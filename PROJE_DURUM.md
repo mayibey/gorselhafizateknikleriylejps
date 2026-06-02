@@ -2,12 +2,12 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 2 Haziran 2026
+> Son güncelleme: 3 Haziran 2026
 
 ---
 
 ## 1. Nerede kaldık (özet)
-Çalışan bir iskelet var: 4 sekmeli navigasyon, gerçek SRS döngüsü, gerçek TCK görselleri, kanun seçip çalışma, **branş sistemi + onboarding + DB migration (tamamlandı, `d95b129`)**. Sırada: içerik maratonu (49 TCK görselini gerçek kartlara bağlamak).
+Çalışan bir iskelet var: 4 sekmeli navigasyon, gerçek SRS döngüsü, gerçek TCK görselleri, kanun seçip çalışma, branş sistemi + onboarding + DB migration. **Mevzuat artık 66 gerçek kanun başlığıyla dolu (25 müşterek + 41 jandarma, `51ab4bb`); kartlar TCK hariç boş ("yakında").** Android EAS build config de hazır (`e256f95`, profiller: preview/development/production). Sırada: içerik maratonu (49 TCK görselini gerçek kartlara bağlamak).
 
 Geliştirme web'de yürüyor (`npx expo start --web` → localhost). Telefonda Expo Go bağlanma sorunlu (aşağıda), kalıcı çözüm: DB migration + ileride development build.
 
@@ -22,9 +22,12 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). Telefonda E
 - `32af324` Görsel sistemi: 49 TCK görseli temiz şemaya, codegen registry, StudyCard tek-görsel + fallback, m1 seed
 - `aecb4f0` Mevzuat ekranı: kanun listesi (Müşterek/Branş + kart sayısı), kanun modu (getCardsByLaw), akış başlığında madde no + ad
 - `d95b129` Branş sistemi: branches/law_branches (M2M), AsyncStorage branş kaydı, `PRAGMA user_version` migration runner (SRS korunur, referans veri idempotent), onboarding + branş değiştirme, `getLaws(bransSlug)` + `getBranches()`, Mevzuat branş filtresi; hafıza dosyaları (CLAUDE.md, PROJE_DURUM.md)
+- `e256f95` Android EAS build config: eas.json (3 profil), android.package com.mayibey.jsps, expo-dev-client, name/slug düzeltme, EAS projectId
+- `87b4d91` docs: JSPS mevzuat listesi PDF (seed kaynağı)
+- `51ab4bb` Mevzuat seed: gerçek JSPS listesi (25 müşterek + 41 jandarma = 66 kanun), TCK id1 pinli, law_branches jandarma eşlemesi, MEBS/Mali placeholder kaldırıldı, v2 migration (referans veri re-seed, srs korunur)
 
 ## 3. Devam eden iş
-- Şu an aktif tur yok. Sırada (Backlog'dan): **içerik maratonu** — 49 TCK görselini gerçek kartlara bağla (madde no + başlık + anlatım), önce Müşterek + Jandarma.
+- Şu an aktif tur yok. **Mevzuat 66 kanun başlığı seed'lendi (kartlar TCK hariç boş — Mevzuat'ta "yakında").** Sırada (Backlog'dan): **içerik maratonu** — TCK 49 görselini gerçek kartlara bağla (madde no + başlık + anlatım), sonra diğer müşterek + jandarma kanunlarının içeriği.
 
 ## 4. Backlog (planlı işler, sıra kabaca)
 - Tatbikat ekranı (quiz/sınav sistemi) — kartlardan otomatik soru, çıkmış sorular kategorisi
