@@ -9,6 +9,15 @@ export const SEED_LAWS: Law[] = [
 
 export const SEED_CARDS: Card[] = [
   {
+    id: 5,
+    law_id: 1,
+    madde_no: 'TCK m.1',
+    baslik: 'CEZA KANUNUNUN AMACI',
+    anlatim_metni: 'Yer tutucu anlatım metni — ceza kanununun amacı.',
+    gorsel_yolu: 'tck_m1',
+    ses_yolu: null,
+  },
+  {
     id: 1,
     law_id: 1,
     madde_no: 'TCK m.86',

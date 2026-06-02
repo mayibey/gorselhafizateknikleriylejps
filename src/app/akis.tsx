@@ -36,19 +36,32 @@ export default function AkisScreen() {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
-      {/* Üst krom: kapat + ilerleme */}
+      {/* Üst krom: kapat + aktif kart meta (madde no + ilerleme) + blok rozeti */}
       <View style={styles.header}>
         <Pressable onPress={() => router.back()} hitSlop={12}>
           <MaterialCommunityIcons name="close" size={26} color={Palette.beyaz} />
         </Pressable>
         {queue && !bitti ? (
-          <AppText variant="govde" color="beyaz" bold>
-            {index + 1} / {queue.length}
-          </AppText>
+          <View style={styles.headerMeta}>
+            <AppText variant="govde" color="beyaz" bold>
+              {queue[index].madde_no}
+            </AppText>
+            <AppText variant="etiket" color="kenarlik">
+              {index + 1} / {queue.length}
+            </AppText>
+          </View>
         ) : (
-          <View />
+          <View style={styles.headerMeta} />
         )}
-        <View style={styles.headerSpacer} />
+        {queue && !bitti && queue[index].blok === 'müşterek' ? (
+          <View style={styles.headerRozet}>
+            <AppText variant="etiket" color="lacivert" bold>
+              Müşterek
+            </AppText>
+          </View>
+        ) : (
+          <View style={styles.headerSpacer} />
+        )}
       </View>
 
       {!queue ? (
@@ -139,6 +152,16 @@ const styles = StyleSheet.create({
   },
   headerSpacer: {
     width: 26,
+  },
+  headerMeta: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  headerRozet: {
+    backgroundColor: Palette.altin,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.half,
+    borderRadius: Radius.s,
   },
   // Ortak "telefon kolonu": web'de ortalanır, dar ekranda tam en.
   kolon: {

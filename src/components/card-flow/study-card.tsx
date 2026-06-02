@@ -1,12 +1,28 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
 import { StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { CardWithSrs } from '@/db/schema';
+// Üretilen registry src/assets altında; '@/assets/*' alias'ı gerçek assets/ klasörüne
+// gittiği için göreli import kullanıyoruz.
+import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
 
-/** Tek bir kart: kırmızı başlık şeridi → 2x2 panel ızgarası → lacivert künye şeridi. */
+/** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
 export function StudyCard({ card }: { card: CardWithSrs }) {
+  const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
+
+  // Görselli mod: kart kendi künyesini içerir → uygulama şeritleri gösterilmez.
+  if (gorsel !== undefined) {
+    return (
+      <View style={styles.card}>
+        <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
+      </View>
+    );
+  }
+
+  // Yer tutucu mod (görselsiz kartlar için fallback).
   return (
     <View style={styles.card}>
       {/* Kırmızı başlık şeridi */}
@@ -57,6 +73,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.m,
     overflow: 'hidden',
+  },
+  gorsel: {
+    width: '100%',
+    aspectRatio: 1,
   },
   baslikSerit: {
     backgroundColor: Palette.kirmizi,
