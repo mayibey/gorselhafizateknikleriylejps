@@ -1,48 +1,16 @@
 /**
- * Veri katmanı.
- * - Native (iOS/Android): expo-sqlite.
- * - Web: bellek-içi yedek (web'de ekstra wasm yapılandırması gerekmesin diye).
- * Her iki arka uç da aynı API'yi sunar; SRS kuralları srgüncelle ile tek yerden gelir.
+ * Veri katmanı — NATIVE (iOS/Android): expo-sqlite.
+ * expo-sqlite import'u SADECE bu dosyada bulunur; Metro web build'inde
+ * `database.web.ts` seçildiği için bu dosya web grafiğine hiç girmez.
  */
-
-import { Platform } from 'react-native';
 
 import { CREATE_SQL, type CardWithSrs } from '@/db/schema';
 import { SEED_CARDS, SEED_LAWS } from '@/db/seed';
+import type { Backend, RecordReviewResult } from '@/db/types';
 import { srsGuncelle, type SrsCevap } from '@/lib/srs';
 
-interface Backend {
-  init(): Promise<void>;
-  getStudyCards(): Promise<CardWithSrs[]>;
-  saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void>;
-}
-
-/** Bellek-içi arka uç (web + yedek). */
-class MemoryBackend implements Backend {
-  private srs = new Map<number, { kutu: number; sonraki_tarih: string }>();
-
-  async init(): Promise<void> {
-    if (this.srs.size > 0) return;
-    const bugun = new Date().toISOString().slice(0, 10);
-    for (const card of SEED_CARDS) this.srs.set(card.id, { kutu: 1, sonraki_tarih: bugun });
-  }
-
-  async getStudyCards(): Promise<CardWithSrs[]> {
-    return SEED_CARDS.map((card) => {
-      const law = SEED_LAWS.find((l) => l.id === card.law_id)!;
-      const s = this.srs.get(card.id)!;
-      return { ...card, blok: law.blok, law_ad: law.ad, kutu: s.kutu, sonraki_tarih: s.sonraki_tarih };
-    });
-  }
-
-  async saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void> {
-    this.srs.set(cardId, { kutu, sonraki_tarih: sonrakiTarih });
-  }
-}
-
-/** expo-sqlite arka ucu (native). */
+/** expo-sqlite arka ucu. */
 class SqliteBackend implements Backend {
-  // expo-sqlite tipini gevşek tutuyoruz; sadece native'de yüklenir.
   private db: Awaited<ReturnType<typeof import('expo-sqlite').openDatabaseAsync>> | null = null;
 
   async init(): Promise<void> {
@@ -98,7 +66,7 @@ class SqliteBackend implements Backend {
   }
 }
 
-const backend: Backend = Platform.OS === 'web' ? new MemoryBackend() : new SqliteBackend();
+const backend: Backend = new SqliteBackend();
 
 let hazir: Promise<void> | null = null;
 
@@ -119,7 +87,7 @@ export async function recordReview(
   cardId: number,
   mevcutKutu: number,
   cevap: SrsCevap,
-): Promise<{ kutu: number; sonraki_tarih: string }> {
+): Promise<RecordReviewResult> {
   await initDatabase();
   const next = srsGuncelle(mevcutKutu, cevap);
   await backend.saveSrs(cardId, next.kutu, next.sonraki_tarih);
