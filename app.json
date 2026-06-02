@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "_expo_tmp",
-    "slug": "_expo_tmp",
+    "name": "Görsel Hafıza JSPS",
+    "slug": "gorsel-hafiza-jsps",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -11,6 +11,7 @@
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.mayibey.jsps",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -40,6 +41,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "37237509-6816-434d-b5d0-95bacad71797"
+      }
     }
   }
 }
