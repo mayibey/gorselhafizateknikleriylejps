@@ -6,13 +6,15 @@
  * İki implementasyon da bu imzaları birebir export eder.
  */
 
-import type { CardWithSrs } from '@/db/schema';
+import type { CardWithSrs, LawWithCount } from '@/db/schema';
 import type { RecordReviewResult, SrsCevap } from '@/db/types';
 import type { QueueCard } from '@/lib/queue';
 
 export function initDatabase(): Promise<void>;
 export function getStudyCards(): Promise<CardWithSrs[]>;
 export function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
+export function getLaws(): Promise<LawWithCount[]>;
+export function getCardsByLaw(lawId: number): Promise<QueueCard[]>;
 export function recordReview(
   cardId: number,
   mevcutKutu: number,

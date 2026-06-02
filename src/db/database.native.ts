@@ -4,9 +4,16 @@
  * `database.web.ts` seçildiği için bu dosya web grafiğine hiç girmez.
  */
 
-import { CREATE_SQL, type CardWithLaw, type CardWithSrs, type Srs } from '@/db/schema';
+import {
+  CREATE_SQL,
+  type CardWithLaw,
+  type CardWithSrs,
+  type LawWithCount,
+  type Srs,
+} from '@/db/schema';
 import { SEED_CARDS, SEED_LAWS } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
+import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
 import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 
@@ -66,6 +73,33 @@ class SqliteBackend implements Backend {
     return gunlukKuyruk(cards, srsMap, bugunISO(), yeniLimit);
   }
 
+  async getLaws(): Promise<LawWithCount[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    return this.db.getAllAsync<LawWithCount>(
+      `SELECT l.id, l.blok, l.ad, COUNT(c.id) AS kartSayisi
+       FROM laws l
+       LEFT JOIN cards c ON c.law_id = l.id
+       GROUP BY l.id, l.blok, l.ad
+       ORDER BY l.id`,
+    );
+  }
+
+  async getCardsByLaw(lawId: number): Promise<QueueCard[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const cards = await this.db.getAllAsync<CardWithLaw>(
+      `SELECT c.*, l.blok AS blok, l.ad AS law_ad
+       FROM cards c
+       JOIN laws l ON l.id = c.law_id
+       WHERE c.law_id = ?`,
+      lawId,
+    );
+    const srsRows = await this.db.getAllAsync<Srs>('SELECT card_id, kutu, sonraki_tarih FROM srs');
+    const srsMap = new Map<number, SrsDurum>(
+      srsRows.map((r) => [r.card_id, { kutu: r.kutu, sonraki_tarih: r.sonraki_tarih }]),
+    );
+    return kanunKuyrugu(cards, srsMap);
+  }
+
   async saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void> {
     if (!this.db) throw new Error('DB hazır değil');
     // UPSERT: yeni kartta (srs satırı yoksa) oluştur, varsa güncelle.
@@ -99,6 +133,18 @@ export async function getStudyCards(): Promise<CardWithSrs[]> {
 export async function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getDailyQueue(yeniLimit);
+}
+
+/** Tüm kanunları kart sayısıyla döndürür (Mevzuat listesi). */
+export async function getLaws(): Promise<LawWithCount[]> {
+  await initDatabase();
+  return backend.getLaws();
+}
+
+/** Bir kanunun TÜM kartlarını (due filtresiz) SRS durumuyla döndürür (kanun çalışma modu). */
+export async function getCardsByLaw(lawId: number): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getCardsByLaw(lawId);
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */

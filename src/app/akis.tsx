@@ -1,5 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -8,7 +8,7 @@ import { AudioBar } from '@/components/card-flow/audio-bar';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { AppText } from '@/components/ui/app-text';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { getDailyQueue, recordReview } from '@/db/database';
+import { getCardsByLaw, getDailyQueue, recordReview } from '@/db/database';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -16,13 +16,16 @@ type Cozulen = { tekrar: number; yeni: number };
 
 export default function AkisScreen() {
   const router = useRouter();
+  const { lawId } = useLocalSearchParams<{ lawId?: string }>();
+  const kanunModu = lawId != null && lawId !== '';
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [index, setIndex] = useState(0);
   const [cozulen, setCozulen] = useState<Cozulen>({ tekrar: 0, yeni: 0 });
 
   useEffect(() => {
-    void getDailyQueue().then(setQueue);
-  }, []);
+    const yukle = kanunModu ? getCardsByLaw(Number(lawId)) : getDailyQueue();
+    void yukle.then(setQueue);
+  }, [kanunModu, lawId]);
 
   async function cevapla(cevap: SrsCevap) {
     if (!queue) return;
@@ -43,8 +46,10 @@ export default function AkisScreen() {
         </Pressable>
         {queue && !bitti ? (
           <View style={styles.headerMeta}>
-            <AppText variant="govde" color="beyaz" bold>
-              {queue[index].madde_no}
+            <AppText variant="govde" color="beyaz" bold numberOfLines={1} ellipsizeMode="tail">
+              {queue[index].baslik
+                ? `${queue[index].madde_no} — ${queue[index].baslik}`
+                : queue[index].madde_no}
             </AppText>
             <AppText variant="etiket" color="kenarlik">
               {index + 1} / {queue.length}
@@ -70,7 +75,12 @@ export default function AkisScreen() {
         </View>
       ) : bitti ? (
         <View style={styles.kolon}>
-          <Bitti cozulen={cozulen} bosBaslangic={queue.length === 0} onClose={() => router.back()} />
+          <Bitti
+            cozulen={cozulen}
+            bosBaslangic={queue.length === 0}
+            kanunModu={kanunModu}
+            onClose={() => router.back()}
+          />
         </View>
       ) : (
         <View style={styles.kolon}>
@@ -111,22 +121,27 @@ function Buton({ renk, etiket, onPress }: { renk: string; etiket: string; onPres
 function Bitti({
   cozulen,
   bosBaslangic,
+  kanunModu,
   onClose,
 }: {
   cozulen: Cozulen;
   bosBaslangic: boolean;
+  kanunModu: boolean;
   onClose: () => void;
 }) {
+  const baslik = kanunModu ? 'Bu kanun bitti' : 'Bugünlük bitti';
+  const bosMetin = kanunModu ? 'Bu kanunda kart yok.' : 'Bugün için vakti gelmiş kart yok.';
+  const ozetMetin = kanunModu
+    ? `${cozulen.tekrar + cozulen.yeni} kart çalıştın.`
+    : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`;
   return (
     <View style={styles.center}>
       <MaterialCommunityIcons name="check-decagram" size={64} color={Palette.yesil} />
       <AppText variant="baslik" bold>
-        Bugünlük bitti
+        {baslik}
       </AppText>
       <AppText variant="govde" color="solukMetin">
-        {bosBaslangic
-          ? 'Bugün için vakti gelmiş kart yok.'
-          : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`}
+        {bosBaslangic ? bosMetin : ozetMetin}
       </AppText>
       <Pressable style={({ pressed }) => [styles.restart, pressed && styles.pressed]} onPress={onClose}>
         <AppText variant="govde" color="beyaz" bold>

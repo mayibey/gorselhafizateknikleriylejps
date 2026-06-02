@@ -4,9 +4,10 @@
  * wa-sqlite.wasm / worker grafiğine hiç girmez.
  */
 
-import { type CardWithLaw, type CardWithSrs } from '@/db/schema';
+import { type CardWithLaw, type CardWithSrs, type LawWithCount } from '@/db/schema';
 import { SEED_CARDS, SEED_LAWS } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
+import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
 import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 
@@ -38,6 +39,18 @@ class MemoryBackend implements Backend {
     return gunlukKuyruk(this.cardsWithLaw(), this.srs, bugunISO(), yeniLimit);
   }
 
+  async getLaws(): Promise<LawWithCount[]> {
+    return SEED_LAWS.map((law) => ({
+      ...law,
+      kartSayisi: SEED_CARDS.filter((c) => c.law_id === law.id).length,
+    }));
+  }
+
+  async getCardsByLaw(lawId: number): Promise<QueueCard[]> {
+    const cards = this.cardsWithLaw().filter((c) => c.law_id === lawId);
+    return kanunKuyrugu(cards, this.srs);
+  }
+
   async saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void> {
     // Map.set zaten upsert: yeni kartta oluşturur, varsa günceller.
     this.srs.set(cardId, { kutu, sonraki_tarih: sonrakiTarih });
@@ -64,6 +77,18 @@ export async function getStudyCards(): Promise<CardWithSrs[]> {
 export async function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getDailyQueue(yeniLimit);
+}
+
+/** Tüm kanunları kart sayısıyla döndürür (Mevzuat listesi). */
+export async function getLaws(): Promise<LawWithCount[]> {
+  await initDatabase();
+  return backend.getLaws();
+}
+
+/** Bir kanunun TÜM kartlarını (due filtresiz) SRS durumuyla döndürür (kanun çalışma modu). */
+export async function getCardsByLaw(lawId: number): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getCardsByLaw(lawId);
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */

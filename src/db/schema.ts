@@ -8,6 +8,11 @@ export interface Law {
   ad: string;
 }
 
+/** Kanun + içindeki kart sayısı (Mevzuat listesi için). */
+export interface LawWithCount extends Law {
+  kartSayisi: number;
+}
+
 export interface Card {
   id: number;
   law_id: number;
