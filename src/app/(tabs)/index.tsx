@@ -1,43 +1,77 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
+import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
+import { getDailyQueue } from '@/db/database';
+import type { QueueCard } from '@/lib/queue';
 
 export default function KarargahScreen() {
   const router = useRouter();
+  const [queue, setQueue] = useState<QueueCard[] | null>(null);
+
+  // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu tazele.
+  useFocusEffect(
+    useCallback(() => {
+      void getDailyQueue().then(setQueue);
+    }, []),
+  );
+
+  const tekrarSayisi = queue?.filter((c) => !c.yeni).length ?? 0;
+  const yeniSayisi = queue?.filter((c) => c.yeni).length ?? 0;
+  const bos = queue !== null && queue.length === 0;
 
   return (
     <Screen title="Karargah">
-      {/* Devam Et — lacivert ana aksiyon kartı */}
-      <Pressable
-        style={({ pressed }) => [styles.devamEt, pressed && styles.pressed]}
-        onPress={() => router.push('/akis')}>
-        <View style={styles.devamEtMetin}>
-          <AppText variant="etiket" color="altin" bold>
-            DEVAM ET
-          </AppText>
-          <AppText variant="altBaslik" color="beyaz" bold>
-            Kart Akışı
-          </AppText>
-          <AppText variant="kucuk" color="kenarlik">
-            Kaldığın yerden çalış
-          </AppText>
+      {/* Devam Et — kuyruk doluysa akışa götürür; boşsa "bugünlük bitti" */}
+      {bos ? (
+        <View style={[styles.devamEt, styles.devamEtBitti]}>
+          <View style={styles.devamEtMetin}>
+            <AppText variant="etiket" color="altin" bold>
+              BUGÜNLÜK BİTTİ
+            </AppText>
+            <AppText variant="altBaslik" color="beyaz" bold>
+              Tebrikler
+            </AppText>
+            <AppText variant="kucuk" color="kenarlik">
+              Yarın yeni tekrarlar gelecek
+            </AppText>
+          </View>
+          <MaterialCommunityIcons name="check-decagram" size={48} color={Palette.altin} />
         </View>
-        <MaterialCommunityIcons name="play-circle" size={48} color={Palette.altin} />
-      </Pressable>
+      ) : (
+        <Pressable
+          style={({ pressed }) => [styles.devamEt, pressed && styles.pressed]}
+          onPress={() => router.push('/akis')}>
+          <View style={styles.devamEtMetin}>
+            <AppText variant="etiket" color="altin" bold>
+              DEVAM ET
+            </AppText>
+            <AppText variant="altBaslik" color="beyaz" bold>
+              Kart Akışı
+            </AppText>
+            <AppText variant="kucuk" color="kenarlik">
+              {tekrarSayisi + yeniSayisi > 0
+                ? `${tekrarSayisi + yeniSayisi} kart seni bekliyor`
+                : 'Kaldığın yerden çalış'}
+            </AppText>
+          </View>
+          <MaterialCommunityIcons name="play-circle" size={48} color={Palette.altin} />
+        </Pressable>
+      )}
 
-      {/* Bugünün Görevi */}
+      {/* Bugünün Görevi — sayılar kuyruktan türetilir */}
       <Card>
         <AppText variant="etiket" color="solukMetin" bold>
           BUGÜNÜN GÖREVİ
         </AppText>
         <View style={styles.gorevSatir}>
-          <Gorev sayi="12" etiket="Tekrar" />
-          <Gorev sayi="8" etiket="Yeni" />
-          <Gorev sayi="1" etiket="Mini Tatbikat" />
+          <Gorev sayi={tekrarSayisi} etiket="Tekrar" />
+          <Gorev sayi={yeniSayisi} etiket="Yeni" />
+          <Gorev sayi={1} etiket="Mini Tatbikat" />
         </View>
       </Card>
 
@@ -67,7 +101,7 @@ function Card({ children }: { children: React.ReactNode }) {
   return <View style={styles.card}>{children}</View>;
 }
 
-function Gorev({ sayi, etiket }: { sayi: string; etiket: string }) {
+function Gorev({ sayi, etiket }: { sayi: number; etiket: string }) {
   return (
     <View style={styles.gorev}>
       <AppText variant="baslik" bold>
@@ -104,6 +138,9 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.lacivert,
     borderRadius: Radius.l,
     padding: Spacing.four,
+  },
+  devamEtBitti: {
+    opacity: 0.9,
   },
   devamEtMetin: {
     gap: Spacing.half,

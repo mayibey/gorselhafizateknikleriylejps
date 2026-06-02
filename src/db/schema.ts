@@ -24,10 +24,14 @@ export interface Srs {
   sonraki_tarih: string;
 }
 
-/** Kart + ait olduğu kanun + SRS durumu birleşik görünüm. */
-export interface CardWithSrs extends Card {
+/** Kart + ait olduğu kanun (SRS'siz ham birleşim — kuyruk girdisi). */
+export interface CardWithLaw extends Card {
   blok: Blok;
   law_ad: string;
+}
+
+/** Kart + ait olduğu kanun + SRS durumu birleşik görünüm. */
+export interface CardWithSrs extends CardWithLaw {
   kutu: number;
   sonraki_tarih: string;
 }

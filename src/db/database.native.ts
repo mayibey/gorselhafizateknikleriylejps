@@ -4,10 +4,11 @@
  * `database.web.ts` seçildiği için bu dosya web grafiğine hiç girmez.
  */
 
-import { CREATE_SQL, type CardWithSrs } from '@/db/schema';
+import { CREATE_SQL, type CardWithLaw, type CardWithSrs, type Srs } from '@/db/schema';
 import { SEED_CARDS, SEED_LAWS } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
-import { srsGuncelle, type SrsCevap } from '@/lib/srs';
+import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
+import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 
 /** expo-sqlite arka ucu. */
 class SqliteBackend implements Backend {
@@ -21,7 +22,7 @@ class SqliteBackend implements Backend {
     const row = await this.db.getFirstAsync<{ n: number }>('SELECT COUNT(*) AS n FROM cards');
     if ((row?.n ?? 0) > 0) return;
 
-    const bugun = new Date().toISOString().slice(0, 10);
+    // Sadece laws + cards tohumlanır. srs tohumlanmaz: "srs kaydı yok = yeni kart".
     for (const law of SEED_LAWS) {
       await this.db.runAsync('INSERT INTO laws (id, blok, ad) VALUES (?, ?, ?)', law.id, law.blok, law.ad);
     }
@@ -35,11 +36,6 @@ class SqliteBackend implements Backend {
         card.anlatim_metni,
         card.gorsel_yolu,
         card.ses_yolu,
-      );
-      await this.db.runAsync(
-        'INSERT INTO srs (card_id, kutu, sonraki_tarih) VALUES (?, 1, ?)',
-        card.id,
-        bugun,
       );
     }
   }
@@ -55,13 +51,30 @@ class SqliteBackend implements Backend {
     );
   }
 
+  async getDailyQueue(yeniLimit: number = YENI_LIMIT): Promise<QueueCard[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const cards = await this.db.getAllAsync<CardWithLaw>(
+      `SELECT c.*, l.blok AS blok, l.ad AS law_ad
+       FROM cards c
+       JOIN laws l ON l.id = c.law_id
+       ORDER BY c.id`,
+    );
+    const srsRows = await this.db.getAllAsync<Srs>('SELECT card_id, kutu, sonraki_tarih FROM srs');
+    const srsMap = new Map<number, SrsDurum>(
+      srsRows.map((r) => [r.card_id, { kutu: r.kutu, sonraki_tarih: r.sonraki_tarih }]),
+    );
+    return gunlukKuyruk(cards, srsMap, bugunISO(), yeniLimit);
+  }
+
   async saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void> {
     if (!this.db) throw new Error('DB hazır değil');
+    // UPSERT: yeni kartta (srs satırı yoksa) oluştur, varsa güncelle.
     await this.db.runAsync(
-      'UPDATE srs SET kutu = ?, sonraki_tarih = ? WHERE card_id = ?',
+      `INSERT INTO srs (card_id, kutu, sonraki_tarih) VALUES (?, ?, ?)
+       ON CONFLICT(card_id) DO UPDATE SET kutu = excluded.kutu, sonraki_tarih = excluded.sonraki_tarih`,
+      cardId,
       kutu,
       sonrakiTarih,
-      cardId,
     );
   }
 }
@@ -76,13 +89,19 @@ export function initDatabase(): Promise<void> {
   return hazir;
 }
 
-/** Çalışma akışı için tüm kartları SRS durumuyla birlikte döndürür. */
+/** Tüm kartları SRS durumuyla döndürür (geriye dönük; akış artık getDailyQueue kullanır). */
 export async function getStudyCards(): Promise<CardWithSrs[]> {
   await initDatabase();
   return backend.getStudyCards();
 }
 
-/** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını günceller ve yeni durumu döndürür. */
+/** Bugünün çalışma kuyruğu: vakti gelmiş tekrarlar + en fazla yeniLimit yeni kart. */
+export async function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getDailyQueue(yeniLimit);
+}
+
+/** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */
 export async function recordReview(
   cardId: number,
   mevcutKutu: number,

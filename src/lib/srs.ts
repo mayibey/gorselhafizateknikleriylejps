@@ -10,6 +10,14 @@ export type SrsCevap = 'biliyorum' | 'tekrar' | 'zor';
 
 const ARALIKLAR = [1, 2, 4, 7, 14, 30] as const;
 
+/**
+ * Bugünün YYYY-MM-DD (UTC) değeri. seed, recordReview ve kuyruk sorgusundaki
+ * "bugün" karşılaştırması HEPSİ bunu kullanır ki tarih dilimi tutarlı olsun.
+ */
+export function bugunISO(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
 export function sonrakiKutu(mevcutKutu: number, cevap: SrsCevap): number {
   switch (cevap) {
     case 'biliyorum':
