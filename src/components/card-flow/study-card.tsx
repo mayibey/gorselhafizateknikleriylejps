@@ -51,6 +51,7 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
 
 const styles = StyleSheet.create({
   card: {
+    width: '100%',
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kenarlik,
     borderWidth: 1,

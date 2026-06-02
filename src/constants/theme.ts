@@ -52,6 +52,8 @@ export const Spacing = {
 
 export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
 export const MaxContentWidth = 800;
+/** Kart Akışı'nın "telefon kolonu" genişlik tavanı (web'de ortalanır, dar ekranda devreye girmez). */
+export const CardFlowMaxWidth = 460;
 
 // --- Aşağısı Expo template bileşenlerinin (themed-text vb.) geriye dönük uyumu içindir. ---
 
