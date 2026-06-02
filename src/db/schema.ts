@@ -92,5 +92,5 @@ CREATE TABLE IF NOT EXISTS law_branches (
 );
 `;
 
-/** Bu turun şema sürümü (PRAGMA user_version). Şema değişince artırılır. */
-export const SCHEMA_VERSION = 1;
+/** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
+export const SCHEMA_VERSION = 2;

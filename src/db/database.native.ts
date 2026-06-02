@@ -44,7 +44,15 @@ class SqliteBackend implements Backend {
       await this.seedReference();
       version = 1;
     }
-    // Gelecekte: if (version < 2) { ...; version = 2; }
+    if (version < 2) {
+      // Gerçek mevzuat listesi geldi ve kanun id şeması değişti (TCK id1 pinli,
+      // müşterek 2-25, jandarma 26-66). INSERT OR IGNORE eski id'leri remap edemez,
+      // bu yüzden REFERANS veriyi (laws/law_branches/cards) sıfırlayıp yeniden tohumlarız.
+      // srs (kullanıcı ilerlemesi) AYRI tablo, card_id ile bağlı → SİLİNMEZ, korunur.
+      await db.execAsync('DELETE FROM law_branches; DELETE FROM laws; DELETE FROM cards;');
+      await this.seedReference();
+      version = 2;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
