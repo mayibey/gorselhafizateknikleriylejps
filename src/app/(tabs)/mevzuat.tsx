@@ -8,19 +8,23 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getLaws } from '@/db/database';
 import type { LawWithCount } from '@/db/schema';
+import { useBrans } from '@/lib/brans-context';
 
 export default function MevzuatScreen() {
   const router = useRouter();
+  const { brans } = useBrans();
   const [laws, setLaws] = useState<LawWithCount[] | null>(null);
 
+  // Branş değişince liste tazelenir (dep'te brans var).
   useFocusEffect(
     useCallback(() => {
-      void getLaws().then(setLaws);
-    }, []),
+      if (!brans) return;
+      void getLaws(brans).then(setLaws);
+    }, [brans]),
   );
 
   const musterek = laws?.filter((l) => l.blok === 'müşterek') ?? [];
-  const brans = laws?.filter((l) => l.blok === 'branş') ?? [];
+  const bransKanunlari = laws?.filter((l) => l.blok === 'branş') ?? [];
 
   function kanunaGit(law: LawWithCount) {
     router.push({ pathname: '/akis', params: { lawId: String(law.id) } });
@@ -29,7 +33,7 @@ export default function MevzuatScreen() {
   return (
     <Screen title="Mevzuat">
       <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} />
-      <Bolum baslik="BRANŞ" laws={brans} onPress={kanunaGit} />
+      <Bolum baslik="BRANŞ" laws={bransKanunlari} onPress={kanunaGit} />
     </Screen>
   );
 }

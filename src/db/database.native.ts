@@ -6,12 +6,13 @@
 
 import {
   CREATE_SQL,
+  type Branch,
   type CardWithLaw,
   type CardWithSrs,
   type LawWithCount,
   type Srs,
 } from '@/db/schema';
-import { SEED_CARDS, SEED_LAWS } from '@/db/seed';
+import { SEED_BRANCHES, SEED_CARDS, SEED_LAW_BRANCHES, SEED_LAWS } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
@@ -24,18 +25,50 @@ class SqliteBackend implements Backend {
   async init(): Promise<void> {
     const SQLite = await import('expo-sqlite');
     this.db = await SQLite.openDatabaseAsync('jsps.db');
-    await this.db.execAsync(CREATE_SQL);
+    await this.migrate();
+  }
 
-    const row = await this.db.getFirstAsync<{ n: number }>('SELECT COUNT(*) AS n FROM cards');
-    if ((row?.n ?? 0) > 0) return;
+  /**
+   * PRAGMA user_version tabanlı migration runner.
+   * Eksik sürümleri sırayla uygular; her sürüm idempotenttir (yeniden çalışsa
+   * da güvenli). Kullanıcı verisi (srs) hiçbir adımda silinmez.
+   */
+  private async migrate(): Promise<void> {
+    const db = this.db!;
+    const row = await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version');
+    let version = row?.user_version ?? 0;
 
-    // Sadece laws + cards tohumlanır. srs tohumlanmaz: "srs kaydı yok = yeni kart".
+    if (version < 1) {
+      // Tüm tablolar (IF NOT EXISTS) — eski kurulumlarda branches/law_branches da oluşur.
+      await db.execAsync(CREATE_SQL);
+      await this.seedReference();
+      version = 1;
+    }
+    // Gelecekte: if (version < 2) { ...; version = 2; }
+
+    if (version !== (row?.user_version ?? 0)) {
+      await db.execAsync(`PRAGMA user_version = ${version}`);
+    }
+  }
+
+  /**
+   * Referans veriyi (laws, cards, branches, law_branches) IDEMPOTENT yükler
+   * (INSERT OR IGNORE). srs'e DOKUNULMAZ → mevcut ilerleme korunur.
+   * Eski kurulumlarda kartlar zaten dolu olsa da branş tabloları buradan dolar.
+   */
+  private async seedReference(): Promise<void> {
+    const db = this.db!;
     for (const law of SEED_LAWS) {
-      await this.db.runAsync('INSERT INTO laws (id, blok, ad) VALUES (?, ?, ?)', law.id, law.blok, law.ad);
+      await db.runAsync(
+        'INSERT OR IGNORE INTO laws (id, blok, ad) VALUES (?, ?, ?)',
+        law.id,
+        law.blok,
+        law.ad,
+      );
     }
     for (const card of SEED_CARDS) {
-      await this.db.runAsync(
-        'INSERT INTO cards (id, law_id, madde_no, baslik, anlatim_metni, gorsel_yolu, ses_yolu) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      await db.runAsync(
+        'INSERT OR IGNORE INTO cards (id, law_id, madde_no, baslik, anlatim_metni, gorsel_yolu, ses_yolu) VALUES (?, ?, ?, ?, ?, ?, ?)',
         card.id,
         card.law_id,
         card.madde_no,
@@ -43,6 +76,22 @@ class SqliteBackend implements Backend {
         card.anlatim_metni,
         card.gorsel_yolu,
         card.ses_yolu,
+      );
+    }
+    for (const b of SEED_BRANCHES) {
+      await db.runAsync(
+        'INSERT OR IGNORE INTO branches (id, slug, ad, sira) VALUES (?, ?, ?, ?)',
+        b.id,
+        b.slug,
+        b.ad,
+        b.sira,
+      );
+    }
+    for (const lb of SEED_LAW_BRANCHES) {
+      await db.runAsync(
+        'INSERT OR IGNORE INTO law_branches (law_id, branch_id) VALUES (?, ?)',
+        lb.law_id,
+        lb.branch_id,
       );
     }
   }
@@ -73,14 +122,27 @@ class SqliteBackend implements Backend {
     return gunlukKuyruk(cards, srsMap, bugunISO(), yeniLimit);
   }
 
-  async getLaws(): Promise<LawWithCount[]> {
+  async getBranches(): Promise<Branch[]> {
     if (!this.db) throw new Error('DB hazır değil');
+    return this.db.getAllAsync<Branch>('SELECT id, slug, ad, sira FROM branches ORDER BY sira');
+  }
+
+  async getLaws(bransSlug: string): Promise<LawWithCount[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    // müşterek (herkese) + seçili branşın kanunları.
     return this.db.getAllAsync<LawWithCount>(
       `SELECT l.id, l.blok, l.ad, COUNT(c.id) AS kartSayisi
        FROM laws l
        LEFT JOIN cards c ON c.law_id = l.id
+       WHERE l.blok = 'müşterek'
+          OR l.id IN (
+            SELECT lb.law_id FROM law_branches lb
+            JOIN branches b ON b.id = lb.branch_id
+            WHERE b.slug = ?
+          )
        GROUP BY l.id, l.blok, l.ad
        ORDER BY l.id`,
+      bransSlug,
     );
   }
 
@@ -135,10 +197,16 @@ export async function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]> {
   return backend.getDailyQueue(yeniLimit);
 }
 
-/** Tüm kanunları kart sayısıyla döndürür (Mevzuat listesi). */
-export async function getLaws(): Promise<LawWithCount[]> {
+/** Tüm branşları (sıralı) döndürür (onboarding / branş değiştirme). */
+export async function getBranches(): Promise<Branch[]> {
   await initDatabase();
-  return backend.getLaws();
+  return backend.getBranches();
+}
+
+/** Müşterek + seçili branşın kanunlarını kart sayısıyla döndürür (Mevzuat listesi). */
+export async function getLaws(bransSlug: string): Promise<LawWithCount[]> {
+  await initDatabase();
+  return backend.getLaws(bransSlug);
 }
 
 /** Bir kanunun TÜM kartlarını (due filtresiz) SRS durumuyla döndürür (kanun çalışma modu). */

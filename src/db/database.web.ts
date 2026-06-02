@@ -4,8 +4,8 @@
  * wa-sqlite.wasm / worker grafiğine hiç girmez.
  */
 
-import { type CardWithLaw, type CardWithSrs, type LawWithCount } from '@/db/schema';
-import { SEED_CARDS, SEED_LAWS } from '@/db/seed';
+import { type Branch, type CardWithLaw, type CardWithSrs, type LawWithCount } from '@/db/schema';
+import { SEED_BRANCHES, SEED_CARDS, SEED_LAW_BRANCHES, SEED_LAWS } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
@@ -39,11 +39,22 @@ class MemoryBackend implements Backend {
     return gunlukKuyruk(this.cardsWithLaw(), this.srs, bugunISO(), yeniLimit);
   }
 
-  async getLaws(): Promise<LawWithCount[]> {
-    return SEED_LAWS.map((law) => ({
-      ...law,
-      kartSayisi: SEED_CARDS.filter((c) => c.law_id === law.id).length,
-    }));
+  async getBranches(): Promise<Branch[]> {
+    return [...SEED_BRANCHES].sort((a, b) => a.sira - b.sira);
+  }
+
+  async getLaws(bransSlug: string): Promise<LawWithCount[]> {
+    // müşterek (herkese) + seçili branşın kanunları.
+    const brans = SEED_BRANCHES.find((b) => b.slug === bransSlug);
+    const bransLawIds = new Set(
+      SEED_LAW_BRANCHES.filter((lb) => lb.branch_id === brans?.id).map((lb) => lb.law_id),
+    );
+    return SEED_LAWS.filter((law) => law.blok === 'müşterek' || bransLawIds.has(law.id)).map(
+      (law) => ({
+        ...law,
+        kartSayisi: SEED_CARDS.filter((c) => c.law_id === law.id).length,
+      }),
+    );
   }
 
   async getCardsByLaw(lawId: number): Promise<QueueCard[]> {
@@ -79,10 +90,16 @@ export async function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]> {
   return backend.getDailyQueue(yeniLimit);
 }
 
-/** Tüm kanunları kart sayısıyla döndürür (Mevzuat listesi). */
-export async function getLaws(): Promise<LawWithCount[]> {
+/** Tüm branşları (sıralı) döndürür (onboarding / branş değiştirme). */
+export async function getBranches(): Promise<Branch[]> {
   await initDatabase();
-  return backend.getLaws();
+  return backend.getBranches();
+}
+
+/** Müşterek + seçili branşın kanunlarını kart sayısıyla döndürür (Mevzuat listesi). */
+export async function getLaws(bransSlug: string): Promise<LawWithCount[]> {
+  await initDatabase();
+  return backend.getLaws(bransSlug);
 }
 
 /** Bir kanunun TÜM kartlarını (due filtresiz) SRS durumuyla döndürür (kanun çalışma modu). */

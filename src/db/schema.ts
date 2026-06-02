@@ -13,6 +13,20 @@ export interface LawWithCount extends Law {
   kartSayisi: number;
 }
 
+/** JSPS branşı (Jandarma, MEBS, …). */
+export interface Branch {
+  id: number;
+  slug: string;
+  ad: string;
+  sira: number;
+}
+
+/** Kanun ↔ branş çoğa-çok eşlemesi. müşterek kanunlar burada YER ALMAZ. */
+export interface LawBranch {
+  law_id: number;
+  branch_id: number;
+}
+
 export interface Card {
   id: number;
   law_id: number;
@@ -63,4 +77,20 @@ CREATE TABLE IF NOT EXISTS srs (
   kutu INTEGER NOT NULL,
   sonraki_tarih TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS branches (
+  id INTEGER PRIMARY KEY,
+  slug TEXT NOT NULL UNIQUE,
+  ad TEXT NOT NULL,
+  sira INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS law_branches (
+  law_id INTEGER NOT NULL,
+  branch_id INTEGER NOT NULL,
+  PRIMARY KEY (law_id, branch_id)
+);
 `;
+
+/** Bu turun şema sürümü (PRAGMA user_version). Şema değişince artırılır. */
+export const SCHEMA_VERSION = 1;
