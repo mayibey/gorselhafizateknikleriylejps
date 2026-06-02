@@ -7,7 +7,7 @@
 ---
 
 ## 1. Nerede kaldık (özet)
-Çalışan bir iskelet var: 4 sekmeli navigasyon, gerçek SRS döngüsü, gerçek TCK görselleri, kanun seçip çalışma. **Şu an branş sistemi + onboarding + DB migration turu Claude Code'da çalışıyor** (bu tur bittiğinde commit'lenecek, aşağıya işlenecek).
+Çalışan bir iskelet var: 4 sekmeli navigasyon, gerçek SRS döngüsü, gerçek TCK görselleri, kanun seçip çalışma, **branş sistemi + onboarding + DB migration (tamamlandı, `d95b129`)**. Sırada: içerik maratonu (49 TCK görselini gerçek kartlara bağlamak).
 
 Geliştirme web'de yürüyor (`npx expo start --web` → localhost). Telefonda Expo Go bağlanma sorunlu (aşağıda), kalıcı çözüm: DB migration + ileride development build.
 
@@ -21,11 +21,10 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). Telefonda E
 - `ebe279b` Kart Akışı: getDailyQueue akışı + ortalı telefon kolonu (maxWidth 460), ScrollView + pinli buton bandı
 - `32af324` Görsel sistemi: 49 TCK görseli temiz şemaya, codegen registry, StudyCard tek-görsel + fallback, m1 seed
 - `aecb4f0` Mevzuat ekranı: kanun listesi (Müşterek/Branş + kart sayısı), kanun modu (getCardsByLaw), akış başlığında madde no + ad
+- `d95b129` Branş sistemi: branches/law_branches (M2M), AsyncStorage branş kaydı, `PRAGMA user_version` migration runner (SRS korunur, referans veri idempotent), onboarding + branş değiştirme, `getLaws(bransSlug)` + `getBranches()`, Mevzuat branş filtresi; hafıza dosyaları (CLAUDE.md, PROJE_DURUM.md)
 
 ## 3. Devam eden iş
-- **Branş sistemi + onboarding + DB migration** (Claude Code'da, fix verildi):
-  - branches + law_branches (many-to-many), AsyncStorage branş kaydı, `PRAGMA user_version` migration runner (SRS korunur, referans veri idempotent), onboarding ekranı (16 branş), `getLaws(bransSlug)` + `getBranches()`, Mevzuat branşa göre filtre, Sicil'den branş değiştirme.
-  - Bitince: tsc + export doğrula → commit → bu dosyayı güncelle.
+- Şu an aktif tur yok. Sırada (Backlog'dan): **içerik maratonu** — 49 TCK görselini gerçek kartlara bağla (madde no + başlık + anlatım), önce Müşterek + Jandarma.
 
 ## 4. Backlog (planlı işler, sıra kabaca)
 - Tatbikat ekranı (quiz/sınav sistemi) — kartlardan otomatik soru, çıkmış sorular kategorisi
