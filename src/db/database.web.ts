@@ -4,7 +4,14 @@
  * wa-sqlite.wasm / worker grafiğine hiç girmez.
  */
 
-import { type Branch, type CardWithLaw, type CardWithSrs, type LawWithCount } from '@/db/schema';
+import {
+  type Branch,
+  type CardWithLaw,
+  type CardWithSrs,
+  type LawWithCount,
+  type PerformansKaynak,
+  type PerformansSatir,
+} from '@/db/schema';
 import { SEED_BRANCHES, SEED_CARDS, SEED_LAW_BRANCHES, SEED_LAWS } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
@@ -17,6 +24,8 @@ class MemoryBackend implements Backend {
   private srs = new Map<number, SrsDurum>();
   // Çalışılan günler (streak). Bellek-içi → her yenilemede sıfırlanır (web kısıtı, native kalıcı).
   private studyDays = new Set<string>();
+  // Performans logu (akıllı öğrenme). Bellek-içi → yenilemede sıfırlanır (native kalıcı).
+  private performans: PerformansSatir[] = [];
 
   async init(): Promise<void> {
     // srs tohumlanmaz: "srs kaydı yok = yeni kart".
@@ -81,6 +90,14 @@ class MemoryBackend implements Backend {
   async getStudyDays(): Promise<string[]> {
     return [...this.studyDays];
   }
+
+  async kaydetPerformans(cardId: number, kaynak: PerformansKaynak, sonuc: string): Promise<void> {
+    this.performans.push({ card_id: cardId, kaynak, sonuc, tarih: bugunISO() });
+  }
+
+  async getPerformans(): Promise<PerformansSatir[]> {
+    return [...this.performans];
+  }
 }
 
 const backend: Backend = new MemoryBackend();
@@ -139,6 +156,8 @@ export async function recordReview(
   const next = srsGuncelle(mevcutKutu, cevap);
   await backend.saveSrs(cardId, next.kutu, next.sonraki_tarih);
   await backend.markStudyDay(bugunISO());
+  // Akıllı öğrenme: çalışma cevabını performans loguna ekle (SRS'ten ayrı katman).
+  await backend.kaydetPerformans(cardId, 'calisma', cevap);
   return next;
 }
 
@@ -146,4 +165,20 @@ export async function recordReview(
 export async function getStudyDays(): Promise<string[]> {
   await initDatabase();
   return backend.getStudyDays();
+}
+
+/** Bir cevabı performans loguna ekler (akıllı öğrenme — Katman 1). */
+export async function kaydetPerformans(
+  cardId: number,
+  kaynak: PerformansKaynak,
+  sonuc: string,
+): Promise<void> {
+  await initDatabase();
+  return backend.kaydetPerformans(cardId, kaynak, sonuc);
+}
+
+/** Ham performans loglarını (ekleme sırasıyla) döndürür; analiz Katman 2'de. */
+export async function getPerformans(): Promise<PerformansSatir[]> {
+  await initDatabase();
+  return backend.getPerformans();
 }

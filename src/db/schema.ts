@@ -43,6 +43,21 @@ export interface Srs {
   sonraki_tarih: string;
 }
 
+/** Performans logu kaynağı: Karargah çalışması mı, Tatbikat quiz'i mi. */
+export type PerformansKaynak = 'calisma' | 'quiz';
+
+/**
+ * Tek bir cevabın performans logu satırı (akıllı öğrenme — Katman 1).
+ * sonuc kaynağa göre HAM tutulur: çalışma 'biliyorum'|'tekrar'|'zor', quiz 'dogru'|'yanlis'.
+ * SRS'ten AYRI katman; "geri besleme havuzu" Katman 2'de okuma filtresiyle türetilir.
+ */
+export interface PerformansSatir {
+  card_id: number;
+  kaynak: PerformansKaynak;
+  sonuc: string;
+  tarih: string;
+}
+
 /** Kart + ait olduğu kanun (SRS'siz ham birleşim — kuyruk girdisi). */
 export interface CardWithLaw extends Card {
   blok: Blok;
@@ -94,7 +109,15 @@ CREATE TABLE IF NOT EXISTS law_branches (
 CREATE TABLE IF NOT EXISTS study_days (
   gun TEXT PRIMARY KEY
 );
+
+CREATE TABLE IF NOT EXISTS kart_performans (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  card_id INTEGER NOT NULL,
+  kaynak TEXT NOT NULL,
+  sonuc TEXT NOT NULL,
+  tarih TEXT NOT NULL
+);
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 3;
+export const SCHEMA_VERSION = 4;

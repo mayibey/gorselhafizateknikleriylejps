@@ -6,7 +6,7 @@
  * İki implementasyon da bu imzaları birebir export eder.
  */
 
-import type { Branch, CardWithSrs, LawWithCount } from '@/db/schema';
+import type { Branch, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
 import type { RecordReviewResult, SrsCevap } from '@/db/types';
 import type { QueueCard } from '@/lib/queue';
 
@@ -23,3 +23,9 @@ export function recordReview(
   mevcutKutu: number,
   cevap: SrsCevap,
 ): Promise<RecordReviewResult>;
+export function kaydetPerformans(
+  cardId: number,
+  kaynak: PerformansKaynak,
+  sonuc: string,
+): Promise<void>;
+export function getPerformans(): Promise<PerformansSatir[]>;

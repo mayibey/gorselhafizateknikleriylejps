@@ -10,6 +10,8 @@ import {
   type CardWithLaw,
   type CardWithSrs,
   type LawWithCount,
+  type PerformansKaynak,
+  type PerformansSatir,
   type Srs,
 } from '@/db/schema';
 import { SEED_BRANCHES, SEED_CARDS, SEED_LAW_BRANCHES, SEED_LAWS } from '@/db/seed';
@@ -60,6 +62,15 @@ class SqliteBackend implements Backend {
       // srs ilerlemesi aynen korunur.
       await db.execAsync('CREATE TABLE IF NOT EXISTS study_days (gun TEXT PRIMARY KEY)');
       version = 3;
+    }
+    if (version < 4) {
+      // kart_performans (akıllı öğrenme — cevap logu). TAMAMEN EKLEMELİ: yalnız CREATE
+      // TABLE IF NOT EXISTS — srs/study_days/laws/cards/branches'e DOKUNULMAZ.
+      // Mevcut v3 telefonlar bu adımla kart_performans alır, ilerleme aynen korunur.
+      await db.execAsync(
+        'CREATE TABLE IF NOT EXISTS kart_performans (id INTEGER PRIMARY KEY AUTOINCREMENT, card_id INTEGER NOT NULL, kaynak TEXT NOT NULL, sonuc TEXT NOT NULL, tarih TEXT NOT NULL)',
+      );
+      version = 4;
     }
 
     if (version !== (row?.user_version ?? 0)) {
@@ -207,6 +218,24 @@ class SqliteBackend implements Backend {
     const rows = await this.db.getAllAsync<{ gun: string }>('SELECT gun FROM study_days');
     return rows.map((r) => r.gun);
   }
+
+  async kaydetPerformans(cardId: number, kaynak: PerformansKaynak, sonuc: string): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    await this.db.runAsync(
+      'INSERT INTO kart_performans (card_id, kaynak, sonuc, tarih) VALUES (?, ?, ?, ?)',
+      cardId,
+      kaynak,
+      sonuc,
+      bugunISO(),
+    );
+  }
+
+  async getPerformans(): Promise<PerformansSatir[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    return this.db.getAllAsync<PerformansSatir>(
+      'SELECT card_id, kaynak, sonuc, tarih FROM kart_performans ORDER BY id',
+    );
+  }
 }
 
 const backend: Backend = new SqliteBackend();
@@ -265,6 +294,8 @@ export async function recordReview(
   const next = srsGuncelle(mevcutKutu, cevap);
   await backend.saveSrs(cardId, next.kutu, next.sonraki_tarih);
   await backend.markStudyDay(bugunISO());
+  // Akıllı öğrenme: çalışma cevabını performans loguna ekle (SRS'ten ayrı katman).
+  await backend.kaydetPerformans(cardId, 'calisma', cevap);
   return next;
 }
 
@@ -272,4 +303,20 @@ export async function recordReview(
 export async function getStudyDays(): Promise<string[]> {
   await initDatabase();
   return backend.getStudyDays();
+}
+
+/** Bir cevabı performans loguna ekler (akıllı öğrenme — Katman 1). */
+export async function kaydetPerformans(
+  cardId: number,
+  kaynak: PerformansKaynak,
+  sonuc: string,
+): Promise<void> {
+  await initDatabase();
+  return backend.kaydetPerformans(cardId, kaynak, sonuc);
+}
+
+/** Ham performans loglarını (ekleme sırasıyla) döndürür; analiz Katman 2'de. */
+export async function getPerformans(): Promise<PerformansSatir[]> {
+  await initDatabase();
+  return backend.getPerformans();
 }

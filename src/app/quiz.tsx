@@ -8,7 +8,7 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { getCardsByLaw } from '@/db/database';
+import { getCardsByLaw, kaydetPerformans } from '@/db/database';
 import { MIN_HAVUZ, puanla, type QuizSoru, quizUret, SECENEK_SAYISI } from '@/lib/quiz';
 
 type Cevap = { soruIndex: number; secilenIndex: number };
@@ -61,8 +61,15 @@ export default function QuizScreen() {
   }, [yukle]);
 
   function sec(i: number) {
-    if (secilen !== null) return; // soru zaten cevaplandı
+    if (secilen !== null || !sorular) return; // soru zaten cevaplandı
     setSecilen(i);
+    // Akıllı öğrenme: quiz cevabını logla (ateşle-unut; UI'yı bloklamaz/bozmaz).
+    const soruO = sorular[index];
+    void kaydetPerformans(
+      soruO.kaynakCardId,
+      'quiz',
+      i === soruO.dogruIndex ? 'dogru' : 'yanlis',
+    ).catch(() => {});
   }
 
   function sonraki() {
