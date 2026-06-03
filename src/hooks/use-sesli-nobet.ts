@@ -59,6 +59,16 @@ export function useSesliNobet(kartlar: QueueCard[]): SesliNobet {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
+  // Ekran kapanınca (unmount) sesi durdur. Web'de (HTML5 Audio) auto-release sesi
+  // kesmiyordu → açık pause. Native'de zaten duruyor; bu ekstra garanti.
+  useEffect(() => {
+    return () => {
+      try {
+        player.pause();
+      } catch {}
+    };
+  }, [player]);
+
   function oynatDurdur() {
     if (kaynak === null) return;
     if (oynuyor) {

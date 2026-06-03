@@ -9,6 +9,7 @@
  */
 
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
+import { useEffect } from 'react';
 
 import { KART_SESLERI } from '../assets/kart-sesleri';
 
@@ -30,6 +31,13 @@ export function useKartSesi(sesYolu: string | null | undefined): KartSesi {
   const varMi = kaynak !== null;
   const oynuyor = varMi ? (durum?.playing ?? false) : false;
   const yukleniyor = varMi ? (durum?.isBuffering ?? false) : false;
+
+  // Kart değişince / ekran kapanınca sesi durdur (web'de auto-release kesmiyordu).
+  useEffect(() => () => {
+    try {
+      player.pause();
+    } catch {}
+  }, [player]);
 
   function calistirDurdur() {
     if (!varMi) return;
