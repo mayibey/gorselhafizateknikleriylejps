@@ -9,7 +9,7 @@
 ## 1. Nerede kaldık (özet)
 Çalışan bir iskelet var: 4 sekmeli navigasyon, gerçek SRS döngüsü, gerçek TCK görselleri, kanun seçip çalışma, branş sistemi + onboarding + DB migration. **Mevzuat artık 66 gerçek kanun başlığıyla dolu (25 müşterek + 41 jandarma, `51ab4bb`); kartlar TCK hariç boş ("yakında").** Android EAS build config de hazır (`e256f95`, profiller: preview/development/production). Sırada: içerik maratonu (49 TCK görselini gerçek kartlara bağlamak).
 
-Geliştirme web'de yürüyor (`npx expo start --web` → localhost). Telefonda Expo Go bağlanma sorunlu (aşağıda), kalıcı çözüm: DB migration + ileride development build.
+Geliştirme web'de yürüyor (`npx expo start --web` → localhost). **iPhone Expo Go artık çalışıyor** — bunun için proje SDK 54'e indirildi (`88983ca`; Apple App Store'daki Expo Go en fazla SDK 54 destekliyor). VirtualView/onModeChange hatası gitti.
 
 ---
 
@@ -25,6 +25,7 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). Telefonda E
 - `e256f95` Android EAS build config: eas.json (3 profil), android.package com.mayibey.jsps, expo-dev-client, name/slug düzeltme, EAS projectId
 - `87b4d91` docs: JSPS mevzuat listesi PDF (seed kaynağı)
 - `51ab4bb` Mevzuat seed: gerçek JSPS listesi (25 müşterek + 41 jandarma = 66 kanun), TCK id1 pinli, law_branches jandarma eşlemesi, MEBS/Mali placeholder kaldırıldı, v2 migration (referans veri re-seed, srs korunur)
+- `88983ca` **SDK 56 → SDK 54 tam downgrade**: iPhone Expo Go uyumu (Apple App Store'daki Expo Go en fazla SDK 54). RN 0.81.5, expo 54.0.35, router 6, worklets 0.5.1, reanimated 4.1, typescript 5.9.2. node_modules+lock sıfırdan kuruldu (tek RN 0.81.5, ERESOLVE'suz). 4 şablon dosyada tip uyumu düzeltmesi (external-link Href, collapsible SymbolView, use-theme ColorSchemeName, animated-icon absoluteFillObject) — çekirdek mantık (database/srs/queue/kanun-kartlari/ekranlar) dokunulmadı. Web + iPhone test edildi: VirtualView hatası gitti.
 
 ## 3. Devam eden iş
 - Şu an aktif tur yok. **Mevzuat 66 kanun başlığı seed'lendi (kartlar TCK hariç boş — Mevzuat'ta "yakında").** Sırada (Backlog'dan): **içerik maratonu** — TCK 49 görselini gerçek kartlara bağla (madde no + başlık + anlatım), sonra diğer müşterek + jandarma kanunlarının içeriği.
@@ -54,6 +55,7 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). Telefonda E
 - **Migration = user_version runner** (DB adı yükseltme DEĞİL): kullanıcının SRS ilerlemesi korunsun.
 - **Branş storage = AsyncStorage** (SQLite settings değil): web'de de kalıcı, onboarding her yenilemede tekrar çıkmasın.
 - **Alt sınıf (subay/astsubay) şimdilik yok**: YAGNI, sadece ana branş.
+- **SDK 54'te sabit (56 değil)**: iPhone App Store'daki Expo Go en fazla SDK 54 destekliyor (Apple inceleme gecikmesi). 56'da telefonda test imkânsızdı → tüm ekosistem 54'e indirildi (`88983ca`). SDK 56'ya çıkma; çıkılırsa iPhone Expo Go bağlanamaz. Detay/pinler CLAUDE.md "SÜRÜM SABİT" maddesinde.
 
 ## 7. İş akışı kuralları (özet — detay CLAUDE.md'de)
 - Her değişiklikten önce KEŞİF, sonra FIX. Keşifsiz fix yok.
