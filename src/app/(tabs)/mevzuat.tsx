@@ -36,6 +36,10 @@ export default function MevzuatScreen() {
     router.push({ pathname: '/akis', params: { lawId: String(law.id) } });
   }
 
+  function sesliNobete(law: LawWithCount) {
+    router.push({ pathname: '/sesli-nobet', params: { lawId: String(law.id) } });
+  }
+
   return (
     <Screen title="Mevzuat">
       {hata ? (
@@ -52,8 +56,8 @@ export default function MevzuatScreen() {
         <EmptyState ikon="book-outline" baslik="Bu branşta kanun yok" />
       ) : (
         <>
-          <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} />
-          <Bolum baslik="BRANŞ" laws={bransKanunlari} onPress={kanunaGit} />
+          <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} onSes={sesliNobete} />
+          <Bolum baslik="BRANŞ" laws={bransKanunlari} onPress={kanunaGit} onSes={sesliNobete} />
         </>
       )}
     </Screen>
@@ -64,10 +68,12 @@ function Bolum({
   baslik,
   laws,
   onPress,
+  onSes,
 }: {
   baslik: string;
   laws: LawWithCount[];
   onPress: (law: LawWithCount) => void;
+  onSes: (law: LawWithCount) => void;
 }) {
   return (
     <View style={styles.bolum}>
@@ -79,13 +85,21 @@ function Bolum({
           Bu bölümde kanun yok.
         </AppText>
       ) : (
-        laws.map((law) => <KanunSatir key={law.id} law={law} onPress={onPress} />)
+        laws.map((law) => <KanunSatir key={law.id} law={law} onPress={onPress} onSes={onSes} />)
       )}
     </View>
   );
 }
 
-function KanunSatir({ law, onPress }: { law: LawWithCount; onPress: (law: LawWithCount) => void }) {
+function KanunSatir({
+  law,
+  onPress,
+  onSes,
+}: {
+  law: LawWithCount;
+  onPress: (law: LawWithCount) => void;
+  onSes: (law: LawWithCount) => void;
+}) {
   const bos = law.kartSayisi === 0;
   return (
     <Pressable
@@ -99,6 +113,14 @@ function KanunSatir({ law, onPress }: { law: LawWithCount; onPress: (law: LawWit
           {bos ? 'yakında' : `${law.kartSayisi} kart`}
         </AppText>
       </View>
+      {/* Ayrı giriş: Sesli Nöbet (akış navigasyonunu bozmaz; kendi onPress'i var). */}
+      <Pressable
+        onPress={() => onSes(law)}
+        hitSlop={8}
+        accessibilityRole="button"
+        accessibilityLabel="Sesli Nöbet">
+        <MaterialCommunityIcons name="headphones" size={22} color={Palette.lacivert} />
+      </Pressable>
       <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
     </Pressable>
   );

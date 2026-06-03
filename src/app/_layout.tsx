@@ -45,6 +45,7 @@ function RootNavigator() {
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="akis" />
         <Stack.Screen name="quiz" />
+        <Stack.Screen name="sesli-nobet" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
       </Stack>
