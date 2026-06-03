@@ -109,9 +109,9 @@ export const SEED_LAW_BRANCHES: LawBranch[] = Array.from({ length: 41 }, (_, i) 
 }));
 
 /**
- * Kartlar — placeholder. Tümü TCK (law_id 1); 49 TCK görseli + madde metinleri
- * ayrı içerik turunda bağlanacak. (Eski PVSK placeholder kartı, id şeması
- * değiştiği için kaldırıldı.)
+ * Kartlar. TCK (law_id 1, id 1-5) placeholder + 4733 m.8 (law_id 49, id 100-109,
+ * 10 panel görsel + 1 sesli kart). Başlıklar/metinler geçici; gerçek içerik
+ * eklendikçe genişler. (Eski PVSK placeholder kartı, id şeması değiştiği için kaldırıldı.)
  */
 export const SEED_CARDS: Card[] = [
   {
@@ -148,6 +148,98 @@ export const SEED_CARDS: Card[] = [
     baslik: 'HAKARET',
     anlatim_metni: 'Yer tutucu anlatım metni — hakaret suçu.',
     gorsel_yolu: null,
+    ses_yolu: null,
+  },
+
+  // --- 4733 m.8 (law_id 49, jandarma) — 10 panel, akışta bu sırayla; özet en son ---
+  {
+    id: 100,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 1. BÖLÜM',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_1',
+    ses_yolu: null,
+  },
+  {
+    id: 101,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 2. BÖLÜM',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_2',
+    ses_yolu: null,
+  },
+  {
+    id: 102,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 3. BÖLÜM',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_3',
+    ses_yolu: null,
+  },
+  {
+    id: 103,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 4. BÖLÜM',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_4',
+    ses_yolu: null,
+  },
+  {
+    id: 104,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 5. BÖLÜM',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_5',
+    ses_yolu: null,
+  },
+  {
+    id: 105,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 6. BÖLÜM',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_6',
+    ses_yolu: '4733_m8_6',
+  },
+  {
+    id: 106,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 7. BÖLÜM',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_7',
+    ses_yolu: null,
+  },
+  {
+    id: 107,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 8. BÖLÜM (A)',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_8a',
+    ses_yolu: null,
+  },
+  {
+    id: 108,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — 8. BÖLÜM (B)',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8.',
+    gorsel_yolu: '4733_m8_8b',
+    ses_yolu: null,
+  },
+  {
+    id: 109,
+    law_id: 49,
+    madde_no: '4733 m.8',
+    baslik: '4733 M.8 — ÖZET',
+    anlatim_metni: 'Yer tutucu anlatım metni — 4733 m.8 özet.',
+    gorsel_yolu: '4733_m8_ozet',
     ses_yolu: null,
   },
 ];

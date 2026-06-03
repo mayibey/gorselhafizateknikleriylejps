@@ -120,4 +120,4 @@ CREATE TABLE IF NOT EXISTS kart_performans (
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 4;
+export const SCHEMA_VERSION = 5;

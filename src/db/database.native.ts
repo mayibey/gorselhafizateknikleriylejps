@@ -72,6 +72,13 @@ class SqliteBackend implements Backend {
       );
       version = 4;
     }
+    if (version < 5) {
+      // 4733 m.8 kartları (ve gelecekteki yeni içerik) eklendi. TAMAMEN EKLEMELİ:
+      // seedReference() INSERT OR IGNORE → yeni id'ler eklenir, mevcut veri DEĞİŞMEZ,
+      // srs (kullanıcı ilerlemesi) KORUNUR. DELETE/DROP YOK.
+      await this.seedReference();
+      version = 5;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

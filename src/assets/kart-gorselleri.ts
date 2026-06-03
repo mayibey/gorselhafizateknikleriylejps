@@ -4,6 +4,16 @@
 import type { ImageRequireSource } from 'react-native';
 
 export const KART_GORSELLERI: Record<string, ImageRequireSource> = {
+  "4733_m8_1": require("../../assets/kartlar/4733/4733_m8_1.png"),
+  "4733_m8_2": require("../../assets/kartlar/4733/4733_m8_2.png"),
+  "4733_m8_3": require("../../assets/kartlar/4733/4733_m8_3.png"),
+  "4733_m8_4": require("../../assets/kartlar/4733/4733_m8_4.png"),
+  "4733_m8_5": require("../../assets/kartlar/4733/4733_m8_5.png"),
+  "4733_m8_6": require("../../assets/kartlar/4733/4733_m8_6.png"),
+  "4733_m8_7": require("../../assets/kartlar/4733/4733_m8_7.png"),
+  "4733_m8_8a": require("../../assets/kartlar/4733/4733_m8_8a.png"),
+  "4733_m8_8b": require("../../assets/kartlar/4733/4733_m8_8b.png"),
+  "4733_m8_ozet": require("../../assets/kartlar/4733/4733_m8_ozet.png"),
   "tck_ayirt_m21_22": require("../../assets/kartlar/tck/tck_ayirt_m21_22.png"),
   "tck_m1": require("../../assets/kartlar/tck/tck_m1.png"),
   "tck_m2": require("../../assets/kartlar/tck/tck_m2.png"),
