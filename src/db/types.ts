@@ -3,7 +3,7 @@
  * Buraya expo-sqlite gibi platforma özel HİÇBİR bağ girmez.
  */
 
-import type { Branch, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
+import type { Branch, CardWithLaw, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -14,6 +14,8 @@ export type { QueueCard, SrsDurum } from '@/lib/queue';
 export interface Backend {
   init(): Promise<void>;
   getStudyCards(): Promise<CardWithSrs[]>;
+  /** Tüm kartlar + kanun bilgisi (srs JOIN'siz; performans analizi için metadata). */
+  getAllCards(): Promise<CardWithLaw[]>;
   getCardCount(): Promise<number>;
   getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
   getBranches(): Promise<Branch[]>;

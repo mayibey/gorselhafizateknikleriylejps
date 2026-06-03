@@ -8,20 +8,24 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getBranches, getCardCount, getStudyCards } from '@/db/database';
+import { getAllCards, getBranches, getCardCount, getPerformans, getStudyCards } from '@/db/database';
 import type { Branch } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
+import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { hesaplaIstatistik, type Istatistik, type KutuDagilimi, MAKS_KUTU, OGRENILDI_KUTU } from '@/lib/stats';
+
+type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet };
 
 export default function SicilScreen() {
   const router = useRouter();
   const { brans } = useBrans();
   const [branches, setBranches] = useState<Branch[] | null>(null);
   const [ist, setIst] = useState<Istatistik | null>(null);
+  const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [hata, setHata] = useState(false);
 
-  // Odağa her gelindiğinde (çalışmadan dönünce) branş + istatistikleri tazele.
-  // İstatistik = ana veri (hata → retry); branş adı degrade olur ("—").
+  // Odağa her gelindiğinde (çalışmadan dönünce) branş + istatistik + zayıf analizi tazele.
+  // İstatistik = ana veri (hata → retry); branş adı + zayıf analizi degrade olur (ayrı catch).
   const yukle = useCallback(() => {
     setHata(false);
     void getBranches()
@@ -30,6 +34,10 @@ export default function SicilScreen() {
     void Promise.all([getStudyCards(), getCardCount()])
       .then(([studied, toplam]) => setIst(hesaplaIstatistik(studied, toplam)))
       .catch(() => setHata(true));
+    // Zayıf analizi AYRI: hatası İLERLEME/KUTU DAĞILIMI'nı bozmaz.
+    void Promise.all([getPerformans(), getAllCards()])
+      .then(([perf, cards]) => setZayif({ liste: zayifKartlar(perf, cards), ozet: eksikOzet(perf, cards) }))
+      .catch(() => setZayif(null));
   }, []);
 
   useFocusEffect(yukle);
@@ -91,9 +99,71 @@ export default function SicilScreen() {
               Kutu {OGRENILDI_KUTU}+ = öğrenildi
             </AppText>
           </View>
+
+          {/* Zayıf Mevziler — geri besleme havuzu (son denemede zor/yanlış) */}
+          <View style={styles.istatistikKart}>
+            <AppText variant="etiket" color="solukMetin" bold>
+              ZAYIF MEVZİLER
+            </AppText>
+            <ZayifBolum zayif={zayif} />
+          </View>
         </>
       )}
     </Screen>
+  );
+}
+
+/** Geri besleme havuzu: top-5 zayıf kart + özet; veri yok/zayıf yok durumları. */
+function ZayifBolum({ zayif }: { zayif: ZayifVeri | null }) {
+  if (zayif === null) {
+    return (
+      <AppText variant="kucuk" color="solukMetin">
+        Yükleniyor…
+      </AppText>
+    );
+  }
+  if (zayif.ozet.toplamDeneme === 0) {
+    return (
+      <AppText variant="kucuk" color="solukMetin">
+        Henüz yeterli veri yok — çalış veya quiz çöz, zayıf konuların burada toplanır.
+      </AppText>
+    );
+  }
+  if (zayif.liste.length === 0) {
+    return (
+      <AppText variant="kucuk" color="yesil" bold>
+        Zayıf mevzin yok 👏
+      </AppText>
+    );
+  }
+
+  const ilk5 = zayif.liste.slice(0, 5);
+  const kalan = zayif.liste.length - ilk5.length;
+  return (
+    <>
+      {zayif.ozet.enZayifKanun ? (
+        <AppText variant="kucuk" color="solukMetin">
+          En zayıf: {zayif.ozet.enZayifKanun}
+        </AppText>
+      ) : null}
+      {ilk5.map((z) => (
+        <View key={z.card.id} style={styles.zayifSatir}>
+          <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
+            {z.card.madde_no} — {z.card.baslik}
+          </AppText>
+          <View style={styles.zayifRozet}>
+            <AppText variant="etiket" color="beyaz" bold>
+              {z.yanlisSayisi} yanlış
+            </AppText>
+          </View>
+        </View>
+      ))}
+      {kalan > 0 ? (
+        <AppText variant="etiket" color="solukMetin">
+          +{kalan} daha
+        </AppText>
+      ) : null}
+    </>
   );
 }
 
@@ -185,6 +255,21 @@ const styles = StyleSheet.create({
   statSatir: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  zayifSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: Spacing.two,
+  },
+  zayifAd: {
+    flex: 1,
+  },
+  zayifRozet: {
+    backgroundColor: Palette.kirmizi,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.half,
+    borderRadius: Radius.s,
   },
   stat: {
     alignItems: 'center',

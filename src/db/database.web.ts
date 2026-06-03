@@ -46,6 +46,10 @@ class MemoryBackend implements Backend {
     });
   }
 
+  async getAllCards(): Promise<CardWithLaw[]> {
+    return this.cardsWithLaw();
+  }
+
   async getCardCount(): Promise<number> {
     return SEED_CARDS.length;
   }
@@ -114,6 +118,12 @@ export function initDatabase(): Promise<void> {
 export async function getStudyCards(): Promise<CardWithSrs[]> {
   await initDatabase();
   return backend.getStudyCards();
+}
+
+/** Tüm kartları kanun bilgisiyle döndürür (performans analizi için metadata). */
+export async function getAllCards(): Promise<CardWithLaw[]> {
+  await initDatabase();
+  return backend.getAllCards();
 }
 
 /** Toplam kart sayısı (istatistik paydası). */

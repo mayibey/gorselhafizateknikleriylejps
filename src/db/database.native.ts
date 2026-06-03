@@ -134,6 +134,17 @@ class SqliteBackend implements Backend {
     );
   }
 
+  async getAllCards(): Promise<CardWithLaw[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    // Tüm kartlar + kanun bilgisi; srs JOIN YOK → quiz-only kartlar da gelir.
+    return this.db.getAllAsync<CardWithLaw>(
+      `SELECT c.*, l.blok AS blok, l.ad AS law_ad
+       FROM cards c
+       JOIN laws l ON l.id = c.law_id
+       ORDER BY c.id`,
+    );
+  }
+
   async getCardCount(): Promise<number> {
     if (!this.db) throw new Error('DB hazır değil');
     const row = await this.db.getFirstAsync<{ n: number }>('SELECT COUNT(*) AS n FROM cards');
@@ -252,6 +263,12 @@ export function initDatabase(): Promise<void> {
 export async function getStudyCards(): Promise<CardWithSrs[]> {
   await initDatabase();
   return backend.getStudyCards();
+}
+
+/** Tüm kartları kanun bilgisiyle döndürür (performans analizi için metadata). */
+export async function getAllCards(): Promise<CardWithLaw[]> {
+  await initDatabase();
+  return backend.getAllCards();
 }
 
 /** Toplam kart sayısı (istatistik paydası). */
