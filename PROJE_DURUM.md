@@ -28,16 +28,19 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). **iPhone Ex
 - `88983ca` **SDK 56 → SDK 54 tam downgrade**: iPhone Expo Go uyumu (Apple App Store'daki Expo Go en fazla SDK 54). RN 0.81.5, expo 54.0.35, router 6, worklets 0.5.1, reanimated 4.1, typescript 5.9.2. node_modules+lock sıfırdan kuruldu (tek RN 0.81.5, ERESOLVE'suz). 4 şablon dosyada tip uyumu düzeltmesi (external-link Href, collapsible SymbolView, use-theme ColorSchemeName, animated-icon absoluteFillObject) — çekirdek mantık (database/srs/queue/kanun-kartlari/ekranlar) dokunulmadı. Web + iPhone test edildi: VirtualView hatası gitti.
 - `f1962a6` docs: SDK sabiti 56 → 54 (CLAUDE.md sürüm pinleri + PROJE_DURUM downgrade notu)
 - `947fd1c` **İstatistik Faz A**: `lib/stats.ts` (yeni saf dosya — `hesaplaIstatistik`: çalışılan/öğrenilen/hazırlık%/kutu dağılımı; öğrenildi = kutu≥4), `getCardCount` (4-dosya senkron). Karargah hazırlık % gerçeğe bağlandı, nöbet serisi geçici `—` (streak Faz B'de). Sicil: İLERLEME + KUTU DAĞILIMI kartları (placeholder kalktı). Web/native parite: stats yalnız kutu≥1 (çalışılmış) kart üzerinden. external-link typedRoutes regresyonu (`Extract<…,string>`) düzeltildi. Şema değişmedi (SCHEMA_VERSION=2).
+- `2f5b84f` docs: istatistik Faz A tamamlandı notu
+- `6ca939a` **İstatistik Faz B (streak)**: `study_days (gun TEXT PK)` tablosu + **migration v3** (tamamen eklemeli — yalnız `CREATE TABLE IF NOT EXISTS`, srs/laws/cards/branches dokunulmaz; v2 telefonlar otomatik v3 alır, ilerleme korunur). `markStudyDay`/`getStudyDays` (4-dosya senkron); `recordReview` her cevapta `bugunISO()` gününü işaretler. `lib/stats.ts`'e saf `hesaplaStreak` + `oncekiGun` (UTC; çapa bugün-veya-dün → geriye kesintisiz say → yoksa 0). Karargah nöbet serisi gerçek (0/yükleniyor → `—`). Web bellek-içi → yenilemede streak sıfırlanır (srs davranışıyla tutarlı). **SCHEMA_VERSION 2→3.**
 
 ## 3. Devam eden iş
-- **İstatistik Faz A tamamlandı (`947fd1c`)**: Karargah hazırlık % + Sicil ilerleme/kutu dağılımı gerçeğe bağlı. **Sırada Faz B — Nöbet serisi (streak)**: şema değişikliği gerektirir (srs'te çalışma günü tutulmuyor) → `study_days` tablosu (`gun TEXT PK`), `recordReview`'da `bugunISO()` ekle, `SCHEMA_VERSION` 2→3 migration (srs korunur), `lib/stats.ts`'e saf `hesaplaStreak`, Karargah "Nöbet serisi" `—` yerine gerçek değer. İsteğe bağlı: `(gun, adet)` ile "bugün çalışılan kart".
-- Diğer açık iş: **içerik maratonu** — TCK 49 görselini gerçek kartlara bağla (madde no + başlık + anlatım), sonra diğer müşterek + jandarma kanunlarının içeriği. (Şu an toplam 4 kart → hazırlık % paydası küçük; içerik artınca anlamlanır.)
+- **İstatistikler BİTTİ (Faz A `947fd1c` + Faz B `6ca939a`).** Karargah (hazırlık % + nöbet serisi) ve Sicil (ilerleme + kutu dağılımı) metriklerinin tümü gerçek SRS verisine bağlı. Statik kalan tek metrik kalmadı; istisna: Karargah "Mini Tatbikat" ve "Günün Maddesi" (bilerek kapsam dışı — Tatbikat/içerik işine ait). DB şema sürümü **3** (study_days dahil).
+- **Sırada: içerik maratonu** — TCK 49 görselini gerçek kartlara bağla (madde no + başlık + anlatım), sonra diğer müşterek + jandarma kanunlarının içeriği. (Şu an toplam 4 kart → hazırlık % paydası küçük; içerik artınca anlamlanır.)
+- İsteğe bağlı sonraki istatistik işi (gerekirse): "bugün çalışılan kart" için `study_days`'e `(gun, adet)` kolonu (v4 migration); streak için ŞART değil.
 
 ## 4. Backlog (planlı işler, sıra kabaca)
 - Tatbikat ekranı (quiz/sınav sistemi) — kartlardan otomatik soru, çıkmış sorular kategorisi
-- Sicil ekranı istatistikleri: hazırlık % + çalışılan/öğrenilen + kutu dağılımı ✅ (`947fd1c`, Faz A). Kalan: streak (Faz B), çalışılan saat (zaman ölçümü yok — büyük iş).
+- Sicil ekranı istatistikleri: hazırlık % + çalışılan/öğrenilen + kutu dağılımı ✅ (`947fd1c`, Faz A). Kalan: çalışılan saat (zaman ölçümü yok — büyük iş, opsiyonel).
 - Ses entegrasyonu (Faz 4): expo-audio kart anlatımı + "Sesli Nöbet" (arka arkaya, kilit ekranı). Otomatik başlama kararı verilecek (öneri: otomatik başlamasın).
-- Karargah metrikleri: Hazırlık % gerçeğe bağlandı ✅ (`947fd1c`). Kalan: Nöbet serisi (streak, Faz B — şu an `—`).
+- Karargah metrikleri: Hazırlık % ✅ (`947fd1c`) + Nöbet serisi/streak ✅ (`6ca939a`) gerçeğe bağlandı. (Mini Tatbikat + Günün Maddesi bilerek statik — kapsam dışı.)
 - Dikey ekran kilidi (yatay mod kapat)
 - **İçerik maratonu**: 49 TCK görselini gerçek kartlara bağla (her birine madde no + başlık + anlatım metni). Sonra 65 gerçek kanun. Önce Müşterek + Jandarma.
 - Development build (Faz 6): Expo Go/ngrok derdini kökten çözer, telefonda kendi uygulaman gibi açılır
