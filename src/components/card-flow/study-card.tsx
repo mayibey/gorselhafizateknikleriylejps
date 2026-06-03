@@ -2,9 +2,12 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { StyleSheet, View } from 'react-native';
 
+import { Watermark } from '@/components/card-flow/watermark';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { CardWithSrs } from '@/db/schema';
+import { useCihazKimlik } from '@/hooks/use-cihaz-kimlik';
+import { bugunISO } from '@/lib/srs';
 // Üretilen registry src/assets altında; '@/assets/*' alias'ı gerçek assets/ klasörüne
 // gittiği için göreli import kullanıyoruz.
 import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
@@ -12,12 +15,16 @@ import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
 export function StudyCard({ card }: { card: CardWithSrs }) {
   const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
+  const { kimlik } = useCihazKimlik();
+  // Forensic filigran: kimlik yüklenince render edilir (yoksa overlay yok).
+  const filigran = kimlik ? <Watermark metin={`JSPS • ${kimlik} • ${bugunISO()}`} /> : null;
 
   // Görselli mod: kart kendi künyesini içerir → uygulama şeritleri gösterilmez.
   if (gorsel !== undefined) {
     return (
       <View style={styles.card}>
         <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
+        {filigran}
       </View>
     );
   }
@@ -61,6 +68,7 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
           </AppText>
         )}
       </View>
+      {filigran}
     </View>
   );
 }

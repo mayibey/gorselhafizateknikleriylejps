@@ -52,6 +52,10 @@ export const Spacing = {
 
 export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
 export const MaxContentWidth = 800;
+
+/** Forensic filigran: fotoğrafta görünür ama kartı okutur opaklık + çapraz açı. */
+export const FiligranOpaklik = 0.15;
+export const FiligranAci = '-30deg';
 /** Kart Akışı'nın "telefon kolonu" genişlik tavanı (web'de ortalanır, dar ekranda devreye girmez). */
 export const CardFlowMaxWidth = 460;
 
