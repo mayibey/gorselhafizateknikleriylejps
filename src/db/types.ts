@@ -14,6 +14,7 @@ export type { QueueCard, SrsDurum } from '@/lib/queue';
 export interface Backend {
   init(): Promise<void>;
   getStudyCards(): Promise<CardWithSrs[]>;
+  getCardCount(): Promise<number>;
   getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
   getBranches(): Promise<Branch[]>;
   getLaws(bransSlug: string): Promise<LawWithCount[]>;

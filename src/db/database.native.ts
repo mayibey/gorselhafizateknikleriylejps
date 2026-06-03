@@ -115,6 +115,12 @@ class SqliteBackend implements Backend {
     );
   }
 
+  async getCardCount(): Promise<number> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const row = await this.db.getFirstAsync<{ n: number }>('SELECT COUNT(*) AS n FROM cards');
+    return row?.n ?? 0;
+  }
+
   async getDailyQueue(yeniLimit: number = YENI_LIMIT): Promise<QueueCard[]> {
     if (!this.db) throw new Error('DB hazır değil');
     const cards = await this.db.getAllAsync<CardWithLaw>(
@@ -197,6 +203,12 @@ export function initDatabase(): Promise<void> {
 export async function getStudyCards(): Promise<CardWithSrs[]> {
   await initDatabase();
   return backend.getStudyCards();
+}
+
+/** Toplam kart sayısı (istatistik paydası). */
+export async function getCardCount(): Promise<number> {
+  await initDatabase();
+  return backend.getCardCount();
 }
 
 /** Bugünün çalışma kuyruğu: vakti gelmiş tekrarlar + en fazla yeniLimit yeni kart. */

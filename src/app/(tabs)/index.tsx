@@ -6,17 +6,22 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getDailyQueue } from '@/db/database';
+import { getCardCount, getDailyQueue, getStudyCards } from '@/db/database';
 import type { QueueCard } from '@/lib/queue';
+import { hesaplaIstatistik } from '@/lib/stats';
 
 export default function KarargahScreen() {
   const router = useRouter();
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
+  const [hazirlik, setHazirlik] = useState<number | null>(null);
 
-  // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu tazele.
+  // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu + hazırlık %'sini tazele.
   useFocusEffect(
     useCallback(() => {
       void getDailyQueue().then(setQueue);
+      void Promise.all([getStudyCards(), getCardCount()]).then(([studied, toplam]) =>
+        setHazirlik(hesaplaIstatistik(studied, toplam).hazirlikYuzde),
+      );
     }, []),
   );
 
@@ -77,8 +82,9 @@ export default function KarargahScreen() {
 
       {/* Metrik kartları */}
       <View style={styles.metrikSatir}>
-        <Metrik deger="%38" etiket="Hazırlık" />
-        <Metrik deger="14" etiket="Nöbet serisi" />
+        <Metrik deger={hazirlik === null ? '—' : `%${hazirlik}`} etiket="Hazırlık" />
+        {/* Nöbet serisi (streak) Faz B'de gerçek veriye bağlanacak; yanlış sayı yerine "—". */}
+        <Metrik deger="—" etiket="Nöbet serisi" />
       </View>
 
       {/* Günün Maddesi */}

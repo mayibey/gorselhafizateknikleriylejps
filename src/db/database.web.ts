@@ -35,6 +35,10 @@ class MemoryBackend implements Backend {
     });
   }
 
+  async getCardCount(): Promise<number> {
+    return SEED_CARDS.length;
+  }
+
   async getDailyQueue(yeniLimit: number = YENI_LIMIT): Promise<QueueCard[]> {
     return gunlukKuyruk(this.cardsWithLaw(), this.srs, bugunISO(), yeniLimit);
   }
@@ -82,6 +86,12 @@ export function initDatabase(): Promise<void> {
 export async function getStudyCards(): Promise<CardWithSrs[]> {
   await initDatabase();
   return backend.getStudyCards();
+}
+
+/** Toplam kart sayısı (istatistik paydası). */
+export async function getCardCount(): Promise<number> {
+  await initDatabase();
+  return backend.getCardCount();
 }
 
 /** Bugünün çalışma kuyruğu: vakti gelmiş tekrarlar + en fazla yeniLimit yeni kart. */

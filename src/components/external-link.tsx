@@ -2,7 +2,11 @@ import { Link } from 'expo-router';
 import { openBrowserAsync, WebBrowserPresentationStyle } from 'expo-web-browser';
 import { type ComponentProps } from 'react';
 
-type Props = Omit<ComponentProps<typeof Link>, 'href'> & { href: ComponentProps<typeof Link>['href'] };
+// href'in yalnızca string üyeleri (nesne formu hariç): hem <Link href> hem
+// openBrowserAsync(string) için geçerli. typedRoutes üretilsin/üretilmesin sağlam.
+type Props = Omit<ComponentProps<typeof Link>, 'href'> & {
+  href: Extract<ComponentProps<typeof Link>['href'], string>;
+};
 
 export function ExternalLink({ href, ...rest }: Props) {
   return (

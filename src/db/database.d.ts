@@ -12,6 +12,7 @@ import type { QueueCard } from '@/lib/queue';
 
 export function initDatabase(): Promise<void>;
 export function getStudyCards(): Promise<CardWithSrs[]>;
+export function getCardCount(): Promise<number>;
 export function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
 export function getBranches(): Promise<Branch[]>;
 export function getLaws(bransSlug: string): Promise<LawWithCount[]>;
