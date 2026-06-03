@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { AudioBar } from '@/components/card-flow/audio-bar';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -139,6 +140,8 @@ export default function AkisScreen() {
             </View>
 
             <StudyCard card={queue[index]} />
+            {/* Sesli anlatım kontrolü. key=kart id → kart değişince remount → önceki ses durur. */}
+            <AudioBar key={queue[index].id} sesYolu={queue[index].ses_yolu} />
           </ScrollView>
 
           {/* Cevap butonları — ScrollView'ın dışında, kolonun altına sabit */}

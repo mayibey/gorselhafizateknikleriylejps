@@ -1,37 +1,53 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
+import { useKartSesi } from '@/hooks/use-kart-sesi';
 
-/** Yer tutucu ses çubuğu: play butonu + waveform placeholder + süre. Gerçek ses sonra. */
-export function AudioBar() {
-  const [caliyor, setCaliyor] = useState(false);
+/**
+ * Aktif kartın sesli anlatım kontrolü. Ses varsa Dinle/Duraklat, yoksa soluk "yakında".
+ * Otomatik başlamaz (yalnız butona basınca). Ses içeriği gelene kadar çoğu kart sessizdir.
+ */
+export function AudioBar({ sesYolu }: { sesYolu: string | null | undefined }) {
+  const { varMi, oynuyor, yukleniyor, calistirDurdur } = useKartSesi(sesYolu);
+
+  if (!varMi) {
+    return (
+      <View style={[styles.bar, styles.barPasif]}>
+        <View style={[styles.play, styles.playPasif]}>
+          <MaterialCommunityIcons name="volume-off" size={22} color={Palette.solukMetin} />
+        </View>
+        <AppText variant="kucuk" color="solukMetin">
+          Sesli anlatım yakında
+        </AppText>
+      </View>
+    );
+  }
 
   return (
-    <View style={styles.bar}>
-      <Pressable
-        style={({ pressed }) => [styles.play, pressed && styles.pressed]}
-        onPress={() => setCaliyor((v) => !v)}>
-        <MaterialCommunityIcons name={caliyor ? 'pause' : 'play'} size={24} color={Palette.beyaz} />
-      </Pressable>
-
-      {/* Waveform placeholder */}
-      <View style={styles.waveform}>
-        {WAVE.map((h, i) => (
-          <View key={i} style={[styles.cubuk, { height: h }]} />
-        ))}
+    <Pressable
+      style={({ pressed }) => [styles.bar, pressed && styles.pressed]}
+      onPress={calistirDurdur}
+      accessibilityRole="button"
+      accessibilityLabel={oynuyor ? 'Duraklat' : 'Dinle'}>
+      <View style={styles.play}>
+        {yukleniyor ? (
+          <ActivityIndicator color={Palette.beyaz} />
+        ) : (
+          <MaterialCommunityIcons
+            name={oynuyor ? 'pause' : 'play'}
+            size={24}
+            color={Palette.beyaz}
+          />
+        )}
       </View>
-
-      <AppText variant="kucuk" color="solukMetin">
-        0:42
+      <AppText variant="kucuk" color="lacivert" bold>
+        {oynuyor ? 'Duraklat' : 'Sesli anlatımı dinle'}
       </AppText>
-    </View>
+    </Pressable>
   );
 }
-
-const WAVE = [8, 16, 10, 22, 14, 26, 12, 20, 9, 18, 24, 11, 17, 13, 21, 10];
 
 const styles = StyleSheet.create({
   bar: {
@@ -44,6 +60,9 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.two,
   },
+  barPasif: {
+    opacity: 0.55,
+  },
   pressed: {
     opacity: 0.8,
   },
@@ -55,16 +74,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  waveform: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 3,
-    height: 28,
-  },
-  cubuk: {
-    flex: 1,
+  playPasif: {
     backgroundColor: Palette.kenarlik,
-    borderRadius: 2,
   },
 });
