@@ -4,6 +4,8 @@ import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getCardCount, getDailyQueue, getStudyCards, getStudyDays } from '@/db/database';
@@ -16,21 +18,50 @@ export default function KarargahScreen() {
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
+  const [hata, setHata] = useState(false);
 
   // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu + hazırlık % + nöbet serisini tazele.
-  useFocusEffect(
-    useCallback(() => {
-      void getDailyQueue().then(setQueue);
-      void Promise.all([getStudyCards(), getCardCount()]).then(([studied, toplam]) =>
-        setHazirlik(hesaplaIstatistik(studied, toplam).hazirlikYuzde),
-      );
-      void getStudyDays().then((gunler) => setStreak(hesaplaStreak(gunler, bugunISO())));
-    }, []),
-  );
+  // Kuyruk = ana veri (hata → ekran-içi retry). İstatistikler degrade olur ("—"), gating yapmaz.
+  const yukle = useCallback(() => {
+    setHata(false);
+    void getDailyQueue()
+      .then(setQueue)
+      .catch(() => setHata(true));
+    void Promise.all([getStudyCards(), getCardCount()])
+      .then(([studied, toplam]) => setHazirlik(hesaplaIstatistik(studied, toplam).hazirlikYuzde))
+      .catch(() => setHazirlik(null));
+    void getStudyDays()
+      .then((gunler) => setStreak(hesaplaStreak(gunler, bugunISO())))
+      .catch(() => setStreak(null));
+  }, []);
+
+  useFocusEffect(yukle);
 
   const tekrarSayisi = queue?.filter((c) => !c.yeni).length ?? 0;
   const yeniSayisi = queue?.filter((c) => c.yeni).length ?? 0;
   const bos = queue !== null && queue.length === 0;
+
+  if (hata) {
+    return (
+      <Screen title="Karargah">
+        <EmptyState
+          ikon="alert-circle-outline"
+          ikonRenk="kirmizi"
+          baslik="Yüklenemedi"
+          aciklama="Günlük durum yüklenemedi."
+          buton={{ etiket: 'Tekrar dene', onPress: yukle }}
+        />
+      </Screen>
+    );
+  }
+
+  if (queue === null) {
+    return (
+      <Screen title="Karargah">
+        <Loading metin="Yükleniyor…" />
+      </Screen>
+    );
+  }
 
   return (
     <Screen title="Karargah">

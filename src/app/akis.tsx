@@ -1,12 +1,13 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useCallback, useEffect, useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { AudioBar } from '@/components/card-flow/audio-bar';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { AppText } from '@/components/ui/app-text';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getCardsByLaw, getDailyQueue, recordReview } from '@/db/database';
 import type { QueueCard } from '@/lib/queue';
@@ -19,23 +20,44 @@ export default function AkisScreen() {
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
   const kanunModu = lawId != null && lawId !== '';
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
+  const [hata, setHata] = useState(false);
   const [index, setIndex] = useState(0);
   const [cozulen, setCozulen] = useState<Cozulen>({ tekrar: 0, yeni: 0 });
+  const [cevapHatasi, setCevapHatasi] = useState(false);
+
+  const yukle = useCallback(() => {
+    setHata(false);
+    setQueue(null);
+    setIndex(0);
+    setCozulen({ tekrar: 0, yeni: 0 });
+    const p = kanunModu ? getCardsByLaw(Number(lawId)) : getDailyQueue();
+    void p.then(setQueue).catch(() => setHata(true));
+  }, [kanunModu, lawId]);
 
   useEffect(() => {
-    const yukle = kanunModu ? getCardsByLaw(Number(lawId)) : getDailyQueue();
-    void yukle.then(setQueue);
-  }, [kanunModu, lawId]);
+    yukle();
+  }, [yukle]);
 
   async function cevapla(cevap: SrsCevap) {
     if (!queue) return;
     const card = queue[index];
-    await recordReview(card.id, card.kutu, cevap);
-    setCozulen((c) => (card.yeni ? { ...c, yeni: c.yeni + 1 } : { ...c, tekrar: c.tekrar + 1 }));
-    setIndex((i) => i + 1);
+    try {
+      setCevapHatasi(false);
+      await recordReview(card.id, card.kutu, cevap);
+      setCozulen((c) => (card.yeni ? { ...c, yeni: c.yeni + 1 } : { ...c, tekrar: c.tekrar + 1 }));
+      setIndex((i) => i + 1);
+    } catch {
+      // Buton kilitlenmez; kullanıcı tekrar deneyebilir.
+      setCevapHatasi(true);
+    }
   }
 
-  const bitti = queue !== null && index >= queue.length;
+  const bitti = queue !== null && queue.length > 0 && index >= queue.length;
+  const aktif = !hata && queue !== null && queue.length > 0 && index < queue.length;
+  const geriEtiket = kanunModu ? "Mevzuat'a dön" : "Karargah'a dön";
+  const ozetMetin = kanunModu
+    ? `${cozulen.tekrar + cozulen.yeni} kart çalıştın.`
+    : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`;
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
@@ -44,21 +66,21 @@ export default function AkisScreen() {
         <Pressable onPress={() => router.back()} hitSlop={12}>
           <MaterialCommunityIcons name="close" size={26} color={Palette.beyaz} />
         </Pressable>
-        {queue && !bitti ? (
+        {aktif ? (
           <View style={styles.headerMeta}>
             <AppText variant="govde" color="beyaz" bold numberOfLines={1} ellipsizeMode="tail">
-              {queue[index].baslik
-                ? `${queue[index].madde_no} — ${queue[index].baslik}`
-                : queue[index].madde_no}
+              {queue![index].baslik
+                ? `${queue![index].madde_no} — ${queue![index].baslik}`
+                : queue![index].madde_no}
             </AppText>
             <AppText variant="etiket" color="kenarlik">
-              {index + 1} / {queue.length}
+              {index + 1} / {queue!.length}
             </AppText>
           </View>
         ) : (
           <View style={styles.headerMeta} />
         )}
-        {queue && !bitti && queue[index].blok === 'müşterek' ? (
+        {aktif && queue![index].blok === 'müşterek' ? (
           <View style={styles.headerRozet}>
             <AppText variant="etiket" color="lacivert" bold>
               Müşterek
@@ -69,17 +91,43 @@ export default function AkisScreen() {
         )}
       </View>
 
-      {!queue ? (
-        <View style={styles.center}>
-          <ActivityIndicator color={Palette.lacivert} />
+      {hata ? (
+        <View style={styles.kolon}>
+          <EmptyState
+            ikon="alert-circle-outline"
+            ikonRenk="kirmizi"
+            baslik="Yüklenemedi"
+            aciklama="Kartlar yüklenemedi."
+            buton={{ etiket: 'Tekrar dene', onPress: yukle }}
+          />
+        </View>
+      ) : queue === null ? (
+        <View style={styles.kolon}>
+          <Loading />
+        </View>
+      ) : queue.length === 0 ? (
+        // Boş başlangıç: bu kanunda hiç kart yok ("yakında").
+        <View style={styles.kolon}>
+          <EmptyState
+            ikon="clock-outline"
+            baslik={kanunModu ? 'Yakında' : 'Bugünlük bitti'}
+            aciklama={
+              kanunModu
+                ? 'Bu kanunun kartları yakında eklenecek.'
+                : 'Bugün için vakti gelmiş kart yok.'
+            }
+            buton={{ etiket: geriEtiket, onPress: () => router.back() }}
+          />
         </View>
       ) : bitti ? (
+        // Çalışıp tükenince: tamamlandı.
         <View style={styles.kolon}>
-          <Bitti
-            cozulen={cozulen}
-            bosBaslangic={queue.length === 0}
-            kanunModu={kanunModu}
-            onClose={() => router.back()}
+          <EmptyState
+            ikon="check-decagram"
+            ikonRenk="yesil"
+            baslik="Bu turu tamamladın"
+            aciklama={ozetMetin}
+            buton={{ etiket: geriEtiket, onPress: () => router.back() }}
           />
         </View>
       ) : (
@@ -91,14 +139,20 @@ export default function AkisScreen() {
             </View>
 
             <StudyCard card={queue[index]} />
-            <AudioBar />
           </ScrollView>
 
           {/* Cevap butonları — ScrollView'ın dışında, kolonun altına sabit */}
-          <View style={styles.butonSatir}>
-            <Buton renk={Palette.yesil} etiket="Biliyorum" onPress={() => void cevapla('biliyorum')} />
-            <Buton renk={Palette.amber} etiket="Tekrar" onPress={() => void cevapla('tekrar')} />
-            <Buton renk={Palette.kirmizi} etiket="Zor" onPress={() => void cevapla('zor')} />
+          <View style={styles.altBlok}>
+            {cevapHatasi ? (
+              <AppText variant="kucuk" color="kirmizi" bold style={styles.cevapHata}>
+                Kaydedilemedi, tekrar dene.
+              </AppText>
+            ) : null}
+            <View style={styles.butonSatir}>
+              <Buton renk={Palette.yesil} etiket="Biliyorum" onPress={() => void cevapla('biliyorum')} />
+              <Buton renk={Palette.amber} etiket="Tekrar" onPress={() => void cevapla('tekrar')} />
+              <Buton renk={Palette.kirmizi} etiket="Zor" onPress={() => void cevapla('zor')} />
+            </View>
           </View>
         </View>
       )}
@@ -115,40 +169,6 @@ function Buton({ renk, etiket, onPress }: { renk: string; etiket: string; onPres
         {etiket}
       </AppText>
     </Pressable>
-  );
-}
-
-function Bitti({
-  cozulen,
-  bosBaslangic,
-  kanunModu,
-  onClose,
-}: {
-  cozulen: Cozulen;
-  bosBaslangic: boolean;
-  kanunModu: boolean;
-  onClose: () => void;
-}) {
-  const baslik = kanunModu ? 'Bu kanun bitti' : 'Bugünlük bitti';
-  const bosMetin = kanunModu ? 'Bu kanunda kart yok.' : 'Bugün için vakti gelmiş kart yok.';
-  const ozetMetin = kanunModu
-    ? `${cozulen.tekrar + cozulen.yeni} kart çalıştın.`
-    : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`;
-  return (
-    <View style={styles.center}>
-      <MaterialCommunityIcons name="check-decagram" size={64} color={Palette.yesil} />
-      <AppText variant="baslik" bold>
-        {baslik}
-      </AppText>
-      <AppText variant="govde" color="solukMetin">
-        {bosBaslangic ? bosMetin : ozetMetin}
-      </AppText>
-      <Pressable style={({ pressed }) => [styles.restart, pressed && styles.pressed]} onPress={onClose}>
-        <AppText variant="govde" color="beyaz" bold>
-          Karargah'a dön
-        </AppText>
-      </Pressable>
-    </View>
   );
 }
 
@@ -203,12 +223,18 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: Palette.lacivert,
   },
-  butonSatir: {
-    flexDirection: 'row',
-    gap: Spacing.two,
+  altBlok: {
     paddingHorizontal: Spacing.three,
     paddingTop: Spacing.two,
     paddingBottom: Spacing.three,
+    gap: Spacing.two,
+  },
+  cevapHata: {
+    textAlign: 'center',
+  },
+  butonSatir: {
+    flexDirection: 'row',
+    gap: Spacing.two,
   },
   buton: {
     flex: 1,
@@ -218,18 +244,5 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.85,
-  },
-  center: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.three,
-    padding: Spacing.four,
-  },
-  restart: {
-    backgroundColor: Palette.lacivert,
-    borderRadius: Radius.m,
-    paddingHorizontal: Spacing.five,
-    paddingVertical: Spacing.three,
   },
 });

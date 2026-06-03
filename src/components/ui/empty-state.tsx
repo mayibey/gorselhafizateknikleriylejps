@@ -1,0 +1,72 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Pressable, StyleSheet, View } from 'react-native';
+
+import { AppText } from '@/components/ui/app-text';
+import { Palette, type PaletteColor, Radius, Spacing } from '@/constants/theme';
+
+type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
+
+type EmptyStateProps = {
+  ikon?: IconName;
+  ikonRenk?: PaletteColor;
+  baslik: string;
+  aciklama?: string;
+  /** Opsiyonel aksiyon butonu (geri dön / tekrar dene). */
+  buton?: { etiket: string; onPress: () => void };
+};
+
+/** Boş / hata / bitiş durumları için ortak, ortalı bilgi ekranı. */
+export function EmptyState({
+  ikon = 'inbox-outline',
+  ikonRenk = 'solukMetin',
+  baslik,
+  aciklama,
+  buton,
+}: EmptyStateProps) {
+  return (
+    <View style={styles.center}>
+      <MaterialCommunityIcons name={ikon} size={64} color={Palette[ikonRenk]} />
+      <AppText variant="baslik" bold style={styles.ortala}>
+        {baslik}
+      </AppText>
+      {aciklama ? (
+        <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+          {aciklama}
+        </AppText>
+      ) : null}
+      {buton ? (
+        <Pressable
+          style={({ pressed }) => [styles.buton, pressed && styles.pressed]}
+          onPress={buton.onPress}>
+          <AppText variant="govde" color="beyaz" bold>
+            {buton.etiket}
+          </AppText>
+        </Pressable>
+      ) : null}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.three,
+    padding: Spacing.four,
+    minHeight: 240,
+  },
+  ortala: {
+    textAlign: 'center',
+  },
+  buton: {
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.five,
+    paddingVertical: Spacing.three,
+    marginTop: Spacing.one,
+  },
+  pressed: {
+    opacity: 0.85,
+  },
+});

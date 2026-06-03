@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
-import { MaxContentWidth, Palette, Spacing } from '@/constants/theme';
+import { BottomTabInset, MaxContentWidth, Palette, Spacing } from '@/constants/theme';
 
 type ScreenProps = {
   /** Üstte lacivert krom başlık şeridi. */
@@ -48,8 +48,13 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     alignItems: 'center',
+    // Alt sekme çubuğu içeriği örtmesin (son satır görünür kalsın).
+    paddingBottom: BottomTabInset,
   },
   body: {
+    // flexGrow: tek ekran-içi durumda (Loading/EmptyState flex:1) dikey ortalansın;
+    // normal içerik yine üstten dizilir.
+    flexGrow: 1,
     width: '100%',
     maxWidth: MaxContentWidth,
     padding: Spacing.three,

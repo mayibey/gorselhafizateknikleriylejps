@@ -4,6 +4,8 @@ import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getLaws } from '@/db/database';
@@ -14,14 +16,18 @@ export default function MevzuatScreen() {
   const router = useRouter();
   const { brans } = useBrans();
   const [laws, setLaws] = useState<LawWithCount[] | null>(null);
+  const [hata, setHata] = useState(false);
 
-  // Branş değişince liste tazelenir (dep'te brans var).
-  useFocusEffect(
-    useCallback(() => {
-      if (!brans) return;
-      void getLaws(brans).then(setLaws);
-    }, [brans]),
-  );
+  // Branş değişince liste tazelenir (dep'te brans var). Hata → retry için ayrı fn.
+  const yukle = useCallback(() => {
+    if (!brans) return;
+    setHata(false);
+    void getLaws(brans)
+      .then(setLaws)
+      .catch(() => setHata(true));
+  }, [brans]);
+
+  useFocusEffect(yukle);
 
   const musterek = laws?.filter((l) => l.blok === 'müşterek') ?? [];
   const bransKanunlari = laws?.filter((l) => l.blok === 'branş') ?? [];
@@ -32,8 +38,24 @@ export default function MevzuatScreen() {
 
   return (
     <Screen title="Mevzuat">
-      <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} />
-      <Bolum baslik="BRANŞ" laws={bransKanunlari} onPress={kanunaGit} />
+      {hata ? (
+        <EmptyState
+          ikon="alert-circle-outline"
+          ikonRenk="kirmizi"
+          baslik="Yüklenemedi"
+          aciklama="Mevzuat listesi yüklenemedi."
+          buton={{ etiket: 'Tekrar dene', onPress: yukle }}
+        />
+      ) : laws === null ? (
+        <Loading metin="Yükleniyor…" />
+      ) : laws.length === 0 ? (
+        <EmptyState ikon="book-outline" baslik="Bu branşta kanun yok" />
+      ) : (
+        <>
+          <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} />
+          <Bolum baslik="BRANŞ" laws={bransKanunlari} onPress={kanunaGit} />
+        </>
+      )}
     </Screen>
   );
 }
@@ -54,7 +76,7 @@ function Bolum({
       </AppText>
       {laws.length === 0 ? (
         <AppText variant="kucuk" color="solukMetin">
-          Kanun yok.
+          Bu bölümde kanun yok.
         </AppText>
       ) : (
         laws.map((law) => <KanunSatir key={law.id} law={law} onPress={onPress} />)

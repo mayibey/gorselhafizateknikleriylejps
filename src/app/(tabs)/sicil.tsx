@@ -4,6 +4,8 @@ import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getBranches, getCardCount, getStudyCards } from '@/db/database';
@@ -16,16 +18,21 @@ export default function SicilScreen() {
   const { brans } = useBrans();
   const [branches, setBranches] = useState<Branch[] | null>(null);
   const [ist, setIst] = useState<Istatistik | null>(null);
+  const [hata, setHata] = useState(false);
 
   // Odağa her gelindiğinde (çalışmadan dönünce) branş + istatistikleri tazele.
-  useFocusEffect(
-    useCallback(() => {
-      void getBranches().then(setBranches);
-      void Promise.all([getStudyCards(), getCardCount()]).then(([studied, toplam]) =>
-        setIst(hesaplaIstatistik(studied, toplam)),
-      );
-    }, []),
-  );
+  // İstatistik = ana veri (hata → retry); branş adı degrade olur ("—").
+  const yukle = useCallback(() => {
+    setHata(false);
+    void getBranches()
+      .then(setBranches)
+      .catch(() => {});
+    void Promise.all([getStudyCards(), getCardCount()])
+      .then(([studied, toplam]) => setIst(hesaplaIstatistik(studied, toplam)))
+      .catch(() => setHata(true));
+  }, []);
+
+  useFocusEffect(yukle);
 
   const bransAd = branches?.find((b) => b.slug === brans)?.ad ?? '—';
 
@@ -50,10 +57,16 @@ export default function SicilScreen() {
         </View>
       </Pressable>
 
-      {ist === null ? (
-        <AppText variant="kucuk" color="solukMetin">
-          İstatistikler yükleniyor…
-        </AppText>
+      {hata ? (
+        <EmptyState
+          ikon="alert-circle-outline"
+          ikonRenk="kirmizi"
+          baslik="Yüklenemedi"
+          aciklama="İstatistikler yüklenemedi."
+          buton={{ etiket: 'Tekrar dene', onPress: yukle }}
+        />
+      ) : ist === null ? (
+        <Loading metin="İstatistikler yükleniyor…" />
       ) : (
         <>
           {/* İlerleme özeti */}
