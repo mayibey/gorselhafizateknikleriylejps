@@ -2,6 +2,7 @@ import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { ErrorBoundary } from '@/components/ui/error-boundary';
@@ -15,14 +16,17 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <SafeAreaProvider>
-      <StatusBar style="light" />
-      <BransProvider>
-        <ErrorBoundary>
-          <RootNavigator />
-        </ErrorBoundary>
-      </BransProvider>
-    </SafeAreaProvider>
+    // GestureHandlerRootView: gesture-handler jestleri (görsel zoom pinch/pan) için şart.
+    <GestureHandlerRootView style={styles.kok}>
+      <SafeAreaProvider>
+        <StatusBar style="light" />
+        <BransProvider>
+          <ErrorBoundary>
+            <RootNavigator />
+          </ErrorBoundary>
+        </BransProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
 
@@ -56,6 +60,9 @@ function RootNavigator() {
 }
 
 const styles = StyleSheet.create({
+  kok: {
+    flex: 1,
+  },
   splash: {
     backgroundColor: Palette.lacivert,
   },

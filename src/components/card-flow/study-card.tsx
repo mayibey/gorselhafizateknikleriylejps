@@ -1,7 +1,9 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { StyleSheet, View } from 'react-native';
+import { useState } from 'react';
+import { Pressable, StyleSheet, View } from 'react-native';
 
+import { GorselZoom } from '@/components/card-flow/gorsel-zoom';
 import { Watermark } from '@/components/card-flow/watermark';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
@@ -16,16 +18,21 @@ import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
 export function StudyCard({ card }: { card: CardWithSrs }) {
   const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
   const { kimlik } = useCihazKimlik();
+  const [zoomAcik, setZoomAcik] = useState(false);
   // Forensic filigran: kimlik yüklenince render edilir (yoksa overlay yok).
   const filigran = kimlik ? <Watermark metin={`JSPS • ${kimlik} • ${bugunISO()}`} /> : null;
 
   // Görselli mod: kart kendi künyesini içerir → uygulama şeritleri gösterilmez.
+  // Görsele dokununca tam ekran zoom overlay açılır (ses çalıyorsa kesilmez — ekran unmount olmaz).
   if (gorsel !== undefined) {
     return (
-      <View style={styles.card}>
-        <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
-        {filigran}
-      </View>
+      <>
+        <Pressable style={styles.card} onPress={() => setZoomAcik(true)}>
+          <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
+          {filigran}
+        </Pressable>
+        <GorselZoom gorsel={gorsel} gorunur={zoomAcik} onKapat={() => setZoomAcik(false)} />
+      </>
     );
   }
 
