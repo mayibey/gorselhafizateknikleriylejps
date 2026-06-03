@@ -6,13 +6,17 @@ import { Palette, type PaletteColor, Radius, Spacing } from '@/constants/theme';
 
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
+type Aksiyon = { etiket: string; onPress: () => void };
+
 type EmptyStateProps = {
   ikon?: IconName;
   ikonRenk?: PaletteColor;
   baslik: string;
   aciklama?: string;
-  /** Opsiyonel aksiyon butonu (geri dön / tekrar dene). */
-  buton?: { etiket: string; onPress: () => void };
+  /** Opsiyonel birincil aksiyon butonu (dolu, lacivert). */
+  buton?: Aksiyon;
+  /** Opsiyonel ikincil aksiyon (metin/çerçeve buton). */
+  ikincilButon?: Aksiyon;
 };
 
 /** Boş / hata / bitiş durumları için ortak, ortalı bilgi ekranı. */
@@ -22,6 +26,7 @@ export function EmptyState({
   baslik,
   aciklama,
   buton,
+  ikincilButon,
 }: EmptyStateProps) {
   return (
     <View style={styles.center}>
@@ -40,6 +45,15 @@ export function EmptyState({
           onPress={buton.onPress}>
           <AppText variant="govde" color="beyaz" bold>
             {buton.etiket}
+          </AppText>
+        </Pressable>
+      ) : null}
+      {ikincilButon ? (
+        <Pressable
+          style={({ pressed }) => [styles.ikincil, pressed && styles.pressed]}
+          onPress={ikincilButon.onPress}>
+          <AppText variant="govde" color="lacivert" bold>
+            {ikincilButon.etiket}
           </AppText>
         </Pressable>
       ) : null}
@@ -65,6 +79,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.five,
     paddingVertical: Spacing.three,
     marginTop: Spacing.one,
+  },
+  ikincil: {
+    borderWidth: 1,
+    borderColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.five,
+    paddingVertical: Spacing.three,
   },
   pressed: {
     opacity: 0.85,
