@@ -26,15 +26,18 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). **iPhone Ex
 - `87b4d91` docs: JSPS mevzuat listesi PDF (seed kaynağı)
 - `51ab4bb` Mevzuat seed: gerçek JSPS listesi (25 müşterek + 41 jandarma = 66 kanun), TCK id1 pinli, law_branches jandarma eşlemesi, MEBS/Mali placeholder kaldırıldı, v2 migration (referans veri re-seed, srs korunur)
 - `88983ca` **SDK 56 → SDK 54 tam downgrade**: iPhone Expo Go uyumu (Apple App Store'daki Expo Go en fazla SDK 54). RN 0.81.5, expo 54.0.35, router 6, worklets 0.5.1, reanimated 4.1, typescript 5.9.2. node_modules+lock sıfırdan kuruldu (tek RN 0.81.5, ERESOLVE'suz). 4 şablon dosyada tip uyumu düzeltmesi (external-link Href, collapsible SymbolView, use-theme ColorSchemeName, animated-icon absoluteFillObject) — çekirdek mantık (database/srs/queue/kanun-kartlari/ekranlar) dokunulmadı. Web + iPhone test edildi: VirtualView hatası gitti.
+- `f1962a6` docs: SDK sabiti 56 → 54 (CLAUDE.md sürüm pinleri + PROJE_DURUM downgrade notu)
+- `947fd1c` **İstatistik Faz A**: `lib/stats.ts` (yeni saf dosya — `hesaplaIstatistik`: çalışılan/öğrenilen/hazırlık%/kutu dağılımı; öğrenildi = kutu≥4), `getCardCount` (4-dosya senkron). Karargah hazırlık % gerçeğe bağlandı, nöbet serisi geçici `—` (streak Faz B'de). Sicil: İLERLEME + KUTU DAĞILIMI kartları (placeholder kalktı). Web/native parite: stats yalnız kutu≥1 (çalışılmış) kart üzerinden. external-link typedRoutes regresyonu (`Extract<…,string>`) düzeltildi. Şema değişmedi (SCHEMA_VERSION=2).
 
 ## 3. Devam eden iş
-- Şu an aktif tur yok. **Mevzuat 66 kanun başlığı seed'lendi (kartlar TCK hariç boş — Mevzuat'ta "yakında").** Sırada (Backlog'dan): **içerik maratonu** — TCK 49 görselini gerçek kartlara bağla (madde no + başlık + anlatım), sonra diğer müşterek + jandarma kanunlarının içeriği.
+- **İstatistik Faz A tamamlandı (`947fd1c`)**: Karargah hazırlık % + Sicil ilerleme/kutu dağılımı gerçeğe bağlı. **Sırada Faz B — Nöbet serisi (streak)**: şema değişikliği gerektirir (srs'te çalışma günü tutulmuyor) → `study_days` tablosu (`gun TEXT PK`), `recordReview`'da `bugunISO()` ekle, `SCHEMA_VERSION` 2→3 migration (srs korunur), `lib/stats.ts`'e saf `hesaplaStreak`, Karargah "Nöbet serisi" `—` yerine gerçek değer. İsteğe bağlı: `(gun, adet)` ile "bugün çalışılan kart".
+- Diğer açık iş: **içerik maratonu** — TCK 49 görselini gerçek kartlara bağla (madde no + başlık + anlatım), sonra diğer müşterek + jandarma kanunlarının içeriği. (Şu an toplam 4 kart → hazırlık % paydası küçük; içerik artınca anlamlanır.)
 
 ## 4. Backlog (planlı işler, sıra kabaca)
 - Tatbikat ekranı (quiz/sınav sistemi) — kartlardan otomatik soru, çıkmış sorular kategorisi
-- Sicil ekranı (istatistik: hazırlık %, çalışılan saat, streak)
+- Sicil ekranı istatistikleri: hazırlık % + çalışılan/öğrenilen + kutu dağılımı ✅ (`947fd1c`, Faz A). Kalan: streak (Faz B), çalışılan saat (zaman ölçümü yok — büyük iş).
 - Ses entegrasyonu (Faz 4): expo-audio kart anlatımı + "Sesli Nöbet" (arka arkaya, kilit ekranı). Otomatik başlama kararı verilecek (öneri: otomatik başlamasın).
-- Karargah "%38 Hazırlık" + "14 Nöbet serisi" metriklerini gerçek veriye bağla (şu an statik)
+- Karargah metrikleri: Hazırlık % gerçeğe bağlandı ✅ (`947fd1c`). Kalan: Nöbet serisi (streak, Faz B — şu an `—`).
 - Dikey ekran kilidi (yatay mod kapat)
 - **İçerik maratonu**: 49 TCK görselini gerçek kartlara bağla (her birine madde no + başlık + anlatım metni). Sonra 65 gerçek kanun. Önce Müşterek + Jandarma.
 - Development build (Faz 6): Expo Go/ngrok derdini kökten çözer, telefonda kendi uygulaman gibi açılır
