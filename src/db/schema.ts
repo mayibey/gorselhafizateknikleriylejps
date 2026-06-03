@@ -90,7 +90,11 @@ CREATE TABLE IF NOT EXISTS law_branches (
   branch_id INTEGER NOT NULL,
   PRIMARY KEY (law_id, branch_id)
 );
+
+CREATE TABLE IF NOT EXISTS study_days (
+  gun TEXT PRIMARY KEY
+);
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 2;
+export const SCHEMA_VERSION = 3;

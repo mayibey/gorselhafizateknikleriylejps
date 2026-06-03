@@ -53,6 +53,14 @@ class SqliteBackend implements Backend {
       await this.seedReference();
       version = 2;
     }
+    if (version < 3) {
+      // study_days (streak için çalışılan günler). TAMAMEN EKLEMELİ: yalnız CREATE
+      // TABLE IF NOT EXISTS — srs/laws/cards/branches'e DOKUNULMAZ (v2'deki DELETE
+      // mantığı buraya TAŞINMAZ). Mevcut v2 telefonlar bu adımla study_days alır,
+      // srs ilerlemesi aynen korunur.
+      await db.execAsync('CREATE TABLE IF NOT EXISTS study_days (gun TEXT PRIMARY KEY)');
+      version = 3;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
@@ -187,6 +195,18 @@ class SqliteBackend implements Backend {
       sonrakiTarih,
     );
   }
+
+  async markStudyDay(gun: string): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    // Gün-tekil: aynı gün ikinci kez no-op.
+    await this.db.runAsync('INSERT OR IGNORE INTO study_days (gun) VALUES (?)', gun);
+  }
+
+  async getStudyDays(): Promise<string[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const rows = await this.db.getAllAsync<{ gun: string }>('SELECT gun FROM study_days');
+    return rows.map((r) => r.gun);
+  }
 }
 
 const backend: Backend = new SqliteBackend();
@@ -244,5 +264,12 @@ export async function recordReview(
   await initDatabase();
   const next = srsGuncelle(mevcutKutu, cevap);
   await backend.saveSrs(cardId, next.kutu, next.sonraki_tarih);
+  await backend.markStudyDay(bugunISO());
   return next;
+}
+
+/** Çalışılmış günleri (YYYY-MM-DD) ham liste döndürür; streak lib/stats.ts'te hesaplanır. */
+export async function getStudyDays(): Promise<string[]> {
+  await initDatabase();
+  return backend.getStudyDays();
 }

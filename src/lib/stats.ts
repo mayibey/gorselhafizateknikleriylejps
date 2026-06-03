@@ -52,3 +52,34 @@ export function hesaplaIstatistik(studied: CardWithSrs[], toplamKart: number): I
 
   return { calisilanKart, toplamKart, ogrenilenKart, hazirlikYuzde, kutuDagilimi };
 }
+
+/**
+ * Verilen YYYY-MM-DD gününün bir önceki takvim günü (UTC).
+ * bugunISO() UTC üretir (toISOString) → tutarlı olsun diye burada da UTC.
+ */
+export function oncekiGun(iso: string): string {
+  const t = new Date(`${iso}T00:00:00.000Z`);
+  t.setUTCDate(t.getUTCDate() - 1);
+  return t.toISOString().slice(0, 10);
+}
+
+/**
+ * Nöbet serisi: kesintisiz çalışılan gün sayısı.
+ *  - Çapa: bugün çalışıldıysa bugünden, değilse dün çalışıldıysa dünden başla;
+ *    ikisi de yoksa 0 ("bugün henüz çalışmadım" seriyi kırmaz, dün varsa dünkü değer).
+ *  - Çapadan geriye doğru kesintisiz say.
+ * Saf: DB/IO yok; bugun enjekte edildiği için deterministik/test edilebilir.
+ */
+export function hesaplaStreak(gunler: string[], bugun: string): number {
+  const set = new Set(gunler); // gün-tekilliği
+  const dun = oncekiGun(bugun);
+  let g = set.has(bugun) ? bugun : set.has(dun) ? dun : null;
+  if (g === null) return 0;
+
+  let streak = 0;
+  while (set.has(g)) {
+    streak++;
+    g = oncekiGun(g);
+  }
+  return streak;
+}

@@ -6,22 +6,25 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getCardCount, getDailyQueue, getStudyCards } from '@/db/database';
+import { getCardCount, getDailyQueue, getStudyCards, getStudyDays } from '@/db/database';
 import type { QueueCard } from '@/lib/queue';
-import { hesaplaIstatistik } from '@/lib/stats';
+import { bugunISO } from '@/lib/srs';
+import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 
 export default function KarargahScreen() {
   const router = useRouter();
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
+  const [streak, setStreak] = useState<number | null>(null);
 
-  // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu + hazırlık %'sini tazele.
+  // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu + hazırlık % + nöbet serisini tazele.
   useFocusEffect(
     useCallback(() => {
       void getDailyQueue().then(setQueue);
       void Promise.all([getStudyCards(), getCardCount()]).then(([studied, toplam]) =>
         setHazirlik(hesaplaIstatistik(studied, toplam).hazirlikYuzde),
       );
+      void getStudyDays().then((gunler) => setStreak(hesaplaStreak(gunler, bugunISO())));
     }, []),
   );
 
@@ -83,8 +86,8 @@ export default function KarargahScreen() {
       {/* Metrik kartları */}
       <View style={styles.metrikSatir}>
         <Metrik deger={hazirlik === null ? '—' : `%${hazirlik}`} etiket="Hazırlık" />
-        {/* Nöbet serisi (streak) Faz B'de gerçek veriye bağlanacak; yanlış sayı yerine "—". */}
-        <Metrik deger="—" etiket="Nöbet serisi" />
+        {/* Nöbet serisi: kesintisiz çalışılan gün. 0 (veya kırık seri) → "—". */}
+        <Metrik deger={streak === null || streak === 0 ? '—' : `${streak}`} etiket="Nöbet serisi" />
       </View>
 
       {/* Günün Maddesi */}

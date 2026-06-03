@@ -20,6 +20,10 @@ export interface Backend {
   getLaws(bransSlug: string): Promise<LawWithCount[]>;
   getCardsByLaw(lawId: number): Promise<QueueCard[]>;
   saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void>;
+  /** Verilen günü (YYYY-MM-DD) "çalışıldı" olarak işaretler (gün-tekil). */
+  markStudyDay(gun: string): Promise<void>;
+  /** Çalışılmış günleri (YYYY-MM-DD) ham liste olarak döndürür (streak hesabı stats.ts'te). */
+  getStudyDays(): Promise<string[]>;
 }
 
 /** Public API'nin (initDatabase/getStudyCards/recordReview) ortak tip imzaları. */

@@ -15,6 +15,8 @@ import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 class MemoryBackend implements Backend {
   // srs kaydı OLMAYAN kart = yeni kart. Başlangıçta boş (tohumlanmaz).
   private srs = new Map<number, SrsDurum>();
+  // Çalışılan günler (streak). Bellek-içi → her yenilemede sıfırlanır (web kısıtı, native kalıcı).
+  private studyDays = new Set<string>();
 
   async init(): Promise<void> {
     // srs tohumlanmaz: "srs kaydı yok = yeni kart".
@@ -69,6 +71,15 @@ class MemoryBackend implements Backend {
   async saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void> {
     // Map.set zaten upsert: yeni kartta oluşturur, varsa günceller.
     this.srs.set(cardId, { kutu, sonraki_tarih: sonrakiTarih });
+  }
+
+  async markStudyDay(gun: string): Promise<void> {
+    // Set.add zaten gün-tekil.
+    this.studyDays.add(gun);
+  }
+
+  async getStudyDays(): Promise<string[]> {
+    return [...this.studyDays];
   }
 }
 
@@ -127,5 +138,12 @@ export async function recordReview(
   await initDatabase();
   const next = srsGuncelle(mevcutKutu, cevap);
   await backend.saveSrs(cardId, next.kutu, next.sonraki_tarih);
+  await backend.markStudyDay(bugunISO());
   return next;
+}
+
+/** Çalışılmış günleri (YYYY-MM-DD) ham liste döndürür; streak lib/stats.ts'te hesaplanır. */
+export async function getStudyDays(): Promise<string[]> {
+  await initDatabase();
+  return backend.getStudyDays();
 }
