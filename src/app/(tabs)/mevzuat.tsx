@@ -33,7 +33,8 @@ export default function MevzuatScreen() {
   const bransKanunlari = laws?.filter((l) => l.blok === 'branş') ?? [];
 
   function kanunaGit(law: LawWithCount) {
-    router.push({ pathname: '/akis', params: { lawId: String(law.id) } });
+    // Kanun → Patika (bölümler). Bölümü olmayan kanun patikada tek "Tüm Kartlar" düğümü gösterir.
+    router.push({ pathname: '/patika', params: { lawId: String(law.id) } });
   }
 
   function sesliNobete(law: LawWithCount) {

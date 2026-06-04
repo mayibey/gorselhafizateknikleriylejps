@@ -3,11 +3,11 @@
  * Buraya expo-sqlite gibi platforma özel HİÇBİR bağ girmez.
  */
 
-import type { Branch, CardWithLaw, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
+import type { Bolum, Branch, CardWithLaw, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
-export type { Blok, Branch, Card, CardWithLaw, CardWithSrs, Law, LawBranch, LawWithCount, PerformansKaynak, PerformansSatir, Srs } from '@/db/schema';
+export type { Blok, Bolum, BolumKart, Branch, Card, CardWithLaw, CardWithSrs, Law, LawBranch, LawWithCount, PerformansKaynak, PerformansSatir, Srs } from '@/db/schema';
 export type { QueueCard, SrsDurum } from '@/lib/queue';
 
 /** Hem native (SQLite) hem web (bellek-içi) arka uçlarının uyduğu sözleşme. */
@@ -21,6 +21,10 @@ export interface Backend {
   getBranches(): Promise<Branch[]>;
   getLaws(bransSlug: string): Promise<LawWithCount[]>;
   getCardsByLaw(lawId: number): Promise<QueueCard[]>;
+  /** Bir kanunun patika bölümleri (sıralı). */
+  getBolumler(lawId: number): Promise<Bolum[]>;
+  /** Bir bölümün kartları (bölüm-içi sıraya göre). */
+  getCardsByBolum(bolumId: number): Promise<QueueCard[]>;
   saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void>;
   /** Verilen günü (YYYY-MM-DD) "çalışıldı" olarak işaretler (gün-tekil). */
   markStudyDay(gun: string): Promise<void>;

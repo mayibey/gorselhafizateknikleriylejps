@@ -5,7 +5,7 @@
  * - TCK law_id=1 PİNLİ: 49 TCK görseli + tck_m1 kartı buna bağlı, kaydırılmaz.
  */
 
-import type { Branch, Card, Law, LawBranch } from '@/db/schema';
+import type { Bolum, BolumKart, Branch, Card, Law, LawBranch } from '@/db/schema';
 
 export const SEED_LAWS: Law[] = [
   // --- MÜŞTEREK (id 1-25) ---
@@ -242,4 +242,27 @@ export const SEED_CARDS: Card[] = [
     gorsel_yolu: '4733_m8_ozet',
     ses_yolu: null,
   },
+];
+
+/**
+ * Patika bölümleri (Duolingo blokları). Bölümü OLMAYAN kanunlar (TCK gibi) patikada
+ * tek "Tüm Kartlar" düğümü gösterir. DEMO: 4733 m.8 (law_id 49) 2 bölüme bölündü.
+ */
+export const SEED_BOLUMLER: Bolum[] = [
+  { id: 1, law_id: 49, ad: 'Bölüm 1 — Yasal Üretim ve İhlaller', sira: 1 },
+  { id: 2, law_id: 49, ad: 'Bölüm 2 — Yaptırımlar ve Sonuçlar', sira: 2 },
+];
+
+/** Bölüm ↔ kart (bölüm içi sıra). Bölüm 1: card 100-104, Bölüm 2: card 105-109. */
+export const SEED_BOLUM_KARTLARI: BolumKart[] = [
+  { bolum_id: 1, card_id: 100, sira: 1 },
+  { bolum_id: 1, card_id: 101, sira: 2 },
+  { bolum_id: 1, card_id: 102, sira: 3 },
+  { bolum_id: 1, card_id: 103, sira: 4 },
+  { bolum_id: 1, card_id: 104, sira: 5 },
+  { bolum_id: 2, card_id: 105, sira: 1 },
+  { bolum_id: 2, card_id: 106, sira: 2 },
+  { bolum_id: 2, card_id: 107, sira: 3 },
+  { bolum_id: 2, card_id: 108, sira: 4 },
+  { bolum_id: 2, card_id: 109, sira: 5 },
 ];

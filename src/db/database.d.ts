@@ -6,7 +6,7 @@
  * İki implementasyon da bu imzaları birebir export eder.
  */
 
-import type { Branch, CardWithLaw, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
+import type { Bolum, Branch, CardWithLaw, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
 import type { RecordReviewResult, SrsCevap } from '@/db/types';
 import type { QueueCard } from '@/lib/queue';
 
@@ -18,6 +18,8 @@ export function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
 export function getBranches(): Promise<Branch[]>;
 export function getLaws(bransSlug: string): Promise<LawWithCount[]>;
 export function getCardsByLaw(lawId: number): Promise<QueueCard[]>;
+export function getBolumler(lawId: number): Promise<Bolum[]>;
+export function getCardsByBolum(bolumId: number): Promise<QueueCard[]>;
 export function getStudyDays(): Promise<string[]>;
 export function recordReview(
   cardId: number,

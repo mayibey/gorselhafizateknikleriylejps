@@ -5,6 +5,7 @@
  */
 
 import {
+  type Bolum,
   type Branch,
   type CardWithLaw,
   type CardWithSrs,
@@ -12,7 +13,14 @@ import {
   type PerformansKaynak,
   type PerformansSatir,
 } from '@/db/schema';
-import { SEED_BRANCHES, SEED_CARDS, SEED_LAW_BRANCHES, SEED_LAWS } from '@/db/seed';
+import {
+  SEED_BOLUM_KARTLARI,
+  SEED_BOLUMLER,
+  SEED_BRANCHES,
+  SEED_CARDS,
+  SEED_LAW_BRANCHES,
+  SEED_LAWS,
+} from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
@@ -79,6 +87,24 @@ class MemoryBackend implements Backend {
   async getCardsByLaw(lawId: number): Promise<QueueCard[]> {
     const cards = this.cardsWithLaw().filter((c) => c.law_id === lawId);
     return kanunKuyrugu(cards, this.srs);
+  }
+
+  async getBolumler(lawId: number): Promise<Bolum[]> {
+    return SEED_BOLUMLER.filter((b) => b.law_id === lawId).sort((a, b) => a.sira - b.sira);
+  }
+
+  async getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
+    const haritaWithLaw = new Map(this.cardsWithLaw().map((c) => [c.id, c]));
+    return SEED_BOLUM_KARTLARI.filter((bk) => bk.bolum_id === bolumId)
+      .sort((a, b) => a.sira - b.sira)
+      .map((bk) => haritaWithLaw.get(bk.card_id))
+      .filter((c): c is CardWithLaw => c !== undefined)
+      .map((card) => {
+        const s = this.srs.get(card.id);
+        return s
+          ? { ...card, kutu: s.kutu, sonraki_tarih: s.sonraki_tarih, yeni: false }
+          : { ...card, kutu: 0, sonraki_tarih: '', yeni: true };
+      });
   }
 
   async saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void> {
@@ -154,6 +180,18 @@ export async function getLaws(bransSlug: string): Promise<LawWithCount[]> {
 export async function getCardsByLaw(lawId: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getCardsByLaw(lawId);
+}
+
+/** Bir kanunun patika bölümleri (sıralı; bölümü yoksa boş dizi). */
+export async function getBolumler(lawId: number): Promise<Bolum[]> {
+  await initDatabase();
+  return backend.getBolumler(lawId);
+}
+
+/** Bir bölümün kartları, bölüm-içi sıraya göre (akış için). */
+export async function getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getCardsByBolum(bolumId);
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */

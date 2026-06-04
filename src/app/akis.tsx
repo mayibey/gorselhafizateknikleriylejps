@@ -10,7 +10,7 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { getCardsByLaw, getDailyQueue, recordReview } from '@/db/database';
+import { getCardsByBolum, getCardsByLaw, getDailyQueue, recordReview } from '@/db/database';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -18,8 +18,11 @@ type Cozulen = { tekrar: number; yeni: number };
 
 export default function AkisScreen() {
   const router = useRouter();
-  const { lawId } = useLocalSearchParams<{ lawId?: string }>();
+  const { lawId, bolumId } = useLocalSearchParams<{ lawId?: string; bolumId?: string }>();
+  const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
+  // Patika/kanun modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
+  const tekKanun = bolumModu || kanunModu;
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hata, setHata] = useState(false);
   const [index, setIndex] = useState(0);
@@ -31,9 +34,14 @@ export default function AkisScreen() {
     setQueue(null);
     setIndex(0);
     setCozulen({ tekrar: 0, yeni: 0 });
-    const p = kanunModu ? getCardsByLaw(Number(lawId)) : getDailyQueue();
+    // Öncelik: bölüm > kanun > günlük kuyruk. (Mevcut lawId/daily davranışı korunur.)
+    const p = bolumModu
+      ? getCardsByBolum(Number(bolumId))
+      : kanunModu
+        ? getCardsByLaw(Number(lawId))
+        : getDailyQueue();
     void p.then(setQueue).catch(() => setHata(true));
-  }, [kanunModu, lawId]);
+  }, [bolumModu, bolumId, kanunModu, lawId]);
 
   useEffect(() => {
     yukle();
@@ -55,8 +63,9 @@ export default function AkisScreen() {
 
   const bitti = queue !== null && queue.length > 0 && index >= queue.length;
   const aktif = !hata && queue !== null && queue.length > 0 && index < queue.length;
-  const geriEtiket = kanunModu ? "Mevzuat'a dön" : "Karargah'a dön";
-  const ozetMetin = kanunModu
+  // Patika/kanun modunda geri = patika (Mevzuat → patika → akış); günlükte Karargah.
+  const geriEtiket = tekKanun ? 'Geri dön' : "Karargah'a dön";
+  const ozetMetin = tekKanun
     ? `${cozulen.tekrar + cozulen.yeni} kart çalıştın.`
     : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`;
 
@@ -111,10 +120,10 @@ export default function AkisScreen() {
         <View style={styles.kolon}>
           <EmptyState
             ikon="clock-outline"
-            baslik={kanunModu ? 'Yakında' : 'Bugünlük bitti'}
+            baslik={tekKanun ? 'Yakında' : 'Bugünlük bitti'}
             aciklama={
-              kanunModu
-                ? 'Bu kanunun kartları yakında eklenecek.'
+              tekKanun
+                ? 'Bu bölümün kartları yakında eklenecek.'
                 : 'Bugün için vakti gelmiş kart yok.'
             }
             buton={{ etiket: geriEtiket, onPress: () => router.back() }}

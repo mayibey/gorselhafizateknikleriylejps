@@ -27,6 +27,24 @@ export interface LawBranch {
   branch_id: number;
 }
 
+/**
+ * Patika "bölümü" (Duolingo bloğu). Bir kanun → sıralı bölümler.
+ * NOT: laws.blok (müşterek/branş) ile KARIŞTIRMA — bu ayrı kavram ("bolum").
+ */
+export interface Bolum {
+  id: number;
+  law_id: number;
+  ad: string;
+  sira: number;
+}
+
+/** Bölüm ↔ kart eşlemesi (bölüm içi sıra). */
+export interface BolumKart {
+  bolum_id: number;
+  card_id: number;
+  sira: number;
+}
+
 export interface Card {
   id: number;
   law_id: number;
@@ -117,7 +135,21 @@ CREATE TABLE IF NOT EXISTS kart_performans (
   sonuc TEXT NOT NULL,
   tarih TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS bolumler (
+  id INTEGER PRIMARY KEY,
+  law_id INTEGER NOT NULL,
+  ad TEXT NOT NULL,
+  sira INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS bolum_kartlari (
+  bolum_id INTEGER NOT NULL,
+  card_id INTEGER NOT NULL,
+  sira INTEGER NOT NULL,
+  PRIMARY KEY (bolum_id, card_id)
+);
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 5;
+export const SCHEMA_VERSION = 6;

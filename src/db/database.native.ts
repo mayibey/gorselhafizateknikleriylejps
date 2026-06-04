@@ -5,6 +5,7 @@
  */
 
 import {
+  type Bolum,
   CREATE_SQL,
   type Branch,
   type CardWithLaw,
@@ -14,7 +15,14 @@ import {
   type PerformansSatir,
   type Srs,
 } from '@/db/schema';
-import { SEED_BRANCHES, SEED_CARDS, SEED_LAW_BRANCHES, SEED_LAWS } from '@/db/seed';
+import {
+  SEED_BOLUM_KARTLARI,
+  SEED_BOLUMLER,
+  SEED_BRANCHES,
+  SEED_CARDS,
+  SEED_LAW_BRANCHES,
+  SEED_LAWS,
+} from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
@@ -79,6 +87,16 @@ class SqliteBackend implements Backend {
       await this.seedReference();
       version = 5;
     }
+    if (version < 6) {
+      // Patika bölümleri (bolumler + bolum_kartlari). TAMAMEN EKLEMELİ: yalnız CREATE
+      // TABLE IF NOT EXISTS + INSERT OR IGNORE seed. cards/srs/diğer tablolara DOKUNULMAZ.
+      await db.execAsync(
+        `CREATE TABLE IF NOT EXISTS bolumler (id INTEGER PRIMARY KEY, law_id INTEGER NOT NULL, ad TEXT NOT NULL, sira INTEGER NOT NULL);
+         CREATE TABLE IF NOT EXISTS bolum_kartlari (bolum_id INTEGER NOT NULL, card_id INTEGER NOT NULL, sira INTEGER NOT NULL, PRIMARY KEY (bolum_id, card_id));`,
+      );
+      await this.seedBolumler();
+      version = 6;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
@@ -128,6 +146,60 @@ class SqliteBackend implements Backend {
         lb.branch_id,
       );
     }
+  }
+
+  /** Patika bölümlerini idempotent yükler (INSERT OR IGNORE). */
+  private async seedBolumler(): Promise<void> {
+    const db = this.db!;
+    for (const b of SEED_BOLUMLER) {
+      await db.runAsync(
+        'INSERT OR IGNORE INTO bolumler (id, law_id, ad, sira) VALUES (?, ?, ?, ?)',
+        b.id,
+        b.law_id,
+        b.ad,
+        b.sira,
+      );
+    }
+    for (const bk of SEED_BOLUM_KARTLARI) {
+      await db.runAsync(
+        'INSERT OR IGNORE INTO bolum_kartlari (bolum_id, card_id, sira) VALUES (?, ?, ?)',
+        bk.bolum_id,
+        bk.card_id,
+        bk.sira,
+      );
+    }
+  }
+
+  async getBolumler(lawId: number): Promise<Bolum[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    return this.db.getAllAsync<Bolum>(
+      'SELECT id, law_id, ad, sira FROM bolumler WHERE law_id = ? ORDER BY sira',
+      lawId,
+    );
+  }
+
+  async getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    // Bölümün kartları, bölüm-içi sıraya göre (kanunKuyrugu'nun madde sıralaması DEĞİL).
+    const cards = await this.db.getAllAsync<CardWithLaw>(
+      `SELECT c.*, l.blok AS blok, l.ad AS law_ad
+       FROM bolum_kartlari bk
+       JOIN cards c ON c.id = bk.card_id
+       JOIN laws l ON l.id = c.law_id
+       WHERE bk.bolum_id = ?
+       ORDER BY bk.sira`,
+      bolumId,
+    );
+    const srsRows = await this.db.getAllAsync<Srs>('SELECT card_id, kutu, sonraki_tarih FROM srs');
+    const srsMap = new Map<number, SrsDurum>(
+      srsRows.map((r) => [r.card_id, { kutu: r.kutu, sonraki_tarih: r.sonraki_tarih }]),
+    );
+    return cards.map((card) => {
+      const s = srsMap.get(card.id);
+      return s
+        ? { ...card, kutu: s.kutu, sonraki_tarih: s.sonraki_tarih, yeni: false }
+        : { ...card, kutu: 0, sonraki_tarih: '', yeni: true };
+    });
   }
 
   async getStudyCards(): Promise<CardWithSrs[]> {
@@ -306,6 +378,18 @@ export async function getLaws(bransSlug: string): Promise<LawWithCount[]> {
 export async function getCardsByLaw(lawId: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getCardsByLaw(lawId);
+}
+
+/** Bir kanunun patika bölümleri (sıralı; bölümü yoksa boş dizi). */
+export async function getBolumler(lawId: number): Promise<Bolum[]> {
+  await initDatabase();
+  return backend.getBolumler(lawId);
+}
+
+/** Bir bölümün kartları, bölüm-içi sıraya göre (akış için). */
+export async function getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getCardsByBolum(bolumId);
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */
