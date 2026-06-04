@@ -1,5 +1,6 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ReactNode } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
@@ -8,19 +9,26 @@ import { BottomTabInset, MaxContentWidth, Palette, Spacing } from '@/constants/t
 type ScreenProps = {
   /** Üstte lacivert krom başlık şeridi. */
   title?: string;
+  /** Verilirse başlık şeridinde solda geri oku gösterir (pushed ekranlar için). */
+  onGeri?: () => void;
   /** İçerik kaydırılabilir mi (varsayılan: evet). */
   scroll?: boolean;
   children: ReactNode;
 };
 
 /** Krem zeminli, güvenli alanlı ortak ekran sarmalayıcı. */
-export function Screen({ title, scroll = true, children }: ScreenProps) {
+export function Screen({ title, onGeri, scroll = true, children }: ScreenProps) {
   const body = <View style={styles.body}>{children}</View>;
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
       {title ? (
         <View style={styles.header}>
+          {onGeri ? (
+            <Pressable onPress={onGeri} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
+              <MaterialCommunityIcons name="arrow-left" size={26} color={Palette.beyaz} />
+            </Pressable>
+          ) : null}
           <AppText variant="baslik" color="beyaz" bold>
             {title}
           </AppText>
@@ -41,6 +49,9 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.kremZemin,
   },
   header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
     backgroundColor: Palette.lacivert,
     paddingHorizontal: Spacing.four,
     paddingVertical: Spacing.three,

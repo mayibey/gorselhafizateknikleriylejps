@@ -68,7 +68,7 @@ export default function PatikaScreen() {
     : -1;
 
   return (
-    <Screen title="Patika">
+    <Screen title="Patika" onGeri={() => router.back()}>
       {hata ? (
         <EmptyState
           ikon="alert-circle-outline"
