@@ -51,6 +51,7 @@ function RootNavigator() {
         <Stack.Screen name="quiz" />
         <Stack.Screen name="sesli-nobet" />
         <Stack.Screen name="patika" />
+        <Stack.Screen name="geri-bildirim" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
       </Stack>

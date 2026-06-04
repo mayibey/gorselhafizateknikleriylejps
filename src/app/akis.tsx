@@ -151,6 +151,26 @@ export default function AkisScreen() {
             <StudyCard card={queue[index]} />
             {/* Sesli anlatım kontrolü. key=kart id → kart değişince remount → önceki ses durur. */}
             <AudioBar key={queue[index].id} sesYolu={queue[index].ses_yolu} />
+
+            {/* Hata/öneri bildir — aktif kart bilgisi otomatik gömülür (Formspree). */}
+            <Pressable
+              style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
+              onPress={() =>
+                router.push({
+                  pathname: '/geri-bildirim',
+                  params: {
+                    card_id: String(queue[index].id),
+                    madde_no: queue[index].madde_no,
+                    baslik: queue[index].baslik,
+                    kanun: queue[index].law_ad,
+                  },
+                })
+              }>
+              <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.solukMetin} />
+              <AppText variant="etiket" color="solukMetin">
+                Hata/öneri bildir
+              </AppText>
+            </Pressable>
           </ScrollView>
 
           {/* Cevap butonları — ScrollView'ın dışında, kolonun altına sabit */}
@@ -243,6 +263,13 @@ const styles = StyleSheet.create({
   },
   cevapHata: {
     textAlign: 'center',
+  },
+  bildir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    paddingVertical: Spacing.one,
   },
   butonSatir: {
     flexDirection: 'row',
