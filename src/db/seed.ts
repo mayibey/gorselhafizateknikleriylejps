@@ -242,6 +242,70 @@ export const SEED_CARDS: Card[] = [
     gorsel_yolu: '4733_m8_ozet',
     ses_yolu: null,
   },
+
+  // === TCK görsel kartları (law_id 1; id 200-299 bloğu) ===
+  // m.1 kartı id 5'te (tck_m1) ZATEN VAR → tekrar eklenmedi. Başlıklar resmî madde
+  // başlıkları; anlatım metni + madde metni içeriği ayrı tur. gorsel_yolu = registry key.
+
+  // --- GRUP 1: Genel Hükümler (m.2-5; m.1 id 5'te) ---
+  { id: 201, law_id: 1, madde_no: 'TCK m.2', baslik: 'Suçta ve cezada kanunilik ilkesi', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.2.', gorsel_yolu: 'tck_m2', ses_yolu: null },
+  { id: 202, law_id: 1, madde_no: 'TCK m.3', baslik: 'Adalet ve kanun önünde eşitlik ilkesi', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.3.', gorsel_yolu: 'tck_m3', ses_yolu: null },
+  { id: 203, law_id: 1, madde_no: 'TCK m.4', baslik: 'Kanunun bağlayıcılığı', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.4.', gorsel_yolu: 'tck_m4', ses_yolu: null },
+  { id: 204, law_id: 1, madde_no: 'TCK m.5', baslik: 'Özel kanunlarla ilişki', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.5.', gorsel_yolu: 'tck_m5', ses_yolu: null },
+
+  // --- GRUP 2: Ceza Sorumluluğu (m.20-23 + ayırt) ---
+  { id: 210, law_id: 1, madde_no: 'TCK m.20', baslik: 'Ceza sorumluluğunun şahsiliği', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.20.', gorsel_yolu: 'tck_m20', ses_yolu: null },
+  { id: 211, law_id: 1, madde_no: 'TCK m.21', baslik: 'Kast', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.21.', gorsel_yolu: 'tck_m21', ses_yolu: null },
+  { id: 212, law_id: 1, madde_no: 'TCK m.22', baslik: 'Taksir', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.22.', gorsel_yolu: 'tck_m22', ses_yolu: null },
+  { id: 213, law_id: 1, madde_no: 'TCK m.23', baslik: 'Netice sebebiyle ağırlaşmış suç', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.23.', gorsel_yolu: 'tck_m23', ses_yolu: null },
+  { id: 214, law_id: 1, madde_no: 'TCK m.21-22', baslik: 'Kast – Taksir ayrımı (karşılaştırma)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.21-22.', gorsel_yolu: 'tck_ayirt_m21_22', ses_yolu: null },
+
+  // --- GRUP 3: Teşebbüs, İştirak, İçtima ve Cezalar (m.35-45 + özet) ---
+  { id: 220, law_id: 1, madde_no: 'TCK m.35', baslik: 'Suça teşebbüs', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.35.', gorsel_yolu: 'tck_m35', ses_yolu: null },
+  { id: 221, law_id: 1, madde_no: 'TCK m.36', baslik: 'Gönüllü vazgeçme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.36.', gorsel_yolu: 'tck_m36', ses_yolu: null },
+  { id: 222, law_id: 1, madde_no: 'TCK m.37', baslik: 'Faillik', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.37.', gorsel_yolu: 'tck_m37', ses_yolu: null },
+  { id: 223, law_id: 1, madde_no: 'TCK m.38', baslik: 'Azmettirme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.38.', gorsel_yolu: 'tck_m38', ses_yolu: null },
+  { id: 224, law_id: 1, madde_no: 'TCK m.39', baslik: 'Yardım etme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.39.', gorsel_yolu: 'tck_m39', ses_yolu: null },
+  { id: 225, law_id: 1, madde_no: 'TCK m.40', baslik: 'Bağlılık kuralı', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.40.', gorsel_yolu: 'tck_m40', ses_yolu: null },
+  { id: 226, law_id: 1, madde_no: 'TCK m.41', baslik: 'İştirak halinde işlenen suçlarda gönüllü vazgeçme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.41.', gorsel_yolu: 'tck_m41', ses_yolu: null },
+  { id: 227, law_id: 1, madde_no: 'TCK m.42', baslik: 'Bileşik suç', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.42.', gorsel_yolu: 'tck_m42', ses_yolu: null },
+  { id: 228, law_id: 1, madde_no: 'TCK m.43', baslik: 'Zincirleme suç', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.43.', gorsel_yolu: 'tck_m43', ses_yolu: null },
+  { id: 229, law_id: 1, madde_no: 'TCK m.44', baslik: 'Fikri içtima', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.44.', gorsel_yolu: 'tck_m44', ses_yolu: null },
+  { id: 230, law_id: 1, madde_no: 'TCK m.45', baslik: 'Cezalar', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.45.', gorsel_yolu: 'tck_m45', ses_yolu: null },
+  { id: 231, law_id: 1, madde_no: 'TCK m.35-45', baslik: 'Teşebbüs–İştirak–İçtima (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.35-45.', gorsel_yolu: 'tck_ozet_m35_45', ses_yolu: null },
+
+  // --- GRUP 4: Kamu İdaresine Karşı Suçlar (m.247-266 + 2 özet) ---
+  { id: 240, law_id: 1, madde_no: 'TCK m.247', baslik: 'Zimmet', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.247.', gorsel_yolu: 'tck_m247', ses_yolu: null },
+  { id: 241, law_id: 1, madde_no: 'TCK m.250', baslik: 'İrtikap', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.250.', gorsel_yolu: 'tck_m250', ses_yolu: null },
+  { id: 242, law_id: 1, madde_no: 'TCK m.251', baslik: 'Denetim görevinin ihmali', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.251.', gorsel_yolu: 'tck_m251', ses_yolu: null },
+  { id: 243, law_id: 1, madde_no: 'TCK m.252', baslik: 'Rüşvet', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.252.', gorsel_yolu: 'tck_m252', ses_yolu: null },
+  { id: 244, law_id: 1, madde_no: 'TCK m.255', baslik: 'Nüfuz ticareti', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.255.', gorsel_yolu: 'tck_m255', ses_yolu: null },
+  { id: 245, law_id: 1, madde_no: 'TCK m.256', baslik: 'Zor kullanma yetkisine ilişkin sınırın aşılması', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.256.', gorsel_yolu: 'tck_m256', ses_yolu: null },
+  { id: 246, law_id: 1, madde_no: 'TCK m.257', baslik: 'Görevi kötüye kullanma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.257.', gorsel_yolu: 'tck_m257', ses_yolu: null },
+  { id: 247, law_id: 1, madde_no: 'TCK m.258', baslik: 'Göreve ilişkin sırrın açıklanması', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.258.', gorsel_yolu: 'tck_m258', ses_yolu: null },
+  { id: 248, law_id: 1, madde_no: 'TCK m.259', baslik: 'Kamu görevlisinin ticareti', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.259.', gorsel_yolu: 'tck_m259', ses_yolu: null },
+  { id: 249, law_id: 1, madde_no: 'TCK m.260', baslik: 'Kamu görevinin terki veya yapılmaması', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.260.', gorsel_yolu: 'tck_m260', ses_yolu: null },
+  { id: 250, law_id: 1, madde_no: 'TCK m.261', baslik: 'Kişilerin malları üzerinde usulsüz tasarruf', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.261.', gorsel_yolu: 'tck_m261', ses_yolu: null },
+  { id: 251, law_id: 1, madde_no: 'TCK m.262', baslik: 'Kamu görevinin usulsüz olarak üstlenilmesi', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.262.', gorsel_yolu: 'tck_m262', ses_yolu: null },
+  { id: 252, law_id: 1, madde_no: 'TCK m.264', baslik: 'Özel işaret ve kıyafetleri usulsüz kullanma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.264.', gorsel_yolu: 'tck_m264', ses_yolu: null },
+  { id: 253, law_id: 1, madde_no: 'TCK m.266', baslik: 'Kamu görevine ait araç ve gereçleri suçta kullanma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.266.', gorsel_yolu: 'tck_m266', ses_yolu: null },
+  { id: 254, law_id: 1, madde_no: 'TCK m.247-255', baslik: 'Zimmet–Rüşvet–İrtikap (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.247-255.', gorsel_yolu: 'tck_ozet_m247_255', ses_yolu: null },
+  { id: 255, law_id: 1, madde_no: 'TCK m.256-266', baslik: 'Görevi kötüye kullanma ve diğerleri (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.256-266.', gorsel_yolu: 'tck_ozet_m256_266', ses_yolu: null },
+
+  // --- GRUP 5: Milli Savunmaya Karşı Suçlar (m.317-325 + özet) ---
+  { id: 260, law_id: 1, madde_no: 'TCK m.317', baslik: 'Askeri komutanlıkların gasbı', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.317.', gorsel_yolu: 'tck_m317', ses_yolu: null },
+  { id: 261, law_id: 1, madde_no: 'TCK m.318', baslik: 'Halkı askerlikten soğutma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.318.', gorsel_yolu: 'tck_m318', ses_yolu: null },
+  { id: 262, law_id: 1, madde_no: 'TCK m.319', baslik: 'Askerleri itaatsizliğe teşvik', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.319.', gorsel_yolu: 'tck_m319', ses_yolu: null },
+  { id: 263, law_id: 1, madde_no: 'TCK m.320', baslik: 'Yabancı hizmetine asker yazma, yazılma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.320.', gorsel_yolu: 'tck_m320', ses_yolu: null },
+  { id: 264, law_id: 1, madde_no: 'TCK m.321', baslik: 'Savaş zamanında emirlere uymama', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.321.', gorsel_yolu: 'tck_m321', ses_yolu: null },
+  { id: 265, law_id: 1, madde_no: 'TCK m.322', baslik: 'Savaş zamanında yükümlülükler', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.322.', gorsel_yolu: 'tck_m322', ses_yolu: null },
+  { id: 266, law_id: 1, madde_no: 'TCK m.323', baslik: 'Savaşta yalan haber yayma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.323.', gorsel_yolu: 'tck_m323', ses_yolu: null },
+  { id: 267, law_id: 1, madde_no: 'TCK m.324', baslik: 'Seferberlikle ilgili görevin ihmali', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.324.', gorsel_yolu: 'tck_m324', ses_yolu: null },
+  { id: 268, law_id: 1, madde_no: 'TCK m.325', baslik: 'Düşmandan unvan ve benzeri payeler kabulü', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.325.', gorsel_yolu: 'tck_m325', ses_yolu: null },
+  { id: 269, law_id: 1, madde_no: 'TCK m.317-325', baslik: 'Milli savunmaya karşı suçlar (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.317-325.', gorsel_yolu: 'tck_ozet_m317_325', ses_yolu: null },
+
+  // --- GENEL ÖZET ---
+  { id: 290, law_id: 1, madde_no: 'TCK Genel Özet', baslik: 'TCK Genel Hükümler – Genel Özet', anlatim_metni: 'Yer tutucu anlatım metni — TCK Genel Özet.', gorsel_yolu: 'tck_ozet_b1', ses_yolu: null },
 ];
 
 /**
@@ -251,6 +315,13 @@ export const SEED_CARDS: Card[] = [
 export const SEED_BOLUMLER: Bolum[] = [
   { id: 1, law_id: 49, ad: 'Bölüm 1 — Yasal Üretim ve İhlaller', sira: 1 },
   { id: 2, law_id: 49, ad: 'Bölüm 2 — Yaptırımlar ve Sonuçlar', sira: 2 },
+
+  // TCK (law_id 1) patikası — 5 bölüm (id 3-7).
+  { id: 3, law_id: 1, ad: 'Genel Hükümler', sira: 1 },
+  { id: 4, law_id: 1, ad: 'Ceza Sorumluluğu', sira: 2 },
+  { id: 5, law_id: 1, ad: 'Teşebbüs, İştirak, İçtima ve Cezalar', sira: 3 },
+  { id: 6, law_id: 1, ad: 'Kamu İdaresine Karşı Suçlar', sira: 4 },
+  { id: 7, law_id: 1, ad: 'Milli Savunmaya Karşı Suçlar', sira: 5 },
 ];
 
 /** Bölüm ↔ kart (bölüm içi sıra). Bölüm 1: card 100-104, Bölüm 2: card 105-109. */
@@ -265,4 +336,63 @@ export const SEED_BOLUM_KARTLARI: BolumKart[] = [
   { bolum_id: 2, card_id: 107, sira: 3 },
   { bolum_id: 2, card_id: 108, sira: 4 },
   { bolum_id: 2, card_id: 109, sira: 5 },
+
+  // TCK B1 — Genel Hükümler (m.1 [id 5] + m.2-5 + Genel Özet sonda)
+  { bolum_id: 3, card_id: 5, sira: 1 },
+  { bolum_id: 3, card_id: 201, sira: 2 },
+  { bolum_id: 3, card_id: 202, sira: 3 },
+  { bolum_id: 3, card_id: 203, sira: 4 },
+  { bolum_id: 3, card_id: 204, sira: 5 },
+  { bolum_id: 3, card_id: 290, sira: 6 },
+
+  // TCK B2 — Ceza Sorumluluğu (m.20-23 + ayırt sonda)
+  { bolum_id: 4, card_id: 210, sira: 1 },
+  { bolum_id: 4, card_id: 211, sira: 2 },
+  { bolum_id: 4, card_id: 212, sira: 3 },
+  { bolum_id: 4, card_id: 213, sira: 4 },
+  { bolum_id: 4, card_id: 214, sira: 5 },
+
+  // TCK B3 — Teşebbüs, İştirak, İçtima ve Cezalar (m.35-45 + özet sonda)
+  { bolum_id: 5, card_id: 220, sira: 1 },
+  { bolum_id: 5, card_id: 221, sira: 2 },
+  { bolum_id: 5, card_id: 222, sira: 3 },
+  { bolum_id: 5, card_id: 223, sira: 4 },
+  { bolum_id: 5, card_id: 224, sira: 5 },
+  { bolum_id: 5, card_id: 225, sira: 6 },
+  { bolum_id: 5, card_id: 226, sira: 7 },
+  { bolum_id: 5, card_id: 227, sira: 8 },
+  { bolum_id: 5, card_id: 228, sira: 9 },
+  { bolum_id: 5, card_id: 229, sira: 10 },
+  { bolum_id: 5, card_id: 230, sira: 11 },
+  { bolum_id: 5, card_id: 231, sira: 12 },
+
+  // TCK B4 — Kamu İdaresine Karşı Suçlar (m.247-266 + 2 özet sonda)
+  { bolum_id: 6, card_id: 240, sira: 1 },
+  { bolum_id: 6, card_id: 241, sira: 2 },
+  { bolum_id: 6, card_id: 242, sira: 3 },
+  { bolum_id: 6, card_id: 243, sira: 4 },
+  { bolum_id: 6, card_id: 244, sira: 5 },
+  { bolum_id: 6, card_id: 245, sira: 6 },
+  { bolum_id: 6, card_id: 246, sira: 7 },
+  { bolum_id: 6, card_id: 247, sira: 8 },
+  { bolum_id: 6, card_id: 248, sira: 9 },
+  { bolum_id: 6, card_id: 249, sira: 10 },
+  { bolum_id: 6, card_id: 250, sira: 11 },
+  { bolum_id: 6, card_id: 251, sira: 12 },
+  { bolum_id: 6, card_id: 252, sira: 13 },
+  { bolum_id: 6, card_id: 253, sira: 14 },
+  { bolum_id: 6, card_id: 254, sira: 15 },
+  { bolum_id: 6, card_id: 255, sira: 16 },
+
+  // TCK B5 — Milli Savunmaya Karşı Suçlar (m.317-325 + özet sonda)
+  { bolum_id: 7, card_id: 260, sira: 1 },
+  { bolum_id: 7, card_id: 261, sira: 2 },
+  { bolum_id: 7, card_id: 262, sira: 3 },
+  { bolum_id: 7, card_id: 263, sira: 4 },
+  { bolum_id: 7, card_id: 264, sira: 5 },
+  { bolum_id: 7, card_id: 265, sira: 6 },
+  { bolum_id: 7, card_id: 266, sira: 7 },
+  { bolum_id: 7, card_id: 267, sira: 8 },
+  { bolum_id: 7, card_id: 268, sira: 9 },
+  { bolum_id: 7, card_id: 269, sira: 10 },
 ];

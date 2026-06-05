@@ -97,6 +97,14 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 6;
     }
+    if (version < 7) {
+      // TCK görsel kartları (id 200-299) + TCK patika bölümleri (id 3-7). TAMAMEN EKLEMELİ:
+      // seedReference() + seedBolumler() INSERT OR IGNORE → yeni id'ler eklenir, mevcut veri
+      // (4733 dahil) DEĞİŞMEZ, srs (kullanıcı ilerlemesi) KORUNUR. DELETE/DROP YOK.
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 7;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
