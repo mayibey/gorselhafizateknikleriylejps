@@ -11,6 +11,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getCardsByBolum, getCardsByLaw, getDailyQueue, recordReview } from '@/db/database';
+import { maddeMetni } from '@/db/madde-metinleri';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -152,6 +153,30 @@ export default function AkisScreen() {
             {/* Sesli anlatım kontrolü. key=kart id → kart değişince remount → önceki ses durur. */}
             <AudioBar key={queue[index].id} sesYolu={queue[index].ses_yolu} />
 
+            {/* Madde Metni — resmî tam metin. Metin varsa aktif, yoksa soluk "yakında". */}
+            {maddeMetni(queue[index].madde_no) !== null ? (
+              <Pressable
+                style={({ pressed }) => [styles.maddeBtn, pressed && styles.pressed]}
+                onPress={() =>
+                  router.push({
+                    pathname: '/madde-metni',
+                    params: { madde_no: queue[index].madde_no, baslik: queue[index].baslik },
+                  })
+                }>
+                <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.lacivert} />
+                <AppText variant="kucuk" color="lacivert" bold>
+                  Madde Metni
+                </AppText>
+              </Pressable>
+            ) : (
+              <View style={[styles.maddeBtn, styles.maddeBtnPasif]}>
+                <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.solukMetin} />
+                <AppText variant="kucuk" color="solukMetin">
+                  Madde metni yakında
+                </AppText>
+              </View>
+            )}
+
             {/* Hata/öneri bildir — aktif kart bilgisi otomatik gömülür (Formspree). */}
             <Pressable
               style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
@@ -270,6 +295,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: Spacing.one,
     paddingVertical: Spacing.one,
+  },
+  maddeBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+  },
+  maddeBtnPasif: {
+    opacity: 0.55,
   },
   butonSatir: {
     flexDirection: 'row',
