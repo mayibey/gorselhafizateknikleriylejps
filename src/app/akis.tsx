@@ -5,6 +5,7 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AudioBar } from '@/components/card-flow/audio-bar';
+import { MaddeMetniSheet } from '@/components/card-flow/madde-metni-sheet';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -29,6 +30,13 @@ export default function AkisScreen() {
   const [index, setIndex] = useState(0);
   const [cozulen, setCozulen] = useState<Cozulen>({ tekrar: 0, yeni: 0 });
   const [cevapHatasi, setCevapHatasi] = useState(false);
+  // Madde metni sheet'i (ekran-içi overlay; queue/index/SRS'e dokunmaz).
+  const [maddeAcik, setMaddeAcik] = useState(false);
+
+  // Kart değişince açık sheet'i kapat (yeni kartın metnine kaymasın).
+  useEffect(() => {
+    setMaddeAcik(false);
+  }, [index]);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -157,12 +165,7 @@ export default function AkisScreen() {
             {maddeMetni(queue[index].madde_no) !== null ? (
               <Pressable
                 style={({ pressed }) => [styles.maddeBtn, pressed && styles.pressed]}
-                onPress={() =>
-                  router.push({
-                    pathname: '/madde-metni',
-                    params: { madde_no: queue[index].madde_no, baslik: queue[index].baslik },
-                  })
-                }>
+                onPress={() => setMaddeAcik(true)}>
                 <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.lacivert} />
                 <AppText variant="kucuk" color="lacivert" bold>
                   Madde Metni
@@ -211,6 +214,15 @@ export default function AkisScreen() {
               <Buton renk={Palette.kirmizi} etiket="Zor" onPress={() => void cevapla('zor')} />
             </View>
           </View>
+
+          {/* Madde metni sheet'i — ScrollView/alt blok ile KARDEŞ (absoluteFill).
+              Açıkken cevap butonlarının da üstünü örter → yanlışlıkla index kayması olmaz. */}
+          <MaddeMetniSheet
+            gorunur={maddeAcik}
+            maddeNo={queue[index].madde_no}
+            baslik={queue[index].baslik}
+            onKapat={() => setMaddeAcik(false)}
+          />
         </View>
       )}
     </SafeAreaView>
