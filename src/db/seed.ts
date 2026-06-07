@@ -313,18 +313,24 @@ export const SEED_CARDS: Card[] = [
  * olunan maddeler. Patika bunları "Madde N" DÜĞÜMLERİ olarak gösterir (bölüm bloğu DEĞİL).
  * - 'belirli liste' kanunlar: PDF'deki İLGİLİ MADDELER birebir.
  * - 'Tamamı' kanunlar: MEHAZLARI klasöründeki gerçek metinden çıkarıldı (.doc→antiword,
- *   HTML/.docx→XML; dosya sonundaki değişiklik tablosu ayıklandı). `tam(N)` = 1..N + Ek +
- *   Geçici; mülga maddeler de numara olarak düğüm sayılır.
+ *   HTML/.docx→XML, taranmış PDF→pdftotext; dosya sonundaki değişiklik tablosu ayıklandı).
+ *   `tam(N, {ek, gecici, mulga})` = 1..N + Ek + Geçici, EKSİ `mulga` (kaynakta "(Mülga...)"
+ *   işaretli ana maddeler düğüm OLUŞTURMAZ → yürürlükten kalkmış maddeler patikada yok).
  * 66/66 kanunun TAMAMI kapsamlı (kapsamsız kanun kalmadı; olsaydı patikada tek "Tüm
  * Kartlar" düğümü gösterirdi). id 21 (6284 Uyg Yön) taranmış PDF'ten (pdftotext) çıkarıldı.
  * Etiket → düğüm adı: '5'→"Madde 5", 'Ek 7'→"Ek Madde 7", 'Geçici 2'→"Geçici Madde 2",
  * '13/A'→"Madde 13/A".
  */
 
-/** 'Tamamı' kanunlar için 1..n ana madde + Ek + Geçici madde etiketleri üretir. */
-function tam(n: number, opts?: { ek?: number[]; gecici?: number[] }): string[] {
+/**
+ * 'Tamamı' kanunlar için 1..n ana madde + Ek + Geçici madde etiketleri üretir.
+ * `mulga`: kaynaktan "(Mülga...)" işaretli ana madde numaraları → düğüm OLUŞTURULMAZ
+ * (yürürlükten kalkmış maddeler patikada görünmez).
+ */
+function tam(n: number, opts?: { ek?: number[]; gecici?: number[]; mulga?: number[] }): string[] {
+  const mulga = new Set(opts?.mulga ?? []);
   const a: string[] = [];
-  for (let i = 1; i <= n; i++) a.push(String(i));
+  for (let i = 1; i <= n; i++) if (!mulga.has(i)) a.push(String(i));
   for (const k of opts?.ek ?? []) a.push(`Ek ${k}`);
   for (const k of opts?.gecici ?? []) a.push(`Geçici ${k}`);
   return a;
@@ -336,7 +342,7 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   // prettier-ignore
   1: ['1','2','3','4','5','20','21','22','23','35','36','37','38','39','40','41','42','43','44','45','247','248','249','250','251','252','253','254','255','256','257','258','259','260','261','262','264','265','266','317','318','319','320','321','322','323','324','325'], // TCK 5237 (müşterek kapsam)
   // prettier-ignore
-  2: tam(27, { ek: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], gecici: [1,2,3,4,5,6,7,8,9,10,11,12] }), // 2803 Jandarma Teşkilat Kanunu — Tamamı
+  2: tam(27, { ek: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], gecici: [1,2,3,4,5,6,7,8,9,10,11,12], mulga: [16,17,23,25] }), // 2803 Jandarma Teşkilat Kanunu — Tamamı
   3: ['3', '4', '5', '6', '7', '28'], // 6698 KVKK
   4: ['2', '3', '21', '22', '24'], // 7201 Tebligat
   5: ['2', '4', '9', '11', '18', '27', '31', '32', '42', '43', '57', '58', 'Ek 1'], // 5442 İl İdaresi
@@ -357,15 +363,15 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   19: ['2', '3', '4', '5'], // Bilgi Edinme Uyg Yön
   20: ['10', '13', '14'], // 2521 Avda/Sporda Yön
   21: tam(48), // 6284'e İlişkin Uygulama Yön — Tamamı (m.47 yürürlük, m.48 yürütme)
-  22: tam(64), // JGK ve SGK Personel Yön — Tamamı
+  22: tam(64, { mulga: [43, 44] }), // JGK ve SGK Personel Yön — Tamamı
   23: tam(35), // Jandarma ve SG Personelinin Hizmet Esasları Yön — Tamamı
   24: ['5', '20'], // İzin Yön
   // prettier-ignore
   25: tam(18, { ek: [1,2,3,4,5,6,7,8,9,10,11,12], gecici: [1,2,3,4,5,6,7,8,9,10] }), // 6136 Ateşli Silahlar Kanunu — Tamamı
 
   // --- BRANŞ (Jandarma) ---
-  26: tam(335, { ek: [1], gecici: [1, 2, 3, 4, 5, 6, 7, 8] }), // 5271 CMK — Tamamı
-  27: tam(21, { ek: [1, 2, 3], gecici: [1, 2, 3, 4] }), // 1774 Kimlik Bildirme — Tamamı
+  26: tam(335, { ek: [1], gecici: [1, 2, 3, 4, 5, 6, 7, 8], mulga: [250, 251, 252, 295] }), // 5271 CMK — Tamamı
+  27: tam(21, { ek: [1, 2, 3], gecici: [1, 2, 3, 4], mulga: [5, 8, 13, 16] }), // 1774 Kimlik Bildirme — Tamamı
   28: ['1', '2', '3', '4', '5', '6', '7', '8', '11', '12', '22', '23', '24', '25', '26', '27'], // 2911 Toplantı/Gösteri
   // prettier-ignore
   29: ['3','4','5','6','12','13','14','15','16','17','18','20','21','22','23','24','25','26','28','29','30','34'], // 4915 Kara Avcılığı
@@ -374,14 +380,14 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   32: ['14', '15', '16', '17', '18', '19', '41', '42', '68', '76', '77', '78', '79', '83', '84', '88'], // 6831 Orman
   33: ['3', '4', '6', '19', '20', '22', '23', '26', '27'], // 4342 Mera
   // prettier-ignore
-  34: tam(138, { ek: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], gecici: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27] }), // 2918 KTK — Tamamı
+  34: tam(138, { ek: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], gecici: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27], mulga: [11,40,113,117,119,120,127,129] }), // 2918 KTK — Tamamı
   35: ['4', '5', '7', '10', '14', '17', '19', '20'], // 5188 Özel Güvenlik
   36: tam(50, { ek: [1], gecici: [1, 2] }), // 5395 Çocuk Koruma — Tamamı
   37: ['6', '7', '8', '9', '10', '11', '12', '13', '14'], // 2860 Yardım Toplama
   38: ['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '20', '21', '22'], // 5199 Hayvanları Koruma
   39: ['12', '15', '20', '26', '27', '28'], // 2872 Çevre
   40: ['5', '13/A', '16', 'Ek 7'], // 2559 PVSK
-  41: tam(27), // 5607 Kaçakçılık — Tamamı
+  41: tam(27, { mulga: [8, 14] }), // 5607 Kaçakçılık — Tamamı
   42: tam(7), // 3298 Uyuşturucu — Tamamı
   43: ['4', '6', '7', '12'], // 6222 Sporda Şiddet
   44: ['20', '21', '23'], // 2313 Uyuşturucu Murakabesi
@@ -390,9 +396,10 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   47: ['2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '15'], // 3091 Zilyetlik
   48: ['2', '3', '4'], // 4207 Tütün Zararları
   49: ['8'], // 4733 Tütün/Alkol Piyasası
-  50: tam(35, { ek: [1, 2, 3, 4], gecici: [1] }), // Kimlik Bildirme Kanunu Uyg. Yön — Tamamı
+  50: tam(35, { ek: [1, 2, 3, 4], gecici: [1], mulga: [11, 12, 13, 18, 31] }), // Kimlik Bildirme Kanunu Uyg. Yön — Tamamı
   51: ['4', '13', '14', '15', '17'], // Ses/Gaz Fişeği Yön
-  52: tam(182, { ek: [1, 2, 3, 4], gecici: [10] }), // Karayolları Trafik Yön — Tamamı
+  // prettier-ignore
+  52: tam(182, { ek: [1,2,3,4], gecici: [10], mulga: [1,2,6,7,8,9,28,29,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,54,55,56,57,58,59,61,69,70,71,72,73,74,77,78,134,141,164,175] }), // Karayolları Trafik Yön — Tamamı
   53: ['3', '4', '5'], // Taşınır Kültür Yön
   54: ['5', '6', '8', '12', '17', '21', '22', '24', '29', '30', '33', '34', '36', '37', '38', '43', '44', '45', '46'], // Özel Güvenlik Uyg Yön
   55: tam(15), // Adli Kolluk Yön — Tamamı
