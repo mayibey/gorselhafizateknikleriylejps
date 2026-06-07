@@ -312,11 +312,12 @@ export const SEED_CARDS: Card[] = [
  * Patika KAPSAMI — JSPS resmî mevzuat listesi (Ek-1). Her kanun için sınavda sorumlu
  * olunan maddeler. Patika bunları "Madde N" DÜĞÜMLERİ olarak gösterir (bölüm bloğu DEĞİL).
  * - 'belirli liste' kanunlar: PDF'deki İLGİLİ MADDELER birebir.
- * - 'Tamamı' kanunlar: MEHAZLARI klasöründeki gerçek metinden antiword ile çıkarıldı
- *   (`tam(N)` = 1..N + Ek + Geçici; mülga maddeler de numara olarak düğüm sayılır).
- * Kaynağı çıkarılamayan/eksik 'Tamamı' kanunlar listede YOK → kapsamsız kanun patikada
- * tek "Tüm Kartlar" düğümü gösterir. (Eksikler: müşterek 2/6/9/11/15/17/21/22/23/25;
- * okunamayan yönetmelikler 50/55/57/60 — gerçek metin gelince eklenecek.)
+ * - 'Tamamı' kanunlar: MEHAZLARI klasöründeki gerçek metinden çıkarıldı (.doc→antiword,
+ *   HTML/.docx→XML; dosya sonundaki değişiklik tablosu ayıklandı). `tam(N)` = 1..N + Ek +
+ *   Geçici; mülga maddeler de numara olarak düğüm sayılır.
+ * Kaynağı çıkarılamayan 'Tamamı' kanunlar listede YOK → kapsamsız kanun patikada tek
+ * "Tüm Kartlar" düğümü gösterir. (Kalan tek eksik: id 21 = 6284 Uyg Yön, kaynak dosyası
+ * bozuk/okunamadı — gerçek metin gelince eklenecek.)
  * Etiket → düğüm adı: '5'→"Madde 5", 'Ek 7'→"Ek Madde 7", 'Geçici 2'→"Geçici Madde 2",
  * '13/A'→"Madde 13/A".
  */
@@ -335,21 +336,33 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   // --- MÜŞTEREK ---
   // prettier-ignore
   1: ['1','2','3','4','5','20','21','22','23','35','36','37','38','39','40','41','42','43','44','45','247','248','249','250','251','252','253','254','255','256','257','258','259','260','261','262','264','265','266','317','318','319','320','321','322','323','324','325'], // TCK 5237 (müşterek kapsam)
+  // prettier-ignore
+  2: tam(27, { ek: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], gecici: [1,2,3,4,5,6,7,8,9,10,11,12] }), // 2803 Jandarma Teşkilat Kanunu — Tamamı
   3: ['3', '4', '5', '6', '7', '28'], // 6698 KVKK
   4: ['2', '3', '21', '22', '24'], // 7201 Tebligat
   5: ['2', '4', '9', '11', '18', '27', '31', '32', '42', '43', '57', '58', 'Ek 1'], // 5442 İl İdaresi
+  6: tam(45, { ek: [1], gecici: [1, 2, 3] }), // 5326 Kabahatler Kanunu — Tamamı
   7: ['1', '2', '3', '4', '7', '8', '15', '19', '20', '21', '22', 'Ek 2'], // 3713 Terörle Mücadele
   8: ['1', '2', '3', '9', '11', '22', '23'], // 2935 OHAL
+  9: tam(5), // 5816 Atatürk Aleyhine İşlenen Suçlar — Tamamı
   10: tam(13), // 6284 — "İlk 13 madde"
+  11: tam(12), // 2893 Türk Bayrağı Kanunu — Tamamı
   // prettier-ignore
   12: ['4','5','6','7','8','9','10','11','12','13','14','15','19','20','21','27','28','29','30','31','32','33','34'], // 7068 Genel Kolluk Disiplin
   13: ['3', '4', '6', '7', '8', '10', '11', '12', '13', '15', '16'], // 4678 Sözleşmeli Subay/Astsubay
   14: ['2', '3', '4', '5'], // 5070 E-İmza
+  15: tam(39), // Resmî Yazışmalarda Uyg. Usul ve Esaslar Yön — Tamamı
   16: ['3', '5', '6', '8', '9', '11', '12', '13', '14', '15', '22', '26', '30', '31', '32'], // Sözleşmeli Subay Yön
+  17: tam(82), // Jandarma Teşkilat, Görev ve Yetkileri Yön — Tamamı
   18: ['8', '9', '10', '11'], // KV Silinmesi Yön
   19: ['2', '3', '4', '5'], // Bilgi Edinme Uyg Yön
   20: ['10', '13', '14'], // 2521 Avda/Sporda Yön
+  22: tam(64), // JGK ve SGK Personel Yön — Tamamı
+  23: tam(35), // Jandarma ve SG Personelinin Hizmet Esasları Yön — Tamamı
   24: ['5', '20'], // İzin Yön
+  // prettier-ignore
+  25: tam(18, { ek: [1,2,3,4,5,6,7,8,9,10,11,12], gecici: [1,2,3,4,5,6,7,8,9,10] }), // 6136 Ateşli Silahlar Kanunu — Tamamı
+  // NOT: id 21 (6284 Uyg Yön) kaynak dosyası bozuk (okunamadı) → kapsamsız, tek "Tüm Kartlar".
 
   // --- BRANŞ (Jandarma) ---
   26: tam(335, { ek: [1], gecici: [1, 2, 3, 4, 5, 6, 7, 8] }), // 5271 CMK — Tamamı
@@ -378,13 +391,17 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   47: ['2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '15'], // 3091 Zilyetlik
   48: ['2', '3', '4'], // 4207 Tütün Zararları
   49: ['8'], // 4733 Tütün/Alkol Piyasası
+  50: tam(35, { ek: [1, 2, 3, 4], gecici: [1] }), // Kimlik Bildirme Kanunu Uyg. Yön — Tamamı
   51: ['4', '13', '14', '15', '17'], // Ses/Gaz Fişeği Yön
   52: tam(182, { ek: [1, 2, 3, 4], gecici: [10] }), // Karayolları Trafik Yön — Tamamı
   53: ['3', '4', '5'], // Taşınır Kültür Yön
   54: ['5', '6', '8', '12', '17', '21', '22', '24', '29', '30', '33', '34', '36', '37', '38', '43', '44', '45', '46'], // Özel Güvenlik Uyg Yön
+  55: tam(15), // Adli Kolluk Yön — Tamamı
   56: tam(36), // Adli ve Önleme Aramaları Yön — Tamamı
+  57: tam(32, { gecici: [1] }), // Suç Eşyası Yön — Tamamı
   58: tam(34), // Yakalama, Gözaltına Alma ve İfade Alma Yön — Tamamı
   59: ['3', '4', '5', '6', '16'], // Beden Muayenesi Yön
+  60: tam(31), // Çocuk Koruma Koruyucu/Destekleyici Tedbir Yön — Tamamı
   61: ['3', '5', '16'], // Çocuk Koruma Usul/Esas Yön
   62: ['3', '5', '6', '7', '8', '29', '30', '32', '33', '34', '36', '38', '43'], // İşyeri Açma Yön
   63: ['3', '5', '6', '7', '8', '9', '14', '15'], // Kum/Çakıl Yön

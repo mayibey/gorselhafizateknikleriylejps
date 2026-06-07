@@ -152,4 +152,4 @@ CREATE TABLE IF NOT EXISTS bolum_kartlari (
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 8;
+export const SCHEMA_VERSION = 9;
