@@ -315,9 +315,8 @@ export const SEED_CARDS: Card[] = [
  * - 'Tamamı' kanunlar: MEHAZLARI klasöründeki gerçek metinden çıkarıldı (.doc→antiword,
  *   HTML/.docx→XML; dosya sonundaki değişiklik tablosu ayıklandı). `tam(N)` = 1..N + Ek +
  *   Geçici; mülga maddeler de numara olarak düğüm sayılır.
- * Kaynağı çıkarılamayan 'Tamamı' kanunlar listede YOK → kapsamsız kanun patikada tek
- * "Tüm Kartlar" düğümü gösterir. (Kalan tek eksik: id 21 = 6284 Uyg Yön, kaynak dosyası
- * bozuk/okunamadı — gerçek metin gelince eklenecek.)
+ * 66/66 kanunun TAMAMI kapsamlı (kapsamsız kanun kalmadı; olsaydı patikada tek "Tüm
+ * Kartlar" düğümü gösterirdi). id 21 (6284 Uyg Yön) taranmış PDF'ten (pdftotext) çıkarıldı.
  * Etiket → düğüm adı: '5'→"Madde 5", 'Ek 7'→"Ek Madde 7", 'Geçici 2'→"Geçici Madde 2",
  * '13/A'→"Madde 13/A".
  */
@@ -357,12 +356,12 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   18: ['8', '9', '10', '11'], // KV Silinmesi Yön
   19: ['2', '3', '4', '5'], // Bilgi Edinme Uyg Yön
   20: ['10', '13', '14'], // 2521 Avda/Sporda Yön
+  21: tam(48), // 6284'e İlişkin Uygulama Yön — Tamamı (m.47 yürürlük, m.48 yürütme)
   22: tam(64), // JGK ve SGK Personel Yön — Tamamı
   23: tam(35), // Jandarma ve SG Personelinin Hizmet Esasları Yön — Tamamı
   24: ['5', '20'], // İzin Yön
   // prettier-ignore
   25: tam(18, { ek: [1,2,3,4,5,6,7,8,9,10,11,12], gecici: [1,2,3,4,5,6,7,8,9,10] }), // 6136 Ateşli Silahlar Kanunu — Tamamı
-  // NOT: id 21 (6284 Uyg Yön) kaynak dosyası bozuk (okunamadı) → kapsamsız, tek "Tüm Kartlar".
 
   // --- BRANŞ (Jandarma) ---
   26: tam(335, { ek: [1], gecici: [1, 2, 3, 4, 5, 6, 7, 8] }), // 5271 CMK — Tamamı
