@@ -13,18 +13,7 @@ import type { Bolum } from '@/db/schema';
 import { bolumIlerleme } from '@/lib/patika';
 
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
-type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
-
 const TAMAM_YESIL = '#16a34a';
-/** Bölüm sırasına göre döngüsel generic ikonlar (veri değişmeden çeşitlilik). */
-const BOLUM_IKONLARI: IconName[] = [
-  'book-open-variant',
-  'gavel',
-  'shield-outline',
-  'file-document-outline',
-  'scale-balance',
-  'clipboard-text-outline',
-];
 
 export default function PatikaScreen() {
   const router = useRouter();
@@ -62,9 +51,10 @@ export default function PatikaScreen() {
 
   useFocusEffect(yukle);
 
-  // İlk tamamlanmamış düğüm = "aktif" (altın vurgu). Hepsi tamamsa -1.
+  // "aktif" (altın vurgu) = ilk çalışılabilir ama bitmemiş madde (kartı olan, tamamlanmamış).
+  // Kartı olmayan madde düğümleri (kapsam iskeleti) aktif sayılmaz.
   const aktifIndex = dugumler
-    ? dugumler.findIndex((d) => !(d.toplam > 0 && d.calisilan === d.toplam))
+    ? dugumler.findIndex((d) => d.toplam > 0 && d.calisilan < d.toplam)
     : -1;
 
   return (
@@ -134,11 +124,14 @@ function BolumDugumu({
   aktif: boolean;
   onPress: () => void;
 }) {
-  const { bolum, calisilan, toplam, oran } = dugum;
-  const tamam = toplam > 0 && calisilan === toplam;
-  const baslanmis = oran > 0 && !tamam;
-  const ikon = BOLUM_IKONLARI[(bolum.sira - 1) % BOLUM_IKONLARI.length];
-  const dolu = tamam || baslanmis; // ikon/numara beyaz mı soluk mu
+  const { bolum, calisilan, toplam } = dugum;
+  const kartVar = toplam > 0; // bu maddeye bağlı kart var mı (yoksa kapsam iskeleti)
+  const tamam = kartVar && calisilan === toplam;
+  // Daire içi kısa etiket: "Madde 5"→"5", "Ek Madde 7"→"Ek 7", "Geçici Madde 2"→"Geç.2".
+  const kisa = bolum.ad
+    .replace('Geçici Madde ', 'Geç.')
+    .replace('Ek Madde ', 'Ek ')
+    .replace('Madde ', '');
 
   return (
     <View style={[styles.dugumSatir, { alignSelf: index % 2 === 0 ? 'flex-start' : 'flex-end' }]}>
@@ -146,30 +139,25 @@ function BolumDugumu({
         <View
           style={[
             styles.daire,
-            tamam ? styles.daireTamam : baslanmis ? styles.daireBaslanmis : styles.daireBos,
+            tamam ? styles.daireTamam : kartVar ? styles.daireBaslanmis : styles.daireBos,
             aktif && styles.daireAktif,
           ]}>
           {tamam ? (
-            <MaterialCommunityIcons name="check-bold" size={30} color={Palette.beyaz} />
+            <MaterialCommunityIcons name="check-bold" size={28} color={Palette.beyaz} />
           ) : (
-            <>
-              <MaterialCommunityIcons
-                name={ikon}
-                size={24}
-                color={dolu ? Palette.beyaz : Palette.solukMetin}
-              />
-              <AppText variant="etiket" color={dolu ? 'beyaz' : 'solukMetin'} bold>
-                {bolum.sira}
-              </AppText>
-            </>
+            <AppText variant="kucuk" color={kartVar ? 'beyaz' : 'solukMetin'} bold>
+              {kisa}
+            </AppText>
           )}
         </View>
-        <AppText variant="etiket" bold style={styles.dugumAd} numberOfLines={2}>
+        <AppText variant="etiket" bold style={styles.dugumAd} numberOfLines={1}>
           {bolum.ad}
         </AppText>
-        <AppText variant="etiket" color="solukMetin">
-          {calisilan}/{toplam}
-        </AppText>
+        {kartVar ? (
+          <AppText variant="etiket" color="solukMetin">
+            {calisilan}/{toplam}
+          </AppText>
+        ) : null}
       </Pressable>
     </View>
   );

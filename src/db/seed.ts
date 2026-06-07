@@ -309,90 +309,132 @@ export const SEED_CARDS: Card[] = [
 ];
 
 /**
- * Patika bölümleri (Duolingo blokları). Bölümü OLMAYAN kanunlar (TCK gibi) patikada
- * tek "Tüm Kartlar" düğümü gösterir. DEMO: 4733 m.8 (law_id 49) 2 bölüme bölündü.
+ * Patika KAPSAMI — JSPS resmî mevzuat listesi (Ek-1). Her kanun için sınavda sorumlu
+ * olunan maddeler. Patika bunları "Madde N" DÜĞÜMLERİ olarak gösterir (bölüm bloğu DEĞİL).
+ * - 'belirli liste' kanunlar: PDF'deki İLGİLİ MADDELER birebir.
+ * - 'Tamamı' kanunlar: MEHAZLARI klasöründeki gerçek metinden antiword ile çıkarıldı
+ *   (`tam(N)` = 1..N + Ek + Geçici; mülga maddeler de numara olarak düğüm sayılır).
+ * Kaynağı çıkarılamayan/eksik 'Tamamı' kanunlar listede YOK → kapsamsız kanun patikada
+ * tek "Tüm Kartlar" düğümü gösterir. (Eksikler: müşterek 2/6/9/11/15/17/21/22/23/25;
+ * okunamayan yönetmelikler 50/55/57/60 — gerçek metin gelince eklenecek.)
+ * Etiket → düğüm adı: '5'→"Madde 5", 'Ek 7'→"Ek Madde 7", 'Geçici 2'→"Geçici Madde 2",
+ * '13/A'→"Madde 13/A".
  */
-export const SEED_BOLUMLER: Bolum[] = [
-  { id: 1, law_id: 49, ad: 'Bölüm 1 — Yasal Üretim ve İhlaller', sira: 1 },
-  { id: 2, law_id: 49, ad: 'Bölüm 2 — Yaptırımlar ve Sonuçlar', sira: 2 },
 
-  // TCK (law_id 1) patikası — 5 bölüm (id 3-7).
-  { id: 3, law_id: 1, ad: 'Genel Hükümler', sira: 1 },
-  { id: 4, law_id: 1, ad: 'Ceza Sorumluluğu', sira: 2 },
-  { id: 5, law_id: 1, ad: 'Teşebbüs, İştirak, İçtima ve Cezalar', sira: 3 },
-  { id: 6, law_id: 1, ad: 'Kamu İdaresine Karşı Suçlar', sira: 4 },
-  { id: 7, law_id: 1, ad: 'Milli Savunmaya Karşı Suçlar', sira: 5 },
-];
+/** 'Tamamı' kanunlar için 1..n ana madde + Ek + Geçici madde etiketleri üretir. */
+function tam(n: number, opts?: { ek?: number[]; gecici?: number[] }): string[] {
+  const a: string[] = [];
+  for (let i = 1; i <= n; i++) a.push(String(i));
+  for (const k of opts?.ek ?? []) a.push(`Ek ${k}`);
+  for (const k of opts?.gecici ?? []) a.push(`Geçici ${k}`);
+  return a;
+}
 
-/** Bölüm ↔ kart (bölüm içi sıra). Bölüm 1: card 100-104, Bölüm 2: card 105-109. */
-export const SEED_BOLUM_KARTLARI: BolumKart[] = [
-  { bolum_id: 1, card_id: 100, sira: 1 },
-  { bolum_id: 1, card_id: 101, sira: 2 },
-  { bolum_id: 1, card_id: 102, sira: 3 },
-  { bolum_id: 1, card_id: 103, sira: 4 },
-  { bolum_id: 1, card_id: 104, sira: 5 },
-  { bolum_id: 2, card_id: 105, sira: 1 },
-  { bolum_id: 2, card_id: 106, sira: 2 },
-  { bolum_id: 2, card_id: 107, sira: 3 },
-  { bolum_id: 2, card_id: 108, sira: 4 },
-  { bolum_id: 2, card_id: 109, sira: 5 },
+/** law_id → sınav kapsamındaki madde etiketleri (sıralı). */
+export const SEED_KAPSAM: Record<number, string[]> = {
+  // --- MÜŞTEREK ---
+  // prettier-ignore
+  1: ['1','2','3','4','5','20','21','22','23','35','36','37','38','39','40','41','42','43','44','45','247','248','249','250','251','252','253','254','255','256','257','258','259','260','261','262','264','265','266','317','318','319','320','321','322','323','324','325'], // TCK 5237 (müşterek kapsam)
+  3: ['3', '4', '5', '6', '7', '28'], // 6698 KVKK
+  4: ['2', '3', '21', '22', '24'], // 7201 Tebligat
+  5: ['2', '4', '9', '11', '18', '27', '31', '32', '42', '43', '57', '58', 'Ek 1'], // 5442 İl İdaresi
+  7: ['1', '2', '3', '4', '7', '8', '15', '19', '20', '21', '22', 'Ek 2'], // 3713 Terörle Mücadele
+  8: ['1', '2', '3', '9', '11', '22', '23'], // 2935 OHAL
+  10: tam(13), // 6284 — "İlk 13 madde"
+  // prettier-ignore
+  12: ['4','5','6','7','8','9','10','11','12','13','14','15','19','20','21','27','28','29','30','31','32','33','34'], // 7068 Genel Kolluk Disiplin
+  13: ['3', '4', '6', '7', '8', '10', '11', '12', '13', '15', '16'], // 4678 Sözleşmeli Subay/Astsubay
+  14: ['2', '3', '4', '5'], // 5070 E-İmza
+  16: ['3', '5', '6', '8', '9', '11', '12', '13', '14', '15', '22', '26', '30', '31', '32'], // Sözleşmeli Subay Yön
+  18: ['8', '9', '10', '11'], // KV Silinmesi Yön
+  19: ['2', '3', '4', '5'], // Bilgi Edinme Uyg Yön
+  20: ['10', '13', '14'], // 2521 Avda/Sporda Yön
+  24: ['5', '20'], // İzin Yön
 
-  // TCK B1 — Genel Hükümler (m.1 [id 5] + m.2-5 + Genel Özet sonda)
-  { bolum_id: 3, card_id: 5, sira: 1 },
-  { bolum_id: 3, card_id: 201, sira: 2 },
-  { bolum_id: 3, card_id: 202, sira: 3 },
-  { bolum_id: 3, card_id: 203, sira: 4 },
-  { bolum_id: 3, card_id: 204, sira: 5 },
-  { bolum_id: 3, card_id: 290, sira: 6 },
+  // --- BRANŞ (Jandarma) ---
+  26: tam(335, { ek: [1], gecici: [1, 2, 3, 4, 5, 6, 7, 8] }), // 5271 CMK — Tamamı
+  27: tam(21, { ek: [1, 2, 3], gecici: [1, 2, 3, 4] }), // 1774 Kimlik Bildirme — Tamamı
+  28: ['1', '2', '3', '4', '5', '6', '7', '8', '11', '12', '22', '23', '24', '25', '26', '27'], // 2911 Toplantı/Gösteri
+  // prettier-ignore
+  29: ['3','4','5','6','12','13','14','15','16','17','18','20','21','22','23','24','25','26','28','29','30','34'], // 4915 Kara Avcılığı
+  30: ['2', '3', '19', '20', '21', '22', '23', '24', '25', '33', '34', '35', '36', 'Ek 3'], // 1380 Su Ürünleri
+  31: ['3', '4', '5', '6', '7', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '102'], // 6458 YUKK
+  32: ['14', '15', '16', '17', '18', '19', '41', '42', '68', '76', '77', '78', '79', '83', '84', '88'], // 6831 Orman
+  33: ['3', '4', '6', '19', '20', '22', '23', '26', '27'], // 4342 Mera
+  // prettier-ignore
+  34: tam(138, { ek: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], gecici: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27] }), // 2918 KTK — Tamamı
+  35: ['4', '5', '7', '10', '14', '17', '19', '20'], // 5188 Özel Güvenlik
+  36: tam(50, { ek: [1], gecici: [1, 2] }), // 5395 Çocuk Koruma — Tamamı
+  37: ['6', '7', '8', '9', '10', '11', '12', '13', '14'], // 2860 Yardım Toplama
+  38: ['3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '20', '21', '22'], // 5199 Hayvanları Koruma
+  39: ['12', '15', '20', '26', '27', '28'], // 2872 Çevre
+  40: ['5', '13/A', '16', 'Ek 7'], // 2559 PVSK
+  41: tam(27), // 5607 Kaçakçılık — Tamamı
+  42: tam(7), // 3298 Uyuşturucu — Tamamı
+  43: ['4', '6', '7', '12'], // 6222 Sporda Şiddet
+  44: ['20', '21', '23'], // 2313 Uyuşturucu Murakabesi
+  45: tam(21), // 6415 Terörizmin Finansmanı — "1-21 arası"
+  46: ['3', '4', '6', '16', '23', '26', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75'], // 2863 Kültür/Tabiat
+  47: ['2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '15'], // 3091 Zilyetlik
+  48: ['2', '3', '4'], // 4207 Tütün Zararları
+  49: ['8'], // 4733 Tütün/Alkol Piyasası
+  51: ['4', '13', '14', '15', '17'], // Ses/Gaz Fişeği Yön
+  52: tam(182, { ek: [1, 2, 3, 4], gecici: [10] }), // Karayolları Trafik Yön — Tamamı
+  53: ['3', '4', '5'], // Taşınır Kültür Yön
+  54: ['5', '6', '8', '12', '17', '21', '22', '24', '29', '30', '33', '34', '36', '37', '38', '43', '44', '45', '46'], // Özel Güvenlik Uyg Yön
+  56: tam(36), // Adli ve Önleme Aramaları Yön — Tamamı
+  58: tam(34), // Yakalama, Gözaltına Alma ve İfade Alma Yön — Tamamı
+  59: ['3', '4', '5', '6', '16'], // Beden Muayenesi Yön
+  61: ['3', '5', '16'], // Çocuk Koruma Usul/Esas Yön
+  62: ['3', '5', '6', '7', '8', '29', '30', '32', '33', '34', '36', '38', '43'], // İşyeri Açma Yön
+  63: ['3', '5', '6', '7', '8', '9', '14', '15'], // Kum/Çakıl Yön
+  64: ['3', '6', '7', '8', '9', '10'], // Tütün/Alkol Satış Yön
+  65: ['3', '5', '10', '12', '22'], // Türk Vatandaşlığı Uyg Yön
+  66: ['3', '4', '7', '8', '9', '10', '16', '47', '54', '60', '70', '71'], // Ateşli Silahlar/Bıçaklar Yön
+};
 
-  // TCK B2 — Ceza Sorumluluğu (m.20-23 + ayırt sonda)
-  { bolum_id: 4, card_id: 210, sira: 1 },
-  { bolum_id: 4, card_id: 211, sira: 2 },
-  { bolum_id: 4, card_id: 212, sira: 3 },
-  { bolum_id: 4, card_id: 213, sira: 4 },
-  { bolum_id: 4, card_id: 214, sira: 5 },
+/** Madde etiketi → patika düğümü adı. */
+function maddeAd(etiket: string): string {
+  if (etiket.startsWith('Ek ')) return `Ek Madde ${etiket.slice(3)}`;
+  if (etiket.startsWith('Geçici ')) return `Geçici Madde ${etiket.slice(7)}`;
+  return `Madde ${etiket}`;
+}
 
-  // TCK B3 — Teşebbüs, İştirak, İçtima ve Cezalar (m.35-45 + özet sonda)
-  { bolum_id: 5, card_id: 220, sira: 1 },
-  { bolum_id: 5, card_id: 221, sira: 2 },
-  { bolum_id: 5, card_id: 222, sira: 3 },
-  { bolum_id: 5, card_id: 223, sira: 4 },
-  { bolum_id: 5, card_id: 224, sira: 5 },
-  { bolum_id: 5, card_id: 225, sira: 6 },
-  { bolum_id: 5, card_id: 226, sira: 7 },
-  { bolum_id: 5, card_id: 227, sira: 8 },
-  { bolum_id: 5, card_id: 228, sira: 9 },
-  { bolum_id: 5, card_id: 229, sira: 10 },
-  { bolum_id: 5, card_id: 230, sira: 11 },
-  { bolum_id: 5, card_id: 231, sira: 12 },
+/**
+ * Patika düğümleri (bolumler tablosu YENİDEN KULLANILIYOR — her satır artık bir MADDE).
+ * id = law_id*1000 + sıra → deterministik/idempotent (kanun başına en çok ~344 madde).
+ */
+export const SEED_BOLUMLER: Bolum[] = Object.entries(SEED_KAPSAM).flatMap(
+  ([lawIdStr, etiketler]) => {
+    const lawId = Number(lawIdStr);
+    return etiketler.map((et, i) => ({
+      id: lawId * 1000 + (i + 1),
+      law_id: lawId,
+      ad: maddeAd(et),
+      sira: i + 1,
+    }));
+  },
+);
 
-  // TCK B4 — Kamu İdaresine Karşı Suçlar (m.247-266 + 2 özet sonda)
-  { bolum_id: 6, card_id: 240, sira: 1 },
-  { bolum_id: 6, card_id: 241, sira: 2 },
-  { bolum_id: 6, card_id: 242, sira: 3 },
-  { bolum_id: 6, card_id: 243, sira: 4 },
-  { bolum_id: 6, card_id: 244, sira: 5 },
-  { bolum_id: 6, card_id: 245, sira: 6 },
-  { bolum_id: 6, card_id: 246, sira: 7 },
-  { bolum_id: 6, card_id: 247, sira: 8 },
-  { bolum_id: 6, card_id: 248, sira: 9 },
-  { bolum_id: 6, card_id: 249, sira: 10 },
-  { bolum_id: 6, card_id: 250, sira: 11 },
-  { bolum_id: 6, card_id: 251, sira: 12 },
-  { bolum_id: 6, card_id: 252, sira: 13 },
-  { bolum_id: 6, card_id: 253, sira: 14 },
-  { bolum_id: 6, card_id: 254, sira: 15 },
-  { bolum_id: 6, card_id: 255, sira: 16 },
-
-  // TCK B5 — Milli Savunmaya Karşı Suçlar (m.317-325 + özet sonda)
-  { bolum_id: 7, card_id: 260, sira: 1 },
-  { bolum_id: 7, card_id: 261, sira: 2 },
-  { bolum_id: 7, card_id: 262, sira: 3 },
-  { bolum_id: 7, card_id: 263, sira: 4 },
-  { bolum_id: 7, card_id: 264, sira: 5 },
-  { bolum_id: 7, card_id: 265, sira: 6 },
-  { bolum_id: 7, card_id: 266, sira: 7 },
-  { bolum_id: 7, card_id: 267, sira: 8 },
-  { bolum_id: 7, card_id: 268, sira: 9 },
-  { bolum_id: 7, card_id: 269, sira: 10 },
-];
+/**
+ * Mevcut kartları madde düğümüne OTOMATİK bağlar: madde_no içindeki "m.<N>" → o maddenin
+ * düğümü (kapsamdaki sıraya göre bolum_id). Kapsamda olmayan madde veya numarasız (özet)
+ * kart bağlanmaz — bu kartlara Mevzuat→kanun (getCardsByLaw) ile yine erişilir.
+ */
+export const SEED_BOLUM_KARTLARI: BolumKart[] = (() => {
+  const satirlar: BolumKart[] = [];
+  const sayac = new Map<number, number>(); // bolum_id → o düğüme eklenen kart sayısı (sira)
+  for (const card of SEED_CARDS) {
+    const kapsam = SEED_KAPSAM[card.law_id];
+    if (!kapsam) continue;
+    const m = card.madde_no.match(/m\.\s*(\d+(?:\/[A-Za-z])?)/i);
+    if (!m) continue;
+    const idx = kapsam.indexOf(m[1]);
+    if (idx < 0) continue;
+    const bolumId = card.law_id * 1000 + (idx + 1);
+    const sira = (sayac.get(bolumId) ?? 0) + 1;
+    sayac.set(bolumId, sira);
+    satirlar.push({ bolum_id: bolumId, card_id: card.id, sira });
+  }
+  return satirlar;
+})();

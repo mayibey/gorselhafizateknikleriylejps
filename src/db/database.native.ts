@@ -105,6 +105,15 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 7;
     }
+    if (version < 8) {
+      // Patika artık bölüm bloğu DEĞİL, sınav kapsamı = MADDE düğümleri. bolumler ve
+      // bolum_kartlari SALT REFERANS veridir (srs içermez) → güvenle sıfırlanıp yeni
+      // kapsamla yeniden tohumlanır. cards/srs/laws/branches'e DOKUNULMAZ; kullanıcı
+      // ilerlemesi (srs, card_id ile bağlı) KORUNUR. (Eski bölüm id 1-7 → yeni id law*1000+.)
+      await db.execAsync('DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedBolumler();
+      version = 8;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
