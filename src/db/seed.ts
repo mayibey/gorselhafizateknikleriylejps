@@ -5,6 +5,7 @@
  * - TCK law_id=1 PİNLİ: 49 TCK görseli + tck_m1 kartı buna bağlı, kaydırılmaz.
  */
 
+import { KART_GORSELLERI } from '../assets/kart-gorselleri';
 import type { Bolum, BolumKart, Branch, Card, Law, LawBranch } from '@/db/schema';
 
 export const SEED_LAWS: Law[] = [
@@ -113,45 +114,89 @@ export const SEED_LAW_BRANCHES: LawBranch[] = Array.from({ length: 41 }, (_, i) 
  * 10 panel görsel + 1 sesli kart). Başlıklar/metinler geçici; gerçek içerik
  * eklendikçe genişler. (Eski PVSK placeholder kartı, id şeması değiştiği için kaldırıldı.)
  */
-export const SEED_CARDS: Card[] = [
-  {
-    id: 5,
-    law_id: 1,
-    madde_no: 'TCK m.1',
-    baslik: 'CEZA KANUNUNUN AMACI',
-    anlatim_metni: 'Yer tutucu anlatım metni — ceza kanununun amacı.',
-    gorsel_yolu: 'tck_m1',
-    ses_yolu: null,
-  },
-  {
-    id: 1,
-    law_id: 1,
-    madde_no: 'TCK m.86',
-    baslik: 'KASTEN YARALAMA',
-    anlatim_metni: 'Yer tutucu anlatım metni — kasten yaralama suçunun unsurları.',
-    gorsel_yolu: null,
-    ses_yolu: null,
-  },
-  {
-    id: 2,
-    law_id: 1,
-    madde_no: 'TCK m.106',
-    baslik: 'TEHDİT',
-    anlatim_metni: 'Yer tutucu anlatım metni — tehdit suçu.',
-    gorsel_yolu: null,
-    ses_yolu: null,
-  },
-  {
-    id: 3,
-    law_id: 1,
-    madde_no: 'TCK m.125',
-    baslik: 'HAKARET',
-    anlatim_metni: 'Yer tutucu anlatım metni — hakaret suçu.',
-    gorsel_yolu: null,
-    ses_yolu: null,
-  },
+/** Önceki turdan korunan resmî TCK madde başlıkları (madde no → başlık). Eksikler placeholder. */
+// prettier-ignore
+const TCK_BASLIK: Record<string, string> = {
+  '1': 'Ceza kanununun amacı', '2': 'Suçta ve cezada kanunilik ilkesi', '3': 'Adalet ve kanun önünde eşitlik ilkesi',
+  '4': 'Kanunun bağlayıcılığı', '5': 'Özel kanunlarla ilişki', '20': 'Ceza sorumluluğunun şahsiliği', '21': 'Kast',
+  '22': 'Taksir', '23': 'Netice sebebiyle ağırlaşmış suç', '35': 'Suça teşebbüs', '36': 'Gönüllü vazgeçme',
+  '37': 'Faillik', '38': 'Azmettirme', '39': 'Yardım etme', '40': 'Bağlılık kuralı',
+  '41': 'İştirak halinde işlenen suçlarda gönüllü vazgeçme', '42': 'Bileşik suç', '43': 'Zincirleme suç',
+  '44': 'Fikri içtima', '45': 'Cezalar', '247': 'Zimmet', '250': 'İrtikap', '251': 'Denetim görevinin ihmali',
+  '252': 'Rüşvet', '255': 'Nüfuz ticareti', '256': 'Zor kullanma yetkisine ilişkin sınırın aşılması',
+  '257': 'Görevi kötüye kullanma', '258': 'Göreve ilişkin sırrın açıklanması', '259': 'Kamu görevlisinin ticareti',
+  '260': 'Kamu görevinin terki veya yapılmaması', '261': 'Kişilerin malları üzerinde usulsüz tasarruf',
+  '262': 'Kamu görevinin usulsüz olarak üstlenilmesi', '264': 'Özel işaret ve kıyafetleri usulsüz kullanma',
+  '266': 'Kamu görevine ait araç ve gereçleri suçta kullanma', '317': 'Askeri komutanlıkların gasbı',
+  '318': 'Halkı askerlikten soğutma', '319': 'Askerleri itaatsizliğe teşvik', '320': 'Yabancı hizmetine asker yazma, yazılma',
+  '321': 'Savaş zamanında emirlere uymama', '322': 'Savaş zamanında yükümlülükler', '323': 'Savaşta yalan haber yayma',
+  '324': 'Seferberlikle ilgili görevin ihmali', '325': 'Düşmandan unvan ve benzeri payeler kabulü',
+};
 
-  // --- 4733 m.8 (law_id 49, jandarma) — 10 panel, akışta bu sırayla; özet en son ---
+/** Görsel anahtar öneki → kanun. (4733 görselleri şu an boş → registry'de yok.) */
+const KANUN_BILGI: Record<string, { lawId: number; etiket: string }> = {
+  tck: { lawId: 1, etiket: 'TCK' },
+  kabahatler: { lawId: 6, etiket: 'Kabahatler' },
+};
+
+/**
+ * TCK + Kabahatler görsel kartlarını registry anahtarlarından ÜRETİR (her PNG = 1 kart).
+ * Çok panel → aynı madde_no (4733 m.8 gibi aynı düğümde sıralanır). Özet/ayırt → ilk maddenin
+ * madde_no'su ile o düğüme bağlanır; genel özet (madde no'suz) bağlanmaz, kanun akışında görünür.
+ * Sıra: kanun → bağlandığı madde → tip (normal<özet<ayırt<genelözet) → panel.
+ */
+function gorselKartlari(): Card[] {
+  type Tip = 'normal' | 'ozet' | 'ayirt' | 'genelozet';
+  type Ham = { key: string; lawId: number; etiket: string; link: number; rank: number; panel: string; tip: Tip; nums: number[]; tag: string };
+  const ham: Ham[] = [];
+  for (const key of Object.keys(KART_GORSELLERI)) {
+    const us = key.indexOf('_');
+    const bilgi = KANUN_BILGI[key.slice(0, us)];
+    if (!bilgi) continue;
+    const geri = key.slice(us + 1); // 'm35_1' | 'ayirt_m21_22' | 'ozet_m247_266' | 'ozet_tutar'
+    const ortak = { key, lawId: bilgi.lawId, etiket: bilgi.etiket };
+    if (geri.startsWith('ayirt_m')) {
+      const nums = geri.slice(7).split('_').map(Number);
+      ham.push({ ...ortak, link: nums[0], rank: 2, panel: '', tip: 'ayirt', nums, tag: '' });
+    } else if (geri.startsWith('ozet_m')) {
+      const nums = geri.slice(6).split('_').map(Number);
+      ham.push({ ...ortak, link: nums[0], rank: 1, panel: '', tip: 'ozet', nums, tag: '' });
+    } else if (geri.startsWith('ozet_')) {
+      ham.push({ ...ortak, link: Number.MAX_SAFE_INTEGER, rank: 3, panel: '', tip: 'genelozet', nums: [], tag: geri.slice(5) });
+    } else {
+      const m = /^m(\d+)(?:_(.*))?$/.exec(geri);
+      const no = Number(m![1]);
+      ham.push({ ...ortak, link: no, rank: 0, panel: m![2] ?? '', tip: 'normal', nums: [no], tag: '' });
+    }
+  }
+  ham.sort((a, b) => a.lawId - b.lawId || a.link - b.link || a.rank - b.rank || a.panel.localeCompare(b.panel) || a.key.localeCompare(b.key));
+  const cards: Card[] = [];
+  const sayac: Record<number, number> = {};
+  for (const h of ham) {
+    const id = (h.lawId === 1 ? 100000 : 110000) + (sayac[h.lawId] = (sayac[h.lawId] ?? 0) + 1);
+    let madde_no: string, baslik: string;
+    if (h.tip === 'genelozet') {
+      madde_no = `${h.etiket} özet`;
+      baslik = `Özet — ${h.tag}`;
+    } else if (h.tip === 'ozet') {
+      madde_no = `${h.etiket} m.${h.link}`;
+      baslik = `m.${h.nums[0]}${h.nums.length > 1 ? '–' + h.nums[h.nums.length - 1] : ''} özet`;
+    } else if (h.tip === 'ayirt') {
+      madde_no = `${h.etiket} m.${h.link}`;
+      baslik = `m.${h.nums.join('–')} ayırt`;
+    } else {
+      madde_no = `${h.etiket} m.${h.link}`;
+      const taban = (h.lawId === 1 ? TCK_BASLIK[String(h.link)] : undefined) ?? `Madde ${h.link}`;
+      baslik = h.panel && h.panel !== '1' ? `${taban} (${h.panel.replace(/_/g, '/')})` : taban;
+    }
+    cards.push({ id, law_id: h.lawId, madde_no, baslik, anlatim_metni: `Yer tutucu anlatım metni — ${madde_no}.`, gorsel_yolu: h.key, ses_yolu: null });
+  }
+  return cards;
+}
+
+export const SEED_CARDS: Card[] = [
+  // --- 4733 m.8 (law_id 49) — görselleri BOŞALTILDI (yeni içerik gelecek); kartlar placeholder
+  // olarak korunur: gorsel_yolu registry'de yok → StudyCard 2x2 fallback gösterir, çökme yok. ---
   {
     id: 100,
     law_id: 49,
@@ -243,69 +288,8 @@ export const SEED_CARDS: Card[] = [
     ses_yolu: null,
   },
 
-  // === TCK görsel kartları (law_id 1; id 200-299 bloğu) ===
-  // m.1 kartı id 5'te (tck_m1) ZATEN VAR → tekrar eklenmedi. Başlıklar resmî madde
-  // başlıkları; anlatım metni + madde metni içeriği ayrı tur. gorsel_yolu = registry key.
-
-  // --- GRUP 1: Genel Hükümler (m.2-5; m.1 id 5'te) ---
-  { id: 201, law_id: 1, madde_no: 'TCK m.2', baslik: 'Suçta ve cezada kanunilik ilkesi', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.2.', gorsel_yolu: 'tck_m2', ses_yolu: null },
-  { id: 202, law_id: 1, madde_no: 'TCK m.3', baslik: 'Adalet ve kanun önünde eşitlik ilkesi', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.3.', gorsel_yolu: 'tck_m3', ses_yolu: null },
-  { id: 203, law_id: 1, madde_no: 'TCK m.4', baslik: 'Kanunun bağlayıcılığı', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.4.', gorsel_yolu: 'tck_m4', ses_yolu: null },
-  { id: 204, law_id: 1, madde_no: 'TCK m.5', baslik: 'Özel kanunlarla ilişki', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.5.', gorsel_yolu: 'tck_m5', ses_yolu: null },
-
-  // --- GRUP 2: Ceza Sorumluluğu (m.20-23 + ayırt) ---
-  { id: 210, law_id: 1, madde_no: 'TCK m.20', baslik: 'Ceza sorumluluğunun şahsiliği', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.20.', gorsel_yolu: 'tck_m20', ses_yolu: null },
-  { id: 211, law_id: 1, madde_no: 'TCK m.21', baslik: 'Kast', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.21.', gorsel_yolu: 'tck_m21', ses_yolu: null },
-  { id: 212, law_id: 1, madde_no: 'TCK m.22', baslik: 'Taksir', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.22.', gorsel_yolu: 'tck_m22', ses_yolu: null },
-  { id: 213, law_id: 1, madde_no: 'TCK m.23', baslik: 'Netice sebebiyle ağırlaşmış suç', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.23.', gorsel_yolu: 'tck_m23', ses_yolu: null },
-  { id: 214, law_id: 1, madde_no: 'TCK m.21-22', baslik: 'Kast – Taksir ayrımı (karşılaştırma)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.21-22.', gorsel_yolu: 'tck_ayirt_m21_22', ses_yolu: null },
-
-  // --- GRUP 3: Teşebbüs, İştirak, İçtima ve Cezalar (m.35-45 + özet) ---
-  { id: 220, law_id: 1, madde_no: 'TCK m.35', baslik: 'Suça teşebbüs', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.35.', gorsel_yolu: 'tck_m35', ses_yolu: null },
-  { id: 221, law_id: 1, madde_no: 'TCK m.36', baslik: 'Gönüllü vazgeçme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.36.', gorsel_yolu: 'tck_m36', ses_yolu: null },
-  { id: 222, law_id: 1, madde_no: 'TCK m.37', baslik: 'Faillik', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.37.', gorsel_yolu: 'tck_m37', ses_yolu: null },
-  { id: 223, law_id: 1, madde_no: 'TCK m.38', baslik: 'Azmettirme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.38.', gorsel_yolu: 'tck_m38', ses_yolu: null },
-  { id: 224, law_id: 1, madde_no: 'TCK m.39', baslik: 'Yardım etme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.39.', gorsel_yolu: 'tck_m39', ses_yolu: null },
-  { id: 225, law_id: 1, madde_no: 'TCK m.40', baslik: 'Bağlılık kuralı', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.40.', gorsel_yolu: 'tck_m40', ses_yolu: null },
-  { id: 226, law_id: 1, madde_no: 'TCK m.41', baslik: 'İştirak halinde işlenen suçlarda gönüllü vazgeçme', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.41.', gorsel_yolu: 'tck_m41', ses_yolu: null },
-  { id: 227, law_id: 1, madde_no: 'TCK m.42', baslik: 'Bileşik suç', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.42.', gorsel_yolu: 'tck_m42', ses_yolu: null },
-  { id: 228, law_id: 1, madde_no: 'TCK m.43', baslik: 'Zincirleme suç', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.43.', gorsel_yolu: 'tck_m43', ses_yolu: null },
-  { id: 229, law_id: 1, madde_no: 'TCK m.44', baslik: 'Fikri içtima', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.44.', gorsel_yolu: 'tck_m44', ses_yolu: null },
-  { id: 230, law_id: 1, madde_no: 'TCK m.45', baslik: 'Cezalar', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.45.', gorsel_yolu: 'tck_m45', ses_yolu: null },
-  { id: 231, law_id: 1, madde_no: 'TCK m.35-45', baslik: 'Teşebbüs–İştirak–İçtima (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.35-45.', gorsel_yolu: 'tck_ozet_m35_45', ses_yolu: null },
-
-  // --- GRUP 4: Kamu İdaresine Karşı Suçlar (m.247-266 + 2 özet) ---
-  { id: 240, law_id: 1, madde_no: 'TCK m.247', baslik: 'Zimmet', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.247.', gorsel_yolu: 'tck_m247', ses_yolu: null },
-  { id: 241, law_id: 1, madde_no: 'TCK m.250', baslik: 'İrtikap', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.250.', gorsel_yolu: 'tck_m250', ses_yolu: null },
-  { id: 242, law_id: 1, madde_no: 'TCK m.251', baslik: 'Denetim görevinin ihmali', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.251.', gorsel_yolu: 'tck_m251', ses_yolu: null },
-  { id: 243, law_id: 1, madde_no: 'TCK m.252', baslik: 'Rüşvet', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.252.', gorsel_yolu: 'tck_m252', ses_yolu: null },
-  { id: 244, law_id: 1, madde_no: 'TCK m.255', baslik: 'Nüfuz ticareti', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.255.', gorsel_yolu: 'tck_m255', ses_yolu: null },
-  { id: 245, law_id: 1, madde_no: 'TCK m.256', baslik: 'Zor kullanma yetkisine ilişkin sınırın aşılması', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.256.', gorsel_yolu: 'tck_m256', ses_yolu: null },
-  { id: 246, law_id: 1, madde_no: 'TCK m.257', baslik: 'Görevi kötüye kullanma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.257.', gorsel_yolu: 'tck_m257', ses_yolu: null },
-  { id: 247, law_id: 1, madde_no: 'TCK m.258', baslik: 'Göreve ilişkin sırrın açıklanması', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.258.', gorsel_yolu: 'tck_m258', ses_yolu: null },
-  { id: 248, law_id: 1, madde_no: 'TCK m.259', baslik: 'Kamu görevlisinin ticareti', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.259.', gorsel_yolu: 'tck_m259', ses_yolu: null },
-  { id: 249, law_id: 1, madde_no: 'TCK m.260', baslik: 'Kamu görevinin terki veya yapılmaması', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.260.', gorsel_yolu: 'tck_m260', ses_yolu: null },
-  { id: 250, law_id: 1, madde_no: 'TCK m.261', baslik: 'Kişilerin malları üzerinde usulsüz tasarruf', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.261.', gorsel_yolu: 'tck_m261', ses_yolu: null },
-  { id: 251, law_id: 1, madde_no: 'TCK m.262', baslik: 'Kamu görevinin usulsüz olarak üstlenilmesi', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.262.', gorsel_yolu: 'tck_m262', ses_yolu: null },
-  { id: 252, law_id: 1, madde_no: 'TCK m.264', baslik: 'Özel işaret ve kıyafetleri usulsüz kullanma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.264.', gorsel_yolu: 'tck_m264', ses_yolu: null },
-  { id: 253, law_id: 1, madde_no: 'TCK m.266', baslik: 'Kamu görevine ait araç ve gereçleri suçta kullanma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.266.', gorsel_yolu: 'tck_m266', ses_yolu: null },
-  { id: 254, law_id: 1, madde_no: 'TCK m.247-255', baslik: 'Zimmet–Rüşvet–İrtikap (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.247-255.', gorsel_yolu: 'tck_ozet_m247_255', ses_yolu: null },
-  { id: 255, law_id: 1, madde_no: 'TCK m.256-266', baslik: 'Görevi kötüye kullanma ve diğerleri (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.256-266.', gorsel_yolu: 'tck_ozet_m256_266', ses_yolu: null },
-
-  // --- GRUP 5: Milli Savunmaya Karşı Suçlar (m.317-325 + özet) ---
-  { id: 260, law_id: 1, madde_no: 'TCK m.317', baslik: 'Askeri komutanlıkların gasbı', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.317.', gorsel_yolu: 'tck_m317', ses_yolu: null },
-  { id: 261, law_id: 1, madde_no: 'TCK m.318', baslik: 'Halkı askerlikten soğutma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.318.', gorsel_yolu: 'tck_m318', ses_yolu: null },
-  { id: 262, law_id: 1, madde_no: 'TCK m.319', baslik: 'Askerleri itaatsizliğe teşvik', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.319.', gorsel_yolu: 'tck_m319', ses_yolu: null },
-  { id: 263, law_id: 1, madde_no: 'TCK m.320', baslik: 'Yabancı hizmetine asker yazma, yazılma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.320.', gorsel_yolu: 'tck_m320', ses_yolu: null },
-  { id: 264, law_id: 1, madde_no: 'TCK m.321', baslik: 'Savaş zamanında emirlere uymama', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.321.', gorsel_yolu: 'tck_m321', ses_yolu: null },
-  { id: 265, law_id: 1, madde_no: 'TCK m.322', baslik: 'Savaş zamanında yükümlülükler', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.322.', gorsel_yolu: 'tck_m322', ses_yolu: null },
-  { id: 266, law_id: 1, madde_no: 'TCK m.323', baslik: 'Savaşta yalan haber yayma', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.323.', gorsel_yolu: 'tck_m323', ses_yolu: null },
-  { id: 267, law_id: 1, madde_no: 'TCK m.324', baslik: 'Seferberlikle ilgili görevin ihmali', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.324.', gorsel_yolu: 'tck_m324', ses_yolu: null },
-  { id: 268, law_id: 1, madde_no: 'TCK m.325', baslik: 'Düşmandan unvan ve benzeri payeler kabulü', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.325.', gorsel_yolu: 'tck_m325', ses_yolu: null },
-  { id: 269, law_id: 1, madde_no: 'TCK m.317-325', baslik: 'Milli savunmaya karşı suçlar (özet)', anlatim_metni: 'Yer tutucu anlatım metni — TCK m.317-325.', gorsel_yolu: 'tck_ozet_m317_325', ses_yolu: null },
-
-  // --- GENEL ÖZET ---
-  { id: 290, law_id: 1, madde_no: 'TCK Genel Özet', baslik: 'TCK Genel Hükümler – Genel Özet', anlatim_metni: 'Yer tutucu anlatım metni — TCK Genel Özet.', gorsel_yolu: 'tck_ozet_b1', ses_yolu: null },
+  // === TCK + Kabahatler görsel kartları — registry'den ÜRETİLİR (gorselKartlari) ===
+  ...gorselKartlari(),
 ];
 
 /**
