@@ -11,12 +11,19 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { getAyar } from '@/lib/bildirim';
 import { getCardsByBolum, getCardsByLaw, getDailyQueue, getZayifKuyruk, recordReview } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
 type Cozulen = { tekrar: number; yeni: number };
+
+/** Günlük kuyruğu kullanıcının "oturum başına kart" hedefine göre sınırlar (Eğitim Planı). */
+async function gunlukSinirli(): Promise<QueueCard[]> {
+  const [ayar, kuyruk] = await Promise.all([getAyar(), getDailyQueue()]);
+  return kuyruk.slice(0, ayar.gunlukKart);
+}
 
 export default function AkisScreen() {
   const router = useRouter();
@@ -55,7 +62,7 @@ export default function AkisScreen() {
         ? getCardsByBolum(Number(bolumId))
         : kanunModu
           ? getCardsByLaw(Number(lawId))
-          : getDailyQueue();
+          : gunlukSinirli();
     void p.then(setQueue).catch(() => setHata(true));
   }, [zayifModu, bolumModu, bolumId, kanunModu, lawId]);
 

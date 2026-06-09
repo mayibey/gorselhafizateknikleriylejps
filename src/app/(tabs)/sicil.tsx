@@ -94,6 +94,16 @@ export default function SicilScreen() {
         </View>
       </Pressable>
 
+      <Pressable
+        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
+        onPress={() => router.push('/egitim-plani')}>
+        <MaterialCommunityIcons name="bell-outline" size={20} color={Palette.lacivert} />
+        <AppText variant="kucuk" bold style={styles.planAd}>
+          Eğitim Planı (Bildirimler)
+        </AppText>
+        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+      </Pressable>
+
       {hata ? (
         <EmptyState
           ikon="alert-circle-outline"
@@ -473,5 +483,18 @@ const styles = StyleSheet.create({
     borderRadius: Radius.s,
     paddingVertical: Spacing.two,
     marginTop: Spacing.one,
+  },
+  planKart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+  },
+  planAd: {
+    flex: 1,
   },
 });

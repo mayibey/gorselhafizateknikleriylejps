@@ -1,7 +1,7 @@
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -43,6 +43,21 @@ function RootNavigator() {
     else if (brans && onboardingDe) router.replace('/');
   }, [brans, yukleniyor, segments, router]);
 
+  // İçtima bildirimine dokununca akışa (günlük kuyruk) götür. Web'de / modül yoksa no-op.
+  useEffect(() => {
+    if (Platform.OS === 'web') return;
+    let sub: { remove: () => void } | undefined;
+    void (async () => {
+      try {
+        const N = await import('expo-notifications');
+        sub = N.addNotificationResponseReceivedListener(() => router.push('/akis'));
+      } catch {
+        // bildirim modülü yüklenemezse sessiz geç
+      }
+    })();
+    return () => sub?.remove();
+  }, [router]);
+
   return (
     <>
       <Stack screenOptions={{ headerShown: false }}>
@@ -53,6 +68,7 @@ function RootNavigator() {
         <Stack.Screen name="patika" />
         <Stack.Screen name="geri-bildirim" />
         <Stack.Screen name="madde-metni" />
+        <Stack.Screen name="egitim-plani" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
       </Stack>
