@@ -59,7 +59,10 @@ export default function GirisScreen() {
             <View style={styles.amblem}>
               <MaterialCommunityIcons name="shield-account" size={44} color={Palette.altin} />
             </View>
-            <AppText variant="baslik" color="beyaz" bold style={styles.merkez}>
+            <AppText variant="baslik" color="altin" bold style={styles.merkez}>
+              MEVZU
+            </AppText>
+            <AppText variant="altBaslik" color="beyaz" bold style={styles.merkez}>
               {kayitMi ? 'Birliğe Katıl' : 'İçtimaya Giriş'}
             </AppText>
             <AppText variant="kucuk" color="kenarlik" style={styles.merkez}>

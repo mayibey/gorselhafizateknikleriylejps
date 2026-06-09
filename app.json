@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Görsel Hafıza JSPS",
+    "name": "Mevzu",
     "slug": "gorsel-hafiza-jsps",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "expotmp",
+    "scheme": "mevzu",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
