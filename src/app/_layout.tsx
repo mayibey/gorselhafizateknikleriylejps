@@ -86,6 +86,7 @@ function RootNavigator() {
         <Stack.Screen name="geri-bildirim" />
         <Stack.Screen name="madde-metni" />
         <Stack.Screen name="egitim-plani" />
+        <Stack.Screen name="hesap" />
         <Stack.Screen name="giris" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />

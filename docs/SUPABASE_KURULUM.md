@@ -74,6 +74,27 @@ create table public.rapor (
 alter table public.rapor enable row level security;
 create policy "rapor ekle" on public.rapor
   for insert with check (auth.uid() = raporlayan_id);
+
+-- HESAP SİLME (kullanıcı kendi hesabını siler; profiles + mesajlar cascade ile gider) --
+create or replace function public.hesabi_sil() returns void
+  language sql security definer set search_path = public as $$
+  delete from auth.users where id = auth.uid();
+$$;
+
+-- KULLANICI ENGELLEME (UGC kuralı) ---------------------------------------
+create table public.engellenenler (
+  engelleyen_id uuid not null references public.profiles(id) on delete cascade,
+  engellenen_id uuid not null references public.profiles(id) on delete cascade,
+  tarih timestamptz default now(),
+  primary key (engelleyen_id, engellenen_id)
+);
+alter table public.engellenenler enable row level security;
+create policy "kendi engellerini gorur" on public.engellenenler
+  for select using (auth.uid() = engelleyen_id);
+create policy "engelle ekle" on public.engellenenler
+  for insert with check (auth.uid() = engelleyen_id);
+create policy "engel kaldir" on public.engellenenler
+  for delete using (auth.uid() = engelleyen_id);
 ```
 
 ## 4) (Önerilen) E-posta doğrulama

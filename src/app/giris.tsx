@@ -2,6 +2,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useState } from 'react';
 import {
   KeyboardAvoidingView,
+  Linking,
   Platform,
   Pressable,
   ScrollView,
@@ -12,8 +13,13 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
+import { GIZLILIK_URL, SARTLAR_URL } from '@/constants/config';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { girisYap, kayitOl } from '@/lib/auth';
+
+const yasalAc = (url: string) => {
+  if (url) void Linking.openURL(url);
+};
 
 export default function GirisScreen() {
   const [kayitMi, setKayitMi] = useState(false);
@@ -128,6 +134,18 @@ export default function GirisScreen() {
                   {kayitMi ? 'Zaten hesabın var mı? Giriş yap' : 'Hesabın yok mu? Birliğe katıl'}
                 </AppText>
               </Pressable>
+
+              <AppText variant="etiket" color="kenarlik" style={styles.merkez}>
+                Devam ederek{' '}
+                <AppText variant="etiket" color="altin" bold onPress={() => yasalAc(SARTLAR_URL)}>
+                  Kullanım Şartları
+                </AppText>{' '}
+                ve{' '}
+                <AppText variant="etiket" color="altin" bold onPress={() => yasalAc(GIZLILIK_URL)}>
+                  Gizlilik Politikası
+                </AppText>
+                'nı kabul edersin.
+              </AppText>
             </View>
           </View>
         </ScrollView>

@@ -36,3 +36,14 @@ export async function kayitOl(
 export async function cikisYap(): Promise<void> {
   await supabase.auth.signOut();
 }
+
+/**
+ * Hesabı ve tüm verilerini siler (KALICI). Supabase'de `hesabi_sil()` RPC'si auth
+ * kullanıcısını siler; profiles/mesaj/engel kayıtları FK cascade ile gider.
+ */
+export async function hesabiSil(): Promise<AuthSonuc> {
+  const { error } = await supabase.rpc('hesabi_sil');
+  if (error) return { ok: false, hata: ceviri(error.message) };
+  await supabase.auth.signOut();
+  return { ok: true };
+}

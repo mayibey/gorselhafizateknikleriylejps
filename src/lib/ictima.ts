@@ -64,6 +64,26 @@ export async function mesajRaporla(mesajId: number, sebep: string): Promise<void
   await supabase.from('rapor').insert({ mesaj_id: mesajId, raporlayan_id: u.user.id, sebep });
 }
 
+/** Engellediğim kullanıcı id'leri (mesaj listesi bunları gizler). */
+export async function engellenenleriGetir(): Promise<string[]> {
+  const { data: u } = await supabase.auth.getUser();
+  if (!u.user) return [];
+  const { data } = await supabase
+    .from('engellenenler')
+    .select('engellenen_id')
+    .eq('engelleyen_id', u.user.id);
+  return (data ?? []).map((r) => (r as { engellenen_id: string }).engellenen_id);
+}
+
+/** Bir kullanıcıyı engeller (mesajları artık görünmez). */
+export async function kullaniciEngelle(engellenenId: string): Promise<void> {
+  const { data: u } = await supabase.auth.getUser();
+  if (!u.user) return;
+  await supabase
+    .from('engellenenler')
+    .insert({ engelleyen_id: u.user.id, engellenen_id: engellenenId });
+}
+
 /** Yeni mesaj geldiğinde `onYeni` çağırır; temizleyici döndürür. */
 export function mesajAboneligi(onYeni: () => void): () => void {
   const kanal = supabase

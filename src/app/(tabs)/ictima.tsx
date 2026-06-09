@@ -20,7 +20,9 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import { cikisYap } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import {
+  engellenenleriGetir,
   type IctimaMesaj,
+  kullaniciEngelle,
   mesajAboneligi,
   mesajGonder,
   mesajlariGetir,
@@ -41,12 +43,14 @@ export default function IctimaScreen() {
   const { session } = useAuth();
   const benId = session?.user.id ?? null;
   const [mesajlar, setMesajlar] = useState<IctimaMesaj[] | null>(null);
+  const [engellenen, setEngellenen] = useState<Set<string>>(new Set());
   const [taslak, setTaslak] = useState('');
   const [gonderiliyor, setGonderiliyor] = useState(false);
   const listeRef = useRef<FlatList<IctimaMesaj>>(null);
 
   const yukle = useCallback(() => {
     void mesajlariGetir().then(setMesajlar);
+    void engellenenleriGetir().then((ids) => setEngellenen(new Set(ids)));
   }, []);
 
   // Odakta yükle + realtime aboneliği (yeni mesajda yeniden çek).
@@ -90,8 +94,16 @@ export default function IctimaScreen() {
         },
       ]);
     } else {
-      Alert.alert('Mesajı raporla', `${m.kullaniciAdi}: ${m.metin}`, [
+      Alert.alert(m.kullaniciAdi, m.metin, [
         { text: 'Vazgeç', style: 'cancel' },
+        {
+          text: 'Engelle',
+          onPress: () =>
+            void kullaniciEngelle(m.gonderenId).then(() => {
+              yukle();
+              Alert.alert('Engellendi', `${m.kullaniciAdi} artık görünmeyecek.`);
+            }),
+        },
         {
           text: 'Raporla',
           style: 'destructive',
@@ -110,6 +122,9 @@ export default function IctimaScreen() {
   async function cikisYay() {
     await cikisYap();
   }
+
+  // Engellediğim kullanıcıların mesajlarını gizle.
+  const gorunen = mesajlar ? mesajlar.filter((m) => !engellenen.has(m.gonderenId)) : null;
 
   if (!supabaseHazir) {
     return (
@@ -131,9 +146,9 @@ export default function IctimaScreen() {
         style={styles.flex}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         keyboardVerticalOffset={90}>
-        {mesajlar === null ? (
+        {gorunen === null ? (
           <Loading metin="İçtima yükleniyor…" />
-        ) : mesajlar.length === 0 ? (
+        ) : gorunen.length === 0 ? (
           <EmptyState
             ikon="forum-outline"
             baslik="İlk sözü sen söyle"
@@ -142,7 +157,7 @@ export default function IctimaScreen() {
         ) : (
           <FlatList
             ref={listeRef}
-            data={mesajlar}
+            data={gorunen}
             keyExtractor={(m) => String(m.id)}
             contentContainerStyle={styles.liste}
             renderItem={({ item }) => (
