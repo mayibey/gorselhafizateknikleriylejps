@@ -8,7 +8,8 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getCardCount, getDailyQueue, getStudyCards, getStudyDays } from '@/db/database';
+import { getAllCards, getCardCount, getDailyQueue, getStudyCards, getStudyDays } from '@/db/database';
+import type { CardWithLaw } from '@/db/schema';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -18,6 +19,7 @@ export default function KarargahScreen() {
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
+  const [gunMadde, setGunMadde] = useState<CardWithLaw | null>(null);
   const [hata, setHata] = useState(false);
 
   // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu + hazırlık % + nöbet serisini tazele.
@@ -33,6 +35,15 @@ export default function KarargahScreen() {
     void getStudyDays()
       .then((gunler) => setStreak(hesaplaStreak(gunler, bugunISO())))
       .catch(() => setStreak(null));
+    // Günün Maddesi: gerçek başlıklı kartlardan güne göre deterministik seçim (placeholder yok).
+    void getAllCards()
+      .then((cards) => {
+        const adaylar = cards.filter((c) => !/^Madde\s/i.test(c.baslik));
+        if (adaylar.length === 0) return setGunMadde(null);
+        const gun = Number(bugunISO().split('-').join('')) || 0;
+        setGunMadde(adaylar[gun % adaylar.length]);
+      })
+      .catch(() => setGunMadde(null));
   }, []);
 
   useFocusEffect(yukle);
@@ -121,18 +132,24 @@ export default function KarargahScreen() {
         <Metrik deger={streak === null || streak === 0 ? '—' : `${streak}`} etiket="Nöbet serisi" />
       </View>
 
-      {/* Günün Maddesi */}
-      <Card>
-        <AppText variant="etiket" color="solukMetin" bold>
-          GÜNÜN MADDESİ
-        </AppText>
-        <AppText variant="altBaslik" bold>
-          TCK m.86 — Kasten Yaralama
-        </AppText>
-        <AppText variant="kucuk" color="solukMetin">
-          Yer tutucu özet metni.
-        </AppText>
-      </Card>
+      {/* Günün Maddesi — gerçek karta bağlı; tıkla → o kanunun patikası */}
+      {gunMadde ? (
+        <Pressable
+          style={({ pressed }) => [styles.card, pressed && styles.pressed]}
+          onPress={() =>
+            router.push({ pathname: '/patika', params: { lawId: String(gunMadde.law_id) } })
+          }>
+          <AppText variant="etiket" color="solukMetin" bold>
+            GÜNÜN MADDESİ
+          </AppText>
+          <AppText variant="altBaslik" bold>
+            {gunMadde.madde_no} — {gunMadde.baslik}
+          </AppText>
+          <AppText variant="kucuk" color="solukMetin">
+            {gunMadde.law_ad}
+          </AppText>
+        </Pressable>
+      ) : null}
     </Screen>
   );
 }

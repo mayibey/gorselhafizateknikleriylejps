@@ -17,7 +17,12 @@ Durum: ⬜ yapılacak · ✅ yapıldı · 👤 sende (hesap/dış) · ⏳ beklem
 - ✅ Gizlilik & Şartlar erişimi: giriş ekranında onay linki + /hesap'ta linkler (config'teki URL'ye)
 - ✅ **Hesap silme** ekranı + işlevi (/hesap → Hesabı Sil; rpc hesabi_sil; Apple/Google zorunlu)
 - ✅ **Kullanıcı engelleme** (İçtima uzun-bas → Engelle; engellenenin mesajları gizlenir) + rapor zaten var
-- ⬜ Review-risk temizliği (kırık "yakında" akışları; demo düğmeler zaten __DEV__)
+- 🟡 Review-risk temizliği (sürüyor):
+  - ✅ Karargah "Günün Maddesi" sabit placeholder ("Yer tutucu özet metni") → **gerçek günlük karta** bağlandı (tıkla → patika).
+  - ✅ StudyCard `anlatim_metni` placeholder'ı ekranda gösterilmiyordu (yalnız DB) — görünür risk yok.
+  - ✅ Demo/test düğmeleri zaten `__DEV__` (yayında görünmez).
+  - 👤/❓ **Sesli Nöbet:** hiç ses dosyası yok → her zaman "yakında". Apple için ikincil özellik (kabul edilebilir) ama istersen v1'de gizleyelim. **Karar gerek.**
+  - ❓ **İçerik boşlukları** (Mevzuat'ta "yakında" kart sayıları, patika'da boş madde düğümleri, 4733 görselsiz 2x2 fallback) → asıl Apple riski; içerik turuyla çözülür (ayrı iş).
 
 ## 3. Build yapılandırma (BENDE hazır, build SENDE)
 - ⬜ iOS `bundleIdentifier` (örn. com.mayibey.jsps) + izin metinleri (infoPlist)
