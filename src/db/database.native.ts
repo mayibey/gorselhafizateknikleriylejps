@@ -445,6 +445,11 @@ class SqliteBackend implements Backend {
       d.kademe,
     );
   }
+
+  async sicilSifirla(): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    await this.db.execAsync('DELETE FROM sicil_kayitlari; DELETE FROM geri_bes_durum;');
+  }
 }
 
 const backend: Backend = new SqliteBackend();
@@ -571,4 +576,9 @@ export async function getGeriBesDurum(): Promise<GeriBesDurum> {
 export async function setGeriBesDurum(durum: GeriBesDurum): Promise<void> {
   await initDatabase();
   return backend.setGeriBesDurum(durum);
+}
+
+export async function sicilSifirla(): Promise<void> {
+  await initDatabase();
+  return backend.sicilSifirla();
 }

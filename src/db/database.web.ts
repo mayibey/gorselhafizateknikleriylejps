@@ -161,6 +161,12 @@ class MemoryBackend implements Backend {
   async setGeriBesDurum(d: GeriBesDurum): Promise<void> {
     this.geriBes = { ...d };
   }
+
+  async sicilSifirla(): Promise<void> {
+    this.sicil = [];
+    this.sicilSayac = 0;
+    this.geriBes = { acik: false, acilis: null, sonTarih: null, kademe: 0 };
+  }
 }
 
 const backend: Backend = new MemoryBackend();
@@ -287,4 +293,9 @@ export async function getGeriBesDurum(): Promise<GeriBesDurum> {
 export async function setGeriBesDurum(durum: GeriBesDurum): Promise<void> {
   await initDatabase();
   return backend.setGeriBesDurum(durum);
+}
+
+export async function sicilSifirla(): Promise<void> {
+  await initDatabase();
+  return backend.sicilSifirla();
 }

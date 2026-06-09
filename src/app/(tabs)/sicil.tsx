@@ -9,6 +9,7 @@ import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, type PaletteColor, Radius, Spacing } from '@/constants/theme';
 import {
+  ekleSicilKaydi,
   getAllCards,
   getBranches,
   getCardCount,
@@ -16,11 +17,14 @@ import {
   getPerformans,
   getSicilKayitlari,
   getStudyCards,
+  sicilSifirla,
 } from '@/db/database';
 import type { Branch, GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
+import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
+import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik, type KutuDagilimi, MAKS_KUTU, OGRENILDI_KUTU } from '@/lib/stats';
 
 type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet };
@@ -160,6 +164,29 @@ export default function SicilScreen() {
               zayifSayisi={zayif?.liste.length ?? 0}
               onGeriBes={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
             />
+            {__DEV__ ? (
+              <View style={styles.demoSatir}>
+                <Pressable
+                  style={({ pressed }) => [styles.demoBtn, pressed && styles.pressed]}
+                  onPress={() => {
+                    void (async () => {
+                      for (const k of ornekKayitlar(bugunISO())) await ekleSicilKaydi(k);
+                      yukle();
+                    })();
+                  }}>
+                  <AppText variant="etiket" color="lacivert" bold>
+                    🧪 Örnek kayıt ekle
+                  </AppText>
+                </Pressable>
+                <Pressable
+                  style={({ pressed }) => [styles.demoBtn, pressed && styles.pressed]}
+                  onPress={() => void sicilSifirla().then(yukle)}>
+                  <AppText variant="etiket" color="kirmizi" bold>
+                    Temizle
+                  </AppText>
+                </Pressable>
+              </View>
+            ) : null}
           </View>
         </>
       )}
@@ -496,5 +523,22 @@ const styles = StyleSheet.create({
   },
   planAd: {
     flex: 1,
+  },
+  demoSatir: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    marginTop: Spacing.two,
+    borderTopWidth: 1,
+    borderTopColor: Palette.kenarlik,
+    paddingTop: Spacing.two,
+  },
+  demoBtn: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: Palette.kremZemin,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.s,
+    paddingVertical: Spacing.two,
   },
 });

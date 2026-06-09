@@ -44,6 +44,8 @@ export interface Backend {
   getGeriBesDurum(): Promise<GeriBesDurum>;
   /** Geri besleme emri durumunu yazar (id=1 upsert). */
   setGeriBesDurum(durum: GeriBesDurum): Promise<void>;
+  /** Sicil defterini ve geri-bes durumunu sıfırlar (demo/önizleme temizliği). */
+  sicilSifirla(): Promise<void>;
 }
 
 /** Public API'nin (initDatabase/getStudyCards/recordReview) ortak tip imzaları. */

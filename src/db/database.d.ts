@@ -37,3 +37,4 @@ export function getSicilKayitlari(): Promise<SicilKaydi[]>;
 export function ekleSicilKaydi(kayit: Omit<SicilKaydi, 'id'>): Promise<void>;
 export function getGeriBesDurum(): Promise<GeriBesDurum>;
 export function setGeriBesDurum(durum: GeriBesDurum): Promise<void>;
+export function sicilSifirla(): Promise<void>;

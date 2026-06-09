@@ -187,3 +187,19 @@ export function odulDegerlendir(
   }
   return yeni;
 }
+
+/**
+ * DEMO/önizleme: her dereceden birer örnek kayıt (gerçek temsili metinlerle). Yalnız
+ * geliştirme modunda (Sicil ekranı __DEV__ düğmesi) görünümü hızlı görmek için kullanılır.
+ */
+export function ornekKayitlar(bugun: string): YeniSicilKaydi[] {
+  return [
+    odulKaydi('ustun_basari', '1. Üstün Başarı', 'demo:ustun', bugun),
+    odulKaydi('basari', '1. Başarı', 'demo:basari', bugun),
+    odulKaydi('takdir', '5237 sayılı Türk Ceza Kanunu', 'demo:takdir', bugun),
+    cezaKaydi('ayliktan_kesme', bugun),
+    cezaKaydi('kinama', bugun),
+    cezaKaydi('uyari', bugun),
+    cezaKaydi('yazili_ikaz', bugun),
+  ];
+}
