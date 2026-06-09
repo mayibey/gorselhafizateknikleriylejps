@@ -2,7 +2,7 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 9 Haziran 2026
+> Son güncelleme: 10 Haziran 2026
 
 ---
 
@@ -74,6 +74,12 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). **iPhone Ex
 - **İÇTİMA ALANI (4. fikir) — PLANLANDI, kod başlamadı** (`docs/ICTIMA_ALANI_PLAN.md`). Sohbet+arkadaş+DM **backend ZORUNLU** (offline app → sosyal ağ); sahte/yarım yapılmadı. Önerilen yığın **Supabase** (Auth+Postgres+Realtime+RLS). **Kullanıcı kararı bekliyor:** backend onayı · üyelik modeli · v1 kapsamı (öneri: Auth+genel sohbet, DM/arkadaş v2) · KVKK/moderasyon metinleri · bütçe. Karar gelince faz faz uygulanır; diğer 3 fikirden bağımsız.
 
 - **İÇTİMA ALANI v1 (4. fikir) — KOD YAZILDI, Supabase kurulumu bekliyor** (`e8962f8` temel + `d1934ae` giriş kapısı + `b05b42f` sohbet). İlk backend'li özellik. **Kararlar (kullanıcı):** v1=Auth+genel sohbet · e-posta/şifre · **giriş app-wide**. **Yığın:** Supabase (@supabase/supabase-js + react-native-url-polyfill; çekirdek pinler korundu). `lib/supabase.ts` (env'den; **anahtar yoksa `supabaseHazir=false` → backend uykuda, uygulama offline çalışır, KİLİTLENME yok**), `lib/auth-context.tsx` (oturum), `lib/auth.ts` (giriş/kayıt/çıkış), `lib/ictima.ts` (mesaj CRUD + realtime). Ekranlar: **/giris** (e-posta/şifre toggle), **5. sekme /(tabs)/ictima** (canlı sohbet, balonlar, uzun-bas sil/raporla, çıkış). `_layout` guard: hazır+oturum yok→/giris, sonra branş→onboarding. **AKTİFLEŞTİRME (kullanıcı):** `docs/SUPABASE_KURULUM.md` → proje aç + SQL çalıştır (profiles/ictima_mesaj/rapor + RLS + realtime + trigger) + `.env`'e URL/anon key. **v2:** DM + arkadaşlık (`docs/ICTIMA_ALANI_PLAN.md`). **NOT:** SRS ilerlemesi şimdilik LOKAL kalıyor (buluta sync ayrı iş); KVKK metinleri canlıdan önce gerekli. tsc temiz.
+
+- **MAĞAZA HAZIRLIĞI başladı** (kararlar: v1 **İçtima'lı**, isim **Mevzu**). Yayına girmeden önceki kod/evrak işleri (build + developer hesabı kullanıcıda):
+  - `e433864` **İsim → "Mevzu"** (app.json name + scheme 'mevzu'; slug korundu/EAS bağı; giriş ekranına MEVZU wordmark).
+  - `e545222` **Yayın evrakları** (`docs/`): GIZLILIK_POLITIKASI (KVKK, gerçek veri akışı) · KULLANIM_SARTLARI (sınav garantisi reddi + İçtima UGC kuralları) · MAGAZA_LISTELEME (ad/açıklama/anahtar kelime/yaş/veri beyanı) · **YAYIN_HAZIRLIK.md** (tam checklist; bende/sende/bekleme ayrımı).
+  - `2861238` **Apple/Google zorunlu maddeler:** **Hesap silme** (/hesap ekranı → `rpc('hesabi_sil')`, cascade) + **Kullanıcı engelleme** (İçtima uzun-bas → Engelle, mesaj gizleme; `engellenenler` tablosu) + **yasal linkler** (giriş onay satırı + /hesap; `config.GIZLILIK_URL/SARTLAR_URL`). SUPABASE_KURULUM.md'ye `hesabi_sil()` + `engellenenler` SQL eklendi. Sicil'e "Hesap" girişi.
+  - Hepsi `supabaseHazir`/`__DEV__` guard'lı; web export temiz (SSR), tsc temiz. **Sıradaki bende:** review-risk temizliği + build config (iOS bundleId/infoPlist/notif plugin). **Sende:** developer hesapları, EAS build, Supabase kurulumu, legal yer tutucuları doldurup yayınlama, ekran görüntüleri. Asıl takvim: hesap onayı + Google 14 gün test + review.
 
 ## 3. Devam eden iş
 - **İstatistikler BİTTİ (Faz A `947fd1c` + Faz B `6ca939a`).** Karargah (hazırlık % + nöbet serisi) ve Sicil (ilerleme + kutu dağılımı) metriklerinin tümü gerçek SRS verisine bağlı. DB şema sürümü **3** (study_days dahil).

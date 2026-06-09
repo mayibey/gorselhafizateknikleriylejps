@@ -2,9 +2,9 @@
 
 Durum: ⬜ yapılacak · ✅ yapıldı · 👤 sende (hesap/dış) · ⏳ bekleme (takvim) · ❓ karar gerek
 
-## 0. Kararlar (önce bunlar)
-- ❓ **v1 İçtima'lı mı, İçtima'sız mı?** (İçtima'sız = çok daha hızlı geçer; sosyali v2'ye at)
-- ❓ **Uygulama adı:** Görsel Hafıza JSPS / **Mevzu** / başka?
+## 0. Kararlar (VERİLDİ)
+- ✅ **v1 İçtima'LI** (sosyal dahil) — UGC/hesap kuralları geçerli.
+- ✅ **Uygulama adı: Mevzu** (app.json + giriş ekranı işlendi).
 
 ## 1. Yasal / metin (BENDE — başlandı)
 - ✅ Gizlilik Politikası taslağı → `docs/GIZLILIK_POLITIKASI.md`
@@ -13,11 +13,11 @@ Durum: ⬜ yapılacak · ✅ yapıldı · 👤 sende (hesap/dış) · ⏳ beklem
 - 👤 Yer tutucuları doldur (şirket/iletişim/şehir/tarih) + **bir web sayfasında yayınla** (URL şart)
 - 👤 (Önerilen) avukat/danışman onayı
 
-## 2. Uygulama içi (BENDE — sıradaki)
-- ⬜ Gizlilik & Şartlar ekranı (uygulama içinden okunur + giriş ekranında onay linki)
-- ⬜ (İçtima'lı ise) **Hesap silme** ekranı + işlevi (Apple/Google ZORUNLU)
-- ⬜ (İçtima'lı ise) **Kullanıcı engelleme** + rapor akışı cilası (UGC kuralı)
-- ⬜ Review-risk temizliği (kırık "yakında" akışları, demo düğmeler zaten __DEV__)
+## 2. Uygulama içi (BENDE)
+- ✅ Gizlilik & Şartlar erişimi: giriş ekranında onay linki + /hesap'ta linkler (config'teki URL'ye)
+- ✅ **Hesap silme** ekranı + işlevi (/hesap → Hesabı Sil; rpc hesabi_sil; Apple/Google zorunlu)
+- ✅ **Kullanıcı engelleme** (İçtima uzun-bas → Engelle; engellenenin mesajları gizlenir) + rapor zaten var
+- ⬜ Review-risk temizliği (kırık "yakında" akışları; demo düğmeler zaten __DEV__)
 
 ## 3. Build yapılandırma (BENDE hazır, build SENDE)
 - ⬜ iOS `bundleIdentifier` (örn. com.mayibey.jsps) + izin metinleri (infoPlist)
