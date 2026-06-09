@@ -25,6 +25,7 @@ import {
 } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
+import { zayifKartlar } from '@/lib/performans';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
 import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 
@@ -133,6 +134,16 @@ class MemoryBackend implements Backend {
 
   async getPerformans(): Promise<PerformansSatir[]> {
     return [...this.performans];
+  }
+
+  async getZayifKuyruk(): Promise<QueueCard[]> {
+    const zayif = zayifKartlar(this.performans, this.cardsWithLaw());
+    return zayif.map(({ card }) => {
+      const s = this.srs.get(card.id);
+      return s
+        ? { ...card, kutu: s.kutu, sonraki_tarih: s.sonraki_tarih, yeni: false }
+        : { ...card, kutu: 0, sonraki_tarih: '', yeni: true };
+    });
   }
 
   async getSicilKayitlari(): Promise<SicilKaydi[]> {
@@ -251,6 +262,11 @@ export async function kaydetPerformans(
 export async function getPerformans(): Promise<PerformansSatir[]> {
   await initDatabase();
   return backend.getPerformans();
+}
+
+export async function getZayifKuyruk(): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getZayifKuyruk();
 }
 
 export async function getSicilKayitlari(): Promise<SicilKaydi[]> {

@@ -18,6 +18,7 @@ export function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
 export function getBranches(): Promise<Branch[]>;
 export function getLaws(bransSlug: string): Promise<LawWithCount[]>;
 export function getCardsByLaw(lawId: number): Promise<QueueCard[]>;
+export function getZayifKuyruk(): Promise<QueueCard[]>;
 export function getBolumler(lawId: number): Promise<Bolum[]>;
 export function getCardsByBolum(bolumId: number): Promise<QueueCard[]>;
 export function getStudyDays(): Promise<string[]>;

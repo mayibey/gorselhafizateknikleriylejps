@@ -11,7 +11,7 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { getCardsByBolum, getCardsByLaw, getDailyQueue, recordReview } from '@/db/database';
+import { getCardsByBolum, getCardsByLaw, getDailyQueue, getZayifKuyruk, recordReview } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
@@ -20,11 +20,16 @@ type Cozulen = { tekrar: number; yeni: number };
 
 export default function AkisScreen() {
   const router = useRouter();
-  const { lawId, bolumId } = useLocalSearchParams<{ lawId?: string; bolumId?: string }>();
+  const { lawId, bolumId, mod } = useLocalSearchParams<{
+    lawId?: string;
+    bolumId?: string;
+    mod?: string;
+  }>();
   const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
-  // Patika/kanun modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
-  const tekKanun = bolumModu || kanunModu;
+  const zayifModu = mod === 'zayif'; // geri-bes oturumu (zayıf mevzi kuyruğu)
+  // Patika/kanun/zayıf modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
+  const tekKanun = bolumModu || kanunModu || zayifModu;
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hata, setHata] = useState(false);
   const [index, setIndex] = useState(0);
@@ -43,14 +48,16 @@ export default function AkisScreen() {
     setQueue(null);
     setIndex(0);
     setCozulen({ tekrar: 0, yeni: 0 });
-    // Öncelik: bölüm > kanun > günlük kuyruk. (Mevcut lawId/daily davranışı korunur.)
-    const p = bolumModu
-      ? getCardsByBolum(Number(bolumId))
-      : kanunModu
-        ? getCardsByLaw(Number(lawId))
-        : getDailyQueue();
+    // Öncelik: zayıf (geri-bes) > bölüm > kanun > günlük kuyruk. (Mevcut davranış korunur.)
+    const p = zayifModu
+      ? getZayifKuyruk()
+      : bolumModu
+        ? getCardsByBolum(Number(bolumId))
+        : kanunModu
+          ? getCardsByLaw(Number(lawId))
+          : getDailyQueue();
     void p.then(setQueue).catch(() => setHata(true));
-  }, [bolumModu, bolumId, kanunModu, lawId]);
+  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId]);
 
   useEffect(() => {
     yukle();
@@ -128,12 +135,15 @@ export default function AkisScreen() {
         // Boş başlangıç: bu kanunda hiç kart yok ("yakında").
         <View style={styles.kolon}>
           <EmptyState
-            ikon="clock-outline"
-            baslik={tekKanun ? 'Yakında' : 'Bugünlük bitti'}
+            ikon={zayifModu ? 'shield-check-outline' : 'clock-outline'}
+            ikonRenk={zayifModu ? 'yesil' : undefined}
+            baslik={zayifModu ? 'Zayıf mevzin yok' : tekKanun ? 'Yakında' : 'Bugünlük bitti'}
             aciklama={
-              tekKanun
-                ? 'Bu bölümün kartları yakında eklenecek.'
-                : 'Bugün için vakti gelmiş kart yok.'
+              zayifModu
+                ? 'Tüm mevziler sağlam — geri besleme eğitimi gerekmiyor. 🎖️'
+                : tekKanun
+                  ? 'Bu bölümün kartları yakında eklenecek.'
+                  : 'Bugün için vakti gelmiş kart yok.'
             }
             buton={{ etiket: geriEtiket, onPress: () => router.back() }}
           />

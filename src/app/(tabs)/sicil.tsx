@@ -134,7 +134,10 @@ export default function SicilScreen() {
             <AppText variant="etiket" color="solukMetin" bold>
               ZAYIF MEVZİLER
             </AppText>
-            <ZayifBolum zayif={zayif} />
+            <ZayifBolum
+              zayif={zayif}
+              onCalis={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+            />
           </View>
 
           {/* Ödül-Ceza Sicili — takdir/başarı ödülleri + geri-bes ceza merdiveni */}
@@ -145,7 +148,7 @@ export default function SicilScreen() {
             <SicilBolum
               sicil={sicil}
               zayifSayisi={zayif?.liste.length ?? 0}
-              onGeriBes={() => router.push('/akis')}
+              onGeriBes={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
             />
           </View>
         </>
@@ -234,8 +237,8 @@ function SicilBolum({
   );
 }
 
-/** Geri besleme havuzu: top-5 zayıf kart + özet; veri yok/zayıf yok durumları. */
-function ZayifBolum({ zayif }: { zayif: ZayifVeri | null }) {
+/** Geri besleme havuzu: top-5 zayıf kart + özet + "Zayıfları çalış" (geri-bes oturumu). */
+function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () => void }) {
   if (zayif === null) {
     return (
       <AppText variant="kucuk" color="solukMetin">
@@ -284,6 +287,14 @@ function ZayifBolum({ zayif }: { zayif: ZayifVeri | null }) {
           +{kalan} daha
         </AppText>
       ) : null}
+      <Pressable
+        style={({ pressed }) => [styles.zayifCalisBtn, pressed && styles.pressed]}
+        onPress={onCalis}>
+        <MaterialCommunityIcons name="target" size={18} color={Palette.beyaz} />
+        <AppText variant="kucuk" color="beyaz" bold>
+          Zayıfları çalış (geri-bes)
+        </AppText>
+      </Pressable>
     </>
   );
 }
@@ -452,5 +463,15 @@ const styles = StyleSheet.create({
   sicilMetin: {
     marginTop: Spacing.one,
     lineHeight: 18,
+  },
+  zayifCalisBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.s,
+    paddingVertical: Spacing.two,
+    marginTop: Spacing.one,
   },
 });

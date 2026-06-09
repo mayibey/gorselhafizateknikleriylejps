@@ -27,6 +27,7 @@ import {
 } from '@/db/seed';
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
+import { zayifKartlar } from '@/lib/performans';
 import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
 import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 
@@ -387,6 +388,20 @@ class SqliteBackend implements Backend {
     );
   }
 
+  async getZayifKuyruk(): Promise<QueueCard[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const [perf, cards] = [await this.getPerformans(), await this.getAllCards()];
+    const zayif = zayifKartlar(perf, cards);
+    const srsRows = await this.db.getAllAsync<Srs>('SELECT card_id, kutu, sonraki_tarih FROM srs');
+    const srsMap = new Map(srsRows.map((s) => [s.card_id, s]));
+    return zayif.map(({ card }) => {
+      const s = srsMap.get(card.id);
+      return s
+        ? { ...card, kutu: s.kutu, sonraki_tarih: s.sonraki_tarih, yeni: false }
+        : { ...card, kutu: 0, sonraki_tarih: '', yeni: true };
+    });
+  }
+
   async getSicilKayitlari(): Promise<SicilKaydi[]> {
     if (!this.db) throw new Error('DB hazır değil');
     return this.db.getAllAsync<SicilKaydi>(
@@ -531,6 +546,11 @@ export async function kaydetPerformans(
 export async function getPerformans(): Promise<PerformansSatir[]> {
   await initDatabase();
   return backend.getPerformans();
+}
+
+export async function getZayifKuyruk(): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getZayifKuyruk();
 }
 
 export async function getSicilKayitlari(): Promise<SicilKaydi[]> {

@@ -21,6 +21,8 @@ export interface Backend {
   getBranches(): Promise<Branch[]>;
   getLaws(bransSlug: string): Promise<LawWithCount[]>;
   getCardsByLaw(lawId: number): Promise<QueueCard[]>;
+  /** Zayıf mevzi kuyruğu (geri-bes oturumu): son denemede zor/yanlış kartlar + SRS. */
+  getZayifKuyruk(): Promise<QueueCard[]>;
   /** Bir kanunun patika bölümleri (sıralı). */
   getBolumler(lawId: number): Promise<Bolum[]>;
   /** Bir bölümün kartları (bölüm-içi sıraya göre). */
