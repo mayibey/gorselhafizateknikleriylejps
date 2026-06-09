@@ -18,9 +18,37 @@ const ANON = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? '';
 /** URL + anon anahtar tanımlı mı. false ise İçtima/giriş özellikleri devre dışı. */
 export const supabaseHazir = URL.length > 0 && ANON.length > 0;
 
+/**
+ * SSR-güvenli oturum deposu. Web sunucu-render'ında (window YOK) auth-js açılışta
+ * storage'a dokunur → AsyncStorage `window`'a erişince çökerdi (beyaz ekran). Web'de
+ * yalnız window varken localStorage; SSR'da no-op; native'de AsyncStorage.
+ */
+const depolama = {
+  getItem(key: string): Promise<string | null> {
+    if (Platform.OS === 'web') {
+      return Promise.resolve(typeof window === 'undefined' ? null : window.localStorage.getItem(key));
+    }
+    return AsyncStorage.getItem(key);
+  },
+  setItem(key: string, value: string): Promise<void> {
+    if (Platform.OS === 'web') {
+      if (typeof window !== 'undefined') window.localStorage.setItem(key, value);
+      return Promise.resolve();
+    }
+    return AsyncStorage.setItem(key, value);
+  },
+  removeItem(key: string): Promise<void> {
+    if (Platform.OS === 'web') {
+      if (typeof window !== 'undefined') window.localStorage.removeItem(key);
+      return Promise.resolve();
+    }
+    return AsyncStorage.removeItem(key);
+  },
+};
+
 export const supabase = createClient(URL || 'https://placeholder.supabase.co', ANON || 'public-anon-placeholder', {
   auth: {
-    storage: AsyncStorage,
+    storage: depolama,
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: false,
