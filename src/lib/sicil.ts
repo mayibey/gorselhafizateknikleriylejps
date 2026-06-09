@@ -32,7 +32,7 @@ export function gunEkle(iso: string, n: number): string {
 /** id'siz sicil kaydı (DB'ye eklenecek taslak). */
 export type YeniSicilKaydi = Omit<SicilKaydi, 'id'>;
 
-// --- Temsili metinler (Jandarma Cüneyt Eğitim Komutanlığı) ---
+// --- Temsili metinler (Eğitim Komutanlığı antetli resmi yazı üslubu) ---
 
 const CEZA_BILGI: Record<CezaDerece, { baslik: string; govde: string }> = {
   yazili_ikaz: {
@@ -82,7 +82,8 @@ const ODUL_BILGI: Record<OdulDerece, { baslik: string; govde: (sebep: string) =>
   },
 };
 
-const IMZA = '— Eğt. K. J. Cüneyt';
+const ANTET = 'EĞİTİM KOMUTANLIĞI';
+const IMZA = '— Eğitim Komutanlığı';
 
 function cezaKaydi(derece: CezaDerece, tarih: string): YeniSicilKaydi {
   const b = CEZA_BILGI[derece];
@@ -90,7 +91,7 @@ function cezaKaydi(derece: CezaDerece, tarih: string): YeniSicilKaydi {
     tip: 'ceza',
     derece,
     baslik: b.baslik,
-    metin: `JANDARMA CÜNEYT EĞİTİM KOMUTANLIĞI — ${b.baslik.toUpperCase()}\n\n${b.govde}\n\n${IMZA}`,
+    metin: `${ANTET} — ${b.baslik.toUpperCase()}\n\n${b.govde}\n\n${IMZA}`,
     sebep: 'Geri besleme eğitimine süresinde icabet edilmedi',
     anahtar: null,
     tarih,
@@ -103,7 +104,7 @@ function odulKaydi(derece: OdulDerece, sebep: string, anahtar: string, tarih: st
     tip: 'odul',
     derece,
     baslik: b.baslik,
-    metin: `JANDARMA CÜNEYT EĞİTİM KOMUTANLIĞI — ${b.baslik.toUpperCase()}\n\n${b.govde(sebep)}\n\n${IMZA}`,
+    metin: `${ANTET} — ${b.baslik.toUpperCase()}\n\n${b.govde(sebep)}\n\n${IMZA}`,
     sebep,
     anahtar,
     tarih,
