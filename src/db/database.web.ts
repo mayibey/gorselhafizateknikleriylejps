@@ -9,9 +9,11 @@ import {
   type Branch,
   type CardWithLaw,
   type CardWithSrs,
+  type GeriBesDurum,
   type LawWithCount,
   type PerformansKaynak,
   type PerformansSatir,
+  type SicilKaydi,
 } from '@/db/schema';
 import {
   SEED_BOLUM_KARTLARI,
@@ -34,6 +36,10 @@ class MemoryBackend implements Backend {
   private studyDays = new Set<string>();
   // Performans logu (akıllı öğrenme). Bellek-içi → yenilemede sıfırlanır (native kalıcı).
   private performans: PerformansSatir[] = [];
+  // Sicil (ödül/ceza) + geri-bes durumu. Bellek-içi → yenilemede sıfırlanır (native kalıcı).
+  private sicil: SicilKaydi[] = [];
+  private sicilSayac = 0;
+  private geriBes: GeriBesDurum = { acik: false, acilis: null, sonTarih: null, kademe: 0 };
 
   async init(): Promise<void> {
     // srs tohumlanmaz: "srs kaydı yok = yeni kart".
@@ -127,6 +133,22 @@ class MemoryBackend implements Backend {
 
   async getPerformans(): Promise<PerformansSatir[]> {
     return [...this.performans];
+  }
+
+  async getSicilKayitlari(): Promise<SicilKaydi[]> {
+    return [...this.sicil].reverse(); // en yeni önce (native ORDER BY id DESC ile parite)
+  }
+
+  async ekleSicilKaydi(k: Omit<SicilKaydi, 'id'>): Promise<void> {
+    this.sicil.push({ ...k, id: ++this.sicilSayac });
+  }
+
+  async getGeriBesDurum(): Promise<GeriBesDurum> {
+    return { ...this.geriBes };
+  }
+
+  async setGeriBesDurum(d: GeriBesDurum): Promise<void> {
+    this.geriBes = { ...d };
   }
 }
 
@@ -229,4 +251,24 @@ export async function kaydetPerformans(
 export async function getPerformans(): Promise<PerformansSatir[]> {
   await initDatabase();
   return backend.getPerformans();
+}
+
+export async function getSicilKayitlari(): Promise<SicilKaydi[]> {
+  await initDatabase();
+  return backend.getSicilKayitlari();
+}
+
+export async function ekleSicilKaydi(kayit: Omit<SicilKaydi, 'id'>): Promise<void> {
+  await initDatabase();
+  return backend.ekleSicilKaydi(kayit);
+}
+
+export async function getGeriBesDurum(): Promise<GeriBesDurum> {
+  await initDatabase();
+  return backend.getGeriBesDurum();
+}
+
+export async function setGeriBesDurum(durum: GeriBesDurum): Promise<void> {
+  await initDatabase();
+  return backend.setGeriBesDurum(durum);
 }

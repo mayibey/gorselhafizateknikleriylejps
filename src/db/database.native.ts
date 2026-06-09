@@ -10,9 +10,11 @@ import {
   type Branch,
   type CardWithLaw,
   type CardWithSrs,
+  type GeriBesDurum,
   type LawWithCount,
   type PerformansKaynak,
   type PerformansSatir,
+  type SicilKaydi,
   type Srs,
 } from '@/db/schema';
 import {
@@ -145,6 +147,15 @@ class SqliteBackend implements Backend {
       await this.seedReference();
       await this.seedBolumler();
       version = 12;
+    }
+    if (version < 13) {
+      // Sicil (ödül/ceza) sistemi. TAMAMEN EKLEMELİ: yalnız CREATE TABLE IF NOT EXISTS;
+      // srs/cards/diğer tablolara DOKUNULMAZ. Kullanıcı ilerlemesi korunur.
+      await db.execAsync(
+        `CREATE TABLE IF NOT EXISTS sicil_kayitlari (id INTEGER PRIMARY KEY AUTOINCREMENT, tip TEXT NOT NULL, derece TEXT NOT NULL, baslik TEXT NOT NULL, metin TEXT NOT NULL, sebep TEXT NOT NULL, anahtar TEXT, tarih TEXT NOT NULL);
+         CREATE TABLE IF NOT EXISTS geri_bes_durum (id INTEGER PRIMARY KEY, acik INTEGER NOT NULL, acilis TEXT, son_tarih TEXT, kademe INTEGER NOT NULL);`,
+      );
+      version = 13;
     }
 
     if (version !== (row?.user_version ?? 0)) {
@@ -375,6 +386,50 @@ class SqliteBackend implements Backend {
       'SELECT card_id, kaynak, sonuc, tarih FROM kart_performans ORDER BY id',
     );
   }
+
+  async getSicilKayitlari(): Promise<SicilKaydi[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    return this.db.getAllAsync<SicilKaydi>(
+      'SELECT id, tip, derece, baslik, metin, sebep, anahtar, tarih FROM sicil_kayitlari ORDER BY id DESC',
+    );
+  }
+
+  async ekleSicilKaydi(k: Omit<SicilKaydi, 'id'>): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    await this.db.runAsync(
+      'INSERT INTO sicil_kayitlari (tip, derece, baslik, metin, sebep, anahtar, tarih) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      k.tip,
+      k.derece,
+      k.baslik,
+      k.metin,
+      k.sebep,
+      k.anahtar,
+      k.tarih,
+    );
+  }
+
+  async getGeriBesDurum(): Promise<GeriBesDurum> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const row = await this.db.getFirstAsync<{
+      acik: number;
+      acilis: string | null;
+      son_tarih: string | null;
+      kademe: number;
+    }>('SELECT acik, acilis, son_tarih, kademe FROM geri_bes_durum WHERE id = 1');
+    if (!row) return { acik: false, acilis: null, sonTarih: null, kademe: 0 };
+    return { acik: row.acik === 1, acilis: row.acilis, sonTarih: row.son_tarih, kademe: row.kademe };
+  }
+
+  async setGeriBesDurum(d: GeriBesDurum): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    await this.db.runAsync(
+      'INSERT OR REPLACE INTO geri_bes_durum (id, acik, acilis, son_tarih, kademe) VALUES (1, ?, ?, ?, ?)',
+      d.acik ? 1 : 0,
+      d.acilis,
+      d.sonTarih,
+      d.kademe,
+    );
+  }
 }
 
 const backend: Backend = new SqliteBackend();
@@ -476,4 +531,24 @@ export async function kaydetPerformans(
 export async function getPerformans(): Promise<PerformansSatir[]> {
   await initDatabase();
   return backend.getPerformans();
+}
+
+export async function getSicilKayitlari(): Promise<SicilKaydi[]> {
+  await initDatabase();
+  return backend.getSicilKayitlari();
+}
+
+export async function ekleSicilKaydi(kayit: Omit<SicilKaydi, 'id'>): Promise<void> {
+  await initDatabase();
+  return backend.ekleSicilKaydi(kayit);
+}
+
+export async function getGeriBesDurum(): Promise<GeriBesDurum> {
+  await initDatabase();
+  return backend.getGeriBesDurum();
+}
+
+export async function setGeriBesDurum(durum: GeriBesDurum): Promise<void> {
+  await initDatabase();
+  return backend.setGeriBesDurum(durum);
 }

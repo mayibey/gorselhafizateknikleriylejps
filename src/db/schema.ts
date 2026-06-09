@@ -88,6 +88,36 @@ export interface CardWithSrs extends CardWithLaw {
   sonraki_tarih: string;
 }
 
+/** Sicil defteri kaydı türü. */
+export type SicilTip = 'odul' | 'ceza';
+/** Ceza kademeleri (geri-bes devamsızlık merdiveni). */
+export type CezaDerece = 'yazili_ikaz' | 'uyari' | 'kinama' | 'ayliktan_kesme';
+/** Ödül kademeleri (başarı merdiveni). */
+export type OdulDerece = 'takdir' | 'basari' | 'ustun_basari';
+export type SicilDerece = CezaDerece | OdulDerece;
+
+/** Sicil defteri kaydı (ödül veya ceza); temsili resmi yazı `metin`'de. */
+export interface SicilKaydi {
+  id: number;
+  tip: SicilTip;
+  derece: SicilDerece;
+  baslik: string;
+  metin: string;
+  sebep: string;
+  /** Tekilleştirme anahtarı (örn. 'takdir:1'); ceza kayıtlarında null. */
+  anahtar: string | null;
+  tarih: string;
+}
+
+/** Geri besleme eğitim emri durumu (tek satır, id=1). */
+export interface GeriBesDurum {
+  acik: boolean;
+  acilis: string | null;
+  sonTarih: string | null;
+  /** 0 = temiz sicil; 1..4 = en son verilen ceza kademesi. */
+  kademe: number;
+}
+
 export const CREATE_SQL = `
 CREATE TABLE IF NOT EXISTS laws (
   id INTEGER PRIMARY KEY,
@@ -149,7 +179,26 @@ CREATE TABLE IF NOT EXISTS bolum_kartlari (
   sira INTEGER NOT NULL,
   PRIMARY KEY (bolum_id, card_id)
 );
+
+CREATE TABLE IF NOT EXISTS sicil_kayitlari (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  tip TEXT NOT NULL,
+  derece TEXT NOT NULL,
+  baslik TEXT NOT NULL,
+  metin TEXT NOT NULL,
+  sebep TEXT NOT NULL,
+  anahtar TEXT,
+  tarih TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS geri_bes_durum (
+  id INTEGER PRIMARY KEY,
+  acik INTEGER NOT NULL,
+  acilis TEXT,
+  son_tarih TEXT,
+  kademe INTEGER NOT NULL
+);
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 12;
+export const SCHEMA_VERSION = 13;

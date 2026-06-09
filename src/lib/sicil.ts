@@ -1,0 +1,189 @@
+/**
+ * Saf Ödül/Ceza (Sicil) mantığı. DB/IO YOK; veri enjekte edilir (stats/performans deseni).
+ *
+ * CEZA — geri besleme devamsızlık merdiveni:
+ *   ≥ZAYIF_ESIK zayıf mevzi → "Geri Besleme Eğitim Emri" açılır (PENCERE_GUN günlük pencere).
+ *   Pencere içinde eşik altına düşülürse → emir kapanır, BERAAT (kademe sıfırlanır).
+ *   Pencere dolar ve hâlâ zayıfsa → kademe ilerler + ceza işlenir, yeni pencere açılır:
+ *   Yazılı İkaz → Uyarı → Kınama → Aylıktan Kesme.
+ *
+ * ÖDÜL — başarı merdiveni:
+ *   Kanun bitince (tüm kartları öğrenildi) → Takdir. TAKDIR_PER_BASARI takdir → Başarı Belgesi.
+ *   BASARI_PER_USTUN başarı → Üstün Başarı Belgesi.
+ */
+
+import type { CezaDerece, GeriBesDurum, OdulDerece, SicilKaydi } from '@/db/schema';
+
+export const ZAYIF_ESIK = 3; // bu kadar zayıf mevzi → geri-bes emri açılır
+export const PENCERE_GUN = 3; // emir penceresi (gün)
+export const TAKDIR_PER_BASARI = 5; // 5 Takdir → 1 Başarı Belgesi
+export const BASARI_PER_USTUN = 3; // 3 Başarı → 1 Üstün Başarı
+
+/** Ceza kademeleri sırası (kademe 1..4). */
+export const CEZA_SIRA: CezaDerece[] = ['yazili_ikaz', 'uyari', 'kinama', 'ayliktan_kesme'];
+
+/** Verilen YYYY-MM-DD gününe n gün ekler (UTC; stats.oncekiGun ile tutarlı). */
+export function gunEkle(iso: string, n: number): string {
+  const t = new Date(`${iso}T00:00:00.000Z`);
+  t.setUTCDate(t.getUTCDate() + n);
+  return t.toISOString().slice(0, 10);
+}
+
+/** id'siz sicil kaydı (DB'ye eklenecek taslak). */
+export type YeniSicilKaydi = Omit<SicilKaydi, 'id'>;
+
+// --- Temsili metinler (Jandarma Cüneyt Eğitim Komutanlığı) ---
+
+const CEZA_BILGI: Record<CezaDerece, { baslik: string; govde: string }> = {
+  yazili_ikaz: {
+    baslik: 'Yazılı İkaz',
+    govde:
+      'İlgili personel, geri besleme eğitim emrine süresi içinde icabet etmemiştir. ' +
+      'İşbu yazı ikaz mahiyetindedir; zayıf mevzilerin ivedi takviyesi tembih olunur.',
+  },
+  uyari: {
+    baslik: 'Uyarı Cezası',
+    govde:
+      'Geri besleme eğitimindeki devamsızlık tekerrür etmiştir. Personel hakkında UYARI cezası ' +
+      'tertip edilmiştir. Zayıf mevzilerin derhal toparlanması beklenmektedir.',
+  },
+  kinama: {
+    baslik: 'Kınama Cezası',
+    govde:
+      'Müteaddit ikaz ve uyarıya rağmen geri besleme eğitimine icabet edilmemiştir. Personel ' +
+      'KINANMIŞTIR. Eğitim disiplinine riayet etmesi son kez hatırlatılır.',
+  },
+  ayliktan_kesme: {
+    baslik: 'Aylıktan Kesme Cezası',
+    govde:
+      'Israrlı devamsızlık nedeniyle personel hakkında (temsili) AYLIKTAN KESME cezası tertip ' +
+      'edilmiştir. Zayıf mevziler kapatılmadan sicil temizlenmeyecektir.',
+  },
+};
+
+const ODUL_BILGI: Record<OdulDerece, { baslik: string; govde: (sebep: string) => string }> = {
+  takdir: {
+    baslik: 'Takdir',
+    govde: (s) =>
+      `${s} mevzuatını üstün gayretle tamamlayan personel TAKDİR edilmiştir. ` +
+      'Bu azim ve disiplin, birliğe örnek gösterilir.',
+  },
+  basari: {
+    baslik: 'Başarı Belgesi',
+    govde: () =>
+      'Biriken takdirlerle gösterdiği istikrarlı başarı nedeniyle personele BAŞARI BELGESİ ' +
+      'tevcih edilmiştir. Tebrik olunur.',
+  },
+  ustun_basari: {
+    baslik: 'Üstün Başarı Belgesi',
+    govde: () =>
+      'Olağanüstü gayret ve süreklilikle elde ettiği başarılar nedeniyle personele ÜSTÜN BAŞARI ' +
+      'BELGESİ takdim edilmiştir. Birliğin iftiharıdır.',
+  },
+};
+
+const IMZA = '— Eğt. K. J. Cüneyt';
+
+function cezaKaydi(derece: CezaDerece, tarih: string): YeniSicilKaydi {
+  const b = CEZA_BILGI[derece];
+  return {
+    tip: 'ceza',
+    derece,
+    baslik: b.baslik,
+    metin: `JANDARMA CÜNEYT EĞİTİM KOMUTANLIĞI — ${b.baslik.toUpperCase()}\n\n${b.govde}\n\n${IMZA}`,
+    sebep: 'Geri besleme eğitimine süresinde icabet edilmedi',
+    anahtar: null,
+    tarih,
+  };
+}
+
+function odulKaydi(derece: OdulDerece, sebep: string, anahtar: string, tarih: string): YeniSicilKaydi {
+  const b = ODUL_BILGI[derece];
+  return {
+    tip: 'odul',
+    derece,
+    baslik: b.baslik,
+    metin: `JANDARMA CÜNEYT EĞİTİM KOMUTANLIĞI — ${b.baslik.toUpperCase()}\n\n${b.govde(sebep)}\n\n${IMZA}`,
+    sebep,
+    anahtar,
+    tarih,
+  };
+}
+
+// --- CEZA değerlendirmesi ---
+
+/**
+ * Aktif emir + güncel zayıf sayısına göre durumu ilerletir; ihlal varsa ceza kaydı üretir.
+ * Saf: bugün enjekte → deterministik/test edilebilir.
+ */
+export function degerlendirGeriBes(
+  zayifSayisi: number,
+  durum: GeriBesDurum,
+  bugun: string,
+): { durum: GeriBesDurum; ceza: YeniSicilKaydi | null } {
+  // 1) Emir kapalı → eşik aşıldıysa aç (ceza yok), aksi halde dokunma.
+  if (!durum.acik) {
+    if (zayifSayisi >= ZAYIF_ESIK) {
+      return {
+        durum: { acik: true, acilis: bugun, sonTarih: gunEkle(bugun, PENCERE_GUN), kademe: durum.kademe },
+        ceza: null,
+      };
+    }
+    return { durum, ceza: null };
+  }
+  // 2) Emir açık + eşik altına düştü (toparladı) → kapat, beraat (kademe sıfır).
+  if (zayifSayisi < ZAYIF_ESIK) {
+    return { durum: { acik: false, acilis: null, sonTarih: null, kademe: 0 }, ceza: null };
+  }
+  // 3) Emir açık + pencere doldu + hâlâ zayıf → ihlal: kademe ilerle, ceza, yeni pencere.
+  if (durum.sonTarih && bugun > durum.sonTarih) {
+    const yeniKademe = Math.min(durum.kademe + 1, CEZA_SIRA.length);
+    return {
+      durum: { acik: true, acilis: bugun, sonTarih: gunEkle(bugun, PENCERE_GUN), kademe: yeniKademe },
+      ceza: cezaKaydi(CEZA_SIRA[yeniKademe - 1], bugun),
+    };
+  }
+  // 4) Açık, pencere dolmadı, hâlâ zayıf → bekle.
+  return { durum, ceza: null };
+}
+
+// --- ÖDÜL değerlendirmesi ---
+
+export type KanunDurum = { lawId: number; lawAd: string; tamamlandi: boolean };
+
+/**
+ * Tamamlanan kanunlar için Takdir + eşiğe göre Başarı/Üstün Başarı kayıtlarını üretir.
+ * `mevcut` zaten verilmiş kayıtlar (tekilleştirme + sayım buradan).
+ */
+export function odulDegerlendir(
+  kanunlar: KanunDurum[],
+  mevcut: SicilKaydi[],
+  bugun: string,
+): YeniSicilKaydi[] {
+  const yeni: YeniSicilKaydi[] = [];
+  const varAnahtar = new Set(mevcut.map((k) => k.anahtar).filter((a): a is string => a !== null));
+  let takdir = mevcut.filter((k) => k.derece === 'takdir').length;
+  let basari = mevcut.filter((k) => k.derece === 'basari').length;
+  let ustun = mevcut.filter((k) => k.derece === 'ustun_basari').length;
+
+  // Takdir: tamamlanan her kanun için bir kez (anahtar 'takdir:<lawId>').
+  for (const k of kanunlar) {
+    if (!k.tamamlandi) continue;
+    const anahtar = `takdir:${k.lawId}`;
+    if (varAnahtar.has(anahtar)) continue;
+    yeni.push(odulKaydi('takdir', k.lawAd, anahtar, bugun));
+    varAnahtar.add(anahtar);
+    takdir++;
+  }
+  // Başarı: her TAKDIR_PER_BASARI takdirde 1.
+  for (let i = basari + 1; i <= Math.floor(takdir / TAKDIR_PER_BASARI); i++) {
+    yeni.push(odulKaydi('basari', `${i}. Başarı`, `basari:${i}`, bugun));
+    basari++;
+  }
+  // Üstün Başarı: her BASARI_PER_USTUN başarıda 1.
+  for (let i = ustun + 1; i <= Math.floor(basari / BASARI_PER_USTUN); i++) {
+    yeni.push(odulKaydi('ustun_basari', `${i}. Üstün Başarı`, `ustun:${i}`, bugun));
+    ustun++;
+  }
+  return yeni;
+}

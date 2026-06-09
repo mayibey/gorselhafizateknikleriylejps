@@ -6,7 +6,7 @@
  * İki implementasyon da bu imzaları birebir export eder.
  */
 
-import type { Bolum, Branch, CardWithLaw, CardWithSrs, LawWithCount, PerformansKaynak, PerformansSatir } from '@/db/schema';
+import type { Bolum, Branch, CardWithLaw, CardWithSrs, GeriBesDurum, LawWithCount, PerformansKaynak, PerformansSatir, SicilKaydi } from '@/db/schema';
 import type { RecordReviewResult, SrsCevap } from '@/db/types';
 import type { QueueCard } from '@/lib/queue';
 
@@ -32,3 +32,7 @@ export function kaydetPerformans(
   sonuc: string,
 ): Promise<void>;
 export function getPerformans(): Promise<PerformansSatir[]>;
+export function getSicilKayitlari(): Promise<SicilKaydi[]>;
+export function ekleSicilKaydi(kayit: Omit<SicilKaydi, 'id'>): Promise<void>;
+export function getGeriBesDurum(): Promise<GeriBesDurum>;
+export function setGeriBesDurum(durum: GeriBesDurum): Promise<void>;

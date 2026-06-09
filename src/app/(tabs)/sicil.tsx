@@ -7,14 +7,37 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
-import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getAllCards, getBranches, getCardCount, getPerformans, getStudyCards } from '@/db/database';
-import type { Branch } from '@/db/schema';
+import { Palette, type PaletteColor, Radius, Spacing } from '@/constants/theme';
+import {
+  getAllCards,
+  getBranches,
+  getCardCount,
+  getGeriBesDurum,
+  getPerformans,
+  getSicilKayitlari,
+  getStudyCards,
+} from '@/db/database';
+import type { Branch, GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
+import { degerlendirSicil } from '@/lib/sicil-servis';
 import { hesaplaIstatistik, type Istatistik, type KutuDagilimi, MAKS_KUTU, OGRENILDI_KUTU } from '@/lib/stats';
 
 type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet };
+type SicilVeri = { kayitlar: SicilKaydi[]; durum: GeriBesDurum };
+type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
+
+const DERECE_BILGI: Record<SicilDerece, { ikon: IconName; renk: PaletteColor }> = {
+  takdir: { ikon: 'medal-outline', renk: 'altin' },
+  basari: { ikon: 'medal', renk: 'altin' },
+  ustun_basari: { ikon: 'trophy', renk: 'altin' },
+  yazili_ikaz: { ikon: 'alert-outline', renk: 'amber' },
+  uyari: { ikon: 'alert', renk: 'amber' },
+  kinama: { ikon: 'gavel', renk: 'kirmizi' },
+  ayliktan_kesme: { ikon: 'cash-remove', renk: 'kirmizi' },
+};
+const KADEME_AD = ['—', 'Yazılı İkaz', 'Uyarı', 'Kınama', 'Aylıktan Kesme'];
+const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '—');
 
 export default function SicilScreen() {
   const router = useRouter();
@@ -22,6 +45,7 @@ export default function SicilScreen() {
   const [branches, setBranches] = useState<Branch[] | null>(null);
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
+  const [sicil, setSicil] = useState<SicilVeri | null>(null);
   const [hata, setHata] = useState(false);
 
   // Odağa her gelindiğinde (çalışmadan dönünce) branş + istatistik + zayıf analizi tazele.
@@ -38,6 +62,11 @@ export default function SicilScreen() {
     void Promise.all([getPerformans(), getAllCards()])
       .then(([perf, cards]) => setZayif({ liste: zayifKartlar(perf, cards), ozet: eksikOzet(perf, cards) }))
       .catch(() => setZayif(null));
+    // Ödül/Ceza: önce değerlendir (yeni kayıt/ceza işle), sonra sicil + emir durumunu yükle. AYRI catch.
+    void degerlendirSicil()
+      .then(() => Promise.all([getSicilKayitlari(), getGeriBesDurum()]))
+      .then(([kayitlar, durum]) => setSicil({ kayitlar, durum }))
+      .catch(() => setSicil(null));
   }, []);
 
   useFocusEffect(yukle);
@@ -107,9 +136,101 @@ export default function SicilScreen() {
             </AppText>
             <ZayifBolum zayif={zayif} />
           </View>
+
+          {/* Ödül-Ceza Sicili — takdir/başarı ödülleri + geri-bes ceza merdiveni */}
+          <View style={styles.istatistikKart}>
+            <AppText variant="etiket" color="solukMetin" bold>
+              ÖDÜL-CEZA SİCİLİ
+            </AppText>
+            <SicilBolum
+              sicil={sicil}
+              zayifSayisi={zayif?.liste.length ?? 0}
+              onGeriBes={() => router.push('/akis')}
+            />
+          </View>
         </>
       )}
     </Screen>
+  );
+}
+
+/** Geri-bes emir uyarısı + sicil defteri (ödül/ceza kayıtları; tıkla → temsili metin). */
+function SicilBolum({
+  sicil,
+  zayifSayisi,
+  onGeriBes,
+}: {
+  sicil: SicilVeri | null;
+  zayifSayisi: number;
+  onGeriBes: () => void;
+}) {
+  const [acikId, setAcikId] = useState<number | null>(null);
+  if (sicil === null) {
+    return (
+      <AppText variant="kucuk" color="solukMetin">
+        Yükleniyor…
+      </AppText>
+    );
+  }
+  const { kayitlar, durum } = sicil;
+  return (
+    <>
+      {durum.acik ? (
+        <View style={styles.emirKart}>
+          <View style={styles.emirUst}>
+            <MaterialCommunityIcons name="bugle" size={18} color={Palette.beyaz} />
+            <AppText variant="kucuk" color="beyaz" bold>
+              GERİ BESLEME EĞİTİM EMRİ
+            </AppText>
+          </View>
+          <AppText variant="etiket" color="beyaz">
+            Son tarih {tarihFmt(durum.sonTarih ?? '')} — {zayifSayisi} zayıf mevzini bu süre içinde
+            kapat.{durum.kademe > 0 ? ` (Sicil kademesi: ${KADEME_AD[durum.kademe]})` : ''}
+          </AppText>
+          <Pressable
+            style={({ pressed }) => [styles.emirButon, pressed && styles.pressed]}
+            onPress={onGeriBes}>
+            <AppText variant="etiket" color="kirmizi" bold>
+              EĞİTİME BAŞLA
+            </AppText>
+          </Pressable>
+        </View>
+      ) : null}
+
+      {kayitlar.length === 0 ? (
+        <AppText variant="kucuk" color="solukMetin">
+          Sicilin tertemiz. Mevzileri öğrendikçe takdir, ihmal edince ceza burada işlenir.
+        </AppText>
+      ) : (
+        kayitlar.map((k) => {
+          const b = DERECE_BILGI[k.derece];
+          const acik = acikId === k.id;
+          return (
+            <Pressable
+              key={k.id}
+              onPress={() => setAcikId(acik ? null : k.id)}
+              style={({ pressed }) => [styles.sicilSatir, pressed && styles.pressed]}>
+              <View style={styles.sicilUst}>
+                <MaterialCommunityIcons name={b.ikon} size={20} color={Palette[b.renk]} />
+                <AppText variant="kucuk" bold style={styles.sicilAd} numberOfLines={1}>
+                  {k.baslik}
+                </AppText>
+                <AppText variant="etiket" color="solukMetin">
+                  {tarihFmt(k.tarih)}
+                </AppText>
+              </View>
+              <AppText
+                variant="etiket"
+                color="solukMetin"
+                numberOfLines={acik ? undefined : 1}
+                style={acik ? styles.sicilMetin : undefined}>
+                {acik ? k.metin : k.sebep}
+              </AppText>
+            </Pressable>
+          );
+        })
+      )}
+    </>
   );
 }
 
@@ -294,5 +415,42 @@ const styles = StyleSheet.create({
   kutuBar: {
     width: '100%',
     borderRadius: Radius.s,
+  },
+  emirKart: {
+    backgroundColor: Palette.kirmizi,
+    borderRadius: Radius.s,
+    padding: Spacing.two,
+    gap: Spacing.one,
+  },
+  emirUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  emirButon: {
+    alignSelf: 'flex-start',
+    backgroundColor: Palette.beyaz,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.one,
+    borderRadius: Radius.s,
+    marginTop: Spacing.half,
+  },
+  sicilSatir: {
+    borderTopWidth: 1,
+    borderTopColor: Palette.kenarlik,
+    paddingTop: Spacing.two,
+    gap: Spacing.half,
+  },
+  sicilUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  sicilAd: {
+    flex: 1,
+  },
+  sicilMetin: {
+    marginTop: Spacing.one,
+    lineHeight: 18,
   },
 });
