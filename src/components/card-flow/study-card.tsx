@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { GorselZoom } from '@/components/card-flow/gorsel-zoom';
@@ -19,6 +19,10 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
   const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
   const { kimlik } = useCihazKimlik();
   const [zoomAcik, setZoomAcik] = useState(false);
+  // Görselin gerçek en-boy oranı (yüklenince ölçülür) → kutu görsele göre boyutlanır,
+  // kare kalıba sığıp küçülmez. Kart değişince sıfırla.
+  const [oran, setOran] = useState<number | null>(null);
+  useEffect(() => setOran(null), [card.gorsel_yolu]);
   // Forensic filigran: kimlik yüklenince render edilir (yoksa overlay yok).
   const filigran = kimlik ? <Watermark metin={`JSPS • ${kimlik} • ${bugunISO()}`} /> : null;
 
@@ -28,7 +32,16 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
     return (
       <>
         <Pressable style={styles.card} onPress={() => setZoomAcik(true)}>
-          <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
+          <Image
+            source={gorsel}
+            style={[styles.gorsel, { aspectRatio: oran ?? 1 }]}
+            contentFit="contain"
+            onLoad={(e) => {
+              const w = e.source?.width;
+              const h = e.source?.height;
+              if (w && h) setOran(w / h);
+            }}
+          />
           {filigran}
         </Pressable>
         <GorselZoom gorsel={gorsel} gorunur={zoomAcik} onKapat={() => setZoomAcik(false)} />
@@ -91,7 +104,6 @@ const styles = StyleSheet.create({
   },
   gorsel: {
     width: '100%',
-    aspectRatio: 1,
   },
   baslikSerit: {
     backgroundColor: Palette.kirmizi,

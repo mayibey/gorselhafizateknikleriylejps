@@ -263,6 +263,37 @@ class SqliteBackend implements Backend {
     });
   }
 
+  async getCardsByBolumChain(bolumId: number): Promise<QueueCard[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    // Girilen bölümün kanununu + sırasını bul; o sıradan itibaren TÜM bölümlerin kartları.
+    const bas = await this.db.getFirstAsync<{ law_id: number; sira: number }>(
+      'SELECT law_id, sira FROM bolumler WHERE id = ?',
+      bolumId,
+    );
+    if (!bas) return [];
+    const cards = await this.db.getAllAsync<CardWithLaw>(
+      `SELECT c.*, l.blok AS blok, l.ad AS law_ad
+       FROM bolumler b
+       JOIN bolum_kartlari bk ON bk.bolum_id = b.id
+       JOIN cards c ON c.id = bk.card_id
+       JOIN laws l ON l.id = c.law_id
+       WHERE b.law_id = ? AND b.sira >= ?
+       ORDER BY b.sira, bk.sira`,
+      bas.law_id,
+      bas.sira,
+    );
+    const srsRows = await this.db.getAllAsync<Srs>('SELECT card_id, kutu, sonraki_tarih FROM srs');
+    const srsMap = new Map<number, SrsDurum>(
+      srsRows.map((r) => [r.card_id, { kutu: r.kutu, sonraki_tarih: r.sonraki_tarih }]),
+    );
+    return cards.map((card) => {
+      const s = srsMap.get(card.id);
+      return s
+        ? { ...card, kutu: s.kutu, sonraki_tarih: s.sonraki_tarih, yeni: false }
+        : { ...card, kutu: 0, sonraki_tarih: '', yeni: true };
+    });
+  }
+
   async getStudyCards(): Promise<CardWithSrs[]> {
     if (!this.db) throw new Error('DB hazır değil');
     return this.db.getAllAsync<CardWithSrs>(
@@ -514,6 +545,11 @@ export async function getBolumler(lawId: number): Promise<Bolum[]> {
 export async function getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getCardsByBolum(bolumId);
+}
+
+export async function getCardsByBolumChain(bolumId: number): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getCardsByBolumChain(bolumId);
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */

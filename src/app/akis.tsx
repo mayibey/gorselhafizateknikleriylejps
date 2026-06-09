@@ -12,10 +12,23 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
-import { getCardsByBolum, getCardsByLaw, getDailyQueue, getZayifKuyruk, recordReview } from '@/db/database';
+import {
+  getCardsByBolumChain,
+  getCardsByLaw,
+  getDailyQueue,
+  getZayifKuyruk,
+  recordReview,
+} from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
 import type { QueueCard } from '@/lib/queue';
-import type { SrsCevap } from '@/lib/srs';
+import { bugunISO, type SrsCevap, srsGuncelle } from '@/lib/srs';
+
+/** Bir cevabın kartı kaç gün sonraya attığını döndürür (buton alt metni için). */
+function gunSonra(kutu: number, cevap: SrsCevap): number {
+  const { sonraki_tarih } = srsGuncelle(kutu, cevap);
+  const fark = (Date.parse(`${sonraki_tarih}T00:00:00Z`) - Date.parse(`${bugunISO()}T00:00:00Z`)) / 86400000;
+  return Math.max(1, Math.round(fark));
+}
 
 type Cozulen = { tekrar: number; yeni: number };
 
@@ -59,7 +72,7 @@ export default function AkisScreen() {
     const p = zayifModu
       ? getZayifKuyruk()
       : bolumModu
-        ? getCardsByBolum(Number(bolumId))
+        ? getCardsByBolumChain(Number(bolumId)) // girilen maddeden kanun sonuna kadar sürekli akış
         : kanunModu
           ? getCardsByLaw(Number(lawId))
           : gunlukSinirli();
@@ -226,9 +239,24 @@ export default function AkisScreen() {
               </AppText>
             ) : null}
             <View style={styles.butonSatir}>
-              <Buton renk={Palette.yesil} etiket="Biliyorum" onPress={() => void cevapla('biliyorum')} />
-              <Buton renk={Palette.amber} etiket="Tekrar" onPress={() => void cevapla('tekrar')} />
-              <Buton renk={Palette.kirmizi} etiket="Zor" onPress={() => void cevapla('zor')} />
+              <Buton
+                renk={Palette.kirmizi}
+                etiket="Bilemedim"
+                alt={`${gunSonra(queue[index].kutu, 'zor')} gün sonra`}
+                onPress={() => void cevapla('zor')}
+              />
+              <Buton
+                renk={Palette.amber}
+                etiket="Zorlandım"
+                alt={`${gunSonra(queue[index].kutu, 'tekrar')} gün sonra`}
+                onPress={() => void cevapla('tekrar')}
+              />
+              <Buton
+                renk={Palette.yesil}
+                etiket="Biliyordum"
+                alt={`${gunSonra(queue[index].kutu, 'biliyorum')} gün sonra`}
+                onPress={() => void cevapla('biliyorum')}
+              />
             </View>
           </View>
 
@@ -246,13 +274,26 @@ export default function AkisScreen() {
   );
 }
 
-function Buton({ renk, etiket, onPress }: { renk: string; etiket: string; onPress: () => void }) {
+function Buton({
+  renk,
+  etiket,
+  alt,
+  onPress,
+}: {
+  renk: string;
+  etiket: string;
+  alt: string;
+  onPress: () => void;
+}) {
   return (
     <Pressable
       style={({ pressed }) => [styles.buton, { backgroundColor: renk }, pressed && styles.pressed]}
       onPress={onPress}>
-      <AppText variant="govde" color="beyaz" bold>
+      <AppText variant="kucuk" color="beyaz" bold>
         {etiket}
+      </AppText>
+      <AppText variant="etiket" color="beyaz">
+        {alt}
       </AppText>
     </Pressable>
   );
@@ -346,8 +387,9 @@ const styles = StyleSheet.create({
   buton: {
     flex: 1,
     borderRadius: Radius.m,
-    paddingVertical: Spacing.three,
+    paddingVertical: Spacing.two,
     alignItems: 'center',
+    gap: 2,
   },
   pressed: {
     opacity: 0.85,

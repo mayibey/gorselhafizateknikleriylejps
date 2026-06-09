@@ -114,6 +114,32 @@ class MemoryBackend implements Backend {
       });
   }
 
+  async getCardsByBolumChain(bolumId: number): Promise<QueueCard[]> {
+    const bas = SEED_BOLUMLER.find((b) => b.id === bolumId);
+    if (!bas) return [];
+    const bolumlar = SEED_BOLUMLER.filter(
+      (b) => b.law_id === bas.law_id && b.sira >= bas.sira,
+    ).sort((a, b) => a.sira - b.sira);
+    const harita = new Map(this.cardsWithLaw().map((c) => [c.id, c]));
+    const out: QueueCard[] = [];
+    for (const b of bolumlar) {
+      const kartlar = SEED_BOLUM_KARTLARI.filter((bk) => bk.bolum_id === b.id).sort(
+        (x, y) => x.sira - y.sira,
+      );
+      for (const bk of kartlar) {
+        const card = harita.get(bk.card_id);
+        if (!card) continue;
+        const s = this.srs.get(card.id);
+        out.push(
+          s
+            ? { ...card, kutu: s.kutu, sonraki_tarih: s.sonraki_tarih, yeni: false }
+            : { ...card, kutu: 0, sonraki_tarih: '', yeni: true },
+        );
+      }
+    }
+    return out;
+  }
+
   async saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void> {
     // Map.set zaten upsert: yeni kartta oluşturur, varsa günceller.
     this.srs.set(cardId, { kutu, sonraki_tarih: sonrakiTarih });
@@ -231,6 +257,11 @@ export async function getBolumler(lawId: number): Promise<Bolum[]> {
 export async function getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getCardsByBolum(bolumId);
+}
+
+export async function getCardsByBolumChain(bolumId: number): Promise<QueueCard[]> {
+  await initDatabase();
+  return backend.getCardsByBolumChain(bolumId);
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */

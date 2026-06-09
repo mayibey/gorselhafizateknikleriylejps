@@ -27,6 +27,8 @@ export interface Backend {
   getBolumler(lawId: number): Promise<Bolum[]>;
   /** Bir bölümün kartları (bölüm-içi sıraya göre). */
   getCardsByBolum(bolumId: number): Promise<QueueCard[]>;
+  /** Bu bölümden başlayıp kanunun KALAN bölümlerini de sırayla (sürekli patika akışı). */
+  getCardsByBolumChain(bolumId: number): Promise<QueueCard[]>;
   saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void>;
   /** Verilen günü (YYYY-MM-DD) "çalışıldı" olarak işaretler (gün-tekil). */
   markStudyDay(gun: string): Promise<void>;
