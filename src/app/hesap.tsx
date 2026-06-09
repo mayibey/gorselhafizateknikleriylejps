@@ -1,11 +1,10 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { Alert, Linking, Pressable, StyleSheet, View } from 'react-native';
+import { Alert, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Screen } from '@/components/ui/screen';
-import { GIZLILIK_URL, SARTLAR_URL } from '@/constants/config';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { cikisYap, hesabiSil } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
@@ -13,14 +12,6 @@ import { useAuth } from '@/lib/auth-context';
 export default function HesapScreen() {
   const router = useRouter();
   const { session, hazir } = useAuth();
-
-  function linkAc(url: string, ad: string) {
-    if (!url) {
-      Alert.alert(ad, 'Bu belge yakında yayında olacak.');
-      return;
-    }
-    void Linking.openURL(url);
-  }
 
   function silOnayi() {
     Alert.alert(
@@ -70,13 +61,13 @@ export default function HesapScreen() {
         <Satir
           ikon="shield-lock-outline"
           ad="Gizlilik Politikası"
-          onPress={() => linkAc(GIZLILIK_URL, 'Gizlilik Politikası')}
+          onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}
         />
         <View style={styles.ayrac} />
         <Satir
           ikon="file-document-outline"
           ad="Kullanım Şartları"
-          onPress={() => linkAc(SARTLAR_URL, 'Kullanım Şartları')}
+          onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}
         />
       </View>
 

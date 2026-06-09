@@ -1,8 +1,8 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import {
   KeyboardAvoidingView,
-  Linking,
   Platform,
   Pressable,
   ScrollView,
@@ -13,15 +13,11 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
-import { GIZLILIK_URL, SARTLAR_URL } from '@/constants/config';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { girisYap, kayitOl } from '@/lib/auth';
 
-const yasalAc = (url: string) => {
-  if (url) void Linking.openURL(url);
-};
-
 export default function GirisScreen() {
+  const router = useRouter();
   const [kayitMi, setKayitMi] = useState(false);
   const [email, setEmail] = useState('');
   const [sifre, setSifre] = useState('');
@@ -137,11 +133,19 @@ export default function GirisScreen() {
 
               <AppText variant="etiket" color="kenarlik" style={styles.merkez}>
                 Devam ederek{' '}
-                <AppText variant="etiket" color="altin" bold onPress={() => yasalAc(SARTLAR_URL)}>
+                <AppText
+                  variant="etiket"
+                  color="altin"
+                  bold
+                  onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
                   Kullanım Şartları
                 </AppText>{' '}
                 ve{' '}
-                <AppText variant="etiket" color="altin" bold onPress={() => yasalAc(GIZLILIK_URL)}>
+                <AppText
+                  variant="etiket"
+                  color="altin"
+                  bold
+                  onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}>
                   Gizlilik Politikası
                 </AppText>
                 'nı kabul edersin.
