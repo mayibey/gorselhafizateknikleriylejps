@@ -1,6 +1,6 @@
 # Görsel Hafıza Teknikleriyle JSPS
 
-Türk Jandarma/Sahil Güvenlik personeli için JSPS sınav hazırlık uygulaması. Ana fark: her kanun maddesi için "Jandarma Cüneyt" maskotlu 4 panelli karikatür kart + aralıklı tekrar (SRS).
+Türk Jandarma/Sahil Güvenlik personeli için JSPS sınav hazırlık uygulaması. Ana fark: her kanun maddesi için görsel hafıza karikatür kartı (4 panel) + aralıklı tekrar (SRS). (NOT: erken aşamadaki "Jandarma Cüneyt" maskotu TERK EDİLDİ — artık öyle bir karakter yok.)
 
 ## Stack & komutlar
 - Expo SDK 54, TypeScript (strict), expo-router, expo-sqlite (native), AsyncStorage (branş kaydı)

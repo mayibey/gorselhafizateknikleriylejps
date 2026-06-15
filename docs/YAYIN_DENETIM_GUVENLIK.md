@@ -17,8 +17,8 @@
 - **[H4] Tatbikat branş 15/16 boş** — `seed.ts` `SEED_LAW_BRANCHES` tüm branş kanunlarını yalnız Jandarma'ya bağlıyor; başka branş seçen "Bu bölümde kanun yok" görüyor.
 - **[H5] Karargah "Mini Tatbikat: 1" sahte sabit** — `(tabs)/index.tsx` statik `sayi={1}`, hiçbir şeye bağlı değil, tıklanmıyor.
 
-### Hukuki / marka riski (gözden kaçıyor — ciddi)
-- **[H6] Resmî amblem/üniforma** — maskot "Jandarma Cüneyt" gerçek jandarma amblemi + askeri rütbe taşıyor. Google impersonation politikası + TR mevzuatı resmî kurum amblemine duyarlı. Çözüm: maskotu stilize/jenerik yap (birebir resmî amblem değil) + **"Jandarma Genel Komutanlığı veya resmî bir kurumla bağlantılı değildir"** ibaresi (mağaza açıklaması + uygulama içi).
+### Hukuki / marka riski
+- **[H6] Resmî amblem/logo kullanımı** — NOT (16 Haz 2026): "Jandarma Cüneyt" maskotu **TERK EDİLDİ**, artık öyle bir karakter yok (kullanıcı). Dolayısıyla maskot-stilize işi İPTAL. Kalan tek kontrol: **mevcut kart görsellerinin içinde gerçek jandarma/SG amblemi veya logosu BİREBİR kullanılmamalı** (impersonation riski karakterden değil, resmî logonun aynen kopyalanmasından doğar). Kullanıcı teyit edecek; birebir logo varsa stilize edilmeli. "Bağlantılı değildir" ibaresi (A4) yine de bedava sigorta olarak kalır.
 
 ### Mağaza zorunluluğu (sende — içerik/hosting)
 - **[H7] Gizlilik politikası URL'i** — Data Safety formu zorunlu istiyor; `config.ts` `GIZLILIK_URL/SARTLAR_URL` boş. `docs/GIZLILIK_POLITIKASI.md`'yi (İçtima'sız güncel haliyle) bir yere yayınla → URL'leri config'e yaz. Uygulama içi `/yasal` metni zaten çalışıyor (canonical = `constants/yasal-metin.ts`).
@@ -92,7 +92,7 @@
 ### D — Sende (kod değil)
 - [ ] **D1 [H7]** Gizlilik metnini yayınla → URL'leri `config.ts`'e yaz.
 - [x] **D2** ✅ `docs/` yasal/mağaza dökümanları İçtima'sız + Google Play odaklı güncellendi: GIZLILIK_POLITIKASI · KULLANIM_SARTLARI · MAGAZA_LISTELEME · YAYIN_HAZIRLIK. (canonical = `yasal-metin.ts` ile tutarlı; yer tutucular [GELİŞTİRİCİ/İLETİŞİM/TARİH] sende.)
-- [ ] **D4 [H6]** Maskot ambleminin stilize edilmesi (birebir resmî jandarma amblemi olmasın) + mağaza açıklamasına `RESMI_BAGLANTI_YOK` ibaresini koy.
+- [~] **D4 [H6]** Maskot İPTAL (Cüneyt terk edildi) → stilize işi YOK. Kalan: (a) mevcut kart görsellerinde birebir resmî jandarma/SG **logosu/amblemi** olmadığını teyit et; (b) mağaza açıklamasına `RESMI_BAGLANTI_YOK` ibaresini koy.
 - [ ] **D3** Developer hesabı + EAS production build + 20 test / 14 gün + ekran görüntüleri + feature graphic.
 
 ### E — v2 (onaydan sonra, backend gerektirir)

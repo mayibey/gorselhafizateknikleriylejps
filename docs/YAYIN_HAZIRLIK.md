@@ -37,7 +37,7 @@ Durum: ⬜ yapılacak · ✅ yapıldı · 👤 sende (hesap/dış/para) · ⏳ b
 - ⬜ **Feature graphic (1024×500)** — Play zorunlu
 - 👤 Ekran görüntüleri: Android telefon (zorunlu) + 7"/10" tablet (önerilir)
 - ✅ Açıklama/kategori/yaş/veri beyanı metinleri (`docs/MAGAZA_LISTELEME.md`)
-- 👤 **Maskot ambleminin stilize edilmesi** (birebir resmî jandarma amblemi olmasın — impersonation riski)
+- 👤 Kart görsellerinde **birebir resmî jandarma/SG logosu-amblemi olmadığını teyit et** (maskot Cüneyt terk edildi; risk karakter değil, resmî logonun aynen kopyalanması)
 
 ## 5. Hesap & süreç (SENDE / BEKLEME)
 - 👤 Google Play Console ($25) hesabı + kimlik doğrulama ⏳
