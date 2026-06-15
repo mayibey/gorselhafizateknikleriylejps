@@ -7,6 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { MaddeMetniSheet } from '@/components/card-flow/madde-metni-sheet';
 import { StudyCard } from '@/components/card-flow/study-card';
+import { TtsBar } from '@/components/card-flow/tts-bar';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
@@ -192,6 +193,9 @@ export default function AkisScreen() {
             </View>
 
             <StudyCard card={queue[index]} />
+
+            {/* Sesli anlatım (TTS) — metni olan kartta görünür; kart değişince remount → durur. */}
+            <TtsBar key={queue[index].id} gorselYolu={queue[index].gorsel_yolu} />
 
             {/* Madde Metni — resmî tam metin. Metin varsa aktif, yoksa soluk "yakında". */}
             {maddeMetni(queue[index].madde_no) !== null ? (
