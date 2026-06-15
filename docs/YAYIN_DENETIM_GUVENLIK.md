@@ -77,7 +77,7 @@
 ## 5. İŞ SIRASI (öncelikli)
 
 ### A — Yayın-engelleyici (kod, önce bunlar)
-- [ ] **A1 [H1]** Geri bildirim sahte başarı düzelt (endpoint boşken özelliği gizle; dolunca otomatik döner).
+- [x] **A1 [H1]** ✅ Geri bildirim sahte başarı düzeltildi — `akis.tsx`'te "Hata/öneri bildir" girişi `FORMSPREE_ENDPOINT` boşken gizleniyor. Adres `config.ts`'e yazılınca buton otomatik geri gelir, kod değişmeden gerçek çalışır. (Form ekranı + gönderme mantığı yerinde, park edildi.)
 - [ ] **A2 [H3+H4]** Tatbikat sadeleştir: yalnız dolu kanunlar + "Branş konuları yakında" (Mevzuat gibi).
 - [ ] **A3 [H5]** Karargah sahte "Mini Tatbikat: 1" kaldır.
 - [ ] **A4 [H6]** "Resmî kurumla bağlantılı değildir" ibaresi (yasal metin + görünür yer) + maskot uyarısı.

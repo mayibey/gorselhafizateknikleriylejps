@@ -9,6 +9,7 @@ import { StudyCard } from '@/components/card-flow/study-card';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
+import { FORMSPREE_ENDPOINT } from '@/constants/config';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
 import {
@@ -207,25 +208,29 @@ export default function AkisScreen() {
               </View>
             )}
 
-            {/* Hata/öneri bildir — aktif kart bilgisi otomatik gömülür (Formspree). */}
-            <Pressable
-              style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
-              onPress={() =>
-                router.push({
-                  pathname: '/geri-bildirim',
-                  params: {
-                    card_id: String(queue[index].id),
-                    madde_no: queue[index].madde_no,
-                    baslik: queue[index].baslik,
-                    kanun: queue[index].law_ad,
-                  },
-                })
-              }>
-              <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.solukMetin} />
-              <AppText variant="etiket" color="solukMetin">
-                Hata/öneri bildir
-              </AppText>
-            </Pressable>
+            {/* Hata/öneri bildir — aktif kart bilgisi otomatik gömülür (Formspree).
+               Posta adresi (FORMSPREE_ENDPOINT) boşken GİZLİ: mesaj hiçbir yere gitmeyeceği
+               için "gönderildi" yanılgısı olmasın. Adres config'e yazılınca otomatik geri gelir. */}
+            {FORMSPREE_ENDPOINT ? (
+              <Pressable
+                style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
+                onPress={() =>
+                  router.push({
+                    pathname: '/geri-bildirim',
+                    params: {
+                      card_id: String(queue[index].id),
+                      madde_no: queue[index].madde_no,
+                      baslik: queue[index].baslik,
+                      kanun: queue[index].law_ad,
+                    },
+                  })
+                }>
+                <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.solukMetin} />
+                <AppText variant="etiket" color="solukMetin">
+                  Hata/öneri bildir
+                </AppText>
+              </Pressable>
+            ) : null}
           </ScrollView>
 
           {/* Cevap butonları — ScrollView'ın dışında, kolonun altına sabit */}
