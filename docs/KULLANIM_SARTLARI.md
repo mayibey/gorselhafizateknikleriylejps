@@ -1,13 +1,13 @@
 # Kullanım Şartları (EULA)
 
-> **NOT (yayından önce):** `[UYGULAMA ADI]`, `[GELİŞTİRİCİ/ŞİRKET ADI]`, `[İLETİŞİM E-POSTASI]`,
-> `[YÜRÜRLÜK TARİHİ]`, `[ŞEHİR]` doldur. Avukat onayı önerilir. App Store, kullanıcı içeriği (sohbet)
-> olan uygulamalarda bir EULA + içerik kuralları **ister** — bu belge onu karşılar.
+> **NOT (yayından önce):** `[GELİŞTİRİCİ/ŞİRKET ADI]`, `[İLETİŞİM E-POSTASI]`,
+> `[YÜRÜRLÜK TARİHİ]`, `[ŞEHİR]` doldur. Avukat onayı önerilir.
+> Uygulama içi canonical özet: `src/constants/yasal-metin.ts`.
 
 **Son güncelleme:** [YÜRÜRLÜK TARİHİ]
 
 ## 1. Kabul
-[UYGULAMA ADI]'nı ("Uygulama") kullanarak bu şartları kabul edersin. Kabul etmiyorsan kullanma.
+Mevzu'yu ("Uygulama") kullanarak bu şartları kabul edersin. Kabul etmiyorsan kullanma.
 Uygulama **[GELİŞTİRİCİ/ŞİRKET ADI]** tarafından sunulur.
 
 ## 2. Hizmet ve sorumluluk reddi
@@ -16,45 +16,34 @@ sunar. **Uygulama bir eğitim/çalışma aracıdır; sınavı kazanacağını GA
 bilgilendirme amaçlıdır, resmi/hukuki danışmanlık değildir. Mevzuat metinlerinde güncel resmi
 kaynak esastır.
 
-## 3. Hesap
-- Doğru bilgi vermek ve hesabını korumakla yükümlüsün; hesabınla yapılan işlemlerden sorumlusun.
-- Bir başkasının adına/izinsiz hesap açamazsın.
+Bu uygulama bağımsız bir hazırlık aracıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik
+Komutanlığı veya herhangi bir resmî kurum/makamla bağlantılı, ilişkili veya onlar tarafından
+onaylanmış **değildir**. İlgili marka, amblem ve adlar yalnızca tanımlama amacıyla anılır ve
+sahiplerine aittir.
 
-## 4. Kullanıcı içeriği (İçtima Alanı) ve yasaklar
-İçtima Alanı'nda paylaştığın içerikten **sen sorumlusun**. Şunlar **yasaktır**:
-- Hakaret, taciz, tehdit, nefret söylemi, zorbalık;
-- Müstehcen/yasa dışı içerik, spam, reklam, dolandırıcılık;
-- Başkasının kişisel verisini paylaşma; telif/fikri mülkiyet ihlali;
-- Sınav güvenliğini ihlal eden (çalınmış soru vb.) paylaşımlar.
-
-Uygunsuz içeriği **raporlayabilir**, kullanıcıları **engelleyebilirsin**. Raporları makul sürede
-(hedef **24 saat**) değerlendiririz.
-
-## 5. Moderasyon ve askıya alma
-Şartları ihlal eden içeriği kaldırma, hesabı uyarma, askıya alma veya kapatma hakkımız saklıdır.
-
-## 6. Fikri mülkiyet
+## 3. Fikri mülkiyet
 Mevzuat metinleri kamuya açıktır. Uygulamadaki **özgün görseller, karikatürler, tasarım, marka ve
-yazılım** [GELİŞTİRİCİ/ŞİRKET ADI]'na aittir; izinsiz kopyalanamaz, dağıtılamaz. Filigranlı
-görsellerin yetkisiz paylaşımı yasaktır.
+yazılım** [GELİŞTİRİCİ/ŞİRKET ADI]'na aittir; izinsiz kopyalanamaz, dağıtılamaz. Görseller
+kullanıcıya özel **filigran** taşır; filigranlı görsellerin yetkisiz paylaşımı/çoğaltılması
+yasaktır ve takip edilebilir.
 
-## 7. Ücretlendirme
+## 4. Ücretlendirme
 Uygulama şu an ücretsizdir. İleride ücretli özellikler eklenirse şartlar güncellenir ve önceden
 bilgilendirilir.
 
-## 8. Sorumluluğun sınırlandırılması
+## 5. Sorumluluğun sınırlandırılması
 Uygulama "olduğu gibi" sunulur. Yürürlükteki hukukun izin verdiği ölçüde, kullanımdan doğan
 dolaylı zararlardan sorumlu değiliz.
 
-## 9. Fesih
-Hesabını dilediğin an silebilirsin. Şartları ihlal halinde erişimini sonlandırabiliriz.
+## 6. Fesih
+Uygulamayı dilediğin an kaldırabilirsin. Şartları ihlal halinde erişimini sonlandırabiliriz.
 
-## 10. Değişiklikler
+## 7. Değişiklikler
 Bu şartları güncelleyebiliriz; önemli değişiklikleri uygulama içinde bildiririz.
 
-## 11. Uygulanacak hukuk
+## 8. Uygulanacak hukuk
 Bu şartlara **Türkiye Cumhuriyeti hukuku** uygulanır; uyuşmazlıklarda **[ŞEHİR]** mahkemeleri ve
 icra daireleri yetkilidir.
 
-## 12. İletişim
+## 9. İletişim
 **[İLETİŞİM E-POSTASI]**

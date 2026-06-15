@@ -1,53 +1,56 @@
-# Yayın Hazırlık Checklist (App Store + Play Store)
+# Yayın Hazırlık Checklist (Google Play)
 
-Durum: ⬜ yapılacak · ✅ yapıldı · 👤 sende (hesap/dış) · ⏳ bekleme (takvim) · ❓ karar gerek
+Durum: ⬜ yapılacak · ✅ yapıldı · 👤 sende (hesap/dış/para) · ⏳ bekleme (takvim)
 
-## 0. Kararlar (VERİLDİ)
-- ✅ **v1 İçtima'LI** (sosyal dahil) — UGC/hesap kuralları geçerli.
-- ✅ **Uygulama adı: Mevzu** (app.json + giriş ekranı işlendi).
+> Hedef: **Google Play** (Android). Kod tarafı denetim+düzeltmeleri `docs/YAYIN_DENETIM_GUVENLIK.md`'de.
 
-## 1. Yasal / metin (BENDE — başlandı)
-- ✅ Gizlilik Politikası taslağı → `docs/GIZLILIK_POLITIKASI.md`
-- ✅ Kullanım Şartları (EULA) taslağı → `docs/KULLANIM_SARTLARI.md`
-- ✅ Mağaza listeleme metinleri → `docs/MAGAZA_LISTELEME.md`
+## 0. Kararlar (GÜNCEL)
+- ✅ **v1 = İÇTİMA YOK** (sohbet/hesap/backend kaldırıldı) — uygulama %100 **çevrimdışı**, hesapsız.
+- ✅ **Uygulama adı: Mevzu**.
+- ✅ **Pro üyelik / satış = v2** (onaydan sonra; RevenueCat + Google Play Billing).
+- ✅ **Sesli özellik + Tatbikat v1'de gizli** (içerik gelince geri açılır).
+
+## 1. Yasal / metin (BENDE — ✅ bitti)
+- ✅ Gizlilik Politikası (İçtima'sız, çevrimdışı) → `docs/GIZLILIK_POLITIKASI.md`
+- ✅ Kullanım Şartları (EULA, İçtima'sız) → `docs/KULLANIM_SARTLARI.md`
+- ✅ Mağaza listeleme metinleri (Google Play) → `docs/MAGAZA_LISTELEME.md`
+- ✅ Uygulama içi yasal metin (canonical) → `src/constants/yasal-metin.ts` + `/yasal` ekranı
+- ✅ "Resmî kurumla bağlantılı değildir" ibaresi (yasal + Sicil altı görünür)
 - 👤 Yer tutucuları doldur (şirket/iletişim/şehir/tarih) + **bir web sayfasında yayınla** (URL şart)
 - 👤 (Önerilen) avukat/danışman onayı
 
-## 2. Uygulama içi (BENDE)
-- ✅ Gizlilik & Şartlar erişimi: giriş ekranında onay linki + /hesap'ta linkler (config'teki URL'ye)
-- ✅ **Hesap silme** ekranı + işlevi (/hesap → Hesabı Sil; rpc hesabi_sil; Apple/Google zorunlu)
-- ✅ **Kullanıcı engelleme** (İçtima uzun-bas → Engelle; engellenenin mesajları gizlenir) + rapor zaten var
-- 🟡 Review-risk temizliği (sürüyor):
-  - ✅ Karargah "Günün Maddesi" sabit placeholder ("Yer tutucu özet metni") → **gerçek günlük karta** bağlandı (tıkla → patika).
-  - ✅ StudyCard `anlatim_metni` placeholder'ı ekranda gösterilmiyordu (yalnız DB) — görünür risk yok.
-  - ✅ Demo/test düğmeleri zaten `__DEV__` (yayında görünmez).
-  - 👤/❓ **Sesli Nöbet:** hiç ses dosyası yok → her zaman "yakında". Apple için ikincil özellik (kabul edilebilir) ama istersen v1'de gizleyelim. **Karar gerek.**
-  - ❓ **İçerik boşlukları** (Mevzuat'ta "yakında" kart sayıları, patika'da boş madde düğümleri, 4733 görselsiz 2x2 fallback) → asıl Apple riski; içerik turuyla çözülür (ayrı iş).
+## 2. Uygulama içi (BENDE — ✅ bitti)
+- ✅ Gizlilik & Şartlar erişimi: Sicil → "Gizlilik & Kullanım Şartları" → `/yasal` (URL boşken de çalışır)
+- ✅ Review-risk temizliği: sahte geri bildirim gizlendi · Tatbikat tek "yakında" · Karargah sahte
+  "Mini Tatbikat" kaldırıldı · "Günün Maddesi" gerçek karta bağlı · demo düğmeleri `__DEV__`
+- ✅ İçerik koruması: kullanıcıya özel filigran + `expo-screen-capture` (kart akışında ekran görüntüsü engeli)
 
 ## 3. Build yapılandırma (BENDE hazır, build SENDE)
-- ⬜ iOS `bundleIdentifier` (örn. com.mayibey.jsps) + izin metinleri (infoPlist)
-- ⬜ expo-notifications config plugin (Android kanal/ikon)
-- ⬜ Uygulama adı/sürüm kesinleştir (app.json)
-- 👤 `eas build -p ios/android --profile production` (senin EAS hesabınla)
-- 👤 Cihazda dene (development build), kritik akışları gez
+- ✅ `android.package` = com.mayibey.jsps · uygulama adı/sürüm (app.json)
+- ✅ `expo-notifications` config plugin (Android kanal/ikon) eklendi
+- ✅ EAS profilleri (eas.json: development/preview/production app-bundle)
+- 👤 `eas build -p android --profile production` (senin EAS hesabınla → AAB)
+- 👤 Development build ile cihazda dene (bildirim + ekran-görüntüsü-engeli yalnız gerçek build'de çalışır)
 
 ## 4. Mağaza varlıkları
-- ⬜ Uygulama ikonu (cila) + (gerekirse) feature graphic (Play)
-- 👤 Ekran görüntüleri: iPhone 6.7"/6.5" zorunlu, Android telefon + tablet
-- ✅ Açıklama/anahtar kelime/kategori metinleri (docs/MAGAZA_LISTELEME.md)
+- ✅ Uygulama ikonu (app.json adaptiveIcon)
+- ⬜ **Feature graphic (1024×500)** — Play zorunlu
+- 👤 Ekran görüntüleri: Android telefon (zorunlu) + 7"/10" tablet (önerilir)
+- ✅ Açıklama/kategori/yaş/veri beyanı metinleri (`docs/MAGAZA_LISTELEME.md`)
+- 👤 **Maskot ambleminin stilize edilmesi** (birebir resmî jandarma amblemi olmasın — impersonation riski)
 
 ## 5. Hesap & süreç (SENDE / BEKLEME)
-- 👤 Apple Developer ($99/yıl) + Google Play Console ($25) hesabı + kimlik doğrulama ⏳
-- 👤 (İçtima'lı, hesap girişli) reviewer için **demo hesap**
-- 👤 Apple App Privacy + Google Data Safety formları (docs'taki tabloya göre)
-- ⏳ **Google yeni hesap:** 20 test kullanıcı / 14 gün kapalı test (üretimden önce)
-- ⏳ Review kuyruğu: Apple ~1–3 gün, Google saat–gün
+- 👤 Google Play Console ($25) hesabı + kimlik doğrulama ⏳
+- 👤 Gizlilik Politikası URL'sini Console'a gir + Data Safety formu (`MAGAZA_LISTELEME.md` tablosu)
+- 👤 İçerik derecelendirme anketi (IARC — UGC yok → düşük derece)
+- ⏳ **Google yeni kişisel hesap:** 20 test kullanıcı / 14 gün kapalı test (üretimden önce)
+- ⏳ Review kuyruğu: saat–birkaç gün
 
-## 6. (İçtima'lı ise) Backend
-- 👤 Supabase projesi + SQL (docs/SUPABASE_KURULUM.md) + `.env` anahtarları
-- ⬜ Canlı test (giriş + sohbet + rapor/engelle)
+## 6. v2 (onaydan SONRA — backend gerektirir, kod bende, hesap/para sende)
+- Pro üyelik (RevenueCat + Google Play Billing) · sunucu-kapılı premium içerik + imzalı URL ·
+  Google Play Integrity (korsan) · 2-cihaz limiti · filigranı gerçek user ID'ye bağlama.
 
 ---
-**Özet:** 1. ve 4.'ün metin kısmı ✅ (bende bitti). Sıradaki bende: 2. (uygulama-içi ekranlar) +
-3.'ün config kısmı. Asıl takvimi belirleyen: hesap onayı + Google 14 gün test + review.
-**İçeriği zenginleştirmek ayrı iş ama Apple'da "geçme"nin asıl kilidi.**
+**Özet:** Yasal/metin (1), uygulama-içi (2), build config (3) **bende bitti**. Kalan bende: feature
+graphic dışında yok. **Asıl takvim:** Play Console hesabı + gizlilik URL yayını + 14 gün kapalı test.
+**SENDE kritik:** gizlilik URL'sini yayınla → `config.ts`'e yaz; maskot amblemini stilize et.

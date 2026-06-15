@@ -1,64 +1,68 @@
 # Gizlilik Politikası
 
-> **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `[UYGULAMA ADI]`,
-> `[GELİŞTİRİCİ/ŞİRKET ADI]`, `[İLETİŞİM E-POSTASI]`, `[YÜRÜRLÜK TARİHİ]`.
+> **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `[GELİŞTİRİCİ/ŞİRKET ADI]`,
+> `[İLETİŞİM E-POSTASI]`, `[YÜRÜRLÜK TARİHİ]`.
 > Bu metin sağlam bir taslaktır; canlıya çıkmadan **bir avukata/danışmana onaylatman önerilir**.
-> Bunu bir web sayfasında yayınla (App Store/Play Store gizlilik politikası **URL** ister).
+> Bunu bir web sayfasında yayınla (Google Play gizlilik politikası **URL** ister) ve URL'yi
+> `src/constants/config.ts > GIZLILIK_URL`'e yaz. Uygulama içi canonical özet: `src/constants/yasal-metin.ts`.
 
 **Son güncelleme:** [YÜRÜRLÜK TARİHİ]
 
-[UYGULAMA ADI] ("Uygulama") olarak gizliliğine önem veriyoruz. Bu politika, hangi verileri
-neden işlediğimizi ve haklarını açıklar. Veri sorumlusu: **[GELİŞTİRİCİ/ŞİRKET ADI]**
+Mevzu ("Uygulama") olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
+işlediğimizi ve haklarını açıklar. Veri sorumlusu: **[GELİŞTİRİCİ/ŞİRKET ADI]**
 (iletişim: **[İLETİŞİM E-POSTASI]**).
 
-## 1. İşlediğimiz veriler
-- **Hesap verileri:** e-posta adresi, şifre (şifrelenmiş saklanır) ve seçtiğin kullanıcı adı.
-- **İçtima Alanı (sohbet) içeriği:** gönderdiğin mesajlar ve gönderim zamanı. Genel sohbet
-  mesajları diğer kullanıcılara **açıktır**.
-- **Cihaz tanımlayıcı:** kart güvenliği (filigran) için cihazında üretilen rastgele bir kimlik.
-- **Çalışma verileri (cihazda):** ilerlemen, tekrar kayıtların ve branş seçimin **cihazında**
-  (yerel veritabanı) tutulur; sunucuya gönderilmez.
-- **Geri bildirim:** "Hata/öneri bildir" kullanırsan; mesajın + ilgili kart bilgisi + cihaz
-  tanımlayıcı, üçüncü taraf form servisine (Formspree) iletilir.
+**Önemli:** Uygulama tamamen **çevrimdışı** çalışır. Hesap açmıyoruz, kullanıcı girişi yok,
+sohbet/sosyal özellik yok. Çalışma verilerin **cihazından çıkmaz**.
 
-Reklam kimliği, konum, rehber, mikrofon/kamera verisi **toplamıyoruz**. Reklam ağı yok.
+## 1. İşlediğimiz veriler
+- **Çalışma verileri (yalnız cihazda):** ilerlemen, tekrar kayıtların, branş seçimin ve sicilin
+  cihazının yerel veritabanında tutulur; **sunucuya gönderilmez.**
+- **Cihaz tanımlayıcı (yalnız cihazda):** kart güvenliği (filigran) için cihazında üretilen
+  rastgele bir kimlik. Cihazında kalır, bizimle paylaşılmaz.
+- **Geri bildirim (yalnız sen gönderirsen):** "Hata/öneri bildir" özelliğini kullanırsan mesajın +
+  ilgili kart bilgisi + cihaz tanımlayıcı, üçüncü taraf form servisine (Formspree) iletilir.
+  *(Bu özellik yalnızca bir form adresi tanımlıysa görünür.)*
+
+Hesap verisi (e-posta/şifre), reklam kimliği, konum, rehber, mikrofon/kamera verisi
+**toplamıyoruz**. Reklam ağı ve izleme (tracking) **yok**.
 
 ## 2. İşleme amaçları ve hukuki sebepler (KVKK m.5)
-- Hesabını oluşturmak ve oturumunu sürdürmek — *sözleşmenin ifası*.
-- İçtima Alanı'nda mesajlaşmayı sağlamak — *sözleşmenin ifası / açık rıza*.
-- Kötüye kullanımı önlemek, içerik güvenliği (filigran, moderasyon/rapor) — *meşru menfaat*.
-- Talep edersen destek/geri bildirim — *meşru menfaat / açık rıza*.
+- Çalışma aracını sunmak (veriyi cihazda işleme) — *meşru menfaat*.
+- Gönderdiğin geri bildirimi değerlendirmek — *meşru menfaat / açık rıza*.
 
 ## 3. Veri aktarımı ve işleyenler
-- **Supabase** (kimlik doğrulama + veritabanı barındırma) — hesap ve sohbet verisi burada işlenir.
-  Sunucular yurt dışında olabilir; bu durumda veri **yurt dışına aktarılır**.
-- **Formspree** (yalnız geri bildirim gönderirsen).
-Bunlar dışında verini üçüncü kişilerle **satmıyor/paylaşmıyoruz**. Yasal zorunluluk halinde
-yetkili makamlarla paylaşım saklıdır.
+- Verilerin cihazında tutulur, sunucumuza **aktarılmaz**.
+- Yalnızca **sen geri bildirim gönderirsen**, mesajın üçüncü taraf form servisi **Formspree**'ye
+  iletilir (sunucular yurt dışında olabilir → bu durumda veri yurt dışına aktarılır).
+- Verini üçüncü kişilerle **satmıyor/paylaşmıyoruz**. Yasal zorunluluk halinde yetkili makamlarla
+  paylaşım saklıdır.
 
 ## 4. Saklama süresi
-- Hesap ve sohbet verisi, hesabın aktif olduğu sürece saklanır.
-- Hesabını sildiğinde hesap verilerin ve mesajların makul süre içinde silinir/anonimleştirilir.
-- Yasal saklama yükümlülükleri saklıdır.
+Çalışma verisi ve cihaz tanımlayıcı, uygulama cihazında yüklü olduğu sürece saklanır.
 
 ## 5. Haklarınız (KVKK m.11)
-Verinin işlenip işlenmediğini öğrenme, erişme, düzeltme, **silme**, aktarıma itiraz ve zararın
+Verinin işlenip işlenmediğini öğrenme, erişme, düzeltme, **silme**, itiraz ve zararın
 giderilmesini talep etme haklarına sahipsin. Başvuru: **[İLETİŞİM E-POSTASI]**.
 
-## 6. Hesap silme
-Uygulama içinden hesabını ve verilerini **silebilirsin** (Sicil/Ayarlar → Hesabı Sil). Ayrıca
-[İLETİŞİM E-POSTASI] üzerinden de talep edebilirsin.
+## 6. Veri silme
+Tüm verin cihazında tutulduğundan, **uygulamayı kaldırman** (veya cihaz ayarlarından uygulama
+verisini temizlemen) tüm çalışma verini kalıcı olarak siler.
 
 ## 7. Çocuklar
-Uygulama **[13/16/18]** yaş altına yönelik değildir. Bu yaşın altındaysan veli onayı olmadan
-hesap oluşturma.
+Uygulama belirlenen yaş altına yönelik değildir.
 
 ## 8. Güvenlik
-Şifreler şifreli saklanır; erişim, satır düzeyi güvenlik (RLS) kurallarıyla sınırlandırılır.
-Hiçbir sistem %100 güvenli olmasa da makul teknik/idari tedbirleri alırız.
+Verilerin cihazında tutulur. Hiçbir sistem %100 güvenli olmasa da makul teknik/idari tedbirleri
+alırız.
 
-## 9. Değişiklikler
+## 9. Bağlantı reddi
+Bu uygulama bağımsız bir sınav hazırlık aracıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik
+Komutanlığı veya herhangi bir resmî kurum/makamla bağlantılı, ilişkili veya onlar tarafından
+onaylanmış **değildir**.
+
+## 10. Değişiklikler
 Bu politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde/duyuruyla bildiririz.
 
-## 10. İletişim
+## 11. İletişim
 Sorular için: **[İLETİŞİM E-POSTASI]**.

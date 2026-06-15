@@ -91,7 +91,7 @@
 
 ### D — Sende (kod değil)
 - [ ] **D1 [H7]** Gizlilik metnini yayınla → URL'leri `config.ts`'e yaz.
-- [ ] **D2** `docs/` yasal/mağaza dökümanlarını İçtima'sız güncelle (canonical = `yasal-metin.ts`).
+- [x] **D2** ✅ `docs/` yasal/mağaza dökümanları İçtima'sız + Google Play odaklı güncellendi: GIZLILIK_POLITIKASI · KULLANIM_SARTLARI · MAGAZA_LISTELEME · YAYIN_HAZIRLIK. (canonical = `yasal-metin.ts` ile tutarlı; yer tutucular [GELİŞTİRİCİ/İLETİŞİM/TARİH] sende.)
 - [ ] **D4 [H6]** Maskot ambleminin stilize edilmesi (birebir resmî jandarma amblemi olmasın) + mağaza açıklamasına `RESMI_BAGLANTI_YOK` ibaresini koy.
 - [ ] **D3** Developer hesabı + EAS production build + 20 test / 14 gün + ekran görüntüleri + feature graphic.
 
