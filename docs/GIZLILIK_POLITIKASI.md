@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-> **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `MEVZU`,
+> **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `MEVZU-JSPS`,
 > `dev.ademyilmaz@gmail.com`, `16 Haziran 2026`.
 > Bu metin sağlam bir taslaktır; canlıya çıkmadan **bir avukata/danışmana onaylatman önerilir**.
 > Bunu bir web sayfasında yayınla (Google Play gizlilik politikası **URL** ister) ve URL'yi
@@ -8,8 +8,8 @@
 
 **Son güncelleme:** 16 Haziran 2026
 
-Mevzu ("Uygulama") olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
-işlediğimizi ve haklarını açıklar. Veri sorumlusu: **MEVZU**
+MEVZU-JSPS ("Uygulama") olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
+işlediğimizi ve haklarını açıklar. Veri sorumlusu: **MEVZU-JSPS**
 (iletişim: **dev.ademyilmaz@gmail.com**).
 
 **Önemli:** Uygulama tamamen **çevrimdışı** çalışır. Hesap açmıyoruz, kullanıcı girişi yok,

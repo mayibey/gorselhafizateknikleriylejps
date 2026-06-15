@@ -6,7 +6,7 @@ Durum: ⬜ yapılacak · ✅ yapıldı · 👤 sende (hesap/dış/para) · ⏳ b
 
 ## 0. Kararlar (GÜNCEL)
 - ✅ **v1 = İÇTİMA YOK** (sohbet/hesap/backend kaldırıldı) — uygulama %100 **çevrimdışı**, hesapsız.
-- ✅ **Uygulama adı: Mevzu**.
+- ✅ **Uygulama adı: MEVZU-JSPS**.
 - ✅ **Pro üyelik / satış = v2** (onaydan sonra; RevenueCat + Google Play Billing).
 - ✅ **Sesli özellik + Tatbikat v1'de gizli** (içerik gelince geri açılır).
 

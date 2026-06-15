@@ -1,14 +1,14 @@
 # Kullanım Şartları (EULA)
 
-> **NOT (yayından önce):** `MEVZU`, `dev.ademyilmaz@gmail.com`,
+> **NOT (yayından önce):** `MEVZU-JSPS`, `dev.ademyilmaz@gmail.com`,
 > `16 Haziran 2026`, `Osmaniye` doldur. Avukat onayı önerilir.
 > Uygulama içi canonical özet: `src/constants/yasal-metin.ts`.
 
 **Son güncelleme:** 16 Haziran 2026
 
 ## 1. Kabul
-Mevzu'yu ("Uygulama") kullanarak bu şartları kabul edersin. Kabul etmiyorsan kullanma.
-Uygulama **MEVZU** tarafından sunulur.
+MEVZU-JSPS'yi ("Uygulama") kullanarak bu şartları kabul edersin. Kabul etmiyorsan kullanma.
+Uygulama **MEVZU-JSPS** tarafından sunulur.
 
 ## 2. Hizmet ve sorumluluk reddi
 Uygulama, JSPS sınavına hazırlık için görsel hafıza kartları, tekrar sistemi ve eğitim araçları
@@ -23,7 +23,7 @@ sahiplerine aittir.
 
 ## 3. Fikri mülkiyet
 Mevzuat metinleri kamuya açıktır. Uygulamadaki **özgün görseller, karikatürler, tasarım, marka ve
-yazılım** MEVZU'na aittir; izinsiz kopyalanamaz, dağıtılamaz. Görseller
+yazılım** MEVZU-JSPS'na aittir; izinsiz kopyalanamaz, dağıtılamaz. Görseller
 kullanıcıya özel **filigran** taşır; filigranlı görsellerin yetkisiz paylaşımı/çoğaltılması
 yasaktır ve takip edilebilir.
 

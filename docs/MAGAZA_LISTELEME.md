@@ -1,10 +1,10 @@
 # Mağaza Listeleme Metinleri (Google Play)
 
 > Hedef: **Google Play** (Android). İleride App Store eklenirse metinler büyük ölçüde geçerli.
-> Karakter sınırları işaretli. Uygulama adı: **Mevzu**.
+> Karakter sınırları işaretli. Uygulama adı: **MEVZU-JSPS**.
 
 ## Uygulama adı (max 30)
-- **Önerilen:** `Mevzu: JSPS Görsel Hafıza` (anahtar kelime + marka). Kısa marka: `Mevzu`.
+- **Önerilen:** `MEVZU-JSPS: Görsel Hafıza` (marka + anahtar kelime). Kısa marka: `MEVZU-JSPS`.
 
 ## Kısa açıklama (Play, max 80)
 `Jandarma/SG sınavına görsel hafıza kartları ve aralıklı tekrarla hazırlan.`
