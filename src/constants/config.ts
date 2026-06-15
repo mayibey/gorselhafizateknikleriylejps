@@ -12,5 +12,5 @@ export const FORMSPREE_ENDPOINT = '';
  * URL'leri buraya yaz (mağaza + giriş ekranı + Hesap ekranı buraya bağlanır).
  * Boşsa uygulama "yakında" gösterir.
  */
-export const GIZLILIK_URL = '';
-export const SARTLAR_URL = '';
+export const GIZLILIK_URL = 'https://mayibey.github.io/gorselhafizateknikleriylejps/';
+export const SARTLAR_URL = 'https://mayibey.github.io/gorselhafizateknikleriylejps/sartlar.html';

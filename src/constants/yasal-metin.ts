@@ -2,7 +2,7 @@
  * Uygulama içi yasal metinler. Mağaza incelemesi için linklerin HER ZAMAN çalışması
  * gerekir (URL barındırılmasa bile). Tam/güncel sürüm hosting'e koyulup config'teki
  * GIZLILIK_URL/SARTLAR_URL doldurulabilir; uygulama içi metin canonical özet olarak kalır.
- * Yer tutucuları yayından önce doldur: [GELİŞTİRİCİ/ŞİRKET ADI], [İLETİŞİM E-POSTASI].
+ * Yer tutucuları yayından önce doldur: MEVZU, dev.ademyilmaz@gmail.com.
  */
 
 /**
@@ -14,7 +14,7 @@ export const RESMI_BAGLANTI_YOK =
 
 export const GIZLILIK_METNI = `MEVZU — GİZLİLİK POLİTİKASI
 
-Veri sorumlusu: [GELİŞTİRİCİ/ŞİRKET ADI] · İletişim: [İLETİŞİM E-POSTASI]
+Veri sorumlusu: MEVZU · İletişim: dev.ademyilmaz@gmail.com
 
 1) İŞLENEN VERİLER
 • Çalışma verisi: ilerlemen, branşın ve sicilin yalnız CİHAZINDA tutulur (sunucuya gönderilmez).
@@ -33,7 +33,7 @@ form servisi Formspree'ye iletilir (sunucular yurt dışında olabilir). Verini 
 Çalışma verisi ve cihaz kimliği cihazında, uygulama yüklü olduğu sürece saklanır.
 
 5) HAKLARIN (KVKK m.11)
-Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: [İLETİŞİM E-POSTASI].
+Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: dev.ademyilmaz@gmail.com.
 
 6) VERİ SİLME
 Tüm verin cihazında olduğundan, uygulamayı kaldırman (veya cihaz ayarlarından verisini temizlemen)
@@ -45,11 +45,11 @@ Belirlenen yaş altına yönelik değildir.
 8) DEĞİŞİKLİKLER
 Politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde bildiririz.
 
-Sorular: [İLETİŞİM E-POSTASI]`;
+Sorular: dev.ademyilmaz@gmail.com`;
 
 export const SARTLAR_METNI = `MEVZU — KULLANIM ŞARTLARI
 
-Uygulamayı kullanarak bu şartları kabul edersin. Sunan: [GELİŞTİRİCİ/ŞİRKET ADI].
+Uygulamayı kullanarak bu şartları kabul edersin. Sunan: MEVZU.
 
 1) HİZMET ve SORUMLULUK REDDİ
 Mevzu, JSPS sınavına hazırlık için görsel hafıza kartları, tekrar sistemi ve eğitim araçları sunar.
@@ -59,7 +59,7 @@ ${RESMI_BAGLANTI_YOK}
 
 2) FİKRİ MÜLKİYET
 Mevzuat metinleri kamuya açıktır. Özgün görseller, karikatürler, tasarım, marka ve yazılım
-[GELİŞTİRİCİ/ŞİRKET ADI]'na aittir; izinsiz kopyalanamaz. Filigranlı görsellerin yetkisiz paylaşımı yasaktır.
+MEVZU'na aittir; izinsiz kopyalanamaz. Filigranlı görsellerin yetkisiz paylaşımı yasaktır.
 
 3) ÜCRET
 Uygulama şu an ücretsizdir. İleride ücretli özellik eklenirse önceden bilgilendirilir.
@@ -73,4 +73,4 @@ Uygulamayı dilediğin an kaldırabilirsin. Şartları ihlal halinde erişimini 
 6) UYGULANACAK HUKUK
 Türkiye Cumhuriyeti hukuku uygulanır.
 
-İletişim: [İLETİŞİM E-POSTASI]`;
+İletişim: dev.ademyilmaz@gmail.com`;

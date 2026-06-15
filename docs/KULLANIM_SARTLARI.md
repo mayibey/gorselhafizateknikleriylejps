@@ -1,14 +1,14 @@
 # Kullanım Şartları (EULA)
 
-> **NOT (yayından önce):** `[GELİŞTİRİCİ/ŞİRKET ADI]`, `[İLETİŞİM E-POSTASI]`,
-> `[YÜRÜRLÜK TARİHİ]`, `[ŞEHİR]` doldur. Avukat onayı önerilir.
+> **NOT (yayından önce):** `MEVZU`, `dev.ademyilmaz@gmail.com`,
+> `16 Haziran 2026`, `Osmaniye` doldur. Avukat onayı önerilir.
 > Uygulama içi canonical özet: `src/constants/yasal-metin.ts`.
 
-**Son güncelleme:** [YÜRÜRLÜK TARİHİ]
+**Son güncelleme:** 16 Haziran 2026
 
 ## 1. Kabul
 Mevzu'yu ("Uygulama") kullanarak bu şartları kabul edersin. Kabul etmiyorsan kullanma.
-Uygulama **[GELİŞTİRİCİ/ŞİRKET ADI]** tarafından sunulur.
+Uygulama **MEVZU** tarafından sunulur.
 
 ## 2. Hizmet ve sorumluluk reddi
 Uygulama, JSPS sınavına hazırlık için görsel hafıza kartları, tekrar sistemi ve eğitim araçları
@@ -23,7 +23,7 @@ sahiplerine aittir.
 
 ## 3. Fikri mülkiyet
 Mevzuat metinleri kamuya açıktır. Uygulamadaki **özgün görseller, karikatürler, tasarım, marka ve
-yazılım** [GELİŞTİRİCİ/ŞİRKET ADI]'na aittir; izinsiz kopyalanamaz, dağıtılamaz. Görseller
+yazılım** MEVZU'na aittir; izinsiz kopyalanamaz, dağıtılamaz. Görseller
 kullanıcıya özel **filigran** taşır; filigranlı görsellerin yetkisiz paylaşımı/çoğaltılması
 yasaktır ve takip edilebilir.
 
@@ -42,8 +42,8 @@ Uygulamayı dilediğin an kaldırabilirsin. Şartları ihlal halinde erişimini 
 Bu şartları güncelleyebiliriz; önemli değişiklikleri uygulama içinde bildiririz.
 
 ## 8. Uygulanacak hukuk
-Bu şartlara **Türkiye Cumhuriyeti hukuku** uygulanır; uyuşmazlıklarda **[ŞEHİR]** mahkemeleri ve
+Bu şartlara **Türkiye Cumhuriyeti hukuku** uygulanır; uyuşmazlıklarda **Osmaniye** mahkemeleri ve
 icra daireleri yetkilidir.
 
 ## 9. İletişim
-**[İLETİŞİM E-POSTASI]**
+**dev.ademyilmaz@gmail.com**

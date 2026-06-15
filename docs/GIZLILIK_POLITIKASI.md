@@ -1,16 +1,16 @@
 # Gizlilik Politikası
 
-> **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `[GELİŞTİRİCİ/ŞİRKET ADI]`,
-> `[İLETİŞİM E-POSTASI]`, `[YÜRÜRLÜK TARİHİ]`.
+> **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `MEVZU`,
+> `dev.ademyilmaz@gmail.com`, `16 Haziran 2026`.
 > Bu metin sağlam bir taslaktır; canlıya çıkmadan **bir avukata/danışmana onaylatman önerilir**.
 > Bunu bir web sayfasında yayınla (Google Play gizlilik politikası **URL** ister) ve URL'yi
 > `src/constants/config.ts > GIZLILIK_URL`'e yaz. Uygulama içi canonical özet: `src/constants/yasal-metin.ts`.
 
-**Son güncelleme:** [YÜRÜRLÜK TARİHİ]
+**Son güncelleme:** 16 Haziran 2026
 
 Mevzu ("Uygulama") olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
-işlediğimizi ve haklarını açıklar. Veri sorumlusu: **[GELİŞTİRİCİ/ŞİRKET ADI]**
-(iletişim: **[İLETİŞİM E-POSTASI]**).
+işlediğimizi ve haklarını açıklar. Veri sorumlusu: **MEVZU**
+(iletişim: **dev.ademyilmaz@gmail.com**).
 
 **Önemli:** Uygulama tamamen **çevrimdışı** çalışır. Hesap açmıyoruz, kullanıcı girişi yok,
 sohbet/sosyal özellik yok. Çalışma verilerin **cihazından çıkmaz**.
@@ -43,7 +43,7 @@ Hesap verisi (e-posta/şifre), reklam kimliği, konum, rehber, mikrofon/kamera v
 
 ## 5. Haklarınız (KVKK m.11)
 Verinin işlenip işlenmediğini öğrenme, erişme, düzeltme, **silme**, itiraz ve zararın
-giderilmesini talep etme haklarına sahipsin. Başvuru: **[İLETİŞİM E-POSTASI]**.
+giderilmesini talep etme haklarına sahipsin. Başvuru: **dev.ademyilmaz@gmail.com**.
 
 ## 6. Veri silme
 Tüm verin cihazında tutulduğundan, **uygulamayı kaldırman** (veya cihaz ayarlarından uygulama
@@ -65,4 +65,4 @@ onaylanmış **değildir**.
 Bu politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde/duyuruyla bildiririz.
 
 ## 11. İletişim
-Sorular için: **[İLETİŞİM E-POSTASI]**.
+Sorular için: **dev.ademyilmaz@gmail.com**.
