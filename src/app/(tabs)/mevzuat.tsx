@@ -29,16 +29,13 @@ export default function MevzuatScreen() {
 
   useFocusEffect(yukle);
 
-  const musterek = laws?.filter((l) => l.blok === 'müşterek') ?? [];
-  const bransKanunlari = laws?.filter((l) => l.blok === 'branş') ?? [];
+  // Şimdilik yalnız içeriği OLAN (kart sayısı > 0) müşterek kanunlar gösterilir.
+  // İçeriği hazır olmayanlar gizli; branş konuları topluca "yakında".
+  const musterek = laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0) ?? [];
 
   function kanunaGit(law: LawWithCount) {
     // Kanun → Patika (bölümler). Bölümü olmayan kanun patikada tek "Tüm Kartlar" düğümü gösterir.
     router.push({ pathname: '/patika', params: { lawId: String(law.id) } });
-  }
-
-  function sesliNobete(law: LawWithCount) {
-    router.push({ pathname: '/sesli-nobet', params: { lawId: String(law.id) } });
   }
 
   return (
@@ -53,15 +50,30 @@ export default function MevzuatScreen() {
         />
       ) : laws === null ? (
         <Loading metin="Yükleniyor…" />
-      ) : laws.length === 0 ? (
-        <EmptyState ikon="book-outline" baslik="Bu branşta kanun yok" />
       ) : (
         <>
-          <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} onSes={sesliNobete} />
-          <Bolum baslik="BRANŞ" laws={bransKanunlari} onPress={kanunaGit} onSes={sesliNobete} />
+          <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} />
+          <BransYakinda />
         </>
       )}
     </Screen>
+  );
+}
+
+/** Branş konuları henüz yayında değil — tek bilgi kartı (tek tek "yakında" satırları yerine). */
+function BransYakinda() {
+  return (
+    <View style={styles.bolum}>
+      <AppText variant="etiket" color="solukMetin" bold>
+        BRANŞ
+      </AppText>
+      <View style={styles.yakindaKart}>
+        <MaterialCommunityIcons name="progress-clock" size={22} color={Palette.solukMetin} />
+        <AppText variant="kucuk" color="solukMetin" bold style={styles.yakindaMetin}>
+          Branş konuları yakında — hazırlanıyor.
+        </AppText>
+      </View>
+    </View>
   );
 }
 
@@ -69,12 +81,10 @@ function Bolum({
   baslik,
   laws,
   onPress,
-  onSes,
 }: {
   baslik: string;
   laws: LawWithCount[];
   onPress: (law: LawWithCount) => void;
-  onSes: (law: LawWithCount) => void;
 }) {
   return (
     <View style={styles.bolum}>
@@ -86,7 +96,7 @@ function Bolum({
           Bu bölümde kanun yok.
         </AppText>
       ) : (
-        laws.map((law) => <KanunSatir key={law.id} law={law} onPress={onPress} onSes={onSes} />)
+        laws.map((law) => <KanunSatir key={law.id} law={law} onPress={onPress} />)
       )}
     </View>
   );
@@ -95,33 +105,22 @@ function Bolum({
 function KanunSatir({
   law,
   onPress,
-  onSes,
 }: {
   law: LawWithCount;
   onPress: (law: LawWithCount) => void;
-  onSes: (law: LawWithCount) => void;
 }) {
-  const bos = law.kartSayisi === 0;
   return (
     <Pressable
-      style={({ pressed }) => [styles.satir, bos && styles.satirBos, pressed && styles.pressed]}
+      style={({ pressed }) => [styles.satir, pressed && styles.pressed]}
       onPress={() => onPress(law)}>
       <AppText variant="govde" bold style={styles.satirAd}>
         {law.ad}
       </AppText>
-      <View style={[styles.rozet, bos && styles.rozetBos]}>
-        <AppText variant="etiket" color={bos ? 'solukMetin' : 'beyaz'} bold>
-          {bos ? 'yakında' : `${law.kartSayisi} kart`}
+      <View style={styles.rozet}>
+        <AppText variant="etiket" color="beyaz" bold>
+          {law.kartSayisi} kart
         </AppText>
       </View>
-      {/* Ayrı giriş: Sesli Nöbet (akış navigasyonunu bozmaz; kendi onPress'i var). */}
-      <Pressable
-        onPress={() => onSes(law)}
-        hitSlop={8}
-        accessibilityRole="button"
-        accessibilityLabel="Sesli Nöbet">
-        <MaterialCommunityIcons name="headphones" size={22} color={Palette.lacivert} />
-      </Pressable>
       <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
     </Pressable>
   );
@@ -141,9 +140,6 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.three,
   },
-  satirBos: {
-    opacity: 0.55,
-  },
   satirAd: {
     flex: 1,
   },
@@ -153,8 +149,18 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.half,
     borderRadius: Radius.s,
   },
-  rozetBos: {
-    backgroundColor: Palette.kenarlik,
+  yakindaKart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+  },
+  yakindaMetin: {
+    flex: 1,
   },
   pressed: {
     opacity: 0.7,

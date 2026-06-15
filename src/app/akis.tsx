@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { AudioBar } from '@/components/card-flow/audio-bar';
 import { MaddeMetniSheet } from '@/components/card-flow/madde-metni-sheet';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { AppText } from '@/components/ui/app-text';
@@ -188,8 +187,6 @@ export default function AkisScreen() {
             </View>
 
             <StudyCard card={queue[index]} />
-            {/* Sesli anlatım kontrolü. key=kart id → kart değişince remount → önceki ses durur. */}
-            <AudioBar key={queue[index].id} sesYolu={queue[index].ses_yolu} />
 
             {/* Madde Metni — resmî tam metin. Metin varsa aktif, yoksa soluk "yakında". */}
             {maddeMetni(queue[index].madde_no) !== null ? (
