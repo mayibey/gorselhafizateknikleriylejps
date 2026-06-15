@@ -5,6 +5,13 @@
  * Yer tutucuları yayından önce doldur: [GELİŞTİRİCİ/ŞİRKET ADI], [İLETİŞİM E-POSTASI].
  */
 
+/**
+ * Resmî kurum bağlantısı reddi. Mağaza "impersonation" riskine karşı uygulama içinde
+ * (Sicil altı) ve yasal metinlerde görünür. Mağaza açıklamasına da aynı cümle konmalı.
+ */
+export const RESMI_BAGLANTI_YOK =
+  'Bu uygulama bağımsız bir sınav hazırlık aracıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı veya herhangi bir resmî kurum/makamla bağlantılı, ilişkili veya onlar tarafından onaylanmış değildir. İlgili marka, amblem ve adlar yalnızca tanımlama amacıyla anılır ve sahiplerine aittir.';
+
 export const GIZLILIK_METNI = `MEVZU — GİZLİLİK POLİTİKASI
 
 Veri sorumlusu: [GELİŞTİRİCİ/ŞİRKET ADI] · İletişim: [İLETİŞİM E-POSTASI]
@@ -48,6 +55,7 @@ Uygulamayı kullanarak bu şartları kabul edersin. Sunan: [GELİŞTİRİCİ/Ş�
 Mevzu, JSPS sınavına hazırlık için görsel hafıza kartları, tekrar sistemi ve eğitim araçları sunar.
 Bir çalışma aracıdır; SINAVI KAZANACAĞINI GARANTİ ETMEZ. İçerikler bilgilendirme amaçlıdır,
 resmi/hukuki danışmanlık değildir; güncel resmi mevzuat esastır.
+${RESMI_BAGLANTI_YOK}
 
 2) FİKRİ MÜLKİYET
 Mevzuat metinleri kamuya açıktır. Özgün görseller, karikatürler, tasarım, marka ve yazılım

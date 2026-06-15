@@ -8,6 +8,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, type PaletteColor, Radius, Spacing } from '@/constants/theme';
+import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
 import {
   ekleSicilKaydi,
   getAllCards,
@@ -200,6 +201,11 @@ export default function SicilScreen() {
           </View>
         </>
       )}
+
+      {/* Resmî kurum bağlantısı reddi — mağaza impersonation riskine karşı görünür ibare. */}
+      <AppText variant="etiket" color="solukMetin" style={styles.resmiNot}>
+        {RESMI_BAGLANTI_YOK}
+      </AppText>
     </Screen>
   );
 }
@@ -550,5 +556,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.s,
     paddingVertical: Spacing.two,
+  },
+  resmiNot: {
+    textAlign: 'center',
+    marginTop: Spacing.two,
+    lineHeight: 16,
   },
 });
