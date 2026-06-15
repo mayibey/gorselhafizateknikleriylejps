@@ -137,6 +137,29 @@ const TCK_BASLIK: Record<string, string> = {
 const KANUN_BILGI: Record<string, { lawId: number; etiket: string }> = {
   tck: { lawId: 1, etiket: 'TCK' },
   kabahatler: { lawId: 6, etiket: 'Kabahatler' },
+  jandarmakanun: { lawId: 2, etiket: "Jandarma Kanunu" },
+  kvkk: { lawId: 3, etiket: "KVKK" },
+  tebligat: { lawId: 4, etiket: "Tebligat" },
+  ililaresi: { lawId: 5, etiket: "İl İdaresi" },
+  terorle: { lawId: 7, etiket: "Terörle Mücadele" },
+  ohal: { lawId: 8, etiket: "OHAL" },
+  ataturk: { lawId: 9, etiket: "Atatürk Al. Suçlar" },
+  ailekoruma: { lawId: 10, etiket: "6284 Ailenin Korunması" },
+  bayrak: { lawId: 11, etiket: "Türk Bayrağı" },
+  disiplin: { lawId: 12, etiket: "Disiplin" },
+  sozlesmeliasb: { lawId: 13, etiket: "Sözleşmeli Sb/Asb" },
+  eimza: { lawId: 14, etiket: "E-İmza" },
+  resmiyazisma: { lawId: 15, etiket: "Resmî Yazışma" },
+  sozlesmeliyon: { lawId: 16, etiket: "Sözleşmeli Sb/Asb Yön" },
+  jandteskyon: { lawId: 17, etiket: "Jandarma Teşkilat Yön" },
+  kvksilme: { lawId: 18, etiket: "KV Silme Yön" },
+  bilgiedinme: { lawId: 19, etiket: "Bilgi Edinme Yön" },
+  tufekler: { lawId: 20, etiket: "2521 Tüfekler Yön" },
+  aileuyg: { lawId: 21, etiket: "6284 Uyg. Yön" },
+  personelyon: { lawId: 22, etiket: "Personel Yön" },
+  hizmetesas: { lawId: 23, etiket: "Hizmet Esasları Yön" },
+  izinyon: { lawId: 24, etiket: "İzin Yön" },
+  atesli: { lawId: 25, etiket: "6136 Ateşli Silahlar" },
 };
 
 /**
@@ -399,6 +422,36 @@ export const SEED_KAPSAM: Record<number, string[]> = {
   65: ['3', '5', '10', '12', '22'], // Türk Vatandaşlığı Uyg Yön
   66: ['3', '4', '7', '8', '9', '10', '16', '47', '54', '60', '70', '71'], // Ateşli Silahlar/Bıçaklar Yön
 };
+
+// --- İÇERİK YERLEŞTİRME: müşterek görseller (fabrika uretilen_gorseller). Patika kapsamı =
+// yalnız GÖRSELİ OLAN maddeler (görselsiz maddeler patikadan düşürüldü). 1(TCK)/6(Kabahatler)
+// dokunulmadı. EK/Geçici/harfli madde + isimli özet kartları genel-özet (patika düğümü yok),
+// kanun akışında görünür. gorselKartlari() registry'den otomatik üretir.
+Object.assign(SEED_KAPSAM, {
+  2: ['1','4','7','8','9','12','14','15','18','21','26'], // Jandarma Kanunu
+  3: ['3','4','5','6','7','28'], // KVKK
+  4: ['2','3','21','22','24'], // Tebligat
+  5: ['2','4','9','11','18','27','31','32','42','57','58','66'], // İl İdaresi
+  7: ['1','2','3','4','5','6','7','15','19','20','21','22'], // Terörle Mücadele
+  8: ['1','2','3','9','11','22','23'], // OHAL
+  9: ['1','2','3'], // Atatürk Al. Suçlar
+  10: ['1','3','4','5','6','7','8','9','12','13'], // 6284 Ailenin Korunması
+  11: ['2','3','4','5','6','7','8'], // Türk Bayrağı
+  12: ['4','5','6','7','8','9','10','11','12','13','14','15','19','20','27','28','29','30','31','32','33','34'], // Disiplin
+  13: ['3','4','6','7','8','10','12','13','15','16'], // Sözleşmeli Sb/Asb
+  14: ['2','3','4','5'], // E-İmza
+  15: ['2','3','4','5','6','8','10','11','13','15','16','17','18','19','21','22','23','24','25','26','27','29','31','32','33'], // Resmî Yazışma
+  16: ['3','5','6','8','12','13','14','15','22','26','30','31','32'], // Sözleşmeli Sb/Asb Yön
+  17: ['1','3','4','5','7','8','9','10','11','18','19','21','24','25','38','39','41','42','45','46','47','48','52','58','59','60','61','65','67','70','74','75','76','80'], // Jandarma Teşkilat Yön
+  18: ['4','7','8','11','12'], // KV Silme Yön
+  19: ['2','3','4','5'], // Bilgi Edinme Yön
+  20: ['10','13','14'], // 2521 Tüfekler Yön
+  21: ['1','3','4','6','8','11','12','17','29','30','32','34','35','37','38','39'], // 6284 Uyg. Yön
+  22: ['4','7','9','10','14','15','21','24','25','32','33','35','38','42','45','46','51','60'], // Personel Yön
+  23: ['1','4','5','6','7','8','9','10','11','12','14','15','16','17','18','19','20','21','22','23','24','25','26','28','30','32','34'], // Hizmet Esasları Yön
+  24: ['5','20'], // İzin Yön
+  25: ['6','7','9','14'], // 6136 Ateşli Silahlar
+});
 
 /** Madde etiketi → patika düğümü adı. */
 function maddeAd(etiket: string): string {

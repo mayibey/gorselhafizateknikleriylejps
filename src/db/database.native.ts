@@ -158,6 +158,16 @@ class SqliteBackend implements Backend {
       );
       version = 13;
     }
+    if (version < 14) {
+      // Müşterek görsel içeriği eklendi (23 yeni kanun: kvkk/disiplin/jandteskyon… ~400 yeni
+      // kart) + patika kapsamı yalnız GÖRSELİ OLAN maddelerle trimlendi. cards SALT REFERANS →
+      // DELETE+yeniden tohumla; srs (card_id ile ayrı tablo) KORUNUR. Kart↔madde bağı değiştiği
+      // için bolum_kartlari/bolumler de yeniden tohumlanır. (TCK/Kabahatler dokunulmadı.)
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 14;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

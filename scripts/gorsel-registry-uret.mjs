@@ -22,7 +22,7 @@ function pngTopla(dir) {
   for (const ad of readdirSync(dir)) {
     const tam = join(dir, ad);
     if (statSync(tam).isDirectory()) sonuc.push(...pngTopla(tam));
-    else if (ad.toLowerCase().endsWith('.png')) sonuc.push(tam);
+    else if (/\.(png|webp)$/i.test(ad)) sonuc.push(tam);
   }
   return sonuc;
 }
@@ -31,7 +31,7 @@ const dosyalar = pngTopla(assetsRoot).sort();
 
 const anahtarlar = new Map(); // key -> rel path (çakışma tespiti için)
 for (const tam of dosyalar) {
-  const key = basename(tam).replace(/\.png$/i, '');
+  const key = basename(tam).replace(/\.(png|webp)$/i, '');
   let rel = relative(outDir, tam).split(sep).join('/');
   if (!rel.startsWith('.')) rel = './' + rel;
   if (anahtarlar.has(key)) {
