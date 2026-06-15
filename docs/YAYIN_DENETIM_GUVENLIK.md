@@ -81,7 +81,7 @@
 - [x] **A2 [H3+H4]** ✅ Tatbikat KOMPLE gizlendi (kullanıcı kararı: liste değil tek "yakında" ekranı) — `tatbikat.tsx` artık tek EmptyState ("Deneme sınavları ve tatbikat bölümü yakında eklenecek"). Kilitli satır denizi + boş branş sorunu gitti. Quiz altyapısı (`/quiz`, `lib/quiz.ts`) kodda duruyor; içerik gelince liste+başlatıcı git geçmişinden geri gelir.
 - [x] **A3 [H5]** ✅ Karargah sahte "Mini Tatbikat: 1" kaldırıldı — `(tabs)/index.tsx` "BUGÜNÜN GÖREVİ" kutusunda artık yalnız gerçek iki sayı (Tekrar + Yeni), `flex:1` ile 50/50 ortalı.
 - [x] **A4 [H6]** ✅ "Resmî kurumla bağlantılı değildir" ibaresi eklendi — `constants/yasal-metin.ts > RESMI_BAGLANTI_YOK` ortak sabiti; Kullanım Şartları md.1'e gömüldü + Sicil ekranı altında görünür soluk satır. **Kalan (SENDE, D4):** maskot ambleminin stilize edilmesi (görsel iş) + mağaza açıklamasına aynı ibarenin konması.
-- [ ] **A5 [H2]** `app.json`'a `expo-notifications` plugin ekle (v1'de tutuyorsak) ya da bildirimi v1'de gizle.
+- [x] **A5 [H2]** ✅ Bildirim tutuldu — `app.json` plugins'e `expo-notifications` eklendi (JSON doğrulandı). Production/dev build'de Android ikon/kanal düzgün kurulur. (Expo Go'da sınırlı — normal; gerçek build'de çalışır.)
 
 ### B — Güvenlik (bloklamaz, yayından önce iyi olur)
 - [ ] **B1** `expo-screen-capture` ile çalışma/kart ekranlarında ekran görüntüsü engeli.
