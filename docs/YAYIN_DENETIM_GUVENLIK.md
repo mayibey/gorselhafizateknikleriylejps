@@ -84,7 +84,7 @@
 - [x] **A5 [H2]** ✅ Bildirim tutuldu — `app.json` plugins'e `expo-notifications` eklendi (JSON doğrulandı). Production/dev build'de Android ikon/kanal düzgün kurulur. (Expo Go'da sınırlı — normal; gerçek build'de çalışır.)
 
 ### B — Güvenlik (bloklamaz, yayından önce iyi olur)
-- [ ] **B1** `expo-screen-capture` ile çalışma/kart ekranlarında ekran görüntüsü engeli.
+- [x] **B1** ✅ `expo-screen-capture ~8.0.9` kuruldu; `akis.tsx`'te `usePreventScreenCapture()` → kart akışı açıkken Android'de ekran görüntüsü/kaydı engellenir (FLAG_SECURE). Yalnız gerçek build'de etkin (web/Expo Go no-op; web export doğrulandı). Sınır: ikinci telefonla fotoğraf engellenemez, iOS'ta tam engel yok — caydırıcı + filigran tamamlayıcısı.
 
 ### C — Temizlik
 - [ ] **C1 [T1]** Ölü rota `madde-metni.tsx` sil.

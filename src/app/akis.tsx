@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { usePreventScreenCapture } from 'expo-screen-capture';
 import { useCallback, useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -39,6 +40,9 @@ async function gunlukSinirli(): Promise<QueueCard[]> {
 }
 
 export default function AkisScreen() {
+  // İçerik koruması: kart akışı açıkken ekran görüntüsü/kaydı engellenir (Android FLAG_SECURE).
+  // Yalnız gerçek build'de etkin; web/Expo Go'da güvenli no-op. Filigranla birlikte caydırıcı.
+  usePreventScreenCapture();
   const router = useRouter();
   const { lawId, bolumId, mod } = useLocalSearchParams<{
     lawId?: string;
