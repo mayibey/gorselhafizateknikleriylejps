@@ -87,7 +87,7 @@
 - [x] **B1** ✅ `expo-screen-capture ~8.0.9` kuruldu; `akis.tsx`'te `usePreventScreenCapture()` → kart akışı açıkken Android'de ekran görüntüsü/kaydı engellenir (FLAG_SECURE). Yalnız gerçek build'de etkin (web/Expo Go no-op; web export doğrulandı). Sınır: ikinci telefonla fotoğraf engellenemez, iOS'ta tam engel yok — caydırıcı + filigran tamamlayıcısı.
 
 ### C — Temizlik
-- [ ] **C1 [T1]** Ölü rota `madde-metni.tsx` sil.
+- [x] **C1 [T1]** ✅ Ölü rota `src/app/madde-metni.tsx` silindi + `_layout.tsx` kaydı kaldırıldı. Madde metni özelliği `madde-metni-sheet` (overlay) ile çalışmaya devam ediyor. tsc temiz, başka referans yok.
 
 ### D — Sende (kod değil)
 - [ ] **D1 [H7]** Gizlilik metnini yayınla → URL'leri `config.ts`'e yaz.

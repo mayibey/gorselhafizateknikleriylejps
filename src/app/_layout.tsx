@@ -67,7 +67,6 @@ function RootNavigator() {
         <Stack.Screen name="sesli-nobet" />
         <Stack.Screen name="patika" />
         <Stack.Screen name="geri-bildirim" />
-        <Stack.Screen name="madde-metni" />
         <Stack.Screen name="egitim-plani" />
         <Stack.Screen name="yasal" />
         <Stack.Screen name="onboarding" />
