@@ -78,7 +78,7 @@
 
 ### A — Yayın-engelleyici (kod, önce bunlar)
 - [x] **A1 [H1]** ✅ Geri bildirim sahte başarı düzeltildi — `akis.tsx`'te "Hata/öneri bildir" girişi `FORMSPREE_ENDPOINT` boşken gizleniyor. Adres `config.ts`'e yazılınca buton otomatik geri gelir, kod değişmeden gerçek çalışır. (Form ekranı + gönderme mantığı yerinde, park edildi.)
-- [ ] **A2 [H3+H4]** Tatbikat sadeleştir: yalnız dolu kanunlar + "Branş konuları yakında" (Mevzuat gibi).
+- [x] **A2 [H3+H4]** ✅ Tatbikat KOMPLE gizlendi (kullanıcı kararı: liste değil tek "yakında" ekranı) — `tatbikat.tsx` artık tek EmptyState ("Deneme sınavları ve tatbikat bölümü yakında eklenecek"). Kilitli satır denizi + boş branş sorunu gitti. Quiz altyapısı (`/quiz`, `lib/quiz.ts`) kodda duruyor; içerik gelince liste+başlatıcı git geçmişinden geri gelir.
 - [ ] **A3 [H5]** Karargah sahte "Mini Tatbikat: 1" kaldır.
 - [ ] **A4 [H6]** "Resmî kurumla bağlantılı değildir" ibaresi (yasal metin + görünür yer) + maskot uyarısı.
 - [ ] **A5 [H2]** `app.json`'a `expo-notifications` plugin ekle (v1'de tutuyorsak) ya da bildirimi v1'de gizle.
