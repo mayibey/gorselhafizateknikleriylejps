@@ -20,7 +20,6 @@ import {
   sicilSifirla,
 } from '@/db/database';
 import type { Branch, GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
-import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
@@ -47,7 +46,6 @@ const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '�
 export default function SicilScreen() {
   const router = useRouter();
   const { brans } = useBrans();
-  const { hazir: authHazir, session } = useAuth();
   const [branches, setBranches] = useState<Branch[] | null>(null);
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
@@ -110,17 +108,15 @@ export default function SicilScreen() {
         <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
       </Pressable>
 
-      {authHazir && session ? (
-        <Pressable
-          style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
-          onPress={() => router.push('/hesap')}>
-          <MaterialCommunityIcons name="account-circle-outline" size={20} color={Palette.lacivert} />
-          <AppText variant="kucuk" bold style={styles.planAd}>
-            Hesap
-          </AppText>
-          <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
-        </Pressable>
-      ) : null}
+      <Pressable
+        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
+        onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}>
+        <MaterialCommunityIcons name="shield-lock-outline" size={20} color={Palette.lacivert} />
+        <AppText variant="kucuk" bold style={styles.planAd}>
+          Gizlilik & Kullanım Şartları
+        </AppText>
+        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+      </Pressable>
 
       {hata ? (
         <EmptyState

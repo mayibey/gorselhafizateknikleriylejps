@@ -28,6 +28,14 @@ export default function YasalScreen() {
             </AppText>
           </Pressable>
         ) : null}
+        <Pressable
+          onPress={() =>
+            router.replace({ pathname: '/yasal', params: { tip: sartlar ? 'gizlilik' : 'sartlar' } })
+          }>
+          <AppText variant="etiket" color="lacivert" bold style={styles.link}>
+            {sartlar ? '→ Gizlilik Politikası' : '→ Kullanım Şartları'}
+          </AppText>
+        </Pressable>
       </ScrollView>
     </Screen>
   );

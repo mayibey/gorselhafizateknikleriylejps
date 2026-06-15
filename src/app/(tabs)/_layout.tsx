@@ -32,7 +32,6 @@ export default function TabsLayout() {
         options={{ title: 'Mevzuat', tabBarIcon: icon('book-open-variant') }}
       />
       <Tabs.Screen name="tatbikat" options={{ title: 'Tatbikat', tabBarIcon: icon('target') }} />
-      <Tabs.Screen name="ictima" options={{ title: 'İçtima', tabBarIcon: icon('account-group') }} />
       <Tabs.Screen name="sicil" options={{ title: 'Sicil', tabBarIcon: icon('account') }} />
     </Tabs>
   );

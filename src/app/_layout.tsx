@@ -8,7 +8,6 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
-import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 
 export default function RootLayout() {
@@ -21,13 +20,11 @@ export default function RootLayout() {
     <GestureHandlerRootView style={styles.kok}>
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <AuthProvider>
-          <BransProvider>
-            <ErrorBoundary>
-              <RootNavigator />
-            </ErrorBoundary>
-          </BransProvider>
-        </AuthProvider>
+        <BransProvider>
+          <ErrorBoundary>
+            <RootNavigator />
+          </ErrorBoundary>
+        </BransProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
@@ -35,30 +32,16 @@ export default function RootLayout() {
 
 function RootNavigator() {
   const { brans, yukleniyor } = useBrans();
-  const { session, yukleniyor: authYukleniyor, hazir } = useAuth();
   const segments = useSegments();
   const router = useRouter();
 
-  // Guard sırası: (1) Supabase hazır + oturum yok → giriş; (2) branş yoksa onboarding.
-  // Supabase hazır DEĞİLSE giriş kapısı uyur → uygulama eski offline davranışıyla çalışır.
+  // Guard: branş yoksa onboarding'e götür (uygulama tamamen offline çalışır).
   useEffect(() => {
-    if (yukleniyor || authYukleniyor) return;
-    const seg0 = segments[0];
-    const girisDe = seg0 === 'giris';
-    const onboardingDe = seg0 === 'onboarding';
-
-    if (hazir && !session) {
-      if (!girisDe) router.replace('/giris');
-      return;
-    }
-    // Oturum var (veya backend uykuda): giriş ekranındaysan çık.
-    if (girisDe) {
-      router.replace('/');
-      return;
-    }
+    if (yukleniyor) return;
+    const onboardingDe = segments[0] === 'onboarding';
     if (!brans && !onboardingDe) router.replace('/onboarding');
     else if (brans && onboardingDe) router.replace('/');
-  }, [hazir, session, authYukleniyor, brans, yukleniyor, segments, router]);
+  }, [brans, yukleniyor, segments, router]);
 
   // İçtima bildirimine dokununca akışa (günlük kuyruk) götür. Web'de / modül yoksa no-op.
   useEffect(() => {
@@ -86,14 +69,12 @@ function RootNavigator() {
         <Stack.Screen name="geri-bildirim" />
         <Stack.Screen name="madde-metni" />
         <Stack.Screen name="egitim-plani" />
-        <Stack.Screen name="hesap" />
         <Stack.Screen name="yasal" />
-        <Stack.Screen name="giris" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
       </Stack>
-      {/* Branş + oturum okunana kadar krom rengi overlay (flash önleme). */}
-      {yukleniyor || authYukleniyor ? (
+      {/* Branş okunana kadar krom rengi overlay (flash önleme). */}
+      {yukleniyor ? (
         <View style={[StyleSheet.absoluteFill, styles.splash]} />
       ) : null}
     </>
