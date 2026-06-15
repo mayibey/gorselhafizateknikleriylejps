@@ -121,7 +121,6 @@ export default function KarargahScreen() {
         <View style={styles.gorevSatir}>
           <Gorev sayi={tekrarSayisi} etiket="Tekrar" />
           <Gorev sayi={yeniSayisi} etiket="Yeni" />
-          <Gorev sayi={1} etiket="Mini Tatbikat" />
         </View>
       </Card>
 
