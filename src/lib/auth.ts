@@ -7,12 +7,16 @@
  * (supabaseHazir=false) fonksiyonlar `KapaliHata` fırlatır; UI bunu "yakında" gösterir.
  */
 import { makeRedirectUri } from 'expo-auth-session';
+import { Platform } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
-/** Tarayıcı oturumu sonrası askıda kalan auth oturumunu temizler (Expo gereği). */
-WebBrowser.maybeCompleteAuthSession();
+// Tarayıcı oturumu sonrası askıda kalanı temizler (Expo gereği). SSR'de (web + window
+// yok) çağırma → "window is not defined" çökmesini önle.
+if (!(Platform.OS === 'web' && typeof window === 'undefined')) {
+  WebBrowser.maybeCompleteAuthSession();
+}
 
 export class KapaliHata extends Error {
   constructor() {
@@ -20,9 +24,6 @@ export class KapaliHata extends Error {
     this.name = 'KapaliHata';
   }
 }
-
-/** OAuth dönüş adresi: app scheme `mevzu://` (app.json scheme ile aynı). */
-const redirectTo = makeRedirectUri({ scheme: 'mevzu' });
 
 /** URL'deki query/fragment parametrelerini ayrıştırır (code / access_token vb.). */
 function paramAyikla(url: string): Record<string, string> {
@@ -39,6 +40,10 @@ function paramAyikla(url: string): Record<string, string> {
 /** Gmail ile giriş. Başarılıysa oturum AsyncStorage'a yazılır (onAuthStateChange tetiklenir). */
 export async function gmailIleGiris(): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
+
+  // OAuth dönüş adresi: gerçek build'de `mevzu://`, Expo Go'da `exp://...`.
+  // Çalışma anında (her zaman istemci tarafı) üretilir → SSR'de değerlendirilmez.
+  const redirectTo = makeRedirectUri({ scheme: 'mevzu' });
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
