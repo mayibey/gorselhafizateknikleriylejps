@@ -23,14 +23,7 @@ import {
 } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
 import type { QueueCard } from '@/lib/queue';
-import { bugunISO, type SrsCevap, srsGuncelle } from '@/lib/srs';
-
-/** Bir cevabın kartı kaç gün sonraya attığını döndürür (buton alt metni için). */
-function gunSonra(kutu: number, cevap: SrsCevap): number {
-  const { sonraki_tarih } = srsGuncelle(kutu, cevap);
-  const fark = (Date.parse(`${sonraki_tarih}T00:00:00Z`) - Date.parse(`${bugunISO()}T00:00:00Z`)) / 86400000;
-  return Math.max(1, Math.round(fark));
-}
+import type { SrsCevap } from '@/lib/srs';
 
 type Cozulen = { tekrar: number; yeni: number };
 
@@ -68,10 +61,13 @@ export default function AkisScreen() {
   const [cevapHatasi, setCevapHatasi] = useState(false);
   // Madde metni sheet'i (ekran-içi overlay; queue/index/SRS'e dokunmaz).
   const [maddeAcik, setMaddeAcik] = useState(false);
+  // Sesli anlatım sonuna kadar okununca true → "sıradakine geç" mesajı çıkar.
+  const [anlatimBitti, setAnlatimBitti] = useState(false);
 
-  // Kart değişince açık sheet'i kapat (yeni kartın metnine kaymasın).
+  // Kart değişince açık sheet'i kapat + anlatım-bitti mesajını sıfırla.
   useEffect(() => {
     setMaddeAcik(false);
+    setAnlatimBitti(false);
   }, [index]);
 
   const yukle = useCallback(() => {
@@ -201,7 +197,11 @@ export default function AkisScreen() {
             <StudyCard card={queue[index]} />
 
             {/* Sesli anlatım (TTS) — metni olan kartta görünür; kart değişince remount → durur. */}
-            <TtsBar key={queue[index].id} gorselYolu={queue[index].gorsel_yolu} />
+            <TtsBar
+              key={queue[index].id}
+              gorselYolu={queue[index].gorsel_yolu}
+              onBitti={() => setAnlatimBitti(true)}
+            />
 
             {/* Madde Metni — resmî tam metin. Metin varsa aktif, yoksa soluk "yakında". */}
             {maddeMetni(queue[index].madde_no) !== null ? (
@@ -254,26 +254,36 @@ export default function AkisScreen() {
                 Kaydedilemedi, tekrar dene.
               </AppText>
             ) : null}
-            <View style={styles.butonSatir}>
-              <Buton
-                renk={Palette.kirmizi}
-                etiket="Bilemedim"
-                alt={`${gunSonra(queue[index].kutu, 'zor')} gün sonra`}
-                onPress={() => void cevapla('zor')}
-              />
-              <Buton
-                renk={Palette.amber}
-                etiket="Zorlandım"
-                alt={`${gunSonra(queue[index].kutu, 'tekrar')} gün sonra`}
-                onPress={() => void cevapla('tekrar')}
-              />
-              <Buton
-                renk={Palette.yesil}
-                etiket="Biliyordum"
-                alt={`${gunSonra(queue[index].kutu, 'biliyorum')} gün sonra`}
-                onPress={() => void cevapla('biliyorum')}
-              />
-            </View>
+            {anlatimBitti ? (
+              /* Sesli anlatım bittiğinde: sıradaki konu + tek "devam" düğmesi. */
+              <>
+                <AppText variant="kucuk" bold style={styles.siradaki}>
+                  {index + 1 < queue.length
+                    ? `Sıradaki konu: ${queue[index + 1].baslik}`
+                    : 'Bu turun son kartı'}
+                </AppText>
+                <Pressable
+                  style={({ pressed }) => [styles.devamBtn, pressed && styles.pressed]}
+                  onPress={() => void cevapla('biliyorum')}>
+                  <AppText variant="govde" color="beyaz" bold>
+                    {index + 1 < queue.length ? 'Tamam, sıradakine geç ▶' : 'Tamam, turu bitir'}
+                  </AppText>
+                </Pressable>
+              </>
+            ) : (
+              <View style={styles.butonSatir}>
+                <Buton
+                  renk={Palette.yesil}
+                  etiket="Biliyorum"
+                  onPress={() => void cevapla('biliyorum')}
+                />
+                <Buton
+                  renk={Palette.amber}
+                  etiket="Tekrar Hatırlat"
+                  onPress={() => void cevapla('zor')}
+                />
+              </View>
+            )}
           </View>
 
           {/* Madde metni sheet'i — ScrollView/alt blok ile KARDEŞ (absoluteFill).
@@ -290,26 +300,13 @@ export default function AkisScreen() {
   );
 }
 
-function Buton({
-  renk,
-  etiket,
-  alt,
-  onPress,
-}: {
-  renk: string;
-  etiket: string;
-  alt: string;
-  onPress: () => void;
-}) {
+function Buton({ renk, etiket, onPress }: { renk: string; etiket: string; onPress: () => void }) {
   return (
     <Pressable
       style={({ pressed }) => [styles.buton, { backgroundColor: renk }, pressed && styles.pressed]}
       onPress={onPress}>
-      <AppText variant="kucuk" color="beyaz" bold>
+      <AppText variant="govde" color="beyaz" bold>
         {etiket}
-      </AppText>
-      <AppText variant="etiket" color="beyaz">
-        {alt}
       </AppText>
     </Pressable>
   );
@@ -403,9 +400,19 @@ const styles = StyleSheet.create({
   buton: {
     flex: 1,
     borderRadius: Radius.m,
-    paddingVertical: Spacing.two,
+    paddingVertical: Spacing.three,
     alignItems: 'center',
     gap: 2,
+  },
+  siradaki: {
+    textAlign: 'center',
+    marginBottom: Spacing.one,
+  },
+  devamBtn: {
+    backgroundColor: Palette.yesil,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    alignItems: 'center',
   },
   pressed: {
     opacity: 0.85,

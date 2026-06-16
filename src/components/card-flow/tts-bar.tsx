@@ -13,7 +13,14 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
  * telefon Türkçe sesiyle okunur (çevrimdışı, ücretsiz). Metni olmayan kartta gizli.
  * Auto-play YOK. Kart değişince/ekran kapanınca okuma durur (key + cleanup).
  */
-export function TtsBar({ gorselYolu }: { gorselYolu: string | null }) {
+export function TtsBar({
+  gorselYolu,
+  onBitti,
+}: {
+  gorselYolu: string | null;
+  /** Anlatım sonuna kadar okunup bitince çağrılır (kullanıcı durdurursa ÇAĞRILMAZ). */
+  onBitti?: () => void;
+}) {
   const metin = gorselYolu ? KART_SES_METINLERI[gorselYolu] : undefined;
   const [oynuyor, setOynuyor] = useState(false);
 
@@ -35,7 +42,10 @@ export function TtsBar({ gorselYolu }: { gorselYolu: string | null }) {
     Speech.speak(metin!, {
       language: 'tr-TR',
       rate: 1.0,
-      onDone: () => setOynuyor(false),
+      onDone: () => {
+        setOynuyor(false);
+        onBitti?.();
+      },
       onStopped: () => setOynuyor(false),
       onError: () => setOynuyor(false),
     });
