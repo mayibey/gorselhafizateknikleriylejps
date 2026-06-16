@@ -16,6 +16,7 @@ DEST_BASE = os.path.join(REPO, "assets", "kartlar")
 
 # folder -> (lawId, slug[no underscore], etiket)
 MAP = {
+    "01_5237_TCK":              (1,  "tck",           "TCK"),
     "03_5442_ILIDARESI":        (5,  "ililaresi",     "İl İdaresi"),
     "04_3713_TERORLE_MUCADELE": (7,  "terorle",       "Terörle Mücadele"),
     "05_7068_DISIPLIN":         (12, "disiplin",      "Disiplin"),

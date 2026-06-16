@@ -201,4 +201,4 @@ CREATE TABLE IF NOT EXISTS geri_bes_durum (
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 14;
+export const SCHEMA_VERSION = 15;
