@@ -101,21 +101,23 @@ export default function SicilScreen() {
         </View>
       </Pressable>
 
-      {/* Hesap — Gmail ile giriş (opsiyonel). Yapılandırılmamışsa "yakında" gizli tutulmaz;
-          giriş ekranı kendi durumunu (yakında/giriş/çıkış) gösterir. */}
-      <Pressable
-        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
-        onPress={() => router.push('/giris')}>
-        <MaterialCommunityIcons
-          name={kullanici ? 'account-check' : 'account-circle-outline'}
-          size={20}
-          color={Palette.lacivert}
-        />
-        <AppText variant="kucuk" bold style={styles.planAd} numberOfLines={1}>
-          {kullanici ? (kullanici.email ?? 'Hesabım') : hazir ? 'Gmail ile giriş yap' : 'Hesap (yakında)'}
-        </AppText>
-        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
-      </Pressable>
+      {/* Hesap — Gmail ile giriş. YALNIZ üyelik aktifken (hazir) görünür; v1'de
+          UYELIK_AKTIF=false → hazir=false → kart komple gizli (uygulama offline). */}
+      {hazir ? (
+        <Pressable
+          style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
+          onPress={() => router.push('/giris')}>
+          <MaterialCommunityIcons
+            name={kullanici ? 'account-check' : 'account-circle-outline'}
+            size={20}
+            color={Palette.lacivert}
+          />
+          <AppText variant="kucuk" bold style={styles.planAd} numberOfLines={1}>
+            {kullanici ? (kullanici.email ?? 'Hesabım') : 'Gmail ile giriş yap'}
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+        </Pressable>
+      ) : null}
 
       <Pressable
         style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}

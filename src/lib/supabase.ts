@@ -13,9 +13,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import { Platform } from 'react-native';
 
-import { SUPABASE_ANON_KEY, SUPABASE_URL } from '@/constants/config';
+import { SUPABASE_ANON_KEY, SUPABASE_URL, UYELIK_AKTIF } from '@/constants/config';
 
-export const supabaseHazir = SUPABASE_URL !== '' && SUPABASE_ANON_KEY !== '';
+// UYELIK_AKTIF=false (v1) → anahtarlar dolu olsa bile client OLUŞMAZ, Supabase'e
+// hiç bağlanılmaz (gerçek offline). Mağaza onayından sonra v2'de bayrak açılır.
+export const supabaseHazir = UYELIK_AKTIF && SUPABASE_URL !== '' && SUPABASE_ANON_KEY !== '';
 
 // Web SSR (Expo Router'ın Node ön-render'ı) sırasında `window`/localStorage YOK →
 // AsyncStorage'ın web sürümü "window is not defined" ile çöker ve dev sunucuyu öldürür.

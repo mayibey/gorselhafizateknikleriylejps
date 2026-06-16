@@ -97,3 +97,24 @@
 
 ### E — v2 (onaydan sonra, backend gerektirir)
 - [ ] Pro üyelik (RevenueCat + Play Billing) · Sunucu-kapılı premium içerik + imzalı URL · Play Integrity · 2 cihaz limiti · Filigranı gerçek user ID'ye bağla.
+
+---
+
+## 6. ÜYELİK SONRASI DENETİM (17 Haziran 2026) — Gmail girişi eklendikten sonra
+
+> Bölüm 1-5 denetimi üyelik EKLENMEDEN önceydi. Sonra Gmail (Google OAuth + Supabase)
+> girişi eklendi → yeni denetim (kapsamlı ajan taraması). 3 BLOCKER bulundu, hepsi üyelikten.
+
+### Bulgular (BLOCKER — hepsi Gmail/Supabase'den)
+- **[Ü1] Gizlilik politikası ÇELİŞKİSİ** — `yasal-metin.ts` + `docs/GIZLILIK_POLITIKASI.md` "hesap açmıyoruz, e-posta toplamıyoruz, sunucuya veri gitmez" diyor; ama Gmail girişi e-posta+hesabı Supabase'e (yurt dışı) yazıyordu. → Google "yanıltıcı davranış" red + KVKK açığı.
+- **[Ü2] Hesap silme YOK** — Gmail girişli uygulamada Google zorunlu; sadece "Çıkış" vardı.
+- **[Ü3] Data Safety uyumsuz** — e-posta/sunucu toplama beyan edilmemiş.
+
+### ÇÖZÜM (uygulandı) — v1 için üyelik ana şalterle KAPATILDI
+- **`config.ts > UYELIK_AKTIF = false`** (derleme-zamanı). `supabase.ts`: `supabaseHazir = UYELIK_AKTIF && ...` → **client HİÇ oluşmaz, Supabase'e bağlanılmaz, e-posta toplanmaz** → uygulama gerçekten %100 offline → mevcut "hesap yok" gizlilik metni DOĞRU kalır → **Ü1+Ü2+Ü3 blocker'ları YOK oldu.** `sicil.tsx` Hesap kartı `hazir` ile gizlendi; `/giris` rotası ulaşılamaz (kod duruyor). **v2'de** (onaydan sonra, ödeme ile) bayrak TRUE + gizlilik güncelle + hesap silme + Data Safety → **yeni build = yeniden inceleme** (meşru faz; sunucudan gizli açma DEĞİL).
+- **[Ü4 orta] `error-boundary.tsx` `console.error`** → `__DEV__` guard'landı (üretimde sessiz).
+
+### Kalan risk (v1, düşük — yönetilebilir)
+- "Yakında" yüzeyleri (Tatbikat sekmesi, sesli-nobet, branş) → "minimum functionality" algısı. Bilinçli. İstenirse Tatbikat sekmesi v1'de komple gizlenebilir (azaltma).
+- **[D1 hâlâ SENDE]** Gizlilik URL'ini gerçekten yayınla (GitHub Pages) + linkin açıldığını teyit et.
+- Doğrulama: tsc 0 hata. Üyelik kapalı → Supabase çağrısı yok (AuthProvider erken döner).

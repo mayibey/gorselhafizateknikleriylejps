@@ -21,8 +21,8 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: unknown) {
-    // İleride uzak loglama eklenebilir; şimdilik konsola.
-    console.error('ErrorBoundary yakaladı:', error);
+    // Yalnız geliştirmede konsola (üretimde sessiz; ileride uzak loglama eklenebilir).
+    if (__DEV__) console.error('ErrorBoundary yakaladı:', error);
   }
 
   private sifirla = () => this.setState({ hata: false });

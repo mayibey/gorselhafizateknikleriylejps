@@ -26,3 +26,15 @@ export const SARTLAR_URL = 'https://mayibey.github.io/gorselhafizateknikleriylej
  */
 export const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL ?? '';
 export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? '';
+
+/**
+ * ÜYELİK ANA ŞALTERİ (derleme-zamanı). v1 yayını için FALSE:
+ * - Supabase'e HİÇ bağlanılmaz (client oluşmaz, ağ çağrısı yok, e-posta toplanmaz)
+ *   → uygulama gerçekten %100 offline → mevcut "hesap yok" gizlilik metni DOĞRU kalır
+ *   → mağaza red riski (gizlilik çelişkisi + hesap silme zorunluluğu) ORTADAN KALKAR.
+ * - Giriş girişi (Sicil'deki Hesap kartı) gizlenir; /giris rotası "yakında" gösterir.
+ * v2'de (onaydan sonra, ödeme ile birlikte) TRUE yapılır → o sürümde gizlilik metni
+ * güncellenir + hesap silme eklenir + Data Safety düzeltilir → yeniden incelenir.
+ * Anahtarlar `.env`'de hazır bekler; sadece bu bayrak kapalı.
+ */
+export const UYELIK_AKTIF = false;
