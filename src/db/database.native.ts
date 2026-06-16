@@ -193,6 +193,17 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 17;
     }
+    if (version < 18) {
+      // KART ID ŞEMASI DÜZELTİLDİ: law*1000+sıra. Eski şema (110000 + kanun-başına sayaç) TÜM
+      // müşterek kanunları aynı id'lere bindiriyordu → INSERT OR IGNORE'da çakışıp yalnız 4 kanun
+      // (TCK/Jandarma/Kabahatler/Disiplin) görünüyordu; diğer 21 kanun kartsız kalıyordu.
+      // cards SALT REFERANS → DELETE+yeniden tohumla; srs eski id'lere bağlıydı → orphan olur
+      // (yayın öncesi, kabul; yeni id'lerle kartlar "yeni" sayılır). bolumler de yeniden tohumlanır.
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 18;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

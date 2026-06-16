@@ -196,7 +196,10 @@ function gorselKartlari(): Card[] {
   const cards: Card[] = [];
   const sayac: Record<number, number> = {};
   for (const h of ham) {
-    const id = (h.lawId === 1 ? 100000 : 110000) + (sayac[h.lawId] = (sayac[h.lawId] ?? 0) + 1);
+    // Her kanun KENDİ 1000'lik id bloğunda: law*1000 + sıra (kanun başına <1000 kart).
+    // ESKİ ŞEMA (110000 + kanun-başına sayaç) TÜM müşterek kanunları aynı id'lere bindiriyordu
+    // → INSERT OR IGNORE'da çakışıp yalnız 4 kanun (TCK/Jandarma/Kabahatler/Disiplin) görünüyordu.
+    const id = h.lawId * 1000 + (sayac[h.lawId] = (sayac[h.lawId] ?? 0) + 1);
     let madde_no: string, baslik: string;
     if (h.tip === 'genelozet') {
       madde_no = `${h.etiket} özet`;
