@@ -194,7 +194,27 @@ export default function AkisScreen() {
               <View style={[styles.fill, { width: `${((index + 1) / queue.length) * 100}%` }]} />
             </View>
 
-            <StudyCard card={queue[index]} />
+            {/* Kartı saran katman: sol/sağ kenarda gezinme okları (saf görünüm —
+                SRS'e dokunmaz, yalnız index değiştirir). İlk kartta sol, son kartta sağ pasif. */}
+            <View style={styles.kartSar}>
+              <StudyCard card={queue[index]} />
+              <Pressable
+                disabled={index === 0}
+                onPress={() => setIndex((i) => Math.max(0, i - 1))}
+                style={[styles.okBtn, styles.okSol, index === 0 && styles.okPasif]}
+                hitSlop={8}
+                accessibilityLabel="Önceki kart">
+                <MaterialCommunityIcons name="chevron-left" size={32} color={Palette.beyaz} />
+              </Pressable>
+              <Pressable
+                disabled={index >= queue.length - 1}
+                onPress={() => setIndex((i) => Math.min(queue.length - 1, i + 1))}
+                style={[styles.okBtn, styles.okSag, index >= queue.length - 1 && styles.okPasif]}
+                hitSlop={8}
+                accessibilityLabel="Sonraki kart">
+                <MaterialCommunityIcons name="chevron-right" size={32} color={Palette.beyaz} />
+              </Pressable>
+            </View>
 
             {/* Sesli anlatım (TTS) — metni olan kartta görünür; kart değişince remount → durur. */}
             <TtsBar
@@ -358,6 +378,37 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: Palette.kenarlik,
     overflow: 'hidden',
+  },
+  kartSar: {
+    position: 'relative',
+    justifyContent: 'center',
+  },
+  okBtn: {
+    position: 'absolute',
+    top: '50%',
+    marginTop: -22,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: Palette.lacivert,
+    opacity: 0.9,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4,
+    zIndex: 2,
+  },
+  okSol: {
+    left: -6,
+  },
+  okSag: {
+    right: -6,
+  },
+  okPasif: {
+    opacity: 0.25,
   },
   fill: {
     height: '100%',
