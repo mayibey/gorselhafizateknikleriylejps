@@ -185,6 +185,14 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 16;
     }
+    if (version < 17) {
+      // Kabahatler görselleri yeni kaynaktan tazelendi (eski 70 → yeni 62) + kapsam trimlendi.
+      // cards SALT REFERANS → DELETE+yeniden tohumla; srs KORUNUR.
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 17;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

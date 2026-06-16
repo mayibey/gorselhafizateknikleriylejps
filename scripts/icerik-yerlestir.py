@@ -17,6 +17,7 @@ DEST_BASE = os.path.join(REPO, "assets", "kartlar")
 # folder -> (lawId, slug[no underscore], etiket)
 MAP = {
     "01_5237_TCK":              (1,  "tck",           "TCK"),
+    "02_5326_KABAHATLER":       (6,  "kabahatler",    "Kabahatler"),
     "03_5442_ILIDARESI":        (5,  "ililaresi",     "İl İdaresi"),
     "04_3713_TERORLE_MUCADELE": (7,  "terorle",       "Terörle Mücadele"),
     "05_7068_DISIPLIN":         (12, "disiplin",      "Disiplin"),
@@ -127,7 +128,14 @@ def main():
                        "genelozet": len(anomali), "eslesme": eslesme, "ses": ses}
         print(f"[{slug}] law {lawId}: {len(pngs)} png -> {len(kapsam_sorted)} madde dugumu, {len(anomali)} genel-ozet/baglanmayan")
     out = os.path.join(REPO, "scripts", "_icerik_rapor.json")
-    json.dump(rapor, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    existing = {}
+    if os.path.isfile(out):
+        try:
+            existing = json.load(open(out, encoding="utf-8"))
+        except Exception:
+            existing = {}
+    existing.update(rapor)  # sadece işlenen slug'lar güncellenir, diğerleri korunur
+    json.dump(existing, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("RAPOR ->", out)
 
 if __name__ == "__main__":
