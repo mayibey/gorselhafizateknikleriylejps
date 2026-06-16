@@ -34,9 +34,9 @@ satın alma → mağaza yayını.
 ## FAZ B — Geliştirici hesapları (mağaza + satın alma için ŞART)
 > Süreç uzayabilir (Google kimlik doğrulaması günler sürebilir) → ERKEN başla, paralel ilerlesin.
 
-- [ ] **B1 [SEN]** Google Play Console hesabı aç (tek seferlik **$25**). Kimlik doğrulamasını başlat.
+- [x] **B1 [SEN]** Google Play Console hesabı **AÇILDI + ONAYLANDI** — ilk uygulamayı bekliyor. ✅
 - [ ] **B2 [SEN]** (iOS de istiyorsan) Apple Developer Program (**$99/yıl**). İstemiyorsan şimdilik atla → sadece Android.
-- [ ] **B3 [KARAR]** Önce hangi platform? Öneri: **Android önce** (ucuz, hızlı), iOS sonra.
+- [x] **B3 [KARAR]** **Android önce** (Play hesabı hazır). iOS sonra.
 
 ---
 
@@ -44,9 +44,10 @@ satın alma → mağaza yayını.
 > Expo Go'nun ötesi: ekran-görüntüsü engeli, bildirim, ileride satın alma sadece gerçek build'de çalışır.
 > `eas.json` + projectId zaten hazır.
 
-- [ ] **C1 [KOD]** Build öncesi denetim: app.json (ikon/splash/izinler/sürüm), eas.json profilleri gözden geçir.
-- [ ] **C2 [SEN]** `npx eas login` + `npx eas build -p android --profile preview` (ilk APK/AAB).
-- [ ] **C3 [SEN+BEN]** Telefona kur, gez: giriş, bildirim, ekran-görüntüsü engeli, kart akışı çalışıyor mu?
+- [x] **C1 [KOD]** Denetim yapıldı: Android build config HAZIR (preview=APK, production=AAB, autoIncrement+remote sürüm doğru, pluginler tam). **BULGULAR:** (1) **İkon hâlâ varsayılan Expo şablonu** (mavi "A") → Play production'dan ÖNCE markalı ikon ŞART (test build'i için sorun değil). (2) `ios.icon` yolu bozuk (`./assets/expo.icon`) — yalnız ileride iOS build'inde önemli, Android'i etkilemez.
+- [ ] **C2 [SEN]** `npx eas login` → `npx eas build -p android --profile preview` (test APK; varsayılan ikonla, sadece çalışıyor mu diye).
+- [ ] **C3 [SEN+BEN]** APK'yı telefona kur, gez: **Gmail giriş (artık `mevzu://` sabit — IP derdi yok)**, bildirim, ekran-görüntüsü engeli, kart akışı.
+- [ ] **C4 [SEN→BEN]** Markalı ikon (1024×1024 PNG) ver → app.json + adaptive icon'a bağlarım → production AAB.
 
 ---
 
