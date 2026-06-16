@@ -8,7 +8,13 @@
  * Görsel/ses registry'leriyle (KART_GORSELLERI/KART_SESLERI) aynı anahtar→değer deseni.
  *
  * Eklemek için: '4733 m.8': `... resmî tam metin ...`, satırı ekle.
+ *
+ * Bu el-yazımı map'in YANINDA, müşterek MASTER md'lerinden OTOMATİK üretilen
+ * KART_MADDE_METINLERI registry'si vardır (`npm run madde:uret`). maddeMetni()
+ * önce buraya, sonra üretilen registry'ye bakar (el-yazımı öncelikli).
  */
+import { KART_MADDE_METINLERI } from '../assets/kart-madde-metinleri';
+
 export const MADDE_METINLERI: Record<string, string> = {
   // 4733 m.8 "Cezai hükümler" — Resmî konsolide gövde metni (birebir; mülga fıkra
   // işaretleri korunur, YTL/TL ifadeleri orijinal haliyle bırakılmıştır, dipnotlar
@@ -326,7 +332,9 @@ MADDE 266 –
 (1) Görevi gereği olarak elinde bulundurduğu araç ve gereçleri bir suçun işlenmesi sırasında kullanan kamu görevlisi hakkında, ilgili suçun tanımında kamu görevlisi sıfatı esasen göz önünde bulundurulmamış ise, verilecek ceza üçte biri oranında artırılır.`,
 };
 
-/** Madde metnini döndürür; yoksa null. Saf lookup (DB/IO yok). */
+/** Madde metnini döndürür; yoksa null. Saf lookup (DB/IO yok).
+ *  Öncelik: el-yazımı MADDE_METINLERI (yüksek kaliteli TCK/4733) → üretilen registry
+ *  (KART_MADDE_METINLERI, müşterek MASTER md'lerinden `npm run madde:uret`). */
 export function maddeMetni(maddeNo: string): string | null {
-  return MADDE_METINLERI[maddeNo] ?? null;
+  return MADDE_METINLERI[maddeNo] ?? KART_MADDE_METINLERI[maddeNo] ?? null;
 }
