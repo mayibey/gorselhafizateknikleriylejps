@@ -8,6 +8,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
+import { AuthProvider } from '@/lib/auth-context';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 
 export default function RootLayout() {
@@ -20,11 +21,13 @@ export default function RootLayout() {
     <GestureHandlerRootView style={styles.kok}>
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <BransProvider>
-          <ErrorBoundary>
-            <RootNavigator />
-          </ErrorBoundary>
-        </BransProvider>
+        <AuthProvider>
+          <BransProvider>
+            <ErrorBoundary>
+              <RootNavigator />
+            </ErrorBoundary>
+          </BransProvider>
+        </AuthProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
@@ -71,6 +74,7 @@ function RootNavigator() {
         <Stack.Screen name="yasal" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="giris" options={{ presentation: 'modal' }} />
       </Stack>
       {/* Branş okunana kadar krom rengi overlay (flash önleme). */}
       {yukleniyor ? (

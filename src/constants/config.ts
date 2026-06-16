@@ -14,3 +14,15 @@ export const FORMSPREE_ENDPOINT = '';
  */
 export const GIZLILIK_URL = 'https://mayibey.github.io/gorselhafizateknikleriylejps/';
 export const SARTLAR_URL = 'https://mayibey.github.io/gorselhafizateknikleriylejps/sartlar.html';
+
+/**
+ * Supabase (Gmail ile giriş / üyelik altyapısı).
+ * BOŞ olduğu sürece üyelik UYKUDA: uygulama %100 offline çalışır, giriş ekranı
+ * "yapılandırılmadı" der, KİLİTLENME yok. Aktifleştirmek için docs/UYELIK_KURULUM.md:
+ *   1. supabase.com'da proje aç → Project URL + anon key buraya.
+ *   2. Google Cloud OAuth client + Supabase Google provider (kurulum dosyasında).
+ * anon key PUBLIC anahtardır (istemci kodunda durması normaldir; RLS gerçek koruma).
+ * Env varsa (EXPO_PUBLIC_SUPABASE_*) onu kullanır, yoksa aşağıdaki sabitler.
+ */
+export const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL ?? '';
+export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? '';

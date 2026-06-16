@@ -21,6 +21,7 @@ import {
   sicilSifirla,
 } from '@/db/database';
 import type { Branch, GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
+import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
@@ -47,6 +48,7 @@ const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '�
 export default function SicilScreen() {
   const router = useRouter();
   const { brans } = useBrans();
+  const { kullanici, hazir } = useAuth();
   const [branches, setBranches] = useState<Branch[] | null>(null);
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
@@ -97,6 +99,22 @@ export default function SicilScreen() {
           </AppText>
           <MaterialCommunityIcons name="swap-horizontal" size={18} color={Palette.beyaz} />
         </View>
+      </Pressable>
+
+      {/* Hesap — Gmail ile giriş (opsiyonel). Yapılandırılmamışsa "yakında" gizli tutulmaz;
+          giriş ekranı kendi durumunu (yakında/giriş/çıkış) gösterir. */}
+      <Pressable
+        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
+        onPress={() => router.push('/giris')}>
+        <MaterialCommunityIcons
+          name={kullanici ? 'account-check' : 'account-circle-outline'}
+          size={20}
+          color={Palette.lacivert}
+        />
+        <AppText variant="kucuk" bold style={styles.planAd} numberOfLines={1}>
+          {kullanici ? (kullanici.email ?? 'Hesabım') : hazir ? 'Gmail ile giriş yap' : 'Hesap (yakında)'}
+        </AppText>
+        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
       </Pressable>
 
       <Pressable
