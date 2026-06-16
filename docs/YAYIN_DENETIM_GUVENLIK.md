@@ -115,6 +115,7 @@
 - **[Ü4 orta] `error-boundary.tsx` `console.error`** → `__DEV__` guard'landı (üretimde sessiz).
 
 ### Kalan risk (v1, düşük — yönetilebilir)
-- "Yakında" yüzeyleri (Tatbikat sekmesi, sesli-nobet, branş) → "minimum functionality" algısı. Bilinçli. İstenirse Tatbikat sekmesi v1'de komple gizlenebilir (azaltma).
+- **[Ü5] ✅ Tatbikat sekmesi GİZLENDİ** — `(tabs)/_layout.tsx` Tatbikat `href:null` → sekme çubuğundan kalktı (boş "yakında" sekmesi = minimum-functionality riski gitti). Rota+ekran v2 için kodda durur. Artık **3 sekme: Karargah · Mevzuat · Sicil** (hepsi işlevsel/dolu). /tatbikat /quiz'e giden link yok (doğrulandı).
+- Kalan "yakında" yüzeyleri DÜŞÜK risk: Mevzuat "Branş konuları yakında" (gerçek kanun listesi içinde tek bilgi kartı, bilinçli bırakıldı), akis bağlamsal boş durumları (Mevzuat yalnız dolu kanunları gösterdiği için reviewer nadiren görür). giriş/sesli-nobet ulaşılamaz.
 - **[D1 hâlâ SENDE]** Gizlilik URL'ini gerçekten yayınla (GitHub Pages) + linkin açıldığını teyit et.
 - Doğrulama: tsc 0 hata. Üyelik kapalı → Supabase çağrısı yok (AuthProvider erken döner).
