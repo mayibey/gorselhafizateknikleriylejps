@@ -51,29 +51,9 @@ export default function MevzuatScreen() {
       ) : laws === null ? (
         <Loading metin="Yükleniyor…" />
       ) : (
-        <>
-          <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} />
-          <BransYakinda />
-        </>
+        <Bolum baslik="MÜŞTEREK" laws={musterek} onPress={kanunaGit} />
       )}
     </Screen>
-  );
-}
-
-/** Branş konuları henüz yayında değil — tek bilgi kartı (tek tek "yakında" satırları yerine). */
-function BransYakinda() {
-  return (
-    <View style={styles.bolum}>
-      <AppText variant="etiket" color="solukMetin" bold>
-        BRANŞ
-      </AppText>
-      <View style={styles.yakindaKart}>
-        <MaterialCommunityIcons name="progress-clock" size={22} color={Palette.solukMetin} />
-        <AppText variant="kucuk" color="solukMetin" bold style={styles.yakindaMetin}>
-          Branş konuları yakında — hazırlanıyor.
-        </AppText>
-      </View>
-    </View>
   );
 }
 
@@ -148,19 +128,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.half,
     borderRadius: Radius.s,
-  },
-  yakindaKart: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    padding: Spacing.three,
-  },
-  yakindaMetin: {
-    flex: 1,
   },
   pressed: {
     opacity: 0.7,

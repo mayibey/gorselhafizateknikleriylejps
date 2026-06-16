@@ -116,6 +116,8 @@
 
 ### Kalan risk (v1, düşük — yönetilebilir)
 - **[Ü5] ✅ Tatbikat sekmesi GİZLENDİ** — `(tabs)/_layout.tsx` Tatbikat `href:null` → sekme çubuğundan kalktı (boş "yakında" sekmesi = minimum-functionality riski gitti). Rota+ekran v2 için kodda durur. Artık **3 sekme: Karargah · Mevzuat · Sicil** (hepsi işlevsel/dolu). /tatbikat /quiz'e giden link yok (doğrulandı).
-- Kalan "yakında" yüzeyleri DÜŞÜK risk: Mevzuat "Branş konuları yakında" (gerçek kanun listesi içinde tek bilgi kartı, bilinçli bırakıldı), akis bağlamsal boş durumları (Mevzuat yalnız dolu kanunları gösterdiği için reviewer nadiren görür). giriş/sesli-nobet ulaşılamaz.
+- **[Ü6] ✅ Mevzuat "Branş konuları yakında" kartı KALDIRILDI** — `mevzuat.tsx` artık yalnız 24 dolu müşterek kanunu temiz gösterir (BransYakinda fonksiyonu+stilleri silindi). Reachable "yakında" yüzeyi kalmadı. (akis bağlamsal boş durumları yalnız içeriksiz öğede çıkar — Mevzuat dolu kanun gösterir → reviewer görmez; giriş/sesli-nobet ulaşılamaz.)
+- **[D1] ✅ Gizlilik/Şartlar URL'leri CANLI + DOĞRU** — GitHub Pages yayında (HTTP 200): GIZLILIK_URL + SARTLAR_URL açılıyor; gizlilik metni "tamamen çevrimdışı, hesap açmıyoruz, e-posta toplamıyoruz, sunucuya gönderilmez" diyor → **üyelik kapalı v1 ile birebir DOĞRU**. `config.ts` URL'leri bunlara bağlı. Data Safety formu için URL hazır.
+- Leftover tarandı: src/'de Cüneyt/maskot/TODO/placeholder YOK (temiz).
 - **[D1 hâlâ SENDE]** Gizlilik URL'ini gerçekten yayınla (GitHub Pages) + linkin açıldığını teyit et.
 - Doğrulama: tsc 0 hata. Üyelik kapalı → Supabase çağrısı yok (AuthProvider erken döner).
