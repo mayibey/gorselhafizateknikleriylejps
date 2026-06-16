@@ -6,21 +6,22 @@ import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
+import { girisDonusAdresi } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 
 export default function GirisScreen() {
   const router = useRouter();
   const { kullanici, hazir, girisYap, cikis } = useAuth();
   const [mesgul, setMesgul] = useState(false);
-  const [hata, setHata] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
 
   async function giris() {
-    setHata(false);
+    setHata(null);
     setMesgul(true);
     try {
       await girisYap();
-    } catch {
-      setHata(true);
+    } catch (e) {
+      setHata(e instanceof Error ? e.message : 'Bilinmeyen hata');
     } finally {
       setMesgul(false);
     }
@@ -88,7 +89,7 @@ export default function GirisScreen() {
 
           {hata ? (
             <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
-              Giriş yapılamadı, tekrar dene.
+              {__DEV__ ? `Hata: ${hata}` : 'Giriş yapılamadı, tekrar dene.'}
             </AppText>
           ) : null}
 
@@ -105,6 +106,18 @@ export default function GirisScreen() {
           </AppText>
         </>
       )}
+
+      {__DEV__ && hazir ? (
+        // TEŞHİS (yalnız geliştirme): Supabase Redirect URLs'e eklenmesi gereken dönüş adresi.
+        <View style={styles.teshisKart}>
+          <AppText variant="etiket" color="solukMetin" bold>
+            TEŞHİS — Supabase Redirect URLs'e ekle:
+          </AppText>
+          <AppText variant="etiket" color="lacivert" bold selectable>
+            {girisDonusAdresi()}
+          </AppText>
+        </View>
+      ) : null}
 
       <Pressable
         style={({ pressed }) => [styles.misafirBtn, pressed && styles.pressed]}
@@ -174,6 +187,14 @@ const styles = StyleSheet.create({
   },
   pasif: {
     opacity: 0.6,
+  },
+  teshisKart: {
+    gap: Spacing.one,
+    backgroundColor: Palette.kremZemin,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.s,
+    padding: Spacing.two,
   },
   misafirBtn: {
     alignSelf: 'center',

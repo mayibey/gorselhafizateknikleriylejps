@@ -25,14 +25,30 @@ export class KapaliHata extends Error {
   }
 }
 
-/** URL'deki query/fragment parametrelerini ayrıştırır (code / access_token vb.). */
+/** OAuth dönüş adresi (Supabase Redirect URLs'e EKLENMESİ gereken adres). Teşhis için. */
+export function girisDonusAdresi(): string {
+  return makeRedirectUri({ scheme: 'mevzu' });
+}
+
+/** URL'deki query (?...) VE fragment (#...) parametrelerini ayrıştırır.
+ * Supabase dönüşü `?code=...#` gibi (code query'de + boş/dolu fragment) gelebilir →
+ * ikisini de topla, "ya o ya bu" yapma (boş `#` code'u gizlemesin). */
 function paramAyikla(url: string): Record<string, string> {
   const out: Record<string, string> = {};
-  const sorgu = url.includes('#') ? url.split('#')[1] : url.split('?')[1];
-  if (!sorgu) return out;
-  for (const parca of sorgu.split('&')) {
-    const [k, v] = parca.split('=');
-    if (k) out[decodeURIComponent(k)] = decodeURIComponent(v ?? '');
+  const qIndex = url.indexOf('?');
+  const hIndex = url.indexOf('#');
+  const parcalar: string[] = [];
+  if (qIndex !== -1) {
+    const son = hIndex !== -1 && hIndex > qIndex ? hIndex : url.length;
+    parcalar.push(url.slice(qIndex + 1, son));
+  }
+  if (hIndex !== -1) parcalar.push(url.slice(hIndex + 1));
+  for (const sorgu of parcalar) {
+    for (const parca of sorgu.split('&')) {
+      if (!parca) continue;
+      const [k, v] = parca.split('=');
+      if (k) out[decodeURIComponent(k)] = decodeURIComponent(v ?? '');
+    }
   }
   return out;
 }
@@ -41,7 +57,7 @@ function paramAyikla(url: string): Record<string, string> {
 export async function gmailIleGiris(): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
 
-  // OAuth dönüş adresi: gerçek build'de `mevzu://`, Expo Go'da `exp://...`.
+  // OAuth dönüş adresi: gerçek build'de `mevzu://`, Expo Go'da `exp://<ip>:<port>`.
   // Çalışma anında (her zaman istemci tarafı) üretilir → SSR'de değerlendirilmez.
   const redirectTo = makeRedirectUri({ scheme: 'mevzu' });
 
@@ -58,7 +74,11 @@ export async function gmailIleGiris(): Promise<void> {
     return;
   }
 
+  // Supabase dönüşü `?code=...#` formatında gelir (code query'de, sonda boş fragment).
   const params = paramAyikla(sonuc.url);
+  if (params.error || params.error_description) {
+    throw new Error(`OAuth hata: ${params.error_description ?? params.error}`);
+  }
   if (params.code) {
     const { error: cErr } = await supabase.auth.exchangeCodeForSession(params.code);
     if (cErr) throw cErr;
@@ -69,7 +89,7 @@ export async function gmailIleGiris(): Promise<void> {
     });
     if (sErr) throw sErr;
   } else {
-    throw new Error('Giriş tamamlanamadı (oturum belirteci yok).');
+    throw new Error('Giriş tamamlanamadı (oturum belirteci alınamadı).');
   }
 }
 

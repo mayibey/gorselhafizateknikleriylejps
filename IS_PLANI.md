@@ -19,14 +19,15 @@ satın alma → mağaza yayını.
 ## FAZ A — Üyelik aktifleştir (Gmail giriş çalışsın)  ⏳ ÖNCE BU
 > Kod hazır; sadece senin hesap açıp anahtar girmen lazım. Ücretsiz. Detay: `docs/UYELIK_KURULUM.md`.
 
-- [ ] **A1 [SEN]** supabase.com → yeni proje aç (bölge: Frankfurt/EU). Project URL + anon key kopyala.
-- [ ] **A2 [SEN]** Google Cloud Console → OAuth consent screen (External) + test user olarak kendi Gmail'in.
-- [ ] **A3 [SEN]** Google Cloud → Credentials → OAuth client (Web) → redirect: `https://<proje>.supabase.co/auth/v1/callback` → Client ID + Secret al.
-- [ ] **A4 [SEN]** Supabase → Authentication → Providers → Google'ı aç, Client ID/Secret yapıştır. URL Configuration → Redirect URLs'e `mevzu://` ekle.
-- [ ] **A5 [SEN]** Proje kökünde `.env`: `EXPO_PUBLIC_SUPABASE_URL=...` + `EXPO_PUBLIC_SUPABASE_ANON_KEY=...` → `npx expo start -c`.
-- [ ] **A6 [SEN+BEN]** Telefonda Sicil → "Gmail ile giriş yap" → dene. Takılırsan (genelde redirect URL) bana söyle, birlikte ayıklarız.
+- [x] **A1 [SEN]** supabase.com → yeni proje aç (bölge: Frankfurt/EU). Project URL + anon key kopyala. ✅
+- [x] **A2 [SEN]** Google Cloud → OAuth consent screen (External) + test user kendi Gmail'in. ✅
+- [x] **A3 [SEN]** Google Cloud → OAuth client (**Web** — Supabase callback aracı olduğu için) → Client ID + Secret. ✅
+- [x] **A4 [SEN]** Supabase → Google'ı aç + Client ID/Secret + **URL Config: Redirect URLs (exp://...) + Site URL = exp adresi** (localhost bırakma!). ✅
+- [x] **A5 [BEN]** `.env` dolduruldu (URL anon key JWT'sinden türetildi). ✅
+- [x] **A6 [SEN+BEN]** Telefonda Gmail girişi **ÇALIŞTI**, e-posta görünüyor. ✅ (Bug: dönüş URL'i `?code=...#` → parse düzeltildi.)
 
-**Sonuç:** Gmail girişi çalışır. Buradan sonra "kim üye" bilinir → satın alma mümkün olur.
+**Sonuç:** ✅ **Gmail girişi ÇALIŞIYOR.** "Kim üye" biliniyor → satın alma için zemin hazır.
+**NOT (Expo Go):** redirect `exp://<IP>:8081` IP'ye bağlı → ağ/IP değişirse giriş ekranındaki TEŞHİS kutusundan yeni adresi alıp Supabase'i güncelle. Kalıcı çözüm: Faz C gerçek build (`mevzu://` sabit).
 
 ---
 

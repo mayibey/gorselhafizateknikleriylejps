@@ -36,11 +36,25 @@ Aşağıdaki adımlar **bir kez** yapılır; sonra `Gmail ile giriş yap` butonu
 
 1. Supabase panel → **Authentication → Providers → Google** → **Enable**.
 2. 2. adımdaki **Client ID** ve **Client Secret**'i yapıştır → **Save**.
-3. **Authentication → URL Configuration → Redirect URLs** kısmına uygulamanın
-   deep-link şemasını ekle (giriş sonrası app'e dönüş için):
-   - `mevzu://`
-   - (Geliştirme/Expo Go için ayrıca Expo'nun ürettiği `exp://` adresini de eklemen
-     gerekebilir — giriş denerken konsolda görünen `redirectTo` adresini ekle.)
+3. **Authentication → URL Configuration** (giriş sonrası app'e dönüş — ÖNEMLİ):
+   - **Redirect URLs** → şunları ekle:
+     - `mevzu://**` (gerçek build için)
+     - `exp://**`
+     - **`exp://<PC-LAN-IP>:8081`** ← Expo Go testi için ASIL adres. Bu adresi
+       uygulamada **Giriş ekranının altındaki "TEŞHİS" kutusu** gösterir (dev modda).
+       Örn. `exp://192.168.1.106:8081`.
+     - `exp://<PC-LAN-IP>:8081/**`
+   - **Site URL** → **`exp://<PC-LAN-IP>:8081`** yap (varsayılan `http://localhost:3000`
+     BIRAKMA!). Sebebi: Supabase `exp://` redirect'ini bazen eşleştiremeyip **Site URL'e
+     düşüyor**; Site URL localhost ise telefonda "Safari sunucuya bağlanamadı" olur.
+     Site URL'i exp adresine çevirince düşse bile uygulamaya döner. (Site URL'in kendi
+     **"Save changes"** butonu ayrı — ona basmayı unutma.)
+
+   > ⚠️ **Expo Go IP uyarısı:** `exp://192.168.x.x:8081` adresindeki IP, geliştirme
+   > bilgisayarının ev ağı IP'sidir. Wi-Fi/ağ veya IP değişirse bu adres değişir →
+   > giriş kırılır. O zaman uygulamadaki TEŞHİS kutusundan yeni adresi oku, Supabase
+   > Redirect URLs + Site URL'i güncelle. **Kalıcı çözüm: gerçek build** (`mevzu://`
+   > sabit kalır, IP derdi tamamen biter) — bkz. `IS_PLANI.md` Faz C.
 
 ## 4) Anahtarları uygulamaya gir
 
