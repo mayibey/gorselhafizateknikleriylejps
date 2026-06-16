@@ -4,19 +4,17 @@
     "slug": "gorsel-hafiza-jsps",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/mevzu-icon-1024.png",
     "scheme": "mevzu",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/images/mevzu-icon-1024.png"
     },
     "android": {
       "package": "com.mayibey.jsps",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#1F3864",
+        "foregroundImage": "./assets/images/mevzu-icon-1024.png"
       },
       "predictiveBackGestureEnabled": false
     },

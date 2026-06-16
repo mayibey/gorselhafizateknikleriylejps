@@ -47,7 +47,7 @@ satın alma → mağaza yayını.
 - [x] **C1 [KOD]** Denetim yapıldı: Android build config HAZIR (preview=APK, production=AAB, autoIncrement+remote sürüm doğru, pluginler tam). **BULGULAR:** (1) **İkon hâlâ varsayılan Expo şablonu** (mavi "A") → Play production'dan ÖNCE markalı ikon ŞART (test build'i için sorun değil). (2) `ios.icon` yolu bozuk (`./assets/expo.icon`) — yalnız ileride iOS build'inde önemli, Android'i etkilemez.
 - [ ] **C2 [SEN]** `npx eas login` → `npx eas build -p android --profile preview` (test APK; varsayılan ikonla, sadece çalışıyor mu diye).
 - [ ] **C3 [SEN+BEN]** APK'yı telefona kur, gez: **Gmail giriş (artık `mevzu://` sabit — IP derdi yok)**, bildirim, ekran-görüntüsü engeli, kart akışı.
-- [ ] **C4 [SEN→BEN]** Markalı ikon (1024×1024 PNG) ver → app.json + adaptive icon'a bağlarım → production AAB.
+- [~] **C4 [SEN→BEN]** İkon: kullanıcı `mevzu-icon-1024/512` (şeffaf logo) verdi → **GEÇİCİ bağlandı** (app.json icon + adaptiveIcon fg, bg #1F3864). **NOT:** bu logo full-bleed + detaylı → launcher'da kenarları maskede kırpılır + küçükte yazılar okunmaz. **Production öncesi SADELEŞTİR** (kitap+tokmak sembolü, safe-zone'lu). 512 = Play mağaza listesi ikonu (kenara not). Logo → splash'e de konabilir (ayrı adım).
 
 ---
 
