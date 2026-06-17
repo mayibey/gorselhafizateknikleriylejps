@@ -28,6 +28,13 @@ export const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL ?? '';
 export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? '';
 
 /**
+ * Sentry çökme paneli DSN'i (TEŞHİS). Doluysa uygulama çökmelerini Sentry'ye yollar
+ * → web panelinde tam hata + stack trace görünür (ADB/logcat gerekmez). Client DSN
+ * gizli değildir (uygulamalara gömülür). Boşsa Sentry uykuda (no-op).
+ */
+export const SENTRY_DSN = process.env.EXPO_PUBLIC_SENTRY_DSN ?? '';
+
+/**
  * ÜYELİK ANA ŞALTERİ (derleme-zamanı). v1 yayını için FALSE:
  * - Supabase'e HİÇ bağlanılmaz (client oluşmaz, ağ çağrısı yok, e-posta toplanmaz)
  *   → uygulama gerçekten %100 offline → mevcut "hesap yok" gizlilik metni DOĞRU kalır

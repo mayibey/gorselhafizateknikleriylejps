@@ -6,6 +6,7 @@
     "@expo/vector-icons": "^15.0.2",
     "@likashefqet/react-native-image-zoom": "^4.3.0",
     "@react-native-async-storage/async-storage": "2.2.0",
+    "@sentry/react-native": "~7.2.0",
     "@supabase/supabase-js": "^2.108.2",
     "expo": "^54.0.35",
     "expo-audio": "~1.1.1",
