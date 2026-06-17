@@ -12,7 +12,7 @@
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#1F3864",
         "foregroundImage": "./assets/images/mevzu-icon-1024.png"
@@ -37,7 +37,8 @@
       ],
       "expo-sqlite",
       "expo-audio",
-      "expo-web-browser"
+      "expo-web-browser",
+      "./plugins/withRemovedPermissions"
     ],
     "experiments": {
       "typedRoutes": true
