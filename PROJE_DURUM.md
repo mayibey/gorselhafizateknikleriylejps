@@ -2,11 +2,46 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 17 Haziran 2026
+> Son güncelleme: 17 Haziran 2026 (gece)
 
-> **YAYIN (17 Haz):** Sentry (çökme paneli) v1'de KALDIRILDI (`99d4f45`) → uygulama %100 offline → Play "Veri Güvenliği" = **veri toplanmıyor** (doğru beyan).
+> # 🚦 GÜNCEL DURUM — 17 Haz gecesi (YARIN BURADAN DEVAM)
 >
-> **YEREL BUILD'E GEÇİLDİ (17 Haz):** EAS kuyruğu (20+ dk) yerine kendi PC'de gradle build (Android Studio kurulu). Süreç `docs/YEREL_BUILD.md`'de. Kurulum: prebuild → upload keystore (`credentials/upload-keystore.jks`, git-dışı, şifre KEYSTORE_BILGI.txt) → `~/.gradle/gradle.properties`'e MEVZU_UPLOAD_* (BOM'suz!) → `reactNativeArchitectures=arm64-v8a` (OOM fix) + heap 4GB → `gradlew :app:bundleRelease`. **Sonuç: `D:\mevzu-yerel.aab` (162.5 MB, arm64, versionCode 1, CN=MEVZU-JSPS imzalı, ~1-4 dk).** Play'e BU yüklenecek. EAS'in `D:\mevzu.aab`'si farklı anahtar → yüklenmez.
+> **NEREDEYİZ:** Uygulama (MEVZU-JSPS, paket `app.mevzujsps.android`) **Google Play kapalı teste GÖNDERİLDİ → şu an "İncelemede" (in review).** Gönderim kapsamı: Kapalı test (Alpha) + Mağaza Girişi + Uygulama İçeriği + Mağaza ayarları. Yüklenen sürüm: **versionCode 3**.
+>
+> **YARIN İLK BAKILACAK:** İnceleme onaylandı mı? (Play Console → Test ve yayınla → Kapalı test). Onaylanınca uygulama testçilere kurulabilir olur.
+>
+> **14 GÜN / 12 TESTÇİ ŞARTI (yeni hesap):** Üretime geçmek için en az **12 testçi**, **14 gün kesintisiz** kapalı testte olmalı. Sayaç inceleme bitip 12 testçi opt-in olunca işler. İlerleme: "üretime erişim / production access" bölümünde "X/12 testçi, Y/14 gün". **→ Asıl iş yarın: 12 gerçek kişi (Gmail) ayarlayıp test davetini kabul ettirmek, uygulamayı silmemelerini sağlamak.**
+>
+> ### Bu oturumda yapılanlar (commit'li, master'da)
+> 1. **Sentry KALDIRILDI** (`99d4f45`) → %100 offline → Play "Veri Güvenliği" = **veri toplanmıyor** (doğru, işaretlendi).
+> 2. **YEREL BUILD'E GEÇİLDİ** — EAS kuyruğu (20+ dk, hatta saatlerce IN_QUEUE) yerine kendi PC'de gradle build. Süreç: `docs/YEREL_BUILD.md`.
+> 3. **Gereksiz/hassas izinler kaldırıldı** (config plugin `plugins/withRemovedPermissions.js`): READ_MEDIA_IMAGES/VIDEO, READ/WRITE_EXTERNAL_STORAGE, RECORD_AUDIO, SYSTEM_ALERT_WINDOW. (Play "foto/video izni beyanı" hatasının sebebiydi.) Kalan izinler masum: INTERNET, ses çalma, titreşim.
+> 4. **Mağaza metinleri + grafikler hazır**: `docs/PLAY_MAGAZA_GIRISI.md` (ad/kısa/tam açıklama) + simge `assets/images/mevzu-icon-512.png` + özellik grafiği `assets/store/feature-graphic-1024x500.png`.
+>
+> ### YEREL BUILD — nasıl (özet, detay docs/YEREL_BUILD.md)
+> ```
+> cd android
+> $env:JAVA_HOME="C:\Program Files\Android\Android Studio\jbr"
+> $env:ANDROID_HOME="$env:LOCALAPPDATA\Android\Sdk"
+> .\gradlew.bat :app:bundleRelease --no-daemon
+> # AAB: android/app/build/outputs/bundle/release/app-release.aab → D:\mevzu-yerel.aab
+> ```
+> - **İmza:** upload key `credentials/upload-keystore.jks` (git-dışı, şifre `credentials/KEYSTORE_BILGI.txt`). Creds `~/.gradle/gradle.properties`'te (**BOM'suz UTF-8 olmalı**, yoksa debug'a düşer → Play reddeder). AAB `CN=MEVZU-JSPS` ile imzalı olmalı (keytool -printcert ile doğrula).
+> - **OOM fix:** `android/gradle.properties` → `reactNativeArchitectures=arm64-v8a` (4 ABI birden = daemon OOM) + heap `-Xmx4096m`.
+> - **DİKKAT versionCode:** Her yeni Play yüklemesinde ARTMALI. Sıradaki build **versionCode 4** olacak. Kaynak: `app.json` → `android.versionCode` (şu an 3) + `android/app/build.gradle` (prebuild app.json'dan üretir; android/ elle düzenlendiyse ikisini eşitle).
+> - **prebuild --clean YAPMA gereksiz yere:** android/ içindeki ayarları (signing, gradle.properties, local.properties) sıfırlar. İzin plugin'i artık app.json'da olduğu için prebuild sonrası izinler otomatik gelir; ama signing/arch/heap'i tekrar uygulamak gerekir.
+> - **YÜKLEME:** Play'e `D:\mevzu-yerel.aab` yüklenir. EAS'in `D:\mevzu.aab`'si FARKLI anahtarla imzalı → ASLA yüklenmez (yerel upload key'e bağlı kaldık).
+>
+> ### versionCode geçmişi (Play'de her biri benzersiz olmalı)
+> - vCode 1 → dahili teste (internal) yüklendi (test edildi).
+> - vCode 2 → kapalı teste denendi; "foto/video izni" hatası + izin temizliği gerekti.
+> - **vCode 3 → kapalı teste GÖNDERİLDİ, ŞU AN İNCELEMEDE.** ← buradayız.
+>
+> ### Backlog (sonra)
+> - **Mağaza ekran görüntüleri:** telefona kurulunca 4 ekran (Karargah, Mevzuat, kart, Sicil) çekilip mağaza girişine eklenecek (zorunlu, henüz eksikse).
+> - **Kart görselini sağa/sola kaydırarak değiştirme** (kullanıcı "sonra" dedi).
+> - Genel yayında istenirse `armeabi-v7a` ABI'sini de ekle (RAM uygunken).
+> - R8/proguard "kod gösterme dosyası" uyarısı = ZARARSIZ, görmezden gel (kod karartma yok).
 
 ---
 
