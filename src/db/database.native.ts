@@ -7,6 +7,7 @@
 import {
   type Bolum,
   CREATE_SQL,
+  SCHEMA_VERSION,
   type Branch,
   type CardWithLaw,
   type CardWithSrs,
@@ -50,6 +51,25 @@ class SqliteBackend implements Backend {
     const db = this.db!;
     const row = await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version');
     let version = row?.user_version ?? 0;
+
+    // YENİ KURULUM HIZLI YOLU: ilk açılışta tüm şemayı oluştur + BİR KEZ tohumla, ara
+    // sürümleri (v1..v17 DELETE+re-seed) ATLA. Yoksa fresh install seedReference'ı 6x,
+    // seedBolumler'i 11x çalıştırıp (~25k insert) ilk açılışı saniyelerce bekletir
+    // (branş ekranı getBranches→initDatabase'i beklediği için ekrana yansır).
+    if (version === 0) {
+      await db.execAsync(CREATE_SQL);
+      await db.execAsync(
+        `CREATE TABLE IF NOT EXISTS study_days (gun TEXT PRIMARY KEY);
+         CREATE TABLE IF NOT EXISTS kart_performans (id INTEGER PRIMARY KEY AUTOINCREMENT, card_id INTEGER NOT NULL, kaynak TEXT NOT NULL, sonuc TEXT NOT NULL, tarih TEXT NOT NULL);
+         CREATE TABLE IF NOT EXISTS bolumler (id INTEGER PRIMARY KEY, law_id INTEGER NOT NULL, ad TEXT NOT NULL, sira INTEGER NOT NULL);
+         CREATE TABLE IF NOT EXISTS bolum_kartlari (bolum_id INTEGER NOT NULL, card_id INTEGER NOT NULL, sira INTEGER NOT NULL, PRIMARY KEY (bolum_id, card_id));
+         CREATE TABLE IF NOT EXISTS sicil_kayitlari (id INTEGER PRIMARY KEY AUTOINCREMENT, tip TEXT NOT NULL, derece TEXT NOT NULL, baslik TEXT NOT NULL, metin TEXT NOT NULL, sebep TEXT NOT NULL, anahtar TEXT, tarih TEXT NOT NULL);
+         CREATE TABLE IF NOT EXISTS geri_bes_durum (id INTEGER PRIMARY KEY, acik INTEGER NOT NULL, acilis TEXT, son_tarih TEXT, kademe INTEGER NOT NULL);`,
+      );
+      await this.seedReference();
+      await this.seedBolumler();
+      version = SCHEMA_VERSION; // tüm ara migration'lar atlanır (aşağıdaki if'ler çalışmaz)
+    }
 
     if (version < 1) {
       // Tüm tablolar (IF NOT EXISTS) — eski kurulumlarda branches/law_branches da oluşur.
@@ -217,64 +237,70 @@ class SqliteBackend implements Backend {
    */
   private async seedReference(): Promise<void> {
     const db = this.db!;
-    for (const law of SEED_LAWS) {
-      await db.runAsync(
-        'INSERT OR IGNORE INTO laws (id, blok, ad) VALUES (?, ?, ?)',
-        law.id,
-        law.blok,
-        law.ad,
-      );
-    }
-    for (const card of SEED_CARDS) {
-      await db.runAsync(
-        'INSERT OR IGNORE INTO cards (id, law_id, madde_no, baslik, anlatim_metni, gorsel_yolu, ses_yolu) VALUES (?, ?, ?, ?, ?, ?, ?)',
-        card.id,
-        card.law_id,
-        card.madde_no,
-        card.baslik,
-        card.anlatim_metni,
-        card.gorsel_yolu,
-        card.ses_yolu,
-      );
-    }
-    for (const b of SEED_BRANCHES) {
-      await db.runAsync(
-        'INSERT OR IGNORE INTO branches (id, slug, ad, sira) VALUES (?, ?, ?, ?)',
-        b.id,
-        b.slug,
-        b.ad,
-        b.sira,
-      );
-    }
-    for (const lb of SEED_LAW_BRANCHES) {
-      await db.runAsync(
-        'INSERT OR IGNORE INTO law_branches (law_id, branch_id) VALUES (?, ?)',
-        lb.law_id,
-        lb.branch_id,
-      );
-    }
+    // TEK TRANSACTION: yüzlerce INSERT'i tek disk-commit'te toplar (10-100x hızlı;
+    // yoksa her satır ayrı commit → ilk açılış saniyelerce sürer).
+    await db.withTransactionAsync(async () => {
+      for (const law of SEED_LAWS) {
+        await db.runAsync(
+          'INSERT OR IGNORE INTO laws (id, blok, ad) VALUES (?, ?, ?)',
+          law.id,
+          law.blok,
+          law.ad,
+        );
+      }
+      for (const card of SEED_CARDS) {
+        await db.runAsync(
+          'INSERT OR IGNORE INTO cards (id, law_id, madde_no, baslik, anlatim_metni, gorsel_yolu, ses_yolu) VALUES (?, ?, ?, ?, ?, ?, ?)',
+          card.id,
+          card.law_id,
+          card.madde_no,
+          card.baslik,
+          card.anlatim_metni,
+          card.gorsel_yolu,
+          card.ses_yolu,
+        );
+      }
+      for (const b of SEED_BRANCHES) {
+        await db.runAsync(
+          'INSERT OR IGNORE INTO branches (id, slug, ad, sira) VALUES (?, ?, ?, ?)',
+          b.id,
+          b.slug,
+          b.ad,
+          b.sira,
+        );
+      }
+      for (const lb of SEED_LAW_BRANCHES) {
+        await db.runAsync(
+          'INSERT OR IGNORE INTO law_branches (law_id, branch_id) VALUES (?, ?)',
+          lb.law_id,
+          lb.branch_id,
+        );
+      }
+    });
   }
 
-  /** Patika bölümlerini idempotent yükler (INSERT OR IGNORE). */
+  /** Patika bölümlerini idempotent yükler (INSERT OR IGNORE). Tek transaction (binlerce satır). */
   private async seedBolumler(): Promise<void> {
     const db = this.db!;
-    for (const b of SEED_BOLUMLER) {
-      await db.runAsync(
-        'INSERT OR IGNORE INTO bolumler (id, law_id, ad, sira) VALUES (?, ?, ?, ?)',
-        b.id,
-        b.law_id,
-        b.ad,
-        b.sira,
-      );
-    }
-    for (const bk of SEED_BOLUM_KARTLARI) {
-      await db.runAsync(
-        'INSERT OR IGNORE INTO bolum_kartlari (bolum_id, card_id, sira) VALUES (?, ?, ?)',
-        bk.bolum_id,
-        bk.card_id,
-        bk.sira,
-      );
-    }
+    await db.withTransactionAsync(async () => {
+      for (const b of SEED_BOLUMLER) {
+        await db.runAsync(
+          'INSERT OR IGNORE INTO bolumler (id, law_id, ad, sira) VALUES (?, ?, ?, ?)',
+          b.id,
+          b.law_id,
+          b.ad,
+          b.sira,
+        );
+      }
+      for (const bk of SEED_BOLUM_KARTLARI) {
+        await db.runAsync(
+          'INSERT OR IGNORE INTO bolum_kartlari (bolum_id, card_id, sira) VALUES (?, ?, ?)',
+          bk.bolum_id,
+          bk.card_id,
+          bk.sira,
+        );
+      }
+    });
   }
 
   async getBolumler(lawId: number): Promise<Bolum[]> {
