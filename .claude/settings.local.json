@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(npm *)"
+      "PowerShell(npm *)",
+      "Bash(git rm *)",
+      "Bash(rm -rf karakterler/ \"5_KARAKTER_CHATGPT_SABLONLARI.docx\" \"JSPS_Karakter_Kanun_Envanteri.docx\")",
+      "Bash(ls -d karakterler)",
+      "Bash(ls *KARAKTER* *Karakter*)"
     ]
   }
 }

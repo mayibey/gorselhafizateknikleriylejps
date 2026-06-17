@@ -8,7 +8,6 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Platform } from 'react-native';
 
 export type BildirimAyar = {
   aktif: boolean;
@@ -50,68 +49,15 @@ export async function setAyar(a: BildirimAyar): Promise<void> {
   }
 }
 
-const ICTIMA = {
-  sabah: { title: '📯 Sabah İçtiması', body: 'Birlik göreve! Bugünün mevzilerini güçlendir.' },
-  gece: { title: '🌙 Gece Eğitimi', body: 'Gün bitmeden tekrar zamanı — mevzileri pekiştir.' },
-  firsat: { title: '⚡ Fırsat Eğitimi', body: 'Boş anını değerlendir; kısa bir eğitim seni bekliyor.' },
-};
-
-/** Fırsat Eğitimi için bir sonraki rastgele zamana kalan saniye (bugün 11:00–18:00; geçtiyse yarın). */
-function firsatSaniye(): number {
-  const now = new Date();
-  const hedef = new Date(now);
-  const saat = 11 + Math.floor(Math.random() * 7); // 11..17
-  hedef.setHours(saat, Math.floor(Math.random() * 60), 0, 0);
-  let diff = (hedef.getTime() - now.getTime()) / 1000;
-  if (diff < 60) diff += 24 * 3600; // saat geçtiyse yarına al
-  return Math.round(diff);
-}
-
 export type PlanSonuc = 'ok' | 'izin-yok' | 'web' | 'hata';
 
 /**
- * Mevcut planı iptal eder ve ayara göre yeniden planlar. İzin yoksa ister.
- * `aktif=false` ise sadece iptal eder. Web'de no-op ('web' döner).
+ * v1'de DEVRE DIŞI: `expo-notifications` kaldırıldı (standalone Android'de Firebase
+ * `FirebaseInitProvider` google-services.json olmadan başlangıçta çöküyordu — Sentry'den
+ * önce). Ayar yine saklanır (getAyar/setAyar) ama bildirim planlanmaz. v2'de (gerçek
+ * Firebase + onaylı build) geri eklenecek. Çağrı zararsız 'web' döner.
  */
 export async function planla(ayar: BildirimAyar): Promise<PlanSonuc> {
-  if (Platform.OS === 'web') return 'web';
-  try {
-    const N = await import('expo-notifications');
-    let izinli = (await N.getPermissionsAsync()).granted;
-    if (!izinli) izinli = (await N.requestPermissionsAsync()).granted;
-    if (!izinli) return 'izin-yok';
-
-    if (Platform.OS === 'android') {
-      await N.setNotificationChannelAsync('egitim', {
-        name: 'Eğitim İçtiması',
-        importance: N.AndroidImportance.DEFAULT,
-      });
-    }
-
-    await N.cancelAllScheduledNotificationsAsync();
-    if (!ayar.aktif) return 'ok';
-
-    const data = { hedef: 'akis' };
-    await N.scheduleNotificationAsync({
-      content: { ...ICTIMA.sabah, data },
-      trigger: { type: N.SchedulableTriggerInputTypes.DAILY, hour: ayar.sabahSaat, minute: 0 },
-    });
-    await N.scheduleNotificationAsync({
-      content: { ...ICTIMA.gece, data },
-      trigger: { type: N.SchedulableTriggerInputTypes.DAILY, hour: ayar.geceSaat, minute: 0 },
-    });
-    if (ayar.firsatAktif) {
-      await N.scheduleNotificationAsync({
-        content: { ...ICTIMA.firsat, data },
-        trigger: {
-          type: N.SchedulableTriggerInputTypes.TIME_INTERVAL,
-          seconds: firsatSaniye(),
-          repeats: false,
-        },
-      });
-    }
-    return 'ok';
-  } catch {
-    return 'hata';
-  }
+  void ayar;
+  return 'web';
 }
