@@ -12,9 +12,9 @@
 >
 > **KARAR (kullanıcı):** Yeni ad **"Mevzu — JSPS Hazırlık"** · ikonu **kullanıcı yeniden hazırlayacak** (kılıç/askeri sembol YOK).
 >
-> **YAPILDI (kod, 18 Haz):** `app.json name` → "Mevzu — JSPS Hazırlık" · `docs/PLAY_MAGAZA_GIRISI.md` ad + tam açıklamaya **bağımsız/resmî-kurumla-bağlantısız ibaresi**.
-> **BEKLEYEN:** (1) Kullanıcıdan yeni temiz **ikon** (`mevzu-icon-1024.png` + `mevzu-icon-512.png`) + **özellik grafiği** (`feature-graphic-1024x500.png`) — aynı dosya adlarıyla üzerine yaz → app.json değişmez. (2) **vCode 4 yeni build** (yeni isim+ikon). (3) Play Console'da mağaza **adı + ikon (512) + özellik grafiği** güncelle → yeniden gönder.
-> **NOT:** Google'ın işaretlediği alanlar mağaza-girişi (ad+512 ikon) → teorik olarak rebuild'siz Console'dan düzeltilip yeniden gönderilebilir; AMA cihazdaki launcher ikonu/adı eski kalır → 2. red riski → **sağlam yol = vCode 4 rebuild + Console güncelle.**
+> **YAPILDI (kod, 18 Haz — commit `971c8a4`):** (1) **Yeni sivil ikon** `mevzu-icon-1024.png`+`512.png` (kılıç/askeri amblem/resmî mühür YOK → beyin+kitap+ışık; kullanıcı kare verdi, ImageMagick yok → .NET System.Drawing ile resize). (2) **Özellik grafiği** `feature-graphic-1024x500.png` yeni logoyla yeniden üretildi (.NET ile). (3) `app.json name` → "Mevzu — JSPS Hazırlık". (4) `docs/PLAY_MAGAZA_GIRISI.md` tam açıklamanın **EN BAŞINA büyük harf muafiyet ibaresi** (rakip JSPS PRO örneği gibi) + sonda tekrar. (5) **versionCode 3→4** (app.json + android/app/build.gradle).
+> **BEKLEYEN (kullanıcı, Play Console — kod değil):** (1) **vCode 4 AAB build** (`docs/YEREL_BUILD.md`). (2) **Mağaza girişini güncelle:** yeni ad + yeni 512 ikon + yeni özellik grafiği + **tam açıklamayı `PLAY_MAGAZA_GIRISI.md`'den kopyala-yapıştır** (muafiyet ibaresi en başta — EN KRİTİK adım, döküman/kod Google'a ulaşmaz, canlı listeyi elle güncellemek şart). (3) **Aynı Kapalı test track'inde YENİ SÜRÜM oluştur** (vCode 3'ü silme, yeni track açma) → vCode 4 yükle → incelemeye gönder.
+> **NOT (red analizi, kullanıcı araştırması):** "JSPS" kelimesi yasak değil (markette dolu app var); reddin 3 tetikleyicisi: muafiyet ibaresi yok + ikon resmî/devlet estetiği + isimde ayrıştırıcı kelime yok. Üçü de düzeltildi.
 >
 > ---
 >
