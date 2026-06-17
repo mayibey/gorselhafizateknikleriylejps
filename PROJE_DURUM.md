@@ -2,9 +2,23 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 17 Haziran 2026 (gece)
+> Son güncelleme: 18 Haziran 2026
 
-> # 🚦 GÜNCEL DURUM — 17 Haz gecesi (YARIN BURADAN DEVAM)
+> # 🔴 RED GELDİ — KİMLİĞE BÜRÜNME (Impersonation) — 18 Haz
+>
+> **vCode 3 kapalı test REDDEDİLDİ.** Sebep: **Google Play "Kimliğe Bürünme Politikası" ihlali** (içerik değil, marka/ikon). 17 Haz itibarıyla uygulama Play'de kullanılamaz. İki tetikleyici:
+> 1. **Yanıltıcı Başlık** — mağaza adı **"JSPS"** (resmî kurum kısaltması, "resmî değil" diye ayrılmıyor).
+> 2. **Yanıltıcı Simge** — ikon + özellik grafiğindeki logo **altın kılıç + askeri amblem havası** (Jandarma/devlet çağrışımı).
+>
+> **KARAR (kullanıcı):** Yeni ad **"Mevzu — JSPS Hazırlık"** · ikonu **kullanıcı yeniden hazırlayacak** (kılıç/askeri sembol YOK).
+>
+> **YAPILDI (kod, 18 Haz):** `app.json name` → "Mevzu — JSPS Hazırlık" · `docs/PLAY_MAGAZA_GIRISI.md` ad + tam açıklamaya **bağımsız/resmî-kurumla-bağlantısız ibaresi**.
+> **BEKLEYEN:** (1) Kullanıcıdan yeni temiz **ikon** (`mevzu-icon-1024.png` + `mevzu-icon-512.png`) + **özellik grafiği** (`feature-graphic-1024x500.png`) — aynı dosya adlarıyla üzerine yaz → app.json değişmez. (2) **vCode 4 yeni build** (yeni isim+ikon). (3) Play Console'da mağaza **adı + ikon (512) + özellik grafiği** güncelle → yeniden gönder.
+> **NOT:** Google'ın işaretlediği alanlar mağaza-girişi (ad+512 ikon) → teorik olarak rebuild'siz Console'dan düzeltilip yeniden gönderilebilir; AMA cihazdaki launcher ikonu/adı eski kalır → 2. red riski → **sağlam yol = vCode 4 rebuild + Console güncelle.**
+>
+> ---
+>
+> # 🚦 ÖNCEKİ DURUM — 17 Haz gecesi (YARIN BURADAN DEVAM)
 >
 > **NEREDEYİZ:** Uygulama (MEVZU-JSPS, paket `app.mevzujsps.android`) **Google Play kapalı teste GÖNDERİLDİ → şu an "İncelemede" (in review).** Gönderim kapsamı: Kapalı test (Alpha) + Mağaza Girişi + Uygulama İçeriği + Mağaza ayarları. Yüklenen sürüm: **versionCode 3**.
 >
