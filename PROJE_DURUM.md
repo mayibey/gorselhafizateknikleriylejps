@@ -2,7 +2,9 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 10 Haziran 2026
+> Son güncelleme: 17 Haziran 2026
+
+> **YAYIN (17 Haz):** Sentry (çökme paneli) v1'de KALDIRILDI (`99d4f45`) → uygulama %100 offline → Play "Veri Güvenliği" = **veri toplanmıyor** (doğru beyan). Yeni production AAB build'i **fd2042f7** (versionCode 4, paket `app.mevzujsps.android`, expo-asset SDK-54 fix + ilk-açılış hız fix dahil) başlatıldı → bitince `D:\mevzu.aab`'ye iner, kapalı test parçasına o yüklenecek. Eski `D:\mevzu.aab` (com.mayibey.jsps) YÜKLENMEYECEK (yanlış paket).
 
 ---
 
