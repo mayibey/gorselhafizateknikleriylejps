@@ -16,6 +16,8 @@
 > **BEKLEYEN (kullanıcı, Play Console — kod değil):** (1) **vCode 4 AAB build** (`docs/YEREL_BUILD.md`). (2) **Mağaza girişini güncelle:** yeni ad + yeni 512 ikon + yeni özellik grafiği + **tam açıklamayı `PLAY_MAGAZA_GIRISI.md`'den kopyala-yapıştır** (muafiyet ibaresi en başta — EN KRİTİK adım, döküman/kod Google'a ulaşmaz, canlı listeyi elle güncellemek şart). (3) **Aynı Kapalı test track'inde YENİ SÜRÜM oluştur** (vCode 3'ü silme, yeni track açma) → vCode 4 yükle → incelemeye gönder.
 > **NOT (red analizi, kullanıcı araştırması):** "JSPS" kelimesi yasak değil (markette dolu app var); reddin 3 tetikleyicisi: muafiyet ibaresi yok + ikon resmî/devlet estetiği + isimde ayrıştırıcı kelime yok. Üçü de düzeltildi.
 >
+> **BUILD OTOMASYONU (18 Haz):** Yeni ikon/isim build'e ancak prebuild ile geçtiği (sadece `gradlew` eski içerik üretir), prebuild de imza/arm64/heap ayarlarını sıfırladığı için → **`plugins/withYerelBuild.js` config plugin yazıldı** (app.json plugins'e eklendi): release imza bloğu (`MEVZU_UPLOAD_*`) + `reactNativeArchitectures=arm64-v8a` + heap `-Xmx4096m` artık **her prebuild'de otomatik**. Regex dönüşümü temiz template'te test edildi (mevcut elle-yazımla birebir). **Build artık sadece:** `npx expo prebuild -p android --no-install` → `cd android` → `gradlew :app:bundleRelease`. İmza creds yine `~/.gradle/gradle.properties` (BOM'suz). `docs/YEREL_BUILD.md` sadeleştirildi.
+>
 > ---
 >
 > # 🚦 ÖNCEKİ DURUM — 17 Haz gecesi (YARIN BURADAN DEVAM)

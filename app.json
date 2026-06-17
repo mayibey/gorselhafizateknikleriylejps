@@ -38,7 +38,8 @@
       "expo-sqlite",
       "expo-audio",
       "expo-web-browser",
-      "./plugins/withRemovedPermissions"
+      "./plugins/withRemovedPermissions",
+      "./plugins/withYerelBuild"
     ],
     "experiments": {
       "typedRoutes": true
