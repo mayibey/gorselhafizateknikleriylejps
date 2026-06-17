@@ -11,7 +11,7 @@
       "icon": "./assets/images/mevzu-icon-1024.png"
     },
     "android": {
-      "package": "com.mayibey.jsps",
+      "package": "app.mevzujsps.android",
       "adaptiveIcon": {
         "backgroundColor": "#1F3864",
         "foregroundImage": "./assets/images/mevzu-icon-1024.png"

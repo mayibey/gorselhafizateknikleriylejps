@@ -12,8 +12,13 @@ export const FORMSPREE_ENDPOINT = '';
  * URL'leri buraya yaz (mağaza + giriş ekranı + Hesap ekranı buraya bağlanır).
  * Boşsa uygulama "yakında" gösterir.
  */
-export const GIZLILIK_URL = 'https://mayibey.github.io/gorselhafizateknikleriylejps/';
-export const SARTLAR_URL = 'https://mayibey.github.io/gorselhafizateknikleriylejps/sartlar.html';
+// Gizlilik/Şartlar'ın YAYINLANMIŞ web adresleri. Boşken uygulama içi gömülü metin
+// (constants/yasal-metin.ts + /yasal ekranı) kullanılır; "web'de aç" linki gizlenir.
+// "mayibey" markaya uymadığı için eski mayibey.github.io KALDIRILDI. Yeni adres
+// (markalı, mayibey'siz host) barındırılınca buraya yazılacak + Play Console gizlilik
+// URL'ine girilecek. Şimdilik boş → uygulama gömülü metinle çalışır.
+export const GIZLILIK_URL = '';
+export const SARTLAR_URL = '';
 
 /**
  * Supabase (Gmail ile giriş / üyelik altyapısı).
