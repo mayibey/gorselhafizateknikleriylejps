@@ -44,3 +44,6 @@ example
 # generated native folders
 /ios
 /android
+
+# Yerel imza anahtarı (GİZLİ — repoya girmez)
+credentials/

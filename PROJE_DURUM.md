@@ -4,7 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 17 Haziran 2026
 
-> **YAYIN (17 Haz):** Sentry (çökme paneli) v1'de KALDIRILDI (`99d4f45`) → uygulama %100 offline → Play "Veri Güvenliği" = **veri toplanmıyor** (doğru beyan). Yeni production AAB build'i **fd2042f7** (versionCode 4, paket `app.mevzujsps.android`, expo-asset SDK-54 fix + ilk-açılış hız fix dahil) başlatıldı → bitince `D:\mevzu.aab`'ye iner, kapalı test parçasına o yüklenecek. Eski `D:\mevzu.aab` (com.mayibey.jsps) YÜKLENMEYECEK (yanlış paket).
+> **YAYIN (17 Haz):** Sentry (çökme paneli) v1'de KALDIRILDI (`99d4f45`) → uygulama %100 offline → Play "Veri Güvenliği" = **veri toplanmıyor** (doğru beyan).
+>
+> **YEREL BUILD'E GEÇİLDİ (17 Haz):** EAS kuyruğu (20+ dk) yerine kendi PC'de gradle build (Android Studio kurulu). Süreç `docs/YEREL_BUILD.md`'de. Kurulum: prebuild → upload keystore (`credentials/upload-keystore.jks`, git-dışı, şifre KEYSTORE_BILGI.txt) → `~/.gradle/gradle.properties`'e MEVZU_UPLOAD_* (BOM'suz!) → `reactNativeArchitectures=arm64-v8a` (OOM fix) + heap 4GB → `gradlew :app:bundleRelease`. **Sonuç: `D:\mevzu-yerel.aab` (162.5 MB, arm64, versionCode 1, CN=MEVZU-JSPS imzalı, ~1-4 dk).** Play'e BU yüklenecek. EAS'in `D:\mevzu.aab`'si farklı anahtar → yüklenmez.
 
 ---
 
