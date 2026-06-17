@@ -32,14 +32,9 @@ export const SARTLAR_URL = '';
 export const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL ?? '';
 export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? '';
 
-/**
- * Sentry çökme paneli DSN'i (TEŞHİS). Doluysa uygulama çökmelerini Sentry'ye yollar
- * → web panelinde tam hata + stack trace görünür (ADB/logcat gerekmez). Client DSN
- * gizli değildir (uygulamalara gömülür). Boşsa Sentry uykuda (no-op).
- */
-export const SENTRY_DSN =
-  process.env.EXPO_PUBLIC_SENTRY_DSN ??
-  'https://503f8ef3a69088f61fb6b118179ce1f5@o4511579895037952.ingest.de.sentry.io/4511579898052688';
+// Sentry (çökme paneli) v1'de KALDIRILDI → "veri toplanmıyor" beyanı %100 doğru olsun
+// + offline gizlilik metniyle uyumlu. Çökme avı bitti (expo-asset fix). v2'de gerekirse
+// geri eklenir (o zaman Data Safety'ye "crash logs" beyanı + gizlilik metni güncellenir).
 
 /**
  * ÜYELİK ANA ŞALTERİ (derleme-zamanı). v1 yayını için FALSE:

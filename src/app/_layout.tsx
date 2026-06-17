@@ -5,21 +5,13 @@ import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import * as Sentry from '@sentry/react-native';
-
 import { ErrorBoundary } from '@/components/ui/error-boundary';
-import { SENTRY_DSN } from '@/constants/config';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { AuthProvider } from '@/lib/auth-context';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 
-// TEŞHİS: DSN doluysa çökmeleri Sentry'ye yolla (native+JS). Boşsa no-op.
-if (SENTRY_DSN) {
-  Sentry.init({ dsn: SENTRY_DSN, debug: false, tracesSampleRate: 0 });
-}
-
-function RootLayout() {
+export default function RootLayout() {
   useEffect(() => {
     void initDatabase();
   }, []);
@@ -87,6 +79,3 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.lacivert,
   },
 });
-
-// Sentry.wrap → çökme/performans izleme için kökü sarar (DSN boşken zararsız).
-export default Sentry.wrap(RootLayout);
