@@ -53,5 +53,8 @@
     "ses:uret": "node scripts/ses-registry-uret.mjs",
     "madde:uret": "node scripts/madde-metni-uret.mjs"
   },
+  "overrides": {
+    "expo-asset": "12.0.13"
+  },
   "private": true
 }
