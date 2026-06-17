@@ -32,7 +32,9 @@ export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? ''
  * → web panelinde tam hata + stack trace görünür (ADB/logcat gerekmez). Client DSN
  * gizli değildir (uygulamalara gömülür). Boşsa Sentry uykuda (no-op).
  */
-export const SENTRY_DSN = process.env.EXPO_PUBLIC_SENTRY_DSN ?? '';
+export const SENTRY_DSN =
+  process.env.EXPO_PUBLIC_SENTRY_DSN ??
+  'https://503f8ef3a69088f61fb6b118179ce1f5@o4511579895037952.ingest.de.sentry.io/4511579898052688';
 
 /**
  * ÜYELİK ANA ŞALTERİ (derleme-zamanı). v1 yayını için FALSE:
