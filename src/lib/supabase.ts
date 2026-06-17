@@ -1,44 +1,42 @@
 /**
- * Supabase istemcisi (Gmail ile giriş / üyelik). GUARDED:
- * - SUPABASE_URL/ANON_KEY boşsa `supabaseHazir = false` ve `supabase = null`
- *   → üyelik uykuda, uygulama offline çalışır, hiçbir yerde çökmez.
- * - Anahtar dolunca istemci kurulur; oturum AsyncStorage'ta kalıcı (PKCE akışı).
- *
- * NOT: `react-native-url-polyfill` Supabase'in fetch/URL kullanımı için ŞART (RN'de
- * global URL eksik) → en üstte import edilir.
+ * Supabase istemcisi (Gmail ile giriş / üyelik). GUARDED + KOŞULLU YÜKLEME:
+ * - `supabaseHazir = UYELIK_AKTIF && anahtarlar dolu`. v1'de UYELIK_AKTIF=false.
+ * - Ağır bağımlılıklar (@supabase/supabase-js + react-native-url-polyfill) STATİK
+ *   import DEĞİL → yalnız `supabaseHazir` iken `require` ile yüklenir. Böylece v1'de
+ *   bu modüller başlangıçta HİÇ çalışmaz (url-polyfill global yamalaması yok, supabase
+ *   init yok) → release build başlangıç çökme yüzeyi küçülür, gerçek offline.
+ * - Anahtar dolunca (v2) istemci kurulur; oturum AsyncStorage'ta kalıcı (PKCE).
  */
-import 'react-native-url-polyfill/auto';
-
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import { Platform } from 'react-native';
+import type { SupabaseClient } from '@supabase/supabase-js'; // yalnız tip (derlemede silinir)
 
 import { SUPABASE_ANON_KEY, SUPABASE_URL, UYELIK_AKTIF } from '@/constants/config';
 
-// UYELIK_AKTIF=false (v1) → anahtarlar dolu olsa bile client OLUŞMAZ, Supabase'e
-// hiç bağlanılmaz (gerçek offline). Mağaza onayından sonra v2'de bayrak açılır.
 export const supabaseHazir = UYELIK_AKTIF && SUPABASE_URL !== '' && SUPABASE_ANON_KEY !== '';
 
-// Web SSR (Expo Router'ın Node ön-render'ı) sırasında `window`/localStorage YOK →
-// AsyncStorage'ın web sürümü "window is not defined" ile çöker ve dev sunucuyu öldürür.
-// SSR'de no-op storage + oturum kapalı; native ve gerçek tarayıcıda AsyncStorage (kalıcı).
-const ssrOrtami = Platform.OS === 'web' && typeof window === 'undefined';
-const oturumStorage = ssrOrtami
-  ? {
-      getItem: async () => null,
-      setItem: async () => {},
-      removeItem: async () => {},
-    }
-  : AsyncStorage;
+function istemciOlustur(): SupabaseClient | null {
+  if (!supabaseHazir) return null; // v1: ağır require'lar HİÇ çalışmaz
 
-export const supabase: SupabaseClient | null = supabaseHazir
-  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      auth: {
-        storage: oturumStorage,
-        autoRefreshToken: !ssrOrtami,
-        persistSession: !ssrOrtami,
-        detectSessionInUrl: false, // React Native: URL'den oturum yakalama yok
-        flowType: 'pkce', // mobil OAuth için güvenli akış (code → session)
-      },
-    })
-  : null;
+  // Koşullu require — yalnız üyelik AÇIKKEN modülleri yükler.
+  require('react-native-url-polyfill/auto'); // Supabase fetch/URL için (RN'de global URL eksik)
+  const { createClient } = require('@supabase/supabase-js') as typeof import('@supabase/supabase-js');
+
+  // Web SSR (Node ön-render) sırasında window/localStorage yok → no-op storage.
+  const ssrOrtami = Platform.OS === 'web' && typeof window === 'undefined';
+  const oturumStorage = ssrOrtami
+    ? { getItem: async () => null, setItem: async () => {}, removeItem: async () => {} }
+    : AsyncStorage;
+
+  return createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth: {
+      storage: oturumStorage,
+      autoRefreshToken: !ssrOrtami,
+      persistSession: !ssrOrtami,
+      detectSessionInUrl: false, // React Native: URL'den oturum yakalama yok
+      flowType: 'pkce', // mobil OAuth için güvenli akış (code → session)
+    },
+  });
+}
+
+export const supabase: SupabaseClient | null = istemciOlustur();

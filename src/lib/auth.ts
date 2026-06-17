@@ -12,9 +12,9 @@ import * as WebBrowser from 'expo-web-browser';
 
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
-// Tarayıcı oturumu sonrası askıda kalanı temizler (Expo gereği). SSR'de (web + window
-// yok) çağırma → "window is not defined" çökmesini önle.
-if (!(Platform.OS === 'web' && typeof window === 'undefined')) {
+// Tarayıcı oturumu sonrası askıda kalanı temizler (Expo gereği). Yalnız üyelik AÇIKKEN
+// ve SSR olmayan ortamda çağrılır (v1'de gereksiz native çağrı + "window yok" çökmesi yok).
+if (supabaseHazir && !(Platform.OS === 'web' && typeof window === 'undefined')) {
   WebBrowser.maybeCompleteAuthSession();
 }
 
