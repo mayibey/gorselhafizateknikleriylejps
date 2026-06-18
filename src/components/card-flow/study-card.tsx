@@ -28,10 +28,10 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
     return (
       <>
         <Pressable style={styles.card} onPress={() => setZoomAcik(true)}>
-          {/* TEK TİP STANDART: sabit kare alan + cover → her kart aynı boyut, tam genişlik
-              dolar (yan boşluk yok), alttaki Sesli Anlatım + Madde Metni hep sığar. Kare
-              olmayan görsel merkezden kırpılır; tam hali görsele dokununca (zoom) görünür. */}
-          <Image source={gorsel} style={styles.gorsel} contentFit="cover" />
+          {/* TEK TİP STANDART KUTU: sabit dikey oran + contain → her kart aynı ölçü, görselin
+              TAMAMI görünür (üst/alt kırpılmaz). Kutuyla aynı oranda olmayan görselde ince
+              kenar boşluğu kalır → kalıcı çözüm: kaynak görselleri bu orana (kare/dikey) üret. */}
+          <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
           {filigran}
         </Pressable>
         <GorselZoom gorsel={gorsel} gorunur={zoomAcik} onKapat={() => setZoomAcik(false)} />
@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
   },
   gorsel: {
     width: '100%',
-    // Sabit kare oran → tüm kartlar tek tip; portre görseller kontrolleri aşağı itmez.
-    aspectRatio: 1,
+    // Sabit DİKEY oran (4:5) → tüm kartlar tek tip kutu; görsel contain ile tam sığar.
+    aspectRatio: 0.8,
   },
   baslikSerit: {
     backgroundColor: Palette.kirmizi,

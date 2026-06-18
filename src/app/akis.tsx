@@ -244,8 +244,12 @@ export default function AkisScreen() {
                 </Pressable>
               </View>
             </GestureDetector>
+          </ScrollView>
 
-            {/* Sesli anlatım (TTS) — metni olan kartta görünür; kart değişince remount → durur. */}
+          {/* Alt pinli blok: Sesli Anlatım + Madde Metni + cevap butonları — hep görünür,
+              en altta butonların hemen üstünde. (Görsel kutusu yukarıda sabit ölçüde.) */}
+          <View style={styles.altBlok}>
+            {/* Sesli anlatım (TTS) — kart değişince remount → durur. */}
             <TtsBar
               key={queue[index].id}
               gorselYolu={queue[index].gorsel_yolu}
@@ -271,9 +275,7 @@ export default function AkisScreen() {
               </View>
             )}
 
-            {/* Hata/öneri bildir — aktif kart bilgisi otomatik gömülür (Formspree).
-               Posta adresi (FORMSPREE_ENDPOINT) boşken GİZLİ: mesaj hiçbir yere gitmeyeceği
-               için "gönderildi" yanılgısı olmasın. Adres config'e yazılınca otomatik geri gelir. */}
+            {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli (yanıltıcı "gönderildi" olmasın). */}
             {FORMSPREE_ENDPOINT ? (
               <Pressable
                 style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
@@ -294,10 +296,7 @@ export default function AkisScreen() {
                 </AppText>
               </Pressable>
             ) : null}
-          </ScrollView>
 
-          {/* Cevap butonları — ScrollView'ın dışında, kolonun altına sabit */}
-          <View style={styles.altBlok}>
             {cevapHatasi ? (
               <AppText variant="kucuk" color="kirmizi" bold style={styles.cevapHata}>
                 Kaydedilemedi, tekrar dene.
