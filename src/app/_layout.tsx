@@ -10,6 +10,7 @@ import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { AuthProvider } from '@/lib/auth-context';
 import { BransProvider, useBrans } from '@/lib/brans-context';
+import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
 
 export default function RootLayout() {
   useEffect(() => {
@@ -23,9 +24,11 @@ export default function RootLayout() {
         <StatusBar style="light" />
         <AuthProvider>
           <BransProvider>
-            <ErrorBoundary>
-              <RootNavigator />
-            </ErrorBoundary>
+            <RutbeProvider>
+              <ErrorBoundary>
+                <RootNavigator />
+              </ErrorBoundary>
+            </RutbeProvider>
           </BransProvider>
         </AuthProvider>
       </SafeAreaProvider>
@@ -34,17 +37,22 @@ export default function RootLayout() {
 }
 
 function RootNavigator() {
-  const { brans, yukleniyor } = useBrans();
+  const { brans, yukleniyor: bransYukleniyor } = useBrans();
+  const { rutbe, yukleniyor: rutbeYukleniyor } = useRutbe();
   const segments = useSegments();
   const router = useRouter();
 
-  // Guard: branş yoksa onboarding'e götür (uygulama tamamen offline çalışır).
+  const yukleniyor = bransYukleniyor || rutbeYukleniyor;
+  // Onboarding branş + rütbe ister (ikisi de müfredat filtresi). İkisi de varsa içeri al.
+  const eksik = !brans || !rutbe;
+
+  // Guard: branş veya rütbe yoksa onboarding'e götür (uygulama tamamen offline çalışır).
   useEffect(() => {
     if (yukleniyor) return;
     const onboardingDe = segments[0] === 'onboarding';
-    if (!brans && !onboardingDe) router.replace('/onboarding');
-    else if (brans && onboardingDe) router.replace('/');
-  }, [brans, yukleniyor, segments, router]);
+    if (eksik && !onboardingDe) router.replace('/onboarding');
+    else if (!eksik && onboardingDe) router.replace('/');
+  }, [eksik, yukleniyor, segments, router]);
 
   // (Bildirim dinleyicisi v1'de kaldırıldı — expo-notifications çıkarıldı.)
 
