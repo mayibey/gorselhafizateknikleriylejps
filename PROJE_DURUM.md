@@ -14,8 +14,9 @@
 > 3. **`yasal-metin.ts`** (Şartlar) → yeni "2) RESMÎ KAYNAK" maddesi (URL'le); sonraki maddeler 3-7'ye kaydı.
 > 4. **`docs/PLAY_MAGAZA_GIRISI.md`** → açıklamaya "KANUN METİNLERİNİN KAYNAĞI" bölümü + URL; "Orijinal kanun metni" maddesine kaynak notu. (`docs/MAGAZA_LISTELEME.md` eski taslak da aynı şekilde güçlendirildi.) tsc 0 hata.
 >
-> **AÇIK KARAR (kullanıcı):** Google "uygulama güncellemenizi gönderin" diyor ama kanıt = açıklama. İki yol: **(A hızlı)** sadece mağaza açıklamasını güncelle + yeniden gönder (yeni build YOK; kanıt açıklamaydı). **(B sağlam)** in-app kaynak linkli **vCode 5** build al + açıklamayı güncelle + gönder. B daha garantili (in-app link de eklenmiş olur) ama rebuild ister. Kod her iki yola da hazır.
-> **BEKLEYEN (kullanıcı, Play Console):** açıklamayı `PLAY_MAGAZA_GIRISI.md`'den **birebir** güncelle (KAYNAK bölümü dahil) → (B ise vCode 5 yükle) → incelemeye gönder.
+> **KARAR (kullanıcı): B — SAĞLAM YOL.** In-app kaynak linkli **vCode 5** build alındı + açıklama güncellendi. (A = sadece açıklama, build yok seçeneği vardı; kullanıcı garantili olanı seçti.)
+> **BUILD ALINDI ✅ (18 Haz 08:15):** versionCode 4→5 (app.json). `npx expo prebuild -p android --no-install` (config plugin imza/arm64/heap otomatik) → `gradlew :app:bundleRelease` → BUILD SUCCESSFUL (1m21s). `D:\mevzu-yerel.aab` (162.8 MB, vCode 5) hazır; **imza CN=MEVZU-JSPS doğrulandı** (keytool, vCode 4 ile aynı upload key). Madde metni panelinde tıklanabilir mevzuat.gov.tr kaynak satırı artık build'de.
+> **BEKLEYEN (kullanıcı, Play Console — kod değil):** (1) `D:\mevzu-yerel.aab`'yi (vCode 5) aynı kapalı test track'ine yeni sürüm olarak yükle. (2) Mağaza açıklamasını `PLAY_MAGAZA_GIRISI.md`'den **birebir** güncelle (**KANUN METİNLERİNİN KAYNAĞI** bölümü dahil). (3) İncelemeye gönder.
 >
 > ---
 >
