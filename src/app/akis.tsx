@@ -3,6 +3,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as ScreenCapture from 'expo-screen-capture';
 import { useCallback, useEffect, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { MaddeMetniSheet } from '@/components/card-flow/madde-metni-sheet';
@@ -26,6 +27,9 @@ import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
 type Cozulen = { tekrar: number; yeni: number };
+
+// Swipe için yatay eşik (px): bundan fazla yatay sürükleme kartı değiştirir.
+const SWIPE_ESIK = 45;
 
 /** Günlük kuyruğu kullanıcının "oturum başına kart" hedefine göre sınırlar (Eğitim Planı). */
 async function gunlukSinirli(): Promise<QueueCard[]> {
@@ -122,6 +126,18 @@ export default function AkisScreen() {
     ? `${cozulen.tekrar + cozulen.yeni} kart çalıştın.`
     : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`;
 
+  // Kart üzerinde yatay swipe = ileri/geri (oklarla aynı; SADECE index, SRS'e dokunmaz).
+  // Yatay-only: tap zoom'a, dikey sürükleme ScrollView'a kalır. runOnJS → worklet gerekmez.
+  const sonIdx = (queue?.length ?? 1) - 1;
+  const kartKaydir = Gesture.Pan()
+    .runOnJS(true)
+    .activeOffsetX([-20, 20])
+    .failOffsetY([-15, 15])
+    .onEnd((e) => {
+      if (e.translationX <= -SWIPE_ESIK) setIndex((i) => Math.min(sonIdx, i + 1));
+      else if (e.translationX >= SWIPE_ESIK) setIndex((i) => Math.max(0, i - 1));
+    });
+
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
       {/* Üst krom: kapat + aktif kart meta (madde no + ilerleme) + blok rozeti */}
@@ -204,27 +220,30 @@ export default function AkisScreen() {
               <View style={[styles.fill, { width: `${((index + 1) / queue.length) * 100}%` }]} />
             </View>
 
-            {/* Kartı saran katman: sol/sağ kenarda gezinme okları (saf görünüm —
-                SRS'e dokunmaz, yalnız index değiştirir). İlk kartta sol, son kartta sağ pasif. */}
-            <View style={styles.kartSar}>
-              <StudyCard card={queue[index]} />
-              <Pressable
-                disabled={index === 0}
-                onPress={() => setIndex((i) => Math.max(0, i - 1))}
-                style={[styles.okBtn, styles.okSol, index === 0 && styles.okPasif]}
-                hitSlop={8}
-                accessibilityLabel="Önceki kart">
-                <MaterialCommunityIcons name="chevron-left" size={32} color={Palette.beyaz} />
-              </Pressable>
-              <Pressable
-                disabled={index >= queue.length - 1}
-                onPress={() => setIndex((i) => Math.min(queue.length - 1, i + 1))}
-                style={[styles.okBtn, styles.okSag, index >= queue.length - 1 && styles.okPasif]}
-                hitSlop={8}
-                accessibilityLabel="Sonraki kart">
-                <MaterialCommunityIcons name="chevron-right" size={32} color={Palette.beyaz} />
-              </Pressable>
-            </View>
+            {/* Kartı saran katman: yatay swipe (ileri/geri) + sol/sağ kenarda gezinme okları
+                (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir). İlk kartta sol, son
+                kartta sağ ok pasif. */}
+            <GestureDetector gesture={kartKaydir}>
+              <View style={styles.kartSar}>
+                <StudyCard card={queue[index]} />
+                <Pressable
+                  disabled={index === 0}
+                  onPress={() => setIndex((i) => Math.max(0, i - 1))}
+                  style={[styles.okBtn, styles.okSol, index === 0 && styles.okPasif]}
+                  hitSlop={8}
+                  accessibilityLabel="Önceki kart">
+                  <MaterialCommunityIcons name="chevron-left" size={32} color={Palette.beyaz} />
+                </Pressable>
+                <Pressable
+                  disabled={index >= queue.length - 1}
+                  onPress={() => setIndex((i) => Math.min(queue.length - 1, i + 1))}
+                  style={[styles.okBtn, styles.okSag, index >= queue.length - 1 && styles.okPasif]}
+                  hitSlop={8}
+                  accessibilityLabel="Sonraki kart">
+                  <MaterialCommunityIcons name="chevron-right" size={32} color={Palette.beyaz} />
+                </Pressable>
+              </View>
+            </GestureDetector>
 
             {/* Sesli anlatım (TTS) — metni olan kartta görünür; kart değişince remount → durur. */}
             <TtsBar
