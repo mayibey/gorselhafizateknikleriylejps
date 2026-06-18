@@ -21,6 +21,15 @@ export const GIZLILIK_URL = '';
 export const SARTLAR_URL = '';
 
 /**
+ * Resmî mevzuat kaynağı. Google "Yanıltıcı İddialar Politikası" (resmî bilgi gösteren
+ * uygulamalar orijinal kaynağa net ve erişilebilir link vermek ZORUNDA) gereği:
+ * uygulamada gösterilen tüm kanun/madde metinlerinin resmî kaynağı T.C. Mevzuat Bilgi
+ * Sistemi'dir. Madde metni panelinde tıklanabilir kaynak satırı olarak gösterilir +
+ * mağaza açıklamasında belirtilir. DEĞİŞTİRME (resmî .gov adresi).
+ */
+export const MEVZUAT_KAYNAK_URL = 'https://www.mevzuat.gov.tr';
+
+/**
  * Supabase (Gmail ile giriş / üyelik altyapısı).
  * BOŞ olduğu sürece üyelik UYKUDA: uygulama %100 offline çalışır, giriş ekranı
  * "yapılandırılmadı" der, KİLİTLENME yok. Aktifleştirmek için docs/UYELIK_KURULUM.md:

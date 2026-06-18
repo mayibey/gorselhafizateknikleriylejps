@@ -16,6 +16,7 @@ Kanunları görsel karikatür kartlar + aralıklı tekrarla kalıcı öğren.
 ```
 
 ## Tam açıklama (max 4000)
+> NOT (2. red — "Yanıltıcı İddialar Politikası", 18 Haz 2026): Muafiyet ibaresi kabul edildi; bu kez sorun **"Resmi Bilgilerle İlgili Kaynak Bağlantısı Eksik"** — uygulama resmî kanun metni gösteriyor ama orijinal kaynağa (mevzuat.gov.tr) net/erişilebilir link yoktu. Düzeltme: açıklamaya **"KANUN METİNLERİNİN KAYNAĞI"** bölümü + URL eklendi; uygulama içinde madde metni panelinde tıklanabilir kaynak satırı eklendi (kod). Bu açıklamayı Play Console'a **birebir** kopyala-yapıştır.
 ```
 ÖNEMLİ: BU UYGULAMA HİÇBİR RESMÎ KURUMLA (JANDARMA GENEL KOMUTANLIĞI, SAHİL GÜVENLİK KOMUTANLIĞI, JANDARMA VE SAHİL GÜVENLİK AKADEMİSİ VB.) BAĞLANTILI, ONLAR TARAFINDAN DESTEKLENEN YA DA YETKİLENDİRİLEN BİR UYGULAMA DEĞİLDİR. BAĞIMSIZ BİR SINAV HAZIRLIK UYGULAMASIDIR. "JSPS" YALNIZCA HAZIRLANILAN SINAVI TANIMLAMAK İÇİN KULLANILMIŞTIR.
 
@@ -31,10 +32,15 @@ Kuru kanun metnini ezberlemek zordur ve çabuk unutulur. Mevzu her kanun maddesi
 • Aralıklı tekrar (Leitner) — bilimsel temelli kalıcı öğrenme
 • Branşına göre mevzuat — Jandarma / Sahil Güvenlik
 • Günlük çalışma kuyruğu — o gün ne çalışacağını uygulama söyler
-• Orijinal kanun metni — kartın yanında ilgili maddenin tam metni
+• Orijinal kanun metni — kartın yanında ilgili maddenin tam metni (kaynak: T.C. resmî mevzuat veritabanı, mevzuat.gov.tr)
 • Sesli dinleme — kartları dinleyerek tekrar et, ileri/geri al
 • İlerleme takibi — kutu dağılımı ve hazırlık yüzdesi
 • %100 çevrimdışı — internet gerekmez, hiçbir veri toplanmaz
+
+KANUN METİNLERİNİN KAYNAĞI
+Uygulamada gösterilen tüm kanun ve mevzuat metinleri, Türkiye Cumhuriyeti resmî mevzuat veritabanından (Mevzuat Bilgi Sistemi) alınmıştır:
+https://www.mevzuat.gov.tr
+Metinler bilgilendirme amaçlıdır; güncel ve bağlayıcı sürüm için daima resmî kaynak esastır. İlgili kaynak bağlantısına uygulama içinde madde metni ekranından da erişilebilir.
 
 KİMLER İÇİN?
 JSPS / Jandarma ve Sahil Güvenlik Akademisi giriş ve terfi sınavlarına hazırlanan herkes.

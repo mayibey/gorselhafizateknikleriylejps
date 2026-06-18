@@ -4,7 +4,22 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 18 Haziran 2026
 
-> # 🔴 RED GELDİ — KİMLİĞE BÜRÜNME (Impersonation) — 18 Haz
+> # 🔴 2. RED — YANILTICI İDDİALAR (Resmî Kaynak Linki Eksik) — 18 Haz
+>
+> **vCode 4 kapalı test REDDEDİLDİ (2. kez, FARKLI sebep).** Bu kez **"Yanıltıcı İddialar Politikası"** — alt başlık: **"Resmi Bilgilerle İlgili Kaynak Bağlantısı Eksik"**. Muafiyet ibaresi ARTIK KABUL (Google red metninde alıntılıyor → impersonation sorunu çözülmüş). Yeni sorun: uygulama **resmî kanun metinleri** gösteriyor ama orijinal kaynağa (.gov, mevzuat.gov.tr) **net ve erişilebilir URL/bağlantı yoktu**. Flag'lenen yer: **Tam açıklama (tr-TR)**.
+>
+> **YAPILDI (kod + docs, 18 Haz):** Google'ın "düzeltme yöntemi" maddelerine birebir:
+> 1. **`config.ts`** → `MEVZUAT_KAYNAK_URL = 'https://www.mevzuat.gov.tr'` (tek kaynak sabiti).
+> 2. **`madde-metni-sheet.tsx`** → resmî metin panelinin altına **sabit, tıklanabilir** "Kaynak: mevzuat.gov.tr (T.C. resmî mevzuat veritabanı)" satırı (`Linking.openURL`; ScrollView flex:1 → kaynak şeridi altta sabit). "net ve erişilebilir URL/bağlantı" şartını birebir karşılar.
+> 3. **`yasal-metin.ts`** (Şartlar) → yeni "2) RESMÎ KAYNAK" maddesi (URL'le); sonraki maddeler 3-7'ye kaydı.
+> 4. **`docs/PLAY_MAGAZA_GIRISI.md`** → açıklamaya "KANUN METİNLERİNİN KAYNAĞI" bölümü + URL; "Orijinal kanun metni" maddesine kaynak notu. (`docs/MAGAZA_LISTELEME.md` eski taslak da aynı şekilde güçlendirildi.) tsc 0 hata.
+>
+> **AÇIK KARAR (kullanıcı):** Google "uygulama güncellemenizi gönderin" diyor ama kanıt = açıklama. İki yol: **(A hızlı)** sadece mağaza açıklamasını güncelle + yeniden gönder (yeni build YOK; kanıt açıklamaydı). **(B sağlam)** in-app kaynak linkli **vCode 5** build al + açıklamayı güncelle + gönder. B daha garantili (in-app link de eklenmiş olur) ama rebuild ister. Kod her iki yola da hazır.
+> **BEKLEYEN (kullanıcı, Play Console):** açıklamayı `PLAY_MAGAZA_GIRISI.md`'den **birebir** güncelle (KAYNAK bölümü dahil) → (B ise vCode 5 yükle) → incelemeye gönder.
+>
+> ---
+>
+> # 🔴 1. RED — KİMLİĞE BÜRÜNME (Impersonation) — 18 Haz (ÇÖZÜLDÜ)
 >
 > **vCode 3 kapalı test REDDEDİLDİ.** Sebep: **Google Play "Kimliğe Bürünme Politikası" ihlali** (içerik değil, marka/ikon). 17 Haz itibarıyla uygulama Play'de kullanılamaz. İki tetikleyici:
 > 1. **Yanıltıcı Başlık** — mağaza adı **"JSPS"** (resmî kurum kısaltması, "resmî değil" diye ayrılmıyor).

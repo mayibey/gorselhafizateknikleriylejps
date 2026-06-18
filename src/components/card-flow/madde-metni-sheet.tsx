@@ -1,7 +1,8 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Linking, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { MEVZUAT_KAYNAK_URL } from '@/constants/config';
 import { BottomTabInset, Palette, Spacing } from '@/constants/theme';
 import { maddeMetni } from '@/db/madde-metinleri';
 
@@ -56,11 +57,25 @@ export function MaddeMetniSheet({
 
         {/* İçerik: metin varsa scroll'lanan tam metin, yoksa "yakında" */}
         {metin ? (
-          <ScrollView contentContainerStyle={styles.govdeContent}>
-            <AppText variant="govde" style={styles.metin}>
-              {metin}
-            </AppText>
-          </ScrollView>
+          <>
+            <ScrollView style={styles.scroll} contentContainerStyle={styles.govdeContent}>
+              <AppText variant="govde" style={styles.metin}>
+                {metin}
+              </AppText>
+            </ScrollView>
+            {/* Resmî kaynak atfı (Google "Yanıltıcı İddialar" — resmî bilgi kaynağı
+                tıklanabilir link olarak görünür olmalı). Panel altında sabit kalır. */}
+            <Pressable
+              style={({ pressed }) => [styles.kaynak, pressed && styles.pressed]}
+              onPress={() => void Linking.openURL(MEVZUAT_KAYNAK_URL)}
+              accessibilityRole="link"
+              accessibilityLabel="Resmî kaynak: mevzuat.gov.tr (yeni sekmede açılır)">
+              <MaterialCommunityIcons name="open-in-new" size={14} color={Palette.solukMetin} />
+              <AppText variant="kucuk" color="solukMetin" style={styles.kaynakMetin}>
+                Kaynak: mevzuat.gov.tr (T.C. resmî mevzuat veritabanı)
+              </AppText>
+            </Pressable>
+          </>
         ) : (
           <View style={styles.bos}>
             <MaterialCommunityIcons
@@ -138,14 +153,31 @@ const styles = StyleSheet.create({
   pressed: {
     opacity: 0.7,
   },
+  scroll: {
+    // Kaynak satırı panel altına sabitlensin diye scroll esner.
+    flex: 1,
+  },
   govdeContent: {
     paddingTop: Spacing.two,
-    // Son satır görünür kalsın.
-    paddingBottom: BottomTabInset + Spacing.five,
+    // Son satır kaynak şeridinin üstünde görünür kalsın.
+    paddingBottom: Spacing.three,
   },
   metin: {
     // Yorgun gözle uzun metin için rahat satır yüksekliği.
     lineHeight: 28,
+  },
+  kaynak: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    borderTopWidth: 1,
+    borderTopColor: Palette.kenarlik,
+    paddingTop: Spacing.two,
+    paddingBottom: BottomTabInset + Spacing.two,
+  },
+  kaynakMetin: {
+    textDecorationLine: 'underline',
   },
   bos: {
     flex: 1,

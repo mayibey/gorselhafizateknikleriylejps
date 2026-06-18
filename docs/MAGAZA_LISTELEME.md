@@ -20,9 +20,13 @@ kapsamına birebir uygun "patika" ile çalış.
 • Patika — her kanunun sınav kapsamındaki maddeleri tek tek, sırayla
 • Sicil & Ödül-Ceza — kanun bitince takdir, ihmal edince geri-besleme; askeri disiplin temasıyla
 • Eğitim Planı — sabah/gece/fırsat eğitimi hatırlatmaları
-• Madde metinleri — resmî tam metin, çevrimdışı erişim
+• Madde metinleri — resmî tam metin, çevrimdışı erişim (kaynak: mevzuat.gov.tr)
 
 Tamamen çevrimdışı çalışır; hesap açmana gerek yok, verilerin cihazında kalır.
+
+KANUN METİNLERİNİN KAYNAĞI: Uygulamadaki tüm kanun ve mevzuat metinleri Türkiye Cumhuriyeti
+resmî mevzuat veritabanından (Mevzuat Bilgi Sistemi) alınmıştır: https://www.mevzuat.gov.tr
+Güncel ve bağlayıcı sürüm için daima resmî kaynak esastır.
 
 Not: Bu uygulama bağımsız bir hazırlık aracıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik
 Komutanlığı veya herhangi bir resmî kurumla bağlantılı değildir. Sınav başarısını garanti etmez;

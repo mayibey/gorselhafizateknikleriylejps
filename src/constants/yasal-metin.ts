@@ -57,20 +57,25 @@ Bir çalışma aracıdır; SINAVI KAZANACAĞINI GARANTİ ETMEZ. İçerikler bilg
 resmi/hukuki danışmanlık değildir; güncel resmi mevzuat esastır.
 ${RESMI_BAGLANTI_YOK}
 
-2) FİKRİ MÜLKİYET
+2) RESMÎ KAYNAK
+Uygulamada gösterilen kanun ve mevzuat metinleri Türkiye Cumhuriyeti resmî mevzuat
+veritabanından (Mevzuat Bilgi Sistemi — https://www.mevzuat.gov.tr) alınmıştır. Metinler
+bilgilendirme amaçlıdır; güncel ve bağlayıcı sürüm için daima resmî kaynak esastır.
+
+3) FİKRİ MÜLKİYET
 Mevzuat metinleri kamuya açıktır. Özgün görseller, karikatürler, tasarım, marka ve yazılım
 MEVZU-JSPS'na aittir; izinsiz kopyalanamaz. Filigranlı görsellerin yetkisiz paylaşımı yasaktır.
 
-3) ÜCRET
+4) ÜCRET
 Uygulama şu an ücretsizdir. İleride ücretli özellik eklenirse önceden bilgilendirilir.
 
-4) SORUMLULUĞUN SINIRI
+5) SORUMLULUĞUN SINIRI
 Uygulama "olduğu gibi" sunulur. Hukukun izin verdiği ölçüde dolaylı zararlardan sorumlu değiliz.
 
-5) FESİH
+6) FESİH
 Uygulamayı dilediğin an kaldırabilirsin. Şartları ihlal halinde erişimini sonlandırabiliriz.
 
-6) UYGULANACAK HUKUK
+7) UYGULANACAK HUKUK
 Türkiye Cumhuriyeti hukuku uygulanır.
 
 İletişim: dev.ademyilmaz@gmail.com`;
