@@ -8,22 +8,40 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getAllCards, getCardCount, getDailyQueue, getStudyCards, getStudyDays } from '@/db/database';
-import type { CardWithLaw } from '@/db/schema';
+import {
+  getAllCards,
+  getBranches,
+  getCardCount,
+  getDailyQueue,
+  getPerformans,
+  getStudyCards,
+  getStudyDays,
+} from '@/db/database';
+import type { Branch, CardWithLaw } from '@/db/schema';
+import { useBrans } from '@/lib/brans-context';
+import { getAyar } from '@/lib/bildirim';
+import { zayifKartlar } from '@/lib/performans';
 import type { QueueCard } from '@/lib/queue';
+import { useRutbe } from '@/lib/rutbe-context';
+import { RUTBELER } from '@/lib/rutbe-store';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 
 export default function KarargahScreen() {
   const router = useRouter();
+  const { brans } = useBrans();
+  const { rutbe } = useRutbe();
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
   const [gunMadde, setGunMadde] = useState<CardWithLaw | null>(null);
+  const [branches, setBranches] = useState<Branch[] | null>(null);
+  const [hedef, setHedef] = useState<number | null>(null);
+  const [bugunSayi, setBugunSayi] = useState(0);
+  const [zayifSayi, setZayifSayi] = useState(0);
   const [hata, setHata] = useState(false);
 
-  // Ekrana her dönüldüğünde (akıştan sonra) kuyruğu + hazırlık % + nöbet serisini tazele.
-  // Kuyruk = ana veri (hata → ekran-içi retry). İstatistikler degrade olur ("—"), gating yapmaz.
+  // Ekrana her dönüldüğünde tazele. Kuyruk = ana veri (hata → retry); gerisi degrade olur.
   const yukle = useCallback(() => {
     setHata(false);
     void getDailyQueue()
@@ -35,13 +53,28 @@ export default function KarargahScreen() {
     void getStudyDays()
       .then((gunler) => setStreak(hesaplaStreak(gunler, bugunISO())))
       .catch(() => setStreak(null));
-    // Günün Maddesi: gerçek başlıklı kartlardan güne göre deterministik seçim (placeholder yok).
-    void getAllCards()
-      .then((cards) => {
+    void getBranches()
+      .then(setBranches)
+      .catch(() => {});
+    void getAyar()
+      .then((a) => setHedef(a.gunlukKart))
+      .catch(() => {});
+    // Günün Maddesi + bugün çalışılan + zayıf mevzi — tek performans+kart yüklemesinden.
+    void Promise.all([getPerformans(), getAllCards()])
+      .then(([perf, cards]) => {
         const adaylar = cards.filter((c) => !/^Madde\s/i.test(c.baslik));
-        if (adaylar.length === 0) return setGunMadde(null);
-        const gun = Number(bugunISO().split('-').join('')) || 0;
-        setGunMadde(adaylar[gun % adaylar.length]);
+        if (adaylar.length > 0) {
+          const gun = Number(bugunISO().split('-').join('')) || 0;
+          setGunMadde(adaylar[gun % adaylar.length]);
+        } else {
+          setGunMadde(null);
+        }
+        const bugun = bugunISO();
+        const bugunKartlar = new Set(
+          perf.filter((p) => p.tarih === bugun && p.kaynak === 'calisma').map((p) => p.card_id),
+        );
+        setBugunSayi(bugunKartlar.size);
+        setZayifSayi(zayifKartlar(perf, cards).length);
       })
       .catch(() => setGunMadde(null));
   }, []);
@@ -51,6 +84,8 @@ export default function KarargahScreen() {
   const tekrarSayisi = queue?.filter((c) => !c.yeni).length ?? 0;
   const yeniSayisi = queue?.filter((c) => c.yeni).length ?? 0;
   const bos = queue !== null && queue.length === 0;
+  const bransAd = branches?.find((b) => b.slug === brans)?.ad ?? null;
+  const rutbeAd = RUTBELER.find((r) => r.slug === rutbe)?.ad ?? null;
 
   if (hata) {
     return (
@@ -76,6 +111,19 @@ export default function KarargahScreen() {
 
   return (
     <Screen title="Karargah">
+      {/* A) Selamlama + branş/rütbe rozeti */}
+      <View style={styles.selam}>
+        <AppText variant="altBaslik" bold>
+          Göreve hazır!
+        </AppText>
+        {bransAd || rutbeAd ? (
+          <View style={styles.rozetSatir}>
+            {bransAd ? <Chip ikon="account-group" metin={bransAd} /> : null}
+            {rutbeAd ? <Chip ikon="chevron-triple-up" metin={rutbeAd} /> : null}
+          </View>
+        ) : null}
+      </View>
+
       {/* Devam Et — kuyruk doluysa akışa götürür; boşsa "bugünlük bitti" */}
       {bos ? (
         <View style={[styles.devamEt, styles.devamEtBitti]}>
@@ -113,22 +161,68 @@ export default function KarargahScreen() {
         </Pressable>
       )}
 
-      {/* Bugünün Görevi — sayılar kuyruktan türetilir */}
-      <Card>
-        <AppText variant="etiket" color="solukMetin" bold>
-          BUGÜNÜN GÖREVİ
-        </AppText>
+      {/* B) Bugünün Görevi — günlük hedef ilerleme çubuğu + Tekrar/Yeni */}
+      <View style={styles.card}>
+        <View style={styles.gorevBaslik}>
+          <AppText variant="etiket" color="solukMetin" bold>
+            BUGÜNÜN GÖREVİ
+          </AppText>
+          {hedef && hedef > 0 ? (
+            <AppText variant="etiket" color="solukMetin">
+              {Math.min(bugunSayi, hedef)} / {hedef} kart
+            </AppText>
+          ) : null}
+        </View>
+        {hedef && hedef > 0 ? <Bar oran={bugunSayi / hedef} /> : null}
         <View style={styles.gorevSatir}>
           <Gorev sayi={tekrarSayisi} etiket="Tekrar" />
           <Gorev sayi={yeniSayisi} etiket="Yeni" />
+          <Gorev sayi={bugunSayi} etiket="Bugün çalışılan" />
         </View>
-      </Card>
+      </View>
 
-      {/* Metrik kartları */}
+      {/* C) Zayıf mevzi kısayolu — zayıf kart varsa geri-besleme akışına götürür */}
+      {zayifSayi > 0 ? (
+        <Pressable
+          style={({ pressed }) => [styles.zayif, pressed && styles.pressed]}
+          onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}>
+          <MaterialCommunityIcons name="target" size={28} color={Palette.amber} />
+          <View style={styles.zayifMetin}>
+            <AppText variant="kucuk" color="amber" bold>
+              GERİ BESLEME
+            </AppText>
+            <AppText variant="kucuk" bold>
+              {zayifSayi} zayıf mevzi — şimdi çalış
+            </AppText>
+          </View>
+          <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+        </Pressable>
+      ) : null}
+
+      {/* D) Metrik kartları — görsel cila (hazırlık çubuğu + nöbet alevi) */}
       <View style={styles.metrikSatir}>
-        <Metrik deger={hazirlik === null ? '—' : `%${hazirlik}`} etiket="Hazırlık" />
-        {/* Nöbet serisi: kesintisiz çalışılan gün. 0 (veya kırık seri) → "—". */}
-        <Metrik deger={streak === null || streak === 0 ? '—' : `${streak}`} etiket="Nöbet serisi" />
+        <View style={[styles.card, styles.metrik]}>
+          <AppText variant="dev" bold>
+            {hazirlik === null ? '—' : `%${hazirlik}`}
+          </AppText>
+          <Bar oran={(hazirlik ?? 0) / 100} />
+          <AppText variant="kucuk" color="solukMetin">
+            Hazırlık
+          </AppText>
+        </View>
+        <View style={[styles.card, styles.metrik]}>
+          <View style={styles.nobetDeger}>
+            {streak && streak > 0 ? (
+              <MaterialCommunityIcons name="fire" size={22} color={Palette.amber} />
+            ) : null}
+            <AppText variant="dev" bold>
+              {streak === null || streak === 0 ? '—' : `${streak}`}
+            </AppText>
+          </View>
+          <AppText variant="kucuk" color="solukMetin">
+            Nöbet serisi
+          </AppText>
+        </View>
       </View>
 
       {/* Günün Maddesi — gerçek karta bağlı; tıkla → o kanunun patikası */}
@@ -153,8 +247,25 @@ export default function KarargahScreen() {
   );
 }
 
-function Card({ children }: { children: React.ReactNode }) {
-  return <View style={styles.card}>{children}</View>;
+function Chip({ ikon, metin }: { ikon: keyof typeof MaterialCommunityIcons.glyphMap; metin: string }) {
+  return (
+    <View style={styles.chip}>
+      <MaterialCommunityIcons name={ikon} size={14} color={Palette.lacivert} />
+      <AppText variant="etiket" color="lacivert" bold>
+        {metin}
+      </AppText>
+    </View>
+  );
+}
+
+/** İlerleme çubuğu (oran 0..1). */
+function Bar({ oran }: { oran: number }) {
+  const yuzde = Math.min(100, Math.max(0, oran * 100));
+  return (
+    <View style={styles.track}>
+      <View style={[styles.fill, { width: `${yuzde}%` }]} />
+    </View>
+  );
 }
 
 function Gorev({ sayi, etiket }: { sayi: number; etiket: string }) {
@@ -170,22 +281,28 @@ function Gorev({ sayi, etiket }: { sayi: number; etiket: string }) {
   );
 }
 
-function Metrik({ deger, etiket }: { deger: string; etiket: string }) {
-  return (
-    <View style={[styles.card, styles.metrik]}>
-      <AppText variant="dev" bold>
-        {deger}
-      </AppText>
-      <AppText variant="kucuk" color="solukMetin">
-        {etiket}
-      </AppText>
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
   pressed: {
     opacity: 0.85,
+  },
+  selam: {
+    gap: Spacing.two,
+  },
+  rozetSatir: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: Spacing.two,
+  },
+  chip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.half,
+    borderRadius: Radius.s,
   },
   devamEt: {
     flexDirection: 'row',
@@ -209,6 +326,11 @@ const styles = StyleSheet.create({
     padding: Spacing.three,
     gap: Spacing.two,
   },
+  gorevBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
   gorevSatir: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -217,6 +339,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
   },
+  zayif: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.amber,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+  },
+  zayifMetin: {
+    flex: 1,
+    gap: Spacing.half,
+  },
   metrikSatir: {
     flexDirection: 'row',
     gap: Spacing.three,
@@ -224,5 +360,21 @@ const styles = StyleSheet.create({
   metrik: {
     flex: 1,
     alignItems: 'center',
+  },
+  nobetDeger: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  track: {
+    width: '100%',
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: Palette.kenarlik,
+    overflow: 'hidden',
+  },
+  fill: {
+    height: '100%',
+    backgroundColor: Palette.lacivert,
   },
 });
