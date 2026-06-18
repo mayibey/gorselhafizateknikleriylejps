@@ -24,6 +24,10 @@
 
 ---
 
+## Denetim Tier 3 — ölü kod temizliği ✅
+`aa95ff4` sonrası: 11 kullanılmayan Expo-template dosyası silindi (themed-text/themed-view, hint-row, web-badge, ui/collapsible, animated-icon[.web], use-theme, use-color-scheme[.web], external-link) + `theme.ts`'ten ölü `Colors`/`Fonts`/`ThemeColor` export'ları (FontFamily korundu). Kapalı ölü küme — hiçbir aktif ekran kullanmıyordu. tsc + web export temiz.
+**Kalan denetim işleri:** Tier 1 (bildirim no-op/Eğitim Planı, metinsiz "madde metni" gri kutu, patika kartsız düğüm) · Tier 2 (patika N+1 perf).
+
 ## Doğal kümeler (sıralama için)
 - **A — Backend/üyelik (politika ağır, mağaza yeniden inceleme):** #1 + #2 + #13 → birlikte, ayrı bir faz (#13 filigran-kişiselleştirme #1 ile gelir).
 - **B — Logo/ikon:** #5 + #12 → tek build'de.

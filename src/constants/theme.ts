@@ -59,38 +59,6 @@ export const FiligranAci = '-30deg';
 /** Kart Akışı'nın "telefon kolonu" genişlik tavanı (web'de ortalanır, dar ekranda devreye girmez). */
 export const CardFlowMaxWidth = 460;
 
-// --- Aşağısı Expo template bileşenlerinin (themed-text vb.) geriye dönük uyumu içindir. ---
-
-export const Colors = {
-  light: {
-    text: '#000000',
-    background: Palette.kremZemin,
-    backgroundElement: Palette.kartKremi,
-    backgroundSelected: Palette.kenarlik,
-    textSecondary: Palette.solukMetin,
-  },
-  dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
-  },
-} as const;
-
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
-
-export const Fonts = Platform.select({
-  ios: { sans: 'system-ui', serif: 'ui-serif', rounded: 'ui-rounded', mono: 'ui-monospace' },
-  default: { sans: 'normal', serif: 'serif', rounded: 'normal', mono: 'monospace' },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
-  },
-});
-
 /** Tek font ailesi (yeni JSPS ekranları için). */
 export const FontFamily = Platform.select({
   ios: 'system-ui',
