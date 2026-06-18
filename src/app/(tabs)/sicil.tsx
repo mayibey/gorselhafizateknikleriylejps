@@ -81,7 +81,7 @@ export default function SicilScreen() {
   const bransAd = branches?.find((b) => b.slug === brans)?.ad ?? '—';
 
   return (
-    <Screen title="Sicil">
+    <Screen title="Evsaf">
       <Pressable
         style={({ pressed }) => [styles.bransKart, pressed && styles.pressed]}
         onPress={() => router.push('/brans-sec')}>

@@ -38,7 +38,7 @@ export default function TabsLayout() {
         name="tatbikat"
         options={{ title: 'Tatbikat', tabBarIcon: icon('target'), href: null }}
       />
-      <Tabs.Screen name="sicil" options={{ title: 'Sicil', tabBarIcon: icon('account') }} />
+      <Tabs.Screen name="sicil" options={{ title: 'Evsaf', tabBarIcon: icon('account') }} />
     </Tabs>
   );
 }

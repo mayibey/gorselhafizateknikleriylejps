@@ -16,7 +16,7 @@ export default function OnboardingScreen() {
   return (
     <BransSecici
       baslik="Branşını Seç"
-      altyazi="Mevzuatın buna göre filtrelenecek. Sonradan Sicil'den değiştirebilirsin."
+      altyazi="Mevzuatın buna göre filtrelenecek. Sonradan Evsaf'tan değiştirebilirsin."
       onSelect={sec}
     />
   );
