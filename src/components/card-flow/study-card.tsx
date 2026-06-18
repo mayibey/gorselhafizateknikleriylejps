@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useEffect, useState } from 'react';
-import { Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 
 import { GorselZoom } from '@/components/card-flow/gorsel-zoom';
 import { Watermark } from '@/components/card-flow/watermark';
@@ -18,11 +18,6 @@ import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
 export function StudyCard({ card }: { card: CardWithSrs }) {
   const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
   const { kimlik } = useCihazKimlik();
-  const { height: ekranY } = useWindowDimensions();
-  // Görsel yükseklik TAVANI: uzun (portre) görseller kartı şişirip alttaki Sesli Anlatım +
-  // Madde Metni'ni ekran dışına itmesin. Gerçek oran korunur (contain → bozulma yok);
-  // tavanı aşan görsel sığdırılır (yanları boş kalır). Ekrana göre uyarlanır, tabletlerde 460.
-  const gorselMaxY = Math.min(Math.round(ekranY * 0.5), 460);
   const [zoomAcik, setZoomAcik] = useState(false);
   // Görselin gerçek en-boy oranı (yüklenince ölçülür) → kutu görsele göre boyutlanır,
   // kare kalıba sığıp küçülmez. Kart değişince sıfırla.
@@ -39,7 +34,7 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
         <Pressable style={styles.card} onPress={() => setZoomAcik(true)}>
           <Image
             source={gorsel}
-            style={[styles.gorsel, { aspectRatio: oran ?? 1, maxHeight: gorselMaxY }]}
+            style={[styles.gorsel, { aspectRatio: oran ?? 1 }]}
             contentFit="contain"
             onLoad={(e) => {
               const w = e.source?.width;
