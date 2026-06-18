@@ -31,6 +31,7 @@ export default function TabsLayout() {
         name="mevzuat"
         options={{ title: 'Mevzuat', tabBarIcon: icon('book-open-variant') }}
       />
+      <Tabs.Screen name="ara" options={{ title: 'Ara', tabBarIcon: icon('magnify') }} />
       {/* Tatbikat (deneme/quiz) v1'de GİZLİ — içerik yok, boş sekme "yarım app" riski.
           href:null → sekme çubuğundan kalkar, rota+ekran v2 için kodda durur. */}
       <Tabs.Screen

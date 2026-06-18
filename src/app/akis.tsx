@@ -44,10 +44,11 @@ export default function AkisScreen() {
     };
   }, []);
   const router = useRouter();
-  const { lawId, bolumId, mod } = useLocalSearchParams<{
+  const { lawId, bolumId, mod, kart } = useLocalSearchParams<{
     lawId?: string;
     bolumId?: string;
     mod?: string;
+    kart?: string; // Arama'dan gelince: kuyrukta bu kart id'sinden başla.
   }>();
   const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
@@ -83,8 +84,17 @@ export default function AkisScreen() {
         : kanunModu
           ? getCardsByLaw(Number(lawId))
           : gunlukSinirli();
-    void p.then(setQueue).catch(() => setHata(true));
-  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId]);
+    void p
+      .then((q) => {
+        setQueue(q);
+        // Arama sonucundan gelindiyse eşleşen karta atla (yoksa baştan).
+        if (kart) {
+          const i = q.findIndex((c) => c.id === Number(kart));
+          if (i >= 0) setIndex(i);
+        }
+      })
+      .catch(() => setHata(true));
+  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId, kart]);
 
   useEffect(() => {
     yukle();
