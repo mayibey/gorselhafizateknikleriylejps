@@ -47,3 +47,6 @@ example
 
 # Yerel imza anahtarı (GİZLİ — repoya girmez)
 credentials/
+
+# JetBrains IDE ayarları (kişiye/makineye özel — repoya girmez)
+.idea/
