@@ -11,10 +11,13 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getLaws } from '@/db/database';
 import type { LawWithCount } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
+import { useRutbe } from '@/lib/rutbe-context';
+import { rutbeGorur } from '@/lib/rutbe-kapsam';
 
 export default function MevzuatScreen() {
   const router = useRouter();
   const { brans } = useBrans();
+  const { rutbe } = useRutbe();
   const [laws, setLaws] = useState<LawWithCount[] | null>(null);
   const [hata, setHata] = useState(false);
 
@@ -31,7 +34,9 @@ export default function MevzuatScreen() {
 
   // Şimdilik yalnız içeriği OLAN (kart sayısı > 0) müşterek kanunlar gösterilir.
   // İçeriği hazır olmayanlar gizli; branş konuları topluca "yakında".
-  const musterek = laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0) ?? [];
+  // + RÜTBE filtresi: kullanıcının rütbesinde olmayan kanunlar gizlenir (resmî Ek-1 kapsamı).
+  const musterek =
+    laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0 && rutbeGorur(l.id, rutbe)) ?? [];
 
   function kanunaGit(law: LawWithCount) {
     // Kanun → Patika (bölümler). Bölümü olmayan kanun patikada tek "Tüm Kartlar" düğümü gösterir.

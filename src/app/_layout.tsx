@@ -67,8 +67,10 @@ function RootNavigator() {
         <Stack.Screen name="geri-bildirim" />
         <Stack.Screen name="egitim-plani" />
         <Stack.Screen name="yasal" />
+        <Stack.Screen name="ayarlar" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="rutbe-sec" options={{ presentation: 'modal' }} />
         <Stack.Screen name="giris" options={{ presentation: 'modal' }} />
       </Stack>
       {/* Branş okunana kadar krom rengi overlay (flash önleme). */}

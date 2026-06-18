@@ -12,7 +12,6 @@ import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
 import {
   ekleSicilKaydi,
   getAllCards,
-  getBranches,
   getCardCount,
   getGeriBesDurum,
   getPerformans,
@@ -20,9 +19,7 @@ import {
   getStudyCards,
   sicilSifirla,
 } from '@/db/database';
-import type { Branch, GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
-import { useAuth } from '@/lib/auth-context';
-import { useBrans } from '@/lib/brans-context';
+import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
@@ -47,9 +44,6 @@ const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '�
 
 export default function SicilScreen() {
   const router = useRouter();
-  const { brans } = useBrans();
-  const { kullanici, hazir } = useAuth();
-  const [branches, setBranches] = useState<Branch[] | null>(null);
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
@@ -59,9 +53,6 @@ export default function SicilScreen() {
   // İstatistik = ana veri (hata → retry); branş adı + zayıf analizi degrade olur (ayrı catch).
   const yukle = useCallback(() => {
     setHata(false);
-    void getBranches()
-      .then(setBranches)
-      .catch(() => {});
     void Promise.all([getStudyCards(), getCardCount()])
       .then(([studied, toplam]) => setIst(hesaplaIstatistik(studied, toplam)))
       .catch(() => setHata(true));
@@ -78,63 +69,15 @@ export default function SicilScreen() {
 
   useFocusEffect(yukle);
 
-  const bransAd = branches?.find((b) => b.slug === brans)?.ad ?? '—';
-
   return (
     <Screen title="Evsaf">
-      <Pressable
-        style={({ pressed }) => [styles.bransKart, pressed && styles.pressed]}
-        onPress={() => router.push('/brans-sec')}>
-        <View style={styles.bransMetin}>
-          <AppText variant="etiket" color="solukMetin" bold>
-            BRANŞIN
-          </AppText>
-          <AppText variant="altBaslik" bold>
-            {bransAd}
-          </AppText>
-        </View>
-        <View style={styles.degistir}>
-          <AppText variant="kucuk" color="beyaz" bold>
-            Değiştir
-          </AppText>
-          <MaterialCommunityIcons name="swap-horizontal" size={18} color={Palette.beyaz} />
-        </View>
-      </Pressable>
-
-      {/* Hesap — Gmail ile giriş. YALNIZ üyelik aktifken (hazir) görünür; v1'de
-          UYELIK_AKTIF=false → hazir=false → kart komple gizli (uygulama offline). */}
-      {hazir ? (
-        <Pressable
-          style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
-          onPress={() => router.push('/giris')}>
-          <MaterialCommunityIcons
-            name={kullanici ? 'account-check' : 'account-circle-outline'}
-            size={20}
-            color={Palette.lacivert}
-          />
-          <AppText variant="kucuk" bold style={styles.planAd} numberOfLines={1}>
-            {kullanici ? (kullanici.email ?? 'Hesabım') : 'Gmail ile giriş yap'}
-          </AppText>
-          <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
-        </Pressable>
-      ) : null}
-
+      {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
       <Pressable
         style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
-        onPress={() => router.push('/egitim-plani')}>
-        <MaterialCommunityIcons name="bell-outline" size={20} color={Palette.lacivert} />
+        onPress={() => router.push('/ayarlar')}>
+        <MaterialCommunityIcons name="cog-outline" size={20} color={Palette.lacivert} />
         <AppText variant="kucuk" bold style={styles.planAd}>
-          Eğitim Planı (Bildirimler)
-        </AppText>
-        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
-      </Pressable>
-
-      <Pressable
-        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
-        onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}>
-        <MaterialCommunityIcons name="shield-lock-outline" size={20} color={Palette.lacivert} />
-        <AppText variant="kucuk" bold style={styles.planAd}>
-          Gizlilik & Kullanım Şartları
+          Ayarlar (Branş · Rütbe · Bildirimler · Yasal)
         </AppText>
         <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
       </Pressable>
@@ -424,28 +367,6 @@ function KutuGrafik({ dagilim }: { dagilim: KutuDagilimi }) {
 }
 
 const styles = StyleSheet.create({
-  bransKart: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    padding: Spacing.three,
-  },
-  bransMetin: {
-    gap: Spacing.half,
-  },
-  degistir: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.one,
-    backgroundColor: Palette.lacivert,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.two,
-    borderRadius: Radius.s,
-  },
   pressed: {
     opacity: 0.85,
   },
