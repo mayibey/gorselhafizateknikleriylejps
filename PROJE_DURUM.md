@@ -2,7 +2,11 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 18 Haziran 2026
+> Son güncelleme: 19 Haziran 2026
+>
+> ### ▶ YARIN BURADAN DEVAM (19 Haz akşamı yedeklendi — tüm commit'ler origin/master'da)
+> Kapalı test CANLI (vCode 5, 12/14 sayacı). Bugün **saha iyileştirme turu** yapıldı — canlı iş planı `docs/IS_PLANI.md` (14 madde, ✅'ler işli). **Biten (kod-only):** Arama sekmesi · #3 swipe · #4 kart düzeni (sabit 4:5 dikey kutu + contain + Sesli/Madde alta pinli — son commit `18c5019`; **telefon teyidi bekliyor**) · #8 Karargah cila · #9 rütbe (4 rütbe, müşterek matris kilitli) · #10 Ayarlar · #11 Evsaf · ölü kod temizliği.
+> **YARIN İLK:** (1) kart düzenini telefonda teyit (kenar boşluğu/sığma) — gerekirse `study-card.tsx aspectRatio 0.8` ayarı **veya** kaynak görselleri 4:5 üret. (2) Kalan kümeler: **B** logo/ikon (#5,#12 — kullanıcı görseli) · **C** içerik (#6 patika görsel-madde hizalama, #7 ses) · **A** backend (#1 zorunlu Gmail, #2 bulut yedek, #13 kişiye-özel filigran — politika ağır, ayrı faz) · **F** tatbikat (#14) · branş rütbe matrisi (PDF branş bölümleri, `pdftotext -table -enc UTF-8`). Hâlâ kod-only: denetim **Tier 1** (bildirim no-op, branş vaadi) + **Tier 2** (patika N+1 perf).
 
 > # 🔴 2. RED — YANILTICI İDDİALAR (Resmî Kaynak Linki Eksik) — 18 Haz
 >
