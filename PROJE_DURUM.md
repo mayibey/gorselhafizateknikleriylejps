@@ -2,7 +2,12 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 19 Haziran 2026
+> Son güncelleme: 23 Haziran 2026
+>
+> ### ▶ 23 Haz — FİLİGRAN ZOOM FIX + vCode 6 BUILD
+> **Sorun:** Karta tıklayınca açılan tam ekran yakınlaştırma (GorselZoom) overlay'i filigran (Watermark) içermiyordu → zoom modunda forensic filigran kayboluyordu. **Düzeltme (commit `a0393ba`):** `GorselZoom`'a `filigranMetin` prop'u; Watermark artık ImageZoom üstüne `pointerEvents="none"` ile çiziliyor (pinch/pan altıdaki görsele geçer, filigran ekranı sabit kaplar). Aynı metin kart+zoom'da ortak (`study-card.tsx`). tsc 0 hata.
+> **BUILD ALINDI ✅ (23 Haz 12:37):** versionCode 5→6 (app.json). `npx expo prebuild -p android --no-install` → `gradlew :app:bundleRelease` → BUILD SUCCESSFUL (1m44s, Android Studio jbr). `D:\mevzu-yerel.aab` (170.7 MB, vCode 6). **Doğrulandı:** AAB protobuf manifest → versionCode=6, READ_MEDIA_IMAGES/VIDEO YOK, izinler temiz; imza **CN=MEVZU-JSPS** (keytool, aynı upload key).
+> **BEKLEYEN (kullanıcı, Play Console):** `D:\mevzu-yerel.aab` (vCode 6) aynı kapalı test track'ine yeni sürüm olarak yükle → incelemeye gönder. (NOT: Play foto/video beyanı hâlâ soruyorsa eski sürümden gelen sticky form; beyanı "kullanılmıyor" olarak güncelle.)
 >
 > ### ▶ YARIN BURADAN DEVAM (19 Haz akşamı yedeklendi — tüm commit'ler origin/master'da)
 > Kapalı test CANLI (vCode 5, 12/14 sayacı). Bugün **saha iyileştirme turu** yapıldı — canlı iş planı `docs/IS_PLANI.md` (14 madde, ✅'ler işli). **Biten (kod-only):** Arama sekmesi · #3 swipe · #4 kart düzeni (sabit 4:5 dikey kutu + contain + Sesli/Madde alta pinli — son commit `18c5019`; **telefon teyidi bekliyor**) · #8 Karargah cila · #9 rütbe (4 rütbe, müşterek matris kilitli) · #10 Ayarlar · #11 Evsaf · ölü kod temizliği.
