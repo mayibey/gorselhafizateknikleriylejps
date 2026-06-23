@@ -2,21 +2,27 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { ImageZoom } from '@likashefqet/react-native-image-zoom';
 import { type ImageSourcePropType, Pressable, StyleSheet, View } from 'react-native';
 
+import { Watermark } from '@/components/card-flow/watermark';
 import { Palette, Spacing } from '@/constants/theme';
 
 /**
  * Tam ekran görsel inceleme overlay'i (pinch + pan + double-tap zoom).
  * RN Modal DEĞİL → absoluteFill overlay (ekran içinde; ekran unmount olmaz → ses kesilmez).
  * @likashefqet/react-native-image-zoom (gesture-handler + reanimated üstüne, pure-JS).
+ *
+ * Filigran: zoom modunda da görünmeli (kart modundaki forensic koruma burada da geçerli).
+ * Watermark pointerEvents="none" → pinch/pan altıdaki ImageZoom'a geçer; ekranı sabit kaplar.
  */
 export function GorselZoom({
   gorsel,
   gorunur,
   onKapat,
+  filigranMetin,
 }: {
   gorsel: ImageSourcePropType;
   gorunur: boolean;
   onKapat: () => void;
+  filigranMetin?: string | null;
 }) {
   if (!gorunur) return null;
   return (
@@ -32,6 +38,7 @@ export function GorselZoom({
         isPinchEnabled
         isPanEnabled
       />
+      {filigranMetin ? <Watermark metin={filigranMetin} /> : null}
       <Pressable
         style={({ pressed }) => [styles.kapat, pressed && styles.pressed]}
         onPress={onKapat}

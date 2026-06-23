@@ -20,7 +20,9 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
   const { kimlik } = useCihazKimlik();
   const [zoomAcik, setZoomAcik] = useState(false);
   // Forensic filigran: kimlik yüklenince render edilir (yoksa overlay yok).
-  const filigran = kimlik ? <Watermark metin={`JSPS • ${kimlik} • ${bugunISO()}`} /> : null;
+  // Aynı metin hem kart hem tam ekran zoom overlay'inde kullanılır (zoom modunda da görünsün).
+  const filigranMetin = kimlik ? `JSPS • ${kimlik} • ${bugunISO()}` : null;
+  const filigran = filigranMetin ? <Watermark metin={filigranMetin} /> : null;
 
   // Görselli mod: kart kendi künyesini içerir → uygulama şeritleri gösterilmez.
   // Görsele dokununca tam ekran zoom overlay açılır (ses çalıyorsa kesilmez — ekran unmount olmaz).
@@ -34,7 +36,12 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
           <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
           {filigran}
         </Pressable>
-        <GorselZoom gorsel={gorsel} gorunur={zoomAcik} onKapat={() => setZoomAcik(false)} />
+        <GorselZoom
+          gorsel={gorsel}
+          gorunur={zoomAcik}
+          onKapat={() => setZoomAcik(false)}
+          filigranMetin={filigranMetin}
+        />
       </>
     );
   }
