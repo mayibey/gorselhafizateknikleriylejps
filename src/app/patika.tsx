@@ -14,7 +14,7 @@ import {
   type LayoutChangeEvent,
 } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
-import Svg, { Ellipse, G, Path } from 'react-native-svg';
+import Svg, { G, Path, Rect } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
@@ -85,12 +85,12 @@ function bezierAci(p0: Pt, p1: Pt, t: number): number {
   return (Math.atan2(dy, dx) * 180) / Math.PI + 90;
 }
 
-/** Tek postal izi: ileri bakan iki elips (ön taban + topuk), yerel uzayda "yukarı". */
+/** Tek postal izi: çift-bloklu bot tabanı (ön taban + topuk), yerel uzayda "yukarı/ileri" bakan. */
 function PostalIzi({ x, y, aci, renk }: { x: number; y: number; aci: number; renk: string }) {
   return (
     <G transform={`translate(${x} ${y}) rotate(${aci})`}>
-      <Ellipse cx={0} cy={-2} rx={2.4} ry={3.4} fill={renk} />
-      <Ellipse cx={0} cy={3.6} rx={1.6} ry={2} fill={renk} />
+      <Rect x={-6} y={-13} width={12} height={15} rx={4.5} fill={renk} />
+      <Rect x={-4.5} y={4.5} width={9} height={9} rx={4} fill={renk} />
     </G>
   );
 }
@@ -104,14 +104,15 @@ function PostalIzi({ x, y, aci, renk }: { x: number; y: number; aci: number; ren
  */
 function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): ReactNode[] {
   const mesafe = Math.abs(p1.y - p0.y);
-  const izSayisi = Math.max(2, Math.min(5, Math.round(mesafe / 34)));
+  // Bot izi büyüdü → seyrelt (eski /34 → /46, en çok 3) ki üst üste binmesin.
+  const izSayisi = Math.max(2, Math.min(3, Math.round(mesafe / 46)));
   const izler: ReactNode[] = [];
   for (let k = 0; k < izSayisi; k++) {
     const t = (k + 1) / (izSayisi + 1);
     const n = bezierNokta(p0, p1, t);
     const aci = bezierAci(p0, p1, t);
     const r = (aci * Math.PI) / 180;
-    const ofset = k % 2 === 0 ? 2.5 : -2.5;
+    const ofset = k % 2 === 0 ? 3.5 : -3.5;
     izler.push(
       <PostalIzi
         key={`${anahtar}-${k}`}
