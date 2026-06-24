@@ -20,17 +20,16 @@ import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import {
   getBolumler,
-  getCardCount,
   getCardsByBolum,
+  getCardsByLaw,
   getLaws,
-  getStudyCards,
   getStudyDays,
 } from '@/db/database';
 import type { Bolum } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { bolumIlerleme } from '@/lib/patika';
 import { bugunISO } from '@/lib/srs';
-import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
+import { hesaplaStreak } from '@/lib/stats';
 
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
 /** Düğümün görsel durumu — MEVCUT veri (calisilan/toplam/aktifIndex) türetilir, davranış değil. */
@@ -151,6 +150,10 @@ export default function PatikaScreen() {
         if (bolumler.length === 0) {
           setBolumsuz(true);
           setDugumler([]);
+          // Bölümsüz kanun: chip'i o kanunun GERÇEK kartından besle (kutu≥1/toplam).
+          const kartlar = await getCardsByLaw(id);
+          const calisilan = kartlar.filter((c) => c.kutu >= 1).length;
+          setHazirlik(kartlar.length > 0 ? Math.round((calisilan / kartlar.length) * 100) : 0);
           return;
         }
         const dugum = await Promise.all(
@@ -161,8 +164,15 @@ export default function PatikaScreen() {
         );
         setBolumsuz(false);
         setDugumler(dugum);
+        // Bölümlü kanun: "Çalışıldı %" = o kanunun kutu≥1 kart / toplam (bolumIlerleme'den).
+        const calisilan = dugum.reduce((a, d) => a + d.calisilan, 0);
+        const toplam = dugum.reduce((a, d) => a + d.toplam, 0);
+        setHazirlik(toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0);
       })
-      .catch(() => setHata(true));
+      .catch(() => {
+        setHata(true);
+        setHazirlik(null);
+      });
 
     // Üst bar verisi (degrade olur — patika ana veriyi etkilemez).
     if (brans) {
@@ -173,9 +183,6 @@ export default function PatikaScreen() {
     void getStudyDays()
       .then((g) => setStreak(hesaplaStreak(g, bugunISO())))
       .catch(() => setStreak(null));
-    void Promise.all([getStudyCards(), getCardCount()])
-      .then(([s, t]) => setHazirlik(hesaplaIstatistik(s, t).hazirlikYuzde))
-      .catch(() => setHazirlik(null));
   }, [lawId, brans]);
 
   useFocusEffect(yukle);
@@ -209,7 +216,7 @@ export default function PatikaScreen() {
             {hazirlik === null ? '—' : `%${hazirlik}`}
           </AppText>
           <AppText variant="etiket" color="metinSolukAcik">
-            Hazırlık
+            Çalışıldı
           </AppText>
         </View>
       </View>

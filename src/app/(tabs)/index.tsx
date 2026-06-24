@@ -48,7 +48,14 @@ export default function KarargahScreen() {
       .then(setQueue)
       .catch(() => setHata(true));
     void Promise.all([getStudyCards(), getCardCount()])
-      .then(([studied, toplam]) => setHazirlik(hesaplaIstatistik(studied, toplam).hazirlikYuzde))
+      .then(([studied, toplam]) => {
+        // "Çalışıldı %" = kutu≥1 / toplam (EŞİKSİZ). hazirlikYuzde (kutu≥4) DEĞİL —
+        // o eşik sicil ödül + kutu grafiğinde kullanılıyor, dokunulmaz.
+        const ist = hesaplaIstatistik(studied, toplam);
+        const calisildiYuzde =
+          ist.toplamKart > 0 ? Math.round((ist.calisilanKart / ist.toplamKart) * 100) : 0;
+        setHazirlik(calisildiYuzde);
+      })
       .catch(() => setHazirlik(null));
     void getStudyDays()
       .then((gunler) => setStreak(hesaplaStreak(gunler, bugunISO())))
@@ -207,7 +214,7 @@ export default function KarargahScreen() {
           </AppText>
           <Bar oran={(hazirlik ?? 0) / 100} />
           <AppText variant="kucuk" color="solukMetin">
-            Hazırlık
+            Çalışıldı
           </AppText>
         </View>
         <View style={[styles.card, styles.metrik]}>
