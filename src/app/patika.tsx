@@ -14,7 +14,7 @@ import {
   type LayoutChangeEvent,
 } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
-import Svg, { Path } from 'react-native-svg';
+import Svg, { Ellipse, G, Path } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
@@ -56,6 +56,73 @@ function dugumMerkez(i: number, W: number): { x: number; y: number } {
 function segmentYol(p0: { x: number; y: number }, p1: { x: number; y: number }): string {
   const ortaY = (p0.y + p1.y) / 2;
   return `M ${p0.x} ${p0.y} C ${p0.x} ${ortaY}, ${p1.x} ${ortaY}, ${p1.x} ${p1.y}`;
+}
+
+// --- Postal izi: yürünmüş segmenti çizgi yerine bot tabanı izleriyle döşeriz. ---
+// Kontrol noktaları segmentYol ile AYNI: C1=(p0.x,ortaY) C2=(p1.x,ortaY).
+type Pt = { x: number; y: number };
+
+/** Kübik bezier üzerinde t∈[0,1] noktası. B(t)=(1-t)³P0+3(1-t)²t·C1+3(1-t)t²·C2+t³P3. */
+function bezierNokta(p0: Pt, p1: Pt, t: number): Pt {
+  const ortaY = (p0.y + p1.y) / 2;
+  const c1x = p0.x;
+  const c2x = p1.x;
+  const u = 1 - t;
+  const x = u * u * u * p0.x + 3 * u * u * t * c1x + 3 * u * t * t * c2x + t * t * t * p1.x;
+  const y = u * u * u * p0.y + 3 * u * u * t * ortaY + 3 * u * t * t * ortaY + t * t * t * p1.y;
+  return { x, y };
+}
+
+/** Teğet açısı (derece). RN dönüşü için +90 → iz şekli "ileri/yukarı" bakar. */
+function bezierAci(p0: Pt, p1: Pt, t: number): number {
+  const ortaY = (p0.y + p1.y) / 2;
+  const c1x = p0.x;
+  const c2x = p1.x;
+  const u = 1 - t;
+  // B'(t) = 3(1-t)²(C1-P0) + 6(1-t)t(C2-C1) + 3t²(P3-C2)
+  const dx = 3 * u * u * (c1x - p0.x) + 6 * u * t * (c2x - c1x) + 3 * t * t * (p1.x - c2x);
+  const dy = 3 * u * u * (ortaY - p0.y) + 6 * u * t * (ortaY - ortaY) + 3 * t * t * (p1.y - ortaY);
+  return (Math.atan2(dy, dx) * 180) / Math.PI + 90;
+}
+
+/** Tek postal izi: ileri bakan iki elips (ön taban + topuk), yerel uzayda "yukarı". */
+function PostalIzi({ x, y, aci, renk }: { x: number; y: number; aci: number; renk: string }) {
+  return (
+    <G transform={`translate(${x} ${y}) rotate(${aci})`}>
+      <Ellipse cx={0} cy={-2} rx={2.4} ry={3.4} fill={renk} />
+      <Ellipse cx={0} cy={3.6} rx={1.6} ry={2} fill={renk} />
+    </G>
+  );
+}
+
+/**
+ * Bir (yürünmüş) segmente postal izleri serper.
+ *  - İz sayısı segment boyuna orantılı (clamp 2..5).
+ *  - t kenarlardan içeri alınır (düğüme binmesin).
+ *  - Ardışık izler yürüyüş yönüne dik ±2.5px alternatif kaydırılır.
+ * Dik birim vektör = (cos(aci), sin(aci)); aci zaten teğet+90 → (-dy,dx)/|.| ile aynı.
+ */
+function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): ReactNode[] {
+  const mesafe = Math.abs(p1.y - p0.y);
+  const izSayisi = Math.max(2, Math.min(5, Math.round(mesafe / 34)));
+  const izler: ReactNode[] = [];
+  for (let k = 0; k < izSayisi; k++) {
+    const t = (k + 1) / (izSayisi + 1);
+    const n = bezierNokta(p0, p1, t);
+    const aci = bezierAci(p0, p1, t);
+    const r = (aci * Math.PI) / 180;
+    const ofset = k % 2 === 0 ? 2.5 : -2.5;
+    izler.push(
+      <PostalIzi
+        key={`${anahtar}-${k}`}
+        x={n.x + Math.cos(r) * ofset}
+        y={n.y + Math.sin(r) * ofset}
+        aci={aci}
+        renk={renk}
+      />,
+    );
+  }
+  return izler;
 }
 
 export default function PatikaScreen() {
@@ -238,36 +305,38 @@ function Harita({
     <View style={[st.harita, { height: haritaY }]} onLayout={olc}>
       {W > 0 ? (
         <>
-          {/* Kıvrımlı yol: geçilen segmentler dolu (altın/yeşil), ileri segmentler kesikli */}
+          {/* Yürünmüş segment → postal izi (çizgi yok); yürünmemiş → kesikli soluk konnektör */}
           <Svg width={W} height={haritaY} style={StyleSheet.absoluteFill} pointerEvents="none">
-            {dugumler.slice(0, -1).map((_, i) => {
-              const p0 = dugumMerkez(i, W);
-              const p1 = dugumMerkez(i + 1, W);
-              const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
-              const ikiTamam =
-                dugumler[i].toplam > 0 &&
-                dugumler[i].calisilan === dugumler[i].toplam &&
-                dugumler[i + 1].toplam > 0 &&
-                dugumler[i + 1].calisilan === dugumler[i + 1].toplam;
-              return (
-                <Path
-                  key={dugumler[i].bolum.id}
-                  d={segmentYol(p0, p1)}
-                  fill="none"
-                  stroke={
-                    gecildi
-                      ? ikiTamam
-                        ? Palette.yesil
-                        : Palette.altin
-                      : Palette.metinSolukAcik
-                  }
-                  strokeWidth={gecildi ? 5 : 3}
-                  strokeLinecap="round"
-                  strokeDasharray={gecildi ? undefined : '2 12'}
-                  opacity={gecildi ? 1 : 0.6}
-                />
-              );
-            })}
+            {(() => {
+              const konnektorler: ReactNode[] = [];
+              const postallar: ReactNode[] = [];
+              dugumler.slice(0, -1).forEach((_, i) => {
+                const p0 = dugumMerkez(i, W);
+                const p1 = dugumMerkez(i + 1, W);
+                const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
+                const anahtar = String(dugumler[i].bolum.id);
+                if (!gecildi) {
+                  // Yürünmemiş ara: mevcut kesikli/soluk konnektör (postal YOK, önü temiz).
+                  konnektorler.push(
+                    <Path
+                      key={anahtar}
+                      d={segmentYol(p0, p1)}
+                      fill="none"
+                      stroke={Palette.metinSolukAcik}
+                      strokeWidth={3}
+                      strokeLinecap="round"
+                      strokeDasharray="2 12"
+                      opacity={0.6}
+                    />,
+                  );
+                } else {
+                  // Yürünmüş ara: konnektör çizgisi yerine postal izleri serpiştir.
+                  postallar.push(...segmentPostallari(p0, p1, Palette.altin, anahtar));
+                }
+              });
+              // Önce konnektörler, sonra postallar (üstte kalsın).
+              return [...konnektorler, ...postallar];
+            })()}
           </Svg>
 
           {dugumler.map((d, i) => (
