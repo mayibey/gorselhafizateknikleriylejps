@@ -16,6 +16,7 @@ export const Palette = {
   kenarlik: '#E3D8BE',
   solukMetin: '#8A7A52',
   altin: '#E6C24A',
+  altinKoyu: '#C9A227', // krem zeminde okunur altın (postal izi, halka, accent)
   ten: '#E8C9A8',
   yesil: '#2E7D32',
   amber: '#B5791C',
