@@ -1,27 +1,75 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
+import {
+  ActivityIndicator,
+  Animated,
+  Easing,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  View,
+  type LayoutChangeEvent,
+} from 'react-native';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import Svg, { Path } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
-import { EmptyState } from '@/components/ui/empty-state';
-import { Loading } from '@/components/ui/loading';
-import { Screen } from '@/components/ui/screen';
-import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getBolumler, getCardsByBolum } from '@/db/database';
+import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import {
+  getBolumler,
+  getCardCount,
+  getCardsByBolum,
+  getLaws,
+  getStudyCards,
+  getStudyDays,
+} from '@/db/database';
 import type { Bolum } from '@/db/schema';
+import { useBrans } from '@/lib/brans-context';
 import { bolumIlerleme } from '@/lib/patika';
+import { bugunISO } from '@/lib/srs';
+import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
-const TAMAM_YESIL = '#16a34a';
+/** Düğümün görsel durumu — MEVCUT veri (calisilan/toplam/aktifIndex) türetilir, davranış değil. */
+type Durum = 'aktif' | 'tamam' | 'baslanmis' | 'baslanmadi';
+
+// Animasyon native sürücüsü web'de desteklenmez (RNW uyarı basar) → platforma göre.
+const USE_NATIVE = Platform.OS !== 'web';
+
+// Kıvrımlı yol geometrisi (düğüm merkezleri SVG path ile birebir aynı koordinatlardan geçer).
+const NODE = 76; // normal düğüm çapı
+const HERO = 98; // aktif düğüm (büyük / hero)
+const ROW_GAP = 134; // düğümler arası dikey ritim
+const PAD_TOP = 70; // üstte "buradasın" pill'ine yer
+const PAD_BOTTOM = 60;
+const COL_SOL = 0.3; // sola alternating düğüm merkez x oranı
+const COL_SAG = 0.7; // sağa alternating düğüm merkez x oranı
+
+function dugumMerkez(i: number, W: number): { x: number; y: number } {
+  return { x: W * (i % 2 === 0 ? COL_SOL : COL_SAG), y: PAD_TOP + i * ROW_GAP + NODE / 2 };
+}
+
+/** İki düğüm merkezini birleştiren yumuşak (dikey S) bezier segmenti. */
+function segmentYol(p0: { x: number; y: number }, p1: { x: number; y: number }): string {
+  const ortaY = (p0.y + p1.y) / 2;
+  return `M ${p0.x} ${p0.y} C ${p0.x} ${ortaY}, ${p1.x} ${ortaY}, ${p1.x} ${p1.y}`;
+}
 
 export default function PatikaScreen() {
   const router = useRouter();
+  const { brans } = useBrans();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
   // null = yükleniyor; bolumsuz = kanunun bölümü yok (tek düğüm).
   const [dugumler, setDugumler] = useState<BolumDugum[] | null>(null);
   const [bolumsuz, setBolumsuz] = useState(false);
   const [hata, setHata] = useState(false);
+  // Üst bar — yalnızca GERÇEK veri.
+  const [kanunAd, setKanunAd] = useState<string | null>(null);
+  const [streak, setStreak] = useState<number | null>(null);
+  const [hazirlik, setHazirlik] = useState<number | null>(null);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -47,182 +95,536 @@ export default function PatikaScreen() {
         setDugumler(dugum);
       })
       .catch(() => setHata(true));
-  }, [lawId]);
+
+    // Üst bar verisi (degrade olur — patika ana veriyi etkilemez).
+    if (brans) {
+      void getLaws(brans)
+        .then((laws) => setKanunAd(laws.find((l) => l.id === id)?.ad ?? null))
+        .catch(() => setKanunAd(null));
+    }
+    void getStudyDays()
+      .then((g) => setStreak(hesaplaStreak(g, bugunISO())))
+      .catch(() => setStreak(null));
+    void Promise.all([getStudyCards(), getCardCount()])
+      .then(([s, t]) => setHazirlik(hesaplaIstatistik(s, t).hazirlikYuzde))
+      .catch(() => setHazirlik(null));
+  }, [lawId, brans]);
 
   useFocusEffect(yukle);
 
   // "aktif" (altın vurgu) = ilk çalışılabilir ama bitmemiş madde (kartı olan, tamamlanmamış).
-  // Kartı olmayan madde düğümleri (kapsam iskeleti) aktif sayılmaz.
+  // Kartı olmayan madde düğümleri (kapsam iskeleti) aktif sayılmaz. [DEĞİŞMEDİ]
   const aktifIndex = dugumler
     ? dugumler.findIndex((d) => d.toplam > 0 && d.calisilan < d.toplam)
     : -1;
 
+  // Bölüm şeridi sayacı: tamamlanan bölüm / toplam bölüm (mevcut veriden türetilir).
+  const tamamBolum = dugumler?.filter((d) => d.toplam > 0 && d.calisilan === d.toplam).length ?? 0;
+  const toplamBolum = dugumler?.length ?? 0;
+
   return (
-    <Screen title="Patika" onGeri={() => router.back()}>
+    <DarkScaffold title="Patika" onGeri={() => router.back()}>
+      <StatusBar style="light" />
+
+      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK) */}
+      <View style={st.ustBar}>
+        <View style={st.statChip}>
+          <MaterialCommunityIcons name="fire" size={18} color={Palette.altin} />
+          <AppText variant="kucuk" bold color="altinAcik">
+            {streak === null ? '—' : streak}
+          </AppText>
+        </View>
+        <View style={st.statChip}>
+          <AppText variant="kucuk" bold color="metinAcik">
+            {hazirlik === null ? '—' : `%${hazirlik}`}
+          </AppText>
+          <AppText variant="etiket" color="metinSolukAcik">
+            Hazırlık
+          </AppText>
+        </View>
+      </View>
+
+      {/* Bölüm şeridi — aktif kanun adı + ilerleme */}
+      <View style={st.serit}>
+        <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.metinSolukAcik} />
+        <AppText variant="kucuk" bold color="metinAcik" numberOfLines={1} style={st.seritAd}>
+          {kanunAd ?? 'Mevzuat'}
+        </AppText>
+        {!bolumsuz && toplamBolum > 0 ? (
+          <AppText variant="kucuk" bold color="altinAcik">
+            {tamamBolum}/{toplamBolum} bölüm
+          </AppText>
+        ) : null}
+      </View>
+
       {hata ? (
-        <EmptyState
+        <DurumKutu
           ikon="alert-circle-outline"
-          ikonRenk="kirmizi"
           baslik="Yüklenemedi"
           aciklama="Patika yüklenemedi."
           buton={{ etiket: 'Tekrar dene', onPress: yukle }}
         />
       ) : dugumler === null ? (
-        <Loading metin="Yükleniyor…" />
+        <View style={st.merkezKutu}>
+          <ActivityIndicator color={Palette.altin} />
+          <AppText variant="kucuk" color="metinSolukAcik">
+            Yükleniyor…
+          </AppText>
+        </View>
       ) : bolumsuz ? (
-        // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm → düz akış.
-        <TekDugum onPress={() => router.push({ pathname: '/akis', params: { lawId: String(lawId) } })} />
+        // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
+        <TekDugum
+          onPress={() => router.push({ pathname: '/akis', params: { lawId: String(lawId) } })}
+        />
       ) : (
-        <View style={styles.patika}>
-          {/* Soluk merkez omurga (düğümler bunun üstünde sola-sağa çıkar) */}
-          <View style={styles.omurga} pointerEvents="none" />
+        <Harita dugumler={dugumler} aktifIndex={aktifIndex} router={router} />
+      )}
+    </DarkScaffold>
+  );
+}
+
+/** Koyu zeminli, kendi başlık şeritli ekran sarmalayıcı (dark-first, patika'ya özel). */
+function DarkScaffold({
+  title,
+  onGeri,
+  children,
+}: {
+  title: string;
+  onGeri: () => void;
+  children: ReactNode;
+}) {
+  const insets = useSafeAreaInsets();
+  return (
+    <SafeAreaView style={st.safe} edges={['top', 'left', 'right']}>
+      <View style={st.header}>
+        <Pressable onPress={onGeri} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
+          <MaterialCommunityIcons name="arrow-left" size={26} color={Palette.metinAcik} />
+        </Pressable>
+        <AppText variant="baslik" color="metinAcik" bold>
+          {title}
+        </AppText>
+      </View>
+      <ScrollView
+        style={st.scroll}
+        contentContainerStyle={[st.scrollContent, { paddingBottom: insets.bottom + Spacing.six }]}>
+        <View style={st.body}>{children}</View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+/** Kıvrımlı yol + alternating düğümler. Genişlik onLayout ile ölçülür (path = düğüm koordinatları). */
+function Harita({
+  dugumler,
+  aktifIndex,
+  router,
+}: {
+  dugumler: BolumDugum[];
+  aktifIndex: number;
+  router: ReturnType<typeof useRouter>;
+}) {
+  const [W, setW] = useState(0);
+  const olc = (e: LayoutChangeEvent) => {
+    const w = e.nativeEvent.layout.width;
+    if (w > 0 && w !== W) setW(w);
+  };
+
+  const n = dugumler.length;
+  const haritaY = PAD_TOP + (n - 1) * ROW_GAP + NODE + PAD_BOTTOM;
+
+  return (
+    <View style={[st.harita, { height: haritaY }]} onLayout={olc}>
+      {W > 0 ? (
+        <>
+          {/* Kıvrımlı yol: geçilen segmentler dolu (altın/yeşil), ileri segmentler kesikli */}
+          <Svg width={W} height={haritaY} style={StyleSheet.absoluteFill} pointerEvents="none">
+            {dugumler.slice(0, -1).map((_, i) => {
+              const p0 = dugumMerkez(i, W);
+              const p1 = dugumMerkez(i + 1, W);
+              const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
+              const ikiTamam =
+                dugumler[i].toplam > 0 &&
+                dugumler[i].calisilan === dugumler[i].toplam &&
+                dugumler[i + 1].toplam > 0 &&
+                dugumler[i + 1].calisilan === dugumler[i + 1].toplam;
+              return (
+                <Path
+                  key={dugumler[i].bolum.id}
+                  d={segmentYol(p0, p1)}
+                  fill="none"
+                  stroke={
+                    gecildi
+                      ? ikiTamam
+                        ? Palette.yesil
+                        : Palette.altin
+                      : Palette.metinSolukAcik
+                  }
+                  strokeWidth={gecildi ? 5 : 3}
+                  strokeLinecap="round"
+                  strokeDasharray={gecildi ? undefined : '2 12'}
+                  opacity={gecildi ? 1 : 0.6}
+                />
+              );
+            })}
+          </Svg>
+
           {dugumler.map((d, i) => (
-            <BolumDugumu
+            <Dugum
               key={d.bolum.id}
               dugum={d}
               index={i}
-              aktif={i === aktifIndex}
+              durum={durumCoz(d, i === aktifIndex)}
+              merkez={dugumMerkez(i, W)}
               onPress={() =>
                 router.push({ pathname: '/akis', params: { bolumId: String(d.bolum.id) } })
               }
             />
           ))}
-        </View>
-      )}
-    </Screen>
-  );
-}
-
-function TekDugum({ onPress }: { onPress: () => void }) {
-  return (
-    <View style={styles.tekSatir}>
-      <Pressable
-        style={({ pressed }) => [styles.dugumKutu, pressed && styles.pressed]}
-        onPress={onPress}>
-        <View style={[styles.daire, styles.daireBaslanmis]}>
-          <MaterialCommunityIcons name="cards-outline" size={28} color={Palette.beyaz} />
-        </View>
-        <AppText variant="kucuk" bold style={styles.dugumAd}>
-          Tüm Kartlar
-        </AppText>
-        <AppText variant="etiket" color="solukMetin">
-          Bu kanunu çalış
-        </AppText>
-      </Pressable>
+        </>
+      ) : null}
     </View>
   );
 }
 
-function BolumDugumu({
+/** MEVCUT veri → görsel durum. Aktif (i===aktifIndex) zaten tamamlanmamış kart-düğüm. */
+function durumCoz(d: BolumDugum, aktif: boolean): Durum {
+  const kartVar = d.toplam > 0;
+  const tamam = kartVar && d.calisilan === d.toplam;
+  if (aktif) return 'aktif';
+  if (tamam) return 'tamam';
+  if (kartVar && d.calisilan > 0) return 'baslanmis';
+  return 'baslanmadi';
+}
+
+function Dugum({
   dugum,
   index,
-  aktif,
+  durum,
+  merkez,
   onPress,
 }: {
   dugum: BolumDugum;
   index: number;
-  aktif: boolean;
+  durum: Durum;
+  merkez: { x: number; y: number };
   onPress: () => void;
 }) {
-  const { bolum, calisilan, toplam } = dugum;
-  const kartVar = toplam > 0; // bu maddeye bağlı kart var mı (yoksa kapsam iskeleti)
-  const tamam = kartVar && calisilan === toplam;
-  // Daire içi kısa etiket: "Madde 5"→"5", "Ek Madde 7"→"Ek 7", "Geçici Madde 2"→"Geç.2".
-  const kisa = bolum.ad
-    .replace('Geçici Madde ', 'Geç.')
-    .replace('Ek Madde ', 'Ek ')
-    .replace('Madde ', '');
+  const aktif = durum === 'aktif';
+  const cap = aktif ? HERO : NODE;
+  const yuzde = dugum.toplam > 0 ? Math.round((dugum.calisilan / dugum.toplam) * 100) : 0;
+
+  // Giriş (fade + scale, sıralı) + aktifte yumuşak pulse.
+  const enter = useRef(new Animated.Value(0)).current;
+  const pulse = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    Animated.timing(enter, {
+      toValue: 1,
+      duration: 300,
+      delay: Math.min(index, 12) * 55,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: USE_NATIVE,
+    }).start();
+    if (aktif) {
+      const dongu = Animated.loop(
+        Animated.sequence([
+          Animated.timing(pulse, {
+            toValue: 1,
+            duration: 1100,
+            easing: Easing.inOut(Easing.quad),
+            useNativeDriver: USE_NATIVE,
+          }),
+          Animated.timing(pulse, {
+            toValue: 0,
+            duration: 1100,
+            easing: Easing.inOut(Easing.quad),
+            useNativeDriver: USE_NATIVE,
+          }),
+        ]),
+      );
+      dongu.start();
+      return () => dongu.stop();
+    }
+  }, [aktif, index, enter, pulse]);
+
+  const girisScale = enter.interpolate({ inputRange: [0, 1], outputRange: [0.85, 1] });
+  const pulseScale = pulse.interpolate({ inputRange: [0, 1], outputRange: [1, 1.06] });
+
+  // Konteyner merkezi = düğüm merkezi; pill üstte, ad altta (akış dışı, absolute).
+  const BOX = 150;
+  return (
+    <Animated.View
+      style={[
+        st.dugumKutu,
+        {
+          left: merkez.x - BOX / 2,
+          top: merkez.y - cap / 2,
+          width: BOX,
+          height: cap,
+          opacity: enter,
+          transform: [{ scale: girisScale }],
+        },
+      ]}>
+      {aktif ? (
+        <View style={st.buradasinPill}>
+          <AppText variant="etiket" bold color="zeminKoyu">
+            buradasın
+          </AppText>
+        </View>
+      ) : null}
+
+      <Animated.View style={{ transform: [{ scale: pulseScale }] }}>
+        <Pressable
+          onPress={onPress}
+          accessibilityRole="button"
+          accessibilityLabel={dugum.bolum.ad}
+          style={({ pressed }) => [
+            st.daire,
+            { width: cap, height: cap, borderRadius: cap / 2 },
+            durum === 'aktif' && st.daireAktif,
+            durum === 'tamam' && st.daireTamam,
+            durum === 'baslanmis' && st.daireBaslanmis,
+            durum === 'baslanmadi' && st.daireBaslanmadi,
+            pressed && st.pressed,
+          ]}>
+          {durum === 'aktif' ? (
+            <MaterialCommunityIcons name="play" size={36} color={Palette.zeminKoyu} />
+          ) : durum === 'tamam' ? (
+            <MaterialCommunityIcons name="check-bold" size={32} color={Palette.yesilAcik} />
+          ) : durum === 'baslanmis' ? (
+            <AppText variant="kucuk" bold color="metinAcik">
+              %{yuzde}
+            </AppText>
+          ) : (
+            <View style={st.nokta} />
+          )}
+        </Pressable>
+      </Animated.View>
+
+      <View style={[st.adKutu, { top: cap + 6 }]}>
+        <AppText
+          variant="etiket"
+          bold
+          color={durum === 'baslanmadi' ? 'metinSolukAcik' : 'metinAcik'}
+          numberOfLines={1}
+          style={st.adMetin}>
+          {dugum.bolum.ad}
+        </AppText>
+      </View>
+    </Animated.View>
+  );
+}
+
+/** Bölümsüz kanun → tek hero düğüm ("Tüm Kartlar"). */
+function TekDugum({ onPress }: { onPress: () => void }) {
+  const enter = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    Animated.timing(enter, {
+      toValue: 1,
+      duration: 320,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: USE_NATIVE,
+    }).start();
+  }, [enter]);
+  const scale = enter.interpolate({ inputRange: [0, 1], outputRange: [0.85, 1] });
 
   return (
-    <View style={[styles.dugumSatir, { alignSelf: index % 2 === 0 ? 'flex-start' : 'flex-end' }]}>
-      <Pressable style={({ pressed }) => [styles.dugumKutu, pressed && styles.pressed]} onPress={onPress}>
-        <View
-          style={[
-            styles.daire,
-            tamam ? styles.daireTamam : kartVar ? styles.daireBaslanmis : styles.daireBos,
-            aktif && styles.daireAktif,
-          ]}>
-          {tamam ? (
-            <MaterialCommunityIcons name="check-bold" size={28} color={Palette.beyaz} />
-          ) : (
-            <AppText variant="kucuk" color={kartVar ? 'beyaz' : 'solukMetin'} bold>
-              {kisa}
-            </AppText>
-          )}
-        </View>
-        <AppText variant="etiket" bold style={styles.dugumAd} numberOfLines={1}>
-          {bolum.ad}
+    <Animated.View style={[st.tekSatir, { opacity: enter, transform: [{ scale }] }]}>
+      <View style={st.buradasinPill}>
+        <AppText variant="etiket" bold color="zeminKoyu">
+          buradasın
         </AppText>
-        {kartVar ? (
-          <AppText variant="etiket" color="solukMetin">
-            {calisilan}/{toplam}
-          </AppText>
-        ) : null}
+      </View>
+      <Pressable
+        onPress={onPress}
+        accessibilityRole="button"
+        accessibilityLabel="Tüm Kartlar"
+        style={({ pressed }) => [
+          st.daire,
+          { width: HERO, height: HERO, borderRadius: HERO / 2 },
+          st.daireAktif,
+          pressed && st.pressed,
+        ]}>
+        <MaterialCommunityIcons name="play" size={36} color={Palette.zeminKoyu} />
+      </Pressable>
+      <AppText variant="kucuk" bold color="metinAcik" style={st.adMetin}>
+        Tüm Kartlar
+      </AppText>
+      <AppText variant="etiket" color="metinSolukAcik">
+        Bu kanunu çalış
+      </AppText>
+    </Animated.View>
+  );
+}
+
+/** Koyu zeminli hata/durum kutusu. */
+function DurumKutu({
+  ikon,
+  baslik,
+  aciklama,
+  buton,
+}: {
+  ikon: keyof typeof MaterialCommunityIcons.glyphMap;
+  baslik: string;
+  aciklama: string;
+  buton: { etiket: string; onPress: () => void };
+}) {
+  return (
+    <View style={st.merkezKutu}>
+      <MaterialCommunityIcons name={ikon} size={44} color={Palette.kirmizi} />
+      <AppText variant="altBaslik" bold color="metinAcik">
+        {baslik}
+      </AppText>
+      <AppText variant="kucuk" color="metinSolukAcik">
+        {aciklama}
+      </AppText>
+      <Pressable
+        onPress={buton.onPress}
+        style={({ pressed }) => [st.retryBtn, pressed && st.pressed]}>
+        <AppText variant="kucuk" bold color="zeminKoyu">
+          {buton.etiket}
+        </AppText>
       </Pressable>
     </View>
   );
 }
 
-const NODE = 84;
-
-const styles = StyleSheet.create({
-  patika: {
-    position: 'relative',
+const st = StyleSheet.create({
+  safe: {
+    flex: 1,
+    backgroundColor: Palette.zeminKoyu,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+    backgroundColor: Palette.yuzeyKoyu,
+    paddingHorizontal: Spacing.four,
     paddingVertical: Spacing.three,
-    gap: Spacing.four,
   },
-  omurga: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: '50%',
-    width: 3,
-    marginLeft: -1.5,
-    backgroundColor: Palette.kenarlik,
-    opacity: 0.5,
+  scroll: {
+    flex: 1,
+    backgroundColor: Palette.zeminKoyu,
   },
-  dugumSatir: {
-    width: '55%',
+  scrollContent: {
+    flexGrow: 1,
     alignItems: 'center',
   },
-  tekSatir: {
-    alignSelf: 'center',
-    alignItems: 'center',
-    paddingVertical: Spacing.five,
+  body: {
+    flexGrow: 1,
+    width: '100%',
+    maxWidth: MaxContentWidth,
+    padding: Spacing.three,
+    gap: Spacing.three,
   },
-  dugumKutu: {
+
+  // Üst bar
+  ustBar: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+  },
+  statChip: {
+    flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
-    maxWidth: 160,
+    backgroundColor: Palette.yuzeyKoyu,
+    borderColor: Palette.kenarlikKoyu,
+    borderWidth: 1,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  serit: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.yuzeyKoyu,
+    borderColor: Palette.kenarlikKoyu,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  seritAd: {
+    flex: 1,
+  },
+
+  // Harita
+  harita: {
+    position: 'relative',
+    width: '100%',
+  },
+  dugumKutu: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  daire: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+  },
+  daireAktif: {
+    backgroundColor: Palette.altin,
+    borderColor: Palette.altinAcik,
+    borderWidth: 2,
+  },
+  daireTamam: {
+    backgroundColor: Palette.yuzeyKoyu,
+    borderColor: Palette.yesil,
+  },
+  daireBaslanmis: {
+    backgroundColor: Palette.yuzeyKoyu,
+    borderColor: Palette.altin,
+  },
+  daireBaslanmadi: {
+    backgroundColor: Palette.yuzeyKoyuSoluk,
+    borderColor: Palette.kenarlikKoyu,
+  },
+  nokta: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: Palette.metinSolukAcik,
+  },
+  buradasinPill: {
+    position: 'absolute',
+    top: -28,
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+  },
+  adKutu: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+  },
+  adMetin: {
+    textAlign: 'center',
   },
   pressed: {
     opacity: 0.8,
   },
-  daire: {
-    width: NODE,
-    height: NODE,
-    borderRadius: NODE / 2,
+
+  // Tek düğüm / durum kutuları
+  tekSatir: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    gap: Spacing.two,
+    paddingVertical: Spacing.six,
+  },
+  merkezKutu: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 3,
+    gap: Spacing.two,
+    paddingVertical: Spacing.six,
   },
-  daireTamam: {
-    backgroundColor: TAMAM_YESIL,
-    borderColor: TAMAM_YESIL,
-  },
-  daireBaslanmis: {
-    backgroundColor: Palette.lacivert,
-    borderColor: Palette.lacivert,
-  },
-  daireBos: {
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-  },
-  daireAktif: {
-    borderColor: Palette.altin,
-    borderWidth: 4,
-  },
-  dugumAd: {
-    textAlign: 'center',
+  retryBtn: {
+    marginTop: Spacing.two,
+    backgroundColor: Palette.altin,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
   },
 });

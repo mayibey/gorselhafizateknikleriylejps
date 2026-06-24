@@ -2,7 +2,12 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 23 Haziran 2026
+> Son güncelleme: 24 Haziran 2026
+>
+> ### ▶ 24 Haz — UI YENİLEME (1): PATİKA DARK-FIRST
+> **Bağlam:** Kapsamlı UI yenilemesinin ilk adımı — `patika.tsx` dark-first yeniden stillendi. **Davranış DEĞİŞMEDİ:** veri çağrıları (`getBolumler`/`getCardsByBolum`/`bolumIlerleme`), `aktifIndex` türetmesi ve `/akis` navigasyonu (bölüm→`bolumId`, bölümsüz→`lawId`, geri→`back()`) birebir korundu — sadece görünüm.
+> **Yapılan:** (1) `react-native-svg` kuruldu (`npx expo install`). (2) **theme.ts**'e dark token'lar **additif** eklendi (açık marka paleti DOKUNULMADI): `zeminKoyu/yuzeyKoyu/yuzeyKoyuSoluk/kenarlikKoyu/metinAcik/metinSolukAcik/altinAcik/yesilAcik`. (3) Merkez omurga yerine **react-native-svg kıvrımlı bezier yol** (düğüm merkezlerinden geçer; geçilen segment dolu altın/yeşil, ileri segment kesikli soluk). (4) **4 düğüm durumu** mevcut veriden türetildi: tamam (yeşil kenar+check), aktif (altın hero+play+"buradasın" pill+pulse), başlanmış (altın halka+%), başlanmadı (soluk yüzey+nötr nokta; **kilit YOK, hâlâ tıklanabilir**). (5) **Gerçek-veri üst bar:** seri (`hesaplaStreak`), hazırlık% (`hesaplaIstatistik`), bölüm şeridi (kanun adı `getLaws` + tamam/toplam bölüm) — uydurma can/elmas yok. (6) Hafif animasyon (RN Animated, web'de native sürücü kapalı): sıralı fade+scale + aktifte pulse.
+> **Doğrulama:** `npx tsc --noEmit` 0 hata. Yeni public DB fonksiyonu YOK → 4-dosya senkron tetiklenmiyor. **Telefon/web görsel teyidi bekliyor** (dev-client'a svg için rebuild gerekir).
 >
 > ### ▶ 23 Haz — FİLİGRAN ZOOM FIX + vCode 6 BUILD
 > **Sorun:** Karta tıklayınca açılan tam ekran yakınlaştırma (GorselZoom) overlay'i filigran (Watermark) içermiyordu → zoom modunda forensic filigran kayboluyordu. **Düzeltme (commit `a0393ba`):** `GorselZoom`'a `filigranMetin` prop'u; Watermark artık ImageZoom üstüne `pointerEvents="none"` ile çiziliyor (pinch/pan altıdaki görsele geçer, filigran ekranı sabit kaplar). Aynı metin kart+zoom'da ortak (`study-card.tsx`). tsc 0 hata.
