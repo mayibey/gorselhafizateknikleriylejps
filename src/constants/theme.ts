@@ -21,18 +21,6 @@ export const Palette = {
   yesil: '#2E7D32',
   amber: '#B5791C',
   beyaz: '#FFFFFF',
-
-  // Dark-first token'ları (yeni ekranlar — şu an /patika). Mevcut AÇIK marka
-  // paleti yukarıda DOKUNULMADI; bunlar additif. Koyu lacivert ekseni marka
-  // lacivertiyle (#1F3864) uyumlu.
-  zeminKoyu: '#0B1730', // koyu ekran zemini (derin lacivert)
-  yuzeyKoyu: '#15294A', // koyu kart / düğüm yüzeyi
-  yuzeyKoyuSoluk: '#11203B', // başlanmadı düğüm (düşük vurgu yüzey)
-  kenarlikKoyu: '#2A3E5E', // koyu zeminde soluk kenarlık
-  metinAcik: '#F4EEDF', // koyu zeminde ana metin
-  metinSolukAcik: '#9DB0CC', // koyu zeminde soluk metin
-  altinAcik: '#F2D98A', // altın vurgu açığı (kenar/sayı)
-  yesilAcik: '#5CD685', // tamamlandı onay (check) açığı
 } as const;
 
 export type PaletteColor = keyof typeof Palette;
