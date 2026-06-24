@@ -1,13 +1,12 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { StatusBar } from 'expo-status-bar';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Pressable, StyleSheet, TextInput, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
-import { BottomTabInset, MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { Screen } from '@/components/ui/screen';
+import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getLaws, getStudyCards } from '@/db/database';
 import type { LawWithCount } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
@@ -61,72 +60,58 @@ export default function MevzuatScreen() {
   }
 
   return (
-    <SafeAreaView style={st.safe} edges={['top', 'left', 'right']}>
-      <StatusBar style="dark" />
-      <View style={st.header}>
-        <AppText variant="baslik" color="metinAcik" bold>
-          Mevzuat
-        </AppText>
+    <Screen title="Mevzuat">
+      {/* Arama — listeyle birlikte kayar (sticky değil) */}
+      <View style={st.aramaKutu}>
+        <MaterialCommunityIcons name="magnify" size={20} color={Palette.solukMetin} />
+        <TextInput
+          style={st.aramaInput}
+          value={arama}
+          onChangeText={setArama}
+          placeholder="Kanun ara…"
+          placeholderTextColor={Palette.solukMetin}
+          returnKeyType="search"
+          autoCorrect={false}
+        />
+        {arama.length > 0 ? (
+          <Pressable onPress={() => setArama('')} hitSlop={8} accessibilityLabel="Aramayı temizle">
+            <MaterialCommunityIcons name="close-circle" size={18} color={Palette.solukMetin} />
+          </Pressable>
+        ) : null}
       </View>
 
-      <ScrollView
-        style={st.scroll}
-        contentContainerStyle={[st.scrollContent, { paddingBottom: BottomTabInset + Spacing.four }]}
-        keyboardShouldPersistTaps="handled">
-        <View style={st.body}>
-          {/* Arama */}
-          <View style={st.aramaKutu}>
-            <MaterialCommunityIcons name="magnify" size={20} color={Palette.metinSolukAcik} />
-            <TextInput
-              style={st.aramaInput}
-              value={arama}
-              onChangeText={setArama}
-              placeholder="Kanun ara…"
-              placeholderTextColor={Palette.metinSolukAcik}
-              returnKeyType="search"
-              autoCorrect={false}
-            />
-            {arama.length > 0 ? (
-              <Pressable onPress={() => setArama('')} hitSlop={8} accessibilityLabel="Aramayı temizle">
-                <MaterialCommunityIcons name="close-circle" size={18} color={Palette.metinSolukAcik} />
-              </Pressable>
-            ) : null}
-          </View>
-
-          {hata ? (
-            <DurumKutu
-              ikon="alert-circle-outline"
-              baslik="Yüklenemedi"
-              aciklama="Mevzuat listesi yüklenemedi."
-              buton={{ etiket: 'Tekrar dene', onPress: yukle }}
-            />
-          ) : laws === null ? (
-            <DurumKutu ikon="book-open-variant" baslik="Yükleniyor…" aciklama="" />
+      {hata ? (
+        <DurumKutu
+          ikon="alert-circle-outline"
+          baslik="Yüklenemedi"
+          aciklama="Mevzuat listesi yüklenemedi."
+          buton={{ etiket: 'Tekrar dene', onPress: yukle }}
+        />
+      ) : laws === null ? (
+        <DurumKutu ikon="book-open-variant" baslik="Yükleniyor…" aciklama="" />
+      ) : (
+        <>
+          {/* Kategori başlığı — DEĞİŞMEDİ: yalnız MÜŞTEREK (branş "yakında", kapsam dışı) */}
+          <AppText variant="etiket" bold color="solukMetin" style={st.kategori}>
+            MÜŞTEREK
+          </AppText>
+          {gosterilen.length === 0 ? (
+            <AppText variant="kucuk" color="solukMetin">
+              {q ? 'Eşleşen kanun yok.' : 'Bu bölümde kanun yok.'}
+            </AppText>
           ) : (
-            <>
-              {/* Kategori başlığı — DEĞİŞMEDİ: yalnız MÜŞTEREK (branş "yakında", kapsam dışı) */}
-              <AppText variant="etiket" bold color="metinSolukAcik" style={st.kategori}>
-                MÜŞTEREK
-              </AppText>
-              {gosterilen.length === 0 ? (
-                <AppText variant="kucuk" color="metinSolukAcik">
-                  {q ? 'Eşleşen kanun yok.' : 'Bu bölümde kanun yok.'}
-                </AppText>
-              ) : (
-                gosterilen.map((law) => (
-                  <KanunSatir
-                    key={law.id}
-                    law={law}
-                    calisilan={ilerleme?.get(law.id) ?? 0}
-                    onPress={kanunaGit}
-                  />
-                ))
-              )}
-            </>
+            gosterilen.map((law) => (
+              <KanunSatir
+                key={law.id}
+                law={law}
+                calisilan={ilerleme?.get(law.id) ?? 0}
+                onPress={kanunaGit}
+              />
+            ))
           )}
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+        </>
+      )}
+    </Screen>
   );
 }
 
@@ -142,13 +127,10 @@ function KanunSatir({
   const toplam = law.kartSayisi;
   const yuzde = toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0;
   const tam = yuzde === 100;
-  const baslanmis = yuzde > 0 && !tam;
   const bos = yuzde === 0;
 
   // Numara rozeti: addan kanun no çek ("5237 sayılı…" → "5237"); yoksa kitap ikonu fallback.
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
-  // Vurgu rengi (rozet + halka): tamam → yeşil, başlanmış → altın, boş → soluk.
-  const vurgu = tam ? Palette.yesilAcik : baslanmis ? Palette.altin : Palette.metinSolukAcik;
 
   return (
     <Pressable
@@ -156,14 +138,14 @@ function KanunSatir({
       onPress={() => onPress(law)}
       accessibilityRole="button"
       accessibilityLabel={law.ad}>
-      {/* Monogram rozeti */}
+      {/* Monogram rozeti — lacivert kare, numara altın (premium) */}
       <View style={st.rozet}>
         {no ? (
-          <AppText variant="kucuk" bold color={bos ? 'metinSolukAcik' : tam ? 'yesilAcik' : 'altin'}>
+          <AppText variant="kucuk" bold color="altin">
             {no}
           </AppText>
         ) : (
-          <MaterialCommunityIcons name="book-outline" size={20} color={vurgu} />
+          <MaterialCommunityIcons name="book-outline" size={20} color={Palette.altin} />
         )}
       </View>
 
@@ -172,19 +154,21 @@ function KanunSatir({
         <AppText
           variant="govde"
           bold
-          color={bos ? 'metinSolukAcik' : 'metinAcik'}
+          color={bos ? 'solukMetin' : 'lacivert'}
           numberOfLines={1}
           ellipsizeMode="tail">
           {law.ad}
         </AppText>
-        <AppText variant="etiket" color={tam ? 'yesilAcik' : 'metinSolukAcik'}>
+        <AppText variant="etiket" color={tam ? 'yesil' : 'solukMetin'}>
           {calisilan}/{toplam} kart · %{yuzde} çalışıldı
         </AppText>
       </View>
 
-      {/* İlerleme halkası ya da tamam tiki */}
+      {/* Sağ durum: tamam → yeşil tik · başlanmış → halka · başlanmadı → chevron */}
       {tam ? (
-        <MaterialCommunityIcons name="check-circle" size={26} color={Palette.yesilAcik} />
+        <MaterialCommunityIcons name="check-circle" size={26} color={Palette.yesil} />
+      ) : bos ? (
+        <MaterialCommunityIcons name="chevron-right" size={24} color={Palette.solukMetin} />
       ) : (
         <IlerlemeHalkasi yuzde={yuzde} />
       )}
@@ -192,7 +176,7 @@ function KanunSatir({
   );
 }
 
-/** Küçük dairesel ilerleme: track + altın yay (yuzde kadar). yuzde 0 → yalnız track. */
+/** Küçük dairesel ilerleme: track + koyu altın yay (yuzde kadar). */
 function IlerlemeHalkasi({ yuzde }: { yuzde: number }) {
   const boyut = 28;
   const kalinlik = 3.5;
@@ -202,13 +186,13 @@ function IlerlemeHalkasi({ yuzde }: { yuzde: number }) {
 
   return (
     <Svg width={boyut} height={boyut}>
-      <Circle cx={c} cy={c} r={r} stroke={Palette.kenarlikKoyu} strokeWidth={kalinlik} fill="none" />
+      <Circle cx={c} cy={c} r={r} stroke={Palette.kenarlik} strokeWidth={kalinlik} fill="none" />
       {yuzde > 0 ? (
         <Circle
           cx={c}
           cy={c}
           r={r}
-          stroke={Palette.altin}
+          stroke={Palette.altinKoyu}
           strokeWidth={kalinlik}
           fill="none"
           strokeLinecap="round"
@@ -221,7 +205,7 @@ function IlerlemeHalkasi({ yuzde }: { yuzde: number }) {
   );
 }
 
-/** Koyu zeminli yükleniyor/hata kutusu (ortak Loading/EmptyState açık temalı). */
+/** Yükleniyor/hata kutusu (krem zemin). */
 function DurumKutu({
   ikon,
   baslik,
@@ -235,18 +219,18 @@ function DurumKutu({
 }) {
   return (
     <View style={st.merkezKutu}>
-      <MaterialCommunityIcons name={ikon} size={40} color={Palette.metinSolukAcik} />
-      <AppText variant="altBaslik" bold color="metinAcik">
+      <MaterialCommunityIcons name={ikon} size={40} color={Palette.solukMetin} />
+      <AppText variant="altBaslik" bold color="lacivert">
         {baslik}
       </AppText>
       {aciklama ? (
-        <AppText variant="kucuk" color="metinSolukAcik">
+        <AppText variant="kucuk" color="solukMetin">
           {aciklama}
         </AppText>
       ) : null}
       {buton ? (
         <Pressable onPress={buton.onPress} style={({ pressed }) => [st.retryBtn, pressed && st.pressed]}>
-          <AppText variant="kucuk" bold color="zeminKoyu">
+          <AppText variant="kucuk" bold color="lacivert">
             {buton.etiket}
           </AppText>
         </Pressable>
@@ -256,36 +240,12 @@ function DurumKutu({
 }
 
 const st = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: Palette.zeminKoyu,
-  },
-  header: {
-    backgroundColor: Palette.yuzeyKoyu,
-    paddingHorizontal: Spacing.four,
-    paddingVertical: Spacing.three,
-  },
-  scroll: {
-    flex: 1,
-    backgroundColor: Palette.zeminKoyu,
-  },
-  scrollContent: {
-    flexGrow: 1,
-    alignItems: 'center',
-  },
-  body: {
-    flexGrow: 1,
-    width: '100%',
-    maxWidth: MaxContentWidth,
-    padding: Spacing.three,
-    gap: Spacing.three,
-  },
   aramaKutu: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
-    backgroundColor: Palette.yuzeyKoyu,
-    borderColor: Palette.kenarlikKoyu,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
     borderWidth: 1,
     borderRadius: Radius.l,
     paddingHorizontal: Spacing.three,
@@ -293,7 +253,7 @@ const st = StyleSheet.create({
   },
   aramaInput: {
     flex: 1,
-    color: Palette.metinAcik,
+    color: Palette.lacivert,
     fontSize: 16,
     paddingVertical: 0,
   },
@@ -305,8 +265,8 @@ const st = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.three,
-    backgroundColor: Palette.yuzeyKoyu,
-    borderColor: Palette.kenarlikKoyu,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
     borderWidth: 1,
     borderRadius: Radius.m,
     padding: Spacing.three,
@@ -315,9 +275,7 @@ const st = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: Radius.s,
-    backgroundColor: Palette.yuzeyKoyuSoluk,
-    borderColor: Palette.kenarlikKoyu,
-    borderWidth: 1,
+    backgroundColor: Palette.lacivert,
     alignItems: 'center',
     justifyContent: 'center',
   },
