@@ -7,16 +7,33 @@ import '@/global.css';
 
 import { Platform } from 'react-native';
 
-/** Uygulama renk paleti. Kırmızı SADECE aksiyon/uyarı içindir. */
+/** Krem premium marka paleti. Kırmızı SADECE aksiyon/uyarı içindir. */
 export const Palette = {
-  lacivert: '#1F3864', // ana / krom
+  // Lacivert / krom ekseni
+  lacivert: '#0B1F3A', // ana / krom
+  lacivert2: '#173B6B', // krom üst tonu / aksan
+  anaMetin: '#1B2A4A', // krem üstünde ana metin
   kirmizi: '#C00000', // sadece aksiyon / uyarı
-  kremZemin: '#F7F1E3', // sayfa zemini
-  kartKremi: '#FBF6EA', // kart yüzeyi
-  kenarlik: '#E3D8BE',
-  solukMetin: '#8A7A52',
-  altin: '#E6C24A',
-  altinKoyu: '#C9A227', // krem zeminde okunur altın (postal izi, halka, accent)
+
+  // Krem yüzeyler
+  kremZemin: '#F7F3EA', // sayfa zemini
+  kartKremi: '#FFFCF5', // kart yüzeyi
+  kenarlik: '#E7DCC7', // kart kenarlığı
+  ayirici: '#EFE6D6', // ince ayraç
+  solukMetin: '#8A7D62', // ikincil metin
+
+  // Altın (şampanya)
+  altin: '#C9A227', // ana altın accent
+  altinKoyu: '#B88917', // koyu altın (svg/okunur)
+  altinSolukYuzey: '#F3E7C1', // altın soluk yüzey (rozet/pill arka)
+
+  // İlerleme
+  ilerlemeDolu: '#C9A227',
+  ilerlemeTrack: '#EDE3CF',
+
+  kartGolge: 'rgba(11,31,58,0.08)', // kart gölgesi (shadowColor değil; rgba)
+
+  // Korunan yardımcı tonlar (mevcut ekranlar kullanıyor)
   ten: '#E8C9A8',
   yesil: '#2E7D32',
   amber: '#B5791C',
