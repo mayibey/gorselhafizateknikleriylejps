@@ -1,5 +1,4 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { StatusBar } from 'expo-status-bar';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import {
@@ -8,16 +7,15 @@ import {
   Easing,
   Platform,
   Pressable,
-  ScrollView,
   StyleSheet,
   View,
   type LayoutChangeEvent,
 } from 'react-native';
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { G, Path, Rect } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
-import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { Screen } from '@/components/ui/screen';
+import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   getBolumler,
   getCardsByBolum,
@@ -96,9 +94,9 @@ function PostalIzi({ x, y, aci, renk }: { x: number; y: number; aci: number; ren
 
 /**
  * Bir (yürünmüş) segmente postal izleri serper.
- *  - İz sayısı segment boyuna orantılı (clamp 2..5).
+ *  - İz sayısı segment boyuna orantılı (clamp 2..3).
  *  - t kenarlardan içeri alınır (düğüme binmesin).
- *  - Ardışık izler yürüyüş yönüne dik ±2.5px alternatif kaydırılır.
+ *  - Ardışık izler yürüyüş yönüne dik ±3.5px alternatif kaydırılır.
  * Dik birim vektör = (cos(aci), sin(aci)); aci zaten teğet+90 → (-dy,dx)/|.| ile aynı.
  */
 function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): ReactNode[] {
@@ -193,29 +191,26 @@ export default function PatikaScreen() {
     ? dugumler.findIndex((d) => d.toplam > 0 && d.calisilan < d.toplam)
     : -1;
 
-  // Bölüm şeridi sayacı: tamamlanan bölüm / toplam bölüm (mevcut veriden türetilir).
   // Şerit sayacı KART bazlı (bölüm değil): çalışınca anında hareket eder + kartsız
   // iskelet bölümler paydayı şişirmez. calisilan = kutu>=1 görülen kart (bolumIlerleme).
   const calisilanKart = dugumler?.reduce((a, d) => a + d.calisilan, 0) ?? 0;
   const toplamKart = dugumler?.reduce((a, d) => a + d.toplam, 0) ?? 0;
 
   return (
-    <DarkScaffold title="Patika" onGeri={() => router.back()}>
-      <StatusBar style="dark" />
-
+    <Screen title="Patika" onGeri={() => router.back()}>
       {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK) */}
       <View style={st.ustBar}>
         <View style={st.statChip}>
-          <MaterialCommunityIcons name="fire" size={18} color={Palette.altin} />
-          <AppText variant="kucuk" bold color="altinAcik">
+          <MaterialCommunityIcons name="fire" size={18} color={Palette.altinKoyu} />
+          <AppText variant="kucuk" bold color="altinKoyu">
             {streak === null ? '—' : streak}
           </AppText>
         </View>
         <View style={st.statChip}>
-          <AppText variant="kucuk" bold color="metinAcik">
+          <AppText variant="kucuk" bold color="lacivert">
             {hazirlik === null ? '—' : `%${hazirlik}`}
           </AppText>
-          <AppText variant="etiket" color="metinSolukAcik">
+          <AppText variant="etiket" color="solukMetin">
             Çalışıldı
           </AppText>
         </View>
@@ -223,12 +218,12 @@ export default function PatikaScreen() {
 
       {/* Kanun şeridi — aktif kanun adı + gerçek kart ilerlemesi (kart bazlı) */}
       <View style={st.serit}>
-        <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.metinSolukAcik} />
-        <AppText variant="kucuk" bold color="metinAcik" numberOfLines={1} style={st.seritAd}>
+        <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.solukMetin} />
+        <AppText variant="kucuk" bold color="lacivert" numberOfLines={1} style={st.seritAd}>
           {kanunAd ?? 'Mevzuat'}
         </AppText>
         {!bolumsuz && dugumler !== null ? (
-          <AppText variant="kucuk" bold color="altinAcik">
+          <AppText variant="kucuk" bold color="altinKoyu">
             {toplamKart === 0 ? '0 kart' : `${calisilanKart}/${toplamKart} kart`}
           </AppText>
         ) : null}
@@ -243,8 +238,8 @@ export default function PatikaScreen() {
         />
       ) : dugumler === null ? (
         <View style={st.merkezKutu}>
-          <ActivityIndicator color={Palette.altin} />
-          <AppText variant="kucuk" color="metinSolukAcik">
+          <ActivityIndicator color={Palette.lacivert} />
+          <AppText variant="kucuk" color="solukMetin">
             Yükleniyor…
           </AppText>
         </View>
@@ -256,37 +251,7 @@ export default function PatikaScreen() {
       ) : (
         <Harita dugumler={dugumler} aktifIndex={aktifIndex} router={router} />
       )}
-    </DarkScaffold>
-  );
-}
-
-/** Koyu zeminli, kendi başlık şeritli ekran sarmalayıcı (dark-first, patika'ya özel). */
-function DarkScaffold({
-  title,
-  onGeri,
-  children,
-}: {
-  title: string;
-  onGeri: () => void;
-  children: ReactNode;
-}) {
-  const insets = useSafeAreaInsets();
-  return (
-    <SafeAreaView style={st.safe} edges={['top', 'left', 'right']}>
-      <View style={st.header}>
-        <Pressable onPress={onGeri} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
-          <MaterialCommunityIcons name="arrow-left" size={26} color={Palette.metinAcik} />
-        </Pressable>
-        <AppText variant="baslik" color="metinAcik" bold>
-          {title}
-        </AppText>
-      </View>
-      <ScrollView
-        style={st.scroll}
-        contentContainerStyle={[st.scrollContent, { paddingBottom: insets.bottom + Spacing.six }]}>
-        <View style={st.body}>{children}</View>
-      </ScrollView>
-    </SafeAreaView>
+    </Screen>
   );
 }
 
@@ -324,22 +289,22 @@ function Harita({
                 const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
                 const anahtar = String(dugumler[i].bolum.id);
                 if (!gecildi) {
-                  // Yürünmemiş ara: mevcut kesikli/soluk konnektör (postal YOK, önü temiz).
+                  // Yürünmemiş ara: kesikli soluk konnektör (krem'de kenarlık tonu, postal YOK).
                   konnektorler.push(
                     <Path
                       key={anahtar}
                       d={segmentYol(p0, p1)}
                       fill="none"
-                      stroke={Palette.metinSolukAcik}
+                      stroke={Palette.kenarlik}
                       strokeWidth={3}
                       strokeLinecap="round"
                       strokeDasharray="2 12"
-                      opacity={0.6}
+                      opacity={0.9}
                     />,
                   );
                 } else {
-                  // Yürünmüş ara: konnektör çizgisi yerine postal izleri serpiştir.
-                  postallar.push(...segmentPostallari(p0, p1, Palette.altin, anahtar));
+                  // Yürünmüş ara: konnektör çizgisi yerine postal izleri serpiştir (krem'de koyu altın).
+                  postallar.push(...segmentPostallari(p0, p1, Palette.altinKoyu, anahtar));
                 }
               });
               // Önce konnektörler, sonra postallar (üstte kalsın).
@@ -445,7 +410,7 @@ function Dugum({
       ]}>
       {aktif ? (
         <View style={st.buradasinPill}>
-          <AppText variant="etiket" bold color="zeminKoyu">
+          <AppText variant="etiket" bold color="lacivert">
             buradasın
           </AppText>
         </View>
@@ -466,11 +431,11 @@ function Dugum({
             pressed && st.pressed,
           ]}>
           {durum === 'aktif' ? (
-            <MaterialCommunityIcons name="play" size={36} color={Palette.zeminKoyu} />
+            <MaterialCommunityIcons name="play" size={36} color={Palette.lacivert} />
           ) : durum === 'tamam' ? (
-            <MaterialCommunityIcons name="check-bold" size={32} color={Palette.yesilAcik} />
+            <MaterialCommunityIcons name="check-bold" size={32} color={Palette.yesil} />
           ) : durum === 'baslanmis' ? (
-            <AppText variant="kucuk" bold color="metinAcik">
+            <AppText variant="kucuk" bold color="lacivert">
               %{yuzde}
             </AppText>
           ) : (
@@ -483,7 +448,7 @@ function Dugum({
         <AppText
           variant="etiket"
           bold
-          color={durum === 'baslanmadi' ? 'metinSolukAcik' : 'metinAcik'}
+          color={durum === 'baslanmadi' ? 'solukMetin' : 'lacivert'}
           numberOfLines={1}
           style={st.adMetin}>
           {dugum.bolum.ad}
@@ -509,7 +474,7 @@ function TekDugum({ onPress }: { onPress: () => void }) {
   return (
     <Animated.View style={[st.tekSatir, { opacity: enter, transform: [{ scale }] }]}>
       <View style={st.buradasinPill}>
-        <AppText variant="etiket" bold color="zeminKoyu">
+        <AppText variant="etiket" bold color="lacivert">
           buradasın
         </AppText>
       </View>
@@ -523,19 +488,19 @@ function TekDugum({ onPress }: { onPress: () => void }) {
           st.daireAktif,
           pressed && st.pressed,
         ]}>
-        <MaterialCommunityIcons name="play" size={36} color={Palette.zeminKoyu} />
+        <MaterialCommunityIcons name="play" size={36} color={Palette.lacivert} />
       </Pressable>
-      <AppText variant="kucuk" bold color="metinAcik" style={st.adMetin}>
+      <AppText variant="kucuk" bold color="lacivert" style={st.adMetin}>
         Tüm Kartlar
       </AppText>
-      <AppText variant="etiket" color="metinSolukAcik">
+      <AppText variant="etiket" color="solukMetin">
         Bu kanunu çalış
       </AppText>
     </Animated.View>
   );
 }
 
-/** Koyu zeminli hata/durum kutusu. */
+/** Hata/durum kutusu (krem zemin). */
 function DurumKutu({
   ikon,
   baslik,
@@ -550,16 +515,16 @@ function DurumKutu({
   return (
     <View style={st.merkezKutu}>
       <MaterialCommunityIcons name={ikon} size={44} color={Palette.kirmizi} />
-      <AppText variant="altBaslik" bold color="metinAcik">
+      <AppText variant="altBaslik" bold color="lacivert">
         {baslik}
       </AppText>
-      <AppText variant="kucuk" color="metinSolukAcik">
+      <AppText variant="kucuk" color="solukMetin">
         {aciklama}
       </AppText>
       <Pressable
         onPress={buton.onPress}
         style={({ pressed }) => [st.retryBtn, pressed && st.pressed]}>
-        <AppText variant="kucuk" bold color="zeminKoyu">
+        <AppText variant="kucuk" bold color="lacivert">
           {buton.etiket}
         </AppText>
       </Pressable>
@@ -568,34 +533,6 @@ function DurumKutu({
 }
 
 const st = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: Palette.zeminKoyu,
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.three,
-    backgroundColor: Palette.yuzeyKoyu,
-    paddingHorizontal: Spacing.four,
-    paddingVertical: Spacing.three,
-  },
-  scroll: {
-    flex: 1,
-    backgroundColor: Palette.zeminKoyu,
-  },
-  scrollContent: {
-    flexGrow: 1,
-    alignItems: 'center',
-  },
-  body: {
-    flexGrow: 1,
-    width: '100%',
-    maxWidth: MaxContentWidth,
-    padding: Spacing.three,
-    gap: Spacing.three,
-  },
-
   // Üst bar
   ustBar: {
     flexDirection: 'row',
@@ -605,8 +542,8 @@ const st = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.yuzeyKoyu,
-    borderColor: Palette.kenarlikKoyu,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
     borderWidth: 1,
     borderRadius: Radius.s,
     paddingHorizontal: Spacing.three,
@@ -616,8 +553,8 @@ const st = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
-    backgroundColor: Palette.yuzeyKoyu,
-    borderColor: Palette.kenarlikKoyu,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
     borderWidth: 1,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
@@ -644,26 +581,26 @@ const st = StyleSheet.create({
   },
   daireAktif: {
     backgroundColor: Palette.altin,
-    borderColor: Palette.altinAcik,
+    borderColor: Palette.altinKoyu,
     borderWidth: 2,
   },
   daireTamam: {
-    backgroundColor: Palette.yuzeyKoyu,
+    backgroundColor: Palette.kartKremi,
     borderColor: Palette.yesil,
   },
   daireBaslanmis: {
-    backgroundColor: Palette.yuzeyKoyu,
+    backgroundColor: Palette.kartKremi,
     borderColor: Palette.altin,
   },
   daireBaslanmadi: {
-    backgroundColor: Palette.yuzeyKoyuSoluk,
-    borderColor: Palette.kenarlikKoyu,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
   },
   nokta: {
     width: 10,
     height: 10,
     borderRadius: 5,
-    backgroundColor: Palette.metinSolukAcik,
+    backgroundColor: Palette.solukMetin,
   },
   buradasinPill: {
     position: 'absolute',
