@@ -119,8 +119,10 @@ export default function PatikaScreen() {
     : -1;
 
   // Bölüm şeridi sayacı: tamamlanan bölüm / toplam bölüm (mevcut veriden türetilir).
-  const tamamBolum = dugumler?.filter((d) => d.toplam > 0 && d.calisilan === d.toplam).length ?? 0;
-  const toplamBolum = dugumler?.length ?? 0;
+  // Şerit sayacı KART bazlı (bölüm değil): çalışınca anında hareket eder + kartsız
+  // iskelet bölümler paydayı şişirmez. calisilan = kutu>=1 görülen kart (bolumIlerleme).
+  const calisilanKart = dugumler?.reduce((a, d) => a + d.calisilan, 0) ?? 0;
+  const toplamKart = dugumler?.reduce((a, d) => a + d.toplam, 0) ?? 0;
 
   return (
     <DarkScaffold title="Patika" onGeri={() => router.back()}>
@@ -144,15 +146,15 @@ export default function PatikaScreen() {
         </View>
       </View>
 
-      {/* Bölüm şeridi — aktif kanun adı + ilerleme */}
+      {/* Kanun şeridi — aktif kanun adı + gerçek kart ilerlemesi (kart bazlı) */}
       <View style={st.serit}>
         <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.metinSolukAcik} />
         <AppText variant="kucuk" bold color="metinAcik" numberOfLines={1} style={st.seritAd}>
           {kanunAd ?? 'Mevzuat'}
         </AppText>
-        {!bolumsuz && toplamBolum > 0 ? (
+        {!bolumsuz && dugumler !== null ? (
           <AppText variant="kucuk" bold color="altinAcik">
-            {tamamBolum}/{toplamBolum} bölüm
+            {toplamKart === 0 ? '0 kart' : `${calisilanKart}/${toplamKart} kart`}
           </AppText>
         ) : null}
       </View>
