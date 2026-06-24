@@ -21,7 +21,7 @@ export default function RootLayout() {
     // GestureHandlerRootView: gesture-handler jestleri (görsel zoom pinch/pan) için şart.
     <GestureHandlerRootView style={styles.kok}>
       <SafeAreaProvider>
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
         <AuthProvider>
           <BransProvider>
             <RutbeProvider>

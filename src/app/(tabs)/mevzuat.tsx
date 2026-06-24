@@ -62,7 +62,7 @@ export default function MevzuatScreen() {
 
   return (
     <SafeAreaView style={st.safe} edges={['top', 'left', 'right']}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <View style={st.header}>
         <AppText variant="baslik" color="metinAcik" bold>
           Mevzuat

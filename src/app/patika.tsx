@@ -201,7 +201,7 @@ export default function PatikaScreen() {
 
   return (
     <DarkScaffold title="Patika" onGeri={() => router.back()}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
 
       {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK) */}
       <View style={st.ustBar}>
