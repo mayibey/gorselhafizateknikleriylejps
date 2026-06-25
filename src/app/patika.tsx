@@ -11,7 +11,8 @@ import {
   View,
   type LayoutChangeEvent,
 } from 'react-native';
-import Svg, { Circle, G, Line, Path, Rect } from 'react-native-svg';
+import Svg, { G, Path, Rect } from 'react-native-svg';
+import { Image } from 'expo-image';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -28,6 +29,10 @@ import { useBrans } from '@/lib/brans-context';
 import { bolumIlerleme } from '@/lib/patika';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaStreak } from '@/lib/stats';
+
+// Patika manzara arka planı (dağ/orman/pusula — krem topografik). Görsel patika
+// alanını kaplar; düğüm/bot izi/etiketler bunun ÜSTÜnde render edilir.
+const ARKA_PLAN = require('../../assets/images/patika-arkaplan.png');
 
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
 /** Düğümün görsel durumu — MEVCUT veri (calisilan/toplam/aktifIndex) türetilir, davranış değil. */
@@ -133,58 +138,6 @@ function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): React
     );
   }
   return izler;
-}
-
-/**
- * Harita arka plan dokusu (ÇOK hafif, neredeyse görünmez): topografik kontur
- * çizgileri + sol-altta pusula + sağ-altta dağ silüeti. Deterministik (W,H'den
- * türetilir; Math.random YOK). Düğüm/postalların ALTINDA, dokunmayı engellemez.
- */
-function HaritaDokusu({ W, H }: { W: number; H: number }) {
-  const adim = Math.max(36, W / 9);
-  // Kontur sayısı TOPLAM yüksekliğe orantılı → tüm patika boyunca eşit kapsama.
-  const konturSayisi = Math.max(5, Math.round(H / 150));
-  const konturlar: string[] = [];
-  for (let j = 0; j < konturSayisi; j++) {
-    const yBase = H * ((j + 0.5) / konturSayisi);
-    const faz = j * 1.3;
-    let d = '';
-    for (let x = 0; x <= W; x += adim) {
-      const y = yBase + 15 * Math.sin(x / 90 + faz);
-      d += `${x === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)} `;
-    }
-    konturlar.push(d);
-  }
-  // Sağ-alt dağ silüeti (zikzak kontur)
-  const dy = H * 0.9;
-  const dagYol =
-    `M ${(W * 0.52).toFixed(0)} ${(H * 0.94).toFixed(0)} ` +
-    `L ${(W * 0.6).toFixed(0)} ${(dy - 26).toFixed(0)} L ${(W * 0.67).toFixed(0)} ${dy.toFixed(0)} ` +
-    `L ${(W * 0.74).toFixed(0)} ${(dy - 34).toFixed(0)} L ${(W * 0.82).toFixed(0)} ${dy.toFixed(0)} ` +
-    `L ${(W * 0.9).toFixed(0)} ${(dy - 22).toFixed(0)} L ${W.toFixed(0)} ${(dy + 6).toFixed(0)}`;
-  // Sol-alt pusula
-  const cx = W * 0.2;
-  const cy = H * 0.84;
-  const R = Math.min(40, W * 0.13);
-
-  return (
-    <Svg width={W} height={H} style={StyleSheet.absoluteFill} pointerEvents="none">
-      {konturlar.map((d, i) => (
-        <Path key={i} d={d} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.13} />
-      ))}
-      <Path d={dagYol} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.12} />
-      <G transform={`translate(${cx} ${cy})`} opacity={0.2}>
-        <Circle r={R} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" />
-        <Circle r={R * 0.62} stroke={Palette.altinKoyu} strokeWidth={1} fill="none" />
-        <Line x1={0} y1={-R} x2={0} y2={-R * 0.55} stroke={Palette.altinKoyu} strokeWidth={1} />
-        <Line x1={0} y1={R} x2={0} y2={R * 0.55} stroke={Palette.altinKoyu} strokeWidth={1} />
-        <Line x1={-R} y1={0} x2={-R * 0.55} y2={0} stroke={Palette.altinKoyu} strokeWidth={1} />
-        <Line x1={R} y1={0} x2={R * 0.55} y2={0} stroke={Palette.altinKoyu} strokeWidth={1} />
-        <Path d={`M 0 ${-R * 0.45} L ${R * 0.16} 0 L 0 ${R * 0.45} L ${-R * 0.16} 0 Z`} fill={Palette.altinKoyu} />
-        <Path d={`M ${-R * 0.45} 0 L 0 ${R * 0.16} L ${R * 0.45} 0 L 0 ${-R * 0.16} Z`} fill={Palette.altinKoyu} />
-      </G>
-    </Svg>
-  );
 }
 
 export default function PatikaScreen() {
@@ -344,11 +297,11 @@ function Harita({
 
   return (
     <View style={[st.harita, { height: haritaY }]} onLayout={olc}>
+      {/* Manzara arka planı (dağ/orman/pusula PNG) — tüm patika alanını kaplar,
+          düğüm/postal/etiketler bunun ÜSTÜnde. */}
+      <Image source={ARKA_PLAN} style={StyleSheet.absoluteFill} contentFit="cover" pointerEvents="none" />
       {W > 0 ? (
         <>
-          {/* Arka plan dokusu — en altta (topografik + pusula + dağ) */}
-          <HaritaDokusu W={W} H={haritaY} />
-
           {/* Yürünmüş segment → postal izi (çizgi yok); yürünmemiş → kesikli soluk konnektör */}
           <Svg width={W} height={haritaY} style={StyleSheet.absoluteFill} pointerEvents="none">
             {(() => {
