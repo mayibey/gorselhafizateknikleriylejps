@@ -33,6 +33,9 @@ import { hesaplaStreak } from '@/lib/stats';
 // Patika manzara arka planı (dağ/orman/pusula — krem topografik). Görsel patika
 // alanını kaplar; düğüm/bot izi/etiketler bunun ÜSTÜnde render edilir.
 const ARKA_PLAN = require('../../assets/images/patika-arkaplan.png');
+// Görselin doğal en-boy oranı (1844/853 = yükseklik/genişlik). Dikey TILE'da
+// her dilim W * ORAN yüksekliğinde → germe/esneme YOK, doğal oran korunur.
+const ARKA_PLAN_ORAN = 1844 / 853;
 
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
 /** Düğümün görsel durumu — MEVCUT veri (calisilan/toplam/aktifIndex) türetilir, davranış değil. */
@@ -297,9 +300,25 @@ function Harita({
 
   return (
     <View style={[st.harita, { height: haritaY }]} onLayout={olc}>
-      {/* Manzara arka planı (dağ/orman/pusula PNG) — tüm patika alanını kaplar,
-          düğüm/postal/etiketler bunun ÜSTÜnde. */}
-      <Image source={ARKA_PLAN} style={StyleSheet.absoluteFill} contentFit="cover" pointerEvents="none" />
+      {/* Manzara arka planı — DİKEY TILE: görsel doğal oranında (W × W*ORAN) alt
+          alta tekrarlanır → uzun patikada germe/esneme YOK. Düğüm/postal üstte. */}
+      {W > 0
+        ? Array.from({ length: Math.max(1, Math.ceil(haritaY / (W * ARKA_PLAN_ORAN))) }, (_, i) => (
+            <Image
+              key={`bg-${i}`}
+              source={ARKA_PLAN}
+              style={{
+                position: 'absolute',
+                left: 0,
+                top: i * W * ARKA_PLAN_ORAN,
+                width: W,
+                height: W * ARKA_PLAN_ORAN,
+              }}
+              contentFit="cover"
+              pointerEvents="none"
+            />
+          ))
+        : null}
       {W > 0 ? (
         <>
           {/* Yürünmüş segment → postal izi (çizgi yok); yürünmemiş → kesikli soluk konnektör */}
@@ -620,6 +639,7 @@ const st = StyleSheet.create({
   harita: {
     position: 'relative',
     width: '100%',
+    overflow: 'hidden', // tile'ın son dilimi haritaY'yi aşarsa kırpılsın
   },
   dugumKutu: {
     position: 'absolute',
