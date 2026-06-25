@@ -1,4 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -27,6 +28,9 @@ import { useRutbe } from '@/lib/rutbe-context';
 import { RUTBELER } from '@/lib/rutbe-store';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
+
+// Metalik-ish altın gradyan (açık → ana → koyu altın). Play diski + geri besleme diski.
+const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as const;
 
 export default function KarargahScreen() {
   const router = useRouter();
@@ -187,10 +191,14 @@ export default function KarargahScreen() {
                 {bekleyen > 0 ? `${bekleyen} kart seni bekliyor` : 'Kaldığın yerden çalış'}
               </AppText>
             </View>
-            {/* Dolu altın play diski (mockup) — büyük, lacivert play */}
-            <View style={styles.heroPlay}>
-              <MaterialCommunityIcons name="play" size={34} color={Palette.lacivert} />
-            </View>
+            {/* Metalik altın play diski — gradyan + gölge, lacivert play */}
+            <LinearGradient
+              colors={ALTIN_GRADYAN}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.heroPlay}>
+              <MaterialCommunityIcons name="play" size={36} color={Palette.lacivert} />
+            </LinearGradient>
           </View>
 
           {/* 3 bilgi SÜTUNU yan yana — hepsi gerçek/türetilmiş veri */}
@@ -227,7 +235,13 @@ export default function KarargahScreen() {
         <Pressable
           style={({ pressed }) => [styles.zayif, pressed && styles.pressed]}
           onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}>
-          <MaterialCommunityIcons name="target" size={28} color={Palette.amber} />
+          <LinearGradient
+            colors={ALTIN_GRADYAN}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.gbDisk}>
+            <MaterialCommunityIcons name="target" size={26} color={Palette.lacivert} />
+          </LinearGradient>
           <View style={styles.zayifMetin}>
             <AppText variant="etiket" color="amber" bold>
               GERİ BESLEME
@@ -329,15 +343,15 @@ function HeroBilgi({
   deger: string;
 }) {
   return (
-    <View style={styles.heroSutun}>
-      <View style={styles.heroSutunUst}>
-        <MaterialCommunityIcons name={ikon} size={14} color={Palette.altin} />
-        <AppText variant="etiket" color="kenarlik" numberOfLines={1} style={styles.heroSutunEtiket}>
-          {etiket}
+    <View style={styles.heroKutu}>
+      <View style={styles.heroKutuUst}>
+        <MaterialCommunityIcons name={ikon} size={15} color={Palette.altinAcik2} />
+        <AppText variant="kucuk" color="beyaz" bold numberOfLines={2} style={styles.heroKutuDeger}>
+          {deger}
         </AppText>
       </View>
-      <AppText variant="kucuk" color="beyaz" bold numberOfLines={2}>
-        {deger}
+      <AppText variant="etiket" color="kenarlik" numberOfLines={1}>
+        {etiket}
       </AppText>
     </View>
   );
@@ -452,31 +466,37 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   heroPlay: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: Palette.altin,
+    width: 64,
+    height: 64,
+    borderRadius: 32,
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.3,
+    shadowRadius: 7,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 6,
   },
   heroBilgi: {
     flexDirection: 'row',
-    gap: Spacing.three,
-    borderTopColor: 'rgba(255,255,255,0.14)',
-    borderTopWidth: 1,
-    paddingTop: Spacing.three,
+    gap: Spacing.two,
   },
-  heroSutun: {
+  heroKutu: {
     flex: 1,
     gap: Spacing.half,
+    backgroundColor: Palette.kartPanelKoyu,
+    borderColor: Palette.kartKenarKoyu,
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: Spacing.two,
   },
-  heroSutunUst: {
+  heroKutuUst: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     gap: Spacing.one,
   },
-  heroSutunEtiket: {
-    flexShrink: 1,
+  heroKutuDeger: {
+    flex: 1,
   },
 
   // Krem kartlar
@@ -488,10 +508,10 @@ const styles = StyleSheet.create({
     padding: Spacing.three,
     gap: Spacing.two,
     shadowColor: Palette.lacivert,
-    shadowOpacity: 0.06,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 2,
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 3,
   },
   gorevBaslik: {
     flexDirection: 'row',
@@ -520,6 +540,18 @@ const styles = StyleSheet.create({
   zayifMetin: {
     flex: 1,
     gap: Spacing.half,
+  },
+  gbDisk: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.25,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 5,
   },
 
   // 3 kutu
