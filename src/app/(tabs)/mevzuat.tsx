@@ -10,6 +10,7 @@ import { getAllCards, getLaws, getPerformans, getStudyCards } from '@/db/databas
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { sonCalisilanKanun } from '@/lib/devamet';
+import { getFavoriler, toggleFavori } from '@/lib/favori';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
 
@@ -35,6 +36,8 @@ export default function MevzuatScreen() {
   const [arama, setArama] = useState('');
   const [aktifCip, setAktifCip] = useState<Cip>('tumu');
   const [cipGoster, setCipGoster] = useState(true);
+  const [favoriler, setFavoriler] = useState<Set<number>>(new Set());
+  const [favoriAcik, setFavoriAcik] = useState(false);
   const [hata, setHata] = useState(false);
 
   // Branş değişince + odağa her dönüşte tazele (çalışıp dönünce ilerleme/Devam Et güncel).
@@ -63,7 +66,15 @@ export default function MevzuatScreen() {
         setCardLawMap(new Map());
         setPerf([]);
       });
+    // Favoriler (AsyncStorage) — focus'ta tazelenir.
+    void getFavoriler()
+      .then((ids) => setFavoriler(new Set(ids)))
+      .catch(() => {});
   }, [brans]);
+
+  const favoriToggle = (lawId: number) => {
+    void toggleFavori(lawId).then((yeni) => setFavoriler(new Set(yeni)));
+  };
 
   useFocusEffect(yukle);
 
@@ -81,8 +92,9 @@ export default function MevzuatScreen() {
     return il && il.toplam > 0 ? (il.calisilan / il.toplam) * 100 : 0;
   };
 
-  // Filtre zinciri: musterek → ÇİP → arama → map (hepsi elde, yeni sorgu yok).
-  const cipli = musterek.filter((l) => {
+  // Filtre zinciri: musterek → FAVORİ → ÇİP → arama → map (hepsi elde, yeni sorgu yok).
+  const taban = favoriAcik ? musterek.filter((l) => favoriler.has(l.id)) : musterek;
+  const cipli = taban.filter((l) => {
     const y = yuzdesi(l);
     switch (aktifCip) {
       case 'devam':
@@ -115,10 +127,26 @@ export default function MevzuatScreen() {
 
   return (
     <Screen title="Mevzuat">
-      {/* Açıklama (Screen header'da slot yok → kayan içerik) */}
-      <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
-        Kanunları çalış, hedeflerine daha hızlı ulaş.
-      </AppText>
+      {/* Açıklama + Favorilerim filtresi (Screen header'da slot yok → kayan içerik) */}
+      <View style={st.ustSatir}>
+        <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
+          Kanunları çalış, hedeflerine daha hızlı ulaş.
+        </AppText>
+        <Pressable
+          onPress={() => setFavoriAcik((v) => !v)}
+          style={[st.favBtn, favoriAcik && st.favBtnAktif]}
+          accessibilityRole="button"
+          accessibilityLabel="Favorilerim filtresi">
+          <MaterialCommunityIcons
+            name={favoriAcik ? 'heart' : 'heart-outline'}
+            size={16}
+            color={favoriAcik ? Palette.lacivert : Palette.altinKoyu}
+          />
+          <AppText variant="etiket" bold color={favoriAcik ? 'lacivert' : 'altinKoyu'}>
+            Favorilerim
+          </AppText>
+        </Pressable>
+      </View>
 
       {/* Arama + filtre butonu (listeyle birlikte kayar) */}
       <View style={st.aramaSatir}>
@@ -219,11 +247,15 @@ export default function MevzuatScreen() {
 
           {gosterilen.length === 0 ? (
             <AppText variant="kucuk" color="solukMetin">
-              {q
-                ? 'Eşleşen kanun yok.'
-                : aktifCip !== 'tumu'
-                  ? 'Bu filtrede kanun yok.'
-                  : 'Bu bölümde kanun yok.'}
+              {favoriAcik && favoriler.size === 0
+                ? 'Henüz favori kanun yok — bir kanunun kalbine dokun.'
+                : q
+                  ? 'Eşleşen kanun yok.'
+                  : favoriAcik
+                    ? 'Bu filtrede favori kanun yok.'
+                    : aktifCip !== 'tumu'
+                      ? 'Bu filtrede kanun yok.'
+                      : 'Bu bölümde kanun yok.'}
             </AppText>
           ) : (
             gosterilen.map((law) => (
@@ -231,6 +263,8 @@ export default function MevzuatScreen() {
                 key={law.id}
                 law={law}
                 calisilan={ilerleme?.get(law.id) ?? 0}
+                favori={favoriler.has(law.id)}
+                onFavori={favoriToggle}
                 onPress={kanunaGit}
               />
             ))
@@ -328,10 +362,14 @@ function DevamEtKart({
 function KanunSatir({
   law,
   calisilan,
+  favori,
+  onFavori,
   onPress,
 }: {
   law: LawWithCount;
   calisilan: number;
+  favori: boolean;
+  onFavori: (lawId: number) => void;
   onPress: (law: LawWithCount) => void;
 }) {
   const toplam = law.kartSayisi;
@@ -362,6 +400,23 @@ function KanunSatir({
           </AppText>
         </View>
       </View>
+
+      {/* Kalp — AYRI Pressable (dış satıra dokunmayı yutar → yanlışlıkla /patika YOK) */}
+      <Pressable
+        onPress={(e) => {
+          e.stopPropagation();
+          onFavori(law.id);
+        }}
+        hitSlop={8}
+        style={st.kalp}
+        accessibilityRole="button"
+        accessibilityLabel={favori ? 'Favoriden çıkar' : 'Favoriye ekle'}>
+        <MaterialCommunityIcons
+          name={favori ? 'heart' : 'heart-outline'}
+          size={22}
+          color={favori ? Palette.altin : Palette.solukMetin}
+        />
+      </Pressable>
 
       {/* Sağ durum: tamam → altın tik (yeşil DEĞİL) · değilse play + Başla/Devam + chevron */}
       <View style={st.satirSag}>
@@ -416,8 +471,30 @@ function DurumKutu({
 }
 
 const st = StyleSheet.create({
+  ustSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
   aciklama: {
-    marginTop: -Spacing.one,
+    flex: 1,
+  },
+  favBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    borderColor: Palette.altin,
+    borderWidth: 1,
+    borderRadius: Radius.l,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.one,
+  },
+  favBtnAktif: {
+    backgroundColor: Palette.altin,
+    borderColor: Palette.altin,
+  },
+  kalp: {
+    padding: Spacing.one,
   },
   aramaSatir: {
     flexDirection: 'row',
