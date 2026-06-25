@@ -238,8 +238,11 @@ export default function AkisScreen() {
         </View>
       ) : (
         <View style={styles.kolon}>
-          {/* Üst blok kaydırılabilir; kart ne kadar uzun olursa olsun butonlar pinli kalır */}
-          <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
+          {/* TEK dış scroll: görsel kart + alt blok burada akar (görsel kart İÇİNDE scroll YOK) */}
+          <ScrollView
+            style={styles.scroll}
+            contentContainerStyle={styles.scrollContent}
+            showsVerticalScrollIndicator={false}>
             {/* Kartı saran katman: yatay swipe (ileri/geri) + sol/sağ kenarda gezinme okları
                 (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir). */}
             <GestureDetector gesture={kartKaydir}>
@@ -265,10 +268,9 @@ export default function AkisScreen() {
                 </Pressable>
               </View>
             </GestureDetector>
-          </ScrollView>
 
-          {/* Alt pinli blok: Sesli Anlatım + Madde Metni + cevap butonları */}
-          <View style={styles.altBlok}>
+            {/* Alt blok — TEK dış scroll içinde (görsel kart başrol, kart içi scroll yok) */}
+            <View style={styles.altBlok}>
             {/* Sesli anlatım (TTS) — kart değişince remount → durur. */}
             <TtsBar
               key={queue[index].id}
@@ -286,7 +288,7 @@ export default function AkisScreen() {
                   </AppText>
                   <MaterialCommunityIcons name="chevron-down" size={20} color={Palette.solukMetin} />
                 </View>
-                <AppText variant="kucuk" color="anaMetin" numberOfLines={3}>
+                <AppText variant="kucuk" color="anaMetin" numberOfLines={2}>
                   {maddeTxt}
                 </AppText>
                 <View style={styles.maddeAyirici} />
@@ -372,9 +374,10 @@ export default function AkisScreen() {
                 </Pressable>
               </View>
             )}
-          </View>
+            </View>
+          </ScrollView>
 
-          {/* Madde metni sheet'i — ScrollView/alt blok ile KARDEŞ (absoluteFill). */}
+          {/* Madde metni sheet'i — kolon ile KARDEŞ (absoluteFill). */}
           <MaddeMetniSheet
             gorunur={maddeAcik}
             maddeNo={queue[index].madde_no}
@@ -493,9 +496,6 @@ const styles = StyleSheet.create({
     opacity: 0.25,
   },
   altBlok: {
-    paddingHorizontal: Spacing.three,
-    paddingTop: Spacing.two,
-    paddingBottom: Spacing.three,
     gap: Spacing.two,
   },
   // Madde Metni kartı (krem — koyu ekranda kontrast)

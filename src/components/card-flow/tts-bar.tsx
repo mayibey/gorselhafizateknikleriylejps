@@ -24,7 +24,7 @@ import { Palette, Spacing } from '@/constants/theme';
 const HIZLAR = [1.0, 1.25, 1.5] as const;
 /** Dekoratif waveform çubuk sayısı. */
 const BAR_SAYISI = 40;
-const DALGA_Y = 46;
+const DALGA_Y = 38;
 
 /** Metni cümlelere böler; çok kısa parçaları (kısaltma vb.) öncekine ekler. */
 function cumlelereBol(metin: string): string[] {
@@ -189,25 +189,21 @@ export function TtsBar({
         ) : null}
       </View>
 
-      {/* Dürüst gösterge: süre/saat YOK → cümle sayacı */}
-      <AppText variant="etiket" color="kartMetinIkincil" style={styles.sayac}>
-        Cümle {aktif + 1} / {cumleler.length}
-      </AppText>
-
-      {/* Legend (cümle bazlı) */}
-      <View style={styles.legend}>
-        <View style={[styles.lgNokta, { backgroundColor: Palette.altinAcik2 }]} />
-        <AppText variant="etiket" color="kartMetinIkincil">
-          Dinlenen
+      {/* Tek satır (kompakt): cümle sayacı (dürüst — süre/saat YOK) + legend */}
+      <View style={styles.altSatir}>
+        <AppText variant="etiket" bold color="kartMetinAcik">
+          Cümle {aktif + 1} / {cumleler.length}
         </AppText>
-        <View style={[styles.lgCizgi, { backgroundColor: Palette.altinAcik2 }]} />
-        <AppText variant="etiket" color="kartMetinIkincil">
-          Şu an
-        </AppText>
-        <View style={[styles.lgNokta, styles.lgNoktaGri]} />
-        <AppText variant="etiket" color="kartMetinIkincil">
-          Kalan
-        </AppText>
+        <View style={styles.legend}>
+          <View style={[styles.lgNokta, { backgroundColor: Palette.altinAcik2 }]} />
+          <AppText variant="etiket" color="kartMetinIkincil">
+            Dinlenen
+          </AppText>
+          <View style={[styles.lgNokta, styles.lgNoktaGri]} />
+          <AppText variant="etiket" color="kartMetinIkincil">
+            Kalan
+          </AppText>
+        </View>
       </View>
 
       {/* Kontroller: ◀ önceki cümle · büyük dur/devam · ▶ sonraki cümle · hız */}
@@ -267,8 +263,8 @@ const styles = StyleSheet.create({
     borderColor: Palette.kartKenarKoyu,
     borderWidth: 1,
     borderRadius: 20,
-    padding: Spacing.three,
-    gap: Spacing.two,
+    padding: Spacing.two,
+    gap: Spacing.one,
     marginTop: Spacing.two,
   },
   ust: {
@@ -280,15 +276,17 @@ const styles = StyleSheet.create({
     width: '100%',
     height: DALGA_Y,
   },
-  sayac: {
-    textAlign: 'center',
+  altSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    gap: Spacing.one,
   },
   legend: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
     gap: Spacing.one,
-    flexWrap: 'wrap',
   },
   lgNokta: {
     width: 8,
@@ -301,17 +299,10 @@ const styles = StyleSheet.create({
     opacity: 0.4,
     marginLeft: Spacing.two,
   },
-  lgCizgi: {
-    width: 2,
-    height: 12,
-    marginLeft: Spacing.two,
-    marginRight: 2,
-  },
   kontroller: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: Spacing.one,
   },
   yan: {
     width: 44,
