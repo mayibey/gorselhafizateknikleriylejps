@@ -11,7 +11,7 @@ import {
   View,
   type LayoutChangeEvent,
 } from 'react-native';
-import Svg, { G, Path, Rect } from 'react-native-svg';
+import Svg, { Path } from 'react-native-svg';
 import { Image } from 'expo-image';
 
 import { AppText } from '@/components/ui/app-text';
@@ -36,6 +36,13 @@ const ARKA_PLAN = require('../../assets/images/patika-arkaplan.png');
 // Görselin doğal en-boy oranı (1844/853 = yükseklik/genişlik). Dikey TILE'da
 // her dilim W * ORAN yüksekliğinde → germe/esneme YOK, doğal oran korunur.
 const ARKA_PLAN_ORAN = 1844 / 853;
+
+// Çift bot izi sprite'ı (1254×1254, şeffaf): SOL yarı=sol ayak, SAĞ yarı=sağ ayak.
+// Tek <Image>'ı 2×genişlikte verip yatay kaydır + overflow:hidden → tek ayak gösterilir.
+const CIFT_AYAK = require('../../assets/images/ciftayak.png');
+const AYAK_W = 14; // tek ayak görünür genişliği
+const AYAK_H = 28; // tek ayak yüksekliği (sprite kare → kap 2*AYAK_W × AYAK_H = kare, germe yok)
+const AYAK_OFSET = 5; // yol merkez çizgisinden sol/sağ kayma
 
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
 /** Düğümün görsel durumu — MEVCUT veri (calisilan/toplam/aktifIndex) türetilir, davranış değil. */
@@ -90,13 +97,31 @@ function bezierAci(p0: Pt, p1: Pt, t: number): number {
   return (Math.atan2(dy, dx) * 180) / Math.PI + 90;
 }
 
-/** Tek postal izi: çift-bloklu bot tabanı (ön taban + topuk), yerel uzayda "yukarı/ileri" bakan. */
-function PostalIzi({ x, y, aci, renk }: { x: number; y: number; aci: number; renk: string }) {
+/**
+ * Tek ayak izi (PNG sprite'ın yarısı). Kap AYAK_W×AYAK_H, içindeki Image 2× genişlikte;
+ * sol ayak → left:0 (sol yarı), sağ ayak → left:-AYAK_W (sağ yarı), overflow:hidden ile
+ * sadece o yarı görünür. Kap (x,y) merkezli + teğet açısına döner (yola paralel).
+ */
+function AyakIzi({ x, y, aci, sol }: { x: number; y: number; aci: number; sol: boolean }) {
   return (
-    <G transform={`translate(${x} ${y}) rotate(${aci})`}>
-      <Rect x={-6} y={-13} width={12} height={15} rx={4.5} fill={renk} />
-      <Rect x={-4.5} y={4.5} width={9} height={9} rx={4} fill={renk} />
-    </G>
+    <View
+      pointerEvents="none"
+      style={{
+        position: 'absolute',
+        left: x - AYAK_W / 2,
+        top: y - AYAK_H / 2,
+        width: AYAK_W,
+        height: AYAK_H,
+        overflow: 'hidden',
+        transform: [{ rotate: `${aci}deg` }],
+      }}>
+      <Image
+        source={CIFT_AYAK}
+        style={{ position: 'absolute', top: 0, left: sol ? 0 : -AYAK_W, width: AYAK_W * 2, height: AYAK_H }}
+        contentFit="cover"
+        pointerEvents="none"
+      />
+    </View>
   );
 }
 
@@ -113,30 +138,31 @@ function bezierUzunluk(p0: Pt, p1: Pt): number {
 }
 
 /**
- * Bir (yürünmüş) segmente postal izleri serper — YOLA PARALEL + DÜZENLİ.
+ * Bir (yürünmüş) segmente PNG ayak izleri serper — YOLA PARALEL + DÜZENLİ.
  *  - İz sayısı YAY UZUNLUĞUNA orantılı (eşit aralık, dağınık değil).
- *  - Her iz o noktadaki teğet açısına döner (yürüyüş yönüne bakar).
- *  - Sol-sağ ayak: yola dik ±3px düzenli alternatif (rastgele saçılma YOK).
- * Dik birim vektör = (cos(aci), sin(aci)); aci zaten teğet+90 → (-dy,dx)/|.| ile aynı.
+ *  - Her ayak o noktadaki teğet açısına döner (yürüyüş yönüne bakar).
+ *  - Sol-sağ ALTERNATİF: çift k → sol ayak (+ofset), tek k → sağ ayak (−ofset) →
+ *    gerçekçi yürüyüş (sol, sağ, sol…). Dik birim vektör = (cos(aci), sin(aci)).
  */
-function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): ReactNode[] {
+function segmentPostallari(p0: Pt, p1: Pt, anahtar: string): ReactNode[] {
   const uzunluk = bezierUzunluk(p0, p1);
-  // ~26px'de bir adım → eşit aralıklı, yola paralel sıralı izler.
-  const izSayisi = Math.max(3, Math.min(8, Math.round(uzunluk / 26)));
+  // ~32px'de bir adım (PNG ayak büyük → biraz seyrek; perf için makul).
+  const izSayisi = Math.max(2, Math.min(6, Math.round(uzunluk / 32)));
   const izler: ReactNode[] = [];
   for (let k = 0; k < izSayisi; k++) {
     const t = (k + 1) / (izSayisi + 1);
     const n = bezierNokta(p0, p1, t);
     const aci = bezierAci(p0, p1, t);
     const r = (aci * Math.PI) / 180;
-    const ofset = k % 2 === 0 ? 3 : -3;
+    const sol = k % 2 === 0;
+    const ofset = sol ? AYAK_OFSET : -AYAK_OFSET;
     izler.push(
-      <PostalIzi
+      <AyakIzi
         key={`${anahtar}-${k}`}
         x={n.x + Math.cos(r) * ofset}
         y={n.y + Math.sin(r) * ofset}
         aci={aci}
-        renk={renk}
+        sol={sol}
       />,
     );
   }
@@ -319,43 +345,43 @@ function Harita({
             />
           ))
         : null}
-      {W > 0 ? (
-        <>
-          {/* Yürünmüş segment → postal izi (çizgi yok); yürünmemiş → kesikli soluk konnektör */}
-          <Svg width={W} height={haritaY} style={StyleSheet.absoluteFill} pointerEvents="none">
-            {(() => {
-              const konnektorler: ReactNode[] = [];
-              const postallar: ReactNode[] = [];
-              dugumler.slice(0, -1).forEach((_, i) => {
-                const p0 = dugumMerkez(i, W);
-                const p1 = dugumMerkez(i + 1, W);
-                const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
-                const anahtar = String(dugumler[i].bolum.id);
-                if (!gecildi) {
-                  // Yürünmemiş ara: kesikli soluk konnektör (krem'de kenarlık tonu, postal YOK).
-                  konnektorler.push(
-                    <Path
-                      key={anahtar}
-                      d={segmentYol(p0, p1)}
-                      fill="none"
-                      stroke={Palette.kenarlik}
-                      strokeWidth={3}
-                      strokeLinecap="round"
-                      strokeDasharray="2 12"
-                      opacity={0.9}
-                    />,
-                  );
-                } else {
-                  // Yürünmüş ara: konnektör çizgisi yerine postal izleri serpiştir (krem'de koyu altın).
-                  postallar.push(...segmentPostallari(p0, p1, Palette.altinKoyu, anahtar));
-                }
-              });
-              // Önce konnektörler, sonra postallar (üstte kalsın).
-              return [...konnektorler, ...postallar];
-            })()}
-          </Svg>
-
-          {dugumler.map((d, i) => (
+      {W > 0
+        ? (() => {
+            const konnektorler: ReactNode[] = [];
+            const ayaklar: ReactNode[] = [];
+            dugumler.slice(0, -1).forEach((_, i) => {
+              const p0 = dugumMerkez(i, W);
+              const p1 = dugumMerkez(i + 1, W);
+              const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
+              const anahtar = String(dugumler[i].bolum.id);
+              if (!gecildi) {
+                // Yürünmemiş ara: kesikli soluk konnektör (SVG, postal YOK).
+                konnektorler.push(
+                  <Path
+                    key={anahtar}
+                    d={segmentYol(p0, p1)}
+                    fill="none"
+                    stroke={Palette.kenarlik}
+                    strokeWidth={3}
+                    strokeLinecap="round"
+                    strokeDasharray="2 12"
+                    opacity={0.9}
+                  />,
+                );
+              } else {
+                // Yürünmüş ara: PNG ayak izleri (RN Image — SVG dışında, konnektörün üstünde).
+                ayaklar.push(...segmentPostallari(p0, p1, anahtar));
+              }
+            });
+            return (
+              <>
+                {/* Kesikli konnektörler (yürünmemiş) — en altta */}
+                <Svg width={W} height={haritaY} style={StyleSheet.absoluteFill} pointerEvents="none">
+                  {konnektorler}
+                </Svg>
+                {/* PNG ayak izleri (yürünmüş) — konnektörün üstünde, düğümlerin altında */}
+                {ayaklar}
+                {dugumler.map((d, i) => (
             <Dugum
               key={d.bolum.id}
               dugum={d}
@@ -365,10 +391,12 @@ function Harita({
               onPress={() =>
                 router.push({ pathname: '/akis', params: { bolumId: String(d.bolum.id) } })
               }
-            />
-          ))}
-        </>
-      ) : null}
+                  />
+                ))}
+              </>
+            );
+          })()
+        : null}
     </View>
   );
 }
