@@ -11,7 +11,7 @@ import {
   View,
   type LayoutChangeEvent,
 } from 'react-native';
-import Svg, { G, Path, Rect } from 'react-native-svg';
+import Svg, { Circle, G, Line, Path, Rect } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -121,6 +121,56 @@ function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): React
     );
   }
   return izler;
+}
+
+/**
+ * Harita arka plan dokusu (ÇOK hafif, neredeyse görünmez): topografik kontur
+ * çizgileri + sol-altta pusula + sağ-altta dağ silüeti. Deterministik (W,H'den
+ * türetilir; Math.random YOK). Düğüm/postalların ALTINDA, dokunmayı engellemez.
+ */
+function HaritaDokusu({ W, H }: { W: number; H: number }) {
+  const adim = Math.max(36, W / 9);
+  const konturlar: string[] = [];
+  for (let j = 0; j < 5; j++) {
+    const yBase = H * (0.16 + j * 0.16);
+    const faz = j * 1.3;
+    let d = '';
+    for (let x = 0; x <= W; x += adim) {
+      const y = yBase + 15 * Math.sin(x / 90 + faz);
+      d += `${x === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)} `;
+    }
+    konturlar.push(d);
+  }
+  // Sağ-alt dağ silüeti (zikzak kontur)
+  const dy = H * 0.9;
+  const dagYol =
+    `M ${(W * 0.52).toFixed(0)} ${(H * 0.94).toFixed(0)} ` +
+    `L ${(W * 0.6).toFixed(0)} ${(dy - 26).toFixed(0)} L ${(W * 0.67).toFixed(0)} ${dy.toFixed(0)} ` +
+    `L ${(W * 0.74).toFixed(0)} ${(dy - 34).toFixed(0)} L ${(W * 0.82).toFixed(0)} ${dy.toFixed(0)} ` +
+    `L ${(W * 0.9).toFixed(0)} ${(dy - 22).toFixed(0)} L ${W.toFixed(0)} ${(dy + 6).toFixed(0)}`;
+  // Sol-alt pusula
+  const cx = W * 0.2;
+  const cy = H * 0.84;
+  const R = Math.min(40, W * 0.13);
+
+  return (
+    <Svg width={W} height={H} style={StyleSheet.absoluteFill} pointerEvents="none">
+      {konturlar.map((d, i) => (
+        <Path key={i} d={d} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.06} />
+      ))}
+      <Path d={dagYol} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.07} />
+      <G transform={`translate(${cx} ${cy})`} opacity={0.09}>
+        <Circle r={R} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" />
+        <Circle r={R * 0.62} stroke={Palette.altinKoyu} strokeWidth={1} fill="none" />
+        <Line x1={0} y1={-R} x2={0} y2={-R * 0.55} stroke={Palette.altinKoyu} strokeWidth={1} />
+        <Line x1={0} y1={R} x2={0} y2={R * 0.55} stroke={Palette.altinKoyu} strokeWidth={1} />
+        <Line x1={-R} y1={0} x2={-R * 0.55} y2={0} stroke={Palette.altinKoyu} strokeWidth={1} />
+        <Line x1={R} y1={0} x2={R * 0.55} y2={0} stroke={Palette.altinKoyu} strokeWidth={1} />
+        <Path d={`M 0 ${-R * 0.45} L ${R * 0.16} 0 L 0 ${R * 0.45} L ${-R * 0.16} 0 Z`} fill={Palette.altinKoyu} />
+        <Path d={`M ${-R * 0.45} 0 L 0 ${R * 0.16} L ${R * 0.45} 0 L 0 ${-R * 0.16} Z`} fill={Palette.altinKoyu} />
+      </G>
+    </Svg>
+  );
 }
 
 export default function PatikaScreen() {
@@ -278,6 +328,9 @@ function Harita({
     <View style={[st.harita, { height: haritaY }]} onLayout={olc}>
       {W > 0 ? (
         <>
+          {/* Arka plan dokusu — en altta (topografik + pusula + dağ) */}
+          <HaritaDokusu W={W} H={haritaY} />
+
           {/* Yürünmüş segment → postal izi (çizgi yok); yürünmemiş → kesikli soluk konnektör */}
           <Svg width={W} height={haritaY} style={StyleSheet.absoluteFill} pointerEvents="none">
             {(() => {
@@ -408,15 +461,27 @@ function Dugum({
           transform: [{ scale: girisScale }],
         },
       ]}>
+      {/* Aktif düğüm: sağ-üstte altın yıldız rozeti */}
       {aktif ? (
-        <View style={st.buradasinPill}>
-          <AppText variant="etiket" bold color="lacivert">
-            buradasın
-          </AppText>
+        <View style={[st.yildizBadge, { left: BOX / 2 + cap / 2 - 13, top: -4 }]} pointerEvents="none">
+          <MaterialCommunityIcons name="star" size={14} color={Palette.lacivert} />
         </View>
       ) : null}
 
       <Animated.View style={{ transform: [{ scale: pulseScale }] }}>
+        {/* Aktif düğüm: yumuşak altın glow (iki katman, daire arkasında) */}
+        {aktif ? (
+          <>
+            <View
+              pointerEvents="none"
+              style={[st.glow, { width: cap + 60, height: cap + 60, borderRadius: (cap + 60) / 2, top: -30, left: -30 }]}
+            />
+            <View
+              pointerEvents="none"
+              style={[st.glow2, { width: cap + 28, height: cap + 28, borderRadius: (cap + 28) / 2, top: -14, left: -14 }]}
+            />
+          </>
+        ) : null}
         <Pressable
           onPress={onPress}
           accessibilityRole="button"
@@ -433,7 +498,7 @@ function Dugum({
           {durum === 'aktif' ? (
             <MaterialCommunityIcons name="play" size={36} color={Palette.lacivert} />
           ) : durum === 'tamam' ? (
-            <MaterialCommunityIcons name="check-bold" size={32} color={Palette.yesil} />
+            <MaterialCommunityIcons name="check-bold" size={32} color={Palette.altinKoyu} />
           ) : durum === 'baslanmis' ? (
             <AppText variant="kucuk" bold color="lacivert">
               %{yuzde}
@@ -444,15 +509,26 @@ function Dugum({
         </Pressable>
       </Animated.View>
 
-      <View style={[st.adKutu, { top: cap + 6 }]}>
-        <AppText
-          variant="etiket"
-          bold
-          color={durum === 'baslanmadi' ? 'solukMetin' : 'lacivert'}
-          numberOfLines={1}
-          style={st.adMetin}>
-          {dugum.bolum.ad}
-        </AppText>
+      <View style={[st.adKutu, { top: cap + 8 }]}>
+        {aktif ? (
+          <View style={st.aktifEtiket}>
+            <AppText variant="etiket" bold color="beyaz" numberOfLines={1}>
+              {dugum.bolum.ad}
+            </AppText>
+            <AppText variant="etiket" bold color="altinAcik2" style={st.aktifEtiketAlt}>
+              • ŞU ANKİ KONUM
+            </AppText>
+          </View>
+        ) : (
+          <AppText
+            variant="etiket"
+            bold
+            color={durum === 'baslanmadi' ? 'solukMetin' : 'lacivert'}
+            numberOfLines={1}
+            style={st.adMetin}>
+            {dugum.bolum.ad}
+          </AppText>
+        )}
       </View>
     </Animated.View>
   );
@@ -473,9 +549,9 @@ function TekDugum({ onPress }: { onPress: () => void }) {
 
   return (
     <Animated.View style={[st.tekSatir, { opacity: enter, transform: [{ scale }] }]}>
-      <View style={st.buradasinPill}>
-        <AppText variant="etiket" bold color="lacivert">
-          buradasın
+      <View style={st.aktifEtiket}>
+        <AppText variant="etiket" bold color="altinAcik2">
+          ŞU ANKİ KONUM
         </AppText>
       </View>
       <Pressable
@@ -602,12 +678,35 @@ const st = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: Palette.solukMetin,
   },
-  buradasinPill: {
+  glow: {
     position: 'absolute',
-    top: -28,
-    left: 0,
-    right: 0,
+    backgroundColor: 'rgba(231,188,86,0.22)', // altinAcik2 saydam — dış yumuşak halka
+  },
+  glow2: {
+    position: 'absolute',
+    backgroundColor: 'rgba(231,188,86,0.40)', // iç (daha belirgin) glow
+  },
+  yildizBadge: {
+    position: 'absolute',
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    backgroundColor: Palette.altin,
+    borderWidth: 1.5,
+    borderColor: Palette.kartKremi,
     alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 3,
+  },
+  aktifEtiket: {
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.half,
+    alignItems: 'center',
+  },
+  aktifEtiketAlt: {
+    marginTop: 1,
   },
   adKutu: {
     position: 'absolute',
