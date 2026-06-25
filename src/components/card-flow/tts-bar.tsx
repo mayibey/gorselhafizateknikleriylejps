@@ -1,8 +1,16 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Pressable, StyleSheet, View, type LayoutChangeEvent } from 'react-native';
-import Svg, { Circle, Rect } from 'react-native-svg';
+import {
+  Animated,
+  Easing,
+  Pressable,
+  StyleSheet,
+  View,
+  type GestureResponderEvent,
+  type LayoutChangeEvent,
+} from 'react-native';
+import Svg, { Rect } from 'react-native-svg';
 
 import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
 import { AppText } from '@/components/ui/app-text';
@@ -58,6 +66,8 @@ export function TtsBar({
   // Her oynat/durdur "nesil"i artırır; eski okumanın onDone'u geç gelirse (seek/stop)
   // nesli tutmadığı için zincirlemez → çakışma olmaz.
   const nesilRef = useRef(0);
+  // Akıcı dolgu/playhead oranı (0..1). Cümle okunurken hedefe doğru animasyonla akar.
+  const oranAnim = useRef(new Animated.Value(0)).current;
 
   // Sabit (dekoratif) genlik deseni — gerçek ses genliği DEĞİL.
   const amplitudler = useMemo(
@@ -77,6 +87,27 @@ export function TtsBar({
       void Speech.stop();
     };
   }, []);
+
+  // Akıcı ilerleme: cümle OKUNURKEN playhead/dolgu, o cümlenin başından sonuna
+  // TAHMİNİ sürede (karakter sayısı / hız) yumuşakça akar. Gerçek saniye DEĞİL.
+  // Durunca olduğu yerde donar; cümle değişince yeni cümlenin başından akar.
+  useEffect(() => {
+    const N = cumleler.length;
+    if (N === 0) return;
+    if (oynuyor) {
+      oranAnim.setValue(aktif / N);
+      const len = cumleler[aktif]?.length ?? 20;
+      const sure = Math.min(8000, Math.max(800, ((len / 13) * 1000) / hizRef.current));
+      Animated.timing(oranAnim, {
+        toValue: (aktif + 1) / N,
+        duration: sure,
+        easing: Easing.linear,
+        useNativeDriver: false,
+      }).start();
+    } else {
+      oranAnim.stopAnimation();
+    }
+  }, [aktif, oynuyor, cumleler, oranAnim]);
 
   if (!metin) return null;
 
@@ -135,6 +166,14 @@ export function TtsBar({
     oynat(yeni);
   }
 
+  // Waveform'a dokun → o orana en yakın CÜMLEDEN başlat (saniye değil, cümle hassasiyeti).
+  function dalgaDokun(e: GestureResponderEvent) {
+    if (W <= 0 || cumleler.length === 0) return;
+    const o = Math.min(1, Math.max(0, e.nativeEvent.locationX / W));
+    const i = Math.min(cumleler.length - 1, Math.max(0, Math.floor(o * cumleler.length)));
+    oynat(i);
+  }
+
   function hizDegis() {
     const yeni = (hizIdx + 1) % HIZLAR.length;
     setHizIdx(yeni);
@@ -148,9 +187,9 @@ export function TtsBar({
 
   const ilkCumle = aktif === 0;
   const sonCumle = aktif >= cumleler.length - 1;
-  // Dolu oran = CÜMLE ilerlemesi (kaçıncı cümle) — saniye/süre DEĞİL.
-  const oran = cumleler.length > 0 ? (aktif + 1) / cumleler.length : 0;
   const barW = W > 0 ? (W / BAR_SAYISI) * 0.55 : 0;
+  // Animasyonlu dolu genişliği / playhead konumu (oranAnim 0..1 → 0..W).
+  const doluGenislik = oranAnim.interpolate({ inputRange: [0, 1], outputRange: [0, W] });
 
   return (
     <View style={styles.panel}>
@@ -161,33 +200,64 @@ export function TtsBar({
         </AppText>
       </View>
 
-      {/* DEKORATİF waveform (gerçek ses genliği değil; dolu = cümle ilerlemesi) */}
-      <View style={styles.dalgaSar} onLayout={olc}>
+      {/* DEKORATİF waveform (gerçek ses genliği değil; dolu = cümle ilerlemesi).
+          Dokun → o orana en yakın cümleden başlar (saniye değil, CÜMLE hassasiyeti). */}
+      <Pressable style={styles.dalgaSar} onLayout={olc} onPress={dalgaDokun} accessibilityLabel="Cümleye atla">
         {W > 0 ? (
-          <Svg width={W} height={DALGA_Y}>
-            {amplitudler.map((a, i) => {
-              const cx = (i + 0.5) * (W / BAR_SAYISI);
-              const bh = a * DALGA_Y * 0.86;
-              const dolu = (i + 0.5) / BAR_SAYISI <= oran;
-              return (
-                <Rect
-                  key={i}
-                  x={cx - barW / 2}
-                  y={(DALGA_Y - bh) / 2}
-                  width={barW}
-                  height={bh}
-                  rx={barW / 2}
-                  fill={dolu ? Palette.altinAcik2 : Palette.kartMetinIkincil}
-                  opacity={dolu ? 1 : 0.3}
-                />
-              );
-            })}
-            {/* Playhead: cümle oranına denk gelen ince altın çizgi + üstte nokta */}
-            <Rect x={W * oran - 1} y={0} width={2} height={DALGA_Y} fill={Palette.altinAcik2} />
-            <Circle cx={W * oran} cy={4} r={3.5} fill={Palette.altinAcik2} />
-          </Svg>
+          <>
+            {/* Sönük taban çubukları */}
+            <Svg width={W} height={DALGA_Y} style={StyleSheet.absoluteFill} pointerEvents="none">
+              {amplitudler.map((a, i) => {
+                const cx = (i + 0.5) * (W / BAR_SAYISI);
+                const bh = a * DALGA_Y * 0.86;
+                return (
+                  <Rect
+                    key={i}
+                    x={cx - barW / 2}
+                    y={(DALGA_Y - bh) / 2}
+                    width={barW}
+                    height={bh}
+                    rx={barW / 2}
+                    fill={Palette.kartMetinIkincil}
+                    opacity={0.3}
+                  />
+                );
+              })}
+            </Svg>
+            {/* Dolu (altın) çubuklar — animasyonlu genişlikle soldan açılır (akıcı) */}
+            <Animated.View
+              pointerEvents="none"
+              style={[styles.doluKatman, { width: doluGenislik }]}>
+              <Svg width={W} height={DALGA_Y}>
+                {amplitudler.map((a, i) => {
+                  const cx = (i + 0.5) * (W / BAR_SAYISI);
+                  const bh = a * DALGA_Y * 0.86;
+                  return (
+                    <Rect
+                      key={i}
+                      x={cx - barW / 2}
+                      y={(DALGA_Y - bh) / 2}
+                      width={barW}
+                      height={bh}
+                      rx={barW / 2}
+                      fill={Palette.altinAcik2}
+                    />
+                  );
+                })}
+              </Svg>
+            </Animated.View>
+            {/* Playhead — akıcı çizgi + üstte nokta */}
+            <Animated.View
+              pointerEvents="none"
+              style={[styles.playheadCizgi, { transform: [{ translateX: doluGenislik }] }]}
+            />
+            <Animated.View
+              pointerEvents="none"
+              style={[styles.playheadNokta, { transform: [{ translateX: doluGenislik }] }]}
+            />
+          </>
         ) : null}
-      </View>
+      </Pressable>
 
       {/* Tek satır (kompakt): cümle sayacı (dürüst — süre/saat YOK) + legend */}
       <View style={styles.altSatir}>
@@ -276,6 +346,31 @@ const styles = StyleSheet.create({
   dalgaSar: {
     width: '100%',
     height: DALGA_Y,
+  },
+  doluKatman: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    height: DALGA_Y,
+    overflow: 'hidden',
+  },
+  playheadCizgi: {
+    position: 'absolute',
+    left: -1,
+    top: 0,
+    width: 2,
+    height: DALGA_Y,
+    borderRadius: 1,
+    backgroundColor: Palette.altinAcik2,
+  },
+  playheadNokta: {
+    position: 'absolute',
+    left: -3.5,
+    top: -2,
+    width: 7,
+    height: 7,
+    borderRadius: 3.5,
+    backgroundColor: Palette.altinAcik2,
   },
   altSatir: {
     flexDirection: 'row',
