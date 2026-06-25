@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -12,6 +12,15 @@ import { useBrans } from '@/lib/brans-context';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
+
+// Filtre çipleri (ilerleme bazlı, elde süzme — yeni sorgu yok).
+const CIPLER = [
+  { k: 'tumu', ad: 'Tümü' },
+  { k: 'devam', ad: 'Devam Ettiklerim' },
+  { k: 'bitmeyen', ad: 'Bitmeyenler' },
+  { k: 'tamam', ad: 'Tamamlananlar' },
+] as const;
+type Cip = (typeof CIPLER)[number]['k'];
 
 export default function MevzuatScreen() {
   const router = useRouter();
@@ -24,6 +33,8 @@ export default function MevzuatScreen() {
   const [cardLawMap, setCardLawMap] = useState<Map<number, number> | null>(null);
   const [perf, setPerf] = useState<PerformansSatir[] | null>(null);
   const [arama, setArama] = useState('');
+  const [aktifCip, setAktifCip] = useState<Cip>('tumu');
+  const [cipGoster, setCipGoster] = useState(true);
   const [hata, setHata] = useState(false);
 
   // Branş değişince + odağa her dönüşte tazele (çalışıp dönünce ilerleme/Devam Et güncel).
@@ -60,15 +71,33 @@ export default function MevzuatScreen() {
   const musterek =
     laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0 && rutbeGorur(l.id, rutbe)) ?? [];
 
-  // İstemci-taraflı arama (ada/numaraya göre). Yeni sorgu yok.
-  const q = arama.trim().toLocaleLowerCase('tr');
-  const gosterilen = q ? musterek.filter((l) => l.ad.toLocaleLowerCase('tr').includes(q)) : musterek;
-
-  // law_id → {calisilan, toplam} (Devam Et türetmesi + satır barları için).
+  // law_id → {calisilan, toplam} (Devam Et + bar + çip filtresi). musterek'ten kurulur.
   const lawIlerleme = new Map<number, { calisilan: number; toplam: number }>();
   for (const l of musterek) {
     lawIlerleme.set(l.id, { calisilan: ilerleme?.get(l.id) ?? 0, toplam: l.kartSayisi });
   }
+  const yuzdesi = (l: LawWithCount) => {
+    const il = lawIlerleme.get(l.id);
+    return il && il.toplam > 0 ? (il.calisilan / il.toplam) * 100 : 0;
+  };
+
+  // Filtre zinciri: musterek → ÇİP → arama → map (hepsi elde, yeni sorgu yok).
+  const cipli = musterek.filter((l) => {
+    const y = yuzdesi(l);
+    switch (aktifCip) {
+      case 'devam':
+        return y > 0 && y < 100;
+      case 'bitmeyen':
+        return y < 100;
+      case 'tamam':
+        return y === 100;
+      default:
+        return true;
+    }
+  });
+  const q = arama.trim().toLocaleLowerCase('tr');
+  const gosterilen = q ? cipli.filter((l) => l.ad.toLocaleLowerCase('tr').includes(q)) : cipli;
+
   const devam =
     perf && cardLawMap && ilerleme
       ? sonCalisilanKanun(perf, cardLawMap, lawIlerleme)
@@ -91,24 +120,61 @@ export default function MevzuatScreen() {
         Kanunları çalış, hedeflerine daha hızlı ulaş.
       </AppText>
 
-      {/* Arama — listeyle birlikte kayar (sticky değil) */}
-      <View style={st.aramaKutu}>
-        <MaterialCommunityIcons name="magnify" size={20} color={Palette.solukMetin} />
-        <TextInput
-          style={st.aramaInput}
-          value={arama}
-          onChangeText={setArama}
-          placeholder="Kanun, madde veya konu ara…"
-          placeholderTextColor={Palette.solukMetin}
-          returnKeyType="search"
-          autoCorrect={false}
-        />
-        {arama.length > 0 ? (
-          <Pressable onPress={() => setArama('')} hitSlop={8} accessibilityLabel="Aramayı temizle">
-            <MaterialCommunityIcons name="close-circle" size={18} color={Palette.solukMetin} />
-          </Pressable>
-        ) : null}
+      {/* Arama + filtre butonu (listeyle birlikte kayar) */}
+      <View style={st.aramaSatir}>
+        <View style={st.aramaKutu}>
+          <MaterialCommunityIcons name="magnify" size={20} color={Palette.solukMetin} />
+          <TextInput
+            style={st.aramaInput}
+            value={arama}
+            onChangeText={setArama}
+            placeholder="Kanun, madde veya konu ara…"
+            placeholderTextColor={Palette.solukMetin}
+            returnKeyType="search"
+            autoCorrect={false}
+          />
+          {arama.length > 0 ? (
+            <Pressable onPress={() => setArama('')} hitSlop={8} accessibilityLabel="Aramayı temizle">
+              <MaterialCommunityIcons name="close-circle" size={18} color={Palette.solukMetin} />
+            </Pressable>
+          ) : null}
+        </View>
+        <Pressable
+          onPress={() => setCipGoster((v) => !v)}
+          style={[st.filtreBtn, cipGoster && st.filtreBtnAktif]}
+          accessibilityRole="button"
+          accessibilityLabel="Filtreleri aç/kapat">
+          <MaterialCommunityIcons
+            name="filter-variant"
+            size={22}
+            color={cipGoster ? Palette.beyaz : Palette.solukMetin}
+          />
+        </Pressable>
       </View>
+
+      {/* Filtre çipleri (ilerleme bazlı) */}
+      {cipGoster ? (
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={st.cipSeridi}>
+          {CIPLER.map((c) => {
+            const aktif = aktifCip === c.k;
+            return (
+              <Pressable
+                key={c.k}
+                onPress={() => setAktifCip(c.k)}
+                style={[st.cip, aktif ? st.cipAktif : st.cipPasif]}
+                accessibilityRole="button"
+                accessibilityLabel={c.ad}>
+                <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+                  {c.ad}
+                </AppText>
+              </Pressable>
+            );
+          })}
+        </ScrollView>
+      ) : null}
 
       {hata ? (
         <DurumKutu
@@ -153,7 +219,11 @@ export default function MevzuatScreen() {
 
           {gosterilen.length === 0 ? (
             <AppText variant="kucuk" color="solukMetin">
-              {q ? 'Eşleşen kanun yok.' : 'Bu bölümde kanun yok.'}
+              {q
+                ? 'Eşleşen kanun yok.'
+                : aktifCip !== 'tumu'
+                  ? 'Bu filtrede kanun yok.'
+                  : 'Bu bölümde kanun yok.'}
             </AppText>
           ) : (
             gosterilen.map((law) => (
@@ -349,7 +419,13 @@ const st = StyleSheet.create({
   aciklama: {
     marginTop: -Spacing.one,
   },
+  aramaSatir: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    alignItems: 'stretch',
+  },
   aramaKutu: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
@@ -359,6 +435,38 @@ const st = StyleSheet.create({
     borderRadius: Radius.l,
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.two,
+  },
+  filtreBtn: {
+    width: 56,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.l,
+  },
+  filtreBtnAktif: {
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.lacivert,
+  },
+  cipSeridi: {
+    gap: Spacing.two,
+    paddingVertical: Spacing.half,
+  },
+  cip: {
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.l,
+    borderWidth: 1,
+    justifyContent: 'center',
+  },
+  cipAktif: {
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.lacivert,
+  },
+  cipPasif: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
   },
   aramaInput: {
     flex: 1,
