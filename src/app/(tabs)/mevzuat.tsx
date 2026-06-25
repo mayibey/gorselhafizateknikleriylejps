@@ -341,7 +341,7 @@ function DevamEtKart({
         <View style={st.devamBaslikSol}>
           <MaterialCommunityIcons name="bookmark" size={16} color={Palette.altinKoyu} />
           <AppText variant="etiket" bold color="altinKoyu" style={st.devamEtiket}>
-            {siradaki ? '🎖️ BİTTİ — SIRADAKİ' : 'DEVAM ET'}
+            {siradaki ? '🎖️ SIRADAKİ KANUN' : 'DEVAM ET'}
           </AppText>
         </View>
         <Pressable
@@ -379,7 +379,7 @@ function DevamEtKart({
       <View style={st.devamCta}>
         <MaterialCommunityIcons name="play" size={18} color={Palette.lacivert} />
         <AppText variant="kucuk" bold color="lacivert">
-          Çalışmaya devam et
+          {siradaki ? 'Bununla devam et' : 'Çalışmaya devam et'}
         </AppText>
       </View>
     </Pressable>
