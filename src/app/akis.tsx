@@ -490,8 +490,14 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    padding: Spacing.three,
-    paddingBottom: Spacing.four, // sabit footer'ın hemen üstünde nefes payı
+    // Kısa içerik dikey ORTALANSIN → görsel+sekme+panel bloğu ortada, footer'la
+    // arasındaki ölü boşluk dengelenir (tek dipte dev boşluk kalmaz).
+    justifyContent: 'center',
+    // Görsel TAM EKRAN genişliği (full-bleed) → en büyük render. Diğer modüller
+    // (sekme/panel/bildir) altBlok'ta kendi yatay padding'ini alır.
+    paddingHorizontal: 0,
+    paddingTop: Spacing.three,
+    paddingBottom: Spacing.four,
     gap: Spacing.three,
   },
   kartSar: {
@@ -524,15 +530,16 @@ const styles = StyleSheet.create({
     zIndex: 2,
   },
   okSol: {
-    left: -6,
+    left: 6,
   },
   okSag: {
-    right: -6,
+    right: 6,
   },
   okPasif: {
     opacity: 0.25,
   },
   altBlok: {
+    paddingHorizontal: Spacing.three,
     gap: Spacing.two,
   },
   // Sabit alt footer (ScrollView dışında) — cevap butonları her zaman erişilir.
