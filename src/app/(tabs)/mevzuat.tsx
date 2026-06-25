@@ -18,7 +18,7 @@ import { rutbeGorur } from '@/lib/rutbe-kapsam';
 const CIPLER = [
   { k: 'tumu', ad: 'Tümü' },
   { k: 'devam', ad: 'Devam Ettiklerim' },
-  { k: 'bitmeyen', ad: 'Bitmeyenler' },
+  { k: 'baslamadi', ad: 'Başlamadıklarım' },
   { k: 'tamam', ad: 'Tamamlananlar' },
 ] as const;
 type Cip = (typeof CIPLER)[number]['k'];
@@ -99,8 +99,8 @@ export default function MevzuatScreen() {
     switch (aktifCip) {
       case 'devam':
         return y > 0 && y < 100;
-      case 'bitmeyen':
-        return y < 100;
+      case 'baslamadi':
+        return y === 0;
       case 'tamam':
         return y === 100;
       default:
