@@ -1,5 +1,5 @@
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, TextInput, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
@@ -11,6 +11,7 @@ import { getAllCards } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
 import type { CardWithLaw } from '@/db/schema';
 import { araIndeksHazirla, araKanunlar, trKucuk, type AramaSonuc } from '@/lib/ara';
+import { getSonAramalar, sonAramaEkle } from '@/lib/son-aramalar';
 
 // Sekme değişiminde / sonuca gidip dönünce SON ARAMA hatırlansın (kullanıcı 3-4 sonuçtan
 // ilkini beğenmezse geri dönüp diğerine girebilsin). Modül seviyesinde → remount'a dayanır.
@@ -20,6 +21,7 @@ export default function AraScreen() {
   const router = useRouter();
   const [sorgu, setSorgu] = useState(sonSorgu);
   const [cards, setCards] = useState<CardWithLaw[] | null>(null);
+  const [sonAramalar, setSonAramalar] = useState<string[]>([]); // 8B'de gösterilecek
   const [hata, setHata] = useState(false);
 
   const yukle = useCallback(() => {
@@ -29,16 +31,27 @@ export default function AraScreen() {
       .catch(() => setHata(true));
   }, []);
 
-  // Kartları bir kez yükle (odakta, yoksa).
+  // Kartları bir kez yükle (odakta, yoksa) + son aramalar geçmişini tazele.
   useFocusEffect(
     useCallback(() => {
       if (cards === null) yukle();
+      void getSonAramalar().then(setSonAramalar);
     }, [cards, yukle]),
   );
 
   // İndeks: kartlar yüklenince BİR kez (pahalı önişlem). Arama: her tuşta hızlı filtre.
   const indeks = useMemo(() => (cards ? araIndeksHazirla(cards, maddeMetni) : []), [cards]);
   const sonuclar = useMemo(() => araKanunlar(indeks, sorgu), [indeks, sorgu]);
+
+  // Son arama kaydı: HER tuşta DEĞİL → sorgu ~700ms durunca + ≥2 harf (debounce, spam yok).
+  useEffect(() => {
+    const q = sorgu.trim();
+    if (q.length < 2) return;
+    const t = setTimeout(() => {
+      void sonAramaEkle(q).then(setSonAramalar);
+    }, 700);
+    return () => clearTimeout(t);
+  }, [sorgu]);
 
   function degis(t: string) {
     sonSorgu = t;
