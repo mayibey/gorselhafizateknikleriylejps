@@ -25,7 +25,7 @@ import { getAyar } from '@/lib/bildirim';
 import { zayifKartlar } from '@/lib/performans';
 import type { QueueCard } from '@/lib/queue';
 import { useRutbe } from '@/lib/rutbe-context';
-import { RUTBELER } from '@/lib/rutbe-store';
+import { RUTBELER, type Rutbe } from '@/lib/rutbe-store';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 
@@ -34,8 +34,10 @@ const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as 
 
 export default function KarargahScreen() {
   const router = useRouter();
-  const { brans } = useBrans();
-  const { rutbe } = useRutbe();
+  const { brans, setBrans } = useBrans();
+  const { rutbe, setRutbe } = useRutbe();
+  // Açık dropdown ('rol'=branş / 'kademe'=rütbe / null). Aynı anda yalnız biri.
+  const [acikDD, setAcikDD] = useState<'rol' | 'kademe' | null>(null);
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
@@ -140,8 +142,20 @@ export default function KarargahScreen() {
       title="Karargah"
       headerSag={
         <View style={styles.headerIkonlar}>
-          <MaterialCommunityIcons name="bell-outline" size={22} color={Palette.altin} />
-          <MaterialCommunityIcons name="account-circle-outline" size={24} color={Palette.altin} />
+          <Pressable
+            onPress={() => router.push('/egitim-plani')}
+            hitSlop={10}
+            accessibilityRole="button"
+            accessibilityLabel="Bildirim ayarları">
+            <MaterialCommunityIcons name="bell-outline" size={22} color={Palette.altin} />
+          </Pressable>
+          <Pressable
+            onPress={() => router.push('/ayarlar')}
+            hitSlop={10}
+            accessibilityRole="button"
+            accessibilityLabel="Profil ve ayarlar">
+            <MaterialCommunityIcons name="account-circle-outline" size={24} color={Palette.altin} />
+          </Pressable>
         </View>
       }>
       {/* Header altı açıklama + branş/rütbe rozeti (kayan içerik) */}
@@ -149,12 +163,34 @@ export default function KarargahScreen() {
         <AppText variant="kucuk" color="solukMetin">
           Bugünkü çalışma özetin burada.
         </AppText>
-        {bransAd || rutbeAd ? (
-          <View style={styles.rozetSatir}>
-            {bransAd ? <Chip ikon="account-group" metin={bransAd} /> : null}
-            {rutbeAd ? <Chip ikon="chevron-triple-up" metin={rutbeAd} /> : null}
-          </View>
-        ) : null}
+        <View style={styles.rolKademe}>
+          <Dropdown
+            etiket="Rol"
+            ikon="account-group"
+            seciliAd={bransAd ?? 'Seç'}
+            secenekler={branches?.map((b) => ({ slug: b.slug, ad: b.ad })) ?? []}
+            seciliSlug={brans}
+            acik={acikDD === 'rol'}
+            onAc={() => setAcikDD(acikDD === 'rol' ? null : 'rol')}
+            onSec={(slug) => {
+              void setBrans(slug);
+              setAcikDD(null);
+            }}
+          />
+          <Dropdown
+            etiket="Kademe"
+            ikon="chevron-triple-up"
+            seciliAd={rutbeAd ?? 'Seç'}
+            secenekler={RUTBELER.map((r) => ({ slug: r.slug, ad: r.ad }))}
+            seciliSlug={rutbe}
+            acik={acikDD === 'kademe'}
+            onAc={() => setAcikDD(acikDD === 'kademe' ? null : 'kademe')}
+            onSec={(slug) => {
+              void setRutbe(slug as Rutbe);
+              setAcikDD(null);
+            }}
+          />
+        </View>
       </View>
 
       {/* HERO — Devam Et / Kart Akışı (lacivert). Boşsa "bugünlük bitti". */}
@@ -321,13 +357,82 @@ export default function KarargahScreen() {
   );
 }
 
-function Chip({ ikon, metin }: { ikon: keyof typeof MaterialCommunityIcons.glyphMap; metin: string }) {
+/** İnline (sayfadan çıkmadan açılan) Rol/Kademe seçici. Seçince context'i anında günceller. */
+function Dropdown({
+  etiket,
+  ikon,
+  seciliAd,
+  secenekler,
+  seciliSlug,
+  acik,
+  onAc,
+  onSec,
+}: {
+  etiket: string;
+  ikon: keyof typeof MaterialCommunityIcons.glyphMap;
+  seciliAd: string;
+  secenekler: { slug: string; ad: string }[];
+  seciliSlug: string | null;
+  acik: boolean;
+  onAc: () => void;
+  onSec: (slug: string) => void;
+}) {
   return (
-    <View style={styles.chip}>
-      <MaterialCommunityIcons name={ikon} size={14} color={Palette.lacivert} />
-      <AppText variant="etiket" color="lacivert" bold>
-        {metin}
-      </AppText>
+    <View style={styles.dd}>
+      <Pressable
+        style={({ pressed }) => [styles.ddTetik, pressed && styles.pressed]}
+        onPress={onAc}
+        accessibilityRole="button"
+        accessibilityLabel={`${etiket}: ${seciliAd}`}>
+        <MaterialCommunityIcons name={ikon} size={14} color={Palette.lacivert} />
+        <View style={styles.ddTetikMetin}>
+          <AppText variant="etiket" color="solukMetin">
+            {etiket}
+          </AppText>
+          <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1}>
+            {seciliAd}
+          </AppText>
+        </View>
+        <MaterialCommunityIcons
+          name={acik ? 'chevron-up' : 'chevron-down'}
+          size={18}
+          color={Palette.solukMetin}
+        />
+      </Pressable>
+      {acik ? (
+        <View style={styles.ddPanel}>
+          {secenekler.length === 0 ? (
+            <AppText variant="kucuk" color="solukMetin" style={styles.ddBos}>
+              Seçenek yok
+            </AppText>
+          ) : (
+            secenekler.map((o) => {
+              const sec = o.slug === seciliSlug;
+              return (
+                <Pressable
+                  key={o.slug}
+                  style={({ pressed }) => [
+                    styles.ddSecenek,
+                    sec && styles.ddSecenekSecili,
+                    pressed && styles.pressed,
+                  ]}
+                  onPress={() => onSec(o.slug)}>
+                  <AppText
+                    variant="kucuk"
+                    bold
+                    color={sec ? 'beyaz' : 'anaMetin'}
+                    style={styles.ddSecenekAd}>
+                    {o.ad}
+                  </AppText>
+                  {sec ? (
+                    <MaterialCommunityIcons name="check-bold" size={16} color={Palette.altin} />
+                  ) : null}
+                </Pressable>
+              );
+            })
+          )}
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -426,21 +531,59 @@ const styles = StyleSheet.create({
   selam: {
     gap: Spacing.two,
   },
-  rozetSatir: {
+  rolKademe: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    alignItems: 'flex-start', // biri açılınca diğeri üstte kalsın (inline expander)
     gap: Spacing.two,
+    zIndex: 1,
   },
-  chip: {
+  dd: {
+    flex: 1,
+  },
+  ddTetik: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.one,
+    gap: Spacing.two,
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kenarlik,
     borderWidth: 1,
-    paddingHorizontal: Spacing.two,
-    paddingVertical: Spacing.half,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  ddTetikMetin: {
+    flex: 1,
+  },
+  ddPanel: {
+    marginTop: Spacing.one,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.one,
+    gap: Spacing.half,
+    shadowColor: Palette.lacivert,
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 4,
+  },
+  ddSecenek: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
     borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.two,
+  },
+  ddSecenekSecili: {
+    backgroundColor: Palette.lacivert,
+  },
+  ddSecenekAd: {
+    flex: 1,
+  },
+  ddBos: {
+    padding: Spacing.two,
   },
 
   // Hero
