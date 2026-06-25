@@ -288,7 +288,7 @@ export default function AkisScreen() {
                   </AppText>
                   <MaterialCommunityIcons name="chevron-down" size={20} color={Palette.solukMetin} />
                 </View>
-                <AppText variant="kucuk" color="anaMetin" numberOfLines={2}>
+                <AppText variant="kucuk" color="anaMetin" numberOfLines={5}>
                   {maddeTxt}
                 </AppText>
                 <View style={styles.maddeAyirici} />
@@ -504,7 +504,7 @@ const styles = StyleSheet.create({
     borderColor: Palette.kenarlik,
     borderWidth: 1,
     borderRadius: 20,
-    padding: Spacing.three,
+    padding: Spacing.four,
     gap: Spacing.two,
   },
   maddeKartPasif: {

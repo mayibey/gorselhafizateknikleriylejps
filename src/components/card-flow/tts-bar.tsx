@@ -24,7 +24,7 @@ import { Palette, Spacing } from '@/constants/theme';
 const HIZLAR = [1.0, 1.25, 1.5] as const;
 /** Dekoratif waveform çubuk sayısı. */
 const BAR_SAYISI = 40;
-const DALGA_Y = 38;
+const DALGA_Y = 27;
 
 /** Metni cümlelere böler; çok kısa parçaları (kısaltma vb.) öncekine ekler. */
 function cumlelereBol(metin: string): string[] {
@@ -215,7 +215,7 @@ export function TtsBar({
           hitSlop={8}
           accessibilityRole="button"
           accessibilityLabel="Önceki cümle">
-          <MaterialCommunityIcons name="skip-previous" size={28} color={Palette.kartMetinAcik} />
+          <MaterialCommunityIcons name="skip-previous" size={22} color={Palette.kartMetinAcik} />
         </Pressable>
 
         <Pressable
@@ -225,7 +225,7 @@ export function TtsBar({
           accessibilityLabel={oynuyor ? 'Sesli anlatımı durdur' : 'Sesli anlatımı dinle'}>
           <MaterialCommunityIcons
             name={oynuyor ? 'pause' : 'play'}
-            size={34}
+            size={26}
             color={Palette.lacivert}
           />
         </Pressable>
@@ -237,7 +237,7 @@ export function TtsBar({
           hitSlop={8}
           accessibilityRole="button"
           accessibilityLabel="Sonraki cümle">
-          <MaterialCommunityIcons name="skip-next" size={28} color={Palette.kartMetinAcik} />
+          <MaterialCommunityIcons name="skip-next" size={22} color={Palette.kartMetinAcik} />
         </Pressable>
 
         <Pressable
@@ -262,8 +262,9 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.kartPanelKoyu,
     borderColor: Palette.kartKenarKoyu,
     borderWidth: 1,
-    borderRadius: 20,
-    padding: Spacing.two,
+    borderRadius: 16,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.one,
     gap: Spacing.one,
     marginTop: Spacing.two,
   },
@@ -305,21 +306,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   yan: {
-    width: 44,
-    height: 44,
+    width: 38,
+    height: 38,
     alignItems: 'center',
     justifyContent: 'center',
   },
   oynat: {
-    width: 68,
-    height: 68,
-    borderRadius: 34,
+    width: 52,
+    height: 52,
+    borderRadius: 26,
     backgroundColor: Palette.altin,
     alignItems: 'center',
     justifyContent: 'center',
   },
   hizBtn: {
-    width: 52,
+    width: 46,
     alignItems: 'center',
     justifyContent: 'center',
   },
