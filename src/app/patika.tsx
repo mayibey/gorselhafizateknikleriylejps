@@ -92,24 +92,36 @@ function PostalIzi({ x, y, aci, renk }: { x: number; y: number; aci: number; ren
   );
 }
 
+/** Bezier yaklaşık yay uzunluğu (12 örnekle). Eşit aralıklı iz dağıtımı için. */
+function bezierUzunluk(p0: Pt, p1: Pt): number {
+  let len = 0;
+  let onceki = bezierNokta(p0, p1, 0);
+  for (let s = 1; s <= 12; s++) {
+    const simdi = bezierNokta(p0, p1, s / 12);
+    len += Math.hypot(simdi.x - onceki.x, simdi.y - onceki.y);
+    onceki = simdi;
+  }
+  return len;
+}
+
 /**
- * Bir (yürünmüş) segmente postal izleri serper.
- *  - İz sayısı segment boyuna orantılı (clamp 2..3).
- *  - t kenarlardan içeri alınır (düğüme binmesin).
- *  - Ardışık izler yürüyüş yönüne dik ±3.5px alternatif kaydırılır.
+ * Bir (yürünmüş) segmente postal izleri serper — YOLA PARALEL + DÜZENLİ.
+ *  - İz sayısı YAY UZUNLUĞUNA orantılı (eşit aralık, dağınık değil).
+ *  - Her iz o noktadaki teğet açısına döner (yürüyüş yönüne bakar).
+ *  - Sol-sağ ayak: yola dik ±3px düzenli alternatif (rastgele saçılma YOK).
  * Dik birim vektör = (cos(aci), sin(aci)); aci zaten teğet+90 → (-dy,dx)/|.| ile aynı.
  */
 function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): ReactNode[] {
-  const mesafe = Math.abs(p1.y - p0.y);
-  // Bot izi büyüdü → seyrelt (eski /34 → /46, en çok 3) ki üst üste binmesin.
-  const izSayisi = Math.max(2, Math.min(3, Math.round(mesafe / 46)));
+  const uzunluk = bezierUzunluk(p0, p1);
+  // ~26px'de bir adım → eşit aralıklı, yola paralel sıralı izler.
+  const izSayisi = Math.max(3, Math.min(8, Math.round(uzunluk / 26)));
   const izler: ReactNode[] = [];
   for (let k = 0; k < izSayisi; k++) {
     const t = (k + 1) / (izSayisi + 1);
     const n = bezierNokta(p0, p1, t);
     const aci = bezierAci(p0, p1, t);
     const r = (aci * Math.PI) / 180;
-    const ofset = k % 2 === 0 ? 3.5 : -3.5;
+    const ofset = k % 2 === 0 ? 3 : -3;
     izler.push(
       <PostalIzi
         key={`${anahtar}-${k}`}
@@ -130,9 +142,11 @@ function segmentPostallari(p0: Pt, p1: Pt, renk: string, anahtar: string): React
  */
 function HaritaDokusu({ W, H }: { W: number; H: number }) {
   const adim = Math.max(36, W / 9);
+  // Kontur sayısı TOPLAM yüksekliğe orantılı → tüm patika boyunca eşit kapsama.
+  const konturSayisi = Math.max(5, Math.round(H / 150));
   const konturlar: string[] = [];
-  for (let j = 0; j < 5; j++) {
-    const yBase = H * (0.16 + j * 0.16);
+  for (let j = 0; j < konturSayisi; j++) {
+    const yBase = H * ((j + 0.5) / konturSayisi);
     const faz = j * 1.3;
     let d = '';
     for (let x = 0; x <= W; x += adim) {
@@ -156,10 +170,10 @@ function HaritaDokusu({ W, H }: { W: number; H: number }) {
   return (
     <Svg width={W} height={H} style={StyleSheet.absoluteFill} pointerEvents="none">
       {konturlar.map((d, i) => (
-        <Path key={i} d={d} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.06} />
+        <Path key={i} d={d} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.13} />
       ))}
-      <Path d={dagYol} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.07} />
-      <G transform={`translate(${cx} ${cy})`} opacity={0.09}>
+      <Path d={dagYol} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" opacity={0.12} />
+      <G transform={`translate(${cx} ${cy})`} opacity={0.2}>
         <Circle r={R} stroke={Palette.altinKoyu} strokeWidth={1.5} fill="none" />
         <Circle r={R * 0.62} stroke={Palette.altinKoyu} strokeWidth={1} fill="none" />
         <Line x1={0} y1={-R} x2={0} y2={-R * 0.55} stroke={Palette.altinKoyu} strokeWidth={1} />
@@ -502,7 +516,7 @@ function Dugum({
           {durum === 'aktif' ? (
             <MaterialCommunityIcons name="play" size={36} color={Palette.lacivert} />
           ) : durum === 'tamam' ? (
-            <MaterialCommunityIcons name="check-bold" size={32} color={Palette.altinKoyu} />
+            <MaterialCommunityIcons name="check-bold" size={36} color={Palette.altinKoyu} />
           ) : durum === 'baslanmis' ? (
             <AppText variant="kucuk" bold color="lacivert">
               %{yuzde}
@@ -671,7 +685,8 @@ const st = StyleSheet.create({
   },
   daireTamam: {
     backgroundColor: Palette.kartKremi,
-    borderColor: Palette.yesil,
+    borderColor: Palette.lacivert,
+    borderWidth: 4, // mockup: koyu lacivert KALIN halka
   },
   daireBaslanmis: {
     backgroundColor: Palette.kartKremi,
