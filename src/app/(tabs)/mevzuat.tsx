@@ -224,9 +224,10 @@ export default function MevzuatScreen() {
               siradaki={devam.tip === 'siradaki'}
               onPress={() => kanunaGit(devamLaw)}
               onTumunuGor={() => {
-                setAktifCip('tumu');
-                setFavoriAcik(false);
-                setArama('');
+                // "Tümünü gör" → 'Devam Ettiklerim' filtresine geç (0<%<100).
+                setAktifCip('devam');
+                setFavoriAcik(false); // çip filtresi görünür olsun
+                setCipGoster(true); // çip şeridi açık → seçili çip görünsün
               }}
             />
           ) : devam.tip === 'hepsiBitti' ? (
