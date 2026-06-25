@@ -331,6 +331,11 @@ export default function AkisScreen() {
               </Pressable>
             ) : null}
 
+            </View>
+          </ScrollView>
+
+          {/* SABİT footer — cevap butonları her zaman altta (scroll DIŞINDA). */}
+          <View style={styles.footer}>
             {cevapHatasi ? (
               <AppText variant="kucuk" color="kirmizi" bold style={styles.cevapHata}>
                 Kaydedilemedi, tekrar dene.
@@ -374,8 +379,7 @@ export default function AkisScreen() {
                 </Pressable>
               </View>
             )}
-            </View>
-          </ScrollView>
+          </View>
 
           {/* Madde metni sheet'i — kolon ile KARDEŞ (absoluteFill). */}
           <MaddeMetniSheet
@@ -455,6 +459,7 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     padding: Spacing.three,
+    paddingBottom: Spacing.four, // sabit footer'ın hemen üstünde nefes payı
     gap: Spacing.three,
   },
   kartSar: {
@@ -496,6 +501,15 @@ const styles = StyleSheet.create({
     opacity: 0.25,
   },
   altBlok: {
+    gap: Spacing.two,
+  },
+  // Sabit alt footer (ScrollView dışında) — cevap butonları her zaman erişilir.
+  footer: {
+    borderTopColor: Palette.kartKenarKoyu,
+    borderTopWidth: 1,
+    backgroundColor: Palette.kartZeminKoyu,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.three,
     gap: Spacing.two,
   },
   // Madde Metni kartı (krem — koyu ekranda kontrast)
