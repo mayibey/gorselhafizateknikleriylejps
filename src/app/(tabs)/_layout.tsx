@@ -1,16 +1,32 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import type { ColorValue } from 'react-native';
+import { StyleSheet, View, type ColorValue } from 'react-native';
 
 import { FontFamily, Palette } from '@/constants/theme';
 
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
 function icon(name: IconName) {
-  return ({ color, size }: { color: ColorValue; size: number }) => (
-    <MaterialCommunityIcons name={name} color={color} size={size} />
+  // Aktif sekmenin ÜSTÜnde ince altın çizgi (pasifte saydam → ikon konumu kaymaz).
+  return ({ focused, color, size }: { focused: boolean; color: ColorValue; size: number }) => (
+    <View style={ikonStil.sar}>
+      <View style={[ikonStil.cizgi, focused && ikonStil.cizgiAktif]} />
+      <MaterialCommunityIcons name={name} color={color} size={size} />
+    </View>
   );
 }
+
+const ikonStil = StyleSheet.create({
+  sar: { alignItems: 'center' },
+  cizgi: {
+    height: 3,
+    width: 28,
+    borderRadius: 2,
+    marginBottom: 4,
+    backgroundColor: 'transparent',
+  },
+  cizgiAktif: { backgroundColor: Palette.altin },
+});
 
 /** Krom: krem zemin, aktif sekme lacivert, pasif soluk. */
 export default function TabsLayout() {

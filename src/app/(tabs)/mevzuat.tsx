@@ -180,11 +180,12 @@ export default function MevzuatScreen() {
         </Pressable>
       </View>
 
-      {/* Filtre çipleri (ilerleme bazlı) */}
-      {cipGoster ? (
+      {/* Filtre çipleri (ilerleme bazlı). Favori filtresi açıkken gizli (kafa karışmasın). */}
+      {cipGoster && !favoriAcik ? (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
+          style={st.cipScroll}
           contentContainerStyle={st.cipSeridi}>
           {CIPLER.map((c) => {
             const aktif = aktifCip === c.k;
@@ -222,6 +223,11 @@ export default function MevzuatScreen() {
               calisilan={ilerleme?.get(devamLaw.id) ?? 0}
               siradaki={devam.tip === 'siradaki'}
               onPress={() => kanunaGit(devamLaw)}
+              onTumunuGor={() => {
+                setAktifCip('tumu');
+                setFavoriAcik(false);
+                setArama('');
+              }}
             />
           ) : devam.tip === 'hepsiBitti' ? (
             <View style={st.bittiKart}>
@@ -313,11 +319,13 @@ function DevamEtKart({
   calisilan,
   siradaki,
   onPress,
+  onTumunuGor,
 }: {
   law: LawWithCount;
   calisilan: number;
   siradaki: boolean;
   onPress: () => void;
+  onTumunuGor: () => void;
 }) {
   const toplam = law.kartSayisi;
   const yuzde = toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0;
@@ -329,9 +337,28 @@ function DevamEtKart({
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={`Çalışmaya devam et: ${law.ad}`}>
-      <AppText variant="etiket" bold color="altinKoyu" style={st.devamEtiket}>
-        {siradaki ? '🎖️ BİTTİ — SIRADAKİ' : 'DEVAM ET'}
-      </AppText>
+      <View style={st.devamBaslikSatir}>
+        <View style={st.devamBaslikSol}>
+          <MaterialCommunityIcons name="bookmark" size={16} color={Palette.altinKoyu} />
+          <AppText variant="etiket" bold color="altinKoyu" style={st.devamEtiket}>
+            {siradaki ? '🎖️ BİTTİ — SIRADAKİ' : 'DEVAM ET'}
+          </AppText>
+        </View>
+        <Pressable
+          onPress={(e) => {
+            e.stopPropagation();
+            onTumunuGor();
+          }}
+          hitSlop={6}
+          style={st.tumunuGor}
+          accessibilityRole="button"
+          accessibilityLabel="Tümünü gör">
+          <AppText variant="etiket" bold color="solukMetin">
+            Tümünü gör
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+        </Pressable>
+      </View>
       <View style={st.devamGovde}>
         <Monogram no={no} boyut={72} variant="baslik" />
         <View style={st.devamOrta}>
@@ -343,7 +370,7 @@ function DevamEtKart({
           </AppText>
           <View style={st.barSatir}>
             <Bar yuzde={yuzde} />
-            <AppText variant="etiket" bold color="altinKoyu">
+            <AppText variant="etiket" bold color="altinKoyu" style={st.barYuzde}>
               %{yuzde}
             </AppText>
           </View>
@@ -395,7 +422,7 @@ function KanunSatir({
         </AppText>
         <View style={st.barSatir}>
           <Bar yuzde={yuzde} />
-          <AppText variant="etiket" bold color="altinKoyu">
+          <AppText variant="etiket" bold color="altinKoyu" style={st.barYuzde}>
             %{yuzde}
           </AppText>
         </View>
@@ -424,7 +451,9 @@ function KanunSatir({
           <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
         ) : (
           <>
-            <MaterialCommunityIcons name="play" size={16} color={Palette.altin} />
+            <View style={st.playDaire}>
+              <MaterialCommunityIcons name="play" size={14} color={Palette.altinKoyu} />
+            </View>
             <AppText variant="etiket" bold color="altinKoyu">
               {bos ? 'Başla' : 'Devam'}
             </AppText>
@@ -526,15 +555,22 @@ const st = StyleSheet.create({
     backgroundColor: Palette.lacivert,
     borderColor: Palette.lacivert,
   },
+  cipScroll: {
+    flexGrow: 0, // yatay ScrollView flex column içinde dikey büyümesin (DEV SÜTUN bug fix)
+  },
   cipSeridi: {
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: Spacing.two,
     paddingVertical: Spacing.half,
   },
   cip: {
+    height: 44,
+    alignSelf: 'flex-start', // dikey esneme yok
     paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.two,
     borderRadius: Radius.l,
     borderWidth: 1,
+    alignItems: 'center',
     justifyContent: 'center',
   },
   cipAktif: {
@@ -561,8 +597,23 @@ const st = StyleSheet.create({
     padding: Spacing.three,
     gap: Spacing.three,
   },
+  devamBaslikSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  devamBaslikSol: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
   devamEtiket: {
     letterSpacing: 1,
+  },
+  tumunuGor: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.half,
   },
   devamGovde: {
     flexDirection: 'row',
@@ -629,7 +680,12 @@ const st = StyleSheet.create({
   barFill: {
     height: '100%',
     borderRadius: 3,
-    backgroundColor: Palette.ilerlemeDolu,
+    backgroundColor: Palette.altinKoyu, // krem üstünde okunur (şampanya altın soluk kalıyordu)
+  },
+  barYuzde: {
+    minWidth: 40,
+    textAlign: 'right',
+    flexShrink: 0,
   },
 
   // Liste satırı
@@ -651,6 +707,14 @@ const st = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
+  },
+  playDaire: {
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    backgroundColor: Palette.altinSolukYuzey,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   merkezKutu: {
