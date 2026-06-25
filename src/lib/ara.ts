@@ -18,10 +18,15 @@ export interface AraKayit {
   maddeNo: string;
   baslik: string;
   metin: string; // resmî tam metin ('' olabilir — metinsiz madde)
+  anlatim: string; // kart anlatım metni ("Kartlar" kapsamı için)
   metinK: string; // tr-küçük harf (arama için önceden hesaplı)
   baslikK: string;
   maddeK: string;
+  anlatimK: string;
 }
+
+/** Arama kapsamı (filtre çipleri): hepsi · kanun metni · madde no · kart içeriği. */
+export type AraKapsam = 'hepsi' | 'metin' | 'madde' | 'kart';
 
 export interface AramaSonuc {
   cardId: number;
@@ -55,6 +60,7 @@ export function araIndeksHazirla(
     if (gorulen.has(anahtar)) continue;
     gorulen.add(anahtar);
     const metin = metinAl(c.madde_no) ?? '';
+    const anlatim = c.anlatim_metni ?? '';
     kayitlar.push({
       cardId: c.id,
       lawId: c.law_id,
@@ -63,9 +69,11 @@ export function araIndeksHazirla(
       maddeNo: c.madde_no,
       baslik: c.baslik,
       metin,
+      anlatim,
       metinK: trKucuk(metin),
       baslikK: trKucuk(c.baslik),
       maddeK: trKucuk(c.madde_no),
+      anlatimK: trKucuk(anlatim),
     });
   }
   return kayitlar;
@@ -73,17 +81,38 @@ export function araIndeksHazirla(
 
 const MIN_UZUNLUK = 2;
 
-/** İndekste sorguyu arar; eşleşen maddeleri alaka sırasıyla (başlık ağırlıklı) döner. */
-export function araKanunlar(indeks: AraKayit[], sorgu: string): AramaSonuc[] {
+/**
+ * İndekste sorguyu arar; eşleşen maddeleri alaka sırasıyla (başlık ağırlıklı) döner.
+ * PHRASE eşleştirme (q AYNEN, substring) DEĞİŞMEDİ; `kapsam` yalnız NEREDE arandığını
+ * daraltır: hepsi (metin+başlık+madde+anlatım) · metin · madde · kart (başlık+anlatım).
+ */
+export function araKanunlar(
+  indeks: AraKayit[],
+  sorgu: string,
+  kapsam: AraKapsam = 'hepsi',
+): AramaSonuc[] {
   const q = trKucuk(sorgu.trim());
   if (q.length < MIN_UZUNLUK) return [];
+  const hepsi = kapsam === 'hepsi';
 
   const sonuclar: AramaSonuc[] = [];
   for (const k of indeks) {
-    const metinAdet = sayGec(k.metinK, q);
-    const baslikAdet = sayGec(k.baslikK, q);
-    const maddeAdet = k.maddeK.includes(q) ? 1 : 0;
-    if (metinAdet + baslikAdet + maddeAdet === 0) continue;
+    const metinAdet = hepsi || kapsam === 'metin' ? sayGec(k.metinK, q) : 0;
+    const maddeAdet = (hepsi || kapsam === 'madde') && k.maddeK.includes(q) ? 1 : 0;
+    // "Kartlar" kapsamı = kart içeriği: başlık + anlatım metni.
+    const baslikAdet = hepsi || kapsam === 'kart' ? sayGec(k.baslikK, q) : 0;
+    const anlatimAdet = hepsi || kapsam === 'kart' ? sayGec(k.anlatimK, q) : 0;
+    if (metinAdet + baslikAdet + maddeAdet + anlatimAdet === 0) continue;
+    // Snippet: eşleşen alandan bağlam (metin > anlatım > başlık).
+    let kaynak = k.baslik;
+    let kaynakK = k.baslikK;
+    if (metinAdet > 0) {
+      kaynak = k.metin;
+      kaynakK = k.metinK;
+    } else if (anlatimAdet > 0) {
+      kaynak = k.anlatim;
+      kaynakK = k.anlatimK;
+    }
     sonuclar.push({
       cardId: k.cardId,
       lawId: k.lawId,
@@ -91,10 +120,10 @@ export function araKanunlar(indeks: AraKayit[], sorgu: string): AramaSonuc[] {
       blok: k.blok,
       maddeNo: k.maddeNo,
       baslik: k.baslik,
-      snippet: snippetUret(k.metin || k.baslik, k.metin ? k.metinK : k.baslikK, q),
-      eslesme: metinAdet + baslikAdet,
-      // Başlıkta geçiş en güçlü alaka (madde adı), sonra madde no, sonra gövde.
-      skor: baslikAdet * 5 + maddeAdet * 3 + metinAdet,
+      snippet: snippetUret(kaynak || k.baslik, kaynakK || k.baslikK, q),
+      eslesme: metinAdet + baslikAdet + anlatimAdet,
+      // Başlık en güçlü alaka, sonra madde no, sonra anlatım, sonra gövde.
+      skor: baslikAdet * 5 + maddeAdet * 3 + anlatimAdet * 2 + metinAdet,
     });
   }
   sonuclar.sort((a, b) => b.skor - a.skor);
