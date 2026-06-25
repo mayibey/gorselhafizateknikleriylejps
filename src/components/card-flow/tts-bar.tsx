@@ -113,9 +113,12 @@ export function TtsBar({
 
   // i. cümleyi oku; bitince (aynı nesilse ve durdurulmadıysa) sonrakine zincirle.
   function cumleOku(i: number, nesil: number) {
+    // Savunma: geçersiz/sınır-dışı indeks (cumleler[i] undefined) → okuma yok, çökme yok.
+    const cumle = cumleler[i];
+    if (cumle === undefined) return;
     aktifRef.current = i;
     setAktif(i);
-    Speech.speak(cumleler[i], {
+    Speech.speak(cumle, {
       language: 'tr-TR',
       rate: hizRef.current, // canlı hız (sonraki cümle yeni hızla okunur)
       onDone: () => {
@@ -140,6 +143,7 @@ export function TtsBar({
 
   // Verilen cümleden oynatmaya başla (önce mevcut okumayı kes, nesli artır).
   function oynat(i: number) {
+    if (cumleler[i] === undefined) return; // geçersiz indeks → "oynuyor"a düşme
     nesilRef.current += 1;
     const nesil = nesilRef.current;
     void Speech.stop();
@@ -168,9 +172,14 @@ export function TtsBar({
 
   // Waveform'a dokun → o orana en yakın CÜMLEDEN başlat (saniye değil, cümle hassasiyeti).
   function dalgaDokun(e: GestureResponderEvent) {
-    if (W <= 0 || cumleler.length === 0) return;
-    const o = Math.min(1, Math.max(0, e.nativeEvent.locationX / W));
-    const i = Math.min(cumleler.length - 1, Math.max(0, Math.floor(o * cumleler.length)));
+    const N = cumleler.length;
+    if (W <= 0 || N === 0) return;
+    // locationX bazı web olaylarında undefined olabilir → NaN clamp'leri geçer,
+    // cumleler[NaN] undefined olup çökerdi. finite değilse hiçbir şey yapma.
+    const lx = e.nativeEvent.locationX;
+    if (!Number.isFinite(lx)) return;
+    const o = Math.min(1, Math.max(0, lx / W));
+    const i = Math.max(0, Math.min(N - 1, Math.floor(o * N)));
     oynat(i);
   }
 
