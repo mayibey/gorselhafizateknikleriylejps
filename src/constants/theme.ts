@@ -33,6 +33,15 @@ export const Palette = {
 
   kartGolge: 'rgba(11,31,58,0.08)', // kart gölgesi (shadowColor değil; rgba)
 
+  // Kart çalışma ekranı (KOYU mod — app krem ama çalışma modu koyu premium).
+  kartZeminKoyu: '#061A33', // çalışma ekranı zemini
+  kartYuzeyKoyu: '#0B1F3A', // header / yüzey
+  kartPanelKoyu: '#0D2747', // ses paneli vb.
+  kartMetinAcik: '#FFFFFF', // koyu üstünde ana metin
+  kartMetinIkincil: '#D8CFBD', // koyu üstünde ikincil metin
+  kartKenarKoyu: 'rgba(255,255,255,0.14)', // koyu üstünde ince kenar
+  altinAcik2: '#E7BC56', // koyu üstünde altın accent (waveform/playhead)
+
   // Korunan yardımcı tonlar (mevcut ekranlar kullanıyor)
   ten: '#E8C9A8',
   yesil: '#2E7D32',
@@ -72,7 +81,7 @@ export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
 export const MaxContentWidth = 800;
 
 /** Forensic filigran: fotoğrafta görünür ama kartı okutur opaklık + çapraz açı. */
-export const FiligranOpaklik = 0.15;
+export const FiligranOpaklik = 0.22;
 export const FiligranAci = '-30deg';
 /** Kart Akışı'nın "telefon kolonu" genişlik tavanı (web'de ortalanır, dar ekranda devreye girmez). */
 export const CardFlowMaxWidth = 460;

@@ -138,40 +138,64 @@ export default function AkisScreen() {
       else if (e.translationX >= SWIPE_ESIK) setIndex((i) => Math.max(0, i - 1));
     });
 
+  const c = aktif ? queue![index] : null;
+  const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
+  const maddeTxt = c ? maddeMetni(c.madde_no) : null;
+
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
-      {/* Üst krom: kapat + aktif kart meta (madde no + ilerleme) + blok rozeti */}
+      {/* KOYU header: kapat + kart meta (madde no + X/Y) + blok rozeti + ilerleme */}
       <View style={styles.header}>
-        <Pressable onPress={() => router.back()} hitSlop={12}>
-          <MaterialCommunityIcons name="close" size={26} color={Palette.beyaz} />
-        </Pressable>
+        <View style={styles.headerUst}>
+          <Pressable onPress={() => router.back()} hitSlop={12} accessibilityLabel="Kapat">
+            <MaterialCommunityIcons name="close" size={26} color={Palette.kartMetinAcik} />
+          </Pressable>
+          {aktif && c ? (
+            <View style={styles.headerMeta}>
+              <AppText
+                variant="govde"
+                color="kartMetinAcik"
+                bold
+                numberOfLines={1}
+                ellipsizeMode="tail">
+                {c.baslik ? `${c.madde_no} — ${c.baslik}` : c.madde_no}
+              </AppText>
+              <AppText variant="etiket" color="kartMetinIkincil">
+                {index + 1} / {queue!.length}
+              </AppText>
+            </View>
+          ) : (
+            <View style={styles.headerMeta}>
+              <AppText variant="govde" color="kartMetinAcik" bold>
+                Kart Akışı
+              </AppText>
+            </View>
+          )}
+          {aktif && c?.blok === 'müşterek' ? (
+            <View style={styles.headerRozet}>
+              <AppText variant="etiket" color="lacivert" bold>
+                Müşterek
+              </AppText>
+            </View>
+          ) : (
+            <View style={styles.headerSpacer} />
+          )}
+        </View>
+
         {aktif ? (
-          <View style={styles.headerMeta}>
-            <AppText variant="govde" color="beyaz" bold numberOfLines={1} ellipsizeMode="tail">
-              {queue![index].baslik
-                ? `${queue![index].madde_no} — ${queue![index].baslik}`
-                : queue![index].madde_no}
+          <>
+            <View style={styles.track}>
+              <View style={[styles.fill, { width: `${yuzde}%` }]} />
+            </View>
+            <AppText variant="etiket" bold color="altinAcik2" style={styles.yuzdeMetin}>
+              %{yuzde}
             </AppText>
-            <AppText variant="etiket" color="kenarlik">
-              {index + 1} / {queue!.length}
-            </AppText>
-          </View>
-        ) : (
-          <View style={styles.headerMeta} />
-        )}
-        {aktif && queue![index].blok === 'müşterek' ? (
-          <View style={styles.headerRozet}>
-            <AppText variant="etiket" color="lacivert" bold>
-              Müşterek
-            </AppText>
-          </View>
-        ) : (
-          <View style={styles.headerSpacer} />
-        )}
+          </>
+        ) : null}
       </View>
 
       {hata ? (
-        <View style={styles.kolon}>
+        <View style={styles.durumKolon}>
           <EmptyState
             ikon="alert-circle-outline"
             ikonRenk="kirmizi"
@@ -181,12 +205,12 @@ export default function AkisScreen() {
           />
         </View>
       ) : queue === null ? (
-        <View style={styles.kolon}>
+        <View style={styles.durumKolon}>
           <Loading />
         </View>
       ) : queue.length === 0 ? (
         // Boş başlangıç: bu kanunda hiç kart yok ("yakında").
-        <View style={styles.kolon}>
+        <View style={styles.durumKolon}>
           <EmptyState
             ikon={zayifModu ? 'shield-check-outline' : 'clock-outline'}
             ikonRenk={zayifModu ? 'yesil' : undefined}
@@ -203,7 +227,7 @@ export default function AkisScreen() {
         </View>
       ) : bitti ? (
         // Çalışıp tükenince: tamamlandı.
-        <View style={styles.kolon}>
+        <View style={styles.durumKolon}>
           <EmptyState
             ikon="check-decagram"
             ikonRenk="yesil"
@@ -216,16 +240,13 @@ export default function AkisScreen() {
         <View style={styles.kolon}>
           {/* Üst blok kaydırılabilir; kart ne kadar uzun olursa olsun butonlar pinli kalır */}
           <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
-            <View style={styles.track}>
-              <View style={[styles.fill, { width: `${((index + 1) / queue.length) * 100}%` }]} />
-            </View>
-
             {/* Kartı saran katman: yatay swipe (ileri/geri) + sol/sağ kenarda gezinme okları
-                (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir). İlk kartta sol, son
-                kartta sağ ok pasif. */}
+                (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir). */}
             <GestureDetector gesture={kartKaydir}>
               <View style={styles.kartSar}>
-                <StudyCard card={queue[index]} />
+                <View style={styles.gorselSar}>
+                  <StudyCard card={queue[index]} />
+                </View>
                 <Pressable
                   disabled={index === 0}
                   onPress={() => setIndex((i) => Math.max(0, i - 1))}
@@ -246,8 +267,7 @@ export default function AkisScreen() {
             </GestureDetector>
           </ScrollView>
 
-          {/* Alt pinli blok: Sesli Anlatım + Madde Metni + cevap butonları — hep görünür,
-              en altta butonların hemen üstünde. (Görsel kutusu yukarıda sabit ölçüde.) */}
+          {/* Alt pinli blok: Sesli Anlatım + Madde Metni + cevap butonları */}
           <View style={styles.altBlok}>
             {/* Sesli anlatım (TTS) — kart değişince remount → durur. */}
             <TtsBar
@@ -256,18 +276,30 @@ export default function AkisScreen() {
               onBitti={() => setAnlatimBitti(true)}
             />
 
-            {/* Madde Metni — resmî tam metin. Metin varsa aktif, yoksa soluk "yakında". */}
-            {maddeMetni(queue[index].madde_no) !== null ? (
-              <Pressable
-                style={({ pressed }) => [styles.maddeBtn, pressed && styles.pressed]}
-                onPress={() => setMaddeAcik(true)}>
-                <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.lacivert} />
-                <AppText variant="kucuk" color="lacivert" bold>
-                  Madde Metni
+            {/* Madde Metni — resmî tam metin önizleme + "Tam metni aç". Yoksa soluk "yakında". */}
+            {maddeTxt !== null ? (
+              <View style={styles.maddeKart}>
+                <View style={styles.maddeBaslik}>
+                  <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.lacivert} />
+                  <AppText variant="kucuk" color="lacivert" bold style={styles.maddeBaslikAd}>
+                    Madde Metni
+                  </AppText>
+                  <MaterialCommunityIcons name="chevron-down" size={20} color={Palette.solukMetin} />
+                </View>
+                <AppText variant="kucuk" color="anaMetin" numberOfLines={3}>
+                  {maddeTxt}
                 </AppText>
-              </Pressable>
+                <View style={styles.maddeAyirici} />
+                <Pressable
+                  onPress={() => setMaddeAcik(true)}
+                  style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
+                  <AppText variant="kucuk" bold color="altinKoyu">
+                    Tam metni aç
+                  </AppText>
+                </Pressable>
+              </View>
             ) : (
-              <View style={[styles.maddeBtn, styles.maddeBtnPasif]}>
+              <View style={[styles.maddeKart, styles.maddeKartPasif]}>
                 <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.solukMetin} />
                 <AppText variant="kucuk" color="solukMetin">
                   Madde metni yakında
@@ -275,7 +307,7 @@ export default function AkisScreen() {
               </View>
             )}
 
-            {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli (yanıltıcı "gönderildi" olmasın). */}
+            {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli. */}
             {FORMSPREE_ENDPOINT ? (
               <Pressable
                 style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
@@ -290,8 +322,8 @@ export default function AkisScreen() {
                     },
                   })
                 }>
-                <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.solukMetin} />
-                <AppText variant="etiket" color="solukMetin">
+                <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.kartMetinIkincil} />
+                <AppText variant="etiket" color="kartMetinIkincil">
                   Hata/öneri bildir
                 </AppText>
               </Pressable>
@@ -305,7 +337,7 @@ export default function AkisScreen() {
             {anlatimBitti ? (
               /* Sesli anlatım bittiğinde: sıradaki konu + tek "devam" düğmesi. */
               <>
-                <AppText variant="kucuk" bold style={styles.siradaki}>
+                <AppText variant="kucuk" bold color="kartMetinIkincil" style={styles.siradaki}>
                   {index + 1 < queue.length
                     ? `Sıradaki konu: ${queue[index + 1].baslik}`
                     : 'Bu turun son kartı'}
@@ -313,29 +345,36 @@ export default function AkisScreen() {
                 <Pressable
                   style={({ pressed }) => [styles.devamBtn, pressed && styles.pressed]}
                   onPress={() => void cevapla('biliyorum')}>
-                  <AppText variant="govde" color="beyaz" bold>
+                  <AppText variant="govde" color="kartMetinAcik" bold>
                     {index + 1 < queue.length ? 'Tamam, sıradakine geç ▶' : 'Tamam, turu bitir'}
                   </AppText>
                 </Pressable>
               </>
             ) : (
               <View style={styles.butonSatir}>
-                <Buton
-                  renk={Palette.yesil}
-                  etiket="Biliyorum"
-                  onPress={() => void cevapla('biliyorum')}
-                />
-                <Buton
-                  renk={Palette.amber}
-                  etiket="Tekrar Hatırlat"
-                  onPress={() => void cevapla('zor')}
-                />
+                <Pressable
+                  style={({ pressed }) => [styles.bildimBtn, pressed && styles.pressed]}
+                  onPress={() => void cevapla('biliyorum')}>
+                  <View style={styles.bildimDaire}>
+                    <MaterialCommunityIcons name="check-bold" size={18} color={Palette.lacivert} />
+                  </View>
+                  <AppText variant="govde" color="kartMetinAcik" bold>
+                    Bildim
+                  </AppText>
+                </Pressable>
+                <Pressable
+                  style={({ pressed }) => [styles.tekrarBtn, pressed && styles.pressed]}
+                  onPress={() => void cevapla('zor')}>
+                  <MaterialCommunityIcons name="refresh" size={20} color={Palette.altinKoyu} />
+                  <AppText variant="govde" color="altinKoyu" bold>
+                    Tekrar Hatırlat
+                  </AppText>
+                </Pressable>
               </View>
             )}
           </View>
 
-          {/* Madde metni sheet'i — ScrollView/alt blok ile KARDEŞ (absoluteFill).
-              Açıkken cevap butonlarının da üstünü örter → yanlışlıkla index kayması olmaz. */}
+          {/* Madde metni sheet'i — ScrollView/alt blok ile KARDEŞ (absoluteFill). */}
           <MaddeMetniSheet
             gorunur={maddeAcik}
             maddeNo={queue[index].madde_no}
@@ -348,30 +387,22 @@ export default function AkisScreen() {
   );
 }
 
-function Buton({ renk, etiket, onPress }: { renk: string; etiket: string; onPress: () => void }) {
-  return (
-    <Pressable
-      style={({ pressed }) => [styles.buton, { backgroundColor: renk }, pressed && styles.pressed]}
-      onPress={onPress}>
-      <AppText variant="govde" color="beyaz" bold>
-        {etiket}
-      </AppText>
-    </Pressable>
-  );
-}
-
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: Palette.kremZemin,
+    backgroundColor: Palette.kartZeminKoyu,
   },
   header: {
+    backgroundColor: Palette.kartYuzeyKoyu,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.three,
+    gap: Spacing.two,
+  },
+  headerUst: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: Palette.lacivert,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.three,
+    gap: Spacing.two,
   },
   headerSpacer: {
     width: 26,
@@ -386,12 +417,34 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.half,
     borderRadius: Radius.s,
   },
+  track: {
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: Palette.kartKenarKoyu,
+    overflow: 'hidden',
+  },
+  fill: {
+    height: '100%',
+    borderRadius: 3,
+    backgroundColor: Palette.altinAcik2,
+  },
+  yuzdeMetin: {
+    textAlign: 'center',
+  },
   // Ortak "telefon kolonu": web'de ortalanır, dar ekranda tam en.
   kolon: {
     flex: 1,
     width: '100%',
     maxWidth: CardFlowMaxWidth,
     alignSelf: 'center',
+  },
+  // Yükleme/hata/boş/bitti — krem zeminli (EmptyState/Loading açık temalı, okunur kalsın).
+  durumKolon: {
+    flex: 1,
+    width: '100%',
+    maxWidth: CardFlowMaxWidth,
+    alignSelf: 'center',
+    backgroundColor: Palette.kremZemin,
   },
   scroll: {
     flex: 1,
@@ -401,15 +454,16 @@ const styles = StyleSheet.create({
     padding: Spacing.three,
     gap: Spacing.three,
   },
-  track: {
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: Palette.kenarlik,
-    overflow: 'hidden',
-  },
   kartSar: {
     position: 'relative',
     justifyContent: 'center',
+  },
+  gorselSar: {
+    borderRadius: 22,
+    borderWidth: 1.5,
+    borderColor: Palette.altin,
+    backgroundColor: Palette.kartKremi,
+    overflow: 'hidden',
   },
   okBtn: {
     position: 'absolute',
@@ -438,18 +492,44 @@ const styles = StyleSheet.create({
   okPasif: {
     opacity: 0.25,
   },
-  fill: {
-    height: '100%',
-    backgroundColor: Palette.lacivert,
-  },
   altBlok: {
     paddingHorizontal: Spacing.three,
     paddingTop: Spacing.two,
     paddingBottom: Spacing.three,
     gap: Spacing.two,
   },
-  cevapHata: {
-    textAlign: 'center',
+  // Madde Metni kartı (krem — koyu ekranda kontrast)
+  maddeKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: 20,
+    padding: Spacing.three,
+    gap: Spacing.two,
+  },
+  maddeKartPasif: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    opacity: 0.7,
+  },
+  maddeBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  maddeBaslikAd: {
+    flex: 1,
+  },
+  maddeAyirici: {
+    height: 1,
+    backgroundColor: Palette.kenarlik,
+    marginTop: Spacing.one,
+  },
+  maddeAc: {
+    alignItems: 'center',
+    paddingVertical: Spacing.one,
   },
   bildir: {
     flexDirection: 'row',
@@ -458,40 +538,57 @@ const styles = StyleSheet.create({
     gap: Spacing.one,
     paddingVertical: Spacing.one,
   },
-  maddeBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.two,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    paddingVertical: Spacing.three,
-  },
-  maddeBtnPasif: {
-    opacity: 0.55,
-  },
-  butonSatir: {
-    flexDirection: 'row',
-    gap: Spacing.two,
-  },
-  buton: {
-    flex: 1,
-    borderRadius: Radius.m,
-    paddingVertical: Spacing.three,
-    alignItems: 'center',
-    gap: 2,
+  cevapHata: {
+    textAlign: 'center',
   },
   siradaki: {
     textAlign: 'center',
     marginBottom: Spacing.one,
   },
   devamBtn: {
-    backgroundColor: Palette.yesil,
-    borderRadius: Radius.m,
-    paddingVertical: Spacing.three,
+    height: 58,
+    borderRadius: 18,
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.altin,
+    borderWidth: 1.5,
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  butonSatir: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  bildimBtn: {
+    flex: 1,
+    height: 58,
+    borderRadius: 18,
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.altin,
+    borderWidth: 1.5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+  },
+  bildimDaire: {
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    backgroundColor: Palette.altin,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tekrarBtn: {
+    flex: 1,
+    height: 58,
+    borderRadius: 18,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
   },
   pressed: {
     opacity: 0.85,
