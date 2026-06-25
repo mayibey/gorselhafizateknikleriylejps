@@ -175,6 +175,13 @@ export default function KarargahScreen() {
           onPress={() => router.push('/akis')}
           accessibilityRole="button"
           accessibilityLabel="Kart akışına devam et">
+          {/* Silik dekoratif arma (lacivert üstünde çok soluk, içeriği boğmaz) */}
+          <MaterialCommunityIcons
+            name="shield-star-outline"
+            size={150}
+            color={Palette.altinAcik2}
+            style={styles.heroArma}
+          />
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
               <AppText variant="etiket" color="altin" bold>
@@ -187,19 +194,17 @@ export default function KarargahScreen() {
                 {bekleyen > 0 ? `${bekleyen} kart seni bekliyor` : 'Kaldığın yerden çalış'}
               </AppText>
             </View>
-            <View style={styles.heroSag}>
-              <MaterialCommunityIcons name="play-circle" size={52} color={Palette.altin} />
-              <AppText variant="etiket" color="altin" bold>
-                Devam Et ›
-              </AppText>
+            {/* Dolu altın play diski (mockup) — büyük, lacivert play */}
+            <View style={styles.heroPlay}>
+              <MaterialCommunityIcons name="play" size={34} color={Palette.lacivert} />
             </View>
           </View>
 
-          {/* 3 bilgi satırı — hepsi gerçek/türetilmiş veri */}
+          {/* 3 bilgi SÜTUNU yan yana — hepsi gerçek/türetilmiş veri */}
           <View style={styles.heroBilgi}>
             <HeroBilgi ikon="clock-outline" etiket="Tahmini süre" deger={`${bekleyen} dk`} />
             {sonKonu ? <HeroBilgi ikon="book-outline" etiket="Son konu" deger={sonKonu} /> : null}
-            <HeroBilgi ikon="target" etiket="Hedef" deger="Görevi tamamla" />
+            <HeroBilgi ikon="target" etiket="Hedef" deger="Bugünkü görevi tamamla" />
           </View>
         </Pressable>
       )}
@@ -238,7 +243,7 @@ export default function KarargahScreen() {
               {zayifSayi} zayıf mevzi — şimdi güçlendir
             </AppText>
             <AppText variant="etiket" color="solukMetin">
-              Son denemede zorlandığın kartlar
+              Son 3 oturumda zorlandığın konular
             </AppText>
           </View>
           <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
@@ -320,7 +325,7 @@ function Chip({ ikon, metin }: { ikon: keyof typeof MaterialCommunityIcons.glyph
   );
 }
 
-/** Hero içi tek bilgi satırı: ikon + etiket (soluk) + değer (beyaz). */
+/** Hero içi bilgi SÜTUNU: üstte ikon+etiket (soluk), altta değer (beyaz). 3'ü yan yana. */
 function HeroBilgi({
   ikon,
   etiket,
@@ -331,12 +336,14 @@ function HeroBilgi({
   deger: string;
 }) {
   return (
-    <View style={styles.heroBilgiSatir}>
-      <MaterialCommunityIcons name={ikon} size={16} color={Palette.altin} />
-      <AppText variant="etiket" color="kenarlik" style={styles.heroBilgiEtiket}>
-        {etiket}
-      </AppText>
-      <AppText variant="etiket" color="beyaz" bold numberOfLines={1}>
+    <View style={styles.heroSutun}>
+      <View style={styles.heroSutunUst}>
+        <MaterialCommunityIcons name={ikon} size={14} color={Palette.altin} />
+        <AppText variant="etiket" color="kenarlik" numberOfLines={1} style={styles.heroSutunEtiket}>
+          {etiket}
+        </AppText>
+      </View>
+      <AppText variant="kucuk" color="beyaz" bold numberOfLines={2}>
         {deger}
       </AppText>
     </View>
@@ -355,8 +362,8 @@ function Bar({ oran }: { oran: number }) {
 
 /** Dairesel ilerleme halkası — track + koyu altın yay + ortada %Z. */
 function Halka({ yuzde }: { yuzde: number | null }) {
-  const boyut = 54;
-  const kalinlik = 5;
+  const boyut = 58;
+  const kalinlik = 8;
   const r = (boyut - kalinlik) / 2;
   const c = boyut / 2;
   const cevre = 2 * Math.PI * r;
@@ -435,6 +442,13 @@ const styles = StyleSheet.create({
     borderRadius: Radius.l,
     padding: Spacing.four,
     gap: Spacing.three,
+    overflow: 'hidden', // silik arma taşmasın
+  },
+  heroArma: {
+    position: 'absolute',
+    right: -28,
+    top: -16,
+    opacity: 0.1,
   },
   heroBitti: {
     flexDirection: 'row',
@@ -451,23 +465,32 @@ const styles = StyleSheet.create({
     gap: Spacing.half,
     flex: 1,
   },
-  heroSag: {
+  heroPlay: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: Palette.altin,
     alignItems: 'center',
-    gap: Spacing.half,
+    justifyContent: 'center',
   },
   heroBilgi: {
-    gap: Spacing.two,
+    flexDirection: 'row',
+    gap: Spacing.three,
     borderTopColor: 'rgba(255,255,255,0.14)',
     borderTopWidth: 1,
     paddingTop: Spacing.three,
   },
-  heroBilgiSatir: {
+  heroSutun: {
+    flex: 1,
+    gap: Spacing.half,
+  },
+  heroSutunUst: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.two,
+    gap: Spacing.one,
   },
-  heroBilgiEtiket: {
-    flex: 1,
+  heroSutunEtiket: {
+    flexShrink: 1,
   },
 
   // Krem kartlar
