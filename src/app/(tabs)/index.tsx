@@ -175,13 +175,6 @@ export default function KarargahScreen() {
           onPress={() => router.push('/akis')}
           accessibilityRole="button"
           accessibilityLabel="Kart akışına devam et">
-          {/* Silik dekoratif arma (lacivert üstünde çok soluk, içeriği boğmaz) */}
-          <MaterialCommunityIcons
-            name="shield-star-outline"
-            size={150}
-            color={Palette.altinAcik2}
-            style={styles.heroArma}
-          />
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
               <AppText variant="etiket" color="altin" bold>
@@ -442,13 +435,6 @@ const styles = StyleSheet.create({
     borderRadius: Radius.l,
     padding: Spacing.four,
     gap: Spacing.three,
-    overflow: 'hidden', // silik arma taşmasın
-  },
-  heroArma: {
-    position: 'absolute',
-    right: -28,
-    top: -16,
-    opacity: 0.1,
   },
   heroBitti: {
     flexDirection: 'row',
