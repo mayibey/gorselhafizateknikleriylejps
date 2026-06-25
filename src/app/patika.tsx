@@ -247,7 +247,11 @@ export default function PatikaScreen() {
   const toplamKart = dugumler?.reduce((a, d) => a + d.toplam, 0) ?? 0;
 
   return (
-    <Screen title="Patika" onGeri={() => router.back()}>
+    <Screen
+      title="Patika"
+      onGeri={() => router.back()}
+      headerAltinCizgi
+      headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
       {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK) */}
       <View style={st.ustBar}>
         <View style={st.statChip}>
@@ -266,10 +270,10 @@ export default function PatikaScreen() {
         </View>
       </View>
 
-      {/* Kanun şeridi — aktif kanun adı + gerçek kart ilerlemesi (kart bazlı) */}
-      <View style={st.serit}>
-        <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.solukMetin} />
-        <AppText variant="kucuk" bold color="lacivert" numberOfLines={1} style={st.seritAd}>
+      {/* Kanun özet kartı — kitap + ad + gerçek kart ilerlemesi (kart bazlı) */}
+      <View style={st.kanunKart}>
+        <MaterialCommunityIcons name="book-open-variant" size={22} color={Palette.altin} />
+        <AppText variant="govde" color="anaMetin" numberOfLines={1} style={st.seritAd}>
           {kanunAd ?? 'Mevzuat'}
         </AppText>
         {!bolumsuz && dugumler !== null ? (
@@ -625,7 +629,7 @@ const st = StyleSheet.create({
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.two,
   },
-  serit: {
+  kanunKart: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
@@ -634,7 +638,12 @@ const st = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.two,
+    paddingVertical: Spacing.three,
+    shadowColor: Palette.lacivert,
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 3,
   },
   seritAd: {
     flex: 1,

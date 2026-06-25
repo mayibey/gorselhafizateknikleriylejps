@@ -11,13 +11,24 @@ type ScreenProps = {
   title?: string;
   /** Verilirse başlık şeridinde solda geri oku gösterir (pushed ekranlar için). */
   onGeri?: () => void;
+  /** Opsiyonel: başlık şeridinde SAĞ üstte içerik (ikon vb.). Default: yok. */
+  headerSag?: ReactNode;
+  /** Opsiyonel: header ile gövde arasında ince altın çizgi. Default: yok. */
+  headerAltinCizgi?: boolean;
   /** İçerik kaydırılabilir mi (varsayılan: evet). */
   scroll?: boolean;
   children: ReactNode;
 };
 
 /** Krem zeminli, güvenli alanlı ortak ekran sarmalayıcı. */
-export function Screen({ title, onGeri, scroll = true, children }: ScreenProps) {
+export function Screen({
+  title,
+  onGeri,
+  headerSag,
+  headerAltinCizgi,
+  scroll = true,
+  children,
+}: ScreenProps) {
   const body = <View style={styles.body}>{children}</View>;
 
   return (
@@ -32,8 +43,10 @@ export function Screen({ title, onGeri, scroll = true, children }: ScreenProps) 
           <AppText variant="baslik" color="beyaz" bold>
             {title}
           </AppText>
+          {headerSag ? <View style={styles.headerSag}>{headerSag}</View> : null}
         </View>
       ) : null}
+      {title && headerAltinCizgi ? <View style={styles.altinCizgi} /> : null}
       {scroll ? (
         <ScrollView contentContainerStyle={styles.scrollContent}>{body}</ScrollView>
       ) : (
@@ -55,6 +68,13 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.lacivert,
     paddingHorizontal: Spacing.four,
     paddingVertical: Spacing.three,
+  },
+  headerSag: {
+    marginLeft: 'auto', // başlığı solda bırak, sağ slotu en sağa it
+  },
+  altinCizgi: {
+    height: 1,
+    backgroundColor: Palette.altin,
   },
   scrollContent: {
     flexGrow: 1,
