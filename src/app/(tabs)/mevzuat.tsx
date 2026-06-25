@@ -304,12 +304,13 @@ function Monogram({
   );
 }
 
-/** Altın ilerleme barı (track + dolu). */
+/** Altın ilerleme barı (track + dolu). Flex-oranlı dolum → %100'de tam dolar. */
 function Bar({ yuzde }: { yuzde: number }) {
   const w = Math.min(100, Math.max(0, yuzde));
   return (
     <View style={st.barTrack}>
-      <View style={[st.barFill, { width: `${w}%` }]} />
+      {w > 0 ? <View style={[st.barFill, { flex: w }]} /> : null}
+      {w < 100 ? <View style={{ flex: 100 - w }} /> : null}
     </View>
   );
 }
@@ -374,6 +375,9 @@ function DevamEtKart({
               %{yuzde}
             </AppText>
           </View>
+        </View>
+        <View style={st.bookDaire}>
+          <MaterialCommunityIcons name="book-open-variant" size={26} color={Palette.altinKoyu} />
         </View>
       </View>
       <View style={st.devamCta}>
@@ -451,12 +455,12 @@ function KanunSatir({
           <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
         ) : (
           <>
-            <View style={st.playDaire}>
-              <MaterialCommunityIcons name="play" size={14} color={Palette.altinKoyu} />
+            <View style={st.baslaBtn}>
+              <MaterialCommunityIcons name="play" size={15} color={Palette.altinKoyu} />
+              <AppText variant="etiket" bold color="altinKoyu">
+                {bos ? 'Başla' : 'Devam'}
+              </AppText>
             </View>
-            <AppText variant="etiket" bold color="altinKoyu">
-              {bos ? 'Başla' : 'Devam'}
-            </AppText>
             <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
           </>
         )}
@@ -672,6 +676,7 @@ const st = StyleSheet.create({
   },
   barTrack: {
     flex: 1,
+    flexDirection: 'row',
     height: 6,
     borderRadius: 3,
     backgroundColor: Palette.ilerlemeTrack,
@@ -706,12 +711,24 @@ const st = StyleSheet.create({
   satirSag: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.one,
+    gap: Spacing.two,
+    marginLeft: Spacing.one, // kalp ile arası ferahlasın
   },
-  playDaire: {
-    width: 26,
-    height: 26,
-    borderRadius: 13,
+  baslaBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.one,
+  },
+  bookDaire: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
     backgroundColor: Palette.altinSolukYuzey,
     alignItems: 'center',
     justifyContent: 'center',
