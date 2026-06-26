@@ -18,15 +18,24 @@ export interface AraKayit {
   maddeNo: string;
   baslik: string;
   metin: string; // resmî tam metin ('' olabilir — metinsiz madde)
-  anlatim: string; // kart anlatım metni ("Kartlar" kapsamı için)
+  anlatim: string; // GERÇEK seslendirme metni ("Kartlar" kapsamı) — '' olabilir
+  civile: string; // seslendirmenin "Aklınıza çivileyin: …" kısmı ("Aklına Çivile" kapsamı)
   metinK: string; // tr-küçük harf (arama için önceden hesaplı)
   baslikK: string;
   maddeK: string;
   anlatimK: string;
+  civileK: string;
 }
 
-/** Arama kapsamı (filtre çipleri): hepsi · kanun metni · madde no · kart içeriği. */
-export type AraKapsam = 'hepsi' | 'metin' | 'madde' | 'kart';
+/** Arama kapsamı (filtre çipleri): hepsi · kanun metni · madde no · kart içeriği · aklına çivile. */
+export type AraKapsam = 'hepsi' | 'metin' | 'madde' | 'kart' | 'civile';
+
+/** Seslendirme metninden "Aklınıza çivileyin: …" cümlesini (sona kadar) ayıklar; yoksa ''. */
+const CIVILE_ANAHTAR = 'aklınıza çivileyin';
+export function civileAyikla(ses: string): string {
+  const i = trKucuk(ses).indexOf(CIVILE_ANAHTAR);
+  return i === -1 ? '' : ses.slice(i).trim();
+}
 
 export interface AramaSonuc {
   cardId: number;
@@ -52,6 +61,7 @@ export function trKucuk(s: string): string {
 export function araIndeksHazirla(
   cards: CardWithLaw[],
   metinAl: (maddeNo: string) => string | null,
+  sesAl: (gorselYolu: string | null) => string | null,
 ): AraKayit[] {
   const gorulen = new Set<string>();
   const kayitlar: AraKayit[] = [];
@@ -60,7 +70,10 @@ export function araIndeksHazirla(
     if (gorulen.has(anahtar)) continue;
     gorulen.add(anahtar);
     const metin = metinAl(c.madde_no) ?? '';
-    const anlatim = c.anlatim_metni ?? '';
+    // "Kartlar" kapsamı = GERÇEK seslendirme metni (temsilci kartın gorsel_yolu'ndan).
+    // Eski c.anlatim_metni placeholder'dı → artık ses metni kullanılır.
+    const anlatim = sesAl(c.gorsel_yolu) ?? '';
+    const civile = civileAyikla(anlatim);
     kayitlar.push({
       cardId: c.id,
       lawId: c.law_id,
@@ -70,10 +83,12 @@ export function araIndeksHazirla(
       baslik: c.baslik,
       metin,
       anlatim,
+      civile,
       metinK: trKucuk(metin),
       baslikK: trKucuk(c.baslik),
       maddeK: trKucuk(c.madde_no),
       anlatimK: trKucuk(anlatim),
+      civileK: trKucuk(civile),
     });
   }
   return kayitlar;
@@ -84,7 +99,8 @@ const MIN_UZUNLUK = 2;
 /**
  * İndekste sorguyu arar; eşleşen maddeleri alaka sırasıyla (başlık ağırlıklı) döner.
  * PHRASE eşleştirme (q AYNEN, substring) DEĞİŞMEDİ; `kapsam` yalnız NEREDE arandığını
- * daraltır: hepsi (metin+başlık+madde+anlatım) · metin · madde · kart (başlık+anlatım).
+ * daraltır: hepsi (metin+başlık+madde+anlatım+çivile) · metin · madde · kart (başlık+
+ * anlatım=gerçek ses) · civile ("Aklınıza çivileyin" kısmı).
  */
 export function araKanunlar(
   indeks: AraKayit[],
@@ -99,16 +115,25 @@ export function araKanunlar(
   for (const k of indeks) {
     const metinAdet = hepsi || kapsam === 'metin' ? sayGec(k.metinK, q) : 0;
     const maddeAdet = (hepsi || kapsam === 'madde') && k.maddeK.includes(q) ? 1 : 0;
-    // "Kartlar" kapsamı = kart içeriği: başlık + anlatım metni.
+    // "Kartlar" kapsamı = kart içeriği: başlık + GERÇEK seslendirme metni (anlatim).
     const baslikAdet = hepsi || kapsam === 'kart' ? sayGec(k.baslikK, q) : 0;
     const anlatimAdet = hepsi || kapsam === 'kart' ? sayGec(k.anlatimK, q) : 0;
-    if (metinAdet + baslikAdet + maddeAdet + anlatimAdet === 0) continue;
-    // Snippet: eşleşen alandan bağlam (metin > anlatım > başlık).
+    // "Aklına Çivile" kapsamı = seslendirmenin "Aklınıza çivileyin: …" kısmı.
+    const civileAdet = hepsi || kapsam === 'civile' ? sayGec(k.civileK, q) : 0;
+    // 'hepsi'de anlatim çiviileyi ZATEN kapsar (civile ⊂ anlatim) → çift saymamak için
+    // civile yalnız 'civile' kapsamında toplama/skora girer; 'hepsi'de sadece snippet
+    // tercihi için hesaplanır.
+    const civileToplam = kapsam === 'civile' ? civileAdet : 0;
+    if (metinAdet + baslikAdet + maddeAdet + anlatimAdet + civileToplam === 0) continue;
+    // Snippet: eşleşen alandan bağlam (metin > çivile > anlatım > başlık).
     let kaynak = k.baslik;
     let kaynakK = k.baslikK;
     if (metinAdet > 0) {
       kaynak = k.metin;
       kaynakK = k.metinK;
+    } else if (civileAdet > 0) {
+      kaynak = k.civile;
+      kaynakK = k.civileK;
     } else if (anlatimAdet > 0) {
       kaynak = k.anlatim;
       kaynakK = k.anlatimK;
@@ -121,9 +146,9 @@ export function araKanunlar(
       maddeNo: k.maddeNo,
       baslik: k.baslik,
       snippet: snippetUret(kaynak || k.baslik, kaynakK || k.baslikK, q),
-      eslesme: metinAdet + baslikAdet + anlatimAdet,
-      // Başlık en güçlü alaka, sonra madde no, sonra anlatım, sonra gövde.
-      skor: baslikAdet * 5 + maddeAdet * 3 + anlatimAdet * 2 + metinAdet,
+      eslesme: metinAdet + baslikAdet + anlatimAdet + civileToplam,
+      // Başlık en güçlü alaka, sonra madde no, sonra çivile/anlatım, sonra gövde.
+      skor: baslikAdet * 5 + maddeAdet * 3 + civileToplam * 2 + anlatimAdet * 2 + metinAdet,
     });
   }
   sonuclar.sort((a, b) => b.skor - a.skor);

@@ -3,6 +3,8 @@ import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FlatList, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
+// Seslendirme metni registry'si ('@/assets' alias gerçek assets/'a gittiği için göreli).
+import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
@@ -65,11 +67,17 @@ export default function AraScreen() {
     }, [cards, yukle, brans]),
   );
 
-  // Kapsam: aktif çip → arama alanını daraltır. 'civile' = 'kart' (ayrı veri yok, isim kalır).
-  const kapsam: AraKapsam =
-    aktifCip === null ? 'hepsi' : aktifCip === 'civile' ? 'kart' : aktifCip;
+  // Kapsam: aktif çip → arama alanını daraltır. 'civile' artık GERÇEK kapsam (ses metninin
+  // "Aklınıza çivileyin" kısmı); 'kart' = gerçek seslendirme metni (placeholder değil).
+  const kapsam: AraKapsam = aktifCip === null ? 'hepsi' : aktifCip;
 
-  const indeks = useMemo(() => (cards ? araIndeksHazirla(cards, maddeMetni) : []), [cards]);
+  const indeks = useMemo(
+    () =>
+      cards
+        ? araIndeksHazirla(cards, maddeMetni, (g) => (g ? KART_SES_METINLERI[g] ?? null : null))
+        : [],
+    [cards],
+  );
   const sonuclar = useMemo(() => araKanunlar(indeks, sorgu, kapsam), [indeks, sorgu, kapsam]);
 
   // Son arama kaydı: sorgu ~700ms durunca + ≥2 harf (debounce, spam yok).
