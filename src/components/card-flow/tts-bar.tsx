@@ -202,13 +202,7 @@ export function TtsBar({
 
   return (
     <View style={styles.panel}>
-      <View style={styles.ust}>
-        <MaterialCommunityIcons name="volume-high" size={18} color={Palette.altinAcik2} />
-        <AppText variant="kucuk" bold color="kartMetinAcik">
-          Sesli Anlatım
-        </AppText>
-      </View>
-
+      {/* Başlık YOK — "Sesli Anlatım" etiketi sekme butonunda (çift başlık kaldırıldı). */}
       {/* DEKORATİF waveform (gerçek ses genliği değil; dolu = cümle ilerlemesi).
           Dokun → o orana en yakın cümleden başlar (saniye değil, CÜMLE hassasiyeti). */}
       <Pressable style={styles.dalgaSar} onLayout={olc} onPress={dalgaDokun} accessibilityLabel="Cümleye atla">
@@ -346,11 +340,6 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.one,
     gap: Spacing.one,
     marginTop: Spacing.two,
-  },
-  ust: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
   },
   dalgaSar: {
     width: '100%',
