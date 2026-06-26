@@ -15,7 +15,14 @@ import { bugunISO } from '@/lib/srs';
 import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
-export function StudyCard({ card }: { card: CardWithSrs }) {
+export function StudyCard({
+  card,
+  onOran,
+}: {
+  card: CardWithSrs;
+  /** Görselin DOĞAL oranı (genişlik/yükseklik) yüklenince bildirilir (kutu boyutu için). */
+  onOran?: (oran: number) => void;
+}) {
   const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
   const { kimlik } = useCihazKimlik();
   const [zoomAcik, setZoomAcik] = useState(false);
@@ -41,6 +48,11 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
             recyclingKey={String(card.id)}
             cachePolicy="memory-disk"
             transition={150}
+            // Görsel yüklenince GERÇEK boyut → doğal oran (web+native aynı; crash yok).
+            onLoad={(e) => {
+              const { width, height } = e.source;
+              if (width > 0 && height > 0) onOran?.(width / height);
+            }}
           />
           {filigran}
         </Pressable>

@@ -4,7 +4,6 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as ScreenCapture from 'expo-screen-capture';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Image as RNImage,
   type LayoutChangeEvent,
   type NativeScrollEvent,
   type NativeSyntheticEvent,
@@ -93,6 +92,9 @@ export default function AkisScreen() {
   // Görsel alanı ölçüsü (onLayout) → görsel kutusu doğal orana göre boyutlanır,
   // kalan alana sığar (contain mantığı; boşluk/kırpma yok). Bkz. gorselBoyut.
   const [alan, setAlan] = useState({ w: 0, h: 0 });
+  // Görselin DOĞAL oranı (genişlik/yükseklik). expo-image onLoad'dan gelir → web+native
+  // AYNI (resolveAssetSource web'de YOK, crash ederdi). Yüklenene kadar null → fallback.
+  const [oran, setOran] = useState<number | null>(null);
 
   // Madde paneli panel-içi scroll: metin kutuya sığmıyorsa "Devamını gör" + scroll.
   const maddeScrollRef = useRef<ScrollView>(null);
@@ -115,6 +117,7 @@ export default function AkisScreen() {
     setMaddeSonda(false);
     maddeOfsetRef.current = 0;
     maddeScrollRef.current?.scrollTo({ y: 0, animated: false });
+    setOran(null); // yeni kartın oranı onLoad ile gelene kadar fallback
   }, [index]);
 
   const yukle = useCallback(() => {
@@ -184,19 +187,13 @@ export default function AkisScreen() {
   const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
 
-  // GÖRSEL KUTUSU = görselin DOĞAL oranı, kalan alana sığar (contain). Görselin
-  // gerçek genişlik/yükseklik oranı resolveAssetSource'tan alınır; kutu bu orana göre
-  // alan genişliğine kadar büyür, ama alan yüksekliğini AŞMAZ (footer/ikon örtülmez).
-  // Kutu görselle aynı oranda → iç boşluk (letterbox) ya da kırpma YOK. Çok uzun
-  // görselde yükseklik sınıra oturur, genişlik orana göre azalır (yine tam + boşluksuz).
-  const gorselKaynak = c?.gorsel_yolu ? KART_GORSELLERI[c.gorsel_yolu] : null;
+  // GÖRSEL KUTUSU = görselin DOĞAL oranı, kalan alana sığar (contain). Oran expo-image
+  // onLoad'dan (oran state) gelir → web+native AYNI, crash YOK. Kutu bu orana göre alan
+  // genişliğine kadar büyür ama alan yüksekliğini AŞMAZ (footer/ikon örtülmez). Kutu
+  // görselle aynı oranda → letterbox/kırpma YOK. Çok uzun görselde yükseklik sınıra
+  // oturur, genişlik orana göre azalır (yine tam + boşluksuz). oran yokken → fallback.
   const gorselBoyut = useMemo(() => {
-    if (!gorselKaynak || alan.w <= 0 || alan.h <= 0) return null;
-    const cozum = RNImage.resolveAssetSource(gorselKaynak);
-    const gw = cozum?.width ?? 0;
-    const gh = cozum?.height ?? 0;
-    if (gw <= 0 || gh <= 0) return null; // oran bilinmiyor → varsayılan oran stiline düş
-    const oran = gw / gh; // görsel genişlik/yükseklik
+    if (!oran || oran <= 0 || alan.w <= 0 || alan.h <= 0) return null;
     let bw = alan.w;
     let bh = bw / oran;
     if (bh > alan.h) {
@@ -204,7 +201,7 @@ export default function AkisScreen() {
       bw = bh * oran;
     }
     return { w: Math.round(bw), h: Math.round(bh) };
-  }, [gorselKaynak, alan.w, alan.h]);
+  }, [oran, alan.w, alan.h]);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
@@ -295,7 +292,7 @@ export default function AkisScreen() {
                       ? { width: gorselBoyut.w, height: gorselBoyut.h }
                       : styles.gorselSarOran,
                   ]}>
-                  <StudyCard card={queue[index]} />
+                  <StudyCard card={queue[index]} onOran={setOran} />
                 </View>
                 <Pressable
                   disabled={index === 0}
