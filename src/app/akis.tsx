@@ -16,7 +16,7 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { FORMSPREE_ENDPOINT } from '@/constants/config';
-import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { CardFlowMaxWidth, Palette, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
 import {
   getCardsByBolumChain,
@@ -30,6 +30,9 @@ import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
 type Cozulen = { tekrar: number; yeni: number };
+
+// Görselin üstüne binen TEK panel alanı: aynı anda yalnız biri (ses/madde) ya da hiçbiri.
+type AcikPanel = 'yok' | 'ses' | 'madde';
 
 // Swipe için yatay eşik (px): bundan fazla yatay sürükleme kartı değiştirir.
 const SWIPE_ESIK = 45;
@@ -75,17 +78,16 @@ export default function AkisScreen() {
   const [maddeAcik, setMaddeAcik] = useState(false);
   // Sesli anlatım sonuna kadar okununca true → "sıradakine geç" mesajı çıkar.
   const [anlatimBitti, setAnlatimBitti] = useState(false);
-  // Yan ikon toggle'ları (sekme YOK): ses kontrol paneli açık mı / madde paneli genişledi mi.
-  // Ses OTOMATİK çalar (TtsBar mount'ta); bu bayraklar yalnız kontrolleri/önizlemeyi gösterir.
-  const [sesAcik, setSesAcik] = useState(false);
-  const [maddeGenis, setMaddeGenis] = useState(false);
+  // TEK panel alanı (görselin üstüne biner): 'ses' kontrolleri / 'madde' metni / 'yok'.
+  // Ses OTOMATİK çalar (TtsBar mount'ta, panel kapalıyken de); bu bayrak yalnız
+  // hangi panelin görselin üstüne açılacağını seçer (biri açılınca diğeri kapanır).
+  const [acikPanel, setAcikPanel] = useState<AcikPanel>('yok');
 
-  // Kart değişince: açık sheet'i kapat + anlatım-bitti sıfırla + yan panelleri kapat.
+  // Kart değişince: açık sheet'i kapat + anlatım-bitti sıfırla + paneli kapat.
   useEffect(() => {
     setMaddeAcik(false);
     setAnlatimBitti(false);
-    setSesAcik(false);
-    setMaddeGenis(false);
+    setAcikPanel('yok');
   }, [index]);
 
   const yukle = useCallback(() => {
@@ -157,53 +159,24 @@ export default function AkisScreen() {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
-      {/* KOYU header: kapat + kart meta (madde no + X/Y) + blok rozeti + ilerleme */}
+      {/* SADE header: ✕ (sol) + ortada "X/Y · %Z" + ince ilerleme barı.
+          Başlık + Müşterek rozeti KALDIRILDI (görsel içinde künye zaten yazıyor) →
+          kazanılan dikey alan görsele gider. İlerleme verisi korunur. */}
       <View style={styles.header}>
         <View style={styles.headerUst}>
           <Pressable onPress={() => router.back()} hitSlop={12} accessibilityLabel="Kapat">
             <MaterialCommunityIcons name="close" size={26} color={Palette.kartMetinAcik} />
           </Pressable>
-          {aktif && c ? (
-            <View style={styles.headerMeta}>
-              <AppText
-                variant="govde"
-                color="kartMetinAcik"
-                bold
-                numberOfLines={1}
-                ellipsizeMode="tail">
-                {c.baslik ? `${c.madde_no} — ${c.baslik}` : c.madde_no}
-              </AppText>
-              <AppText variant="etiket" color="kartMetinIkincil">
-                {index + 1} / {queue!.length}
-              </AppText>
-            </View>
-          ) : (
-            <View style={styles.headerMeta}>
-              <AppText variant="govde" color="kartMetinAcik" bold>
-                Kart Akışı
-              </AppText>
-            </View>
-          )}
-          {aktif && c?.blok === 'müşterek' ? (
-            <View style={styles.headerRozet}>
-              <AppText variant="etiket" color="lacivert" bold>
-                Müşterek
-              </AppText>
-            </View>
-          ) : (
-            <View style={styles.headerSpacer} />
-          )}
+          <AppText variant="etiket" bold color="kartMetinAcik" style={styles.headerMetaMetin}>
+            {aktif ? `${index + 1}/${queue!.length} · %${yuzde}` : 'Kart Akışı'}
+          </AppText>
+          <View style={styles.headerSpacer} />
         </View>
 
         {aktif ? (
-          <>
-            <View style={styles.track}>
-              <View style={[styles.fill, { width: `${yuzde}%` }]} />
-            </View>
-            <AppText variant="etiket" bold color="altinAcik2" style={styles.yuzdeMetin}>
-              %{yuzde}
-            </AppText>
-          </>
+          <View style={styles.track}>
+            <View style={[styles.fill, { width: `${yuzde}%` }]} />
+          </View>
         ) : null}
       </View>
 
@@ -251,12 +224,11 @@ export default function AkisScreen() {
         </View>
       ) : (
         <View style={styles.kolon}>
-          {/* TEK dış scroll: görsel kart + alt blok burada akar (görsel kart İÇİNDE scroll YOK) */}
-          <ScrollView
-            style={styles.scroll}
-            contentContainerStyle={styles.scrollContent}
-            showsVerticalScrollIndicator={false}>
-            {/* Kartı saran katman: yatay swipe (ileri/geri) + sol/sağ kenarda gezinme okları
+          {/* GÖRSEL ALANI — tek ekran sabit (dış scroll YOK). Görsel büyük, ortalı.
+              Panel açıkken alt ~yarısı görselin ÜSTÜNE binen overlay ile örtülür;
+              üst yarı + künye görünür kalır. Görsel üstünde başka ikon YOK (temiz). */}
+          <View style={styles.gorselAlan}>
+            {/* Kartı saran katman: yatay swipe (ileri/geri) + sol/sağ gezinme okları
                 (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir). */}
             <GestureDetector gesture={kartKaydir}>
               <View style={styles.kartSar}>
@@ -279,43 +251,6 @@ export default function AkisScreen() {
                   accessibilityLabel="Sonraki kart">
                   <MaterialCommunityIcons name="chevron-right" size={32} color={Palette.beyaz} />
                 </Pressable>
-
-                {/* Sağ-alt 2 dikey ikon (sekme DEĞİL → toggle): ses kontrolleri / madde paneli.
-                    Aktifken altın dolu, pasifken altın çerçeve. */}
-                <View style={styles.yanIkonlar}>
-                  <Pressable
-                    onPress={() => setSesAcik((v) => !v)}
-                    style={styles.yanBtn}
-                    accessibilityRole="button"
-                    accessibilityLabel="Sesli anlatım kontrolleri">
-                    <View style={[styles.yanDaire, sesAcik && styles.yanDaireAktif]}>
-                      <MaterialCommunityIcons
-                        name="headphones"
-                        size={22}
-                        color={sesAcik ? Palette.lacivert : Palette.altinAcik2}
-                      />
-                    </View>
-                    <AppText variant="etiket" bold color="kartMetinAcik" style={styles.yanEtiket}>
-                      Sesli Anlatım
-                    </AppText>
-                  </Pressable>
-                  <Pressable
-                    onPress={() => setMaddeGenis((v) => !v)}
-                    style={styles.yanBtn}
-                    accessibilityRole="button"
-                    accessibilityLabel="Madde metni paneli">
-                    <View style={[styles.yanDaire, maddeGenis && styles.yanDaireAktif]}>
-                      <MaterialCommunityIcons
-                        name="file-document-outline"
-                        size={22}
-                        color={maddeGenis ? Palette.lacivert : Palette.altinAcik2}
-                      />
-                    </View>
-                    <AppText variant="etiket" bold color="kartMetinAcik" style={styles.yanEtiket}>
-                      Madde Metni
-                    </AppText>
-                  </Pressable>
-                </View>
               </View>
             </GestureDetector>
 
@@ -337,84 +272,122 @@ export default function AkisScreen() {
               })}
             </View>
 
-            {/* Alt blok — TEK dış scroll içinde (görsel kart başrol, kart içi scroll yok) */}
-            <View style={styles.altBlok}>
-            {/* SES kontrol paneli — sesAcik ile aç/kapa (display; TtsBar mount KALIR →
-                otomatik çalan ses kesilmez). Ses, panel kapalıyken de çalar. */}
-            <View style={sesAcik ? null : styles.gizli}>
-              <TtsBar
-                key={queue[index].id}
-                gorselYolu={queue[index].gorsel_yolu}
-                onBitti={() => setAnlatimBitti(true)}
-              />
-            </View>
+            {/* PANEL — görselin ALT kısmının ÜSTÜNE biner (absolute overlay). 'yok' iken
+                display:none → TtsBar mount KALIR, otomatik çalan ses KESİLMEZ. ✕ ya da
+                aktif ikona tekrar basınca kapanır. Panel absolute → görsel boyutunu/akışı
+                bozmaz, ekranı uzatmaz. */}
+            <View style={[styles.panel, acikPanel === 'yok' && styles.gizli]}>
+              <Pressable
+                onPress={() => setAcikPanel('yok')}
+                style={styles.panelKapat}
+                hitSlop={10}
+                accessibilityRole="button"
+                accessibilityLabel="Paneli kapat">
+                <MaterialCommunityIcons name="close" size={22} color={Palette.kartMetinAcik} />
+              </Pressable>
 
-            {/* MADDE METNİ paneli — DEFAULT KAPALI; yalnız 📄 ikonuyla açılınca görünür. */}
-            {maddeGenis ? (
-              maddeTxt !== null ? (
-                <View style={styles.maddeKart}>
-                  <Pressable
-                    onPress={() => setMaddeGenis(false)}
-                    style={styles.maddeBaslik}
-                    accessibilityRole="button"
-                    accessibilityLabel="Madde metnini kapat">
-                    <MaterialCommunityIcons name="file-document-outline" size={18} color={Palette.altinKoyu} />
-                    <AppText variant="kucuk" bold color="anaMetin" style={styles.maddeBaslikAd}>
+              {/* SES kontrolleri — TtsBar HER ZAMAN mount (display toggle) → ses panel
+                  kapalıyken / madde'ye geçince KESİLMEZ. Otomatik başlama korunur. */}
+              <View style={acikPanel === 'ses' ? styles.panelIcerik : styles.gizli}>
+                <TtsBar
+                  key={queue[index].id}
+                  gorselYolu={queue[index].gorsel_yolu}
+                  onBitti={() => setAnlatimBitti(true)}
+                />
+              </View>
+
+              {/* MADDE metni — panel İÇİNDE kaydırılır (dış ekran sabit kalır). Metin
+                  yoksa "yakında". "Tam metni aç →" 9B sheet'ini açar. */}
+              <View style={acikPanel === 'madde' ? styles.panelIcerik : styles.gizli}>
+                {maddeTxt !== null ? (
+                  <>
+                    <AppText variant="kucuk" bold color="kartMetinAcik" style={styles.panelBaslik}>
                       Madde Metni
                     </AppText>
-                    <AppText variant="etiket" color="solukMetin">
-                      kapat
+                    <ScrollView
+                      style={styles.maddeKaydir}
+                      showsVerticalScrollIndicator={false}>
+                      <AppText variant="kucuk" color="kartMetinAcik">
+                        {maddeTxt}
+                      </AppText>
+                    </ScrollView>
+                    <Pressable
+                      onPress={() => setMaddeAcik(true)}
+                      style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
+                      <AppText variant="kucuk" bold color="altinAcik2">
+                        Tam metni aç →
+                      </AppText>
+                    </Pressable>
+                  </>
+                ) : (
+                  <View style={styles.maddeYakinda}>
+                    <MaterialCommunityIcons name="file-document-outline" size={26} color={Palette.kartMetinIkincil} />
+                    <AppText variant="kucuk" color="kartMetinIkincil">
+                      Madde metni yakında
                     </AppText>
-                    <MaterialCommunityIcons name="chevron-down" size={18} color={Palette.solukMetin} />
-                  </Pressable>
-                  <AppText variant="kucuk" color="anaMetin" numberOfLines={30}>
-                    {maddeTxt}
-                  </AppText>
-                  <View style={styles.maddeAyirici} />
-                  <Pressable
-                    onPress={() => setMaddeAcik(true)}
-                    style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
-                    <AppText variant="kucuk" bold color="altinKoyu">
-                      Tam metni aç →
-                    </AppText>
-                  </Pressable>
-                </View>
-              ) : (
-                <View style={[styles.maddeKart, styles.maddeKartPasif]}>
-                  <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.solukMetin} />
-                  <AppText variant="kucuk" color="solukMetin">
-                    Madde metni yakında
-                  </AppText>
-                </View>
-              )
-            ) : null}
-
-            {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli. */}
-            {FORMSPREE_ENDPOINT ? (
-              <Pressable
-                style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
-                onPress={() =>
-                  router.push({
-                    pathname: '/geri-bildirim',
-                    params: {
-                      card_id: String(queue[index].id),
-                      madde_no: queue[index].madde_no,
-                      baslik: queue[index].baslik,
-                      kanun: queue[index].law_ad,
-                    },
-                  })
-                }>
-                <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.kartMetinIkincil} />
-                <AppText variant="etiket" color="kartMetinIkincil">
-                  Hata/öneri bildir
-                </AppText>
-              </Pressable>
-            ) : null}
-
+                  </View>
+                )}
+              </View>
             </View>
-          </ScrollView>
+          </View>
 
-          {/* SABİT footer — cevap butonları her zaman altta (scroll DIŞINDA). */}
+          {/* 🎧/📄 — GÖRSELİN ALTINDA yan yana 2 buton (görsel üstü TAMAMEN temiz →
+              çakışma kökten biter). Aktif altın dolu, pasif altın çerçeve. Biri açılınca
+              diğeri kapanır (TEK panel alanı). */}
+          <View style={styles.ikonSatir}>
+            <Pressable
+              onPress={() => setAcikPanel((p) => (p === 'ses' ? 'yok' : 'ses'))}
+              style={[styles.ikonBtn, acikPanel === 'ses' && styles.ikonBtnAktif]}
+              accessibilityRole="button"
+              accessibilityLabel="Sesli anlatım">
+              <MaterialCommunityIcons
+                name="headphones"
+                size={20}
+                color={acikPanel === 'ses' ? Palette.lacivert : Palette.altinAcik2}
+              />
+              <AppText variant="etiket" bold color={acikPanel === 'ses' ? 'lacivert' : 'kartMetinAcik'}>
+                Sesli Anlatım
+              </AppText>
+            </Pressable>
+            <Pressable
+              onPress={() => setAcikPanel((p) => (p === 'madde' ? 'yok' : 'madde'))}
+              style={[styles.ikonBtn, acikPanel === 'madde' && styles.ikonBtnAktif]}
+              accessibilityRole="button"
+              accessibilityLabel="Madde metni">
+              <MaterialCommunityIcons
+                name="file-document-outline"
+                size={20}
+                color={acikPanel === 'madde' ? Palette.lacivert : Palette.altinAcik2}
+              />
+              <AppText variant="etiket" bold color={acikPanel === 'madde' ? 'lacivert' : 'kartMetinAcik'}>
+                Madde Metni
+              </AppText>
+            </Pressable>
+          </View>
+
+          {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli (yer kaplamaz). */}
+          {FORMSPREE_ENDPOINT ? (
+            <Pressable
+              style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
+              onPress={() =>
+                router.push({
+                  pathname: '/geri-bildirim',
+                  params: {
+                    card_id: String(queue[index].id),
+                    madde_no: queue[index].madde_no,
+                    baslik: queue[index].baslik,
+                    kanun: queue[index].law_ad,
+                  },
+                })
+              }>
+              <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.kartMetinIkincil} />
+              <AppText variant="etiket" color="kartMetinIkincil">
+                Hata/öneri bildir
+              </AppText>
+            </Pressable>
+          ) : null}
+
+          {/* SABİT footer — cevap butonları her zaman altta. */}
           <View style={styles.footer}>
             {cevapHatasi ? (
               <AppText variant="kucuk" color="kirmizi" bold style={styles.cevapHata}>
@@ -494,18 +467,13 @@ const styles = StyleSheet.create({
   headerSpacer: {
     width: 26,
   },
-  headerMeta: {
+  // Sade header ortası: "X/Y · %Z" — ✕ ile sağdaki spacer arasında ortalanır.
+  headerMetaMetin: {
     flex: 1,
-    alignItems: 'center',
-  },
-  headerRozet: {
-    backgroundColor: Palette.altin,
-    paddingHorizontal: Spacing.two,
-    paddingVertical: Spacing.half,
-    borderRadius: Radius.s,
+    textAlign: 'center',
   },
   track: {
-    height: 6,
+    height: 5,
     borderRadius: 3,
     backgroundColor: Palette.kartKenarKoyu,
     overflow: 'hidden',
@@ -515,10 +483,8 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     backgroundColor: Palette.altinAcik2,
   },
-  yuzdeMetin: {
-    textAlign: 'center',
-  },
-  // Ortak "telefon kolonu": web'de ortalanır, dar ekranda tam en.
+  // Ortak "telefon kolonu": web'de ortalanır, dar ekranda tam en. TEK ekran sabit
+  // (scroll YOK) → flex column: görsel alanı (flex) + ikon satırı + footer.
   kolon: {
     flex: 1,
     width: '100%',
@@ -533,20 +499,15 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: Palette.kremZemin,
   },
-  scroll: {
+  // GÖRSEL ALANI — kalan dikey alanı doldurur (flex). Görsel ortalanır; taşarsa
+  // kırpılır (overflow) → ekran SABİT kalır, scroll açılmaz. Panel bu alanın altına
+  // absolute biner → görseli/akışı uzatmaz.
+  gorselAlan: {
     flex: 1,
-  },
-  scrollContent: {
-    flexGrow: 1,
-    // Kısa içerik dikey ORTALANSIN → görsel+sekme+panel bloğu ortada, footer'la
-    // arasındaki ölü boşluk dengelenir (tek dipte dev boşluk kalmaz).
     justifyContent: 'center',
-    // Görsel TAM EKRAN genişliği (full-bleed) → en büyük render. Diğer modüller
-    // (sekme/panel/bildir) altBlok'ta kendi yatay padding'ini alır.
-    paddingHorizontal: 0,
-    paddingTop: Spacing.three,
-    paddingBottom: Spacing.four,
-    gap: Spacing.three,
+    overflow: 'hidden',
+    position: 'relative',
+    paddingVertical: Spacing.two,
   },
   kartSar: {
     position: 'relative',
@@ -600,11 +561,7 @@ const styles = StyleSheet.create({
   okPasif: {
     opacity: 0.25,
   },
-  altBlok: {
-    paddingHorizontal: Spacing.three,
-    gap: Spacing.two,
-  },
-  // Sabit alt footer (ScrollView dışında) — cevap butonları her zaman erişilir.
+  // Sabit alt footer — cevap butonları her zaman erişilir.
   footer: {
     borderTopColor: Palette.kartKenarKoyu,
     borderTopWidth: 1,
@@ -613,74 +570,84 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.three,
     gap: Spacing.two,
   },
-  // Görsel sağ kenarı, alt-orta: 2 dikey toggle ikonu (ses / madde). bottom '16%' →
-  // görselin alt rozet/konuşma-balonu şeridinin ÜSTÜNDE kalır (içeriği ezmez), okSag
-  // (dikey ortadaki ileri oku) ile de çakışmaz (onun altında).
-  yanIkonlar: {
+  // PANEL — görselin alt kısmının ÜSTÜNE binen koyu overlay (absolute). Üst yarı +
+  // künye görünür kalır. Yatay payla görselin içine değil kenarlardan biraz içeride.
+  panel: {
     position: 'absolute',
-    right: 8,
-    bottom: '16%',
-    gap: Spacing.two,
-    alignItems: 'center',
-    zIndex: 3,
-  },
-  yanBtn: {
-    width: 64,
-    alignItems: 'center',
-    gap: Spacing.half,
-  },
-  yanDaire: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(11,23,48,0.72)', // koyu yarı-saydam → görsel üstünde okunur
-    borderWidth: 1.5,
+    left: Spacing.two,
+    right: Spacing.two,
+    bottom: Spacing.two,
+    height: '54%', // görselin alt ~yarısını örter
+    backgroundColor: Palette.kartYuzeyKoyu,
     borderColor: Palette.altin,
-  },
-  yanDaireAktif: {
-    backgroundColor: Palette.altinAcik2,
-    borderColor: Palette.altinAcik2,
-  },
-  yanEtiket: {
-    textAlign: 'center',
-  },
-  gizli: {
-    display: 'none',
-  },
-  // Madde Metni kartı (krem — koyu ekranda kontrast)
-  maddeKart: {
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
     borderWidth: 1,
-    borderRadius: 20,
-    padding: Spacing.four,
-    gap: Spacing.two,
+    borderRadius: 18,
+    paddingHorizontal: Spacing.three,
+    paddingTop: Spacing.five, // sağ üst ✕ için boşluk
+    paddingBottom: Spacing.three,
+    zIndex: 5,
+    shadowColor: '#000',
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: -2 },
+    elevation: 8,
   },
-  maddeKartPasif: {
-    flexDirection: 'row',
+  panelKapat: {
+    position: 'absolute',
+    top: Spacing.two,
+    right: Spacing.two,
+    width: 32,
+    height: 32,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: Spacing.two,
-    opacity: 0.7,
+    zIndex: 6,
   },
-  maddeBaslik: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
+  panelIcerik: {
+    flex: 1,
+    justifyContent: 'center',
   },
-  maddeBaslikAd: {
+  panelBaslik: {
+    marginBottom: Spacing.one,
+  },
+  // Madde metni panel İÇİNDE kaydırılır → dış ekran sabit kalır (uzamaz).
+  maddeKaydir: {
     flex: 1,
   },
-  maddeAyirici: {
-    height: 1,
-    backgroundColor: Palette.kenarlik,
-    marginTop: Spacing.one,
+  maddeYakinda: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
   },
   maddeAc: {
     alignItems: 'center',
-    paddingVertical: Spacing.one,
+    paddingTop: Spacing.two,
+  },
+  // 🎧/📄 — görselin ALTINDA yan yana 2 eşit buton.
+  ikonSatir: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    paddingHorizontal: Spacing.three,
+    paddingTop: Spacing.two,
+  },
+  ikonBtn: {
+    flex: 1,
+    height: 46,
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderColor: Palette.altin,
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+  },
+  ikonBtnAktif: {
+    backgroundColor: Palette.altinAcik2,
+    borderColor: Palette.altinAcik2,
+  },
+  gizli: {
+    display: 'none',
   },
   bildir: {
     flexDirection: 'row',
