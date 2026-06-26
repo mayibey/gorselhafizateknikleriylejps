@@ -33,7 +33,16 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
           {/* TEK TİP STANDART KUTU: sabit dikey oran + contain → her kart aynı ölçü, görselin
               TAMAMI görünür (üst/alt kırpılmaz). Kutuyla aynı oranda olmayan görselde ince
               kenar boşluğu kalır → kalıcı çözüm: kaynak görselleri bu orana (kare/dikey) üret. */}
-          <Image source={gorsel} style={styles.gorsel} contentFit="contain" />
+          {/* recyclingKey: kart değişince ESKİ görsel TUTULMAZ (stale yok) → decode'a kadar
+              placeholder (kart zemini). cachePolicy: bir kez yüklenen tekrar decode olmaz. */}
+          <Image
+            source={gorsel}
+            style={styles.gorsel}
+            contentFit="contain"
+            recyclingKey={String(card.id)}
+            cachePolicy="memory-disk"
+            transition={150}
+          />
           {filigran}
         </Pressable>
         <GorselZoom
@@ -103,6 +112,7 @@ const styles = StyleSheet.create({
     width: '100%',
     // Sabit DİKEY oran (4:5) → tüm kartlar tek tip kutu; görsel contain ile tam sığar.
     aspectRatio: 0.8,
+    backgroundColor: Palette.kremZemin, // decode'a kadar nötr placeholder (stale görsel değil)
   },
   baslikSerit: {
     backgroundColor: Palette.kirmizi,

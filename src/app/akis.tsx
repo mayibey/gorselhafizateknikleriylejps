@@ -1,4 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as ScreenCapture from 'expo-screen-capture';
 import { useCallback, useEffect, useState } from 'react';
@@ -6,6 +7,8 @@ import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native'
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+// Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
+import { KART_GORSELLERI } from '../assets/kart-gorselleri';
 import { MaddeMetniSheet } from '@/components/card-flow/madde-metni-sheet';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { TtsBar } from '@/components/card-flow/tts-bar';
@@ -276,6 +279,24 @@ export default function AkisScreen() {
               </View>
             </GestureDetector>
 
+            {/* Komşu kartların (index±1) görselini ÖNDEN decode et (opacity 0, tam ölçü →
+                cache'e doğru boyutta girer) → swipe/sonraki kart anında hazır. */}
+            <View style={styles.onyukle} pointerEvents="none">
+              {[index - 1, index + 1].map((i) => {
+                const k = queue[i];
+                const g = k && k.gorsel_yolu ? KART_GORSELLERI[k.gorsel_yolu] : null;
+                return g ? (
+                  <Image
+                    key={`pre-${k.id}`}
+                    source={g}
+                    style={styles.onyukleGorsel}
+                    contentFit="contain"
+                    cachePolicy="memory-disk"
+                  />
+                ) : null;
+              })}
+            </View>
+
             {/* Alt blok — TEK dış scroll içinde (görsel kart başrol, kart içi scroll yok) */}
             <View style={styles.altBlok}>
             {/* Yan yana sekmeler: Sesli Anlatım | Madde Metni (görsel başrol; tek panel açık) */}
@@ -514,6 +535,20 @@ const styles = StyleSheet.create({
     borderColor: Palette.altin,
     backgroundColor: Palette.kartKremi,
     overflow: 'hidden',
+  },
+  // Önyükleme katmanı: tam ölçü ama görünmez (opacity 0) + arkada → komşu görselleri
+  // doğru boyutta decode edip cache'ler; layout'u/scroll'u etkilemez (absolute).
+  onyukle: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    opacity: 0,
+    zIndex: -1,
+  },
+  onyukleGorsel: {
+    width: '100%',
+    aspectRatio: 0.8,
   },
   okBtn: {
     position: 'absolute',
