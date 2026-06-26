@@ -511,7 +511,7 @@ export default function AkisScreen() {
                     <MaterialCommunityIcons name="check-bold" size={18} color={Palette.lacivert} />
                   </View>
                   <AppText variant="govde" color="kartMetinAcik" bold>
-                    Bildim
+                    Öğrendim
                   </AppText>
                 </Pressable>
                 <Pressable
