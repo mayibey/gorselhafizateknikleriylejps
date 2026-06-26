@@ -349,47 +349,45 @@ export default function AkisScreen() {
               />
             </View>
 
-            {/* MADDE METNİ önizleme paneli — her zaman görünür; başlığa/📄'ye dokun→genişle. */}
-            {maddeTxt !== null ? (
-              <View style={styles.maddeKart}>
-                <Pressable
-                  onPress={() => setMaddeGenis((v) => !v)}
-                  style={styles.maddeBaslik}
-                  accessibilityRole="button"
-                  accessibilityLabel="Madde metnini genişlet/daralt">
-                  <MaterialCommunityIcons name="file-document-outline" size={18} color={Palette.altinKoyu} />
-                  <AppText variant="kucuk" bold color="anaMetin" style={styles.maddeBaslikAd}>
-                    Madde Metni
+            {/* MADDE METNİ paneli — DEFAULT KAPALI; yalnız 📄 ikonuyla açılınca görünür. */}
+            {maddeGenis ? (
+              maddeTxt !== null ? (
+                <View style={styles.maddeKart}>
+                  <Pressable
+                    onPress={() => setMaddeGenis(false)}
+                    style={styles.maddeBaslik}
+                    accessibilityRole="button"
+                    accessibilityLabel="Madde metnini kapat">
+                    <MaterialCommunityIcons name="file-document-outline" size={18} color={Palette.altinKoyu} />
+                    <AppText variant="kucuk" bold color="anaMetin" style={styles.maddeBaslikAd}>
+                      Madde Metni
+                    </AppText>
+                    <AppText variant="etiket" color="solukMetin">
+                      kapat
+                    </AppText>
+                    <MaterialCommunityIcons name="chevron-down" size={18} color={Palette.solukMetin} />
+                  </Pressable>
+                  <AppText variant="kucuk" color="anaMetin" numberOfLines={30}>
+                    {maddeTxt}
                   </AppText>
-                  <AppText variant="etiket" color="solukMetin">
-                    {maddeGenis ? 'kapat' : 'dokun aç'}
+                  <View style={styles.maddeAyirici} />
+                  <Pressable
+                    onPress={() => setMaddeAcik(true)}
+                    style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
+                    <AppText variant="kucuk" bold color="altinKoyu">
+                      Tam metni aç →
+                    </AppText>
+                  </Pressable>
+                </View>
+              ) : (
+                <View style={[styles.maddeKart, styles.maddeKartPasif]}>
+                  <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.solukMetin} />
+                  <AppText variant="kucuk" color="solukMetin">
+                    Madde metni yakında
                   </AppText>
-                  <MaterialCommunityIcons
-                    name={maddeGenis ? 'chevron-up' : 'chevron-down'}
-                    size={18}
-                    color={Palette.solukMetin}
-                  />
-                </Pressable>
-                <AppText variant="kucuk" color="anaMetin" numberOfLines={maddeGenis ? 30 : 2}>
-                  {maddeTxt}
-                </AppText>
-                <View style={styles.maddeAyirici} />
-                <Pressable
-                  onPress={() => setMaddeAcik(true)}
-                  style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
-                  <AppText variant="kucuk" bold color="altinKoyu">
-                    Tam metni aç →
-                  </AppText>
-                </Pressable>
-              </View>
-            ) : (
-              <View style={[styles.maddeKart, styles.maddeKartPasif]}>
-                <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.solukMetin} />
-                <AppText variant="kucuk" color="solukMetin">
-                  Madde metni yakında
-                </AppText>
-              </View>
-            )}
+                </View>
+              )
+            ) : null}
 
             {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli. */}
             {FORMSPREE_ENDPOINT ? (
@@ -615,12 +613,14 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.three,
     gap: Spacing.two,
   },
-  // Görsel sağ-alt köşesi: 2 dikey toggle ikonu (ses / madde)
+  // Görsel sağ kenarı, alt-orta: 2 dikey toggle ikonu (ses / madde). bottom '16%' →
+  // görselin alt rozet/konuşma-balonu şeridinin ÜSTÜNDE kalır (içeriği ezmez), okSag
+  // (dikey ortadaki ileri oku) ile de çakışmaz (onun altında).
   yanIkonlar: {
     position: 'absolute',
     right: 8,
-    bottom: 12,
-    gap: Spacing.three,
+    bottom: '16%',
+    gap: Spacing.two,
     alignItems: 'center',
     zIndex: 3,
   },
