@@ -29,10 +29,9 @@ export function StudyCard({ card }: { card: CardWithSrs }) {
   if (gorsel !== undefined) {
     return (
       <>
-        <Pressable style={styles.card} onPress={() => setZoomAcik(true)}>
-          {/* TEK TİP STANDART KUTU: sabit dikey oran + contain → her kart aynı ölçü, görselin
-              TAMAMI görünür (üst/alt kırpılmaz). Kutuyla aynı oranda olmayan görselde ince
-              kenar boşluğu kalır → kalıcı çözüm: kaynak görselleri bu orana (kare/dikey) üret. */}
+        <Pressable style={[styles.card, styles.cardGorsel]} onPress={() => setZoomAcik(true)}>
+          {/* Kutu artık GÖRSELİN DOĞAL ORANINDA (akis'te gorselBoyut hesaplar) → görsel
+              kutuyu tam doldurur: iç kenar boşluğu (letterbox) ya da kırpma YOK. */}
           {/* recyclingKey: kart değişince ESKİ görsel TUTULMAZ (stale yok) → decode'a kadar
               placeholder (kart zemini). cachePolicy: bir kez yüklenen tekrar decode olmaz. */}
           <Image
@@ -108,10 +107,15 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     overflow: 'hidden',
   },
+  // Görselli kart: saran kutu (gorselSar) doğal oranda sabit ölçü verir → kart o kutuyu
+  // tam doldurur (yer tutucu modu bu stili almaz, doğal yükseklikte kalır).
+  cardGorsel: {
+    height: '100%',
+  },
   gorsel: {
+    // Kutu görselin doğal oranında → görsel kutuyu tam doldurur (boşluk/kırpma yok).
     width: '100%',
-    // Sabit DİKEY oran (4:5) → tüm kartlar tek tip kutu; görsel contain ile tam sığar.
-    aspectRatio: 0.8,
+    height: '100%',
     backgroundColor: Palette.kremZemin, // decode'a kadar nötr placeholder (stale görsel değil)
   },
   baslikSerit: {

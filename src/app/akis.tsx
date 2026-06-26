@@ -2,14 +2,23 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import * as ScreenCapture from 'expo-screen-capture';
-import { useCallback, useEffect, useState } from 'react';
-import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  Image as RNImage,
+  type LayoutChangeEvent,
+  type NativeScrollEvent,
+  type NativeSyntheticEvent,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  View,
+} from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
 import { KART_GORSELLERI } from '../assets/kart-gorselleri';
-import { MaddeMetniSheet } from '@/components/card-flow/madde-metni-sheet';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { TtsBar } from '@/components/card-flow/tts-bar';
 import { AppText } from '@/components/ui/app-text';
@@ -74,8 +83,6 @@ export default function AkisScreen() {
   const [index, setIndex] = useState(0);
   const [cozulen, setCozulen] = useState<Cozulen>({ tekrar: 0, yeni: 0 });
   const [cevapHatasi, setCevapHatasi] = useState(false);
-  // Madde metni sheet'i (ekran-içi overlay; queue/index/SRS'e dokunmaz).
-  const [maddeAcik, setMaddeAcik] = useState(false);
   // Sesli anlatım sonuna kadar okununca true → "sıradakine geç" mesajı çıkar.
   const [anlatimBitti, setAnlatimBitti] = useState(false);
   // TEK panel alanı (görselin üstüne biner): 'ses' kontrolleri / 'madde' metni / 'yok'.
@@ -83,11 +90,31 @@ export default function AkisScreen() {
   // hangi panelin görselin üstüne açılacağını seçer (biri açılınca diğeri kapanır).
   const [acikPanel, setAcikPanel] = useState<AcikPanel>('yok');
 
-  // Kart değişince: açık sheet'i kapat + anlatım-bitti sıfırla + paneli kapat.
+  // Görsel alanı ölçüsü (onLayout) → görsel kutusu doğal orana göre boyutlanır,
+  // kalan alana sığar (contain mantığı; boşluk/kırpma yok). Bkz. gorselBoyut.
+  const [alan, setAlan] = useState({ w: 0, h: 0 });
+
+  // Madde paneli panel-içi scroll: metin kutuya sığmıyorsa "Devamını gör" + scroll.
+  const maddeScrollRef = useRef<ScrollView>(null);
+  const maddeVpRef = useRef(0); // panel-içi görünür yükseklik
+  const maddeIcerikRef = useRef(0); // metnin tam yüksekliği
+  const maddeOfsetRef = useRef(0); // mevcut scroll konumu
+  const [maddeUzun, setMaddeUzun] = useState(false); // metin sığmıyor mu (buton göster)
+  const [maddeSonda, setMaddeSonda] = useState(false); // en alta gelindi mi (butonu gizle)
+
+  // Madde uzunluğunu (sığmıyor mu) içerik vs görünür yükseklikten hesapla.
+  const maddeUzunHesapla = useCallback(() => {
+    setMaddeUzun(maddeIcerikRef.current > maddeVpRef.current + 4);
+  }, []);
+
+  // Kart değişince: anlatım-bitti sıfırla + paneli kapat + madde scroll durumunu sıfırla.
   useEffect(() => {
-    setMaddeAcik(false);
     setAnlatimBitti(false);
     setAcikPanel('yok');
+    setMaddeUzun(false);
+    setMaddeSonda(false);
+    maddeOfsetRef.current = 0;
+    maddeScrollRef.current?.scrollTo({ y: 0, animated: false });
   }, [index]);
 
   const yukle = useCallback(() => {
@@ -157,6 +184,28 @@ export default function AkisScreen() {
   const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
 
+  // GÖRSEL KUTUSU = görselin DOĞAL oranı, kalan alana sığar (contain). Görselin
+  // gerçek genişlik/yükseklik oranı resolveAssetSource'tan alınır; kutu bu orana göre
+  // alan genişliğine kadar büyür, ama alan yüksekliğini AŞMAZ (footer/ikon örtülmez).
+  // Kutu görselle aynı oranda → iç boşluk (letterbox) ya da kırpma YOK. Çok uzun
+  // görselde yükseklik sınıra oturur, genişlik orana göre azalır (yine tam + boşluksuz).
+  const gorselKaynak = c?.gorsel_yolu ? KART_GORSELLERI[c.gorsel_yolu] : null;
+  const gorselBoyut = useMemo(() => {
+    if (!gorselKaynak || alan.w <= 0 || alan.h <= 0) return null;
+    const cozum = RNImage.resolveAssetSource(gorselKaynak);
+    const gw = cozum?.width ?? 0;
+    const gh = cozum?.height ?? 0;
+    if (gw <= 0 || gh <= 0) return null; // oran bilinmiyor → varsayılan oran stiline düş
+    const oran = gw / gh; // görsel genişlik/yükseklik
+    let bw = alan.w;
+    let bh = bw / oran;
+    if (bh > alan.h) {
+      bh = alan.h;
+      bw = bh * oran;
+    }
+    return { w: Math.round(bw), h: Math.round(bh) };
+  }, [gorselKaynak, alan.w, alan.h]);
+
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
       {/* SADE header: ✕ (sol) + ortada "X/Y · %Z" + ince ilerleme barı.
@@ -224,15 +273,28 @@ export default function AkisScreen() {
         </View>
       ) : (
         <View style={styles.kolon}>
-          {/* GÖRSEL ALANI — tek ekran sabit (dış scroll YOK). Görsel büyük, ortalı.
-              Panel açıkken alt ~yarısı görselin ÜSTÜNE binen overlay ile örtülür;
-              üst yarı + künye görünür kalır. Görsel üstünde başka ikon YOK (temiz). */}
-          <View style={styles.gorselAlan}>
+          {/* GÖRSEL ALANI — tek ekran sabit (dış scroll YOK). Görsel doğal oranında,
+              kalan alana sığacak şekilde ortalı (boşluk/kırpma yok). onLayout ile alan
+              ölçülür → gorselBoyut. Panel açıkken alt kısmı overlay ile örtülür. */}
+          <View
+            style={styles.gorselAlan}
+            onLayout={(e: LayoutChangeEvent) => {
+              const { width, height } = e.nativeEvent.layout;
+              if (width > 0 && height > 0 && (width !== alan.w || height !== alan.h)) {
+                setAlan({ w: width, h: height });
+              }
+            }}>
             {/* Kartı saran katman: yatay swipe (ileri/geri) + sol/sağ gezinme okları
                 (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir). */}
             <GestureDetector gesture={kartKaydir}>
               <View style={styles.kartSar}>
-                <View style={styles.gorselSar}>
+                <View
+                  style={[
+                    styles.gorselSar,
+                    gorselBoyut
+                      ? { width: gorselBoyut.w, height: gorselBoyut.h }
+                      : styles.gorselSarOran,
+                  ]}>
                   <StudyCard card={queue[index]} />
                 </View>
                 <Pressable
@@ -275,8 +337,14 @@ export default function AkisScreen() {
             {/* PANEL — görselin ALT kısmının ÜSTÜNE biner (absolute overlay). 'yok' iken
                 display:none → TtsBar mount KALIR, otomatik çalan ses KESİLMEZ. ✕ ya da
                 aktif ikona tekrar basınca kapanır. Panel absolute → görsel boyutunu/akışı
-                bozmaz, ekranı uzatmaz. */}
-            <View style={[styles.panel, acikPanel === 'yok' && styles.gizli]}>
+                bozmaz, ekranı uzatmaz. YÜKSEKLİK İÇERİĞE göre: ses kısa (sadece
+                kontroller kadar), madde uzun (maks yükseklik + panel-içi scroll). */}
+            <View
+              style={[
+                styles.panel,
+                acikPanel === 'madde' && styles.panelMadde,
+                acikPanel === 'yok' && styles.gizli,
+              ]}>
               <Pressable
                 onPress={() => setAcikPanel('yok')}
                 style={styles.panelKapat}
@@ -287,8 +355,9 @@ export default function AkisScreen() {
               </Pressable>
 
               {/* SES kontrolleri — TtsBar HER ZAMAN mount (display toggle) → ses panel
-                  kapalıyken / madde'ye geçince KESİLMEZ. Otomatik başlama korunur. */}
-              <View style={acikPanel === 'ses' ? styles.panelIcerik : styles.gizli}>
+                  kapalıyken / madde'ye geçince KESİLMEZ. Otomatik başlama korunur.
+                  Sarmal İÇERİĞE sarılır (flex YOK) → panel sadece kontroller kadar. */}
+              <View style={acikPanel === 'ses' ? null : styles.gizli}>
                 <TtsBar
                   key={queue[index].id}
                   gorselYolu={queue[index].gorsel_yolu}
@@ -296,28 +365,54 @@ export default function AkisScreen() {
                 />
               </View>
 
-              {/* MADDE metni — panel İÇİNDE kaydırılır (dış ekran sabit kalır). Metin
-                  yoksa "yakında". "Tam metni aç →" 9B sheet'ini açar. */}
-              <View style={acikPanel === 'madde' ? styles.panelIcerik : styles.gizli}>
+              {/* MADDE metni — kutu SABİT (panelMadde maxHeight), metin kutu İÇİNDE
+                  kaydırılır → dış ekran/kutu uzamaz. Kısa metinde buton yok; uzun
+                  metinde "Devamını gör →" (basınca bir ekran aşağı kayar). Metin yoksa
+                  "yakında". (Ayrı tam-metin sheet KALDIRILDI; panel-içi scroll yeter.) */}
+              <View style={acikPanel === 'madde' ? styles.panelIcerikMadde : styles.gizli}>
                 {maddeTxt !== null ? (
                   <>
                     <AppText variant="kucuk" bold color="kartMetinAcik" style={styles.panelBaslik}>
                       Madde Metni
                     </AppText>
                     <ScrollView
+                      ref={maddeScrollRef}
                       style={styles.maddeKaydir}
-                      showsVerticalScrollIndicator={false}>
+                      showsVerticalScrollIndicator
+                      scrollEventThrottle={16}
+                      onLayout={(e: LayoutChangeEvent) => {
+                        maddeVpRef.current = e.nativeEvent.layout.height;
+                        maddeUzunHesapla();
+                      }}
+                      onContentSizeChange={(_w, h) => {
+                        maddeIcerikRef.current = h;
+                        maddeUzunHesapla();
+                      }}
+                      onScroll={(e: NativeSyntheticEvent<NativeScrollEvent>) => {
+                        const { contentOffset, contentSize, layoutMeasurement } = e.nativeEvent;
+                        maddeOfsetRef.current = contentOffset.y;
+                        setMaddeSonda(
+                          contentOffset.y + layoutMeasurement.height >= contentSize.height - 4,
+                        );
+                      }}>
                       <AppText variant="kucuk" color="kartMetinAcik">
                         {maddeTxt}
                       </AppText>
                     </ScrollView>
-                    <Pressable
-                      onPress={() => setMaddeAcik(true)}
-                      style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
-                      <AppText variant="kucuk" bold color="altinAcik2">
-                        Tam metni aç →
-                      </AppText>
-                    </Pressable>
+                    {maddeUzun && !maddeSonda ? (
+                      <Pressable
+                        onPress={() =>
+                          maddeScrollRef.current?.scrollTo({
+                            y: maddeOfsetRef.current + maddeVpRef.current * 0.9,
+                            animated: true,
+                          })
+                        }
+                        style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
+                        <AppText variant="kucuk" bold color="altinAcik2">
+                          Devamını gör →
+                        </AppText>
+                      </Pressable>
+                    ) : null}
                   </>
                 ) : (
                   <View style={styles.maddeYakinda}>
@@ -433,14 +528,6 @@ export default function AkisScreen() {
               </View>
             )}
           </View>
-
-          {/* Madde metni sheet'i — kolon ile KARDEŞ (absoluteFill). */}
-          <MaddeMetniSheet
-            gorunur={maddeAcik}
-            maddeNo={queue[index].madde_no}
-            baslik={queue[index].baslik}
-            onKapat={() => setMaddeAcik(false)}
-          />
         </View>
       )}
     </SafeAreaView>
@@ -505,6 +592,7 @@ const styles = StyleSheet.create({
   gorselAlan: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'center', // kutu alandan darsa (yüksek görsel) yatay ortalanır
     overflow: 'hidden',
     position: 'relative',
     paddingVertical: Spacing.two,
@@ -513,12 +601,18 @@ const styles = StyleSheet.create({
     position: 'relative',
     justifyContent: 'center',
   },
+  // Görsel kutusu: ölçü gorselBoyut'tan inline gelir (görselin doğal oranı + alana
+  // sığma). Ölçü henüz yokken (ilk layout / oran bilinmiyor) gorselSarOran'a düşer.
   gorselSar: {
     borderRadius: 22,
     borderWidth: 1.5,
     borderColor: Palette.altin,
     backgroundColor: Palette.kartKremi,
     overflow: 'hidden',
+  },
+  gorselSarOran: {
+    width: '100%',
+    aspectRatio: 0.8,
   },
   // Önyükleme katmanı: tam ölçü ama görünmez (opacity 0) + arkada → komşu görselleri
   // doğru boyutta decode edip cache'ler; layout'u/scroll'u etkilemez (absolute).
@@ -577,7 +671,8 @@ const styles = StyleSheet.create({
     left: Spacing.two,
     right: Spacing.two,
     bottom: Spacing.two,
-    height: '54%', // görselin alt ~yarısını örter
+    // Yükseklik İÇERİĞE göre (height yok) → ses paneli sadece kontroller kadar yüksek
+    // olur, gereksiz boşluk kalmaz. Madde paneli panelMadde ile maks yüksekliğe oturur.
     backgroundColor: Palette.kartYuzeyKoyu,
     borderColor: Palette.altin,
     borderWidth: 1,
@@ -592,6 +687,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: -2 },
     elevation: 8,
   },
+  // Madde paneli: kutu SABİT (maks yükseklik) → uzun metin panel-içi scroll'la okunur,
+  // kutu/ekran BÜYÜMEZ. Kısa metinde içeriğe sarılır (maxHeight'i aşmaz).
+  panelMadde: {
+    maxHeight: '60%',
+  },
   panelKapat: {
     position: 'absolute',
     top: Spacing.two,
@@ -602,9 +702,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     zIndex: 6,
   },
-  panelIcerik: {
+  // Madde içerik sarmalı: flex:1 → panelMadde maks yüksekliğe oturunca ScrollView
+  // sınırlı yükseklik alır ve metin İÇERİDE kayar (kutu büyümez).
+  panelIcerikMadde: {
     flex: 1,
-    justifyContent: 'center',
   },
   panelBaslik: {
     marginBottom: Spacing.one,
