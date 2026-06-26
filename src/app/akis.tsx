@@ -26,6 +26,7 @@ import { Loading } from '@/components/ui/loading';
 import { FORMSPREE_ENDPOINT } from '@/constants/config';
 import { CardFlowMaxWidth, Palette, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
+import { erteleBugun, ertelemeAktifMi } from '@/lib/modal-erteleme';
 import {
   getCardsByBolumChain,
   getCardsByLaw,
@@ -104,6 +105,10 @@ export default function AkisScreen() {
   const [maddeUzun, setMaddeUzun] = useState(false); // metin sığmıyor mu (buton göster)
   const [maddeSonda, setMaddeSonda] = useState(false); // en alta gelindi mi (butonu gizle)
 
+  // Ses bitince "geçelim mi?" modalı + "bugün sorma" işareti (ekran-içi overlay).
+  const [modalAcik, setModalAcik] = useState(false);
+  const [bugunSorma, setBugunSorma] = useState(false);
+
   // Madde uzunluğunu (sığmıyor mu) içerik vs görünür yükseklikten hesapla.
   const maddeUzunHesapla = useCallback(() => {
     setMaddeUzun(maddeIcerikRef.current > maddeVpRef.current + 4);
@@ -118,7 +123,23 @@ export default function AkisScreen() {
     maddeOfsetRef.current = 0;
     maddeScrollRef.current?.scrollTo({ y: 0, animated: false });
     setOran(null); // yeni kartın oranı onLoad ile gelene kadar fallback
+    setModalAcik(false); // yeni kartta modal kapalı (anlatimBitti zaten sıfırlanıyor)
+    setBugunSorma(false);
   }, [index]);
+
+  // Ses (otomatik anlatım) bitince → erteleme penceresinde DEĞİLSEK "geçelim mi?" modalı.
+  // onBitti yalnız doğal bitişte gelir (durdur/seek/kart değişimi tetiklemez → yanlış
+  // açılma yok). Footer NORMAL kalır; bu modal EK olarak açılır.
+  useEffect(() => {
+    if (!anlatimBitti) return;
+    let iptal = false;
+    void ertelemeAktifMi().then((aktif) => {
+      if (!iptal && !aktif) setModalAcik(true);
+    });
+    return () => {
+      iptal = true;
+    };
+  }, [anlatimBitti]);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -161,6 +182,15 @@ export default function AkisScreen() {
       // Buton kilitlenmez; kullanıcı tekrar deneyebilir.
       setCevapHatasi(true);
     }
+  }
+
+  // Modal seçimi: "bugün sorma" işaretliyse hangi butona basılırsa basılsın ertele.
+  // 'biliyorum'/'zor' → cevapla (SRS kaydı + sonraki kart); 'incele' → sadece kapat
+  // (cevapla ÇAĞRILMAZ → index değişmez, kart ekranda kalır).
+  function modalSec(aksiyon: SrsCevap | 'incele') {
+    if (bugunSorma) void erteleBugun();
+    setModalAcik(false);
+    if (aksiyon !== 'incele') void cevapla(aksiyon);
   }
 
   const bitti = queue !== null && queue.length > 0 && index >= queue.length;
@@ -479,52 +509,93 @@ export default function AkisScreen() {
             </Pressable>
           ) : null}
 
-          {/* SABİT footer — cevap butonları her zaman altta. */}
+          {/* SABİT footer — cevap butonları her zaman altta. Ses bitince footer NORMAL
+              kalır (Öğrendim/Tekrar Hatırlat); "geçelim mi?" sorusu EK modalda sorulur. */}
           <View style={styles.footer}>
             {cevapHatasi ? (
               <AppText variant="kucuk" color="kirmizi" bold style={styles.cevapHata}>
                 Kaydedilemedi, tekrar dene.
               </AppText>
             ) : null}
-            {anlatimBitti ? (
-              /* Sesli anlatım bittiğinde: sıradaki konu + tek "devam" düğmesi. */
-              <>
-                <AppText variant="kucuk" bold color="kartMetinIkincil" style={styles.siradaki}>
-                  {index + 1 < queue.length
-                    ? `Sıradaki konu: ${queue[index + 1].baslik}`
-                    : 'Bu turun son kartı'}
+            <View style={styles.butonSatir}>
+              <Pressable
+                style={({ pressed }) => [styles.bildimBtn, pressed && styles.pressed]}
+                onPress={() => void cevapla('biliyorum')}>
+                <View style={styles.bildimDaire}>
+                  <MaterialCommunityIcons name="check-bold" size={18} color={Palette.lacivert} />
+                </View>
+                <AppText variant="govde" color="kartMetinAcik" bold>
+                  Öğrendim
                 </AppText>
+              </Pressable>
+              <Pressable
+                style={({ pressed }) => [styles.tekrarBtn, pressed && styles.pressed]}
+                onPress={() => void cevapla('zor')}>
+                <MaterialCommunityIcons name="refresh" size={20} color={Palette.altinKoyu} />
+                <AppText variant="govde" color="altinKoyu" bold>
+                  Tekrar Hatırlat
+                </AppText>
+              </Pressable>
+            </View>
+          </View>
+
+          {/* SES BİTİNCE "geçelim mi?" MODALI — RN Modal DEĞİL, ekran-içi absoluteFill
+              overlay (GorselZoom deseni) → AkisScreen unmount olmaz, TtsBar mount kalır
+              (ses kesilmez). Footer'ı kapsayan tam-ekran katman. */}
+          {modalAcik ? (
+            <View style={styles.modalOverlay}>
+              <View style={styles.modalKart}>
+                <AppText variant="altBaslik" color="anaMetin" bold style={styles.modalBaslik}>
+                  Anlatım bitti
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin" style={styles.modalAlt}>
+                  Bu kartı öğrendin mi, sıradakine geçelim mi?
+                </AppText>
+
                 <Pressable
-                  style={({ pressed }) => [styles.devamBtn, pressed && styles.pressed]}
-                  onPress={() => void cevapla('biliyorum')}>
-                  <AppText variant="govde" color="kartMetinAcik" bold>
-                    {index + 1 < queue.length ? 'Tamam, sıradakine geç ▶' : 'Tamam, turu bitir'}
-                  </AppText>
-                </Pressable>
-              </>
-            ) : (
-              <View style={styles.butonSatir}>
-                <Pressable
-                  style={({ pressed }) => [styles.bildimBtn, pressed && styles.pressed]}
-                  onPress={() => void cevapla('biliyorum')}>
-                  <View style={styles.bildimDaire}>
-                    <MaterialCommunityIcons name="check-bold" size={18} color={Palette.lacivert} />
-                  </View>
-                  <AppText variant="govde" color="kartMetinAcik" bold>
+                  style={({ pressed }) => [styles.modalOgrendim, pressed && styles.pressed]}
+                  onPress={() => modalSec('biliyorum')}>
+                  <MaterialCommunityIcons name="check-bold" size={18} color={Palette.lacivert} />
+                  <AppText variant="govde" color="lacivert" bold>
                     Öğrendim
                   </AppText>
                 </Pressable>
+
                 <Pressable
-                  style={({ pressed }) => [styles.tekrarBtn, pressed && styles.pressed]}
-                  onPress={() => void cevapla('zor')}>
-                  <MaterialCommunityIcons name="refresh" size={20} color={Palette.altinKoyu} />
+                  style={({ pressed }) => [styles.modalTekrar, pressed && styles.pressed]}
+                  onPress={() => modalSec('zor')}>
+                  <MaterialCommunityIcons name="refresh" size={18} color={Palette.altinKoyu} />
                   <AppText variant="govde" color="altinKoyu" bold>
                     Tekrar Hatırlat
                   </AppText>
                 </Pressable>
+
+                <Pressable
+                  style={({ pressed }) => [styles.modalIncele, pressed && styles.pressed]}
+                  onPress={() => modalSec('incele')}>
+                  <AppText variant="kucuk" color="solukMetin" bold>
+                    Kartı inceleyeceğim
+                  </AppText>
+                </Pressable>
+
+                <Pressable
+                  style={styles.modalBugunSorma}
+                  onPress={() => setBugunSorma((v) => !v)}
+                  accessibilityRole="checkbox"
+                  accessibilityState={{ checked: bugunSorma }}
+                  hitSlop={8}>
+                  <MaterialCommunityIcons
+                    name={bugunSorma ? 'checkbox-marked' : 'checkbox-blank-outline'}
+                    size={20}
+                    color={bugunSorma ? Palette.altinKoyu : Palette.solukMetin}
+                  />
+                  <AppText variant="kucuk" color="solukMetin">
+                    Bugün tekrar sorma
+                  </AppText>
+                </Pressable>
               </View>
-            )}
-          </View>
+            </View>
+          ) : null}
         </View>
       )}
     </SafeAreaView>
@@ -757,18 +828,69 @@ const styles = StyleSheet.create({
   cevapHata: {
     textAlign: 'center',
   },
-  siradaki: {
-    textAlign: 'center',
-    marginBottom: Spacing.one,
-  },
-  devamBtn: {
-    height: 58,
-    borderRadius: 18,
-    backgroundColor: Palette.lacivert,
-    borderColor: Palette.altin,
-    borderWidth: 1.5,
+  // Ses bitince "geçelim mi?" modalı — ekran-içi absoluteFill overlay (RN Modal DEĞİL).
+  modalOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(11, 31, 58, 0.62)',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: Spacing.four,
+    zIndex: 1000,
+    elevation: 1000,
+  },
+  modalKart: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: 20,
+    padding: Spacing.four,
+    gap: Spacing.two,
+    shadowColor: '#000',
+    shadowOpacity: 0.25,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 12,
+  },
+  modalBaslik: {
+    textAlign: 'center',
+  },
+  modalAlt: {
+    textAlign: 'center',
+    marginBottom: Spacing.two,
+  },
+  modalOgrendim: {
+    height: 54,
+    borderRadius: 16,
+    backgroundColor: Palette.altin,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+  },
+  modalTekrar: {
+    height: 54,
+    borderRadius: 16,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.altin,
+    borderWidth: 1.5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+  },
+  modalIncele: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: Spacing.two,
+  },
+  modalBugunSorma: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    paddingTop: Spacing.one,
   },
   butonSatir: {
     flexDirection: 'row',
