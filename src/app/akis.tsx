@@ -37,11 +37,15 @@ async function gunlukSinirli(): Promise<QueueCard[]> {
   return kuyruk.slice(0, ayar.gunlukKart);
 }
 
+// GEÇİCİ: SS almak için kapatıldı, geri açılacak → true yapınca koruma geri gelir.
+const EKRAN_KORUMA_AKTIF = false;
+
 export default function AkisScreen() {
   // İçerik koruması: kart akışı açıkken ekran görüntüsü/kaydı engellenir (Android FLAG_SECURE).
   // Yalnız NATIVE'de — web'de expo-screen-capture API'si yok (çağrı atılırsa hata) → guard.
+  // GEÇİCİ: EKRAN_KORUMA_AKTIF=false iken koruma UYGULANMAZ (SS almak için kapatıldı).
   useEffect(() => {
-    if (Platform.OS === 'web') return;
+    if (!EKRAN_KORUMA_AKTIF || Platform.OS === 'web') return;
     void ScreenCapture.preventScreenCaptureAsync().catch(() => {});
     return () => {
       void ScreenCapture.allowScreenCaptureAsync().catch(() => {});
