@@ -25,7 +25,8 @@ import { Palette, Spacing } from '@/constants/theme';
  * ◀ önceki / ▶ sonraki CÜMLE ile gezinme. Waveform DEKORATİF: dolu kısım cümle
  * ilerlemesini (kaçıncı cümle) gösterir — saniye/süre DEĞİL (dürüst gösterge).
  *
- * Auto-play YOK. Kart değişince component remount olur (akis'te key=card.id) → durur.
+ * Auto-play VAR: kart açılınca (mount) otomatik 0. cümleden başlar. Kart değişince
+ * component remount olur (akis'te key=card.id) → eski durur, yeni otomatik başlar.
  */
 
 /** Hız döngüsü (expo-speech rate parametresi → gerçek hızlanma). */
@@ -79,13 +80,16 @@ export function TtsBar({
     [],
   );
 
-  // Unmount / kart değişimi → okumayı durdur.
+  // Mount: OTOMATİK başla (kart açılınca ses kendiliğinden çalar, 0. cümleden).
+  // Unmount / kart değişimi → okumayı durdur. (oynat hoisted → mount effect'te kullanılır.)
   useEffect(() => {
+    if (metin && cumleler.length > 0) oynat(0);
     return () => {
       nesilRef.current += 1;
       oynuyorRef.current = false;
       void Speech.stop();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Akıcı ilerleme: cümle OKUNURKEN playhead/dolgu, o cümlenin başından sonuna

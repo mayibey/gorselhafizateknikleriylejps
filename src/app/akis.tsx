@@ -75,14 +75,17 @@ export default function AkisScreen() {
   const [maddeAcik, setMaddeAcik] = useState(false);
   // Sesli anlatım sonuna kadar okununca true → "sıradakine geç" mesajı çıkar.
   const [anlatimBitti, setAnlatimBitti] = useState(false);
-  // Ses / Madde Metni sekmesi (görselin altında; açılışta ses açık).
-  const [aktifSekme, setAktifSekme] = useState<'ses' | 'madde'>('ses');
+  // Yan ikon toggle'ları (sekme YOK): ses kontrol paneli açık mı / madde paneli genişledi mi.
+  // Ses OTOMATİK çalar (TtsBar mount'ta); bu bayraklar yalnız kontrolleri/önizlemeyi gösterir.
+  const [sesAcik, setSesAcik] = useState(false);
+  const [maddeGenis, setMaddeGenis] = useState(false);
 
-  // Kart değişince açık sheet'i kapat + anlatım-bitti mesajını sıfırla + sekmeyi ses'e al.
+  // Kart değişince: açık sheet'i kapat + anlatım-bitti sıfırla + yan panelleri kapat.
   useEffect(() => {
     setMaddeAcik(false);
     setAnlatimBitti(false);
-    setAktifSekme('ses');
+    setSesAcik(false);
+    setMaddeGenis(false);
   }, [index]);
 
   const yukle = useCallback(() => {
@@ -276,6 +279,43 @@ export default function AkisScreen() {
                   accessibilityLabel="Sonraki kart">
                   <MaterialCommunityIcons name="chevron-right" size={32} color={Palette.beyaz} />
                 </Pressable>
+
+                {/* Sağ-alt 2 dikey ikon (sekme DEĞİL → toggle): ses kontrolleri / madde paneli.
+                    Aktifken altın dolu, pasifken altın çerçeve. */}
+                <View style={styles.yanIkonlar}>
+                  <Pressable
+                    onPress={() => setSesAcik((v) => !v)}
+                    style={styles.yanBtn}
+                    accessibilityRole="button"
+                    accessibilityLabel="Sesli anlatım kontrolleri">
+                    <View style={[styles.yanDaire, sesAcik && styles.yanDaireAktif]}>
+                      <MaterialCommunityIcons
+                        name="headphones"
+                        size={22}
+                        color={sesAcik ? Palette.lacivert : Palette.altinAcik2}
+                      />
+                    </View>
+                    <AppText variant="etiket" bold color="kartMetinAcik" style={styles.yanEtiket}>
+                      Sesli Anlatım
+                    </AppText>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => setMaddeGenis((v) => !v)}
+                    style={styles.yanBtn}
+                    accessibilityRole="button"
+                    accessibilityLabel="Madde metni paneli">
+                    <View style={[styles.yanDaire, maddeGenis && styles.yanDaireAktif]}>
+                      <MaterialCommunityIcons
+                        name="file-document-outline"
+                        size={22}
+                        color={maddeGenis ? Palette.lacivert : Palette.altinAcik2}
+                      />
+                    </View>
+                    <AppText variant="etiket" bold color="kartMetinAcik" style={styles.yanEtiket}>
+                      Madde Metni
+                    </AppText>
+                  </Pressable>
+                </View>
               </View>
             </GestureDetector>
 
@@ -299,40 +339,9 @@ export default function AkisScreen() {
 
             {/* Alt blok — TEK dış scroll içinde (görsel kart başrol, kart içi scroll yok) */}
             <View style={styles.altBlok}>
-            {/* Yan yana sekmeler: Sesli Anlatım | Madde Metni (görsel başrol; tek panel açık) */}
-            <View style={styles.sekmeCubuk}>
-              <Pressable
-                onPress={() => setAktifSekme('ses')}
-                style={[styles.sekme, aktifSekme === 'ses' ? styles.sekmeAktif : styles.sekmePasif]}
-                accessibilityRole="button"
-                accessibilityLabel="Sesli Anlatım sekmesi">
-                <MaterialCommunityIcons
-                  name="volume-high"
-                  size={18}
-                  color={aktifSekme === 'ses' ? Palette.lacivert : Palette.kartMetinIkincil}
-                />
-                <AppText variant="kucuk" bold color={aktifSekme === 'ses' ? 'lacivert' : 'kartMetinIkincil'}>
-                  Sesli Anlatım
-                </AppText>
-              </Pressable>
-              <Pressable
-                onPress={() => setAktifSekme('madde')}
-                style={[styles.sekme, aktifSekme === 'madde' ? styles.sekmeAktif : styles.sekmePasif]}
-                accessibilityRole="button"
-                accessibilityLabel="Madde Metni sekmesi">
-                <MaterialCommunityIcons
-                  name="file-document-outline"
-                  size={18}
-                  color={aktifSekme === 'madde' ? Palette.lacivert : Palette.kartMetinIkincil}
-                />
-                <AppText variant="kucuk" bold color={aktifSekme === 'madde' ? 'lacivert' : 'kartMetinIkincil'}>
-                  Madde Metni
-                </AppText>
-              </Pressable>
-            </View>
-
-            {/* SES paneli — display ile gizlenir (TtsBar mount KALIR → TTS kesilmez). */}
-            <View style={aktifSekme === 'ses' ? null : styles.gizli}>
+            {/* SES kontrol paneli — sesAcik ile aç/kapa (display; TtsBar mount KALIR →
+                otomatik çalan ses kesilmez). Ses, panel kapalıyken de çalar. */}
+            <View style={sesAcik ? null : styles.gizli}>
               <TtsBar
                 key={queue[index].id}
                 gorselYolu={queue[index].gorsel_yolu}
@@ -340,31 +349,47 @@ export default function AkisScreen() {
               />
             </View>
 
-            {/* MADDE paneli — yalnız madde sekmesinde (başlık sekme; daha çok satır) */}
-            {aktifSekme === 'madde' ? (
-              maddeTxt !== null ? (
-                <View style={styles.maddeKart}>
-                  <AppText variant="kucuk" color="anaMetin" numberOfLines={8}>
-                    {maddeTxt}
+            {/* MADDE METNİ önizleme paneli — her zaman görünür; başlığa/📄'ye dokun→genişle. */}
+            {maddeTxt !== null ? (
+              <View style={styles.maddeKart}>
+                <Pressable
+                  onPress={() => setMaddeGenis((v) => !v)}
+                  style={styles.maddeBaslik}
+                  accessibilityRole="button"
+                  accessibilityLabel="Madde metnini genişlet/daralt">
+                  <MaterialCommunityIcons name="file-document-outline" size={18} color={Palette.altinKoyu} />
+                  <AppText variant="kucuk" bold color="anaMetin" style={styles.maddeBaslikAd}>
+                    Madde Metni
                   </AppText>
-                  <View style={styles.maddeAyirici} />
-                  <Pressable
-                    onPress={() => setMaddeAcik(true)}
-                    style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
-                    <AppText variant="kucuk" bold color="altinKoyu">
-                      Tam metni aç
-                    </AppText>
-                  </Pressable>
-                </View>
-              ) : (
-                <View style={[styles.maddeKart, styles.maddeKartPasif]}>
-                  <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.solukMetin} />
-                  <AppText variant="kucuk" color="solukMetin">
-                    Madde metni yakında
+                  <AppText variant="etiket" color="solukMetin">
+                    {maddeGenis ? 'kapat' : 'dokun aç'}
                   </AppText>
-                </View>
-              )
-            ) : null}
+                  <MaterialCommunityIcons
+                    name={maddeGenis ? 'chevron-up' : 'chevron-down'}
+                    size={18}
+                    color={Palette.solukMetin}
+                  />
+                </Pressable>
+                <AppText variant="kucuk" color="anaMetin" numberOfLines={maddeGenis ? 30 : 2}>
+                  {maddeTxt}
+                </AppText>
+                <View style={styles.maddeAyirici} />
+                <Pressable
+                  onPress={() => setMaddeAcik(true)}
+                  style={({ pressed }) => [styles.maddeAc, pressed && styles.pressed]}>
+                  <AppText variant="kucuk" bold color="altinKoyu">
+                    Tam metni aç →
+                  </AppText>
+                </Pressable>
+              </View>
+            ) : (
+              <View style={[styles.maddeKart, styles.maddeKartPasif]}>
+                <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.solukMetin} />
+                <AppText variant="kucuk" color="solukMetin">
+                  Madde metni yakında
+                </AppText>
+              </View>
+            )}
 
             {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli. */}
             {FORMSPREE_ENDPOINT ? (
@@ -590,28 +615,36 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.three,
     gap: Spacing.two,
   },
-  // Ses | Madde sekmeleri
-  sekmeCubuk: {
-    flexDirection: 'row',
-    gap: Spacing.two,
+  // Görsel sağ-alt köşesi: 2 dikey toggle ikonu (ses / madde)
+  yanIkonlar: {
+    position: 'absolute',
+    right: 8,
+    bottom: 12,
+    gap: Spacing.three,
+    alignItems: 'center',
+    zIndex: 3,
   },
-  sekme: {
-    flex: 1,
-    height: 44,
-    flexDirection: 'row',
+  yanBtn: {
+    width: 64,
+    alignItems: 'center',
+    gap: Spacing.half,
+  },
+  yanDaire: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: Spacing.one,
-    borderRadius: Radius.m,
-    borderWidth: 1,
+    backgroundColor: 'rgba(11,23,48,0.72)', // koyu yarı-saydam → görsel üstünde okunur
+    borderWidth: 1.5,
+    borderColor: Palette.altin,
   },
-  sekmeAktif: {
+  yanDaireAktif: {
     backgroundColor: Palette.altinAcik2,
     borderColor: Palette.altinAcik2,
   },
-  sekmePasif: {
-    backgroundColor: Palette.kartYuzeyKoyu,
-    borderColor: Palette.kartKenarKoyu,
+  yanEtiket: {
+    textAlign: 'center',
   },
   gizli: {
     display: 'none',
