@@ -235,6 +235,14 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 19;
     }
+    if (version < 20) {
+      // Bağsız (genel-özet/ek-geçici özet) kartlar artık kanunun "Özet" patika düğümüne
+      // bağlanıyor → patikada görünür + ilerleme paydasına girer (ör. 2803: 31/31). cards
+      // DEĞİŞMEDİ → yalnız bolumler/bolum_kartlari yeniden tohumlanır; SRS TAM korunur.
+      await db.execAsync('DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedBolumler();
+      version = 20;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
