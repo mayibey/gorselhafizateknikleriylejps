@@ -19,7 +19,7 @@ import {
   getStudyCards,
   sicilSifirla,
 } from '@/db/database';
-import type { CardWithSrs, GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
+import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
@@ -48,19 +48,13 @@ export default function SicilScreen() {
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
   const [hata, setHata] = useState(false);
-  // Çalışılmış kartlar (öğrenilen listesi render'da zayıf havuza göre türetilir).
-  const [studied, setStudied] = useState<CardWithSrs[]>([]);
-  const [ogrAcik, setOgrAcik] = useState(false);
 
   // Odağa her gelindiğinde (çalışmadan dönünce) branş + istatistik + zayıf analizi tazele.
   // İstatistik = ana veri (hata → retry); branş adı + zayıf analizi degrade olur (ayrı catch).
   const yukle = useCallback(() => {
     setHata(false);
     void Promise.all([getStudyCards(), getCardCount()])
-      .then(([cards, toplam]) => {
-        setIst(hesaplaIstatistik(cards, toplam));
-        setStudied(cards); // öğrenilen listesi render'da zayıf havuza göre süzülür
-      })
+      .then(([cards, toplam]) => setIst(hesaplaIstatistik(cards, toplam)))
       .catch(() => setHata(true));
     // Zayıf analizi AYRI: hatası İLERLEME/KUTU DAĞILIMI'nı bozmaz.
     void Promise.all([getPerformans(), getAllCards()])
@@ -76,19 +70,14 @@ export default function SicilScreen() {
   useFocusEffect(yukle);
 
   // METRİKLER (kutusuz, performans temelli):
-  //  Çalışılan = en az 1 kez cevaplanan kart. Öğrenilen = çalışılan AMA zayıf havuzda
-  //  OLMAYAN (son 2 denemesi iyi → oturmuş) kart. Hazırlık = öğrenilen ÷ toplam.
-  const zayifSet = new Set((zayif?.liste ?? []).map((z) => z.card.id));
-  const ogrenilenList = studied
-    .filter((c) => c.kutu >= 1 && !zayifSet.has(c.id))
-    .sort(
-      (a, b) =>
-        a.law_ad.localeCompare(b.law_ad, 'tr') || a.madde_no.localeCompare(b.madde_no, 'tr'),
-    );
+  //  Çalışılan = en az 1 kez cevaplanan kart. Hazırlık = (çalışılan − zayıf) ÷ toplam,
+  //  yani oturmuş (zayıf havuzda olmayan) kart oranı. Kalan = 100 − hazırlık.
+  const zayifN = zayif?.liste.length ?? 0;
   const calisilanN = ist?.calisilanKart ?? 0;
   const toplamN = ist?.toplamKart ?? 0;
-  const ogrenilenN = ogrenilenList.length;
+  const ogrenilenN = Math.max(0, calisilanN - zayifN); // hazırlık payı (oturmuş kart)
   const hazirlikN = toplamN > 0 ? Math.round((ogrenilenN / toplamN) * 100) : 0;
+  const kalanN = toplamN > 0 ? 100 - hazirlikN : 0;
 
   return (
     <Screen title="Evsaf">
@@ -119,40 +108,13 @@ export default function SicilScreen() {
           <View style={styles.istatistikKart}>
             <BolumBaslik
               baslik="İLERLEME"
-              bilgi="Çalışılan = en az 1 kez gördüğün kart. Öğrenilen = doğru bilip oturmuş (zayıf mevzilerde olmayan) kart — üstüne dokun, listesini gör. Hazırlık % = öğrenilen ÷ toplam kart, sınava hazırlık oranın."
+              bilgi="Çalışılan = en az 1 kez gördüğün kart. Hazırlık % = oturmuş (zayıf mevzilerde olmayan) kart ÷ toplam, sınava hazırlık oranın. Kalan % = 100 − hazırlık, daha sağlamlaştırılacak kısım."
             />
             <View style={styles.statSatir}>
               <Stat deger={`${calisilanN}/${toplamN}`} etiket="Çalışılan" />
-              <Stat
-                deger={`${ogrenilenN}`}
-                etiket="Öğrenilen"
-                onPress={() => setOgrAcik((v) => !v)}
-                aktif={ogrAcik}
-              />
               <Stat deger={`%${hazirlikN}`} etiket="Hazırlık" />
+              <Stat deger={`%${kalanN}`} etiket="Kalan" />
             </View>
-
-            {/* "Öğrenilen"e tıklayınca öğrenilen kartların listesi. */}
-            {ogrAcik ? (
-              <View style={styles.ogrListe}>
-                {ogrenilenList.length === 0 ? (
-                  <AppText variant="kucuk" color="solukMetin">
-                    Henüz oturmuş kart yok — bir kartı doğru bilip zayıf mevzilerden çıkınca burada
-                    öğrenilmiş sayılır.
-                  </AppText>
-                ) : (
-                  ogrenilenList.map((c) => (
-                    <View key={c.id} style={styles.ogrSatir}>
-                      <MaterialCommunityIcons name="check-circle" size={15} color={Palette.yesil} />
-                      <AppText variant="kucuk" bold style={styles.ogrAd} numberOfLines={1}>
-                        {c.madde_no}
-                        {c.baslik ? ` — ${c.baslik}` : ''}
-                      </AppText>
-                    </View>
-                  ))
-                )}
-              </View>
-            ) : null}
           </View>
 
           {/* Zayıf Mevziler — geri besleme havuzu (son denemede zor/yanlış) */}
@@ -471,21 +433,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 2,
-  },
-  // Öğrenilen kart listesi (Öğrenilen'e tıklayınca açılır)
-  ogrListe: {
-    borderTopWidth: 1,
-    borderTopColor: Palette.kenarlik,
-    paddingTop: Spacing.two,
-    gap: Spacing.one,
-  },
-  ogrSatir: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-  },
-  ogrAd: {
-    flex: 1,
   },
   emirKart: {
     backgroundColor: Palette.kirmizi,

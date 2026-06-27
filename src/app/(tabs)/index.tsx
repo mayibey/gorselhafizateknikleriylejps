@@ -14,15 +14,14 @@ import {
   getAllCards,
   getBranches,
   getCardCount,
-  getDailyQueue,
   getPerformans,
   getStudyCards,
   getStudyDays,
+  getZayifKuyruk,
 } from '@/db/database';
 import type { Branch, CardWithLaw } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { getAyar } from '@/lib/bildirim';
-import { zayifKartlar } from '@/lib/performans';
 import type { QueueCard } from '@/lib/queue';
 import { useRutbe } from '@/lib/rutbe-context';
 import { RUTBELER, type Rutbe } from '@/lib/rutbe-store';
@@ -46,7 +45,6 @@ export default function KarargahScreen() {
   const [branches, setBranches] = useState<Branch[] | null>(null);
   const [hedef, setHedef] = useState<number | null>(null);
   const [bugunSayi, setBugunSayi] = useState(0);
-  const [zayifSayi, setZayifSayi] = useState(0);
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [hata, setHata] = useState(false);
@@ -54,7 +52,9 @@ export default function KarargahScreen() {
   // Ekrana her dönüldüğünde tazele. Kuyruk = ana veri (hata → retry); gerisi degrade olur.
   const yukle = useCallback(() => {
     setHata(false);
-    void getDailyQueue()
+    // Etüt = ZAYIF HAVUZ (tekrar-hatırlat + denemede yanlış). Due/Leitner DEĞİL → "zayıf
+    // var ama Etüt boş" sorunu biter.
+    void getZayifKuyruk()
       .then(setQueue)
       .catch(() => setHata(true));
     void Promise.all([getStudyCards(), getCardCount()])
@@ -91,7 +91,6 @@ export default function KarargahScreen() {
           perf.filter((p) => p.tarih === bugun && p.kaynak === 'calisma').map((p) => p.card_id),
         );
         setBugunSayi(bugunKartlar.size);
-        setZayifSayi(zayifKartlar(perf, cards).length);
         // Unutma uyarısı: her kanunun SON çalışma tarihi (calisma logundan) → ≥7 gün
         // geçmişse "tekrar et" listesine. cardLaw haritası tek seferde kurulur.
         const cardLaw = new Map(cards.map((c) => [c.id, { id: c.law_id, ad: c.law_ad }]));
@@ -134,7 +133,7 @@ export default function KarargahScreen() {
 
   useFocusEffect(yukle);
 
-  // Etüt artık SADECE tekrar (yeni kart yok) → queue tamamı "tekrar".
+  // Etüt = zayıf havuz → queue tamamı zayıf mevzi (tekrar-hatırlat + denemede yanlış).
   const tekrarSayisi = queue?.length ?? 0;
   const bekleyen = queue?.length ?? 0;
   const bos = queue !== null && queue.length === 0;
@@ -254,18 +253,18 @@ export default function KarargahScreen() {
         </View>
       ) : null}
 
-      {/* HERO — Devam Et / Kart Akışı (lacivert). Boşsa "bugünlük bitti". */}
+      {/* HERO — ETÜT = zayıf havuz (eksik/zorlandığın kartları düzelt). Boşsa "zayıf yok". */}
       {bos ? (
         <View style={[styles.hero, styles.heroBitti]}>
           <View style={styles.heroMetin}>
             <AppText variant="etiket" color="altin" bold>
-              TEKRAR YOK
+              ZAYIF MEVZİ YOK
             </AppText>
             <AppText variant="baslik" color="beyaz" bold>
-              Etüt boş
+              Etüt boş 🎖️
             </AppText>
             <AppText variant="kucuk" color="kenarlik">
-              Tekrarı gelen kart yok — Mevzuat'tan yeni kart öğrenebilirsin
+              Eksik/zorlandığın kart yok — yeni kart öğrenmek için Mevzuat'a geç
             </AppText>
           </View>
           <MaterialCommunityIcons name="check-decagram" size={52} color={Palette.altin} />
@@ -273,25 +272,25 @@ export default function KarargahScreen() {
       ) : (
         <Pressable
           style={({ pressed }) => [styles.hero, pressed && styles.pressed]}
-          onPress={() => router.push('/akis')}
+          onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
           accessibilityRole="button"
-          accessibilityLabel="Kart akışına devam et">
+          accessibilityLabel="Etüt — zayıf mevzileri çalış">
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
               <AppText variant="etiket" color="altin" bold>
-                GÜNLÜK ETÜT
+                ETÜT
               </AppText>
               <AppText variant="baslik" color="beyaz" bold>
-                Etüt
+                Zayıf Mevziler
               </AppText>
-              {/* Ne işe yaradığını açıkça anlat: SADECE aralıklı tekrar (yeni öğrenme Mevzuat'ta). */}
+              {/* Etüt = hata + zorlandıklarını düzeltme bölümü (tekrar-hatırlat + denemede yanlış). */}
               <AppText variant="etiket" color="altinAcik2">
-                Öğrendiklerini tekrar et (aralıklı tekrar)
+                Eksik ve zorlandığın kartları tekrar et
               </AppText>
               <AppText variant="kucuk" color="kenarlik">
                 {bekleyen > 0
-                  ? `${bekleyen} kartın tekrarı geldi`
-                  : 'Tekrar zamanı gelen kart yok'}
+                  ? `${bekleyen} zayıf mevzi seni bekliyor`
+                  : 'Şu an düzeltilecek mevzi yok'}
               </AppText>
             </View>
             {/* Metalik altın play diski — gradyan + gölge, lacivert play */}
@@ -331,39 +330,12 @@ export default function KarargahScreen() {
         </View>
         {hedef && hedef > 0 ? <Bar oran={bugunSayi / hedef} /> : null}
         <View style={styles.gorevSatir}>
-          <Gorev sayi={tekrarSayisi} etiket="Bekleyen tekrar" />
+          <Gorev sayi={tekrarSayisi} etiket="Zayıf mevzi" />
           <Gorev sayi={bugunSayi} etiket="Bugün çalışılan" />
         </View>
       </View>
 
-      {/* GERİ BESLEME — zayıf mevzi (varsa) */}
-      {zayifSayi > 0 ? (
-        <Pressable
-          style={({ pressed }) => [styles.zayif, pressed && styles.pressed]}
-          onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}>
-          <LinearGradient
-            colors={ALTIN_GRADYAN}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-            style={styles.gbDisk}>
-            <MaterialCommunityIcons name="target" size={26} color={Palette.lacivert} />
-          </LinearGradient>
-          <View style={styles.zayifMetin}>
-            <AppText variant="etiket" color="amber" bold>
-              GERİ BESLEME
-            </AppText>
-            <AppText variant="kucuk" bold color="anaMetin">
-              {zayifSayi} zayıf mevzi — şimdi güçlendir
-            </AppText>
-            <AppText variant="etiket" color="solukMetin">
-              Son 3 oturumda zorlandığın konular
-            </AppText>
-          </View>
-          <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
-        </Pressable>
-      ) : null}
-
-      {/* 3 KUTU — Genel ilerleme (halka) · Nöbet serisi · Bekleyen kart */}
+      {/* 3 KUTU — Genel ilerleme (halka) · Nöbet serisi · Zayıf mevzi */}
       <View style={styles.kutuSatir}>
         <View style={[styles.card, styles.kutu]}>
           <Halka yuzde={hazirlik} />
@@ -386,13 +358,13 @@ export default function KarargahScreen() {
         </View>
         <View style={[styles.card, styles.kutu]}>
           <View style={styles.kutuDeger}>
-            <MaterialCommunityIcons name="layers-triple-outline" size={20} color={Palette.altinKoyu} />
+            <MaterialCommunityIcons name="target" size={20} color={Palette.altinKoyu} />
             <AppText variant="dev" bold color="anaMetin">
               {bekleyen}
             </AppText>
           </View>
           <AppText variant="etiket" color="solukMetin">
-            Bekleyen kart
+            Zayıf mevzi
           </AppText>
         </View>
       </View>
@@ -769,33 +741,6 @@ const styles = StyleSheet.create({
   gorev: {
     alignItems: 'center',
     flex: 1,
-  },
-
-  zayif: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.amber,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    padding: Spacing.three,
-  },
-  zayifMetin: {
-    flex: 1,
-    gap: Spacing.half,
-  },
-  gbDisk: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.25,
-    shadowRadius: 5,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 5,
   },
 
   // 3 kutu
