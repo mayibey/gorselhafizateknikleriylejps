@@ -10,6 +10,7 @@ import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } f
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { hecele } from '@/lib/hece';
+import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
 import { useRutbe } from '@/lib/rutbe-context';
@@ -35,6 +36,8 @@ export default function MevzuatScreen() {
   // getLaws.kartSayisi TÜM kartları (genel-özet dahil) sayar → %100 imkânsız olurdu; bu
   // yüzden paydayı bölüme bağlı kartlarla hesaplıyoruz (genel-özet kartlar hariç).
   const [toplamMap, setToplamMap] = useState<Map<number, number> | null>(null);
+  // law_id → SON çalışma tarihi (YYYY-MM-DD); yoksa kanun hiç çalışılmamış.
+  const [sonCalisma, setSonCalisma] = useState<Map<number, string>>(new Map());
   // card_id → law_id (Devam Et için) ve kronolojik performans log'u (son çalışma).
   const [cardLawMap, setCardLawMap] = useState<Map<number, number> | null>(null);
   const [perf, setPerf] = useState<PerformansSatir[] | null>(null);
@@ -74,12 +77,23 @@ export default function MevzuatScreen() {
         for (const c of allCards) clm.set(c.id, c.law_id);
         setCardLawMap(clm);
         setPerf(p);
+        // law_id → SON çalışma tarihi (calisma logundan) → "en son ... çalıştın" satırı.
+        const sc = new Map<number, string>();
+        for (const satir of p) {
+          if (satir.kaynak !== 'calisma') continue;
+          const lw = clm.get(satir.card_id);
+          if (lw == null) continue;
+          const mevcut = sc.get(lw);
+          if (!mevcut || satir.tarih > mevcut) sc.set(lw, satir.tarih);
+        }
+        setSonCalisma(sc);
       })
       .catch(() => {
         setIlerleme(new Map());
         setToplamMap(new Map());
         setCardLawMap(new Map());
         setPerf([]);
+        setSonCalisma(new Map());
       });
     // Favoriler (AsyncStorage) — focus'ta tazelenir.
     void getFavoriler()
@@ -100,6 +114,12 @@ export default function MevzuatScreen() {
   // law_id → {calisilan, toplam} (Devam Et + bar + çip filtresi). toplam = bölüme bağlı
   // (çalışılabilir) kart sayısı → %100 ulaşılabilir (genel-özet kartlar paydaya girmez).
   const toplamKart = (id: number) => toplamMap?.get(id) ?? 0;
+  // Kanunun son çalışmasından bu yana geçen gün (null = hiç çalışılmadı).
+  const sonGun = (id: number): number | null => {
+    const t = sonCalisma.get(id);
+    if (!t) return null;
+    return Math.round((Date.parse(`${bugunISO()}T00:00:00Z`) - Date.parse(`${t}T00:00:00Z`)) / 86400000);
+  };
   const lawIlerleme = new Map<number, { calisilan: number; toplam: number }>();
   for (const l of musterek) {
     lawIlerleme.set(l.id, { calisilan: ilerleme?.get(l.id) ?? 0, toplam: toplamKart(l.id) });
@@ -332,6 +352,7 @@ export default function MevzuatScreen() {
                 law={law}
                 calisilan={ilerleme?.get(law.id) ?? 0}
                 toplam={toplamKart(law.id)}
+                sonGun={sonGun(law.id)}
                 favori={favoriler.has(law.id)}
                 onFavori={favoriToggle}
                 onPress={kanunaGit}
@@ -460,6 +481,7 @@ function KanunSatir({
   law,
   calisilan,
   toplam,
+  sonGun,
   favori,
   onFavori,
   onPress,
@@ -467,6 +489,7 @@ function KanunSatir({
   law: LawWithCount;
   calisilan: number;
   toplam: number;
+  sonGun: number | null;
   favori: boolean;
   onFavori: (lawId: number) => void;
   onPress: (law: LawWithCount) => void;
@@ -477,6 +500,15 @@ function KanunSatir({
   const bos = calisilan === 0;
   const yuzde = toplam > 0 ? Math.min(100, Math.round((calisilan / toplam) * 100)) : 0;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
+  // "En son ne zaman çalışıldı" metni. sonGun null → hiç başlanmamış (kırmızı uyarı).
+  const sonMetin =
+    sonGun === null
+      ? 'Henüz başlamadın'
+      : sonGun <= 0
+        ? 'En son bugün çalıştın'
+        : sonGun === 1
+          ? 'En son dün çalıştın'
+          : `En son ${sonGun} gün önce çalıştın`;
 
   return (
     <Pressable
@@ -495,6 +527,17 @@ function KanunSatir({
       <AppText variant="kucuk" color="solukMetin">
         {calisilan} / {toplam} kart tamamlandı
       </AppText>
+      {/* En son ne zaman çalışıldı — hiç başlanmadıysa kırmızı uyarı. */}
+      <View style={st.sonSatir}>
+        <MaterialCommunityIcons
+          name={sonGun === null ? 'alert-circle-outline' : 'clock-outline'}
+          size={13}
+          color={sonGun === null ? Palette.kirmizi : Palette.solukMetin}
+        />
+        <AppText variant="etiket" bold={sonGun === null} color={sonGun === null ? 'kirmizi' : 'solukMetin'}>
+          {sonMetin}
+        </AppText>
+      </View>
       <View style={st.barSatir}>
         <Bar yuzde={yuzde} />
         <AppText variant="etiket" bold color="altinKoyu" style={st.barYuzde}>
@@ -802,6 +845,11 @@ const st = StyleSheet.create({
   // Kanun adı: kalan genişliği tam kaplar (monogram dışında boydan boya), heceli sarar.
   kanunAd: {
     flex: 1,
+  },
+  sonSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
   },
   // Alt aksiyon satırı: kalp + Başla/Devam/tik → kartın SAĞ ALTINDA.
   satirAlt: {
