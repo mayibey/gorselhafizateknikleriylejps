@@ -103,22 +103,29 @@ export default function MevzuatScreen() {
   for (const l of musterek) {
     lawIlerleme.set(l.id, { calisilan: ilerleme?.get(l.id) ?? 0, toplam: toplamKart(l.id) });
   }
-  const yuzdesi = (l: LawWithCount) => {
+  // Durum TAM SAYI sayımıyla (yuvarlama YOK) → 3 kategori KESİN ayrık (bos/devam/tamam),
+  // KanunSatir görünümüyle birebir. Eski yuvarlanmış yüzde sınır durumlarında (ör. 199/200
+  // → görünümde %100 ama filtrede <100) çoklu/yanlış sekme yapıyordu.
+  const lawDurum = (l: LawWithCount): 'bos' | 'devam' | 'tamam' => {
     const il = lawIlerleme.get(l.id);
-    return il && il.toplam > 0 ? (il.calisilan / il.toplam) * 100 : 0;
+    const cal = il?.calisilan ?? 0;
+    const top = il?.toplam ?? 0;
+    if (top > 0 && cal >= top) return 'tamam';
+    if (cal > 0) return 'devam';
+    return 'bos';
   };
 
   // Filtre zinciri: musterek → FAVORİ → ÇİP → arama → map (hepsi elde, yeni sorgu yok).
   const taban = favoriAcik ? musterek.filter((l) => favoriler.has(l.id)) : musterek;
   const cipli = taban.filter((l) => {
-    const y = yuzdesi(l);
+    const d = lawDurum(l);
     switch (aktifCip) {
       case 'devam':
-        return y > 0 && y < 100;
+        return d === 'devam';
       case 'baslamadi':
-        return y === 0;
+        return d === 'bos';
       case 'tamam':
-        return y === 100;
+        return d === 'tamam';
       default:
         return true;
     }
@@ -265,8 +272,10 @@ export default function MevzuatScreen() {
         <DurumKutu ikon="book-open-variant" baslik="Yükleniyor…" aciklama="" />
       ) : (
         <>
-          {/* Devam Et — son çalışılan / sıradaki kanun (3A türetmesi). 'yok' → gizli. */}
-          {devamLaw ? (
+          {/* Devam Et — YALNIZ "Tümü" görünümünde (filtre/favori seçiliyken gizli → hero
+              filtreden bağımsız olduğu için "kanun her sekmede görünüyor" karışıklığı olmaz). */}
+          {aktifCip === 'tumu' && !favoriAcik ? (
+            devamLaw ? (
             <DevamEtKart
               law={devamLaw}
               calisilan={ilerleme?.get(devamLaw.id) ?? 0}
@@ -289,6 +298,7 @@ export default function MevzuatScreen() {
                 Tebrikler — tüm müşterek mevzuatı bitirdin.
               </AppText>
             </View>
+          ) : null
           ) : null}
 
           {/* TÜM MEVZUAT bölüm başlığı */}
@@ -418,7 +428,7 @@ function DevamEtKart({
       <View style={st.devamGovde}>
         <Monogram no={no} boyut={72} variant="baslik" />
         <View style={st.devamOrta}>
-          <AppText variant="govde" bold color="anaMetin" numberOfLines={2}>
+          <AppText variant="govde" bold color="anaMetin">
             {law.ad}
           </AppText>
           <AppText variant="kucuk" color="solukMetin">
@@ -460,9 +470,11 @@ function KanunSatir({
   onFavori: (lawId: number) => void;
   onPress: (law: LawWithCount) => void;
 }) {
-  const yuzde = toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0;
-  const tam = yuzde === 100;
-  const bos = yuzde === 0;
+  // Durum TAM SAYI sayımıyla (yuvarlama YOK) → filtreyle BİREBİR tutarlı (sınır
+  // durumlarında çoklu/yanlış sekme sorunu biter). yüzde yalnız bar/etiket için.
+  const tam = toplam > 0 && calisilan >= toplam;
+  const bos = calisilan === 0;
+  const yuzde = toplam > 0 ? Math.min(100, Math.round((calisilan / toplam) * 100)) : 0;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
 
   return (
@@ -474,7 +486,8 @@ function KanunSatir({
       <Monogram no={no} boyut={56} variant="govde" />
 
       <View style={st.satirOrta}>
-        <AppText variant="govde" bold color="anaMetin" numberOfLines={1} ellipsizeMode="tail">
+        {/* Tam kanun adı — kısaltma YOK (gerekirse alt satıra sarar, kutuya sığar). */}
+        <AppText variant="govde" bold color="anaMetin">
           {law.ad}
         </AppText>
         <AppText variant="kucuk" color="solukMetin">
