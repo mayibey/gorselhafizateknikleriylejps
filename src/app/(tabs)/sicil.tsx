@@ -19,7 +19,7 @@ import {
   getStudyCards,
   sicilSifirla,
 } from '@/db/database';
-import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
+import type { CardWithSrs, GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
@@ -48,13 +48,24 @@ export default function SicilScreen() {
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
   const [hata, setHata] = useState(false);
+  // Öğrenilen kartların listesi (kutu ≥ OGRENILDI_KUTU) — "Öğrenilen"e tıklayınca açılır.
+  const [ogrenilenler, setOgrenilenler] = useState<CardWithSrs[]>([]);
+  const [ogrAcik, setOgrAcik] = useState(false);
 
   // Odağa her gelindiğinde (çalışmadan dönünce) branş + istatistik + zayıf analizi tazele.
   // İstatistik = ana veri (hata → retry); branş adı + zayıf analizi degrade olur (ayrı catch).
   const yukle = useCallback(() => {
     setHata(false);
     void Promise.all([getStudyCards(), getCardCount()])
-      .then(([studied, toplam]) => setIst(hesaplaIstatistik(studied, toplam)))
+      .then(([studied, toplam]) => {
+        setIst(hesaplaIstatistik(studied, toplam));
+        // Öğrenilen kartlar (kutu ≥ eşik) — kanun→madde sıralı (liste için).
+        setOgrenilenler(
+          studied
+            .filter((c) => c.kutu >= OGRENILDI_KUTU)
+            .sort((a, b) => a.law_ad.localeCompare(b.law_ad, 'tr') || a.madde_no.localeCompare(b.madde_no, 'tr')),
+        );
+      })
       .catch(() => setHata(true));
     // Zayıf analizi AYRI: hatası İLERLEME/KUTU DAĞILIMI'nı bozmaz.
     void Promise.all([getPerformans(), getAllCards()])
@@ -101,9 +112,40 @@ export default function SicilScreen() {
             </AppText>
             <View style={styles.statSatir}>
               <Stat deger={`${ist.calisilanKart}/${ist.toplamKart}`} etiket="Çalışılan" />
-              <Stat deger={`${ist.ogrenilenKart}`} etiket="Öğrenilen" />
+              <Stat
+                deger={`${ist.ogrenilenKart}`}
+                etiket="Öğrenilen"
+                onPress={() => setOgrAcik((v) => !v)}
+                aktif={ogrAcik}
+              />
               <Stat deger={`%${ist.hazirlikYuzde}`} etiket="Hazırlık" />
             </View>
+
+            {/* "Öğrenilen"e tıklayınca öğrenilen kartların listesi (kutu ≥ eşik). */}
+            {ogrAcik ? (
+              <View style={styles.ogrListe}>
+                {ogrenilenler.length === 0 ? (
+                  <AppText variant="kucuk" color="solukMetin">
+                    Henüz öğrenilen kart yok — bir kart kutu {OGRENILDI_KUTU}+ olunca (üst üste
+                    bildikçe) öğrenildi sayılır.
+                  </AppText>
+                ) : (
+                  ogrenilenler.map((c) => (
+                    <View key={c.id} style={styles.ogrSatir}>
+                      <AppText variant="kucuk" bold style={styles.ogrAd} numberOfLines={1}>
+                        {c.madde_no}
+                        {c.baslik ? ` — ${c.baslik}` : ''}
+                      </AppText>
+                      <View style={styles.ogrRozet}>
+                        <AppText variant="etiket" color="beyaz" bold>
+                          K{Math.min(c.kutu, MAKS_KUTU)}
+                        </AppText>
+                      </View>
+                    </View>
+                  ))
+                )}
+              </View>
+            ) : null}
           </View>
 
           {/* Kutu dağılımı (Leitner) */}
@@ -315,16 +357,42 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
   );
 }
 
-function Stat({ deger, etiket }: { deger: string; etiket: string }) {
-  return (
-    <View style={styles.stat}>
+function Stat({
+  deger,
+  etiket,
+  onPress,
+  aktif,
+}: {
+  deger: string;
+  etiket: string;
+  onPress?: () => void;
+  aktif?: boolean;
+}) {
+  const ic = (
+    <>
       <AppText variant="baslik" bold>
         {deger}
       </AppText>
-      <AppText variant="etiket" color="solukMetin">
-        {etiket}
-      </AppText>
-    </View>
+      <View style={styles.statEtiket}>
+        <AppText variant="etiket" color={onPress ? 'lacivert' : 'solukMetin'} bold={!!onPress}>
+          {etiket}
+        </AppText>
+        {onPress ? (
+          <MaterialCommunityIcons
+            name={aktif ? 'chevron-up' : 'chevron-down'}
+            size={14}
+            color={Palette.lacivert}
+          />
+        ) : null}
+      </View>
+    </>
+  );
+  return onPress ? (
+    <Pressable style={styles.stat} onPress={onPress} accessibilityRole="button">
+      {ic}
+    </Pressable>
+  ) : (
+    <View style={styles.stat}>{ic}</View>
   );
 }
 
@@ -400,6 +468,32 @@ const styles = StyleSheet.create({
   stat: {
     alignItems: 'center',
     flex: 1,
+  },
+  statEtiket: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 2,
+  },
+  // Öğrenilen kart listesi (Öğrenilen'e tıklayınca açılır)
+  ogrListe: {
+    borderTopWidth: 1,
+    borderTopColor: Palette.kenarlik,
+    paddingTop: Spacing.two,
+    gap: Spacing.one,
+  },
+  ogrSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  ogrAd: {
+    flex: 1,
+  },
+  ogrRozet: {
+    backgroundColor: Palette.yesil,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.half,
+    borderRadius: Radius.s,
   },
   kutuSatir: {
     flexDirection: 'row',
