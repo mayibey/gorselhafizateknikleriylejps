@@ -24,7 +24,7 @@ import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/p
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
-import { hesaplaIstatistik, type Istatistik, type KutuDagilimi, MAKS_KUTU, OGRENILDI_KUTU } from '@/lib/stats';
+import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
 
 type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet };
 type SicilVeri = { kayitlar: SicilKaydi[]; durum: GeriBesDurum };
@@ -48,8 +48,8 @@ export default function SicilScreen() {
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
   const [hata, setHata] = useState(false);
-  // Öğrenilen kartların listesi (kutu ≥ OGRENILDI_KUTU) — "Öğrenilen"e tıklayınca açılır.
-  const [ogrenilenler, setOgrenilenler] = useState<CardWithSrs[]>([]);
+  // Çalışılmış kartlar (öğrenilen listesi render'da zayıf havuza göre türetilir).
+  const [studied, setStudied] = useState<CardWithSrs[]>([]);
   const [ogrAcik, setOgrAcik] = useState(false);
 
   // Odağa her gelindiğinde (çalışmadan dönünce) branş + istatistik + zayıf analizi tazele.
@@ -57,14 +57,9 @@ export default function SicilScreen() {
   const yukle = useCallback(() => {
     setHata(false);
     void Promise.all([getStudyCards(), getCardCount()])
-      .then(([studied, toplam]) => {
-        setIst(hesaplaIstatistik(studied, toplam));
-        // Öğrenilen kartlar (kutu ≥ eşik) — kanun→madde sıralı (liste için).
-        setOgrenilenler(
-          studied
-            .filter((c) => c.kutu >= OGRENILDI_KUTU)
-            .sort((a, b) => a.law_ad.localeCompare(b.law_ad, 'tr') || a.madde_no.localeCompare(b.madde_no, 'tr')),
-        );
+      .then(([cards, toplam]) => {
+        setIst(hesaplaIstatistik(cards, toplam));
+        setStudied(cards); // öğrenilen listesi render'da zayıf havuza göre süzülür
       })
       .catch(() => setHata(true));
     // Zayıf analizi AYRI: hatası İLERLEME/KUTU DAĞILIMI'nı bozmaz.
@@ -79,6 +74,21 @@ export default function SicilScreen() {
   }, []);
 
   useFocusEffect(yukle);
+
+  // METRİKLER (kutusuz, performans temelli):
+  //  Çalışılan = en az 1 kez cevaplanan kart. Öğrenilen = çalışılan AMA zayıf havuzda
+  //  OLMAYAN (son 2 denemesi iyi → oturmuş) kart. Hazırlık = öğrenilen ÷ toplam.
+  const zayifSet = new Set((zayif?.liste ?? []).map((z) => z.card.id));
+  const ogrenilenList = studied
+    .filter((c) => c.kutu >= 1 && !zayifSet.has(c.id))
+    .sort(
+      (a, b) =>
+        a.law_ad.localeCompare(b.law_ad, 'tr') || a.madde_no.localeCompare(b.madde_no, 'tr'),
+    );
+  const calisilanN = ist?.calisilanKart ?? 0;
+  const toplamN = ist?.toplamKart ?? 0;
+  const ogrenilenN = ogrenilenList.length;
+  const hazirlikN = toplamN > 0 ? Math.round((ogrenilenN / toplamN) * 100) : 0;
 
   return (
     <Screen title="Evsaf">
@@ -109,56 +119,40 @@ export default function SicilScreen() {
           <View style={styles.istatistikKart}>
             <BolumBaslik
               baslik="İLERLEME"
-              bilgi="Çalışılan = en az 1 kez gördüğün kart. Öğrenilen = üst üste bildiğin için 4. kutuya (veya üstüne) çıkmış kart (üstüne dokun, listesini gör). Hazırlık % = öğrenilen ÷ toplam kart — sınava hazırlık oranın."
+              bilgi="Çalışılan = en az 1 kez gördüğün kart. Öğrenilen = doğru bilip oturmuş (zayıf mevzilerde olmayan) kart — üstüne dokun, listesini gör. Hazırlık % = öğrenilen ÷ toplam kart, sınava hazırlık oranın."
             />
             <View style={styles.statSatir}>
-              <Stat deger={`${ist.calisilanKart}/${ist.toplamKart}`} etiket="Çalışılan" />
+              <Stat deger={`${calisilanN}/${toplamN}`} etiket="Çalışılan" />
               <Stat
-                deger={`${ist.ogrenilenKart}`}
+                deger={`${ogrenilenN}`}
                 etiket="Öğrenilen"
                 onPress={() => setOgrAcik((v) => !v)}
                 aktif={ogrAcik}
               />
-              <Stat deger={`%${ist.hazirlikYuzde}`} etiket="Hazırlık" />
+              <Stat deger={`%${hazirlikN}`} etiket="Hazırlık" />
             </View>
 
-            {/* "Öğrenilen"e tıklayınca öğrenilen kartların listesi (kutu ≥ eşik). */}
+            {/* "Öğrenilen"e tıklayınca öğrenilen kartların listesi. */}
             {ogrAcik ? (
               <View style={styles.ogrListe}>
-                {ogrenilenler.length === 0 ? (
+                {ogrenilenList.length === 0 ? (
                   <AppText variant="kucuk" color="solukMetin">
-                    Henüz öğrenilen kart yok — bir kart kutu {OGRENILDI_KUTU}+ olunca (üst üste
-                    bildikçe) öğrenildi sayılır.
+                    Henüz oturmuş kart yok — bir kartı doğru bilip zayıf mevzilerden çıkınca burada
+                    öğrenilmiş sayılır.
                   </AppText>
                 ) : (
-                  ogrenilenler.map((c) => (
+                  ogrenilenList.map((c) => (
                     <View key={c.id} style={styles.ogrSatir}>
+                      <MaterialCommunityIcons name="check-circle" size={15} color={Palette.yesil} />
                       <AppText variant="kucuk" bold style={styles.ogrAd} numberOfLines={1}>
                         {c.madde_no}
                         {c.baslik ? ` — ${c.baslik}` : ''}
                       </AppText>
-                      <View style={styles.ogrRozet}>
-                        <AppText variant="etiket" color="beyaz" bold>
-                          K{Math.min(c.kutu, MAKS_KUTU)}
-                        </AppText>
-                      </View>
                     </View>
                   ))
                 )}
               </View>
             ) : null}
-          </View>
-
-          {/* Kutu dağılımı (Leitner) */}
-          <View style={styles.istatistikKart}>
-            <BolumBaslik
-              baslik="KUTU DAĞILIMI"
-              bilgi={`Her kart bir kutuda durur (1-6). Doğru bildikçe ÜST kutuya çıkar, şaşırınca 1. kutuya döner. Kutu düşükse Karargah → Etüt'te SIK (1·2·4 gün), yükseldikçe SEYREK (7·14·30 gün) karşına gelir. Kutu ${OGRENILDI_KUTU} ve üstü = öğrenildi (yeşil). Çubuklar sağa/yeşile kaydıkça sınava o kadar hazırsın.`}
-            />
-            <KutuGrafik dagilim={ist.kutuDagilimi} />
-            <AppText variant="etiket" color="solukMetin">
-              Kutu {OGRENILDI_KUTU}+ = öğrenildi
-            </AppText>
           </View>
 
           {/* Zayıf Mevziler — geri besleme havuzu (son denemede zor/yanlış) */}
@@ -427,44 +421,6 @@ function Stat({
   );
 }
 
-/** Kutu 1..6 için basit dikey çubuk grafiği. Öğrenilen kutular (≥OGRENILDI_KUTU) yeşil. */
-function KutuGrafik({ dagilim }: { dagilim: KutuDagilimi }) {
-  const kutular = Array.from({ length: MAKS_KUTU }, (_, i) => i + 1);
-  const maks = Math.max(1, ...kutular.map((k) => dagilim[k] ?? 0));
-
-  return (
-    <View style={styles.kutuSatir}>
-      {kutular.map((k) => {
-        const adet = dagilim[k] ?? 0;
-        const yukseklik = adet === 0 ? 4 : Math.round((adet / maks) * 52) + 12;
-        const ogrenildi = k >= OGRENILDI_KUTU;
-        return (
-          <View key={k} style={styles.kutuSutun}>
-            <AppText variant="etiket" color="solukMetin">
-              {adet}
-            </AppText>
-            <View style={styles.kutuRay}>
-              <View
-                style={[
-                  styles.kutuBar,
-                  {
-                    height: yukseklik,
-                    backgroundColor:
-                      adet === 0 ? Palette.kenarlik : ogrenildi ? Palette.yesil : Palette.amber,
-                  },
-                ]}
-              />
-            </View>
-            <AppText variant="etiket" color={ogrenildi ? 'yesil' : 'solukMetin'} bold>
-              {k}
-            </AppText>
-          </View>
-        );
-      })}
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
   pressed: {
     opacity: 0.85,
@@ -530,32 +486,6 @@ const styles = StyleSheet.create({
   },
   ogrAd: {
     flex: 1,
-  },
-  ogrRozet: {
-    backgroundColor: Palette.yesil,
-    paddingHorizontal: Spacing.two,
-    paddingVertical: Spacing.half,
-    borderRadius: Radius.s,
-  },
-  kutuSatir: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    gap: Spacing.two,
-    marginTop: Spacing.one,
-  },
-  kutuSutun: {
-    flex: 1,
-    alignItems: 'center',
-    gap: Spacing.one,
-  },
-  kutuRay: {
-    height: 64,
-    width: '60%',
-    justifyContent: 'flex-end',
-  },
-  kutuBar: {
-    width: '100%',
-    borderRadius: Radius.s,
   },
   emirKart: {
     backgroundColor: Palette.kirmizi,

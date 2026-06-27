@@ -47,6 +47,8 @@ export default function KarargahScreen() {
   const [hedef, setHedef] = useState<number | null>(null);
   const [bugunSayi, setBugunSayi] = useState(0);
   const [zayifSayi, setZayifSayi] = useState(0);
+  // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
+  const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [hata, setHata] = useState(false);
 
   // Ekrana her dönüldüğünde tazele. Kuyruk = ana veri (hata → retry); gerisi degrade olur.
@@ -90,6 +92,27 @@ export default function KarargahScreen() {
         );
         setBugunSayi(bugunKartlar.size);
         setZayifSayi(zayifKartlar(perf, cards).length);
+        // Unutma uyarısı: her kanunun SON çalışma tarihi (calisma logundan) → ≥7 gün
+        // geçmişse "tekrar et" listesine. cardLaw haritası tek seferde kurulur.
+        const cardLaw = new Map(cards.map((c) => [c.id, { id: c.law_id, ad: c.law_ad }]));
+        const sonCalisma = new Map<number, { ad: string; tarih: string }>();
+        for (const p of perf) {
+          if (p.kaynak !== 'calisma') continue;
+          const cl = cardLaw.get(p.card_id);
+          if (!cl) continue;
+          const mevcut = sonCalisma.get(cl.id);
+          if (!mevcut || p.tarih > mevcut.tarih) sonCalisma.set(cl.id, { ad: cl.ad, tarih: p.tarih });
+        }
+        const bugunMs = Date.parse(`${bugun}T00:00:00Z`);
+        const stale = [...sonCalisma.entries()]
+          .map(([lawId, v]) => ({
+            lawId,
+            ad: v.ad,
+            gun: Math.round((bugunMs - Date.parse(`${v.tarih}T00:00:00Z`)) / 86400000),
+          }))
+          .filter((u) => u.gun >= 7)
+          .sort((a, b) => b.gun - a.gun);
+        setUnutulan(stale);
         // Son konu: en son 'calisma' performans satırı → o kartın madde_no'su (gerçek veri).
         let son: string | null = null;
         for (let i = perf.length - 1; i >= 0; i--) {
@@ -103,7 +126,10 @@ export default function KarargahScreen() {
         }
         setSonKonu(son);
       })
-      .catch(() => setGunMadde(null));
+      .catch(() => {
+        setGunMadde(null);
+        setUnutulan([]);
+      });
   }, []);
 
   useFocusEffect(yukle);
@@ -192,6 +218,41 @@ export default function KarargahScreen() {
           />
         </View>
       </View>
+
+      {/* UNUTMA UYARISI — ≥7 gündür tekrar edilmemiş kanunlar (tedbir bandı). */}
+      {unutulan.length > 0 ? (
+        <View style={styles.unutBanner}>
+          <View style={styles.unutBaslik}>
+            <MaterialCommunityIcons name="clock-alert-outline" size={18} color={Palette.amber} />
+            <AppText variant="etiket" bold color="amber" style={styles.unutBaslikAd}>
+              TEKRAR ZAMANI
+            </AppText>
+          </View>
+          <AppText variant="kucuk" color="anaMetin">
+            Şu kanunlara en az 7 gündür tekrar yapmadın — unutmamak için tekrar etmeni öneriyoruz:
+          </AppText>
+          {unutulan.slice(0, 5).map((u) => (
+            <Pressable
+              key={u.lawId}
+              style={({ pressed }) => [styles.unutSatir, pressed && styles.pressed]}
+              onPress={() => router.push({ pathname: '/patika', params: { lawId: String(u.lawId) } })}>
+              <MaterialCommunityIcons name="history" size={16} color={Palette.altinKoyu} />
+              <AppText variant="kucuk" bold color="lacivert" style={styles.unutAd} numberOfLines={1}>
+                {u.ad}
+              </AppText>
+              <AppText variant="etiket" color="solukMetin">
+                {u.gun} gün
+              </AppText>
+              <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+            </Pressable>
+          ))}
+          {unutulan.length > 5 ? (
+            <AppText variant="etiket" color="solukMetin">
+              +{unutulan.length - 5} kanun daha
+            </AppText>
+          ) : null}
+        </View>
+      ) : null}
 
       {/* HERO — Devam Et / Kart Akışı (lacivert). Boşsa "bugünlük bitti". */}
       {bos ? (
@@ -652,6 +713,37 @@ const styles = StyleSheet.create({
   },
 
   // Krem kartlar
+  // Unutma uyarı bandı (amber çerçeveli)
+  unutBanner: {
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.amber,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    gap: Spacing.two,
+  },
+  unutBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  unutBaslikAd: {
+    letterSpacing: 1,
+  },
+  unutSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.two,
+  },
+  unutAd: {
+    flex: 1,
+  },
   card: {
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kenarlik,

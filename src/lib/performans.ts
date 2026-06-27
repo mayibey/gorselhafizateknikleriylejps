@@ -1,8 +1,9 @@
 /**
  * Saf performans analizi (akıllı öğrenme — Katman 2). DB/IO YOK; performans+cards enjekte.
- * "Geri besleme havuzu" (zayıf kartlar) = SON-DENEME recency mantığı:
- *  - Bir kartın EN GÜNCEL performans satırı "kötü" ise zayıftır.
- *  - Son deneme iyi (biliyorum/dogru/tekrar) ise → toparlanmış, havuzdan çıkar.
+ * "Geri besleme havuzu" (zayıf kartlar) = bir kart kötü yapılınca girer, ÇIKIŞ için
+ * SON İKİ deneme de iyi olmalı (tek doğru yetmez → "2 doğru" kuralı, daha güvenli).
+ *  - Hiç kötü yapılmamış kart → havuzda değil.
+ *  - Kötü yapılmış kart → son 2 deneme ardışık iyi olana kadar havuzda kalır.
  * Kötü = çalışmada 'zor' VEYA quiz'de 'yanlis'. 'tekrar' zayıf SAYILMAZ.
  * stats.ts/quiz.ts deseni: saf, test edilebilir.
  */
@@ -38,8 +39,8 @@ function kartHarita(cards: CardWithLaw[]): Map<number, CardWithLaw> {
 }
 
 /**
- * Zayıf kartlar: SON performans satırı kötü olanlar (recency).
- * getPerformans() ekleme sırasıyla (kronolojik) döndüğü için son giren = en güncel.
+ * Zayıf kartlar: bir kez kötü yapılmış VE son 2 denemesi ardışık iyi OLMAYAN kartlar.
+ * getPerformans() ekleme sırasıyla (kronolojik) döndüğü için sondakiler = en güncel.
  */
 export function zayifKartlar(performans: PerformansSatir[], cards: CardWithLaw[]): ZayifKart[] {
   const harita = kartHarita(cards);
@@ -53,14 +54,17 @@ export function zayifKartlar(performans: PerformansSatir[], cards: CardWithLaw[]
 
   const sonuc: ZayifKart[] = [];
   for (const [cardId, satirlar] of grup) {
-    const son = satirlar[satirlar.length - 1];
-    if (!kotuMu(son)) continue; // son deneme iyi → toparlandı
+    if (!satirlar.some(kotuMu)) continue; // hiç kötü yapılmamış → havuzda değil
+    // Sondan başlayarak ardışık "iyi" deneme sayısı; 2'ye ulaştıysa toparlanmış (çıkar).
+    let ardisikIyi = 0;
+    for (let i = satirlar.length - 1; i >= 0 && !kotuMu(satirlar[i]); i--) ardisikIyi++;
+    if (ardisikIyi >= 2) continue; // 2 ardışık doğru → havuzdan çıktı
     const card = harita.get(cardId);
     if (!card) continue; // metadata yoksa atla
     sonuc.push({
       card,
       yanlisSayisi: satirlar.filter(kotuMu).length,
-      sonTarih: son.tarih,
+      sonTarih: satirlar[satirlar.length - 1].tarih,
     });
   }
 
