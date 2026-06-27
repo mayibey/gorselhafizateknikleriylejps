@@ -209,27 +209,29 @@ export default function AkisScreen() {
     ? `${cozulen.tekrar + cozulen.yeni} kart çalıştın.`
     : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`;
 
-  // Kart üzerinde yatay swipe = ileri/geri (oklarla aynı; SADECE index, SRS'e dokunmaz).
-  // Yatay-only: tap zoom'a, dikey sürükleme ScrollView'a kalır. runOnJS → worklet gerekmez.
-  const sonIdx = (queue?.length ?? 1) - 1;
-  const kartKaydir = Gesture.Pan()
-    .runOnJS(true)
-    .activeOffsetX([-20, 20])
-    .failOffsetY([-15, 15])
-    .onEnd((e) => {
-      if (e.translationX <= -SWIPE_ESIK) setIndex((i) => Math.min(sonIdx, i + 1));
-      else if (e.translationX >= SWIPE_ESIK) setIndex((i) => Math.max(0, i - 1));
-    });
-
   const c = aktif ? queue![index] : null;
   const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
   // Kartın GERÇEK ses dosyası (mp3) var mı → varsa TtsBar (robotik TTS) yerine SesOynatici.
   const sesVar = !!(c && c.gorsel_yolu && KART_SESLERI[c.gorsel_yolu]);
   // Kartın görseli var mı (registry'de). Görselli kartta görsel görünmeden "Öğrendim"
-  // basılamaz; görselsiz (yer tutucu) kartta beklenecek görsel yok → hemen açık.
+  // basılamaz / kart KAYDIRILAMAZ; görselsiz (yer tutucu) kartta beklenecek görsel yok → açık.
   const gorselVar = !!(c && c.gorsel_yolu && KART_GORSELLERI[c.gorsel_yolu]);
   const ogrenebilir = !gorselVar || gorselGorundu;
+
+  // Kart üzerinde yatay swipe = ileri/geri (oklarla aynı; SADECE index, SRS'e dokunmaz).
+  // Yatay-only: tap zoom'a, dikey sürükleme ScrollView'a kalır. runOnJS → worklet gerekmez.
+  // GÖRSEL GÖRÜNMEDEN kaydırma YOK (ogrenebilir false → swipe yutulur).
+  const sonIdx = (queue?.length ?? 1) - 1;
+  const kartKaydir = Gesture.Pan()
+    .runOnJS(true)
+    .activeOffsetX([-20, 20])
+    .failOffsetY([-15, 15])
+    .onEnd((e) => {
+      if (!ogrenebilir) return; // görsel görünene kadar kaydırma kilitli
+      if (e.translationX <= -SWIPE_ESIK) setIndex((i) => Math.min(sonIdx, i + 1));
+      else if (e.translationX >= SWIPE_ESIK) setIndex((i) => Math.max(0, i - 1));
+    });
 
   // GÖRSEL KUTUSU = görselin DOĞAL oranı, kalan alana sığar (contain). Oran expo-image
   // onLoad'dan (oran state) gelir → web+native AYNI, crash YOK. Kutu bu orana göre alan
@@ -343,17 +345,21 @@ export default function AkisScreen() {
                   />
                 </View>
                 <Pressable
-                  disabled={index === 0}
+                  disabled={index === 0 || !ogrenebilir}
                   onPress={() => setIndex((i) => Math.max(0, i - 1))}
-                  style={[styles.okBtn, styles.okSol, index === 0 && styles.okPasif]}
+                  style={[styles.okBtn, styles.okSol, (index === 0 || !ogrenebilir) && styles.okPasif]}
                   hitSlop={8}
                   accessibilityLabel="Önceki kart">
                   <MaterialCommunityIcons name="chevron-left" size={32} color={Palette.beyaz} />
                 </Pressable>
                 <Pressable
-                  disabled={index >= queue.length - 1}
+                  disabled={index >= queue.length - 1 || !ogrenebilir}
                   onPress={() => setIndex((i) => Math.min(queue.length - 1, i + 1))}
-                  style={[styles.okBtn, styles.okSag, index >= queue.length - 1 && styles.okPasif]}
+                  style={[
+                    styles.okBtn,
+                    styles.okSag,
+                    (index >= queue.length - 1 || !ogrenebilir) && styles.okPasif,
+                  ]}
                   hitSlop={8}
                   accessibilityLabel="Sonraki kart">
                   <MaterialCommunityIcons name="chevron-right" size={32} color={Palette.beyaz} />
