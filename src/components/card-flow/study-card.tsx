@@ -18,10 +18,13 @@ import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
 export function StudyCard({
   card,
   onOran,
+  onGorundu,
 }: {
   card: CardWithSrs;
   /** Görselin DOĞAL oranı (genişlik/yükseklik) yüklenince bildirilir (kutu boyutu için). */
   onOran?: (oran: number) => void;
+  /** Görsel ekranda görünür olunca (yüklendi VEYA hata) bildirilir → "Öğrendim" kilidi açılır. */
+  onGorundu?: () => void;
 }) {
   const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
   const { kimlik } = useCihazKimlik();
@@ -52,7 +55,10 @@ export function StudyCard({
             onLoad={(e) => {
               const { width, height } = e.source;
               if (width > 0 && height > 0) onOran?.(width / height);
+              onGorundu?.(); // görsel ekranda → "Öğrendim" kilidi açılsın
             }}
+            // Yüklenemese bile kilitlenip kalmasın (görmeden öğrendim engeli soft-lock olmasın).
+            onError={() => onGorundu?.()}
           />
           {filigran}
         </Pressable>

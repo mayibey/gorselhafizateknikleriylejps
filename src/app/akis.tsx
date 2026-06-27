@@ -112,6 +112,10 @@ export default function AkisScreen() {
   const [modalAcik, setModalAcik] = useState(false);
   const [bugunSorma, setBugunSorma] = useState(false);
 
+  // Görsel ekranda görünene (yüklenene/hata) kadar "Öğrendim" basılamaz → görmeden
+  // öğrendim işaretlenmesin. Kart değişince sıfırlanır; StudyCard onGorundu ile true olur.
+  const [gorselGorundu, setGorselGorundu] = useState(false);
+
   // Madde uzunluğunu (sığmıyor mu) içerik vs görünür yükseklikten hesapla.
   const maddeUzunHesapla = useCallback(() => {
     setMaddeUzun(maddeIcerikRef.current > maddeVpRef.current + 4);
@@ -126,6 +130,7 @@ export default function AkisScreen() {
     maddeOfsetRef.current = 0;
     maddeScrollRef.current?.scrollTo({ y: 0, animated: false });
     setOran(null); // yeni kartın oranı onLoad ile gelene kadar fallback
+    setGorselGorundu(false); // yeni görsel görünene kadar Öğrendim kilitli
     setModalAcik(false); // yeni kartta modal kapalı (anlatimBitti zaten sıfırlanıyor)
     setBugunSorma(false);
   }, [index]);
@@ -221,6 +226,10 @@ export default function AkisScreen() {
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
   // Kartın GERÇEK ses dosyası (mp3) var mı → varsa TtsBar (robotik TTS) yerine SesOynatici.
   const sesVar = !!(c && c.gorsel_yolu && KART_SESLERI[c.gorsel_yolu]);
+  // Kartın görseli var mı (registry'de). Görselli kartta görsel görünmeden "Öğrendim"
+  // basılamaz; görselsiz (yer tutucu) kartta beklenecek görsel yok → hemen açık.
+  const gorselVar = !!(c && c.gorsel_yolu && KART_GORSELLERI[c.gorsel_yolu]);
+  const ogrenebilir = !gorselVar || gorselGorundu;
 
   // GÖRSEL KUTUSU = görselin DOĞAL oranı, kalan alana sığar (contain). Oran expo-image
   // onLoad'dan (oran state) gelir → web+native AYNI, crash YOK. Kutu bu orana göre alan
@@ -327,7 +336,11 @@ export default function AkisScreen() {
                       ? { width: gorselBoyut.w, height: gorselBoyut.h }
                       : styles.gorselSarOran,
                   ]}>
-                  <StudyCard card={queue[index]} onOran={setOran} />
+                  <StudyCard
+                    card={queue[index]}
+                    onOran={setOran}
+                    onGorundu={() => setGorselGorundu(true)}
+                  />
                 </View>
                 <Pressable
                   disabled={index === 0}
@@ -532,14 +545,25 @@ export default function AkisScreen() {
               </AppText>
             ) : null}
             <View style={styles.butonSatir}>
+              {/* Öğrendim — görsel görünene kadar KİLİTLİ (görmeden öğrendim işaretlenmesin). */}
               <Pressable
-                style={({ pressed }) => [styles.bildimBtn, pressed && styles.pressed]}
-                onPress={() => void cevapla('biliyorum')}>
+                disabled={!ogrenebilir}
+                style={({ pressed }) => [
+                  styles.bildimBtn,
+                  pressed && styles.pressed,
+                  !ogrenebilir && styles.btnPasif,
+                ]}
+                onPress={() => void cevapla('biliyorum')}
+                accessibilityState={{ disabled: !ogrenebilir }}>
                 <View style={styles.bildimDaire}>
-                  <MaterialCommunityIcons name="check-bold" size={18} color={Palette.lacivert} />
+                  <MaterialCommunityIcons
+                    name={ogrenebilir ? 'check-bold' : 'eye-off-outline'}
+                    size={18}
+                    color={Palette.lacivert}
+                  />
                 </View>
                 <AppText variant="govde" color="kartMetinAcik" bold>
-                  Öğrendim
+                  {ogrenebilir ? 'Öğrendim' : 'Önce görseli gör'}
                 </AppText>
               </Pressable>
               <Pressable
@@ -944,5 +968,8 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.85,
+  },
+  btnPasif: {
+    opacity: 0.45,
   },
 });
