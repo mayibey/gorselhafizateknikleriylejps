@@ -14,7 +14,7 @@ export function initDatabase(): Promise<void>;
 export function getStudyCards(): Promise<CardWithSrs[]>;
 export function getAllCards(): Promise<CardWithLaw[]>;
 export function getCardCount(): Promise<number>;
-export function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
+export function getDailyQueue(): Promise<QueueCard[]>;
 export function getBranches(): Promise<Branch[]>;
 export function getLaws(bransSlug: string): Promise<LawWithCount[]>;
 export function getCardsByLaw(lawId: number): Promise<QueueCard[]>;

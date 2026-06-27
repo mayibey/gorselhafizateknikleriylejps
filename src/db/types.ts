@@ -17,7 +17,7 @@ export interface Backend {
   /** Tüm kartlar + kanun bilgisi (srs JOIN'siz; performans analizi için metadata). */
   getAllCards(): Promise<CardWithLaw[]>;
   getCardCount(): Promise<number>;
-  getDailyQueue(yeniLimit?: number): Promise<QueueCard[]>;
+  getDailyQueue(): Promise<QueueCard[]>;
   getBranches(): Promise<Branch[]>;
   getLaws(bransSlug: string): Promise<LawWithCount[]>;
   getCardsByLaw(lawId: number): Promise<QueueCard[]>;

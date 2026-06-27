@@ -108,8 +108,8 @@ export default function KarargahScreen() {
 
   useFocusEffect(yukle);
 
-  const tekrarSayisi = queue?.filter((c) => !c.yeni).length ?? 0;
-  const yeniSayisi = queue?.filter((c) => c.yeni).length ?? 0;
+  // Etüt artık SADECE tekrar (yeni kart yok) → queue tamamı "tekrar".
+  const tekrarSayisi = queue?.length ?? 0;
   const bekleyen = queue?.length ?? 0;
   const bos = queue !== null && queue.length === 0;
   const bransAd = branches?.find((b) => b.slug === brans)?.ad ?? null;
@@ -198,13 +198,13 @@ export default function KarargahScreen() {
         <View style={[styles.hero, styles.heroBitti]}>
           <View style={styles.heroMetin}>
             <AppText variant="etiket" color="altin" bold>
-              BUGÜNLÜK BİTTİ
+              TEKRAR YOK
             </AppText>
             <AppText variant="baslik" color="beyaz" bold>
-              Tebrikler
+              Etüt boş
             </AppText>
             <AppText variant="kucuk" color="kenarlik">
-              Yarın yeni tekrarlar gelecek
+              Tekrarı gelen kart yok — Mevzuat'tan yeni kart öğrenebilirsin
             </AppText>
           </View>
           <MaterialCommunityIcons name="check-decagram" size={52} color={Palette.altin} />
@@ -223,14 +223,14 @@ export default function KarargahScreen() {
               <AppText variant="baslik" color="beyaz" bold>
                 Etüt
               </AppText>
-              {/* Ne işe yaradığını açıkça anlat: aralıklı tekrar + yeni kart. */}
+              {/* Ne işe yaradığını açıkça anlat: SADECE aralıklı tekrar (yeni öğrenme Mevzuat'ta). */}
               <AppText variant="etiket" color="altinAcik2">
-                Öğrendiklerini tekrar et + yeni kart öğren
+                Öğrendiklerini tekrar et (aralıklı tekrar)
               </AppText>
               <AppText variant="kucuk" color="kenarlik">
                 {bekleyen > 0
-                  ? `${bekleyen} kart hazır (vakti gelen tekrarlar + yeni)`
-                  : 'Kaldığın yerden çalış'}
+                  ? `${bekleyen} kartın tekrarı geldi`
+                  : 'Tekrar zamanı gelen kart yok'}
               </AppText>
             </View>
             {/* Metalik altın play diski — gradyan + gölge, lacivert play */}
@@ -270,8 +270,7 @@ export default function KarargahScreen() {
         </View>
         {hedef && hedef > 0 ? <Bar oran={bugunSayi / hedef} /> : null}
         <View style={styles.gorevSatir}>
-          <Gorev sayi={tekrarSayisi} etiket="Tekrar" />
-          <Gorev sayi={yeniSayisi} etiket="Yeni" />
+          <Gorev sayi={tekrarSayisi} etiket="Bekleyen tekrar" />
           <Gorev sayi={bugunSayi} etiket="Bugün çalışılan" />
         </View>
       </View>

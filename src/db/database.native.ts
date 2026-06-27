@@ -29,7 +29,7 @@ import {
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { zayifKartlar } from '@/lib/performans';
-import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
+import { gunlukKuyruk, type QueueCard, type SrsDurum } from '@/lib/queue';
 import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 
 /** expo-sqlite arka ucu. */
@@ -413,7 +413,9 @@ class SqliteBackend implements Backend {
     return row?.n ?? 0;
   }
 
-  async getDailyQueue(yeniLimit: number = YENI_LIMIT): Promise<QueueCard[]> {
+  // Etüt = SADECE TEKRAR (vakti gelen due kartlar). Yeni kart öğrenme Mevzuat→patikada
+  // yapılır → günlük kuyruğa yeni kart EKLENMEZ (yeniLimit=0).
+  async getDailyQueue(): Promise<QueueCard[]> {
     if (!this.db) throw new Error('DB hazır değil');
     const cards = await this.db.getAllAsync<CardWithLaw>(
       `SELECT c.*, l.blok AS blok, l.ad AS law_ad
@@ -425,7 +427,7 @@ class SqliteBackend implements Backend {
     const srsMap = new Map<number, SrsDurum>(
       srsRows.map((r) => [r.card_id, { kutu: r.kutu, sonraki_tarih: r.sonraki_tarih }]),
     );
-    return gunlukKuyruk(cards, srsMap, bugunISO(), yeniLimit);
+    return gunlukKuyruk(cards, srsMap, bugunISO(), 0);
   }
 
   async getBranches(): Promise<Branch[]> {
@@ -610,10 +612,10 @@ export async function getCardCount(): Promise<number> {
   return backend.getCardCount();
 }
 
-/** Bugünün çalışma kuyruğu: vakti gelmiş tekrarlar + en fazla yeniLimit yeni kart. */
-export async function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]> {
+/** Etüt kuyruğu: yalnız vakti gelmiş TEKRARLAR (due). Yeni kart yok (Mevzuat→patikada öğrenilir). */
+export async function getDailyQueue(): Promise<QueueCard[]> {
   await initDatabase();
-  return backend.getDailyQueue(yeniLimit);
+  return backend.getDailyQueue();
 }
 
 /** Tüm branşları (sıralı) döndürür (onboarding / branş değiştirme). */

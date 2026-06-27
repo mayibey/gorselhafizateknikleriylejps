@@ -26,7 +26,7 @@ import {
 import type { Backend, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { zayifKartlar } from '@/lib/performans';
-import { gunlukKuyruk, type QueueCard, type SrsDurum, YENI_LIMIT } from '@/lib/queue';
+import { gunlukKuyruk, type QueueCard, type SrsDurum } from '@/lib/queue';
 import { bugunISO, srsGuncelle, type SrsCevap } from '@/lib/srs';
 
 /** Bellek-içi arka uç. */
@@ -69,8 +69,9 @@ class MemoryBackend implements Backend {
     return SEED_CARDS.length;
   }
 
-  async getDailyQueue(yeniLimit: number = YENI_LIMIT): Promise<QueueCard[]> {
-    return gunlukKuyruk(this.cardsWithLaw(), this.srs, bugunISO(), yeniLimit);
+  // Etüt = SADECE TEKRAR (due). Yeni kart yok (Mevzuat→patikada öğrenilir) → yeniLimit=0.
+  async getDailyQueue(): Promise<QueueCard[]> {
+    return gunlukKuyruk(this.cardsWithLaw(), this.srs, bugunISO(), 0);
   }
 
   async getBranches(): Promise<Branch[]> {
@@ -227,10 +228,10 @@ export async function getCardCount(): Promise<number> {
   return backend.getCardCount();
 }
 
-/** Bugünün çalışma kuyruğu: vakti gelmiş tekrarlar + en fazla yeniLimit yeni kart. */
-export async function getDailyQueue(yeniLimit?: number): Promise<QueueCard[]> {
+/** Etüt kuyruğu: yalnız vakti gelmiş TEKRARLAR (due). Yeni kart yok (Mevzuat→patikada öğrenilir). */
+export async function getDailyQueue(): Promise<QueueCard[]> {
   await initDatabase();
-  return backend.getDailyQueue(yeniLimit);
+  return backend.getDailyQueue();
 }
 
 /** Tüm branşları (sıralı) döndürür (onboarding / branş değiştirme). */
