@@ -247,7 +247,11 @@ export default function KarargahScreen() {
           <View style={styles.heroBilgi}>
             <HeroBilgi ikon="clock-outline" etiket="Tahmini süre" deger={`${bekleyen} dk`} />
             {sonKonu ? <HeroBilgi ikon="book-outline" etiket="Son konu" deger={sonKonu} /> : null}
-            <HeroBilgi ikon="target" etiket="Hedef" deger="Bugünkü görevi tamamla" />
+            <HeroBilgi
+              ikon="target"
+              etiket="Günlük hedef"
+              deger={hedef && hedef > 0 ? `${hedef} kart` : 'Günü tamamla'}
+            />
           </View>
         </Pressable>
       )}
