@@ -107,9 +107,10 @@ export default function SicilScreen() {
         <>
           {/* İlerleme özeti */}
           <View style={styles.istatistikKart}>
-            <AppText variant="etiket" color="solukMetin" bold>
-              İLERLEME
-            </AppText>
+            <BolumBaslik
+              baslik="İLERLEME"
+              bilgi="Çalışılan = en az 1 kez gördüğün kart. Öğrenilen = üst üste bildiğin için 4. kutuya (veya üstüne) çıkmış kart (üstüne dokun, listesini gör). Hazırlık % = öğrenilen ÷ toplam kart — sınava hazırlık oranın."
+            />
             <View style={styles.statSatir}>
               <Stat deger={`${ist.calisilanKart}/${ist.toplamKart}`} etiket="Çalışılan" />
               <Stat
@@ -150,9 +151,10 @@ export default function SicilScreen() {
 
           {/* Kutu dağılımı (Leitner) */}
           <View style={styles.istatistikKart}>
-            <AppText variant="etiket" color="solukMetin" bold>
-              KUTU DAĞILIMI
-            </AppText>
+            <BolumBaslik
+              baslik="KUTU DAĞILIMI"
+              bilgi={`Her kart bir kutuda durur (1-6). Doğru bildikçe ÜST kutuya çıkar, şaşırınca 1. kutuya döner. Kutu düşükse Karargah → Etüt'te SIK (1·2·4 gün), yükseldikçe SEYREK (7·14·30 gün) karşına gelir. Kutu ${OGRENILDI_KUTU} ve üstü = öğrenildi (yeşil). Çubuklar sağa/yeşile kaydıkça sınava o kadar hazırsın.`}
+            />
             <KutuGrafik dagilim={ist.kutuDagilimi} />
             <AppText variant="etiket" color="solukMetin">
               Kutu {OGRENILDI_KUTU}+ = öğrenildi
@@ -357,6 +359,35 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
   );
 }
 
+/** Bölüm başlığı + ⓘ; dokununca altında sade bilgilendirici metin açılır. */
+function BolumBaslik({ baslik, bilgi }: { baslik: string; bilgi: string }) {
+  const [acik, setAcik] = useState(false);
+  return (
+    <>
+      <Pressable
+        style={styles.bolumBaslik}
+        onPress={() => setAcik((v) => !v)}
+        hitSlop={8}
+        accessibilityRole="button"
+        accessibilityLabel={`${baslik} — bilgi`}>
+        <AppText variant="etiket" color="solukMetin" bold>
+          {baslik}
+        </AppText>
+        <MaterialCommunityIcons
+          name={acik ? 'information' : 'information-outline'}
+          size={15}
+          color={Palette.lacivert}
+        />
+      </Pressable>
+      {acik ? (
+        <AppText variant="etiket" color="solukMetin" style={styles.bolumBilgi}>
+          {bilgi}
+        </AppText>
+      ) : null}
+    </>
+  );
+}
+
 function Stat({
   deger,
   etiket,
@@ -449,6 +480,17 @@ const styles = StyleSheet.create({
   statSatir: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  bolumBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  bolumBilgi: {
+    lineHeight: 17,
+    backgroundColor: Palette.kremZemin,
+    borderRadius: Radius.s,
+    padding: Spacing.two,
   },
   zayifSatir: {
     flexDirection: 'row',

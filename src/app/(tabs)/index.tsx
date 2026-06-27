@@ -218,13 +218,19 @@ export default function KarargahScreen() {
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
               <AppText variant="etiket" color="altin" bold>
-                DEVAM ET
+                GÜNLÜK ETÜT
               </AppText>
               <AppText variant="baslik" color="beyaz" bold>
-                Kart Akışı
+                Etüt
+              </AppText>
+              {/* Ne işe yaradığını açıkça anlat: aralıklı tekrar + yeni kart. */}
+              <AppText variant="etiket" color="altinAcik2">
+                Öğrendiklerini tekrar et + yeni kart öğren
               </AppText>
               <AppText variant="kucuk" color="kenarlik">
-                {bekleyen > 0 ? `${bekleyen} kart seni bekliyor` : 'Kaldığın yerden çalış'}
+                {bekleyen > 0
+                  ? `${bekleyen} kart hazır (vakti gelen tekrarlar + yeni)`
+                  : 'Kaldığın yerden çalış'}
               </AppText>
             </View>
             {/* Metalik altın play diski — gradyan + gölge, lacivert play */}
