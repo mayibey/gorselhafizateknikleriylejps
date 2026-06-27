@@ -18,6 +18,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
 import { KART_GORSELLERI } from '../assets/kart-gorselleri';
+// Gerçek ses (mp3) registry — kartın gorsel_yolu ile anahtarlı (varsa TTS yerine çalar).
+import { KART_SESLERI } from '../assets/kart-sesleri';
+import { SesOynatici } from '@/components/card-flow/ses-oynatici';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { TtsBar } from '@/components/card-flow/tts-bar';
 import { AppText } from '@/components/ui/app-text';
@@ -216,6 +219,8 @@ export default function AkisScreen() {
   const c = aktif ? queue![index] : null;
   const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
+  // Kartın GERÇEK ses dosyası (mp3) var mı → varsa TtsBar (robotik TTS) yerine SesOynatici.
+  const sesVar = !!(c && c.gorsel_yolu && KART_SESLERI[c.gorsel_yolu]);
 
   // GÖRSEL KUTUSU = görselin DOĞAL oranı, kalan alana sığar (contain). Oran expo-image
   // onLoad'dan (oran state) gelir → web+native AYNI, crash YOK. Kutu bu orana göre alan
@@ -381,15 +386,24 @@ export default function AkisScreen() {
                 <MaterialCommunityIcons name="close" size={22} color={Palette.kartMetinAcik} />
               </Pressable>
 
-              {/* SES kontrolleri — TtsBar HER ZAMAN mount (display toggle) → ses panel
-                  kapalıyken / madde'ye geçince KESİLMEZ. Otomatik başlama korunur.
-                  Sarmal İÇERİĞE sarılır (flex YOK) → panel sadece kontroller kadar. */}
+              {/* SES kontrolleri — HER ZAMAN mount (display toggle) → ses panel kapalıyken /
+                  madde'ye geçince KESİLMEZ. Otomatik başlama korunur. Sarmal İÇERİĞE sarılır
+                  (flex YOK) → panel sadece kontroller kadar. Kartın GERÇEK mp3'ü varsa
+                  SesOynatici (insan seslendirme), yoksa TtsBar (robotik TTS). */}
               <View style={acikPanel === 'ses' ? null : styles.gizli}>
-                <TtsBar
-                  key={queue[index].id}
-                  gorselYolu={queue[index].gorsel_yolu}
-                  onBitti={() => setAnlatimBitti(true)}
-                />
+                {sesVar ? (
+                  <SesOynatici
+                    key={queue[index].id}
+                    sesYolu={queue[index].gorsel_yolu}
+                    onBitti={() => setAnlatimBitti(true)}
+                  />
+                ) : (
+                  <TtsBar
+                    key={queue[index].id}
+                    gorselYolu={queue[index].gorsel_yolu}
+                    onBitti={() => setAnlatimBitti(true)}
+                  />
+                )}
               </View>
 
               {/* MADDE metni — kutu SABİT (panelMadde maxHeight), metin kutu İÇİNDE
