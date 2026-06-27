@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import type { ReactNode } from 'react';
+import { useScrollToTop } from '@react-navigation/native';
+import { type ReactNode, useRef } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -31,6 +32,11 @@ export function Screen({
 }: ScreenProps) {
   const body = <View style={styles.body}>{children}</View>;
 
+  // Aktif sekmeye tekrar dokununca içeriği EN ÜSTE kaydır (React Navigation davranışı).
+  // scroll=false ekranlarda ref bağlanmaz → no-op.
+  const scrollRef = useRef<ScrollView>(null);
+  useScrollToTop(scrollRef);
+
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
       {title ? (
@@ -48,7 +54,9 @@ export function Screen({
       ) : null}
       {title && headerAltinCizgi ? <View style={styles.altinCizgi} /> : null}
       {scroll ? (
-        <ScrollView contentContainerStyle={styles.scrollContent}>{body}</ScrollView>
+        <ScrollView ref={scrollRef} contentContainerStyle={styles.scrollContent}>
+          {body}
+        </ScrollView>
       ) : (
         body
       )}
