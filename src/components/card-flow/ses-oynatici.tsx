@@ -21,6 +21,9 @@ import { Palette, Spacing } from '@/constants/theme';
  * Bitince onBitti (akis'te "geçelim mi?" modalını tetikler).
  */
 
+/** Hız döngüsü (expo-audio playbackRate). */
+const HIZLAR = [1, 1.25, 1.5, 2] as const;
+
 function bicimSure(s: number): string {
   const v = Number.isFinite(s) && s > 0 ? s : 0;
   const dk = Math.floor(v / 60);
@@ -41,6 +44,7 @@ export function SesOynatici({
   const player = useAudioPlayer(kaynak);
   const durum = useAudioPlayerStatus(player);
   const [W, setW] = useState(0);
+  const [hizIdx, setHizIdx] = useState(0); // okuma hızı (HIZLAR indeksi)
 
   const oynuyor = durum?.playing ?? false;
   const yukleniyor = durum?.isBuffering ?? false;
@@ -54,6 +58,7 @@ export function SesOynatici({
     if (basladiRef.current || kaynak === null) return;
     basladiRef.current = true;
     try {
+      player.shouldCorrectPitch = true; // hızlanınca ses tizleşmesin (konuşma doğal kalsın)
       player.play();
     } catch {}
   }, [player, kaynak]);
@@ -117,6 +122,14 @@ export function SesOynatici({
     if (w > 0 && w !== W) setW(w);
   };
 
+  function hizDegis() {
+    const yeni = (hizIdx + 1) % HIZLAR.length;
+    setHizIdx(yeni);
+    try {
+      player.setPlaybackRate(HIZLAR[yeni], 'high'); // pitch düzeltmeli → konuşma doğal
+    } catch {}
+  }
+
   return (
     <View style={styles.sar}>
       {/* GERÇEK ilerleme barı (dekoratif değil) — dokun → o ana atla. */}
@@ -151,6 +164,18 @@ export function SesOynatici({
         </Pressable>
         <Pressable onPress={() => sar(10)} style={styles.yan} hitSlop={8} accessibilityLabel="10 saniye ileri">
           <MaterialCommunityIcons name="fast-forward-10" size={26} color={Palette.kartMetinAcik} />
+        </Pressable>
+        <Pressable
+          onPress={hizDegis}
+          style={styles.hizBtn}
+          accessibilityRole="button"
+          accessibilityLabel="Okuma hızı">
+          <AppText variant="kucuk" bold color="altinAcik2">
+            {HIZLAR[hizIdx]}x
+          </AppText>
+          <AppText variant="etiket" color="kartMetinIkincil">
+            HIZ
+          </AppText>
         </Pressable>
       </View>
     </View>
@@ -193,11 +218,17 @@ const styles = StyleSheet.create({
   kontroller: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.four,
+    justifyContent: 'space-between',
+    gap: Spacing.two,
   },
   yan: {
     width: 44,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  hizBtn: {
+    minWidth: 44,
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
