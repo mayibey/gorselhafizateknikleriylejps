@@ -85,16 +85,26 @@ def parse(name, slug):
     # tanınmayan -> genel özet
     return goz(slug, rest)
 
+def gercek_folder(prefix):
+    """SRC_BASE altında prefix ile BAŞLAYAN gerçek klasör adını bulur (' TAMAM' eki vb.)."""
+    for d in os.listdir(SRC_BASE):
+        if d.startswith(prefix) and os.path.isdir(os.path.join(SRC_BASE, d)):
+            return d
+    return None
+
 def main():
     only = set(sys.argv[1:])
     rapor = {}
     for folder, (lawId, slug, etiket) in MAP.items():
         if only and slug not in only:
             continue
-        src_dir = os.path.join(SRC_BASE, folder, "uretilen_gorseller")
-        ses_dir = os.path.join(SRC_BASE, folder, "ses_metinleri")
+        real = gercek_folder(folder)
+        if not real:
+            print(f"!! kaynak klasor yok: {folder}"); continue
+        src_dir = os.path.join(SRC_BASE, real, "uretilen_gorseller")
+        ses_dir = os.path.join(SRC_BASE, real, "ses_metinleri")
         if not os.path.isdir(src_dir):
-            print(f"!! kaynak yok: {folder}"); continue
+            print(f"!! kaynak yok: {real}"); continue
         dest_dir = os.path.join(DEST_BASE, slug)
         # temizle + yeniden oluştur (idempotent)
         if os.path.isdir(dest_dir): shutil.rmtree(dest_dir)
