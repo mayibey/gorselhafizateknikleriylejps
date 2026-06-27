@@ -9,6 +9,7 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
+import { hecele } from '@/lib/hece';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
 import { useRutbe } from '@/lib/rutbe-context';
@@ -429,7 +430,7 @@ function DevamEtKart({
         <Monogram no={no} boyut={72} variant="baslik" />
         <View style={st.devamOrta}>
           <AppText variant="govde" bold color="anaMetin">
-            {law.ad}
+            {hecele(law.ad)}
           </AppText>
           <AppText variant="kucuk" color="solukMetin">
             {calisilan} / {toplam} kart tamamlandı
@@ -483,47 +484,47 @@ function KanunSatir({
       onPress={() => onPress(law)}
       accessibilityRole="button"
       accessibilityLabel={law.ad}>
-      <Monogram no={no} boyut={56} variant="govde" />
-
-      <View style={st.satirOrta}>
-        {/* Tam kanun adı — kısaltma YOK (gerekirse alt satıra sarar, kutuya sığar). */}
-        <AppText variant="govde" bold color="anaMetin">
-          {law.ad}
+      {/* ÜST: monogram + tam kanun adı BOYDAN BOYA (heceli sarma → Türkçe hece bölme). */}
+      <View style={st.satirUst}>
+        <Monogram no={no} boyut={56} variant="govde" />
+        <AppText variant="govde" bold color="anaMetin" style={st.kanunAd}>
+          {hecele(law.ad)}
         </AppText>
-        <AppText variant="kucuk" color="solukMetin">
-          {calisilan} / {toplam} kart tamamlandı
-        </AppText>
-        <View style={st.barSatir}>
-          <Bar yuzde={yuzde} />
-          <AppText variant="etiket" bold color="altinKoyu" style={st.barYuzde}>
-            %{yuzde}
-          </AppText>
-        </View>
       </View>
 
-      {/* Kalp — AYRI Pressable (dış satıra dokunmayı yutar → yanlışlıkla /patika YOK) */}
-      <Pressable
-        onPress={(e) => {
-          e.stopPropagation();
-          onFavori(law.id);
-        }}
-        hitSlop={8}
-        style={st.kalp}
-        accessibilityRole="button"
-        accessibilityLabel={favori ? 'Favoriden çıkar' : 'Favoriye ekle'}>
-        <MaterialCommunityIcons
-          name={favori ? 'heart' : 'heart-outline'}
-          size={22}
-          color={favori ? Palette.altin : Palette.solukMetin}
-        />
-      </Pressable>
+      <AppText variant="kucuk" color="solukMetin">
+        {calisilan} / {toplam} kart tamamlandı
+      </AppText>
+      <View style={st.barSatir}>
+        <Bar yuzde={yuzde} />
+        <AppText variant="etiket" bold color="altinKoyu" style={st.barYuzde}>
+          %{yuzde}
+        </AppText>
+      </View>
 
-      {/* Sağ durum: tamam → altın tik (yeşil DEĞİL) · değilse play + Başla/Devam + chevron */}
-      <View style={st.satirSag}>
+      {/* ALT SAĞ: kalp + Başla/Devam/tik (kartın sağ altında). */}
+      <View style={st.satirAlt}>
+        <Pressable
+          onPress={(e) => {
+            e.stopPropagation();
+            onFavori(law.id);
+          }}
+          hitSlop={8}
+          style={st.kalp}
+          accessibilityRole="button"
+          accessibilityLabel={favori ? 'Favoriden çıkar' : 'Favoriye ekle'}>
+          <MaterialCommunityIcons
+            name={favori ? 'heart' : 'heart-outline'}
+            size={22}
+            color={favori ? Palette.altin : Palette.solukMetin}
+          />
+        </Pressable>
         {tam ? (
-          <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
+          <View style={st.satirSag}>
+            <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
+          </View>
         ) : (
-          <>
+          <View style={st.satirSag}>
             <View style={st.baslaBtn}>
               <MaterialCommunityIcons name="play" size={15} color={Palette.altinKoyu} />
               <AppText variant="etiket" bold color="altinKoyu">
@@ -531,7 +532,7 @@ function KanunSatir({
               </AppText>
             </View>
             <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
-          </>
+          </View>
         )}
       </View>
     </Pressable>
@@ -784,26 +785,35 @@ const st = StyleSheet.create({
     flexShrink: 0,
   },
 
-  // Liste satırı
+  // Liste satırı — DİKEY kart: üst (monogram+ad boydan boya) · ilerleme · alt sağ (kalp+Başla)
   satir: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.three,
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kenarlik,
     borderWidth: 1,
     borderRadius: Radius.m,
     padding: Spacing.three,
+    gap: Spacing.two,
   },
-  satirOrta: {
+  satirUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+  },
+  // Kanun adı: kalan genişliği tam kaplar (monogram dışında boydan boya), heceli sarar.
+  kanunAd: {
     flex: 1,
-    gap: Spacing.one,
+  },
+  // Alt aksiyon satırı: kalp + Başla/Devam/tik → kartın SAĞ ALTINDA.
+  satirAlt: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    gap: Spacing.three,
   },
   satirSag: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
-    marginLeft: Spacing.one, // kalp ile arası ferahlasın
   },
   baslaBtn: {
     flexDirection: 'row',
