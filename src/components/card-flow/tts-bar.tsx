@@ -15,6 +15,7 @@ import Svg, { Rect } from 'react-native-svg';
 import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Spacing } from '@/constants/theme';
+import { SES_HIZLARI, sesHizDurum } from '@/lib/ses-hiz';
 
 /**
  * Sesli anlatım — kartın ses metnini cihazın TTS'i (expo-speech) ile okur.
@@ -29,8 +30,6 @@ import { Palette, Spacing } from '@/constants/theme';
  * component remount olur (akis'te key=card.id) → eski durur, yeni otomatik başlar.
  */
 
-/** Hız döngüsü (expo-speech rate parametresi → gerçek hızlanma). */
-const HIZLAR = [1.0, 1.25, 1.5] as const;
 /** Dekoratif waveform çubuk sayısı. */
 const BAR_SAYISI = 40;
 const DALGA_Y = 27;
@@ -59,11 +58,11 @@ export function TtsBar({
 
   const [aktif, setAktif] = useState(0); // okunan cümle indeksi
   const [oynuyor, setOynuyor] = useState(false);
-  const [hizIdx, setHizIdx] = useState(0);
+  const [hizIdx, setHizIdx] = useState(sesHizDurum.idx); // paylaşılan hız (mp3 ile aynı, korunur)
   const [W, setW] = useState(0); // waveform genişliği (onLayout)
   const aktifRef = useRef(0);
   const oynuyorRef = useRef(false);
-  const hizRef = useRef<number>(HIZLAR[0]);
+  const hizRef = useRef<number>(SES_HIZLARI[sesHizDurum.idx]);
   // Her oynat/durdur "nesil"i artırır; eski okumanın onDone'u geç gelirse (seek/stop)
   // nesli tutmadığı için zincirlemez → çakışma olmaz.
   const nesilRef = useRef(0);
@@ -188,9 +187,10 @@ export function TtsBar({
   }
 
   function hizDegis() {
-    const yeni = (hizIdx + 1) % HIZLAR.length;
+    const yeni = (hizIdx + 1) % SES_HIZLARI.length;
     setHizIdx(yeni);
-    hizRef.current = HIZLAR[yeni];
+    hizRef.current = SES_HIZLARI[yeni];
+    sesHizDurum.idx = yeni; // seçimi paylaş (mp3 + sonraki kartlar aynı hız)
   }
 
   const olc = (e: LayoutChangeEvent) => {
@@ -323,7 +323,7 @@ export function TtsBar({
           accessibilityRole="button"
           accessibilityLabel="Okuma hızı">
           <AppText variant="kucuk" bold color="altinAcik2">
-            {HIZLAR[hizIdx]}x
+            {SES_HIZLARI[hizIdx]}x
           </AppText>
           <AppText variant="etiket" color="kartMetinIkincil">
             HIZ

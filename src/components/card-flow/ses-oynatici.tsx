@@ -12,6 +12,7 @@ import {
 import { KART_SESLERI } from '../../assets/kart-sesleri';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Spacing } from '@/constants/theme';
+import { SES_HIZLARI, sesHizDurum } from '@/lib/ses-hiz';
 
 /**
  * GERÇEK ses (mp3) oynatıcı — kartın insan-seslendirme dosyasını çalar (expo-audio).
@@ -20,9 +21,6 @@ import { Palette, Spacing } from '@/constants/theme';
  * ±10sn. Otomatik başlar (kart açılınca; TtsBar paritesi — akis key=card.id ile remount).
  * Bitince onBitti (akis'te "geçelim mi?" modalını tetikler).
  */
-
-/** Hız döngüsü (expo-audio playbackRate). */
-const HIZLAR = [1, 1.25, 1.5, 2] as const;
 
 function bicimSure(s: number): string {
   const v = Number.isFinite(s) && s > 0 ? s : 0;
@@ -44,7 +42,7 @@ export function SesOynatici({
   const player = useAudioPlayer(kaynak);
   const durum = useAudioPlayerStatus(player);
   const [W, setW] = useState(0);
-  const [hizIdx, setHizIdx] = useState(0); // okuma hızı (HIZLAR indeksi)
+  const [hizIdx, setHizIdx] = useState(sesHizDurum.idx); // okuma hızı (paylaşılan, korunur)
 
   const oynuyor = durum?.playing ?? false;
   const yukleniyor = durum?.isBuffering ?? false;
@@ -62,6 +60,14 @@ export function SesOynatici({
       player.play();
     } catch {}
   }, [player, kaynak]);
+
+  // Hızı player'a uygula (yeni kart/oynatıcı VE hız değişiminde) → seçilen hız korunur.
+  useEffect(() => {
+    try {
+      player.shouldCorrectPitch = true;
+      player.setPlaybackRate(SES_HIZLARI[hizIdx], 'high');
+    } catch {}
+  }, [player, hizIdx]);
 
   // Bitince onBitti (bir kez). Kart değişince component remount → ref sıfırlanır.
   const bittiRef = useRef(false);
@@ -123,11 +129,10 @@ export function SesOynatici({
   };
 
   function hizDegis() {
-    const yeni = (hizIdx + 1) % HIZLAR.length;
+    const yeni = (hizIdx + 1) % SES_HIZLARI.length;
     setHizIdx(yeni);
-    try {
-      player.setPlaybackRate(HIZLAR[yeni], 'high'); // pitch düzeltmeli → konuşma doğal
-    } catch {}
+    sesHizDurum.idx = yeni; // seçimi paylaş (TTS + sonraki kartlar aynı hız)
+    // Uygulama [player, hizIdx] effect'inde (pitch düzeltmeli) yapılır.
   }
 
   return (
@@ -171,7 +176,7 @@ export function SesOynatici({
           accessibilityRole="button"
           accessibilityLabel="Okuma hızı">
           <AppText variant="kucuk" bold color="altinAcik2">
-            {HIZLAR[hizIdx]}x
+            {SES_HIZLARI[hizIdx]}x
           </AppText>
           <AppText variant="etiket" color="kartMetinIkincil">
             HIZ
