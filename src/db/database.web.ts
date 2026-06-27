@@ -114,6 +114,10 @@ class MemoryBackend implements Backend {
       });
   }
 
+  async getBolumKartIds(): Promise<number[]> {
+    return [...new Set(SEED_BOLUM_KARTLARI.map((bk) => bk.card_id))];
+  }
+
   async getCardsByBolumChain(bolumId: number): Promise<QueueCard[]> {
     const bas = SEED_BOLUMLER.find((b) => b.id === bolumId);
     if (!bas) return [];
@@ -262,6 +266,12 @@ export async function getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
 export async function getCardsByBolumChain(bolumId: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getCardsByBolumChain(bolumId);
+}
+
+/** Patikada çalışılabilir (bölüme bağlı) TÜM kart id'leri — ilerleme paydası (genel-özet hariç). */
+export async function getBolumKartIds(): Promise<number[]> {
+  await initDatabase();
+  return backend.getBolumKartIds();
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */

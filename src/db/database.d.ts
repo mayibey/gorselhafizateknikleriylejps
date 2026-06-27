@@ -22,6 +22,7 @@ export function getZayifKuyruk(): Promise<QueueCard[]>;
 export function getBolumler(lawId: number): Promise<Bolum[]>;
 export function getCardsByBolum(bolumId: number): Promise<QueueCard[]>;
 export function getCardsByBolumChain(bolumId: number): Promise<QueueCard[]>;
+export function getBolumKartIds(): Promise<number[]>;
 export function getStudyDays(): Promise<string[]>;
 export function recordReview(
   cardId: number,

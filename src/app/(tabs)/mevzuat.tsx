@@ -6,7 +6,7 @@ import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getAllCards, getLaws, getPerformans, getStudyCards } from '@/db/database';
+import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { sonCalisilanKanun } from '@/lib/devamet';
@@ -28,8 +28,12 @@ export default function MevzuatScreen() {
   const { brans } = useBrans();
   const { rutbe } = useRutbe();
   const [laws, setLaws] = useState<LawWithCount[] | null>(null);
-  // law_id → kutu≥1 (çalışılmış) kart sayısı. null = henüz yüklenmedi.
+  // law_id → kutu≥1 ÇALIŞILMIŞ (bölüme bağlı) kart sayısı. null = henüz yüklenmedi.
   const [ilerleme, setIlerleme] = useState<Map<number, number> | null>(null);
+  // law_id → patikada ÇALIŞILABİLİR (bölüme bağlı) toplam kart sayısı = ilerleme paydası.
+  // getLaws.kartSayisi TÜM kartları (genel-özet dahil) sayar → %100 imkânsız olurdu; bu
+  // yüzden paydayı bölüme bağlı kartlarla hesaplıyoruz (genel-özet kartlar hariç).
+  const [toplamMap, setToplamMap] = useState<Map<number, number> | null>(null);
   // card_id → law_id (Devam Et için) ve kronolojik performans log'u (son çalışma).
   const [cardLawMap, setCardLawMap] = useState<Map<number, number> | null>(null);
   const [perf, setPerf] = useState<PerformansSatir[] | null>(null);
@@ -49,13 +53,20 @@ export default function MevzuatScreen() {
     void getLaws(brans)
       .then(setLaws)
       .catch(() => setHata(true));
-    // İlerleme + Devam Et verisi AYRI (degrade olur): tek tur getStudyCards/getAllCards/getPerformans.
-    // Parite: kutu≥1 filtresi web/native'de AYNI "çalışılmış" kümesini verir.
-    void Promise.all([getStudyCards(), getAllCards(), getPerformans()])
-      .then(([studied, allCards, p]) => {
+    // İlerleme + Devam Et verisi AYRI (degrade olur): tek tur. getBolumKartIds = patikada
+    // çalışılabilir (bölüme bağlı) kart kümesi → hem toplam payda hem "çalışılmış" SADECE
+    // bu kümeden sayılır (genel-özet kartlar paydayı şişirip %100'ü imkânsız kılmasın).
+    void Promise.all([getStudyCards(), getAllCards(), getPerformans(), getBolumKartIds()])
+      .then(([studied, allCards, p, bolumKartIds]) => {
+        const bagli = new Set(bolumKartIds);
+        // toplam (payda): law_id → bölüme bağlı kart sayısı.
+        const tm = new Map<number, number>();
+        for (const c of allCards) if (bagli.has(c.id)) tm.set(c.law_id, (tm.get(c.law_id) ?? 0) + 1);
+        setToplamMap(tm);
+        // çalışılmış (pay): yalnız bölüme bağlı + kutu≥1.
         const im = new Map<number, number>();
         for (const c of studied) {
-          if (c.kutu >= 1) im.set(c.law_id, (im.get(c.law_id) ?? 0) + 1);
+          if (c.kutu >= 1 && bagli.has(c.id)) im.set(c.law_id, (im.get(c.law_id) ?? 0) + 1);
         }
         setIlerleme(im);
         const clm = new Map<number, number>();
@@ -65,6 +76,7 @@ export default function MevzuatScreen() {
       })
       .catch(() => {
         setIlerleme(new Map());
+        setToplamMap(new Map());
         setCardLawMap(new Map());
         setPerf([]);
       });
@@ -84,10 +96,12 @@ export default function MevzuatScreen() {
   const musterek =
     laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0 && rutbeGorur(l.id, rutbe)) ?? [];
 
-  // law_id → {calisilan, toplam} (Devam Et + bar + çip filtresi). musterek'ten kurulur.
+  // law_id → {calisilan, toplam} (Devam Et + bar + çip filtresi). toplam = bölüme bağlı
+  // (çalışılabilir) kart sayısı → %100 ulaşılabilir (genel-özet kartlar paydaya girmez).
+  const toplamKart = (id: number) => toplamMap?.get(id) ?? 0;
   const lawIlerleme = new Map<number, { calisilan: number; toplam: number }>();
   for (const l of musterek) {
-    lawIlerleme.set(l.id, { calisilan: ilerleme?.get(l.id) ?? 0, toplam: l.kartSayisi });
+    lawIlerleme.set(l.id, { calisilan: ilerleme?.get(l.id) ?? 0, toplam: toplamKart(l.id) });
   }
   const yuzdesi = (l: LawWithCount) => {
     const il = lawIlerleme.get(l.id);
@@ -256,6 +270,7 @@ export default function MevzuatScreen() {
             <DevamEtKart
               law={devamLaw}
               calisilan={ilerleme?.get(devamLaw.id) ?? 0}
+              toplam={toplamKart(devamLaw.id)}
               siradaki={devam.tip === 'siradaki'}
               onPress={() => kanunaGit(devamLaw)}
               onTumunuGor={() => {
@@ -305,6 +320,7 @@ export default function MevzuatScreen() {
                 key={law.id}
                 law={law}
                 calisilan={ilerleme?.get(law.id) ?? 0}
+                toplam={toplamKart(law.id)}
                 favori={favoriler.has(law.id)}
                 onFavori={favoriToggle}
                 onPress={kanunaGit}
@@ -356,17 +372,18 @@ function Bar({ yuzde }: { yuzde: number }) {
 function DevamEtKart({
   law,
   calisilan,
+  toplam,
   siradaki,
   onPress,
   onTumunuGor,
 }: {
   law: LawWithCount;
   calisilan: number;
+  toplam: number;
   siradaki: boolean;
   onPress: () => void;
   onTumunuGor: () => void;
 }) {
-  const toplam = law.kartSayisi;
   const yuzde = toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
 
@@ -431,17 +448,18 @@ function DevamEtKart({
 function KanunSatir({
   law,
   calisilan,
+  toplam,
   favori,
   onFavori,
   onPress,
 }: {
   law: LawWithCount;
   calisilan: number;
+  toplam: number;
   favori: boolean;
   onFavori: (lawId: number) => void;
   onPress: (law: LawWithCount) => void;
 }) {
-  const toplam = law.kartSayisi;
   const yuzde = toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0;
   const tam = yuzde === 100;
   const bos = yuzde === 0;

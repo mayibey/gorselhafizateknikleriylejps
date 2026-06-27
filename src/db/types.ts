@@ -29,6 +29,8 @@ export interface Backend {
   getCardsByBolum(bolumId: number): Promise<QueueCard[]>;
   /** Bu bölümden başlayıp kanunun KALAN bölümlerini de sırayla (sürekli patika akışı). */
   getCardsByBolumChain(bolumId: number): Promise<QueueCard[]>;
+  /** Bir bölüme bağlı (patikada çalışılabilir) TÜM kart id'leri — ilerleme paydası. */
+  getBolumKartIds(): Promise<number[]>;
   saveSrs(cardId: number, kutu: number, sonrakiTarih: string): Promise<void>;
   /** Verilen günü (YYYY-MM-DD) "çalışıldı" olarak işaretler (gün-tekil). */
   markStudyDay(gun: string): Promise<void>;

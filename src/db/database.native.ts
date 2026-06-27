@@ -502,6 +502,14 @@ class SqliteBackend implements Backend {
     );
   }
 
+  async getBolumKartIds(): Promise<number[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const rows = await this.db.getAllAsync<{ card_id: number }>(
+      'SELECT DISTINCT card_id FROM bolum_kartlari',
+    );
+    return rows.map((r) => r.card_id);
+  }
+
   async getZayifKuyruk(): Promise<QueueCard[]> {
     if (!this.db) throw new Error('DB hazır değil');
     const [perf, cards] = [await this.getPerformans(), await this.getAllCards()];
@@ -633,6 +641,12 @@ export async function getCardsByBolum(bolumId: number): Promise<QueueCard[]> {
 export async function getCardsByBolumChain(bolumId: number): Promise<QueueCard[]> {
   await initDatabase();
   return backend.getCardsByBolumChain(bolumId);
+}
+
+/** Patikada çalışılabilir (bölüme bağlı) TÜM kart id'leri — ilerleme paydası (genel-özet hariç). */
+export async function getBolumKartIds(): Promise<number[]> {
+  await initDatabase();
+  return backend.getBolumKartIds();
 }
 
 /** Bir kartın cevabını işler: Leitner kuralıyla SRS kaydını UPSERT eder ve yeni durumu döndürür. */
