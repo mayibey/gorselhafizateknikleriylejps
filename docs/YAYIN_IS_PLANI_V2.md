@@ -1,7 +1,9 @@
 # Yayın İş Planı V2 — Sunucu, Üyelik, Ödeme, Gating
 
-> Karar tarihi: 2026-06-27. Bu plan 6 maddelik yayın hedefini sıralar.
+> Karar tarihi: 2026-06-27 (sıra güncellemesi: 2026-06-28). Bu plan 6 maddelik yayın hedefini sıralar.
 > **Sabit kararlar:** Depolama = **Supabase Storage** · Ödeme = **Doğrudan Google Play Billing** (RevenueCat yok) · İçerik kısıtlama (gating) = **en son**.
+>
+> **⚠️ GÜNCEL SIRA (28 Haz):** İçerik hâlâ üretiliyor (yüklenmemiş sesler var). Bu yüzden **içeriği Supabase Storage'a taşıma + ödeme + gating EN SONA** bırakıldı (içerik bitmeden taşımak = boşa yükleme/churn). **Önce:** Faz 1 (kalan sesler + 10 görsel) ve Faz 3 (Gmail giriş — içerik app'te gömülü kalırken yapılabilir). **Son küme:** Faz 2 (içerik→Storage) → Faz 4 (ödeme) → Faz 5 (gating).
 
 ## 0. Mevcut durum (keşif bulguları)
 - **App içinde 643 MB içerik gömülü** (`assets/kartlar` 391 MB + `assets/sesler` 252 MB). Bu haliyle mağazaya yüklenemez → içeriği sunucuya taşımak yayının ÖN ŞARTI, sadece iyileştirme değil.
@@ -64,9 +66,13 @@
 
 ---
 
-## Paralel kollar (önerilen yürütme)
-- **Kol A (içerik/hesap):** Faz 0 hesap açılışları + Faz 1 kalan sesler/10 görsel.
-- **Kol B (teknik):** Faz 2 (içerik→Storage + güvenli erişim) → Faz 3 (Gmail) → Faz 4 (ödeme) → Faz 5 (gating).
+## Yürütme sırası (28 Haz güncel)
+1. **ŞİMDİ — Kol A (içerik):** Faz 1 kalan sesler + son 10 görsel. (İçerik bitmeden Storage'a taşıma YOK.)
+2. **ŞİMDİ — Kol A (hesap):** Faz 0 Supabase projesi (Gmail için gerekli) + Google OAuth. (Play ödeme profili son kümede.)
+3. **SONRA — Kol B (teknik):** Faz 3 Gmail giriş aktivasyonu (içerik app'te gömülü kalır) + gizlilik/Data Safety güncelle.
+4. **SON KÜME (içerik bitince, yayın öncesi):** Faz 2 içerik→Supabase Storage + imzalı URL/cache → Faz 4 Play Billing → Faz 5 gating.
+
+> Not: İçerik 643MB gömülü kaldığı sürece public mağaza build'i alınamaz; kapalı test sürüyor. Son kümeden önce kapalı testte içerik gömülü devam eder.
 
 ## Açık kararlar (ilerledikçe netleşecek)
 - Monetizasyon modeli: abonelik (aylık/yıllık) mı, tek seferlik mi, branş/kanun paketi mi? (Faz 4/5 tasarımını belirler.)
