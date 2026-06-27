@@ -243,6 +243,15 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 20;
     }
+    if (version < 21) {
+      // Kalan kanunların GERÇEK sesleri eklendi (25/25 kanun) + 6 kanunun görselleri güncel
+      // kaynaktan tazelendi (disiplin/eimza/resmiyazisma/aileuyg/hizmetesas/personelyon) →
+      // kart id'leri değişti. cards SALT REFERANS → DELETE+yeniden tohumla; srs KORUNUR.
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 21;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

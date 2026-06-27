@@ -17,24 +17,34 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEST_BASE = os.path.join(REPO, "assets", "sesler")
 
 # folder öneki (TAMAM eki dahil değil) -> slug. icerik-yerlestir.py MAP ile aynı slug'lar.
-# Sadece SESİ ÜRETİLMİŞ 16 kanun.
+# TÜM müşterek kanunlar (icerik-yerlestir.py MAP ile aynı). "ses dosyaları" klasörü
+# olmayan kanun otomatik atlanır → güvenli (yeni sesler geldikçe yeniden çalıştır).
 TARGET = {
     "01_5237_TCK":              "tck",
+    "02_5326_KABAHATLER":       "kabahatler",
     "03_5442_ILIDARESI":        "ililaresi",
     "04_3713_TERORLE_MUCADELE": "terorle",
+    "05_7068_DISIPLIN":         "disiplin",
     "06_2803_JANDARMA":         "jandarmakanun",
     "07_7201_TEBLIGAT":         "tebligat",
     "08_6698_KVKK":             "kvkk",
+    "09_2935_OHAL":             "ohal",
     "10_5816_ATATURK_ALEYHINE": "ataturk",
     "11_2893_TURK_BAYRAGI":     "bayrak",
     "12_6284_AILENIN_KORUNMASI":"ailekoruma",
+    "13_5070_EIMZA":            "eimza",
     "14_4678_SOZLESMELI_SB_ASB":"sozlesmeliasb",
+    "15_RESMI_YAZISMA":         "resmiyazisma",
     "16_KVK_SILME_ANONIM":      "kvksilme",
     "17_BILGI_EDINME_YON":      "bilgiedinme",
     "18_6136_ATESLI_SILAHLAR":  "atesli",
     "19_2521_TUFEKLER_YON":     "tufekler",
     "20_SOZLESMELI_SBASB_YON":  "sozlesmeliyon",
+    "21_6284_UYGULAMA_YON":     "aileuyg",
     "22_JGK_IZIN_YON":          "izinyon",
+    "23_HIZMET_ESASLARI_YON":   "hizmetesas",
+    "24_PERSONEL_YON":          "personelyon",
+    "25_JANDARMA_TESKILAT_YON": "jandteskyon",
 }
 
 TR = str.maketrans({"ç":"c","Ç":"c","ğ":"g","Ğ":"g","ı":"i","İ":"i","ş":"s","Ş":"s","ö":"o","Ö":"o","ü":"u","Ü":"u","â":"a"})
