@@ -35,6 +35,8 @@ export default function MevzuatScreen() {
   const [perf, setPerf] = useState<PerformansSatir[] | null>(null);
   const [arama, setArama] = useState('');
   const [aktifCip, setAktifCip] = useState<Cip>('tumu');
+  // Üst seçim: Müşterek (mevcut liste) / Branş (içerik henüz yok → "çok yakında").
+  const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
   const [cipGoster, setCipGoster] = useState(true);
   const [favoriler, setFavoriler] = useState<Set<number>>(new Set());
   const [favoriAcik, setFavoriAcik] = useState(false);
@@ -127,6 +129,39 @@ export default function MevzuatScreen() {
 
   return (
     <Screen title="Mevzuat">
+      {/* ÜST SEÇİM: Müşterek / Branş. Müşterek = mevcut liste; Branş = içerik henüz
+          üretilmedi → "çok yakında". */}
+      <View style={st.blokSecici}>
+        {(['müşterek', 'brans'] as const).map((b) => {
+          const aktif = blok === b;
+          return (
+            <Pressable
+              key={b}
+              onPress={() => setBlok(b)}
+              style={[st.blokSeg, aktif && st.blokSegAktif]}
+              accessibilityRole="button"
+              accessibilityLabel={b === 'müşterek' ? 'Müşterek mevzuat' : 'Branş mevzuatı'}>
+              <MaterialCommunityIcons
+                name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
+                size={16}
+                color={aktif ? Palette.beyaz : Palette.solukMetin}
+              />
+              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+                {b === 'müşterek' ? 'Müşterek' : 'Branş'}
+              </AppText>
+            </Pressable>
+          );
+        })}
+      </View>
+
+      {blok === 'brans' ? (
+        <DurumKutu
+          ikon="hammer-wrench"
+          baslik="Çok yakında"
+          aciklama="Branşına özel mevzuat içeriği hazırlanıyor."
+        />
+      ) : (
+        <>
       {/* Açıklama + Favorilerim filtresi (Screen header'da slot yok → kayan içerik) */}
       <View style={st.ustSatir}>
         <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
@@ -276,6 +311,8 @@ export default function MevzuatScreen() {
               />
             ))
           )}
+        </>
+      )}
         </>
       )}
     </Screen>
@@ -505,6 +542,28 @@ function DurumKutu({
 }
 
 const st = StyleSheet.create({
+  // Üst Müşterek/Branş seçici (segmented)
+  blokSecici: {
+    flexDirection: 'row',
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.l,
+    padding: Spacing.half,
+    gap: Spacing.half,
+  },
+  blokSeg: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.m,
+  },
+  blokSegAktif: {
+    backgroundColor: Palette.lacivert,
+  },
   ustSatir: {
     flexDirection: 'row',
     alignItems: 'center',
