@@ -1,54 +1,5 @@
 EKSIK MADDE METNI OLAN KARTLAR (gorsel var, metin yok)
-Uretim: scripts/madde-metni-uret.mjs (merge-safe). Toplam eksik: 35
+Uretim: scripts/madde-metni-uret.mjs (merge-safe). Toplam eksik: 0
 Not: 'ayirt/ozet' tipi birlesik kartlar tek madde metni gerektirmeyebilir.
 Kalanlar parser bloke yanlis-pozitifi (orn. 'GECICI Olarak' basligi) veya kaynakta 📜 blok yoklugu.
-
-=== Hizmet Esasları Yön (9) ===
-  hizmetesas_ayirt_m12  ->  Hizmet Esasları Yön m.12  [ayirt]
-  hizmetesas_ayirt_m4  ->  Hizmet Esasları Yön m.4  [ayirt]
-  hizmetesas_m16_1  ->  Hizmet Esasları Yön m.16
-  hizmetesas_m20_1  ->  Hizmet Esasları Yön m.20
-  hizmetesas_m21_1  ->  Hizmet Esasları Yön m.21
-  hizmetesas_m25_1  ->  Hizmet Esasları Yön m.25
-  hizmetesas_m28_33xcerceve  ->  Hizmet Esasları Yön m.28
-  hizmetesas_m30_1  ->  Hizmet Esasları Yön m.30
-  hizmetesas_m32_1  ->  Hizmet Esasları Yön m.32
-
-=== Jandarma Teşkilat Yön (7) ===
-  jandteskyon_ayirt_m8  ->  Jandarma Teşkilat Yön m.8  [ayirt]
-  jandteskyon_m18_1  ->  Jandarma Teşkilat Yön m.18
-  jandteskyon_m19_1  ->  Jandarma Teşkilat Yön m.19
-  jandteskyon_m21_1  ->  Jandarma Teşkilat Yön m.21
-  jandteskyon_m38_1  ->  Jandarma Teşkilat Yön m.38
-  jandteskyon_m45_1  ->  Jandarma Teşkilat Yön m.45
-  jandteskyon_m67_1  ->  Jandarma Teşkilat Yön m.67
-
-=== Personel Yön (7) ===
-  personelyon_ayirt_m53  ->  Personel Yön m.53  [ayirt]
-  personelyon_m11_12  ->  Personel Yön m.11
-  personelyon_m16_1  ->  Personel Yön m.16
-  personelyon_m21_1  ->  Personel Yön m.21
-  personelyon_m30_31  ->  Personel Yön m.30
-  personelyon_m32_1  ->  Personel Yön m.32
-  personelyon_m9_1  ->  Personel Yön m.9
-
-=== 6136 Ateşli Silahlar (5) ===
-  atesli_m14_1  ->  6136 Ateşli Silahlar m.14
-  atesli_m1_1  ->  6136 Ateşli Silahlar m.1
-  atesli_m6_1  ->  6136 Ateşli Silahlar m.6
-  atesli_m7_1  ->  6136 Ateşli Silahlar m.7
-  atesli_m9_1  ->  6136 Ateşli Silahlar m.9
-
-=== 6284 Uyg. Yön (4) ===
-  aileuyg_m11_10  ->  6284 Uyg. Yön m.11
-  aileuyg_m1_2  ->  6284 Uyg. Yön m.1
-  aileuyg_m35_1  ->  6284 Uyg. Yön m.35
-  aileuyg_m8_1  ->  6284 Uyg. Yön m.8
-
-=== 2521 Tüfekler Yön (2) ===
-  tufekler_ayirt_m10  ->  2521 Tüfekler Yön m.10  [ayirt]
-  tufekler_m13_1  ->  2521 Tüfekler Yön m.13
-
-=== Sözleşmeli Sb/Asb Yön (1) ===
-  sozlesmeliyon_ayirt_m6  ->  Sözleşmeli Sb/Asb Yön m.6  [ayirt]
 
