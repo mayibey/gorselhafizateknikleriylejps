@@ -54,7 +54,8 @@
     "lint": "expo lint",
     "gorsel:uret": "node scripts/gorsel-registry-uret.mjs",
     "ses:uret": "node scripts/ses-registry-uret.mjs",
-    "madde:uret": "node scripts/madde-metni-uret.mjs"
+    "madde:uret": "node scripts/madde-metni-uret.mjs",
+    "soru:uret": "node scripts/soru-registry-uret.mjs"
   },
   "overrides": {
     "expo-asset": "12.0.13"
