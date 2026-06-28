@@ -405,24 +405,26 @@ export default function AkisScreen() {
                 <MaterialCommunityIcons name="close" size={22} color={Palette.kartMetinAcik} />
               </Pressable>
 
-              {/* SES kontrolleri — HER ZAMAN mount (display toggle) → ses panel kapalıyken /
-                  madde'ye geçince KESİLMEZ. Otomatik başlama korunur. Sarmal İÇERİĞE sarılır
-                  (flex YOK) → panel sadece kontroller kadar. Kartın GERÇEK mp3'ü varsa
-                  SesOynatici (insan seslendirme), yoksa TtsBar (robotik TTS). */}
+              {/* SES kontrolleri — GÖRSEL EKRANDA GÖRÜNENE KADAR mount EDİLMEZ (ogrenebilir
+                  false iken) → otomatik başlama görsel yüklenince başlar (görselsiz kartta
+                  hemen). Mount olunca display-toggle ile panel kapalıyken/madde'ye geçince
+                  KESİLMEZ. Kartın GERÇEK mp3'ü varsa SesOynatici, yoksa TtsBar (robotik TTS). */}
               <View style={acikPanel === 'ses' ? null : styles.gizli}>
-                {sesVar ? (
-                  <SesOynatici
-                    key={queue[index].id}
-                    sesYolu={queue[index].gorsel_yolu}
-                    onBitti={() => setAnlatimBitti(true)}
-                  />
-                ) : (
-                  <TtsBar
-                    key={queue[index].id}
-                    gorselYolu={queue[index].gorsel_yolu}
-                    onBitti={() => setAnlatimBitti(true)}
-                  />
-                )}
+                {ogrenebilir ? (
+                  sesVar ? (
+                    <SesOynatici
+                      key={queue[index].id}
+                      sesYolu={queue[index].gorsel_yolu}
+                      onBitti={() => setAnlatimBitti(true)}
+                    />
+                  ) : (
+                    <TtsBar
+                      key={queue[index].id}
+                      gorselYolu={queue[index].gorsel_yolu}
+                      onBitti={() => setAnlatimBitti(true)}
+                    />
+                  )
+                ) : null}
               </View>
 
               {/* MADDE metni — kutu SABİT (panelMadde maxHeight), metin kutu İÇİNDE
