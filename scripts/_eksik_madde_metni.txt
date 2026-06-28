@@ -1,5 +1,5 @@
 EKSIK MADDE METNI OLAN KARTLAR (gorsel var, metin yok)
-Uretim: scripts/madde-metni-uret.mjs (merge-safe). Toplam eksik: 64
+Uretim: scripts/madde-metni-uret.mjs (merge-safe). Toplam eksik: 35
 Not: 'ayirt/ozet' tipi birlesik kartlar tek madde metni gerektirmeyebilir.
 Kalanlar parser bloke yanlis-pozitifi (orn. 'GECICI Olarak' basligi) veya kaynakta 📜 blok yoklugu.
 
@@ -32,21 +32,6 @@ Kalanlar parser bloke yanlis-pozitifi (orn. 'GECICI Olarak' basligi) veya kaynak
   personelyon_m32_1  ->  Personel Yön m.32
   personelyon_m9_1  ->  Personel Yön m.9
 
-=== Sözleşmeli Sb/Asb (6) ===
-  sozlesmeliasb_m13_1  ->  Sözleşmeli Sb/Asb m.13
-  sozlesmeliasb_m15_1  ->  Sözleşmeli Sb/Asb m.15
-  sozlesmeliasb_m16_1  ->  Sözleşmeli Sb/Asb m.16
-  sozlesmeliasb_m17_23  ->  Sözleşmeli Sb/Asb m.17
-  sozlesmeliasb_m18_1  ->  Sözleşmeli Sb/Asb m.18
-  sozlesmeliasb_m8_1  ->  Sözleşmeli Sb/Asb m.8
-
-=== 6284 Ailenin Korunması (5) ===
-  ailekoruma_m10_11  ->  6284 Ailenin Korunması m.10
-  ailekoruma_m12_1  ->  6284 Ailenin Korunması m.12
-  ailekoruma_m17_1  ->  6284 Ailenin Korunması m.17
-  ailekoruma_m18_19  ->  6284 Ailenin Korunması m.18
-  ailekoruma_m7_1  ->  6284 Ailenin Korunması m.7
-
 === 6136 Ateşli Silahlar (5) ===
   atesli_m14_1  ->  6136 Ateşli Silahlar m.14
   atesli_m1_1  ->  6136 Ateşli Silahlar m.1
@@ -54,47 +39,15 @@ Kalanlar parser bloke yanlis-pozitifi (orn. 'GECICI Olarak' basligi) veya kaynak
   atesli_m7_1  ->  6136 Ateşli Silahlar m.7
   atesli_m9_1  ->  6136 Ateşli Silahlar m.9
 
-=== Resmî Yazışma (5) ===
-  resmiyazisma_m22_1  ->  Resmî Yazışma m.22
-  resmiyazisma_m24_1  ->  Resmî Yazışma m.24
-  resmiyazisma_m27_1  ->  Resmî Yazışma m.27
-  resmiyazisma_m2_1  ->  Resmî Yazışma m.2
-  resmiyazisma_m32_1  ->  Resmî Yazışma m.32
-
-=== Terörle Mücadele (5) ===
-  terorle_m15_1  ->  Terörle Mücadele m.15
-  terorle_m19_1  ->  Terörle Mücadele m.19
-  terorle_m20_1  ->  Terörle Mücadele m.20
-  terorle_m21_1  ->  Terörle Mücadele m.21
-  terorle_m22_1  ->  Terörle Mücadele m.22
-
 === 6284 Uyg. Yön (4) ===
   aileuyg_m11_10  ->  6284 Uyg. Yön m.11
   aileuyg_m1_2  ->  6284 Uyg. Yön m.1
   aileuyg_m35_1  ->  6284 Uyg. Yön m.35
   aileuyg_m8_1  ->  6284 Uyg. Yön m.8
 
-=== Disiplin (3) ===
-  disiplin_m27_1  ->  Disiplin m.27
-  disiplin_m28_1  ->  Disiplin m.28
-  disiplin_m34_1  ->  Disiplin m.34
-
-=== OHAL (2) ===
-  ohal_m22_1  ->  OHAL m.22
-  ohal_m23_1  ->  OHAL m.23
-
 === 2521 Tüfekler Yön (2) ===
   tufekler_ayirt_m10  ->  2521 Tüfekler Yön m.10  [ayirt]
   tufekler_m13_1  ->  2521 Tüfekler Yön m.13
-
-=== E-İmza (1) ===
-  eimza_m2_1  ->  E-İmza m.2
-
-=== Jandarma Kanunu (1) ===
-  jandarmakanun_m1_2x3  ->  Jandarma Kanunu m.1
-
-=== KV Silme Yön (1) ===
-  kvksilme_ayirt_m8  ->  KV Silme Yön m.8  [ayirt]
 
 === Sözleşmeli Sb/Asb Yön (1) ===
   sozlesmeliyon_ayirt_m6  ->  Sözleşmeli Sb/Asb Yön m.6  [ayirt]
