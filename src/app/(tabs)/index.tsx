@@ -255,20 +255,24 @@ export default function KarargahScreen() {
 
       {/* HERO — ETÜT = zayıf havuz (eksik/zorlandığın kartları düzelt). Boşsa "zayıf yok". */}
       {bos ? (
-        <View style={[styles.hero, styles.heroBitti]}>
+        <Pressable
+          style={({ pressed }) => [styles.hero, styles.heroBitti, pressed && styles.pressed]}
+          onPress={() => router.push('/mevzuat')}
+          accessibilityRole="button"
+          accessibilityLabel="Mevzuat'tan konu çalış">
           <View style={styles.heroMetin}>
             <AppText variant="etiket" color="altin" bold>
-              ZAYIF MEVZİ YOK
+              GÜNÜ TAMAMLADIN 🎖️
             </AppText>
             <AppText variant="baslik" color="beyaz" bold>
-              Etüt boş 🎖️
+              Tüm görevleri yaptın
             </AppText>
             <AppText variant="kucuk" color="kenarlik">
-              Eksik/zorlandığın kart yok — yeni kart öğrenmek için Mevzuat'a geç
+              Tekrar edilecek mevzi kalmadı — Mevzuat'tan yeni konu çalış ›
             </AppText>
           </View>
-          <MaterialCommunityIcons name="check-decagram" size={52} color={Palette.altin} />
-        </View>
+          <MaterialCommunityIcons name="book-open-variant" size={52} color={Palette.altin} />
+        </Pressable>
       ) : (
         <Pressable
           style={({ pressed }) => [styles.hero, pressed && styles.pressed]}
