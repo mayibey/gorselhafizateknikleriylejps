@@ -360,7 +360,18 @@ export default function KarargahScreen() {
             Nöbet serisi
           </AppText>
         </View>
-        <View style={[styles.card, styles.kutu]}>
+        {/* Zayıf mevzi kutusu — TIKLANIR: dokun → Etüt (zayıf akışı). Boşsa pasif. */}
+        <Pressable
+          disabled={bekleyen === 0}
+          onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+          style={({ pressed }) => [
+            styles.card,
+            styles.kutu,
+            pressed && styles.pressed,
+            bekleyen === 0 && styles.pressed,
+          ]}
+          accessibilityRole="button"
+          accessibilityLabel="Zayıf mevzileri çalış">
           <View style={styles.kutuDeger}>
             <MaterialCommunityIcons name="target" size={20} color={Palette.altinKoyu} />
             <AppText variant="dev" bold color="anaMetin">
@@ -370,7 +381,7 @@ export default function KarargahScreen() {
           <AppText variant="etiket" color="solukMetin">
             Zayıf mevzi
           </AppText>
-        </View>
+        </Pressable>
       </View>
 
       {/* GÜNÜN MADDESİ — tarih rotasyonlu kart + İncele */}
