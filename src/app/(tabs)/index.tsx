@@ -12,19 +12,14 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   getAllCards,
-  getBranches,
   getCardCount,
   getPerformans,
   getStudyCards,
   getStudyDays,
   getZayifKuyruk,
 } from '@/db/database';
-import type { Branch, CardWithLaw } from '@/db/schema';
-import { useBrans } from '@/lib/brans-context';
-import { getAyar } from '@/lib/bildirim';
+import type { CardWithLaw } from '@/db/schema';
 import type { QueueCard } from '@/lib/queue';
-import { useRutbe } from '@/lib/rutbe-context';
-import { RUTBELER, type Rutbe } from '@/lib/rutbe-store';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 
@@ -33,17 +28,11 @@ const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as 
 
 export default function KarargahScreen() {
   const router = useRouter();
-  const { brans, setBrans } = useBrans();
-  const { rutbe, setRutbe } = useRutbe();
-  // Açık dropdown ('rol'=branş / 'kademe'=rütbe / null). Aynı anda yalnız biri.
-  const [acikDD, setAcikDD] = useState<'rol' | 'kademe' | null>(null);
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
   const [gunMadde, setGunMadde] = useState<CardWithLaw | null>(null);
   const [sonKonu, setSonKonu] = useState<string | null>(null);
-  const [branches, setBranches] = useState<Branch[] | null>(null);
-  const [hedef, setHedef] = useState<number | null>(null);
   const [bugunSayi, setBugunSayi] = useState(0);
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
@@ -70,12 +59,6 @@ export default function KarargahScreen() {
     void getStudyDays()
       .then((gunler) => setStreak(hesaplaStreak(gunler, bugunISO())))
       .catch(() => setStreak(null));
-    void getBranches()
-      .then(setBranches)
-      .catch(() => {});
-    void getAyar()
-      .then((a) => setHedef(a.gunlukKart))
-      .catch(() => {});
     // Günün Maddesi + bugün çalışılan + zayıf mevzi + SON KONU — tek performans+kart yüklemesinden.
     void Promise.all([getPerformans(), getAllCards()])
       .then(([perf, cards]) => {
@@ -137,8 +120,6 @@ export default function KarargahScreen() {
   const tekrarSayisi = queue?.length ?? 0;
   const bekleyen = queue?.length ?? 0;
   const bos = queue !== null && queue.length === 0;
-  const bransAd = branches?.find((b) => b.slug === brans)?.ad ?? null;
-  const rutbeAd = RUTBELER.find((r) => r.slug === rutbe)?.ad ?? null;
 
   if (hata) {
     return (
@@ -183,39 +164,12 @@ export default function KarargahScreen() {
           </Pressable>
         </View>
       }>
-      {/* Header altı açıklama + branş/rütbe rozeti (kayan içerik) */}
+      {/* Header altı açıklama. (Branş/rütbe artık YALNIZ Evsaf → Ayarlar'dan değişir;
+          buradaki rol/kademe dropdown'ları kaldırıldı, yer 7-gün uyarı bandına bırakıldı.) */}
       <View style={styles.selam}>
         <AppText variant="kucuk" color="solukMetin">
           Bugünkü çalışma özetin burada.
         </AppText>
-        <View style={styles.rolKademe}>
-          <Dropdown
-            etiket="Rol"
-            ikon="account-group"
-            seciliAd={bransAd ?? 'Seç'}
-            secenekler={branches?.map((b) => ({ slug: b.slug, ad: b.ad })) ?? []}
-            seciliSlug={brans}
-            acik={acikDD === 'rol'}
-            onAc={() => setAcikDD(acikDD === 'rol' ? null : 'rol')}
-            onSec={(slug) => {
-              void setBrans(slug);
-              setAcikDD(null);
-            }}
-          />
-          <Dropdown
-            etiket="Kademe"
-            ikon="chevron-triple-up"
-            seciliAd={rutbeAd ?? 'Seç'}
-            secenekler={RUTBELER.map((r) => ({ slug: r.slug, ad: r.ad }))}
-            seciliSlug={rutbe}
-            acik={acikDD === 'kademe'}
-            onAc={() => setAcikDD(acikDD === 'kademe' ? null : 'kademe')}
-            onSec={(slug) => {
-              void setRutbe(slug as Rutbe);
-              setAcikDD(null);
-            }}
-          />
-        </View>
       </View>
 
       {/* UNUTMA UYARISI — ≥7 gündür tekrar edilmemiş kanunlar (tedbir bandı). */}
@@ -307,32 +261,23 @@ export default function KarargahScreen() {
             </LinearGradient>
           </View>
 
-          {/* 3 bilgi SÜTUNU yan yana — hepsi gerçek/türetilmiş veri */}
+          {/* Bilgi SÜTUNLARI — gerçek/türetilmiş veri. (Günlük hedef sütunu kaldırıldı; hedef
+              artık Karargah'ta sabit gösterilmiyor — kullanıcı Ayarlar → Eğitim Planı'ndan ayarlar.) */}
           <View style={styles.heroBilgi}>
             <HeroBilgi ikon="clock-outline" etiket="Tahmini süre" deger={`${bekleyen} dk`} />
             {sonKonu ? <HeroBilgi ikon="book-outline" etiket="Son konu" deger={sonKonu} /> : null}
-            <HeroBilgi
-              ikon="target"
-              etiket="Günlük hedef"
-              deger={hedef && hedef > 0 ? `${hedef} kart` : 'Günü tamamla'}
-            />
           </View>
         </Pressable>
       )}
 
-      {/* BUGÜNÜN GÖREVİ — günlük hedef ilerleme + Tekrar/Yeni/Bugün */}
+      {/* BUGÜNÜN GÖREVİ — günlük aktivite (sabit hedef/15-kart bandı KALDIRILDI; hedef
+          kullanıcı tarafından Ayarlar → Eğitim Planı'ndan belirlenir). Sayaçlar gün-bazlı. */}
       <View style={styles.card}>
         <View style={styles.gorevBaslik}>
           <AppText variant="etiket" color="solukMetin" bold>
             BUGÜNÜN GÖREVİ
           </AppText>
-          {hedef && hedef > 0 ? (
-            <AppText variant="etiket" color="solukMetin">
-              {Math.min(bugunSayi, hedef)} / {hedef} kart
-            </AppText>
-          ) : null}
         </View>
-        {hedef && hedef > 0 ? <Bar oran={bugunSayi / hedef} /> : null}
         <View style={styles.gorevSatir}>
           <Gorev sayi={tekrarSayisi} etiket="Zayıf mevzi" />
           <Gorev sayi={bugunSayi} etiket="Bugün çalışılan" />
@@ -414,86 +359,6 @@ export default function KarargahScreen() {
   );
 }
 
-/** İnline (sayfadan çıkmadan açılan) Rol/Kademe seçici. Seçince context'i anında günceller. */
-function Dropdown({
-  etiket,
-  ikon,
-  seciliAd,
-  secenekler,
-  seciliSlug,
-  acik,
-  onAc,
-  onSec,
-}: {
-  etiket: string;
-  ikon: keyof typeof MaterialCommunityIcons.glyphMap;
-  seciliAd: string;
-  secenekler: { slug: string; ad: string }[];
-  seciliSlug: string | null;
-  acik: boolean;
-  onAc: () => void;
-  onSec: (slug: string) => void;
-}) {
-  return (
-    <View style={styles.dd}>
-      <Pressable
-        style={({ pressed }) => [styles.ddTetik, pressed && styles.pressed]}
-        onPress={onAc}
-        accessibilityRole="button"
-        accessibilityLabel={`${etiket}: ${seciliAd}`}>
-        <MaterialCommunityIcons name={ikon} size={14} color={Palette.lacivert} />
-        <View style={styles.ddTetikMetin}>
-          <AppText variant="etiket" color="solukMetin">
-            {etiket}
-          </AppText>
-          <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1}>
-            {seciliAd}
-          </AppText>
-        </View>
-        <MaterialCommunityIcons
-          name={acik ? 'chevron-up' : 'chevron-down'}
-          size={18}
-          color={Palette.solukMetin}
-        />
-      </Pressable>
-      {acik ? (
-        <View style={styles.ddPanel}>
-          {secenekler.length === 0 ? (
-            <AppText variant="kucuk" color="solukMetin" style={styles.ddBos}>
-              Seçenek yok
-            </AppText>
-          ) : (
-            secenekler.map((o) => {
-              const sec = o.slug === seciliSlug;
-              return (
-                <Pressable
-                  key={o.slug}
-                  style={({ pressed }) => [
-                    styles.ddSecenek,
-                    sec && styles.ddSecenekSecili,
-                    pressed && styles.pressed,
-                  ]}
-                  onPress={() => onSec(o.slug)}>
-                  <AppText
-                    variant="kucuk"
-                    bold
-                    color={sec ? 'beyaz' : 'anaMetin'}
-                    style={styles.ddSecenekAd}>
-                    {o.ad}
-                  </AppText>
-                  {sec ? (
-                    <MaterialCommunityIcons name="check-bold" size={16} color={Palette.altin} />
-                  ) : null}
-                </Pressable>
-              );
-            })
-          )}
-        </View>
-      ) : null}
-    </View>
-  );
-}
-
 /** Hero içi bilgi SÜTUNU: üstte ikon+etiket (soluk), altta değer (beyaz). 3'ü yan yana. */
 function HeroBilgi({
   ikon,
@@ -515,16 +380,6 @@ function HeroBilgi({
       <AppText variant="etiket" color="kenarlik" numberOfLines={1}>
         {etiket}
       </AppText>
-    </View>
-  );
-}
-
-/** İlerleme çubuğu (oran 0..1) — altın dolgu. */
-function Bar({ oran }: { oran: number }) {
-  const yuzde = Math.min(100, Math.max(0, oran * 100));
-  return (
-    <View style={styles.track}>
-      <View style={[styles.fill, { width: `${yuzde}%` }]} />
     </View>
   );
 }
@@ -587,60 +442,6 @@ const styles = StyleSheet.create({
   },
   selam: {
     gap: Spacing.two,
-  },
-  rolKademe: {
-    flexDirection: 'row',
-    alignItems: 'flex-start', // biri açılınca diğeri üstte kalsın (inline expander)
-    gap: Spacing.two,
-    zIndex: 1,
-  },
-  dd: {
-    flex: 1,
-  },
-  ddTetik: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.two,
-  },
-  ddTetikMetin: {
-    flex: 1,
-  },
-  ddPanel: {
-    marginTop: Spacing.one,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    padding: Spacing.one,
-    gap: Spacing.half,
-    shadowColor: Palette.lacivert,
-    shadowOpacity: 0.12,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 4 },
-    elevation: 4,
-  },
-  ddSecenek: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-    borderRadius: Radius.s,
-    paddingHorizontal: Spacing.two,
-    paddingVertical: Spacing.two,
-  },
-  ddSecenekSecili: {
-    backgroundColor: Palette.lacivert,
-  },
-  ddSecenekAd: {
-    flex: 1,
-  },
-  ddBos: {
-    padding: Spacing.two,
   },
 
   // Hero
@@ -778,18 +579,6 @@ const styles = StyleSheet.create({
   },
 
   // Bar
-  track: {
-    width: '100%',
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: Palette.ilerlemeTrack,
-    overflow: 'hidden',
-  },
-  fill: {
-    height: '100%',
-    borderRadius: 4,
-    backgroundColor: Palette.altinKoyu,
-  },
 
   // Günün maddesi
   gunMaddeAlt: {

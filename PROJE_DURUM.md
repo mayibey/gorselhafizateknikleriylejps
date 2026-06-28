@@ -2,7 +2,11 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 28 Haziran 2026
+> Son güncelleme: 29 Haziran 2026
+>
+> ### ▶ 29 Haz — Karargah sadeleşti: rol/kademe kaldırıldı + hedef display kaldırıldı
+> Başkan istekleri: (1) Karargah üstündeki **rol(branş)/kademe(rütbe) dropdown'ları KALDIRILDI** — branş/rütbe artık YALNIZ Evsaf → Ayarlar'dan değişir (zaten `/brans-sec` + `/rutbe-sec` orada vardı). (2) Açılan üst alan **7-gün "TEKRAR ZAMANI" uyarı bandına** bırakıldı (banner zaten vardı, dropdown'lar gidince üste çıktı). (3) **"Bugünün görevi: 15 kart" sabit hedefi KALDIRILDI** — hem hero'daki "Günlük hedef" sütunu hem "BUGÜNÜN GÖREVİ" hedef bar/sayacı; aktivite istatistikleri (Zayıf mevzi · Bugün çalışılan) KALDI. Hedef (`gunlukKart`) hâlâ oturum limiti olarak çalışıyor (`akis.tsx slice`) + kullanıcı Ayarlar → Eğitim Planı stepper'ından (5–50) ayarlar; Karargah'ta artık sabit gösterilmiyor.
+> Temizlik: index.tsx'ten ölü `Dropdown`/`Bar` bileşenleri + ilgili state (acikDD/hedef/branches/brans/rutbe) + importlar (useBrans/useRutbe/RUTBELER/getAyar/getBranches/Branch) + ölü stiller (rolKademe/dd*/track/fill) kaldırıldı. tsc 0.
 >
 > ### ▶ 28 Haz — Deneme soruları tazelendi: 601 → 862 (+261)
 > Başkan fabrikadaki `SORULAR.json`'lara yeni sorular ekledi. `npm run soru:uret` yeniden çalıştırıldı → `src/assets/kart-sorulari.ts` 25 kanun · **862 soru** (önceki 601, +261). Yeni dosya/kanun YOK (hâlâ 25 müşterek, branş soruları yok); mevcut dosyalara eklendi. Doğrulama: hiçbir kanunda düşüş yok, tekrar `soru_id` yok, tüm sorular geçerli (dogru 0-tabanlı index şık aralığında + ≥2 şık), tsc 0. Codegen idempotent — sınav UI/zayıf-havuz/skor mantığı değişmedi, yalnız registry tazelendi.
