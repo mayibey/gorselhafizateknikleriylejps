@@ -207,7 +207,7 @@ function gorselKartlari(): Card[] {
       baslik = `Özet — ${h.tag}`;
     } else if (h.tip === 'ozet') {
       madde_no = `${h.etiket} m.${h.link}`;
-      baslik = `m.${h.nums[0]}${h.nums.length > 1 ? '–' + h.nums[h.nums.length - 1] : ''} özet`;
+      baslik = `m.${h.nums.join('–')} özet`; // TÜM üye maddeler (ayırt ile aynı biçim)
     } else if (h.tip === 'ayirt') {
       madde_no = `${h.etiket} m.${h.link}`;
       baslik = `m.${h.nums.join('–')} ayırt`;

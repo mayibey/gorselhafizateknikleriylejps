@@ -25,6 +25,7 @@ import {
   getStudyDays,
 } from '@/db/database';
 import type { Bolum } from '@/db/schema';
+import { birlesikUyeler } from '@/lib/birlesik';
 import { useBrans } from '@/lib/brans-context';
 import { bolumIlerleme } from '@/lib/patika';
 import { bugunISO } from '@/lib/srs';
@@ -44,7 +45,13 @@ const AYAK_W = 14; // tek ayak görünür genişliği
 const AYAK_H = 28; // tek ayak yüksekliği (sprite kare → kap 2*AYAK_W × AYAK_H = kare, germe yok)
 const AYAK_OFSET = 5; // yol merkez çizgisinden sol/sağ kayma
 
-type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
+type BolumDugum = {
+  bolum: Bolum;
+  calisilan: number;
+  toplam: number;
+  oran: number;
+  birlesik?: string; // bu düğümde birleşik (ayırt/özet) kart varsa üye maddeler: "m.21–22"
+};
 /** Düğümün görsel durumu — MEVCUT veri (calisilan/toplam/aktifIndex) türetilir, davranış değil. */
 type Durum = 'aktif' | 'tamam' | 'baslanmis' | 'baslanmadi';
 
@@ -203,7 +210,10 @@ export default function PatikaScreen() {
         const dugum = await Promise.all(
           bolumler.map(async (b): Promise<BolumDugum> => {
             const kartlar = await getCardsByBolum(b.id);
-            return { bolum: b, ...bolumIlerleme(kartlar) };
+            // Bu düğümde birleşik (ayırt/özet) kart varsa üye maddeleri rozet için topla.
+            const mk = kartlar.find((k) => birlesikUyeler(k.gorsel_yolu));
+            const birlesik = mk ? 'm.' + birlesikUyeler(mk.gorsel_yolu)!.join('–') : undefined;
+            return { bolum: b, birlesik, ...bolumIlerleme(kartlar) };
           }),
         );
         setBolumsuz(false);
@@ -547,6 +557,16 @@ function Dugum({
             {dugum.bolum.ad}
           </AppText>
         )}
+        {dugum.birlesik ? (
+          <AppText
+            variant="etiket"
+            bold
+            color="altinKoyu"
+            numberOfLines={1}
+            style={st.birlesikRozet}>
+            içerir: {dugum.birlesik}
+          </AppText>
+        ) : null}
       </View>
     </Animated.View>
   );
@@ -741,6 +761,10 @@ const st = StyleSheet.create({
   },
   adMetin: {
     textAlign: 'center',
+  },
+  birlesikRozet: {
+    textAlign: 'center',
+    marginTop: 1,
   },
   pressed: {
     opacity: 0.8,
