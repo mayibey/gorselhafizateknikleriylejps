@@ -493,9 +493,15 @@ export default function AkisScreen() {
               diğeri kapanır (TEK panel alanı). */}
           <View style={styles.ikonSatir}>
             <Pressable
+              disabled={!ogrenebilir}
               onPress={() => setAcikPanel((p) => (p === 'ses' ? 'yok' : 'ses'))}
-              style={[styles.ikonBtn, acikPanel === 'ses' && styles.ikonBtnAktif]}
+              style={[
+                styles.ikonBtn,
+                acikPanel === 'ses' && styles.ikonBtnAktif,
+                !ogrenebilir && styles.btnPasif,
+              ]}
               accessibilityRole="button"
+              accessibilityState={{ disabled: !ogrenebilir }}
               accessibilityLabel="Sesli anlatım">
               <MaterialCommunityIcons
                 name="headphones"
@@ -507,9 +513,15 @@ export default function AkisScreen() {
               </AppText>
             </Pressable>
             <Pressable
+              disabled={!ogrenebilir}
               onPress={() => setAcikPanel((p) => (p === 'madde' ? 'yok' : 'madde'))}
-              style={[styles.ikonBtn, acikPanel === 'madde' && styles.ikonBtnAktif]}
+              style={[
+                styles.ikonBtn,
+                acikPanel === 'madde' && styles.ikonBtnAktif,
+                !ogrenebilir && styles.btnPasif,
+              ]}
               accessibilityRole="button"
+              accessibilityState={{ disabled: !ogrenebilir }}
               accessibilityLabel="Madde metni">
               <MaterialCommunityIcons
                 name="file-document-outline"
@@ -574,9 +586,16 @@ export default function AkisScreen() {
                   {ogrenebilir ? 'Öğrendim' : 'Önce görseli gör'}
                 </AppText>
               </Pressable>
+              {/* Tekrar Hatırlat — Öğrendim ile aynı: görsel görünene kadar KİLİTLİ. */}
               <Pressable
-                style={({ pressed }) => [styles.tekrarBtn, pressed && styles.pressed]}
-                onPress={() => void cevapla('zor')}>
+                disabled={!ogrenebilir}
+                style={({ pressed }) => [
+                  styles.tekrarBtn,
+                  pressed && styles.pressed,
+                  !ogrenebilir && styles.btnPasif,
+                ]}
+                onPress={() => void cevapla('zor')}
+                accessibilityState={{ disabled: !ogrenebilir }}>
                 <MaterialCommunityIcons name="refresh" size={20} color={Palette.altinKoyu} />
                 <AppText variant="govde" color="altinKoyu" bold>
                   Tekrar Hatırlat
