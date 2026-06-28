@@ -48,11 +48,10 @@ export default function TabsLayout() {
         options={{ title: 'Mevzuat', tabBarIcon: icon('book-open-variant') }}
       />
       <Tabs.Screen name="ara" options={{ title: 'Ara', tabBarIcon: icon('magnify') }} />
-      {/* Tatbikat (deneme/quiz) v1'de GİZLİ — içerik yok, boş sekme "yarım app" riski.
-          href:null → sekme çubuğundan kalkar, rota+ekran v2 için kodda durur. */}
+      {/* Tatbikat (kanun bazlı deneme sınavı) AKTİF — 25 müşterek kanunun küratörlü soruları. */}
       <Tabs.Screen
         name="tatbikat"
-        options={{ title: 'Tatbikat', tabBarIcon: icon('target'), href: null }}
+        options={{ title: 'Tatbikat', tabBarIcon: icon('target') }}
       />
       <Tabs.Screen name="sicil" options={{ title: 'Evsaf', tabBarIcon: icon('account') }} />
     </Tabs>

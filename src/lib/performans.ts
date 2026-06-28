@@ -5,7 +5,7 @@
  *  - Hiç kötü yapılmamış kart → havuzda değil.
  *  - Kötü yapılmış kart → son 2 deneme ardışık iyi olana kadar havuzda kalır.
  * Kötü = çalışmada 'zor' VEYA quiz'de 'yanlis'. 'tekrar' zayıf SAYILMAZ.
- * stats.ts/quiz.ts deseni: saf, test edilebilir.
+ * stats.ts/sinav.ts deseni: saf, test edilebilir.
  */
 
 import type { CardWithLaw, PerformansSatir } from '@/db/schema';
