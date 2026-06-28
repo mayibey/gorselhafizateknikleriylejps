@@ -241,7 +241,13 @@ export default function AraScreen() {
                     style={({ pressed }) => [styles.sikKart, pressed && styles.pressed]}>
                     <View style={styles.sikMono}>
                       {no ? (
-                        <AppText variant="kucuk" bold color="altin">
+                        <AppText
+                          variant="kucuk"
+                          bold
+                          color="altin"
+                          numberOfLines={1}
+                          adjustsFontSizeToFit
+                          style={styles.sikMonoNo}>
                           {no}
                         </AppText>
                       ) : (
@@ -477,6 +483,12 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.lacivert,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 2,
+  },
+  // Kanun no kutuya tek satır sığsın (4 hane "5237" alt satıra kaymasın → küçülerek sığar).
+  sikMonoNo: {
+    width: '100%',
+    textAlign: 'center',
   },
   ipucu: {
     backgroundColor: Palette.kartKremi,
