@@ -6,6 +6,7 @@
  */
 
 import { KART_GORSELLERI } from '../assets/kart-gorselleri';
+import { birlesikUyeler } from '@/lib/birlesik';
 import type { Bolum, BolumKart, Branch, Card, Law, LawBranch } from '@/db/schema';
 
 export const SEED_LAWS: Law[] = [
@@ -387,7 +388,9 @@ const _patikaBaglama = (() => {
   const satirlar: BolumKart[] = [];
   const sayac = new Map<number, number>(); // bolum_id → eklenen kart sayısı (sira)
   const baglanan = new Set<number>(); // bağlanan card.id
+  // 1) NORMAL (birleşik olmayan) kartları madde düğümüne bağla.
   for (const card of SEED_CARDS) {
+    if (birlesikUyeler(card.gorsel_yolu)) continue; // birleşik kart → 2. geçişte
     const kapsam = SEED_KAPSAM[card.law_id];
     if (!kapsam) continue;
     const m = card.madde_no.match(/m\.\s*(\d+(?:\/[A-Za-z])?)/i);
@@ -395,6 +398,30 @@ const _patikaBaglama = (() => {
     const idx = kapsam.indexOf(m[1]);
     if (idx < 0) continue;
     const bolumId = card.law_id * 1000 + (idx + 1);
+    const sira = (sayac.get(bolumId) ?? 0) + 1;
+    sayac.set(bolumId, sira);
+    satirlar.push({ bolum_id: bolumId, card_id: card.id, sira });
+    baglanan.add(card.id);
+  }
+  // 2) BİRLEŞİK (ayırt/özet) kartları, kapsamdaki EN BÜYÜK üye maddenin düğümüne bağla →
+  //    kart, içerdiği TÜM maddeler görüldükten SONRA gelir (24-25 ayırt, m.25 düğümünde).
+  //    2. geçiş olduğu için düğüm-içi sırada da en sona düşer (sira en yüksek).
+  for (const card of SEED_CARDS) {
+    const uyeler = birlesikUyeler(card.gorsel_yolu);
+    if (!uyeler) continue;
+    const kapsam = SEED_KAPSAM[card.law_id];
+    if (!kapsam) continue;
+    let bestIdx = -1;
+    let bestVal = -1;
+    for (const u of uyeler) {
+      const i = kapsam.indexOf(String(u));
+      if (i >= 0 && u > bestVal) {
+        bestVal = u;
+        bestIdx = i;
+      }
+    }
+    if (bestIdx < 0) continue; // hiçbir üye kapsamda değil → 3. geçişte "Özet" düğümüne
+    const bolumId = card.law_id * 1000 + (bestIdx + 1);
     const sira = (sayac.get(bolumId) ?? 0) + 1;
     sayac.set(bolumId, sira);
     satirlar.push({ bolum_id: bolumId, card_id: card.id, sira });
