@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 28 Haziran 2026
 >
+> ### ▶ 28 Haz — Deneme soruları tazelendi: 601 → 862 (+261)
+> Başkan fabrikadaki `SORULAR.json`'lara yeni sorular ekledi. `npm run soru:uret` yeniden çalıştırıldı → `src/assets/kart-sorulari.ts` 25 kanun · **862 soru** (önceki 601, +261). Yeni dosya/kanun YOK (hâlâ 25 müşterek, branş soruları yok); mevcut dosyalara eklendi. Doğrulama: hiçbir kanunda düşüş yok, tekrar `soru_id` yok, tüm sorular geçerli (dogru 0-tabanlı index şık aralığında + ≥2 şık), tsc 0. Codegen idempotent — sınav UI/zayıf-havuz/skor mantığı değişmedi, yalnız registry tazelendi.
+>
 > ### ▶ 28 Haz — KART EKRANI UX: ok kaldır + boşluğa dokun-kapat + sabit madde kutusu + Etüt→Geri Besleme
 > Başkan istekleri (4):
 > **(1)** Kart ekranındaki sol/sağ **gezinme ok butonları KALDIRILDI** (`akis.tsx`) — gezinme yalnız yatay swipe ile. İlgili `okBtn/okSol/okSag/okPasif` stilleri de silindi.
