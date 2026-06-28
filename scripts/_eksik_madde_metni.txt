@@ -1,0 +1,115 @@
+EKSIK MADDE METNI OLAN KARTLAR (gorsel var, metin yok)
+Uretim: scripts/madde-metni-uret.mjs (merge-safe). Toplam eksik: 76
+Not: 'ayirt/ozet' tipi birlesik kartlar tek madde metni gerektirmeyebilir.
+Kalanlar parser bloke yanlis-pozitifi (orn. 'GECICI Olarak' basligi) veya kaynakta 📜 blok yoklugu.
+
+=== Hizmet Esasları Yön (9) ===
+  hizmetesas_ayirt_m12  ->  Hizmet Esasları Yön m.12  [ayirt]
+  hizmetesas_ayirt_m4  ->  Hizmet Esasları Yön m.4  [ayirt]
+  hizmetesas_m16_1  ->  Hizmet Esasları Yön m.16
+  hizmetesas_m20_1  ->  Hizmet Esasları Yön m.20
+  hizmetesas_m21_1  ->  Hizmet Esasları Yön m.21
+  hizmetesas_m25_1  ->  Hizmet Esasları Yön m.25
+  hizmetesas_m28_33xcerceve  ->  Hizmet Esasları Yön m.28
+  hizmetesas_m30_1  ->  Hizmet Esasları Yön m.30
+  hizmetesas_m32_1  ->  Hizmet Esasları Yön m.32
+
+=== Sözleşmeli Sb/Asb (9) ===
+  sozlesmeliasb_ayirt_m7  ->  Sözleşmeli Sb/Asb m.7  [ayirt]
+  sozlesmeliasb_m10_1  ->  Sözleşmeli Sb/Asb m.10
+  sozlesmeliasb_m13_1  ->  Sözleşmeli Sb/Asb m.13
+  sozlesmeliasb_m15_1  ->  Sözleşmeli Sb/Asb m.15
+  sozlesmeliasb_m16_1  ->  Sözleşmeli Sb/Asb m.16
+  sozlesmeliasb_m17_23  ->  Sözleşmeli Sb/Asb m.17
+  sozlesmeliasb_m18_1  ->  Sözleşmeli Sb/Asb m.18
+  sozlesmeliasb_m7_1  ->  Sözleşmeli Sb/Asb m.7
+  sozlesmeliasb_m8_1  ->  Sözleşmeli Sb/Asb m.8
+
+=== Jandarma Teşkilat Yön (8) ===
+  jandteskyon_ayirt_m8  ->  Jandarma Teşkilat Yön m.8  [ayirt]
+  jandteskyon_m18_1  ->  Jandarma Teşkilat Yön m.18
+  jandteskyon_m19_1  ->  Jandarma Teşkilat Yön m.19
+  jandteskyon_m21_1  ->  Jandarma Teşkilat Yön m.21
+  jandteskyon_m38_1  ->  Jandarma Teşkilat Yön m.38
+  jandteskyon_m45_1  ->  Jandarma Teşkilat Yön m.45
+  jandteskyon_m67_1  ->  Jandarma Teşkilat Yön m.67
+  jandteskyon_m70_1  ->  Jandarma Teşkilat Yön m.70
+
+=== Personel Yön (7) ===
+  personelyon_ayirt_m53  ->  Personel Yön m.53  [ayirt]
+  personelyon_m11_12  ->  Personel Yön m.11
+  personelyon_m16_1  ->  Personel Yön m.16
+  personelyon_m21_1  ->  Personel Yön m.21
+  personelyon_m30_31  ->  Personel Yön m.30
+  personelyon_m32_1  ->  Personel Yön m.32
+  personelyon_m9_1  ->  Personel Yön m.9
+
+=== Disiplin (6) ===
+  disiplin_m11_1  ->  Disiplin m.11
+  disiplin_m20_21  ->  Disiplin m.20
+  disiplin_m27_1  ->  Disiplin m.27
+  disiplin_m28_1  ->  Disiplin m.28
+  disiplin_m34_1  ->  Disiplin m.34
+  disiplin_m5_1  ->  Disiplin m.5
+
+=== Resmî Yazışma (6) ===
+  resmiyazisma_m18_1  ->  Resmî Yazışma m.18
+  resmiyazisma_m22_1  ->  Resmî Yazışma m.22
+  resmiyazisma_m24_1  ->  Resmî Yazışma m.24
+  resmiyazisma_m27_1  ->  Resmî Yazışma m.27
+  resmiyazisma_m2_1  ->  Resmî Yazışma m.2
+  resmiyazisma_m32_1  ->  Resmî Yazışma m.32
+
+=== 6284 Ailenin Korunması (5) ===
+  ailekoruma_m10_11  ->  6284 Ailenin Korunması m.10
+  ailekoruma_m12_1  ->  6284 Ailenin Korunması m.12
+  ailekoruma_m17_1  ->  6284 Ailenin Korunması m.17
+  ailekoruma_m18_19  ->  6284 Ailenin Korunması m.18
+  ailekoruma_m7_1  ->  6284 Ailenin Korunması m.7
+
+=== 6136 Ateşli Silahlar (5) ===
+  atesli_m14_1  ->  6136 Ateşli Silahlar m.14
+  atesli_m1_1  ->  6136 Ateşli Silahlar m.1
+  atesli_m6_1  ->  6136 Ateşli Silahlar m.6
+  atesli_m7_1  ->  6136 Ateşli Silahlar m.7
+  atesli_m9_1  ->  6136 Ateşli Silahlar m.9
+
+=== Terörle Mücadele (5) ===
+  terorle_m15_1  ->  Terörle Mücadele m.15
+  terorle_m19_1  ->  Terörle Mücadele m.19
+  terorle_m20_1  ->  Terörle Mücadele m.20
+  terorle_m21_1  ->  Terörle Mücadele m.21
+  terorle_m22_1  ->  Terörle Mücadele m.22
+
+=== 6284 Uyg. Yön (4) ===
+  aileuyg_m11_10  ->  6284 Uyg. Yön m.11
+  aileuyg_m1_2  ->  6284 Uyg. Yön m.1
+  aileuyg_m35_1  ->  6284 Uyg. Yön m.35
+  aileuyg_m8_1  ->  6284 Uyg. Yön m.8
+
+=== OHAL (3) ===
+  ohal_m11_1  ->  OHAL m.11
+  ohal_m22_1  ->  OHAL m.22
+  ohal_m23_1  ->  OHAL m.23
+
+=== E-İmza (2) ===
+  eimza_m2_1  ->  E-İmza m.2
+  eimza_m5_1  ->  E-İmza m.5
+
+=== Jandarma Kanunu (2) ===
+  jandarmakanun_m1_2x3  ->  Jandarma Kanunu m.1
+  jandarmakanun_m21_1  ->  Jandarma Kanunu m.21
+
+=== 2521 Tüfekler Yön (2) ===
+  tufekler_ayirt_m10  ->  2521 Tüfekler Yön m.10  [ayirt]
+  tufekler_m13_1  ->  2521 Tüfekler Yön m.13
+
+=== Türk Bayrağı (1) ===
+  bayrak_m3_1  ->  Türk Bayrağı m.3
+
+=== KV Silme Yön (1) ===
+  kvksilme_ayirt_m8  ->  KV Silme Yön m.8  [ayirt]
+
+=== Sözleşmeli Sb/Asb Yön (1) ===
+  sozlesmeliyon_ayirt_m6  ->  Sözleşmeli Sb/Asb Yön m.6  [ayirt]
+

@@ -179,9 +179,14 @@ function masterParse(text) {
 const registry = {}; // "<etiket> m.<no>" -> metin
 const rapor = [];
 
+// Kaynak klasörler editör akışında " TAMAM" gibi sonek alabiliyor (örn.
+// "23_HIZMET_ESASLARI_YON TAMAM"). ETIKET anahtarını ÖNEK olarak eşleştir → sonekten
+// bağımsız doğru klasörü bul (tam eşleşme veya "<anahtar> ..." ile başlayan).
+const TUM_KLASORLER = existsSync(KAYNAK) ? readdirSync(KAYNAK) : [];
 for (const klasor of Object.keys(ETIKET)) {
-  const dir = join(KAYNAK, klasor);
-  if (!existsSync(dir)) {
+  const gercekAd = TUM_KLASORLER.find((d) => d === klasor || d.startsWith(klasor + ' '));
+  const dir = gercekAd ? join(KAYNAK, gercekAd) : null;
+  if (!dir || !existsSync(dir)) {
     rapor.push(`${klasor}: KLASÖR YOK`);
     continue;
   }
@@ -205,10 +210,30 @@ for (const klasor of Object.keys(ETIKET)) {
   rapor.push(`${klasor.padEnd(28)} → ${etiket.padEnd(26)} ${say} madde`);
 }
 
+// MERGE-SAFE: önceki üretimde olup bu turda kaynaktan ÇIKMAYAN anahtarları KORU. Kaynak
+// MASTER dosyaları zamanla yeniden düzenlenince (📜 blok taşıma vs.) eskiden çıkarılmış bir
+// madde metni bu turda parse edilemeyebilir → o kartlar placeholder'a DÜŞMESİN. Bu turda
+// çıkan anahtarlar eskiyi GÜNCELLER (registry öncelikli), yalnız eski-tekil anahtarlar korunur.
+const onceki = {};
+if (existsSync(outFile)) {
+  const eski = readFileSync(outFile, 'utf8');
+  const satirRe = /^\s+("(?:[^"\\]|\\.)*"):\s*("(?:[^"\\]|\\.)*"),?\s*$/gm;
+  let mm;
+  while ((mm = satirRe.exec(eski))) {
+    try {
+      onceki[JSON.parse(mm[1])] = JSON.parse(mm[2]);
+    } catch {
+      /* bozuk satır → atla */
+    }
+  }
+}
+const korunan = Object.keys(onceki).filter((k) => !(k in registry));
+const birlesik = { ...onceki, ...registry };
+
 // Anahtarları kanun+madde no'ya göre sırala (okunaklı çıktı).
-const siraliAnahtar = Object.keys(registry).sort((a, b) => a.localeCompare(b, 'tr'));
+const siraliAnahtar = Object.keys(birlesik).sort((a, b) => a.localeCompare(b, 'tr'));
 const govde = siraliAnahtar
-  .map((k) => `  ${JSON.stringify(k)}: ${JSON.stringify(registry[k])},`)
+  .map((k) => `  ${JSON.stringify(k)}: ${JSON.stringify(birlesik[k])},`)
   .join('\n');
 
 const out = `// OTOMATİK ÜRETİLDİ — elle düzenleme. \`npm run madde:uret\` ile yenile.
@@ -226,4 +251,8 @@ writeFileSync(outFile, out, 'utf8');
 
 console.log('--- Kanun bazında çıkarılan madde sayısı ---');
 for (const r of rapor) console.log(r);
+if (korunan.length) {
+  console.log(`\nKORUNAN (önceki üretimden, bu turda parse edilemeyen) ${korunan.length} anahtar:`);
+  for (const k of korunan.sort((a, b) => a.localeCompare(b, 'tr'))) console.log(`  • ${k}`);
+}
 console.log(`\nTOPLAM: ${siraliAnahtar.length} madde metni → ${outFile}`);
