@@ -6,8 +6,8 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getAllCards, getBolumKartIds, getLaws, getStudyCards } from '@/db/database';
-import type { LawWithCount } from '@/db/schema';
+import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
+import type { LawWithCount, SinavSonuc } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { hecele } from '@/lib/hece';
 import { useRutbe } from '@/lib/rutbe-context';
@@ -30,6 +30,8 @@ export default function TatbikatScreen() {
   const [laws, setLaws] = useState<LawWithCount[] | null>(null);
   // law_id → kilit/ilerleme durumu (Mevzuat ile aynı: bölüme bağlı + kutu≥1).
   const [durumMap, setDurumMap] = useState<Map<number, Durum>>(new Map());
+  // law_id → SON deneme sonucu (en güncel; "Son deneme: X/Y" satırı için).
+  const [sonucMap, setSonucMap] = useState<Map<number, SinavSonuc>>(new Map());
   const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
   const [hata, setHata] = useState(false);
 
@@ -39,6 +41,14 @@ export default function TatbikatScreen() {
     void getLaws(brans)
       .then(setLaws)
       .catch(() => setHata(true));
+    // Son deneme skorları (law_id → en güncel; getSinavSonuclari id artan → son yazan kalır).
+    void getSinavSonuclari()
+      .then((sonuclar) => {
+        const sm = new Map<number, SinavSonuc>();
+        for (const s of sonuclar) sm.set(s.law_id, s);
+        setSonucMap(sm);
+      })
+      .catch(() => setSonucMap(new Map()));
     // İlerleme/kilit: Mevzuat'taki "tamam" tanımı (bölüme bağlı kart kümesi + kutu≥1).
     void Promise.all([getStudyCards(), getAllCards(), getBolumKartIds()])
       .then(([studied, allCards, bolumKartIds]) => {
@@ -136,6 +146,7 @@ export default function TatbikatScreen() {
                 law={law}
                 durum={durumMap.get(law.id)}
                 soruSayisi={sinavSoruSayisi(law.id)}
+                sonSonuc={sonucMap.get(law.id)}
                 onSinav={sinavaGit}
                 onCalis={kanunaGit}
               />
@@ -166,12 +177,14 @@ function KanunSatir({
   law,
   durum,
   soruSayisi,
+  sonSonuc,
   onSinav,
   onCalis,
 }: {
   law: LawWithCount;
   durum: Durum | undefined;
   soruSayisi: number;
+  sonSonuc: SinavSonuc | undefined;
   onSinav: (law: LawWithCount) => void;
   onCalis: (law: LawWithCount) => void;
 }) {
@@ -213,6 +226,16 @@ function KanunSatir({
           </AppText>
         </View>
       )}
+
+      {/* Son deneme skoru (varsa) — açık/kilitli fark etmez, geçmiş kalıcıdır. */}
+      {sonSonuc ? (
+        <View style={styles.altSatir}>
+          <MaterialCommunityIcons name="history" size={16} color={Palette.solukMetin} />
+          <AppText variant="etiket" bold color="solukMetin">
+            Son deneme: {sonSonuc.dogru}/{sonSonuc.toplam}
+          </AppText>
+        </View>
+      ) : null}
     </Pressable>
   );
 }

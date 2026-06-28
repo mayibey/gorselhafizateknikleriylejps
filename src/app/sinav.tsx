@@ -1,18 +1,22 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { ekleSinavSonucu, getCardsByLaw, kaydetPerformans } from '@/db/database';
+import type { QueueCard } from '@/lib/queue';
 import {
+  eslesenKartIdleri,
   getSinavSorulari,
   type KartSoru,
   puanlaSinav,
   type SinavCevap,
 } from '@/lib/sinav';
+import { bugunISO } from '@/lib/srs';
 
 /** Doğru/yanlış geri bildirim renkleri (tema: yeşil onay, kırmızı uyarı). */
 const DOGRU_YESIL = Palette.yesil;
@@ -20,19 +24,26 @@ const YANLIS_KIRMIZI = Palette.kirmizi;
 
 /**
  * Tatbikat deneme sınavı — küratörlü gerçek SORULAR.json sorularını gösterir.
- * Salt ölçüm: SRS'e/zayıf havuza DOKUNMAZ (soru→DB kart eşlemesi olmadığından
- * performans loglanmaz). Akış: soru + şıklar → seç → doğru/yanlış + açıklama →
- * ilerle → sonda skor.
+ * Akış: soru + şıklar → seç → doğru/yanlış + açıklama → ilerle → sonda skor.
+ * - YANLIŞ cevap → sorunun kaynak maddesine eşleşen kartlar ZAYIF HAVUZA düşer
+ *   (kaydetPerformans 'quiz'/'yanlis'; Karargah→Etüt'te 2 ardışık doğruyla çıkar).
+ *   DOĞRU cevap loglanmaz (havuzdan çıkış yalnız Etüt'le). SRS kutusuna dokunulmaz.
+ * - Sınav bitince skor `sinav_sonuclari`'na kalıcı yazılır (Tatbikat'ta gösterilir).
  */
 export default function SinavScreen() {
   const router = useRouter();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
+  const lawIdNum = lawId != null && lawId !== '' ? Number(lawId) : null;
   const [sorular, setSorular] = useState<KartSoru[] | null>(null);
   const [hata, setHata] = useState(false);
   const [bos, setBos] = useState(false);
   const [index, setIndex] = useState(0);
   const [secilen, setSecilen] = useState<number | null>(null);
   const [cevaplar, setCevaplar] = useState<SinavCevap[]>([]);
+  // O kanunun kartları (zayıf havuz eşleştirmesi için) — bir kez yüklenir, cache'lenir.
+  const kartlarRef = useRef<QueueCard[] | null>(null);
+  // Skor BİR KEZ kaydedilsin (bitiş ekranı yeniden render'larında tekrar yazılmasın).
+  const kaydedildiRef = useRef(false);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -41,25 +52,53 @@ export default function SinavScreen() {
     setIndex(0);
     setSecilen(null);
     setCevaplar([]);
-    if (lawId == null || lawId === '') {
+    kartlarRef.current = null;
+    kaydedildiRef.current = false;
+    if (lawIdNum == null || Number.isNaN(lawIdNum)) {
       setHata(true);
       return;
     }
-    const liste = getSinavSorulari(Number(lawId));
+    const liste = getSinavSorulari(lawIdNum);
     if (liste.length === 0) {
       setBos(true);
       return;
     }
     setSorular(liste);
-  }, [lawId]);
+    // Zayıf havuz eşleştirmesi için kanunun kartlarını önden yükle (ateşle-unut).
+    void getCardsByLaw(lawIdNum)
+      .then((c) => {
+        kartlarRef.current = c;
+      })
+      .catch(() => {});
+  }, [lawIdNum]);
 
   useEffect(() => {
     yukle();
   }, [yukle]);
 
+  /** YANLIŞ cevap → eşleşen kartları zayıf havuza sok (UI'yı bloklamaz). */
+  async function zayifaDusur(soru: KartSoru) {
+    try {
+      let kartlar = kartlarRef.current;
+      if (!kartlar && lawIdNum != null) {
+        kartlar = await getCardsByLaw(lawIdNum);
+        kartlarRef.current = kartlar;
+      }
+      if (!kartlar) return;
+      const ids = eslesenKartIdleri(soru.kaynak, kartlar);
+      for (const id of ids) {
+        await kaydetPerformans(id, 'quiz', 'yanlis').catch(() => {});
+      }
+    } catch {
+      // sessiz geç: zayıf havuz logu kritik değil, sınav akışını bozmamalı.
+    }
+  }
+
   function sec(i: number) {
     if (secilen !== null || !sorular) return; // soru zaten cevaplandı
     setSecilen(i);
+    const soruO = sorular[index];
+    if (i !== soruO.dogru) void zayifaDusur(soruO); // yalnız yanlışta logla
   }
 
   function sonraki() {
@@ -72,6 +111,14 @@ export default function SinavScreen() {
   const bitti = sorular !== null && index >= sorular.length;
   const aktif = sorular !== null && !bitti;
   const soru = aktif ? sorular[index] : null;
+
+  // Sınav bitince skoru BİR KEZ kalıcı kaydet (kaydedildiRef guard; yukle'de sıfırlanır).
+  useEffect(() => {
+    if (!bitti || !sorular || lawIdNum == null || kaydedildiRef.current) return;
+    kaydedildiRef.current = true;
+    const { dogru, toplam } = puanlaSinav(cevaplar, sorular);
+    void ekleSinavSonucu(lawIdNum, dogru, toplam, bugunISO()).catch(() => {});
+  }, [bitti, sorular, cevaplar, lawIdNum]);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>

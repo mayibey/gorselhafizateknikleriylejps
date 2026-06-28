@@ -8,6 +8,7 @@
  */
 
 import { KART_SORULARI, type KartSoru } from '../assets/kart-sorulari';
+import { birlesikUyeler } from '@/lib/birlesik';
 
 export type { KartSoru } from '../assets/kart-sorulari';
 
@@ -43,6 +44,56 @@ export function getSinavSorulari(lawId: number, rastgele: () => number = Math.ra
   const sorular = KART_SORULARI[lawId];
   if (!sorular || sorular.length === 0) return [];
   return karistir(sorular, rastgele);
+}
+
+/**
+ * Bir soru kaynağından ("5237 m.1/1", "5237 m.21-22", "5237 m.247-250-252") madde
+ * numaralarını çıkarır. Yalnız "m." sonrası madde no(lar)ı alınır; alt-fıkra (/2) ve
+ * fıkra-aralığı (-3) yok sayılır; "-" ile ayrılan madde no'ları DISKRET listedir
+ * (kaynak verisi "247-250-252" gibi maddeleri tek tek sayar). Birden çok "m." atfı
+ * (örn. "m.21/2, m.36") da toplanır. Madde no yoksa (Ek/Geçici madde atfı) boş dizi.
+ */
+export function kaynakMaddeNolari(kaynak: string): number[] {
+  const out = new Set<number>();
+  const re = /m\.\s*(\d+(?:-\d+)*)/gi;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(kaynak)) !== null) {
+    for (const parca of m[1].split('-')) {
+      const n = parseInt(parca, 10);
+      if (!Number.isNaN(n)) out.add(n);
+    }
+  }
+  return [...out];
+}
+
+/** Zayıf havuz eşleştirmesi için karttan gereken minimum alanlar. */
+export type EslesmeKart = { id: number; madde_no: string; gorsel_yolu: string | null };
+
+/**
+ * Verilen soru kaynağıyla eşleşen kart id'lerini bulur (saf).
+ * Bir kart eşleşir = kaynaktaki madde no'larından en az biri kartın maddesidir.
+ * Kart maddeleri: madde_no'daki "m.<no>" + (birleşik/ayırt-özet kartlarda) gorsel
+ * anahtarından TÜM üye madde no'ları → ör. m.21-22 ayırt kartı, "m.22" sorusuyla da eşleşir.
+ * Eşleşme yoksa boş dizi (çağıran sessiz geçer).
+ */
+export function eslesenKartIdleri(kaynak: string, kartlar: readonly EslesmeKart[]): number[] {
+  const hedef = new Set(kaynakMaddeNolari(kaynak));
+  if (hedef.size === 0) return [];
+  const ids: number[] = [];
+  for (const k of kartlar) {
+    const kartNolari = new Set<number>();
+    const mm = k.madde_no.match(/m\.\s*(\d+)/i);
+    if (mm) kartNolari.add(parseInt(mm[1], 10));
+    const uyeler = birlesikUyeler(k.gorsel_yolu);
+    if (uyeler) for (const u of uyeler) kartNolari.add(u);
+    for (const n of kartNolari) {
+      if (hedef.has(n)) {
+        ids.push(k.id);
+        break;
+      }
+    }
+  }
+  return ids;
 }
 
 /** Verilen cevapları puanlar (saf). */
