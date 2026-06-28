@@ -148,12 +148,31 @@ function masterParse(text) {
   let bloke = false; // ayırt/özet/ek kartı → madde metni sayma
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    // ID satırı: "... MADDE <NN>-<panel>". Ayırt/Özet/Ek/Geçici → bloke.
-    const idm = line.match(/MADDE\s+(\d+)\s*-\s*[0-9A-Za-zÇĞİÖŞÜçğıöşü]+/);
+    // ID satırı: backtick içinde kart kimliği, örn `7068 MADDE 11-1`, `JSGKHIZMET MADDE 04-AYIRT`.
+    // BLOKE KARARI başlık AÇIKLAMASINDAN değil, ID'nin "MADDE <NN>-" SONRASI SONEK'inden verilir.
+    // (Eski sürüm tüm başlığı büyütüp /GEÇ|EK|AYIRT/ arardı → "GEÇİCİ Olarak", "m.18 — Ek",
+    //  "…Ayrı" gibi GERÇEK madde açıklamalarına yanlış takılıp metni eliyordu.)
+    const idm = line.match(/`[^`]*?\bMADDE\s+(\d+)\s*-\s*([^`]+)`/i);
     if (idm) {
-      const up = line.toLocaleUpperCase('tr');
-      bloke = /AYIRT|AYIRD|OZET|ÖZET|\bEK\b|EK-|GEÇ|GEC|TABLO|KARSILAS/.test(up);
+      const sonek = idm[2].trim().toLocaleUpperCase('tr'); // "1" | "AYIRT" | "13-1" | "KINAMA"
+      // Aggregate (tek madde metni DEĞİL) = ayırt/özet/cetvel/tablo/karşılaştırma/ek/geçici.
+      // Madde ARALIĞI sonekleri (20-21, 12-13-1) bloke EDİLMEZ → metin İLK maddeye yazılır
+      // (placeholder'dan iyidir; gerçek aggregate'ler sonek KELİMESİYLE elenir).
+      bloke = /AYIRT|AYIRD|OZET|ÖZET|CETVEL|TABLO|KARSILAS|KARŞILAŞ|GEÇİCİ|GECICI|\bEK\b/.test(sonek);
       cur = bloke ? null : String(parseInt(idm[1], 10));
+      continue;
+    }
+    // MADDE'siz sentetik kart ID'si (### başlık + backtick, örn `7068 OZET-SUREC`,
+    // `7068 DEVAMSIZLIK-AYIRT`) → bloke. Yalnız aggregate KELİMESİ içeren ID'leri ele
+    // (Jandarma gibi ID'siz kanunların düz ### başlıklarını BOZMA).
+    if (
+      line.startsWith('###') &&
+      /`[^`]*(AYIRT|AYIRD|OZET|ÖZET|CETVEL|TABLO|KARSILAS|KARŞILAŞ|DEVAMSIZLIK|ZAMANASIMI|ITIRAZ)[^`]*`/i.test(
+        line,
+      )
+    ) {
+      bloke = true;
+      cur = null;
       continue;
     }
     // 📜 işaret satırı → metni çıkar
