@@ -36,20 +36,15 @@ savunma, anti-piracy (APK klon), sunucu+asset+offline entegrasyon, işe yaramaya
 ## ✅ LOOP TAMAMLANDI (29 Haz gecesi)
 Tüm fazlar bitti; uygulamaya **sıfır kod dokunuşu**. ~31 ajan. Çıktılar `docs/DEGERLENDIRME/` (01-13 + 00_* + tasarim/). Yönetici özeti FAZ 6'da derin-tarama düzeltmeleriyle cilalandı. Pending heartbeat (~02:42) firilince "tamam" görüp kendini durduracak (yeniden planlanmayacak).
 
-## Loop durumu
-- [x] FAZ 1 — Derin değerlendirme (11 rapor) ✅
-- [x] FAZ 2 — Karşı-görüş (10/11; 06 WF2'de tamamlanıyor)
-- [x] FAZ 3 — Eksiklik kritiği (00_EKSIKLER_VE_CELISKILER) ✅
-- [x] FAZ 4 — Sentez (özet+yol haritası+risk register) ✅
-- [x] FAZ 4b — WF2 derinleştirme (içerik tam tarama + P0 plan) — HÂLÂ ÇALIŞIYOR (12_/13_/06-karşı henüz yok)
-- [x] FAZ 5 — Tasarım mockup'ları (HTML) ✅ — tasarim/yon-A/B/C.html (~37KB her biri, Playfair+marka token) + 00_README. Tarayıcıda açılır.
-- [x] FAZ 6 — Final tutarlılık + özet cilası (WF2 bitince)
-> Heartbeat 1 (≈00:51): tasarım WF bitti; WF2 sürüyor. WF2 completion + heartbeat (~02:42) FAZ 6'yı tetikleyecek.
-- [ ] FAZ 2 — Karşı-görüş/doğrulama (her rapora çoklu-göz eklendi)
-- [ ] FAZ 3 — Eksiklik kritiği (gaps) + ek pas
-- [ ] FAZ 4 — Sentez (00_YONETICI_OZETI + risk register + yol haritası)
-- [ ] FAZ 5 — Alternatif tasarım mockup'ları (imagegen-frontend-mobile)
-- [x] FAZ 6 — Final tutarlılık geçişi (orkestratör şefi)
+## Loop durumu — HEPSİ TAMAM ✅
+- [x] FAZ 1 — Derin değerlendirme (11 rapor)
+- [x] FAZ 2 — Karşı-görüş / kırmızı-takım (11/11; 06 dahil — başlık Türkçe karakterli)
+- [x] FAZ 3 — Eksiklik kritiği (00_EKSIKLER_VE_CELISKILER)
+- [x] FAZ 4 — Sentez (00_YONETICI_OZETI + 00_YOL_HARITASI + 00_RISK_REGISTER)
+- [x] FAZ 4b — Derinleştirme: 12_ICERIK_TAM_TARAMA + 13_UYGULAMA_PLANI_P0
+- [x] FAZ 5 — Tasarım mockup'ları (tasarim/yon-A|B|C.html + 00_README)
+- [x] FAZ 6 — Final tutarlılık + özet cilası (içerik bulgusu derin-taramayla düzeltildi, m.25 çelişkisi çözüldü)
+> KAPANIŞ: 11 derin rapor + 13 toplam doküman + 3 tasarım mockup; ~31 ajan; uygulamaya SIFIR kod dokunuşu; tümü commit+push'lu (5dc51a2). Heartbeat DURDU (yeni planlanmadı).
 
 ## Resume notu
 Token/oturum kesilirse: bu dosyadaki kutuları kontrol et, eksik fazı tetikle. Workflow
