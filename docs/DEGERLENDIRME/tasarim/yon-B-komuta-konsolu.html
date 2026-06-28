@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSPS — Yön B · Komuta Konsolu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== TOKENS (Yön B — DARK-FIRST) ===== */
+  :root{
+    --bg-deep:#06121f;          /* OLED derin lacivert presentation zemin */
+    --bg-deep2:#081a2c;
+    --navy:#0B1F3A;             /* ana koyu yüzey */
+    --navy2:#0d2547;            /* yüzey 2 */
+    --navy3:#103056;           /* yükseltilmiş yüzey */
+    --navy-line:#1c3c63;       /* koyu zemin kenarlık */
+    --navy-line2:#16314f;
+    --gold:#C9A227;
+    --gold-bright:#E2BE45;     /* koyu üstünde parlak altın */
+    --gold-dark:#B88917;
+    --gold-soft:#3a3115;       /* altın soluk koyu yüzey */
+    --cream:#F4ECDB;           /* koyu üstünde ana metin (krem) */
+    --cream-dim:#C7BCA3;       /* ikincil krem metin (AA geçer) */
+    --cream-faint:#8C8470;     /* üçüncül */
+    --red:#E2493F;             /* koyu üstünde aksiyon/uyarı kırmızı */
+    --red-deep:#C00000;
+    --green:#5BD08A;
+    --green-deep:#2E7D32;
+    --amber:#E0A540;
+    --skin:#E8C9A8;
+    --shadow:rgba(0,0,0,0.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;}
+  html,body{height:100%;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:
+      radial-gradient(1200px 700px at 20% -10%, #0e2740 0%, transparent 60%),
+      radial-gradient(1000px 600px at 100% 110%, #0a1d31 0%, transparent 55%),
+      linear-gradient(160deg,#06121f 0%,#04101a 100%);
+    color:var(--cream);
+    min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;
+    padding:54px 24px 70px;
+    overflow-x:auto;
+  }
+
+  /* ===== Presentation header ===== */
+  .deck-head{max-width:1280px;width:100%;text-align:center;margin-bottom:46px;}
+  .deck-kicker{
+    font-size:12px;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--gold-bright);font-weight:600;margin-bottom:16px;
+    display:inline-flex;align-items:center;gap:14px;
+  }
+  .deck-kicker::before,.deck-kicker::after{content:"";width:42px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dark),transparent);}
+  .deck-title{font-family:'Playfair Display',serif;font-weight:800;font-size:46px;line-height:1.05;color:var(--cream);letter-spacing:.4px;}
+  .deck-title .b{color:var(--gold-bright);}
+  .deck-sub{margin-top:16px;font-size:15px;color:var(--cream-dim);max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;}
+
+  /* ===== Phone row ===== */
+  .row{display:flex;gap:46px;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:1320px;}
+  .stage{display:flex;flex-direction:column;align-items:center;gap:20px;}
+  .stage-label{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--cream-dim);font-weight:600;}
+  .stage-label b{color:var(--gold-bright);font-weight:700;}
+
+  /* ===== Phone frame ===== */
+  .phone{
+    width:390px;height:844px;border-radius:54px;position:relative;
+    background:#000;
+    padding:13px;
+    box-shadow:0 2px 0 rgba(255,255,255,.04) inset,
+               0 40px 80px -28px rgba(0,0,0,.85),
+               0 0 0 2px #1a2740,
+               0 0 0 8px #0a121e,
+               0 0 0 9px #243650;
+  }
+  .screen{
+    width:100%;height:100%;border-radius:42px;overflow:hidden;position:relative;
+    background:linear-gradient(180deg,var(--navy) 0%,#08182b 100%);
+    display:flex;flex-direction:column;
+  }
+  /* notch */
+  .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:128px;height:30px;background:#000;border-radius:0 0 18px 18px;z-index:40;}
+  /* status bar */
+  .statusbar{height:50px;flex:0 0 50px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 26px 6px;font-size:14px;font-weight:600;color:var(--cream);z-index:30;}
+  .statusbar .ico{display:flex;gap:6px;align-items:center;}
+  .statusbar svg{display:block;}
+  /* home indicator */
+  .home-ind{position:absolute;bottom:9px;left:50%;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:rgba(244,236,219,.55);z-index:50;}
+
+  .body{flex:1 1 auto;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+  .scroll{flex:1 1 auto;overflow:hidden;padding:6px 18px 0;}
+
+  /* ===== Bottom tab bar ===== */
+  .tabbar{
+    flex:0 0 auto;height:84px;padding:10px 8px 26px;
+    background:linear-gradient(180deg,rgba(8,22,38,.4),#071425 60%);
+    border-top:1px solid var(--navy-line2);
+    display:flex;justify-content:space-around;align-items:flex-start;
+    backdrop-filter:blur(8px);
+  }
+  .tab{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;color:var(--cream-faint);}
+  .tab svg{width:23px;height:23px;}
+  .tab span{font-size:10.5px;font-weight:600;letter-spacing:.02em;}
+  .tab.on{color:var(--gold-bright);}
+  .tab.on .dot{width:4px;height:4px;border-radius:50%;background:var(--gold-bright);margin-top:-2px;}
+
+  /* ===== generic ===== */
+  .serif{font-family:'Playfair Display',serif;}
+  .gold{color:var(--gold-bright);}
+  .dim{color:var(--cream-dim);}
+  .card{background:var(--navy2);border:1px solid var(--navy-line2);border-radius:20px;}
+  .hair{height:1px;background:linear-gradient(90deg,transparent,var(--navy-line),transparent);}
+
+  /* ===== KARARGAH ===== */
+  .k-greet-row{display:flex;align-items:center;justify-content:space-between;margin:10px 4px 4px;}
+  .k-hello{font-size:13px;color:var(--cream-dim);font-weight:500;letter-spacing:.02em;}
+  .k-name{font-family:'Playfair Display',serif;font-weight:700;font-size:25px;color:var(--cream);margin-top:2px;}
+  .k-rank{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;margin-top:3px;}
+  .k-ava{width:48px;height:48px;border-radius:14px;border:1px solid var(--gold-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    background:linear-gradient(150deg,#13345a,#0a1f37);box-shadow:0 0 0 3px rgba(201,162,39,.10);}
+  .k-ava span{font-family:'Playfair Display',serif;font-weight:700;color:var(--gold-bright);font-size:18px;}
+
+  .warn{
+    margin-top:16px;border-radius:16px;padding:13px 14px;
+    background:linear-gradient(135deg,rgba(226,73,63,.16),rgba(226,73,63,.05));
+    border:1px solid rgba(226,73,63,.4);display:flex;gap:12px;align-items:center;
+  }
+  .warn .wic{width:34px;height:34px;border-radius:10px;background:rgba(226,73,63,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .warn .wic svg{width:18px;height:18px;}
+  .warn-t{font-size:13px;font-weight:700;color:#FBD9D5;line-height:1.25;}
+  .warn-s{font-size:11.5px;color:#E7B0AA;margin-top:2px;line-height:1.3;}
+
+  .etut{
+    margin-top:16px;border-radius:22px;padding:18px;position:relative;overflow:hidden;
+    background:linear-gradient(140deg,#123257 0%,#0b2342 60%,#0a1d36 100%);
+    border:1px solid var(--gold-dark);
+    box-shadow:0 18px 40px -22px rgba(0,0,0,.8), 0 0 0 1px rgba(201,162,39,.12) inset;
+  }
+  .etut::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.22),transparent 70%);}
+  .etut-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;}
+  .etut-row{display:flex;align-items:center;justify-content:space-between;margin-top:8px;position:relative;z-index:2;}
+  .etut-h{font-family:'Playfair Display',serif;font-weight:700;font-size:23px;color:var(--cream);line-height:1.1;}
+  .etut-sub{font-size:12px;color:var(--cream-dim);margin-top:6px;max-width:200px;line-height:1.4;}
+  .etut-cnt{font-family:'Playfair Display',serif;font-size:40px;font-weight:800;color:var(--gold-bright);line-height:1;}
+  .etut-cnt small{display:block;font-family:'Inter';font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);margin-top:4px;text-align:right;}
+  .etut-play{margin-top:16px;height:48px;border-radius:14px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;gap:9px;position:relative;z-index:2;box-shadow:0 10px 22px -10px rgba(201,162,39,.6);}
+  .etut-play span{font-weight:800;font-size:14px;color:#1a1305;letter-spacing:.04em;}
+  .etut-play svg{width:16px;height:16px;}
+
+  .sec-h{display:flex;align-items:center;justify-content:space-between;margin:20px 4px 10px;}
+  .sec-h .t{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);font-weight:600;}
+  .sec-h .l{font-size:11px;color:var(--gold-bright);font-weight:600;}
+
+  .gorev{display:flex;gap:12px;align-items:center;padding:13px 14px;border-radius:16px;background:var(--navy2);border:1px solid var(--navy-line2);}
+  .gorev .gn{width:42px;height:42px;border-radius:11px;background:var(--gold-soft);border:1px solid var(--gold-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;}
+  .gorev .gn b{font-family:'Playfair Display';font-size:15px;color:var(--gold-bright);line-height:1;}
+  .gorev .gn small{font-size:8px;color:var(--cream-dim);letter-spacing:.08em;margin-top:2px;}
+  .gorev-t{font-size:13.5px;font-weight:700;color:var(--cream);}
+  .gorev-s{font-size:11.5px;color:var(--cream-dim);margin-top:3px;}
+  .gorev-chk{margin-left:auto;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .gorev-chk svg{width:13px;height:13px;}
+
+  .triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px;}
+  .stat{background:var(--navy2);border:1px solid var(--navy-line2);border-radius:16px;padding:13px 8px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px;}
+  .ring{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;
+    background:conic-gradient(var(--gold-bright) 0% 72%, #14314f 72% 100%);}
+  .ring .in{width:38px;height:38px;border-radius:50%;background:var(--navy2);display:grid;place-items:center;font-size:13px;font-weight:800;color:var(--cream);}
+  .stat .big{font-family:'Playfair Display';font-size:24px;font-weight:800;color:var(--gold-bright);line-height:1;}
+  .stat .lbl{font-size:10px;color:var(--cream-dim);font-weight:600;letter-spacing:.04em;line-height:1.2;}
+  .flameic{width:50px;height:50px;border-radius:50%;background:radial-gradient(circle at 50% 60%,rgba(224,165,64,.25),transparent 70%);display:grid;place-items:center;}
+  .flameic svg{width:26px;height:26px;}
+  .madic{width:50px;height:50px;border-radius:50%;background:rgba(201,162,39,.08);display:grid;place-items:center;border:1px solid var(--navy-line2);}
+  .madic b{font-family:'Playfair Display';font-size:12px;color:var(--gold-bright);}
+
+  /* ===== KART AKIŞI ===== */
+  .akis-top{display:flex;align-items:center;justify-content:space-between;padding:8px 4px 4px;}
+  .akis-top .x{width:34px;height:34px;border-radius:11px;background:var(--navy3);display:grid;place-items:center;border:1px solid var(--navy-line2);}
+  .akis-top .x svg{width:15px;height:15px;}
+  .akis-meta{text-align:center;}
+  .akis-meta .law{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;}
+  .akis-meta .art{font-family:'Playfair Display';font-weight:700;font-size:16px;color:var(--cream);margin-top:2px;}
+  .akis-prog{display:flex;gap:5px;margin:12px 4px 0;}
+  .akis-prog i{height:4px;border-radius:2px;flex:1;background:#14314f;}
+  .akis-prog i.done{background:var(--gold-bright);}
+  .akis-prog i.cur{background:linear-gradient(90deg,var(--gold-bright),#14314f);}
+
+  /* comic card */
+  .comic{
+    margin:16px 4px 0;border-radius:22px;overflow:hidden;position:relative;
+    background:linear-gradient(160deg,#0f2b4a,#0a1d34);
+    border:1px solid var(--gold-dark);
+    box-shadow:0 24px 50px -24px rgba(0,0,0,.85),0 0 0 1px rgba(201,162,39,.14) inset,0 0 40px -10px rgba(201,162,39,.12);
+  }
+  .comic-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;background:var(--gold-dark);aspect-ratio:3/3.35;}
+  .panel{position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:10px;}
+  .panel .pn{position:absolute;top:8px;left:9px;font-family:'Playfair Display';font-size:11px;font-weight:700;color:rgba(244,236,219,.55);z-index:3;}
+  .panel .cap{font-size:9.5px;font-weight:600;color:var(--cream);background:rgba(6,18,31,.7);padding:3px 7px;border-radius:6px;backdrop-filter:blur(2px);z-index:3;letter-spacing:.01em;}
+  /* simple illustrative scenes via gradients + shapes */
+  .p1{background:linear-gradient(165deg,#1a4571 0%,#0d2745 100%);}
+  .p2{background:linear-gradient(165deg,#3a2c52 0%,#16213f 100%);}
+  .p3{background:linear-gradient(165deg,#123f4d 0%,#0c2533 100%);}
+  .p4{background:linear-gradient(165deg,#4a2f22 0%,#1c1c2e 100%);}
+  .scene{position:absolute;inset:0;z-index:1;}
+  .fig{position:absolute;border-radius:50% 50% 46% 46%;}
+  .head{width:26px;height:26px;border-radius:50%;background:var(--skin);}
+  .torso{width:40px;height:50px;border-radius:18px 18px 8px 8px;}
+  .moon{position:absolute;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 38% 38%,#f3e7c1,#cbb878);box-shadow:0 0 22px rgba(243,231,193,.4);}
+  .scale{position:absolute;width:42px;height:42px;}
+  .badge-shape{position:absolute;width:40px;height:46px;background:linear-gradient(160deg,var(--gold-bright),var(--gold-dark));clip-path:polygon(50% 0,100% 22%,100% 70%,50% 100%,0 70%,0 22%);box-shadow:0 0 18px rgba(201,162,39,.4);}
+  .speech{position:absolute;background:#F4ECDB;color:#0B1F3A;font-size:8px;font-weight:700;padding:4px 7px;border-radius:9px;z-index:2;}
+  .speech::after{content:"";position:absolute;bottom:-5px;left:12px;border:5px solid transparent;border-top-color:#F4ECDB;border-bottom:0;}
+
+  .akis-tools{display:flex;justify-content:center;gap:18px;margin:16px 0 0;}
+  .tool{width:54px;height:54px;border-radius:50%;background:var(--navy2);border:1px solid var(--navy-line);display:grid;place-items:center;position:relative;}
+  .tool svg{width:22px;height:22px;}
+  .tool .tl{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:9.5px;color:var(--cream-dim);font-weight:600;white-space:nowrap;}
+  .tool.on{border-color:var(--gold-dark);background:var(--gold-soft);}
+
+  .akis-btns{margin-top:30px;display:flex;flex-direction:column;gap:11px;padding:0 2px;}
+  .btn-learn{height:54px;border-radius:16px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;gap:9px;box-shadow:0 14px 28px -12px rgba(201,162,39,.6);}
+  .btn-learn span{font-weight:800;font-size:15px;color:#1a1305;letter-spacing:.03em;}
+  .btn-learn svg{width:18px;height:18px;}
+  .btn-again{height:50px;border-radius:16px;background:transparent;border:1.5px solid var(--red);display:flex;align-items:center;justify-content:center;gap:8px;}
+  .btn-again span{font-weight:700;font-size:14px;color:var(--red);letter-spacing:.02em;}
+  .btn-again svg{width:16px;height:16px;}
+
+  /* article text variant (peek) */
+  .art-peek{margin:14px 4px 0;border-radius:16px;background:var(--navy2);border:1px solid var(--navy-line2);overflow:hidden;}
+  .art-peek-h{display:flex;align-items:center;gap:8px;padding:11px 14px;border-bottom:1px solid var(--navy-line2);}
+  .art-peek-h svg{width:15px;height:15px;}
+  .art-peek-h b{font-size:12px;font-weight:700;color:var(--cream);letter-spacing:.04em;}
+  .art-peek-h .law2{margin-left:auto;font-size:10px;color:var(--gold-bright);font-weight:600;letter-spacing:.1em;}
+  .art-body{height:118px;overflow:hidden;padding:12px 14px;position:relative;}
+  .art-body p{font-size:11.5px;line-height:1.65;color:var(--cream-dim);}
+  .art-body p b{color:var(--cream);}
+  .art-body::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(transparent,var(--navy2));}
+
+  /* ===== MEVZUAT ===== */
+  .m-head{padding:8px 4px 0;}
+  .m-title{font-family:'Playfair Display';font-weight:700;font-size:27px;color:var(--cream);}
+  .m-sub{font-size:12.5px;color:var(--cream-dim);margin-top:3px;}
+  .seg{margin:16px 4px 0;background:var(--navy3);border:1px solid var(--navy-line2);border-radius:14px;padding:4px;display:flex;}
+  .seg div{flex:1;text-align:center;font-size:12.5px;font-weight:700;padding:9px 0;border-radius:10px;color:var(--cream-dim);}
+  .seg .on{background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:#1a1305;box-shadow:0 6px 14px -8px rgba(201,162,39,.6);}
+
+  .search-mini{margin:14px 4px 0;height:44px;border-radius:13px;background:var(--navy2);border:1px solid var(--navy-line2);display:flex;align-items:center;gap:10px;padding:0 14px;}
+  .search-mini svg{width:16px;height:16px;}
+  .search-mini span{font-size:12.5px;color:var(--cream-faint);}
+
+  .law{display:flex;align-items:center;gap:13px;padding:14px 12px;border-radius:18px;background:var(--navy2);border:1px solid var(--navy-line2);margin-top:11px;}
+  .law-no{width:58px;height:58px;border-radius:14px;flex-shrink:0;background:linear-gradient(150deg,#13345a,#0b2038);border:1px solid var(--navy-line);display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .law-no b{font-family:'Playfair Display';font-weight:700;font-size:18px;color:var(--gold-bright);line-height:1;white-space:nowrap;}
+  .law-no small{font-size:7.5px;letter-spacing:.12em;color:var(--cream-faint);margin-top:3px;text-transform:uppercase;}
+  .law-mid{flex:1;min-width:0;}
+  .law-name{font-size:13.5px;font-weight:700;color:var(--cream);line-height:1.2;}
+  .law-meta{font-size:10.5px;color:var(--cream-dim);margin-top:4px;}
+  .law-bar{margin-top:8px;height:5px;border-radius:3px;background:#14314f;overflow:hidden;}
+  .law-bar i{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold-bright),var(--gold-dark));}
+  .law-right{display:flex;flex-direction:column;align-items:flex-end;gap:9px;flex-shrink:0;}
+  .law-pct{font-size:12px;font-weight:800;color:var(--gold-bright);font-family:'Playfair Display';}
+  .law-heart svg{width:18px;height:18px;}
+
+  .badge-new{position:absolute;}
+  @media (max-width:1280px){ .row{justify-content:flex-start;} }
+</style>
+</head>
+<body>
+
+  <div class="deck-head">
+    <div class="deck-kicker">JSPS · Görsel Hafıza</div>
+    <h1 class="deck-title">Yön B — <span class="b">Komuta Konsolu</span></h1>
+    <p class="deck-sub">Dark-first harekât dili. Derin lacivert OLED zemin üzerinde sıcak altın vurgu; görsel hafıza kartları gece görüş temasında parlar. Lacivert + altın + Playfair ile aynı marka ruhu, köklü sapma.</p>
+  </div>
+
+  <div class="row">
+
+    <!-- ============ 1 · KARARGAH ============ -->
+    <div class="stage">
+      <div class="stage-label"><b>01</b> · Karargâh</div>
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="statusbar">
+          <span>9:41</span>
+          <span class="ico">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="0" y="7" width="3" height="5" rx="1" fill="#F4ECDB"/><rect x="4.5" y="5" width="3" height="7" rx="1" fill="#F4ECDB"/><rect x="9" y="2.5" width="3" height="9.5" rx="1" fill="#F4ECDB"/><rect x="13.5" y="0" width="3" height="12" rx="1" fill="#F4ECDB"/></svg>
+            <svg width="22" height="12" viewBox="0 0 22 12" fill="none"><rect x="0.5" y="0.5" width="18" height="11" rx="3" stroke="#F4ECDB" opacity=".5"/><rect x="2" y="2" width="14" height="8" rx="1.6" fill="#F4ECDB"/><rect x="19.5" y="4" width="2" height="4" rx="1" fill="#F4ECDB"/></svg>
+          </span>
+        </div>
+
+        <div class="body">
+          <div class="scroll">
+            <div class="k-greet-row">
+              <div>
+                <div class="k-hello">İyi akşamlar, hazır mısın?</div>
+                <div class="k-name">Komutanım</div>
+                <div class="k-rank">J. Astsb. Adayı</div>
+              </div>
+              <div class="k-ava"><span>MA</span></div>
+            </div>
+
+            <!-- warning band -->
+            <div class="warn">
+              <div class="wic">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke="#FBD9D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="warn-t">7 gündür tekrar etmedin</div>
+                <div class="warn-s">TCK ve 7068 Disiplin maddelerin soğumak üzere</div>
+              </div>
+            </div>
+
+            <!-- ETÜT giriş kartı -->
+            <div class="etut">
+              <div class="etut-tag">Geri Besleme · Etüt</div>
+              <div class="etut-row">
+                <div>
+                  <div class="etut-h">Zayıf Mevziler</div>
+                  <div class="etut-sub">Zorlandığın maddeleri pekiştir, cepheyi sağlamlaştır.</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="etut-cnt">14<small>Mevzi</small></div>
+                </div>
+              </div>
+              <div class="etut-play">
+                <svg viewBox="0 0 24 24" fill="#1a1305"><path d="M7 5v14l11-7z"/></svg>
+                <span>ETÜDE BAŞLA</span>
+              </div>
+            </div>
+
+            <!-- bugünün görevi -->
+            <div class="sec-h"><div class="t">Bugünün Görevi</div><div class="l">2 / 3</div></div>
+            <div class="gorev">
+              <div class="gn"><b>5237</b><small>TCK</small></div>
+              <div>
+                <div class="gorev-t">Bugün 5 madde çalış</div>
+                <div class="gorev-s">m.21 Kast · m.22 Taksir okunuyor</div>
+              </div>
+              <div class="gorev-chk">
+                <svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#5BD08A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+
+            <!-- triple stat -->
+            <div class="triple">
+              <div class="stat">
+                <div class="ring"><div class="in">72%</div></div>
+                <div class="big" style="display:none"></div>
+                <div class="lbl">İlerleme</div>
+              </div>
+              <div class="stat">
+                <div class="flameic">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c1 4-3 5-3 9a3 3 0 0 0 6 0c0-1-1-2-1-3 2 1 4 3 4 6a6 6 0 1 1-12 0c0-5 5-7 6-12Z" fill="#E0A540"/></svg>
+                </div>
+                <div class="big">18</div>
+                <div class="lbl">Nöbet Serisi</div>
+              </div>
+              <div class="stat">
+                <div class="madic"><b>m.86</b></div>
+                <div class="big" style="font-size:13px;line-height:1.15;">Kasten<br>Yaralama</div>
+                <div class="lbl">Günün Maddesi</div>
+              </div>
+            </div>
+            <div style="height:14px"></div>
+          </div>
+
+          <!-- tab bar -->
+          <div class="tabbar">
+            <div class="tab on"><div class="dot"></div>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 10 12 3l8 7v9a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1v-9Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span>Karargâh</span></div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h11l3 3v13H5V4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Mevzuat</span></div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Ara</span></div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6v6c0 5 3.4 7.5 8 9 4.6-1.5 8-4 8-9V6l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span>Tatbikat</span></div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.6" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c0-3.6 3-6 7-6s7 2.4 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Evsaf</span></div>
+          </div>
+          <div class="home-ind"></div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- ============ 2 · KART AKIŞI ============ -->
+    <div class="stage">
+      <div class="stage-label"><b>02</b> · Kart Akışı</div>
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="statusbar">
+          <span>9:41</span>
+          <span class="ico">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="0" y="7" width="3" height="5" rx="1" fill="#F4ECDB"/><rect x="4.5" y="5" width="3" height="7" rx="1" fill="#F4ECDB"/><rect x="9" y="2.5" width="3" height="9.5" rx="1" fill="#F4ECDB"/><rect x="13.5" y="0" width="3" height="12" rx="1" fill="#F4ECDB"/></svg>
+            <svg width="22" height="12" viewBox="0 0 22 12" fill="none"><rect x="0.5" y="0.5" width="18" height="11" rx="3" stroke="#F4ECDB" opacity=".5"/><rect x="2" y="2" width="14" height="8" rx="1.6" fill="#F4ECDB"/><rect x="19.5" y="4" width="2" height="4" rx="1" fill="#F4ECDB"/></svg>
+          </span>
+        </div>
+
+        <div class="body">
+          <div class="scroll">
+            <div class="akis-top">
+              <div class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="#C7BCA3" stroke-width="2" stroke-linecap="round"/></svg></div>
+              <div class="akis-meta">
+                <div class="law">TCK · 5237</div>
+                <div class="art">m.21 — Kast</div>
+              </div>
+              <div class="x"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v6m0 0 3-3m-3 3L9 6M5 14h14v6H5z" stroke="#C7BCA3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+            <div class="akis-prog">
+              <i class="done"></i><i class="done"></i><i class="cur"></i><i></i><i></i>
+            </div>
+
+            <!-- COMIC 4-panel -->
+            <div class="comic">
+              <div class="comic-grid">
+                <div class="panel p1">
+                  <div class="pn">1</div>
+                  <div class="scene">
+                    <div class="moon" style="top:14px;right:14px"></div>
+                    <div class="fig head" style="bottom:34px;left:50%;transform:translateX(-50%)"></div>
+                    <div class="fig torso" style="bottom:0;left:50%;transform:translateX(-50%);background:linear-gradient(#16406b,#0d2745)"></div>
+                  </div>
+                  <div class="speech" style="top:30px;left:8px">İSTEYEREK!</div>
+                  <div class="cap">Niyet kuruluyor</div>
+                </div>
+                <div class="panel p2">
+                  <div class="pn">2</div>
+                  <div class="scene">
+                    <div class="fig head" style="bottom:36px;left:24px"></div>
+                    <div class="fig torso" style="bottom:2px;left:18px;background:linear-gradient(#3a2c52,#1c1c2e)"></div>
+                    <div class="fig head" style="bottom:36px;right:22px;background:#d9b893"></div>
+                    <div class="fig torso" style="bottom:2px;right:16px;background:linear-gradient(#2a2440,#161528)"></div>
+                  </div>
+                  <div class="cap">Eylem bilerek yapılır</div>
+                </div>
+                <div class="panel p3">
+                  <div class="pn">3</div>
+                  <div class="scene">
+                    <svg class="scale" style="top:18px;left:50%;transform:translateX(-50%)" viewBox="0 0 48 48" fill="none"><path d="M24 6v34M14 40h20M24 10 9 18m15-8 15 8M9 18l-5 9h10l-5-9Zm30 0-5 9h10l-5-9Z" stroke="#E2BE45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <div class="cap">Bilinç + irade = KAST</div>
+                </div>
+                <div class="panel p4">
+                  <div class="pn">4</div>
+                  <div class="scene">
+                    <div class="badge-shape" style="top:18px;left:50%;transform:translateX(-50%)"></div>
+                  </div>
+                  <div class="cap">Cezası ağırlaşır</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- tools -->
+            <div class="akis-tools">
+              <div class="tool on">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-4a8 8 0 0 1 16 0v4M4 14a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 2Zm16 0a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2Z" stroke="#E2BE45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="tl">Sesli anlat</span>
+              </div>
+              <div class="tool">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l3 3v15H6V3Z" stroke="#C7BCA3" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9h6M9 13h6M9 17h4" stroke="#C7BCA3" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <span class="tl">Madde metni</span>
+              </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="akis-btns">
+              <div class="btn-learn">
+                <svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="#1a1305" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Öğrendim</span>
+              </div>
+              <div class="btn-again">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 5v5h5M4 10a8 8 0 1 1 1.5 6" stroke="#E2493F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Tekrar Hatırlat</span>
+              </div>
+            </div>
+            <div style="height:16px"></div>
+          </div>
+          <div class="home-ind"></div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- ============ 3 · MEVZUAT ============ -->
+    <div class="stage">
+      <div class="stage-label"><b>03</b> · Mevzuat</div>
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="statusbar">
+          <span>9:41</span>
+          <span class="ico">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="0" y="7" width="3" height="5" rx="1" fill="#F4ECDB"/><rect x="4.5" y="5" width="3" height="7" rx="1" fill="#F4ECDB"/><rect x="9" y="2.5" width="3" height="9.5" rx="1" fill="#F4ECDB"/><rect x="13.5" y="0" width="3" height="12" rx="1" fill="#F4ECDB"/></svg>
+            <svg width="22" height="12" viewBox="0 0 22 12" fill="none"><rect x="0.5" y="0.5" width="18" height="11" rx="3" stroke="#F4ECDB" opacity=".5"/><rect x="2" y="2" width="14" height="8" rx="1.6" fill="#F4ECDB"/><rect x="19.5" y="4" width="2" height="4" rx="1" fill="#F4ECDB"/></svg>
+          </span>
+        </div>
+
+        <div class="body">
+          <div class="scroll">
+            <div class="m-head">
+              <div class="m-title serif">Mevzuat</div>
+              <div class="m-sub">Cephaneliğin · 5 kanun, 412 madde</div>
+            </div>
+
+            <div class="seg">
+              <div class="on">Müşterek</div>
+              <div>Branş</div>
+            </div>
+
+            <div class="search-mini">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#8C8470" stroke-width="1.8"/><path d="m16 16 4 4" stroke="#8C8470" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Madde veya kanun ara…</span>
+            </div>
+
+            <!-- law rows -->
+            <div class="law">
+              <div class="law-no"><b>5237</b><small>Kanun</small></div>
+              <div class="law-mid">
+                <div class="law-name">Türk Ceza Kanunu</div>
+                <div class="law-meta">132 madde · 95 öğrenildi</div>
+                <div class="law-bar"><i style="width:72%"></i></div>
+              </div>
+              <div class="law-right">
+                <div class="law-pct">72%</div>
+                <div class="law-heart"><svg viewBox="0 0 24 24" fill="#E2493F"><path d="M12 21s-7-4.5-9.5-9C1 8.5 2.5 5 6 5c2 0 3 1.2 4 2.5C11 6.2 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.5-9.5 9-9.5 9Z"/></svg></div>
+              </div>
+            </div>
+
+            <div class="law">
+              <div class="law-no"><b>7068</b><small>Kanun</small></div>
+              <div class="law-mid">
+                <div class="law-name">Disiplin Kanunu</div>
+                <div class="law-meta">48 madde · 22 öğrenildi</div>
+                <div class="law-bar"><i style="width:46%"></i></div>
+              </div>
+              <div class="law-right">
+                <div class="law-pct">46%</div>
+                <div class="law-heart"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8.5 2.5 5 6 5c2 0 3 1.2 4 2.5C11 6.2 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.5-9.5 9-9.5 9Z" stroke="#8C8470" stroke-width="1.8"/></svg></div>
+              </div>
+            </div>
+
+            <div class="law">
+              <div class="law-no"><b>2803</b><small>Kanun</small></div>
+              <div class="law-mid">
+                <div class="law-name">Jandarma Teşkilât Kanunu</div>
+                <div class="law-meta">28 madde · 9 öğrenildi</div>
+                <div class="law-bar"><i style="width:32%"></i></div>
+              </div>
+              <div class="law-right">
+                <div class="law-pct">32%</div>
+                <div class="law-heart"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8.5 2.5 5 6 5c2 0 3 1.2 4 2.5C11 6.2 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.5-9.5 9-9.5 9Z" stroke="#8C8470" stroke-width="1.8"/></svg></div>
+              </div>
+            </div>
+
+            <div class="law">
+              <div class="law-no"><b>5442</b><small>Kanun</small></div>
+              <div class="law-mid">
+                <div class="law-name">İl İdaresi Kanunu</div>
+                <div class="law-meta">42 madde · 4 öğrenildi</div>
+                <div class="law-bar"><i style="width:10%"></i></div>
+              </div>
+              <div class="law-right">
+                <div class="law-pct">10%</div>
+                <div class="law-heart"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8.5 2.5 5 6 5c2 0 3 1.2 4 2.5C11 6.2 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.5-9.5 9-9.5 9Z" stroke="#8C8470" stroke-width="1.8"/></svg></div>
+              </div>
+            </div>
+
+            <div class="law">
+              <div class="law-no"><b>3713</b><small>Kanun</small></div>
+              <div class="law-mid">
+                <div class="law-name">Terörle Mücadele Kanunu</div>
+                <div class="law-meta">22 madde · başlanmadı</div>
+                <div class="law-bar"><i style="width:0%"></i></div>
+              </div>
+              <div class="law-right">
+                <div class="law-pct" style="color:#8C8470">Başla</div>
+                <div class="law-heart"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8.5 2.5 5 6 5c2 0 3 1.2 4 2.5C11 6.2 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.5-9.5 9-9.5 9Z" stroke="#8C8470" stroke-width="1.8"/></svg></div>
+              </div>
+            </div>
+            <div style="height:14px"></div>
+          </div>
+
+          <div class="tabbar">
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 10 12 3l8 7v9a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1v-9Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span>Karargâh</span></div>
+            <div class="tab on"><div class="dot"></div>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h11l3 3v13H5V4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Mevzuat</span></div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Ara</span></div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6v6c0 5 3.4 7.5 8 9 4.6-1.5 8-4 8-9V6l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span>Tatbikat</span></div>
+            <div class="tab">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.6" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c0-3.6 3-6 7-6s7 2.4 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span>Evsaf</span></div>
+          </div>
+          <div class="home-ind"></div>
+        </div>
+      </div></div>
+    </div>
+
+  </div>
+</body>
+</html>

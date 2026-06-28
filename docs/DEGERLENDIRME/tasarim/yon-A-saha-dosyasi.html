@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yön A — Saha Dosyası · JSPS Görsel Hafıza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --krem:#F7F3EA; --kart:#FFFCF5; --kenar:#E7DCC7; --ayirici:#EFE6D6;
+    --lacivert:#0B1F3A; --lacivert2:#173B6B; --metin:#1B2A4A; --soluk:#6E6047;
+    --altin:#C9A227; --altinKoyu:#B88917; --altinYuzey:#F3E7C1;
+    --kirmizi:#C00000; --yesil:#2E7D32; --amber:#B5791C; --ten:#E8C9A8; --beyaz:#FFFFFF;
+    --golge:0 18px 40px rgba(11,31,58,0.08);
+    --golgeKart:0 6px 18px rgba(11,31,58,0.07);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:
+      radial-gradient(900px 600px at 18% -10%, rgba(201,162,39,0.10), transparent 60%),
+      radial-gradient(1000px 700px at 110% 120%, rgba(23,59,107,0.55), transparent 55%),
+      linear-gradient(160deg,#0a1830 0%, #0B1F3A 48%, #08182f 100%);
+    color:var(--metin);
+    min-height:100vh;
+    padding:56px 28px 72px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---- Sunum başlığı ---- */
+  .sahne-baslik{max-width:1280px; margin:0 auto 46px; text-align:center; color:var(--krem);}
+  .sahne-kicker{
+    font-size:12px; letter-spacing:3.4px; text-transform:uppercase; font-weight:700;
+    color:var(--altin); display:inline-flex; align-items:center; gap:12px;
+  }
+  .sahne-kicker::before,.sahne-kicker::after{content:""; width:38px; height:1px; background:linear-gradient(90deg,transparent,var(--altin),transparent);}
+  .sahne-baslik h1{
+    font-family:'Playfair Display',serif; font-weight:800; font-size:42px;
+    margin:18px 0 10px; letter-spacing:.3px;
+  }
+  .sahne-baslik p{color:#C9D2E2; font-size:15px; max-width:620px; margin:0 auto; line-height:1.6;}
+
+  /* ---- Telefon dizilimi ---- */
+  .dizi{
+    display:flex; gap:46px; justify-content:center; align-items:flex-start;
+    flex-wrap:wrap; max-width:1320px; margin:0 auto;
+  }
+  .yuva{display:flex; flex-direction:column; align-items:center; gap:20px;}
+  .yuva-etiket{text-align:center; color:var(--krem);}
+  .yuva-etiket .no{
+    font-family:'Playfair Display',serif; font-size:13px; color:var(--altin); font-weight:700;
+    letter-spacing:2px;
+  }
+  .yuva-etiket .ad{font-size:14px; color:#D9E0EC; font-weight:600; margin-top:2px;}
+
+  /* ---- Telefon çerçevesi ---- */
+  .telefon{
+    width:390px; height:844px; border-radius:54px; position:relative;
+    background:#0b1424;
+    padding:13px;
+    box-shadow:
+      0 50px 90px rgba(0,0,0,0.55),
+      0 0 0 2px rgba(255,255,255,0.04) inset,
+      0 0 0 11px #060d18, 0 0 0 12px #1d2738;
+  }
+  .ekran{
+    width:100%; height:100%; border-radius:42px; overflow:hidden;
+    background:var(--krem); position:relative; display:flex; flex-direction:column;
+  }
+  /* Durum çubuğu */
+  .durum{
+    height:54px; flex:none; display:flex; align-items:flex-end; justify-content:space-between;
+    padding:0 26px 9px; font-size:14px; font-weight:700; color:var(--lacivert);
+    position:relative; z-index:5;
+  }
+  .durum .sag{display:flex; align-items:center; gap:7px;}
+  .durum svg{display:block;}
+  .centik{
+    position:absolute; top:11px; left:50%; transform:translateX(-50%);
+    width:128px; height:30px; background:#0b1424; border-radius:0 0 18px 18px; z-index:6;
+  }
+  /* Home indicator */
+  .home-ind{
+    position:absolute; bottom:8px; left:50%; transform:translateX(-50%);
+    width:138px; height:5px; border-radius:3px; background:rgba(11,31,58,0.30); z-index:20;
+  }
+  /* İçerik scroll alanı */
+  .icerik{flex:1; overflow:hidden; position:relative;}
+  .icerik-pad{padding:6px 20px 20px;}
+
+  /* ---- Alt sekme çubuğu ---- */
+  .sekme{
+    flex:none; height:84px; background:rgba(255,252,245,0.94);
+    border-top:1px solid var(--kenar);
+    backdrop-filter:blur(8px);
+    display:flex; justify-content:space-around; align-items:flex-start; padding-top:11px;
+    position:relative; z-index:10;
+  }
+  .sekme-og{display:flex; flex-direction:column; align-items:center; gap:5px; width:64px;}
+  .sekme-og .ikn{width:24px; height:24px; color:#A99B7E;}
+  .sekme-og span{font-size:10.5px; font-weight:600; color:#A99B7E; letter-spacing:.2px;}
+  .sekme-og.aktif .ikn{color:var(--lacivert);}
+  .sekme-og.aktif span{color:var(--lacivert); font-weight:700;}
+  .sekme-og.aktif::before{
+    content:""; position:absolute; top:0; width:30px; height:3px; border-radius:0 0 3px 3px;
+    background:var(--altin);
+  }
+
+  /* ===== KARARGAH ===== */
+  .selam{display:flex; justify-content:space-between; align-items:flex-start; margin:8px 0 18px;}
+  .selam .gun{font-size:12px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:var(--altinKoyu);}
+  .selam h2{font-family:'Playfair Display',serif; font-weight:700; font-size:27px; margin-top:5px; color:var(--metin);}
+  .selam .avatar{
+    width:46px; height:46px; border-radius:14px; flex:none;
+    background:linear-gradient(150deg,var(--lacivert2),var(--lacivert));
+    color:var(--altinYuzey); display:flex; align-items:center; justify-content:center;
+    font-family:'Playfair Display',serif; font-weight:700; font-size:18px;
+    box-shadow:var(--golgeKart); border:1px solid rgba(201,162,39,0.4);
+  }
+
+  /* Uyarı bandı */
+  .uyari{
+    display:flex; align-items:center; gap:13px; padding:13px 15px; border-radius:15px;
+    background:linear-gradient(180deg,#FBF3DC,#F8ECCB); border:1px solid #ECD9A6;
+    margin-bottom:20px;
+  }
+  .uyari .nokta{
+    width:34px; height:34px; flex:none; border-radius:10px; background:var(--altinYuzey);
+    display:flex; align-items:center; justify-content:center; color:var(--altinKoyu);
+    border:1px solid #E4CE8E;
+  }
+  .uyari .tx{flex:1;}
+  .uyari .tx b{display:block; font-size:13.5px; color:#7A5B12; font-weight:700;}
+  .uyari .tx small{font-size:11.5px; color:var(--soluk); font-weight:500;}
+  .uyari .chev{color:var(--altinKoyu);}
+
+  /* Hero — tek odak Etüt girişi */
+  .hero{
+    border-radius:24px; padding:24px 22px; position:relative; overflow:hidden;
+    background:
+      radial-gradient(420px 220px at 88% -30%, rgba(201,162,39,0.30), transparent 60%),
+      linear-gradient(155deg,#173B6B 0%, #0B1F3A 92%);
+    box-shadow:var(--golge); margin-bottom:18px;
+    color:var(--krem);
+  }
+  .hero .seal{
+    position:absolute; right:-26px; top:-22px; width:150px; height:150px; border-radius:50%;
+    border:1px solid rgba(201,162,39,0.30);
+  }
+  .hero .seal::after{content:""; position:absolute; inset:18px; border-radius:50%; border:1px dashed rgba(201,162,39,0.22);}
+  .hero-kicker{font-size:11px; font-weight:700; letter-spacing:2.4px; text-transform:uppercase; color:var(--altin);}
+  .hero h3{font-family:'Playfair Display',serif; font-weight:700; font-size:25px; margin:9px 0 4px; line-height:1.18;}
+  .hero p{font-size:12.5px; color:#BFCBDD; line-height:1.5; max-width:230px;}
+  .hero-alt{display:flex; align-items:center; justify-content:space-between; margin-top:20px;}
+  .hero-sayi{display:flex; align-items:baseline; gap:8px;}
+  .hero-sayi b{font-family:'Playfair Display',serif; font-size:40px; color:var(--beyaz); line-height:1;}
+  .hero-sayi span{font-size:12px; color:#AEBBD0; font-weight:600; max-width:90px; line-height:1.25;}
+  .play{
+    width:62px; height:62px; flex:none; border-radius:50%;
+    background:linear-gradient(160deg,var(--altin),var(--altinKoyu));
+    display:flex; align-items:center; justify-content:center; color:var(--lacivert);
+    box-shadow:0 10px 22px rgba(201,162,39,0.40);
+  }
+  .play svg{margin-left:3px;}
+
+  /* Bugünün görevi mini */
+  .gorev{
+    display:flex; align-items:center; gap:13px; padding:14px 15px; border-radius:17px;
+    background:var(--kart); border:1px solid var(--kenar); box-shadow:var(--golgeKart);
+    margin-bottom:16px;
+  }
+  .gorev .rozet{
+    width:42px; height:42px; flex:none; border-radius:12px; background:var(--altinYuzey);
+    border:1px solid #E6D097; display:flex; align-items:center; justify-content:center;
+    font-family:'Playfair Display',serif; font-weight:700; color:var(--altinKoyu); font-size:15px;
+  }
+  .gorev .gv{flex:1;}
+  .gorev .gv .lab{font-size:10.5px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--altinKoyu);}
+  .gorev .gv b{display:block; font-size:14.5px; color:var(--metin); margin-top:2px; font-weight:700;}
+  .gorev .gv small{font-size:11.5px; color:var(--soluk); font-weight:500;}
+  .gorev .ilerle{display:flex; flex-direction:column; align-items:flex-end; gap:6px;}
+  .gorev .ilerle b{font-size:13px; color:var(--lacivert); font-weight:800;}
+  .mini-bar{width:70px; height:6px; border-radius:4px; background:#EDE3CF; overflow:hidden;}
+  .mini-bar i{display:block; height:100%; border-radius:4px; background:linear-gradient(90deg,var(--altin),var(--altinKoyu));}
+
+  /* 2 kutu (3 değil) */
+  .kutular{display:grid; grid-template-columns:1fr 1fr; gap:13px;}
+  .kutu{
+    background:var(--kart); border:1px solid var(--kenar); border-radius:18px; padding:16px 15px;
+    box-shadow:var(--golgeKart); position:relative;
+  }
+  .halka{width:58px; height:58px; margin:2px auto 10px; position:relative;}
+  .halka svg{transform:rotate(-90deg);}
+  .halka .pct{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family:'Playfair Display',serif; font-weight:700; font-size:15px; color:var(--lacivert);
+  }
+  .kutu .kt-lab{text-align:center; font-size:11.5px; font-weight:600; color:var(--soluk);}
+  .kutu.streak{display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;}
+  .streak .alev{font-size:26px; margin-bottom:4px;}
+  .streak b{font-family:'Playfair Display',serif; font-size:30px; color:var(--metin); line-height:1;}
+  .streak small{font-size:11px; color:var(--soluk); font-weight:600; margin-top:3px;}
+  .streak .gunler{display:flex; gap:5px; margin-top:9px;}
+  .streak .gunler i{width:8px; height:8px; border-radius:50%; background:var(--altin);}
+  .streak .gunler i.bos{background:#E4D9C2;}
+
+  /* ===== KART AKIŞI ===== */
+  .akis-ust{display:flex; align-items:center; justify-content:space-between; margin:6px 2px 14px;}
+  .akis-ust .geri{width:38px; height:38px; border-radius:12px; background:var(--kart); border:1px solid var(--kenar); display:flex; align-items:center; justify-content:center; color:var(--metin);}
+  .akis-ust .orta{text-align:center;}
+  .akis-ust .orta .mlab{font-size:11px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:var(--altinKoyu);}
+  .akis-ust .orta b{font-family:'Playfair Display',serif; font-size:16px; color:var(--metin);}
+  .akis-ust .sayac{font-size:12px; font-weight:700; color:var(--soluk); background:var(--kart); border:1px solid var(--kenar); padding:8px 11px; border-radius:11px;}
+
+  /* İlerleme noktaları */
+  .akis-dots{display:flex; gap:5px; padding:0 2px; margin-bottom:14px;}
+  .akis-dots i{flex:1; height:4px; border-radius:3px; background:#E4D9C2;}
+  .akis-dots i.dolu{background:var(--altin);}
+  .akis-dots i.simdi{background:var(--lacivert);}
+
+  /* Karikatür kartı — 4 panel */
+  .karikatur{
+    background:var(--kart); border:1px solid var(--kenar); border-radius:22px; padding:14px;
+    box-shadow:var(--golge);
+  }
+  .kart-tagh{display:flex; align-items:center; justify-content:space-between; margin:2px 4px 11px;}
+  .kart-tagh .sol{font-family:'Playfair Display',serif; font-weight:700; font-size:15px; color:var(--metin);}
+  .kart-tagh .et{font-size:10px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--altinKoyu); background:var(--altinYuzey); padding:4px 9px; border-radius:8px; border:1px solid #E6D097;}
+  .paneller{display:grid; grid-template-columns:1fr 1fr; gap:9px;}
+  .panel{
+    aspect-ratio:1/1; border-radius:14px; position:relative; overflow:hidden;
+    border:1px solid var(--kenar);
+    background:linear-gradient(170deg,#FBF6E9,#F4ECD9);
+  }
+  .panel .pn{position:absolute; top:7px; left:8px; width:19px; height:19px; border-radius:6px; background:rgba(11,31,58,0.82); color:var(--altinYuzey); font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; z-index:3;}
+  .panel .cap{position:absolute; left:8px; right:8px; bottom:7px; font-size:9.5px; font-weight:600; color:var(--metin); background:rgba(255,252,245,0.82); padding:3px 6px; border-radius:7px; line-height:1.2; z-index:3;}
+  /* basit CSS sahne çizimleri */
+  .sahne{position:absolute; inset:0;}
+  .yer{position:absolute; left:0; right:0; bottom:0; height:34%; background:linear-gradient(180deg,#EDE1C7,#E2D2AF);}
+  .gunes{position:absolute; right:14px; top:13px; width:24px; height:24px; border-radius:50%; background:radial-gradient(circle,#F2D98A,#E6BE54);}
+  .figur{position:absolute; bottom:34%; width:16px; border-radius:8px 8px 0 0;}
+  .figur::before{content:""; position:absolute; top:-13px; left:50%; transform:translateX(-50%); width:11px; height:11px; border-radius:50%; background:var(--ten); border:1px solid rgba(0,0,0,0.06);}
+  .figur.a{left:18px; height:34px; background:var(--lacivert2);}
+  .figur.b{left:40px; height:28px; background:var(--kirmizi);}
+  .kalkan{position:absolute; bottom:42%; left:50%; transform:translateX(-50%); width:30px; height:36px; background:linear-gradient(160deg,var(--altin),var(--altinKoyu)); border-radius:6px 6px 16px 16px; border:2px solid #fff7e0;}
+  .balon{position:absolute; top:12px; left:12px; background:#fff; border:1px solid var(--kenar); border-radius:10px; padding:4px 7px; font-size:8.5px; font-weight:700; color:var(--lacivert);}
+  .terazi{position:absolute; bottom:38%; left:50%; transform:translateX(-50%); width:36px; height:3px; background:var(--lacivert); border-radius:2px;}
+  .terazi::before,.terazi::after{content:""; position:absolute; top:0; width:13px; height:8px; border:2px solid var(--lacivert); border-top:none; border-radius:0 0 9px 9px;}
+  .terazi::before{left:-4px;} .terazi::after{right:-4px;}
+  .direk{position:absolute; bottom:34%; left:50%; transform:translateX(-50%); width:3px; height:30px; background:var(--lacivert);}
+
+  /* Madde metni paneli (açık varyant) */
+  .madde-panel{
+    margin-top:13px; background:#FBF6EA; border:1px solid var(--kenar); border-radius:16px;
+    padding:13px 14px;
+  }
+  .madde-panel .mh{display:flex; align-items:center; gap:8px; margin-bottom:8px;}
+  .madde-panel .mh .ic{width:26px; height:26px; border-radius:8px; background:var(--altinYuzey); border:1px solid #E6D097; display:flex; align-items:center; justify-content:center; color:var(--altinKoyu);}
+  .madde-panel .mh b{font-family:'Playfair Display',serif; font-size:14px; color:var(--metin);}
+  .madde-scroll{height:74px; overflow:hidden; position:relative; font-size:12px; line-height:1.55; color:var(--metin);}
+  .madde-scroll::after{content:""; position:absolute; left:0; right:0; bottom:0; height:24px; background:linear-gradient(180deg,transparent,#FBF6EA);}
+  .madde-scroll .par{font-size:10.5px; font-weight:700; color:var(--altinKoyu); letter-spacing:.4px;}
+
+  /* Yuvarlak ikonlar */
+  .yuvarlaklar{display:flex; justify-content:center; gap:16px; margin:16px 0 14px;}
+  .yuv{
+    width:54px; height:54px; border-radius:50%; background:var(--kart);
+    border:1px solid var(--kenar); box-shadow:var(--golgeKart);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+    color:var(--lacivert);
+  }
+  .yuv span{font-size:8.5px; font-weight:700; color:var(--soluk);}
+
+  /* Aksiyon butonları */
+  .aksiyon{display:flex; gap:11px;}
+  .btn{
+    flex:1; height:54px; border-radius:16px; display:flex; align-items:center; justify-content:center; gap:8px;
+    font-size:14px; font-weight:700; cursor:default;
+  }
+  .btn.tekrar{background:var(--kart); border:1px solid var(--kenar); color:var(--metin);}
+  .btn.ogrendim{background:linear-gradient(160deg,var(--lacivert2),var(--lacivert)); color:var(--krem); box-shadow:0 12px 24px rgba(11,31,58,0.28); border:1px solid rgba(201,162,39,0.35);}
+  .btn.ogrendim .tik{width:22px; height:22px; border-radius:50%; background:var(--altin); color:var(--lacivert); display:flex; align-items:center; justify-content:center;}
+
+  /* ===== MEVZUAT ===== */
+  .mevz-baslik{margin:8px 0 16px;}
+  .mevz-baslik .gun{font-size:12px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:var(--altinKoyu);}
+  .mevz-baslik h2{font-family:'Playfair Display',serif; font-weight:700; font-size:27px; color:var(--metin); margin-top:5px;}
+  /* segmented */
+  .segment{
+    display:flex; background:#EFE6D6; border-radius:14px; padding:4px; margin-bottom:18px;
+    border:1px solid var(--kenar);
+  }
+  .segment div{flex:1; text-align:center; padding:9px; font-size:13px; font-weight:700; color:var(--soluk); border-radius:11px;}
+  .segment div.on{background:var(--kart); color:var(--lacivert); box-shadow:var(--golgeKart);}
+  /* kanun satırı */
+  .kanun{
+    display:flex; align-items:center; gap:13px; padding:13px; border-radius:18px;
+    background:var(--kart); border:1px solid var(--kenar); box-shadow:var(--golgeKart);
+    margin-bottom:12px;
+  }
+  .mono{
+    width:52px; height:52px; flex:none; border-radius:13px;
+    background:linear-gradient(155deg,var(--lacivert2),var(--lacivert));
+    color:var(--altinYuzey); display:flex; align-items:center; justify-content:center;
+    font-family:'Playfair Display',serif; font-weight:700; font-size:16px;
+    border:1px solid rgba(201,162,39,0.4);
+    white-space:nowrap;
+  }
+  .mono.kucuk{font-size:14px;}
+  .kanun .ks{flex:1; min-width:0;}
+  .kanun .ks b{display:block; font-size:14px; color:var(--metin); font-weight:700; line-height:1.25;}
+  .kanun .ks .alt{display:flex; align-items:center; gap:8px; margin-top:8px;}
+  .kanun .ks .alt .bar{flex:1; height:6px; border-radius:4px; background:#EDE3CF; overflow:hidden;}
+  .kanun .ks .alt .bar i{display:block; height:100%; border-radius:4px; background:linear-gradient(90deg,var(--altin),var(--altinKoyu));}
+  .kanun .ks .alt .pc{font-size:11px; font-weight:800; color:var(--lacivert);}
+  .kanun .basla{width:38px; height:38px; flex:none; border-radius:11px; background:var(--altinYuzey); border:1px solid #E6D097; display:flex; align-items:center; justify-content:center; color:var(--altinKoyu);}
+  .kanun .kalp{width:38px; height:38px; flex:none; border-radius:11px; background:var(--kart); border:1px solid var(--kenar); display:flex; align-items:center; justify-content:center; color:#B9AC8E;}
+  .kanun.fav .kalp{color:var(--kirmizi); border-color:#EAC9C9; background:#FBEFEF;}
+
+  @media (max-width:760px){ body{padding:32px 10px;} .dizi{gap:34px;} }
+</style>
+</head>
+<body>
+
+  <div class="sahne-baslik">
+    <span class="sahne-kicker">Tasarım Yönü A · Düşük Risk Referans</span>
+    <h1>Saha Dosyası</h1>
+    <p>Krem-premium ve Playfair editöryel dilinin korunmuş, cilası artırılmış evrimi. Tek odaklı kahraman, sakin hiyerarşi, altın ödül anları.</p>
+  </div>
+
+  <div class="dizi">
+
+    <!-- ============ 1) KARARGAH ============ -->
+    <div class="yuva">
+      <div class="telefon">
+        <div class="centik"></div>
+        <div class="ekran">
+          <div class="durum">
+            <span>09:24</span>
+            <div class="sag">
+              <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1" fill="#1B2A4A"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#1B2A4A"/><rect x="10" y="1.5" width="3" height="10.5" rx="1" fill="#1B2A4A"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#1B2A4A" opacity="0.35"/></svg>
+              <svg width="22" height="12" viewBox="0 0 22 12"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="#1B2A4A" stroke-width="1.2"/><rect x="2.6" y="2.6" width="13" height="6.8" rx="1.6" fill="#1B2A4A"/><rect x="20" y="4" width="2" height="4" rx="1" fill="#1B2A4A"/></svg>
+            </div>
+          </div>
+          <div class="icerik">
+            <div class="icerik-pad">
+
+              <div class="selam">
+                <div>
+                  <div class="gun">29 Haziran · Pazartesi</div>
+                  <h2>Göreve hazır, J. Uzm. Çvş.</h2>
+                </div>
+                <div class="avatar">MA</div>
+              </div>
+
+              <div class="uyari">
+                <div class="nokta">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3l9-16z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16.6" r="1" fill="currentColor"/></svg>
+                </div>
+                <div class="tx">
+                  <b>7 gündür tekrar etmedin</b>
+                  <small>5237 TCK · 7068 Disiplin maddeleri soğuyor</small>
+                </div>
+                <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+
+              <div class="hero">
+                <div class="seal"></div>
+                <div class="hero-kicker">Geri Besleme · Etüt</div>
+                <h3>Zayıf mevzileri<br>tahkim et</h3>
+                <p>Yanlış yaptığın ve tekrar istediğin maddeler tek akışta önüne gelir.</p>
+                <div class="hero-alt">
+                  <div class="hero-sayi">
+                    <b>14</b><span>zayıf mevzi sırada</span>
+                  </div>
+                  <div class="play">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="gorev">
+                <div class="rozet">21</div>
+                <div class="gv">
+                  <div class="lab">Bugünün Görevi</div>
+                  <b>TCK m.21 — Kast</b>
+                  <small>6 / 9 madde tamamlandı</small>
+                </div>
+                <div class="ilerle">
+                  <b>%67</b>
+                  <div class="mini-bar"><i style="width:67%"></i></div>
+                </div>
+              </div>
+
+              <div class="kutular">
+                <div class="kutu">
+                  <div class="halka">
+                    <svg width="58" height="58" viewBox="0 0 58 58">
+                      <circle cx="29" cy="29" r="24" fill="none" stroke="#EDE3CF" stroke-width="7"/>
+                      <circle cx="29" cy="29" r="24" fill="none" stroke="#C9A227" stroke-width="7" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="51"/>
+                    </svg>
+                    <div class="pct">%66</div>
+                  </div>
+                  <div class="kt-lab">Genel ilerleme</div>
+                </div>
+                <div class="kutu streak">
+                  <div class="alev">🔥</div>
+                  <b>12</b>
+                  <small>günlük nöbet serisi</small>
+                  <div class="gunler"><i></i><i></i><i></i><i></i><i></i><i class="bos"></i><i class="bos"></i></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- alt sekme -->
+          <div class="sekme">
+            <div class="sekme-og aktif">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><path d="M4 11l8-6 8 6v8a1 1 0 01-1 1h-4v-5h-6v5H5a1 1 0 01-1-1v-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              <span>Karargah</span>
+            </div>
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><path d="M6 4h9l4 4v12H6V4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 4v5h5M9 13h6M9 16h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Mevzuat</span>
+            </div>
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Ara</span>
+            </div>
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><path d="M5 4h14v4l-5 5v5l-4 2v-7L5 8V4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              <span>Tatbikat</span>
+            </div>
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M5 19c.7-3.6 3.4-5.5 7-5.5s6.3 1.9 7 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Evsaf</span>
+            </div>
+          </div>
+          <div class="home-ind"></div>
+        </div>
+      </div>
+      <div class="yuva-etiket"><div class="no">01</div><div class="ad">Karargah · Ana</div></div>
+    </div>
+
+    <!-- ============ 2) KART AKIŞI ============ -->
+    <div class="yuva">
+      <div class="telefon">
+        <div class="centik"></div>
+        <div class="ekran">
+          <div class="durum">
+            <span>09:31</span>
+            <div class="sag">
+              <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1" fill="#1B2A4A"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#1B2A4A"/><rect x="10" y="1.5" width="3" height="10.5" rx="1" fill="#1B2A4A"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#1B2A4A" opacity="0.35"/></svg>
+              <svg width="22" height="12" viewBox="0 0 22 12"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="#1B2A4A" stroke-width="1.2"/><rect x="2.6" y="2.6" width="13" height="6.8" rx="1.6" fill="#1B2A4A"/><rect x="20" y="4" width="2" height="4" rx="1" fill="#1B2A4A"/></svg>
+            </div>
+          </div>
+          <div class="icerik">
+            <div class="icerik-pad">
+
+              <div class="akis-ust">
+                <div class="geri">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="orta">
+                  <div class="mlab">5237 TCK</div>
+                  <b>m.21 — Kast</b>
+                </div>
+                <div class="sayac">4 / 9</div>
+              </div>
+
+              <div class="akis-dots">
+                <i class="dolu"></i><i class="dolu"></i><i class="dolu"></i><i class="simdi"></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+
+              <div class="karikatur">
+                <div class="kart-tagh">
+                  <div class="sol">Kast Sahnesi</div>
+                  <div class="et">Görsel Hafıza</div>
+                </div>
+                <div class="paneller">
+                  <div class="panel">
+                    <span class="pn">1</span>
+                    <div class="sahne">
+                      <div class="gunes"></div>
+                      <div class="yer"></div>
+                      <div class="balon">"Bilerek!"</div>
+                      <div class="figur a"></div>
+                    </div>
+                    <div class="cap">Niyet doğuyor</div>
+                  </div>
+                  <div class="panel">
+                    <span class="pn">2</span>
+                    <div class="sahne">
+                      <div class="yer"></div>
+                      <div class="figur a"></div>
+                      <div class="figur b"></div>
+                    </div>
+                    <div class="cap">İsteyerek davranış</div>
+                  </div>
+                  <div class="panel">
+                    <span class="pn">3</span>
+                    <div class="sahne">
+                      <div class="yer"></div>
+                      <div class="kalkan"></div>
+                    </div>
+                    <div class="cap">Sonucu öngörme</div>
+                  </div>
+                  <div class="panel">
+                    <span class="pn">4</span>
+                    <div class="sahne">
+                      <div class="yer"></div>
+                      <div class="terazi"></div>
+                      <div class="direk"></div>
+                    </div>
+                    <div class="cap">Cezai sorumluluk</div>
+                  </div>
+                </div>
+
+                <div class="madde-panel">
+                  <div class="mh">
+                    <div class="ic">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l3 3v15H6V3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 11h6M9 15h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                    </div>
+                    <b>Madde Metni</b>
+                  </div>
+                  <div class="madde-scroll">
+                    <span class="par">MADDE 21 — Kast</span><br>
+                    (1) Suçun oluşması kastın varlığına bağlıdır. Kast, suçun kanunî tanımındaki unsurların bilerek ve istenerek gerçekleştirilmesidir.<br>
+                    (2) Kişinin, suçun kanunî tanımındaki unsurların gerçekleşebileceğini öngörmesine rağmen, fiili işlemesi hâlinde olası kast vardır...
+                  </div>
+                </div>
+              </div>
+
+              <div class="yuvarlaklar">
+                <div class="yuv">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 14v-4a8 8 0 0116 0v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="3" y="13" width="4" height="6" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="17" y="13" width="4" height="6" rx="2" stroke="currentColor" stroke-width="1.7"/></svg>
+                  <span>Ses</span>
+                </div>
+                <div class="yuv">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l3 3v15H6V3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 11h6M9 15h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                  <span>Metin</span>
+                </div>
+              </div>
+
+              <div class="aksiyon">
+                <div class="btn tekrar">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5v6h6M20 19v-6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 9a7 7 0 00-13-2M5 15a7 7 0 0013 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  Tekrar Hatırlat
+                </div>
+                <div class="btn ogrendim">
+                  <span class="tik"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4 10-11" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  Öğrendim
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="home-ind"></div>
+        </div>
+      </div>
+      <div class="yuva-etiket"><div class="no">02</div><div class="ad">Kart Akışı · Çalışma</div></div>
+    </div>
+
+    <!-- ============ 3) MEVZUAT ============ -->
+    <div class="yuva">
+      <div class="telefon">
+        <div class="centik"></div>
+        <div class="ekran">
+          <div class="durum">
+            <span>09:38</span>
+            <div class="sag">
+              <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1" fill="#1B2A4A"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#1B2A4A"/><rect x="10" y="1.5" width="3" height="10.5" rx="1" fill="#1B2A4A"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#1B2A4A" opacity="0.35"/></svg>
+              <svg width="22" height="12" viewBox="0 0 22 12"><rect x="1" y="1" width="18" height="10" rx="3" fill="none" stroke="#1B2A4A" stroke-width="1.2"/><rect x="2.6" y="2.6" width="13" height="6.8" rx="1.6" fill="#1B2A4A"/><rect x="20" y="4" width="2" height="4" rx="1" fill="#1B2A4A"/></svg>
+            </div>
+          </div>
+          <div class="icerik">
+            <div class="icerik-pad">
+
+              <div class="mevz-baslik">
+                <div class="gun">Kütüphane</div>
+                <h2>Mevzuat</h2>
+              </div>
+
+              <div class="segment">
+                <div class="on">Müşterek</div>
+                <div>Branş</div>
+              </div>
+
+              <div class="kanun fav">
+                <div class="mono">5237</div>
+                <div class="ks">
+                  <b>Türk Ceza Kanunu</b>
+                  <div class="alt"><div class="bar"><i style="width:72%"></i></div><span class="pc">%72</span></div>
+                </div>
+                <div class="kalp"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 20s-7-4.6-9.3-9C1.2 8 2.6 5 5.6 5c2 0 3.2 1.2 4.4 2.6C11.2 6.2 12.4 5 14.4 5c3 0 4.4 3 2.9 6-2.3 4.4-9.3 9-9.3 9z"/></svg></div>
+              </div>
+
+              <div class="kanun">
+                <div class="mono">7068</div>
+                <div class="ks">
+                  <b>Güvenlik Kuvvetleri Disiplin K.</b>
+                  <div class="alt"><div class="bar"><i style="width:48%"></i></div><span class="pc">%48</span></div>
+                </div>
+                <div class="basla"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+              </div>
+
+              <div class="kanun">
+                <div class="mono">2803</div>
+                <div class="ks">
+                  <b>Jandarma Teşkilat Kanunu</b>
+                  <div class="alt"><div class="bar"><i style="width:31%"></i></div><span class="pc">%31</span></div>
+                </div>
+                <div class="basla"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+              </div>
+
+              <div class="kanun">
+                <div class="mono">5442</div>
+                <div class="ks">
+                  <b>İl İdaresi Kanunu</b>
+                  <div class="alt"><div class="bar"><i style="width:12%"></i></div><span class="pc">%12</span></div>
+                </div>
+                <div class="basla"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+              </div>
+
+              <div class="kanun">
+                <div class="mono">3713</div>
+                <div class="ks">
+                  <b>Terörle Mücadele Kanunu</b>
+                  <div class="alt"><div class="bar"><i style="width:0%"></i></div><span class="pc" style="color:var(--soluk)">Yeni</span></div>
+                </div>
+                <div class="basla"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+              </div>
+
+            </div>
+          </div>
+          <div class="sekme">
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><path d="M4 11l8-6 8 6v8a1 1 0 01-1 1h-4v-5h-6v5H5a1 1 0 01-1-1v-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              <span>Karargah</span>
+            </div>
+            <div class="sekme-og aktif">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><path d="M6 4h9l4 4v12H6V4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 4v5h5M9 13h6M9 16h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Mevzuat</span>
+            </div>
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Ara</span>
+            </div>
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><path d="M5 4h14v4l-5 5v5l-4 2v-7L5 8V4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              <span>Tatbikat</span>
+            </div>
+            <div class="sekme-og">
+              <svg class="ikn" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.5" r="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M5 19c.7-3.6 3.4-5.5 7-5.5s6.3 1.9 7 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <span>Evsaf</span>
+            </div>
+          </div>
+          <div class="home-ind"></div>
+        </div>
+      </div>
+      <div class="yuva-etiket"><div class="no">03</div><div class="ad">Mevzuat · Kanun Listesi</div></div>
+    </div>
+
+  </div>
+</body>
+</html>

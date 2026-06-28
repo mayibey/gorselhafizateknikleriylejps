@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yön C — Görsel-Önce Deste · JSPS Görsel Hafıza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --krem:#F7F3EA; --kartKrem:#FFFCF5; --kenar:#E7DCC7; --ayirici:#EFE6D6;
+    --lacivert:#0B1F3A; --lacivert2:#173B6B; --metin:#1B2A4A; --soluk:#6E6047;
+    --altin:#C9A227; --altinKoyu:#B88917; --altinSoluk:#F3E7C1;
+    --kirmizi:#C00000; --yesil:#2E7D32; --amber:#B5791C; --ten:#E8C9A8; --beyaz:#FFFFFF;
+    --golge:rgba(11,31,58,0.08);
+  }
+  *{box-sizing:border-box; margin:0; padding:0; -webkit-font-smoothing:antialiased;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:
+      radial-gradient(1200px 700px at 50% -10%, #11263f 0%, #0b1a2e 45%, #081320 100%);
+    color:#fff; min-height:100vh; padding:64px 32px 80px;
+    display:flex; flex-direction:column; align-items:center; gap:48px;
+  }
+
+  /* ---- Sunum başlık ---- */
+  .poster-head{ text-align:center; max-width:760px; }
+  .poster-kicker{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:11px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--altin); font-weight:600; margin-bottom:18px;
+  }
+  .poster-kicker::before,.poster-kicker::after{
+    content:""; width:34px; height:1px; background:linear-gradient(90deg,transparent,var(--altinKoyu),transparent);
+  }
+  .poster-head h1{
+    font-family:'Playfair Display',serif; font-weight:800;
+    font-size:46px; line-height:1.05; letter-spacing:-.01em; color:#fff;
+  }
+  .poster-head h1 em{ color:var(--altin); font-style:italic; }
+  .poster-head p{
+    margin-top:16px; font-size:15px; line-height:1.6; color:#b9c4d4; font-weight:400;
+  }
+
+  /* ---- Telefon dizilimi ---- */
+  .stage{ display:flex; gap:40px; flex-wrap:wrap; justify-content:center; align-items:flex-start; }
+  .device-col{ display:flex; flex-direction:column; align-items:center; gap:18px; }
+  .device-tag{ font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#8da0b8; font-weight:600; }
+  .device-tag b{ color:var(--altin); font-weight:700; }
+
+  /* ---- Telefon çerçevesi ---- */
+  .phone{
+    width:390px; height:844px; border-radius:54px;
+    background:#0a1422; padding:13px;
+    box-shadow:
+      0 2px 0 #1c2c40 inset,
+      0 50px 90px -30px rgba(0,0,0,.7),
+      0 0 0 2px #05346a4d, 0 0 0 11px #0a1422, 0 0 0 12px #233247;
+    position:relative;
+  }
+  .screen{
+    width:100%; height:100%; background:var(--krem); border-radius:42px;
+    overflow:hidden; position:relative; display:flex; flex-direction:column;
+  }
+  /* Dinamik ada / çentik */
+  .island{
+    position:absolute; top:11px; left:50%; transform:translateX(-50%);
+    width:122px; height:34px; background:#05080d; border-radius:20px; z-index:60;
+  }
+  /* Durum çubuğu */
+  .statusbar{
+    height:52px; flex:0 0 52px; display:flex; align-items:center; justify-content:space-between;
+    padding:0 28px 0 32px; font-size:15px; font-weight:600; color:var(--metin); z-index:50;
+  }
+  .statusbar .sb-right{ display:flex; align-items:center; gap:7px; }
+  .sb-ic{ width:18px; height:12px; border-radius:2px; }
+  .sb-bat{ width:24px; height:12px; border:1.5px solid var(--metin); border-radius:3px; position:relative; opacity:.85;}
+  .sb-bat::after{content:"";position:absolute;right:-4px;top:3px;width:2px;height:6px;background:var(--metin);border-radius:2px;}
+  .sb-bat::before{content:"";position:absolute;left:1.5px;top:1.5px;bottom:1.5px;width:70%;background:var(--metin);border-radius:1px;}
+  .sb-net{display:flex;align-items:flex-end;gap:2px;height:12px;}
+  .sb-net i{width:3px;background:var(--metin);border-radius:1px;display:block;}
+  .sb-net i:nth-child(1){height:5px;} .sb-net i:nth-child(2){height:7px;}
+  .sb-net i:nth-child(3){height:9px;} .sb-net i:nth-child(4){height:12px;}
+
+  .body{ flex:1; overflow:hidden; position:relative; display:flex; flex-direction:column; }
+
+  /* Home indicator */
+  .home-ind{
+    position:absolute; bottom:9px; left:50%; transform:translateX(-50%);
+    width:134px; height:5px; border-radius:3px; background:rgba(27,42,74,.32); z-index:70;
+  }
+
+  /* ---- Alt sekme çubuğu ---- */
+  .tabbar{
+    flex:0 0 auto; background:var(--kartKrem); border-top:1px solid var(--kenar);
+    padding:10px 14px 26px; display:flex; justify-content:space-between; z-index:40;
+    box-shadow:0 -8px 24px -16px var(--golge);
+  }
+  .tab{ flex:1; display:flex; flex-direction:column; align-items:center; gap:5px; }
+  .tab svg{ width:23px; height:23px; }
+  .tab span{ font-size:10px; font-weight:600; letter-spacing:.01em; color:var(--soluk); }
+  .tab.on span{ color:var(--lacivert); font-weight:700; }
+  .tab .ic{ stroke:var(--soluk); fill:none; stroke-width:1.7; }
+  .tab.on .ic{ stroke:var(--altinKoyu); }
+  .tab.on .ic-fill{ fill:var(--altin); stroke:var(--altinKoyu); }
+
+  /* ===================== EKRAN 1 — KARARGAH (görsel hero) ===================== */
+  .s1-scroll{ flex:1; overflow:hidden; padding:4px 20px 16px; }
+  .s1-hello{ display:flex; align-items:center; justify-content:space-between; margin:2px 2px 14px; }
+  .s1-hello .greet{ }
+  .s1-hello .greet small{ font-size:12px; color:var(--soluk); font-weight:600; letter-spacing:.04em; }
+  .s1-hello .greet h2{ font-family:'Playfair Display',serif; font-weight:700; font-size:24px; color:var(--metin); line-height:1.1; margin-top:3px;}
+  .s1-streak{
+    display:flex; align-items:center; gap:6px; background:var(--altinSoluk);
+    border:1px solid #ecd99c; border-radius:999px; padding:7px 12px;
+  }
+  .s1-streak b{ font-size:14px; color:var(--altinKoyu); font-weight:800; }
+  .s1-streak span{ font-size:10px; color:var(--amber); font-weight:600; }
+
+  /* Hero görsel kart — günün maddesi karikatürü */
+  .hero-card{
+    border-radius:24px; overflow:hidden; position:relative;
+    box-shadow:0 24px 44px -22px rgba(11,31,58,.5); border:1px solid var(--kenar);
+    background:var(--kartKrem);
+  }
+  .hero-art{ position:relative; height:392px; background:linear-gradient(160deg,#1a3a5e,#0B1F3A); }
+  /* 4 panel karikatür sahne (temsili) */
+  .toon{
+    position:absolute; inset:0;
+    display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:3px;
+    background:#0B1F3A; padding:3px;
+  }
+  .toon .pane{ position:relative; overflow:hidden; }
+  .p1{ background:linear-gradient(165deg,#bcd4ec,#8fb2d6); }
+  .p2{ background:linear-gradient(165deg,#f4ddb6,#e7bd7f); }
+  .p3{ background:linear-gradient(165deg,#d9c7ec,#b89cd6); }
+  .p4{ background:linear-gradient(165deg,#bfe3c9,#8ec79f); }
+  .toon .pnum{
+    position:absolute; top:7px; left:8px; font-family:'Playfair Display',serif; font-weight:800;
+    font-size:13px; color:rgba(11,31,58,.45); z-index:3;
+  }
+  /* basit sahne figürleri */
+  .sun{ position:absolute; width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#ffe9a8,#f3c34d);top:14px;right:16px; box-shadow:0 0 0 6px rgba(243,195,77,.25);}
+  .ground{ position:absolute; left:0;right:0;bottom:0;height:34%; background:rgba(11,31,58,.14); }
+  .ground.gr2{ background:rgba(184,137,23,.28);} .ground.gr4{ background:rgba(46,125,50,.25);}
+  .fig{ position:absolute; bottom:24%; }
+  .fig .head{ width:18px;height:18px;border-radius:50%;background:var(--ten);margin:0 auto; box-shadow:0 0 0 2px rgba(11,31,58,.25);}
+  .fig .body{ width:24px;height:30px;border-radius:10px 10px 7px 7px;background:#0B1F3A;margin:-2px auto 0; }
+  .fig.red .body{ background:var(--kirmizi); }
+  .fig.left{ left:18%;} .fig.right{ right:20%;}
+  .scale{ position:absolute; bottom:30%; left:50%; transform:translateX(-50%); width:40px;height:30px;}
+  .scale::before{content:"";position:absolute;left:50%;top:0;width:3px;height:30px;background:#0B1F3A;transform:translateX(-50%);}
+  .scale::after{content:"";position:absolute;left:0;top:6px;width:40px;height:3px;background:#0B1F3A;border-radius:2px;}
+  .book{ position:absolute; bottom:26%; right:24%; width:30px;height:22px;background:var(--beyaz);border:2px solid #0B1F3A;border-radius:2px; box-shadow:-3px 3px 0 #0B1F3A;}
+  .speech{ position:absolute; top:14%; left:18%; background:#fff;border:2px solid #0B1F3A;border-radius:9px;padding:3px 7px;font-size:9px;font-weight:800;color:#0B1F3A;font-family:'Inter';}
+  .badge21{ position:absolute; top:13px; left:50%; transform:translateX(-50%);
+    background:var(--kirmizi);color:#fff;font-family:'Playfair Display';font-weight:800;font-size:11px;
+    padding:2px 10px;border-radius:999px; z-index:5; box-shadow:0 4px 10px rgba(192,0,0,.4);}
+
+  /* alt fade scrim + başlık overlay */
+  .hero-scrim{
+    position:absolute; left:0; right:0; bottom:0; height:62%;
+    background:linear-gradient(to top, rgba(7,16,28,.96) 8%, rgba(7,16,28,.78) 38%, rgba(7,16,28,0) 100%);
+    display:flex; flex-direction:column; justify-content:flex-end; padding:18px 20px 18px;
+  }
+  .hero-scrim .law-chip{
+    align-self:flex-start; font-size:10px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;
+    color:#0B1F3A; background:var(--altin); padding:4px 10px; border-radius:6px; margin-bottom:11px;
+  }
+  .hero-scrim h3{ font-family:'Playfair Display',serif; font-weight:800; font-size:30px; line-height:1.04; color:#fff; }
+  .hero-scrim h3 em{ color:var(--altin); font-style:italic; }
+  .hero-scrim p{ font-size:12.5px; color:#d6deea; margin-top:8px; line-height:1.5; max-width:88%; }
+  .hero-meta{ display:flex; align-items:center; gap:14px; margin-top:13px; font-size:11px; color:#aab8cb; font-weight:600;}
+  .hero-meta i{ width:4px;height:4px;border-radius:50%;background:var(--altin); }
+
+  /* tek CTA */
+  .hero-cta{
+    margin:14px 2px 4px; display:flex; align-items:center; justify-content:center; gap:11px;
+    background:linear-gradient(180deg,#173B6B,#0B1F3A); color:#fff;
+    border-radius:18px; padding:18px; font-family:'Inter'; font-weight:700; font-size:16px;
+    box-shadow:0 16px 28px -14px rgba(11,31,58,.65); border:1px solid #0d2950;
+  }
+  .hero-cta .play{ width:30px;height:30px;border-radius:50%;background:var(--altin);display:flex;align-items:center;justify-content:center;}
+  .hero-cta .play svg{ width:13px;height:13px; }
+
+  /* uyarı bandı (ince) */
+  .warn-band{
+    margin:14px 2px 0; display:flex; align-items:center; gap:11px;
+    background:#fbeeee; border:1px solid #f1cccc; border-left:4px solid var(--kirmizi);
+    border-radius:14px; padding:12px 14px;
+  }
+  .warn-band .wic{ width:30px;height:30px;border-radius:9px;background:#f6dada;display:flex;align-items:center;justify-content:center;flex:0 0 30px;}
+  .warn-band .wt{ flex:1; }
+  .warn-band .wt b{ font-size:12.5px; color:#7d1414; font-weight:700; display:block; }
+  .warn-band .wt span{ font-size:11px; color:#9a4b4b; font-weight:500; }
+  .warn-band .wlaws{ font-size:11px; font-weight:700; color:var(--kirmizi); }
+
+  /* 3 kutu mini istatistik */
+  .stat-row{ display:flex; gap:10px; margin:14px 2px 0; }
+  .stat{
+    flex:1; background:var(--kartKrem); border:1px solid var(--kenar); border-radius:16px;
+    padding:13px 10px; text-align:center; box-shadow:0 6px 14px -10px var(--golge);
+  }
+  .ring{ width:42px;height:42px;border-radius:50%; margin:0 auto 7px;
+    background:conic-gradient(var(--altin) 0 73%, var(--ayirici) 73% 100%);
+    display:flex;align-items:center;justify-content:center;}
+  .ring i{ width:30px;height:30px;border-radius:50%;background:var(--kartKrem);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--lacivert);}
+  .stat .big{ font-family:'Playfair Display';font-weight:800;font-size:21px;color:var(--metin);line-height:1; }
+  .stat small{ display:block; font-size:9.5px; color:var(--soluk); font-weight:600; margin-top:5px; letter-spacing:.02em;}
+  .stat .ic-emoji{ font-size:21px; line-height:1; }
+
+  /* ===================== EKRAN 2 — KART AKIŞI ===================== */
+  .s2-top{ display:flex; align-items:center; justify-content:space-between; padding:6px 20px 12px; }
+  .s2-back{ width:38px;height:38px;border-radius:12px;background:var(--kartKrem);border:1px solid var(--kenar);display:flex;align-items:center;justify-content:center;}
+  .s2-back svg{width:16px;height:16px;stroke:var(--metin);stroke-width:2;fill:none;}
+  .s2-progress{ flex:1; margin:0 14px; }
+  .s2-progress .bar{ height:6px;border-radius:999px;background:var(--ayirici);overflow:hidden;}
+  .s2-progress .bar i{ display:block;height:100%;width:42%;background:linear-gradient(90deg,var(--altin),var(--altinKoyu));border-radius:999px;}
+  .s2-progress small{ font-size:10px;color:var(--soluk);font-weight:600;display:block;margin-top:5px;text-align:center;}
+  .s2-law{ font-size:11px;font-weight:700;color:var(--altinKoyu); }
+
+  .s2-card-wrap{ flex:1; padding:2px 18px 4px; display:flex; flex-direction:column; }
+  .study-card{
+    flex:1; border-radius:26px; overflow:hidden; position:relative; border:1px solid var(--kenar);
+    box-shadow:0 26px 50px -26px rgba(11,31,58,.55); background:#0B1F3A; display:flex; flex-direction:column;
+  }
+  .study-art{ position:relative; flex:1; }
+  .study-art .toon{ }
+  .study-cap{
+    position:absolute; left:0;right:0;bottom:0; padding:16px 18px 16px;
+    background:linear-gradient(to top, rgba(7,16,28,.95), rgba(7,16,28,.55) 55%, rgba(7,16,28,0));
+  }
+  .study-cap .chip{ display:inline-block; font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#0B1F3A;background:var(--altin);padding:3px 9px;border-radius:6px;margin-bottom:9px;}
+  .study-cap h3{ font-family:'Playfair Display';font-weight:800;font-size:25px;color:#fff;line-height:1.06;}
+  .study-cap h3 em{ color:var(--altin);font-style:italic;}
+
+  /* madde metni paneli (açık, iç scroll) */
+  .madde-panel{
+    margin:12px 18px 0; background:var(--kartKrem); border:1px solid var(--kenar);
+    border-radius:18px; height:120px; overflow:hidden; position:relative;
+    box-shadow:0 8px 18px -12px var(--golge);
+  }
+  .madde-panel .mp-head{ display:flex;align-items:center;gap:8px; padding:11px 14px 7px; border-bottom:1px solid var(--ayirici);}
+  .madde-panel .mp-head b{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--altinKoyu); font-weight:700;}
+  .madde-panel .mp-head .grip{ margin-left:auto; width:26px;height:4px;border-radius:2px;background:var(--kenar);}
+  .madde-panel .mp-body{ padding:9px 14px 14px; overflow:auto; height:78px; }
+  .madde-panel .mp-body p{ font-size:11.5px; line-height:1.62; color:var(--metin); }
+  .madde-panel .mp-body p b{ color:var(--lacivert2); }
+
+  /* iki yuvarlak ikon */
+  .round-tools{ display:flex; justify-content:center; gap:18px; margin:14px 0 12px; }
+  .rt{ width:54px;height:54px;border-radius:50%;background:var(--kartKrem);border:1px solid var(--kenar);
+    display:flex;align-items:center;justify-content:center;font-size:21px;box-shadow:0 8px 16px -10px var(--golge);position:relative;}
+  .rt small{ position:absolute; bottom:-19px; font-size:9.5px; color:var(--soluk); font-weight:600; white-space:nowrap;}
+  .rt.act{ background:var(--altinSoluk); border-color:#ecd99c; }
+
+  .s2-actions{ display:flex; gap:11px; padding:6px 18px 6px; }
+  .btn{ flex:1; border-radius:16px; padding:16px; text-align:center; font-weight:700; font-size:15px; border:1px solid transparent; }
+  .btn-ogrendim{ background:linear-gradient(180deg,#368a3c,#256128); color:#fff; box-shadow:0 14px 24px -14px rgba(46,125,50,.6);}
+  .btn-tekrar{ background:var(--kartKrem); color:var(--amber); border-color:#e7cf9a; }
+
+  /* ===================== EKRAN 3 — MEVZUAT (görsel deste) ===================== */
+  .s3-head{ padding:6px 20px 10px; }
+  .s3-head h2{ font-family:'Playfair Display';font-weight:800;font-size:27px;color:var(--metin); }
+  .s3-head p{ font-size:12px;color:var(--soluk);font-weight:500;margin-top:3px; }
+  .segmented{ display:flex; background:var(--ayirici); border-radius:13px; padding:4px; margin:12px 20px 6px; }
+  .seg{ flex:1; text-align:center; padding:9px; border-radius:9px; font-size:13px; font-weight:700; color:var(--soluk); }
+  .seg.on{ background:var(--kartKrem); color:var(--lacivert); box-shadow:0 4px 10px -6px var(--golge); }
+
+  .deck{ flex:1; overflow:hidden; padding:8px 20px 14px; display:flex; flex-direction:column; gap:14px; }
+  .law-card{
+    border-radius:20px; overflow:hidden; position:relative; height:158px;
+    border:1px solid var(--kenar); box-shadow:0 16px 30px -20px rgba(11,31,58,.45); background:#0B1F3A;
+  }
+  .law-art{ position:absolute; inset:0; }
+  .law-art .toon{ }
+  .law-scrim{
+    position:absolute; inset:0; padding:15px 17px;
+    background:linear-gradient(105deg, rgba(7,16,28,.92) 0%, rgba(7,16,28,.62) 48%, rgba(7,16,28,.12) 100%);
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .law-top{ display:flex; align-items:flex-start; justify-content:space-between; }
+  .law-no{
+    font-family:'Playfair Display'; font-weight:800; font-size:17px; color:#0B1F3A;
+    background:var(--altin); padding:5px 11px; border-radius:9px; white-space:nowrap; letter-spacing:.01em;
+    box-shadow:0 4px 10px rgba(201,162,39,.4);
+  }
+  .law-heart{ width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(2px);
+    display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.18);}
+  .law-heart svg{ width:16px;height:16px; }
+  .law-bottom h3{ font-family:'Playfair Display';font-weight:800;font-size:21px;color:#fff;line-height:1.08; }
+  .law-bottom .pmeta{ display:flex;align-items:center;justify-content:space-between;margin-top:11px; }
+  .law-bottom .pbar{ flex:1; height:6px;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden;margin-right:11px;}
+  .law-bottom .pbar i{ display:block;height:100%;background:linear-gradient(90deg,var(--altin),var(--altinKoyu));border-radius:999px;}
+  .law-bottom .ppct{ font-size:12px;font-weight:800;color:var(--altin); }
+
+  /* deste varyasyon görselleri */
+  .lawA .pane{background:none;}
+  .lawA .p1{background:linear-gradient(160deg,#2a4a72,#0B1F3A);}
+  .lawB .p1{background:linear-gradient(160deg,#6e4b86,#3a2350);}
+  .lawC .p1{background:linear-gradient(160deg,#2f6e4e,#143a28);}
+  .full-toon{ position:absolute; inset:0; }
+
+  @media (max-width:1320px){ .stage{ gap:30px; } }
+</style>
+</head>
+<body>
+
+  <div class="poster-head">
+    <div class="poster-kicker">Yön C · Görsel-Önce Deste</div>
+    <h1>Önce <em>görsel</em>, sonra madde.</h1>
+    <p>JSPS Görsel Hafıza — ev ve liste ekranları metin panosundan çıkıp tam-genişlik karikatür akışına döner. Günün maddesi koca bir kapak, kanunlar görsel-kapaklı bir deste, tek net çağrı: çalışmaya başla.</p>
+  </div>
+
+  <div class="stage">
+
+    <!-- ============ EKRAN 1 — KARARGAH ============ -->
+    <div class="device-col">
+      <div class="device-tag"><b>01</b> · Karargâh</div>
+      <div class="phone">
+        <div class="screen">
+          <div class="island"></div>
+          <div class="statusbar">
+            <span>9:41</span>
+            <div class="sb-right">
+              <div class="sb-net"><i></i><i></i><i></i><i></i></div>
+              <span style="font-size:11px;font-weight:700;letter-spacing:.02em;">5G</span>
+              <div class="sb-bat"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="s1-scroll">
+
+              <div class="s1-hello">
+                <div class="greet">
+                  <small>İyi akşamlar, Komutan</small>
+                  <h2>Karargâh</h2>
+                </div>
+                <div class="s1-streak">
+                  <b>🔥 12</b><span>günlük nöbet</span>
+                </div>
+              </div>
+
+              <!-- HERO görsel kart -->
+              <div class="hero-card">
+                <div class="hero-art">
+                  <div class="toon">
+                    <div class="pane p1">
+                      <span class="pnum">1</span>
+                      <div class="sun"></div>
+                      <div class="speech">DUR!</div>
+                      <div class="fig left"><div class="head"></div><div class="body"></div></div>
+                      <div class="ground"></div>
+                    </div>
+                    <div class="pane p2">
+                      <span class="pnum">2</span>
+                      <div class="scale"></div>
+                      <div class="ground gr2"></div>
+                    </div>
+                    <div class="pane p3">
+                      <span class="pnum">3</span>
+                      <div class="fig left red"><div class="head"></div><div class="body"></div></div>
+                      <div class="fig right"><div class="head"></div><div class="body"></div></div>
+                      <div class="ground"></div>
+                    </div>
+                    <div class="pane p4">
+                      <span class="pnum">4</span>
+                      <div class="book"></div>
+                      <div class="ground gr4"></div>
+                    </div>
+                  </div>
+                  <div class="badge21">m.21</div>
+                  <div class="hero-scrim">
+                    <span class="law-chip">Bugünün maddesi · TCK</span>
+                    <h3>Kast — <em>bilerek ve isteyerek</em></h3>
+                    <p>Suçun kanuni tanımındaki unsurların bilerek ve istenerek gerçekleştirilmesi. Olası kast ayrımıyla birlikte.</p>
+                    <div class="hero-meta"><span>TCK m.21</span><i></i><span>4 panel sahne</span><i></i><span>~2 dk</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- tek CTA -->
+              <div class="hero-cta">
+                <span class="play">
+                  <svg viewBox="0 0 24 24" fill="#0B1F3A"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                Çalışmaya başla
+              </div>
+
+              <!-- uyarı bandı -->
+              <div class="warn-band">
+                <div class="wic">⚠️</div>
+                <div class="wt">
+                  <b>7 gündür tekrar etmedin</b>
+                  <span>2803 Jandarma · 7068 Disiplin</span>
+                </div>
+                <div class="wlaws">2 kanun</div>
+              </div>
+
+              <!-- 3 kutu -->
+              <div class="stat-row">
+                <div class="stat">
+                  <div class="ring"><i>73%</i></div>
+                  <small>İlerleme</small>
+                </div>
+                <div class="stat">
+                  <div class="ic-emoji">🛡️</div>
+                  <div class="big" style="margin-top:6px;">12</div>
+                  <small>Nöbet serisi</small>
+                </div>
+                <div class="stat">
+                  <div class="ic-emoji">📜</div>
+                  <div class="big" style="margin-top:6px;">m.21</div>
+                  <small>Günün maddesi</small>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ALT SEKME -->
+            <div class="tabbar">
+              <div class="tab on">
+                <svg viewBox="0 0 24 24"><path class="ic-fill" d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+                <span>Karargâh</span>
+              </div>
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><path class="ic" d="M5 4h11l3 3v13H5zM8 9h8M8 13h8M8 17h5"/></svg>
+                <span>Mevzuat</span>
+              </div>
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><circle class="ic" cx="11" cy="11" r="6"/><path class="ic" d="m20 20-4-4"/></svg>
+                <span>Ara</span>
+              </div>
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><path class="ic" d="M4 6h16M4 6v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6M9 11l2 2 4-4"/></svg>
+                <span>Tatbikat</span>
+              </div>
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><circle class="ic" cx="12" cy="8" r="4"/><path class="ic" d="M5 21c0-4 3.5-6 7-6s7 2 7 6"/></svg>
+                <span>Evsaf</span>
+              </div>
+            </div>
+            <div class="home-ind"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ EKRAN 2 — KART AKIŞI ============ -->
+    <div class="device-col">
+      <div class="device-tag"><b>02</b> · Kart Akışı</div>
+      <div class="phone">
+        <div class="screen">
+          <div class="island"></div>
+          <div class="statusbar">
+            <span>9:41</span>
+            <div class="sb-right">
+              <div class="sb-net"><i></i><i></i><i></i><i></i></div>
+              <span style="font-size:11px;font-weight:700;">5G</span>
+              <div class="sb-bat"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="s2-top">
+              <div class="s2-back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></div>
+              <div class="s2-progress">
+                <div class="bar"><i></i></div>
+                <small>5 / 12 kart</small>
+              </div>
+              <div class="s2-law">TCK</div>
+            </div>
+
+            <div class="s2-card-wrap">
+              <!-- TAM görsel kart -->
+              <div class="study-card">
+                <div class="study-art">
+                  <div class="toon">
+                    <div class="pane p1">
+                      <span class="pnum">1</span>
+                      <div class="sun"></div>
+                      <div class="fig left"><div class="head"></div><div class="body"></div></div>
+                      <div class="ground"></div>
+                    </div>
+                    <div class="pane p2">
+                      <span class="pnum">2</span>
+                      <div class="speech" style="left:20%;">İSTEYEREK</div>
+                      <div class="fig right"><div class="head"></div><div class="body"></div></div>
+                      <div class="ground gr2"></div>
+                    </div>
+                    <div class="pane p3">
+                      <span class="pnum">3</span>
+                      <div class="scale"></div>
+                      <div class="ground"></div>
+                    </div>
+                    <div class="pane p4">
+                      <span class="pnum">4</span>
+                      <div class="book"></div>
+                      <div class="ground gr4"></div>
+                    </div>
+                  </div>
+                  <div class="study-cap">
+                    <span class="chip">TCK m.21 · Kast</span>
+                    <h3>Bilerek ve <em>isteyerek</em></h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- madde metni paneli (açık) -->
+              <div class="madde-panel">
+                <div class="mp-head">
+                  <span>📄</span><b>Madde Metni · TCK m.21</b><div class="grip"></div>
+                </div>
+                <div class="mp-body">
+                  <p><b>(1)</b> Suçun oluşması kastın varlığına bağlıdır. Kast, suçun kanuni tanımındaki unsurların bilerek ve istenerek gerçekleştirilmesidir.</p>
+                  <p style="margin-top:8px;"><b>(2)</b> Kişinin, suçun kanuni tanımındaki unsurların gerçekleşebileceğini öngörmesine rağmen, fiili işlemesi hâlinde <b>olası kast</b> vardır.</p>
+                </div>
+              </div>
+
+              <!-- iki yuvarlak ikon -->
+              <div class="round-tools">
+                <div class="rt act">🎧<small>Sesli anlat</small></div>
+                <div class="rt">📄<small>Madde metni</small></div>
+              </div>
+
+              <!-- aksiyonlar -->
+              <div class="s2-actions">
+                <div class="btn btn-tekrar">↻ Tekrar Hatırlat</div>
+                <div class="btn btn-ogrendim">✓ Öğrendim</div>
+              </div>
+            </div>
+            <div class="home-ind"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ EKRAN 3 — MEVZUAT ============ -->
+    <div class="device-col">
+      <div class="device-tag"><b>03</b> · Mevzuat</div>
+      <div class="phone">
+        <div class="screen">
+          <div class="island"></div>
+          <div class="statusbar">
+            <span>9:41</span>
+            <div class="sb-right">
+              <div class="sb-net"><i></i><i></i><i></i><i></i></div>
+              <span style="font-size:11px;font-weight:700;">5G</span>
+              <div class="sb-bat"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="s3-head">
+              <h2>Mevzuat</h2>
+              <p>Görsel-kapaklı kanun destesi · dokun, çalışmaya başla</p>
+            </div>
+            <div class="segmented">
+              <div class="seg on">Müşterek</div>
+              <div class="seg">Branş</div>
+            </div>
+
+            <div class="deck">
+
+              <!-- 5237 -->
+              <div class="law-card lawA">
+                <div class="law-art">
+                  <div class="toon full-toon">
+                    <div class="pane p1"><div class="sun"></div><div class="fig left"><div class="head"></div><div class="body"></div></div><div class="ground"></div></div>
+                    <div class="pane p3"><div class="scale"></div><div class="ground"></div></div>
+                    <div class="pane p2"><div class="book"></div><div class="ground gr2"></div></div>
+                    <div class="pane p4"><div class="fig right red"><div class="head"></div><div class="body"></div></div><div class="ground gr4"></div></div>
+                  </div>
+                </div>
+                <div class="law-scrim">
+                  <div class="law-top">
+                    <div class="law-no">5237</div>
+                    <div class="law-heart"><svg viewBox="0 0 24 24" fill="#C9A227" stroke="#C9A227"><path d="M12 21s-7-4.5-9.5-8.5C1 9 3 6 6 6c2 0 3 1 3.5 2 .5-1 1.5-2 3.5-2 3 0 5 3 3.5 6.5C19 16.5 12 21 12 21z"/></svg></div>
+                  </div>
+                  <div class="law-bottom">
+                    <h3>Türk Ceza Kanunu</h3>
+                    <div class="pmeta">
+                      <div class="pbar"><i style="width:68%"></i></div>
+                      <span class="ppct">68%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7068 -->
+              <div class="law-card lawB">
+                <div class="law-art">
+                  <div class="toon full-toon">
+                    <div class="pane p3"><div class="fig left"><div class="head"></div><div class="body"></div></div><div class="ground"></div></div>
+                    <div class="pane p1"><div class="speech" style="left:24%">RAPOR</div><div class="ground"></div></div>
+                    <div class="pane p4"><div class="book"></div><div class="ground gr4"></div></div>
+                    <div class="pane p2"><div class="scale"></div><div class="ground gr2"></div></div>
+                  </div>
+                </div>
+                <div class="law-scrim">
+                  <div class="law-top">
+                    <div class="law-no">7068</div>
+                    <div class="law-heart"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 21s-7-4.5-9.5-8.5C1 9 3 6 6 6c2 0 3 1 3.5 2 .5-1 1.5-2 3.5-2 3 0 5 3 3.5 6.5C19 16.5 12 21 12 21z"/></svg></div>
+                  </div>
+                  <div class="law-bottom">
+                    <h3>Disiplin Kanunu</h3>
+                    <div class="pmeta">
+                      <div class="pbar"><i style="width:34%"></i></div>
+                      <span class="ppct">34%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2803 -->
+              <div class="law-card lawC">
+                <div class="law-art">
+                  <div class="toon full-toon">
+                    <div class="pane p4"><div class="sun"></div><div class="fig left"><div class="head"></div><div class="body"></div></div><div class="ground gr4"></div></div>
+                    <div class="pane p2"><div class="fig right"><div class="head"></div><div class="body"></div></div><div class="ground gr2"></div></div>
+                    <div class="pane p1"><div class="book"></div><div class="ground"></div></div>
+                    <div class="pane p3"><div class="scale"></div><div class="ground"></div></div>
+                  </div>
+                </div>
+                <div class="law-scrim">
+                  <div class="law-top">
+                    <div class="law-no">2803</div>
+                    <div class="law-heart"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 21s-7-4.5-9.5-8.5C1 9 3 6 6 6c2 0 3 1 3.5 2 .5-1 1.5-2 3.5-2 3 0 5 3 3.5 6.5C19 16.5 12 21 12 21z"/></svg></div>
+                  </div>
+                  <div class="law-bottom">
+                    <h3>Jandarma Teşkilat K.</h3>
+                    <div class="pmeta">
+                      <div class="pbar"><i style="width:12%"></i></div>
+                      <span class="ppct">12%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="tabbar">
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><path class="ic" d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>
+                <span>Karargâh</span>
+              </div>
+              <div class="tab on">
+                <svg viewBox="0 0 24 24"><path class="ic-fill" d="M5 4h11l3 3v13H5z"/><path class="ic" style="stroke:#fff" d="M8 9h8M8 13h8M8 17h5"/></svg>
+                <span>Mevzuat</span>
+              </div>
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><circle class="ic" cx="11" cy="11" r="6"/><path class="ic" d="m20 20-4-4"/></svg>
+                <span>Ara</span>
+              </div>
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><path class="ic" d="M4 6h16M4 6v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6M9 11l2 2 4-4"/></svg>
+                <span>Tatbikat</span>
+              </div>
+              <div class="tab">
+                <svg viewBox="0 0 24 24"><circle class="ic" cx="12" cy="8" r="4"/><path class="ic" d="M5 21c0-4 3.5-6 7-6s7 2 7 6"/></svg>
+                <span>Evsaf</span>
+              </div>
+            </div>
+            <div class="home-ind"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
