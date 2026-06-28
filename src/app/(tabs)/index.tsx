@@ -278,11 +278,11 @@ export default function KarargahScreen() {
           style={({ pressed }) => [styles.hero, pressed && styles.pressed]}
           onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
           accessibilityRole="button"
-          accessibilityLabel="Etüt — zayıf mevzileri çalış">
+          accessibilityLabel="Geri Besleme — zayıf mevzileri çalış">
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
               <AppText variant="etiket" color="altin" bold>
-                ETÜT
+                GERİ BESLEME
               </AppText>
               <AppText variant="baslik" color="beyaz" bold>
                 Zayıf Mevziler

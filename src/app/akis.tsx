@@ -347,8 +347,9 @@ export default function AkisScreen() {
                 setAlan({ w: width, h: height });
               }
             }}>
-            {/* Kartı saran katman: yatay swipe (ileri/geri) + sol/sağ gezinme okları
-                (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir). */}
+            {/* Kartı saran katman: yatay swipe (ileri/geri). Gezinme YALNIZ swipe ile
+                (saf görünüm — SRS'e dokunmaz, yalnız index değiştirir; sol/sağ ok butonları
+                kaldırıldı). */}
             <GestureDetector gesture={kartKaydir}>
               <View style={styles.kartSar}>
                 <View
@@ -364,26 +365,6 @@ export default function AkisScreen() {
                     onGorundu={() => setGorselGorundu(true)}
                   />
                 </View>
-                <Pressable
-                  disabled={index === 0 || !ogrenebilir}
-                  onPress={() => setIndex((i) => Math.max(0, i - 1))}
-                  style={[styles.okBtn, styles.okSol, (index === 0 || !ogrenebilir) && styles.okPasif]}
-                  hitSlop={8}
-                  accessibilityLabel="Önceki kart">
-                  <MaterialCommunityIcons name="chevron-left" size={32} color={Palette.beyaz} />
-                </Pressable>
-                <Pressable
-                  disabled={index >= queue.length - 1 || !ogrenebilir}
-                  onPress={() => setIndex((i) => Math.min(queue.length - 1, i + 1))}
-                  style={[
-                    styles.okBtn,
-                    styles.okSag,
-                    (index >= queue.length - 1 || !ogrenebilir) && styles.okPasif,
-                  ]}
-                  hitSlop={8}
-                  accessibilityLabel="Sonraki kart">
-                  <MaterialCommunityIcons name="chevron-right" size={32} color={Palette.beyaz} />
-                </Pressable>
               </View>
             </GestureDetector>
 
@@ -404,6 +385,16 @@ export default function AkisScreen() {
                 ) : null;
               })}
             </View>
+
+            {/* Panel AÇIKKEN görselin boş bir yerine dokununca panel kapanır (backdrop).
+                Panel zIndex'i daha yüksek → panel kontrolleri/✕ çalışmaya devam eder. */}
+            {acikPanel !== 'yok' ? (
+              <Pressable
+                style={styles.panelKapatKatman}
+                onPress={() => setAcikPanel('yok')}
+                accessibilityLabel="Paneli kapat"
+              />
+            ) : null}
 
             {/* PANEL — görselin ALT kısmının ÜSTÜNE biner (absolute overlay). 'yok' iken
                 display:none → TtsBar mount KALIR, otomatik çalan ses KESİLMEZ. ✕ ya da
@@ -781,33 +772,6 @@ const styles = StyleSheet.create({
     width: '100%',
     aspectRatio: 0.8,
   },
-  okBtn: {
-    position: 'absolute',
-    top: '50%',
-    marginTop: -22,
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: Palette.lacivert,
-    opacity: 0.9,
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 4,
-    zIndex: 2,
-  },
-  okSol: {
-    left: 6,
-  },
-  okSag: {
-    right: 6,
-  },
-  okPasif: {
-    opacity: 0.25,
-  },
   // Sabit alt footer — cevap butonları her zaman erişilir.
   footer: {
     borderTopColor: Palette.kartKenarKoyu,
@@ -840,10 +804,15 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: -2 },
     elevation: 8,
   },
-  // Madde paneli: kutu SABİT (maks yükseklik) → uzun metin panel-içi scroll'la okunur,
-  // kutu/ekran BÜYÜMEZ. Kısa metinde içeriğe sarılır (maxHeight'i aşmaz).
+  // Madde paneli: kutu HER ZAMAN AYNI yükseklik (sabit %60) → kısa/uzun metin fark etmez,
+  // metin panel-içi ScrollView ile (scroll bar) okunur, kutu/ekran BÜYÜMEZ.
   panelMadde: {
-    maxHeight: '60%',
+    height: '60%',
+  },
+  // Panel açıkken görselin boş alanına dokunma katmanı (panel zIndex 5'in altında).
+  panelKapatKatman: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 4,
   },
   panelKapat: {
     position: 'absolute',

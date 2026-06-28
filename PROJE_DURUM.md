@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 28 Haziran 2026
 >
+> ### ▶ 28 Haz — KART EKRANI UX: ok kaldır + boşluğa dokun-kapat + sabit madde kutusu + Etüt→Geri Besleme
+> Başkan istekleri (4):
+> **(1)** Kart ekranındaki sol/sağ **gezinme ok butonları KALDIRILDI** (`akis.tsx`) — gezinme yalnız yatay swipe ile. İlgili `okBtn/okSol/okSag/okPasif` stilleri de silindi.
+> **(2)** Ses/madde paneli AÇIKKEN görselin **boş bir yerine dokununca panel KAPANIR** — panel'den önce `panelKapatKatman` (absoluteFill, zIndex 4) backdrop Pressable → `setAcikPanel('yok')`. Panel zIndex 5 olduğundan panel kontrolleri/✕ çalışır; backdrop yalnız `gorselAlan` içinde olduğu için 🎧/📄 ikon satırı + footer (kardeş View'lar) panel açıkken de tıklanır (yalnız görsele dokununca kapanır).
+> **(3)** Madde metni kutusu artık **HER ZAMAN AYNI yükseklik** (`panelMadde` `maxHeight:'60%'` → `height:'60%'`) → kısa/uzun fark etmez; uzun kanunlarda metin panel-içi ScrollView (scroll bar, `showsVerticalScrollIndicator`) ile kendi içinde kayar, kutu/ekran büyümez. (İç ScrollView zaten flex:1 idi → sabit yükseklikte doğal dolar.)
+> **(4)** Karargah hero **"ETÜT" → "GERİ BESLEME"** (`index.tsx`, etiket + accessibilityLabel). İşlev (zayıf havuz) ve "Zayıf Mevziler" başlığı/açıklaması AYNI. Evsaf'taki geri besleme (ödül/ceza, GeriBesDurum) bölümü DOKUNULMADI (başkan "olduğu gibi kalsın" dedi). Not: iç değişken/terminoloji "Etüt"/"zayif" olarak korundu (yalnız görünen ad değişti).
+> Doğrulama: tsc 0. Telefon görsel teyidi bekliyor.
+>
 > ### ▶ 28 Haz — AYIRT/ÖZET KARTLARI PATİKADA KENDİ DÜĞÜMÜ (rozet kaldırıldı)
 > **Bağlam:** Önceki "içerir: m.21–22" rozeti yanıltıcıydı — ayırt kartı tek-madde düğümüne (max üye, örn. Madde 22) bağlanıp üstüne rozet konuyordu; o düğümde madde 22'nin kendi kartı da olduğundan rozet sanki düğüm 21+22'yi kapsıyormuş gibi görünüyor, ayırt kartı ayrı görünmüyordu (başkan testte yakaladı: "bu sistem tamamen hatalı").
 > **Çözüm:** Her ayırt/özet kartı artık patikada **KENDİ düğümü**: "Madde 35–36 ayırt" / "Madde 247–250–252 özet" / tek-üyeli "Madde 4 ayırt" — kapsamdaki **en büyük üye maddenin HEMEN ARDINA** (35–36 ayırt → madde 36'dan sonra = "37. sıra"). Düğüm adı görsel anahtarından (`tck_ayirt_m35_36`) yeni `lib/birlesik.ts ayirtOzetBilgi` (tek-üyeli DAHİL + tip) + `birlesikDugumAd` ile üretiliyor. **Rozet kaldırıldı** (`patika.tsx` birlesik alanı/render/stil + `birlesikUyeler` importu).
