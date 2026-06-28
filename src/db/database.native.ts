@@ -264,6 +264,15 @@ class SqliteBackend implements Backend {
       version = 22;
     }
 
+    if (version < 23) {
+      // Ayırt/özet kartları artık patikada KENDİ düğümü ("Madde 35–36 ayırt"), son üye
+      // maddesinin ardına — tek-madde düğümüne karışan eski "içerir" rozeti kaldırıldı.
+      // bolumler/bolum_kartlari SALT REFERANS → sıfırla+yeniden tohumla; srs/cards KORUNUR.
+      await db.execAsync('DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedBolumler();
+      version = 23;
+    }
+
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
     }

@@ -27,3 +27,39 @@ export function birlesikUyeler(gorselYolu: string | null | undefined): number[] 
     .map(Number);
   return uyeler.length > 1 ? uyeler : null;
 }
+
+/** Ayırt/özet kartının üye maddeleri + tipi (TEK üyeli de DAHİL — patika düğüm adı için). */
+export type AyirtOzet = { uyeler: number[]; tip: 'ayırt' | 'özet' };
+
+/**
+ * Bir ayırt/özet kartının üyeleri + tipi. `birlesikUyeler`'den FARKI: tek üyeli kartı da
+ * döndürür (örn. "eimza_ayirt_m4" → {uyeler:[4], tip:'ayırt'}) ve tip bilgisini taşır →
+ * patikada her ayırt/özet kartına KENDİ düğümü ("Madde 35–36 ayırt") verilir.
+ * Birleşik (ayırt/özet) olmayan veya madde-no'suz genel-özet (ozet_tutar) → null.
+ */
+export function ayirtOzetBilgi(gorselYolu: string | null | undefined): AyirtOzet | null {
+  if (!gorselYolu) return null;
+  const us = gorselYolu.indexOf('_');
+  if (us < 0) return null;
+  const geri = gorselYolu.slice(us + 1);
+  let tip: 'ayırt' | 'özet' | null = null;
+  let govde: string | null = null;
+  if (geri.startsWith('ayirt_m')) {
+    tip = 'ayırt';
+    govde = geri.slice(7);
+  } else if (geri.startsWith('ozet_m')) {
+    tip = 'özet';
+    govde = geri.slice(6);
+  }
+  if (!tip || !govde) return null;
+  const uyeler = govde
+    .split('_')
+    .filter((s) => /^\d+$/.test(s))
+    .map(Number);
+  return uyeler.length ? { uyeler, tip } : null;
+}
+
+/** Ayırt/özet düğümünün adı: "Madde 35–36 ayırt" / "Madde 247–250–252 özet" / "Madde 4 ayırt". */
+export function birlesikDugumAd(bilgi: AyirtOzet): string {
+  return `Madde ${bilgi.uyeler.join('–')} ${bilgi.tip}`;
+}

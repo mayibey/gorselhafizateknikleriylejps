@@ -6,7 +6,7 @@
  */
 
 import { KART_GORSELLERI } from '../assets/kart-gorselleri';
-import { birlesikUyeler } from '@/lib/birlesik';
+import { ayirtOzetBilgi, birlesikDugumAd } from '@/lib/birlesik';
 import type { Bolum, BolumKart, Branch, Card, Law, LawBranch } from '@/db/schema';
 
 export const SEED_LAWS: Law[] = [
@@ -374,98 +374,85 @@ function maddeAd(etiket: string): string {
   return `Madde ${etiket}`;
 }
 
-/** "Özet" düğümünün kanun-içi sırası (madde düğümlerinin SONUNDA; kanun başına <999 madde). */
-const OZET_SIRA = 999;
-
 /**
- * Patika bağlama analizi (TEK kaynak):
- *  - Madde kartlarını ("m.<N>") kapsamdaki madde düğümüne bağlar.
- *  - Bağlanmayan kartları (genel-özet + kapsam dışı ek/geçici özetleri) kanunun "Özet"
- *    düğümüne bağlar → patikada GÖRÜNÜR + ilerleme paydasına girer (eskiden kayıptılar).
- * Çıktı: bağlama satırları + Özet düğümü olması gereken kanunlar.
+ * Patika düğümleri + kart↔düğüm bağları (TEK kaynak). Her kanun için:
+ *  - kapsamdaki her madde → bir düğüm ("Madde N", sıralı).
+ *  - her AYIRT/ÖZET kartı → KENDİ düğümü ("Madde 35–36 ayırt"), kapsamdaki EN BÜYÜK üye
+ *    maddesinin HEMEN ARDINA. Böylece kart içerdiği TÜM maddeler görüldükten sonra gelir
+ *    ve tek-madde düğümüne karışmaz (eski "içerir" rozeti kaldırıldı).
+ *  - bağsız kartlar (madde-no'suz genel-özet / kapsam dışı) → kanunun sonundaki "Özet" düğümü.
+ * id = law_id*1000 + sıra (deterministik; kanun başına <999 düğüm). SRS card_id ile bağlı
+ * olduğundan düğüm id'leri değişse bile kullanıcı ilerlemesi KORUNUR (migration reseed).
  */
-const _patikaBaglama = (() => {
-  const satirlar: BolumKart[] = [];
-  const sayac = new Map<number, number>(); // bolum_id → eklenen kart sayısı (sira)
-  const baglanan = new Set<number>(); // bağlanan card.id
-  // 1) NORMAL (birleşik olmayan) kartları madde düğümüne bağla.
-  for (const card of SEED_CARDS) {
-    if (birlesikUyeler(card.gorsel_yolu)) continue; // birleşik kart → 2. geçişte
-    const kapsam = SEED_KAPSAM[card.law_id];
-    if (!kapsam) continue;
-    const m = card.madde_no.match(/m\.\s*(\d+(?:\/[A-Za-z])?)/i);
-    if (!m) continue;
-    const idx = kapsam.indexOf(m[1]);
-    if (idx < 0) continue;
-    const bolumId = card.law_id * 1000 + (idx + 1);
-    const sira = (sayac.get(bolumId) ?? 0) + 1;
-    sayac.set(bolumId, sira);
-    satirlar.push({ bolum_id: bolumId, card_id: card.id, sira });
-    baglanan.add(card.id);
-  }
-  // 2) BİRLEŞİK (ayırt/özet) kartları, kapsamdaki EN BÜYÜK üye maddenin düğümüne bağla →
-  //    kart, içerdiği TÜM maddeler görüldükten SONRA gelir (24-25 ayırt, m.25 düğümünde).
-  //    2. geçiş olduğu için düğüm-içi sırada da en sona düşer (sira en yüksek).
-  for (const card of SEED_CARDS) {
-    const uyeler = birlesikUyeler(card.gorsel_yolu);
-    if (!uyeler) continue;
-    const kapsam = SEED_KAPSAM[card.law_id];
-    if (!kapsam) continue;
-    let bestIdx = -1;
-    let bestVal = -1;
-    for (const u of uyeler) {
-      const i = kapsam.indexOf(String(u));
-      if (i >= 0 && u > bestVal) {
-        bestVal = u;
-        bestIdx = i;
+const _patika = (() => {
+  const bolumler: Bolum[] = [];
+  const baglamalar: BolumKart[] = [];
+
+  for (const [lawIdStr, kapsam] of Object.entries(SEED_KAPSAM)) {
+    const lawId = Number(lawIdStr);
+    type Dugum = { sortIdx: number; sub: number; tie: string; ad: string; kartIds: number[] };
+    const maddeDugum = new Map<string, Dugum>(); // kapsam etiketi → madde düğümü
+    const dugumler: Dugum[] = [];
+    // 1) Her kapsam maddesi için bir düğüm (kartı olmasa bile görünür).
+    kapsam.forEach((et, i) => {
+      const d: Dugum = { sortIdx: i, sub: 0, tie: '', ad: maddeAd(et), kartIds: [] };
+      maddeDugum.set(et, d);
+      dugumler.push(d);
+    });
+    const ozetKartlar: number[] = [];
+    // 2) Kartları dağıt (SEED_CARDS sırası korunur → düğüm-içi panel sırası doğal).
+    for (const card of SEED_CARDS) {
+      if (card.law_id !== lawId) continue;
+      const bilgi = ayirtOzetBilgi(card.gorsel_yolu);
+      if (bilgi) {
+        // Ayırt/özet → KENDİ düğümü, kapsamdaki en büyük üyenin index'inde (madde düğümünden
+        // SONRA: sub=1). Hiç üye kapsamda değilse "Özet" düğümüne düşer.
+        let bestIdx = -1;
+        let bestVal = -1;
+        for (const u of bilgi.uyeler) {
+          const i = kapsam.indexOf(String(u));
+          if (i >= 0 && u > bestVal) {
+            bestVal = u;
+            bestIdx = i;
+          }
+        }
+        if (bestIdx < 0) {
+          ozetKartlar.push(card.id);
+          continue;
+        }
+        dugumler.push({
+          sortIdx: bestIdx,
+          sub: 1,
+          tie: bilgi.uyeler.join('_'),
+          ad: birlesikDugumAd(bilgi),
+          kartIds: [card.id],
+        });
+      } else {
+        // Normal kart → madde düğümü (madde-no'dan). Eşleşmezse "Özet" düğümüne.
+        const m = card.madde_no.match(/m\.\s*(\d+(?:\/[A-Za-z])?)/i);
+        const d = m ? maddeDugum.get(m[1]) : undefined;
+        if (d) d.kartIds.push(card.id);
+        else ozetKartlar.push(card.id);
       }
     }
-    if (bestIdx < 0) continue; // hiçbir üye kapsamda değil → 3. geçişte "Özet" düğümüne
-    const bolumId = card.law_id * 1000 + (bestIdx + 1);
-    const sira = (sayac.get(bolumId) ?? 0) + 1;
-    sayac.set(bolumId, sira);
-    satirlar.push({ bolum_id: bolumId, card_id: card.id, sira });
-    baglanan.add(card.id);
+    // 3) Bağsız kartlar → kanun sonundaki "Özet" düğümü.
+    if (ozetKartlar.length) {
+      dugumler.push({ sortIdx: Number.MAX_SAFE_INTEGER, sub: 0, tie: '', ad: 'Özet', kartIds: ozetKartlar });
+    }
+    // 4) Sırala (madde index → madde(0) önce ayırt(1) sonra → tie) ve sıra/id ata.
+    dugumler.sort((a, b) => a.sortIdx - b.sortIdx || a.sub - b.sub || a.tie.localeCompare(b.tie));
+    dugumler.forEach((d, k) => {
+      const sira = k + 1;
+      const id = lawId * 1000 + sira;
+      bolumler.push({ id, law_id: lawId, ad: d.ad, sira });
+      d.kartIds.forEach((cid, j) => baglamalar.push({ bolum_id: id, card_id: cid, sira: j + 1 }));
+    });
   }
-  // Bağlanmayan kartları kanunun "Özet" düğümüne bağla (madde sırasını koruyarak: SEED_CARDS
-  // zaten kanun→madde→tip→panel sıralı üretildiği için doğal sıra korunur).
-  const ozetSayac = new Map<number, number>();
-  const ozetliKanunlar = new Set<number>();
-  for (const card of SEED_CARDS) {
-    if (baglanan.has(card.id)) continue;
-    if (!SEED_KAPSAM[card.law_id]) continue; // kapsamı (patikası) olmayan kanun → atla
-    const bolumId = card.law_id * 1000 + OZET_SIRA;
-    const sira = (ozetSayac.get(bolumId) ?? 0) + 1;
-    ozetSayac.set(bolumId, sira);
-    satirlar.push({ bolum_id: bolumId, card_id: card.id, sira });
-    ozetliKanunlar.add(card.law_id);
-  }
-  return { satirlar, ozetliKanunlar };
+  return { bolumler, baglamalar };
 })();
 
-/**
- * Patika düğümleri (bolumler tablosu YENİDEN KULLANILIYOR — her satır bir MADDE; ayrıca
- * bağsız kartlar için kanun başına bir "Özet" düğümü). id = law_id*1000 + sıra → deterministik.
- */
-export const SEED_BOLUMLER: Bolum[] = [
-  ...Object.entries(SEED_KAPSAM).flatMap(([lawIdStr, etiketler]) => {
-    const lawId = Number(lawIdStr);
-    return etiketler.map((et, i) => ({
-      id: lawId * 1000 + (i + 1),
-      law_id: lawId,
-      ad: maddeAd(et),
-      sira: i + 1,
-    }));
-  }),
-  ...[...(_patikaBaglama.ozetliKanunlar as Set<number>)]
-    .sort((a, b) => a - b)
-    .map((lawId) => ({
-      id: lawId * 1000 + OZET_SIRA,
-      law_id: lawId,
-      ad: 'Özet',
-      sira: OZET_SIRA,
-    })),
-];
+/** Patika düğümleri (her madde + her ayırt/özet kartı için ayrı düğüm + kanun sonu "Özet"). */
+export const SEED_BOLUMLER: Bolum[] = _patika.bolumler;
 
-/** Kart↔düğüm bağları (madde düğümleri + "Özet" düğümü). Bkz. _patikaBaglama. */
-export const SEED_BOLUM_KARTLARI: BolumKart[] = _patikaBaglama.satirlar;
+/** Kart↔düğüm bağları. Bkz. _patika. */
+export const SEED_BOLUM_KARTLARI: BolumKart[] = _patika.baglamalar;
