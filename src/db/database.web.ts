@@ -14,6 +14,7 @@ import {
   type PerformansKaynak,
   type PerformansSatir,
   type SicilKaydi,
+  type SinavSonuc,
 } from '@/db/schema';
 import {
   SEED_BOLUM_KARTLARI,
@@ -41,6 +42,9 @@ class MemoryBackend implements Backend {
   private sicil: SicilKaydi[] = [];
   private sicilSayac = 0;
   private geriBes: GeriBesDurum = { acik: false, acilis: null, sonTarih: null, kademe: 0 };
+  // Deneme sınavı sonuçları. Bellek-içi → yenilemede sıfırlanır (native kalıcı).
+  private sinavSonuclari: SinavSonuc[] = [];
+  private sinavSayac = 0;
 
   async init(): Promise<void> {
     // srs tohumlanmaz: "srs kaydı yok = yeni kart".
@@ -198,6 +202,14 @@ class MemoryBackend implements Backend {
     this.sicilSayac = 0;
     this.geriBes = { acik: false, acilis: null, sonTarih: null, kademe: 0 };
   }
+
+  async ekleSinavSonucu(lawId: number, dogru: number, toplam: number, tarih: string): Promise<void> {
+    this.sinavSonuclari.push({ id: ++this.sinavSayac, law_id: lawId, dogru, toplam, tarih });
+  }
+
+  async getSinavSonuclari(): Promise<SinavSonuc[]> {
+    return [...this.sinavSonuclari]; // ekleme sırasıyla (native ORDER BY id ile parite)
+  }
 }
 
 const backend: Backend = new MemoryBackend();
@@ -340,4 +352,21 @@ export async function setGeriBesDurum(durum: GeriBesDurum): Promise<void> {
 export async function sicilSifirla(): Promise<void> {
   await initDatabase();
   return backend.sicilSifirla();
+}
+
+/** Bir deneme sınavı sonucunu kalıcı kaydeder (Tatbikat skor geçmişi). */
+export async function ekleSinavSonucu(
+  lawId: number,
+  dogru: number,
+  toplam: number,
+  tarih: string,
+): Promise<void> {
+  await initDatabase();
+  return backend.ekleSinavSonucu(lawId, dogru, toplam, tarih);
+}
+
+/** Tüm deneme sınavı sonuçlarını (eskiden yeniye) döndürür. */
+export async function getSinavSonuclari(): Promise<SinavSonuc[]> {
+  await initDatabase();
+  return backend.getSinavSonuclari();
 }

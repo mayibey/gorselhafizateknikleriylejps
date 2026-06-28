@@ -16,6 +16,7 @@ import {
   type PerformansKaynak,
   type PerformansSatir,
   type SicilKaydi,
+  type SinavSonuc,
   type Srs,
 } from '@/db/schema';
 import {
@@ -251,6 +252,16 @@ class SqliteBackend implements Backend {
       await this.seedReference();
       await this.seedBolumler();
       version = 21;
+    }
+
+    if (version < 22) {
+      // Deneme sınavı (Tatbikat) skor geçmişi. TAMAMEN EKLEMELİ: yalnız CREATE TABLE IF
+      // NOT EXISTS — srs/kart_performans/cards/diğer tablolara DOKUNULMAZ; referans veri
+      // reseed EDİLMEZ. Kullanıcı verisi tam korunur.
+      await db.execAsync(
+        'CREATE TABLE IF NOT EXISTS sinav_sonuclari (id INTEGER PRIMARY KEY AUTOINCREMENT, law_id INTEGER NOT NULL, dogru INTEGER NOT NULL, toplam INTEGER NOT NULL, tarih TEXT NOT NULL)',
+      );
+      version = 22;
     }
 
     if (version !== (row?.user_version ?? 0)) {
@@ -591,6 +602,24 @@ class SqliteBackend implements Backend {
     if (!this.db) throw new Error('DB hazır değil');
     await this.db.execAsync('DELETE FROM sicil_kayitlari; DELETE FROM geri_bes_durum;');
   }
+
+  async ekleSinavSonucu(lawId: number, dogru: number, toplam: number, tarih: string): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    await this.db.runAsync(
+      'INSERT INTO sinav_sonuclari (law_id, dogru, toplam, tarih) VALUES (?, ?, ?, ?)',
+      lawId,
+      dogru,
+      toplam,
+      tarih,
+    );
+  }
+
+  async getSinavSonuclari(): Promise<SinavSonuc[]> {
+    if (!this.db) throw new Error('DB hazır değil');
+    return this.db.getAllAsync<SinavSonuc>(
+      'SELECT id, law_id, dogru, toplam, tarih FROM sinav_sonuclari ORDER BY id',
+    );
+  }
 }
 
 const backend: Backend = new SqliteBackend();
@@ -733,4 +762,21 @@ export async function setGeriBesDurum(durum: GeriBesDurum): Promise<void> {
 export async function sicilSifirla(): Promise<void> {
   await initDatabase();
   return backend.sicilSifirla();
+}
+
+/** Bir deneme sınavı sonucunu kalıcı kaydeder (Tatbikat skor geçmişi). */
+export async function ekleSinavSonucu(
+  lawId: number,
+  dogru: number,
+  toplam: number,
+  tarih: string,
+): Promise<void> {
+  await initDatabase();
+  return backend.ekleSinavSonucu(lawId, dogru, toplam, tarih);
+}
+
+/** Tüm deneme sınavı sonuçlarını (eskiden yeniye) döndürür. */
+export async function getSinavSonuclari(): Promise<SinavSonuc[]> {
+  await initDatabase();
+  return backend.getSinavSonuclari();
 }

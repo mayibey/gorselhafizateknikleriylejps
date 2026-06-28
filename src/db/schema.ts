@@ -109,6 +109,16 @@ export interface SicilKaydi {
   tarih: string;
 }
 
+/** Bir deneme sınavı (Tatbikat) sonucu — kalıcı skor geçmişi. */
+export interface SinavSonuc {
+  id: number;
+  law_id: number;
+  dogru: number;
+  toplam: number;
+  /** YYYY-MM-DD. */
+  tarih: string;
+}
+
 /** Geri besleme eğitim emri durumu (tek satır, id=1). */
 export interface GeriBesDurum {
   acik: boolean;
@@ -198,7 +208,15 @@ CREATE TABLE IF NOT EXISTS geri_bes_durum (
   son_tarih TEXT,
   kademe INTEGER NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS sinav_sonuclari (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  law_id INTEGER NOT NULL,
+  dogru INTEGER NOT NULL,
+  toplam INTEGER NOT NULL,
+  tarih TEXT NOT NULL
+);
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 21;
+export const SCHEMA_VERSION = 22;

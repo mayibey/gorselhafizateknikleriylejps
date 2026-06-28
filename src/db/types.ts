@@ -3,11 +3,11 @@
  * Buraya expo-sqlite gibi platforma özel HİÇBİR bağ girmez.
  */
 
-import type { Bolum, Branch, CardWithLaw, CardWithSrs, GeriBesDurum, LawWithCount, PerformansKaynak, PerformansSatir, SicilKaydi } from '@/db/schema';
+import type { Bolum, Branch, CardWithLaw, CardWithSrs, GeriBesDurum, LawWithCount, PerformansKaynak, PerformansSatir, SicilKaydi, SinavSonuc } from '@/db/schema';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
-export type { Blok, Bolum, BolumKart, Branch, Card, CardWithLaw, CardWithSrs, CezaDerece, GeriBesDurum, Law, LawBranch, LawWithCount, OdulDerece, PerformansKaynak, PerformansSatir, SicilDerece, SicilKaydi, SicilTip, Srs } from '@/db/schema';
+export type { Blok, Bolum, BolumKart, Branch, Card, CardWithLaw, CardWithSrs, CezaDerece, GeriBesDurum, Law, LawBranch, LawWithCount, OdulDerece, PerformansKaynak, PerformansSatir, SicilDerece, SicilKaydi, SicilTip, SinavSonuc, Srs } from '@/db/schema';
 export type { QueueCard, SrsDurum } from '@/lib/queue';
 
 /** Hem native (SQLite) hem web (bellek-içi) arka uçlarının uyduğu sözleşme. */
@@ -50,6 +50,10 @@ export interface Backend {
   setGeriBesDurum(durum: GeriBesDurum): Promise<void>;
   /** Sicil defterini ve geri-bes durumunu sıfırlar (demo/önizleme temizliği). */
   sicilSifirla(): Promise<void>;
+  /** Bir deneme sınavı sonucunu kalıcı kaydeder (id otomatik). */
+  ekleSinavSonucu(lawId: number, dogru: number, toplam: number, tarih: string): Promise<void>;
+  /** Tüm deneme sınavı sonuçlarını ekleme sırasıyla (eskiden yeniye) döndürür. */
+  getSinavSonuclari(): Promise<SinavSonuc[]>;
 }
 
 /** Public API'nin (initDatabase/getStudyCards/recordReview) ortak tip imzaları. */
