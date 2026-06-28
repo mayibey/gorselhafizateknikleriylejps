@@ -54,8 +54,9 @@ export function hesaplaIstatistik(studied: CardWithSrs[], toplamKart: number): I
 }
 
 /**
- * Verilen YYYY-MM-DD gününün bir önceki takvim günü (UTC).
- * bugunISO() UTC üretir (toISOString) → tutarlı olsun diye burada da UTC.
+ * Verilen YYYY-MM-DD gününün bir önceki takvim günü. Saf takvim-günü matematiği:
+ * tarih STRING'i UTC gece yarısı olarak ayrıştırılıp -1 gün → biçimlenir. Girdi yerel
+ * ya da UTC günü olsun fark etmez; sonuç doğru önceki takvim günüdür (bugunISO artık yerel).
  */
 export function oncekiGun(iso: string): string {
   const t = new Date(`${iso}T00:00:00.000Z`);

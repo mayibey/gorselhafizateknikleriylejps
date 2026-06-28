@@ -11,11 +11,23 @@ export type SrsCevap = 'biliyorum' | 'tekrar' | 'zor';
 const ARALIKLAR = [1, 2, 4, 7, 14, 30] as const;
 
 /**
- * Bugünün YYYY-MM-DD (UTC) değeri. seed, recordReview ve kuyruk sorgusundaki
- * "bugün" karşılaştırması HEPSİ bunu kullanır ki tarih dilimi tutarlı olsun.
+ * Bir Date'in YEREL (cihaz saat dilimi) takvim günü → YYYY-MM-DD. toISOString (UTC)
+ * DEĞİL → gün sınırı yerel gece yarısı (00:00) olur. (UTC+3 Türkiye'de toISOString
+ * günü 03:00'a kadar düne sabitliyordu → sayaçlar 00:00 yerine 03:00'da sıfırlanıyordu.)
+ */
+export function yerelISO(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const g = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${g}`;
+}
+
+/**
+ * Bugünün YYYY-MM-DD değeri (YEREL gün). seed, recordReview, günlük sayaçlar ve kuyruk
+ * "bugün" karşılaştırması HEPSİ bunu kullanır → tüm sayaçlar yerel gece 00:00'da sıfırlanır.
  */
 export function bugunISO(): string {
-  return new Date().toISOString().slice(0, 10);
+  return yerelISO(new Date());
 }
 
 export function sonrakiKutu(mevcutKutu: number, cevap: SrsCevap): number {
@@ -29,12 +41,12 @@ export function sonrakiKutu(mevcutKutu: number, cevap: SrsCevap): number {
   }
 }
 
-/** YYYY-MM-DD formatında bir sonraki tekrar tarihi. */
+/** YYYY-MM-DD formatında bir sonraki tekrar tarihi (YEREL gün — bugunISO ile tutarlı). */
 export function sonrakiTarih(kutu: number, bugun: Date = new Date()): string {
   const gun = ARALIKLAR[Math.min(kutu, ARALIKLAR.length - 1)];
   const tarih = new Date(bugun);
   tarih.setDate(tarih.getDate() + gun);
-  return tarih.toISOString().slice(0, 10);
+  return yerelISO(tarih);
 }
 
 /** Bir cevaba göre yeni SRS durumunu (kutu + sonraki_tarih) hesaplar. */
