@@ -163,7 +163,13 @@ function Monogram({ no }: { no: string | null }) {
   return (
     <View style={styles.monogram}>
       {no ? (
-        <AppText variant="govde" bold color="altin">
+        <AppText
+          variant="govde"
+          bold
+          color="altin"
+          numberOfLines={1}
+          adjustsFontSizeToFit
+          style={styles.monoNo}>
           {no}
         </AppText>
       ) : (
@@ -327,6 +333,12 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.lacivert,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  // Kanun no (örn. 5237) kutuya TEK SATIR sığsın — küçülerek (alt satıra taşmaz).
+  monoNo: {
+    width: '100%',
+    textAlign: 'center',
+    paddingHorizontal: 2,
   },
   merkezKutu: {
     flex: 1,

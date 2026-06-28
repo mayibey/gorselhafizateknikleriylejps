@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### ▶ 29 Haz — Tatbikat: kanun no kutusu tek satır
+> Başkan: Tatbikat kanun listesinde soldaki monogram kutusunda kanun no'su (örn. 5237) kutuya sığmayıp alt satıra taşıyordu. `Monogram` AppText'ine `numberOfLines={1}` + `adjustsFontSizeToFit` + `monoNo` stili (width %100, textAlign center) → ara.tsx `sikMonoNo` deseni. Artık küçülerek tek satır sığar. tsc 0.
+>
+> ### ▶ 29 Haz — Tüm günlük sayaçlar yerel gece 00:00'da sıfırlanır (UTC bug)
+> Başkan: sayaçlar (bugünün görevi / bugün çalışılan / Mevzuat son-çalışma vb.) gece 00:00'da sıfırlanmalı. **Kök neden:** `lib/srs.ts bugunISO()` `new Date().toISOString()` = **UTC tarihi** kullanıyordu → UTC+3 Türkiye'de "bugün" sınırı UTC 00:00 = yerel **03:00** (sayaçlar 03:00'da sıfırlanıyor, 00:00-03:00 arası dünün verisi). **Düzeltme:** yeni `yerelISO(d)` (getFullYear/Month/Date — yerel) + `bugunISO()` ve `sonrakiTarih()` artık yerel gün biçimler. bugunISO TEK kaynak → tüm günlük sayaçlar/streak/performans-tarih/sınav-tarih yerel 00:00'da sıfırlanır. `oncekiGun`/`sicil.ts` saf takvim-günü string matematiği (yerel/UTC fark etmez) → dokunulmadı, yorum güncellendi. Web+native aynı saf fn → parite. UTC+3 01:00 senaryosu Node ile doğrulandı (eski 28, yeni 29). tsc 0.
+>
 > ### ▶ 29 Haz — Karargah sadeleşti: rol/kademe kaldırıldı + hedef display kaldırıldı
 > Başkan istekleri: (1) Karargah üstündeki **rol(branş)/kademe(rütbe) dropdown'ları KALDIRILDI** — branş/rütbe artık YALNIZ Evsaf → Ayarlar'dan değişir (zaten `/brans-sec` + `/rutbe-sec` orada vardı). (2) Açılan üst alan **7-gün "TEKRAR ZAMANI" uyarı bandına** bırakıldı (banner zaten vardı, dropdown'lar gidince üste çıktı). (3) **"Bugünün görevi: 15 kart" sabit hedefi KALDIRILDI** — hem hero'daki "Günlük hedef" sütunu hem "BUGÜNÜN GÖREVİ" hedef bar/sayacı; aktivite istatistikleri (Zayıf mevzi · Bugün çalışılan) KALDI. Hedef (`gunlukKart`) hâlâ oturum limiti olarak çalışıyor (`akis.tsx slice`) + kullanıcı Ayarlar → Eğitim Planı stepper'ından (5–50) ayarlar; Karargah'ta artık sabit gösterilmiyor.
 > Temizlik: index.tsx'ten ölü `Dropdown`/`Bar` bileşenleri + ilgili state (acikDD/hedef/branches/brans/rutbe) + importlar (useBrans/useRutbe/RUTBELER/getAyar/getBranches/Branch) + ölü stiller (rolKademe/dd*/track/fill) kaldırıldı. tsc 0.
