@@ -38,6 +38,7 @@ import {
   recordReview,
 } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
+import { sinavVarMi } from '@/lib/sinav';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -203,6 +204,11 @@ export default function AkisScreen() {
 
   const bitti = queue !== null && queue.length > 0 && index >= queue.length;
   const aktif = !hata && queue !== null && queue.length > 0 && index < queue.length;
+  // Kanun/bölüm modu bitince o kanunun deneme sınavı varsa CTA göster (zayıf/günlük hariç).
+  // bölüm modunda lawId param yok → biten kuyruğun kartlarından law_id türetilir.
+  const bitenLawId = kanunModu ? Number(lawId) : bolumModu ? (queue?.[0]?.law_id ?? null) : null;
+  const sinavGoster =
+    bitenLawId != null && !Number.isNaN(bitenLawId) && sinavVarMi(bitenLawId);
   // Patika/kanun modunda geri = patika (Mevzuat → patika → akış); günlükte Karargah.
   const geriEtiket = tekKanun ? 'Geri dön' : "Karargah'a dön";
   const ozetMetin = tekKanun
@@ -311,7 +317,21 @@ export default function AkisScreen() {
             ikonRenk="yesil"
             baslik="Bu turu tamamladın"
             aciklama={ozetMetin}
-            buton={{ etiket: geriEtiket, onPress: () => router.back() }}
+            buton={
+              sinavGoster
+                ? {
+                    etiket: 'Deneme sınavına gir',
+                    onPress: () =>
+                      router.push({
+                        pathname: '/sinav',
+                        params: { lawId: String(bitenLawId) },
+                      }),
+                  }
+                : { etiket: geriEtiket, onPress: () => router.back() }
+            }
+            ikincilButon={
+              sinavGoster ? { etiket: geriEtiket, onPress: () => router.back() } : undefined
+            }
           />
         </View>
       ) : (

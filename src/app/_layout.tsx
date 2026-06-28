@@ -90,6 +90,7 @@ function RootNavigator() {
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="akis" />
         <Stack.Screen name="quiz" />
+        <Stack.Screen name="sinav" />
         <Stack.Screen name="sesli-nobet" />
         <Stack.Screen name="patika" />
         <Stack.Screen name="geri-bildirim" />
