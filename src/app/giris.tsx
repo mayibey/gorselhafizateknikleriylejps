@@ -1,12 +1,12 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Alert, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { girisDonusAdresi } from '@/lib/auth';
+import { girisDonusAdresi, type Profil, profilGetir } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 
 export default function GirisScreen() {
@@ -15,6 +15,16 @@ export default function GirisScreen() {
     useAuth();
   const [mesgul, setMesgul] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
+  const [profil, setProfil] = useState<Profil | null>(null);
+
+  // Hesap bilgilerini (ad/soyad/telefon) göster — giriş yapıldıysa çek.
+  useEffect(() => {
+    if (!kullanici) {
+      setProfil(null);
+      return;
+    }
+    void profilGetir().then(setProfil);
+  }, [kullanici]);
 
   async function giris() {
     setHata(null);
@@ -92,12 +102,19 @@ export default function GirisScreen() {
           <View style={styles.hesapKart}>
             <MaterialCommunityIcons name="check-circle" size={22} color={Palette.yesil} />
             <View style={styles.hesapMetin}>
-              <AppText variant="kucuk" color="solukMetin">
-                Giriş yapıldı
-              </AppText>
-              <AppText variant="govde" bold numberOfLines={1}>
+              {profil?.ad || profil?.soyad ? (
+                <AppText variant="govde" bold numberOfLines={1}>
+                  {`${profil.ad ?? ''} ${profil.soyad ?? ''}`.trim()}
+                </AppText>
+              ) : null}
+              <AppText variant="kucuk" color="anaMetin" numberOfLines={1}>
                 {kullanici.email ?? 'Gmail hesabı'}
               </AppText>
+              {profil?.telefon ? (
+                <AppText variant="kucuk" color="solukMetin">
+                  {profil.telefon}
+                </AppText>
+              ) : null}
             </View>
             <Pressable
               style={({ pressed }) => [styles.cikisBtn, pressed && styles.pressed]}
