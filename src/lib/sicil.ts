@@ -32,32 +32,32 @@ export function gunEkle(iso: string, n: number): string {
 /** id'siz sicil kaydı (DB'ye eklenecek taslak). */
 export type YeniSicilKaydi = Omit<SicilKaydi, 'id'>;
 
-// --- Temsili metinler (Eğitim Komutanlığı antetli resmi yazı üslubu) ---
+// --- Temsili metinler (Mevzu JSPS Birliği antetli, DOĞRUDAN 2. şahıs/"tarafınıza" üslubu) ---
 
 const CEZA_BILGI: Record<CezaDerece, { baslik: string; govde: string }> = {
   yazili_ikaz: {
     baslik: 'Yazılı İkaz',
     govde:
-      'İlgili personel, geri besleme eğitim emrine süresi içinde icabet etmemiştir. ' +
-      'İşbu yazı ikaz mahiyetindedir; zayıf mevzilerin ivedi takviyesi tembih olunur.',
+      'Geri besleme eğitim emrine süresi içinde icabet etmediniz. İşbu yazı tarafınıza İKAZ ' +
+      'mahiyetindedir; zayıf mevzilerinizin ivedi takviyesi tembih olunur.',
   },
   uyari: {
     baslik: 'Uyarı Cezası',
     govde:
-      'Geri besleme eğitimindeki devamsızlık tekerrür etmiştir. Personel hakkında UYARI cezası ' +
-      'tertip edilmiştir. Zayıf mevzilerin derhal toparlanması beklenmektedir.',
+      'Geri besleme eğitimindeki devamsızlığınız tekerrür etmiştir. Tarafınıza UYARI cezası ' +
+      'tertip edilmiştir. Zayıf mevzilerinizi derhal toparlamanız beklenmektedir.',
   },
   kinama: {
     baslik: 'Kınama Cezası',
     govde:
-      'Müteaddit ikaz ve uyarıya rağmen geri besleme eğitimine icabet edilmemiştir. Personel ' +
-      'KINANMIŞTIR. Eğitim disiplinine riayet etmesi son kez hatırlatılır.',
+      'Müteaddit ikaz ve uyarıya rağmen geri besleme eğitimine icabet etmediniz. Tarafınıza ' +
+      'KINAMA cezası tertip edilmiştir. Eğitim disiplinine riayet etmeniz son kez hatırlatılır.',
   },
   ayliktan_kesme: {
     baslik: 'Aylıktan Kesme Cezası',
     govde:
-      'Israrlı devamsızlık nedeniyle personel hakkında (temsili) AYLIKTAN KESME cezası tertip ' +
-      'edilmiştir. Zayıf mevziler kapatılmadan sicil temizlenmeyecektir.',
+      'Israrlı devamsızlığınız nedeniyle tarafınıza (temsili) AYLIKTAN KESME cezası tertip ' +
+      'edilmiştir. Zayıf mevzileriniz kapatılmadan siciliniz temizlenmeyecektir.',
   },
 };
 
@@ -65,25 +65,25 @@ const ODUL_BILGI: Record<OdulDerece, { baslik: string; govde: (sebep: string) =>
   takdir: {
     baslik: 'Takdir',
     govde: (s) =>
-      `${s} deneme sınavını %100 doğrulukla geçen personel TAKDİR edilmiştir. ` +
-      'Bu azim ve disiplin, birliğe örnek gösterilir.',
+      `${s} deneme sınavını %100 doğrulukla geçtiğiniz için tarafınıza TAKDİR takdim edilmiştir. ` +
+      'Bu azim ve disiplin, birliğe örnektir.',
   },
   basari: {
     baslik: 'Başarı Belgesi',
     govde: () =>
-      'Biriken takdirlerle gösterdiği istikrarlı başarı nedeniyle personele BAŞARI BELGESİ ' +
-      'tevcih edilmiştir. Tebrik olunur.',
+      'Biriken takdirlerle gösterdiğiniz istikrarlı başarı nedeniyle tarafınıza BAŞARI BELGESİ ' +
+      'tevcih edilmiştir. Sizi tebrik ederiz.',
   },
   ustun_basari: {
     baslik: 'Üstün Başarı Belgesi',
     govde: () =>
-      'Olağanüstü gayret ve süreklilikle elde ettiği başarılar nedeniyle personele ÜSTÜN BAŞARI ' +
-      'BELGESİ takdim edilmiştir. Birliğin iftiharıdır.',
+      'Olağanüstü gayret ve süreklilikle elde ettiğiniz başarılar nedeniyle tarafınıza ÜSTÜN ' +
+      'BAŞARI BELGESİ takdim edilmiştir. Birliğin iftiharısınız.',
   },
 };
 
-const ANTET = 'EĞİTİM KOMUTANLIĞI';
-const IMZA = '— Eğitim Komutanlığı';
+const ANTET = 'MEVZU JSPS BİRLİĞİ';
+const IMZA = '— Mevzu JSPS Birliği';
 
 function cezaKaydi(derece: CezaDerece, tarih: string): YeniSicilKaydi {
   const b = CEZA_BILGI[derece];
@@ -92,7 +92,7 @@ function cezaKaydi(derece: CezaDerece, tarih: string): YeniSicilKaydi {
     derece,
     baslik: b.baslik,
     metin: `${ANTET} — ${b.baslik.toUpperCase()}\n\n${b.govde}\n\n${IMZA}`,
-    sebep: 'Geri besleme eğitimine süresinde icabet edilmedi',
+    sebep: 'Geri besleme eğitimine süresinde icabet etmediniz',
     anahtar: null,
     tarih,
   };

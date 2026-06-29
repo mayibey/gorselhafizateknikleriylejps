@@ -47,7 +47,7 @@ function BelgeCerceve({
           <MaterialCommunityIcons name="star-four-points" size={14} color={vurguHex} />
         </View>
         <AppText variant="etiket" bold color={vurgu} style={styles.antet}>
-          EĞİTİM KOMUTANLIĞI
+          MEVZU JSPS BİRLİĞİ
         </AppText>
         <AppText variant="baslik" bold color={baslikRenk} style={styles.baslik}>
           {baslik.toUpperCase()}
@@ -61,7 +61,7 @@ function BelgeCerceve({
             {tarihFmt(tarih)}
           </AppText>
           <AppText variant="etiket" bold color="solukMetin">
-            — Eğitim Komutanlığı
+            — Mevzu JSPS Birliği
           </AppText>
         </View>
       </View>
@@ -87,7 +87,7 @@ export function TakdirBelgesi({ kanunAd, tarih }: { kanunAd: string; tarih: stri
           <AppText variant="govde" bold color="altinKoyu">
             %100 doğrulukla
           </AppText>{' '}
-          tamamlayan personel TAKDİR edilmiştir. Bu azim ve disiplin, birliğe örnek gösterilir.
+          tamamladığınız için tarafınıza TAKDİR takdim edilmiştir. Bu azim ve disiplin, birliğe örnektir.
         </>
       }
     />
