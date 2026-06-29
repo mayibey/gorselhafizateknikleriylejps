@@ -18,6 +18,7 @@ import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { AuthProvider } from '@/lib/auth-context';
+import { getAyar, planla } from '@/lib/bildirim';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
 
@@ -35,6 +36,12 @@ export default function RootLayout() {
 
   useEffect(() => {
     void initDatabase();
+  }, []);
+
+  // Açılışta günlük bildirimleri (ayara göre) yeniden planla — kalıcı hatırlatmalar için.
+  // (Web'de + google-services.json yoksa no-op; bkz. lib/bildirim.ts.)
+  useEffect(() => {
+    void getAyar().then(planla);
   }, []);
 
   // Fontlar yüklenince (ya da yüklenemezse de) splash'i gizle.

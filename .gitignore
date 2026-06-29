@@ -50,3 +50,6 @@ credentials/
 
 # JetBrains IDE ayarları (kişiye/makineye özel — repoya girmez)
 .idea/
+
+# Firebase (FCM) — gizli, her makineye elle eklenir (bkz docs/BILDIRIM_KURULUM.md)
+google-services.json
