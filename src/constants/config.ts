@@ -55,4 +55,6 @@ export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? ''
  * güncellenir + hesap silme eklenir + Data Safety düzeltilir → yeniden incelenir.
  * Anahtarlar `.env`'de hazır bekler; sadece bu bayrak kapalı.
  */
-export const UYELIK_AKTIF = false;
+export const UYELIK_AKTIF = true;
+// ⚠️ YAYIN ÖNCESİ (true ile mağazaya çıkmadan): gizlilik/KVKK metni + uygulama-içi & web
+// "hesabı sil" + Play Data Safety güncellenMELİ (bkz. docs/UYELIK_KURULUM.md + DEGERLENDIRME/08).
