@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 
@@ -25,6 +25,81 @@ import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 
 // Metalik-ish altın gradyan (açık → ana → koyu altın). Play diski + geri besleme diski.
 const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as const;
+
+// ⏳ JSPS SINAV TARİHİ — Karargah en üstteki geri sayım buna göre işler.
+// BAŞKAN: Gerçek sınav tarih/saati belli olunca SADECE bu satırı değiştir.
+// new Date(yıl, AY-1, gün, saat, dakika) — AY 0-tabanlı (8 = Eylül). Şimdilik ~65 gün (placeholder).
+const SINAV_TARIHI = new Date(2026, 8, 2, 10, 0, 0); // 2 Eylül 2026, 10:00
+
+function ikiHane(n: number): string {
+  return String(n).padStart(2, '0');
+}
+
+/** Karargah en üstü: JSPS sınavına canlı geri sayım (gün/saat/dk/sn). Her saniye işler. */
+function SinavGeriSayim() {
+  const [kalanMs, setKalanMs] = useState(() => SINAV_TARIHI.getTime() - Date.now());
+  useEffect(() => {
+    const t = setInterval(() => setKalanMs(SINAV_TARIHI.getTime() - Date.now()), 1000);
+    return () => clearInterval(t);
+  }, []);
+
+  if (kalanMs <= 0) {
+    return (
+      <View style={styles.geriSayim}>
+        <AppText variant="etiket" bold color="altinAcik2" style={styles.geriSayimUst}>
+          JSPS SINAVI
+        </AppText>
+        <AppText variant="altBaslik" bold color="beyaz">
+          Sınav günü geldi 🎖️ Başarılar!
+        </AppText>
+      </View>
+    );
+  }
+
+  const top = Math.floor(kalanMs / 1000);
+  const gun = Math.floor(top / 86400);
+  const saat = Math.floor((top % 86400) / 3600);
+  const dk = Math.floor((top % 3600) / 60);
+  const sn = top % 60;
+
+  return (
+    <View style={styles.geriSayim}>
+      <AppText variant="etiket" bold color="altinAcik2" style={styles.geriSayimUst}>
+        JSPS SINAVINA KALAN
+      </AppText>
+      <View style={styles.geriSayimSatir}>
+        <GsBlok deger={String(gun)} etiket="GÜN" />
+        <GsAyrac />
+        <GsBlok deger={ikiHane(saat)} etiket="SAAT" />
+        <GsAyrac />
+        <GsBlok deger={ikiHane(dk)} etiket="DAKİKA" />
+        <GsAyrac />
+        <GsBlok deger={ikiHane(sn)} etiket="SANİYE" />
+      </View>
+    </View>
+  );
+}
+
+function GsBlok({ deger, etiket }: { deger: string; etiket: string }) {
+  return (
+    <View style={styles.gsBlok}>
+      <AppText variant="dev" bold color="altinAcik2" style={styles.gsSayi}>
+        {deger}
+      </AppText>
+      <AppText variant="etiket" color="kartMetinIkincil" style={styles.gsEtiket}>
+        {etiket}
+      </AppText>
+    </View>
+  );
+}
+
+function GsAyrac() {
+  return (
+    <AppText variant="dev" bold color="kartMetinIkincil" style={styles.gsAyrac}>
+      :
+    </AppText>
+  );
+}
 
 export default function KarargahScreen() {
   const router = useRouter();
@@ -164,6 +239,9 @@ export default function KarargahScreen() {
           </Pressable>
         </View>
       }>
+      {/* EN ÜST — JSPS sınavına canlı geri sayım (tarih SINAV_TARIHI sabitinde). */}
+      <SinavGeriSayim />
+
       {/* Header altı açıklama. (Branş/rütbe artık YALNIZ Evsaf → Ayarlar'dan değişir;
           buradaki rol/kademe dropdown'ları kaldırıldı, yer 7-gün uyarı bandına bırakıldı.) */}
       <View style={styles.selam}>
@@ -442,6 +520,41 @@ const styles = StyleSheet.create({
   },
   selam: {
     gap: Spacing.two,
+  },
+
+  // Sınav geri sayımı (en üst, koyu lacivert şerit + altın rakamlar — komuta-konsolu aksanı)
+  geriSayim: {
+    backgroundColor: Palette.kartYuzeyKoyu,
+    borderRadius: Radius.l,
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
+    paddingVertical: Spacing.three,
+    paddingHorizontal: Spacing.two,
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  geriSayimUst: {
+    letterSpacing: 1.5,
+  },
+  geriSayimSatir: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  gsBlok: {
+    alignItems: 'center',
+    minWidth: 58,
+  },
+  gsSayi: {
+    fontVariant: ['tabular-nums'],
+  },
+  gsEtiket: {
+    letterSpacing: 0.5,
+    marginTop: -2,
+  },
+  gsAyrac: {
+    opacity: 0.5,
+    marginHorizontal: 2,
   },
 
   // Hero
