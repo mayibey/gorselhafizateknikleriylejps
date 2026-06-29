@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -11,7 +11,8 @@ import { useAuth } from '@/lib/auth-context';
 
 export default function GirisScreen() {
   const router = useRouter();
-  const { kullanici, hazir, girisYap, cikis } = useAuth();
+  const { kullanici, hazir, girisYap, cikis, hesabiSil, reaktiveEdildi, reaktivasyonGizle } =
+    useAuth();
   const [mesgul, setMesgul] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
 
@@ -27,6 +28,31 @@ export default function GirisScreen() {
     }
   }
 
+  function hesabiSilOnay() {
+    Alert.alert(
+      'Hesabını sil?',
+      'Hesabın silinmek üzere işaretlenecek. 30 gün içinde tekrar giriş yaparsan otomatik geri ' +
+        'gelir; bu süre dolunca KALICI silinir.\n\nSatın aldığın her şey (premium erişim) kaybolur.',
+      [
+        { text: 'Vazgeç', style: 'cancel' },
+        {
+          text: 'Hesabı Sil',
+          style: 'destructive',
+          onPress: () => {
+            void (async () => {
+              try {
+                await hesabiSil();
+                router.back();
+              } catch (e) {
+                setHata(e instanceof Error ? e.message : 'Hesap silinemedi');
+              }
+            })();
+          },
+        },
+      ],
+    );
+  }
+
   return (
     <Screen title="Giriş" onGeri={() => router.back()}>
       <View style={styles.marka}>
@@ -40,6 +66,18 @@ export default function GirisScreen() {
         </AppText>
       </View>
 
+      {reaktiveEdildi ? (
+        <View style={styles.reaktiveKart}>
+          <MaterialCommunityIcons name="restore" size={22} color={Palette.yesil} />
+          <AppText variant="kucuk" color="anaMetin" style={styles.bilgiMetin}>
+            Hoş geldin! Hesabın silinmek üzereydi — tekrar giriş yaptığın için geri getirildi.
+          </AppText>
+          <Pressable onPress={reaktivasyonGizle} hitSlop={8}>
+            <MaterialCommunityIcons name="close" size={18} color={Palette.solukMetin} />
+          </Pressable>
+        </View>
+      ) : null}
+
       {!hazir ? (
         // Supabase anahtarları girilmemiş → üyelik uykuda (uygulama offline tam çalışır).
         <View style={styles.bilgiKart}>
@@ -49,25 +87,35 @@ export default function GirisScreen() {
           </AppText>
         </View>
       ) : kullanici ? (
-        // Oturum açık → hesap bilgisi + çıkış.
-        <View style={styles.hesapKart}>
-          <MaterialCommunityIcons name="check-circle" size={22} color={Palette.yesil} />
-          <View style={styles.hesapMetin}>
-            <AppText variant="kucuk" color="solukMetin">
-              Giriş yapıldı
-            </AppText>
-            <AppText variant="govde" bold numberOfLines={1}>
-              {kullanici.email ?? 'Gmail hesabı'}
-            </AppText>
+        // Oturum açık → hesap bilgisi + çıkış + hesabı sil.
+        <>
+          <View style={styles.hesapKart}>
+            <MaterialCommunityIcons name="check-circle" size={22} color={Palette.yesil} />
+            <View style={styles.hesapMetin}>
+              <AppText variant="kucuk" color="solukMetin">
+                Giriş yapıldı
+              </AppText>
+              <AppText variant="govde" bold numberOfLines={1}>
+                {kullanici.email ?? 'Gmail hesabı'}
+              </AppText>
+            </View>
+            <Pressable
+              style={({ pressed }) => [styles.cikisBtn, pressed && styles.pressed]}
+              onPress={() => void cikis()}>
+              <AppText variant="kucuk" color="kirmizi" bold>
+                Çıkış
+              </AppText>
+            </Pressable>
           </View>
           <Pressable
-            style={({ pressed }) => [styles.cikisBtn, pressed && styles.pressed]}
-            onPress={() => void cikis()}>
+            style={({ pressed }) => [styles.hesapSilBtn, pressed && styles.pressed]}
+            onPress={hesabiSilOnay}>
+            <MaterialCommunityIcons name="account-remove-outline" size={18} color={Palette.kirmizi} />
             <AppText variant="kucuk" color="kirmizi" bold>
-              Çıkış
+              Hesabı Sil
             </AppText>
           </Pressable>
-        </View>
+        </>
       ) : (
         // Oturum yok → Gmail ile giriş.
         <>
@@ -148,6 +196,23 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.m,
     padding: Spacing.three,
+  },
+  reaktiveKart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: 'rgba(46,125,50,0.08)',
+    borderColor: Palette.yesil,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+  },
+  hesapSilBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    paddingVertical: Spacing.two,
   },
   bilgiMetin: {
     flex: 1,

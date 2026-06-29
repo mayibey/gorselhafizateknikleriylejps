@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### 📋 BACKLOG (planlandı, sırası gelince)
+> - **İlk-açılış TUTORIAL (interaktif tanıtım turu):** Kullanıcı uygulamaya ilk girince ne nerede / nasıl kullanılır gösteren coach-mark / adım adım tur (Karargah, Mevzuat, patika, kart akışı, Tatbikat, Evsaf). [Başkan isteği 29 Haz.] Önerilen zaman: v2 üyelik temeli oturunca, **yayın öncesi UX paketi** içinde (onboarding tanıtım kartının DEVAMI — o statikti, bu interaktif). Not: `react-native` coach-mark / overlay; tab'lara highlight + balon ipucu; "Geç" + "Bir daha gösterme" (AsyncStorage bayrağı).
+>
+> ### ▶ 29 Haz — v2 BÜYÜK İŞ başladı: Üyelik (Google giriş AKTİF) + Hesap silme (30g soft delete)
+> **Google ile giriş AKTİF** (`UYELIK_AKTIF=true`; Supabase vwmjr + Google OAuth web client + .env hazırdı; Expo Go'da uçtan uca çalıştı, e-posta görünüyor). **Hesap silme = 30 günlük YUMUŞAK silme** (başkan kararı, [[hesap-silme-30gun-soft-delete]]): `docs/v2/01_profiles_soft_delete.sql` (profiles tablo + RLS + signup trigger + `silme_talep_tarihi` + geriye dönük satır; pg_cron kalıcı-silme commented=sonraki). `auth.ts`: silmeTalepTarihiGetir/hesapSilmeTalebiKur/hesapGeriGetir. `auth-context`: girişte silme talebi varsa OTOMATİK reaktivasyon (`reaktiveEdildi`) + `hesabiSil`. `giris.tsx`: "Hesabı Sil" (Alert uyarı: 30g + satın almalar gider) + reaktivasyon bildirimi. tsc 0. **Kullanıcı ADIMI: `docs/v2/01_..sql`'i Supabase SQL Editor'da çalıştır.** Sıra: KVKK metni → bulut senkron → e-posta/şifre → Apple → içerik→sunucu → ödeme → gating → anti-piracy.
+>
 > ### ▶ 29 Haz — Orta iş: Aktif hatırlama (kart akışı sonu mini-quiz) [P1-a]
 > Testing-effect: kart akışı ÖĞRENME modunda (kanun/bölüm) bitince, o kanunun sorularından **2-3 rastgele "Hatırlama" sorusu** çıkar, sonra mevcut "tamamladın" + sınav CTA. Zayıf modunda YOK. Yeni `components/card-flow/hatirla-quiz.tsx` (krem temalı — akış durumKolon'u krem; soru+şık+açıklama, salt self-test, puan cezası yok). `akis.tsx`: `ogrenmeModu` + `hatirlaSorular`/`hatirlaBitti` state + yükleme effect (`getSinavSorulari`, soru yoksa atla) + `bitti && hatirlaGoster` render dalı + loader reset. Yeni DB fonksiyonu yok → parite korunur. tsc 0.
 >

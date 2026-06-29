@@ -98,3 +98,44 @@ export async function cikisYap(): Promise<void> {
   if (!supabaseHazir || !supabase) return;
   await supabase.auth.signOut();
 }
+
+// --- Hesap silme: 30 günlük YUMUŞAK silme (soft delete) + reaktivasyon ---
+// profiles.silme_talep_tarihi: null=aktif, dolu=30g sonra kalıcı silinecek.
+// Tekrar giriş yapınca otomatik geri getirilir (auth-context). Kalıcı silme = pg_cron.
+
+/** Profilden silme talep tarihini getirir (yoksa/tablo yoksa/hata → null; güvenli). */
+export async function silmeTalepTarihiGetir(): Promise<string | null> {
+  if (!supabaseHazir || !supabase) return null;
+  try {
+    const { data } = await supabase.from('profiles').select('silme_talep_tarihi').single();
+    return (data?.silme_talep_tarihi as string | null) ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** Hesabı silmek üzere İŞARETLER (30 gün sonra kalıcı; o güne dek girişle geri gelir). */
+export async function hesapSilmeTalebiKur(): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { data: u } = await supabase.auth.getUser();
+  const id = u.user?.id;
+  if (!id) throw new Error('Oturum bulunamadı.');
+  const { error } = await supabase
+    .from('profiles')
+    .update({ silme_talep_tarihi: new Date().toISOString() })
+    .eq('id', id);
+  if (error) throw error;
+}
+
+/** Silme talebini İPTAL eder (hesabı geri getirir). Güvenli no-op'lu. */
+export async function hesapGeriGetir(): Promise<void> {
+  if (!supabaseHazir || !supabase) return;
+  try {
+    const { data: u } = await supabase.auth.getUser();
+    const id = u.user?.id;
+    if (!id) return;
+    await supabase.from('profiles').update({ silme_talep_tarihi: null }).eq('id', id);
+  } catch {
+    // sessiz geç (tablo henüz yoksa reaktivasyon atlanır)
+  }
+}
