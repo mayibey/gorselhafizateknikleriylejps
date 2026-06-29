@@ -93,6 +93,39 @@ export async function gmailIleGiris(): Promise<void> {
   }
 }
 
+// --- E-posta/şifre ile giriş (Google'a alternatif) ---
+
+/** E-posta + şifre ile giriş. */
+export async function epostaGiris(eposta: string, sifre: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.signInWithPassword({ email: eposta.trim(), password: sifre });
+  if (error) throw error;
+}
+
+/**
+ * E-posta + şifre ile KAYIT. Supabase doğrulama e-postası gönderir (varsayılan SMTP üretimde
+ * sınırlı → yayında özel SMTP). `dogrulamaGerek=true` ise kullanıcı e-postasını onaylamalı.
+ */
+export async function epostaKayit(
+  eposta: string,
+  sifre: string,
+): Promise<{ dogrulamaGerek: boolean }> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { data, error } = await supabase.auth.signUp({ email: eposta.trim(), password: sifre });
+  if (error) throw error;
+  // Oturum yoksa e-posta doğrulaması bekleniyor demektir.
+  return { dogrulamaGerek: !data.session };
+}
+
+/** Şifre sıfırlama e-postası gönderir. */
+export async function sifreSifirla(eposta: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.resetPasswordForEmail(eposta.trim(), {
+    redirectTo: makeRedirectUri({ scheme: 'mevzu' }),
+  });
+  if (error) throw error;
+}
+
 /** Oturumu kapatır. Yapılandırılmamışsa no-op. */
 export async function cikisYap(): Promise<void> {
   if (!supabaseHazir || !supabase) return;

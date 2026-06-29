@@ -1,10 +1,11 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { BransSecici } from '@/components/brans-secici';
+import { GirisFormu } from '@/components/giris-formu';
 import { RutbeSecici } from '@/components/rutbe-secici';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
@@ -21,7 +22,7 @@ export default function OnboardingScreen() {
   const router = useRouter();
   const { brans, setBrans } = useBrans();
   const { rutbe, setRutbe } = useRutbe();
-  const { kullanici, hazir, girisYap } = useAuth();
+  const { kullanici, hazir } = useAuth();
   const [tanitimGecildi, setTanitimGecildi] = useState(false);
   // Giriş ZORUNLU (Supabase yapılandırıldıysa). hazir=false ise gate kapalı (girişsiz akış).
   const girisGerek = hazir && !kullanici;
@@ -33,7 +34,7 @@ export default function OnboardingScreen() {
 
   // Adım 0.5: ZORUNLU giriş (devam etmek için).
   if (girisGerek) {
-    return <GirisAdim girisYap={girisYap} />;
+    return <GirisAdim />;
   }
 
   // Adım 1: branş.
@@ -118,23 +119,8 @@ function Tanitim({ onBasla }: { onBasla: () => void }) {
   );
 }
 
-/** ZORUNLU giriş adımı — devam etmek için Gmail ile giriş. (Atlama yok.) */
-function GirisAdim({ girisYap }: { girisYap: () => Promise<void> }) {
-  const [mesgul, setMesgul] = useState(false);
-  const [hata, setHata] = useState<string | null>(null);
-
-  async function giris() {
-    setHata(null);
-    setMesgul(true);
-    try {
-      await girisYap();
-    } catch (e) {
-      setHata(e instanceof Error ? e.message : 'Giriş yapılamadı');
-    } finally {
-      setMesgul(false);
-    }
-  }
-
+/** ZORUNLU giriş adımı — devam etmek için giriş (Google + e-posta/şifre). (Atlama yok.) */
+function GirisAdim() {
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
       <ScrollView contentContainerStyle={styles.icerik}>
@@ -149,30 +135,10 @@ function GirisAdim({ girisYap }: { girisYap: () => Promise<void> }) {
           </AppText>
         </View>
 
-        <Pressable
-          disabled={mesgul}
-          style={({ pressed }) => [styles.googleBtn, pressed && styles.pressed, mesgul && styles.pasif]}
-          onPress={() => void giris()}>
-          {mesgul ? (
-            <ActivityIndicator color={Palette.lacivert} />
-          ) : (
-            <>
-              <MaterialCommunityIcons name="google" size={22} color={Palette.lacivert} />
-              <AppText variant="govde" bold color="lacivert">
-                Gmail ile giriş yap
-              </AppText>
-            </>
-          )}
-        </Pressable>
-
-        {hata ? (
-          <AppText variant="kucuk" color="kirmizi" bold style={styles.hataMetin}>
-            {__DEV__ ? `Hata: ${hata}` : 'Giriş yapılamadı, tekrar dene.'}
-          </AppText>
-        ) : null}
+        <GirisFormu />
 
         <AppText variant="etiket" color="solukMetin" style={styles.hataMetin}>
-          Giriş yaparak Gizlilik Politikası ve Kullanım Şartları'nı kabul etmiş olursun.
+          Giriş/kayıt yaparak Gizlilik Politikası ve Kullanım Şartları'nı kabul etmiş olursun.
         </AppText>
 
         {__DEV__ ? (
