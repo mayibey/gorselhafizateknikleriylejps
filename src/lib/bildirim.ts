@@ -23,8 +23,12 @@ export type BildirimAyar = {
   aktif: boolean;
   /** Sabah İçtiması saati (0-23). */
   sabahSaat: number;
+  /** Sabah İçtiması dakikası (0-59). */
+  sabahDakika: number;
   /** Gece Eğitimi saati (0-23). */
   geceSaat: number;
+  /** Gece Eğitimi dakikası (0-59). */
+  geceDakika: number;
   /** Fırsat Eğitimi (gün içi rastgele) açık mı. */
   firsatAktif: boolean;
   /** Oturum başına hedef kart sayısı (günlük kuyruğu sınırlar). */
@@ -34,7 +38,9 @@ export type BildirimAyar = {
 export const VARSAYILAN_AYAR: BildirimAyar = {
   aktif: true, // bildirim varsayılan AÇIK (kullanıcı Eğitim Planı'ndan kapatabilir)
   sabahSaat: 8,
+  sabahDakika: 0,
   geceSaat: 21,
+  geceDakika: 0,
   firsatAktif: true,
   gunlukKart: 15,
 };
@@ -124,8 +130,8 @@ export async function planla(ayar: BildirimAyar): Promise<PlanSonuc> {
       });
     }
 
-    await gunlukKur(ayar.sabahSaat, 0, SABAH);
-    await gunlukKur(ayar.geceSaat, 0, GECE);
+    await gunlukKur(ayar.sabahSaat, ayar.sabahDakika, SABAH);
+    await gunlukKur(ayar.geceSaat, ayar.geceDakika, GECE);
 
     if (ayar.firsatAktif) {
       // Sabah+1 ile Gece-1 arası rastgele bir saat; her planlamada tazelenir.
@@ -134,6 +140,30 @@ export async function planla(ayar: BildirimAyar): Promise<PlanSonuc> {
       const saat = ust > alt ? alt + Math.floor(Math.random() * (ust - alt)) : alt;
       await gunlukKur(saat, 30, FIRSAT);
     }
+    return 'ok';
+  } catch {
+    return 'hata';
+  }
+}
+
+/**
+ * TEST: 5 saniye sonra bir bildirim düşürür → kurulumun çalıştığını anında doğrulamak için.
+ * (Eğitim Planı'ndaki "Test bildirimi" butonu çağırır.)
+ */
+export async function testBildirimi(): Promise<PlanSonuc> {
+  if (WEB) return 'web';
+  try {
+    if (!(await izinIste())) return 'izin-yok';
+    if (Platform.OS === 'android') {
+      await Notifications.setNotificationChannelAsync('gunluk', {
+        name: 'Günlük Hatırlatmalar',
+        importance: Notifications.AndroidImportance.DEFAULT,
+      });
+    }
+    await Notifications.scheduleNotificationAsync({
+      content: { title: 'Test bildirimi 🎖️', body: 'Bildirimler çalışıyor — içtimalar zamanında düşecek.' },
+      trigger: { type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL, seconds: 5, repeats: false },
+    });
     return 'ok';
   } catch {
     return 'hata';

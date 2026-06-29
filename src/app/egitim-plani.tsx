@@ -7,9 +7,10 @@ import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { type BildirimAyar, getAyar, planla, setAyar } from '@/lib/bildirim';
+import { type BildirimAyar, getAyar, planla, setAyar, testBildirimi } from '@/lib/bildirim';
 
-const ikiHane = (n: number) => `${n.toString().padStart(2, '0')}:00`;
+const pad = (n: number) => n.toString().padStart(2, '0');
+const ssMM = (saat: number, dakika: number) => `${pad(saat)}:${pad(dakika)}`;
 
 export default function EgitimPlaniScreen() {
   const router = useRouter();
@@ -43,6 +44,20 @@ export default function EgitimPlaniScreen() {
           : sonuc === 'web'
             ? 'Ayar kaydedildi. Bildirimler yalnız telefonda (development build) çalışır.'
             : 'Planlama yapılamadı, tekrar dene.',
+    );
+  }
+
+  async function testEt() {
+    setDurum(null);
+    const sonuc = await testBildirimi();
+    setDurum(
+      sonuc === 'ok'
+        ? 'Test bildirimi ~5 saniye içinde düşecek 🔔 (uygulamayı arkaya alıp bekleyebilirsin).'
+        : sonuc === 'izin-yok'
+          ? 'Bildirim izni verilmedi — izin verince tekrar dene.'
+          : sonuc === 'web'
+            ? 'Test yalnız telefonda (Expo Go / build) çalışır.'
+            : 'Test başarısız, tekrar dene.',
     );
   }
 
@@ -80,14 +95,16 @@ export default function EgitimPlaniScreen() {
           ikon="weather-sunset-up"
           ad="Sabah İçtiması"
           saat={ayar.sabahSaat}
-          onDegis={(s) => guncelle({ sabahSaat: s })}
+          dakika={ayar.sabahDakika}
+          onDegis={(s, d) => guncelle({ sabahSaat: s, sabahDakika: d })}
         />
         <View style={styles.ayrac} />
         <SaatSatir
           ikon="weather-night"
           ad="Gece Eğitimi"
           saat={ayar.geceSaat}
-          onDegis={(s) => guncelle({ geceSaat: s })}
+          dakika={ayar.geceDakika}
+          onDegis={(s, d) => guncelle({ geceSaat: s, geceDakika: d })}
         />
         <View style={styles.ayrac} />
         <View style={styles.satir}>
@@ -99,7 +116,7 @@ export default function EgitimPlaniScreen() {
               </AppText>
             </View>
             <AppText variant="etiket" color="solukMetin">
-              Gün içinde rastgele bir saatte (11:00–18:00).
+              Sabah ve gece arasında rastgele bir saatte (sürpriz hatırlatma).
             </AppText>
           </View>
           <Switch
@@ -144,6 +161,15 @@ export default function EgitimPlaniScreen() {
           {kaydediyor ? 'Planlanıyor…' : 'Kaydet & Planla'}
         </AppText>
       </Pressable>
+
+      <Pressable
+        style={({ pressed }) => [styles.testBtn, pressed && styles.pressed]}
+        onPress={() => void testEt()}>
+        <MaterialCommunityIcons name="bell-ring-outline" size={18} color={Palette.lacivert} />
+        <AppText variant="kucuk" color="lacivert" bold>
+          Test bildirimi gönder (5 sn)
+        </AppText>
+      </Pressable>
     </Screen>
   );
 }
@@ -152,29 +178,50 @@ function SaatSatir({
   ikon,
   ad,
   saat,
+  dakika,
   onDegis,
 }: {
   ikon: keyof typeof MaterialCommunityIcons.glyphMap;
   ad: string;
   saat: number;
-  onDegis: (s: number) => void;
+  dakika: number;
+  onDegis: (saat: number, dakika: number) => void;
 }) {
   return (
-    <View style={styles.satir}>
-      <View style={styles.satirMetin}>
-        <View style={styles.adSatir}>
-          <MaterialCommunityIcons name={ikon} size={20} color={Palette.lacivert} />
-          <AppText variant="govde" bold>
-            {ad}
+    <View style={styles.saatSatir}>
+      <View style={styles.adSatir}>
+        <MaterialCommunityIcons name={ikon} size={20} color={Palette.lacivert} />
+        <AppText variant="govde" bold>
+          {ad}
+        </AppText>
+        <AppText variant="govde" bold color="altinKoyu" style={styles.saatBuyuk}>
+          {ssMM(saat, dakika)}
+        </AppText>
+      </View>
+      <View style={styles.saatKontrol}>
+        <View style={styles.saatGrup}>
+          <Stepper
+            deger={saat}
+            etiket={pad(saat)}
+            onAzalt={() => onDegis((saat + 23) % 24, dakika)}
+            onArtir={() => onDegis((saat + 1) % 24, dakika)}
+          />
+          <AppText variant="etiket" color="solukMetin">
+            saat
+          </AppText>
+        </View>
+        <View style={styles.saatGrup}>
+          <Stepper
+            deger={dakika}
+            etiket={pad(dakika)}
+            onAzalt={() => onDegis(saat, (dakika + 55) % 60)}
+            onArtir={() => onDegis(saat, (dakika + 5) % 60)}
+          />
+          <AppText variant="etiket" color="solukMetin">
+            dakika (5'er)
           </AppText>
         </View>
       </View>
-      <Stepper
-        deger={saat}
-        etiket={ikiHane(saat)}
-        onAzalt={() => onDegis((saat + 23) % 24)}
-        onArtir={() => onDegis((saat + 1) % 24)}
-      />
     </View>
   );
 }
@@ -227,6 +274,32 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
+  },
+  saatSatir: {
+    gap: Spacing.two,
+  },
+  saatBuyuk: {
+    marginLeft: 'auto', // ad solda, büyük saat sağda
+  },
+  saatKontrol: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: Spacing.four,
+  },
+  saatGrup: {
+    alignItems: 'center',
+    gap: Spacing.half,
+  },
+  testBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    borderWidth: 1.5,
+    borderColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.two,
+    marginTop: Spacing.two,
   },
   ayrac: {
     height: 1,
