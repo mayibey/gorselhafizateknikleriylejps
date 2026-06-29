@@ -21,6 +21,11 @@ function tarihFmt(iso: string): string {
   return y && a && g ? `${g}.${a}.${y}` : iso;
 }
 
+// Türkçe-uyumlu büyük harf: i→İ, ı→I (JS toUpperCase 'i'→'I' yapıp "TAKDIR" üretiyordu).
+function trUpper(s: string): string {
+  return s.replace(/ı/g, 'I').replace(/i/g, 'İ').toUpperCase();
+}
+
 /** Ortak belge çerçevesi (antet + ikon + başlık + gövde + imza). */
 function BelgeCerceve({
   ikon,
@@ -50,7 +55,7 @@ function BelgeCerceve({
           MEVZU JSPS BİRLİĞİ
         </AppText>
         <AppText variant="baslik" bold color={baslikRenk} style={styles.baslik}>
-          {baslik.toUpperCase()}
+          {trUpper(baslik)}
         </AppText>
         <View style={[styles.ayrac, { backgroundColor: vurguHex }]} />
         <AppText variant="govde" color="anaMetin" style={styles.govde}>

@@ -85,13 +85,18 @@ const ODUL_BILGI: Record<OdulDerece, { baslik: string; govde: (sebep: string) =>
 const ANTET = 'MEVZU JSPS BİRLİĞİ';
 const IMZA = '— Mevzu JSPS Birliği';
 
+// Türkçe-uyumlu büyük harf: i→İ, ı→I (JS toUpperCase 'i'→'I' yapıp "TAKDIR" üretiyordu).
+function trUpper(s: string): string {
+  return s.replace(/ı/g, 'I').replace(/i/g, 'İ').toUpperCase();
+}
+
 function cezaKaydi(derece: CezaDerece, tarih: string): YeniSicilKaydi {
   const b = CEZA_BILGI[derece];
   return {
     tip: 'ceza',
     derece,
     baslik: b.baslik,
-    metin: `${ANTET} — ${b.baslik.toUpperCase()}\n\n${b.govde}\n\n${IMZA}`,
+    metin: `${ANTET} — ${trUpper(b.baslik)}\n\n${b.govde}\n\n${IMZA}`,
     sebep: 'Geri besleme eğitimine süresinde icabet etmediniz',
     anahtar: null,
     tarih,
@@ -104,7 +109,7 @@ function odulKaydi(derece: OdulDerece, sebep: string, anahtar: string, tarih: st
     tip: 'odul',
     derece,
     baslik: b.baslik,
-    metin: `${ANTET} — ${b.baslik.toUpperCase()}\n\n${b.govde(sebep)}\n\n${IMZA}`,
+    metin: `${ANTET} — ${trUpper(b.baslik)}\n\n${b.govde(sebep)}\n\n${IMZA}`,
     sebep,
     anahtar,
     tarih,
