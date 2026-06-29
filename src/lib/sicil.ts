@@ -8,7 +8,7 @@
  *   Yazılı İkaz → Uyarı → Kınama → Aylıktan Kesme.
  *
  * ÖDÜL — başarı merdiveni:
- *   Kanun bitince (tüm kartları öğrenildi) → Takdir. TAKDIR_PER_BASARI takdir → Başarı Belgesi.
+ *   Kanunun deneme sınavı %100 geçilince → Takdir. TAKDIR_PER_BASARI takdir → Başarı Belgesi.
  *   BASARI_PER_USTUN başarı → Üstün Başarı Belgesi.
  */
 
@@ -65,7 +65,7 @@ const ODUL_BILGI: Record<OdulDerece, { baslik: string; govde: (sebep: string) =>
   takdir: {
     baslik: 'Takdir',
     govde: (s) =>
-      `${s} mevzuatını üstün gayretle tamamlayan personel TAKDİR edilmiştir. ` +
+      `${s} deneme sınavını %100 doğrulukla geçen personel TAKDİR edilmiştir. ` +
       'Bu azim ve disiplin, birliğe örnek gösterilir.',
   },
   basari: {

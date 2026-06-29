@@ -5,10 +5,12 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
+import { TakdirBelgesi } from '@/components/sicil/takdir-belgesi';
 import { EmptyState } from '@/components/ui/empty-state';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { ekleSinavSonucu, getCardsByLaw, kaydetPerformans } from '@/db/database';
 import type { QueueCard } from '@/lib/queue';
+import { degerlendirSicil } from '@/lib/sicil-servis';
 import {
   eslesenKartIdleri,
   getSinavSorulari,
@@ -35,6 +37,7 @@ export default function SinavScreen() {
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
   const lawIdNum = lawId != null && lawId !== '' ? Number(lawId) : null;
   const [sorular, setSorular] = useState<KartSoru[] | null>(null);
+  const [lawAd, setLawAd] = useState<string | null>(null);
   const [hata, setHata] = useState(false);
   const [bos, setBos] = useState(false);
   const [index, setIndex] = useState(0);
@@ -64,10 +67,13 @@ export default function SinavScreen() {
       return;
     }
     setSorular(liste);
+    setLawAd(null);
     // Zayıf havuz eşleştirmesi için kanunun kartlarını önden yükle (ateşle-unut).
+    // Kart law_ad taşır → Takdir Belgesi için kanun adını buradan al.
     void getCardsByLaw(lawIdNum)
       .then((c) => {
         kartlarRef.current = c;
+        if (c[0]?.law_ad) setLawAd(c[0].law_ad);
       })
       .catch(() => {});
   }, [lawIdNum]);
@@ -113,11 +119,19 @@ export default function SinavScreen() {
   const soru = aktif ? sorular[index] : null;
 
   // Sınav bitince skoru BİR KEZ kalıcı kaydet (kaydedildiRef guard; yukle'de sıfırlanır).
+  // %100 ise: kayıttan SONRA sicil değerlendir → Takdir Belgesi kaydı düşer (idempotent).
   useEffect(() => {
     if (!bitti || !sorular || lawIdNum == null || kaydedildiRef.current) return;
     kaydedildiRef.current = true;
     const { dogru, toplam } = puanlaSinav(cevaplar, sorular);
-    void ekleSinavSonucu(lawIdNum, dogru, toplam, bugunISO()).catch(() => {});
+    void (async () => {
+      try {
+        await ekleSinavSonucu(lawIdNum, dogru, toplam, bugunISO());
+        if (toplam > 0 && dogru === toplam) await degerlendirSicil();
+      } catch {
+        // sessiz geç (skor/ödül kaydı başarısızsa sonuç ekranı yine görünsün)
+      }
+    })();
   }, [bitti, sorular, cevaplar, lawIdNum]);
 
   return (
@@ -158,6 +172,7 @@ export default function SinavScreen() {
         <Sonuc
           cevaplar={cevaplar}
           sorular={sorular}
+          lawAd={lawAd}
           onTekrar={yukle}
           onBitir={() => router.back()}
         />
@@ -287,15 +302,46 @@ function Secenek({
 function Sonuc({
   cevaplar,
   sorular,
+  lawAd,
   onTekrar,
   onBitir,
 }: {
   cevaplar: SinavCevap[];
   sorular: KartSoru[];
+  lawAd: string | null;
   onTekrar: () => void;
   onBitir: () => void;
 }) {
   const { dogru, toplam, yuzde } = puanlaSinav(cevaplar, sorular);
+
+  // %100 → TAKDİR BELGESİ (görsel sertifika); kayıt zaten sicil'e işlendi.
+  if (yuzde === 100) {
+    return (
+      <ScrollView style={styles.kolon} contentContainerStyle={styles.sonucContent}>
+        <AppText variant="altBaslik" bold color="altinKoyu" style={styles.tamIsabet}>
+          🎖️ Tam isabet — {dogru}/{toplam}
+        </AppText>
+        <TakdirBelgesi kanunAd={lawAd ?? 'Bu kanun'} tarih={bugunISO()} />
+        <View style={styles.sonucButonlar}>
+          <Pressable
+            style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]}
+            onPress={onTekrar}>
+            <AppText variant="govde" bold color="lacivert">
+              Tekrar çöz
+            </AppText>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [styles.sonucBtn, pressed && styles.pressed]}
+            onPress={onBitir}>
+            <AppText variant="govde" bold color="beyaz">
+              Bitir
+            </AppText>
+          </Pressable>
+        </View>
+      </ScrollView>
+    );
+  }
+
   const basarili = yuzde >= 70;
   return (
     <View style={styles.kolon}>
@@ -416,5 +462,32 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.85,
+  },
+  // %100 Takdir Belgesi sonuç ekranı
+  sonucContent: {
+    padding: Spacing.three,
+    gap: Spacing.three,
+  },
+  tamIsabet: {
+    textAlign: 'center',
+  },
+  sonucButonlar: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+  },
+  sonucBtn: {
+    flex: 1,
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    alignItems: 'center',
+  },
+  sonucBtnIkincil: {
+    flex: 1,
+    borderColor: Palette.lacivert,
+    borderWidth: 1.5,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    alignItems: 'center',
   },
 });
