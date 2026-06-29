@@ -14,6 +14,7 @@ import {
   gmailIleGiris,
   hesapGeriGetir,
   hesapSilmeTalebiKur,
+  profilGetir,
   silmeTalepTarihiGetir,
 } from '@/lib/auth';
 import { senkronKaydet, senkronYukle } from '@/lib/senkron';
@@ -30,6 +31,8 @@ type AuthContextDeger = {
   hesabiSil: () => Promise<void>; // 30 günlük silme talebi + çıkış
   reaktiveEdildi: boolean; // bu girişte silinmek üzere olan hesap geri getirildi mi
   reaktivasyonGizle: () => void;
+  profilTamam: boolean | null; // ad/soyad/telefon dolu mu (null = henüz bilinmiyor)
+  profilYenile: () => Promise<void>; // profil kaydedilince çağır → gate güncellensin
 };
 
 const AuthCtx = createContext<AuthContextDeger | null>(null);
@@ -38,6 +41,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [kullanici, setKullanici] = useState<Kullanici | null>(null);
   const [yukleniyor, setYukleniyor] = useState(true);
   const [reaktiveEdildi, setReaktiveEdildi] = useState(false);
+  const [profilTamam, setProfilTamam] = useState<boolean | null>(null);
+
+  async function profilYenile(): Promise<void> {
+    const p = await profilGetir();
+    setProfilTamam(!!(p?.ad && p?.soyad && p?.telefon));
+  }
 
   useEffect(() => {
     if (!supabaseHazir || !supabase) {
@@ -45,7 +54,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return;
     }
     const sb = supabase;
-    // Girişten sonra: (1) silme talebi varsa REAKTİVASYON, (2) bulut ilerlemeyi çek (senkron).
+    // Girişten sonra: (1) silme talebi → REAKTİVASYON, (2) bulut senkron, (3) profil tamlığı.
     async function girisSonrasi() {
       const talep = await silmeTalepTarihiGetir();
       if (talep) {
@@ -53,6 +62,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setReaktiveEdildi(true);
       }
       await senkronYukle();
+      const p = await profilGetir();
+      setProfilTamam(!!(p?.ad && p?.soyad && p?.telefon));
     }
     // İlk oturumu oku.
     void sb.auth.getSession().then(async ({ data }) => {
@@ -79,12 +90,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await senkronKaydet(); // çıkmadan önce son ilerlemeyi buluta yaz
     await cikisYap();
     setKullanici(null);
+    setProfilTamam(null);
   }
 
   async function hesabiSil(): Promise<void> {
     await hesapSilmeTalebiKur(); // 30 günlük silme işareti
     await cikisYap();
     setKullanici(null);
+    setProfilTamam(null);
   }
 
   return (
@@ -98,6 +111,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         hesabiSil,
         reaktiveEdildi,
         reaktivasyonGizle: () => setReaktiveEdildi(false),
+        profilTamam,
+        profilYenile,
       }}>
       {children}
     </AuthCtx.Provider>

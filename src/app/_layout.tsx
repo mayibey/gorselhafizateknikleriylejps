@@ -83,7 +83,7 @@ export default function RootLayout() {
 function RootNavigator() {
   const { brans, yukleniyor: bransYukleniyor } = useBrans();
   const { rutbe, yukleniyor: rutbeYukleniyor } = useRutbe();
-  const { kullanici, hazir, yukleniyor: authYukleniyor } = useAuth();
+  const { kullanici, hazir, yukleniyor: authYukleniyor, profilTamam } = useAuth();
   const segments = useSegments();
   const router = useRouter();
 
@@ -91,17 +91,19 @@ function RootNavigator() {
   // Giriş ZORUNLU: Supabase yapılandırıldıysa (hazir) ve oturum yoksa giriş ister.
   // (hazir=false ise — anahtar yok — gate kapanır, uygulama girişsiz çalışır: güvenli fallback.)
   const girisGerek = hazir && !kullanici;
-  // Onboarding: ZORUNLU giriş + branş + rütbe. Üçü de tamamsa içeri al.
-  const eksik = girisGerek || !brans || !rutbe;
+  // Giriş var ama profil tamlığı henüz bilinmiyor → bekle (yanlış yönlendirme olmasın).
+  const profilBekle = !!kullanici && profilTamam === null;
+  // Onboarding: ZORUNLU giriş + profil (ad/soyad/telefon) + branş + rütbe.
+  const eksik = girisGerek || profilTamam === false || !brans || !rutbe;
 
-  // Guard: giriş yoksa veya branş/rütbe yoksa onboarding'e götür.
+  // Guard: giriş/profil/branş/rütbe eksikse onboarding'e götür.
   useEffect(() => {
-    if (yukleniyor) return;
+    if (yukleniyor || profilBekle) return;
     if (segments[0] === 'sifre-yenile') return; // şifre kurtarma akışı kendi oturumunu kurar
     const onboardingDe = segments[0] === 'onboarding';
     if (eksik && !onboardingDe) router.replace('/onboarding');
     else if (!eksik && onboardingDe) router.replace('/');
-  }, [eksik, yukleniyor, segments, router]);
+  }, [eksik, yukleniyor, profilBekle, segments, router]);
 
   // (Bildirim dinleyicisi v1'de kaldırıldı — expo-notifications çıkarıldı.)
 

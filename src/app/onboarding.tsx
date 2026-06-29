@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -9,7 +9,7 @@ import { GirisFormu } from '@/components/giris-formu';
 import { RutbeSecici } from '@/components/rutbe-secici';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { girisDonusAdresi, type Profil, profilGetir, profilKaydet } from '@/lib/auth';
+import { girisDonusAdresi, type Profil, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
 import { adHatasi, telefonHatasi } from '@/lib/dogrulama';
@@ -23,23 +23,10 @@ export default function OnboardingScreen() {
   const router = useRouter();
   const { brans, setBrans } = useBrans();
   const { rutbe, setRutbe } = useRutbe();
-  const { kullanici, hazir } = useAuth();
+  const { kullanici, hazir, profilTamam, profilYenile } = useAuth();
   const [tanitimGecildi, setTanitimGecildi] = useState(false);
-  const [profil, setProfil] = useState<Profil | null | undefined>(undefined); // undefined = çekilmedi
   // Giriş ZORUNLU (Supabase yapılandırıldıysa). hazir=false ise gate kapalı (girişsiz akış).
   const girisGerek = hazir && !kullanici;
-
-  // Giriş yapınca profili çek (ad/soyad/telefon tam mı kontrolü için).
-  useEffect(() => {
-    if (!kullanici) {
-      setProfil(undefined);
-      return;
-    }
-    void profilGetir().then(setProfil);
-  }, [kullanici]);
-
-  const profilEksik =
-    !!kullanici && profil !== undefined && (!profil?.ad || !profil?.soyad || !profil?.telefon);
 
   // Adım 0: tanıtım (yeni kullanıcı — hiç branş/rütbe yok — en başta, giriş öncesi).
   if (!brans && !rutbe && !tanitimGecildi) {
@@ -51,8 +38,8 @@ export default function OnboardingScreen() {
     return <GirisAdim />;
   }
 
-  // Profil henüz çekiliyor → kısa bekleme (yanlışlıkla profil adımı parlamasın).
-  if (kullanici && profil === undefined) {
+  // Profil tamlığı henüz bilinmiyor (auth-context çekiyor) → kısa bekleme.
+  if (kullanici && profilTamam === null) {
     return (
       <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
         <View style={[styles.icerik, styles.merkezde]}>
@@ -62,9 +49,9 @@ export default function OnboardingScreen() {
     );
   }
 
-  // Adım 0.7: PROFİL bilgileri (ad/soyad/telefon eksikse).
-  if (profilEksik) {
-    return <ProfilAdim mevcut={profil ?? null} onTamam={() => void profilGetir().then(setProfil)} />;
+  // Adım 0.7: PROFİL bilgileri (ad/soyad/telefon eksikse — zorunlu).
+  if (profilTamam === false) {
+    return <ProfilAdim mevcut={null} onTamam={() => void profilYenile()} />;
   }
 
   // Adım 1: branş.
