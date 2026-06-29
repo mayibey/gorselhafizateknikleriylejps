@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { BransSecici } from '@/components/brans-secici';
@@ -9,9 +9,10 @@ import { GirisFormu } from '@/components/giris-formu';
 import { RutbeSecici } from '@/components/rutbe-secici';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { girisDonusAdresi } from '@/lib/auth';
+import { girisDonusAdresi, type Profil, profilGetir, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
+import { adHatasi, telefonHatasi } from '@/lib/dogrulama';
 import { useRutbe } from '@/lib/rutbe-context';
 
 /**
@@ -24,8 +25,21 @@ export default function OnboardingScreen() {
   const { rutbe, setRutbe } = useRutbe();
   const { kullanici, hazir } = useAuth();
   const [tanitimGecildi, setTanitimGecildi] = useState(false);
+  const [profil, setProfil] = useState<Profil | null | undefined>(undefined); // undefined = çekilmedi
   // Giriş ZORUNLU (Supabase yapılandırıldıysa). hazir=false ise gate kapalı (girişsiz akış).
   const girisGerek = hazir && !kullanici;
+
+  // Giriş yapınca profili çek (ad/soyad/telefon tam mı kontrolü için).
+  useEffect(() => {
+    if (!kullanici) {
+      setProfil(undefined);
+      return;
+    }
+    void profilGetir().then(setProfil);
+  }, [kullanici]);
+
+  const profilEksik =
+    !!kullanici && profil !== undefined && (!profil?.ad || !profil?.soyad || !profil?.telefon);
 
   // Adım 0: tanıtım (yeni kullanıcı — hiç branş/rütbe yok — en başta, giriş öncesi).
   if (!brans && !rutbe && !tanitimGecildi) {
@@ -35,6 +49,22 @@ export default function OnboardingScreen() {
   // Adım 0.5: ZORUNLU giriş (devam etmek için).
   if (girisGerek) {
     return <GirisAdim />;
+  }
+
+  // Profil henüz çekiliyor → kısa bekleme (yanlışlıkla profil adımı parlamasın).
+  if (kullanici && profil === undefined) {
+    return (
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+        <View style={[styles.icerik, styles.merkezde]}>
+          <ActivityIndicator color={Palette.lacivert} />
+        </View>
+      </SafeAreaView>
+    );
+  }
+
+  // Adım 0.7: PROFİL bilgileri (ad/soyad/telefon eksikse).
+  if (profilEksik) {
+    return <ProfilAdim mevcut={profil ?? null} onTamam={() => void profilGetir().then(setProfil)} />;
   }
 
   // Adım 1: branş.
@@ -156,6 +186,95 @@ function GirisAdim() {
   );
 }
 
+/** Profil bilgileri adımı — ad/soyad/telefon (zorunlu + doğrulamalı). */
+function ProfilAdim({ mevcut, onTamam }: { mevcut: Profil | null; onTamam: () => void }) {
+  const [ad, setAd] = useState(mevcut?.ad ?? '');
+  const [soyad, setSoyad] = useState(mevcut?.soyad ?? '');
+  const [telefon, setTelefon] = useState(mevcut?.telefon ?? '');
+  const [mesgul, setMesgul] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
+
+  async function kaydet() {
+    const h = adHatasi(ad, 'Ad') ?? adHatasi(soyad, 'Soyad') ?? telefonHatasi(telefon);
+    if (h) {
+      setHata(h);
+      return;
+    }
+    setHata(null);
+    setMesgul(true);
+    try {
+      await profilKaydet(ad, soyad, telefon);
+      onTamam();
+    } catch (e) {
+      setHata(e instanceof Error ? e.message : 'Kaydedilemedi, tekrar dene.');
+    } finally {
+      setMesgul(false);
+    }
+  }
+
+  return (
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+      <ScrollView contentContainerStyle={styles.icerik}>
+        <View style={styles.marka}>
+          <MaterialCommunityIcons name="card-account-details-outline" size={44} color={Palette.lacivert} />
+          <AppText variant="baslik" bold color="lacivert">
+            Profil Bilgilerin
+          </AppText>
+          <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
+            Kazandığın Takdir Belgelerinde adın yazacak. Bilgilerini doğru gir.
+          </AppText>
+        </View>
+
+        <TextInput
+          style={styles.girdi}
+          placeholder="Ad"
+          placeholderTextColor={Palette.solukMetin}
+          value={ad}
+          onChangeText={setAd}
+          autoCapitalize="words"
+        />
+        <TextInput
+          style={styles.girdi}
+          placeholder="Soyad"
+          placeholderTextColor={Palette.solukMetin}
+          value={soyad}
+          onChangeText={setSoyad}
+          autoCapitalize="words"
+        />
+        <TextInput
+          style={styles.girdi}
+          placeholder="Telefon (05XX XXX XX XX)"
+          placeholderTextColor={Palette.solukMetin}
+          value={telefon}
+          onChangeText={setTelefon}
+          keyboardType="phone-pad"
+          inputMode="tel"
+          maxLength={20}
+        />
+
+        <Pressable
+          disabled={mesgul}
+          style={({ pressed }) => [styles.basla, pressed && styles.pressed, mesgul && styles.pasif]}
+          onPress={() => void kaydet()}>
+          {mesgul ? (
+            <ActivityIndicator color={Palette.beyaz} />
+          ) : (
+            <AppText variant="govde" color="beyaz" bold>
+              Devam
+            </AppText>
+          )}
+        </Pressable>
+
+        {hata ? (
+          <AppText variant="kucuk" color="kirmizi" bold style={styles.hataMetin}>
+            {hata}
+          </AppText>
+        ) : null}
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
@@ -221,6 +340,21 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     paddingVertical: Spacing.three,
     alignItems: 'center',
+  },
+  girdi: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.three,
+    fontSize: 16,
+    color: Palette.anaMetin,
+  },
+  merkezde: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   googleBtn: {
     flexDirection: 'row',

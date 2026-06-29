@@ -9,8 +9,9 @@ import { ActivityIndicator, Pressable, StyleSheet, TextInput, View } from 'react
 
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { epostaGiris, epostaKayit, sifreSifirla } from '@/lib/auth';
+import { epostaGiris, epostaKayit, epostaKullanimda, sifreSifirla } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
+import { epostaHatasi, sifreHatasi } from '@/lib/dogrulama';
 
 type Mod = 'giris' | 'kayit';
 type Mesaj = { tip: 'hata' | 'bilgi'; metin: string };
@@ -19,7 +20,7 @@ function hataMetni(e: unknown): string {
   const m = e instanceof Error ? e.message : '';
   if (/invalid login credentials/i.test(m)) return 'E-posta veya şifre hatalı.';
   if (/already registered|already exists/i.test(m)) return 'Bu e-posta zaten kayıtlı. Giriş yap.';
-  if (/at least 6/i.test(m)) return 'Şifre en az 6 karakter olmalı.';
+  if (/at least \d/i.test(m)) return 'Şifre en az 8 karakter olmalı.';
   if (/valid email|invalid email/i.test(m)) return 'Geçerli bir e-posta gir.';
   if (/email not confirmed/i.test(m)) return 'E-postanı doğrula (gelen kutunu kontrol et).';
   return __DEV__ && m ? `Hata: ${m}` : 'İşlem yapılamadı, tekrar dene.';
@@ -50,12 +51,28 @@ export function GirisFormu() {
       setMesaj({ tip: 'hata', metin: 'E-posta ve şifre gir.' });
       return;
     }
+    // Kayıtta SIKI doğrulama (girişte yok — mevcut bilgiyi giriyorlar).
+    if (mod === 'kayit') {
+      const dHata = epostaHatasi(eposta) ?? sifreHatasi(sifre);
+      if (dHata) {
+        setMesaj({ tip: 'hata', metin: dHata });
+        return;
+      }
+    }
     setMesaj(null);
     setMesgul(true);
     try {
       if (mod === 'giris') {
         await epostaGiris(eposta, sifre);
       } else {
+        // Mükerrer hesap engeli: e-posta zaten kayıtlıysa yeni hesap açtırma.
+        if (await epostaKullanimda(eposta)) {
+          setMesaj({
+            tip: 'hata',
+            metin: 'Bu e-posta zaten kayıtlı. "Giriş yap"a geç veya Google ile gir.',
+          });
+          return;
+        }
         const { dogrulamaGerek } = await epostaKayit(eposta, sifre);
         if (dogrulamaGerek) {
           setMesaj({

@@ -140,6 +140,50 @@ export async function yeniSifreBelirle(sifre: string): Promise<void> {
   if (error) throw error;
 }
 
+// --- Profil (ad/soyad/telefon) + mükerrer hesap engeli ---
+
+export type Profil = { ad: string | null; soyad: string | null; telefon: string | null };
+
+/** E-posta ZATEN kayıtlı mı (mükerrer hesabı önlemek için signup öncesi kontrol). */
+export async function epostaKullanimda(eposta: string): Promise<boolean> {
+  if (!supabaseHazir || !supabase) return false;
+  try {
+    const { data, error } = await supabase.rpc('eposta_kullanimda', { p_eposta: eposta.trim() });
+    return !error && data === true;
+  } catch {
+    return false;
+  }
+}
+
+/** Giriş yapan kullanıcının profilini getirir (yoksa/hata → null). */
+export async function profilGetir(): Promise<Profil | null> {
+  if (!supabaseHazir || !supabase) return null;
+  try {
+    const { data } = await supabase.from('profiles').select('ad, soyad, telefon').single();
+    if (!data) return null;
+    return {
+      ad: (data.ad as string | null) ?? null,
+      soyad: (data.soyad as string | null) ?? null,
+      telefon: (data.telefon as string | null) ?? null,
+    };
+  } catch {
+    return null;
+  }
+}
+
+/** Profil bilgilerini kaydeder (ad/soyad/telefon). */
+export async function profilKaydet(ad: string, soyad: string, telefon: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { data: u } = await supabase.auth.getUser();
+  const id = u.user?.id;
+  if (!id) throw new Error('Oturum bulunamadı.');
+  const { error } = await supabase
+    .from('profiles')
+    .update({ ad: ad.trim(), soyad: soyad.trim(), telefon: telefon.trim() })
+    .eq('id', id);
+  if (error) throw error;
+}
+
 /** Oturumu kapatır. Yapılandırılmamışsa no-op. */
 export async function cikisYap(): Promise<void> {
   if (!supabaseHazir || !supabase) return;

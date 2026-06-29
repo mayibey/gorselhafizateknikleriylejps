@@ -4,9 +4,18 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
-> ### 📋 BACKLOG (planlandı, sırası gelince)
-> - **İlk-açılış TUTORIAL (interaktif tanıtım turu):** Kullanıcı uygulamaya ilk girince ne nerede / nasıl kullanılır gösteren coach-mark / adım adım tur (Karargah, Mevzuat, patika, kart akışı, Tatbikat, Evsaf). [Başkan isteği 29 Haz.] Önerilen zaman: v2 üyelik temeli oturunca, **yayın öncesi UX paketi** içinde (onboarding tanıtım kartının DEVAMI — o statikti, bu interaktif). Not: `react-native` coach-mark / overlay; tab'lara highlight + balon ipucu; "Geç" + "Bir daha gösterme" (AsyncStorage bayrağı).
+> ### 📋 BACKLOG (planlandı, ertelendi — başkan "unutma" dedi; bkz. memory [[kayit-tasarim-ve-ertelenenler]])
+> - **İlk-açılış TUTORIAL (interaktif tanıtım turu):** ne nerede / nasıl kullanılır coach-mark turu (Karargah/Mevzuat/patika/akış/Tatbikat/Evsaf). Yayın-öncesi UX paketi; AsyncStorage "gösterildi" bayrağı.
+> - **SMS doğrulama** → anti-piracy fazına ertelendi (telefon ALANI şimdi toplanıyor; doğrulama ödeme/Integrity ile). Twilio/Netgsm — ücretli.
+> - **Şık "E-postan onaylandı" web ekranı** → `mevzujsps.com/onaylandi` (Expo Go'da boş sayfa normal; gerçek build + web ile). Aynısı şifre-yenileme dönüşü.
+> - **Markalı gizlilik URL** → `mevzujsps.com/gizlilik`; `config.ts GIZLILIK_URL/SARTLAR_URL` doldur + Play Data Safety.
+> - **Marka e-postası** yasal metinlerde `dev.ademyilmaz@gmail.com` → `iletisim@mevzujsps.com`.
+> - **Apple ile giriş** → iOS fazı.
 >
+> ### ▶ 29 Haz — Üyelik: Registration redesign (bir-email-bir-hesap + ad/soyad/telefon + doğrulama)
+> Başkan: mükerrer hesap olmasın + kişisel bilgi (ad/soyad/telefon ZORUNLU) al + saçma giriş engelle (TR telefon, şifre ≥8). `docs/v2/03_profil_ve_dedup.sql`: profiles'a ad/soyad/telefon + `eposta_kullanimda()` SECURITY DEFINER (mükerrer engel). Yeni `lib/dogrulama.ts` (adHatasi/telefonHatasi[TR normalize 05XXXXXXXXX]/sifreHatasi[≥8+harf+rakam]/epostaHatasi). `giris-formu.tsx`: kayıtta e-posta+şifre doğrulama + signup öncesi `epostaKullanimda` → varsa "zaten kayıtlı, giriş yap" (mükerrer engel). `auth.ts`: epostaKullanimda/profilGetir/profilKaydet/type Profil. `onboarding.tsx`: yeni **ProfilAdim** (ad/soyad/telefon, doğrulamalı) — sıra: tanıtım→giriş→**profil**→branş→rütbe; profil eksikse zorunlu. tsc 0. **Kullanıcı ADIMLARI:** (1) `docs/v2/03_..sql` çalıştır. (2) Supabase Users'tan mevcut 2 MÜKERRER hesabı ELLE sil (verisi olanı tut). Telefon=ZORUNLU (başkan kararı); SMS doğrulama ertelendi.
+>
+> ### ▶ 29 Haz — Üyelik: Şifre yenileme akışı (app tarafı) + SMTP gerçeği
 > ### ▶ 29 Haz — Üyelik: Şifre yenileme akışı (app tarafı) + SMTP gerçeği
 > **ÖNEMLİ:** Supabase Pro e-posta sorununu ÇÖZMEZ — dahili SMTP hem Free hem Pro'da test-amaçlı (saatte birkaç mail). Çözüm: **özel SMTP (Resend önerildi, ücretsiz 3k/ay)** → Supabase Auth → Emails → SMTP Settings. Bu = senin kuracağın (mailin GİTMESİ). **App tarafı (mailin GERİ DÖNMESİ) yazıldı:** `auth.ts sifreSifirla` redirectTo `mevzu://sifre-yenile` (path); yeni `kurtarmaKoduDegistir` (exchangeCodeForSession) + `yeniSifreBelirle` (updateUser). Yeni `app/sifre-yenile.tsx` (code'u oturuma çevir → yeni şifre + tekrar → kaydet → app'e gir). `_layout`: Stack'e eklendi + gate istisnası (sifre-yenile rotası giriş kontrolünü atlar, kurtarma oturumu orada kurulur). expo-router deep-link `mevzu://sifre-yenile?code=` ekrana yönlendirir. tsc 0. **E2E test SMTP kurulunca:** şifremi unuttum → mail → linke tıkla → app yeni-şifre ekranı → kaydet → girişli.
 >
