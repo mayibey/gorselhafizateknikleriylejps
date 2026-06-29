@@ -1,13 +1,11 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import * as ScreenCapture from 'expo-screen-capture';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   type LayoutChangeEvent,
   type NativeScrollEvent,
   type NativeSyntheticEvent,
-  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -29,6 +27,7 @@ import { Loading } from '@/components/ui/loading';
 import { FORMSPREE_ENDPOINT } from '@/constants/config';
 import { CardFlowMaxWidth, Palette, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
+import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { erteleBugun, ertelemeAktifMi } from '@/lib/modal-erteleme';
 import {
   getCardsByBolumChain,
@@ -56,20 +55,9 @@ async function gunlukSinirli(): Promise<QueueCard[]> {
   return kuyruk.slice(0, ayar.gunlukKart);
 }
 
-// GEÇİCİ: SS almak için kapatıldı, geri açılacak → true yapınca koruma geri gelir.
-const EKRAN_KORUMA_AKTIF = false;
-
 export default function AkisScreen() {
   // İçerik koruması: kart akışı açıkken ekran görüntüsü/kaydı engellenir (Android FLAG_SECURE).
-  // Yalnız NATIVE'de — web'de expo-screen-capture API'si yok (çağrı atılırsa hata) → guard.
-  // GEÇİCİ: EKRAN_KORUMA_AKTIF=false iken koruma UYGULANMAZ (SS almak için kapatıldı).
-  useEffect(() => {
-    if (!EKRAN_KORUMA_AKTIF || Platform.OS === 'web') return;
-    void ScreenCapture.preventScreenCaptureAsync().catch(() => {});
-    return () => {
-      void ScreenCapture.allowScreenCaptureAsync().catch(() => {});
-    };
-  }, []);
+  useEkranKoruma();
   const router = useRouter();
   const { lawId, bolumId, mod, kart } = useLocalSearchParams<{
     lawId?: string;
