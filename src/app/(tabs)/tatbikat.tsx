@@ -84,11 +84,6 @@ export default function TatbikatScreen() {
     router.push({ pathname: '/sinav', params: { lawId: String(law.id) } });
   }
 
-  function kanunaGit(law: LawWithCount) {
-    // Kilitli kanun → önce çalış: o kanunun patikasına götür.
-    router.push({ pathname: '/patika', params: { lawId: String(law.id) } });
-  }
-
   return (
     <Screen title="Tatbikat">
       {/* ÜST SEÇİM: Müşterek / Branş (Mevzuat ile aynı desen). */}
@@ -133,7 +128,7 @@ export default function TatbikatScreen() {
       ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">
-            Bir kanunun tüm kartlarını çalış, deneme sınavının kilidini aç.
+            Her kanunun deneme sınavı açık — istersen önce Mevzuat'tan çalış, sonra kendini sına.
           </AppText>
           {musterek.length === 0 ? (
             <AppText variant="kucuk" color="solukMetin">
@@ -148,7 +143,6 @@ export default function TatbikatScreen() {
                 soruSayisi={sinavSoruSayisi(law.id)}
                 sonSonuc={sonucMap.get(law.id)}
                 onSinav={sinavaGit}
-                onCalis={kanunaGit}
               />
             ))
           )}
@@ -185,53 +179,48 @@ function KanunSatir({
   soruSayisi,
   sonSonuc,
   onSinav,
-  onCalis,
 }: {
   law: LawWithCount;
   durum: Durum | undefined;
   soruSayisi: number;
   sonSonuc: SinavSonuc | undefined;
   onSinav: (law: LawWithCount) => void;
-  onCalis: (law: LawWithCount) => void;
 }) {
-  const acik = durum?.tamam ?? false;
   const calisilan = durum?.calisilan ?? 0;
   const toplam = durum?.toplam ?? law.kartSayisi;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
 
+  // Deneme sınavı HER ZAMAN AÇIK (kilit kaldırıldı — başkan kararı). Hazırlık yalnız BİLGİ.
   return (
     <Pressable
-      style={({ pressed }) => [styles.satir, !acik && styles.satirKilitli, pressed && styles.pressed]}
-      onPress={() => (acik ? onSinav(law) : onCalis(law))}
+      style={({ pressed }) => [styles.satir, pressed && styles.pressed]}
+      onPress={() => onSinav(law)}
       accessibilityRole="button"
-      accessibilityLabel={acik ? `${law.ad} deneme sınavı` : `${law.ad} — önce çalış`}>
+      accessibilityLabel={`${law.ad} deneme sınavı`}>
       <View style={styles.satirUst}>
         <Monogram no={no} />
         <AppText variant="govde" bold color="anaMetin" style={styles.kanunAd}>
           {hecele(law.ad)}
         </AppText>
-        {acik ? (
-          <MaterialCommunityIcons name="play-circle" size={28} color={Palette.lacivert} />
-        ) : (
-          <MaterialCommunityIcons name="lock-outline" size={24} color={Palette.solukMetin} />
-        )}
+        <MaterialCommunityIcons name="play-circle" size={28} color={Palette.lacivert} />
       </View>
 
-      {acik ? (
-        <View style={styles.altSatir}>
-          <MaterialCommunityIcons name="clipboard-check-outline" size={16} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" bold color="altinKoyu">
-            Deneme Sınavı · {soruSayisi} soru
-          </AppText>
-        </View>
-      ) : (
+      <View style={styles.altSatir}>
+        <MaterialCommunityIcons name="clipboard-check-outline" size={16} color={Palette.altinKoyu} />
+        <AppText variant="kucuk" bold color="altinKoyu">
+          Deneme Sınavı · {soruSayisi} soru
+        </AppText>
+      </View>
+
+      {/* Hazırlık (kilit DEĞİL — sadece bilgi: ne kadarını çalıştın). */}
+      {toplam > 0 ? (
         <View style={styles.altSatir}>
           <MaterialCommunityIcons name="book-clock-outline" size={16} color={Palette.solukMetin} />
-          <AppText variant="kucuk" color="solukMetin">
-            Önce tüm kartları çalış ({calisilan}/{toplam})
+          <AppText variant="etiket" color="solukMetin">
+            Hazırlık: {calisilan}/{toplam} kart çalışıldı
           </AppText>
         </View>
-      )}
+      ) : null}
 
       {/* Son deneme skoru (varsa) — açık/kilitli fark etmez, geçmiş kalıcıdır. */}
       {sonSonuc ? (
@@ -309,9 +298,6 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.three,
     gap: Spacing.two,
-  },
-  satirKilitli: {
-    opacity: 0.7,
   },
   satirUst: {
     flexDirection: 'row',
