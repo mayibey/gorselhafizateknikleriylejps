@@ -1,13 +1,15 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { BransSecici } from '@/components/brans-secici';
 import { RutbeSecici } from '@/components/rutbe-secici';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { girisDonusAdresi } from '@/lib/auth';
+import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
 
@@ -19,11 +21,19 @@ export default function OnboardingScreen() {
   const router = useRouter();
   const { brans, setBrans } = useBrans();
   const { rutbe, setRutbe } = useRutbe();
+  const { kullanici, hazir, girisYap } = useAuth();
   const [tanitimGecildi, setTanitimGecildi] = useState(false);
+  // Giriş ZORUNLU (Supabase yapılandırıldıysa). hazir=false ise gate kapalı (girişsiz akış).
+  const girisGerek = hazir && !kullanici;
 
-  // Adım 0: tanıtım (yalnız branş seçilmeden ve henüz geçilmemişse).
-  if (!brans && !tanitimGecildi) {
+  // Adım 0: tanıtım (yeni kullanıcı — hiç branş/rütbe yok — en başta, giriş öncesi).
+  if (!brans && !rutbe && !tanitimGecildi) {
     return <Tanitim onBasla={() => setTanitimGecildi(true)} />;
+  }
+
+  // Adım 0.5: ZORUNLU giriş (devam etmek için).
+  if (girisGerek) {
+    return <GirisAdim girisYap={girisYap} />;
   }
 
   // Adım 1: branş.
@@ -108,6 +118,78 @@ function Tanitim({ onBasla }: { onBasla: () => void }) {
   );
 }
 
+/** ZORUNLU giriş adımı — devam etmek için Gmail ile giriş. (Atlama yok.) */
+function GirisAdim({ girisYap }: { girisYap: () => Promise<void> }) {
+  const [mesgul, setMesgul] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
+
+  async function giris() {
+    setHata(null);
+    setMesgul(true);
+    try {
+      await girisYap();
+    } catch (e) {
+      setHata(e instanceof Error ? e.message : 'Giriş yapılamadı');
+    } finally {
+      setMesgul(false);
+    }
+  }
+
+  return (
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+      <ScrollView contentContainerStyle={styles.icerik}>
+        <View style={styles.marka}>
+          <MaterialCommunityIcons name="shield-account" size={48} color={Palette.lacivert} />
+          <AppText variant="baslik" bold color="lacivert">
+            MEVZU · JSPS
+          </AppText>
+          <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
+            Devam etmek için giriş yap. İlerlemen ve satın alımların hesabına bağlanır, cihaz
+            değiştirsen bile kaybolmaz.
+          </AppText>
+        </View>
+
+        <Pressable
+          disabled={mesgul}
+          style={({ pressed }) => [styles.googleBtn, pressed && styles.pressed, mesgul && styles.pasif]}
+          onPress={() => void giris()}>
+          {mesgul ? (
+            <ActivityIndicator color={Palette.lacivert} />
+          ) : (
+            <>
+              <MaterialCommunityIcons name="google" size={22} color={Palette.lacivert} />
+              <AppText variant="govde" bold color="lacivert">
+                Gmail ile giriş yap
+              </AppText>
+            </>
+          )}
+        </Pressable>
+
+        {hata ? (
+          <AppText variant="kucuk" color="kirmizi" bold style={styles.hataMetin}>
+            {__DEV__ ? `Hata: ${hata}` : 'Giriş yapılamadı, tekrar dene.'}
+          </AppText>
+        ) : null}
+
+        <AppText variant="etiket" color="solukMetin" style={styles.hataMetin}>
+          Giriş yaparak Gizlilik Politikası ve Kullanım Şartları'nı kabul etmiş olursun.
+        </AppText>
+
+        {__DEV__ ? (
+          <View style={styles.teshisKart}>
+            <AppText variant="etiket" color="solukMetin" bold>
+              TEŞHİS — Supabase Redirect URLs'e ekle:
+            </AppText>
+            <AppText variant="etiket" color="lacivert" bold selectable>
+              {girisDonusAdresi()}
+            </AppText>
+          </View>
+        ) : null}
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
@@ -174,7 +256,32 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.three,
     alignItems: 'center',
   },
+  googleBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.beyaz,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+  },
+  hataMetin: {
+    textAlign: 'center',
+  },
+  teshisKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    gap: Spacing.half,
+  },
   pressed: {
     opacity: 0.85,
+  },
+  pasif: {
+    opacity: 0.6,
   },
 });

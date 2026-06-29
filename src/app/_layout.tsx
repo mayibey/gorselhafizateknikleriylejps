@@ -17,7 +17,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
-import { AuthProvider } from '@/lib/auth-context';
+import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { getAyar, planla } from '@/lib/bildirim';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
@@ -74,14 +74,18 @@ export default function RootLayout() {
 function RootNavigator() {
   const { brans, yukleniyor: bransYukleniyor } = useBrans();
   const { rutbe, yukleniyor: rutbeYukleniyor } = useRutbe();
+  const { kullanici, hazir, yukleniyor: authYukleniyor } = useAuth();
   const segments = useSegments();
   const router = useRouter();
 
-  const yukleniyor = bransYukleniyor || rutbeYukleniyor;
-  // Onboarding branş + rütbe ister (ikisi de müfredat filtresi). İkisi de varsa içeri al.
-  const eksik = !brans || !rutbe;
+  const yukleniyor = bransYukleniyor || rutbeYukleniyor || authYukleniyor;
+  // Giriş ZORUNLU: Supabase yapılandırıldıysa (hazir) ve oturum yoksa giriş ister.
+  // (hazir=false ise — anahtar yok — gate kapanır, uygulama girişsiz çalışır: güvenli fallback.)
+  const girisGerek = hazir && !kullanici;
+  // Onboarding: ZORUNLU giriş + branş + rütbe. Üçü de tamamsa içeri al.
+  const eksik = girisGerek || !brans || !rutbe;
 
-  // Guard: branş veya rütbe yoksa onboarding'e götür (uygulama tamamen offline çalışır).
+  // Guard: giriş yoksa veya branş/rütbe yoksa onboarding'e götür.
   useEffect(() => {
     if (yukleniyor) return;
     const onboardingDe = segments[0] === 'onboarding';
