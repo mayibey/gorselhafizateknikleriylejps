@@ -17,27 +17,36 @@ export const GIZLILIK_METNI = `MEVZU-JSPS — GİZLİLİK POLİTİKASI
 Veri sorumlusu: MEVZU-JSPS · İletişim: dev.ademyilmaz@gmail.com
 
 1) İŞLENEN VERİLER
-• Çalışma verisi: ilerlemen, branşın ve sicilin yalnız CİHAZINDA tutulur (sunucuya gönderilmez).
-• Cihaz tanımlayıcı: kart güvenliği (filigran) için cihazında üretilen rastgele kimlik (cihazında kalır).
+• Hesap verisi: Uygulamayı kullanmak için Google (Gmail) ile giriş zorunludur. Girişte
+  e-posta adresin ve hesap kimliğin (kullanıcı no) işlenir ve hesabına bağlanır.
+• Çalışma verisi: ilerlemen, branşın, rütben ve sicilin şu an CİHAZINDA tutulur (ileride,
+  bilgilendirilerek, hesabınla cihazlar arası eşitlenebilir).
+• Cihaz tanımlayıcı: kart güvenliği (filigran) için cihazında üretilen rastgele kimlik.
 • Geri bildirim: GÖNDERİRSEN mesajın + ilgili kart bilgisi + cihaz kimliği bir form servisine iletilir.
-Hesap açmıyoruz; e-posta/şifre, reklam kimliği, konum, rehber, kamera/mikrofon verisi TOPLAMIYORUZ.
+Reklam kimliği, konum, rehber, kamera/mikrofon verisi TOPLAMIYORUZ. Şifre saklamıyoruz (giriş Google üzerinden).
 
 2) AMAÇ ve HUKUKİ SEBEP (KVKK m.5)
-Çalışma aracını sunmak (cihazda işleme) ve gönderdiğin geri bildirimi değerlendirmek için meşru menfaat.
+• Üyelik/giriş, hesabın güvenliği ve ileride satın alımların hesabına bağlanması: sözleşmenin
+  kurulması/ifası ve açık rızan.
+• Geri bildirimini değerlendirmek ve içerik güvenliği (filigran): meşru menfaat.
 
-3) AKTARIM
-Verilerin cihazında tutulur, sunucumuza aktarılmaz. Yalnızca SEN geri bildirim gönderirsen, mesajın
-form servisi Formspree'ye iletilir (sunucular yurt dışında olabilir). Verini satmıyor/paylaşmıyoruz.
+3) AKTARIM ve YURT DIŞI
+Hesap/giriş verisi, kimlik doğrulama altyapımız Supabase'de (AB/Frankfurt sunucuları) ve giriş
+sağlayıcısı Google'da işlenir. Geri bildirim gönderirsen mesajın Formspree'ye iletilir. Bu servislerin
+sunucuları YURT DIŞINDA olduğundan, GİRİŞ YAPARAK verinin yurt dışına aktarılmasına AÇIK RIZA vermiş
+olursun. Verini satmıyor, pazarlama amacıyla paylaşmıyoruz.
 
 4) SAKLAMA
-Çalışma verisi ve cihaz kimliği cihazında, uygulama yüklü olduğu sürece saklanır.
+Hesap verin, hesabın aktif olduğu sürece saklanır. Çalışma verisi cihazında, uygulama yüklü olduğu sürece tutulur.
 
 5) HAKLARIN (KVKK m.11)
 Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: dev.ademyilmaz@gmail.com.
 
-6) VERİ SİLME
-Tüm verin cihazında olduğundan, uygulamayı kaldırman (veya cihaz ayarlarından verisini temizlemen)
-tüm çalışma verini kalıcı olarak siler.
+6) HESAP ve VERİ SİLME
+• Uygulama içinden "Hesabı Sil" diyebilirsin: hesabın silinmek üzere işaretlenir ve 30 gün içinde
+  tekrar giriş yapmazsan KALICI olarak (hesap verinle birlikte) silinir. 30 gün içinde girersen geri gelir.
+• Cihazdaki çalışma verisini, uygulamayı kaldırarak (veya cihaz ayarlarından temizleyerek) silebilirsin.
+• Dilersen yukarıdaki e-postadan da silme talebinde bulunabilirsin.
 
 7) ÇOCUKLAR / GÜVENLİK
 Belirlenen yaş altına yönelik değildir.
@@ -66,8 +75,11 @@ bilgilendirme amaçlıdır; güncel ve bağlayıcı sürüm için daima resmî k
 Mevzuat metinleri kamuya açıktır. Özgün görseller, karikatürler, tasarım, marka ve yazılım
 MEVZU-JSPS'na aittir; izinsiz kopyalanamaz. Filigranlı görsellerin yetkisiz paylaşımı yasaktır.
 
-4) ÜCRET
-Uygulama şu an ücretsizdir. İleride ücretli özellik eklenirse önceden bilgilendirilir.
+4) ÜYELİK ve ÜCRET
+Uygulamayı kullanmak için Google (Gmail) ile giriş gerekir; hesabının ve giriş bilgilerinin
+güvenliğinden sen sorumlusun. Hesabını uygulama içinden silebilirsin (30 gün içinde tekrar
+girersen geri gelir). Uygulama şu an ücretsizdir; ileride ücretli özellik eklenirse önceden
+bilgilendirilir ve satın alımlar hesabına bağlanır.
 
 5) SORUMLULUĞUN SINIRI
 Uygulama "olduğu gibi" sunulur. Hukukun izin verdiği ölçüde dolaylı zararlardan sorumlu değiliz.

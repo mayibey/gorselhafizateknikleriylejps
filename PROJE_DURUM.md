@@ -7,6 +7,9 @@
 > ### 📋 BACKLOG (planlandı, sırası gelince)
 > - **İlk-açılış TUTORIAL (interaktif tanıtım turu):** Kullanıcı uygulamaya ilk girince ne nerede / nasıl kullanılır gösteren coach-mark / adım adım tur (Karargah, Mevzuat, patika, kart akışı, Tatbikat, Evsaf). [Başkan isteği 29 Haz.] Önerilen zaman: v2 üyelik temeli oturunca, **yayın öncesi UX paketi** içinde (onboarding tanıtım kartının DEVAMI — o statikti, bu interaktif). Not: `react-native` coach-mark / overlay; tab'lara highlight + balon ipucu; "Geç" + "Bir daha gösterme" (AsyncStorage bayrağı).
 >
+> ### ▶ 29 Haz — Üyelik: KVKK / gizlilik metni güncellendi (auth gerçeğine göre)
+> Giriş zorunlu + kişisel veri (e-posta/hesap) işleniyor → eski "tamamen offline, hesap açmıyoruz, sunucuya gitmez" metni YANLIŞTI. `yasal-metin.ts GIZLILIK_METNI` + `SARTLAR_METNI` yeniden yazıldı: Google giriş zorunlu, e-posta/hesap kimliği Supabase'de (AB/Frankfurt), yurt-dışı aktarım = girişle AÇIK RIZA, 30g hesap silme, KVKK hakları. `docs/index.html` (barındırılan gizlilik, GitHub Pages) aynı şekilde güncellendi. **AÇIK İŞ (yayın öncesi):** `config.ts GIZLILIK_URL/SARTLAR_URL` boş bırakıldı (başkanın "markalı, mayibey'siz host" notu) → Play Data Safety için marka-host kararıyla doldurulacak + Play Console gizlilik URL'ine girilecek. tsc 0.
+>
 > ### ▶ 29 Haz — Üyelik: GİRİŞ ZORUNLU yapıldı (login gate)
 > Başkan kararı: uygulama girişsiz açılmasın. Akış: **tanıtım → ZORUNLU giriş → branş → rütbe → app.** `_layout.tsx` RootNavigator guard'ına `girisGerek = hazir && !kullanici` eklendi → `eksik`'e dahil (auth yukleniyor da bekleme dahil). `onboarding.tsx`: yeni `GirisAdim` (atlamasız Gmail giriş + dev TEŞHİS kutusu); sıra tanıtım→giriş→branş→rütbe. **Güvenli fallback:** `hazir=false` (anahtar yok) ise gate kapalı, girişsiz çalışır. Oturum AsyncStorage'da kalıcı → ilk girişten sonra OFFLINE açılış çalışır (yalnız ilk açılış internet ister). tsc 0.
 >

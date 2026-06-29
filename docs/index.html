@@ -42,55 +42,67 @@
   <p>MEVZU-JSPS (“Uygulama”) olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
   işlediğimizi ve haklarını açıklar.</p>
 
-  <p><strong>Önemli:</strong> Uygulama tamamen <strong>çevrimdışı</strong> çalışır. Hesap açmıyoruz,
-  kullanıcı girişi yok, sohbet/sosyal özellik yok. Çalışma verilerin <strong>cihazından çıkmaz</strong>.</p>
+  <p><strong>Önemli:</strong> Uygulamayı kullanmak için <strong>Google (Gmail) ile giriş</strong> gerekir.
+  Girişte e-posta adresin ve hesap kimliğin işlenir. Çalışma verilerin şu an cihazında tutulur
+  (ileride, bilgilendirilerek, hesabınla eşitlenebilir). Reklam/izleme yok.</p>
 
   <h2>1. İşlediğimiz veriler</h2>
   <ul>
-    <li><strong>Çalışma verileri (yalnız cihazda):</strong> ilerlemen, tekrar kayıtların, branş
-      seçimin ve sicilin cihazının yerel veritabanında tutulur; sunucuya gönderilmez.</li>
-    <li><strong>Cihaz tanımlayıcı (yalnız cihazda):</strong> kart güvenliği (filigran) için cihazında
-      üretilen rastgele bir kimlik. Cihazında kalır, bizimle paylaşılmaz.</li>
-    <li><strong>Geri bildirim (yalnız sen gönderirsen):</strong> “Hata/öneri bildir” özelliğini
-      kullanırsan mesajın + ilgili kart bilgisi + cihaz tanımlayıcı, üçüncü taraf form servisine
-      (Formspree) iletilir. Bu özellik yalnızca bir form adresi tanımlıysa görünür.</li>
+    <li><strong>Hesap verisi:</strong> Google ile giriş zorunlu olduğundan e-posta adresin ve hesap
+      kimliğin (kullanıcı no) işlenir ve hesabına bağlanır.</li>
+    <li><strong>Çalışma verileri (şu an cihazda):</strong> ilerlemen, tekrar kayıtların, branş/rütbe
+      seçimin ve sicilin cihazının yerel veritabanında tutulur. İleride hesabınla cihazlar arası
+      eşitlenebilir (bilgilendirilerek).</li>
+    <li><strong>Cihaz tanımlayıcı:</strong> kart güvenliği (filigran) için cihazında üretilen rastgele kimlik.</li>
+    <li><strong>Geri bildirim (yalnız sen gönderirsen):</strong> mesajın + ilgili kart bilgisi + cihaz
+      tanımlayıcı, üçüncü taraf form servisine (Formspree) iletilir.</li>
   </ul>
-  <p>Hesap verisi (e-posta/şifre), reklam kimliği, konum, rehber, mikrofon/kamera verisi
+  <p>Şifre saklamıyoruz (giriş Google üzerinden). Reklam kimliği, konum, rehber, mikrofon/kamera verisi
   <strong>toplamıyoruz</strong>. Reklam ağı ve izleme (tracking) <strong>yok</strong>.</p>
 
   <h2>2. İşleme amaçları ve hukuki sebepler (KVKK m.5)</h2>
   <ul>
-    <li>Çalışma aracını sunmak (veriyi cihazda işleme) — <em>meşru menfaat</em>.</li>
-    <li>Gönderdiğin geri bildirimi değerlendirmek — <em>meşru menfaat / açık rıza</em>.</li>
+    <li>Üyelik/giriş, hesabın güvenliği ve ileride satın alımların hesabına bağlanması —
+      <em>sözleşmenin kurulması/ifası ve açık rıza</em>.</li>
+    <li>Geri bildirimini değerlendirmek ve içerik güvenliği (filigran) — <em>meşru menfaat</em>.</li>
   </ul>
 
-  <h2>3. Veri aktarımı ve işleyenler</h2>
+  <h2>3. Veri aktarımı ve yurt dışı</h2>
   <ul>
-    <li>Verilerin cihazında tutulur, sunucumuza <strong>aktarılmaz</strong>.</li>
-    <li>Yalnızca <strong>sen geri bildirim gönderirsen</strong>, mesajın üçüncü taraf form servisi
-      Formspree’ye iletilir (sunucular yurt dışında olabilir → bu durumda veri yurt dışına aktarılır).</li>
-    <li>Verini üçüncü kişilerle satmıyor/paylaşmıyoruz. Yasal zorunluluk halinde yetkili makamlarla
+    <li>Hesap/giriş verisi, kimlik doğrulama altyapımız <strong>Supabase</strong> (AB/Frankfurt) ve giriş
+      sağlayıcısı <strong>Google</strong> tarafından işlenir.</li>
+    <li>Geri bildirim gönderirsen mesajın <strong>Formspree</strong>’ye iletilir.</li>
+    <li>Bu servislerin sunucuları <strong>yurt dışında</strong> olduğundan, giriş yaparak verinin yurt
+      dışına aktarılmasına <strong>açık rıza</strong> vermiş olursun.</li>
+    <li>Verini satmıyor, pazarlama için paylaşmıyoruz. Yasal zorunluluk halinde yetkili makamlarla
       paylaşım saklıdır.</li>
   </ul>
 
   <h2>4. Saklama süresi</h2>
-  <p>Çalışma verisi ve cihaz tanımlayıcı, uygulama cihazında yüklü olduğu sürece saklanır.</p>
+  <p>Hesap verin, hesabın aktif olduğu sürece saklanır. Çalışma verisi ve cihaz tanımlayıcı, uygulama
+  cihazında yüklü olduğu sürece tutulur.</p>
 
   <h2>5. Haklarınız (KVKK m.11)</h2>
   <p>Verinin işlenip işlenmediğini öğrenme, erişme, düzeltme, <strong>silme</strong>, itiraz ve zararın
   giderilmesini talep etme haklarına sahipsin. Başvuru:
   <a href="mailto:dev.ademyilmaz@gmail.com">dev.ademyilmaz@gmail.com</a>.</p>
 
-  <h2>6. Veri silme</h2>
-  <p>Tüm verin cihazında tutulduğundan, <strong>uygulamayı kaldırman</strong> (veya cihaz ayarlarından
-  uygulama verisini temizlemen) tüm çalışma verini kalıcı olarak siler.</p>
+  <h2>6. Hesap ve veri silme</h2>
+  <ul>
+    <li>Uygulama içinden <strong>“Hesabı Sil”</strong> diyebilirsin: hesabın silinmek üzere işaretlenir
+      ve <strong>30 gün</strong> içinde tekrar giriş yapmazsan hesap verinle birlikte <strong>kalıcı
+      olarak silinir</strong>. 30 gün içinde girersen hesabın geri gelir.</li>
+    <li>Cihazdaki çalışma verisini, <strong>uygulamayı kaldırarak</strong> (veya cihaz ayarlarından
+      temizleyerek) silebilirsin.</li>
+    <li>Dilersen e-postadan da silme talebinde bulunabilirsin.</li>
+  </ul>
 
   <h2>7. Çocuklar</h2>
   <p>Uygulama belirlenen yaş altına yönelik değildir.</p>
 
   <h2>8. Güvenlik</h2>
-  <p>Verilerin cihazında tutulur. Hiçbir sistem %100 güvenli olmasa da makul teknik/idari tedbirleri
-  alırız.</p>
+  <p>Çalışma verin cihazında, hesap verin ise güvenli kimlik-doğrulama altyapımızda (Supabase) tutulur.
+  Hiçbir sistem %100 güvenli olmasa da makul teknik/idari tedbirleri alırız.</p>
 
   <h2>9. Bağlantı reddi</h2>
   <p>Bu uygulama bağımsız bir sınav hazırlık aracıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik
