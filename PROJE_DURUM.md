@@ -4,6 +4,13 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### ▶ 29 Haz — D1 polish + Yol haritası E (küçük işler)
+> **Evsaf belge modalı (D1 polish):** `takdir-belgesi.tsx` genelleştirildi (ortak `BelgeCerceve` + `TakdirBelgesi` sınav ekranı + `SicilBelgesi` kayıttan render; ödül=altın/madalya, ceza=kırmızı/kalkan). Evsaf'ta sicil kaydına basınca inline metin yerine **görsel belge MODALI** açılır.
+> **E1 — FLAG_SECURE (güvenlik):** `EKRAN_KORUMA_AKTIF=false` kaldırıldı; yeni `lib/ekran-koruma.ts useEkranKoruma()` hook'u kart görseli görünen `/akis` + `/sesli-nobet`'te ekran görüntüsü/kaydı engeller (Android FLAG_SECURE). Sicil/takdir/ayarlar screenshot'lanabilir kalır (sertifika paylaşımı serbest).
+> **E2 — Branş "çok yakında" şıklaştırıldı:** yeni `components/ui/yakinda.tsx` (altın YAKINDA rozeti + marka tonu); mevzuat + tatbikat branş boş-durumu `hammer-wrench/Çok yakında` yerine premium `Yakinda` (shield-star + "Branş eğitimi/sınavları yolda"). Gizlenmedi (kapsam görünür).
+> **E3 — kalan altın-yazı kontrastı:** yeni `altinMetin #8A6510` token'ı (krem üstünde ≈4.5:1 AA). Krem ekranlardaki `color="altinKoyu"` YAZILAR → `altinMetin` (tatbikat/patika/mevzuat/index/sinav). `altinKoyu` ikonlarda + KOYU akış ekranında DEĞİŞMEDİ (koyu üstünde kontrastı korumak için). tsc 0.
+> **Büyük işler (offline→sunucu, üyelik, ödeme) BEKLİYOR — başkan kararı.**
+>
 > ### ▶ 29 Haz — Yol haritası D1: Ödül revize — Takdir Belgesi (sınav %100 → görsel sertifika)
 > Başkan kararı V5 (ödül/ceza komple revize). **Keşif bulgusu:** CEZA sistemi (geri-bes emri + 3 günlük pencere `PENCERE_GUN=3` + kademeli askeri ceza Yazılı İkaz→Uyarı→Kınama→Aylıktan Kesme) ZATEN başkanın tarif ettiği gibi → DOKUNULMADI. **D1 yapıldı (ÖDÜL trigger değişti):** Takdir artık "tüm kartlar kutu≥4" yerine **kanunun deneme sınavı %100 (dogru===toplam)** geçilince veriliyor. `sicil-servis.ts` ödül bloğu `getSinavSonuclari`'dan besleniyor (getStudyCards/OGRENILDI_KUTU çıktı); `odulDegerlendir`+başarı/üstün merdiveni AYNEN (idempotent `takdir:<lawId>`). `sicil.ts` takdir metni güncellendi. Yeni **`components/sicil/takdir-belgesi.tsx`** (antetli görsel sertifika: madalya + EĞİTİM KOMUTANLIĞI + TAKDİR BELGESİ + kanun adı + tarih). `sinav.tsx`: %100 bitince kayıttan sonra `degerlendirSicil()` (takdir düşer) + Sonuç ekranında sertifika gösterilir. Yeni DB fonksiyonu YOK → 4-dosya senkron gerekmedi, web/native parite korunur. tsc 0. **Sıradaki olası polish:** Evsaf'ta takdir kaydına basınca tam sertifikayı tekrar aç.
 >

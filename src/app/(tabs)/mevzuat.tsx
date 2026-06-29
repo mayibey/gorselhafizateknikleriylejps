@@ -5,6 +5,7 @@ import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
+import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
@@ -197,10 +198,10 @@ export default function MevzuatScreen() {
       </View>
 
       {blok === 'brans' ? (
-        <DurumKutu
-          ikon="hammer-wrench"
-          baslik="Çok yakında"
-          aciklama="Branşına özel mevzuat içeriği hazırlanıyor."
+        <Yakinda
+          ikon="shield-star-outline"
+          baslik="Branş eğitimi yolda"
+          aciklama="Jandarma ve Sahil Güvenlik'e özel mevzuat içeriği hazırlanıyor. Şimdilik müşterek kanunlardan çalışmaya devam et."
         />
       ) : (
         <>
@@ -428,7 +429,7 @@ function DevamEtKart({
       <View style={st.devamBaslikSatir}>
         <View style={st.devamBaslikSol}>
           <MaterialCommunityIcons name="bookmark" size={16} color={Palette.altinKoyu} />
-          <AppText variant="etiket" bold color="altinKoyu" style={st.devamEtiket}>
+          <AppText variant="etiket" bold color="altinMetin" style={st.devamEtiket}>
             {siradaki ? '🎖️ SIRADAKİ KANUN' : 'DEVAM ET'}
           </AppText>
         </View>
@@ -458,7 +459,7 @@ function DevamEtKart({
           </AppText>
           <View style={st.barSatir}>
             <Bar yuzde={yuzde} />
-            <AppText variant="etiket" bold color="altinKoyu" style={st.barYuzde}>
+            <AppText variant="etiket" bold color="altinMetin" style={st.barYuzde}>
               %{yuzde}
             </AppText>
           </View>
@@ -540,7 +541,7 @@ function KanunSatir({
       </View>
       <View style={st.barSatir}>
         <Bar yuzde={yuzde} />
-        <AppText variant="etiket" bold color="altinKoyu" style={st.barYuzde}>
+        <AppText variant="etiket" bold color="altinMetin" style={st.barYuzde}>
           %{yuzde}
         </AppText>
       </View>
@@ -570,7 +571,7 @@ function KanunSatir({
           <View style={st.satirSag}>
             <View style={st.baslaBtn}>
               <MaterialCommunityIcons name="play" size={15} color={Palette.altinKoyu} />
-              <AppText variant="etiket" bold color="altinKoyu">
+              <AppText variant="etiket" bold color="altinMetin">
                 {bos ? 'Başla' : 'Devam'}
               </AppText>
             </View>

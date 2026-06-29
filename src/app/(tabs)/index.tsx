@@ -425,7 +425,7 @@ export default function KarargahScreen() {
               {gunMadde.law_ad}
             </AppText>
             <View style={styles.incele}>
-              <AppText variant="etiket" bold color="altinKoyu">
+              <AppText variant="etiket" bold color="altinMetin">
                 İncele
               </AppText>
               <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.altinKoyu} />

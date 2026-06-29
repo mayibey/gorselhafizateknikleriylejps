@@ -24,7 +24,8 @@ export const Palette = {
 
   // Altın (şampanya)
   altin: '#C9A227', // ana altın accent
-  altinKoyu: '#B88917', // koyu altın (svg/okunur)
+  altinKoyu: '#B88917', // koyu altın (ikon/svg + KOYU ekranda yazı)
+  altinMetin: '#8A6510', // krem üstünde altın YAZI (WCAG AA ≈4.5:1; altinKoyu metin olarak soluktu)
   altinSolukYuzey: '#F3E7C1', // altın soluk yüzey (rozet/pill arka)
 
   // İlerleme

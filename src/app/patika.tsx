@@ -252,7 +252,7 @@ export default function PatikaScreen() {
       <View style={st.ustBar}>
         <View style={st.statChip}>
           <MaterialCommunityIcons name="fire" size={18} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" bold color="altinKoyu">
+          <AppText variant="kucuk" bold color="altinMetin">
             {streak === null ? '—' : streak}
           </AppText>
         </View>
@@ -273,7 +273,7 @@ export default function PatikaScreen() {
           {kanunAd ?? 'Mevzuat'}
         </AppText>
         {!bolumsuz && dugumler !== null ? (
-          <AppText variant="kucuk" bold color="altinKoyu">
+          <AppText variant="kucuk" bold color="altinMetin">
             {toplamKart === 0 ? '0 kart' : `${calisilanKart}/${toplamKart} kart`}
           </AppText>
         ) : null}

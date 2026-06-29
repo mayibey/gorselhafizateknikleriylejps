@@ -184,7 +184,7 @@ export default function SinavScreen() {
             </View>
 
             {soru!.kaynak ? (
-              <AppText variant="etiket" bold color="altinKoyu">
+              <AppText variant="etiket" bold color="altinMetin">
                 {soru!.kaynak}
               </AppText>
             ) : null}
@@ -318,7 +318,7 @@ function Sonuc({
   if (yuzde === 100) {
     return (
       <ScrollView style={styles.kolon} contentContainerStyle={styles.sonucContent}>
-        <AppText variant="altBaslik" bold color="altinKoyu" style={styles.tamIsabet}>
+        <AppText variant="altBaslik" bold color="altinMetin" style={styles.tamIsabet}>
           🎖️ Tam isabet — {dogru}/{toplam}
         </AppText>
         <TakdirBelgesi kanunAd={lawAd ?? 'Bu kanun'} tarih={bugunISO()} />

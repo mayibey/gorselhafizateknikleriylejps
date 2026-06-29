@@ -5,6 +5,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
+import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
@@ -111,10 +112,10 @@ export default function TatbikatScreen() {
       </View>
 
       {blok === 'brans' ? (
-        <DurumKutu
-          ikon="hammer-wrench"
-          baslik="Çok yakında"
-          aciklama="Branşına özel deneme sınavları hazırlanıyor."
+        <Yakinda
+          ikon="shield-star-outline"
+          baslik="Branş sınavları yolda"
+          aciklama="Branşına özel deneme sınavları hazırlanıyor. Şimdilik müşterek kanunların sınavlarıyla kendini sına."
         />
       ) : hata ? (
         <DurumKutu
@@ -207,7 +208,7 @@ function KanunSatir({
 
       <View style={styles.altSatir}>
         <MaterialCommunityIcons name="clipboard-check-outline" size={16} color={Palette.altinKoyu} />
-        <AppText variant="kucuk" bold color="altinKoyu">
+        <AppText variant="kucuk" bold color="altinMetin">
           Deneme Sınavı · {soruSayisi} soru
         </AppText>
       </View>
