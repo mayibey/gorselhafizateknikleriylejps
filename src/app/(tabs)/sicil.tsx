@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
@@ -21,6 +21,8 @@ import {
   sicilSifirla,
 } from '@/db/database';
 import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
+import { type Cinsiyet, type Profil, profilGetir } from '@/lib/auth';
+import { useAuth } from '@/lib/auth-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
@@ -92,6 +94,8 @@ export default function SicilScreen() {
         </AppText>
         <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
       </Pressable>
+
+      <KisiselBilgiler />
 
       {hata ? (
         <EmptyState
@@ -172,6 +176,78 @@ export default function SicilScreen() {
         {RESMI_BAGLANTI_YOK}
       </AppText>
     </Screen>
+  );
+}
+
+// --- Kişisel Bilgiler (Evsaf) ---
+
+const CINSIYET_AD: Record<Cinsiyet, string> = {
+  kadin: 'Kadın',
+  erkek: 'Erkek',
+  belirtmek_istemiyorum: 'Belirtilmedi',
+};
+
+function tarihTR(iso: string | null): string | null {
+  if (!iso) return null;
+  const [y, a, g] = iso.split('-');
+  return y && a && g ? `${g}.${a}.${y}` : iso;
+}
+
+/** Evsaf üst kartı: hesap + ad/soyad/telefon/doğum/cinsiyet (profilden çekilir). */
+function KisiselBilgiler() {
+  const { kullanici, hazir } = useAuth();
+  const [profil, setProfil] = useState<Profil | null>(null);
+
+  useEffect(() => {
+    if (!kullanici) {
+      setProfil(null);
+      return;
+    }
+    void profilGetir().then(setProfil);
+  }, [kullanici]);
+
+  if (!hazir || !kullanici) return null; // üyelik kapalıysa gösterme
+
+  const adSoyad = `${profil?.ad ?? ''} ${profil?.soyad ?? ''}`.trim();
+  const satirlar: { ikon: IconName; etiket: string; deger: string | null }[] = [
+    { ikon: 'email-outline', etiket: 'E-posta', deger: kullanici.email },
+    { ikon: 'phone-outline', etiket: 'Telefon', deger: profil?.telefon ?? null },
+    { ikon: 'calendar-outline', etiket: 'Doğum tarihi', deger: tarihTR(profil?.dogumTarihi ?? null) },
+    {
+      ikon: 'gender-male-female',
+      etiket: 'Cinsiyet',
+      deger: profil?.cinsiyet ? CINSIYET_AD[profil.cinsiyet] : null,
+    },
+  ];
+
+  return (
+    <View style={styles.istatistikKart}>
+      <View style={styles.kisiUst}>
+        <View style={styles.kisiAvatar}>
+          <MaterialCommunityIcons name="account" size={28} color={Palette.lacivert} />
+        </View>
+        <View style={styles.kisiAdBlok}>
+          <AppText variant="govde" bold color="lacivert" numberOfLines={1}>
+            {adSoyad || 'Hesabım'}
+          </AppText>
+          <AppText variant="etiket" color="solukMetin">
+            KİŞİSEL BİLGİLER
+          </AppText>
+        </View>
+      </View>
+      <View style={styles.kisiAyrac} />
+      {satirlar.map((s) => (
+        <View key={s.etiket} style={styles.kisiSatir}>
+          <MaterialCommunityIcons name={s.ikon} size={18} color={Palette.altinKoyu} />
+          <AppText variant="kucuk" color="solukMetin" style={styles.kisiEtiket}>
+            {s.etiket}
+          </AppText>
+          <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1} style={styles.kisiDeger}>
+            {s.deger ?? '—'}
+          </AppText>
+        </View>
+      ))}
+    </View>
   );
 }
 
@@ -421,6 +497,39 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.three,
     gap: Spacing.two,
+  },
+  kisiUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+  },
+  kisiAvatar: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: Palette.altinSolukYuzey,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  kisiAdBlok: {
+    flex: 1,
+    gap: Spacing.half,
+  },
+  kisiAyrac: {
+    height: 1,
+    backgroundColor: Palette.ayirici,
+  },
+  kisiSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  kisiEtiket: {
+    width: 96,
+  },
+  kisiDeger: {
+    flex: 1,
+    textAlign: 'right',
   },
   statSatir: {
     flexDirection: 'row',

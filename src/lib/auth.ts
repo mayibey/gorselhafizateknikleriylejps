@@ -142,7 +142,19 @@ export async function yeniSifreBelirle(sifre: string): Promise<void> {
 
 // --- Profil (ad/soyad/telefon) + mükerrer hesap engeli ---
 
-export type Profil = { ad: string | null; soyad: string | null; telefon: string | null };
+export type Cinsiyet = 'kadin' | 'erkek' | 'belirtmek_istemiyorum';
+export type Profil = {
+  ad: string | null;
+  soyad: string | null;
+  telefon: string | null;
+  dogumTarihi: string | null; // YYYY-MM-DD
+  cinsiyet: Cinsiyet | null;
+};
+
+/** Profil eksiksiz mi (zorunlu alanlar dolu) — gate/akış kararı. */
+export function profilTamMi(p: Profil | null): boolean {
+  return !!(p?.ad && p?.soyad && p?.telefon && p?.dogumTarihi && p?.cinsiyet);
+}
 
 /** E-posta ZATEN kayıtlı mı (mükerrer hesabı önlemek için signup öncesi kontrol). */
 export async function epostaKullanimda(eposta: string): Promise<boolean> {
@@ -159,27 +171,44 @@ export async function epostaKullanimda(eposta: string): Promise<boolean> {
 export async function profilGetir(): Promise<Profil | null> {
   if (!supabaseHazir || !supabase) return null;
   try {
-    const { data } = await supabase.from('profiles').select('ad, soyad, telefon').single();
+    const { data } = await supabase
+      .from('profiles')
+      .select('ad, soyad, telefon, dogum_tarihi, cinsiyet')
+      .single();
     if (!data) return null;
     return {
       ad: (data.ad as string | null) ?? null,
       soyad: (data.soyad as string | null) ?? null,
       telefon: (data.telefon as string | null) ?? null,
+      dogumTarihi: (data.dogum_tarihi as string | null) ?? null,
+      cinsiyet: (data.cinsiyet as Cinsiyet | null) ?? null,
     };
   } catch {
     return null;
   }
 }
 
-/** Profil bilgilerini kaydeder (ad/soyad/telefon). */
-export async function profilKaydet(ad: string, soyad: string, telefon: string): Promise<void> {
+/** Profil bilgilerini kaydeder (ad/soyad/telefon/doğum tarihi/cinsiyet). */
+export async function profilKaydet(p: {
+  ad: string;
+  soyad: string;
+  telefon: string;
+  dogumTarihi: string;
+  cinsiyet: Cinsiyet;
+}): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
   const { data: u } = await supabase.auth.getUser();
   const id = u.user?.id;
   if (!id) throw new Error('Oturum bulunamadı.');
   const { error } = await supabase
     .from('profiles')
-    .update({ ad: ad.trim(), soyad: soyad.trim(), telefon: telefon.trim() })
+    .update({
+      ad: p.ad.trim(),
+      soyad: p.soyad.trim(),
+      telefon: p.telefon.trim(),
+      dogum_tarihi: p.dogumTarihi,
+      cinsiyet: p.cinsiyet,
+    })
     .eq('id', id);
   if (error) throw error;
 }

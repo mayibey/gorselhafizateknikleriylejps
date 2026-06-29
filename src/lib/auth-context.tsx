@@ -15,6 +15,7 @@ import {
   hesapGeriGetir,
   hesapSilmeTalebiKur,
   profilGetir,
+  profilTamMi,
   silmeTalepTarihiGetir,
 } from '@/lib/auth';
 import { senkronKaydet, senkronYukle } from '@/lib/senkron';
@@ -45,7 +46,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   async function profilYenile(): Promise<void> {
     const p = await profilGetir();
-    setProfilTamam(!!(p?.ad && p?.soyad && p?.telefon));
+    setProfilTamam(profilTamMi(p));
   }
 
   useEffect(() => {
@@ -63,7 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
       await senkronYukle();
       const p = await profilGetir();
-      setProfilTamam(!!(p?.ad && p?.soyad && p?.telefon));
+      setProfilTamam(profilTamMi(p));
     }
     // İlk oturumu oku.
     void sb.auth.getSession().then(async ({ data }) => {
