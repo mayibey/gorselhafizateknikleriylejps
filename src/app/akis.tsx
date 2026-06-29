@@ -18,6 +18,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { KART_GORSELLERI } from '../assets/kart-gorselleri';
 // Gerçek ses (mp3) registry — kartın gorsel_yolu ile anahtarlı (varsa TTS yerine çalar).
 import { KART_SESLERI } from '../assets/kart-sesleri';
+import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
 import { SesOynatici } from '@/components/card-flow/ses-oynatici';
 import { StudyCard } from '@/components/card-flow/study-card';
 import { TtsBar } from '@/components/card-flow/tts-bar';
@@ -37,7 +38,7 @@ import {
   recordReview,
 } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
-import { sinavVarMi } from '@/lib/sinav';
+import { getSinavSorulari, type KartSoru, sinavVarMi } from '@/lib/sinav';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -70,10 +71,15 @@ export default function AkisScreen() {
   const zayifModu = mod === 'zayif'; // geri-bes oturumu (zayıf mevzi kuyruğu)
   // Patika/kanun/zayıf modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
   const tekKanun = bolumModu || kanunModu || zayifModu;
+  // Öğrenme modu (kanun/bölüm) → akış bitince "aktif hatırlama" mini-quiz çıkar (zayıf'ta YOK).
+  const ogrenmeModu = kanunModu || bolumModu;
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hata, setHata] = useState(false);
   const [index, setIndex] = useState(0);
   const [cozulen, setCozulen] = useState<Cozulen>({ tekrar: 0, yeni: 0 });
+  // Aktif hatırlama: akış bitince yüklenen 2-3 soru + tamamlanma bayrağı.
+  const [hatirlaSorular, setHatirlaSorular] = useState<KartSoru[] | null>(null);
+  const [hatirlaBitti, setHatirlaBitti] = useState(false);
   const [cevapHatasi, setCevapHatasi] = useState(false);
   // Sesli anlatım sonuna kadar okununca true → "sıradakine geç" mesajı çıkar.
   const [anlatimBitti, setAnlatimBitti] = useState(false);
@@ -143,6 +149,8 @@ export default function AkisScreen() {
     setQueue(null);
     setIndex(0);
     setCozulen({ tekrar: 0, yeni: 0 });
+    setHatirlaSorular(null);
+    setHatirlaBitti(false);
     // Öncelik: zayıf (geri-bes) > bölüm > kanun > günlük kuyruk. (Mevcut davranış korunur.)
     const p = zayifModu
       ? getZayifKuyruk()
@@ -197,6 +205,21 @@ export default function AkisScreen() {
   const bitenLawId = kanunModu ? Number(lawId) : bolumModu ? (queue?.[0]?.law_id ?? null) : null;
   const sinavGoster =
     bitenLawId != null && !Number.isNaN(bitenLawId) && sinavVarMi(bitenLawId);
+
+  // Aktif hatırlama: akış bitince (öğrenme modunda) o kanunun sorularından 2-3 tane yükle (bir kez).
+  useEffect(() => {
+    if (!bitti || !ogrenmeModu || bitenLawId == null || Number.isNaN(bitenLawId)) return;
+    if (hatirlaBitti || hatirlaSorular !== null) return;
+    const hepsi = getSinavSorulari(bitenLawId);
+    if (hepsi.length === 0) {
+      setHatirlaBitti(true); // soru yoksa hatırlamayı atla → doğrudan tamamlandı
+      return;
+    }
+    setHatirlaSorular([...hepsi].sort(() => Math.random() - 0.5).slice(0, Math.min(3, hepsi.length)));
+  }, [bitti, ogrenmeModu, bitenLawId, hatirlaBitti, hatirlaSorular]);
+
+  const hatirlaGoster =
+    bitti && ogrenmeModu && !hatirlaBitti && !!hatirlaSorular && hatirlaSorular.length > 0;
   // Patika/kanun modunda geri = patika (Mevzuat → patika → akış); günlükte Karargah.
   const geriEtiket = tekKanun ? 'Geri dön' : "Karargah'a dön";
   const ozetMetin = tekKanun
@@ -296,6 +319,11 @@ export default function AkisScreen() {
             }
             buton={{ etiket: geriEtiket, onPress: () => router.back() }}
           />
+        </View>
+      ) : bitti && hatirlaGoster ? (
+        // Akış bitti → önce AKTİF HATIRLAMA (2-3 mini soru), sonra tamamlandı ekranı.
+        <View style={styles.durumKolon}>
+          <HatirlaQuiz sorular={hatirlaSorular!} onTamamla={() => setHatirlaBitti(true)} />
         </View>
       ) : bitti ? (
         // Çalışıp tükenince: tamamlandı.

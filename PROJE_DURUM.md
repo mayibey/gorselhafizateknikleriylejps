@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### ▶ 29 Haz — Orta iş: Aktif hatırlama (kart akışı sonu mini-quiz) [P1-a]
+> Testing-effect: kart akışı ÖĞRENME modunda (kanun/bölüm) bitince, o kanunun sorularından **2-3 rastgele "Hatırlama" sorusu** çıkar, sonra mevcut "tamamladın" + sınav CTA. Zayıf modunda YOK. Yeni `components/card-flow/hatirla-quiz.tsx` (krem temalı — akış durumKolon'u krem; soru+şık+açıklama, salt self-test, puan cezası yok). `akis.tsx`: `ogrenmeModu` + `hatirlaSorular`/`hatirlaBitti` state + yükleme effect (`getSinavSorulari`, soru yoksa atla) + `bitti && hatirlaGoster` render dalı + loader reset. Yeni DB fonksiyonu yok → parite korunur. tsc 0.
+>
 > ### ▶ 29 Haz — Küçük iş: Onboarding tanıtım/değer adımı (P1-c)
 > İlk açılışa branş seçiminden ÖNCE bir **tanıtım adımı** eklendi (`onboarding.tsx` `Tanitim` + `tanitimGecildi` state): marka + "Kanunları görselle, kalıcı öğren" + 3 değer (görsel kart / deneme sınavı+takdir / sicil-ödül) + "Başla". Ürünün ana farkı ilk ekranda görünür → drop-off azalır. tsc 0. (P1-a "aktif hatırlama" = kart akışını değiştiren ORTA iş, küçük değil → parkta.)
 >
