@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### ▶ 29 Haz — Küçük iş: Onboarding tanıtım/değer adımı (P1-c)
+> İlk açılışa branş seçiminden ÖNCE bir **tanıtım adımı** eklendi (`onboarding.tsx` `Tanitim` + `tanitimGecildi` state): marka + "Kanunları görselle, kalıcı öğren" + 3 değer (görsel kart / deneme sınavı+takdir / sicil-ödül) + "Başla". Ürünün ana farkı ilk ekranda görünür → drop-off azalır. tsc 0. (P1-a "aktif hatırlama" = kart akışını değiştiren ORTA iş, küçük değil → parkta.)
+>
 > ### ▶ 29 Haz — Küçük işler: sınav→zayıf köprüsü + test paneli __DEV__'e geri + belge metin/Türkçe
 > **Sınav→eylem köprüsü (P1-b):** sınav sonucu <%100 ise `Sonuc`'ta **"Yanlış maddeleri çalış"** CTA → `router.replace('/akis?mod=zayif')` (yanlışlar zaten zayıf havuza düşüyordu → döngü kapandı). EmptyState yerine özel skor+3 buton düzeni. **Test paneli __DEV__'e geri alındı** (expo start'ta görünür, yayında gizli). **Belge metinleri:** "EĞİTİM KOMUTANLIĞI"→"MEVZU JSPS BİRLİĞİ" (impersonation riski), 3. şahıs→"tarafınıza", + Türkçe büyük harf düzeltmesi (`trUpper` i→İ; "TAKDIR"→"TAKDİR"). Hepsi tsc 0.
 >
