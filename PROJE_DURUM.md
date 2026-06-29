@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### ▶ 29 Haz — Karargah geri sayım + kontrast (gece değerlendirmesi sonrası başkan kararları)
+> Gece otonom değerlendirmesinin (docs/DEGERLENDIRME/) ardından başkan kararları → `docs/DEGERLENDIRME/00_KARARLAR_BASKAN.md`. Bu turda 2 uygulama değişikliği:
+> **(1) Kontrast/okunabilirlik (değerlendirme #7):** `theme.ts` `solukMetin #8A7D62→#6E6047` (krem üstünde 3.67:1→≈4.6:1, WCAG AA) — uygulamanın VARSAYILAN ikincil yazı rengi, 60+ yerde (Evsaf/Karargah/Mevzuat/Ara/Giriş/Tatbikat/madde-sheet/Patika) tek dosyada düzeldi. `amber #B5791C→#8A5A12` (TEKRAR ZAMANI uyarı bandı). `altinKoyu` DOKUNULMADI (çoğu ikon/SVG rengi; yazı-olarak-altın per-callsite işi, sonraya). "bi yap görelim olmazsa döneriz" onayıyla.
+> **(2) Karargah en üste JSPS sınavına CANLI geri sayım:** `index.tsx` `SinavGeriSayim` bileşeni (gün/saat/dakika/saniye, her saniye `setInterval` ile işler, koyu lacivert şerit + altın tabular rakamlar — komuta-konsolu aksanı). Hedef tek sabit: `SINAV_TARIHI = new Date(2026,8,2,10,0,0)` (2 Eyl 2026 ≈65 gün, PLACEHOLDER — başkan gerçek tarih/saati verince o satır değişir). tsc 0.
+> **Bekleyen kararlar (00_KARARLAR_BASKAN):** SRS→kaldır, Bildirim→gerçek yap (sırada), Ödül/Ceza→komple revize (takdir belgesi + geri-besleme-görevi temelli ceza), Branş kalsın + Tatbikat kilidi açılsın, %100 offline iddiası kalkacak.
+>
 > ### ▶ 29 Haz — Tatbikat: kanun no kutusu tek satır
 > Başkan: Tatbikat kanun listesinde soldaki monogram kutusunda kanun no'su (örn. 5237) kutuya sığmayıp alt satıra taşıyordu. `Monogram` AppText'ine `numberOfLines={1}` + `adjustsFontSizeToFit` + `monoNo` stili (width %100, textAlign center) → ara.tsx `sikMonoNo` deseni. Artık küçülerek tek satır sığar. tsc 0.
 >
