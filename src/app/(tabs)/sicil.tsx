@@ -1,8 +1,9 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
+import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
@@ -183,7 +184,7 @@ function SicilBolum({
   zayifSayisi: number;
   onGeriBes: () => void;
 }) {
-  const [acikId, setAcikId] = useState<number | null>(null);
+  const [secili, setSecili] = useState<SicilKaydi | null>(null);
   if (sicil === null) {
     return (
       <AppText variant="kucuk" color="solukMetin">
@@ -223,11 +224,12 @@ function SicilBolum({
       ) : (
         kayitlar.map((k) => {
           const b = DERECE_BILGI[k.derece];
-          const acik = acikId === k.id;
           return (
             <Pressable
               key={k.id}
-              onPress={() => setAcikId(acik ? null : k.id)}
+              onPress={() => setSecili(k)}
+              accessibilityRole="button"
+              accessibilityLabel={`${k.baslik} belgesini aç`}
               style={({ pressed }) => [styles.sicilSatir, pressed && styles.pressed]}>
               <View style={styles.sicilUst}>
                 <MaterialCommunityIcons name={b.ikon} size={20} color={Palette[b.renk]} />
@@ -238,17 +240,41 @@ function SicilBolum({
                   {tarihFmt(k.tarih)}
                 </AppText>
               </View>
-              <AppText
-                variant="etiket"
-                color="solukMetin"
-                numberOfLines={acik ? undefined : 1}
-                style={acik ? styles.sicilMetin : undefined}>
-                {acik ? k.metin : k.sebep}
-              </AppText>
+              <View style={styles.sicilAltSatir}>
+                <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.sicilSebep}>
+                  {k.sebep}
+                </AppText>
+                <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+              </View>
             </Pressable>
           );
         })
       )}
+
+      {/* Görsel belge modalı — kayda basınca tam sertifika/ceza yazısı. */}
+      <Modal
+        visible={secili !== null}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setSecili(null)}>
+        <Pressable style={styles.modalKatman} onPress={() => setSecili(null)}>
+          <ScrollView
+            style={styles.modalScroll}
+            contentContainerStyle={styles.modalIcerik}
+            showsVerticalScrollIndicator={false}>
+            <Pressable onPress={() => {}}>
+              {secili ? <SicilBelgesi kayit={secili} /> : null}
+              <Pressable
+                style={({ pressed }) => [styles.modalKapat, pressed && styles.pressed]}
+                onPress={() => setSecili(null)}>
+                <AppText variant="govde" bold color="beyaz">
+                  Kapat
+                </AppText>
+              </Pressable>
+            </Pressable>
+          </ScrollView>
+        </Pressable>
+      </Modal>
     </>
   );
 }
@@ -467,9 +493,33 @@ const styles = StyleSheet.create({
   sicilAd: {
     flex: 1,
   },
-  sicilMetin: {
-    marginTop: Spacing.one,
-    lineHeight: 18,
+  sicilAltSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  sicilSebep: {
+    flex: 1,
+  },
+  modalKatman: {
+    flex: 1,
+    backgroundColor: 'rgba(11,31,58,0.55)',
+    justifyContent: 'center',
+  },
+  modalScroll: {
+    flexGrow: 0,
+    maxHeight: '90%',
+  },
+  modalIcerik: {
+    padding: Spacing.four,
+    gap: Spacing.three,
+  },
+  modalKapat: {
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    alignItems: 'center',
+    marginTop: Spacing.three,
   },
   zayifCalisBtn: {
     flexDirection: 'row',
