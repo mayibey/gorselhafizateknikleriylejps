@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### ▶ 29 Haz — Yol haritası A+B: Tatbikat kilidi açıldı + m.25 içerik düzeltme
+> Gece değerlendirmesi yol haritasından (sıralı): **A) Tatbikat deneme sınavı kilidi KALDIRILDI** (her kanun sınavı her zaman açık; kilit yerine "Hazırlık: X/Y kart çalışıldı" bilgi satırı; `tatbikat.tsx` onCalis/kanunaGit/satirKilitli temizlendi). **B) İçerik hatası m.25 DÜZELTİLDİ:** `Jandarma Teşkilat Yön m.25` küme-kartı m.25 yerine m.26+ metnini gösteriyordu (12_ICERIK_TAM_TARAMA B2); resmî m.25 metni (mevzuat 6845, tutuklu/hükümlü soruşturma-duruşmaya götürme) `MADDE_METINLERI`'ne override eklendi (KART_MADDE_METINLERI'nden önce gelir). tsc 0. Sırada C (SRS kaldır).
+>
 > ### ▶ 29 Haz — Bildirim: dakika hassasiyeti + 5sn test butonu
 > Başkan: kullanıcı istediği saate (sadece saat değil DAKİKA da) bildirim ayarlayabilmeli + test. `BildirimAyar`'a `sabahDakika`/`geceDakika` (0-59, varsayılan 0) eklendi; `planla` `gunlukKur(saat, dakika, …)` ile zamanlar. `egitim-plani.tsx` `SaatSatir` artık SAAT + DAKİKA (5'er adım) iki stepper + büyük "HH:MM" gösterimi. Yeni `testBildirimi()` (TIME_INTERVAL 5sn) + "Test bildirimi gönder (5 sn)" butonu → kurulumu anında doğrula. Fırsat etiketi güncellendi (sabit 11-18 → "sabah-gece arası rastgele"). google-services.json kuruldu (proje mevzu-jsps-59639, paket doğru). tsc 0.
 >
