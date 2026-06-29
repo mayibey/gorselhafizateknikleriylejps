@@ -117,12 +117,26 @@ export async function epostaKayit(
   return { dogrulamaGerek: !data.session };
 }
 
-/** Şifre sıfırlama e-postası gönderir. */
+/** Şifre sıfırlama e-postası gönderir. Link app'e `mevzu://sifre-yenile?code=...` ile döner. */
 export async function sifreSifirla(eposta: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
   const { error } = await supabase.auth.resetPasswordForEmail(eposta.trim(), {
-    redirectTo: makeRedirectUri({ scheme: 'mevzu' }),
+    redirectTo: makeRedirectUri({ scheme: 'mevzu', path: 'sifre-yenile' }),
   });
+  if (error) throw error;
+}
+
+/** Şifre-yenileme linkindeki PKCE kodunu (kurtarma) oturuma çevirir. */
+export async function kurtarmaKoduDegistir(code: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.exchangeCodeForSession(code);
+  if (error) throw error;
+}
+
+/** Oturum açıkken yeni şifre belirler (şifre-yenileme ekranı). */
+export async function yeniSifreBelirle(sifre: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.updateUser({ password: sifre });
   if (error) throw error;
 }
 

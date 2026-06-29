@@ -97,6 +97,7 @@ function RootNavigator() {
   // Guard: giriş yoksa veya branş/rütbe yoksa onboarding'e götür.
   useEffect(() => {
     if (yukleniyor) return;
+    if (segments[0] === 'sifre-yenile') return; // şifre kurtarma akışı kendi oturumunu kurar
     const onboardingDe = segments[0] === 'onboarding';
     if (eksik && !onboardingDe) router.replace('/onboarding');
     else if (!eksik && onboardingDe) router.replace('/');
@@ -117,6 +118,7 @@ function RootNavigator() {
         <Stack.Screen name="yasal" />
         <Stack.Screen name="ayarlar" />
         <Stack.Screen name="onboarding" />
+        <Stack.Screen name="sifre-yenile" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
         <Stack.Screen name="rutbe-sec" options={{ presentation: 'modal' }} />
         <Stack.Screen name="giris" options={{ presentation: 'modal' }} />
