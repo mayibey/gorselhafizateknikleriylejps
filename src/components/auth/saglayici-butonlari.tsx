@@ -55,7 +55,12 @@ const styles = StyleSheet.create({
     borderColor: Palette.kenarlik,
     borderWidth: 1,
     borderRadius: Radius.m,
-    height: 52,
+    height: 54,
+    shadowColor: Palette.kartGolge,
+    shadowOpacity: 1,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
   },
   logo: {
     width: 22,

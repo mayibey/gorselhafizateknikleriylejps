@@ -47,7 +47,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
-    height: 52,
+    height: 54,
+    shadowColor: Palette.kartGolge,
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
   },
   girdi: {
     flex: 1,

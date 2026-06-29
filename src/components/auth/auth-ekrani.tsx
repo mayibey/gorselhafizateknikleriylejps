@@ -18,7 +18,10 @@ import { useAuth } from '@/lib/auth-context';
 import { epostaHatasi, sifreHatasi } from '@/lib/dogrulama';
 
 import { AdimGostergesi } from './adim-gostergesi';
+import { AnaButon } from './ana-buton';
+import { Arma } from './arma';
 import { AuthGirdi } from './auth-girdi';
+import { DekoratifArkaplan } from './dekoratif-arkaplan';
 import { KarakterFigur } from './karakter-figur';
 import { SaglayiciButonlari } from './saglayici-butonlari';
 
@@ -116,11 +119,12 @@ export function AuthEkrani() {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+      <DekoratifArkaplan />
       <ScrollView contentContainerStyle={styles.icerik} keyboardShouldPersistTaps="handled">
-        {/* Üst: arma + karakter */}
+        {/* Üst: arma (orta) + karakter (sağ) */}
         <View style={styles.ust}>
-          <View style={styles.arma}>
-            <MaterialCommunityIcons name="shield-star" size={30} color={Palette.altinKoyu} />
+          <View style={styles.armaSar}>
+            <Arma />
           </View>
           <KarakterFigur style={styles.karakter} />
         </View>
@@ -190,15 +194,12 @@ export function AuthEkrani() {
             </Pressable>
           ) : null}
 
-          <Pressable
-            disabled={mesgul}
-            style={({ pressed }) => [styles.anaBtn, pressed && styles.pressed, mesgul && styles.pasif]}
-            onPress={() => void gonder()}>
-            <AppText variant="govde" bold color="beyaz">
-              {kayitMi ? 'Devam et' : 'Giriş yap'}
-            </AppText>
-            <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.beyaz} />
-          </Pressable>
+          <AnaButon
+            etiket={kayitMi ? 'Devam et' : 'Giriş yap'}
+            onPress={() => void gonder()}
+            mesgul={mesgul}
+          />
+          <View style={styles.btnArasi} />
 
           {mesaj ? (
             <AppText
@@ -266,38 +267,31 @@ const styles = StyleSheet.create({
     maxWidth: MaxContentWidth,
     alignSelf: 'center',
     paddingHorizontal: Spacing.four,
+    paddingTop: Spacing.two,
     paddingBottom: Spacing.four,
-    gap: Spacing.two,
+    gap: 12,
   },
   ust: {
-    height: 150,
+    height: 140,
     justifyContent: 'flex-start',
   },
-  arma: {
+  armaSar: {
     position: 'absolute',
     top: Spacing.two,
     alignSelf: 'center',
-    width: 52,
-    height: 52,
-    borderRadius: 26,
-    backgroundColor: Palette.altinSolukYuzey,
-    borderWidth: 1,
-    borderColor: Palette.altin,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   karakter: {
     position: 'absolute',
-    right: -Spacing.two,
+    right: -Spacing.three,
     top: 0,
   },
   altyazi: {
     lineHeight: 20,
-    maxWidth: '72%',
+    maxWidth: '64%',
   },
   form: {
     gap: Spacing.two,
-    marginTop: Spacing.one,
+    marginTop: Spacing.two,
   },
   unuttumSar: {
     alignSelf: 'flex-end',
@@ -324,15 +318,8 @@ const styles = StyleSheet.create({
     flex: 1,
     lineHeight: 18,
   },
-  anaBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.one,
-    backgroundColor: Palette.lacivert,
-    borderRadius: Radius.m,
-    height: 52,
-    marginTop: Spacing.one,
+  btnArasi: {
+    height: Spacing.one,
   },
   mesaj: {
     textAlign: 'center',
@@ -341,7 +328,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
-    marginVertical: Spacing.one,
+    marginVertical: Spacing.two,
   },
   ayracCizgi: {
     flex: 1,

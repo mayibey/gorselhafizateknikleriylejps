@@ -1,4 +1,3 @@
-import DateTimePicker, { type DateTimePickerEvent } from '@react-native-community/datetimepicker';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
@@ -6,8 +5,12 @@ import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'reac
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AdimGostergesi } from '@/components/auth/adim-gostergesi';
+import { AnaButon } from '@/components/auth/ana-buton';
+import { Arma } from '@/components/auth/arma';
 import { AuthEkrani } from '@/components/auth/auth-ekrani';
 import { AuthGirdi } from '@/components/auth/auth-girdi';
+import { DekoratifArkaplan } from '@/components/auth/dekoratif-arkaplan';
+import { DogumTarihiSecici } from '@/components/auth/dogum-tarihi-secici';
 import { KarakterFigur } from '@/components/auth/karakter-figur';
 import { BransSecici } from '@/components/brans-secici';
 import { RutbeSecici } from '@/components/rutbe-secici';
@@ -87,9 +90,10 @@ const DEGERLER: { ikon: keyof typeof MaterialCommunityIcons.glyphMap; baslik: st
 function Tanitim({ onBasla }: { onBasla: () => void }) {
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+      <DekoratifArkaplan />
       <ScrollView contentContainerStyle={styles.icerik}>
-        <View style={styles.marka}>
-          <MaterialCommunityIcons name="shield-star" size={40} color={Palette.altinKoyu} />
+        <View style={styles.markaArma}>
+          <Arma />
           <AppText variant="etiket" bold color="altinMetin" style={styles.markaAd}>
             MEVZU · JSPS
           </AppText>
@@ -120,11 +124,7 @@ function Tanitim({ onBasla }: { onBasla: () => void }) {
         </View>
       </ScrollView>
       <View style={styles.altBlok}>
-        <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.pressed]} onPress={onBasla}>
-          <AppText variant="govde" bold color="beyaz">
-            Başla
-          </AppText>
-        </Pressable>
+        <AnaButon etiket="Başla" onPress={onBasla} />
       </View>
     </SafeAreaView>
   );
@@ -152,11 +152,6 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
   const [mesgul, setMesgul] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
 
-  function tarihSecildi(e: DateTimePickerEvent, d?: Date) {
-    setTarihAcik(false);
-    if (e.type === 'set' && d) setDogum(d);
-  }
-
   async function kaydet() {
     const h = adHatasi(ad, 'Ad') ?? adHatasi(soyad, 'Soyad') ?? telefonHatasi(telefon);
     if (h) return setHata(h);
@@ -176,97 +171,76 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+      <DekoratifArkaplan />
       <ScrollView contentContainerStyle={styles.profilIcerik} keyboardShouldPersistTaps="handled">
+        {/* Adım göstergesi EN ÜSTTE — karakter figürü "Tamamla"yı kapatmasın diye. */}
+        <AdimGostergesi adim={2} />
+
         <View style={styles.profilUst}>
-          <View style={styles.arma}>
-            <MaterialCommunityIcons name="shield-star" size={26} color={Palette.altinKoyu} />
+          <View style={styles.profilBaslikBlok}>
+            <AppText variant="dev" bold color="lacivert">
+              Profilini Tamamlayalım
+            </AppText>
+            <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
+              Adın kazandığın Takdir Belgelerinde yazacak. Bilgilerini eksiksiz gir.
+            </AppText>
           </View>
           <KarakterFigur style={styles.profilKarakter} />
         </View>
 
-        <AdimGostergesi adim={2} />
-
-        <AppText variant="dev" bold color="lacivert" style={styles.profilBaslik}>
-          Profilini Tanıyalım
-        </AppText>
-        <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
-          Adın kazandığın Takdir Belgelerinde yazacak. Bilgilerini eksiksiz gir.
-        </AppText>
-
         <View style={styles.bolumBaslik}>
           <MaterialCommunityIcons name="account-outline" size={18} color={Palette.altinKoyu} />
           <AppText variant="etiket" bold color="lacivert">
-            Kişisel Bilgiler
+            KİŞİSEL BİLGİLER
           </AppText>
         </View>
 
-        <View style={styles.ikili}>
-          <View style={styles.yari}>
-            <AuthGirdi ikon="account-outline" placeholder="Ad" value={ad} onChangeText={setAd} autoCapitalize="words" />
+        <View style={styles.bolumKart}>
+          <View style={styles.ikili}>
+            <View style={styles.yari}>
+              <AuthGirdi ikon="account-outline" placeholder="Ad" value={ad} onChangeText={setAd} autoCapitalize="words" />
+            </View>
+            <View style={styles.yari}>
+              <AuthGirdi ikon="account-outline" placeholder="Soyad" value={soyad} onChangeText={setSoyad} autoCapitalize="words" />
+            </View>
           </View>
-          <View style={styles.yari}>
-            <AuthGirdi ikon="account-outline" placeholder="Soyad" value={soyad} onChangeText={setSoyad} autoCapitalize="words" />
-          </View>
-        </View>
 
-        <AuthGirdi
-          ikon="phone-outline"
-          placeholder="Telefon (05XX XXX XX XX)"
-          value={telefon}
-          onChangeText={setTelefon}
-          keyboardType="phone-pad"
-          inputMode="tel"
-          maxLength={20}
-        />
-
-        <Pressable style={styles.tarihKutu} onPress={() => setTarihAcik(true)}>
-          <MaterialCommunityIcons name="calendar-outline" size={20} color={Palette.solukMetin} />
-          <AppText variant="govde" color={dogum ? 'anaMetin' : 'solukMetin'} style={styles.tarihMetin}>
-            {dogum ? tarihGoster(dogum) : 'Doğum tarihi'}
-          </AppText>
-          <MaterialCommunityIcons name="chevron-down" size={20} color={Palette.solukMetin} />
-        </Pressable>
-        {tarihAcik ? (
-          <DateTimePicker
-            value={dogum ?? new Date(2000, 0, 1)}
-            mode="date"
-            display="spinner"
-            maximumDate={new Date()}
-            onChange={tarihSecildi}
+          <AuthGirdi
+            ikon="phone-outline"
+            placeholder="Telefon (05XX XXX XX XX)"
+            value={telefon}
+            onChangeText={setTelefon}
+            keyboardType="phone-pad"
+            inputMode="tel"
+            maxLength={20}
           />
-        ) : null}
 
-        <View style={styles.cinsiyet}>
-          {CINSIYETLER.map((c) => {
-            const secili = cinsiyet === c.deger;
-            return (
-              <Pressable
-                key={c.deger}
-                style={[styles.cinsBtn, secili && styles.cinsSecili]}
-                onPress={() => setCinsiyet(c.deger)}>
-                <AppText variant="etiket" bold color={secili ? 'beyaz' : 'anaMetin'} numberOfLines={1}>
-                  {c.etiket}
-                </AppText>
-              </Pressable>
-            );
-          })}
+          <Pressable style={styles.tarihKutu} onPress={() => setTarihAcik(true)}>
+            <MaterialCommunityIcons name="calendar-outline" size={20} color={Palette.solukMetin} />
+            <AppText variant="govde" color={dogum ? 'anaMetin' : 'solukMetin'} style={styles.tarihMetin}>
+              {dogum ? tarihGoster(dogum) : 'Doğum tarihi'}
+            </AppText>
+            <MaterialCommunityIcons name="chevron-down" size={20} color={Palette.solukMetin} />
+          </Pressable>
+
+          <View style={styles.cinsiyet}>
+            {CINSIYETLER.map((c) => {
+              const secili = cinsiyet === c.deger;
+              return (
+                <Pressable
+                  key={c.deger}
+                  style={[styles.cinsBtn, secili && styles.cinsSecili]}
+                  onPress={() => setCinsiyet(c.deger)}>
+                  <AppText variant="etiket" bold color={secili ? 'beyaz' : 'anaMetin'} numberOfLines={1}>
+                    {c.etiket}
+                  </AppText>
+                </Pressable>
+              );
+            })}
+          </View>
         </View>
 
-        <Pressable
-          disabled={mesgul}
-          style={({ pressed }) => [styles.anaBtnRow, pressed && styles.pressed, mesgul && styles.pasif]}
-          onPress={() => void kaydet()}>
-          {mesgul ? (
-            <ActivityIndicator color={Palette.beyaz} />
-          ) : (
-            <>
-              <AppText variant="govde" bold color="beyaz">
-                Devam et
-              </AppText>
-              <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.beyaz} />
-            </>
-          )}
-        </Pressable>
+        <AnaButon etiket="Devam et" onPress={() => void kaydet()} mesgul={mesgul} />
 
         {hata ? (
           <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
@@ -274,6 +248,16 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
           </AppText>
         ) : null}
       </ScrollView>
+
+      <DogumTarihiSecici
+        acik={tarihAcik}
+        deger={dogum}
+        onSec={(d) => {
+          setDogum(d);
+          setTarihAcik(false);
+        }}
+        onKapat={() => setTarihAcik(false)}
+      />
     </SafeAreaView>
   );
 }
@@ -300,6 +284,10 @@ const styles = StyleSheet.create({
   marka: {
     alignItems: 'center',
     gap: Spacing.one,
+  },
+  markaArma: {
+    alignItems: 'center',
+    gap: Spacing.two,
   },
   markaAd: {
     letterSpacing: 2,
@@ -358,28 +346,27 @@ const styles = StyleSheet.create({
     gap: Spacing.two,
   },
   profilUst: {
-    height: 130,
-  },
-  arma: {
-    position: 'absolute',
-    top: Spacing.two,
-    left: 0,
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: Palette.altinSolukYuzey,
-    borderWidth: 1,
-    borderColor: Palette.altin,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    gap: Spacing.two,
+    marginTop: Spacing.one,
+  },
+  profilBaslikBlok: {
+    flex: 1,
+    gap: Spacing.half,
   },
   profilKarakter: {
-    position: 'absolute',
-    right: -Spacing.two,
-    top: 0,
+    width: 116,
+    height: 146,
+    marginRight: -Spacing.two,
   },
-  profilBaslik: {
-    marginTop: Spacing.one,
+  bolumKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    gap: Spacing.two,
   },
   bolumBaslik: {
     flexDirection: 'row',
@@ -425,16 +412,6 @@ const styles = StyleSheet.create({
   cinsSecili: {
     backgroundColor: Palette.lacivert,
     borderColor: Palette.lacivert,
-  },
-  anaBtnRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.one,
-    backgroundColor: Palette.lacivert,
-    borderRadius: Radius.m,
-    height: 52,
-    marginTop: Spacing.two,
   },
   pressed: {
     opacity: 0.85,

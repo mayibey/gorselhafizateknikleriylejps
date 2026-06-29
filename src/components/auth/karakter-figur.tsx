@@ -17,8 +17,8 @@ export function KarakterFigur({ style }: { style?: ViewStyle }) {
 
 const styles = StyleSheet.create({
   kap: {
-    width: 148,
-    height: 188, // yükseklik < görsel oranı → alt (bacaklar) kırpılır, kemer üstü görünür
+    width: 158,
+    height: 202, // yükseklik < görsel oranı → alt (bacaklar) kırpılır, kemer üstü görünür
     overflow: 'hidden',
   },
   gorsel: {

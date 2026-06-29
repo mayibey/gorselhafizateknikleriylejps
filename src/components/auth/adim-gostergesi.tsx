@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
   },
   cizgi: {
     flex: 1,
-    height: 2,
+    height: 3,
+    borderRadius: 2,
     backgroundColor: Palette.kenarlik,
   },
   cizgiDolu: {
@@ -86,6 +87,11 @@ const styles = StyleSheet.create({
   daireAktif: {
     backgroundColor: Palette.lacivert,
     borderColor: Palette.lacivert,
+    shadowColor: Palette.lacivert,
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 3,
   },
   daireTamam: {
     backgroundColor: Palette.altin,
