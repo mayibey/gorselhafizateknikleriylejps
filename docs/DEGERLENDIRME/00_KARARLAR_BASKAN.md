@@ -2,10 +2,12 @@
 
 > 29 Haz, başkanın yol haritasına (00_YOL_HARITASI.md) verdiği net kararlar. Çelişkide BU dosya kazanır.
 
-## V1 — SRS / Aralıklı tekrar → **KALDIR** (bağlama YOK)
-- Karar: Aralıklı tekrar zorunlu değil. **Mağaza listelemesinden "aralıklı tekrar/SRS" iddiası çıkar + ilgili ölü kodu sil.** (Yol haritası "Etüt'e bağla" diyordu → İPTAL, yerine temiz kaldırma.)
-- Etki: ürün vaadi = görsel hafıza kartı + deneme sınavı. Karargah "Etüt/Geri Besleme" hero'su yeni ödül/ceza modeline göre yeniden tanımlanacak (aşağı V5).
-- Not: `srs.ts` Leitner mantığı ödül-sicil için görünmez kalabilir mi yoksa tamamen mi çıkar → uygulama anında netleşir; mağaza iddiası kesin çıkar.
+## V1 — SRS / Aralıklı tekrar → **KALDIR** (bağlama YOK) ✅ YAPILDI (29 Haz)
+- Karar: Aralıklı tekrar zorunlu değil. **Mağaza listelemesinden "aralıklı tekrar/SRS" iddiası çıkar + ilgili ölü kodu sil.**
+- **UYGULAMA BULGUSU (keşif):** "ölü kod sil" beklenenden farklı çıktı:
+  - **Mağaza iddiası KALDIRILDI** ✅ — `MAGAZA_LISTELEME.md` + `PLAY_MAGAZA_GIRISI.md`'den "Aralıklı tekrar (Leitner/SRS)" + "Günlük çalışma kuyruğu" satırları çıkarıldı, yerine GERÇEK özellikler (deneme sınavları, patika, zayıf mevzi tekrarı) yazıldı. Yasal metinlerdeki generic "tekrar sistemi" KALDI (doğru — box tabanlı tekrar var).
+  - **KOD SİLİNMEDİ (kasıtlı):** Keşif gösterdi ki `kutu`/`srsGuncelle` (Leitner box) ÖLÜ DEĞİL — tüm ilerleme (Mevzuat %, patika, Tatbikat hazırlık, zayıf havuz, sicil ödül) buna bağlı + CLAUDE.md "srs.ts dokunma, SRS kutsal" diyor. `getDailyQueue` (günlük/due yolu) gerçekten erişilemez (plain `/akis` çağrılmıyor) ama 4-dosya senkronlu kutsal SRS alanında; silmenin getirisi ~0, riski var → BIRAKILDI (zararsız ölü fallback).
+- Sonuç: ürün vaadi dürüstleşti (görsel hafıza + deneme sınavı). Box motoru ilerleme belkemiği olarak çalışmaya devam — kullanıcıya "aralıklı tekrar" diye PAZARLANMIYOR artık.
 
 ## V2 — Bildirim/Eğitim Planı → **GERÇEKTEN ÇALIŞTIR** (gizleme YOK)
 - Karar: Günlük bildirim göndermeyi kaldırmak salaklık; **gerçek push bildirim kur.** (Yol haritası "gizle" diyordu → İPTAL.)

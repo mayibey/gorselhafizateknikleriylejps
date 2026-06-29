@@ -12,7 +12,7 @@ Mevzu — JSPS Hazırlık
 
 ## Kısa açıklama (max 80) — 68 karakter
 ```
-Kanunları görsel karikatür kartlar + aralıklı tekrarla kalıcı öğren.
+Kanunları görsel karikatür kartlar ve deneme sınavlarıyla kalıcı öğren.
 ```
 
 ## Tam açıklama (max 4000)
@@ -25,13 +25,13 @@ Mevzu — Görsel Hafıza Teknikleriyle JSPS Sınavına Hazırlık
 Mevzu, JSPS (Jandarma ve Sahil Güvenlik Akademisi) sınavına hazırlananlar için tasarlanmış, kanun maddelerini KALICI öğrenmeni sağlayan bağımsız bir çalışma uygulamasıdır.
 
 NEDEN FARKLI?
-Kuru kanun metnini ezberlemek zordur ve çabuk unutulur. Mevzu her kanun maddesini bir KARİKATÜR KARTA (görsel hafıza tekniği) dönüştürür — beyin, görselleri düz metinden çok daha iyi hatırlar. Üstüne ARALIKLI TEKRAR sistemini ekler: her kartı tam unutmaya başladığın anda karşına çıkarır, böylece bilgi kısa süreli hafızadan kalıcı hafızaya geçer.
+Kuru kanun metnini ezberlemek zordur ve çabuk unutulur. Mevzu her kanun maddesini bir KARİKATÜR KARTA (görsel hafıza tekniği) dönüştürür — beyin, görselleri düz metinden çok daha iyi hatırlar. Üstüne her kanunun DENEME SINAVINI ekler: yanlış yaptığın maddeler "zayıf mevzi" olarak işaretlenir, onları tekrar çalışarak eksiğini kapatırsın.
 
 ÖNE ÇIKANLAR
 • Görsel karikatür kartlar — her madde için akılda kalıcı bir sahne
-• Aralıklı tekrar (Leitner) — bilimsel temelli kalıcı öğrenme
+• Deneme sınavları — her kanun için sorularla kendini sına, eksiğini gör
 • Branşına göre mevzuat — Jandarma / Sahil Güvenlik
-• Günlük çalışma kuyruğu — o gün ne çalışacağını uygulama söyler
+• Zayıf mevzi tekrarı — yanlış ve zorlandığın maddeleri ayrıca çalış
 • Orijinal kanun metni — kartın yanında ilgili maddenin tam metni (kaynak: T.C. resmî mevzuat veritabanı, mevzuat.gov.tr)
 • Sesli dinleme — kartları dinleyerek tekrar et, ileri/geri al
 • İlerleme takibi — kutu dağılımı ve hazırlık yüzdesi

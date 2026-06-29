@@ -7,16 +7,16 @@
 - **Önerilen:** `MEVZU-JSPS: Görsel Hafıza` (marka + anahtar kelime). Kısa marka: `MEVZU-JSPS`.
 
 ## Kısa açıklama (Play, max 80)
-`Jandarma/SG sınavına görsel hafıza kartları ve aralıklı tekrarla hazırlan.`
+`Jandarma/SG sınavına görsel hafıza kartları ve deneme sınavlarıyla hazırlan.`
 
 ## Tam açıklama (TR)
 ```
 JSPS (Jandarma ve Sahil Güvenlik Personeli Sınavı) mevzuatını ezberlemek yerine GÖRSELLE aklında
-tut. Her kanun maddesi için 4 panelli karikatür kartlar, aralıklı tekrar (SRS) sistemi ve sınav
-kapsamına birebir uygun "patika" ile çalış.
+tut. Her kanun maddesi için 4 panelli karikatür kartlar, sesli anlatım ve sınav kapsamına
+birebir uygun "patika" ile çalış; her kanunun deneme sınavıyla kendini sına.
 
 • Görsel hafıza kartları — maddeleri karikatürle, kalıcı şekilde öğren
-• Aralıklı tekrar (Leitner) — doğru zamanda tekrar, az emekle kalıcı bilgi
+• Deneme sınavları — her kanun için çoktan seçmeli sorular, anında geri bildirim
 • Patika — her kanunun sınav kapsamındaki maddeleri tek tek, sırayla
 • Sicil & Ödül-Ceza — kanun bitince takdir, ihmal edince geri-besleme; askeri disiplin temasıyla
 • Eğitim Planı — sabah/gece/fırsat eğitimi hatırlatmaları
