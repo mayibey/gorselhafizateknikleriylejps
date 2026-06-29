@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 29 Haziran 2026
 >
+> ### ▶ 29 Haz — Küçük işler: sınav→zayıf köprüsü + test paneli __DEV__'e geri + belge metin/Türkçe
+> **Sınav→eylem köprüsü (P1-b):** sınav sonucu <%100 ise `Sonuc`'ta **"Yanlış maddeleri çalış"** CTA → `router.replace('/akis?mod=zayif')` (yanlışlar zaten zayıf havuza düşüyordu → döngü kapandı). EmptyState yerine özel skor+3 buton düzeni. **Test paneli __DEV__'e geri alındı** (expo start'ta görünür, yayında gizli). **Belge metinleri:** "EĞİTİM KOMUTANLIĞI"→"MEVZU JSPS BİRLİĞİ" (impersonation riski), 3. şahıs→"tarafınıza", + Türkçe büyük harf düzeltmesi (`trUpper` i→İ; "TAKDIR"→"TAKDİR"). Hepsi tsc 0.
+>
 > ### ▶ 29 Haz — D1 polish + Yol haritası E (küçük işler)
 > **Evsaf belge modalı (D1 polish):** `takdir-belgesi.tsx` genelleştirildi (ortak `BelgeCerceve` + `TakdirBelgesi` sınav ekranı + `SicilBelgesi` kayıttan render; ödül=altın/madalya, ceza=kırmızı/kalkan). Evsaf'ta sicil kaydına basınca inline metin yerine **görsel belge MODALI** açılır.
 > **E1 — FLAG_SECURE (güvenlik):** `EKRAN_KORUMA_AKTIF=false` kaldırıldı; yeni `lib/ekran-koruma.ts useEkranKoruma()` hook'u kart görseli görünen `/akis` + `/sesli-nobet`'te ekran görüntüsü/kaydı engeller (Android FLAG_SECURE). Sicil/takdir/ayarlar screenshot'lanabilir kalır (sertifika paylaşımı serbest).

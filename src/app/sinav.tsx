@@ -173,6 +173,7 @@ export default function SinavScreen() {
           cevaplar={cevaplar}
           sorular={sorular}
           lawAd={lawAd}
+          onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yukle}
           onBitir={() => router.back()}
         />
@@ -303,12 +304,14 @@ function Sonuc({
   cevaplar,
   sorular,
   lawAd,
+  onZayif,
   onTekrar,
   onBitir,
 }: {
   cevaplar: SinavCevap[];
   sorular: KartSoru[];
   lawAd: string | null;
+  onZayif: () => void;
   onTekrar: () => void;
   onBitir: () => void;
 }) {
@@ -343,17 +346,52 @@ function Sonuc({
   }
 
   const basarili = yuzde >= 70;
+  const yanlisVar = dogru < toplam;
   return (
-    <View style={styles.kolon}>
-      <EmptyState
-        ikon={basarili ? 'trophy-outline' : 'school-outline'}
-        ikonRenk={basarili ? 'altin' : 'solukMetin'}
-        baslik={`Skorun: ${dogru}/${toplam}`}
-        aciklama={`%${yuzde} doğru${basarili ? ' — tebrikler!' : ' — biraz daha çalış.'}`}
-        buton={{ etiket: 'Tekrar çöz', onPress: onTekrar }}
-        ikincilButon={{ etiket: 'Bitir', onPress: onBitir }}
-      />
-    </View>
+    <ScrollView style={styles.kolon} contentContainerStyle={styles.sonucContent}>
+      <View style={styles.skorOzet}>
+        <MaterialCommunityIcons
+          name={basarili ? 'trophy-outline' : 'school-outline'}
+          size={48}
+          color={basarili ? Palette.altin : Palette.solukMetin}
+        />
+        <AppText variant="altBaslik" bold color="lacivert">
+          Skorun: {dogru}/{toplam}
+        </AppText>
+        <AppText variant="kucuk" color="solukMetin">
+          %{yuzde} doğru{basarili ? ' — tebrikler!' : ' — biraz daha çalış.'}
+        </AppText>
+      </View>
+
+      {/* Sınav→eylem köprüsü: yanlışlar zayıf havuza düştü → hemen çalışmaya yönlendir. */}
+      {yanlisVar ? (
+        <Pressable
+          style={({ pressed }) => [styles.zayifBtn, pressed && styles.pressed]}
+          onPress={onZayif}>
+          <MaterialCommunityIcons name="target" size={18} color={Palette.beyaz} />
+          <AppText variant="govde" bold color="beyaz">
+            Yanlış maddeleri çalış
+          </AppText>
+        </Pressable>
+      ) : null}
+
+      <View style={styles.sonucButonlar}>
+        <Pressable
+          style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]}
+          onPress={onTekrar}>
+          <AppText variant="govde" bold color="lacivert">
+            Tekrar çöz
+          </AppText>
+        </Pressable>
+        <Pressable
+          style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]}
+          onPress={onBitir}>
+          <AppText variant="govde" bold color="lacivert">
+            Bitir
+          </AppText>
+        </Pressable>
+      </View>
+    </ScrollView>
   );
 }
 
@@ -481,6 +519,20 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     paddingVertical: Spacing.three,
     alignItems: 'center',
+  },
+  zayifBtn: {
+    flexDirection: 'row',
+    gap: Spacing.one,
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  skorOzet: {
+    alignItems: 'center',
+    gap: Spacing.one,
+    paddingVertical: Spacing.three,
   },
   sonucBtnIkincil: {
     flex: 1,
