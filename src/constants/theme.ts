@@ -20,7 +20,7 @@ export const Palette = {
   kartKremi: '#FFFCF5', // kart yüzeyi
   kenarlik: '#E7DCC7', // kart kenarlığı
   ayirici: '#EFE6D6', // ince ayraç
-  solukMetin: '#8A7D62', // ikincil metin
+  solukMetin: '#6E6047', // ikincil metin (koyulaştırıldı: krem üstünde WCAG AA ≈4.6:1; eski #8A7D62 = 3.67:1 okunmuyordu)
 
   // Altın (şampanya)
   altin: '#C9A227', // ana altın accent
@@ -45,7 +45,7 @@ export const Palette = {
   // Korunan yardımcı tonlar (mevcut ekranlar kullanıyor)
   ten: '#E8C9A8',
   yesil: '#2E7D32',
-  amber: '#B5791C',
+  amber: '#8A5A12', // uyarı (koyulaştırıldı: soluk altın zemin üstünde okunabilir; eski #B5791C düşük kontrasttı)
   beyaz: '#FFFFFF',
 } as const;
 
