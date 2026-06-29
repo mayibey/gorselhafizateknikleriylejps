@@ -139,29 +139,29 @@ export default function SicilScreen() {
               zayifSayisi={zayif?.liste.length ?? 0}
               onGeriBes={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
             />
-            {__DEV__ ? (
-              <View style={styles.demoSatir}>
-                <Pressable
-                  style={({ pressed }) => [styles.demoBtn, pressed && styles.pressed]}
-                  onPress={() => {
-                    void (async () => {
-                      for (const k of ornekKayitlar(bugunISO())) await ekleSicilKaydi(k);
-                      yukle();
-                    })();
-                  }}>
-                  <AppText variant="etiket" color="lacivert" bold>
-                    🧪 Örnek kayıt ekle
-                  </AppText>
-                </Pressable>
-                <Pressable
-                  style={({ pressed }) => [styles.demoBtn, pressed && styles.pressed]}
-                  onPress={() => void sicilSifirla().then(yukle)}>
-                  <AppText variant="etiket" color="kirmizi" bold>
-                    Temizle
-                  </AppText>
-                </Pressable>
-              </View>
-            ) : null}
+            {/* GEÇİCİ TEST PANELİ — 7 derecenin hepsini ekler; her birine basınca belge modalı açılır.
+                İnceleme bitince "Temizle" ile sil; sonra bu blok kaldırılacak / __DEV__'e geri alınacak. */}
+            <View style={styles.demoSatir}>
+              <Pressable
+                style={({ pressed }) => [styles.demoBtn, pressed && styles.pressed]}
+                onPress={() => {
+                  void (async () => {
+                    for (const k of ornekKayitlar(bugunISO())) await ekleSicilKaydi(k);
+                    yukle();
+                  })();
+                }}>
+                <AppText variant="etiket" color="lacivert" bold>
+                  🧪 Örnek kayıt ekle
+                </AppText>
+              </Pressable>
+              <Pressable
+                style={({ pressed }) => [styles.demoBtn, pressed && styles.pressed]}
+                onPress={() => void sicilSifirla().then(yukle)}>
+                <AppText variant="etiket" color="kirmizi" bold>
+                  Temizle
+                </AppText>
+              </Pressable>
+            </View>
           </View>
         </>
       )}
