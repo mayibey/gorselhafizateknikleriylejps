@@ -10,7 +10,7 @@ import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { AppState, StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -19,6 +19,7 @@ import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { getAyar, planla } from '@/lib/bildirim';
+import { senkronKaydet } from '@/lib/senkron';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
 
@@ -42,6 +43,14 @@ export default function RootLayout() {
   // (Web'de + google-services.json yoksa no-op; bkz. lib/bildirim.ts.)
   useEffect(() => {
     void getAyar().then(planla);
+  }, []);
+
+  // Uygulama arka plana alınınca ilerlemeyi buluta yaz (giriş yoksa no-op).
+  useEffect(() => {
+    const sub = AppState.addEventListener('change', (durum) => {
+      if (durum === 'background' || durum === 'inactive') void senkronKaydet();
+    });
+    return () => sub.remove();
   }, []);
 
   // Fontlar yüklenince (ya da yüklenemezse de) splash'i gizle.

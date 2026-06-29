@@ -27,7 +27,7 @@ import {
   SEED_LAW_BRANCHES,
   SEED_LAWS,
 } from '@/db/seed';
-import type { Backend, RecordReviewResult } from '@/db/types';
+import type { Backend, IlerlemeSnapshot, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { zayifKartlar } from '@/lib/performans';
 import { gunlukKuyruk, type QueueCard, type SrsDurum } from '@/lib/queue';
@@ -629,6 +629,50 @@ class SqliteBackend implements Backend {
       'SELECT id, law_id, dogru, toplam, tarih FROM sinav_sonuclari ORDER BY id',
     );
   }
+
+  async ilerlemeDisaAktar(): Promise<IlerlemeSnapshot> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const srs = await this.db.getAllAsync<{ card_id: number; kutu: number; sonraki_tarih: string }>(
+      'SELECT card_id, kutu, sonraki_tarih FROM srs',
+    );
+    const studyDays = await this.getStudyDays();
+    const performans = await this.getPerformans();
+    const sicil = (await this.getSicilKayitlari()).map(({ id, ...r }) => r);
+    const geriBes = await this.getGeriBesDurum();
+    const sinavlar = (await this.getSinavSonuclari()).map(({ id, ...r }) => r);
+    return { surum: 1, srs, studyDays, performans, sicil, geriBes, sinavlar };
+  }
+
+  async ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    const db = this.db;
+    // SRS — güvenli birleştir: kutu ASLA geri gitmez (max); tarih kazanan kutununki.
+    for (const s of snapshot.srs) {
+      await db.runAsync(
+        `INSERT INTO srs (card_id, kutu, sonraki_tarih) VALUES (?, ?, ?)
+         ON CONFLICT(card_id) DO UPDATE SET
+           sonraki_tarih = CASE WHEN excluded.kutu >= srs.kutu THEN excluded.sonraki_tarih ELSE srs.sonraki_tarih END,
+           kutu = MAX(srs.kutu, excluded.kutu)`,
+        [s.card_id, s.kutu, s.sonraki_tarih],
+      );
+    }
+    // Çalışılan günler — birleştir (gün-tekil).
+    for (const g of snapshot.studyDays) await this.markStudyDay(g);
+    // Log/sicil/sınav: YALNIZ yeni cihazda (tam yükle) — çoğaltma/çakışma önlenir.
+    if (tamYukle) {
+      for (const p of snapshot.performans) {
+        await db.runAsync(
+          'INSERT INTO kart_performans (card_id, kaynak, sonuc, tarih) VALUES (?, ?, ?, ?)',
+          [p.card_id, p.kaynak, p.sonuc, p.tarih],
+        );
+      }
+      for (const k of snapshot.sicil) await this.ekleSicilKaydi(k);
+      await this.setGeriBesDurum(snapshot.geriBes);
+      for (const s of snapshot.sinavlar) {
+        await this.ekleSinavSonucu(s.law_id, s.dogru, s.toplam, s.tarih);
+      }
+    }
+  }
 }
 
 const backend: Backend = new SqliteBackend();
@@ -788,4 +832,14 @@ export async function ekleSinavSonucu(
 export async function getSinavSonuclari(): Promise<SinavSonuc[]> {
   await initDatabase();
   return backend.getSinavSonuclari();
+}
+
+export async function ilerlemeDisaAktar(): Promise<IlerlemeSnapshot> {
+  await initDatabase();
+  return backend.ilerlemeDisaAktar();
+}
+
+export async function ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void> {
+  await initDatabase();
+  return backend.ilerlemeIceAktar(snapshot, tamYukle);
 }

@@ -7,7 +7,7 @@
  */
 
 import type { Bolum, Branch, CardWithLaw, CardWithSrs, GeriBesDurum, LawWithCount, PerformansKaynak, PerformansSatir, SicilKaydi, SinavSonuc } from '@/db/schema';
-import type { RecordReviewResult, SrsCevap } from '@/db/types';
+import type { IlerlemeSnapshot, RecordReviewResult, SrsCevap } from '@/db/types';
 import type { QueueCard } from '@/lib/queue';
 
 export function initDatabase(): Promise<void>;
@@ -47,3 +47,5 @@ export function ekleSinavSonucu(
   tarih: string,
 ): Promise<void>;
 export function getSinavSonuclari(): Promise<SinavSonuc[]>;
+export function ilerlemeDisaAktar(): Promise<IlerlemeSnapshot>;
+export function ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void>;

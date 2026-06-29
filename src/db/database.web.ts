@@ -24,7 +24,7 @@ import {
   SEED_LAW_BRANCHES,
   SEED_LAWS,
 } from '@/db/seed';
-import type { Backend, RecordReviewResult } from '@/db/types';
+import type { Backend, IlerlemeSnapshot, RecordReviewResult } from '@/db/types';
 import { kanunKuyrugu } from '@/lib/kanun-kartlari';
 import { zayifKartlar } from '@/lib/performans';
 import { gunlukKuyruk, type QueueCard, type SrsDurum } from '@/lib/queue';
@@ -210,6 +210,42 @@ class MemoryBackend implements Backend {
   async getSinavSonuclari(): Promise<SinavSonuc[]> {
     return [...this.sinavSonuclari]; // ekleme sırasıyla (native ORDER BY id ile parite)
   }
+
+  async ilerlemeDisaAktar(): Promise<IlerlemeSnapshot> {
+    const srs = [...this.srs.entries()].map(([card_id, d]) => ({
+      card_id,
+      kutu: d.kutu,
+      sonraki_tarih: d.sonraki_tarih,
+    }));
+    return {
+      surum: 1,
+      srs,
+      studyDays: [...this.studyDays],
+      performans: [...this.performans],
+      sicil: this.sicil.map(({ id, ...r }) => r),
+      geriBes: { ...this.geriBes },
+      sinavlar: this.sinavSonuclari.map(({ id, ...r }) => r),
+    };
+  }
+
+  async ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void> {
+    // SRS — kutu ASLA geri gitmez: yalnız gelen kutu >= mevcut ise üzerine yaz.
+    for (const s of snapshot.srs) {
+      const mevcut = this.srs.get(s.card_id);
+      if (!mevcut || s.kutu >= mevcut.kutu) {
+        this.srs.set(s.card_id, { kutu: s.kutu, sonraki_tarih: s.sonraki_tarih });
+      }
+    }
+    for (const g of snapshot.studyDays) this.studyDays.add(g);
+    if (tamYukle) {
+      for (const p of snapshot.performans) this.performans.push({ ...p });
+      for (const k of snapshot.sicil) this.sicil.push({ ...k, id: ++this.sicilSayac });
+      this.geriBes = { ...snapshot.geriBes };
+      for (const s of snapshot.sinavlar) {
+        this.sinavSonuclari.push({ ...s, id: ++this.sinavSayac });
+      }
+    }
+  }
 }
 
 const backend: Backend = new MemoryBackend();
@@ -369,4 +405,14 @@ export async function ekleSinavSonucu(
 export async function getSinavSonuclari(): Promise<SinavSonuc[]> {
   await initDatabase();
   return backend.getSinavSonuclari();
+}
+
+export async function ilerlemeDisaAktar(): Promise<IlerlemeSnapshot> {
+  await initDatabase();
+  return backend.ilerlemeDisaAktar();
+}
+
+export async function ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void> {
+  await initDatabase();
+  return backend.ilerlemeIceAktar(snapshot, tamYukle);
 }

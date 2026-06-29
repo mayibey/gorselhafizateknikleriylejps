@@ -16,6 +16,7 @@ import {
   hesapSilmeTalebiKur,
   silmeTalepTarihiGetir,
 } from '@/lib/auth';
+import { senkronKaydet, senkronYukle } from '@/lib/senkron';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
 export type Kullanici = { id: string; email: string | null };
@@ -44,26 +45,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return;
     }
     const sb = supabase;
-    // Girişte silme talebi varsa → tekrar giriş = REAKTİVASYON (talebi iptal et + bildir).
-    async function reaktivasyonKontrol() {
+    // Girişten sonra: (1) silme talebi varsa REAKTİVASYON, (2) bulut ilerlemeyi çek (senkron).
+    async function girisSonrasi() {
       const talep = await silmeTalepTarihiGetir();
       if (talep) {
         await hesapGeriGetir();
         setReaktiveEdildi(true);
       }
+      await senkronYukle();
     }
     // İlk oturumu oku.
     void sb.auth.getSession().then(async ({ data }) => {
       const u = data.session?.user;
       setKullanici(u ? { id: u.id, email: u.email ?? null } : null);
       setYukleniyor(false);
-      if (u) await reaktivasyonKontrol();
+      if (u) await girisSonrasi();
     });
     // Oturum değişimlerini dinle (giriş/çıkış/yenileme).
     const { data: sub } = sb.auth.onAuthStateChange((olay, session) => {
       const u = session?.user;
       setKullanici(u ? { id: u.id, email: u.email ?? null } : null);
-      if (u && olay === 'SIGNED_IN') void reaktivasyonKontrol();
+      if (u && olay === 'SIGNED_IN') void girisSonrasi();
     });
     return () => sub.subscription.unsubscribe();
   }, []);
@@ -74,6 +76,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   async function cikis(): Promise<void> {
+    await senkronKaydet(); // çıkmadan önce son ilerlemeyi buluta yaz
     await cikisYap();
     setKullanici(null);
   }

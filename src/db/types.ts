@@ -10,6 +10,17 @@ import type { SrsCevap } from '@/lib/srs';
 export type { Blok, Bolum, BolumKart, Branch, Card, CardWithLaw, CardWithSrs, CezaDerece, GeriBesDurum, Law, LawBranch, LawWithCount, OdulDerece, PerformansKaynak, PerformansSatir, SicilDerece, SicilKaydi, SicilTip, SinavSonuc, Srs } from '@/db/schema';
 export type { QueueCard, SrsDurum } from '@/lib/queue';
 
+/** Bulut senkron için kullanıcı ilerleme anlık görüntüsü (JSON). Referans veri (laws/cards) DAHİL DEĞİL. */
+export type IlerlemeSnapshot = {
+  surum: 1;
+  srs: { card_id: number; kutu: number; sonraki_tarih: string }[];
+  studyDays: string[];
+  performans: PerformansSatir[];
+  sicil: Omit<SicilKaydi, 'id'>[];
+  geriBes: GeriBesDurum;
+  sinavlar: Omit<SinavSonuc, 'id'>[];
+};
+
 /** Hem native (SQLite) hem web (bellek-içi) arka uçlarının uyduğu sözleşme. */
 export interface Backend {
   init(): Promise<void>;
@@ -54,6 +65,10 @@ export interface Backend {
   ekleSinavSonucu(lawId: number, dogru: number, toplam: number, tarih: string): Promise<void>;
   /** Tüm deneme sınavı sonuçlarını ekleme sırasıyla (eskiden yeniye) döndürür. */
   getSinavSonuclari(): Promise<SinavSonuc[]>;
+  /** Kullanıcı ilerlemesini JSON snapshot olarak dışa aktarır (bulut senkron). */
+  ilerlemeDisaAktar(): Promise<IlerlemeSnapshot>;
+  /** Snapshot'ı yerele birleştirir: SRS max(kutu) (asla geri gitmez); tamYukle=true → log/sicil/sınav da. */
+  ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void>;
 }
 
 /** Public API'nin (initDatabase/getStudyCards/recordReview) ortak tip imzaları. */
