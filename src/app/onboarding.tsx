@@ -125,6 +125,14 @@ const CINSIYETLER: { deger: Cinsiyet; etiket: string }[] = [
 const iki = (n: number) => String(n).padStart(2, '0');
 const tarihISO = (d: Date) => `${d.getFullYear()}-${iki(d.getMonth() + 1)}-${iki(d.getDate())}`;
 const tarihGoster = (d: Date) => `${iki(d.getDate())}.${iki(d.getMonth() + 1)}.${d.getFullYear()}`;
+// Tam yaş (gün hassasiyetinde) — 18+ üyelik şartı kontrolü için.
+function yasHesapla(d: Date): number {
+  const bugun = new Date();
+  let yas = bugun.getFullYear() - d.getFullYear();
+  const ayFark = bugun.getMonth() - d.getMonth();
+  if (ayFark < 0 || (ayFark === 0 && bugun.getDate() < d.getDate())) yas -= 1;
+  return yas;
+}
 
 function ProfilAdim({ onTamam }: { onTamam: () => void }) {
   const { setBrans } = useBrans();
@@ -149,6 +157,7 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
     const h = adHatasi(ad, 'Ad') ?? adHatasi(soyad, 'Soyad') ?? telefonHatasi(telefon);
     if (h) return setHata(h);
     if (!dogum) return setHata('Doğum tarihini seç.');
+    if (yasHesapla(dogum) < 18) return setHata('Üye olmak için en az 18 yaşında olmalısın.');
     if (!cinsiyet) return setHata('Cinsiyetini seç.');
     if (!brans) return setHata('Branşını seç.');
     if (!rutbe) return setHata('Rütbeni/statünü seç.');

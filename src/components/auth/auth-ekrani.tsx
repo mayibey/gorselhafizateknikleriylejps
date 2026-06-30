@@ -104,7 +104,13 @@ export function AuthEkrani() {
         }
       }
     } catch (e) {
-      setMesaj({ tip: 'hata', metin: hataMetni(e) });
+      // Giriş başarısız + e-posta kayıtlı DEĞİLSE → net "hesap yok" mesajı (tester #1).
+      // (Kayıtlıysa veya kontrol edilemezse genel "e-posta/şifre hatalı".)
+      if (!kayitMi && !(await epostaKullanimda(eposta).catch(() => true))) {
+        setMesaj({ tip: 'hata', metin: 'Bu e-posta ile kayıtlı hesap yok. "Kayıt ol"a geçip üye ol.' });
+      } else {
+        setMesaj({ tip: 'hata', metin: hataMetni(e) });
+      }
     } finally {
       setMesgul(false);
     }

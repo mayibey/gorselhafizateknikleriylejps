@@ -25,14 +25,15 @@ export function DogumTarihiSecici({
   onKapat: () => void;
 }) {
   const buYil = new Date().getFullYear();
+  const enSonYil = buYil - 18; // 18 yaş şartı: en geç bu yıl doğanlar üye olabilir
   const [gun, setGun] = useState(deger?.getDate() ?? 1);
   const [ay, setAy] = useState(deger?.getMonth() ?? 0);
   const [yil, setYil] = useState(deger?.getFullYear() ?? 2000);
 
   const gunler = useMemo(() => Array.from({ length: 31 }, (_, i) => i + 1), []);
   const yillar = useMemo(
-    () => Array.from({ length: buYil - 1939 }, (_, i) => buYil - i),
-    [buYil],
+    () => Array.from({ length: enSonYil - 1939 }, (_, i) => enSonYil - i),
+    [enSonYil],
   );
 
   function onayla() {
