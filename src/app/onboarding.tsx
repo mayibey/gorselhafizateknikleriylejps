@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -12,14 +12,17 @@ import { AuthGirdi } from '@/components/auth/auth-girdi';
 import { DekoratifArkaplan } from '@/components/auth/dekoratif-arkaplan';
 import { DogumTarihiSecici } from '@/components/auth/dogum-tarihi-secici';
 import { KarakterFigur } from '@/components/auth/karakter-figur';
+import { SecimKutu } from '@/components/auth/secim-kutu';
 import { BransSecici } from '@/components/brans-secici';
 import { RutbeSecici } from '@/components/rutbe-secici';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { getBranches } from '@/db/database';
 import { type Cinsiyet, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
 import { adHatasi, telefonHatasi } from '@/lib/dogrulama';
+import { type Rutbe, RUTBELER } from '@/lib/rutbe-store';
 import { useRutbe } from '@/lib/rutbe-context';
 
 /**
@@ -143,24 +146,37 @@ const tarihISO = (d: Date) => `${d.getFullYear()}-${iki(d.getMonth() + 1)}-${iki
 const tarihGoster = (d: Date) => `${iki(d.getDate())}.${iki(d.getMonth() + 1)}.${d.getFullYear()}`;
 
 function ProfilAdim({ onTamam }: { onTamam: () => void }) {
+  const { setBrans } = useBrans();
+  const { setRutbe } = useRutbe();
   const [ad, setAd] = useState('');
   const [soyad, setSoyad] = useState('');
   const [telefon, setTelefon] = useState('');
   const [dogum, setDogum] = useState<Date | null>(null);
   const [cinsiyet, setCinsiyet] = useState<Cinsiyet | null>(null);
+  const [brans, setBransSec] = useState<string | null>(null);
+  const [rutbe, setRutbeSec] = useState<Rutbe | null>(null);
+  const [branslar, setBranslar] = useState<{ slug: string; ad: string }[]>([]);
   const [tarihAcik, setTarihAcik] = useState(false);
   const [mesgul, setMesgul] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
+
+  useEffect(() => {
+    void getBranches().then((bs) => setBranslar(bs.map((b) => ({ slug: b.slug, ad: b.ad }))));
+  }, []);
 
   async function kaydet() {
     const h = adHatasi(ad, 'Ad') ?? adHatasi(soyad, 'Soyad') ?? telefonHatasi(telefon);
     if (h) return setHata(h);
     if (!dogum) return setHata('Doğum tarihini seç.');
     if (!cinsiyet) return setHata('Cinsiyetini seç.');
+    if (!brans) return setHata('Branşını seç.');
+    if (!rutbe) return setHata('Rütbeni/statünü seç.');
     setHata(null);
     setMesgul(true);
     try {
       await profilKaydet({ ad, soyad, telefon, dogumTarihi: tarihISO(dogum), cinsiyet });
+      await setBrans(brans); // müfredat filtresi (AsyncStorage + context)
+      await setRutbe(rutbe);
       onTamam();
     } catch (e) {
       setHata(e instanceof Error ? e.message : 'Kaydedilemedi, tekrar dene.');
@@ -238,6 +254,31 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
               );
             })}
           </View>
+        </View>
+
+        <View style={styles.bolumBaslik}>
+          <MaterialCommunityIcons name="shield-account-outline" size={18} color={Palette.altinKoyu} />
+          <AppText variant="etiket" bold color="lacivert">
+            GÖREV BİLGİLERİ
+          </AppText>
+        </View>
+        <View style={styles.bolumKart}>
+          <SecimKutu
+            ikon="medal-outline"
+            placeholder="Rütben / Statün"
+            baslik="Rütbeni Seç"
+            deger={rutbe}
+            secenekler={RUTBELER}
+            onSec={setRutbeSec}
+          />
+          <SecimKutu
+            ikon="shield-account-outline"
+            placeholder="Branşın / Sınıfın"
+            baslik="Branşını Seç"
+            deger={brans}
+            secenekler={branslar}
+            onSec={setBransSec}
+          />
         </View>
 
         <AnaButon etiket="Devam et" onPress={() => void kaydet()} mesgul={mesgul} />
