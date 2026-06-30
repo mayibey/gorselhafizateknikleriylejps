@@ -1,10 +1,10 @@
 /**
- * AES-256-CTR at-rest şifreleme yardımcıları (saf-JS, aes-js) + ÖLÇÜM aracı.
- * İndirilen görselleri diskte şifreli tutmak için; gösterirken çözülür (data-URI).
- * NOT (ölçümden sonra karar): anahtar üretimi/saklama → expo-secure-store (donanım keystore) +
- * sunucudan kullanıcı-anahtarı. Şu an ölçüm için rastgele anahtar.
+ * AES-256-CTR at-rest şifreleme (modern, optimize @noble/ciphers) + ÖLÇÜM aracı.
+ * İndirilen görselleri diskte şifreli tutmak için; gösterirken çözülür.
+ * NOT (entegrasyonda): anahtar → expo-secure-store (donanım keystore) + sunucudan kullanıcı-anahtarı.
+ * Her dosya için rastgele 16-bayt nonce şifreli verinin başına eklenir (CTR nonce tekrarı olmaz).
  */
-import aesjs from 'aes-js';
+import { ctr } from '@noble/ciphers/aes.js';
 import * as Crypto from 'expo-crypto';
 import * as FileSystem from 'expo-file-system/legacy';
 
@@ -18,7 +18,7 @@ export function b64ToBytes(b64: string): Uint8Array {
 
 export function bytesToB64(bytes: Uint8Array): string {
   let bin = '';
-  const yig = 0x8000; // 32KB parça → String.fromCharCode stack taşmasın
+  const yig = 0x8000;
   for (let i = 0; i < bytes.length; i += yig) {
     bin += String.fromCharCode(...bytes.subarray(i, i + yig));
   }
@@ -29,9 +29,22 @@ export function rastgeleAnahtar(): Uint8Array {
   return Crypto.getRandomBytes(32); // AES-256
 }
 
-const ctr = (key: Uint8Array) => new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(1));
-export const aesSifrele = (plain: Uint8Array, key: Uint8Array): Uint8Array => ctr(key).encrypt(plain);
-export const aesCoz = (cipher: Uint8Array, key: Uint8Array): Uint8Array => ctr(key).decrypt(cipher);
+/** Şifrele → [16B nonce | ciphertext]. */
+export function aesSifrele(plain: Uint8Array, key: Uint8Array): Uint8Array {
+  const nonce = Crypto.getRandomBytes(16);
+  const cipher = ctr(key, nonce).encrypt(plain);
+  const out = new Uint8Array(nonce.length + cipher.length);
+  out.set(nonce, 0);
+  out.set(cipher, nonce.length);
+  return out;
+}
+
+/** Çöz: [16B nonce | ciphertext] → plain. */
+export function aesCoz(paket: Uint8Array, key: Uint8Array): Uint8Array {
+  const nonce = paket.subarray(0, 16);
+  const cipher = paket.subarray(16);
+  return ctr(key, nonce).decrypt(cipher);
+}
 
 /**
  * ÖLÇÜM: indirilmiş bir TCK görselini şifrele→çöz, süreleri döndürür.
@@ -48,14 +61,14 @@ export async function sifrelemeOlcum(): Promise<string> {
   const t1 = Date.now();
 
   const key = rastgeleAnahtar();
-  const cipher = aesSifrele(plain, key);
+  const paket = aesSifrele(plain, key);
   const t2 = Date.now();
 
-  const plain2 = aesCoz(cipher, key);
+  const plain2 = aesCoz(paket, key);
   const b64geri = bytesToB64(plain2);
   const t3 = Date.now();
 
   const kb = Math.round(plain.length / 1024);
   const eslesme = b64geri.length === b64.length ? 'OK' : 'FARK!';
-  return `${kb}KB · oku+decode ${t1 - t0}ms · şifrele ${t2 - t1}ms · ÇÖZ+encode ${t3 - t2}ms (${eslesme})`;
+  return `${kb}KB · oku ${t1 - t0}ms · şifrele ${t2 - t1}ms · ÇÖZ+encode ${t3 - t2}ms (${eslesme})`;
 }
