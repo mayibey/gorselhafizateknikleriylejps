@@ -25,6 +25,7 @@ import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
+import { UyelikProvider } from '@/lib/uyelik-context';
 
 // Fontlar yüklenene kadar splash açık kalsın (yanıp sönme/FOUT önlenir).
 void SplashScreen.preventAutoHideAsync();
@@ -85,13 +86,15 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <StatusBar style="dark" />
         <AuthProvider>
-          <BransProvider>
-            <RutbeProvider>
-              <ErrorBoundary>
-                <RootNavigator />
-              </ErrorBoundary>
-            </RutbeProvider>
-          </BransProvider>
+          <UyelikProvider>
+            <BransProvider>
+              <RutbeProvider>
+                <ErrorBoundary>
+                  <RootNavigator />
+                </ErrorBoundary>
+              </RutbeProvider>
+            </BransProvider>
+          </UyelikProvider>
         </AuthProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
