@@ -11,13 +11,11 @@ import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getCardsByLaw } from '@/db/database';
 import { useSesliNobet } from '@/hooks/use-sesli-nobet';
-import { useEkranKoruma } from '@/lib/ekran-koruma';
 import type { QueueCard } from '@/lib/queue';
 import { sesliKartlar } from '@/lib/sesli-nobet';
 
 export default function SesliNobetScreen() {
-  // İçerik koruması: kart görseli görünür → ekran görüntüsü/kaydı engellenir.
-  useEkranKoruma();
+  // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
   const router = useRouter();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
   const [kartlar, setKartlar] = useState<QueueCard[] | null>(null);

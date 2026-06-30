@@ -29,7 +29,6 @@ import { Loading } from '@/components/ui/loading';
 import { FORMSPREE_ENDPOINT } from '@/constants/config';
 import { CardFlowMaxWidth, Palette, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
-import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { erteleBugun, ertelemeAktifMi } from '@/lib/modal-erteleme';
 import {
   getCardsByBolumChain,
@@ -58,8 +57,7 @@ async function gunlukSinirli(): Promise<QueueCard[]> {
 }
 
 export default function AkisScreen() {
-  // İçerik koruması: kart akışı açıkken ekran görüntüsü/kaydı engellenir (Android FLAG_SECURE).
-  useEkranKoruma();
+  // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
   const router = useRouter();
   const { lawId, bolumId, mod, kart } = useLocalSearchParams<{
     lawId?: string;

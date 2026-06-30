@@ -20,6 +20,7 @@ import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { getAyar, planla } from '@/lib/bildirim';
+import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
 import { BransProvider, useBrans } from '@/lib/brans-context';
@@ -36,6 +37,10 @@ export default function RootLayout() {
     Inter_800ExtraBold,
     PlayfairDisplay_700Bold,
   });
+
+  // Ekran görüntüsü + VİDEO KAYDI engeli — GLOBAL (tüm ekranlar; Android FLAG_SECURE).
+  // (Önce sadece /akis + sesli-nöbette'ydi; içerik arama/sheet'lerde de görünüyor → app geneli.)
+  useEkranKoruma();
 
   useEffect(() => {
     void initDatabase();
