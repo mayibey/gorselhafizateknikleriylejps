@@ -12,9 +12,11 @@ const KALDIRILACAK = [
   'android.permission.WRITE_EXTERNAL_STORAGE',
   'android.permission.RECORD_AUDIO',
   'android.permission.SYSTEM_ALERT_WINDOW',
-  // NOT: FOREGROUND_SERVICE(+_MEDIA_PLAYBACK) KALDIRILMADI — uygulama arka planda ses çalıyor
-  // (test ile doğrulandı: ekran kapalı/app arka planda iken anlatım devam ediyor). Bu meşru bir
-  // medya-oynatma kullanımı → Play "Ön plan hizmeti izinleri" beyanı "Medya oynatma" ile doldurulur.
+  // Arka plan sesi KODDA KAPATILDI (_layout.tsx: setAudioModeAsync shouldPlayInBackground:false)
+  // → ses yalnız uygulama önplandayken çalar → foreground-service iznine GEREK YOK → kaldır.
+  // Böylece Play "Ön plan hizmeti izinleri" beyan zorunluluğu ortadan kalkar.
+  'android.permission.FOREGROUND_SERVICE',
+  'android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK',
 ];
 
 module.exports = function withRemovedPermissions(config) {

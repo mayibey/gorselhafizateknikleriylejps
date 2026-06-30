@@ -6,6 +6,7 @@ import {
   useFonts,
 } from '@expo-google-fonts/inter';
 import { PlayfairDisplay_700Bold } from '@expo-google-fonts/playfair-display';
+import { setAudioModeAsync } from 'expo-audio';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
@@ -49,6 +50,12 @@ export default function RootLayout() {
   // İndirilmiş kanun listesini belleğe al → görsel çözümleyici yerel dosyaları görsün.
   useEffect(() => {
     void indirmeDurumYukle();
+  }, []);
+
+  // Ses ARKA PLANDA ÇALMASIN — app arka plana/ekran kapanınca anlatım dursun. Böylece
+  // foreground-service iznine gerek kalmaz (Play "ön plan hizmeti izinleri" beyanı gerekmez).
+  useEffect(() => {
+    void setAudioModeAsync({ shouldPlayInBackground: false });
   }, []);
 
   // Uygulama arka plana alınınca ilerlemeyi buluta yaz (giriş yoksa no-op).
