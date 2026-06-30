@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
     elevation: 1,
   },
   logo: {
-    width: 22,
-    height: 22,
+    width: 34,
+    height: 34,
   },
   pressed: {
     opacity: 0.85,
