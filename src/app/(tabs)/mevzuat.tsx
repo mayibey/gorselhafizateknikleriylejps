@@ -13,6 +13,8 @@ import { useBrans } from '@/lib/brans-context';
 import { hecele } from '@/lib/hece';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
+import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
+import { LAW_KLASOR } from '@/db/seed';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
@@ -499,6 +501,7 @@ function KanunSatir({
   // durumlarında çoklu/yanlış sekme sorunu biter). yüzde yalnız bar/etiket için.
   const tam = toplam > 0 && calisilan >= toplam;
   const bos = calisilan === 0;
+  const klasorAdi = LAW_KLASOR[law.id];
   const yuzde = toplam > 0 ? Math.min(100, Math.round((calisilan / toplam) * 100)) : 0;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
   // "En son ne zaman çalışıldı" metni. sonGun null → hiç başlanmamış (kırmızı uyarı).
@@ -563,6 +566,7 @@ function KanunSatir({
             color={favori ? Palette.altin : Palette.solukMetin}
           />
         </Pressable>
+        {klasorAdi ? <KanunIndirButon klasor={klasorAdi} /> : null}
         {tam ? (
           <View style={st.satirSag}>
             <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />

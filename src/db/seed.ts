@@ -163,6 +163,11 @@ const KANUN_BILGI: Record<string, { lawId: number; etiket: string }> = {
   atesli: { lawId: 25, etiket: "6136 Ateşli Silahlar" },
 };
 
+/** lawId → içerik klasörü (KANUN_BILGI'nin tersi). İndirme butonu kanunun klasörünü bundan bulur. */
+export const LAW_KLASOR: Record<number, string> = Object.fromEntries(
+  Object.entries(KANUN_BILGI).map(([klasor, { lawId }]) => [lawId, klasor]),
+);
+
 /**
  * TCK + Kabahatler görsel kartlarını registry anahtarlarından ÜRETİR (her PNG = 1 kart).
  * Çok panel → aynı madde_no (4733 m.8 gibi aynı düğümde sıralanır). Özet/ayırt → ilk maddenin
