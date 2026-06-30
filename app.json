@@ -54,7 +54,8 @@
       ],
       "./plugins/withRemovedPermissions",
       "./plugins/withYerelBuild",
-      "expo-secure-store"
+      "expo-secure-store",
+      "expo-iap"
     ],
     "experiments": {
       "typedRoutes": true
