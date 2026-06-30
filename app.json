@@ -15,7 +15,7 @@
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 7,
+      "versionCode": 8,
       "googleServicesFile": "./google-services.json",
       "allowBackup": false,
       "permissions": [
