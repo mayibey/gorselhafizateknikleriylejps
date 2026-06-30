@@ -1,5 +1,4 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -13,8 +12,6 @@ import { DekoratifArkaplan } from '@/components/auth/dekoratif-arkaplan';
 import { DogumTarihiSecici } from '@/components/auth/dogum-tarihi-secici';
 import { KarakterFigur } from '@/components/auth/karakter-figur';
 import { SecimKutu } from '@/components/auth/secim-kutu';
-import { BransSecici } from '@/components/brans-secici';
-import { RutbeSecici } from '@/components/rutbe-secici';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getBranches } from '@/db/database';
@@ -26,13 +23,13 @@ import { type Rutbe, RUTBELER } from '@/lib/rutbe-store';
 import { useRutbe } from '@/lib/rutbe-context';
 
 /**
- * İlk açılış akışı: Tanıtım → ZORUNLU giriş/kayıt (AuthEkrani) → PROFİL (ad/soyad/telefon/
- * doğum/cinsiyet) → branş → rütbe → ana ekran. Giriş + profil zorunlu (gate: _layout).
+ * İlk açılış akışı: Tanıtım → ZORUNLU giriş/kayıt (AuthEkrani) → PROFİL (TEK adım: ad/soyad/
+ * telefon/doğum/cinsiyet + branş/rütbe) → ana ekran. İlk girişte her şey BİR KEZ kurulur;
+ * sonradan Evsaf → Ayarlar'dan değiştirilir. Branş/rütbe artık profilin içinde (ayrı adım yok).
  */
 export default function OnboardingScreen() {
-  const router = useRouter();
-  const { brans, setBrans } = useBrans();
-  const { rutbe, setRutbe } = useRutbe();
+  const { brans } = useBrans();
+  const { rutbe } = useRutbe();
   const { kullanici, hazir, profilTamam, profilYenile } = useAuth();
   const [tanitimGecildi, setTanitimGecildi] = useState(false);
   const girisGerek = hazir && !kullanici;
@@ -55,31 +52,11 @@ export default function OnboardingScreen() {
       </SafeAreaView>
     );
   }
-  // 0.7: PROFİL (eksikse zorunlu).
+  // PROFİL — tek seferlik kurulum (kişisel + görev/branş/rütbe). Eksikse zorunlu.
   if (profilTamam === false) {
     return <ProfilAdim onTamam={() => void profilYenile()} />;
   }
-  // 1: branş.
-  if (!brans) {
-    return (
-      <BransSecici
-        baslik="Branşını Seç"
-        altyazi="Mevzuatın buna göre filtrelenecek. Sonradan Evsaf'tan değiştirebilirsin."
-        onSelect={(slug) => void setBrans(slug)}
-      />
-    );
-  }
-  // 2: rütbe.
-  if (!rutbe) {
-    return (
-      <RutbeSecici
-        baslik="Rütbeni Seç"
-        altyazi="Konular rütbene göre filtrelenir. Sonradan Evsaf → Ayarlar'dan değiştirebilirsin."
-        onSelect={(slug) => void setRutbe(slug).then(() => router.replace('/'))}
-      />
-    );
-  }
-  return null;
+  return null; // her şey tamam → _layout gate ana ekrana yönlendirir
 }
 
 // --- Tanıtım (değer önermesi) ---

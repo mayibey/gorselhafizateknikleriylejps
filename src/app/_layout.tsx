@@ -81,8 +81,8 @@ export default function RootLayout() {
 }
 
 function RootNavigator() {
-  const { brans, yukleniyor: bransYukleniyor } = useBrans();
-  const { rutbe, yukleniyor: rutbeYukleniyor } = useRutbe();
+  const { yukleniyor: bransYukleniyor } = useBrans();
+  const { yukleniyor: rutbeYukleniyor } = useRutbe();
   const { kullanici, hazir, yukleniyor: authYukleniyor, profilTamam } = useAuth();
   const segments = useSegments();
   const router = useRouter();
@@ -93,8 +93,8 @@ function RootNavigator() {
   const girisGerek = hazir && !kullanici;
   // Giriş var ama profil tamlığı henüz bilinmiyor → bekle (yanlış yönlendirme olmasın).
   const profilBekle = !!kullanici && profilTamam === null;
-  // Onboarding: ZORUNLU giriş + profil (ad/soyad/telefon) + branş + rütbe.
-  const eksik = girisGerek || profilTamam === false || !brans || !rutbe;
+  // Onboarding: ZORUNLU giriş + tek-seferlik profil kurulumu (kişisel + branş/rütbe profilde).
+  const eksik = girisGerek || profilTamam === false;
 
   // Guard: giriş/profil/branş/rütbe eksikse onboarding'e götür.
   useEffect(() => {
