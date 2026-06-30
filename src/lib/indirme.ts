@@ -15,7 +15,7 @@ import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
 import { KART_SES_YOLLARI } from '../assets/kart-sesleri';
 import { ICERIK_TABANI } from '@/constants/config';
 import { icerikAnahtari } from './cihaz-anahtar';
-import { imzaliUrller } from './imzali-url';
+import { gorselFiligran, imzaliUrller } from './imzali-url';
 import { aesSifrele, b64ToBytes, bytesToB64 } from './sifreleme';
 
 /** Cihazda indirme destekleniyor mu (web'de hayır). */
@@ -93,10 +93,12 @@ export async function kanunIndir(
   await FileSystem.makeDirectoryAsync(KOK + klasor, { intermediates: true }).catch(() => {});
   const anahtar = await icerikAnahtari();
 
-  // İMZALI URL (flag açıksa): tüm dosyalar için tek çağrıda kısa-ömürlü URL al; yoksa public.
+  // İMZALI URL (ses için): tüm yollar tek çağrıda; yoksa public.
   const tumYollar = [...gorseller, ...sesler].map((d) => d.yol);
   const imzali = await imzaliUrller(tumYollar).catch(() => new Map<string, string>());
   const indirUrl = (yol: string) => imzali.get(yol) ?? `${ICERIK_TABANI}/${yol}`;
+  // GÖRSEL için: filigran fonksiyonu (sunucu e-postayı piksele basar). Aktifse görseller buradan.
+  const filigran = await gorselFiligran().catch(() => null);
 
   let biten = 0;
   const ilerle = () => {
@@ -104,12 +106,18 @@ export async function kanunIndir(
     onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100) });
   };
 
-  // GÖRSELLER — indir + AES şifrele (diskte düz görsel kalmaz).
+  // GÖRSELLER — (filigran fonksiyonundan / yoksa imzalı-public) indir + AES şifrele.
   for (const { yol } of gorseller) {
     const hedef = KOK + yol;
     const bilgi = await FileSystem.getInfoAsync(hedef);
     if (!bilgi.exists || bilgi.size === 0) {
-      await FileSystem.downloadAsync(indirUrl(yol), hedef);
+      if (filigran) {
+        await FileSystem.downloadAsync(`${filigran.base}?yol=${encodeURIComponent(yol)}`, hedef, {
+          headers: filigran.headers,
+        });
+      } else {
+        await FileSystem.downloadAsync(indirUrl(yol), hedef);
+      }
       const b64 = await FileSystem.readAsStringAsync(hedef, { encoding: FileSystem.EncodingType.Base64 });
       const paket = aesSifrele(b64ToBytes(b64), anahtar);
       await FileSystem.writeAsStringAsync(hedef, bytesToB64(paket), {
