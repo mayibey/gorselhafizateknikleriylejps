@@ -12,6 +12,11 @@ const KALDIRILACAK = [
   'android.permission.WRITE_EXTERNAL_STORAGE',
   'android.permission.RECORD_AUDIO',
   'android.permission.SYSTEM_ALERT_WINDOW',
+  // expo-audio bunları ekliyor ama uygulama ARKA PLANDA ses çalmıyor (staysActiveInBackground
+  // YOK; ses yalnız uygulama önplandayken çalar). Foreground-service iznini beyan etmek yerine
+  // KALDIR → Play "Ön plan hizmeti izinleri" beyan zorunluluğu ortadan kalkar.
+  'android.permission.FOREGROUND_SERVICE',
+  'android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK',
 ];
 
 module.exports = function withRemovedPermissions(config) {
