@@ -1,58 +1,34 @@
 /**
  * Kanun indirme butonu (Mevzuat satırı) — durum: İndir / %X iniyor / İndirildi (+ sil).
- * İndirilen kanun çalışırken yerelden okunur (anında + offline). Yalnız uzak kaynak (ICERIK_TABANI)
- * + indirme-destekli platformda görünür; yerel/gömülü modda gizli (gerek yok).
+ * KONTROLLÜ: state'i useKanunIndirme hook'undan alır (satır gate'i ile paylaşır).
+ * Yalnız uzak kaynak (ICERIK_TABANI) + indirme-destekli platformda görünür.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useState } from 'react';
-import {
-  ActivityIndicator,
-  Alert,
-  type GestureResponderEvent,
-  Pressable,
-  StyleSheet,
-  View,
-} from 'react-native';
+import { ActivityIndicator, type GestureResponderEvent, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { ICERIK_TABANI } from '@/constants/config';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { indirmeDestekli, kanunIndir, kanunIndirilmisMi, kanunSil } from '@/lib/indirme';
+import type { IndirmeDurum } from '@/hooks/use-kanun-indirme';
+import { indirmeDestekli } from '@/lib/indirme';
 
-type Durum = 'yok' | 'iniyor' | 'indirildi';
-
-export function KanunIndirButon({ klasor }: { klasor: string }) {
-  const [durum, setDurum] = useState<Durum>(() => (kanunIndirilmisMi(klasor) ? 'indirildi' : 'yok'));
-  const [yuzde, setYuzde] = useState(0);
-
+export function KanunIndirButon({
+  durum,
+  yuzde,
+  onIndir,
+  onSil,
+}: {
+  durum: IndirmeDurum;
+  yuzde: number;
+  onIndir: () => void;
+  onSil: () => void;
+}) {
   if (!indirmeDestekli || !ICERIK_TABANI) return null;
 
-  async function indir(e?: GestureResponderEvent) {
+  const dur = (fn: () => void) => (e?: GestureResponderEvent) => {
     e?.stopPropagation();
-    setDurum('iniyor');
-    setYuzde(0);
-    try {
-      await kanunIndir(klasor, (p) => setYuzde(p.yuzde));
-      setDurum('indirildi');
-    } catch (e) {
-      setDurum('yok');
-      Alert.alert('İndirilemedi', e instanceof Error ? e.message : 'Bağlantını kontrol et, tekrar dene.');
-    }
-  }
-
-  function silSor(e?: GestureResponderEvent) {
-    e?.stopPropagation();
-    Alert.alert('İndirilen içeriği sil', 'Bu kanunun indirilen görselleri cihazdan silinecek. Tekrar çalışmak için yeniden indirmen gerekir.', [
-      { text: 'Vazgeç', style: 'cancel' },
-      {
-        text: 'Sil',
-        style: 'destructive',
-        onPress: () => {
-          void kanunSil(klasor).then(() => setDurum('yok'));
-        },
-      },
-    ]);
-  }
+    fn();
+  };
 
   if (durum === 'iniyor') {
     return (
@@ -67,7 +43,7 @@ export function KanunIndirButon({ klasor }: { klasor: string }) {
 
   if (durum === 'indirildi') {
     return (
-      <Pressable style={[styles.kutu, styles.indirildi]} onPress={silSor} hitSlop={6}>
+      <Pressable style={[styles.kutu, styles.indirildi]} onPress={dur(onSil)} hitSlop={6}>
         <MaterialCommunityIcons name="check-circle" size={16} color={Palette.yesil} />
         <AppText variant="etiket" bold color="yesil">
           İndirildi
@@ -78,7 +54,7 @@ export function KanunIndirButon({ klasor }: { klasor: string }) {
   }
 
   return (
-    <Pressable style={[styles.kutu, styles.indir]} onPress={(e) => void indir(e)} hitSlop={6}>
+    <Pressable style={[styles.kutu, styles.indir]} onPress={dur(onIndir)} hitSlop={6}>
       <MaterialCommunityIcons name="download" size={16} color={Palette.lacivert} />
       <AppText variant="etiket" bold color="lacivert">
         İndir

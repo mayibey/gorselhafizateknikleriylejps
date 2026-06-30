@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -14,8 +14,11 @@ import { hecele } from '@/lib/hece';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
+import { ICERIK_TABANI } from '@/constants/config';
 import { LAW_KLASOR } from '@/db/seed';
+import { useKanunIndirme } from '@/hooks/use-kanun-indirme';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
+import { indirmeDestekli } from '@/lib/indirme';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
 
@@ -502,6 +505,26 @@ function KanunSatir({
   const tam = toplam > 0 && calisilan >= toplam;
   const bos = calisilan === 0;
   const klasorAdi = LAW_KLASOR[law.id];
+  const indirme = useKanunIndirme(klasorAdi ?? '');
+  // Uzak modda (içerik sunucuda): bir kanunu çalışmak için ÖNCE indirilmeli.
+  const indirGerek =
+    !!klasorAdi && indirmeDestekli && !!ICERIK_TABANI && indirme.durum !== 'indirildi';
+
+  function satiraBas() {
+    if (indirGerek) {
+      if (indirme.durum === 'iniyor') return; // iniyorsa bekle
+      Alert.alert(
+        'Önce indir',
+        `"${law.ad}" çalışmak için önce indirilmeli. İndirildikten sonra internetsiz, anında çalışır. Şimdi indirilsin mi?`,
+        [
+          { text: 'Vazgeç', style: 'cancel' },
+          { text: 'İndir', onPress: () => void indirme.indir() },
+        ],
+      );
+      return;
+    }
+    onPress(law);
+  }
   const yuzde = toplam > 0 ? Math.min(100, Math.round((calisilan / toplam) * 100)) : 0;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
   // "En son ne zaman çalışıldı" metni. sonGun null → hiç başlanmamış (kırmızı uyarı).
@@ -517,7 +540,7 @@ function KanunSatir({
   return (
     <Pressable
       style={({ pressed }) => [st.satir, pressed && st.pressed]}
-      onPress={() => onPress(law)}
+      onPress={satiraBas}
       accessibilityRole="button"
       accessibilityLabel={law.ad}>
       {/* ÜST: monogram + tam kanun adı BOYDAN BOYA (heceli sarma → Türkçe hece bölme). */}
@@ -566,7 +589,14 @@ function KanunSatir({
             color={favori ? Palette.altin : Palette.solukMetin}
           />
         </Pressable>
-        {klasorAdi ? <KanunIndirButon klasor={klasorAdi} /> : null}
+        {klasorAdi ? (
+          <KanunIndirButon
+            durum={indirme.durum}
+            yuzde={indirme.yuzde}
+            onIndir={indirme.indir}
+            onSil={indirme.sil}
+          />
+        ) : null}
         {tam ? (
           <View style={st.satirSag}>
             <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
