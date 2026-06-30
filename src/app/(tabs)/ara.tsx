@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { FlatList, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { Alert, FlatList, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 // Seslendirme metni registry'si ('@/assets' alias gerçek assets/'a gittiği için göreli).
 import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
@@ -9,11 +9,14 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
+import { ICERIK_TABANI } from '@/constants/config';
 import { FontFamily, Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getLaws } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
 import type { CardWithLaw, LawWithCount } from '@/db/schema';
+import { LAW_KLASOR } from '@/db/seed';
 import { araIndeksHazirla, araKanunlar, trKucuk, type AraKapsam, type AramaSonuc } from '@/lib/ara';
+import { indirmeDestekli, kanunIndirilmisMi } from '@/lib/indirme';
 import { useBrans } from '@/lib/brans-context';
 import { getSonAramalar, sonAramaEkle, sonAramalariTemizle } from '@/lib/son-aramalar';
 
@@ -96,6 +99,19 @@ export default function AraScreen() {
   }
 
   function ac(s: AramaSonuc) {
+    // Kanun indirilmemişse → boş/bozuk kart yerine indir-uyarısı (tester #5).
+    const klasor = LAW_KLASOR[s.lawId];
+    if (klasor && indirmeDestekli && ICERIK_TABANI && !kanunIndirilmisMi(klasor)) {
+      Alert.alert(
+        'Kanun indirilmemiş',
+        'Bu maddenin kartlarını görmek için önce kanunu indirmen gerekiyor.',
+        [
+          { text: 'Vazgeç', style: 'cancel' },
+          { text: "Mevzuat'a git", onPress: () => router.push('/mevzuat') },
+        ],
+      );
+      return;
+    }
     router.push({ pathname: '/akis', params: { lawId: String(s.lawId), kart: String(s.cardId) } });
   }
 
