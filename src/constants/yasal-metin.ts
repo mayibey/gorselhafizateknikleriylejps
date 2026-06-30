@@ -2,7 +2,7 @@
  * Uygulama içi yasal metinler. Mağaza incelemesi için linklerin HER ZAMAN çalışması
  * gerekir (URL barındırılmasa bile). Tam/güncel sürüm hosting'e koyulup config'teki
  * GIZLILIK_URL/SARTLAR_URL doldurulabilir; uygulama içi metin canonical özet olarak kalır.
- * Yer tutucuları yayından önce doldur: MEVZU-JSPS, dev.ademyilmaz@gmail.com.
+ * Yer tutucuları yayından önce doldur: MEVZU-JSPS, iletisim@mevzujsps.com.
  */
 
 /**
@@ -14,7 +14,7 @@ export const RESMI_BAGLANTI_YOK =
 
 export const GIZLILIK_METNI = `MEVZU-JSPS — GİZLİLİK POLİTİKASI
 
-Veri sorumlusu: MEVZU-JSPS · İletişim: dev.ademyilmaz@gmail.com
+Veri sorumlusu: MEVZU-JSPS · İletişim: iletisim@mevzujsps.com
 
 1) İŞLENEN VERİLER
 • Hesap verisi: Uygulamayı kullanmak için Google (Gmail) ile giriş zorunludur. Girişte
@@ -45,7 +45,7 @@ satmıyor, pazarlama amacıyla paylaşmıyoruz.
 Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürece saklanır. Cihazdaki çalışma verisi uygulama yüklü olduğu sürece tutulur; indirilen içerik şifreli olarak cihazında kalır (Mevzuat'tan silebilirsin).
 
 5) HAKLARIN (KVKK m.11)
-Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: dev.ademyilmaz@gmail.com.
+Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: iletisim@mevzujsps.com.
 
 6) HESAP ve VERİ SİLME
 • Hesabını UYGULAMA İÇİNDEN, tek tuşla silebilirsin: Evsaf → Ayarlar → Hesap → "Hesabı Sil".
@@ -59,7 +59,7 @@ Belirlenen yaş altına yönelik değildir.
 8) DEĞİŞİKLİKLER
 Politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde bildiririz.
 
-Sorular: dev.ademyilmaz@gmail.com`;
+Sorular: iletisim@mevzujsps.com`;
 
 export const SARTLAR_METNI = `MEVZU-JSPS — KULLANIM ŞARTLARI
 
@@ -95,4 +95,4 @@ Uygulamayı dilediğin an kaldırabilirsin. Şartları ihlal halinde erişimini 
 7) UYGULANACAK HUKUK
 Türkiye Cumhuriyeti hukuku uygulanır.
 
-İletişim: dev.ademyilmaz@gmail.com`;
+İletişim: iletisim@mevzujsps.com`;

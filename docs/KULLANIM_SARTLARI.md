@@ -1,6 +1,6 @@
 # Kullanım Şartları (EULA)
 
-> **NOT (yayından önce):** `MEVZU-JSPS`, `dev.ademyilmaz@gmail.com`,
+> **NOT (yayından önce):** `MEVZU-JSPS`, `iletisim@mevzujsps.com`,
 > `16 Haziran 2026`, `Osmaniye` doldur. Avukat onayı önerilir.
 > Uygulama içi canonical özet: `src/constants/yasal-metin.ts`.
 
@@ -46,4 +46,4 @@ Bu şartlara **Türkiye Cumhuriyeti hukuku** uygulanır; uyuşmazlıklarda **Osm
 icra daireleri yetkilidir.
 
 ## 9. İletişim
-**dev.ademyilmaz@gmail.com**
+**iletisim@mevzujsps.com**

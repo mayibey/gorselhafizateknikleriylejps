@@ -6,7 +6,7 @@
 > **`src/constants/yasal-metin.ts`**. Bu dosya yalnız geçmiş kaydı için duruyor.
 
 > **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `MEVZU-JSPS`,
-> `dev.ademyilmaz@gmail.com`, `16 Haziran 2026`.
+> `iletisim@mevzujsps.com`, `16 Haziran 2026`.
 > Bu metin sağlam bir taslaktır; canlıya çıkmadan **bir avukata/danışmana onaylatman önerilir**.
 > Bunu bir web sayfasında yayınla (Google Play gizlilik politikası **URL** ister) ve URL'yi
 > `src/constants/config.ts > GIZLILIK_URL`'e yaz. Uygulama içi canonical özet: `src/constants/yasal-metin.ts`.
@@ -15,7 +15,7 @@
 
 MEVZU-JSPS ("Uygulama") olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
 işlediğimizi ve haklarını açıklar. Veri sorumlusu: **MEVZU-JSPS**
-(iletişim: **dev.ademyilmaz@gmail.com**).
+(iletişim: **iletisim@mevzujsps.com**).
 
 **Önemli:** Uygulama tamamen **çevrimdışı** çalışır. Hesap açmıyoruz, kullanıcı girişi yok,
 sohbet/sosyal özellik yok. Çalışma verilerin **cihazından çıkmaz**.
@@ -48,7 +48,7 @@ Hesap verisi (e-posta/şifre), reklam kimliği, konum, rehber, mikrofon/kamera v
 
 ## 5. Haklarınız (KVKK m.11)
 Verinin işlenip işlenmediğini öğrenme, erişme, düzeltme, **silme**, itiraz ve zararın
-giderilmesini talep etme haklarına sahipsin. Başvuru: **dev.ademyilmaz@gmail.com**.
+giderilmesini talep etme haklarına sahipsin. Başvuru: **iletisim@mevzujsps.com**.
 
 ## 6. Veri silme
 Tüm verin cihazında tutulduğundan, **uygulamayı kaldırman** (veya cihaz ayarlarından uygulama
@@ -70,4 +70,4 @@ onaylanmış **değildir**.
 Bu politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde/duyuruyla bildiririz.
 
 ## 11. İletişim
-Sorular için: **dev.ademyilmaz@gmail.com**.
+Sorular için: **iletisim@mevzujsps.com**.
