@@ -15,7 +15,8 @@ import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
-import { gorselKaynak, gorselVarMi } from '@/lib/gorsel-kaynak';
+import { gorselOnCoz } from '@/lib/gorsel-coz';
+import { gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 // Gerçek ses (mp3) registry — kartın gorsel_yolu ile anahtarlı (varsa TTS yerine çalar).
 import { KART_SESLERI } from '../assets/kart-sesleri';
 import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
@@ -128,7 +129,13 @@ export default function AkisScreen() {
     setGorselGorundu(false); // yeni görsel görünene kadar Öğrendim kilitli
     setModalAcik(false); // yeni kartta modal kapalı (anlatimBitti zaten sıfırlanıyor)
     setBugunSorma(false);
-  }, [index]);
+    // PRELOAD: mevcut + komşu ŞİFRELİ kartları arkada önden çöz → açılış beklemesi gizlenir.
+    gorselOnCoz([
+      indirilmisGorsel(queue?.[index]?.gorsel_yolu),
+      indirilmisGorsel(queue?.[index + 1]?.gorsel_yolu),
+      indirilmisGorsel(queue?.[index - 1]?.gorsel_yolu),
+    ]);
+  }, [index, queue]);
 
   // Ses (otomatik anlatım) bitince → erteleme penceresinde DEĞİLSEK "geçelim mi?" modalı.
   // onBitti yalnız doğal bitişte gelir (durdur/seek/kart değişimi tetiklemez → yanlış

@@ -46,7 +46,8 @@
         }
       ],
       "./plugins/withRemovedPermissions",
-      "./plugins/withYerelBuild"
+      "./plugins/withYerelBuild",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true

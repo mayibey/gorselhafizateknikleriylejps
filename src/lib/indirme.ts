@@ -13,6 +13,8 @@ import * as FileSystem from 'expo-file-system/legacy';
 
 import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
 import { ICERIK_TABANI } from '@/constants/config';
+import { icerikAnahtari } from './cihaz-anahtar';
+import { aesSifrele, b64ToBytes, bytesToB64 } from './sifreleme';
 
 /** Cihazda indirme destekleniyor mu (web'de hayır). */
 export const indirmeDestekli = !!FileSystem.documentDirectory;
@@ -79,6 +81,7 @@ export async function kanunIndir(
   if (toplam === 0) throw new Error(`Kanun bulunamadı: ${klasor}`);
 
   await FileSystem.makeDirectoryAsync(KOK + klasor, { intermediates: true }).catch(() => {});
+  const anahtar = await icerikAnahtari();
 
   let biten = 0;
   for (const { yol } of dosyalar) {
@@ -86,6 +89,12 @@ export async function kanunIndir(
     const bilgi = await FileSystem.getInfoAsync(hedef);
     if (!bilgi.exists || bilgi.size === 0) {
       await FileSystem.downloadAsync(`${ICERIK_TABANI}/${yol}`, hedef);
+      // ŞİFRELE: indirileni AES-256 ile şifrele, üzerine yaz → diskte düz görsel kalmaz.
+      const b64 = await FileSystem.readAsStringAsync(hedef, { encoding: FileSystem.EncodingType.Base64 });
+      const paket = aesSifrele(b64ToBytes(b64), anahtar);
+      await FileSystem.writeAsStringAsync(hedef, bytesToB64(paket), {
+        encoding: FileSystem.EncodingType.Base64,
+      });
     }
     biten++;
     onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100) });

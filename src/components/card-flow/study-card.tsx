@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 
 import { GorselZoom } from '@/components/card-flow/gorsel-zoom';
 import { Watermark } from '@/components/card-flow/watermark';
@@ -9,8 +9,9 @@ import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { CardWithSrs } from '@/db/schema';
 import { useCihazKimlik } from '@/hooks/use-cihaz-kimlik';
+import { cozHazir, gorselCoz } from '@/lib/gorsel-coz';
+import { gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { bugunISO } from '@/lib/srs';
-import { gorselKaynak } from '@/lib/gorsel-kaynak';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
 export function StudyCard({
@@ -24,13 +25,47 @@ export function StudyCard({
   /** Görsel ekranda görünür olunca (yüklendi VEYA hata) bildirilir → "Öğrendim" kilidi açılır. */
   onGorundu?: () => void;
 }) {
-  const gorsel = gorselKaynak(card.gorsel_yolu);
+  // İndirilmiş içerik ŞİFRELİ → çöz (data-URI). İndirilmemişse uzak/gömülü kaynak.
+  const sifreliYol = indirilmisGorsel(card.gorsel_yolu);
+  const [cozulmus, setCozulmus] = useState<string | null>(() =>
+    sifreliYol ? (cozHazir(sifreliYol) ?? null) : null,
+  );
+  useEffect(() => {
+    if (!sifreliYol) return;
+    const hazir = cozHazir(sifreliYol);
+    if (hazir) {
+      setCozulmus(hazir);
+      return;
+    }
+    setCozulmus(null);
+    let iptal = false;
+    gorselCoz(sifreliYol)
+      .then((d) => !iptal && setCozulmus(d))
+      .catch(() => !iptal && onGorundu?.()); // çözülemezse kilitlenip kalmasın
+    return () => {
+      iptal = true;
+    };
+  }, [sifreliYol, onGorundu]);
+
+  const gorsel = sifreliYol ? (cozulmus ? { uri: cozulmus } : undefined) : gorselKaynak(card.gorsel_yolu);
   const { kimlik } = useCihazKimlik();
   const [zoomAcik, setZoomAcik] = useState(false);
   // Forensic filigran: kimlik yüklenince render edilir (yoksa overlay yok).
   // Aynı metin hem kart hem tam ekran zoom overlay'inde kullanılır (zoom modunda da görünsün).
   const filigranMetin = kimlik ? `JSPS • ${kimlik} • ${bugunISO()}` : null;
   const filigran = filigranMetin ? <Watermark metin={filigranMetin} /> : null;
+
+  // Şifreli içerik henüz çözülmedi → "çözülüyor" bekleme kutusu (Öğrendim kilitli kalır).
+  if (sifreliYol && !cozulmus) {
+    return (
+      <View style={[styles.card, styles.cardGorsel, styles.cozuluyor]}>
+        <ActivityIndicator color={Palette.altinKoyu} />
+        <AppText variant="kucuk" color="solukMetin" style={styles.cozuluyorMetin}>
+          Görsel çözülüyor…
+        </AppText>
+      </View>
+    );
+  }
 
   // Görselli mod: kart kendi künyesini içerir → uygulama şeritleri gösterilmez.
   // Görsele dokununca tam ekran zoom overlay açılır (ses çalıyorsa kesilmez — ekran unmount olmaz).
@@ -127,6 +162,14 @@ const styles = StyleSheet.create({
   // tam doldurur (yer tutucu modu bu stili almaz, doğal yükseklikte kalır).
   cardGorsel: {
     height: '100%',
+  },
+  cozuluyor: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+  },
+  cozuluyorMetin: {
+    marginTop: Spacing.one,
   },
   gorsel: {
     // Kutu görselin doğal oranında → görsel kutuyu tam doldurur (boşluk/kırpma yok).
