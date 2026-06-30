@@ -1,24 +1,33 @@
 /**
- * Premium ürün ID'leri — Play Console'da BU ID'lerle oluşturulacak (build yüklendikten sonra).
- * Kod ile Play Console BİREBİR aynı olmalı.
+ * Premium ürün ID'leri — Play Console'da BU ID'lerle oluşturulacak. Kod ile BİREBİR aynı olmalı.
+ * Model: 2 KATEGORİ (müşterek / branş) × 2 SEÇENEK (yıllık abonelik / ömür boyu tek-seferlik).
  */
 
-// Yıllık abonelik (Play "subscription" ürünü, yıllık base plan).
-export const URUN_YILLIK = 'premium_yillik';
-// Ömür boyu (Play "tek seferlik / managed" ürünü).
-export const URUN_OMURBOYU = 'premium_omurboyu';
+// MÜŞTEREK (ortak) konular
+export const URUN_MUSTEREK_YILLIK = 'musterek_yillik'; // abonelik
+export const URUN_MUSTEREK_OMURBOYU = 'musterek_omurboyu'; // tek seferlik
 
-// expo-iap sorgu listeleri (abonelik vs tek-seferlik ayrı API).
-export const ABONELIK_URUNLERI = [URUN_YILLIK];
-export const TEK_SEFERLIK_URUNLERI = [URUN_OMURBOYU];
+// BRANŞ konuları
+export const URUN_BRANS_YILLIK = 'brans_yillik'; // abonelik
+export const URUN_BRANS_OMURBOYU = 'brans_omurboyu'; // tek seferlik
 
-/**
- * ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. Sadece TCK (ilk konu) + denemesi.
- * Klasör adıyla (LAW_KLASOR değeri). Gerisi premium.
- */
+// expo-iap sorgu listeleri (abonelik vs tek-seferlik ayrı API)
+export const ABONELIK_URUNLERI = [URUN_MUSTEREK_YILLIK, URUN_BRANS_YILLIK];
+export const TEK_SEFERLIK_URUNLERI = [URUN_MUSTEREK_OMURBOYU, URUN_BRANS_OMURBOYU];
+
+// Kategoriye göre gruplar (hak hesabı için)
+export const MUSTEREK_URUNLERI = [URUN_MUSTEREK_YILLIK, URUN_MUSTEREK_OMURBOYU];
+export const BRANS_URUNLERI = [URUN_BRANS_YILLIK, URUN_BRANS_OMURBOYU];
+
+/** ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. Sadece TCK (ilk müşterek konu) + denemesi. */
 export const UCRETSIZ_KANUNLAR = ['tck'];
 
 /** Bir kanun (klasör) ücretsiz tadımlık mı? */
 export function ucretsizKanun(klasor: string | null | undefined): boolean {
   return !!klasor && UCRETSIZ_KANUNLAR.includes(klasor);
+}
+
+/** Bir law.blok değeri müşterek mi (değilse branş bloğu). */
+export function musterekBlokMu(blok: string | null | undefined): boolean {
+  return (blok ?? '').toLocaleLowerCase('tr') === 'müşterek';
 }
