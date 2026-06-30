@@ -106,11 +106,13 @@ export async function kanunIndir(
     onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100) });
   };
 
-  // GÖRSELLER — (filigran fonksiyonundan / yoksa imzalı-public) indir + AES şifrele.
-  for (const { yol } of gorseller) {
+  // Tek dosya: GÖRSEL = (filigran fn / imzalı-public) indir + AES şifrele; SES = imzalı/public.
+  // Var olanı atlar (devam-edilebilir).
+  const indirTek = async (tip: 'gorsel' | 'ses', yol: string) => {
     const hedef = KOK + yol;
     const bilgi = await FileSystem.getInfoAsync(hedef);
-    if (!bilgi.exists || bilgi.size === 0) {
+    if (bilgi.exists && bilgi.size > 0) return;
+    if (tip === 'gorsel') {
       if (filigran) {
         await FileSystem.downloadAsync(`${filigran.base}?yol=${encodeURIComponent(yol)}`, hedef, {
           headers: filigran.headers,
@@ -123,19 +125,39 @@ export async function kanunIndir(
       await FileSystem.writeAsStringAsync(hedef, bytesToB64(paket), {
         encoding: FileSystem.EncodingType.Base64,
       });
-    }
-    ilerle();
-  }
-
-  // SESLER — indir (şifresiz; anlatım içeriği, koruma imzalı URL + sunucu erişim katmanı).
-  for (const { yol } of sesler) {
-    const hedef = KOK + yol;
-    const bilgi = await FileSystem.getInfoAsync(hedef);
-    if (!bilgi.exists || bilgi.size === 0) {
+    } else {
       await FileSystem.downloadAsync(indirUrl(yol), hedef);
     }
-    ilerle();
-  }
+  };
+
+  // 3 deneme (sunucu filigranı soğuk başlayınca tek tük hata/timeout olabiliyor).
+  const indirTekRetry = async (tip: 'gorsel' | 'ses', yol: string) => {
+    for (let d = 0; ; d++) {
+      try {
+        return await indirTek(tip, yol);
+      } catch (e) {
+        if (d >= 2) throw e;
+      }
+    }
+  };
+
+  // PARALEL indir (eşzamanlı havuz). Sıralı çok yavaştı: sunucu filigranı görsel başına ~5sn,
+  // sıralıyken her istek soğuk başlıyordu. Havuz ile sunucu çok kopya açıp aynı anda işler
+  // (ölçüm: 8 paralel ≈ 5.5sn = görsel başına ~700ms, sıralının ~7 katı hız).
+  const isler: { tip: 'gorsel' | 'ses'; yol: string }[] = [
+    ...gorseller.map((g) => ({ tip: 'gorsel' as const, yol: g.yol })),
+    ...sesler.map((s) => ({ tip: 'ses' as const, yol: s.yol })),
+  ];
+  const ESZAMANLI = 6;
+  let sira = 0;
+  const calisan = async () => {
+    while (sira < isler.length) {
+      const is = isler[sira++];
+      await indirTekRetry(is.tip, is.yol);
+      ilerle();
+    }
+  };
+  await Promise.all(Array.from({ length: ESZAMANLI }, () => calisan()));
 
   indirilmis.add(klasor);
   await durumKaydet();
