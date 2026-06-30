@@ -48,10 +48,10 @@ Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürec
 Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: dev.ademyilmaz@gmail.com.
 
 6) HESAP ve VERİ SİLME
-• Uygulama içinden "Hesabı Sil" diyebilirsin: hesabın silinmek üzere işaretlenir ve 30 gün içinde
-  tekrar giriş yapmazsan KALICI olarak (hesap verinle birlikte) silinir. 30 gün içinde girersen geri gelir.
-• Cihazdaki çalışma verisini, uygulamayı kaldırarak (veya cihaz ayarlarından temizleyerek) silebilirsin.
-• Dilersen yukarıdaki e-postadan da silme talebinde bulunabilirsin.
+• Hesabını UYGULAMA İÇİNDEN, tek tuşla silebilirsin: Evsaf → Ayarlar → Hesap → "Hesabı Sil".
+  Hesabın silinmek üzere işaretlenir ve 30 gün içinde tekrar giriş yapmazsan hesabın ve hesabına
+  bağlı tüm verin OTOMATİK olarak KALICI silinir. 30 gün içinde girersen hesabın geri gelir.
+• Cihazdaki yerel çalışma verisini, uygulamayı kaldırarak (veya cihaz ayarlarından temizleyerek) silebilirsin.
 
 7) ÇOCUKLAR / GÜVENLİK
 Belirlenen yaş altına yönelik değildir.
