@@ -43,19 +43,22 @@
   işlediğimizi ve haklarını açıklar.</p>
 
   <p><strong>Önemli:</strong> Uygulamayı kullanmak için <strong>Google (Gmail) ile giriş</strong> gerekir.
-  Girişte e-posta adresin ve hesap kimliğin işlenir. Çalışma verilerin şu an cihazında tutulur
-  (ileride, bilgilendirilerek, hesabınla eşitlenebilir). Reklam/izleme yok.</p>
+  Girişte e-posta adresin ve hesap kimliğin işlenir. Çalışma verilerin cihazında tutulur ve hesabınla
+  buluta yedeklenir. Reklam/izleme yok.</p>
 
   <h2>1. İşlediğimiz veriler</h2>
   <ul>
     <li><strong>Hesap verisi:</strong> Google ile giriş zorunlu olduğundan e-posta adresin ve hesap
       kimliğin (kullanıcı no) işlenir ve hesabına bağlanır.</li>
-    <li><strong>Çalışma verileri (şu an cihazda):</strong> ilerlemen, tekrar kayıtların, branş/rütbe
-      seçimin ve sicilin cihazının yerel veritabanında tutulur. İleride hesabınla cihazlar arası
-      eşitlenebilir (bilgilendirilerek).</li>
-    <li><strong>Cihaz tanımlayıcı:</strong> kart güvenliği (filigran) için cihazında üretilen rastgele kimlik.</li>
-    <li><strong>Geri bildirim (yalnız sen gönderirsen):</strong> mesajın + ilgili kart bilgisi + cihaz
-      tanımlayıcı, üçüncü taraf form servisine (Formspree) iletilir.</li>
+    <li><strong>Çalışma verileri:</strong> ilerlemen, tekrar kayıtların, branş/rütbe seçimin ve sicilin
+      cihazının yerel veritabanında tutulur <strong>ve hesabınla buluta (Supabase, AB/Frankfurt)
+      yedeklenir</strong> → cihaz değiştirsen kaybolmaz.</li>
+    <li><strong>İçerik:</strong> kart görselleri içerik sunucumuzdan (Cloudflare R2 / Supabase Storage)
+      internet üzerinden indirilir; indirilen görseller cihazında <strong>şifreli (AES-256)</strong> saklanır.</li>
+    <li><strong>İçerik güvenliği (filigran):</strong> içerik korsanlığına karşı, kart görseline hesabının
+      e-posta adresi soluk biçimde basılır (yalnız senin gördüğün ekranda).</li>
+    <li><strong>Geri bildirim (yalnız sen gönderirsen):</strong> mesajın + ilgili kart bilgisi üçüncü
+      taraf form servisine (Formspree) iletilir.</li>
   </ul>
   <p>Şifre saklamıyoruz (giriş Google üzerinden). Reklam kimliği, konum, rehber, mikrofon/kamera verisi
   <strong>toplamıyoruz</strong>. Reklam ağı ve izleme (tracking) <strong>yok</strong>.</p>
@@ -71,6 +74,8 @@
   <ul>
     <li>Hesap/giriş verisi, kimlik doğrulama altyapımız <strong>Supabase</strong> (AB/Frankfurt) ve giriş
       sağlayıcısı <strong>Google</strong> tarafından işlenir.</li>
+    <li>Kart içeriği (görseller) içerik sunucularımızdan (<strong>Cloudflare R2 / Supabase Storage</strong>)
+      internet üzerinden indirilir; bu sırada IP adresin ilgili sunucuya ulaşır (standart ağ isteği).</li>
     <li>Geri bildirim gönderirsen mesajın <strong>Formspree</strong>’ye iletilir.</li>
     <li>Bu servislerin sunucuları <strong>yurt dışında</strong> olduğundan, giriş yaparak verinin yurt
       dışına aktarılmasına <strong>açık rıza</strong> vermiş olursun.</li>
@@ -79,8 +84,9 @@
   </ul>
 
   <h2>4. Saklama süresi</h2>
-  <p>Hesap verin, hesabın aktif olduğu sürece saklanır. Çalışma verisi ve cihaz tanımlayıcı, uygulama
-  cihazında yüklü olduğu sürece tutulur.</p>
+  <p>Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürece saklanır. Cihazdaki
+  çalışma verisi uygulama yüklü olduğu sürece tutulur; indirilen içerik şifreli olarak cihazında kalır
+  (Mevzuat ekranından silebilirsin).</p>
 
   <h2>5. Haklarınız (KVKK m.11)</h2>
   <p>Verinin işlenip işlenmediğini öğrenme, erişme, düzeltme, <strong>silme</strong>, itiraz ve zararın
