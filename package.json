@@ -61,6 +61,7 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "gorsel:uret": "node scripts/gorsel-registry-uret.mjs",
+    "gorsel:manifest": "node scripts/gorsel-registry-uret.mjs --manifest",
     "ses:uret": "node scripts/ses-registry-uret.mjs",
     "madde:uret": "node scripts/madde-metni-uret.mjs",
     "soru:uret": "node scripts/soru-registry-uret.mjs"

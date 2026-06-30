@@ -32,7 +32,7 @@ const dosyalar = pngTopla(assetsRoot).sort();
 // Gömülü binary'leri pakete dahil etmeden SADECE manifest+anahtar üretmek için:
 //   GORSEL_MANIFEST_ONLY=1 npm run gorsel:uret
 // (sunucuya taşıma fazında app boyutunu ~MB'lere indirmek için; require map atlanır.)
-const manifestOnly = process.env.GORSEL_MANIFEST_ONLY === '1';
+const manifestOnly = process.env.GORSEL_MANIFEST_ONLY === '1' || process.argv.includes('--manifest');
 
 const anahtarlar = new Map(); // key -> { req: outDir'e göre require yolu, yol: icerik-göreli yol (uzantılı) }
 for (const tam of dosyalar) {
