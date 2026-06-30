@@ -19,10 +19,13 @@ Veri sorumlusu: MEVZU-JSPS · İletişim: dev.ademyilmaz@gmail.com
 1) İŞLENEN VERİLER
 • Hesap verisi: Uygulamayı kullanmak için Google (Gmail) ile giriş zorunludur. Girişte
   e-posta adresin ve hesap kimliğin (kullanıcı no) işlenir ve hesabına bağlanır.
-• Çalışma verisi: ilerlemen, branşın, rütben ve sicilin şu an CİHAZINDA tutulur (ileride,
-  bilgilendirilerek, hesabınla cihazlar arası eşitlenebilir).
-• Cihaz tanımlayıcı: kart güvenliği (filigran) için cihazında üretilen rastgele kimlik.
-• Geri bildirim: GÖNDERİRSEN mesajın + ilgili kart bilgisi + cihaz kimliği bir form servisine iletilir.
+• Çalışma verisi: ilerlemen, branşın, rütben ve sicilin cihazında tutulur VE hesabınla buluta
+  (Supabase, AB/Frankfurt) yedeklenir → cihaz değiştirsen kaybolmaz.
+• İçerik: kart görselleri içerik sunucumuzdan (Cloudflare R2 / Supabase Storage) internet
+  üzerinden indirilir; indirilen görseller cihazında ŞİFRELİ (AES-256) saklanır.
+• İçerik güvenliği (filigran): sızıntı tespiti için kart görseline hesabının e-posta adresi
+  soluk biçimde basılır (yalnız senin gördüğün ekranda; içerik korsanlığına karşı).
+• Geri bildirim: GÖNDERİRSEN mesajın + ilgili kart bilgisi bir form servisine iletilir.
 Reklam kimliği, konum, rehber, kamera/mikrofon verisi TOPLAMIYORUZ. Şifre saklamıyoruz (giriş Google üzerinden).
 
 2) AMAÇ ve HUKUKİ SEBEP (KVKK m.5)
@@ -32,12 +35,14 @@ Reklam kimliği, konum, rehber, kamera/mikrofon verisi TOPLAMIYORUZ. Şifre sakl
 
 3) AKTARIM ve YURT DIŞI
 Hesap/giriş verisi, kimlik doğrulama altyapımız Supabase'de (AB/Frankfurt sunucuları) ve giriş
-sağlayıcısı Google'da işlenir. Geri bildirim gönderirsen mesajın Formspree'ye iletilir. Bu servislerin
-sunucuları YURT DIŞINDA olduğundan, GİRİŞ YAPARAK verinin yurt dışına aktarılmasına AÇIK RIZA vermiş
-olursun. Verini satmıyor, pazarlama amacıyla paylaşmıyoruz.
+sağlayıcısı Google'da işlenir. Kart içeriği (görseller) içerik sunucularımızdan (Cloudflare R2 /
+Supabase Storage) internet üzerinden indirilir; bu sırada IP adresin ilgili sunucuya ulaşır (standart
+ağ isteği). Geri bildirim gönderirsen mesajın Formspree'ye iletilir. Bu servislerin sunucuları YURT
+DIŞINDA olduğundan, GİRİŞ YAPARAK verinin yurt dışına aktarılmasına AÇIK RIZA vermiş olursun. Verini
+satmıyor, pazarlama amacıyla paylaşmıyoruz.
 
 4) SAKLAMA
-Hesap verin, hesabın aktif olduğu sürece saklanır. Çalışma verisi cihazında, uygulama yüklü olduğu sürece tutulur.
+Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürece saklanır. Cihazdaki çalışma verisi uygulama yüklü olduğu sürece tutulur; indirilen içerik şifreli olarak cihazında kalır (Mevzuat'tan silebilirsin).
 
 5) HAKLARIN (KVKK m.11)
 Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: dev.ademyilmaz@gmail.com.
