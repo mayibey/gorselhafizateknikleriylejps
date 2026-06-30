@@ -52,7 +52,7 @@ function BelgeCerceve({
           <MaterialCommunityIcons name="star-four-points" size={14} color={vurguHex} />
         </View>
         <AppText variant="etiket" bold color={vurgu} style={styles.antet}>
-          MEVZU JSPS BİRLİĞİ
+          MEVZU · JSPS
         </AppText>
         <AppText variant="baslik" bold color={baslikRenk} style={styles.baslik}>
           {trUpper(baslik)}
@@ -66,7 +66,7 @@ function BelgeCerceve({
             {tarihFmt(tarih)}
           </AppText>
           <AppText variant="etiket" bold color="solukMetin">
-            — Mevzu JSPS Birliği
+            — Mevzu · JSPS
           </AppText>
         </View>
       </View>

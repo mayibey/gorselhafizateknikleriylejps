@@ -82,8 +82,9 @@ const ODUL_BILGI: Record<OdulDerece, { baslik: string; govde: (sebep: string) =>
   },
 };
 
-const ANTET = 'MEVZU JSPS BİRLİĞİ';
-const IMZA = '— Mevzu JSPS Birliği';
+// NOT (impersonation): "BİRLİĞİ" askeri kurumsal ünvan çağrıştırır → nötr marka adı.
+const ANTET = 'MEVZU · JSPS';
+const IMZA = '— Mevzu · JSPS';
 
 // Türkçe-uyumlu büyük harf: i→İ, ı→I (JS toUpperCase 'i'→'I' yapıp "TAKDIR" üretiyordu).
 function trUpper(s: string): string {

@@ -1,5 +1,10 @@
 # Gizlilik Politikası
 
+> ⛔ **ARŞİV — GEÇERSİZ (v1, çevrimdışı dönem).** Bu metin "tamamen çevrimdışı / hesap yok / veri
+> toplanmaz" diyor; ARTIK YANLIŞ (Google girişi + Supabase + içerik sunucusu var). **Play'e veya
+> web'e BUNU YÜKLEME.** Güncel/canonical: **`docs/index.html`** (yayınlanan) + uygulama içi
+> **`src/constants/yasal-metin.ts`**. Bu dosya yalnız geçmiş kaydı için duruyor.
+
 > **NOT (yayından önce):** Aşağıdaki yer tutucuları doldur → `MEVZU-JSPS`,
 > `dev.ademyilmaz@gmail.com`, `16 Haziran 2026`.
 > Bu metin sağlam bir taslaktır; canlıya çıkmadan **bir avukata/danışmana onaylatman önerilir**.

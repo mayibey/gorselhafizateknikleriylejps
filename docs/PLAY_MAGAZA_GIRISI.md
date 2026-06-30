@@ -35,7 +35,7 @@ Kuru kanun metnini ezberlemek zordur ve çabuk unutulur. Mevzu her kanun maddesi
 • Orijinal kanun metni — kartın yanında ilgili maddenin tam metni (kaynak: T.C. resmî mevzuat veritabanı, mevzuat.gov.tr)
 • Sesli dinleme — kartları dinleyerek tekrar et, ileri/geri al
 • İlerleme takibi — kutu dağılımı ve hazırlık yüzdesi
-• %100 çevrimdışı — internet gerekmez, hiçbir veri toplanmaz
+• İndir, çevrimdışı çalış — kanunu indir, internetsiz çalış (giriş + içerik indirme için internet gerekir; ilerlemen hesabına güvenle yedeklenir)
 
 KANUN METİNLERİNİN KAYNAĞI
 Uygulamada gösterilen tüm kanun ve mevzuat metinleri, Türkiye Cumhuriyeti resmî mevzuat veritabanından (Mevzuat Bilgi Sistemi) alınmıştır:

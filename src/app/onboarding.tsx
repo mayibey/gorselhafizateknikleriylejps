@@ -14,6 +14,7 @@ import { KarakterFigur } from '@/components/auth/karakter-figur';
 import { SecimKutu } from '@/components/auth/secim-kutu';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
 import { getBranches } from '@/db/database';
 import { type Cinsiyet, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
@@ -82,8 +83,11 @@ function Tanitim({ onBasla }: { onBasla: () => void }) {
           Kanunları görselle, kalıcı öğren
         </AppText>
         <AppText variant="kucuk" color="solukMetin" style={[styles.ortali, styles.altyazi]}>
-          Kuru metni ezberleme; karikatür kartlar, deneme sınavları ve askeri sicil temasıyla
+          Kuru metni ezberleme; karikatür kartlar, deneme sınavları ve ödül-sicil temasıyla
           JSPS'e hazırlan.
+        </AppText>
+        <AppText variant="etiket" color="solukMetin" style={[styles.ortali, styles.disclaimer]}>
+          {RESMI_BAGLANTI_YOK}
         </AppText>
         <View style={styles.degerler}>
           {DEGERLER.map((d) => (
@@ -315,6 +319,11 @@ const styles = StyleSheet.create({
   },
   altyazi: {
     lineHeight: 20,
+  },
+  disclaimer: {
+    lineHeight: 15,
+    marginTop: Spacing.two,
+    opacity: 0.85,
   },
   degerler: {
     gap: Spacing.two,

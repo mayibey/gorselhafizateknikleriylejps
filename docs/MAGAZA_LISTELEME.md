@@ -22,7 +22,7 @@ birebir uygun "patika" ile çalış; her kanunun deneme sınavıyla kendini sın
 • Eğitim Planı — sabah/gece/fırsat eğitimi hatırlatmaları
 • Madde metinleri — resmî tam metin, çevrimdışı erişim (kaynak: mevzuat.gov.tr)
 
-Tamamen çevrimdışı çalışır; hesap açmana gerek yok, verilerin cihazında kalır.
+Kanunu indir, internetsiz çalış. Google ile giriş yapılır; ilerlemen hesabına yedeklenir (cihaz değiştirsen kaybolmaz).
 
 KANUN METİNLERİNİN KAYNAĞI: Uygulamadaki tüm kanun ve mevzuat metinleri Türkiye Cumhuriyeti
 resmî mevzuat veritabanından (Mevzuat Bilgi Sistemi) alınmıştır: https://www.mevzuat.gov.tr
