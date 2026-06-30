@@ -13,6 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
+import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
 import { epostaGiris, epostaKayit, epostaKullanimda, girisDonusAdresi, sifreSifirla } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { epostaHatasi, sifreHatasi } from '@/lib/dogrulama';
@@ -249,6 +250,10 @@ export function AuthEkrani() {
           </AppText>
         </View>
 
+        <AppText variant="etiket" color="solukMetin" style={styles.disclaimer}>
+          {RESMI_BAGLANTI_YOK}
+        </AppText>
+
         {__DEV__ ? (
           <View style={styles.teshis}>
             <AppText variant="etiket" color="solukMetin" bold>
@@ -346,6 +351,12 @@ const styles = StyleSheet.create({
   altLink: {
     alignItems: 'center',
     marginTop: Spacing.one,
+  },
+  disclaimer: {
+    textAlign: 'center',
+    lineHeight: 15,
+    marginTop: Spacing.two,
+    opacity: 0.8,
   },
   guvenlik: {
     flexDirection: 'row',
