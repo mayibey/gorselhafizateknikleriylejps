@@ -15,6 +15,7 @@ import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
 import { KART_SES_YOLLARI } from '../assets/kart-sesleri';
 import { ICERIK_TABANI } from '@/constants/config';
 import { icerikAnahtari } from './cihaz-anahtar';
+import { imzaliUrller } from './imzali-url';
 import { aesSifrele, b64ToBytes, bytesToB64 } from './sifreleme';
 
 /** Cihazda indirme destekleniyor mu (web'de hayır). */
@@ -92,6 +93,11 @@ export async function kanunIndir(
   await FileSystem.makeDirectoryAsync(KOK + klasor, { intermediates: true }).catch(() => {});
   const anahtar = await icerikAnahtari();
 
+  // İMZALI URL (flag açıksa): tüm dosyalar için tek çağrıda kısa-ömürlü URL al; yoksa public.
+  const tumYollar = [...gorseller, ...sesler].map((d) => d.yol);
+  const imzali = await imzaliUrller(tumYollar).catch(() => new Map<string, string>());
+  const indirUrl = (yol: string) => imzali.get(yol) ?? `${ICERIK_TABANI}/${yol}`;
+
   let biten = 0;
   const ilerle = () => {
     biten++;
@@ -103,7 +109,7 @@ export async function kanunIndir(
     const hedef = KOK + yol;
     const bilgi = await FileSystem.getInfoAsync(hedef);
     if (!bilgi.exists || bilgi.size === 0) {
-      await FileSystem.downloadAsync(`${ICERIK_TABANI}/${yol}`, hedef);
+      await FileSystem.downloadAsync(indirUrl(yol), hedef);
       const b64 = await FileSystem.readAsStringAsync(hedef, { encoding: FileSystem.EncodingType.Base64 });
       const paket = aesSifrele(b64ToBytes(b64), anahtar);
       await FileSystem.writeAsStringAsync(hedef, bytesToB64(paket), {
@@ -113,12 +119,12 @@ export async function kanunIndir(
     ilerle();
   }
 
-  // SESLER — indir (şifresiz; anlatım içeriği, asıl koruma serving fazında imzalı URL).
+  // SESLER — indir (şifresiz; anlatım içeriği, koruma imzalı URL + sunucu erişim katmanı).
   for (const { yol } of sesler) {
     const hedef = KOK + yol;
     const bilgi = await FileSystem.getInfoAsync(hedef);
     if (!bilgi.exists || bilgi.size === 0) {
-      await FileSystem.downloadAsync(`${ICERIK_TABANI}/${yol}`, hedef);
+      await FileSystem.downloadAsync(indirUrl(yol), hedef);
     }
     ilerle();
   }

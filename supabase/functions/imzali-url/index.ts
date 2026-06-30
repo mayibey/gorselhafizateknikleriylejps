@@ -1,0 +1,67 @@
+// Supabase Edge Function: imzali-url
+// İçerik bucket'ı PRIVATE olunca, giriş yapmış kullanıcıya kısa-ömürlü imzalı indirme URL'leri verir.
+// → public scraping biter; yalnız oturumu olan kullanıcı içerik çeker; URL'ler ~15 dk'da ölür.
+//
+// Deploy (kullanıcı):
+//   supabase functions deploy imzali-url --project-ref vwmjrvolkbiofpkzzwef
+// Secrets (Edge'de SUPABASE_URL + SUPABASE_ANON_KEY otomatik gelir; service key'i ekle):
+//   supabase secrets set SERVICE_ROLE_KEY=eyJ...   (Settings → API → service_role)
+// Bucket'ı PRIVATE yap: Storage → icerik → Settings → Public access KAPALI.
+//
+// İstek: POST { yollar: ["tck/tck_m1.webp", ...] }  + Authorization: Bearer <kullanıcı JWT>
+// Yanıt: [{ path, signedUrl }]  (createSignedUrls çıktısı)
+
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+const CORS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+};
+
+const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
+const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY')!;
+const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
+const BUCKET = 'icerik';
+const TTL_SN = 900; // 15 dk
+const MAX_YOL = 400; // tek istekte üst sınır (büyük kanun bir çağrıda)
+
+Deno.serve(async (req) => {
+  if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
+  if (req.method !== 'POST') return yanit({ hata: 'POST gerekli' }, 405);
+
+  const auth = req.headers.get('Authorization');
+  if (!auth) return yanit({ hata: 'Yetkisiz' }, 401);
+
+  // 1) Kullanıcı JWT doğrula (yalnız gerçek oturum içerik URL'i alır)
+  const kullaniciClient = createClient(SUPABASE_URL, ANON_KEY, {
+    global: { headers: { Authorization: auth } },
+  });
+  const { data: { user }, error: authHata } = await kullaniciClient.auth.getUser();
+  if (authHata || !user) return yanit({ hata: 'Geçersiz oturum' }, 401);
+
+  // 2) Yolları al
+  let yollar: unknown;
+  try {
+    yollar = (await req.json())?.yollar;
+  } catch {
+    return yanit({ hata: 'Geçersiz gövde' }, 400);
+  }
+  if (!Array.isArray(yollar) || yollar.length === 0) return yanit({ hata: 'yollar gerekli' }, 400);
+  if (yollar.length > MAX_YOL) return yanit({ hata: `En fazla ${MAX_YOL} yol` }, 400);
+  const temiz = yollar.filter((y): y is string => typeof y === 'string' && !y.includes('..'));
+
+  // 3) service_role ile imzalı URL üret (TODO yayın: + premium/entitlement kontrolü RLS'ten)
+  const admin = createClient(SUPABASE_URL, SERVICE_KEY);
+  const { data, error } = await admin.storage.from(BUCKET).createSignedUrls(temiz, TTL_SN);
+  if (error) return yanit({ hata: error.message }, 500);
+
+  return yanit(data, 200);
+});
+
+function yanit(govde: unknown, kod: number): Response {
+  return new Response(JSON.stringify(govde), {
+    status: kod,
+    headers: { ...CORS, 'Content-Type': 'application/json' },
+  });
+}

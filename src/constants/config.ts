@@ -49,6 +49,13 @@ export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? ''
  */
 export const ICERIK_TABANI = process.env.EXPO_PUBLIC_ICERIK_TABANI ?? '';
 
+/**
+ * İmzalı URL modu: bucket PRIVATE + indirme `imzali-url` Edge Function'ından kısa-ömürlü URL alır
+ * (public scraping biter, auth'a bağlı). Edge Function DEPLOY + bucket PRIVATE olunca '1' yap.
+ * Kapalıyken (varsayılan) indirme public ICERIK_TABANI'dan iner (mevcut davranış).
+ */
+export const IMZALI_URL_AKTIF = (process.env.EXPO_PUBLIC_IMZALI_URL ?? '') === '1';
+
 // Sentry (çökme paneli) v1'de KALDIRILDI → "veri toplanmıyor" beyanı %100 doğru olsun
 // + offline gizlilik metniyle uyumlu. Çökme avı bitti (expo-asset fix). v2'de gerekirse
 // geri eklenir (o zaman Data Safety'ye "crash logs" beyanı + gizlilik metni güncellenir).
