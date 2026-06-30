@@ -62,7 +62,9 @@ function filigranSvg(w: number, h: number, metin: string): string {
   let elemanlar = '';
   for (let y = 26; y < h; y += 105) {
     for (let x = 4; x < w; x += 230) {
-      elemanlar += `<text x="${x}" y="${y}" font-family="${FONT_AILESI}" font-size="13" fill="#ffffff" fill-opacity="0.20" transform="rotate(-22 ${x} ${y})">${t}</text>`;
+      // Beyaz dolgu + KOYU kenarlık (outline) → açık zeminde de görünür (KVKK gibi beyaz kartlarda
+      // düz beyaz filigran kayboluyordu). paint-order=stroke: kenarlık yazının arkasında.
+      elemanlar += `<text x="${x}" y="${y}" font-family="${FONT_AILESI}" font-size="13" fill="#ffffff" fill-opacity="0.34" stroke="#0B1F3A" stroke-width="0.7" stroke-opacity="0.24" paint-order="stroke" transform="rotate(-22 ${x} ${y})">${t}</text>`;
     }
   }
   return `<svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">${elemanlar}</svg>`;
