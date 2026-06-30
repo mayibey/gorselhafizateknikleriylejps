@@ -26,7 +26,6 @@ import { TtsBar } from '@/components/card-flow/tts-bar';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
-import { FORMSPREE_ENDPOINT } from '@/constants/config';
 import { CardFlowMaxWidth, Palette, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
 import { erteleBugun, ertelemeAktifMi } from '@/lib/modal-erteleme';
@@ -566,27 +565,25 @@ export default function AkisScreen() {
             </Pressable>
           </View>
 
-          {/* Hata/öneri bildir — FORMSPREE_ENDPOINT boşken gizli (yer kaplamaz). */}
-          {FORMSPREE_ENDPOINT ? (
-            <Pressable
-              style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
-              onPress={() =>
-                router.push({
-                  pathname: '/geri-bildirim',
-                  params: {
-                    card_id: String(queue[index].id),
-                    madde_no: queue[index].madde_no,
-                    baslik: queue[index].baslik,
-                    kanun: queue[index].law_ad,
-                  },
-                })
-              }>
-              <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.kartMetinIkincil} />
-              <AppText variant="etiket" color="kartMetinIkincil">
-                Hata/öneri bildir
-              </AppText>
-            </Pressable>
-          ) : null}
+          {/* Hata/öneri bildir — HER kartta görünür; kart context'iyle Supabase'e yazılır. */}
+          <Pressable
+            style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
+            onPress={() =>
+              router.push({
+                pathname: '/geri-bildirim',
+                params: {
+                  card_id: String(queue[index].id),
+                  madde_no: queue[index].madde_no,
+                  baslik: queue[index].baslik,
+                  kanun: queue[index].law_ad,
+                },
+              })
+            }>
+            <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.kartMetinIkincil} />
+            <AppText variant="etiket" color="kartMetinIkincil">
+              Hata/öneri bildir
+            </AppText>
+          </Pressable>
 
           {/* SABİT footer — cevap butonları her zaman altta. Ses bitince footer NORMAL
               kalır (Öğrendim/Tekrar Hatırlat); "geçelim mi?" sorusu EK modalda sorulur. */}
