@@ -51,8 +51,13 @@ function withBuildTuning(config) {
       if (item) item.value = value;
       else cfg.modResults.push({ type: 'property', key, value });
     };
-    set('org.gradle.jvmargs', '-Xmx4096m -XX:MaxMetaspaceSize=512m');
+    set('org.gradle.jvmargs', '-Xmx5120m -XX:MaxMetaspaceSize=512m');
     set('reactNativeArchitectures', 'arm64-v8a');
+    // OOM fix (vCode 6 build deneyiminden): paralel JS-bundle + native + ayrı Kotlin daemon
+    // aynı anda bellek tepesi → daemon çöküyordu. Paralel kapalı + Kotlin gradle-içinde + işçi 2.
+    set('org.gradle.parallel', 'false');
+    set('org.gradle.workers.max', '2');
+    set('kotlin.compiler.execution.strategy', 'in-process');
     return cfg;
   });
 }
