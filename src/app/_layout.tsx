@@ -19,6 +19,7 @@ import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { getAyar, planla } from '@/lib/bildirim';
+import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
@@ -43,6 +44,11 @@ export default function RootLayout() {
   // (Web'de + google-services.json yoksa no-op; bkz. lib/bildirim.ts.)
   useEffect(() => {
     void getAyar().then(planla);
+  }, []);
+
+  // İndirilmiş kanun listesini belleğe al → görsel çözümleyici yerel dosyaları görsün.
+  useEffect(() => {
+    void indirmeDurumYukle();
   }, []);
 
   // Uygulama arka plana alınınca ilerlemeyi buluta yaz (giriş yoksa no-op).

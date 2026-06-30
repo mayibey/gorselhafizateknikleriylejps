@@ -8,21 +8,27 @@ import type { ImageRequireSource } from 'react-native';
 
 import { KART_GORSEL_YOLLARI, KART_GORSELLERI } from '../assets/kart-gorselleri';
 import { ICERIK_TABANI } from '@/constants/config';
+import { kanunIndirilmisMi, yerelDosyaUri } from './indirme';
 
 export type GorselKaynak = ImageRequireSource | { uri: string };
 
-/** Anahtar → expo-image kaynağı (uzak {uri} veya yerel require). Yoksa undefined. */
+const klasorOf = (yol: string) => yol.slice(0, yol.indexOf('/'));
+
+/**
+ * Anahtar → expo-image kaynağı. Öncelik: (1) cihaza İNDİRİLMİŞ yerel dosya (anında+offline),
+ * (2) ICERIK_TABANI doluysa uzak {uri} (stream+cache), (3) pakete GÖMÜLÜ require. Yoksa undefined.
+ */
 export function gorselKaynak(key?: string | null): GorselKaynak | undefined {
   if (!key) return undefined;
-  if (ICERIK_TABANI) {
-    const yol = KART_GORSEL_YOLLARI[key];
-    return yol ? { uri: `${ICERIK_TABANI}/${yol}` } : undefined;
+  const yol = KART_GORSEL_YOLLARI[key];
+  if (yol) {
+    if (kanunIndirilmisMi(klasorOf(yol))) return { uri: yerelDosyaUri(yol) };
+    if (ICERIK_TABANI) return { uri: `${ICERIK_TABANI}/${yol}` };
   }
   return KART_GORSELLERI[key];
 }
 
-/** Bu anahtar için görsel var mı? (uzak modda manifest, yerel modda require map.) */
+/** Bu anahtar için herhangi bir görsel kaynağı var mı? (indirilmiş / uzak / gömülü) */
 export function gorselVarMi(key?: string | null): boolean {
-  if (!key) return false;
-  return ICERIK_TABANI ? key in KART_GORSEL_YOLLARI : key in KART_GORSELLERI;
+  return gorselKaynak(key) !== undefined;
 }
