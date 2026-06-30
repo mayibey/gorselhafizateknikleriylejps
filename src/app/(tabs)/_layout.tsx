@@ -48,10 +48,12 @@ export default function TabsLayout() {
         options={{ title: 'Mevzuat', tabBarIcon: icon('book-open-variant') }}
       />
       <Tabs.Screen name="ara" options={{ title: 'Ara', tabBarIcon: icon('magnify') }} />
-      {/* Tatbikat (kanun bazlı deneme sınavı) AKTİF — 25 müşterek kanunun küratörlü soruları. */}
+      {/* Talim (kanun bazlı deneme/alıştırma) — 25 müşterek kanunun küratörlü soruları.
+          (Route adı 'tatbikat' içeride kaldı; görünen ad 'Talim'. İleride genel JSPS denemesi
+          eklenince ayrı 'Tatbikat' sekmesi açılacak.) */}
       <Tabs.Screen
         name="tatbikat"
-        options={{ title: 'Tatbikat', tabBarIcon: icon('target') }}
+        options={{ title: 'Talim', tabBarIcon: icon('target') }}
       />
       <Tabs.Screen name="sicil" options={{ title: 'Evsaf', tabBarIcon: icon('account') }} />
     </Tabs>

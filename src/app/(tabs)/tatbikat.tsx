@@ -86,7 +86,7 @@ export default function TatbikatScreen() {
   }
 
   return (
-    <Screen title="Tatbikat">
+    <Screen title="Talim">
       {/* ÜST SEÇİM: Müşterek / Branş (Mevzuat ile aynı desen). */}
       <View style={styles.blokSecici}>
         {(['müşterek', 'brans'] as const).map((b) => {

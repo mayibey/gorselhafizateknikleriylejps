@@ -16,6 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
 import { gorselOnCoz } from '@/lib/gorsel-coz';
+import { ICERIK_TABANI } from '@/constants/config';
 import { gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { sesVarMi } from '@/lib/ses-kaynak';
 import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
@@ -164,10 +165,15 @@ export default function AkisScreen() {
           : gunlukSinirli();
     void p
       .then((q) => {
-        setQueue(q);
+        // ZAYIF (geri-besleme): sunucu modunda (ICERIK_TABANI dolu) SADECE indirilmiş kanunların
+        // kartlarını göster — indirilmemiş kart görsel/ses çekemiyordu (bozuk/boş görünüyordu).
+        // İndirilmemişler gizlenir; kullanıcı o kanunu indirince geri-beslemede yine görünür.
+        const liste =
+          zayifModu && ICERIK_TABANI ? q.filter((c) => indirilmisGorsel(c.gorsel_yolu) !== null) : q;
+        setQueue(liste);
         // Arama sonucundan gelindiyse eşleşen karta atla (yoksa baştan).
         if (kart) {
-          const i = q.findIndex((c) => c.id === Number(kart));
+          const i = liste.findIndex((c) => c.id === Number(kart));
           if (i >= 0) setIndex(i);
         }
       })
