@@ -1,13 +1,9 @@
 // Kart sesi registry üreticisi (görsel sisteminin sesli analoğu).
-// assets/sesler/ altını tarar, her .m4a/.mp3 için literal require üreten
-// src/assets/kart-sesleri.ts dosyasını OTOMATİK yazar.
-// Çalıştır: npm run ses:uret
-//
-// Metro dinamik require'ı (require(degisken)) çözmez; bu yüzden sesler de
-// görseller gibi bu script ile statik require'a dökülür.
-// Şu an 0 ses dosyası var → BOŞ registry üretir (assets/sesler/ yoksa da güvenli).
+// assets/sesler/ altını tarar; KART_SES_YOLLARI (manifest) + KART_SES_ANAHTARLARI + KART_SESLERI
+// (require map) üretir. Çalıştır: npm run ses:uret
+//   GORSEL_MANIFEST_ONLY=1 / --manifest → require map BOŞ (binary pakete girmez, ses sunucudan iner).
 
-import { existsSync, readdirSync, statSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -16,10 +12,10 @@ const root = join(scriptDir, '..');
 const assetsRoot = join(root, 'assets', 'sesler');
 const outFile = join(root, 'src', 'assets', 'kart-sesleri.ts');
 const outDir = dirname(outFile);
+const manifestOnly = process.env.GORSEL_MANIFEST_ONLY === '1' || process.argv.includes('--manifest');
 
 const UZANTILAR = ['.m4a', '.mp3'];
 
-/** Klasörü özyinelemeli tarayıp tüm ses yollarını döndürür (klasör yoksa boş). */
 function sesTopla(dir) {
   if (!existsSync(dir)) return [];
   const sonuc = [];
@@ -33,30 +29,41 @@ function sesTopla(dir) {
 
 const dosyalar = sesTopla(assetsRoot).sort();
 
-const anahtarlar = new Map(); // key -> rel path (çakışma tespiti için)
+const anahtarlar = new Map(); // key -> { req, yol }
 for (const tam of dosyalar) {
   const key = basename(tam).replace(/\.(m4a|mp3)$/i, '');
-  let rel = relative(outDir, tam).split(sep).join('/');
-  if (!rel.startsWith('.')) rel = './' + rel;
+  let req = relative(outDir, tam).split(sep).join('/');
+  if (!req.startsWith('.')) req = './' + req;
+  const yol = relative(assetsRoot, tam).split(sep).join('/'); // ör. "tck/tck_m1.mp3"
   if (anahtarlar.has(key)) {
-    throw new Error(`Çakışan anahtar: "${key}" (${anahtarlar.get(key)} ve ${rel})`);
+    throw new Error(`Çakışan anahtar: "${key}" (${anahtarlar.get(key).yol} ve ${yol})`);
   }
-  anahtarlar.set(key, rel);
+  anahtarlar.set(key, { req, yol });
 }
 
-const satirlar = [...anahtarlar.entries()].map(
-  ([key, rel]) => `  ${JSON.stringify(key)}: require(${JSON.stringify(rel)}),`,
-);
+const giris = [...anahtarlar.entries()];
+const yolSatir = giris.map(([key, { yol }]) => `  ${JSON.stringify(key)}: ${JSON.stringify(yol)},`);
+const reqSatir = giris.map(([key, { req }]) => `  ${JSON.stringify(key)}: require(${JSON.stringify(req)}),`);
 
-const govde = satirlar.length ? `\n${satirlar.join('\n')}\n` : '';
+const yolGovde = yolSatir.length ? `\n${yolSatir.join('\n')}\n` : '';
+const reqGovde = reqSatir.length ? `\n${reqSatir.join('\n')}\n` : '';
+
+const reqBlok = manifestOnly
+  ? `// MANIFEST-ONLY: yerel require map yok (ses sunucudan iner; bkz. lib/ses-kaynak.ts).
+export const KART_SESLERI: Record<string, number> = {};`
+  : `export const KART_SESLERI: Record<string, number> = {${reqGovde}};`;
+
 const icerik = `// OTOMATİK ÜRETİLDİ — elle düzenleme. \`npm run ses:uret\` ile yenile.
 // Kaynak: assets/sesler/ · Anahtar = dosya adının uzantısız hali (ör. tck_m1).
-// Değer = require'lı ses kaynağı (Metro asset id, number). Şu an boş olabilir.
+${manifestOnly ? '// (manifest-only: require map boş — uzaktan)\n' : ''}
+export const KART_SES_YOLLARI: Record<string, string> = {${yolGovde}};
 
-export const KART_SESLERI: Record<string, number> = {${govde}};
+export const KART_SES_ANAHTARLARI: string[] = Object.keys(KART_SES_YOLLARI);
+
+${reqBlok}
 `;
 
 mkdirSync(outDir, { recursive: true });
 writeFileSync(outFile, icerik, 'utf8');
 
-console.log(`${anahtarlar.size} ses → ${relative(root, outFile)}`);
+console.log(`${anahtarlar.size} ses → ${relative(root, outFile)}${manifestOnly ? ' (MANIFEST-ONLY)' : ''}`);

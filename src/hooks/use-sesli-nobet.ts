@@ -12,8 +12,8 @@ import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useEffect, useRef, useState } from 'react';
 
 import type { QueueCard } from '@/lib/queue';
+import { sesKaynak } from '@/lib/ses-kaynak';
 import { oncekiIndex, sonrakiIndex } from '@/lib/sesli-nobet';
-import { KART_SESLERI } from '../assets/kart-sesleri';
 
 export type SesliNobet = {
   aktifKart: QueueCard | undefined;
@@ -31,7 +31,7 @@ export type SesliNobet = {
 export function useSesliNobet(kartlar: QueueCard[]): SesliNobet {
   const [index, setIndex] = useState(0);
   const aktifKart = kartlar[index];
-  const kaynak = aktifKart?.ses_yolu ? (KART_SESLERI[aktifKart.ses_yolu] ?? null) : null;
+  const kaynak = sesKaynak(aktifKart?.ses_yolu);
 
   const player = useAudioPlayer(kaynak);
   const durum = useAudioPlayerStatus(player);

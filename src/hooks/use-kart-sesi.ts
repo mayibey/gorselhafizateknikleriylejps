@@ -11,7 +11,7 @@
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useEffect } from 'react';
 
-import { KART_SESLERI } from '../assets/kart-sesleri';
+import { sesKaynak } from '@/lib/ses-kaynak';
 
 export type KartSesi = {
   /** Bu kartın bir ses kaynağı var mı (registry'de kayıtlı mı). */
@@ -23,7 +23,7 @@ export type KartSesi = {
 };
 
 export function useKartSesi(sesYolu: string | null | undefined): KartSesi {
-  const kaynak = sesYolu ? (KART_SESLERI[sesYolu] ?? null) : null;
+  const kaynak = sesKaynak(sesYolu);
   // Hook'lar koşulsuz çağrılır; kaynak null ise yüklü olmayan bir player döner.
   const player = useAudioPlayer(kaynak);
   const durum = useAudioPlayerStatus(player);

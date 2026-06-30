@@ -12,6 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as FileSystem from 'expo-file-system/legacy';
 
 import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
+import { KART_SES_YOLLARI } from '../assets/kart-sesleri';
 import { ICERIK_TABANI } from '@/constants/config';
 import { icerikAnahtari } from './cihaz-anahtar';
 import { aesSifrele, b64ToBytes, bytesToB64 } from './sifreleme';
@@ -58,6 +59,13 @@ export function kanunGorselleri(klasor: string): { key: string; yol: string }[] 
     .map(([key, yol]) => ({ key, yol }));
 }
 
+/** Bir kanun klasörünün tüm ses kayıtları (manifest'ten). */
+export function kanunSesleri(klasor: string): { key: string; yol: string }[] {
+  return Object.entries(KART_SES_YOLLARI)
+    .filter(([, yol]) => yol.startsWith(`${klasor}/`))
+    .map(([key, yol]) => ({ key, yol }));
+}
+
 /** İçerik-göreli yolun (ör. "tck/tck_m1.webp") yerel dosya URI'si. */
 export function yerelDosyaUri(yol: string): string {
   return KOK + yol;
@@ -76,28 +84,43 @@ export async function kanunIndir(
   if (!indirmeDestekli) throw new Error('İndirme bu platformda desteklenmiyor.');
   if (!ICERIK_TABANI) throw new Error('İçerik sunucusu ayarlı değil (ICERIK_TABANI boş).');
 
-  const dosyalar = kanunGorselleri(klasor);
-  const toplam = dosyalar.length;
+  const gorseller = kanunGorselleri(klasor);
+  const sesler = kanunSesleri(klasor);
+  const toplam = gorseller.length + sesler.length;
   if (toplam === 0) throw new Error(`Kanun bulunamadı: ${klasor}`);
 
   await FileSystem.makeDirectoryAsync(KOK + klasor, { intermediates: true }).catch(() => {});
   const anahtar = await icerikAnahtari();
 
   let biten = 0;
-  for (const { yol } of dosyalar) {
+  const ilerle = () => {
+    biten++;
+    onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100) });
+  };
+
+  // GÖRSELLER — indir + AES şifrele (diskte düz görsel kalmaz).
+  for (const { yol } of gorseller) {
     const hedef = KOK + yol;
     const bilgi = await FileSystem.getInfoAsync(hedef);
     if (!bilgi.exists || bilgi.size === 0) {
       await FileSystem.downloadAsync(`${ICERIK_TABANI}/${yol}`, hedef);
-      // ŞİFRELE: indirileni AES-256 ile şifrele, üzerine yaz → diskte düz görsel kalmaz.
       const b64 = await FileSystem.readAsStringAsync(hedef, { encoding: FileSystem.EncodingType.Base64 });
       const paket = aesSifrele(b64ToBytes(b64), anahtar);
       await FileSystem.writeAsStringAsync(hedef, bytesToB64(paket), {
         encoding: FileSystem.EncodingType.Base64,
       });
     }
-    biten++;
-    onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100) });
+    ilerle();
+  }
+
+  // SESLER — indir (şifresiz; anlatım içeriği, asıl koruma serving fazında imzalı URL).
+  for (const { yol } of sesler) {
+    const hedef = KOK + yol;
+    const bilgi = await FileSystem.getInfoAsync(hedef);
+    if (!bilgi.exists || bilgi.size === 0) {
+      await FileSystem.downloadAsync(`${ICERIK_TABANI}/${yol}`, hedef);
+    }
+    ilerle();
   }
 
   indirilmis.add(klasor);

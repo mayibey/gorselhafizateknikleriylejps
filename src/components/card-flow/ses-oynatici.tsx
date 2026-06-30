@@ -9,8 +9,8 @@ import {
   type LayoutChangeEvent,
 } from 'react-native';
 
-import { KART_SESLERI } from '../../assets/kart-sesleri';
 import { AppText } from '@/components/ui/app-text';
+import { sesKaynak } from '@/lib/ses-kaynak';
 import { Palette, Spacing } from '@/constants/theme';
 import { SES_HIZLARI, sesHizDurum } from '@/lib/ses-hiz';
 
@@ -38,7 +38,7 @@ export function SesOynatici({
   /** Ses sonuna kadar çalınıp bitince çağrılır (kullanıcı durdurursa ÇAĞRILMAZ). */
   onBitti?: () => void;
 }) {
-  const kaynak = sesYolu ? (KART_SESLERI[sesYolu] ?? null) : null;
+  const kaynak = sesKaynak(sesYolu);
   const player = useAudioPlayer(kaynak);
   const durum = useAudioPlayerStatus(player);
   const [W, setW] = useState(0);
