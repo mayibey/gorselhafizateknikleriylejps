@@ -15,7 +15,7 @@ import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
-import { KART_GORSELLERI } from '../assets/kart-gorselleri';
+import { gorselKaynak, gorselVarMi } from '@/lib/gorsel-kaynak';
 // Gerçek ses (mp3) registry — kartın gorsel_yolu ile anahtarlı (varsa TTS yerine çalar).
 import { KART_SESLERI } from '../assets/kart-sesleri';
 import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
@@ -233,7 +233,7 @@ export default function AkisScreen() {
   const sesVar = !!(c && c.gorsel_yolu && KART_SESLERI[c.gorsel_yolu]);
   // Kartın görseli var mı (registry'de). Görselli kartta görsel görünmeden "Öğrendim"
   // basılamaz / kart KAYDIRILAMAZ; görselsiz (yer tutucu) kartta beklenecek görsel yok → açık.
-  const gorselVar = !!(c && c.gorsel_yolu && KART_GORSELLERI[c.gorsel_yolu]);
+  const gorselVar = gorselVarMi(c?.gorsel_yolu);
   const ogrenebilir = !gorselVar || gorselGorundu;
 
   // Kart üzerinde yatay swipe = ileri/geri (oklarla aynı; SADECE index, SRS'e dokunmaz).
@@ -389,7 +389,7 @@ export default function AkisScreen() {
             <View style={styles.onyukle} pointerEvents="none">
               {[index - 1, index + 1].map((i) => {
                 const k = queue[i];
-                const g = k && k.gorsel_yolu ? KART_GORSELLERI[k.gorsel_yolu] : null;
+                const g = gorselKaynak(k?.gorsel_yolu) ?? null;
                 return g ? (
                   <Image
                     key={`pre-${k.id}`}

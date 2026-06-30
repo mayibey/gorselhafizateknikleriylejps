@@ -5,7 +5,7 @@
  * - TCK law_id=1 PİNLİ: 49 TCK görseli + tck_m1 kartı buna bağlı, kaydırılmaz.
  */
 
-import { KART_GORSELLERI } from '../assets/kart-gorselleri';
+import { KART_ANAHTARLARI } from '../assets/kart-gorselleri';
 import { ayirtOzetBilgi, birlesikDugumAd } from '@/lib/birlesik';
 import type { Bolum, BolumKart, Branch, Card, Law, LawBranch } from '@/db/schema';
 
@@ -173,7 +173,7 @@ function gorselKartlari(): Card[] {
   type Tip = 'normal' | 'ozet' | 'ayirt' | 'genelozet';
   type Ham = { key: string; lawId: number; etiket: string; link: number; rank: number; panel: string; tip: Tip; nums: number[]; tag: string };
   const ham: Ham[] = [];
-  for (const key of Object.keys(KART_GORSELLERI)) {
+  for (const key of KART_ANAHTARLARI) {
     const us = key.indexOf('_');
     const bilgi = KANUN_BILGI[key.slice(0, us)];
     if (!bilgi) continue;

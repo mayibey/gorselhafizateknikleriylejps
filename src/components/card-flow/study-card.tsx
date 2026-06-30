@@ -10,9 +10,7 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { CardWithSrs } from '@/db/schema';
 import { useCihazKimlik } from '@/hooks/use-cihaz-kimlik';
 import { bugunISO } from '@/lib/srs';
-// Üretilen registry src/assets altında; '@/assets/*' alias'ı gerçek assets/ klasörüne
-// gittiği için göreli import kullanıyoruz.
-import { KART_GORSELLERI } from '../../assets/kart-gorselleri';
+import { gorselKaynak } from '@/lib/gorsel-kaynak';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
 export function StudyCard({
@@ -26,7 +24,7 @@ export function StudyCard({
   /** Görsel ekranda görünür olunca (yüklendi VEYA hata) bildirilir → "Öğrendim" kilidi açılır. */
   onGorundu?: () => void;
 }) {
-  const gorsel = card.gorsel_yolu ? KART_GORSELLERI[card.gorsel_yolu] : undefined;
+  const gorsel = gorselKaynak(card.gorsel_yolu);
   const { kimlik } = useCihazKimlik();
   const [zoomAcik, setZoomAcik] = useState(false);
   // Forensic filigran: kimlik yüklenince render edilir (yoksa overlay yok).

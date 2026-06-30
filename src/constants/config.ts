@@ -41,6 +41,14 @@ export const MEVZUAT_KAYNAK_URL = 'https://www.mevzuat.gov.tr';
 export const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL ?? '';
 export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? '';
 
+/**
+ * İÇERİK CDN/sunucu tabanı (kart görsel/ses dosyaları). BOŞ ise içerik GÖMÜLÜ (yerel
+ * require) okunur — varsayılan, mevcut davranış. Dolu ise (örn. R2/Supabase Storage
+ * public base URL) görseller uzaktan çekilir: `${ICERIK_TABANI}/${yol}` (bkz. lib/gorsel-kaynak).
+ * Sona '/' KOYMA. Sunucuya taşıma fazında doldurulur + codegen GORSEL_MANIFEST_ONLY ile yenilenir.
+ */
+export const ICERIK_TABANI = process.env.EXPO_PUBLIC_ICERIK_TABANI ?? '';
+
 // Sentry (çökme paneli) v1'de KALDIRILDI → "veri toplanmıyor" beyanı %100 doğru olsun
 // + offline gizlilik metniyle uyumlu. Çökme avı bitti (expo-asset fix). v2'de gerekirse
 // geri eklenir (o zaman Data Safety'ye "crash logs" beyanı + gizlilik metni güncellenir).

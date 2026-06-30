@@ -29,32 +29,57 @@ function pngTopla(dir) {
 
 const dosyalar = pngTopla(assetsRoot).sort();
 
-const anahtarlar = new Map(); // key -> rel path (çakışma tespiti için)
+// Gömülü binary'leri pakete dahil etmeden SADECE manifest+anahtar üretmek için:
+//   GORSEL_MANIFEST_ONLY=1 npm run gorsel:uret
+// (sunucuya taşıma fazında app boyutunu ~MB'lere indirmek için; require map atlanır.)
+const manifestOnly = process.env.GORSEL_MANIFEST_ONLY === '1';
+
+const anahtarlar = new Map(); // key -> { req: outDir'e göre require yolu, yol: icerik-göreli yol (uzantılı) }
 for (const tam of dosyalar) {
   const key = basename(tam).replace(/\.(png|webp)$/i, '');
-  let rel = relative(outDir, tam).split(sep).join('/');
-  if (!rel.startsWith('.')) rel = './' + rel;
+  let req = relative(outDir, tam).split(sep).join('/');
+  if (!req.startsWith('.')) req = './' + req;
+  const yol = relative(assetsRoot, tam).split(sep).join('/'); // ör. "ailekoruma/ailekoruma_m1_1.png"
   if (anahtarlar.has(key)) {
-    throw new Error(`Çakışan anahtar: "${key}" (${anahtarlar.get(key)} ve ${rel})`);
+    throw new Error(`Çakışan anahtar: "${key}" (${anahtarlar.get(key).yol} ve ${yol})`);
   }
-  anahtarlar.set(key, rel);
+  anahtarlar.set(key, { req, yol });
 }
 
-const satirlar = [...anahtarlar.entries()].map(
-  ([key, rel]) => `  ${JSON.stringify(key)}: require(${JSON.stringify(rel)}),`,
-);
+const giris = [...anahtarlar.entries()];
+const yolSatir = giris.map(([key, { yol }]) => `  ${JSON.stringify(key)}: ${JSON.stringify(yol)},`);
+const reqSatir = giris.map(([key, { req }]) => `  ${JSON.stringify(key)}: require(${JSON.stringify(req)}),`);
+
+// KART_GORSEL_YOLLARI: anahtar → içerik-göreli yol (uzantılı). Uzak URL = ICERIK_TABANI + '/' + yol.
+// KART_ANAHTARLARI: seed.ts ŞEMAYI bundan türetir → binary kaldırılsa bile gömülü kalır (B1).
+// KART_GORSELLERI: yerel require map (manifestOnly modda ÜRETİLMEZ; pakete binary girmez).
+const yolBlok = `export const KART_GORSEL_YOLLARI: Record<string, string> = {
+${yolSatir.join('\n')}
+};
+
+export const KART_ANAHTARLARI: string[] = Object.keys(KART_GORSEL_YOLLARI);`;
+
+const reqBlok = manifestOnly
+  ? `// MANIFEST-ONLY modda üretildi: yerel require map yok (binary pakete girmez).
+// Görseller ICERIK_TABANI üzerinden uzaktan çekilir (bkz. lib/gorsel-kaynak.ts).
+export const KART_GORSELLERI: Record<string, ImageRequireSource> = {};`
+  : `export const KART_GORSELLERI: Record<string, ImageRequireSource> = {
+${reqSatir.join('\n')}
+};`;
 
 const icerik = `// OTOMATİK ÜRETİLDİ — elle düzenleme. \`npm run gorsel:uret\` ile yenile.
 // Kaynak: assets/kartlar/ · Anahtar = dosya adının uzantısız hali (ör. tck_m1).
-
+${manifestOnly ? '// (manifest-only: require map boş — uzaktan yükleme)\n' : ''}
 import type { ImageRequireSource } from 'react-native';
 
-export const KART_GORSELLERI: Record<string, ImageRequireSource> = {
-${satirlar.join('\n')}
-};
+${yolBlok}
+
+${reqBlok}
 `;
 
 mkdirSync(outDir, { recursive: true });
 writeFileSync(outFile, icerik, 'utf8');
 
-console.log(`${anahtarlar.size} görsel → ${relative(root, outFile)}`);
+console.log(
+  `${anahtarlar.size} görsel → ${relative(root, outFile)}${manifestOnly ? ' (MANIFEST-ONLY)' : ''}`,
+);
