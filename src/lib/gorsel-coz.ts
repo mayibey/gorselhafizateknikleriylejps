@@ -10,7 +10,9 @@ import { yerelDosyaUri } from './indirme';
 import { aesCoz, b64ToBytes, bytesToB64 } from './sifreleme';
 
 const onbellek = new Map<string, string>(); // yol -> data-URI
-const MAX = 10; // ~10 kart × ~350KB = makul bellek
+// 80 çözülmüş kart bellekte tutulur (~37MB) → bir kanunu komple kapsar; tekrar girince yeniden
+// çözmez (eskiden MAX=10'du, kanuna tekrar girince "görseller kayboldu" sanılıyordu).
+const MAX = 80;
 
 function mime(yol: string): string {
   if (yol.endsWith('.webp')) return 'image/webp';

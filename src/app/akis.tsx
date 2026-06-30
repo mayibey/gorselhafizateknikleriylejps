@@ -17,8 +17,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
 import { gorselOnCoz } from '@/lib/gorsel-coz';
 import { gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
-// Gerçek ses (mp3) registry — kartın gorsel_yolu ile anahtarlı (varsa TTS yerine çalar).
-import { KART_SESLERI } from '../assets/kart-sesleri';
+import { sesVarMi } from '@/lib/ses-kaynak';
 import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
 import { SesOynatici } from '@/components/card-flow/ses-oynatici';
 import { StudyCard } from '@/components/card-flow/study-card';
@@ -234,7 +233,9 @@ export default function AkisScreen() {
   const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
   // Kartın GERÇEK ses dosyası (mp3) var mı → varsa TtsBar (robotik TTS) yerine SesOynatici.
-  const sesVar = !!(c && c.gorsel_yolu && KART_SESLERI[c.gorsel_yolu]);
+  // sesVarMi: indirilmiş + uzak manifest + gömülü (3 adım). Strip'li build'de gömülü BOŞ olduğu
+  // için eskiden hep TtsBar çıkıyordu ("bütün sesler robot sesi") → 3-adım kontrolle gerçek mp3.
+  const sesVar = sesVarMi(c?.gorsel_yolu);
   // Kartın görseli var mı (registry'de). Görselli kartta görsel görünmeden "Öğrendim"
   // basılamaz / kart KAYDIRILAMAZ; görselsiz (yer tutucu) kartta beklenecek görsel yok → açık.
   const gorselVar = gorselVarMi(c?.gorsel_yolu);

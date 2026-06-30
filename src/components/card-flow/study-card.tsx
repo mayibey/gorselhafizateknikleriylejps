@@ -49,13 +49,17 @@ export function StudyCard({
   // Forensic filigran artık SUNUCUDA görselin piksellerine basılıyor (gorsel Edge Function) →
   // client overlay kaldırıldı (gereksiz + bypass edilebilir; sunucununki cihaza zaten gömülü gelir).
 
-  // Şifreli içerik henüz çözülmedi → "çözülüyor" bekleme kutusu (Öğrendim kilitli kalır).
+  // Şifreli içerik henüz çözülmedi → "hazırlanıyor" bekleme kutusu (Öğrendim kilitli kalır).
   if (sifreliYol && !cozulmus) {
     return (
       <View style={[styles.card, styles.cardGorsel, styles.cozuluyor]}>
-        <ActivityIndicator color={Palette.altinKoyu} />
-        <AppText variant="kucuk" color="solukMetin" style={styles.cozuluyorMetin}>
-          Görsel çözülüyor…
+        <ActivityIndicator size="large" color={Palette.altinKoyu} />
+        <AppText variant="govde" bold color="lacivert" style={styles.cozuluyorMetin}>
+          Görsel hazırlanıyor…
+        </AppText>
+        <AppText variant="kucuk" color="solukMetin" style={styles.cozuluyorAlt}>
+          İlk açılışta görseller cihazında güvenle hazırlanıyor (şifre çözülüyor). Bu işlem
+          ilk seferde biraz sürebilir — bozuk değil, lütfen bekle. 🔒
         </AppText>
       </View>
     );
@@ -154,9 +158,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: Spacing.two,
+    paddingHorizontal: Spacing.five,
   },
   cozuluyorMetin: {
     marginTop: Spacing.one,
+  },
+  cozuluyorAlt: {
+    textAlign: 'center',
+    lineHeight: 18,
   },
   gorsel: {
     // Kutu görselin doğal oranında → görsel kutuyu tam doldurur (boşluk/kırpma yok).
