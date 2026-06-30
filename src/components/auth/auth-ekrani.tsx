@@ -16,6 +16,7 @@ import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { epostaGiris, epostaKayit, epostaKullanimda, girisDonusAdresi, sifreSifirla } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { epostaHatasi, sifreHatasi } from '@/lib/dogrulama';
+import { sifreSizmisMi } from '@/lib/sifre-guvenlik';
 
 import { AdimGostergesi } from './adim-gostergesi';
 import { AnaButon } from './ana-buton';
@@ -84,6 +85,13 @@ export function AuthEkrani() {
       } else {
         if (await epostaKullanimda(eposta)) {
           setMesaj({ tip: 'hata', metin: 'Bu e-posta zaten kayıtlı. "Giriş yap"a geç.' });
+          return;
+        }
+        if (await sifreSizmisMi(sifre)) {
+          setMesaj({
+            tip: 'hata',
+            metin: 'Bu şifre bilinen veri ihlallerinde görülmüş. Güvenliğin için başka bir şifre seç.',
+          });
           return;
         }
         const { dogrulamaGerek } = await epostaKayit(eposta, sifre);

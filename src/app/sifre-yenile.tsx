@@ -12,6 +12,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { kurtarmaKoduDegistir, yeniSifreBelirle } from '@/lib/auth';
+import { sifreHatasi } from '@/lib/dogrulama';
+import { sifreSizmisMi } from '@/lib/sifre-guvenlik';
 
 type Durum = 'isleniyor' | 'form' | 'gecersiz';
 
@@ -35,8 +37,9 @@ export default function SifreYenileScreen() {
   }, [code]);
 
   async function kaydet() {
-    if (sifre.length < 6) {
-      setHata('Şifre en az 6 karakter olmalı.');
+    const sHata = sifreHatasi(sifre);
+    if (sHata) {
+      setHata(sHata);
       return;
     }
     if (sifre !== tekrar) {
@@ -46,6 +49,10 @@ export default function SifreYenileScreen() {
     setHata(null);
     setMesgul(true);
     try {
+      if (await sifreSizmisMi(sifre)) {
+        setHata('Bu şifre bilinen veri ihlallerinde görülmüş. Lütfen başka bir şifre seç.');
+        return;
+      }
       await yeniSifreBelirle(sifre);
       router.replace('/'); // oturum açık → gate geçer, uygulamaya girer
     } catch (e) {
