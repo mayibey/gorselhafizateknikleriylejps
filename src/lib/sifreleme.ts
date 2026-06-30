@@ -6,7 +6,6 @@
  */
 import { ctr } from '@noble/ciphers/aes.js';
 import * as Crypto from 'expo-crypto';
-import * as FileSystem from 'expo-file-system/legacy';
 
 // --- base64 <-> bytes (Hermes global atob/btoa; büyük veri için parçalı) ---
 export function b64ToBytes(b64: string): Uint8Array {
@@ -46,29 +45,3 @@ export function aesCoz(paket: Uint8Array, key: Uint8Array): Uint8Array {
   return ctr(key, nonce).decrypt(cipher);
 }
 
-/**
- * ÖLÇÜM: indirilmiş bir TCK görselini şifrele→çöz, süreleri döndürür.
- * "ÇÖZ+encode" = bir kartı GÖSTERMEDEN önce ödenecek gerçek maliyet (data-URI hazırlama).
- */
-export async function sifrelemeOlcum(): Promise<string> {
-  const uri = (FileSystem.documentDirectory ?? '') + 'jsps/tck/tck_m1_1.webp';
-  const bilgi = await FileSystem.getInfoAsync(uri);
-  if (!bilgi.exists) return 'Önce TCK indir (Mevzuat → İndir), sonra ölç.';
-
-  const t0 = Date.now();
-  const b64 = await FileSystem.readAsStringAsync(uri, { encoding: FileSystem.EncodingType.Base64 });
-  const plain = b64ToBytes(b64);
-  const t1 = Date.now();
-
-  const key = rastgeleAnahtar();
-  const paket = aesSifrele(plain, key);
-  const t2 = Date.now();
-
-  const plain2 = aesCoz(paket, key);
-  const b64geri = bytesToB64(plain2);
-  const t3 = Date.now();
-
-  const kb = Math.round(plain.length / 1024);
-  const eslesme = b64geri.length === b64.length ? 'OK' : 'FARK!';
-  return `${kb}KB · oku ${t1 - t0}ms · şifrele ${t2 - t1}ms · ÇÖZ+encode ${t3 - t2}ms (${eslesme})`;
-}
