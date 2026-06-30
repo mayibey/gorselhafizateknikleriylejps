@@ -62,6 +62,9 @@
     "gorsel:uret": "node scripts/gorsel-registry-uret.mjs",
     "gorsel:manifest": "node scripts/gorsel-registry-uret.mjs --manifest",
     "ses:uret": "node scripts/ses-registry-uret.mjs",
+    "ses:manifest": "node scripts/ses-registry-uret.mjs --manifest",
+    "icerik:manifest": "node scripts/gorsel-registry-uret.mjs --manifest && node scripts/ses-registry-uret.mjs --manifest",
+    "icerik:tam": "node scripts/gorsel-registry-uret.mjs && node scripts/ses-registry-uret.mjs",
     "madde:uret": "node scripts/madde-metni-uret.mjs",
     "soru:uret": "node scripts/soru-registry-uret.mjs"
   },

@@ -47,15 +47,23 @@ if (!URL || !KEY) {
 
 const supabase = createClient(URL, KEY, { auth: { persistSession: false } });
 
-const KOK = 'assets/kartlar';
-const TIP = { '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg' };
+// Varsayılan görseller; ICERIK_KOK=assets/sesler ile sesleri yükle.
+const KOK = process.env.ICERIK_KOK || 'assets/kartlar';
+const TIP = {
+  '.png': 'image/png',
+  '.webp': 'image/webp',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.mp3': 'audio/mpeg',
+  '.m4a': 'audio/mp4',
+};
 
 function topla(dir) {
   const sonuc = [];
   for (const ad of readdirSync(dir)) {
     const tam = join(dir, ad);
     if (statSync(tam).isDirectory()) sonuc.push(...topla(tam));
-    else if (/\.(png|webp|jpe?g)$/i.test(ad)) sonuc.push(tam);
+    else if (/\.(png|webp|jpe?g|mp3|m4a)$/i.test(ad)) sonuc.push(tam);
   }
   return sonuc;
 }
