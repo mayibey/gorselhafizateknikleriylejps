@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
-import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Alert, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { AppText } from '@/components/ui/app-text';
@@ -24,6 +24,7 @@ import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { type Cinsiyet, type Profil, profilGetir } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
+import { sifrelemeOlcum } from '@/lib/sifreleme';
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
@@ -163,6 +164,13 @@ export default function SicilScreen() {
                   onPress={() => void sicilSifirla().then(yukle)}>
                   <AppText variant="etiket" color="kirmizi" bold>
                     Temizle
+                  </AppText>
+                </Pressable>
+                <Pressable
+                  style={({ pressed }) => [styles.demoBtn, pressed && styles.pressed]}
+                  onPress={() => void sifrelemeOlcum().then((s) => Alert.alert('AES ölçüm', s))}>
+                  <AppText variant="etiket" color="lacivert" bold>
+                    🔐 AES ölç
                   </AppText>
                 </Pressable>
               </View>
