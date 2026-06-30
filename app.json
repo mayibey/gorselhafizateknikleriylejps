@@ -46,8 +46,7 @@
         }
       ],
       "./plugins/withRemovedPermissions",
-      "./plugins/withYerelBuild",
-      "@react-native-community/datetimepicker"
+      "./plugins/withYerelBuild"
     ],
     "experiments": {
       "typedRoutes": true

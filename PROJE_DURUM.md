@@ -2,7 +2,10 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 29 Haziran 2026
+> Son güncelleme: 30 Haziran 2026
+>
+> ### ▶ 30 Haz — Güvenlik (sızmış-şifre) + auth temizlik/optimizasyon
+> **Sızmış-şifre kontrolü:** Supabase "leaked password protection" Pro'ya kilitli → aynısı kodda. `lib/sifre-guvenlik.ts` (saf-JS SHA-1, test vektörleriyle doğrulandı + HIBP range API k-anonymity: şifre GÖNDERİLMEZ, hash ilk-5 hane). Kayıt + şifre-yenileme akışlarında sızmış şifre reddedilir; ağ hatasında fail-open. sifre-yenile ≥6→≥8+harf+rakam'a yükseldi. **Güvenlik denetimi (kod):** service_role uygulamada YOK, .env gitignore'lu, anon-only, 2 tablo da RLS açık → DB dump yolu kapalı. **Optimizasyon:** auth PNG'leri 5.4MB→273KB (apple/google 2.1MB→4KB, tegmen 1.2MB→265KB; System.Drawing yüksek-kalite). **Temizlik:** kullanılmayan `@react-native-community/datetimepicker` paketten + app.json plugin'den kaldırıldı. tsc 0. Supabase compromised-password toggle GEREKMEZ (kod hallediyor).
 >
 > ### ▶ 30 Haz — Auth premium CİLA (ajan denetimi %70→ düzeltmeler) + başkan fix'leri
 > Kalite-denetim ajanı (referans 1/2/3 vs kod) %70 verdi → P0-P3 uygulandı: **DekoratifArkaplan** (svg krem/altın köşe blobları + noktalar, auth+profil+tanıtım), **AnaButon** (expo-linear-gradient lacivert→lacivert2 + glow gölge, tüm ana butonlar), **Arma** (altın defne çelengi + kalkan-yıldız), girdi+sağlayıcı butonlarına hafif gölge + yükseklik 52→54, karakter 148×188→158×202 + right -16, başlık-form boşlukları açıldı (gap 12), stepper çizgi 3px + aktif daireye halo. **Başkan fix'leri:** "Profilini Tanıyalım"→"Tamamlayalım"; native takvim İngilizce ay veriyordu → yeni **DogumTarihiSecici** (TR Gün/Ay-Türkçe/Yıl 3-sütun modal, native DateTimePicker SÖKÜLDÜ-kullanılmıyor); ProfilAdim'da **stepper EN ÜSTE** alındı (karakter "Tamamla"yı kapatıyordu — düzeldi) + Kişisel Bilgiler ince kart içine. tsc 0. ⚠ **"Kaydedilemedi" hatası = SQL eksik:** kullanıcı `docs/v2/03` VE `04` SQL'ini çalıştırmalı (profil kolonları yoksa profilGetir/Kaydet patlar). datetimepicker paketi artık unused (app.json plugin kaldı; cleanup notu).
