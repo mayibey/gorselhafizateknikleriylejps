@@ -185,7 +185,7 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
         <View style={styles.profilUst}>
           <View style={styles.profilBaslikBlok}>
             <AppText variant="dev" bold color="lacivert">
-              Profilini Tamamlayalım
+              Profilini{'\n'}Tamamlayalım
             </AppText>
             <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
               Adın kazandığın Takdir Belgelerinde yazacak. Bilgilerini eksiksiz gir.
