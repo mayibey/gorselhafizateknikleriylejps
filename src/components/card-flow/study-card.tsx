@@ -9,6 +9,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { CardWithSrs } from '@/db/schema';
 import { useCihazKimlik } from '@/hooks/use-cihaz-kimlik';
+import { useAuth } from '@/lib/auth-context';
 import { cozHazir, gorselCoz } from '@/lib/gorsel-coz';
 import { gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { bugunISO } from '@/lib/srs';
@@ -48,11 +49,13 @@ export function StudyCard({
   }, [sifreliYol, onGorundu]);
 
   const gorsel = sifreliYol ? (cozulmus ? { uri: cozulmus } : undefined) : gorselKaynak(card.gorsel_yolu);
+  const { kullanici } = useAuth();
   const { kimlik } = useCihazKimlik();
   const [zoomAcik, setZoomAcik] = useState(false);
-  // Forensic filigran: kimlik yüklenince render edilir (yoksa overlay yok).
-  // Aynı metin hem kart hem tam ekran zoom overlay'inde kullanılır (zoom modunda da görünsün).
-  const filigranMetin = kimlik ? `JSPS • ${kimlik} • ${bugunISO()}` : null;
+  // Forensic filigran: ÖNCELİK kullanıcı e-postası (sızıntı HESABA kadar izlenir); yoksa cihaz
+  // kimliği (girişsiz fallback). Aynı metin hem kartta hem tam ekran zoom overlay'inde.
+  const damga = kullanici?.email ?? kimlik;
+  const filigranMetin = damga ? `JSPS • ${damga} • ${bugunISO()}` : null;
   const filigran = filigranMetin ? <Watermark metin={filigranMetin} /> : null;
 
   // Şifreli içerik henüz çözülmedi → "çözülüyor" bekleme kutusu (Öğrendim kilitli kalır).

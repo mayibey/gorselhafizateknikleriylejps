@@ -18,7 +18,7 @@ export function b64ToBytes(b64: string): Uint8Array {
 
 export function bytesToB64(bytes: Uint8Array): string {
   let bin = '';
-  const yig = 0x8000;
+  const yig = 0x2000; // 8KB parça → Hermes argüman limitini (spread) zorlamaz
   for (let i = 0; i < bytes.length; i += yig) {
     bin += String.fromCharCode(...bytes.subarray(i, i + yig));
   }
