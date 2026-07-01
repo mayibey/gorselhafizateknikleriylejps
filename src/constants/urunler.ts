@@ -19,6 +19,15 @@ export const TEK_SEFERLIK_URUNLERI = [URUN_MUSTEREK_OMURBOYU, URUN_BRANS_OMURBOY
 export const MUSTEREK_URUNLERI = [URUN_MUSTEREK_YILLIK, URUN_MUSTEREK_OMURBOYU];
 export const BRANS_URUNLERI = [URUN_BRANS_YILLIK, URUN_BRANS_OMURBOYU];
 
+/**
+ * KİLİT ANA ŞALTERİ (tek nokta).
+ *  - `false` → HİÇBİR içerik kilitlenmez, her şey açık (kapalı test / geliştirme).
+ *  - `true`  → ödeme kilidi devrede: TCK + denemesi ücretsiz, gerisi ilgili hakka bağlı.
+ * `kanunErisilebilir` bunu ilk satırda kontrol eder → tüm ekranlar tek yerden açılıp kapanır.
+ * NOT: Bunu değiştirmek yeni derleme (build) gerektirir; test edenlere ancak yeni sürümle yansır.
+ */
+export const KILIT_AKTIF = true;
+
 /** ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. Sadece TCK (ilk müşterek konu) + denemesi. */
 export const UCRETSIZ_KANUNLAR = ['tck'];
 

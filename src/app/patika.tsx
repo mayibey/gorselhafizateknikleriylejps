@@ -15,8 +15,11 @@ import Svg, { Path } from 'react-native-svg';
 import { Image } from 'expo-image';
 
 import { AppText } from '@/components/ui/app-text';
+import { KilitKarti } from '@/components/premium/kilit-karti';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
+import { LAW_KLASOR } from '@/db/seed';
+import { useUyelik } from '@/lib/uyelik-context';
 import {
   getBolumler,
   getCardsByBolum,
@@ -172,7 +175,10 @@ function segmentPostallari(p0: Pt, p1: Pt, anahtar: string): ReactNode[] {
 export default function PatikaScreen() {
   const router = useRouter();
   const { brans } = useBrans();
+  const { kanunErisilebilir } = useUyelik();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
+  // Kanunun bloğu (müşterek/branş) — kilit kontrolü için. null = henüz bilinmiyor.
+  const [lawBlok, setLawBlok] = useState<string | null>(null);
   // null = yükleniyor; bolumsuz = kanunun bölümü yok (tek düğüm).
   const [dugumler, setDugumler] = useState<BolumDugum[] | null>(null);
   const [bolumsuz, setBolumsuz] = useState(false);
@@ -221,8 +227,15 @@ export default function PatikaScreen() {
     // Üst bar verisi (degrade olur — patika ana veriyi etkilemez).
     if (brans) {
       void getLaws(brans)
-        .then((laws) => setKanunAd(laws.find((l) => l.id === id)?.ad ?? null))
-        .catch(() => setKanunAd(null));
+        .then((laws) => {
+          const law = laws.find((l) => l.id === id);
+          setKanunAd(law?.ad ?? null);
+          setLawBlok(law?.blok ?? null);
+        })
+        .catch(() => {
+          setKanunAd(null);
+          setLawBlok(null);
+        });
     }
     void getStudyDays()
       .then((g) => setStreak(hesaplaStreak(g, bugunISO())))
@@ -241,6 +254,11 @@ export default function PatikaScreen() {
   // iskelet bölümler paydayı şişirmez. calisilan = kutu>=1 görülen kart (bolumIlerleme).
   const calisilanKart = dugumler?.reduce((a, d) => a + d.calisilan, 0) ?? 0;
   const toplamKart = dugumler?.reduce((a, d) => a + d.toplam, 0) ?? 0;
+
+  // Kilit: kanunun bloğu bilindiğinde ve erişim yoksa (TCK/ücretsiz hariç). Şalter kapalıysa
+  // kanunErisilebilir hep true → kilitli asla true olmaz.
+  const klasor = lawId != null ? LAW_KLASOR[Number(lawId)] : undefined;
+  const kilitli = lawBlok != null && !kanunErisilebilir(klasor, lawBlok);
 
   return (
     <Screen
@@ -279,7 +297,9 @@ export default function PatikaScreen() {
         ) : null}
       </View>
 
-      {hata ? (
+      {kilitli ? (
+        <KilitKarti kanunAd={kanunAd} />
+      ) : hata ? (
         <DurumKutu
           ikon="alert-circle-outline"
           baslik="Yüklenemedi"

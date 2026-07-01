@@ -21,6 +21,7 @@ import { getFavoriler, toggleFavori } from '@/lib/favori';
 import { indirmeDestekli } from '@/lib/indirme';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
+import { useUyelik } from '@/lib/uyelik-context';
 
 // Filtre çipleri (ilerleme bazlı, elde süzme — yeni sorgu yok).
 const CIPLER = [
@@ -506,11 +507,19 @@ function KanunSatir({
   const bos = calisilan === 0;
   const klasorAdi = LAW_KLASOR[law.id];
   const indirme = useKanunIndirme(klasorAdi ?? '');
+  const router = useRouter();
+  const { kanunErisilebilir } = useUyelik();
+  // Premium kilidi: erişim yoksa satır → paywall (indir/çalış yerine). Şalter kapalıysa hep açık.
+  const kilitli = !kanunErisilebilir(klasorAdi, law.blok);
   // Uzak modda (içerik sunucuda): bir kanunu çalışmak için ÖNCE indirilmeli.
   const indirGerek =
     !!klasorAdi && indirmeDestekli && !!ICERIK_TABANI && indirme.durum !== 'indirildi';
 
   function satiraBas() {
+    if (kilitli) {
+      router.push('/paywall');
+      return;
+    }
     if (indirGerek) {
       if (indirme.durum === 'iniyor') return; // iniyorsa bekle
       Alert.alert(
@@ -589,28 +598,42 @@ function KanunSatir({
             color={favori ? Palette.altin : Palette.solukMetin}
           />
         </Pressable>
-        {klasorAdi ? (
-          <KanunIndirButon
-            durum={indirme.durum}
-            yuzde={indirme.yuzde}
-            onIndir={indirme.indir}
-            onSil={indirme.sil}
-          />
-        ) : null}
-        {tam ? (
+        {kilitli ? (
           <View style={st.satirSag}>
-            <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
-          </View>
-        ) : (
-          <View style={st.satirSag}>
-            <View style={st.baslaBtn}>
-              <MaterialCommunityIcons name="play" size={15} color={Palette.altinKoyu} />
+            <View style={st.kilitChip}>
+              <MaterialCommunityIcons name="lock" size={15} color={Palette.altinKoyu} />
               <AppText variant="etiket" bold color="altinMetin">
-                {bos ? 'Başla' : 'Devam'}
+                Kilidi Aç
               </AppText>
             </View>
             <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
           </View>
+        ) : (
+          <>
+            {klasorAdi ? (
+              <KanunIndirButon
+                durum={indirme.durum}
+                yuzde={indirme.yuzde}
+                onIndir={indirme.indir}
+                onSil={indirme.sil}
+              />
+            ) : null}
+            {tam ? (
+              <View style={st.satirSag}>
+                <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
+              </View>
+            ) : (
+              <View style={st.satirSag}>
+                <View style={st.baslaBtn}>
+                  <MaterialCommunityIcons name="play" size={15} color={Palette.altinKoyu} />
+                  <AppText variant="etiket" bold color="altinMetin">
+                    {bos ? 'Başla' : 'Devam'}
+                  </AppText>
+                </View>
+                <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+              </View>
+            )}
+          </>
         )}
       </View>
     </Pressable>
@@ -904,6 +927,17 @@ const st = StyleSheet.create({
     gap: Spacing.one,
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.one,
+  },
+  kilitChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.altin,
     borderWidth: 1,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,

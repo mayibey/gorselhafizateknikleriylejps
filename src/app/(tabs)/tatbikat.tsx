@@ -9,11 +9,13 @@ import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
+import { LAW_KLASOR } from '@/db/seed';
 import { useBrans } from '@/lib/brans-context';
 import { hecele } from '@/lib/hece';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
 import { sinavSoruSayisi, sinavVarMi } from '@/lib/sinav';
+import { useUyelik } from '@/lib/uyelik-context';
 
 /** Bir kanunun deneme sınavı durumu (kilit + ilerleme). */
 type Durum = { calisilan: number; toplam: number; tamam: boolean };
@@ -190,12 +192,17 @@ function KanunSatir({
   const calisilan = durum?.calisilan ?? 0;
   const toplam = durum?.toplam ?? law.kartSayisi;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
+  const router = useRouter();
+  const { kanunErisilebilir } = useUyelik();
+  // Premium kilidi: erişim yoksa sınav yerine paywall. Şalter kapalıysa hep açık.
+  const kilitli = !kanunErisilebilir(LAW_KLASOR[law.id], law.blok);
 
-  // Deneme sınavı HER ZAMAN AÇIK (kilit kaldırıldı — başkan kararı). Hazırlık yalnız BİLGİ.
+  // Deneme sınavı HER ZAMAN AÇIK (hazırlık kilidi kaldırıldı — başkan kararı); yalnız premium
+  // kilidi geçerli. Hazırlık satırı yalnız BİLGİ.
   return (
     <Pressable
       style={({ pressed }) => [styles.satir, pressed && styles.pressed]}
-      onPress={() => onSinav(law)}
+      onPress={() => (kilitli ? router.push('/paywall') : onSinav(law))}
       accessibilityRole="button"
       accessibilityLabel={`${law.ad} deneme sınavı`}>
       <View style={styles.satirUst}>
@@ -203,13 +210,21 @@ function KanunSatir({
         <AppText variant="govde" bold color="anaMetin" style={styles.kanunAd}>
           {hecele(law.ad)}
         </AppText>
-        <MaterialCommunityIcons name="play-circle" size={28} color={Palette.lacivert} />
+        <MaterialCommunityIcons
+          name={kilitli ? 'lock' : 'play-circle'}
+          size={28}
+          color={kilitli ? Palette.altinKoyu : Palette.lacivert}
+        />
       </View>
 
       <View style={styles.altSatir}>
-        <MaterialCommunityIcons name="clipboard-check-outline" size={16} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons
+          name={kilitli ? 'lock-open-outline' : 'clipboard-check-outline'}
+          size={16}
+          color={Palette.altinKoyu}
+        />
         <AppText variant="kucuk" bold color="altinMetin">
-          Deneme Sınavı · {soruSayisi} soru
+          {kilitli ? 'Kilidi Aç' : `Deneme Sınavı · ${soruSayisi} soru`}
         </AppText>
       </View>
 

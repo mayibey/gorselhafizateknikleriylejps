@@ -6,7 +6,13 @@
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
-import { BRANS_URUNLERI, MUSTEREK_URUNLERI, musterekBlokMu, ucretsizKanun } from '@/constants/urunler';
+import {
+  BRANS_URUNLERI,
+  KILIT_AKTIF,
+  MUSTEREK_URUNLERI,
+  musterekBlokMu,
+  ucretsizKanun,
+} from '@/constants/urunler';
 import { supabase } from '@/lib/supabase';
 
 type Haklar = { musterek: boolean; brans: boolean };
@@ -65,7 +71,8 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const kanunErisilebilir = (klasor: string | null | undefined, blok: string | null | undefined) => {
-    if (ucretsizKanun(klasor)) return true;
+    if (!KILIT_AKTIF) return true; // ana şalter kapalı → her içerik açık
+    if (ucretsizKanun(klasor)) return true; // TCK + denemesi ücretsiz
     return musterekBlokMu(blok) ? haklar.musterek : haklar.brans;
   };
 
