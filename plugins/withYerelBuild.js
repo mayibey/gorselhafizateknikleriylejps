@@ -51,7 +51,10 @@ function withBuildTuning(config) {
       if (item) item.value = value;
       else cfg.modResults.push({ type: 'property', key, value });
     };
-    set('org.gradle.jvmargs', '-Xmx5120m -XX:MaxMetaspaceSize=512m');
+    // Metaspace 512m → 1024m: Kotlin derleyici gradle-içinde (in-process) çalıştığı için TÜM
+    // modüllerin sınıf metaverisi daemon metaspace'inde birikir; 512m'de OutOfMemoryError:Metaspace
+    // (react-native-screens compileReleaseKotlin) veriyordu. Heap 5120m yeterli, metaspace dardı.
+    set('org.gradle.jvmargs', '-Xmx5120m -XX:MaxMetaspaceSize=1024m');
     set('reactNativeArchitectures', 'arm64-v8a');
     // OOM fix (vCode 6 build deneyiminden): paralel JS-bundle + native + ayrı Kotlin daemon
     // aynı anda bellek tepesi → daemon çöküyordu. Paralel kapalı + Kotlin gradle-içinde + işçi 2.
