@@ -11,12 +11,20 @@ import * as WebBrowser from 'expo-web-browser';
 
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
-// OAuth/kurtarma dönüş adresi SABİT (makeRedirectUri DEĞİL): uygulamada expo-dev-client kurulu
-// olduğu için makeRedirectUri bazı yapılarda geliştirici-şeması (exp+...) üretip Supabase
-// allowlist'iyle (mevzu://) eşleşmiyor → Supabase web Site URL'ine düşüyor ("beyaz ekran",
-// giriş kurulamıyor). Sabit `mevzu://` → allowlist'le BİREBİR → dönüş app'e gelir.
-const DONUS_ADRESI = 'mevzu://';
-const DONUS_SIFRE_YENILE = 'mevzu://sifre-yenile';
+// OAuth/kurtarma dönüş adresi PLATFORMA GÖRE:
+// - Native: SABİT `mevzu://` (makeRedirectUri DEĞİL — expo-dev-client kuruluyken bazı yapılarda
+//   exp+ şeması üretip Supabase allowlist'iyle eşleşmiyor → web Site URL'ine düşüyor "beyaz ekran").
+// - Web: tarayıcı `mevzu://` şemasına DÖNEMEZ (popup sonsuz döner) → sayfanın kendi origin'i
+//   (örn. http://localhost:8081). Origin da Supabase Redirect URLs allowlist'inde olmalı.
+function donusAdresi(): string {
+  if (Platform.OS === 'web' && typeof window !== 'undefined') return window.location.origin;
+  return 'mevzu://';
+}
+function donusSifreYenile(): string {
+  if (Platform.OS === 'web' && typeof window !== 'undefined')
+    return `${window.location.origin}/sifre-yenile`;
+  return 'mevzu://sifre-yenile';
+}
 
 // Tarayıcı oturumu sonrası askıda kalanı temizler (Expo gereği). Yalnız üyelik AÇIKKEN
 // ve SSR olmayan ortamda çağrılır (v1'de gereksiz native çağrı + "window yok" çökmesi yok).
@@ -33,7 +41,7 @@ export class KapaliHata extends Error {
 
 /** OAuth dönüş adresi (Supabase Redirect URLs'e EKLENMESİ gereken adres). Teşhis için. */
 export function girisDonusAdresi(): string {
-  return DONUS_ADRESI;
+  return donusAdresi();
 }
 
 /** URL'deki query (?...) VE fragment (#...) parametrelerini ayrıştırır.
@@ -96,7 +104,7 @@ export async function oauthUrlIsle(url: string): Promise<boolean> {
 export async function gmailIleGiris(): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
 
-  const redirectTo = DONUS_ADRESI; // sabit mevzu:// (allowlist'le birebir)
+  const redirectTo = donusAdresi(); // native: sabit mevzu:// · web: sayfanın origin'i
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
@@ -156,7 +164,7 @@ export async function epostaKayit(
 export async function sifreSifirla(eposta: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
   const { error } = await supabase.auth.resetPasswordForEmail(eposta.trim(), {
-    redirectTo: DONUS_SIFRE_YENILE,
+    redirectTo: donusSifreYenile(),
   });
   if (error) throw error;
 }
