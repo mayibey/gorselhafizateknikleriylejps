@@ -7,8 +7,9 @@ import { GorselZoom } from '@/components/card-flow/gorsel-zoom';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { CardWithSrs } from '@/db/schema';
+import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { cozHazir, gorselCoz } from '@/lib/gorsel-coz';
-import { gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
+import { gorselBekliyorMu, gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
 export function StudyCard({
@@ -22,6 +23,8 @@ export function StudyCard({
   /** Görsel ekranda görünür olunca (yüklendi VEYA hata) bildirilir → "Öğrendim" kilidi açılır. */
   onGorundu?: () => void;
 }) {
+  // Web imzalı modda URL arka planda gelir → gelince yeniden çiz (native'de no-op).
+  useImzaliTazele();
   // İndirilmiş içerik ŞİFRELİ → çöz (data-URI). İndirilmemişse uzak/gömülü kaynak.
   const sifreliYol = indirilmisGorsel(card.gorsel_yolu);
   const [cozulmus, setCozulmus] = useState<string | null>(() =>
@@ -49,8 +52,9 @@ export function StudyCard({
   // Forensic filigran artık SUNUCUDA görselin piksellerine basılıyor (gorsel Edge Function) →
   // client overlay kaldırıldı (gereksiz + bypass edilebilir; sunucununki cihaza zaten gömülü gelir).
 
-  // Şifreli içerik henüz çözülmedi → "hazırlanıyor" bekleme kutusu (Öğrendim kilitli kalır).
-  if (sifreliYol && !cozulmus) {
+  // Şifreli içerik henüz çözülmedi VEYA web imzalı URL yolda → "hazırlanıyor" bekleme kutusu
+  // (Öğrendim kilitli kalır; placeholder ızgara YANLIŞ olur — görsel var, sadece yolda).
+  if ((sifreliYol && !cozulmus) || gorselBekliyorMu(card.gorsel_yolu)) {
     return (
       <View style={[styles.card, styles.cardGorsel, styles.cozuluyor]}>
         <ActivityIndicator size="large" color={Palette.altinKoyu} />

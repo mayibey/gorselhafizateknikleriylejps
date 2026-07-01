@@ -11,6 +11,7 @@
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useEffect } from 'react';
 
+import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { sesKaynak } from '@/lib/ses-kaynak';
 
 export type KartSesi = {
@@ -23,6 +24,7 @@ export type KartSesi = {
 };
 
 export function useKartSesi(sesYolu: string | null | undefined): KartSesi {
+  useImzaliTazele(); // web imzalı modda mp3 URL'i gelince yeniden çiz (native no-op)
   const kaynak = sesKaynak(sesYolu);
   // Hook'lar koşulsuz çağrılır; kaynak null ise yüklü olmayan bir player döner.
   const player = useAudioPlayer(kaynak);

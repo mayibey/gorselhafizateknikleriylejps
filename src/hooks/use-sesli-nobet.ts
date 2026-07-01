@@ -11,6 +11,7 @@
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useEffect, useRef, useState } from 'react';
 
+import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import type { QueueCard } from '@/lib/queue';
 import { sesKaynak } from '@/lib/ses-kaynak';
 import { oncekiIndex, sonrakiIndex } from '@/lib/sesli-nobet';
@@ -29,6 +30,7 @@ export type SesliNobet = {
 
 /** kartlar: zaten sesliKartlar() ile filtrelenmiş (her birinin ses_yolu registry'de var). */
 export function useSesliNobet(kartlar: QueueCard[]): SesliNobet {
+  useImzaliTazele(); // web imzalı modda mp3 URL'i gelince yeniden çiz (native no-op)
   const [index, setIndex] = useState(0);
   const aktifKart = kartlar[index];
   const kaynak = sesKaynak(aktifKart?.ses_yolu);

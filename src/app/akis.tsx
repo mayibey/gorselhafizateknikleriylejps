@@ -16,6 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
 import { gorselOnCoz } from '@/lib/gorsel-coz';
+import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { calisilabilirZayif, gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { sesVarMi } from '@/lib/ses-kaynak';
 import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
@@ -56,6 +57,7 @@ async function gunlukSinirli(): Promise<QueueCard[]> {
 
 export default function AkisScreen() {
   // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
+  useImzaliTazele(); // web imzalı modda görsel URL'leri gelince yeniden çiz (native no-op)
   const router = useRouter();
   const { lawId, bolumId, mod, kart } = useLocalSearchParams<{
     lawId?: string;

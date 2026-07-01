@@ -8,6 +8,7 @@ import type { ImageRequireSource } from 'react-native';
 
 import { KART_GORSEL_YOLLARI, KART_GORSELLERI } from '../assets/kart-gorselleri';
 import { ICERIK_TABANI } from '@/constants/config';
+import { imzaliUriSync, webImzaliAktif } from './imzali-cache';
 import { kanunIndirilmisMi } from './indirme';
 
 export type GorselKaynak = ImageRequireSource | { uri: string };
@@ -25,12 +26,30 @@ export function indirilmisGorsel(key?: string | null): string | null {
 export function gorselKaynak(key?: string | null): GorselKaynak | undefined {
   if (!key) return undefined;
   const yol = KART_GORSEL_YOLLARI[key];
-  if (yol && ICERIK_TABANI) return { uri: `${ICERIK_TABANI}/${yol}` };
+  if (yol && ICERIK_TABANI) {
+    // Web + private bucket: public URL 400 verir → kısa-ömürlü imzalı URL (hazır değilse
+    // undefined; imzali-cache getirince dinleyiciler tetiklenir, render'da URL gelir).
+    if (webImzaliAktif()) {
+      const imzali = imzaliUriSync(yol);
+      return imzali ? { uri: imzali } : undefined;
+    }
+    return { uri: `${ICERIK_TABANI}/${yol}` };
+  }
   return KART_GORSELLERI[key];
 }
 
-/** Bu kart için herhangi bir görsel var mı? (indirilmiş-şifreli / uzak / gömülü) */
+/** Web'de görselin imzalı URL'i henüz YOLDA mı? (StudyCard "hazırlanıyor" göstersin, placeholder değil) */
+export function gorselBekliyorMu(key?: string | null): boolean {
+  if (!key || !webImzaliAktif()) return false;
+  const yol = KART_GORSEL_YOLLARI[key];
+  return !!yol && imzaliUriSync(yol) === null;
+}
+
+/** Bu kart için herhangi bir görsel var mı? (indirilmiş-şifreli / uzak / gömülü)
+ *  Web imzalı modda URL'in henüz gelmemiş olması "yok" SAYILMAZ (manifest'te varsa var). */
 export function gorselVarMi(key?: string | null): boolean {
+  if (!key) return false;
+  if (webImzaliAktif() && KART_GORSEL_YOLLARI[key]) return true;
   return !!indirilmisGorsel(key) || gorselKaynak(key) !== undefined;
 }
 

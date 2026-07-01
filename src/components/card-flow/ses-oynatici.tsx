@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { sesKaynak } from '@/lib/ses-kaynak';
 import { Palette, Spacing } from '@/constants/theme';
 import { SES_HIZLARI, sesHizDurum } from '@/lib/ses-hiz';
@@ -38,6 +39,7 @@ export function SesOynatici({
   /** Ses sonuna kadar çalınıp bitince çağrılır (kullanıcı durdurursa ÇAĞRILMAZ). */
   onBitti?: () => void;
 }) {
+  useImzaliTazele(); // web imzalı modda mp3 URL'i gelince yeniden çiz (native no-op)
   const kaynak = sesKaynak(sesYolu);
   const player = useAudioPlayer(kaynak);
   const durum = useAudioPlayerStatus(player);

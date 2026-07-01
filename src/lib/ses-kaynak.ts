@@ -8,6 +8,7 @@
  */
 import { KART_SES_YOLLARI, KART_SESLERI } from '../assets/kart-sesleri';
 import { ICERIK_TABANI } from '@/constants/config';
+import { imzaliUriSync, webImzaliAktif } from './imzali-cache';
 import { kanunIndirilmisMi, yerelDosyaUri } from './indirme';
 
 export type SesKaynak = number | { uri: string };
@@ -20,7 +21,14 @@ export function sesKaynak(key?: string | null): SesKaynak | null {
   const yol = KART_SES_YOLLARI[key];
   if (yol) {
     if (kanunIndirilmisMi(klasorOf(yol))) return { uri: yerelDosyaUri(yol) };
-    if (ICERIK_TABANI) return { uri: `${ICERIK_TABANI}/${yol}` };
+    if (ICERIK_TABANI) {
+      // Web + private bucket: imzalı URL (hazır değilse null → URL gelince render'da dolar).
+      if (webImzaliAktif()) {
+        const imzali = imzaliUriSync(yol);
+        return imzali ? { uri: imzali } : null;
+      }
+      return { uri: `${ICERIK_TABANI}/${yol}` };
+    }
   }
   return KART_SESLERI[key] ?? null;
 }
