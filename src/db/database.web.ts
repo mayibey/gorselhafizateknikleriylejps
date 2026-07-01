@@ -203,8 +203,14 @@ class MemoryBackend implements Backend {
     this.geriBes = { acik: false, acilis: null, sonTarih: null, kademe: 0 };
   }
 
-  async ekleSinavSonucu(lawId: number, dogru: number, toplam: number, tarih: string): Promise<void> {
-    this.sinavSonuclari.push({ id: ++this.sinavSayac, law_id: lawId, dogru, toplam, tarih });
+  async ekleSinavSonucu(
+    lawId: number,
+    test: number,
+    dogru: number,
+    toplam: number,
+    tarih: string,
+  ): Promise<void> {
+    this.sinavSonuclari.push({ id: ++this.sinavSayac, law_id: lawId, test, dogru, toplam, tarih });
   }
 
   async getSinavSonuclari(): Promise<SinavSonuc[]> {
@@ -242,7 +248,8 @@ class MemoryBackend implements Backend {
       for (const k of snapshot.sicil) this.sicil.push({ ...k, id: ++this.sicilSayac });
       this.geriBes = { ...snapshot.geriBes };
       for (const s of snapshot.sinavlar) {
-        this.sinavSonuclari.push({ ...s, id: ++this.sinavSayac });
+        // Eski snapshot'larda test alanı olmayabilir → 0'a düş.
+        this.sinavSonuclari.push({ ...s, test: s.test ?? 0, id: ++this.sinavSayac });
       }
     }
   }
@@ -393,12 +400,13 @@ export async function sicilSifirla(): Promise<void> {
 /** Bir deneme sınavı sonucunu kalıcı kaydeder (Tatbikat skor geçmişi). */
 export async function ekleSinavSonucu(
   lawId: number,
+  test: number,
   dogru: number,
   toplam: number,
   tarih: string,
 ): Promise<void> {
   await initDatabase();
-  return backend.ekleSinavSonucu(lawId, dogru, toplam, tarih);
+  return backend.ekleSinavSonucu(lawId, test, dogru, toplam, tarih);
 }
 
 /** Tüm deneme sınavı sonuçlarını (eskiden yeniye) döndürür. */

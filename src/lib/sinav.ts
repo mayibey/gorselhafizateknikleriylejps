@@ -46,6 +46,57 @@ export function getSinavSorulari(lawId: number, rastgele: () => number = Math.ra
   return karistir(sorular, rastgele);
 }
 
+// --- Testlere bölme (uzun kanunlarda tek seferde 50 soru yorucu → ~20'şerlik Test 1/2/3…) ---
+
+/** Bir testin hedef soru sayısı. */
+export const TEST_BOYUT = 20;
+// Son parça bundan azsa bir öncekine eklenir (tek/çok küçük soruluk test olmasın; 41 → 20+21).
+const MIN_ARTIK = 8;
+
+/**
+ * Bir kanunun soru havuzunu STABİL dilimlere böler → [ [başlangıç, bitiş), … ] (registry sırası).
+ * Dilim KÜMESİ sabittir (Test 2 hep aynı sorular) → puan/devam test bazında anlamlı.
+ */
+function testSinirlari(toplam: number): [number, number][] {
+  if (toplam <= 0) return [];
+  const out: [number, number][] = [];
+  let i = 0;
+  while (i < toplam) {
+    let son = Math.min(i + TEST_BOYUT, toplam);
+    if (toplam - son > 0 && toplam - son < MIN_ARTIK) son = toplam; // küçük artığı bu teste kat
+    out.push([i, son]);
+    i = son;
+  }
+  return out;
+}
+
+/** Bir kanunun test sayısı (0 = sınav yok). */
+export function testSayisi(lawId: number): number {
+  return testSinirlari(sinavSoruSayisi(lawId)).length;
+}
+
+/** Bir testin soru sayısı (geçersiz test index → 0). */
+export function testSoruSayisi(lawId: number, testIndex: number): number {
+  const s = testSinirlari(sinavSoruSayisi(lawId))[testIndex];
+  return s ? s[1] - s[0] : 0;
+}
+
+/**
+ * Bir testin (sabit dilim) sorularını döndürür — dilim İÇİNDE karıştırılmış. Küme sabit
+ * (Test N hep aynı sorular), sıra her denemede değişir (devam için sıra ayrıca saklanır).
+ */
+export function getTestSorulari(
+  lawId: number,
+  testIndex: number,
+  rastgele: () => number = Math.random,
+): KartSoru[] {
+  const sorular = KART_SORULARI[lawId];
+  if (!sorular || sorular.length === 0) return [];
+  const s = testSinirlari(sorular.length)[testIndex];
+  if (!s) return [];
+  return karistir(sorular.slice(s[0], s[1]), rastgele);
+}
+
 /**
  * Bir soru kaynağından ("5237 m.1/1", "5237 m.21-22", "5237 m.247-250-252") madde
  * numaralarını çıkarır. Yalnız "m." sonrası madde no(lar)ı alınır; alt-fıkra (/2) ve

@@ -14,7 +14,7 @@ import { useBrans } from '@/lib/brans-context';
 import { hecele } from '@/lib/hece';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
-import { sinavSoruSayisi, sinavVarMi } from '@/lib/sinav';
+import { sinavSoruSayisi, sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
 import { useUyelik } from '@/lib/uyelik-context';
 
 /** Bir kanunun deneme sınavı durumu (kilit + ilerleme). */
@@ -33,8 +33,8 @@ export default function TatbikatScreen() {
   const [laws, setLaws] = useState<LawWithCount[] | null>(null);
   // law_id → kilit/ilerleme durumu (Mevzuat ile aynı: bölüme bağlı + kutu≥1).
   const [durumMap, setDurumMap] = useState<Map<number, Durum>>(new Map());
-  // law_id → SON deneme sonucu (en güncel; "Son deneme: X/Y" satırı için).
-  const [sonucMap, setSonucMap] = useState<Map<number, SinavSonuc>>(new Map());
+  // law_id → (test → SON deneme sonucu). Her testin son skoru ayrı ("Son: X/Y").
+  const [sonucMap, setSonucMap] = useState<Map<number, Map<number, SinavSonuc>>>(new Map());
   const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
   const [hata, setHata] = useState(false);
 
@@ -47,8 +47,15 @@ export default function TatbikatScreen() {
     // Son deneme skorları (law_id → en güncel; getSinavSonuclari id artan → son yazan kalır).
     void getSinavSonuclari()
       .then((sonuclar) => {
-        const sm = new Map<number, SinavSonuc>();
-        for (const s of sonuclar) sm.set(s.law_id, s);
+        const sm = new Map<number, Map<number, SinavSonuc>>();
+        for (const s of sonuclar) {
+          let m = sm.get(s.law_id);
+          if (!m) {
+            m = new Map();
+            sm.set(s.law_id, m);
+          }
+          m.set(s.test, s); // id artan → son yazan (en güncel) kalır
+        }
         setSonucMap(sm);
       })
       .catch(() => setSonucMap(new Map()));
@@ -83,8 +90,8 @@ export default function TatbikatScreen() {
   const musterek =
     laws?.filter((l) => l.blok === 'müşterek' && sinavVarMi(l.id) && rutbeGorur(l.id, rutbe)) ?? [];
 
-  function sinavaGit(law: LawWithCount) {
-    router.push({ pathname: '/sinav', params: { lawId: String(law.id) } });
+  function sinavaGit(law: LawWithCount, test: number) {
+    router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(test) } });
   }
 
   return (
@@ -131,7 +138,8 @@ export default function TatbikatScreen() {
       ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">
-            Her kanunun deneme sınavı açık — istersen önce Mevzuat'tan çalış, sonra kendini sına.
+            Uzun kanunlar 20'şer soruluk testlere bölündü. İstersen önce Mevzuat'tan çalış, sonra
+            kendini sına.
           </AppText>
           {musterek.length === 0 ? (
             <AppText variant="kucuk" color="solukMetin">
@@ -143,8 +151,7 @@ export default function TatbikatScreen() {
                 key={law.id}
                 law={law}
                 durum={durumMap.get(law.id)}
-                soruSayisi={sinavSoruSayisi(law.id)}
-                sonSonuc={sonucMap.get(law.id)}
+                sonuclar={sonucMap.get(law.id)}
                 onSinav={sinavaGit}
               />
             ))
@@ -179,16 +186,15 @@ function Monogram({ no }: { no: string | null }) {
 function KanunSatir({
   law,
   durum,
-  soruSayisi,
-  sonSonuc,
+  sonuclar,
   onSinav,
 }: {
   law: LawWithCount;
   durum: Durum | undefined;
-  soruSayisi: number;
-  sonSonuc: SinavSonuc | undefined;
-  onSinav: (law: LawWithCount) => void;
+  sonuclar: Map<number, SinavSonuc> | undefined;
+  onSinav: (law: LawWithCount, test: number) => void;
 }) {
+  const [acik, setAcik] = useState(false);
   const calisilan = durum?.calisilan ?? 0;
   const toplam = durum?.toplam ?? law.kartSayisi;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
@@ -197,57 +203,114 @@ function KanunSatir({
   // Premium kilidi: erişim yoksa sınav yerine paywall. Şalter kapalıysa hep açık.
   const kilitli = !kanunErisilebilir(LAW_KLASOR[law.id], law.blok);
 
-  // Deneme sınavı HER ZAMAN AÇIK (hazırlık kilidi kaldırıldı — başkan kararı); yalnız premium
-  // kilidi geçerli. Hazırlık satırı yalnız BİLGİ.
+  const testN = testSayisi(law.id);
+  const toplamSoru = sinavSoruSayisi(law.id);
+  const tekTest = testN <= 1; // ≤20 soru → tek test: başlığa basınca doğrudan aç
+
+  function basHeader() {
+    if (kilitli) {
+      router.push('/paywall');
+      return;
+    }
+    if (tekTest) {
+      onSinav(law, 0);
+      return;
+    }
+    setAcik((v) => !v);
+  }
+
+  const sagIkon = kilitli ? 'lock' : tekTest ? 'play-circle' : acik ? 'chevron-up' : 'chevron-down';
+  const tekSon = sonuclar?.get(0);
+
   return (
-    <Pressable
-      style={({ pressed }) => [styles.satir, pressed && styles.pressed]}
-      onPress={() => (kilitli ? router.push('/paywall') : onSinav(law))}
-      accessibilityRole="button"
-      accessibilityLabel={`${law.ad} deneme sınavı`}>
-      <View style={styles.satirUst}>
-        <Monogram no={no} />
-        <AppText variant="govde" bold color="anaMetin" style={styles.kanunAd}>
-          {hecele(law.ad)}
-        </AppText>
-        <MaterialCommunityIcons
-          name={kilitli ? 'lock' : 'play-circle'}
-          size={28}
-          color={kilitli ? Palette.altinKoyu : Palette.lacivert}
-        />
-      </View>
+    <View style={styles.satir}>
+      <Pressable
+        onPress={basHeader}
+        style={({ pressed }) => [styles.satirBas, pressed && styles.pressed]}
+        accessibilityRole="button"
+        accessibilityLabel={`${law.ad} deneme sınavı`}>
+        <View style={styles.satirUst}>
+          <Monogram no={no} />
+          <AppText variant="govde" bold color="anaMetin" style={styles.kanunAd}>
+            {hecele(law.ad)}
+          </AppText>
+          <MaterialCommunityIcons
+            name={sagIkon}
+            size={28}
+            color={kilitli ? Palette.altinKoyu : Palette.lacivert}
+          />
+        </View>
 
-      <View style={styles.altSatir}>
-        <MaterialCommunityIcons
-          name={kilitli ? 'lock-open-outline' : 'clipboard-check-outline'}
-          size={16}
-          color={Palette.altinKoyu}
-        />
-        <AppText variant="kucuk" bold color="altinMetin">
-          {kilitli ? 'Kilidi Aç' : `Deneme Sınavı · ${soruSayisi} soru`}
-        </AppText>
-      </View>
-
-      {/* Hazırlık (kilit DEĞİL — sadece bilgi: ne kadarını çalıştın). */}
-      {toplam > 0 ? (
         <View style={styles.altSatir}>
-          <MaterialCommunityIcons name="book-clock-outline" size={16} color={Palette.solukMetin} />
-          <AppText variant="etiket" color="solukMetin">
-            Hazırlık: {calisilan}/{toplam} kart çalışıldı
+          <MaterialCommunityIcons
+            name={kilitli ? 'lock-open-outline' : 'clipboard-check-outline'}
+            size={16}
+            color={Palette.altinKoyu}
+          />
+          <AppText variant="kucuk" bold color="altinMetin">
+            {kilitli
+              ? 'Kilidi Aç'
+              : tekTest
+                ? `Deneme Sınavı · ${toplamSoru} soru`
+                : `${testN} test · ${toplamSoru} soru`}
           </AppText>
         </View>
-      ) : null}
 
-      {/* Son deneme skoru (varsa) — açık/kilitli fark etmez, geçmiş kalıcıdır. */}
-      {sonSonuc ? (
-        <View style={styles.altSatir}>
-          <MaterialCommunityIcons name="history" size={16} color={Palette.solukMetin} />
-          <AppText variant="etiket" bold color="solukMetin">
-            Son deneme: {sonSonuc.dogru}/{sonSonuc.toplam}
-          </AppText>
+        {/* Hazırlık (kilit DEĞİL — sadece bilgi: ne kadarını çalıştın). */}
+        {toplam > 0 ? (
+          <View style={styles.altSatir}>
+            <MaterialCommunityIcons name="book-clock-outline" size={16} color={Palette.solukMetin} />
+            <AppText variant="etiket" color="solukMetin">
+              Hazırlık: {calisilan}/{toplam} kart çalışıldı
+            </AppText>
+          </View>
+        ) : null}
+
+        {/* Tek testli kanunda son skor başlıkta (çok testli → her testin altında). */}
+        {tekTest && !kilitli && tekSon ? (
+          <View style={styles.altSatir}>
+            <MaterialCommunityIcons name="history" size={16} color={Palette.solukMetin} />
+            <AppText variant="etiket" bold color="solukMetin">
+              Son deneme: {tekSon.dogru}/{tekSon.toplam}
+            </AppText>
+          </View>
+        ) : null}
+      </Pressable>
+
+      {/* Çok testli kanun → açılınca Test 1..N (her biri ayrı sınav + kendi son skoru). */}
+      {acik && !tekTest && !kilitli ? (
+        <View style={styles.testler}>
+          {Array.from({ length: testN }, (_, t) => {
+            const ss = sonuclar?.get(t);
+            const soru = testSoruSayisi(law.id, t);
+            const aced = !!ss && ss.toplam > 0 && ss.dogru === ss.toplam;
+            return (
+              <Pressable
+                key={t}
+                onPress={() => onSinav(law, t)}
+                style={({ pressed }) => [styles.testSatir, pressed && styles.pressed]}
+                accessibilityRole="button"
+                accessibilityLabel={`Test ${t + 1}`}>
+                <MaterialCommunityIcons
+                  name={aced ? 'check-circle' : 'play-circle-outline'}
+                  size={22}
+                  color={aced ? Palette.altinKoyu : Palette.lacivert}
+                />
+                <View style={styles.testOrta}>
+                  <AppText variant="kucuk" bold color="anaMetin">
+                    Test {t + 1}
+                  </AppText>
+                  <AppText variant="etiket" color="solukMetin">
+                    {soru} soru{ss ? ` · Son: ${ss.dogru}/${ss.toplam}` : ''}
+                  </AppText>
+                </View>
+                <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+              </Pressable>
+            );
+          })}
         </View>
       ) : null}
-    </Pressable>
+    </View>
   );
 }
 
@@ -314,6 +377,31 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.three,
     gap: Spacing.two,
+  },
+  satirBas: {
+    gap: Spacing.two,
+  },
+  testler: {
+    marginTop: Spacing.one,
+    borderTopWidth: 1,
+    borderTopColor: Palette.ayirici,
+    paddingTop: Spacing.two,
+    gap: Spacing.two,
+  },
+  testSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kremZemin,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.two,
+  },
+  testOrta: {
+    flex: 1,
+    gap: Spacing.half,
   },
   satirUst: {
     flexDirection: 'row',

@@ -113,6 +113,8 @@ export interface SicilKaydi {
 export interface SinavSonuc {
   id: number;
   law_id: number;
+  /** Kanunun kaçıncı testi (0 tabanlı). Testlere bölme öncesi kayıtlar 0. */
+  test: number;
   dogru: number;
   toplam: number;
   /** YYYY-MM-DD. */
@@ -212,6 +214,7 @@ CREATE TABLE IF NOT EXISTS geri_bes_durum (
 CREATE TABLE IF NOT EXISTS sinav_sonuclari (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   law_id INTEGER NOT NULL,
+  test INTEGER NOT NULL DEFAULT 0,
   dogru INTEGER NOT NULL,
   toplam INTEGER NOT NULL,
   tarih TEXT NOT NULL
@@ -219,4 +222,4 @@ CREATE TABLE IF NOT EXISTS sinav_sonuclari (
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 23;
+export const SCHEMA_VERSION = 24;

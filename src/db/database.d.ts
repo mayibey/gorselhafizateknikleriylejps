@@ -42,6 +42,7 @@ export function setGeriBesDurum(durum: GeriBesDurum): Promise<void>;
 export function sicilSifirla(): Promise<void>;
 export function ekleSinavSonucu(
   lawId: number,
+  test: number,
   dogru: number,
   toplam: number,
   tarih: string,

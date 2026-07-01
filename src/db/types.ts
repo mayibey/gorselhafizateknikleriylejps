@@ -61,8 +61,8 @@ export interface Backend {
   setGeriBesDurum(durum: GeriBesDurum): Promise<void>;
   /** Sicil defterini ve geri-bes durumunu sıfırlar (demo/önizleme temizliği). */
   sicilSifirla(): Promise<void>;
-  /** Bir deneme sınavı sonucunu kalıcı kaydeder (id otomatik). */
-  ekleSinavSonucu(lawId: number, dogru: number, toplam: number, tarih: string): Promise<void>;
+  /** Bir deneme sınavı sonucunu kalıcı kaydeder (id otomatik). test = kanunun kaçıncı testi (0 tabanlı). */
+  ekleSinavSonucu(lawId: number, test: number, dogru: number, toplam: number, tarih: string): Promise<void>;
   /** Tüm deneme sınavı sonuçlarını ekleme sırasıyla (eskiden yeniye) döndürür. */
   getSinavSonuclari(): Promise<SinavSonuc[]>;
   /** Kullanıcı ilerlemesini JSON snapshot olarak dışa aktarır (bulut senkron). */

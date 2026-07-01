@@ -273,6 +273,16 @@ class SqliteBackend implements Backend {
       version = 23;
     }
 
+    if (version < 24) {
+      // Deneme sınavı testlere bölündü (Test 1/2/3) → skor kaydına "test" (0 tabanlı) eklendi.
+      // TAMAMEN EKLEMELİ: ALTER ADD COLUMN (mevcut satırlar test=0). Kullanıcı verisi korunur.
+      // (Sütun zaten varsa ALTER hata verir → catch ile yut: idempotent.)
+      await db
+        .execAsync('ALTER TABLE sinav_sonuclari ADD COLUMN test INTEGER NOT NULL DEFAULT 0')
+        .catch(() => {});
+      version = 24;
+    }
+
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
     }
@@ -612,11 +622,18 @@ class SqliteBackend implements Backend {
     await this.db.execAsync('DELETE FROM sicil_kayitlari; DELETE FROM geri_bes_durum;');
   }
 
-  async ekleSinavSonucu(lawId: number, dogru: number, toplam: number, tarih: string): Promise<void> {
+  async ekleSinavSonucu(
+    lawId: number,
+    test: number,
+    dogru: number,
+    toplam: number,
+    tarih: string,
+  ): Promise<void> {
     if (!this.db) throw new Error('DB hazır değil');
     await this.db.runAsync(
-      'INSERT INTO sinav_sonuclari (law_id, dogru, toplam, tarih) VALUES (?, ?, ?, ?)',
+      'INSERT INTO sinav_sonuclari (law_id, test, dogru, toplam, tarih) VALUES (?, ?, ?, ?, ?)',
       lawId,
+      test,
       dogru,
       toplam,
       tarih,
@@ -626,7 +643,7 @@ class SqliteBackend implements Backend {
   async getSinavSonuclari(): Promise<SinavSonuc[]> {
     if (!this.db) throw new Error('DB hazır değil');
     return this.db.getAllAsync<SinavSonuc>(
-      'SELECT id, law_id, dogru, toplam, tarih FROM sinav_sonuclari ORDER BY id',
+      'SELECT id, law_id, test, dogru, toplam, tarih FROM sinav_sonuclari ORDER BY id',
     );
   }
 
@@ -669,7 +686,7 @@ class SqliteBackend implements Backend {
       for (const k of snapshot.sicil) await this.ekleSicilKaydi(k);
       await this.setGeriBesDurum(snapshot.geriBes);
       for (const s of snapshot.sinavlar) {
-        await this.ekleSinavSonucu(s.law_id, s.dogru, s.toplam, s.tarih);
+        await this.ekleSinavSonucu(s.law_id, s.test ?? 0, s.dogru, s.toplam, s.tarih);
       }
     }
   }
@@ -820,12 +837,13 @@ export async function sicilSifirla(): Promise<void> {
 /** Bir deneme sınavı sonucunu kalıcı kaydeder (Tatbikat skor geçmişi). */
 export async function ekleSinavSonucu(
   lawId: number,
+  test: number,
   dogru: number,
   toplam: number,
   tarih: string,
 ): Promise<void> {
   await initDatabase();
-  return backend.ekleSinavSonucu(lawId, dogru, toplam, tarih);
+  return backend.ekleSinavSonucu(lawId, test, dogru, toplam, tarih);
 }
 
 /** Tüm deneme sınavı sonuçlarını (eskiden yeniye) döndürür. */

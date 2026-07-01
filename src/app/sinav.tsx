@@ -13,10 +13,11 @@ import type { QueueCard } from '@/lib/queue';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import {
   eslesenKartIdleri,
-  getSinavSorulari,
+  getTestSorulari,
   type KartSoru,
   puanlaSinav,
   type SinavCevap,
+  testSayisi,
 } from '@/lib/sinav';
 import {
   sinavIlerlemeKaydet,
@@ -39,8 +40,9 @@ const YANLIS_KIRMIZI = Palette.kirmizi;
  */
 export default function SinavScreen() {
   const router = useRouter();
-  const { lawId } = useLocalSearchParams<{ lawId?: string }>();
+  const { lawId, test } = useLocalSearchParams<{ lawId?: string; test?: string }>();
   const lawIdNum = lawId != null && lawId !== '' ? Number(lawId) : null;
+  const testNum = test != null && test !== '' ? Number(test) : 0; // kanunun kaçıncı testi (0 tabanlı)
   const [sorular, setSorular] = useState<KartSoru[] | null>(null);
   const [lawAd, setLawAd] = useState<string | null>(null);
   const [hata, setHata] = useState(false);
@@ -80,14 +82,14 @@ export default function SinavScreen() {
       return;
     }
     void (async () => {
-      const kayit = await sinavIlerlemeOku(lawIdNum).catch(() => null);
+      const kayit = await sinavIlerlemeOku(lawIdNum, testNum).catch(() => null);
       if (kayit && kayit.sorular.length > 0) {
         // Devam: saklanan soru sırası + işaretler + konum.
         setSorular(kayit.sorular);
         setSecimler(kayit.secimler);
         setIndex(Math.min(kayit.index, kayit.sorular.length));
       } else {
-        const liste = getSinavSorulari(lawIdNum);
+        const liste = getTestSorulari(lawIdNum, testNum);
         if (liste.length === 0) {
           setBos(true);
           return;
@@ -98,18 +100,18 @@ export default function SinavScreen() {
       }
       kartlariYukle();
     })();
-  }, [lawIdNum, kartlariYukle]);
+  }, [lawIdNum, testNum, kartlariYukle]);
 
   // "Tekrar çöz" → kaydı sil + YENİ karıştırılmış sınav (baştan).
   const yenidenBasla = useCallback(() => {
     if (lawIdNum == null) return;
-    void sinavIlerlemeSil(lawIdNum);
-    const liste = getSinavSorulari(lawIdNum);
+    void sinavIlerlemeSil(lawIdNum, testNum);
+    const liste = getTestSorulari(lawIdNum, testNum);
     setSorular(liste);
     setSecimler(new Array(liste.length).fill(null));
     setIndex(0);
     kaydedildiRef.current = false;
-  }, [lawIdNum]);
+  }, [lawIdNum, testNum]);
 
   useEffect(() => {
     yukle();
@@ -171,25 +173,25 @@ export default function SinavScreen() {
   useEffect(() => {
     if (!bitti || !sorular || lawIdNum == null || kaydedildiRef.current) return;
     kaydedildiRef.current = true;
-    void sinavIlerlemeSil(lawIdNum); // sınav bitti → "devam" kaydı temizlenir
+    void sinavIlerlemeSil(lawIdNum, testNum); // sınav bitti → "devam" kaydı temizlenir
     const { dogru, toplam } = puanlaSinav(cevaplar, sorular);
     void (async () => {
       try {
-        await ekleSinavSonucu(lawIdNum, dogru, toplam, bugunISO());
+        await ekleSinavSonucu(lawIdNum, testNum, dogru, toplam, bugunISO());
         if (toplam > 0 && dogru === toplam) await degerlendirSicil();
       } catch {
         // sessiz geç (skor/ödül kaydı başarısızsa sonuç ekranı yine görünsün)
       }
     })();
-  }, [bitti, sorular, cevaplar, lawIdNum]);
+  }, [bitti, sorular, cevaplar, lawIdNum, testNum]);
 
   // Yarım sınavı kaydet → ekrandan çıkıp dönünce KALDIĞIN YERDEN devam. En az bir soru
   // cevaplanmışsa ve sınav bitmemişse sakla (bitince yukarıdaki efekt siler).
   useEffect(() => {
     if (lawIdNum == null || sorular === null || bitti) return;
     if (!secimler.some((s) => s !== null)) return; // hiç cevap yok → saklama
-    void sinavIlerlemeKaydet(lawIdNum, { sorular, secimler, index });
-  }, [secimler, index, bitti, sorular, lawIdNum]);
+    void sinavIlerlemeKaydet(lawIdNum, testNum, { sorular, secimler, index });
+  }, [secimler, index, bitti, sorular, lawIdNum, testNum]);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
@@ -202,6 +204,11 @@ export default function SinavScreen() {
           <AppText variant="govde" color="beyaz" bold>
             {aktif ? `Soru ${index + 1} / ${sorular!.length}` : 'Deneme Sınavı'}
           </AppText>
+          {lawIdNum != null && testSayisi(lawIdNum) > 1 ? (
+            <AppText variant="etiket" color="altinAcik2" bold>
+              TEST {testNum + 1} / {testSayisi(lawIdNum)}
+            </AppText>
+          ) : null}
         </View>
         <View style={styles.headerSpacer} />
       </View>

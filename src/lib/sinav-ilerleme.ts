@@ -10,6 +10,9 @@ import type { KartSoru } from '@/lib/sinav';
 
 const ONEK = 'jsps.sinav.ilerleme.';
 
+// Anahtar kanun+test bazlı (her testin yarım kalanı ayrı saklanır).
+const anahtar = (lawId: number, test: number) => `${ONEK}${lawId}.${test}`;
+
 export type SinavIlerleme = {
   /** O oturumdaki (karıştırılmış) soru sırası — devam ederken aynı sırayı korumak için. */
   sorular: KartSoru[];
@@ -19,9 +22,9 @@ export type SinavIlerleme = {
   index: number;
 };
 
-export async function sinavIlerlemeOku(lawId: number): Promise<SinavIlerleme | null> {
+export async function sinavIlerlemeOku(lawId: number, test: number): Promise<SinavIlerleme | null> {
   try {
-    const ham = await AsyncStorage.getItem(ONEK + lawId);
+    const ham = await AsyncStorage.getItem(anahtar(lawId, test));
     if (!ham) return null;
     const v = JSON.parse(ham) as SinavIlerleme;
     // Sağlamlık: bozuk/eksik kayıt ya da uzunluk uyuşmazlığı → yok say (baştan başlar).
@@ -33,17 +36,21 @@ export async function sinavIlerlemeOku(lawId: number): Promise<SinavIlerleme | n
   }
 }
 
-export async function sinavIlerlemeKaydet(lawId: number, v: SinavIlerleme): Promise<void> {
+export async function sinavIlerlemeKaydet(
+  lawId: number,
+  test: number,
+  v: SinavIlerleme,
+): Promise<void> {
   try {
-    await AsyncStorage.setItem(ONEK + lawId, JSON.stringify(v));
+    await AsyncStorage.setItem(anahtar(lawId, test), JSON.stringify(v));
   } catch {
     // sessiz: yarım-sınav kaydı kritik değil
   }
 }
 
-export async function sinavIlerlemeSil(lawId: number): Promise<void> {
+export async function sinavIlerlemeSil(lawId: number, test: number): Promise<void> {
   try {
-    await AsyncStorage.removeItem(ONEK + lawId);
+    await AsyncStorage.removeItem(anahtar(lawId, test));
   } catch {
     // sessiz
   }

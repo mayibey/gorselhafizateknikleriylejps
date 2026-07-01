@@ -16,6 +16,7 @@ import {
 } from '@/db/database';
 import { zayifKartlar } from '@/lib/performans';
 import { degerlendirGeriBes, type KanunDurum, odulDegerlendir, type YeniSicilKaydi } from '@/lib/sicil';
+import { testSayisi, testSoruSayisi } from '@/lib/sinav';
 import { bugunISO } from '@/lib/srs';
 
 export type SicilSonuc = { yeniKayitlar: YeniSicilKaydi[] };
@@ -38,10 +39,25 @@ export async function degerlendirSicil(): Promise<SicilSonuc> {
   await setGeriBesDurum(yeniDurum);
   if (ceza) yeniKayitlar.push(ceza);
 
-  // ÖDÜL — kanunun DENEME SINAVI %100 (dogru===toplam) geçilince → Takdir (başkan kararı V5).
-  const yuzdeYuz = new Set(
-    sinavlar.filter((s) => s.toplam > 0 && s.dogru === s.toplam).map((s) => s.law_id),
-  );
+  // ÖDÜL — kanunun TÜM testleri %100 geçilince → Takdir (test bazlı; başkan kararı: her testi
+  // %100 yapan kanunu bitirmiş sayılır). Bir test-kaydı "aced" = dogru===toplam VE toplam o testin
+  // gerçek soru sayısı (eski/bölme-öncesi kayıtlar bölünmüş kanunda sayılmaz → yeniden çözülür).
+  const acedTests = new Map<number, Set<number>>();
+  for (const s of sinavlar) {
+    if (s.toplam > 0 && s.dogru === s.toplam && s.toplam === testSoruSayisi(s.law_id, s.test)) {
+      let set = acedTests.get(s.law_id);
+      if (!set) {
+        set = new Set();
+        acedTests.set(s.law_id, set);
+      }
+      set.add(s.test);
+    }
+  }
+  const yuzdeYuz = new Set<number>();
+  for (const [lawId, set] of acedTests) {
+    const n = testSayisi(lawId);
+    if (n > 0 && set.size >= n) yuzdeYuz.add(lawId); // her testi aced → kanun tamam
+  }
   const adMap = new Map<number, string>();
   for (const c of allCards) if (!adMap.has(c.law_id)) adMap.set(c.law_id, c.law_ad);
   const kanunDurumlari: KanunDurum[] = [...adMap.entries()].map(([lawId, lawAd]) => ({
