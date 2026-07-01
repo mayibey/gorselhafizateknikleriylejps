@@ -7,6 +7,7 @@ import {
 } from '@expo-google-fonts/inter';
 import { PlayfairDisplay_700Bold } from '@expo-google-fonts/playfair-display';
 import { setAudioModeAsync } from 'expo-audio';
+import * as Linking from 'expo-linking';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
@@ -18,6 +19,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
+import { oauthUrlIsle } from '@/lib/auth';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { getAyar, planla } from '@/lib/bildirim';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
@@ -56,6 +58,19 @@ export default function RootLayout() {
   // İndirilmiş kanun listesini belleğe al → görsel çözümleyici yerel dosyaları görsün.
   useEffect(() => {
     void indirmeDurumYukle();
+  }, []);
+
+  // GOOGLE GİRİŞ DÖNÜŞÜ (deep-link): Android'de OAuth redirect app'e `mevzu://?code=...` deep-link
+  // olarak düşebilir (WebBrowser oturumu 'dismiss' döner). Burada yakalayıp code'u oturuma çeviririz
+  // → giriş tamamlanır (şifre-yenileme HARİÇ; o kendi ekranında). Soğuk açılış için getInitialURL.
+  useEffect(() => {
+    const sub = Linking.addEventListener('url', ({ url }) => {
+      void oauthUrlIsle(url);
+    });
+    void Linking.getInitialURL().then((url) => {
+      if (url) void oauthUrlIsle(url);
+    });
+    return () => sub.remove();
   }, []);
 
   // Ses ARKA PLANDA ÇALMASIN — app arka plana/ekran kapanınca anlatım dursun. Böylece

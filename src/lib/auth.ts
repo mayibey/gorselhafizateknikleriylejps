@@ -53,6 +53,39 @@ function paramAyikla(url: string): Record<string, string> {
   return out;
 }
 
+// OAuth code'u İKİ yoldan gelebilir: (1) WebBrowser.openAuthSessionAsync sonucu, (2) app'e
+// gelen deep-link (Android'de redirect app'e deep-link olarak düşüp openAuthSession 'dismiss'
+// dönebiliyor → o zaman oturum yalnız deep-link'ten kurulur). Aynı kod iki kez işlenmesin diye
+// dedup: işlenen kod set'i + tek-uçuş bayrağı (exchangeCodeForSession kodu bir kez tüketir).
+const islenenKodlar = new Set<string>();
+let kodIsleniyor = false;
+
+/** PKCE `code`'unu oturuma çevirir (dedup'lu). Oturum kurulduysa true. */
+export async function oturumKoduIsle(code: string): Promise<boolean> {
+  if (!supabaseHazir || !supabase) return false;
+  if (!code || kodIsleniyor || islenenKodlar.has(code)) return false;
+  kodIsleniyor = true;
+  try {
+    const { error } = await supabase.auth.exchangeCodeForSession(code);
+    if (error) throw error;
+    islenenKodlar.add(code);
+    return true; // onAuthStateChange(SIGNED_IN) tetiklenir → uygulama içeri girer
+  } finally {
+    kodIsleniyor = false;
+  }
+}
+
+/**
+ * Gelen bir deep-link URL'inde OAuth `code` varsa oturuma çevirir (şifre-yenileme HARİÇ — o kendi
+ * ekranında işlenir). _layout deep-link dinleyicisi bunu çağırır → giriş dönüşü kaçmaz.
+ */
+export async function oauthUrlIsle(url: string): Promise<boolean> {
+  if (!url || url.includes('sifre-yenile')) return false;
+  const params = paramAyikla(url);
+  if (!params.code) return false;
+  return oturumKoduIsle(params.code);
+}
+
 /** Gmail ile giriş. Başarılıysa oturum AsyncStorage'a yazılır (onAuthStateChange tetiklenir). */
 export async function gmailIleGiris(): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
@@ -69,10 +102,10 @@ export async function gmailIleGiris(): Promise<void> {
   if (!data?.url) throw new Error('Giriş bağlantısı alınamadı.');
 
   const sonuc = await WebBrowser.openAuthSessionAsync(data.url, redirectTo);
-  if (sonuc.type !== 'success' || !sonuc.url) {
-    // Kullanıcı vazgeçti / iptal → sessiz dön (hata değil).
-    return;
-  }
+  // Android'de redirect app'e DEEP-LINK olarak düşebilir → openAuthSession 'dismiss'/'cancel'
+  // döner ama oturum _layout deep-link dinleyicisi (oauthUrlIsle) ile kurulur. O yüzden burada
+  // 'success' değilse SESSİZ dön (hata fırlatma) — dinleyici işi bitirir.
+  if (sonuc.type !== 'success' || !sonuc.url) return;
 
   // Supabase dönüşü `?code=...#` formatında gelir (code query'de, sonda boş fragment).
   const params = paramAyikla(sonuc.url);
@@ -80,17 +113,15 @@ export async function gmailIleGiris(): Promise<void> {
     throw new Error(`OAuth hata: ${params.error_description ?? params.error}`);
   }
   if (params.code) {
-    const { error: cErr } = await supabase.auth.exchangeCodeForSession(params.code);
-    if (cErr) throw cErr;
+    await oturumKoduIsle(params.code); // dedup'lu (deep-link ile yarışırsa çift işlenmez)
   } else if (params.access_token && params.refresh_token) {
     const { error: sErr } = await supabase.auth.setSession({
       access_token: params.access_token,
       refresh_token: params.refresh_token,
     });
     if (sErr) throw sErr;
-  } else {
-    throw new Error('Giriş tamamlanamadı (oturum belirteci alınamadı).');
   }
+  // code de token da yoksa: oturum deep-link dinleyicisinden gelebilir → sessiz geç.
 }
 
 // --- E-posta/şifre ile giriş (Google'a alternatif) ---
