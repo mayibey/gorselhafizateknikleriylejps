@@ -48,6 +48,17 @@ export async function sinavIlerlemeKaydet(
   }
 }
 
+/** TÜM yarım sınav kayıtlarını siler (hesap değişiminde — önceki kullanıcının yarımı sızmasın). */
+export async function sinavIlerlemeTumunuSil(): Promise<void> {
+  try {
+    const hepsi = await AsyncStorage.getAllKeys();
+    const bizim = hepsi.filter((k) => k.startsWith(ONEK));
+    if (bizim.length > 0) await AsyncStorage.multiRemove(bizim);
+  } catch {
+    // sessiz geç
+  }
+}
+
 export async function sinavIlerlemeSil(lawId: number, test: number): Promise<void> {
   try {
     await AsyncStorage.removeItem(anahtar(lawId, test));

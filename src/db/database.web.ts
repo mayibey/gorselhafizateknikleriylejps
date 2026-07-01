@@ -253,6 +253,18 @@ class MemoryBackend implements Backend {
       }
     }
   }
+
+  async ilerlemeSifirla(): Promise<void> {
+    // YALNIZ kullanıcı ilerlemesi — referans veri (laws/cards/branches) korunur (native parite).
+    this.srs.clear();
+    this.studyDays.clear();
+    this.performans = [];
+    this.sicil = [];
+    this.sicilSayac = 0;
+    this.geriBes = { acik: false, acilis: null, sonTarih: null, kademe: 0 };
+    this.sinavSonuclari = [];
+    this.sinavSayac = 0;
+  }
 }
 
 const backend: Backend = new MemoryBackend();
@@ -423,4 +435,10 @@ export async function ilerlemeDisaAktar(): Promise<IlerlemeSnapshot> {
 export async function ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void> {
   await initDatabase();
   return backend.ilerlemeIceAktar(snapshot, tamYukle);
+}
+
+/** TÜM kullanıcı ilerlemesini siler — YALNIZ hesap değişiminde (bkz. lib/senkron). */
+export async function ilerlemeSifirla(): Promise<void> {
+  await initDatabase();
+  return backend.ilerlemeSifirla();
 }

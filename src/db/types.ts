@@ -69,6 +69,10 @@ export interface Backend {
   ilerlemeDisaAktar(): Promise<IlerlemeSnapshot>;
   /** Snapshot'ı yerele birleştirir: SRS max(kutu) (asla geri gitmez); tamYukle=true → log/sicil/sınav da. */
   ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void>;
+  /** TÜM kullanıcı ilerlemesini siler (srs/günler/performans/sicil/geri-bes/sınav).
+   *  YALNIZ hesap değişiminde çağrılır — önceki kullanıcının ilerlemesi yeni hesaba bulaşmasın.
+   *  Referans veri (laws/cards/branches) SİLİNMEZ. */
+  ilerlemeSifirla(): Promise<void>;
 }
 
 /** Public API'nin (initDatabase/getStudyCards/recordReview) ortak tip imzaları. */

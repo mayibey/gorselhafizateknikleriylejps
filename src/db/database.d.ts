@@ -50,3 +50,4 @@ export function ekleSinavSonucu(
 export function getSinavSonuclari(): Promise<SinavSonuc[]>;
 export function ilerlemeDisaAktar(): Promise<IlerlemeSnapshot>;
 export function ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void>;
+export function ilerlemeSifirla(): Promise<void>;

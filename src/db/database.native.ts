@@ -690,6 +690,15 @@ class SqliteBackend implements Backend {
       }
     }
   }
+
+  async ilerlemeSifirla(): Promise<void> {
+    if (!this.db) throw new Error('DB hazır değil');
+    // YALNIZ kullanıcı ilerlemesi — referans veri (laws/cards/branches/bolumler) korunur.
+    await this.db.execAsync(
+      'DELETE FROM srs; DELETE FROM study_days; DELETE FROM kart_performans; ' +
+        'DELETE FROM sicil_kayitlari; DELETE FROM geri_bes_durum; DELETE FROM sinav_sonuclari;',
+    );
+  }
 }
 
 const backend: Backend = new SqliteBackend();
@@ -860,4 +869,10 @@ export async function ilerlemeDisaAktar(): Promise<IlerlemeSnapshot> {
 export async function ilerlemeIceAktar(snapshot: IlerlemeSnapshot, tamYukle: boolean): Promise<void> {
   await initDatabase();
   return backend.ilerlemeIceAktar(snapshot, tamYukle);
+}
+
+/** TÜM kullanıcı ilerlemesini siler — YALNIZ hesap değişiminde (bkz. lib/senkron). */
+export async function ilerlemeSifirla(): Promise<void> {
+  await initDatabase();
+  return backend.ilerlemeSifirla();
 }
