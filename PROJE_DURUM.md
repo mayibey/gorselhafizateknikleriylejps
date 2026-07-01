@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 1 Temmuz 2026
 >
+> ### ▶ 1 Tem — KİLİTSİZ FİNAL AAB vCode 9 ÜRETİLDİ (47MB) + build Metaspace OOM fix (özet)
+> `bash scripts/build-aab.sh` → **ilk deneme battı:** `react-native-screens compileReleaseKotlin` → `OutOfMemoryError: Metaspace` (Kotlin in-process → tüm modül sınıf metaverisi daemon metaspace'inde birikir; `withYerelBuild.js` metaspace **512m** dardı, heap 5120m yeterliydi). **Fix:** metaspace 512m→**1024m** (kalıcı, plugin'de). **İkinci deneme BAŞARILI (4m18s):** AAB `android/app/build/outputs/bundle/release/app-release.aab` **47MB** → `D:\buildler\mevzu-vCode9.aab` kopyalandı. Kilitsiz (KILIT_AKTIF=false), vCode 9. **KALAN (kullanıcı):** (1) Play Console'a vCode 9 AAB'yi yükle (kapalı test) (2) testerlar uygulamayı SİLİP yeniden kursun (tam sıfırdan) + Supabase Auth'tan eski test kullanıcıları sil (cascade: profil/ilerleme/geri-bildirim/üyelik) → sıfırdan test.
+>
 > ### ▶ 1 Tem — KİLİTSİZ FİNAL BUILD hazırlığı (KILIT_AKTIF=false, vCode 9) (özet)
 > Başkan kararı: kilitsiz final sürüm bas → testerlar son testleri yapsın → SONRA kilit + yayın. **`KILIT_AKTIF = true → false`** (tek şalter; `kanunErisilebilir` hep true → hiçbir içerik kilitlenmez, testerlar her şeye erişir; paywall ekranı yalnız Ayarlar'dan bilgi amaçlı erişilir, hiçbir yeri zorlamaz — gating boşlukları da şalter kapalı olduğu için önemsiz). **app.json versionCode 8 → 9** (Play daha yüksek ister; vCode 8 kullanıldı). AAB: `bash scripts/build-aab.sh` (strip→prebuild--clean→gradle bundleRelease). tsc 0. **KİLİDİ AÇMAK İÇİN (yayın öncesi):** `KILIT_AKTIF=true` + gating boşluklarını tamamla (arama→indir-aç→/akis ve /akis doğrudan premium kilidini kontrol etmiyor) + GOOGLE_SA + dogrula-satinalma deploy + gerçek cihaz satın-alma testi.
 >
