@@ -138,6 +138,7 @@ function RootNavigator() {
         <Stack.Screen name="patika" />
         <Stack.Screen name="geri-bildirim" />
         <Stack.Screen name="egitim-plani" />
+        <Stack.Screen name="paywall" />
         <Stack.Screen name="yasal" />
         <Stack.Screen name="ayarlar" />
         <Stack.Screen name="onboarding" />

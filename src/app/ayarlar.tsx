@@ -64,6 +64,11 @@ export default function AyarlarScreen() {
         UYGULAMA
       </AppText>
       <Satir
+        ikon="star-circle-outline"
+        etiket="Premium / Abonelik"
+        onPress={() => router.push('/paywall')}
+      />
+      <Satir
         ikon="bell-outline"
         etiket="Eğitim Planı (Bildirimler)"
         onPress={() => router.push('/egitim-plani')}
