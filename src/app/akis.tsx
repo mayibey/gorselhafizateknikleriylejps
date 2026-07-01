@@ -16,8 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
 import { gorselOnCoz } from '@/lib/gorsel-coz';
-import { ICERIK_TABANI } from '@/constants/config';
-import { gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
+import { calisilabilirZayif, gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { sesVarMi } from '@/lib/ses-kaynak';
 import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
 import { SesOynatici } from '@/components/card-flow/ses-oynatici';
@@ -105,9 +104,10 @@ export default function AkisScreen() {
   const [modalAcik, setModalAcik] = useState(false);
   const [bugunSorma, setBugunSorma] = useState(false);
 
-  // Görsel ekranda görünene (yüklenene/hata) kadar "Öğrendim" basılamaz → görmeden
-  // öğrendim işaretlenmesin. Kart değişince sıfırlanır; StudyCard onGorundu ile true olur.
+  // Görsel ekranda görünene (yüklenene/hata) kadar "Öğrendim"/ses/madde/swipe KİLİTLİ → görmeden
+  // işaretlenmesin. Kart değişince (aşağıda render anında) sıfırlanır; StudyCard onGorundu ile true.
   const [gorselGorundu, setGorselGorundu] = useState(false);
+  const [gorunenKartId, setGorunenKartId] = useState<number | null>(null);
 
   // Madde uzunluğunu (sığmıyor mu) içerik vs görünür yükseklikten hesapla.
   const maddeUzunHesapla = useCallback(() => {
@@ -123,7 +123,6 @@ export default function AkisScreen() {
     maddeOfsetRef.current = 0;
     maddeScrollRef.current?.scrollTo({ y: 0, animated: false });
     setOran(null); // yeni kartın oranı onLoad ile gelene kadar fallback
-    setGorselGorundu(false); // yeni görsel görünene kadar Öğrendim kilitli
     setModalAcik(false); // yeni kartta modal kapalı (anlatimBitti zaten sıfırlanıyor)
     setBugunSorma(false);
     // PRELOAD: mevcut + komşu ŞİFRELİ kartları arkada önden çöz → açılış beklemesi gizlenir.
@@ -165,11 +164,9 @@ export default function AkisScreen() {
           : gunlukSinirli();
     void p
       .then((q) => {
-        // ZAYIF (geri-besleme): sunucu modunda (ICERIK_TABANI dolu) SADECE indirilmiş kanunların
-        // kartlarını göster — indirilmemiş kart görsel/ses çekemiyordu (bozuk/boş görünüyordu).
-        // İndirilmemişler gizlenir; kullanıcı o kanunu indirince geri-beslemede yine görünür.
-        const liste =
-          zayifModu && ICERIK_TABANI ? q.filter((c) => indirilmisGorsel(c.gorsel_yolu) !== null) : q;
+        // ZAYIF (geri-besleme): yalnız İNDİRİLMİŞ kanun kartları (indirilmemiş kart görsel/ses
+        // çekemeyip bozuk görünüyordu). Karargah sayacıyla AYNI yardımcı → sayı tutarlı.
+        const liste = zayifModu ? calisilabilirZayif(q) : q;
         setQueue(liste);
         // Arama sonucundan gelindiyse eşleşen karta atla (yoksa baştan).
         if (kart) {
@@ -236,6 +233,13 @@ export default function AkisScreen() {
     : `Bugün ${cozulen.tekrar} tekrar · ${cozulen.yeni} yeni kart çalıştın.`;
 
   const c = aktif ? queue![index] : null;
+  // Kart değişince görsel-görünme kilidini RENDER ANINDA sıfırla (useEffect render'dan SONRA
+  // çalıştığı için bir kare önceki kartın 'true'su taşınıp butonlar erken açılabiliyordu).
+  // React "önceki state'i render'da ayarla" deseni → yeni kartta görsel yüklenene kadar KESİN kilit.
+  if (c && c.id !== gorunenKartId) {
+    setGorunenKartId(c.id);
+    if (gorselGorundu) setGorselGorundu(false);
+  }
   const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
   // Kartın GERÇEK ses dosyası (mp3) var mı → varsa TtsBar (robotik TTS) yerine SesOynatici.

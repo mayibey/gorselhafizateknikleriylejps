@@ -19,6 +19,7 @@ import {
   getZayifKuyruk,
 } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
+import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -118,8 +119,9 @@ export default function KarargahScreen() {
     setHata(false);
     // Etüt = ZAYIF HAVUZ (tekrar-hatırlat + denemede yanlış). Due/Leitner DEĞİL → "zayıf
     // var ama Etüt boş" sorunu biter.
+    // Akıştaki zayıf kuyruğuyla AYNI filtre (indirilmiş kanunlar) → sayaç tutarlı (63 vs 60 biter).
     void getZayifKuyruk()
-      .then(setQueue)
+      .then((q) => setQueue(calisilabilirZayif(q)))
       .catch(() => setHata(true));
     void Promise.all([getStudyCards(), getCardCount()])
       .then(([studied, toplam]) => {

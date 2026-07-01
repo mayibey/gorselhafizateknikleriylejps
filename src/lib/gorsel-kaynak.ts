@@ -33,3 +33,14 @@ export function gorselKaynak(key?: string | null): GorselKaynak | undefined {
 export function gorselVarMi(key?: string | null): boolean {
   return !!indirilmisGorsel(key) || gorselKaynak(key) !== undefined;
 }
+
+/**
+ * Zayıf havuzu ÇALIŞILABİLİR kartlara indirger: sunucu modunda (ICERIK_TABANI dolu) yalnız
+ * İNDİRİLMİŞ kanun kartları kalır (indirilmemişler görsel/ses çekemeyip bozuk görünüyordu).
+ * ICERIK_TABANI boşsa (gömülü/dev) dokunmaz. TEK KAYNAK → Karargah sayacı ile akış kuyruğu
+ * AYNI sayıyı gösterir (63 vs 60 tutarsızlığı biter).
+ */
+export function calisilabilirZayif<T extends { gorsel_yolu: string | null }>(kartlar: T[]): T[] {
+  if (!ICERIK_TABANI) return kartlar;
+  return kartlar.filter((c) => indirilmisGorsel(c.gorsel_yolu) !== null);
+}
