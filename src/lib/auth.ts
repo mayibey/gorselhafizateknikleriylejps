@@ -6,11 +6,17 @@
  * native modül YOK → Expo Go'da test edilebilir. Supabase yapılandırılmadıysa
  * (supabaseHazir=false) fonksiyonlar `KapaliHata` fırlatır; UI bunu "yakında" gösterir.
  */
-import { makeRedirectUri } from 'expo-auth-session';
 import { Platform } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 
 import { supabase, supabaseHazir } from '@/lib/supabase';
+
+// OAuth/kurtarma dönüş adresi SABİT (makeRedirectUri DEĞİL): uygulamada expo-dev-client kurulu
+// olduğu için makeRedirectUri bazı yapılarda geliştirici-şeması (exp+...) üretip Supabase
+// allowlist'iyle (mevzu://) eşleşmiyor → Supabase web Site URL'ine düşüyor ("beyaz ekran",
+// giriş kurulamıyor). Sabit `mevzu://` → allowlist'le BİREBİR → dönüş app'e gelir.
+const DONUS_ADRESI = 'mevzu://';
+const DONUS_SIFRE_YENILE = 'mevzu://sifre-yenile';
 
 // Tarayıcı oturumu sonrası askıda kalanı temizler (Expo gereği). Yalnız üyelik AÇIKKEN
 // ve SSR olmayan ortamda çağrılır (v1'de gereksiz native çağrı + "window yok" çökmesi yok).
@@ -27,7 +33,7 @@ export class KapaliHata extends Error {
 
 /** OAuth dönüş adresi (Supabase Redirect URLs'e EKLENMESİ gereken adres). Teşhis için. */
 export function girisDonusAdresi(): string {
-  return makeRedirectUri({ scheme: 'mevzu' });
+  return DONUS_ADRESI;
 }
 
 /** URL'deki query (?...) VE fragment (#...) parametrelerini ayrıştırır.
@@ -90,9 +96,7 @@ export async function oauthUrlIsle(url: string): Promise<boolean> {
 export async function gmailIleGiris(): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
 
-  // OAuth dönüş adresi: gerçek build'de `mevzu://`, Expo Go'da `exp://<ip>:<port>`.
-  // Çalışma anında (her zaman istemci tarafı) üretilir → SSR'de değerlendirilmez.
-  const redirectTo = makeRedirectUri({ scheme: 'mevzu' });
+  const redirectTo = DONUS_ADRESI; // sabit mevzu:// (allowlist'le birebir)
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
@@ -152,7 +156,7 @@ export async function epostaKayit(
 export async function sifreSifirla(eposta: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
   const { error } = await supabase.auth.resetPasswordForEmail(eposta.trim(), {
-    redirectTo: makeRedirectUri({ scheme: 'mevzu', path: 'sifre-yenile' }),
+    redirectTo: DONUS_SIFRE_YENILE,
   });
   if (error) throw error;
 }
