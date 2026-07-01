@@ -282,6 +282,17 @@ function SicilBolum({
     );
   }
   const { kayitlar, durum } = sicil;
+  // Emri yerine getirmek için KALAN SÜRE (gün) + süre dolunca gelecek ceza kademesi.
+  const kalanGun = durum.sonTarih
+    ? Math.max(
+        0,
+        Math.round(
+          (Date.parse(`${durum.sonTarih}T00:00:00Z`) - Date.parse(`${bugunISO()}T00:00:00Z`)) /
+            86400000,
+        ),
+      )
+    : 0;
+  const siradakiCeza = KADEME_AD[Math.min(durum.kademe + 1, KADEME_AD.length - 1)];
   return (
     <>
       {durum.acik ? (
@@ -292,9 +303,28 @@ function SicilBolum({
               GERİ BESLEME EĞİTİM EMRİ
             </AppText>
           </View>
+
+          {/* Kalan süre — vurgulu geri sayım (motive + ceza uyarısı). */}
+          <View style={styles.emirSure}>
+            <MaterialCommunityIcons
+              name={kalanGun === 0 ? 'alarm-light-outline' : 'timer-sand'}
+              size={16}
+              color={Palette.beyaz}
+            />
+            <AppText variant="kucuk" color="beyaz" bold>
+              {kalanGun === 0
+                ? 'Süren bugün doluyor — SON GÜN!'
+                : `Görevi tamamlamak için ${kalanGun} gün kaldı`}
+            </AppText>
+          </View>
+
           <AppText variant="etiket" color="beyaz">
-            Son tarih {tarihFmt(durum.sonTarih ?? '')} — {zayifSayisi} zayıf mevzini bu süre içinde
-            kapat.{durum.kademe > 0 ? ` (Sicil kademesi: ${KADEME_AD[durum.kademe]})` : ''}
+            Bu süre içinde {zayifSayisi} zayıf mevzini kapatmazsan{' '}
+            <AppText variant="etiket" color="beyaz" bold>
+              {siradakiCeza}
+            </AppText>{' '}
+            cezası alırsın. (Son tarih: {tarihFmt(durum.sonTarih ?? '')})
+            {durum.kademe > 0 ? ` — Şu anki kademe: ${KADEME_AD[durum.kademe]}` : ''}
           </AppText>
           <Pressable
             style={({ pressed }) => [styles.emirButon, pressed && styles.pressed]}
@@ -592,6 +622,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
+  },
+  emirSure: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: 'rgba(255,255,255,0.18)',
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.one,
+    alignSelf: 'flex-start',
   },
   emirButon: {
     alignSelf: 'flex-start',
