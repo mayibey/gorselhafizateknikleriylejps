@@ -139,7 +139,13 @@ export default function KarargahScreen() {
     // Günün Maddesi + bugün çalışılan + zayıf mevzi + SON KONU — tek performans+kart yüklemesinden.
     void Promise.all([getPerformans(), getAllCards()])
       .then(([perf, cards]) => {
-        const adaylar = cards.filter((c) => !/^Madde\s/i.test(c.baslik));
+        // Günün Maddesi adayları: YALNIZ normal tek-madde kartları. Özet/ayırt/genel-özet
+        // birleşik kartları (anahtar deseni _ozet_/_ayirt_) ham anahtar sızdırıyordu
+        // ("Özet — ...ayirt") → ele. Başlığı "Madde X" olan yer-tutucular da hariç.
+        const ozetAyirtMi = (yol: string | null) => !!yol && /_(ayirt|ozet)(_|$)/i.test(yol);
+        const adaylar = cards.filter(
+          (c) => !ozetAyirtMi(c.gorsel_yolu) && !/^Madde\s/i.test(c.baslik),
+        );
         if (adaylar.length > 0) {
           const gun = Number(bugunISO().split('-').join('')) || 0;
           setGunMadde(adaylar[gun % adaylar.length]);
@@ -414,7 +420,11 @@ export default function KarargahScreen() {
         <Pressable
           style={({ pressed }) => [styles.card, pressed && styles.pressed]}
           onPress={() =>
-            router.push({ pathname: '/patika', params: { lawId: String(gunMadde.law_id) } })
+            // Tüm yönetmeliği/patikayı madde 1'den açmak yerine DOĞRUDAN o maddenin kartını aç.
+            router.push({
+              pathname: '/akis',
+              params: { lawId: String(gunMadde.law_id), kart: String(gunMadde.id) },
+            })
           }>
           <AppText variant="etiket" color="solukMetin" bold>
             GÜNÜN MADDESİ

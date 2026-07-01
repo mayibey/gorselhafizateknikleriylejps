@@ -29,6 +29,7 @@ import {
 } from '@/db/database';
 import type { Bolum } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
+import { hecele } from '@/lib/hece';
 import { bolumIlerleme } from '@/lib/patika';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaStreak } from '@/lib/stats';
@@ -287,8 +288,8 @@ export default function PatikaScreen() {
       {/* Kanun özet kartı — kitap + ad + gerçek kart ilerlemesi (kart bazlı) */}
       <View style={st.kanunKart}>
         <MaterialCommunityIcons name="book-open-variant" size={22} color={Palette.altin} />
-        <AppText variant="govde" color="anaMetin" numberOfLines={1} style={st.seritAd}>
-          {kanunAd ?? 'Mevzuat'}
+        <AppText variant="govde" color="anaMetin" numberOfLines={2} style={st.seritAd}>
+          {hecele(kanunAd ?? 'Mevzuat')}
         </AppText>
         {!bolumsuz && dugumler !== null ? (
           <AppText variant="kucuk" bold color="altinMetin">
