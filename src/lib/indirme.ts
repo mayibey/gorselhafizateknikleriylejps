@@ -10,6 +10,7 @@
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as FileSystem from 'expo-file-system/legacy';
+import { AppState } from 'react-native';
 
 import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
 import { KART_SES_YOLLARI } from '../assets/kart-sesleri';
@@ -27,6 +28,55 @@ const DURUM_ANAHTAR = 'jsps.indirilen.kanunlar';
 // Modül-içi önbellek: indirilmiş kanun klasörleri (ör. "tck"). Çözümleyici bunu senkron okur.
 let indirilmis = new Set<string>();
 let yuklendi = false;
+
+const bekle = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+
+/**
+ * Ön plana dönene kadar bekle. Uygulama arka plandayken ağ istekleri OS tarafından kesilir;
+ * bunu "hata" saymak yerine ön planı bekleyip devam ederiz → indirme İPTAL olmaz, DURAKLAR.
+ * (Ön plan servisi izni almadığımız için gerçek arka-plan indirmesi yok; duraklat-devam et modeli.)
+ */
+function onPlanBekle(): Promise<void> {
+  if (AppState.currentState === 'active') return Promise.resolve();
+  return new Promise<void>((resolve) => {
+    const sub = AppState.addEventListener('change', (s) => {
+      if (s === 'active') {
+        sub.remove();
+        resolve();
+      }
+    });
+  });
+}
+
+// ---- İndirme durumu yöneticisi (modül-içi, reaktif) ----
+// State ekran hafızasında değil BURADA tutulur → başka sekmeye geçip dönünce / arka plandan
+// gelince yüzde kaybolmaz; iki bileşen aynı indirmeyi çift başlatmaz (tek uçuş).
+export type AktifIndirme = { yuzde: number; iniyor: boolean };
+const aktif = new Map<string, AktifIndirme>();
+const promiseler = new Map<string, Promise<void>>();
+const dinleyiciler = new Map<string, Set<() => void>>();
+
+function bildir(klasor: string) {
+  dinleyiciler.get(klasor)?.forEach((fn) => fn());
+}
+
+/** Bir kanunun anlık indirme durumu (yüzde + iniyor mu). Yoksa undefined. */
+export function indirmeDurumuAl(klasor: string): AktifIndirme | undefined {
+  return aktif.get(klasor);
+}
+
+/** Bir kanunun indirme durumundaki değişimleri dinle (abonelik). Geri dönen fn ile çöz. */
+export function indirmeDinle(klasor: string, fn: () => void): () => void {
+  let s = dinleyiciler.get(klasor);
+  if (!s) {
+    s = new Set();
+    dinleyiciler.set(klasor, s);
+  }
+  s.add(fn);
+  return () => {
+    s?.delete(fn);
+  };
+}
 
 /** Uygulama açılışında bir kez çağır → indirilmiş kanun listesini belleğe al. */
 export async function indirmeDurumYukle(): Promise<void> {
@@ -130,13 +180,23 @@ export async function kanunIndir(
     }
   };
 
-  // 3 deneme (sunucu filigranı soğuk başlayınca tek tük hata/timeout olabiliyor).
+  // Dayanıklı indirme: ön planı bekle → indir. Hata OLURSA ve bu sırada uygulama arka plandaysa
+  // (OS ağı kesmiştir) bunu BAŞARISIZLIK SAYMA → ön planı bekleyip yeniden dene (duraklat-devam).
+  // Yalnız uygulama ÖN PLANDAYKEN oluşan hatalar sayılır (gerçek ağ hatası) → 3 denemede pes eder.
+  // Yeniden denemeden önce bozuk/yarım kalmış dosyayı sil (temiz iner).
   const indirTekRetry = async (tip: 'gorsel' | 'ses', yol: string) => {
-    for (let d = 0; ; d++) {
+    const hedef = KOK + yol;
+    let d = 0;
+    for (;;) {
+      await onPlanBekle();
       try {
         return await indirTek(tip, yol);
       } catch (e) {
-        if (d >= 2) throw e;
+        await FileSystem.deleteAsync(hedef, { idempotent: true }).catch(() => {});
+        // Arka plana geçtiği için düştüyse: sayma, ön planı bekleyip tekrar dene.
+        if (AppState.currentState !== 'active') continue;
+        if (d++ >= 2) throw e;
+        await bekle(600 * d);
       }
     }
   };
@@ -161,6 +221,35 @@ export async function kanunIndir(
 
   indirilmis.add(klasor);
   await durumKaydet();
+}
+
+/**
+ * İndirmeyi TEK UÇUŞ başlat/sürdür — durum yöneticisini besler (yüzde + iniyor).
+ * Aynı kanun için zaten iniyorsa mevcut promise'i döndürür (çift indirme yok). UI bunu çağırır.
+ */
+export function kanunIndirBaslat(klasor: string): Promise<void> {
+  const mevcut = promiseler.get(klasor);
+  if (mevcut) return mevcut;
+  aktif.set(klasor, { yuzde: aktif.get(klasor)?.yuzde ?? 0, iniyor: true });
+  bildir(klasor);
+  const p = kanunIndir(klasor, (pr) => {
+    aktif.set(klasor, { yuzde: pr.yuzde, iniyor: true });
+    bildir(klasor);
+  }).then(
+    () => {
+      aktif.set(klasor, { yuzde: 100, iniyor: false });
+      promiseler.delete(klasor);
+      bildir(klasor);
+    },
+    (e) => {
+      aktif.delete(klasor);
+      promiseler.delete(klasor);
+      bildir(klasor);
+      throw e;
+    },
+  );
+  promiseler.set(klasor, p);
+  return p;
 }
 
 /** İndirilen kanunu cihazdan sil. */

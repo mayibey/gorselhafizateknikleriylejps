@@ -2,28 +2,57 @@
  * Bir kanunun indirme durumu — satır (gate) + buton AYNI state'i paylaşsın diye tek hook.
  * (kanunIndirilmisMi modül-içi Set; reaktif değil → indirince satır güncellensin diye state burada.)
  */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Alert } from 'react-native';
 
-import { kanunIndir, kanunIndirilmisMi, kanunSil } from '@/lib/indirme';
+import {
+  indirmeDinle,
+  indirmeDurumuAl,
+  kanunIndirBaslat,
+  kanunIndirilmisMi,
+  kanunSil,
+} from '@/lib/indirme';
 
 export type IndirmeDurum = 'yok' | 'iniyor' | 'indirildi';
 
 export function useKanunIndirme(klasor: string) {
-  const [durum, setDurum] = useState<IndirmeDurum>(() =>
-    klasor && kanunIndirilmisMi(klasor) ? 'indirildi' : 'yok',
-  );
-  const [yuzde, setYuzde] = useState(0);
+  const [durum, setDurum] = useState<IndirmeDurum>(() => {
+    if (klasor && kanunIndirilmisMi(klasor)) return 'indirildi';
+    if (klasor && indirmeDurumuAl(klasor)?.iniyor) return 'iniyor';
+    return 'yok';
+  });
+  const [yuzde, setYuzde] = useState(() => (klasor ? (indirmeDurumuAl(klasor)?.yuzde ?? 0) : 0));
+
+  // Durum yöneticisini dinle → başka sekmeden dönünce / arka plandan gelince yüzde & durum
+  // ekranda kayıtlı kalır (state artık modülde, bileşende değil).
+  useEffect(() => {
+    if (!klasor) return;
+    const d = indirmeDurumuAl(klasor);
+    if (d) {
+      setYuzde(d.yuzde);
+      setDurum(d.iniyor ? 'iniyor' : 'indirildi');
+    } else if (kanunIndirilmisMi(klasor)) {
+      setDurum('indirildi');
+    }
+    return indirmeDinle(klasor, () => {
+      const s = indirmeDurumuAl(klasor);
+      if (s) {
+        setYuzde(s.yuzde);
+        setDurum(s.iniyor ? 'iniyor' : 'indirildi');
+      } else {
+        setDurum(kanunIndirilmisMi(klasor) ? 'indirildi' : 'yok');
+      }
+    });
+  }, [klasor]);
 
   async function indir() {
     if (!klasor) return;
     setDurum('iniyor');
-    setYuzde(0);
     try {
-      await kanunIndir(klasor, (p) => setYuzde(p.yuzde));
+      await kanunIndirBaslat(klasor);
       setDurum('indirildi');
     } catch (e) {
-      setDurum('yok');
+      setDurum(kanunIndirilmisMi(klasor) ? 'indirildi' : 'yok');
       Alert.alert('İndirilemedi', e instanceof Error ? e.message : 'Bağlantını kontrol et, tekrar dene.');
     }
   }
