@@ -1,7 +1,17 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Alert, FlatList, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  ActivityIndicator,
+  Alert,
+  FlatList,
+  Modal,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  TextInput,
+  View,
+} from 'react-native';
 
 // Seslendirme metni registry'si ('@/assets' alias gerçek assets/'a gittiği için göreli).
 import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
@@ -16,7 +26,13 @@ import { maddeMetni } from '@/db/madde-metinleri';
 import type { CardWithLaw, LawWithCount } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
 import { araIndeksHazirla, araKanunlar, trKucuk, type AraKapsam, type AramaSonuc } from '@/lib/ara';
-import { indirmeDestekli, kanunIndirilmisMi } from '@/lib/indirme';
+import {
+  indirmeDestekli,
+  indirmeDinle,
+  indirmeDurumuAl,
+  kanunIndirBaslat,
+  kanunIndirilmisMi,
+} from '@/lib/indirme';
 import { useBrans } from '@/lib/brans-context';
 import { getSonAramalar, sonAramaEkle, sonAramalariTemizle } from '@/lib/son-aramalar';
 
@@ -53,6 +69,12 @@ export default function AraScreen() {
   const [laws, setLaws] = useState<LawWithCount[]>([]);
   const [sonAramalar, setSonAramalar] = useState<string[]>([]);
   const [hata, setHata] = useState(false);
+  // İndirilmemiş kanunun sonucuna basınca: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
+  const [indirModal, setIndirModal] = useState<AramaSonuc | null>(null);
+  const [indirYuzde, setIndirYuzde] = useState(0);
+  const [indirDurum, setIndirDurum] = useState<'iniyor' | 'hata'>('iniyor');
+  // Bitince OTOMATİK karta gidilecek mi (kullanıcı "arka planda indir" derse iptal → gitme).
+  const acilacakRef = useRef<AramaSonuc | null>(null);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -93,26 +115,67 @@ export default function AraScreen() {
     return () => clearTimeout(t);
   }, [sorgu]);
 
+  // İndirme modalı açıkken yüzdeyi durum yöneticisinden dinle (arka planda ilerledikçe güncellensin).
+  useEffect(() => {
+    if (!indirModal) return;
+    const klasor = LAW_KLASOR[indirModal.lawId];
+    if (!klasor) return;
+    const guncelle = () => setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
+    guncelle();
+    return indirmeDinle(klasor, guncelle);
+  }, [indirModal]);
+
   function degis(t: string) {
     sonSorgu = t;
     setSorgu(t);
   }
 
+  function kartaGit(s: AramaSonuc) {
+    router.push({ pathname: '/akis', params: { lawId: String(s.lawId), kart: String(s.cardId) } });
+  }
+
+  // İndir + biter bitmez aranan KARTA git (Mevzuat'a atma yok → kullanıcı aradığı karta ulaşır).
+  function indirVeAc(s: AramaSonuc, klasor: string) {
+    setIndirModal(s);
+    setIndirDurum('iniyor');
+    setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
+    acilacakRef.current = s; // bu sonuç için otomatik-açma niyeti
+    kanunIndirBaslat(klasor).then(
+      () => {
+        // Kullanıcı "arka planda indir" demediyse (niyet hâlâ bu sonuç) → karta git.
+        if (acilacakRef.current === s) {
+          acilacakRef.current = null;
+          setIndirModal(null);
+          kartaGit(s);
+        }
+      },
+      () => {
+        if (acilacakRef.current === s) setIndirDurum('hata');
+      },
+    );
+  }
+
+  // Modalı kapat (otomatik-açmayı iptal et; indirme arka planda sürebilir).
+  function indirModalKapat() {
+    acilacakRef.current = null;
+    setIndirModal(null);
+  }
+
   function ac(s: AramaSonuc) {
-    // Kanun indirilmemişse → boş/bozuk kart yerine indir-uyarısı (tester #5).
+    // Kanun indirilmemişse → boş/bozuk kart yerine ÖNCE indir (yüzdeli), sonra karta git (tester #5).
     const klasor = LAW_KLASOR[s.lawId];
     if (klasor && indirmeDestekli && ICERIK_TABANI && !kanunIndirilmisMi(klasor)) {
       Alert.alert(
         'Kanun indirilmemiş',
-        'Bu maddenin kartlarını görmek için önce kanunu indirmen gerekiyor.',
+        'Bu maddenin kartlarını görmek için önce kanunu indirmek gerekiyor. Şimdi indirilip açılsın mı?',
         [
           { text: 'Vazgeç', style: 'cancel' },
-          { text: "Mevzuat'a git", onPress: () => router.push('/mevzuat') },
+          { text: 'İndir ve aç', onPress: () => indirVeAc(s, klasor) },
         ],
       );
       return;
     }
-    router.push({ pathname: '/akis', params: { lawId: String(s.lawId), kart: String(s.cardId) } });
+    kartaGit(s);
   }
 
   function temizle() {
@@ -319,6 +382,67 @@ export default function AraScreen() {
           renderItem={({ item }) => <Sonuc s={item} q={sorgu.trim()} onPress={() => ac(item)} />}
         />
       )}
+
+      {/* İndir ve aç modalı — indirilmemiş kanunun sonucuna basınca; biter bitmez karta gider. */}
+      <Modal
+        visible={indirModal !== null}
+        transparent
+        animationType="fade"
+        onRequestClose={indirModalKapat}>
+        <View style={styles.modalKatman}>
+          <View style={styles.modalKart}>
+            {indirDurum === 'hata' ? (
+              <>
+                <MaterialCommunityIcons name="wifi-off" size={40} color={Palette.kirmizi} />
+                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
+                  İndirilemedi
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin" style={styles.modalOrtali}>
+                  Bağlantını kontrol et, tekrar dene.
+                </AppText>
+                <View style={styles.modalBtnlar}>
+                  <Pressable
+                    style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
+                    onPress={indirModalKapat}>
+                    <AppText variant="kucuk" bold color="lacivert">
+                      Kapat
+                    </AppText>
+                  </Pressable>
+                  <Pressable
+                    style={({ pressed }) => [styles.modalBtn, pressed && styles.pressed]}
+                    onPress={() =>
+                      indirModal && indirVeAc(indirModal, LAW_KLASOR[indirModal.lawId] ?? '')
+                    }>
+                    <AppText variant="kucuk" bold color="beyaz">
+                      Tekrar dene
+                    </AppText>
+                  </Pressable>
+                </View>
+              </>
+            ) : (
+              <>
+                <ActivityIndicator size="large" color={Palette.lacivert} />
+                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
+                  İndiriliyor… %{indirYuzde}
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin" numberOfLines={2} style={styles.modalOrtali}>
+                  {indirModal?.kanun} indiriliyor. Bitince madde otomatik açılacak.
+                </AppText>
+                <View style={styles.modalBar}>
+                  <View style={[styles.modalBarDolu, { width: `${indirYuzde}%` }]} />
+                </View>
+                <Pressable
+                  style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
+                  onPress={indirModalKapat}>
+                  <AppText variant="kucuk" bold color="lacivert">
+                    Arka planda indir
+                  </AppText>
+                </Pressable>
+              </>
+            )}
+          </View>
+        </View>
+      </Modal>
     </Screen>
   );
 }
@@ -560,5 +684,57 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.85,
+  },
+
+  // İndir ve aç modalı
+  modalKatman: {
+    flex: 1,
+    backgroundColor: 'rgba(11,31,58,0.55)',
+    justifyContent: 'center',
+    padding: Spacing.four,
+  },
+  modalKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.l,
+    padding: Spacing.four,
+    gap: Spacing.two,
+    alignItems: 'center',
+  },
+  modalOrtali: {
+    textAlign: 'center',
+  },
+  modalBar: {
+    width: '100%',
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: Palette.ilerlemeTrack,
+    overflow: 'hidden',
+    marginTop: Spacing.one,
+  },
+  modalBarDolu: {
+    height: '100%',
+    borderRadius: 3,
+    backgroundColor: Palette.altinKoyu,
+  },
+  modalBtnlar: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    marginTop: Spacing.two,
+  },
+  modalBtn: {
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
+  },
+  modalBtnIkincil: {
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
+    marginTop: Spacing.one,
   },
 });

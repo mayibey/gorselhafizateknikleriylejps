@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 1 Temmuz 2026
 >
+> ### ▶ 1 Tem — Arama sonucu Mevzuat'a atıyordu → İNDİR VE AÇ (aranan karta git) (özet)
+> Tester: arama sonucuna basınca ilgili karta değil Mevzuat'a gidiyor. **Kök neden:** `ara.tsx ac()` — kanun indirilmemişse (sunucu-içerikli gerçek build'de çoğu öyle) "Kanun indirilmemiş" uyarısı → **"Mevzuat'a git"** (tester #5'te bozuk-kart yerine eklenmişti); `/akis` zaten `kart` param'ıyla doğru karta atlıyor, sorun sadece bu kapıda. **Çözüm:** Alert artık **"İndir ve aç"** → `indirVeAc()`: yüzdeli indirme MODALI (durum yöneticisi `kanunIndirBaslat`+`indirmeDinle` — arka-plan duraklat/devam ile uyumlu) → **biter bitmez aranan KARTA gider** (Mevzuat'a atma yok). Hata → "Tekrar dene"; "Arka planda indir" modalı kapatır (indirme sürer) + `acilacakRef` guard → arka plana alınca bitince otomatik-zıplama YOK. Sadece UI (ara.tsx), DB'ye dokunulmadı. tsc 0.
+>
 > ### ▶ 1 Tem — Geri-besleme emrine KALAN SÜRE + ceza uyarısı (Evsaf) (özet)
 > Başkan: emri yerine getirmek için kalan süre + "yapmazsan ikaz alırsın" mesajı motive eder. Evsaf → Ödül-Ceza Sicili'ndeki **emir kartı** (`sicil.tsx SicilBolum`) zenginleştirildi: **kalan gün** (bugünISO→sonTarih farkı, min 0) vurgulu geri-sayım çipi ("Görevi tamamlamak için X gün kaldı" / 0 ise "SON GÜN!") + **sıradaki ceza kademesini** açıkça yazan uyarı ("… kapatmazsan **{siradakiCeza}** cezası alırsın", siradakiCeza = KADEME_AD[min(kademe+1,4)] → kademe 0'da Yazılı İkaz). Sadece UI/metin — ceza mantığı (ZAYIF_ESIK=3, PENCERE_GUN=3, kademe merdiveni) DEĞİŞMEDİ, DB'ye dokunulmadı. tsc 0.
 >
