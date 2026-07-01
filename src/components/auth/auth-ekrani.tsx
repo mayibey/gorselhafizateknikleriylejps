@@ -263,7 +263,7 @@ export function AuthEkrani() {
         {__DEV__ ? (
           <View style={styles.teshis}>
             <AppText variant="etiket" color="solukMetin" bold>
-              TEŞHİS — Supabase Redirect URLs'e ekle:
+              TEŞHİS — dönüş adresi (Supabase Redirect URLs listesinde OLMALI):
             </AppText>
             <AppText variant="etiket" color="lacivert" bold selectable>
               {girisDonusAdresi()}

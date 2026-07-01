@@ -71,7 +71,7 @@ export default function GirisScreen() {
           MEVZU-JSPS
         </AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
-          Giriş yapmak isteğe bağlıdır. Hesabınla ilerlemen güvende olur ve ileride
+          Hesabınla ilerlemen güvende olur; cihaz değiştirsen de kaybolmaz ve ileride
           satın alımların hesabına bağlanır.
         </AppText>
       </View>
@@ -176,7 +176,7 @@ export default function GirisScreen() {
         // TEŞHİS (yalnız geliştirme): Supabase Redirect URLs'e eklenmesi gereken dönüş adresi.
         <View style={styles.teshisKart}>
           <AppText variant="etiket" color="solukMetin" bold>
-            TEŞHİS — Supabase Redirect URLs'e ekle:
+            TEŞHİS — dönüş adresi (Supabase Redirect URLs listesinde OLMALI):
           </AppText>
           <AppText variant="etiket" color="lacivert" bold selectable>
             {girisDonusAdresi()}

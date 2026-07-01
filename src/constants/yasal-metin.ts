@@ -37,7 +37,7 @@ Reklam kimliği, konum, rehber, kamera/mikrofon verisi TOPLAMIYORUZ. Şifre sakl
 Hesap/giriş verisi, kimlik doğrulama altyapımız Supabase'de (AB/Frankfurt sunucuları) ve giriş
 sağlayıcısı Google'da işlenir. Kart içeriği (görseller) içerik sunucularımızdan (Cloudflare R2 /
 Supabase Storage) internet üzerinden indirilir; bu sırada IP adresin ilgili sunucuya ulaşır (standart
-ağ isteği). Geri bildirim gönderirsen mesajın Formspree'ye iletilir. Bu servislerin sunucuları YURT
+ağ isteği). Geri bildirim gönderirsen mesajın (ilgili kart bilgisiyle) veri tabanımıza (Supabase) kaydedilir. Bu servislerin sunucuları YURT
 DIŞINDA olduğundan, GİRİŞ YAPARAK verinin yurt dışına aktarılmasına AÇIK RIZA vermiş olursun. Verini
 satmıyor, pazarlama amacıyla paylaşmıyoruz.
 
