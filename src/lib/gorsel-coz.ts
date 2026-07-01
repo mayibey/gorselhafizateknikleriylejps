@@ -4,6 +4,7 @@
  * Düz dosya diske YAZILMAZ (data-URI bellekte) → at-rest düz sızıntı yok.
  */
 import * as FileSystem from 'expo-file-system/legacy';
+import { InteractionManager } from 'react-native';
 
 import { icerikAnahtari } from './cihaz-anahtar';
 import { yerelDosyaUri } from './indirme';
@@ -48,9 +49,33 @@ export async function gorselCoz(yol: string): Promise<string> {
   return dataUri;
 }
 
-/** Komşu kartları arkada önceden çöz (preload) — beklemeyi gizler. Hataları yutar. */
+// --- Komşu ön-yükleme (preload) — JS thread'i BLOKE ETMEDEN ---
+// aesCoz + base64 SENKRON çalışır (~0.5-1sn/görsel). Eskiden gorselOnCoz komşuları AYNI ANDA
+// çözüyordu → kart değişince JS thread saniyelerce bloke → UI kilitleniyor (jest/ses/dokunma
+// donuyor). Şimdi: (1) etkileşim bitince (runAfterInteractions → swipe/animasyon bitsin),
+// (2) TEK TEK, aralarında makro-görev nefesi (setTimeout 0 → dokunmalar işlensin),
+// (3) hızlı geçişte yalnız EN GÜNCEL komşular kuyrukta (eskiler çözülmez).
+let onKuyruk: string[] = [];
+let onCalisiyor = false;
+
+function onSonraki() {
+  if (onCalisiyor) return;
+  let yol = onKuyruk.shift();
+  while (yol && onbellek.has(yol)) yol = onKuyruk.shift(); // önbellektekileri atla
+  if (!yol) return;
+  onCalisiyor = true;
+  void gorselCoz(yol)
+    .catch(() => {})
+    .finally(() => {
+      onCalisiyor = false;
+      if (onKuyruk.length) setTimeout(onSonraki, 0); // nefes ver → sonraki komşu
+    });
+}
+
+/** Komşu kartları arkada önceden çöz (preload) — beklemeyi gizler; JS thread'i bloke ETMEZ. */
 export function gorselOnCoz(yollar: (string | null | undefined)[]): void {
-  for (const yol of yollar) {
-    if (yol && !onbellek.has(yol)) void gorselCoz(yol).catch(() => {});
-  }
+  const temiz = yollar.filter((y): y is string => !!y && !onbellek.has(y));
+  if (temiz.length === 0) return;
+  onKuyruk = temiz; // yalnız en güncel istek (hızlı geçişte eski komşuları çözme)
+  void InteractionManager.runAfterInteractions(() => onSonraki());
 }
