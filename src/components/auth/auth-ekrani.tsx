@@ -235,7 +235,7 @@ export function AuthEkrani() {
           <View style={styles.ayracCizgi} />
         </View>
 
-        <SaglayiciButonlari onGoogle={() => void google()} onApple={apple} mesgul={mesgul} />
+        <SaglayiciButonlari onGoogle={() => void google()} onApple={apple} mesgul={mesgul} kayit={kayitMi} />
 
         <Pressable
           style={styles.altLink}

@@ -13,11 +13,15 @@ export function SaglayiciButonlari({
   onGoogle,
   onApple,
   mesgul,
+  kayit,
 }: {
   onGoogle: () => void;
   onApple: () => void;
   mesgul?: boolean;
+  /** true → "…ile kaydol" (kayıt modu), false/undefined → "…ile giriş yap". */
+  kayit?: boolean;
 }) {
+  const eylem = kayit ? 'kaydol' : 'giriş yap';
   return (
     <View style={styles.kok}>
       <Pressable
@@ -26,7 +30,7 @@ export function SaglayiciButonlari({
         onPress={onGoogle}>
         <Image source={GOOGLE_LOGO} style={styles.logo} contentFit="contain" />
         <AppText variant="govde" bold color="anaMetin">
-          Google ile devam et
+          Google ile {eylem}
         </AppText>
       </Pressable>
       <Pressable
@@ -35,7 +39,7 @@ export function SaglayiciButonlari({
         onPress={onApple}>
         <Image source={APPLE_LOGO} style={styles.logo} contentFit="contain" />
         <AppText variant="govde" bold color="anaMetin">
-          Apple ile devam et
+          Apple ile {eylem}
         </AppText>
       </Pressable>
     </View>
