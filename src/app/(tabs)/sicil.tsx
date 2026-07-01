@@ -95,6 +95,18 @@ export default function SicilScreen() {
         <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
       </Pressable>
 
+      {/* Genel hata/öneri bildirimi (kart-bağımsız) — karttaki bildirimle aynı yere (Supabase
+          geri_bildirim tablosu) düşer, sadece kart bilgisi olmadan. */}
+      <Pressable
+        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
+        onPress={() => router.push('/geri-bildirim')}>
+        <MaterialCommunityIcons name="message-alert-outline" size={20} color={Palette.lacivert} />
+        <AppText variant="kucuk" bold style={styles.planAd}>
+          Hata / Öneri Bildir
+        </AppText>
+        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+      </Pressable>
+
       <KisiselBilgiler />
 
       {hata ? (

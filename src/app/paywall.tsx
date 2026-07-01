@@ -333,7 +333,6 @@ function KategoriKart({
             baslik="Yıllık"
             fiyat={yillikFiyat}
             altYazi="/yıl · yenilenir"
-            vurgu
             mesgul={islemUrun === kategori.yillik}
             pasif={!aktif || (!!islemUrun && islemUrun !== kategori.yillik)}
             onPress={onYillik}
@@ -341,7 +340,8 @@ function KategoriKart({
           <PlanButon
             baslik="Ömür boyu"
             fiyat={omurboyuFiyat}
-            altYazi="tek seferlik"
+            altYazi="tek seferlik · hep senin"
+            vurgu
             mesgul={islemUrun === kategori.omurboyu}
             pasif={!aktif || (!!islemUrun && islemUrun !== kategori.omurboyu)}
             onPress={onOmurboyu}
