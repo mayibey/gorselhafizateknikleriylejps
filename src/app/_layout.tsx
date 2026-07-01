@@ -117,8 +117,8 @@ export default function RootLayout() {
 }
 
 function RootNavigator() {
-  const { yukleniyor: bransYukleniyor } = useBrans();
-  const { yukleniyor: rutbeYukleniyor } = useRutbe();
+  const { brans, yukleniyor: bransYukleniyor } = useBrans();
+  const { rutbe, yukleniyor: rutbeYukleniyor } = useRutbe();
   const { kullanici, hazir, yukleniyor: authYukleniyor, profilTamam } = useAuth();
   const segments = useSegments();
   const router = useRouter();
@@ -129,8 +129,14 @@ function RootNavigator() {
   const girisGerek = hazir && !kullanici;
   // Giriş var ama profil tamlığı henüz bilinmiyor → bekle (yanlış yönlendirme olmasın).
   const profilBekle = !!kullanici && profilTamam === null;
-  // Onboarding: ZORUNLU giriş + tek-seferlik profil kurulumu (kişisel + branş/rütbe profilde).
-  const eksik = girisGerek || profilTamam === false;
+  // Görev bilgisi (branş/rütbe) yalnız CİHAZDA tutuluyor; sunucudaki profilde değil. Uygulama
+  // silinip yeniden kurulunca profil (ad/soyad/… sunucudan) tam gelse de branş/rütbe boş kalır
+  // → Mevzuat/Talim "Yükleniyor"da takılırdı. Bu yüzden giriş yapmış + profili tam kullanıcıda
+  // branş/rütbe eksikse de onboarding'e (yalnız görev adımı) götürürüz.
+  const gorevEksik = !brans || !rutbe;
+  // Onboarding: ZORUNLU giriş + tek-seferlik profil kurulumu + görev (branş/rütbe) seçimi.
+  const eksik =
+    girisGerek || profilTamam === false || (!!kullanici && profilTamam === true && gorevEksik);
 
   // Guard: giriş/profil/branş/rütbe eksikse onboarding'e götür.
   useEffect(() => {

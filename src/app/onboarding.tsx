@@ -35,8 +35,9 @@ export default function OnboardingScreen() {
   const [tanitimGecildi, setTanitimGecildi] = useState(false);
   const girisGerek = hazir && !kullanici;
 
-  // 0: tanıtım (yeni kullanıcı, giriş öncesi).
-  if (!brans && !rutbe && !tanitimGecildi) {
+  // 0: tanıtım — YALNIZ giriş gereken (yeni) kullanıcıya, henüz geçmediyse. Silip yeniden
+  // kuran kullanıcı zaten girişli → tanıtımı tekrar göstermeyiz, doğrudan görev adımına iner.
+  if (girisGerek && !tanitimGecildi) {
     return <Tanitim onBasla={() => setTanitimGecildi(true)} />;
   }
   // 0.5: ZORUNLU giriş/kayıt.
@@ -56,6 +57,11 @@ export default function OnboardingScreen() {
   // PROFİL — tek seferlik kurulum (kişisel + görev/branş/rütbe). Eksikse zorunlu.
   if (profilTamam === false) {
     return <ProfilAdim onTamam={() => void profilYenile()} />;
+  }
+  // Profil TAM ama branş/rütbe (cihazda) yok → yalnız görev adımı. Silip yeniden kuran kullanıcı
+  // buradan branş/rütbesini tek seferde seçer; seçince Mevzuat/Talim yüklenir (artık takılmaz).
+  if (!brans || !rutbe) {
+    return <GorevAdim />;
   }
   return null; // her şey tamam → _layout gate ana ekrana yönlendirir
 }
@@ -289,6 +295,91 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
         }}
         onKapat={() => setTarihAcik(false)}
       />
+    </SafeAreaView>
+  );
+}
+
+// --- Görev adımı (yalnız branş/rütbe) ---
+// Profil (kişisel bilgiler) SUNUCUDA tam olduğu hâlde branş/rütbe cihazda boşsa (silip-kurma)
+// gösterilir. ProfilAdim'ın görev bölümünün sadeleştirilmiş hâli — kişisel alanları tekrar sormaz.
+function GorevAdim() {
+  const { setBrans } = useBrans();
+  const { setRutbe } = useRutbe();
+  const [brans, setBransSec] = useState<string | null>(null);
+  const [rutbe, setRutbeSec] = useState<Rutbe | null>(null);
+  const [branslar, setBranslar] = useState<{ slug: string; ad: string }[]>([]);
+  const [mesgul, setMesgul] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
+
+  useEffect(() => {
+    void getBranches().then((bs) => setBranslar(bs.map((b) => ({ slug: b.slug, ad: b.ad }))));
+  }, []);
+
+  async function kaydet() {
+    if (!brans) return setHata('Branşını seç.');
+    if (!rutbe) return setHata('Rütbeni/statünü seç.');
+    setHata(null);
+    setMesgul(true);
+    try {
+      await setBrans(brans); // müfredat filtresi (AsyncStorage + context)
+      await setRutbe(rutbe);
+      // Kaydedince context güncellenir → OnboardingScreen boş adımı bırakır, gate ana ekrana atar.
+    } catch (e) {
+      setHata(e instanceof Error ? e.message : 'Kaydedilemedi, tekrar dene.');
+    } finally {
+      setMesgul(false);
+    }
+  }
+
+  return (
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+      <DekoratifArkaplan />
+      <ScrollView contentContainerStyle={styles.profilIcerik} keyboardShouldPersistTaps="handled">
+        <View style={styles.profilUst}>
+          <View style={styles.profilBaslikBlok}>
+            <AppText variant="dev" bold color="lacivert">
+              Görev{'\n'}Bilgilerin
+            </AppText>
+            <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
+              Sana doğru mevzuatı göstermemiz için branş ve rütbeni seç.
+            </AppText>
+          </View>
+          <KarakterFigur style={styles.profilKarakter} />
+        </View>
+
+        <View style={styles.bolumBaslik}>
+          <MaterialCommunityIcons name="shield-account-outline" size={18} color={Palette.altinKoyu} />
+          <AppText variant="etiket" bold color="lacivert">
+            GÖREV BİLGİLERİ
+          </AppText>
+        </View>
+        <View style={styles.bolumKart}>
+          <SecimKutu
+            ikon="medal-outline"
+            placeholder="Rütben / Statün"
+            baslik="Rütbeni Seç"
+            deger={rutbe}
+            secenekler={RUTBELER}
+            onSec={setRutbeSec}
+          />
+          <SecimKutu
+            ikon="shield-account-outline"
+            placeholder="Branşın / Sınıfın"
+            baslik="Branşını Seç"
+            deger={brans}
+            secenekler={branslar}
+            onSec={setBransSec}
+          />
+        </View>
+
+        <AnaButon etiket="Devam et" onPress={() => void kaydet()} mesgul={mesgul} />
+
+        {hata ? (
+          <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
+            {hata}
+          </AppText>
+        ) : null}
+      </ScrollView>
     </SafeAreaView>
   );
 }
