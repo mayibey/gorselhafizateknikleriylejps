@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 1 Temmuz 2026
 >
+> ### ▶ 1 Tem — KİLİTSİZ FİNAL BUILD hazırlığı (KILIT_AKTIF=false, vCode 9) (özet)
+> Başkan kararı: kilitsiz final sürüm bas → testerlar son testleri yapsın → SONRA kilit + yayın. **`KILIT_AKTIF = true → false`** (tek şalter; `kanunErisilebilir` hep true → hiçbir içerik kilitlenmez, testerlar her şeye erişir; paywall ekranı yalnız Ayarlar'dan bilgi amaçlı erişilir, hiçbir yeri zorlamaz — gating boşlukları da şalter kapalı olduğu için önemsiz). **app.json versionCode 8 → 9** (Play daha yüksek ister; vCode 8 kullanıldı). AAB: `bash scripts/build-aab.sh` (strip→prebuild--clean→gradle bundleRelease). tsc 0. **KİLİDİ AÇMAK İÇİN (yayın öncesi):** `KILIT_AKTIF=true` + gating boşluklarını tamamla (arama→indir-aç→/akis ve /akis doğrudan premium kilidini kontrol etmiyor) + GOOGLE_SA + dogrula-satinalma deploy + gerçek cihaz satın-alma testi.
+>
 > ### ▶ 1 Tem — Arama sonucu Mevzuat'a atıyordu → İNDİR VE AÇ (aranan karta git) (özet)
 > Tester: arama sonucuna basınca ilgili karta değil Mevzuat'a gidiyor. **Kök neden:** `ara.tsx ac()` — kanun indirilmemişse (sunucu-içerikli gerçek build'de çoğu öyle) "Kanun indirilmemiş" uyarısı → **"Mevzuat'a git"** (tester #5'te bozuk-kart yerine eklenmişti); `/akis` zaten `kart` param'ıyla doğru karta atlıyor, sorun sadece bu kapıda. **Çözüm:** Alert artık **"İndir ve aç"** → `indirVeAc()`: yüzdeli indirme MODALI (durum yöneticisi `kanunIndirBaslat`+`indirmeDinle` — arka-plan duraklat/devam ile uyumlu) → **biter bitmez aranan KARTA gider** (Mevzuat'a atma yok). Hata → "Tekrar dene"; "Arka planda indir" modalı kapatır (indirme sürer) + `acilacakRef` guard → arka plana alınca bitince otomatik-zıplama YOK. Sadece UI (ara.tsx), DB'ye dokunulmadı. tsc 0.
 >

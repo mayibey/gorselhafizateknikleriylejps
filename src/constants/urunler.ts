@@ -26,7 +26,7 @@ export const BRANS_URUNLERI = [URUN_BRANS_YILLIK, URUN_BRANS_OMURBOYU];
  * `kanunErisilebilir` bunu ilk satırda kontrol eder → tüm ekranlar tek yerden açılıp kapanır.
  * NOT: Bunu değiştirmek yeni derleme (build) gerektirir; test edenlere ancak yeni sürümle yansır.
  */
-export const KILIT_AKTIF = true;
+export const KILIT_AKTIF = false;
 
 /** ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. Sadece TCK (ilk müşterek konu) + denemesi. */
 export const UCRETSIZ_KANUNLAR = ['tck'];
