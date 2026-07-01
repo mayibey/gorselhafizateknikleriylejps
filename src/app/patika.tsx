@@ -5,6 +5,7 @@ import {
   ActivityIndicator,
   Animated,
   Easing,
+  Modal,
   Platform,
   Pressable,
   StyleSheet,
@@ -19,6 +20,14 @@ import { KilitKarti } from '@/components/premium/kilit-karti';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { LAW_KLASOR } from '@/db/seed';
+import { ICERIK_TABANI } from '@/constants/config';
+import {
+  indirmeDestekli,
+  indirmeDinle,
+  indirmeDurumuAl,
+  kanunIndirBaslat,
+  kanunIndirilmisMi,
+} from '@/lib/indirme';
 import { useUyelik } from '@/lib/uyelik-context';
 import {
   getBolumler,
@@ -188,6 +197,13 @@ export default function PatikaScreen() {
   const [kanunAd, setKanunAd] = useState<string | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
+  // İNDİRME KAPISI (boş kart tedbiri): içeriği inmemiş kanunun kartına GİDİLMEZ; önce indirilir.
+  // Kart akışının TEK önü patika olduğu için (Mevzuat, Ara→sık açılan, Ara→sonuç hepsi buraya /
+  // buradan geçer) kapıyı burada tutmak tüm yolları kapatır → hiçbir yerden boş beyaz kart çıkmaz.
+  const [indirModal, setIndirModal] = useState<Record<string, string> | null>(null);
+  const [indirYuzde, setIndirYuzde] = useState(0);
+  const [indirDurum, setIndirDurum] = useState<'iniyor' | 'hata'>('iniyor');
+  const bekleyenRef = useRef<Record<string, string> | null>(null);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -245,6 +261,52 @@ export default function PatikaScreen() {
 
   useFocusEffect(yukle);
 
+  // Kanun klasörü (indirme + kilit için). null = klasörü olmayan/bilinmeyen kanun.
+  const klasor = lawId != null ? LAW_KLASOR[Number(lawId)] : undefined;
+  // İçerik inmemiş mi? (indirme destekli + sunucu ayarlı + bu kanun henüz inmemiş). Gömülü
+  // içerikli build'de (ICERIK_TABANI boş) veya web'de indirGerek hep false → kapı devre dışı.
+  const indirGerek = !!klasor && indirmeDestekli && !!ICERIK_TABANI && !kanunIndirilmisMi(klasor);
+
+  // İndirme modalı açıkken yüzdeyi durum yöneticisinden dinle (arka planda ilerledikçe güncellensin).
+  useEffect(() => {
+    if (!indirModal || !klasor) return;
+    const guncelle = () => setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
+    guncelle();
+    return indirmeDinle(klasor, guncelle);
+  }, [indirModal, klasor]);
+
+  // Karta git — ama içerik inmemişse ÖNCE indir (yüzdeli modal), biter bitmez aç. Hangi
+  // düğümden gelinirse gelinsin (tek düğüm / bölüm düğümü) boş beyaz kart çıkmaz.
+  function akisAc(params: Record<string, string>) {
+    if (indirGerek && klasor) {
+      setIndirModal(params);
+      setIndirDurum('iniyor');
+      setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
+      bekleyenRef.current = params;
+      kanunIndirBaslat(klasor).then(
+        () => {
+          // "Arka planda indir" denmediyse (niyet hâlâ bu düğüm) → karta git.
+          if (bekleyenRef.current === params) {
+            bekleyenRef.current = null;
+            setIndirModal(null);
+            router.push({ pathname: '/akis', params });
+          }
+        },
+        () => {
+          if (bekleyenRef.current === params) setIndirDurum('hata');
+        },
+      );
+      return;
+    }
+    router.push({ pathname: '/akis', params });
+  }
+
+  // Modalı kapat (otomatik-açmayı iptal et; indirme arka planda sürebilir).
+  function indirModalKapat() {
+    bekleyenRef.current = null;
+    setIndirModal(null);
+  }
+
   // "aktif" (altın vurgu) = ilk çalışılabilir ama bitmemiş madde (kartı olan, tamamlanmamış).
   // Kartı olmayan madde düğümleri (kapsam iskeleti) aktif sayılmaz. [DEĞİŞMEDİ]
   const aktifIndex = dugumler
@@ -257,8 +319,7 @@ export default function PatikaScreen() {
   const toplamKart = dugumler?.reduce((a, d) => a + d.toplam, 0) ?? 0;
 
   // Kilit: kanunun bloğu bilindiğinde ve erişim yoksa (TCK/ücretsiz hariç). Şalter kapalıysa
-  // kanunErisilebilir hep true → kilitli asla true olmaz.
-  const klasor = lawId != null ? LAW_KLASOR[Number(lawId)] : undefined;
+  // kanunErisilebilir hep true → kilitli asla true olmaz. (klasor yukarıda tanımlı.)
   const kilitli = lawBlok != null && !kanunErisilebilir(klasor, lawBlok);
 
   return (
@@ -316,12 +377,73 @@ export default function PatikaScreen() {
         </View>
       ) : bolumsuz ? (
         // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
-        <TekDugum
-          onPress={() => router.push({ pathname: '/akis', params: { lawId: String(lawId) } })}
-        />
+        <TekDugum onPress={() => akisAc({ lawId: String(lawId) })} />
       ) : (
-        <Harita dugumler={dugumler} aktifIndex={aktifIndex} router={router} />
+        <Harita
+          dugumler={dugumler}
+          aktifIndex={aktifIndex}
+          onDugumBas={(id) => akisAc({ bolumId: String(id) })}
+        />
       )}
+
+      {/* İçerik indir + aç modalı — inmemiş kanunun düğümüne basınca; biter bitmez kart açılır. */}
+      <Modal
+        visible={indirModal !== null}
+        transparent
+        animationType="fade"
+        onRequestClose={indirModalKapat}>
+        <View style={st.modalKatman}>
+          <View style={st.modalKart}>
+            {indirDurum === 'hata' ? (
+              <>
+                <MaterialCommunityIcons name="wifi-off" size={40} color={Palette.kirmizi} />
+                <AppText variant="govde" bold color="lacivert" style={st.modalOrtali}>
+                  İndirilemedi
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin" style={st.modalOrtali}>
+                  Bağlantını kontrol et, tekrar dene.
+                </AppText>
+                <View style={st.modalBtnlar}>
+                  <Pressable
+                    style={({ pressed }) => [st.modalBtnIkincil, pressed && st.pressed]}
+                    onPress={indirModalKapat}>
+                    <AppText variant="kucuk" bold color="lacivert">
+                      Kapat
+                    </AppText>
+                  </Pressable>
+                  <Pressable
+                    style={({ pressed }) => [st.modalBtn, pressed && st.pressed]}
+                    onPress={() => indirModal && akisAc(indirModal)}>
+                    <AppText variant="kucuk" bold color="beyaz">
+                      Tekrar dene
+                    </AppText>
+                  </Pressable>
+                </View>
+              </>
+            ) : (
+              <>
+                <ActivityIndicator size="large" color={Palette.lacivert} />
+                <AppText variant="govde" bold color="lacivert" style={st.modalOrtali}>
+                  İndiriliyor… %{indirYuzde}
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin" style={st.modalOrtali}>
+                  Kanun içeriği indiriliyor. Bitince kart otomatik açılacak.
+                </AppText>
+                <View style={st.modalBar}>
+                  <View style={[st.modalBarDolu, { width: `${indirYuzde}%` }]} />
+                </View>
+                <Pressable
+                  style={({ pressed }) => [st.modalBtnIkincil, pressed && st.pressed]}
+                  onPress={indirModalKapat}>
+                  <AppText variant="kucuk" bold color="lacivert">
+                    Arka planda indir
+                  </AppText>
+                </Pressable>
+              </>
+            )}
+          </View>
+        </View>
+      </Modal>
     </Screen>
   );
 }
@@ -330,11 +452,11 @@ export default function PatikaScreen() {
 function Harita({
   dugumler,
   aktifIndex,
-  router,
+  onDugumBas,
 }: {
   dugumler: BolumDugum[];
   aktifIndex: number;
-  router: ReturnType<typeof useRouter>;
+  onDugumBas: (bolumId: number) => void;
 }) {
   const [W, setW] = useState(0);
   const olc = (e: LayoutChangeEvent) => {
@@ -409,9 +531,7 @@ function Harita({
               index={i}
               durum={durumCoz(d, i === aktifIndex)}
               merkez={dugumMerkez(i, W)}
-              onPress={() =>
-                router.push({ pathname: '/akis', params: { bolumId: String(d.bolum.id) } })
-              }
+              onPress={() => onDugumBas(d.bolum.id)}
                   />
                 ))}
               </>
@@ -787,5 +907,57 @@ const st = StyleSheet.create({
     borderRadius: Radius.s,
     paddingHorizontal: Spacing.four,
     paddingVertical: Spacing.two,
+  },
+
+  // İndir + aç modalı (boş kart tedbiri)
+  modalKatman: {
+    flex: 1,
+    backgroundColor: 'rgba(11,31,58,0.55)',
+    justifyContent: 'center',
+    padding: Spacing.four,
+  },
+  modalKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.l,
+    padding: Spacing.four,
+    gap: Spacing.two,
+    alignItems: 'center',
+  },
+  modalOrtali: {
+    textAlign: 'center',
+  },
+  modalBar: {
+    width: '100%',
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: Palette.ilerlemeTrack,
+    overflow: 'hidden',
+    marginTop: Spacing.one,
+  },
+  modalBarDolu: {
+    height: '100%',
+    borderRadius: 3,
+    backgroundColor: Palette.altinKoyu,
+  },
+  modalBtnlar: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    marginTop: Spacing.two,
+  },
+  modalBtn: {
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
+  },
+  modalBtnIkincil: {
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
+    marginTop: Spacing.one,
   },
 });
