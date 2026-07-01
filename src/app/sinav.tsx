@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -18,6 +18,11 @@ import {
   puanlaSinav,
   type SinavCevap,
 } from '@/lib/sinav';
+import {
+  sinavIlerlemeKaydet,
+  sinavIlerlemeOku,
+  sinavIlerlemeSil,
+} from '@/lib/sinav-ilerleme';
 import { bugunISO } from '@/lib/srs';
 
 /** Doğru/yanlış geri bildirim renkleri (tema: yeşil onay, kırmızı uyarı). */
@@ -41,41 +46,69 @@ export default function SinavScreen() {
   const [hata, setHata] = useState(false);
   const [bos, setBos] = useState(false);
   const [index, setIndex] = useState(0);
-  const [secilen, setSecilen] = useState<number | null>(null);
-  const [cevaplar, setCevaplar] = useState<SinavCevap[]>([]);
+  // Soru başına seçilen şık (null = cevaplanmadı). Tek kaynak → önceki soruya dönüş + devam
+  // (kaldığın yerden) BUNDAN türer. sorular ile aynı uzunlukta.
+  const [secimler, setSecimler] = useState<(number | null)[]>([]);
   // O kanunun kartları (zayıf havuz eşleştirmesi için) — bir kez yüklenir, cache'lenir.
   const kartlarRef = useRef<QueueCard[] | null>(null);
   // Skor BİR KEZ kaydedilsin (bitiş ekranı yeniden render'larında tekrar yazılmasın).
   const kaydedildiRef = useRef(false);
 
-  const yukle = useCallback(() => {
-    setHata(false);
-    setBos(false);
-    setSorular(null);
-    setIndex(0);
-    setSecilen(null);
-    setCevaplar([]);
-    kartlarRef.current = null;
-    kaydedildiRef.current = false;
-    if (lawIdNum == null || Number.isNaN(lawIdNum)) {
-      setHata(true);
-      return;
-    }
-    const liste = getSinavSorulari(lawIdNum);
-    if (liste.length === 0) {
-      setBos(true);
-      return;
-    }
-    setSorular(liste);
-    setLawAd(null);
-    // Zayıf havuz eşleştirmesi için kanunun kartlarını önden yükle (ateşle-unut).
-    // Kart law_ad taşır → Takdir Belgesi için kanun adını buradan al.
+  // Bir kanunun kartlarını (zayıf havuz eşleştirmesi + Takdir Belgesi adı) önden yükle.
+  const kartlariYukle = useCallback(() => {
+    if (lawIdNum == null) return;
     void getCardsByLaw(lawIdNum)
       .then((c) => {
         kartlarRef.current = c;
         if (c[0]?.law_ad) setLawAd(c[0].law_ad);
       })
       .catch(() => {});
+  }, [lawIdNum]);
+
+  // Açılış: yarım kalan sınav varsa KALDIĞIN YERDEN devam et; yoksa yeni (karıştırılmış) sınav.
+  const yukle = useCallback(() => {
+    setHata(false);
+    setBos(false);
+    setSorular(null);
+    setIndex(0);
+    setSecimler([]);
+    setLawAd(null);
+    kartlarRef.current = null;
+    kaydedildiRef.current = false;
+    if (lawIdNum == null || Number.isNaN(lawIdNum)) {
+      setHata(true);
+      return;
+    }
+    void (async () => {
+      const kayit = await sinavIlerlemeOku(lawIdNum).catch(() => null);
+      if (kayit && kayit.sorular.length > 0) {
+        // Devam: saklanan soru sırası + işaretler + konum.
+        setSorular(kayit.sorular);
+        setSecimler(kayit.secimler);
+        setIndex(Math.min(kayit.index, kayit.sorular.length));
+      } else {
+        const liste = getSinavSorulari(lawIdNum);
+        if (liste.length === 0) {
+          setBos(true);
+          return;
+        }
+        setSorular(liste);
+        setSecimler(new Array(liste.length).fill(null));
+        setIndex(0);
+      }
+      kartlariYukle();
+    })();
+  }, [lawIdNum, kartlariYukle]);
+
+  // "Tekrar çöz" → kaydı sil + YENİ karıştırılmış sınav (baştan).
+  const yenidenBasla = useCallback(() => {
+    if (lawIdNum == null) return;
+    void sinavIlerlemeSil(lawIdNum);
+    const liste = getSinavSorulari(lawIdNum);
+    setSorular(liste);
+    setSecimler(new Array(liste.length).fill(null));
+    setIndex(0);
+    kaydedildiRef.current = false;
   }, [lawIdNum]);
 
   useEffect(() => {
@@ -100,29 +133,45 @@ export default function SinavScreen() {
     }
   }
 
+  // Bu sorunun seçili şıkkı (yoksa null). Önceki soruya dönünce o sorunun cevabı BURADAN gelir.
+  const secilen = sorular && index < secimler.length ? secimler[index] : null;
+
   function sec(i: number) {
-    if (secilen !== null || !sorular) return; // soru zaten cevaplandı
-    setSecilen(i);
+    if (!sorular || secilen !== null) return; // soru zaten cevaplandı → değiştirilemez (kilitli)
+    setSecimler((s) => {
+      const y = [...s];
+      y[index] = i;
+      return y;
+    });
     const soruO = sorular[index];
-    if (i !== soruO.dogru) void zayifaDusur(soruO); // yalnız yanlışta logla
+    if (i !== soruO.dogru) void zayifaDusur(soruO); // yalnız yanlışta (ilk cevapta) logla
   }
 
-  function sonraki() {
-    if (secilen === null) return;
-    setCevaplar((c) => [...c, { soruIndex: index, secilenIndex: secilen }]);
-    setSecilen(null);
+  function ileri() {
+    if (secilen === null) return; // cevaplanmadan ilerleme yok
     setIndex((i) => i + 1);
+  }
+
+  function geri() {
+    setIndex((i) => Math.max(0, i - 1)); // önceki soru (cevaplı → salt görüntüleme)
   }
 
   const bitti = sorular !== null && index >= sorular.length;
   const aktif = sorular !== null && !bitti;
   const soru = aktif ? sorular[index] : null;
 
+  // Puanlama/sonuç için cevap listesi — secimler'den türetilir (cevaplanmayan -1 = yanlış sayılır).
+  const cevaplar = useMemo<SinavCevap[]>(
+    () => secimler.map((s, i) => ({ soruIndex: i, secilenIndex: s ?? -1 })),
+    [secimler],
+  );
+
   // Sınav bitince skoru BİR KEZ kalıcı kaydet (kaydedildiRef guard; yukle'de sıfırlanır).
   // %100 ise: kayıttan SONRA sicil değerlendir → Takdir Belgesi kaydı düşer (idempotent).
   useEffect(() => {
     if (!bitti || !sorular || lawIdNum == null || kaydedildiRef.current) return;
     kaydedildiRef.current = true;
+    void sinavIlerlemeSil(lawIdNum); // sınav bitti → "devam" kaydı temizlenir
     const { dogru, toplam } = puanlaSinav(cevaplar, sorular);
     void (async () => {
       try {
@@ -133,6 +182,14 @@ export default function SinavScreen() {
       }
     })();
   }, [bitti, sorular, cevaplar, lawIdNum]);
+
+  // Yarım sınavı kaydet → ekrandan çıkıp dönünce KALDIĞIN YERDEN devam. En az bir soru
+  // cevaplanmışsa ve sınav bitmemişse sakla (bitince yukarıdaki efekt siler).
+  useEffect(() => {
+    if (lawIdNum == null || sorular === null || bitti) return;
+    if (!secimler.some((s) => s !== null)) return; // hiç cevap yok → saklama
+    void sinavIlerlemeKaydet(lawIdNum, { sorular, secimler, index });
+  }, [secimler, index, bitti, sorular, lawIdNum]);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
@@ -174,7 +231,7 @@ export default function SinavScreen() {
           sorular={sorular}
           lawAd={lawAd}
           onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
-          onTekrar={yukle}
+          onTekrar={yenidenBasla}
           onBitir={() => router.back()}
         />
       ) : (
@@ -229,8 +286,26 @@ export default function SinavScreen() {
             ) : null}
           </ScrollView>
 
-          {/* Sonraki — yalnız cevaplandıktan sonra aktif */}
+          {/* Alt gezinme: Önceki (cevaplarını gör) + Sonraki (cevaplandıktan sonra aktif) */}
           <View style={styles.altBlok}>
+            <Pressable
+              disabled={index === 0}
+              style={({ pressed }) => [
+                styles.onceki,
+                index === 0 && styles.oncekiPasif,
+                pressed && index !== 0 && styles.pressed,
+              ]}
+              onPress={geri}
+              accessibilityLabel="Önceki soru">
+              <MaterialCommunityIcons
+                name="chevron-left"
+                size={22}
+                color={index === 0 ? Palette.solukMetin : Palette.lacivert}
+              />
+              <AppText variant="govde" bold color={index === 0 ? 'solukMetin' : 'lacivert'}>
+                Önceki
+              </AppText>
+            </Pressable>
             <Pressable
               disabled={secilen === null}
               style={({ pressed }) => [
@@ -238,7 +313,7 @@ export default function SinavScreen() {
                 secilen === null && styles.sonrakiPasif,
                 pressed && secilen !== null && styles.pressed,
               ]}
-              onPress={sonraki}>
+              onPress={ileri}>
               <AppText variant="govde" color="beyaz" bold>
                 {index + 1 >= sorular.length ? 'Sonucu gör' : 'Sonraki'}
               </AppText>
@@ -485,15 +560,35 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   altBlok: {
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    gap: Spacing.two,
     paddingHorizontal: Spacing.three,
     paddingTop: Spacing.two,
     paddingBottom: Spacing.three,
   },
+  onceki: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1.5,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    paddingHorizontal: Spacing.four,
+  },
+  oncekiPasif: {
+    opacity: 0.4,
+  },
   sonraki: {
+    flex: 1,
     backgroundColor: Palette.lacivert,
     borderRadius: Radius.m,
     paddingVertical: Spacing.three,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   sonrakiPasif: {
     opacity: 0.4,
