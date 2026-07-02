@@ -22,8 +22,8 @@
         "android.permission.POST_NOTIFICATIONS"
       ],
       "adaptiveIcon": {
-        "backgroundColor": "#1F3864",
-        "foregroundImage": "./assets/images/mevzu-icon-1024.png"
+        "backgroundColor": "#00030F",
+        "foregroundImage": "./assets/images/mevzu-icon-adaptive.png"
       },
       "predictiveBackGestureEnabled": false
     },
