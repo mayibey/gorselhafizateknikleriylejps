@@ -23,6 +23,7 @@ import {
 import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { type Cinsiyet, type Profil, profilGetir } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
+import { maddeEtiket } from '@/lib/madde-etiket';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
@@ -434,7 +435,7 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
       {ilk5.map((z) => (
         <View key={z.card.id} style={styles.zayifSatir}>
           <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
-            {z.card.madde_no} — {z.card.baslik}
+            {maddeEtiket(z.card.madde_no, z.card.baslik)}
           </AppText>
           <View style={styles.zayifRozet}>
             <AppText variant="etiket" color="beyaz" bold>

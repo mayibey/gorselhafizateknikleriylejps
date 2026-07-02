@@ -26,6 +26,7 @@ import { maddeMetni } from '@/db/madde-metinleri';
 import type { CardWithLaw, LawWithCount } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
 import { araIndeksHazirla, araKanunlar, trKucuk, type AraKapsam, type AramaSonuc } from '@/lib/ara';
+import { maddeEtiket } from '@/lib/madde-etiket';
 import {
   indirmeDestekli,
   indirmeDinle,
@@ -462,7 +463,7 @@ function Sonuc({ s, q, onPress }: { s: AramaSonuc; q: string; onPress: () => voi
         </View>
       </View>
       <AppText variant="govde" color="lacivert" bold style={styles.baslik}>
-        {s.baslik ? `${s.maddeNo} — ${s.baslik}` : s.maddeNo}
+        {maddeEtiket(s.maddeNo, s.baslik)}
       </AppText>
       {vurgula(s.snippet, q)}
     </Pressable>

@@ -20,6 +20,7 @@ import {
 } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
 import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
+import { maddeEtiket } from '@/lib/madde-etiket';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -430,7 +431,7 @@ export default function KarargahScreen() {
             GÜNÜN MADDESİ
           </AppText>
           <AppText variant="govde" bold color="anaMetin">
-            {gunMadde.madde_no} — {gunMadde.baslik}
+            {maddeEtiket(gunMadde.madde_no, gunMadde.baslik)}
           </AppText>
           <View style={styles.gunMaddeAlt}>
             <AppText variant="kucuk" color="solukMetin" style={styles.gunMaddeAd} numberOfLines={1}>

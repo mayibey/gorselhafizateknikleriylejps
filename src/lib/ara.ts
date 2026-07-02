@@ -58,14 +58,21 @@ export function trKucuk(s: string): string {
  * Kart listesinden aranabilir indeks üretir. metinAl = maddeMetni (resmî metin çözücü).
  * SAF: aynı girdi → aynı çıktı (getAllCards web/native paritesi indekse taşınır).
  */
+// Özet/ayırt BİRLEŞİK kartları (gorsel_yolu ..._ozet/_ayirt) temsilci OLMASIN — başlıkları
+// ham anahtar sızdırıyor ("m.8 ayırt"). Normal kart varsa o temsilci; yoksa mecburen bu.
+const OZET_AYIRT = /_(ayirt|ozet)(_|$)/;
+const ozelKartMi = (c: CardWithLaw) => !!c.gorsel_yolu && OZET_AYIRT.test(c.gorsel_yolu);
+
 export function araIndeksHazirla(
   cards: CardWithLaw[],
   metinAl: (maddeNo: string) => string | null,
   sesAl: (gorselYolu: string | null) => string | null,
 ): AraKayit[] {
+  // Normal kartlar önce → aynı maddenin özet/ayırt kartı ancak BAŞKA kart yoksa temsilci olur.
+  const sirali = [...cards.filter((c) => !ozelKartMi(c)), ...cards.filter(ozelKartMi)];
   const gorulen = new Set<string>();
   const kayitlar: AraKayit[] = [];
-  for (const c of cards) {
+  for (const c of sirali) {
     const anahtar = `${c.law_id}|${c.madde_no}`;
     if (gorulen.has(anahtar)) continue;
     gorulen.add(anahtar);
