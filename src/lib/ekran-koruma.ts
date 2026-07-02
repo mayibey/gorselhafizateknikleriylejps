@@ -10,9 +10,14 @@ import * as ScreenCapture from 'expo-screen-capture';
 import { useEffect } from 'react';
 import { Platform } from 'react-native';
 
+// TEST ŞALTERİ (derleme zamanı): otomatik test build'lerinde ekran görüntüsü gerekir
+// (emülatör turu FLAG_SECURE yüzünden kör kalıyordu). ÜRETİM build'lerinde bu env
+// ASLA set edilmez → koruma aynen aktif. (bash: EXPO_PUBLIC_TEST_MODU=1 ./gradlew …)
+const TEST_MODU = (process.env.EXPO_PUBLIC_TEST_MODU ?? '') === '1';
+
 export function useEkranKoruma() {
   useEffect(() => {
-    if (Platform.OS === 'web') return;
+    if (Platform.OS === 'web' || TEST_MODU) return;
     void ScreenCapture.preventScreenCaptureAsync().catch(() => {});
     return () => {
       void ScreenCapture.allowScreenCaptureAsync().catch(() => {});
