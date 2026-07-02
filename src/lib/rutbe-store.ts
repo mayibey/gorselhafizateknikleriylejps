@@ -26,3 +26,8 @@ export async function getRutbe(): Promise<Rutbe | null> {
 export async function setRutbe(slug: Rutbe): Promise<void> {
   await AsyncStorage.setItem(ANAHTAR, slug);
 }
+
+/** Cihazdaki rütbe seçimini siler (hesap değişimi — sunucuda seçim yoksa). */
+export async function rutbeTemizle(): Promise<void> {
+  await AsyncStorage.removeItem(ANAHTAR);
+}

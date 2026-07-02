@@ -15,3 +15,8 @@ export async function getBrans(): Promise<string | null> {
 export async function setBrans(slug: string): Promise<void> {
   await AsyncStorage.setItem(ANAHTAR, slug);
 }
+
+/** Cihazdaki branş seçimini siler (hesap değişimi — sunucuda seçim yoksa). */
+export async function bransTemizle(): Promise<void> {
+  await AsyncStorage.removeItem(ANAHTAR);
+}

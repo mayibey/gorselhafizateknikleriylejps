@@ -256,6 +256,42 @@ export async function profilKaydet(p: {
   if (error) throw error;
 }
 
+// --- Görev bilgisi (branş/rütbe) — SUNUCUDA, hesaba bağlı (docs/v2/08) ---
+// Cihazdaki kopya hız/offline içindir; girişte sunucu ESAS alınır (hesap değişiminde
+// önceki kullanıcının branşı görünmesin), seçim yapılınca sunucuya da yazılır.
+
+export type Gorev = { brans: string | null; rutbe: string | null };
+
+/** Sunucudaki görev bilgisi. Ağ/tablo hatasında null (cihazdaki korunur — fail-open). */
+export async function gorevGetir(): Promise<Gorev | null> {
+  if (!supabaseHazir || !supabase) return null;
+  try {
+    const { data, error } = await supabase.from('profiles').select('brans, rutbe').single();
+    if (error || !data) return null;
+    return {
+      brans: (data.brans as string | null) ?? null,
+      rutbe: (data.rutbe as string | null) ?? null,
+    };
+  } catch {
+    return null;
+  }
+}
+
+/** Görev bilgisini sunucuya yazar (kısmi olabilir: yalnız brans ya da yalnız rutbe).
+ *  beklenenUid = SEÇİM ANINDAKİ hesap: yazma anında oturum değiştiyse (çıkış+farklı giriş
+ *  yarışı) İPTAL — önceki kullanıcının seçimi yeni hesabın profiline yazılmasın. */
+export async function gorevKaydet(g: Partial<Gorev>, beklenenUid: string): Promise<void> {
+  if (!supabaseHazir || !supabase) return;
+  try {
+    const { data: u } = await supabase.auth.getUser();
+    const id = u.user?.id;
+    if (!id || id !== beklenenUid) return;
+    await supabase.from('profiles').update(g).eq('id', id);
+  } catch {
+    // sessiz geç — offline'da cihazdaki değer geçerli kalır, sonraki seçimde yazılır
+  }
+}
+
 /** Oturumu kapatır. Yapılandırılmamışsa no-op. */
 export async function cikisYap(): Promise<void> {
   if (!supabaseHazir || !supabase) return;
