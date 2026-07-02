@@ -13,7 +13,7 @@
 - [x] **F6. Kilit AKTİF** — `KILIT_AKTIF=true`. ⚠️ Testerların erişmesi için Play ürünleri + ödeme profili doğrulaması ŞART.
 - [x] **F7. Branş "çok yakında" + %50 indirim** — mevzuat + tatbikat + paywall branş ibaresi.
 - [~] **F8. Kalan UX** — (3) bildirim ikonu ✅ (bildirim-ikon.png beyaz silüet + app.json). (7) indirme %→MB ⏳ ERTELENDİ (indirme.ts byte akışı derin — bir sonraki). (5) tutorial spotlight ⏳ ERTELENDİ (BÜYÜK yeniden tasarım).
-- [ ] **F9. Denetim + tsc 0 + build (vCode 15) + Play kapalı test yükleme (Brave).**
+- [x] **F9. Denetim + tsc 0 + build (vCode 15) + Play kapalı test yükleme (Brave).** — ✅ vCode 15 (1.0.5) AAB alındı, doğrulandı (Genel Deneme + KILIT_AKTIF gömülü), Play Alpha kapalı teste yüklendi, İleri→Kaydet→incelemeye gönderildi. Durum: **"İncelenmekte olan değişiklikler"** (Google incelemesinde). 3 Tem gecesi.
 
 ## SABAHA KALAN (net — başkan karar/onay):
 - **F4 zayıf ayrımı** (Talim vs Tatbikat ayrı liste) — schema v25, sağlam yapılmalı.
