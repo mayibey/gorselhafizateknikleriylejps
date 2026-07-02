@@ -107,6 +107,20 @@ Deno.serve(async (req) => {
   };
 
   try {
+    // Aynı satın alma (token) başka bir hesaba bağlıysa reddet — bir makbuzun paylaşılarak
+    // birden çok hesabı premium yapmasını önler (DB'deki partial-unique index ikinci savunma).
+    const { data: baskaSahip } = await admin
+      .from('uyelik_haklari')
+      .select('user_id')
+      .eq('satin_alma_token', token)
+      .neq('user_id', user.id)
+      .limit(1)
+      .maybeSingle();
+    if (baskaSahip) {
+      await log('reddedildi', 'token baska hesaba bagli', null);
+      return hata('Bu satın alma başka bir hesaba bağlı', 409);
+    }
+
     const gToken = await googleToken();
     const base = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${PAKET}`;
 
@@ -157,6 +171,6 @@ Deno.serve(async (req) => {
     return new Response(JSON.stringify({ ok: true, premium: true, bitis }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
   } catch (e) {
     await log('hata', e instanceof Error ? e.message : String(e), null);
-    return hata(`Doğrulama hatası: ${e instanceof Error ? e.message : e}`, 500);
+    return hata('Satın alma doğrulanamadı, tekrar dene', 500);
   }
 });

@@ -25,6 +25,12 @@ const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
 const BUCKET = 'icerik';
 const TTL_SN = 900; // 15 dk
 const MAX_YOL = 400; // tek istekte üst sınır (büyük kanun bir çağrıda)
+// KİLİT: '1' ise premium kapısı AKTİF (yalnız hakkı olan premium içerik URL'i alır).
+// Ayarlanmamış/'0' = kapalı → herkes erişir (kapalı test modu; istemci KILIT_AKTIF=false ile hizalı).
+// Kilit açarken: supabase secrets set KILIT_AKTIF=1
+const KILIT = Deno.env.get('KILIT_AKTIF') === '1';
+const UCRETSIZ_KLASOR = ['tck']; // her zaman serbest kanun klasörleri (istemci UCRETSIZ ile hizalı)
+const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
@@ -51,10 +57,21 @@ Deno.serve(async (req) => {
   if (yollar.length > MAX_YOL) return yanit({ hata: `En fazla ${MAX_YOL} yol` }, 400);
   const temiz = yollar.filter((y): y is string => typeof y === 'string' && !y.includes('..'));
 
-  // 3) service_role ile imzalı URL üret (TODO yayın: + premium/entitlement kontrolü RLS'ten)
   const admin = createClient(SUPABASE_URL, SERVICE_KEY);
+
+  // 3) PREMIUM KAPISI (yalnız kilit aktifken): ücretsiz olmayan içerik için hak kontrolü.
+  //    → istemcideki paywall sunucuda karşılık bulur; ödeme duvarı fonksiyon çağrısıyla atlanamaz.
+  if (KILIT && !temiz.every(ucretsizMi)) {
+    const { data: pr } = await admin.rpc('premium_mi', { p_user: user.id });
+    if (!pr) return yanit({ hata: 'Bu içerik için üyelik gerekli' }, 402);
+  }
+
+  // 4) service_role ile imzalı URL üret
   const { data, error } = await admin.storage.from(BUCKET).createSignedUrls(temiz, TTL_SN);
-  if (error) return yanit({ hata: error.message }, 500);
+  if (error) {
+    console.error('createSignedUrls', error.message);
+    return yanit({ hata: 'İçerik hazırlanamadı' }, 500);
+  }
 
   return yanit(data, 200);
 });

@@ -24,6 +24,10 @@ const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY')!;
 const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
 const BUCKET = 'icerik';
+// KİLİT: '1' ise premium kapısı AKTİF (imzali-url ile aynı model). Kilit açarken: secrets set KILIT_AKTIF=1
+const KILIT = Deno.env.get('KILIT_AKTIF') === '1';
+const UCRETSIZ_KLASOR = ['tck'];
+const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 const FONT_URL = 'https://unpkg.com/@expo-google-fonts/inter@0.4.2/400Regular/Inter_400Regular.ttf';
 const FONT_AILESI = 'Inter';
 
@@ -90,6 +94,13 @@ Deno.serve(async (req) => {
   if (!yol || yol.includes('..') || !/\.(webp|png|jpe?g)$/i.test(yol)) return hata('Geçersiz yol', 400);
 
   const admin = createClient(SUPABASE_URL, SERVICE_KEY);
+
+  // PREMIUM KAPISI (yalnız kilit aktifken): ücretsiz olmayan görsel için hak kontrolü.
+  if (KILIT && !ucretsizMi(yol)) {
+    const { data: pr } = await admin.rpc('premium_mi', { p_user: user.id });
+    if (!pr) return hata('Bu içerik için üyelik gerekli', 402);
+  }
+
   const { data: blob, error: iHata } = await admin.storage.from(BUCKET).download(yol);
   if (iHata || !blob) return hata('Görsel bulunamadı', 404);
   const girdi = new Uint8Array(await blob.arrayBuffer());
@@ -120,6 +131,7 @@ Deno.serve(async (req) => {
       headers: { ...CORS, 'Content-Type': 'image/webp', 'Cache-Control': 'no-store' },
     });
   } catch (e) {
-    return hata(`islem: ${e instanceof Error ? e.message : String(e)}`, 500);
+    console.error('gorsel islem', e instanceof Error ? e.message : String(e));
+    return hata('Görsel işlenemedi', 500);
   }
 });
