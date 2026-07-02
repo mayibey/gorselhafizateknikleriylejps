@@ -147,6 +147,48 @@ export function eslesenKartIdleri(kaynak: string, kartlar: readonly EslesmeKart[
   return ids;
 }
 
+/** Bir kartın kapsadığı madde no'ları (kendi madde_no + birleşik/ayırt-özet üyeleri). */
+function kartMaddeNolari(k: { madde_no: string; gorsel_yolu: string | null }): Set<number> {
+  const s = new Set<number>();
+  const mm = k.madde_no.match(/m\.\s*(\d+)/i);
+  if (mm) s.add(parseInt(mm[1], 10));
+  const uyeler = birlesikUyeler(k.gorsel_yolu);
+  if (uyeler) for (const u of uyeler) s.add(u);
+  return s;
+}
+
+/** Teyit-quiz için karttan gereken alanlar (law_id soru registry'sini seçer). */
+export type TeyitKart = { id: number; law_id: number; madde_no: string; gorsel_yolu: string | null };
+
+/**
+ * ZAYIF HAVUZ TEYİDİ (saf): verilen (çalışılmış zayıf) kartların HER BİRİ için, o kartın
+ * maddesine ait BİR soru döndürür → { soru, cardId }. Öz-rapor ("biliyorum") yerine OBJEKTİF
+ * teyit: Etüt sonunda kullanıcı bu soruları çözer; doğru → kart havuzdan çıkışa sayılır.
+ * Kartın maddesine soru yoksa kart atlanır (yalnız çalışma değeri sayılır — mevcut davranış).
+ * Aynı soru iki karta düşmez. `rastgele` enjekte edilebilir (test + çeşitlilik).
+ */
+export function teyitSorulari(
+  kartlar: readonly TeyitKart[],
+  rastgele: () => number = Math.random,
+): { soru: KartSoru; cardId: number }[] {
+  const out: { soru: KartSoru; cardId: number }[] = [];
+  const kullanilmis = new Set<string>();
+  for (const k of kartlar) {
+    const sorular = KART_SORULARI[k.law_id];
+    if (!sorular || sorular.length === 0) continue;
+    const kartNo = kartMaddeNolari(k);
+    if (kartNo.size === 0) continue;
+    const adaylar = sorular.filter(
+      (s) => !kullanilmis.has(s.id) && kaynakMaddeNolari(s.kaynak).some((n) => kartNo.has(n)),
+    );
+    if (adaylar.length === 0) continue;
+    const secili = adaylar[Math.floor(rastgele() * adaylar.length)];
+    kullanilmis.add(secili.id);
+    out.push({ soru: secili, cardId: k.id });
+  }
+  return out;
+}
+
 /** Verilen cevapları puanlar (saf). */
 export function puanlaSinav(
   cevaplar: SinavCevap[],

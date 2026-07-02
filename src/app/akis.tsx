@@ -34,10 +34,11 @@ import {
   getCardsByLaw,
   getDailyQueue,
   getZayifKuyruk,
+  kaydetPerformans,
   recordReview,
 } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
-import { getSinavSorulari, type KartSoru, sinavVarMi } from '@/lib/sinav';
+import { getSinavSorulari, type KartSoru, sinavVarMi, teyitSorulari } from '@/lib/sinav';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -79,6 +80,9 @@ export default function AkisScreen() {
   // Aktif hatırlama: akış bitince yüklenen 2-3 soru + tamamlanma bayrağı.
   const [hatirlaSorular, setHatirlaSorular] = useState<KartSoru[] | null>(null);
   const [hatirlaBitti, setHatirlaBitti] = useState(false);
+  // ZAYIF TEYİDİ: Etüt bitince çalışılan kartların sorularıyla objektif teyit ({soru, cardId}).
+  const [teyitListe, setTeyitListe] = useState<{ soru: KartSoru; cardId: number }[] | null>(null);
+  const [teyitBitti, setTeyitBitti] = useState(false);
   const [cevapHatasi, setCevapHatasi] = useState(false);
   // Sesli anlatım sonuna kadar okununca true → "sıradakine geç" mesajı çıkar.
   const [anlatimBitti, setAnlatimBitti] = useState(false);
@@ -228,6 +232,36 @@ export default function AkisScreen() {
 
   const hatirlaGoster =
     bitti && ogrenmeModu && !hatirlaBitti && !!hatirlaSorular && hatirlaSorular.length > 0;
+
+  // ZAYIF TEYİDİ: Etüt bitince, çalışılan kartların maddelerine ait soruları bir kez üret.
+  // Soru yoksa teyit atlanır (yalnız çalışma değeri sayılır → mevcut davranış).
+  useEffect(() => {
+    if (!bitti || !zayifModu || teyitBitti || teyitListe !== null) return;
+    if (!queue || queue.length === 0) {
+      setTeyitBitti(true);
+      return;
+    }
+    const liste = teyitSorulari(queue);
+    if (liste.length === 0) {
+      setTeyitBitti(true);
+      return;
+    }
+    setTeyitListe(liste);
+  }, [bitti, zayifModu, teyitBitti, teyitListe, queue]);
+
+  const teyitGoster = bitti && zayifModu && !teyitBitti && !!teyitListe && teyitListe.length > 0;
+
+  // Teyit sorusu cevaplanınca: DOĞRU → kart havuz çıkışına ('quiz'/'dogru'), YANLIŞ → havuzda
+  // kalır ('quiz'/'yanlis'). Öz-rapor "biliyorum" tek başına yetmez; objektif teyit belirler.
+  async function teyitSonuc(soruId: string, dogruMu: boolean) {
+    const t = teyitListe?.find((x) => x.soru.id === soruId);
+    if (!t) return;
+    try {
+      await kaydetPerformans(t.cardId, 'quiz', dogruMu ? 'dogru' : 'yanlis');
+    } catch {
+      // sessiz geç (teyit kaydı başarısızsa akış kesilmesin)
+    }
+  }
   // Patika/kanun modunda geri = patika (Mevzuat → patika → akış); günlükte Karargah.
   const geriEtiket = tekKanun ? 'Geri dön' : "Karargah'a dön";
   const ozetMetin = tekKanun
@@ -335,6 +369,18 @@ export default function AkisScreen() {
                   : 'Bugün için vakti gelmiş kart yok.'
             }
             buton={{ etiket: geriEtiket, onPress: () => router.back() }}
+          />
+        </View>
+      ) : bitti && teyitGoster ? (
+        // Zayıf Etüt bitti → OBJEKTİF TEYİT: çalıştığın kartların sorularını çöz. Doğru → kart
+        // havuzdan çıkar, yanlış → kalır ("biliyorum" tek başına yetmez).
+        <View style={styles.durumKolon}>
+          <HatirlaQuiz
+            sorular={teyitListe!.map((t) => t.soru)}
+            baslik="TEYİT"
+            altyazi="Çalıştığın mevzileri gerçekten öğrendin mi? Doğru çözersen mevzi kapanır."
+            onSonuc={(soruId, dogruMu) => void teyitSonuc(soruId, dogruMu)}
+            onTamamla={() => setTeyitBitti(true)}
           />
         </View>
       ) : bitti && hatirlaGoster ? (

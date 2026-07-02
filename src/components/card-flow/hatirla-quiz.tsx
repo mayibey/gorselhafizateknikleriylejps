@@ -12,7 +12,20 @@ import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { KartSoru } from '@/lib/sinav';
 
-export function HatirlaQuiz({ sorular, onTamamla }: { sorular: KartSoru[]; onTamamla: () => void }) {
+export function HatirlaQuiz({
+  sorular,
+  onTamamla,
+  onSonuc,
+  baslik = 'HATIRLAMA',
+  altyazi = 'Çalıştıklarını pekiştir — önce aklında canlandır, sonra işaretle.',
+}: {
+  sorular: KartSoru[];
+  onTamamla: () => void;
+  /** Her soru cevaplanınca sonucu bildirir (teyit modunda havuz çıkışını besler). */
+  onSonuc?: (soruId: string, dogruMu: boolean) => void;
+  baslik?: string;
+  altyazi?: string;
+}) {
   const [index, setIndex] = useState(0);
   const [secilen, setSecilen] = useState<number | null>(null);
   const soru = sorular[index];
@@ -21,6 +34,7 @@ export function HatirlaQuiz({ sorular, onTamamla }: { sorular: KartSoru[]; onTam
   function sec(i: number) {
     if (secilen !== null) return;
     setSecilen(i);
+    onSonuc?.(soru.id, i === soru.dogru);
   }
   function ilerle() {
     if (sonMu) {
@@ -36,11 +50,11 @@ export function HatirlaQuiz({ sorular, onTamamla }: { sorular: KartSoru[]; onTam
       <View style={styles.ust}>
         <MaterialCommunityIcons name="brain" size={18} color={Palette.altinKoyu} />
         <AppText variant="etiket" bold color="altinMetin">
-          HATIRLAMA · {index + 1}/{sorular.length}
+          {baslik} · {index + 1}/{sorular.length}
         </AppText>
       </View>
       <AppText variant="kucuk" color="solukMetin">
-        Çalıştıklarını pekiştir — önce aklında canlandır, sonra işaretle.
+        {altyazi}
       </AppText>
 
       {soru.kaynak ? (
