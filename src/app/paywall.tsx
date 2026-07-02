@@ -57,7 +57,7 @@ const KATEGORILER: Kategori[] = [
   {
     slug: 'brans',
     ad: 'Branş Konuları',
-    aciklama: 'Seçtiğin branşa özel mevzuat ve denemeler (yakında genişliyor).',
+    aciklama: 'Seçtiğin branşa özel mevzuat ve denemeler ÇOK YAKINDA. Şimdi alırsan %50 indirimli — yayına gelince tam fiyattan satışta.',
     ikon: 'medal-outline',
     yillik: URUN_BRANS_YILLIK,
     omurboyu: URUN_BRANS_OMURBOYU,

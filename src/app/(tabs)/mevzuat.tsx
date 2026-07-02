@@ -206,8 +206,8 @@ export default function MevzuatScreen() {
       {blok === 'brans' ? (
         <Yakinda
           ikon="shield-star-outline"
-          baslik="Branş eğitimi yolda"
-          aciklama="Jandarma ve Sahil Güvenlik'e özel mevzuat içeriği hazırlanıyor. Şimdilik müşterek kanunlardan çalışmaya devam et."
+          baslik="Branş eğitimi ÇOK YAKINDA"
+          aciklama="Branşına özel mevzuat ve denemeler hazırlanıyor. Şimdi katılanlara özel %50 indirim — yayına gelince tam fiyattan satışta olacak. Şimdilik müşterek kanunlardan çalışmaya devam et."
         />
       ) : (
         <>

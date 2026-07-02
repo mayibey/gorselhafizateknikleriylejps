@@ -25,8 +25,10 @@ export const BRANS_URUNLERI = [URUN_BRANS_YILLIK, URUN_BRANS_OMURBOYU];
  *  - `true`  → ödeme kilidi devrede: TCK + denemesi ücretsiz, gerisi ilgili hakka bağlı.
  * `kanunErisilebilir` bunu ilk satırda kontrol eder → tüm ekranlar tek yerden açılıp kapanır.
  * NOT: Bunu değiştirmek yeni derleme (build) gerektirir; test edenlere ancak yeni sürümle yansır.
+ * ⚠️ true (3 Tem, final): TCK+denemesi ücretsiz, gerisi ödeme ister. Testerların erişmesi için
+ *    Play'de ürünlerin OLUŞTURULMUŞ + ödeme profilinin DOĞRULANMIŞ olması ŞART (yoksa TCK hariç kilitli).
  */
-export const KILIT_AKTIF = false;
+export const KILIT_AKTIF = true;
 
 /** ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. Sadece TCK (ilk müşterek konu) + denemesi. */
 export const UCRETSIZ_KANUNLAR = ['tck'];
