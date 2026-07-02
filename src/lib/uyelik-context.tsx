@@ -15,13 +15,17 @@ import {
 } from '@/constants/urunler';
 import { supabase } from '@/lib/supabase';
 
-type Haklar = { musterek: boolean; brans: boolean };
+/** Aktif bir satın alma hakkı (kart/taç gösterimi için). */
+export type HakSatir = { urun: string; tip: 'omurboyu' | 'abonelik'; bitis: string | null };
+type Haklar = { musterek: boolean; brans: boolean; liste: HakSatir[] };
 
 type UyelikContextDeger = {
   musterek: boolean;
   brans: boolean;
   /** Herhangi bir premium hak var mı (müşterek veya branş). */
   premium: boolean;
+  /** Kullanıcının AKTİF satın alma hakları (Üyeliğim kartı + taç için). */
+  aktifHaklar: HakSatir[];
   yukleniyor: boolean;
   yenile: () => Promise<void>;
   /** Bir kanun açık mı: TCK ücretsiz · müşterek bloğu müşterek hakkına · branş bloğu branş hakkına bağlı. */
@@ -31,7 +35,7 @@ type UyelikContextDeger = {
 const UyelikCtx = createContext<UyelikContextDeger | null>(null);
 
 async function haklariOku(): Promise<Haklar> {
-  const bos = { musterek: false, brans: false };
+  const bos: Haklar = { musterek: false, brans: false, liste: [] };
   if (!supabase) return bos;
   const {
     data: { user },
@@ -44,20 +48,24 @@ async function haklariOku(): Promise<Haklar> {
     h.tip === 'omurboyu' || (h.tip === 'abonelik' && h.bitis != null && new Date(h.bitis).getTime() > simdi);
   let musterek = false;
   let brans = false;
+  const liste: HakSatir[] = [];
   for (const h of data as { urun: string; tip: string; bitis: string | null }[]) {
     if (!aktif(h)) continue;
     if (MUSTEREK_URUNLERI.includes(h.urun)) musterek = true;
     if (BRANS_URUNLERI.includes(h.urun)) brans = true;
+    liste.push({ urun: h.urun, tip: h.tip === 'abonelik' ? 'abonelik' : 'omurboyu', bitis: h.bitis });
   }
-  return { musterek, brans };
+  return { musterek, brans, liste };
 }
 
 export function UyelikProvider({ children }: { children: ReactNode }) {
-  const [haklar, setHaklar] = useState<Haklar>({ musterek: false, brans: false });
+  const [haklar, setHaklar] = useState<Haklar>({ musterek: false, brans: false, liste: [] });
   const [yukleniyor, setYukleniyor] = useState(true);
 
   const yenile = async () => {
-    const h = await haklariOku().catch(() => ({ musterek: false, brans: false }));
+    const h = await haklariOku().catch(
+      () => ({ musterek: false, brans: false, liste: [] }) as Haklar,
+    );
     setHaklar(h);
     setYukleniyor(false);
   };
@@ -82,6 +90,7 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
         musterek: haklar.musterek,
         brans: haklar.brans,
         premium: haklar.musterek || haklar.brans,
+        aktifHaklar: haklar.liste,
         yukleniyor,
         yenile,
         kanunErisilebilir,

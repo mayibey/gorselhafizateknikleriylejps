@@ -29,6 +29,7 @@ import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
+import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
 
 type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet };
 type SicilVeri = { kayitlar: SicilKaydi[]; durum: GeriBesDurum };
@@ -109,6 +110,9 @@ export default function SicilScreen() {
       </Pressable>
 
       <KisiselBilgiler />
+
+      {/* Premium'sa "Üyeliğim" kartı (aktif paketler) — değilse görünmez. */}
+      <UyelikKarti />
 
       {hata ? (
         <EmptyState

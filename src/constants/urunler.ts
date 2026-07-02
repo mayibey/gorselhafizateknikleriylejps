@@ -40,3 +40,16 @@ export function ucretsizKanun(klasor: string | null | undefined): boolean {
 export function musterekBlokMu(blok: string | null | undefined): boolean {
   return (blok ?? '').toLocaleLowerCase('tr') === 'müşterek';
 }
+
+/** Ürün ID → okunabilir kategori/tip (Üyeliğim kartı + taç etiketi için). Bilinmeyen ürün → null. */
+export type UrunBilgi = { kategori: 'Müşterek' | 'Branş'; tip: 'Ömür boyu' | 'Yıllık'; ad: string };
+export function urunBilgi(urun: string): UrunBilgi | null {
+  const kategori = MUSTEREK_URUNLERI.includes(urun)
+    ? 'Müşterek'
+    : BRANS_URUNLERI.includes(urun)
+      ? 'Branş'
+      : null;
+  if (!kategori) return null;
+  const tip = ABONELIK_URUNLERI.includes(urun) ? 'Yıllık' : 'Ömür boyu';
+  return { kategori, tip, ad: `${kategori} · ${tip}` };
+}

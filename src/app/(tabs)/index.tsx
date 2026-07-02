@@ -24,6 +24,7 @@ import { maddeEtiket } from '@/lib/madde-etiket';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
+import { UyelikTaci } from '@/components/premium/uyelik-rozeti';
 
 // Metalik-ish altın gradyan (açık → ana → koyu altın). Play diski + geri besleme diski.
 const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as const;
@@ -232,6 +233,8 @@ export default function KarargahScreen() {
       title="Karargah"
       headerSag={
         <View style={styles.headerIkonlar}>
+          {/* Premium'sa altın taç (dokununca Üyelik ekranı) — premium değilse görünmez. */}
+          <UyelikTaci boyut={18} />
           <Pressable
             onPress={() => router.push('/egitim-plani')}
             hitSlop={10}

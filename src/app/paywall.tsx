@@ -14,7 +14,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { type Purchase, useIAP } from 'expo-iap';
+import { getAvailablePurchases, type Purchase, useIAP } from 'expo-iap';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Platform, Pressable, StyleSheet, View } from 'react-native';
 
@@ -103,7 +103,7 @@ function PaywallIcerik() {
   const [durum, setDurum] = useState<'dogrulaniyor' | null>(null);
   const [mesaj, setMesaj] = useState<{ tip: 'basari' | 'hata'; metin: string } | null>(null);
 
-  const { connected, products, subscriptions, fetchProducts, requestPurchase, finishTransaction, restorePurchases } =
+  const { connected, products, subscriptions, fetchProducts, requestPurchase, finishTransaction } =
     useIAP({
       onPurchaseSuccess: (purchase) => {
         void tamamla(purchase);
@@ -192,9 +192,32 @@ function PaywallIcerik() {
     setMesaj(null);
     setDurum('dogrulaniyor');
     try {
-      await restorePurchases();
+      // Play'deki mevcut satın almaları çek → HER BİRİNİ SUNUCUDA yeniden doğrula (hak yaz).
+      // (restorePurchases yalnız native liste getiriyordu, sunucuya doğrulatmıyordu → hak yazılmıyordu.)
+      const alinmis = await getAvailablePurchases();
+      let dogrulandi = 0;
+      for (const p of alinmis) {
+        const token = p.purchaseToken ?? '';
+        if (!token) continue;
+        try {
+          const sonuc = await satinAlmaDogrula(p.productId, token);
+          if (sonuc.ok) {
+            dogrulandi++;
+            await finishTransaction({ purchase: p, isConsumable: false }).catch(() => {});
+          }
+        } catch {
+          // bu ürün doğrulanamadı → diğerlerine devam
+        }
+      }
       await yenile();
-      setMesaj({ tip: 'basari', metin: 'Erişim bilgilerin yenilendi.' });
+      setMesaj(
+        dogrulandi > 0
+          ? { tip: 'basari', metin: 'Satın alımların doğrulandı — erişimin açıldı.' }
+          : {
+              tip: 'hata',
+              metin: 'Aktif satın alma bulunamadı. Ödeme yaptıysan birkaç dakika sonra tekrar dene.',
+            },
+      );
     } catch {
       setMesaj({ tip: 'hata', metin: 'Yenileme başarısız. İnternetini kontrol et.' });
     } finally {
