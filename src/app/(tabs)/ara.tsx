@@ -55,7 +55,6 @@ const ORNEKLER = ['kast', 'TCK 318'];
 // Sık açılan mevzuatlar — SABİT curated law_id; ad getLaws'tan (yoksa fb gerçek isim).
 const SIK_ACILAN: { id: number; kisa: string; fb: string }[] = [
   { id: 1, kisa: 'TCK', fb: '5237 sayılı Türk Ceza Kanunu' },
-  { id: 26, kisa: 'CMK', fb: '5271 sayılı Ceza Muhakemesi Kanunu' },
   { id: 12, kisa: 'Disiplin', fb: '7068 sayılı Genel Kolluk Disiplin Hükümleri Kanunu' },
   { id: 2, kisa: 'Jandarma', fb: '2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu' },
   { id: 25, kisa: 'Silahlar', fb: '6136 sayılı Ateşli Silahlar ve Bıçaklar Kanunu' },

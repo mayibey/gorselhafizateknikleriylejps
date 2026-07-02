@@ -68,7 +68,7 @@ function SinavGeriSayim() {
   return (
     <View style={styles.geriSayim}>
       <AppText variant="etiket" bold color="altinAcik2" style={styles.geriSayimUst}>
-        JSPS SINAVINA KALAN
+        JSPS SINAVINA KALAN (TAHMİNİ)
       </AppText>
       <View style={styles.geriSayimSatir}>
         <GsBlok deger={String(gun)} etiket="GÜN" />

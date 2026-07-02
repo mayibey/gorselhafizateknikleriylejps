@@ -7,7 +7,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { type BildirimAyar, getAyar, planla, setAyar, testBildirimi } from '@/lib/bildirim';
+import { type BildirimAyar, getAyar, planla, setAyar } from '@/lib/bildirim';
 
 const pad = (n: number) => n.toString().padStart(2, '0');
 const ssMM = (saat: number, dakika: number) => `${pad(saat)}:${pad(dakika)}`;
@@ -49,20 +49,6 @@ export default function EgitimPlaniScreen() {
     );
   }
 
-  async function testEt() {
-    setDurum(null);
-    const sonuc = await testBildirimi();
-    setIzinYok(sonuc === 'izin-yok');
-    setDurum(
-      sonuc === 'ok'
-        ? 'Test bildirimi ~5 saniye içinde düşecek 🔔 (uygulamayı arkaya alıp bekleyebilirsin).'
-        : sonuc === 'izin-yok'
-          ? 'Bildirim izni verilmedi — izin verince tekrar dene.'
-          : sonuc === 'web'
-            ? 'Test yalnız telefonda (Expo Go / build) çalışır.'
-            : 'Test başarısız, tekrar dene.',
-    );
-  }
 
   if (!ayar) {
     return (
@@ -181,14 +167,6 @@ export default function EgitimPlaniScreen() {
         </AppText>
       </Pressable>
 
-      <Pressable
-        style={({ pressed }) => [styles.testBtn, pressed && styles.pressed]}
-        onPress={() => void testEt()}>
-        <MaterialCommunityIcons name="bell-ring-outline" size={18} color={Palette.lacivert} />
-        <AppText variant="kucuk" color="lacivert" bold>
-          Test bildirimi gönder (5 sn)
-        </AppText>
-      </Pressable>
     </Screen>
   );
 }
