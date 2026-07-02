@@ -51,7 +51,10 @@ export function AuthEkrani() {
 
   const kayitMi = mod === 'kayit';
 
+  const RIZA_UYARI = 'Devam etmek için Kullanım Şartları ve Gizlilik Politikası’nı kabul et.';
+
   async function google() {
+    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
     setMesaj(null);
     setMesgul(true);
     try {
@@ -64,6 +67,7 @@ export function AuthEkrani() {
   }
 
   function apple() {
+    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
     setMesaj({ tip: 'bilgi', metin: 'Apple ile giriş iOS sürümünde aktifleşecek.' });
   }
 
@@ -72,11 +76,11 @@ export function AuthEkrani() {
       setMesaj({ tip: 'hata', metin: 'E-posta ve şifre gir.' });
       return;
     }
+    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
     if (kayitMi) {
       const dHata = epostaHatasi(eposta) ?? sifreHatasi(sifre);
       if (dHata) return setMesaj({ tip: 'hata', metin: dHata });
       if (sifre !== sifreTekrar) return setMesaj({ tip: 'hata', metin: 'Şifreler aynı değil.' });
-      if (!sartlar) return setMesaj({ tip: 'hata', metin: 'Şartları kabul etmen gerekiyor.' });
     }
     setMesaj(null);
     setMesgul(true);
@@ -189,25 +193,28 @@ export function AuthEkrani() {
             </Pressable>
           )}
 
-          {kayitMi ? (
-            <Pressable style={styles.sartSatir} onPress={() => setSartlar((s) => !s)}>
-              <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
-                {sartlar ? (
-                  <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} />
-                ) : null}
-              </View>
-              <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
-                <AppText
-                  variant="etiket"
-                  color="lacivert"
-                  bold
-                  onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
-                  Kullanım Şartları ve Gizlilik Politikası
-                </AppText>
-                'nı okudum, kabul ediyorum.
+          <Pressable
+            style={styles.sartSatir}
+            onPress={() => setSartlar((s) => !s)}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: sartlar }}
+            accessibilityLabel="Kullanım Şartları ve Gizlilik Politikası'nı kabul ediyorum">
+            <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
+              {sartlar ? (
+                <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} />
+              ) : null}
+            </View>
+            <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
+              <AppText
+                variant="etiket"
+                color="lacivert"
+                bold
+                onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
+                Kullanım Şartları ve Gizlilik Politikası
               </AppText>
-            </Pressable>
-          ) : null}
+              'nı okudum, kabul ediyorum.
+            </AppText>
+          </Pressable>
 
           <AnaButon
             etiket={kayitMi ? 'Devam et' : 'Giriş yap'}

@@ -40,21 +40,33 @@ resmî mevzuatta güncel kaynak esastır.
 - Kullanıcı içeriği (sohbet/UGC) **YOK**, çevrimiçi etkileşim **YOK** → düşük derece (genelde
   **Herkes / 3+**). Ankette "kullanıcılar arası iletişim" sorularına **HAYIR** işaretle.
 
-## Veri toplama beyanı (Google Data Safety) — özet
-| Veri | Toplanıyor/Paylaşılıyor mu | Amaç | Kimlikle bağlı |
+## Veri toplama beyanı (Google Data Safety) — GÜNCEL (2 Tem 2026)
+> ⚠️ DİKKAT: Bu bölüm 2 Tem 2026'da düzeltildi. Uygulama artık hesap açıyor ve VERİ TOPLUYOR.
+> Formun ilk sorusuna **"Evet, veri topluyor/paylaşıyor"** işaretle. Eski "veri toplamıyor" beyanı GEÇERSİZ.
+
+**Genel:** Aktarımda şifreli = **Evet** · Kullanıcı silme talep edebilir = **Evet** (uygulama içi 30 gün + iletisim@) · İzleme (tracking) = **Hayır**
+
+| Veri türü | Toplanıyor | Kimliğe bağlı | Amaç |
 |---|---|---|---|
-| Hesap/e-posta/şifre | **Hayır** (hesap yok) | — | — |
-| Kullanıcı içeriği (mesaj) | **Hayır** (sohbet yok) | — | — |
-| Çalışma verisi | **Hayır** (yalnız cihazda) | — | — |
-| Cihaz tanımlayıcı (filigran) | **Hayır** (cihazda kalır, paylaşılmaz) | Güvenlik | — |
-| Geri bildirim (opsiyonel) | Sadece kullanıcı gönderirse → Formspree'ye | Destek | Hayır |
-- Reklam **YOK**, izleme (tracking) **YOK**, konum **YOK**.
-- Data Safety formunda muhtemel sonuç: **"Bu uygulama veri toplamıyor"** (geri bildirim akışı
-  yalnız kullanıcı isteğiyle ve opsiyonel olduğundan; emin değilsen "Uygulama etkinliği →
-  diğer kullanıcı tarafından başlatılan" olarak beyan et).
+| E-posta adresi | Evet | Evet | Hesap yönetimi, uygulama işlevi |
+| Ad (ad + soyad) | Evet | Evet | Uygulama işlevi (Takdir Belgesi kişiselleştirme) |
+| Telefon numarası | Evet | Evet | Hesap yönetimi |
+| Kullanıcı kimliği (hesap no) | Evet | Evet | Hesap yönetimi |
+| Doğum tarihi (diğer bilgi) | Evet | Evet | Uygulama işlevi (18+ doğrulama) |
+| Cinsiyet (diğer bilgi) | Evet | Evet | Uygulama işlevi |
+| Uygulama etkinliği / ilerleme | Evet | Evet | Uygulama işlevi, kişiselleştirme |
+| Satın alma geçmişi (finansal) | Evet | Evet | Uygulama işlevi (IAP; kart/banka verisi Google'da) |
+| IP adresi / günlük (diğer) | Evet | Evet | Güvenlik, kötüye kullanımı önleme |
+| Geri bildirim mesajı (UGC) | Yalnız gönderilirse | Evet | Destek |
+
+- **Paylaşım (3. taraf):** Google/Supabase/Cloudflare = **işleyen (processor)** → Play tanımında "paylaşım" DEĞİL, "toplama" altında kalır. (Formspree endpoint'i şu an boş; ileride açılırsa geri bildirim "3. tarafla paylaşılıyor" olur.)
+- **"Hayır" işaretlenecekler:** Konum, kişiler, takvim, kamera/mikrofon, reklam kimliği, sağlık/fitness.
+- **Push token:** şu an üretilmiyor/gönderilmiyor (yalnız lokal bildirim) → beyan etme. v2'de FCM açılırsa "Cihaz kimlikleri" ekle.
+- **İçerik derecesi anketi:** kullanıcılar arası iletişim/UGC paylaşımı **YOK** (geri bildirim tek yönlü) → o sorulara Hayır; ama "kişisel veri topluyor mu?" → **Evet**.
 
 ## Gerekli ekstra (review için)
-- **Gizlilik Politikası URL'si** (docs/GIZLILIK_POLITIKASI.md'yi yayınla → `config.ts > GIZLILIK_URL`)
-- **Destek e-postası / URL**
+- **Gizlilik Politikası URL'si:** `docs/index.html` yayında (GitHub Pages) → Play Console'a + `config.ts > GIZLILIK_URL`'e yaz.
+- **Destek e-postası:** iletisim@mevzujsps.com
 - Ekran görüntüleri: Android telefon (zorunlu) + 7"/10" tablet (önerilir) · Feature graphic (1024×500, zorunlu)
-- Demo hesap **GEREKMEZ** (hesap yok). Hesap silme web yolu **GEREKMEZ** (hesap yok).
+- **Demo hesap GEREKLİ** (giriş zorunlu) — inceleme için test hesabı bilgisi ver (örn. android.test@mevzujsps.com).
+- **Hesap silme web yolu GEREKLİ:** `docs/hesap-sil.html` yayında → Play "hesap silme URL"si olarak ver.

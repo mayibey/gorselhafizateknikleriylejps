@@ -31,7 +31,7 @@
 <div class="wrap">
   <header>
     <h1>MEVZU-JSPS — Gizlilik Politikası</h1>
-    <div class="tarih">Son güncelleme: 16 Haziran 2026</div>
+    <div class="tarih">Son güncelleme: 2 Temmuz 2026</div>
   </header>
 
   <div class="sorumlu">
@@ -42,14 +42,20 @@
   <p>MEVZU-JSPS (“Uygulama”) olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
   işlediğimizi ve haklarını açıklar.</p>
 
-  <p><strong>Önemli:</strong> Uygulamayı kullanmak için <strong>Google (Gmail) ile giriş</strong> gerekir.
-  Girişte e-posta adresin ve hesap kimliğin işlenir. Çalışma verilerin cihazında tutulur ve hesabınla
-  buluta yedeklenir. Reklam/izleme yok.</p>
+  <p><strong>Önemli:</strong> Uygulamayı kullanmak için hesap açman gerekir; <strong>e-posta/şifre
+  ile veya Google (Gmail) hesabıyla</strong> giriş yapabilirsin. Girişte e-posta adresin ve hesap
+  kimliğin işlenir; ayrıca üyelik için ad, soyad, telefon, doğum tarihi ve cinsiyet bilgin alınır.
+  Çalışma verilerin cihazında tutulur ve hesabınla buluta yedeklenir. Reklam/izleme yok.</p>
 
   <h2>1. İşlediğimiz veriler</h2>
   <ul>
-    <li><strong>Hesap verisi:</strong> Google ile giriş zorunlu olduğundan e-posta adresin ve hesap
-      kimliğin (kullanıcı no) işlenir ve hesabına bağlanır.</li>
+    <li><strong>Hesap verisi:</strong> e-posta/şifre ile veya Google hesabıyla giriş yapabilirsin;
+      e-posta adresin ve hesap kimliğin (kullanıcı no) işlenir ve hesabına bağlanır. E-posta/şifre ile
+      kayıt olursan şifren, kimlik doğrulama altyapımız Supabase’de <strong>güvenli biçimde (hash’lenerek)</strong>
+      saklanır; şifreni biz göremeyiz.</li>
+    <li><strong>Profil verisi:</strong> adın, soyadın, telefon numaran, doğum tarihin ve cinsiyetin —
+      üyelik, <strong>yaş doğrulaması (18+)</strong> ve Takdir Belgesi kişiselleştirmesi için işlenir ve
+      hesabına bağlı olarak buluta yazılır.</li>
     <li><strong>Çalışma verileri:</strong> ilerlemen, tekrar kayıtların, branş/rütbe seçimin ve sicilin
       cihazının yerel veritabanında tutulur <strong>ve hesabınla buluta (Supabase, AB/Frankfurt)
       yedeklenir</strong> → cihaz değiştirsen kaybolmaz.</li>
@@ -57,11 +63,15 @@
       internet üzerinden indirilir; indirilen görseller cihazında <strong>şifreli (AES-256)</strong> saklanır.</li>
     <li><strong>İçerik güvenliği (filigran):</strong> içerik korsanlığına karşı, kart görseline hesabının
       e-posta adresi soluk biçimde basılır (yalnız senin gördüğün ekranda).</li>
-    <li><strong>Geri bildirim (yalnız sen gönderirsen):</strong> mesajın + ilgili kart bilgisi üçüncü
-      taraf form servisine (Formspree) iletilir.</li>
+    <li><strong>Satın alma:</strong> üyelik satın alırsan, satın alma Google Play üzerinden alınır ve
+      hesabına bağlanır (kart/banka bilgin Google’da işlenir, bize ulaşmaz).</li>
+    <li><strong>Geri bildirim (yalnız sen gönderirsen):</strong> mesajın + ilgili kart bilgisi veri
+      tabanımıza (Supabase) kaydedilir.</li>
+    <li><strong>Ağ:</strong> içerik ve giriş sunucularımıza bağlanırken IP adresin ilgili sunucuya ulaşır
+      (standart ağ isteği; güvenlik ve kötüye kullanımı önleme amacıyla).</li>
   </ul>
-  <p>Şifre saklamıyoruz (giriş Google üzerinden). Reklam kimliği, konum, rehber, mikrofon/kamera verisi
-  <strong>toplamıyoruz</strong>. Reklam ağı ve izleme (tracking) <strong>yok</strong>.</p>
+  <p>Reklam kimliği, konum, rehber, mikrofon/kamera verisi <strong>toplamıyoruz</strong>. Reklam ağı ve
+  izleme (tracking) <strong>yok</strong>.</p>
 
   <h2>2. İşleme amaçları ve hukuki sebepler (KVKK m.5)</h2>
   <ul>
@@ -76,9 +86,10 @@
       sağlayıcısı <strong>Google</strong> tarafından işlenir.</li>
     <li>Kart içeriği (görseller) içerik sunucularımızdan (<strong>Cloudflare R2 / Supabase Storage</strong>)
       internet üzerinden indirilir; bu sırada IP adresin ilgili sunucuya ulaşır (standart ağ isteği).</li>
-    <li>Geri bildirim gönderirsen mesajın <strong>Formspree</strong>’ye iletilir.</li>
-    <li>Bu servislerin sunucuları <strong>yurt dışında</strong> olduğundan, giriş yaparak verinin yurt
-      dışına aktarılmasına <strong>açık rıza</strong> vermiş olursun.</li>
+    <li>Geri bildirim gönderirsen mesajın veri tabanımıza (<strong>Supabase</strong>) kaydedilir.</li>
+    <li>Bu servislerin sunucuları <strong>yurt dışında</strong> olduğundan, kayıt/giriş sırasında
+      Kullanım Şartları ve Gizlilik Politikası’nı <strong>onaylayarak</strong> verinin yurt dışına
+      aktarılmasına <strong>açık rıza</strong> vermiş olursun.</li>
     <li>Verini satmıyor, pazarlama için paylaşmıyoruz. Yasal zorunluluk halinde yetkili makamlarla
       paylaşım saklıdır.</li>
   </ul>
@@ -103,8 +114,9 @@
       ayarlarından temizleyerek) silebilirsin.</li>
   </ul>
 
-  <h2>7. Çocuklar</h2>
-  <p>Uygulama belirlenen yaş altına yönelik değildir.</p>
+  <h2>7. Yaş sınırı</h2>
+  <p>Bu uygulamayı kullanmak ve üye olmak için <strong>en az 18 yaşında</strong> olmalısın. Kayıt
+  sırasında doğum tarihin bu şart için doğrulanır; 18 yaş altına yönelik değildir.</p>
 
   <h2>8. Güvenlik</h2>
   <p>Çalışma verin cihazında, hesap verin ise güvenli kimlik-doğrulama altyapımızda (Supabase) tutulur.
