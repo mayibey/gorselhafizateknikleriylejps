@@ -43,7 +43,12 @@ export function KanunIndirButon({
 
   if (durum === 'indirildi') {
     return (
-      <Pressable style={[styles.kutu, styles.indirildi]} onPress={dur(onSil)} hitSlop={6}>
+      <Pressable
+        style={[styles.kutu, styles.indirildi]}
+        onPress={dur(onSil)}
+        hitSlop={10}
+        accessibilityRole="button"
+        accessibilityLabel="İndirileni sil">
         <MaterialCommunityIcons name="check-circle" size={16} color={Palette.yesil} />
         <AppText variant="etiket" bold color="yesil">
           İndirildi
@@ -54,7 +59,12 @@ export function KanunIndirButon({
   }
 
   return (
-    <Pressable style={[styles.kutu, styles.indir]} onPress={dur(onIndir)} hitSlop={6}>
+    <Pressable
+      style={[styles.kutu, styles.indir]}
+      onPress={dur(onIndir)}
+      hitSlop={10}
+      accessibilityRole="button"
+      accessibilityLabel="Kanunu indir">
       <MaterialCommunityIcons name="download" size={16} color={Palette.lacivert} />
       <AppText variant="etiket" bold color="lacivert">
         İndir

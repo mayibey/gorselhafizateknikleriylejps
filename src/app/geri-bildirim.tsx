@@ -98,7 +98,11 @@ export default function GeriBildirimScreen() {
             <Pressable
               key={t.key}
               onPress={() => setTip(t.key)}
-              style={[styles.tip, secili && styles.tipSecili]}>
+              style={[styles.tip, secili && styles.tipSecili]}
+              hitSlop={8}
+              accessibilityRole="button"
+              accessibilityState={{ selected: secili }}
+              accessibilityLabel={t.ad}>
               <AppText variant="kucuk" color={secili ? 'beyaz' : 'lacivert'} bold>
                 {t.ad}
               </AppText>

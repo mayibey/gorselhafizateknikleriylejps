@@ -11,7 +11,11 @@ import { Palette } from '@/constants/theme';
 export function DekoratifArkaplan() {
   const { width, height } = useWindowDimensions();
   return (
-    <View style={StyleSheet.absoluteFill} pointerEvents="none">
+    <View
+      style={StyleSheet.absoluteFill}
+      pointerEvents="none"
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants">
       <Svg width={width} height={height}>
         {/* Sol üst yumuşak altın blob */}
         <Circle cx={-10} cy={70} r={110} fill={Palette.altinSolukYuzey} opacity={0.4} />

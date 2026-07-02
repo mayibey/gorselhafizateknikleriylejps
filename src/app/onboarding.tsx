@@ -175,7 +175,7 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
       await setRutbe(rutbe);
       onTamam();
     } catch (e) {
-      setHata(e instanceof Error ? e.message : 'Kaydedilemedi, tekrar dene.');
+      setHata(__DEV__ && e instanceof Error ? e.message : 'Kaydedilemedi. İnternet bağlantını kontrol edip tekrar dene.');
     } finally {
       setMesgul(false);
     }
@@ -325,7 +325,7 @@ function GorevAdim() {
       await setRutbe(rutbe);
       // Kaydedince context güncellenir → OnboardingScreen boş adımı bırakır, gate ana ekrana atar.
     } catch (e) {
-      setHata(e instanceof Error ? e.message : 'Kaydedilemedi, tekrar dene.');
+      setHata(__DEV__ && e instanceof Error ? e.message : 'Kaydedilemedi. İnternet bağlantını kontrol edip tekrar dene.');
     } finally {
       setMesgul(false);
     }

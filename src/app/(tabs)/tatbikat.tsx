@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
@@ -134,7 +135,7 @@ export default function TatbikatScreen() {
           buton={{ etiket: 'Tekrar dene', onPress: yukle }}
         />
       ) : laws === null ? (
-        <DurumKutu ikon="clipboard-text-clock-outline" baslik="Yükleniyor…" aciklama="" />
+        <Loading metin="Yükleniyor…" />
       ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">

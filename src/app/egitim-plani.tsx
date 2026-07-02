@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Pressable, StyleSheet, Switch, View } from 'react-native';
+import { Linking, Pressable, StyleSheet, Switch, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
@@ -16,6 +16,7 @@ export default function EgitimPlaniScreen() {
   const router = useRouter();
   const [ayar, setAyarState] = useState<BildirimAyar | null>(null);
   const [durum, setDurum] = useState<string | null>(null);
+  const [izinYok, setIzinYok] = useState(false);
   const [kaydediyor, setKaydediyor] = useState(false);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ export default function EgitimPlaniScreen() {
     await setAyar(ayar);
     const sonuc = await planla(ayar);
     setKaydediyor(false);
+    setIzinYok(sonuc === 'izin-yok');
     setDurum(
       sonuc === 'ok'
         ? ayar.aktif
@@ -50,6 +52,7 @@ export default function EgitimPlaniScreen() {
   async function testEt() {
     setDurum(null);
     const sonuc = await testBildirimi();
+    setIzinYok(sonuc === 'izin-yok');
     setDurum(
       sonuc === 'ok'
         ? 'Test bildirimi ~5 saniye içinde düşecek 🔔 (uygulamayı arkaya alıp bekleyebilirsin).'
@@ -86,6 +89,7 @@ export default function EgitimPlaniScreen() {
             onValueChange={(v) => guncelle({ aktif: v })}
             trackColor={{ true: Palette.lacivert, false: Palette.kenarlik }}
             thumbColor={Palette.beyaz}
+            accessibilityLabel="Bildirimleri aç/kapat"
           />
         </View>
       </View>
@@ -124,6 +128,7 @@ export default function EgitimPlaniScreen() {
             onValueChange={(v) => guncelle({ firsatAktif: v })}
             trackColor={{ true: Palette.lacivert, false: Palette.kenarlik }}
             thumbColor={Palette.beyaz}
+            accessibilityLabel="Fırsat eğitimini aç/kapat"
           />
         </View>
       </View>
@@ -141,6 +146,7 @@ export default function EgitimPlaniScreen() {
           <Stepper
             deger={ayar.gunlukKart}
             etiket={`${ayar.gunlukKart}`}
+            ad="kart sayısı"
             onAzalt={() => guncelle({ gunlukKart: Math.max(5, ayar.gunlukKart - 5) })}
             onArtir={() => guncelle({ gunlukKart: Math.min(50, ayar.gunlukKart + 5) })}
           />
@@ -153,10 +159,23 @@ export default function EgitimPlaniScreen() {
         </AppText>
       ) : null}
 
+      {izinYok ? (
+        <Pressable
+          style={({ pressed }) => [styles.testBtn, pressed && styles.pressed]}
+          onPress={() => void Linking.openSettings()}
+          accessibilityRole="button">
+          <MaterialCommunityIcons name="cog-outline" size={18} color={Palette.lacivert} />
+          <AppText variant="kucuk" color="lacivert" bold>
+            Bildirim ayarlarını aç
+          </AppText>
+        </Pressable>
+      ) : null}
+
       <Pressable
         style={({ pressed }) => [styles.kaydet, pressed && styles.pressed, kaydediyor && styles.pasif]}
         disabled={kaydediyor}
-        onPress={() => void kaydet()}>
+        onPress={() => void kaydet()}
+        accessibilityRole="button">
         <AppText variant="govde" color="beyaz" bold>
           {kaydediyor ? 'Planlanıyor…' : 'Kaydet & Planla'}
         </AppText>
@@ -203,6 +222,7 @@ function SaatSatir({
           <Stepper
             deger={saat}
             etiket={pad(saat)}
+            ad={`${ad} saati`}
             onAzalt={() => onDegis((saat + 23) % 24, dakika)}
             onArtir={() => onDegis((saat + 1) % 24, dakika)}
           />
@@ -214,6 +234,7 @@ function SaatSatir({
           <Stepper
             deger={dakika}
             etiket={pad(dakika)}
+            ad={`${ad} dakikası`}
             onAzalt={() => onDegis(saat, (dakika + 55) % 60)}
             onArtir={() => onDegis(saat, (dakika + 5) % 60)}
           />
@@ -228,23 +249,35 @@ function SaatSatir({
 
 function Stepper({
   etiket,
+  ad,
   onAzalt,
   onArtir,
 }: {
   deger: number;
   etiket: string;
+  ad?: string;
   onAzalt: () => void;
   onArtir: () => void;
 }) {
   return (
     <View style={styles.stepper}>
-      <Pressable style={({ pressed }) => [styles.stepBtn, pressed && styles.pressed]} onPress={onAzalt}>
+      <Pressable
+        style={({ pressed }) => [styles.stepBtn, pressed && styles.pressed]}
+        onPress={onAzalt}
+        hitSlop={10}
+        accessibilityRole="button"
+        accessibilityLabel={ad ? `${ad} azalt` : 'Azalt'}>
         <MaterialCommunityIcons name="minus" size={20} color={Palette.beyaz} />
       </Pressable>
       <AppText variant="govde" bold style={styles.stepDeger}>
         {etiket}
       </AppText>
-      <Pressable style={({ pressed }) => [styles.stepBtn, pressed && styles.pressed]} onPress={onArtir}>
+      <Pressable
+        style={({ pressed }) => [styles.stepBtn, pressed && styles.pressed]}
+        onPress={onArtir}
+        hitSlop={10}
+        accessibilityRole="button"
+        accessibilityLabel={ad ? `${ad} artır` : 'Artır'}>
         <MaterialCommunityIcons name="plus" size={20} color={Palette.beyaz} />
       </Pressable>
     </View>
@@ -283,8 +316,10 @@ const styles = StyleSheet.create({
   },
   saatKontrol: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: Spacing.four,
+    rowGap: Spacing.two,
+    columnGap: Spacing.four,
   },
   saatGrup: {
     alignItems: 'center',
@@ -326,7 +361,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   kaydet: {
-    backgroundColor: Palette.kirmizi,
+    backgroundColor: Palette.lacivert,
     borderRadius: Radius.m,
     paddingVertical: Spacing.three,
     alignItems: 'center',

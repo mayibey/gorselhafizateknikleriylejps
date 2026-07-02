@@ -18,7 +18,9 @@ import {
   ilerlemeIceAktar,
   ilerlemeSifirla,
 } from '@/db/database';
+import { setFavoriler } from '@/lib/favori';
 import { sinavIlerlemeTumunuSil } from '@/lib/sinav-ilerleme';
+import { sonAramalariTemizle } from '@/lib/son-aramalar';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
 const TABLO = 'kullanici_ilerleme';
@@ -55,6 +57,11 @@ async function hesapDegisimiIsle(uid: string): Promise<void> {
   if (oncekiSahip && oncekiSahip !== uid) {
     await ilerlemeSifirla();
     await sinavIlerlemeTumunuSil();
+    // Cihaza bağlı ama hesaba-özel diğer yerel veri de temizlenmeli — aksi halde önceki
+    // kullanıcının favorileri/arama geçmişi yeni hesaba sızar. (brans/rutbe cihaz-görevi
+    // olarak KASITLI korunuyor — onboarding tekrar sormasın diye.)
+    await setFavoriler([]);
+    await sonAramalariTemizle();
     aktifVeriSahibi = null; // yerel artık boş/sahipsiz — yükleme sonunda uid'e bağlanır
   }
   // NOT: SON_KULLANICI_KEY burada YAZILMAZ — bulut çekimi başarıyla bitince yazılır

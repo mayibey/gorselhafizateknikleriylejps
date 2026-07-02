@@ -264,7 +264,10 @@ function PaywallIcerik() {
 
       <Pressable
         style={({ pressed }) => [styles.geriYukleBtn, pressed && styles.pressed]}
-        onPress={() => void geriYukle()}>
+        onPress={() => void geriYukle()}
+        hitSlop={10}
+        accessibilityRole="button"
+        accessibilityLabel="Satın alımları geri yükle">
         <MaterialCommunityIcons name="restore" size={18} color={Palette.lacivert} />
         <AppText variant="kucuk" color="lacivert" bold>
           Satın alımları geri yükle
