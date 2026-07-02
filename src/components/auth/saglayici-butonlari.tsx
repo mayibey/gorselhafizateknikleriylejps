@@ -1,22 +1,20 @@
 /**
- * "Google ile devam et" + "Apple ile devam et" butonları (gerçek logolarla).
- * Google çalışır; Apple iOS fazında aktifleşecek → şimdilik bilgilendirme.
+ * "Google ile giriş yap / kaydol" butonu (gerçek logoyla). Birincil giriş yöntemi.
+ * (Apple butonu Android'de kaldırıldı — iOS fazında ayrıca eklenecek; kural: Google varsa Apple da zorunlu.)
  */
 import { Image } from 'expo-image';
 import { Pressable, StyleSheet, View } from 'react-native';
 
-import { APPLE_LOGO, GOOGLE_LOGO } from '../../assets/auth-gorselleri';
+import { GOOGLE_LOGO } from '../../assets/auth-gorselleri';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 
 export function SaglayiciButonlari({
   onGoogle,
-  onApple,
   mesgul,
   kayit,
 }: {
   onGoogle: () => void;
-  onApple: () => void;
   mesgul?: boolean;
   /** true → "…ile kaydol" (kayıt modu), false/undefined → "…ile giriş yap". */
   kayit?: boolean;
@@ -26,20 +24,13 @@ export function SaglayiciButonlari({
     <View style={styles.kok}>
       <Pressable
         disabled={mesgul}
+        accessibilityRole="button"
+        accessibilityLabel={`Google ile ${eylem}`}
         style={({ pressed }) => [styles.btn, pressed && styles.pressed, mesgul && styles.pasif]}
         onPress={onGoogle}>
         <Image source={GOOGLE_LOGO} style={styles.logo} contentFit="contain" />
         <AppText variant="govde" bold color="anaMetin">
           Google ile {eylem}
-        </AppText>
-      </Pressable>
-      <Pressable
-        disabled={mesgul}
-        style={({ pressed }) => [styles.btn, pressed && styles.pressed, mesgul && styles.pasif]}
-        onPress={onApple}>
-        <Image source={APPLE_LOGO} style={styles.logo} contentFit="contain" />
-        <AppText variant="govde" bold color="anaMetin">
-          Apple ile {eylem}
         </AppText>
       </Pressable>
     </View>

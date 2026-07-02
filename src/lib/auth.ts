@@ -128,7 +128,9 @@ export async function gmailIleGiris(): Promise<void> {
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
-    options: { redirectTo, skipBrowserRedirect: true },
+    // prompt=select_account → Google HER ZAMAN hesap seçici gösterir (tek hesabı otomatik seçmez).
+    // Kullanıcı birden çok Google hesabı kullanıyorsa doğru olanı seçebilir; hesap yoksa giriş sayfası.
+    options: { redirectTo, skipBrowserRedirect: true, queryParams: { prompt: 'select_account' } },
   });
   if (error) throw error;
   if (!data?.url) throw new Error('Giriş bağlantısı alınamadı.');

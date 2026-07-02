@@ -66,11 +66,6 @@ export function AuthEkrani() {
     }
   }
 
-  function apple() {
-    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
-    setMesaj({ tip: 'bilgi', metin: 'Apple ile giriş iOS sürümünde aktifleşecek.' });
-  }
-
   async function gonder() {
     if (!eposta.trim() || !sifre) {
       setMesaj({ tip: 'hata', metin: 'E-posta ve şifre gir.' });
@@ -159,6 +154,53 @@ export function AuthEkrani() {
 
         {kayitMi ? <AdimGostergesi adim={1} /> : null}
 
+        {/* Şartlar onayı — HEM Google HEM e-posta yolunu kapsar (KVKK). Üstte, ikisinden önce. */}
+        <Pressable
+          style={styles.sartSatir}
+          onPress={() => setSartlar((s) => !s)}
+          accessibilityRole="checkbox"
+          accessibilityState={{ checked: sartlar }}
+          accessibilityLabel="Kullanım Şartları ve Gizlilik Politikası'nı kabul ediyorum">
+          <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
+            {sartlar ? <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} /> : null}
+          </View>
+          <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
+            <AppText
+              variant="etiket"
+              color="lacivert"
+              bold
+              onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
+              Kullanım Şartları ve Gizlilik Politikası
+            </AppText>
+            'nı okudum, kabul ediyorum.
+          </AppText>
+        </Pressable>
+
+        {/* BİRİNCİL yöntem: Google (öne çıkar). Apple Android'de yok. */}
+        <View style={styles.googleSar}>
+          <SaglayiciButonlari onGoogle={() => void google()} mesgul={mesgul} kayit={kayitMi} />
+        </View>
+
+        {mesaj ? (
+          <AppText
+            variant="kucuk"
+            bold
+            color={mesaj.tip === 'hata' ? 'kirmizi' : 'yesil'}
+            style={styles.mesaj}>
+            {mesaj.metin}
+          </AppText>
+        ) : null}
+
+        {/* Ayraç: e-posta ikincil yöntem. */}
+        <View style={styles.ayrac}>
+          <View style={styles.ayracCizgi} />
+          <AppText variant="etiket" color="solukMetin">
+            ya da e-posta ile {kayitMi ? 'kaydol' : 'giriş yap'}
+          </AppText>
+          <View style={styles.ayracCizgi} />
+        </View>
+
+        {/* İKİNCİL yöntem: e-posta / şifre. */}
         <View style={styles.form}>
           <AuthGirdi
             ikon="email-outline"
@@ -170,13 +212,7 @@ export function AuthEkrani() {
             autoCorrect={false}
             inputMode="email"
           />
-          <AuthGirdi
-            ikon="lock-outline"
-            placeholder="Şifre"
-            value={sifre}
-            onChangeText={setSifre}
-            sifre
-          />
+          <AuthGirdi ikon="lock-outline" placeholder="Şifre" value={sifre} onChangeText={setSifre} sifre />
           {kayitMi ? (
             <AuthGirdi
               ikon="lock-check-outline"
@@ -193,56 +229,12 @@ export function AuthEkrani() {
             </Pressable>
           )}
 
-          <Pressable
-            style={styles.sartSatir}
-            onPress={() => setSartlar((s) => !s)}
-            accessibilityRole="checkbox"
-            accessibilityState={{ checked: sartlar }}
-            accessibilityLabel="Kullanım Şartları ve Gizlilik Politikası'nı kabul ediyorum">
-            <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
-              {sartlar ? (
-                <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} />
-              ) : null}
-            </View>
-            <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
-              <AppText
-                variant="etiket"
-                color="lacivert"
-                bold
-                onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
-                Kullanım Şartları ve Gizlilik Politikası
-              </AppText>
-              'nı okudum, kabul ediyorum.
-            </AppText>
-          </Pressable>
-
           <AnaButon
-            etiket={kayitMi ? 'Devam et' : 'Giriş yap'}
+            etiket={kayitMi ? 'E-posta ile kaydol' : 'E-posta ile giriş yap'}
             onPress={() => void gonder()}
             mesgul={mesgul}
           />
-          <View style={styles.btnArasi} />
-
-          {mesaj ? (
-            <AppText
-              variant="kucuk"
-              bold
-              color={mesaj.tip === 'hata' ? 'kirmizi' : 'yesil'}
-              style={styles.mesaj}>
-              {mesaj.metin}
-            </AppText>
-          ) : null}
         </View>
-
-        <View style={styles.ayrac}>
-          <View style={styles.ayracCizgi} />
-          <AppText variant="etiket" color="solukMetin">
-            veya
-          </AppText>
-          <View style={styles.ayracCizgi} />
-        </View>
-
-        <SaglayiciButonlari onGoogle={() => void google()} onApple={apple} mesgul={mesgul} kayit={kayitMi} />
 
         <Pressable
           style={styles.altLink}
@@ -317,6 +309,8 @@ const styles = StyleSheet.create({
   },
   form: {
     gap: Spacing.two,
+  },
+  googleSar: {
     marginTop: Spacing.two,
   },
   unuttumSar: {
@@ -326,6 +320,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
+    marginTop: Spacing.two,
   },
   kutu: {
     width: 20,
