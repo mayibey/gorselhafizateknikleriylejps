@@ -26,6 +26,8 @@ import {
   sinavIlerlemeSil,
 } from '@/lib/sinav-ilerleme';
 import { bugunISO } from '@/lib/srs';
+import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
+import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
 
 /** Doğru/yanlış geri bildirim renkleri (tema: yeşil onay, kırmızı uyarı). */
 const DOGRU_YESIL = Palette.yesil;
@@ -52,6 +54,8 @@ export default function SinavScreen() {
   // Kanunun TÜM testleri %100 mü → sonuç ekranında Takdir Belgesi görseli SADECE o zaman çıkar
   // (tek testi %100 yapmak belgeyi hak ettirmez; sicile de öyle yazılıyor — gösterim eşiği ile hizalı).
   const [belgeHak, setBelgeHak] = useState(false);
+  // İlk kez sınav açılınca bir kez çıkan bağlamsal ipucu.
+  const [sinavIpucu, setSinavIpucu] = useState(false);
   // Soru başına seçilen şık (null = cevaplanmadı). Tek kaynak → önceki soruya dönüş + devam
   // (kaldığın yerden) BUNDAN türer. sorular ile aynı uzunlukta.
   const [secimler, setSecimler] = useState<(number | null)[]>([]);
@@ -171,6 +175,13 @@ export default function SinavScreen() {
     () => secimler.map((s, i) => ({ soruIndex: i, secilenIndex: s ?? -1 })),
     [secimler],
   );
+
+  // İlk kez sınav açılınca bağlamsal ipucu göster (bir kez; sonra AsyncStorage'da işaretli).
+  useEffect(() => {
+    void ipucuGoruldu('sinav').then((g) => {
+      if (!g) setSinavIpucu(true);
+    });
+  }, []);
 
   // Sınav bitince skoru BİR KEZ kalıcı kaydet (kaydedildiRef guard; yukle'de sıfırlanır).
   // %100 ise: kayıttan SONRA sicil değerlendir → Takdir Belgesi kaydı düşer (idempotent).
@@ -344,6 +355,24 @@ export default function SinavScreen() {
           </View>
         </View>
       )}
+
+      {/* İlk kez sınav açılınca: nasıl çözülür (bir kez). Soru varken göster. */}
+      {sinavIpucu && aktif ? (
+        <IpucuOverlay
+          baslik="Sınav nasıl çözülür?"
+          altyazi="Kısaca:"
+          maddeler={[
+            { ikon: 'gesture-tap', metin: 'Bir şık seç; doğru mu yanlış mı anında görünür, altında kısa açıklama çıkar.' },
+            { ikon: 'chevron-left', metin: '"Önceki" ile geri dönüp verdiğin cevapları görebilirsin.' },
+            { ikon: 'content-save-outline', metin: 'Yarıda bırakırsan kaldığın yerden devam edersin.' },
+            { ikon: 'medal-outline', metin: 'Tüm testleri %100 çözersen Takdir Belgesi kazanırsın.' },
+          ]}
+          onKapat={() => {
+            setSinavIpucu(false);
+            void ipucuIsaretle('sinav');
+          }}
+        />
+      ) : null}
     </SafeAreaView>
   );
 }

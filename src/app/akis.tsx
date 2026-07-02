@@ -39,6 +39,8 @@ import {
 } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
 import { getSinavSorulari, type KartSoru, sinavVarMi, teyitSorulari } from '@/lib/sinav';
+import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
+import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
 import type { QueueCard } from '@/lib/queue';
 import type { SrsCevap } from '@/lib/srs';
 
@@ -83,6 +85,8 @@ export default function AkisScreen() {
   // ZAYIF TEYİDİ: Etüt bitince çalışılan kartların sorularıyla objektif teyit ({soru, cardId}).
   const [teyitListe, setTeyitListe] = useState<{ soru: KartSoru; cardId: number }[] | null>(null);
   const [teyitBitti, setTeyitBitti] = useState(false);
+  // İlk kez kart akışı açılınca bir kez çıkan bağlamsal ipucu (bu ekranda ne var).
+  const [kartIpucu, setKartIpucu] = useState(false);
   const [cevapHatasi, setCevapHatasi] = useState(false);
   // Sesli anlatım sonuna kadar okununca true → "sıradakine geç" mesajı çıkar.
   const [anlatimBitti, setAnlatimBitti] = useState(false);
@@ -232,6 +236,13 @@ export default function AkisScreen() {
 
   const hatirlaGoster =
     bitti && ogrenmeModu && !hatirlaBitti && !!hatirlaSorular && hatirlaSorular.length > 0;
+
+  // İlk kez kart akışı açılınca bağlamsal ipucu göster (bir kez; sonra AsyncStorage'da işaretli).
+  useEffect(() => {
+    void ipucuGoruldu('kart-akisi').then((g) => {
+      if (!g) setKartIpucu(true);
+    });
+  }, []);
 
   // ZAYIF TEYİDİ: Etüt bitince, çalışılan kartların maddelerine ait soruları bir kez üret.
   // Soru yoksa teyit atlanır (yalnız çalışma değeri sayılır → mevcut davranış).
@@ -751,6 +762,24 @@ export default function AkisScreen() {
           ) : null}
         </View>
       )}
+
+      {/* İlk kez kart açılınca: bu ekranda ne var (bir kez). Kart yüklüyken göster. */}
+      {kartIpucu && aktif ? (
+        <IpucuOverlay
+          baslik="Kart nasıl çalışır?"
+          altyazi="Bu ekranda maddeyi çalışırsın. Kısaca:"
+          maddeler={[
+            { ikon: 'volume-high', metin: 'Sesli anlatım otomatik başlar; alttaki çubuktan durdurup dinleyebilirsin.' },
+            { ikon: 'text-box-outline', metin: 'Maddenin resmî metnini okumak için "Madde" düğmesine bas.' },
+            { ikon: 'gesture-swipe-horizontal', metin: 'Sonraki veya önceki karta parmağınla kaydırarak geç.' },
+            { ikon: 'check-circle-outline', metin: '"Öğrendim" ya da "Tekrar Hatırlat" ile kartı işaretle.' },
+          ]}
+          onKapat={() => {
+            setKartIpucu(false);
+            void ipucuIsaretle('kart-akisi');
+          }}
+        />
+      ) : null}
     </SafeAreaView>
   );
 }
