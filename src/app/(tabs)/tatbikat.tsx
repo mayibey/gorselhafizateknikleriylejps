@@ -15,7 +15,7 @@ import { useBrans } from '@/lib/brans-context';
 import { hecele } from '@/lib/hece';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
-import { sinavSoruSayisi, sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
+import { genelDenemeler, PUAN_KATSAYI, sinavSoruSayisi, sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
 import { useUyelik } from '@/lib/uyelik-context';
 
 /** Bir kanunun deneme sınavı durumu (kilit + ilerleme). */
@@ -37,6 +37,9 @@ export default function TatbikatScreen() {
   // law_id → (test → SON deneme sonucu). Her testin son skoru ayrı ("Son: X/Y").
   const [sonucMap, setSonucMap] = useState<Map<number, Map<number, SinavSonuc>>>(new Map());
   const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
+  // Alt seçim: Talim (kanun denemeleri) / Tatbikat (Genel Deneme 1/2/3).
+  const [mod, setMod] = useState<'talim' | 'tatbikat'>('talim');
+  const { kanunErisilebilir } = useUyelik();
   const [hata, setHata] = useState(false);
 
   const yukle = useCallback(() => {
@@ -95,6 +98,13 @@ export default function TatbikatScreen() {
     router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(test) } });
   }
 
+  function genelDenemeGit(no: number) {
+    router.push({ pathname: '/sinav', params: { genel: String(no) } });
+  }
+
+  // Genel deneme müşterek karma içeriktir → müşterek hakkına bağlı (KILIT_AKTIF kapalıyken açık).
+  const genelKilitli = !kanunErisilebilir(undefined, 'müşterek');
+
   return (
     <Screen title="Talim">
       {/* ÜST SEÇİM: Müşterek / Branş (Mevzuat ile aynı desen). */}
@@ -121,12 +131,54 @@ export default function TatbikatScreen() {
         })}
       </View>
 
+      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler) — yalnız müşterekte. */}
+      {blok === 'müşterek' ? (
+        <View style={styles.blokSecici}>
+          {(['talim', 'tatbikat'] as const).map((m) => {
+            const aktif = mod === m;
+            return (
+              <Pressable
+                key={m}
+                onPress={() => setMod(m)}
+                style={[styles.blokSeg, aktif && styles.blokSegAktif]}
+                accessibilityRole="button"
+                accessibilityLabel={m === 'talim' ? 'Talim — kanun denemeleri' : 'Tatbikat — genel denemeler'}>
+                <MaterialCommunityIcons
+                  name={m === 'talim' ? 'clipboard-check-outline' : 'flag-checkered'}
+                  size={16}
+                  color={aktif ? Palette.beyaz : Palette.solukMetin}
+                />
+                <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+                  {m === 'talim' ? 'Talim' : 'Tatbikat'}
+                </AppText>
+              </Pressable>
+            );
+          })}
+        </View>
+      ) : null}
+
       {blok === 'brans' ? (
         <Yakinda
           ikon="shield-star-outline"
-          baslik="Branş sınavları yolda"
-          aciklama="Branşına özel deneme sınavları hazırlanıyor. Şimdilik müşterek kanunların sınavlarıyla kendini sına."
+          baslik="Branş sınavları ÇOK YAKINDA"
+          aciklama="Branşına özel deneme sınavları hazırlanıyor. Şimdi katılanlara özel %50 indirim — yayına gelince tam fiyattan satışta olacak. Şimdilik müşterek sınavlarıyla kendini sına."
         />
+      ) : mod === 'tatbikat' ? (
+        <>
+          <AppText variant="kucuk" color="solukMetin">
+            Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların
+            zayıf mevzilerine düşer.
+          </AppText>
+          {genelDenemeler().map((d) => (
+            <GenelDenemeSatir
+              key={d.no}
+              deneme={d}
+              sonuc={sonucMap.get(-d.no)?.get(0)}
+              kilitli={genelKilitli}
+              onGit={() => (genelKilitli ? router.push('/paywall') : genelDenemeGit(d.no))}
+            />
+          ))}
+        </>
       ) : hata ? (
         <DurumKutu
           ikon="alert-circle-outline"
@@ -139,8 +191,8 @@ export default function TatbikatScreen() {
       ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">
-            Uzun kanunlar 20'şer soruluk testlere bölündü. İstersen önce Mevzuat'tan çalış, sonra
-            kendini sına.
+            Uzun kanunlar 20'şer soruluk testlere bölündü. Her soru 2 puan. İstersen önce Mevzuat'tan çalış,
+            sonra kendini sına.
           </AppText>
           {musterek.length === 0 ? (
             <AppText variant="kucuk" color="solukMetin">
@@ -160,6 +212,45 @@ export default function TatbikatScreen() {
         </>
       )}
     </Screen>
+  );
+}
+
+/** Genel deneme (Tatbikat) satırı: başlık + soru sayısı + son puan + kilit. */
+function GenelDenemeSatir({
+  deneme,
+  sonuc,
+  kilitli,
+  onGit,
+}: {
+  deneme: { no: number; baslik: string; soruSayisi: number };
+  sonuc: SinavSonuc | undefined;
+  kilitli: boolean;
+  onGit: () => void;
+}) {
+  return (
+    <Pressable
+      style={({ pressed }) => [styles.genelSatir, pressed && styles.pressed]}
+      onPress={onGit}
+      accessibilityRole="button"
+      accessibilityLabel={deneme.baslik}>
+      <View style={styles.monogram}>
+        <MaterialCommunityIcons name="flag-checkered" size={22} color={Palette.altin} />
+      </View>
+      <View style={styles.satirMetin}>
+        <AppText variant="govde" bold color="anaMetin">
+          {deneme.baslik}
+        </AppText>
+        <AppText variant="etiket" color="solukMetin">
+          {deneme.soruSayisi} soru · {deneme.soruSayisi * PUAN_KATSAYI} puan
+          {sonuc ? ` · Son: ${sonuc.dogru * PUAN_KATSAYI}/${sonuc.toplam * PUAN_KATSAYI} puan` : ''}
+        </AppText>
+      </View>
+      <MaterialCommunityIcons
+        name={kilitli ? 'lock' : 'chevron-right'}
+        size={22}
+        color={kilitli ? Palette.altinKoyu : Palette.solukMetin}
+      />
+    </Pressable>
   );
 }
 
@@ -378,6 +469,20 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.three,
     gap: Spacing.two,
+  },
+  genelSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+  },
+  satirMetin: {
+    flex: 1,
+    gap: Spacing.half,
   },
   satirBas: {
     gap: Spacing.two,
