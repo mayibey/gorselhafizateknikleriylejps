@@ -8,7 +8,7 @@ import { AppText } from '@/components/ui/app-text';
 import { TakdirBelgesi } from '@/components/sicil/takdir-belgesi';
 import { EmptyState } from '@/components/ui/empty-state';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { ekleSinavSonucu, getCardsByLaw, kaydetPerformans } from '@/db/database';
+import { ekleSinavSonucu, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
 import type { QueueCard } from '@/lib/queue';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import {
@@ -18,6 +18,7 @@ import {
   puanlaSinav,
   type SinavCevap,
   testSayisi,
+  testSoruSayisi,
 } from '@/lib/sinav';
 import {
   sinavIlerlemeKaydet,
@@ -48,6 +49,9 @@ export default function SinavScreen() {
   const [hata, setHata] = useState(false);
   const [bos, setBos] = useState(false);
   const [index, setIndex] = useState(0);
+  // Kanunun TÜM testleri %100 mü → sonuç ekranında Takdir Belgesi görseli SADECE o zaman çıkar
+  // (tek testi %100 yapmak belgeyi hak ettirmez; sicile de öyle yazılıyor — gösterim eşiği ile hizalı).
+  const [belgeHak, setBelgeHak] = useState(false);
   // Soru başına seçilen şık (null = cevaplanmadı). Tek kaynak → önceki soruya dönüş + devam
   // (kaldığın yerden) BUNDAN türer. sorular ile aynı uzunlukta.
   const [secimler, setSecimler] = useState<(number | null)[]>([]);
@@ -178,7 +182,17 @@ export default function SinavScreen() {
     void (async () => {
       try {
         await ekleSinavSonucu(lawIdNum, testNum, dogru, toplam, bugunISO());
-        if (toplam > 0 && dogru === toplam) await degerlendirSicil();
+        if (toplam > 0 && dogru === toplam) {
+          await degerlendirSicil();
+          // Kanunun TÜM testleri %100 mu → tam Takdir Belgesi hakkı (sicil-servis ile aynı ölçüt).
+          const hepsi = (await getSinavSonuclari()).filter((s) => s.law_id === lawIdNum);
+          const aced = new Set(
+            hepsi
+              .filter((s) => s.toplam > 0 && s.dogru === s.toplam && s.toplam === testSoruSayisi(lawIdNum, s.test))
+              .map((s) => s.test),
+          );
+          setBelgeHak(aced.size >= testSayisi(lawIdNum));
+        }
       } catch {
         // sessiz geç (skor/ödül kaydı başarısızsa sonuç ekranı yine görünsün)
       }
@@ -237,6 +251,8 @@ export default function SinavScreen() {
           cevaplar={cevaplar}
           sorular={sorular}
           lawAd={lawAd}
+          lawId={lawIdNum}
+          belgeHak={belgeHak}
           onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
@@ -386,6 +402,8 @@ function Sonuc({
   cevaplar,
   sorular,
   lawAd,
+  lawId,
+  belgeHak,
   onZayif,
   onTekrar,
   onBitir,
@@ -393,20 +411,37 @@ function Sonuc({
   cevaplar: SinavCevap[];
   sorular: KartSoru[];
   lawAd: string | null;
+  lawId: number | null;
+  belgeHak: boolean;
   onZayif: () => void;
   onTekrar: () => void;
   onBitir: () => void;
 }) {
   const { dogru, toplam, yuzde } = puanlaSinav(cevaplar, sorular);
+  // Tek testli kanunda tek test = kanun (belge kesin); çok testli kanunda TÜM testler %100 şart.
+  const tamBelge = lawId != null && (testSayisi(lawId) === 1 || belgeHak);
 
-  // %100 → TAKDİR BELGESİ (görsel sertifika); kayıt zaten sicil'e işlendi.
+  // %100 → TAKDİR BELGESİ yalnız kanunun TÜMÜ %100 ise; tek test %100 ise yönlendiren tebrik.
   if (yuzde === 100) {
     return (
       <ScrollView style={styles.kolon} contentContainerStyle={styles.sonucContent}>
-        <AppText variant="altBaslik" bold color="altinMetin" style={styles.tamIsabet}>
-          🎖️ Tam isabet — {dogru}/{toplam}
-        </AppText>
-        <TakdirBelgesi kanunAd={lawAd ?? 'Bu kanun'} tarih={bugunISO()} />
+        {tamBelge ? (
+          <>
+            <AppText variant="altBaslik" bold color="altinMetin" style={styles.tamIsabet}>
+              🎖️ Tam isabet — {dogru}/{toplam}
+            </AppText>
+            <TakdirBelgesi kanunAd={lawAd ?? 'Bu kanun'} tarih={bugunISO()} />
+          </>
+        ) : (
+          <>
+            <AppText variant="altBaslik" bold color="altinMetin" style={styles.tamIsabet}>
+              🎯 Tam isabet — {dogru}/{toplam}
+            </AppText>
+            <AppText variant="kucuk" color="solukMetin" style={styles.belgeIpucu}>
+              Bu testi tam çözdün. Kanunun TÜM testlerini %100 yapınca Takdir Belgesi kazanırsın.
+            </AppText>
+          </>
+        )}
         <View style={styles.sonucButonlar}>
           <Pressable
             style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]}
@@ -610,6 +645,10 @@ const styles = StyleSheet.create({
   },
   tamIsabet: {
     textAlign: 'center',
+  },
+  belgeIpucu: {
+    textAlign: 'center',
+    lineHeight: 20,
   },
   sonucButonlar: {
     flexDirection: 'row',

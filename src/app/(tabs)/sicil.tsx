@@ -418,7 +418,7 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
   if (zayif.liste.length === 0) {
     return (
       <AppText variant="kucuk" color="yesil" bold>
-        Zayıf mevzin yok 👏
+        Zayıf mevzin yok 🎖️
       </AppText>
     );
   }

@@ -71,7 +71,7 @@ export default function GeriBildirimScreen() {
             Teşekkürler
           </AppText>
           <AppText variant="govde" color="solukMetin" style={styles.ortala}>
-            Değerlendirmeniz bize ulaştı 🙏
+            Değerlendirmeniz bize ulaştı 🎖️
           </AppText>
         </View>
       </Screen>

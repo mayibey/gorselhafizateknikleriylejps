@@ -192,6 +192,23 @@ export async function testBildirimi(): Promise<PlanSonuc> {
 }
 
 /**
+ * Bildirime TIKLANINCA çalışacak geri çağırım (uygulama açıkken + kapalıyken açılışta).
+ * v1'de tüm içtimalar Karargah'a götürür (deep-link veri taşımıyor). Web'de no-op.
+ * Dönen fonksiyon dinleyiciyi kaldırır (useEffect cleanup).
+ */
+export function bildirimTiklamaDinle(onTikla: () => void): () => void {
+  if (WEB) return () => {};
+  // Uygulama TAMAMEN kapalıyken bildirime tıklanıp açıldıysa: son yanıtı bir kez işle.
+  Notifications.getLastNotificationResponseAsync()
+    .then((yanit) => {
+      if (yanit) onTikla();
+    })
+    .catch(() => {});
+  const sub = Notifications.addNotificationResponseReceivedListener(() => onTikla());
+  return () => sub.remove();
+}
+
+/**
  * İLERİDE (v2 backend): Uzak push için Expo push token. Backend gelince Supabase'e yazılıp
  * sunucudan gönderilir. Şimdilik yalnız token üretir; gönderim YOK. Gerçek cihaz + izin gerek.
  */

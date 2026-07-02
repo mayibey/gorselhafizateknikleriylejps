@@ -21,7 +21,7 @@ import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
 import { oauthUrlIsle } from '@/lib/auth';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
-import { getAyar, planla } from '@/lib/bildirim';
+import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
@@ -147,7 +147,10 @@ function RootNavigator() {
     else if (!eksik && onboardingDe) router.replace('/');
   }, [eksik, yukleniyor, profilBekle, segments, router]);
 
-  // (Bildirim dinleyicisi v1'de kaldırıldı — expo-notifications çıkarıldı.)
+  // Bildirime tıklayınca uygulama açılıp Karargah'a gitsin (uygulama kapalıyken açılış dahil).
+  useEffect(() => {
+    return bildirimTiklamaDinle(() => router.replace('/'));
+  }, [router]);
 
   return (
     <>

@@ -68,7 +68,7 @@ export default function GirisScreen() {
       <View style={styles.marka}>
         <MaterialCommunityIcons name="shield-account" size={56} color={Palette.lacivert} />
         <AppText variant="baslik" bold color="lacivert">
-          MEVZU-JSPS
+          MEVZU · JSPS
         </AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
           Hesabınla ilerlemen güvende olur; cihaz değiştirsen de kaybolmaz ve ileride

@@ -51,7 +51,7 @@ export function AuthEkrani() {
 
   const kayitMi = mod === 'kayit';
 
-  const RIZA_UYARI = 'Devam etmek için Kullanım Şartları ve Gizlilik Politikası’nı kabul et.';
+  const RIZA_UYARI = "Devam etmek için Kullanım Şartları ve Gizlilik Politikası'nı kabul et.";
 
   async function google() {
     if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
