@@ -30,8 +30,9 @@ export interface AraKayit {
 /** Arama kapsamı (filtre çipleri): hepsi · kanun metni · madde no · kart içeriği · aklına çivile. */
 export type AraKapsam = 'hepsi' | 'metin' | 'madde' | 'kart' | 'civile';
 
-/** Seslendirme metninden "Aklınıza çivileyin: …" cümlesini (sona kadar) ayıklar; yoksa ''. */
-const CIVILE_ANAHTAR = 'aklınıza çivileyin';
+/** Seslendirme metninden "Aklınıza çivileyin: …" cümlesini (sona kadar) ayıklar; yoksa ''.
+ *  NOT: trKucuk aksan katladığı için anahtar da KATLANMIŞ hâlde ("akliniza civileyin"). */
+const CIVILE_ANAHTAR = 'akliniza civileyin';
 export function civileAyikla(ses: string): string {
   const i = trKucuk(ses).indexOf(CIVILE_ANAHTAR);
   return i === -1 ? '' : ses.slice(i).trim();
@@ -49,9 +50,21 @@ export interface AramaSonuc {
   skor: number; // sıralama: başlık eşleşmesi ağırlıklı
 }
 
-/** Türkçe-duyarlı küçük harf (İ→i, I→ı). Aksi halde arama Türkçe'de yanlış eşleşir. */
+/**
+ * Türkçe-duyarlı küçük harf + AKSAN KATLAMA (ş→s, ı/İ→i, ğ→g, ç→c, ö→o, ü→u).
+ * Türk kullanıcılar sık sık Türkçe karakter kullanmadan yazar ("kisisel", "gorev",
+ * "mesru") → aksan katlanmazsa "Sonuç yok" alıyorlardı. Katlama HEM sorguya HEM
+ * indekse uygulanır → "kisisel" ↔ "kişisel" eşleşir. 1:1 harf dönüşümü (konum korunur →
+ * snippet vurgusu bozulmaz). Not: metin GÖSTERİMİ ham kalır, yalnız ARAMA anahtarı katlanır.
+ */
+const AKSAN: Record<string, string> = {
+  ş: 's', ı: 'i', ğ: 'g', ç: 'c', ö: 'o', ü: 'u', â: 'a', î: 'i', û: 'u',
+};
 export function trKucuk(s: string): string {
-  return s.toLocaleLowerCase('tr-TR');
+  const kucuk = s.toLocaleLowerCase('tr-TR');
+  let out = '';
+  for (const ch of kucuk) out += AKSAN[ch] ?? ch;
+  return out;
 }
 
 /**
