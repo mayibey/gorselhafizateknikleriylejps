@@ -94,14 +94,39 @@ export async function izinIste(): Promise<boolean> {
   }
 }
 
+// İçtima tipleri → İSİMLİ Android kanalları. Kullanıcı sistem ayarlarında her birini ayrı
+// susturabilir/özelleştirebilir. HIGH önem = sesli + heads-up (çalışma hatırlatması dikkat çeksin).
+// NOT: bildirime channelId VERİLMEZSE Android genel "fallback" kanalına düşer (sessiz) — o yüzden
+// hem kanal oluşturulur HEM içerikte channelId verilir.
+const KANALLAR = {
+  sabah: { id: 'ictima_sabah', name: 'Sabah İçtiması' },
+  gece: { id: 'ictima_gece', name: 'Gece Eğitimi' },
+  firsat: { id: 'ictima_firsat', name: 'Fırsat Eğitimi' },
+  test: { id: 'ictima_test', name: 'Test Bildirimi' },
+} as const;
+
 // Günlük hatırlatma içerikleri (sınav-odaklı, kısa, motive edici).
 const SABAH = { title: 'Günaydın 🎖️', body: 'Bugünün etüdü seni bekliyor — bir mevzi de bugün düşsün.' };
 const GECE = { title: 'Gece eğitimi vakti', body: 'Bugün çalıştın mı? 5 dakika ayır, zayıf mevzilerini tekrar et.' };
 const FIRSAT = { title: 'Fırsat eğitimi', body: 'Boş bir anın mı var? Bir madde tekrar et, sınava bir adım daha.' };
 
-async function gunlukKur(saat: number, dakika: number, icerik: { title: string; body: string }) {
+/** Android'de isimli kanalı (HIGH önem = sesli/heads-up) oluşturur. Web/iOS'ta no-op. */
+async function kanalKur(kanal: { id: string; name: string }): Promise<void> {
+  if (Platform.OS !== 'android') return;
+  await Notifications.setNotificationChannelAsync(kanal.id, {
+    name: kanal.name,
+    importance: Notifications.AndroidImportance.HIGH,
+  });
+}
+
+async function gunlukKur(
+  saat: number,
+  dakika: number,
+  icerik: { title: string; body: string },
+  kanal: { id: string; name: string },
+) {
   await Notifications.scheduleNotificationAsync({
-    content: { title: icerik.title, body: icerik.body },
+    content: { title: icerik.title, body: icerik.body, ...(Platform.OS === 'android' && { channelId: kanal.id }) },
     trigger: {
       type: Notifications.SchedulableTriggerInputTypes.DAILY,
       hour: saat,
@@ -123,22 +148,19 @@ export async function planla(ayar: BildirimAyar): Promise<PlanSonuc> {
     const izin = await izinIste();
     if (!izin) return 'izin-yok';
 
-    if (Platform.OS === 'android') {
-      await Notifications.setNotificationChannelAsync('gunluk', {
-        name: 'Günlük Hatırlatmalar',
-        importance: Notifications.AndroidImportance.DEFAULT,
-      });
-    }
+    await kanalKur(KANALLAR.sabah);
+    await kanalKur(KANALLAR.gece);
+    if (ayar.firsatAktif) await kanalKur(KANALLAR.firsat);
 
-    await gunlukKur(ayar.sabahSaat, ayar.sabahDakika, SABAH);
-    await gunlukKur(ayar.geceSaat, ayar.geceDakika, GECE);
+    await gunlukKur(ayar.sabahSaat, ayar.sabahDakika, SABAH, KANALLAR.sabah);
+    await gunlukKur(ayar.geceSaat, ayar.geceDakika, GECE, KANALLAR.gece);
 
     if (ayar.firsatAktif) {
       // Sabah+1 ile Gece-1 arası rastgele bir saat; her planlamada tazelenir.
       const alt = Math.min(ayar.sabahSaat + 1, 23);
       const ust = Math.max(ayar.geceSaat - 1, alt);
       const saat = ust > alt ? alt + Math.floor(Math.random() * (ust - alt)) : alt;
-      await gunlukKur(saat, 30, FIRSAT);
+      await gunlukKur(saat, 30, FIRSAT, KANALLAR.firsat);
     }
     return 'ok';
   } catch {
@@ -154,14 +176,13 @@ export async function testBildirimi(): Promise<PlanSonuc> {
   if (WEB) return 'web';
   try {
     if (!(await izinIste())) return 'izin-yok';
-    if (Platform.OS === 'android') {
-      await Notifications.setNotificationChannelAsync('gunluk', {
-        name: 'Günlük Hatırlatmalar',
-        importance: Notifications.AndroidImportance.DEFAULT,
-      });
-    }
+    await kanalKur(KANALLAR.test);
     await Notifications.scheduleNotificationAsync({
-      content: { title: 'Test bildirimi 🎖️', body: 'Bildirimler çalışıyor — içtimalar zamanında düşecek.' },
+      content: {
+        title: 'Test bildirimi 🎖️',
+        body: 'Bildirimler çalışıyor — içtimalar zamanında düşecek.',
+        ...(Platform.OS === 'android' && { channelId: KANALLAR.test.id }),
+      },
       trigger: { type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL, seconds: 5, repeats: false },
     });
     return 'ok';
