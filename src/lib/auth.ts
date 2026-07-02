@@ -74,16 +74,36 @@ function paramAyikla(url: string): Record<string, string> {
 const islenenKodlar = new Set<string>();
 let kodIsleniyor = false;
 
-/** PKCE `code`'unu oturuma çevirir (dedup'lu). Oturum kurulduysa true. */
+const bekle = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * PKCE `code`'unu oturuma çevirir (dedup'lu). Oturum kurulduysa true.
+ *
+ * FRESH-INSTALL YARIŞI: ilk denemede exchangeCodeForSession, signInWithOAuth'un
+ * AsyncStorage'a yeni yazdığı `code_verifier`'ı okuyamadan çalışıp başarısız olabiliyordu
+ * (kullanıcı hiçbir şey görmüyor → 2-3 kez basınca depo ısınıp giriyordu — tester bulgusu).
+ * Çözüm: TEK basışta içeride kısa aralıklarla 3 kez dene (verifier gelene dek). Kod yalnız
+ * GERÇEK başarıda dedup'a girer; başarısızlıkta serbest kalır (öbür yol / retry deneyebilsin).
+ */
 export async function oturumKoduIsle(code: string): Promise<boolean> {
   if (!supabaseHazir || !supabase) return false;
   if (!code || kodIsleniyor || islenenKodlar.has(code)) return false;
   kodIsleniyor = true;
   try {
-    const { error } = await supabase.auth.exchangeCodeForSession(code);
-    if (error) throw error;
-    islenenKodlar.add(code);
-    return true; // onAuthStateChange(SIGNED_IN) tetiklenir → uygulama içeri girer
+    let sonHata: unknown = null;
+    for (let deneme = 0; deneme < 3; deneme++) {
+      if (deneme > 0) await bekle(500); // verifier AsyncStorage'a insin
+      const { error } = await supabase.auth.exchangeCodeForSession(code);
+      if (!error) {
+        islenenKodlar.add(code);
+        return true; // onAuthStateChange(SIGNED_IN) tetiklenir → uygulama içeri girer
+      }
+      sonHata = error;
+      // "code challenge/verifier" hataları geçici (yarış) → tekrar dene; diğerlerinde çık.
+      const m = (error as { message?: string })?.message ?? '';
+      if (!/verifier|challenge|code|expired|state/i.test(m)) break;
+    }
+    throw sonHata ?? new Error('Oturum kurulamadı');
   } finally {
     kodIsleniyor = false;
   }
