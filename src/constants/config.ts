@@ -61,15 +61,12 @@ export const IMZALI_URL_AKTIF = (process.env.EXPO_PUBLIC_IMZALI_URL ?? '') === '
 // geri eklenir (o zaman Data Safety'ye "crash logs" beyanı + gizlilik metni güncellenir).
 
 /**
- * ÜYELİK ANA ŞALTERİ (derleme-zamanı). v1 yayını için FALSE:
- * - Supabase'e HİÇ bağlanılmaz (client oluşmaz, ağ çağrısı yok, e-posta toplanmaz)
- *   → uygulama gerçekten %100 offline → mevcut "hesap yok" gizlilik metni DOĞRU kalır
- *   → mağaza red riski (gizlilik çelişkisi + hesap silme zorunluluğu) ORTADAN KALKAR.
- * - Giriş girişi (Sicil'deki Hesap kartı) gizlenir; /giris rotası "yakında" gösterir.
- * v2'de (onaydan sonra, ödeme ile birlikte) TRUE yapılır → o sürümde gizlilik metni
- * güncellenir + hesap silme eklenir + Data Safety düzeltilir → yeniden incelenir.
- * Anahtarlar `.env`'de hazır bekler; sadece bu bayrak kapalı.
+ * ÜYELİK ANA ŞALTERİ (derleme-zamanı). ŞU AN TRUE — giriş ZORUNLU (Supabase auth aktif).
+ * TRUE olduğunda yasal/uyum gereksinimleri (2 Tem 2026 itibarıyla KARŞILANDI):
+ * - Gizlilik/KVKK metni gerçek toplanan veriyi (e-posta/ad/soyad/telefon/DT/cinsiyet) sayar
+ *   + yurt dışı aktarım onay kutusuna bağlı açık rıza (bkz. yasal-metin.ts, auth-ekrani.tsx).
+ * - Hesap silme uygulama içi (30 gün soft-delete) + web (docs/hesap-sil.html) mevcut.
+ * - Play Data Safety cevapları docs/MAGAZA_LISTELEME.md'de güncel ("veri topluyor").
+ * FALSE yapılırsa client hiç oluşmaz, uygulama offline çalışır (v1 öncesi mod).
  */
 export const UYELIK_AKTIF = true;
-// ⚠️ YAYIN ÖNCESİ (true ile mağazaya çıkmadan): gizlilik/KVKK metni + uygulama-içi & web
-// "hesabı sil" + Play Data Safety güncellenMELİ (bkz. docs/UYELIK_KURULUM.md + DEGERLENDIRME/08).
