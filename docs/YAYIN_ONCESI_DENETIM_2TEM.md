@@ -2,7 +2,19 @@
 
 > vCode 12 Play incelemesindeyken yapılan 4 kollu bağımsız denetim (güvenlik + tasarım/UX + mağaza/yasal + kod sağlamlık).
 > 29 Haz çok-ajanlı değerlendirmenin ÜSTÜNE, sonradan eklenen ekranlara (auth, paywall, indirme, bildirim, talim, sicil) odaklandı.
-> Kod DEĞİŞTİRİLMEDİ — bu bir keşif/rapor. Düzeltme başkan onayıyla ayrı iş.
+
+## ✅ DURUM (2 Tem akşam) — kod/metin delikleri KAPATILDI
+Başkan emri "benlik olanları ayır, diğer tüm delikleri kapatalım" → 4 commit (tsc 0):
+- **Grup 1 (yasal):** `108eb1c` — TÜMÜ düzeltildi (gizlilik veri listesi, şifre/giriş iddiası, KVKK rıza tüm yollarda, 18 yaş, abonelik maddesi, web senkron, Data Safety tablosu).
+- **Grup 3 (UX):** `a421455` — TÜMÜ düzeltildi (kırmızı buton, ham hata, favori/arama sızıntısı, hitSlop, a11y, spinner, izin butonu).
+- **Grup 2 (güvenlik):** `1b49d74` — KOD hazır (premium kapısı env-guard'lı, token unique, hata maske). **DEPLOY + SQL + secret BAŞKANDA** (kilit açma anında).
+- **Grup 4 (temizlik):** `0f0a58c` — TÜMÜ (yetim dosya, sürüm, pin, yorum, palet).
+- **KILIT_AKTIF=false** bilinçli (test) — yayın kararı, promote'tan önce flip.
+- **BAŞKANDA (kod değil):** Play Data Safety formu (checklist bu raporda), mağaza metni + gizlilik URL, IBAN/Google, Edge deploy + 09 SQL.
+
+Aşağısı orijinal bulgu raporu (referans).
+
+---
 
 ## GRUP 1 — YAYINI ENGELLEYEBİLİR (Google reddi + KVKK) — EN KRİTİK
 
