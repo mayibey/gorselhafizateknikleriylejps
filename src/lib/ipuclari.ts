@@ -27,3 +27,24 @@ export async function ipucuIsaretle(ad: IpucuAd): Promise<void> {
     // sessiz geç (işaretlenemezse ipucu tekrar çıkar — kabul edilebilir)
   }
 }
+
+// --- Uygulama turu (ilk açılış tanıtımı) — TÜM kullanıcılar bir kez görür ---
+const TANITIM_KEY = 'jsps.tanitim.tamam';
+
+/** Uygulama turu daha önce tamamlandı/geçildi mi? (hata → tamamlanmamış say → tur yine çıkar) */
+export async function tanitimTamamMi(): Promise<boolean> {
+  try {
+    return (await AsyncStorage.getItem(TANITIM_KEY)) === '1';
+  } catch {
+    return false;
+  }
+}
+
+/** Uygulama turunu "tamamlandı" işaretle (bir daha çıkmaz). */
+export async function tanitimTamamla(): Promise<void> {
+  try {
+    await AsyncStorage.setItem(TANITIM_KEY, '1');
+  } catch {
+    // sessiz geç
+  }
+}

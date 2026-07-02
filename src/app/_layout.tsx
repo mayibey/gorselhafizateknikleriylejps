@@ -11,7 +11,7 @@ import * as Linking from 'expo-linking';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AppState, StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -22,6 +22,8 @@ import { initDatabase } from '@/db/database';
 import { oauthUrlIsle } from '@/lib/auth';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
+import { tanitimTamamla, tanitimTamamMi } from '@/lib/ipuclari';
+import { UygulamaTuru } from '@/components/tanitim/uygulama-turu';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
@@ -122,6 +124,11 @@ function RootNavigator() {
   const { kullanici, hazir, yukleniyor: authYukleniyor, profilTamam } = useAuth();
   const segments = useSegments();
   const router = useRouter();
+  // Uygulama turu: TÜM kullanıcılar (yeni + mevcut) bir kez görür. null = henüz okunmadı.
+  const [tanitimTamam, setTanitimTamam] = useState<boolean | null>(null);
+  useEffect(() => {
+    void tanitimTamamMi().then(setTanitimTamam);
+  }, []);
 
   const yukleniyor = bransYukleniyor || rutbeYukleniyor || authYukleniyor;
   // Giriş ZORUNLU: Supabase yapılandırıldıysa (hazir) ve oturum yoksa giriş ister.
@@ -140,17 +147,31 @@ function RootNavigator() {
 
   // Guard: giriş/profil/branş/rütbe eksikse onboarding'e götür.
   useEffect(() => {
-    if (yukleniyor || profilBekle) return;
+    // Uygulama turu açıkken (Stack render edilmiyor) yönlendirme yapma — yalnız tur bitince.
+    if (yukleniyor || profilBekle || tanitimTamam !== true) return;
     if (segments[0] === 'sifre-yenile') return; // şifre kurtarma akışı kendi oturumunu kurar
     const onboardingDe = segments[0] === 'onboarding';
     if (eksik && !onboardingDe) router.replace('/onboarding');
     else if (!eksik && onboardingDe) router.replace('/');
-  }, [eksik, yukleniyor, profilBekle, segments, router]);
+  }, [eksik, yukleniyor, profilBekle, tanitimTamam, segments, router]);
 
   // Bildirime tıklayınca uygulama açılıp Karargah'a gitsin (uygulama kapalıyken açılış dahil).
   useEffect(() => {
     return bildirimTiklamaDinle(() => router.replace('/'));
   }, [router]);
+
+  // EN ÜST KAPI: uygulama turu tamamlanmadıysa (yeni VEYA mevcut kullanıcı), her şeyden önce
+  // turu göster. Tamamlanınca kalıcı işaretlenir → bir daha çıkmaz. Yükleme bitene kadar bekle.
+  if (tanitimTamam === false && !yukleniyor) {
+    return (
+      <UygulamaTuru
+        onTamam={() => {
+          void tanitimTamamla();
+          setTanitimTamam(true);
+        }}
+      />
+    );
+  }
 
   return (
     <>
