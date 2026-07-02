@@ -2,7 +2,7 @@
   "expo": {
     "name": "Mevzu — JSPS Hazırlık",
     "slug": "gorsel-hafiza-jsps",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/images/mevzu-icon-1024.png",
     "scheme": "mevzu",
@@ -15,7 +15,7 @@
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 14,
+      "versionCode": 15,
       "googleServicesFile": "./google-services.json",
       "allowBackup": false,
       "permissions": [
@@ -49,7 +49,8 @@
       [
         "expo-notifications",
         {
-          "color": "#0B1F3A"
+          "color": "#0B1F3A",
+          "icon": "./assets/images/bildirim-ikon.png"
         }
       ],
       "./plugins/withRemovedPermissions",

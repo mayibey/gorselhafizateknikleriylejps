@@ -8,12 +8,18 @@
 - [x] **F1. Genel deneme verisi** — `scripts/genel-deneme-uret.mjs` + `npm run genel:uret` → `src/assets/genel-denemeler.ts` (3 deneme × 50 soru = 150, çakışma yok). GenelSoru: id/soru/siklar/dogru/aciklama/kaynak/zorluk/kartId.
 - [ ] **F2. Sınav mantığı — genel deneme + 2 PUAN** — `sinav.ts`: getGenelDeneme(no)/getGenelDenemeSorulari; `puanlaSinav` → puan (2×doğru) alanı; `sinav.tsx` genel mod (param `genel=1/2/3`, tüm kartlar), skor "X/100 puan".
 - [ ] **F3. Hatalı soru özeti + çözüm/açıklama + kart yönlendirme** — sonuç ekranında yanlış sorular listesi; her birinde doğru cevap + açıklama; "ilgili kartı çalış" → `/akis?kart=<id>` (kaynak_madde/kartId ile eşleşen kart).
-- [ ] **F4. Zayıf mevzi AYRIMI (Talim vs Tatbikat)** — `kart_performans.kaynak` enum'a `'talim'`+`'tatbikat'` (SCHEMA_VERSION 25, 4-dosya senkron + migration). Sınav yanlışı kaynağı moda göre. `getZayifKuyruk(kaynak?)`. Karargah/Etüt/Talim/Tatbikat ayrı listeler + kart yönlendirme.
-- [ ] **F5. Talim/Tatbikat ekran ayrımı** — `tatbikat.tsx` (Talim ekranı): müşterek/branş ALTINA "Talim" (kanun denemeleri) / "Tatbikat" (Genel Deneme 1/2/3) seçimi. Tatbikat listesi → genel deneme başlatır.
-- [ ] **F6. Kilit AKTİF + kilit simgeleri** — `KILIT_AKTIF=true`; kilit çipleri/paywall doğru; satın alınca kalkar (uyelik-context zaten kategori-bazlı).
-- [ ] **F7. Branş "çok çok yakında" + %50 indirim ibaresi** — mevzuat/tatbikat/paywall branş: "çok yakında" + "şimdi al %50 indirimli, yayında tam fiyat" mesajı.
-- [ ] **F8. Kalan UX** — (3) bildirim ikonu app.json; (7) indirme %→MB; (5) tutorial spotlight [BÜYÜK, zaman kalırsa].
+- [~] **F4. Zayıf mevzi AYRIMI (Talim vs Tatbikat)** — ⏳ ERTELENDİ (bir sonraki build). SCHEMA_VERSION 25 migration + 4-dosya senkron + performans + 3 ekran = gece sonu build'i riske atar. Genel deneme yanlışları ŞU AN tek zayıf havuza düşüyor (mevcut davranış korunur). Ayrı görünüm bir sonraki iterasyona.
+- [x] **F5. Talim/Tatbikat ekran ayrımı** — tatbikat.tsx müşterek altına Talim/Tatbikat segment; Tatbikat → Genel Deneme 1/2/3 listesi (kilit + son puan) → /sinav?genel.
+- [x] **F6. Kilit AKTİF** — `KILIT_AKTIF=true`. ⚠️ Testerların erişmesi için Play ürünleri + ödeme profili doğrulaması ŞART.
+- [x] **F7. Branş "çok yakında" + %50 indirim** — mevzuat + tatbikat + paywall branş ibaresi.
+- [~] **F8. Kalan UX** — (3) bildirim ikonu ✅ (bildirim-ikon.png beyaz silüet + app.json). (7) indirme %→MB ⏳ ERTELENDİ (indirme.ts byte akışı derin — bir sonraki). (5) tutorial spotlight ⏳ ERTELENDİ (BÜYÜK yeniden tasarım).
 - [ ] **F9. Denetim + tsc 0 + build (vCode 15) + Play kapalı test yükleme (Brave).**
+
+## SABAHA KALAN (net — başkan karar/onay):
+- **F4 zayıf ayrımı** (Talim vs Tatbikat ayrı liste) — schema v25, sağlam yapılmalı.
+- **F8-7 indirme MB gösterimi** — indirme.ts byte akışı.
+- **F8-5 tutorial spotlight** (gerçek ekranda vurgu + karartma) — büyük.
+- **Play (başkanda):** ödeme profili doğrulama (31 Tem ACİL), 1 TL ürünler, ekstre/adres, fatura e-postası.
 
 ## BAŞKANDA (kod değil — ben yapamam, net rapor):
 - **ÖDEME PROFİLİ DOĞRULAMA (ACİL):** hesap 31 Tem'de kalkacak — "Google satıcı ödeme yöntemini doğrulayamadı". payments.google.com + Gmail payments-noreply. Ürün satışı da buna bağlı.
