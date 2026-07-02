@@ -8,11 +8,12 @@ import { AppText } from '@/components/ui/app-text';
 import { TakdirBelgesi } from '@/components/sicil/takdir-belgesi';
 import { EmptyState } from '@/components/ui/empty-state';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { ekleSinavSonucu, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
-import type { QueueCard } from '@/lib/queue';
+import { ekleSinavSonucu, getAllCards, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
+import type { CardWithLaw } from '@/db/schema';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import {
   eslesenKartIdleri,
+  getGenelDenemeSorulari,
   getTestSorulari,
   type KartSoru,
   puanlaSinav,
@@ -43,8 +44,12 @@ const YANLIS_KIRMIZI = Palette.kirmizi;
  */
 export default function SinavScreen() {
   const router = useRouter();
-  const { lawId, test } = useLocalSearchParams<{ lawId?: string; test?: string }>();
-  const lawIdNum = lawId != null && lawId !== '' ? Number(lawId) : null;
+  const { lawId, test, genel } = useLocalSearchParams<{ lawId?: string; test?: string; genel?: string }>();
+  // GENEL DENEME (Tatbikat): genel=1/2/3. Kayıt/skor/devam için "sanal law_id" = -genelNo
+  // (negatif → genel deneme; getSinavSonuclari'nda law_id<0 ile ayrışır). Soru/kart yüklemesi farklı.
+  const genelNo = genel != null && genel !== '' ? Number(genel) : null;
+  const genelModu = genelNo != null && !Number.isNaN(genelNo);
+  const lawIdNum = genelModu ? -genelNo! : lawId != null && lawId !== '' ? Number(lawId) : null;
   const testNum = test != null && test !== '' ? Number(test) : 0; // kanunun kaçıncı testi (0 tabanlı)
   const [sorular, setSorular] = useState<KartSoru[] | null>(null);
   const [lawAd, setLawAd] = useState<string | null>(null);
@@ -60,20 +65,22 @@ export default function SinavScreen() {
   // (kaldığın yerden) BUNDAN türer. sorular ile aynı uzunlukta.
   const [secimler, setSecimler] = useState<(number | null)[]>([]);
   // O kanunun kartları (zayıf havuz eşleştirmesi için) — bir kez yüklenir, cache'lenir.
-  const kartlarRef = useRef<QueueCard[] | null>(null);
+  const kartlarRef = useRef<CardWithLaw[] | null>(null);
   // Skor BİR KEZ kaydedilsin (bitiş ekranı yeniden render'larında tekrar yazılmasın).
   const kaydedildiRef = useRef(false);
 
-  // Bir kanunun kartlarını (zayıf havuz eşleştirmesi + Takdir Belgesi adı) önden yükle.
+  // Kartları (zayıf havuz eşleştirmesi + Takdir Belgesi adı) önden yükle.
+  // Genel deneme = çok-kanun → TÜM kartlar; kanun sınavı → o kanunun kartları.
   const kartlariYukle = useCallback(() => {
-    if (lawIdNum == null) return;
-    void getCardsByLaw(lawIdNum)
+    const p = genelModu ? getAllCards() : lawIdNum != null ? getCardsByLaw(lawIdNum) : null;
+    if (!p) return;
+    void p
       .then((c) => {
         kartlarRef.current = c;
-        if (c[0]?.law_ad) setLawAd(c[0].law_ad);
+        if (!genelModu && c[0]?.law_ad) setLawAd(c[0].law_ad);
       })
       .catch(() => {});
-  }, [lawIdNum]);
+  }, [lawIdNum, genelModu]);
 
   // Açılış: yarım kalan sınav varsa KALDIĞIN YERDEN devam et; yoksa yeni (karıştırılmış) sınav.
   const yukle = useCallback(() => {
@@ -97,7 +104,7 @@ export default function SinavScreen() {
         setSecimler(kayit.secimler);
         setIndex(Math.min(kayit.index, kayit.sorular.length));
       } else {
-        const liste = getTestSorulari(lawIdNum, testNum);
+        const liste = genelModu ? getGenelDenemeSorulari(genelNo!) : getTestSorulari(lawIdNum, testNum);
         if (liste.length === 0) {
           setBos(true);
           return;
@@ -108,18 +115,18 @@ export default function SinavScreen() {
       }
       kartlariYukle();
     })();
-  }, [lawIdNum, testNum, kartlariYukle]);
+  }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo]);
 
   // "Tekrar çöz" → kaydı sil + YENİ karıştırılmış sınav (baştan).
   const yenidenBasla = useCallback(() => {
     if (lawIdNum == null) return;
     void sinavIlerlemeSil(lawIdNum, testNum);
-    const liste = getTestSorulari(lawIdNum, testNum);
+    const liste = genelModu ? getGenelDenemeSorulari(genelNo!) : getTestSorulari(lawIdNum, testNum);
     setSorular(liste);
     setSecimler(new Array(liste.length).fill(null));
     setIndex(0);
     kaydedildiRef.current = false;
-  }, [lawIdNum, testNum]);
+  }, [lawIdNum, testNum, genelModu, genelNo]);
 
   useEffect(() => {
     yukle();
@@ -129,8 +136,8 @@ export default function SinavScreen() {
   async function zayifaDusur(soru: KartSoru) {
     try {
       let kartlar = kartlarRef.current;
-      if (!kartlar && lawIdNum != null) {
-        kartlar = await getCardsByLaw(lawIdNum);
+      if (!kartlar) {
+        kartlar = genelModu ? await getAllCards() : lawIdNum != null ? await getCardsByLaw(lawIdNum) : null;
         kartlarRef.current = kartlar;
       }
       if (!kartlar) return;
@@ -141,6 +148,16 @@ export default function SinavScreen() {
     } catch {
       // sessiz geç: zayıf havuz logu kritik değil, sınav akışını bozmamalı.
     }
+  }
+
+  /** Sonuç ekranındaki yanlış soru → ilgili kartın akışına git (o kanunun kartında). */
+  function kartaGit(soru: KartSoru) {
+    const kartlar = kartlarRef.current;
+    if (!kartlar) return;
+    const ids = eslesenKartIdleri(soru.kaynak, kartlar);
+    const kart = ids.length > 0 ? kartlar.find((k) => k.id === ids[0]) : undefined;
+    if (!kart) return;
+    router.push({ pathname: '/akis', params: { lawId: String(kart.law_id), kart: String(kart.id) } });
   }
 
   // Bu sorunun seçili şıkkı (yoksa null). Önceki soruya dönünce o sorunun cevabı BURADAN gelir.
@@ -193,7 +210,8 @@ export default function SinavScreen() {
     void (async () => {
       try {
         await ekleSinavSonucu(lawIdNum, testNum, dogru, toplam, bugunISO());
-        if (toplam > 0 && dogru === toplam) {
+        // Takdir Belgesi yalnız KANUN denemelerinde (genel deneme = -law_id → atla).
+        if (!genelModu && toplam > 0 && dogru === toplam) {
           await degerlendirSicil();
           // Kanunun TÜM testleri %100 mu → tam Takdir Belgesi hakkı (sicil-servis ile aynı ölçüt).
           const hepsi = (await getSinavSonuclari()).filter((s) => s.law_id === lawIdNum);
@@ -263,10 +281,12 @@ export default function SinavScreen() {
           sorular={sorular}
           lawAd={lawAd}
           lawId={lawIdNum}
+          genelModu={genelModu}
           belgeHak={belgeHak}
           onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
+          onKartGit={(s) => kartaGit(s)}
         />
       ) : (
         <View style={styles.kolon}>
@@ -427,61 +447,110 @@ function Secenek({
   );
 }
 
+/** Sonuç ekranındaki tek yanlış soru kartı: soru + senin cevabın + doğru cevap + açıklama + karta git. */
+function HataKart({
+  soru,
+  secilen,
+  onKartGit,
+}: {
+  soru: KartSoru;
+  secilen: number;
+  onKartGit: () => void;
+}) {
+  const H = ['A', 'B', 'C', 'D', 'E'];
+  return (
+    <View style={styles.hataKart}>
+      <AppText variant="kucuk" bold color="anaMetin">
+        {soru.soru}
+      </AppText>
+      <View style={styles.hataSatir}>
+        <MaterialCommunityIcons name="close-circle" size={16} color={Palette.kirmizi} />
+        <AppText variant="etiket" color="kirmizi" style={styles.hataMetin}>
+          Senin cevabın: {secilen >= 0 ? `${H[secilen]}) ${soru.siklar[secilen]}` : 'Boş bıraktın'}
+        </AppText>
+      </View>
+      <View style={styles.hataSatir}>
+        <MaterialCommunityIcons name="check-circle" size={16} color={Palette.yesil} />
+        <AppText variant="etiket" color="yesil" style={styles.hataMetin}>
+          Doğru cevap: {H[soru.dogru]}) {soru.siklar[soru.dogru]}
+        </AppText>
+      </View>
+      {soru.aciklama ? (
+        <AppText variant="etiket" color="solukMetin" style={styles.hataAciklama}>
+          {soru.aciklama}
+        </AppText>
+      ) : null}
+      <Pressable style={({ pressed }) => [styles.kartGitBtn, pressed && styles.pressed]} onPress={onKartGit}>
+        <MaterialCommunityIcons name="card-text-outline" size={15} color={Palette.lacivert} />
+        <AppText variant="etiket" bold color="lacivert">
+          İlgili kartı çalış
+        </AppText>
+      </Pressable>
+    </View>
+  );
+}
+
 function Sonuc({
   cevaplar,
   sorular,
   lawAd,
   lawId,
+  genelModu,
   belgeHak,
   onZayif,
   onTekrar,
   onBitir,
+  onKartGit,
 }: {
   cevaplar: SinavCevap[];
   sorular: KartSoru[];
   lawAd: string | null;
   lawId: number | null;
+  genelModu: boolean;
   belgeHak: boolean;
   onZayif: () => void;
   onTekrar: () => void;
   onBitir: () => void;
+  onKartGit: (soru: KartSoru) => void;
 }) {
-  const { dogru, toplam, yuzde } = puanlaSinav(cevaplar, sorular);
-  // Tek testli kanunda tek test = kanun (belge kesin); çok testli kanunda TÜM testler %100 şart.
-  const tamBelge = lawId != null && (testSayisi(lawId) === 1 || belgeHak);
+  const [ozetAcik, setOzetAcik] = useState(false);
+  const { dogru, toplam, yuzde, puan, toplamPuan } = puanlaSinav(cevaplar, sorular);
+  // Takdir Belgesi yalnız KANUN denemesinde + kanunun tümü %100 ise.
+  const tamBelge = !genelModu && lawId != null && (testSayisi(lawId) === 1 || belgeHak);
+  const yanlislar = sorular
+    .map((s, i) => ({ soru: s, secilen: cevaplar[i]?.secilenIndex ?? -1 }))
+    .filter((x) => x.secilen !== x.soru.dogru);
 
-  // %100 → TAKDİR BELGESİ yalnız kanunun TÜMÜ %100 ise; tek test %100 ise yönlendiren tebrik.
+  // %100 — tam isabet.
   if (yuzde === 100) {
     return (
       <ScrollView style={styles.kolon} contentContainerStyle={styles.sonucContent}>
         {tamBelge ? (
           <>
             <AppText variant="altBaslik" bold color="altinMetin" style={styles.tamIsabet}>
-              🎖️ Tam isabet — {dogru}/{toplam}
+              🎖️ Tam isabet — {dogru}/{toplam} · {puan} puan
             </AppText>
             <TakdirBelgesi kanunAd={lawAd ?? 'Bu kanun'} tarih={bugunISO()} />
           </>
         ) : (
           <>
             <AppText variant="altBaslik" bold color="altinMetin" style={styles.tamIsabet}>
-              🎯 Tam isabet — {dogru}/{toplam}
+              🎯 Tam isabet — {dogru}/{toplam} · {puan} puan
             </AppText>
-            <AppText variant="kucuk" color="solukMetin" style={styles.belgeIpucu}>
-              Bu testi tam çözdün. Kanunun TÜM testlerini %100 yapınca Takdir Belgesi kazanırsın.
-            </AppText>
+            {!genelModu ? (
+              <AppText variant="kucuk" color="solukMetin" style={styles.belgeIpucu}>
+                Bu testi tam çözdün. Kanunun TÜM testlerini %100 yapınca Takdir Belgesi kazanırsın.
+              </AppText>
+            ) : null}
           </>
         )}
         <View style={styles.sonucButonlar}>
-          <Pressable
-            style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]}
-            onPress={onTekrar}>
+          <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onTekrar}>
             <AppText variant="govde" bold color="lacivert">
               Tekrar çöz
             </AppText>
           </Pressable>
-          <Pressable
-            style={({ pressed }) => [styles.sonucBtn, pressed && styles.pressed]}
-            onPress={onBitir}>
+          <Pressable style={({ pressed }) => [styles.sonucBtn, pressed && styles.pressed]} onPress={onBitir}>
             <AppText variant="govde" bold color="beyaz">
               Bitir
             </AppText>
@@ -492,7 +561,6 @@ function Sonuc({
   }
 
   const basarili = yuzde >= 70;
-  const yanlisVar = dogru < toplam;
   return (
     <ScrollView style={styles.kolon} contentContainerStyle={styles.sonucContent}>
       <View style={styles.skorOzet}>
@@ -504,34 +572,55 @@ function Sonuc({
         <AppText variant="altBaslik" bold color="lacivert">
           Skorun: {dogru}/{toplam}
         </AppText>
+        {/* Her soru 2 puan → toplam puan (başkan: "kaç aldığı yazılsın"). */}
+        <AppText variant="govde" bold color="altinMetin">
+          {puan} / {toplamPuan} puan
+        </AppText>
         <AppText variant="kucuk" color="solukMetin">
           %{yuzde} doğru{basarili ? ' — tebrikler!' : ' — biraz daha çalış.'}
         </AppText>
       </View>
 
       {/* Sınav→eylem köprüsü: yanlışlar zayıf havuza düştü → hemen çalışmaya yönlendir. */}
-      {yanlisVar ? (
-        <Pressable
-          style={({ pressed }) => [styles.zayifBtn, pressed && styles.pressed]}
-          onPress={onZayif}>
+      {yanlislar.length > 0 ? (
+        <Pressable style={({ pressed }) => [styles.zayifBtn, pressed && styles.pressed]} onPress={onZayif}>
           <MaterialCommunityIcons name="target" size={18} color={Palette.beyaz} />
           <AppText variant="govde" bold color="beyaz">
-            Yanlış maddeleri çalış
+            Yanlış mevzileri çalış
           </AppText>
         </Pressable>
       ) : null}
 
+      {/* Hatalı soru özeti (açılır): her yanlış → doğru cevap + açıklama + ilgili kart. */}
+      {yanlislar.length > 0 ? (
+        <>
+          <Pressable
+            style={({ pressed }) => [styles.ozetBtn, pressed && styles.pressed]}
+            onPress={() => setOzetAcik((a) => !a)}>
+            <MaterialCommunityIcons
+              name={ozetAcik ? 'chevron-up' : 'clipboard-list-outline'}
+              size={18}
+              color={Palette.lacivert}
+            />
+            <AppText variant="kucuk" bold color="lacivert">
+              {ozetAcik ? 'Yanlışları gizle' : `Yanlışlarımı ve çözümleri gör (${yanlislar.length})`}
+            </AppText>
+          </Pressable>
+          {ozetAcik
+            ? yanlislar.map((y, i) => (
+                <HataKart key={i} soru={y.soru} secilen={y.secilen} onKartGit={() => onKartGit(y.soru)} />
+              ))
+            : null}
+        </>
+      ) : null}
+
       <View style={styles.sonucButonlar}>
-        <Pressable
-          style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]}
-          onPress={onTekrar}>
+        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onTekrar}>
           <AppText variant="govde" bold color="lacivert">
             Tekrar çöz
           </AppText>
         </Pressable>
-        <Pressable
-          style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]}
-          onPress={onBitir}>
+        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onBitir}>
           <AppText variant="govde" bold color="lacivert">
             Bitir
           </AppText>
@@ -711,5 +800,43 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     paddingVertical: Spacing.three,
     alignItems: 'center',
+  },
+  ozetBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1.5,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.two,
+  },
+  hataKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    gap: Spacing.one,
+  },
+  hataSatir: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: Spacing.one,
+  },
+  hataMetin: {
+    flex: 1,
+    lineHeight: 18,
+  },
+  hataAciklama: {
+    lineHeight: 18,
+    marginTop: Spacing.half,
+  },
+  kartGitBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    alignSelf: 'flex-start',
+    marginTop: Spacing.one,
   },
 });

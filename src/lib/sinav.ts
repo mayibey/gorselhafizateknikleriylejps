@@ -8,9 +8,11 @@
  */
 
 import { KART_SORULARI, type KartSoru } from '../assets/kart-sorulari';
+import { GENEL_DENEMELER, type GenelDeneme } from '../assets/genel-denemeler';
 import { birlesikUyeler } from '@/lib/birlesik';
 
 export type { KartSoru } from '../assets/kart-sorulari';
+export type { GenelDeneme, GenelSoru } from '../assets/genel-denemeler';
 
 /** Bir sınav cevabı: hangi soru, hangi şık seçildi. */
 export type SinavCevap = { soruIndex: number; secilenIndex: number };
@@ -44,6 +46,30 @@ export function getSinavSorulari(lawId: number, rastgele: () => number = Math.ra
   const sorular = KART_SORULARI[lawId];
   if (!sorular || sorular.length === 0) return [];
   return karistir(sorular, rastgele);
+}
+
+// --- GENEL DENEMELER (Tatbikat) — karma, çok-kanun; "Genel Deneme 1/2/3" ---
+
+/** Kaç genel deneme var (Tatbikat listesi). */
+export function genelDenemeSayisi(): number {
+  return GENEL_DENEMELER.length;
+}
+
+/** Genel deneme meta bilgisi (no/başlık/soru sayısı). */
+export function genelDenemeler(): { no: number; baslik: string; soruSayisi: number }[] {
+  return GENEL_DENEMELER.map((d) => ({ no: d.no, baslik: d.baslik, soruSayisi: d.sorular.length }));
+}
+
+/** Bir genel denemenin sorularını (karışık) döndürür. GenelSoru KartSoru-uyumlu (+ kartId). */
+export function getGenelDenemeSorulari(no: number, rastgele: () => number = Math.random): KartSoru[] {
+  const d = GENEL_DENEMELER.find((x) => x.no === no);
+  if (!d || d.sorular.length === 0) return [];
+  return karistir(d.sorular, rastgele);
+}
+
+/** Genel denemede kaç soru var (yoksa 0). */
+export function genelDenemeSoruSayisi(no: number): number {
+  return GENEL_DENEMELER.find((x) => x.no === no)?.sorular.length ?? 0;
 }
 
 // --- Testlere bölme (uzun kanunlarda tek seferde 50 soru yorucu → ~20'şerlik Test 1/2/3…) ---
@@ -190,10 +216,13 @@ export function teyitSorulari(
 }
 
 /** Verilen cevapları puanlar (saf). */
+/** Her doğru cevabın puanı (deneme puanı — 50 soruluk genel deneme = 100 puan). */
+export const PUAN_KATSAYI = 2;
+
 export function puanlaSinav(
   cevaplar: SinavCevap[],
   sorular: KartSoru[],
-): { dogru: number; toplam: number; yuzde: number } {
+): { dogru: number; toplam: number; yuzde: number; puan: number; toplamPuan: number } {
   const toplam = sorular.length;
   let dogru = 0;
   for (const c of cevaplar) {
@@ -201,5 +230,5 @@ export function puanlaSinav(
     if (soru && c.secilenIndex === soru.dogru) dogru++;
   }
   const yuzde = toplam > 0 ? Math.round((dogru / toplam) * 100) : 0;
-  return { dogru, toplam, yuzde };
+  return { dogru, toplam, yuzde, puan: dogru * PUAN_KATSAYI, toplamPuan: toplam * PUAN_KATSAYI };
 }
