@@ -509,9 +509,11 @@ export default function AkisScreen() {
               {/* SES kontrolleri — GÖRSEL EKRANDA GÖRÜNENE KADAR mount EDİLMEZ (ogrenebilir
                   false iken) → otomatik başlama görsel yüklenince başlar (görselsiz kartta
                   hemen). Mount olunca display-toggle ile panel kapalıyken/madde'ye geçince
-                  KESİLMEZ. Kartın GERÇEK mp3'ü varsa SesOynatici, yoksa TtsBar (robotik TTS). */}
+                  KESİLMEZ. Kartın GERÇEK mp3'ü varsa SesOynatici, yoksa TtsBar (robotik TTS).
+                  İLK-AÇILIŞ İPUCU açıkken de mount EDİLMEZ → kullanıcı ipucuyu okuyup "Anladım"
+                  demeden ses başlamaz (setKartIpucu(false) sonrası mount olup otomatik başlar). */}
               <View style={acikPanel === 'ses' ? null : styles.gizli}>
-                {ogrenebilir ? (
+                {ogrenebilir && !kartIpucu ? (
                   sesVar ? (
                     <SesOynatici
                       key={queue[index].id}
