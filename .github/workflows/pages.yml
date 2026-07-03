@@ -6,12 +6,13 @@ name: Deploy docs to GitHub Pages
 on:
   push:
     branches: [master]
-    # YALNIZ docs/ değişince deploy et. Kod/kök-dosya (PROJE_DURUM.md vb.) commit'lerinde
-    # docs aynı kaldığı için "aynı içeriği yeniden deploy" → "Deployment failed, try again later"
-    # hatası + gereksiz mail oluyordu. Bu filtre no-op deploy'ları tamamen eler.
+    # YALNIZ docs/ değişince deploy et. GitHub Pages, içeriği hiç değişmemiş (byte-byte aynı)
+    # bir yayını reddedip "Deployment failed, try again later" veriyor → kod/kök-dosya
+    # (PROJE_DURUM.md vb.) commit'lerinde docs aynı kaldığı için her push fail + gereksiz mail
+    # oluyordu. Bu filtre no-op deploy'ları TAMAMEN eler (workflow hiç çalışmaz).
+    # NOT: workflow'un kendisini test etmek için manuel "Run workflow" (workflow_dispatch) kullan.
     paths:
       - 'docs/**'
-      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
