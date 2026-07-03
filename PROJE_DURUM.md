@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 3 Temmuz 2026
 >
+> ### ▶ 3 Tem GECE (2) — NATIVE GOOGLE SIGN-IN + vCode 19 YÜKLENDİ
+> Google giriş takılması (mail seçince supabase.co redirect döngüsünde kalma) için Supabase OAuth/WebBrowser YERİNE @react-native-google-signin (native hesap seçici → idToken → supabase.auth.signInWithIdToken; redirect/callback YOK). Cloud: Web client (webClientId=1065249322807-rooson7kmj49lgt3hvfl25s41hnmappv, Supabase external_google_client_id ile AYNI) + YENİ Android client (package app.mevzujsps.android + App Signing SHA-1 9C:31:...). Web tarafı eski Supabase OAuth (GoogleSignin native-only, dinamik import). Build vCode 19/1.0.9 BUILD SUCCESSFUL (native derleme, google-signin bundle teyit). Play Alpha release 20 → incelemeye gönderildi. Onaylanınca test: Google giriş takılmadan + supabase.co yerine marka. NOT: Android client Google propagation birkaç saat olabilir. SHA-1ler: App Signing 9C:31:BB:88:69:BC:93:AC:1A:89:E4:CC:CD:AB:BB:B3:F9:2E:F1:4B, Upload E2:E5:1F:7E:39:38:0E:2D:FB:E9:1A:CD:8B:C9:AE:0F:D2:DC:EE:D2.
+>
 > ### ▶ 3 Tem GECE — vCode 18 KAPALI TESTE YÜKLENDİ (google giriş + acknowledge fix)
 > vCode 17 sonrası 2 kod fix: (1) Google giriş PKCE yarışı daha sağlam (auth.ts, 5 deneme+artan bekleme, ilk-basış takılması) (2) acknowledge/iade önleme (paywall, doğrulama gecikse bile satın alma acknowledge → iade yok). Build vCode 18/1.0.8, bundle teyit (acknowledge/isConsumable). Play Alpha → release 19 → incelemeye gönderildi ("İncelenmekte"). ÖDEME 401 hâlâ: en son deneme 14:28 UTC 401; kök neden ödeme profili (banka deposit 2-3 gün bekleniyor). Tester mail farklı-hesap = Play Store hesabı (respectylmz1) ≠ uygulama girişi (mayibey), Play Billing doğası, bizim mail göndermiyoruz. Sipariş yönetimi: tüm satın almalar (35.99 gerçek + 0 test) GERİ ÖDEME YAPILDI, kimse mağdur değil.
 >
