@@ -127,21 +127,27 @@ function PaywallIcerik() {
     void fetchProducts({ skus: ABONELIK_URUNLERI, type: 'subs' });
   }, [connected]);
 
-  // Satın alma başarılı → sunucuda doğrula → finishTransaction → hakları yenile.
+  // Satın alma başarılı → ÖNCE acknowledge (iade önle) → sunucuda doğrula → hakları yenile.
   async function tamamla(purchase: Purchase) {
     setDurum('dogrulaniyor');
+    const token = purchase.purchaseToken ?? '';
+    // 1) ACKNOWLEDGE (isConsumable:false → sahiplik kalır, geri-yükle çalışır). Satın alma GERÇEK
+    //    (Play SDK'sından); doğrulama sonucundan BAĞIMSIZ hemen onaylanır → Google'ın 3-gün "onaylanmadı
+    //    → otomatik iade/iptal" kuralı devreye girmez. Acknowledge sahiplik VERMEZ, yalnız "aldım" bildirir
+    //    → hak yine SUNUCUDA yazılır (güvenlik korunur). Doğrulama gecikse/401 verse bile müşteri mağdur olmaz.
+    await finishTransaction({ purchase, isConsumable: false }).catch(() => {});
+    // 2) SUNUCUDA DOĞRULA + hak yaz. Başarısızsa satın alma askıda kalır (iade YOK) → "geri yükle" ile açılır.
     try {
-      const token = purchase.purchaseToken ?? '';
       const sonuc = await satinAlmaDogrula(purchase.productId, token);
       if (!sonuc.ok) throw new Error('Sunucu doğrulaması başarısız.');
-      // Doğrulandı → işlemi kapat (isConsumable:false → abonelik + kalıcı ürün tüketilmez).
-      await finishTransaction({ purchase, isConsumable: false });
       await yenile();
       setMesaj({ tip: 'basari', metin: 'Satın alma tamamlandı — erişimin açıldı.' });
     } catch (e) {
       setMesaj({
         tip: 'hata',
-        metin: __DEV__ ? `Doğrulama hatası: ${e instanceof Error ? e.message : e}` : 'Satın alma doğrulanamadı.',
+        metin: __DEV__
+          ? `Doğrulama hatası: ${e instanceof Error ? e.message : e}`
+          : 'Ödemen alındı ve kaydedildi. Doğrulama şu an tamamlanamadı — birkaç dakika sonra "Satın alımları geri yükle" ile erişimin açılır.',
       });
     } finally {
       setIslemUrun(null);
@@ -199,14 +205,13 @@ function PaywallIcerik() {
       for (const p of alinmis) {
         const token = p.purchaseToken ?? '';
         if (!token) continue;
+        // ACKNOWLEDGE her durumda (doğrulama sonucundan bağımsız) → iade/iptal önlenir; sahiplik kalır.
+        await finishTransaction({ purchase: p, isConsumable: false }).catch(() => {});
         try {
           const sonuc = await satinAlmaDogrula(p.productId, token);
-          if (sonuc.ok) {
-            dogrulandi++;
-            await finishTransaction({ purchase: p, isConsumable: false }).catch(() => {});
-          }
+          if (sonuc.ok) dogrulandi++;
         } catch {
-          // bu ürün doğrulanamadı → diğerlerine devam
+          // bu ürün doğrulanamadı → diğerlerine devam (acknowledge yapıldı, iade olmaz)
         }
       }
       await yenile();
