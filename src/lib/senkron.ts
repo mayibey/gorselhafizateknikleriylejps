@@ -26,6 +26,33 @@ import { supabase, supabaseHazir } from '@/lib/supabase';
 const TABLO = 'kullanici_ilerleme';
 // Cihazda EN SON senkronlanan hesabın id'si → hesap değişimi tespiti (bulaşma önleme).
 const SON_KULLANICI_KEY = 'jsps.senkron.sonKullaniciId';
+
+// TEK SEFERLİK İLERLEME SIFIRLAMA (test için temiz başlangıç). Bu sayı ARTIRILINCA herkeste bir
+// kez daha sıfırlama çalışır (eski test verisi cihaz + buluttan silinir). 0 = kapalı/hiç yapılmadı.
+const SIFIRLAMA_TOHUMU = 1;
+const SIFIRLAMA_ANAHTAR = 'jsps.ilerleme.sifirlamaTohumu';
+
+/**
+ * TEK SEFERLİK ilerleme sıfırlama — testerların cihazında + bulutta kalan ESKİ ilerlemeyi temiz
+ * bir teste geçmek için bir kez siler. senkronYukle içinde BULUT ÇEKİMİNDEN ÖNCE çağrılır → bulut
+ * yedeği de silindiği için sonraki çekim boş gelir, geri yükleme OLMAZ. Bayrak (AsyncStorage)
+ * TOHUM'a eşitlenir → bir daha çalışmaz (TOHUM artırılana kadar). Başarısızsa bayrak yazılmaz →
+ * sonraki girişte tekrar denenir. Referans veri (laws/cards) `ilerlemeSifirla`'da korunur.
+ */
+async function ilerlemeSifirlamaMigrasyonu(uid: string): Promise<void> {
+  if (SIFIRLAMA_TOHUMU <= 0) return;
+  const yapilan = Number((await AsyncStorage.getItem(SIFIRLAMA_ANAHTAR)) ?? '0');
+  if (yapilan >= SIFIRLAMA_TOHUMU) return; // bu cihazda zaten yapıldı
+  // CİHAZ: srs/performans/sicil/geriBes/sınav + yarım sınav + favori/arama (hesaba-özel yerel).
+  await ilerlemeSifirla();
+  await sinavIlerlemeTumunuSil();
+  await setFavoriler([]);
+  await sonAramalariTemizle();
+  // BULUT: bu kullanıcının yedek satırı (varsa) — silinmezse çekim geri yüklerdi.
+  if (supabase) await supabase.from(TABLO).delete().eq('user_id', uid);
+  await AsyncStorage.setItem(SIFIRLAMA_ANAHTAR, String(SIFIRLAMA_TOHUMU));
+  aktifVeriSahibi = null; // yerel artık boş → yükleme sonunda uid'e bağlanır
+}
 // BU ÇALIŞAN KOPYADAKİ yerel verinin sahibi (modül hafızası). Web'de OAuth popup'ı
 // uygulamanın ikinci bir kopyasını açar ve AsyncStorage'ı (localStorage) paylaşır →
 // yalnız depo anahtarına güvenmek yarışa açık. Kural: bu kopyada senkronYukle(uid)
@@ -77,6 +104,8 @@ export async function senkronYukle(): Promise<void> {
     const uid = u.user?.id;
     if (!uid) return;
     await hesapDegisimiIsle(uid);
+    // TEK SEFERLİK sıfırlama (test temiz başlangıç) — çekimden ÖNCE (bulut da silinir → boş çekilir).
+    await ilerlemeSifirlamaMigrasyonu(uid);
     const { data } = await supabase.from(TABLO).select('veri').maybeSingle();
     const snapshot = data?.veri as IlerlemeSnapshot | undefined;
     if (snapshot && snapshot.surum === 1) {
