@@ -23,8 +23,9 @@ import {
 import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { type Cinsiyet, type Profil, profilGetir } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
-import { calisilabilirZayifMevzi } from '@/lib/gorsel-kaynak';
+import { calisilabilirZayifMevzi, kartKlasoru } from '@/lib/gorsel-kaynak';
 import { maddeEtiket } from '@/lib/madde-etiket';
+import { useUyelik } from '@/lib/uyelik-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
@@ -32,7 +33,9 @@ import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
 import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
 
-type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet; indirilmemis: number };
+// liste = ÇALIŞILABİLİR (indirilmiş) zayıflar; kilitli = üyelik gerektiren kanunlarda (indirilemez);
+// inebilir = erişilebilir ama henüz indirilmemiş (Mevzuat'tan inince çalışılır).
+type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet; kilitli: number; inebilir: number };
 type SicilVeri = { kayitlar: SicilKaydi[]; durum: GeriBesDurum };
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
@@ -50,6 +53,7 @@ const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '�
 
 export default function SicilScreen() {
   const router = useRouter();
+  const { kanunErisilebilir } = useUyelik();
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
@@ -69,7 +73,19 @@ export default function SicilScreen() {
       .then(([perf, cards]) => {
         const tum = zayifKartlar(perf, cards);
         const liste = calisilabilirZayifMevzi(tum);
-        setZayif({ liste, ozet: eksikOzet(perf, cards), indirilmemis: tum.length - liste.length });
+        const calisSet = new Set(liste.map((z) => z.card.id));
+        // Çalışılamayan (indirilmemiş) zayıfları kilit durumuna göre ayır: kilitli kanunun mevzisi
+        // İNDİRİLEMEZ (üyelik gerek) → "indir" demek yanıltıcı; erişilebilir olan indirilebilir.
+        const disari = tum.filter((z) => !calisSet.has(z.card.id));
+        const kilitli = disari.filter(
+          (z) => !kanunErisilebilir(kartKlasoru(z.card.gorsel_yolu), z.card.blok),
+        ).length;
+        setZayif({
+          liste,
+          ozet: eksikOzet(perf, cards),
+          kilitli,
+          inebilir: disari.length - kilitli,
+        });
       })
       .catch(() => setZayif(null));
     // Ödül/Ceza: önce değerlendir (yeni kayıt/ceza işle), sonra sicil + emir durumunu yükle. AYRI catch.
@@ -77,7 +93,7 @@ export default function SicilScreen() {
       .then(() => Promise.all([getSicilKayitlari(), getGeriBesDurum()]))
       .then(([kayitlar, durum]) => setSicil({ kayitlar, durum }))
       .catch(() => setSicil(null));
-  }, []);
+  }, [kanunErisilebilir]);
 
   useFocusEffect(yukle);
 
@@ -427,14 +443,24 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
     );
   }
   if (zayif.liste.length === 0) {
-    // Çalışılabilir zayıf yok — ama içeriği inmemiş zayıflar varsa kullanıcıyı bilgilendir
-    // (yoksa "zayıfım yok" sanır; oysa o kanunlar inmediği için çalışılamıyor).
-    if (zayif.indirilmemis > 0) {
+    // Çalışılabilir zayıf yok — ama çalışılamayan (kilitli/inmemiş) zayıflar varsa DOĞRU yönlendir.
+    // Kilitli kanunun mevzisi indirilemez → "indir" değil "üyeliğinle açılır" demeliyiz.
+    if (zayif.kilitli > 0 || zayif.inebilir > 0) {
       return (
-        <AppText variant="kucuk" color="amber">
-          {zayif.indirilmemis} zayıf mevzin, henüz indirilmemiş kanunlarda. Mevzuat'tan o kanunları
-          indirince burada çalışabilirsin.
-        </AppText>
+        <>
+          {zayif.kilitli > 0 ? (
+            <AppText variant="kucuk" color="amber">
+              {zayif.kilitli} zayıf mevzin, üyelik gerektiren kanunlarda. Üyeliğini aldığında bu
+              mevziler açılır ve burada çalışabilirsin.
+            </AppText>
+          ) : null}
+          {zayif.inebilir > 0 ? (
+            <AppText variant="kucuk" color="amber">
+              {zayif.inebilir} zayıf mevzin, henüz indirilmemiş kanunlarda. Mevzuat'tan o kanunları
+              indirince burada çalışabilirsin.
+            </AppText>
+          ) : null}
+        </>
       );
     }
     return (

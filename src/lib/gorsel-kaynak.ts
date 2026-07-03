@@ -22,6 +22,13 @@ export function indirilmisGorsel(key?: string | null): string | null {
   return yol && kanunIndirilmisMi(klasorOf(yol)) ? yol : null;
 }
 
+/** Kartın kanun klasörü (ör. "tck") — gorsel anahtarından. Erişim/kilit kontrolü için. */
+export function kartKlasoru(key?: string | null): string | null {
+  if (!key) return null;
+  const yol = KART_GORSEL_YOLLARI[key];
+  return yol ? klasorOf(yol) : null;
+}
+
 /** İNDİRİLMEMİŞ görsel için kaynak: uzak {uri} veya gömülü require. (İndirilmiş → çöz yolu.) */
 export function gorselKaynak(key?: string | null): GorselKaynak | undefined {
   if (!key) return undefined;
