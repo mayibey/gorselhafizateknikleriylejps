@@ -22,6 +22,9 @@ export function useKanunIndirme(klasor: string) {
     return 'yok';
   });
   const [yuzde, setYuzde] = useState(() => (klasor ? (indirmeDurumuAl(klasor)?.yuzde ?? 0) : 0));
+  const [inenBayt, setInenBayt] = useState(() =>
+    klasor ? (indirmeDurumuAl(klasor)?.inenBayt ?? 0) : 0,
+  );
 
   // Durum yöneticisini dinle → başka sekmeden dönünce / arka plandan gelince yüzde & durum
   // ekranda kayıtlı kalır (state artık modülde, bileşende değil).
@@ -30,6 +33,7 @@ export function useKanunIndirme(klasor: string) {
     const d = indirmeDurumuAl(klasor);
     if (d) {
       setYuzde(d.yuzde);
+      setInenBayt(d.inenBayt);
       setDurum(d.iniyor ? 'iniyor' : 'indirildi');
     } else if (kanunIndirilmisMi(klasor)) {
       setDurum('indirildi');
@@ -38,6 +42,7 @@ export function useKanunIndirme(klasor: string) {
       const s = indirmeDurumuAl(klasor);
       if (s) {
         setYuzde(s.yuzde);
+        setInenBayt(s.inenBayt);
         setDurum(s.iniyor ? 'iniyor' : 'indirildi');
       } else {
         setDurum(kanunIndirilmisMi(klasor) ? 'indirildi' : 'yok');
@@ -73,5 +78,5 @@ export function useKanunIndirme(klasor: string) {
     );
   }
 
-  return { durum, yuzde, indir, sil };
+  return { durum, yuzde, inenBayt, indir, sil };
 }

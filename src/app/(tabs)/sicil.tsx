@@ -441,6 +441,21 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
           <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
             {maddeEtiket(z.card.madde_no, z.card.baslik)}
           </AppText>
+          {/* Nereden zayıf düştü — Talim (çalışma/kanun sınavı) ve/veya Tatbikat (genel deneme). */}
+          {z.kaynaklar.tatbikat ? (
+            <View style={[styles.kaynakRozet, styles.kaynakTatbikat]}>
+              <AppText variant="etiket" color="amber" bold>
+                Tatbikat
+              </AppText>
+            </View>
+          ) : null}
+          {z.kaynaklar.talim ? (
+            <View style={[styles.kaynakRozet, styles.kaynakTalim]}>
+              <AppText variant="etiket" color="lacivert" bold>
+                Talim
+              </AppText>
+            </View>
+          ) : null}
           <View style={styles.zayifRozet}>
             <AppText variant="etiket" color="beyaz" bold>
               {z.yanlisSayisi} yanlış
@@ -607,6 +622,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.half,
     borderRadius: Radius.s,
+  },
+  kaynakRozet: {
+    paddingHorizontal: Spacing.one,
+    paddingVertical: Spacing.half,
+    borderRadius: Radius.s,
+    borderWidth: 1,
+  },
+  kaynakTatbikat: {
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.altin,
+  },
+  kaynakTalim: {
+    backgroundColor: Palette.kremZemin,
+    borderColor: Palette.kenarlik,
   },
   stat: {
     alignItems: 'center',

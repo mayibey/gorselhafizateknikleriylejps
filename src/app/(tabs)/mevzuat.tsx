@@ -614,6 +614,7 @@ function KanunSatir({
               <KanunIndirButon
                 durum={indirme.durum}
                 yuzde={indirme.yuzde}
+                inenBayt={indirme.inenBayt}
                 onIndir={indirme.indir}
                 onSil={indirme.sil}
               />

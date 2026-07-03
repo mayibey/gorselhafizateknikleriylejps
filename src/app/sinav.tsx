@@ -142,8 +142,11 @@ export default function SinavScreen() {
       }
       if (!kartlar) return;
       const ids = eslesenKartIdleri(soru.kaynak, kartlar);
+      // Genel deneme (Tatbikat) yanlışı 'genel', Talim (kanun sınavı) yanlışı 'quiz' kaynağıyla
+      // düşer → zayıf mevzide "Tatbikat/Talim" etiketi buradan ayrışır (tek havuz, ayrı etiket).
+      const kaynakTip = genelModu ? 'genel' : 'quiz';
       for (const id of ids) {
-        await kaydetPerformans(id, 'quiz', 'yanlis').catch(() => {});
+        await kaydetPerformans(id, kaynakTip, 'yanlis').catch(() => {});
       }
     } catch {
       // sessiz geç: zayıf havuz logu kritik değil, sınav akışını bozmamalı.

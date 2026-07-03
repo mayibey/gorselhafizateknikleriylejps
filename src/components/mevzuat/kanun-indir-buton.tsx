@@ -12,14 +12,23 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { IndirmeDurum } from '@/hooks/use-kanun-indirme';
 import { indirmeDestekli } from '@/lib/indirme';
 
+/** Bayt → okunabilir MB metni (ör. "12.3 MB"). 0 → boş (henüz ölçülmedi). */
+function mbMetin(bayt: number): string {
+  if (!bayt || bayt <= 0) return '';
+  const mb = bayt / (1024 * 1024);
+  return `${mb < 10 ? mb.toFixed(1) : Math.round(mb)} MB`;
+}
+
 export function KanunIndirButon({
   durum,
   yuzde,
+  inenBayt,
   onIndir,
   onSil,
 }: {
   durum: IndirmeDurum;
   yuzde: number;
+  inenBayt: number;
   onIndir: () => void;
   onSil: () => void;
 }) {
@@ -31,11 +40,13 @@ export function KanunIndirButon({
   };
 
   if (durum === 'iniyor') {
+    const mb = mbMetin(inenBayt);
     return (
       <View style={[styles.kutu, styles.iniyor]}>
         <ActivityIndicator size="small" color={Palette.lacivert} />
         <AppText variant="etiket" bold color="lacivert">
           %{yuzde}
+          {mb ? ` · ${mb}` : ''}
         </AppText>
       </View>
     );

@@ -16,10 +16,15 @@
 - [x] **F9. Denetim + tsc 0 + build (vCode 15) + Play kapalı test yükleme (Brave).** — ✅ vCode 15 (1.0.5) AAB alındı, doğrulandı (Genel Deneme + KILIT_AKTIF gömülü), Play Alpha kapalı teste yüklendi, İleri→Kaydet→incelemeye gönderildi. Durum: **"İncelenmekte olan değişiklikler"** (Google incelemesinde). 3 Tem gecesi.
 
 ## SABAHA KALAN (net — başkan karar/onay):
-- **F4 zayıf ayrımı** (Talim vs Tatbikat ayrı liste) — schema v25, sağlam yapılmalı.
-- **F8-7 indirme MB gösterimi** — indirme.ts byte akışı.
-- **F8-5 tutorial spotlight** (gerçek ekranda vurgu + karartma) — büyük.
-- **Play (başkanda):** ödeme profili doğrulama (31 Tem ACİL), 1 TL ürünler, ekstre/adres, fatura e-postası.
+- **F4 zayıf ayrımı** — ✅ 3 Tem yapıldı (tek havuz + Talim/Tatbikat kaynak ETİKETİ; schema göçü YOK — kaynak TEXT sütununa 'genel' değeri eklendi). vCode 16.
+- **F8-7 indirme MB gösterimi** — ✅ 3 Tem yapıldı (indirme.ts inenBayt akışı → butonda "%X · Y MB"). vCode 16.
+- **F8-5 tutorial spotlight** — ✅ 3 Tem yapıldı (koyu sahne + parlayan altın ışık halkası; uygulama-turu.tsx yeniden tasarım). vCode 16.
+- **Play (başkanda):** ödeme profili doğrulama (31 Tem ACİL — AYRI konu), 1 TL ürünler, ekstre/adres, fatura e-postası.
+
+## vCode 16 (3 Tem) — kalan işler + ödeme kök neden:
+- **Ödeme KÖK NEDEN ÇÖZÜLDÜ:** servis hesabına Play'de finansal izin verilmemişti (401 permissionDenied) → verildi. Kod doğruydu. Test: uygulamada "geri yükle".
+- **Ses ipucu fix:** ilk ipucu açıkken ses beklemesin (akis.tsx).
+- **Zayıf kaynak etiketi + MB + spotlight** (F4/F8-7/F8-5 yukarıda ✅).
 
 ## BAŞKANDA (kod değil — ben yapamam, net rapor):
 - **ÖDEME PROFİLİ DOĞRULAMA (ACİL):** hesap 31 Tem'de kalkacak — "Google satıcı ödeme yöntemini doğrulayamadı". payments.google.com + Gmail payments-noreply. Ürün satışı da buna bağlı.

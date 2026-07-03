@@ -13,9 +13,17 @@ import type { CardWithLaw, PerformansSatir } from '@/db/schema';
 export function kotuMu(satir: PerformansSatir): boolean {
   return (
     (satir.kaynak === 'calisma' && satir.sonuc === 'zor') ||
-    (satir.kaynak === 'quiz' && satir.sonuc === 'yanlis')
+    ((satir.kaynak === 'quiz' || satir.kaynak === 'genel') && satir.sonuc === 'yanlis')
   );
 }
+
+/** Bir zayıf kartın nereden geldiği (tek havuz, ayrı etiket). Kart iki kaynaktan da gelmiş olabilir. */
+export type ZayifKaynaklar = {
+  /** Talim: kart çalışmasında 'zor' VEYA kanun sınavında (quiz) 'yanlis'. */
+  talim: boolean;
+  /** Tatbikat: genel deneme (genel) 'yanlis'. */
+  tatbikat: boolean;
+};
 
 export type ZayifKart = {
   card: CardWithLaw;
@@ -23,6 +31,8 @@ export type ZayifKart = {
   yanlisSayisi: number;
   /** En güncel deneme tarihi (YYYY-MM-DD). */
   sonTarih: string;
+  /** Nereden zayıf düştü — Talim/Tatbikat etiketi için (tek havuz, ayrı rozet). */
+  kaynaklar: ZayifKaynaklar;
 };
 
 export type KanunPerf = {
@@ -61,10 +71,15 @@ export function zayifKartlar(performans: PerformansSatir[], cards: CardWithLaw[]
     if (ardisikIyi >= 2) continue; // 2 ardışık doğru → havuzdan çıktı
     const card = harita.get(cardId);
     if (!card) continue; // metadata yoksa atla
+    const kotuSatirlar = satirlar.filter(kotuMu);
     sonuc.push({
       card,
-      yanlisSayisi: satirlar.filter(kotuMu).length,
+      yanlisSayisi: kotuSatirlar.length,
       sonTarih: satirlar[satirlar.length - 1].tarih,
+      kaynaklar: {
+        talim: kotuSatirlar.some((s) => s.kaynak === 'calisma' || s.kaynak === 'quiz'),
+        tatbikat: kotuSatirlar.some((s) => s.kaynak === 'genel'),
+      },
     });
   }
 

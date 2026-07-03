@@ -51,7 +51,7 @@ function onPlanBekle(): Promise<void> {
 // ---- İndirme durumu yöneticisi (modül-içi, reaktif) ----
 // State ekran hafızasında değil BURADA tutulur → başka sekmeye geçip dönünce / arka plandan
 // gelince yüzde kaybolmaz; iki bileşen aynı indirmeyi çift başlatmaz (tek uçuş).
-export type AktifIndirme = { yuzde: number; iniyor: boolean };
+export type AktifIndirme = { yuzde: number; iniyor: boolean; inenBayt: number };
 const aktif = new Map<string, AktifIndirme>();
 const promiseler = new Map<string, Promise<void>>();
 const dinleyiciler = new Map<string, Set<() => void>>();
@@ -122,7 +122,7 @@ export function yerelDosyaUri(yol: string): string {
   return KOK + yol;
 }
 
-export type IndirmeIlerleme = { toplam: number; biten: number; yuzde: number };
+export type IndirmeIlerleme = { toplam: number; biten: number; yuzde: number; inenBayt: number };
 
 /**
  * Bir kanunu indir (per-dosya; var olanı atlar = devam edilebilir). onIlerleme ile yüzde bildirir.
@@ -151,9 +151,11 @@ export async function kanunIndir(
   const filigran = await gorselFiligran().catch(() => null);
 
   let biten = 0;
-  const ilerle = () => {
+  let inenBayt = 0;
+  const ilerle = (ekBayt: number) => {
     biten++;
-    onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100) });
+    inenBayt += ekBayt;
+    onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100), inenBayt });
   };
 
   // Tek dosya: GÖRSEL = (filigran fn / imzalı-public) indir + AES şifrele; SES = imzalı/public.
@@ -214,7 +216,12 @@ export async function kanunIndir(
     while (sira < isler.length) {
       const is = isler[sira++];
       await indirTekRetry(is.tip, is.yol);
-      ilerle();
+      // İnen dosyanın cihazda kapladığı boyutu topla (MB göstergesi için). Var olanı atladıysa
+      // da boyutu sayılır → devam eden indirmede toplam MB doğru görünür. Okunamzsa 0.
+      const sz = await FileSystem.getInfoAsync(KOK + is.yol)
+        .then((b) => (b.exists && b.size ? b.size : 0))
+        .catch(() => 0);
+      ilerle(sz);
     }
   };
   await Promise.all(Array.from({ length: ESZAMANLI }, () => calisan()));
@@ -230,14 +237,22 @@ export async function kanunIndir(
 export function kanunIndirBaslat(klasor: string): Promise<void> {
   const mevcut = promiseler.get(klasor);
   if (mevcut) return mevcut;
-  aktif.set(klasor, { yuzde: aktif.get(klasor)?.yuzde ?? 0, iniyor: true });
+  aktif.set(klasor, {
+    yuzde: aktif.get(klasor)?.yuzde ?? 0,
+    iniyor: true,
+    inenBayt: aktif.get(klasor)?.inenBayt ?? 0,
+  });
   bildir(klasor);
   const p = kanunIndir(klasor, (pr) => {
-    aktif.set(klasor, { yuzde: pr.yuzde, iniyor: true });
+    aktif.set(klasor, { yuzde: pr.yuzde, iniyor: true, inenBayt: pr.inenBayt });
     bildir(klasor);
   }).then(
     () => {
-      aktif.set(klasor, { yuzde: 100, iniyor: false });
+      aktif.set(klasor, {
+        yuzde: 100,
+        iniyor: false,
+        inenBayt: aktif.get(klasor)?.inenBayt ?? 0,
+      });
       promiseler.delete(klasor);
       bildir(klasor);
     },

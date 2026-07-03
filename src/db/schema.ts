@@ -61,12 +61,19 @@ export interface Srs {
   sonraki_tarih: string;
 }
 
-/** Performans logu kaynağı: Karargah çalışması mı, Tatbikat quiz'i mi. */
-export type PerformansKaynak = 'calisma' | 'quiz';
+/**
+ * Performans logu kaynağı:
+ *  - 'calisma' → Karargah/kart akışı çalışması ('biliyorum'|'tekrar'|'zor')
+ *  - 'quiz'    → Talim (kanun bazlı sınav) ('dogru'|'yanlis')
+ *  - 'genel'   → Tatbikat (genel deneme) ('dogru'|'yanlis')
+ * NOT: DB'de `kaynak` serbest TEXT sütunu (enum değil) → yeni değer şema göçü GEREKTİRMEZ.
+ * Zayıf mevzi etiketi bu kaynağa bakar: talim = calisma|quiz, tatbikat = genel.
+ */
+export type PerformansKaynak = 'calisma' | 'quiz' | 'genel';
 
 /**
  * Tek bir cevabın performans logu satırı (akıllı öğrenme — Katman 1).
- * sonuc kaynağa göre HAM tutulur: çalışma 'biliyorum'|'tekrar'|'zor', quiz 'dogru'|'yanlis'.
+ * sonuc kaynağa göre HAM tutulur: çalışma 'biliyorum'|'tekrar'|'zor', quiz/genel 'dogru'|'yanlis'.
  * SRS'ten AYRI katman; "geri besleme havuzu" Katman 2'de okuma filtresiyle türetilir.
  */
 export interface PerformansSatir {
