@@ -63,3 +63,15 @@ export function calisilabilirZayif<T extends { gorsel_yolu: string | null }>(kar
   if (!ICERIK_TABANI) return kartlar;
   return kartlar.filter((c) => indirilmisGorsel(c.gorsel_yolu) !== null);
 }
+
+/**
+ * ZayifKart listesini ÇALIŞILABİLİR (indirilmiş görselli) mevzilere indirger — Evsaf listesi +
+ * geri-besleme emri/ceza AYNI filtreyi kullansın diye (yukarıdaki `calisilabilirZayif` kart
+ * kuyruğu içindir; bu `ZayifKart` meta'sını korur). Sunucu modunda indirilmemiş kanunların
+ * zayıfları SAYILMAZ → Karargah/akış (0) ile Evsaf/emir (50+) tutarsızlığı kapanır, kullanıcı
+ * çalışamadığı mevzi yüzünden sonsuz ceza almaz.
+ */
+export function calisilabilirZayifMevzi(zayiflar: import('./performans').ZayifKart[]) {
+  if (!ICERIK_TABANI) return zayiflar;
+  return zayiflar.filter((z) => indirilmisGorsel(z.card.gorsel_yolu) !== null);
+}

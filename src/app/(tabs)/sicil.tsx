@@ -23,6 +23,7 @@ import {
 import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { type Cinsiyet, type Profil, profilGetir } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
+import { calisilabilirZayifMevzi } from '@/lib/gorsel-kaynak';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
 import { ornekKayitlar } from '@/lib/sicil';
@@ -31,7 +32,7 @@ import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
 import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
 
-type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet };
+type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet; indirilmemis: number };
 type SicilVeri = { kayitlar: SicilKaydi[]; durum: GeriBesDurum };
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
@@ -61,9 +62,15 @@ export default function SicilScreen() {
     void Promise.all([getStudyCards(), getCardCount()])
       .then(([cards, toplam]) => setIst(hesaplaIstatistik(cards, toplam)))
       .catch(() => setHata(true));
-    // Zayıf analizi AYRI: hatası İLERLEME/KUTU DAĞILIMI'nı bozmaz.
+    // Zayıf analizi AYRI: hatası İLERLEME/KUTU DAĞILIMI'nı bozmaz. Liste ÇALIŞILABİLİR (indirilmiş)
+    // mevzilere indirgenir → Karargah/akış sayacıyla tutarlı; içeriği inmemiş zayıflar `indirilmemis`
+    // olarak ayrı sayılır (kullanıcı "indir de çalış" uyarısı görsün, sessizce kaybolmasın).
     void Promise.all([getPerformans(), getAllCards()])
-      .then(([perf, cards]) => setZayif({ liste: zayifKartlar(perf, cards), ozet: eksikOzet(perf, cards) }))
+      .then(([perf, cards]) => {
+        const tum = zayifKartlar(perf, cards);
+        const liste = calisilabilirZayifMevzi(tum);
+        setZayif({ liste, ozet: eksikOzet(perf, cards), indirilmemis: tum.length - liste.length });
+      })
       .catch(() => setZayif(null));
     // Ödül/Ceza: önce değerlendir (yeni kayıt/ceza işle), sonra sicil + emir durumunu yükle. AYRI catch.
     void degerlendirSicil()
@@ -420,6 +427,16 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
     );
   }
   if (zayif.liste.length === 0) {
+    // Çalışılabilir zayıf yok — ama içeriği inmemiş zayıflar varsa kullanıcıyı bilgilendir
+    // (yoksa "zayıfım yok" sanır; oysa o kanunlar inmediği için çalışılamıyor).
+    if (zayif.indirilmemis > 0) {
+      return (
+        <AppText variant="kucuk" color="amber">
+          {zayif.indirilmemis} zayıf mevzin, henüz indirilmemiş kanunlarda. Mevzuat'tan o kanunları
+          indirince burada çalışabilirsin.
+        </AppText>
+      );
+    }
     return (
       <AppText variant="kucuk" color="yesil" bold>
         Zayıf mevzin yok 🎖️

@@ -14,6 +14,7 @@ import {
   getSinavSonuclari,
   setGeriBesDurum,
 } from '@/db/database';
+import { calisilabilirZayifMevzi } from '@/lib/gorsel-kaynak';
 import { zayifKartlar } from '@/lib/performans';
 import { degerlendirGeriBes, type KanunDurum, odulDegerlendir, type YeniSicilKaydi } from '@/lib/sicil';
 import { testSayisi, testSoruSayisi } from '@/lib/sinav';
@@ -33,8 +34,10 @@ export async function degerlendirSicil(): Promise<SicilSonuc> {
   const bugun = bugunISO();
   const yeniKayitlar: YeniSicilKaydi[] = [];
 
-  // CEZA — geri besleme devamsızlık merdiveni.
-  const zayifSayisi = zayifKartlar(perf, allCards).length;
+  // CEZA — geri besleme devamsızlık merdiveni. ÇALIŞILABİLİR (indirilmiş) zayıf mevzi sayısı
+  // kullanılır: kullanıcının çalışamadığı (içeriği inmemiş) mevzi için emir/ceza AÇILMAZ →
+  // Karargah/akış sayacıyla tutarlı, "çalışamadığım mevzi yüzünden sonsuz ceza" bug'ı kapanır.
+  const zayifSayisi = calisilabilirZayifMevzi(zayifKartlar(perf, allCards)).length;
   const { durum: yeniDurum, ceza } = degerlendirGeriBes(zayifSayisi, durum, bugun);
   await setGeriBesDurum(yeniDurum);
   if (ceza) yeniKayitlar.push(ceza);
