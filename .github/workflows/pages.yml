@@ -6,6 +6,12 @@ name: Deploy docs to GitHub Pages
 on:
   push:
     branches: [master]
+    # YALNIZ docs/ değişince deploy et. Kod/kök-dosya (PROJE_DURUM.md vb.) commit'lerinde
+    # docs aynı kaldığı için "aynı içeriği yeniden deploy" → "Deployment failed, try again later"
+    # hatası + gereksiz mail oluyordu. Bu filtre no-op deploy'ları tamamen eler.
+    paths:
+      - 'docs/**'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -15,7 +21,9 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # Ardışık push'larda önceki deploy'u İPTAL ETME (iptal = "failure" sayılıp mail tetikliyordu);
+  # sıraya al → her deploy tamamlanır, hatasız.
+  cancel-in-progress: false
 
 jobs:
   deploy:
