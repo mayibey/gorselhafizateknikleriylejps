@@ -91,8 +91,11 @@ export async function oturumKoduIsle(code: string): Promise<boolean> {
   kodIsleniyor = true;
   try {
     let sonHata: unknown = null;
-    for (let deneme = 0; deneme < 3; deneme++) {
-      if (deneme > 0) await bekle(500); // verifier AsyncStorage'a insin
+    // İlk denemeden ÖNCE de kısa bekle (verifier AsyncStorage'a insin) + 5 deneme + ARTAN bekleme
+    // → "ilk basışta takılıp ikincide düzeliyor" yarışı kapanır (verifier gecikmesi tolere edilir).
+    const beklemeler = [250, 600, 900, 1200, 1600];
+    for (let deneme = 0; deneme < beklemeler.length; deneme++) {
+      await bekle(beklemeler[deneme]);
       const { error } = await supabase.auth.exchangeCodeForSession(code);
       if (!error) {
         islenenKodlar.add(code);
