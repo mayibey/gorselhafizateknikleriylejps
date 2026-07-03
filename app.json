@@ -2,7 +2,7 @@
   "expo": {
     "name": "Mevzu — JSPS Hazırlık",
     "slug": "gorsel-hafiza-jsps",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "orientation": "portrait",
     "icon": "./assets/images/mevzu-icon-1024.png",
     "scheme": "mevzu",
@@ -15,7 +15,7 @@
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 18,
+      "versionCode": 19,
       "googleServicesFile": "./google-services.json",
       "allowBackup": false,
       "permissions": [
@@ -56,7 +56,8 @@
       "./plugins/withRemovedPermissions",
       "./plugins/withYerelBuild",
       "expo-secure-store",
-      "expo-iap"
+      "expo-iap",
+      "@react-native-google-signin/google-signin"
     ],
     "experiments": {
       "typedRoutes": true

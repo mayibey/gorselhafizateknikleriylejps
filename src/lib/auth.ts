@@ -123,11 +123,48 @@ export async function oauthUrlIsle(url: string): Promise<boolean> {
   return oturumKoduIsle(params.code);
 }
 
+// Kendi Google OAuth client'ımızın WEB client ID'si (Supabase Google provider + native audience).
+// NATIVE giriş bunu webClientId olarak kullanır → idToken'ı DOĞRUDAN Supabase'e verir (redirect YOK).
+const GOOGLE_WEB_CLIENT_ID = '1065249322807-rooson7kmj49lgt3hvfl25s41hnmappv.apps.googleusercontent.com';
+let googleConfigured = false;
+
+/**
+ * NATIVE Google girişi — telefonun kendi hesap seçici penceresi → idToken → Supabase
+ * signInWithIdToken. WebBrowser/redirect/Supabase-callback YOK → "supabase.co'da dönüp durma"
+ * takılması biter, kullanıcı "supabase.co" yerine markayı görür. (GoogleSignin native-only:
+ * dinamik import → web bundle'ına native modül GİRMEZ.)
+ */
+async function nativeGoogleGiris(): Promise<void> {
+  const { GoogleSignin } = await import('@react-native-google-signin/google-signin');
+  if (!googleConfigured) {
+    GoogleSignin.configure({ webClientId: GOOGLE_WEB_CLIENT_ID });
+    googleConfigured = true;
+  }
+  await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+  const resp = await GoogleSignin.signIn();
+  // @react-native-google-signin v13+ dönüş: { type:'success'|'cancelled', data:{ idToken, ... } }
+  const idToken =
+    (resp as { data?: { idToken?: string } })?.data?.idToken ??
+    (resp as { idToken?: string })?.idToken;
+  if (!idToken) {
+    if ((resp as { type?: string })?.type === 'cancelled') return; // kullanıcı vazgeçti → sessiz
+    throw new Error('Google kimlik doğrulaması alınamadı.');
+  }
+  const { error } = await supabase!.auth.signInWithIdToken({ provider: 'google', token: idToken });
+  if (error) throw error;
+}
+
 /** Gmail ile giriş. Başarılıysa oturum AsyncStorage'a yazılır (onAuthStateChange tetiklenir). */
 export async function gmailIleGiris(): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
 
-  const redirectTo = donusAdresi(); // native: sabit mevzu:// · web: sayfanın origin'i
+  // NATIVE: kendi client'ımızla native hesap seçici (redirect/WebBrowser YOK → takılma biter).
+  // Web'de GoogleSignin çalışmaz → aşağıdaki Supabase OAuth (WebBrowser) akışı kullanılır.
+  if (Platform.OS !== 'web') {
+    return nativeGoogleGiris();
+  }
+
+  const redirectTo = donusAdresi(); // web: sayfanın origin'i
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
