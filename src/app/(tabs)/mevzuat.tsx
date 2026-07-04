@@ -217,7 +217,7 @@ function MevzuatIcerik() {
         <Yakinda
           ikon="shield-star-outline"
           baslik="Branş eğitimi — ÖN SATIŞTA"
-          aciklama="Branşına özel mevzuat ve denemeler HENÜZ YAYINDA DEĞİL, hazırlanıyor. Şu an satılan branş paketi ÖN SATIŞTIR: %50 indirimli alırsın, içerik yayınlanınca otomatik açılır. Şimdilik müşterek kanunlardan çalışmaya devam et."
+          aciklama="Branşına özel mevzuat ve denemeler HENÜZ YAYINDA DEĞİL, hazırlanıyor (müşterekin 2 katı içerik hedefiyle). Ön satışta %50 indirimle müşterek fiyatına alırsın; içerik yayınlanınca otomatik açılır, fiyat tam fiyata (2 katına) çıkar. Şimdilik müşterek kanunlardan çalışmaya devam et."
         />
       ) : (
         <>

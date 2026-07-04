@@ -171,7 +171,7 @@ function TatbikatIcerik() {
         <Yakinda
           ikon="shield-star-outline"
           baslik="Branş sınavları — ÖN SATIŞTA"
-          aciklama="Branşına özel deneme sınavları HENÜZ YAYINDA DEĞİL, hazırlanıyor. Şu an satılan branş paketi ÖN SATIŞTIR: %50 indirimli alırsın, içerik yayınlanınca otomatik açılır. Şimdilik müşterek sınavlarıyla kendini sına."
+          aciklama="Branşına özel deneme sınavları HENÜZ YAYINDA DEĞİL, hazırlanıyor (müşterekin 2 katı içerik hedefiyle). Ön satışta %50 indirimle müşterek fiyatına alırsın; içerik yayınlanınca otomatik açılır, fiyat tam fiyata (2 katına) çıkar. Şimdilik müşterek sınavlarıyla kendini sına."
         />
       ) : mod === 'tatbikat' ? (
         <>

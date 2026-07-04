@@ -58,7 +58,7 @@ const KATEGORILER: Kategori[] = [
     slug: 'paket',
     ad: 'Müşterek + Branş Paketi',
     aciklama:
-      'İki kategori bir arada — ayrı ayrı almaktan daha avantajlı. Branş içerikleri ÖN SATIŞTIR: henüz yayında değil, hazırlanıyor; yayınlanınca otomatik açılır.',
+      'İki kategori bir arada — ayrı ayrı almaktan yaklaşık %15 daha avantajlı. Branş tarafı ÖN SATIŞTIR: hazırlanıyor, yayınlanınca otomatik açılır.',
     ikon: 'package-variant-closed',
     yillik: URUN_PAKET_YILLIK,
     omurboyu: URUN_PAKET_OMURBOYU,
@@ -76,7 +76,7 @@ const KATEGORILER: Kategori[] = [
     slug: 'brans',
     ad: 'Branş Konuları',
     aciklama:
-      'ÖN SATIŞ — Branş içerikleri HENÜZ YAYINDA DEĞİL, hazırlanıyor. Şimdi %50 indirimli ön satıştan alırsan içerik yayınlandığında otomatik açılır; yayına gelince tam fiyattan satılacak.',
+      'ÖN SATIŞ — Branş içerikleri HENÜZ YAYINDA DEĞİL, hazırlanıyor (müşterekin 2 katı içerik hedefiyle). Tam fiyatı müşterekin 2 katı olacak; ön satışta %50 indirimle MÜŞTEREK FİYATINA. Şimdi alırsan içerik yayınlanınca otomatik açılır.',
     ikon: 'medal-outline',
     yillik: URUN_BRANS_YILLIK,
     omurboyu: URUN_BRANS_OMURBOYU,
