@@ -1,6 +1,8 @@
 /**
  * Premium ürün ID'leri — Play Console'da BU ID'lerle oluşturulacak. Kod ile BİREBİR aynı olmalı.
- * Model: 2 KATEGORİ (müşterek / branş) × 2 SEÇENEK (yıllık abonelik / ömür boyu tek-seferlik).
+ * Model: 2 KATEGORİ (müşterek / branş) × 2 SEÇENEK (yıllık abonelik / ömür boyu tek-seferlik)
+ * + PAKET (müşterek+branş birlikte, avantajlı) + YÜKSELTME (yıllıktan ömür boyuna FARK fiyatı).
+ * Sunucu eşleşmesi: supabase/functions/dogrula-satinalma URUNLER seti — İKİSİ BİRLİKTE güncellenir.
  */
 
 // MÜŞTEREK (ortak) konular
@@ -11,13 +13,40 @@ export const URUN_MUSTEREK_OMURBOYU = 'musterek_omurboyu'; // tek seferlik
 export const URUN_BRANS_YILLIK = 'brans_yillik'; // abonelik
 export const URUN_BRANS_OMURBOYU = 'brans_omurboyu'; // tek seferlik
 
-// expo-iap sorgu listeleri (abonelik vs tek-seferlik ayrı API)
-export const ABONELIK_URUNLERI = [URUN_MUSTEREK_YILLIK, URUN_BRANS_YILLIK];
-export const TEK_SEFERLIK_URUNLERI = [URUN_MUSTEREK_OMURBOYU, URUN_BRANS_OMURBOYU];
+// PAKET (müşterek + branş birlikte — iki kategoriye birden hak verir)
+export const URUN_PAKET_YILLIK = 'paket_yillik'; // abonelik
+export const URUN_PAKET_OMURBOYU = 'paket_omurboyu'; // tek seferlik
 
-// Kategoriye göre gruplar (hak hesabı için)
-export const MUSTEREK_URUNLERI = [URUN_MUSTEREK_YILLIK, URUN_MUSTEREK_OMURBOYU];
-export const BRANS_URUNLERI = [URUN_BRANS_YILLIK, URUN_BRANS_OMURBOYU];
+// YÜKSELTME: aktif YILLIK sahibi ömür boyuna FARK fiyatıyla geçer (tek seferlik; sunucu
+// aktif yıllık şartını da denetler). Hak olarak o kategorinin ömür boyusu sayılır.
+export const URUN_MUSTEREK_YUKSELTME = 'musterek_omurboyu_yukseltme';
+export const URUN_BRANS_YUKSELTME = 'brans_omurboyu_yukseltme';
+
+// expo-iap sorgu listeleri (abonelik vs tek-seferlik ayrı API)
+export const ABONELIK_URUNLERI = [URUN_MUSTEREK_YILLIK, URUN_BRANS_YILLIK, URUN_PAKET_YILLIK];
+export const TEK_SEFERLIK_URUNLERI = [
+  URUN_MUSTEREK_OMURBOYU,
+  URUN_BRANS_OMURBOYU,
+  URUN_PAKET_OMURBOYU,
+  URUN_MUSTEREK_YUKSELTME,
+  URUN_BRANS_YUKSELTME,
+];
+
+// Kategoriye göre gruplar (hak hesabı için) — paket İKİ kategoriye de hak verir
+export const MUSTEREK_URUNLERI = [
+  URUN_MUSTEREK_YILLIK,
+  URUN_MUSTEREK_OMURBOYU,
+  URUN_MUSTEREK_YUKSELTME,
+  URUN_PAKET_YILLIK,
+  URUN_PAKET_OMURBOYU,
+];
+export const BRANS_URUNLERI = [
+  URUN_BRANS_YILLIK,
+  URUN_BRANS_OMURBOYU,
+  URUN_BRANS_YUKSELTME,
+  URUN_PAKET_YILLIK,
+  URUN_PAKET_OMURBOYU,
+];
 
 /**
  * KİLİT ANA ŞALTERİ (tek nokta).
@@ -44,13 +73,20 @@ export function musterekBlokMu(blok: string | null | undefined): boolean {
 }
 
 /** Ürün ID → okunabilir kategori/tip (Üyeliğim kartı + taç etiketi için). Bilinmeyen ürün → null. */
-export type UrunBilgi = { kategori: 'Müşterek' | 'Branş'; tip: 'Ömür boyu' | 'Yıllık'; ad: string };
+export type UrunBilgi = {
+  kategori: 'Müşterek' | 'Branş' | 'Müşterek + Branş';
+  tip: 'Ömür boyu' | 'Yıllık';
+  ad: string;
+};
 export function urunBilgi(urun: string): UrunBilgi | null {
-  const kategori = MUSTEREK_URUNLERI.includes(urun)
-    ? 'Müşterek'
-    : BRANS_URUNLERI.includes(urun)
-      ? 'Branş'
-      : null;
+  const paketMi = urun === URUN_PAKET_YILLIK || urun === URUN_PAKET_OMURBOYU;
+  const kategori = paketMi
+    ? 'Müşterek + Branş'
+    : MUSTEREK_URUNLERI.includes(urun)
+      ? 'Müşterek'
+      : BRANS_URUNLERI.includes(urun)
+        ? 'Branş'
+        : null;
   if (!kategori) return null;
   const tip = ABONELIK_URUNLERI.includes(urun) ? 'Yıllık' : 'Ömür boyu';
   return { kategori, tip, ad: `${kategori} · ${tip}` };

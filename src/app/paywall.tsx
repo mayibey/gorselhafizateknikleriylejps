@@ -16,7 +16,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { getAvailablePurchases, type Purchase, useIAP } from 'expo-iap';
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Linking, Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { Arma } from '@/components/auth/arma';
 import { AppText } from '@/components/ui/app-text';
@@ -24,28 +24,45 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   ABONELIK_URUNLERI,
+  BRANS_URUNLERI,
+  MUSTEREK_URUNLERI,
   TEK_SEFERLIK_URUNLERI,
   URUN_BRANS_OMURBOYU,
   URUN_BRANS_YILLIK,
+  URUN_BRANS_YUKSELTME,
   URUN_MUSTEREK_OMURBOYU,
   URUN_MUSTEREK_YILLIK,
+  URUN_MUSTEREK_YUKSELTME,
+  URUN_PAKET_OMURBOYU,
+  URUN_PAKET_YILLIK,
 } from '@/constants/urunler';
 import { useAuth } from '@/lib/auth-context';
-import { satinAlmaDogrula } from '@/lib/satinalma';
+import { DogrulamaReddi, satinAlmaDogrula } from '@/lib/satinalma';
 import { useUyelik } from '@/lib/uyelik-context';
 
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
 type Kategori = {
-  slug: 'musterek' | 'brans';
+  slug: 'paket' | 'musterek' | 'brans';
   ad: string;
   aciklama: string;
   ikon: IconName;
   yillik: string;
   omurboyu: string;
+  /** Aktif yıllık sahibine gösterilen "ömür boyuna geç" FARK ürünü (paket hariç). */
+  yukseltme?: string;
 };
 
 const KATEGORILER: Kategori[] = [
+  {
+    slug: 'paket',
+    ad: 'Müşterek + Branş Paketi',
+    aciklama:
+      'İki kategori bir arada — ayrı ayrı almaktan daha avantajlı. Branş içerikleri ÖN SATIŞTIR: henüz yayında değil, hazırlanıyor; yayınlanınca otomatik açılır.',
+    ikon: 'package-variant-closed',
+    yillik: URUN_PAKET_YILLIK,
+    omurboyu: URUN_PAKET_OMURBOYU,
+  },
   {
     slug: 'musterek',
     ad: 'Müşterek Konular',
@@ -53,16 +70,22 @@ const KATEGORILER: Kategori[] = [
     ikon: 'bank-outline',
     yillik: URUN_MUSTEREK_YILLIK,
     omurboyu: URUN_MUSTEREK_OMURBOYU,
+    yukseltme: URUN_MUSTEREK_YUKSELTME,
   },
   {
     slug: 'brans',
     ad: 'Branş Konuları',
-    aciklama: 'Seçtiğin branşa özel mevzuat ve denemeler ÇOK YAKINDA. Şimdi alırsan %50 indirimli — yayına gelince tam fiyattan satışta.',
+    aciklama:
+      'ÖN SATIŞ — Branş içerikleri HENÜZ YAYINDA DEĞİL, hazırlanıyor. Şimdi %50 indirimli ön satıştan alırsan içerik yayınlandığında otomatik açılır; yayına gelince tam fiyattan satılacak.',
     ikon: 'medal-outline',
     yillik: URUN_BRANS_YILLIK,
     omurboyu: URUN_BRANS_OMURBOYU,
+    yukseltme: URUN_BRANS_YUKSELTME,
   },
 ];
+
+/** Google Play abonelik yönetimi (yükseltme sonrası yıllığı iptal için). */
+const PLAY_ABONELIKLER = 'https://play.google.com/store/account/subscriptions';
 
 export default function PaywallScreen() {
   const router = useRouter();
@@ -97,11 +120,23 @@ function WebNot() {
 }
 
 function PaywallIcerik() {
-  const { hazir } = useAuth();
-  const { musterek, brans, yenile } = useUyelik();
+  const { hazir, kullanici } = useAuth();
+  const { musterek, brans, aktifHaklar, yenile } = useUyelik();
   const [islemUrun, setIslemUrun] = useState<string | null>(null); // hangi ürün işleniyor (buton kilidi)
   const [durum, setDurum] = useState<'dogrulaniyor' | null>(null);
   const [mesaj, setMesaj] = useState<{ tip: 'basari' | 'hata'; metin: string } | null>(null);
+
+  // Kategori sahipliğini TİPE göre ayır: ömür boyu → tam; yalnız yıllık → yükseltme teklif edilir.
+  function kategoriDurum(urunler: string[]): { omur: boolean; yillik: boolean } {
+    let omur = false;
+    let yillik = false;
+    for (const h of aktifHaklar) {
+      if (!urunler.includes(h.urun)) continue;
+      if (h.tip === 'omurboyu') omur = true;
+      else yillik = true;
+    }
+    return { omur, yillik };
+  }
 
   const { connected, products, subscriptions, fetchProducts, requestPurchase, finishTransaction } =
     useIAP({
@@ -143,6 +178,11 @@ function PaywallIcerik() {
       await yenile();
       setMesaj({ tip: 'basari', metin: 'Satın alma tamamlandı — erişimin açıldı.' });
     } catch (e) {
+      // Sunucunun NET reddi (başka hesaba bağlı / yükseltme şartı) → mesajı olduğu gibi göster.
+      if (e instanceof DogrulamaReddi) {
+        setMesaj({ tip: 'hata', metin: e.message });
+        return;
+      }
       setMesaj({
         tip: 'hata',
         metin: __DEV__
@@ -173,18 +213,25 @@ function PaywallIcerik() {
     setMesaj(null);
     setIslemUrun(urun);
     try {
+      // obfuscatedAccountId = kullanıcının hesap kimliği → satın alma GOOGLE tarafında da hesaba
+      // bağlanır (itiraz/iade süreçlerinde kanıt + hangi hesabın aldığı Play kayıtlarında görünür).
+      const hesapId = kullanici?.id;
       if (abonelik) {
         const token = offerToken(urun);
         await requestPurchase({
           type: 'subs',
           request: {
-            google: { skus: [urun], subscriptionOffers: token ? [{ sku: urun, offerToken: token }] : [] },
+            google: {
+              skus: [urun],
+              subscriptionOffers: token ? [{ sku: urun, offerToken: token }] : [],
+              obfuscatedAccountId: hesapId,
+            },
           },
         });
       } else {
         await requestPurchase({
           type: 'in-app',
-          request: { google: { skus: [urun] } },
+          request: { google: { skus: [urun], obfuscatedAccountId: hesapId } },
         });
       }
       // Başarı/başarısızlık native listener'a (onPurchaseSuccess/onPurchaseError) düşer.
@@ -202,6 +249,7 @@ function PaywallIcerik() {
       // (restorePurchases yalnız native liste getiriyordu, sunucuya doğrulatmıyordu → hak yazılmıyordu.)
       const alinmis = await getAvailablePurchases();
       let dogrulandi = 0;
+      let reddi: string | null = null; // sunucunun NET reddi (örn. "başka hesaba bağlı")
       for (const p of alinmis) {
         const token = p.purchaseToken ?? '';
         if (!token) continue;
@@ -210,8 +258,9 @@ function PaywallIcerik() {
         try {
           const sonuc = await satinAlmaDogrula(p.productId, token);
           if (sonuc.ok) dogrulandi++;
-        } catch {
+        } catch (e) {
           // bu ürün doğrulanamadı → diğerlerine devam (acknowledge yapıldı, iade olmaz)
+          if (e instanceof DogrulamaReddi) reddi = e.message;
         }
       }
       await yenile();
@@ -220,7 +269,9 @@ function PaywallIcerik() {
           ? { tip: 'basari', metin: 'Satın alımların doğrulandı — erişimin açıldı.' }
           : {
               tip: 'hata',
-              metin: 'Aktif satın alma bulunamadı. Ödeme yaptıysan birkaç dakika sonra tekrar dene.',
+              metin:
+                reddi ??
+                'Aktif satın alma bulunamadı. Ödeme yaptıysan birkaç dakika sonra tekrar dene.',
             },
       );
     } catch {
@@ -252,18 +303,26 @@ function PaywallIcerik() {
       ) : null}
 
       {KATEGORILER.map((k) => {
-        const sahip = k.slug === 'musterek' ? musterek : brans;
+        // Paket kartı yalnız HİÇBİR kategoriye sahip olmayana gösterilir (çifte ödeme karışıklığı olmasın).
+        if (k.slug === 'paket' && (musterek || brans)) return null;
+        const durumK =
+          k.slug === 'paket'
+            ? { omur: false, yillik: false }
+            : kategoriDurum(k.slug === 'musterek' ? MUSTEREK_URUNLERI : BRANS_URUNLERI);
         return (
           <KategoriKart
             key={k.slug}
             kategori={k}
-            sahip={sahip}
+            sahipOmur={durumK.omur}
+            sahipYillik={durumK.yillik}
             yillikFiyat={fiyat(k.yillik)}
             omurboyuFiyat={fiyat(k.omurboyu)}
+            yukseltmeFiyat={k.yukseltme ? fiyat(k.yukseltme) : '—'}
             islemUrun={islemUrun}
             aktif={connected}
             onYillik={() => void satinAl(k.yillik, true)}
             onOmurboyu={() => void satinAl(k.omurboyu, false)}
+            onYukseltme={k.yukseltme ? () => void satinAl(k.yukseltme!, false) : undefined}
           />
         );
       })}
@@ -313,23 +372,30 @@ function PaywallIcerik() {
 
 function KategoriKart({
   kategori,
-  sahip,
+  sahipOmur,
+  sahipYillik,
   yillikFiyat,
   omurboyuFiyat,
+  yukseltmeFiyat,
   islemUrun,
   aktif,
   onYillik,
   onOmurboyu,
+  onYukseltme,
 }: {
   kategori: Kategori;
-  sahip: boolean;
+  sahipOmur: boolean;
+  sahipYillik: boolean;
   yillikFiyat: string;
   omurboyuFiyat: string;
+  yukseltmeFiyat: string;
   islemUrun: string | null;
   aktif: boolean;
   onYillik: () => void;
   onOmurboyu: () => void;
+  onYukseltme?: () => void;
 }) {
+  const sahip = sahipOmur || sahipYillik;
   return (
     <View style={styles.kart}>
       <View style={styles.kartUst}>
@@ -348,16 +414,43 @@ function KategoriKart({
           <View style={styles.sahipRozet}>
             <MaterialCommunityIcons name="check-decagram" size={16} color={Palette.yesil} />
             <AppText variant="etiket" color="yesil" bold>
-              Aktif
+              {sahipOmur ? 'Aktif' : 'Yıllık aktif'}
             </AppText>
           </View>
         ) : null}
       </View>
 
-      {sahip ? (
+      {sahipOmur ? (
         <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
-          Bu pakete tam erişimin var.
+          Bu pakete ömür boyu tam erişimin var.
         </AppText>
+      ) : sahipYillik ? (
+        // Yıllık sahibi → ömür boyuna FARK fiyatıyla yükseltme teklifi.
+        <View style={styles.yukseltmeSar}>
+          <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
+            Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.
+          </AppText>
+          <PlanButon
+            baslik="Ömür boyuna yükselt"
+            fiyat={yukseltmeFiyat}
+            altYazi="tek seferlik fark ödemesi"
+            vurgu
+            mesgul={islemUrun === kategori.yukseltme}
+            pasif={!aktif || !onYukseltme || (!!islemUrun && islemUrun !== kategori.yukseltme)}
+            onPress={onYukseltme ?? (() => {})}
+          />
+          <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
+            Yükselttikten sonra yıllık aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
+            <AppText
+              variant="etiket"
+              color="lacivert"
+              bold
+              onPress={() => void Linking.openURL(PLAY_ABONELIKLER)}>
+              Google Play → Abonelikler
+            </AppText>
+            'den yıllığı iptal et (kalan süren zaten ömür boyu erişimin içinde).
+          </AppText>
+        </View>
       ) : (
         <View style={styles.planlar}>
           <PlanButon
@@ -489,6 +582,12 @@ const styles = StyleSheet.create({
   },
   sahipMetin: {
     paddingBottom: Spacing.one,
+  },
+  yukseltmeSar: {
+    gap: Spacing.two,
+  },
+  yukseltmeNot: {
+    lineHeight: 16,
   },
   planlar: {
     flexDirection: 'row',
