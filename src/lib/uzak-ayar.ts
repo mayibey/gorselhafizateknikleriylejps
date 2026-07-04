@@ -31,10 +31,3 @@ export async function ayarOku(anahtar: string): Promise<string | null> {
 export async function telefonGirisAcikMi(): Promise<boolean> {
   return (await ayarOku('telefon_giris')) === '1';
 }
-
-/** Premium içerik çevrimdışı en fazla kaç gün kullanılabilir (heartbeat penceresi). Varsayılan 5. */
-export async function premiumOfflineGun(): Promise<number> {
-  const s = await ayarOku('premium_offline_gun');
-  const n = s ? parseInt(s, 10) : NaN;
-  return Number.isFinite(n) && n > 0 ? n : 5;
-}

@@ -76,7 +76,7 @@ function WebNot() {
 
 function PaywallIcerik() {
   const { hazir, kullanici } = useAuth();
-  const { aktifHaklar, offlineKilit, cihazKilit, yenile } = useUyelik();
+  const { aktifHaklar, cihazKilit, yenile } = useUyelik();
   const [islemUrun, setIslemUrun] = useState<string | null>(null); // hangi ürün işleniyor (buton kilidi)
   const [durum, setDurum] = useState<'dogrulaniyor' | null>(null);
   const [mesaj, setMesaj] = useState<{ tip: 'basari' | 'hata'; metin: string } | null>(null);
@@ -238,16 +238,6 @@ function PaywallIcerik() {
           <AppText variant="kucuk" color="solukMetin" style={styles.esnek}>
             Play Store bağlantısı kurulamadı. Satın alma yalnızca Google Play'den yüklenmiş gerçek
             uygulamada çalışır (Expo Go'da değil).
-          </AppText>
-        </View>
-      ) : null}
-
-      {offlineKilit ? (
-        <View style={styles.bilgiKart}>
-          <MaterialCommunityIcons name="wifi-off" size={22} color={Palette.amber} />
-          <AppText variant="kucuk" color="anaMetin" style={styles.esnek}>
-            Üyeliğin duruyor, ama uzun süredir internete bağlanmadığın için doğrulanamadı. Bir kez
-            internete bağlanman yeterli — erişimin otomatik geri açılır.
           </AppText>
         </View>
       ) : null}

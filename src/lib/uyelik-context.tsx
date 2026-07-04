@@ -2,23 +2,18 @@
  * Premium üyelik durumu — TEK KAPSAM modeli: herhangi bir aktif hak (yıllık abonelik ya da
  * ömür boyu) uygulamanın TAMAMINI açar. Supabase `uyelik_haklari`'ndan okur.
  *
- * ÇEVRİMDIŞI PAYLAŞIM KORUMASI (heartbeat): premium yalnız SUNUCUDAN taze okundukça geçerlidir.
- * Her başarılı okuma "son doğrulama" anını cihaza yazar. Cihaz N gün (uzak ayar premium_offline_gun,
- * vars. 5) boyunca sunucuyu DOĞRULAYAMAZSA premium KİLİTLENİR ("üyeliğini doğrulamak için internete
- * bağlan"). Böylece bir hesabı iki cihazda çevrimdışı paylaşma penceresi N günle sınırlanır; ayrıca
- * tek-oturum kilidi (auth-context) sahibi olmayan cihazı ONLINE olunca komple çıkışa zorlar.
+ * ÇEVRİMDIŞI ÇALIŞMA KORUNUR: sunucu okunamazsa (çevrimdışı) son premium değeri KORUNUR —
+ * arazide/sinyalsiz kullanıcı cezalanmaz (başkan kararı, 5 Tem). Paylaşım koruması iki katman:
+ * tek-oturum (auth-context; online olunca sahibi olmayan cihaz çıkışa zorlanır) + cihaz kötüye
+ * kullanım kilidi (7 günde 2 cihaz — docs/v2/12). Çevrimdışı süre kilidi KALDIRILDI.
  */
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { AppState } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { KILIT_AKTIF, PREMIUM_URUNLERI, ucretsizKanun } from '@/constants/urunler';
 import { getCihazKimlik } from '@/lib/cihaz-kimlik';
 import { supabase, supabaseHazir } from '@/lib/supabase';
-import { premiumOfflineGun } from '@/lib/uzak-ayar';
-
-const HEARTBEAT_KEY = 'jsps.uyelik.songecerli'; // premium'un en son SUNUCUDAN doğrulandığı an (ms)
 
 /** Aktif bir satın alma hakkı (kart/taç gösterimi için). */
 export type HakSatir = { urun: string; tip: 'omurboyu' | 'abonelik'; bitis: string | null };
@@ -28,12 +23,10 @@ type Haklar = { premium: boolean; liste: HakSatir[] };
 type OkumaSonuc = { durum: 'ok'; haklar: Haklar } | { durum: 'offline' };
 
 type UyelikContextDeger = {
-  /** Aktif premium hak var mı VE heartbeat taze mi — uygulamanın tamamını açar. */
+  /** Aktif premium hak var mı — uygulamanın tamamını açar. */
   premium: boolean;
   aktifHaklar: HakSatir[];
   yukleniyor: boolean;
-  /** Çevrimdışı çok uzun kalındığı için premium geçici kilitli mi (internete bağlan uyarısı). */
-  offlineKilit: boolean;
   /** Çok fazla farklı cihazda kullanım → hesap otomatik kilitli mi (destek ile açılır). */
   cihazKilit: boolean;
   yenile: () => Promise<void>;
@@ -73,20 +66,12 @@ async function haklariOku(): Promise<OkumaSonuc> {
 export function UyelikProvider({ children }: { children: ReactNode }) {
   const [haklar, setHaklar] = useState<Haklar>({ premium: false, liste: [] });
   const [yukleniyor, setYukleniyor] = useState(true);
-  const [offlineKilit, setOfflineKilit] = useState(false);
   const [cihazKilit, setCihazKilit] = useState(false);
 
   const yenile = async () => {
     const sonuc = await haklariOku().catch(() => ({ durum: 'offline' }) as OkumaSonuc);
     if (sonuc.durum === 'ok') {
-      // Sunucu okundu → değerleri tazele + heartbeat damgasını at + kilidi aç.
       setHaklar(sonuc.haklar);
-      setOfflineKilit(false);
-      try {
-        await AsyncStorage.setItem(HEARTBEAT_KEY, String(Date.now()));
-      } catch {
-        // damga yazılamazsa sorun değil — sonraki okuma tekrar dener
-      }
       // CİHAZ KÖTÜYE KULLANIM: yalnız premium hesaplarda denetle (paylaşım koruması). Bu cihazı
       // kaydet + 7 günde >2 farklı cihaz kullanılıyorsa sunucu otomatik kilitler (docs/v2/12).
       if (sonuc.haklar.premium && supabase) {
@@ -100,19 +85,8 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
       } else {
         setCihazKilit(false);
       }
-    } else {
-      // Çevrimdışı → son premium değeri KORUNUR ama heartbeat penceresi aşıldıysa KİLİTLE.
-      try {
-        const ham = await AsyncStorage.getItem(HEARTBEAT_KEY);
-        const son = ham ? parseInt(ham, 10) : NaN;
-        const gun = await premiumOfflineGun();
-        const asildi = !Number.isFinite(son) || Date.now() - son > gun * 24 * 60 * 60 * 1000;
-        setOfflineKilit(asildi);
-      } catch {
-        // ayar/damga okunamadı → kilitleme (fail-open; çevrimdışı çalışma bozulmasın)
-        setOfflineKilit(false);
-      }
     }
+    // Çevrimdışı (durum='offline') → hiçbir şey yapma: son premium/kilit değeri KORUNUR.
     setYukleniyor(false);
   };
 
@@ -121,7 +95,7 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
     const authSub = supabase?.auth.onAuthStateChange(() => {
       void yenile();
     });
-    // Uygulama öne gelince tekrar doğrula (heartbeat) → çevrimdışı pencere gerçekçi ilerler.
+    // Uygulama öne gelince tekrar doğrula (cihaz kaydı + hak tazeleme).
     const appSub = AppState.addEventListener('change', (durum) => {
       if (durum === 'active') void yenile();
     });
@@ -131,8 +105,8 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // Premium = aktif hak VAR, çevrimdışı pencere aşılmadı VE cihaz kötüye kullanım kilidi yok.
-  const premium = haklar.premium && !offlineKilit && !cihazKilit;
+  // Premium = aktif hak VAR ve cihaz kötüye kullanım kilidi yok. (Çevrimdışı süre kilidi YOK.)
+  const premium = haklar.premium && !cihazKilit;
 
   const kanunErisilebilir = (klasor: string | null | undefined, _blok?: string | null | undefined) => {
     if (!KILIT_AKTIF) return true; // ana şalter kapalı → her içerik açık
@@ -146,7 +120,6 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
         premium,
         aktifHaklar: haklar.liste,
         yukleniyor,
-        offlineKilit,
         cihazKilit,
         yenile,
         kanunErisilebilir,
