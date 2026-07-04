@@ -7,6 +7,7 @@ import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
+import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
@@ -47,6 +48,8 @@ function TatbikatIcerik() {
   const [sonucMap, setSonucMap] = useState<Map<number, Map<number, SinavSonuc>>>(new Map());
   // Üst seçim: Talim (kanun denemeleri) / Tatbikat (Genel Deneme 1/2/3).
   const [mod, setMod] = useState<'talim' | 'tatbikat'>('talim');
+  // Üst seçim: Müşterek (mevcut) / Branş (içerik güncellemelerle eklenecek → "hazırlanıyor").
+  const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
   const { kanunErisilebilir } = useUyelik();
   const [hata, setHata] = useState(false);
 
@@ -115,8 +118,39 @@ function TatbikatIcerik() {
 
   return (
     <Screen title="Talim">
-      {/* TEK KAPSAM modeli (4 Tem): Müşterek/Branş sekmesi KALDIRILDI. */}
-      {/* ÜST SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). */}
+      {/* ÜST SEÇİM: Müşterek (mevcut) / Branş (içerik hazırlanıyor, güncellemelerle eklenir). */}
+      <View style={styles.blokSecici}>
+        {(['müşterek', 'brans'] as const).map((b) => {
+          const aktif = blok === b;
+          return (
+            <Pressable
+              key={b}
+              onPress={() => setBlok(b)}
+              style={[styles.blokSeg, aktif && styles.blokSegAktif]}
+              accessibilityRole="button"
+              accessibilityLabel={b === 'müşterek' ? 'Müşterek sınavlar' : 'Branş sınavları'}>
+              <MaterialCommunityIcons
+                name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
+                size={16}
+                color={aktif ? Palette.beyaz : Palette.solukMetin}
+              />
+              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+                {b === 'müşterek' ? 'Müşterek' : 'Branş'}
+              </AppText>
+            </Pressable>
+          );
+        })}
+      </View>
+
+      {blok === 'brans' ? (
+        <Yakinda
+          ikon="shield-star-outline"
+          baslik="Branş sınavları hazırlanıyor"
+          aciklama="Branşına özel deneme sınavları hazırlanıyor ve güncellemelerle eklenecek. Üyeliğin bunları da kapsar — çıktıkça uygulamanda otomatik görünür. Şimdilik müşterek sınavlarıyla kendini sına."
+        />
+      ) : (
+        <>
+      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). */}
       <View style={styles.blokSecici}>
         {(['talim', 'tatbikat'] as const).map((m) => {
           const aktif = mod === m;
@@ -186,6 +220,8 @@ function TatbikatIcerik() {
               />
             ))
           )}
+        </>
+      )}
         </>
       )}
     </Screen>

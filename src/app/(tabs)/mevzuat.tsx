@@ -6,6 +6,7 @@ import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react
 import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
+import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
@@ -63,6 +64,8 @@ function MevzuatIcerik() {
   const [favoriler, setFavoriler] = useState<Set<number>>(new Set());
   const [favoriAcik, setFavoriAcik] = useState(false);
   const [hata, setHata] = useState(false);
+  // Üst seçim: Müşterek (mevcut liste) / Branş (içerik güncellemelerle eklenecek → "hazırlanıyor").
+  const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
 
   // Branş değişince + odağa her dönüşte tazele (çalışıp dönünce ilerleme/Devam Et güncel).
   const yukle = useCallback(() => {
@@ -186,9 +189,38 @@ function MevzuatIcerik() {
 
   return (
     <Screen title="Mevzuat">
-      {/* TEK KAPSAM modeli (4 Tem): Müşterek/Branş sekmesi KALDIRILDI — branş içeriği
-          üretilmeyecek; tüm liste tek pakettir. */}
-      <>
+      {/* ÜST SEÇİM: Müşterek (mevcut liste) / Branş (içerik hazırlanıyor, güncellemelerle eklenir). */}
+      <View style={st.blokSecici}>
+        {(['müşterek', 'brans'] as const).map((b) => {
+          const aktif = blok === b;
+          return (
+            <Pressable
+              key={b}
+              onPress={() => setBlok(b)}
+              style={[st.blokSeg, aktif && st.blokSegAktif]}
+              accessibilityRole="button"
+              accessibilityLabel={b === 'müşterek' ? 'Müşterek mevzuat' : 'Branş mevzuatı'}>
+              <MaterialCommunityIcons
+                name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
+                size={16}
+                color={aktif ? Palette.beyaz : Palette.solukMetin}
+              />
+              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+                {b === 'müşterek' ? 'Müşterek' : 'Branş'}
+              </AppText>
+            </Pressable>
+          );
+        })}
+      </View>
+
+      {blok === 'brans' ? (
+        <Yakinda
+          ikon="shield-star-outline"
+          baslik="Branş konuları hazırlanıyor"
+          aciklama="Branşına özel mevzuat kartları hazırlanıyor ve güncellemelerle eklenecek. Üyeliğin bunları da kapsar — çıktıkça uygulamanda otomatik görünür. Şimdilik müşterek kanunlardan çalışmaya devam et."
+        />
+      ) : (
+        <>
       {/* Açıklama + Favorilerim filtresi (Screen header'da slot yok → kayan içerik) */}
       <View style={st.ustSatir}>
         <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
@@ -346,7 +378,8 @@ function MevzuatIcerik() {
           )}
         </>
       )}
-      </>
+        </>
+      )}
     </Screen>
   );
 }
