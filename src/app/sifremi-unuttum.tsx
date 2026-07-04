@@ -46,8 +46,14 @@ export default function SifremiUnuttumScreen() {
       await sifreSifirla(eposta);
       setAdim('kod');
       setSayac(60);
-    } catch {
-      setHata('Gönderilemedi. E-posta adresini kontrol edip tekrar dene.');
+    } catch (e) {
+      // Sunucu sıklık sınırı: aynı adrese en erken 12 dk'da bir mail (saatte 5 — kötüye kullanım önlemi)
+      const m = e instanceof Error ? e.message : '';
+      setHata(
+        /security|rate|seconds|too many/i.test(m)
+          ? 'Çok sık kod istedin — güvenlik için biraz bekle, birkaç dakika sonra tekrar dene.'
+          : 'Gönderilemedi. E-posta adresini kontrol edip tekrar dene.',
+      );
     } finally {
       setMesgul(false);
     }

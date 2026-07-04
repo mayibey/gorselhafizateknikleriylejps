@@ -56,8 +56,13 @@ export function DogrulamaKapisi({ children }: { children: ReactNode }) {
     try {
       await dogrulamaMailiGonder(kullanici.email);
       setMesaj('Doğrulama e-postası gönderildi — gelen kutunu (ve spam klasörünü) kontrol et.');
-    } catch {
-      setMesaj('Gönderilemedi. Biraz bekleyip tekrar dene.');
+    } catch (e) {
+      const m = e instanceof Error ? e.message : '';
+      setMesaj(
+        /security|rate|seconds|too many/i.test(m)
+          ? 'Çok sık istekte bulundun — güvenlik için biraz bekle, birkaç dakika sonra tekrar dene.'
+          : 'Gönderilemedi. Biraz bekleyip tekrar dene.',
+      );
     } finally {
       setMesgul(false);
     }
