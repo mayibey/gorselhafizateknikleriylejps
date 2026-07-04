@@ -174,8 +174,9 @@ function MevzuatIcerik() {
       : ({ tip: 'yok' } as const);
 
   function kanunaGit(law: LawWithCount) {
-    // DEĞİŞMEDİ: Kanun → Patika (bölümler). Bölümsüz kanun patikada tek düğüm gösterir.
-    router.push({ pathname: '/patika', params: { lawId: String(law.id) } });
+    // Kanun → SEÇİM ekranı: Görsel Konu Anlatımı (→ patika/akış) veya Zor Detay Kartları (→ salt
+    // görüntüleme). Kilit/indirme kapısı KanunSatir.satiraBas'ta zaten geçildi.
+    router.push({ pathname: '/kanun-sec', params: { lawId: String(law.id), ad: law.ad } });
   }
 
   const devamLaw =

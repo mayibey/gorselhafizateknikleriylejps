@@ -183,6 +183,8 @@ function gorselKartlari(): Card[] {
     const bilgi = KANUN_BILGI[key.slice(0, us)];
     if (!bilgi) continue;
     const geri = key.slice(us + 1); // 'm35_1' | 'ayirt_m21_22' | 'ozet_m247_266' | 'ozet_tutar'
+    // ZOR DETAY görselleri (_zor_) çalışma kartı DEĞİL (salt görüntüleme, /zor-detay ekranı) → atla.
+    if (geri.startsWith('zor_')) continue;
     const ortak = { key, lawId: bilgi.lawId, etiket: bilgi.etiket };
     if (geri.startsWith('ayirt_m')) {
       const nums = geri.slice(7).split('_').map(Number);

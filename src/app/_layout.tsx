@@ -202,6 +202,8 @@ function RootNavigator() {
     <>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="kanun-sec" />
+        <Stack.Screen name="zor-detay" />
         <Stack.Screen name="akis" />
         <Stack.Screen name="sinav" />
         <Stack.Screen name="sesli-nobet" />

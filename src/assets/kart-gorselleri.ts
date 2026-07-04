@@ -573,6 +573,9 @@ export const KART_GORSEL_YOLLARI: Record<string, string> = {
 
 export const KART_ANAHTARLARI: string[] = Object.keys(KART_GORSEL_YOLLARI);
 
+// ZOR DETAY (salt görüntüleme) anahtarları — {klasor}_zor_{n}. /zor-detay ekranı kullanır.
+export const KART_ZOR_ANAHTARLARI: string[] = [];
+
 export const KART_GORSELLERI: Record<string, ImageRequireSource> = {
   "ailekoruma_m10_11": require("../../assets/kartlar/ailekoruma/ailekoruma_m10_11.webp"),
   "ailekoruma_m12_1": require("../../assets/kartlar/ailekoruma/ailekoruma_m12_1.webp"),

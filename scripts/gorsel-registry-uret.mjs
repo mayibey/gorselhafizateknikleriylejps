@@ -50,6 +50,18 @@ const giris = [...anahtarlar.entries()];
 const yolSatir = giris.map(([key, { yol }]) => `  ${JSON.stringify(key)}: ${JSON.stringify(yol)},`);
 const reqSatir = giris.map(([key, { req }]) => `  ${JSON.stringify(key)}: require(${JSON.stringify(req)}),`);
 
+// "ZOR DETAY" görselleri: anahtar = {klasor}_zor_{n}. Bunlar SALT GÖRÜNTÜLEME (öğrendim/SRS YOK);
+// seed.ts bunları çalışma kartı üretiminden HARİÇ tutar, /zor-detay ekranı bu listeden okur.
+// Aynı klasörde durdukları için indirme/şifreleme/imzalı-URL boru hattından otomatik geçerler.
+const zorAnahtarlar = giris
+  .map(([key]) => key)
+  .filter((key) => {
+    const i = key.indexOf('_');
+    return i > 0 && key.slice(i + 1).startsWith('zor_');
+  });
+const zorBlok = `// ZOR DETAY (salt görüntüleme) anahtarları — {klasor}_zor_{n}. /zor-detay ekranı kullanır.
+export const KART_ZOR_ANAHTARLARI: string[] = ${JSON.stringify(zorAnahtarlar)};`;
+
 // KART_GORSEL_YOLLARI: anahtar → içerik-göreli yol (uzantılı). Uzak URL = ICERIK_TABANI + '/' + yol.
 // KART_ANAHTARLARI: seed.ts ŞEMAYI bundan türetir → binary kaldırılsa bile gömülü kalır (B1).
 // KART_GORSELLERI: yerel require map (manifestOnly modda ÜRETİLMEZ; pakete binary girmez).
@@ -73,6 +85,8 @@ ${manifestOnly ? '// (manifest-only: require map boş — uzaktan yükleme)\n' :
 import type { ImageRequireSource } from 'react-native';
 
 ${yolBlok}
+
+${zorBlok}
 
 ${reqBlok}
 `;
