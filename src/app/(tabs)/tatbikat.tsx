@@ -3,6 +3,7 @@ import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
+import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
@@ -28,6 +29,15 @@ type Durum = { calisilan: number; toplam: number; tamam: boolean };
  * Yalnız soru havuzu olan müşterek kanunlar listelenir; branş içeriği "çok yakında".
  */
 export default function TatbikatScreen() {
+  // E-POSTA DOĞRULAMA KAPISI: doğrulanmamış hesap içeriğe giremez (girişe izin var, içerik kilitli).
+  return (
+    <DogrulamaKapisi>
+      <TatbikatIcerik />
+    </DogrulamaKapisi>
+  );
+}
+
+function TatbikatIcerik() {
   const router = useRouter();
   const { brans } = useBrans();
   const { rutbe } = useRutbe();
@@ -160,8 +170,8 @@ export default function TatbikatScreen() {
       {blok === 'brans' ? (
         <Yakinda
           ikon="shield-star-outline"
-          baslik="Branş sınavları ÇOK YAKINDA"
-          aciklama="Branşına özel deneme sınavları hazırlanıyor. Şimdi katılanlara özel %50 indirim — yayına gelince tam fiyattan satışta olacak. Şimdilik müşterek sınavlarıyla kendini sına."
+          baslik="Branş sınavları — ÖN SATIŞTA"
+          aciklama="Branşına özel deneme sınavları HENÜZ YAYINDA DEĞİL, hazırlanıyor. Şu an satılan branş paketi ÖN SATIŞTIR: %50 indirimli alırsın, içerik yayınlanınca otomatik açılır. Şimdilik müşterek sınavlarıyla kendini sına."
         />
       ) : mod === 'tatbikat' ? (
         <>

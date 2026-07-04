@@ -17,6 +17,7 @@ import {
   profilGetir,
   profilTamMi,
   silmeTalepTarihiGetir,
+  sozlesmeOnayKaydet,
 } from '@/lib/auth';
 import { senkronKaydet, senkronYukle } from '@/lib/senkron';
 import { supabase, supabaseHazir } from '@/lib/supabase';
@@ -62,6 +63,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         await hesapGeriGetir();
         setReaktiveEdildi(true);
       }
+      // Sözleşme onay ANI (KVKK kanıtı): UI kabul olmadan giriş/kayıt başlatmıyor → ilk girişte
+      // bir kez profile yazılır (zaten doluysa no-op; ilk kabul tarihi korunur).
+      void sozlesmeOnayKaydet();
       await senkronYukle();
       const p = await profilGetir();
       setProfilTamam(profilTamMi(p));

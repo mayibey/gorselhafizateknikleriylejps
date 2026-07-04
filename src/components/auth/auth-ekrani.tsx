@@ -7,17 +7,18 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
-import { epostaGiris, epostaKayit, epostaKullanimda, girisDonusAdresi, sifreSifirla } from '@/lib/auth';
+import { epostaGiris, epostaKayit, epostaKullanimda, girisDonusAdresi } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { epostaHatasi, sifreHatasi } from '@/lib/dogrulama';
 import { sifreSizmisMi } from '@/lib/sifre-guvenlik';
+import { telefonGirisAcikMi } from '@/lib/uzak-ayar';
 
 import { AdimGostergesi } from './adim-gostergesi';
 import { AnaButon } from './ana-buton';
@@ -32,6 +33,8 @@ type Mesaj = { tip: 'hata' | 'bilgi'; metin: string };
 
 function hataMetni(e: unknown): string {
   const m = e instanceof Error ? e.message : '';
+  // Google girişinin GERÇEK sebebi zaten Türkçe hazırlandı → olduğu gibi göster (kör teşhis bitsin).
+  if (e instanceof Error && e.name === 'GoogleGirisHatasi') return m;
   if (/invalid login credentials/i.test(m)) return 'E-posta veya şifre hatalı.';
   if (/already registered|already exists/i.test(m)) return 'Bu e-posta zaten kayıtlı. Giriş yap.';
   if (/email not confirmed/i.test(m)) return 'E-postanı doğrula (gelen kutunu kontrol et).';
@@ -48,13 +51,20 @@ export function AuthEkrani() {
   const [sartlar, setSartlar] = useState(false);
   const [mesgul, setMesgul] = useState(false);
   const [mesaj, setMesaj] = useState<Mesaj | null>(null);
+  const [telefonAcik, setTelefonAcik] = useState(false);
 
   const kayitMi = mod === 'kayit';
+
+  // Telefon ile giriş uzaktan bayrakla açılır (MasGSM hazır olunca build'siz aktive edilir).
+  useEffect(() => {
+    void telefonGirisAcikMi().then(setTelefonAcik);
+  }, []);
 
   const RIZA_UYARI = "Devam etmek için Kullanım Şartları ve Gizlilik Politikası'nı kabul et.";
 
   async function google() {
-    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
+    // Onay kutusu yalnız KAYITTA istenir; girişte "giriş yaparak kabul etmiş olursun" metni geçerli.
+    if (kayitMi && !sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
     setMesaj(null);
     setMesgul(true);
     try {
@@ -71,7 +81,7 @@ export function AuthEkrani() {
       setMesaj({ tip: 'hata', metin: 'E-posta ve şifre gir.' });
       return;
     }
-    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
+    if (kayitMi && !sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
     if (kayitMi) {
       const dHata = epostaHatasi(eposta) ?? sifreHatasi(sifre);
       if (dHata) return setMesaj({ tip: 'hata', metin: dHata });
@@ -115,16 +125,6 @@ export function AuthEkrani() {
     }
   }
 
-  async function sifremiUnuttum() {
-    if (!eposta.trim()) return setMesaj({ tip: 'hata', metin: 'Önce e-posta adresini gir.' });
-    try {
-      await sifreSifirla(eposta);
-      setMesaj({ tip: 'bilgi', metin: 'Şifre sıfırlama e-postası gönderildi.' });
-    } catch (e) {
-      setMesaj({ tip: 'hata', metin: hataMetni(e) });
-    }
-  }
-
   function modDegis(yeni: Mod) {
     setMod(yeni);
     setMesaj(null);
@@ -152,19 +152,55 @@ export function AuthEkrani() {
             : 'Kaldığın yerden devam et, ilerlemene güvenle ulaş.'}
         </AppText>
 
+        {/* GİRİŞ / KAYDOL sekmeleri — yeni kullanıcı "kaydol"u aramasın, ilk bakışta görsün. */}
+        <View style={styles.sekmeler} accessibilityRole="tablist">
+          <Pressable
+            style={[styles.sekme, !kayitMi && styles.sekmeAktif]}
+            onPress={() => modDegis('giris')}
+            accessibilityRole="tab"
+            accessibilityState={{ selected: !kayitMi }}>
+            <AppText variant="kucuk" bold color={!kayitMi ? 'beyaz' : 'lacivert'}>
+              Giriş Yap
+            </AppText>
+          </Pressable>
+          <Pressable
+            style={[styles.sekme, kayitMi && styles.sekmeAktif]}
+            onPress={() => modDegis('kayit')}
+            accessibilityRole="tab"
+            accessibilityState={{ selected: kayitMi }}>
+            <AppText variant="kucuk" bold color={kayitMi ? 'beyaz' : 'lacivert'}>
+              Kaydol
+            </AppText>
+          </Pressable>
+        </View>
+
         {kayitMi ? <AdimGostergesi adim={1} /> : null}
 
-        {/* Şartlar onayı — HEM Google HEM e-posta yolunu kapsar (KVKK). Üstte, ikisinden önce. */}
-        <Pressable
-          style={styles.sartSatir}
-          onPress={() => setSartlar((s) => !s)}
-          accessibilityRole="checkbox"
-          accessibilityState={{ checked: sartlar }}
-          accessibilityLabel="Kullanım Şartları ve Gizlilik Politikası'nı kabul ediyorum">
-          <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
-            {sartlar ? <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} /> : null}
-          </View>
-          <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
+        {/* Şartlar onayı: yalnız KAYITTA işaretlenir (bir kez). Girişte alttaki bilgi metni geçerli. */}
+        {kayitMi ? (
+          <Pressable
+            style={styles.sartSatir}
+            onPress={() => setSartlar((s) => !s)}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: sartlar }}
+            accessibilityLabel="Kullanım Şartları ve Gizlilik Politikası'nı kabul ediyorum">
+            <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
+              {sartlar ? <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} /> : null}
+            </View>
+            <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
+              <AppText
+                variant="etiket"
+                color="lacivert"
+                bold
+                onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
+                Kullanım Şartları ve Gizlilik Politikası
+              </AppText>
+              'nı okudum, kabul ediyorum.
+            </AppText>
+          </Pressable>
+        ) : (
+          <AppText variant="etiket" color="solukMetin" style={styles.girisRiza}>
+            Giriş yaparak{' '}
             <AppText
               variant="etiket"
               color="lacivert"
@@ -172,9 +208,9 @@ export function AuthEkrani() {
               onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
               Kullanım Şartları ve Gizlilik Politikası
             </AppText>
-            'nı okudum, kabul ediyorum.
+            'nı kabul etmiş olursun.
           </AppText>
-        </Pressable>
+        )}
 
         {/* BİRİNCİL yöntem: Google (öne çıkar). Apple Android'de yok. */}
         <View style={styles.googleSar}>
@@ -222,7 +258,10 @@ export function AuthEkrani() {
               sifre
             />
           ) : (
-            <Pressable onPress={() => void sifremiUnuttum()} style={styles.unuttumSar} hitSlop={8}>
+            <Pressable
+              onPress={() => router.push('/sifremi-unuttum')}
+              style={styles.unuttumSar}
+              hitSlop={8}>
               <AppText variant="kucuk" color="lacivert" bold>
                 Şifremi unuttum
               </AppText>
@@ -234,6 +273,19 @@ export function AuthEkrani() {
             onPress={() => void gonder()}
             mesgul={mesgul}
           />
+
+          {telefonAcik ? (
+            <Pressable
+              style={({ pressed }) => [styles.telefonBtn, pressed && styles.pressed]}
+              onPress={() => router.push('/telefon-giris')}
+              accessibilityRole="button"
+              accessibilityLabel="Telefon numarası ile devam et">
+              <MaterialCommunityIcons name="cellphone-message" size={18} color={Palette.lacivert} />
+              <AppText variant="kucuk" color="lacivert" bold>
+                Telefon ile {kayitMi ? 'kaydol' : 'giriş yap'}
+              </AppText>
+            </Pressable>
+          ) : null}
         </View>
 
         <Pressable
@@ -338,6 +390,39 @@ const styles = StyleSheet.create({
   sartMetin: {
     flex: 1,
     lineHeight: 18,
+  },
+  girisRiza: {
+    lineHeight: 18,
+    marginTop: Spacing.two,
+  },
+  sekmeler: {
+    flexDirection: 'row',
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: 3,
+    marginTop: Spacing.two,
+  },
+  sekme: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.s,
+  },
+  sekmeAktif: {
+    backgroundColor: Palette.lacivert,
+  },
+  telefonBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1.5,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.two,
+    backgroundColor: Palette.kartKremi,
   },
   btnArasi: {
     height: Spacing.one,

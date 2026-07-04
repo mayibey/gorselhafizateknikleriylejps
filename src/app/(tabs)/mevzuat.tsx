@@ -3,6 +3,7 @@ import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
+import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Yakinda } from '@/components/ui/yakinda';
@@ -33,6 +34,15 @@ const CIPLER = [
 type Cip = (typeof CIPLER)[number]['k'];
 
 export default function MevzuatScreen() {
+  // E-POSTA DOĞRULAMA KAPISI: doğrulanmamış hesap içeriğe giremez (girişe izin var, içerik kilitli).
+  return (
+    <DogrulamaKapisi>
+      <MevzuatIcerik />
+    </DogrulamaKapisi>
+  );
+}
+
+function MevzuatIcerik() {
   const router = useRouter();
   const { brans } = useBrans();
   const { rutbe } = useRutbe();
@@ -206,8 +216,8 @@ export default function MevzuatScreen() {
       {blok === 'brans' ? (
         <Yakinda
           ikon="shield-star-outline"
-          baslik="Branş eğitimi ÇOK YAKINDA"
-          aciklama="Branşına özel mevzuat ve denemeler hazırlanıyor. Şimdi katılanlara özel %50 indirim — yayına gelince tam fiyattan satışta olacak. Şimdilik müşterek kanunlardan çalışmaya devam et."
+          baslik="Branş eğitimi — ÖN SATIŞTA"
+          aciklama="Branşına özel mevzuat ve denemeler HENÜZ YAYINDA DEĞİL, hazırlanıyor. Şu an satılan branş paketi ÖN SATIŞTIR: %50 indirimli alırsın, içerik yayınlanınca otomatik açılır. Şimdilik müşterek kanunlardan çalışmaya devam et."
         />
       ) : (
         <>

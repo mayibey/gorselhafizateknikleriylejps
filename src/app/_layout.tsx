@@ -19,7 +19,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
-import { oauthUrlIsle } from '@/lib/auth';
+import { oauthUrlIsle, tanitimSunucudanOku, tanitimSunucuyaYaz } from '@/lib/auth';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
 import { tanitimTamamla, tanitimTamamMi } from '@/lib/ipuclari';
@@ -124,11 +124,33 @@ function RootNavigator() {
   const { kullanici, hazir, yukleniyor: authYukleniyor, profilTamam } = useAuth();
   const segments = useSegments();
   const router = useRouter();
-  // Uygulama turu: TÜM kullanıcılar (yeni + mevcut) bir kez görür. null = henüz okunmadı.
+  // Uygulama turu: HESABA bağlı (sunucu esas) — her hesap bir kez görür; cihaz değişse de takip
+  // edilir. Girişsiz/offline durumda cihaz-yerel bayrak geçerli (fail-open). null = henüz okunmadı.
   const [tanitimTamam, setTanitimTamam] = useState<boolean | null>(null);
   useEffect(() => {
-    void tanitimTamamMi().then(setTanitimTamam);
-  }, []);
+    if (authYukleniyor) return;
+    let iptal = false;
+    void (async () => {
+      const yerel = await tanitimTamamMi();
+      if (!kullanici) {
+        if (!iptal) setTanitimTamam(yerel);
+        return;
+      }
+      const sunucu = await tanitimSunucudanOku();
+      if (iptal) return;
+      if (sunucu === true) {
+        if (!yerel) void tanitimTamamla(); // cihaz bayrağını sunucuya eşitle
+        setTanitimTamam(true);
+      } else if (sunucu === null) {
+        setTanitimTamam(yerel); // sunucu okunamadı (offline) → cihazdaki geçerli
+      } else {
+        setTanitimTamam(false); // hesap turu görmemiş → göster (cihaz görmüş olsa bile)
+      }
+    })();
+    return () => {
+      iptal = true;
+    };
+  }, [kullanici, authYukleniyor]);
 
   const yukleniyor = bransYukleniyor || rutbeYukleniyor || authYukleniyor;
   // Giriş ZORUNLU: Supabase yapılandırıldıysa (hazir) ve oturum yoksa giriş ister.
@@ -166,7 +188,8 @@ function RootNavigator() {
     return (
       <UygulamaTuru
         onTamam={() => {
-          void tanitimTamamla();
+          void tanitimTamamla(); // cihaz bayrağı
+          void tanitimSunucuyaYaz(); // hesap bayrağı (girişliyse; değilse sessiz no-op)
           setTanitimTamam(true);
         }}
       />
@@ -188,6 +211,9 @@ function RootNavigator() {
         <Stack.Screen name="ayarlar" />
         <Stack.Screen name="onboarding" />
         <Stack.Screen name="sifre-yenile" />
+        <Stack.Screen name="sifremi-unuttum" />
+        <Stack.Screen name="telefon-giris" />
+        <Stack.Screen name="tanitim" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
         <Stack.Screen name="rutbe-sec" options={{ presentation: 'modal' }} />
         <Stack.Screen name="giris" options={{ presentation: 'modal' }} />

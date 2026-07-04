@@ -16,6 +16,9 @@ export default function GirisScreen() {
   const [mesgul, setMesgul] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
   const [profil, setProfil] = useState<Profil | null>(null);
+  // Çıkış / hesap silme YARIŞ KORUMASI: biri başlayınca ikisi de kilitlenir (hızlı çift
+  // dokunuşlar birbirini ezmesin — "çıkış+sil aynı anda" karmaşası kapanır).
+  const [hesapIslemi, setHesapIslemi] = useState<'cikis' | 'sil' | null>(null);
 
   // Hesap bilgilerini (ad/soyad/telefon) göster — giriş yapıldıysa çek.
   useEffect(() => {
@@ -38,7 +41,18 @@ export default function GirisScreen() {
     }
   }
 
+  async function cikisYapGuvenli() {
+    if (hesapIslemi) return; // zaten bir işlem sürüyor
+    setHesapIslemi('cikis');
+    try {
+      await cikis();
+    } finally {
+      setHesapIslemi(null);
+    }
+  }
+
   function hesabiSilOnay() {
+    if (hesapIslemi) return; // çıkış/silme sürerken ikinci işlem başlamasın
     Alert.alert(
       'Hesabını sil?',
       'Hesabın silinmek üzere işaretlenecek. 30 gün içinde tekrar giriş yaparsan otomatik geri ' +
@@ -50,11 +64,15 @@ export default function GirisScreen() {
           style: 'destructive',
           onPress: () => {
             void (async () => {
+              if (hesapIslemi) return;
+              setHesapIslemi('sil');
               try {
                 await hesabiSil();
                 router.back();
               } catch (e) {
                 setHata(e instanceof Error ? e.message : 'Hesap silinemedi');
+              } finally {
+                setHesapIslemi(null);
               }
             })();
           },
@@ -117,20 +135,44 @@ export default function GirisScreen() {
               ) : null}
             </View>
             <Pressable
-              style={({ pressed }) => [styles.cikisBtn, pressed && styles.pressed]}
-              onPress={() => void cikis()}>
-              <AppText variant="kucuk" color="kirmizi" bold>
-                Çıkış
-              </AppText>
+              disabled={!!hesapIslemi}
+              style={({ pressed }) => [
+                styles.cikisBtn,
+                pressed && styles.pressed,
+                hesapIslemi && styles.pasif,
+              ]}
+              onPress={() => void cikisYapGuvenli()}>
+              {hesapIslemi === 'cikis' ? (
+                <ActivityIndicator size="small" color={Palette.kirmizi} />
+              ) : (
+                <AppText variant="kucuk" color="kirmizi" bold>
+                  Çıkış
+                </AppText>
+              )}
             </Pressable>
           </View>
           <Pressable
-            style={({ pressed }) => [styles.hesapSilBtn, pressed && styles.pressed]}
+            disabled={!!hesapIslemi}
+            style={({ pressed }) => [
+              styles.hesapSilBtn,
+              pressed && styles.pressed,
+              hesapIslemi && styles.pasif,
+            ]}
             onPress={hesabiSilOnay}>
-            <MaterialCommunityIcons name="account-remove-outline" size={18} color={Palette.kirmizi} />
-            <AppText variant="kucuk" color="kirmizi" bold>
-              Hesabı Sil
-            </AppText>
+            {hesapIslemi === 'sil' ? (
+              <ActivityIndicator size="small" color={Palette.kirmizi} />
+            ) : (
+              <>
+                <MaterialCommunityIcons
+                  name="account-remove-outline"
+                  size={18}
+                  color={Palette.kirmizi}
+                />
+                <AppText variant="kucuk" color="kirmizi" bold>
+                  Hesabı Sil
+                </AppText>
+              </>
+            )}
           </Pressable>
         </>
       ) : (

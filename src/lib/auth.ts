@@ -134,6 +134,28 @@ let googleConfigured = false;
  * takılması biter, kullanıcı "supabase.co" yerine markayı görür. (GoogleSignin native-only:
  * dinamik import → web bundle'ına native modül GİRMEZ.)
  */
+/** Google girişinin GERÇEK sebebi — UI bu mesajı OLDUĞU GİBİ gösterir (genel "işlem yapılamadı"
+ * yerine; kör teşhis bitsin). name üzerinden tanınır (auth-ekrani hataMetni). */
+export class GoogleGirisHatasi extends Error {
+  constructor(mesaj: string) {
+    super(mesaj);
+    this.name = 'GoogleGirisHatasi';
+  }
+}
+
+// @react-native-google-signin hata kodu → anlaşılır Türkçe açıklama.
+function googleHataAciklama(kod: string | number | undefined, ham: string): string {
+  const k = String(kod ?? '');
+  if (k === '10' || k === 'DEVELOPER_ERROR')
+    return 'Google yapılandırma hatası (kod 10 — imza/istemci uyuşmazlığı). Uygulamanın bu sürümü Google tarafında henüz tanınmıyor olabilir; birkaç saat sonra tekrar dene, sürerse bildir.';
+  if (k === '7' || k === 'NETWORK_ERROR') return 'Ağ hatası — internet bağlantını kontrol edip tekrar dene.';
+  if (k === '5' || k === 'INVALID_ACCOUNT') return 'Google hesabı geçersiz görünüyor. Başka bir hesapla dene.';
+  if (k === '12502' || k === 'IN_PROGRESS') return 'Zaten bir giriş denemesi sürüyor — bir saniye bekleyip tekrar dene.';
+  if (k === 'PLAY_SERVICES_NOT_AVAILABLE')
+    return 'Google Play Hizmetleri bu cihazda yok/güncel değil. Play Store’dan güncelleyip tekrar dene.';
+  return `Google giriş hatası (kod ${k || '?'}): ${ham}`;
+}
+
 async function nativeGoogleGiris(): Promise<void> {
   const { GoogleSignin } = await import('@react-native-google-signin/google-signin');
   if (!googleConfigured) {
@@ -141,17 +163,26 @@ async function nativeGoogleGiris(): Promise<void> {
     googleConfigured = true;
   }
   await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
-  const resp = await GoogleSignin.signIn();
+  let resp: unknown;
+  try {
+    resp = await GoogleSignin.signIn();
+  } catch (e) {
+    const kod = (e as { code?: string | number })?.code;
+    if (String(kod) === '12501' || kod === 'SIGN_IN_CANCELLED') return; // kullanıcı vazgeçti → sessiz
+    throw new GoogleGirisHatasi(
+      googleHataAciklama(kod, e instanceof Error ? e.message : String(e)),
+    );
+  }
   // @react-native-google-signin v13+ dönüş: { type:'success'|'cancelled', data:{ idToken, ... } }
   const idToken =
     (resp as { data?: { idToken?: string } })?.data?.idToken ??
     (resp as { idToken?: string })?.idToken;
   if (!idToken) {
     if ((resp as { type?: string })?.type === 'cancelled') return; // kullanıcı vazgeçti → sessiz
-    throw new Error('Google kimlik doğrulaması alınamadı.');
+    throw new GoogleGirisHatasi('Google kimlik bilgisi (idToken) alınamadı — tekrar dene.');
   }
   const { error } = await supabase!.auth.signInWithIdToken({ provider: 'google', token: idToken });
-  if (error) throw error;
+  if (error) throw new GoogleGirisHatasi(`Sunucu Google girişini kabul etmedi: ${error.message}`);
 }
 
 /** Gmail ile giriş. Başarılıysa oturum AsyncStorage'a yazılır (onAuthStateChange tetiklenir). */
@@ -358,6 +389,108 @@ export async function gorevKaydet(g: Partial<Gorev>, beklenenUid: string): Promi
 export async function cikisYap(): Promise<void> {
   if (!supabaseHazir || !supabase) return;
   await supabase.auth.signOut();
+}
+
+// --- Sözleşme onayı (KVKK kanıtı) — İLK kabul anı profile bir kez yazılır ---
+
+/** Sözleşme onay anını kaydeder (yalnız BOŞSA — ilk kabul anı korunur). Sessiz/no-op'lu. */
+export async function sozlesmeOnayKaydet(): Promise<void> {
+  if (!supabaseHazir || !supabase) return;
+  try {
+    const { data: u } = await supabase.auth.getUser();
+    const id = u.user?.id;
+    if (!id) return;
+    await supabase
+      .from('profiles')
+      .update({ sozlesme_onay: new Date().toISOString() })
+      .eq('id', id)
+      .is('sozlesme_onay', null);
+  } catch {
+    // sessiz — bir sonraki girişte tekrar denenir
+  }
+}
+
+// --- Tanıtım turu (sunucu tarafı) — hesap gördü mü? (profiles.tanitim_gordu) ---
+
+/** Sunucuda bu HESAP turu gördü mü? true/false; okunamazsa (offline/hata) null. */
+export async function tanitimSunucudanOku(): Promise<boolean | null> {
+  if (!supabaseHazir || !supabase) return null;
+  try {
+    const { data, error } = await supabase.from('profiles').select('tanitim_gordu').single();
+    if (error || !data) return null;
+    return data.tanitim_gordu != null;
+  } catch {
+    return null;
+  }
+}
+
+/** Bu hesabı "turu gördü" işaretler (yalnız boşsa — ilk görüş anı korunur). Sessiz. */
+export async function tanitimSunucuyaYaz(): Promise<void> {
+  if (!supabaseHazir || !supabase) return;
+  try {
+    const { data: u } = await supabase.auth.getUser();
+    const id = u.user?.id;
+    if (!id) return;
+    await supabase
+      .from('profiles')
+      .update({ tanitim_gordu: new Date().toISOString() })
+      .eq('id', id)
+      .is('tanitim_gordu', null);
+  } catch {
+    // sessiz
+  }
+}
+
+// --- E-posta doğrulama (içerik kapısı) ---
+
+/** Oturumdaki e-posta doğrulanmış mı? SUNUCUDAN taze okur (kullanıcı maildeki linke tıkladıysa
+ * görünür). true/false; okunamazsa (offline) null → kapı FAIL-OPEN davranır (mağduriyet yok). */
+export async function epostaDogrulanmisMi(): Promise<boolean | null> {
+  if (!supabaseHazir || !supabase) return null;
+  try {
+    const { data, error } = await supabase.auth.getUser();
+    if (error || !data.user) return null;
+    const u = data.user as { email_confirmed_at?: string | null; confirmed_at?: string | null };
+    return u.email_confirmed_at != null || u.confirmed_at != null;
+  } catch {
+    return null;
+  }
+}
+
+/** Doğrulama e-postasını YENİDEN gönderir (kayıt onayı). */
+export async function dogrulamaMailiGonder(eposta: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.resend({ type: 'signup', email: eposta.trim() });
+  if (error) throw error;
+}
+
+// --- Telefon ile giriş (SMS OTP) — uzak bayrak `telefon_giris` açıkken kullanılır ---
+
+/** TR telefonunu E.164'e çevirir: "5xx xxx xx xx" → "+905xxxxxxxxx". Geçersizse null. */
+export function telefonE164(ham: string): string | null {
+  const rakamlar = ham.replace(/\D/g, '');
+  if (/^5\d{9}$/.test(rakamlar)) return `+90${rakamlar}`;
+  if (/^05\d{9}$/.test(rakamlar)) return `+9${rakamlar}`;
+  if (/^905\d{9}$/.test(rakamlar)) return `+${rakamlar}`;
+  return null;
+}
+
+/** Telefona tek kullanımlık giriş kodu (SMS) gönderir. Hesap yoksa oluşturur. */
+export async function telefonKodGonder(telefonE164Str: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.signInWithOtp({ phone: telefonE164Str });
+  if (error) throw error;
+}
+
+/** SMS ile gelen kodu doğrular → oturum açılır (onAuthStateChange tetiklenir). */
+export async function telefonKodDogrula(telefonE164Str: string, kod: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.verifyOtp({
+    phone: telefonE164Str,
+    token: kod.trim(),
+    type: 'sms',
+  });
+  if (error) throw error;
 }
 
 // --- Hesap silme: 30 günlük YUMUŞAK silme (soft delete) + reaktivasyon ---

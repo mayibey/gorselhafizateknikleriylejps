@@ -74,6 +74,11 @@ export default function AyarlarScreen() {
         onPress={() => router.push('/egitim-plani')}
       />
       <Satir
+        ikon="play-circle-outline"
+        etiket="Tanıtım turunu tekrar izle"
+        onPress={() => router.push('/tanitim')}
+      />
+      <Satir
         ikon="shield-lock-outline"
         etiket="Gizlilik & Kullanım Şartları"
         onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}
