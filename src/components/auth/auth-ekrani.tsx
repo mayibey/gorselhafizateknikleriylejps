@@ -8,8 +8,10 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { MEVZU_LOGO } from '../../assets/auth-gorselleri';
 
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
@@ -22,7 +24,6 @@ import { telefonGirisAcikMi } from '@/lib/uzak-ayar';
 
 import { AdimGostergesi } from './adim-gostergesi';
 import { AnaButon } from './ana-buton';
-import { Arma } from './arma';
 import { AuthGirdi } from './auth-girdi';
 import { DekoratifArkaplan } from './dekoratif-arkaplan';
 import { KarakterFigur } from './karakter-figur';
@@ -43,7 +44,7 @@ function hataMetni(e: unknown): string {
 
 export function AuthEkrani() {
   const router = useRouter();
-  const { girisYap } = useAuth();
+  const { girisYap, oturumDustu } = useAuth();
   const [mod, setMod] = useState<Mod>('giris');
   const [eposta, setEposta] = useState('');
   const [sifre, setSifre] = useState('');
@@ -135,13 +136,21 @@ export function AuthEkrani() {
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
       <DekoratifArkaplan />
       <ScrollView contentContainerStyle={styles.icerik} keyboardShouldPersistTaps="handled">
-        {/* Üst: arma (orta) + karakter (sağ) */}
+        {/* Üst: MEVZU logosu (sol) + teğmen (sağ) — başkan tasarımı (ortadaki arma kaldırıldı) */}
         <View style={styles.ust}>
-          <View style={styles.armaSar}>
-            <Arma />
-          </View>
+          <Image source={MEVZU_LOGO} style={styles.logo} accessibilityLabel="MEVZU logosu" />
           <KarakterFigur style={styles.karakter} />
         </View>
+
+        {oturumDustu ? (
+          <View style={styles.dususKart}>
+            <MaterialCommunityIcons name="cellphone-lock" size={20} color={Palette.amber} />
+            <AppText variant="etiket" color="anaMetin" style={styles.dususMetin}>
+              Hesabına başka bir cihazdan giriş yapıldı; güvenlik gereği bu cihazdaki oturum
+              kapatıldı. Devam etmek için tekrar giriş yap.
+            </AppText>
+          </View>
+        ) : null}
 
         <AppText variant="dev" bold color="lacivert">
           {kayitMi ? 'Hesap Oluştur' : 'Giriş Yap'}
@@ -345,15 +354,34 @@ const styles = StyleSheet.create({
     height: 140,
     justifyContent: 'flex-start',
   },
-  armaSar: {
+  logo: {
     position: 'absolute',
+    left: 0,
     top: Spacing.two,
-    alignSelf: 'center',
+    width: 96,
+    height: 96,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
   },
   karakter: {
     position: 'absolute',
     right: -Spacing.three,
     top: 0,
+  },
+  dususKart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.altin,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.two,
+  },
+  dususMetin: {
+    flex: 1,
+    lineHeight: 17,
   },
   altyazi: {
     lineHeight: 20,

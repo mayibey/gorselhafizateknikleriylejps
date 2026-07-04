@@ -8,6 +8,7 @@
  * (reaktiveEdildi=true → UI "hesabın geri geldi" der). bkz. lib/auth.ts + docs/v2.
  */
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { AppState } from 'react-native';
 
 import {
   cikisYap,
@@ -19,6 +20,7 @@ import {
   silmeTalepTarihiGetir,
   sozlesmeOnayKaydet,
 } from '@/lib/auth';
+import { oturumGecerliMi, oturumSahiplen } from '@/lib/oturum-kilidi';
 import { senkronKaydet, senkronYukle } from '@/lib/senkron';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
@@ -33,6 +35,8 @@ type AuthContextDeger = {
   hesabiSil: () => Promise<void>; // 30 günlük silme talebi + çıkış
   reaktiveEdildi: boolean; // bu girişte silinmek üzere olan hesap geri getirildi mi
   reaktivasyonGizle: () => void;
+  /** TEK OTURUM: hesabına başka cihazdan girildiği için bu cihazın oturumu düşürüldü mü. */
+  oturumDustu: boolean;
   profilTamam: boolean | null; // ad/soyad/telefon dolu mu (null = henüz bilinmiyor)
   profilYenile: () => Promise<void>; // profil kaydedilince çağır → gate güncellensin
 };
@@ -44,10 +48,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [yukleniyor, setYukleniyor] = useState(true);
   const [reaktiveEdildi, setReaktiveEdildi] = useState(false);
   const [profilTamam, setProfilTamam] = useState<boolean | null>(null);
+  const [oturumDustu, setOturumDustu] = useState(false);
 
   async function profilYenile(): Promise<void> {
     const p = await profilGetir();
     setProfilTamam(profilTamMi(p));
+  }
+
+  // TEK OTURUM ihlali: başka cihaz sahiplenmiş → bu cihazın oturumunu kapat + kullanıcıya söyle.
+  async function oturumuDusur(): Promise<void> {
+    setOturumDustu(true);
+    await cikisYap();
+    setKullanici(null);
+    setProfilTamam(null);
   }
 
   useEffect(() => {
@@ -56,8 +69,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return;
     }
     const sb = supabase;
-    // Girişten sonra: (1) silme talebi → REAKTİVASYON, (2) bulut senkron, (3) profil tamlığı.
-    async function girisSonrasi() {
+    // Girişten sonra: (0) tek-oturum, (1) silme talebi → REAKTİVASYON, (2) bulut senkron, (3) profil.
+    // yeniGiris=true → bu cihaz hesabı SAHİPLENİR (diğer cihazlar düşer).
+    // yeniGiris=false (oturum geri yükleme) → geçerlilik KONTROL edilir; başka cihaz sahiplendiyse düş.
+    async function girisSonrasi(yeniGiris: boolean) {
+      if (yeniGiris) {
+        setOturumDustu(false);
+        await oturumSahiplen();
+      } else if (!(await oturumGecerliMi())) {
+        await oturumuDusur();
+        return;
+      }
       const talep = await silmeTalepTarihiGetir();
       if (talep) {
         await hesapGeriGetir();
@@ -75,15 +97,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const u = data.session?.user;
       setKullanici(u ? { id: u.id, email: u.email ?? null } : null);
       setYukleniyor(false);
-      if (u) await girisSonrasi();
+      if (u) await girisSonrasi(false);
     });
     // Oturum değişimlerini dinle (giriş/çıkış/yenileme).
     const { data: sub } = sb.auth.onAuthStateChange((olay, session) => {
       const u = session?.user;
       setKullanici(u ? { id: u.id, email: u.email ?? null } : null);
-      if (u && olay === 'SIGNED_IN') void girisSonrasi();
+      if (u && olay === 'SIGNED_IN') void girisSonrasi(true);
     });
     return () => sub.subscription.unsubscribe();
+  }, []);
+
+  // Uygulama ÖNE gelince tek-oturum kontrolü: başka cihaz giriş yaptıysa bu cihaz burada düşer.
+  useEffect(() => {
+    if (!supabaseHazir || !supabase) return;
+    const sb = supabase;
+    const sub = AppState.addEventListener('change', (durum) => {
+      if (durum !== 'active') return;
+      void (async () => {
+        const { data } = await sb.auth.getSession();
+        if (!data.session) return;
+        if (!(await oturumGecerliMi())) await oturumuDusur();
+      })();
+    });
+    return () => sub.remove();
   }, []);
 
   async function girisYap(): Promise<void> {
@@ -116,6 +153,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         hesabiSil,
         reaktiveEdildi,
         reaktivasyonGizle: () => setReaktiveEdildi(false),
+        oturumDustu,
         profilTamam,
         profilYenile,
       }}>
