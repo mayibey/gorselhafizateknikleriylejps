@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 4 Temmuz 2026
 >
+> ### ▶ 5 Tem — GÜVENLİK İNCELEMESİ (/security-review) + cihaz kilidi sunucuya zorlandı
+> /security-review çalıştırıldı (working tree temiz → elle güvenlik-kritik dosyalara yönlendirildi: Edge fn'ler + RPC'ler + RLS + SQL). SONUÇ: ödeme/hak zinciri SAĞLAM (ödemeden premium yolu YOK). Tek gerçek bulgu (MEDIUM, güven 9): cihaz_kilit + tek-oturum yalnız istemcideydi → değiştirilmiş istemci atlar. **DÜZELTİLDİ (docs/v2/13, canlıda):** premium_mi artık `cihaz_kilit is null` da arar (imzali-url/gorsel kilitli hesabı reddeder); profiles_kilit_koru trigger (authenticated cihaz_kilit'i değiştiremez); premium_mi execute yalnız service_role. Küçük notlar (checklist): (a) YAYINDA `KILIT_AKTIF=1` zaten yapıldı ✓, (b) aktif_oturum istemci-yazılır kaldı (tek-oturum UX katmanı; sağlam katman = cihaz sayısı kilidi definer+RLS+premium_mi).
+>
 > ### ▶ 5 Tem — ÇEVRİMDIŞI 5-GÜN KİLİDİ KALDIRILDI (başkan kararı, ahlaki+pratik)
 > Başkan sorguladı: arazide/sinyalsiz görevdeki jandarma personeli çevrimdışı çalışamayınca cezalanıyor. Etik değerlendirme: çalışma aleti vermek, kullanıcının görev ihmalinden bizi sorumlu yapmaz (o disiplin amirin işi); dürüst çoğunluğu azınlık için cezalandırmak yanlış. KARAR: çevrimdışı süre kilidi (heartbeat/offlineKilit/premiumOfflineGun) TAMAMEN kaldırıldı — çevrimdışı çalışma korunur (sunucu okunamazsa son premium değeri korunur). Paylaşım koruması iki katmanla yeter: **tek-oturum** (online olunca sahibi olmayan cihaz çıkışa zorlanır) + **cihaz kilidi** (7 günde 2 cihaz, docs/v2/12). Mevcut testerlar (vCode 21) için sunucudan premium_offline_gun=36500 (o build'de de tetiklenmez). Not: başkanın "internet zorunlu yap" fikri REDDEDİLDİ — aynı sebeple (arazi personeli) daha kötü olurdu; ürünün canı = indir+çevrimdışı çalış.
 >
