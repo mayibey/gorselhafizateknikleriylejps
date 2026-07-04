@@ -171,7 +171,9 @@ function RootNavigator() {
   useEffect(() => {
     // Uygulama turu açıkken (Stack render edilmiyor) yönlendirme yapma — yalnız tur bitince.
     if (yukleniyor || profilBekle || tanitimTamam !== true) return;
-    if (segments[0] === 'sifre-yenile') return; // şifre kurtarma akışı kendi oturumunu kurar
+    // Girişsiz de erişilebilen hesap-kurtarma/giriş rotaları — guard bunları GERİ ATMASIN
+    // (şifremi-unuttum'a basınca onboarding'e fırlatma bulgusu).
+    if (['sifre-yenile', 'sifremi-unuttum', 'telefon-giris'].includes(segments[0] ?? '')) return;
     const onboardingDe = segments[0] === 'onboarding';
     if (eksik && !onboardingDe) router.replace('/onboarding');
     else if (!eksik && onboardingDe) router.replace('/');

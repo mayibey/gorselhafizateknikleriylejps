@@ -163,6 +163,13 @@ async function nativeGoogleGiris(): Promise<void> {
     googleConfigured = true;
   }
   await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+  // Önceki Google oturumunu BIRAK → hesap seçici HER girişte çıksın (yoksa ikinci girişte
+  // sormadan son hesapla girer; kullanıcı farklı hesap seçemez — başkan bulgusu).
+  try {
+    await GoogleSignin.signOut();
+  } catch {
+    // oturum yoksa/hata → önemsiz, seçici zaten çıkar
+  }
   let resp: unknown;
   try {
     resp = await GoogleSignin.signIn();
@@ -266,6 +273,18 @@ export async function sifreSifirla(eposta: string): Promise<void> {
 export async function kurtarmaKoduDegistir(code: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
   const { error } = await supabase.auth.exchangeCodeForSession(code);
+  if (error) throw error;
+}
+
+/** Şifre sıfırlama MAİLİNDEKİ KODU doğrular → kurtarma oturumu açılır (ardından
+ * yeniSifreBelirle ile yeni şifre konur). Link tıklamaya göre her cihazda şaşmaz çalışır. */
+export async function sifreKoduDogrula(eposta: string, kod: string): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  const { error } = await supabase.auth.verifyOtp({
+    email: eposta.trim(),
+    token: kod.trim(),
+    type: 'recovery',
+  });
   if (error) throw error;
 }
 

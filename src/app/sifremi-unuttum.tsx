@@ -1,11 +1,13 @@
 /**
- * Şifremi Unuttum — AYRI, temiz ekran (giriş ekranındaki kutuya bağımlılık kaldırıldı).
- * Kullanıcı e-postasını burada yazar → sıfırlama maili gönderilir (Türkçe şablon, sunucuda).
- * Maildeki bağlantı `mevzu://sifre-yenile` ile uygulamaya döner → yeni şifre ekranı.
+ * Şifremi Unuttum — KOD akışı (başkan kararı, 4 Tem): e-posta gir → maile 6 haneli kod gelir →
+ * kodu gir → yeni şifreni belirle. Link tıklamaya göre her cihazda şaşmaz çalışır (deep-link
+ * kırılganlığı yok); kod hangi e-postaya gönderildiyse YALNIZ o hesabı sıfırlar. Maildeki
+ * yedek bağlantı da çalışmaya devam eder (sifre-yenile ekranı).
+ * Kod doğrulanınca kurtarma oturumu açılır → şifre konunca kullanıcı zaten giriş yapmış olur.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { AnaButon } from '@/components/auth/ana-buton';
@@ -13,24 +15,37 @@ import { AuthGirdi } from '@/components/auth/auth-girdi';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { sifreSifirla } from '@/lib/auth';
-import { epostaHatasi } from '@/lib/dogrulama';
+import { sifreKoduDogrula, sifreSifirla, yeniSifreBelirle } from '@/lib/auth';
+import { epostaHatasi, sifreHatasi } from '@/lib/dogrulama';
+
+type Adim = 'eposta' | 'kod' | 'sifre' | 'bitti';
 
 export default function SifremiUnuttumScreen() {
   const router = useRouter();
+  const [adim, setAdim] = useState<Adim>('eposta');
   const [eposta, setEposta] = useState('');
+  const [kod, setKod] = useState('');
+  const [sifre, setSifre] = useState('');
+  const [sifreTekrar, setSifreTekrar] = useState('');
   const [mesgul, setMesgul] = useState(false);
-  const [gonderildi, setGonderildi] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
+  const [sayac, setSayac] = useState(0); // kodu tekrar gönder bekleme (sn)
 
-  async function gonder() {
+  useEffect(() => {
+    if (sayac <= 0) return;
+    const t = setTimeout(() => setSayac((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [sayac]);
+
+  async function kodGonder() {
     const dHata = epostaHatasi(eposta);
     if (dHata) return setHata(dHata);
     setHata(null);
     setMesgul(true);
     try {
       await sifreSifirla(eposta);
-      setGonderildi(true);
+      setAdim('kod');
+      setSayac(60);
     } catch {
       setHata('Gönderilemedi. E-posta adresini kontrol edip tekrar dene.');
     } finally {
@@ -38,51 +53,129 @@ export default function SifremiUnuttumScreen() {
     }
   }
 
+  async function kodDogrula() {
+    if (kod.trim().length < 4) return setHata('Mailine gelen kodu gir.');
+    setHata(null);
+    setMesgul(true);
+    try {
+      await sifreKoduDogrula(eposta, kod);
+      setAdim('sifre');
+    } catch {
+      setHata('Kod hatalı ya da süresi doldu. Maildeki kodu kontrol et veya yeni kod iste.');
+    } finally {
+      setMesgul(false);
+    }
+  }
+
+  async function sifreKaydet() {
+    const dHata = sifreHatasi(sifre);
+    if (dHata) return setHata(dHata);
+    if (sifre !== sifreTekrar) return setHata('Şifreler aynı değil.');
+    setHata(null);
+    setMesgul(true);
+    try {
+      await yeniSifreBelirle(sifre);
+      setAdim('bitti');
+    } catch {
+      setHata('Şifre kaydedilemedi. Tekrar dene.');
+    } finally {
+      setMesgul(false);
+    }
+  }
+
   return (
     <Screen title="Şifremi Unuttum" onGeri={() => router.back()}>
-      {gonderildi ? (
-        <View style={styles.sonucKart}>
-          <MaterialCommunityIcons name="email-check-outline" size={40} color={Palette.yesil} />
-          <AppText variant="govde" bold style={styles.ortali}>
-            Sıfırlama bağlantısı gönderildi
-          </AppText>
-          <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
-            {eposta.trim()} adresine bir e-posta gönderdik. İçindeki bağlantıya dokununca yeni
-            şifreni belirleyeceğin ekran açılır. E-posta birkaç dakika içinde gelmezse gereksiz
-            (spam) klasörünü kontrol et.
-          </AppText>
-          <AnaButon etiket="Giriş ekranına dön" onPress={() => router.back()} />
-        </View>
-      ) : (
-        <View style={styles.form}>
-          <MaterialCommunityIcons
-            name="lock-question"
-            size={40}
-            color={Palette.lacivert}
-            style={styles.ikon}
-          />
-          <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
-            Sorun değil — hesabının e-posta adresini yaz, sana yeni şifre belirleme bağlantısı
-            gönderelim.
-          </AppText>
-          <AuthGirdi
-            ikon="email-outline"
-            placeholder="E-posta adresi"
-            value={eposta}
-            onChangeText={setEposta}
-            keyboardType="email-address"
-            autoCapitalize="none"
-            autoCorrect={false}
-            inputMode="email"
-          />
-          {hata ? (
-            <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
-              {hata}
+      <View style={styles.form}>
+        {adim === 'eposta' ? (
+          <>
+            <MaterialCommunityIcons name="lock-question" size={40} color={Palette.lacivert} style={styles.ikon} />
+            <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
+              Sorun değil — hesabının e-posta adresini yaz, sana 6 haneli bir sıfırlama kodu
+              gönderelim.
             </AppText>
-          ) : null}
-          <AnaButon etiket="Sıfırlama bağlantısı gönder" onPress={() => void gonder()} mesgul={mesgul} />
-        </View>
-      )}
+            <AuthGirdi
+              ikon="email-outline"
+              placeholder="E-posta adresi"
+              value={eposta}
+              onChangeText={setEposta}
+              keyboardType="email-address"
+              autoCapitalize="none"
+              autoCorrect={false}
+              inputMode="email"
+            />
+            {hata ? (
+              <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
+                {hata}
+              </AppText>
+            ) : null}
+            <AnaButon etiket="Kodu gönder" onPress={() => void kodGonder()} mesgul={mesgul} />
+          </>
+        ) : adim === 'kod' ? (
+          <>
+            <MaterialCommunityIcons name="email-fast-outline" size={40} color={Palette.lacivert} style={styles.ikon} />
+            <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
+              {eposta.trim()} adresine bir kod gönderdik. Maildeki kodu aşağıya yaz (gelmezse spam
+              klasörünü kontrol et):
+            </AppText>
+            <AuthGirdi
+              ikon="numeric"
+              placeholder="Sıfırlama kodu"
+              value={kod}
+              onChangeText={setKod}
+              keyboardType="number-pad"
+              autoCorrect={false}
+            />
+            {hata ? (
+              <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
+                {hata}
+              </AppText>
+            ) : null}
+            <AnaButon etiket="Kodu doğrula" onPress={() => void kodDogrula()} mesgul={mesgul} />
+            <AppText
+              variant="kucuk"
+              color={sayac > 0 ? 'solukMetin' : 'lacivert'}
+              bold
+              style={styles.ortali}
+              onPress={() => {
+                if (sayac <= 0 && !mesgul) void kodGonder();
+              }}>
+              {sayac > 0 ? `Kodu tekrar gönder (${sayac} sn)` : 'Kodu tekrar gönder'}
+            </AppText>
+          </>
+        ) : adim === 'sifre' ? (
+          <>
+            <MaterialCommunityIcons name="lock-reset" size={40} color={Palette.lacivert} style={styles.ikon} />
+            <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
+              Kod doğrulandı. Şimdi yeni şifreni belirle:
+            </AppText>
+            <AuthGirdi ikon="lock-outline" placeholder="Yeni şifre" value={sifre} onChangeText={setSifre} sifre />
+            <AuthGirdi
+              ikon="lock-check-outline"
+              placeholder="Yeni şifre (tekrar)"
+              value={sifreTekrar}
+              onChangeText={setSifreTekrar}
+              sifre
+            />
+            {hata ? (
+              <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
+                {hata}
+              </AppText>
+            ) : null}
+            <AnaButon etiket="Şifreyi kaydet" onPress={() => void sifreKaydet()} mesgul={mesgul} />
+          </>
+        ) : (
+          <View style={styles.sonucKart}>
+            <MaterialCommunityIcons name="check-circle-outline" size={44} color={Palette.yesil} />
+            <AppText variant="govde" bold style={styles.ortali}>
+              Şifren güncellendi
+            </AppText>
+            <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
+              Giriş de yapıldı — doğrudan çalışmaya devam edebilirsin.
+            </AppText>
+            <AnaButon etiket="Uygulamaya dön" onPress={() => router.replace('/')} />
+          </View>
+        )}
+      </View>
     </Screen>
   );
 }
@@ -103,7 +196,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.l,
     padding: Spacing.four,
-    marginTop: Spacing.four,
   },
   ortali: {
     textAlign: 'center',
