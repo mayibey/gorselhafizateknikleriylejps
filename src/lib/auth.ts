@@ -249,12 +249,19 @@ export async function epostaGiris(eposta: string, sifre: string): Promise<void> 
  * E-posta + şifre ile KAYIT. Supabase doğrulama e-postası gönderir (varsayılan SMTP üretimde
  * sınırlı → yayında özel SMTP). `dogrulamaGerek=true` ise kullanıcı e-postasını onaylamalı.
  */
+// Doğrulama e-postasındaki bağlantıya tıklayınca açılacak markalı "onaylandı" sayfası.
+const ONAY_DONUS = 'https://mayibey.github.io/gorselhafizateknikleriylejps/onaylandi.html';
+
 export async function epostaKayit(
   eposta: string,
   sifre: string,
 ): Promise<{ dogrulamaGerek: boolean }> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
-  const { data, error } = await supabase.auth.signUp({ email: eposta.trim(), password: sifre });
+  const { data, error } = await supabase.auth.signUp({
+    email: eposta.trim(),
+    password: sifre,
+    options: { emailRedirectTo: ONAY_DONUS },
+  });
   if (error) throw error;
   // Oturum yoksa e-posta doğrulaması bekleniyor demektir.
   return { dogrulamaGerek: !data.session };
@@ -479,7 +486,11 @@ export async function epostaDogrulanmisMi(): Promise<boolean | null> {
 /** Doğrulama e-postasını YENİDEN gönderir (kayıt onayı). */
 export async function dogrulamaMailiGonder(eposta: string): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
-  const { error } = await supabase.auth.resend({ type: 'signup', email: eposta.trim() });
+  const { error } = await supabase.auth.resend({
+    type: 'signup',
+    email: eposta.trim(),
+    options: { emailRedirectTo: ONAY_DONUS },
+  });
   if (error) throw error;
 }
 
