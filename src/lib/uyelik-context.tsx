@@ -14,6 +14,7 @@ import { AppState } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { KILIT_AKTIF, PREMIUM_URUNLERI, ucretsizKanun } from '@/constants/urunler';
+import { getCihazKimlik } from '@/lib/cihaz-kimlik';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 import { premiumOfflineGun } from '@/lib/uzak-ayar';
 
@@ -33,6 +34,8 @@ type UyelikContextDeger = {
   yukleniyor: boolean;
   /** Çevrimdışı çok uzun kalındığı için premium geçici kilitli mi (internete bağlan uyarısı). */
   offlineKilit: boolean;
+  /** Çok fazla farklı cihazda kullanım → hesap otomatik kilitli mi (destek ile açılır). */
+  cihazKilit: boolean;
   yenile: () => Promise<void>;
   kanunErisilebilir: (klasor: string | null | undefined, blok?: string | null | undefined) => boolean;
 };
@@ -71,6 +74,7 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
   const [haklar, setHaklar] = useState<Haklar>({ premium: false, liste: [] });
   const [yukleniyor, setYukleniyor] = useState(true);
   const [offlineKilit, setOfflineKilit] = useState(false);
+  const [cihazKilit, setCihazKilit] = useState(false);
 
   const yenile = async () => {
     const sonuc = await haklariOku().catch(() => ({ durum: 'offline' }) as OkumaSonuc);
@@ -82,6 +86,19 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
         await AsyncStorage.setItem(HEARTBEAT_KEY, String(Date.now()));
       } catch {
         // damga yazılamazsa sorun değil — sonraki okuma tekrar dener
+      }
+      // CİHAZ KÖTÜYE KULLANIM: yalnız premium hesaplarda denetle (paylaşım koruması). Bu cihazı
+      // kaydet + 7 günde >2 farklı cihaz kullanılıyorsa sunucu otomatik kilitler (docs/v2/12).
+      if (sonuc.haklar.premium && supabase) {
+        try {
+          const kimlik = await getCihazKimlik();
+          const { data, error } = await supabase.rpc('cihaz_dogrula', { p_cihaz_id: kimlik });
+          setCihazKilit(!error && data != null); // data = kilit anı (null → açık)
+        } catch {
+          setCihazKilit(false); // RPC hatası → kilitleme (fail-open)
+        }
+      } else {
+        setCihazKilit(false);
       }
     } else {
       // Çevrimdışı → son premium değeri KORUNUR ama heartbeat penceresi aşıldıysa KİLİTLE.
@@ -114,8 +131,8 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // Premium = aktif hak VAR ve çevrimdışı pencere aşılmadı.
-  const premium = haklar.premium && !offlineKilit;
+  // Premium = aktif hak VAR, çevrimdışı pencere aşılmadı VE cihaz kötüye kullanım kilidi yok.
+  const premium = haklar.premium && !offlineKilit && !cihazKilit;
 
   const kanunErisilebilir = (klasor: string | null | undefined, _blok?: string | null | undefined) => {
     if (!KILIT_AKTIF) return true; // ana şalter kapalı → her içerik açık
@@ -130,6 +147,7 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
         aktifHaklar: haklar.liste,
         yukleniyor,
         offlineKilit,
+        cihazKilit,
         yenile,
         kanunErisilebilir,
       }}>

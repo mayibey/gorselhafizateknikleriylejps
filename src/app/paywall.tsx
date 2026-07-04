@@ -76,7 +76,7 @@ function WebNot() {
 
 function PaywallIcerik() {
   const { hazir, kullanici } = useAuth();
-  const { aktifHaklar, offlineKilit, yenile } = useUyelik();
+  const { aktifHaklar, offlineKilit, cihazKilit, yenile } = useUyelik();
   const [islemUrun, setIslemUrun] = useState<string | null>(null); // hangi ürün işleniyor (buton kilidi)
   const [durum, setDurum] = useState<'dogrulaniyor' | null>(null);
   const [mesaj, setMesaj] = useState<{ tip: 'basari' | 'hata'; metin: string } | null>(null);
@@ -248,6 +248,24 @@ function PaywallIcerik() {
           <AppText variant="kucuk" color="anaMetin" style={styles.esnek}>
             Üyeliğin duruyor, ama uzun süredir internete bağlanmadığın için doğrulanamadı. Bir kez
             internete bağlanman yeterli — erişimin otomatik geri açılır.
+          </AppText>
+        </View>
+      ) : null}
+
+      {cihazKilit ? (
+        <View style={[styles.bilgiKart, styles.kilitKart]}>
+          <MaterialCommunityIcons name="shield-alert-outline" size={22} color={Palette.kirmizi} />
+          <AppText variant="kucuk" color="anaMetin" style={styles.esnek}>
+            Hesabın kısa sürede çok fazla farklı cihazda kullanıldığı için güvenlik amacıyla geçici
+            olarak kilitlendi. Üyeliğin geçerli — açmak için{' '}
+            <AppText
+              variant="kucuk"
+              color="lacivert"
+              bold
+              onPress={() => void Linking.openURL('mailto:iletisim@mevzujsps.com?subject=Hesap%20kilidi')}>
+              iletisim@mevzujsps.com
+            </AppText>
+            {' '}adresine yaz.
           </AppText>
         </View>
       ) : null}
@@ -459,6 +477,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.m,
     padding: Spacing.three,
+  },
+  kilitKart: {
+    backgroundColor: 'rgba(192,0,0,0.06)',
+    borderColor: Palette.kirmizi,
   },
   kart: {
     backgroundColor: Palette.kartKremi,
