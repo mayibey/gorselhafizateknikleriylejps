@@ -1,16 +1,13 @@
 /**
  * Paywall + satın alma akışı (expo-iap, DİREKT Google Play Billing).
  *
- * Model: 2 KATEGORİ (müşterek / branş) × 2 SEÇENEK (yıllık abonelik / ömür boyu tek-seferlik) = 4 ürün.
- * Akış: useIAP.fetchProducts → kullanıcı bir plana basar → requestPurchase → (native listener)
- * onPurchaseSuccess → satinAlmaDogrula(token) [Supabase Edge → Google API doğrular, hakkı SUNUCUDA yazar]
- * → finishTransaction → useUyelik.yenile(). İstemci ASLA kendini "premium" ilan etmez.
+ * TEK KAPSAM modeli (4 Tem): uygulamanın TAMAMI tek pakettir → YILLIK (abonelik) ya da
+ * ÖMÜR BOYU (tek seferlik) satın alınır; aktif yıllık sahibi FARK fiyatıyla ömür boyuna yükselir.
+ * Akış: useIAP.fetchProducts → kullanıcı plana basar → requestPurchase → onPurchaseSuccess
+ * → acknowledge → satinAlmaDogrula (Supabase Edge → Google doğrular, hakkı SUNUCUDA yazar)
+ * → useUyelik.yenile(). İstemci ASLA kendini "premium" ilan etmez.
  *
- * NOT: Gating (kilit) BİLEREK KAPALI — bu ekran erişilebilir ama hiçbir yeri kilitlemiyor
- * (kapalı testte testerlar tüm içeriğe erişsin). Kilit final yayında `kanunErisilebilir` ile açılacak.
- *
- * Web/Expo Go: expo-iap native modül → yalnız gerçek Android derlemesinde çalışır. Web'de bilgi notu,
- * mağaza bağlantısı kurulamazsa (connected=false) butonlar pasif + uyarı gösterilir.
+ * Web/Expo Go: expo-iap native modül → yalnız gerçek Android derlemesinde çalışır.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -24,68 +21,25 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   ABONELIK_URUNLERI,
-  BRANS_URUNLERI,
-  MUSTEREK_URUNLERI,
   TEK_SEFERLIK_URUNLERI,
-  URUN_BRANS_OMURBOYU,
-  URUN_BRANS_YILLIK,
-  URUN_BRANS_YUKSELTME,
-  URUN_MUSTEREK_OMURBOYU,
-  URUN_MUSTEREK_YILLIK,
-  URUN_MUSTEREK_YUKSELTME,
-  URUN_PAKET_OMURBOYU,
-  URUN_PAKET_YILLIK,
+  URUN_OMURBOYU,
+  URUN_YILLIK,
+  URUN_YUKSELTME,
 } from '@/constants/urunler';
 import { useAuth } from '@/lib/auth-context';
 import { DogrulamaReddi, satinAlmaDogrula } from '@/lib/satinalma';
 import { useUyelik } from '@/lib/uyelik-context';
 
-type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
-
-type Kategori = {
-  slug: 'paket' | 'musterek' | 'brans';
-  ad: string;
-  aciklama: string;
-  ikon: IconName;
-  yillik: string;
-  omurboyu: string;
-  /** Aktif yıllık sahibine gösterilen "ömür boyuna geç" FARK ürünü (paket hariç). */
-  yukseltme?: string;
-};
-
-const KATEGORILER: Kategori[] = [
-  {
-    slug: 'paket',
-    ad: 'Müşterek + Branş Paketi',
-    aciklama:
-      'İki kategori bir arada — ayrı ayrı almaktan yaklaşık %15 daha avantajlı. Branş tarafı ÖN SATIŞTIR: hazırlanıyor, yayınlanınca otomatik açılır.',
-    ikon: 'package-variant-closed',
-    yillik: URUN_PAKET_YILLIK,
-    omurboyu: URUN_PAKET_OMURBOYU,
-  },
-  {
-    slug: 'musterek',
-    ad: 'Müşterek Konular',
-    aciklama: 'Tüm adaylara ortak mevzuat — kanun kartları, sesli anlatım ve deneme sınavları.',
-    ikon: 'bank-outline',
-    yillik: URUN_MUSTEREK_YILLIK,
-    omurboyu: URUN_MUSTEREK_OMURBOYU,
-    yukseltme: URUN_MUSTEREK_YUKSELTME,
-  },
-  {
-    slug: 'brans',
-    ad: 'Branş Konuları',
-    aciklama:
-      'ÖN SATIŞ — Branş içerikleri HENÜZ YAYINDA DEĞİL, hazırlanıyor (müşterekin 2 katı içerik hedefiyle). Tam fiyatı müşterekin 2 katı olacak; ön satışta %50 indirimle MÜŞTEREK FİYATINA. Şimdi alırsan içerik yayınlanınca otomatik açılır.',
-    ikon: 'medal-outline',
-    yillik: URUN_BRANS_YILLIK,
-    omurboyu: URUN_BRANS_OMURBOYU,
-    yukseltme: URUN_BRANS_YUKSELTME,
-  },
-];
-
 /** Google Play abonelik yönetimi (yükseltme sonrası yıllığı iptal için). */
 const PLAY_ABONELIKLER = 'https://play.google.com/store/account/subscriptions';
+
+/** Paket kapsamı (tek kart üstünde madde madde gösterilir). */
+const KAPSAM = [
+  'Tüm kanunların görsel hafıza kartları',
+  'Sesli anlatımlar ve madde metinleri',
+  'Talim deneme sınavları + genel denemeler',
+  'Zayıf mevzi takibi ve kişisel gelişim sicili',
+];
 
 export default function PaywallScreen() {
   const router = useRouter();
@@ -97,7 +51,8 @@ export default function PaywallScreen() {
           MEVZU Premium
         </AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
-          TCK ve denemesi herkese ücretsiz. Diğer tüm mevzuata tam erişim için bir plan seç.
+          TCK ve denemesi herkese ücretsiz. Uygulamanın TAMAMINA erişim için bir plan seç —
+          tek paket, her şey dahil.
         </AppText>
       </View>
 
@@ -121,22 +76,14 @@ function WebNot() {
 
 function PaywallIcerik() {
   const { hazir, kullanici } = useAuth();
-  const { musterek, brans, aktifHaklar, yenile } = useUyelik();
+  const { aktifHaklar, yenile } = useUyelik();
   const [islemUrun, setIslemUrun] = useState<string | null>(null); // hangi ürün işleniyor (buton kilidi)
   const [durum, setDurum] = useState<'dogrulaniyor' | null>(null);
   const [mesaj, setMesaj] = useState<{ tip: 'basari' | 'hata'; metin: string } | null>(null);
 
-  // Kategori sahipliğini TİPE göre ayır: ömür boyu → tam; yalnız yıllık → yükseltme teklif edilir.
-  function kategoriDurum(urunler: string[]): { omur: boolean; yillik: boolean } {
-    let omur = false;
-    let yillik = false;
-    for (const h of aktifHaklar) {
-      if (!urunler.includes(h.urun)) continue;
-      if (h.tip === 'omurboyu') omur = true;
-      else yillik = true;
-    }
-    return { omur, yillik };
-  }
+  // Sahiplik TİPE göre: ömür boyu → tam; yalnız yıllık → yükseltme teklif edilir.
+  const sahipOmur = aktifHaklar.some((h) => h.tip === 'omurboyu');
+  const sahipYillik = !sahipOmur && aktifHaklar.some((h) => h.tip === 'abonelik');
 
   const { connected, products, subscriptions, fetchProducts, requestPurchase, finishTransaction } =
     useIAP({
@@ -146,8 +93,7 @@ function PaywallIcerik() {
       onPurchaseError: (e) => {
         setIslemUrun(null);
         setDurum(null);
-        // Kullanıcı iptal ettiyse sessiz geç.
-        if (e.code === 'user-cancelled') return;
+        if (e.code === 'user-cancelled') return; // kullanıcı vazgeçti → sessiz
         setMesaj({ tip: 'hata', metin: __DEV__ ? `Satın alma hatası: ${e.message}` : 'Satın alma tamamlanamadı.' });
       },
       onError: () => {
@@ -166,12 +112,9 @@ function PaywallIcerik() {
   async function tamamla(purchase: Purchase) {
     setDurum('dogrulaniyor');
     const token = purchase.purchaseToken ?? '';
-    // 1) ACKNOWLEDGE (isConsumable:false → sahiplik kalır, geri-yükle çalışır). Satın alma GERÇEK
-    //    (Play SDK'sından); doğrulama sonucundan BAĞIMSIZ hemen onaylanır → Google'ın 3-gün "onaylanmadı
-    //    → otomatik iade/iptal" kuralı devreye girmez. Acknowledge sahiplik VERMEZ, yalnız "aldım" bildirir
-    //    → hak yine SUNUCUDA yazılır (güvenlik korunur). Doğrulama gecikse/401 verse bile müşteri mağdur olmaz.
+    // ACKNOWLEDGE (isConsumable:false → sahiplik kalır). Doğrulama sonucundan BAĞIMSIZ hemen
+    // onaylanır → Google'ın 3-gün "onaylanmadı → iade" kuralı devreye girmez; hak yine SUNUCUDA yazılır.
     await finishTransaction({ purchase, isConsumable: false }).catch(() => {});
-    // 2) SUNUCUDA DOĞRULA + hak yaz. Başarısızsa satın alma askıda kalır (iade YOK) → "geri yükle" ile açılır.
     try {
       const sonuc = await satinAlmaDogrula(purchase.productId, token);
       if (!sonuc.ok) throw new Error('Sunucu doğrulaması başarısız.');
@@ -213,8 +156,7 @@ function PaywallIcerik() {
     setMesaj(null);
     setIslemUrun(urun);
     try {
-      // obfuscatedAccountId = kullanıcının hesap kimliği → satın alma GOOGLE tarafında da hesaba
-      // bağlanır (itiraz/iade süreçlerinde kanıt + hangi hesabın aldığı Play kayıtlarında görünür).
+      // obfuscatedAccountId = kullanıcının hesap kimliği → satın alma GOOGLE tarafında da hesaba bağlanır.
       const hesapId = kullanici?.id;
       if (abonelik) {
         const token = offerToken(urun);
@@ -246,20 +188,18 @@ function PaywallIcerik() {
     setDurum('dogrulaniyor');
     try {
       // Play'deki mevcut satın almaları çek → HER BİRİNİ SUNUCUDA yeniden doğrula (hak yaz).
-      // (restorePurchases yalnız native liste getiriyordu, sunucuya doğrulatmıyordu → hak yazılmıyordu.)
       const alinmis = await getAvailablePurchases();
       let dogrulandi = 0;
       let reddi: string | null = null; // sunucunun NET reddi (örn. "başka hesaba bağlı")
       for (const p of alinmis) {
         const token = p.purchaseToken ?? '';
         if (!token) continue;
-        // ACKNOWLEDGE her durumda (doğrulama sonucundan bağımsız) → iade/iptal önlenir; sahiplik kalır.
+        // ACKNOWLEDGE her durumda → iade/iptal önlenir; sahiplik kalır.
         await finishTransaction({ purchase: p, isConsumable: false }).catch(() => {});
         try {
           const sonuc = await satinAlmaDogrula(p.productId, token);
           if (sonuc.ok) dogrulandi++;
         } catch (e) {
-          // bu ürün doğrulanamadı → diğerlerine devam (acknowledge yapıldı, iade olmaz)
           if (e instanceof DogrulamaReddi) reddi = e.message;
         }
       }
@@ -302,30 +242,94 @@ function PaywallIcerik() {
         </View>
       ) : null}
 
-      {KATEGORILER.map((k) => {
-        // Paket kartı yalnız HİÇBİR kategoriye sahip olmayana gösterilir (çifte ödeme karışıklığı olmasın).
-        if (k.slug === 'paket' && (musterek || brans)) return null;
-        const durumK =
-          k.slug === 'paket'
-            ? { omur: false, yillik: false }
-            : kategoriDurum(k.slug === 'musterek' ? MUSTEREK_URUNLERI : BRANS_URUNLERI);
-        return (
-          <KategoriKart
-            key={k.slug}
-            kategori={k}
-            sahipOmur={durumK.omur}
-            sahipYillik={durumK.yillik}
-            yillikFiyat={fiyat(k.yillik)}
-            omurboyuFiyat={fiyat(k.omurboyu)}
-            yukseltmeFiyat={k.yukseltme ? fiyat(k.yukseltme) : '—'}
-            islemUrun={islemUrun}
-            aktif={connected}
-            onYillik={() => void satinAl(k.yillik, true)}
-            onOmurboyu={() => void satinAl(k.omurboyu, false)}
-            onYukseltme={k.yukseltme ? () => void satinAl(k.yukseltme!, false) : undefined}
-          />
-        );
-      })}
+      {/* TEK PAKET kartı — kapsam listesi + duruma göre planlar / yükseltme / tam-erişim */}
+      <View style={styles.kart}>
+        <View style={styles.kartUst}>
+          <View style={styles.kartIkon}>
+            <MaterialCommunityIcons name="crown-outline" size={24} color={Palette.altinKoyu} />
+          </View>
+          <View style={styles.esnek}>
+            <AppText variant="govde" bold>
+              Tam Erişim
+            </AppText>
+            <AppText variant="etiket" color="solukMetin">
+              Tek paket — uygulamadaki her şey dahil.
+            </AppText>
+          </View>
+          {sahipOmur || sahipYillik ? (
+            <View style={styles.sahipRozet}>
+              <MaterialCommunityIcons name="check-decagram" size={16} color={Palette.yesil} />
+              <AppText variant="etiket" color="yesil" bold>
+                {sahipOmur ? 'Aktif' : 'Yıllık aktif'}
+              </AppText>
+            </View>
+          ) : null}
+        </View>
+
+        <View style={styles.kapsam}>
+          {KAPSAM.map((k) => (
+            <View key={k} style={styles.kapsamSatir}>
+              <MaterialCommunityIcons name="check" size={16} color={Palette.yesil} />
+              <AppText variant="etiket" color="anaMetin" style={styles.esnek}>
+                {k}
+              </AppText>
+            </View>
+          ))}
+        </View>
+
+        {sahipOmur ? (
+          <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
+            Ömür boyu tam erişimin var — her şey açık.
+          </AppText>
+        ) : sahipYillik ? (
+          // Yıllık sahibi → ömür boyuna FARK fiyatıyla yükseltme teklifi.
+          <View style={styles.yukseltmeSar}>
+            <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
+              Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.
+            </AppText>
+            <PlanButon
+              baslik="Ömür boyuna yükselt"
+              fiyat={fiyat(URUN_YUKSELTME)}
+              altYazi="tek seferlik fark ödemesi"
+              vurgu
+              mesgul={islemUrun === URUN_YUKSELTME}
+              pasif={!connected || (!!islemUrun && islemUrun !== URUN_YUKSELTME)}
+              onPress={() => void satinAl(URUN_YUKSELTME, false)}
+            />
+            <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
+              Yükselttikten sonra yıllık aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
+              <AppText
+                variant="etiket"
+                color="lacivert"
+                bold
+                onPress={() => void Linking.openURL(PLAY_ABONELIKLER)}>
+                Google Play → Abonelikler
+              </AppText>
+              'den yıllığı iptal et (kalan süren zaten ömür boyu erişimin içinde).
+            </AppText>
+          </View>
+        ) : (
+          <View style={styles.planlar}>
+            <PlanButon
+              baslik="Yıllık"
+              fiyat={fiyat(URUN_YILLIK)}
+              altYazi="/yıl · yenilenir"
+              mesgul={islemUrun === URUN_YILLIK}
+              pasif={!connected || (!!islemUrun && islemUrun !== URUN_YILLIK)}
+              onPress={() => void satinAl(URUN_YILLIK, true)}
+            />
+            <PlanButon
+              baslik="Ömür boyu"
+              fiyat={fiyat(URUN_OMURBOYU)}
+              altYazi="tek seferlik · hep senin"
+              vurgu
+              mesgul={islemUrun === URUN_OMURBOYU}
+              pasif={!connected || (!!islemUrun && islemUrun !== URUN_OMURBOYU)}
+              onPress={() => void satinAl(URUN_OMURBOYU, false)}
+            />
+          </View>
+        )}
+      </View>
 
       {durum === 'dogrulaniyor' ? (
         <View style={styles.durumSatir}>
@@ -362,117 +366,11 @@ function PaywallIcerik() {
       </Pressable>
 
       <AppText variant="etiket" color="solukMetin" style={styles.yasal}>
-        Yıllık planlar bir aboneliktir ve iptal edilmezse her yıl otomatik yenilenir; dilediğin zaman
-        Google Play → Abonelikler'den iptal edebilirsin. Ömür boyu planlar tek seferlik ödemedir.
+        Yıllık plan bir aboneliktir ve iptal edilmezse her yıl otomatik yenilenir; dilediğin zaman
+        Google Play → Abonelikler'den iptal edebilirsin. Ömür boyu plan tek seferlik ödemedir.
         Ödemeler Google Play üzerinden alınır.
       </AppText>
     </>
-  );
-}
-
-function KategoriKart({
-  kategori,
-  sahipOmur,
-  sahipYillik,
-  yillikFiyat,
-  omurboyuFiyat,
-  yukseltmeFiyat,
-  islemUrun,
-  aktif,
-  onYillik,
-  onOmurboyu,
-  onYukseltme,
-}: {
-  kategori: Kategori;
-  sahipOmur: boolean;
-  sahipYillik: boolean;
-  yillikFiyat: string;
-  omurboyuFiyat: string;
-  yukseltmeFiyat: string;
-  islemUrun: string | null;
-  aktif: boolean;
-  onYillik: () => void;
-  onOmurboyu: () => void;
-  onYukseltme?: () => void;
-}) {
-  const sahip = sahipOmur || sahipYillik;
-  return (
-    <View style={styles.kart}>
-      <View style={styles.kartUst}>
-        <View style={styles.kartIkon}>
-          <MaterialCommunityIcons name={kategori.ikon} size={24} color={Palette.altinKoyu} />
-        </View>
-        <View style={styles.esnek}>
-          <AppText variant="govde" bold>
-            {kategori.ad}
-          </AppText>
-          <AppText variant="etiket" color="solukMetin">
-            {kategori.aciklama}
-          </AppText>
-        </View>
-        {sahip ? (
-          <View style={styles.sahipRozet}>
-            <MaterialCommunityIcons name="check-decagram" size={16} color={Palette.yesil} />
-            <AppText variant="etiket" color="yesil" bold>
-              {sahipOmur ? 'Aktif' : 'Yıllık aktif'}
-            </AppText>
-          </View>
-        ) : null}
-      </View>
-
-      {sahipOmur ? (
-        <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
-          Bu pakete ömür boyu tam erişimin var.
-        </AppText>
-      ) : sahipYillik ? (
-        // Yıllık sahibi → ömür boyuna FARK fiyatıyla yükseltme teklifi.
-        <View style={styles.yukseltmeSar}>
-          <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
-            Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.
-          </AppText>
-          <PlanButon
-            baslik="Ömür boyuna yükselt"
-            fiyat={yukseltmeFiyat}
-            altYazi="tek seferlik fark ödemesi"
-            vurgu
-            mesgul={islemUrun === kategori.yukseltme}
-            pasif={!aktif || !onYukseltme || (!!islemUrun && islemUrun !== kategori.yukseltme)}
-            onPress={onYukseltme ?? (() => {})}
-          />
-          <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
-            Yükselttikten sonra yıllık aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
-            <AppText
-              variant="etiket"
-              color="lacivert"
-              bold
-              onPress={() => void Linking.openURL(PLAY_ABONELIKLER)}>
-              Google Play → Abonelikler
-            </AppText>
-            'den yıllığı iptal et (kalan süren zaten ömür boyu erişimin içinde).
-          </AppText>
-        </View>
-      ) : (
-        <View style={styles.planlar}>
-          <PlanButon
-            baslik="Yıllık"
-            fiyat={yillikFiyat}
-            altYazi="/yıl · yenilenir"
-            mesgul={islemUrun === kategori.yillik}
-            pasif={!aktif || (!!islemUrun && islemUrun !== kategori.yillik)}
-            onPress={onYillik}
-          />
-          <PlanButon
-            baslik="Ömür boyu"
-            fiyat={omurboyuFiyat}
-            altYazi="tek seferlik · hep senin"
-            vurgu
-            mesgul={islemUrun === kategori.omurboyu}
-            pasif={!aktif || (!!islemUrun && islemUrun !== kategori.omurboyu)}
-            onPress={onOmurboyu}
-          />
-        </View>
-      )}
-    </View>
   );
 }
 
@@ -574,6 +472,14 @@ const styles = StyleSheet.create({
     borderColor: Palette.altin,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  kapsam: {
+    gap: Spacing.one,
+  },
+  kapsamSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
   },
   sahipRozet: {
     flexDirection: 'row',

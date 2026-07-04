@@ -65,7 +65,7 @@ export function UyelikKarti() {
             </View>
             <View style={styles.satirMetin}>
               <AppText variant="kucuk" bold color="anaMetin">
-                {bilgi ? `${bilgi.kategori} tam erişim` : h.urun}
+                {bilgi ? bilgi.ad : h.urun}
               </AppText>
               <AppText variant="etiket" color="solukMetin">
                 {alt}

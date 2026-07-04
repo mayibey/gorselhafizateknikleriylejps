@@ -18,19 +18,23 @@ const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY')!;
 const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
 const PAKET = 'app.mevzujsps.android';
 
-// Bilinen ürünler (istemci sabitiyle BİREBİR — src/constants/urunler.ts). Bilinmeyen ürün reddedilir.
+// TEK KAPSAM modeli (4 Tem): satılan 3 ürün + eski model ürünleri (geriye uyum — geçmiş
+// satın almalar premium saymaya devam eder). Bilinmeyen ürün reddedilir.
 const URUNLER = new Set([
-  'musterek_yillik', 'musterek_omurboyu',
-  'brans_yillik', 'brans_omurboyu',
-  'paket_yillik', 'paket_omurboyu', // müşterek + branş birlikte
-  'musterek_omurboyu_yukseltme', 'brans_omurboyu_yukseltme', // yıllıktan ömür boyuna FARK fiyatı
+  // satılan
+  'musterek_yillik', 'musterek_omurboyu', 'musterek_omurboyu_yukseltme',
+  // eski model (artık satılmaz ama tanınır)
+  'brans_yillik', 'brans_omurboyu', 'brans_omurboyu_yukseltme',
+  'paket_yillik', 'paket_omurboyu',
 ]);
 
-// Yükseltme ürünü şartı: o kategoride AKTİF yıllık abonelik olmalı — manipüle edilmiş bir istemci
-// fark fiyatına düz ömür boyu alamasın. (Geri yüklemede aranmaz: hak bir kez doğrulandıysa kalıcı.)
+// Yükseltme ürünü şartı: AKTİF yıllık abonelik olmalı — manipüle edilmiş bir istemci fark
+// fiyatına düz ömür boyu alamasın. (Geri yüklemede aranmaz: hak bir kez doğrulandıysa kalıcı.)
+// Tek kapsam: herhangi bir yıllık (yeni musterek_yillik ya da eski brans/paket) yeterli.
+const AKTIF_YILLIK_URUNLER = ['musterek_yillik', 'brans_yillik', 'paket_yillik'];
 const YUKSELTME_SARTI: Record<string, string[]> = {
-  musterek_omurboyu_yukseltme: ['musterek_yillik', 'paket_yillik'],
-  brans_omurboyu_yukseltme: ['brans_yillik', 'paket_yillik'],
+  musterek_omurboyu_yukseltme: AKTIF_YILLIK_URUNLER,
+  brans_omurboyu_yukseltme: AKTIF_YILLIK_URUNLER,
 };
 
 function hata(mesaj: string, kod: number, kodAdi?: string): Response {

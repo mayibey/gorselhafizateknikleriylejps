@@ -7,7 +7,6 @@ import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
-import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
@@ -46,8 +45,7 @@ function TatbikatIcerik() {
   const [durumMap, setDurumMap] = useState<Map<number, Durum>>(new Map());
   // law_id → (test → SON deneme sonucu). Her testin son skoru ayrı ("Son: X/Y").
   const [sonucMap, setSonucMap] = useState<Map<number, Map<number, SinavSonuc>>>(new Map());
-  const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
-  // Alt seçim: Talim (kanun denemeleri) / Tatbikat (Genel Deneme 1/2/3).
+  // Üst seçim: Talim (kanun denemeleri) / Tatbikat (Genel Deneme 1/2/3).
   const [mod, setMod] = useState<'talim' | 'tatbikat'>('talim');
   const { kanunErisilebilir } = useUyelik();
   const [hata, setHata] = useState(false);
@@ -112,68 +110,37 @@ function TatbikatIcerik() {
     router.push({ pathname: '/sinav', params: { genel: String(no) } });
   }
 
-  // Genel deneme müşterek karma içeriktir → müşterek hakkına bağlı (KILIT_AKTIF kapalıyken açık).
-  const genelKilitli = !kanunErisilebilir(undefined, 'müşterek');
+  // Genel deneme karma içeriktir → premium'a bağlı (KILIT_AKTIF kapalıyken açık).
+  const genelKilitli = !kanunErisilebilir(undefined);
 
   return (
     <Screen title="Talim">
-      {/* ÜST SEÇİM: Müşterek / Branş (Mevzuat ile aynı desen). */}
+      {/* TEK KAPSAM modeli (4 Tem): Müşterek/Branş sekmesi KALDIRILDI. */}
+      {/* ÜST SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). */}
       <View style={styles.blokSecici}>
-        {(['müşterek', 'brans'] as const).map((b) => {
-          const aktif = blok === b;
+        {(['talim', 'tatbikat'] as const).map((m) => {
+          const aktif = mod === m;
           return (
             <Pressable
-              key={b}
-              onPress={() => setBlok(b)}
+              key={m}
+              onPress={() => setMod(m)}
               style={[styles.blokSeg, aktif && styles.blokSegAktif]}
               accessibilityRole="button"
-              accessibilityLabel={b === 'müşterek' ? 'Müşterek sınavlar' : 'Branş sınavları'}>
+              accessibilityLabel={m === 'talim' ? 'Talim — kanun denemeleri' : 'Tatbikat — genel denemeler'}>
               <MaterialCommunityIcons
-                name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
+                name={m === 'talim' ? 'clipboard-check-outline' : 'flag-checkered'}
                 size={16}
                 color={aktif ? Palette.beyaz : Palette.solukMetin}
               />
               <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
-                {b === 'müşterek' ? 'Müşterek' : 'Branş'}
+                {m === 'talim' ? 'Talim' : 'Tatbikat'}
               </AppText>
             </Pressable>
           );
         })}
       </View>
 
-      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler) — yalnız müşterekte. */}
-      {blok === 'müşterek' ? (
-        <View style={styles.blokSecici}>
-          {(['talim', 'tatbikat'] as const).map((m) => {
-            const aktif = mod === m;
-            return (
-              <Pressable
-                key={m}
-                onPress={() => setMod(m)}
-                style={[styles.blokSeg, aktif && styles.blokSegAktif]}
-                accessibilityRole="button"
-                accessibilityLabel={m === 'talim' ? 'Talim — kanun denemeleri' : 'Tatbikat — genel denemeler'}>
-                <MaterialCommunityIcons
-                  name={m === 'talim' ? 'clipboard-check-outline' : 'flag-checkered'}
-                  size={16}
-                  color={aktif ? Palette.beyaz : Palette.solukMetin}
-                />
-                <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
-                  {m === 'talim' ? 'Talim' : 'Tatbikat'}
-                </AppText>
-              </Pressable>
-            );
-          })}
-        </View>
-      ) : null}
-
-      {blok === 'brans' ? (
-        <Yakinda
-          ikon="shield-star-outline"
-          baslik="Branş sınavları — ÖN SATIŞTA"
-          aciklama="Branşına özel deneme sınavları HENÜZ YAYINDA DEĞİL, hazırlanıyor (müşterekin 2 katı içerik hedefiyle). Ön satışta %50 indirimle müşterek fiyatına alırsın; içerik yayınlanınca otomatik açılır, fiyat tam fiyata (2 katına) çıkar. Şimdilik müşterek sınavlarıyla kendini sına."
-        />
-      ) : mod === 'tatbikat' ? (
+      {mod === 'tatbikat' ? (
         <>
           <AppText variant="kucuk" color="solukMetin">
             Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların
