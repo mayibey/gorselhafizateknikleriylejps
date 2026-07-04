@@ -136,7 +136,7 @@ export function AuthEkrani() {
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
       <DekoratifArkaplan />
       <ScrollView contentContainerStyle={styles.icerik} keyboardShouldPersistTaps="handled">
-        {/* Üst: MEVZU logosu (sol) + teğmen (sağ) — başkan tasarımı (ortadaki arma kaldırıldı) */}
+        {/* Üst: MEVZU logosu (sol, büyük) + teğmen (sağ) — ALTLARI aynı hizada. */}
         <View style={styles.ust}>
           <Image source={MEVZU_LOGO} style={styles.logo} accessibilityLabel="MEVZU logosu" />
           <KarakterFigur style={styles.karakter} />
@@ -152,7 +152,7 @@ export function AuthEkrani() {
           </View>
         ) : null}
 
-        <AppText variant="dev" bold color="lacivert">
+        <AppText variant="dev" bold color="lacivert" style={styles.baslik}>
           {kayitMi ? 'Hesap Oluştur' : 'Giriş Yap'}
         </AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
@@ -351,23 +351,26 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   ust: {
-    height: 140,
-    justifyContent: 'flex-start',
+    height: 200,
   },
   logo: {
     position: 'absolute',
     left: 0,
-    top: Spacing.two,
-    width: 96,
-    height: 96,
-    borderRadius: 20,
+    bottom: 0, // altı teğmenin altıyla aynı hizada
+    width: 140,
+    height: 140,
+    borderRadius: 26,
     borderWidth: 1,
     borderColor: Palette.kenarlik,
   },
   karakter: {
     position: 'absolute',
     right: -Spacing.three,
-    top: 0,
+    bottom: 0,
+  },
+  baslik: {
+    textAlign: 'center',
+    alignSelf: 'stretch',
   },
   dususKart: {
     flexDirection: 'row',
@@ -385,7 +388,8 @@ const styles = StyleSheet.create({
   },
   altyazi: {
     lineHeight: 20,
-    maxWidth: '64%',
+    textAlign: 'center',
+    alignSelf: 'stretch',
   },
   form: {
     gap: Spacing.two,
