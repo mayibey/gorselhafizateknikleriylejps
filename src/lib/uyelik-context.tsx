@@ -35,18 +35,18 @@ type UyelikContextDeger = {
 
 const UyelikCtx = createContext<UyelikContextDeger | null>(null);
 
-/** Sunucudan hakları oku. Oturum yoksa → ok+boş. Ağ/sorgu hatası → offline (son değer korunur). */
+/** Sunucudan hakları oku. OTURUM YOKSA (çıkış) → ok+boş (premium sıfırlanır, bayat kalmaz).
+ * Oturum VAR ama sorgu ağ hatası verirse → offline (son değer korunur, çevrimdışı çalışma sürsün). */
 async function haklariOku(): Promise<OkumaSonuc> {
   if (!supabase) return { durum: 'ok', haklar: { premium: false, liste: [] } };
-  let user;
+  // getSession YERELDEN okur (ağsız, çıkışta null döner) → "oturum yok"u "çevrimdışı"dan ayırır.
+  let oturum;
   try {
-    const r = await supabase.auth.getUser();
-    user = r.data.user;
-    if (r.error) return { durum: 'offline' }; // token yenilenemedi vb. → çevrimdışı say
+    oturum = (await supabase.auth.getSession()).data.session;
   } catch {
     return { durum: 'offline' };
   }
-  if (!user) return { durum: 'ok', haklar: { premium: false, liste: [] } };
+  if (!oturum) return { durum: 'ok', haklar: { premium: false, liste: [] } }; // çıkış → premium false
 
   const { data, error } = await supabase.from('uyelik_haklari').select('urun, tip, bitis');
   if (error) return { durum: 'offline' }; // sunucuya ulaşılamadı → son değeri koru

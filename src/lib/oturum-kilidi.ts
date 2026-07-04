@@ -11,6 +11,11 @@ import { supabase, supabaseHazir } from '@/lib/supabase';
 
 const KEY = 'jsps.oturum.kimlik';
 
+// Sahiplenme SÜRÜYOR bayrağı: girişte oturumSahiplen çalışırken (yerel↔sunucu arasında ağ
+// penceresi) eşzamanlı bir oturumGecerliMi çağrısı GEÇİCİ uyuşmazlık görüp cihazı DÜŞÜRMESİN.
+// (OAuth dönüşünde app 'active' olur → oturumGecerliMi ile SIGNED_IN sahiplenmesi yarışır.)
+let sahipleniyor = false;
+
 function rastgeleKimlik(): string {
   return (
     Math.random().toString(36).slice(2) +
@@ -19,18 +24,23 @@ function rastgeleKimlik(): string {
   );
 }
 
-/** Bu cihaz hesabı SAHİPLENİR (girişte çağrılır): yeni kimlik → cihaz + sunucu. Sessiz. */
+/** Bu cihaz hesabı SAHİPLENİR (girişte çağrılır): yeni kimlik → ÖNCE sunucu, SONRA cihaz. Sessiz.
+ * Sıra önemli: sunucu yazımı BAŞARISIZSA yerel kimliği değiştirme → sonraki kontrolde yanlış düşme olmaz. */
 export async function oturumSahiplen(): Promise<void> {
   if (!supabaseHazir || !supabase) return;
+  sahipleniyor = true;
   try {
     const { data: u } = await supabase.auth.getUser();
     const id = u.user?.id;
     if (!id) return;
     const kimlik = rastgeleKimlik();
+    const { error } = await supabase.from('profiles').update({ aktif_oturum: kimlik }).eq('id', id);
+    if (error) return; // sunucuya yazılamadı → yerel değişmesin (sahiplik sunucuyla tutarlı kalır)
     await AsyncStorage.setItem(KEY, kimlik);
-    await supabase.from('profiles').update({ aktif_oturum: kimlik }).eq('id', id);
   } catch {
     // sessiz — sonraki sahiplenme/kontrol toparlar
+  } finally {
+    sahipleniyor = false;
   }
 }
 
@@ -40,6 +50,7 @@ export async function oturumSahiplen(): Promise<void> {
  */
 export async function oturumGecerliMi(): Promise<boolean> {
   if (!supabaseHazir || !supabase) return true;
+  if (sahipleniyor) return true; // sahiplenme sürüyor → geçici uyuşmazlığı düşme sayma
   try {
     const { data: u } = await supabase.auth.getUser();
     if (!u.user) return true; // oturum yok → konu dışı

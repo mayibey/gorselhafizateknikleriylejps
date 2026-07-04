@@ -196,8 +196,9 @@ function gorselKartlari(): Card[] {
       ham.push({ ...ortak, link: Number.MAX_SAFE_INTEGER, rank: 3, panel: '', tip: 'genelozet', nums: [], tag: geri.slice(5) });
     } else {
       const m = /^m(\d+)(?:_(.*))?$/.exec(geri);
-      const no = Number(m![1]);
-      ham.push({ ...ortak, link: no, rank: 0, panel: m![2] ?? '', tip: 'normal', nums: [no], tag: '' });
+      if (!m) continue; // konvansiyon-dışı ad (ör. tck_kapak) → kart üretme; app boot ÇÖKMESİN
+      const no = Number(m[1]);
+      ham.push({ ...ortak, link: no, rank: 0, panel: m[2] ?? '', tip: 'normal', nums: [no], tag: '' });
     }
   }
   ham.sort((a, b) => a.lawId - b.lawId || a.link - b.link || a.rank - b.rank || a.panel.localeCompare(b.panel) || a.key.localeCompare(b.key));

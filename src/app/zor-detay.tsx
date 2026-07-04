@@ -75,7 +75,13 @@ export default function ZorDetayScreen() {
         data={anahtarlar}
         keyExtractor={(k) => k}
         horizontal
-        pagingEnabled
+        // pagingEnabled ÇERÇEVE genişliğine snap eder; kart genişliği (sayfaGenislik) çerçeveden
+        // dar olabildiğinden (geniş ekran) snapToInterval ile KART genişliğine snap ediyoruz →
+        // sayfalar hizalı + "N/M" göstergesi doğru.
+        snapToInterval={sayfaGenislik}
+        snapToAlignment="start"
+        disableIntervalMomentum
+        decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
         onMomentumScrollEnd={(e) =>
           setAktif(Math.round(e.nativeEvent.contentOffset.x / sayfaGenislik))
