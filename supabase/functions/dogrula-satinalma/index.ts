@@ -18,8 +18,23 @@ const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY')!;
 const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
 const PAKET = 'app.mevzujsps.android';
 
-function hata(mesaj: string, kod: number): Response {
-  return new Response(JSON.stringify({ hata: mesaj }), {
+// Bilinen ürünler (istemci sabitiyle BİREBİR — src/constants/urunler.ts). Bilinmeyen ürün reddedilir.
+const URUNLER = new Set([
+  'musterek_yillik', 'musterek_omurboyu',
+  'brans_yillik', 'brans_omurboyu',
+  'paket_yillik', 'paket_omurboyu', // müşterek + branş birlikte
+  'musterek_omurboyu_yukseltme', 'brans_omurboyu_yukseltme', // yıllıktan ömür boyuna FARK fiyatı
+]);
+
+// Yükseltme ürünü şartı: o kategoride AKTİF yıllık abonelik olmalı — manipüle edilmiş bir istemci
+// fark fiyatına düz ömür boyu alamasın. (Geri yüklemede aranmaz: hak bir kez doğrulandıysa kalıcı.)
+const YUKSELTME_SARTI: Record<string, string[]> = {
+  musterek_omurboyu_yukseltme: ['musterek_yillik', 'paket_yillik'],
+  brans_omurboyu_yukseltme: ['brans_yillik', 'paket_yillik'],
+};
+
+function hata(mesaj: string, kod: number, kodAdi?: string): Response {
+  return new Response(JSON.stringify(kodAdi ? { hata: mesaj, kod: kodAdi } : { hata: mesaj }), {
     status: kod,
     headers: { ...CORS, 'Content-Type': 'application/json' },
   });
@@ -98,6 +113,7 @@ Deno.serve(async (req) => {
   // 2) Girdi
   const { token, urun, tip } = await req.json().catch(() => ({}));
   if (!token || !urun || (tip !== 'abonelik' && tip !== 'omurboyu')) return hata('Eksik/geçersiz girdi', 400);
+  if (!URUNLER.has(urun)) return hata('Bilinmeyen ürün', 400);
 
   const admin = createClient(SUPABASE_URL, SERVICE_KEY);
   const log = async (durum: string, detay: string, ham: unknown) => {
@@ -118,7 +134,37 @@ Deno.serve(async (req) => {
       .maybeSingle();
     if (baskaSahip) {
       await log('reddedildi', 'token baska hesaba bagli', null);
-      return hata('Bu satın alma başka bir hesaba bağlı', 409);
+      return hata(
+        'Bu satın alma başka bir hesaba bağlı. Satın almayı yaptığın hesapla giriş yap.',
+        409,
+        'baska-hesap',
+      );
+    }
+
+    // Yükseltme ürünü: aktif yıllık abonelik ŞARTI (yalnız İLK doğrulamada; geri yüklemede aranmaz).
+    const sart = YUKSELTME_SARTI[urun];
+    if (sart) {
+      const { data: mevcutHak } = await admin
+        .from('uyelik_haklari')
+        .select('urun')
+        .eq('user_id', user.id)
+        .eq('satin_alma_token', token)
+        .limit(1)
+        .maybeSingle();
+      if (!mevcutHak) {
+        const { data: aktifYillik } = await admin
+          .from('uyelik_haklari')
+          .select('urun, bitis')
+          .eq('user_id', user.id)
+          .in('urun', sart)
+          .gt('bitis', new Date().toISOString())
+          .limit(1)
+          .maybeSingle();
+        if (!aktifYillik) {
+          await log('reddedildi', 'yukseltme sarti yok (aktif yillik gerekli)', null);
+          return hata('Yükseltme için aktif bir yıllık üyelik gerekir.', 412, 'yukseltme-sart');
+        }
+      }
     }
 
     const gToken = await googleToken();
