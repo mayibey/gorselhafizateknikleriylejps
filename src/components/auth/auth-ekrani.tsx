@@ -64,8 +64,8 @@ export function AuthEkrani() {
   const RIZA_UYARI = "Devam etmek için Kullanım Şartları ve Gizlilik Politikası'nı kabul et.";
 
   async function google() {
-    // Onay kutusu yalnız KAYITTA istenir; girişte "giriş yaparak kabul etmiş olursun" metni geçerli.
-    if (kayitMi && !sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
+    // Onay HER İKİ modda da zorunlu (Google girişten de hesap açılabilir → rıza kaçmasın).
+    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
     setMesaj(null);
     setMesgul(true);
     try {
@@ -82,7 +82,7 @@ export function AuthEkrani() {
       setMesaj({ tip: 'hata', metin: 'E-posta ve şifre gir.' });
       return;
     }
-    if (kayitMi && !sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
+    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
     if (kayitMi) {
       const dHata = epostaHatasi(eposta) ?? sifreHatasi(sifre);
       if (dHata) return setMesaj({ tip: 'hata', metin: dHata });
@@ -185,31 +185,18 @@ export function AuthEkrani() {
 
         {kayitMi ? <AdimGostergesi adim={1} /> : null}
 
-        {/* Şartlar onayı: yalnız KAYITTA işaretlenir (bir kez). Girişte alttaki bilgi metni geçerli. */}
-        {kayitMi ? (
-          <Pressable
-            style={styles.sartSatir}
-            onPress={() => setSartlar((s) => !s)}
-            accessibilityRole="checkbox"
-            accessibilityState={{ checked: sartlar }}
-            accessibilityLabel="Kullanım Şartları ve Gizlilik Politikası'nı kabul ediyorum">
-            <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
-              {sartlar ? <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} /> : null}
-            </View>
-            <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
-              <AppText
-                variant="etiket"
-                color="lacivert"
-                bold
-                onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
-                Kullanım Şartları ve Gizlilik Politikası
-              </AppText>
-              'nı okudum, kabul ediyorum.
-            </AppText>
-          </Pressable>
-        ) : (
-          <AppText variant="etiket" color="solukMetin" style={styles.girisRiza}>
-            Giriş yaparak{' '}
+        {/* Şartlar onayı: HER İKİ yolda da (Giriş + Kaydol) ZORUNLU kutucuk — Google girişten de
+            hesap açılabildiği için onay her butonda alınır (başkan kararı). */}
+        <Pressable
+          style={styles.sartSatir}
+          onPress={() => setSartlar((s) => !s)}
+          accessibilityRole="checkbox"
+          accessibilityState={{ checked: sartlar }}
+          accessibilityLabel="Kullanım Şartları ve Gizlilik Politikası'nı kabul ediyorum">
+          <View style={[styles.kutu, sartlar && styles.kutuDolu]}>
+            {sartlar ? <MaterialCommunityIcons name="check" size={14} color={Palette.beyaz} /> : null}
+          </View>
+          <AppText variant="etiket" color="solukMetin" style={styles.sartMetin}>
             <AppText
               variant="etiket"
               color="lacivert"
@@ -217,9 +204,9 @@ export function AuthEkrani() {
               onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
               Kullanım Şartları ve Gizlilik Politikası
             </AppText>
-            'nı kabul etmiş olursun.
+            'nı okudum, kabul ediyorum.
           </AppText>
-        )}
+        </Pressable>
 
         {/* BİRİNCİL yöntem: Google (öne çıkar). Apple Android'de yok. */}
         <View style={styles.googleSar}>
