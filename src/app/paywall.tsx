@@ -76,6 +76,16 @@ function WebNot() {
   );
 }
 
+/** Kalan süreyi "S sa D dk" (1 saatten çoksa) ya da "D dk S sn" biçiminde yazar. Bitti/negatif → null. */
+function kalanYazi(bitisISO: string, simdi: number): string | null {
+  const kalan = Math.floor((new Date(bitisISO).getTime() - simdi) / 1000);
+  if (kalan <= 0) return null;
+  const sa = Math.floor(kalan / 3600);
+  const dk = Math.floor((kalan % 3600) / 60);
+  const sn = kalan % 60;
+  return sa > 0 ? `${sa} sa ${dk} dk` : `${dk} dk ${sn} sn`;
+}
+
 function PaywallIcerik() {
   const router = useRouter();
   const { hazir, kullanici } = useAuth();
@@ -99,6 +109,15 @@ function PaywallIcerik() {
       iptal = true;
     };
   }, [kullanici]);
+
+  // İLK GİRİŞ indirimi için CANLI geri sayım — bitiş sunucudan gelir; yalnız gerekince saniyede bir tikler.
+  const [simdi, setSimdi] = useState(() => Date.now());
+  const geriSayimVar = indirim != null && indirim.kaynak === 'ilk_giris' && !!indirim.bitis;
+  useEffect(() => {
+    if (!geriSayimVar) return;
+    const t = setInterval(() => setSimdi(Date.now()), 1000);
+    return () => clearInterval(t);
+  }, [geriSayimVar]);
 
   // Sahiplik TİPE göre: ömür boyu → tam; yalnız yıllık → yükseltme teklif edilir.
   const sahipOmur = aktifHaklar.some((h) => h.tip === 'omurboyu');
@@ -180,6 +199,8 @@ function PaywallIcerik() {
   // İndirim GERÇEKTEN uygulanabilir mi (Play tarafı hazır)? Banner/etiket yalnız buna göre gösterilir
   // → "indirim vaat edip tam fiyat çekme" olmaz.
   const indirimUygulanabilir = !!(yillikIndirimliTeklif() || omurboyuIndirimliUrun());
+  // İlk giriş indiriminin kalan süresi (varsa). Süre bitince null → sayaç gizlenir.
+  const geriSayim = geriSayimVar && indirim?.bitis ? kalanYazi(indirim.bitis, simdi) : null;
 
   // Yıllık gösterilecek fiyat: indirimli teklif varsa onun fiyatı, yoksa temel fiyat.
   function yillikGosterFiyat(): string {
@@ -381,11 +402,18 @@ function PaywallIcerik() {
           <>
             {indirimUygulanabilir && indirim ? (
               <View style={styles.indirimSerit}>
-                <MaterialCommunityIcons name="ticket-percent" size={18} color={Palette.yesil} />
+                <MaterialCommunityIcons
+                  name={geriSayim ? 'clock-fast' : 'ticket-percent'}
+                  size={18}
+                  color={Palette.yesil}
+                />
                 <AppText variant="kucuk" color="yesil" bold style={styles.esnek}>
-                  %{indirim.yuzde} indirimin uygulanıyor
-                  {indirim.kaynak === 'ilk_giris' ? ' (ilk gün fırsatı)' : ''} — yıllık ve ömür boyunda
-                  geçerli.
+                  %{indirim.yuzde} indirimin uygulanıyor — yıllık ve ömür boyunda geçerli.
+                  {geriSayim
+                    ? ` İlk gün fırsatı: ${geriSayim} kaldı!`
+                    : indirim.kaynak === 'ilk_giris'
+                      ? ' (ilk gün fırsatı)'
+                      : ''}
                 </AppText>
               </View>
             ) : null}
