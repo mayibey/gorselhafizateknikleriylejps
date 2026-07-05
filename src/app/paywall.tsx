@@ -21,7 +21,6 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   ABONELIK_URUNLERI,
-  INDIRIMLI_OMURBOYU_URUNLERI,
   TEK_SEFERLIK_URUNLERI,
   URUN_OMURBOYU,
   URUN_YILLIK,
@@ -133,8 +132,8 @@ function PaywallIcerik() {
   // Mağazaya bağlanınca ürünleri çek (abonelik + tek-seferlik AYRI API).
   useEffect(() => {
     if (!connected) return;
-    // İndirimli ömür boyu SKU'ları da çek (varsa fiyatını/satın almasını gösterebilelim; yoksa sessiz).
-    void fetchProducts({ skus: [...TEK_SEFERLIK_URUNLERI, ...INDIRIMLI_OMURBOYU_URUNLERI], type: 'in-app' });
+    // Tek-seferlik ürünler (indirim ARTIK ayrı ürün değil, musterek_omurboyu'na eklenen teklifle).
+    void fetchProducts({ skus: TEK_SEFERLIK_URUNLERI, type: 'in-app' });
     void fetchProducts({ skus: ABONELIK_URUNLERI, type: 'subs' });
   }, [connected]);
 
@@ -182,14 +181,17 @@ function PaywallIcerik() {
     const hedef = indirim.yillik_offer;
     return s.subscriptionOfferDetailsAndroid?.find((o) => o.offerId === hedef);
   }
-  // Ömür boyu için indirimli ürün (durum + Play'de o SKU çekilebildiyse). Yoksa undefined.
-  function omurboyuIndirimliUrun() {
+  // Ömür boyu için indirimli TEKLİF: musterek_omurboyu ürününe eklenmiş tek-seferlik teklif (offerId
+  // = indirim20/indirim30, yıllıkla AYNI). Ayrı ürün YOK; teklif token'ıyla base ürün indirimli alınır.
+  function omurboyuIndirimliTeklif() {
     if (!indirim) return undefined;
-    return products.find((p) => p.id === indirim.omurboyu_urun);
+    const p = products.find((x) => x.id === URUN_OMURBOYU);
+    if (!p || p.platform !== 'android') return undefined;
+    return p.oneTimePurchaseOfferDetailsAndroid?.find((o) => o.offerId === indirim.yillik_offer);
   }
   // İndirim GERÇEKTEN uygulanabilir mi (Play tarafı hazır)? Banner/etiket yalnız buna göre gösterilir
   // → "indirim vaat edip tam fiyat çekme" olmaz.
-  const indirimUygulanabilir = !!(yillikIndirimliTeklif() || omurboyuIndirimliUrun());
+  const indirimUygulanabilir = !!(yillikIndirimliTeklif() || omurboyuIndirimliTeklif());
   // İlk giriş indiriminin kalan süresi (varsa). Süre bitince null → sayaç gizlenir.
   const geriSayim = geriSayimVar && indirim?.bitis ? kalanMetin(indirim.bitis, simdi) : null;
 
@@ -197,6 +199,10 @@ function PaywallIcerik() {
   function yillikGosterFiyat(): string {
     const ph = yillikIndirimliTeklif()?.pricingPhases?.pricingPhaseList?.[0]?.formattedPrice;
     return ph ?? fiyat(URUN_YILLIK);
+  }
+  // Ömür boyu gösterilecek fiyat: indirimli teklif varsa onun (indirimli) fiyatı, yoksa temel fiyat.
+  function omurboyuGosterFiyat(): string {
+    return omurboyuIndirimliTeklif()?.formattedPrice ?? fiyat(URUN_OMURBOYU);
   }
 
   // Android abonelik için offerToken (requestPurchase subs bunu ister).
@@ -234,9 +240,11 @@ function PaywallIcerik() {
           },
         });
       } else {
+        // Ömür boyu indirimi: base ürünü indirimli TEKLİF token'ıyla al (ayrı ürün yok). Token yoksa temel fiyat.
+        const tekToken = urun === URUN_OMURBOYU ? omurboyuIndirimliTeklif()?.offerToken : undefined;
         await requestPurchase({
           type: 'in-app',
-          request: { google: { skus: [urun], obfuscatedAccountId: hesapId } },
+          request: { google: { skus: [urun], obfuscatedAccountId: hesapId, offerToken: tekToken } },
         });
       }
       // Başarı/başarısızlık native listener'a (onPurchaseSuccess/onPurchaseError) düşer.
@@ -421,19 +429,16 @@ function PaywallIcerik() {
               />
               <PlanButon
                 baslik="Ömür boyu"
-                fiyat={omurboyuIndirimliUrun()?.displayPrice ?? fiyat(URUN_OMURBOYU)}
+                fiyat={omurboyuGosterFiyat()}
                 altYazi={
-                  omurboyuIndirimliUrun()
+                  omurboyuIndirimliTeklif()
                     ? `tek seferlik · %${indirim?.yuzde} indirimli`
                     : 'tek seferlik · hep senin'
                 }
                 vurgu
-                mesgul={islemUrun === (omurboyuIndirimliUrun()?.id ?? URUN_OMURBOYU)}
-                pasif={
-                  !connected ||
-                  (!!islemUrun && islemUrun !== (omurboyuIndirimliUrun()?.id ?? URUN_OMURBOYU))
-                }
-                onPress={() => void satinAl(omurboyuIndirimliUrun()?.id ?? URUN_OMURBOYU, false)}
+                mesgul={islemUrun === URUN_OMURBOYU}
+                pasif={!connected || (!!islemUrun && islemUrun !== URUN_OMURBOYU)}
+                onPress={() => void satinAl(URUN_OMURBOYU, false)}
               />
             </View>
           </>
