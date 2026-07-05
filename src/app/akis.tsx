@@ -38,6 +38,8 @@ import {
   recordReview,
 } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
+import { LAW_KLASOR } from '@/db/seed';
+import { useUyelik } from '@/lib/uyelik-context';
 import { getSinavSorulari, type KartSoru, sinavVarMi, teyitSorulari } from '@/lib/sinav';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
@@ -71,6 +73,14 @@ export default function AkisScreen() {
   const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
   const zayifModu = mod === 'zayif'; // geri-bes oturumu (zayıf mevzi kuyruğu)
+  // GÜVENLİK KAPISI (defense-in-depth): belirli bir kanun açılıyorsa (lawId), erişim yoksa ASLA gösterme
+  // → paywall. Aramadan/sınavdan premium içerik bedava açılması bulgusuna karşı; tüm giriş noktalarını
+  // kapatır (patika zaten kendi kontrol ediyor; bu ikinci kalkan).
+  const { kanunErisilebilir } = useUyelik();
+  const kanunKilitli = kanunModu && !kanunErisilebilir(LAW_KLASOR[Number(lawId)]);
+  useEffect(() => {
+    if (kanunKilitli) router.replace('/paywall');
+  }, [kanunKilitli, router]);
   // Patika/kanun/zayıf modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
   const tekKanun = bolumModu || kanunModu || zayifModu;
   // Öğrenme modu (kanun/bölüm) → akış bitince "aktif hatırlama" mini-quiz çıkar (zayıf'ta YOK).
@@ -327,6 +337,15 @@ export default function AkisScreen() {
     }
     return { w: Math.round(bw), h: Math.round(bh) };
   }, [oran, alan.w, alan.h]);
+
+  // Kilitli kanun → içerik gösterme (yukarıdaki effect paywall'a yönlendiriyor). Yanıp sönmeyi önler.
+  if (kanunKilitli) {
+    return (
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+        <Loading />
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>

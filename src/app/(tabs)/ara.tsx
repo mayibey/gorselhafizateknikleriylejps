@@ -36,6 +36,7 @@ import {
 } from '@/lib/indirme';
 import { useBrans } from '@/lib/brans-context';
 import { getSonAramalar, sonAramaEkle, sonAramalariTemizle } from '@/lib/son-aramalar';
+import { useUyelik } from '@/lib/uyelik-context';
 
 // Sekme değişiminde / sonuca gidip dönünce SON ARAMA hatırlansın. Modül seviyesinde.
 let sonSorgu = '';
@@ -63,6 +64,7 @@ const SIK_ACILAN: { id: number; kisa: string; fb: string }[] = [
 export default function AraScreen() {
   const router = useRouter();
   const { brans } = useBrans();
+  const { kanunErisilebilir } = useUyelik();
   const [sorgu, setSorgu] = useState(sonSorgu);
   const [aktifCip, setAktifCip] = useState<CipKey | null>(null);
   const [cards, setCards] = useState<CardWithLaw[] | null>(null);
@@ -162,8 +164,13 @@ export default function AraScreen() {
   }
 
   function ac(s: AramaSonuc) {
-    // Kanun indirilmemişse → boş/bozuk kart yerine ÖNCE indir (yüzdeli), sonra karta git (tester #5).
     const klasor = LAW_KLASOR[s.lawId];
+    // PREMIUM KİLİDİ (KRİTİK): erişilebilir değilse karta/indirmeye HİÇ gitme → paywall'a yönlendir.
+    // (Aramadan premium içerik bedava açılması + "indir ve aç" ile kilit atlanması bulgusu.)
+    if (!kanunErisilebilir(klasor)) {
+      router.push('/paywall');
+      return;
+    }
     if (klasor && indirmeDestekli && ICERIK_TABANI && !kanunIndirilmisMi(klasor)) {
       Alert.alert(
         'Kanun indirilmemiş',
