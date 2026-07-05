@@ -29,6 +29,7 @@ import {
   kanunIndirilmisMi,
 } from '@/lib/indirme';
 import { useUyelik } from '@/lib/uyelik-context';
+import { tckGirildiIsaretle } from '@/lib/indirim-hatirlatma';
 import {
   getBolumler,
   getCardsByBolum,
@@ -187,6 +188,10 @@ export default function PatikaScreen() {
   const { brans } = useBrans();
   const { kanunErisilebilir } = useUyelik();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
+  // Çalışmaya (TCK/patika) girildi → indirim hatırlatma tetiğini aç (Karargah'a dönünce modal çıkar).
+  useEffect(() => {
+    void tckGirildiIsaretle();
+  }, []);
   // Kanunun bloğu (müşterek/branş) — kilit kontrolü için. null = henüz bilinmiyor.
   const [lawBlok, setLawBlok] = useState<string | null>(null);
   // null = yükleniyor; bolumsuz = kanunun bölümü yok (tek düğüm).

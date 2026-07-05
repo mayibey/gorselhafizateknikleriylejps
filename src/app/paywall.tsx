@@ -28,6 +28,7 @@ import {
   URUN_YUKSELTME,
 } from '@/constants/urunler';
 import { useAuth } from '@/lib/auth-context';
+import { kalanMetin } from '@/lib/geri-sayim';
 import { type IndirimDurumu, indirimDurumuOku } from '@/lib/indirim';
 import { DogrulamaReddi, satinAlmaDogrula } from '@/lib/satinalma';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -74,18 +75,6 @@ function WebNot() {
       </AppText>
     </View>
   );
-}
-
-/** Kalan süreyi "S sa D dk" (1 saatten çoksa) ya da "D dk S sn" biçiminde yazar. Bitti/negatif/parse edilemez → null. */
-function kalanYazi(bitisISO: string, simdi: number): string | null {
-  const hedef = new Date(bitisISO).getTime();
-  if (Number.isNaN(hedef)) return null; // bitiş parse edilemezse sayacı GİZLE ("NaN dk NaN sn" olmasın)
-  const kalan = Math.floor((hedef - simdi) / 1000);
-  if (kalan <= 0) return null;
-  const sa = Math.floor(kalan / 3600);
-  const dk = Math.floor((kalan % 3600) / 60);
-  const sn = kalan % 60;
-  return sa > 0 ? `${sa} sa ${dk} dk` : `${dk} dk ${sn} sn`;
 }
 
 function PaywallIcerik() {
@@ -202,7 +191,7 @@ function PaywallIcerik() {
   // → "indirim vaat edip tam fiyat çekme" olmaz.
   const indirimUygulanabilir = !!(yillikIndirimliTeklif() || omurboyuIndirimliUrun());
   // İlk giriş indiriminin kalan süresi (varsa). Süre bitince null → sayaç gizlenir.
-  const geriSayim = geriSayimVar && indirim?.bitis ? kalanYazi(indirim.bitis, simdi) : null;
+  const geriSayim = geriSayimVar && indirim?.bitis ? kalanMetin(indirim.bitis, simdi) : null;
 
   // Yıllık gösterilecek fiyat: indirimli teklif varsa onun fiyatı, yoksa temel fiyat.
   function yillikGosterFiyat(): string {

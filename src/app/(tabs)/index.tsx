@@ -26,6 +26,7 @@ import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 import { UyelikTaci } from '@/components/premium/uyelik-rozeti';
+import { IndirimHatirlatma } from '@/components/premium/indirim-hatirlatma';
 
 // Metalik-ish altın gradyan (açık → ana → koyu altın). Play diski + geri besleme diski.
 const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as const;
@@ -248,6 +249,9 @@ export default function KarargahScreen() {
         </View>
       }>
       {/* EN ÜST — JSPS sınavına canlı geri sayım (tarih SINAV_TARIHI sabitinde). */}
+      {/* İlk gün indirimi hatırlatma modalı (koşullar tutunca kendi çıkar). */}
+      <IndirimHatirlatma />
+
       <SinavGeriSayim />
 
       {/* Header altı açıklama. (Branş/rütbe artık YALNIZ Evsaf → Ayarlar'dan değişir;
