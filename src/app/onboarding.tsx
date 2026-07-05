@@ -24,9 +24,10 @@ import { type Rutbe, RUTBELER } from '@/lib/rutbe-store';
 import { useRutbe } from '@/lib/rutbe-context';
 
 /**
- * İlk açılış akışı: Tanıtım → ZORUNLU giriş/kayıt (AuthEkrani) → PROFİL (TEK adım: ad/soyad/
- * telefon/doğum/cinsiyet + branş/rütbe) → ana ekran. İlk girişte her şey BİR KEZ kurulur;
- * sonradan Evsaf → Ayarlar'dan değiştirilir. Branş/rütbe artık profilin içinde (ayrı adım yok).
+ * İlk açılış akışı: ZORUNLU giriş/kayıt (AuthEkrani) → PROFİL (TEK adım: ad/soyad/telefon/doğum/
+ * cinsiyet + branş/rütbe) → (sonra _layout Tanıtım turunu gösterir) → ana ekran. İlk girişte her
+ * şey BİR KEZ kurulur; sonradan Evsaf → Ayarlar'dan değiştirilir. Branş/rütbe profilin içinde.
+ * NOT: Tanıtım turu artık burada DEĞİL, _layout kök kapısında ve profil/görev BİTİNCE (son adım).
  */
 export default function OnboardingScreen() {
   const { brans } = useBrans();

@@ -167,10 +167,10 @@ function RootNavigator() {
   const eksik =
     girisGerek || profilTamam === false || (!!kullanici && profilTamam === true && gorevEksik);
 
-  // Guard: giriş/profil/branş/rütbe eksikse onboarding'e götür.
+  // Guard: giriş/profil/branş/rütbe eksikse onboarding'e götür. (Tur beklenmez — ÖNCE profil/görev
+  // tamamlanır, tur en SONA alındı; bkz. aşağıdaki "EN ÜST KAPI".)
   useEffect(() => {
-    // Uygulama turu açıkken (Stack render edilmiyor) yönlendirme yapma — yalnız tur bitince.
-    if (yukleniyor || profilBekle || tanitimTamam !== true) return;
+    if (yukleniyor || profilBekle) return;
     // Girişsiz de erişilebilen hesap-kurtarma/giriş rotaları — guard bunları GERİ ATMASIN
     // (şifremi-unuttum'a basınca onboarding'e fırlatma bulgusu).
     if (['sifre-yenile', 'sifremi-unuttum', 'telefon-giris'].includes(segments[0] ?? '')) return;
@@ -184,9 +184,10 @@ function RootNavigator() {
     return bildirimTiklamaDinle(() => router.replace('/'));
   }, [router]);
 
-  // EN ÜST KAPI: uygulama turu tamamlanmadıysa (yeni VEYA mevcut kullanıcı), her şeyden önce
-  // turu göster. Tamamlanınca kalıcı işaretlenir → bir daha çıkmaz. Yükleme bitene kadar bekle.
-  if (tanitimTamam === false && !yukleniyor) {
+  // SON ADIM (uygulamaya girmeden ÖNCE): profil/görev TAMAMLANDIYSA (!eksik) ve tur görülmediyse
+  // uygulama turunu göster. Böylece sıra: giriş → profil → görev → TUR → ana ekran. Tamamlanınca
+  // kalıcı işaretlenir → bir daha çıkmaz. (Giriş/profil eksikken tur AÇILMAZ; önce onboarding.)
+  if (tanitimTamam === false && !eksik && !profilBekle && !yukleniyor) {
     return (
       <UygulamaTuru
         onTamam={() => {

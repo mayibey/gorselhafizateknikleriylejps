@@ -100,7 +100,7 @@ export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
           </AppText>
           <AppText variant="kucuk" color="beyaz" style={[styles.ortali, styles.altyazi, styles.solukBeyaz]}>
             Kuru metni ezberleme; karikatür kartlar, deneme sınavları ve ödül-sicil temasıyla
-            JSPS'e hazırlan.
+            JSPS'ye hazırlan.
           </AppText>
           <AppText variant="etiket" color="beyaz" style={[styles.ortali, styles.disclaimer, styles.solukBeyaz]}>
             {RESMI_BAGLANTI_YOK}
