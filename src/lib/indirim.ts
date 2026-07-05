@@ -6,7 +6,20 @@
  */
 import { supabase } from '@/lib/supabase';
 
-export type IndirimHak = { offer_id: string; yuzde: number };
+/**
+ * Kullanıcının GÜNCEL indirim durumu (sunucu hesaplar; ÜST ÜSTE BİNMEZ — tek, en yüksek):
+ *  kaynak='kod' (SUEM2020OZEL30 → %30) > kaynak='ilk_giris' (hesap açılışından 24 saat → %20) > yok.
+ *  yillik_offer  = YILLIK için Play abonelik teklifinin offerId'si.
+ *  omurboyu_urun = ÖMÜR BOYU için indirimli Play ürününün SKU'su.
+ *  bitis         = (yalnız ilk giriş) indirimin biteceği an (ISO).
+ */
+export type IndirimDurumu = {
+  yuzde: number;
+  kaynak: 'kod' | 'ilk_giris';
+  yillik_offer: string;
+  omurboyu_urun: string;
+  bitis?: string;
+};
 
 const HATA_MESAJ: Record<string, string> = {
   oturum: 'Önce giriş yapmalısın.',
@@ -32,13 +45,13 @@ export async function indirimKoduKullan(kod: string): Promise<IndirimSonuc> {
   }
 }
 
-/** Kullanıcının güncel indirim hakkı (yoksa null). RLS ile yalnız kendi satırını okur. */
-export async function indirimHakkiOku(): Promise<IndirimHak | null> {
+/** Kullanıcının güncel indirim durumu (yoksa null). Sunucu tek/en yüksek indirimi döner. */
+export async function indirimDurumuOku(): Promise<IndirimDurumu | null> {
   if (!supabase) return null;
   try {
-    const { data, error } = await supabase.from('indirim_hak').select('offer_id, yuzde').maybeSingle();
+    const { data, error } = await supabase.rpc('indirim_durumu');
     if (error || !data) return null;
-    return data as IndirimHak;
+    return data as IndirimDurumu;
   } catch {
     return null;
   }

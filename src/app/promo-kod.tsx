@@ -77,7 +77,7 @@ export default function PromoKodScreen() {
           </AppText>
           <AppText variant="govde" color="solukMetin" style={styles.ortala}>
             {indirimMi
-              ? 'Yıllık üyeliği seçtiğinde indirim fiyatına yansıyacak.'
+              ? 'Yıllık ya da ömür boyu üyeliği seçtiğinde indirim fiyatına yansıyacak.'
               : 'Erişimin açıldı. İyi çalışmalar!'}
           </AppText>
           <Pressable
@@ -98,7 +98,7 @@ export default function PromoKodScreen() {
     <Screen title="Promosyon Kodu" onGeri={() => router.back()}>
       <AppText variant="govde" color="solukMetin">
         Elindeki promosyon veya indirim kodunu gir. Bedava erişim kodları anında açar; indirim
-        kodları yıllık üyeliğin fiyatına yansır.
+        kodları üyelik fiyatına yansır.
       </AppText>
 
       <TextInput

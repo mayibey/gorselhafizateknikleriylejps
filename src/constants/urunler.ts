@@ -33,6 +33,16 @@ export const PROMO_URUNLERI = [URUN_PROMO_YILLIK, URUN_PROMO_OMURBOYU];
  */
 export const INDIRIM_OFFER_ID = 'indirim20';
 
+/**
+ * İNDİRİMLİ ÖMÜR BOYU ürünleri — Google tek seferlik üründe "kodla % teklif" desteklemez, o yüzden
+ * indirim ömür boyunda AYRI ürünle uygulanır: eligible kullanıcıya app bu ucuz SKU'yu satın aldırır.
+ * Play'de %80/%70 fiyatla açılır (ödeme profili sonrası). Sunucu (indirim_durumu.omurboyu_urun) hangi
+ * SKU'nun kullanılacağını söyler. dogrula-satinalma bu SKU'ları omurboyu premium sayar.
+ */
+export const URUN_OMURBOYU_I20 = 'musterek_omurboyu_i20'; // %20 indirimli ömür boyu
+export const URUN_OMURBOYU_I30 = 'musterek_omurboyu_i30'; // %30 indirimli ömür boyu
+export const INDIRIMLI_OMURBOYU_URUNLERI = [URUN_OMURBOYU_I20, URUN_OMURBOYU_I30];
+
 // Eski model ürünleri (artık SATILMAZ; geçmiş satın alma/geri yükleme premium saysın diye tanınır)
 export const ESKI_PREMIUM_URUNLERI = [
   'brans_yillik',
@@ -42,11 +52,12 @@ export const ESKI_PREMIUM_URUNLERI = [
   'paket_omurboyu',
 ];
 
-/** uyelik_haklari'nda premium sayılan TÜM ürünler (satılan + promo + eski). */
+/** uyelik_haklari'nda premium sayılan TÜM ürünler (satılan + indirimli ömür boyu + promo + eski). */
 export const PREMIUM_URUNLERI = [
   URUN_YILLIK,
   URUN_OMURBOYU,
   URUN_YUKSELTME,
+  ...INDIRIMLI_OMURBOYU_URUNLERI,
   ...PROMO_URUNLERI,
   ...ESKI_PREMIUM_URUNLERI,
 ];

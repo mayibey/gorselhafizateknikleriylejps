@@ -23,6 +23,8 @@ const PAKET = 'app.mevzujsps.android';
 const URUNLER = new Set([
   // satılan
   'musterek_yillik', 'musterek_omurboyu', 'musterek_omurboyu_yukseltme',
+  // indirimli ömür boyu (ayrı Play ürünü; kod/ilk-giriş indirimiyle bu SKU satın alınır — tip: omurboyu)
+  'musterek_omurboyu_i20', 'musterek_omurboyu_i30',
   // eski model (artık satılmaz ama tanınır)
   'brans_yillik', 'brans_omurboyu', 'brans_omurboyu_yukseltme',
   'paket_yillik', 'paket_omurboyu',

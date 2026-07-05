@@ -21,13 +21,14 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   ABONELIK_URUNLERI,
+  INDIRIMLI_OMURBOYU_URUNLERI,
   TEK_SEFERLIK_URUNLERI,
   URUN_OMURBOYU,
   URUN_YILLIK,
   URUN_YUKSELTME,
 } from '@/constants/urunler';
 import { useAuth } from '@/lib/auth-context';
-import { type IndirimHak, indirimHakkiOku } from '@/lib/indirim';
+import { type IndirimDurumu, indirimDurumuOku } from '@/lib/indirim';
 import { DogrulamaReddi, satinAlmaDogrula } from '@/lib/satinalma';
 import { useUyelik } from '@/lib/uyelik-context';
 
@@ -82,17 +83,17 @@ function PaywallIcerik() {
   const [islemUrun, setIslemUrun] = useState<string | null>(null); // hangi ürün işleniyor (buton kilidi)
   const [durum, setDurum] = useState<'dogrulaniyor' | null>(null);
   const [mesaj, setMesaj] = useState<{ tip: 'basari' | 'hata'; metin: string } | null>(null);
-  const [indirim, setIndirim] = useState<IndirimHak | null>(null); // yıllık indirim hakkı (kod ile kazanılır)
+  const [indirim, setIndirim] = useState<IndirimDurumu | null>(null); // güncel indirim (kod %30 / ilk giriş %20)
 
-  // Kullanıcının yıllık indirim hakkını oku (varsa yıllık satın almada indirimli teklif kullanılır).
+  // Kullanıcının güncel indirim durumunu oku (sunucu tek/en yüksek indirimi verir; üst üste binmez).
   useEffect(() => {
     if (!kullanici) {
       setIndirim(null);
       return;
     }
     let iptal = false;
-    void indirimHakkiOku().then((h) => {
-      if (!iptal) setIndirim(h);
+    void indirimDurumuOku().then((d) => {
+      if (!iptal) setIndirim(d);
     });
     return () => {
       iptal = true;
@@ -122,7 +123,8 @@ function PaywallIcerik() {
   // Mağazaya bağlanınca ürünleri çek (abonelik + tek-seferlik AYRI API).
   useEffect(() => {
     if (!connected) return;
-    void fetchProducts({ skus: TEK_SEFERLIK_URUNLERI, type: 'in-app' });
+    // İndirimli ömür boyu SKU'ları da çek (varsa fiyatını/satın almasını gösterebilelim; yoksa sessiz).
+    void fetchProducts({ skus: [...TEK_SEFERLIK_URUNLERI, ...INDIRIMLI_OMURBOYU_URUNLERI], type: 'in-app' });
     void fetchProducts({ skus: ABONELIK_URUNLERI, type: 'subs' });
   }, [connected]);
 
@@ -162,6 +164,29 @@ function PaywallIcerik() {
     return p?.displayPrice ?? '—';
   }
 
+  // Yıllık için indirimli teklif (durum + Play'de o offerId varsa). Yoksa undefined.
+  function yillikIndirimliTeklif() {
+    if (!indirim) return undefined;
+    const s = subscriptions.find((x) => x.id === URUN_YILLIK);
+    if (!s || s.platform !== 'android') return undefined;
+    const hedef = indirim.yillik_offer;
+    return s.subscriptionOfferDetailsAndroid?.find((o) => o.offerId === hedef);
+  }
+  // Ömür boyu için indirimli ürün (durum + Play'de o SKU çekilebildiyse). Yoksa undefined.
+  function omurboyuIndirimliUrun() {
+    if (!indirim) return undefined;
+    return products.find((p) => p.id === indirim.omurboyu_urun);
+  }
+  // İndirim GERÇEKTEN uygulanabilir mi (Play tarafı hazır)? Banner/etiket yalnız buna göre gösterilir
+  // → "indirim vaat edip tam fiyat çekme" olmaz.
+  const indirimUygulanabilir = !!(yillikIndirimliTeklif() || omurboyuIndirimliUrun());
+
+  // Yıllık gösterilecek fiyat: indirimli teklif varsa onun fiyatı, yoksa temel fiyat.
+  function yillikGosterFiyat(): string {
+    const ph = yillikIndirimliTeklif()?.pricingPhases?.pricingPhaseList?.[0]?.formattedPrice;
+    return ph ?? fiyat(URUN_YILLIK);
+  }
+
   // Android abonelik için offerToken (requestPurchase subs bunu ister).
   // İndirim hakkı olan kullanıcıya (YALNIZ yıllık) indirimli teklif; yoksa TEMEL teklif seçilir.
   // (Eskiden hep [0] seçiliyordu — teklif eklenince yanlışlıkla herkese indirim gidebilirdi.)
@@ -169,8 +194,8 @@ function PaywallIcerik() {
     const s = subscriptions.find((x) => x.id === urun);
     if (!s || s.platform !== 'android') return undefined;
     const teklifler = s.subscriptionOfferDetailsAndroid ?? [];
-    if (indirim && urun === URUN_YILLIK) {
-      const indirimli = teklifler.find((o) => o.offerId === indirim.offer_id);
+    if (urun === URUN_YILLIK) {
+      const indirimli = yillikIndirimliTeklif();
       if (indirimli) return indirimli.offerToken;
     }
     const temel = teklifler.find((o) => !o.offerId) ?? teklifler[0];
@@ -354,31 +379,42 @@ function PaywallIcerik() {
           </View>
         ) : (
           <>
-            {indirim ? (
+            {indirimUygulanabilir && indirim ? (
               <View style={styles.indirimSerit}>
                 <MaterialCommunityIcons name="ticket-percent" size={18} color={Palette.yesil} />
                 <AppText variant="kucuk" color="yesil" bold style={styles.esnek}>
-                  %{indirim.yuzde} indirimin hazır — yıllık üyelikte uygulanır.
+                  %{indirim.yuzde} indirimin uygulanıyor
+                  {indirim.kaynak === 'ilk_giris' ? ' (ilk gün fırsatı)' : ''} — yıllık ve ömür boyunda
+                  geçerli.
                 </AppText>
               </View>
             ) : null}
             <View style={styles.planlar}>
               <PlanButon
                 baslik="Yıllık"
-                fiyat={fiyat(URUN_YILLIK)}
-                altYazi={indirim ? `/yıl · %${indirim.yuzde} indirimli` : '/yıl · yenilenir'}
+                fiyat={yillikGosterFiyat()}
+                altYazi={
+                  yillikIndirimliTeklif() ? `/yıl · %${indirim?.yuzde} indirimli` : '/yıl · yenilenir'
+                }
                 mesgul={islemUrun === URUN_YILLIK}
                 pasif={!connected || (!!islemUrun && islemUrun !== URUN_YILLIK)}
                 onPress={() => void satinAl(URUN_YILLIK, true)}
               />
               <PlanButon
                 baslik="Ömür boyu"
-                fiyat={fiyat(URUN_OMURBOYU)}
-                altYazi="tek seferlik · hep senin"
+                fiyat={omurboyuIndirimliUrun()?.displayPrice ?? fiyat(URUN_OMURBOYU)}
+                altYazi={
+                  omurboyuIndirimliUrun()
+                    ? `tek seferlik · %${indirim?.yuzde} indirimli`
+                    : 'tek seferlik · hep senin'
+                }
                 vurgu
-                mesgul={islemUrun === URUN_OMURBOYU}
-                pasif={!connected || (!!islemUrun && islemUrun !== URUN_OMURBOYU)}
-                onPress={() => void satinAl(URUN_OMURBOYU, false)}
+                mesgul={islemUrun === (omurboyuIndirimliUrun()?.id ?? URUN_OMURBOYU)}
+                pasif={
+                  !connected ||
+                  (!!islemUrun && islemUrun !== (omurboyuIndirimliUrun()?.id ?? URUN_OMURBOYU))
+                }
+                onPress={() => void satinAl(omurboyuIndirimliUrun()?.id ?? URUN_OMURBOYU, false)}
               />
             </View>
           </>
