@@ -7,6 +7,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { useAuth } from '@/lib/auth-context';
+import { indirimKoduKullan } from '@/lib/indirim';
 import { promoKodKullan } from '@/lib/promo';
 import { useUyelik } from '@/lib/uyelik-context';
 
@@ -19,20 +20,29 @@ export default function PromoKodScreen() {
   const [kod, setKod] = useState('');
   const [gonderiliyor, setGonderiliyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
-  const [basarili, setBasarili] = useState(false);
+  // Başarı iki türlü: 'acildi' = bedava tam erişim; 'indirim' = yıllıkta %yuzde indirim tanımlandı.
+  const [basari, setBasari] = useState<{ tip: 'acildi' } | { tip: 'indirim'; yuzde: number } | null>(null);
 
   async function kullan() {
     const temiz = kod.trim().toUpperCase();
     if (!temiz || gonderiliyor) return;
     setGonderiliyor(true);
     setHata(null);
-    const sonuc = await promoKodKullan(temiz);
-    if (sonuc.ok) {
+    // Önce BEDAVA erişim kodu dene; olmazsa İNDİRİM kodu dene (tek kutu, iki tür kod).
+    const bedava = await promoKodKullan(temiz);
+    if (bedava.ok) {
       await yenile(); // premium hemen açılsın
-      setBasarili(true);
-    } else {
-      setHata(sonuc.mesaj);
+      setBasari({ tip: 'acildi' });
+      setGonderiliyor(false);
+      return;
     }
+    const indirim = await indirimKoduKullan(temiz);
+    if (indirim.ok) {
+      setBasari({ tip: 'indirim', yuzde: indirim.yuzde });
+      setGonderiliyor(false);
+      return;
+    }
+    setHata(bedava.mesaj); // ikisi de olmadı → geçersiz kod mesajı
     setGonderiliyor(false);
   }
 
@@ -55,21 +65,26 @@ export default function PromoKodScreen() {
     );
   }
 
-  // Başarı ekranı.
-  if (basarili) {
+  // Başarı ekranı — bedava erişim mi, indirim mi?
+  if (basari) {
+    const indirimMi = basari.tip === 'indirim';
     return (
       <Screen title="Promosyon Kodu" onGeri={() => router.back()}>
         <View style={styles.merkez}>
           <MaterialCommunityIcons name="check-decagram" size={64} color={Palette.yesil} />
           <AppText variant="baslik" bold style={styles.ortala}>
-            Kod kabul edildi 🎖️
+            {indirimMi ? `%${basari.yuzde} indirim tanımlandı` : 'Kod kabul edildi 🎖️'}
           </AppText>
           <AppText variant="govde" color="solukMetin" style={styles.ortala}>
-            Erişimin açıldı. İyi çalışmalar!
+            {indirimMi
+              ? 'Yıllık üyeliği seçtiğinde indirim fiyatına yansıyacak.'
+              : 'Erişimin açıldı. İyi çalışmalar!'}
           </AppText>
-          <Pressable style={styles.buton} onPress={() => router.back()}>
+          <Pressable
+            style={styles.buton}
+            onPress={() => (indirimMi ? router.replace('/paywall') : router.back())}>
             <AppText variant="govde" color="beyaz" bold>
-              Tamam
+              {indirimMi ? 'Yıllık Planı Gör' : 'Tamam'}
             </AppText>
           </Pressable>
         </View>
@@ -82,7 +97,8 @@ export default function PromoKodScreen() {
   return (
     <Screen title="Promosyon Kodu" onGeri={() => router.back()}>
       <AppText variant="govde" color="solukMetin">
-        Elindeki promosyon kodunu gir, erişimin anında açılsın.
+        Elindeki promosyon veya indirim kodunu gir. Bedava erişim kodları anında açar; indirim
+        kodları yıllık üyeliğin fiyatına yansır.
       </AppText>
 
       <TextInput

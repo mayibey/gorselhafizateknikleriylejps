@@ -24,6 +24,15 @@ export const URUN_PROMO_YILLIK = 'promo_yillik'; // abonelik — süreli (kod ta
 export const URUN_PROMO_OMURBOYU = 'promo_omurboyu'; // omurboyu — süresiz
 export const PROMO_URUNLERI = [URUN_PROMO_YILLIK, URUN_PROMO_OMURBOYU];
 
+/**
+ * İNDİRİM KODU — YILLIK üyelikte gerçek %X indirim (bedava DEĞİL; kişi indirimli öder, para Google'dan).
+ * Play Console'da yıllık base plana bu offerId ile bir "promosyon teklifi" (%X, uygunluk=developer
+ * determined) açılır. İndirim kodu kullanan kullanıcıya satın almada TEMEL teklif yerine bu teklif
+ * gösterilir → Google az tahsil eder. Sunucudaki indirim_kodlari.offer_id bununla EŞLEŞMELİ.
+ * NOT: Play tarafı ödeme profili aktif olunca kurulur/test edilir; buraya kadar hazır.
+ */
+export const INDIRIM_OFFER_ID = 'indirim20';
+
 // Eski model ürünleri (artık SATILMAZ; geçmiş satın alma/geri yükleme premium saysın diye tanınır)
 export const ESKI_PREMIUM_URUNLERI = [
   'brans_yillik',

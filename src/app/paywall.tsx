@@ -27,6 +27,7 @@ import {
   URUN_YUKSELTME,
 } from '@/constants/urunler';
 import { useAuth } from '@/lib/auth-context';
+import { type IndirimHak, indirimHakkiOku } from '@/lib/indirim';
 import { DogrulamaReddi, satinAlmaDogrula } from '@/lib/satinalma';
 import { useUyelik } from '@/lib/uyelik-context';
 
@@ -81,6 +82,22 @@ function PaywallIcerik() {
   const [islemUrun, setIslemUrun] = useState<string | null>(null); // hangi ürün işleniyor (buton kilidi)
   const [durum, setDurum] = useState<'dogrulaniyor' | null>(null);
   const [mesaj, setMesaj] = useState<{ tip: 'basari' | 'hata'; metin: string } | null>(null);
+  const [indirim, setIndirim] = useState<IndirimHak | null>(null); // yıllık indirim hakkı (kod ile kazanılır)
+
+  // Kullanıcının yıllık indirim hakkını oku (varsa yıllık satın almada indirimli teklif kullanılır).
+  useEffect(() => {
+    if (!kullanici) {
+      setIndirim(null);
+      return;
+    }
+    let iptal = false;
+    void indirimHakkiOku().then((h) => {
+      if (!iptal) setIndirim(h);
+    });
+    return () => {
+      iptal = true;
+    };
+  }, [kullanici]);
 
   // Sahiplik TİPE göre: ömür boyu → tam; yalnız yıllık → yükseltme teklif edilir.
   const sahipOmur = aktifHaklar.some((h) => h.tip === 'omurboyu');
@@ -146,10 +163,18 @@ function PaywallIcerik() {
   }
 
   // Android abonelik için offerToken (requestPurchase subs bunu ister).
+  // İndirim hakkı olan kullanıcıya (YALNIZ yıllık) indirimli teklif; yoksa TEMEL teklif seçilir.
+  // (Eskiden hep [0] seçiliyordu — teklif eklenince yanlışlıkla herkese indirim gidebilirdi.)
   function offerToken(urun: string): string | undefined {
     const s = subscriptions.find((x) => x.id === urun);
-    if (s && s.platform === 'android') return s.subscriptionOfferDetailsAndroid?.[0]?.offerToken ?? undefined;
-    return undefined;
+    if (!s || s.platform !== 'android') return undefined;
+    const teklifler = s.subscriptionOfferDetailsAndroid ?? [];
+    if (indirim && urun === URUN_YILLIK) {
+      const indirimli = teklifler.find((o) => o.offerId === indirim.offer_id);
+      if (indirimli) return indirimli.offerToken;
+    }
+    const temel = teklifler.find((o) => !o.offerId) ?? teklifler[0];
+    return temel?.offerToken;
   }
 
   async function satinAl(urun: string, abonelik: boolean) {
@@ -328,25 +353,35 @@ function PaywallIcerik() {
             </AppText>
           </View>
         ) : (
-          <View style={styles.planlar}>
-            <PlanButon
-              baslik="Yıllık"
-              fiyat={fiyat(URUN_YILLIK)}
-              altYazi="/yıl · yenilenir"
-              mesgul={islemUrun === URUN_YILLIK}
-              pasif={!connected || (!!islemUrun && islemUrun !== URUN_YILLIK)}
-              onPress={() => void satinAl(URUN_YILLIK, true)}
-            />
-            <PlanButon
-              baslik="Ömür boyu"
-              fiyat={fiyat(URUN_OMURBOYU)}
-              altYazi="tek seferlik · hep senin"
-              vurgu
-              mesgul={islemUrun === URUN_OMURBOYU}
-              pasif={!connected || (!!islemUrun && islemUrun !== URUN_OMURBOYU)}
-              onPress={() => void satinAl(URUN_OMURBOYU, false)}
-            />
-          </View>
+          <>
+            {indirim ? (
+              <View style={styles.indirimSerit}>
+                <MaterialCommunityIcons name="ticket-percent" size={18} color={Palette.yesil} />
+                <AppText variant="kucuk" color="yesil" bold style={styles.esnek}>
+                  %{indirim.yuzde} indirimin hazır — yıllık üyelikte uygulanır.
+                </AppText>
+              </View>
+            ) : null}
+            <View style={styles.planlar}>
+              <PlanButon
+                baslik="Yıllık"
+                fiyat={fiyat(URUN_YILLIK)}
+                altYazi={indirim ? `/yıl · %${indirim.yuzde} indirimli` : '/yıl · yenilenir'}
+                mesgul={islemUrun === URUN_YILLIK}
+                pasif={!connected || (!!islemUrun && islemUrun !== URUN_YILLIK)}
+                onPress={() => void satinAl(URUN_YILLIK, true)}
+              />
+              <PlanButon
+                baslik="Ömür boyu"
+                fiyat={fiyat(URUN_OMURBOYU)}
+                altYazi="tek seferlik · hep senin"
+                vurgu
+                mesgul={islemUrun === URUN_OMURBOYU}
+                pasif={!connected || (!!islemUrun && islemUrun !== URUN_OMURBOYU)}
+                onPress={() => void satinAl(URUN_OMURBOYU, false)}
+              />
+            </View>
+          </>
         )}
       </View>
 
@@ -392,7 +427,7 @@ function PaywallIcerik() {
         accessibilityLabel="Promosyon kodu kullan">
         <MaterialCommunityIcons name="ticket-percent-outline" size={18} color={Palette.lacivert} />
         <AppText variant="kucuk" color="lacivert" bold>
-          Promosyon kodun mu var?
+          Promosyon veya indirim kodun mu var?
         </AppText>
       </Pressable>
 
@@ -533,6 +568,16 @@ const styles = StyleSheet.create({
   planlar: {
     flexDirection: 'row',
     gap: Spacing.two,
+  },
+  indirimSerit: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderRadius: Radius.s,
+    paddingVertical: Spacing.two,
+    paddingHorizontal: Spacing.three,
+    marginBottom: Spacing.two,
   },
   plan: {
     flex: 1,
