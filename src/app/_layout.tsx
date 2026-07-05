@@ -24,6 +24,8 @@ import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
 import { tanitimTamamla, tanitimTamamMi } from '@/lib/ipuclari';
 import { UygulamaTuru } from '@/components/tanitim/uygulama-turu';
+import { ZorunluGuncelleme } from '@/components/guncelleme/zorunlu-guncelleme';
+import { zorunluGuncellemeGerekli } from '@/lib/guncelleme';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
@@ -127,6 +129,17 @@ function RootNavigator() {
   // Uygulama turu: HESABA bağlı (sunucu esas) — her hesap bir kez görür; cihaz değişse de takip
   // edilir. Girişsiz/offline durumda cihaz-yerel bayrak geçerli (fail-open). null = henüz okunmadı.
   const [tanitimTamam, setTanitimTamam] = useState<boolean | null>(null);
+  // ZORUNLU GÜNCELLEME: sunucu min sürüm > cihaz sürümü → her şeyden önce kapatılamaz güncelle ekranı.
+  const [guncelleGerek, setGuncelleGerek] = useState(false);
+  useEffect(() => {
+    let iptal = false;
+    void zorunluGuncellemeGerekli().then((v) => {
+      if (!iptal) setGuncelleGerek(v);
+    });
+    return () => {
+      iptal = true;
+    };
+  }, []);
   useEffect(() => {
     if (authYukleniyor) return;
     let iptal = false;
@@ -183,6 +196,11 @@ function RootNavigator() {
   useEffect(() => {
     return bildirimTiklamaDinle(() => router.replace('/'));
   }, [router]);
+
+  // EN ÜST KAPI: zorunlu güncelleme varsa HER ŞEYDEN önce (giriş/tur/profil dahil) kapatılamaz ekran.
+  if (guncelleGerek) {
+    return <ZorunluGuncelleme />;
+  }
 
   // SON ADIM (uygulamaya girmeden ÖNCE): profil/görev TAMAMLANDIYSA (!eksik) ve tur görülmediyse
   // uygulama turunu göster. Böylece sıra: giriş → profil → görev → TUR → ana ekran. Tamamlanınca
