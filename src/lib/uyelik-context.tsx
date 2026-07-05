@@ -11,7 +11,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { AppState } from 'react-native';
 
-import { KILIT_AKTIF, PREMIUM_URUNLERI, ucretsizKanun } from '@/constants/urunler';
+import { kanunErisilebilirSaf, PREMIUM_URUNLERI } from '@/constants/urunler';
 import { getCihazKimlik } from '@/lib/cihaz-kimlik';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
@@ -108,11 +108,9 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
   // Premium = aktif hak VAR ve cihaz kötüye kullanım kilidi yok. (Çevrimdışı süre kilidi YOK.)
   const premium = haklar.premium && !cihazKilit;
 
-  const kanunErisilebilir = (klasor: string | null | undefined, _blok?: string | null | undefined) => {
-    if (!KILIT_AKTIF) return true; // ana şalter kapalı → her içerik açık
-    if (ucretsizKanun(klasor)) return true; // TCK + denemesi ücretsiz
-    return premium;
-  };
+  // Saf fonksiyona delege (davranış aynı; kuyruk süzme/hook aynı mantığı kullanır → tek kaynak).
+  const kanunErisilebilir = (klasor: string | null | undefined, _blok?: string | null | undefined) =>
+    kanunErisilebilirSaf(klasor, premium);
 
   return (
     <UyelikCtx.Provider

@@ -24,6 +24,7 @@ import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { KART_ZOR_ANAHTARLARI } from '../assets/kart-gorselleri';
 import { LAW_KLASOR } from '@/db/seed';
 import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
+import { useKanunKilidi } from '@/lib/icerik-kilidi';
 import { cozHazir, gorselCoz } from '@/lib/gorsel-coz';
 import { gorselBekliyorMu, gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 
@@ -44,9 +45,13 @@ export default function ZorDetayScreen() {
   const { lawId, ad } = useLocalSearchParams<{ lawId?: string; ad?: string }>();
   const { width } = useWindowDimensions();
   const [aktif, setAktif] = useState(0);
+  // PREMIUM KAPISI: erişim yoksa (yükleme bitince) paywall'a; içerik gösterme.
+  const kilitli = useKanunKilidi(lawId != null && lawId !== '' ? Number(lawId) : null);
 
   const anahtarlar = useMemo(() => zorAnahtarlari(Number(lawId)), [lawId]);
   const sayfaGenislik = Math.min(width, CardFlowMaxWidth + Spacing.four * 2);
+
+  if (kilitli) return null;
 
   if (anahtarlar.length === 0) {
     return (

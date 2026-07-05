@@ -11,12 +11,17 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
+import { useKanunKilidi } from '@/lib/icerik-kilidi';
 
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
 export default function KanunSecScreen() {
   const router = useRouter();
   const { lawId, ad } = useLocalSearchParams<{ lawId?: string; ad?: string }>();
+  // PREMIUM KAPISI (savunma-derinliği): ara-ekran da kilitli kanunda paywall'a atsın (çocuk ekranlar
+  // /patika + /zor-detay zaten kapalı; bu deep-link ara-ekranını da kapatır).
+  const kilitli = useKanunKilidi(lawId != null && lawId !== '' ? Number(lawId) : null);
+  if (kilitli) return null;
 
   return (
     <Screen title={ad || 'Kanun'} onGeri={() => router.back()}>

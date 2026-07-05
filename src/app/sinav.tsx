@@ -11,6 +11,9 @@ import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { ekleSinavSonucu, getAllCards, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
 import { degerlendirSicil } from '@/lib/sicil-servis';
+import { kanunErisilebilirSaf } from '@/constants/urunler';
+import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
+import { useUyelik } from '@/lib/uyelik-context';
 import {
   eslesenKartIdleri,
   getGenelDenemeSorulari,
@@ -51,6 +54,17 @@ export default function SinavScreen() {
   const genelModu = genelNo != null && !Number.isNaN(genelNo);
   const lawIdNum = genelModu ? -genelNo! : lawId != null && lawId !== '' ? Number(lawId) : null;
   const testNum = test != null && test !== '' ? Number(test) : 0; // kanunun kaçıncı testi (0 tabanlı)
+  // PREMIUM KAPISI: genel deneme → premium şart; kanun sınavı → o kanun erişilebilir olmalı. Erişim
+  // yoksa (yükleme bitince) soru+cevap GÖSTERİLMEDEN paywall'a. (Sınav soruları gömülü, tek kapı bu.)
+  const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
+  const kilitli =
+    !uyelikYukleniyor &&
+    (genelModu
+      ? !kanunErisilebilirSaf(undefined, premium)
+      : lawId != null && lawId !== '' && !lawErisilebilirSaf(Number(lawId), premium));
+  useEffect(() => {
+    if (kilitli) router.replace('/paywall');
+  }, [kilitli, router]);
   const [sorular, setSorular] = useState<KartSoru[] | null>(null);
   const [lawAd, setLawAd] = useState<string | null>(null);
   const [hata, setHata] = useState(false);
@@ -238,6 +252,9 @@ export default function SinavScreen() {
     if (!secimler.some((s) => s !== null)) return; // hiç cevap yok → saklama
     void sinavIlerlemeKaydet(lawIdNum, testNum, { sorular, secimler, index });
   }, [secimler, index, bitti, sorular, lawIdNum, testNum]);
+
+  // Premium kilidi: erişim yoksa içerik gösterme (yukarıdaki effect paywall'a yönlendiriyor).
+  if (kilitli) return null;
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>

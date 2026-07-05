@@ -10,6 +10,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getCardsByLaw } from '@/db/database';
+import { useKanunKilidi } from '@/lib/icerik-kilidi';
 import { useSesliNobet } from '@/hooks/use-sesli-nobet';
 import type { QueueCard } from '@/lib/queue';
 import { sesliKartlar } from '@/lib/sesli-nobet';
@@ -18,6 +19,8 @@ export default function SesliNobetScreen() {
   // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
   const router = useRouter();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
+  // PREMIUM KAPISI: erişim yoksa paywall'a (yetim rota; sadece deep-link ile açılabilir).
+  const kilitli = useKanunKilidi(lawId != null && lawId !== '' ? Number(lawId) : null);
   const [kartlar, setKartlar] = useState<QueueCard[] | null>(null);
   const [hata, setHata] = useState(false);
 
@@ -40,6 +43,8 @@ export default function SesliNobetScreen() {
   // Hook koşulsuz çağrılır; liste yüklenene kadar boş.
   const nobet = useSesliNobet(kartlar ?? []);
   const { aktifKart, index, toplam, oynuyor, yukleniyor, oynatDurdur, sonraki, onceki } = nobet;
+
+  if (kilitli) return null; // premium kilidi: içerik gösterme (effect paywall'a yönlendiriyor)
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>

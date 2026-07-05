@@ -38,7 +38,7 @@ import {
   recordReview,
 } from '@/db/database';
 import { maddeMetni } from '@/db/madde-metinleri';
-import { LAW_KLASOR } from '@/db/seed';
+import { lawErisilebilirSaf, useKanunKilidi } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
 import { getSinavSorulari, type KartSoru, sinavVarMi, teyitSorulari } from '@/lib/sinav';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
@@ -73,19 +73,15 @@ export default function AkisScreen() {
   const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
   const zayifModu = mod === 'zayif'; // geri-bes oturumu (zayıf mevzi kuyruğu)
-  // GÜVENLİK KAPISI (defense-in-depth): belirli bir kanun açılıyorsa (lawId), erişim yoksa ASLA gösterme
-  // → paywall. Aramadan/sınavdan premium içerik bedava açılması bulgusuna karşı; tüm giriş noktalarını
-  // kapatır (patika zaten kendi kontrol ediyor; bu ikinci kalkan).
-  const { kanunErisilebilir } = useUyelik();
-  const kanunKilitli = kanunModu && !kanunErisilebilir(LAW_KLASOR[Number(lawId)]);
-  useEffect(() => {
-    if (kanunKilitli) router.replace('/paywall');
-  }, [kanunKilitli, router]);
+  const { premium } = useUyelik();
   // Patika/kanun/zayıf modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
   const tekKanun = bolumModu || kanunModu || zayifModu;
   // Öğrenme modu (kanun/bölüm) → akış bitince "aktif hatırlama" mini-quiz çıkar (zayıf'ta YOK).
   const ogrenmeModu = kanunModu || bolumModu;
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
+  // PREMIUM KAPISI (mekanizma-seviyesi): kanun modu → lawId ile yükleme ÖNCESİ yönlendir. Bölüm/zayıf
+  // modunda kuyruk yüklenip premium süzüldükten sonra "hepsi süzüldüyse paywall" kontrolü devreye girer.
+  const kanunKilitli = useKanunKilidi(kanunModu ? Number(lawId) : null);
   const [hata, setHata] = useState(false);
   const [index, setIndex] = useState(0);
   const [cozulen, setCozulen] = useState<Cozulen>({ tekrar: 0, yeni: 0 });
@@ -186,7 +182,15 @@ export default function AkisScreen() {
       .then((q) => {
         // ZAYIF (geri-besleme): yalnız İNDİRİLMİŞ kanun kartları (indirilmemiş kart görsel/ses
         // çekemeyip bozuk görünüyordu). Karargah sayacıyla AYNI yardımcı → sayı tutarlı.
-        const liste = zayifModu ? calisilabilirZayif(q) : q;
+        const liste0 = zayifModu ? calisilabilirZayif(q) : q;
+        // PREMIUM SÜZGEÇ (TÜM modlar): erişilemeyen kanunun kartlarını çıkar. Zayıf/bölüm karmasında
+        // TCK kalır, premium düşer → lapsed-premium sızması + deep-link bolumModu içerik-seviyesinde kapanır.
+        const liste = liste0.filter((c) => lawErisilebilirSaf(c.law_id, premium));
+        // Kartlar vardı ama HEPSİ premium süzüldüyse (bölüm/zayıf modu premium kanun) → paywall.
+        if (liste0.length > 0 && liste.length === 0) {
+          router.replace('/paywall');
+          return;
+        }
         setQueue(liste);
         // Arama sonucundan gelindiyse eşleşen karta atla (yoksa baştan).
         if (kart) {
@@ -195,7 +199,7 @@ export default function AkisScreen() {
         }
       })
       .catch(() => setHata(true));
-  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId, kart]);
+  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId, kart, premium, router]);
 
   useEffect(() => {
     yukle();

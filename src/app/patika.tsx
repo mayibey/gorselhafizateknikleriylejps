@@ -323,9 +323,10 @@ export default function PatikaScreen() {
   const calisilanKart = dugumler?.reduce((a, d) => a + d.calisilan, 0) ?? 0;
   const toplamKart = dugumler?.reduce((a, d) => a + d.toplam, 0) ?? 0;
 
-  // Kilit: kanunun bloğu bilindiğinde ve erişim yoksa (TCK/ücretsiz hariç). Şalter kapalıysa
-  // kanunErisilebilir hep true → kilitli asla true olmaz. (klasor yukarıda tanımlı.)
-  const kilitli = lawBlok != null && !kanunErisilebilir(klasor, lawBlok);
+  // Kilit: klasör'den (lawId) ANINDA hesaplanır — lawBlok yüklenmesini BEKLEMEZ (eski `lawBlok != null`
+  // fail-open'ıydı: yükleme/catch penceresinde premium bölüm düğümleri tıklanabiliyordu). kanunErisilebilir
+  // zaten _blok param'ını kullanmaz. Şalter kapalıysa hep true → kilitli asla true olmaz.
+  const kilitli = !kanunErisilebilir(klasor);
 
   return (
     <Screen

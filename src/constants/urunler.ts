@@ -79,6 +79,16 @@ export function ucretsizKanun(klasor: string | null | undefined): boolean {
   return !!klasor && UCRETSIZ_KANUNLAR.includes(klasor);
 }
 
+/**
+ * SAF premium kilidi — reaktif context DIŞINDA da (kuyruk süzme, hook) kullanılır. Davranış:
+ * KILIT_AKTIF kapalı → açık; ücretsiz TCK → açık; aksi → premium şart. (uyelik-context bunu çağırır.)
+ */
+export function kanunErisilebilirSaf(klasor: string | null | undefined, premium: boolean): boolean {
+  if (!KILIT_AKTIF) return true;
+  if (ucretsizKanun(klasor)) return true;
+  return premium;
+}
+
 /** Ürün ID → okunabilir ad/tip (Üyeliğim kartı + taç etiketi için). Bilinmeyen ürün → null. */
 export type UrunBilgi = { tip: 'Ömür boyu' | 'Yıllık'; ad: string };
 export function urunBilgi(urun: string): UrunBilgi | null {
