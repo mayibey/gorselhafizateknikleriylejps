@@ -2,7 +2,10 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 4 Temmuz 2026
+> Son güncelleme: 5 Temmuz 2026
+>
+> ### ▶ 5 Tem (3) — DUYURULAR ÖZELLİĞİ (Karargah çan → duyuru ikonu, sunucudan yönetilir)
+> Başkan: "duyurular bölümü neden yok?" + "çan ikonunun yerine duyuru ikonu koy, duyuru yoksa 'duyuru yok' yazsın, geçmiş duyurular da görünsün." **YAPILDI:** (1) **Sunucu (docs/v2/14):** `duyurular` tablosu (baslik/metin/hedef['herkes'|'premium']/aktif/created_at) + RLS yalnız-oku (aktif=true), yazma yalnız dashboard/service_role. Başkan artık build almadan Supabase'den satır ekleyince herkeste anında görünür. İlk "hoş geldin" duyurusu eklendi (canlı, teyitli). (2) **İstemci `lib/duyuru.ts`:** aktif duyuruları yeni→eski çeker, premium-hedefli olanları yalnız premium kullanıcıya gösterir; okunmamış takibi AsyncStorage son-görülme zamanıyla (çevrimdışı→boş, çökme yok). (3) **Ekran `/duyurular`:** geçmiş dâhil tüm duyurular, boşsa "Henüz duyuru yok", premium rozeti; açılışta okundu işaretlenir. (4) **Karargah başlığı:** eski çan (bell-outline → /egitim-plani) KALDIRILDI, yerine `DuyuruIkonu` (bullhorn-outline, okunmamış varsa kırmızı nokta → /duyurular). egitim-plani hâlâ Ayarlar'dan erişilebilir (orphan değil). _layout'a Stack.Screen eklendi. tsc 0 hata. **Sonraki build'e (vCode 25) girecek; push/FCM bildirimi sonraya.**
 >
 > ### ▶ 5 Tem (2) — vCode 24/1.0.14 KAPALI TESTE + İNCELEMEDE (giriş+kaydol onay kutucuğu her ikisinde)
 > vCode 23 sonrası başkan: onay kutucuğu Giriş sekmesinde de zorunlu olsun (Google girişten de hesap açılabiliyor → rıza kaçmasın). auth-ekrani: kutucuk her iki modda görünür + google()/gonder() her modda sartlar zorunlu (pasif metin kaldırıldı). versionCode 24/1.0.14 build → D:uildlermevzu-vCode24.aab → kapalı test release 25 → başkan incelemeye GÖNDERDİ ("İncelenmekte"). vCode 24 = 23 üstü (her şey + onay). SATILAN ÜRÜNLER/FİYAT (teyit): Tam Erişim Yıllık 1.079,99 · Ömür Boyu 1.559,99 · Ömür Boyuna Yükseltme 479,99 (Türkiye KDV dahil); eski brans/paket Play'de uykuda, app satmıyor. EMÜLATÖR NOTU: D:/android-avd var ama PC reset'te AVD kaydı bozuldu (emulator -list-avds boş); native önizleme için yeniden kayıt/boot + APK gerek.

@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 
+import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
@@ -235,13 +236,8 @@ export default function KarargahScreen() {
         <View style={styles.headerIkonlar}>
           {/* Premium'sa altın taç (dokununca Üyelik ekranı) — premium değilse görünmez. */}
           <UyelikTaci boyut={18} />
-          <Pressable
-            onPress={() => router.push('/egitim-plani')}
-            hitSlop={10}
-            accessibilityRole="button"
-            accessibilityLabel="Bildirim ayarları">
-            <MaterialCommunityIcons name="bell-outline" size={22} color={Palette.altin} />
-          </Pressable>
+          {/* Duyurular (eski çan yerine) — okunmamış varsa kırmızı nokta. */}
+          <DuyuruIkonu boyut={22} />
           <Pressable
             onPress={() => router.push('/ayarlar')}
             hitSlop={10}
