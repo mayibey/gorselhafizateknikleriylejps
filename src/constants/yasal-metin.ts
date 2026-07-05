@@ -2,7 +2,7 @@
  * Uygulama içi yasal metinler. Mağaza incelemesi için linklerin HER ZAMAN çalışması
  * gerekir (URL barındırılmasa bile). Tam/güncel sürüm hosting'e koyulup config'teki
  * GIZLILIK_URL/SARTLAR_URL doldurulabilir; uygulama içi metin canonical özet olarak kalır.
- * Yer tutucuları yayından önce doldur: MEVZU-JSPS, iletisim@mevzujsps.com.
+ * Marka: "Mevzu · JSPS" · İletişim: iletisim@mevzujsps.com (nihai — yayına hazır).
  */
 
 /**
@@ -12,9 +12,9 @@
 export const RESMI_BAGLANTI_YOK =
   'Bu uygulama bağımsız bir sınav hazırlık aracıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı veya herhangi bir resmî kurum/makamla bağlantılı, ilişkili veya onlar tarafından onaylanmış değildir. İlgili marka, amblem ve adlar yalnızca tanımlama amacıyla anılır ve sahiplerine aittir.';
 
-export const GIZLILIK_METNI = `MEVZU-JSPS — GİZLİLİK POLİTİKASI
+export const GIZLILIK_METNI = `Mevzu · JSPS — GİZLİLİK POLİTİKASI
 
-Veri sorumlusu: MEVZU-JSPS · İletişim: iletisim@mevzujsps.com
+Veri sorumlusu: Mevzu · JSPS · İletişim: iletisim@mevzujsps.com
 
 1) İŞLENEN VERİLER
 • Hesap verisi: Uygulamayı kullanmak için hesap açman gerekir. E-posta ve şifre ile VEYA
@@ -76,12 +76,12 @@ Politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde bildir
 
 Sorular: iletisim@mevzujsps.com`;
 
-export const SARTLAR_METNI = `MEVZU-JSPS — KULLANIM ŞARTLARI
+export const SARTLAR_METNI = `Mevzu · JSPS — KULLANIM ŞARTLARI
 
-Uygulamayı kullanarak bu şartları kabul edersin. Sunan: MEVZU-JSPS.
+Uygulamayı kullanarak bu şartları kabul edersin. Sunan: Mevzu · JSPS.
 
 1) HİZMET ve SORUMLULUK REDDİ
-MEVZU-JSPS, JSPS sınavına hazırlık için görsel hafıza kartları, tekrar sistemi ve eğitim araçları sunar.
+Mevzu · JSPS, JSPS sınavına hazırlık için görsel hafıza kartları, tekrar sistemi ve eğitim araçları sunar.
 Bir çalışma aracıdır; SINAVI KAZANACAĞINI GARANTİ ETMEZ. İçerikler bilgilendirme amaçlıdır,
 resmi/hukuki danışmanlık değildir; güncel resmi mevzuat esastır.
 ${RESMI_BAGLANTI_YOK}
@@ -93,7 +93,7 @@ bilgilendirme amaçlıdır; güncel ve bağlayıcı sürüm için daima resmî k
 
 3) FİKRİ MÜLKİYET
 Mevzuat metinleri kamuya açıktır. Özgün görseller, karikatürler, tasarım, marka ve yazılım
-MEVZU-JSPS'na aittir; izinsiz kopyalanamaz. Filigranlı görsellerin yetkisiz paylaşımı yasaktır.
+Mevzu · JSPS'na aittir; izinsiz kopyalanamaz. Filigranlı görsellerin yetkisiz paylaşımı yasaktır.
 
 4) ÜYELİK, YAŞ ve ÜCRET
 Uygulamayı kullanmak için hesap açman gerekir; e-posta/şifre ile veya Google hesabıyla giriş
