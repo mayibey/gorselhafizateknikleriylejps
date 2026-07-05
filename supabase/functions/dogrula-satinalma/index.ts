@@ -187,6 +187,12 @@ Deno.serve(async (req) => {
         await log('reddedildi', `purchaseState=${p.purchaseState} http=${r.status}`, p);
         return hata('Satın alma doğrulanamadı', 402);
       }
+      // F6: Token gerçekten BU hesap için mi? Satın alırken obfuscatedAccountId=user.id gönderilir;
+      // Google onu obfuscatedExternalAccountId olarak döndürür. Varsa ve uyuşmuyorsa → başka hesabın token'ı.
+      if (p.obfuscatedExternalAccountId && p.obfuscatedExternalAccountId !== user.id) {
+        await log('reddedildi', `hesap uyusmazligi ext=${p.obfuscatedExternalAccountId}`, p);
+        return hata('Bu satın alma başka bir hesaba ait.', 403, 'baska_hesap');
+      }
       // Onayla (acknowledgementState 0=onaylanmamış → 3 günde onaylanmazsa iade)
       if (p.acknowledgementState === 0) {
         await fetch(`${base}/purchases/products/${urun}/tokens/${token}:acknowledge`, {
@@ -210,6 +216,12 @@ Deno.serve(async (req) => {
     if (!r.ok || !aktif) {
       await log('reddedildi', `subState=${s.subscriptionState} http=${r.status}`, s);
       return hata('Abonelik aktif değil', 402);
+    }
+    // F6: Abonelik gerçekten BU hesap için mi (externalAccountIdentifiers.obfuscatedExternalAccountId)?
+    const extId = s.externalAccountIdentifiers?.obfuscatedExternalAccountId;
+    if (extId && extId !== user.id) {
+      await log('reddedildi', `hesap uyusmazligi ext=${extId}`, s);
+      return hata('Bu abonelik başka bir hesaba ait.', 403, 'baska_hesap');
     }
     if (s.acknowledgementState === 'ACKNOWLEDGEMENT_STATE_PENDING') {
       await fetch(`${base}/purchases/subscriptions/${urun}/tokens/${token}:acknowledge`, {

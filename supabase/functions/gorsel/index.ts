@@ -24,8 +24,9 @@ const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY')!;
 const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
 const BUCKET = 'icerik';
-// KİLİT: '1' ise premium kapısı AKTİF (imzali-url ile aynı model). Kilit açarken: secrets set KILIT_AKTIF=1
-const KILIT = Deno.env.get('KILIT_AKTIF') === '1';
+// KİLİT: FAIL-CLOSED — varsayılan (secret ayarsız) premium kapısı AKTİF; yalnız açıkça '0' kapatır
+// (denetim EK-A: eskiden `=== '1'` fail-open idi). Kapatmak için: supabase secrets set KILIT_AKTIF=0
+const KILIT = Deno.env.get('KILIT_AKTIF') !== '0';
 const UCRETSIZ_KLASOR = ['tck'];
 const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 const FONT_URL = 'https://unpkg.com/@expo-google-fonts/inter@0.4.2/400Regular/Inter_400Regular.ttf';

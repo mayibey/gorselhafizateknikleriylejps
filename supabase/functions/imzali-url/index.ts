@@ -25,10 +25,10 @@ const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
 const BUCKET = 'icerik';
 const TTL_SN = 900; // 15 dk
 const MAX_YOL = 400; // tek istekte üst sınır (büyük kanun bir çağrıda)
-// KİLİT: '1' ise premium kapısı AKTİF (yalnız hakkı olan premium içerik URL'i alır).
-// Ayarlanmamış/'0' = kapalı → herkes erişir (kapalı test modu; istemci KILIT_AKTIF=false ile hizalı).
-// Kilit açarken: supabase secrets set KILIT_AKTIF=1
-const KILIT = Deno.env.get('KILIT_AKTIF') === '1';
+// KİLİT: FAIL-CLOSED — VARSAYILAN (secret ayarsız) premium kapısı AKTİF. Yalnız açıkça '0' ile kapanır
+// (kapalı test icin bilerek). Eskiden `=== '1'` idi → secret unutulursa TÜM premium içerik açığa çıkıyordu
+// (denetim EK-A). İstemci KILIT_AKTIF=true ile hizalı. Kapatmak için: supabase secrets set KILIT_AKTIF=0
+const KILIT = Deno.env.get('KILIT_AKTIF') !== '0';
 const UCRETSIZ_KLASOR = ['tck']; // her zaman serbest kanun klasörleri (istemci UCRETSIZ ile hizalı)
 const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 
