@@ -76,9 +76,11 @@ function WebNot() {
   );
 }
 
-/** Kalan süreyi "S sa D dk" (1 saatten çoksa) ya da "D dk S sn" biçiminde yazar. Bitti/negatif → null. */
+/** Kalan süreyi "S sa D dk" (1 saatten çoksa) ya da "D dk S sn" biçiminde yazar. Bitti/negatif/parse edilemez → null. */
 function kalanYazi(bitisISO: string, simdi: number): string | null {
-  const kalan = Math.floor((new Date(bitisISO).getTime() - simdi) / 1000);
+  const hedef = new Date(bitisISO).getTime();
+  if (Number.isNaN(hedef)) return null; // bitiş parse edilemezse sayacı GİZLE ("NaN dk NaN sn" olmasın)
+  const kalan = Math.floor((hedef - simdi) / 1000);
   if (kalan <= 0) return null;
   const sa = Math.floor(kalan / 3600);
   const dk = Math.floor((kalan % 3600) / 60);
