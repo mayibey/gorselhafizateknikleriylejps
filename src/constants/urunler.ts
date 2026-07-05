@@ -18,6 +18,12 @@ export const URUN_YUKSELTME = 'musterek_omurboyu_yukseltme'; // tek seferlik —
 export const ABONELIK_URUNLERI = [URUN_YILLIK];
 export const TEK_SEFERLIK_URUNLERI = [URUN_OMURBOYU, URUN_YUKSELTME];
 
+// PROMOSYON ürünleri — Play'de SATILMAZ; promo kodu kullanınca sunucu (promo_kullan RPC)
+// bu ürünle uyelik_haklari satırı açar. Premium sayılır (Play satın almasıyla aynı hak).
+export const URUN_PROMO_YILLIK = 'promo_yillik'; // abonelik — süreli (kod tanımına göre gün)
+export const URUN_PROMO_OMURBOYU = 'promo_omurboyu'; // omurboyu — süresiz
+export const PROMO_URUNLERI = [URUN_PROMO_YILLIK, URUN_PROMO_OMURBOYU];
+
 // Eski model ürünleri (artık SATILMAZ; geçmiş satın alma/geri yükleme premium saysın diye tanınır)
 export const ESKI_PREMIUM_URUNLERI = [
   'brans_yillik',
@@ -27,11 +33,12 @@ export const ESKI_PREMIUM_URUNLERI = [
   'paket_omurboyu',
 ];
 
-/** uyelik_haklari'nda premium sayılan TÜM ürünler (satılan + eski). */
+/** uyelik_haklari'nda premium sayılan TÜM ürünler (satılan + promo + eski). */
 export const PREMIUM_URUNLERI = [
   URUN_YILLIK,
   URUN_OMURBOYU,
   URUN_YUKSELTME,
+  ...PROMO_URUNLERI,
   ...ESKI_PREMIUM_URUNLERI,
 ];
 
@@ -56,7 +63,11 @@ export function ucretsizKanun(klasor: string | null | undefined): boolean {
 export type UrunBilgi = { tip: 'Ömür boyu' | 'Yıllık'; ad: string };
 export function urunBilgi(urun: string): UrunBilgi | null {
   if (!PREMIUM_URUNLERI.includes(urun)) return null;
-  const yillikMi = urun === URUN_YILLIK || urun === 'brans_yillik' || urun === 'paket_yillik';
+  const yillikMi =
+    urun === URUN_YILLIK ||
+    urun === URUN_PROMO_YILLIK ||
+    urun === 'brans_yillik' ||
+    urun === 'paket_yillik';
   return yillikMi
     ? { tip: 'Yıllık', ad: 'Tam Erişim · Yıllık' }
     : { tip: 'Ömür boyu', ad: 'Tam Erişim · Ömür Boyu' };

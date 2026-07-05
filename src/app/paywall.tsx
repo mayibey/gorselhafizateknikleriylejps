@@ -75,6 +75,7 @@ function WebNot() {
 }
 
 function PaywallIcerik() {
+  const router = useRouter();
   const { hazir, kullanici } = useAuth();
   const { aktifHaklar, cihazKilit, yenile } = useUyelik();
   const [islemUrun, setIslemUrun] = useState<string | null>(null); // hangi ürün işleniyor (buton kilidi)
@@ -380,6 +381,18 @@ function PaywallIcerik() {
         <MaterialCommunityIcons name="restore" size={18} color={Palette.lacivert} />
         <AppText variant="kucuk" color="lacivert" bold>
           Satın alımları geri yükle
+        </AppText>
+      </Pressable>
+
+      <Pressable
+        style={({ pressed }) => [styles.geriYukleBtn, pressed && styles.pressed]}
+        onPress={() => router.push('/promo-kod')}
+        hitSlop={10}
+        accessibilityRole="button"
+        accessibilityLabel="Promosyon kodu kullan">
+        <MaterialCommunityIcons name="ticket-percent-outline" size={18} color={Palette.lacivert} />
+        <AppText variant="kucuk" color="lacivert" bold>
+          Promosyon kodun mu var?
         </AppText>
       </Pressable>
 

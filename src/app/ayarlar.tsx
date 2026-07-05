@@ -69,6 +69,11 @@ export default function AyarlarScreen() {
         onPress={() => router.push('/paywall')}
       />
       <Satir
+        ikon="ticket-percent-outline"
+        etiket="Promosyon Kodu"
+        onPress={() => router.push('/promo-kod')}
+      />
+      <Satir
         ikon="bell-outline"
         etiket="Eğitim Planı (Bildirimler)"
         onPress={() => router.push('/egitim-plani')}
