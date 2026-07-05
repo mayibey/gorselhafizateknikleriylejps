@@ -191,7 +191,13 @@ function PaywallIcerik() {
   }
   // İndirim GERÇEKTEN uygulanabilir mi (Play tarafı hazır)? Banner/etiket yalnız buna göre gösterilir
   // → "indirim vaat edip tam fiyat çekme" olmaz.
-  const indirimUygulanabilir = !!(yillikIndirimliTeklif() || omurboyuIndirimliTeklif());
+  const yillikInd = !!yillikIndirimliTeklif();
+  const omurInd = !!omurboyuIndirimliTeklif();
+  const indirimUygulanabilir = yillikInd || omurInd;
+  // Banner kapsamı GERÇEK duruma göre: yalnız Play'de hazır olan plan(lar) için "geçerli" de
+  // → sadece biri hazırken "yıllık ve ömür boyunda geçerli" diye fazla vaat etme (denetim F4).
+  const indirimKapsam =
+    yillikInd && omurInd ? 'yıllık ve ömür boyunda' : yillikInd ? 'yıllıkta' : 'ömür boyunda';
   // İlk giriş indiriminin kalan süresi (varsa). Süre bitince null → sayaç gizlenir.
   const geriSayim = geriSayimVar && indirim?.bitis ? kalanMetin(indirim.bitis, simdi) : null;
 
@@ -407,7 +413,7 @@ function PaywallIcerik() {
                   color={Palette.yesil}
                 />
                 <AppText variant="kucuk" color="yesil" bold style={styles.esnek}>
-                  %{indirim.yuzde} indirimin uygulanıyor — yıllık ve ömür boyunda geçerli.
+                  %{indirim.yuzde} indirimin uygulanıyor — {indirimKapsam} geçerli.
                   {geriSayim
                     ? ` İlk gün fırsatı: ${geriSayim} kaldı!`
                     : indirim.kaynak === 'ilk_giris'

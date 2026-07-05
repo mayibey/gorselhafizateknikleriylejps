@@ -66,7 +66,12 @@ async function yerelBosMu(): Promise<boolean> {
     getPerformans(),
     getSicilKayitlari(),
   ]);
-  return studied.length === 0 && perf.length === 0 && sicil.length === 0;
+  // PLATFORM-NÖTR: native getStudyCards yalnız çalışılmış kartları (INNER JOIN srs) döner,
+  // web ise TÜM kartları kutu=0 ile döner → web'de studied.length hep dolu, yerelBosMu asla
+  // true olmuyordu (bulut geri-yükleme web'de hiç tetiklenmiyordu). Gerçek ilerleme sinyali
+  // = SRS kutusu ilerlemiş (kutu>0) kart sayısı; her iki platformda aynı anlam.
+  const calisilmis = studied.filter((c) => c.kutu > 0).length;
+  return calisilmis === 0 && perf.length === 0 && sicil.length === 0;
 }
 
 /**
