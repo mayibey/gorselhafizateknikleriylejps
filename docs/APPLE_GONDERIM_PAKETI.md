@@ -84,9 +84,10 @@ Uygulama bağımsız bir sınav hazırlık aracıdır; hiçbir resmî kurumla ba
 ```
 - **Contact:** Ad Soyad + telefon + `iletisim@mevzujsps.com` (Adem'in bilgileri).
 
-## 9. Demo hesap (inceleme için) — OLUŞTURULACAK
-- Öneri: `apple.review@mevzujsps.com` / güçlü parola · profil tam (ad/soyad/telefon/doğum) · e-posta doğrulanmış.
-- Supabase admin ile oluşturulacak (auto-confirm + profiles satırı) → panele bu bilgiler girilir.
+## 9. Demo hesap (inceleme için) — ✅ OLUŞTURULDU (çalışıyor)
+- E-posta: `apple.review@mevzujsps.com` · profil TAM (Apple Review / +905000000000 / 1990-01-01 / jandarma-asb) · e-posta doğrulanmış · giriş test edildi (200 ✓).
+- **Parola bu dosyada YOK** (docs/ GitHub Pages'te herkese açık). Parola özel olarak saklandı — panele girerken kullanılır.
+- Reviewer e-posta+parola ile giriş → profil+branş dolu → doğrudan içerik (kilit kapalı, her şey açık).
 
 ## 10. Export Compliance (şifreleme)
 - app.json `usesNonExemptEncryption: false` (mevcut). Öneri: **muaf** — içerik korumak için standart AES; iletişim/güvenlik uygulaması değil. İlk gönderimde bu cevapla ilerle; Apple ek belge isterse yıllık self-classification eklenir. (Başkan "sonra bakarım" dedi → varsayılan bu.)
