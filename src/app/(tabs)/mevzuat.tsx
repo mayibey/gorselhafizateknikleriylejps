@@ -177,9 +177,10 @@ function MevzuatIcerik() {
       : ({ tip: 'yok' } as const);
 
   function kanunaGit(law: LawWithCount) {
-    // Kanun → SEÇİM ekranı: Görsel Konu Anlatımı (→ patika/akış) veya Zor Detay Kartları (→ salt
-    // görüntüleme). Kilit/indirme kapısı KanunSatir.satiraBas'ta zaten geçildi.
-    router.push({ pathname: '/kanun-sec', params: { lawId: String(law.id), ad: law.ad } });
+    // Kanuna basınca DOĞRUDAN kart akışı başlar (eski usül). Araya "Görsel Konu Anlatımı / Zor
+    // Detay Kartları" seçim ekranı (/kanun-sec) GİRMEZ — Zor Detay v2'ye ertelendi. Kilit/indirme
+    // kapısı KanunSatir.satiraBas'ta zaten geçildi; /patika kendi kilit kapısını da uygular.
+    router.push({ pathname: '/patika', params: { lawId: String(law.id) } });
   }
 
   const devamLaw =
