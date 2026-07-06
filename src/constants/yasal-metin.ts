@@ -29,9 +29,10 @@ Veri sorumlusu: Mevzu · JSPS · İletişim: iletisim@mevzujsps.com
   (Supabase, AB/Frankfurt) yedeklenir → cihaz değiştirsen kaybolmaz.
 • İçerik: kart görselleri içerik sunucumuzdan (Cloudflare R2 / Supabase Storage) internet
   üzerinden indirilir; indirilen görseller cihazında ŞİFRELİ (AES-256) saklanır.
-• İçerik güvenliği (filigran): sızıntı tespiti için kart görseline hesabının e-posta adresi
-  soluk biçimde basılır (yalnız senin gördüğün ekranda; içerik korsanlığına karşı).
-• Cihaz kimliği: her kurulumda üretilen benzersiz bir cihaz kimliği tutulur — filigran ve hesap
+• İçerik güvenliği (filigran + erişim kaydı): sızıntı/korsanlık tespiti için kart görseline
+  hesap kimliğin soluk biçimde basılır; ayrıca hangi hesabın hangi içeriğe ne zaman ve hangi IP
+  ile eriştiği güvenlik amacıyla kaydedilir (erişim logu).
+• Cihaz kimliği: her kurulumda üretilen benzersiz bir cihaz kimliği tutulur — hesap
   paylaşımını/kötüye kullanımı önleme (aynı hesabın çok fazla cihazda kullanılmasını sınırlama) amacıyla.
 • Satın alma: üyelik satın alırsan, satın alma Google Play üzerinden alınır ve hesabına
   bağlanır (kart/banka bilgin Google'da işlenir, bize ulaşmaz).
@@ -56,7 +57,7 @@ verinin yurt dışına aktarılmasına AÇIK RIZA vermiş olursun. Verini satmı
 paylaşmıyoruz.
 
 4) SAKLAMA
-Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürece saklanır. Cihazdaki çalışma verisi uygulama yüklü olduğu sürece tutulur; indirilen içerik şifreli olarak cihazında kalır (Mevzuat'tan silebilirsin).
+Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürece saklanır. Cihazdaki çalışma verisi uygulama yüklü olduğu sürece tutulur; indirilen içerik şifreli olarak cihazında kalır (Mevzuat'tan silebilirsin). İçerik erişim kayıtları (güvenlik/kötüye kullanımı önleme amacıyla tutulan hesap, zaman ve IP bilgisi) en fazla 12 ay saklanır, sonra silinir veya anonimleştirilir.
 
 5) HAKLARIN (KVKK m.11)
 Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: iletisim@mevzujsps.com.

@@ -66,6 +66,19 @@ Deno.serve(async (req) => {
     if (!pr) return yanit({ hata: 'Bu içerik için üyelik gerekli' }, 402);
   }
 
+  // ADLİ İZ: hangi hesap, ne zaman, hangi (NAT) IP'den içerik URL'i istedi (fail-open).
+  const istekIp = (req.headers.get('x-forwarded-for') ?? '').split(',')[0].trim() || null;
+  admin
+    .from('icerik_erisim_log')
+    .insert({
+      user_id: user.id,
+      yol: temiz[0] ?? null,
+      ip: istekIp,
+      ua: req.headers.get('user-agent'),
+      kaynak: `imzali-url(${temiz.length})`,
+    })
+    .then(() => {}, () => {});
+
   // 4) service_role ile imzalı URL üret
   const { data, error } = await admin.storage.from(BUCKET).createSignedUrls(temiz, TTL_SN);
   if (error) {

@@ -1,7 +1,10 @@
 /**
- * Giriş sağlayıcı butonları: Google (her platform) + Apple (YALNIZ iOS — App Store Guideline 4.8:
+ * Giriş sağlayıcı butonları: Google (Android/web) + Apple (YALNIZ iOS — App Store Guideline 4.8:
  * Google sunuluyorsa Apple da eşdeğer seçenek olarak zorunlu). Apple butonu Apple'ın kendi native
  * bileşeni (tasarım kuralı gereği); yalnız iOS'ta render edilir → Android/web'de hiç görünmez.
+ * NOT: iOS'ta Google butonu GİZLİ — native Google girişi iOS için henüz yapılandırılmadı
+ * (iosClientId/GoogleService-Info.plist + reversed-client URL scheme yok) → basılınca hata verirdi.
+ * iOS'ta Apple ile Giriş + e-posta yeterli. iOS Google client kurulunca guard kaldırılır.
  */
 import * as AppleAuthentication from 'expo-apple-authentication';
 import { Image } from 'expo-image';
@@ -27,17 +30,20 @@ export function SaglayiciButonlari({
   const eylem = kayit ? 'kaydol' : 'giriş yap';
   return (
     <View style={styles.kok}>
-      <Pressable
-        disabled={mesgul}
-        accessibilityRole="button"
-        accessibilityLabel={`Google ile ${eylem}`}
-        style={({ pressed }) => [styles.btn, pressed && styles.pressed, mesgul && styles.pasif]}
-        onPress={onGoogle}>
-        <Image source={GOOGLE_LOGO} style={styles.logo} contentFit="contain" />
-        <AppText variant="govde" bold color="anaMetin">
-          Google ile {eylem}
-        </AppText>
-      </Pressable>
+      {/* Google: iOS'ta gizli (native iOS client yapılandırılmadı → hata verirdi). */}
+      {Platform.OS !== 'ios' ? (
+        <Pressable
+          disabled={mesgul}
+          accessibilityRole="button"
+          accessibilityLabel={`Google ile ${eylem}`}
+          style={({ pressed }) => [styles.btn, pressed && styles.pressed, mesgul && styles.pasif]}
+          onPress={onGoogle}>
+          <Image source={GOOGLE_LOGO} style={styles.logo} contentFit="contain" />
+          <AppText variant="govde" bold color="anaMetin">
+            Google ile {eylem}
+          </AppText>
+        </Pressable>
+      ) : null}
       {Platform.OS === 'ios' && onApple ? (
         <AppleAuthentication.AppleAuthenticationButton
           buttonType={

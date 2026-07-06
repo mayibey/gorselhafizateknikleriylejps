@@ -102,13 +102,25 @@ Deno.serve(async (req) => {
     if (!pr) return hata('Bu içerik için üyelik gerekli', 402);
   }
 
+  // ADLİ İZ: hangi hesap, hangi görsele, ne zaman, hangi (NAT) IP'den erişti.
+  // Fail-open: log yazımı içerik sunmayı ASLA bloklamaz. Kimlik zinciri:
+  // filigran(user.id) → profiles(ad/soyad/telefon) → bu log(zaman+IP+UA).
+  const istekIp = (req.headers.get('x-forwarded-for') ?? '').split(',')[0].trim() || null;
+  admin
+    .from('icerik_erisim_log')
+    .insert({ user_id: user.id, yol, ip: istekIp, ua: req.headers.get('user-agent'), kaynak: 'gorsel' })
+    .then(() => {}, () => {});
+
   const { data: blob, error: iHata } = await admin.storage.from(BUCKET).download(yol);
   if (iHata || !blob) return hata('Görsel bulunamadı', 404);
   const girdi = new Uint8Array(await blob.arrayBuffer());
 
   try {
     await hazirla();
-    const damga = user.email ?? user.id;
+    // Filigran = hesap kimliği (user.id ilk 8 hex). E-posta BASMA: Apple "E-postamı Gizle"
+    // relay adresi kişiye ulaştırmaz; user.id her sağlayıcıda profiles(ad/soyad/telefon)'a
+    // birebir bağlanır (tam UUID erişim logunda). Sızıntıda tek adımda kimlik.
+    const damga = user.id.slice(0, 8);
     let cikti: Uint8Array | null = null;
 
     ImageMagick.read(girdi, (img) => {
