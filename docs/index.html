@@ -4,24 +4,20 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="index,follow" />
-<title>Mevzu · JSPS — Gizlilik Politikası</title>
+<title>Mevzu · JSPS — GİZLİLİK POLİTİKASI</title>
 <style>
-  :root { --lacivert:#1F3864; --krem:#F7F1E3; --metin:#2b2b2b; --soluk:#6b6b6b; --kenar:#e3d8be; }
+  :root { --lacivert:#0B1F3A; --krem:#F7F3EA; --metin:#1B2A4A; --soluk:#6E6047; --kenar:#E7DCC7; --altin:#C9A227; }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--krem); color:var(--metin);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6; }
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
   .wrap { max-width:760px; margin:0 auto; padding:28px 20px 64px; }
   header { border-bottom:2px solid var(--lacivert); padding-bottom:14px; margin-bottom:8px; }
   h1 { color:var(--lacivert); margin:0 0 4px; font-size:1.7rem; }
   h2 { color:var(--lacivert); font-size:1.12rem; margin:26px 0 6px; }
   .tarih { color:var(--soluk); font-size:.9rem; }
-  .sorumlu { background:#fff; border:1px solid var(--kenar); border-radius:10px; padding:12px 16px; margin:18px 0; }
-  ul { padding-left:20px; }
-  li { margin:4px 0; }
-  a { color:var(--lacivert); }
-  nav { margin:18px 0 0; }
-  nav a { display:inline-block; background:var(--lacivert); color:#fff; text-decoration:none;
+  ul { padding-left:20px; } li { margin:4px 0; }
+  a { color:var(--altin); }
+  nav { margin:22px 0 0; } nav a { display:inline-block; background:var(--lacivert); color:#fff; text-decoration:none;
     padding:8px 14px; border-radius:8px; font-size:.92rem; }
   footer { margin-top:40px; color:var(--soluk); font-size:.85rem; border-top:1px solid var(--kenar); padding-top:14px; }
   strong { color:var(--lacivert); }
@@ -30,115 +26,30 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>Mevzu · JSPS — Gizlilik Politikası</h1>
-    <div class="tarih">Son güncelleme: 2 Temmuz 2026</div>
+    <h1>Mevzu · JSPS — GİZLİLİK POLİTİKASI</h1>
+    <div class="tarih">Son güncelleme: 7 Temmuz 2026</div>
   </header>
-
-  <div class="sorumlu">
-    <strong>Veri sorumlusu:</strong> Mevzu · JSPS · <strong>İletişim:</strong>
-    <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a>
-  </div>
-
-  <p>Mevzu · JSPS (“Uygulama”) olarak gizliliğine önem veriyoruz. Bu politika hangi verileri neden
-  işlediğimizi ve haklarını açıklar.</p>
-
-  <p><strong>Önemli:</strong> Uygulamayı kullanmak için hesap açman gerekir; <strong>e-posta/şifre
-  ile veya Google (Gmail) hesabıyla</strong> giriş yapabilirsin. Girişte e-posta adresin ve hesap
-  kimliğin işlenir; ayrıca üyelik için ad, soyad, telefon, doğum tarihi ve cinsiyet bilgin alınır.
-  Çalışma verilerin cihazında tutulur ve hesabınla buluta yedeklenir. Reklam/izleme yok.</p>
-
-  <h2>1. İşlediğimiz veriler</h2>
-  <ul>
-    <li><strong>Hesap verisi:</strong> e-posta/şifre ile veya Google hesabıyla giriş yapabilirsin;
-      e-posta adresin ve hesap kimliğin (kullanıcı no) işlenir ve hesabına bağlanır. E-posta/şifre ile
-      kayıt olursan şifren, kimlik doğrulama altyapımız Supabase’de <strong>güvenli biçimde (hash’lenerek)</strong>
-      saklanır; şifreni biz göremeyiz.</li>
-    <li><strong>Profil verisi:</strong> adın, soyadın, telefon numaran, doğum tarihin ve cinsiyetin —
-      üyelik, <strong>yaş doğrulaması (18+)</strong> ve Takdir Belgesi kişiselleştirmesi için işlenir ve
-      hesabına bağlı olarak buluta yazılır.</li>
-    <li><strong>Çalışma verileri:</strong> ilerlemen, tekrar kayıtların, branş/rütbe seçimin ve sicilin
-      cihazının yerel veritabanında tutulur <strong>ve hesabınla buluta (Supabase, AB/Frankfurt)
-      yedeklenir</strong> → cihaz değiştirsen kaybolmaz.</li>
-    <li><strong>İçerik:</strong> kart görselleri içerik sunucumuzdan (Cloudflare R2 / Supabase Storage)
-      internet üzerinden indirilir; indirilen görseller cihazında <strong>şifreli (AES-256)</strong> saklanır.</li>
-    <li><strong>İçerik güvenliği (filigran):</strong> içerik korsanlığına karşı, kart görseline hesabının
-      e-posta adresi soluk biçimde basılır (yalnız senin gördüğün ekranda).</li>
-    <li><strong>Cihaz kimliği:</strong> her kurulumda üretilen benzersiz bir cihaz kimliği tutulur —
-      filigran ve hesap paylaşımını/kötüye kullanımı önleme (aynı hesabın çok fazla cihazda
-      kullanılmasını sınırlama) amacıyla.</li>
-    <li><strong>Satın alma:</strong> üyelik satın alırsan, satın alma Google Play üzerinden alınır ve
-      hesabına bağlanır (kart/banka bilgin Google’da işlenir, bize ulaşmaz).</li>
-    <li><strong>Geri bildirim (yalnız sen gönderirsen):</strong> mesajın + ilgili kart bilgisi veri
-      tabanımıza (Supabase) kaydedilir.</li>
-    <li><strong>Ağ:</strong> içerik ve giriş sunucularımıza bağlanırken IP adresin ilgili sunucuya ulaşır
-      (standart ağ isteği; güvenlik ve kötüye kullanımı önleme amacıyla).</li>
-  </ul>
-  <p>Reklam kimliği, konum, rehber, mikrofon/kamera verisi <strong>toplamıyoruz</strong>. Reklam ağı ve
-  izleme (tracking) <strong>yok</strong>.</p>
-
-  <h2>2. İşleme amaçları ve hukuki sebepler (KVKK m.5)</h2>
-  <ul>
-    <li>Üyelik/giriş, hesabın güvenliği ve ileride satın alımların hesabına bağlanması —
-      <em>sözleşmenin kurulması/ifası ve açık rıza</em>.</li>
-    <li>Geri bildirimini değerlendirmek ve içerik güvenliği (filigran) — <em>meşru menfaat</em>.</li>
-  </ul>
-
-  <h2>3. Veri aktarımı ve yurt dışı</h2>
-  <ul>
-    <li>Hesap/giriş verisi, kimlik doğrulama altyapımız <strong>Supabase</strong> (AB/Frankfurt) ve giriş
-      sağlayıcısı <strong>Google</strong> tarafından işlenir.</li>
-    <li>Kart içeriği (görseller) içerik sunucularımızdan (<strong>Cloudflare R2 / Supabase Storage</strong>)
-      internet üzerinden indirilir; bu sırada IP adresin ilgili sunucuya ulaşır (standart ağ isteği).</li>
-    <li>Geri bildirim gönderirsen mesajın veri tabanımıza (<strong>Supabase</strong>) kaydedilir.</li>
-    <li>Bu servislerin sunucuları <strong>yurt dışında</strong> olduğundan, kayıt/giriş sırasında
-      Kullanım Şartları ve Gizlilik Politikası’nı <strong>onaylayarak</strong> verinin yurt dışına
-      aktarılmasına <strong>açık rıza</strong> vermiş olursun.</li>
-    <li>Verini satmıyor, pazarlama için paylaşmıyoruz. Yasal zorunluluk halinde yetkili makamlarla
-      paylaşım saklıdır.</li>
-  </ul>
-
-  <h2>4. Saklama süresi</h2>
-  <p>Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürece saklanır. Cihazdaki
-  çalışma verisi uygulama yüklü olduğu sürece tutulur; indirilen içerik şifreli olarak cihazında kalır
-  (Mevzuat ekranından silebilirsin).</p>
-
-  <h2>5. Haklarınız (KVKK m.11)</h2>
-  <p>Verinin işlenip işlenmediğini öğrenme, erişme, düzeltme, <strong>silme</strong>, itiraz ve zararın
-  giderilmesini talep etme haklarına sahipsin. Başvuru:
-  <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a>.</p>
-
-  <h2>6. Hesap ve veri silme</h2>
-  <ul>
-    <li>Hesabını <strong>uygulama içinden, tek tuşla</strong> silebilirsin (Evsaf → Ayarlar → Hesap →
-      “Hesabı Sil”): hesabın silinmek üzere işaretlenir ve <strong>30 gün</strong> içinde tekrar giriş
-      yapmazsan hesap verinle birlikte <strong>otomatik olarak kalıcı silinir</strong>. 30 gün içinde
-      girersen hesabın geri gelir.</li>
-    <li>Cihazdaki yerel çalışma verisini, <strong>uygulamayı kaldırarak</strong> (veya cihaz
-      ayarlarından temizleyerek) silebilirsin.</li>
-  </ul>
-
-  <h2>7. Yaş sınırı</h2>
-  <p>Bu uygulamayı kullanmak ve üye olmak için <strong>en az 18 yaşında</strong> olmalısın. Kayıt
-  sırasında doğum tarihin bu şart için doğrulanır; 18 yaş altına yönelik değildir.</p>
-
-  <h2>8. Güvenlik</h2>
-  <p>Çalışma verin cihazında, hesap verin ise güvenli kimlik-doğrulama altyapımızda (Supabase) tutulur.
-  Hiçbir sistem %100 güvenli olmasa da makul teknik/idari tedbirleri alırız.</p>
-
-  <h2>9. Bağlantı reddi</h2>
-  <p>Bu uygulama bağımsız bir sınav hazırlık aracıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik
-  Komutanlığı veya herhangi bir resmî kurum/makamla bağlantılı, ilişkili veya onlar tarafından
-  onaylanmış <strong>değildir</strong>.</p>
-
-  <h2>10. Değişiklikler</h2>
-  <p>Bu politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde/duyuruyla bildiririz.</p>
-
-  <h2>11. İletişim</h2>
-  <p>Sorular için: <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a>.</p>
-
+  <p>Veri sorumlusu: Mevzu · JSPS · İletişim: <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a></p>
+  <h2>1) İŞLENEN VERİLER</h2>
+  <ul><li>Hesap verisi: Uygulamayı kullanmak için hesap açman gerekir. E-posta ve şifre ile VEYA Google (Gmail) hesabıyla giriş yapabilirsin. Girişte e-posta adresin ve hesap kimliğin (kullanıcı no) işlenir ve hesabına bağlanır. E-posta/şifre ile kayıt olursan şifren, kimlik doğrulama altyapımız Supabase'de güvenli biçimde (hash'lenerek) saklanır; şifreni biz göremeyiz.</li><li>Profil verisi: adın, soyadın, telefon numaran, doğum tarihin ve cinsiyetin — üyelik, yaş doğrulaması (18+) ve Takdir Belgesi kişiselleştirmesi için işlenir ve hesabına bağlı olarak buluta (Supabase, AB/Frankfurt) yazılır.</li><li>Çalışma verisi: ilerlemen, branşın, rütben ve sicilin cihazında tutulur VE hesabınla buluta (Supabase, AB/Frankfurt) yedeklenir → cihaz değiştirsen kaybolmaz.</li><li>İçerik: kart görselleri içerik sunucumuzdan (Cloudflare R2 / Supabase Storage) internet üzerinden indirilir; indirilen görseller cihazında ŞİFRELİ (AES-256) saklanır.</li><li>İçerik güvenliği (filigran + erişim kaydı): sızıntı/korsanlık tespiti için kart görseline hesap kimliğin soluk biçimde basılır; ayrıca hangi hesabın hangi içeriğe ne zaman ve hangi IP ile eriştiği güvenlik amacıyla kaydedilir (erişim logu).</li><li>Cihaz kimliği: her kurulumda üretilen benzersiz bir cihaz kimliği tutulur — hesap paylaşımını/kötüye kullanımı önleme (aynı hesabın çok fazla cihazda kullanılmasını sınırlama) amacıyla.</li><li>Satın alma: üyelik satın alırsan, satın alma Google Play / App Store üzerinden alınır ve hesabına bağlanır (kart/banka bilgin ilgili mağazada (Google/Apple) işlenir, bize ulaşmaz).</li><li>Geri bildirim: GÖNDERİRSEN mesajın + ilgili kart bilgisi veri tabanımıza (Supabase) kaydedilir.</li><li>Ağ: içerik ve giriş sunucularımıza bağlanırken IP adresin ilgili sunucuya ulaşır (standart ağ isteği; güvenlik ve kötüye kullanımı önleme amacıyla).</li></ul>
+  <p>Reklam kimliği, konum, rehber, kamera/mikrofon verisi TOPLAMIYORUZ. Reklam göstermiyor, seni izlemiyoruz.</p>
+  <h2>2) AMAÇ ve HUKUKİ SEBEP (KVKK m.5)</h2>
+  <ul><li>Üyelik/giriş, hesabın güvenliği ve ileride satın alımların hesabına bağlanması: sözleşmenin kurulması/ifası ve açık rızan.</li><li>Geri bildirimini değerlendirmek ve içerik güvenliği (filigran): meşru menfaat.</li></ul>
+  <h2>3) AKTARIM ve YURT DIŞI</h2>
+  <p>Hesap/giriş verisi, kimlik doğrulama altyapımız Supabase'de (AB/Frankfurt sunucuları) ve giriş sağlayıcısı Google'da işlenir. Kart içeriği (görseller) içerik sunucularımızdan (Cloudflare R2 / Supabase Storage) internet üzerinden indirilir; bu sırada IP adresin ilgili sunucuya ulaşır (standart ağ isteği). Geri bildirim gönderirsen mesajın (ilgili kart bilgisiyle) veri tabanımıza (Supabase) kaydedilir. Bu servislerin sunucuları YURT DIŞINDA olduğundan, kayıt/giriş sırasında Kullanım Şartları ve Gizlilik Politikası'nı ONAYLAYARAK verinin yurt dışına aktarılmasına AÇIK RIZA vermiş olursun. Verini satmıyor, pazarlama amacıyla paylaşmıyoruz.</p>
+  <h2>4) SAKLAMA</h2>
+  <p>Hesap verin ve buluta yedeklenen çalışma verin, hesabın aktif olduğu sürece saklanır. Cihazdaki çalışma verisi uygulama yüklü olduğu sürece tutulur; indirilen içerik şifreli olarak cihazında kalır (Mevzuat'tan silebilirsin). İçerik erişim kayıtları (güvenlik/kötüye kullanımı önleme amacıyla tutulan hesap, zaman ve IP bilgisi) en fazla 12 ay saklanır, sonra silinir veya anonimleştirilir.</p>
+  <h2>5) HAKLARIN (KVKK m.11)</h2>
+  <p>Erişim, düzeltme, SİLME, itiraz ve zararın giderilmesini talep edebilirsin: <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a>.</p>
+  <h2>6) HESAP ve VERİ SİLME</h2>
+  <ul><li>Hesabını UYGULAMA İÇİNDEN, tek tuşla silebilirsin: Evsaf → Ayarlar → Hesap → "Hesabı Sil". Hesabın silinmek üzere işaretlenir ve 30 gün içinde tekrar giriş yapmazsan hesabın ve hesabına bağlı tüm verin OTOMATİK olarak KALICI silinir. 30 gün içinde girersen hesabın geri gelir.</li><li>Cihazdaki yerel çalışma verisini, uygulamayı kaldırarak (veya cihaz ayarlarından temizleyerek) silebilirsin.</li></ul>
+  <h2>7) YAŞ SINIRI / GÜVENLİK</h2>
+  <p>Bu uygulamayı kullanmak ve üye olmak için en az 18 yaşında olmalısın. Kayıt sırasında doğum tarihin bu şart için doğrulanır; 18 yaş altına yönelik değildir.</p>
+  <h2>8) DEĞİŞİKLİKLER</h2>
+  <p>Politikayı güncelleyebiliriz; önemli değişiklikleri uygulama içinde bildiririz.</p>
+  <p>Sorular: <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a></p>
   <nav><a href="sartlar.html">Kullanım Şartları →</a></nav>
-
-  <footer>© 2026 Mevzu · JSPS · Osmaniye, Türkiye</footer>
+  <footer>© 2026 Mevzu · JSPS · <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a></footer>
 </div>
 </body>
 </html>
