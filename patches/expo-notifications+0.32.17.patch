@@ -1,0 +1,21 @@
+diff --git a/node_modules/expo-notifications/plugin/build/withNotificationsIOS.js b/node_modules/expo-notifications/plugin/build/withNotificationsIOS.js
+index a5f3bb8..ddea384 100644
+--- a/node_modules/expo-notifications/plugin/build/withNotificationsIOS.js
++++ b/node_modules/expo-notifications/plugin/build/withNotificationsIOS.js
+@@ -7,12 +7,10 @@ const fs_1 = require("fs");
+ const path_1 = require("path");
+ const ERROR_MSG_PREFIX = 'An error occurred while configuring iOS notifications. ';
+ const withNotificationsIOS = (config, { mode = 'development', sounds = [], enableBackgroundRemoteNotifications }) => {
+-    config = (0, config_plugins_1.withEntitlementsPlist)(config, (config) => {
+-        if (!config.modResults['aps-environment']) {
+-            config.modResults['aps-environment'] = mode;
+-        }
+-        return config;
+-    });
++    // MEVZU PATCH: aps-environment entitlement'i EKLENMIYOR. Sebep: uzak/remote push kimlik bilgisi
++    // (APNs key) Apple ID + 2FA istiyor (API key yapamaz) -> profil push icermiyor -> Xcode build
++    // "doesn't include aps-environment" ile dusuyor. Uygulama yalnizca YEREL bildirim kullaniyor;
++    // yerel bildirim aps-environment GEREKTIRMEZ. (Uzak push ileride: bu yama kaldirilir + APNs kurulur.)
+     config = withNotificationSounds(config, { sounds });
+     config = withBackgroundRemoteNotifications(config, enableBackgroundRemoteNotifications);
+     return config;
