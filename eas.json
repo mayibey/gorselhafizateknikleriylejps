@@ -25,6 +25,13 @@
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "ascAppId": "6787908212",
+        "ascApiKeyPath": "C:/Users/GIGABYTE/OneDrive/Desktop/AuthKey_RGL99F5D25.p8",
+        "ascApiKeyId": "RGL99F5D25",
+        "ascApiKeyIssuerId": "6ad2e590-a37b-41d0-bcd6-0462ff64781f"
+      }
+    }
   }
 }
