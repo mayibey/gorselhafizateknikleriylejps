@@ -72,7 +72,12 @@ export default function SicilScreen() {
     void Promise.all([getPerformans(), getAllCards()])
       .then(([perf, cards]) => {
         const tum = zayifKartlar(perf, cards);
-        const liste = calisilabilirZayifMevzi(tum);
+        // PREMIUM SIZINTI KAPISI: çalışılabilir zayıf listesi yalnız ERİŞİLEBİLİR kanunları içerir →
+        // süresi biten kullanıcı premium bir zayıf mevzinin no+başlığını listede görmez. Kilitliler
+        // aşağıda `disari`→`kilitli` sayacına düşer (zaten "üyelik gerek" uyarısı veriliyor). (Denetim.)
+        const liste = calisilabilirZayifMevzi(tum).filter((z) =>
+          kanunErisilebilir(kartKlasoru(z.card.gorsel_yolu), z.card.blok),
+        );
         const calisSet = new Set(liste.map((z) => z.card.id));
         // Çalışılamayan (indirilmemiş) zayıfları kilit durumuna göre ayır: kilitli kanunun mevzisi
         // İNDİRİLEMEZ (üyelik gerek) → "indir" demek yanıltıcı; erişilebilir olan indirilebilir.

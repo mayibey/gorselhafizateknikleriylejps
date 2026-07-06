@@ -21,6 +21,8 @@ import {
 } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
 import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
+import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
+import { useUyelik } from '@/lib/uyelik-context';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
@@ -107,6 +109,7 @@ function GsAyrac() {
 }
 
 export default function KarargahScreen() {
+  const { premium } = useUyelik();
   const router = useRouter();
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
@@ -147,8 +150,13 @@ export default function KarargahScreen() {
         // birleşik kartları (anahtar deseni _ozet_/_ayirt_) ham anahtar sızdırıyordu
         // ("Özet — ...ayirt") → ele. Başlığı "Madde X" olan yer-tutucular da hariç.
         const ozetAyirtMi = (yol: string | null) => !!yol && /_(ayirt|ozet)(_|$)/i.test(yol);
+        // PREMIUM SIZINTI KAPISI: "Günün Maddesi" yalnız ERİŞİLEBİLİR kanunlardan seçilir →
+        // ücretsiz kullanıcı ana ekranda premium bir maddenin no+başlığını görmez. (Denetim.)
         const adaylar = cards.filter(
-          (c) => !ozetAyirtMi(c.gorsel_yolu) && !/^Madde\s/i.test(c.baslik),
+          (c) =>
+            !ozetAyirtMi(c.gorsel_yolu) &&
+            !/^Madde\s/i.test(c.baslik) &&
+            lawErisilebilirSaf(c.law_id, premium),
         );
         if (adaylar.length > 0) {
           const gun = Number(bugunISO().split('-').join('')) || 0;
@@ -199,7 +207,7 @@ export default function KarargahScreen() {
         setGunMadde(null);
         setUnutulan([]);
       });
-  }, []);
+  }, [premium]);
 
   useFocusEffect(yukle);
 

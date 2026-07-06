@@ -386,7 +386,14 @@ export default function AraScreen() {
               {sonuclar.length} madde bulundu
             </AppText>
           }
-          renderItem={({ item }) => <Sonuc s={item} q={sorgu.trim()} onPress={() => ac(item)} />}
+          renderItem={({ item }) => (
+            <Sonuc
+              s={item}
+              q={sorgu.trim()}
+              kilitli={!kanunErisilebilir(LAW_KLASOR[item.lawId])}
+              onPress={() => ac(item)}
+            />
+          )}
         />
       )}
 
@@ -454,8 +461,22 @@ export default function AraScreen() {
   );
 }
 
-/** Tek sonuç kartı: kanun · madde no — başlık · vurgulu snippet. */
-function Sonuc({ s, q, onPress }: { s: AramaSonuc; q: string; onPress: () => void }) {
+/** Tek sonuç kartı: kanun · madde no — başlık · vurgulu snippet.
+ * PREMIUM SIZINTI KAPISI: kilitli kanunda snippet (madde metni + "Aklınıza çivileyin"
+ * anlatımı = ödemeli içerik) GÖSTERİLMEZ; yalnız kanun adı + madde başlığı (keşif/satış için)
+ * kalır, yerine "üyelik gerekli" şeridi. Dokununca ac() zaten paywall'a atar. (Denetim: arama
+ * sonuç snippet'i kilitsiz premium metni sızdırıyordu — dokunma kapısı yetmiyordu.) */
+function Sonuc({
+  s,
+  q,
+  kilitli,
+  onPress,
+}: {
+  s: AramaSonuc;
+  q: string;
+  kilitli: boolean;
+  onPress: () => void;
+}) {
   return (
     <Pressable style={({ pressed }) => [styles.kart, pressed && styles.pressed]} onPress={onPress}>
       <View style={styles.ust}>
@@ -471,7 +492,16 @@ function Sonuc({ s, q, onPress }: { s: AramaSonuc; q: string; onPress: () => voi
       <AppText variant="govde" color="lacivert" bold style={styles.baslik}>
         {maddeEtiket(s.maddeNo, s.baslik)}
       </AppText>
-      {vurgula(s.snippet, q)}
+      {kilitli ? (
+        <View style={styles.kilitSerit}>
+          <MaterialCommunityIcons name="lock-outline" size={14} color={Palette.solukMetin} />
+          <AppText variant="kucuk" color="solukMetin" style={styles.snippet}>
+            Üyelik gerekli — görmek için dokun
+          </AppText>
+        </View>
+      ) : (
+        vurgula(s.snippet, q)
+      )}
     </Pressable>
   );
 }
@@ -688,6 +718,11 @@ const styles = StyleSheet.create({
   },
   snippet: {
     lineHeight: 20,
+  },
+  kilitSerit: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
   },
   pressed: {
     opacity: 0.85,
