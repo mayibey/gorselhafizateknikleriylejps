@@ -1,5 +1,5 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { Linking, Pressable, ScrollView, StyleSheet } from 'react-native';
+import { Linking, Platform, Pressable, ScrollView, StyleSheet } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -11,7 +11,9 @@ export default function YasalScreen() {
   const router = useRouter();
   const { tip } = useLocalSearchParams<{ tip?: string }>();
   const sartlar = tip === 'sartlar';
-  const metin = sartlar ? SARTLAR_METNI : GIZLILIK_METNI;
+  const hamMetin = sartlar ? SARTLAR_METNI : GIZLILIK_METNI;
+  // Metinler Android-first yazıldı ("Google Play"). iOS'ta mağaza App Store → uyarlanır.
+  const metin = Platform.OS === 'ios' ? hamMetin.split('Google Play').join('App Store') : hamMetin;
   const url = sartlar ? SARTLAR_URL : GIZLILIK_URL;
   const baslik = sartlar ? 'Kullanım Şartları' : 'Gizlilik Politikası';
 

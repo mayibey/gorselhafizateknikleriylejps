@@ -526,10 +526,32 @@ function PaywallIcerik() {
       </Pressable>
 
       <AppText variant="etiket" color="solukMetin" style={styles.yasal}>
-        Yıllık plan bir aboneliktir ve iptal edilmezse her yıl otomatik yenilenir; dilediğin zaman
-        Google Play → Abonelikler'den iptal edebilirsin. Ömür boyu plan tek seferlik ödemedir.
-        Ödemeler Google Play üzerinden alınır.
+        Yıllık plan bir aboneliktir ve iptal edilmezse her yıl otomatik yenilenir; dilediğin zaman{' '}
+        {ios ? 'Ayarlar → Abonelikler' : 'Google Play → Abonelikler'}'den iptal edebilirsin. Ömür boyu
+        plan tek seferlik ödemedir. Ödemeler {ios ? 'App Store' : 'Google Play'} üzerinden alınır.
       </AppText>
+
+      {/* Apple 3.1.2 (ve Google): otomatik yenilenen abonelikte ödeme ekranında işlevsel
+          Kullanım Şartları (EULA) + Gizlilik Politikası linki ZORUNLU. */}
+      <View style={styles.yasalLinkler}>
+        <AppText
+          variant="etiket"
+          color="lacivert"
+          bold
+          onPress={() => router.push({ pathname: '/yasal', params: { tip: 'sartlar' } })}>
+          Kullanım Şartları
+        </AppText>
+        <AppText variant="etiket" color="solukMetin">
+          {'   ·   '}
+        </AppText>
+        <AppText
+          variant="etiket"
+          color="lacivert"
+          bold
+          onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}>
+          Gizlilik Politikası
+        </AppText>
+      </View>
     </>
   );
 }
@@ -736,6 +758,12 @@ const styles = StyleSheet.create({
   yasal: {
     textAlign: 'center',
     lineHeight: 18,
+  },
+  yasalLinkler: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
   pressed: {
     opacity: 0.85,
