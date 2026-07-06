@@ -3,6 +3,8 @@
  * Akış: paywall (useIAP) requestPurchase → purchase event → satinAlmaDogrula(token) → hak yazılır
  * → finishTransaction. Hak SUNUCUDA yazılır (istemci "premium" diyemez).
  */
+import { Platform } from 'react-native';
+
 import { ABONELIK_URUNLERI } from '@/constants/urunler';
 
 import { supabase } from './supabase';
@@ -33,8 +35,9 @@ export async function satinAlmaDogrula(urun: string, token: string): Promise<Dog
   if (!supabase) throw new Error('Sunucu bağlantısı yok.');
   if (!token) throw new Error('Satın alma belirteci alınamadı.');
   const tip = abonelikMi(urun) ? 'abonelik' : 'omurboyu';
+  // platform → sunucu Apple (StoreKit JWS) mi Google (Play token) mi doğrulayacağını bilir.
   const { data, error } = await supabase.functions.invoke<DogrulamaSonuc>('dogrula-satinalma', {
-    body: { token, urun, tip },
+    body: { token, urun, tip, platform: Platform.OS },
   });
   if (error) {
     // invoke hatasında sunucunun JSON gövdesi error.context (Response) içinde — net mesajı çıkar.

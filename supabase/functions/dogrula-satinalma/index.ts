@@ -17,6 +17,12 @@ const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY')!;
 const SERVICE_KEY = Deno.env.get('SERVICE_ROLE_KEY')!;
 const PAKET = 'app.mevzujsps.android';
+const BUNDLE_IOS = 'app.mevzujsps.ios';
+// App Store Server API: önce üretim, olmazsa sandbox (test satın almaları sandbox'ta doğrulanır).
+const APPLE_HOSTLAR = [
+  'https://api.storekit.itunes.apple.com',
+  'https://api.storekit-sandbox.itunes.apple.com',
+];
 
 // TEK KAPSAM modeli (4 Tem): satılan 3 ürün + eski model ürünleri (geriye uyum — geçmiş
 // satın almalar premium saymaya devam eder). Bilinmeyen ürün reddedilir.
@@ -105,6 +111,105 @@ async function googleToken(): Promise<string> {
   return veri.access_token;
 }
 
+// ---- APPLE (StoreKit 2 / App Store Server API) ----
+// İstemci purchaseToken'ı iOS'ta bir JWS'tir (Apple imzalı transaction). Güven zinciri:
+// transactionId'yi JWS'ten çıkar → KENDİ imzaladığımız API JWT'siyle Apple'a sor → Apple'ın döndürdüğü
+// imzalı transaction'ı (TLS + kendi kimliğimizle) GÜVEN → alanları doğrula. Sahte/başka-app token'ı
+// Apple'da 404 ya da bundleId uyuşmazlığı verir.
+class AppleRed extends Error {
+  kod: number;
+  kodAdi?: string;
+  constructor(mesaj: string, kod: number, kodAdi?: string) {
+    super(mesaj);
+    this.kod = kod;
+    this.kodAdi = kodAdi;
+  }
+}
+
+function b64urlCoz(s: string): Uint8Array {
+  s = s.replace(/-/g, '+').replace(/_/g, '/');
+  while (s.length % 4) s += '=';
+  const bin = atob(s);
+  return Uint8Array.from(bin, (c) => c.charCodeAt(0));
+}
+
+// JWS/JWT payload'ını (imza DOĞRULAMADAN) çöz — yalnız Apple'a soracağımız transactionId için.
+// Güven, Apple API yanıtından gelir; istemci token'ının payload'ına güvenilmez.
+function jwsPayload(jws: string): Record<string, unknown> {
+  const p = String(jws).split('.');
+  if (p.length < 2) throw new AppleRed('Geçersiz satın alma belirteci', 402);
+  return JSON.parse(new TextDecoder().decode(b64urlCoz(p[1])));
+}
+
+// App Store Server API için ES256 JWT (kendi kimliğimiz). Gizli: APPLE_IAP_* (başkan üretir).
+async function appleJwt(): Promise<string> {
+  const issuer = Deno.env.get('APPLE_IAP_ISSUER_ID');
+  const keyId = Deno.env.get('APPLE_IAP_KEY_ID');
+  const pem = Deno.env.get('APPLE_IAP_PRIVATE_KEY');
+  if (!issuer || !keyId || !pem) throw new AppleRed('Apple doğrulama yapılandırılmamış', 500);
+  const simdi = Math.floor(Date.now() / 1000);
+  const header = b64url(new TextEncoder().encode(JSON.stringify({ alg: 'ES256', kid: keyId, typ: 'JWT' })));
+  const claim = b64url(
+    new TextEncoder().encode(
+      JSON.stringify({ iss: issuer, iat: simdi, exp: simdi + 600, aud: 'appstoreconnect-v1', bid: BUNDLE_IOS }),
+    ),
+  );
+  const imzalanacak = `${header}.${claim}`;
+  const key = await crypto.subtle.importKey(
+    'pkcs8',
+    pemToDer(pem),
+    { name: 'ECDSA', namedCurve: 'P-256' },
+    false,
+    ['sign'],
+  );
+  const imza = await crypto.subtle.sign({ name: 'ECDSA', hash: 'SHA-256' }, key, new TextEncoder().encode(imzalanacak));
+  return `${imzalanacak}.${b64url(imza)}`;
+}
+
+// transactionId → Apple'ın imzalı transaction bilgisi (üretim, olmazsa sandbox).
+async function appleTransactionBilgi(txId: string): Promise<Record<string, unknown> | null> {
+  const jwt = await appleJwt();
+  for (const host of APPLE_HOSTLAR) {
+    const r = await fetch(`${host}/inApps/v1/transactions/${txId}`, {
+      headers: { Authorization: `Bearer ${jwt}` },
+    });
+    if (r.ok) {
+      const d = await r.json();
+      if (d?.signedTransactionInfo) return jwsPayload(d.signedTransactionInfo as string);
+      return null;
+    }
+    // 404 üretimde → sandbox transaction olabilir → sonraki host'u dene. Diğer hatalarda da dene.
+  }
+  return null;
+}
+
+// Apple satın almasını doğrula → { bitis } (abonelik bitiş ISO / omurboyu null). Reddi AppleRed atar.
+async function appleDogrula(
+  token: string,
+  urun: string,
+  tip: string,
+  userId: string,
+): Promise<{ bitis: string | null }> {
+  const istemciTx = jwsPayload(token);
+  const txId = String(istemciTx.transactionId ?? istemciTx.originalTransactionId ?? '');
+  if (!txId) throw new AppleRed('İşlem kimliği okunamadı', 402);
+  const bilgi = await appleTransactionBilgi(txId);
+  if (!bilgi) throw new AppleRed('Satın alma Apple tarafında doğrulanamadı', 402);
+  if (bilgi.bundleId !== BUNDLE_IOS) throw new AppleRed('Satın alma bu uygulamaya ait değil', 402);
+  if (bilgi.productId !== urun) throw new AppleRed('Ürün uyuşmuyor', 402);
+  if (bilgi.revocationDate) throw new AppleRed('Satın alma iptal edilmiş', 402);
+  // Sahiplik: appAccountToken = satın alırken verilen kullanıcı UUID'si. Apple küçük harfe çevirir.
+  const hesap = bilgi.appAccountToken ? String(bilgi.appAccountToken).toLowerCase() : '';
+  if (hesap && hesap !== userId.toLowerCase()) {
+    throw new AppleRed('Bu satın alma başka bir hesaba ait.', 403, 'baska_hesap');
+  }
+  const bitis =
+    tip === 'abonelik' && typeof bilgi.expiresDate === 'number'
+      ? new Date(bilgi.expiresDate).toISOString()
+      : null;
+  return { bitis };
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
   if (req.method !== 'POST') return hata('Yöntem desteklenmiyor', 405);
@@ -117,7 +222,7 @@ Deno.serve(async (req) => {
   if (aHata || !user) return hata('Geçersiz oturum', 401);
 
   // 2) Girdi
-  const { token, urun, tip } = await req.json().catch(() => ({}));
+  const { token, urun, tip, platform } = await req.json().catch(() => ({}));
   if (!token || !urun || (tip !== 'abonelik' && tip !== 'omurboyu')) return hata('Eksik/geçersiz girdi', 400);
   if (!URUNLER.has(urun)) return hata('Bilinmeyen ürün', 400);
 
@@ -145,6 +250,20 @@ Deno.serve(async (req) => {
         409,
         'baska-hesap',
       );
+    }
+
+    // iOS: Apple/StoreKit doğrulaması (App Store Server API) — Google yolundan tamamen ayrı.
+    // (Android ya da platform göndermeyen eski istemci → aşağıdaki Google akışı.) iOS'ta ayrı
+    // "yükseltme" ürünü yok, yıllık→ömür boyu tam fiyat → YUKSELTME_SARTI iOS'ta çalışmaz.
+    if (platform === 'ios') {
+      const { bitis } = await appleDogrula(token, urun, tip, user.id);
+      await admin.from('uyelik_haklari').upsert({
+        user_id: user.id, urun, tip, bitis, satin_alma_token: token, son_dogrulama: new Date().toISOString(),
+      });
+      await log('dogrulandi', `apple ${tip} bitis=${bitis}`, null);
+      return new Response(JSON.stringify({ ok: true, premium: true, bitis }), {
+        headers: { ...CORS, 'Content-Type': 'application/json' },
+      });
     }
 
     // Yükseltme ürünü: aktif yıllık abonelik ŞARTI (yalnız İLK doğrulamada; geri yüklemede aranmaz).
@@ -234,6 +353,10 @@ Deno.serve(async (req) => {
     await log('dogrulandi', `abonelik bitis=${bitis}`, s);
     return new Response(JSON.stringify({ ok: true, premium: true, bitis }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
   } catch (e) {
+    if (e instanceof AppleRed) {
+      await log('reddedildi', 'apple: ' + e.message, null);
+      return hata(e.message, e.kod, e.kodAdi);
+    }
     await log('hata', e instanceof Error ? e.message : String(e), null);
     return hata('Satın alma doğrulanamadı, tekrar dene', 500);
   }
