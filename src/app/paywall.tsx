@@ -1,5 +1,8 @@
 /**
- * Paywall + satın alma akışı (expo-iap, DİREKT Google Play Billing).
+ * Paywall + satın alma akışı (expo-iap — Android: Google Play Billing, iOS: StoreKit 2).
+ * Platform ayrımı `satinAl`'da: Android teklif/indirim (offerToken); iOS base ürün (appAccountToken=UUID,
+ * ilk sürüm indirimsiz). İndirim fonksiyonları iOS'ta zaten no-op (platform!=='android'). Yıllık→ömür
+ * boyu: Android farkla yükseltme (URUN_YUKSELTME), iOS tam fiyat (URUN_OMURBOYU — fark ürünü yok).
  *
  * TEK KAPSAM modeli (4 Tem): uygulamanın TAMAMI tek pakettir → YILLIK (abonelik) ya da
  * ÖMÜR BOYU (tek seferlik) satın alınır; aktif yıllık sahibi FARK fiyatıyla ömür boyuna yükselir.
@@ -69,8 +72,8 @@ function WebNot() {
     <View style={styles.bilgiKart}>
       <MaterialCommunityIcons name="cellphone-arrow-down" size={22} color={Palette.amber} />
       <AppText variant="kucuk" color="solukMetin" style={styles.esnek}>
-        Satın alma yalnızca Android uygulamasında (Google Play) yapılabilir. Web sürümünde önizleme
-        amaçlıdır.
+        Satın alma yalnızca telefon uygulamasında (App Store / Google Play) yapılabilir. Web
+        sürümünde önizleme amaçlıdır.
       </AppText>
     </View>
   );
@@ -112,6 +115,13 @@ function PaywallIcerik() {
   // Sahiplik TİPE göre: ömür boyu → tam; yalnız yıllık → yükseltme teklif edilir.
   const sahipOmur = aktifHaklar.some((h) => h.tip === 'omurboyu');
   const sahipYillik = !sahipOmur && aktifHaklar.some((h) => h.tip === 'abonelik');
+  // iOS'ta ayrı "farkla yükseltme" ürünü YOK (URUN_YUKSELTME oluşturulmadı) → yıllık sahibi ömür boyuna
+  // TAM fiyatla geçer. Abonelik yönetimi de platforma göre (Apple / Google).
+  const ios = Platform.OS === 'ios';
+  const yukseltUrun = ios ? URUN_OMURBOYU : URUN_YUKSELTME;
+  const ABONELIK_YONETIM = ios
+    ? 'https://apps.apple.com/account/subscriptions'
+    : PLAY_ABONELIKLER;
 
   const { connected, products, subscriptions, fetchProducts, requestPurchase, finishTransaction } =
     useIAP({
@@ -231,9 +241,24 @@ function PaywallIcerik() {
     setMesaj(null);
     setIslemUrun(urun);
     try {
-      // obfuscatedAccountId = kullanıcının hesap kimliği → satın alma GOOGLE tarafında da hesaba bağlanır.
+      // Hesap kimliği (UUID) → satın alma mağaza tarafında da hesaba bağlanır (sunucu sahiplik kontrolü).
       const hesapId = kullanici?.id;
-      if (abonelik) {
+      if (Platform.OS === 'ios') {
+        // iOS/StoreKit: indirim/teklif YOK (ilk sürüm base ürün — Android'deki offerToken sistemi
+        // iOS'ta yok). appAccountToken = kullanıcı UUID (Apple tarafı hesaba bağlar). subs/in-app ayrı
+        // çağrı — requestPurchase args `type` ile ayrışır (tek ternary TS'i daraltmaz).
+        if (abonelik) {
+          await requestPurchase({
+            type: 'subs',
+            request: { apple: { sku: urun, appAccountToken: hesapId } },
+          });
+        } else {
+          await requestPurchase({
+            type: 'in-app',
+            request: { apple: { sku: urun, appAccountToken: hesapId } },
+          });
+        }
+      } else if (abonelik) {
         const token = offerToken(urun);
         await requestPurchase({
           type: 'subs',
@@ -313,8 +338,8 @@ function PaywallIcerik() {
         <View style={styles.bilgiKart}>
           <MaterialCommunityIcons name="store-off-outline" size={22} color={Palette.amber} />
           <AppText variant="kucuk" color="solukMetin" style={styles.esnek}>
-            Play Store bağlantısı kurulamadı. Satın alma yalnızca Google Play'den yüklenmiş gerçek
-            uygulamada çalışır (Expo Go'da değil).
+            Mağaza bağlantısı kurulamadı. Satın alma yalnızca mağazadan ({ios ? 'App Store' : 'Google Play'})
+            yüklenmiş gerçek uygulamada çalışır (Expo Go'da değil).
           </AppText>
         </View>
       ) : null}
@@ -377,28 +402,31 @@ function PaywallIcerik() {
             Ömür boyu tam erişimin var — her şey açık.
           </AppText>
         ) : sahipYillik ? (
-          // Yıllık sahibi → ömür boyuna FARK fiyatıyla yükseltme teklifi.
+          // Yıllık sahibi → ömür boyuna geçiş. Android: FARK fiyatıyla (URUN_YUKSELTME).
+          // iOS: fark ürünü yok → TAM fiyatla ömür boyu (URUN_OMURBOYU).
           <View style={styles.yukseltmeSar}>
             <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
-              Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.
+              {ios
+                ? 'Yıllık planın aktif. İstersen ömür boyu tam erişime geçebilirsin.'
+                : 'Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.'}
             </AppText>
             <PlanButon
-              baslik="Ömür boyuna yükselt"
-              fiyat={fiyat(URUN_YUKSELTME)}
-              altYazi="tek seferlik fark ödemesi"
+              baslik={ios ? 'Ömür boyuna geç' : 'Ömür boyuna yükselt'}
+              fiyat={fiyat(yukseltUrun)}
+              altYazi={ios ? 'tek seferlik — tam erişim' : 'tek seferlik fark ödemesi'}
               vurgu
-              mesgul={islemUrun === URUN_YUKSELTME}
-              pasif={!connected || (!!islemUrun && islemUrun !== URUN_YUKSELTME)}
-              onPress={() => void satinAl(URUN_YUKSELTME, false)}
+              mesgul={islemUrun === yukseltUrun}
+              pasif={!connected || (!!islemUrun && islemUrun !== yukseltUrun)}
+              onPress={() => void satinAl(yukseltUrun, false)}
             />
             <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
-              Yükselttikten sonra yıllık aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
+              Geçtikten sonra yıllık aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
               <AppText
                 variant="etiket"
                 color="lacivert"
                 bold
-                onPress={() => void Linking.openURL(PLAY_ABONELIKLER)}>
-                Google Play → Abonelikler
+                onPress={() => void Linking.openURL(ABONELIK_YONETIM)}>
+                {ios ? 'Ayarlar → Abonelikler' : 'Google Play → Abonelikler'}
               </AppText>
               'den yıllığı iptal et (kalan süren zaten ömür boyu erişimin içinde).
             </AppText>
