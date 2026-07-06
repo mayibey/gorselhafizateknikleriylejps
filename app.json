@@ -8,7 +8,10 @@
     "scheme": "mevzu",
     "userInterfaceStyle": "automatic",
     "ios": {
+      "bundleIdentifier": "app.mevzujsps.ios",
+      "buildNumber": "1",
       "icon": "./assets/images/mevzu-icon-1024.png",
+      "usesAppleSignIn": true,
       "config": {
         "usesNonExemptEncryption": false
       }

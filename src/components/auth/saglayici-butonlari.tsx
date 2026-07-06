@@ -1,9 +1,11 @@
 /**
- * "Google ile giriş yap / kaydol" butonu (gerçek logoyla). Birincil giriş yöntemi.
- * (Apple butonu Android'de kaldırıldı — iOS fazında ayrıca eklenecek; kural: Google varsa Apple da zorunlu.)
+ * Giriş sağlayıcı butonları: Google (her platform) + Apple (YALNIZ iOS — App Store Guideline 4.8:
+ * Google sunuluyorsa Apple da eşdeğer seçenek olarak zorunlu). Apple butonu Apple'ın kendi native
+ * bileşeni (tasarım kuralı gereği); yalnız iOS'ta render edilir → Android/web'de hiç görünmez.
  */
+import * as AppleAuthentication from 'expo-apple-authentication';
 import { Image } from 'expo-image';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { GOOGLE_LOGO } from '../../assets/auth-gorselleri';
 import { AppText } from '@/components/ui/app-text';
@@ -11,10 +13,13 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 
 export function SaglayiciButonlari({
   onGoogle,
+  onApple,
   mesgul,
   kayit,
 }: {
   onGoogle: () => void;
+  /** iOS'ta Apple ile giriş/kaydol. Verilmezse Apple butonu gösterilmez (Android/web). */
+  onApple?: () => void;
   mesgul?: boolean;
   /** true → "…ile kaydol" (kayıt modu), false/undefined → "…ile giriş yap". */
   kayit?: boolean;
@@ -33,6 +38,21 @@ export function SaglayiciButonlari({
           Google ile {eylem}
         </AppText>
       </Pressable>
+      {Platform.OS === 'ios' && onApple ? (
+        <AppleAuthentication.AppleAuthenticationButton
+          buttonType={
+            kayit
+              ? AppleAuthentication.AppleAuthenticationButtonType.SIGN_UP
+              : AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN
+          }
+          buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.BLACK}
+          cornerRadius={Radius.m}
+          style={[styles.appleBtn, mesgul && styles.pasif]}
+          onPress={() => {
+            if (!mesgul) onApple();
+          }}
+        />
+      ) : null}
     </View>
   );
 }
@@ -60,6 +80,10 @@ const styles = StyleSheet.create({
   logo: {
     width: 34,
     height: 34,
+  },
+  appleBtn: {
+    height: 54,
+    width: '100%',
   },
   pressed: {
     opacity: 0.85,

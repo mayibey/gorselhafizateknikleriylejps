@@ -12,6 +12,7 @@ import { AppState } from 'react-native';
 
 import {
   cikisYap,
+  appleIleGiris,
   gmailIleGiris,
   hesapGeriGetir,
   hesapSilmeTalebiKur,
@@ -31,6 +32,7 @@ type AuthContextDeger = {
   yukleniyor: boolean;
   hazir: boolean; // Supabase yapılandırıldı mı (giriş mümkün mü)
   girisYap: () => Promise<void>;
+  girisYapApple: () => Promise<void>; // iOS'ta Apple ile giriş (Guideline 4.8)
   cikis: () => Promise<void>;
   hesabiSil: () => Promise<void>; // 30 günlük silme talebi + çıkış
   reaktiveEdildi: boolean; // bu girişte silinmek üzere olan hesap geri getirildi mi
@@ -128,6 +130,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Oturum onAuthStateChange ile gelir; ekstra setState gerekmez.
   }
 
+  async function girisYapApple(): Promise<void> {
+    await appleIleGiris();
+    // Oturum onAuthStateChange ile gelir (girisYap ile aynı).
+  }
+
   async function cikis(): Promise<void> {
     await senkronKaydet(); // çıkmadan önce son ilerlemeyi buluta yaz
     await cikisYap();
@@ -149,6 +156,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         yukleniyor,
         hazir: supabaseHazir,
         girisYap,
+        girisYapApple,
         cikis,
         hesabiSil,
         reaktiveEdildi,

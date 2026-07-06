@@ -236,6 +236,59 @@ export async function gmailIleGiris(): Promise<void> {
   // code de token da yoksa: oturum deep-link dinleyicisinden gelebilir → sessiz geç.
 }
 
+/** Apple girişinin GERÇEK sebebi — UI bu mesajı OLDUĞU GİBİ gösterir (GoogleGirisHatasi deseni). */
+export class AppleGirisHatasi extends Error {
+  constructor(mesaj: string) {
+    super(mesaj);
+    this.name = 'AppleGirisHatasi';
+  }
+}
+
+/**
+ * NATIVE Apple girişi (YALNIZ iOS) — App Store Guideline 4.8: Google sunuluyorsa Apple da EŞDEĞER
+ * seçenek olarak ZORUNLU. AppleAuthentication.signInAsync → identityToken → Supabase
+ * signInWithIdToken({ provider:'apple' }). Dinamik import → Android/web bundle'ına iOS native
+ * modülü GİRMEZ (nativeGoogleGiris ile aynı desen). Ad-soyad SADECE İLK girişte gelir (Apple
+ * sonraki girişlerde vermez) → geldiğinde kullanıcı meta verisine yazılır (profil ön-doldurma).
+ * ÖN KOŞUL (başkan panel işi): Supabase Auth → Providers → Apple AÇIK + Apple Developer'da
+ * "Sign in with Apple" capability & Services ID/key. Bunlar olmadan signInWithIdToken reddeder.
+ */
+export async function appleIleGiris(): Promise<void> {
+  if (!supabaseHazir || !supabase) throw new KapaliHata();
+  if (Platform.OS !== 'ios') {
+    throw new AppleGirisHatasi('Apple ile giriş yalnızca iPhone/iPad üzerinde kullanılabilir.');
+  }
+  const AppleAuthentication = await import('expo-apple-authentication');
+  let credential: import('expo-apple-authentication').AppleAuthenticationCredential;
+  try {
+    credential = await AppleAuthentication.signInAsync({
+      requestedScopes: [
+        AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
+        AppleAuthentication.AppleAuthenticationScope.EMAIL,
+      ],
+    });
+  } catch (e) {
+    if ((e as { code?: string })?.code === 'ERR_REQUEST_CANCELED') return; // vazgeçti → sessiz
+    throw new AppleGirisHatasi(`Apple giriş hatası: ${e instanceof Error ? e.message : String(e)}`);
+  }
+  const idToken = credential.identityToken;
+  if (!idToken) throw new AppleGirisHatasi('Apple kimlik bilgisi alınamadı — tekrar dene.');
+  const { error } = await supabase.auth.signInWithIdToken({ provider: 'apple', token: idToken });
+  if (error) throw new AppleGirisHatasi(`Sunucu Apple girişini kabul etmedi: ${error.message}`);
+  // Ad-soyad yalnız İLK girişte gelir → geldiğinde meta veriye yaz (profil ekranı ön-doldurabilir).
+  const tamAd = [credential.fullName?.givenName, credential.fullName?.familyName]
+    .filter(Boolean)
+    .join(' ')
+    .trim();
+  if (tamAd) {
+    try {
+      await supabase.auth.updateUser({ data: { full_name: tamAd } });
+    } catch {
+      // meta yazımı başarısız → önemsiz, giriş yine geçerli
+    }
+  }
+}
+
 // --- E-posta/şifre ile giriş (Google'a alternatif) ---
 
 /** E-posta + şifre ile giriş. */

@@ -35,7 +35,7 @@ type Mesaj = { tip: 'hata' | 'bilgi'; metin: string };
 function hataMetni(e: unknown): string {
   const m = e instanceof Error ? e.message : '';
   // Google girişinin GERÇEK sebebi zaten Türkçe hazırlandı → olduğu gibi göster (kör teşhis bitsin).
-  if (e instanceof Error && e.name === 'GoogleGirisHatasi') return m;
+  if (e instanceof Error && (e.name === 'GoogleGirisHatasi' || e.name === 'AppleGirisHatasi')) return m;
   if (/invalid login credentials/i.test(m)) return 'E-posta veya şifre hatalı.';
   if (/already registered|already exists/i.test(m)) return 'Bu e-posta zaten kayıtlı. Giriş yap.';
   if (/email not confirmed/i.test(m)) return 'E-postanı doğrula (gelen kutunu kontrol et).';
@@ -44,7 +44,7 @@ function hataMetni(e: unknown): string {
 
 export function AuthEkrani() {
   const router = useRouter();
-  const { girisYap, oturumDustu } = useAuth();
+  const { girisYap, girisYapApple, oturumDustu } = useAuth();
   const [mod, setMod] = useState<Mod>('giris');
   const [eposta, setEposta] = useState('');
   const [sifre, setSifre] = useState('');
@@ -70,6 +70,20 @@ export function AuthEkrani() {
     setMesgul(true);
     try {
       await girisYap();
+    } catch (e) {
+      setMesaj({ tip: 'hata', metin: hataMetni(e) });
+    } finally {
+      setMesgul(false);
+    }
+  }
+
+  async function apple() {
+    // Google ile aynı rıza kuralı (Apple girişten de hesap açılabilir).
+    if (!sartlar) return setMesaj({ tip: 'hata', metin: RIZA_UYARI });
+    setMesaj(null);
+    setMesgul(true);
+    try {
+      await girisYapApple();
     } catch (e) {
       setMesaj({ tip: 'hata', metin: hataMetni(e) });
     } finally {
@@ -210,7 +224,12 @@ export function AuthEkrani() {
 
         {/* BİRİNCİL yöntem: Google (öne çıkar). Apple Android'de yok. */}
         <View style={styles.googleSar}>
-          <SaglayiciButonlari onGoogle={() => void google()} mesgul={mesgul} kayit={kayitMi} />
+          <SaglayiciButonlari
+            onGoogle={() => void google()}
+            onApple={() => void apple()}
+            mesgul={mesgul}
+            kayit={kayitMi}
+          />
         </View>
 
         {mesaj ? (
