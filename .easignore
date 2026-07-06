@@ -1,0 +1,23 @@
+# EAS Build YÜKLEMESİNE girmeyecekler. .easignore varsa EAS bunu kullanır (gitignore yerine),
+# o yüzden node_modules/.git/native klasörler de BURADA açıkça dışlanmalı.
+# SEBEP: yerel Android build (scripts/build-aab.sh) android/ altında ~1GB artefakt bırakıyor;
+# bu iOS EAS build'i için GEREKSİZ ama yüklemeyi 1.5GB'a çıkarıyordu → burada dışlanır.
+# NOT: assets/kartlar + assets/sesler (görsel+ses) DIŞLANMAZ — görsel/ses registry require()
+# ile bundle'a giriyor; dışlanırsa Metro çözemez. (App Store öncesi iOS içerik-kırpma AYRI iş.)
+
+node_modules/
+.git/
+/android
+/ios
+web-build/
+.expo/
+
+# yerel build çıktıları / kaynak dokümanlar (uygulamaya bağlı değil)
+buildler/
+docs/
+JSPS MESLEK KONULARI MEHAZLARI/
+DEGERLENDIRME/
+*.aab
+*.apk
+*.log
+*.tsbuildinfo
