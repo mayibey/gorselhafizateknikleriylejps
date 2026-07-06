@@ -69,7 +69,7 @@ export const PREMIUM_URUNLERI = [
  * `kanunErisilebilir` bunu ilk satırda kontrol eder → tüm ekranlar tek yerden açılıp kapanır.
  * NOT: Bunu değiştirmek yeni derleme (build) gerektirir; test edenlere ancak yeni sürümle yansır.
  */
-export const KILIT_AKTIF = true;
+export const KILIT_AKTIF = false;
 
 /** ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. Sadece TCK (ilk konu) + denemesi. */
 export const UCRETSIZ_KANUNLAR = ['tck'];
