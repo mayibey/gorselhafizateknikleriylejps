@@ -49,17 +49,9 @@
       "expo-sqlite",
       "expo-audio",
       "expo-web-browser",
-      [
-        "expo-notifications",
-        {
-          "color": "#0B1F3A",
-          "icon": "./assets/images/bildirim-ikon.png"
-        }
-      ],
       "./plugins/withRemovedPermissions",
       "./plugins/withYerelBuild",
       "./plugins/withModularHeaders",
-      "./plugins/withoutRemotePush",
       "expo-secure-store",
       "expo-iap",
       "@react-native-google-signin/google-signin"
