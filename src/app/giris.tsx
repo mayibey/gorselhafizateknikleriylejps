@@ -55,8 +55,8 @@ export default function GirisScreen() {
     if (hesapIslemi) return; // çıkış/silme sürerken ikinci işlem başlamasın
     Alert.alert(
       'Hesabını sil?',
-      'Hesabın silinmek üzere işaretlenecek. 30 gün içinde tekrar giriş yaparsan otomatik geri ' +
-        'gelir; bu süre dolunca KALICI silinir.\n\nSatın aldığın her şey (premium erişim) kaybolur.',
+      'Hesabın ve tüm verilerin silinmek üzere işaretlenir ve 30 gün içinde KALICI olarak silinir. ' +
+        'Satın aldığın her şey (premium erişim) de kaybolur.',
       [
         { text: 'Vazgeç', style: 'cancel' },
         {
