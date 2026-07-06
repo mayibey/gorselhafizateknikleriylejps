@@ -52,3 +52,18 @@ kapısızdı). **Ders: güvenlik kapısını EN ÇAĞIRAN yere değil, EN DAR ME
   bulut geri-yükleme web'de hiç tetiklenmiyordu. Platform-nötr sinyal (kutu>0) şart.
 - **6 Tem:** obfuscatedExternalAccountId ≠ user.id kontrolü yoktu → başka hesaba ait
   satın alma bu hesaba bağlanabilirdi. Sunucu doğrulamada sahiplik zorunlu.
+- **6 Tem (2. tur — sistem kendini denetledi):** Mekanizma-seviyesi kilit kart AÇMAYI
+  kapatti AMA gösterimi kapatmadı. Ajanlar buldu: (a) arama sonuç SNIPPET'i kilitli
+  kanunda premium madde metni + "Aklınıza çivileyin" anlatımını gösteriyordu — dokunma
+  kapısı snippet'i durdurmaz; DERS: **kilit yalnız navigasyonda değil, İÇERİĞİN GÖRÜNDÜĞÜ
+  HER RENDER'da olmalı** (liste/snippet/önizleme dahil). (b) "Günün Maddesi" + "Zayıf
+  Mevziler" premium madde no+başlığını gösteriyordu (metadata sızıntısı, düşük). Üçü de
+  düzeltildi (aday havuzu/sonuç/zayıf liste premium süzülür). (c) MİMARİ: madde metinleri +
+  sınav soruları + anlatım JS bundle'a GÖMÜLÜ, kapı yalnız istemcide → APK açan/istemci
+  yamalayan ödeme yapmadan alır. Görseller sunucuda korumalı; metin/sorular değil. DERS:
+  **istemci-only kapı = APK çıkarmayla atlanır; asıl koruma içeriği sunucudan servis etmek**
+  (yol haritası: içeriği sunucuya taşı). (d) ICERIK_TABANI `/object/public/` yoluna işaret
+  ediyor + resolver'lar auth'suz doğrudan çekiyor — şu an bucket private (404) olduğu için
+  canlı değil ama LATENT: bucket public yapılırsa tüm görsel/ses auth'suz sızar. DERS:
+  **public URL yolu + 'bucket private olmalı' varsayımı çelişir; config seviyesinde de
+  fail-closed düşün.**
