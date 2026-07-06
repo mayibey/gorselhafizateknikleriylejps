@@ -58,6 +58,7 @@
       ],
       "./plugins/withRemovedPermissions",
       "./plugins/withYerelBuild",
+      "./plugins/withModularHeaders",
       "expo-secure-store",
       "expo-iap",
       "@react-native-google-signin/google-signin"
