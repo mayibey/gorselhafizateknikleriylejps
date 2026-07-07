@@ -306,7 +306,7 @@ export async function epostaGiris(eposta: string, sifre: string): Promise<void> 
  * sınırlı → yayında özel SMTP). `dogrulamaGerek=true` ise kullanıcı e-postasını onaylamalı.
  */
 // Doğrulama e-postasındaki bağlantıya tıklayınca açılacak markalı "onaylandı" sayfası.
-const ONAY_DONUS = 'https://mayibey.github.io/gorselhafizateknikleriylejps/onaylandi.html';
+const ONAY_DONUS = 'https://mevzujsps.com/onaylandi.html';
 
 export async function epostaKayit(
   eposta: string,

@@ -14,11 +14,10 @@ export const FORMSPREE_ENDPOINT = '';
  */
 // Gizlilik/Şartlar'ın YAYINLANMIŞ web adresleri. Boşken uygulama içi gömülü metin
 // (constants/yasal-metin.ts + /yasal ekranı) kullanılır; "web'de aç" linki gizlenir.
-// "mayibey" markaya uymadığı için eski mayibey.github.io KALDIRILDI. Yeni adres
-// (markalı, mayibey'siz host) barındırılınca buraya yazılacak + Play Console gizlilik
-// URL'ine girilecek. Şimdilik boş → uygulama gömülü metinle çalışır.
-export const GIZLILIK_URL = '';
-export const SARTLAR_URL = '';
+// Markalı alan adı mevzujsps.com (GitHub Pages, HTTPS) yayında — App Store/Play gizlilik
+// URL'i de buraya işaret eder. (Eski mayibey.github.io markaya uymadığı için KALDIRILDI.)
+export const GIZLILIK_URL = 'https://mevzujsps.com/';
+export const SARTLAR_URL = 'https://mevzujsps.com/sartlar.html';
 
 /**
  * Resmî mevzuat kaynağı. Google "Yanıltıcı İddialar Politikası" (resmî bilgi gösteren
