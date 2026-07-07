@@ -126,6 +126,9 @@ export async function oauthUrlIsle(url: string): Promise<boolean> {
 // Kendi Google OAuth client'ımızın WEB client ID'si (Supabase Google provider + native audience).
 // NATIVE giriş bunu webClientId olarak kullanır → idToken'ı DOĞRUDAN Supabase'e verir (redirect YOK).
 const GOOGLE_WEB_CLIENT_ID = '1065249322807-rooson7kmj49lgt3hvfl25s41hnmappv.apps.googleusercontent.com';
+// iOS NATIVE Google client (Google Cloud → OAuth client type iOS, bundle app.mevzujsps.ios).
+// iOS'ta GoogleSignin bunu ister (+ app.json google-signin plugin iosUrlScheme = ters çevrilmişi).
+const GOOGLE_IOS_CLIENT_ID = '1065249322807-8a9q8ugdp7jrsragmb6292h1jffiuleu.apps.googleusercontent.com';
 let googleConfigured = false;
 
 /**
@@ -159,7 +162,7 @@ function googleHataAciklama(kod: string | number | undefined, ham: string): stri
 async function nativeGoogleGiris(): Promise<void> {
   const { GoogleSignin } = await import('@react-native-google-signin/google-signin');
   if (!googleConfigured) {
-    GoogleSignin.configure({ webClientId: GOOGLE_WEB_CLIENT_ID });
+    GoogleSignin.configure({ webClientId: GOOGLE_WEB_CLIENT_ID, iosClientId: GOOGLE_IOS_CLIENT_ID });
     googleConfigured = true;
   }
   await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
