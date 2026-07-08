@@ -1,8 +1,8 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useEffect, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, Alert, Modal, Pressable, StyleSheet, View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
@@ -10,6 +10,7 @@ import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
+import { ICERIK_TABANI } from '@/constants/config';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   getAllCards,
@@ -20,6 +21,14 @@ import {
   getZayifKuyruk,
 } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
+import { LAW_KLASOR } from '@/db/seed';
+import {
+  indirmeDestekli,
+  indirmeDinle,
+  indirmeDurumuAl,
+  kanunIndirBaslat,
+  kanunIndirilmisMi,
+} from '@/lib/indirme';
 import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -120,6 +129,81 @@ export default function KarargahScreen() {
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [hata, setHata] = useState(false);
+  // Günün Maddesi indirilmemiş kanundansa: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
+  // (Arama/Patika'daki İNDİRME KAPISI ile aynı; Günün Maddesi bu kapıyı atlayıp boş kart açıyordu.)
+  const [indirModal, setIndirModal] = useState<CardWithLaw | null>(null);
+  const [indirYuzde, setIndirYuzde] = useState(0);
+  const [indirDurum, setIndirDurum] = useState<'iniyor' | 'hata'>('iniyor');
+  // Bitince OTOMATİK karta gidilecek mi (kullanıcı "arka planda indir" derse iptal → gitme).
+  const acilacakRef = useRef<CardWithLaw | null>(null);
+
+  // İndirme modalı açıkken yüzdeyi durum yöneticisinden dinle (arka planda ilerledikçe güncellensin).
+  useEffect(() => {
+    if (!indirModal) return;
+    const klasor = LAW_KLASOR[indirModal.law_id];
+    if (!klasor) return;
+    const guncelle = () => setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
+    guncelle();
+    return indirmeDinle(klasor, guncelle);
+  }, [indirModal]);
+
+  // Günün Maddesi kartını aç. DOĞRUDAN o maddenin kartını açar (tüm patikayı değil).
+  const gunMaddeGit = useCallback(
+    (g: CardWithLaw) =>
+      router.push({ pathname: '/akis', params: { lawId: String(g.law_id), kart: String(g.id) } }),
+    [router],
+  );
+
+  // İndir + biter bitmez Günün Maddesi kartına git (Arama'daki indirVeAc ile aynı desen).
+  const indirVeAc = useCallback(
+    (g: CardWithLaw, klasor: string) => {
+      setIndirModal(g);
+      setIndirDurum('iniyor');
+      setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
+      acilacakRef.current = g;
+      kanunIndirBaslat(klasor).then(
+        () => {
+          // Kullanıcı "arka planda indir" demediyse (niyet hâlâ bu kart) → karta git.
+          if (acilacakRef.current === g) {
+            acilacakRef.current = null;
+            setIndirModal(null);
+            gunMaddeGit(g);
+          }
+        },
+        () => {
+          if (acilacakRef.current === g) setIndirDurum('hata');
+        },
+      );
+    },
+    [gunMaddeGit],
+  );
+
+  // Modalı kapat (otomatik-açmayı iptal et; indirme arka planda sürebilir).
+  const indirModalKapat = useCallback(() => {
+    acilacakRef.current = null;
+    setIndirModal(null);
+  }, []);
+
+  // Günün Maddesi'ne basınca: içerik inmemişse ÖNCE indir (yüzdeli modal), sonra kartı aç.
+  // (Aday seçimi zaten lawErisilebilirSaf ile erişilebilir kanunlardan → paywall gerekmez.)
+  const gunMaddeAc = useCallback(
+    (g: CardWithLaw) => {
+      const klasor = LAW_KLASOR[g.law_id];
+      if (klasor && indirmeDestekli && ICERIK_TABANI && !kanunIndirilmisMi(klasor)) {
+        Alert.alert(
+          'Kanun indirilmemiş',
+          'Bu maddenin görsel kartını görmek için önce kanunun içeriğini indirmek gerekiyor. Şimdi indirilip açılsın mı?',
+          [
+            { text: 'Vazgeç', style: 'cancel' },
+            { text: 'İndir ve aç', onPress: () => indirVeAc(g, klasor) },
+          ],
+        );
+        return;
+      }
+      gunMaddeGit(g);
+    },
+    [gunMaddeGit, indirVeAc],
+  );
 
   // Ekrana her dönüldüğünde tazele. Kuyruk = ana veri (hata → retry); gerisi degrade olur.
   const yukle = useCallback(() => {
@@ -431,13 +515,7 @@ export default function KarargahScreen() {
       {gunMadde ? (
         <Pressable
           style={({ pressed }) => [styles.card, pressed && styles.pressed]}
-          onPress={() =>
-            // Tüm yönetmeliği/patikayı madde 1'den açmak yerine DOĞRUDAN o maddenin kartını aç.
-            router.push({
-              pathname: '/akis',
-              params: { lawId: String(gunMadde.law_id), kart: String(gunMadde.id) },
-            })
-          }>
+          onPress={() => gunMaddeAc(gunMadde)}>
           <AppText variant="etiket" color="solukMetin" bold>
             GÜNÜN MADDESİ
           </AppText>
@@ -457,6 +535,67 @@ export default function KarargahScreen() {
           </View>
         </Pressable>
       ) : null}
+
+      {/* İndir ve aç modalı — Günün Maddesi'nin kanunu inmemişse; biter bitmez kart açılır. */}
+      <Modal
+        visible={indirModal !== null}
+        transparent
+        animationType="fade"
+        onRequestClose={indirModalKapat}>
+        <View style={styles.modalKatman}>
+          <View style={styles.modalKart}>
+            {indirDurum === 'hata' ? (
+              <>
+                <MaterialCommunityIcons name="wifi-off" size={40} color={Palette.kirmizi} />
+                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
+                  İndirilemedi
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin" style={styles.modalOrtali}>
+                  Bağlantını kontrol et, tekrar dene.
+                </AppText>
+                <View style={styles.modalBtnlar}>
+                  <Pressable
+                    style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
+                    onPress={indirModalKapat}>
+                    <AppText variant="kucuk" bold color="lacivert">
+                      Kapat
+                    </AppText>
+                  </Pressable>
+                  <Pressable
+                    style={({ pressed }) => [styles.modalBtn, pressed && styles.pressed]}
+                    onPress={() =>
+                      indirModal && indirVeAc(indirModal, LAW_KLASOR[indirModal.law_id] ?? '')
+                    }>
+                    <AppText variant="kucuk" bold color="beyaz">
+                      Tekrar dene
+                    </AppText>
+                  </Pressable>
+                </View>
+              </>
+            ) : (
+              <>
+                <ActivityIndicator size="large" color={Palette.lacivert} />
+                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
+                  İndiriliyor… %{indirYuzde}
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin" numberOfLines={2} style={styles.modalOrtali}>
+                  {indirModal?.law_ad} indiriliyor. Bitince madde otomatik açılacak.
+                </AppText>
+                <View style={styles.modalBar}>
+                  <View style={[styles.modalBarDolu, { width: `${indirYuzde}%` }]} />
+                </View>
+                <Pressable
+                  style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
+                  onPress={indirModalKapat}>
+                  <AppText variant="kucuk" bold color="lacivert">
+                    Arka planda indir
+                  </AppText>
+                </Pressable>
+              </>
+            )}
+          </View>
+        </View>
+      </Modal>
     </Screen>
   );
 }
@@ -730,5 +869,57 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.half,
+  },
+
+  // İndir ve aç modalı (Arama ekranındaki desenle aynı görünüm).
+  modalKatman: {
+    flex: 1,
+    backgroundColor: 'rgba(11,31,58,0.55)',
+    justifyContent: 'center',
+    padding: Spacing.four,
+  },
+  modalKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.l,
+    padding: Spacing.four,
+    gap: Spacing.two,
+    alignItems: 'center',
+  },
+  modalOrtali: {
+    textAlign: 'center',
+  },
+  modalBar: {
+    width: '100%',
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: Palette.ilerlemeTrack,
+    overflow: 'hidden',
+    marginTop: Spacing.one,
+  },
+  modalBarDolu: {
+    height: '100%',
+    borderRadius: 3,
+    backgroundColor: Palette.altinKoyu,
+  },
+  modalBtnlar: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    marginTop: Spacing.two,
+  },
+  modalBtn: {
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
+  },
+  modalBtnIkincil: {
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
+    marginTop: Spacing.one,
   },
 });
