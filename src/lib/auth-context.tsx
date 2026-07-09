@@ -25,7 +25,27 @@ import { oturumGecerliMi, oturumSahiplen } from '@/lib/oturum-kilidi';
 import { senkronKaydet, senkronYukle } from '@/lib/senkron';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
-export type Kullanici = { id: string; email: string | null };
+export type Kullanici = {
+  id: string;
+  email: string | null;
+  /** Giriş yöntemi: 'apple' | 'email' | 'google' … (app_metadata.provider). Apple ile girenlerde
+   *  isim Apple'dan gelir → onboarding isim SORMAZ (App Store Guideline 4). */
+  saglayici: string | null;
+  /** Apple/sosyal girişte sağlayıcının verdiği tam ad (user_metadata.full_name). İlk girişte gelir. */
+  tamAd: string | null;
+};
+
+/** Supabase User → sade Kullanici (sağlayıcı + tam ad dahil). */
+function kullaniciYap(u: { id: string; email?: string | null; app_metadata?: { provider?: string }; user_metadata?: Record<string, unknown> } | null | undefined): Kullanici | null {
+  if (!u) return null;
+  const ad = u.user_metadata?.full_name;
+  return {
+    id: u.id,
+    email: u.email ?? null,
+    saglayici: u.app_metadata?.provider ?? null,
+    tamAd: typeof ad === 'string' && ad.trim() ? ad.trim() : null,
+  };
+}
 
 type AuthContextDeger = {
   kullanici: Kullanici | null;
@@ -97,14 +117,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // İlk oturumu oku.
     void sb.auth.getSession().then(async ({ data }) => {
       const u = data.session?.user;
-      setKullanici(u ? { id: u.id, email: u.email ?? null } : null);
+      setKullanici(kullaniciYap(u));
       setYukleniyor(false);
       if (u) await girisSonrasi(false);
     });
     // Oturum değişimlerini dinle (giriş/çıkış/yenileme).
     const { data: sub } = sb.auth.onAuthStateChange((olay, session) => {
       const u = session?.user;
-      setKullanici(u ? { id: u.id, email: u.email ?? null } : null);
+      setKullanici(kullaniciYap(u));
       if (u && olay === 'SIGNED_IN') void girisSonrasi(true);
     });
     return () => sub.subscription.unsubscribe();
