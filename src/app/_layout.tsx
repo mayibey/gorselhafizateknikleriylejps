@@ -123,7 +123,7 @@ export default function RootLayout() {
 function RootNavigator() {
   const { brans, yukleniyor: bransYukleniyor } = useBrans();
   const { rutbe, yukleniyor: rutbeYukleniyor } = useRutbe();
-  const { kullanici, hazir, yukleniyor: authYukleniyor, profilTamam } = useAuth();
+  const { kullanici, hazir, yukleniyor: authYukleniyor } = useAuth();
   const segments = useSegments();
   const router = useRouter();
   // Uygulama turu: HESABA bağlı (sunucu esas) — her hesap bir kez görür; cihaz değişse de takip
@@ -169,28 +169,24 @@ function RootNavigator() {
   // Giriş ZORUNLU: Supabase yapılandırıldıysa (hazir) ve oturum yoksa giriş ister.
   // (hazir=false ise — anahtar yok — gate kapanır, uygulama girişsiz çalışır: güvenli fallback.)
   const girisGerek = hazir && !kullanici;
-  // Giriş var ama profil tamlığı henüz bilinmiyor → bekle (yanlış yönlendirme olmasın).
-  const profilBekle = !!kullanici && profilTamam === null;
-  // Görev bilgisi (branş/rütbe) yalnız CİHAZDA tutuluyor; sunucudaki profilde değil. Uygulama
-  // silinip yeniden kurulunca profil (ad/soyad/… sunucudan) tam gelse de branş/rütbe boş kalır
-  // → Mevzuat/Talim "Yükleniyor"da takılırdı. Bu yüzden giriş yapmış + profili tam kullanıcıda
-  // branş/rütbe eksikse de onboarding'e (yalnız görev adımı) götürürüz.
+  // Görev bilgisi (branş/rütbe) yalnız CİHAZDA tutuluyor. Uygulama silinip yeniden kurulunca
+  // branş/rütbe boş kalır → onboarding'e götürürüz (orada seçilir).
   const gorevEksik = !brans || !rutbe;
-  // Onboarding: ZORUNLU giriş + tek-seferlik profil kurulumu + görev (branş/rütbe) seçimi.
-  const eksik =
-    girisGerek || profilTamam === false || (!!kullanici && profilTamam === true && gorevEksik);
+  // Onboarding: ZORUNLU giriş + görev (branş/rütbe) seçimi. Kişisel profil alanları Apple gereği
+  // OPSİYONEL olduğundan kapı artık sunucu profil tamlığına (profilTamam) bağlı DEĞİL.
+  const eksik = girisGerek || (!!kullanici && gorevEksik);
 
   // Guard: giriş/profil/branş/rütbe eksikse onboarding'e götür. (Tur beklenmez — ÖNCE profil/görev
   // tamamlanır, tur en SONA alındı; bkz. aşağıdaki "EN ÜST KAPI".)
   useEffect(() => {
-    if (yukleniyor || profilBekle) return;
+    if (yukleniyor) return;
     // Girişsiz de erişilebilen hesap-kurtarma/giriş rotaları — guard bunları GERİ ATMASIN
     // (şifremi-unuttum'a basınca onboarding'e fırlatma bulgusu).
     if (['sifre-yenile', 'sifremi-unuttum', 'telefon-giris'].includes(segments[0] ?? '')) return;
     const onboardingDe = segments[0] === 'onboarding';
     if (eksik && !onboardingDe) router.replace('/onboarding');
     else if (!eksik && onboardingDe) router.replace('/');
-  }, [eksik, yukleniyor, profilBekle, tanitimTamam, segments, router]);
+  }, [eksik, yukleniyor, tanitimTamam, segments, router]);
 
   // Bildirime tıklayınca uygulama açılıp Karargah'a gitsin (uygulama kapalıyken açılış dahil).
   useEffect(() => {
@@ -205,7 +201,7 @@ function RootNavigator() {
   // SON ADIM (uygulamaya girmeden ÖNCE): profil/görev TAMAMLANDIYSA (!eksik) ve tur görülmediyse
   // uygulama turunu göster. Böylece sıra: giriş → profil → görev → TUR → ana ekran. Tamamlanınca
   // kalıcı işaretlenir → bir daha çıkmaz. (Giriş/profil eksikken tur AÇILMAZ; önce onboarding.)
-  if (tanitimTamam === false && !eksik && !profilBekle && !yukleniyor) {
+  if (tanitimTamam === false && !eksik && !yukleniyor) {
     return (
       <UygulamaTuru
         onTamam={() => {

@@ -32,31 +32,19 @@ import { useRutbe } from '@/lib/rutbe-context';
 export default function OnboardingScreen() {
   const { brans } = useBrans();
   const { rutbe } = useRutbe();
-  const { kullanici, hazir, profilTamam, profilYenile } = useAuth();
+  const { kullanici, hazir, profilYenile } = useAuth();
   const girisGerek = hazir && !kullanici;
 
   // ZORUNLU giriş/kayıt. (Uygulama turu artık _layout kök kapısında — yeni + mevcut herkese bir kez.)
   if (girisGerek) {
     return <AuthEkrani />;
   }
-  // Profil tamlığı çekiliyor → bekle.
-  if (kullanici && profilTamam === null) {
-    return (
-      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
-        <View style={[styles.icerik, styles.merkezde]}>
-          <ActivityIndicator color={Palette.lacivert} />
-        </View>
-      </SafeAreaView>
-    );
-  }
-  // PROFİL — tek seferlik kurulum (kişisel + görev/branş/rütbe). Eksikse zorunlu.
-  if (profilTamam === false) {
-    return <ProfilAdim onTamam={() => void profilYenile()} />;
-  }
-  // Profil TAM ama branş/rütbe (cihazda) yok → yalnız görev adımı. Silip yeniden kuran kullanıcı
-  // buradan branş/rütbesini tek seferde seçer; seçince Mevzuat/Talim yüklenir (artık takılmaz).
+  // Yeni (veya cihazı sıfırlanmış) kullanıcı: branş/rütbe eksikse TEK-seferlik kurulum adımı.
+  // ProfilAdim kişisel bilgileri OPSİYONEL toplar (Apple 5.1.1(v)/4.0) + branş/rütbeyi ZORUNLU
+  // alır. Kapı artık profilTamam'a (5 zorunlu alan) DEĞİL branş/rütbeye bağlı → opsiyonel kişisel
+  // alanlar boş geçilince onboarding döngüye girmez.
   if (!brans || !rutbe) {
-    return <GorevAdim />;
+    return <ProfilAdim onTamam={() => void profilYenile()} />;
   }
   return null; // her şey tamam → _layout gate ana ekrana yönlendirir
 }
@@ -101,17 +89,21 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
   }, []);
 
   async function kaydet() {
-    const h = adHatasi(ad, 'Ad') ?? adHatasi(soyad, 'Soyad') ?? telefonHatasi(telefon);
-    if (h) return setHata(h);
-    if (!dogum) return setHata('Doğum tarihini seç.');
-    if (yasHesapla(dogum) < 18) return setHata('Üye olmak için en az 18 yaşında olmalısın.');
-    if (!cinsiyet) return setHata('Cinsiyetini seç.');
+    // KİŞİSEL alanlar OPSİYONEL (Apple 5.1.1(v): telefon/doğum zorunlu tutulamaz; 4.0: Apple ile
+    // girişte ad tekrar istenemez). Dolu ise FORMATI doğrula; boşsa serbest geç.
+    const kisiselHata =
+      (ad.trim() ? adHatasi(ad, 'Ad') : null) ??
+      (soyad.trim() ? adHatasi(soyad, 'Soyad') : null) ??
+      (telefon.trim() ? telefonHatasi(telefon) : null) ??
+      (dogum && yasHesapla(dogum) < 18 ? 'Üye olmak için en az 18 yaşında olmalısın.' : null);
+    if (kisiselHata) return setHata(kisiselHata);
+    // GÖREV bilgisi (branş/rütbe) ZORUNLU — hangi içeriğin gösterileceği buna bağlı (işlevsel).
     if (!brans) return setHata('Branşını seç.');
     if (!rutbe) return setHata('Rütbeni/statünü seç.');
     setHata(null);
     setMesgul(true);
     try {
-      await profilKaydet({ ad, soyad, telefon, dogumTarihi: tarihISO(dogum), cinsiyet });
+      await profilKaydet({ ad, soyad, telefon, dogumTarihi: dogum ? tarihISO(dogum) : null, cinsiyet });
       await setBrans(brans); // müfredat filtresi (AsyncStorage + context)
       await setRutbe(rutbe);
       onTamam();

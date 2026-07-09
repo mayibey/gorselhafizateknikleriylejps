@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, TextInput, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import { ActivityIndicator, Platform, Pressable, StyleSheet, TextInput, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -22,6 +22,13 @@ export default function PromoKodScreen() {
   const [hata, setHata] = useState<string | null>(null);
   // Başarı iki türlü: 'acildi' = bedava tam erişim; 'indirim' = yıllıkta %yuzde indirim tanımlandı.
   const [basari, setBasari] = useState<{ tip: 'acildi' } | { tip: 'indirim'; yuzde: number } | null>(null);
+
+  // iOS'ta promo kod ERİŞİLEMEZ (Apple 3.1.1: içerik App Store dışı mekanizmayla açılamaz). Menü
+  // linkleri zaten gizli; deep-link'le açılsa bile burada ana ekrana geri atılır → ekran inert.
+  useEffect(() => {
+    if (Platform.OS === 'ios') router.replace('/');
+  }, [router]);
+  if (Platform.OS === 'ios') return null;
 
   async function kullan() {
     const temiz = kod.trim().toUpperCase();

@@ -142,8 +142,11 @@ function PaywallIcerik() {
   // Mağazaya bağlanınca ürünleri çek (abonelik + tek-seferlik AYRI API).
   useEffect(() => {
     if (!connected) return;
-    // Tek-seferlik ürünler (indirim ARTIK ayrı ürün değil, musterek_omurboyu'na eklenen teklifle).
-    void fetchProducts({ skus: TEK_SEFERLIK_URUNLERI, type: 'in-app' });
+    // Tek-seferlik ürünler. iOS'ta YALNIZ App Store'da var olan ürünü çek: URUN_YUKSELTME (fark
+    // ürünü) sadece Google'da tanımlı → iOS'ta geçersiz SKU StoreKit fetch'ini bozup "ürünler
+    // yüklenemedi" (Apple 2.1 ret) yapıyordu. Android'de tümü (ömür boyu + yükseltme).
+    const tekSeferlikSkus = Platform.OS === 'ios' ? [URUN_OMURBOYU] : TEK_SEFERLIK_URUNLERI;
+    void fetchProducts({ skus: tekSeferlikSkus, type: 'in-app' });
     void fetchProducts({ skus: ABONELIK_URUNLERI, type: 'subs' });
   }, [connected]);
 
@@ -513,17 +516,21 @@ function PaywallIcerik() {
         </AppText>
       </Pressable>
 
-      <Pressable
-        style={({ pressed }) => [styles.geriYukleBtn, pressed && styles.pressed]}
-        onPress={() => router.push('/promo-kod')}
-        hitSlop={10}
-        accessibilityRole="button"
-        accessibilityLabel="Promosyon kodu kullan">
-        <MaterialCommunityIcons name="ticket-percent-outline" size={18} color={Palette.lacivert} />
-        <AppText variant="kucuk" color="lacivert" bold>
-          Promosyon veya indirim kodun mu var?
-        </AppText>
-      </Pressable>
+      {/* Promosyon kodu — iOS'ta GİZLİ: Apple 3.1.1 gereği içerik App Store dışı bir mekanizmayla
+          (promo kod) açılamaz. Android'de kalır (Google izin verir). */}
+      {!ios ? (
+        <Pressable
+          style={({ pressed }) => [styles.geriYukleBtn, pressed && styles.pressed]}
+          onPress={() => router.push('/promo-kod')}
+          hitSlop={10}
+          accessibilityRole="button"
+          accessibilityLabel="Promosyon kodu kullan">
+          <MaterialCommunityIcons name="ticket-percent-outline" size={18} color={Palette.lacivert} />
+          <AppText variant="kucuk" color="lacivert" bold>
+            Promosyon veya indirim kodun mu var?
+          </AppText>
+        </Pressable>
+      ) : null}
 
       <AppText variant="etiket" color="solukMetin" style={styles.yasal}>
         Yıllık plan bir aboneliktir ve iptal edilmezse her yıl otomatik yenilenir; dilediğin zaman{' '}

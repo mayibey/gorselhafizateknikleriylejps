@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -68,11 +68,14 @@ export default function AyarlarScreen() {
         etiket="Premium / Abonelik"
         onPress={() => router.push('/paywall')}
       />
-      <Satir
-        ikon="ticket-percent-outline"
-        etiket="Promosyon Kodu"
-        onPress={() => router.push('/promo-kod')}
-      />
+      {/* Promosyon Kodu — iOS'ta GİZLİ (Apple 3.1.1: içerik App Store dışı mekanizmayla açılamaz). */}
+      {Platform.OS !== 'ios' ? (
+        <Satir
+          ikon="ticket-percent-outline"
+          etiket="Promosyon Kodu"
+          onPress={() => router.push('/promo-kod')}
+        />
+      ) : null}
       <Satir
         ikon="bell-outline"
         etiket="Eğitim Planı (Bildirimler)"

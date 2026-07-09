@@ -406,28 +406,28 @@ export async function profilGetir(): Promise<Profil | null> {
   }
 }
 
-/** Profil bilgilerini kaydeder (ad/soyad/telefon/doğum tarihi/cinsiyet). */
+/** Profil bilgilerini kaydeder. Tüm alanlar OPSİYONEL (Apple 5.1.1(v) + 4.0: telefon/doğum/ad
+ * zorunlu tutulamaz). YALNIZ dolu gelen alanlar yazılır → boşla mevcut veriyi EZMEZ (yeniden
+ * kuran kullanıcı bilgisini kaybetmez). Hiç alan yoksa sessizce geçer. */
 export async function profilKaydet(p: {
-  ad: string;
-  soyad: string;
-  telefon: string;
-  dogumTarihi: string;
-  cinsiyet: Cinsiyet;
+  ad?: string;
+  soyad?: string;
+  telefon?: string;
+  dogumTarihi?: string | null;
+  cinsiyet?: Cinsiyet | null;
 }): Promise<void> {
   if (!supabaseHazir || !supabase) throw new KapaliHata();
   const { data: u } = await supabase.auth.getUser();
   const id = u.user?.id;
   if (!id) throw new Error('Oturum bulunamadı.');
-  const { error } = await supabase
-    .from('profiles')
-    .update({
-      ad: p.ad.trim(),
-      soyad: p.soyad.trim(),
-      telefon: p.telefon.trim(),
-      dogum_tarihi: p.dogumTarihi,
-      cinsiyet: p.cinsiyet,
-    })
-    .eq('id', id);
+  const upd: Record<string, unknown> = {};
+  if (p.ad?.trim()) upd.ad = p.ad.trim();
+  if (p.soyad?.trim()) upd.soyad = p.soyad.trim();
+  if (p.telefon?.trim()) upd.telefon = p.telefon.trim();
+  if (p.dogumTarihi) upd.dogum_tarihi = p.dogumTarihi;
+  if (p.cinsiyet) upd.cinsiyet = p.cinsiyet;
+  if (Object.keys(upd).length === 0) return; // yazılacak bir şey yok
+  const { error } = await supabase.from('profiles').update(upd).eq('id', id);
   if (error) throw error;
 }
 
