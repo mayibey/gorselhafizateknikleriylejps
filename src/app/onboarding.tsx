@@ -1,33 +1,31 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { AdimGostergesi } from '@/components/auth/adim-gostergesi';
 import { AnaButon } from '@/components/auth/ana-buton';
-import { Arma } from '@/components/auth/arma';
 import { AuthEkrani } from '@/components/auth/auth-ekrani';
-import { AuthGirdi } from '@/components/auth/auth-girdi';
 import { DekoratifArkaplan } from '@/components/auth/dekoratif-arkaplan';
-import { DogumTarihiSecici } from '@/components/auth/dogum-tarihi-secici';
 import { KarakterFigur } from '@/components/auth/karakter-figur';
 import { SecimKutu } from '@/components/auth/secim-kutu';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
-import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
 import { getBranches } from '@/db/database';
-import { type Cinsiyet, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
-import { adHatasi, telefonHatasi } from '@/lib/dogrulama';
 import { type Rutbe, RUTBELER } from '@/lib/rutbe-store';
 import { useRutbe } from '@/lib/rutbe-context';
 
 /**
- * İlk açılış akışı: ZORUNLU giriş/kayıt (AuthEkrani) → PROFİL (TEK adım: ad/soyad/telefon/doğum/
- * cinsiyet + branş/rütbe) → (sonra _layout Tanıtım turunu gösterir) → ana ekran. İlk girişte her
- * şey BİR KEZ kurulur; sonradan Evsaf → Ayarlar'dan değiştirilir. Branş/rütbe profilin içinde.
- * NOT: Tanıtım turu artık burada DEĞİL, _layout kök kapısında ve profil/görev BİTİNCE (son adım).
+ * İlk açılış akışı: ZORUNLU giriş/kayıt (AuthEkrani) → GÖREV (branş/rütbe) → (sonra _layout Tanıtım
+ * turunu gösterir) → ana ekran.
+ *
+ * KİŞİSEL BİLGİ TOPLANMAZ (ad/soyad/telefon/doğum/cinsiyet). Apple reddi gereği kaldırıldı:
+ *  - Guideline 4.0: "Apple ile Giriş" sonrası isim/e-posta tekrar istenemez (Apple zaten sağlar).
+ *  - Guideline 5.1.1(v): telefon gibi çekirdek işleve gereksiz kişisel bilgi ZORUNLU tutulamaz.
+ * Opsiyonel yapmak yetmedi (Apple alanların görünmesini bile istemedi) → onboarding'den TAMAMEN
+ * çıkarıldı. Uygulama yalnız İŞLEVSEL bilgiyi (branş/rütbe = hangi mevzuat gösterilecek) ister.
+ * Sızıntı takibi e-posta girişi + görsel filigranı + sunucu logu ile sağlanır (isim/telefona bağlı değil).
  */
 export default function OnboardingScreen() {
   const { brans } = useBrans();
@@ -39,48 +37,20 @@ export default function OnboardingScreen() {
   if (girisGerek) {
     return <AuthEkrani />;
   }
-  // Yeni (veya cihazı sıfırlanmış) kullanıcı: branş/rütbe eksikse TEK-seferlik kurulum adımı.
-  // ProfilAdim kişisel bilgileri OPSİYONEL toplar (Apple 5.1.1(v)/4.0) + branş/rütbeyi ZORUNLU
-  // alır. Kapı artık profilTamam'a (5 zorunlu alan) DEĞİL branş/rütbeye bağlı → opsiyonel kişisel
-  // alanlar boş geçilince onboarding döngüye girmez.
+  // Yeni (veya cihazı sıfırlanmış) kullanıcı: branş/rütbe eksikse TEK-seferlik görev seçimi.
   if (!brans || !rutbe) {
-    return <ProfilAdim onTamam={() => void profilYenile()} />;
+    return <GorevAdim onTamam={() => void profilYenile()} />;
   }
   return null; // her şey tamam → _layout gate ana ekrana yönlendirir
 }
 
-// --- Profil adımı (kayıt adım 2) ---
-
-const CINSIYETLER: { deger: Cinsiyet; etiket: string }[] = [
-  { deger: 'kadin', etiket: 'Kadın' },
-  { deger: 'erkek', etiket: 'Erkek' },
-  { deger: 'belirtmek_istemiyorum', etiket: 'Belirtmem' },
-];
-
-const iki = (n: number) => String(n).padStart(2, '0');
-const tarihISO = (d: Date) => `${d.getFullYear()}-${iki(d.getMonth() + 1)}-${iki(d.getDate())}`;
-const tarihGoster = (d: Date) => `${iki(d.getDate())}.${iki(d.getMonth() + 1)}.${d.getFullYear()}`;
-// Tam yaş (gün hassasiyetinde) — 18+ üyelik şartı kontrolü için.
-function yasHesapla(d: Date): number {
-  const bugun = new Date();
-  let yas = bugun.getFullYear() - d.getFullYear();
-  const ayFark = bugun.getMonth() - d.getMonth();
-  if (ayFark < 0 || (ayFark === 0 && bugun.getDate() < d.getDate())) yas -= 1;
-  return yas;
-}
-
-function ProfilAdim({ onTamam }: { onTamam: () => void }) {
+// --- Görev adımı: yalnız branş/rütbe (işlevsel; hangi mevzuatın gösterileceğini belirler) ---
+function GorevAdim({ onTamam }: { onTamam: () => void }) {
   const { setBrans } = useBrans();
   const { setRutbe } = useRutbe();
-  const [ad, setAd] = useState('');
-  const [soyad, setSoyad] = useState('');
-  const [telefon, setTelefon] = useState('');
-  const [dogum, setDogum] = useState<Date | null>(null);
-  const [cinsiyet, setCinsiyet] = useState<Cinsiyet | null>(null);
   const [brans, setBransSec] = useState<string | null>(null);
   const [rutbe, setRutbeSec] = useState<Rutbe | null>(null);
   const [branslar, setBranslar] = useState<{ slug: string; ad: string }[]>([]);
-  const [tarihAcik, setTarihAcik] = useState(false);
   const [mesgul, setMesgul] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
 
@@ -89,174 +59,14 @@ function ProfilAdim({ onTamam }: { onTamam: () => void }) {
   }, []);
 
   async function kaydet() {
-    // KİŞİSEL alanlar OPSİYONEL (Apple 5.1.1(v): telefon/doğum zorunlu tutulamaz; 4.0: Apple ile
-    // girişte ad tekrar istenemez). Dolu ise FORMATI doğrula; boşsa serbest geç.
-    const kisiselHata =
-      (ad.trim() ? adHatasi(ad, 'Ad') : null) ??
-      (soyad.trim() ? adHatasi(soyad, 'Soyad') : null) ??
-      (telefon.trim() ? telefonHatasi(telefon) : null) ??
-      (dogum && yasHesapla(dogum) < 18 ? 'Üye olmak için en az 18 yaşında olmalısın.' : null);
-    if (kisiselHata) return setHata(kisiselHata);
-    // GÖREV bilgisi (branş/rütbe) ZORUNLU — hangi içeriğin gösterileceği buna bağlı (işlevsel).
     if (!brans) return setHata('Branşını seç.');
     if (!rutbe) return setHata('Rütbeni/statünü seç.');
     setHata(null);
     setMesgul(true);
     try {
-      await profilKaydet({ ad, soyad, telefon, dogumTarihi: dogum ? tarihISO(dogum) : null, cinsiyet });
       await setBrans(brans); // müfredat filtresi (AsyncStorage + context)
       await setRutbe(rutbe);
       onTamam();
-    } catch (e) {
-      setHata(__DEV__ && e instanceof Error ? e.message : 'Kaydedilemedi. İnternet bağlantını kontrol edip tekrar dene.');
-    } finally {
-      setMesgul(false);
-    }
-  }
-
-  return (
-    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
-      <DekoratifArkaplan />
-      <ScrollView contentContainerStyle={styles.profilIcerik} keyboardShouldPersistTaps="handled">
-        {/* Adım göstergesi EN ÜSTTE — karakter figürü "Tamamla"yı kapatmasın diye. */}
-        <AdimGostergesi adim={2} />
-
-        <View style={styles.profilUst}>
-          <View style={styles.profilBaslikBlok}>
-            <AppText variant="dev" bold color="lacivert">
-              Profilini{'\n'}Tamamlayalım
-            </AppText>
-            <AppText variant="kucuk" color="solukMetin" style={styles.altyazi}>
-              Adın kazandığın Takdir Belgelerinde yazacak. Bilgilerini eksiksiz gir.
-            </AppText>
-          </View>
-          <KarakterFigur style={styles.profilKarakter} />
-        </View>
-
-        <View style={styles.bolumBaslik}>
-          <MaterialCommunityIcons name="account-outline" size={18} color={Palette.altinKoyu} />
-          <AppText variant="etiket" bold color="lacivert">
-            KİŞİSEL BİLGİLER
-          </AppText>
-        </View>
-
-        <View style={styles.bolumKart}>
-          <View style={styles.ikili}>
-            <View style={styles.yari}>
-              <AuthGirdi ikon="account-outline" placeholder="Ad" value={ad} onChangeText={setAd} autoCapitalize="words" />
-            </View>
-            <View style={styles.yari}>
-              <AuthGirdi ikon="account-outline" placeholder="Soyad" value={soyad} onChangeText={setSoyad} autoCapitalize="words" />
-            </View>
-          </View>
-
-          <AuthGirdi
-            ikon="phone-outline"
-            placeholder="Telefon (05XX XXX XX XX)"
-            value={telefon}
-            onChangeText={setTelefon}
-            keyboardType="phone-pad"
-            inputMode="tel"
-            maxLength={20}
-          />
-
-          <Pressable style={styles.tarihKutu} onPress={() => setTarihAcik(true)}>
-            <MaterialCommunityIcons name="calendar-outline" size={20} color={Palette.solukMetin} />
-            <AppText variant="govde" color={dogum ? 'anaMetin' : 'solukMetin'} style={styles.tarihMetin}>
-              {dogum ? tarihGoster(dogum) : 'Doğum tarihi'}
-            </AppText>
-            <MaterialCommunityIcons name="chevron-down" size={20} color={Palette.solukMetin} />
-          </Pressable>
-
-          <View style={styles.cinsiyet}>
-            {CINSIYETLER.map((c) => {
-              const secili = cinsiyet === c.deger;
-              return (
-                <Pressable
-                  key={c.deger}
-                  style={[styles.cinsBtn, secili && styles.cinsSecili]}
-                  onPress={() => setCinsiyet(c.deger)}>
-                  <AppText variant="etiket" bold color={secili ? 'beyaz' : 'anaMetin'} numberOfLines={1}>
-                    {c.etiket}
-                  </AppText>
-                </Pressable>
-              );
-            })}
-          </View>
-        </View>
-
-        <View style={styles.bolumBaslik}>
-          <MaterialCommunityIcons name="shield-account-outline" size={18} color={Palette.altinKoyu} />
-          <AppText variant="etiket" bold color="lacivert">
-            GÖREV BİLGİLERİ
-          </AppText>
-        </View>
-        <View style={styles.bolumKart}>
-          <SecimKutu
-            ikon="medal-outline"
-            placeholder="Rütben / Statün"
-            baslik="Rütbeni Seç"
-            deger={rutbe}
-            secenekler={RUTBELER}
-            onSec={setRutbeSec}
-          />
-          <SecimKutu
-            ikon="shield-account-outline"
-            placeholder="Branşın / Sınıfın"
-            baslik="Branşını Seç"
-            deger={brans}
-            secenekler={branslar}
-            onSec={setBransSec}
-          />
-        </View>
-
-        <AnaButon etiket="Devam et" onPress={() => void kaydet()} mesgul={mesgul} />
-
-        {hata ? (
-          <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
-            {hata}
-          </AppText>
-        ) : null}
-      </ScrollView>
-
-      <DogumTarihiSecici
-        acik={tarihAcik}
-        deger={dogum}
-        onSec={(d) => {
-          setDogum(d);
-          setTarihAcik(false);
-        }}
-        onKapat={() => setTarihAcik(false)}
-      />
-    </SafeAreaView>
-  );
-}
-
-// --- Görev adımı (yalnız branş/rütbe) ---
-// Profil (kişisel bilgiler) SUNUCUDA tam olduğu hâlde branş/rütbe cihazda boşsa (silip-kurma)
-// gösterilir. ProfilAdim'ın görev bölümünün sadeleştirilmiş hâli — kişisel alanları tekrar sormaz.
-function GorevAdim() {
-  const { setBrans } = useBrans();
-  const { setRutbe } = useRutbe();
-  const [brans, setBransSec] = useState<string | null>(null);
-  const [rutbe, setRutbeSec] = useState<Rutbe | null>(null);
-  const [branslar, setBranslar] = useState<{ slug: string; ad: string }[]>([]);
-  const [mesgul, setMesgul] = useState(false);
-  const [hata, setHata] = useState<string | null>(null);
-
-  useEffect(() => {
-    void getBranches().then((bs) => setBranslar(bs.map((b) => ({ slug: b.slug, ad: b.ad }))));
-  }, []);
-
-  async function kaydet() {
-    if (!brans) return setHata('Branşını seç.');
-    if (!rutbe) return setHata('Rütbeni/statünü seç.');
-    setHata(null);
-    setMesgul(true);
-    try {
-      await setBrans(brans); // müfredat filtresi (AsyncStorage + context)
-      await setRutbe(rutbe);
-      // Kaydedince context güncellenir → OnboardingScreen boş adımı bırakır, gate ana ekrana atar.
     } catch (e) {
       setHata(__DEV__ && e instanceof Error ? e.message : 'Kaydedilemedi. İnternet bağlantını kontrol edip tekrar dene.');
     } finally {
@@ -322,125 +132,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Palette.kremZemin,
   },
-  icerik: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    width: '100%',
-    maxWidth: MaxContentWidth,
-    alignSelf: 'center',
-    padding: Spacing.four,
-    gap: Spacing.three,
-  },
-  merkezde: {
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  marka: {
-    alignItems: 'center',
-    gap: Spacing.one,
-  },
-  markaArma: {
-    alignItems: 'center',
-    gap: Spacing.two,
-  },
-  markaAd: {
-    letterSpacing: 2,
-  },
   ortali: {
     textAlign: 'center',
   },
   altyazi: {
     lineHeight: 20,
   },
-  disclaimer: {
-    lineHeight: 15,
-    marginTop: Spacing.two,
-    opacity: 0.85,
-  },
-  degerler: {
-    gap: Spacing.two,
-    marginTop: Spacing.two,
-  },
-  degerSatir: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.three,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    padding: Spacing.three,
-  },
-  degerIkon: {
-    width: 44,
-    height: 44,
-    borderRadius: Radius.m,
-    backgroundColor: Palette.altinSolukYuzey,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  degerMetin: {
-    flex: 1,
-    gap: Spacing.half,
-  },
-  altBlok: {
-    width: '100%',
-    maxWidth: MaxContentWidth,
-    alignSelf: 'center',
-    padding: Spacing.four,
-  },
-  gecLink: {
-    position: 'absolute',
-    top: Spacing.three,
-    right: Spacing.four,
-    zIndex: 2,
-    paddingVertical: Spacing.one,
-    paddingHorizontal: Spacing.two,
-  },
-  turIcerik: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    gap: Spacing.three,
-  },
-  turIkonKutu: {
-    width: 108,
-    height: 108,
-    borderRadius: 54,
-    backgroundColor: Palette.altinSolukYuzey,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    marginBottom: Spacing.two,
-  },
-  turMetin: {
-    lineHeight: 24,
-    maxWidth: 380,
-    alignSelf: 'center',
-  },
-  noktalar: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    gap: Spacing.one,
-    marginBottom: Spacing.three,
-  },
-  nokta: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: Palette.kenarlik,
-  },
-  noktaAktif: {
-    backgroundColor: Palette.altin,
-    width: 20,
-  },
-  anaBtn: {
-    backgroundColor: Palette.lacivert,
-    borderRadius: Radius.m,
-    paddingVertical: Spacing.three,
-    alignItems: 'center',
-  },
-  // Profil
   profilIcerik: {
     width: '100%',
     maxWidth: MaxContentWidth,
@@ -477,50 +174,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.one,
     marginTop: Spacing.two,
-  },
-  ikili: {
-    flexDirection: 'row',
-    gap: Spacing.two,
-  },
-  yari: {
-    flex: 1,
-  },
-  tarihKutu: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
-    borderRadius: Radius.m,
-    paddingHorizontal: Spacing.three,
-    height: 52,
-  },
-  tarihMetin: {
-    flex: 1,
-  },
-  cinsiyet: {
-    flexDirection: 'row',
-    gap: Spacing.two,
-  },
-  cinsBtn: {
-    flex: 1,
-    height: 44,
-    borderRadius: Radius.m,
-    borderWidth: 1,
-    borderColor: Palette.kenarlik,
-    backgroundColor: Palette.kartKremi,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cinsSecili: {
-    backgroundColor: Palette.lacivert,
-    borderColor: Palette.lacivert,
-  },
-  pressed: {
-    opacity: 0.85,
-  },
-  pasif: {
-    opacity: 0.6,
   },
 });
