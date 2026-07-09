@@ -5,14 +5,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AnaButon } from '@/components/auth/ana-buton';
 import { AuthEkrani } from '@/components/auth/auth-ekrani';
-import { AuthGirdi } from '@/components/auth/auth-girdi';
 import { DekoratifArkaplan } from '@/components/auth/dekoratif-arkaplan';
 import { KarakterFigur } from '@/components/auth/karakter-figur';
 import { SecimKutu } from '@/components/auth/secim-kutu';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getBranches } from '@/db/database';
-import { profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
 import { type Rutbe, RUTBELER } from '@/lib/rutbe-store';
@@ -22,11 +20,10 @@ import { useRutbe } from '@/lib/rutbe-context';
  * İlk açılış akışı: ZORUNLU giriş/kayıt (AuthEkrani) → GÖREV (branş/rütbe) → (sonra _layout Tanıtım
  * turunu gösterir) → ana ekran.
  *
- * KİŞİSEL BİLGİ (Apple reddi gereği sadeleştirildi):
- *  - Telefon/doğum/cinsiyet HİÇ toplanmaz (Guideline 5.1.1(v): çekirdek işleve gereksiz).
- *  - AD/SOYAD: Apple ile girenlere SORULMAZ (Guideline 4 — Apple ismi zaten sağlar, tamAd'dan
- *    alınır). E-posta ile girenlere OPSİYONEL sorulur (Takdir Belgesi + Sicil'de görünür; boş
- *    geçilebilir → 5.1.1(v) uyumlu). İşlevsel bilgi (branş/rütbe = hangi mevzuat) her zaman ZORUNLU.
+ * KİŞİSEL BİLGİ TOPLANMAZ (Apple reddi gereği). Uygulama yalnız İŞLEVSEL bilgiyi (branş/rütbe =
+ * hangi mevzuat gösterilecek) ister. AD/SOYAD ise SADECE gerektiğinde — Takdir Belgesi ilk çıkınca
+ * "belgende görünecek adın bu mu?" diye bir kez sorulur (bkz. components/sicil/belge-isim-sor).
+ * Böylece Apple Guideline 4/5.1.1(v) ile çakışmaz (giriş sonrası isim istenmez).
  */
 export default function OnboardingScreen() {
   const { brans } = useBrans();
@@ -47,14 +44,8 @@ export default function OnboardingScreen() {
 
 // --- Görev adımı: yalnız branş/rütbe (işlevsel; hangi mevzuatın gösterileceğini belirler) ---
 function GorevAdim({ onTamam }: { onTamam: () => void }) {
-  const { kullanici } = useAuth();
   const { setBrans } = useBrans();
   const { setRutbe } = useRutbe();
-  // Apple ile girenlere isim SORULMAZ — Apple ismi zaten sağlar (Guideline 4). E-posta ile
-  // girenlerde OPSİYONEL Ad/Soyad alanı gösterilir (Takdir Belgesi + Sicil'de görünür).
-  const appleIle = kullanici?.saglayici === 'apple';
-  const [ad, setAd] = useState('');
-  const [soyad, setSoyad] = useState('');
   const [brans, setBransSec] = useState<string | null>(null);
   const [rutbe, setRutbeSec] = useState<Rutbe | null>(null);
   const [branslar, setBranslar] = useState<{ slug: string; ad: string }[]>([]);
@@ -71,18 +62,6 @@ function GorevAdim({ onTamam }: { onTamam: () => void }) {
     setHata(null);
     setMesgul(true);
     try {
-      // İSİM (opsiyonel): Apple'da sağlayıcının verdiği tam addan, e-postada formdan. Doluysa
-      // profile yaz — best-effort (hata olsa da görev kaydını engellemesin). Son kelime = soyad.
-      const tamAd = appleIle ? (kullanici?.tamAd ?? '') : `${ad.trim()} ${soyad.trim()}`.trim();
-      if (tamAd) {
-        const parca = tamAd.split(/\s+/);
-        const soyadDeg = parca.length > 1 ? (parca.pop() ?? '') : '';
-        try {
-          await profilKaydet({ ad: parca.join(' '), soyad: soyadDeg });
-        } catch {
-          /* isim yazımı önemsiz — görev bilgisi yine kaydedilir */
-        }
-      }
       await setBrans(brans); // müfredat filtresi (AsyncStorage + context)
       await setRutbe(rutbe);
       onTamam();
@@ -108,30 +87,6 @@ function GorevAdim({ onTamam }: { onTamam: () => void }) {
           </View>
           <KarakterFigur style={styles.profilKarakter} />
         </View>
-
-        {!appleIle ? (
-          <>
-            <View style={styles.bolumBaslik}>
-              <MaterialCommunityIcons name="account-outline" size={18} color={Palette.altinKoyu} />
-              <AppText variant="etiket" bold color="lacivert">
-                AD SOYAD (İSTEĞE BAĞLI)
-              </AppText>
-            </View>
-            <View style={styles.bolumKart}>
-              <View style={styles.ikili}>
-                <View style={styles.yari}>
-                  <AuthGirdi ikon="account-outline" placeholder="Ad" value={ad} onChangeText={setAd} autoCapitalize="words" />
-                </View>
-                <View style={styles.yari}>
-                  <AuthGirdi ikon="account-outline" placeholder="Soyad" value={soyad} onChangeText={setSoyad} autoCapitalize="words" />
-                </View>
-              </View>
-              <AppText variant="kucuk" color="solukMetin">
-                Kazandığın Takdir Belgelerinde yazar. İstersen boş geçebilirsin.
-              </AppText>
-            </View>
-          </>
-        ) : null}
 
         <View style={styles.bolumBaslik}>
           <MaterialCommunityIcons name="shield-account-outline" size={18} color={Palette.altinKoyu} />
@@ -217,12 +172,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.one,
     marginTop: Spacing.two,
-  },
-  ikili: {
-    flexDirection: 'row',
-    gap: Spacing.two,
-  },
-  yari: {
-    flex: 1,
   },
 });

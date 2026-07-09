@@ -5,7 +5,7 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
-import { TakdirBelgesi } from '@/components/sicil/takdir-belgesi';
+import { TakdirBelgeAlani } from '@/components/sicil/takdir-belge-alani';
 import { EmptyState } from '@/components/ui/empty-state';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { ekleSinavSonucu, getAllCards, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
@@ -550,7 +550,7 @@ function Sonuc({
             <AppText variant="altBaslik" bold color="altinMetin" style={styles.tamIsabet}>
               🎖️ Tam isabet — {dogru}/{toplam} · {puan} puan
             </AppText>
-            <TakdirBelgesi kanunAd={lawAd ?? 'Bu kanun'} tarih={bugunISO()} />
+            <TakdirBelgeAlani kanunAd={lawAd ?? 'Bu kanun'} tarih={bugunISO()} />
           </>
         ) : (
           <>

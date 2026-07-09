@@ -74,8 +74,11 @@ function BelgeCerceve({
   );
 }
 
-/** Sınav %100 → Takdir Belgesi (kanun adından metin üretir). */
-export function TakdirBelgesi({ kanunAd, tarih }: { kanunAd: string; tarih: string }) {
+/**
+ * Sınav %100 → Takdir Belgesi (kanun adından metin üretir). `isim` verilirse belgede "Sn. Ad Soyad"
+ * görünür (3. şahıs metin); yoksa isimsiz (2. şahıs "tarafınıza"). İsim onayı TakdirBelgeAlani'nde.
+ */
+export function TakdirBelgesi({ kanunAd, tarih, isim }: { kanunAd: string; tarih: string; isim?: string | null }) {
   return (
     <BelgeCerceve
       ikon="medal"
@@ -85,6 +88,14 @@ export function TakdirBelgesi({ kanunAd, tarih }: { kanunAd: string; tarih: stri
       tarih={tarih}
       govde={
         <>
+          {isim ? (
+            <>
+              <AppText variant="govde" bold color="lacivert">
+                Sn. {isim}
+              </AppText>
+              {'\n\n'}
+            </>
+          ) : null}
           <AppText variant="govde" bold color="lacivert">
             {kanunAd}
           </AppText>{' '}
@@ -92,7 +103,10 @@ export function TakdirBelgesi({ kanunAd, tarih }: { kanunAd: string; tarih: stri
           <AppText variant="govde" bold color="altinKoyu">
             %100 doğrulukla
           </AppText>{' '}
-          tamamladığınız için tarafınıza TAKDİR takdim edilmiştir. Bu azim ve disiplin, birliğe örnektir.
+          {isim
+            ? 'tamamladığı için TAKDİR takdim edilmiştir'
+            : 'tamamladığınız için tarafınıza TAKDİR takdim edilmiştir'}
+          . Bu azim ve disiplin, birliğe örnektir.
         </>
       }
     />
