@@ -234,12 +234,22 @@ Deno.serve(async (req) => {
   };
 
   try {
+    // KAYIT ANAHTARI: iOS istemci token'ı bir JWS'tir (5KB+, sertifika zinciriyle) → uyelik_haklari'nın
+    // satin_alma_token BENZERSİZ indeksine SIĞMAZ (btree max 2704 byte → INSERT çöker, premium açılmaz).
+    // Kısa+kalıcı originalTransactionId'yi anahtar yap (abonelik yenilemelerinde de aynı → paylaşım
+    // kontrolü doğru çalışır). Android'de Google purchaseToken zaten kısa → aynen kullanılır.
+    let kayitToken = token;
+    if (platform === 'ios') {
+      const p = jwsPayload(token);
+      kayitToken = String(p.originalTransactionId ?? p.transactionId ?? token);
+    }
+
     // Aynı satın alma (token) başka bir hesaba bağlıysa reddet — bir makbuzun paylaşılarak
     // birden çok hesabı premium yapmasını önler (DB'deki partial-unique index ikinci savunma).
     const { data: baskaSahip } = await admin
       .from('uyelik_haklari')
       .select('user_id')
-      .eq('satin_alma_token', token)
+      .eq('satin_alma_token', kayitToken)
       .neq('user_id', user.id)
       .limit(1)
       .maybeSingle();
@@ -257,9 +267,11 @@ Deno.serve(async (req) => {
     // "yükseltme" ürünü yok, yıllık→ömür boyu tam fiyat → YUKSELTME_SARTI iOS'ta çalışmaz.
     if (platform === 'ios') {
       const { bitis } = await appleDogrula(token, urun, tip, user.id);
-      await admin.from('uyelik_haklari').upsert({
-        user_id: user.id, urun, tip, bitis, satin_alma_token: token, son_dogrulama: new Date().toISOString(),
+      const { error: yazHata } = await admin.from('uyelik_haklari').upsert({
+        user_id: user.id, urun, tip, bitis, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(),
       });
+      // Hak yazılamazsa 'dogrulandi' YAZMA — sessiz başarısızlık premium'u açmaz (kök sebep buydu).
+      if (yazHata) throw new Error('uyelik_haklari yazilamadi: ' + yazHata.message);
       await log('dogrulandi', `apple ${tip} bitis=${bitis}`, null);
       return new Response(JSON.stringify({ ok: true, premium: true, bitis }), {
         headers: { ...CORS, 'Content-Type': 'application/json' },
@@ -319,7 +331,7 @@ Deno.serve(async (req) => {
         });
       }
       await admin.from('uyelik_haklari').upsert({
-        user_id: user.id, urun, tip: 'omurboyu', bitis: null, satin_alma_token: token, son_dogrulama: new Date().toISOString(),
+        user_id: user.id, urun, tip: 'omurboyu', bitis: null, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(),
       });
       await log('dogrulandi', 'omurboyu', p);
       return new Response(JSON.stringify({ ok: true, premium: true }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
@@ -348,7 +360,7 @@ Deno.serve(async (req) => {
       }).catch(() => {});
     }
     await admin.from('uyelik_haklari').upsert({
-      user_id: user.id, urun, tip: 'abonelik', bitis, satin_alma_token: token, son_dogrulama: new Date().toISOString(),
+      user_id: user.id, urun, tip: 'abonelik', bitis, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(),
     });
     await log('dogrulandi', `abonelik bitis=${bitis}`, s);
     return new Response(JSON.stringify({ ok: true, premium: true, bitis }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
