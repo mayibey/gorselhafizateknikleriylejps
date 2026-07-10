@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 10 Temmuz 2026
 >
+> ### ▶ 10 Tem (2) — 🚀 iOS YAYINDA! (READY_FOR_SALE) — HER İKİ PLATFORM CANLI
+> Başkan "bas al yayına" (açık yayın onayı) → `POST /v1/appStoreVersionReleaseRequests` (appStoreVersion ilişkisi) → 201 → **sürüm 1.0 = READY_FOR_SALE.** iPhone uygulaması App Store'da YAYINDA (birkaç saatte tam yayılır). **ARTIK HER İKİ PLATFORM DA CANLI: Google Play (vCode 40) + App Store (build 25).** İlk gün Android: 73+ kullanıcı, 7 ömür boyu satış. **KALAN:** Küçük İşletme Programı (%15, iki platform) + iOS Apple offer code (devre indirimleri) + sonraki güncelleme biriktir listesi (zorunlu güncelleme / keep-screen-on / ticket sistemi / kişiye-özel push).
+>
 > ### ▶ 10 Tem — 🎉 APPLE ONAYLADI! (build 25 → PENDING_DEVELOPER_RELEASE, IAP APPROVED)
 > Gece otomatik izleme sırasında: **sürüm 1.0 (build 25) → PENDING_DEVELOPER_RELEASE + musterek_omurboyu → APPROVED.** Apple 3. gönderimi (isim onboarding'de yok + telefon yok + EULA link + isim=belge-anında-sor) ONAYLADI. releaseType MANUAL → **başkanın "Yayınla/Release" butonuna basması gerekiyor** (canlıya geçsin). Başkan uyuyordu → müjde PushNotification atıldı + ScheduleWakeup stop. **Claude YAYINLAMADI** (release = başkanın kararı/dış aksiyon; manuel bırakılmış ki başkan zamanı seçsin). Başkan uyanınca: ASC → app → 1.0 sürümü → "Release this version". **KALAN (başkan uyanınca):** yayınla butonu + (opsiyonel) TestFlight'ta build 25 son bir kontrol + Küçük İşletme Programı başvurusu (%15) + iOS Apple offer code (SUEM eşdeğeri) kurulumu.
 >
