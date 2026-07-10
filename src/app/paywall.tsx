@@ -14,7 +14,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { getAvailablePurchases, type Purchase, useIAP } from 'expo-iap';
+import { getAvailablePurchases, presentCodeRedemptionSheetIOS, type Purchase, useIAP } from 'expo-iap';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Linking, Platform, Pressable, StyleSheet, View } from 'react-native';
 
@@ -288,6 +288,17 @@ function PaywallIcerik() {
     }
   }
 
+  // iOS: Apple'ın NATIVE indirim/teklif kodu ekranını uygulama içinden açar (App Store offer code).
+  // Bu Apple'ın kendi mekanizması → 3.1.1 uyumlu (kendi promo-kod ekranımız /promo-kod iOS'ta gizli).
+  // Yalnız gerçek cihazda çalışır (simülatörde no-op). Kullanıcı kodu girip indirimli satın alır.
+  async function iosIndirimKodu() {
+    try {
+      await presentCodeRedemptionSheetIOS();
+    } catch {
+      setMesaj({ tip: 'hata', metin: 'İndirim kodu ekranı açılamadı. Lütfen tekrar dene.' });
+    }
+  }
+
   async function geriYukle() {
     setMesaj(null);
     setDurum('dogrulaniyor');
@@ -516,21 +527,21 @@ function PaywallIcerik() {
         </AppText>
       </Pressable>
 
-      {/* Promosyon kodu — iOS'ta GİZLİ: Apple 3.1.1 gereği içerik App Store dışı bir mekanizmayla
-          (promo kod) açılamaz. Android'de kalır (Google izin verir). */}
-      {!ios ? (
-        <Pressable
-          style={({ pressed }) => [styles.geriYukleBtn, pressed && styles.pressed]}
-          onPress={() => router.push('/promo-kod')}
-          hitSlop={10}
-          accessibilityRole="button"
-          accessibilityLabel="Promosyon kodu kullan">
-          <MaterialCommunityIcons name="ticket-percent-outline" size={18} color={Palette.lacivert} />
-          <AppText variant="kucuk" color="lacivert" bold>
-            Promosyon veya indirim kodun mu var?
-          </AppText>
-        </Pressable>
-      ) : null}
+      {/* İndirim/promosyon kodu — platforma göre DOĞRU mekanizma:
+          • iOS: Apple'ın NATIVE offer-code ekranı (presentCodeRedemptionSheetIOS) → 3.1.1 uyumlu.
+            (Kendi /promo-kod ekranımız iOS'ta gizli; App Store dışı içerik açma yasak.)
+          • Android: kendi /promo-kod ekranımız (Google izin verir). */}
+      <Pressable
+        style={({ pressed }) => [styles.geriYukleBtn, pressed && styles.pressed]}
+        onPress={() => (ios ? void iosIndirimKodu() : router.push('/promo-kod'))}
+        hitSlop={10}
+        accessibilityRole="button"
+        accessibilityLabel="İndirim kodu kullan">
+        <MaterialCommunityIcons name="ticket-percent-outline" size={18} color={Palette.lacivert} />
+        <AppText variant="kucuk" color="lacivert" bold>
+          İndirim kodum var
+        </AppText>
+      </Pressable>
 
       <AppText variant="etiket" color="solukMetin" style={styles.yasal}>
         Yıllık plan bir aboneliktir ve iptal edilmezse her yıl otomatik yenilenir; dilediğin zaman{' '}

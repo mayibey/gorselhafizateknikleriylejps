@@ -12,9 +12,17 @@ create table if not exists public.duyurular (
   created_at  timestamptz not null default now()
 );
 
+-- Kişiye özel duyuru hedefi (null = herkese açık; dolu = YALNIZ o kullanıcı görür). RLS aşağıda.
+alter table public.duyurular add column if not exists hedef_user_id uuid references auth.users(id) on delete cascade;
+-- İsteğe bağlı aksiyon: 'paywall' → duyuruya dokununca satın alma ekranı açılır (indirim duyuruları).
+-- null ise duyuru yalnız okunur. İstemci `duyuru.ts` select'ine + tipine eklidir.
+alter table public.duyurular add column if not exists link text;
+
 alter table public.duyurular enable row level security;
+-- OKUMA: aktif VE (herkese açık YA DA bu kullanıcıya özel). Kişiye-özel sızıntısını önler.
 drop policy if exists "duyuru_oku" on public.duyurular;
-create policy "duyuru_oku" on public.duyurular for select using (aktif = true);
+create policy "duyuru_oku" on public.duyurular
+  for select using (aktif = true and (hedef_user_id is null or hedef_user_id = auth.uid()));
 
 -- İlk hoş geldin duyurusu (özellik çalışıyor görünsün + boş kalmasın).
 insert into public.duyurular (baslik, metin, hedef)

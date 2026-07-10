@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -46,9 +46,13 @@ export default function DuyurularScreen() {
 }
 
 function DuyuruKarti({ duyuru }: { duyuru: Duyuru }) {
+  const router = useRouter();
   const tarih = tarihBicim(duyuru.created_at);
-  return (
-    <View style={styles.kart}>
+  // link='paywall' → duyuruya dokununca satın alma ekranı açılır (indirim duyuruları için).
+  const paywallGit = duyuru.link === 'paywall';
+
+  const govde = (
+    <>
       <View style={styles.baslikSatir}>
         <AppText variant="govde" bold style={styles.baslik}>
           {duyuru.baslik}
@@ -69,8 +73,29 @@ function DuyuruKarti({ duyuru }: { duyuru: Duyuru }) {
       <AppText variant="kucuk" style={styles.metin}>
         {duyuru.metin}
       </AppText>
-    </View>
+      {paywallGit ? (
+        <View style={styles.aksiyonSatir}>
+          <AppText variant="kucuk" color="lacivert" bold>
+            İndirimi gör
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.lacivert} />
+        </View>
+      ) : null}
+    </>
   );
+
+  if (paywallGit) {
+    return (
+      <Pressable
+        style={({ pressed }) => [styles.kart, pressed && styles.kartBasili]}
+        onPress={() => router.push('/paywall')}
+        accessibilityRole="button"
+        accessibilityLabel={`${duyuru.baslik} — satın alma ekranını aç`}>
+        {govde}
+      </Pressable>
+    );
+  }
+  return <View style={styles.kart}>{govde}</View>;
 }
 
 /** ISO → "5 Temmuz 2026" (tr-TR). Hata olursa boş döner. */
@@ -103,6 +128,16 @@ const styles = StyleSheet.create({
     borderColor: Palette.kenarlik,
     padding: Spacing.three,
     gap: Spacing.one,
+  },
+  kartBasili: {
+    opacity: 0.7,
+  },
+  aksiyonSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    marginTop: Spacing.one,
+    gap: 2,
   },
   baslikSatir: {
     flexDirection: 'row',

@@ -16,6 +16,9 @@ export type Duyuru = {
   metin: string;
   hedef: 'herkes' | 'premium';
   created_at: string;
+  // İsteğe bağlı aksiyon: 'paywall' ise duyuruya dokununca satın alma ekranı açılır (sunucudan
+  // yönetilir; null ise duyuru sadece okunur). İleride başka hedefler eklenebilir.
+  link: string | null;
 };
 
 const SON_GORULME_KEY = 'jsps.duyuru.songoruldu';
@@ -26,7 +29,7 @@ export async function duyurulariGetir(premium: boolean): Promise<Duyuru[]> {
   try {
     const { data, error } = await supabase
       .from('duyurular')
-      .select('id, baslik, metin, hedef, created_at')
+      .select('id, baslik, metin, hedef, created_at, link')
       .eq('aktif', true)
       .order('created_at', { ascending: false });
     if (error || !data) return [];

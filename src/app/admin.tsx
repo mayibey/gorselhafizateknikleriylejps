@@ -277,6 +277,7 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
   const [metin, setMetin] = useState('');
   const [hedef, setHedef] = useState<Hedef>('herkes');
   const [email, setEmail] = useState('');
+  const [paywall, setPaywall] = useState(false); // true → duyuruya dokununca satın alma açılır
   const [gonderiliyor, setGonderiliyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
 
@@ -306,11 +307,13 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
         metin: metinTemiz,
         hedef: hedef === 'premium' ? 'premium' : 'herkes',
         hedefUserId,
+        paywall,
       });
       setBaslik('');
       setMetin('');
       setEmail('');
       setHedef('herkes');
+      setPaywall(false);
       await onEklendi();
     } catch {
       setHata('Duyuru eklenemedi, tekrar dene.');
@@ -364,6 +367,22 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
           editable={!gonderiliyor}
         />
       ) : null}
+
+      <Pressable
+        style={styles.paywallSatir}
+        onPress={() => setPaywall((v) => !v)}
+        disabled={gonderiliyor}
+        accessibilityRole="checkbox"
+        accessibilityState={{ checked: paywall }}>
+        <MaterialCommunityIcons
+          name={paywall ? 'checkbox-marked' : 'checkbox-blank-outline'}
+          size={22}
+          color={paywall ? Palette.altin : Palette.solukMetin}
+        />
+        <AppText variant="kucuk" style={styles.esnek}>
+          Dokununca satın alma ekranını aç (indirim duyurusu)
+        </AppText>
+      </Pressable>
 
       {hata ? (
         <AppText variant="kucuk" color="kirmizi" bold>
@@ -658,6 +677,12 @@ const styles = StyleSheet.create({
   hedefler: {
     flexDirection: 'row',
     gap: Spacing.two,
+  },
+  paywallSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    marginTop: Spacing.one,
   },
   hedefBtn: {
     flex: 1,

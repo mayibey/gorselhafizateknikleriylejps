@@ -96,6 +96,7 @@ export async function duyuruEkle(p: {
   metin: string;
   hedef: 'herkes' | 'premium';
   hedefUserId?: string;
+  paywall?: boolean; // true → duyuruya dokununca satın alma ekranı açılır (link='paywall')
 }): Promise<void> {
   if (!supabase) throw new Error('Yönetim şu an kullanılamıyor.');
   const satir: Record<string, unknown> = {
@@ -104,6 +105,7 @@ export async function duyuruEkle(p: {
     hedef: p.hedefUserId ? 'herkes' : p.hedef,
   };
   if (p.hedefUserId) satir.hedef_user_id = p.hedefUserId;
+  if (p.paywall) satir.link = 'paywall';
   const { error } = await supabase.from('duyurular').insert(satir);
   if (error) throw new Error(error.message);
 }

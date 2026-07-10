@@ -79,8 +79,10 @@ export default function RootLayout() {
 
   // Ses ARKA PLANDA ÇALMASIN — app arka plana/ekran kapanınca anlatım dursun. Böylece
   // foreground-service iznine gerek kalmaz (Play "ön plan hizmeti izinleri" beyanı gerekmez).
+  // playsInSilentMode: iOS'ta telefon SESSİZ MODDAYKEN de uygulama sesi çalsın (kullanıcılar
+  // "ses yok" sanıyordu; iOS varsayılanı sessiz modda susar). Android'de bu alan etkisiz.
   useEffect(() => {
-    void setAudioModeAsync({ shouldPlayInBackground: false });
+    void setAudioModeAsync({ shouldPlayInBackground: false, playsInSilentMode: true });
   }, []);
 
   // Uygulama arka plana alınınca ilerlemeyi buluta yaz (giriş yoksa no-op).
