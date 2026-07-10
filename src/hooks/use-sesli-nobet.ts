@@ -11,6 +11,7 @@
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useEffect, useRef, useState } from 'react';
 
+import { useEkranAcikTut } from '@/hooks/use-ekran-acik-tut';
 import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import type { QueueCard } from '@/lib/queue';
 import { sesKaynak } from '@/lib/ses-kaynak';
@@ -40,6 +41,9 @@ export function useSesliNobet(kartlar: QueueCard[]): SesliNobet {
 
   const oynuyor = durum?.playing ?? false;
   const yukleniyor = durum?.isBuffering ?? false;
+
+  // Sesli nöbet çalarken ekran kapanmasın (kullanıcı önerisi).
+  useEkranAcikTut(oynuyor, 'mevzu-nobet');
 
   // Oturum aktif mi (kullanıcı başlattı → kart değişince devam etsin).
   const devamRef = useRef(false);
