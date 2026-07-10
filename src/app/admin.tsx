@@ -1,0 +1,692 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useFocusEffect, useRouter } from 'expo-router';
+import { useCallback, useState } from 'react';
+import { ActivityIndicator, Pressable, StyleSheet, TextInput, View } from 'react-native';
+
+import { AppText } from '@/components/ui/app-text';
+import { Screen } from '@/components/ui/screen';
+import { Palette, Radius, Spacing, type PaletteColor } from '@/constants/theme';
+import {
+  type AdminDuyuru,
+  type AdminTalep,
+  adminCevapla,
+  adminDuyurulariGetir,
+  adminTalepleriGetir,
+  duyuruAktiflik,
+  duyuruEkle,
+  duyuruSil,
+  kullaniciBul,
+  talepDurumGuncelle,
+} from '@/lib/admin';
+import { type DestekDurum, type DestekMesaj, talepMesajlariGetir } from '@/lib/destek';
+
+type Sekme = 'talepler' | 'duyurular';
+
+const DURUM_RENK: Record<DestekDurum, PaletteColor> = {
+  acik: 'amber',
+  cevaplandi: 'yesil',
+  kapandi: 'solukMetin',
+};
+
+const DURUM_ETIKET: Record<DestekDurum, string> = {
+  acik: 'Açık',
+  cevaplandi: 'Cevaplandı',
+  kapandi: 'Kapandı',
+};
+
+/** Yönetim Paneli — yalnız admin görür (Ayarlar'dan açılır). İki sekme: Talepler · Duyurular. */
+export default function AdminScreen() {
+  const router = useRouter();
+  const [sekme, setSekme] = useState<Sekme>('talepler');
+  const [seciliTalep, setSeciliTalep] = useState<AdminTalep | null>(null);
+
+  const baslik = seciliTalep ? (seciliTalep.konu || 'Talep') : 'Yönetim Paneli';
+  const geriBas = seciliTalep ? () => setSeciliTalep(null) : () => router.back();
+
+  return (
+    <Screen title={baslik} onGeri={geriBas}>
+      {seciliTalep ? (
+        <TalepThread talep={seciliTalep} />
+      ) : (
+        <>
+          <View style={styles.sekmeler}>
+            <SekmeBtn etiket="Talepler" aktif={sekme === 'talepler'} onPress={() => setSekme('talepler')} />
+            <SekmeBtn etiket="Duyurular" aktif={sekme === 'duyurular'} onPress={() => setSekme('duyurular')} />
+          </View>
+          {sekme === 'talepler' ? (
+            <TaleplerSekmesi onSec={setSeciliTalep} />
+          ) : (
+            <DuyurularSekmesi />
+          )}
+        </>
+      )}
+    </Screen>
+  );
+}
+
+function SekmeBtn({ etiket, aktif, onPress }: { etiket: string; aktif: boolean; onPress: () => void }) {
+  return (
+    <Pressable style={[styles.sekmeBtn, aktif && styles.sekmeBtnAktif]} onPress={onPress}>
+      <AppText variant="kucuk" color={aktif ? 'beyaz' : 'solukMetin'} bold>
+        {etiket}
+      </AppText>
+    </Pressable>
+  );
+}
+
+// ── (A) TALEPLER ────────────────────────────────────────────────────────────
+
+function TaleplerSekmesi({ onSec }: { onSec: (t: AdminTalep) => void }) {
+  const [talepler, setTalepler] = useState<AdminTalep[] | null>(null);
+
+  useFocusEffect(
+    useCallback(() => {
+      let iptal = false;
+      void adminTalepleriGetir().then((liste) => {
+        if (!iptal) setTalepler(liste);
+      });
+      return () => {
+        iptal = true;
+      };
+    }, []),
+  );
+
+  if (talepler === null) return <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />;
+  if (talepler.length === 0) {
+    return (
+      <View style={styles.bos}>
+        <MaterialCommunityIcons name="lifebuoy" size={44} color={Palette.solukMetin} />
+        <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+          Henüz destek talebi yok.
+        </AppText>
+      </View>
+    );
+  }
+  return (
+    <>
+      {talepler.map((t) => (
+        <Pressable
+          key={t.id}
+          style={({ pressed }) => [styles.kart, pressed && styles.pressed]}
+          onPress={() => onSec(t)}>
+          <View style={styles.kartUst}>
+            <AppText variant="govde" bold style={styles.esnek} numberOfLines={2}>
+              {t.konu}
+            </AppText>
+            <DurumRozet durum={t.durum} />
+          </View>
+          <AppText variant="kucuk" color="solukMetin">
+            {tarihBicimUzun(t.guncelleme_at)}
+          </AppText>
+        </Pressable>
+      ))}
+    </>
+  );
+}
+
+function TalepThread({ talep }: { talep: AdminTalep }) {
+  const [durum, setDurum] = useState<DestekDurum>(talep.durum);
+  const [mesajlar, setMesajlar] = useState<DestekMesaj[] | null>(null);
+  const [metin, setMetin] = useState('');
+  const [gonderiliyor, setGonderiliyor] = useState(false);
+  const [hata, setHata] = useState(false);
+
+  const mesajYukle = useCallback(async () => {
+    const liste = await talepMesajlariGetir(talep.id);
+    setMesajlar(liste);
+  }, [talep.id]);
+
+  useFocusEffect(
+    useCallback(() => {
+      void mesajYukle();
+    }, [mesajYukle]),
+  );
+
+  async function gonder() {
+    const temiz = metin.trim();
+    if (!temiz || gonderiliyor) return;
+    setGonderiliyor(true);
+    setHata(false);
+    try {
+      await adminCevapla(talep.id, temiz);
+      setMetin('');
+      setDurum('cevaplandi'); // trigger cevaplandı yapar — UI'yi hemen eşitle
+      await mesajYukle();
+    } catch {
+      setHata(true);
+    } finally {
+      setGonderiliyor(false);
+    }
+  }
+
+  async function durumaCevir(yeni: DestekDurum) {
+    const onceki = durum;
+    setDurum(yeni);
+    try {
+      await talepDurumGuncelle(talep.id, yeni);
+    } catch {
+      setDurum(onceki); // başarısızsa geri al
+    }
+  }
+
+  const gonderPasif = metin.trim().length === 0 || gonderiliyor;
+
+  return (
+    <>
+      <View style={styles.threadUst}>
+        <DurumRozet durum={durum} />
+        <AppText variant="kucuk" color="solukMetin">
+          {tarihBicimUzun(talep.created_at)}
+        </AppText>
+      </View>
+
+      {mesajlar === null ? (
+        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+      ) : (
+        mesajlar.map((m) => <Baloncuk key={m.id} mesaj={m} />)
+      )}
+
+      <TextInput
+        style={styles.girdi}
+        value={metin}
+        onChangeText={setMetin}
+        placeholder="Cevap yaz…"
+        placeholderTextColor={Palette.solukMetin}
+        multiline
+        textAlignVertical="top"
+        editable={!gonderiliyor}
+      />
+      {hata ? (
+        <AppText variant="kucuk" color="kirmizi" bold>
+          Gönderilemedi, tekrar dene.
+        </AppText>
+      ) : null}
+      <Pressable
+        style={[styles.anaBtn, gonderPasif && styles.pasif]}
+        disabled={gonderPasif}
+        onPress={() => void gonder()}>
+        {gonderiliyor ? (
+          <ActivityIndicator color={Palette.beyaz} />
+        ) : (
+          <AppText variant="govde" color="beyaz" bold>
+            Cevabı Gönder
+          </AppText>
+        )}
+      </Pressable>
+
+      <View style={styles.durumButonlar}>
+        <Pressable
+          style={[styles.durumBtn, durum === 'cevaplandi' && styles.durumBtnAktif]}
+          onPress={() => void durumaCevir('cevaplandi')}>
+          <AppText variant="kucuk" color={durum === 'cevaplandi' ? 'beyaz' : 'anaMetin'} bold>
+            Çözüldü
+          </AppText>
+        </Pressable>
+        <Pressable
+          style={[styles.durumBtn, durum === 'kapandi' && styles.durumBtnAktif]}
+          onPress={() => void durumaCevir('kapandi')}>
+          <AppText variant="kucuk" color={durum === 'kapandi' ? 'beyaz' : 'anaMetin'} bold>
+            Kapat
+          </AppText>
+        </Pressable>
+      </View>
+    </>
+  );
+}
+
+// ── (B) DUYURULAR ───────────────────────────────────────────────────────────
+
+type Hedef = 'herkes' | 'premium' | 'kisi';
+
+function DuyurularSekmesi() {
+  const [duyurular, setDuyurular] = useState<AdminDuyuru[] | null>(null);
+
+  const yukle = useCallback(async () => {
+    const liste = await adminDuyurulariGetir();
+    setDuyurular(liste);
+  }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      void yukle();
+    }, [yukle]),
+  );
+
+  return (
+    <>
+      <DuyuruForm onEklendi={yukle} />
+
+      <AppText variant="etiket" color="solukMetin" bold style={styles.bolumBaslik}>
+        MEVCUT DUYURULAR
+      </AppText>
+      {duyurular === null ? (
+        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+      ) : duyurular.length === 0 ? (
+        <AppText variant="kucuk" color="solukMetin">
+          Henüz duyuru yok.
+        </AppText>
+      ) : (
+        duyurular.map((d) => <DuyuruKarti key={d.id} duyuru={d} onDegisti={yukle} />)
+      )}
+    </>
+  );
+}
+
+function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
+  const [baslik, setBaslik] = useState('');
+  const [metin, setMetin] = useState('');
+  const [hedef, setHedef] = useState<Hedef>('herkes');
+  const [email, setEmail] = useState('');
+  const [gonderiliyor, setGonderiliyor] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
+
+  async function gonder() {
+    const baslikTemiz = baslik.trim();
+    const metinTemiz = metin.trim();
+    if (!baslikTemiz || !metinTemiz || gonderiliyor) return;
+    setGonderiliyor(true);
+    setHata(null);
+    try {
+      let hedefUserId: string | undefined;
+      if (hedef === 'kisi') {
+        const emailTemiz = email.trim();
+        if (!emailTemiz) {
+          setHata('E-posta gir.');
+          return;
+        }
+        const kisi = await kullaniciBul(emailTemiz);
+        if (!kisi) {
+          setHata('Bu e-postayla kullanıcı bulunamadı.');
+          return;
+        }
+        hedefUserId = kisi.user_id;
+      }
+      await duyuruEkle({
+        baslik: baslikTemiz,
+        metin: metinTemiz,
+        hedef: hedef === 'premium' ? 'premium' : 'herkes',
+        hedefUserId,
+      });
+      setBaslik('');
+      setMetin('');
+      setEmail('');
+      setHedef('herkes');
+      await onEklendi();
+    } catch {
+      setHata('Duyuru eklenemedi, tekrar dene.');
+    } finally {
+      setGonderiliyor(false);
+    }
+  }
+
+  const gonderPasif = baslik.trim().length === 0 || metin.trim().length === 0 || gonderiliyor;
+
+  return (
+    <View style={styles.form}>
+      <AppText variant="etiket" color="solukMetin" bold>
+        YENİ DUYURU
+      </AppText>
+      <TextInput
+        style={styles.tekSatir}
+        value={baslik}
+        onChangeText={setBaslik}
+        placeholder="Başlık"
+        placeholderTextColor={Palette.solukMetin}
+        editable={!gonderiliyor}
+        maxLength={120}
+      />
+      <TextInput
+        style={styles.girdi}
+        value={metin}
+        onChangeText={setMetin}
+        placeholder="Duyuru metni…"
+        placeholderTextColor={Palette.solukMetin}
+        multiline
+        textAlignVertical="top"
+        editable={!gonderiliyor}
+      />
+
+      <View style={styles.hedefler}>
+        <HedefBtn etiket="Herkes" aktif={hedef === 'herkes'} onPress={() => setHedef('herkes')} />
+        <HedefBtn etiket="Premium" aktif={hedef === 'premium'} onPress={() => setHedef('premium')} />
+        <HedefBtn etiket="Kişiye Özel" aktif={hedef === 'kisi'} onPress={() => setHedef('kisi')} />
+      </View>
+
+      {hedef === 'kisi' ? (
+        <TextInput
+          style={styles.tekSatir}
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Kullanıcı e-postası"
+          placeholderTextColor={Palette.solukMetin}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          editable={!gonderiliyor}
+        />
+      ) : null}
+
+      {hata ? (
+        <AppText variant="kucuk" color="kirmizi" bold>
+          {hata}
+        </AppText>
+      ) : null}
+
+      <Pressable
+        style={[styles.anaBtn, gonderPasif && styles.pasif]}
+        disabled={gonderPasif}
+        onPress={() => void gonder()}>
+        {gonderiliyor ? (
+          <ActivityIndicator color={Palette.beyaz} />
+        ) : (
+          <AppText variant="govde" color="beyaz" bold>
+            Duyuruyu Yayınla
+          </AppText>
+        )}
+      </Pressable>
+    </View>
+  );
+}
+
+function HedefBtn({ etiket, aktif, onPress }: { etiket: string; aktif: boolean; onPress: () => void }) {
+  return (
+    <Pressable style={[styles.hedefBtn, aktif && styles.hedefBtnAktif]} onPress={onPress}>
+      <AppText variant="etiket" color={aktif ? 'beyaz' : 'anaMetin'} bold>
+        {etiket}
+      </AppText>
+    </Pressable>
+  );
+}
+
+function DuyuruKarti({ duyuru, onDegisti }: { duyuru: AdminDuyuru; onDegisti: () => Promise<void> }) {
+  const [islemde, setIslemde] = useState(false);
+
+  async function aktifligiCevir() {
+    if (islemde) return;
+    setIslemde(true);
+    try {
+      await duyuruAktiflik(duyuru.id, !duyuru.aktif);
+      await onDegisti();
+    } catch {
+      // sessiz — liste bir sonraki yüklemede tutarlı
+    } finally {
+      setIslemde(false);
+    }
+  }
+
+  async function sil() {
+    if (islemde) return;
+    setIslemde(true);
+    try {
+      await duyuruSil(duyuru.id);
+      await onDegisti();
+    } catch {
+      setIslemde(false);
+    }
+  }
+
+  return (
+    <View style={styles.kart}>
+      <View style={styles.kartUst}>
+        <AppText variant="govde" bold style={styles.esnek} numberOfLines={2}>
+          {duyuru.baslik}
+        </AppText>
+        <View style={[styles.durumNokta, { backgroundColor: duyuru.aktif ? Palette.yesil : Palette.solukMetin }]} />
+      </View>
+      <AppText variant="kucuk" color="solukMetin" numberOfLines={3}>
+        {duyuru.metin}
+      </AppText>
+      <View style={styles.kartAlt}>
+        <AppText variant="etiket" color="solukMetin" bold>
+          {duyuru.hedef === 'premium' ? 'PREMİUM' : 'HERKES'} · {duyuru.aktif ? 'Aktif' : 'Pasif'}
+        </AppText>
+        <View style={styles.kartAksiyon}>
+          <Pressable style={styles.kucukBtn} disabled={islemde} onPress={() => void aktifligiCevir()}>
+            <AppText variant="etiket" color="lacivert" bold>
+              {duyuru.aktif ? 'Pasifleştir' : 'Aktifleştir'}
+            </AppText>
+          </Pressable>
+          <Pressable style={styles.kucukBtn} disabled={islemde} onPress={() => void sil()}>
+            <AppText variant="etiket" color="kirmizi" bold>
+              Sil
+            </AppText>
+          </Pressable>
+        </View>
+      </View>
+    </View>
+  );
+}
+
+// ── Ortak ───────────────────────────────────────────────────────────────────
+
+function Baloncuk({ mesaj }: { mesaj: DestekMesaj }) {
+  const kullanici = mesaj.gonderen === 'kullanici';
+  return (
+    <View style={[styles.baloncukSarma, kullanici ? styles.sol : styles.sag]}>
+      <View style={[styles.baloncuk, kullanici ? styles.baloncukKullanici : styles.baloncukAdmin]}>
+        <AppText variant="kucuk" color={kullanici ? 'anaMetin' : 'beyaz'}>
+          {mesaj.metin}
+        </AppText>
+      </View>
+      <AppText variant="etiket" color="solukMetin" style={kullanici ? undefined : styles.ortala}>
+        {kullanici ? 'Kullanıcı' : 'Sen (Admin)'} · {tarihBicimUzun(mesaj.created_at)}
+      </AppText>
+    </View>
+  );
+}
+
+function DurumRozet({ durum }: { durum: DestekDurum }) {
+  return (
+    <View style={styles.rozet}>
+      <View style={[styles.rozetNokta, { backgroundColor: Palette[DURUM_RENK[durum]] }]} />
+      <AppText variant="etiket" color={DURUM_RENK[durum]} bold>
+        {DURUM_ETIKET[durum]}
+      </AppText>
+    </View>
+  );
+}
+
+/** ISO → "5 Temmuz 2026 14:30" (tr-TR). Hata olursa boş döner. */
+function tarihBicimUzun(iso: string): string {
+  try {
+    return new Date(iso).toLocaleString('tr-TR', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  } catch {
+    return '';
+  }
+}
+
+const styles = StyleSheet.create({
+  sekmeler: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+  },
+  sekmeBtn: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.m,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    backgroundColor: Palette.kartKremi,
+  },
+  sekmeBtnAktif: {
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.lacivert,
+  },
+  yukleniyor: {
+    marginVertical: Spacing.four,
+  },
+  bos: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    paddingVertical: Spacing.six,
+  },
+  ortala: {
+    textAlign: 'center',
+  },
+  esnek: {
+    flex: 1,
+  },
+  kart: {
+    backgroundColor: Palette.kartKremi,
+    borderRadius: Radius.l,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    padding: Spacing.three,
+    gap: Spacing.one,
+  },
+  kartUst: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: Spacing.two,
+  },
+  kartAlt: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: Spacing.two,
+    marginTop: Spacing.one,
+  },
+  kartAksiyon: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+  },
+  kucukBtn: {
+    paddingVertical: Spacing.one,
+    paddingHorizontal: Spacing.two,
+  },
+  durumNokta: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    marginTop: 6,
+  },
+  threadUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: Spacing.two,
+  },
+  baloncukSarma: {
+    maxWidth: '85%',
+    gap: Spacing.half,
+  },
+  sag: {
+    alignSelf: 'flex-end',
+    alignItems: 'flex-end',
+  },
+  sol: {
+    alignSelf: 'flex-start',
+    alignItems: 'flex-start',
+  },
+  baloncuk: {
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  baloncukKullanici: {
+    backgroundColor: Palette.kartKremi,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+  },
+  baloncukAdmin: {
+    backgroundColor: Palette.lacivert,
+  },
+  girdi: {
+    minHeight: 120,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    fontSize: 16,
+    color: Palette.anaMetin,
+  },
+  tekSatir: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    fontSize: 16,
+    color: Palette.anaMetin,
+  },
+  anaBtn: {
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    alignItems: 'center',
+  },
+  pasif: {
+    opacity: 0.4,
+  },
+  pressed: {
+    opacity: 0.75,
+  },
+  durumButonlar: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+  },
+  durumBtn: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.m,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    backgroundColor: Palette.kartKremi,
+  },
+  durumBtnAktif: {
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.lacivert,
+  },
+  form: {
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    borderRadius: Radius.l,
+    padding: Spacing.three,
+  },
+  hedefler: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+  },
+  hedefBtn: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.s,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    backgroundColor: Palette.kremZemin,
+  },
+  hedefBtnAktif: {
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.lacivert,
+  },
+  bolumBaslik: {
+    marginTop: Spacing.two,
+  },
+  rozet: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 2,
+  },
+  rozetNokta: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+  },
+});

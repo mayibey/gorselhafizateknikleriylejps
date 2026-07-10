@@ -5,6 +5,7 @@
  * - RLS gerçek koruma: istemci yalnız KENDİ satırlarını görür/ekler (docs/v2/21_destek_sistemi.sql).
  * - Supabase hazır değilse (offline/v1) güvenli boş/hata: liste boş döner, yazma çağrıları throw.
  */
+import { destekSonGoruldu } from '@/lib/destek-okundu';
 import { supabase } from '@/lib/supabase';
 
 export type DestekDurum = 'acik' | 'cevaplandi' | 'kapandi';
@@ -37,6 +38,25 @@ export async function destekTalepleriGetir(): Promise<DestekTalebi[]> {
     return data as DestekTalebi[];
   } catch {
     return [];
+  }
+}
+
+/**
+ * Kullanıcının görmediği YENİ admin cevabı var mı? (uygulama içi rozet için.) Bir talebin
+ * durumu 'cevaplandi' VE guncelleme_at, son görülmeden yeniyse okunmamış sayılır.
+ * Supabase yoksa / hata olursa false (rozet çıkmaz).
+ */
+export async function okunmamisCevapVarMi(): Promise<boolean> {
+  if (!supabase) return false;
+  try {
+    const talepler = await destekTalepleriGetir();
+    if (talepler.length === 0) return false;
+    const sonMs = await destekSonGoruldu();
+    return talepler.some(
+      (t) => t.durum === 'cevaplandi' && new Date(t.guncelleme_at).getTime() > sonMs,
+    );
+  } catch {
+    return false;
   }
 }
 

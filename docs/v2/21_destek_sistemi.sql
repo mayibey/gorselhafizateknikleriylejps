@@ -70,6 +70,7 @@ create policy "destek_mesaj_insert_own" on public.destek_mesaj
       select 1 from public.destek_talebi t
       where t.id = destek_mesaj.talep_id
         and t.user_id = auth.uid()
+        and t.durum <> 'kapandi'  -- admin KAPATTIYSA kullanıcı yazamaz (yeni talep açar)
     )
   );
 

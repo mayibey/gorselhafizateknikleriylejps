@@ -8,7 +8,9 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getBranches } from '@/db/database';
 import type { Branch } from '@/db/schema';
+import { adminMi } from '@/lib/admin';
 import { useAuth } from '@/lib/auth-context';
+import { okunmamisCevapVarMi } from '@/lib/destek';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
 import { RUTBELER } from '@/lib/rutbe-store';
@@ -22,12 +24,24 @@ export default function AyarlarScreen() {
   const { rutbe } = useRutbe();
   const { kullanici, hazir } = useAuth();
   const [branches, setBranches] = useState<Branch[] | null>(null);
+  const [admin, setAdmin] = useState(false);
+  const [destekRozet, setDestekRozet] = useState(false);
 
   useFocusEffect(
     useCallback(() => {
       void getBranches()
         .then(setBranches)
         .catch(() => {});
+      let iptal = false;
+      void adminMi().then((v) => {
+        if (!iptal) setAdmin(v);
+      });
+      void okunmamisCevapVarMi().then((v) => {
+        if (!iptal) setDestekRozet(v);
+      });
+      return () => {
+        iptal = true;
+      };
     }, []),
   );
 
@@ -84,6 +98,7 @@ export default function AyarlarScreen() {
       <Satir
         ikon="lifebuoy"
         etiket="Destek / Taleplerim"
+        rozet={destekRozet}
         onPress={() => router.push('/destek')}
       />
       <Satir
@@ -96,6 +111,13 @@ export default function AyarlarScreen() {
         etiket="Gizlilik & Kullanım Şartları"
         onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}
       />
+      {admin ? (
+        <Satir
+          ikon="shield-crown-outline"
+          etiket="Yönetim Paneli"
+          onPress={() => router.push('/admin')}
+        />
+      ) : null}
     </Screen>
   );
 }
@@ -104,11 +126,13 @@ function Satir({
   ikon,
   etiket,
   deger,
+  rozet,
   onPress,
 }: {
   ikon: IconName;
   etiket: string;
   deger?: string;
+  rozet?: boolean;
   onPress: () => void;
 }) {
   return (
@@ -117,6 +141,7 @@ function Satir({
       <AppText variant="kucuk" bold style={styles.etiket}>
         {etiket}
       </AppText>
+      {rozet ? <View style={styles.rozetNokta} /> : null}
       {deger ? (
         <AppText variant="kucuk" color="solukMetin" numberOfLines={1} style={styles.deger}>
           {deger}
@@ -146,6 +171,12 @@ const styles = StyleSheet.create({
   },
   deger: {
     maxWidth: '45%',
+  },
+  rozetNokta: {
+    width: 9,
+    height: 9,
+    borderRadius: 5,
+    backgroundColor: Palette.kirmizi,
   },
   pressed: {
     opacity: 0.75,

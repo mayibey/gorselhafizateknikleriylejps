@@ -15,6 +15,7 @@ import {
   talepMesajlariGetir,
   yeniTalep,
 } from '@/lib/destek';
+import { destekGoruldu } from '@/lib/destek-okundu';
 
 type Goruntu = 'liste' | 'thread' | 'yeni';
 
@@ -46,6 +47,7 @@ export default function DestekScreen() {
   useFocusEffect(
     useCallback(() => {
       if (goruntu === 'liste') void listeYukle();
+      void destekGoruldu(); // ekran açık → okunmamış rozeti temizle
     }, [goruntu, listeYukle]),
   );
 
@@ -176,6 +178,7 @@ function ThreadGorunum({
     }
   }
 
+  const kapali = talep.durum === 'kapandi';
   const gonderPasif = metin.trim().length === 0 || gonderiliyor;
 
   return (
@@ -193,33 +196,44 @@ function ThreadGorunum({
         mesajlar.map((m) => <Baloncuk key={m.id} mesaj={m} />)
       )}
 
-      <TextInput
-        style={styles.girdi}
-        value={metin}
-        onChangeText={setMetin}
-        placeholder="Cevap yaz…"
-        placeholderTextColor={Palette.solukMetin}
-        multiline
-        textAlignVertical="top"
-        editable={!gonderiliyor}
-      />
-      {hata ? (
-        <AppText variant="kucuk" color="kirmizi" bold>
-          Gönderilemedi, tekrar dene.
-        </AppText>
-      ) : null}
-      <Pressable
-        style={[styles.gonderBtn, gonderPasif && styles.pasif]}
-        disabled={gonderPasif}
-        onPress={() => void gonder()}>
-        {gonderiliyor ? (
-          <ActivityIndicator color={Palette.beyaz} />
-        ) : (
-          <AppText variant="govde" color="beyaz" bold>
-            Gönder
+      {kapali ? (
+        <View style={styles.kapaliNot}>
+          <MaterialCommunityIcons name="lock-check-outline" size={22} color={Palette.solukMetin} />
+          <AppText variant="kucuk" color="solukMetin" style={styles.kapaliNotYazi}>
+            Bu talep kapatıldı. Yeni bir sorunun olursa yeni talep açabilirsin.
           </AppText>
-        )}
-      </Pressable>
+        </View>
+      ) : (
+        <>
+          <TextInput
+            style={styles.girdi}
+            value={metin}
+            onChangeText={setMetin}
+            placeholder="Cevap yaz…"
+            placeholderTextColor={Palette.solukMetin}
+            multiline
+            textAlignVertical="top"
+            editable={!gonderiliyor}
+          />
+          {hata ? (
+            <AppText variant="kucuk" color="kirmizi" bold>
+              Gönderilemedi, tekrar dene.
+            </AppText>
+          ) : null}
+          <Pressable
+            style={[styles.gonderBtn, gonderPasif && styles.pasif]}
+            disabled={gonderPasif}
+            onPress={() => void gonder()}>
+            {gonderiliyor ? (
+              <ActivityIndicator color={Palette.beyaz} />
+            ) : (
+              <AppText variant="govde" color="beyaz" bold>
+                Gönder
+              </AppText>
+            )}
+          </Pressable>
+        </>
+      )}
     </>
   );
 }
@@ -459,5 +473,18 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
+  },
+  kapaliNot: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+  },
+  kapaliNotYazi: {
+    flex: 1,
   },
 });
