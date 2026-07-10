@@ -44,6 +44,11 @@ create policy "destek_mesaj_admin_insert" on public.destek_mesaj
   for insert with check (benadmin());
 
 -- ── DUYURULAR: admin ekler/günceller/siler (kullanıcı zaten yalnız okur) ────
+-- DİKKAT: admin için duyurular'a genel bir SELECT politikası KOYMA. RLS politikaları OR'lanır;
+-- benadmin() SELECT'i normal FEED'e de sızar → admin, BAŞKA kullanıcıya özel duyuruları da
+-- Karargah akışında görür (kişiye-özel sızıntısı). Panel listesi için aşağıdaki RPC kullanılır.
+drop policy if exists "duyurular_admin_select" on public.duyurular;
+
 drop policy if exists "duyurular_admin_insert" on public.duyurular;
 create policy "duyurular_admin_insert" on public.duyurular
   for insert with check (benadmin());
@@ -66,3 +71,12 @@ create or replace function public.admin_kullanici_bul(p_email text)
    limit 1;
 $fn$;
 grant execute on function public.admin_kullanici_bul(text) to authenticated;
+
+-- Panel için TÜM duyuruları (pasif + kişiye özel dahil) listeler — YALNIZ admin. Feed RLS'i
+-- admin'e sadece genel+kendine-özel gösterdiğinden panel bu RPC ile tam listeyi alır.
+create or replace function public.admin_duyurular_listele()
+  returns setof public.duyurular language sql security definer stable
+  set search_path = public as $fn$
+  select * from public.duyurular where benadmin() order by created_at desc;
+$fn$;
+grant execute on function public.admin_duyurular_listele() to authenticated;

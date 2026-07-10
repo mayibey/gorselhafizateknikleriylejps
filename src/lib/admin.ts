@@ -75,10 +75,11 @@ export async function talepDurumGuncelle(talepId: string, durum: DestekDurum): P
 export async function adminDuyurulariGetir(): Promise<AdminDuyuru[]> {
   if (!supabase) return [];
   try {
+    // RPC (SECURITY DEFINER): yalnız admin çağırınca TÜM duyuruları (pasif + kişiye özel
+    // dahil) döner. Doğrudan tablo SELECT'i kullanılmaz — feed RLS'i admin'e de sadece
+    // genel + kendine-özel gösterir (kişiye-özel sızıntısını önlemek için, bkz. migration 22).
     const { data, error } = await supabase
-      .from('duyurular')
-      .select('id, baslik, metin, hedef, aktif, created_at')
-      .order('created_at', { ascending: false });
+      .rpc('admin_duyurular_listele');
     if (error || !data) return [];
     return data as AdminDuyuru[];
   } catch {
