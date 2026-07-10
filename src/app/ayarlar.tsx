@@ -82,6 +82,11 @@ export default function AyarlarScreen() {
         onPress={() => router.push('/egitim-plani')}
       />
       <Satir
+        ikon="lifebuoy"
+        etiket="Destek / Taleplerim"
+        onPress={() => router.push('/destek')}
+      />
+      <Satir
         ikon="play-circle-outline"
         etiket="Tanıtım turunu tekrar izle"
         onPress={() => router.push('/tanitim')}

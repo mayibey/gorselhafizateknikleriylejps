@@ -226,6 +226,7 @@ function RootNavigator() {
         <Stack.Screen name="geri-bildirim" />
         <Stack.Screen name="egitim-plani" />
         <Stack.Screen name="duyurular" />
+        <Stack.Screen name="destek" />
         <Stack.Screen name="promo-kod" />
         <Stack.Screen name="paywall" />
         <Stack.Screen name="yasal" />
