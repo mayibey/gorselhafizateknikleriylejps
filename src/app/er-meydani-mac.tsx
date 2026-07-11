@@ -45,22 +45,24 @@ export default function ErMeydaniMacScreen() {
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
   const baslangicRef = useRef<number>(Date.now());
+  const cevaplandiRef = useRef(false); // bu soru cevaplandı mı (süre+tıklama çift tetik guard)
+  const kaydettiRef = useRef(false); // sonuç bir kez yazıldı mı (offline'da bile döngü olmasın)
 
   const benSkor = toplamPuan(benAdimlar);
   const golgeSkorSuana = golge.adimlar.slice(0, benAdimlar.length).reduce((t, a) => t + a.puan, 0);
 
-  // Bir soruyu bitir: adımı kaydet, geri bildirim fazına geç, sonra ilerle.
+  // Bir soruyu bitir: adımı kaydet, geri bildirim fazına geç. Ref guard → çift sayım yok
+  // (süre dolması + tıklama aynı anda gelse bile; StrictMode'da da güvenli).
   const soruyuBitir = useCallback(
     (secilenIndex: number | null) => {
-      setFaz((f) => {
-        if (f !== 'oyun') return f; // çift tetiklemeyi engelle (süre + tıklama)
-        const gecenMs = Math.min(SORU_SURE_MS, Date.now() - baslangicRef.current);
-        const soru = sorular[index];
-        const dogru = secilenIndex !== null && soru != null && secilenIndex === soru.dogru;
-        setSecili(secilenIndex);
-        setBenAdimlar((a) => [...a, { dogru, gecenMs, puan: puanSoru(dogru, gecenMs) }]);
-        return 'geribildirim';
-      });
+      if (cevaplandiRef.current) return;
+      cevaplandiRef.current = true;
+      const gecenMs = Math.min(SORU_SURE_MS, Date.now() - baslangicRef.current);
+      const soru = sorular[index];
+      const dogru = secilenIndex !== null && soru != null && secilenIndex === soru.dogru;
+      setSecili(secilenIndex);
+      setBenAdimlar((a) => [...a, { dogru, gecenMs, puan: puanSoru(dogru, gecenMs) }]);
+      setFaz('geribildirim');
     },
     [index, sorular],
   );
@@ -68,6 +70,7 @@ export default function ErMeydaniMacScreen() {
   // Sayaç: yalnız 'oyun' fazında işler; 0'a inince süre doldu → yanlış say.
   useEffect(() => {
     if (faz !== 'oyun') return;
+    cevaplandiRef.current = false;
     baslangicRef.current = Date.now();
     setKalanMs(SORU_SURE_MS);
     const t = setInterval(() => {
@@ -97,9 +100,11 @@ export default function ErMeydaniMacScreen() {
     return () => clearTimeout(t);
   }, [faz, index, sorular.length]);
 
-  // Maç bitince sonucu sunucuya yaz (bir kez).
+  // Maç bitince sonucu sunucuya yaz — REF guard ile TAM BİR KEZ (offline/null dönse bile döngü yok).
   useEffect(() => {
-    if (faz !== 'bitti' || kaydediliyor || sunucu !== null) return;
+    if (faz !== 'bitti' || kaydettiRef.current) return;
+    kaydettiRef.current = true;
+    let iptal = false;
     setKaydediliyor(true);
     void sonucKaydet({
       mod,
@@ -110,9 +115,28 @@ export default function ErMeydaniMacScreen() {
       rakipId: null,
       rakipRumuz: golge.rumuz,
     })
-      .then((s) => setSunucu(s))
-      .finally(() => setKaydediliyor(false));
-  }, [faz, benAdimlar, golge, mod, seed, kaydediliyor, sunucu]);
+      .then((s) => {
+        if (!iptal) setSunucu(s);
+      })
+      .finally(() => {
+        if (!iptal) setKaydediliyor(false);
+      });
+    return () => {
+      iptal = true;
+    };
+  }, [faz, benAdimlar, golge, mod, seed]);
+
+  // Yeni tohum (Yeni Rakip / Kodla Katıl aynı ekrana replace edince) → maçı baştan başlat.
+  useEffect(() => {
+    setIndex(0);
+    setFaz('oyun');
+    setSecili(null);
+    setKalanMs(SORU_SURE_MS);
+    setBenAdimlar([]);
+    setSunucu(null);
+    kaydettiRef.current = false;
+    cevaplandiRef.current = false;
+  }, [seed]);
 
   if (sorular.length === 0) {
     return (

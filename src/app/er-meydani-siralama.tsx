@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -13,6 +13,7 @@ import {
   gecenHaftaSampiyon,
   liderlikGetir,
   siramGetir,
+  sikayetEt,
 } from '@/lib/er-meydani';
 
 /** ER MEYDANI — HAFTALIK SIRALAMA. İlk N + senin sıran + geçen haftanın şampiyonu. Pazartesi sıfırlanır. */
@@ -39,6 +40,26 @@ export default function ErMeydaniSiralamaScreen() {
   );
 
   const bendeListede = (liste ?? []).some((r) => r.ben);
+
+  // Apple UGC şartı: uygunsuz takma adı şikayet et. (Rumuz görünen tek kullanıcı içeriği.)
+  function sikayetSor(rumuz: string) {
+    Alert.alert(
+      'Takma adı şikayet et',
+      `"${rumuz}" adını uygunsuz buluyorsan bize bildir; inceleyelim.`,
+      [
+        { text: 'Vazgeç', style: 'cancel' },
+        {
+          text: 'Şikayet Et',
+          style: 'destructive',
+          onPress: () => {
+            void sikayetEt(null, rumuz, 'uygunsuz rumuz')
+              .then(() => Alert.alert('Teşekkürler', 'Şikayetin bize ulaştı, inceleyeceğiz.'))
+              .catch(() => Alert.alert('Gönderilemedi', 'Lütfen sonra tekrar dene.'));
+          },
+        },
+      ],
+    );
+  }
 
   return (
     <Screen title="Sıralama" onGeri={() => router.back()} headerAltinCizgi>
@@ -83,7 +104,7 @@ export default function ErMeydaniSiralamaScreen() {
       ) : (
         <View style={styles.listeSarma}>
           {liste.map((r) => (
-            <SiraSatiri key={`${r.sira}-${r.rumuz}`} satir={r} />
+            <SiraSatiri key={`${r.sira}-${r.rumuz}`} satir={r} onSikayet={sikayetSor} />
           ))}
           {!bendeListede && siram === null ? (
             <AppText variant="kucuk" color="solukMetin" style={styles.ipucu}>
@@ -96,7 +117,7 @@ export default function ErMeydaniSiralamaScreen() {
   );
 }
 
-function SiraSatiri({ satir }: { satir: LiderlikSatir }) {
+function SiraSatiri({ satir, onSikayet }: { satir: LiderlikSatir; onSikayet: (rumuz: string) => void }) {
   const madalya = satir.sira <= 3;
   const madalyaRenk = satir.sira === 1 ? Palette.altin : satir.sira === 2 ? '#B8B8C0' : '#C08A5E';
   return (
@@ -115,6 +136,15 @@ function SiraSatiri({ satir }: { satir: LiderlikSatir }) {
         <AppText variant="etiket" color="solukMetin">{satir.mac_sayisi} maç</AppText>
       </View>
       <AppText variant="altBaslik" color="altinMetin" bold>{satir.puan}</AppText>
+      {!satir.ben ? (
+        <Pressable
+          hitSlop={10}
+          onPress={() => onSikayet(satir.rumuz)}
+          accessibilityRole="button"
+          accessibilityLabel={`${satir.rumuz} takma adını şikayet et`}>
+          <MaterialCommunityIcons name="dots-vertical" size={20} color={Palette.solukMetin} />
+        </Pressable>
+      ) : null}
     </View>
   );
 }
