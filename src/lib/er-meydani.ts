@@ -1,0 +1,136 @@
+/**
+ * ER MEYDANI — sunucu (Supabase) istemci katmanı. Saf oyun mantığı er-meydani-mantik.ts'te.
+ * - Puan/sıralama SUNUCUDA (RPC, security definer) yönetilir → istemci puan tablosuna yazamaz (anti-hile).
+ * - Supabase yoksa (offline/v1) güvenli boş/hata döner; oyun yine de gölge rakiple oynanır (sadece
+ *   sıralamaya yazılmaz).
+ * - RLS + RPC: docs/v2/23_er_meydani.sql.
+ */
+import { supabase } from '@/lib/supabase';
+
+export type ErMeydaniSonuc = { verilen: number; haftalik_toplam: number; kazandim: boolean };
+export type LiderlikSatir = { sira: number; rumuz: string; puan: number; mac_sayisi: number; ben: boolean };
+export type Siram = { sira: number; puan: number; mac_sayisi: number };
+export type Sampiyon = { rumuz: string; puan: number };
+
+/** Kullanıcının takma adı (yoksa null). */
+export async function rumuzGetir(): Promise<string | null> {
+  if (!supabase) return null;
+  try {
+    const { data: k } = await supabase.auth.getUser();
+    const uid = k.user?.id;
+    if (!uid) return null;
+    const { data, error } = await supabase.from('profiles').select('rumuz').eq('id', uid).single();
+    if (error || !data) return null;
+    return (data as { rumuz: string | null }).rumuz;
+  } catch {
+    return null;
+  }
+}
+
+/** Takma ad belirler (doğrulama + benzersizlik + küfür filtresi SUNUCUDA). */
+export async function rumuzAyarla(rumuz: string): Promise<{ ok: boolean; hata?: string }> {
+  if (!supabase) return { ok: false, hata: 'Şu an kullanılamıyor.' };
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_rumuz_ayarla', { p_rumuz: rumuz });
+    if (error) return { ok: false, hata: error.message };
+    const sonuc = String(data ?? '');
+    if (sonuc === 'ok') return { ok: true };
+    return { ok: false, hata: sonuc.replace(/^hata:\s*/, '') };
+  } catch (e) {
+    return { ok: false, hata: (e as Error).message };
+  }
+}
+
+/** Maç sonucunu kaydeder → sunucu haftalık puanı verir (anti-farm). Offline → null. */
+export async function sonucKaydet(p: {
+  mod: 'hizli' | 'canli' | 'arkadas';
+  seed: number;
+  havuz?: string;
+  benimPuan: number;
+  rakipPuan: number;
+  golge: boolean;
+  rakipId?: string | null;
+  rakipRumuz?: string | null;
+}): Promise<ErMeydaniSonuc | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_sonuc_kaydet', {
+      p_mod: p.mod,
+      p_seed: p.seed,
+      p_havuz: p.havuz ?? 'ucretsiz',
+      p_benim_puan: p.benimPuan,
+      p_rakip_puan: p.rakipPuan,
+      p_golge: p.golge,
+      p_rakip_id: p.rakipId ?? null,
+      p_rakip_rumuz: p.rakipRumuz ?? null,
+    });
+    if (error || !data) return null;
+    const j = data as { verilen?: number; haftalik_toplam?: number; kazandim?: boolean; hata?: string };
+    if (j.hata) return null;
+    return { verilen: j.verilen ?? 0, haftalik_toplam: j.haftalik_toplam ?? 0, kazandim: !!j.kazandim };
+  } catch {
+    return null;
+  }
+}
+
+/** Bu haftanın sıralaması (ilk N). Offline → boş. */
+export async function liderlikGetir(limit = 20): Promise<LiderlikSatir[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_liderlik', { p_limit: limit });
+    if (error || !data) return [];
+    return data as LiderlikSatir[];
+  } catch {
+    return [];
+  }
+}
+
+/** Çağıranın bu haftaki sırası (henüz puanı yoksa null). */
+export async function siramGetir(): Promise<Siram | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_siram');
+    if (error || !data) return null;
+    const arr = data as Siram[];
+    return arr.length ? arr[0] : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Geçen haftanın şampiyonu (onur köşesi). Yoksa null. */
+export async function gecenHaftaSampiyon(): Promise<Sampiyon | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_gecen_hafta_sampiyon');
+    if (error || !data) return null;
+    const arr = data as Sampiyon[];
+    return arr.length ? arr[0] : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Rakibi şikayet et (Apple UGC şartı). */
+export async function sikayetEt(rakipId: string | null, rakipRumuz: string | null, sebep: string): Promise<void> {
+  if (!supabase) throw new Error('Şu an kullanılamıyor.');
+  const { data: k } = await supabase.auth.getUser();
+  const uid = k.user?.id;
+  if (!uid) throw new Error('Oturum bulunamadı.');
+  const { error } = await supabase
+    .from('er_meydani_sikayet')
+    .insert({ sikayet_eden: uid, sikayet_edilen: rakipId, rumuz: rakipRumuz, sebep });
+  if (error) throw new Error(error.message);
+}
+
+/** Rakibi engelle (Apple UGC şartı). */
+export async function engelle(engellenenId: string): Promise<void> {
+  if (!supabase) throw new Error('Şu an kullanılamıyor.');
+  const { data: k } = await supabase.auth.getUser();
+  const uid = k.user?.id;
+  if (!uid) throw new Error('Oturum bulunamadı.');
+  const { error } = await supabase
+    .from('er_meydani_engel')
+    .upsert({ engelleyen: uid, engellenen: engellenenId }, { onConflict: 'engelleyen,engellenen' });
+  if (error) throw new Error(error.message);
+}
