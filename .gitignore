@@ -53,3 +53,8 @@ credentials/
 
 # Firebase (FCM) — gizli, her makineye elle eklenir (bkz docs/BILDIRIM_KURULUM.md)
 google-services.json
+
+# Üye/satın-alan PII dışa aktarımları — ASLA commit etme
+kayitli-uyeler.csv
+satin-alanlar.csv
+*.csv
