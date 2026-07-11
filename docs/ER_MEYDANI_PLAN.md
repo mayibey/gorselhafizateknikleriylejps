@@ -21,19 +21,26 @@
 - Rumuz: 3-16 karakter, harf/rakam/boşluk, tek kelimelik küfür kara listesi.
 
 ## İlerleme (checklist)
-- [ ] 1. DB migration 23: rumuz + er_meydani_mac + haftalik_puan + engel/şikayet + RLS + RPC'ler → Supabase'e uygula
-- [ ] 2. Saf mantık: seed→10 soru (ücretsiz havuz), puanlama (hız), hafta anahtarı, gölge rakip
-- [ ] 3. lib/er-meydani.ts: supabase çağrıları (rumuz, sonuç kaydet, sıralama, geçmiş) + solo akış
-- [ ] 4. Ekran: Er Meydanı lobi (hızlı eşleş / arkadaş kodu / sıralama)
-- [ ] 5. Ekran: Maç (10 soru, sayaç, canlı skor barı) — solo/gölge
-- [ ] 6. Ekran: Sonuç (kazandın/kaybettin, puan, tekrar, paylaş)
-- [ ] 7. Ekran: Sıralama (haftalık top + senin sıran + geçen hafta şampiyonu)
-- [ ] 8. Rumuz belirleme akışı + küfür filtresi
-- [ ] 9. Karargah'a "Er Meydanı" giriş noktası
-- [ ] 10. Canlı mod (gerçek zamanlı) — kod yazılır, 2 telefon testi başkana
-- [ ] 11. Apple uyumu: şikayet + engelle
-- [ ] 12. tsc 0 + öz-denetim (review) + commit'ler + PROJE_DURUM
+- [x] 1. DB migration 23+24: rumuz + er_meydani_mac + haftalik_puan + engel/şikayet + RLS + RPC'ler → Supabase'e uygulandı+doğrulandı
+- [x] 2. Saf mantık: seed→10 soru (ücretsiz havuz 862 soru), puanlama (hız, max 2000), hafta anahtarı, gölge rakip
+- [x] 3. lib/er-meydani.ts: supabase çağrıları (rumuz, sonuç kaydet, sıralama, şikayet/engelle) + solo akış
+- [x] 4. Ekran: Er Meydanı lobi (hızlı eşleş / arkadaş kodu / sıralama)
+- [x] 5. Ekran: Maç (10 soru, sayaç, canlı skor barı) — solo/gölge
+- [x] 6. Ekran: Sonuç (kazandın/kaybettin, puan, tekrar, paylaş)
+- [x] 7. Ekran: Sıralama (haftalık top + senin sıran + geçen hafta şampiyonu)
+- [x] 8. Rumuz belirleme akışı + küfür filtresi (DB CHECK + RPC)
+- [x] 9. Karargah'a "Er Meydanı" giriş noktası
+- [ ] 10. **Canlı mod (gerçek zamanlı, eşzamanlı yarış)** — HENÜZ YOK; 2 telefon testi gerektirdiği için başkanla birlikte kurulacak sonraki adım
+- [x] 11. Apple uyumu: şikayet (sıralamada) — engelle canlı modla gelecek
+- [x] 12. tsc 0 + öz-denetim (2 adversaryal ajan) + düzeltmeler + commit'ler + PROJE_DURUM
+
+## Yapılan testler (12 Tem gece, hepsi geçti)
+- Saf mantık node testi: base36 kod round-trip 200k'da 0 hata; puan sınırları tam; RNG deterministik.
+- Sunucu RPC uçtan uca (rollback tx, gerçek uid): rumuz ok, puan 1500, kendine=0, sıralama OK.
+- **İki-kullanıcı head-to-head (gerçek uid'ler):** A vs B kaydı, sıralama #1 A=1700 / #2 B=1300, anti-farm 4.maç=0, kendine=0.
+- **Gerçek sorularla maç simülasyonu:** iki kullanıcı aynı tohumla AYNI 10 soru; şık işaretleme→puan adım adım işliyor (A 1166 / B 1019); gölge rakip çalışıyor; farklı tohum→farklı soru.
 
 ## Test notu (sabah başkana)
-- Tek telefonla test edilebilir: hızlı eşleş → gölge rakibe karşı 10 soru → puan → sıralama.
-- Canlı mod için 2 telefon gerekir (ya da 2 hesap/2 cihaz).
+- Tek telefonla: Karargah → Er Meydanı → takma ad → Hızlı Eşleş → gölge rakibe karşı 10 soru → puan → Sıralama.
+- İKİ kişiyle (bugün mümkün): "Arkadaşını Davet Et" → kod paylaş → ikisi de aynı sorularla oynar → skorları Sıralama'da karşılaştır.
+- Canlı eşzamanlı yarış (madde 10) henüz yok — sıradaki iş.
