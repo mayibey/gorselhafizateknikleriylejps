@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Pressable, Share, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Pressable, Share, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -24,6 +24,8 @@ import {
   type LigSonuc,
   ligEslesme,
   ligSonuc,
+  odaDurum,
+  odaSkor,
   sonucKaydet,
   zayifKanunEkle,
 } from '@/lib/er-meydani';
@@ -39,6 +41,7 @@ export default function ErMeydaniMacScreen() {
     soru?: string;
     sure?: string;
     kanun?: string;
+    oda?: string;
     rakip_skor?: string;
     rakip_rating?: string;
     rakip_id?: string;
@@ -51,6 +54,8 @@ export default function ErMeydaniMacScreen() {
     return Number.isFinite(p) && p > 0 ? p : seedUret();
   }, [params.seed]);
   const ligMod = params.mod === 'lig';
+  const odaMod = params.mod === 'oda';
+  const odaId = params.oda ?? '';
   const mod = (params.mod === 'arkadas' ? 'arkadas' : 'hizli') as 'hizli' | 'arkadas';
   // Dereceli maçta rakip = eşleşmeden gelen gölge (yenilecek hedef skor).
   const ligRakip = useMemo(
@@ -89,6 +94,8 @@ export default function ErMeydaniMacScreen() {
   const [benAdimlar, setBenAdimlar] = useState<MacAdim[]>([]);
   const [sunucu, setSunucu] = useState<ErMeydaniSonuc | null>(null);
   const [ligSonucState, setLigSonucState] = useState<LigSonuc | null>(null);
+  const [odaRakipSkor, setOdaRakipSkor] = useState<number | null>(null);
+  const [odaRakipRumuz, setOdaRakipRumuz] = useState('Rakip');
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
   const baslangicRef = useRef<number>(Date.now());
@@ -159,34 +166,60 @@ export default function ErMeydaniMacScreen() {
       .map((a, i) => (a.dogru ? null : (sorular[i]?.kanun ?? null)))
       .filter((k): k is number => k != null && k > 0);
     void zayifKanunEkle(yanlisKanunlar);
-    const yaz = ligMod
-      ? ligSonuc({
-          seed,
-          benimSkor: benim,
-          rakipSkor: ligRakip.skor,
-          rakipRating: ligRakip.rating,
-          rakipId: ligRakip.id,
-        }).then((s) => {
-          if (!iptal) setLigSonucState(s);
-        })
-      : sonucKaydet({
-          mod,
-          seed,
-          benimPuan: normalizePuan(benim, adet), // sıralama adaleti: 0-2000 ölçek
-          rakipPuan: normalizePuan(golge.toplam, adet),
-          golge: true,
-          rakipId: null,
-          rakipRumuz: golge.rumuz,
-        }).then((s) => {
-          if (!iptal) setSunucu(s);
-        });
+    const yaz = odaMod
+      ? odaSkor(odaId, benim) // oda: skoru odaya yaz; rakip skoru poll effect'i getirir
+      : ligMod
+        ? ligSonuc({
+            seed,
+            benimSkor: benim,
+            rakipSkor: ligRakip.skor,
+            rakipRating: ligRakip.rating,
+            rakipId: ligRakip.id,
+          }).then((s) => {
+            if (!iptal) setLigSonucState(s);
+          })
+        : sonucKaydet({
+            mod,
+            seed,
+            benimPuan: normalizePuan(benim, adet), // sıralama adaleti: 0-2000 ölçek
+            rakipPuan: normalizePuan(golge.toplam, adet),
+            golge: true,
+            rakipId: null,
+            rakipRumuz: golge.rumuz,
+          }).then((s) => {
+            if (!iptal) setSunucu(s);
+          });
     void yaz.finally(() => {
       if (!iptal) setKaydediliyor(false);
     });
     return () => {
       iptal = true;
     };
-  }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip, sorular]);
+  }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip, sorular, odaMod, odaId]);
+
+  // Oda modu: maç bitince rakibin skorunu poll et (o da oynayınca sonuç belli olur).
+  useEffect(() => {
+    if (!odaMod || faz !== 'bitti' || odaRakipSkor != null) return;
+    let dur = false;
+    const tik = async () => {
+      if (dur) return;
+      const d = await odaDurum(odaId);
+      if (dur || !d) return;
+      const rs = d.rol === 'kuran' ? d.rakip_skor : d.kuran_skor;
+      const rr = d.rol === 'kuran' ? d.rakip_rumuz : d.kuran_rumuz;
+      if (rs != null) {
+        setOdaRakipSkor(rs);
+        setOdaRakipRumuz(rr ?? 'Rakip');
+        dur = true;
+      }
+    };
+    void tik();
+    const t = setInterval(() => void tik(), 3000);
+    return () => {
+      dur = true;
+      clearInterval(t);
+    };
+  }, [odaMod, faz, odaRakipSkor, odaId]);
 
   // Yeni tohum/ayar (Yeni Rakip / Kodla Katıl aynı ekrana replace edince) → maçı baştan başlat.
   useEffect(() => {
@@ -197,6 +230,7 @@ export default function ErMeydaniMacScreen() {
     setBenAdimlar([]);
     setSunucu(null);
     setLigSonucState(null);
+    setOdaRakipSkor(null);
     kaydettiRef.current = false;
     cevaplandiRef.current = false;
   }, [seed, adet, sureMs]);
@@ -237,18 +271,45 @@ export default function ErMeydaniMacScreen() {
     return <InceleGorunum sorular={sorular} adimlar={benAdimlar} onGeri={() => setFaz('bitti')} />;
   }
 
+  // Oda modu: rakip henüz bitirmediyse bekleme ekranı.
+  if (faz === 'bitti' && odaMod && odaRakipSkor == null) {
+    return (
+      <Screen title="Er Meydanı" onGeri={() => router.replace('/er-meydani')}>
+        <View style={styles.odaBekle}>
+          <ActivityIndicator size="large" color={Palette.altinKoyu} />
+          <AppText variant="baslik" color="altinMetin" bold style={styles.ortala}>Skorun: {benSkor}</AppText>
+          <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+            Rakibin hâlâ oynuyor — o da bitirince kazanan burada belli olacak.
+          </AppText>
+          <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
+            <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
+            <AppText variant="govde" color="lacivert" bold>Soruları İncele</AppText>
+          </Pressable>
+          <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
+            <AppText variant="govde" color="solukMetin" bold>Çıkış</AppText>
+          </Pressable>
+        </View>
+      </Screen>
+    );
+  }
+
   if (faz === 'bitti') {
+    const odaBitti = odaMod && odaRakipSkor != null;
     return (
       <SonucGorunum
         ligMod={ligMod}
         benSkor={benSkor}
-        rakipSkor={ligMod ? ligRakip.skor : golge.toplam}
-        rakipRumuz={ligMod ? ligRakip.rumuz : golge.rumuz}
+        rakipSkor={ligMod ? ligRakip.skor : odaBitti ? (odaRakipSkor as number) : golge.toplam}
+        rakipRumuz={ligMod ? ligRakip.rumuz : odaMod ? odaRakipRumuz : golge.rumuz}
         sunucu={sunucu}
         ligSonuc={ligSonucState}
         kaydediliyor={kaydediliyor}
         onIncele={() => setFaz('inceleme')}
-        onTekrar={() => router.replace({ pathname: '/er-meydani-mac', params: { seed: String(seedUret()), mod: 'hizli' } })}
+        onTekrar={() =>
+          odaMod
+            ? router.replace('/er-meydani')
+            : router.replace({ pathname: '/er-meydani-mac', params: { seed: String(seedUret()), mod: 'hizli' } })
+        }
         onYeniLig={() => void yeniLigMac()}
         onSiralama={() => router.replace(ligMod ? '/er-meydani-lig' : '/er-meydani-siralama')}
         onCik={() => router.replace('/er-meydani')}
@@ -278,6 +339,12 @@ export default function ErMeydaniMacScreen() {
         </View>
         {ligMod ? (
           <SkorKutu ad={ligRakip.rumuz} skor={ligRakip.skor} altEtiket="hedef" />
+        ) : odaMod ? (
+          <View style={styles.skorKutu}>
+            <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>Rakip</AppText>
+            <MaterialCommunityIcons name="account-clock-outline" size={22} color={Palette.solukMetin} />
+            <AppText variant="etiket" color="solukMetin">ayrı oynuyor</AppText>
+          </View>
         ) : (
           <SkorKutu ad={golge.rumuz} skor={golgeSkorSuana} />
         )}
@@ -546,6 +613,7 @@ function InceleGorunum({
 
 const styles = StyleSheet.create({
   ortala: { textAlign: 'center' },
+  odaBekle: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.three, paddingBottom: Spacing.six },
   inceleBtnMetin: { flex: 1, gap: 2 },
   inceleKart: {
     backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,

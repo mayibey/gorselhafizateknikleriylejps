@@ -11,6 +11,7 @@ import {
   type AcikOda,
   type KatilBilgi,
   type LigDurum,
+  type OdaBilgi,
   acikOdalar,
   ligDurum,
   ligEslesme,
@@ -101,7 +102,18 @@ export default function ErMeydaniScreen() {
   }
 
   function odayaGit(k: KatilBilgi) {
-    macaGit({ seed: k.seed, mod: 'arkadas', soru: k.soru_sayisi, sure: k.sure_sn, kanunlar: k.kanunlar });
+    // Odaya katılan rakip: 'oda' modunda oynar (gerçek rakip, bot değil).
+    router.push({
+      pathname: '/er-meydani-mac',
+      params: {
+        seed: String(k.seed),
+        mod: 'oda',
+        oda: k.oda_id,
+        soru: String(k.soru_sayisi),
+        sure: String(k.sure_sn),
+        ...(k.kanunlar && k.kanunlar.length ? { kanun: k.kanunlar.join(',') } : {}),
+      },
+    });
   }
 
   // Listeden katıl: seed liste'de yok (sızmasın diye) → önce sunucudan odanın seed'ini al.
@@ -187,13 +199,14 @@ export default function ErMeydaniScreen() {
         <OdaKurPanel
           aktif={playAktif}
           onKapat={() => setOdaKurAcik(false)}
-          onKuruldu={(k, kod) => {
+          onKuruldu={(oda) => {
             setOdaKurAcik(false);
             odalariYukle();
             void Share.share({
-              message: `Seni Er Meydanı'na davet ediyorum! Oda kodu: ${kod} — Mevzu (JSPS Hazırlık) uygulamasında bu kodla ${k.soru_sayisi} soru / ${k.sure_sn} sn'lik maçta benimle yarış! 💪`,
+              message: `Seni Er Meydanı'na davet ediyorum! Oda kodu: ${oda.kod} — Mevzu (JSPS Hazırlık) uygulamasında bu kodla katıl, ${oda.soru_sayisi} soru / ${oda.sure_sn} sn'lik maçta kapışalım! ⚔️`,
             });
-            odayaGit(k);
+            // Kuran bekleme odasına gider; rakip gelince ikisi de maça girer.
+            router.push({ pathname: '/er-meydani-oda', params: { oda: oda.id, kod: oda.kod } });
           }}
         />
       ) : (
@@ -340,7 +353,7 @@ function OdaKurPanel({
 }: {
   aktif: boolean;
   onKapat: () => void;
-  onKuruldu: (k: KatilBilgi, kod: string) => void;
+  onKuruldu: (oda: OdaBilgi) => void;
 }) {
   const [soru, setSoru] = useState(10);
   const [sure, setSure] = useState(15);
@@ -359,18 +372,7 @@ function OdaKurPanel({
     const sonuc = await odaKur(soru, sure, kanunlar);
     setKuruluyor(false);
     if (sonuc.ok && sonuc.oda) {
-      onKuruldu(
-        {
-          seed: sonuc.oda.seed,
-          soru_sayisi: sonuc.oda.soru_sayisi,
-          sure_sn: sonuc.oda.sure_sn,
-          kanunlar: sonuc.oda.kanunlar,
-          havuz: 'ucretsiz',
-          kuran_id: '',
-          kuran_rumuz: '',
-        },
-        sonuc.oda.kod,
-      );
+      onKuruldu(sonuc.oda);
     } else {
       setHata(sonuc.hata ?? 'Oda kurulamadı.');
     }

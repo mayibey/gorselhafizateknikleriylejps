@@ -124,14 +124,27 @@ export type AcikOda = {
   benimki: boolean;
 };
 export type KatilBilgi = {
+  oda_id: string;
   seed: number;
   soru_sayisi: number;
   sure_sn: number;
   kanunlar: number[];
-  havuz: string;
-  kuran_id: string;
   kuran_rumuz: string;
+  rol: string;
 };
+export type OdaDurum = {
+  durum: 'acik' | 'oynaniyor' | 'bitti' | 'kapandi';
+  kuran_rumuz: string;
+  rakip_rumuz: string | null;
+  seed: number;
+  soru_sayisi: number;
+  sure_sn: number;
+  kanunlar: number[];
+  kuran_skor: number | null;
+  rakip_skor: number | null;
+  rol: 'kuran' | 'rakip' | 'yok';
+};
+export type OdaSkorSonuc = { durum: string; kuran_skor: number | null; rakip_skor: number | null };
 
 /** Ayarlarla (soru sayısı + süre + kanunlar) açık oda kurar. Boş kanunlar = karışık. Hata → {ok:false}. */
 export async function odaKur(
@@ -189,6 +202,42 @@ export async function odaKapat(odaId: string): Promise<void> {
   if (!supabase) return;
   try {
     await supabase.rpc('er_meydani_oda_kapat', { p_oda_id: odaId });
+  } catch {
+    /* sessiz */
+  }
+}
+
+/** Oda durumu (bekleme odası + maç sonu için poll). */
+export async function odaDurum(odaId: string): Promise<OdaDurum | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_oda_durum', { p_oda_id: odaId });
+    if (error || !data) return null;
+    const j = data as OdaDurum & { hata?: string };
+    return j.hata ? null : j;
+  } catch {
+    return null;
+  }
+}
+
+/** Maç sonu kendi skorunu odaya yaz (kuran/rakip rolüne göre sunucu koyar). */
+export async function odaSkor(odaId: string, skor: number): Promise<OdaSkorSonuc | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_oda_skor', { p_oda_id: odaId, p_skor: skor });
+    if (error || !data) return null;
+    const j = data as OdaSkorSonuc & { hata?: string };
+    return j.hata ? null : j;
+  } catch {
+    return null;
+  }
+}
+
+/** Kuran odayı iptal eder (rakip gelmeden). */
+export async function odaIptal(odaId: string): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.rpc('er_meydani_oda_iptal', { p_oda_id: odaId });
   } catch {
     /* sessiz */
   }
