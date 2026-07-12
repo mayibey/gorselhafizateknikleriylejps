@@ -22,6 +22,7 @@ import { initDatabase } from '@/db/database';
 import { oauthUrlIsle, tanitimSunucudanOku, tanitimSunucuyaYaz } from '@/lib/auth';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
+import { pushTokenGuncelle } from '@/lib/er-meydani';
 import { tanitimTamamla, tanitimTamamMi } from '@/lib/ipuclari';
 import { UygulamaTuru } from '@/components/tanitim/uygulama-turu';
 import { ZorunluGuncelleme } from '@/components/guncelleme/zorunlu-guncelleme';
@@ -57,6 +58,11 @@ export default function RootLayout() {
   // (Web'de + google-services.json yoksa no-op; bkz. lib/bildirim.ts.)
   useEffect(() => {
     void getAyar().then(planla);
+  }, []);
+
+  // Açılışta uzak push token'ı kaydet (oda dolunca/katılınca bildirim için). Oturum yoksa no-op.
+  useEffect(() => {
+    void pushTokenGuncelle();
   }, []);
 
   // İndirilmiş kanun listesini belleğe al → görsel çözümleyici yerel dosyaları görsün.

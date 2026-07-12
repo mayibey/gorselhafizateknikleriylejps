@@ -6,6 +6,19 @@
  * - RLS + RPC: docs/v2/23_er_meydani.sql.
  */
 import { supabase } from '@/lib/supabase';
+import { uzakPushTokenAl } from '@/lib/bildirim';
+
+/** Expo push token'ı al + sunucuya kaydet (oda bildirimleri için). Açılışta çağrılır. Sessiz. */
+export async function pushTokenGuncelle(): Promise<void> {
+  if (!supabase) return;
+  try {
+    const token = await uzakPushTokenAl();
+    if (!token) return;
+    await supabase.rpc('er_meydani_push_kaydet', { p_token: token, p_platform: null });
+  } catch {
+    /* sessiz */
+  }
+}
 
 export type ErMeydaniSonuc = { verilen: number; haftalik_toplam: number; kazandim: boolean };
 export type LiderlikSatir = { sira: number; rumuz: string; puan: number; mac_sayisi: number; ben: boolean };
