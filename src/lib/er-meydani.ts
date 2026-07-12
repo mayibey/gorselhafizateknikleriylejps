@@ -187,6 +187,101 @@ export async function odaKapat(odaId: string): Promise<void> {
   }
 }
 
+// ── LİG (dereceli, gölge-usulü) ────────────────────────────────────────────
+export type LigDurum = {
+  puan: number;
+  kademe: string;
+  mac: number;
+  galip: number;
+  maglup: number;
+  sezon: string;
+  sira: number;
+};
+export type LigEslesme = {
+  kayit_id: string | null;
+  golge: boolean;
+  seed: number;
+  rakip_skor: number;
+  rakip_rating: number;
+  rakip_rumuz: string;
+  rakip_id: string | null;
+  benim_rating: number;
+  kademe: string;
+};
+export type LigSonuc = { delta: number; rating: number; kademe: string; galip_mu: boolean; berabere: boolean };
+export type LigTabloSatir = {
+  sira: number;
+  rumuz: string;
+  puan: number;
+  kademe: string;
+  mac: number;
+  galip: number;
+  ben: boolean;
+};
+
+/** Kendi lig durumu (rating/kademe/sıra). Tembel sezon sıfırlaması sunucuda uygulanır. */
+export async function ligDurum(): Promise<LigDurum | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_lig_durum');
+    if (error || !data) return null;
+    const j = data as LigDurum & { hata?: string };
+    return j.hata ? null : j;
+  } catch {
+    return null;
+  }
+}
+
+/** Dereceli eşleşme: seviyeye yakın gölge rakip (yoksa sentetik). Offline → null. */
+export async function ligEslesme(): Promise<LigEslesme | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_lig_eslesme');
+    if (error || !data) return null;
+    const j = data as LigEslesme & { hata?: string };
+    return j.hata ? null : j;
+  } catch {
+    return null;
+  }
+}
+
+/** Dereceli maç sonucu → ELO güncellenir (sunucu). Offline → null. */
+export async function ligSonuc(p: {
+  seed: number;
+  benimSkor: number;
+  rakipSkor: number;
+  rakipRating: number;
+  rakipId: string | null;
+}): Promise<LigSonuc | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_lig_sonuc', {
+      p_seed: p.seed,
+      p_benim_skor: p.benimSkor,
+      p_rakip_skor: p.rakipSkor,
+      p_rakip_rating: p.rakipRating,
+      p_rakip_id: p.rakipId,
+    });
+    if (error || !data) return null;
+    const j = data as LigSonuc & { hata?: string };
+    return j.hata ? null : j;
+  } catch {
+    return null;
+  }
+}
+
+/** Bu sezonun lig tablosu (rating sıralaması). Offline → boş. */
+export async function ligTablo(limit = 50): Promise<LigTabloSatir[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_lig_tablo', { p_limit: limit });
+    if (error || !data) return [];
+    return data as LigTabloSatir[];
+  } catch {
+    return [];
+  }
+}
+
 /** Rakibi şikayet et (Apple UGC şartı). */
 export async function sikayetEt(rakipId: string | null, rakipRumuz: string | null, sebep: string): Promise<void> {
   if (!supabase) throw new Error('Şu an kullanılamıyor.');
