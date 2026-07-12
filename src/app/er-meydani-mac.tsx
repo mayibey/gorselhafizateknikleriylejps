@@ -29,10 +29,17 @@ import {
   odaSkor,
   sonucKaydet,
   zayifKanunEkle,
+  zayifMaddeEkle,
 } from '@/lib/er-meydani';
 import { gonderGeriBildirim } from '@/lib/geri-bildirim';
 
 type Faz = 'oyun' | 'geribildirim' | 'bitti' | 'inceleme';
+
+/** Kaynak referansından madde no çıkar ("5237 m.4/2" → "4", "MADDE 7" → "7"). */
+function maddeAyikla(kaynak: string): string {
+  const m = /m\.?\s*(\d+)/i.exec(kaynak) ?? /madde\s*(\d+)/i.exec(kaynak);
+  return m ? m[1] : '';
+}
 
 /** ER MEYDANI — MAÇ. 10 soru, süreli, gölge rakibe karşı hız yarışı. Sonuç aynı ekranda. */
 export default function ErMeydaniMacScreen() {
@@ -168,6 +175,18 @@ export default function ErMeydaniMacScreen() {
       .map((a, i) => (a.dogru ? null : (sorular[i]?.kanun ?? null)))
       .filter((k): k is number => k != null && k > 0);
     void zayifKanunEkle(yanlisKanunlar);
+    // Madde bazlı: yanlış soruların maddesini kaydet (Güç Kazandırma detay modalı).
+    const yanlisMadde = benAdimlar
+      .map((a, i) => {
+        const s = sorular[i];
+        if (a.dogru || !s || s.kanun <= 0) return null;
+        const md = maddeAyikla(s.kaynak);
+        return md ? { kanun: s.kanun, madde: md } : null;
+      })
+      .filter((x): x is { kanun: number; madde: string } => x != null);
+    if (yanlisMadde.length) {
+      void zayifMaddeEkle(yanlisMadde.map((x) => x.kanun), yanlisMadde.map((x) => x.madde));
+    }
     const yaz = odaMod
       ? odaSkor(odaId, benim).then((r) => {
           if (!iptal && r && r.durum === 'bitti') setOdaSonuc(r.oyuncular); // herkes bitmişse sıralama hazır

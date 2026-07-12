@@ -448,6 +448,30 @@ export async function zayifKanunlar(): Promise<ZayifKanun[]> {
   }
 }
 
+export type ZayifMadde = { madde: string; yanlis: number };
+
+/** Maç sonu yanlış yapılan MADDELERİ ekle (paralel: kanunlar[i] + maddeler[i]). Sessiz. */
+export async function zayifMaddeEkle(kanunlar: number[], maddeler: string[]): Promise<void> {
+  if (!supabase || kanunlar.length === 0) return;
+  try {
+    await supabase.rpc('er_meydani_zayif_madde_ekle', { p_kanunlar: kanunlar, p_maddeler: maddeler });
+  } catch {
+    /* sessiz */
+  }
+}
+
+/** Bir kanunun zorlanılan maddeleri (yanlış çok→az). Detay modalı için. Offline → boş. */
+export async function zayifMaddeler(kanun: number): Promise<ZayifMadde[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_zayif_maddeler', { p_kanun: kanun });
+    if (error || !data) return [];
+    return data as ZayifMadde[];
+  } catch {
+    return [];
+  }
+}
+
 /** Rakibi şikayet et (Apple UGC şartı). */
 export async function sikayetEt(rakipId: string | null, rakipRumuz: string | null, sebep: string): Promise<void> {
   if (!supabase) throw new Error('Şu an kullanılamıyor.');
