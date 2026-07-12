@@ -399,6 +399,51 @@ export default function KarargahScreen() {
 
       <SinavGeriSayim />
 
+      {/* 3 KUTU — Genel ilerleme · Nöbet serisi · Zayıf mevzi (sayacın hemen altında). */}
+      <View style={styles.kutuSatir}>
+        <View style={[styles.card, styles.kutu]}>
+          <Halka yuzde={hazirlik} />
+          <AppText variant="etiket" color="solukMetin">
+            Genel ilerleme
+          </AppText>
+        </View>
+        <View style={[styles.card, styles.kutu]}>
+          <View style={styles.kutuDeger}>
+            {streak && streak > 0 ? (
+              <MaterialCommunityIcons name="fire" size={22} color={Palette.amber} />
+            ) : null}
+            <AppText variant="dev" bold color="anaMetin">
+              {streak === null || streak === 0 ? '—' : `${streak}`}
+            </AppText>
+          </View>
+          <AppText variant="etiket" color="solukMetin">
+            Nöbet serisi
+          </AppText>
+        </View>
+        {/* Zayıf mevzi kutusu — TIKLANIR: dokun → Etüt (zayıf akışı). Boşsa pasif. */}
+        <Pressable
+          disabled={bekleyen === 0}
+          onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+          style={({ pressed }) => [
+            styles.card,
+            styles.kutu,
+            pressed && styles.pressed,
+            bekleyen === 0 && styles.pressed,
+          ]}
+          accessibilityRole="button"
+          accessibilityLabel="Zayıf mevzileri çalış">
+          <View style={styles.kutuDeger}>
+            <MaterialCommunityIcons name="target" size={20} color={Palette.altinKoyu} />
+            <AppText variant="dev" bold color="anaMetin">
+              {bekleyen}
+            </AppText>
+          </View>
+          <AppText variant="etiket" color="solukMetin">
+            Zayıf mevzi
+          </AppText>
+        </Pressable>
+      </View>
+
       {/* UNUTMA UYARISI — ≥7 gündür tekrar edilmemiş kanunlar (tedbir bandı). */}
       {unutulan.length > 0 ? (
         <View style={styles.unutBanner}>
@@ -654,51 +699,6 @@ export default function KarargahScreen() {
           </Pressable>
         </Pressable>
       </Modal>
-
-      {/* 3 KUTU — Genel ilerleme (halka) · Nöbet serisi · Zayıf mevzi */}
-      <View style={styles.kutuSatir}>
-        <View style={[styles.card, styles.kutu]}>
-          <Halka yuzde={hazirlik} />
-          <AppText variant="etiket" color="solukMetin">
-            Genel ilerleme
-          </AppText>
-        </View>
-        <View style={[styles.card, styles.kutu]}>
-          <View style={styles.kutuDeger}>
-            {streak && streak > 0 ? (
-              <MaterialCommunityIcons name="fire" size={22} color={Palette.amber} />
-            ) : null}
-            <AppText variant="dev" bold color="anaMetin">
-              {streak === null || streak === 0 ? '—' : `${streak}`}
-            </AppText>
-          </View>
-          <AppText variant="etiket" color="solukMetin">
-            Nöbet serisi
-          </AppText>
-        </View>
-        {/* Zayıf mevzi kutusu — TIKLANIR: dokun → Etüt (zayıf akışı). Boşsa pasif. */}
-        <Pressable
-          disabled={bekleyen === 0}
-          onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
-          style={({ pressed }) => [
-            styles.card,
-            styles.kutu,
-            pressed && styles.pressed,
-            bekleyen === 0 && styles.pressed,
-          ]}
-          accessibilityRole="button"
-          accessibilityLabel="Zayıf mevzileri çalış">
-          <View style={styles.kutuDeger}>
-            <MaterialCommunityIcons name="target" size={20} color={Palette.altinKoyu} />
-            <AppText variant="dev" bold color="anaMetin">
-              {bekleyen}
-            </AppText>
-          </View>
-          <AppText variant="etiket" color="solukMetin">
-            Zayıf mevzi
-          </AppText>
-        </Pressable>
-      </View>
 
       {/* GÜNÜN MADDESİ — tarih rotasyonlu kart + İncele */}
       {gunMadde ? (
