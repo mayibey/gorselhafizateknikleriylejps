@@ -111,6 +111,82 @@ export async function gecenHaftaSampiyon(): Promise<Sampiyon | null> {
   }
 }
 
+// ── ODA SİSTEMİ (kuran ayarlı + açık odalar) ───────────────────────────────
+export type OdaBilgi = { id: string; kod: string; seed: number; soru_sayisi: number; sure_sn: number };
+export type AcikOda = {
+  id: string;
+  kod: string;
+  kuran_rumuz: string;
+  soru_sayisi: number;
+  sure_sn: number;
+  created_at: string;
+  benimki: boolean;
+};
+export type KatilBilgi = {
+  seed: number;
+  soru_sayisi: number;
+  sure_sn: number;
+  havuz: string;
+  kuran_id: string;
+  kuran_rumuz: string;
+};
+
+/** Ayarlarla (soru sayısı + süre) açık oda kurar. Hata → {ok:false}. */
+export async function odaKur(soruSayisi: number, sureSn: number): Promise<{ ok: boolean; oda?: OdaBilgi; hata?: string }> {
+  if (!supabase) return { ok: false, hata: 'Şu an kullanılamıyor.' };
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_oda_kur', {
+      p_soru_sayisi: soruSayisi,
+      p_sure_sn: sureSn,
+    });
+    if (error || !data) return { ok: false, hata: error?.message ?? 'Oda kurulamadı.' };
+    const j = data as OdaBilgi & { hata?: string };
+    if (j.hata) return { ok: false, hata: j.hata };
+    return { ok: true, oda: j };
+  } catch (e) {
+    return { ok: false, hata: (e as Error).message };
+  }
+}
+
+/** Açık odalar (herkese görünür; engellenenler hariç). Offline → boş. */
+export async function acikOdalar(): Promise<AcikOda[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_acik_odalar', { p_limit: 30 });
+    if (error || !data) return [];
+    return data as AcikOda[];
+  } catch {
+    return [];
+  }
+}
+
+/** Odaya katıl (listeden id ile veya kodla) → odanın seed+ayarları. Bulunamaz/kapalı → null. */
+export async function odayaKatil(odaId: string | null, kod: string | null): Promise<KatilBilgi | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_odaya_katil', {
+      p_oda_id: odaId,
+      p_kod: kod,
+    });
+    if (error || !data) return null;
+    const j = data as KatilBilgi & { hata?: string };
+    if (j.hata) return null;
+    return j;
+  } catch {
+    return null;
+  }
+}
+
+/** Kuranın kendi odasını kapatması. */
+export async function odaKapat(odaId: string): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.rpc('er_meydani_oda_kapat', { p_oda_id: odaId });
+  } catch {
+    /* sessiz */
+  }
+}
+
 /** Rakibi şikayet et (Apple UGC şartı). */
 export async function sikayetEt(rakipId: string | null, rakipRumuz: string | null, sebep: string): Promise<void> {
   if (!supabase) throw new Error('Şu an kullanılamıyor.');

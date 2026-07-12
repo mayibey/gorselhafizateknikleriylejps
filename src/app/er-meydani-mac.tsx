@@ -13,6 +13,7 @@ import {
   SORU_SURE_MS,
   getErMeydaniSorulari,
   golgeRakipUret,
+  normalizePuan,
   puanSoru,
   seedUret,
   toplamPuan,
@@ -24,7 +25,7 @@ type Faz = 'oyun' | 'geribildirim' | 'bitti';
 /** ER MEYDANI — MAÇ. 10 soru, süreli, gölge rakibe karşı hız yarışı. Sonuç aynı ekranda. */
 export default function ErMeydaniMacScreen() {
   const router = useRouter();
-  const params = useLocalSearchParams<{ seed?: string; mod?: string }>();
+  const params = useLocalSearchParams<{ seed?: string; mod?: string; soru?: string; sure?: string }>();
 
   // Tohum: verilmezse üret (doğrudan açılırsa). useMemo → tek sefer sabit.
   const seed = useMemo(() => {
@@ -32,14 +33,23 @@ export default function ErMeydaniMacScreen() {
     return Number.isFinite(p) && p > 0 ? p : seedUret();
   }, [params.seed]);
   const mod = (params.mod === 'arkadas' ? 'arkadas' : 'hizli') as 'hizli' | 'arkadas';
+  // Oda ayarları (yoksa varsayılan 10 soru / 15 sn).
+  const adet = useMemo(() => {
+    const n = Number(params.soru);
+    return [5, 10, 15, 20].includes(n) ? n : SORU_SAYISI;
+  }, [params.soru]);
+  const sureMs = useMemo(() => {
+    const n = Number(params.sure);
+    return [10, 15, 20, 30].includes(n) ? n * 1000 : SORU_SURE_MS;
+  }, [params.sure]);
 
-  const sorular = useMemo(() => getErMeydaniSorulari(seed), [seed]);
-  const golge = useMemo<GolgeRakip>(() => golgeRakipUret(seed), [seed]);
+  const sorular = useMemo(() => getErMeydaniSorulari(seed, adet), [seed, adet]);
+  const golge = useMemo<GolgeRakip>(() => golgeRakipUret(seed, adet, sureMs), [seed, adet, sureMs]);
 
   const [index, setIndex] = useState(0);
   const [faz, setFaz] = useState<Faz>('oyun');
   const [secili, setSecili] = useState<number | null>(null);
-  const [kalanMs, setKalanMs] = useState(SORU_SURE_MS);
+  const [kalanMs, setKalanMs] = useState(sureMs);
   const [benAdimlar, setBenAdimlar] = useState<MacAdim[]>([]);
   const [sunucu, setSunucu] = useState<ErMeydaniSonuc | null>(null);
   const [kaydediliyor, setKaydediliyor] = useState(false);
@@ -57,14 +67,14 @@ export default function ErMeydaniMacScreen() {
     (secilenIndex: number | null) => {
       if (cevaplandiRef.current) return;
       cevaplandiRef.current = true;
-      const gecenMs = Math.min(SORU_SURE_MS, Date.now() - baslangicRef.current);
+      const gecenMs = Math.min(sureMs, Date.now() - baslangicRef.current);
       const soru = sorular[index];
       const dogru = secilenIndex !== null && soru != null && secilenIndex === soru.dogru;
       setSecili(secilenIndex);
-      setBenAdimlar((a) => [...a, { dogru, gecenMs, puan: puanSoru(dogru, gecenMs) }]);
+      setBenAdimlar((a) => [...a, { dogru, gecenMs, puan: puanSoru(dogru, gecenMs, sureMs) }]);
       setFaz('geribildirim');
     },
-    [index, sorular],
+    [index, sorular, sureMs],
   );
 
   // Sayaç: yalnız 'oyun' fazında işler; 0'a inince süre doldu → yanlış say.
@@ -72,9 +82,9 @@ export default function ErMeydaniMacScreen() {
     if (faz !== 'oyun') return;
     cevaplandiRef.current = false;
     baslangicRef.current = Date.now();
-    setKalanMs(SORU_SURE_MS);
+    setKalanMs(sureMs);
     const t = setInterval(() => {
-      const kalan = SORU_SURE_MS - (Date.now() - baslangicRef.current);
+      const kalan = sureMs - (Date.now() - baslangicRef.current);
       if (kalan <= 0) {
         setKalanMs(0);
         soruyuBitir(null);
@@ -83,13 +93,13 @@ export default function ErMeydaniMacScreen() {
       }
     }, 100);
     return () => clearInterval(t);
-  }, [faz, index, soruyuBitir]);
+  }, [faz, index, soruyuBitir, sureMs]);
 
   // Geri bildirim gösterildikten sonra ilerle (sonraki soru veya bitiş).
   useEffect(() => {
     if (faz !== 'geribildirim') return;
     const t = setTimeout(() => {
-      if (index + 1 >= SORU_SAYISI || index + 1 >= sorular.length) {
+      if (index + 1 >= adet || index + 1 >= sorular.length) {
         setFaz('bitti');
       } else {
         setIndex((i) => i + 1);
@@ -98,7 +108,7 @@ export default function ErMeydaniMacScreen() {
       }
     }, 1300);
     return () => clearTimeout(t);
-  }, [faz, index, sorular.length]);
+  }, [faz, index, adet, sorular.length]);
 
   // Maç bitince sonucu sunucuya yaz — REF guard ile TAM BİR KEZ (offline/null dönse bile döngü yok).
   useEffect(() => {
@@ -109,8 +119,8 @@ export default function ErMeydaniMacScreen() {
     void sonucKaydet({
       mod,
       seed,
-      benimPuan: toplamPuan(benAdimlar),
-      rakipPuan: golge.toplam,
+      benimPuan: normalizePuan(toplamPuan(benAdimlar), adet), // sıralama adaleti: 0-2000 ölçek
+      rakipPuan: normalizePuan(golge.toplam, adet),
       golge: true,
       rakipId: null,
       rakipRumuz: golge.rumuz,
@@ -124,19 +134,19 @@ export default function ErMeydaniMacScreen() {
     return () => {
       iptal = true;
     };
-  }, [faz, benAdimlar, golge, mod, seed]);
+  }, [faz, benAdimlar, golge, mod, seed, adet]);
 
-  // Yeni tohum (Yeni Rakip / Kodla Katıl aynı ekrana replace edince) → maçı baştan başlat.
+  // Yeni tohum/ayar (Yeni Rakip / Kodla Katıl aynı ekrana replace edince) → maçı baştan başlat.
   useEffect(() => {
     setIndex(0);
     setFaz('oyun');
     setSecili(null);
-    setKalanMs(SORU_SURE_MS);
+    setKalanMs(sureMs);
     setBenAdimlar([]);
     setSunucu(null);
     kaydettiRef.current = false;
     cevaplandiRef.current = false;
-  }, [seed]);
+  }, [seed, adet, sureMs]);
 
   if (sorular.length === 0) {
     return (
@@ -173,7 +183,7 @@ export default function ErMeydaniMacScreen() {
         <SkorKutu ad="Sen" skor={benSkor} vurgu />
         <View style={styles.ortaBilgi}>
           <AppText variant="etiket" color="solukMetin" bold>
-            SORU {index + 1}/{SORU_SAYISI}
+            SORU {index + 1}/{adet}
           </AppText>
           <View style={[styles.sureRozet, saniye <= 5 && styles.sureRozetAcil]}>
             <MaterialCommunityIcons name="timer-outline" size={16} color={saniye <= 5 ? Palette.beyaz : Palette.lacivert} />

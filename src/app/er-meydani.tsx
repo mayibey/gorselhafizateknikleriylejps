@@ -7,23 +7,31 @@ import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { seedUret } from '@/lib/er-meydani-mantik';
-import { rumuzAyarla, rumuzGetir } from '@/lib/er-meydani';
+import {
+  type AcikOda,
+  type KatilBilgi,
+  acikOdalar,
+  odaKur,
+  odayaKatil,
+  rumuzAyarla,
+  rumuzGetir,
+} from '@/lib/er-meydani';
 
-/** Tohum ↔ paylaşılabilir kısa kod (base36). */
-function seedToKod(seed: number): string {
-  return seed.toString(36).toUpperCase();
-}
-function kodToSeed(kod: string): number | null {
-  const s = parseInt(kod.trim().toLowerCase(), 36);
-  return Number.isFinite(s) && s > 0 ? s : null;
-}
+const SORU_SECENEK = [5, 10, 15, 20];
+const SURE_SECENEK = [10, 15, 20, 30];
 
-/** ER MEYDANI — LOBİ. Takma ad + hızlı eşleş + arkadaş kodu + sıralama. */
+/** ER MEYDANI — LOBİ. Takma ad + hızlı eşleş + oda kur (ayarlı) + açık odalar + kodla katıl + sıralama. */
 export default function ErMeydaniScreen() {
   const router = useRouter();
   const [rumuz, setRumuz] = useState<string | null>(null);
   const [yuklendi, setYuklendi] = useState(false);
   const [duzenle, setDuzenle] = useState(false);
+  const [odalar, setOdalar] = useState<AcikOda[] | null>(null);
+  const [odaKurAcik, setOdaKurAcik] = useState(false);
+
+  const odalariYukle = useCallback(() => {
+    void acikOdalar().then(setOdalar);
+  }, []);
 
   useFocusEffect(
     useCallback(() => {
@@ -33,30 +41,44 @@ export default function ErMeydaniScreen() {
         setRumuz(r);
         setYuklendi(true);
       });
+      odalariYukle();
       return () => {
         iptal = true;
       };
-    }, []),
+    }, [odalariYukle]),
   );
 
   const playAktif = !!rumuz;
 
+  const macaGit = useCallback(
+    (p: { seed: number; mod: 'hizli' | 'arkadas'; soru?: number; sure?: number }) =>
+      router.push({
+        pathname: '/er-meydani-mac',
+        params: {
+          seed: String(p.seed),
+          mod: p.mod,
+          ...(p.soru ? { soru: String(p.soru) } : {}),
+          ...(p.sure ? { sure: String(p.sure) } : {}),
+        },
+      }),
+    [router],
+  );
+
   function hizliEslesme() {
     if (!playAktif) return;
-    router.push({ pathname: '/er-meydani-mac', params: { seed: String(seedUret()), mod: 'hizli' } });
+    macaGit({ seed: seedUret(), mod: 'hizli' });
   }
 
-  async function davetEt() {
+  function odayaGit(k: KatilBilgi) {
+    macaGit({ seed: k.seed, mod: 'arkadas', soru: k.soru_sayisi, sure: k.sure_sn });
+  }
+
+  // Listeden katıl: seed liste'de yok (sızmasın diye) → önce sunucudan odanın seed'ini al.
+  async function listedenKatil(o: AcikOda) {
     if (!playAktif) return;
-    const seed = seedUret();
-    try {
-      await Share.share({
-        message: `Seni Er Meydanı'na davet ediyorum! Kod: ${seedToKod(seed)} — Mevzu (JSPS Hazırlık) uygulamasında bu kodla aynı 10 soruda benimle yarış. Bakalım kim daha hızlı ve doğru! 💪`,
-      });
-    } catch {
-      /* iptal */
-    }
-    router.push({ pathname: '/er-meydani-mac', params: { seed: String(seed), mod: 'arkadas' } });
+    const bilgi = await odayaKatil(o.id, null);
+    if (bilgi) odayaGit(bilgi);
+    else odalariYukle(); // oda kapanmış olabilir → listeyi tazele
   }
 
   return (
@@ -98,7 +120,7 @@ export default function ErMeydaniScreen() {
         </AppText>
       ) : null}
 
-      {/* Aksiyonlar */}
+      {/* Hızlı eşleş */}
       <Pressable
         disabled={!playAktif}
         onPress={hizliEslesme}
@@ -110,18 +132,74 @@ export default function ErMeydaniScreen() {
         </View>
       </Pressable>
 
-      <Pressable
-        disabled={!playAktif}
-        onPress={davetEt}
-        style={({ pressed }) => [styles.ikincilBtn, !playAktif && styles.pasif, pressed && styles.basili]}>
-        <MaterialCommunityIcons name="account-multiple-plus" size={22} color={Palette.lacivert} />
-        <View style={styles.btnMetin}>
-          <AppText variant="govde" color="lacivert" bold>Arkadaşını Davet Et</AppText>
-          <AppText variant="etiket" color="solukMetin">Kod paylaş, aynı sorularla yarışın</AppText>
-        </View>
-      </Pressable>
+      {/* Oda kur (ayarlı) */}
+      {odaKurAcik ? (
+        <OdaKurPanel
+          aktif={playAktif}
+          onKapat={() => setOdaKurAcik(false)}
+          onKuruldu={(k, kod) => {
+            setOdaKurAcik(false);
+            odalariYukle();
+            void Share.share({
+              message: `Seni Er Meydanı'na davet ediyorum! Oda kodu: ${kod} — Mevzu (JSPS Hazırlık) uygulamasında bu kodla ${k.soru_sayisi} soru / ${k.sure_sn} sn'lik maçta benimle yarış! 💪`,
+            });
+            odayaGit(k);
+          }}
+        />
+      ) : (
+        <Pressable
+          disabled={!playAktif}
+          onPress={() => setOdaKurAcik(true)}
+          style={({ pressed }) => [styles.ikincilBtn, !playAktif && styles.pasif, pressed && styles.basili]}>
+          <MaterialCommunityIcons name="plus-box" size={22} color={Palette.lacivert} />
+          <View style={styles.btnMetin}>
+            <AppText variant="govde" color="lacivert" bold>Oda Kur</AppText>
+            <AppText variant="etiket" color="solukMetin">Soru sayısı ve süreyi sen seç, kodu paylaş</AppText>
+          </View>
+        </Pressable>
+      )}
 
-      <KodlaKatil aktif={playAktif} onKatil={(seed) => router.push({ pathname: '/er-meydani-mac', params: { seed: String(seed), mod: 'arkadas' } })} />
+      <KodlaKatil
+        aktif={playAktif}
+        onKatil={(k) => odayaGit(k)}
+      />
+
+      {/* Açık odalar */}
+      <View style={styles.odalarBaslik}>
+        <MaterialCommunityIcons name="door-open" size={18} color={Palette.altinKoyu} />
+        <AppText variant="etiket" color="solukMetin" bold>AÇIK ODALAR</AppText>
+        <Pressable hitSlop={10} onPress={odalariYukle} style={styles.yenileBtn}>
+          <MaterialCommunityIcons name="refresh" size={18} color={Palette.lacivert} />
+        </Pressable>
+      </View>
+      {odalar === null ? (
+        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+      ) : odalar.length === 0 ? (
+        <AppText variant="kucuk" color="solukMetin" style={styles.bosOda}>
+          Şu an açık oda yok. "Oda Kur" ile ilk odayı sen aç!
+        </AppText>
+      ) : (
+        odalar.map((o) => (
+          <View key={o.id} style={[styles.odaSatir, o.benimki && styles.odaBenim]}>
+            <View style={styles.odaBilgi}>
+              <AppText variant="govde" color="anaMetin" bold numberOfLines={1}>
+                {o.kuran_rumuz}{o.benimki ? ' (senin odan)' : ''}
+              </AppText>
+              <AppText variant="etiket" color="solukMetin">
+                {o.soru_sayisi} soru · {o.sure_sn} sn · kod {o.kod}
+              </AppText>
+            </View>
+            {!o.benimki ? (
+              <Pressable
+                disabled={!playAktif}
+                onPress={() => void listedenKatil(o)}
+                style={({ pressed }) => [styles.katilBtn, !playAktif && styles.pasif, pressed && styles.basili]}>
+                <AppText variant="kucuk" color="beyaz" bold>Katıl</AppText>
+              </Pressable>
+            ) : null}
+          </View>
+        ))
+      )}
 
       <Pressable
         onPress={() => router.push('/er-meydani-siralama')}
@@ -161,7 +239,7 @@ function RumuzForm({
   }
 
   return (
-    <View style={styles.rumuzForm}>
+    <View style={styles.form}>
       <AppText variant="etiket" color="solukMetin" bold>TAKMA AD (SIRALAMADA GÖRÜNÜR)</AppText>
       <TextInput
         style={styles.girdi}
@@ -178,7 +256,7 @@ function RumuzForm({
       ) : (
         <AppText variant="etiket" color="solukMetin">3-16 karakter · harf, rakam, boşluk</AppText>
       )}
-      <View style={styles.rumuzBtnSatir}>
+      <View style={styles.btnSatir}>
         {onVazgec ? (
           <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={onVazgec}>
             <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
@@ -188,21 +266,92 @@ function RumuzForm({
           style={({ pressed }) => [styles.kaydetBtn, (deger.trim().length < 3 || kaydediliyor) && styles.pasif, pressed && styles.basili]}
           disabled={deger.trim().length < 3 || kaydediliyor}
           onPress={() => void kaydet()}>
-          {kaydediliyor ? (
-            <ActivityIndicator color={Palette.beyaz} />
-          ) : (
-            <AppText variant="govde" color="beyaz" bold>Kaydet</AppText>
-          )}
+          {kaydediliyor ? <ActivityIndicator color={Palette.beyaz} /> : <AppText variant="govde" color="beyaz" bold>Kaydet</AppText>}
         </Pressable>
       </View>
     </View>
   );
 }
 
-function KodlaKatil({ aktif, onKatil }: { aktif: boolean; onKatil: (seed: number) => void }) {
+function OdaKurPanel({
+  aktif,
+  onKapat,
+  onKuruldu,
+}: {
+  aktif: boolean;
+  onKapat: () => void;
+  onKuruldu: (k: KatilBilgi, kod: string) => void;
+}) {
+  const [soru, setSoru] = useState(10);
+  const [sure, setSure] = useState(15);
+  const [kuruluyor, setKuruluyor] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
+
+  async function kur() {
+    if (!aktif || kuruluyor) return;
+    setKuruluyor(true);
+    setHata(null);
+    const sonuc = await odaKur(soru, sure);
+    setKuruluyor(false);
+    if (sonuc.ok && sonuc.oda) {
+      onKuruldu(
+        {
+          seed: sonuc.oda.seed,
+          soru_sayisi: sonuc.oda.soru_sayisi,
+          sure_sn: sonuc.oda.sure_sn,
+          havuz: 'ucretsiz',
+          kuran_id: '',
+          kuran_rumuz: '',
+        },
+        sonuc.oda.kod,
+      );
+    } else {
+      setHata(sonuc.hata ?? 'Oda kurulamadı.');
+    }
+  }
+
+  return (
+    <View style={styles.form}>
+      <AppText variant="etiket" color="solukMetin" bold>SORU SAYISI</AppText>
+      <ChipSatir secenekler={SORU_SECENEK} secili={soru} onSec={setSoru} />
+      <AppText variant="etiket" color="solukMetin" bold style={styles.aralik}>SORU BAŞINA SÜRE (SN)</AppText>
+      <ChipSatir secenekler={SURE_SECENEK} secili={sure} onSec={setSure} />
+      {hata ? <AppText variant="kucuk" color="kirmizi" bold style={styles.aralik}>{hata}</AppText> : null}
+      <View style={styles.btnSatir}>
+        <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={onKapat}>
+          <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
+        </Pressable>
+        <Pressable
+          style={({ pressed }) => [styles.kaydetBtn, (!aktif || kuruluyor) && styles.pasif, pressed && styles.basili]}
+          disabled={!aktif || kuruluyor}
+          onPress={() => void kur()}>
+          {kuruluyor ? <ActivityIndicator color={Palette.beyaz} /> : <AppText variant="govde" color="beyaz" bold>Oda Oluştur</AppText>}
+        </Pressable>
+      </View>
+    </View>
+  );
+}
+
+function ChipSatir({ secenekler, secili, onSec }: { secenekler: number[]; secili: number; onSec: (n: number) => void }) {
+  return (
+    <View style={styles.chipSatir}>
+      {secenekler.map((n) => (
+        <Pressable
+          key={n}
+          onPress={() => onSec(n)}
+          style={({ pressed }) => [styles.chip, secili === n && styles.chipSecili, pressed && styles.basili]}>
+          <AppText variant="govde" color={secili === n ? 'beyaz' : 'lacivert'} bold>{n}</AppText>
+        </Pressable>
+      ))}
+    </View>
+  );
+}
+
+function KodlaKatil({ aktif, onKatil }: { aktif: boolean; onKatil: (k: KatilBilgi) => void }) {
   const [ac, setAc] = useState(false);
   const [kod, setKod] = useState('');
-  const [hata, setHata] = useState(false);
+  const [hata, setHata] = useState<string | null>(null);
+  const [araniyor, setAraniyor] = useState(false);
 
   if (!ac) {
     return (
@@ -213,46 +362,49 @@ function KodlaKatil({ aktif, onKatil }: { aktif: boolean; onKatil: (seed: number
         <MaterialCommunityIcons name="key-variant" size={22} color={Palette.lacivert} />
         <View style={styles.btnMetin}>
           <AppText variant="govde" color="lacivert" bold>Kodla Katıl</AppText>
-          <AppText variant="etiket" color="solukMetin">Arkadaşının kodunu gir</AppText>
+          <AppText variant="etiket" color="solukMetin">Arkadaşının oda kodunu gir</AppText>
         </View>
       </Pressable>
     );
   }
 
-  function katil() {
-    const seed = kodToSeed(kod);
-    if (seed === null) {
-      setHata(true);
-      return;
-    }
-    onKatil(seed);
+  async function katil() {
+    const k = kod.trim();
+    if (k.length === 0 || araniyor) return;
+    setAraniyor(true);
+    setHata(null);
+    const bilgi = await odayaKatil(null, k);
+    setAraniyor(false);
+    if (bilgi) onKatil(bilgi);
+    else setHata('Oda bulunamadı ya da kapandı.');
   }
 
   return (
-    <View style={styles.kodForm}>
-      <AppText variant="etiket" color="solukMetin" bold>ARKADAŞININ KODU</AppText>
+    <View style={styles.form}>
+      <AppText variant="etiket" color="solukMetin" bold>ARKADAŞININ ODA KODU</AppText>
       <TextInput
         style={styles.girdi}
         value={kod}
         onChangeText={(t) => {
           setKod(t);
-          setHata(false);
+          setHata(null);
         }}
-        placeholder="Örn. K7QMX2"
+        placeholder="Örn. B9E21C"
         placeholderTextColor={Palette.solukMetin}
         autoCapitalize="characters"
         autoCorrect={false}
+        editable={!araniyor}
       />
-      {hata ? <AppText variant="kucuk" color="kirmizi" bold>Geçersiz kod.</AppText> : null}
-      <View style={styles.rumuzBtnSatir}>
+      {hata ? <AppText variant="kucuk" color="kirmizi" bold>{hata}</AppText> : null}
+      <View style={styles.btnSatir}>
         <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={() => setAc(false)}>
           <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
         </Pressable>
         <Pressable
-          style={({ pressed }) => [styles.kaydetBtn, kod.trim().length === 0 && styles.pasif, pressed && styles.basili]}
-          disabled={kod.trim().length === 0}
-          onPress={katil}>
-          <AppText variant="govde" color="beyaz" bold>Katıl</AppText>
+          style={({ pressed }) => [styles.kaydetBtn, (kod.trim().length === 0 || araniyor) && styles.pasif, pressed && styles.basili]}
+          disabled={kod.trim().length === 0 || araniyor}
+          onPress={() => void katil()}>
+          {araniyor ? <ActivityIndicator color={Palette.beyaz} /> : <AppText variant="govde" color="beyaz" bold>Katıl</AppText>}
         </Pressable>
       </View>
     </View>
@@ -272,11 +424,7 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m, padding: Spacing.three,
   },
   rumuzAd: { flex: 1 },
-  rumuzForm: {
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
-    borderRadius: Radius.m, padding: Spacing.three, gap: Spacing.two,
-  },
-  kodForm: {
+  form: {
     backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three, gap: Spacing.two,
   },
@@ -284,7 +432,15 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.beyaz, borderColor: Palette.kenarlik, borderWidth: 1,
     borderRadius: Radius.m, padding: Spacing.three, fontSize: 16, color: Palette.anaMetin,
   },
-  rumuzBtnSatir: { flexDirection: 'row', gap: Spacing.two, marginTop: Spacing.one },
+  aralik: { marginTop: Spacing.one },
+  chipSatir: { flexDirection: 'row', gap: Spacing.two },
+  chip: {
+    flex: 1, alignItems: 'center', justifyContent: 'center',
+    backgroundColor: Palette.kremZemin, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.m, paddingVertical: Spacing.two,
+  },
+  chipSecili: { backgroundColor: Palette.lacivert, borderColor: Palette.lacivert },
+  btnSatir: { flexDirection: 'row', gap: Spacing.two, marginTop: Spacing.one },
   vazgecBtn: {
     flex: 1, alignItems: 'center', justifyContent: 'center',
     backgroundColor: Palette.kremZemin, borderWidth: 1, borderColor: Palette.kenarlik,
@@ -305,6 +461,20 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m, padding: Spacing.three,
   },
   btnMetin: { flex: 1, gap: 2 },
+  odalarBaslik: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two, marginTop: Spacing.two },
+  yenileBtn: { marginLeft: 'auto' },
+  bosOda: { textAlign: 'center', paddingVertical: Spacing.three },
+  odaSatir: {
+    flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
+    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.m, padding: Spacing.three,
+  },
+  odaBenim: { borderColor: Palette.altin, backgroundColor: Palette.altinSolukYuzey },
+  odaBilgi: { flex: 1, gap: 2 },
+  katilBtn: {
+    backgroundColor: Palette.lacivert, borderRadius: Radius.m,
+    paddingHorizontal: Spacing.four, paddingVertical: Spacing.two,
+  },
   pasif: { opacity: 0.45 },
   basili: { opacity: 0.85 },
 });

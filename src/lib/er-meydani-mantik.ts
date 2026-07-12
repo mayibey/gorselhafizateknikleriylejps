@@ -72,10 +72,10 @@ export function getErMeydaniSorulari(seed: number, adet: number = SORU_SAYISI): 
   return karistir(havuz, rngOlustur(seed)).slice(0, Math.min(adet, havuz.length));
 }
 
-/** Tek sorunun puanı: doğruysa temel + kalan süreye orantılı bonus; değilse 0. */
-export function puanSoru(dogruMu: boolean, gecenMs: number): number {
+/** Tek sorunun puanı: doğruysa temel + kalan süreye orantılı bonus; değilse 0. `sureMs` oda ayarı. */
+export function puanSoru(dogruMu: boolean, gecenMs: number, sureMs: number = SORU_SURE_MS): number {
   if (!dogruMu) return 0;
-  const kalanOran = Math.max(0, Math.min(1, (SORU_SURE_MS - gecenMs) / SORU_SURE_MS));
+  const kalanOran = Math.max(0, Math.min(1, (sureMs - gecenMs) / sureMs));
   return TEMEL_PUAN + Math.round(HIZ_BONUS * kalanOran);
 }
 
@@ -83,6 +83,15 @@ export function puanSoru(dogruMu: boolean, gecenMs: number): number {
 export type MacAdim = { dogru: boolean; gecenMs: number; puan: number };
 export function toplamPuan(adimlar: readonly MacAdim[]): number {
   return adimlar.reduce((t, a) => t + a.puan, 0);
+}
+
+/**
+ * Değişken soru sayılı maçları sıralamada ADİL kılmak için puanı 0-2000 ölçeğine indirger
+ * (ortalama-soru-puanı × 10). 20 soruluk oda 10 soruluğun iki katı sıralama puanı vermesin diye.
+ */
+export function normalizePuan(rawToplam: number, adet: number): number {
+  if (adet <= 0) return 0;
+  return Math.min(MAX_PUAN, Math.round((rawToplam / adet) * SORU_SAYISI));
 }
 
 // ── GÖLGE RAKİP (tek başına oynanabilsin diye) ─────────────────────────────
@@ -99,14 +108,19 @@ export type GolgeRakip = { rumuz: string; adimlar: MacAdim[]; toplam: number };
  * `zorluk` = rakibin bir soruyu doğru bilme olasılığı (0.5 kolay … 0.8 zorlu).
  * Her adımda rakibin süresi 2–12 sn arası (insan gibi), puanı ona göre hesaplanır.
  */
-export function golgeRakipUret(seed: number, zorluk: number = 0.62): GolgeRakip {
+export function golgeRakipUret(
+  seed: number,
+  adet: number = SORU_SAYISI,
+  sureMs: number = SORU_SURE_MS,
+  zorluk: number = 0.62,
+): GolgeRakip {
   const r = rngOlustur((seed ^ 0x9e3779b9) >>> 0);
   const rumuz = `${GOLGE_UNVAN[Math.floor(r() * GOLGE_UNVAN.length)]} ${GOLGE_ADLAR[Math.floor(r() * GOLGE_ADLAR.length)]}`;
   const adimlar: MacAdim[] = [];
-  for (let i = 0; i < SORU_SAYISI; i++) {
+  for (let i = 0; i < adet; i++) {
     const dogru = r() < zorluk;
-    const gecenMs = Math.round((2 + r() * 10) * 1000); // 2–12 sn
-    adimlar.push({ dogru, gecenMs, puan: puanSoru(dogru, gecenMs) });
+    const gecenMs = Math.round((0.15 + r() * 0.65) * sureMs); // süreye orantılı, insan gibi
+    adimlar.push({ dogru, gecenMs, puan: puanSoru(dogru, gecenMs, sureMs) });
   }
   return { rumuz, adimlar, toplam: toplamPuan(adimlar) };
 }
