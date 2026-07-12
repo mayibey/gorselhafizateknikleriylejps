@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, Share, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, Share, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -405,6 +405,11 @@ export default function ErMeydaniMacScreen() {
         <View style={[styles.sureDolu, { width: `${sureOran * 100}%` }, saniye <= 5 && styles.sureDoluAcil]} />
       </View>
 
+      {/* Soru + şıklar KAYDIRILABİLİR: uzun sorularda son şıklar (E) kesilmesin, HUD/süre üstte sabit. */}
+      <ScrollView
+        style={styles.oyunKaydir}
+        contentContainerStyle={styles.oyunKaydirIc}
+        showsVerticalScrollIndicator>
       {/* Soru */}
       <View style={styles.soruKart}>
         <AppText variant="govde" bold style={styles.soruMetin}>
@@ -441,6 +446,7 @@ export default function ErMeydaniMacScreen() {
           );
         })}
       </View>
+      </ScrollView>
     </Screen>
   );
 }
@@ -731,6 +737,8 @@ const styles = StyleSheet.create({
   },
   soruMetin: { lineHeight: 26 },
   siklar: { gap: Spacing.two, marginTop: Spacing.one },
+  oyunKaydir: { flex: 1 },
+  oyunKaydirIc: { gap: Spacing.three, paddingBottom: Spacing.four },
   sik: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
     backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,

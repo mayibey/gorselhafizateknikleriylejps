@@ -135,6 +135,7 @@ export default function KarargahScreen() {
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [zayifKanun, setZayifKanun] = useState<ZayifKanun[]>([]);
   const [zorlandiAcik, setZorlandiAcik] = useState(false);
+  const [zayifHepsi, setZayifHepsi] = useState(false);
   const [hata, setHata] = useState(false);
   // Günün Maddesi indirilmemiş kanundansa: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
   // (Arama/Patika'daki İNDİRME KAPISI ile aynı; Günün Maddesi bu kapıyı atlayıp boş kart açıyordu.)
@@ -503,7 +504,7 @@ export default function KarargahScreen() {
               <AppText variant="kucuk" color="anaMetin">
                 Er Meydanı'nda en çok bu konularda yanlış yaptın:
               </AppText>
-          {zayifKanun.slice(0, 8).map((z) => {
+          {zayifKanun.slice(0, zayifHepsi ? zayifKanun.length : 4).map((z) => {
             const ad = KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`;
             const icerik = (
               <>
@@ -534,6 +535,14 @@ export default function KarargahScreen() {
               </View>
             );
           })}
+          {zayifKanun.length > 4 ? (
+            <Pressable onPress={() => setZayifHepsi((a) => !a)} style={styles.gbDahaBtn}>
+              <AppText variant="etiket" color="lacivert" bold>
+                {zayifHepsi ? 'Daha az göster' : `+${zayifKanun.length - 4} konu daha`}
+              </AppText>
+              <MaterialCommunityIcons name={zayifHepsi ? 'chevron-up' : 'chevron-down'} size={16} color={Palette.lacivert} />
+            </Pressable>
+          ) : null}
           {premium ? (
             <AppText variant="etiket" color="solukMetin">
               Bir konuya dokun → o konuyu çalış, mevzini güçlendir.
@@ -953,6 +962,13 @@ const styles = StyleSheet.create({
   },
   gbBaslikMini: {
     letterSpacing: 0.5,
+  },
+  gbDahaBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+    paddingVertical: Spacing.one,
   },
   gbSatir: {
     flexDirection: 'row',
