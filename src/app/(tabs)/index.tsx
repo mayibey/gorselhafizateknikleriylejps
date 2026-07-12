@@ -399,14 +399,6 @@ export default function KarargahScreen() {
 
       <SinavGeriSayim />
 
-      {/* Header altı açıklama. (Branş/rütbe artık YALNIZ Evsaf → Ayarlar'dan değişir;
-          buradaki rol/kademe dropdown'ları kaldırıldı, yer 7-gün uyarı bandına bırakıldı.) */}
-      <View style={styles.selam}>
-        <AppText variant="kucuk" color="solukMetin">
-          Bugünkü çalışma özetin burada.
-        </AppText>
-      </View>
-
       {/* UNUTMA UYARISI — ≥7 gündür tekrar edilmemiş kanunlar (tedbir bandı). */}
       {unutulan.length > 0 ? (
         <View style={styles.unutBanner}>
@@ -662,20 +654,6 @@ export default function KarargahScreen() {
           </Pressable>
         </Pressable>
       </Modal>
-
-      {/* BUGÜNÜN GÖREVİ — günlük aktivite (sabit hedef/15-kart bandı KALDIRILDI; hedef
-          kullanıcı tarafından Ayarlar → Eğitim Planı'ndan belirlenir). Sayaçlar gün-bazlı. */}
-      <View style={styles.card}>
-        <View style={styles.gorevBaslik}>
-          <AppText variant="etiket" color="solukMetin" bold>
-            BUGÜNÜN GÖREVİ
-          </AppText>
-        </View>
-        <View style={styles.gorevSatir}>
-          <Gorev sayi={tekrarSayisi} etiket="Zayıf mevzi" />
-          <Gorev sayi={bugunSayi} etiket="Bugün çalışılan" />
-        </View>
-      </View>
 
       {/* 3 KUTU — Genel ilerleme (halka) · Nöbet serisi · Zayıf mevzi */}
       <View style={styles.kutuSatir}>
