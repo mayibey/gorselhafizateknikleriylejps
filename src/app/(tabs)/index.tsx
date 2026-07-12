@@ -407,6 +407,14 @@ export default function KarargahScreen() {
         </View>
       ) : null}
 
+      {/* ═══ GERİ BESLEME — zayıf mevziler + düello eksikleri (tek başlık altında) ═══ */}
+      <View style={styles.gbUstBaslik}>
+        <MaterialCommunityIcons name="chart-timeline-variant" size={18} color={Palette.altinKoyu} />
+        <AppText variant="etiket" color="solukMetin" bold style={styles.gbUstBaslikAd}>
+          GERİ BESLEME
+        </AppText>
+      </View>
+
       {/* HERO — ETÜT = zayıf havuz (eksik/zorlandığın kartları düzelt). Boşsa "zayıf yok". */}
       {bos ? (
         <Pressable
@@ -436,10 +444,10 @@ export default function KarargahScreen() {
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
               <AppText variant="etiket" color="altin" bold>
-                GERİ BESLEME
+                ZAYIF MEVZİLER
               </AppText>
               <AppText variant="baslik" color="beyaz" bold>
-                Zayıf Mevziler
+                Kart Çalışması
               </AppText>
               {/* Etüt = hata + zorlandıklarını düzeltme bölümü (tekrar-hatırlat + denemede yanlış). */}
               <AppText variant="etiket" color="altinAcik2">
@@ -469,6 +477,66 @@ export default function KarargahScreen() {
           </View>
         </Pressable>
       )}
+
+      {/* Düello'da zorlandığın kanunlar (ücretsiz görür; gidermek için premium) — Geri Besleme altında. */}
+      {zayifKanun.length > 0 ? (
+        <View style={styles.gbKart}>
+          <View style={styles.gbBaslik}>
+            <MaterialCommunityIcons name="target-account" size={18} color={Palette.kirmizi} />
+            <AppText variant="etiket" bold color="solukMetin" style={styles.gbBaslikAd}>
+              DÜELLODA ZORLANDIĞIN KANUNLAR
+            </AppText>
+          </View>
+          <AppText variant="kucuk" color="anaMetin">
+            Er Meydanı'nda en çok bu kanunlarda yanlış yaptın:
+          </AppText>
+          {zayifKanun.slice(0, 4).map((z) => {
+            const ad = KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`;
+            const icerik = (
+              <>
+                <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
+                <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd} numberOfLines={1}>
+                  {ad}
+                </AppText>
+                <AppText variant="etiket" color="kirmizi" bold>
+                  {z.yanlis} yanlış
+                </AppText>
+                {premium ? (
+                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                ) : (
+                  <MaterialCommunityIcons name="lock-outline" size={16} color={Palette.solukMetin} />
+                )}
+              </>
+            );
+            return premium ? (
+              <Pressable
+                key={z.kanun}
+                style={({ pressed }) => [styles.gbSatir, pressed && styles.pressed]}
+                onPress={() => router.push({ pathname: '/patika', params: { lawId: String(z.kanun) } })}>
+                {icerik}
+              </Pressable>
+            ) : (
+              <View key={z.kanun} style={styles.gbSatir}>
+                {icerik}
+              </View>
+            );
+          })}
+          {premium ? (
+            <AppText variant="etiket" color="solukMetin">
+              Bir kanuna dokun → o kanunu çalış, mevzini güçlendir.
+            </AppText>
+          ) : (
+            <Pressable
+              style={({ pressed }) => [styles.gbPremiumBtn, pressed && styles.pressed]}
+              onPress={() => router.push('/paywall')}>
+              <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
+              <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>
+                Bu kanunları çalışıp zayıf mevzini gider → Premium Al
+              </AppText>
+            </Pressable>
+          )}
+        </View>
+      ) : null}
 
       {/* BUGÜNÜN GÖREVİ — günlük aktivite (sabit hedef/15-kart bandı KALDIRILDI; hedef
           kullanıcı tarafından Ayarlar → Eğitim Planı'ndan belirlenir). Sayaçlar gün-bazlı. */}
@@ -528,66 +596,6 @@ export default function KarargahScreen() {
           </AppText>
         </Pressable>
       </View>
-
-      {/* GERİ BESLEME — Düello'da zorlandığın kanunlar (ücretsiz görür; gidermek için premium). */}
-      {zayifKanun.length > 0 ? (
-        <View style={styles.gbKart}>
-          <View style={styles.gbBaslik}>
-            <MaterialCommunityIcons name="target-account" size={18} color={Palette.kirmizi} />
-            <AppText variant="etiket" bold color="solukMetin" style={styles.gbBaslikAd}>
-              GERİ BESLEME · DÜELLODA ZORLANDIĞIN KANUNLAR
-            </AppText>
-          </View>
-          <AppText variant="kucuk" color="anaMetin">
-            Er Meydanı'nda en çok bu kanunlarda yanlış yaptın:
-          </AppText>
-          {zayifKanun.slice(0, 4).map((z) => {
-            const ad = KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`;
-            const icerik = (
-              <>
-                <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
-                <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd} numberOfLines={1}>
-                  {ad}
-                </AppText>
-                <AppText variant="etiket" color="kirmizi" bold>
-                  {z.yanlis} yanlış
-                </AppText>
-                {premium ? (
-                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
-                ) : (
-                  <MaterialCommunityIcons name="lock-outline" size={16} color={Palette.solukMetin} />
-                )}
-              </>
-            );
-            return premium ? (
-              <Pressable
-                key={z.kanun}
-                style={({ pressed }) => [styles.gbSatir, pressed && styles.pressed]}
-                onPress={() => router.push({ pathname: '/patika', params: { lawId: String(z.kanun) } })}>
-                {icerik}
-              </Pressable>
-            ) : (
-              <View key={z.kanun} style={styles.gbSatir}>
-                {icerik}
-              </View>
-            );
-          })}
-          {premium ? (
-            <AppText variant="etiket" color="solukMetin">
-              Bir kanuna dokun → o kanunu çalış, mevzini güçlendir.
-            </AppText>
-          ) : (
-            <Pressable
-              style={({ pressed }) => [styles.gbPremiumBtn, pressed && styles.pressed]}
-              onPress={() => router.push('/paywall')}>
-              <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
-              <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>
-                Bu kanunları çalışıp zayıf mevzini gider → Premium Al
-              </AppText>
-            </Pressable>
-          )}
-        </View>
-      ) : null}
 
       {/* GÜNÜN MADDESİ — tarih rotasyonlu kart + İncele */}
       {gunMadde ? (
@@ -887,7 +895,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  // Geri Besleme — düello zayıf kanunlar kartı
+  // Geri Besleme — bölüm başlığı + düello zayıf kanunlar kartı
+  gbUstBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    marginTop: Spacing.one,
+  },
+  gbUstBaslikAd: {
+    letterSpacing: 1,
+  },
   gbKart: {
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kirmizi,
