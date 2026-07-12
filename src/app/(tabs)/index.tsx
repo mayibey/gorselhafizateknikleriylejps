@@ -134,6 +134,7 @@ export default function KarargahScreen() {
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [zayifKanun, setZayifKanun] = useState<ZayifKanun[]>([]);
+  const [zorlandiAcik, setZorlandiAcik] = useState(false);
   const [hata, setHata] = useState(false);
   // Günün Maddesi indirilmemiş kanundansa: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
   // (Arama/Patika'daki İNDİRME KAPISI ile aynı; Günün Maddesi bu kapıyı atlayıp boş kart açıyordu.)
@@ -481,19 +482,28 @@ export default function KarargahScreen() {
       {/* Er Meydanı'nda zorlandığın konular (ücretsiz görür; gidermek için premium) — Geri Besleme altında. */}
       {zayifKanun.length > 0 ? (
         <View style={styles.gbKart}>
-          <View style={styles.gbBaslik}>
+          <Pressable onPress={() => setZorlandiAcik((a) => !a)} style={styles.gbBasrow}>
             <MaterialCommunityIcons name="target-account" size={18} color={Palette.kirmizi} />
-            <AppText variant="etiket" bold color="solukMetin" style={styles.gbBaslikAd}>
-              ER MEYDANINDA ZORLANDIĞIN KONULAR
+            <View style={styles.gbBasKol}>
+              <AppText variant="etiket" bold color="solukMetin" style={styles.gbBaslikMini}>
+                ER MEYDANINDA ZORLANDIĞIN KONULAR
+              </AppText>
+              <AppText variant="govde" color="altinMetin" bold>
+                Güç Kazandırma Eğitim Planı
+              </AppText>
+            </View>
+            <MaterialCommunityIcons name={zorlandiAcik ? 'chevron-up' : 'chevron-down'} size={22} color={Palette.solukMetin} />
+          </Pressable>
+          {!zorlandiAcik ? (
+            <AppText variant="etiket" color="solukMetin">
+              {zayifKanun.length} konuda zorlandın — planı görmek için dokun
             </AppText>
-          </View>
-          <AppText variant="govde" color="altinMetin" bold>
-            Güç Kazandırma Eğitim Planı
-          </AppText>
-          <AppText variant="kucuk" color="anaMetin">
-            Er Meydanı'nda en çok bu konularda yanlış yaptın:
-          </AppText>
-          {zayifKanun.slice(0, 4).map((z) => {
+          ) : (
+            <>
+              <AppText variant="kucuk" color="anaMetin">
+                Er Meydanı'nda en çok bu konularda yanlış yaptın:
+              </AppText>
+          {zayifKanun.slice(0, 8).map((z) => {
             const ad = KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`;
             const icerik = (
               <>
@@ -541,6 +551,8 @@ export default function KarargahScreen() {
                   Premium Al
                 </AppText>
               </Pressable>
+            </>
+          )}
             </>
           )}
         </View>
@@ -929,6 +941,18 @@ const styles = StyleSheet.create({
   gbBaslikAd: {
     letterSpacing: 0.5,
     flex: 1,
+  },
+  gbBasrow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  gbBasKol: {
+    flex: 1,
+    gap: 2,
+  },
+  gbBaslikMini: {
+    letterSpacing: 0.5,
   },
   gbSatir: {
     flexDirection: 'row',
