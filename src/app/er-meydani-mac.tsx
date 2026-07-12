@@ -31,6 +31,7 @@ export default function ErMeydaniMacScreen() {
     mod?: string;
     soru?: string;
     sure?: string;
+    kanun?: string;
     rakip_skor?: string;
     rakip_rating?: string;
     rakip_id?: string;
@@ -64,7 +65,14 @@ export default function ErMeydaniMacScreen() {
     return [10, 15, 20, 30].includes(n) ? n * 1000 : SORU_SURE_MS;
   }, [params.sure]);
 
-  const sorular = useMemo(() => getErMeydaniSorulari(seed, adet), [seed, adet]);
+  // Oda konu seçimi (kanun id'leri virgülle). Yoksa → tüm banka (karışık; lig hep karışık).
+  const kanunlar = useMemo(() => {
+    if (!params.kanun) return undefined;
+    const arr = params.kanun.split(',').map(Number).filter((n) => Number.isInteger(n) && n > 0);
+    return arr.length ? arr : undefined;
+  }, [params.kanun]);
+
+  const sorular = useMemo(() => getErMeydaniSorulari(seed, adet, kanunlar), [seed, adet, kanunlar]);
   const golge = useMemo<GolgeRakip>(() => golgeRakipUret(seed, adet, sureMs), [seed, adet, sureMs]);
 
   const [index, setIndex] = useState(0);

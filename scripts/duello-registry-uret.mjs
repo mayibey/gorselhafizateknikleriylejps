@@ -21,6 +21,23 @@ function sikTemizle(s) {
   return String(s).replace(/^\s*[A-E]\)\s*/, '').trim();
 }
 
+// soru_id öneki (01-25) → uygulama law_id (soru-registry-uret.mjs KLASOR_LAW ile birebir).
+const ONEK_LAW = {
+  '01': 1, '02': 6, '03': 5, '04': 7, '05': 12, '06': 2, '07': 4, '08': 3, '09': 8,
+  '10': 9, '11': 11, '12': 10, '13': 14, '14': 13, '15': 15, '16': 18, '17': 19,
+  '18': 25, '19': 20, '20': 16, '21': 21, '22': 24, '23': 23, '24': 22, '25': 17,
+};
+// law_id → kısa ad (oda seçici + zayıf-kanun gösterimi; SEED_LAWS'in kısaltılmışı).
+const KISA_AD = {
+  1: 'TCK', 2: 'Jandarma Teşkilat K.', 3: 'KVKK', 4: 'Tebligat K.', 5: 'İl İdaresi K.',
+  6: 'Kabahatler K.', 7: 'Terörle Mücadele K.', 8: 'OHAL K.', 9: 'Atatürk Aleyhine Suçlar',
+  10: '6284 (Ailenin Korunması)', 11: 'Türk Bayrağı K.', 12: 'Disiplin (7068)',
+  13: 'Sözleşmeli Sb/Asb K.', 14: 'E-İmza K.', 15: 'Resmî Yazışma Yön.',
+  16: 'Sözleşmeli Sb/Asb Yön.', 17: 'Jandarma Teşkilat Yön.', 18: 'KVK Silme/İmha Yön.',
+  19: 'Bilgi Edinme Yön.', 20: 'Tüfekler Yön. (2521)', 21: '6284 Uygulama Yön.',
+  22: 'Personel Yön.', 23: 'Hizmet Esasları Yön.', 24: 'İzin Yön.', 25: '6136 Ateşli Silahlar',
+};
+
 if (!existsSync(KAYNAK)) {
   console.error('KAYNAK YOK:', KAYNAK);
   process.exit(1);
@@ -48,8 +65,10 @@ for (const s of ham) {
     continue;
   }
   if (id) seen.add(id);
+  const kanun = ONEK_LAW[id.slice(0, 2)] ?? 0;
   sorular.push({
     id,
+    kanun,
     soru: String(s.soru).trim(),
     siklar: siklar.map(sikTemizle),
     dogru: dogruIdx,
@@ -59,6 +78,10 @@ for (const s of ham) {
     zorluk: String(s.zorluk ?? '').trim(),
   });
 }
+
+// Bankada bulunan kanunlar (id + kısa ad) — oda seçici + zayıf-kanun gösterimi için.
+const kanunlarVar = [...new Set(sorular.map((q) => q.kanun))].filter((k) => k > 0).sort((a, b) => a - b);
+const duelloKanunlar = kanunlarVar.map((id) => ({ id, ad: KISA_AD[id] ?? `Kanun ${id}` }));
 
 // id'ye göre deterministik sıra (tohumlu karıştırma için stabil taban).
 sorular.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
@@ -74,6 +97,8 @@ const out = `// OTOMATİK ÜRETİLDİ — elle düzenleme. \`npm run soru:duello
 export type DuelloSoru = {
   /** Kaynak soru kimliği (örn. "01-D-001"). */
   id: string;
+  /** Ait olduğu kanun (uygulama law_id; oda konu seçimi + zayıf-kanun için). */
+  kanun: number;
   /** Soru metni. */
   soru: string;
   /** Şıklar (önekleri ayıklanmış). */
@@ -93,6 +118,9 @@ export type DuelloSoru = {
 export const DUELLO_SORULARI: DuelloSoru[] = [
 ${govde}
 ];
+
+/** Bankada bulunan kanunlar (id + kısa ad) — oda konu seçici + zayıf-kanun gösterimi. */
+export const DUELLO_KANUNLAR: { id: number; ad: string }[] = ${JSON.stringify(duelloKanunlar)};
 `;
 
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });

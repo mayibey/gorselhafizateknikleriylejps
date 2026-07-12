@@ -112,13 +112,14 @@ export async function gecenHaftaSampiyon(): Promise<Sampiyon | null> {
 }
 
 // ── ODA SİSTEMİ (kuran ayarlı + açık odalar) ───────────────────────────────
-export type OdaBilgi = { id: string; kod: string; seed: number; soru_sayisi: number; sure_sn: number };
+export type OdaBilgi = { id: string; kod: string; seed: number; soru_sayisi: number; sure_sn: number; kanunlar: number[] };
 export type AcikOda = {
   id: string;
   kod: string;
   kuran_rumuz: string;
   soru_sayisi: number;
   sure_sn: number;
+  kanunlar: number[];
   created_at: string;
   benimki: boolean;
 };
@@ -126,18 +127,24 @@ export type KatilBilgi = {
   seed: number;
   soru_sayisi: number;
   sure_sn: number;
+  kanunlar: number[];
   havuz: string;
   kuran_id: string;
   kuran_rumuz: string;
 };
 
-/** Ayarlarla (soru sayısı + süre) açık oda kurar. Hata → {ok:false}. */
-export async function odaKur(soruSayisi: number, sureSn: number): Promise<{ ok: boolean; oda?: OdaBilgi; hata?: string }> {
+/** Ayarlarla (soru sayısı + süre + kanunlar) açık oda kurar. Boş kanunlar = karışık. Hata → {ok:false}. */
+export async function odaKur(
+  soruSayisi: number,
+  sureSn: number,
+  kanunlar: number[],
+): Promise<{ ok: boolean; oda?: OdaBilgi; hata?: string }> {
   if (!supabase) return { ok: false, hata: 'Şu an kullanılamıyor.' };
   try {
     const { data, error } = await supabase.rpc('er_meydani_oda_kur', {
       p_soru_sayisi: soruSayisi,
       p_sure_sn: sureSn,
+      p_kanunlar: kanunlar,
     });
     if (error || !data) return { ok: false, hata: error?.message ?? 'Oda kurulamadı.' };
     const j = data as OdaBilgi & { hata?: string };

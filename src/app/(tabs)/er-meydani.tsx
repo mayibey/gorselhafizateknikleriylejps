@@ -6,7 +6,7 @@ import { ActivityIndicator, Pressable, Share, StyleSheet, TextInput, View } from
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { seedUret } from '@/lib/er-meydani-mantik';
+import { DUELLO_KANUNLAR, seedUret } from '@/lib/er-meydani-mantik';
 import {
   type AcikOda,
   type KatilBilgi,
@@ -59,7 +59,7 @@ export default function ErMeydaniScreen() {
   const playAktif = !!rumuz;
 
   const macaGit = useCallback(
-    (p: { seed: number; mod: 'hizli' | 'arkadas'; soru?: number; sure?: number }) =>
+    (p: { seed: number; mod: 'hizli' | 'arkadas'; soru?: number; sure?: number; kanunlar?: number[] }) =>
       router.push({
         pathname: '/er-meydani-mac',
         params: {
@@ -67,6 +67,7 @@ export default function ErMeydaniScreen() {
           mod: p.mod,
           ...(p.soru ? { soru: String(p.soru) } : {}),
           ...(p.sure ? { sure: String(p.sure) } : {}),
+          ...(p.kanunlar && p.kanunlar.length ? { kanun: p.kanunlar.join(',') } : {}),
         },
       }),
     [router],
@@ -100,7 +101,7 @@ export default function ErMeydaniScreen() {
   }
 
   function odayaGit(k: KatilBilgi) {
-    macaGit({ seed: k.seed, mod: 'arkadas', soru: k.soru_sayisi, sure: k.sure_sn });
+    macaGit({ seed: k.seed, mod: 'arkadas', soru: k.soru_sayisi, sure: k.sure_sn, kanunlar: k.kanunlar });
   }
 
   // Listeden katıl: seed liste'de yok (sızmasın diye) → önce sunucudan odanın seed'ini al.
@@ -343,14 +344,19 @@ function OdaKurPanel({
 }) {
   const [soru, setSoru] = useState(10);
   const [sure, setSure] = useState(15);
+  const [kanunlar, setKanunlar] = useState<number[]>([]); // boş = karışık
   const [kuruluyor, setKuruluyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
+
+  function kanunToggle(id: number) {
+    setKanunlar((k) => (k.includes(id) ? k.filter((x) => x !== id) : [...k, id]));
+  }
 
   async function kur() {
     if (!aktif || kuruluyor) return;
     setKuruluyor(true);
     setHata(null);
-    const sonuc = await odaKur(soru, sure);
+    const sonuc = await odaKur(soru, sure, kanunlar);
     setKuruluyor(false);
     if (sonuc.ok && sonuc.oda) {
       onKuruldu(
@@ -358,6 +364,7 @@ function OdaKurPanel({
           seed: sonuc.oda.seed,
           soru_sayisi: sonuc.oda.soru_sayisi,
           sure_sn: sonuc.oda.sure_sn,
+          kanunlar: sonuc.oda.kanunlar,
           havuz: 'ucretsiz',
           kuran_id: '',
           kuran_rumuz: '',
@@ -375,6 +382,38 @@ function OdaKurPanel({
       <ChipSatir secenekler={SORU_SECENEK} secili={soru} onSec={setSoru} />
       <AppText variant="etiket" color="solukMetin" bold style={styles.aralik}>SORU BAŞINA SÜRE (SN)</AppText>
       <ChipSatir secenekler={SURE_SECENEK} secili={sure} onSec={setSure} />
+
+      <AppText variant="etiket" color="solukMetin" bold style={styles.aralik}>KANUNLAR (KONU)</AppText>
+      <Pressable
+        onPress={() => setKanunlar([])}
+        style={({ pressed }) => [styles.kanunRow, kanunlar.length === 0 && styles.kanunSecili, pressed && styles.basili]}>
+        <MaterialCommunityIcons
+          name={kanunlar.length === 0 ? 'check-circle' : 'circle-outline'}
+          size={18}
+          color={kanunlar.length === 0 ? Palette.lacivert : Palette.solukMetin}
+        />
+        <AppText variant="kucuk" color="anaMetin" bold>Karışık (tüm kanunlar)</AppText>
+      </Pressable>
+      {DUELLO_KANUNLAR.map((k) => {
+        const sec = kanunlar.includes(k.id);
+        return (
+          <Pressable
+            key={k.id}
+            onPress={() => kanunToggle(k.id)}
+            style={({ pressed }) => [styles.kanunRow, sec && styles.kanunSecili, pressed && styles.basili]}>
+            <MaterialCommunityIcons
+              name={sec ? 'check-circle' : 'circle-outline'}
+              size={18}
+              color={sec ? Palette.lacivert : Palette.solukMetin}
+            />
+            <AppText variant="kucuk" color="anaMetin" style={styles.kanunAd}>{k.ad}</AppText>
+          </Pressable>
+        );
+      })}
+      {kanunlar.length > 0 ? (
+        <AppText variant="etiket" color="altinMetin" bold>{kanunlar.length} kanun seçili</AppText>
+      ) : null}
+
       {hata ? <AppText variant="kucuk" color="kirmizi" bold style={styles.aralik}>{hata}</AppText> : null}
       <View style={styles.btnSatir}>
         <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={onKapat}>
@@ -499,6 +538,12 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m, paddingVertical: Spacing.two,
   },
   chipSecili: { backgroundColor: Palette.lacivert, borderColor: Palette.lacivert },
+  kanunRow: {
+    flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
+    paddingVertical: Spacing.two, paddingHorizontal: Spacing.two, borderRadius: Radius.s,
+  },
+  kanunSecili: { backgroundColor: Palette.altinSolukYuzey },
+  kanunAd: { flex: 1 },
   btnSatir: { flexDirection: 'row', gap: Spacing.two, marginTop: Spacing.one },
   vazgecBtn: {
     flex: 1, alignItems: 'center', justifyContent: 'center',

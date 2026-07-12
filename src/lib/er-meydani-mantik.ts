@@ -12,6 +12,7 @@
 import { DUELLO_SORULARI, type DuelloSoru } from '../assets/duello-sorulari';
 
 export type { DuelloSoru } from '../assets/duello-sorulari';
+export { DUELLO_KANUNLAR } from '../assets/duello-sorulari';
 
 /** Bir maçtaki soru sayısı. */
 export const SORU_SAYISI = 10;
@@ -59,8 +60,17 @@ export function tumSorular(): DuelloSoru[] {
  * Bir maçın sorularını döndürür — tohumdan deterministik (aynı tohum = aynı sorular, aynı sıra).
  * Ücretsiz havuz = TÜM düello bankası (1992 soru; oyun modu açık/ücretsiz; çalışma içeriği ayrı).
  */
-export function getErMeydaniSorulari(seed: number, adet: number = SORU_SAYISI): DuelloSoru[] {
-  const havuz = tumSorular();
+export function getErMeydaniSorulari(
+  seed: number,
+  adet: number = SORU_SAYISI,
+  kanunlar?: number[],
+): DuelloSoru[] {
+  let havuz = tumSorular();
+  if (kanunlar && kanunlar.length > 0) {
+    const set = new Set(kanunlar);
+    const filtre = havuz.filter((q) => set.has(q.kanun));
+    if (filtre.length > 0) havuz = filtre; // seçili kanunda soru yoksa tüm havuza düş (boş maç olmasın)
+  }
   if (havuz.length === 0) return [];
   return karistir(havuz, rngOlustur(seed)).slice(0, Math.min(adet, havuz.length));
 }
