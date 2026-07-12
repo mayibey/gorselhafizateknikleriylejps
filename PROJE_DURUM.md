@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 12 Temmuz 2026
 >
+> ### ▶ 12 Tem (3) — 📲 ER MEYDANI GENİŞ SÜRÜM TESTFLIGHT'TA (1.0.33/build 34) + EAS Starter
+> Er Meydanı'na eklenenler (hepsi commit + test): **nav düzeni** (Er Meydanı ORTA sekme altın vurgulu, Ara→başlık büyüteç), **Özellik 1** oda konu/kanun seçimi (Karışık/25 kanun; codegen'e kanun etiketi+DUELLO_KANUNLAR; migration 27), **Özellik 2** düello zayıf-kanun sayacı → Karargah "GERİ BESLEME" kartı (ücretsiz plan+premium upsell / premium→çalış; migration 28; KUTSAL SRS'e dokunmadan ayrı sayaç), **Geri Besleme başlığı** (zayıf mevziler hero + düello eksikleri bir arada). **BUILD:** EAS ücretsiz iOS kotası (15/ay) DOLDU → başkan **Starter $19/ay** aldı ($45 kredi, anında açıldı; Codemagic plan-B'de kaldı). iOS 1.0.33/vCode43 build (770ec198) FINISHED → `eas submit` → App Store Connect (submission 5f61c05a) → TestFlight işleniyor. **TEST SÜRÜMÜ — App Store'a submit EDİLMEDİ.** app.json 1.0.32→1.0.33, vCode 42→43.
+>
 > ### ▶ 12 Tem (2) — 📲 ER MEYDANI TESTFLIGHT'TA (iOS 1.0.32/build 32) — başkan test için
 > Başkan "TestFlight'ta yok mu, oradan test etsem" → doğru, önceki build'lerde Er Meydanı YOKtu. Başkan "al madem". **app.json 1.0.31→1.0.32, versionCode 41→42** (iOS+Android eşit; forced-update alignment). **EAS iOS build (mayibey): FINISHED (~7dk), KOTA SORUNU YOK** (Codemagic'e gerek kalmadı — plan B olarak dursun, ASC API anahtarı var). Build id dcee554f. **`eas submit` → App Store Connect'e yüklendi (submission 25766c68), Apple işliyor → TestFlight.** Er Meydanı artık başkanın telefonunda test edilebilir (solo/oda/kod/lig + 1992 banka + inceleme). **BU BİR TEST SÜRÜMÜ — App Store'a (halka) submit EDİLMEDİ** (o başkan onayı + ayrı iş). Android internal build henüz alınmadı (2. cihaz co-test istenirse alınır). Codemagic notu: EAS kota biterse geçilir; macOS runner + ASC p8 ile kurulur.
 >
