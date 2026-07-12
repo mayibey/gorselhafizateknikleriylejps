@@ -7,6 +7,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
+  type DuelloSoru,
   type GolgeRakip,
   type MacAdim,
   SORU_SAYISI,
@@ -20,7 +21,7 @@ import {
 } from '@/lib/er-meydani-mantik';
 import { type ErMeydaniSonuc, sonucKaydet } from '@/lib/er-meydani';
 
-type Faz = 'oyun' | 'geribildirim' | 'bitti';
+type Faz = 'oyun' | 'geribildirim' | 'bitti' | 'inceleme';
 
 /** ER MEYDANI — MAÇ. 10 soru, süreli, gölge rakibe karşı hız yarışı. Sonuç aynı ekranda. */
 export default function ErMeydaniMacScreen() {
@@ -71,7 +72,7 @@ export default function ErMeydaniMacScreen() {
       const soru = sorular[index];
       const dogru = secilenIndex !== null && soru != null && secilenIndex === soru.dogru;
       setSecili(secilenIndex);
-      setBenAdimlar((a) => [...a, { dogru, gecenMs, puan: puanSoru(dogru, gecenMs, sureMs) }]);
+      setBenAdimlar((a) => [...a, { dogru, gecenMs, puan: puanSoru(dogru, gecenMs, sureMs), secilen: secilenIndex }]);
       setFaz('geribildirim');
     },
     [index, sorular, sureMs],
@@ -158,6 +159,10 @@ export default function ErMeydaniMacScreen() {
     );
   }
 
+  if (faz === 'inceleme') {
+    return <InceleGorunum sorular={sorular} adimlar={benAdimlar} onGeri={() => setFaz('bitti')} />;
+  }
+
   if (faz === 'bitti') {
     return (
       <SonucGorunum
@@ -165,6 +170,7 @@ export default function ErMeydaniMacScreen() {
         golge={golge}
         sunucu={sunucu}
         kaydediliyor={kaydediliyor}
+        onIncele={() => setFaz('inceleme')}
         onTekrar={() => router.replace({ pathname: '/er-meydani-mac', params: { seed: String(seedUret()), mod: 'hizli' } })}
         onSiralama={() => router.replace('/er-meydani-siralama')}
         onCik={() => router.replace('/er-meydani')}
@@ -258,6 +264,7 @@ function SonucGorunum({
   golge,
   sunucu,
   kaydediliyor,
+  onIncele,
   onTekrar,
   onSiralama,
   onCik,
@@ -266,6 +273,7 @@ function SonucGorunum({
   golge: GolgeRakip;
   sunucu: ErMeydaniSonuc | null;
   kaydediliyor: boolean;
+  onIncele: () => void;
   onTekrar: () => void;
   onSiralama: () => void;
   onCik: () => void;
@@ -325,6 +333,13 @@ function SonucGorunum({
         <MaterialCommunityIcons name="sword-cross" size={22} color={Palette.beyaz} />
         <AppText variant="govde" color="beyaz" bold>Yeni Rakip</AppText>
       </Pressable>
+      <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={onIncele}>
+        <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
+        <View style={styles.inceleBtnMetin}>
+          <AppText variant="govde" color="lacivert" bold>Soruları İncele</AppText>
+          <AppText variant="etiket" color="solukMetin">Doğru cevaplar + açıklamalarıyla öğren</AppText>
+        </View>
+      </Pressable>
       <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={paylas}>
         <MaterialCommunityIcons name="share-variant" size={20} color={Palette.lacivert} />
         <AppText variant="govde" color="lacivert" bold>Sonucu Paylaş</AppText>
@@ -337,8 +352,98 @@ function SonucGorunum({
   );
 }
 
+/** MAÇ SONU İNCELEME — 10 sorunun tekrarı: doğru cevap + açıklama; yanlışların vurgulu. */
+function InceleGorunum({
+  sorular,
+  adimlar,
+  onGeri,
+}: {
+  sorular: DuelloSoru[];
+  adimlar: MacAdim[];
+  onGeri: () => void;
+}) {
+  return (
+    <Screen title="Soruları İncele" onGeri={onGeri} headerAltinCizgi>
+      {adimlar.map((a, i) => {
+        const soru = sorular[i];
+        if (!soru) return null;
+        return (
+          <View key={i} style={styles.inceleKart}>
+            <View style={styles.inceleUst}>
+              <View style={[styles.inceleRozet, a.dogru ? styles.inceleDogruRozet : styles.inceleYanlisRozet]}>
+                <MaterialCommunityIcons name={a.dogru ? 'check' : 'close'} size={14} color={Palette.beyaz} />
+                <AppText variant="etiket" color="beyaz" bold>{a.dogru ? 'Doğru' : a.secilen == null ? 'Boş' : 'Yanlış'}</AppText>
+              </View>
+              <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.inceleKaynak}>
+                {i + 1}/{adimlar.length}{soru.kaynak ? ` · ${soru.kaynak}` : ''}
+              </AppText>
+            </View>
+
+            <AppText variant="kucuk" bold color="anaMetin" style={styles.inceleSoru}>{soru.soru}</AppText>
+
+            {soru.siklar.map((s, j) => {
+              const dogruSik = j === soru.dogru;
+              const benimYanlis = j === a.secilen && j !== soru.dogru;
+              return (
+                <View key={j} style={[styles.inceleSik, dogruSik && styles.sikDogru, benimYanlis && styles.sikYanlis]}>
+                  <AppText variant="kucuk" color={dogruSik ? 'yesil' : benimYanlis ? 'kirmizi' : 'solukMetin'} bold>
+                    {String.fromCharCode(65 + j)}
+                  </AppText>
+                  <AppText
+                    variant="kucuk"
+                    color={dogruSik ? 'yesil' : benimYanlis ? 'kirmizi' : 'anaMetin'}
+                    style={styles.inceleSikMetin}>
+                    {s}
+                  </AppText>
+                </View>
+              );
+            })}
+
+            {soru.aciklama ? (
+              <View style={styles.aciklamaKutu}>
+                <AppText variant="etiket" color="altinKoyu" bold>AÇIKLAMA</AppText>
+                <AppText variant="kucuk" color="anaMetin" style={styles.aciklamaMetin}>{soru.aciklama}</AppText>
+                {soru.celdirici ? (
+                  <AppText variant="etiket" color="solukMetin" style={styles.celdiriciMetin}>
+                    Neden diğerleri yanlış: {soru.celdirici}
+                  </AppText>
+                ) : null}
+              </View>
+            ) : null}
+          </View>
+        );
+      })}
+    </Screen>
+  );
+}
+
 const styles = StyleSheet.create({
   ortala: { textAlign: 'center' },
+  inceleBtnMetin: { flex: 1, gap: 2 },
+  inceleKart: {
+    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.l, padding: Spacing.three, gap: Spacing.two,
+  },
+  inceleUst: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
+  inceleRozet: {
+    flexDirection: 'row', alignItems: 'center', gap: 3,
+    borderRadius: Radius.s, paddingHorizontal: Spacing.two, paddingVertical: 2,
+  },
+  inceleDogruRozet: { backgroundColor: Palette.yesil },
+  inceleYanlisRozet: { backgroundColor: Palette.kirmizi },
+  inceleKaynak: { flex: 1, textAlign: 'right' },
+  inceleSoru: { lineHeight: 21 },
+  inceleSik: {
+    flexDirection: 'row', alignItems: 'flex-start', gap: Spacing.two,
+    borderWidth: 1, borderColor: Palette.kenarlik, borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two, paddingVertical: Spacing.two,
+  },
+  inceleSikMetin: { flex: 1, lineHeight: 20 },
+  aciklamaKutu: {
+    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three, gap: 3,
+  },
+  aciklamaMetin: { lineHeight: 21 },
+  celdiriciMetin: { lineHeight: 18, marginTop: Spacing.one, fontStyle: 'italic' },
   skorBar: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   skorKutu: {
     flex: 1,

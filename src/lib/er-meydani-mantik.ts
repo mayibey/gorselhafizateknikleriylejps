@@ -9,7 +9,9 @@
  * NOT: Şık sırası KARIŞTIRILMAZ (bazı açıklamalar "(C) şıkkı" gibi harfe atıf yapar; sinav.ts ile aynı kural).
  */
 
-import { KART_SORULARI, type KartSoru } from '../assets/kart-sorulari';
+import { DUELLO_SORULARI, type DuelloSoru } from '../assets/duello-sorulari';
+
+export type { DuelloSoru } from '../assets/duello-sorulari';
 
 /** Bir maçtaki soru sayısı. */
 export const SORU_SAYISI = 10;
@@ -48,25 +50,16 @@ function karistir<T>(dizi: readonly T[], rastgele: () => number): T[] {
   return a;
 }
 
-/** Tüm kanunların sorularını tek düz listeye toplar (id'ye göre STABİL sıra — memoize). */
-let _tumSorular: KartSoru[] | null = null;
-export function tumSorular(): KartSoru[] {
-  if (_tumSorular) return _tumSorular;
-  const hepsi: KartSoru[] = [];
-  for (const lawId of Object.keys(KART_SORULARI)) {
-    const grup = KART_SORULARI[Number(lawId)];
-    if (grup) hepsi.push(...grup);
-  }
-  hepsi.sort((x, y) => (x.id < y.id ? -1 : x.id > y.id ? 1 : 0));
-  _tumSorular = hepsi;
-  return hepsi;
+/** Düello soru bankası (codegen'de id'ye göre stabil sıralı; tohumlu karıştırmanın tabanı). */
+export function tumSorular(): DuelloSoru[] {
+  return DUELLO_SORULARI;
 }
 
 /**
  * Bir maçın sorularını döndürür — tohumdan deterministik (aynı tohum = aynı sorular, aynı sıra).
- * Ücretsiz havuz = TÜM sorular (oyun modu açık/ücretsiz; çalışma içeriği ayrı ve kilitli kalır).
+ * Ücretsiz havuz = TÜM düello bankası (1992 soru; oyun modu açık/ücretsiz; çalışma içeriği ayrı).
  */
-export function getErMeydaniSorulari(seed: number, adet: number = SORU_SAYISI): KartSoru[] {
+export function getErMeydaniSorulari(seed: number, adet: number = SORU_SAYISI): DuelloSoru[] {
   const havuz = tumSorular();
   if (havuz.length === 0) return [];
   return karistir(havuz, rngOlustur(seed)).slice(0, Math.min(adet, havuz.length));
@@ -79,8 +72,8 @@ export function puanSoru(dogruMu: boolean, gecenMs: number, sureMs: number = SOR
   return TEMEL_PUAN + Math.round(HIZ_BONUS * kalanOran);
 }
 
-/** Bir maçın adım adım cevaplarını toplam puana çevirir. */
-export type MacAdim = { dogru: boolean; gecenMs: number; puan: number };
+/** Bir maçın adım adım cevaplarını toplam puana çevirir. `secilen` = oyuncunun işaretlediği şık (inceleme için). */
+export type MacAdim = { dogru: boolean; gecenMs: number; puan: number; secilen?: number | null };
 export function toplamPuan(adimlar: readonly MacAdim[]): number {
   return adimlar.reduce((t, a) => t + a.puan, 0);
 }
