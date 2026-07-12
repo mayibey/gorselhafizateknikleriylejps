@@ -289,6 +289,34 @@ export async function ligTablo(limit = 50): Promise<LigTabloSatir[]> {
   }
 }
 
+// ── DÜELLO ZAYIF KANUNLAR (premium hunisi) ─────────────────────────────────
+export type ZayifKanun = { kanun: number; yanlis: number };
+
+/** Maç sonu yanlış yapılan kanunları (tekrarlı) sayaca ekle. Sessiz (fire-and-forget). */
+export async function zayifKanunEkle(kanunlar: number[]): Promise<void> {
+  if (!supabase || kanunlar.length === 0) return;
+  try {
+    await supabase.rpc('er_meydani_zayif_ekle', { p_kanunlar: kanunlar });
+  } catch {
+    /* sessiz */
+  }
+}
+
+/** Kullanıcının düelloda zorlandığı kanunlar (yanlış çok→az). Offline → boş. */
+export async function zayifKanunlar(): Promise<ZayifKanun[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase
+      .from('er_meydani_zayif_kanun')
+      .select('kanun, yanlis')
+      .order('yanlis', { ascending: false });
+    if (error || !data) return [];
+    return data as ZayifKanun[];
+  } catch {
+    return [];
+  }
+}
+
 /** Rakibi şikayet et (Apple UGC şartı). */
 export async function sikayetEt(rakipId: string | null, rakipRumuz: string | null, sebep: string): Promise<void> {
   if (!supabase) throw new Error('Şu an kullanılamıyor.');

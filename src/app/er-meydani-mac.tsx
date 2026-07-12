@@ -19,7 +19,14 @@ import {
   seedUret,
   toplamPuan,
 } from '@/lib/er-meydani-mantik';
-import { type ErMeydaniSonuc, type LigSonuc, ligEslesme, ligSonuc, sonucKaydet } from '@/lib/er-meydani';
+import {
+  type ErMeydaniSonuc,
+  type LigSonuc,
+  ligEslesme,
+  ligSonuc,
+  sonucKaydet,
+  zayifKanunEkle,
+} from '@/lib/er-meydani';
 
 type Faz = 'oyun' | 'geribildirim' | 'bitti' | 'inceleme';
 
@@ -147,6 +154,11 @@ export default function ErMeydaniMacScreen() {
     let iptal = false;
     setKaydediliyor(true);
     const benim = toplamPuan(benAdimlar);
+    // Yanlış yapılan kanunları zayıf-kanun sayacına ekle (premium hunisi; tüm modlarda).
+    const yanlisKanunlar = benAdimlar
+      .map((a, i) => (a.dogru ? null : (sorular[i]?.kanun ?? null)))
+      .filter((k): k is number => k != null && k > 0);
+    void zayifKanunEkle(yanlisKanunlar);
     const yaz = ligMod
       ? ligSonuc({
           seed,
@@ -174,7 +186,7 @@ export default function ErMeydaniMacScreen() {
     return () => {
       iptal = true;
     };
-  }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip]);
+  }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip, sorular]);
 
   // Yeni tohum/ayar (Yeni Rakip / Kodla Katıl aynı ekrana replace edince) → maçı baştan başlat.
   useEffect(() => {

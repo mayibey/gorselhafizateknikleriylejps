@@ -32,6 +32,8 @@ import {
 import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
+import { DUELLO_KANUNLAR } from '@/lib/er-meydani-mantik';
+import { type ZayifKanun, zayifKanunlar } from '@/lib/er-meydani';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
@@ -41,6 +43,9 @@ import { IndirimHatirlatma } from '@/components/premium/indirim-hatirlatma';
 
 // Metalik-ish altın gradyan (açık → ana → koyu altın). Play diski + geri besleme diski.
 const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as const;
+
+// Düello kanun id → kısa ad (zayıf-kanun / Geri Besleme kartı).
+const KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
 
 // ⏳ JSPS SINAV TARİHİ — Karargah en üstteki geri sayım buna göre işler.
 // BAŞKAN: Gerçek sınav tarih/saati belli olunca SADECE bu satırı değiştir.
@@ -128,6 +133,7 @@ export default function KarargahScreen() {
   const [bugunSayi, setBugunSayi] = useState(0);
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
+  const [zayifKanun, setZayifKanun] = useState<ZayifKanun[]>([]);
   const [hata, setHata] = useState(false);
   // Günün Maddesi indirilmemiş kanundansa: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
   // (Arama/Patika'daki İNDİRME KAPISI ile aynı; Günün Maddesi bu kapıyı atlayıp boş kart açıyordu.)
@@ -208,6 +214,10 @@ export default function KarargahScreen() {
   // Ekrana her dönüldüğünde tazele. Kuyruk = ana veri (hata → retry); gerisi degrade olur.
   const yukle = useCallback(() => {
     setHata(false);
+    // Düello zayıf kanunları (Geri Besleme kartı + premium hunisi).
+    void zayifKanunlar()
+      .then(setZayifKanun)
+      .catch(() => setZayifKanun([]));
     // Etüt = ZAYIF HAVUZ (tekrar-hatırlat + denemede yanlış). Due/Leitner DEĞİL → "zayıf
     // var ama Etüt boş" sorunu biter.
     // Akıştaki zayıf kuyruğuyla AYNI filtre (indirilmiş kanunlar) → sayaç tutarlı (63 vs 60 biter).
@@ -519,6 +529,66 @@ export default function KarargahScreen() {
         </Pressable>
       </View>
 
+      {/* GERİ BESLEME — Düello'da zorlandığın kanunlar (ücretsiz görür; gidermek için premium). */}
+      {zayifKanun.length > 0 ? (
+        <View style={styles.gbKart}>
+          <View style={styles.gbBaslik}>
+            <MaterialCommunityIcons name="target-account" size={18} color={Palette.kirmizi} />
+            <AppText variant="etiket" bold color="solukMetin" style={styles.gbBaslikAd}>
+              GERİ BESLEME · DÜELLODA ZORLANDIĞIN KANUNLAR
+            </AppText>
+          </View>
+          <AppText variant="kucuk" color="anaMetin">
+            Er Meydanı'nda en çok bu kanunlarda yanlış yaptın:
+          </AppText>
+          {zayifKanun.slice(0, 4).map((z) => {
+            const ad = KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`;
+            const icerik = (
+              <>
+                <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
+                <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd} numberOfLines={1}>
+                  {ad}
+                </AppText>
+                <AppText variant="etiket" color="kirmizi" bold>
+                  {z.yanlis} yanlış
+                </AppText>
+                {premium ? (
+                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                ) : (
+                  <MaterialCommunityIcons name="lock-outline" size={16} color={Palette.solukMetin} />
+                )}
+              </>
+            );
+            return premium ? (
+              <Pressable
+                key={z.kanun}
+                style={({ pressed }) => [styles.gbSatir, pressed && styles.pressed]}
+                onPress={() => router.push({ pathname: '/patika', params: { lawId: String(z.kanun) } })}>
+                {icerik}
+              </Pressable>
+            ) : (
+              <View key={z.kanun} style={styles.gbSatir}>
+                {icerik}
+              </View>
+            );
+          })}
+          {premium ? (
+            <AppText variant="etiket" color="solukMetin">
+              Bir kanuna dokun → o kanunu çalış, mevzini güçlendir.
+            </AppText>
+          ) : (
+            <Pressable
+              style={({ pressed }) => [styles.gbPremiumBtn, pressed && styles.pressed]}
+              onPress={() => router.push('/paywall')}>
+              <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
+              <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>
+                Bu kanunları çalışıp zayıf mevzini gider → Premium Al
+              </AppText>
+            </Pressable>
+          )}
+        </View>
+      ) : null}
+
       {/* GÜNÜN MADDESİ — tarih rotasyonlu kart + İncele */}
       {gunMadde ? (
         <Pressable
@@ -815,6 +885,53 @@ const styles = StyleSheet.create({
   },
   unutAd: {
     flex: 1,
+  },
+
+  // Geri Besleme — düello zayıf kanunlar kartı
+  gbKart: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kirmizi,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    gap: Spacing.two,
+  },
+  gbBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  gbBaslikAd: {
+    letterSpacing: 0.5,
+    flex: 1,
+  },
+  gbSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kremZemin,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.two,
+  },
+  gbAd: {
+    flex: 1,
+  },
+  gbPremiumBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.altinKoyu,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    marginTop: Spacing.one,
+  },
+  gbPremiumYazi: {
+    flexShrink: 1,
+    textAlign: 'center',
   },
   card: {
     backgroundColor: Palette.kartKremi,
