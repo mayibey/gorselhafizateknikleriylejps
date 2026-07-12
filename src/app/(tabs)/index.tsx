@@ -529,14 +529,19 @@ export default function KarargahScreen() {
               Bir konuya dokun → o konuyu çalış, mevzini güçlendir.
             </AppText>
           ) : (
-            <Pressable
-              style={({ pressed }) => [styles.gbPremiumBtn, pressed && styles.pressed]}
-              onPress={() => router.push('/paywall')}>
-              <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
-              <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>
-                Bu konuları çalışıp zayıf mevzini gider → Premium Al
+            <>
+              <AppText variant="kucuk" color="anaMetin">
+                Bu konuları çalışıp zayıf mevzini gider.
               </AppText>
-            </Pressable>
+              <Pressable
+                style={({ pressed }) => [styles.gbPremiumBtn, pressed && styles.pressed]}
+                onPress={() => router.push('/paywall')}>
+                <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
+                <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>
+                  Premium Al
+                </AppText>
+              </Pressable>
+            </>
           )}
         </View>
       ) : null}
