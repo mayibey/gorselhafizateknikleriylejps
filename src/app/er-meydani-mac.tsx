@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, Share, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Modal, Pressable, ScrollView, Share, StyleSheet, TextInput, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -30,6 +30,7 @@ import {
   sonucKaydet,
   zayifKanunEkle,
 } from '@/lib/er-meydani';
+import { gonderGeriBildirim } from '@/lib/geri-bildirim';
 
 type Faz = 'oyun' | 'geribildirim' | 'bitti' | 'inceleme';
 
@@ -297,7 +298,7 @@ export default function ErMeydaniMacScreen() {
             </AppText>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
               <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
-              <AppText variant="govde" color="lacivert" bold>Soruları İncele</AppText>
+              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
             </Pressable>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
               <AppText variant="govde" color="solukMetin" bold>Çıkış</AppText>
@@ -332,7 +333,7 @@ export default function ErMeydaniMacScreen() {
             })}
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
               <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
-              <AppText variant="govde" color="lacivert" bold>Soruları İncele</AppText>
+              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
             </Pressable>
             <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
               <MaterialCommunityIcons name="sword-cross" size={22} color={Palette.beyaz} />
@@ -584,7 +585,7 @@ function SonucGorunum({
       <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={onIncele}>
         <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
         <View style={styles.inceleBtnMetin}>
-          <AppText variant="govde" color="lacivert" bold>Soruları İncele</AppText>
+          <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
           <AppText variant="etiket" color="solukMetin">Doğru cevaplar + açıklamalarıyla öğren</AppText>
         </View>
       </Pressable>
@@ -612,8 +613,37 @@ function InceleGorunum({
   adimlar: MacAdim[];
   onGeri: () => void;
 }) {
+  const [hataSoru, setHataSoru] = useState<DuelloSoru | null>(null);
+  const [hataMetin, setHataMetin] = useState('');
+  const [durum, setDurum] = useState<'yaz' | 'gonderiliyor' | 'ok' | 'hata'>('yaz');
+
+  async function bildir() {
+    if (!hataSoru || !hataMetin.trim()) return;
+    setDurum('gonderiliyor');
+    try {
+      await gonderGeriBildirim({
+        tip: 'hata',
+        mesaj: `Er Meydanı soru hatası — ${hataSoru.id} (${hataSoru.kaynak})\nSoru: ${hataSoru.soru}\n\nKullanıcı açıklaması: ${hataMetin.trim()}`,
+        card_id: null,
+        madde_no: hataSoru.kaynak,
+        baslik: `Er Meydanı soru: ${hataSoru.id}`,
+        kanun: String(hataSoru.kanun),
+        tarih: '',
+        cihaz_kimlik: '',
+      });
+      setDurum('ok');
+    } catch {
+      setDurum('hata');
+    }
+  }
+  function kapatModal() {
+    setHataSoru(null);
+    setHataMetin('');
+    setDurum('yaz');
+  }
+
   return (
-    <Screen title="Soruları İncele" onGeri={onGeri} headerAltinCizgi>
+    <Screen title="İncele / Hata Bildir" onGeri={onGeri} headerAltinCizgi>
       {adimlar.map((a, i) => {
         const soru = sorular[i];
         if (!soru) return null;
@@ -660,9 +690,62 @@ function InceleGorunum({
                 ) : null}
               </View>
             ) : null}
+
+            <Pressable
+              onPress={() => {
+                setHataSoru(soru);
+                setHataMetin('');
+                setDurum('yaz');
+              }}
+              style={({ pressed }) => [styles.hataBildirBtn, pressed && styles.basili]}>
+              <MaterialCommunityIcons name="flag-outline" size={15} color={Palette.kirmizi} />
+              <AppText variant="etiket" color="kirmizi" bold>Bu soruda hata var — bildir</AppText>
+            </Pressable>
           </View>
         );
       })}
+
+      <Modal visible={hataSoru != null} transparent animationType="fade" onRequestClose={kapatModal}>
+        <View style={styles.modalArka}>
+          <View style={styles.modalKart}>
+            {durum === 'ok' ? (
+              <>
+                <MaterialCommunityIcons name="check-circle" size={40} color={Palette.yesil} style={styles.ortala} />
+                <AppText variant="govde" bold color="anaMetin" style={styles.ortala}>Teşekkürler! Bildirimin bize ulaştı.</AppText>
+                <Pressable style={({ pressed }) => [styles.modalGonder, pressed && styles.basili]} onPress={kapatModal}>
+                  <AppText variant="govde" color="beyaz" bold>Kapat</AppText>
+                </Pressable>
+              </>
+            ) : (
+              <>
+                <AppText variant="altBaslik" bold color="anaMetin">Hata Bildir</AppText>
+                <AppText variant="etiket" color="solukMetin">Seçilen soru: {hataSoru?.id} · {hataSoru?.kaynak}</AppText>
+                <AppText variant="kucuk" color="anaMetin" numberOfLines={3} style={styles.modalSoru}>{hataSoru?.soru}</AppText>
+                <TextInput
+                  value={hataMetin}
+                  onChangeText={setHataMetin}
+                  placeholder="Hata nedir? (yanlış cevap, yazım hatası, madde no… açıkla)"
+                  placeholderTextColor={Palette.solukMetin}
+                  multiline
+                  style={styles.modalInput}
+                />
+                {durum === 'hata' ? <AppText variant="etiket" color="kirmizi" bold>Gönderilemedi, tekrar dene.</AppText> : null}
+                <View style={styles.modalBtnSatir}>
+                  <Pressable style={({ pressed }) => [styles.modalVazgec, pressed && styles.basili]} onPress={kapatModal}>
+                    <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
+                  </Pressable>
+                  <Pressable
+                    disabled={!hataMetin.trim() || durum === 'gonderiliyor'}
+                    style={({ pressed }) => [styles.modalGonder, (!hataMetin.trim() || durum === 'gonderiliyor') && styles.pasif, pressed && styles.basili]}
+                    onPress={() => void bildir()}>
+                    {durum === 'gonderiliyor' ? <ActivityIndicator color={Palette.beyaz} /> : <AppText variant="govde" color="beyaz" bold>Gönder</AppText>}
+                  </Pressable>
+                </View>
+              </>
+            )}
+          </View>
+        </View>
+      </Modal>
     </Screen>
   );
 }
@@ -775,4 +858,34 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m, paddingVertical: Spacing.three,
   },
   basili: { opacity: 0.8 },
+  pasif: { opacity: 0.45 },
+  hataBildirBtn: {
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.one,
+    marginTop: Spacing.two, paddingVertical: Spacing.two,
+    borderTopWidth: 1, borderTopColor: Palette.kenarlik,
+  },
+  modalArka: {
+    flex: 1, backgroundColor: 'rgba(11,31,58,0.45)',
+    alignItems: 'center', justifyContent: 'center', padding: Spacing.four,
+  },
+  modalKart: {
+    width: '100%', maxWidth: 420, gap: Spacing.two,
+    backgroundColor: Palette.kartKremi, borderRadius: Radius.l, padding: Spacing.four,
+    borderWidth: 1, borderColor: Palette.kenarlik,
+  },
+  modalSoru: { marginTop: Spacing.one },
+  modalInput: {
+    minHeight: 90, textAlignVertical: 'top',
+    backgroundColor: Palette.kremZemin, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.m, padding: Spacing.three, color: Palette.anaMetin,
+  },
+  modalBtnSatir: { flexDirection: 'row', gap: Spacing.two, marginTop: Spacing.one },
+  modalVazgec: {
+    flex: 1, alignItems: 'center', justifyContent: 'center',
+    borderWidth: 1, borderColor: Palette.kenarlik, borderRadius: Radius.m, paddingVertical: Spacing.three,
+  },
+  modalGonder: {
+    flex: 1, alignItems: 'center', justifyContent: 'center',
+    backgroundColor: Palette.lacivert, borderRadius: Radius.m, paddingVertical: Spacing.three,
+  },
 });
