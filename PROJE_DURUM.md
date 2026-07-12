@@ -4,6 +4,9 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 12 Temmuz 2026
 >
+> ### ▶ 12 Tem (7) — 🎨 ER MEYDANI 4 ARAYÜZ DÜZELTMESİ (OTA, başkan geri bildirimi)
+> Başkan test ederken 4 istek: (1) **maç ekranı sağ üst** "Rakipler/ayrı oynuyor" → gerçek rakip isimleri (odaDurum'dan ben-hariç rumuzlar, bir kez çekilir); (2) **oda sonucu** 1.'ye **taç (crown) + "👑 KAZANAN"** etiketi + altın vurgu; (3) **Er Meydanı tab ikonu** küçültüldü (altın daire yazıya biniyordu: sword size-6, erDaire padding 5→3, radius 18→14); (4) **oda kur kanun seçimi** uzun liste → **açılır dropdown** (kapalı gelir, özet gösterir, dokununca açılır). tsc 0. Hepsi JS → **OTA (channel production, runtime 1.0.35, group 62cfd311)** ile gönderildi; TestFlight 1.0.35'e (build 40/41) relaunch'ta düşer. Android canlı 1.0.31 runtime → OTA ona GİTMEZ (güvenli). İçerik manifest→update→tam akışı (82 asset).
+>
 > ### ▶ 12 Tem (6) — 🧪 PLAN: Er Meydanı TestFlight detaylı test → sorun yoksa Android'e bas
 > Başkan: "Er Meydanı'nı TestFlight'ta detaylı test edeyim, sorun çıkmazsa Android'e de basarız." **Android build BEKLEMEDE** (başkan onayına bağlı; o build Er Meydanı'nı Android'e ilk kez taşır + derin bağlantıyı Android'de aktifleştirir — assetlinks zaten canlı). Build 1.0.35/40 TestFlight'ta VALID, iç testçilerde hazır. Başkan test edip "tamam" derse: Android production build (EAS, intentFilters'lı) → Play internal → sorunsuzsa production. Test odakları: oda kur/kodla katıl/5-kişi/lig/haftalık sıralama/geri besleme/derin bağlantı linki.
 >
