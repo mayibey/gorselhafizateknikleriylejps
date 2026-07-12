@@ -6,7 +6,7 @@ import { ActivityIndicator, Pressable, Share, StyleSheet, View } from 'react-nat
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { type OdaDurum, odaBaslat, odaDavetMetni, odaDurum, odaIptal } from '@/lib/er-meydani';
+import { type OdaDurum, odaAyril, odaBaslat, odaDavetMetni, odaDurum, odaIptal } from '@/lib/er-meydani';
 
 /** ER MEYDANI — BEKLEME ODASI (çok-oyunculu). Oyuncular toplanır; kuran "Başlat"a basınca herkes oynar. */
 export default function ErMeydaniOdaScreen() {
@@ -80,9 +80,10 @@ export default function ErMeydaniOdaScreen() {
     router.replace('/er-meydani');
   }
 
-  // Geri: odayı KAPATMADAN çık (Odalarım'dan geri dönülebilir).
+  // Geri: odadan AYRIL (üyeliği sil → hayalet oyuncu kalmaz; kuran isen oda kapanır).
   function geriCik() {
     gittiRef.current = true;
+    void odaAyril(odaId);
     router.replace('/er-meydani');
   }
 
@@ -151,7 +152,7 @@ export default function ErMeydaniOdaScreen() {
       )}
 
       <AppText variant="etiket" color="solukMetin" style={styles.geriNot}>
-        Geri çıkarsan oda kapanmaz; "Odalarım"dan geri dönebilirsin.
+        Geri çıkarsan odadan ayrılırsın (aynı anda yalnız tek odada olabilirsin).
       </AppText>
     </Screen>
   );

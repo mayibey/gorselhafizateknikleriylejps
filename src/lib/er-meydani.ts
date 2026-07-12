@@ -273,6 +273,16 @@ export async function odaIptal(odaId: string): Promise<void> {
   }
 }
 
+/** Odadan AYRIL — üyeliği sil (çıkınca düş). Kuran + oda açıksa oda kapanır. Tek-oda kuralı. */
+export async function odaAyril(odaId: string): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.rpc('er_meydani_oda_ayril', { p_oda_id: odaId });
+  } catch {
+    /* sessiz */
+  }
+}
+
 /** Odaya KATILMADAN ayar/konu + oyuncu sayısı önizle (onay ekranı). */
 export async function odaOnizle(
   odaId: string | null,
