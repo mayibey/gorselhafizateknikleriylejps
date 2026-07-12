@@ -16,6 +16,7 @@ import {
   acikOdalar,
   ligDurum,
   ligEslesme,
+  odaDavetMetni,
   odaKur,
   odaOnizle,
   odalarim,
@@ -235,7 +236,7 @@ export default function ErMeydaniScreen() {
             setOdaKurAcik(false);
             odalariYukle();
             void Share.share({
-              message: `Seni Er Meydanı'na davet ediyorum! 👉 https://mevzujsps.com/oda/${oda.kod}\nLink açmazsa uygulamada "Kodla Katıl" → ${oda.kod} (${oda.soru_sayisi} soru / ${oda.sure_sn} sn). ⚔️`,
+              message: odaDavetMetni(oda.kod),
             });
             // Kuran bekleme odasına gider; rakip gelince ikisi de maça girer.
             router.push({ pathname: '/er-meydani-oda', params: { oda: oda.id, kod: oda.kod } });

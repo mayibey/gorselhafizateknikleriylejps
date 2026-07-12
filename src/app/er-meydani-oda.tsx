@@ -6,7 +6,7 @@ import { ActivityIndicator, Pressable, Share, StyleSheet, View } from 'react-nat
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { type OdaDurum, odaBaslat, odaDurum, odaIptal } from '@/lib/er-meydani';
+import { type OdaDurum, odaBaslat, odaDavetMetni, odaDurum, odaIptal } from '@/lib/er-meydani';
 
 /** ER MEYDANI — BEKLEME ODASI (çok-oyunculu). Oyuncular toplanır; kuran "Başlat"a basınca herkes oynar. */
 export default function ErMeydaniOdaScreen() {
@@ -60,7 +60,7 @@ export default function ErMeydaniOdaScreen() {
   async function paylas() {
     try {
       await Share.share({
-        message: `Er Meydanı odama katıl! 👉 https://mevzujsps.com/oda/${kod}\nLink açmazsa uygulamada "Kodla Katıl" → ${kod}. ⚔️`,
+        message: odaDavetMetni(kod),
       });
     } catch {
       /* iptal */

@@ -12,6 +12,16 @@ export type LiderlikSatir = { sira: number; rumuz: string; puan: number; mac_say
 export type Siram = { sira: number; puan: number; mac_sayisi: number };
 export type Sampiyon = { rumuz: string; puan: number };
 
+/** Oda daveti paylaşım metni — TÜM paylaşım noktalarında AYNI (sabit konsept). */
+export function odaDavetMetni(kod: string): string {
+  return (
+    `⚔️ Seni Er Meydanı'na davet ediyorum!\n` +
+    `Mevzu — JSPS Hazırlık uygulamasında düelloya var mısın?\n` +
+    `👉 https://mevzujsps.com/oda/${kod}\n` +
+    `Link açılmazsa uygulamada "Kodla Katıl" bölümüne şu kodu gir: ${kod}`
+  );
+}
+
 /** Kullanıcının takma adı (yoksa null). */
 export async function rumuzGetir(): Promise<string | null> {
   if (!supabase) return null;
