@@ -454,6 +454,7 @@ function OdaKurPanel({
   const [soru, setSoru] = useState(10);
   const [sure, setSure] = useState(15);
   const [kanunlar, setKanunlar] = useState<number[]>([]); // boş = karışık
+  const [kanunAcik, setKanunAcik] = useState(false);
   const [kuruluyor, setKuruluyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
 
@@ -483,33 +484,43 @@ function OdaKurPanel({
 
       <AppText variant="etiket" color="solukMetin" bold style={styles.aralik}>KANUNLAR (KONU)</AppText>
       <Pressable
-        onPress={() => setKanunlar([])}
-        style={({ pressed }) => [styles.kanunRow, kanunlar.length === 0 && styles.kanunSecili, pressed && styles.basili]}>
-        <MaterialCommunityIcons
-          name={kanunlar.length === 0 ? 'check-circle' : 'circle-outline'}
-          size={18}
-          color={kanunlar.length === 0 ? Palette.lacivert : Palette.solukMetin}
-        />
-        <AppText variant="kucuk" color="anaMetin" bold>Karışık (tüm kanunlar)</AppText>
+        onPress={() => setKanunAcik((a) => !a)}
+        style={({ pressed }) => [styles.kanunDropdown, pressed && styles.basili]}>
+        <MaterialCommunityIcons name="format-list-checks" size={18} color={Palette.lacivert} />
+        <AppText variant="kucuk" color="anaMetin" bold style={styles.kanunDropdownMetin} numberOfLines={1}>
+          {kanunlar.length === 0 ? 'Karışık (tüm kanunlar)' : `${kanunlar.length} kanun seçili`}
+        </AppText>
+        <MaterialCommunityIcons name={kanunAcik ? 'chevron-up' : 'chevron-down'} size={20} color={Palette.solukMetin} />
       </Pressable>
-      {DUELLO_KANUNLAR.map((k) => {
-        const sec = kanunlar.includes(k.id);
-        return (
+      {kanunAcik ? (
+        <View style={styles.kanunListe}>
           <Pressable
-            key={k.id}
-            onPress={() => kanunToggle(k.id)}
-            style={({ pressed }) => [styles.kanunRow, sec && styles.kanunSecili, pressed && styles.basili]}>
+            onPress={() => setKanunlar([])}
+            style={({ pressed }) => [styles.kanunRow, kanunlar.length === 0 && styles.kanunSecili, pressed && styles.basili]}>
             <MaterialCommunityIcons
-              name={sec ? 'check-circle' : 'circle-outline'}
+              name={kanunlar.length === 0 ? 'check-circle' : 'circle-outline'}
               size={18}
-              color={sec ? Palette.lacivert : Palette.solukMetin}
+              color={kanunlar.length === 0 ? Palette.lacivert : Palette.solukMetin}
             />
-            <AppText variant="kucuk" color="anaMetin" style={styles.kanunAd}>{k.ad}</AppText>
+            <AppText variant="kucuk" color="anaMetin" bold>Karışık (tüm kanunlar)</AppText>
           </Pressable>
-        );
-      })}
-      {kanunlar.length > 0 ? (
-        <AppText variant="etiket" color="altinMetin" bold>{kanunlar.length} kanun seçili</AppText>
+          {DUELLO_KANUNLAR.map((k) => {
+            const sec = kanunlar.includes(k.id);
+            return (
+              <Pressable
+                key={k.id}
+                onPress={() => kanunToggle(k.id)}
+                style={({ pressed }) => [styles.kanunRow, sec && styles.kanunSecili, pressed && styles.basili]}>
+                <MaterialCommunityIcons
+                  name={sec ? 'check-circle' : 'circle-outline'}
+                  size={18}
+                  color={sec ? Palette.lacivert : Palette.solukMetin}
+                />
+                <AppText variant="kucuk" color="anaMetin" style={styles.kanunAd}>{k.ad}</AppText>
+              </Pressable>
+            );
+          })}
+        </View>
       ) : null}
 
       {hata ? <AppText variant="kucuk" color="kirmizi" bold style={styles.aralik}>{hata}</AppText> : null}
@@ -633,6 +644,16 @@ const styles = StyleSheet.create({
   },
   kanunSecili: { backgroundColor: Palette.altinSolukYuzey },
   kanunAd: { flex: 1 },
+  kanunDropdown: {
+    flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
+    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.m, paddingHorizontal: Spacing.three, paddingVertical: Spacing.two,
+  },
+  kanunDropdownMetin: { flex: 1 },
+  kanunListe: {
+    marginTop: Spacing.one, gap: 2,
+    borderWidth: 1, borderColor: Palette.kenarlik, borderRadius: Radius.m, padding: Spacing.one,
+  },
   btnSatir: { flexDirection: 'row', gap: Spacing.two, marginTop: Spacing.one },
   vazgecBtn: {
     flex: 1, alignItems: 'center', justifyContent: 'center',

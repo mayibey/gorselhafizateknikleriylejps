@@ -96,6 +96,7 @@ export default function ErMeydaniMacScreen() {
   const [sunucu, setSunucu] = useState<ErMeydaniSonuc | null>(null);
   const [ligSonucState, setLigSonucState] = useState<LigSonuc | null>(null);
   const [odaSonuc, setOdaSonuc] = useState<OdaOyuncu[] | null>(null);
+  const [odaRakipler, setOdaRakipler] = useState<string[]>([]);
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
   const baslangicRef = useRef<number>(Date.now());
@@ -199,6 +200,19 @@ export default function ErMeydaniMacScreen() {
     };
   }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip, sorular, odaMod, odaId]);
 
+  // Oda modu: rakip isimlerini bir kez çek (maç üstünde göstermek için).
+  useEffect(() => {
+    if (!odaMod) return;
+    let iptal = false;
+    void odaDurum(odaId).then((d) => {
+      if (iptal || !d) return;
+      setOdaRakipler(d.oyuncular.filter((o) => !o.ben).map((o) => o.rumuz));
+    });
+    return () => {
+      iptal = true;
+    };
+  }, [odaMod, odaId]);
+
   // Oda modu: maç bitince herkes skorlayana kadar poll → oda sıralaması.
   useEffect(() => {
     if (!odaMod || faz !== 'bitti' || odaSonuc != null) return;
@@ -295,21 +309,27 @@ export default function ErMeydaniMacScreen() {
               <MaterialCommunityIcons name="podium-gold" size={56} color={Palette.altin} />
               <AppText variant="dev" color="altinMetin" bold style={styles.ortala}>Oda Sıralaması</AppText>
             </View>
-            {odaSonuc.map((o, i) => (
-              <View key={i} style={[styles.odaSira, o.ben && styles.odaSiraBen]}>
-                <View style={[styles.odaSiraNo, i === 0 && styles.odaSiraNoAltin]}>
-                  {i === 0 ? (
-                    <MaterialCommunityIcons name="trophy" size={16} color={Palette.beyaz} />
-                  ) : (
-                    <AppText variant="kucuk" color="lacivert" bold>{i + 1}</AppText>
-                  )}
+            {odaSonuc.map((o, i) => {
+              const kazanan = i === 0;
+              return (
+                <View key={i} style={[styles.odaSira, o.ben && styles.odaSiraBen, kazanan && styles.odaSiraKazanan]}>
+                  <View style={[styles.odaSiraNo, kazanan && styles.odaSiraNoAltin]}>
+                    {kazanan ? (
+                      <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
+                    ) : (
+                      <AppText variant="kucuk" color="lacivert" bold>{i + 1}</AppText>
+                    )}
+                  </View>
+                  <View style={styles.odaSiraAdKol}>
+                    <AppText variant="govde" color="anaMetin" bold numberOfLines={1}>
+                      {o.rumuz}{o.ben ? ' (sen)' : ''}
+                    </AppText>
+                    {kazanan ? <AppText variant="etiket" color="altinMetin" bold>👑 KAZANAN</AppText> : null}
+                  </View>
+                  <AppText variant="altBaslik" color="altinMetin" bold>{o.skor ?? 0}</AppText>
                 </View>
-                <AppText variant="govde" color="anaMetin" bold style={styles.odaSiraAd} numberOfLines={1}>
-                  {o.rumuz}{o.ben ? ' (sen)' : ''}
-                </AppText>
-                <AppText variant="altBaslik" color="altinMetin" bold>{o.skor ?? 0}</AppText>
-              </View>
-            ))}
+              );
+            })}
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
               <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
               <AppText variant="govde" color="lacivert" bold>Soruları İncele</AppText>
@@ -367,9 +387,13 @@ export default function ErMeydaniMacScreen() {
           <SkorKutu ad={ligRakip.rumuz} skor={ligRakip.skor} altEtiket="hedef" />
         ) : odaMod ? (
           <View style={styles.skorKutu}>
-            <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>Rakipler</AppText>
-            <MaterialCommunityIcons name="account-group" size={22} color={Palette.solukMetin} />
-            <AppText variant="etiket" color="solukMetin">ayrı oynuyor</AppText>
+            <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>
+              {odaRakipler.length > 1 ? 'RAKİPLER' : 'RAKİP'}
+            </AppText>
+            <MaterialCommunityIcons name="account-group" size={20} color={Palette.solukMetin} />
+            <AppText variant="etiket" color="anaMetin" bold numberOfLines={2} style={styles.ortala}>
+              {odaRakipler.length ? odaRakipler.join(', ') : 'bekleniyor'}
+            </AppText>
           </View>
         ) : (
           <SkorKutu ad={golge.rumuz} skor={golgeSkorSuana} />
@@ -651,7 +675,9 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.altinSolukYuzey,
   },
   odaSiraNoAltin: { backgroundColor: Palette.altin },
+  odaSiraKazanan: { borderColor: Palette.altin, backgroundColor: Palette.altinSolukYuzey },
   odaSiraAd: { flex: 1 },
+  odaSiraAdKol: { flex: 1, gap: 2 },
   inceleBtnMetin: { flex: 1, gap: 2 },
   inceleKart: {
     backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,

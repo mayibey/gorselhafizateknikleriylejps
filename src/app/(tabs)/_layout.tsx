@@ -22,7 +22,7 @@ function erMeydaniIcon() {
     <View style={ikonStil.sar}>
       <View style={[ikonStil.cizgi, focused && ikonStil.cizgiAktif]} />
       <View style={ikonStil.erDaire}>
-        <MaterialCommunityIcons name="sword-cross" color={Palette.lacivert} size={size} />
+        <MaterialCommunityIcons name="sword-cross" color={Palette.lacivert} size={size - 6} />
       </View>
     </View>
   );
@@ -40,8 +40,8 @@ const ikonStil = StyleSheet.create({
   cizgiAktif: { backgroundColor: Palette.altin },
   erDaire: {
     backgroundColor: Palette.altin,
-    borderRadius: 18,
-    padding: 5,
+    borderRadius: 14,
+    padding: 3,
   },
 });
 
