@@ -2,7 +2,7 @@
   "expo": {
     "name": "Mevzu — JSPS Hazırlık",
     "slug": "gorsel-hafiza-jsps",
-    "version": "1.0.32",
+    "version": "1.0.33",
     "orientation": "portrait",
     "icon": "./assets/images/mevzu-icon-1024.png",
     "scheme": "mevzu",
@@ -18,7 +18,7 @@
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 42,
+      "versionCode": 43,
       "googleServicesFile": "./google-services.json",
       "allowBackup": false,
       "permissions": [
