@@ -134,8 +134,11 @@ export default function KarargahScreen() {
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [zayifKanun, setZayifKanun] = useState<ZayifKanun[]>([]);
-  const [tumKanunAcik, setTumKanunAcik] = useState(false); // "tümünü gör" modalı
-  const [detayKanun, setDetayKanun] = useState<number | null>(null); // madde detay modalı
+  // TEK modal: mod 'liste' (tüm kanunlar) ↔ 'detay' (bir kanunun maddeleri). iOS iki modalı
+  // üst üste açamadığı için birleşik — liste içinden kanuna dokununca aynı modal detaya geçer.
+  const [modalAcik, setModalAcik] = useState(false);
+  const [modalMod, setModalMod] = useState<'liste' | 'detay'>('liste');
+  const [detayKanun, setDetayKanun] = useState<number | null>(null);
   const [detayMaddeler, setDetayMaddeler] = useState<ZayifMadde[]>([]);
   const [detayYukleniyor, setDetayYukleniyor] = useState(false);
 
@@ -143,10 +146,19 @@ export default function KarargahScreen() {
     setDetayKanun(kanun);
     setDetayMaddeler([]);
     setDetayYukleniyor(true);
+    setModalMod('detay');
+    setModalAcik(true);
     void zayifMaddeler(kanun)
       .then(setDetayMaddeler)
       .catch(() => setDetayMaddeler([]))
       .finally(() => setDetayYukleniyor(false));
+  }
+  function acListe() {
+    setModalMod('liste');
+    setModalAcik(true);
+  }
+  function kapatModal() {
+    setModalAcik(false);
   }
   const [hata, setHata] = useState(false);
   // Günün Maddesi indirilmemiş kanundansa: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
@@ -519,7 +531,7 @@ export default function KarargahScreen() {
             </Pressable>
           ))}
           {zayifKanun.length > 4 ? (
-            <Pressable onPress={() => setTumKanunAcik(true)} style={styles.gbDahaBtn}>
+            <Pressable onPress={acListe} style={styles.gbDahaBtn}>
               <AppText variant="etiket" color="lacivert" bold>
                 +{zayifKanun.length - 4} kanun/yönetmelik daha — tümünü gör
               </AppText>
@@ -539,97 +551,99 @@ export default function KarargahScreen() {
         </View>
       ) : null}
 
-      {/* TÜMÜNÜ GÖR modalı — bütün zorlanılan kanunlar. */}
-      <Modal visible={tumKanunAcik} transparent animationType="slide" onRequestClose={() => setTumKanunAcik(false)}>
-        <View style={styles.gbModalArka}>
-          <View style={styles.gbModalKart}>
-            <View style={styles.gbModalBaslik}>
-              <AppText variant="altBaslik" bold color="anaMetin">Zorlandığın Tüm Konular</AppText>
-              <Pressable onPress={() => setTumKanunAcik(false)} hitSlop={10}>
-                <MaterialCommunityIcons name="close" size={24} color={Palette.solukMetin} />
-              </Pressable>
-            </View>
-            <ScrollView style={styles.gbModalListe} showsVerticalScrollIndicator={false}>
-              {zayifKanun.map((z) => (
-                <Pressable
-                  key={z.kanun}
-                  style={({ pressed }) => [styles.gbSatir, pressed && styles.pressed]}
-                  onPress={() => acDetay(z.kanun)}>
-                  <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
-                  <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd} numberOfLines={1}>
-                    {KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
-                  </AppText>
-                  <AppText variant="etiket" color="kirmizi" bold>{z.yanlis} yanlış</AppText>
-                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
-                </Pressable>
-              ))}
-            </ScrollView>
-          </View>
-        </View>
-      </Modal>
-
-      {/* DETAY modalı — bir kanunun zorlanılan maddeleri; premium tıklayınca kart. */}
-      <Modal visible={detayKanun != null} transparent animationType="slide" onRequestClose={() => setDetayKanun(null)}>
-        <View style={styles.gbModalArka}>
-          <View style={styles.gbModalKart}>
-            <View style={styles.gbModalBaslik}>
-              <AppText variant="altBaslik" bold color="anaMetin" numberOfLines={1} style={styles.gbModalAd}>
-                {detayKanun != null ? (KANUN_AD.get(detayKanun) ?? `Kanun ${detayKanun}`) : ''}
-              </AppText>
-              <Pressable onPress={() => setDetayKanun(null)} hitSlop={10}>
-                <MaterialCommunityIcons name="close" size={24} color={Palette.solukMetin} />
-              </Pressable>
-            </View>
-            <AppText variant="kucuk" color="solukMetin">Bu konuda zorlandığın maddeler:</AppText>
-            {detayYukleniyor ? (
-              <ActivityIndicator color={Palette.lacivert} style={styles.gbModalYukle} />
-            ) : detayMaddeler.length === 0 ? (
-              <AppText variant="kucuk" color="solukMetin" style={styles.gbModalYukle}>
-                Madde detayı henüz yok (yeni maçlarda birikecek).
-              </AppText>
-            ) : (
-              <ScrollView style={styles.gbModalListe} showsVerticalScrollIndicator={false}>
-                {detayMaddeler.map((m) => (
-                  <Pressable
-                    key={m.madde}
-                    disabled={!premium}
-                    style={({ pressed }) => [styles.gbSatir, premium && pressed && styles.pressed]}
-                    onPress={() => {
-                      if (!premium || detayKanun == null) return;
-                      const k = detayKanun;
-                      setDetayKanun(null);
-                      setTumKanunAcik(false);
-                      router.push({ pathname: '/patika', params: { lawId: String(k) } });
-                    }}>
-                    <MaterialCommunityIcons name="file-document-outline" size={16} color={Palette.altinKoyu} />
-                    <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd}>madde {m.madde}</AppText>
-                    <AppText variant="etiket" color="kirmizi" bold>{m.yanlis} yanlış</AppText>
-                    {premium ? (
-                      <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
-                    ) : (
-                      <MaterialCommunityIcons name="lock-outline" size={15} color={Palette.solukMetin} />
-                    )}
+      {/* GÜÇ KAZANDIRMA — TEK modal (liste↔detay). Dışarı tıklayınca kapanır. */}
+      <Modal visible={modalAcik} transparent animationType="slide" onRequestClose={kapatModal}>
+        <Pressable style={styles.gbModalArka} onPress={kapatModal}>
+          <Pressable style={styles.gbModalKart} onPress={() => {}}>
+            {modalMod === 'liste' ? (
+              <>
+                <View style={styles.gbModalBaslik}>
+                  <AppText variant="altBaslik" bold color="anaMetin" style={styles.gbModalAd}>Zorlandığın Tüm Konular</AppText>
+                  <Pressable onPress={kapatModal} hitSlop={10}>
+                    <MaterialCommunityIcons name="close" size={24} color={Palette.solukMetin} />
                   </Pressable>
-                ))}
-              </ScrollView>
-            )}
-            {premium ? (
-              <AppText variant="etiket" color="solukMetin">Bir maddeye dokun → o konuyu çalış.</AppText>
+                </View>
+                <ScrollView style={styles.gbModalListe} showsVerticalScrollIndicator={false}>
+                  {zayifKanun.map((z) => (
+                    <Pressable
+                      key={z.kanun}
+                      style={({ pressed }) => [styles.gbSatir, pressed && styles.pressed]}
+                      onPress={() => acDetay(z.kanun)}>
+                      <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
+                      <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd} numberOfLines={1}>
+                        {KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
+                      </AppText>
+                      <AppText variant="etiket" color="kirmizi" bold>{z.yanlis} yanlış</AppText>
+                      <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                    </Pressable>
+                  ))}
+                </ScrollView>
+              </>
             ) : (
-              <Pressable
-                style={({ pressed }) => [styles.gbPremiumBtn, pressed && styles.pressed]}
-                onPress={() => {
-                  setDetayKanun(null);
-                  router.push('/paywall');
-                }}>
-                <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
-                <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>
-                  Maddeleri çalışmak için → Premium Al
-                </AppText>
-              </Pressable>
+              <>
+                <View style={styles.gbModalBaslik}>
+                  <Pressable onPress={() => setModalMod('liste')} hitSlop={10}>
+                    <MaterialCommunityIcons name="arrow-left" size={22} color={Palette.lacivert} />
+                  </Pressable>
+                  <AppText variant="altBaslik" bold color="anaMetin" numberOfLines={1} style={styles.gbModalAd}>
+                    {detayKanun != null ? (KANUN_AD.get(detayKanun) ?? `Kanun ${detayKanun}`) : ''}
+                  </AppText>
+                  <Pressable onPress={kapatModal} hitSlop={10}>
+                    <MaterialCommunityIcons name="close" size={24} color={Palette.solukMetin} />
+                  </Pressable>
+                </View>
+                <AppText variant="kucuk" color="solukMetin">Bu konuda zorlandığın maddeler:</AppText>
+                {detayYukleniyor ? (
+                  <ActivityIndicator color={Palette.lacivert} style={styles.gbModalYukle} />
+                ) : detayMaddeler.length === 0 ? (
+                  <AppText variant="kucuk" color="solukMetin" style={styles.gbModalYukle}>
+                    Madde detayı henüz yok (yeni maçlarda birikecek).
+                  </AppText>
+                ) : (
+                  <ScrollView style={styles.gbModalListe} showsVerticalScrollIndicator={false}>
+                    {detayMaddeler.map((m) => (
+                      <Pressable
+                        key={m.madde}
+                        disabled={!premium}
+                        style={({ pressed }) => [styles.gbSatir, premium && pressed && styles.pressed]}
+                        onPress={() => {
+                          if (!premium || detayKanun == null) return;
+                          const k = detayKanun;
+                          kapatModal();
+                          router.push({ pathname: '/patika', params: { lawId: String(k) } });
+                        }}>
+                        <MaterialCommunityIcons name="file-document-outline" size={16} color={Palette.altinKoyu} />
+                        <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd}>madde {m.madde}</AppText>
+                        <AppText variant="etiket" color="kirmizi" bold>{m.yanlis} yanlış</AppText>
+                        {premium ? (
+                          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                        ) : (
+                          <MaterialCommunityIcons name="lock-outline" size={15} color={Palette.solukMetin} />
+                        )}
+                      </Pressable>
+                    ))}
+                  </ScrollView>
+                )}
+                {premium ? (
+                  <AppText variant="etiket" color="solukMetin">Bir maddeye dokun → o konuyu çalış.</AppText>
+                ) : (
+                  <>
+                    <AppText variant="etiket" color="solukMetin">Maddeleri çalışmak için premium gerekir.</AppText>
+                    <Pressable
+                      style={({ pressed }) => [styles.gbPremiumBtn, pressed && styles.pressed]}
+                      onPress={() => {
+                        kapatModal();
+                        router.push('/paywall');
+                      }}>
+                      <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
+                      <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>Premium Al</AppText>
+                    </Pressable>
+                  </>
+                )}
+              </>
             )}
-          </View>
-        </View>
+          </Pressable>
+        </Pressable>
       </Modal>
 
       {/* BUGÜNÜN GÖREVİ — günlük aktivite (sabit hedef/15-kart bandı KALDIRILDI; hedef

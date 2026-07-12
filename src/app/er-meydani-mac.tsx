@@ -731,8 +731,8 @@ function InceleGorunum({
               <>
                 <MaterialCommunityIcons name="check-circle" size={40} color={Palette.yesil} style={styles.ortala} />
                 <AppText variant="govde" bold color="anaMetin" style={styles.ortala}>Teşekkürler! Bildirimin bize ulaştı.</AppText>
-                <Pressable style={({ pressed }) => [styles.modalGonder, pressed && styles.basili]} onPress={kapatModal}>
-                  <AppText variant="govde" color="beyaz" bold>Kapat</AppText>
+                <Pressable style={({ pressed }) => [styles.modalTekBtn, pressed && styles.basili]} onPress={kapatModal}>
+                  <AppText variant="govde" color="beyaz" bold>Tamam</AppText>
                 </Pressable>
               </>
             ) : (
@@ -906,5 +906,10 @@ const styles = StyleSheet.create({
   modalGonder: {
     flex: 1, alignItems: 'center', justifyContent: 'center',
     backgroundColor: Palette.lacivert, borderRadius: Radius.m, paddingVertical: Spacing.three,
+  },
+  modalTekBtn: {
+    alignSelf: 'stretch', alignItems: 'center', justifyContent: 'center',
+    backgroundColor: Palette.lacivert, borderRadius: Radius.m, paddingVertical: Spacing.three,
+    marginTop: Spacing.one,
   },
 });
