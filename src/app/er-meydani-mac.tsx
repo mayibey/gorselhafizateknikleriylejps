@@ -19,21 +19,41 @@ import {
   seedUret,
   toplamPuan,
 } from '@/lib/er-meydani-mantik';
-import { type ErMeydaniSonuc, sonucKaydet } from '@/lib/er-meydani';
+import { type ErMeydaniSonuc, type LigSonuc, ligEslesme, ligSonuc, sonucKaydet } from '@/lib/er-meydani';
 
 type Faz = 'oyun' | 'geribildirim' | 'bitti' | 'inceleme';
 
 /** ER MEYDANI — MAÇ. 10 soru, süreli, gölge rakibe karşı hız yarışı. Sonuç aynı ekranda. */
 export default function ErMeydaniMacScreen() {
   const router = useRouter();
-  const params = useLocalSearchParams<{ seed?: string; mod?: string; soru?: string; sure?: string }>();
+  const params = useLocalSearchParams<{
+    seed?: string;
+    mod?: string;
+    soru?: string;
+    sure?: string;
+    rakip_skor?: string;
+    rakip_rating?: string;
+    rakip_id?: string;
+    rakip_rumuz?: string;
+  }>();
 
   // Tohum: verilmezse üret (doğrudan açılırsa). useMemo → tek sefer sabit.
   const seed = useMemo(() => {
     const p = Number(params.seed);
     return Number.isFinite(p) && p > 0 ? p : seedUret();
   }, [params.seed]);
+  const ligMod = params.mod === 'lig';
   const mod = (params.mod === 'arkadas' ? 'arkadas' : 'hizli') as 'hizli' | 'arkadas';
+  // Dereceli maçta rakip = eşleşmeden gelen gölge (yenilecek hedef skor).
+  const ligRakip = useMemo(
+    () => ({
+      skor: Number(params.rakip_skor) || 0,
+      rating: Number(params.rakip_rating) || 1000,
+      id: params.rakip_id && params.rakip_id.length > 0 ? params.rakip_id : null,
+      rumuz: params.rakip_rumuz || 'Rakip',
+    }),
+    [params.rakip_skor, params.rakip_rating, params.rakip_id, params.rakip_rumuz],
+  );
   // Oda ayarları (yoksa varsayılan 10 soru / 15 sn).
   const adet = useMemo(() => {
     const n = Number(params.soru);
@@ -53,6 +73,7 @@ export default function ErMeydaniMacScreen() {
   const [kalanMs, setKalanMs] = useState(sureMs);
   const [benAdimlar, setBenAdimlar] = useState<MacAdim[]>([]);
   const [sunucu, setSunucu] = useState<ErMeydaniSonuc | null>(null);
+  const [ligSonucState, setLigSonucState] = useState<LigSonuc | null>(null);
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
   const baslangicRef = useRef<number>(Date.now());
@@ -111,31 +132,41 @@ export default function ErMeydaniMacScreen() {
     return () => clearTimeout(t);
   }, [faz, index, adet, sorular.length]);
 
-  // Maç bitince sonucu sunucuya yaz — REF guard ile TAM BİR KEZ (offline/null dönse bile döngü yok).
+  // Maç bitince sonucu yaz — REF guard ile TAM BİR KEZ. Dereceli → ELO (ligSonuc); değilse haftalık.
   useEffect(() => {
     if (faz !== 'bitti' || kaydettiRef.current) return;
     kaydettiRef.current = true;
     let iptal = false;
     setKaydediliyor(true);
-    void sonucKaydet({
-      mod,
-      seed,
-      benimPuan: normalizePuan(toplamPuan(benAdimlar), adet), // sıralama adaleti: 0-2000 ölçek
-      rakipPuan: normalizePuan(golge.toplam, adet),
-      golge: true,
-      rakipId: null,
-      rakipRumuz: golge.rumuz,
-    })
-      .then((s) => {
-        if (!iptal) setSunucu(s);
-      })
-      .finally(() => {
-        if (!iptal) setKaydediliyor(false);
-      });
+    const benim = toplamPuan(benAdimlar);
+    const yaz = ligMod
+      ? ligSonuc({
+          seed,
+          benimSkor: benim,
+          rakipSkor: ligRakip.skor,
+          rakipRating: ligRakip.rating,
+          rakipId: ligRakip.id,
+        }).then((s) => {
+          if (!iptal) setLigSonucState(s);
+        })
+      : sonucKaydet({
+          mod,
+          seed,
+          benimPuan: normalizePuan(benim, adet), // sıralama adaleti: 0-2000 ölçek
+          rakipPuan: normalizePuan(golge.toplam, adet),
+          golge: true,
+          rakipId: null,
+          rakipRumuz: golge.rumuz,
+        }).then((s) => {
+          if (!iptal) setSunucu(s);
+        });
+    void yaz.finally(() => {
+      if (!iptal) setKaydediliyor(false);
+    });
     return () => {
       iptal = true;
     };
-  }, [faz, benAdimlar, golge, mod, seed, adet]);
+  }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip]);
 
   // Yeni tohum/ayar (Yeni Rakip / Kodla Katıl aynı ekrana replace edince) → maçı baştan başlat.
   useEffect(() => {
@@ -145,9 +176,32 @@ export default function ErMeydaniMacScreen() {
     setKalanMs(sureMs);
     setBenAdimlar([]);
     setSunucu(null);
+    setLigSonucState(null);
     kaydettiRef.current = false;
     cevaplandiRef.current = false;
   }, [seed, adet, sureMs]);
+
+  // Dereceli: yeni rakip bul → aynı ekrana lig paramlarıyla replace.
+  const yeniLigMac = useCallback(async () => {
+    const e = await ligEslesme();
+    if (e) {
+      router.replace({
+        pathname: '/er-meydani-mac',
+        params: {
+          seed: String(e.seed),
+          mod: 'lig',
+          soru: '10',
+          sure: '15',
+          rakip_skor: String(e.rakip_skor),
+          rakip_rating: String(e.rakip_rating),
+          rakip_id: e.rakip_id ?? '',
+          rakip_rumuz: e.rakip_rumuz,
+        },
+      });
+    } else {
+      router.replace('/er-meydani');
+    }
+  }, [router]);
 
   if (sorular.length === 0) {
     return (
@@ -166,13 +220,17 @@ export default function ErMeydaniMacScreen() {
   if (faz === 'bitti') {
     return (
       <SonucGorunum
+        ligMod={ligMod}
         benSkor={benSkor}
-        golge={golge}
+        rakipSkor={ligMod ? ligRakip.skor : golge.toplam}
+        rakipRumuz={ligMod ? ligRakip.rumuz : golge.rumuz}
         sunucu={sunucu}
+        ligSonuc={ligSonucState}
         kaydediliyor={kaydediliyor}
         onIncele={() => setFaz('inceleme')}
         onTekrar={() => router.replace({ pathname: '/er-meydani-mac', params: { seed: String(seedUret()), mod: 'hizli' } })}
-        onSiralama={() => router.replace('/er-meydani-siralama')}
+        onYeniLig={() => void yeniLigMac()}
+        onSiralama={() => router.replace(ligMod ? '/er-meydani-lig' : '/er-meydani-siralama')}
         onCik={() => router.replace('/er-meydani')}
       />
     );
@@ -198,7 +256,11 @@ export default function ErMeydaniMacScreen() {
             </AppText>
           </View>
         </View>
-        <SkorKutu ad={golge.rumuz} skor={golgeSkorSuana} />
+        {ligMod ? (
+          <SkorKutu ad={ligRakip.rumuz} skor={ligRakip.skor} altEtiket="hedef" />
+        ) : (
+          <SkorKutu ad={golge.rumuz} skor={golgeSkorSuana} />
+        )}
       </View>
 
       {/* Süre çubuğu */}
@@ -246,7 +308,17 @@ export default function ErMeydaniMacScreen() {
   );
 }
 
-function SkorKutu({ ad, skor, vurgu }: { ad: string; skor: number; vurgu?: boolean }) {
+function SkorKutu({
+  ad,
+  skor,
+  vurgu,
+  altEtiket,
+}: {
+  ad: string;
+  skor: number;
+  vurgu?: boolean;
+  altEtiket?: string;
+}) {
   return (
     <View style={styles.skorKutu}>
       <AppText variant="etiket" color={vurgu ? 'lacivert' : 'solukMetin'} bold numberOfLines={1}>
@@ -255,31 +327,44 @@ function SkorKutu({ ad, skor, vurgu }: { ad: string; skor: number; vurgu?: boole
       <AppText variant="altBaslik" color={vurgu ? 'altinMetin' : 'anaMetin'} bold>
         {skor}
       </AppText>
+      {altEtiket ? (
+        <AppText variant="etiket" color="solukMetin">
+          {altEtiket}
+        </AppText>
+      ) : null}
     </View>
   );
 }
 
 function SonucGorunum({
+  ligMod,
   benSkor,
-  golge,
+  rakipSkor,
+  rakipRumuz,
   sunucu,
+  ligSonuc: ligS,
   kaydediliyor,
   onIncele,
   onTekrar,
+  onYeniLig,
   onSiralama,
   onCik,
 }: {
+  ligMod: boolean;
   benSkor: number;
-  golge: GolgeRakip;
+  rakipSkor: number;
+  rakipRumuz: string;
   sunucu: ErMeydaniSonuc | null;
+  ligSonuc: LigSonuc | null;
   kaydediliyor: boolean;
   onIncele: () => void;
   onTekrar: () => void;
+  onYeniLig: () => void;
   onSiralama: () => void;
   onCik: () => void;
 }) {
-  const kazandim = benSkor > golge.toplam;
-  const berabere = benSkor === golge.toplam;
+  const kazandim = benSkor > rakipSkor;
+  const berabere = benSkor === rakipSkor;
 
   async function paylas() {
     try {
@@ -292,7 +377,7 @@ function SonucGorunum({
   }
 
   return (
-    <Screen title="Er Meydanı" onGeri={onCik}>
+    <Screen title={ligMod ? 'Dereceli Maç' : 'Er Meydanı'} onGeri={onCik}>
       <View style={styles.sonucUst}>
         <MaterialCommunityIcons
           name={berabere ? 'shield-half-full' : kazandim ? 'trophy' : 'shield-outline'}
@@ -311,14 +396,32 @@ function SonucGorunum({
         </View>
         <AppText variant="baslik" color="solukMetin">–</AppText>
         <View style={styles.sonucSkorKutu}>
-          <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>{golge.rumuz.toUpperCase()}</AppText>
-          <AppText variant="dev" color="anaMetin" bold>{golge.toplam}</AppText>
+          <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>{rakipRumuz.toUpperCase()}</AppText>
+          <AppText variant="dev" color="anaMetin" bold>{rakipSkor}</AppText>
         </View>
       </View>
 
       {kaydediliyor ? (
-        <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>Puan kaydediliyor…</AppText>
-      ) : sunucu ? (
+        <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+          {ligMod ? 'Derece hesaplanıyor…' : 'Puan kaydediliyor…'}
+        </AppText>
+      ) : ligMod && ligS ? (
+        <View style={styles.ligSonucKutu}>
+          <View style={styles.ligDeltaSatir}>
+            <MaterialCommunityIcons
+              name={ligS.delta >= 0 ? 'trending-up' : 'trending-down'}
+              size={24}
+              color={ligS.delta >= 0 ? Palette.yesil : Palette.kirmizi}
+            />
+            <AppText variant="baslik" color={ligS.delta >= 0 ? 'yesil' : 'kirmizi'} bold>
+              {ligS.delta >= 0 ? '+' : ''}{ligS.delta}
+            </AppText>
+          </View>
+          <AppText variant="kucuk" color="anaMetin" bold>
+            Yeni derecen: {ligS.rating} · {ligS.kademe}
+          </AppText>
+        </View>
+      ) : !ligMod && sunucu ? (
         <View style={styles.puanBilgi}>
           <MaterialCommunityIcons name="star-four-points" size={18} color={Palette.altinKoyu} />
           <AppText variant="kucuk" color="anaMetin">
@@ -329,9 +432,11 @@ function SonucGorunum({
         </View>
       ) : null}
 
-      <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={onTekrar}>
+      <Pressable
+        style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]}
+        onPress={ligMod ? onYeniLig : onTekrar}>
         <MaterialCommunityIcons name="sword-cross" size={22} color={Palette.beyaz} />
-        <AppText variant="govde" color="beyaz" bold>Yeni Rakip</AppText>
+        <AppText variant="govde" color="beyaz" bold>{ligMod ? 'Yeni Dereceli Maç' : 'Yeni Rakip'}</AppText>
       </Pressable>
       <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={onIncele}>
         <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
@@ -340,13 +445,15 @@ function SonucGorunum({
           <AppText variant="etiket" color="solukMetin">Doğru cevaplar + açıklamalarıyla öğren</AppText>
         </View>
       </Pressable>
-      <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={paylas}>
-        <MaterialCommunityIcons name="share-variant" size={20} color={Palette.lacivert} />
-        <AppText variant="govde" color="lacivert" bold>Sonucu Paylaş</AppText>
-      </Pressable>
+      {!ligMod ? (
+        <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={paylas}>
+          <MaterialCommunityIcons name="share-variant" size={20} color={Palette.lacivert} />
+          <AppText variant="govde" color="lacivert" bold>Sonucu Paylaş</AppText>
+        </Pressable>
+      ) : null}
       <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={onSiralama}>
         <MaterialCommunityIcons name="podium-gold" size={20} color={Palette.lacivert} />
-        <AppText variant="govde" color="lacivert" bold>Sıralamayı Gör</AppText>
+        <AppText variant="govde" color="lacivert" bold>{ligMod ? 'Lig Tablosu' : 'Sıralamayı Gör'}</AppText>
       </Pressable>
     </Screen>
   );
@@ -493,6 +600,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
     backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three,
   },
+  ligSonucKutu: {
+    alignItems: 'center', gap: Spacing.one,
+    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three,
+  },
+  ligDeltaSatir: { flexDirection: 'row', alignItems: 'center', gap: Spacing.one },
   anaBtn: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.two,
     backgroundColor: Palette.lacivert, borderRadius: Radius.m, paddingVertical: Spacing.three, marginTop: Spacing.two,

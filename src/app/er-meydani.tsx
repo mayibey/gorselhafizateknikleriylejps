@@ -10,7 +10,10 @@ import { seedUret } from '@/lib/er-meydani-mantik';
 import {
   type AcikOda,
   type KatilBilgi,
+  type LigDurum,
   acikOdalar,
+  ligDurum,
+  ligEslesme,
   odaKur,
   odayaKatil,
   rumuzAyarla,
@@ -28,6 +31,8 @@ export default function ErMeydaniScreen() {
   const [duzenle, setDuzenle] = useState(false);
   const [odalar, setOdalar] = useState<AcikOda[] | null>(null);
   const [odaKurAcik, setOdaKurAcik] = useState(false);
+  const [ligBilgi, setLigBilgi] = useState<LigDurum | null>(null);
+  const [eslesiyor, setEslesiyor] = useState(false);
 
   const odalariYukle = useCallback(() => {
     void acikOdalar().then(setOdalar);
@@ -40,6 +45,9 @@ export default function ErMeydaniScreen() {
         if (iptal) return;
         setRumuz(r);
         setYuklendi(true);
+      });
+      void ligDurum().then((d) => {
+        if (!iptal) setLigBilgi(d);
       });
       odalariYukle();
       return () => {
@@ -67,6 +75,28 @@ export default function ErMeydaniScreen() {
   function hizliEslesme() {
     if (!playAktif) return;
     macaGit({ seed: seedUret(), mod: 'hizli' });
+  }
+
+  // Dereceli maç: seviyeye yakın rakip bul (sunucu) → lig paramlarıyla maça git.
+  async function dereceliMac() {
+    if (!playAktif || eslesiyor) return;
+    setEslesiyor(true);
+    const e = await ligEslesme();
+    setEslesiyor(false);
+    if (!e) return;
+    router.push({
+      pathname: '/er-meydani-mac',
+      params: {
+        seed: String(e.seed),
+        mod: 'lig',
+        soru: '10',
+        sure: '15',
+        rakip_skor: String(e.rakip_skor),
+        rakip_rating: String(e.rakip_rating),
+        rakip_id: e.rakip_id ?? '',
+        rakip_rumuz: e.rakip_rumuz,
+      },
+    });
   }
 
   function odayaGit(k: KatilBilgi) {
@@ -128,8 +158,27 @@ export default function ErMeydaniScreen() {
         <MaterialCommunityIcons name="flash" size={24} color={Palette.beyaz} />
         <View style={styles.btnMetin}>
           <AppText variant="govde" color="beyaz" bold>Hızlı Eşleş</AppText>
-          <AppText variant="etiket" color="beyaz">Hemen bir rakiple 10 soru</AppText>
+          <AppText variant="etiket" color="beyaz">Hemen bir rakiple 10 soru (dereceye saymaz)</AppText>
         </View>
+      </Pressable>
+
+      {/* Dereceli maç (lig) — seviyeye yakın rakip, puan kazan/kaybet */}
+      <Pressable
+        disabled={!playAktif || eslesiyor}
+        onPress={() => void dereceliMac()}
+        style={({ pressed }) => [styles.ligBtn, (!playAktif || eslesiyor) && styles.pasif, pressed && styles.basili]}>
+        <MaterialCommunityIcons name="chevron-triple-up" size={26} color={Palette.altinKoyu} />
+        <View style={styles.btnMetin}>
+          <AppText variant="govde" color="lacivert" bold>Dereceli Maç</AppText>
+          <AppText variant="etiket" color="altinMetin" bold>
+            {eslesiyor
+              ? 'Seviyene uygun rakip aranıyor…'
+              : ligBilgi
+                ? `${ligBilgi.kademe} · ${ligBilgi.puan} puan · ${ligBilgi.sira}. sıra`
+                : 'Seviyene göre rakip · kazan puan al, kaybet puan ver'}
+          </AppText>
+        </View>
+        {eslesiyor ? <ActivityIndicator color={Palette.altinKoyu} /> : null}
       </Pressable>
 
       {/* Oda kur (ayarlı) */}
@@ -208,6 +257,16 @@ export default function ErMeydaniScreen() {
         <View style={styles.btnMetin}>
           <AppText variant="govde" color="lacivert" bold>Haftalık Sıralama</AppText>
           <AppText variant="etiket" color="solukMetin">Zirveye kim oynuyor?</AppText>
+        </View>
+      </Pressable>
+
+      <Pressable
+        onPress={() => router.push('/er-meydani-lig')}
+        style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]}>
+        <MaterialCommunityIcons name="chevron-triple-up" size={22} color={Palette.lacivert} />
+        <View style={styles.btnMetin}>
+          <AppText variant="govde" color="lacivert" bold>Lig Tablosu</AppText>
+          <AppText variant="etiket" color="solukMetin">Dereceli sıralama · her ay sıfırlanır</AppText>
         </View>
       </Pressable>
     </Screen>
@@ -458,6 +517,11 @@ const styles = StyleSheet.create({
   ikincilBtn: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
     backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.m, padding: Spacing.three,
+  },
+  ligBtn: {
+    flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
+    backgroundColor: Palette.altinSolukYuzey, borderWidth: 1, borderColor: Palette.altinKoyu,
     borderRadius: Radius.m, padding: Spacing.three,
   },
   btnMetin: { flex: 1, gap: 2 },
