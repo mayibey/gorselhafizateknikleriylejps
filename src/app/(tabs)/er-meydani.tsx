@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { ActivityIndicator, Pressable, Share, StyleSheet, TextInput, View } from 'react-native';
+import { ActivityIndicator, Alert, Modal, Pressable, Share, StyleSheet, TextInput, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -9,13 +9,16 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import { DUELLO_KANUNLAR, seedUret } from '@/lib/er-meydani-mantik';
 import {
   type AcikOda,
-  type KatilBilgi,
   type LigDurum,
+  type Odam,
   type OdaBilgi,
+  type OdaOnizle,
   acikOdalar,
   ligDurum,
   ligEslesme,
   odaKur,
+  odaOnizle,
+  odalarim,
   odayaKatil,
   rumuzAyarla,
   rumuzGetir,
@@ -23,6 +26,13 @@ import {
 
 const SORU_SECENEK = [5, 10, 15, 20];
 const SURE_SECENEK = [10, 15, 20, 30];
+const KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
+
+/** Kanun id listesini okunur metne çevirir ("Karışık" ya da kanun adları). */
+function kanunlarMetni(ids: number[]): string {
+  if (!ids || ids.length === 0) return 'Karışık (tüm kanunlar)';
+  return ids.map((id) => KANUN_AD.get(id) ?? `Kanun ${id}`).join(', ');
+}
 
 /** ER MEYDANI — LOBİ. Takma ad + hızlı eşleş + oda kur (ayarlı) + açık odalar + kodla katıl + sıralama. */
 export default function ErMeydaniScreen() {
@@ -34,6 +44,9 @@ export default function ErMeydaniScreen() {
   const [odaKurAcik, setOdaKurAcik] = useState(false);
   const [ligBilgi, setLigBilgi] = useState<LigDurum | null>(null);
   const [eslesiyor, setEslesiyor] = useState(false);
+  const [benimOdalar, setBenimOdalar] = useState<Odam[]>([]);
+  const [onayOda, setOnayOda] = useState<OdaOnizle | null>(null);
+  const [katiliyor, setKatiliyor] = useState(false);
 
   const odalariYukle = useCallback(() => {
     void acikOdalar().then(setOdalar);
@@ -49,6 +62,9 @@ export default function ErMeydaniScreen() {
       });
       void ligDurum().then((d) => {
         if (!iptal) setLigBilgi(d);
+      });
+      void odalarim().then((o) => {
+        if (!iptal) setBenimOdalar(o);
       });
       odalariYukle();
       return () => {
@@ -101,27 +117,30 @@ export default function ErMeydaniScreen() {
     });
   }
 
-  function odayaGit(k: KatilBilgi) {
-    // Odaya katılan rakip: 'oda' modunda oynar (gerçek rakip, bot değil).
-    router.push({
-      pathname: '/er-meydani-mac',
-      params: {
-        seed: String(k.seed),
-        mod: 'oda',
-        oda: k.oda_id,
-        soru: String(k.soru_sayisi),
-        sure: String(k.sure_sn),
-        ...(k.kanunlar && k.kanunlar.length ? { kanun: k.kanunlar.join(',') } : {}),
-      },
-    });
+  function beklemeOdasinaGit(odaId: string) {
+    router.push({ pathname: '/er-meydani-oda', params: { oda: odaId } });
   }
 
-  // Listeden katıl: seed liste'de yok (sızmasın diye) → önce sunucudan odanın seed'ini al.
-  async function listedenKatil(o: AcikOda) {
+  // Katılım onayı: önce ODAYI ÖNİZLE (ayar/konu/oyuncu) → onay ekranı → onaylayınca katıl → bekleme odası.
+  async function katilOnayIste(odaId: string | null, kod: string | null) {
     if (!playAktif) return;
-    const bilgi = await odayaKatil(o.id, null);
-    if (bilgi) odayaGit(bilgi);
-    else odalariYukle(); // oda kapanmış olabilir → listeyi tazele
+    const r = await odaOnizle(odaId, kod);
+    if (r.ok && r.oda) setOnayOda(r.oda);
+    else {
+      Alert.alert('Katılınamadı', r.hata ?? 'Oda bulunamadı.');
+      odalariYukle();
+    }
+  }
+
+  async function katilOnayla() {
+    if (!onayOda || katiliyor) return;
+    setKatiliyor(true);
+    const k = await odayaKatil(onayOda.oda_id, null);
+    setKatiliyor(false);
+    const hedef = onayOda.oda_id;
+    setOnayOda(null);
+    if (k) beklemeOdasinaGit(hedef);
+    else Alert.alert('Katılınamadı', 'Oda dolmuş ya da kapanmış olabilir.');
   }
 
   return (
@@ -222,10 +241,33 @@ export default function ErMeydaniScreen() {
         </Pressable>
       )}
 
-      <KodlaKatil
-        aktif={playAktif}
-        onKatil={(k) => odayaGit(k)}
-      />
+      <KodlaKatil aktif={playAktif} onKod={(kod) => void katilOnayIste(null, kod)} />
+
+      {/* Odalarım — kuranın aktif odaları (geri dönmek için) */}
+      {benimOdalar.length > 0 ? (
+        <>
+          <View style={styles.odalarBaslik}>
+            <MaterialCommunityIcons name="door-closed" size={18} color={Palette.altinKoyu} />
+            <AppText variant="etiket" color="solukMetin" bold>ODALARIM</AppText>
+          </View>
+          {benimOdalar.map((o) => (
+            <Pressable
+              key={o.id}
+              onPress={() => beklemeOdasinaGit(o.id)}
+              style={({ pressed }) => [styles.odaSatir, styles.odaBenim, pressed && styles.basili]}>
+              <View style={styles.odaBilgi}>
+                <AppText variant="govde" color="anaMetin" bold numberOfLines={1}>
+                  Kod {o.kod} · {Number(o.oyuncu_sayisi)} oyuncu
+                </AppText>
+                <AppText variant="etiket" color="solukMetin">
+                  {o.soru_sayisi} soru · {o.sure_sn} sn · {o.durum === 'oynaniyor' ? 'başladı' : 'bekliyor'}
+                </AppText>
+              </View>
+              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinKoyu} />
+            </Pressable>
+          ))}
+        </>
+      ) : null}
 
       {/* Açık odalar */}
       <View style={styles.odalarBaslik}>
@@ -248,14 +290,14 @@ export default function ErMeydaniScreen() {
               <AppText variant="govde" color="anaMetin" bold numberOfLines={1}>
                 {o.kuran_rumuz}{o.benimki ? ' (senin odan)' : ''}
               </AppText>
-              <AppText variant="etiket" color="solukMetin">
-                {o.soru_sayisi} soru · {o.sure_sn} sn · kod {o.kod}
+              <AppText variant="etiket" color="solukMetin" numberOfLines={1}>
+                {o.soru_sayisi} soru · {o.sure_sn} sn · {kanunlarMetni(o.kanunlar)}
               </AppText>
             </View>
             {!o.benimki ? (
               <Pressable
                 disabled={!playAktif}
-                onPress={() => void listedenKatil(o)}
+                onPress={() => void katilOnayIste(o.id, null)}
                 style={({ pressed }) => [styles.katilBtn, !playAktif && styles.pasif, pressed && styles.basili]}>
                 <AppText variant="kucuk" color="beyaz" bold>Katıl</AppText>
               </Pressable>
@@ -283,7 +325,48 @@ export default function ErMeydaniScreen() {
           <AppText variant="etiket" color="solukMetin">Dereceli sıralama · her ay sıfırlanır</AppText>
         </View>
       </Pressable>
+
+      {/* Katılım onayı — konu/süre/oyuncu gör, onayla, katıl */}
+      <Modal visible={onayOda != null} transparent animationType="fade" onRequestClose={() => setOnayOda(null)}>
+        <View style={styles.modalKatman}>
+          <View style={styles.modalKart}>
+            <MaterialCommunityIcons name="sword-cross" size={34} color={Palette.altinKoyu} />
+            <AppText variant="baslik" color="anaMetin" bold style={styles.mOrtali}>
+              {onayOda?.kuran_rumuz} · Oda
+            </AppText>
+            <View style={styles.mBilgiSatir}>
+              <MBilgi etiket="Soru" deger={`${onayOda?.soru_sayisi}`} />
+              <MBilgi etiket="Süre" deger={`${onayOda?.sure_sn} sn`} />
+              <MBilgi etiket="Oyuncu" deger={`${onayOda?.oyuncu_sayisi}/${onayOda?.max_oyuncu}`} />
+            </View>
+            <AppText variant="etiket" color="solukMetin" bold>KONULAR</AppText>
+            <AppText variant="kucuk" color="anaMetin" style={styles.mOrtali}>
+              {onayOda ? kanunlarMetni(onayOda.kanunlar) : ''}
+            </AppText>
+            <View style={styles.btnSatir}>
+              <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={() => setOnayOda(null)}>
+                <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
+              </Pressable>
+              <Pressable
+                style={({ pressed }) => [styles.kaydetBtn, katiliyor && styles.pasif, pressed && styles.basili]}
+                disabled={katiliyor}
+                onPress={() => void katilOnayla()}>
+                {katiliyor ? <ActivityIndicator color={Palette.beyaz} /> : <AppText variant="govde" color="beyaz" bold>Katıl ve Bekle</AppText>}
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </Screen>
+  );
+}
+
+function MBilgi({ etiket, deger }: { etiket: string; deger: string }) {
+  return (
+    <View style={styles.mBilgi}>
+      <AppText variant="altBaslik" color="lacivert" bold>{deger}</AppText>
+      <AppText variant="etiket" color="solukMetin">{etiket}</AppText>
+    </View>
   );
 }
 
@@ -447,11 +530,9 @@ function ChipSatir({ secenekler, secili, onSec }: { secenekler: number[]; secili
   );
 }
 
-function KodlaKatil({ aktif, onKatil }: { aktif: boolean; onKatil: (k: KatilBilgi) => void }) {
+function KodlaKatil({ aktif, onKod }: { aktif: boolean; onKod: (kod: string) => void }) {
   const [ac, setAc] = useState(false);
   const [kod, setKod] = useState('');
-  const [hata, setHata] = useState<string | null>(null);
-  const [araniyor, setAraniyor] = useState(false);
 
   if (!ac) {
     return (
@@ -462,21 +543,18 @@ function KodlaKatil({ aktif, onKatil }: { aktif: boolean; onKatil: (k: KatilBilg
         <MaterialCommunityIcons name="key-variant" size={22} color={Palette.lacivert} />
         <View style={styles.btnMetin}>
           <AppText variant="govde" color="lacivert" bold>Kodla Katıl</AppText>
-          <AppText variant="etiket" color="solukMetin">Arkadaşının oda kodunu gir</AppText>
+          <AppText variant="etiket" color="solukMetin">Arkadaşının 4 haneli oda kodunu gir</AppText>
         </View>
       </Pressable>
     );
   }
 
-  async function katil() {
+  function katil() {
     const k = kod.trim();
-    if (k.length === 0 || araniyor) return;
-    setAraniyor(true);
-    setHata(null);
-    const bilgi = await odayaKatil(null, k);
-    setAraniyor(false);
-    if (bilgi) onKatil(bilgi);
-    else setHata('Oda bulunamadı ya da kapandı.');
+    if (k.length === 0) return;
+    onKod(k); // parent önizler + onay ekranı gösterir
+    setKod('');
+    setAc(false);
   }
 
   return (
@@ -485,26 +563,22 @@ function KodlaKatil({ aktif, onKatil }: { aktif: boolean; onKatil: (k: KatilBilg
       <TextInput
         style={styles.girdi}
         value={kod}
-        onChangeText={(t) => {
-          setKod(t);
-          setHata(null);
-        }}
-        placeholder="Örn. B9E21C"
+        onChangeText={setKod}
+        placeholder="Örn. 4271"
         placeholderTextColor={Palette.solukMetin}
-        autoCapitalize="characters"
+        keyboardType="number-pad"
+        maxLength={4}
         autoCorrect={false}
-        editable={!araniyor}
       />
-      {hata ? <AppText variant="kucuk" color="kirmizi" bold>{hata}</AppText> : null}
       <View style={styles.btnSatir}>
         <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={() => setAc(false)}>
           <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
         </Pressable>
         <Pressable
-          style={({ pressed }) => [styles.kaydetBtn, (kod.trim().length === 0 || araniyor) && styles.pasif, pressed && styles.basili]}
-          disabled={kod.trim().length === 0 || araniyor}
-          onPress={() => void katil()}>
-          {araniyor ? <ActivityIndicator color={Palette.beyaz} /> : <AppText variant="govde" color="beyaz" bold>Katıl</AppText>}
+          style={({ pressed }) => [styles.kaydetBtn, kod.trim().length === 0 && styles.pasif, pressed && styles.basili]}
+          disabled={kod.trim().length === 0}
+          onPress={katil}>
+          <AppText variant="govde" color="beyaz" bold>Devam</AppText>
         </Pressable>
       </View>
     </View>
@@ -588,4 +662,14 @@ const styles = StyleSheet.create({
   },
   pasif: { opacity: 0.45 },
   basili: { opacity: 0.85 },
+  modalKatman: {
+    flex: 1, backgroundColor: 'rgba(11,31,58,0.55)', justifyContent: 'center', padding: Spacing.four,
+  },
+  modalKart: {
+    backgroundColor: Palette.kartKremi, borderColor: Palette.kenarlik, borderWidth: 1,
+    borderRadius: Radius.l, padding: Spacing.four, gap: Spacing.two, alignItems: 'center',
+  },
+  mOrtali: { textAlign: 'center' },
+  mBilgiSatir: { flexDirection: 'row', justifyContent: 'space-around', width: '100%', marginVertical: Spacing.one },
+  mBilgi: { alignItems: 'center' },
 });

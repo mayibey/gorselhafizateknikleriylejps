@@ -123,6 +123,7 @@ export type AcikOda = {
   created_at: string;
   benimki: boolean;
 };
+export type OdaOyuncu = { rumuz: string; skor: number | null; ben: boolean };
 export type KatilBilgi = {
   oda_id: string;
   seed: number;
@@ -130,21 +131,40 @@ export type KatilBilgi = {
   sure_sn: number;
   kanunlar: number[];
   kuran_rumuz: string;
-  rol: string;
+};
+export type OdaOnizle = {
+  oda_id: string;
+  kod: string;
+  durum: string;
+  soru_sayisi: number;
+  sure_sn: number;
+  kanunlar: number[];
+  kuran_rumuz: string;
+  oyuncu_sayisi: number;
+  max_oyuncu: number;
 };
 export type OdaDurum = {
   durum: 'acik' | 'oynaniyor' | 'bitti' | 'kapandi';
-  kuran_rumuz: string;
-  rakip_rumuz: string | null;
   seed: number;
   soru_sayisi: number;
   sure_sn: number;
   kanunlar: number[];
-  kuran_skor: number | null;
-  rakip_skor: number | null;
-  rol: 'kuran' | 'rakip' | 'yok';
+  kod: string;
+  max_oyuncu: number;
+  ben_kuran: boolean;
+  oyuncular: OdaOyuncu[];
 };
-export type OdaSkorSonuc = { durum: string; kuran_skor: number | null; rakip_skor: number | null };
+export type OdaSkorSonuc = { durum: string; oyuncular: OdaOyuncu[] };
+export type Odam = {
+  id: string;
+  kod: string;
+  durum: string;
+  soru_sayisi: number;
+  sure_sn: number;
+  kanunlar: number[];
+  oyuncu_sayisi: number;
+  created_at: string;
+};
 
 /** Ayarlarla (soru sayısı + süre + kanunlar) açık oda kurar. Boş kanunlar = karışık. Hata → {ok:false}. */
 export async function odaKur(
@@ -240,6 +260,48 @@ export async function odaIptal(odaId: string): Promise<void> {
     await supabase.rpc('er_meydani_oda_iptal', { p_oda_id: odaId });
   } catch {
     /* sessiz */
+  }
+}
+
+/** Odaya KATILMADAN ayar/konu + oyuncu sayısı önizle (onay ekranı). */
+export async function odaOnizle(
+  odaId: string | null,
+  kod: string | null,
+): Promise<{ ok: boolean; oda?: OdaOnizle; hata?: string }> {
+  if (!supabase) return { ok: false, hata: 'Şu an kullanılamıyor.' };
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_oda_onizle', { p_oda_id: odaId, p_kod: kod });
+    if (error || !data) return { ok: false, hata: error?.message ?? 'Oda bulunamadı.' };
+    const j = data as OdaOnizle & { hata?: string };
+    if (j.hata) return { ok: false, hata: j.hata };
+    return { ok: true, oda: j };
+  } catch (e) {
+    return { ok: false, hata: (e as Error).message };
+  }
+}
+
+/** Kuran maçı başlatır (durum 'oynaniyor'). Yeni durum döner / null. */
+export async function odaBaslat(odaId: string): Promise<string | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_oda_baslat', { p_oda_id: odaId });
+    if (error || !data) return null;
+    const j = data as { durum?: string; hata?: string };
+    return j.hata ? null : (j.durum ?? null);
+  } catch {
+    return null;
+  }
+}
+
+/** Kuranın aktif odaları ("Odalarım" — geri dön). */
+export async function odalarim(): Promise<Odam[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_odalarim');
+    if (error || !data) return [];
+    return data as Odam[];
+  } catch {
+    return [];
   }
 }
 
