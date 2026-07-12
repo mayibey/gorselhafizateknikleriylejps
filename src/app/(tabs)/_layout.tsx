@@ -16,6 +16,18 @@ function icon(name: IconName) {
   );
 }
 
+// Er Meydanı — ORTA sekme, altın vurgulu (kılıç, altın rozet zemin) → göz oraya kayar.
+function erMeydaniIcon() {
+  return ({ focused, size }: { focused: boolean; color: ColorValue; size: number }) => (
+    <View style={ikonStil.sar}>
+      <View style={[ikonStil.cizgi, focused && ikonStil.cizgiAktif]} />
+      <View style={ikonStil.erDaire}>
+        <MaterialCommunityIcons name="sword-cross" color={Palette.lacivert} size={size} />
+      </View>
+    </View>
+  );
+}
+
 const ikonStil = StyleSheet.create({
   sar: { alignItems: 'center' },
   cizgi: {
@@ -26,9 +38,14 @@ const ikonStil = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   cizgiAktif: { backgroundColor: Palette.altin },
+  erDaire: {
+    backgroundColor: Palette.altin,
+    borderRadius: 18,
+    padding: 5,
+  },
 });
 
-/** Krom: krem zemin, aktif sekme lacivert, pasif soluk. */
+/** Krom: krem zemin, aktif sekme lacivert, pasif soluk. Er Meydanı ortada, altın vurgulu. */
 export default function TabsLayout() {
   return (
     <Tabs
@@ -47,15 +64,19 @@ export default function TabsLayout() {
         name="mevzuat"
         options={{ title: 'Mevzuat', tabBarIcon: icon('book-open-variant') }}
       />
-      <Tabs.Screen name="ara" options={{ title: 'Ara', tabBarIcon: icon('magnify') }} />
-      {/* Talim (kanun bazlı deneme/alıştırma) — 25 müşterek kanunun küratörlü soruları.
-          (Route adı 'tatbikat' içeride kaldı; görünen ad 'Talim'. İleride genel JSPS denemesi
-          eklenince ayrı 'Tatbikat' sekmesi açılacak.) */}
+      {/* ORTA — Er Meydanı (altın vurgulu, düello oyun modu) */}
+      <Tabs.Screen
+        name="er-meydani"
+        options={{ title: 'Er Meydanı', tabBarIcon: erMeydaniIcon() }}
+      />
+      {/* Talim (kanun bazlı deneme/alıştırma) — 25 müşterek kanunun küratörlü soruları. */}
       <Tabs.Screen
         name="tatbikat"
         options={{ title: 'Talim', tabBarIcon: icon('target') }}
       />
       <Tabs.Screen name="sicil" options={{ title: 'Evsaf', tabBarIcon: icon('account') }} />
+      {/* Ara — bar'dan gizli (href:null); üstteki büyüteç ikonundan açılır. */}
+      <Tabs.Screen name="ara" options={{ href: null, title: 'Ara' }} />
     </Tabs>
   );
 }

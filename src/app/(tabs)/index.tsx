@@ -327,6 +327,14 @@ export default function KarargahScreen() {
       title="Karargah"
       headerSag={
         <View style={styles.headerIkonlar}>
+          {/* Ara — eski alt sekme yerine başlıkta büyüteç. */}
+          <Pressable
+            onPress={() => router.push('/ara')}
+            hitSlop={10}
+            accessibilityRole="button"
+            accessibilityLabel="Ara">
+            <MaterialCommunityIcons name="magnify" size={24} color={Palette.altin} />
+          </Pressable>
           {/* Premium'sa altın taç (dokununca Üyelik ekranı) — premium değilse görünmez. */}
           <UyelikTaci boyut={18} />
           {/* Duyurular (eski çan yerine) — okunmamış varsa kırmızı nokta. */}
@@ -510,33 +518,6 @@ export default function KarargahScreen() {
           </AppText>
         </Pressable>
       </View>
-
-      {/* ER MEYDANI — 1v1 soru düellosu (ücretsiz oyun modu + haftalık sıralama) */}
-      <Pressable
-        style={({ pressed }) => [styles.erKart, pressed && styles.pressed]}
-        onPress={() => router.push('/er-meydani')}
-        accessibilityRole="button"
-        accessibilityLabel="Er Meydanı — arkadaşınla soru düellosu">
-        <View style={styles.erIkon}>
-          <MaterialCommunityIcons name="sword-cross" size={28} color={Palette.lacivert} />
-        </View>
-        <View style={styles.erMetin}>
-          <View style={styles.erBaslikSatir}>
-            <AppText variant="govde" color="beyaz" bold>
-              Er Meydanı
-            </AppText>
-            <View style={styles.erRozet}>
-              <AppText variant="etiket" color="lacivert" bold>
-                YENİ
-              </AppText>
-            </View>
-          </View>
-          <AppText variant="etiket" color="altinAcik2">
-            Arkadaşınla 10 soruluk düello · haftalık sıralama
-          </AppText>
-        </View>
-        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altin} />
-      </Pressable>
 
       {/* GÜNÜN MADDESİ — tarih rotasyonlu kart + İncele */}
       {gunMadde ? (
@@ -882,41 +863,6 @@ const styles = StyleSheet.create({
   },
 
   // Bar
-
-  // Er Meydanı giriş kartı (lacivert + altın aksan, dikkat çeksin)
-  erKart: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.three,
-    backgroundColor: Palette.lacivert,
-    borderRadius: Radius.l,
-    borderWidth: 1,
-    borderColor: Palette.altinKoyu,
-    padding: Spacing.three,
-  },
-  erIkon: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: Palette.altin,
-  },
-  erMetin: {
-    flex: 1,
-    gap: 2,
-  },
-  erBaslikSatir: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-  },
-  erRozet: {
-    backgroundColor: Palette.altin,
-    borderRadius: Radius.s,
-    paddingHorizontal: Spacing.two,
-    paddingVertical: 1,
-  },
 
   // Günün maddesi
   gunMaddeAlt: {

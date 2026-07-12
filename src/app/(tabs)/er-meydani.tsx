@@ -112,7 +112,7 @@ export default function ErMeydaniScreen() {
   }
 
   return (
-    <Screen title="Er Meydanı" onGeri={() => router.back()} headerAltinCizgi>
+    <Screen title="Er Meydanı" headerAltinCizgi>
       <View style={styles.girisKart}>
         <MaterialCommunityIcons name="sword-cross" size={30} color={Palette.altinKoyu} />
         <AppText variant="kucuk" color="anaMetin" style={styles.girisMetin}>
