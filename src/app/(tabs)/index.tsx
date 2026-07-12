@@ -15,12 +15,15 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   getAllCards,
   getCardCount,
+  getGeriBesDurum,
   getPerformans,
   getStudyCards,
   getStudyDays,
   getZayifKuyruk,
 } from '@/db/database';
-import type { CardWithLaw } from '@/db/schema';
+import type { CardWithLaw, GeriBesDurum } from '@/db/schema';
+import { degerlendirSicil } from '@/lib/sicil-servis';
+import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
 import { LAW_KLASOR } from '@/db/seed';
 import {
   indirmeDestekli,
@@ -134,6 +137,7 @@ export default function KarargahScreen() {
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [zayifKanun, setZayifKanun] = useState<ZayifKanun[]>([]);
+  const [geriBesDurum, setGeriBesDurum] = useState<GeriBesDurum | null>(null);
   // TEK modal: mod 'liste' (tüm kanunlar) ↔ 'detay' (bir kanunun maddeleri). iOS iki modalı
   // üst üste açamadığı için birleşik — liste içinden kanuna dokununca aynı modal detaya geçer.
   const [modalAcik, setModalAcik] = useState(false);
@@ -244,6 +248,11 @@ export default function KarargahScreen() {
     void zayifKanunlar()
       .then(setZayifKanun)
       .catch(() => setZayifKanun([]));
+    // Ödül-ceza emri: Evsaf'taki "GERİ BESLEME EĞİTİM EMRİ" Karargah'ta da görünsün.
+    void degerlendirSicil()
+      .then(() => getGeriBesDurum())
+      .then(setGeriBesDurum)
+      .catch(() => setGeriBesDurum(null));
     // Etüt = ZAYIF HAVUZ (tekrar-hatırlat + denemede yanlış). Due/Leitner DEĞİL → "zayıf
     // var ama Etüt boş" sorunu biter.
     // Akıştaki zayıf kuyruğuyla AYNI filtre (indirilmiş kanunlar) → sayaç tutarlı (63 vs 60 biter).
@@ -440,6 +449,13 @@ export default function KarargahScreen() {
           GERİ BESLEME
         </AppText>
       </View>
+
+      {/* ÖDÜL-CEZA EMRİ — Evsaf'takiyle aynı kart; süre/ceza uyarısı burada da görünür. */}
+      <GeriBeslemeEmri
+        durum={geriBesDurum}
+        zayifSayisi={bekleyen}
+        onBasla={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+      />
 
       {/* HERO — ETÜT = zayıf havuz (eksik/zorlandığın kartları düzelt). Boşsa "zayıf yok". */}
       {bos ? (

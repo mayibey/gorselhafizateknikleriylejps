@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
+import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
@@ -328,46 +329,8 @@ function SicilBolum({
   const siradakiCeza = KADEME_AD[Math.min(durum.kademe + 1, KADEME_AD.length - 1)];
   return (
     <>
-      {durum.acik ? (
-        <View style={styles.emirKart}>
-          <View style={styles.emirUst}>
-            <MaterialCommunityIcons name="bugle" size={18} color={Palette.beyaz} />
-            <AppText variant="kucuk" color="beyaz" bold>
-              GERİ BESLEME EĞİTİM EMRİ
-            </AppText>
-          </View>
+      <GeriBeslemeEmri durum={durum} zayifSayisi={zayifSayisi} onBasla={onGeriBes} />
 
-          {/* Kalan süre — vurgulu geri sayım (motive + ceza uyarısı). */}
-          <View style={styles.emirSure}>
-            <MaterialCommunityIcons
-              name={kalanGun === 0 ? 'alarm-light-outline' : 'timer-sand'}
-              size={16}
-              color={Palette.beyaz}
-            />
-            <AppText variant="kucuk" color="beyaz" bold>
-              {kalanGun === 0
-                ? 'Süren bugün doluyor — SON GÜN!'
-                : `Görevi tamamlamak için ${kalanGun} gün kaldı`}
-            </AppText>
-          </View>
-
-          <AppText variant="etiket" color="beyaz">
-            Bu süre içinde {zayifSayisi} zayıf mevzini kapatmazsan{' '}
-            <AppText variant="etiket" color="beyaz" bold>
-              {siradakiCeza}
-            </AppText>{' '}
-            cezası alırsın. (Son tarih: {tarihFmt(durum.sonTarih ?? '')})
-            {durum.kademe > 0 ? ` — Şu anki kademe: ${KADEME_AD[durum.kademe]}` : ''}
-          </AppText>
-          <Pressable
-            style={({ pressed }) => [styles.emirButon, pressed && styles.pressed]}
-            onPress={onGeriBes}>
-            <AppText variant="etiket" color="kirmizi" bold>
-              EĞİTİME BAŞLA
-            </AppText>
-          </Pressable>
-        </View>
-      ) : null}
 
       {kayitlar.length === 0 ? (
         <AppText variant="kucuk" color="solukMetin">
