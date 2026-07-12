@@ -18,6 +18,7 @@
       "buildNumber": "1",
       "icon": "./assets/images/mevzu-icon-1024.png",
       "usesAppleSignIn": true,
+      "associatedDomains": ["applinks:mevzujsps.com"],
       "config": {
         "usesNonExemptEncryption": false
       }
@@ -29,6 +30,20 @@
       "allowBackup": false,
       "permissions": [
         "android.permission.POST_NOTIFICATIONS"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "mevzujsps.com",
+              "pathPrefix": "/oda"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
       ],
       "adaptiveIcon": {
         "backgroundColor": "#00030F",

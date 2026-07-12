@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Alert, Modal, Pressable, Share, StyleSheet, TextInput, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
@@ -37,6 +37,8 @@ function kanunlarMetni(ids: number[]): string {
 /** ER MEYDANI — LOBİ. Takma ad + hızlı eşleş + oda kur (ayarlı) + açık odalar + kodla katıl + sıralama. */
 export default function ErMeydaniScreen() {
   const router = useRouter();
+  const params = useLocalSearchParams<{ katilKod?: string }>();
+  const katilKodRef = useRef<string | null>(null);
   const [rumuz, setRumuz] = useState<string | null>(null);
   const [yuklendi, setYuklendi] = useState(false);
   const [duzenle, setDuzenle] = useState(false);
@@ -74,6 +76,17 @@ export default function ErMeydaniScreen() {
   );
 
   const playAktif = !!rumuz;
+
+  // Derin bağlantı: mevzujsps.com/oda/KOD → lobiye katilKod ile gelir → katılım onayını aç.
+  useEffect(() => {
+    const kk = params.katilKod;
+    if (kk && kk !== katilKodRef.current && playAktif) {
+      katilKodRef.current = kk;
+      void katilOnayIste(null, kk);
+    }
+    // katilOnayIste function declaration → hoisted; deps sade tutuldu.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.katilKod, playAktif]);
 
   const macaGit = useCallback(
     (p: { seed: number; mod: 'hizli' | 'arkadas'; soru?: number; sure?: number; kanunlar?: number[] }) =>
@@ -222,7 +235,7 @@ export default function ErMeydaniScreen() {
             setOdaKurAcik(false);
             odalariYukle();
             void Share.share({
-              message: `Seni Er Meydanı'na davet ediyorum! Oda kodu: ${oda.kod} — Mevzu (JSPS Hazırlık) uygulamasında bu kodla katıl, ${oda.soru_sayisi} soru / ${oda.sure_sn} sn'lik maçta kapışalım! ⚔️`,
+              message: `Seni Er Meydanı'na davet ediyorum! 👉 https://mevzujsps.com/oda/${oda.kod}\nLink açmazsa uygulamada "Kodla Katıl" → ${oda.kod} (${oda.soru_sayisi} soru / ${oda.sure_sn} sn). ⚔️`,
             });
             // Kuran bekleme odasına gider; rakip gelince ikisi de maça girer.
             router.push({ pathname: '/er-meydani-oda', params: { oda: oda.id, kod: oda.kod } });

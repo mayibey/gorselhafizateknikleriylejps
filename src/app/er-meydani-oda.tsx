@@ -60,7 +60,7 @@ export default function ErMeydaniOdaScreen() {
   async function paylas() {
     try {
       await Share.share({
-        message: `Er Meydanı odama katıl! Kod: ${kod} — Mevzu (JSPS Hazırlık) uygulamasında bu kodla gir, birlikte kapışalım! ⚔️`,
+        message: `Er Meydanı odama katıl! 👉 https://mevzujsps.com/oda/${kod}\nLink açmazsa uygulamada "Kodla Katıl" → ${kod}. ⚔️`,
       });
     } catch {
       /* iptal */
