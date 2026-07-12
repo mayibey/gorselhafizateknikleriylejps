@@ -478,17 +478,20 @@ export default function KarargahScreen() {
         </Pressable>
       )}
 
-      {/* Düello'da zorlandığın kanunlar (ücretsiz görür; gidermek için premium) — Geri Besleme altında. */}
+      {/* Er Meydanı'nda zorlandığın konular (ücretsiz görür; gidermek için premium) — Geri Besleme altında. */}
       {zayifKanun.length > 0 ? (
         <View style={styles.gbKart}>
           <View style={styles.gbBaslik}>
             <MaterialCommunityIcons name="target-account" size={18} color={Palette.kirmizi} />
             <AppText variant="etiket" bold color="solukMetin" style={styles.gbBaslikAd}>
-              DÜELLODA ZORLANDIĞIN KANUNLAR
+              ER MEYDANINDA ZORLANDIĞIN KONULAR
             </AppText>
           </View>
+          <AppText variant="govde" color="altinMetin" bold>
+            Güç Kazandırma Eğitim Planı
+          </AppText>
           <AppText variant="kucuk" color="anaMetin">
-            Er Meydanı'nda en çok bu kanunlarda yanlış yaptın:
+            Er Meydanı'nda en çok bu konularda yanlış yaptın:
           </AppText>
           {zayifKanun.slice(0, 4).map((z) => {
             const ad = KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`;
@@ -523,7 +526,7 @@ export default function KarargahScreen() {
           })}
           {premium ? (
             <AppText variant="etiket" color="solukMetin">
-              Bir kanuna dokun → o kanunu çalış, mevzini güçlendir.
+              Bir konuya dokun → o konuyu çalış, mevzini güçlendir.
             </AppText>
           ) : (
             <Pressable
@@ -531,7 +534,7 @@ export default function KarargahScreen() {
               onPress={() => router.push('/paywall')}>
               <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
               <AppText variant="kucuk" color="beyaz" bold style={styles.gbPremiumYazi}>
-                Bu kanunları çalışıp zayıf mevzini gider → Premium Al
+                Bu konuları çalışıp zayıf mevzini gider → Premium Al
               </AppText>
             </Pressable>
           )}
