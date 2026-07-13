@@ -227,9 +227,10 @@ Deno.serve(async (req) => {
   if (!URUNLER.has(urun)) return hata('Bilinmeyen ürün', 400);
 
   const admin = createClient(SUPABASE_URL, SERVICE_KEY);
+  const magaza = platform === 'ios' ? 'ios' : 'android'; // KAYIT PLATFORMU — iOS satışları 'android' yazılmasın (default 'android' idi).
   const log = async (durum: string, detay: string, ham: unknown) => {
     await admin.from('satin_alma_log').insert({
-      user_id: user.id, urun, tip, token, durum, detay, ham_yanit: ham,
+      user_id: user.id, urun, tip, token, durum, detay, ham_yanit: ham, platform: magaza,
     }).then(() => {}, () => {});
   };
 
@@ -268,7 +269,7 @@ Deno.serve(async (req) => {
     if (platform === 'ios') {
       const { bitis } = await appleDogrula(token, urun, tip, user.id);
       const { error: yazHata } = await admin.from('uyelik_haklari').upsert({
-        user_id: user.id, urun, tip, bitis, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(),
+        user_id: user.id, urun, tip, bitis, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(), platform: magaza,
       });
       // Hak yazılamazsa 'dogrulandi' YAZMA — sessiz başarısızlık premium'u açmaz (kök sebep buydu).
       if (yazHata) throw new Error('uyelik_haklari yazilamadi: ' + yazHata.message);
@@ -331,7 +332,7 @@ Deno.serve(async (req) => {
         });
       }
       await admin.from('uyelik_haklari').upsert({
-        user_id: user.id, urun, tip: 'omurboyu', bitis: null, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(),
+        user_id: user.id, urun, tip: 'omurboyu', bitis: null, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(), platform: magaza,
       });
       await log('dogrulandi', 'omurboyu', p);
       return new Response(JSON.stringify({ ok: true, premium: true }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
@@ -360,7 +361,7 @@ Deno.serve(async (req) => {
       }).catch(() => {});
     }
     await admin.from('uyelik_haklari').upsert({
-      user_id: user.id, urun, tip: 'abonelik', bitis, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(),
+      user_id: user.id, urun, tip: 'abonelik', bitis, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(), platform: magaza,
     });
     await log('dogrulandi', `abonelik bitis=${bitis}`, s);
     return new Response(JSON.stringify({ ok: true, premium: true, bitis }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
