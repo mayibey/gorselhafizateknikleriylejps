@@ -211,7 +211,7 @@ export default function ErMeydaniScreen() {
       {/* Dereceli maç (lig) — seviyeye yakın rakip, puan kazan/kaybet */}
       <Pressable
         disabled={!playAktif || eslesiyor}
-        onPress={() => void dereceliMac()}
+        onPress={() => router.push('/dereceli-kuyruk')}
         style={({ pressed }) => [styles.ligBtn, (!playAktif || eslesiyor) && styles.pasif, pressed && styles.basili]}>
         <MaterialCommunityIcons name="chevron-triple-up" size={26} color={Palette.altinKoyu} />
         <View style={styles.btnMetin}>

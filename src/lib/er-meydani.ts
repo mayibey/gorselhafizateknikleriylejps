@@ -421,6 +421,60 @@ export async function ligSonuc(p: {
   }
 }
 
+// ─── DERECELİ CANLI KUYRUK + HAZIR-KONTROLÜ (LoL mantığı) ───
+export type DereceliDurum = {
+  durum: 'araniyor' | 'eslesti' | 'oynaniyor' | 'bitti' | 'iptal' | 'yok';
+  mac_id?: string;
+  seed?: number;
+  rakip_rumuz?: string;
+  rakip_elo?: number;
+  ben_hazir?: boolean;
+  rakip_hazir?: boolean;
+  rakip_skor?: number;
+  delta?: number;
+  yeni_rating?: number;
+  kademe?: string;
+  benim_elo?: number;
+};
+
+async function dereceliRpc(fn: string, args?: Record<string, unknown>): Promise<DereceliDurum | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc(fn, args);
+    if (error || !data) return null;
+    const j = data as DereceliDurum & { hata?: string };
+    return j.hata ? null : j;
+  } catch {
+    return null;
+  }
+}
+
+/** Dereceli kuyruğa gir — bekleyen gerçek rakip varsa eşleş (ready-check), yoksa 'araniyor'. */
+export function dereceliGir(): Promise<DereceliDurum | null> {
+  return dereceliRpc('er_meydani_dereceli_gir');
+}
+/** Kuyruk/maç durumunu poll et. */
+export function dereceliDurumSorgu(): Promise<DereceliDurum | null> {
+  return dereceliRpc('er_meydani_dereceli_durum');
+}
+/** HAZIR'a bas (ready-check); ikisi de hazırsa 'oynaniyor' döner. */
+export function dereceliHazir(): Promise<DereceliDurum | null> {
+  return dereceliRpc('er_meydani_dereceli_hazir');
+}
+/** Maç bitince skoru yaz; ikisi de yazınca ELO gelir ('bitti'). */
+export function dereceliSkor(skor: number): Promise<DereceliDurum | null> {
+  return dereceliRpc('er_meydani_dereceli_skor', { p_skor: skor });
+}
+/** Kuyruktan/eşleşmeden çık. */
+export async function dereceliIptal(): Promise<void> {
+  if (!supabase) return;
+  try {
+    await supabase.rpc('er_meydani_dereceli_iptal');
+  } catch {
+    /* sessiz */
+  }
+}
+
 /** Bu sezonun lig tablosu (rating sıralaması). Offline → boş. */
 export async function ligTablo(limit = 50): Promise<LigTabloSatir[]> {
   if (!supabase) return [];

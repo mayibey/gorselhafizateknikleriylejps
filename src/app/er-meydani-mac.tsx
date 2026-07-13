@@ -20,9 +20,12 @@ import {
   toplamPuan,
 } from '@/lib/er-meydani-mantik';
 import {
+  type DereceliDurum,
   type ErMeydaniSonuc,
   type LigSonuc,
   type OdaOyuncu,
+  dereceliDurumSorgu,
+  dereceliSkor,
   ligEslesme,
   ligSonuc,
   odaDurum,
@@ -64,6 +67,7 @@ export default function ErMeydaniMacScreen() {
   }, [params.seed]);
   const ligMod = params.mod === 'lig';
   const odaMod = params.mod === 'oda';
+  const dereceliMod = params.mod === 'dereceli';
   const odaId = params.oda ?? '';
   const mod = (params.mod === 'arkadas' ? 'arkadas' : 'hizli') as 'hizli' | 'arkadas';
   // Dereceli maçta rakip = eşleşmeden gelen gölge (yenilecek hedef skor).
@@ -103,6 +107,7 @@ export default function ErMeydaniMacScreen() {
   const [benAdimlar, setBenAdimlar] = useState<MacAdim[]>([]);
   const [sunucu, setSunucu] = useState<ErMeydaniSonuc | null>(null);
   const [ligSonucState, setLigSonucState] = useState<LigSonuc | null>(null);
+  const [dereceliSonuc, setDereceliSonuc] = useState<DereceliDurum | null>(null);
   const [odaSonuc, setOdaSonuc] = useState<OdaOyuncu[] | null>(null);
   const [odaRakipler, setOdaRakipler] = useState<string[]>([]);
   const [kaydediliyor, setKaydediliyor] = useState(false);
@@ -187,7 +192,11 @@ export default function ErMeydaniMacScreen() {
     if (yanlisMadde.length) {
       void zayifMaddeEkle(yanlisMadde.map((x) => x.kanun), yanlisMadde.map((x) => x.madde));
     }
-    const yaz = odaMod
+    const yaz = dereceliMod
+      ? dereceliSkor(benim).then((d) => {
+          if (!iptal && d) setDereceliSonuc(d); // 'bitti' ise ELO hazır; değilse poll bekler
+        })
+      : odaMod
       ? odaSkor(odaId, benim).then((r) => {
           if (!iptal && r && r.durum === 'bitti') setOdaSonuc(r.oyuncular); // herkes bitmişse sıralama hazır
         })
@@ -218,7 +227,25 @@ export default function ErMeydaniMacScreen() {
     return () => {
       iptal = true;
     };
-  }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip, sorular, odaMod, odaId]);
+  }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip, sorular, odaMod, odaId, dereceliMod]);
+
+  // Dereceli modu: maç bitince rakip skorunu yazana kadar poll → ELO sonucu ('bitti').
+  useEffect(() => {
+    if (!dereceliMod || faz !== 'bitti' || dereceliSonuc?.durum === 'bitti') return;
+    let dur = false;
+    const tik = async () => {
+      if (dur) return;
+      const d = await dereceliDurumSorgu();
+      if (dur || !d) return;
+      setDereceliSonuc(d);
+      if (d.durum === 'bitti') dur = true;
+    };
+    const t = setInterval(() => void tik(), 3000);
+    return () => {
+      dur = true;
+      clearInterval(t);
+    };
+  }, [dereceliMod, faz, dereceliSonuc?.durum]);
 
   // Oda modu: rakip isimlerini bir kez çek (maç üstünde göstermek için).
   useEffect(() => {
@@ -364,6 +391,87 @@ export default function ErMeydaniMacScreen() {
     );
   }
 
+  // Dereceli sonuç: rakip bitene kadar bekle → ELO.
+  if (faz === 'bitti' && dereceliMod) {
+    const bitti = dereceliSonuc?.durum === 'bitti';
+    const d = dereceliSonuc?.delta ?? 0;
+    const kazandim = bitti && d > 0;
+    const berabere = bitti && d === 0;
+    return (
+      <Screen title="Dereceli Maç" onGeri={() => router.replace('/er-meydani')}>
+        {!bitti ? (
+          <View style={styles.odaBekle}>
+            <ActivityIndicator size="large" color={Palette.altinKoyu} />
+            <AppText variant="baslik" color="altinMetin" bold style={styles.ortala}>Skorun: {benSkor}</AppText>
+            <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+              Rakibin bitirmesi bekleniyor — sonuç ve dereceni burada göreceksin.
+            </AppText>
+            <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
+              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
+              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
+            </Pressable>
+            <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
+              <AppText variant="govde" color="solukMetin" bold>Çıkış</AppText>
+            </Pressable>
+          </View>
+        ) : (
+          <>
+            <View style={styles.sonucUst}>
+              <MaterialCommunityIcons
+                name={berabere ? 'shield-half-full' : kazandim ? 'trophy' : 'shield-outline'}
+                size={64}
+                color={kazandim ? Palette.altin : berabere ? Palette.solukMetin : Palette.lacivert2}
+              />
+              <AppText variant="dev" color={kazandim ? 'altinMetin' : 'anaMetin'} bold style={styles.ortala}>
+                {berabere ? 'Berabere!' : kazandim ? 'Kazandın!' : 'Kaybettin'}
+              </AppText>
+            </View>
+            <View style={styles.sonucSkorlar}>
+              <View style={styles.sonucSkorKutu}>
+                <AppText variant="etiket" color="solukMetin" bold>SEN</AppText>
+                <AppText variant="dev" color="altinMetin" bold>{benSkor}</AppText>
+              </View>
+              <AppText variant="baslik" color="solukMetin">–</AppText>
+              <View style={styles.sonucSkorKutu}>
+                <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>
+                  {(dereceliSonuc?.rakip_rumuz ?? 'RAKİP').toUpperCase()}
+                </AppText>
+                <AppText variant="dev" color="anaMetin" bold>{dereceliSonuc?.rakip_skor ?? 0}</AppText>
+              </View>
+            </View>
+            <View style={styles.ligSonucKutu}>
+              <View style={styles.ligDeltaSatir}>
+                <MaterialCommunityIcons
+                  name={d >= 0 ? 'trending-up' : 'trending-down'}
+                  size={24}
+                  color={d >= 0 ? Palette.yesil : Palette.kirmizi}
+                />
+                <AppText variant="baslik" color={d >= 0 ? 'yesil' : 'kirmizi'} bold>
+                  {d >= 0 ? '+' : ''}{d}
+                </AppText>
+              </View>
+              <AppText variant="kucuk" color="anaMetin" bold>
+                Yeni derecen: {dereceliSonuc?.yeni_rating} · {dereceliSonuc?.kademe}
+              </AppText>
+            </View>
+            <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
+              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
+              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
+            </Pressable>
+            <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={() => router.replace('/dereceli-kuyruk')}>
+              <MaterialCommunityIcons name="sword-cross" size={22} color={Palette.beyaz} />
+              <AppText variant="govde" color="beyaz" bold>Yeni Dereceli Maç</AppText>
+            </Pressable>
+            <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani-lig')}>
+              <MaterialCommunityIcons name="podium-gold" size={20} color={Palette.lacivert} />
+              <AppText variant="govde" color="lacivert" bold>Lig Tablosu</AppText>
+            </Pressable>
+          </>
+        )}
+      </Screen>
+    );
+  }
+
   if (faz === 'bitti') {
     return (
       <SonucGorunum
@@ -413,6 +521,14 @@ export default function ErMeydaniMacScreen() {
             <MaterialCommunityIcons name="account-group" size={20} color={Palette.solukMetin} />
             <AppText variant="etiket" color="anaMetin" bold numberOfLines={2} style={styles.ortala}>
               {odaRakipler.length ? odaRakipler.join(', ') : 'bekleniyor'}
+            </AppText>
+          </View>
+        ) : dereceliMod ? (
+          <View style={styles.skorKutu}>
+            <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>RAKİP</AppText>
+            <MaterialCommunityIcons name="sword-cross" size={20} color={Palette.solukMetin} />
+            <AppText variant="etiket" color="anaMetin" bold numberOfLines={1} style={styles.ortala}>
+              {params.rakip_rumuz || 'Rakip'}
             </AppText>
           </View>
         ) : (
