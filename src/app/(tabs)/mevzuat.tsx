@@ -6,7 +6,6 @@ import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react
 import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
-import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
@@ -124,9 +123,13 @@ function MevzuatIcerik() {
 
   useFocusEffect(yukle);
 
-  // DEĞİŞMEDİ: yalnız içeriği OLAN müşterek + rütbe kapsamındaki kanunlar.
+  // Gösterilecek kanunlar. Müşterek sekmesi: yalnız içeriği OLAN müşterek (DEĞİŞMEDİ).
+  // Branş sekmesi: branş kanunları — isimler İÇERİK GELMEDEN de görünsün (kart şartı YOK;
+  // kanunlar yavaş yavaş üretildikçe otomatik dolacak). Rütbe kapsamı ikisinde de uygulanır.
   const musterek =
-    laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0 && rutbeGorur(l.id, rutbe)) ?? [];
+    blok === 'brans'
+      ? (laws?.filter((l) => l.blok === 'branş' && rutbeGorur(l.id, rutbe)) ?? [])
+      : (laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0 && rutbeGorur(l.id, rutbe)) ?? []);
 
   // law_id → {calisilan, toplam} (Devam Et + bar + çip filtresi). toplam = bölüme bağlı
   // (çalışılabilir) kart sayısı → %100 ulaşılabilir (genel-özet kartlar paydaya girmez).
@@ -214,13 +217,7 @@ function MevzuatIcerik() {
         })}
       </View>
 
-      {blok === 'brans' ? (
-        <Yakinda
-          ikon="shield-star-outline"
-          baslik="Branş konuları hazırlanıyor"
-          aciklama="Branşına özel mevzuat kartları hazırlanıyor ve güncellemelerle eklenecek. Üyeliğin bunları da kapsar — çıktıkça uygulamanda otomatik görünür. Şimdilik müşterek kanunlardan çalışmaya devam et."
-        />
-      ) : (
+      {(
         <>
       {/* Açıklama + Favorilerim filtresi (Screen header'da slot yok → kayan içerik) */}
       <View style={st.ustSatir}>
