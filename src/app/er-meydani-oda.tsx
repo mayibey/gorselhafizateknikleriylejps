@@ -1,12 +1,12 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, Share, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, Share, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { type OdaDurum, odaAyril, odaBaslat, odaDavetMetni, odaDurum, odaIptal } from '@/lib/er-meydani';
+import { type OdaDurum, odaAt, odaAyril, odaBaslat, odaDavetMetni, odaDurum, odaIptal } from '@/lib/er-meydani';
 
 /** ER MEYDANI — BEKLEME ODASI (çok-oyunculu). Oyuncular toplanır; kuran "Başlat"a basınca herkes oynar. */
 export default function ErMeydaniOdaScreen() {
@@ -80,6 +80,13 @@ export default function ErMeydaniOdaScreen() {
     router.replace('/er-meydani');
   }
 
+  // Kurucu bir oyuncuyu odadan atar → güncel liste anında yansır (poll'u beklemeden).
+  async function atOyuncu(hedefId: string, ad: string) {
+    const yeni = await odaAt(odaId, hedefId);
+    if (yeni) setDurum((d) => (d ? { ...d, oyuncular: yeni } : d));
+    else Alert.alert('Atılamadı', `${ad} atılamadı (oda başlamış olabilir).`);
+  }
+
   // Geri: odadan AYRIL (üyeliği sil → hayalet oyuncu kalmaz; kuran isen oda kapanır).
   function geriCik() {
     gittiRef.current = true;
@@ -107,7 +114,7 @@ export default function ErMeydaniOdaScreen() {
         <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
       ) : (
         oyuncular.map((o, i) => (
-          <View key={i} style={[styles.oyuncuSatir, o.ben && styles.oyuncuBen]}>
+          <View key={o.id ?? i} style={[styles.oyuncuSatir, o.ben && styles.oyuncuBen]}>
             <MaterialCommunityIcons
               name={i === 0 ? 'crown' : 'account'}
               size={18}
@@ -116,6 +123,16 @@ export default function ErMeydaniOdaScreen() {
             <AppText variant="govde" color="anaMetin" bold style={styles.oyuncuAd} numberOfLines={1}>
               {o.rumuz}{o.ben ? ' (sen)' : ''}{i === 0 ? ' · kurucu' : ''}
             </AppText>
+            {/* Kurucu, kendisi hariç oyuncuları odadan atabilir (izinsiz gireni çıkar). */}
+            {benKuran && !o.ben && o.id ? (
+              <Pressable
+                hitSlop={8}
+                onPress={() => void atOyuncu(o.id, o.rumuz)}
+                style={({ pressed }) => [styles.atBtn, pressed && styles.basili]}>
+                <MaterialCommunityIcons name="account-remove" size={18} color={Palette.kirmizi} />
+                <AppText variant="etiket" color="kirmizi" bold>At</AppText>
+              </Pressable>
+            ) : null}
           </View>
         ))
       )}
@@ -179,6 +196,11 @@ const styles = StyleSheet.create({
   },
   oyuncuBen: { borderColor: Palette.altin, backgroundColor: Palette.altinSolukYuzey },
   oyuncuAd: { flex: 1 },
+  atBtn: {
+    flexDirection: 'row', alignItems: 'center', gap: 2,
+    paddingHorizontal: Spacing.two, paddingVertical: 2, borderRadius: Radius.s,
+    borderWidth: 1, borderColor: Palette.kirmizi,
+  },
   bekleSatir: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two, paddingVertical: Spacing.one },
   anaBtn: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.two,

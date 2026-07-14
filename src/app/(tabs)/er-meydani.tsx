@@ -141,7 +141,18 @@ export default function ErMeydaniScreen() {
     const r = await odaOnizle(odaId, kod);
     if (r.ok && r.oda) setOnayOda(r.oda);
     else {
-      Alert.alert('Katılınamadı', r.hata ?? 'Oda bulunamadı.');
+      // Ölü/kapalı oda linki çökmesin → duruma göre NET, dostça mesaj göster.
+      const mesaj =
+        r.hata === 'oda bulunamadı'
+          ? 'Bu oda artık mevcut değil. Kurucu odayı kapatmış ya da kod yanlış olabilir.'
+          : r.hata === 'oda kapandı'
+            ? 'Bu oda kapanmış. Yeni bir oda açabilir ya da açık odalardan birine katılabilirsin.'
+            : r.hata === 'oda dolu'
+              ? 'Bu oda dolmuş (en fazla 5 kişi).'
+              : r.hata === 'kendi odan'
+                ? 'Bu zaten senin odan.'
+                : (r.hata ?? 'Odaya katılınamadı. Bağlantını kontrol edip tekrar dene.');
+      Alert.alert('Odaya katılınamadı', mesaj);
       odalariYukle();
     }
   }
@@ -456,6 +467,7 @@ function OdaKurPanel({
   const [sure, setSure] = useState(15);
   const [kanunlar, setKanunlar] = useState<number[]>([]); // boş = karışık
   const [kanunAcik, setKanunAcik] = useState(false);
+  const [gizli, setGizli] = useState(false); // false = herkese açık · true = şifreli (sadece kodla)
   const [kuruluyor, setKuruluyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
 
@@ -467,7 +479,7 @@ function OdaKurPanel({
     if (!aktif || kuruluyor) return;
     setKuruluyor(true);
     setHata(null);
-    const sonuc = await odaKur(soru, sure, kanunlar);
+    const sonuc = await odaKur(soru, sure, kanunlar, gizli);
     setKuruluyor(false);
     if (sonuc.ok && sonuc.oda) {
       onKuruldu(sonuc.oda);
@@ -523,6 +535,27 @@ function OdaKurPanel({
           })}
         </View>
       ) : null}
+
+      <AppText variant="etiket" color="solukMetin" bold style={styles.aralik}>ODA TİPİ</AppText>
+      <View style={styles.tipSatir}>
+        <Pressable
+          onPress={() => setGizli(false)}
+          style={({ pressed }) => [styles.tipChip, !gizli && styles.tipSecili, pressed && styles.basili]}>
+          <MaterialCommunityIcons name="earth" size={16} color={!gizli ? Palette.beyaz : Palette.lacivert} />
+          <AppText variant="kucuk" color={!gizli ? 'beyaz' : 'lacivert'} bold>Herkese Açık</AppText>
+        </Pressable>
+        <Pressable
+          onPress={() => setGizli(true)}
+          style={({ pressed }) => [styles.tipChip, gizli && styles.tipSecili, pressed && styles.basili]}>
+          <MaterialCommunityIcons name="lock" size={16} color={gizli ? Palette.beyaz : Palette.lacivert} />
+          <AppText variant="kucuk" color={gizli ? 'beyaz' : 'lacivert'} bold>Şifreli</AppText>
+        </Pressable>
+      </View>
+      <AppText variant="etiket" color="solukMetin">
+        {gizli
+          ? 'Sadece kodu (davet linkini) gönderdiğin kişiler girebilir; açık listede görünmez.'
+          : 'Açık odalar listesinde herkes görür ve katılabilir.'}
+      </AppText>
 
       {hata ? <AppText variant="kucuk" color="kirmizi" bold style={styles.aralik}>{hata}</AppText> : null}
       <View style={styles.btnSatir}>
@@ -639,6 +672,13 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m, paddingVertical: Spacing.two,
   },
   chipSecili: { backgroundColor: Palette.lacivert, borderColor: Palette.lacivert },
+  tipSatir: { flexDirection: 'row', gap: Spacing.two },
+  tipChip: {
+    flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.one,
+    backgroundColor: Palette.kremZemin, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.m, paddingVertical: Spacing.two,
+  },
+  tipSecili: { backgroundColor: Palette.lacivert, borderColor: Palette.lacivert },
   kanunRow: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
     paddingVertical: Spacing.two, paddingHorizontal: Spacing.two, borderRadius: Radius.s,

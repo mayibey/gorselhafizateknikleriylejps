@@ -146,7 +146,7 @@ export type AcikOda = {
   created_at: string;
   benimki: boolean;
 };
-export type OdaOyuncu = { rumuz: string; skor: number | null; ben: boolean };
+export type OdaOyuncu = { id: string; rumuz: string; skor: number | null; ben: boolean };
 export type KatilBilgi = {
   oda_id: string;
   seed: number;
@@ -189,11 +189,13 @@ export type Odam = {
   created_at: string;
 };
 
-/** Ayarlarla (soru sayısı + süre + kanunlar) açık oda kurar. Boş kanunlar = karışık. Hata → {ok:false}. */
+/** Ayarlarla (soru sayısı + süre + kanunlar) oda kurar. gizli=true → şifreli (açık listede
+ * görünmez, sadece kodla girilir). Boş kanunlar = karışık. Hata → {ok:false}. */
 export async function odaKur(
   soruSayisi: number,
   sureSn: number,
   kanunlar: number[],
+  gizli = false,
 ): Promise<{ ok: boolean; oda?: OdaBilgi; hata?: string }> {
   if (!supabase) return { ok: false, hata: 'Şu an kullanılamıyor.' };
   try {
@@ -201,6 +203,7 @@ export async function odaKur(
       p_soru_sayisi: soruSayisi,
       p_sure_sn: sureSn,
       p_kanunlar: kanunlar,
+      p_gizli: gizli,
     });
     if (error || !data) return { ok: false, hata: error?.message ?? 'Oda kurulamadı.' };
     const j = data as OdaBilgi & { hata?: string };
@@ -293,6 +296,19 @@ export async function odaAyril(odaId: string): Promise<void> {
     await supabase.rpc('er_meydani_oda_ayril', { p_oda_id: odaId });
   } catch {
     /* sessiz */
+  }
+}
+
+/** Kuran, odadaki bir oyuncuyu ATAR (yetki: yalnız kuran, oda 'acik' iken). Güncel oyuncu listesi / null. */
+export async function odaAt(odaId: string, hedefId: string): Promise<OdaOyuncu[] | null> {
+  if (!supabase) return null;
+  try {
+    const { data, error } = await supabase.rpc('er_meydani_oda_at', { p_oda_id: odaId, p_hedef_id: hedefId });
+    if (error || !data) return null;
+    const j = data as { oyuncular?: OdaOyuncu[]; hata?: string };
+    return j.hata ? null : (j.oyuncular ?? null);
+  } catch {
+    return null;
   }
 }
 
