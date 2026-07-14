@@ -132,6 +132,7 @@ export default function KarargahScreen() {
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
   const [gunMadde, setGunMadde] = useState<CardWithLaw | null>(null);
+  const [tumKartlar, setTumKartlar] = useState<CardWithLaw[]>([]); // madde→kart eşleşmesi (Güç Kazandırma)
   const [sonKonu, setSonKonu] = useState<string | null>(null);
   const [bugunSayi, setBugunSayi] = useState(0);
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
@@ -163,6 +164,20 @@ export default function KarargahScreen() {
   }
   function kapatModal() {
     setModalAcik(false);
+  }
+
+  // Zorlanılan bir maddeye dokununca DOĞRUDAN o maddenin kartını aç (patika başı DEĞİL).
+  // DUELLO kanun id = uygulama law_id. Numarayı eşleştir, özet/ayırt kartlarını atla.
+  // Kart bulunamazsa patikaya düş (eski davranış → regresyon yok).
+  function maddeKartinaGit(kanun: number, maddeNo: string) {
+    kapatModal();
+    const hedef = /(\d+)/.exec(maddeNo)?.[1] ?? maddeNo;
+    const ozetAyirtMi = (yol: string | null) => !!yol && /_(ayirt|ozet)(_|$)/i.test(yol);
+    const kartNo = (c: CardWithLaw) => /(\d+)/.exec(c.madde_no ?? '')?.[1] ?? '';
+    const havuz = tumKartlar.filter((c) => c.law_id === kanun && kartNo(c) === hedef);
+    const kart = havuz.find((c) => !ozetAyirtMi(c.gorsel_yolu)) ?? havuz[0];
+    if (kart) router.push({ pathname: '/akis', params: { lawId: String(kanun), kart: String(kart.id) } });
+    else router.push({ pathname: '/patika', params: { lawId: String(kanun) } });
   }
   const [hata, setHata] = useState(false);
   // Günün Maddesi indirilmemiş kanundansa: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
@@ -275,6 +290,7 @@ export default function KarargahScreen() {
     // Günün Maddesi + bugün çalışılan + zayıf mevzi + SON KONU — tek performans+kart yüklemesinden.
     void Promise.all([getPerformans(), getAllCards()])
       .then(([perf, cards]) => {
+        setTumKartlar(cards); // madde→kart doğrudan geçiş için sakla
         // Günün Maddesi adayları: YALNIZ normal tek-madde kartları. Özet/ayırt/genel-özet
         // birleşik kartları (anahtar deseni _ozet_/_ayirt_) ham anahtar sızdırıyordu
         // ("Özet — ...ayirt") → ele. Başlığı "Madde X" olan yer-tutucular da hariç.
@@ -662,9 +678,7 @@ export default function KarargahScreen() {
                         style={({ pressed }) => [styles.gbSatir, premium && pressed && styles.pressed]}
                         onPress={() => {
                           if (!premium || detayKanun == null) return;
-                          const k = detayKanun;
-                          kapatModal();
-                          router.push({ pathname: '/patika', params: { lawId: String(k) } });
+                          maddeKartinaGit(detayKanun, m.madde);
                         }}>
                         <MaterialCommunityIcons name="file-document-outline" size={16} color={Palette.altinKoyu} />
                         <AppText variant="kucuk" bold color="lacivert" style={styles.gbAd}>madde {m.madde}</AppText>
