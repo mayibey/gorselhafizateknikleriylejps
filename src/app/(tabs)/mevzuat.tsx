@@ -10,6 +10,7 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
+import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
 import { hecele } from '@/lib/hece';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
@@ -63,8 +64,10 @@ function MevzuatIcerik() {
   const [favoriler, setFavoriler] = useState<Set<number>>(new Set());
   const [favoriAcik, setFavoriAcik] = useState(false);
   const [hata, setHata] = useState(false);
-  // Üst seçim: Müşterek (mevcut liste) / Branş (içerik güncellemelerle eklenecek → "hazırlanıyor").
+  // Üst seçim: Müşterek (mevcut liste) / Branş (Jandarma → kanun kartları; diğer branşlar → PDF kitaplar).
   const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
+  // Branşın PDF özet kitapları (Jandarma dışı branşlarda dolu; branş sekmesinde liste olarak gösterilir).
+  const [kitaplar, setKitaplar] = useState<BransKitap[] | null>(null);
 
   // Branş değişince + odağa her dönüşte tazele (çalışıp dönünce ilerleme/Devam Et güncel).
   const yukle = useCallback(() => {
@@ -115,6 +118,10 @@ function MevzuatIcerik() {
     void getFavoriler()
       .then((ids) => setFavoriler(new Set(ids)))
       .catch(() => {});
+    // Branşın PDF kitapları (Jandarma dışı branşlarda dolu → branş sekmesi liste gösterir).
+    void bransKitaplari(brans)
+      .then(setKitaplar)
+      .catch(() => setKitaplar([]));
   }, [brans]);
 
   const favoriToggle = (lawId: number) => {
@@ -217,7 +224,12 @@ function MevzuatIcerik() {
         })}
       </View>
 
-      {(
+      {blok === 'brans' && kitaplar && kitaplar.length > 0 ? (
+        <BransKitapListe
+          kitaplar={kitaplar}
+          onAc={(k) => router.push({ pathname: '/kitap', params: { yol: k.dosyaYolu, baslik: k.baslik } })}
+        />
+      ) : (
         <>
       {/* Açıklama + Favorilerim filtresi (Screen header'da slot yok → kayan içerik) */}
       <View style={st.ustSatir}>
@@ -683,7 +695,47 @@ function DurumKutu({
   );
 }
 
+/** Branş PDF özet kitapları listesi (Jandarma dışı branşlar). Kitaba dokun → görüntüleyici. */
+function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k: BransKitap) => void }) {
+  return (
+    <>
+      <View style={st.ustSatir}>
+        <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
+          Branşına özel özet kitaplar. Dokun, uygulama içinde oku — not al, işaretle.
+        </AppText>
+      </View>
+      {kitaplar.map((k) => (
+        <Pressable
+          key={k.id}
+          onPress={() => onAc(k)}
+          style={({ pressed }) => [st.kitapSatir, pressed && st.kitapBasili]}
+          accessibilityRole="button"
+          accessibilityLabel={k.baslik}>
+          <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.altinKoyu} />
+          <AppText variant="govde" color="anaMetin" bold style={st.kitapAd} numberOfLines={2}>
+            {k.baslik}
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+        </Pressable>
+      ))}
+    </>
+  );
+}
+
 const st = StyleSheet.create({
+  kitapSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+    backgroundColor: Palette.kartKremi,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    marginTop: Spacing.two,
+  },
+  kitapAd: { flex: 1 },
+  kitapBasili: { opacity: 0.85 },
   // Üst Müşterek/Branş seçici (segmented)
   blokSecici: {
     flexDirection: 'row',
