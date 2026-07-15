@@ -30,8 +30,29 @@ if (!URL || !KEY) { console.error('HATA: SUPABASE_URL + SUPABASE_SERVICE_KEY ger
 
 const sb = createClient(URL, KEY, { auth: { persistSession: false } });
 
-// Dosya adı → okunur başlık: .pdf sil, _ → boşluk, tekrarlı öndeki numarayı sadeleştir.
+// DÜZGÜN Türkçe başlık kaynağı: BRANS_DIGER/*/_ozet_meta.json baslik'i (build.py bunu ASCII'ye
+// çevirip kırparak dosya adını üretmiş). Aynı algoritmayla dosya adı → meta.baslik haritası kur.
+const BRANS_DIGER = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const TR_FROM = 'şçğıöüŞÇĞİÖÜ', TR_TO = 'scgiouSCGIOU';
+const translit = (s) => { let o = ''; for (const ch of s) { const i = TR_FROM.indexOf(ch); o += i >= 0 ? TR_TO[i] : ch; } return o; };
+function fnameYap(meta) {
+  const no = String(meta.no ?? '').trim() || 'Y';
+  const slug = translit(String(meta.baslik ?? 'mevzuat')).replace(/[^A-Za-z0-9]+/g, '_').slice(0, 48).replace(/^_+|_+$/g, '');
+  return `${no}_${slug}.pdf`;
+}
+const FNAME_BASLIK = new Map();
+try {
+  for (const d of readdirSync(BRANS_DIGER)) {
+    const mf = join(BRANS_DIGER, d, '_ozet_meta.json');
+    let meta; try { meta = JSON.parse(readFileSync(mf, 'utf8')); } catch { continue; }
+    FNAME_BASLIK.set(fnameYap(meta), meta.baslik);
+  }
+} catch { /* kaynak yoksa fallback baslikYap kullanılır */ }
+
+// Düzgün başlık meta'dan; yoksa dosya adından kaba türet (fallback).
 function baslikYap(ad) {
+  const dogru = FNAME_BASLIK.get(ad);
+  if (dogru) return dogru;
   let t = ad.replace(/\.pdf$/i, '').replace(/_/g, ' ').trim();
   t = t.replace(/^(\d+)\s+\1\b/, '$1'); // "5809 5809 Sayili" → "5809 Sayili"
   return t.replace(/\s+/g, ' ').trim();
