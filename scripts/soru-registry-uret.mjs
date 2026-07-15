@@ -49,63 +49,89 @@ const KLASOR_LAW = {
   '25_JANDARMA_TESKILAT_YON': 17,
 };
 
+// JANDARMA BRANŞ kaynağı — BRANS/<klasor>/<klasor>_SORULAR.json (klasör adları TAM, sonek yok).
+const KAYNAK_BRANS = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
+// BRANS klasör → branş law_id (src/db/seed.ts SEED_LAWS 26-66). 01_5237_TCK ATLANIR (müşterek law 1).
+const BRANS_KLASOR_LAW = {
+  '02_5271_CMK': 26, '03_1774_KIMLIK_BILDIRME': 27, '04_2911_TOPLANTI_GOSTERI': 28,
+  '05_4915_KARA_AVCILIGI': 29, '06_1380_SU_URUNLERI': 30, '07_6458_YABANCILAR': 31,
+  '08_6831_ORMAN': 32, '09_4342_MERA': 33, '10_2918_TRAFIK': 34, '11_5188_OZEL_GUVENLIK': 35,
+  '12_5395_COCUK_KORUMA': 36, '13_2860_YARDIM_TOPLAMA': 37, '14_5199_HAYVANLARI_KORUMA': 38,
+  '15_2872_CEVRE': 39, '16_2559_PVSK': 40, '17_5607_KACAKCILIK': 41, '18_3298_UYUSTURUCU': 42,
+  '19_6222_SPORDA_SIDDET': 43, '20_2313_UYUSTURUCU_MURAKABE': 44, '21_6415_TERORIZM_FINANSMANI': 45,
+  '22_2863_KULTUR_TABIAT': 46, '23_3091_ZILYETLIK': 47, '24_4207_TUTUN_ZARARLARI': 48,
+  '25_4733_TUTUN_ALKOL_PIYASASI': 49, '26_YON_KIMLIK_BILDIRME': 50, '27_YON_SES_GAZ_FISEGI': 51,
+  '28_YON_TRAFIK': 52, '29_YON_IKRAMIYE': 53, '30_YON_OZEL_GUVENLIK': 54, '31_YON_ADLI_KOLLUK': 55,
+  '32_YON_ARAMALAR': 56, '33_YON_SUC_ESYASI': 57, '34_YON_YAKALAMA': 58, '35_YON_BEDEN_MUAYENESI': 59,
+  '36_YON_COCUK_TEDBIR': 60, '37_YON_COCUK_USUL': 61, '38_YON_ISYERI_ACMA': 62, '39_YON_KUM_CAKIL': 63,
+  '40_YON_TUTUN_SATIS': 64, '41_YON_VATANDASLIK': 65, '42_YON_ATESLI_SILAHLAR': 66,
+};
+
 // "A) ..." gibi şık önekini ayıkla → gösterimde temiz metin (doğru cevap index'le tutulur).
 function sikTemizle(s) {
   return String(s).replace(/^\s*[A-E]\)\s*/, '').trim();
 }
 
-const TUM_KLASORLER = existsSync(KAYNAK) ? readdirSync(KAYNAK) : [];
 const registry = {}; // law_id -> KartSoru[]
 const rapor = [];
 let toplamSoru = 0;
 let atlanan = 0;
 
-for (const [klasor, lawId] of Object.entries(KLASOR_LAW)) {
-  const gercekAd = TUM_KLASORLER.find((d) => d === klasor || d.startsWith(klasor + ' '));
-  const dir = gercekAd ? join(KAYNAK, gercekAd) : null;
-  if (!dir || !existsSync(dir)) {
-    rapor.push(`${klasor.padEnd(28)} → law ${lawId}: KLASÖR YOK`);
-    continue;
-  }
-  const dosya = readdirSync(dir).find((a) => /_SORULAR\.json$/i.test(a));
-  if (!dosya) {
-    rapor.push(`${klasor.padEnd(28)} → law ${lawId}: SORULAR.json yok`);
-    continue;
-  }
-  let veri;
-  try {
-    veri = JSON.parse(readFileSync(join(dir, dosya), 'utf8'));
-  } catch (e) {
-    rapor.push(`${klasor.padEnd(28)} → law ${lawId}: JSON HATASI (${e.message})`);
-    continue;
-  }
-  const ham = Array.isArray(veri.sorular) ? veri.sorular : [];
-  const sorular = [];
-  for (const s of ham) {
-    const siklar = Array.isArray(s.siklar) ? s.siklar : [];
-    const dogruIdx = typeof s.dogru === 'string' ? s.dogru.trim().toUpperCase().charCodeAt(0) - 65 : -1;
-    // Geçersiz veri (şık yok / doğru harf şık aralığı dışında / soru metni yok) → atla.
-    if (!s.soru || siklar.length < 2 || dogruIdx < 0 || dogruIdx >= siklar.length) {
-      atlanan++;
+// İki kaynak: MÜŞTEREK (law 1-25) + JANDARMA branş (law 26-66). Aynı registry'ye yazılır.
+const KAYNAKLAR = [
+  { kok: KAYNAK, map: KLASOR_LAW, ad: 'MÜŞTEREK' },
+  { kok: KAYNAK_BRANS, map: BRANS_KLASOR_LAW, ad: 'JANDARMA' },
+];
+
+for (const { kok, map, ad } of KAYNAKLAR) {
+  const tumKlasorler = existsSync(kok) ? readdirSync(kok) : [];
+  for (const [klasor, lawId] of Object.entries(map)) {
+    const gercekAd = tumKlasorler.find((d) => d === klasor || d.startsWith(klasor + ' '));
+    const dir = gercekAd ? join(kok, gercekAd) : null;
+    if (!dir || !existsSync(dir)) {
+      rapor.push(`[${ad}] ${klasor.padEnd(28)} → law ${lawId}: KLASÖR YOK`);
       continue;
     }
-    sorular.push({
-      id: String(s.soru_id ?? ''),
-      soru: String(s.soru).trim(),
-      siklar: siklar.map(sikTemizle),
-      dogru: dogruIdx,
-      aciklama: String(s.aciklama ?? '').trim(),
-      kaynak: String(s.kaynak_madde ?? '').trim(),
-      zorluk: String(s.zorluk ?? '').trim(),
-    });
+    const dosya = readdirSync(dir).find((a) => /_SORULAR\.json$/i.test(a));
+    if (!dosya) {
+      rapor.push(`[${ad}] ${klasor.padEnd(28)} → law ${lawId}: SORULAR.json yok`);
+      continue;
+    }
+    let veri;
+    try {
+      veri = JSON.parse(readFileSync(join(dir, dosya), 'utf8'));
+    } catch (e) {
+      rapor.push(`[${ad}] ${klasor.padEnd(28)} → law ${lawId}: JSON HATASI (${e.message})`);
+      continue;
+    }
+    const ham = Array.isArray(veri.sorular) ? veri.sorular : [];
+    const sorular = [];
+    for (const s of ham) {
+      const siklar = Array.isArray(s.siklar) ? s.siklar : [];
+      const dogruIdx = typeof s.dogru === 'string' ? s.dogru.trim().toUpperCase().charCodeAt(0) - 65 : -1;
+      // Geçersiz veri (şık yok / doğru harf şık aralığı dışında / soru metni yok) → atla.
+      if (!s.soru || siklar.length < 2 || dogruIdx < 0 || dogruIdx >= siklar.length) {
+        atlanan++;
+        continue;
+      }
+      sorular.push({
+        id: String(s.soru_id ?? ''),
+        soru: String(s.soru).trim(),
+        siklar: siklar.map(sikTemizle),
+        dogru: dogruIdx,
+        aciklama: String(s.aciklama ?? '').trim(),
+        kaynak: String(s.kaynak_madde ?? '').trim(),
+        zorluk: String(s.zorluk ?? '').trim(),
+      });
+    }
+    if (sorular.length === 0) {
+      rapor.push(`[${ad}] ${klasor.padEnd(28)} → law ${lawId}: 0 geçerli soru`);
+      continue;
+    }
+    registry[lawId] = sorular;
+    toplamSoru += sorular.length;
+    rapor.push(`[${ad}] ${klasor.padEnd(28)} → law ${String(lawId).padStart(2)}  ${sorular.length} soru`);
   }
-  if (sorular.length === 0) {
-    rapor.push(`${klasor.padEnd(28)} → law ${lawId}: 0 geçerli soru`);
-    continue;
-  }
-  registry[lawId] = sorular;
-  toplamSoru += sorular.length;
-  rapor.push(`${klasor.padEnd(28)} → law ${String(lawId).padStart(2)}  ${sorular.length} soru`);
 }
 
 // law_id artan sırada yaz (okunaklı, deterministik çıktı).

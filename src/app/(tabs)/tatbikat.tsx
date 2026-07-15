@@ -7,7 +7,6 @@ import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
-import { Yakinda } from '@/components/ui/yakinda';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
@@ -101,9 +100,12 @@ function TatbikatIcerik() {
 
   useFocusEffect(yukle);
 
-  // Yalnız sınavı (soru havuzu) olan + rütbe kapsamındaki müşterek kanunlar.
+  // Sınavı (soru havuzu) olan + rütbe kapsamındaki kanunlar. Müşterek sekmesi: müşterek;
+  // Branş sekmesi: branş kanunları (Jandarma deneme soruları law 26-66'ya yüklendi).
   const musterek =
-    laws?.filter((l) => l.blok === 'müşterek' && sinavVarMi(l.id) && rutbeGorur(l.id, rutbe)) ?? [];
+    laws?.filter(
+      (l) => l.blok === (blok === 'brans' ? 'branş' : 'müşterek') && sinavVarMi(l.id) && rutbeGorur(l.id, rutbe),
+    ) ?? [];
 
   function sinavaGit(law: LawWithCount, test: number) {
     router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(test) } });
@@ -142,15 +144,11 @@ function TatbikatIcerik() {
         })}
       </View>
 
-      {blok === 'brans' ? (
-        <Yakinda
-          ikon="shield-star-outline"
-          baslik="Branş sınavları hazırlanıyor"
-          aciklama="Branşına özel deneme sınavları hazırlanıyor ve güncellemelerle eklenecek. Üyeliğin bunları da kapsar — çıktıkça uygulamanda otomatik görünür. Şimdilik müşterek sınavlarıyla kendini sına."
-        />
-      ) : (
+      {(
         <>
-      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). */}
+      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). Branş sekmesinde
+          genel deneme YOK (müşterek-karması) → alt seçim gizli, yalnız kanun denemeleri. */}
+      {blok !== 'brans' ? (
       <View style={styles.blokSecici}>
         {(['talim', 'tatbikat'] as const).map((m) => {
           const aktif = mod === m;
@@ -173,8 +171,9 @@ function TatbikatIcerik() {
           );
         })}
       </View>
+      ) : null}
 
-      {mod === 'tatbikat' ? (
+      {blok !== 'brans' && mod === 'tatbikat' ? (
         <>
           <AppText variant="kucuk" color="solukMetin">
             Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların
