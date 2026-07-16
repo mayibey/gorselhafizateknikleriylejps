@@ -146,9 +146,8 @@ function TatbikatIcerik() {
 
       {(
         <>
-      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). Branş sekmesinde
-          genel deneme YOK (müşterek-karması) → alt seçim gizli, yalnız kanun denemeleri. */}
-      {blok !== 'brans' ? (
+      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). Müşterek + Branş İKİSİNDE
+          de gösterilir (aynı düzen). Branş genel denemesi henüz yok → Tatbikat'ta "yakında". */}
       <View style={styles.blokSecici}>
         {(['talim', 'tatbikat'] as const).map((m) => {
           const aktif = mod === m;
@@ -171,9 +170,15 @@ function TatbikatIcerik() {
           );
         })}
       </View>
-      ) : null}
 
-      {blok !== 'brans' && mod === 'tatbikat' ? (
+      {mod === 'tatbikat' ? (
+        blok === 'brans' ? (
+          <DurumKutu
+            ikon="flag-checkered"
+            baslik="Yakında"
+            aciklama="Branş genel denemeleri hazırlanıyor; yakında burada olacak."
+          />
+        ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">
             Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların
@@ -189,6 +194,7 @@ function TatbikatIcerik() {
             />
           ))}
         </>
+        )
       ) : hata ? (
         <DurumKutu
           ikon="alert-circle-outline"

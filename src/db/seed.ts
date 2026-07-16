@@ -161,6 +161,48 @@ const KANUN_BILGI: Record<string, { lawId: number; etiket: string }> = {
   hizmetesas: { lawId: 23, etiket: "Hizmet Esasları Yön" },
   izinyon: { lawId: 24, etiket: "İzin Yön" },
   atesli: { lawId: 25, etiket: "6136 Ateşli Silahlar" },
+  // --- BRANŞ (Jandarma) kanunları 26-66 · slug = assets/kartlar klasörü (icerik-yerlestir-brans.py MAP) ---
+  cmk: { lawId: 26, etiket: 'CMK' },
+  kimlikbildirme: { lawId: 27, etiket: 'Kimlik Bildirme' },
+  toplantigosteri: { lawId: 28, etiket: 'Toplantı/Gösteri' },
+  karaavciligi: { lawId: 29, etiket: 'Kara Avcılığı' },
+  suurunleri: { lawId: 30, etiket: 'Su Ürünleri' },
+  yabancilar: { lawId: 31, etiket: 'Yabancılar' },
+  orman: { lawId: 32, etiket: 'Orman' },
+  mera: { lawId: 33, etiket: 'Mera' },
+  trafik: { lawId: 34, etiket: 'Trafik' },
+  ozelguvenlik: { lawId: 35, etiket: 'Özel Güvenlik' },
+  cocukkoruma: { lawId: 36, etiket: 'Çocuk Koruma' },
+  yardimtoplama: { lawId: 37, etiket: 'Yardım Toplama' },
+  hayvankoruma: { lawId: 38, etiket: 'Hayvanları Koruma' },
+  cevre: { lawId: 39, etiket: 'Çevre' },
+  pvsk: { lawId: 40, etiket: 'PVSK' },
+  kacakcilik: { lawId: 41, etiket: 'Kaçakçılık' },
+  uyusturucu3298: { lawId: 42, etiket: 'Uyuşturucu (3298)' },
+  spordasiddet: { lawId: 43, etiket: 'Sporda Şiddet' },
+  uyusturucumurakabe: { lawId: 44, etiket: 'Uyuşturucu Murakabe' },
+  terorizmfin: { lawId: 45, etiket: 'Terörizm Finansmanı' },
+  kulturtabiat: { lawId: 46, etiket: 'Kültür/Tabiat' },
+  zilyetlik: { lawId: 47, etiket: 'Zilyetlik' },
+  tutunzarar: { lawId: 48, etiket: 'Tütün Zararları' },
+  tutunalkol: { lawId: 49, etiket: 'Tütün/Alkol Piyasası' },
+  yonkimlik: { lawId: 50, etiket: 'Kimlik Bild. Yön' },
+  yonsesgaz: { lawId: 51, etiket: 'Ses/Gaz Fişeği Yön' },
+  yontrafik: { lawId: 52, etiket: 'Trafik Yön' },
+  yonikramiye: { lawId: 53, etiket: 'İkramiye Yön' },
+  yonozelguv: { lawId: 54, etiket: 'Özel Güvenlik Yön' },
+  yonadlikolluk: { lawId: 55, etiket: 'Adli Kolluk Yön' },
+  yonaramalar: { lawId: 56, etiket: 'Aramalar Yön' },
+  yonsucesyasi: { lawId: 57, etiket: 'Suç Eşyası Yön' },
+  yonyakalama: { lawId: 58, etiket: 'Yakalama Yön' },
+  yonbeden: { lawId: 59, etiket: 'Beden Muayenesi Yön' },
+  yoncocuktedbir: { lawId: 60, etiket: 'Çocuk Tedbir Yön' },
+  yoncocukusul: { lawId: 61, etiket: 'Çocuk Usul Yön' },
+  yonisyeri: { lawId: 62, etiket: 'İşyeri Açma Yön' },
+  yonkumcakil: { lawId: 63, etiket: 'Kum/Çakıl Yön' },
+  yontutunsatis: { lawId: 64, etiket: 'Tütün Satış Yön' },
+  yonvatandaslik: { lawId: 65, etiket: 'Vatandaşlık Yön' },
+  yonatesli: { lawId: 66, etiket: 'Ateşli Silahlar Yön' },
 };
 
 /** lawId → içerik klasörü (KANUN_BILGI'nin tersi). İndirme butonu kanunun klasörünü bundan bulur. */
@@ -176,7 +218,7 @@ export const LAW_KLASOR: Record<number, string> = Object.fromEntries(
  */
 function gorselKartlari(): Card[] {
   type Tip = 'normal' | 'ozet' | 'ayirt' | 'genelozet';
-  type Ham = { key: string; lawId: number; etiket: string; link: number; rank: number; panel: string; tip: Tip; nums: number[]; tag: string };
+  type Ham = { key: string; lawId: number; etiket: string; link: number; rank: number; panel: string; tip: Tip; nums: number[]; tag: string; mlabel?: string };
   const ham: Ham[] = [];
   for (const key of KART_ANAHTARLARI) {
     const us = key.indexOf('_');
@@ -195,10 +237,16 @@ function gorselKartlari(): Card[] {
     } else if (geri.startsWith('ozet_')) {
       ham.push({ ...ortak, link: Number.MAX_SAFE_INTEGER, rank: 3, panel: '', tip: 'genelozet', nums: [], tag: geri.slice(5) });
     } else {
-      const m = /^m(\d+)(?:_(.*))?$/.exec(geri);
+      // m{no}[_{panel}] · m{no}{harf}[_{panel}] (harfli madde 38/A) · mek{no}[_{panel}] (Ek Madde).
+      const m = /^m(ek)?(\d+)([a-z])?(?:_(.*))?$/.exec(geri);
       if (!m) continue; // konvansiyon-dışı ad (ör. tck_kapak) → kart üretme; app boot ÇÖKMESİN
-      const no = Number(m[1]);
-      ham.push({ ...ortak, link: no, rank: 0, panel: m[2] ?? '', tip: 'normal', nums: [no], tag: '' });
+      const no = Number(m[2]);
+      const ek = !!m[1];
+      const harf = m[3] ? m[3].toUpperCase() : '';
+      const mlabel = ek ? `Ek ${no}` : harf ? `${no}/${harf}` : `${no}`;
+      // sort: Ek en sona (link+100000), harfli base'in hemen ardına (kesir); patika sırası SEED_KAPSAM'dan.
+      const link = ek ? 100000 + no : no + (harf ? (harf.charCodeAt(0) - 64) / 100 : 0);
+      ham.push({ ...ortak, link, rank: 0, panel: m[4] ?? '', tip: 'normal', nums: [no], tag: '', mlabel });
     }
   }
   ham.sort((a, b) => a.lawId - b.lawId || a.link - b.link || a.rank - b.rank || a.panel.localeCompare(b.panel) || a.key.localeCompare(b.key));
@@ -220,8 +268,9 @@ function gorselKartlari(): Card[] {
       madde_no = `${h.etiket} m.${h.link}`;
       baslik = `m.${h.nums.join('–')} ayırt`;
     } else {
-      madde_no = `${h.etiket} m.${h.link}`;
-      const taban = (h.lawId === 1 ? TCK_BASLIK[String(h.link)] : undefined) ?? `Madde ${h.link}`;
+      const et = h.mlabel ?? String(h.link);
+      madde_no = `${h.etiket} m.${et}`;
+      const taban = (h.lawId === 1 ? TCK_BASLIK[String(h.link)] : undefined) ?? `Madde ${et}`;
       baslik = h.panel && h.panel !== '1' ? `${taban} (${h.panel.replace(/_/g, '/')})` : taban;
     }
     cards.push({ id, law_id: h.lawId, madde_no, baslik, anlatim_metni: `Yer tutucu anlatım metni — ${madde_no}.`, gorsel_yolu: h.key, ses_yolu: null });
@@ -375,6 +424,54 @@ Object.assign(SEED_KAPSAM, {
   25: ['1','6','7','9','11','12','14'], // 6136 Ateşli Silahlar
 });
 
+// --- İÇERİK YERLEŞTİRME: BRANŞ görselleri (fabrika BRANS/uretilen_gorseller). Patika kapsamı =
+// yalnız GÖRSELİ OLAN maddeler (müşterek ile birebir kural). Harfli madde (38/A) ve Ek Madde (Ek 4)
+// KENDİ düğümü; harfli → base'in ardında, Ek → kanun sonunda. İsimli özet/ayırt (madde-no'suz) →
+// genel-özet (kanun sonu "Özet"). icerik-yerlestir-brans.py raporundan üretildi.
+Object.assign(SEED_KAPSAM, {
+  26: ['2','8','12','22','38/A','39','43','74','75','79','83','85','90','91','93','94','95','98','100','101','102','109','110/A','116','118','119','122','127','128/A','135','137','139','140','141','145','147','148','149','157','158','160','161','164','165','168','170','175','182','206','231','234','253','268','272'], // cmk
+  27: ['1','2','3','4','6','7','9','10','11','15','Ek 1','Ek 3'], // kimlikbildirme
+  28: ['2','3','4','5','6','7','8','9','10','11','12','14','22','23','24','25','26','27','29'], // toplantigosteri
+  29: ['3','4','5','6','12','13','15','18','20','21','22','23','24','25','26','28','29','30'], // karaavciligi
+  30: ['2','3','19','20','21','22','23','24','25','33','34','35','36'], // suurunleri
+  31: ['3','4','5','6','7','52','53','54','55','56','57','57/A','58','59','60','61','62','63','64','102'], // yabancilar
+  32: ['14','15','16','17','18','19','41','42','68','76','77','78','79','83','84','88'], // orman
+  33: ['3','4','6','19','20','22','23','26','27'], // mera
+  34: ['3','5','6','12','20','22','23','31','32','34','36','37','46','47','48','50','51','57','66','69','71','74','78','81','82','83','84','107','109','112','114','115','118','126','Ek 4','Ek 6','Ek 14','Ek 16','Ek 17'], // trafik
+  35: ['4','5','7','10','14','17','19','20'], // ozelguvenlik
+  36: ['3','5','6','7','8','9','15','16','17','18','19','20','21','23','25','26','30','31','37','41/A','41/B','41/C','41/E','45'], // cocukkoruma
+  37: ['6','7','8','9','10','11','12','13','14'], // yardimtoplama
+  38: ['3','4','5','6','7','8','9','10','11','12','13','14','20','21','22'], // hayvankoruma
+  39: ['12','15','20','26','27','28'], // cevre
+  40: ['5','13/A','16'], // pvsk
+  41: ['2','3','4','5','9','10','11','13','16','17','18','19','20','22','23'], // kacakcilik
+  42: ['1','2','4'], // uyusturucu3298
+  43: ['4','6','7','12'], // spordasiddet
+  44: ['20','21','23'], // uyusturucumurakabe
+  45: ['2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','18'], // terorizmfin
+  46: ['3','4','6','16','23','26','64','65','66','67','68','72','74','75'], // kulturtabiat
+  47: ['2','3','4','5','6','7','8','9','10','12','15'], // zilyetlik
+  48: ['2','3','4'], // tutunzarar
+  49: ['8'], // tutunalkol
+  50: ['3','4','5','6','7','8','15','19','20','23','24','28','Ek 1','Ek 2'], // yonkimlik
+  51: ['4','13','14','15','17'], // yonsesgaz
+  52: ['3','4','5','11','13','16','17','26','75','76','79','85','87','95','96','97','98','100','102','109','113','142','150','152','154','155','157','160','166','167','168','173','174','178','Ek 2','Ek 3'], // yontrafik
+  53: ['3','4','5'], // yonikramiye
+  54: ['5','6','8','12','17','21','22','24','29','30','33','34','36','37','38','43','44','45'], // yonozelguv
+  55: ['3','4','5','6','7','11','13'], // yonadlikolluk
+  56: ['4','5','6','7','8','9','10','11','13','15','16','18','19','20','21','25','27','28','29','30','31'], // yonaramalar
+  57: ['3','4','5','7','8','9','10','11','12','16','18','20','21','23','24','25'], // yonsucesyasi
+  58: ['4','5','6','7','8','9','10','11','13','14','15','18','19','20','22','23','24','25','26','27','28'], // yonyakalama
+  59: ['3','4','5','6','16'], // yonbeden
+  60: ['4','5','6','7','8','9','11','12','13','14','15','16','17','18','20','22','26'], // yoncocuktedbir
+  61: ['3','5','16'], // yoncocukusul
+  62: ['3','5','6','7','8','29','30','32','33','34','36','38','43'], // yonisyeri
+  63: ['3','5','6','7','8','10','14','15'], // yonkumcakil
+  64: ['3','6','7','8','9','10'], // yontutunsatis
+  65: ['3','5','10','12','22'], // yonvatandaslik
+  66: ['3','4','7','8','9','10','11','16','47','54','60','70','71'], // yonatesli
+});
+
 /** Madde etiketi → patika düğümü adı. */
 function maddeAd(etiket: string): string {
   if (etiket.startsWith('Ek ')) return `Ek Madde ${etiket.slice(3)}`;
@@ -437,7 +534,7 @@ const _patika = (() => {
         });
       } else {
         // Normal kart → madde düğümü (madde-no'dan). Eşleşmezse "Özet" düğümüne.
-        const m = card.madde_no.match(/m\.\s*(\d+(?:\/[A-Za-z])?)/i);
+        const m = card.madde_no.match(/m\.\s*((?:Ek |Geçici )?\d+(?:\/[A-Za-z])?)/i);
         const d = m ? maddeDugum.get(m[1]) : undefined;
         if (d) d.kartIds.push(card.id);
         else ozetKartlar.push(card.id);
