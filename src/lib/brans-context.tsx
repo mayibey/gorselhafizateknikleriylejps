@@ -58,7 +58,9 @@ export function BransProvider({ children }: { children: ReactNode }) {
     await bransKaydet(slug);
     setBransState(slug);
     // Sunucuya da — seçim ANINDAKİ hesapla (yazma sırasında hesap değişirse iptal).
-    if (uid) void gorevKaydet({ brans: slug }, uid);
+    // AWAIT ŞART: yazma bitmeden onboarding profilYenile→gorevGetir çalışırsa sunucu branşı
+    // hâlâ boş görünüp cihazdakini SİLER → gate branşı 2. kez sorar (ilk-kayıt bug'ı). Bekle.
+    if (uid) await gorevKaydet({ brans: slug }, uid);
   }
 
   return (

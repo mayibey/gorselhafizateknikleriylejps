@@ -57,7 +57,9 @@ export function RutbeProvider({ children }: { children: ReactNode }) {
     await rutbeKaydet(slug);
     setRutbeState(slug);
     // Sunucuya da — seçim ANINDAKİ hesapla (yazma sırasında hesap değişirse iptal).
-    if (uid) void gorevKaydet({ rutbe: slug }, uid);
+    // AWAIT ŞART: yazma bitmeden profilYenile→gorevGetir çalışırsa sunucu rütbesi boş görünüp
+    // cihazdakini SİLER → statü/rütbe 2. kez sorulur (ilk-kayıt bug'ı). Bekle.
+    if (uid) await gorevKaydet({ rutbe: slug }, uid);
   }
 
   return (
