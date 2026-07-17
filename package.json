@@ -79,7 +79,8 @@
     "soru:duello": "node scripts/duello-registry-uret.mjs",
     "genel:uret": "node scripts/genel-deneme-uret.mjs",
     "pdf:viewer": "node scripts/pdf-viewer-uret.mjs",
-    "boyut:uret": "node scripts/boyut-manifest-uret.mjs"
+    "boyut:uret": "node scripts/boyut-manifest-uret.mjs",
+    "genel:brans": "node scripts/genel-deneme-brans-uret.mjs"
   },
   "overrides": {
     "expo-asset": "12.0.13"

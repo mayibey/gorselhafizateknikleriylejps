@@ -9,6 +9,12 @@
 
 import { KART_SORULARI, type KartSoru } from '../assets/kart-sorulari';
 import { GENEL_DENEMELER, type GenelDeneme } from '../assets/genel-denemeler';
+import { GENEL_DENEMELER_BRANS } from '../assets/genel-denemeler-brans';
+
+/** Genel deneme kaynağı (blok'a göre): müşterek (3) veya branş (5). */
+function genelKaynak(blok?: 'brans'): GenelDeneme[] {
+  return blok === 'brans' ? GENEL_DENEMELER_BRANS : GENEL_DENEMELER;
+}
 import { birlesikUyeler } from '@/lib/birlesik';
 
 export type { KartSoru } from '../assets/kart-sorulari';
@@ -50,26 +56,30 @@ export function getSinavSorulari(lawId: number, rastgele: () => number = Math.ra
 
 // --- GENEL DENEMELER (Tatbikat) — karma, çok-kanun; "Genel Deneme 1/2/3" ---
 
-/** Kaç genel deneme var (Tatbikat listesi). */
-export function genelDenemeSayisi(): number {
-  return GENEL_DENEMELER.length;
+/** Kaç genel deneme var (Tatbikat listesi). blok='brans' → branş denemeleri. */
+export function genelDenemeSayisi(blok?: 'brans'): number {
+  return genelKaynak(blok).length;
 }
 
-/** Genel deneme meta bilgisi (no/başlık/soru sayısı). */
-export function genelDenemeler(): { no: number; baslik: string; soruSayisi: number }[] {
-  return GENEL_DENEMELER.map((d) => ({ no: d.no, baslik: d.baslik, soruSayisi: d.sorular.length }));
+/** Genel deneme meta bilgisi (no/başlık/soru sayısı). blok='brans' → branş denemeleri. */
+export function genelDenemeler(blok?: 'brans'): { no: number; baslik: string; soruSayisi: number }[] {
+  return genelKaynak(blok).map((d) => ({ no: d.no, baslik: d.baslik, soruSayisi: d.sorular.length }));
 }
 
 /** Bir genel denemenin sorularını (karışık) döndürür. GenelSoru KartSoru-uyumlu (+ kartId). */
-export function getGenelDenemeSorulari(no: number, rastgele: () => number = Math.random): KartSoru[] {
-  const d = GENEL_DENEMELER.find((x) => x.no === no);
+export function getGenelDenemeSorulari(
+  no: number,
+  blok?: 'brans',
+  rastgele: () => number = Math.random,
+): KartSoru[] {
+  const d = genelKaynak(blok).find((x) => x.no === no);
   if (!d || d.sorular.length === 0) return [];
   return karistir(d.sorular, rastgele);
 }
 
-/** Genel denemede kaç soru var (yoksa 0). */
-export function genelDenemeSoruSayisi(no: number): number {
-  return GENEL_DENEMELER.find((x) => x.no === no)?.sorular.length ?? 0;
+/** Genel denemede kaç soru var (yoksa 0). blok='brans' → branş denemeleri. */
+export function genelDenemeSoruSayisi(no: number, blok?: 'brans'): number {
+  return genelKaynak(blok).find((x) => x.no === no)?.sorular.length ?? 0;
 }
 
 // --- Testlere bölme (uzun kanunlarda tek seferde 50 soru yorucu → ~20'şerlik Test 1/2/3…) ---

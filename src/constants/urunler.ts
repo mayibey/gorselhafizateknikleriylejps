@@ -71,12 +71,19 @@ export const PREMIUM_URUNLERI = [
  */
 export const KILIT_AKTIF = true;
 
-/** ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. Sadece TCK (ilk konu) + denemesi. */
-export const UCRETSIZ_KANUNLAR = ['tck'];
+/** ÜCRETSİZ (tadımlık) kanunlar — premium gerektirmez. TCK hem müşterek ('tck') hem branş ('brtck'):
+ * ikisinin de kartları + kanun denemeleri herkese açık; gerisi premium. */
+export const UCRETSIZ_KANUNLAR = ['tck', 'brtck'];
 
 /** Bir kanun (klasör) ücretsiz tadımlık mı? */
 export function ucretsizKanun(klasor: string | null | undefined): boolean {
   return !!klasor && UCRETSIZ_KANUNLAR.includes(klasor);
+}
+
+/** Genel deneme (Tatbikat sınavı) erişilebilir mi? Başkan kararı: tatbikat sınavları HERKESE
+ * ücretsiz (müşterek + branş genel denemeleri). Kanun denemeleri TCK dışında premium kalır. */
+export function genelDenemeErisilebilir(): boolean {
+  return true;
 }
 
 /**

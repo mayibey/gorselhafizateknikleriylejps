@@ -8,6 +8,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
+import { genelDenemeErisilebilir } from '@/constants/urunler';
 import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
@@ -113,12 +114,15 @@ function TatbikatIcerik() {
     router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(test) } });
   }
 
-  function genelDenemeGit(no: number) {
-    router.push({ pathname: '/sinav', params: { genel: String(no) } });
+  function genelDenemeGit(no: number, brans = false) {
+    router.push({
+      pathname: '/sinav',
+      params: brans ? { genel: String(no), gblok: 'brans' } : { genel: String(no) },
+    });
   }
 
-  // Genel deneme karma içeriktir → premium'a bağlı (KILIT_AKTIF kapalıyken açık).
-  const genelKilitli = !kanunErisilebilir(undefined);
+  // Tatbikat sınavları (genel denemeler) HERKESE ücretsiz (başkan kararı) — müşterek + branş.
+  const genelKilitli = !genelDenemeErisilebilir();
 
   return (
     <Screen title="Talim">
@@ -174,29 +178,25 @@ function TatbikatIcerik() {
       </View>
 
       {mod === 'tatbikat' ? (
-        blok === 'brans' ? (
-          <DurumKutu
-            ikon="flag-checkered"
-            baslik="Yakında"
-            aciklama="Branş genel denemeleri hazırlanıyor; yakında burada olacak."
-          />
-        ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">
-            Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların
-            zayıf mevzilerine düşer.
+            {blok === 'brans'
+              ? 'Branş genel denemeleri 5 sınav × 50 karma sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
+              : 'Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'}
           </AppText>
-          {genelDenemeler().map((d) => (
+          {genelDenemeler(blok === 'brans' ? 'brans' : undefined).map((d) => (
             <GenelDenemeSatir
               key={d.no}
               deneme={d}
-              sonuc={sonucMap.get(-d.no)?.get(0)}
+              // Sanal law_id: branş -(100+no), müşterek -no (sinav.tsx ile birebir).
+              sonuc={sonucMap.get(blok === 'brans' ? -(100 + d.no) : -d.no)?.get(0)}
               kilitli={genelKilitli}
-              onGit={() => (genelKilitli ? router.push('/paywall') : genelDenemeGit(d.no))}
+              onGit={() =>
+                genelKilitli ? router.push('/paywall') : genelDenemeGit(d.no, blok === 'brans')
+              }
             />
           ))}
         </>
-        )
       ) : hata ? (
         <DurumKutu
           ikon="alert-circle-outline"

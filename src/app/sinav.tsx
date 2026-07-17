@@ -11,7 +11,7 @@ import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { ekleSinavSonucu, getAllCards, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
 import { degerlendirSicil } from '@/lib/sicil-servis';
-import { kanunErisilebilirSaf } from '@/constants/urunler';
+import { genelDenemeErisilebilir } from '@/constants/urunler';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
 import {
@@ -47,12 +47,23 @@ const YANLIS_KIRMIZI = Palette.kirmizi;
  */
 export default function SinavScreen() {
   const router = useRouter();
-  const { lawId, test, genel } = useLocalSearchParams<{ lawId?: string; test?: string; genel?: string }>();
-  // GENEL DENEME (Tatbikat): genel=1/2/3. Kayıt/skor/devam için "sanal law_id" = -genelNo
-  // (negatif → genel deneme; getSinavSonuclari'nda law_id<0 ile ayrışır). Soru/kart yüklemesi farklı.
+  const { lawId, test, genel, gblok } = useLocalSearchParams<{
+    lawId?: string;
+    test?: string;
+    genel?: string;
+    gblok?: string;
+  }>();
+  // GENEL DENEME (Tatbikat): genel=1/2/3 (müşterek) veya gblok=brans ile 1..5 (branş).
+  // Sanal law_id: müşterek -genelNo (-1..-3), branş -(100+genelNo) (-101..-105) → sonuç/skor
+  // AYRIŞIR (getSinavSonuclari law_id<0 ile genel deneme sayar; iki blok çakışmaz).
+  const genelBrans = gblok === 'brans';
   const genelNo = genel != null && genel !== '' ? Number(genel) : null;
   const genelModu = genelNo != null && !Number.isNaN(genelNo);
-  const lawIdNum = genelModu ? -genelNo! : lawId != null && lawId !== '' ? Number(lawId) : null;
+  const lawIdNum = genelModu
+    ? -(genelBrans ? 100 + genelNo! : genelNo!)
+    : lawId != null && lawId !== ''
+      ? Number(lawId)
+      : null;
   const testNum = test != null && test !== '' ? Number(test) : 0; // kanunun kaçıncı testi (0 tabanlı)
   // PREMIUM KAPISI: genel deneme → premium şart; kanun sınavı → o kanun erişilebilir olmalı. Erişim
   // yoksa (yükleme bitince) soru+cevap GÖSTERİLMEDEN paywall'a. (Sınav soruları gömülü, tek kapı bu.)
@@ -60,7 +71,7 @@ export default function SinavScreen() {
   const kilitli =
     !uyelikYukleniyor &&
     (genelModu
-      ? !kanunErisilebilirSaf(undefined, premium)
+      ? !genelDenemeErisilebilir() // Tatbikat sınavları HERKESE ücretsiz (başkan kararı)
       : lawId != null && lawId !== '' && !lawErisilebilirSaf(Number(lawId), premium));
   useEffect(() => {
     if (kilitli) router.replace('/paywall');
@@ -118,7 +129,7 @@ export default function SinavScreen() {
         setSecimler(kayit.secimler);
         setIndex(Math.min(kayit.index, kayit.sorular.length));
       } else {
-        const liste = genelModu ? getGenelDenemeSorulari(genelNo!) : getTestSorulari(lawIdNum, testNum);
+        const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBrans ? 'brans' : undefined) : getTestSorulari(lawIdNum, testNum);
         if (liste.length === 0) {
           setBos(true);
           return;
@@ -129,18 +140,18 @@ export default function SinavScreen() {
       }
       kartlariYukle();
     })();
-  }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo]);
+  }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo, genelBrans]);
 
   // "Tekrar çöz" → kaydı sil + YENİ karıştırılmış sınav (baştan).
   const yenidenBasla = useCallback(() => {
     if (lawIdNum == null) return;
     void sinavIlerlemeSil(lawIdNum, testNum);
-    const liste = genelModu ? getGenelDenemeSorulari(genelNo!) : getTestSorulari(lawIdNum, testNum);
+    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBrans ? 'brans' : undefined) : getTestSorulari(lawIdNum, testNum);
     setSorular(liste);
     setSecimler(new Array(liste.length).fill(null));
     setIndex(0);
     kaydedildiRef.current = false;
-  }, [lawIdNum, testNum, genelModu, genelNo]);
+  }, [lawIdNum, testNum, genelModu, genelNo, genelBrans]);
 
   useEffect(() => {
     yukle();
