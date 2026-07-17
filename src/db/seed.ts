@@ -8,6 +8,7 @@
 import { KART_ANAHTARLARI } from '../assets/kart-gorselleri';
 import { ayirtOzetBilgi, birlesikDugumAd } from '@/lib/birlesik';
 import type { Bolum, BolumKart, Branch, Card, Law, LawBranch } from '@/db/schema';
+import { SEED_LAWS_DIGER, SEED_LAW_BRANCHES_DIGER } from '@/db/seed-brans-diger';
 
 export const SEED_LAWS: Law[] = [
   // --- MÜŞTEREK (id 1-25) ---
@@ -81,6 +82,8 @@ export const SEED_LAWS: Law[] = [
   { id: 66, blok: 'branş', ad: 'Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik' },
   // Branş TCK: müşterek TCK'dan (law 1) AYRI — Jandarma branşına özgü TCK maddeleri (BRANS/01_5237_TCK).
   { id: 67, blok: 'branş', ad: '5237 sayılı Türk Ceza Kanunu' },
+  // Diğer branşlar (Jandarma dışı 15) talim kanunları — id 68+ (KART YOK, yalnız talim soruları).
+  ...SEED_LAWS_DIGER,
 ];
 
 /** 16 JSPS branşı. slug stabil anahtar, ad ekranda gösterilir, sira sıralama. */
@@ -107,10 +110,10 @@ export const SEED_BRANCHES: Branch[] = [
  * Jandarma kanunları (id 26-67) → branch_id 1 (jandarma). 42 eşleme (26-66 + branş TCK 67).
  * Müşterek kanunlar (1-25) junction'a GİRMEZ (müşterek TCK law 1 dahil — o müşterek).
  */
-export const SEED_LAW_BRANCHES: LawBranch[] = Array.from({ length: 42 }, (_, i) => ({
-  law_id: 26 + i,
-  branch_id: 1,
-}));
+export const SEED_LAW_BRANCHES: LawBranch[] = [
+  ...Array.from({ length: 42 }, (_, i) => ({ law_id: 26 + i, branch_id: 1 })), // 26-67 jandarma
+  ...SEED_LAW_BRANCHES_DIGER, // diğer 15 branş (çoklu bağ; _META.json.branslar)
+];
 
 /**
  * Kartlar. TCK (law_id 1, id 1-5) placeholder + 4733 m.8 (law_id 49, id 100-109,

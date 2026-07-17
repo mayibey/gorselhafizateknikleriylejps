@@ -178,6 +178,15 @@ function TatbikatIcerik() {
       </View>
 
       {mod === 'tatbikat' ? (
+        // Branş genel denemeleri YALNIZ Jandarma'ya özgü (5×50). Diğer branşlarda genel deneme
+        // yok (talim denemeleri var) → "Yakında". Müşterek + Jandarma branş genel denemeyi görür.
+        blok === 'brans' && brans !== 'jandarma' ? (
+          <DurumKutu
+            ikon="flag-checkered"
+            baslik="Yakında"
+            aciklama="Bu branşın genel denemeleri hazırlanıyor. Talim (kanun) denemeleri hazır — üstteki Talim sekmesinden çözebilirsin."
+          />
+        ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">
             {blok === 'brans'
@@ -197,6 +206,7 @@ function TatbikatIcerik() {
             />
           ))}
         </>
+        )
       ) : hata ? (
         <DurumKutu
           ikon="alert-circle-outline"

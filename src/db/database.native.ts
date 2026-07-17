@@ -301,6 +301,13 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 26;
     }
+    if (version < 27) {
+      // DİĞER BRANŞLAR (Jandarma dışı 15) talim kanunları (id 68-135) + çoklu branş bağları eklendi.
+      // TAMAMEN EKLEMELİ: seedReference() INSERT OR IGNORE → yeni laws + law_branches; mevcut veri +
+      // srs DEĞİŞMEZ. Bu kanunlar KART İÇERMEZ (yalnız talim deneme soruları, registry'de → Tatbikat).
+      await this.seedReference();
+      version = 27;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

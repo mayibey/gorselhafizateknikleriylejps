@@ -78,10 +78,17 @@ const rapor = [];
 let toplamSoru = 0;
 let atlanan = 0;
 
-// İki kaynak: MÜŞTEREK (law 1-25) + JANDARMA branş (law 26-66). Aynı registry'ye yazılır.
+// DİĞER BRANŞLAR kaynağı — BRANS_DIGER/<klasor>/<klasor>_SORULAR.json (law 68+).
+// Klasör→law_id haritası brans-diger-seed-uret.mjs tarafından üretilir (tek kaynak).
+const KAYNAK_DIGER = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS_DIGER';
+const DIGER_MAP_YOL = join(scriptDir, '_brans-diger-law-map.json');
+const DIGER_KLASOR_LAW = existsSync(DIGER_MAP_YOL) ? JSON.parse(readFileSync(DIGER_MAP_YOL, 'utf8')) : {};
+
+// Üç kaynak: MÜŞTEREK (1-25) + JANDARMA branş (26-67) + DİĞER 15 branş (68+). Aynı registry'ye.
 const KAYNAKLAR = [
   { kok: KAYNAK, map: KLASOR_LAW, ad: 'MÜŞTEREK' },
   { kok: KAYNAK_BRANS, map: BRANS_KLASOR_LAW, ad: 'JANDARMA' },
+  { kok: KAYNAK_DIGER, map: DIGER_KLASOR_LAW, ad: 'DİĞER' },
 ];
 
 for (const { kok, map, ad } of KAYNAKLAR) {
