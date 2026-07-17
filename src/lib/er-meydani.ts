@@ -5,6 +5,9 @@
  *   sıralamaya yazılmaz).
  * - RLS + RPC: docs/v2/23_er_meydani.sql.
  */
+import Constants from 'expo-constants';
+import { Platform } from 'react-native';
+
 import { supabase } from '@/lib/supabase';
 import { uzakPushTokenAl } from '@/lib/bildirim';
 
@@ -14,7 +17,13 @@ export async function pushTokenGuncelle(): Promise<void> {
   try {
     const token = await uzakPushTokenAl();
     if (!token) return;
-    await supabase.rpc('er_meydani_push_kaydet', { p_token: token, p_platform: null });
+    // Sürüm takibi: açılışta app sürümünü de kaydet (kim hangi sürümde) + son-görülme (guncelleme).
+    const surum = Constants.expoConfig?.version ?? null;
+    await supabase.rpc('er_meydani_push_kaydet', {
+      p_token: token,
+      p_platform: Platform.OS,
+      p_surum: surum,
+    });
   } catch {
     /* sessiz */
   }
