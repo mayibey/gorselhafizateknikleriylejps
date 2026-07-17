@@ -187,6 +187,17 @@ ${govde}
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
 writeFileSync(outFile, out, 'utf8');
 
+// SAYI MANİFESTİ (küçük): law_id → deneme soru sayısı. Boot'ta soru bankası (KART_SORULARI ~5MB)
+// YÜKLENMEDEN metadata (sinavVarMi/sinavSoruSayisi/testSayisi) bunu okur → açılış hafifler.
+const sayilar = siraliLaw.map((id) => `  ${id}: ${registry[id].length},`).join('\n');
+const sayiOut = `// OTOMATİK ÜRETİLDİ — \`npm run soru:uret\`. law_id → deneme soru sayısı.
+// Boot'ta soru bankası yüklenmeden metadata için (bkz. lib/sinav.ts lazy bank).
+export const KART_SORU_SAYILARI: Record<number, number> = {
+${sayilar}
+};
+`;
+writeFileSync(join(outDir, 'kart-soru-sayilari.ts'), sayiOut, 'utf8');
+
 console.log('--- Kanun bazında entegre edilen soru sayısı ---');
 for (const r of rapor) console.log(r);
 console.log(`\nTOPLAM: ${siraliLaw.length} kanun · ${toplamSoru} soru → ${outFile}`);

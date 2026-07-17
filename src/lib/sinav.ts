@@ -7,30 +7,47 @@
  * şıklar registry'de zaten "A) " önekinden ayıklanmış, doğru cevap index ile tutulur.
  */
 
-import { KART_SORULARI, type KartSoru } from '../assets/kart-sorulari';
-import { GENEL_DENEMELER, type GenelDeneme } from '../assets/genel-denemeler';
-import { GENEL_DENEMELER_BRANS } from '../assets/genel-denemeler-brans';
-
-/** Genel deneme kaynağı (blok'a göre): müşterek (3) veya branş (5). */
-function genelKaynak(blok?: 'brans'): GenelDeneme[] {
-  return blok === 'brans' ? GENEL_DENEMELER_BRANS : GENEL_DENEMELER;
-}
+import { type KartSoru } from '../assets/kart-sorulari';
+import { type GenelDeneme } from '../assets/genel-denemeler';
+import { KART_SORU_SAYILARI } from '../assets/kart-soru-sayilari';
 import { birlesikUyeler } from '@/lib/birlesik';
 
 export type { KartSoru } from '../assets/kart-sorulari';
 export type { GenelDeneme, GenelSoru } from '../assets/genel-denemeler';
 
+// PERF (denetim #5): soru bankası (KART_SORULARI ~5MB) + genel denemeler BOOT'ta YÜKLENMESİN.
+// Metadata (sinavVarMi/sinavSoruSayisi/testSayisi) küçük KART_SORU_SAYILARI manifestinden gelir;
+// yalnız soru DÖNDÜREN fonksiyonlar çağrılınca lazy require ile banka yüklenir (Metro senkron require).
+let _bank: Record<number, KartSoru[]> | null = null;
+function bank(): Record<number, KartSoru[]> {
+  return (_bank ??= (
+    require('../assets/kart-sorulari') as { KART_SORULARI: Record<number, KartSoru[]> }
+  ).KART_SORULARI);
+}
+let _genelM: GenelDeneme[] | null = null;
+let _genelB: GenelDeneme[] | null = null;
+/** Genel deneme kaynağı (lazy; blok'a göre): müşterek (3) veya branş (5). */
+function genelKaynak(blok?: 'brans'): GenelDeneme[] {
+  if (blok === 'brans')
+    return (_genelB ??= (
+      require('../assets/genel-denemeler-brans') as { GENEL_DENEMELER_BRANS: GenelDeneme[] }
+    ).GENEL_DENEMELER_BRANS);
+  return (_genelM ??= (
+    require('../assets/genel-denemeler') as { GENEL_DENEMELER: GenelDeneme[] }
+  ).GENEL_DENEMELER);
+}
+
 /** Bir sınav cevabı: hangi soru, hangi şık seçildi. */
 export type SinavCevap = { soruIndex: number; secilenIndex: number };
 
-/** Bir kanunun deneme sınavı var mı (en az 1 soru)? */
+/** Bir kanunun deneme sınavı var mı (en az 1 soru)? (sayı manifestinden — banka yüklenmez.) */
 export function sinavVarMi(lawId: number): boolean {
-  return (KART_SORULARI[lawId]?.length ?? 0) > 0;
+  return (KART_SORU_SAYILARI[lawId] ?? 0) > 0;
 }
 
-/** Bir kanunun deneme sınavı soru sayısı (yoksa 0). */
+/** Bir kanunun deneme sınavı soru sayısı (yoksa 0). (sayı manifestinden — banka yüklenmez.) */
 export function sinavSoruSayisi(lawId: number): number {
-  return KART_SORULARI[lawId]?.length ?? 0;
+  return KART_SORU_SAYILARI[lawId] ?? 0;
 }
 
 /** Fisher-Yates karıştırma (enjekte RNG ile). Girdiyi mutasyona uğratmaz. */
@@ -49,7 +66,7 @@ function karistir<T>(dizi: readonly T[], rastgele: () => number): T[] {
  * Kanunun sorusu yoksa boş dizi.
  */
 export function getSinavSorulari(lawId: number, rastgele: () => number = Math.random): KartSoru[] {
-  const sorular = KART_SORULARI[lawId];
+  const sorular = bank()[lawId];
   if (!sorular || sorular.length === 0) return [];
   return karistir(sorular, rastgele);
 }
@@ -126,7 +143,7 @@ export function getTestSorulari(
   testIndex: number,
   rastgele: () => number = Math.random,
 ): KartSoru[] {
-  const sorular = KART_SORULARI[lawId];
+  const sorular = bank()[lawId];
   if (!sorular || sorular.length === 0) return [];
   const s = testSinirlari(sorular.length)[testIndex];
   if (!s) return [];
@@ -210,7 +227,7 @@ export function teyitSorulari(
   const out: { soru: KartSoru; cardId: number }[] = [];
   const kullanilmis = new Set<string>();
   for (const k of kartlar) {
-    const sorular = KART_SORULARI[k.law_id];
+    const sorular = bank()[k.law_id];
     if (!sorular || sorular.length === 0) continue;
     const kartNo = kartMaddeNolari(k);
     if (kartNo.size === 0) continue;

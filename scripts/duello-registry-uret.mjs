@@ -118,12 +118,17 @@ export type DuelloSoru = {
 export const DUELLO_SORULARI: DuelloSoru[] = [
 ${govde}
 ];
+`;
 
-/** Bankada bulunan kanunlar (id + kısa ad) — oda konu seçici + zayıf-kanun gösterimi. */
+// DUELLO_KANUNLAR (25 giriş) AYRI dosyada — küçük (id+ad). Ana ekran bunu import eder; 1.5MB
+// DUELLO_SORULARI boot'ta yüklenmez (PERF denetim #5). Düello sorusu yalnız maç açılınca yüklenir.
+const kanunOut = `// OTOMATİK ÜRETİLDİ — \`npm run soru:duello\`. Düello bankasındaki kanunlar (id + kısa ad).
+// Küçük liste → ana ekranda soru bankası yüklenmeden kullanılır.
 export const DUELLO_KANUNLAR: { id: number; ad: string }[] = ${JSON.stringify(duelloKanunlar)};
 `;
 
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
 writeFileSync(outFile, out, 'utf8');
-console.log(`Düello bankası: ${sorular.length} soru → ${outFile}`);
+writeFileSync(join(outDir, 'duello-kanunlar.ts'), kanunOut, 'utf8');
+console.log(`Düello bankası: ${sorular.length} soru → ${outFile} (+ duello-kanunlar.ts)`);
 if (atlanan) console.log(`ATLANAN (geçersiz/tekrar): ${atlanan}`);

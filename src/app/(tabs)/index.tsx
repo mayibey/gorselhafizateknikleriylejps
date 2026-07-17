@@ -35,7 +35,9 @@ import {
 import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
-import { DUELLO_KANUNLAR } from '@/lib/er-meydani-mantik';
+// PERF (denetim #5): DUELLO_KANUNLAR'ı KÜÇÜK duello-kanunlar dosyasından al → er-meydani-mantik
+// üzerinden gelince 1.5MB DUELLO_SORULARI boot'ta yükleniyordu; doğrudan import boot'u hafifletir.
+import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '@/lib/er-meydani';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import type { QueueCard } from '@/lib/queue';

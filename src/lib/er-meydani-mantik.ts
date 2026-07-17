@@ -12,7 +12,7 @@
 import { DUELLO_SORULARI, type DuelloSoru } from '../assets/duello-sorulari';
 
 export type { DuelloSoru } from '../assets/duello-sorulari';
-export { DUELLO_KANUNLAR } from '../assets/duello-sorulari';
+export { DUELLO_KANUNLAR } from '../assets/duello-kanunlar';
 
 /** Bir maçtaki soru sayısı. */
 export const SORU_SAYISI = 10;
