@@ -282,6 +282,16 @@ class SqliteBackend implements Backend {
         .catch(() => {});
       version = 24;
     }
+    if (version < 25) {
+      // BRANŞ İÇERİĞİ eklendi (41 kanun · ~840 görsel kartı + patika kapsamı yalnız görseli olan
+      // maddeler). cards SALT REFERANS → DELETE+yeniden tohumla; srs (card_id ile AYRI tablo)
+      // KORUNUR. Kart↔madde bağı değiştiği için bolum_kartlari/bolumler de yeniden tohumlanır.
+      // (Bu adım OLMADAN OTA'daki yeni SEED_CARDS tabloya girmez → branş "0 kart" görünür.)
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 25;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
