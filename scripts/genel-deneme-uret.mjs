@@ -10,6 +10,7 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
@@ -45,6 +46,7 @@ for (let i = 0; i < DOSYALAR.length; i++) {
       continue;
     }
     const id = String(s.soru_id ?? '').trim();
+    if (SORU_KARA_LISTE.has(id)) { atlanan++; continue; } // salakça/mülga → atla [[soru-kara-liste]]
     if (gorulenId.has(id)) {
       cakisma++;
       console.log(`CAKISMA: soru_id "${id}" tekrar (deneme ${i + 1}) — atlandı`);

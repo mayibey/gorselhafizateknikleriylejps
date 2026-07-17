@@ -9,6 +9,7 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
@@ -60,6 +61,8 @@ for (const s of ham) {
     continue;
   }
   const id = String(s.soru_id ?? '');
+  // Kara liste (salakça/mülga soruları) → atla. [[soru-kara-liste]]
+  if (SORU_KARA_LISTE.has(id)) { atlanan++; continue; }
   if (id && seen.has(id)) {
     atlanan++;
     continue;

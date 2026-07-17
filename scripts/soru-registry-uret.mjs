@@ -13,6 +13,7 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
@@ -115,6 +116,8 @@ for (const { kok, map, ad } of KAYNAKLAR) {
     const ham = Array.isArray(veri.sorular) ? veri.sorular : [];
     const sorular = [];
     for (const s of ham) {
+      // Kara liste (salakça/mülga soruları) → atla. [[soru-kara-liste]]
+      if (SORU_KARA_LISTE.has(String(s.soru_id ?? ''))) { atlanan++; continue; }
       const siklar = Array.isArray(s.siklar) ? s.siklar : [];
       const dogruIdx = typeof s.dogru === 'string' ? s.dogru.trim().toUpperCase().charCodeAt(0) - 65 : -1;
       // Geçersiz veri (şık yok / doğru harf şık aralığı dışında / soru metni yok) → atla.
