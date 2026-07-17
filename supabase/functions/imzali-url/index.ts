@@ -29,7 +29,7 @@ const MAX_YOL = 400; // tek istekte üst sınır (büyük kanun bir çağrıda)
 // (kapalı test icin bilerek). Eskiden `=== '1'` idi → secret unutulursa TÜM premium içerik açığa çıkıyordu
 // (denetim EK-A). İstemci KILIT_AKTIF=true ile hizalı. Kapatmak için: supabase secrets set KILIT_AKTIF=0
 const KILIT = Deno.env.get('KILIT_AKTIF') !== '0';
-const UCRETSIZ_KLASOR = ['tck']; // her zaman serbest kanun klasörleri (istemci UCRETSIZ ile hizalı)
+const UCRETSIZ_KLASOR = ['tck', 'brtck']; // her zaman serbest kanun klasörleri (istemci UCRETSIZ ile hizalı)
 const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 
 Deno.serve(async (req) => {

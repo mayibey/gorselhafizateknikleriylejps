@@ -27,7 +27,7 @@ const BUCKET = 'icerik';
 // KİLİT: FAIL-CLOSED — varsayılan (secret ayarsız) premium kapısı AKTİF; yalnız açıkça '0' kapatır
 // (denetim EK-A: eskiden `=== '1'` fail-open idi). Kapatmak için: supabase secrets set KILIT_AKTIF=0
 const KILIT = Deno.env.get('KILIT_AKTIF') !== '0';
-const UCRETSIZ_KLASOR = ['tck'];
+const UCRETSIZ_KLASOR = ['tck', 'brtck'];
 const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 const FONT_URL = 'https://unpkg.com/@expo-google-fonts/inter@0.4.2/400Regular/Inter_400Regular.ttf';
 const FONT_AILESI = 'Inter';

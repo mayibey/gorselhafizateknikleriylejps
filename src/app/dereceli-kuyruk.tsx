@@ -77,6 +77,12 @@ export default function DereceliKuyrukScreen() {
   }, [durum?.durum, havuzda]);
 
   const donErMeydani = () => router.replace('/er-meydani');
+  // Maçtan/sıradan çık: sunucu kaydını iptal eder (eşleşmişse rakip 'iptal' olur) → kilitlenme
+  // çözülür, kullanıcı yeni maç arayabilir.
+  const cekil = () => {
+    void dereceliIptal();
+    donErMeydani();
+  };
 
   // ── HAVUZDA: kayıt oluştu, rakip bekleniyor ──
   if (havuzda && durum?.durum === 'araniyor') {
@@ -93,7 +99,10 @@ export default function DereceliKuyrukScreen() {
             sana bildirim gönderilir — uygulamayı kapatabilirsin, sıradaki yerin korunur.
           </AppText>
           <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={donErMeydani}>
-            <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön</AppText>
+            <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön (sırada kal)</AppText>
+          </Pressable>
+          <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={cekil}>
+            <AppText variant="kucuk" color="solukMetin" bold>Sıradan çık</AppText>
           </Pressable>
         </View>
       </Screen>
@@ -113,6 +122,9 @@ export default function DereceliKuyrukScreen() {
           </AppText>
           <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={donErMeydani}>
             <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön</AppText>
+          </Pressable>
+          <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={cekil}>
+            <AppText variant="kucuk" color="solukMetin" bold>Maçtan çekil (yeni maç arayabilmek için)</AppText>
           </Pressable>
         </View>
       </Screen>
