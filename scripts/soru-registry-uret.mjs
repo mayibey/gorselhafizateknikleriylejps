@@ -53,6 +53,7 @@ const KLASOR_LAW = {
 const KAYNAK_BRANS = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
 // BRANS klasör → branş law_id (src/db/seed.ts SEED_LAWS 26-66). 01_5237_TCK ATLANIR (müşterek law 1).
 const BRANS_KLASOR_LAW = {
+  '01_5237_TCK': 67, // Branş TCK (Jandarma) — müşterek TCK law 1'den AYRI, BRANS kaynağı
   '02_5271_CMK': 26, '03_1774_KIMLIK_BILDIRME': 27, '04_2911_TOPLANTI_GOSTERI': 28,
   '05_4915_KARA_AVCILIGI': 29, '06_1380_SU_URUNLERI': 30, '07_6458_YABANCILAR': 31,
   '08_6831_ORMAN': 32, '09_4342_MERA': 33, '10_2918_TRAFIK': 34, '11_5188_OZEL_GUVENLIK': 35,
