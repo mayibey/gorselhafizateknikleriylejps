@@ -455,6 +455,8 @@ export type DereceliDurum = {
   rakip_elo?: number;
   ben_hazir?: boolean;
   rakip_hazir?: boolean;
+  /** Kendi skorum (null = maçı henüz oynamadım; dolu = oynadım, sonuç bekleniyor). */
+  benim_skor?: number | null;
   rakip_skor?: number;
   delta?: number;
   yeni_rating?: number;

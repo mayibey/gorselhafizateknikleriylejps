@@ -6,29 +6,23 @@ import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { type DereceliDurum, dereceliDurumSorgu, dereceliGir, dereceliHazir, dereceliIptal } from '@/lib/er-meydani';
+import { type DereceliDurum, dereceliDurumSorgu, dereceliGir, dereceliIptal } from '@/lib/er-meydani';
 
-const ARAMA_SN = 120; // rakip arama süresi (2 dk) — sonra "rakip bulunamadı"
-const HAZIR_SN = 20; // ready-check geri sayımı
+const ARAMA_SN = 120; // canlı arama (2 dk) — sonra HAVUZDA kalır (kayıt), rakip gelince bildirim.
 
-/** DERECELİ MAÇ — CANLI KUYRUK + HAZIR-KONTROLÜ (LoL mantığı). aranıyor → eşleşti(hazır) → oynanıyor. */
+/**
+ * DERECELİ MAÇ — ASYNC (başkan kararı): sahte rakip YOK. Havuza kayıt olur; başkası kayıt olunca
+ * eşleşir + BİLDİRİM ("maça başla"). Senkron değil — iki taraf bağımsız çözer, iki skor gelince sonuç.
+ * Akış: aranıyor (120sn canlı) → eşleşti (oyna) / havuzda (kayıt oluştu) / sonuç bekleniyor / sonuç.
+ */
 export default function DereceliKuyrukScreen() {
   const router = useRouter();
   const [durum, setDurum] = useState<DereceliDurum | null>(null);
   const [kalanArama, setKalanArama] = useState(ARAMA_SN);
-  const [kalanHazir, setKalanHazir] = useState(HAZIR_SN);
-  const [bulunamadi, setBulunamadi] = useState(false);
+  const [havuzda, setHavuzda] = useState(false); // 120sn doldu, kalıcı havuzda bekliyor
   const gittiRef = useRef(false);
-  const hazirBastimRef = useRef(false);
 
-  const cik = useCallback(() => {
-    if (gittiRef.current) return;
-    gittiRef.current = true;
-    void dereceliIptal();
-    router.replace('/er-meydani');
-  }, [router]);
-
-  // Maça geç: oynanıyor olunca maç ekranına (dereceli mod). Rakip adını da taşı (maç üstünde göster).
+  // Eşleşti + henüz oynamadım → maç ekranına (async: rakibi beklemeden oyna).
   const maca = useCallback(
     (d: DereceliDurum) => {
       if (gittiRef.current || !d.seed) return;
@@ -41,80 +35,61 @@ export default function DereceliKuyrukScreen() {
     [router],
   );
 
-  // 1) Kuyruğa gir + poll döngüsü.
+  const isle = useCallback(
+    (d: DereceliDurum | null) => {
+      if (gittiRef.current || !d) return;
+      setDurum(d);
+      // Eşleşti + benim skorum yok → maça başla (oyna). Skorum varsa "sonuç bekleniyor" ekranı.
+      if (d.durum === 'eslesti' && (d.benim_skor == null)) maca(d);
+    },
+    [maca],
+  );
+
+  // Kuyruğa gir + poll döngüsü (havuzda beklerken de eşleşmeyi yakalasın).
   useEffect(() => {
     let dur = false;
-    const isle = (d: DereceliDurum | null) => {
-      if (dur || gittiRef.current || !d) return;
-      setDurum(d);
-      if (d.durum === 'oynaniyor' && d.seed) maca(d);
-      else if (d.durum === 'iptal') setBulunamadi(true); // rakip ayrıldı → "rakip yok" ekranı
-    };
-    void dereceliGir().then(isle);
+    void dereceliGir().then((d) => !dur && isle(d));
     const t = setInterval(() => {
       if (dur || gittiRef.current) return;
-      void dereceliDurumSorgu().then(isle);
-    }, 2000);
+      void dereceliDurumSorgu().then((d) => !dur && isle(d));
+    }, 3000);
     return () => {
       dur = true;
       clearInterval(t);
     };
-  }, [maca]);
+  }, [isle]);
 
-  // 2) Arama geri sayımı (araniyor'dayken). 0 → rakip bulunamadı.
+  // Canlı arama geri sayımı (araniyor'dayken). 0 → İPTAL ETME; havuzda kal (kayıt), bildirim beklenir.
   useEffect(() => {
-    if (durum?.durum !== 'araniyor' || bulunamadi) return;
+    if (durum?.durum !== 'araniyor' || havuzda) return;
     const t = setInterval(() => {
       setKalanArama((s) => {
         if (s <= 1) {
-          void dereceliIptal();
-          setBulunamadi(true);
+          setHavuzda(true);
           return 0;
         }
         return s - 1;
       });
     }, 1000);
     return () => clearInterval(t);
-  }, [durum?.durum, bulunamadi]);
+  }, [durum?.durum, havuzda]);
 
-  // 3) Ready-check geri sayımı (eşleşti'yken). 0 → basmadıysa iptal.
-  useEffect(() => {
-    if (durum?.durum !== 'eslesti') {
-      setKalanHazir(HAZIR_SN);
-      return;
-    }
-    const t = setInterval(() => {
-      setKalanHazir((s) => {
-        if (s <= 1) {
-          if (!hazirBastimRef.current) cik(); // hazır basmadan süre doldu → iptal
-          return 0;
-        }
-        return s - 1;
-      });
-    }, 1000);
-    return () => clearInterval(t);
-  }, [durum?.durum, cik]);
+  const donErMeydani = () => router.replace('/er-meydani');
 
-  async function hazirBas() {
-    hazirBastimRef.current = true;
-    const d = await dereceliHazir();
-    if (d) {
-      setDurum(d);
-      if (d.durum === 'oynaniyor' && d.seed) maca(d);
-    }
-  }
-
-  // ── RAKİP BULUNAMADI ──
-  if (bulunamadi) {
+  // ── HAVUZDA: kayıt oluştu, rakip bekleniyor ──
+  if (havuzda && durum?.durum === 'araniyor') {
     return (
-      <Screen title="Dereceli Maç" onGeri={() => router.replace('/er-meydani')}>
+      <Screen title="Dereceli Maç" onGeri={donErMeydani} headerAltinCizgi>
         <View style={styles.orta}>
-          <MaterialCommunityIcons name="account-search-outline" size={56} color={Palette.solukMetin} />
-          <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>Rakip bulunamadı</AppText>
-          <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-            Şu an dereceli maç arayan başka oyuncu yok. Biraz sonra tekrar dene.
+          <MaterialCommunityIcons name="clipboard-check-outline" size={56} color={Palette.yesil} />
+          <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>
+            Dereceli maç kaydın oluşturuldu ✓
           </AppText>
-          <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
+          <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+            Şu an başka arayan yok, seni havuza yazdım. Başka biri dereceli maç arayınca eşleşeceksin
+            ve sana bildirim gelecek — o zaman girip maça başlarsın. Beklemene gerek yok.
+          </AppText>
+          <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={donErMeydani}>
             <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön</AppText>
           </Pressable>
         </View>
@@ -122,50 +97,71 @@ export default function DereceliKuyrukScreen() {
     );
   }
 
-  // ── EŞLEŞTİ: HAZIR-KONTROLÜ ──
-  if (durum?.durum === 'eslesti') {
+  // ── SONUÇ BEKLENİYOR: ben oynadım, rakip henüz oynamadı ──
+  if (durum?.durum === 'eslesti' && durum.benim_skor != null) {
     return (
-      <Screen title="Rakip Bulundu!" onGeri={cik} headerAltinCizgi>
+      <Screen title="Dereceli Maç" onGeri={donErMeydani} headerAltinCizgi>
         <View style={styles.orta}>
-          <MaterialCommunityIcons name="sword-cross" size={56} color={Palette.altin} />
-          <AppText variant="dev" color="altinMetin" bold style={styles.ortala}>⚔️ Rakip bulundu!</AppText>
-          <View style={styles.rakipKutu}>
-            <MaterialCommunityIcons name="account" size={20} color={Palette.lacivert} />
-            <AppText variant="govde" color="anaMetin" bold>{durum.rakip_rumuz ?? 'Rakip'}</AppText>
-            {durum.rakip_elo != null ? <AppText variant="etiket" color="solukMetin">· {durum.rakip_elo} puan</AppText> : null}
-          </View>
-          <AppText variant="baslik" color={kalanHazir <= 5 ? 'kirmizi' : 'lacivert'} bold>{kalanHazir}</AppText>
-
-          {hazirBastimRef.current ? (
-            <View style={styles.bekleSatir}>
-              <ActivityIndicator size="small" color={Palette.altinKoyu} />
-              <AppText variant="kucuk" color="solukMetin">Rakibin hazır olması bekleniyor…</AppText>
-            </View>
-          ) : (
-            <Pressable style={({ pressed }) => [styles.hazirBtn, pressed && styles.basili]} onPress={() => void hazirBas()}>
-              <MaterialCommunityIcons name="check-bold" size={22} color={Palette.beyaz} />
-              <AppText variant="govde" color="beyaz" bold>HAZIRIM</AppText>
-            </Pressable>
-          )}
-          <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={cik}>
-            <AppText variant="kucuk" color="solukMetin" bold>Vazgeç</AppText>
+          <MaterialCommunityIcons name="timer-sand" size={56} color={Palette.altinKoyu} />
+          <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>Sonuç bekleniyor</AppText>
+          <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+            Sen maçını tamamladın. {durum.rakip_rumuz ?? 'Rakibin'} da çözünce sonuç hesaplanacak ve
+            sana bildirim gelecek.
+          </AppText>
+          <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={donErMeydani}>
+            <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön</AppText>
           </Pressable>
         </View>
       </Screen>
     );
   }
 
-  // ── ARANIYOR ──
+  // ── SONUÇ: iki taraf da oynadı ──
+  if (durum?.durum === 'bitti') {
+    const kazandi = (durum.delta ?? 0) > 0;
+    return (
+      <Screen title="Dereceli Maç" onGeri={donErMeydani} headerAltinCizgi>
+        <View style={styles.orta}>
+          <MaterialCommunityIcons
+            name={kazandi ? 'trophy' : 'flag-checkered'}
+            size={56}
+            color={kazandi ? Palette.altin : Palette.solukMetin}
+          />
+          <AppText variant="dev" color={kazandi ? 'altinMetin' : 'anaMetin'} bold style={styles.ortala}>
+            {kazandi ? '🏆 Kazandın!' : 'Maç bitti'}
+          </AppText>
+          {durum.delta != null ? (
+            <AppText variant="baslik" color={kazandi ? 'yesil' : 'kirmizi'} bold>
+              {durum.delta > 0 ? '+' : ''}{durum.delta} puan
+            </AppText>
+          ) : null}
+          {durum.yeni_rating != null ? (
+            <AppText variant="kucuk" color="solukMetin">
+              Yeni derecen: {durum.yeni_rating}{durum.kademe ? ` · ${durum.kademe}` : ''}
+            </AppText>
+          ) : null}
+          <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={donErMeydani}>
+            <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön</AppText>
+          </Pressable>
+        </View>
+      </Screen>
+    );
+  }
+
+  // ── ARANIYOR (canlı) ──
   return (
-    <Screen title="Dereceli Maç" onGeri={cik} headerAltinCizgi>
+    <Screen title="Dereceli Maç" onGeri={() => { void dereceliIptal(); donErMeydani(); }} headerAltinCizgi>
       <View style={styles.orta}>
         <ActivityIndicator size="large" color={Palette.altinKoyu} />
         <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>Rakip aranıyor…</AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-          Seninle aynı seviyede, dereceli maç arayan gerçek bir oyuncu bulunuyor.
+          Seninle aynı seviyede, dereceli maç arayan gerçek bir oyuncu bulunuyor. Bulunmazsa havuza
+          kaydolursun, rakip gelince bildirim gelir.
         </AppText>
         <AppText variant="etiket" color="solukMetin">{kalanArama} sn</AppText>
-        <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={cik}>
+        <Pressable
+          style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]}
+          onPress={() => { void dereceliIptal(); donErMeydani(); }}>
           <AppText variant="kucuk" color="solukMetin" bold>Aramayı iptal et</AppText>
         </Pressable>
       </View>
@@ -174,19 +170,8 @@ export default function DereceliKuyrukScreen() {
 }
 
 const styles = StyleSheet.create({
-  orta: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.three, paddingBottom: Spacing.six },
+  orta: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.three, paddingBottom: Spacing.six, paddingHorizontal: Spacing.four },
   ortala: { textAlign: 'center' },
-  rakipKutu: {
-    flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
-    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.m,
-    paddingHorizontal: Spacing.four, paddingVertical: Spacing.two,
-  },
-  bekleSatir: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
-  hazirBtn: {
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.two,
-    backgroundColor: Palette.yesil, borderRadius: Radius.m,
-    paddingVertical: Spacing.three, paddingHorizontal: Spacing.six,
-  },
   anaBtn: {
     alignItems: 'center', justifyContent: 'center',
     backgroundColor: Palette.lacivert, borderRadius: Radius.m,

@@ -229,16 +229,19 @@ export default function ErMeydaniMacScreen() {
     };
   }, [faz, benAdimlar, golge, mod, seed, adet, ligMod, ligRakip, sorular, odaMod, odaId, dereceliMod]);
 
-  // Dereceli modu: maç bitince rakip skorunu yazana kadar poll → ELO sonucu ('bitti').
+  // Dereceli (ASYNC): maç bitince rakip skorunu ~60sn poll et (rakip AYNI ANDA oynuyorsa sonuç hemen
+  // gelsin). Rakip hemen oynamıyorsa 60sn sonra BIRAK → "sonuç bekleniyor" gösterilir; iki taraf da
+  // bitince sunucu PUSH atar (rakibe bildirim skor RPC'sinde). Sonsuz poll YOK.
   useEffect(() => {
     if (!dereceliMod || faz !== 'bitti' || dereceliSonuc?.durum === 'bitti') return;
     let dur = false;
+    let n = 0;
     const tik = async () => {
       if (dur) return;
       const d = await dereceliDurumSorgu();
       if (dur || !d) return;
       setDereceliSonuc(d);
-      if (d.durum === 'bitti') dur = true;
+      if (d.durum === 'bitti' || ++n >= 20) dur = true;
     };
     const t = setInterval(() => void tik(), 3000);
     return () => {
@@ -404,7 +407,8 @@ export default function ErMeydaniMacScreen() {
             <ActivityIndicator size="large" color={Palette.altinKoyu} />
             <AppText variant="baslik" color="altinMetin" bold style={styles.ortala}>Skorun: {benSkor}</AppText>
             <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-              Rakibin bitirmesi bekleniyor — sonuç ve dereceni burada göreceksin.
+              Sen bitirdin. Rakibin çözmesi bekleniyor — o da tamamlayınca sonuç hesaplanır ve sana
+              bildirim gelir, dereceni görürsün. Beklemene gerek yok, çıkabilirsin.
             </AppText>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
               <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
