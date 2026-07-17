@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
+import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
 import { useEffect, useRef, useState } from 'react';
 import {
   Pressable,
@@ -89,6 +90,15 @@ export function SesOynatici({
     },
     [player],
   );
+
+  // Ses ÇALARKEN ekran kapanmasın (müşteri Zülküf önerisi) — durunca/çıkınca serbest bırak.
+  useEffect(() => {
+    if (oynuyor) void activateKeepAwakeAsync('sesli-kart');
+    else deactivateKeepAwake('sesli-kart').catch(() => {});
+    return () => {
+      deactivateKeepAwake('sesli-kart').catch(() => {});
+    };
+  }, [oynuyor]);
 
   if (kaynak === null) return null;
 
