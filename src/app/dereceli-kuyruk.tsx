@@ -83,13 +83,14 @@ export default function DereceliKuyrukScreen() {
     return (
       <Screen title="Dereceli Maç" onGeri={donErMeydani} headerAltinCizgi>
         <View style={styles.orta}>
-          <MaterialCommunityIcons name="clipboard-check-outline" size={56} color={Palette.yesil} />
+          <MaterialCommunityIcons name="account-clock-outline" size={56} color={Palette.altinKoyu} />
           <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>
-            Dereceli maç kaydın oluşturuldu ✓
+            Eşleşme sırasına alındın
           </AppText>
           <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-            Şu an başka arayan yok, seni havuza yazdım. Başka biri dereceli maç arayınca eşleşeceksin
-            ve sana bildirim gelecek — o zaman girip maça başlarsın. Beklemene gerek yok.
+            Şu an uygun bir rakip bulunmuyor; talebin sıraya alındı ve etkin kaldı. Seviyene yakın
+            bir oyuncu dereceli maç aradığında otomatik olarak eşleşeceksiniz. Maçın hazır olduğunda
+            sana bildirim gönderilir — uygulamayı kapatabilirsin, sıradaki yerin korunur.
           </AppText>
           <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={donErMeydani}>
             <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön</AppText>
@@ -105,10 +106,10 @@ export default function DereceliKuyrukScreen() {
       <Screen title="Dereceli Maç" onGeri={donErMeydani} headerAltinCizgi>
         <View style={styles.orta}>
           <MaterialCommunityIcons name="timer-sand" size={56} color={Palette.altinKoyu} />
-          <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>Sonuç bekleniyor</AppText>
+          <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>Rakip bekleniyor</AppText>
           <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-            Sen maçını tamamladın. {durum.rakip_rumuz ?? 'Rakibin'} da çözünce sonuç hesaplanacak ve
-            sana bildirim gelecek.
+            Maçını tamamladın. Rakibin ({durum.rakip_rumuz ?? 'rakip'}) da sınavını bitirdiğinde
+            sonuç hesaplanacak ve dereceni bildirimle öğreneceksin. Beklemen gerekmez.
           </AppText>
           <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={donErMeydani}>
             <AppText variant="govde" color="beyaz" bold>Er Meydanı'na Dön</AppText>
@@ -157,21 +158,21 @@ export default function DereceliKuyrukScreen() {
         <ActivityIndicator size="large" color={Palette.altinKoyu} />
         <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>Rakip aranıyor…</AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-          Havuza kaydoldun (kaydın durur, çıksan da). Seninle aynı seviyede biri arayınca eşleşir ve
-          sana bildirim gelir — beklemene gerek yok, çıkabilirsin.
+          Seviyene uygun, dereceli maç arayan bir rakip taranıyor. Kısa sürede bulunmazsa talebin
+          eşleşme sırasına alınır; rakip çıktığında bildirimle haber verilir. Beklemek zorunda değilsin.
         </AppText>
         <AppText variant="etiket" color="solukMetin">{kalanArama} sn</AppText>
         <Pressable
           style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]}
           onPress={() => setHavuzda(true)}
           accessibilityRole="button">
-          <MaterialCommunityIcons name="clipboard-check-outline" size={20} color={Palette.beyaz} />
-          <AppText variant="govde" color="beyaz" bold>Beklemeden Havuza Kaydol</AppText>
+          <MaterialCommunityIcons name="bell-ring-outline" size={20} color={Palette.beyaz} />
+          <AppText variant="govde" color="beyaz" bold>Rakip Bulununca Bildir</AppText>
         </Pressable>
         <Pressable
           style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]}
           onPress={() => { void dereceliIptal(); donErMeydani(); }}>
-          <AppText variant="kucuk" color="solukMetin" bold>Aramayı iptal et (havuzdan çık)</AppText>
+          <AppText variant="kucuk" color="solukMetin" bold>Aramaktan vazgeç</AppText>
         </Pressable>
       </View>
     </Screen>

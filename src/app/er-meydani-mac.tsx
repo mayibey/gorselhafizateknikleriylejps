@@ -407,8 +407,8 @@ export default function ErMeydaniMacScreen() {
             <ActivityIndicator size="large" color={Palette.altinKoyu} />
             <AppText variant="baslik" color="altinMetin" bold style={styles.ortala}>Skorun: {benSkor}</AppText>
             <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-              Sen bitirdin. Rakibin çözmesi bekleniyor — o da tamamlayınca sonuç hesaplanır ve sana
-              bildirim gelir, dereceni görürsün. Beklemene gerek yok, çıkabilirsin.
+              Maçını tamamladın. Rakibin sınavını bitirdiğinde sonuç hesaplanacak ve dereceni
+              bildirimle öğreneceksin. Beklemen gerekmez — çıkabilirsin.
             </AppText>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
               <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
