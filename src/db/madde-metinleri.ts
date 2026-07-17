@@ -16,6 +16,12 @@
 import { KART_MADDE_METINLERI } from '../assets/kart-madde-metinleri';
 
 export const MADDE_METINLERI: Record<string, string> = {
+  // Branş: madde-metni-uret parse'ının atladığı 4 madde (AYIRT kartı olanlar + farklı format) —
+  // resmî metin _KAYNAK_METIN'den elle eklendi (kartla uyumlu; registry'den önce gelir).
+  "Terörizm Finansmanı m.18": "MADDE 18 – (1) 3713 sayılı Kanunun 8 inci maddesi yürürlükten kaldırılmıştır.",
+  "Kültür/Tabiat m.66": "Madde 66 – Bu Kanunun 16 ncı maddesinde yer alan yasaklara aykırı olarak belge verenler, fiil daha ağır cezayı gerektiren bir suç oluşturmadığı takdirde, bir yıldan üç yıla kadar hapis ve adlî para cezası ile; bu Kanunun 7 nci maddesinde yer alan ilan veya tebligatı bilerek, süresinde usulüne uygun yapmayanlar ise, üç aydan bir yıla kadar hapis ve adlî para cezası ile cezalandırılırlar.",
+  "Kültür/Tabiat m.72": "Madde 72 – Bu Kanunun uygulanmasında, görevli kamu personeli hakkında yapılacak iş ve işlemler ve alınacak her türlü kararlar ve bu kararlara karşı yapılacak itirazlar, öncelikle incelenir ve sonuçlandırılır.",
+  "Suç Eşyası Yön m.23": "MADDE 23 – (1) İadesine karar verilmiş olup da sahibi ölmüş veya hakkında gaiplik kararı alınmış bulunanlara ait eşya, yetkili sulh hukuk hâkimine tevdi olunur.",
   // İçerik düzeltme (12_ICERIK_TAM_TARAMA B2): küme kart 'm.25-35' temsilcisi m.25'in KENDİ
   // metnini göstermiyordu (blok m.26'dan başlıyordu). Resmî m.25 (Jandarma Teşkilat Yön,
   // mevzuat.gov.tr 6845) override — KART_MADDE_METINLERI'nden ÖNCE gelir, lookup'ta kazanır.

@@ -101,10 +101,13 @@ function TatbikatIcerik() {
 
   // Sınavı (soru havuzu) olan + rütbe kapsamındaki kanunlar. Müşterek sekmesi: müşterek;
   // Branş sekmesi: branş kanunları (Jandarma deneme soruları law 26-66'ya yüklendi).
-  const musterek =
+  const musterek = (
     laws?.filter(
       (l) => l.blok === (blok === 'brans' ? 'branş' : 'müşterek') && sinavVarMi(l.id) && rutbeGorur(l.id, rutbe),
-    ) ?? [];
+    ) ?? []
+  ).sort((a, b) =>
+    blok === 'brans' ? (a.id === 67 ? 0 : a.id) - (b.id === 67 ? 0 : b.id) : 0,
+  ); // branş sekmesinde TCK (67) en üstte
 
   function sinavaGit(law: LawWithCount, test: number) {
     router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(test) } });

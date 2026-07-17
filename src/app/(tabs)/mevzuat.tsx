@@ -134,7 +134,10 @@ function MevzuatIcerik() {
   // kanunlar yavaş yavaş üretildikçe otomatik dolacak). Rütbe kapsamı ikisinde de uygulanır.
   const musterek =
     blok === 'brans'
-      ? (laws?.filter((l) => l.blok === 'branş' && rutbeGorur(l.id, rutbe)) ?? [])
+      ? (laws
+          ?.filter((l) => l.blok === 'branş' && rutbeGorur(l.id, rutbe))
+          // Branş TCK (law 67) EN ÜSTTE (TCK temel kanun); geri kalanlar id sırasında.
+          .sort((a, b) => (a.id === 67 ? 0 : a.id) - (b.id === 67 ? 0 : b.id)) ?? [])
       : (laws?.filter((l) => l.blok === 'müşterek' && l.kartSayisi > 0 && rutbeGorur(l.id, rutbe)) ?? []);
 
   // law_id → {calisilan, toplam} (Devam Et + bar + çip filtresi). toplam = bölüme bağlı
