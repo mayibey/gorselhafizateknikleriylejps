@@ -48,6 +48,30 @@ const ETIKET = {
   '25_JANDARMA_TESKILAT_YON': 'Jandarma Teşkilat Yön',
 };
 
+// BRANŞ kaynağı (law 26-66). Etiketler seed.ts KANUN_BILGI branş etiketleriyle BİREBİR.
+const KAYNAK_BRANS = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
+const ETIKET_BRANS = {
+  '02_5271_CMK': 'CMK', '03_1774_KIMLIK_BILDIRME': 'Kimlik Bildirme',
+  '04_2911_TOPLANTI_GOSTERI': 'Toplantı/Gösteri', '05_4915_KARA_AVCILIGI': 'Kara Avcılığı',
+  '06_1380_SU_URUNLERI': 'Su Ürünleri', '07_6458_YABANCILAR': 'Yabancılar',
+  '08_6831_ORMAN': 'Orman', '09_4342_MERA': 'Mera', '10_2918_TRAFIK': 'Trafik',
+  '11_5188_OZEL_GUVENLIK': 'Özel Güvenlik', '12_5395_COCUK_KORUMA': 'Çocuk Koruma',
+  '13_2860_YARDIM_TOPLAMA': 'Yardım Toplama', '14_5199_HAYVANLARI_KORUMA': 'Hayvanları Koruma',
+  '15_2872_CEVRE': 'Çevre', '16_2559_PVSK': 'PVSK', '17_5607_KACAKCILIK': 'Kaçakçılık',
+  '18_3298_UYUSTURUCU': 'Uyuşturucu (3298)', '19_6222_SPORDA_SIDDET': 'Sporda Şiddet',
+  '20_2313_UYUSTURUCU_MURAKABE': 'Uyuşturucu Murakabe', '21_6415_TERORIZM_FINANSMANI': 'Terörizm Finansmanı',
+  '22_2863_KULTUR_TABIAT': 'Kültür/Tabiat', '23_3091_ZILYETLIK': 'Zilyetlik',
+  '24_4207_TUTUN_ZARARLARI': 'Tütün Zararları', '25_4733_TUTUN_ALKOL_PIYASASI': 'Tütün/Alkol Piyasası',
+  '26_YON_KIMLIK_BILDIRME': 'Kimlik Bild. Yön', '27_YON_SES_GAZ_FISEGI': 'Ses/Gaz Fişeği Yön',
+  '28_YON_TRAFIK': 'Trafik Yön', '29_YON_IKRAMIYE': 'İkramiye Yön', '30_YON_OZEL_GUVENLIK': 'Özel Güvenlik Yön',
+  '31_YON_ADLI_KOLLUK': 'Adli Kolluk Yön', '32_YON_ARAMALAR': 'Aramalar Yön',
+  '33_YON_SUC_ESYASI': 'Suç Eşyası Yön', '34_YON_YAKALAMA': 'Yakalama Yön',
+  '35_YON_BEDEN_MUAYENESI': 'Beden Muayenesi Yön', '36_YON_COCUK_TEDBIR': 'Çocuk Tedbir Yön',
+  '37_YON_COCUK_USUL': 'Çocuk Usul Yön', '38_YON_ISYERI_ACMA': 'İşyeri Açma Yön',
+  '39_YON_KUM_CAKIL': 'Kum/Çakıl Yön', '40_YON_TUTUN_SATIS': 'Tütün Satış Yön',
+  '41_YON_VATANDASLIK': 'Vatandaşlık Yön', '42_YON_ATESLI_SILAHLAR': 'Ateşli Silahlar Yön',
+};
+
 // Bir satır "📜 metin işareti" satırı mı? (📜 satır başında, opsiyonel >/** önekiyle).
 // Cümle ortasında geçen 📜 (editör notu: "📜 alıntılar ... ✅ teyit") tetiklemez.
 function metinIsaretiMi(line) {
@@ -152,14 +176,22 @@ function masterParse(text) {
     // BLOKE KARARI başlık AÇIKLAMASINDAN değil, ID'nin "MADDE <NN>-" SONRASI SONEK'inden verilir.
     // (Eski sürüm tüm başlığı büyütüp /GEÇ|EK|AYIRT/ arardı → "GEÇİCİ Olarak", "m.18 — Ek",
     //  "…Ayrı" gibi GERÇEK madde açıklamalarına yanlış takılıp metni eliyordu.)
-    const idm = line.match(/`[^`]*?\bMADDE\s+(\d+)\s*-\s*([^`]+)`/i);
+    // `<önek> MADDE <EK?><no><harf?> - <sonek>` · EK iki formatta: önek "2918 EK MADDE 004"
+    // VEYA "1774 MADDE EK-01" → Ek Madde N. harf "038A" → 38/A. (0* baştaki sıfırı yer.)
+    const idm = line.match(/`([^`]*?)\bMADDE\s+(EK[-\s]*)?0*(\d+)([A-Za-z]?)\s*-\s*([^`]+)`/i);
     if (idm) {
-      const sonek = idm[2].trim().toLocaleUpperCase('tr'); // "1" | "AYIRT" | "13-1" | "KINAMA"
+      const onek = idm[1].trim().toLocaleUpperCase('tr');
+      const ekSonra = !!idm[2]; // "MADDE EK-01"
+      const harf = idm[4] ? idm[4].toUpperCase() : '';
+      const sonek = idm[5].trim().toLocaleUpperCase('tr'); // "1" | "AYIRT" | "13-1" | "KINAMA"
       // Aggregate (tek madde metni DEĞİL) = ayırt/özet/cetvel/tablo/karşılaştırma/ek/geçici.
       // Madde ARALIĞI sonekleri (20-21, 12-13-1) bloke EDİLMEZ → metin İLK maddeye yazılır
       // (placeholder'dan iyidir; gerçek aggregate'ler sonek KELİMESİYLE elenir).
       bloke = /AYIRT|AYIRD|OZET|ÖZET|CETVEL|TABLO|KARSILAS|KARŞILAŞ|GEÇİCİ|GECICI|\bEK\b/.test(sonek);
-      cur = bloke ? null : String(parseInt(idm[1], 10));
+      const ek = ekSonra || /\bEK$/.test(onek); // Ek Madde N → kart madde_no "m.Ek N" ile eşleşir
+      const no = String(parseInt(idm[3], 10));
+      const etiketNo = ek ? `Ek ${no}` : harf ? `${no}/${harf}` : no; // kart.madde_no'daki "m.<X>"
+      cur = bloke ? null : etiketNo;
       continue;
     }
     // MADDE'siz sentetik kart ID'si (### başlık + backtick, örn `7068 OZET-SUREC`,
@@ -201,32 +233,39 @@ const rapor = [];
 // Kaynak klasörler editör akışında " TAMAM" gibi sonek alabiliyor (örn.
 // "23_HIZMET_ESASLARI_YON TAMAM"). ETIKET anahtarını ÖNEK olarak eşleştir → sonekten
 // bağımsız doğru klasörü bul (tam eşleşme veya "<anahtar> ..." ile başlayan).
-const TUM_KLASORLER = existsSync(KAYNAK) ? readdirSync(KAYNAK) : [];
-for (const klasor of Object.keys(ETIKET)) {
-  const gercekAd = TUM_KLASORLER.find((d) => d === klasor || d.startsWith(klasor + ' '));
-  const dir = gercekAd ? join(KAYNAK, gercekAd) : null;
-  if (!dir || !existsSync(dir)) {
-    rapor.push(`${klasor}: KLASÖR YOK`);
-    continue;
+// İki kaynak: MÜŞTEREK (law 1-25) + BRANŞ (law 26-66). Aynı registry'ye yazılır.
+const KAYNAKLAR = [
+  { kok: KAYNAK, map: ETIKET, ad: 'MÜŞTEREK' },
+  { kok: KAYNAK_BRANS, map: ETIKET_BRANS, ad: 'BRANŞ' },
+];
+for (const { kok, map, ad } of KAYNAKLAR) {
+  const tumKlasorler = existsSync(kok) ? readdirSync(kok) : [];
+  for (const klasor of Object.keys(map)) {
+    const gercekAd = tumKlasorler.find((d) => d === klasor || d.startsWith(klasor + ' '));
+    const dir = gercekAd ? join(kok, gercekAd) : null;
+    if (!dir || !existsSync(dir)) {
+      rapor.push(`[${ad}] ${klasor}: KLASÖR YOK`);
+      continue;
+    }
+    const masterDosya = readdirSync(dir).find((a) => /MASTER.*\.md$/i.test(a));
+    if (!masterDosya) {
+      rapor.push(`[${ad}] ${klasor}: MASTER md yok`);
+      continue;
+    }
+    const text = readFileSync(join(dir, masterDosya), 'utf8');
+    const maddeler = masterParse(text);
+    const etiket = map[klasor];
+    let say = 0;
+    for (const [no, bloklar] of Object.entries(maddeler)) {
+      // Aynı maddenin panelleri → tekrarsız birleştir.
+      const benzersiz = [...new Set(bloklar.map((b) => b.trim()).filter(Boolean))];
+      const metin = benzersiz.join('\n\n').trim();
+      if (!metin) continue;
+      registry[`${etiket} m.${no}`] = metin;
+      say++;
+    }
+    rapor.push(`[${ad}] ${klasor.padEnd(28)} → ${etiket.padEnd(26)} ${say} madde`);
   }
-  const masterDosya = readdirSync(dir).find((a) => /MASTER.*\.md$/i.test(a));
-  if (!masterDosya) {
-    rapor.push(`${klasor}: MASTER md yok`);
-    continue;
-  }
-  const text = readFileSync(join(dir, masterDosya), 'utf8');
-  const maddeler = masterParse(text);
-  const etiket = ETIKET[klasor];
-  let say = 0;
-  for (const [no, bloklar] of Object.entries(maddeler)) {
-    // Aynı maddenin panelleri → tekrarsız birleştir.
-    const benzersiz = [...new Set(bloklar.map((b) => b.trim()).filter(Boolean))];
-    const metin = benzersiz.join('\n\n').trim();
-    if (!metin) continue;
-    registry[`${etiket} m.${no}`] = metin;
-    say++;
-  }
-  rapor.push(`${klasor.padEnd(28)} → ${etiket.padEnd(26)} ${say} madde`);
 }
 
 // MERGE-SAFE: önceki üretimde olup bu turda kaynaktan ÇIKMAYAN anahtarları KORU. Kaynak
