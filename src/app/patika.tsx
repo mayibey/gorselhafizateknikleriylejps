@@ -39,7 +39,6 @@ import {
 } from '@/db/database';
 import type { Bolum } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
-import { hecele } from '@/lib/hece';
 import { bolumIlerleme } from '@/lib/patika';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaStreak } from '@/lib/stats';
@@ -356,7 +355,7 @@ export default function PatikaScreen() {
       <View style={st.kanunKart}>
         <MaterialCommunityIcons name="book-open-variant" size={22} color={Palette.altin} />
         <AppText variant="govde" color="anaMetin" numberOfLines={2} style={st.seritAd}>
-          {hecele(kanunAd ?? 'Mevzuat')}
+          {kanunAd ?? 'Mevzuat'}
         </AppText>
         {!bolumsuz && dugumler !== null ? (
           <AppText variant="kucuk" bold color="altinMetin">

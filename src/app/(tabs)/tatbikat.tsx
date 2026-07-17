@@ -12,7 +12,6 @@ import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
 import { useBrans } from '@/lib/brans-context';
-import { hecele } from '@/lib/hece';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
 import { genelDenemeler, PUAN_KATSAYI, sinavSoruSayisi, sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
@@ -342,7 +341,7 @@ function KanunSatir({
         <View style={styles.satirUst}>
           <Monogram no={no} />
           <AppText variant="govde" bold color="anaMetin" style={styles.kanunAd}>
-            {hecele(law.ad)}
+            {law.ad}
           </AppText>
           <MaterialCommunityIcons
             name={sagIkon}

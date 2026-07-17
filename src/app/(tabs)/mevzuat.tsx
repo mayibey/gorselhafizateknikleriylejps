@@ -11,7 +11,6 @@ import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } f
 import type { LawWithCount, PerformansSatir } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
-import { hecele } from '@/lib/hece';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
@@ -19,7 +18,7 @@ import { ICERIK_TABANI } from '@/constants/config';
 import { LAW_KLASOR } from '@/db/seed';
 import { useKanunIndirme } from '@/hooks/use-kanun-indirme';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
-import { indirmeDestekli } from '@/lib/indirme';
+import { indirmeDestekli, kanunTahminiBoyut } from '@/lib/indirme';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -478,7 +477,7 @@ function DevamEtKart({
         <Monogram no={no} boyut={72} variant="baslik" />
         <View style={st.devamOrta}>
           <AppText variant="govde" bold color="anaMetin">
-            {hecele(law.ad)}
+            {law.ad}
           </AppText>
           <AppText variant="kucuk" color="solukMetin">
             {calisilan} / {toplam} kart tamamlandı
@@ -576,7 +575,7 @@ function KanunSatir({
       <View style={st.satirUst}>
         <Monogram no={no} boyut={56} variant="govde" />
         <AppText variant="govde" bold color="anaMetin" style={st.kanunAd}>
-          {hecele(law.ad)}
+          {law.ad}
         </AppText>
       </View>
 
@@ -635,6 +634,7 @@ function KanunSatir({
                 durum={indirme.durum}
                 yuzde={indirme.yuzde}
                 inenBayt={indirme.inenBayt}
+                tahminiBayt={kanunTahminiBoyut(klasorAdi)}
                 onIndir={indirme.indir}
                 onSil={indirme.sil}
               />

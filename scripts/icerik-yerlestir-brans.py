@@ -18,6 +18,7 @@ DEST_BASE = os.path.join(REPO, "assets", "kartlar")
 
 # folder -> (lawId, slug[no underscore], etiket).  law 26-66 (soru-registry BRANS_KLASOR_LAW ile birebir).
 MAP = {
+    "01_5237_TCK":                 (67, "brtck",              "TCK"),
     "02_5271_CMK":                 (26, "cmk",                "CMK"),
     "03_1774_KIMLIK_BILDIRME":     (27, "kimlikbildirme",     "Kimlik Bildirme"),
     "04_2911_TOPLANTI_GOSTERI":    (28, "toplantigosteri",    "Toplantı/Gösteri"),

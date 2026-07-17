@@ -33,11 +33,14 @@ export function sonCalisilanKanun(
   lawIlerleme: Map<number, Ilerleme>,
 ): DevamEtSonuc {
   // Sondan başa: ilk çözülebilen 'calisma' satırı → son çalışılan kanun.
+  // BLOK FİLTRESİ: yalnız lawIlerleme'deki (aktif sekme = müşterek VEYA branş) kanunları say.
+  // Böylece branş sekmesinde müşterek TCK'ya (ya da tersi) "devam et" gösterilmez — her blok
+  // kendi son-çalışılanını gösterir; o blokta hiç çalışılmadıysa devam kartı gizlenir ({tip:'yok'}).
   let sonLawId: number | null = null;
   for (let i = perf.length - 1; i >= 0; i--) {
     if (perf[i].kaynak !== 'calisma') continue;
     const lawId = cardLawMap.get(perf[i].card_id);
-    if (lawId !== undefined) {
+    if (lawId !== undefined && lawIlerleme.has(lawId)) {
       sonLawId = lawId;
       break;
     }

@@ -12,6 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as FileSystem from 'expo-file-system/legacy';
 import { AppState } from 'react-native';
 
+import { KANUN_BOYUT } from '../assets/kart-boyutlari';
 import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
 import { KART_SES_YOLLARI } from '../assets/kart-sesleri';
 import { ICERIK_TABANI } from '@/constants/config';
@@ -21,6 +22,21 @@ import { aesSifrele, b64ToBytes, bytesToB64 } from './sifreleme';
 
 /** Cihazda indirme destekleniyor mu (web'de hayır). */
 export const indirmeDestekli = !!FileSystem.documentDirectory;
+
+/** Bir kanunun indirme boyutu kestirimi (bayt) — manifesten, indirmeden ÖNCE bilinir. */
+export function kanunTahminiBoyut(klasor: string): number {
+  return KANUN_BOYUT[klasor] ?? 0;
+}
+
+/** Bayt → okunur boyut ("45 MB", "1.2 GB", "820 KB"). 0/negatif → boş. */
+export function boyutMetni(bayt: number): string {
+  if (!bayt || bayt <= 0) return '';
+  const mb = bayt / 1048576;
+  if (mb >= 1024) return `${(mb / 1024).toFixed(1)} GB`;
+  if (mb >= 10) return `${Math.round(mb)} MB`;
+  if (mb >= 1) return `${mb.toFixed(1)} MB`;
+  return `${Math.max(1, Math.round(bayt / 1024))} KB`;
+}
 
 const KOK = (FileSystem.documentDirectory ?? '') + 'jsps/';
 const DURUM_ANAHTAR = 'jsps.indirilen.kanunlar';

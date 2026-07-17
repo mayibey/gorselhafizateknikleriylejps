@@ -17,6 +17,7 @@ DEST_BASE = os.path.join(REPO, "assets", "sesler")
 
 # icerik-yerlestir-brans.py MAP ile birebir (folder -> slug). Ses klasörü olmayan kanun atlanır.
 MAP = {
+    "01_5237_TCK": "brtck",
     "02_5271_CMK": "cmk", "03_1774_KIMLIK_BILDIRME": "kimlikbildirme",
     "04_2911_TOPLANTI_GOSTERI": "toplantigosteri", "05_4915_KARA_AVCILIGI": "karaavciligi",
     "06_1380_SU_URUNLERI": "suurunleri", "07_6458_YABANCILAR": "yabancilar",

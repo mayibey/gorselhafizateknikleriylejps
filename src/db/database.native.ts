@@ -292,6 +292,15 @@ class SqliteBackend implements Backend {
       await this.seedBolumler();
       version = 25;
     }
+    if (version < 26) {
+      // BRANŞ TCK eklendi (law 67 · Jandarma'ya özgü TCK maddeleri, müşterek TCK'dan ayrı) + 4
+      // UI düzeltmesi. cards SALT REFERANS → DELETE+yeniden tohumla; srs KORUNUR. (v25'i çoktan
+      // uygulamış cihazlar law 67'yi bu adımla alır.)
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 26;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

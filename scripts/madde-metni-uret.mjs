@@ -51,6 +51,7 @@ const ETIKET = {
 // BRANŞ kaynağı (law 26-66). Etiketler seed.ts KANUN_BILGI branş etiketleriyle BİREBİR.
 const KAYNAK_BRANS = 'D:/JSPS Fabrika/kaynaklar/astsubay/KANUN_MASTER_DOSYALARI/BRANS';
 const ETIKET_BRANS = {
+  '01_5237_TCK': 'TCK',
   '02_5271_CMK': 'CMK', '03_1774_KIMLIK_BILDIRME': 'Kimlik Bildirme',
   '04_2911_TOPLANTI_GOSTERI': 'Toplantı/Gösteri', '05_4915_KARA_AVCILIGI': 'Kara Avcılığı',
   '06_1380_SU_URUNLERI': 'Su Ürünleri', '07_6458_YABANCILAR': 'Yabancılar',

@@ -23,12 +23,15 @@ export function KanunIndirButon({
   durum,
   yuzde,
   inenBayt,
+  tahminiBayt = 0,
   onIndir,
   onSil,
 }: {
   durum: IndirmeDurum;
   yuzde: number;
   inenBayt: number;
+  /** İndirmeden ÖNCE bilinen boyut kestirimi (bayt) → "İndir · 45 MB". */
+  tahminiBayt?: number;
   onIndir: () => void;
   onSil: () => void;
 }) {
@@ -78,7 +81,7 @@ export function KanunIndirButon({
       accessibilityLabel="Kanunu indir">
       <MaterialCommunityIcons name="download" size={16} color={Palette.lacivert} />
       <AppText variant="etiket" bold color="lacivert">
-        İndir
+        İndir{mbMetin(tahminiBayt) ? ` · ${mbMetin(tahminiBayt)}` : ''}
       </AppText>
     </Pressable>
   );

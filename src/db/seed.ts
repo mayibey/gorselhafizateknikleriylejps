@@ -79,6 +79,8 @@ export const SEED_LAWS: Law[] = [
   { id: 64, blok: 'branş', ad: 'Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik' },
   { id: 65, blok: 'branş', ad: 'Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik' },
   { id: 66, blok: 'branş', ad: 'Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik' },
+  // Branş TCK: müşterek TCK'dan (law 1) AYRI — Jandarma branşına özgü TCK maddeleri (BRANS/01_5237_TCK).
+  { id: 67, blok: 'branş', ad: '5237 sayılı Türk Ceza Kanunu' },
 ];
 
 /** 16 JSPS branşı. slug stabil anahtar, ad ekranda gösterilir, sira sıralama. */
@@ -102,10 +104,10 @@ export const SEED_BRANCHES: Branch[] = [
 ];
 
 /**
- * Jandarma kanunları (id 26-66) → branch_id 1 (jandarma). 41 eşleme.
- * Müşterek kanunlar (1-25) junction'a GİRMEZ (5237 TCK dahil — o müşterek).
+ * Jandarma kanunları (id 26-67) → branch_id 1 (jandarma). 42 eşleme (26-66 + branş TCK 67).
+ * Müşterek kanunlar (1-25) junction'a GİRMEZ (müşterek TCK law 1 dahil — o müşterek).
  */
-export const SEED_LAW_BRANCHES: LawBranch[] = Array.from({ length: 41 }, (_, i) => ({
+export const SEED_LAW_BRANCHES: LawBranch[] = Array.from({ length: 42 }, (_, i) => ({
   law_id: 26 + i,
   branch_id: 1,
 }));
@@ -203,6 +205,7 @@ const KANUN_BILGI: Record<string, { lawId: number; etiket: string }> = {
   yontutunsatis: { lawId: 64, etiket: 'Tütün Satış Yön' },
   yonvatandaslik: { lawId: 65, etiket: 'Vatandaşlık Yön' },
   yonatesli: { lawId: 66, etiket: 'Ateşli Silahlar Yön' },
+  brtck: { lawId: 67, etiket: 'TCK' }, // Branş TCK (Jandarma) — müşterek TCK'dan ayrı law
 };
 
 /** lawId → içerik klasörü (KANUN_BILGI'nin tersi). İndirme butonu kanunun klasörünü bundan bulur. */
@@ -470,6 +473,7 @@ Object.assign(SEED_KAPSAM, {
   64: ['3','6','7','8','9','10'], // yontutunsatis
   65: ['3','5','10','12','22'], // yonvatandaslik
   66: ['3','4','7','8','9','10','11','16','47','54','60','70','71'], // yonatesli
+  67: ['6','24','25','26','28','29','31','32','33','34','73','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','94','95','96','97','99','102','103','104','105','106','107','108','109','112','116','117','118','120','121','122','123','125','126','127','128','129','130','132','133','134','135','141','144','148','149','150','151','152','153','155','156','157','158','159','160','163','168','170','174','179','188','190','191','197','204','206','207','220','226','227','267','271','272','277','278','279','280','281','282','283','289','299','301','314'], // brtck (branş TCK)
 });
 
 /** Madde etiketi → patika düğümü adı. */
