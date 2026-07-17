@@ -8,7 +8,9 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { type DereceliDurum, dereceliDurumSorgu, dereceliGir, dereceliIptal } from '@/lib/er-meydani';
 
-const ARAMA_SN = 120; // canlı arama (2 dk) — sonra HAVUZDA kalır (kayıt), rakip gelince bildirim.
+const ARAMA_SN = 60; // canlı arama (1 dk) — sonra HAVUZDA kalır (kayıt), rakip gelince bildirim.
+// NOT: Havuza kayıt "Rakip Ara"ya basınca ANINDA sunucuda olur (kalıcı); bu sayaç yalnız ekrandaki
+// canlı bekleme göstergesi. Arka plan/menü değişse de kayıt DURUR (yalnız "Aramayı iptal et" çıkarır).
 
 /**
  * DERECELİ MAÇ — ASYNC (başkan kararı): sahte rakip YOK. Havuza kayıt olur; başkası kayıt olunca
@@ -148,21 +150,21 @@ export default function DereceliKuyrukScreen() {
     );
   }
 
-  // ── ARANIYOR (canlı) ──
+  // ── ARANIYOR (canlı) ── Geri = havuzda KAL (kayıt sürer); yalnız "Aramayı iptal et" çıkarır.
   return (
-    <Screen title="Dereceli Maç" onGeri={() => { void dereceliIptal(); donErMeydani(); }} headerAltinCizgi>
+    <Screen title="Dereceli Maç" onGeri={donErMeydani} headerAltinCizgi>
       <View style={styles.orta}>
         <ActivityIndicator size="large" color={Palette.altinKoyu} />
         <AppText variant="baslik" color="anaMetin" bold style={styles.ortala}>Rakip aranıyor…</AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
-          Seninle aynı seviyede, dereceli maç arayan gerçek bir oyuncu bulunuyor. Bulunmazsa havuza
-          kaydolursun, rakip gelince bildirim gelir.
+          Havuza kaydoldun (kaydın durur, çıksan da). Seninle aynı seviyede biri arayınca eşleşir ve
+          sana bildirim gelir — beklemene gerek yok, çıkabilirsin.
         </AppText>
         <AppText variant="etiket" color="solukMetin">{kalanArama} sn</AppText>
         <Pressable
           style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]}
           onPress={() => { void dereceliIptal(); donErMeydani(); }}>
-          <AppText variant="kucuk" color="solukMetin" bold>Aramayı iptal et</AppText>
+          <AppText variant="kucuk" color="solukMetin" bold>Aramayı iptal et (havuzdan çık)</AppText>
         </Pressable>
       </View>
     </Screen>
