@@ -15,17 +15,19 @@
     },
     "ios": {
       "bundleIdentifier": "app.mevzujsps.ios",
-      "buildNumber": "1",
+      "buildNumber": "45",
       "icon": "./assets/images/mevzu-icon-1024.png",
       "usesAppleSignIn": true,
-      "associatedDomains": ["applinks:mevzujsps.com"],
+      "associatedDomains": [
+        "applinks:mevzujsps.com"
+      ],
       "config": {
         "usesNonExemptEncryption": false
       }
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 48,
+      "versionCode": 49,
       "googleServicesFile": "./google-services.json",
       "allowBackup": false,
       "permissions": [
@@ -42,7 +44,10 @@
               "pathPrefix": "/oda"
             }
           ],
-          "category": ["BROWSABLE", "DEFAULT"]
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
         }
       ],
       "adaptiveIcon": {

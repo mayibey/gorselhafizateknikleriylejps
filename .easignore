@@ -1,0 +1,58 @@
+# EAS build arşiv hariçleri (.gitignore'un aynısı + İÇERİK BİNARY'LERİ).
+# EAS, .easignore varsa .gitignore YERİNE bunu kullanır → .gitignore kuralları burada TEKRARLANIR.
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native (generated — EAS prebuild bulutta yeniden üretir; yerel build çıktısı ~1.2GB)
+.kotlin/
+ios/
+android/
+
+# imza/gizli
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+credentials/
+# google-services.json — Android build'inde FCM için GEREKLİ (683B istemci config, sır değil).
+# EAS_NO_VCS modunda arşive dahil olmalı; bu yüzden hariç TUTMUYORUZ.
+
+# Metro / debug / log
+.metro-health-check*
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# env
+.env
+.env*.local
+!.env.example
+
+# ts / IDE / OS
+*.tsbuildinfo
+.idea/
+.DS_Store
+
+# PII
+*.csv
+
+# Kaynak fabrika/mehaz metinleri — build'e gerekmez
+JSPS MESLEK KONULARI MEHAZLARI/
+docs/
+.git/
+
+# İÇERİK BİNARY'LERİ (webp/mp3 ~2.2GB) — build arşivine GİRMEZ. Registry manifest-only (require-map
+# boş); app içeriği SUNUCUDAN (imzalı-URL) çeker. Bunlar arşive girerse 2GB EAS limitini aşar.
+assets/kartlar/
+assets/sesler/
