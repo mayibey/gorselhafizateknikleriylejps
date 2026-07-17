@@ -162,6 +162,13 @@ export default function DereceliKuyrukScreen() {
         </AppText>
         <AppText variant="etiket" color="solukMetin">{kalanArama} sn</AppText>
         <Pressable
+          style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]}
+          onPress={() => setHavuzda(true)}
+          accessibilityRole="button">
+          <MaterialCommunityIcons name="clipboard-check-outline" size={20} color={Palette.beyaz} />
+          <AppText variant="govde" color="beyaz" bold>Beklemeden Havuza Kaydol</AppText>
+        </Pressable>
+        <Pressable
           style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]}
           onPress={() => { void dereceliIptal(); donErMeydani(); }}>
           <AppText variant="kucuk" color="solukMetin" bold>Aramayı iptal et (havuzdan çık)</AppText>
@@ -175,7 +182,7 @@ const styles = StyleSheet.create({
   orta: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.three, paddingBottom: Spacing.six, paddingHorizontal: Spacing.four },
   ortala: { textAlign: 'center' },
   anaBtn: {
-    alignItems: 'center', justifyContent: 'center',
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.two,
     backgroundColor: Palette.lacivert, borderRadius: Radius.m,
     paddingVertical: Spacing.three, paddingHorizontal: Spacing.six, marginTop: Spacing.two,
   },
