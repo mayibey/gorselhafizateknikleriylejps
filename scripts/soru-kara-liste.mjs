@@ -4,7 +4,7 @@
 // (npm run soru:uret vb.) geri GELMEZ. NOT: "hâlâ yürürlükte mi / hangisi kaldırılMAMIŞ / atıf
 // yönlendirmesi / yürürlükteki geçiş kuralı" gibi MEŞRU sorular listede DEĞİL — onlar kalır.
 //
-// 17 Tem 2026 — başkan dönütü ("mülgadan soru sormuş, ne salakça"). 7 soru:
+// 17 Tem 2026 — başkan dönütü ("mülgadan soru sormuş, ne salakça"). İlk 7 soru:
 export const SORU_KARA_LISTE = new Set([
   '657-S-006',   // 657 DMK m.4'te hangi bent MÜLGA edilmiştir (kalkmış bendi ezberletme)
   '2155-S-013',  // 2155 ile kaldırılan 4367 sayılı Kanun hangi KONUYU düzenlemekteydi (ölü içerik)
@@ -13,4 +13,17 @@ export const SORU_KARA_LISTE = new Set([
   'Y12920-S-038',// 2024 değişikliğiyle metinden ÇIKARILAN ibare hangisi (kalkmış ibare trivia)
   'GHY-S-058',   // kaldırılan yönetmelik hangi RG tarih/sayıda yayımlanmıştı (ölü yönetmelik trivia)
   '06-D-018',    // 2803 m.6/2. cümle hangi düzenlemeyle MÜLGA edilmiştir (repeal metadata trivia)
+  // 18 Tem 2026 — gece kalite taraması, aynı ölü-hüküm/mülga ailesi (12 soru daha):
+  '9815-S-102',  // kaldırılan eski yönetmeliğin ADI (Devlet Harcama Belgeleri Yön.) boşluk doldur
+  'Y5879-S-143', // kaldırılan eski Subay Sicil Yön. hangi RG tarih/sayıda (ölü yönetmelik trivia)
+  '12916-S-098', // kaldırılan eski Yapım İşleri İhaleleri Uyg. Yön. RG tarih/sayı (ölü trivia)
+  'Y12920-S-032',// kaldırılan eski Yapım İşleri Muayene Yön. RG tarih/sayı (ölü trivia)
+  '34039-S-053', // kaldırılan eski Ses/Gaz Fişeği Yön. RG tarih/sayı (ölü trivia)
+  '06-D-145',    // Jandarma Asayiş Vakfı senedi hangi tarihli RG'de ilan (salt tarih ezberi)
+  '9600-S-056',  // kaldırılan eski Ön Ödeme Yön. hangi BKK tarih/sayı (ölü yönetmelik trivia)
+  'Y5809-S-108', // kaldırılan eski Astsubay Sicil Yön. hangi RG tarih/sayı (ölü trivia)
+  '3212-S-041',  // aykırı hükümleri kaldıran kanunun tarih/sayısı (repeal metadata trivia)
+  '3212-S-042',  // aynı, kaldıran kanunun numarasını boşluk doldur (repeal metadata trivia)
+  '2565-S-080',  // hangi kanun (1110 Askeri Memnu) yürürlükten kaldırılmış (ölü kanun kimliği)
+  '3402-S-072',  // hangi kanun (2613 Kadastro) yürürlükten kaldırılmış (ölü kanun kimliği)
 ]);
