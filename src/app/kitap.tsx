@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
@@ -7,9 +7,11 @@ import { PDF_VIEWER_HTML } from '../assets/pdf-viewer';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Spacing } from '@/constants/theme';
+import { KILIT_AKTIF } from '@/constants/urunler';
 import { kitapNotlari, kitapNotuKaydet } from '@/lib/brans-kitap';
 import { imzaliUrller } from '@/lib/imzali-url';
 import { bytesToB64 } from '@/lib/sifreleme';
+import { useUyelik } from '@/lib/uyelik-context';
 
 /**
  * BRANŞ PDF KİTAP GÖRÜNTÜLEYİCİ — imzalı-URL ile PDF indir → base64 → gömülü PDF.js WebView'de
@@ -23,9 +25,21 @@ export default function KitapScreen() {
   const pdfB64 = useRef<string | null>(null);
   const notlar = useRef<Record<number, unknown>>({});
   const web = useRef<WebView>(null);
+  const router = useRouter();
+
+  // PREMIUM KAPISI (savunma-derinliği): kitap ücretli içerik. Liste zaten kilitli satırı paywall'a
+  // atar; buraya doğrudan gelinirse (derin bağlantı/geri tuşu) burada da kapı olsun — yoksa indirme
+  // sunucudan 402 döner ve kullanıcı sebepsiz "hata" ekranı görür. `yukleniyor` bitmeden kilitleme
+  // (premium bilgisi tazelenmeden ödeyeni paywall'a atma — icerik-kilidi.ts ile aynı yarış koruması).
+  const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
+  const kilitli = KILIT_AKTIF && !uyelikYukleniyor && !premium;
+  useEffect(() => {
+    if (kilitli) router.replace('/paywall');
+  }, [kilitli, router]);
 
   useEffect(() => {
     let iptal = false;
+    if (kilitli || uyelikYukleniyor) return;
     void (async () => {
       if (!yol) return setDurum('hata');
       const url = (await imzaliUrller([yol])).get(yol);
@@ -42,7 +56,7 @@ export default function KitapScreen() {
     return () => {
       iptal = true;
     };
-  }, [yol]);
+  }, [yol, kilitli, uyelikYukleniyor]);
 
   // WebView yüklenince PDF'i + kayıtlı notları görüntüleyiciye enjekte et.
   const yuklenince = useCallback(() => {

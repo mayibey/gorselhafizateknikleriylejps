@@ -15,6 +15,7 @@ import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
 import { ICERIK_TABANI } from '@/constants/config';
+import { KILIT_AKTIF } from '@/constants/urunler';
 import { LAW_KLASOR } from '@/db/seed';
 import { useKanunIndirme } from '@/hooks/use-kanun-indirme';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
@@ -698,8 +699,16 @@ function DurumKutu({
   );
 }
 
-/** Branş PDF özet kitapları listesi (Jandarma dışı branşlar). Kitaba dokun → görüntüleyici. */
+/**
+ * Branş PDF özet kitapları listesi (Jandarma dışı branşlar). Kitaba dokun → görüntüleyici.
+ * PREMIUM: kitaplar ücretli içeriktir (sunucu da `pdf/...` yolunu premium kapısında tutar).
+ * Erişim yoksa satır "Kilidi Aç" gösterir ve paywall'a gider — aksi hâlde görüntüleyici açılıp
+ * indirme 402 ile düşer ve kullanıcı sebepsiz "hata" ekranı görürdü (KanunSatir ile aynı davranış).
+ */
 function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k: BransKitap) => void }) {
+  const router = useRouter();
+  const { premium } = useUyelik();
+  const kilitli = KILIT_AKTIF && !premium;
   return (
     <>
       <View style={st.ustSatir}>
@@ -710,14 +719,25 @@ function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k:
       {kitaplar.map((k) => (
         <Pressable
           key={k.id}
-          onPress={() => onAc(k)}
+          onPress={() => (kilitli ? router.push('/paywall') : onAc(k))}
           style={({ pressed }) => [st.kitapSatir, pressed && st.kitapBasili]}
           accessibilityRole="button"
-          accessibilityLabel={k.baslik}>
-          <MaterialCommunityIcons name="file-document-outline" size={22} color={Palette.altinKoyu} />
+          accessibilityLabel={kilitli ? `${k.baslik} — kilitli` : k.baslik}>
+          <MaterialCommunityIcons
+            name={kilitli ? 'lock' : 'file-document-outline'}
+            size={22}
+            color={Palette.altinKoyu}
+          />
           <AppText variant="govde" color="anaMetin" bold style={st.kitapAd} numberOfLines={2}>
             {k.baslik}
           </AppText>
+          {kilitli ? (
+            <View style={st.kilitChip}>
+              <AppText variant="etiket" bold color="altinMetin">
+                Kilidi Aç
+              </AppText>
+            </View>
+          ) : null}
           <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
         </Pressable>
       ))}
