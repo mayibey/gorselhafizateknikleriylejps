@@ -177,6 +177,21 @@ export default function ErMeydaniScreen() {
         </AppText>
       </View>
 
+      {/* Takma ad yoksa: en üstte belirgin uyarı (butonlar pasif olduğu için kullanıcı neden
+          bir şey olmadığını anlamıyordu → önce takma ad gir yönlendirmesi). */}
+      {yuklendi && !playAktif ? (
+        <View style={styles.rumuzUyariKart}>
+          <MaterialCommunityIcons name="account-alert" size={24} color={Palette.kirmizi} />
+          <View style={styles.rumuzUyariMetin}>
+            <AppText variant="govde" color="anaMetin" bold>Önce takma adını gir</AppText>
+            <AppText variant="kucuk" color="solukMetin">
+              Oda kurmak, arkadaşını çağırmak ve rakip bulmak için aşağıya bir takma ad yazıp kaydet. Butonlar ondan sonra açılır.
+            </AppText>
+          </View>
+          <MaterialCommunityIcons name="arrow-down" size={22} color={Palette.altinKoyu} />
+        </View>
+      ) : null}
+
       {/* Takma ad */}
       {!yuklendi ? (
         <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
@@ -200,12 +215,6 @@ export default function ErMeydaniScreen() {
           onVazgec={rumuz ? () => setDuzenle(false) : undefined}
         />
       )}
-
-      {!playAktif && yuklendi ? (
-        <AppText variant="kucuk" color="amber" bold style={styles.uyari}>
-          Meydana çıkmadan önce bir takma ad seç (sıralamada bu görünecek).
-        </AppText>
-      ) : null}
 
       {/* Hızlı eşleş */}
       <Pressable
@@ -705,7 +714,12 @@ const styles = StyleSheet.create({
     flex: 2, alignItems: 'center', justifyContent: 'center',
     backgroundColor: Palette.lacivert, borderRadius: Radius.m, paddingVertical: Spacing.three,
   },
-  uyari: { textAlign: 'center' },
+  rumuzUyariKart: {
+    flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
+    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.l,
+    borderWidth: 1.5, borderColor: Palette.kirmizi, padding: Spacing.three,
+  },
+  rumuzUyariMetin: { flex: 1, gap: 2 },
   anaBtn: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
     backgroundColor: Palette.lacivert, borderRadius: Radius.m, padding: Spacing.three,
