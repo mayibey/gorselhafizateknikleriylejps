@@ -863,6 +863,6 @@ Geliştirme web'de yürüyor (`npx expo start --web` → localhost). **iPhone Ex
 Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando, Tabip, Diş Tabibi, Eczacı, Sağlık, Kimyager, Veteriner, Mühendis. + Müşterek (25 mevzuat, herkese). Toplam ~65 kanun, ~950-1100 öğretim birimi.
 
 ## 9. İçerik varlığı
-- TCK: 49 görsel hazır (`assets/kartlar/tck/`), 4 panelli kare format, künye görselin içinde. Şu an sadece m1 seed'e bağlı; gerisi içerik turunda bağlanacak.
+- Görseller: her madde için TEK görsel hafıza infografiği (başlık + tematik sahne/metafor + etiketli çıkarımlar + "AKLINA ÇİVİLE" özeti). ESKİ "4 panelli karikatür" formatı TERK EDİLDİ, öyle görsel yok. İçerik sunucuda (private bucket), imzalı-URL + filigranla iniyor.
 - Diğer kanunlar: görsel/metin henüz yok (üretilecek).
 - Maskot: Jandarma Cüneyt (mavi bere, tek yıldız, jandarma amblemi). Kart yapısı: olay → sorun → Cüneyt+kanun → sonuç.

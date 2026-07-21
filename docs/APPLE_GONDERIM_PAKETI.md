@@ -13,13 +13,13 @@
 
 ## 2. Promosyon metni / Promotional Text (max 170)
 ```
-JSPS mevzuatını ezberleme, GÖRSELLE aklında tut. 4 panelli karikatür kartlar, sesli anlatım,
+JSPS mevzuatını ezberleme, GÖRSELLE aklında tut. Görsel hafıza kartları, sesli anlatım,
 sınav kapsamına birebir patika ve her kanun için deneme sınavı.
 ```
 
 ## 3. Açıklama / Description (max 4000)
 ```
-JSPS (Jandarma ve Sahil Güvenlik Personeli Sınavı) mevzuatını ezberlemek yerine GÖRSELLE aklında tut. Her kanun maddesi için 4 panelli karikatür kart, sesli anlatım ve sınav kapsamına birebir uygun "patika" ile çalış; her kanunun deneme sınavıyla kendini sına.
+JSPS (Jandarma ve Sahil Güvenlik Personeli Sınavı) mevzuatını ezberlemek yerine GÖRSELLE aklında tut. Her kanun maddesi için görsel hafıza kartı, sesli anlatım ve sınav kapsamına birebir uygun "patika" ile çalış; her kanunun deneme sınavıyla kendini sına.
 
 • Görsel hafıza kartları — maddeleri karikatürle, kalıcı şekilde öğren
 • Deneme sınavları — her kanun için çoktan seçmeli sorular, anında geri bildirim

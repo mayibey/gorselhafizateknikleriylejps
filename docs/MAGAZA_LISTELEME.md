@@ -12,7 +12,7 @@
 ## Tam açıklama (TR)
 ```
 JSPS (Jandarma ve Sahil Güvenlik Personeli Sınavı) mevzuatını ezberlemek yerine GÖRSELLE aklında
-tut. Her kanun maddesi için 4 panelli karikatür kartlar, sesli anlatım ve sınav kapsamına
+tut. Her kanun maddesi için görsel hafıza kartları, sesli anlatım ve sınav kapsamına
 birebir uygun "patika" ile çalış; her kanunun deneme sınavıyla kendini sına.
 
 • Görsel hafıza kartları — maddeleri karikatürle, kalıcı şekilde öğren
