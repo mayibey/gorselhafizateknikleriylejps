@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
-import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
@@ -22,7 +22,7 @@ import {
   sicilSifirla,
 } from '@/db/database';
 import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
-import { type Cinsiyet, type Profil, profilGetir } from '@/lib/auth';
+import { type Cinsiyet, type Profil, profilGetir, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { calisilabilirZayifMevzi, kartKlasoru } from '@/lib/gorsel-kaynak';
 import { maddeEtiket } from '@/lib/madde-etiket';
@@ -243,6 +243,10 @@ function tarihTR(iso: string | null): string | null {
 function KisiselBilgiler() {
   const { kullanici, hazir } = useAuth();
   const [profil, setProfil] = useState<Profil | null>(null);
+  const [duzenle, setDuzenle] = useState(false);
+  const [adG, setAdG] = useState('');
+  const [soyadG, setSoyadG] = useState('');
+  const [kaydediliyor, setKaydediliyor] = useState(false);
 
   useEffect(() => {
     if (!kullanici) {
@@ -252,9 +256,28 @@ function KisiselBilgiler() {
     void profilGetir().then(setProfil);
   }, [kullanici]);
 
+  function duzenleAc() {
+    setAdG(profil?.ad ?? '');
+    setSoyadG(profil?.soyad ?? '');
+    setDuzenle(true);
+  }
+  async function adKaydet() {
+    setKaydediliyor(true);
+    try {
+      await profilKaydet({ ad: adG.trim(), soyad: soyadG.trim() });
+      const yeni = await profilGetir();
+      setProfil(yeni);
+    } catch {
+      /* sessiz — kayıt olmazsa pencere kapanır, tekrar denenebilir */
+    }
+    setKaydediliyor(false);
+    setDuzenle(false);
+  }
+
   if (!hazir || !kullanici) return null; // üyelik kapalıysa gösterme
 
   const adSoyad = `${profil?.ad ?? ''} ${profil?.soyad ?? ''}`.trim();
+  const isimYok = !adSoyad;
   const satirlar: { ikon: IconName; etiket: string; deger: string | null }[] = [
     { ikon: 'email-outline', etiket: 'E-posta', deger: kullanici.email },
     { ikon: 'phone-outline', etiket: 'Telefon', deger: profil?.telefon ?? null },
@@ -280,7 +303,30 @@ function KisiselBilgiler() {
             KİŞİSEL BİLGİLER
           </AppText>
         </View>
+        {!isimYok ? (
+          <Pressable hitSlop={10} onPress={duzenleAc} accessibilityRole="button" accessibilityLabel="Adını düzenle">
+            <AppText variant="kucuk" color="lacivert" bold>
+              Düzenle
+            </AppText>
+          </Pressable>
+        ) : null}
       </View>
+
+      {/* İsim yoksa (çoğunlukla Apple ile girenler) belirgin çağrı — belge/sicil/takip için gerekli. */}
+      {isimYok ? (
+        <Pressable
+          onPress={duzenleAc}
+          style={({ pressed }) => [styles.adCagri, pressed && styles.adCagriBasili]}
+          accessibilityRole="button"
+          accessibilityLabel="Ad ve soyadını gir">
+          <MaterialCommunityIcons name="account-edit-outline" size={20} color={Palette.altinKoyu} />
+          <AppText variant="kucuk" color="anaMetin" bold style={styles.adCagriMetin}>
+            Ad ve soyadını gir — sicilin, takdir/başarı belgelerin ve kişisel takibin için.
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+        </Pressable>
+      ) : null}
+
       <View style={styles.kisiAyrac} />
       {satirlar.map((s) => (
         <View key={s.etiket} style={styles.kisiSatir}>
@@ -293,6 +339,62 @@ function KisiselBilgiler() {
           </AppText>
         </View>
       ))}
+
+      <Modal visible={duzenle} transparent animationType="fade" onRequestClose={() => setDuzenle(false)}>
+        <View style={styles.adPerde}>
+          <View style={styles.adKutu}>
+            <MaterialCommunityIcons name="account-circle-outline" size={38} color={Palette.altinKoyu} />
+            <AppText variant="baslik" bold color="lacivert" style={styles.adOrtali}>
+              Ad ve Soyad
+            </AppText>
+            <AppText variant="kucuk" color="solukMetin" style={styles.adOrtali}>
+              Belgende ve sicilinde görünecek. İstediğin zaman değiştirebilirsin.
+            </AppText>
+            <TextInput
+              style={styles.adGirdi}
+              value={adG}
+              onChangeText={setAdG}
+              placeholder="Ad"
+              placeholderTextColor={Palette.solukMetin}
+              autoCapitalize="words"
+              maxLength={40}
+              editable={!kaydediliyor}
+            />
+            <TextInput
+              style={styles.adGirdi}
+              value={soyadG}
+              onChangeText={setSoyadG}
+              placeholder="Soyad"
+              placeholderTextColor={Palette.solukMetin}
+              autoCapitalize="words"
+              maxLength={40}
+              editable={!kaydediliyor}
+            />
+            <View style={styles.adBtnSatir}>
+              <Pressable
+                style={({ pressed }) => [styles.adVazgec, pressed && styles.adCagriBasili]}
+                onPress={() => setDuzenle(false)}
+                disabled={kaydediliyor}>
+                <AppText variant="govde" color="solukMetin" bold>
+                  Vazgeç
+                </AppText>
+              </Pressable>
+              <Pressable
+                style={({ pressed }) => [styles.adKaydet, pressed && styles.adCagriBasili]}
+                onPress={() => void adKaydet()}
+                disabled={kaydediliyor}>
+                {kaydediliyor ? (
+                  <ActivityIndicator color={Palette.beyaz} />
+                ) : (
+                  <AppText variant="govde" color="beyaz" bold>
+                    Kaydet
+                  </AppText>
+                )}
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -591,6 +693,69 @@ const styles = StyleSheet.create({
   kisiAyrac: {
     height: 1,
     backgroundColor: Palette.ayirici,
+  },
+  adCagri: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
+    borderRadius: Radius.m,
+    padding: Spacing.two,
+  },
+  adCagriBasili: { opacity: 0.85 },
+  adCagriMetin: { flex: 1, lineHeight: 18 },
+  adPerde: {
+    flex: 1,
+    backgroundColor: 'rgba(11,31,58,0.45)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: Spacing.three,
+  },
+  adKutu: {
+    width: '100%',
+    maxWidth: 380,
+    backgroundColor: Palette.kartKremi,
+    borderRadius: Radius.l,
+    padding: Spacing.four,
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  adOrtali: { textAlign: 'center' },
+  adGirdi: {
+    width: '100%',
+    backgroundColor: Palette.kremZemin,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+    color: Palette.anaMetin,
+    fontSize: 16,
+  },
+  adBtnSatir: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    width: '100%',
+    marginTop: Spacing.one,
+  },
+  adVazgec: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: Spacing.three,
+    borderRadius: Radius.m,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+  },
+  adKaydet: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: Spacing.three,
+    borderRadius: Radius.m,
+    backgroundColor: Palette.lacivert,
   },
   kisiSatir: {
     flexDirection: 'row',
