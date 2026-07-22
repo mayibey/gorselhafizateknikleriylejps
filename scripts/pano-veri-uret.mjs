@@ -46,14 +46,19 @@ const BRANS = {
 const CEZA_DER = new Set(['yazili_ikaz', 'uyari', 'kinama', 'ayliktan_kesme']);
 const ODUL_DER = new Set(['takdir', 'basari', 'ustun_basari']);
 
-const [ilerleme, profiller, haklar, maclar] = await Promise.all([
+const KAMPANYA_BASLIK = 'Adını gir 🎖️'; // isim-girme duyurusu (kim hedeflendiyse o an ismi eksikti)
+
+const [ilerleme, profiller, haklar, maclar, kampanyaDuyuru] = await Promise.all([
   tumu('kullanici_ilerleme?select=user_id,veri,guncelleme&order=guncelleme.desc', 100),
   tumu('profiles?select=id,email,ad,soyad,rutbe,brans,created_at'),
   tumu('uyelik_haklari?select=user_id&satin_alma_token=not.is.null'),
   tumu('er_meydani_mac?select=oyuncu_id,kazandim'),
+  tumu(`duyurular?select=hedef_user_id&baslik=eq.${encodeURIComponent(KAMPANYA_BASLIK)}&hedef_user_id=not.is.null`),
 ]);
 
 const pm = Object.fromEntries(profiller.map((p) => [p.id, p]));
+const kampanyaHedef = new Set(kampanyaDuyuru.map((d) => d.hedef_user_id)); // duyuru gönderilen (o an isimsizdi)
+const isimVar = (p) => !!(p.ad || '').trim() && !!(p.soyad || '').trim();
 const alici = new Set(haklar.map((h) => h.user_id)); // gerçek satın alan (premium)
 const mac = {};
 maclar.forEach((m) => {
@@ -82,9 +87,12 @@ const rows = ilerleme.map((r) => {
 
   const em = mac[r.user_id] || { n: 0, g: 0 };
   const premium = alici.has(r.user_id);
+  const kHedef = kampanyaHedef.has(r.user_id); // isim duyurusu gönderildi mi
+  const kGirdi = kHedef && isimVar(p); // gönderildi VE artık ismi var → dönüştü
 
   return {
     n: ((p.ad || '') + ' ' + (p.soyad || '')).trim() || null,
+    kHedef, kGirdi,
     e: p.email || null,
     r: RUTBE[p.rutbe] || p.rutbe || null,
     b: BRANS[p.brans] || p.brans || null,
@@ -111,13 +119,17 @@ ilerleme.forEach((r) => (r.veri?.studyDays || []).forEach((d) => { gunluk[d] = (
 
 const bugun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
 const uyuyanSay = rows.filter((r) => r.uyuyan).length;
+// İsim kampanyası: hedeflenen TÜM kişiler (376) üzerinden dönüşüm (sadece çalışanlar değil)
+const girenler = [...kampanyaHedef].filter((id) => pm[id] && isimVar(pm[id]));
+const kampanya = { hedef: kampanyaHedef.size, girdi: girenler.length };
 writeFileSync(
   join(cikti, 'pano-veri.json'),
-  JSON.stringify({ rows, gunluk, toplamProfil: profiller.length, toplamAlici: alici.size, uyuyan: uyuyanSay, bugun }),
+  JSON.stringify({ rows, gunluk, kampanya, toplamProfil: profiller.length, toplamAlici: alici.size, uyuyan: uyuyanSay, bugun }),
 );
 
 console.log(
   `pano-veri.json → ${cikti}\n` +
   `  profil ${profiller.length} · gerçek çalışan (SRS>0) ${rows.filter((r) => r.srs > 0).length} · ` +
-  `ödeyen ${alici.size} · ödeyip-çalışmayan ${uyuyanSay} · düello oynayan ${Object.keys(mac).length}`,
+  `ödeyen ${alici.size} · ödeyip-çalışmayan ${uyuyanSay} · düello oynayan ${Object.keys(mac).length}\n` +
+  `  İSİM KAMPANYASI: ${kampanya.hedef} hedef · ${kampanya.girdi} girdi (%${kampanya.hedef ? Math.round((kampanya.girdi / kampanya.hedef) * 100) : 0})`,
 );
