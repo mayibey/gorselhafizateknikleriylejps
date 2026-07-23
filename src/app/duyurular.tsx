@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Linking, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -50,6 +50,12 @@ function DuyuruKarti({ duyuru }: { duyuru: Duyuru }) {
   const tarih = tarihBicim(duyuru.created_at);
   // link='paywall' → duyuruya dokununca satın alma ekranı açılır (indirim duyuruları için).
   const paywallGit = duyuru.link === 'paywall';
+  // link bir URL ise (ör. t.me) → "Telegram'a Katıl" butonu; dokununca dış uygulamada açılır.
+  const urlGit = !!duyuru.link && /^(https?:\/\/|t\.me\/)/i.test(duyuru.link);
+  const linkAc = () => {
+    const u = duyuru.link!.startsWith('http') ? duyuru.link! : `https://${duyuru.link!}`;
+    void Linking.openURL(u).catch(() => {});
+  };
 
   const govde = (
     <>
@@ -80,6 +86,18 @@ function DuyuruKarti({ duyuru }: { duyuru: Duyuru }) {
           </AppText>
           <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.lacivert} />
         </View>
+      ) : null}
+      {urlGit ? (
+        <Pressable
+          style={({ pressed }) => [styles.katilBtn, pressed && styles.kartBasili]}
+          onPress={linkAc}
+          accessibilityRole="button"
+          accessibilityLabel="Telegram'a katıl">
+          <MaterialCommunityIcons name="send" size={16} color={Palette.beyaz} />
+          <AppText variant="kucuk" color="beyaz" bold>
+            Telegram'a Katıl
+          </AppText>
+        </Pressable>
       ) : null}
     </>
   );
@@ -138,6 +156,16 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginTop: Spacing.one,
     gap: 2,
+  },
+  katilBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    marginTop: Spacing.two,
+    paddingVertical: 10,
+    borderRadius: Radius.m,
+    backgroundColor: Palette.lacivert,
   },
   baslikSatir: {
     flexDirection: 'row',
