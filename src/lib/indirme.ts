@@ -15,7 +15,7 @@ import { AppState } from 'react-native';
 import { KANUN_BOYUT } from '../assets/kart-boyutlari';
 import { KART_GORSEL_YOLLARI } from '../assets/kart-gorselleri';
 import { KART_SES_YOLLARI } from '../assets/kart-sesleri';
-import { ICERIK_TABANI } from '@/constants/config';
+import { ICERIK_TABANI, IMZALI_URL_AKTIF } from '@/constants/config';
 import { icerikAnahtari } from './cihaz-anahtar';
 import { gorselFiligran, imzaliUrller } from './imzali-url';
 import { aesSifrele, b64ToBytes, bytesToB64 } from './sifreleme';
@@ -159,12 +159,25 @@ export async function kanunIndir(
   await FileSystem.makeDirectoryAsync(KOK + klasor, { intermediates: true }).catch(() => {});
   const anahtar = await icerikAnahtari();
 
-  // İMZALI URL (ses için): tüm yollar tek çağrıda; yoksa public.
+  // İMZALI URL: tüm yollar tek çağrıda (batch). Eksikse TEKİL yeniden istenir → retry gerçekten yeni
+  // imzalı URL alır. Bucket PRIVATE olduğundan imzalı aktifken public'e DÜŞÜLMEZ: public 76B "Bucket
+  // not found" döner ve eskiden bu hata "ses dosyası" diye kaydediliyordu (kart var ama "ses yok").
   const tumYollar = [...gorseller, ...sesler].map((d) => d.yol);
   const imzali = await imzaliUrller(tumYollar).catch(() => new Map<string, string>());
-  const indirUrl = (yol: string) => imzali.get(yol) ?? `${ICERIK_TABANI}/${yol}`;
+  const indirUrl = async (yol: string): Promise<string | null> => {
+    const v = imzali.get(yol);
+    if (v) return v;
+    if (IMZALI_URL_AKTIF) {
+      const m = await imzaliUrller([yol]).catch(() => new Map<string, string>());
+      const u = m.get(yol);
+      if (u) imzali.set(yol, u);
+      return u ?? null; // imzalı alınamadı → public'e DÜŞME (private bucket, bozuk iner)
+    }
+    return `${ICERIK_TABANI}/${yol}`; // eski/public-bucket kurulumu için geriye uyum
+  };
   // GÖRSEL için: filigran fonksiyonu (sunucu e-postayı piksele basar). Aktifse görseller buradan.
   const filigran = await gorselFiligran().catch(() => null);
+  const GECERLI_MIN = 1024; // altı = sunucu hata gövdesi (ör. 76B), gerçek içerik değil
 
   let biten = 0;
   let inenBayt = 0;
@@ -174,27 +187,30 @@ export async function kanunIndir(
     onIlerleme?.({ toplam, biten, yuzde: Math.round((biten / toplam) * 100), inenBayt });
   };
 
-  // Tek dosya: GÖRSEL = (filigran fn / imzalı-public) indir + AES şifrele; SES = imzalı/public.
-  // Var olanı atlar (devam-edilebilir).
+  // Tek dosya: GÖRSEL = (filigran fn / imzalı) indir + AES şifrele; SES = imzalı indir.
+  // Var + GERÇEKTEN dolu olanı atlar (minik bozuk dosyayı "inmiş" SAYMA → eski hatalı sesler yeniden
+  // iner). HTTP != 200 ya da minik gövde → ATMA (kaydetme), böylece retry temiz yeniden dener.
   const indirTek = async (tip: 'gorsel' | 'ses', yol: string) => {
     const hedef = KOK + yol;
     const bilgi = await FileSystem.getInfoAsync(hedef);
-    if (bilgi.exists && bilgi.size > 0) return;
+    if (bilgi.exists && (bilgi.size ?? 0) >= GECERLI_MIN) return;
     if (tip === 'gorsel') {
-      if (filigran) {
-        await FileSystem.downloadAsync(`${filigran.base}?yol=${encodeURIComponent(yol)}`, hedef, {
-          headers: filigran.headers,
-        });
-      } else {
-        await FileSystem.downloadAsync(indirUrl(yol), hedef);
-      }
+      const url = filigran ? `${filigran.base}?yol=${encodeURIComponent(yol)}` : await indirUrl(yol);
+      if (!url) throw new Error('görsel URL alınamadı: ' + yol);
+      const res = await FileSystem.downloadAsync(url, hedef, filigran ? { headers: filigran.headers } : undefined);
+      if (res.status !== 200) throw new Error(`görsel HTTP ${res.status}: ${yol}`);
       const b64 = await FileSystem.readAsStringAsync(hedef, { encoding: FileSystem.EncodingType.Base64 });
       const paket = aesSifrele(b64ToBytes(b64), anahtar);
       await FileSystem.writeAsStringAsync(hedef, bytesToB64(paket), {
         encoding: FileSystem.EncodingType.Base64,
       });
     } else {
-      await FileSystem.downloadAsync(indirUrl(yol), hedef);
+      const url = await indirUrl(yol);
+      if (!url) throw new Error('ses imzalı URL alınamadı: ' + yol);
+      const res = await FileSystem.downloadAsync(url, hedef);
+      if (res.status !== 200) throw new Error(`ses HTTP ${res.status}: ${yol}`);
+      const s = await FileSystem.getInfoAsync(hedef);
+      if (!s.exists || (s.size ?? 0) < GECERLI_MIN) throw new Error('ses dosyası geçersiz/boş: ' + yol);
     }
   };
 
