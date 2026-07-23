@@ -138,6 +138,17 @@ export default function SicilScreen() {
         <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
       </Pressable>
 
+      {/* Çift yönlü destek — talep aç, karşılıklı yazış (biz /admin'den yanıtlarız). */}
+      <Pressable
+        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
+        onPress={() => router.push('/destek')}>
+        <MaterialCommunityIcons name="lifebuoy" size={20} color={Palette.lacivert} />
+        <AppText variant="kucuk" bold style={styles.planAd}>
+          Destek / Taleplerim
+        </AppText>
+        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+      </Pressable>
+
       <KisiselBilgiler />
 
       {/* Premium'sa "Üyeliğim" kartı (aktif paketler) — değilse görünmez. */}
