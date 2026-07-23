@@ -59,12 +59,9 @@ export default function AyarlarScreen() {
         deger={bransAd}
         onPress={() => router.push('/brans-sec')}
       />
-      <Satir
-        ikon="chevron-triple-up"
-        etiket="Rütbe"
-        deger={rutbeAd}
-        onPress={() => router.push('/rutbe-sec')}
-      />
+      {/* Rütbe kilitli: bir kez seçilir, uygulamadan değiştirilemez (topluluk rütbe grupları için). */}
+      <Satir ikon="chevron-triple-up" etiket="Rütbe" deger={rutbeAd} kilitli />
+
       {hazir ? (
         <Satir
           ikon={kullanici ? 'account-check' : 'account-circle-outline'}
@@ -128,15 +125,17 @@ function Satir({
   deger,
   rozet,
   onPress,
+  kilitli,
 }: {
   ikon: IconName;
   etiket: string;
   deger?: string;
   rozet?: boolean;
-  onPress: () => void;
+  onPress?: () => void;
+  kilitli?: boolean;
 }) {
-  return (
-    <Pressable style={({ pressed }) => [styles.satir, pressed && styles.pressed]} onPress={onPress}>
+  const icerik = (
+    <>
       <MaterialCommunityIcons name={ikon} size={22} color={Palette.lacivert} />
       <AppText variant="kucuk" bold style={styles.etiket}>
         {etiket}
@@ -147,7 +146,20 @@ function Satir({
           {deger}
         </AppText>
       ) : null}
-      <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+      <MaterialCommunityIcons
+        name={kilitli ? 'lock-outline' : 'chevron-right'}
+        size={22}
+        color={Palette.solukMetin}
+      />
+    </>
+  );
+  // Kilitli ya da onPress yoksa -> salt-okunur (dokunulamaz) satır.
+  if (kilitli || !onPress) {
+    return <View style={styles.satir}>{icerik}</View>;
+  }
+  return (
+    <Pressable style={({ pressed }) => [styles.satir, pressed && styles.pressed]} onPress={onPress}>
+      {icerik}
     </Pressable>
   );
 }
