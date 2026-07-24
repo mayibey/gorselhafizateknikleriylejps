@@ -1,11 +1,10 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Linking, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
-import { MEVZUAT_KAYNAK_URL } from '@/constants/config';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getBranches } from '@/db/database';
 import type { Branch } from '@/db/schema';
@@ -110,12 +109,6 @@ export default function AyarlarScreen() {
         ikon="shield-lock-outline"
         etiket="Gizlilik & Kullanım Şartları"
         onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}
-      />
-      {/* Google politikası: resmî bilgi kaynağına net + erişilebilir link (mevzuat.gov.tr). */}
-      <Satir
-        ikon="bank-outline"
-        etiket="Kanun Metinleri Kaynağı: mevzuat.gov.tr"
-        onPress={() => void Linking.openURL(MEVZUAT_KAYNAK_URL)}
       />
       {admin ? (
         <Satir
