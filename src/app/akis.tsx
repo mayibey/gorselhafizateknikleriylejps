@@ -4,6 +4,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   type LayoutChangeEvent,
+  Linking,
   type NativeScrollEvent,
   type NativeSyntheticEvent,
   Pressable,
@@ -15,6 +16,7 @@ import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Komşu kart önyükleme (prefetch) registry — bundle görselleri (require asset id).
+import { MEVZUAT_KAYNAK_URL } from '@/constants/config';
 import { gorselOnCoz } from '@/lib/gorsel-coz';
 import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { calisilabilirZayif, gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
@@ -601,6 +603,17 @@ export default function AkisScreen() {
                         </AppText>
                       </Pressable>
                     ) : null}
+                    {/* Resmî kaynak atfı — metnin ALTINDA, tıklanabilir (Google resmî-bilgi kaynak politikası). */}
+                    <Pressable
+                      onPress={() => void Linking.openURL(MEVZUAT_KAYNAK_URL)}
+                      style={({ pressed }) => [styles.maddeKaynak, pressed && styles.pressed]}
+                      accessibilityRole="link"
+                      accessibilityLabel="Resmî kaynak: mevzuat.gov.tr (tarayıcıda açılır)">
+                      <MaterialCommunityIcons name="open-in-new" size={12} color={Palette.kartMetinIkincil} />
+                      <AppText variant="etiket" color="kartMetinIkincil">
+                        Kaynak: mevzuat.gov.tr
+                      </AppText>
+                    </Pressable>
                   </>
                 ) : (
                   <View style={styles.maddeYakinda}>
@@ -975,6 +988,13 @@ const styles = StyleSheet.create({
   },
   maddeAc: {
     alignItems: 'center',
+    paddingTop: Spacing.two,
+  },
+  maddeKaynak: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
     paddingTop: Spacing.two,
   },
   // 🎧/📄 — görselin ALTINDA yan yana 2 eşit buton.
