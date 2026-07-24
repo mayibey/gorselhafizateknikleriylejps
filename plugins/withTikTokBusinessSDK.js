@@ -108,7 +108,15 @@ function withTikTokInit(config) {
       '',
     ].join('\n');
     // didFinishLaunchingWithOptions gövdesinin başına yerleştir.
-    src = src.replace(/(didFinishLaunchingWithOptions[^\n]*\{\s*\n)/, `$1${initKod}`);
+    // NOT: SDK 54'te imza ÇOK SATIRLI (func application(... didFinishLaunchingWithOptions ...) -> Bool {) —
+    // bu yüzden çok satırlı desen + '-> Bool {' sonuna ekle.
+    const desen = /(func\s+application\([\s\S]*?didFinishLaunchingWithOptions[\s\S]*?\)\s*->\s*Bool\s*\{[ \t]*\n)/;
+    if (!desen.test(src)) {
+      throw new Error(
+        "withTikTokBusinessSDK: AppDelegate'te didFinishLaunchingWithOptions bulunamadı — TikTok init eklenemedi. Plugin desenini güncelle.",
+      );
+    }
+    src = src.replace(desen, `$1${initKod}`);
     cfg.modResults.contents = src;
     return cfg;
   });
