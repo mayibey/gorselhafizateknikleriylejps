@@ -11,13 +11,26 @@
 //   Access Token (App Secret) GİZLİ -> ASLA git'e girmez; sadece process.env.TIKTOK_ACCESS_TOKEN
 //   (EAS secret) varsa Info.plist'e yazılır. Yoksa token'sız (deprecated ama çalışan) init'e düşülür,
 //   böylece token olmadan da build kırılmaz.
-const { withDangerousMod, withInfoPlist, withAppDelegate, withXcodeProject } = require('@expo/config-plugins');
+const {
+  withDangerousMod,
+  withInfoPlist,
+  withAppDelegate,
+  withXcodeProject,
+  withProjectBuildGradle,
+  withAppBuildGradle,
+  withMainApplication,
+  AndroidConfig,
+} = require('@expo/config-plugins');
 const fs = require('fs');
 const path = require('path');
 
 const APP_ID = '6787908212'; // App Store uygulama kimliği (app.mevzujsps.ios)
-const TIKTOK_APP_ID = '7666130586798063624'; // TikTok Events Manager -> TikTok Uygulama Kimliği
+const TIKTOK_APP_ID = '7666130586798063624'; // TikTok Events Manager -> iOS TikTok Uygulama Kimliği
 const POD_VERSION = '1.7.1';
+// Android — ayrı veri kaynağı / ayrı TikTok App ID (panelde oluşturuldu)
+const ANDROID_APP_ID = 'app.mevzujsps.android'; // Play paket adı
+const ANDROID_TIKTOK_APP_ID = '7666125033059762194';
+const ANDROID_SDK = 'com.github.tiktok:tiktok-business-android-sdk:1.5.0'; // jitpack (panel step 02)
 const ATT_MESAJ =
   'Reklamların sizinle daha alakalı olması ve uygulama performansını ölçebilmemiz için cihaz tanımlayıcınız kullanılır.';
 
@@ -122,10 +135,100 @@ function withTikTokInit(config) {
   });
 }
 
+// ===== ANDROID =====
+
+// 5) Proje build.gradle: jitpack maven repo (TikTok Android SDK oradan gelir).
+function withAndroidRepo(config) {
+  return withProjectBuildGradle(config, (cfg) => {
+    if (cfg.modResults.language !== 'groovy') return cfg;
+    let c = cfg.modResults.contents;
+    if (!c.includes('mevzu-tiktok-jitpack')) {
+      // allprojects/repositories içine ekle; yoksa maven satırını repositories bloklarına yamalamak yerine
+      // güvenli: 'google()' geçen ilk repositories bloğuna ekle.
+      if (/maven\s*\{\s*url\s*['"]https:\/\/jitpack\.io['"]/.test(c)) {
+        // zaten var
+      } else {
+        c = c.replace(/(repositories\s*\{)/, `$1\n        maven { url 'https://jitpack.io' } // mevzu-tiktok-jitpack`);
+      }
+      cfg.modResults.contents = c;
+    }
+    return cfg;
+  });
+}
+
+// 6) app/build.gradle: TikTok SDK bağımlılığı.
+function withAndroidDependency(config) {
+  return withAppBuildGradle(config, (cfg) => {
+    if (cfg.modResults.language !== 'groovy') return cfg;
+    let c = cfg.modResults.contents;
+    if (!c.includes('mevzu-tiktok-sdk')) {
+      c = c.replace(/(dependencies\s*\{)/, `$1\n    implementation '${ANDROID_SDK}' // mevzu-tiktok-sdk`);
+      cfg.modResults.contents = c;
+    }
+    return cfg;
+  });
+}
+
+// 7) AD_ID izni (Android 13+ reklam kimliği için).
+function withAndroidPermission(config) {
+  return AndroidConfig.Permissions.withPermissions(config, ['com.google.android.gms.permission.AD_ID']);
+}
+
+// 8) MainApplication: açılışta TikTok SDK init + startTrack.
+function withAndroidInit(config) {
+  return withMainApplication(config, (cfg) => {
+    let src = cfg.modResults.contents;
+    if (src.includes('mevzu-tiktok-init')) return cfg; // idempotent
+    const kotlin = cfg.modResults.language === 'kt' || /\.kt$/.test(cfg.modResults.path || '') || /fun onCreate\(\)/.test(src);
+    // import
+    if (!src.includes('com.tiktok.TikTokBusinessSdk')) {
+      src = src.replace(/(^package .*$)/m, `$1\n\nimport com.tiktok.TikTokBusinessSdk`);
+    }
+    if (kotlin) {
+      const initKod = [
+        '',
+        '    // mevzu-tiktok-init: TikTok Business SDK (Android) başlat',
+        '    try {',
+        `      val ttConfig = TikTokBusinessSdk.TTConfig(applicationContext)`,
+        `        .setAppId("${ANDROID_APP_ID}")`,
+        `        .setTTAppId("${ANDROID_TIKTOK_APP_ID}")`,
+        '      TikTokBusinessSdk.initializeSdk(ttConfig)',
+        '      TikTokBusinessSdk.startTrack()',
+        '    } catch (e: Throwable) { android.util.Log.e("TikTokSDK", "init hata", e) }',
+        '',
+      ].join('\n');
+      // super.onCreate() sonrasına ekle
+      src = src.replace(/(super\.onCreate\(\)\s*\n)/, `$1${initKod}`);
+    } else {
+      const initKod = [
+        '',
+        '    // mevzu-tiktok-init: TikTok Business SDK (Android) başlat',
+        '    try {',
+        `      TikTokBusinessSdk.TTConfig ttConfig = new TikTokBusinessSdk.TTConfig(getApplicationContext())`,
+        `        .setAppId("${ANDROID_APP_ID}")`,
+        `        .setTTAppId("${ANDROID_TIKTOK_APP_ID}");`,
+        '      TikTokBusinessSdk.initializeSdk(ttConfig);',
+        '      TikTokBusinessSdk.startTrack();',
+        '    } catch (Throwable e) { android.util.Log.e("TikTokSDK", "init hata", e); }',
+        '',
+      ].join('\n');
+      src = src.replace(/(super\.onCreate\(\);\s*\n)/, `$1${initKod}`);
+    }
+    cfg.modResults.contents = src;
+    return cfg;
+  });
+}
+
 module.exports = function withTikTokBusinessSDK(config) {
+  // iOS
   config = withTikTokPod(config);
   config = withLinkerFlags(config);
   config = withTikTokPlist(config);
   config = withTikTokInit(config);
+  // Android
+  config = withAndroidRepo(config);
+  config = withAndroidDependency(config);
+  config = withAndroidPermission(config);
+  config = withAndroidInit(config);
   return config;
 };
