@@ -61,6 +61,8 @@ export default function AyarlarScreen() {
       />
       {/* Rütbe kilitli: bir kez seçilir, uygulamadan değiştirilemez (topluluk rütbe grupları için). */}
       <Satir ikon="chevron-triple-up" etiket="Rütbe" deger={rutbeAd} kilitli />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any -- yeni route; expo-router tip codegen'i expo start'ta yenilenir */}
+      <Satir ikon="send-circle-outline" etiket="Telegram'a Bağlan" onPress={() => router.push('/telegram-baglan' as any)} />
 
       {hazir ? (
         <Satir

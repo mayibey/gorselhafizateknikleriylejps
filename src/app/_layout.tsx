@@ -247,6 +247,7 @@ function RootNavigator() {
         <Stack.Screen name="tanitim" />
         <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
         <Stack.Screen name="rutbe-sec" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="telegram-baglan" />
         <Stack.Screen name="giris" options={{ presentation: 'modal' }} />
       </Stack>
       {/* Branş okunana kadar krom rengi overlay (flash önleme). */}
