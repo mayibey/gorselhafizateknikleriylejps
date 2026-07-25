@@ -1,12 +1,14 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Alert, Modal, Pressable, Share, StyleSheet, TextInput, View } from 'react-native';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ActivityIndicator, Alert, Modal, Pressable, ScrollView, Share, StyleSheet, TextInput, View } from 'react-native';
 
+import { KanunSecici } from '@/components/er-meydani/kanun-secici';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { DUELLO_KANUNLAR, seedUret } from '@/lib/er-meydani-mantik';
+import { useBrans } from '@/lib/brans-context';
+import { DUELLO_KANUNLAR, kullaniciKanunlari, seedUret } from '@/lib/er-meydani-mantik';
 import {
   type AcikOda,
   type LigDurum,
@@ -48,6 +50,10 @@ export default function ErMeydaniScreen() {
   const [ligBilgi, setLigBilgi] = useState<LigDurum | null>(null);
   const [eslesiyor, setEslesiyor] = useState(false);
   const [benimOdalar, setBenimOdalar] = useState<Odam[]>([]);
+  const { brans } = useBrans();
+  const hizliScope = useMemo(() => kullaniciKanunlari(brans), [brans]);
+  const [hizliAcik, setHizliAcik] = useState(false);
+  const [hizliKanunlar, setHizliKanunlar] = useState<number[]>([]); // boş = karışık (kapsam)
   const [onayOda, setOnayOda] = useState<OdaOnizle | null>(null);
   const [katiliyor, setKatiliyor] = useState(false);
 
@@ -106,7 +112,13 @@ export default function ErMeydaniScreen() {
 
   function hizliEslesme() {
     if (!playAktif) return;
-    macaGit({ seed: seedUret(), mod: 'hizli' });
+    setHizliAcik(true); // önce konu (kanun) seçtir, sonra sisteme karşı başlat
+  }
+  function hizliBasla() {
+    // Seçim yoksa kullanıcının TÜM kapsamı (müşterek + branşı); tüm 135 kanun DEĞİL.
+    const efektif = hizliKanunlar.length ? hizliKanunlar : [...hizliScope.musterek, ...hizliScope.brans].map((k) => k.id);
+    setHizliAcik(false);
+    macaGit({ seed: seedUret(), mod: 'hizli', kanunlar: efektif });
   }
 
   // Dereceli maç: seviyeye yakın rakip bul (sunucu) → lig paramlarıyla maça git.
@@ -391,6 +403,30 @@ export default function ErMeydaniScreen() {
           </View>
         </View>
       </Modal>
+
+      {/* Hızlı eşleş — önce konu (kanun) seçimi (müşterek/branş), sonra sisteme karşı başla */}
+      <Modal visible={hizliAcik} transparent animationType="slide" onRequestClose={() => setHizliAcik(false)}>
+        <View style={styles.modalKatman}>
+          <View style={styles.modalKartGenis}>
+            <AppText variant="baslik" color="anaMetin" bold style={styles.mOrtali}>Hangi konulardan?</AppText>
+            <AppText variant="kucuk" color="solukMetin" style={styles.mOrtali}>
+              Seçmezsen müşterek + branşından karışık gelir.
+            </AppText>
+            <ScrollView style={styles.hizliListe} contentContainerStyle={styles.hizliListeIcerik}>
+              <KanunSecici musterek={hizliScope.musterek} brans={hizliScope.brans} kanunlar={hizliKanunlar} setKanunlar={setHizliKanunlar} />
+            </ScrollView>
+            <View style={styles.btnSatir}>
+              <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={() => setHizliAcik(false)}>
+                <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
+              </Pressable>
+              <Pressable style={({ pressed }) => [styles.kaydetBtn, pressed && styles.basili]} onPress={hizliBasla}>
+                <MaterialCommunityIcons name="flash" size={20} color={Palette.beyaz} />
+                <AppText variant="govde" color="beyaz" bold>Başla</AppText>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </Screen>
   );
 }
@@ -474,21 +510,21 @@ function OdaKurPanel({
 }) {
   const [soru, setSoru] = useState(10);
   const [sure, setSure] = useState(15);
-  const [kanunlar, setKanunlar] = useState<number[]>([]); // boş = karışık
+  const [kanunlar, setKanunlar] = useState<number[]>([]); // boş = karışık (kullanıcının tüm kapsamı)
   const [kanunAcik, setKanunAcik] = useState(false);
   const [gizli, setGizli] = useState(false); // false = herkese açık · true = şifreli (sadece kodla)
   const [kuruluyor, setKuruluyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
-
-  function kanunToggle(id: number) {
-    setKanunlar((k) => (k.includes(id) ? k.filter((x) => x !== id) : [...k, id]));
-  }
+  const { brans } = useBrans();
+  const { musterek, brans: bransKanunlar } = useMemo(() => kullaniciKanunlari(brans), [brans]);
 
   async function kur() {
     if (!aktif || kuruluyor) return;
     setKuruluyor(true);
     setHata(null);
-    const sonuc = await odaKur(soru, sure, kanunlar, gizli);
+    // "Karışık" (seçim yok) = kullanıcının TÜM kapsamı (müşterek + branşı); tüm 135 kanun DEĞİL.
+    const efektif = kanunlar.length ? kanunlar : [...musterek, ...bransKanunlar].map((k) => k.id);
+    const sonuc = await odaKur(soru, sure, efektif, gizli);
     setKuruluyor(false);
     if (sonuc.ok && sonuc.oda) {
       onKuruldu(sonuc.oda);
@@ -510,39 +546,12 @@ function OdaKurPanel({
         style={({ pressed }) => [styles.kanunDropdown, pressed && styles.basili]}>
         <MaterialCommunityIcons name="format-list-checks" size={18} color={Palette.lacivert} />
         <AppText variant="kucuk" color="anaMetin" bold style={styles.kanunDropdownMetin} numberOfLines={1}>
-          {kanunlar.length === 0 ? 'Karışık (tüm kanunlar)' : `${kanunlar.length} kanun seçili`}
+          {kanunlar.length === 0 ? 'Karışık (müşterek + branşın)' : `${kanunlar.length} kanun seçili`}
         </AppText>
         <MaterialCommunityIcons name={kanunAcik ? 'chevron-up' : 'chevron-down'} size={20} color={Palette.solukMetin} />
       </Pressable>
       {kanunAcik ? (
-        <View style={styles.kanunListe}>
-          <Pressable
-            onPress={() => setKanunlar([])}
-            style={({ pressed }) => [styles.kanunRow, kanunlar.length === 0 && styles.kanunSecili, pressed && styles.basili]}>
-            <MaterialCommunityIcons
-              name={kanunlar.length === 0 ? 'check-circle' : 'circle-outline'}
-              size={18}
-              color={kanunlar.length === 0 ? Palette.lacivert : Palette.solukMetin}
-            />
-            <AppText variant="kucuk" color="anaMetin" bold>Karışık (tüm kanunlar)</AppText>
-          </Pressable>
-          {DUELLO_KANUNLAR.map((k) => {
-            const sec = kanunlar.includes(k.id);
-            return (
-              <Pressable
-                key={k.id}
-                onPress={() => kanunToggle(k.id)}
-                style={({ pressed }) => [styles.kanunRow, sec && styles.kanunSecili, pressed && styles.basili]}>
-                <MaterialCommunityIcons
-                  name={sec ? 'check-circle' : 'circle-outline'}
-                  size={18}
-                  color={sec ? Palette.lacivert : Palette.solukMetin}
-                />
-                <AppText variant="kucuk" color="anaMetin" style={styles.kanunAd}>{k.ad}</AppText>
-              </Pressable>
-            );
-          })}
-        </View>
+        <KanunSecici musterek={musterek} brans={bransKanunlar} kanunlar={kanunlar} setKanunlar={setKanunlar} />
       ) : null}
 
       <AppText variant="etiket" color="solukMetin" bold style={styles.aralik}>ODA TİPİ</AppText>
@@ -758,6 +767,12 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.kartKremi, borderColor: Palette.kenarlik, borderWidth: 1,
     borderRadius: Radius.l, padding: Spacing.four, gap: Spacing.two, alignItems: 'center',
   },
+  modalKartGenis: {
+    backgroundColor: Palette.kartKremi, borderColor: Palette.kenarlik, borderWidth: 1,
+    borderRadius: Radius.l, padding: Spacing.four, gap: Spacing.two, maxHeight: '85%',
+  },
+  hizliListe: { width: '100%', marginVertical: Spacing.two },
+  hizliListeIcerik: { paddingBottom: Spacing.two },
   mOrtali: { textAlign: 'center' },
   mBilgiSatir: { flexDirection: 'row', justifyContent: 'space-around', width: '100%', marginVertical: Spacing.one },
   mBilgi: { alignItems: 'center' },

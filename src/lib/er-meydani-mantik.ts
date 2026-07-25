@@ -12,7 +12,31 @@
 import { DUELLO_SORULARI, type DuelloSoru } from '../assets/duello-sorulari';
 
 export type { DuelloSoru } from '../assets/duello-sorulari';
-export { DUELLO_KANUNLAR } from '../assets/duello-kanunlar';
+import { DUELLO_KANUNLAR } from '../assets/duello-kanunlar';
+export { DUELLO_KANUNLAR };
+
+/** Branş slug → branch_id (SEED_BRANCHES ile birebir; er-meydani kanun gruplaması için). */
+export const BRANS_SLUG_ID: Record<string, number> = {
+  jandarma: 1, mebs: 2, havacilik: 3, personel: 4, maliye: 5, istihkam: 6, ikmal: 7,
+  bakim: 8, bando: 9, tabip: 10, dis_tabibi: 11, eczaci: 12, saglik: 13, kimyager: 14,
+  veteriner: 15, muhendis: 16,
+};
+
+export type SeciciKanun = { id: number; ad: string };
+/**
+ * Kullanıcının Er Meydanı'nda SEÇEBİLECEĞİ kanunlar: müşterek (herkese) + KENDİ branşı.
+ * Kategorizasyon law_id/blok ile (duello-kanunlar.ts, seed.ts kanonik) → karışma yok.
+ */
+export function kullaniciKanunlari(bransSlug: string | null): { musterek: SeciciKanun[]; brans: SeciciKanun[] } {
+  const bid = bransSlug ? BRANS_SLUG_ID[bransSlug] : undefined;
+  const musterek: SeciciKanun[] = [];
+  const brans: SeciciKanun[] = [];
+  for (const k of DUELLO_KANUNLAR) {
+    if (k.blok === 'müşterek') musterek.push({ id: k.id, ad: k.ad });
+    else if (bid && k.branslar.includes(bid)) brans.push({ id: k.id, ad: k.ad });
+  }
+  return { musterek, brans };
+}
 
 /** Bir maçtaki soru sayısı. */
 export const SORU_SAYISI = 10;
