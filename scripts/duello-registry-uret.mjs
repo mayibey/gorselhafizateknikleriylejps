@@ -82,9 +82,72 @@ for (const s of ham) {
   });
 }
 
-// Bankada bulunan kanunlar (id + kısa ad) — oda seçici + zayıf-kanun gösterimi için.
+// ── BRANŞ SORULARI ──────────────────────────────────────────────────────────
+// Fabrika'da branş DÜELLO kaynağı YOK (yalnız müşterekte). Branş soruları Tatbikat bankasında:
+// src/assets/kart-sorulari.ts (KART_SORULARI: Record<law_id, KartSoru[]>, law_id 26-135 = branş).
+// Oradaki law_id anahtarları KANONİK (seed.ts ile birebir) -> kategorizasyon GARANTİ doğru (law_id ile,
+// numarayla DEĞİL: TCK 5237 müşterek=id1 / branş=id67 ayrı). Düello formatına çevirip ekliyoruz.
+function kartSorulariOku() {
+  const t = readFileSync(join(root, 'src', 'assets', 'kart-sorulari.ts'), 'utf8');
+  const b0 = t.indexOf('{', t.indexOf('=', t.indexOf('KART_SORULARI')));
+  const b1 = t.lastIndexOf('}');
+  const obj = t.slice(b0, b1 + 1).replace(/^(\s*)(\d+)(\s*):/gm, '$1"$2"$3:').replace(/,(\s*[}\]])/g, '$1');
+  return JSON.parse(obj);
+}
+const KART = kartSorulariOku();
+let bransEklenen = 0;
+for (const [lawIdStr, arr] of Object.entries(KART)) {
+  const lawId = Number(lawIdStr);
+  if (lawId < 26 || !Array.isArray(arr)) continue; // YALNIZ branş (müşterek düellosu ayrı özel setten gelir)
+  for (const s of arr) {
+    const siklar = Array.isArray(s.siklar) ? s.siklar : [];
+    const dogruIdx = typeof s.dogru === 'number' ? s.dogru : -1;
+    if (!s.soru || siklar.length < 2 || dogruIdx < 0 || dogruIdx >= siklar.length) { atlanan++; continue; }
+    const id = String(s.id ?? '');
+    if (SORU_KARA_LISTE.has(id)) { atlanan++; continue; }
+    if (id && seen.has(id)) { atlanan++; continue; }
+    if (id) seen.add(id);
+    sorular.push({
+      id,
+      kanun: lawId, // KANONİK law_id -> maç filtresi (getErMeydaniSorulari) bununla eşler
+      soru: String(s.soru).trim(),
+      siklar: siklar.map(sikTemizle),
+      dogru: dogruIdx,
+      aciklama: String(s.aciklama ?? '').trim(),
+      kaynak: String(s.kaynak ?? '').trim(),
+      celdirici: '', // Tatbikat sorusunda çeldirici mantığı alanı yok
+      zorluk: String(s.zorluk ?? '').trim(),
+    });
+    bransEklenen++;
+  }
+}
+console.log(`Branş soruları eklendi (Tatbikat law_id>=26): ${bransEklenen}`);
+
+// ── KANUN META (id -> {ad, blok, branslar}) — seed.ts + seed-brans-diger.ts'ten (oda seçici gruplaması). ──
+function lawMeta() {
+  const meta = {};
+  const re = /\{\s*id:\s*(\d+),\s*blok:\s*'([^']+)'[^}]*?ad:\s*["']([^"']+)["']/g;
+  for (const src of ['seed.ts', 'seed-brans-diger.ts']) {
+    const s = readFileSync(join(root, 'src', 'db', src), 'utf8');
+    for (const m of s.matchAll(re)) meta[+m[1]] = { ad: m[3], blok: m[2], branslar: [] };
+  }
+  for (let id = 26; id <= 67; id++) if (meta[id]) meta[id].branslar = [1]; // 26-67 -> Jandarma (branch_id 1)
+  const diger = readFileSync(join(root, 'src', 'db', 'seed-brans-diger.ts'), 'utf8');
+  for (const m of diger.matchAll(/law_id:\s*(\d+),\s*branch_id:\s*(\d+)/g)) {
+    if (meta[+m[1]] && !meta[+m[1]].branslar.includes(+m[2])) meta[+m[1]].branslar.push(+m[2]);
+  }
+  return meta;
+}
+const META = lawMeta();
+
+// Bankada bulunan kanunlar (id + ad + blok + branslar) — oda/hızlı-eşleş seçici gruplaması için.
 const kanunlarVar = [...new Set(sorular.map((q) => q.kanun))].filter((k) => k > 0).sort((a, b) => a - b);
-const duelloKanunlar = kanunlarVar.map((id) => ({ id, ad: KISA_AD[id] ?? `Kanun ${id}` }));
+const duelloKanunlar = kanunlarVar.map((id) => ({
+  id,
+  ad: KISA_AD[id] ?? META[id]?.ad ?? `Kanun ${id}`,
+  blok: META[id]?.blok ?? (id <= 25 ? 'müşterek' : 'branş'),
+  branslar: META[id]?.branslar ?? [],
+}));
 
 // id'ye göre deterministik sıra (tohumlu karıştırma için stabil taban).
 sorular.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
@@ -127,7 +190,7 @@ ${govde}
 // DUELLO_SORULARI boot'ta yüklenmez (PERF denetim #5). Düello sorusu yalnız maç açılınca yüklenir.
 const kanunOut = `// OTOMATİK ÜRETİLDİ — \`npm run soru:duello\`. Düello bankasındaki kanunlar (id + kısa ad).
 // Küçük liste → ana ekranda soru bankası yüklenmeden kullanılır.
-export const DUELLO_KANUNLAR: { id: number; ad: string }[] = ${JSON.stringify(duelloKanunlar)};
+export const DUELLO_KANUNLAR: { id: number; ad: string; blok: string; branslar: number[] }[] = ${JSON.stringify(duelloKanunlar)};
 `;
 
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
