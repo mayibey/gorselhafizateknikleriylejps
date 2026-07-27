@@ -8,14 +8,15 @@ import { supabase } from '@/lib/supabase';
 
 /**
  * Kullanıcının GÜNCEL indirim durumu (sunucu hesaplar; ÜST ÜSTE BİNMEZ — tek, en yüksek):
- *  kaynak='kod' (SUEM2020OZEL30 → %30) > kaynak='ilk_giris' (hesap açılışından 24 saat → %20) > yok.
- *  yillik_offer  = YILLIK için Play abonelik teklifinin offerId'si.
- *  omurboyu_urun = ÖMÜR BOYU için indirimli Play ürününün SKU'su.
- *  bitis         = (yalnız ilk giriş) indirimin biteceği an (ISO).
+ *  kaynak='kod' (SUEM2020OZEL30 → %30) > kaynak='kampanya' (herkese süreli %20) >
+ *  kaynak='ilk_giris' (yeni hesaba özel, açılıştan N saat → %20) > yok.
+ *  yillik_offer  = YILLIK + ÖMÜR BOYU için Play teklifinin (base fiyatın üzerine) offerId'si.
+ *  omurboyu_urun = ÖMÜR BOYU base ürün SKU'su.
+ *  bitis         = indirimin biteceği an (ISO) — ilk giriş ve kampanya için; süresiz kampanyada yok.
  */
 export type IndirimDurumu = {
   yuzde: number;
-  kaynak: 'kod' | 'ilk_giris';
+  kaynak: 'kod' | 'ilk_giris' | 'kampanya';
   yillik_offer: string;
   omurboyu_urun: string;
   bitis?: string;

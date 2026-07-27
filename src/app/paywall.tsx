@@ -103,9 +103,13 @@ function PaywallIcerik() {
     };
   }, [kullanici]);
 
-  // İLK GİRİŞ indirimi için CANLI geri sayım — bitiş sunucudan gelir; yalnız gerekince saniyede bir tikler.
+  // Süreli indirimler için CANLI geri sayım — bitiş sunucudan gelir; yalnız gerekince saniyede bir tikler.
+  // İlk giriş (yeni hesap) ve kampanya (herkese süreli) indirimlerinin bitişi vardır.
   const [simdi, setSimdi] = useState(() => Date.now());
-  const geriSayimVar = indirim != null && indirim.kaynak === 'ilk_giris' && !!indirim.bitis;
+  const geriSayimVar =
+    indirim != null &&
+    (indirim.kaynak === 'ilk_giris' || indirim.kaynak === 'kampanya') &&
+    !!indirim.bitis;
   useEffect(() => {
     if (!geriSayimVar) return;
     const t = setInterval(() => setSimdi(Date.now()), 1000);
@@ -457,7 +461,9 @@ function PaywallIcerik() {
                 <AppText variant="kucuk" color="yesil" bold style={styles.esnek}>
                   %{indirim.yuzde} indirimin uygulanıyor — {indirimKapsam} geçerli.
                   {geriSayim
-                    ? ` İlk gün fırsatı: ${geriSayim} kaldı!`
+                    ? indirim.kaynak === 'kampanya'
+                      ? ` Kampanya bitişine ${geriSayim} kaldı!`
+                      : ` İlk gün fırsatı: ${geriSayim} kaldı!`
                     : indirim.kaynak === 'ilk_giris'
                       ? ' (ilk gün fırsatı)'
                       : ''}
@@ -468,6 +474,8 @@ function PaywallIcerik() {
               <PlanButon
                 baslik="Yıllık"
                 fiyat={yillikGosterFiyat()}
+                // İndirimliyken ANA fiyatı üstü çizili göster → indirim base fiyat üzerinden belli olsun.
+                eskiFiyat={yillikIndirimliTeklif() ? fiyat(URUN_YILLIK) : undefined}
                 altYazi={
                   yillikIndirimliTeklif() ? `/yıl · %${indirim?.yuzde} indirimli` : '/yıl · yenilenir'
                 }
@@ -478,6 +486,7 @@ function PaywallIcerik() {
               <PlanButon
                 baslik="Ömür boyu"
                 fiyat={omurboyuGosterFiyat()}
+                eskiFiyat={omurboyuIndirimliTeklif() ? fiyat(URUN_OMURBOYU) : undefined}
                 altYazi={
                   omurboyuIndirimliTeklif()
                     ? `tek seferlik · %${indirim?.yuzde} indirimli`
@@ -577,6 +586,7 @@ function PaywallIcerik() {
 function PlanButon({
   baslik,
   fiyat,
+  eskiFiyat,
   altYazi,
   vurgu,
   mesgul,
@@ -585,6 +595,7 @@ function PlanButon({
 }: {
   baslik: string;
   fiyat: string;
+  eskiFiyat?: string;
   altYazi: string;
   vurgu?: boolean;
   mesgul?: boolean;
@@ -615,6 +626,14 @@ function PlanButon({
         <ActivityIndicator color={vurgu ? Palette.beyaz : Palette.lacivert} style={styles.planSpinner} />
       ) : (
         <>
+          {eskiFiyat ? (
+            <AppText
+              variant="etiket"
+              color={vurgu ? 'beyaz' : 'solukMetin'}
+              style={styles.eskiFiyat}>
+              {eskiFiyat}
+            </AppText>
+          ) : null}
           <AppText variant="altBaslik" bold color={vurgu ? 'beyaz' : 'anaMetin'}>
             {fiyat}
           </AppText>
@@ -743,6 +762,10 @@ const styles = StyleSheet.create({
   },
   planSpinner: {
     marginVertical: Spacing.two,
+  },
+  eskiFiyat: {
+    textDecorationLine: 'line-through',
+    opacity: 0.7,
   },
   durumSatir: {
     flexDirection: 'row',
