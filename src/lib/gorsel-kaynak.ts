@@ -1,14 +1,14 @@
 /**
- * Kart görseli kaynak çözümleyici. Öncelik:
+ * Kart görseli kaynak çözümleyici (ses-kaynak.ts ile simetrik). Öncelik:
  *  (1) İNDİRİLMİŞ (şifreli yerel) → `indirilmisGorsel` yolu döner; StudyCard onu ÇÖZ'er (data-URI).
- *  (2) ICERIK_TABANI doluysa → uzak {uri} (stream + expo-image cache).
+ *  (2) ICERIK_TABANI doluysa → imzalı uzak {uri} (WEB + NATIVE; Storage'daki DÜZ webp doğrudan).
  *  (3) pakete GÖMÜLÜ require.
  */
 import type { ImageRequireSource } from 'react-native';
 
 import { KART_GORSEL_YOLLARI, KART_GORSELLERI } from '../assets/kart-gorselleri';
 import { ICERIK_TABANI } from '@/constants/config';
-import { imzaliUriSync, webImzaliAktif } from './imzali-cache';
+import { imzaliAktif, imzaliUriSync } from './imzali-cache';
 import { kanunIndirilmisMi } from './indirme';
 
 export type GorselKaynak = ImageRequireSource | { uri: string };
@@ -34,9 +34,12 @@ export function gorselKaynak(key?: string | null): GorselKaynak | undefined {
   if (!key) return undefined;
   const yol = KART_GORSEL_YOLLARI[key];
   if (yol && ICERIK_TABANI) {
-    // Web + private bucket: public URL 400 verir → kısa-ömürlü imzalı URL (hazır değilse
-    // undefined; imzali-cache getirince dinleyiciler tetiklenir, render'da URL gelir).
-    if (webImzaliAktif()) {
+    // Private bucket → public URL 400 verir; imzalı URL (WEB + NATIVE, ses-kaynak ile simetrik).
+    // İndirilmemiş/akış senaryosu: eskiden native'de webImzaliAktif() (web-only) yüzünden public
+    // URL dönüp 400 alıyordu → görsel açılmıyordu. Storage'daki dosya DÜZ webp (AES şifreleme
+    // yalnız indirme sırasında cihazda yapılır) → imzalı URL doğrudan {uri} ile gösterilir
+    // (decrypt YOK). Hazır değilse undefined → imzalı gelince useImzaliTazele render'ı tazeler.
+    if (imzaliAktif()) {
       const imzali = imzaliUriSync(yol);
       return imzali ? { uri: imzali } : undefined;
     }
@@ -45,18 +48,19 @@ export function gorselKaynak(key?: string | null): GorselKaynak | undefined {
   return KART_GORSELLERI[key];
 }
 
-/** Web'de görselin imzalı URL'i henüz YOLDA mı? (StudyCard "hazırlanıyor" göstersin, placeholder değil) */
+/** Görselin imzalı URL'i henüz YOLDA mı? (WEB + NATIVE; StudyCard "hazırlanıyor" göstersin, placeholder değil) */
 export function gorselBekliyorMu(key?: string | null): boolean {
-  if (!key || !webImzaliAktif()) return false;
+  if (!key || !imzaliAktif()) return false;
+  if (indirilmisGorsel(key)) return false; // yerelde şifreli var → imzalı URL beklenmez
   const yol = KART_GORSEL_YOLLARI[key];
   return !!yol && imzaliUriSync(yol) === null;
 }
 
 /** Bu kart için herhangi bir görsel var mı? (indirilmiş-şifreli / uzak / gömülü)
- *  Web imzalı modda URL'in henüz gelmemiş olması "yok" SAYILMAZ (manifest'te varsa var). */
+ *  İmzalı modda (web+native) URL'in henüz gelmemiş olması "yok" SAYILMAZ (manifest'te varsa var). */
 export function gorselVarMi(key?: string | null): boolean {
   if (!key) return false;
-  if (webImzaliAktif() && KART_GORSEL_YOLLARI[key]) return true;
+  if (imzaliAktif() && KART_GORSEL_YOLLARI[key]) return true;
   return !!indirilmisGorsel(key) || gorselKaynak(key) !== undefined;
 }
 
