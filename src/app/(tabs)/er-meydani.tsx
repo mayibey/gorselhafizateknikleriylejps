@@ -28,7 +28,7 @@ import {
 } from '@/lib/er-meydani';
 
 const SORU_SECENEK = [5, 10, 15, 20];
-const SURE_SECENEK = [10, 15, 20, 30];
+const SURE_SECENEK = [20, 30, 45, 60];
 const KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
 
 /** Kanun id listesini okunur metne çevirir ("Karışık" ya da kanun adları). */
@@ -134,7 +134,7 @@ export default function ErMeydaniScreen() {
         seed: String(e.seed),
         mod: 'lig',
         soru: '10',
-        sure: '15',
+        sure: '60',
         rakip_skor: String(e.rakip_skor),
         rakip_rating: String(e.rakip_rating),
         rakip_id: e.rakip_id ?? '',
@@ -509,7 +509,7 @@ function OdaKurPanel({
   onKuruldu: (oda: OdaBilgi) => void;
 }) {
   const [soru, setSoru] = useState(10);
-  const [sure, setSure] = useState(15);
+  const [sure, setSure] = useState(30);
   const [kanunlar, setKanunlar] = useState<number[]>([]); // boş = karışık (kullanıcının tüm kapsamı)
   const [kanunAcik, setKanunAcik] = useState(false);
   const [gizli, setGizli] = useState(false); // false = herkese açık · true = şifreli (sadece kodla)

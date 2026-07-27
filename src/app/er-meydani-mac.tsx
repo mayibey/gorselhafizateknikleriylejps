@@ -87,7 +87,7 @@ export default function ErMeydaniMacScreen() {
   }, [params.soru]);
   const sureMs = useMemo(() => {
     const n = Number(params.sure);
-    return [10, 15, 20, 30].includes(n) ? n * 1000 : SORU_SURE_MS;
+    return [20, 30, 45, 60].includes(n) ? n * 1000 : SORU_SURE_MS;
   }, [params.sure]);
 
   // Oda konu seçimi (kanun id'leri virgülle). Yoksa → tüm banka (karışık; lig hep karışık).
@@ -308,7 +308,7 @@ export default function ErMeydaniMacScreen() {
           seed: String(e.seed),
           mod: 'lig',
           soru: '10',
-          sure: '15',
+          sure: '60',
           rakip_skor: String(e.rakip_skor),
           rakip_rating: String(e.rakip_rating),
           rakip_id: e.rakip_id ?? '',
@@ -497,7 +497,7 @@ export default function ErMeydaniMacScreen() {
 
   const soru = sorular[index];
   const saniye = Math.ceil(kalanMs / 1000);
-  const sureOran = Math.max(0, kalanMs / SORU_SURE_MS);
+  const sureOran = Math.max(0, kalanMs / sureMs);
 
   return (
     <Screen title="Er Meydanı" onGeri={() => router.back()} scroll={false}>
