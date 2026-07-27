@@ -309,6 +309,16 @@ class SqliteBackend implements Backend {
       version = 27;
     }
 
+    if (version < 28) {
+      // ÖZET kartları kullanıcıdan GİZLENDİ (gorsel_yolu '_ozet_' deseni). Patikadan da
+      // çıkarıldılar → bolumler/bolum_kartlari SALT REFERANS veri, sıfırla+yeniden tohumla.
+      // cards/srs'e DOKUNULMAZ; kullanıcı ilerlemesi (srs, card_id ile bağlı) TAM korunur.
+      // ('_ayirt_' kartları '_ozet_' içermez → patikada aynen kalır.)
+      await db.execAsync('DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedBolumler();
+      version = 28;
+    }
+
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
     }
@@ -522,10 +532,14 @@ class SqliteBackend implements Backend {
   async getCardsByLaw(lawId: number): Promise<QueueCard[]> {
     if (!this.db) throw new Error('DB hazır değil');
     const cards = await this.db.getAllAsync<CardWithLaw>(
+      // Özet kartları kullanıcıdan GİZLİ: gorsel_yolu'nda literal '_ozet_' geçenler elenir.
+      // SQLite LIKE'da '_' tek-karakter jokeridir → ESCAPE '\' ile alt çizgiler LİTERAL eşleşir.
+      // NOT: '_ayirt_' kartları '_ozet_' içermez → ETKİLENMEZ (yalnız özet kartları gizlenir).
       `SELECT c.*, l.blok AS blok, l.ad AS law_ad
        FROM cards c
        JOIN laws l ON l.id = c.law_id
-       WHERE c.law_id = ?`,
+       WHERE c.law_id = ?
+         AND c.gorsel_yolu NOT LIKE '%\\_ozet\\_%' ESCAPE '\\'`,
       lawId,
     );
     const srsRows = await this.db.getAllAsync<Srs>('SELECT card_id, kutu, sonraki_tarih FROM srs');

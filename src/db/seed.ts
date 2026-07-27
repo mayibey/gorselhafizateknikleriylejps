@@ -515,6 +515,10 @@ const _patika = (() => {
     // 2) Kartları dağıt (SEED_CARDS sırası korunur → düğüm-içi panel sırası doğal).
     for (const card of SEED_CARDS) {
       if (card.law_id !== lawId) continue;
+      // ÖZET kartları patikadan GİZLİ: gorsel_yolu'nda '_ozet_' geçenler hiçbir düğüme
+      // (ne kendi "Madde N özet" düğümüne ne de kanun sonu "Özet" düğümüne) bağlanmaz →
+      // patikada görünmez. '_ayirt_' kartları '_ozet_' içermez → ETKİLENMEZ.
+      if (card.gorsel_yolu?.includes('_ozet_')) continue;
       const bilgi = ayirtOzetBilgi(card.gorsel_yolu);
       if (bilgi) {
         // Ayırt/özet → KENDİ düğümü, kapsamdaki en büyük üyenin index'inde (madde düğümünden
