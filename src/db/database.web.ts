@@ -97,11 +97,7 @@ class MemoryBackend implements Backend {
   }
 
   async getCardsByLaw(lawId: number): Promise<QueueCard[]> {
-    // Özet kartları kullanıcıdan GİZLİ (native SQL filtresiyle BİREBİR aynı): gorsel_yolu'nda
-    // '_ozet_' geçenler elenir. '_ayirt_' kartları '_ozet_' içermez → ETKİLENMEZ.
-    const cards = this.cardsWithLaw().filter(
-      (c) => c.law_id === lawId && !c.gorsel_yolu?.includes('_ozet_'),
-    );
+    const cards = this.cardsWithLaw().filter((c) => c.law_id === lawId);
     return kanunKuyrugu(cards, this.srs);
   }
 

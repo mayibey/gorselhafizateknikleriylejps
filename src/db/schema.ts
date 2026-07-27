@@ -229,4 +229,4 @@ CREATE TABLE IF NOT EXISTS sinav_sonuclari (
 `;
 
 /** Bu turun şema sürümü (PRAGMA user_version). Şema/referans veri değişince artırılır. */
-export const SCHEMA_VERSION = 28;
+export const SCHEMA_VERSION = 27;
