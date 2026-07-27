@@ -93,14 +93,16 @@ function metinCikar(lines, i) {
     .trim();
 
   // (a) Tırnak içi satır-içi metin (müşterek/disiplin stil): "(1) ..." (çok satıra taşabilir)
+  //     Tırnak BİRDEN ÇOK paragrafa (aralarında BOŞ satır ile) yayılabilir (13/A, Ek 3 gibi
+  //     çok fıkralı maddeler) → BOŞ satırda DEĞİL, KAPANIŞ tırnağında (veya yeni bölüm/işaret
+  //     satırında) dur. Boş satır paragraf ayracı olarak korunur.
   if (/^["“]/.test(after)) {
     let buf = after;
     let j = i;
     while (
       !/["”]\s*$/.test(buf) &&
       j + 1 < lines.length &&
-      lines[j + 1].trim() &&
-      !/[🎬🔨🗂️]/.test(lines[j + 1])
+      !/^(#{2,3}\s|📜|🎬|🔨|🗂️|---)/.test(lines[j + 1].trim())
     ) {
       j++;
       buf += '\n' + lines[j].trim();
@@ -146,13 +148,31 @@ function metinCikar(lines, i) {
   return text ? { text, nextIndex: i } : null;
 }
 
-/** Tek bloğu "Madde N –" sınırlarında böler → [{no, text}, ...].
- *  ID'siz kanunlarda (Jandarma v2) bir blok m.4+5+6'yı birleştirir; ayrı maddelere böler. */
+/** Tek bloğu madde başlıkları sınırlarında böler → [{no, text}, ...].
+ *  ID'siz kanunlarda (Jandarma v2) bir blok m.4+5+6'yı birleştirir; ayrı maddelere böler.
+ *  Tanınan başlıklar (satır başı, ops. `>`/`**` blok-alıntı öneki):
+ *    "Madde N –"        → label "N"      (normal madde)
+ *    "Ek Madde N –/:/-" → label "Ek N"   (kart madde_no "m.Ek N" ile eşleşir)
+ *    "Geçici Madde N …" → label "Geçici N"
+ *    "Madde N/HARF –"   → label "N/HARF" (harfli madde, örn 13/A → "m.13/A")
+ *  Ek/Geçici içinde "Madde" geçtiği için önek YAKALANIR (aksi halde "Madde N" olarak yanlış
+ *  etiketlenip gerçek maddeyle çakışırdı). Ayraç kümesi – - : (blok-alıntı "Ek Madde 1:"). */
 function bloklaBol(text) {
-  const re = /(?:^|\n)\s*Madde\s+(\d+)\s*[–-]/gi;
+  // Başlangıç sınırı: satır başı VEYA em-tire (—). Bazı başlıklar aynı satırda bir başlık
+  // önekiyle gelir ("İzinler — Ek Madde 3 –") → em-tire de blok sınırı sayılır. (— = U+2014,
+  // madde ayracı olan en-tire – = U+2013'ten AYRI; ayraç kümesiyle karışmaz.)
+  const re =
+    /(?:^|\n|—)\s*>?\s*\*{0,2}\s*(Ek|Geçici|Gecici)?\s*Madde\s+(\d+)\s*(?:\/\s*([A-Za-z]))?\s*[–\-:]/gi;
   const idxs = [];
   let mm;
-  while ((mm = re.exec(text))) idxs.push({ no: String(parseInt(mm[1], 10)), start: mm.index });
+  while ((mm = re.exec(text))) {
+    const tur = mm[1] ? mm[1].toLocaleLowerCase('tr') : '';
+    const no = String(parseInt(mm[2], 10));
+    const harf = mm[3] ? mm[3].toUpperCase() : '';
+    const label =
+      tur === 'ek' ? `Ek ${no}` : tur ? `Geçici ${no}` : harf ? `${no}/${harf}` : no;
+    idxs.push({ no: label, start: mm.index });
+  }
   if (idxs.length === 0) return [];
   if (idxs.length === 1) return [{ no: idxs[0].no, text: text.trim() }];
   const segs = [];
@@ -173,6 +193,10 @@ function masterParse(text) {
   let bloke = false; // ayırt/özet/ek kartı → madde metni sayma
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+    // Editör silme/çöp notu (🗑️) bir kart KİMLİĞİ DEĞİLDİR. Backtick içinde "MADDE EK-07-10"
+    // gibi bir ID barındırsa bile cur'u KURMASIN; aksi halde bu ID sonraki ID'siz ünitelere
+    // sızıp (Jandarma U18→U19) o ünitelerin metnini yanlış maddeye yazar / bloklaBol'u atlatır.
+    if (/🗑️/.test(line)) continue;
     // ID satırı: backtick içinde kart kimliği, örn `7068 MADDE 11-1`, `JSGKHIZMET MADDE 04-AYIRT`.
     // BLOKE KARARI başlık AÇIKLAMASINDAN değil, ID'nin "MADDE <NN>-" SONRASI SONEK'inden verilir.
     // (Eski sürüm tüm başlığı büyütüp /GEÇ|EK|AYIRT/ arardı → "GEÇİCİ Olarak", "m.18 — Ek",

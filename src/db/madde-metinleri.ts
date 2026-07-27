@@ -415,9 +415,34 @@ MADDE 266 –
 (1) Görevi gereği olarak elinde bulundurduğu araç ve gereçleri bir suçun işlenmesi sırasında kullanan kamu görevlisi hakkında, ilgili suçun tanımında kamu görevlisi sıfatı esasen göz önünde bulundurulmamış ise, verilecek ceza üçte biri oranında artırılır.`,
 };
 
+/** Tek anahtar için birebir metni döndürür (el-yazımı → üretilen registry). */
+function tekMetin(anahtar: string): string | null {
+  return MADDE_METINLERI[anahtar] ?? KART_MADDE_METINLERI[anahtar] ?? null;
+}
+
 /** Madde metnini döndürür; yoksa null. Saf lookup (DB/IO yok).
  *  Öncelik: el-yazımı MADDE_METINLERI (yüksek kaliteli TCK/4733) → üretilen registry
- *  (KART_MADDE_METINLERI, müşterek MASTER md'lerinden `npm run madde:uret`). */
+ *  (KART_MADDE_METINLERI, müşterek MASTER md'lerinden `npm run madde:uret`).
+ *
+ *  BİRLEŞİK (çok-maddeli) kart fallback: madde_no "<etiket> m.Ek 1-2-6" /
+ *  "<etiket> m.Geçici 1-3-5-7" gibi `-` ile ayrık ÜYE maddeleri gösteriyorsa, registry'de
+ *  birleşik anahtar YOKTUR (yalnız tek-madde anahtarları vardır). Bu durumda üye maddelerin
+ *  (m.Ek 1, m.Ek 2, m.Ek 6) metinlerini toplayıp birleştirerek döndürürüz. Tek-madde davranışı
+ *  DEĞİŞMEZ: yalnız birebir lookup boşa düştüğünde bu ayrıştırma denenir. */
 export function maddeMetni(maddeNo: string): string | null {
-  return MADDE_METINLERI[maddeNo] ?? KART_MADDE_METINLERI[maddeNo] ?? null;
+  const dogrudan = tekMetin(maddeNo);
+  if (dogrudan != null) return dogrudan;
+  // "<etiket> m.<Ek|Geçici|>" + "N-N-…" (en az iki üye). Örn "Jandarma Kanunu m.Ek 1-2-6".
+  const m = /^(.* m\.)(Ek |Geçici |Gecici )?(\d+(?:-\d+)+)$/.exec(maddeNo);
+  if (m) {
+    const [, on, tur, nolar] = m;
+    const kind = tur ?? '';
+    const parcalar: string[] = [];
+    for (const no of nolar.split('-')) {
+      const t = tekMetin(`${on}${kind}${no}`);
+      if (t != null) parcalar.push(t);
+    }
+    if (parcalar.length) return parcalar.join('\n\n');
+  }
+  return null;
 }
