@@ -8,7 +8,7 @@
  */
 import { KART_SES_YOLLARI, KART_SESLERI } from '../assets/kart-sesleri';
 import { ICERIK_TABANI } from '@/constants/config';
-import { imzaliUriSync, webImzaliAktif } from './imzali-cache';
+import { imzaliAktif, imzaliUriSync } from './imzali-cache';
 import { kanunIndirilmisMi, yerelDosyaUri } from './indirme';
 
 export type SesKaynak = number | { uri: string };
@@ -22,8 +22,10 @@ export function sesKaynak(key?: string | null): SesKaynak | null {
   if (yol) {
     if (kanunIndirilmisMi(klasorOf(yol))) return { uri: yerelDosyaUri(yol) };
     if (ICERIK_TABANI) {
-      // Web + private bucket: imzalı URL (hazır değilse null → URL gelince render'da dolar).
-      if (webImzaliAktif()) {
+      // Private bucket → public URL 400 verir; imzalı URL (WEB + NATIVE). İndirilmemiş/akış
+      // senaryosu: eskiden native'de public URL dönüp 400 alıyordu (ses gelmiyordu). Hazır
+      // değilse null → imzalı URL gelince useImzaliTazele render'ı tazeler, player kaynağı dolar.
+      if (imzaliAktif()) {
         const imzali = imzaliUriSync(yol);
         return imzali ? { uri: imzali } : null;
       }

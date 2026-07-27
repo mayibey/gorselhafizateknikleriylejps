@@ -61,8 +61,11 @@ export function SesOynatici({
     try {
       player.shouldCorrectPitch = true; // hızlanınca ses tizleşmesin (konuşma doğal kalsın)
       player.play();
-    } catch {}
-  }, [player, kaynak]);
+    } catch (e) {
+      // Sessizce yutma → teşhis (native private-bucket / imzalı-URL sorunları görünür olsun).
+      console.warn('[ses] otomatik başlatma hatası', sesYolu, e);
+    }
+  }, [player, kaynak, sesYolu]);
 
   // Hızı player'a uygula (yeni kart/oynatıcı VE hız değişiminde) → seçilen hız korunur.
   useEffect(() => {
@@ -71,6 +74,25 @@ export function SesOynatici({
       player.setPlaybackRate(SES_HIZLARI[hizIdx], 'high');
     } catch {}
   }, [player, hizIdx]);
+
+  // Ses YÜKLENEMEZ/ÇALINAMAZSA sessizce yutma → teşhis için logla. expo-audio hata durumunu
+  // playbackState='error' (ve/veya status.error) ile bildirir. Private bucket'ta imzalı URL
+  // gelmezse / 400 alınırsa burada görünür (eskiden hata tamamen sessizdi, "ses yok" sanılıyordu).
+  const hataLoglandiRef = useRef(false);
+  useEffect(() => {
+    if (!durum) return;
+    const statusHata = (durum as { error?: unknown }).error;
+    const hataliDurum = durum.playbackState === 'error' || !!statusHata;
+    if (hataliDurum && !hataLoglandiRef.current) {
+      hataLoglandiRef.current = true;
+      console.warn('[ses] oynatma/yükleme hatası', {
+        yol: sesYolu,
+        playbackState: durum.playbackState,
+        reason: durum.reasonForWaitingToPlay,
+        error: statusHata,
+      });
+    }
+  }, [durum?.playbackState, durum, sesYolu]);
 
   // Bitince onBitti (bir kez). Kart değişince component remount → ref sıfırlanır.
   const bittiRef = useRef(false);

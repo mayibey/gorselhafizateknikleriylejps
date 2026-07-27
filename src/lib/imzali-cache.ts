@@ -21,9 +21,19 @@ const istendi = new Set<string>();
 const dinleyiciler = new Set<() => void>();
 let zamanlayici: ReturnType<typeof setTimeout> | null = null;
 
-/** Web'de imzalı-içerik modu aktif mi? (resolver'lar dallanma için kullanır) */
+/**
+ * İmzalı-içerik modu aktif mi? PLATFORMDAN BAĞIMSIZ (web + native). Private bucket'ta public
+ * URL 400 verdiği için ses resolver'ı native'de de bunu kullanır (indirilmemiş/akış senaryosu):
+ * indirme motoru devreye girmeden imzalı URL ile çalabilmek için. (imzaliUrller/imzaliDinle
+ * zaten platformdan bağımsız çalışır; tek web-kısıtı buradaki eski gate'ti.)
+ */
+export function imzaliAktif(): boolean {
+  return IMZALI_URL_AKTIF && ICERIK_TABANI !== '';
+}
+
+/** Web'de imzalı-içerik modu aktif mi? (görsel resolver'ı dallanma için kullanır — davranış AYNI) */
 export function webImzaliAktif(): boolean {
-  return Platform.OS === 'web' && IMZALI_URL_AKTIF && ICERIK_TABANI !== '';
+  return Platform.OS === 'web' && imzaliAktif();
 }
 
 function yay(): void {
