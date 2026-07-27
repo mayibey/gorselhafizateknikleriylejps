@@ -308,6 +308,17 @@ class SqliteBackend implements Backend {
       await this.seedReference();
       version = 27;
     }
+    if (version < 28) {
+      // Ek/Geçici/harfli maddeler (13/A gibi) artık "genelözet" DEĞİL, gerçek madde: madde_no/baslik
+      // düzeltildi + patikada tek "Özet" düğümü yerine kendi düğümleri (Ek/Geçici sonda, harfli base
+      // maddenin ardında). cards SALT REFERANS + KART ID ŞEMASI (law*1000+sıra) AYNI → DELETE+yeniden
+      // tohumla; srs (card_id ile ayrı tablo) TAM KORUNUR. Patika yerleşimi değiştiği için
+      // bolumler/bolum_kartlari da yeniden tohumlanır.
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 28;
+    }
 
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);

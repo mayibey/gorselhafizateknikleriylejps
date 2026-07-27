@@ -6,7 +6,8 @@
  */
 
 import { KART_ANAHTARLARI } from '../assets/kart-gorselleri';
-import { ayirtOzetBilgi, birlesikDugumAd } from '@/lib/birlesik';
+import { ayirtOzetBilgi, birlesikDugumAd, ozetMaddeAd, ozetMaddeBilgi } from '@/lib/birlesik';
+import type { OzetMadde } from '@/lib/birlesik';
 import type { Bolum, BolumKart, Branch, Card, Law, LawBranch } from '@/db/schema';
 import { SEED_LAWS_DIGER, SEED_LAW_BRANCHES_DIGER } from '@/db/seed-brans-diger';
 
@@ -224,7 +225,7 @@ export const LAW_KLASOR: Record<number, string> = Object.fromEntries(
  */
 function gorselKartlari(): Card[] {
   type Tip = 'normal' | 'ozet' | 'ayirt' | 'genelozet';
-  type Ham = { key: string; lawId: number; etiket: string; link: number; rank: number; panel: string; tip: Tip; nums: number[]; tag: string; mlabel?: string };
+  type Ham = { key: string; lawId: number; etiket: string; link: number; rank: number; panel: string; tip: Tip; nums: number[]; tag: string; mlabel?: string; om?: OzetMadde };
   const ham: Ham[] = [];
   for (const key of KART_ANAHTARLARI) {
     const us = key.indexOf('_');
@@ -241,7 +242,11 @@ function gorselKartlari(): Card[] {
       const nums = geri.slice(6).split('_').map(Number);
       ham.push({ ...ortak, link: nums[0], rank: 1, panel: '', tip: 'ozet', nums, tag: '' });
     } else if (geri.startsWith('ozet_')) {
-      ham.push({ ...ortak, link: Number.MAX_SAFE_INTEGER, rank: 3, panel: '', tip: 'genelozet', nums: [], tag: geri.slice(5) });
+      // "ozet_" öneki AMA gerçek madde olabilir (Ek/Geçici/harfli — 13/A). link/rank/panel
+      // genel-özet ile AYNI tutulur → ham sıralaması ve KART ID'leri (law*1000+sıra) DEĞİŞMEZ;
+      // yalnız madde_no/baslik + patika yerleşimi (om ile) farklılaşır.
+      const om = ozetMaddeBilgi(key) ?? undefined;
+      ham.push({ ...ortak, link: Number.MAX_SAFE_INTEGER, rank: 3, panel: '', tip: 'genelozet', nums: [], tag: geri.slice(5), om });
     } else {
       // m{no}[_{panel}] · m{no}{harf}[_{panel}] (harfli madde 38/A) · mek{no}[_{panel}] (Ek Madde).
       const m = /^m(ek)?(\d+)([a-z])?(?:_(.*))?$/.exec(geri);
@@ -264,7 +269,19 @@ function gorselKartlari(): Card[] {
     // → INSERT OR IGNORE'da çakışıp yalnız 4 kanun (TCK/Jandarma/Kabahatler/Disiplin) görünüyordu.
     const id = h.lawId * 1000 + (sayac[h.lawId] = (sayac[h.lawId] ?? 0) + 1);
     let madde_no: string, baslik: string;
-    if (h.tip === 'genelozet') {
+    if (h.om) {
+      // Ek/Geçici/harfli madde: genel-özet DEĞİL, gerçek madde. madde_no diğer maddelerle
+      // aynı biçim (`<etiket> m.<label>`); baslik sade madde adı ("Ek Madde 5" / "Madde 13/A").
+      const om = h.om;
+      const label =
+        om.kind === 'ek'
+          ? `Ek ${om.maddeler.join('-')}`
+          : om.kind === 'gec'
+            ? `Geçici ${om.maddeler.join('-')}`
+            : `${om.no}/${om.harf}`;
+      madde_no = `${h.etiket} m.${label}`;
+      baslik = ozetMaddeAd(om);
+    } else if (h.tip === 'genelozet') {
       madde_no = `${h.etiket} özet`;
       baslik = `Özet — ${h.tag}`;
     } else if (h.tip === 'ozet') {
@@ -487,6 +504,21 @@ function maddeAd(etiket: string): string {
 }
 
 /**
+ * Harfli madde (13/A) için patika sortIdx: base madde (13) kapsamdaysa onun index'i; değilse
+ * kendisinden SAYISAL olarak küçük son maddenin index'i (harfli, onun grubu ardına düşer).
+ */
+function harfSortIdx(kapsam: string[], no: number): number {
+  const direct = kapsam.indexOf(String(no));
+  if (direct >= 0) return direct;
+  let idx = 0;
+  kapsam.forEach((et, i) => {
+    const n = Number(et);
+    if (Number.isFinite(n) && n < no) idx = i;
+  });
+  return idx;
+}
+
+/**
  * Patika düğümleri + kart↔düğüm bağları (TEK kaynak). Her kanun için:
  *  - kapsamdaki her madde → bir düğüm ("Madde N", sıralı).
  *  - her AYIRT/ÖZET kartı → KENDİ düğümü ("Madde 35–36 ayırt"), kapsamdaki EN BÜYÜK üye
@@ -504,6 +536,7 @@ const _patika = (() => {
     const lawId = Number(lawIdStr);
     type Dugum = { sortIdx: number; sub: number; tie: string; ad: string; kartIds: number[] };
     const maddeDugum = new Map<string, Dugum>(); // kapsam etiketi → madde düğümü
+    const ozetMaddeDugum = new Map<string, Dugum>(); // Ek/Geçici/harfli madde düğümü (panelleri grupla)
     const dugumler: Dugum[] = [];
     // 1) Her kapsam maddesi için bir düğüm (kartı olmasa bile görünür).
     kapsam.forEach((et, i) => {
@@ -515,6 +548,27 @@ const _patika = (() => {
     // 2) Kartları dağıt (SEED_CARDS sırası korunur → düğüm-içi panel sırası doğal).
     for (const card of SEED_CARDS) {
       if (card.law_id !== lawId) continue;
+      const om = ozetMaddeBilgi(card.gorsel_yolu);
+      if (om) {
+        // Ek/Geçici/harfli madde → KENDİ düğümü (panelleri tek düğümde grupla); "Özet"e GİTMEZ.
+        // Sıra: harfli → base maddenin hemen ardında (sub=2); Ek → normal maddelerden sonra
+        // (sortIdx 1e6+); Geçici → Ek'ten sonra (2e6+); gerçek Özet düğümü en sonda (MAX).
+        const nodeKey =
+          om.kind === 'harf' ? `harf:${om.no}${om.harf}` : `${om.kind}:${om.maddeler.join('-')}`;
+        let d = ozetMaddeDugum.get(nodeKey);
+        if (!d) {
+          if (om.kind === 'harf') {
+            d = { sortIdx: harfSortIdx(kapsam, om.no), sub: 2, tie: `${om.no}${om.harf}`, ad: ozetMaddeAd(om), kartIds: [] };
+          } else {
+            const taban = om.kind === 'ek' ? 1_000_000 : 2_000_000;
+            d = { sortIdx: taban + (om.maddeler[0] ?? 0), sub: 0, tie: nodeKey, ad: ozetMaddeAd(om), kartIds: [] };
+          }
+          ozetMaddeDugum.set(nodeKey, d);
+          dugumler.push(d);
+        }
+        d.kartIds.push(card.id);
+        continue;
+      }
       const bilgi = ayirtOzetBilgi(card.gorsel_yolu);
       if (bilgi) {
         // Ayırt/özet → KENDİ düğümü, kapsamdaki en büyük üyenin index'inde (madde düğümünden
