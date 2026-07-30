@@ -896,3 +896,9 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 
 > ### ▶ 22 Tem (2) — 🎟️ MEBS DEVRE KODU (MEBS2020OZEL, ~500 TL ömür boyu, limit 15)
 > MEBS devresine ayrı kod, sabit ~500 TL. **Android:** Play `mebsdevre` %68 yüzde-teklifi (Türkiye 499,20 TL, 173 bölge, Etkin) + DB MEBS2020OZEL (offer_id mebsdevre, yuzde 68, kullanim_limiti **15**). Test OK. **iOS:** offer code (c55cb3ad, sabit 500 TL fiyat noktası) + custom code MEBS2020OZEL. ⚠️ iOS min adet 500 (15 imkânsız); pratikte 15 kişiye verilecek. **iPhone linki:** `https://apps.apple.com/redeem?ctx=offercodes&id=6787908212&code=MEBS2020OZEL`. TARAYICI PÜF: takvim "Tarih girin" kutusuna yaz (22.07.2026); bölge checkbox için önce "İndirim tanımla" bağlantısı. [[indirim-kodu-kurma-recetesi]] [[ios-offer-code-api-recete]]
+
+## 30 Tem 2026 — iOS 1.0.42 (ATT fix) YENİDEN İNCELEMEDE + TikTok yeni reklamlar canlı
+- Apple 2.1 (ATT) reddi sonrası 1.0.42/build 65 EAS'ta derlendi (KRİTİK: önce `npm run icerik:manifest` — tam moddayken bulut "Bundle JavaScript" ÇÖKÜYOR; yerelde export geçtiği için yanıltıcı) + `EAS_NO_VCS=1` (arşiv 12MB).
+- ASC API ile: reddedilen sürüm 1.0.42'ye çevrildi, build 65 bağlandı, whatsNew + denetçi notu (ATT açıklaması) yazıldı, REJECTED kalem `resolved:true` yapılıp AYNI reviewSubmission yeniden gönderildi → WAITING_FOR_REVIEW (30 Tem 23:41 TR). Reçete güncellendi (hafıza: asc-production-oto-submit-recete).
+- TikTok: 2 yeni reklam (Hızlı Tren + Paraşüt, dikey 1080x1920, AI etiketi işaretli, tehlikeli auto-enhancement'lar kapalı) yayınlandı; eski reklam kapatıldı; bakiye 1200 TL yüklendi; hedefleme 25-34 + Military service + 7 askerî hashtag; ikisi de Active.
+- Burhan SARIKÖSE'ye uygulamada promo_omurboyu tam erişim verildi (uyelik_haklari, başkan hediyesi).
