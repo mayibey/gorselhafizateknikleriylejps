@@ -30,6 +30,7 @@ import { zorunluGuncellemeGerekli } from '@/lib/guncelleme';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
+import { takipIzniVeMetaBaslat } from '@/lib/takip-izni';
 import { BransProvider, useBrans } from '@/lib/brans-context';
 import { RutbeProvider, useRutbe } from '@/lib/rutbe-context';
 import { UyelikProvider } from '@/lib/uyelik-context';
@@ -52,6 +53,13 @@ export default function RootLayout() {
 
   useEffect(() => {
     void initDatabase();
+  }, []);
+
+  // ATT izni (iOS) + Meta SDK başlatma — izin popup'ı splash kapandıktan sonra görünsün
+  // diye kısa gecikmeli. Apple kuralı: takip verisi toplanmadan ÖNCE sorulmalı (bkz. takip-izni.ts).
+  useEffect(() => {
+    const t = setTimeout(() => void takipIzniVeMetaBaslat(), 1200);
+    return () => clearTimeout(t);
   }, []);
 
   // Açılışta günlük bildirimleri (ayara göre) yeniden planla — kalıcı hatırlatmalar için.
