@@ -22,21 +22,29 @@ export async function takipIzniVeMetaBaslat(): Promise<void> {
   // (31 Tem canlı vaka). Runtime sürümü 1.0.42'den küçükse hiç dokunma.
   const surum = Constants.expoConfig?.version ?? '';
   if (surum < '1.0.42') return;
-  try {
-    const { Settings } = await import('react-native-fbsdk-next');
-    if (Platform.OS === 'ios') {
+  // 1) iOS: ATT iznini HER ŞEYDEN BAĞIMSIZ iste (1.0.42 reddi dersi: istek fbsdk import'una
+  //    bağlıydı; fbsdk aksarsa izin de atlanıyordu. Artık izin önce ve kendi try'ında).
+  let izin = false;
+  if (Platform.OS === 'ios') {
+    try {
       const { requestTrackingPermissionsAsync } = await import('expo-tracking-transparency');
       const { status } = await requestTrackingPermissionsAsync();
-      const izin = status === 'granted';
-      Settings.initializeSDK();
+      izin = status === 'granted';
+    } catch {
+      // ATT modülü yoksa (Expo Go) izin false kalır; app düşmez.
+    }
+  }
+  // 2) Meta SDK ayrı try'da: izne göre başlat.
+  try {
+    const { Settings } = await import('react-native-fbsdk-next');
+    Settings.initializeSDK();
+    if (Platform.OS === 'ios') {
       await Settings.setAdvertiserTrackingEnabled(izin);
       Settings.setAdvertiserIDCollectionEnabled(izin);
-      Settings.setAutoLogAppEventsEnabled(true);
     } else {
-      Settings.initializeSDK();
       Settings.setAdvertiserIDCollectionEnabled(true);
-      Settings.setAutoLogAppEventsEnabled(true);
     }
+    Settings.setAutoLogAppEventsEnabled(true);
   } catch {
     // Ölçüm hiçbir zaman uygulamayı düşürmesin (Expo Go / eksik native modül vb.).
   }
