@@ -902,3 +902,7 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - ASC API ile: reddedilen sürüm 1.0.42'ye çevrildi, build 65 bağlandı, whatsNew + denetçi notu (ATT açıklaması) yazıldı, REJECTED kalem `resolved:true` yapılıp AYNI reviewSubmission yeniden gönderildi → WAITING_FOR_REVIEW (30 Tem 23:41 TR). Reçete güncellendi (hafıza: asc-production-oto-submit-recete).
 - TikTok: 2 yeni reklam (Hızlı Tren + Paraşüt, dikey 1080x1920, AI etiketi işaretli, tehlikeli auto-enhancement'lar kapalı) yayınlandı; eski reklam kapatıldı; bakiye 1200 TL yüklendi; hedefleme 25-34 + Military service + 7 askerî hashtag; ikisi de Active.
 - Burhan SARIKÖSE'ye uygulamada promo_omurboyu tam erişim verildi (uyelik_haklari, başkan hediyesi).
+
+## 31 Tem 2026 — Sınav tarihi resmîleşti: geri sayım + başvuru şeridi (OTA ile CANLI)
+- SINAV_TARIHI = 19 Eylül 2026 14:00 (resmî; "(TAHMİNİ)" kalktı). Başvuru şeridi eklendi: "BAŞVURULAR: 3–23 AĞUSTOS" (son gün kırmızı "SON GÜN!", 23 Ağustos'tan sonra kendiliğinden gizlenir). commit 5603483.
+- OTA üç runtime'a atıldı (1.0.40 / 1.0.41 / 1.0.42) — önce icerik:manifest, yayın sonrası icerik:tam + app.json geri alındı. Web önizleme: expo export + python http.server (expo start --web Windows'ta EMFILE veriyor).
