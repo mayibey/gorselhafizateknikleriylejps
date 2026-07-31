@@ -919,3 +919,15 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - Sunucuya yüklendi: 191 kitap kaydı. 14 branş resmî listeyle BİREBİR; Personel 14/19 (5 kurum içi yönetmelik başkandan bekleniyor).
 - TUZAKLAR: meta "no" alanında "/" (2019/12) → dosya yoluna klasör açıyor, "-" kullan; Türkçe karakter (BÜTÇE) → Supabase storage "Invalid key", ASCII yap.
 - KALAN İŞ (madde düzeyi): Hazine Taşınmazları Yön. (31 madde), Mal Alımı İhaleleri Yön. (18 madde), 1219 Tababet (m.31/35/39/40 dahil), 5996 (m.10/C-10/F), İlkyardım Yön., 3194 İmar (m.1/3/14/20/38/41) — resmî liste "Tamamı" diyor, kitaplar kırpılmış.
+
+## 1 Ağu 2026 (2. tur) — Madde düzeyi tamamlama: 7 kitaba 77 sınav-değerli madde eklendi
+- BAŞKAN KURALI: "tüm kanunu almaya gerek yok, önemli ve soru olabilecek yerlerin özeti yeterli" → kırpma politikası ONAYLANDI; yalnız SINAV DEĞERİ olan eksikler kapatıldı, salt idari/yürürlük/mülga maddeler gerekçeli atlandı.
+- 1219 Tababet +14 madde (m.30/31/35/39/40 = Diş Tabibi çekirdeği, m.73 sahtecilik, m.74 ücret tarifesi, m.11 bilirkişilik)
+- 5996 +9 madde (10/C-10/F yetiştirici birlikleri, m.43 İçişleri/Jandarma yardımı, m.47 kaldırılan kanunlar)
+- İlkyardım Yön. +11 madde (m.7/8/9 merkez açma-kapama, m.17/18 eğitmen nitelik ve imza yetkisi ayrımı)
+- Merkezî Yön. Harcama Belgeleri +2 (m.38 fahri konsolosluk, m.50 sanat eseri alımı)
+- 3194 İmar +8 (m.20 Yapı, m.38 fenni mesuliyet, m.3 genel esas, m.14 irtifak, m.41, m.43, m.44, m.1)
+- Hazine Taşınmazları Yön. +23 (ihale işlem dosyası, onay belgesi, teklif açılma, kesin teminat iadesi, satış izni, millet bahçeleri, ecrimisil-işgal)
+- Mal Alımı İhaleleri Yön. +18 (EKAP, doküman bedelsiz, teklif geçerlilik süresi, ekonomik açıdan en avantajlı teklif, Ek Md.1 iş bitirme)
+- Tümü mevcut kitaplara YERİNDE eklendi (mevcut bloklar bozulmadı), PDF'ler yeniden basıldı, FORCE=1 ile 191 kitap sunucuya yeniden yüklendi.
+- TUZAK: brans-kitap-yukle.mjs güncellenen dosyayı "zaten var" diye ATLAR → içerik değişince FORCE=1 ŞART.
