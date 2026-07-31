@@ -13,9 +13,15 @@
  */
 
 import { Platform } from 'react-native';
+import Constants from 'expo-constants';
 
 export async function takipIzniVeMetaBaslat(): Promise<void> {
   if (Platform.OS === 'web') return;
+  // OTA KORUMASI: expo-tracking-transparency native modülü yalnız 1.0.42+ binary'lerde var.
+  // Eski binary'ye (1.0.40/1.0.41) OTA ile inen bu kod o modülü çağırırsa uygulama ÇÖKEBİLİYOR
+  // (31 Tem canlı vaka). Runtime sürümü 1.0.42'den küçükse hiç dokunma.
+  const surum = Constants.expoConfig?.version ?? '';
+  if (surum < '1.0.42') return;
   try {
     const { Settings } = await import('react-native-fbsdk-next');
     if (Platform.OS === 'ios') {
