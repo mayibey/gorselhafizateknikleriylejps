@@ -53,9 +53,13 @@ const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as 
 const KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
 
 // ⏳ JSPS SINAV TARİHİ — Karargah en üstteki geri sayım buna göre işler.
-// BAŞKAN: Gerçek sınav tarih/saati belli olunca SADECE bu satırı değiştir.
-// new Date(yıl, AY-1, gün, saat, dakika) — AY 0-tabanlı (8 = Eylül). Şimdilik ~65 gün (placeholder).
-const SINAV_TARIHI = new Date(2026, 8, 2, 10, 0, 0); // 2 Eylül 2026, 10:00
+// BAŞKAN: Tarih/saat değişirse SADECE bu satırları değiştir.
+// new Date(yıl, AY-1, gün, saat, dakika) — AY 0-tabanlı (8 = Eylül, 7 = Ağustos).
+const SINAV_TARIHI = new Date(2026, 8, 19, 14, 0, 0); // 19 Eylül 2026, 14:00 (RESMÎ)
+// 📋 BAŞVURU PENCERESİ — geri sayımın altındaki ince şerit buna göre işler:
+// açılmadan önce "şu tarihte açılıyor", açıkken son güne canlı sayaç, kapanınca gizlenir.
+const BASVURU_BASLANGIC = new Date(2026, 7, 3, 0, 0, 0); // 3 Ağustos 2026
+const BASVURU_BITIS = new Date(2026, 7, 23, 23, 59, 59); // 23 Ağustos 2026 (son gün, gece yarısına kadar)
 
 function ikiHane(n: number): string {
   return String(n).padStart(2, '0');
@@ -88,10 +92,22 @@ function SinavGeriSayim() {
   const dk = Math.floor((top % 3600) / 60);
   const sn = top % 60;
 
+  // Başvuru şeridi — sade: pencere kapanana kadar tarihleri gösterir, son gün kırmızıyla uyarır,
+  // 23 Ağustos'tan sonra kendiliğinden gizlenir. (kalanMs her saniye değiştiği için birlikte tazelenir.)
+  const simdi = SINAV_TARIHI.getTime() - kalanMs;
+  let basvuru: { metin: string; vurgu: boolean } | null = null;
+  if (simdi <= BASVURU_BITIS.getTime()) {
+    const sonGun = simdi >= BASVURU_BASLANGIC.getTime() &&
+      Math.ceil((BASVURU_BITIS.getTime() - simdi) / 86400000) <= 1;
+    basvuru = sonGun
+      ? { metin: 'BAŞVURU İÇİN SON GÜN!', vurgu: true }
+      : { metin: 'BAŞVURULAR: 3–23 AĞUSTOS', vurgu: false };
+  }
+
   return (
     <View style={styles.geriSayim}>
       <AppText variant="etiket" bold color="altinAcik2" style={styles.geriSayimUst}>
-        JSPS SINAVINA KALAN (TAHMİNİ)
+        JSPS SINAVINA KALAN · 19 EYLÜL 14.00
       </AppText>
       <View style={styles.geriSayimSatir}>
         <GsBlok deger={String(gun)} etiket="GÜN" />
@@ -102,6 +118,13 @@ function SinavGeriSayim() {
         <GsAyrac />
         <GsBlok deger={ikiHane(sn)} etiket="SANİYE" />
       </View>
+      {basvuru && (
+        <View style={[styles.basvuruSerit, basvuru.vurgu && styles.basvuruSeritVurgu]}>
+          <AppText variant="etiket" bold color={basvuru.vurgu ? 'beyaz' : 'altinAcik2'} style={styles.basvuruMetin}>
+            {basvuru.metin}
+          </AppText>
+        </View>
+      )}
     </View>
   );
 }
@@ -923,6 +946,24 @@ const styles = StyleSheet.create({
   gsAyrac: {
     opacity: 0.5,
     marginHorizontal: 2,
+  },
+  // Başvuru penceresi şeridi (geri sayımın altı — ince, altın çerçeveli bilgi bandı)
+  basvuruSerit: {
+    marginTop: Spacing.one,
+    borderRadius: Radius.m,
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
+    backgroundColor: 'rgba(201,162,39,0.12)',
+    paddingVertical: 6,
+    paddingHorizontal: Spacing.three,
+  },
+  basvuruSeritVurgu: {
+    backgroundColor: Palette.kirmizi,
+    borderColor: Palette.kirmizi,
+  },
+  basvuruMetin: {
+    letterSpacing: 0.8,
+    textAlign: 'center',
   },
 
   // Hero
