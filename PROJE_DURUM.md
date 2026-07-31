@@ -910,3 +910,12 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 ## 31 Tem 2026 (akşam) — OTA çökme kazası + 15 dk'da düzeltme + duyuru/push
 - Sınav tarihi OTA'sı ATT kodunu (expo-tracking-transparency, yalnız 1.0.42 binary'sinde var) eski binary'lere taşıdı → açılıştan ~1.2sn sonra ÇÖKME (canlı, başkan doğruladı). try/catch kurtarmadı. FIX: takip-izni.ts'e sürüm kapısı (surum<'1.0.42' → return), 3 runtime'a acil OTA (commit 434c094). Başkan "düzeldi" teyidi verdi. Ders ota-eas-update-recete hafızasına işlendi.
 - "MEVZU CİDDİLEŞTİ" duyurusu (uygulama içi, herkese) + push 120 cihaza (hepsi Android). iOS push tespiti: canlı iOS build'lerde aps-environment VAR ama iOS token 0 — 1.0.42 canlıya çıkınca izlenecek.
+
+## 1 Ağu 2026 — TÜM BRANŞLARIN kitap denetimi + 10 yeni kitap (14 branş TAM)
+- Resmî Ek-1 listesi (11 sayfa) ile 15 branşın 161 kitabı karşılaştırıldı (4 denetim ajanı). Sonuç: "yanlış branş kapsamı" hatası SADECE Personel'deydi (düzeltildi); diğer branşlarda yok.
+- KÖK NEDEN: 00_MEVZUAT_REGISTRY.json'da 8 mevzuat hiç yer almamış → 16 kitap eksik üretilmiş.
+- ÜRETİLEN 10 YENİ KİTAP (kaynak: mevzuat.gov.tr/Resmî Gazete birebir): 2872 Çevre (6 branşa), 3091 Taşınmaz Zilyedliği (3 branşa), TCK m.240 (2 branşa), 2019/12 Bilgi Güvenliği Genelgesi + 2024/7 Tasarruf Genelgesi (MEBS), 2803 Jandarma Mali + 4678 Sözleşmeli Sb/Asb Mali + Cari Yıl Bütçe H/K/E Cetvelleri (Maliye), 5018 MALİYE TAM KAPSAM (m.52-58 iç kontrol + m.63-64 iç denetim eklendi) ve 5510 MALİYE TAM (m.1-2 eklendi).
+- Ortak 5018/5510 kitaplarının branslar listesinden MALİYE çıkarıldı (Maliye artık kendi tam sürümünü kullanıyor); diğer branşların kitapları bozulmadı.
+- Sunucuya yüklendi: 191 kitap kaydı. 14 branş resmî listeyle BİREBİR; Personel 14/19 (5 kurum içi yönetmelik başkandan bekleniyor).
+- TUZAKLAR: meta "no" alanında "/" (2019/12) → dosya yoluna klasör açıyor, "-" kullan; Türkçe karakter (BÜTÇE) → Supabase storage "Invalid key", ASCII yap.
+- KALAN İŞ (madde düzeyi): Hazine Taşınmazları Yön. (31 madde), Mal Alımı İhaleleri Yön. (18 madde), 1219 Tababet (m.31/35/39/40 dahil), 5996 (m.10/C-10/F), İlkyardım Yön., 3194 İmar (m.1/3/14/20/38/41) — resmî liste "Tamamı" diyor, kitaplar kırpılmış.
