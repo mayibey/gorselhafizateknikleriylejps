@@ -906,3 +906,7 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 ## 31 Tem 2026 — Sınav tarihi resmîleşti: geri sayım + başvuru şeridi (OTA ile CANLI)
 - SINAV_TARIHI = 19 Eylül 2026 14:00 (resmî; "(TAHMİNİ)" kalktı). Başvuru şeridi eklendi: "BAŞVURULAR: 3–23 AĞUSTOS" (son gün kırmızı "SON GÜN!", 23 Ağustos'tan sonra kendiliğinden gizlenir). commit 5603483.
 - OTA üç runtime'a atıldı (1.0.40 / 1.0.41 / 1.0.42) — önce icerik:manifest, yayın sonrası icerik:tam + app.json geri alındı. Web önizleme: expo export + python http.server (expo start --web Windows'ta EMFILE veriyor).
+
+## 31 Tem 2026 (akşam) — OTA çökme kazası + 15 dk'da düzeltme + duyuru/push
+- Sınav tarihi OTA'sı ATT kodunu (expo-tracking-transparency, yalnız 1.0.42 binary'sinde var) eski binary'lere taşıdı → açılıştan ~1.2sn sonra ÇÖKME (canlı, başkan doğruladı). try/catch kurtarmadı. FIX: takip-izni.ts'e sürüm kapısı (surum<'1.0.42' → return), 3 runtime'a acil OTA (commit 434c094). Başkan "düzeldi" teyidi verdi. Ders ota-eas-update-recete hafızasına işlendi.
+- "MEVZU CİDDİLEŞTİ" duyurusu (uygulama içi, herkese) + push 120 cihaza (hepsi Android). iOS push tespiti: canlı iOS build'lerde aps-environment VAR ama iOS token 0 — 1.0.42 canlıya çıkınca izlenecek.
