@@ -31,7 +31,8 @@ export default function DereceliKuyrukScreen() {
       gittiRef.current = true;
       router.replace({
         pathname: '/er-meydani-mac',
-        params: { seed: String(d.seed), mod: 'dereceli', rakip_rumuz: d.rakip_rumuz ?? 'Rakip' },
+        // Soru başına 45 sn (başkan kararı, 2 Ağu) — hızlı eşleşmeyle aynı tempo.
+        params: { seed: String(d.seed), mod: 'dereceli', sure: '45', rakip_rumuz: d.rakip_rumuz ?? 'Rakip' },
       });
     },
     [router],
