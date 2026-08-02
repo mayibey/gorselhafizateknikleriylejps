@@ -118,7 +118,9 @@ export default function ErMeydaniScreen() {
     // Seçim yoksa kullanıcının TÜM kapsamı (müşterek + branşı); tüm 135 kanun DEĞİL.
     const efektif = hizliKanunlar.length ? hizliKanunlar : [...hizliScope.musterek, ...hizliScope.brans].map((k) => k.id);
     setHizliAcik(false);
-    macaGit({ seed: seedUret(), mod: 'hizli', kanunlar: efektif });
+    // Hızlı eşleşmede soru başına süre 45 sn (başkan kararı, 2 Ağu). Oda modunda süre zaten
+    // kurucunun seçimi; burada varsayılan 15 sn kısa geliyordu.
+    macaGit({ seed: seedUret(), mod: 'hizli', sure: 45, kanunlar: efektif });
   }
 
   // Dereceli maç: seviyeye yakın rakip bul (sunucu) → lig paramlarıyla maça git.

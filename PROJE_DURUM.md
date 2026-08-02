@@ -931,3 +931,9 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - Mal Alımı İhaleleri Yön. +18 (EKAP, doküman bedelsiz, teklif geçerlilik süresi, ekonomik açıdan en avantajlı teklif, Ek Md.1 iş bitirme)
 - Tümü mevcut kitaplara YERİNDE eklendi (mevcut bloklar bozulmadı), PDF'ler yeniden basıldı, FORCE=1 ile 191 kitap sunucuya yeniden yüklendi.
 - TUZAK: brans-kitap-yukle.mjs güncellenen dosyayı "zaten var" diye ATLAR → içerik değişince FORCE=1 ŞART.
+
+## 2 Ağu 2026 — Er Meydanı hızlı eşleşme süresi 45 sn + Terörle m.21 kart düzeltmesi
+- **Hızlı eşleşme soru süresi 15 sn → 45 sn** (başkan talebi). KEŞİF SONUCU: hızlı eşleşme `sure` parametresi göndermiyordu, `er-meydani-mac.tsx` de `SORU_SURE_MS` (15000) varsayılanına düşüyordu. Sabiti değiştirmek DERECELİ (lig) maçları da etkileyeceği için sabite DOKUNULMADI; `(tabs)/er-meydani.tsx` `hizliBasla()` içinde `sure: 45` açıkça geçildi (izinli değerler zaten [20,30,45,60]).
+- **Dereceli/lig maçları hâlâ 15 sn** — o da değişsin mi, başkana soruldu. Oda modu zaten kurucunun seçtiği süreyi kullanıyor (etkilenmedi).
+- Puanlama etkilenmez: hız bonusu kalan süreye ORANTILI hesaplanıyor, maç tavan puanı (TEMEL+HIZ_BONUS ×soru) süreden bağımsız → sunucu doğrulaması bozulmaz.
+- Terörle Mücadele m.21 kartındaki kızıl HAÇ → yeşil (zümrüt) HİLAL olarak düzeltilip sunucuya yüklenmişti; görsel dosyası bu commit'le depoya da girdi.
