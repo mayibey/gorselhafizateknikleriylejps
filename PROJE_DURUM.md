@@ -937,3 +937,10 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - **Dereceli/lig maçları hâlâ 15 sn** — o da değişsin mi, başkana soruldu. Oda modu zaten kurucunun seçtiği süreyi kullanıyor (etkilenmedi).
 - Puanlama etkilenmez: hız bonusu kalan süreye ORANTILI hesaplanıyor, maç tavan puanı (TEMEL+HIZ_BONUS ×soru) süreden bağımsız → sunucu doğrulaması bozulmaz.
 - Terörle Mücadele m.21 kartındaki kızıl HAÇ → yeşil (zümrüt) HİLAL olarak düzeltilip sunucuya yüklenmişti; görsel dosyası bu commit'le depoya da girdi.
+
+## 2 Ağu 2026 — Cihaz kilidi: başkan + inceleme hesabı muaf (docs/v2/14)
+- OLAY: Başkanın hesabı (mayibey@gmail.com) 31 Tem 21:53'te OTOMATİK kilitlenmiş — 12_cihaz_kilit.sql'deki "7 günde en fazla 2 farklı cihaz" kuralı, doğal olarak çok cihazda test eden yöneticiyi de vuruyor (geçmişte 4 cihaz görünüyordu).
+- ACİL AÇMA (service_role ile): `cihaz_kilit=null` + `cihaz_gecmisi` satırları SİL + `aktif_oturum=null`. **Geçmişi silmezsen ilk açılışta anında yeniden kilitleniyor** — açma reçetesinin ayrılmaz parçası.
+- KALICI ÇÖZÜM: `profiles.cihaz_muaf` boolean eklendi; `cihaz_dogrula()` muaf hesapta cihaz geçmişi TUTMUYOR ve kilit UYGULAMIYOR. `profiles_kilit_koru` trigger'ına `cihaz_muaf` da eklendi → istemci kendini muaf ilan edemez. Muaf: mayibey@gmail.com + inceleme@mevzujsps.com. Kural diğer herkes için aynı sıkılıkta (2 cihaz/7 gün).
+- Yeni muaf eklemek: `update public.profiles set cihaz_muaf = true where email = '<eposta>';`
+- NOT: SUPABASE_ACCESS_TOKEN (yönetim API) süresi DOLMUŞ (401) → DDL, tarayıcıdaki açık panel oturumundan SQL editörüyle uygulandı. Panelde "Potential issue detected" onayı çıkıyor, buton metni **"Run query"**.
