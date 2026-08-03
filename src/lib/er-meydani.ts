@@ -30,6 +30,18 @@ export async function pushTokenGuncelle(): Promise<void> {
 }
 
 export type ErMeydaniSonuc = { verilen: number; haftalik_toplam: number; kazandim: boolean };
+/** Geçmiş maç satırı. Tablo `er_meydani_mac`; her satır BİR oyuncunun kendi bakışı. */
+export type GecmisMac = {
+  id: string;
+  mod: string; // 'hizli' | 'oda' | 'lig' | 'arkadas' — RPC'ler yazar, serbest metin
+  golge: boolean; // rakip bot/gölge miydi
+  rakip_rumuz: string | null;
+  benim_puan: number;
+  rakip_puan: number;
+  kazandim: boolean;
+  created_at: string;
+};
+export type GecmisOzet = { toplam: number; galibiyet: number; maglubiyet: number; enYuksek: number };
 export type LiderlikSatir = { sira: number; rumuz: string; puan: number; mac_sayisi: number; ben: boolean };
 export type Siram = { sira: number; puan: number; mac_sayisi: number };
 export type Sampiyon = { rumuz: string; puan: number };
@@ -140,6 +152,55 @@ export async function gecenHaftaSampiyon(): Promise<Sampiyon | null> {
     return arr.length ? arr[0] : null;
   } catch {
     return null;
+  }
+}
+
+/**
+ * GEÇMİŞ MAÇLAR. Maçlar en baştan beri `er_meydani_mac` tablosuna yazılıyordu ama hiçbir ekran
+ * okumuyordu — "geçmişi tutmuyor" sanılan şey aslında görünmeyen kayıttı.
+ * RPC gerekmez: tablodaki RLS zaten "oyuncu yalnız KENDİ maçlarını görür" diyor (23_er_meydani.sql).
+ */
+export async function macGecmisi(limit = 60): Promise<GecmisMac[]> {
+  if (!supabase) return [];
+  try {
+    const { data, error } = await supabase
+      .from('er_meydani_mac')
+      .select('id,mod,golge,rakip_rumuz,benim_puan,rakip_puan,kazandim,created_at')
+      .order('created_at', { ascending: false })
+      .limit(limit);
+    if (error || !data) return [];
+    return data as GecmisMac[];
+  } catch {
+    return [];
+  }
+}
+
+/** Listeden özet çıkarır (ayrı sorgu atmamak için istemcide hesaplanır). */
+export function gecmisOzet(liste: GecmisMac[]): GecmisOzet {
+  const galibiyet = liste.filter((m) => m.kazandim).length;
+  return {
+    toplam: liste.length,
+    galibiyet,
+    maglubiyet: liste.length - galibiyet,
+    enYuksek: liste.reduce((a, m) => Math.max(a, m.benim_puan), 0),
+  };
+}
+
+/** Mod kodunu insan diline çevirir. Sunucu serbest metin yazdığı için bilinmeyene de dayanıklı. */
+export function modAdi(mod: string): string {
+  switch (mod) {
+    case 'hizli':
+      return 'Hızlı Eşleşme';
+    case 'oda':
+      return 'Oda Maçı';
+    case 'lig':
+      return 'Lig';
+    case 'dereceli':
+      return 'Dereceli';
+    case 'arkadas':
+      return 'Arkadaş';
+    default:
+      return 'Maç';
   }
 }
 

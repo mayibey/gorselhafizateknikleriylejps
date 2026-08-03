@@ -374,6 +374,16 @@ export default function ErMeydaniScreen() {
         </View>
       </Pressable>
 
+      <Pressable
+        onPress={() => router.push('/er-meydani-gecmis')}
+        style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]}>
+        <MaterialCommunityIcons name="history" size={22} color={Palette.lacivert} />
+        <View style={styles.btnMetin}>
+          <AppText variant="govde" color="lacivert" bold>Geçmiş Maçlar</AppText>
+          <AppText variant="etiket" color="solukMetin">Tüm maçların · galibiyet, skor, tarih</AppText>
+        </View>
+      </Pressable>
+
       {/* Katılım onayı — konu/süre/oyuncu gör, onayla, katıl */}
       <Modal visible={onayOda != null} transparent animationType="fade" onRequestClose={() => setOnayOda(null)}>
         <View style={styles.modalKatman}>
