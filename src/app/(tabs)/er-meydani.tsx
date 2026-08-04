@@ -183,7 +183,13 @@ export default function ErMeydaniScreen() {
   }
 
   return (
-    <Screen title="Er Meydanı" headerAltinCizgi>
+    <Screen title="Oyunlar" headerAltinCizgi>
+      {/* Bölümün adı OYUNLAR; Er Meydanı buranın ilk oyunu. Yeni oyunlar geldikçe
+          bu başlığın altına kendi bloklarıyla eklenecekler. */}
+      <View style={styles.oyunBaslik}>
+        <MaterialCommunityIcons name="sword-cross" size={22} color={Palette.altinKoyu} />
+        <AppText variant="altBaslik" color="lacivert" bold>Er Meydanı</AppText>
+      </View>
       <View style={styles.girisKart}>
         <MaterialCommunityIcons name="sword-cross" size={30} color={Palette.altinKoyu} />
         <AppText variant="kucuk" color="anaMetin" style={styles.girisMetin}>
@@ -674,6 +680,7 @@ function KodlaKatil({ aktif, onKod }: { aktif: boolean; onKod: (kod: string) => 
 }
 
 const styles = StyleSheet.create({
+  oyunBaslik: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two, marginBottom: -Spacing.one },
   girisKart: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
     backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.l, padding: Spacing.three,

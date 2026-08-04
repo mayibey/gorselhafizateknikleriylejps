@@ -16,13 +16,15 @@ function icon(name: IconName) {
   );
 }
 
-// Er Meydanı — ORTA sekme, altın vurgulu (kılıç, altın rozet zemin) → göz oraya kayar.
-function erMeydaniIcon() {
+// OYUNLAR — ORTA sekme, altın vurgulu → göz oraya kayar. Er Meydanı bu bölümün İÇİNDE.
+// Dosya adı 'er-meydani' KALDI: 10'dan fazla yerde router.replace('/er-meydani') var,
+// derin bağlantı (/oda/KOD) da oraya düşüyor. Yalnız görünen ad ve ikon değişti.
+function oyunlarIcon() {
   return ({ focused, size }: { focused: boolean; color: ColorValue; size: number }) => (
     <View style={ikonStil.sar}>
       <View style={[ikonStil.cizgi, focused && ikonStil.cizgiAktif]} />
       <View style={ikonStil.erDaire}>
-        <MaterialCommunityIcons name="sword-cross" color={Palette.lacivert} size={size - 6} />
+        <MaterialCommunityIcons name="gamepad-variant" color={Palette.lacivert} size={size - 6} />
       </View>
     </View>
   );
@@ -64,10 +66,10 @@ export default function TabsLayout() {
         name="mevzuat"
         options={{ title: 'Mevzuat', tabBarIcon: icon('book-open-variant') }}
       />
-      {/* ORTA — Er Meydanı (altın vurgulu, düello oyun modu) */}
+      {/* ORTA — Oyunlar (altın vurgulu). Er Meydanı bu bölümün ilk oyunu. */}
       <Tabs.Screen
         name="er-meydani"
-        options={{ title: 'Er Meydanı', tabBarIcon: erMeydaniIcon() }}
+        options={{ title: 'Oyunlar', tabBarIcon: oyunlarIcon() }}
       />
       {/* Talim (kanun bazlı deneme/alıştırma) — 25 müşterek kanunun küratörlü soruları. */}
       <Tabs.Screen
