@@ -123,6 +123,45 @@ degistir(
   yeniTur();`,
 );
 
+// ---- 2c. TEST MODU KAPALI, İÇERİK YİNE DE AÇIK (6 Ağu, başkan talimatı) ----
+// Menüdeki "TEST MODU AÇIK / AÇ-KAPAT" satırı kullanıcının görmesi gereken bir şey değil.
+// Ama içerik HENÜZ kilitlenmeyecek: test modu kapanınca ücretsiz sınırlar (3 bölüm / günde
+// 3 tur) devreye girerdi. Sınırlar şimdilik pratikte sınırsıza çekiliyor — kilit kararı
+// verildiğinde tek satır: 999 → 3. (Ödeme kapısı [[odeme-modeli-ve-gating]] ile birlikte.)
+degistir(
+  'test modu kapalı',
+  "let TEST_MODU = (localStorage.getItem('mevzu_test_modu') ?? '1') === '1';",
+  'let TEST_MODU = false;   /* üretici: yayında test modu YOK */',
+);
+degistir(
+  'ücretsiz sınırlar şimdilik sınırsız',
+  'const BEDAVA_BOLUM=3, BEDAVA_TUR=3;',
+  'const BEDAVA_BOLUM=999, BEDAVA_TUR=999;   /* üretici: içerik henüz kilitlenmiyor */',
+);
+degistir(
+  'test modu satırı menüden kaldırıldı',
+  /h\+=`<div class="premSat">[\s\S]*?<\/div>`;\n/,
+  '',
+);
+// Satırın tıklama bağlayıcısı da gitmeli: öge kalkınca `$('#premAnahtar')` null döner ve
+// atama TypeError atar → menu() orada patlar, ALTINDAKİ bağlamalar (meydan okuma kutusu)
+// hiç kurulmaz. Kutuyu silip bunu unutmak, menüyü sessizce yarım bırakırdı.
+degistir(
+  'test modu düğmesinin bağlayıcısı',
+  /\s*\$\('#premAnahtar'\)\.onclick=\(\)=>\{[^\n]*\n/,
+  '\n',
+);
+
+// ---- 2d. YARDIMLA BÖLÜM GEÇME KALKTI (6 Ağu, başkan talimatı) ----
+// Çengelde "bitiren geçer" kuralı test için açılmıştı: bütün harfleri yardımla açan da
+// bölümü geçiyordu. Artık puan gerçekten yanıyor (6 - hata - yardım) ve geçmek için
+// eşiğin üstünde kalmak şart — yardım alabilirsin ama bedeli var.
+degistir(
+  'yardımla geçme kaldırıldı',
+  'const TEST_GECIS=true;',
+  'const TEST_GECIS=false;   /* üretici: yardım artık gerçekten yakıyor */',
+);
+
 // ---- 3. KAYIT KÖPRÜSÜ ----
 // Oyun ilerlemesini localStorage'a yazıyor (bölüm, yıldız, rekor, günlük tur…). Cihazda kalırsa
 // telefon değişince gider. Bu yüzden: açılışta uygulamadan gelen kayıt localStorage'a DOLDURULUR,
