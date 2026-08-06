@@ -87,8 +87,14 @@ body{padding:0!important;gap:0!important;background:var(--kremZemin);display:blo
 @media (min-height:700px){
   .sucAd{font-size:clamp(21px,6vw,26px)}
   /* Suçun tanımı EKRANDAKI ASIL SORU — 16px'te "minnacık" duruyordu (başkan iki kez
-     söyledi). Kartın öbür yazılarıyla aynı ağırlığa çekildi. */
-  .sucMt{font-size:17.5px;line-height:1.65;color:var(--metin)}
+     söyledi). Kartın öbür yazılarıyla aynı ağırlığa çekildi.
+     AYRICA: puntoyu büyütüp rengi koyulaştırınca üstteki madde başlığıyla BİRBİRİNE
+     GİRDİ (başkan ekran görüntüsünde daire içine aldı). Artık ikisi ayrı: başlığın
+     altında ince ayırıcı, soru kendi altın şeritli kutusunda duruyor. */
+  .sucAd{margin-bottom:0;padding-bottom:13px;border-bottom:1px solid var(--ayirici)}
+  .sucMt{font-size:17.5px;line-height:1.65;color:var(--metin);
+    margin-top:15px;padding:13px 15px;background:var(--altinYuzey);
+    border-left:3px solid var(--altin);border-radius:0 11px 11px 0}
   .tBar .etik{font-size:13px}
   .slotSat label b{font-size:22px}
   .slotSat label{font-size:12.5px}
