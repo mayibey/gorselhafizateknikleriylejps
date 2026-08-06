@@ -295,8 +295,16 @@ degistir(
   }catch(e){}
   var asil = localStorage.setItem.bind(localStorage);
   localStorage.setItem = function(k, v){
-    asil(k, v);
+    /* ⚠️ ÖNCE HABER VER, SONRA DEPOYA YAZ.
+       Eskiden sıra tersti: asil(k,v) çağrılıyor, SONRA mesaj gönderiliyordu. WebView'in
+       kendi deposu kullanılamadığında (WKWebView'de html+baseUrl ile açılan sayfada olur)
+       asil() HATA FIRLATIYOR ve mesaj satırına hiç gelinmiyordu → oyun ilerlemesi ne cihaza
+       ne sunucuya yazılıyordu, üstelik sessizce. 7 Ağu: başkan bir çengel bölümü bitirdi,
+       oyun_ilerleme tablosunda tek satır oluşmadı; sebebi buydu.
+       Uygulama kaydı zaten AsyncStorage + sunucuya yazıyor; sayfanın kendi deposu çalışmasa
+       da ilerleme kaybolmaz. Bu yüzden mesaj her hâlde gider, depo hatası yutulur. */
     gonder({tip:'kayit', anahtar:String(k), deger:String(v)});
+    try { asil(k, v); } catch(e) {}
   };
   gonder({tip:'hazir'});
 })();

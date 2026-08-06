@@ -1002,3 +1002,16 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - **Menüye geliştirme notu** eklendi (başkan isteği): "🚧 Geliştirme sürüyor — oyunlar her gün iyileşiyor, bitmesine çok az kaldı."
 - **Ekran görüntüsü koruması AÇILDI** (`uygulama_ayar.ekran_koruma` 0 → 1). Sunucu şalteri, build/OTA gerektirmez; başkan "yarın test ederken aç" diyene kadar kapalı kalacak.
 - Tarayıcı doğrulaması: bölüm 1 ekranda sınav ipucuyla açılıyor · her iki tahtada 6/5 kelime, çakışma ve taşma yok, şık gerektiren ipucu 0 · JS hatası 0. tsc 0 hata.
+
+## 7 Ağu 2026 — 🔴 KÖK SEBEP BULUNDU: oyun ilerlemesi neden hiç kaydolmuyordu
+- **BELİRTİ:** `oyun_ilerleme` tablosu bomboştu. Başkan iki çengel bölümü bitirdi, yine tek satır oluşmadı. Oysa kart çalışması (52 kişi/24 saat) ve Er Meydanı (14 maç/24 saat) sorunsuz kaydediyordu.
+- **ELEME:** (a) köprü tarayıcıda sınandı — bölüm bitince `{tip:"kayit",anahtar:"mevzu_bosluk_ilerleme"}` mesajı gidiyordu ✓ (b) sunucuya yazma gerçek kullanıcı yetkisiyle sınandı — HTTP 201 ✓ (c) `senkron.ts` (çalışan kart kaydı) ile `oyun-kayit.ts` yapı olarak BİREBİR aynı çıktı → kütüphane suçlu değil.
+- **KÖK SEBEP (üreteçteki köprü):** `localStorage.setItem` sarmalayıcısı şöyleydi: `asil(k,v); gonder({tip:'kayit',…});` — **önce depoya yazıyor, sonra haber veriyordu.** WebView'in kendi deposu kullanılamadığında (WKWebView'de html+baseUrl ile açılan sayfada olur) `asil()` HATA FIRLATIYOR ve mesaj satırına hiç gelinmiyordu. Sessiz. Aynı dosyadaki tohumlama satırı zaten `try{...}catch{}` ile sarılıydı — yazan kişi setItem'ın patlayabildiğini biliyormuş, sarmalayıcıda uygulanmamış.
+- **DÜZELTME:** sıra ters çevrildi — **önce haber ver, sonra depoya yaz, depo hatasını yut.** Uygulama kaydı zaten AsyncStorage + sunucuya yazıyor; sayfanın kendi deposu çalışmasa da ilerleme kaybolmaz. Tarayıcıda `setItem`'ı bilerek patlatarak doğrulandı: mesaj yine gidiyor.
+- **DERS:** "köprü çalışıyor" demek için mesajın gittiğini görmek yetmiyor — **hata yolunda da** gittiğini görmek gerekiyor. Mutlu yol testi bu kusuru bir gün boyunca gizledi.
+
+## 7 Ağu 2026 — Çengel: yardımla geçiş, odaklanma, kırık künyeler
+- **Yardımla tamamlanınca sonrakine geçmiyordu.** Otomatik geçiş bloğu yalnız TUŞ yolunun içindeydi; son harfi yardımla açan oyuncu aynı kelimede takılı kalıyordu. Ortak `cTamamlaKontrol()` fonksiyonuna alındı, iki yol da onu çağırıyor (bir daha ayrışmasın). Doğrulandı: yardımla TESLİM OL bitince aktif kelime TABİİYETİ'ye geçti.
+- **Yazarken odaklanma sorunu.** İki kusur birdenmiş: (1) `cGorunurYap()` **her tuşta çağrılmıyordu** (yalnız çizimde ve yardımda), oysa imleç harf harf ilerliyor; (2) yalnız ızgaranın kendi sarmalayıcısını kaydırıyor, **sayfanın kendi kaydırmasını (`#govde`) hesaba katmıyordu** → klavye açılınca ızgara ve ipucu ekrandan çıkıyordu. İkisi de düzeltildi; artık açık ipucu da görünür alanda tutuluyor.
+- **KIRIK KÜNYE (10 ipucu):** "[Çocuk Koruma **539**]" yazıyordu, doğrusu 5395 — üretimde kanun numarası kırpılmış. Başkan bir soruda fark etti, taradım, 10 ipucunda birden vardı; hepsi düzeltildi.
+- **BELİRSİZ İPUCU:** 5395 m.24 sorusunda "hangi **kuruma** ilişkin hükümleri" deniyordu; "kurum" günlük dilde teşkilat demek, oyuncu kurum adı arıyordu. Cevap (UZLAŞMA) madde metniyle doğrulandı, **doğruydu**; ipucu "hangi **usule** ilişkin" olarak düzeltildi.
