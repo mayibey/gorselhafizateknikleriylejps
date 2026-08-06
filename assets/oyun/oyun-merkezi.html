@@ -2493,15 +2493,33 @@ function oynayisSayaci(){
   try{ const n=(+localStorage.getItem('mevzu_oynayis')||0)+1;
     localStorage.setItem('mevzu_oynayis',String(n)); return n; }catch{ return Math.floor(Date.now()/1000)%997; }
 }
+/* ORTAK SORU HAVUZU — Kuşatma ve Bayrak Yarışı'nın kendi soruları YOK, ikisi de buradan
+   çeker. Eskiden tek kaynak Boşluk Doldurma havuzuydu (227 kayıt, 3 şıkka indirgenmiş) →
+   iki oyun da hızla tekrara düşüyordu. Artık çıkmış JSPS sınav soruları da aynı kaynakta.
+   ⚠️ SINAV SORUSUNUN ŞIKLARI KIRPILMAZ: roma rakamlı ("I, II, III … hangileri doğrudur")
+   sorularda şık atmak soruyu bozar, hatta cevabı yok edebilir. Olduğu gibi geliyor. */
+let ORTAK_HAVUZ=null;
+function ortakHavuz(){
+  if(ORTAK_HAVUZ) return ORTAK_HAVUZ;
+  const bosluk=HAVUZ.bosluk.map(x=>{
+    const yanlis=(x.sik||[]).filter(y=>y!==x.bos).slice(0,2);
+    if(yanlis.length<2) return null;
+    return {s:`${x.on} …… ${x.son}`, sik:[x.bos,...yanlis], d:0, ref:x.ref};
+  }).filter(Boolean);
+  const sinav=MILYONER_KUSAK.flat().filter(q=>q&&q.sik&&q.sik.length>=3)
+    .map(q=>({s:q.s, sik:q.sik, d:q.d, ref:q.ref}));
+  ORTAK_HAVUZ=bosluk.concat(sinav);
+  return ORTAK_HAVUZ;
+}
 function havuzdanSoru(sart, adet, tohum){
-  const aday=HAVUZ.bosluk.filter(sart);
+  const aday=ortakHavuz().filter(sart);
   const out=[];
   for(let i=0;i<adet&&aday.length;i++){
     const x=aday[(tohum+i*37)%aday.length];
-    const yanlis=x.sik.filter(y=>y!==x.bos).slice(0,2);
-    if(yanlis.length<2) continue;
-    const sik=tohumlu([x.bos,...yanlis],tohum+i);
-    out.push({s:`${x.on} …… ${x.son}`, sik, d:sik.indexOf(x.bos), ref:x.ref});
+    // Şık sırası her çekilişte karışır; INDIS üzerinden yapılır ki iki şıkkın metni
+    // aynı olsa bile doğru cevabın yeni yeri şaşmasın.
+    const sira=tohumlu(x.sik.map((_,j)=>j),tohum+i);
+    out.push({s:x.s, sik:sira.map(j=>x.sik[j]), d:sira.indexOf(x.d), ref:x.ref});
   }
   return out;
 }
@@ -2512,7 +2530,10 @@ function kaleKonulari(){
   // Aynı kanun havuzda iki ayrı yazımla geçebiliyor ("CMK 5271" ve "5271 Ceza
   // Muhakemesi"); numaraya göre tekilleştirilmezse aynı kanun iki kale konusu oluyor.
   const sayac={},ad={};
-  HAVUZ.bosluk.forEach(x=>{
+  // Konu listesi ORTAK havuzdan çıkar (boşluk + çıkmış sınav soruları). Yalnız boşluk
+  // havuzuna bakılırsa yalnızca oradaki kanunlar kale konusu olabiliyordu; sınav
+  // sorularıyla gelen kanunlar (Tebligat, Uzman Jandarma, Kaçakçılık…) seçilemezdi.
+  ortakHavuz().forEach(x=>{
     if(!x.ref||!x.sik||x.sik.length<3) return;
     const bas=String(x.ref).split('·')[0].trim();
     const no=(bas.match(/\d{3,5}/)||[''])[0];
@@ -2595,8 +2616,9 @@ function kSaldiri(){
     ${s.konu?`<div class="soruRef">📜 ${s.konu}</div>`:''}
     <div class="cumle">${s.s}</div>
     <div style="display:flex;flex-direction:column;gap:8px">${s.sik.map((x,j)=>
-      `<button class="sik" data-j="${j}"><span class="h">${'ABC'[j]}</span><span>${x}</span></button>`).join('')}</div>
+      `<button class="sik" data-j="${j}"><span class="h">${'ABCDE'[j]}</span><span>${x}</span></button>`).join('')}</div>
     <div id="kSA"></div>`;
+  kaydirIpucuKur();   // sınav soruları uzun: son şık katlanmanın altında kalmasın
   [...document.querySelectorAll('.sik')].forEach(b=>b.onclick=()=>{
     const j=+b.dataset.j,ok=j===s.d;
     [...document.querySelectorAll('.sik')].forEach(x=>{x.style.pointerEvents='none';
@@ -2661,10 +2683,11 @@ function byCiz(){
     ${benim?`${s.ref?`<div class="soruRef">📜 ${s.ref}</div>`:''}
       <div class="cumle">${s.s}</div>
       <div style="display:flex;flex-direction:column;gap:8px">${s.sik.map((x,j)=>
-        `<button class="sik" data-j="${j}"><span class="h">${'ABC'[j]}</span><span>${x}</span></button>`).join('')}</div>`
+        `<button class="sik" data-j="${j}"><span class="h">${'ABCDE'[j]}</span><span>${x}</span></button>`).join('')}</div>`
      :''}
     <div id="byS"></div>`;
   if(benim){
+    kaydirIpucuKur();   // yarış süreli: görülmeyen şık burada daha da can yakar
     [...document.querySelectorAll('.sik')].forEach(b=>b.onclick=()=>{
       const j=+b.dataset.j,ok=j===s.d;
       [...document.querySelectorAll('.sik')].forEach(x=>{x.style.pointerEvents='none';
