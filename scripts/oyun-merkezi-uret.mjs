@@ -70,14 +70,23 @@ body{padding:0!important;gap:0!important;background:var(--kremZemin);display:blo
    Maket sabit yükseklikteydi, gerçek telefon çok daha uzun. Kısa içerikli oyunlarda
    (Ceza Terazisi gibi) her şey tepeye sıkışıp ekranın yarısı bomboş kalıyordu.
    "safe center": içerik sığıyorsa dikeyde ORTALANIR, taşıyorsa yukarıdan başlar ve
-   normal kayar — düz "center" taşan içeriğin tepesini kırpardı. */
-#govde{justify-content:safe center}
+   normal kayar — düz "center" taşan içeriğin tepesini kırpardı.
+   ⚠️ HERKESE UYGULANMAZ: Çengel/Asmaca gibi oyunlarda gövde tam yükseklikte bir sütun
+   ve ızgara "flex:1" ile kalan alanı kaplıyor; ortalayınca o çocuk uzayamıyor →
+   ızgara kırpıldı, klavye ortada kaldı (başkan gösterdi). Yalnız kısa ekranlarda. */
+#govde:has(.terazi),#govde:has(.dyKart),#govde:has(.ymKart),
+#govde:has(.sonuc),#govde:has(.kilitKart){justify-content:safe center}
 
-/* Alt sekme çubuğu içeriği ÖRTÜYORDU: Günün Maddesi'nde klavyenin son sırası çubuğun
-   altında kalıyordu (başkan Android ekran görüntüsüyle gösterdi). Gövdeye çubuk kadar
-   alt boşluk + cihazın kendi alt güvenli alanı ekleniyor. */
-#govde{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
-#altSabit{bottom:calc(-16px + 96px + env(safe-area-inset-bottom))}
+/* Yapışkan alt şerit kabın 16px DIŞINA taşıyordu → son sıra kırpılıyordu (Günün
+   Maddesi'nde klavyenin alt sırası). Kaba oturtuldu + cihazın alt güvenli alanı.
+   96px'lik alt boşluk KALDIRILDI: klavyeyi yukarı itip harflerin üstüne bindiriyordu. */
+#altSabit{bottom:0;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+#govde{padding-bottom:env(safe-area-inset-bottom)}
+
+/* KLAVYELER GERÇEK DİBE. Ölçtüm: Asmaca'da 196px, Çengel'de 176px ölü alan kalıyordu,
+   üstelik çengelde şerit ızgaraya 56px biniyordu. "margin-top:auto" artan boşluğu
+   şeridin ÜSTÜNE alır → klavye dibe oturur, ızgaraya yer açılır. */
+#asKlavye,#altSabit{margin-top:auto}
 
 /* Grup başlıkları (ARKADAŞ LİGİ · BUGÜN) harf üstlerinden kırpılıyordu: harf aralığı
    büyük, satır yüksekliği yoktu. */
@@ -181,11 +190,13 @@ degistir(
   yeniTur();`,
 );
 
-// ---- 2c. TEST MODU KAPALI, İÇERİK YİNE DE AÇIK (6 Ağu, başkan talimatı) ----
+// ---- 2c. TEST MODU KAPALI + PREMIUM KAPISI AÇIK (6 Ağu gece, başkan kararı) ----
 // Menüdeki "TEST MODU AÇIK / AÇ-KAPAT" satırı kullanıcının görmesi gereken bir şey değil.
-// Ama içerik HENÜZ kilitlenmeyecek: test modu kapanınca ücretsiz sınırlar (3 bölüm / günde
-// 3 tur) devreye girerdi. Sınırlar şimdilik pratikte sınırsıza çekiliyor — kilit kararı
-// verildiğinde tek satır: 999 → 3. (Ödeme kapısı [[odeme-modeli-ve-gating]] ile birlikte.)
+// KİLİT: bölümlü oyunlarda İLK 2 BÖLÜM herkese açık, gerisi premium. Bölümsüz oyunlarda
+// (Doğru-Yanlış · Rütbe Merdiveni · Kuşatma · Bayrak) her oyun için GÜNDE 2 TUR ücretsiz —
+// sayaç oyun başına ayrı, yani Rütbe Merdiveni'ni 2 kez oynayınca yalnız o biter.
+// KİLİT DIŞI: Günün Maddesi (haritası ve tur sayacı yok → zaten herkese açık) ve
+// Er Meydanı (uygulamanın kendi ekranı, WebView kilidine hiç uğramıyor).
 degistir(
   'test modu kapalı',
   "let TEST_MODU = (localStorage.getItem('mevzu_test_modu') ?? '1') === '1';",
@@ -194,7 +205,7 @@ degistir(
 degistir(
   'ücretsiz sınırlar şimdilik sınırsız',
   'const BEDAVA_BOLUM=3, BEDAVA_TUR=3;',
-  'const BEDAVA_BOLUM=999, BEDAVA_TUR=999;   /* üretici: içerik henüz kilitlenmiyor */',
+  'const BEDAVA_BOLUM=2, BEDAVA_TUR=2;   /* başkan: ilk 2 bölüm açık · her oyunda günde 2 tur */',
 );
 degistir(
   'test modu satırı menüden kaldırıldı',

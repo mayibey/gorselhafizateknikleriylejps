@@ -580,7 +580,7 @@ body.cakHata #tel{box-shadow:inset 0 0 0 4px var(--kirmizi)}
 <div id="tel">
   <canvas id="zerre"></canvas>
   <canvas id="konfeti"></canvas>
-  <div id="bar"><button id="geri">‹</button><div id="barBas">Oyun Merkezi</div><div id="barSag"></div><button id="nasil" title="Nasıl oynanır" aria-label="Nasıl oynanır">?</button></div>
+  <div id="bar"><button id="geri">‹</button><div id="barBas">Oyun Merkezi</div><div id="barSag"></div><button id="nasil" title="Nasıl oynanır" aria-label="Nasıl oynanır">?</button><button id="bildir" title="Hata veya öneri bildir" aria-label="Hata bildir">⚑</button></div>
   <div id="govde"></div>
 </div>
 
@@ -860,6 +860,14 @@ const fikrasiz=t=>String(t||'').replace(/^\(\d+\)\s*/,'');
 const kar=a=>{const b=a.slice();
   for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}
   return b;};
+/* Hata/öneri: hangi oyunda ve hangi ekranda olduğunu da gönderir ki kullanıcı
+   "nerede oldu" diye yazmak zorunda kalmasın. */
+function bildirGonder(){
+  const o=OYUNLAR.find(x=>x.id===acikOyun);
+  window.mevzuKopru&&window.mevzuKopru({tip:'geribildirim',
+    oyun:acikOyun||'menu', oyunAd:(o?o.ad:'Oyun Merkezi'),
+    ekran:(document.getElementById('barBas')||{}).textContent||''});
+}
 function bar(b,s,g){$('#barBas').textContent=b;$('#barSag').textContent=s||'';$('#geri').style.display=g?'block':'none';}
 /* Oyundan cikinca gecikmeli isler (sayac, sira bekleme) devam etmesin diye tur sayaci. */
 let tur=0;
@@ -1069,10 +1077,13 @@ function kilitPerdesi(baslik,aciklama,geriFn){
         <div>✓ Geçmiş günlerin Günün Maddesi</div>
         <div>✓ Sıralamaya tam katılım</div></div>
       <button class="btn altin" id="kAl">PREMIUM'A GEÇ</button>
+      <button class="btn altin" id="kPrem">⭐ PREMIUM'A GEÇ</button>
       <button class="btn hafif" id="kGeri">↩ Geri dön</button>
       <div class="aciklamaS" style="text-align:center">Prototipte satın alma yok — düğme
         premium'u açıp kapatır, iki hâli de görebilesin diye.</div></div>`;
   $('#kAl').onclick=()=>{ premiumAyarla(!premiumMu()); (geriFn||menu)(); };
+  // Uygulamanın kendi satın alma ekranını açar; oyun içinde satış yok.
+  if($('#kPrem'))$('#kPrem').onclick=()=>window.mevzuKopru&&window.mevzuKopru({tip:'ekran',ad:'paywall'});
   $('#kGeri').onclick=geriFn||menu;
 }
 
@@ -2371,8 +2382,11 @@ function kaleKonulari(){
   // konuları SGK/İmar gibi branş kanunlarına kayıyordu. Müşterekler öne alınır.
   const ONCELIK=['5237','5271','5326','6284','6136','6698','7068','2803','5442','657','3713','2935','7201'];
   const sira=no=>{const i=ONCELIK.indexOf(no);return i<0?99:i;};
-  return Object.keys(sayac).filter(no=>sayac[no]>=2)
-    .sort((a,b)=>sira(a)-sira(b)||sayac[b]-sayac[a]).slice(0,6).map(no=>ad[no]);
+  // Eskiden .slice(0,6) vardı: yalnız 6 kanun görünüyordu, kullanıcı kalesini
+  // gerçek müfredattan kuramıyordu (başkan bildirdi). Artık soru havuzu olan
+  // HER kanun listede; müşterekler yine üstte.
+  return Object.keys(sayac).filter(no=>sayac[no]>=1)
+    .sort((a,b)=>sira(a)-sira(b)||sayac[b]-sayac[a]).map(no=>ad[no]);
 }
 function kaleSorulari(konular, tohum){
   // Tohum artık dışarıdan verilebiliyor: meydan okumada iki taraf da AYNI soruları
@@ -2502,7 +2516,8 @@ function byCiz(){
   G().innerHTML=`<div class="yarisBar">
       <div class="sr biz"><span class="ad">Sen</span><span class="yol"><i style="width:${byDogru/BY_SORU.length*100}%"></i></span></div>
       ${meydan?`<div class="sr rak"><span class="ad">${meydan.ad}</span><span class="yol"><i style="width:${rakipYuzde}%"></i></span></div>`:''}</div>
-    ${benim?`<div class="cumle">${s.s}</div>
+    ${benim?`${s.ref?`<div class="soruRef">📜 ${s.ref}</div>`:''}
+      <div class="cumle">${s.s}</div>
       <div style="display:flex;flex-direction:column;gap:8px">${s.sik.map((x,j)=>
         `<button class="sik" data-j="${j}"><span class="h">${'ABC'[j]}</span><span>${x}</span></button>`).join('')}</div>`
      :''}

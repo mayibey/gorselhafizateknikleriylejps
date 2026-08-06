@@ -8,6 +8,7 @@ import { OYUN_MERKEZI_HTML } from '../../assets/oyun-merkezi-html';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Spacing } from '@/constants/theme';
 import { type OyunKayit, oyunKaydiGonder, oyunKaydiYaz, oyunKaydiYukle } from '@/lib/oyun-kayit';
+import { useUyelik } from '@/lib/uyelik-context';
 
 /**
  * OYUN MERKEZİ — sekmenin kendisi.
@@ -28,6 +29,10 @@ export default function OyunMerkeziScreen() {
   const [kayit, setKayit] = useState<OyunKayit | null>(null);
   const [hazir, setHazir] = useState(false);
   const menudeMi = useRef(true);
+  // PREMIUM KAPISI: kilit kararını sayfa veriyor ama üyeliği BİLMİYOR — uygulamadan
+  // söylenmezse herkesi ücretsiz sayar. Üyelik bilgisi sayfa açılmadan önce enjekte
+  // edilir; bekleme bitmeden basılırsa ödeyen kullanıcı bir an kilitli görürdü.
+  const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
 
   // Derin bağlantı: /oda/KOD → burada karşılanır, oda koduyla LOBİYE aktarılır.
   useEffect(() => {
@@ -70,11 +75,21 @@ export default function OyunMerkeziScreen() {
           ad?: string;
           anahtar?: string;
           deger?: string;
+          oyunAd?: string;
+          ekran?: string;
         };
         if (m.tip === 'hazir') setHazir(true);
         else if (m.tip === 'nerede') menudeMi.current = !m.ad;
         else if (m.tip === 'ekran' && m.ad === 'ermeydani') router.push('/er-meydani-lobi');
-        else if (m.tip === 'kayit' && m.anahtar) oyunKaydiYaz(m.anahtar, m.deger ?? '');
+        else if (m.tip === 'ekran' && m.ad === 'paywall') router.push('/paywall');
+        else if (m.tip === 'geribildirim') {
+          // Oyunun içinden gelen hata/öneri: hangi oyun ve hangi ekran olduğu başlıkta
+          // hazır gelsin ki kullanıcı "nerede oldu" diye yazmak zorunda kalmasın.
+          router.push({
+            pathname: '/geri-bildirim',
+            params: { baslik: `Oyun: ${m.oyunAd ?? ''}${m.ekran ? ' · ' + m.ekran : ''}` },
+          });
+        } else if (m.tip === 'kayit' && m.anahtar) oyunKaydiYaz(m.anahtar, m.deger ?? '');
       } catch {
         /* yoksay */
       }
@@ -87,7 +102,7 @@ export default function OyunMerkeziScreen() {
   // düğmesi orada. Üstüne bir de uygulamanın başlığını koyunca "Oyun Merkezi" iki kez
   // yazıyordu. Ortak `Screen` sarmalayıcısı da kullanılmıyor: onun gövdesinde kenar boşluğu
   // ve genişlik sınırı var, oyun onların içinde panel gibi duruyordu (başkan gösterdi).
-  if (!kayit) {
+  if (!kayit || uyelikYukleniyor) {
     return (
       <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
         <View style={styles.ortala}>
@@ -105,7 +120,10 @@ export default function OyunMerkeziScreen() {
           originWhitelist={['*']}
           source={{ html: OYUN_MERKEZI_HTML, baseUrl: 'https://mevzujsps.com/oyun' }}
           // Kayıt, sayfanın kendi betiği çalışmadan ÖNCE yerine konur — oyun açılışta okuyor.
-          injectedJavaScriptBeforeContentLoaded={`window.__MEVZU_KAYIT = ${JSON.stringify(kayit)}; true;`}
+          injectedJavaScriptBeforeContentLoaded={`window.__MEVZU_KAYIT = ${JSON.stringify({
+            ...kayit,
+            mevzu_premium: premium ? '1' : '0',
+          })}; true;`}
           onMessage={mesaj}
           javaScriptEnabled
           domStorageEnabled
