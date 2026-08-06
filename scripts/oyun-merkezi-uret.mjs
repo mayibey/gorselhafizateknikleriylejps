@@ -86,7 +86,10 @@ body{padding:0!important;gap:0!important;background:var(--kremZemin);display:blo
 /* Uzun ekranda yazılar da büyür: aynı alanda "minnacık soru" kalmasın. */
 @media (min-height:700px){
   .sucAd{font-size:clamp(21px,6vw,26px)}
-  .sucMt{font-size:16px;line-height:1.6}
+  /* Suçun tanımı EKRANDAKI ASIL SORU — 16px'te "minnacık" duruyordu (başkan iki kez
+     söyledi). Kartın öbür yazılarıyla aynı ağırlığa çekildi. */
+  .sucMt{font-size:17.5px;line-height:1.65;color:var(--metin)}
+  .tBar .etik{font-size:13px}
   .slotSat label b{font-size:22px}
   .slotSat label{font-size:12.5px}
   .cumle{font-size:clamp(17px,5vw,20px);line-height:1.7}
@@ -95,6 +98,21 @@ body{padding:0!important;gap:0!important;background:var(--kremZemin);display:blo
   .dyKart{font-size:19.5px;min-height:200px}
   .hk,.hs{font-size:clamp(15.5px,4.4vw,17.5px)}
   .aciklamaS{font-size:17px;line-height:1.65}
+
+  /* ORTALAMAK YETMEDİ: kart küçük kalınca boşluk sadece alta ve üste bölünüyordu
+     (başkan ikinci kez söyledi). Uzun ekranda kartın kendisi büyüyor — iç boşluk,
+     kaydırıcı yüksekliği ve düğme daha ferah. Yan fayda: kaydırıcıya parmakla
+     tutunmak kolaylaşıyor. */
+  .terazi{padding:22px 20px}
+  .slotSat{margin-top:22px}
+  input[type=range]{height:40px}
+  .tBar{height:46px;margin-top:20px}
+  .btn{padding:20px 15px;font-size:17.5px}
+  .cumle{padding:20px}
+  .ek{min-height:74px;padding:15px}
+  .hk,.hs{padding:15px 16px}
+  .sik{padding:16px}
+  .cip{min-height:54px;padding:14px 20px;font-size:16.5px}
 }
 `;
 {
