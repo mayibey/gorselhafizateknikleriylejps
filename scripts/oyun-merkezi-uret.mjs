@@ -92,6 +92,19 @@ body{padding:0!important;gap:0!important;background:var(--kremZemin);display:blo
    büyük, satır yüksekliği yoktu. */
 .grupBas,.bolgeBas{line-height:1.5;padding:2px 0}
 
+/* HATA BİLDİR — yalnız bayrak simgesiyken kimse ne olduğunu anlamıyordu (başkan
+   söyledi). Yazılı, kırmızı çerçeveli bir rozet: üst şeritte "?" işaretinin yanında
+   duruyor, her oyunda ve her soruda görünüyor. Kırmızı, uygulamanın kimliğinde
+   "aksiyon/uyarı" rengi — tam da bu düğmenin işi. */
+#bildir{flex:none;display:flex;align-items:center;gap:5px;height:30px;padding:0 11px;
+  margin-left:8px;border-radius:20px;cursor:pointer;white-space:nowrap;
+  border:1.5px solid #E88A8A;background:transparent;color:#FFD9D9;
+  font-family:inherit;font-size:12.5px;font-weight:800;letter-spacing:.02em;transition:.15s}
+#bildir:hover,#bildir:active{background:var(--kirmizi);border-color:var(--kirmizi);color:#fff}
+/* Dar telefonda başlık uzunsa yazı gizlenir, bayrak kalır — taşmasın. */
+@media (max-width:380px){#bildir{padding:0 9px;font-size:0;gap:0}
+  #bildir::first-letter{font-size:14px}}
+
 /* Uzun ekranda yazılar da büyür: aynı alanda "minnacık soru" kalmasın. */
 @media (min-height:700px){
   .sucAd{font-size:clamp(21px,6vw,26px)}

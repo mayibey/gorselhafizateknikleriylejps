@@ -580,7 +580,7 @@ body.cakHata #tel{box-shadow:inset 0 0 0 4px var(--kirmizi)}
 <div id="tel">
   <canvas id="zerre"></canvas>
   <canvas id="konfeti"></canvas>
-  <div id="bar"><button id="geri">‹</button><div id="barBas">Oyun Merkezi</div><div id="barSag"></div><button id="nasil" title="Nasıl oynanır" aria-label="Nasıl oynanır">?</button><button id="bildir" title="Hata veya öneri bildir" aria-label="Hata bildir">⚑</button></div>
+  <div id="bar"><button id="geri">‹</button><div id="barBas">Oyun Merkezi</div><div id="barSag"></div><button id="nasil" title="Nasıl oynanır" aria-label="Nasıl oynanır">?</button><button id="bildir" title="Hata veya öneri bildir" aria-label="Hata bildir">⚑ Bildir</button></div>
   <div id="govde"></div>
 </div>
 
@@ -862,6 +862,11 @@ const kar=a=>{const b=a.slice();
   return b;};
 /* Hata/öneri: hangi oyunda ve hangi ekranda olduğunu da gönderir ki kullanıcı
    "nerede oldu" diye yazmak zorunda kalmasın. */
+/* Dugme kabukta sabit duruyor (her ekranda ayni), o yuzden baglama bir kez yapilir. */
+addEventListener('DOMContentLoaded',function(){
+  var b=document.getElementById('bildir');
+  if(b) b.onclick=bildirGonder;
+});
 function bildirGonder(){
   const o=OYUNLAR.find(x=>x.id===acikOyun);
   window.mevzuKopru&&window.mevzuKopru({tip:'geribildirim',
@@ -872,7 +877,12 @@ function bar(b,s,g){$('#barBas').textContent=b;$('#barSag').textContent=s||'';$(
 /* Oyundan cikinca gecikmeli isler (sayac, sira bekleme) devam etmesin diye tur sayaci. */
 let tur=0;
 function yeniTur(){tur++;clearInterval(dTimer);return tur;}
-$('#geri').onclick=()=>{yeniTur();acikOyun=null;$('#nasil').style.display='none';menu();};
+$('#geri').onclick=()=>{
+  yeniTur();
+  // Bölüm içindeysek bir kademe yukarı: bölüm haritası (patika). Oradan menüye.
+  if(acikOyun && HARITALAR[acikOyun] && !haritada){ HRT=HARITALAR[acikOyun]; BOLUM=bolumler(); return haritaCiz(); }
+  acikOyun=null; haritada=false; $('#nasil').style.display='none'; menu();
+};
 $('#nasil').onclick=()=>{ if(acikOyun) tanitimAc(acikOyun,false); };
 
 /* ===== GÖRSEL KATMAN: her oyunun kendi rengi ve canlı zemini ===== */
@@ -1424,7 +1434,9 @@ function sureYaz(sn){ if(!sn) return '—';
   const d=Math.floor(sn/60), s=sn%60; return d?`${d}dk ${s}sn`:`${s}sn`; }
 let bolumBaslangic=0;
 
+let haritada=false;   /* geri tusu icin: harita mi, bolum ici mi */
 function haritaCiz(){
+  haritada=true;
   BOLUM = BOLUM.length ? BOLUM : bolumler();
   const ilerleme = ilerlemeOku();
   const bitenler = Object.keys(ilerleme).length;
@@ -1536,6 +1548,7 @@ function siralamaCiz(){
 }
 
 function bolumBasla(no){
+  haritada=false;
   aktifBolum=no;
   bolumBaslangic=Date.now();          // bölüm süresi buradan sayılır
   HRT.basla(BOLUM[no].sorular);
@@ -2079,6 +2092,9 @@ function asHarf(h){
 }
 function asBitir(kazandi){
   if(kazandi)asD++;
+  // Kelime bitti -> klavye artik ise yaramiyor ve "SONRAKI KELIME" dugmesini ortuyordu
+  // (baskan ekran goruntusuyle gosterdi). Gizlenince sonuc + dugme tek ekrana siger.
+  const kl=document.getElementById('altSabit'); if(kl) kl.style.display='none';
   $('#asSon').innerHTML=`<div class="sonuc" style="margin-top:8px">
       <div class="bs" style="color:var(--${kazandi?'yesil':'kirmizi'})">${kazandi?'Buldun':'Kelime yandı'}</div>
       <div class="al">Cevap: <b style="color:var(--ac);letter-spacing:.12em">${asKelime.k}</b></div></div>

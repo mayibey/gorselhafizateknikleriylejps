@@ -1,6 +1,6 @@
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, BackHandler, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, AppState, BackHandler, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
@@ -54,6 +54,15 @@ export default function OyunMerkeziScreen() {
       };
     }, []),
   );
+
+  // Uygulama arka plana alınırken de it: oyuncu bölümü geçip sekmeden çıkmadan
+  // uygulamayı kapatırsa bekleyen kayıt kaybolurdu.
+  useEffect(() => {
+    const abone = AppState.addEventListener('change', (durum) => {
+      if (durum !== 'active') void oyunKaydiGonder();
+    });
+    return () => abone.remove();
+  }, []);
 
   // Android geri tuşu: oyun içindeysek menüye dön, menüdeysek sekmeden çık.
   useFocusEffect(

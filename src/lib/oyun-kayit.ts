@@ -61,11 +61,25 @@ export async function oyunKaydiYukle(): Promise<OyunKayit> {
   return bellek;
 }
 
-/** Oyun bir anahtar yazdı. Cihaza hemen, sunucuya gecikmeli/toplu. */
+/**
+ * Oyun bir anahtar yazdı. Cihaza HEMEN, sunucuya duruma göre.
+ *
+ * BÖLÜM İLERLEMESİ BEKLETİLMEZ (başkan bildirdi: "bölümü geçtiğim hâlde sonrakine
+ * geçmeden ilerlemem kaydolmuyor"). Sebep gecikmeli yazmaydı: bölüm geçilince kayıt
+ * 4 sn kuyruğa giriyor, kullanıcı o arada uygulamayı kapatırsa sunucuya hiç ulaşmıyordu.
+ * Artık `*_ilerleme` anahtarları ANINDA itiliyor; gerisi (tanıtım görüldü, günlük tur
+ * sayacı gibi ucuz şeyler) toplu gitmeye devam ediyor — her tuşta istek atmayalım.
+ */
+const ONEMLI = /_ilerleme$|^mevzu_gunun_maddesi$/;
+
 export function oyunKaydiYaz(anahtar: string, deger: string): void {
   if (!anahtar) return;
   bellek[anahtar] = deger;
   void AsyncStorage.setItem(CIHAZ_ANAHTAR, JSON.stringify(bellek)).catch(() => {});
+  if (ONEMLI.test(anahtar)) {
+    void oyunKaydiGonder();
+    return;
+  }
   if (zamanlayici) clearTimeout(zamanlayici);
   zamanlayici = setTimeout(() => {
     zamanlayici = null;
