@@ -2157,6 +2157,17 @@ function cVar(r,c,k){return k.yon==='y'?(r===k.r&&c>=k.c&&c<k.c+k.cevap.length):
 function cBitti(k){return [...k.cevap].every((_,i)=>{
   const h=cIz[(k.yon==='d'?k.r+i:k.r)+','+(k.yon==='y'?k.c+i:k.c)];return h&&(h.blok||h.harf);});}
 function cAkt(r,c){const kr=cAk.yon==='y'?cAk.r:cAk.r+cIm,kc=cAk.yon==='y'?cAk.c+cIm:cAk.c;return r===kr&&c===kc;}
+function cGorunurYap(){
+  const kap=document.getElementById('cengelSar');
+  const hu=document.querySelector('#cengel td.imlec')||document.querySelector('#cengel td.vurgu');
+  if(!kap||!hu) return;
+  const kr=kap.getBoundingClientRect(), hr=hu.getBoundingClientRect();
+  const bosluk=hr.height*1.6;   // hucrenin cevresinde nefes payi
+  if(hr.top < kr.top+bosluk)          kap.scrollTop -= (kr.top+bosluk-hr.top);
+  else if(hr.bottom > kr.bottom-bosluk) kap.scrollTop += (hr.bottom-(kr.bottom-bosluk));
+  if(hr.left < kr.left+bosluk)        kap.scrollLeft -= (kr.left+bosluk-hr.left);
+  else if(hr.right > kr.right-bosluk)  kap.scrollLeft += (hr.right-(kr.right-bosluk));
+}
 function cCiz(){
   const kutular=Object.values(cIz).filter(x=>!x.blok);
   const dolu=kutular.filter(x=>x.harf).length;
@@ -2209,7 +2220,7 @@ function cCiz(){
     if(!cVar(r,c,cAk)){const k=CGL.kelimeler.find(k=>cVar(r,c,k));if(k)cAk=k;}
     cIm=cAk.yon==='y'?c-cAk.c:r-cAk.r;
     cHizli();});
-  cOlcekle(); requestAnimationFrame(cOlcekle);
+  cOlcekle(); requestAnimationFrame(function(){ cOlcekle(); cGorunurYap(); });
   $('#cK').onclick=cKon;
   $('#cTemiz').onclick=cTemizle;
   $('#cYar').onclick=cYardimAl;
@@ -2293,6 +2304,26 @@ function cHizli(){
 const CKL=[['Q','W','E','R','T','Y','U','I','O','P','Ğ','Ü'],
            ['A','S','D','F','G','H','J','K','L','Ş','İ'],
            ['Z','X','C','V','B','N','M','Ö','Ç','⌫']];
+/* Bir kelimenin hucrelerini gezer. */
+function cHucreler(k){
+  const o=[];
+  for(let i=0;i<k.cevap.length;i++){
+    const r=k.yon==='y'?k.r:k.r+i, c=k.yon==='y'?k.c+i:k.c;
+    o.push({i,anahtar:r+','+c,h:cIz[r+','+c]});
+  }
+  return o;
+}
+function cKelimeTam(k){ return cHucreler(k).every(x=>x.h&&(x.h.blok||x.h.harf)); }
+function cKelimeDogru(k){ return cHucreler(k).every(x=>x.h&&(x.h.blok||x.h.harf===x.h.dogru)); }
+function cKelimeIsaretle(k){ cHucreler(k).forEach(x=>{ if(x.h&&!x.h.blok) x.h.kontrol=true; }); }
+function cSonrakiEksik(k){
+  const l=CGL.kelimeler, i=l.indexOf(k);
+  for(let a=1;a<=l.length;a++){
+    const y=l[(i+a)%l.length];
+    if(!cKelimeDogru(y)||!cKelimeTam(y)) return y;
+  }
+  return null;
+}
 function cTus(t){
   const n=cAk.cevap.length;
   const blok=i=>cAk.cevap[i]===' ';
@@ -2315,7 +2346,18 @@ function cTus(t){
   }
   else if(t==='▸'){const i=CGL.kelimeler.indexOf(cAk);cAk=CGL.kelimeler[(i+1)%CGL.kelimeler.length];
     cIm=cAk.cevap[0]===' '?1:0;cHizli();}
-  else if(cIm<n&&!blok(cIm)){koy(cIm,t);const j=ileri(cIm);if(j<n)cIm=j;cHizli();}
+  else if(cIm<n&&!blok(cIm)){
+    koy(cIm,t);const j=ileri(cIm);if(j<n)cIm=j;
+    cHizli();
+    // Kelime tam ve DOGRU ise: yesile boya, sonraki eksik kelimeye atla.
+    // Yanlissa hiçbir şey söylenmez — ipucu vermeyelim, KONTROL ET'e kalsin.
+    if(cKelimeTam(cAk) && cKelimeDogru(cAk)){
+      cKelimeIsaretle(cAk);
+      const sonraki=cSonrakiEksik(cAk);
+      if(sonraki){ cAk=sonraki; cIm=cAk.cevap[0]===' '?1:0; }
+      cHizli();
+    }
+  }
   else cHizli();
 }
 function cKon(){

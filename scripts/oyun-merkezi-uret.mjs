@@ -92,6 +92,16 @@ body{padding:0!important;gap:0!important;background:var(--kremZemin);display:blo
    büyük, satır yüksekliği yoktu. */
 .grupBas,.bolgeBas{line-height:1.5;padding:2px 0}
 
+/* İKİ KELİMELİK CEVAPTAKİ AYIRICI BLOK — yazılamayan hücre. Düz koyu kare oyuncuya
+   "burada harf var" gibi görünebiliyordu (başkan: "onu da harf sanabilirler").
+   Artık çapraz taramalı, kenarlıksız, kare köşeli bir DUVAR: bakınca yazılamayacağı
+   ve cevabın iki kelime olduğu anlaşılıyor. */
+#cengel td.blok,.hc.blok{
+  background-color:var(--lacivert)!important;opacity:1!important;border-radius:2px!important;
+  background-image:repeating-linear-gradient(45deg,
+    rgba(255,255,255,.16) 0 3px, transparent 3px 7px)!important;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.14)!important}
+
 /* HATA BİLDİR — yalnız bayrak simgesiyken kimse ne olduğunu anlamıyordu (başkan
    söyledi). Yazılı, kırmızı çerçeveli bir rozet: üst şeritte "?" işaretinin yanında
    duruyor, her oyunda ve her soruda görünüyor. Kırmızı, uygulamanın kimliğinde
