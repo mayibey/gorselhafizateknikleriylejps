@@ -961,8 +961,8 @@ const OYUNLAR=[
  {g:'Eğlence',id:'milyoner',ad:'Rütbe Merdiveni',ik:'🎖️',rz:['rek','Reklamlık'],ac:'12 soruda er’den generale. Üç joker hakkın var.'},
  {g:'Eğlence',id:'yalan',ad:'Yalancı Madde',ik:'🕵️',rz:['rek','Reklamlık'],ac:'Dört metinden yalnızca biri gerçek. Hangisi?'},
  {g:'Rekabet',id:'kelime',ad:'Günün Maddesi',ik:'🟩',rz:['alis','Alışkanlık'],ac:'Günde bir mevzuat terimi — altı hakta bul.'},
- {g:'Rekabet',id:'kusatma',ad:'Kuşatma',ik:'🏰',rz:['sos','Sosyal'],bekle:1,ac:'Kaleni kur, arkadaşının kalesine saldır.'},
- {g:'Rekabet',id:'bayrak',ad:'Bayrak Yarışı',ik:'🚩',rz:['sos','Sosyal'],bekle:1,ac:'Üçe üç takım yarışı — bayrağı önce siz taşıyın.'}
+ {g:'Rekabet',id:'kusatma',ad:'Kuşatma',ik:'🏰',rz:['sos','Sosyal'],ac:'Kaleni 3 konudan kur, kuşat; sonra arkadaşın aynı kaleye girsin.'},
+ {g:'Rekabet',id:'bayrak',ad:'Bayrak Yarışı',ik:'🚩',rz:['sos','Sosyal'],ac:'8 soruluk koşu. Süreni arkadaşına gönder, o kovalasın.'}
 ];
 
 /* Bağlantıyla gelen meydan okuma: ?meydan=KOD veya adres sonundaki /oyun/KOD parçası. */
@@ -1074,48 +1074,57 @@ function kilitPerdesi(baslik,aciklama,geriFn){
    çünkü bölüm içeriği tohumla deterministik — aynı bölüm numarası herkeste aynı sorular.
    Uygulamada bu kod Er Meydanı'nın oda tablosuna yazılıp 4 haneli kodla da paylaşılabilir. */
 let meydan=null;                       // {oyun,bolum,ad,skor,toplam} — gelen meydan okuma
-function meydanKodla(oyun,bolum,ad,skor,toplam){
-  const ham=[oyun,bolum,ad.replace(/[|]/g,''),skor,toplam].join('|');
+/* Haritası olmayan ama meydan okunabilen oyunlar: kurulumlarını `ek` alanında taşırlar. */
+const HARITASIZ_MEYDAN={kusatma:1,bayrak:1};
+
+function meydanKodla(oyun,bolum,ad,skor,toplam,ek){
+  // 6. alan `ek`: haritasız oyunların kurulumu (Kuşatma'nın konuları, tohum). Eski
+  // kodlarda yok — çözücü eksikliğe dayanıklı, geriye dönük uyum bozulmuyor.
+  const ham=[oyun,bolum,ad.replace(/[|]/g,''),skor,toplam,ek||''].join('|');
   return btoa(unescape(encodeURIComponent(ham))).replace(/=+$/,'').replace(/\+/g,'-').replace(/\//g,'_');
 }
 function meydanCoz(kod){
   try{
     const ham=decodeURIComponent(escape(atob(String(kod).trim().replace(/-/g,'+').replace(/_/g,'/'))));
-    const [oyun,bolum,ad,skor,toplam]=ham.split('|');
-    if(!HARITALAR[oyun]) return null;
-    return {oyun,bolum:+bolum,ad:ad||'Arkadaşın',skor:+skor,toplam:+toplam};
+    const [oyun,bolum,ad,skor,toplam,ek]=ham.split('|');
+    if(!HARITALAR[oyun] && !HARITASIZ_MEYDAN[oyun]) return null;
+    return {oyun,bolum:+bolum,ad:ad||'Arkadaşın',skor:+skor,toplam:+toplam,ek:ek||''};
   }catch{ return null; }
 }
 function meydanBaglanti(kod){ return `https://mevzujsps.com/oyun/${kod}`; }
 
 /* Bölüm sonunda: "arkadaşına meydan oku" — kodu üretir, paylaşım metnini hazırlar. */
-function meydanOkuEkrani(oyun,bolum,skor,toplam){
+function meydanOkuEkrani(oyun,bolum,skor,toplam,ek){
+  // Haritasız oyunlarda (Kuşatma/Bayrak) 'Bölüm N' diye bir şey yok; başlık oyunun adı.
+  const oyunAdi=HARITALAR[oyun]?HARITALAR[oyun].ad:(OYUNLAR.find(o=>o.id===oyun)||{}).ad||'Oyun';
+  const altBaslik=HARITALAR[oyun]?` · Bölüm ${bolum+1}`:'';
   const ad=(localStorage.getItem('mevzu_oyuncu_ad')||'').trim();
   const sor=ad||prompt('Meydan okuma için adın:','')||'Bir arkadaşın';
   try{ localStorage.setItem('mevzu_oyuncu_ad',sor); }catch{}
-  const kod=meydanKodla(oyun,bolum,sor,skor,toplam);
-  const metin=`⚔️ ${HARITALAR[oyun].ad} · Bölüm ${bolum+1}
+  const kod=meydanKodla(oyun,bolum,sor,skor,toplam,ek);
+  const metin=`⚔️ ${oyunAdi}${altBaslik}
 `
     +`${sor} ${skor}/${toplam} yaptı. Geçebilir misin?
 ${meydanBaglanti(kod)}`;
   bar('Meydan Okuma','arkadaşına gönder',true);
   G().innerHTML=`<div class="sonuc">
       <div style="font-size:34px">⚔️</div>
-      <div class="bs">${HARITALAR[oyun].ad} · Bölüm ${bolum+1}</div>
+      <div class="bs">${oyunAdi}${altBaslik}</div>
       <div class="al">Skorun <b style="color:var(--ac)">${skor}/${toplam}</b>.
         Arkadaşın <b>birebir aynı soruları</b> oynayacak.</div></div>
     <div class="baslikS" style="margin-top:4px">Paylaşılacak metin</div>
     <div class="kaynak"><div class="rf">kopyala ve gönder</div>
       <div class="mt" id="mMetin" style="white-space:pre-line">${metin}</div></div>
     <button class="btn altin" id="mKopya">📋 KOPYALA</button>
-    <button class="btn hafif" id="mGeri">↩ Haritaya dön</button>
+    <button class="btn hafif" id="mGeri">↩ ${HARITALAR[oyun]?'Haritaya dön':'Menüye dön'}</button>
     <div class="aciklamaS">Kod her şeyi taşıyor — sunucu gerekmiyor. Uygulamada bu, Er Meydanı’nın
       4 haneli oda kodu ile de çalışacak.</div>`;
   $('#mKopya').onclick=()=>{
     const y=()=>{ $('#mKopya').textContent='✓ KOPYALANDI'; setTimeout(()=>{const b=$('#mKopya'); if(b)b.textContent='📋 KOPYALA';},1600); };
     if(navigator.clipboard) navigator.clipboard.writeText(metin).then(y).catch(y); else y();
   };
-  $('#mGeri').onclick=()=>{ HRT=HARITALAR[oyun]; BOLUM=bolumler(); haritaCiz(); };
+  $('#mGeri').onclick=()=>{ if(!HARITALAR[oyun]) return menu();
+    HRT=HARITALAR[oyun]; BOLUM=bolumler(); haritaCiz(); };
 }
 
 /* Gelen kodu aç: aynı oyunun aynı bölümüne düşer, bitince karşılaştırma yapılır. */
@@ -1123,6 +1132,14 @@ function meydanKabul(kodMetni){
   const m=meydanCoz(kodMetni);
   if(!m){ alert('Kod okunamadı. Bağlantının tamamını yapıştır.'); return false; }
   meydan=m;
+  // Haritasız oyunlar: kurulum `ek` alanından gelir, bölüm haritası yoktur.
+  if(HARITASIZ_MEYDAN[m.oyun]){
+    acikOyun=m.oyun; $('#nasil').style.display=NASIL[m.oyun]?'block':'none';
+    temaUygula(m.oyun); yeniTur();
+    if(m.oyun==='kusatma') kusatmaKur(m.ek);
+    else bayrakKur(m.ek);
+    return true;
+  }
   HRT=HARITALAR[m.oyun]; BOLUM=bolumler();
   if(m.bolum<0||m.bolum>=BOLUM.length){ alert('Bu bölüm sende yok.'); meydan=null; return false; }
   acikOyun=m.oyun; $('#nasil').style.display='block';
@@ -2348,8 +2365,10 @@ function kaleKonulari(){
   return Object.keys(sayac).filter(no=>sayac[no]>=2)
     .sort((a,b)=>sira(a)-sira(b)||sayac[b]-sayac[a]).slice(0,6).map(no=>ad[no]);
 }
-function kaleSorulari(konular){
-  const kaleTohum=gunSayisi()+oynayisSayaci()*197;   // her kuşatmada farklı soru
+function kaleSorulari(konular, tohum){
+  // Tohum artık dışarıdan verilebiliyor: meydan okumada iki taraf da AYNI soruları
+  // görmeli, yoksa skor karşılaştırmasının anlamı kalmaz.
+  const kaleTohum=(tohum===undefined)?(gunSayisi()+oynayisSayaci()*197):tohum;
   const out=[];
   konular.forEach((k,i)=>{
     const no=(k.match(/\d{3,5}/)||[''])[0];
@@ -2364,7 +2383,17 @@ function kaleSorulari(konular){
   }
   return out;
 }
-function acKusatma(){kSec2=[];kAsama='kur';kCan=3;kCiz();}
+let kTohum=0, kKonular=[];
+function acKusatma(){meydan=null;kSec2=[];kAsama='kur';kCan=3;kTohum=0;kKonular=[];kCiz();}
+/* Meydan okumadan gelindi: kurulum bağlantıda — aynı konular, aynı tohum, aynı sorular. */
+function kusatmaKur(ek){
+  const [konStr,toh]=String(ek||'').split('!');
+  kKonular=konStr?konStr.split('~'):[];
+  kTohum=+toh||1;
+  if(kKonular.length<1){ alert('Kuşatma kurulumu okunamadı.'); return menu(); }
+  kSec2=kKonular.slice(); KUS_SORU=kaleSorulari(kKonular,kTohum);
+  kAsama='saldiri'; kSor=0; kCan=3; kCiz();
+}
 function kCiz(){
   if(kAsama==='kur'){
     bar('Kuşatma','kale kuruluyor',true);
@@ -2380,7 +2409,10 @@ function kCiz(){
       const k=b.dataset.k;
       if(kSec2.includes(k))kSec2=kSec2.filter(x=>x!==k);else if(kSec2.length<3)kSec2.push(k);
       kCiz();});
-    if($('#kB'))$('#kB').onclick=()=>{KUS_SORU=kaleSorulari(kSec2);kAsama='saldiri';kSor=0;kCan=3;kCiz();};
+    if($('#kB'))$('#kB').onclick=()=>{
+      kKonular=kSec2.slice();
+      kTohum=(gunSayisi()*7919+oynayisSayaci()*197+Date.now()%9973)>>>0;
+      KUS_SORU=kaleSorulari(kKonular,kTohum);kAsama='saldiri';kSor=0;kCan=3;kCiz();};
     return;
   }
   kSaldiri();
@@ -2391,8 +2423,9 @@ function kSaldiri(){
   if(kSor>=KUS_SORU.length||kCan<=0)return kSon();
   const s=KUS_SORU[kSor];
   bar('Kuşatma','saldırı '+(kSor+1)+'/'+KUS_SORU.length,true);
-  G().innerHTML=`<div class="kale"><div class="av">Ü</div><div class="yz"><div class="ad">Ünal K. · kalesi</div>
-      <div class="ac">${KUS_SORU.length} sorusu var, hepsini yıkmalısın</div></div>
+  const kimin=meydan?`${meydan.ad} · kalesi`:'Kurduğun kale';
+  G().innerHTML=`<div class="kale"><div class="av">${(meydan?meydan.ad:'S').slice(0,1).toUpperCase()}</div><div class="yz"><div class="ad">${kimin}</div>
+      <div class="ac">${KUS_SORU.length} burç var, hepsini yıkmalısın</div></div>
       <div class="can">${[0,1,2].map(i=>`<i class="${i<kCan?'':'yik'}"></i>`).join('')}</div></div>
     ${s.konu?`<div class="soruRef">📜 ${s.konu}</div>`:''}
     <div class="cumle">${s.s}</div>
@@ -2411,33 +2444,55 @@ function kSaldiri(){
 }
 function kSon(){
   const kazandi=kCan>0&&kSor>=KUS_SORU.length;
+  // Skor = kalan can (3 üzerinden). Karşılaştırılabilir tek ölçü bu: aynı burçlara
+  // saldıran iki kişiden az can kaybeden daha iyi kuşatmıştır.
+  const skor=Math.max(0,kCan), toplam=3;
+  const rakipSat = meydan
+    ? `<div class="duello ${skor>meydan.skor?'kazandin':(skor<meydan.skor?'kaybettin':'')}">
+         <div class="dSat"><span>Sen</span><b>${skor}/${toplam} can</b></div>
+         <div class="dSat"><span>${meydan.ad}</span><b>${meydan.skor}/${meydan.toplam} can</b></div>
+         <div class="dSonuc">${skor>meydan.skor?'Kaleyi daha sağlam kuşattın 🏆'
+            :skor<meydan.skor?`${meydan.ad} daha az kayıpla girdi`:'Berabere'}</div></div>`
+    : '';
   bar('Kuşatma','bitti',true);
   G().innerHTML=`<div class="sonuc"><div class="puanS">${kazandi?'🏆':'🛡️'}</div>
     <div class="bs">${kazandi?'Kale düştü':'Püskürtüldün'}</div>
-    <div class="al">${kazandi?'Ünal’ın kalesini yıktın. Şimdi o senin kalene saldıracak.':'Ünal’ın kalesi dayandı. Yarın tekrar deneyebilirsin.'}<br><br>
-    Gerçekte bu bildirimle gelir: “Ünal kalene saldırdı.” İki kişinin aynı anda çevrimiçi olması gerekmez.</div></div>
-    <button class="btn altin" id="a1">↻ Yeniden</button><button class="btn hafif" id="a2">Menüye dön</button>`;
+    <div class="al">${kazandi?`${toplam-skor} can kaybederek bütün burçları yıktın.`
+      :'Canların bitti, burçlar ayakta kaldı.'}</div></div>
+    ${rakipSat}
+    ${meydan?'':'<button class="btn altin" id="a0">⚔️ ARKADAŞINA MEYDAN OKU</button>'}
+    <button class="btn ${meydan?'altin':'hafif'}" id="a1">↻ Yeniden</button>
+    <button class="btn hafif" id="a2">Menüye dön</button>`;
+  if($('#a0'))$('#a0').onclick=()=>meydanOkuEkrani('kusatma',0,skor,toplam,kKonular.join('~')+'!'+kTohum);
   $('#a1').onclick=acKusatma;$('#a2').onclick=menu;
 }
 
 /* ============ 13) BAYRAK YARIŞI ============ */
 let BY_SORU=[];
 let byBiz,byRak,byTur,bySira;
-function acBayrak(){BY_SORU=havuzdanSoru(x=>x.sik&&x.sik.length>=3,8,gunSayisi()*7+oynayisSayaci()*131);
-  byBiz=0;byRak=0;byTur=0;bySira=0;byCiz();}
+let byTohum=0, byDogru=0;
+function acBayrak(){
+  meydan=null;
+  byTohum=(gunSayisi()*7+oynayisSayaci()*131+Date.now()%9871)>>>0;
+  bayrakBasla();
+}
+/* Meydan okumadan gelindi: aynı tohum → birebir aynı sorular. */
+function bayrakKur(ek){ byTohum=+String(ek||'').split('!').pop()||1; bayrakBasla(); }
+function bayrakBasla(){
+  BY_SORU=havuzdanSoru(x=>x.sik&&x.sik.length>=3,8,byTohum);
+  byBiz=0;byRak=0;byTur=0;bySira=0;byDogru=0;byCiz();
+}
 function byCiz(){
   if(byBiz>=4||byRak>=4)return bySon();
   const benimTur=tur;
-  bar('Bayrak Yarışı','tur '+(byTur+1),true);
-  const benim=bySira===0;
+  bar('Bayrak Yarışı','tur '+(byTur+1)+'/'+BY_SORU.length,true);
+  const benim=true;                                  // sıra hep sende: koşu senin ayağın
   const s=BY_SORU[byTur%BY_SORU.length];
+  // Rakip çubuğu artık zar değil: meydan okuyanın GERÇEK sonucu. Kimse yoksa gizlenir.
+  const rakipYuzde=meydan?Math.min(100,meydan.skor/Math.max(1,meydan.toplam)*100):0;
   G().innerHTML=`<div class="yarisBar">
-      <div class="sr biz"><span class="ad">Takımın</span><span class="yol"><i style="width:${byBiz/4*100}%"></i></span></div>
-      <div class="sr rak"><span class="ad">Rakip</span><span class="yol"><i style="width:${byRak/4*100}%"></i></span></div></div>
-    <div class="takim">
-      <div class="oyuncu ${bySira===0?'akt':''}"><span class="em">🫵</span>SEN</div>
-      <div class="oyuncu ${bySira===1?'akt':''}"><span class="em">🧑‍✈️</span>Zülküf</div>
-      <div class="oyuncu ${bySira===2?'akt':''}"><span class="em">🧑‍✈️</span>Emre</div></div>
+      <div class="sr biz"><span class="ad">Sen</span><span class="yol"><i style="width:${byDogru/BY_SORU.length*100}%"></i></span></div>
+      ${meydan?`<div class="sr rak"><span class="ad">${meydan.ad}</span><span class="yol"><i style="width:${rakipYuzde}%"></i></span></div>`:''}</div>
     ${benim?`<div class="cumle">${s.s}</div>
       <div style="display:flex;flex-direction:column;gap:8px">${s.sik.map((x,j)=>
         `<button class="sik" data-j="${j}"><span class="h">${'ABC'[j]}</span><span>${x}</span></button>`).join('')}</div>`
@@ -2450,26 +2505,32 @@ function byCiz(){
         if(+x.dataset.j===s.d)x.classList.add('ok');else if(x===b)x.classList.add('hata');});
       $('#byS').innerHTML=`<div class="kaynak" style="margin-top:12px"><div class="rf">${s.ref}</div>
         <div class="mt">${ok?'Bayrağı ilerlettin.':'Bayrak geri döndü — takım bir adım kaybetti.'}</div></div>`;
-      if(ok)byBiz++;else byBiz=Math.max(0,byBiz-1);
-      byRak+=Math.random()<0.55?1:0;
-      setTimeout(()=>{if(benimTur!==tur)return;byTur++;bySira=(bySira+1)%3;byCiz();},1400);});
-  }else{
-    setTimeout(()=>{
-      if(benimTur!==tur)return;                      // oyundan cikildi
-      const ok=Math.random()<0.7;
-      if(ok)byBiz++;else byBiz=Math.max(0,byBiz-1);
-      byRak+=Math.random()<0.55?1:0;
-      byTur++;bySira=(bySira+1)%3;byCiz();},1500);
+      if(ok)byDogru++;
+      setTimeout(()=>{if(benimTur!==tur)return;byTur++;
+        if(byTur>=BY_SORU.length)return bySon();
+        byCiz();},1400);});
   }
 }
 function bySon(){
-  const kazandi=byBiz>=4;
+  const skor=byDogru, toplam=BY_SORU.length;
+  const kazandi=meydan?skor>meydan.skor:skor>=Math.ceil(toplam*0.6);
+  const rakipSat = meydan
+    ? `<div class="duello ${skor>meydan.skor?'kazandin':(skor<meydan.skor?'kaybettin':'')}">
+         <div class="dSat"><span>Sen</span><b>${skor}/${toplam}</b></div>
+         <div class="dSat"><span>${meydan.ad}</span><b>${meydan.skor}/${meydan.toplam}</b></div>
+         <div class="dSonuc">${skor>meydan.skor?'Bayrağı önce sen taşıdın 🥇'
+            :skor<meydan.skor?`${meydan.ad} önde bitirdi`:'Berabere'}</div></div>`
+    : '';
   bar('Bayrak Yarışı','bitti',true);
-  G().innerHTML=`<div class="sonuc"><div class="puanS">${kazandi?'🥇':'🥈'}</div>
-    <div class="bs">${kazandi?'Takımın kazandı':'Rakip önce bitirdi'}</div>
-    <div class="al">Bayrak yarışında bir kişinin hatası takımı geri atıyor — bu yüzden grup sohbeti üretiyor.
-    Er Meydanı’nın oda altyapısı buna hazır.</div></div>
-    <button class="btn altin" id="a1">↻ Yeniden</button><button class="btn hafif" id="a2">Menüye dön</button>`;
+  G().innerHTML=`<div class="sonuc"><div class="puanS">${skor}/${toplam}</div>
+    <div class="bs">${kazandi?'Bayrağı taşıdın':'Bayrak düştü'}</div>
+    <div class="al">${meydan?'Aynı soruları oynadınız — karşılaştırma aşağıda.'
+      :'Bu koşuyu arkadaşına gönder, birebir aynı soruları o da koşsun.'}</div></div>
+    ${rakipSat}
+    ${meydan?'':'<button class="btn altin" id="a0">⚔️ ARKADAŞINA MEYDAN OKU</button>'}
+    <button class="btn ${meydan?'altin':'hafif'}" id="a1">↻ Yeniden</button>
+    <button class="btn hafif" id="a2">Menüye dön</button>`;
+  if($('#a0'))$('#a0').onclick=()=>meydanOkuEkrani('bayrak',0,skor,toplam,'!'+byTohum);
   $('#a1').onclick=acBayrak;$('#a2').onclick=menu;
 }
 
