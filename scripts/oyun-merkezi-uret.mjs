@@ -1,0 +1,145 @@
+/**
+ * OYUN MERKEZİ REGISTRY ÜRETİCİ — `npm run oyun:uret`
+ *
+ * Kaynak: assets/oyun/oyun-merkezi.html  (tarayıcıda tek başına çalışan oyun merkezi)
+ * Çıktı : src/assets/oyun-merkezi-html.ts (WebView'e verilecek HTML dizesi)
+ *
+ * NEDEN ÜRETİCİ VAR: kaynak sayfa tarayıcı prototipi olarak yazıldı — telefon çerçevesi,
+ * "prototip" açıklaması ve geliştirici notları içeriyor. Uygulamanın içinde bunların hiçbiri
+ * olmamalı. Kaynağı ELLE budamak yerine burada buduyoruz ki oyun güncellendiğinde tek komutla
+ * yeniden üretilsin (kart görselleri/sesleri registry'leri ile aynı mantık).
+ *
+ * ÜÇ MÜDAHALE:
+ *  1. Kabuk temizliği — prototip açıklaması + geliştirici notları silinir, telefon maketi
+ *     tam ekrana açılır.
+ *  2. Er Meydanı — menünün EN BAŞINA bir kutu eklenir. Bu oyun WebView içinde DEĞİL, uygulamanın
+ *     kendi ekranında çalışıyor; tıklanınca uygulamaya haber verilir.
+ *  3. Kayıt köprüsü — oyun ilerlemesini localStorage'a yazıyor. Yazılan her şey uygulamaya
+ *     iletilir, uygulama da sunucuya kaydeder. Oyunun kendi mantığına DOKUNULMAZ.
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const kok = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const KAYNAK = path.join(kok, 'assets', 'oyun', 'oyun-merkezi.html');
+const CIKTI = path.join(kok, 'src', 'assets', 'oyun-merkezi-html.ts');
+
+// Satır sonları normalleştirilir: dosya Windows'ta CRLF olarak duruyor, aşağıdaki
+// arama kalıpları ise LF yazılmış — normalleştirmezsek çok satırlı kalıplar tutmuyor.
+let html = fs.readFileSync(KAYNAK, 'utf8').replace(/\r\n/g, '\n');
+const basBoyut = html.length;
+
+/** Kaynakta beklenen bir parçayı değiştirir; bulunamazsa üretimi DURDURUR.
+ *  (Sessizce atlarsa uygulamaya prototip metinleri ya da köprüsüz oyun gider.) */
+function degistir(ad, arayan, yeni) {
+  const once = html;
+  html = html.replace(arayan, yeni);
+  if (html === once) {
+    console.error(`HATA: "${ad}" uygulanamadı — kaynak sayfa değişmiş olabilir.`);
+    process.exit(1);
+  }
+}
+
+// ---- 1. KABUK: prototip açıklaması + geliştirici notları çıkar, maketi tam ekran yap ----
+degistir('prototip açıklaması', /<div class="ust">[\s\S]*?<\/div>\s*/, '');
+degistir('geliştirici notları', /<div class="notlar">[\s\S]*?<\/div>\s*/, '');
+degistir(
+  'tam ekran biçimi',
+  '</style>',
+  `
+/* ---- UYGULAMA İÇİ (üretici ekledi) ----
+   Kaynak sayfa tarayıcıda telefon maketi olarak duruyordu: ortalanmış, köşeleri yuvarlak,
+   gölgeli, en/boy oranı sabit bir kutu. Gerçek telefonun içinde bunların hepsi fazlalık —
+   maket ekranı tamamen kaplar. */
+html,body{height:100%}
+body{padding:0;gap:0;background:var(--kremZemin);display:block}
+#tel{width:100%;max-width:none;height:100%;max-height:none;aspect-ratio:auto;
+  border-radius:0;border:none;box-shadow:none;display:flex}
+</style>`,
+);
+
+// ---- 2. ER MEYDANI: menünün en başındaki kutu ----
+// Uygulamanın kendi ekranında çalışan tek oyun. `dis` işareti taşıyanlar WebView içinde
+// açılmaz; tıklanınca uygulamaya haber gider, o da ilgili ekrana götürür.
+degistir(
+  'Er Meydanı kutusu',
+  'const OYUNLAR=[',
+  `const OYUNLAR=[
+ /* EN BAŞTA: Er Meydanı. Uygulamanın kendi ekranında çalışır (canlı rakip, oda, lig),
+    bu yüzden \`dis\` işaretli — tıklanınca WebView değil uygulama devralır. */
+ {g:'Gerçek Rakip',id:'ermeydani',dis:'ermeydani',ad:'Er Meydanı',ik:'⚔️',
+  ac:'Canlı rakiple 10 soruluk düello. Oda kur, arkadaşını çağır, ligde yüksel.'},`,
+);
+degistir(
+  'kutu tıklaması',
+  "[...document.querySelectorAll('.tile')].forEach(b=>b.onclick=()=>oyunAc(b.dataset.id));",
+  `[...document.querySelectorAll('.tile')].forEach(b=>b.onclick=()=>{
+    const o=OYUNLAR.find(x=>x.id===b.dataset.id);
+    if(o&&o.dis){ window.mevzuKopru&&window.mevzuKopru({tip:'ekran',ad:o.dis}); return; }
+    oyunAc(b.dataset.id);
+  });`,
+);
+
+// ---- 2b. NEREDEYİZ: menüde mi, oyun içinde mi ----
+// Android'in geri tuşu için şart: oyun içindeyken geri MENÜYE dönmeli, menüdeyken sekmeden
+// çıkmalı. Sayfa durumunu kendisi bildirmezse uygulama bunu bilemez (durum sayfanın kendi
+// değişkeninde, dışarıdan okunamıyor).
+degistir(
+  'menüye dönüş bildirimi',
+  'function menu(){\n  temaUygula(\'menu\');',
+  `function menu(){
+  temaUygula('menu');
+  window.mevzuKopru&&window.mevzuKopru({tip:'nerede',ad:''});`,
+);
+degistir(
+  'oyun açılış bildirimi',
+  'function oyunAc(id){\n  yeniTur();',
+  `function oyunAc(id){
+  window.mevzuKopru&&window.mevzuKopru({tip:'nerede',ad:id});
+  yeniTur();`,
+);
+
+// ---- 3. KAYIT KÖPRÜSÜ ----
+// Oyun ilerlemesini localStorage'a yazıyor (bölüm, yıldız, rekor, günlük tur…). Cihazda kalırsa
+// telefon değişince gider. Bu yüzden: açılışta uygulamadan gelen kayıt localStorage'a DOLDURULUR,
+// sonra her yazma uygulamaya iletilir. Oyunun kendi kodu değişmez — sadece setItem sarmalanır.
+degistir(
+  'kayıt köprüsü',
+  '<script>\nconst HAVUZ=',
+  `<script>
+/* KÖPRÜ (üretici ekledi) — oyunun kendi mantığına dokunmaz, yalnız kaydı dışarı taşır. */
+(function(){
+  function gonder(m){
+    try{ window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify(m)); }catch(e){}
+  }
+  window.mevzuKopru = gonder;
+  // Uygulama sayfa yüklenmeden ÖNCE window.__MEVZU_KAYIT yazar (sunucudan gelen ilerleme).
+  try{
+    var s = window.__MEVZU_KAYIT;
+    if (s && typeof s === 'object') {
+      for (var k in s) { try{ localStorage.setItem(k, s[k]); }catch(e){} }
+    }
+  }catch(e){}
+  var asil = localStorage.setItem.bind(localStorage);
+  localStorage.setItem = function(k, v){
+    asil(k, v);
+    gonder({tip:'kayit', anahtar:String(k), deger:String(v)});
+  };
+  gonder({tip:'hazir'});
+})();
+const HAVUZ=`,
+);
+
+const ts = `// OTOMATİK ÜRETİLDİ — ELLE DÜZENLEME. \`npm run oyun:uret\` ile yenile.
+// Kaynak: assets/oyun/oyun-merkezi.html · Üretici: scripts/oyun-merkezi-uret.mjs
+/* eslint-disable */
+
+export const OYUN_MERKEZI_HTML = ${JSON.stringify(html)};
+`;
+
+fs.mkdirSync(path.dirname(CIKTI), { recursive: true });
+fs.writeFileSync(CIKTI, ts, 'utf8');
+console.log(
+  `oyun merkezi: ${(basBoyut / 1024).toFixed(0)} KB → ${(html.length / 1024).toFixed(0)} KB · ${path.relative(kok, CIKTI)}`,
+);
