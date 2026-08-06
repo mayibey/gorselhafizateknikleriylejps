@@ -44,20 +44,29 @@ function degistir(ad, arayan, yeni) {
 // ---- 1. KABUK: prototip açıklaması + geliştirici notları çıkar, maketi tam ekran yap ----
 degistir('prototip açıklaması', /<div class="ust">[\s\S]*?<\/div>\s*/, '');
 degistir('geliştirici notları', /<div class="notlar">[\s\S]*?<\/div>\s*/, '');
-degistir(
-  'tam ekran biçimi',
-  '</style>',
-  `
+// ⚠️ EN SONDAKİ </style>'a eklenir. İlkine eklemek İŞE YARAMIYOR: sayfanın başında küçük bir
+// sıfırlama bloğu var, oyunun asıl biçimleri ondan SONRA geliyor ve üsttekini eziyor. İlk
+// denemede tam da bu oldu — telefon maketi iPhone'da olduğu gibi kaldı (başkan ekran
+// görüntüsüyle gösterdi: içerik panel içinde, kenarlarda boşluk).
+const KABUK_CSS = `
 /* ---- UYGULAMA İÇİ (üretici ekledi) ----
    Kaynak sayfa tarayıcıda telefon maketi olarak duruyordu: ortalanmış, köşeleri yuvarlak,
    gölgeli, en/boy oranı sabit bir kutu. Gerçek telefonun içinde bunların hepsi fazlalık —
-   maket ekranı tamamen kaplar. */
-html,body{height:100%}
-body{padding:0;gap:0;background:var(--kremZemin);display:block}
-#tel{width:100%;max-width:none;height:100%;max-height:none;aspect-ratio:auto;
-  border-radius:0;border:none;box-shadow:none;display:flex}
-</style>`,
-);
+   maket ekranı tamamen kaplamalı, kenarda boşluk kalmamalı. */
+html,body{height:100%;margin:0}
+body{padding:0!important;gap:0!important;background:var(--kremZemin);display:block!important}
+#tel{width:100%!important;max-width:none!important;height:100%!important;max-height:none!important;
+  aspect-ratio:auto!important;border-radius:0!important;border:none!important;
+  box-shadow:none!important;display:flex!important}
+`;
+{
+  const son = html.lastIndexOf('</style>');
+  if (son < 0) {
+    console.error('HATA: "tam ekran biçimi" uygulanamadı — kaynakta </style> yok.');
+    process.exit(1);
+  }
+  html = html.slice(0, son) + KABUK_CSS + html.slice(son);
+}
 
 // ---- 2. ER MEYDANI: menünün en başındaki kutu ----
 // Uygulamanın kendi ekranında çalışan tek oyun. `dis` işareti taşıyanlar WebView içinde

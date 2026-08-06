@@ -1,11 +1,11 @@
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, BackHandler, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
 import { OYUN_MERKEZI_HTML } from '../../assets/oyun-merkezi-html';
 import { AppText } from '@/components/ui/app-text';
-import { Screen } from '@/components/ui/screen';
 import { Palette, Spacing } from '@/constants/theme';
 import { type OyunKayit, oyunKaydiGonder, oyunKaydiYaz, oyunKaydiYukle } from '@/lib/oyun-kayit';
 
@@ -82,18 +82,23 @@ export default function OyunMerkeziScreen() {
     [router],
   );
 
+  // BAŞLIK YOK — sayfanın KENDİ üst şeridi (lacivert + altın çizgi, uygulamanın kimliğiyle
+  // birebir) başlık görevini görüyor; ayrıca oyun içindeyken geri oku ve "nasıl oynanır"
+  // düğmesi orada. Üstüne bir de uygulamanın başlığını koyunca "Oyun Merkezi" iki kez
+  // yazıyordu. Ortak `Screen` sarmalayıcısı da kullanılmıyor: onun gövdesinde kenar boşluğu
+  // ve genişlik sınırı var, oyun onların içinde panel gibi duruyordu (başkan gösterdi).
   if (!kayit) {
     return (
-      <Screen title="Oyun Merkezi" headerAltinCizgi scroll={false}>
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
         <View style={styles.ortala}>
           <ActivityIndicator color={Palette.lacivert} />
         </View>
-      </Screen>
+      </SafeAreaView>
     );
   }
 
   return (
-    <Screen title="Oyun Merkezi" headerAltinCizgi scroll={false}>
+    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
       <View style={styles.kap}>
         <WebView
           ref={web}
@@ -117,11 +122,12 @@ export default function OyunMerkeziScreen() {
           </View>
         ) : null}
       </View>
-    </Screen>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safe: { flex: 1, backgroundColor: Palette.kremZemin },
   kap: { flex: 1 },
   web: { flex: 1, backgroundColor: Palette.kremZemin },
   ortala: { flex: 1, alignItems: 'center', justifyContent: 'center' },
