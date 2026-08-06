@@ -68,12 +68,16 @@ export function SesOynatici({
   }, [player, kaynak, sesYolu]);
 
   // Hızı player'a uygula (yeni kart/oynatıcı VE hız değişiminde) → seçilen hız korunur.
+  // TUZAK (kullanıcı bildirdi, 6 Ağu 2026): expo-audio kaynağı YÜKLEYİNCE hızı 1x'e
+  // sıfırlıyor. Mount anında uygulanan hız kayboluyordu; yeni kartta etiket "1.5x"
+  // görünüyor ama ses normal hızda çalıyordu. Ses yüklenince (süre>0) hız TEKRAR uygulanır.
+  const sesYuklendi = sure > 0;
   useEffect(() => {
     try {
       player.shouldCorrectPitch = true;
       player.setPlaybackRate(SES_HIZLARI[hizIdx], 'high');
     } catch {}
-  }, [player, hizIdx]);
+  }, [player, hizIdx, sesYuklendi]);
 
   // Ses YÜKLENEMEZ/ÇALINAMAZSA sessizce yutma → teşhis için logla. expo-audio hata durumunu
   // playbackState='error' (ve/veya status.error) ile bildirir. Private bucket'ta imzalı URL
