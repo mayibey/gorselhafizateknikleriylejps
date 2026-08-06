@@ -55,13 +55,47 @@ const KABUK_CSS = `
    maket ekranı tamamen kaplamalı, kenarda boşluk kalmamalı. */
 /* Çift dokunmayla yakınlaştırmayı kapatır (viewport metası tek başına iOS'ta her sürümde
    yetmiyor); ayrıca yazı boyutunun kendiliğinden büyümesini engeller. */
-html{touch-action:manipulation;-webkit-text-size-adjust:100%}
-*{-webkit-tap-highlight-color:transparent}
+/* touch-action KALITSAL DEĞİL: yalnız html'e vermek yetmiyordu, ızgara/klavye gibi
+   çocuklarda çift dokunma yine yakınlaştırıyordu (başkan Günün Maddesi'nde gördü).
+   Bu yüzden her ögeye veriliyor. */
+html{-webkit-text-size-adjust:100%}
+*{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;margin:0}
 body{padding:0!important;gap:0!important;background:var(--kremZemin);display:block!important}
 #tel{width:100%!important;max-width:none!important;height:100%!important;max-height:none!important;
   aspect-ratio:auto!important;border-radius:0!important;border:none!important;
   box-shadow:none!important;display:flex!important}
+
+/* ---- BOŞ ALAN (başkan ekran görüntüsüyle gösterdi, 6 Ağu) ----
+   Maket sabit yükseklikteydi, gerçek telefon çok daha uzun. Kısa içerikli oyunlarda
+   (Ceza Terazisi gibi) her şey tepeye sıkışıp ekranın yarısı bomboş kalıyordu.
+   "safe center": içerik sığıyorsa dikeyde ORTALANIR, taşıyorsa yukarıdan başlar ve
+   normal kayar — düz "center" taşan içeriğin tepesini kırpardı. */
+#govde{justify-content:safe center}
+
+/* Alt sekme çubuğu içeriği ÖRTÜYORDU: Günün Maddesi'nde klavyenin son sırası çubuğun
+   altında kalıyordu (başkan Android ekran görüntüsüyle gösterdi). Gövdeye çubuk kadar
+   alt boşluk + cihazın kendi alt güvenli alanı ekleniyor. */
+#govde{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+#altSabit{bottom:calc(-16px + 96px + env(safe-area-inset-bottom))}
+
+/* Grup başlıkları (ARKADAŞ LİGİ · BUGÜN) harf üstlerinden kırpılıyordu: harf aralığı
+   büyük, satır yüksekliği yoktu. */
+.grupBas,.bolgeBas{line-height:1.5;padding:2px 0}
+
+/* Uzun ekranda yazılar da büyür: aynı alanda "minnacık soru" kalmasın. */
+@media (min-height:700px){
+  .sucAd{font-size:clamp(21px,6vw,26px)}
+  .sucMt{font-size:16px;line-height:1.6}
+  .slotSat label b{font-size:22px}
+  .slotSat label{font-size:12.5px}
+  .cumle{font-size:clamp(17px,5vw,20px);line-height:1.7}
+  .sik{font-size:clamp(16px,4.6vw,18.5px)}
+  .ymKart{font-size:clamp(16px,4.6vw,18.5px)}
+  .dyKart{font-size:19.5px;min-height:200px}
+  .hk,.hs{font-size:clamp(15.5px,4.4vw,17.5px)}
+  .aciklamaS{font-size:17px;line-height:1.65}
+}
 `;
 {
   const son = html.lastIndexOf('</style>');
@@ -149,6 +183,24 @@ degistir(
 degistir(
   'test modu düğmesinin bağlayıcısı',
   /\s*\$\('#premAnahtar'\)\.onclick=\(\)=>\{[^\n]*\n/,
+  '\n',
+);
+// Kilit perdesindeki ikinci geliştirici anahtarı: "premium aç/kapat". Menüdeki satırı
+// kaldırmak yetmiyordu — kilit perdesi açıldığında bu düğme çıkıyor ve kullanıcı
+// kendini premium yapabiliyordu. Düğme de bağlayıcısı da çıkarılıyor.
+degistir(
+  'kilit perdesindeki premium anahtarı (düğme)',
+  `<button class="btn altin" id="kAl">PREMIUM'A GEÇ</button>`,
+  '',
+);
+degistir(
+  'kilit perdesindeki prototip notu',
+  /<div class="aciklamaS" style="text-align:center">Prototipte satın alma yok[\s\S]*?<\/div>/,
+  '',
+);
+degistir(
+  'kilit perdesindeki premium anahtarı (bağlayıcı)',
+  /\s*\$\('#kAl'\)\.onclick=\(\)=>\{[^\n]*\n/,
   '\n',
 );
 
