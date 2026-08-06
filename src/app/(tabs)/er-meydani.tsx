@@ -96,10 +96,15 @@ export default function OyunMerkeziScreen() {
         else if (m.tip === 'geribildirim') {
           // Oyunun içinden gelen hata/öneri: hangi oyun ve hangi ekran olduğu başlıkta
           // hazır gelsin ki kullanıcı "nerede oldu" diye yazmak zorunda kalmasın.
+          // Başlıkta oyun adı İKİ KEZ yazılıyordu: bölüm haritasındayken sayfanın üst şeridi
+          // de oyunun adını gösterdiği için "Oyun: X · X" çıkıyordu. Yer bilgisi oyun adıyla
+          // aynıysa tekrarlamıyoruz.
+          const oyunAd = m.oyunAd ?? '';
+          const yer = m.ekran && m.ekran !== oyunAd ? ` · ${m.ekran}` : '';
           router.push({
             pathname: '/geri-bildirim',
             params: {
-              baslik: `Oyun: ${m.oyunAd ?? ''}${m.ekran ? ' · ' + m.ekran : ''}`,
+              baslik: `Oyun: ${oyunAd}${yer}`,
               // Ekrandaki maddenin künyesi + sorunun ilk satırı da kaydediliyor —
               // bozuk soru bildirilince hangi soru olduğu doğrudan görünsün.
               kanun: m.kunye ?? '',

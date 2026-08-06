@@ -895,9 +895,18 @@ function bildirGonder(){
   const kunyeOge=document.querySelector('.soruRef,.kaynak .rf,.ipKunye,.dySatir .dyRef,.ipAcik b');
   const soruOge=document.querySelector('.cumle,.dyKart,.ymKart,.sucMt,.ipAcik,.sik,.hs');
   const kirp=(e,n)=>e?((e.textContent||'').replace(/\s+/g,' ').trim().slice(0,n)):'';
+  // NEREDE olduğunu da bildir. Önceden yalnız üst şeridin yazısı gidiyordu; bu, bölüm
+  // haritasındayken sadece oyunun adına eşitti → rapor "Boşluk Doldurma · Boşluk Doldurma"
+  // olup çıkıyor, hangi bölüm/soru olduğu hiç yazmıyordu (6 Ağu test bildirimi).
+  // Artık: bölümlü oyunda "Bölüm 3 · soru 2 / 8", haritadaysa "Bölüm haritası",
+  // bölümsüz oyunda turun neresi olduğu. Böylece bozuk soru tek bakışta bulunur.
+  const barSag=((document.getElementById('barSag')||{}).textContent||'').trim();
+  const haritali=!!HARITALAR[acikOyun];
+  const yer = !acikOyun ? 'Menü'
+    : haritali ? (haritada ? 'Bölüm haritası' : 'Bölüm '+(aktifBolum+1)+(barSag?' · soru '+barSag:''))
+    : (barSag ? 'Tur · '+barSag : 'Oyun içi');
   window.mevzuKopru&&window.mevzuKopru({tip:'geribildirim',
-    oyun:acikOyun||'menu', oyunAd:(o?o.ad:'Oyun Merkezi'),
-    ekran:(document.getElementById('barBas')||{}).textContent||'',
+    oyun:acikOyun||'menu', oyunAd:(o?o.ad:'Oyun Merkezi'), ekran:yer,
     kunye:kirp(kunyeOge,90), soru:kirp(soruOge,220)});
 }
 function bar(b,s,g){$('#barBas').textContent=b;$('#barSag').textContent=s||'';$('#geri').style.display=g?'block':'none';}

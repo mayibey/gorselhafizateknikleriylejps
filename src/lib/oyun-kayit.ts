@@ -22,6 +22,19 @@ export type OyunKayit = Record<string, string>;
 
 let bellek: OyunKayit = {};
 let zamanlayici: ReturnType<typeof setTimeout> | null = null;
+/**
+ * Son sunucu yazması BAŞARISIZ mı? Eskiden hata sessizce yutuluyordu: kayıt gitmediğinde
+ * ne kullanıcı ne de biz haberdar oluyorduk, "yazılmadı mı yazılamadı mı" ayrımı
+ * yapılamıyordu (6 Ağu: ilerleme tablosu bomboştu, sebebini ölçemedik). Artık hata not
+ * düşülüyor ve bir sonraki yazmada BEKLETMEDEN tekrar deneniyor.
+ */
+let gonderilemedi = false;
+
+/** Son yazma hatası (teşhis için; ekranda gösterilmiyor). */
+export function oyunKaydiSonHata(): string | null {
+  return gonderilemedi ? sonHataMetni : null;
+}
+let sonHataMetni: string | null = null;
 
 /** Cihazdaki kayıt (internet gerekmez). */
 async function cihazdanOku(): Promise<OyunKayit> {
@@ -76,7 +89,8 @@ export function oyunKaydiYaz(anahtar: string, deger: string): void {
   if (!anahtar) return;
   bellek[anahtar] = deger;
   void AsyncStorage.setItem(CIHAZ_ANAHTAR, JSON.stringify(bellek)).catch(() => {});
-  if (ONEMLI.test(anahtar)) {
+  // Önemli anahtar VEYA bir önceki yazma başarısızsa: bekletme, hemen dene.
+  if (ONEMLI.test(anahtar) || gonderilemedi) {
     void oyunKaydiGonder();
     return;
   }
@@ -98,11 +112,28 @@ export async function oyunKaydiGonder(): Promise<void> {
   try {
     const { data: u } = await supabase.auth.getUser();
     const uid = u.user?.id;
-    if (!uid) return;
-    await supabase
+    if (!uid) {
+      // Oturum yoksa kayıt zaten kişiye bağlanamaz; hata değil, bekleyen iş de değil.
+      gonderilemedi = false;
+      return;
+    }
+    const { error } = await supabase
       .from(TABLO)
       .upsert({ user_id: uid, veri: bellek, guncelleme: new Date().toISOString() });
-  } catch {
-    // sessiz geç — cihazdaki kayıt duruyor, sonraki açılışta tekrar denenir
+    // supabase-js HATA FIRLATMAZ, {error} döndürür — eskiden bu hiç okunmuyordu, bu yüzden
+    // başarısız yazma tamamen görünmezdi. Artık not düşülüyor ve tekrar denenecek.
+    if (error) {
+      gonderilemedi = true;
+      sonHataMetni = error.message;
+      console.warn('[oyun-kayit] ilerleme sunucuya yazılamadı:', error.message);
+      return;
+    }
+    gonderilemedi = false;
+    sonHataMetni = null;
+  } catch (e) {
+    gonderilemedi = true;
+    sonHataMetni = (e as Error)?.message ?? String(e);
+    console.warn('[oyun-kayit] ilerleme sunucuya yazılamadı:', sonHataMetni);
+    // Cihazdaki kayıt duruyor; sonraki yazmada veya açılışta tekrar denenir.
   }
 }
