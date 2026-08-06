@@ -53,6 +53,10 @@ const KABUK_CSS = `
    Kaynak sayfa tarayıcıda telefon maketi olarak duruyordu: ortalanmış, köşeleri yuvarlak,
    gölgeli, en/boy oranı sabit bir kutu. Gerçek telefonun içinde bunların hepsi fazlalık —
    maket ekranı tamamen kaplamalı, kenarda boşluk kalmamalı. */
+/* Çift dokunmayla yakınlaştırmayı kapatır (viewport metası tek başına iOS'ta her sürümde
+   yetmiyor); ayrıca yazı boyutunun kendiliğinden büyümesini engeller. */
+html{touch-action:manipulation;-webkit-text-size-adjust:100%}
+*{-webkit-tap-highlight-color:transparent}
 html,body{height:100%;margin:0}
 body{padding:0!important;gap:0!important;background:var(--kremZemin);display:block!important}
 #tel{width:100%!important;max-width:none!important;height:100%!important;max-height:none!important;
@@ -67,6 +71,16 @@ body{padding:0!important;gap:0!important;background:var(--kremZemin);display:blo
   }
   html = html.slice(0, son) + KABUK_CSS + html.slice(son);
 }
+
+// ---- 1b. YAKINLAŞTIRMA KAPALI ----
+// Tarayıcıda çift dokunma sayfayı yakınlaştırıyordu; uygulamanın içinde bu bir kusur —
+// oyun kutularına art arda basınca ekran zıplıyor (başkan bildirdi, 6 Ağu). Sayfa zaten
+// telefon ölçüsüne göre yazılmış, yakınlaştırmaya ihtiyacı yok.
+degistir(
+  'yakınlaştırma kapatma',
+  '<meta name=viewport content="width=device-width,initial-scale=1">',
+  '<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">',
+);
 
 // ---- 2. ER MEYDANI: menünün en başındaki kutu ----
 // Uygulamanın kendi ekranında çalışan tek oyun. `dis` işareti taşıyanlar WebView içinde
