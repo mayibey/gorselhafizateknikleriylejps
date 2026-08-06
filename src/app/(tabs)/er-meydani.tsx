@@ -86,6 +86,8 @@ export default function OyunMerkeziScreen() {
           deger?: string;
           oyunAd?: string;
           ekran?: string;
+          kunye?: string;
+          soru?: string;
         };
         if (m.tip === 'hazir') setHazir(true);
         else if (m.tip === 'nerede') menudeMi.current = !m.ad;
@@ -96,7 +98,13 @@ export default function OyunMerkeziScreen() {
           // hazır gelsin ki kullanıcı "nerede oldu" diye yazmak zorunda kalmasın.
           router.push({
             pathname: '/geri-bildirim',
-            params: { baslik: `Oyun: ${m.oyunAd ?? ''}${m.ekran ? ' · ' + m.ekran : ''}` },
+            params: {
+              baslik: `Oyun: ${m.oyunAd ?? ''}${m.ekran ? ' · ' + m.ekran : ''}`,
+              // Ekrandaki maddenin künyesi + sorunun ilk satırı da kaydediliyor —
+              // bozuk soru bildirilince hangi soru olduğu doğrudan görünsün.
+              kanun: m.kunye ?? '',
+              madde_no: m.soru ? m.soru.slice(0, 120) : '',
+            },
           });
         } else if (m.tip === 'kayit' && m.anahtar) oyunKaydiYaz(m.anahtar, m.deger ?? '');
       } catch {

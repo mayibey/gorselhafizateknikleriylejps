@@ -867,11 +867,38 @@ addEventListener('DOMContentLoaded',function(){
   var b=document.getElementById('bildir');
   if(b) b.onclick=bildirGonder;
 });
+/* SONUC EKRANA GELSIN — her oyunda. Rutbe Merdiveni'nde elenince sonuc merdivenin
+   ALTINA yaziliyordu, oyuncu asagi kaydirmak zorunda kaliyordu (baskan bildirdi).
+   Tek tek her oyuna dokunmak yerine govdeyi izliyoruz: yeni bir sonuc/duello/kilit
+   kutusu belirdiginde gorunur alana kaydiriliyor. Ayni kutu icin BIR KEZ. */
+(function(){
+  var sonGorulen=null;
+  function kaydir(){
+    var kap=document.getElementById('govde'); if(!kap) return;
+    var s=kap.querySelector('.sonuc,.duello,.kilitKart'); if(!s) { sonGorulen=null; return; }
+    if(s===sonGorulen) return;
+    sonGorulen=s;
+    var kr=kap.getBoundingClientRect(), sr=s.getBoundingClientRect();
+    if(sr.top<kr.top || sr.bottom>kr.bottom) kap.scrollTop += (sr.top-kr.top) - 12;
+  }
+  addEventListener('DOMContentLoaded',function(){
+    var kap=document.getElementById('govde'); if(!kap) return;
+    new MutationObserver(function(){ requestAnimationFrame(kaydir); })
+      .observe(kap,{childList:true,subtree:true});
+  });
+})();
 function bildirGonder(){
   const o=OYUNLAR.find(x=>x.id===acikOyun);
+  // EKRANDAKİ SORUYU DA GÖNDER. Yalnız "hangi oyun" yetmiyor: bozuk soru bildirildiğinde
+  // 1200 sorunun içinde aramak gerekirdi (başkan: "samanlıkta iğne aramayalım").
+  // Görünen madde künyesi + sorunun ilk satırı gidiyor → şikâyet doğrudan maddeyi gösteriyor.
+  const kunyeOge=document.querySelector('.soruRef,.kaynak .rf,.ipKunye,.dySatir .dyRef,.ipAcik b');
+  const soruOge=document.querySelector('.cumle,.dyKart,.ymKart,.sucMt,.ipAcik,.sik,.hs');
+  const kirp=(e,n)=>e?((e.textContent||'').replace(/\s+/g,' ').trim().slice(0,n)):'';
   window.mevzuKopru&&window.mevzuKopru({tip:'geribildirim',
     oyun:acikOyun||'menu', oyunAd:(o?o.ad:'Oyun Merkezi'),
-    ekran:(document.getElementById('barBas')||{}).textContent||''});
+    ekran:(document.getElementById('barBas')||{}).textContent||'',
+    kunye:kirp(kunyeOge,90), soru:kirp(soruOge,220)});
 }
 function bar(b,s,g){$('#barBas').textContent=b;$('#barSag').textContent=s||'';$('#geri').style.display=g?'block':'none';}
 /* Oyundan cikinca gecikmeli isler (sayac, sira bekleme) devam etmesin diye tur sayaci. */
@@ -1008,7 +1035,7 @@ function menu(){
     if(o.g!==son){h+=`<div class="grupBas">${o.g}</div>`;son=o.g;}
     h+=`<button class="tile" data-id="${o.id}" style="--t:var(--altin)"><div class="ikon">${o.ik}</div>
       <div class="yz"><div class="ad">${o.ad}${o.bekle?'<span class="bekle">sunucu bekliyor</span>':''}</div>
-        <div class="ac">${o.ac}${o.bekle?' <i>Rakip şimdilik temsilî — gerçek eşleşme sunucu bağlanınca.</i>':''}</div></div>
+        <div class="ac">${o.ac}</div></div>
       </button>`;
   }
   h+=`<div class="premSat">
@@ -1145,8 +1172,8 @@ ${meydanBaglanti(kod)}`;
       <div class="mt" id="mMetin" style="white-space:pre-line">${metin}</div></div>
     <button class="btn altin" id="mKopya">📋 KOPYALA</button>
     <button class="btn hafif" id="mGeri">↩ ${HARITALAR[oyun]?'Haritaya dön':'Menüye dön'}</button>
-    <div class="aciklamaS">Kod her şeyi taşıyor — sunucu gerekmiyor. Uygulamada bu, Er Meydanı’nın
-      4 haneli oda kodu ile de çalışacak.</div>`;
+    <div class="aciklamaS">Bağlantı sorunun kendisini taşıyor — arkadaşın açtığında
+      birebir aynı soruları oynar.</div>`;
   $('#mKopya').onclick=()=>{
     const y=()=>{ $('#mKopya').textContent='✓ KOPYALANDI'; setTimeout(()=>{const b=$('#mKopya'); if(b)b.textContent='📋 KOPYALA';},1600); };
     if(navigator.clipboard) navigator.clipboard.writeText(metin).then(y).catch(y); else y();
@@ -2328,9 +2355,13 @@ function cTus(t){
   const n=cAk.cevap.length;
   const blok=i=>cAk.cevap[i]===' ';
   // Blok hücresi yazılamaz; imleç ilerlerken ve gerilerken üstünden atlar.
-  const ileri=i=>{let j=i+1;while(j<n&&blok(j))j++;return j;};
-  const geri=i=>{let j=i-1;while(j>=0&&blok(j))j--;return j;};
-  const koy=(i,h)=>{if(blok(i))return;
+  const ileri=i=>{let j=i+1;while(j<n&&(blok(j)||kilitli(j)))j++;return j;};
+  const geri=i=>{let j=i-1;while(j>=0&&(blok(j)||kilitli(j)))j--;return j;};
+  // Baska bir kelimeyle DOGRU tamamlanmis hucre: uzerine yazilmaz, silinmez.
+  const kilitli=i=>{if(blok(i))return false;
+    const r=cAk.yon==='y'?cAk.r:cAk.r+i,c=cAk.yon==='y'?cAk.c+i:cAk.c;
+    const x=cIz[r+','+c];return !!(x&&x.kontrol&&x.harf&&x.harf===x.dogru);};
+  const koy=(i,h)=>{if(blok(i)||kilitli(i))return;
     const r=cAk.yon==='y'?cAk.r:cAk.r+i,c=cAk.yon==='y'?cAk.c+i:cAk.c;
     cIz[r+','+c].harf=h;cIz[r+','+c].kontrol=false;};
   // SİLME: imleç DOLU bir kutunun üstündeyse önce ONU siler, geri gitmez.
@@ -2340,7 +2371,7 @@ function cTus(t){
   if(t==='⌫'){
     const dolu=i=>{const r=cAk.yon==='y'?cAk.r:cAk.r+i,c=cAk.yon==='y'?cAk.c+i:cAk.c;
       const h=cIz[r+','+c];return h&&!h.blok&&h.harf;};
-    if(cIm<n&&!blok(cIm)&&dolu(cIm)) koy(cIm,'');
+    if(cIm<n&&!blok(cIm)&&!kilitli(cIm)&&dolu(cIm)) koy(cIm,'');
     else {const j=geri(cIm);if(j>=0){cIm=j;koy(cIm,'');}}
     cHizli();
   }
