@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
-import { Modal, Pressable, StyleSheet, View } from 'react-native';
+import { Modal, Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
@@ -21,10 +21,19 @@ function ikiHane(n: number): string {
 /**
  * İlk gün indirimini hatırlatan modal. Karargah'a yerleşir; koşullar tutunca (çalışmaya girilmiş +
  * en fazla 3 kez + premium değil + ilk-giriş indirimi aktif) canlı geri sayımlı fırsat kartı gösterir.
+ *
+ * 🔴 iOS'TA GÖSTERİLMEZ (7 Ağu 2026, başkan bildirdi: "indirim paneline tıklayıp satın almaya
+ * gidince indirim uygulanmıyor"). Sebep: indirim mekanizması Google Play'in TEKLİF (offer) sistemine
+ * dayanıyor; App Store'da karşılığı yok — paywall/satinAl iOS'ta her zaman TEMEL ürünü tam fiyattan
+ * alıyor. Paywall bunu zaten biliyor ve iOS'ta indirim iddiasında BULUNMUYOR (indirimUygulanabilir),
+ * ama bu hatırlatma paneli platform ayrımı yapmadığı için indirim VAAT EDİP tam fiyata götürüyordu.
+ * Uygulanamayan indirimi vaat etmek hem yanıltıcı hem App Store 3.1.1 riski → panel iOS'ta kapalı.
+ * (Kalıcı çözüm: App Store'da ayrı indirimli ürün açmak — ASC'de ürün + inceleme gerektirir.)
  */
 export function IndirimHatirlatma() {
   const router = useRouter();
   const { premium } = useUyelik();
+  const indirimDesteklenir = Platform.OS === 'android';
   const [durum, setDurum] = useState<IndirimDurumu | null>(null); // dolu ise modal açık
   const [simdi, setSimdi] = useState(() => Date.now());
 
@@ -33,7 +42,7 @@ export function IndirimHatirlatma() {
     useCallback(() => {
       let iptal = false;
       void (async () => {
-        if (premium || seansGosterildi) return;
+        if (!indirimDesteklenir || premium || seansGosterildi) return;
         if (!(await hatirlatUygunMu())) return;
         const d = await indirimDurumuOku();
         if (iptal || !d || d.kaynak !== 'ilk_giris' || !d.bitis) return;
@@ -48,7 +57,7 @@ export function IndirimHatirlatma() {
       return () => {
         iptal = true;
       };
-    }, [premium]),
+    }, [premium, indirimDesteklenir]),
   );
 
   // Modal açıkken saniyede bir tikle.
