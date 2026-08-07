@@ -1041,3 +1041,11 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - **ÇÖZÜM (genel):** sınav kaynaklı kayıtlar `sv:1` ile işaretlendi (318 kayıt: dy 139 · hangi 137 · ayrim 42). `bolumler()` karıştırmadan SONRA kararlı bir bölmeyle işaretlileri öne alıyor — kendi aralarındaki karışık sıra korunuyor, blok olarak başa geçiyorlar. `maddeYay()` (aynı bölümde aynı madde yasağı) sonradan çalıştığı için kalite kuralı bozulmuyor.
 - **ÖLÇÜM:** Hangi Kanun ilk 5 bölüm **6/6 sınav sorusu**, son 3 bölüm 0/6. TCK mı CMK mı aynı. Yani bedava/erken bölümler tamamen çıkmış sınav sorusu, gerisi mevcut havuzla devam ediyor.
 - Doğru-Yanlış'ta bölüm yok (60 sn'lik tur) — orada sınav ifadeleri havuzun %33'ü, tura karışık geliyor.
+
+## 7 Ağu 2026 — Kalan oyunlara da sınav içeriği (ve verimin GERÇEK tavanı)
+- **EKLENEN:** Yalancı Madde 210 → 238 · Boşluk Doldurma 135 → 155 · Kim Yapar 45 → 47 · Süre Şeridi 62 → 63. Hepsi `sv:1` işaretli → ilk bölümlere düşüyor.
+- **BOŞLUK DOLDURMA'da güzel bir eşleşme:** şıklar SINAVIN KENDİ şıkları. Yani çeldiriciler uydurma değil, gerçek sınavda çıkmış olanlar.
+- **VERİM NEDEN DÜŞÜK — ölçüldü, kabul edildi:** cevabı gerçekten "makam" olan soru **16** (önceki "83" gevşek saymaydı: `search` yerine `match` gerekiyordu), süre kalıbına tam uyan 3. Yani bu oyunların alabileceği sınav sorusu doğal olarak az; zorlamak uydurma üretmek olurdu. Madde metni bulma sorunu DEĞİL (391/392 bulunuyor).
+- 🔴 **KUSUR — KELİME İÇİNDEN KESME.** İlk turda cevap kelimenin içinde aranıyordu: "valilerce" içindeki "vali" çıkarılınca ekranda **"…………lerce verilir"** kalıyordu. `kelime_yeri()` eklendi — cevabın önü ve sonu harf olmamalı. Kusurlu kayıtlar elendi.
+- Doğrulama: ilk 5 bölüm → Hangi Kanun 6/6, TCK mı CMK mı 6/6, Yalancı Madde 5/5, Boşluk Doldurma 6/6·6/6·6/6·2/6. Son bölümler 0 (mevcut havuz). tsc 0 hata, JS hatası 0.
+- **KALAN:** Ceza Terazisi (ceza aralığı ayrıştırması gerekiyor, 23 aday) · Adam Asmaca (çengelle aynı 9 hane kısıtı) · Sıraya Diz (işlem sırası — tek sorudan türetilemiyor) · Günün Maddesi (harf oyunu).
