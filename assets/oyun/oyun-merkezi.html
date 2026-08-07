@@ -388,6 +388,12 @@ body{margin:0;min-height:100vh;background:#EDE7DA;color:var(--metin);
 .ipAcik b{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--amber);margin-bottom:3px}
 
+/* Kuşatma kale seçimi — üç açılır liste (uzun düğme listesinin yerine). */
+.kSecSar{display:flex;flex-direction:column;gap:4px}
+.kSecNo{font-size:11.5px;font-weight:700;color:var(--altin);letter-spacing:.4px}
+.kSecil{width:100%;padding:11px 12px;border-radius:11px;border:1px solid var(--ken);
+  background:var(--kart);color:var(--ana);font-size:14px;font-family:inherit;appearance:auto}
+
 /* ---------- ceza terazisi ---------- */
 .terazi{border-radius:18px;padding:clamp(12px,3.6vw,17px);overflow:hidden}
 .sucAd{font-family:var(--serif);font-size:clamp(18px,5.4vw,22px);color:var(--lacivert);margin-bottom:5px;line-height:1.25}
@@ -2136,12 +2142,17 @@ function mSec(j){
   $('#mI').onclick=()=>{if(ok){mi++;mSil=[];mCiz();}else mSon(false);};
 }
 function mSon(kazandi){
+  const yeniRek=rekorYaz('milyoner',mi,RUTBE.length,true);
   bar('Rütbe Merdiveni','bitti',true);
   G().innerHTML=`<div class="sonuc"><div class="puanS">${mi}</div>
     <div class="bs">${kazandi?'Binbaşı!':'Rütben: '+(mi?RUTBE[mi-1]:'—')}</div>
     <div class="al">${kazandi?'On iki sorunun tamamını bildin.':'Elendiğin soruda takıldın. Bota sor jokeri gerçekte Telegram botumuza gider.'}</div></div>
-    <button class="btn altin" id="a1">↻ Yeniden</button><button class="btn hafif" id="a2">Menüye dön</button>`;
+    ${yeniRek?'<div class="al" style="color:var(--altinMetin);font-weight:800">🏆 Yeni rekor!</div>':''}
+    <button class="btn altin" id="a1">↻ Yeniden</button>
+    <button id="mSira" style="width:100%">🏆 Sıralama tablosu</button>
+    <button class="btn hafif" id="a2">Menüye dön</button>`;
   $('#a1').onclick=acMilyoner;$('#a2').onclick=menu;
+  $('#mSira').onclick=()=>rekorTablo('milyoner','Rütbe Merdiveni','en yüksek rütbeye',()=>mSon(kazandi));
 }
 
 /* ============ 10) YALANCI MADDE ============ */
@@ -2618,6 +2629,12 @@ function havuzdanSoru(sart, adet, tohum){
 /* Kale konuları koda gömülü değil, HAVUZDAN çıkıyor: gömülü listede "7201 Tebligat"
    vardı ama havuzda o kanundan soru yoktu — oyuncu onu seçince saldırı başka kanundan
    geliyordu. Artık yalnız gerçekten sorusu olan kanunlar seçenek oluyor. */
+/* Kanun numarası -> uygulamadaki TAM ad (src/db/seed.ts'ten üretildi).
+   Oyun içi etiketler ref'lerden türetildiği için kırpık kalıyordu
+   ("2803 Jandarma Teşkilat"); kullanıcı Mevzuat'ta gördüğü adı görsün. */
+const KANUN_TAM={"1380": "Su Ürünleri Kanunu", "1774": "Kimlik Bildirme Kanunu", "2313": "Uyuşturucu Maddelerin Murakabesi Hakkında Kanun", "2521": "Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik", "2559": "Polis Vazife ve Salahiyet Kanunu", "2803": "Jandarma Teşkilat, Görev ve Yetkileri Kanunu", "2860": "Yardım Toplama Kanunu", "2863": "Kültür ve Tabiat Varlıklarını Koruma Kanunu", "2872": "Çevre Kanunu", "2893": "Türk Bayrağı Kanunu", "2911": "Toplantı ve Gösteri Yürüyüşleri Kanunu", "2918": "Karayolları Trafik Kanunu", "2935": "Olağanüstü Hal Kanunu", "3091": "Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun", "3298": "Uyuşturucu Maddelerle İlgili Kanun", "3713": "Terörle Mücadele Kanunu", "4207": "Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun", "4342": "Mera Kanunu", "4678": "Türk Silahlı Kuvvetlerinde İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun", "4733": "Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun", "4915": "Kara Avcılığı Kanunu", "5070": "Elektronik İmza Kanunu", "5188": "Özel Güvenlik Hizmetlerine Dair Kanun", "5199": "Hayvanları Koruma Kanunu", "5237": "Türk Ceza Kanunu", "5271": "Ceza Muhakemesi Kanunu", "5326": "Kabahatler Kanunu", "5395": "Çocuk Koruma Kanunu", "5442": "İl İdaresi Kanunu", "5607": "Kaçakçılıkla Mücadele Kanunu", "5816": "Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun", "6136": "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun", "6222": "Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun", "6284": "Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun", "6415": "Terörizmin Finansmanının Önlenmesi Hakkında Kanun", "6458": "Yabancılar ve Uluslararası Koruma Kanunu", "6698": "Kişisel Verilerin Korunması Kanunu", "6831": "Orman Kanunu", "7068": "Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun", "7201": "Tebligat Kanunu"};
+function kanunTamAd(no, yedek){ return KANUN_TAM[no] ? (no+' '+KANUN_TAM[no]) : yedek; }
+
 function kaleKonulari(){
   // Aynı kanun havuzda iki ayrı yazımla geçebiliyor ("CMK 5271" ve "5271 Ceza
   // Muhakemesi"); numaraya göre tekilleştirilmezse aynı kanun iki kale konusu oluyor.
@@ -2641,7 +2658,7 @@ function kaleKonulari(){
   // gerçek müfredattan kuramıyordu (başkan bildirdi). Artık soru havuzu olan
   // HER kanun listede; müşterekler yine üstte.
   return Object.keys(sayac).filter(no=>sayac[no]>=1)
-    .sort((a,b)=>sira(a)-sira(b)||sayac[b]-sayac[a]).map(no=>ad[no]);
+    .sort((a,b)=>sira(a)-sira(b)||sayac[b]-sayac[a]).map(no=>kanunTamAd(no, ad[no]));
 }
 function kaleSorulari(konular, tohum){
   // Tohum artık dışarıdan verilebiliyor: meydan okumada iki taraf da AYNI soruları
@@ -2679,16 +2696,28 @@ function kCiz(){
         <div class="ac">Savunmanı 3 konudan kur</div></div>
         <div class="can">${[0,1,2].map(i=>`<i class="${i<kSec2.length?'':'yik'}"></i>`).join('')}</div></div>
       <div class="aciklamaS">Arkadaşların bu konulardan sorularla saldırıya uğrayacak. <b>İyi bildiğin</b> konuları seç ki kalen dayansın.</div>
-      <div style="display:flex;flex-direction:column;gap:8px">
-        ${kaleKonulari().map(k=>
-          `<button class="hk" data-k="${k}" ${kSec2.includes(k)?'style="border-color:var(--altin);background:var(--altinY)"':''}>${kSec2.includes(k)?'✓ ':''}${k}</button>`).join('')}</div>
-      ${kSec2.length===3?'<button class="btn altin" id="kB">KALEYİ KUR ▸</button>':''}`;
-    [...document.querySelectorAll('.hk')].forEach(b=>b.onclick=()=>{
-      const k=b.dataset.k;
-      if(kSec2.includes(k))kSec2=kSec2.filter(x=>x!==k);else if(kSec2.length<3)kSec2.push(k);
-      kCiz();});
+      <div style="display:flex;flex-direction:column;gap:10px">
+        ${[0,1,2].map(i=>`<label class="kSecSar"><span class="kSecNo">${i+1}. burç</span>
+          <select class="kSecil" data-i="${i}">
+            <option value="">— kanun seç —</option>
+            ${kaleKonulari().map(k=>{
+              const baskaSecili = kSec2.some((x,j)=>j!==i && x===k);
+              return baskaSecili ? '' :
+                `<option value="${k}" ${kSec2[i]===k?'selected':''}>${k}</option>`;
+            }).join('')}
+          </select></label>`).join('')}</div>
+      <button class="btn altin" id="kB" ${kSec2.filter(Boolean).length===3?'':'disabled style="opacity:.45"'}>KALEYİ KUR ▸</button>`;
+    /* Üç ayrı açılır liste: telefonun kendi seçicisi açılır, ekran üç satır yer kaplar ve
+       onay düğmesi HEP görünür kalır. Eskiden 51 kanun alt alta düğmeydi, "KALEYİ KUR"
+       ancak 3 seçim yapılınca listenin en altında beliriyordu (başkan bildirdi). */
+    [...document.querySelectorAll('.kSecil')].forEach(sel=>sel.onchange=()=>{
+      const i=+sel.dataset.i;
+      kSec2[i]=sel.value||'';
+      kCiz();
+    });
     if($('#kB'))$('#kB').onclick=()=>{
-      kKonular=kSec2.slice();
+      if(kSec2.filter(Boolean).length!==3) return;   // düğme pasifken de tıklanabilir olmasın
+      kKonular=kSec2.filter(Boolean);
       kTohum=(gunSayisi()*7919+oynayisSayaci()*197+Date.now()%9973)>>>0;
       KUS_SORU=kaleSorulari(kKonular,kTohum);kAsama='saldiri';kSor=0;kCan=3;kCiz();};
     return;
@@ -2733,6 +2762,7 @@ function kSon(){
          <div class="dSonuc">${skor>meydan.skor?'Kaleyi daha sağlam kuşattın 🏆'
             :skor<meydan.skor?`${meydan.ad} daha az kayıpla girdi`:'Berabere'}</div></div>`
     : '';
+  if(!meydan) rekorYaz('kusatma',skor,toplam,true);
   bar('Kuşatma','bitti',true);
   G().innerHTML=`<div class="sonuc"><div class="puanS">${kazandi?'🏆':'🛡️'}</div>
     <div class="bs">${kazandi?'Kale düştü':'Püskürtüldün'}</div>
@@ -2741,9 +2771,41 @@ function kSon(){
     ${rakipSat}
     ${meydan?'':'<button class="btn altin" id="a0">⚔️ ARKADAŞINA MEYDAN OKU</button>'}
     <button class="btn ${meydan?'altin':'hafif'}" id="a1">↻ Yeniden</button>
+    <button id="kSira" style="width:100%">🏆 Sıralama tablosu</button>
     <button class="btn hafif" id="a2">Menüye dön</button>`;
   if($('#a0'))$('#a0').onclick=()=>meydanOkuEkrani('kusatma',0,skor,toplam,kKonular.join('~')+'!'+kTohum);
   $('#a1').onclick=acKusatma;$('#a2').onclick=menu;
+  if($('#kSira'))$('#kSira').onclick=()=>rekorTablo('kusatma','Kuşatma','kalan cana',kSon);
+}
+
+/* ---------- KİŞİSEL REKOR TABLOSU (bölüm haritası olmayan oyunlar) ----------
+   Bölüm haritalı 11 oyunda tablo harita ekranında, Doğru/Yanlış'ta tur sonunda vardı;
+   Rütbe Merdiveni, Kuşatma ve Bayrak Yarışı'nda hiç yoktu (başkan bildirdi, 8 Ağu 2026).
+   Rekor localStorage'a yazılır → köprü sunucuya taşır → cihaz değişse de durur.        */
+const REKOR_ANAHTAR='mevzu_oyun_rekor';
+function rekorHepsi(){ try{ return JSON.parse(localStorage.getItem(REKOR_ANAHTAR)||'{}'); }catch{ return {}; } }
+function rekorOku(oyun){ const r=rekorHepsi()[oyun]; return r&&typeof r.d==='number'?r:null; }
+/* Daha iyi skoru yazar. `iyi`: büyük mü iyi (true) yoksa küçük mü (false). */
+function rekorYaz(oyun,d,toplam,iyiBuyuk){
+  const e=rekorOku(oyun);
+  if(e && (iyiBuyuk?e.d>=d:e.d<=d)) return false;
+  const h=rekorHepsi(); h[oyun]={d:d,t:toplam,z:Date.now()};
+  try{ localStorage.setItem(REKOR_ANAHTAR,JSON.stringify(h)); }catch{}
+  return true;
+}
+function rekorTablo(oyun,baslik,olcu,geriFn){
+  const r=rekorOku(oyun);
+  bar(baslik+' · Sıralama',olcu,true);
+  G().innerHTML=`<div class="aciklamaS">Sıralama <b>${olcu}</b> göre. ${
+      r?`Senin rekorun: <b>${r.d}${r.t?'/'+r.t:''}</b>`:'Henüz rekorun yok — bir tur oyna.'}</div>
+    <div class="sira">
+      <div class="sr ben"><span class="no">🥇</span><span class="kim">SEN</span>
+        <span class="deger">${r?r.d+(r.t?'/'+r.t:''):'—'}</span></div>
+    </div>
+    <div class="kaynak"><div class="rf">Nasıl işler</div><div class="mt">Rekorun buluta kaydedilir;
+      cihaz değiştirsen de kaybolmaz.</div></div>
+    <button class="btn hafif" id="rGeri">↩ Sonuca dön</button>`;
+  $('#rGeri').onclick=geriFn;
 }
 
 /* ============ 13) BAYRAK YARIŞI ============ */
@@ -2802,6 +2864,7 @@ function bySon(){
          <div class="dSonuc">${skor>meydan.skor?'Bayrağı önce sen taşıdın 🥇'
             :skor<meydan.skor?`${meydan.ad} önde bitirdi`:'Berabere'}</div></div>`
     : '';
+  if(!meydan) rekorYaz('bayrak',skor,toplam,true);
   bar('Bayrak Yarışı','bitti',true);
   G().innerHTML=`<div class="sonuc"><div class="puanS">${skor}/${toplam}</div>
     <div class="bs">${kazandi?'Bayrağı taşıdın':'Bayrak düştü'}</div>
@@ -2810,9 +2873,11 @@ function bySon(){
     ${rakipSat}
     ${meydan?'':'<button class="btn altin" id="a0">⚔️ ARKADAŞINA MEYDAN OKU</button>'}
     <button class="btn ${meydan?'altin':'hafif'}" id="a1">↻ Yeniden</button>
+    <button id="bySira" style="width:100%">🏆 Sıralama tablosu</button>
     <button class="btn hafif" id="a2">Menüye dön</button>`;
   if($('#a0'))$('#a0').onclick=()=>meydanOkuEkrani('bayrak',0,skor,toplam,'!'+byTohum);
   $('#a1').onclick=acBayrak;$('#a2').onclick=menu;
+  if($('#bySira'))$('#bySira').onclick=()=>rekorTablo('bayrak','Bayrak Yarışı','doğru sayısına',bySon);
 }
 
 /* ortak bitiş */
