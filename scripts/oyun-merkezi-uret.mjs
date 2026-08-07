@@ -243,24 +243,11 @@ degistir(
   /\s*\$\('#premAnahtar'\)\.onclick=\(\)=>\{[^\n]*\n/,
   '\n',
 );
-// Kilit perdesindeki ikinci geliştirici anahtarı: "premium aç/kapat". Menüdeki satırı
-// kaldırmak yetmiyordu — kilit perdesi açıldığında bu düğme çıkıyor ve kullanıcı
-// kendini premium yapabiliyordu. Düğme de bağlayıcısı da çıkarılıyor.
-degistir(
-  'kilit perdesindeki premium anahtarı (düğme)',
-  `<button class="btn altin" id="kAl">PREMIUM'A GEÇ</button>`,
-  '',
-);
-degistir(
-  'kilit perdesindeki prototip notu',
-  /<div class="aciklamaS" style="text-align:center">Prototipte satın alma yok[\s\S]*?<\/div>/,
-  '',
-);
-degistir(
-  'kilit perdesindeki premium anahtarı (bağlayıcı)',
-  /\s*\$\('#kAl'\)\.onclick=\(\)=>\{[^\n]*\n/,
-  '\n',
-);
+// NOT (8 Ağu 2026): kilit perdesindeki "premium aç/kapat" geliştirici düğmesi (#kAl) ve
+// yanındaki "Prototipte satın alma yok" notu burada YAMAYLA siliniyordu. Artık KAYNAK
+// dosyadan tamamen çıkarıldılar; bu yamalar gereksiz kaldı ve "uygulanamadı" hatası
+// veriyordu, o yüzden kaldırıldı. (Kullanıcıya giden dosyada o düğme HİÇBİR ZAMAN yoktu —
+// kaynağa bakıp "gelir sızıntısı" diye yanlış alarm verdim; doğrusu bu.)
 
 // ---- 2d. YARDIMLA BÖLÜM GEÇME KALKTI (6 Ağu, başkan talimatı) ----
 // Çengelde "bitiren geçer" kuralı test için açılmıştı: bütün harfleri yardımla açan da

@@ -87,7 +87,10 @@ def denetle(ad, sorular, sik_fn, metin_fn):
             # bitiyorken bu bitmiyor. Diger iki isaret yalnizca DESTEK olarak yaziliyor.
             if len(x) < 25:
                 continue
-            if not (noktali >= len(siklar) - 1 and noktali >= 2 and not x.endswith(('.', '?', '!'))):
+            # ⚠️ ESKİ KURAL "noktali >= len(siklar)-1" idi: yalnızca TEK şık bozuksa yakalıyordu.
+            # Bir soruda İKİ şık birden kırpıksa (Çevre Kanunu m.28, CMK m.2) sayı düşüyor ve
+            # kusur görünmez oluyordu. Artık kardeşlerden en az 2'si noktayla bitiyorsa yeter.
+            if not (noktali >= 2 and not x.endswith(('.', '?', '!'))):
                 continue
             neden.append('kardesler nokta ile bitiyor, bu bitmiyor')
             for k, y in enumerate(siklar):
