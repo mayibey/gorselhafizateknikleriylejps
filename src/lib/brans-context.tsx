@@ -13,6 +13,7 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from '
 import { gorevGetir, gorevKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { bransTemizle, getBrans, setBrans as bransKaydet } from '@/lib/brans-store';
+import { gorevSahibiOku, gorevSahibiYaz } from '@/lib/gorev-sahip';
 
 type BransContextDeger = {
   brans: string | null;
@@ -39,15 +40,25 @@ export function BransProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!uid) return;
     let iptal = false;
-    void gorevGetir().then((g) => {
+    void gorevGetir().then(async (g) => {
       if (iptal || g === null) return; // ağ hatası → cihazdaki korunur
       if (g.brans) {
         void bransKaydet(g.brans);
         setBransState(g.brans);
-      } else {
-        void bransTemizle();
-        setBransState(null); // gate GorevAdim'a yollar → seçim sunucuya yazılır
+        void gorevSahibiYaz(uid);
+        return;
       }
+      // Sunucu boş. Cihazdaki seçim BU hesaba aitse silme — sunucuya geri yaz (kendini onarır).
+      // Aksi halde eski davranış: temizle (hesap değişimi; önceki kullanıcının branşı görünmesin).
+      const [sahip, cihazdaki] = await Promise.all([gorevSahibiOku(), getBrans()]);
+      if (iptal) return;
+      if (sahip === uid && cihazdaki) {
+        setBransState(cihazdaki);
+        void gorevKaydet({ brans: cihazdaki }, uid);
+        return;
+      }
+      void bransTemizle();
+      setBransState(null); // gate GorevAdim'a yollar → seçim sunucuya yazılır
     });
     return () => {
       iptal = true;
@@ -60,7 +71,10 @@ export function BransProvider({ children }: { children: ReactNode }) {
     // Sunucuya da — seçim ANINDAKİ hesapla (yazma sırasında hesap değişirse iptal).
     // AWAIT ŞART: yazma bitmeden onboarding profilYenile→gorevGetir çalışırsa sunucu branşı
     // hâlâ boş görünüp cihazdakini SİLER → gate branşı 2. kez sorar (ilk-kayıt bug'ı). Bekle.
-    if (uid) await gorevKaydet({ brans: slug }, uid);
+    if (uid) {
+      await gorevSahibiYaz(uid);
+      await gorevKaydet({ brans: slug }, uid);
+    }
   }
 
   return (

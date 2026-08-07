@@ -461,7 +461,15 @@ export async function gorevKaydet(g: Partial<Gorev>, beklenenUid: string): Promi
     const { data: u } = await supabase.auth.getUser();
     const id = u.user?.id;
     if (!id || id !== beklenenUid) return;
-    await supabase.from('profiles').update(g).eq('id', id);
+    // ⚠️ `update` var olmayan satırda HATA VERMEZ, sessizce 0 satır günceller. Yeni kayıtta
+    // profiles satırını tetikleyici oluşturuyor; seçim o tetikleyiciden önce yazılırsa görev
+    // sunucuya HİÇ işlenmiyordu. Cihazda değer vardı ama sunucu boştu → uygulama bir sonraki
+    // açılışta sunucuyu esas alıp cihazdakini siliyor ve branş/rütbeyi 2. KEZ soruyordu.
+    // Çözüm: yazılan satırı geri iste; 0 satır döndüyse satırı upsert ile oluştur.
+    const { data, error } = await supabase.from('profiles').update(g).eq('id', id).select('id');
+    if (!error && (!data || data.length === 0)) {
+      await supabase.from('profiles').upsert({ id, ...g });
+    }
   } catch {
     // sessiz geç — offline'da cihazdaki değer geçerli kalır, sonraki seçimde yazılır
   }

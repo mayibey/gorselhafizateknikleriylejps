@@ -155,6 +155,7 @@ export default function KarargahScreen() {
   const router = useRouter();
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
+  const [hicCalisilan, setHicCalisilan] = useState(false); // hiç kart çalışmamış (yeni üye)
   const [streak, setStreak] = useState<number | null>(null);
   const [gunMadde, setGunMadde] = useState<CardWithLaw | null>(null);
   const [tumKartlar, setTumKartlar] = useState<CardWithLaw[]>([]); // madde→kart eşleşmesi (Güç Kazandırma)
@@ -307,6 +308,10 @@ export default function KarargahScreen() {
         const calisildiYuzde =
           ist.toplamKart > 0 ? Math.round((ist.calisilanKart / ist.toplamKart) * 100) : 0;
         setHazirlik(calisildiYuzde);
+        // HİÇ başlamamış kullanıcı: zayıf havuz da boş olur ve ekran "Tüm görevleri yaptın"
+        // diyordu — henüz tek kart bile çalışmamışken. Yüzdeye bakmak yetmez (1511 kartta
+        // 7 kart = %0'a yuvarlanıyor); ham sayıya bakılıyor.
+        setHicCalisilan(ist.calisilanKart === 0);
       })
       .catch(() => setHazirlik(null));
     void getStudyDays()
@@ -543,14 +548,19 @@ export default function KarargahScreen() {
           accessibilityRole="button"
           accessibilityLabel="Mevzuat'tan konu çalış">
           <View style={styles.heroMetin}>
+            {/* YENİ ÜYE ile GÜNÜ BİTİREN aynı değil: ikisinde de zayıf havuz boş, ama hiç kart
+                çalışmamış birine "Tüm görevleri yaptın" demek yanlış — nereden başlayacağını
+                söylemek gerekiyor. (Başkan tespiti, 7 Ağu 2026.) */}
             <AppText variant="etiket" color="altin" bold>
-              GÜNÜ TAMAMLADIN 🎖️
+              {hicCalisilan ? 'BURADAN BAŞLA 🎖️' : 'GÜNÜ TAMAMLADIN 🎖️'}
             </AppText>
             <AppText variant="baslik" color="beyaz" bold>
-              Tüm görevleri yaptın
+              {hicCalisilan ? 'İlk mevzini seç' : 'Tüm görevleri yaptın'}
             </AppText>
             <AppText variant="kucuk" color="kenarlik">
-              Tekrar edilecek mevzi kalmadı — Mevzuat'tan yeni konu çalış ›
+              {hicCalisilan
+                ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla ›"
+                : "Tekrar edilecek mevzi kalmadı — Mevzuat'tan yeni konu çalış ›"}
             </AppText>
           </View>
           <MaterialCommunityIcons name="book-open-variant" size={52} color={Palette.altin} />
