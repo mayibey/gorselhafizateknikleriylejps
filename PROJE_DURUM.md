@@ -1049,3 +1049,10 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - 🔴 **KUSUR — KELİME İÇİNDEN KESME.** İlk turda cevap kelimenin içinde aranıyordu: "valilerce" içindeki "vali" çıkarılınca ekranda **"…………lerce verilir"** kalıyordu. `kelime_yeri()` eklendi — cevabın önü ve sonu harf olmamalı. Kusurlu kayıtlar elendi.
 - Doğrulama: ilk 5 bölüm → Hangi Kanun 6/6, TCK mı CMK mı 6/6, Yalancı Madde 5/5, Boşluk Doldurma 6/6·6/6·6/6·2/6. Son bölümler 0 (mevcut havuz). tsc 0 hata, JS hatası 0.
 - **KALAN:** Ceza Terazisi (ceza aralığı ayrıştırması gerekiyor, 23 aday) · Adam Asmaca (çengelle aynı 9 hane kısıtı) · Sıraya Diz (işlem sırası — tek sorudan türetilemiyor) · Günün Maddesi (harf oyunu).
+
+## 7 Ağu 2026 — Adam Asmaca'ya sınav kelimeleri (ve benim yanlış kısıtım)
+- 🔴 **HATAM:** Asmaca'ya çengelin **9 hane kısıtını yanlışlıkla taşımıştım** ve "kalan kelime az" diye rapor etmiştim. Asmacada ızgara YOK — `.asKelime` `flex-wrap` ile alt satıra sarıyor, havuzda zaten 11 harfli kelimeler vardı. Başkan fark etti. Sınır 16 haneye çıkarıldı: aday 43 → 90.
+- **EKLENEN:** 14 kelime (201 → 215), en uzunu 14 harf. İlk 3 bölüm 5/5 · 5/5 · 4/5 sınav kelimesi.
+- **İPUÇLARI MEKANİK:** cevabın geçtiği RESMÎ madde cümlesi bulunup cevap "……" ile boşaltılıyor — API yok, uydurma yok.
+- **DÖRT SÜZGEÇ (her biri gerçek kusurdan sonra eklendi):** (1) "..." içeren alıntı — süzgeç yalnız madde-metni yolundaydı, dayanak yolunda yoktu, kırık ipuçları geçmişti; (2) başlık/dipnot satırı ("İKİNCİ KISIM …", "703 sayılı KHK'nin 138 inci maddesiyle…"); (3) cevabı sızdıran ipucu (başlık satırında cevap ikinci kez geçiyordu); (4) cümle ortasından başlayan ipucu. 33 → 14'e indi, kalanlar temiz.
+- Dipnot işaretleri (`[11]`) ipuçlarından temizlendi.
