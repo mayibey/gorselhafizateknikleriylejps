@@ -1070,9 +1070,11 @@ function menu(){
   // ÇIKMIŞ SINAV ROZETİ (başkan isteği, 7 Ağu 2026): oyunların asıl değeri, sorularının GERÇEK
   // sınavdan gelmesi. Bunu en üstte ve belirgin söylüyoruz. Eski "🚧 Geliştirme sürüyor" notu
   // kaldırıldı — oyunları duyuruyoruz, içeri giren ilk olarak "yarım" mesajı görmesin.
+  // ⚠️ "İLK BÖLÜMLER çıkmış sorulardan oluşur" DEME (başkan uyardı): oyuncu bunu "demek ileriki
+  // bölümlerde çıkmış soru YOK" diye okuyor — övgü sanılan cümle eksiklik ilan ediyor.
   let h='<div class="sinavRozet"><span class="sinavRozetIk">🎖️</span>'
     +'<span><b>Çıkmış sınav sorularından üretilmiştir</b><br>'
-    +'Oyunların ilk bölümleri gerçek JSPS sorularından oluşur.</span></div>'
+    +'Gerçek JSPS sorularıyla çalış — her sorunun kaynağı sonunda görünür.</span></div>'
     +'<div class="aciklamaS">Her oyunun sonunda dayandığı <b>madde metni</b> çıkar. Bilmiş ya da bilmemiş fark etmez — kaynağı görür.</div>';
   let son='';
   for(const o of OYUNLAR){
