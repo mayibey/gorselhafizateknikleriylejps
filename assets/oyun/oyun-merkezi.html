@@ -1695,6 +1695,7 @@ function bSec(v){
     ${s.civile?`<div class="civ"><div class="e">🔨 AKLINA ÇİVİLE</div><div class="c">${s.civile}</div></div>`:''}
     <button class="btn ana" id="bI" style="margin-top:12px">${bi+1<bL.length?'SONRAKİ ▸':'BİTİR'}</button>`;
   $('#bI').onclick=()=>{bi++;bCiz();};
+  otoGec('bI', ok);
 }
 function bSon(){ bolumBitti(bD, bL.length); }
 
@@ -1788,6 +1789,7 @@ function tOranSec(v){
       <div class="mt">${ok?'Doğru.':'Yeşil olan doğru.'} Bu koşulda ceza <b>${s.c.toLowerCase()}</b>.</div></div>
     <button class="btn ana" id="tI" style="margin-top:10px">${ti+1<tL.length?'SONRAKİ ▸':'BİTİR'}</button>`;
   $('#tI').onclick=()=>{ti++;tCiz();};
+  otoGec('tI', p>=90);
 }
 function tOnay(a,u){
   const s=tL[ti],sap=Math.abs(a-s.alt)+Math.abs(u-s.ust);
@@ -1804,6 +1806,7 @@ function tOnay(a,u){
     <div class="kaynak"><div class="rf">${s.ref}</div><div class="mt">${s.mt}</div></div>
     <button class="btn ana" id="tI" style="margin-top:10px">${ti+1<tL.length?'SONRAKİ SUÇ ▸':'BİTİR'}</button>`;
   $('#tI').onclick=()=>{ti++;tCiz();};
+  otoGec('tI', ok);
 }
 function tSon(){
   bolumBitti(tDog, tL.length, `Terazi puanın <b style="color:var(--ac)">${tP}</b> / ${tL.length*100}`);
@@ -1934,6 +1937,7 @@ function hSec(v){
       <div class="mt">${ok?'Doğru kanunu buldun.':'Yeşil olan doğru kanun.'}</div></div>`:'')
     +`<button class="btn ana" id="hI" style="margin-top:12px">${hi+1<hL.length?'SONRAKİ ▸':'BİTİR'}</button>`;
   $('#hI').onclick=()=>{hi++;hCiz();};
+  otoGec('hI', ok);
 }
 
 /* ============ 7b) TCK mı CMK mı? (CEZA AYRIMI) ============
@@ -1958,6 +1962,7 @@ function aySec(v){
       <div class="mt">${ok?'Doğru kanunu buldun.':'Yeşil olan doğru kanun.'}</div></div>
     <button class="btn ana" id="ayI" style="margin-top:10px">${ayi+1<ayL.length?'SONRAKİ ▸':'BİTİR'}</button>`;
   $('#ayI').onclick=()=>{ayi++;ayCiz();};
+  otoGec('ayI', ok);
 }
 
 /* ============ 8) DOĞRU MU YANLIŞ MI ============
@@ -2140,6 +2145,7 @@ function mSec(j){
     <div class="mt">${ok?'Doğru.':'Yanlış.'} Doğru cevap: ${'ABCDE'[s.d]}) ${s.sik[s.d]}</div></div>
     <button class="btn ${ok?'ana':'hafif'}" id="mI" style="margin-top:10px">${ok?(mi+1<MILYONER.length?'SONRAKİ RÜTBE ▸':'BİTİR'):'ELENDİN — SONUÇ'}</button>`;
   $('#mI').onclick=()=>{if(ok){mi++;mSil=[];mCiz();}else mSon(false);};
+  otoGec('mI', ok);
 }
 function mSon(kazandi){
   const yeniRek=rekorYaz('milyoner',mi,RUTBE.length,true);
@@ -2177,6 +2183,7 @@ function ySec(b){
     <div class="mt">${ok?'Gerçeği buldun.':'Sahtesine kandın.'} Yeşil olan resmî metindir.</div></div>
     <button class="btn ana" id="yI" style="margin-top:10px">${yi+1<yL.length?'SONRAKİ ▸':'BİTİR'}</button>`;
   $('#yI').onclick=()=>{yi++;yCiz();};
+  otoGec('yI', ok);
 }
 
 /* ============ 10b) ADAM ASMACA ============
@@ -2255,6 +2262,7 @@ function asBitir(kazandi){
       <div class="al">Cevap: <b style="color:var(--ac);letter-spacing:.12em">${asKelime.k}</b></div></div>
     <button class="btn ana" id="asI" style="margin-top:8px">${asi+1<asL.length?'SONRAKİ KELİME ▸':'BİTİR'}</button>`;
   $('#asI').onclick=()=>{asi++;asKur();};
+  otoGec('asI', kazandi);
 }
 
 /* ============ 11) ÇENGEL ============ */
@@ -2776,6 +2784,23 @@ function kSon(){
   if($('#a0'))$('#a0').onclick=()=>meydanOkuEkrani('kusatma',0,skor,toplam,kKonular.join('~')+'!'+kTohum);
   $('#a1').onclick=acKusatma;$('#a2').onclick=menu;
   if($('#kSira'))$('#kSira').onclick=()=>rekorTablo('kusatma','Kuşatma','kalan cana',kSon);
+}
+
+/* DOĞRU CEVAPTA OTOMATİK GEÇİŞ (başkan isteği, 8 Ağu 2026: "doğru cevaplayınca otomatik
+   diğer soruya geçmiyor"). Doğru bilen oyuncu ayrıca "SONRAKİ" düğmesine basmak zorunda
+   kalmasın — akış bozuluyordu.
+   ⚠️ YANLIŞTA ÇALIŞMAZ: orada doğru cevabı ve dayandığı maddeyi okuması gerekiyor; ekranı
+   elinden almak öğrenmenin ta kendisini bozar. Bekleme süresi, yeşil işareti ve kaynak
+   satırını görmeye yetecek kadar (1,2 sn).
+   `tur` koruması: oyundan çıkılırsa bekleyen geçiş çalışmaz (yeniTur sayacı). */
+function otoGec(dugmeId, dogruMu, ms){
+  if(!dogruMu) return;
+  const t=tur;
+  setTimeout(()=>{
+    if(t!==tur) return;
+    const b=document.getElementById(dugmeId);
+    if(b && !b.disabled) b.click();
+  }, ms||1200);
 }
 
 /* ---------- KİŞİSEL REKOR TABLOSU (bölüm haritası olmayan oyunlar) ----------
