@@ -1074,3 +1074,12 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 
 ## 7 Ağu 2026 — Ekran görüntüsü açıldı
 - `uygulama_ayar.ekran_koruma` **1 → 0** (başkan istedi). Anon anahtarla teyit edildi. Build gerekmez, uygulamayı kapatıp açmak yeterli.
+
+## 7 Ağu 2026 — iOS push bildiriminin KÖK SEBEBİ bulundu (aylardır sessiz hata)
+- **BELİRTİ:** iPhone'lardan hiç push kaydı gelmiyordu. Ölçüm: 169 kayıtlı cihazın 140'ı Android, 29'u eski kayıt, **iOS 0**. Başkanın kendi hesabında da yoktu (izinleri açık olmasına rağmen).
+- **İLK YANLIŞ TEŞHİSİM:** "izin verilmemiş" dedim — başkan düzeltti. Sonra ölçtüm.
+- **TANI GÖSTERGESİ EKLENDİ:** `bildirim.ts uzakPushTokenAl()` catch bloğu hatayı **sessizce yutuyordu**, sebep hiçbir yerde görünmüyordu (aylarca teşhis edilememesinin sebebi bu). Artık hangi aşamada takıldığı kaydediliyor ve **Eğitim Planı ekranında sadece sorun varsa** gösteriliyor. Uygulamanın verdiği gerçek hata: *"no valid aps-environment entitlement string found for application"*.
+- **ZİNCİR (sondan başa):** (1) Canlı iOS build'inin (1.0.43 / build 67) IPA'sı indirildi → `embedded.mobileprovision`'da `aps-environment` **VAR**; (2) ama ana binary'nin **imzalı yetki listesinde YOK** (yalnız application-identifier, applesignin, associated-domains, team-identifier). **Profilin izin vermesi ≠ yetkinin binary'de olması** — 20 Tem'deki doğrulama reçetesi yalnız profile baktığı için bu kaçmış; (3) Sebep: `patches/expo-notifications+0.32.17.patch` — expo-notifications'ın `aps-environment` ekleyen kodunu **silen elle yama**, `postinstall: patch-package` ile her kurulumda (EAS Build dahil) uygulanıyordu → her iOS build'i push'suz çıkıyordu.
+- **YAMANIN KENDİ NOTU:** *"Uzak push ileride: bu yama kaldırılır + APNs kurulur."* APNs anahtarı 20 Tem'de kuruldu, **yama kaldırılmayı unutuldu.**
+- **DÜZELTME:** yama silindi + `app.json ios.entitlements = {"aps-environment": "production"}` açıkça yazıldı (kütüphanenin varsayılan modu `development`, App Store binary'sinde production olmalı). Doğrulama: `npx expo config --type introspect` → eklentiler çalıştıktan sonra yetki görünüyor.
+- ⚠️ **OTA İLE GİTMEZ — yeni iOS build + mağaza sürümü şart.** Android etkilenmedi (orada push zaten çalışıyor).
