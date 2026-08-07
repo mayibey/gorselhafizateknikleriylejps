@@ -203,7 +203,7 @@ function PaywallIcerik() {
 
   // Yıllık için indirimli teklif (durum + Play'de o offerId varsa). Yoksa undefined.
   function yillikIndirimliTeklif() {
-    if (!indirim) return undefined;
+    if (!indirimGecerli) return undefined;
     const s = subscriptions.find((x) => x.id === URUN_YILLIK);
     if (!s || s.platform !== 'android') return undefined;
     const hedef = indirim.yillik_offer;
@@ -212,19 +212,26 @@ function PaywallIcerik() {
   // Ömür boyu için indirimli TEKLİF: musterek_omurboyu ürününe eklenmiş tek-seferlik teklif (offerId
   // = indirim20/indirim30, yıllıkla AYNI). Ayrı ürün YOK; teklif token'ıyla base ürün indirimli alınır.
   function omurboyuIndirimliTeklif() {
-    if (!indirim) return undefined;
+    if (!indirimGecerli) return undefined;
     const p = products.find((x) => x.id === URUN_OMURBOYU);
     if (!p || p.platform !== 'android') return undefined;
     return p.oneTimePurchaseOfferDetailsAndroid?.find((o) => o.offerId === indirim.yillik_offer);
   }
   // İndirim GERÇEKTEN uygulanabilir mi (Play tarafı hazır)? Banner/etiket yalnız buna göre gösterilir
   // → "indirim vaat edip tam fiyat çekme" olmaz.
+  // ⏱️ SÜRE DOLDU MU — ekran AÇIKKEN de kontrol edilir. `indirim` ekran açılışında bir kez okunuyor;
+  // kullanıcı paywall'ı açık bırakıp 24 saati doldurursa indirimli SKU seçili kalır ve süresi geçmiş
+  // indirimden satın alırdı. `simdi` saniyede bir tiktiği için bu kontrol canlı çalışır.
+  const indirimSuresiGecti =
+    !!indirim?.bitis && new Date(indirim.bitis).getTime() <= simdi;
+  const indirimGecerli = !!indirim && !indirimSuresiGecti;
+
   const yillikInd = !!yillikIndirimliTeklif();
   // iOS: indirimli ÖMÜR BOYU ürünü App Store'dan gerçekten geldiyse indirim uygulanabilir.
   // (Ürün onaylanmadıysa StoreKit onu döndürmez → otomatik olarak temel fiyata düşeriz; yani
   //  "indirim vaat edip tam fiyat çekme" durumu oluşamaz. Bayrak koda gömülü DEĞİL, mağazadan gelir.)
   function iosIndirimliOmurUrun() {
-    if (Platform.OS !== 'ios' || !indirim?.omurboyu_urun) return undefined;
+    if (!indirimGecerli || Platform.OS !== 'ios' || !indirim?.omurboyu_urun) return undefined;
     if (!INDIRIMLI_OMURBOYU_URUNLERI.includes(indirim.omurboyu_urun)) return undefined;
     return products.find((x) => x.id === indirim.omurboyu_urun);
   }
