@@ -1056,3 +1056,21 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - **İPUÇLARI MEKANİK:** cevabın geçtiği RESMÎ madde cümlesi bulunup cevap "……" ile boşaltılıyor — API yok, uydurma yok.
 - **DÖRT SÜZGEÇ (her biri gerçek kusurdan sonra eklendi):** (1) "..." içeren alıntı — süzgeç yalnız madde-metni yolundaydı, dayanak yolunda yoktu, kırık ipuçları geçmişti; (2) başlık/dipnot satırı ("İKİNCİ KISIM …", "703 sayılı KHK'nin 138 inci maddesiyle…"); (3) cevabı sızdıran ipucu (başlık satırında cevap ikinci kez geçiyordu); (4) cümle ortasından başlayan ipucu. 33 → 14'e indi, kalanlar temiz.
 - Dipnot işaretleri (`[11]`) ipuçlarından temizlendi.
+
+## 7 Ağu 2026 — Ceza Terazisi'ne sınav içeriği (son eksik oyun) + Asmaca'da oynanamayan kelimeler
+- **CEZA TERAZİSİ tamamlandı** (105 → 117 kart): 10 alt-üst sınır + 2 oran kartı eklendi, havuzda zaten olup çıkmış soruyla eşleşen 6 kart `sv:1` işaretlendi → **ilk 3 bölüm tamamen çıkmış sınav içeriği**.
+- **ÇIKARIM RESMÎ METİNDEN:** fiil cümlesi ve ceza aralığı `maddeler.json`'dan cümle düzeyinde ayrıştırıldı, 16 adayın hepsi resmî metinle birebir doğrulandı. **Çapraz doğrulama:** havuzda zaten var olan 4 maddenin aralıkları (60-144, 24-60, 6-36, 12-36) benim çıkardığımla birebir tuttu → ayrıştırıcı doğru.
+- **BİLEREK ELENENLER:** (1) "üç yıla kadar hapis" gibi **alt sınırı yazmayan** maddeler — oyuncu yazmayan sınırı bilemez, havuzda da öyle kart yoktu (alt=1 benim uydurmam olurdu); (2) TCK 21 ve 38 — suç tanımı değil, ceza çevirme kuralı; (3) oran kartlarında "yarı oranında artırılır" cevaplı 3 aday — mevcut 12 kartın 7'si zaten o cevap, eklemek oyunu tahmin edilebilir yapardı (Milyoner'deki "hep A" hatasının aynısı).
+- 🔴 **ADAM ASMACA — İKİ KELİMELİ 9 CEVAP HİÇ BİTİRİLEMİYORDU.** `asBittiMi()` boşluk karakterini de "bulunması gereken harf" sayıyordu, klavyede boşluk tuşu yok → oyuncu bütün harfleri bilse bile hakları tükenip kaybediyordu. Başkan görüntü sorunu sanıp bildirdi, ölçünce oynanamazlık çıktı. Boşluk hariç tutuldu; 215 kelimenin tamamı oynanabilir doğrulandı.
+- Boşluk artık **çengeldeki gibi koyu blok** (`.asH.blok`) çiziliyor — oyuncu "koyu kutu = doldurulmaz" dilini çengelden zaten biliyor (başkanın önerisi).
+
+## 7 Ağu 2026 — OTA güncellemesi ilk açılışta uygulanıyor
+- **SORUN (başkan):** OTA yayınlayınca kullanıcı yeni içeriği ilk girişinde göremiyordu. Sebep: `expo-updates` varsayılanı güncellemeyi arka planda indirip **bir sonraki açılışta** uyguluyor. Projede expo-updates için hiç kod yazılmamıştı, tamamen varsayılan davranıştaydı.
+- **ÇÖZÜM:** `lib/ota.ts` — açılışta kontrol → varsa indir → `reloadAsync()`. İndirme boyunca `OtaYukleniyor` bekleme ekranı (en üst kapı, giriş/tur/veritabanından önce).
+- **KALKANLAR:** kontrol 6 sn / indirme 40 sn zaman aşımı (yavaş ağda açılış takılmaz) · aynı güncelleme kimliği için en fazla 2 yeniden başlatma denemesi (sonsuz döngüye karşı; vazgeçince eski davranışa döner, kilitlenmez) · `__DEV__`/`isEnabled=false` iken hiç çalışmaz.
+- ⚠️ **Kusur yakalandı yazarken:** ilk yazımda bekleme ekranı dönüş değerine bağlıydı — ama `reloadAsync()` başarılıysa fonksiyon HİÇ dönmüyor, ekran asla görünmezdi. Geri çağırıma çevrildi.
+- ⚠️ **Bu düzeltmenin kendisi de OTA ile gidiyor:** mevcut kullanıcılar onu bir kez ESKİ yolla (ikinci açılış) alacak; sonraki tüm OTA'lar ilk açılışta uygulanacak. Mağazadan yeni indirenler için **yeni build şart** (binary'de bu kod yok).
+- `updates.checkAutomatically` bilerek DEĞİŞTİRİLMEDİ: kendi kodumuz bir sebeple çalışmazsa expo'nun arka plan indirmesi emniyet ağı olarak kalsın.
+
+## 7 Ağu 2026 — Ekran görüntüsü açıldı
+- `uygulama_ayar.ekran_koruma` **1 → 0** (başkan istedi). Anon anahtarla teyit edildi. Build gerekmez, uygulamayı kapatıp açmak yeterli.
