@@ -25,6 +25,7 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   ABONELIK_URUNLERI,
   TEK_SEFERLIK_URUNLERI,
+  INDIRIMLI_OMURBOYU_URUNLERI,
   URUN_OMURBOYU,
   URUN_YILLIK,
   URUN_YUKSELTME,
@@ -149,10 +150,20 @@ function PaywallIcerik() {
     // Tek-seferlik ürünler. iOS'ta YALNIZ App Store'da var olan ürünü çek: URUN_YUKSELTME (fark
     // ürünü) sadece Google'da tanımlı → iOS'ta geçersiz SKU StoreKit fetch'ini bozup "ürünler
     // yüklenemedi" (Apple 2.1 ret) yapıyordu. Android'de tümü (ömür boyu + yükseltme).
-    const tekSeferlikSkus = Platform.OS === 'ios' ? [URUN_OMURBOYU] : TEK_SEFERLIK_URUNLERI;
+    // iOS'ta İNDİRİMLİ ÖMÜR BOYU ürünü de çekilir (musterek_omurboyu_i20). Apple tek seferlik
+    // üründe kişiye özel indirim desteklemiyor → indirim AYRI, ucuz ürünle uygulanıyor. Sunucu
+    // (indirim_durumu.omurboyu_urun) hangi SKU olduğunu söyler; App Store'da yoksa StoreKit onu
+    // yok sayar, fiyat/satın alma temel ürüne düşer (güvenli).
+    const iosIndirimliSku =
+      Platform.OS === 'ios' && indirim?.omurboyu_urun &&
+      INDIRIMLI_OMURBOYU_URUNLERI.includes(indirim.omurboyu_urun)
+        ? [indirim.omurboyu_urun]
+        : [];
+    const tekSeferlikSkus =
+      Platform.OS === 'ios' ? [URUN_OMURBOYU, ...iosIndirimliSku] : TEK_SEFERLIK_URUNLERI;
     void fetchProducts({ skus: tekSeferlikSkus, type: 'in-app' });
     void fetchProducts({ skus: ABONELIK_URUNLERI, type: 'subs' });
-  }, [connected]);
+  }, [connected, indirim?.omurboyu_urun]);
 
   // Satın alma başarılı → ÖNCE acknowledge (iade önle) → sunucuda doğrula → hakları yenile.
   async function tamamla(purchase: Purchase) {
@@ -209,8 +220,20 @@ function PaywallIcerik() {
   // İndirim GERÇEKTEN uygulanabilir mi (Play tarafı hazır)? Banner/etiket yalnız buna göre gösterilir
   // → "indirim vaat edip tam fiyat çekme" olmaz.
   const yillikInd = !!yillikIndirimliTeklif();
-  const omurInd = !!omurboyuIndirimliTeklif();
+  // iOS: indirimli ÖMÜR BOYU ürünü App Store'dan gerçekten geldiyse indirim uygulanabilir.
+  // (Ürün onaylanmadıysa StoreKit onu döndürmez → otomatik olarak temel fiyata düşeriz; yani
+  //  "indirim vaat edip tam fiyat çekme" durumu oluşamaz. Bayrak koda gömülü DEĞİL, mağazadan gelir.)
+  function iosIndirimliOmurUrun() {
+    if (Platform.OS !== 'ios' || !indirim?.omurboyu_urun) return undefined;
+    if (!INDIRIMLI_OMURBOYU_URUNLERI.includes(indirim.omurboyu_urun)) return undefined;
+    return products.find((x) => x.id === indirim.omurboyu_urun);
+  }
+  const omurInd = !!omurboyuIndirimliTeklif() || !!iosIndirimliOmurUrun();
   const indirimUygulanabilir = yillikInd || omurInd;
+  /** Ömür boyu satın almada KULLANILACAK SKU — iOS'ta indirim varsa ucuz ürün, yoksa temel. */
+  function omurboyuSku(): string {
+    return iosIndirimliOmurUrun()?.id ?? URUN_OMURBOYU;
+  }
   // Banner kapsamı GERÇEK duruma göre: yalnız Play'de hazır olan plan(lar) için "geçerli" de
   // → sadece biri hazırken "yıllık ve ömür boyunda geçerli" diye fazla vaat etme (denetim F4).
   const indirimKapsam =
@@ -225,7 +248,11 @@ function PaywallIcerik() {
   }
   // Ömür boyu gösterilecek fiyat: indirimli teklif varsa onun (indirimli) fiyatı, yoksa temel fiyat.
   function omurboyuGosterFiyat(): string {
-    return omurboyuIndirimliTeklif()?.formattedPrice ?? fiyat(URUN_OMURBOYU);
+    return (
+      omurboyuIndirimliTeklif()?.formattedPrice ??      // Android: temel ürüne eklenmiş indirim teklifi
+      iosIndirimliOmurUrun()?.displayPrice ??           // iOS: ayrı indirimli ürünün kendi fiyatı
+      fiyat(URUN_OMURBOYU)
+    );
   }
 
   // Android abonelik için offerToken (requestPurchase subs bunu ister).
@@ -493,9 +520,9 @@ function PaywallIcerik() {
                     : 'tek seferlik · hep senin'
                 }
                 vurgu
-                mesgul={islemUrun === URUN_OMURBOYU}
+                mesgul={islemUrun === omurboyuSku()}
                 pasif={!connected || (!!islemUrun && islemUrun !== URUN_OMURBOYU)}
-                onPress={() => void satinAl(URUN_OMURBOYU, false)}
+                onPress={() => void satinAl(omurboyuSku(), false)}
               />
             </View>
           </>

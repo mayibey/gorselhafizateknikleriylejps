@@ -9,6 +9,7 @@ import { kalanParcala } from '@/lib/geri-sayim';
 import { type IndirimDurumu, indirimDurumuOku } from '@/lib/indirim';
 import { hatirlatGosterildi, hatirlatUygunMu } from '@/lib/indirim-hatirlatma';
 import { useUyelik } from '@/lib/uyelik-context';
+import { ayarOku } from '@/lib/uzak-ayar';
 
 // Oturum bayrağı (modül-yerel): uygulama açık kaldığı sürece hatırlatma bir kez çıkar.
 // Uygulama tamamen kapanıp açılınca modül yeniden yüklenir → sıfırlanır (yeni oturum).
@@ -22,18 +23,22 @@ function ikiHane(n: number): string {
  * İlk gün indirimini hatırlatan modal. Karargah'a yerleşir; koşullar tutunca (çalışmaya girilmiş +
  * en fazla 3 kez + premium değil + ilk-giriş indirimi aktif) canlı geri sayımlı fırsat kartı gösterir.
  *
- * 🔴 iOS'TA GÖSTERİLMEZ (7 Ağu 2026, başkan bildirdi: "indirim paneline tıklayıp satın almaya
- * gidince indirim uygulanmıyor"). Sebep: indirim mekanizması Google Play'in TEKLİF (offer) sistemine
- * dayanıyor; App Store'da karşılığı yok — paywall/satinAl iOS'ta her zaman TEMEL ürünü tam fiyattan
- * alıyor. Paywall bunu zaten biliyor ve iOS'ta indirim iddiasında BULUNMUYOR (indirimUygulanabilir),
- * ama bu hatırlatma paneli platform ayrımı yapmadığı için indirim VAAT EDİP tam fiyata götürüyordu.
- * Uygulanamayan indirimi vaat etmek hem yanıltıcı hem App Store 3.1.1 riski → panel iOS'ta kapalı.
- * (Kalıcı çözüm: App Store'da ayrı indirimli ürün açmak — ASC'de ürün + inceleme gerektirir.)
+ * 🔴 iOS'TA SUNUCU ŞALTERİNE BAĞLI (7 Ağu 2026, başkan bildirdi: "indirim paneline tıklayıp satın
+ * almaya gidince indirim uygulanmıyor"). Sebep: Apple tek seferlik üründe kişiye özel indirim
+ * DESTEKLEMİYOR; indirim App Store'da ayrı ucuz ürünle (musterek_omurboyu_i20) uygulanıyor. O ürün
+ * Apple incelemesinden geçene kadar panel gösterilmemeli — yoksa indirim vaat edip tam fiyat
+ * alınır (yanıltıcı + App Store 3.1.1 riski).
+ * ŞALTER: uygulama_ayar.ios_indirim_aktif — Apple onaylayınca '1' yapılır, kod/build/OTA GEREKMEZ.
+ * Android'de şalter aranmaz (orada indirim Play teklifiyle zaten çalışıyor).
  */
 export function IndirimHatirlatma() {
   const router = useRouter();
   const { premium } = useUyelik();
-  const indirimDesteklenir = Platform.OS === 'android';
+  const [indirimDesteklenir, setDesteklenir] = useState(Platform.OS === 'android');
+  useEffect(() => {
+    if (Platform.OS !== 'ios') return;
+    void ayarOku('ios_indirim_aktif').then((v) => setDesteklenir(v === '1'));
+  }, []);
   const [durum, setDurum] = useState<IndirimDurumu | null>(null); // dolu ise modal açık
   const [simdi, setSimdi] = useState(() => Date.now());
 
