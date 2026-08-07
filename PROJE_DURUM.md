@@ -1083,3 +1083,27 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - **YAMANIN KENDİ NOTU:** *"Uzak push ileride: bu yama kaldırılır + APNs kurulur."* APNs anahtarı 20 Tem'de kuruldu, **yama kaldırılmayı unutuldu.**
 - **DÜZELTME:** yama silindi + `app.json ios.entitlements = {"aps-environment": "production"}` açıkça yazıldı (kütüphanenin varsayılan modu `development`, App Store binary'sinde production olmalı). Doğrulama: `npx expo config --type introspect` → eklentiler çalıştıktan sonra yetki görünüyor.
 - ⚠️ **OTA İLE GİTMEZ — yeni iOS build + mağaza sürümü şart.** Android etkilenmedi (orada push zaten çalışıyor).
+
+## 8 Ağu 2026 — Oyunlar SUNUCUYA taşındı (oyun değişikliği için OTA gerekmiyor)
+- **BAŞKAN SORDU:** "Bu oyunları sunucuya alsak, yaptığımız değişiklikler anında yayınlanmaz mı, OTA'ya ne gerek kalır?" **Cevap: mantıklı — ama OTA bitmez.** Sunucuya taşınan yalnız oyun sayfası; Mevzuat/Talim/paywall/Er Meydanı hepsi uygulamanın kendi kodu, onlar için OTA şart olmaya devam ediyor.
+- **KURULDU:** `lib/oyun-kaynak.ts` (sunucudan al → cihazda önbellekle → olmazsa gömülüye dön) + `scripts/oyun-sunucuya-yukle.mjs` (yükle · `--liste` · `--geri <damga>` · `--kapat`). İşaretçi `uygulama_ayar.oyun_surum`; dosya adı damgalı → ad değişince önbellek kendiliğinden ıskalıyor, eski dosyalar kovada duruyor (geri alma tek satır).
+- **ÜÇ KURAL:** (1) çevrimdışı bozulmasın — bir kez inip cihazda kalıyor; (2) her zaman bir şey olsun — sunucu/ağ/dosya bozuksa GÖMÜLÜ sürüme dönülüyor, kullanıcı asla boş ekran görmüyor (gömülü kopya bilerek duruyor); (3) bozuk dosya önbelleğe yazılmasın — uzunluk + imza kontrolü.
+- **KULLANICI BEKLEMİYOR:** indirme 5 sn ile yarıştırılıyor; yetişmezse gömülüyle anında açılıyor, indirme arka planda sürüp önbelleğe yazıyor → güncel sürüm en geç bir sonraki açılışta.
+- 🔴 **YAKALANAN ENGEL:** `imzali-url` Edge Function'ında premium kapısı var ve `oyun/` ücretsiz klasör listesinde DEĞİLDİ → ücretsiz kullanıcılar 402 alıp sunucudaki oyunları HİÇ alamaz, sessizce eski gömülü sürümde kalırdı. `'oyun'` listeye eklendi, fonksiyon dağıtıldı. Yeni sızıntı değil: gömülü sürüm zaten aynı içeriği her cihazda taşıyor.
+- **DOĞRULAMA:** yüklenen dosya geri indirildi (md5 birebir) · geçici ÜCRETSİZ hesapla uçtan uca (premium_mi=false → imzalı URL 200 → indi → yerelle aynı), hesap silindi · yeni sürüm yayınlandı, aynı test yeni damgayı gördü (OTA YOK) · `--geri` ile eski damgaya dönüldü, sonra ileri alındı.
+- **SIRADAKİ FIRSAT:** bundle'daki en büyük iki dosya oyunlar değil — düello soruları 5,6 MB + kart soruları 4,6 MB. Aynı yolla taşınırsa uygulama ciddi hafifler ve soru düzeltmesi de anında olur.
+
+## 8 Ağu 2026 — Oyunlarda gece yapılan düzeltmeler
+- **Prototip kalıntıları temizlendi** (üst şerit, sıralama notları, kilit ekranı). ⚠️ Kilit ekranındaki bedava-premium düğmesini önce "gelir sızıntısı" diye bildirdim — YANLIŞ ALARM: üretici o düğmeyi zaten siliyordu, kullanıcıya giden dosyada hiç olmadı. Kaynağa bakıp alarm vermişim; kaynak da temizlendi, üreticideki gereksiz 3 yama kaldırıldı.
+- **Kırpık şık kuralı genişletildi:** eski ölçüt yalnız TEK şık bozuksa yakalıyordu; Çevre m.28 ve CMK m.2'de İKİ şık birden kırpıktı (başkan Bayrak Yarışı'nda gördü). Rütbe Merdiveni 485 → 484. Bayrak/Kuşatma havuzu ilk kez denetlendi (daha önce betiğe boş liste geçiyordum): 0 kırpık.
+- **Hangi Kanun'da kanun adları** uygulamanın kendi adlarıyla eşitlendi ("7068 Kanun" gibi adsızlar dahil). ⚠️ İlk denemede yönetmeliği kanun adıyla değiştirmiştim (6284 Uyg. Yön. → Kanun) — AYRI BELGE, cevabı yanlış yapardı; süzgeç eklendi.
+- **Sağa kaydırınca geri** eklendi (dikey/kısa/sola tetiklemiyor, yatay kaydırılan kutulardan başlamıyor).
+- **Kuşatma kale seçimi** 51 düğmelik listeden 3 açılır listeye çevrildi; onay düğmesi hep görünür; kanun adları tam.
+- **Liderlik tablosu** Rütbe Merdiveni · Kuşatma · Bayrak Yarışı'na eklendi (Günün Maddesi'ne eklenmedi: tek soruluk günlük oyun, rekor kavramı yok).
+- **Doğru cevapta otomatik geçiş** 7 oyuna eklendi (yalnız DOĞRU cevapta; yanlışta kaynağı okuması için düğme kalıyor).
+- **Talim'de TCK'ya ÜCRETSİZ rozeti** (Mevzuat'takiyle aynı; ücretsiz liste tek yerden geliyor).
+
+## 8 Ağu 2026 — Er Meydanı "geçersiz ayar" (sunucu düzeltmesi, kod yok)
+- Uygulamada süre seçenekleri 20/30/45/60, sunucu yalnız 10/15/20/30 kabul ediyordu → 45/60 seçen oda kuramıyordu. Bir ara "lig maçlarında 45 sn" değişikliği yapılmış, sunucu tarafı güncellenmemiş.
+- **İKİ KATMAN vardı:** `er_meydani_oda_kur` fonksiyonundaki kontrol + `er_meydani_oda` tablosundaki CHECK kısıtı. İlk turda yalnız fonksiyonu düzelttim, tablo kısıtı kalınca "new row for relation … violates check constraint" çıktı. İkisi de 10/15/20/30/45/60 oldu.
+- Doğrulama: 45 ve 60 sn'lik gerçek oda kaydı oluşturulup silindi. Bütün veritabanı tarandı, başka tabloda süre/soru kısıtı yok.
