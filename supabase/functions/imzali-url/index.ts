@@ -29,7 +29,11 @@ const MAX_YOL = 400; // tek istekte üst sınır (büyük kanun bir çağrıda)
 // (kapalı test icin bilerek). Eskiden `=== '1'` idi → secret unutulursa TÜM premium içerik açığa çıkıyordu
 // (denetim EK-A). İstemci KILIT_AKTIF=true ile hizalı. Kapatmak için: supabase secrets set KILIT_AKTIF=0
 const KILIT = Deno.env.get('KILIT_AKTIF') !== '0';
-const UCRETSIZ_KLASOR = ['tck', 'brtck']; // her zaman serbest kanun klasörleri (istemci UCRETSIZ ile hizalı)
+// 'oyun': oyun merkezi sayfası — premium DEĞİL. Kilit sayfanın İÇİNDE (ilk 2 bölüm/günde 2 tur);
+// sayfanın kendisi herkese açılmalı, yoksa ücretsiz kullanıcı sunucudaki güncel oyunları hiç
+// alamaz, sessizce uygulamaya gömülü eski sürümde kalırdı. Yeni bir sızıntı da değil: gömülü
+// sürüm zaten aynı içeriği her kullanıcının cihazında taşıyor. (8 Ağu 2026)
+const UCRETSIZ_KLASOR = ['tck', 'brtck', 'oyun']; // her zaman serbest klasörler (istemci UCRETSIZ ile hizalı)
 const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 
 Deno.serve(async (req) => {

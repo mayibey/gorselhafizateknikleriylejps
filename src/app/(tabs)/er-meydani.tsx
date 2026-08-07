@@ -4,7 +4,7 @@ import { ActivityIndicator, AppState, BackHandler, StyleSheet, View } from 'reac
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
-import { OYUN_MERKEZI_HTML } from '../../assets/oyun-merkezi-html';
+import { type OyunHtml, oyunHtmlGetir } from '@/lib/oyun-kaynak';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Spacing } from '@/constants/theme';
 import { type OyunKayit, oyunKaydiGonder, oyunKaydiYaz, oyunKaydiYukle } from '@/lib/oyun-kayit';
@@ -27,6 +27,9 @@ export default function OyunMerkeziScreen() {
   const params = useLocalSearchParams<{ katilKod?: string }>();
   const web = useRef<WebView>(null);
   const [kayit, setKayit] = useState<OyunKayit | null>(null);
+  // Oyun sayfası SUNUCUDAN gelir, cihazda önbelleklenir, olmazsa gömülüye döner (lib/oyun-kaynak).
+  // Böylece oyun düzeltmeleri için uygulama güncellemesi (OTA) gerekmiyor. null = henüz çözülmedi.
+  const [oyunHtml, setOyunHtml] = useState<OyunHtml | null>(null);
   const [hazir, setHazir] = useState(false);
   const menudeMi = useRef(true);
   // PREMIUM KAPISI: kilit kararını sayfa veriyor ama üyeliği BİLMİYOR — uygulamadan
@@ -35,6 +38,16 @@ export default function OyunMerkeziScreen() {
   const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
 
   // Derin bağlantı: /oda/KOD → burada karşılanır, oda koduyla LOBİYE aktarılır.
+  useEffect(() => {
+    let iptal = false;
+    void oyunHtmlGetir().then((r) => {
+      if (!iptal) setOyunHtml(r);
+    });
+    return () => {
+      iptal = true;
+    };
+  }, []);
+
   useEffect(() => {
     if (params.katilKod) {
       router.push({ pathname: '/er-meydani-lobi', params: { katilKod: params.katilKod } });
@@ -124,7 +137,7 @@ export default function OyunMerkeziScreen() {
   // düğmesi orada. Üstüne bir de uygulamanın başlığını koyunca "Oyun Merkezi" iki kez
   // yazıyordu. Ortak `Screen` sarmalayıcısı da kullanılmıyor: onun gövdesinde kenar boşluğu
   // ve genişlik sınırı var, oyun onların içinde panel gibi duruyordu (başkan gösterdi).
-  if (!kayit || uyelikYukleniyor) {
+  if (!kayit || !oyunHtml || uyelikYukleniyor) {
     return (
       <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
         <View style={styles.ortala}>
@@ -140,7 +153,7 @@ export default function OyunMerkeziScreen() {
         <WebView
           ref={web}
           originWhitelist={['*']}
-          source={{ html: OYUN_MERKEZI_HTML, baseUrl: 'https://mevzujsps.com/oyun' }}
+          source={{ html: oyunHtml.html, baseUrl: 'https://mevzujsps.com/oyun' }}
           // Kayıt, sayfanın kendi betiği çalışmadan ÖNCE yerine konur — oyun açılışta okuyor.
           injectedJavaScriptBeforeContentLoaded={`window.__MEVZU_KAYIT = ${JSON.stringify({
             ...kayit,
