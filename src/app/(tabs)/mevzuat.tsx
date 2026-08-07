@@ -15,7 +15,7 @@ import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
 import { ICERIK_TABANI } from '@/constants/config';
-import { KILIT_AKTIF } from '@/constants/urunler';
+import { KILIT_AKTIF, ucretsizKanun } from '@/constants/urunler';
 import { LAW_KLASOR } from '@/db/seed';
 import { useKanunIndirme } from '@/hooks/use-kanun-indirme';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
@@ -196,6 +196,14 @@ function MevzuatIcerik() {
     router.push({ pathname: '/patika', params: { lawId: String(law.id) } });
   }
 
+  // A2/A3 — HİÇ BAŞLAMAMIŞ KULLANICI. "Devam Et" kartı yalnız daha önce çalışılmış kanun varsa
+  // çıkıyor; yeni kullanıcıda hiç çalışma olmadığı için ekranın tepesi BOMBOŞ kalıyordu — yani
+  // yön gösteren tek unsur, tam da en çok yön gereken kişide görünmüyordu (başkan bildirdi).
+  const hicBaslamadi =
+    !!ilerleme && [...ilerleme.values()].every((v) => v === 0);
+  // Ücretsiz kanunu listeden bul (TCK). Kilit kapalıysa/bulunamazsa kart gösterilmez.
+  const ucretsizLaw = laws?.find((l) => ucretsizKanun(LAW_KLASOR[l.id]));
+
   const devamLaw =
     devam.tip === 'devam' || devam.tip === 'siradaki'
       ? laws?.find((l) => l.id === devam.lawId)
@@ -237,7 +245,9 @@ function MevzuatIcerik() {
       {/* Açıklama + Favorilerim filtresi (Screen header'da slot yok → kayan içerik) */}
       <View style={st.ustSatir}>
         <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
-          Kanunları çalış, hedeflerine daha hızlı ulaş.
+          {hicBaslamadi && ucretsizLaw
+            ? 'TCK tamamen ücretsiz — önce onunla başla.'
+            : 'Kanunları çalış, hedeflerine daha hızlı ulaş.'}
         </AppText>
         <Pressable
           onPress={() => setFavoriAcik((v) => !v)}
@@ -325,7 +335,13 @@ function MevzuatIcerik() {
         <>
           {/* Devam Et — YALNIZ "Tümü" görünümünde (filtre/favori seçiliyken gizli → hero
               filtreden bağımsız olduğu için "kanun her sekmede görünüyor" karışıklığı olmaz). */}
-          {aktifCip === 'tumu' && !favoriAcik ? (
+          {/* A2 — BURADAN BAŞLA: hiç çalışmamış kullanıcıya ücretsiz kanunu tek dokunuşla açan
+              kart. İlk kart çalışılınca kendiliğinden kaybolur, yerini "Devam Et" alır. */}
+          {aktifCip === 'tumu' && !favoriAcik && hicBaslamadi && ucretsizLaw ? (
+            <BuradanBaslaKart law={ucretsizLaw} onPress={() => kanunaGit(ucretsizLaw)} />
+          ) : null}
+
+          {aktifCip === 'tumu' && !favoriAcik && !hicBaslamadi ? (
             devamLaw ? (
             <DevamEtKart
               law={devamLaw}
@@ -507,6 +523,54 @@ function DevamEtKart({
   );
 }
 
+/**
+ * A2 — "BURADAN BAŞLA" kartı. Yalnız HİÇ çalışmamış kullanıcıya, yalnız "Tümü" görünümünde.
+ * Amaç: 66 satırlık listede (65'i kilitli) yeni kullanıcıya tek ve net bir giriş noktası vermek.
+ * İlk kartını çalışır çalışmaz kaybolur, yerini normal "Devam Et" kartı alır.
+ */
+function BuradanBaslaKart({ law, onPress }: { law: LawWithCount; onPress: () => void }) {
+  const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
+  return (
+    <Pressable
+      style={({ pressed }) => [st.devamKart, st.baslaKart, pressed && st.pressed]}
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`Buradan başla: ${law.ad} — ücretsiz`}>
+      <View style={st.devamBaslikSatir}>
+        <View style={st.devamBaslikSol}>
+          <MaterialCommunityIcons name="flag-checkered" size={16} color={Palette.yesil} />
+          <AppText variant="etiket" bold color="yesil" style={st.devamEtiket}>
+            BURADAN BAŞLA
+          </AppText>
+        </View>
+        <View style={st.ucretsizChip}>
+          <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
+          <AppText variant="etiket" bold color="beyaz">
+            ÜCRETSİZ
+          </AppText>
+        </View>
+      </View>
+      <View style={st.devamGovde}>
+        <Monogram no={no} boyut={72} variant="baslik" />
+        <View style={st.devamOrta}>
+          <AppText variant="govde" bold color="anaMetin">
+            {law.ad}
+          </AppText>
+          <AppText variant="kucuk" color="solukMetin">
+            Bu kanunun tamamı ücretsiz — kart kart çalış, ilerlemen kaydedilsin.
+          </AppText>
+        </View>
+      </View>
+      <View style={st.devamCta}>
+        <MaterialCommunityIcons name="play" size={18} color={Palette.lacivert} />
+        <AppText variant="kucuk" bold color="lacivert">
+          Çalışmaya başla
+        </AppText>
+      </View>
+    </Pressable>
+  );
+}
+
 function KanunSatir({
   law,
   calisilan,
@@ -534,6 +598,11 @@ function KanunSatir({
   const { kanunErisilebilir } = useUyelik();
   // Premium kilidi: erişim yoksa satır → paywall (indir/çalış yerine). Şalter kapalıysa hep açık.
   const kilitli = !kanunErisilebilir(klasorAdi, law.blok);
+  // A1 — ÜCRETSİZ ROZETİ: TCK bedava ama bunu hiçbir yer SÖYLEMİYORDU; ücretsizlik yalnızca
+  // "kilit rozeti yok" olmasından anlaşılıyordu. 66 satırın 65'i kilitli olduğu için yeni
+  // kullanıcı "her şey kilitli" sanıp çıkıyordu (başkan bildirdi, 7 Ağu 2026). Kilit varken
+  // rozet gösterilmez (kilitliyse zaten ücretsiz değildir).
+  const ucretsiz = !kilitli && ucretsizKanun(klasorAdi);
   // Uzak modda (içerik sunucuda): bir kanunu çalışmak için ÖNCE indirilmeli.
   const indirGerek =
     !!klasorAdi && indirmeDestekli && !!ICERIK_TABANI && indirme.durum !== 'indirildi';
@@ -545,6 +614,13 @@ function KanunSatir({
     }
     if (indirGerek) {
       if (indirme.durum === 'iniyor') return; // iniyorsa bekle
+      // A4 — ÜCRETSİZ kanunda SORMA, doğrudan indir. Yeni kullanıcı zaten "ne yapacağım"
+      // aşamasında; araya bir de "indirilsin mi?" kararı koymak ikinci engel oluyordu.
+      // (Ücretli kanunlarda soru KALIYOR — orada indirme bilinçli bir tercih.)
+      if (ucretsiz) {
+        void indirme.indir();
+        return;
+      }
       Alert.alert(
         'Önce indir',
         `"${law.ad}" çalışmak için önce indirilmeli. İndirildikten sonra internetsiz, anında çalışır. Şimdi indirilsin mi?`,
@@ -582,6 +658,15 @@ function KanunSatir({
           {law.ad}
         </AppText>
       </View>
+
+      {ucretsiz ? (
+        <View style={st.ucretsizChip}>
+          <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
+          <AppText variant="etiket" bold color="beyaz">
+            ÜCRETSİZ
+          </AppText>
+        </View>
+      ) : null}
 
       <AppText variant="kucuk" color="solukMetin">
         {calisilan} / {toplam} kart tamamlandı
@@ -1015,6 +1100,20 @@ const st = StyleSheet.create({
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.one,
+  },
+  baslaKart: {
+    borderColor: Palette.yesil,
+  },
+  ucretsizChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    alignSelf: 'flex-start',
+    backgroundColor: Palette.yesil,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 3,
+    marginBottom: 2,
   },
   kilitChip: {
     flexDirection: 'row',
