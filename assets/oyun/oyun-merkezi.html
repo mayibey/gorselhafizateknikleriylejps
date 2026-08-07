@@ -450,10 +450,12 @@ body.cakHata #tel{box-shadow:inset 0 0 0 4px var(--kirmizi)}
 .sayacBar i{display:block;height:100%;border-radius:4px;background:var(--altin);transition:width .95s linear}
 
 /* ---------- milyoner ---------- */
-/* Menüdeki geliştirme notu: dikkat çeksin ama oyunların önüne geçmesin. */
-.gelisNot{background:var(--altinSolukYuzey,#F3E7C1);border:1px solid var(--altin,#C9A227);
-  color:#8A5A12;font-size:12.5px;line-height:1.45;padding:8px 11px;border-radius:10px;margin-bottom:8px}
-.gelisNot b{color:#8A5A12}
+/* Menü üstü ÇIKMIŞ SINAV rozeti — oyunların en güçlü tarafı bu, en görünür yerde durur. */
+.sinavRozet{display:flex;gap:9px;align-items:flex-start;
+  background:var(--lacivert,#0B1F3A);border:1px solid var(--altin,#C9A227);
+  color:#FFFCF5;font-size:12.5px;line-height:1.45;padding:10px 12px;border-radius:12px;margin-bottom:9px}
+.sinavRozet b{color:var(--altin,#C9A227);font-size:13.5px}
+.sinavRozetIk{font-size:19px;line-height:1.1}
 /* KAYDIRMA İPUCU. Gerçek sınav soruları uzun: havuzun yarısında soru+şıklar tek ekrana
    sığmıyor ve son şık katlanmanın altında kalıyor. Telefonda kaydırma çubuğu görünmediği
    için kullanıcı orada bir şık daha olduğunu ANLAMIYOR — görmediği şıkkı da seçemez.
@@ -1065,7 +1067,12 @@ function menu(){
   bar('Oyun Merkezi', OYUNLAR.length+' oyun', false);   // elle yazınca bayatlıyordu
   // GELİŞTİRME NOTU (başkan isteği): oyunlar hâlâ elden geçiyor; kullanıcı eksik ya da
   // acemi bir şey görürse "uygulama böyle" sanmasın, yakında düzeleceğini bilsin.
-  let h='<div class="gelisNot">🚧 <b>Geliştirme sürüyor</b> — oyunlar her gün iyileşiyor, bitmesine çok az kaldı.</div>'
+  // ÇIKMIŞ SINAV ROZETİ (başkan isteği, 7 Ağu 2026): oyunların asıl değeri, sorularının GERÇEK
+  // sınavdan gelmesi. Bunu en üstte ve belirgin söylüyoruz. Eski "🚧 Geliştirme sürüyor" notu
+  // kaldırıldı — oyunları duyuruyoruz, içeri giren ilk olarak "yarım" mesajı görmesin.
+  let h='<div class="sinavRozet"><span class="sinavRozetIk">🎖️</span>'
+    +'<span><b>Çıkmış sınav sorularından üretilmiştir</b><br>'
+    +'Oyunların ilk bölümleri gerçek JSPS sorularından oluşur.</span></div>'
     +'<div class="aciklamaS">Her oyunun sonunda dayandığı <b>madde metni</b> çıkar. Bilmiş ya da bilmemiş fark etmez — kaynağı görür.</div>';
   let son='';
   for(const o of OYUNLAR){
