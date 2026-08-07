@@ -12,7 +12,7 @@ set -u
 cd "D:/GorselHafizaTeknikleriyleJSPS"
 
 MESAJ="${1:?kullanim: bash scripts/ota-yayinla.sh \"yayin mesaji\"}"
-SURUMLER="${SURUMLER:-1.0.43 1.0.42 1.0.41 1.0.40}"
+SURUMLER="${SURUMLER:-1.0.44 1.0.43 1.0.42 1.0.41 1.0.40}"
 
 export TMPDIR='D:\easbuild-tmp'
 export TEMP='D:\easbuild-tmp'
