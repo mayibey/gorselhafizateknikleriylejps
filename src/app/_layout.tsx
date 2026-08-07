@@ -23,6 +23,7 @@ import { oauthUrlIsle, tanitimSunucudanOku, tanitimSunucuyaYaz } from '@/lib/aut
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
 import { pushTokenGuncelle } from '@/lib/er-meydani';
+import { istemciSurumBildir } from '@/lib/istemci-surum';
 import { tanitimTamamla, tanitimTamamMi } from '@/lib/ipuclari';
 import { UygulamaTuru } from '@/components/tanitim/uygulama-turu';
 import { OtaYukleniyor } from '@/components/guncelleme/ota-yukleniyor';
@@ -91,6 +92,11 @@ export default function RootLayout() {
   // Açılışta uzak push token'ı kaydet (oda dolunca/katılınca bildirim için). Oturum yoksa no-op.
   useEffect(() => {
     void pushTokenGuncelle();
+  }, []);
+
+  // Açılışta "hangi sürüm / hangi güncelleme paketi" bildir → OTA'yı kaç kişinin aldığını sayabilelim.
+  useEffect(() => {
+    void istemciSurumBildir();
   }, []);
 
   // İndirilmiş kanun listesini belleğe al → görsel çözümleyici yerel dosyaları görsün.
