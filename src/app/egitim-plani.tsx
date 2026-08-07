@@ -7,7 +7,15 @@ import { AppText } from '@/components/ui/app-text';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
-import { type BildirimAyar, getAyar, planla, setAyar } from '@/lib/bildirim';
+import {
+  type BildirimAyar,
+  type PushTani,
+  getAyar,
+  planla,
+  pushTaniOku,
+  setAyar,
+  uzakPushTokenAl,
+} from '@/lib/bildirim';
 
 const pad = (n: number) => n.toString().padStart(2, '0');
 const ssMM = (saat: number, dakika: number) => `${pad(saat)}:${pad(dakika)}`;
@@ -19,8 +27,13 @@ export default function EgitimPlaniScreen() {
   const [izinYok, setIzinYok] = useState(false);
   const [kaydediyor, setKaydediyor] = useState(false);
 
+  // Uzak (push) bildirim tanısı — token alınabiliyor mu, alınamıyorsa nerede takılıyor.
+  // iPhone'larda push token hiç oluşmuyordu ve sebebi görünmüyordu; artık burada yazıyor.
+  const [tani, setTani] = useState<PushTani | null>(null);
+
   useEffect(() => {
     void getAyar().then(setAyarState);
+    void uzakPushTokenAl().then(() => setTani(pushTaniOku()));
   }, []);
 
   function guncelle(p: Partial<BildirimAyar>) {
@@ -142,6 +155,17 @@ export default function EgitimPlaniScreen() {
       {durum ? (
         <AppText variant="kucuk" color="lacivert" bold style={styles.durum}>
           {durum}
+        </AppText>
+      ) : null}
+
+      {/* Uzak bildirim tanısı — SADECE sorun varsa görünür. Sorun yoksa kullanıcıyı meşgul etmez. */}
+      {tani && tani.asama !== 'tamam' && tani.asama !== 'web' ? (
+        <AppText variant="etiket" color="solukMetin" style={styles.durum}>
+          {tani.asama === 'izin-verilmedi'
+            ? 'Uzak bildirimler kapalı: telefon ayarlarından bu uygulamaya bildirim izni ver.'
+            : tani.asama === 'gercek-cihaz-degil'
+              ? 'Uzak bildirimler yalnız gerçek telefonda çalışır.'
+              : `Uzak bildirimler bu cihazda kurulamadı (${tani.asama}${tani.hata ? ': ' + tani.hata : ''}).`}
         </AppText>
       ) : null}
 

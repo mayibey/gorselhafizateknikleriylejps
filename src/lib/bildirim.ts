@@ -213,15 +213,31 @@ export function bildirimTiklamaDinle(onTikla: () => void): () => void {
  * sunucudan gönderilir. Şimdilik yalnız token üretir; gönderim YOK. Gerçek cihaz + izin gerek.
  */
 export async function uzakPushTokenAl(): Promise<string | null> {
-  if (WEB || !Device.isDevice) return null;
+  if (WEB || !Device.isDevice) return (pushTani = { asama: WEB ? 'web' : 'gercek-cihaz-degil' }), null;
   try {
-    if (!(await izinIste())) return null;
+    if (!(await izinIste())) return (pushTani = { asama: 'izin-verilmedi' }), null;
     const projectId =
       Constants.expoConfig?.extra?.eas?.projectId ?? Constants.easConfig?.projectId;
-    if (!projectId) return null;
+    if (!projectId) return (pushTani = { asama: 'proje-kimligi-yok' }), null;
     const token = await Notifications.getExpoPushTokenAsync({ projectId });
+    pushTani = { asama: 'tamam', token: token.data };
     return token.data;
-  } catch {
+  } catch (e) {
+    pushTani = { asama: 'token-alinamadi', hata: e instanceof Error ? e.message : String(e) };
     return null;
   }
+}
+
+/**
+ * Push token alınırken NEREDE takıldığının kaydı.
+ *
+ * ⚠️ NEDEN VAR: yukarıdaki catch hatayı sessizce yutuyordu; iPhone'larda push token'ı hiç
+ * oluşmadığı halde (169 kayıtlı cihazın 140'ı Android, 29'u eski kayıt, iOS **0**) kimse
+ * sebebini göremiyordu — binary'de `aps-environment` izni VAR olduğu halde. Sessiz yutma
+ * yüzünden aylarca teşhis edilemedi. Artık sebep Eğitim Planı ekranında gösteriliyor.
+ */
+export type PushTani = { asama: string; token?: string; hata?: string };
+let pushTani: PushTani = { asama: 'henuz-denenmedi' };
+export function pushTaniOku(): PushTani {
+  return pushTani;
 }
