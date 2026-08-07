@@ -1035,3 +1035,9 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - **SAHTE ÜRETİMİ:** yalnız TAM KELİME sayı/süre ifadeleri değiştiriliyor ("iki hafta"→"üç hafta", "otuz gün"→"altmış gün"); kelimenin içi asla bozulmuyor (5 Ağu'daki "muayenesi→musaatenesi" dersi).
 - Tarayıcı doğrulaması: Doğru-Yanlış 409 ifade (265 doğru / 144 yanlış), Hangi Kanun 240, TCK mı CMK mı çalışıyor, JS hatası 0. tsc 0 hata.
 - **HÂLÂ SINAV İÇERİĞİ OLMAYANLAR:** Boşluk Doldurma · Yalancı Madde · Ceza Terazisi · Kim Yapar · Süre Şeridi · Adam Asmaca · Sıraya Diz · Günün Maddesi. Bunlar cevabın TÜRÜNE bağlı (süre 28, makam 83, ceza 23, kısa kelime 43 aday) — sıradaki tur.
+
+## 7 Ağu 2026 — Sınav soruları artık İLK BÖLÜMLERDE (başkan sorusu)
+- **SORUN:** havuza eklemek yetmiyormuş. `bolumler()` havuzu `tohumlu()` ile karıştırıp dilimliyor → sınav soruları bütün bölümlere RASTGELE serpiliyordu, oyuncu ilk bölümlerde onlara denk gelmiyordu. (Çengel'de tahtaları elle yerleştirdiğim için orada sorun yoktu.)
+- **ÇÖZÜM (genel):** sınav kaynaklı kayıtlar `sv:1` ile işaretlendi (318 kayıt: dy 139 · hangi 137 · ayrim 42). `bolumler()` karıştırmadan SONRA kararlı bir bölmeyle işaretlileri öne alıyor — kendi aralarındaki karışık sıra korunuyor, blok olarak başa geçiyorlar. `maddeYay()` (aynı bölümde aynı madde yasağı) sonradan çalıştığı için kalite kuralı bozulmuyor.
+- **ÖLÇÜM:** Hangi Kanun ilk 5 bölüm **6/6 sınav sorusu**, son 3 bölüm 0/6. TCK mı CMK mı aynı. Yani bedava/erken bölümler tamamen çıkmış sınav sorusu, gerisi mevcut havuzla devam ediyor.
+- Doğru-Yanlış'ta bölüm yok (60 sn'lik tur) — orada sınav ifadeleri havuzun %33'ü, tura karışık geliyor.
