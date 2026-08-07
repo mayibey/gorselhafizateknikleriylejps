@@ -25,8 +25,10 @@ import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
 import { pushTokenGuncelle } from '@/lib/er-meydani';
 import { tanitimTamamla, tanitimTamamMi } from '@/lib/ipuclari';
 import { UygulamaTuru } from '@/components/tanitim/uygulama-turu';
+import { OtaYukleniyor } from '@/components/guncelleme/ota-yukleniyor';
 import { ZorunluGuncelleme } from '@/components/guncelleme/zorunlu-guncelleme';
 import { zorunluGuncellemeGerekli } from '@/lib/guncelleme';
+import { otaGuncellemeUygula } from '@/lib/ota';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
 import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
@@ -53,6 +55,24 @@ export default function RootLayout() {
 
   useEffect(() => {
     void initDatabase();
+  }, []);
+
+  // OTA: güncelleme varsa AÇILIŞTA indirip uygulamayı yeniden başlat (bkz. lib/ota.ts).
+  // Olmazsa yeni içerik ancak İKİNCİ açılışta görünüyordu — yeni indiren kullanıcı oyunları
+  // ilk girişte göremiyordu. `otaCalisiyor` true iken bekleme ekranı gösterilir; yeniden
+  // başlatma tetiklenirse zaten bu ekran yaşamını orada bitirir.
+  const [otaCalisiyor, setOtaCalisiyor] = useState(false);
+  useEffect(() => {
+    let iptal = false;
+    void otaGuncellemeUygula(() => {
+      if (!iptal) setOtaCalisiyor(true);
+    }).then(() => {
+      // Buraya SADECE başarısızlıkta gelinir (başarıda uygulama yeniden başlar).
+      if (!iptal) setOtaCalisiyor(false);
+    });
+    return () => {
+      iptal = true;
+    };
   }, []);
 
   // ATT izni (iOS) + Meta SDK başlatma — izin popup'ı splash kapandıktan sonra görünsün
@@ -114,6 +134,19 @@ export default function RootLayout() {
 
   // Fontlar gelene kadar render etme (splash görünür kalır).
   if (!fontsLoaded && !fontError) return null;
+
+  // OTA indirilirken hiçbir şeye başlanmasın — indirme bitince uygulama zaten yeniden başlıyor.
+  // (Giriş/tur/veritabanı kapılarından ÖNCE; bu ekran en fazla ~40 sn yaşar, bkz. lib/ota.ts.)
+  if (otaCalisiyor) {
+    return (
+      <GestureHandlerRootView style={styles.kok}>
+        <SafeAreaProvider>
+          <StatusBar style="dark" />
+          <OtaYukleniyor />
+        </SafeAreaProvider>
+      </GestureHandlerRootView>
+    );
+  }
 
   return (
     // GestureHandlerRootView: gesture-handler jestleri (görsel zoom pinch/pan) için şart.
