@@ -12,6 +12,7 @@ import { genelDenemeErisilebilir } from '@/constants/urunler';
 import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
+import { ucretsizKanun } from '@/constants/urunler';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
@@ -324,6 +325,10 @@ function KanunSatir({
   const { kanunErisilebilir } = useUyelik();
   // Premium kilidi: erişim yoksa sınav yerine paywall. Şalter kapalıysa hep açık.
   const kilitli = !kanunErisilebilir(LAW_KLASOR[law.id], law.blok);
+  // ÜCRETSİZ ROZETİ — Mevzuat'takiyle AYNI. Başkan: "TCK ücretsiz diye Mevzuat'a yazdık,
+  // Talim'de denemelerin olduğu yere de yazalım." Kilitli satırda gösterilmez (kilitliyse
+  // zaten ücretsiz değildir); yani rozet ile kilit asla birlikte çıkmaz.
+  const ucretsiz = !kilitli && ucretsizKanun(LAW_KLASOR[law.id]);
 
   const testN = testSayisi(law.id);
   const toplamSoru = sinavSoruSayisi(law.id);
@@ -362,6 +367,15 @@ function KanunSatir({
             color={kilitli ? Palette.altinKoyu : Palette.lacivert}
           />
         </View>
+
+        {ucretsiz ? (
+          <View style={styles.ucretsizChip}>
+            <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
+            <AppText variant="etiket" bold color="beyaz">
+              ÜCRETSİZ
+            </AppText>
+          </View>
+        ) : null}
 
         <View style={styles.altSatir}>
           <MaterialCommunityIcons
@@ -546,6 +560,17 @@ const styles = StyleSheet.create({
   },
   kanunAd: {
     flex: 1,
+  },
+  ucretsizChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    alignSelf: 'flex-start',
+    backgroundColor: Palette.yesil,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 3,
+    marginTop: Spacing.half,
   },
   altSatir: {
     flexDirection: 'row',
