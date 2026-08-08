@@ -81,3 +81,27 @@ Karargâh (ana) · Mevzuat (kanun listesi) · Talim (deneme sınavları) · Oyun
 tuzaklar** yazılıdır (git'e girmez, yereldedir). Bir işe başlamadan önce `.agents/hafiza/MEMORY.md`
 dizinine bakıp ilgili notu oku — o notlar gerçek vakalardan çıkarılmış derslerdir ve aynı
 hatayı ikinci kez yapmayı önler.
+
+## Takıldığın yerde Claude'a sorabilirsin
+
+Bu makinede Claude Code kuruludur ve bu projeyi uzun süredir yürütmektedir; geçmiş kararların,
+patlamış tuzakların ve iş akışının hafızası ondadır. Emin olamadığın bir konuda **tahmin etme,
+ona sor**. Terminalden:
+
+```bash
+claude -p "SORUN BURAYA"
+```
+
+Cevabı yazdırıp çıkar (etkileşimli oturum açmaz), proje bağlamını kendisi okur. Örnekler:
+
+```bash
+claude -p "Bu ekrandaki kart listesi neden web'de bos geliyor, veri katmani nasil bolunmus?"
+claude -p "Bu degisiklik icin OTA mi build mi gerekir, sirasi nedir?"
+claude -p "Bu kanunun kartlari nerede tanimli, gorsel anahtari nasil uretiliyor?"
+```
+
+Ne zaman sor: (1) yayın/derleme/OTA süreçleri, (2) ödeme-üyelik-kilit mantığı, (3) "bu daha
+önce denenmiş miydi" soruları, (4) sunucu tarafı ayarlar, (5) bir kuralın NEDEN var olduğu.
+
+Uzun/riskli bir işe girişmeden önce planını ona doğrulatmak da serbesttir:
+`claude -p "Su plani yapacagim: ... Bu projede bir sakincasi var mi?"`
