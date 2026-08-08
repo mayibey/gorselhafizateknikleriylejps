@@ -105,3 +105,26 @@ Ne zaman sor: (1) yayın/derleme/OTA süreçleri, (2) ödeme-üyelik-kilit mant�
 
 Uzun/riskli bir işe girişmeden önce planını ona doğrulatmak da serbesttir:
 `claude -p "Su plani yapacagim: ... Bu projede bir sakincasi var mi?"`
+
+## Claude ile karşılıklı çalışma (posta kutusu)
+
+İki ajan da aynı klasörde çalışıyor; haberleşme **dosya üzerinden**, ek servis/anahtar yok.
+
+**Sen → Claude (anında):**
+```bash
+claude -p "SORUN"
+```
+
+**Claude → Sen (posta kutusu):** Claude sana soru bırakırsa `.agents/kopru/kutu/` klasöründe
+`<id>.soru.md` adlı bir dosya oluşur. **Uzun süren bir iş yaparken arada bu klasöre bak.**
+Soru dosyası varsa:
+
+1. Soruyu oku.
+2. Cevabını **aynı id ile** `.agents/kopru/kutu/<id>.cevap.md` dosyasına yaz.
+3. Soru dosyasını sil.
+
+Claude o dosyayı bekliyor olur; cevabı yazdığın anda devam eder. Bilmediğin bir şeyi
+**uydurma**, "bilmiyorum" yaz — yanlış cevap ikimizin de işini bozar.
+
+Konuşma geçmişi `.agents/kopru/konusma.md` dosyasında birikir; "az önce ne konuşmuştuk"
+oradan okunur.
