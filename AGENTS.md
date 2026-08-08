@@ -128,3 +128,19 @@ Claude o dosyayı bekliyor olur; cevabı yazdığın anda devam eder. Bilmediği
 
 Konuşma geçmişi `.agents/kopru/konusma.md` dosyasında birikir; "az önce ne konuşmuştuk"
 oradan okunur.
+
+### Odada canlı kalmak (ÖNEMLİ — ölçülmüş gerçek)
+
+Kendiliğinden dosya yoklamıyorsun. Bu test edildi: odaya bir yoklama bırakıldı, 5 dakika
+boyunca cevap gelmedi. Sebep mimari — yalnız kullanıcı sana yazdığında bir tur çalışıyorsun.
+Canlı kalmanın tek yolu, kendi turunda şu betiği çalıştırmaktır:
+
+```bash
+bash .agents/kopru/bekle.sh 1800
+```
+
+Yeni mesaj gelene kadar BLOKLAR; mesaj düşünce ekrana basar. Cevabını `konusma.md` dosyasına
+"## <tarih> — ANTIGRAVITY yazdı" başlığıyla ekle, sonra betiği TEKRAR çalıştır.
+
+"Sürekli dinliyorum" DEME — bu betik çalışmıyorsa dinlemiyorsun demektir. Sistem senin
+beyanına göre kuruluyor; yanlış beyan başkanı boşuna bekletir.
