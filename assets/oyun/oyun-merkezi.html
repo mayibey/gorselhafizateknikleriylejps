@@ -151,6 +151,18 @@ body{margin:0;min-height:100vh;background:#EDE7DA;color:var(--metin);
   background:var(--kart);border:1px solid var(--kenar);box-shadow:0 2px 8px var(--golge)}
 .baslikS{font-family:var(--serif);font-size:22px;color:var(--lacivert);margin:0}
 .aciklamaS{font-size:clamp(14px,4vw,15px);color:var(--soluk);line-height:1.6}
+
+/* İPUCU / SORU VURGUSU (başkan: "ipucu bölümünü renklendir, sorular dikkat çeksin").
+   Soru metni ekranın en önemli parçası ama soluk gri düz yazıydı — göz önce ızgaraya
+   kayıyordu. Artık altın çerçeveli, açık zeminli bir kart: hem uygulamada hem hikâye
+   ekran görüntülerinde ilk bakışta soru okunuyor. */
+.ipKart{background:linear-gradient(180deg,var(--altinSolukYuzey,#F3E7C1),#FFFCF5);
+  border:1.5px solid var(--altin,#C9A227);border-left-width:5px;
+  border-radius:14px;padding:11px 13px;margin-bottom:2px;
+  box-shadow:0 3px 10px -6px rgba(11,31,58,.35)}
+.ipBas{font-size:11.5px;font-weight:800;letter-spacing:1.2px;color:var(--altinKoyu,#B88917);
+  margin-bottom:5px}
+.ipGovde{font-size:clamp(15px,4.3vw,17px);line-height:1.5;color:var(--ana,#1B2A4A);font-weight:600}
 .aciklamaS b{color:var(--altinMetin)}
 .grupBas{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--soluk);
   font-weight:800;margin:8px 0 -4px;display:flex;align-items:center;gap:8px}
@@ -277,8 +289,15 @@ body{margin:0;min-height:100vh;background:#EDE7DA;color:var(--metin);
 .lig .sr .sk{font-variant-numeric:tabular-nums;color:var(--altinMetin);font-weight:800}
 
 /* ---------- boşluk doldurma ---------- */
+/* SORU KUTUSU — bütün oyunlarda soru metni burada durur (başkan: "soruyu renklendirecez,
+   sorular dikkat çeksin"). Önce düz kart zeminiydi, şıklarla aynı görünüyordu ve göz soruyu
+   atlayıp doğrudan şıklara kayıyordu. Artık altın sol şerit + açık altın zemin: ekranda ilk
+   okunan şey soru oluyor. İpucu kartıyla (.ipKart) aynı dil. */
 .cumle{border-radius:16px;padding:clamp(14px,4vw,18px);font-size:clamp(16px,4.7vw,18px);
-  line-height:1.65;color:var(--metin);font-style:normal}
+  line-height:1.65;color:var(--ana,#1B2A4A);font-style:normal;font-weight:600;
+  background:linear-gradient(180deg,var(--altinSolukYuzey,#F3E7C1),#FFFCF5)!important;
+  border:1.5px solid var(--altin,#C9A227)!important;border-left-width:5px!important;
+  box-shadow:0 3px 10px -6px rgba(11,31,58,.35)}
 .bosluk{display:inline-block;min-width:76px;text-align:center;font-weight:800;color:var(--altinMetin);
   padding:0 7px;border-bottom:3px solid var(--altin)}
 .bosluk.ok{color:var(--yesil);border-color:var(--yesil)}
@@ -1336,8 +1355,8 @@ function acKelime(){
   if(kayit){ wT=kayit.tahta.concat(wT.slice(kayit.satir)); wS=kayit.satir; wB=true; }
   const harf=KELIME.cevap.replace(/ /g,'').length;
   const kelimeSayisi=KELIME.cevap.trim().split(/\s+/).length;
-  G().innerHTML=`<div class="aciklamaS">🔑 <b>İpucu:</b> ${KELIME.ipucu} · ${harf} harf${
-      kelimeSayisi>1?' · '+kelimeSayisi+' kelime':''}</div>
+  G().innerHTML=`<div class="ipKart"><div class="ipBas">🔑 İPUCU</div><div class="ipGovde">${KELIME.ipucu} · ${harf} harf${
+      kelimeSayisi>1?' · '+kelimeSayisi+' kelime':''}</div></div>
     <div id="wHak" class="soruRef" style="align-self:center"></div>
     <div id="wGrid"></div><div id="wSon"></div><div id="klavye"></div>`;
   wCiz();wKlav();
