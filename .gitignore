@@ -58,3 +58,6 @@ google-services.json
 kayitli-uyeler.csv
 satin-alanlar.csv
 *.csv
+
+# Yapay zeka ajanlarinin yerel bilgi tabani — GIZLI, asla commitlenmez (bu depo PUBLIC)
+.agents/
