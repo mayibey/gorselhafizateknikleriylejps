@@ -27,14 +27,21 @@ export type OyunKaynak = 'gomulu' | 'onbellek' | 'uzak';
 export type OyunHtml = { html: string; kaynak: OyunKaynak; surum: string | null };
 
 const KLASOR = FileSystem.documentDirectory ? `${FileSystem.documentDirectory}jsps/oyun/` : null;
-/** Sayfanın gerçekten oyun sayfası olduğunu gösteren imza — hata sayfası/yarım indirme elenir. */
-const IMZA = 'OYUNLAR';
+/** ÜRETİLMİŞ oyun sayfasının imzaları. Yalnız "oyun sayfası mı" değil, "üreticiden geçmiş mi"
+ *  diye bakılır: kaynak html yanlışlıkla yayınlanırsa köprü (hazır mesajı/kayıt taşıma) ve
+ *  TEST_MODU=false olmaz → ekran "Oyunlar hazırlanıyor"da takılır ve kilitler devre dışı kalır.
+ *  8 Ağu 2026'da tam bu oldu; artık istemci de kabul etmiyor, gömülüye döner. */
+const IMZALAR = ['OYUNLAR', 'mevzuKopru', "tip:'hazir'", 'let TEST_MODU = false'];
 const ASGARI_HANE = 200_000;
 /** İlk indirme için beklenecek azami süre; aşılırsa gömülüyle açılır, indirme arka planda sürer. */
 const BEKLEME_MS = 5000;
 
 function saglamMi(metin: string): boolean {
-  return typeof metin === 'string' && metin.length >= ASGARI_HANE && metin.includes(IMZA);
+  return (
+    typeof metin === 'string' &&
+    metin.length >= ASGARI_HANE &&
+    IMZALAR.every((x) => metin.includes(x))
+  );
 }
 
 function yol(surum: string): string {

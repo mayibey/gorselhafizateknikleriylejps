@@ -18,10 +18,17 @@
 import fs from 'node:fs';
 
 const KOK = 'D:/GorselHafizaTeknikleriyleJSPS';
-const KAYNAK = `${KOK}/assets/oyun/oyun-merkezi.html`;
+// ⚠️ ÜRETİLMİŞ dosya yüklenir, kaynak html DEĞİL. 8 Ağu'da kaynağı yükledim ve oyunlar
+// "Oyunlar hazırlanıyor" yazısında sonsuza kadar takıldı: köprü kodunu (hazır mesajı, kayıt
+// taşıma) ve TEST_MODU=false ayarını ÜRETİCİ ekliyor; kaynak dosyada ikisi de yok. Üstelik
+// test modu açık kaldığı için premium kilitleri de devre dışı kalırdı.
+const URETILMIS = `${KOK}/src/assets/oyun-merkezi-html.ts`;
 const KOVA = 'icerik';
 const ASGARI_HANE = 200_000;
-const IMZA = 'OYUNLAR';
+// Yalnız "oyun sayfası mı" değil, "ÜRETİLMİŞ oyun sayfası mı" diye bakılır. Bu üç imza
+// yalnızca üreticiden geçmiş dosyada bulunur → kaynak dosya yanlışlıkla yüklenemez.
+const IMZALAR = ['OYUNLAR', 'mevzuKopru', "tip:'hazir'", 'let TEST_MODU = false'];
+const eksikImza = (m) => IMZALAR.filter((x) => !m.includes(x));
 
 const env = Object.fromEntries(
   fs.readFileSync(`${KOK}/.env`, 'utf8').split(/\r?\n/)
@@ -75,9 +82,22 @@ if (komut === '--geri') {
 }
 
 // --- YAYINLA
-const html = fs.readFileSync(KAYNAK, 'utf8');
-if (html.length < ASGARI_HANE || !html.includes(IMZA)) {
-  console.log(`YÜKLENMEDİ — dosya sağlam görünmüyor (${html.length} hane, imza ${html.includes(IMZA)})`);
+// Üretilmiş .ts dosyasından html metnini çıkar (export const OYUN_MERKEZI_HTML = "...";)
+const ts = fs.readFileSync(URETILMIS, 'utf8');
+let html;
+try {
+  html = JSON.parse(ts.slice(ts.indexOf('= "') + 2, ts.lastIndexOf('";') + 1));
+} catch {
+  console.log('YÜKLENMEDİ — üretilmiş dosya okunamadı. Önce: npm run oyun:uret');
+  process.exit(1);
+}
+const eksik = eksikImza(html);
+if (html.length < ASGARI_HANE || eksik.length) {
+  console.log(`YÜKLENMEDİ — üretilmiş dosya değil ya da bozuk (${html.length} hane).`);
+  if (eksik.length) {
+    console.log('  eksik imza:', eksik.join(' · '));
+    console.log('  Çözüm: npm run oyun:uret');
+  }
   process.exit(1);
 }
 const d = new Date(Date.now() + 3 * 3600000); // TR saati
