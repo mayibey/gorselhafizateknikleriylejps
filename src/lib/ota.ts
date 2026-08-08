@@ -6,8 +6,9 @@
  * uygulamayı açan kullanıcı yeni içeriği (örn. oyunları) İLK GİRİŞTE göremez; kapatıp tekrar
  * açması gerekir. Kimse bunu yapmıyor.
  *
- * ÇÖZÜM: açılışta güncelleme var mı bak; varsa indir ve `reloadAsync()` ile uygulamayı kendi
- * kendine yeniden başlat → kullanıcı ilk girişte güncel içeriği görür.
+ * ÇÖZÜM: açılışta güncelleme var mı bak; varsa İNDİR ve kullanıcıya "Güncelleme hazır —
+ * yeniden başlat" ekranını göster. Yeniden başlatmayı KULLANICI başlatır (düğme).
+ * (Önce kendi kendine yeniden başlatıyordu; ekran siyah kalıyordu — başkan bildirdi, 8 Ağu.)
  *
  * ⚠️ SONSUZ DÖNGÜ KALKANI: indirme başarılı olup yeniden başlatma bir sebeple işe yaramazsa
  * (ya da aynı güncelleme tekrar "yeni" görünürse) uygulama her açılışta kendini yeniden başlatıp
@@ -47,16 +48,25 @@ async function denemeOku(): Promise<Deneme | null> {
 }
 
 /**
- * Açılışta çağrılır.
+ * Açılışta çağrılır. Güncelleme varsa İNDİRİR ama uygulamayı KENDİ BAŞINA YENİDEN BAŞLATMAZ.
  *
- * `onIndirmeBasladi` — güncelleme OLDUĞU anlaşılıp indirmeye geçilirken çağrılır; çağıran taraf
- * bu sinyalle "Güncelleniyor" ekranını gösterir. ⚠️ Bu geri çağırım ŞART: başarı durumunda
- * `reloadAsync()` uygulamayı yeniden başlattığı için fonksiyon HİÇ dönmez — dönüş değerini
- * beklersek bekleme ekranı asla görünmez (ilk yazımda bu hataya düşmüştüm).
+ * 🔴 NEDEN OTOMATİK DEĞİL (başkan bildirdi, 8 Ağu 2026): `reloadAsync()` çağrıldığında ekran
+ * SİYAH KALIYOR ve uygulama kapanmış gibi görünüyordu — React görünümü yıkılıp yeniden
+ * kurulurken arada boş kare oluşuyor, kullanıcı "uygulama çöktü" sanıyor. Başkanın önerisi
+ * doğru: indirme bitince kullanıcıya AÇIK bir ekran göster, kararı ona bırak.
+ * Biz bir adım daha ekledik: ekranda bir düğme var, ona basınca yeniden başlatma bizim
+ * tarafımızdan yapılıyor — kullanıcı uygulamayı elle kapatmak zorunda değil. Düğme bir
+ * sebeple çalışmazsa ekranda "kapatıp aç" yazısı da duruyor.
  *
- * Dönüş: indirme denendi ama başarısız/güncelleme yoksa `false`. Hata fırlatmaz.
+ * `onHazir` — güncelleme indi ve uygulanmaya hazır. Çağıran taraf kapatılamaz ekranı gösterir.
+ * `onIndirmeBasladi` — indirme başladı (bekleme göstergesi için).
+ *
+ * Dönüş: indirme başarısız/güncelleme yoksa `false`, indirildi ve hazırsa `true`.
  */
-export async function otaGuncellemeUygula(onIndirmeBasladi?: () => void): Promise<boolean> {
+export async function otaGuncellemeUygula(
+  onIndirmeBasladi?: () => void,
+  onHazir?: () => void,
+): Promise<boolean> {
   if (__DEV__ || !Updates.isEnabled) return false;
   try {
     const sonuc = await zamanAsimi(Updates.checkForUpdateAsync(), KONTROL_ZAMAN_ASIMI);
@@ -75,6 +85,20 @@ export async function otaGuncellemeUygula(onIndirmeBasladi?: () => void): Promis
     const indirme = await zamanAsimi(Updates.fetchUpdateAsync(), INDIRME_ZAMAN_ASIMI);
     if (!indirme?.isNew) return false;
 
+    // Yeniden başlatma BURADA yapılmaz — kullanıcı ekrandaki düğmeye basınca yapılır.
+    onHazir?.();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * İndirilmiş güncellemeyi uygular (uygulamayı yeniden başlatır). Yalnız kullanıcı düğmeye
+ * basınca çağrılır. Başarısız olursa `false` döner → ekran "kapatıp açın" yazısına düşer.
+ */
+export async function otaYenidenBaslat(): Promise<boolean> {
+  try {
     await Updates.reloadAsync();
     return true;
   } catch {

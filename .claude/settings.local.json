@@ -5,7 +5,8 @@
       "Bash(git rm *)",
       "Bash(rm -rf karakterler/ \"5_KARAKTER_CHATGPT_SABLONLARI.docx\" \"JSPS_Karakter_Kanun_Envanteri.docx\")",
       "Bash(ls -d karakterler)",
-      "Bash(ls *KARAKTER* *Karakter*)"
+      "Bash(ls *KARAKTER* *Karakter*)",
+      "Bash(timeout 120 node scripts/oyun-sunucuya-yukle.mjs --liste)"
     ]
   }
 }

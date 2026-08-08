@@ -62,14 +62,16 @@ export default function RootLayout() {
   // Olmazsa yeni içerik ancak İKİNCİ açılışta görünüyordu — yeni indiren kullanıcı oyunları
   // ilk girişte göremiyordu. `otaCalisiyor` true iken bekleme ekranı gösterilir; yeniden
   // başlatma tetiklenirse zaten bu ekran yaşamını orada bitirir.
-  const [otaCalisiyor, setOtaCalisiyor] = useState(false);
+  // 'yok' → normal açılış · 'iniyor' → indirme sürüyor · 'hazir' → indi, kullanıcı başlatacak
+  const [otaDurum, setOtaDurum] = useState<'yok' | 'iniyor' | 'hazir'>('yok');
   useEffect(() => {
     let iptal = false;
-    void otaGuncellemeUygula(() => {
-      if (!iptal) setOtaCalisiyor(true);
-    }).then(() => {
-      // Buraya SADECE başarısızlıkta gelinir (başarıda uygulama yeniden başlar).
-      if (!iptal) setOtaCalisiyor(false);
+    void otaGuncellemeUygula(
+      () => { if (!iptal) setOtaDurum('iniyor'); },
+      () => { if (!iptal) setOtaDurum('hazir'); },
+    ).then((indi) => {
+      // İndirme başarısızsa normal açılışa dön; başarılıysa 'hazir' ekranında kal.
+      if (!iptal && !indi) setOtaDurum('yok');
     });
     return () => {
       iptal = true;
@@ -141,14 +143,15 @@ export default function RootLayout() {
   // Fontlar gelene kadar render etme (splash görünür kalır).
   if (!fontsLoaded && !fontError) return null;
 
-  // OTA indirilirken hiçbir şeye başlanmasın — indirme bitince uygulama zaten yeniden başlıyor.
-  // (Giriş/tur/veritabanı kapılarından ÖNCE; bu ekran en fazla ~40 sn yaşar, bkz. lib/ota.ts.)
-  if (otaCalisiyor) {
+  // OTA indiriliyorken ya da indirilmiş güncelleme uygulanmayı beklerken hiçbir şeye
+  // başlanmasın — yarım güncellemeyle gezilmesin. 'hazir' ekranında yeniden başlatma
+  // düğmesi var; kullanıcı basmadan devam edilmiyor (başkan isteği: otomatik kapanma yok).
+  if (otaDurum !== 'yok') {
     return (
       <GestureHandlerRootView style={styles.kok}>
         <SafeAreaProvider>
           <StatusBar style="dark" />
-          <OtaYukleniyor />
+          <OtaYukleniyor hazir={otaDurum === 'hazir'} />
         </SafeAreaProvider>
       </GestureHandlerRootView>
     );
