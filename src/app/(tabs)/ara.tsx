@@ -1,5 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useFocusEffect, useRouter } from 'expo-router';
+import { useFocusEffect, usePathname, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
@@ -63,6 +63,8 @@ const SIK_ACILAN: { id: number; kisa: string; fb: string }[] = [
 
 export default function AraScreen() {
   const router = useRouter();
+  // Kök yığından (/arama) açıldıysa başlıkta geri oku göster; sekme halinde gösterme.
+  const kokYiginda = usePathname() === '/arama';
   const { brans } = useBrans();
   const { kanunErisilebilir } = useUyelik();
   const [sorgu, setSorgu] = useState(sonSorgu);
@@ -194,7 +196,10 @@ export default function AraScreen() {
   const az = sorgu.trim().length < 2;
 
   return (
-    <Screen title="Ara" scroll={false}>
+    <Screen
+      title="Ara"
+      scroll={false}
+      onGeri={kokYiginda && router.canGoBack() ? () => router.back() : undefined}>
       {/* Arama kutusu — altın terazi + büyüteç + input */}
       <View style={styles.aramaKart}>
         <MaterialCommunityIcons name="scale-balance" size={22} color={Palette.altin} />

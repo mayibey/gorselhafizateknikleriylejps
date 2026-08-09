@@ -309,7 +309,7 @@ function MevzuatIcerik() {
         {talimBurada ? (
           <Pressable
             style={st.aramaKutu}
-            onPress={() => router.push('/ara')}
+            onPress={() => router.push('/arama')}
             accessibilityRole="button"
             accessibilityLabel="Ara — kanun, madde, kart">
             <MaterialCommunityIcons name="magnify" size={20} color={Palette.solukMetin} />
@@ -398,6 +398,8 @@ function MevzuatIcerik() {
 
           {aktifCip === 'tumu' && !favoriAcik && !hicBaslamadi ? (
             devamLaw ? (
+            // Bayraklıda bu kart KARARGAH'a taşındı (KaldiginYerKarti) — burada mükerrerdi.
+            talimBurada ? null : (
             <DevamEtKart
               kompakt={talimBurada}
               law={devamLaw}
@@ -412,6 +414,7 @@ function MevzuatIcerik() {
                 setCipGoster(true); // çip şeridi açık → seçili çip görünsün
               }}
             />
+            )
           ) : devam.tip === 'hepsiBitti' ? (
             <View style={st.bittiKart}>
               <AppText variant="altBaslik" bold color="lacivert">
