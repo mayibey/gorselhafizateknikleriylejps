@@ -21,7 +21,7 @@ import { KILIT_AKTIF, ucretsizKanun } from '@/constants/urunler';
 import { LAW_KLASOR } from '@/db/seed';
 import { useKanunIndirme } from '@/hooks/use-kanun-indirme';
 import { getFavoriler, toggleFavori } from '@/lib/favori';
-import { indirmeDestekli, kanunTahminiBoyut } from '@/lib/indirme';
+import { indirmeDestekli, kanunIndirilmisMi, kanunTahminiBoyut } from '@/lib/indirme';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -715,11 +715,17 @@ function KanunSatir({
     }
     if (indirGerek) {
       if (indirme.durum === 'iniyor') return; // iniyorsa bekle
+      // Bayraklıda düğme "İndir ve Başla" der — sözünü tutar: indirme biter bitmez
+      // çalışmaya girer. Normal modda eski davranış (indir, kullanıcı tekrar basar).
+      const indirVeGir = async () => {
+        await indirme.indir();
+        if (talimAc && klasorAdi && kanunIndirilmisMi(klasorAdi)) onPress(law);
+      };
       // A4 — ÜCRETSİZ kanunda SORMA, doğrudan indir. Yeni kullanıcı zaten "ne yapacağım"
       // aşamasında; araya bir de "indirilsin mi?" kararı koymak ikinci engel oluyordu.
       // (Ücretli kanunlarda soru KALIYOR — orada indirme bilinçli bir tercih.)
       if (ucretsiz) {
-        void indirme.indir();
+        void indirVeGir();
         return;
       }
       Alert.alert(
@@ -727,12 +733,34 @@ function KanunSatir({
         `"${law.ad}" çalışmak için önce indirilmeli. İndirildikten sonra internetsiz, anında çalışır. Şimdi indirilsin mi?`,
         [
           { text: 'Vazgeç', style: 'cancel' },
-          { text: 'İndir', onPress: () => void indirme.indir() },
+          { text: 'İndir', onPress: () => void indirVeGir() },
         ],
       );
       return;
     }
     onPress(law);
+  }
+  // BULUT İKONU (bayraklı; Gemini önerisinden alınan fikir, başkan onayı 9 Ağu gece):
+  // İndirildi/çöp çipi yerine başlık satırında tek ikon — bulut=inmemiş, tik=inmiş,
+  // inerken %. Dokununca indir / cihazdan sil. Çipler kalkınca kart bir satır daha kısalır.
+  const bulutVar = !!talimAc && !kilitli && !!klasorAdi && indirmeDestekli && !!ICERIK_TABANI;
+  function bulutBas() {
+    if (indirme.durum === 'iniyor') return;
+    if (indirme.durum === 'indirildi') {
+      Alert.alert('İndirilen içerik', `"${law.ad}" cihazına indirilmiş — internetsiz çalışır.`, [
+        { text: 'Kapat', style: 'cancel' },
+        { text: 'Cihazdan Sil', style: 'destructive', onPress: () => void indirme.sil() },
+      ]);
+      return;
+    }
+    Alert.alert(
+      'İndir',
+      `"${law.ad}" indirilsin mi? İndirildikten sonra internetsiz, anında çalışır.`,
+      [
+        { text: 'Vazgeç', style: 'cancel' },
+        { text: 'İndir', onPress: () => void indirme.indir() },
+      ],
+    );
   }
   const yuzde = toplam > 0 ? Math.min(100, Math.round((calisilan / toplam) * 100)) : 0;
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
@@ -794,12 +822,37 @@ function KanunSatir({
       onPress={satiraBas}
       accessibilityRole="button"
       accessibilityLabel={law.ad}>
-      {/* ÜST: monogram + tam kanun adı BOYDAN BOYA (heceli sarma → Türkçe hece bölme). */}
+      {/* ÜST: monogram + tam kanun adı BOYDAN BOYA (heceli sarma → Türkçe hece bölme).
+          Bayraklıda sağda indirme durumu ikonu: bulut=inmemiş, tik=inmiş, inerken %. */}
       <View style={st.satirUst}>
         <Monogram no={no} boyut={56} variant="govde" />
         <AppText variant="govde" bold color="anaMetin" style={st.kanunAd}>
           {law.ad}
         </AppText>
+        {bulutVar ? (
+          <Pressable
+            onPress={(e) => {
+              e.stopPropagation();
+              bulutBas();
+            }}
+            hitSlop={10}
+            accessibilityRole="button"
+            accessibilityLabel={
+              indirme.durum === 'indirildi' ? 'İndirildi — yönet' : 'Kanunu indir'
+            }>
+            {indirme.durum === 'iniyor' ? (
+              <AppText variant="etiket" bold color="altinMetin">
+                %{indirme.yuzde}
+              </AppText>
+            ) : (
+              <MaterialCommunityIcons
+                name={indirme.durum === 'indirildi' ? 'cloud-check-outline' : 'cloud-download-outline'}
+                size={24}
+                color={indirme.durum === 'indirildi' ? Palette.altinKoyu : Palette.solukMetin}
+              />
+            )}
+          </Pressable>
+        ) : null}
       </View>
 
       {ucretsiz ? (
@@ -832,8 +885,10 @@ function KanunSatir({
           style={talimAc ? st.sonMetinEsnek : undefined}>
           {sonMetin}
         </AppText>
-        {talimAc ? <View style={st.ustAksiyonBosluk} /> : null}
-        {talimAc ? aksiyonKumesi : null}
+        {/* Bayraklıda çip kümesi kalktı (bulut ikonu + Çalış devraldı); yalnız kilitli
+            kanunda "Kilidi Aç" burada durur. */}
+        {talimAc && kilitli ? <View style={st.ustAksiyonBosluk} /> : null}
+        {talimAc && kilitli ? aksiyonKumesi : null}
       </View>
       <View style={st.barSatir}>
         <Bar yuzde={yuzde} />
@@ -875,9 +930,13 @@ function KanunSatir({
             style={({ pressed }) => [st.calisBtn, pressed && st.pressed]}
             accessibilityRole="button"
             accessibilityLabel="Çalış">
-            <MaterialCommunityIcons name="play" size={17} color={Palette.lacivert} />
+            <MaterialCommunityIcons
+              name={indirGerek ? 'cloud-download-outline' : 'play'}
+              size={17}
+              color={Palette.lacivert}
+            />
             <AppText variant="kucuk" bold color="lacivert">
-              Çalış
+              {indirGerek ? 'İndir ve Başla' : bos ? 'Başla' : 'Çalış'}
             </AppText>
           </Pressable>
           {sinavVarMi(law.id) ? (
