@@ -1171,3 +1171,12 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   Pro 503 → Flash-Lite cevapladı); (b) konuşma hafızası RAM→SQLite (commit d81a967) —
   pm2 restart amnezisi bitti ("Cevap anahtarı D" vakası); (c) yanlış e-imza cevabı
   düzeltildi (doğrusu D, gruba mesaj 1037) + saçma "tanık hakkı" mesajı silindi (1036).
+
+## 9 Ağu 2026 (6) — Bayrak yerel önbelleği + İndir/Devam kümesi üste (commit 9e434df)
+- Başkan: açılışta 5 sekme görünüp 4'e düşüyor → `ozellik.ts`e AsyncStorage önbelleği
+  (`ozellik-kisi:<ad>`): hook önce son bilinen değeri okur (ms), sunucu cevabı gelince
+  günceller + tazeler. Titreme yalnız ilk kurulumda bir kez görünür.
+- Başkan (ekran çizimi): kanun kartındaki [İndirildi/🗑 + Devam >] satırı yukarı →
+  bayraklı modda küme ÜCRETSİZ rozetinin satırına taşındı (`ustAksiyonSatir`), alt
+  satır bayraklı modda hiç çizilmiyor → her kart bir satır kısaldı. Normal mod aynen.
+- OTA production runtime 1.0.43 + 1.0.44. Hepsi bayrak arkasında, yalnız başkanda.
