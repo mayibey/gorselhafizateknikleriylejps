@@ -67,8 +67,10 @@ function ikiHane(n: number): string {
   return String(n).padStart(2, '0');
 }
 
-/** Karargah en üstü: JSPS sınavına canlı geri sayım (gün/saat/dk/sn). Her saniye işler. */
-function SinavGeriSayim() {
+/** Karargah en üstü: JSPS sınavına canlı geri sayım (gün/saat/dk/sn). Her saniye işler.
+ *  kompakt (GECE KARARI K2, bayraklı): saniyeli koca sayaç yerine tek satır —
+ *  uygulamanın ilk sözü "vaktin tükeniyor" olmasın. */
+function SinavGeriSayim({ kompakt }: { kompakt?: boolean }) {
   const [kalanMs, setKalanMs] = useState(() => SINAV_TARIHI.getTime() - Date.now());
   useEffect(() => {
     const t = setInterval(() => setKalanMs(SINAV_TARIHI.getTime() - Date.now()), 1000);
@@ -104,6 +106,22 @@ function SinavGeriSayim() {
     basvuru = sonGun
       ? { metin: 'BAŞVURU İÇİN SON GÜN!', vurgu: true }
       : { metin: 'BAŞVURULAR: 3–23 AĞUSTOS', vurgu: false };
+  }
+
+  if (kompakt) {
+    return (
+      <View style={styles.geriSayimKompakt}>
+        <MaterialCommunityIcons name="calendar-clock" size={16} color={Palette.altin} />
+        <AppText variant="kucuk" bold color="beyaz">
+          JSPS sınavına {gun} gün · 19 Eylül 14.00
+        </AppText>
+        {basvuru ? (
+          <AppText variant="etiket" bold color={basvuru.vurgu ? 'kirmizi' : 'altinAcik2'}>
+            · {basvuru.metin}
+          </AppText>
+        ) : null}
+      </View>
+    );
   }
 
   return (
@@ -432,10 +450,16 @@ export default function KarargahScreen() {
               <MaterialCommunityIcons name="magnify" size={24} color={Palette.altin} />
             </Pressable>
           ) : null}
-          {/* Premium'sa altın taç (dokununca Üyelik ekranı) — premium değilse görünmez. */}
-          <UyelikTaci boyut={18} />
-          {/* Duyurular (eski çan yerine) — okunmamış varsa kırmızı nokta. */}
-          <DuyuruIkonu boyut={22} />
+          {/* GECE KARARI K5 (bayraklı): açıklanmasız taç + megafon başlıktan kalkar.
+              (Duyurulara erişim geçici olarak yalnız bildirimlerden — kalıcı yeri kararlaşacak.) */}
+          {!aramaMevzuatta ? (
+            <>
+              {/* Premium'sa altın taç (dokununca Üyelik ekranı) — premium değilse görünmez. */}
+              <UyelikTaci boyut={18} />
+              {/* Duyurular (eski çan yerine) — okunmamış varsa kırmızı nokta. */}
+              <DuyuruIkonu boyut={22} />
+            </>
+          ) : null}
           <Pressable
             onPress={() => router.push('/ayarlar')}
             hitSlop={10}
@@ -449,7 +473,7 @@ export default function KarargahScreen() {
       {/* İlk gün indirimi hatırlatma modalı (koşullar tutunca kendi çıkar). */}
       <IndirimHatirlatma />
 
-      <SinavGeriSayim />
+      <SinavGeriSayim kompakt={aramaMevzuatta} />
       {/* Bayraklı: Mevzuat'ın üstündeki "kaldığın yer" kartı + Genel Tatbikat girişi
           buraya taşındı (başkan, 9 Ağu gece). */}
       {aramaMevzuatta ? (
@@ -459,7 +483,10 @@ export default function KarargahScreen() {
         </View>
       ) : null}
 
-      {/* 3 KUTU — Genel ilerleme · Nöbet serisi · Zayıf mevzi (sayacın hemen altında). */}
+      {/* 3 KUTU — Genel ilerleme · Nöbet serisi · Zayıf mevzi (sayacın hemen altında).
+          GECE KARARI K3 (bayraklı): kutular Karargah'tan kalkar (Evsaf'a taşınacak) —
+          yeni kullanıcı üç sıfırla karşılanmasın. */}
+      {aramaMevzuatta ? null : (
       <View style={styles.kutuSatir}>
         <View style={[styles.card, styles.kutu]}>
           <Halka yuzde={hazirlik} />
@@ -503,6 +530,7 @@ export default function KarargahScreen() {
           </AppText>
         </Pressable>
       </View>
+      )}
 
       {/* UNUTMA UYARISI — ≥7 gündür tekrar edilmemiş kanunlar (tedbir bandı). */}
       {unutulan.length > 0 ? (
@@ -539,7 +567,11 @@ export default function KarargahScreen() {
         </View>
       ) : null}
 
-      {/* ═══ GERİ BESLEME — zayıf mevziler + düello eksikleri (tek başlık altında) ═══ */}
+      {/* ═══ GERİ BESLEME — zayıf mevziler + düello eksikleri (tek başlık altında) ═══
+          GECE KARARI K5+K7 (bayraklı): açıklanmasız "GERİ BESLEME" başlığı ve kırmızı
+          ödül-ceza emri kartı kalkar — emir dili aşağıdaki altın hero'da, tek yerde. */}
+      {aramaMevzuatta ? null : (
+      <>
       <View style={styles.gbUstBaslik}>
         <MaterialCommunityIcons name="chart-timeline-variant" size={18} color={Palette.altinKoyu} />
         <AppText variant="etiket" color="solukMetin" bold style={styles.gbUstBaslikAd}>
@@ -553,6 +585,8 @@ export default function KarargahScreen() {
         zayifSayisi={bekleyen}
         onBasla={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
       />
+      </>
+      )}
 
       {/* HERO — ETÜT = zayıf havuz (eksik/zorlandığın kartları düzelt). Boşsa "zayıf yok". */}
       {bos ? (
@@ -566,7 +600,7 @@ export default function KarargahScreen() {
                 çalışmamış birine "Tüm görevleri yaptın" demek yanlış — nereden başlayacağını
                 söylemek gerekiyor. (Başkan tespiti, 7 Ağu 2026.) */}
             <AppText variant="etiket" color="altin" bold>
-              {hicCalisilan ? 'BURADAN BAŞLA 🎖️' : 'GÜNÜ TAMAMLADIN 🎖️'}
+              {aramaMevzuatta ? 'BUGÜNÜN EMRİ 🎖️' : hicCalisilan ? 'BURADAN BAŞLA 🎖️' : 'GÜNÜ TAMAMLADIN 🎖️'}
             </AppText>
             <AppText variant="baslik" color="beyaz" bold>
               {hicCalisilan ? 'İlk mevzini seç' : 'Tüm görevleri yaptın'}
@@ -587,11 +621,13 @@ export default function KarargahScreen() {
           accessibilityLabel="Geri Besleme — zayıf mevzileri çalış">
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
+              {/* GECE KARARI K1+K7 (bayraklı): "ZAYIF MEVZİLER" değil "BUGÜNÜN EMRİ";
+                  alarm dili yerine altın "güçlendir" dili. */}
               <AppText variant="etiket" color="altin" bold>
-                ZAYIF MEVZİLER
+                {aramaMevzuatta ? 'BUGÜNÜN EMRİ 🎖️' : 'ZAYIF MEVZİLER'}
               </AppText>
               <AppText variant="baslik" color="beyaz" bold>
-                Kart Çalışması
+                {aramaMevzuatta ? `Zorlandığın ${bekleyen} kartı güçlendir` : 'Kart Çalışması'}
               </AppText>
               {/* Etüt = hata + zorlandıklarını düzeltme bölümü (tekrar-hatırlat + denemede yanlış). */}
               <AppText variant="etiket" color="altinAcik2">
@@ -763,8 +799,10 @@ export default function KarargahScreen() {
         </Pressable>
       </Modal>
 
-      {/* GÜNÜN MADDESİ — tarih rotasyonlu kart + İncele */}
-      {gunMadde ? (
+      {/* GÜNÜN MADDESİ — tarih rotasyonlu kart + İncele.
+          GECE KARARI K4 (bayraklı): Karargah'tan kalkar (günlük görevle aynı işi iki kez
+          teklif ediyordu); Mevzuat listesi altına taşınması ayrıca yapılacak. */}
+      {gunMadde && !aramaMevzuatta ? (
         <Pressable
           style={({ pressed }) => [styles.card, pressed && styles.pressed]}
           onPress={() => gunMaddeAc(gunMadde)}>
@@ -943,6 +981,19 @@ const styles = StyleSheet.create({
   },
 
   // Sınav geri sayımı (en üst, koyu lacivert şerit + altın rakamlar — komuta-konsolu aksanı)
+  // K2 (bayraklı): tek satırlık sayaç — koca bloğun yerine ince şerit.
+  geriSayimKompakt: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.kartYuzeyKoyu,
+    borderRadius: Radius.m,
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
+    paddingVertical: Spacing.two,
+    paddingHorizontal: Spacing.two,
+  },
   geriSayim: {
     backgroundColor: Palette.kartYuzeyKoyu,
     borderRadius: Radius.l,
