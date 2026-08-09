@@ -786,36 +786,38 @@ function KanunSatir({
         </AppText>
       </View>
 
-      {/* Bayraklı modda İndir + Devam kümesi BURAYA (üste) taşındı (başkan, 9 Ağu akşam:
-          "yukarı taşısak alan biraz daha küçülür") — alttaki ayrı satır kalkar, kart kısalır. */}
-      {ucretsiz || talimAc ? (
-        <View style={st.ustAksiyonSatir}>
-          {ucretsiz ? (
-            <View style={st.ucretsizChip}>
-              <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
-              <AppText variant="etiket" bold color="beyaz">
-                ÜCRETSİZ
-              </AppText>
-            </View>
-          ) : null}
-          {talimAc ? <View style={st.ustAksiyonBosluk} /> : null}
-          {talimAc ? aksiyonKumesi : null}
+      {ucretsiz ? (
+        <View style={st.ucretsizChip}>
+          <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
+          <AppText variant="etiket" bold color="beyaz">
+            ÜCRETSİZ
+          </AppText>
         </View>
       ) : null}
 
       <AppText variant="kucuk" color="solukMetin">
         {calisilan} / {toplam} kart tamamlandı
       </AppText>
-      {/* En son ne zaman çalışıldı — hiç başlanmadıysa kırmızı uyarı. */}
+      {/* En son ne zaman çalışıldı — hiç başlanmadıysa kırmızı uyarı. Bayraklı modda
+          İndir + Başla/Devam kümesi de BU satırın sağını paylaşır (başkan, 9 Ağu gece:
+          "henüz başlamadın ile aynı satırı paylaşsalar") — kart bir satır daha kısalır.
+          Taşma emniyeti: durum metni gerekirse "…" ile kısalır, kümeye asla binmez. */}
       <View style={st.sonSatir}>
         <MaterialCommunityIcons
           name={sonGun === null ? 'alert-circle-outline' : 'clock-outline'}
           size={13}
           color={sonGun === null ? Palette.kirmizi : Palette.solukMetin}
         />
-        <AppText variant="etiket" bold={sonGun === null} color={sonGun === null ? 'kirmizi' : 'solukMetin'}>
+        <AppText
+          variant="etiket"
+          bold={sonGun === null}
+          color={sonGun === null ? 'kirmizi' : 'solukMetin'}
+          numberOfLines={1}
+          style={talimAc ? st.sonMetinEsnek : undefined}>
           {sonMetin}
         </AppText>
+        {talimAc ? <View style={st.ustAksiyonBosluk} /> : null}
+        {talimAc ? aksiyonKumesi : null}
       </View>
       <View style={st.barSatir}>
         <Bar yuzde={yuzde} />
@@ -1283,13 +1285,9 @@ const st = StyleSheet.create({
   baslaKart: {
     borderColor: Palette.yesil,
   },
-  // Bayraklı mod: ÜCRETSİZ rozeti (solda) + İndir/Devam kümesi (sağda) tek üst satırda.
-  ustAksiyonSatir: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-  },
+  // Bayraklı mod: "son çalışma" satırının sağını İndir/Devam kümesi paylaşır.
   ustAksiyonBosluk: { flex: 1 },
+  sonMetinEsnek: { flexShrink: 1 },
   ucretsizChip: {
     flexDirection: 'row',
     alignItems: 'center',
