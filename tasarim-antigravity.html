@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mevzu·JSPS - Antigravity Tasarımı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lacivert: '#173B6B',
+            zemin: '#EDE3CF',
+            kart: '#FFFCF5',
+            altin: '#C9A227',
+            altinAcik: 'rgba(201, 162, 39, 0.1)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #333; display: flex; justify-content: center; margin: 0; padding: 20px 0; -webkit-tap-highlight-color: transparent; }
+    #app-container { width: 100%; max-width: 414px; background-color: #EDE3CF; min-height: 896px; position: relative; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border-radius: 40px; border: 8px solid #111; }
+    .tab-content { display: none; padding-bottom: 90px; }
+    .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    .glass-nav { background: rgba(255, 252, 245, 0.9); backdrop-filter: blur(16px); border-top: 1px solid rgba(23, 59, 107, 0.1); }
+    .card-shadow { box-shadow: 0 4px 20px rgba(23, 59, 107, 0.05), 0 1px 3px rgba(23,59,107,0.02); }
+    .node-line { width: 2px; background: #C9A227; position: absolute; left: 24px; top: 0; bottom: 0; z-index: 0; }
+    .progress-bar-bg { background-color: #e5e7eb; height: 4px; border-radius: 2px; overflow: hidden; }
+    .progress-bar-fill { background-color: #C9A227; height: 100%; transition: width 0.3s ease; }
+    
+    /* Custom Scrollbar for inner content */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(23, 59, 107, 0.2); border-radius: 4px; }
+  </style>
+</head>
+<body class="antialiased">
+  <div id="app-container" class="flex flex-col text-lacivert">
+    
+    <!-- Header -->
+    <header class="pt-14 pb-4 px-6 flex justify-between items-center bg-kart rounded-b-[32px] card-shadow relative z-10">
+      <div>
+        <h1 class="font-serif text-[22px] font-bold text-lacivert tracking-tight leading-none">Mevzu·JSPS</h1>
+        <p class="text-[11px] font-bold text-altin mt-1.5 flex items-center gap-1">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          SINAVA 41 GÜN · 19 EYLÜL
+        </p>
+      </div>
+      <!-- User Profile / App State -->
+      <div class="w-10 h-10 rounded-full bg-altin/10 flex items-center justify-center border border-altin/20 text-altin">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </div>
+    </header>
+
+    <!-- TAB: KARARGAH -->
+    <main id="tab-karargah" class="tab-content active px-5 pt-6 overflow-y-auto h-full">
+      
+      <!-- Nöbet Serisi (Top of Karargah) -->
+      <div class="flex items-center gap-2 mb-6">
+        <div class="w-8 h-8 rounded-full bg-altin/10 flex items-center justify-center text-altin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-lacivert/70">12 GÜN KESİNTİSİZ NÖBET</p>
+        </div>
+      </div>
+
+      <!-- Bugünün Emri -->
+      <section class="mb-8">
+        <h2 class="font-serif text-xl font-bold text-lacivert mb-3">Bugünün Emri</h2>
+        
+        <div class="bg-kart rounded-3xl p-6 card-shadow border border-lacivert/5">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-altin/10 text-altin text-[10px] font-bold mb-3 border border-altin/20 tracking-wider">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            İLK DÖNGÜ 1/3
+          </div>
+          <h3 class="text-lg font-bold text-lacivert mb-2 leading-snug">Genel Hükümler ve Kast Unsuru</h3>
+          <p class="text-sm text-lacivert/70 mb-6 leading-relaxed">Bugünkü nöbetinde TCK'nın temel kavramlarını işleyeceğiz. 8 yeni kart seni bekliyor.</p>
+          
+          <button onclick="openModal('modal-kart-akisi')" class="w-full bg-lacivert text-kart font-bold py-3.5 rounded-xl shadow-lg hover:bg-lacivert/90 transition-transform active:scale-[0.98] flex items-center justify-center gap-2">
+            Nöbete Başla
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Zayıf Mevzi (Contextual) -->
+      <section class="mb-8">
+        <div class="bg-lacivert rounded-3xl p-6 card-shadow text-kart relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-altin/10 rounded-full blur-2xl"></div>
+          <h3 class="font-serif text-lg font-bold mb-2 relative z-10 text-kart">Zayıf Mevzini Güçlendir</h3>
+          <p class="text-xs text-kart/70 mb-5 relative z-10 max-w-[85%] leading-relaxed">Son tatbikatlarda PVSK zor kullanma yetkisinde fire verdin. Olay sıcakken pekiştir.</p>
+          <button class="bg-altin text-lacivert font-bold py-2.5 px-5 rounded-lg text-xs shadow-md hover:bg-[#D4B242] transition-colors relative z-10">
+            Mevziye Gir
+          </button>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- TAB: MEVZUAT -->
+    <main id="tab-mevzuat" class="tab-content px-5 pt-6 overflow-y-auto h-full">
+      <h2 class="font-serif text-xl font-bold text-lacivert mb-4">Kanun Patikaları</h2>
+      
+      <!-- Günün Maddesi -->
+      <div class="bg-kart rounded-2xl p-4 card-shadow mb-6 border-l-[3px] border-altin">
+        <p class="text-[10px] font-bold text-altin uppercase tracking-wider mb-1">Günün Maddesi</p>
+        <h4 class="font-bold text-lacivert text-sm mb-1">TCK Madde 25 - Meşru Savunma</h4>
+        <p class="text-xs text-lacivert/70 line-clamp-2 leading-relaxed">Gerek kendisine ve gerek başkasına ait bir hakka yönelmiş, gerçekleşen, gerçekleşmesi veya tekrarı muhakkak olan...</p>
+      </div>
+
+      <div class="space-y-3">
+        <!-- Kanun 1 -->
+        <button onclick="openModal('modal-patika')" class="w-full text-left bg-kart rounded-[20px] p-4 card-shadow border border-lacivert/5 transition-transform active:scale-[0.98] flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="text-[10px] font-bold bg-lacivert/5 text-lacivert px-2 py-0.5 rounded">1</span>
+              <h3 class="font-bold text-lacivert text-sm">Türk Ceza Kanunu</h3>
+            </div>
+            <p class="text-[11px] font-medium text-lacivert/50 ml-8">5237 Sayılı Kanun · 12 Madde Bitti</p>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-lacivert/5 flex items-center justify-center text-lacivert/40">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+        </button>
+
+        <!-- Kanun 2 -->
+        <button class="w-full text-left bg-kart rounded-[20px] p-4 card-shadow border border-lacivert/5 transition-transform active:scale-[0.98] flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="text-[10px] font-bold bg-lacivert/5 text-lacivert px-2 py-0.5 rounded">2</span>
+              <h3 class="font-bold text-lacivert text-sm">Ceza Muhakemesi Kanunu</h3>
+            </div>
+            <p class="text-[11px] font-medium text-lacivert/50 ml-8">5271 Sayılı Kanun · 4 Madde Bitti</p>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-lacivert/5 flex items-center justify-center text-lacivert/40">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+        </button>
+
+        <!-- Kanun Kilitli -->
+        <button class="w-full text-left bg-kart/70 rounded-[20px] p-4 card-shadow border border-lacivert/5 flex items-center justify-between opacity-80">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[10px] font-bold bg-lacivert/5 text-lacivert/40 px-2 py-0.5 rounded">3</span>
+              <h3 class="font-bold text-lacivert/60 text-sm">Polis Vazife ve Salahiyet</h3>
+            </div>
+            <div class="ml-8 mt-1.5 inline-flex items-center gap-1 bg-altin/10 px-2 py-0.5 rounded text-[9px] font-bold text-altin tracking-wider">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              TAM ERİŞİMDE
+            </div>
+          </div>
+        </button>
+      </div>
+    </main>
+
+    <!-- TAB: OYUNLAR -->
+    <main id="tab-oyunlar" class="tab-content px-5 pt-6 overflow-y-auto h-full">
+      
+      <!-- Er Meydanı (Top Module) -->
+      <section class="mb-8">
+        <div class="bg-lacivert rounded-[24px] p-5 card-shadow text-kart border border-altin/20 relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-altin/5 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="flex justify-between items-start mb-4 relative z-10">
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-altin/10 text-altin text-[10px] font-bold mb-2 tracking-wider">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                REKABET MEYDANI
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-kart">Er Meydanı</h3>
+            </div>
+            <div class="w-12 h-12 bg-altin rounded-2xl flex items-center justify-center text-lacivert shadow-sm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+          </div>
+          <p class="text-[13px] text-kart/70 mb-5 relative z-10 leading-relaxed pr-4">Gerçek rakiplere karşı mevzuat bilgini sına. Tohum tabanlı eşleşme ile adil düello.</p>
+          <button class="w-full bg-altin text-lacivert font-bold py-3.5 rounded-xl shadow-md active:scale-[0.98] transition-transform relative z-10 text-sm">
+            Meydana Çık
+          </button>
+        </div>
+      </section>
+
+      <!-- Dikey Kategoriler -->
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-[11px] font-bold text-lacivert/50 uppercase tracking-widest mb-3 px-2">Öğreten Oyunlar</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-kart rounded-[20px] p-5 card-shadow border border-lacivert/5 flex flex-col items-center text-center">
+              <div class="w-12 h-12 rounded-full bg-lacivert/5 flex items-center justify-center mb-3 text-lacivert">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <span class="font-bold text-lacivert text-xs">Boşluk Doldurma</span>
+            </div>
+            <div class="bg-kart rounded-[20px] p-5 card-shadow border border-lacivert/5 flex flex-col items-center text-center">
+              <div class="w-12 h-12 rounded-full bg-lacivert/5 flex items-center justify-center mb-3 text-lacivert">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+              </div>
+              <span class="font-bold text-lacivert text-xs">Kavram Eşleştirme</span>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-[11px] font-bold text-lacivert/50 uppercase tracking-widest mb-3 px-2">Hızlı Tur</h3>
+          <div class="bg-kart rounded-[20px] p-4 card-shadow border border-lacivert/5 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-altin/10 flex items-center justify-center text-altin shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-lacivert text-sm">60 Saniye</h4>
+              <p class="text-[11px] font-medium text-lacivert/60 mt-0.5">Zamana karşı maksimum doğru cevabı bul.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- TAB: EVSAF -->
+    <main id="tab-evsaf" class="tab-content px-5 pt-6 overflow-y-auto h-full">
+      
+      <!-- Kimlik -->
+      <div class="bg-kart rounded-[24px] p-6 card-shadow border border-lacivert/5 mb-6 relative">
+        <div class="absolute top-5 right-5 text-lacivert/30 hover:text-lacivert cursor-pointer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </div>
+        
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-full bg-lacivert/5 flex items-center justify-center text-lacivert mb-4 border-2 border-kart outline outline-2 outline-lacivert/10">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h2 class="font-serif text-xl font-bold text-lacivert text-center leading-tight">J.Asb.Çvş.<br>Ahmet Yılmaz</h2>
+          <div class="inline-flex items-center gap-1.5 mt-3 px-3 py-1 rounded bg-altin/10 border border-altin/30 text-altin text-[10px] font-bold tracking-wider">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            TAM ERİŞİM AKTİF
+          </div>
+        </div>
+      </div>
+
+      <!-- Eğitim Özeti -->
+      <h3 class="text-[11px] font-bold text-lacivert/50 uppercase tracking-widest mb-3 px-2">Eğitim Özeti</h3>
+      <div class="grid grid-cols-2 gap-3 mb-6">
+        <div class="bg-kart rounded-[20px] p-5 card-shadow border border-lacivert/5">
+          <p class="text-[11px] font-bold text-lacivert/50 mb-1 tracking-wide">ÇALIŞILAN MADDE</p>
+          <p class="text-3xl font-serif font-bold text-lacivert">248</p>
+        </div>
+        <div class="bg-kart rounded-[20px] p-5 card-shadow border border-lacivert/5">
+          <p class="text-[11px] font-bold text-lacivert/50 mb-1 tracking-wide">ZAYIF MEVZİ</p>
+          <p class="text-3xl font-serif font-bold text-lacivert">12 <span class="text-sm font-sans text-lacivert/40 font-normal">kart</span></p>
+        </div>
+      </div>
+
+      <!-- Nöbet Geçmişi -->
+      <h3 class="text-[11px] font-bold text-lacivert/50 uppercase tracking-widest mb-3 px-2">Nöbet Geçmişi</h3>
+      <div class="bg-kart rounded-[24px] p-6 card-shadow border border-lacivert/5 mb-6">
+        <div class="flex items-center justify-between mb-5">
+          <div>
+            <h4 class="font-bold text-lacivert text-sm">12 Günlük Seri</h4>
+            <p class="text-[11px] font-medium text-lacivert/50 mt-0.5">Kesintisiz sadakat ve çalışma.</p>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-altin/10 flex items-center justify-center text-altin">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-between items-center gap-1.5">
+          <!-- Son 7 gün şeridi -->
+          <div class="flex-1 h-9 rounded-lg bg-altin/20 border border-altin/30 flex items-center justify-center text-altin"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="flex-1 h-9 rounded-lg bg-altin border border-altin flex items-center justify-center text-kart"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="flex-1 h-9 rounded-lg bg-altin/20 border border-altin/30 flex items-center justify-center text-altin"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="flex-1 h-9 rounded-lg bg-altin border border-altin flex items-center justify-center text-kart"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="flex-1 h-9 rounded-lg bg-altin border border-altin flex items-center justify-center text-kart"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="flex-1 h-9 rounded-lg bg-altin border border-altin flex items-center justify-center text-kart"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="flex-1 h-9 rounded-lg bg-lacivert/5 border border-lacivert/10 flex items-center justify-center"></div>
+        </div>
+      </div>
+
+      <!-- Belgelerim -->
+      <h3 class="text-[11px] font-bold text-lacivert/50 uppercase tracking-widest mb-3 px-2">Belgelerim</h3>
+      <div class="bg-kart rounded-[20px] p-4 card-shadow border border-lacivert/5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-lacivert/5 flex items-center justify-center text-lacivert">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5l9 1.5L17 12l2-5l-9 1.5L12 1l-2 5l-9-1.5L3 12l-2 5z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-lacivert text-sm">Takdir Belgesi</h4>
+            <p class="text-[11px] font-medium text-lacivert/50 mt-0.5">TCK Tamamlama Nişanı</p>
+          </div>
+        </div>
+        <button class="text-xs font-bold text-lacivert bg-lacivert/5 px-3 py-2 rounded-xl hover:bg-lacivert/10 transition-colors">
+          Paylaş
+        </button>
+      </div>
+
+      <!-- Destek (Bottom) -->
+      <div class="mt-8 flex justify-center gap-4 text-[11px] font-bold text-lacivert/30 pb-4">
+        <button class="hover:text-lacivert/60 transition-colors">Hata Bildir</button>
+        <span>·</span>
+        <button class="hover:text-lacivert/60 transition-colors">Destek</button>
+      </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="absolute bottom-0 w-full glass-nav pb-8 pt-4 px-8 flex justify-between items-center z-20 rounded-b-[32px]">
+      <button onclick="switchTab('tab-karargah')" class="nav-btn active flex flex-col items-center gap-1.5 transition-colors text-lacivert" data-target="tab-karargah">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="opacity-100 transition-opacity"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span class="text-[10px] font-bold tracking-wide">Karargah</span>
+      </button>
+      <button onclick="switchTab('tab-mevzuat')" class="nav-btn flex flex-col items-center gap-1.5 transition-colors text-lacivert/30 hover:text-lacivert/60" data-target="tab-mevzuat">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="opacity-100 transition-opacity"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span class="text-[10px] font-bold tracking-wide">Mevzuat</span>
+      </button>
+      <button onclick="switchTab('tab-oyunlar')" class="nav-btn flex flex-col items-center gap-1.5 transition-colors text-lacivert/30 hover:text-lacivert/60" data-target="tab-oyunlar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="opacity-100 transition-opacity"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <span class="text-[10px] font-bold tracking-wide">Oyunlar</span>
+      </button>
+      <button onclick="switchTab('tab-evsaf')" class="nav-btn flex flex-col items-center gap-1.5 transition-colors text-lacivert/30 hover:text-lacivert/60" data-target="tab-evsaf">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="opacity-100 transition-opacity"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span class="text-[10px] font-bold tracking-wide">Evsaf</span>
+      </button>
+    </nav>
+
+    <!-- MODAL: KANUN PATİKASI (Detay) -->
+    <div id="modal-patika" class="fixed inset-0 bg-zemin z-50 flex flex-col transform translate-y-full transition-transform duration-300 ease-out absolute rounded-[32px] overflow-hidden">
+      <!-- Upper part -->
+      <header class="pt-14 pb-4 px-6 flex justify-between items-center bg-kart rounded-b-[32px] card-shadow z-20 relative">
+        <button onclick="closeModal('modal-patika')" class="w-10 h-10 flex items-center justify-center text-lacivert bg-lacivert/5 rounded-full hover:bg-lacivert/10 active:scale-95 transition-transform">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <h2 class="font-serif text-lg font-bold text-lacivert">Türk Ceza Kanunu</h2>
+        <div class="w-10"></div>
+      </header>
+      
+      <!-- Body Map -->
+      <div class="flex-1 overflow-y-auto px-6 py-8 relative">
+        <!-- Node Line -->
+        <div class="node-line"></div>
+        
+        <!-- Node 1 (Completed) -->
+        <div class="relative z-10 pl-12 pb-10">
+          <div class="absolute left-[11px] top-1 w-7 h-7 rounded-full bg-altin border-4 border-zemin flex items-center justify-center text-kart shadow-sm">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3 class="font-bold text-lacivert text-sm">Madde 1-10: Temel İlkeler</h3>
+          <p class="text-xs font-medium text-lacivert/40 mt-1">TAMAMLANDI</p>
+        </div>
+
+        <!-- Node 2 (Active) -->
+        <div class="relative z-10 pl-12 pb-10 cursor-pointer" onclick="document.getElementById('context-panel').classList.toggle('hidden')">
+          <div class="absolute left-[8px] top-1 w-8 h-8 rounded-full bg-kart border-2 border-altin flex items-center justify-center text-altin shadow-md">
+            <div class="w-2.5 h-2.5 rounded-full bg-altin animate-pulse"></div>
+          </div>
+          <div class="bg-kart rounded-[20px] p-5 card-shadow border border-altin/50 relative">
+            <span class="absolute -top-3 right-5 bg-altin text-lacivert text-[9px] font-bold px-2.5 py-1 rounded tracking-wider">SIRADAKİ</span>
+            <h3 class="font-bold text-lacivert text-sm mb-1.5">Madde 11-20: Yaptırımlar</h3>
+            <p class="text-[12px] font-medium text-lacivert/60 leading-relaxed">Suç karşılığında uygulanan yaptırımlar, cezalar ve güvenlik tedbirleri.</p>
+            
+            <!-- Context Panel -->
+            <div id="context-panel" class="hidden mt-5 pt-4 border-t border-lacivert/5 flex flex-col gap-2">
+              <button onclick="openModal('modal-kart-akisi'); closeModal('modal-patika')" class="w-full bg-lacivert text-kart font-bold text-[13px] py-3 rounded-xl shadow-md active:scale-95 transition-transform">Bu Maddeyi Çalış</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node 3 (Locked) -->
+        <div class="relative z-10 pl-12 pb-10 opacity-60">
+          <div class="absolute left-[12px] top-1 w-6 h-6 rounded-full bg-lacivert/10 border-4 border-zemin flex items-center justify-center text-lacivert/40">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 class="font-bold text-lacivert/50 text-sm">Madde 21-30: Sorumluluk</h3>
+          <p class="text-xs font-medium text-lacivert/30 mt-1">KİLİTLİ</p>
+        </div>
+      </div>
+      
+      <!-- Secondary Tabs -->
+      <div class="absolute bottom-6 left-6 right-6 bg-kart/90 backdrop-blur-md rounded-[20px] p-1.5 flex gap-1 card-shadow border border-lacivert/5">
+        <button class="flex-1 bg-lacivert text-kart font-bold text-xs py-3 rounded-2xl shadow-sm">Maddeler</button>
+        <button class="flex-1 text-lacivert/50 font-bold text-xs py-3 rounded-2xl hover:text-lacivert/80">Yoklamalar</button>
+      </div>
+    </div>
+
+    <!-- MODAL: KART AKIŞI -->
+    <div id="modal-kart-akisi" class="fixed inset-0 bg-zemin z-[60] flex flex-col transform translate-y-full transition-transform duration-300 ease-out absolute rounded-[32px] overflow-hidden">
+      <!-- Top Bar -->
+      <header class="pt-14 pb-4 px-6 flex justify-between items-center bg-kart rounded-b-[32px] card-shadow z-10">
+        <button onclick="closeModal('modal-kart-akisi')" class="w-10 h-10 flex items-center justify-center text-lacivert bg-lacivert/5 rounded-full hover:bg-lacivert/10 active:scale-95 transition-transform">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="flex-1 mx-5">
+          <div class="flex justify-between items-end mb-1.5">
+            <span class="text-[11px] font-bold text-lacivert tracking-wider">KART 5/8</span>
+          </div>
+          <div class="progress-bar-bg w-full">
+            <div class="progress-bar-fill w-[62%]"></div>
+          </div>
+        </div>
+        <button class="w-10 h-10 flex items-center justify-center text-lacivert bg-lacivert/5 rounded-full hover:bg-lacivert/10 active:scale-95 transition-transform">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        </button>
+      </header>
+      
+      <!-- Kart Yüzeyi -->
+      <div class="flex-1 px-6 py-8 flex flex-col justify-center relative">
+        <div class="bg-kart w-full aspect-[3/4] rounded-[32px] shadow-2xl border border-lacivert/5 p-8 flex flex-col relative overflow-hidden">
+          
+          <div class="text-center mb-8 relative z-10">
+            <span class="text-[10px] font-bold bg-altin/10 text-altin px-3 py-1 rounded tracking-widest mb-4 inline-block border border-altin/20">TCK MADDE 21</span>
+            <h2 class="font-serif text-3xl font-bold text-lacivert leading-tight mt-1">Kast ve Taksir</h2>
+          </div>
+          
+          <div class="flex-1 flex flex-col justify-center items-center text-center relative z-10">
+            <div class="w-24 h-24 rounded-full bg-lacivert/5 mb-6 flex items-center justify-center">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#173B6B" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <p class="text-lacivert text-sm font-medium leading-relaxed mb-4">
+              Suçun oluşması <strong class="text-altin font-bold">kasta</strong> bağlıdır. Kast, suçun kanuni tanımındaki unsurların bilerek ve istenerek gerçekleştirilmesidir.
+            </p>
+          </div>
+          
+          <div class="mt-auto relative z-10 w-full">
+            <div class="bg-altin/10 border-l-[3px] border-altin p-4 rounded-r-xl">
+              <p class="text-[10px] font-bold text-altin mb-1 tracking-widest">AKLINA ÇİVİLE</p>
+              <p class="text-xs text-lacivert font-bold">BİLEREK ve İSTENEREK = KAST</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Karar Butonları -->
+      <div class="p-6 pb-12 flex gap-3">
+        <button class="flex-1 bg-kart text-lacivert border-[1.5px] border-lacivert/10 font-bold py-4 rounded-2xl shadow-sm active:bg-lacivert/5 transition-colors text-sm">
+          Tekrar göster
+        </button>
+        <button class="flex-[1.5] bg-lacivert text-kart font-bold py-4 rounded-2xl shadow-lg active:bg-lacivert/90 transition-transform active:scale-[0.98] text-sm">
+          Öğrendim
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('text-lacivert');
+        btn.classList.add('text-lacivert/30');
+      });
+      
+      const activeBtn = document.querySelector(`.nav-btn[data-target="${tabId}"]`);
+      activeBtn.classList.remove('text-lacivert/30');
+      activeBtn.classList.add('text-lacivert');
+    }
+
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('translate-y-full');
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add('translate-y-full');
+    }
+  </script>
+</body>
+</html>

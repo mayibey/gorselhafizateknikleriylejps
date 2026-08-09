@@ -1107,3 +1107,22 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - Uygulamada süre seçenekleri 20/30/45/60, sunucu yalnız 10/15/20/30 kabul ediyordu → 45/60 seçen oda kuramıyordu. Bir ara "lig maçlarında 45 sn" değişikliği yapılmış, sunucu tarafı güncellenmemiş.
 - **İKİ KATMAN vardı:** `er_meydani_oda_kur` fonksiyonundaki kontrol + `er_meydani_oda` tablosundaki CHECK kısıtı. İlk turda yalnız fonksiyonu düzelttim, tablo kısıtı kalınca "new row for relation … violates check constraint" çıktı. İkisi de 10/15/20/30/45/60 oldu.
 - Doğrulama: 45 ve 60 sn'lik gerçek oda kaydı oluşturulup silindi. Bütün veritabanı tarandı, başka tabloda süre/soru kısıtı yok.
+
+## 9 Ağu 2026 — Gerçek liderlik tablosu + tek rumuz (sunucudan yayın, OTA'sız)
+- **Sorun:** Liderlik tablosu gerçek veri çekmiyordu — `RAKIPLER=[]` (uydurma rakipler
+  silinmiş, yerine gerçeği konmamış); tablo yalnız SEN satırını gösteriyordu. Oysa
+  son 3 günde 16 gerçek oyuncu `oyun_ilerleme`'ye kayıt düşmüştü.
+- **Sunucu:** iki RPC kuruldu (Supabase yönetim API'siyle): `oyun_siralama(anahtar)`
+  (haritalı oyunlar: bölüm/yıldız/süre) ve `oyun_rekor(anahtar)` (D/Y 60sn rekoru).
+  Rumuz önceliği: profiles.rumuz (Er Meydanı) > veri.mevzu_oyuncu_ad > Personel-XXXX.
+  Anon anahtarla çağrılır; yalnız rumuz+skor döner, kimlik sızmaz.
+- **Oyun merkezi:** ilk girişte bir kez RUMUZ EKRANI (tüm oyunlarda geçerli; Er Meydanı
+  rumuzu varsa o baskın) + `siralamaCiz`/`dSiralama` artık sunucudan gerçek listeyle
+  doluyor; sunucuya ulaşılamazsa eski yalnız-SEN görünümüne düşer.
+- **Yayın:** `oyun:uret` + `oyun-sunucuya-yukle` → damga `20260809-1143` canlıda doğrulandı.
+  Geri almak: `node scripts/oyun-sunucuya-yukle.mjs --geri <önceki damga>`.
+- **Tuzak notu:** üretici `function menu(){
+  temaUygula('menu');` kalıbını arar —
+  menü girişine kod eklerken kalıbı bozma (rumuz kapısı temaUygula'dan SONRA).
+- Ayrı iş, aynı gün: IG zamanlayıcıları PC reset sonrası ölü node yolu yüzünden 3 gün
+  sessiz patlamış; sarmalayıcı .cmd ile düzeltildi, Telegram Günün Kartı (konu 681) atıldı.

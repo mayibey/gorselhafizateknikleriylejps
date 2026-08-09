@@ -1122,6 +1122,7 @@ function meydanBaglantidanAc(){
 }
 function menu(){
   temaUygula('menu');
+  if(rumuzGerekli()){ rumuzCiz(); return; }
   bar('Oyun Merkezi', OYUNLAR.length+' oyun', false);   // elle yazınca bayatlıyordu
   // GELİŞTİRME NOTU (başkan isteği): oyunlar hâlâ elden geçiyor; kullanıcı eksik ya da
   // acemi bir şey görürse "uygulama böyle" sanmasın, yakında düzeleceğini bilsin.
@@ -1657,32 +1658,90 @@ addEventListener('resize',()=>{ if(document.getElementById('harita')) yolCiz(); 
 
 /* ---------- SIRALAMA TABLOSU ----------
    Uydurma rakip YOK; tablo yalnız SEN satırını gösterir, kayıt buluta yazılıyor.        */
-const RAKIPLER=[];   /* uydurma rakipler kaldırıldı — tablo yalnız SEN satırını gösterir */
+
+/* ---------- GERÇEK SIRALAMA (9 Ağu) ----------
+   Sunucudaki oyun_ilerleme kayıtları rpc ile okunur; rumuz önceliği sunucuda:
+   Er Meydanı rumuzu > oyun merkezinde seçilen ad > Personel-XXXX. Anon anahtar
+   halka açık okuma anahtarıdır; rpc yalnız rumuz+skor döndürür, kimlik sızmaz. */
+const SUPA_URL='https://vwmjrvolkbiofpkzzwef.supabase.co';
+const SUPA_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ3bWpydm9sa2Jpb2Zwa3p6d2VmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2MzA2OTUsImV4cCI6MjA5NzIwNjY5NX0.hWOZHC66U5gZAZImUlHRbucFl3iIvrnmvL0jXQLc2Ho';
+async function siralamaGetir(fn, anahtar){
+  const c=await fetch(SUPA_URL+'/rest/v1/rpc/'+fn,{method:'POST',
+    headers:{apikey:SUPA_ANON,Authorization:'Bearer '+SUPA_ANON,'Content-Type':'application/json'},
+    body:JSON.stringify({p_anahtar:anahtar})});
+  if(!c.ok) throw new Error('sunucu '+c.status);
+  return c.json();
+}
+function benimAd(){ return (localStorage.getItem('mevzu_oyuncu_ad')||'').trim(); }
+
+/* ---------- RUMUZ EKRANI: ilk girişte bir kez ---------- */
+function rumuzGerekli(){
+  return !benimAd() && !localStorage.getItem('mevzu_rumuz_soruldu');
+}
+function rumuzCiz(){
+  bar('Rumuzunu Seç','tüm oyunlarda geçerli',false);
+  G().innerHTML=`
+    <div class="kaynak" style="margin-bottom:10px"><div class="rf">SIRALAMADA BU AD GÖRÜNÜR</div>
+      <div class="mt">Liderlik tablolarında diğer adaylarla bu rumuzla yarışırsın.
+      Er Meydanı'nda rumuzun varsa o geçerli olur.</div></div>
+    <input id="rumuzGirdi" maxlength="16" placeholder="örn. Bozkurt07"
+      style="width:100%;box-sizing:border-box;padding:14px;border-radius:13px;border:1px solid var(--kenar);
+      font:inherit;font-size:16px;background:var(--kart);color:var(--metin)">
+    <button class="btn" id="rumuzKaydet" style="margin-top:10px">Kaydet ve oyna</button>
+    <button class="btn hafif" id="rumuzAtla" style="margin-top:7px">Şimdilik atla</button>`;
+  const bitir=()=>{ try{localStorage.setItem('mevzu_rumuz_soruldu','1');}catch(e){} menu(); };
+  document.getElementById('rumuzKaydet').onclick=()=>{
+    const ad=(document.getElementById('rumuzGirdi').value||'').trim().slice(0,16);
+    if(!ad){ document.getElementById('rumuzGirdi').focus(); return; }
+    try{ localStorage.setItem('mevzu_oyuncu_ad',ad); }catch(e){}
+    bitir();
+  };
+  document.getElementById('rumuzAtla').onclick=bitir;
+}
+
+const RAKIPLER=[];   /* uydurma rakipler kaldırıldı */
 function siralamaCiz(){
   const benBolum=Object.keys(ilerlemeOku()).length;
-  const ben={ad:'SEN', bolum:benBolum, sn:sureToplam(), yildiz:yildizToplam(), ben:true};
-  // Rakipler her oyunda aynı listeden gelir; o oyunun bölüm sayısını aşamazlar.
-  const tavan=(BOLUM.length||bolumler().length);
-  const rakip=RAKIPLER.map(r=>({...r, bolum:Math.min(r.bolum,tavan),
-    yildiz:Math.min(r.yildiz, Math.min(r.bolum,tavan)*3)}));
-  // Sıralama: önce bölüm sayısı, eşitse toplam süre (az olan önde)
-  const liste=[...rakip, ben].sort((a,b)=> b.bolum-a.bolum || (a.sn||1e9)-(b.sn||1e9));
-  const madalya=['🥇','🥈','🥉'];
   bar(HRT.ad+' · Sıralama','bölüm · süre',true);
-  G().innerHTML=`
-    <div class="aciklamaS">Sıralama <b>bölüm sayısına</b> göre; eşitlik olursa <b>toplam süre</b> belirler.</div>
-    <div style="display:flex;flex-direction:column;gap:7px">
-      ${liste.map((x,i)=>`<div class="siraSat${x.ben?' ben':''}">
-        <span class="sira${i<3?' madalya':''}">${i<3?madalya[i]:i+1}</span>
-        <span class="kim">${x.ad}<span class="alt">${x.yildiz} yıldız</span></span>
-        <span class="deger">${x.bolum} bölüm<span class="alt">${sureYaz(x.sn)}</span></span>
-      </div>`).join('')}
-    </div>
-    ${benBolum?'':'<div class="aciklamaS" style="text-align:center">Henüz bölüm bitirmedin — bir bölüm oyna, tabloya gir.</div>'}
-    <div class="kaynak"><div class="rf">Nasıl işler</div><div class="mt">İlerlemen buluta kaydedilir;
-      cihaz değiştirsen de kaybolmaz.</div></div>
-    <button class="btn hafif" id="sGeri">🗺️ Haritaya dön</button>`;
-  $('#sGeri').onclick=haritaCiz;
+  G().innerHTML='<div class="aciklamaS">Sıralama yükleniyor…</div>';
+  siralamaGetir('oyun_siralama', HRT.anahtar).then(liste=>{
+    const ben=benimAd();
+    let benVar=false;
+    const satirlar=liste.map(x=>{
+      const b = ben && x.rumuz===ben; if(b) benVar=true;
+      return {ad:x.rumuz, bolum:x.bolum, yildiz:x.yildiz, sn:x.sn, ben:b};
+    });
+    // Sunucu kaydın henüz düşmediyse yerel SEN satırını araya koy
+    if(!benVar && benBolum) satirlar.push({ad:ben||'SEN', bolum:benBolum, sn:sureToplam(), yildiz:yildizToplam(), ben:true});
+    satirlar.sort((a,b)=> b.bolum-a.bolum || (a.sn||1e9)-(b.sn||1e9));
+    const madalya=['🥇','🥈','🥉'];
+    G().innerHTML=`
+      <div class="aciklamaS">GERÇEK adaylarla yarışıyorsun — sıralama <b>bölüm sayısına</b> göre; eşitlikte <b>toplam süre</b>.</div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        ${satirlar.map((x,i2)=>`<div class="siraSat${x.ben?' ben':''}">
+          <span class="sira${i2<3?' madalya':''}">${i2<3?madalya[i2]:i2+1}</span>
+          <span class="kim">${x.ben?'SEN · ':''}${x.ad}<span class="alt">${x.yildiz} yıldız</span></span>
+          <span class="deger">${x.bolum} bölüm<span class="alt">${sureYaz(x.sn)}</span></span>
+        </div>`).join('')||'<div class="aciklamaS" style="text-align:center">Bu oyunda henüz bölüm bitiren yok — ilk sen ol!</div>'}
+      </div>
+      ${benBolum?'':'<div class="aciklamaS" style="text-align:center">Henüz bölüm bitirmedin — bir bölüm oyna, tabloya gir.</div>'}
+      <div class="kaynak"><div class="rf">Nasıl işler</div><div class="mt">İlerlemen buluta kaydedilir;
+        tablo gerçek adayların kayıtlarından gelir.</div></div>
+      <button class="btn hafif" id="sGeri">🗺️ Haritaya dön</button>`;
+    document.getElementById('sGeri').onclick=haritaCiz;
+  }).catch(()=>{
+    // sunucuya ulaşılamadı → eski yalnız-SEN görünümü
+    const ben={ad:benimAd()||'SEN', bolum:benBolum, sn:sureToplam(), yildiz:yildizToplam(), ben:true};
+    G().innerHTML=`
+      <div class="aciklamaS">Sunucuya ulaşılamadı — yalnız kendi ilerlemeni görüyorsun.</div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div class="siraSat ben"><span class="sira madalya">🥇</span>
+          <span class="kim">${ben.ad}<span class="alt">${ben.yildiz} yıldız</span></span>
+          <span class="deger">${ben.bolum} bölüm<span class="alt">${sureYaz(ben.sn)}</span></span></div>
+      </div>
+      <button class="btn hafif" id="sGeri">🗺️ Haritaya dön</button>`;
+    document.getElementById('sGeri').onclick=haritaCiz;
+  });
 }
 
 function bolumBasla(no){
@@ -2048,20 +2107,30 @@ function dRekorOku(){ try{ return +(localStorage.getItem(DY_REKOR)||0); }catch{ 
 const DY_RAKIP=[];   /* uydurma rakipler kaldırıldı — yalnız kendi rekorun */
 function dSiralama(){
   const rekor=dRekorOku();
-  const liste=[...DY_RAKIP,{ad:'SEN',d:rekor,ben:true}].sort((a,b)=>b.d-a.d);
-  const madalya=['🥇','🥈','🥉'];
   bar('Doğru mu Yanlış mı · Sıralama','60 sn rekoru',true);
-  G().innerHTML=`<div class="aciklamaS">Sıralama <b>60 saniyede yapılan doğru sayısına</b> göre. Senin rekorun: <b>${rekor}</b></div>
-    <div style="display:flex;flex-direction:column;gap:7px">
-      ${liste.map((x,i)=>`<div class="siraSat${x.ben?' ben':''}">
-        <span class="sira${i<3?' madalya':''}">${i<3?madalya[i]:i+1}</span>
-        <span class="kim">${x.ad}</span>
-        <span class="deger">${x.d} doğru</span></div>`).join('')}
-    </div>
-    <div class="kaynak"><div class="rf">Nasıl işler</div><div class="mt">Rekorun buluta kaydedilir;
-      cihaz değiştirsen de kaybolmaz.</div></div>
-    <button class="btn hafif" id="dGeri">↩ Sonuca dön</button>`;
-  $('#dGeri').onclick=dSon;
+  G().innerHTML='<div class="aciklamaS">Sıralama yükleniyor…</div>';
+  const ciz=(liste)=>{
+    const ben=benimAd();
+    let benVar=false;
+    const satirlar=liste.map(x=>{ const b=ben&&x.rumuz===ben; if(b) benVar=true;
+      return {ad:x.rumuz,d:x.rekor,ben:b}; });
+    if(!benVar && rekor) satirlar.push({ad:ben||'SEN',d:rekor,ben:true});
+    satirlar.sort((a,b)=>b.d-a.d);
+    const madalya=['🥇','🥈','🥉'];
+    G().innerHTML=`<div class="aciklamaS">GERÇEK adaylarla yarışıyorsun — <b>60 saniyede doğru sayısı</b>. Senin rekorun: <b>${rekor}</b></div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        ${satirlar.map((x,i2)=>`<div class="siraSat${x.ben?' ben':''}">
+          <span class="sira${i2<3?' madalya':''}">${i2<3?madalya[i2]:i2+1}</span>
+          <span class="kim">${x.ben?'SEN · ':''}${x.ad}</span>
+          <span class="deger">${x.d} doğru</span></div>`).join('')||'<div class="aciklamaS" style="text-align:center">Henüz rekor kıran yok — ilk sen ol!</div>'}
+      </div>
+      <div class="kaynak"><div class="rf">Nasıl işler</div><div class="mt">Rekorun buluta kaydedilir;
+        tablo gerçek adayların rekorlarından gelir.</div></div>
+      <button class="btn hafif" id="dGeri">↩ Sonuca dön</button>`;
+    $('#dGeri').onclick=dSon;
+  };
+  siralamaGetir('oyun_rekor','mevzu_dy_rekor').then(ciz)
+    .catch(()=>ciz(rekor?[{rumuz:benimAd()||'SEN',rekor:rekor}]:[]));
 }
 function dSon(){
   const rekor=dRekorOku(), yeniRekor=dD>rekor;
