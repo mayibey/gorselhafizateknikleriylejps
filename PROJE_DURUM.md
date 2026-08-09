@@ -1195,3 +1195,13 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   1.0.40–43 arası dağınık; paket 1.0.40/41/42'ye de basıldı (kod uykuda, bayraklı).
   Telefon sürümü sunucuya kaydedilmiyor — "sürüm takibi" hâlâ yapılacaklar listesinde.
 - **AÇIK KARAR:** genel Tatbikat girişi nereye? (Önerim: Karargah, geri sayım altı satır.)
+
+## 9 Ağu 2026 (8) — Ara'ya geri tuşu + Kaldığın Yer kartı Karargah'a
+- **Ara geri/kaydırma:** /ara gizli SEKME olduğundan push'lanınca geri oku ve iOS
+  kenar-jesti yoktu → aynı ekran kök yığında da açılıyor (`app/arama.tsx` re-export;
+  ara.tsx `usePathname()==='/arama'` ise Screen'e onGeri verir). Bayraklı Mevzuat
+  kutusu /arama'yı açar; herkesin Karargah büyüteci /ara olarak kaldı.
+- **Kaldığın Yer:** Mevzuat üstündeki kompakt Devam kartı bayraklıda kalktı, yerine
+  Karargah'ta geri sayımın altında `KaldiginYerKarti` (components/karargah/kaldigin-yer.tsx,
+  kendi veri hattı, çalışma yoksa görünmez). Mükerrerlik bitti.
+- OTA production ARTIK 5 runtime'a: 1.0.40–1.0.44 (Ahmet Samet eski sürümde olabilir).
