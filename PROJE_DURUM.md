@@ -1139,3 +1139,12 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - **OTA:** production, runtime 1.0.44, android+ios (update group cea10e83). Önce
   `icerik:manifest` çalıştırıldı (1511 görsel/1512 ses manifest-only), tsc 0 hata.
 - Ayrıca: ajan odası sayfaları anahtar kilidine alındı (?giris=... bir kez, çerezle kalıcı).
+
+## 9 Ağu 2026 (3) — Talim → Mevzuat (kişisel bayrakla, yalnız başkanda)
+- Gece kararı K4'ün ilk uygulaması: `ozellik_kisi` bayrağı (`talim-mevzuata`) açık olan
+  kullanıcıda Talim sekmesi bardan kalkar (href:null, rota yaşar) → DÖRT sekme; Mevzuat'ın
+  üstünde altın "Talim — Deneme Sınavları" giriş kartı belirir (/tatbikat'a gider).
+- Genel mekanizma: `src/lib/ozellik.ts` (kisiselOzellikAcikMi / useKisiselOzellik) —
+  `uygulama_ayar.ozellik_kisi` = {"<uid>": ["bayrak", ...]}. Kayıt yoksa davranış aynen eski.
+- Bayrak yalnız başkanda (98be2c62...) açıldı; OTA production 1.0.44 android+ios
+  (update group 97874ff0). Beğenilirse bayrak herkese açılabilir ya da kalıcı koda alınır.

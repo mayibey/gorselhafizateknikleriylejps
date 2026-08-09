@@ -3,6 +3,7 @@ import { Tabs } from 'expo-router';
 import { StyleSheet, View, type ColorValue } from 'react-native';
 
 import { FontFamily, Palette } from '@/constants/theme';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
@@ -49,6 +50,9 @@ const ikonStil = StyleSheet.create({
 
 /** Krom: krem zemin, aktif sekme lacivert, pasif soluk. Er Meydanı ortada, altın vurgulu. */
 export default function TabsLayout() {
+  // GECE KARARI K4 (kişiye özel deneme): dört sekme — Talim bardan kalkar, Mevzuat'ın
+  // içinden ulaşılır. Bayrak yalnız başkanda açık; kapalıyken bugünkü beş sekme aynen.
+  const talimMevzuata = useKisiselOzellik('talim-mevzuata');
   return (
     <Tabs
       screenOptions={{
@@ -71,10 +75,15 @@ export default function TabsLayout() {
         name="er-meydani"
         options={{ title: 'Oyunlar', tabBarIcon: oyunlarIcon() }}
       />
-      {/* Talim (kanun bazlı deneme/alıştırma) — 25 müşterek kanunun küratörlü soruları. */}
+      {/* Talim (kanun bazlı deneme/alıştırma) — 25 müşterek kanunun küratörlü soruları.
+          Bayrak açıkken bardan gizlenir (href:null) ama rota yaşar → Mevzuat'tan açılır. */}
       <Tabs.Screen
         name="tatbikat"
-        options={{ title: 'Talim', tabBarIcon: icon('target') }}
+        options={
+          talimMevzuata
+            ? { href: null, title: 'Talim' }
+            : { title: 'Talim', tabBarIcon: icon('target') }
+        }
       />
       <Tabs.Screen name="sicil" options={{ title: 'Evsaf', tabBarIcon: icon('account') }} />
       {/* Ara — bar'dan gizli (href:null); üstteki büyüteç ikonundan açılır. */}

@@ -13,6 +13,7 @@ import { useBrans } from '@/lib/brans-context';
 import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
 import { ICERIK_TABANI } from '@/constants/config';
 import { KILIT_AKTIF, ucretsizKanun } from '@/constants/urunler';
@@ -43,6 +44,8 @@ export default function MevzuatScreen() {
 }
 
 function MevzuatIcerik() {
+  // GECE KARARI K4 (kişiye özel deneme): Talim sekmesi kalkınca denemelerin kapısı burası.
+  const talimBurada = useKisiselOzellik('talim-mevzuata');
   const router = useRouter();
   const { brans } = useBrans();
   const { rutbe } = useRutbe();
@@ -333,6 +336,24 @@ function MevzuatIcerik() {
         <DurumKutu ikon="book-open-variant" baslik="Yükleniyor…" aciklama="" />
       ) : (
         <>
+          {/* TALİM GİRİŞİ (bayraklı): sekme bardan kalkınca denemeler buradan açılır. */}
+          {talimBurada ? (
+            <Pressable style={st.talimKart} onPress={() => router.push('/tatbikat')}>
+              <View style={st.talimRoz}>
+                <MaterialCommunityIcons name="target" size={22} color={Palette.lacivert} />
+              </View>
+              <View style={st.talimYazi}>
+                <AppText variant="govde" bold color="lacivert">
+                  Talim — Deneme Sınavları
+                </AppText>
+                <AppText variant="kucuk" color="solukMetin">
+                  Kanun bazlı denemeler; kartları bitirdiğin kanunun sınavı açılır.
+                </AppText>
+              </View>
+              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinKoyu} />
+            </Pressable>
+          ) : null}
+
           {/* Devam Et — YALNIZ "Tümü" görünümünde (filtre/favori seçiliyken gizli → hero
               filtreden bağımsız olduğu için "kanun her sekmede görünüyor" karışıklığı olmaz). */}
           {/* A2 — BURADAN BAŞLA: hiç çalışmamış kullanıcıya ücretsiz kanunu tek dokunuşla açan
@@ -831,6 +852,27 @@ function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k:
 }
 
 const st = StyleSheet.create({
+  talimKart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.altin,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: Spacing.two,
+    marginBottom: Spacing.two,
+  },
+  talimRoz: {
+    width: 40,
+    height: 40,
+    borderRadius: Radius.s,
+    backgroundColor: Palette.altin,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  talimYazi: { flex: 1, gap: 2 },
+
   kitapSatir: {
     flexDirection: 'row',
     alignItems: 'center',
