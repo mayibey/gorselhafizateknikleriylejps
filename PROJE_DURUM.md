@@ -1238,3 +1238,24 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - KALAN (gece kararlarından): patika kapsam şeffaflığı · kart akışı (ses sürpriz/düğme adı/
   yüzde/bitiş soruları) · oyunlar (dikey düzen, zayıf köprüsü, ilk tur açık) · E2 takdir
   PAYLAŞ · E3 seri gurur dili · S3 acele dili · S1 erken indirim (BAŞKAN KARARI bekliyor).
+
+## 10 Ağu 2026 (gece, otonom) — Gece kararlarının TAMAMI uygulandı (bayraklı; başkan+Ahmet)
+Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahmet'e."
+- **Kart akışı:** A2 ses ilk kartta bir kez sorulur (`lib/ses-tercih.ts`, mp3+TTS ortak;
+  bayraksızda otomatik sürer) + "Anlatım bitti" modalı bayraklıda ÖLÜ + keep-awake artık
+  sessiz incelemede de (akis mount boyunca). A3 "Tekrar Hatırlat"→"Tekrar göster".
+  A4 "Kart X/Y" + çubuk yalnız cevaplanandan dolar. A5 bitiş soruları oturumun
+  kartlarıyla eşleşenlerden (eslesenKartIdleri; eşleşme yoksa eski havuz).
+- **Patika:** M5 düğüme basınca "Yalnız bu bölüm / Buradan sürdür" seçimi (akis `kapsam=bolum`
+  → getCardsByBolum). M6 kart parametreli kısayol (arama/Günün Maddesi) TEK MADDE oturumu.
+- **Mevzuat:** M3 kilitli kanunda önce değer paneli (Alert), sonra istenirse paywall.
+- **Evsaf:** E1 kişisel bilgiler varsayılan GİZLİ (•••• + Göster/Gizle). E2 Takdir belgesine
+  PAYLAŞ (RN Share, metin; ad onayı sorulur — view-shot native gerektirdiğinden görsel değil).
+  E3 seri kesikse "Yeni nöbet bugün başlar".
+- **Satış:** S2 başlık "Tam Erişim" + taç→kalkan-yıldız. S3 saniyeli geri sayım bayraklıda yok,
+  sakin "(kampanya)". S1 (erken indirim) BAŞKAN KARARI BEKLİYOR — dokunulmadı.
+- **Oyunlar:** G1 dikey kategoriler + G4 hepsi açık ZATEN CANLIDaydı (karar mevcut düzeni
+  onaylıyor; kilit gelince "ilk tur bedava" kuralı hatırlanacak). G5'ten güvenli parça:
+  her doğruda haptik (konfetiAt) — TASLAK kanalıyla yalnız başkan+Ahmet (damga 20260810-0124).
+  Oyunun ses motoru yok → "ses tercihi/susturucu" konusu doğmadı.
+- OTA 5 runtime (1.0.40-44). Ahmet Samet: ozellik_kisi + oyun_surum_kisi her ikisinde.
