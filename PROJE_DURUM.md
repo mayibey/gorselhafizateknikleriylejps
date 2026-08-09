@@ -1157,3 +1157,17 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - Hepsi `talim-mevzuata` bayrağının arkasında — yalnız başkanda görünür.
 - OTA production **runtime 1.0.43** (filonun gerçek sürümü!). Ders: app.json 1.0.44'tü,
   ilk iki OTA kimseye ulaşmamıştı; artık OTA öncesi `eas build:list` ile filo sürümüne bak.
+
+## 9 Ağu 2026 (5) — Devam mini kartında bölünen kanun numarası (523/7) — commit 7a6032a
+- Başkan ekran görüntüsüyle bildirdi: kompakt Devam kartındaki 40px monogramda "5237"
+  iki satıra bölünüyordu. `Monogram` metnine `numberOfLines=1 + adjustsFontSizeToFit`
+  (min ölçek 0.5) — numara artık sığmazsa puntoyu küçültür, asla bölünmez.
+- Monogram ortak bileşen ama görünür etkisi yalnız bayraklı kompakt kartta (büyük
+  kutularda numara zaten sığıyor) → demir kurala uygun, fiilen yalnız başkanda.
+- OTA production runtime **1.0.43 + 1.0.44** (ikisine birden; başkanın cihazı 1.0.43,
+  anlık-denetleme bayrağı sayesinde ~30 sn'de kendiliğinden uygulanır, kapat-aç gerekmez).
+- Aynı gün bot tarafı (D:\jsps-community-bot): (a) model yedek zinciri gerçekten çalışır
+  hale geldi — 30 sn fetch zaman sınırı + her-hatada-düş (commit 91a44f8, canlı test:
+  Pro 503 → Flash-Lite cevapladı); (b) konuşma hafızası RAM→SQLite (commit d81a967) —
+  pm2 restart amnezisi bitti ("Cevap anahtarı D" vakası); (c) yanlış e-imza cevabı
+  düzeltildi (doğrusu D, gruba mesaj 1037) + saçma "tanık hakkı" mesajı silindi (1036).
