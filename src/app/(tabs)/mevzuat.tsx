@@ -369,23 +369,8 @@ function MevzuatIcerik() {
         <DurumKutu ikon="book-open-variant" baslik="Yükleniyor…" aciklama="" />
       ) : (
         <>
-          {/* TALİM GİRİŞİ (bayraklı): sekme bardan kalkınca denemeler buradan açılır. */}
-          {talimBurada ? (
-            <Pressable style={st.talimKart} onPress={() => router.push('/tatbikat')}>
-              <View style={st.talimRoz}>
-                <MaterialCommunityIcons name="target" size={22} color={Palette.lacivert} />
-              </View>
-              <View style={st.talimYazi}>
-                <AppText variant="govde" bold color="lacivert">
-                  Talim — Deneme Sınavları
-                </AppText>
-                <AppText variant="kucuk" color="solukMetin">
-                  Kanun bazlı denemeler; kartları bitirdiğin kanunun sınavı açılır.
-                </AppText>
-              </View>
-              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinKoyu} />
-            </Pressable>
-          ) : null}
+          {/* Üst Talim/Genel Denemeler kartı KALDIRILDI (başkan, 9 Ağu akşam) —
+              denemelere giriş her kanunun kendi "Talim Yap" düğmesinden. */}
 
           {/* Devam Et — YALNIZ "Tümü" görünümünde (filtre/favori seçiliyken gizli → hero
               filtreden bağımsız olduğu için "kanun her sekmede görünüyor" karışıklığı olmaz). */}
