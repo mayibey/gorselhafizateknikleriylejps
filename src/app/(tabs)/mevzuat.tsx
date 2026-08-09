@@ -798,7 +798,7 @@ function KanunSatir({
                 e.stopPropagation();
                 // Başkan kararı (9 Ağu): "önce tüm kartları bitir" şartı YOK — talim her zaman açık.
                 if (testAdedi <= 1) {
-                  router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: '1' } });
+                  router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: '0' } });
                   return;
                 }
                 setTestlerAcik((a) => !a);
@@ -815,21 +815,22 @@ function KanunSatir({
         </View>
       ) : null}
       {talimAc && !kilitli && testlerAcik
-        ? Array.from({ length: testAdedi }, (_, x) => x + 1).map((no) => (
+        ? Array.from({ length: testAdedi }, (_, indeks) => indeks).map((indeks) => (
             <Pressable
-              key={no}
+              key={indeks}
               onPress={(e) => {
                 e.stopPropagation();
-                router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(no) } });
+                // sinav.tsx `test` parametresini 0-TABANLI bekler (testNum).
+                router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(indeks) } });
               }}
               style={({ pressed }) => [st.denemeSatir, pressed && st.pressed]}
               accessibilityRole="button"
-              accessibilityLabel={`Test ${no}`}>
+              accessibilityLabel={`Test ${indeks + 1}`}>
               <AppText variant="kucuk" bold color="anaMetin">
-                Test {no}
+                Test {indeks + 1}
               </AppText>
               <AppText variant="etiket" color="solukMetin">
-                {testSoruSayisi(law.id, no)} soru
+                {testSoruSayisi(law.id, indeks)} soru
               </AppText>
               <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
             </Pressable>
