@@ -730,6 +730,48 @@ function KanunSatir({
           ? 'En son dün çalıştın'
           : `En son ${sonGun} gün önce çalıştın`;
 
+  // İndir + Başla/Devam (veya Kilidi Aç) kümesi — bayraklı modda kartın ÜST satırında,
+  // normal modda eskisi gibi alt satırda. Tek tanım, iki yerleşim.
+  const aksiyonKumesi = kilitli ? (
+    <View style={st.satirSag}>
+      <View style={st.kilitChip}>
+        <MaterialCommunityIcons name="lock" size={15} color={Palette.altinKoyu} />
+        <AppText variant="etiket" bold color="altinMetin">
+          Kilidi Aç
+        </AppText>
+      </View>
+      <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+    </View>
+  ) : (
+    <>
+      {klasorAdi ? (
+        <KanunIndirButon
+          durum={indirme.durum}
+          yuzde={indirme.yuzde}
+          inenBayt={indirme.inenBayt}
+          tahminiBayt={kanunTahminiBoyut(klasorAdi)}
+          onIndir={indirme.indir}
+          onSil={indirme.sil}
+        />
+      ) : null}
+      {tam ? (
+        <View style={st.satirSag}>
+          <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
+        </View>
+      ) : (
+        <View style={st.satirSag}>
+          <View style={st.baslaBtn}>
+            <MaterialCommunityIcons name="play" size={15} color={Palette.altinKoyu} />
+            <AppText variant="etiket" bold color="altinMetin">
+              {bos ? 'Başla' : 'Devam'}
+            </AppText>
+          </View>
+          <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+        </View>
+      )}
+    </>
+  );
+
   return (
     <Pressable
       style={({ pressed }) => [st.satir, pressed && st.pressed]}
@@ -744,12 +786,20 @@ function KanunSatir({
         </AppText>
       </View>
 
-      {ucretsiz ? (
-        <View style={st.ucretsizChip}>
-          <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
-          <AppText variant="etiket" bold color="beyaz">
-            ÜCRETSİZ
-          </AppText>
+      {/* Bayraklı modda İndir + Devam kümesi BURAYA (üste) taşındı (başkan, 9 Ağu akşam:
+          "yukarı taşısak alan biraz daha küçülür") — alttaki ayrı satır kalkar, kart kısalır. */}
+      {ucretsiz || talimAc ? (
+        <View style={st.ustAksiyonSatir}>
+          {ucretsiz ? (
+            <View style={st.ucretsizChip}>
+              <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
+              <AppText variant="etiket" bold color="beyaz">
+                ÜCRETSİZ
+              </AppText>
+            </View>
+          ) : null}
+          {talimAc ? <View style={st.ustAksiyonBosluk} /> : null}
+          {talimAc ? aksiyonKumesi : null}
         </View>
       ) : null}
 
@@ -774,9 +824,9 @@ function KanunSatir({
         </AppText>
       </View>
 
-      {/* ALT SAĞ: kalp + Başla/Devam/tik (kartın sağ altında). */}
-      <View style={st.satirAlt}>
-        {!talimAc ? (
+      {/* ALT SAĞ: kalp + Başla/Devam/tik — yalnız NORMAL modda (bayraklıda küme üstte). */}
+      {!talimAc ? (
+        <View style={st.satirAlt}>
           <Pressable
             onPress={(e) => {
               e.stopPropagation();
@@ -792,47 +842,9 @@ function KanunSatir({
               color={favori ? Palette.altin : Palette.solukMetin}
             />
           </Pressable>
-        ) : null}
-        {kilitli ? (
-          <View style={st.satirSag}>
-            <View style={st.kilitChip}>
-              <MaterialCommunityIcons name="lock" size={15} color={Palette.altinKoyu} />
-              <AppText variant="etiket" bold color="altinMetin">
-                Kilidi Aç
-              </AppText>
-            </View>
-            <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
-          </View>
-        ) : (
-          <>
-            {klasorAdi ? (
-              <KanunIndirButon
-                durum={indirme.durum}
-                yuzde={indirme.yuzde}
-                inenBayt={indirme.inenBayt}
-                tahminiBayt={kanunTahminiBoyut(klasorAdi)}
-                onIndir={indirme.indir}
-                onSil={indirme.sil}
-              />
-            ) : null}
-            {tam ? (
-              <View style={st.satirSag}>
-                <MaterialCommunityIcons name="check-circle" size={24} color={Palette.altinKoyu} />
-              </View>
-            ) : (
-              <View style={st.satirSag}>
-                <View style={st.baslaBtn}>
-                  <MaterialCommunityIcons name="play" size={15} color={Palette.altinKoyu} />
-                  <AppText variant="etiket" bold color="altinMetin">
-                    {bos ? 'Başla' : 'Devam'}
-                  </AppText>
-                </View>
-                <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
-              </View>
-            )}
-          </>
-        )}
-      </View>
+          {aksiyonKumesi}
+        </View>
+      ) : null}
 
       {/* ÇALIŞ + TALİM YAP (bayraklı — başkan emri): her kanunun altında iki düğme. */}
       {talimAc && !kilitli ? (
@@ -1271,6 +1283,13 @@ const st = StyleSheet.create({
   baslaKart: {
     borderColor: Palette.yesil,
   },
+  // Bayraklı mod: ÜCRETSİZ rozeti (solda) + İndir/Devam kümesi (sağda) tek üst satırda.
+  ustAksiyonSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  ustAksiyonBosluk: { flex: 1 },
   ucretsizChip: {
     flexDirection: 'row',
     alignItems: 'center',
