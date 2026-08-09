@@ -47,6 +47,22 @@ async function ayarYaz(deger) {
   });
   return { durum: r.status, govde: await r.text() };
 }
+async function kisiAyarYaz(deger) {
+  const r = await fetch(`${URL_}/rest/v1/uygulama_ayar`, {
+    method: 'POST',
+    headers: { ...H, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates,return=representation' },
+    body: JSON.stringify({ anahtar: 'oyun_surum_kisi', deger }),
+  });
+  return { durum: r.status, govde: await r.text() };
+}
+async function kisiAyarOku() {
+  const r = await fetch(`${URL_}/rest/v1/uygulama_ayar?anahtar=eq.oyun_surum_kisi&select=deger`, { headers: H });
+  const d = await r.json();
+  return Array.isArray(d) && d[0] ? d[0].deger : null;
+}
+// Başkanın hesabı (mayibey@gmail.com) — kişiye özel kanal bu id'ye bağlanır.
+const BASKAN_ID = '98be2c62-4309-4960-9ef3-0a2e032d2f4a';
+
 async function ayarOku() {
   const r = await fetch(`${URL_}/rest/v1/uygulama_ayar?anahtar=eq.oyun_surum&select=deger`, { headers: H });
   const d = await r.json();
@@ -64,6 +80,31 @@ if (komut === '--liste') {
   console.log('güncel işaretçi:', (await ayarOku()) ?? '(boş → gömülü sürüm kullanılıyor)');
   console.log('kovadaki sürümler:');
   for (const x of d) console.log(`  ${x.name}  ${(x.metadata?.size / 1024).toFixed(0)} KB  ${x.created_at?.slice(0, 16)}`);
+  process.exit(0);
+}
+
+if (komut === '--kisi') {
+  const damga = process.argv[3];
+  if (!damga) { console.log('kullanım: --kisi <damga>  (o damgayı YALNIZ başkanın cihazına verir)'); process.exit(1); }
+  console.log(JSON.stringify(await kisiAyarYaz(JSON.stringify({ [BASKAN_ID]: damga }))).slice(0, 200));
+  console.log('KİŞİYE ÖZEL SÜRÜM →', damga, '(yalnız başkan; genel işaretçi değişmedi:', (await ayarOku()) ?? '(boş)', ')');
+  process.exit(0);
+}
+
+if (komut === '--kisi-kapat') {
+  console.log(JSON.stringify(await kisiAyarYaz('')).slice(0, 200));
+  console.log('KİŞİYE ÖZEL KANAL BOŞALTILDI — başkan da genel sürüme döner.');
+  process.exit(0);
+}
+
+if (komut === '--onayla') {
+  const ham = (await kisiAyarOku() || '').trim();
+  let damga = null;
+  try { damga = Object.values(JSON.parse(ham))[0] || null; } catch {}
+  if (!damga) { console.log('ONAYLANACAK ÖZEL SÜRÜM YOK (oyun_surum_kisi boş).'); process.exit(1); }
+  console.log(JSON.stringify(await ayarYaz(damga)).slice(0, 200));
+  console.log(JSON.stringify(await kisiAyarYaz('')).slice(0, 200));
+  console.log('ONAYLANDI → genel işaretçi:', damga, '· özel kanal boşaltıldı.');
   process.exit(0);
 }
 
@@ -123,6 +164,13 @@ if (boyut < ASGARI_HANE) {
   console.log(`İŞARETÇİ ÇEVRİLMEDİ — sunucudaki dosya küçük görünüyor (${boyut} bayt).`);
   process.exit(1);
 }
-console.log(JSON.stringify(await ayarYaz(damga)).slice(0, 200));
-console.log(`YAYINLANDI → ${ad}  (${(boyut / 1024).toFixed(0)} KB)`);
-console.log(`Geri almak: node scripts/oyun-sunucuya-yukle.mjs --geri <önceki damga>`);
+if (komut === '--taslak') {
+  // Dosya kovaya yüklendi ama GENEL işaretçi DEĞİŞMEDİ — yalnız başkanın kanalına verildi.
+  console.log(JSON.stringify(await kisiAyarYaz(JSON.stringify({ [BASKAN_ID]: damga }))).slice(0, 200));
+  console.log(`TASLAK YAYINLANDI (yalnız başkan) → ${ad}  (${(boyut / 1024).toFixed(0)} KB)`);
+  console.log('Beğenilirse herkese: node scripts/oyun-sunucuya-yukle.mjs --onayla');
+} else {
+  console.log(JSON.stringify(await ayarYaz(damga)).slice(0, 200));
+  console.log(`YAYINLANDI → ${ad}  (${(boyut / 1024).toFixed(0)} KB)`);
+  console.log(`Geri almak: node scripts/oyun-sunucuya-yukle.mjs --geri <önceki damga>`);
+}

@@ -21,6 +21,7 @@ import { Platform } from 'react-native';
 
 import { OYUN_MERKEZI_HTML } from '../assets/oyun-merkezi-html';
 import { imzaliUrller } from '@/lib/imzali-url';
+import { supabase } from '@/lib/supabase';
 import { ayarOku } from '@/lib/uzak-ayar';
 
 export type OyunKaynak = 'gomulu' | 'onbellek' | 'uzak';
@@ -35,6 +36,30 @@ const IMZALAR = ['OYUNLAR', 'mevzuKopru', "tip:'hazir'", 'let TEST_MODU = false'
 const ASGARI_HANE = 200_000;
 /** İlk indirme için beklenecek azami süre; aşılırsa gömülüyle açılır, indirme arka planda sürer. */
 const BEKLEME_MS = 5000;
+
+/**
+ * KİŞİYE ÖZEL SÜRÜM (9 Ağu 2026, başkan kararı): yeni oyun sürümleri önce YALNIZ
+ * başkanın cihazında denenir, onaylanınca genel işaretçiye alınır. Mekanizma:
+ * `uygulama_ayar.oyun_surum_kisi` = JSON `{ "<user_id>": "<damga>" }`. Oturumdaki
+ * kullanıcının id'si haritada varsa GENEL işaretçi yerine o damga kullanılır.
+ * Kayıt yoksa/okunamazsa hiçbir şey değişmez — herkes genel sürümde kalır.
+ * ASLA hata fırlatmaz; oturum yoksa sessizce null döner.
+ */
+async function kisiyeOzelSurum(): Promise<string | null> {
+  try {
+    if (!supabase) return null;
+    const ham = (await ayarOku('oyun_surum_kisi'))?.trim();
+    if (!ham) return null;
+    const harita = JSON.parse(ham) as Record<string, string>;
+    const { data } = await supabase.auth.getUser();
+    const uid = data.user?.id;
+    if (!uid) return null;
+    const damga = harita[uid]?.trim();
+    return damga || null;
+  } catch {
+    return null;
+  }
+}
 
 function saglamMi(metin: string): boolean {
   return (
@@ -77,6 +102,9 @@ export async function oyunHtmlGetir(zorlaTazele = false): Promise<OyunHtml> {
   } catch {
     return gomulu;
   }
+  // Kişiye özel sürüm varsa genel işaretçiyi ezer (yalnız o kullanıcının cihazında).
+  const ozel = await kisiyeOzelSurum();
+  if (ozel) surum = ozel;
   if (!surum) return gomulu; // sunucu tarafı kapalı → bugünkü davranış
 
   // 1) Önbellek

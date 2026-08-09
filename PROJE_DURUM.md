@@ -1126,3 +1126,16 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   menü girişine kod eklerken kalıbı bozma (rumuz kapısı temaUygula'dan SONRA).
 - Ayrı iş, aynı gün: IG zamanlayıcıları PC reset sonrası ölü node yolu yüzünden 3 gün
   sessiz patlamış; sarmalayıcı .cmd ile düzeltildi, Telegram Günün Kartı (konu 681) atıldı.
+
+## 9 Ağu 2026 (2) — Kişiye özel oyun sürümü kanalı (başkan önce test eder)
+- **Karar:** yeni oyun/tasarım sürümleri önce YALNIZ başkanın cihazında denenir,
+  onaylanınca herkese açılır; kullanıcılar ara denemeleri hiç görmez.
+- **Mekanizma:** `uygulama_ayar.oyun_surum_kisi` = `{"<user_id>":"<damga>"}`;
+  `oyun-kaynak.ts kisiyeOzelSurum()` oturumdaki kullanıcı haritadaysa genel işaretçiyi
+  ezer. Kayıt yoksa davranış aynen eski (asla hata fırlatmaz).
+- **Betik modları** (oyun-sunucuya-yukle.mjs): `--taslak` (yükle + yalnız başkana ver,
+  genel işaretçi değişmez) · `--onayla` (özel damgayı genele al + kanalı boşalt) ·
+  `--kisi <damga>` · `--kisi-kapat`. Başkan id: 98be2c62-4309-...
+- **OTA:** production, runtime 1.0.44, android+ios (update group cea10e83). Önce
+  `icerik:manifest` çalıştırıldı (1511 görsel/1512 ses manifest-only), tsc 0 hata.
+- Ayrıca: ajan odası sayfaları anahtar kilidine alındı (?giris=... bir kez, çerezle kalıcı).
