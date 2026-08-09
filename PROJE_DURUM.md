@@ -1180,3 +1180,18 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   bayraklı modda küme ÜCRETSİZ rozetinin satırına taşındı (`ustAksiyonSatir`), alt
   satır bayraklı modda hiç çizilmiyor → her kart bir satır kısaldı. Normal mod aynen.
 - OTA production runtime 1.0.43 + 1.0.44. Hepsi bayrak arkasında, yalnız başkanda.
+
+## 9 Ağu 2026 (7) — Gece iterasyonları: satır birleştirme, tek arama, karışım tasarım
+- Hepsi `talim-mevzuata` bayraklı (başkan + Ahmet Samet ÖZER c342d164-…; ikisinde
+  `anlik-guncelleme` de açık). Commit'ler: 9e434df → aebfd4c → 83ed105.
+- **Satır birleştirme:** İndir/Devam kümesi "son çalışma" satırının sağına (elipsis emniyetli).
+- **Tek arama:** Mevzuat'taki kutu dokununca tam aramayı (/ara) açar; Karargah büyüteci
+  bayraklıda gizli. Mevzuat'ın yerel liste filtresi bayraklıda devre dışı (tam arama kapsar).
+- **Karışım tasarım (Gemini fikirlerinden aşı):** İndirildi/çöp çipi + Başla/Devam çipi
+  KALKTI → başlık satırında bulut ikonu (bulut=inmemiş, tik=inmiş, inerken %; dokununca
+  indir/sil). Çalış düğmesi dinamik: "İndir ve Başla" (inmemiş; inince OTOMATİK çalışmaya
+  girer — indirVeGir) / "Başla" (hiç çalışılmamış) / "Çalış". Kilitlide "Kilidi Aç" yerinde.
+- **OTA kapsama dersi:** Ahmet Samet 3× kapat-aç yaptı, güncelleme gelmedi → filo
+  1.0.40–43 arası dağınık; paket 1.0.40/41/42'ye de basıldı (kod uykuda, bayraklı).
+  Telefon sürümü sunucuya kaydedilmiyor — "sürüm takibi" hâlâ yapılacaklar listesinde.
+- **AÇIK KARAR:** genel Tatbikat girişi nereye? (Önerim: Karargah, geri sayım altı satır.)
