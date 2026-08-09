@@ -1066,6 +1066,8 @@ const kc=$('#konfeti'), kx=kc.getContext('2d');
 let parcalar=[];
 function konfetiKur(){kc.width=kc.clientWidth;kc.height=kc.clientHeight;}
 function konfetiAt(adet){
+  /* GECE KARARI G5: her doğruda mikro haptik (Android WebView titreşimi; iOS sessizce yok sayar). */
+  try{ if(navigator.vibrate) navigator.vibrate(15); }catch(e){}
   konfetiKur();
   const renk=getComputedStyle(document.documentElement).getPropertyValue('--ac').trim()||'#C9A227';
   const renkler=[renk,'#FFFFFF','#4CD07A','#E8C766'];
