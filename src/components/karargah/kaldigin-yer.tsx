@@ -109,6 +109,35 @@ export function KaldiginYerKarti() {
   );
 }
 
+/**
+ * GENEL TATBİKAT GİRİŞİ — Karargah (9 Ağu gece, başkan: "tatbikatı da al oraya").
+ * Talim sekmesi bardan kalkınca genel deneme sınavlarına giden kapı kalmamıştı;
+ * artık Kaldığın Yer'in altındaki bu ince satır. /tatbikat rotası yaşıyor (href:null).
+ */
+export function TatbikatGirisi() {
+  const router = useRouter();
+  return (
+    <Pressable
+      onPress={() => router.push('/tatbikat')}
+      style={({ pressed }) => [st.kart, pressed && st.basili]}
+      accessibilityRole="button"
+      accessibilityLabel="Genel Tatbikat — deneme sınavları">
+      <View style={st.monogram}>
+        <MaterialCommunityIcons name="target" size={20} color={Palette.altin} />
+      </View>
+      <View style={st.orta}>
+        <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1}>
+          Genel Tatbikat
+        </AppText>
+        <AppText variant="etiket" color="solukMetin">
+          Karma deneme sınavları — kendini dene
+        </AppText>
+      </View>
+      <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+    </Pressable>
+  );
+}
+
 const st = StyleSheet.create({
   kart: {
     flexDirection: 'row',

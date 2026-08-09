@@ -41,7 +41,7 @@ import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '@/lib/er-meydani';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
-import { KaldiginYerKarti } from '@/components/karargah/kaldigin-yer';
+import { KaldiginYerKarti, TatbikatGirisi } from '@/components/karargah/kaldigin-yer';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -450,8 +450,14 @@ export default function KarargahScreen() {
       <IndirimHatirlatma />
 
       <SinavGeriSayim />
-      {/* Bayraklı: Mevzuat'ın üstündeki "kaldığın yer" kartı buraya taşındı (başkan, 9 Ağu gece). */}
-      {aramaMevzuatta ? <KaldiginYerKarti /> : null}
+      {/* Bayraklı: Mevzuat'ın üstündeki "kaldığın yer" kartı + Genel Tatbikat girişi
+          buraya taşındı (başkan, 9 Ağu gece). */}
+      {aramaMevzuatta ? (
+        <View style={styles.karargahGiris}>
+          <KaldiginYerKarti />
+          <TatbikatGirisi />
+        </View>
+      ) : null}
 
       {/* 3 KUTU — Genel ilerleme · Nöbet serisi · Zayıf mevzi (sayacın hemen altında). */}
       <View style={styles.kutuSatir}>
@@ -921,6 +927,11 @@ function Gorev({ sayi, etiket }: { sayi: number; etiket: string }) {
 const styles = StyleSheet.create({
   pressed: {
     opacity: 0.85,
+  },
+  // Bayraklı: geri sayımın altındaki Kaldığın Yer + Genel Tatbikat ikilisi.
+  karargahGiris: {
+    gap: Spacing.two,
+    marginTop: Spacing.two,
   },
   headerIkonlar: {
     flexDirection: 'row',
