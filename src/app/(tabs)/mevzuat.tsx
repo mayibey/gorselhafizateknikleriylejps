@@ -14,6 +14,7 @@ import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { useKisiselOzellik } from '@/lib/ozellik';
+import { sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
 import { ICERIK_TABANI } from '@/constants/config';
 import { KILIT_AKTIF, ucretsizKanun } from '@/constants/urunler';
@@ -423,6 +424,7 @@ function MevzuatIcerik() {
                 favori={favoriler.has(law.id)}
                 onFavori={favoriToggle}
                 onPress={kanunaGit}
+                talimAc={talimBurada}
               />
             ))
           )}
@@ -600,6 +602,7 @@ function KanunSatir({
   favori,
   onFavori,
   onPress,
+  talimAc,
 }: {
   law: LawWithCount;
   calisilan: number;
@@ -608,17 +611,22 @@ function KanunSatir({
   favori: boolean;
   onFavori: (lawId: number) => void;
   onPress: (law: LawWithCount) => void;
+  talimAc?: boolean;
 }) {
   // Durum TAM SAYI sayımıyla (yuvarlama YOK) → filtreyle BİREBİR tutarlı (sınır
   // durumlarında çoklu/yanlış sekme sorunu biter). yüzde yalnız bar/etiket için.
   const tam = toplam > 0 && calisilan >= toplam;
   const bos = calisilan === 0;
+  const [testlerAcik, setTestlerAcik] = useState(false);
   const klasorAdi = LAW_KLASOR[law.id];
   const indirme = useKanunIndirme(klasorAdi ?? '');
   const router = useRouter();
   const { kanunErisilebilir } = useUyelik();
   // Premium kilidi: erişim yoksa satır → paywall (indir/çalış yerine). Şalter kapalıysa hep açık.
   const kilitli = !kanunErisilebilir(klasorAdi, law.blok);
+  // GECE KARARI M-K4 (bayraklı): her kanunun denemeleri kendi kartının altında.
+  const denemeVar = !!talimAc && !kilitli && sinavVarMi(law.id);
+  const testAdedi = denemeVar ? testSayisi(law.id) : 0;
   // A1 — ÜCRETSİZ ROZETİ: TCK bedava ama bunu hiçbir yer SÖYLEMİYORDU; ücretsizlik yalnızca
   // "kilit rozeti yok" olmasından anlaşılıyordu. 66 satırın 65'i kilitli olduğu için yeni
   // kullanıcı "her şey kilitli" sanıp çıkıyordu (başkan bildirdi, 7 Ağu 2026). Kilit varken
@@ -767,6 +775,77 @@ function KanunSatir({
           </>
         )}
       </View>
+
+      {/* ÇALIŞ + TALİM YAP (bayraklı — başkan emri): her kanunun altında iki düğme. */}
+      {talimAc && !kilitli ? (
+        <View style={st.ikiliButon}>
+          <Pressable
+            onPress={(e) => {
+              e.stopPropagation();
+              satiraBas();
+            }}
+            style={({ pressed }) => [st.calisBtn, pressed && st.pressed]}
+            accessibilityRole="button"
+            accessibilityLabel="Çalış">
+            <MaterialCommunityIcons name="play" size={17} color={Palette.lacivert} />
+            <AppText variant="kucuk" bold color="lacivert">
+              Çalış
+            </AppText>
+          </Pressable>
+          {sinavVarMi(law.id) ? (
+            <Pressable
+              onPress={(e) => {
+                e.stopPropagation();
+                if (!tam) {
+                  Alert.alert(
+                    'Önce kartları bitir',
+                    `Talim için kanunun tüm kartları çalışılmalı (${calisilan}/${toplam}).`,
+                  );
+                  return;
+                }
+                if (testAdedi <= 1) {
+                  router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: '1' } });
+                  return;
+                }
+                setTestlerAcik((a) => !a);
+              }}
+              style={({ pressed }) => [st.talimBtn, pressed && st.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel="Talim yap">
+              <MaterialCommunityIcons
+                name={tam ? 'target' : 'lock'}
+                size={16}
+                color={Palette.altinKoyu}
+              />
+              <AppText variant="kucuk" bold color="altinMetin">
+                Talim Yap{testAdedi > 1 ? ` · ${testAdedi}` : ''}
+              </AppText>
+            </Pressable>
+          ) : null}
+        </View>
+      ) : null}
+      {talimAc && !kilitli && testlerAcik
+        ? Array.from({ length: testAdedi }, (_, x) => x + 1).map((no) => (
+            <Pressable
+              key={no}
+              onPress={(e) => {
+                e.stopPropagation();
+                router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(no) } });
+              }}
+              style={({ pressed }) => [st.denemeSatir, pressed && st.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel={`Test ${no}`}>
+              <AppText variant="kucuk" bold color="anaMetin">
+                Test {no}
+              </AppText>
+              <AppText variant="etiket" color="solukMetin">
+                {testSoruSayisi(law.id, no)} soru
+              </AppText>
+              <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+            </Pressable>
+          ))
+        : null}
+
     </Pressable>
   );
 }
@@ -1190,6 +1269,43 @@ const st = StyleSheet.create({
     borderRadius: Radius.s,
     paddingHorizontal: Spacing.four,
     paddingVertical: Spacing.two,
+  },
+  ikiliButon: {
+    flexDirection: 'row',
+    gap: Spacing.one,
+    marginTop: Spacing.one,
+  },
+  calisBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    backgroundColor: Palette.altin,
+    borderRadius: Radius.s,
+    paddingVertical: Spacing.one + 2,
+  },
+  talimBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderWidth: 1,
+    borderColor: Palette.altin,
+    borderRadius: Radius.s,
+    paddingVertical: Spacing.one + 2,
+  },
+  denemeSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: Palette.altinSolukYuzey,
+    borderRadius: Radius.s,
+    paddingVertical: Spacing.one,
+    paddingHorizontal: Spacing.two,
+    marginTop: 4,
   },
   pressed: {
     opacity: 0.7,

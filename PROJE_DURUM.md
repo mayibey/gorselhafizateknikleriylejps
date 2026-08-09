@@ -1148,3 +1148,12 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   `uygulama_ayar.ozellik_kisi` = {"<uid>": ["bayrak", ...]}. Kayıt yoksa davranış aynen eski.
 - Bayrak yalnız başkanda (98be2c62...) açıldı; OTA production 1.0.44 android+ios
   (update group 97874ff0). Beğenilirse bayrak herkese açılabilir ya da kalıcı koda alınır.
+
+## 9 Ağu 2026 (4) — Kanun kartında "Çalış + Talim Yap" düğmeleri (bayraklı)
+- Başkan emri: Mevzuat'taki üst toplu Talim kartı yerine HER kanun kartının altında
+  iki düğme: **Çalış** (patikaya, mevcut satiraBas) ve **Talim Yap** (o kanunun denemesi;
+  kartlar bitmemişse kilit + uyarı; birden çok test varsa mini listeye açılır).
+- Üstteki kart "Genel Denemeler — Tatbikat"a dönüştü (genel denemeler erişimi kaybolmasın).
+- Hepsi `talim-mevzuata` bayrağının arkasında — yalnız başkanda görünür.
+- OTA production **runtime 1.0.43** (filonun gerçek sürümü!). Ders: app.json 1.0.44'tü,
+  ilk iki OTA kimseye ulaşmamıştı; artık OTA öncesi `eas build:list` ile filo sürümüne bak.
