@@ -1228,3 +1228,13 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   Karargah'takiyle aynı seçim + premium sızıntı kapısı; inmemiş kanunda patikaya düşer).
 - Eski hâlleri kodda aynen duruyor (bayrak kapalı herkes eskisini görüyor) — geri almak
   bayrak satırı silmek kadar kolay. OTA 5 runtime.
+
+## 10 Ağu 2026 — Gece kararları paket 2 (bayraklı)
+- M2: başlanmamış kanunda "0/31" + boş çubuk + %0 YOK → "31 kart · sesli anlatım".
+- M3: kilitli kanunda "Kilidi Aç" → altın "Tam Erişim'de" rozeti (değer paneli SONRAYA).
+- M7: sabit şeritte gerçek adlar — "Müşterek Mevzuat / Jandarma Mevzuatı" (branşa göre).
+- E1: Evsaf'ta Ayarlar satırı → sağ üst dişli; Hata Bildir + Destek → en altta YARDIM grubu.
+- Kompakt sayaç taşması fixi (başvuru ikinci satır). OTA 5 runtime.
+- KALAN (gece kararlarından): patika kapsam şeffaflığı · kart akışı (ses sürpriz/düğme adı/
+  yüzde/bitiş soruları) · oyunlar (dikey düzen, zayıf köprüsü, ilk tur açık) · E2 takdir
+  PAYLAŞ · E3 seri gurur dili · S3 acele dili · S1 erken indirim (BAŞKAN KARARI bekliyor).
