@@ -20,6 +20,7 @@ import { ICERIK_TABANI } from '@/constants/config';
 import { KILIT_AKTIF, ucretsizKanun } from '@/constants/urunler';
 import { LAW_KLASOR } from '@/db/seed';
 import { useKanunIndirme } from '@/hooks/use-kanun-indirme';
+import { getFavoriler, toggleFavori } from '@/lib/favori';
 import { indirmeDestekli, kanunTahminiBoyut } from '@/lib/indirme';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
@@ -64,6 +65,8 @@ function MevzuatIcerik() {
   const [arama, setArama] = useState('');
   const [aktifCip, setAktifCip] = useState<Cip>('tumu');
   const [cipGoster, setCipGoster] = useState(true);
+  const [favoriler, setFavoriler] = useState<Set<number>>(new Set());
+  const [favoriAcik, setFavoriAcik] = useState(false);
   const [hata, setHata] = useState(false);
   // Üst seçim: Müşterek (mevcut liste) / Branş (Jandarma → kanun kartları; diğer branşlar → PDF kitaplar).
   const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
@@ -115,7 +118,9 @@ function MevzuatIcerik() {
         setPerf([]);
         setSonCalisma(new Map());
       });
-    void Promise.resolve()
+    // Favoriler (AsyncStorage) — focus'ta tazelenir.
+    void getFavoriler()
+      .then((ids) => setFavoriler(new Set(ids)))
       .catch(() => {});
     // Branşın PDF kitapları (Jandarma dışı branşlarda dolu → branş sekmesi liste gösterir).
     void bransKitaplari(brans)
@@ -123,6 +128,9 @@ function MevzuatIcerik() {
       .catch(() => setKitaplar([]));
   }, [brans]);
 
+  const favoriToggle = (lawId: number) => {
+    void toggleFavori(lawId).then((yeni) => setFavoriler(new Set(yeni)));
+  };
 
   useFocusEffect(yukle);
 
@@ -163,7 +171,7 @@ function MevzuatIcerik() {
   };
 
   // Filtre zinciri: musterek → FAVORİ → ÇİP → arama → map (hepsi elde, yeni sorgu yok).
-  const taban = musterek;
+  const taban = favoriAcik ? musterek.filter((l) => favoriler.has(l.id)) : musterek;
   const cipli = taban.filter((l) => {
     const d = lawDurum(l);
     switch (aktifCip) {
@@ -208,9 +216,9 @@ function MevzuatIcerik() {
   return (
     <Screen
       title="Mevzuat"
-      // ÜST SEÇİM sabit şerit: Müşterek / Branş — kaydırmada üstte kalır (başkan isteği).
-      sabitUst={
-      <View style={st.blokSecici}>
+      // Bayrak açıkken Müşterek/Branş şeridi kaydırmanın DIŞINDA sabit durur (başkan isteği).
+      sabitUst={talimBurada ? (
+        <View style={st.blokSecici}>
         {(['müşterek', 'brans'] as const).map((b) => {
           const aktif = blok === b;
           return (
@@ -232,7 +240,31 @@ function MevzuatIcerik() {
           );
         })}
       </View>
-      }>
+      ) : undefined}>
+      {!talimBurada ? (
+        <View style={st.blokSecici}>
+        {(['müşterek', 'brans'] as const).map((b) => {
+          const aktif = blok === b;
+          return (
+            <Pressable
+              key={b}
+              onPress={() => setBlok(b)}
+              style={[st.blokSeg, aktif && st.blokSegAktif]}
+              accessibilityRole="button"
+              accessibilityLabel={b === 'müşterek' ? 'Müşterek mevzuat' : 'Branş mevzuatı'}>
+              <MaterialCommunityIcons
+                name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
+                size={16}
+                color={aktif ? Palette.beyaz : Palette.solukMetin}
+              />
+              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+                {b === 'müşterek' ? 'Müşterek' : 'Branş'}
+              </AppText>
+            </Pressable>
+          );
+        })}
+      </View>
+      ) : null}
 
 
       {blok === 'brans' && kitaplar && kitaplar.length > 0 ? (
@@ -242,6 +274,33 @@ function MevzuatIcerik() {
         />
       ) : (
         <>
+      {!talimBurada ? (
+        <>
+      {/* Açıklama + Favorilerim filtresi (Screen header'da slot yok → kayan içerik) */}
+      <View style={st.ustSatir}>
+        <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
+          {hicBaslamadi && ucretsizLaw
+            ? 'TCK tamamen ücretsiz — önce onunla başla.'
+            : 'Kanunları çalış, hedeflerine daha hızlı ulaş.'}
+        </AppText>
+        <Pressable
+          onPress={() => setFavoriAcik((v) => !v)}
+          style={[st.favBtn, favoriAcik && st.favBtnAktif]}
+          accessibilityRole="button"
+          accessibilityLabel="Favorilerim filtresi">
+          <MaterialCommunityIcons
+            name={favoriAcik ? 'heart' : 'heart-outline'}
+            size={16}
+            color={favoriAcik ? Palette.lacivert : Palette.altinKoyu}
+          />
+          <AppText variant="etiket" bold color={favoriAcik ? 'lacivert' : 'altinKoyu'}>
+            Favorilerim
+          </AppText>
+        </Pressable>
+      </View>
+        </>
+      ) : null}
+
       {/* Arama + filtre butonu (listeyle birlikte kayar) */}
       <View style={st.aramaSatir}>
         <View style={st.aramaKutu}>
@@ -274,8 +333,8 @@ function MevzuatIcerik() {
         </Pressable>
       </View>
 
-      {/* Filtre çipleri (ilerleme bazlı). */}
-      {cipGoster ? (
+      {/* Filtre çipleri (ilerleme bazlı). Favori filtresi açıkken gizli (kafa karışmasın). */}
+      {cipGoster && !favoriAcik ? (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -332,11 +391,11 @@ function MevzuatIcerik() {
               filtreden bağımsız olduğu için "kanun her sekmede görünüyor" karışıklığı olmaz). */}
           {/* A2 — BURADAN BAŞLA: hiç çalışmamış kullanıcıya ücretsiz kanunu tek dokunuşla açan
               kart. İlk kart çalışılınca kendiliğinden kaybolur, yerini "Devam Et" alır. */}
-          {aktifCip === 'tumu' && hicBaslamadi && ucretsizLaw ? (
+          {aktifCip === 'tumu' && !favoriAcik && hicBaslamadi && ucretsizLaw ? (
             <BuradanBaslaKart law={ucretsizLaw} onPress={() => kanunaGit(ucretsizLaw)} />
           ) : null}
 
-          {aktifCip === 'tumu' && !hicBaslamadi ? (
+          {aktifCip === 'tumu' && !favoriAcik && !hicBaslamadi ? (
             devamLaw ? (
             <DevamEtKart
               law={devamLaw}
@@ -347,6 +406,7 @@ function MevzuatIcerik() {
               onTumunuGor={() => {
                 // "Tümünü gör" → 'Devam Ettiklerim' filtresine geç (0<%<100).
                 setAktifCip('devam');
+                setFavoriAcik(false); // çip filtresi görünür olsun
                 setCipGoster(true); // çip şeridi açık → seçili çip görünsün
               }}
             />
@@ -375,11 +435,15 @@ function MevzuatIcerik() {
 
           {gosterilen.length === 0 ? (
             <AppText variant="kucuk" color="solukMetin">
-              {q
-                ? 'Eşleşen kanun yok.'
-                : aktifCip !== 'tumu'
-                  ? 'Bu filtrede kanun yok.'
-                  : 'Bu bölümde kanun yok.'}
+              {favoriAcik && favoriler.size === 0
+                ? 'Henüz favori kanun yok — bir kanunun kalbine dokun.'
+                : q
+                  ? 'Eşleşen kanun yok.'
+                  : favoriAcik
+                    ? 'Bu filtrede favori kanun yok.'
+                    : aktifCip !== 'tumu'
+                      ? 'Bu filtrede kanun yok.'
+                      : 'Bu bölümde kanun yok.'}
             </AppText>
           ) : (
             gosterilen.map((law) => (
@@ -389,6 +453,8 @@ function MevzuatIcerik() {
                 calisilan={ilerleme?.get(law.id) ?? 0}
                 toplam={toplamKart(law.id)}
                 sonGun={sonGun(law.id)}
+                favori={favoriler.has(law.id)}
+                onFavori={favoriToggle}
                 onPress={kanunaGit}
                 talimAc={talimBurada}
               />
@@ -565,6 +631,8 @@ function KanunSatir({
   calisilan,
   toplam,
   sonGun,
+  favori,
+  onFavori,
   onPress,
   talimAc,
 }: {
@@ -572,6 +640,8 @@ function KanunSatir({
   calisilan: number;
   toplam: number;
   sonGun: number | null;
+  favori: boolean;
+  onFavori: (lawId: number) => void;
   onPress: (law: LawWithCount) => void;
   talimAc?: boolean;
 }) {
@@ -682,7 +752,23 @@ function KanunSatir({
 
       {/* ALT SAĞ: kalp + Başla/Devam/tik (kartın sağ altında). */}
       <View style={st.satirAlt}>
-
+        {!talimAc ? (
+          <Pressable
+            onPress={(e) => {
+              e.stopPropagation();
+              onFavori(law.id);
+            }}
+            hitSlop={8}
+            style={st.kalp}
+            accessibilityRole="button"
+            accessibilityLabel={favori ? 'Favoriden çıkar' : 'Favoriye ekle'}>
+            <MaterialCommunityIcons
+              name={favori ? 'heart' : 'heart-outline'}
+              size={22}
+              color={favori ? Palette.altin : Palette.solukMetin}
+            />
+          </Pressable>
+        ) : null}
         {kilitli ? (
           <View style={st.satirSag}>
             <View style={st.kilitChip}>
