@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Platform, Pressable, StyleSheet, View } from 'react-native';
+import { Linking, Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -11,6 +11,7 @@ import type { Branch } from '@/db/schema';
 import { adminMi } from '@/lib/admin';
 import { useAuth } from '@/lib/auth-context';
 import { okunmamisCevapVarMi } from '@/lib/destek';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
 import { RUTBELER } from '@/lib/rutbe-store';
@@ -20,6 +21,7 @@ type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 /** Ayarlar — Evsaf'tan açılır. Profil (branş/rütbe) + bildirim + yasal girişleri burada toplanır. */
 export default function AyarlarScreen() {
   const router = useRouter();
+  const telegramSatiri = useKisiselOzellik('talim-mevzuata');
   const { brans } = useBrans();
   const { rutbe } = useRutbe();
   const { kullanici, hazir } = useAuth();
@@ -94,6 +96,15 @@ export default function AyarlarScreen() {
         etiket="Eğitim Planı (Bildirimler)"
         onPress={() => router.push('/egitim-plani')}
       />
+      {/* Bayraklı (10 Ağu, ChatGPT fikri): Telegram topluluğu + bot eşleşmesi tek dokunuşla.
+          Bot tarafında /baglan akışı zaten var; buradan Telegram'da bot açılır. */}
+      {telegramSatiri ? (
+        <Satir
+          ikon="send-circle-outline"
+          etiket="Telegram'a Bağlan"
+          onPress={() => void Linking.openURL('https://t.me/Mevzujspsbot').catch(() => {})}
+        />
+      ) : null}
       <Satir
         ikon="lifebuoy"
         etiket="Destek / Taleplerim"

@@ -51,20 +51,41 @@ export function IstatistikKutulari() {
           Genel ilerleme
         </AppText>
       </View>
-      <View style={st.kutu}>
+      {/* GECE KARARI E3 + ChatGPT fikri (10 Ağu): seri kesikse kutu suçlamaz, DAVET eder —
+          "Yeni nöbet bugün başlar" + HAZIR OL; dokununca çalışmaya götürür. */}
+      <Pressable
+        disabled={!!streak && streak > 0}
+        onPress={() =>
+          router.push(
+            bekleyen > 0 ? { pathname: '/akis', params: { mod: 'zayif' } } : ('/mevzuat' as never),
+          )
+        }
+        style={({ pressed }) => [st.kutu, pressed && st.soluk]}
+        accessibilityRole="button"
+        accessibilityLabel="Yeni nöbete başla">
         <View style={st.kutuDeger}>
           {streak && streak > 0 ? (
             <MaterialCommunityIcons name="fire" size={22} color={Palette.amber} />
+          ) : (
+            <MaterialCommunityIcons name="compass-outline" size={22} color={Palette.altinKoyu} />
+          )}
+          {streak && streak > 0 ? (
+            <AppText variant="dev" bold color="anaMetin">
+              {streak}
+            </AppText>
           ) : null}
-          <AppText variant="dev" bold color="anaMetin">
-            {streak === null || streak === 0 ? '—' : `${streak}`}
-          </AppText>
         </View>
-        {/* GECE KARARI E3: seri gurur dilidir, baskı değil — kesildiyse "yeni nöbet bugün başlar". */}
         <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
           {streak && streak > 0 ? 'Nöbet serisi' : 'Yeni nöbet bugün başlar'}
         </AppText>
-      </View>
+        {!streak ? (
+          <View style={st.hazirOl}>
+            <AppText variant="etiket" bold color="altinMetin">
+              HAZIR OL
+            </AppText>
+          </View>
+        ) : null}
+      </Pressable>
       <Pressable
         disabled={bekleyen === 0}
         onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
@@ -140,6 +161,13 @@ const st = StyleSheet.create({
     gap: Spacing.one,
   },
   kutuEtiket: { textAlign: 'center' },
+  hazirOl: {
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 2,
+  },
   soluk: { opacity: 0.7 },
   satir: {
     flexDirection: 'row',

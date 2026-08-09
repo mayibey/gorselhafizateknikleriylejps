@@ -221,6 +221,15 @@ export default function SicilScreen() {
             <ZayifBolum
               zayif={zayif}
               onCalis={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+              karttanCalis={
+                karargahTasindi
+                  ? (lawId, cardId) =>
+                      router.push({
+                        pathname: '/akis',
+                        params: { lawId: String(lawId), kart: String(cardId) },
+                      })
+                  : undefined
+              }
             />
           </View>
 
@@ -573,7 +582,16 @@ function SicilBolum({
 }
 
 /** Geri besleme havuzu: top-5 zayıf kart + özet + "Zayıfları çalış" (geri-bes oturumu). */
-function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () => void }) {
+function ZayifBolum({
+  zayif,
+  onCalis,
+  karttanCalis,
+}: {
+  zayif: ZayifVeri | null;
+  onCalis: () => void;
+  /** Bayraklı (10 Ağu, ChatGPT fikri): satıra dokun → YALNIZ o maddeyi çalış (tek kart oturumu). */
+  karttanCalis?: (lawId: number, cardId: number) => void;
+}) {
   if (zayif === null) {
     return (
       <AppText variant="kucuk" color="solukMetin">
@@ -626,7 +644,13 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
         </AppText>
       ) : null}
       {ilk5.map((z) => (
-        <View key={z.card.id} style={styles.zayifSatir}>
+        <Pressable
+          key={z.card.id}
+          disabled={!karttanCalis}
+          onPress={() => karttanCalis?.(z.card.law_id, z.card.id)}
+          style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
+          accessibilityRole={karttanCalis ? 'button' : undefined}
+          accessibilityLabel={karttanCalis ? 'Bu maddeyi çalış' : undefined}>
           <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
             {maddeEtiket(z.card.madde_no, z.card.baslik)}
           </AppText>
@@ -650,7 +674,10 @@ function ZayifBolum({ zayif, onCalis }: { zayif: ZayifVeri | null; onCalis: () =
               {z.yanlisSayisi} yanlış
             </AppText>
           </View>
-        </View>
+          {karttanCalis ? (
+            <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+          ) : null}
+        </Pressable>
       ))}
       {kalan > 0 ? (
         <AppText variant="etiket" color="solukMetin">
