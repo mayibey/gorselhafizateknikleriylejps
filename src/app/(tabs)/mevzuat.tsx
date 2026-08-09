@@ -383,6 +383,7 @@ function MevzuatIcerik() {
           {aktifCip === 'tumu' && !favoriAcik && !hicBaslamadi ? (
             devamLaw ? (
             <DevamEtKart
+              kompakt={talimBurada}
               law={devamLaw}
               calisilan={ilerleme?.get(devamLaw.id) ?? 0}
               toplam={toplamKart(devamLaw.id)}
@@ -494,6 +495,7 @@ function DevamEtKart({
   siradaki,
   onPress,
   onTumunuGor,
+  kompakt,
 }: {
   law: LawWithCount;
   calisilan: number;
@@ -501,8 +503,36 @@ function DevamEtKart({
   siradaki: boolean;
   onPress: () => void;
   onTumunuGor: () => void;
+  kompakt?: boolean;
 }) {
   const yuzde = toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0;
+  // KOMPAKT (bayraklı, başkan 9 Ağu): dev kart yerine tek satır — az yer, aynı iş.
+  if (kompakt) {
+    const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
+    return (
+      <Pressable
+        onPress={onPress}
+        style={({ pressed }) => [st.devamMini, pressed && st.pressed]}
+        accessibilityRole="button"
+        accessibilityLabel="Çalışmaya devam et">
+        <Monogram no={no} boyut={40} variant="govde" />
+        <View style={st.devamMiniOrta}>
+          <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1}>
+            {law.ad}
+          </AppText>
+          <AppText variant="etiket" color="solukMetin">
+            {siradaki ? 'Sıradaki kanun' : 'Kaldığın yer'} · {calisilan}/{toplam} · %{yuzde}
+          </AppText>
+        </View>
+        <View style={st.devamMiniBtn}>
+          <MaterialCommunityIcons name="play" size={15} color={Palette.lacivert} />
+          <AppText variant="etiket" bold color="lacivert">
+            Devam
+          </AppText>
+        </View>
+      </Pressable>
+    );
+  }
   const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
 
   return (
@@ -1313,6 +1343,27 @@ const st = StyleSheet.create({
     paddingVertical: Spacing.one,
     paddingHorizontal: Spacing.two,
     marginTop: 4,
+  },
+  devamMini: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.altin,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.one + 2,
+    paddingHorizontal: Spacing.two,
+  },
+  devamMiniOrta: { flex: 1, gap: 1 },
+  devamMiniBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: Palette.altin,
+    borderRadius: 999,
+    paddingVertical: 6,
+    paddingHorizontal: Spacing.two,
   },
   pressed: {
     opacity: 0.7,
