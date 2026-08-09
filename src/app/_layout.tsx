@@ -19,6 +19,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Palette } from '@/constants/theme';
 import { initDatabase } from '@/db/database';
+import { useAnlikGuncelleme } from '@/lib/anlik-guncelleme';
 import { oauthUrlIsle, tanitimSunucudanOku, tanitimSunucuyaYaz } from '@/lib/auth';
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
@@ -42,6 +43,8 @@ import { UyelikProvider } from '@/lib/uyelik-context';
 void SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  // Anlık OTA denetimi — yalnız başkanın cihazında (bayraklı); herkeste no-op.
+  useAnlikGuncelleme();
   const [fontsLoaded, fontError] = useFonts({
     Inter_500Medium,
     Inter_600SemiBold,
