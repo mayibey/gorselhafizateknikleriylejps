@@ -1259,3 +1259,13 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   her doğruda haptik (konfetiAt) — TASLAK kanalıyla yalnız başkan+Ahmet (damga 20260810-0124).
   Oyunun ses motoru yok → "ses tercihi/susturucu" konusu doğmadı.
 - OTA 5 runtime (1.0.40-44). Ahmet Samet: ozellik_kisi + oyun_surum_kisi her ikisinde.
+
+## 10 Ağu 2026 (2) — ChatGPT tasarım fikirleri aşılandı (bayraklı) + krem hero
+- Bugünün Emri kartı KREM oldu (Codex dili; başkan "koyu içimizi karartıyor").
+- ChatGPT 3 tasarımından hüküm: stil RED (koyu zemin, taç, kırmızı %100 halka — marka
+  kurallarına aykırı), 4 fikir ALINDI: (1) Eğitim Planı ekranı ZATEN BİREBİR VARDI
+  (ChatGPT bizim ekrandan türetmiş; Ayarlar→Eğitim Planı). (2) Evsaf zayıf satırına
+  dokun → TEK KART oturumu (akis kart param + M6). (3) Seri kutusu kesikken "Yeni nöbet
+  bugün başlar + HAZIR OL" daveti (dokununca çalışmaya götürür). (4) Ayarlar'a
+  "Telegram'a Bağlan" satırı (t.me/Mevzujspsbot; bot /baglan akışı hazır).
+- OTA 5 runtime, bayrak yalnız başkan+Ahmet.
