@@ -796,11 +796,8 @@ function KanunSatir({
             <Pressable
               onPress={(e) => {
                 e.stopPropagation();
-                // Başkan kararı (9 Ağu): "önce tüm kartları bitir" şartı YOK — talim her zaman açık.
-                if (testAdedi <= 1) {
-                  router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: '0' } });
-                  return;
-                }
+                // Başkan kararı (9 Ağu): kart şartı yok; tek testte de LİSTE açılır ki
+                // soru sayısı görünsün (6698 doğrudan sorulara atlıyordu — tutarsızdı).
                 setTestlerAcik((a) => !a);
               }}
               style={({ pressed }) => [st.talimBtn, pressed && st.pressed]}
@@ -808,7 +805,7 @@ function KanunSatir({
               accessibilityLabel="Talim yap">
               <MaterialCommunityIcons name="target" size={16} color={Palette.altinKoyu} />
               <AppText variant="kucuk" bold color="altinMetin">
-                Talim Yap{testAdedi > 1 ? ` · ${testAdedi}` : ''}
+                Talim Yap · {testAdedi}
               </AppText>
             </Pressable>
           ) : null}
