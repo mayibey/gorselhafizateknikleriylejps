@@ -299,6 +299,10 @@ function KisiselBilgiler() {
   const { kullanici, hazir } = useAuth();
   const [profil, setProfil] = useState<Profil | null>(null);
   const [duzenle, setDuzenle] = useState(false);
+  // GECE KARARI E1 (bayraklı): e-posta/telefon gibi kişisel bilgiler VARSAYILAN GİZLİ —
+  // omuz üstünden bakan görmesin; "Göster"e basınca açılır.
+  const varsayilanGizli = useKisiselOzellik('talim-mevzuata');
+  const [bilgiGoster, setBilgiGoster] = useState(false);
   const [adG, setAdG] = useState('');
   const [soyadG, setSoyadG] = useState('');
   const [kaydediliyor, setKaydediliyor] = useState(false);
@@ -390,10 +394,27 @@ function KisiselBilgiler() {
             {s.etiket}
           </AppText>
           <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1} style={styles.kisiDeger}>
-            {s.deger ?? '—'}
+            {varsayilanGizli && !bilgiGoster && s.deger ? '••••••••' : (s.deger ?? '—')}
           </AppText>
         </View>
       ))}
+      {varsayilanGizli ? (
+        <Pressable
+          onPress={() => setBilgiGoster((v) => !v)}
+          hitSlop={8}
+          style={styles.bilgiGosterBtn}
+          accessibilityRole="button"
+          accessibilityLabel={bilgiGoster ? 'Bilgileri gizle' : 'Bilgileri göster'}>
+          <MaterialCommunityIcons
+            name={bilgiGoster ? 'eye-off-outline' : 'eye-outline'}
+            size={16}
+            color={Palette.solukMetin}
+          />
+          <AppText variant="etiket" color="solukMetin" bold>
+            {bilgiGoster ? 'Gizle' : 'Göster'}
+          </AppText>
+        </Pressable>
+      ) : null}
 
       <Modal visible={duzenle} transparent animationType="fade" onRequestClose={() => setDuzenle(false)}>
         <View style={styles.adPerde}>
@@ -744,6 +765,12 @@ const styles = StyleSheet.create({
   kisiAdBlok: {
     flex: 1,
     gap: Spacing.half,
+  },
+  bilgiGosterBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    alignSelf: 'flex-end',
   },
   kisiAyrac: {
     height: 1,

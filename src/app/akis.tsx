@@ -30,6 +30,7 @@ import { CardFlowMaxWidth, Palette, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
 import { erteleBugun, ertelemeAktifMi } from '@/lib/modal-erteleme';
 import {
+  getCardsByBolum,
   getCardsByBolumChain,
   getCardsByLaw,
   getDailyQueue,
@@ -40,7 +41,9 @@ import {
 import { maddeMetni } from '@/db/madde-metinleri';
 import { lawErisilebilirSaf, useKanunKilidi } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
-import { getSinavSorulari, type KartSoru, sinavVarMi, teyitSorulari } from '@/lib/sinav';
+import { eslesenKartIdleri, getSinavSorulari, type KartSoru, sinavVarMi, teyitSorulari } from '@/lib/sinav';
+import { useKisiselOzellik } from '@/lib/ozellik';
+import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
 import type { QueueCard } from '@/lib/queue';
@@ -64,16 +67,19 @@ export default function AkisScreen() {
   // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
   useImzaliTazele(); // web imzalı modda görsel URL'leri gelince yeniden çiz (native no-op)
   const router = useRouter();
-  const { lawId, bolumId, mod, kart } = useLocalSearchParams<{
+  const { lawId, bolumId, mod, kart, kapsam } = useLocalSearchParams<{
     lawId?: string;
     bolumId?: string;
     mod?: string;
     kart?: string; // Arama'dan gelince: kuyrukta bu kart id'sinden başla.
+    kapsam?: string; // GECE KARARI M5 (bayraklı): 'bolum' = yalnız o bölüm, zincir yok.
   }>();
   const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
   const zayifModu = mod === 'zayif'; // geri-bes oturumu (zayıf mevzi kuyruğu)
   const { premium } = useUyelik();
+  // GECE KARARLARI A2/A3/A4/A5 (bayraklı — yalnız başkan + Ahmet Samet).
+  const geceKarari = useKisiselOzellik('talim-mevzuata');
   // Patika/kanun/zayıf modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
   const tekKanun = bolumModu || kanunModu || zayifModu;
   // Öğrenme modu (kanun/bölüm) → akış bitince "aktif hatırlama" mini-quiz çıkar (zayıf'ta YOK).
@@ -152,8 +158,10 @@ export default function AkisScreen() {
   // Ses (otomatik anlatım) bitince → erteleme penceresinde DEĞİLSEK "geçelim mi?" modalı.
   // onBitti yalnız doğal bitişte gelir (durdur/seek/kart değişimi tetiklemez → yanlış
   // açılma yok). Footer NORMAL kalır; bu modal EK olarak açılır.
+  // GECE KARARI A2 (bayraklı): "Anlatım bitti" tam ekran modalı ÖLDÜ — footer'daki
+  // düğmeler zaten aynı işi yapıyor, araya perde girmesin.
   useEffect(() => {
-    if (!anlatimBitti) return;
+    if (!anlatimBitti || geceKarari) return;
     let iptal = false;
     void ertelemeAktifMi().then((aktif) => {
       if (!iptal && !aktif) setModalAcik(true);
@@ -161,7 +169,17 @@ export default function AkisScreen() {
     return () => {
       iptal = true;
     };
-  }, [anlatimBitti]);
+  }, [anlatimBitti, geceKarari]);
+
+  // GECE KARARI A2 (bayraklı): ekran açık tutma yalnız ses çalarken değil — sessiz
+  // incelemede de. Kart akışı açıkken telefon kararmasın; çıkınca serbest.
+  useEffect(() => {
+    if (!geceKarari) return;
+    void activateKeepAwakeAsync('kart-akisi');
+    return () => {
+      deactivateKeepAwake('kart-akisi').catch(() => {});
+    };
+  }, [geceKarari]);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -174,7 +192,10 @@ export default function AkisScreen() {
     const p = zayifModu
       ? getZayifKuyruk()
       : bolumModu
-        ? getCardsByBolumChain(Number(bolumId)) // girilen maddeden kanun sonuna kadar sürekli akış
+        // M5 (bayraklı): kapsam='bolum' → yalnız o bölümün kartları; yoksa zincir (kanun sonuna dek).
+        ? kapsam === 'bolum'
+          ? getCardsByBolum(Number(bolumId))
+          : getCardsByBolumChain(Number(bolumId)) // girilen maddeden kanun sonuna kadar sürekli akış
         : kanunModu
           ? getCardsByLaw(Number(lawId))
           : gunlukSinirli();
@@ -191,6 +212,15 @@ export default function AkisScreen() {
           router.replace('/paywall');
           return;
         }
+        // GECE KARARI M6 (bayraklı): kart parametresiyle gelen kısayol (arama sonucu /
+        // Günün Maddesi) TEK MADDE telafi oturumu açar — tam kanun kuyruğuna düşmez.
+        if (kart && geceKarari) {
+          const tek = liste.filter((c) => c.id === Number(kart));
+          if (tek.length > 0) {
+            setQueue(tek);
+            return;
+          }
+        }
         setQueue(liste);
         // Arama sonucundan gelindiyse eşleşen karta atla (yoksa baştan).
         if (kart) {
@@ -199,7 +229,7 @@ export default function AkisScreen() {
         }
       })
       .catch(() => setHata(true));
-  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId, kart, premium, router]);
+  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId, kart, kapsam, premium, router, geceKarari]);
 
   useEffect(() => {
     yukle();
@@ -245,8 +275,15 @@ export default function AkisScreen() {
       setHatirlaBitti(true); // soru yoksa hatırlamayı atla → doğrudan tamamlandı
       return;
     }
-    setHatirlaSorular([...hepsi].sort(() => Math.random() - 0.5).slice(0, Math.min(3, hepsi.length)));
-  }, [bitti, ogrenmeModu, bitenLawId, hatirlaBitti, hatirlaSorular]);
+    // GECE KARARI A5 (bayraklı): bitiş soruları OTURUMDAN gelsin — m.1-5 çalışana
+    // m.100'den soru sorulmasın. Kaynağı bu oturumun kartlarıyla eşleşen sorular önce;
+    // hiç eşleşme yoksa eski davranışa (tüm kanun) düşülür ki soru hep çıksın.
+    const oturumdan = geceKarari && queue
+      ? hepsi.filter((s) => eslesenKartIdleri(s.kaynak, queue).length > 0)
+      : hepsi;
+    const havuz = oturumdan.length > 0 ? oturumdan : hepsi;
+    setHatirlaSorular([...havuz].sort(() => Math.random() - 0.5).slice(0, Math.min(3, havuz.length)));
+  }, [bitti, ogrenmeModu, bitenLawId, hatirlaBitti, hatirlaSorular, geceKarari, queue]);
 
   const hatirlaGoster =
     bitti && ogrenmeModu && !hatirlaBitti && !!hatirlaSorular && hatirlaSorular.length > 0;
@@ -302,6 +339,11 @@ export default function AkisScreen() {
     if (gorselGorundu) setGorselGorundu(false);
   }
   const yuzde = aktif ? Math.round(((index + 1) / queue!.length) * 100) : 0;
+  // GECE KARARI A4 (bayraklı): çubuk yalnız CEVAPLANMIŞ karttan dolar (gezinmek doldurmaz).
+  const cevaplananYuzde =
+    queue && queue.length > 0
+      ? Math.min(100, Math.round(((cozulen.tekrar + cozulen.yeni) / queue.length) * 100))
+      : 0;
   const maddeTxt = c ? maddeMetni(c.madde_no) : null;
   // Kartın GERÇEK ses dosyası (mp3) var mı → varsa TtsBar (robotik TTS) yerine SesOynatici.
   // sesVarMi: indirilmiş + uzak manifest + gömülü (3 adım). Strip'li build'de gömülü BOŞ olduğu
@@ -361,15 +403,20 @@ export default function AkisScreen() {
           <Pressable onPress={() => router.back()} hitSlop={12} accessibilityLabel="Kapat">
             <MaterialCommunityIcons name="close" size={26} color={Palette.kartMetinAcik} />
           </Pressable>
+          {/* GECE KARARI A4 (bayraklı): "5/8 · %62" değil "Kart 5/8". */}
           <AppText variant="etiket" bold color="kartMetinAcik" style={styles.headerMetaMetin}>
-            {aktif ? `${index + 1}/${queue!.length} · %${yuzde}` : 'Kart Akışı'}
+            {aktif
+              ? geceKarari
+                ? `Kart ${index + 1}/${queue!.length}`
+                : `${index + 1}/${queue!.length} · %${yuzde}`
+              : 'Kart Akışı'}
           </AppText>
           <View style={styles.headerSpacer} />
         </View>
 
         {aktif ? (
           <View style={styles.track}>
-            <View style={[styles.fill, { width: `${yuzde}%` }]} />
+            <View style={[styles.fill, { width: `${geceKarari ? cevaplananYuzde : yuzde}%` }]} />
           </View>
         ) : null}
       </View>
@@ -542,12 +589,14 @@ export default function AkisScreen() {
                       key={queue[index].id}
                       sesYolu={queue[index].gorsel_yolu}
                       onBitti={() => setAnlatimBitti(true)}
+                      otomatikSor={geceKarari}
                     />
                   ) : (
                     <TtsBar
                       key={queue[index].id}
                       gorselYolu={queue[index].gorsel_yolu}
                       onBitti={() => setAnlatimBitti(true)}
+                      otomatikSor={geceKarari}
                     />
                   )
                 ) : null}
@@ -721,8 +770,10 @@ export default function AkisScreen() {
                 onPress={() => void cevapla('zor')}
                 accessibilityState={{ disabled: !ogrenebilir }}>
                 <MaterialCommunityIcons name="refresh" size={20} color={Palette.altinKoyu} />
+                {/* GECE KARARI A3 (bayraklı): dürüst ad — düğme 'zor' kaydı atıyor,
+                    hatırlatma sözü vermiyor. */}
                 <AppText variant="govde" color="altinKoyu" bold>
-                  Tekrar Hatırlat
+                  {geceKarari ? 'Tekrar göster' : 'Tekrar Hatırlat'}
                 </AppText>
               </Pressable>
             </View>
@@ -755,7 +806,7 @@ export default function AkisScreen() {
                   onPress={() => modalSec('zor')}>
                   <MaterialCommunityIcons name="refresh" size={18} color={Palette.altinKoyu} />
                   <AppText variant="govde" color="altinKoyu" bold>
-                    Tekrar Hatırlat
+                    {geceKarari ? 'Tekrar göster' : 'Tekrar Hatırlat'}
                   </AppText>
                 </Pressable>
 
@@ -797,7 +848,7 @@ export default function AkisScreen() {
             { ikon: 'volume-high', metin: 'Sesli anlatım otomatik başlar; alttaki çubuktan durdurup dinleyebilirsin.' },
             { ikon: 'text-box-outline', metin: 'Maddenin resmî metnini okumak için "Madde" düğmesine bas.' },
             { ikon: 'gesture-swipe-horizontal', metin: 'Sonraki veya önceki karta parmağınla kaydırarak geç.' },
-            { ikon: 'check-circle-outline', metin: '"Öğrendim" ya da "Tekrar Hatırlat" ile kartı işaretle.' },
+            { ikon: 'check-circle-outline', metin: geceKarari ? '"Öğrendim" ya da "Tekrar göster" ile kartı işaretle.' : '"Öğrendim" ya da "Tekrar Hatırlat" ile kartı işaretle.' },
           ]}
           onKapat={() => {
             setKartIpucu(false);

@@ -60,8 +60,9 @@ export function IstatistikKutulari() {
             {streak === null || streak === 0 ? '—' : `${streak}`}
           </AppText>
         </View>
-        <AppText variant="etiket" color="solukMetin">
-          Nöbet serisi
+        {/* GECE KARARI E3: seri gurur dilidir, baskı değil — kesildiyse "yeni nöbet bugün başlar". */}
+        <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
+          {streak && streak > 0 ? 'Nöbet serisi' : 'Yeni nöbet bugün başlar'}
         </AppText>
       </View>
       <Pressable
@@ -138,6 +139,7 @@ const st = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.one,
   },
+  kutuEtiket: { textAlign: 'center' },
   soluk: { opacity: 0.7 },
   satir: {
     flexDirection: 'row',

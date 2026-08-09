@@ -15,6 +15,7 @@ import Svg, { Rect } from 'react-native-svg';
 import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Spacing } from '@/constants/theme';
+import { otoBaslatTercihi } from '@/lib/ses-tercih';
 import { SES_HIZLARI, sesHizDurum } from '@/lib/ses-hiz';
 
 /**
@@ -48,10 +49,13 @@ function cumlelereBol(metin: string): string[] {
 export function TtsBar({
   gorselYolu,
   onBitti,
+  otomatikSor,
 }: {
   gorselYolu: string | null;
   /** Son cümle de okunup anlatım bitince çağrılır (kullanıcı durdurursa ÇAĞRILMAZ). */
   onBitti?: () => void;
+  /** GECE KARARI A2 (bayraklı): ilk kartta "otomatik başlasın mı?" bir kez sorulur. */
+  otomatikSor?: boolean;
 }) {
   const metin = gorselYolu ? KART_SES_METINLERI[gorselYolu] : undefined;
   const cumleler = useMemo(() => (metin ? cumlelereBol(metin) : []), [metin]);
@@ -82,8 +86,15 @@ export function TtsBar({
   // Mount: OTOMATİK başla (kart açılınca ses kendiliğinden çalar, 0. cümleden).
   // Unmount / kart değişimi → okumayı durdur. (oynat hoisted → mount effect'te kullanılır.)
   useEffect(() => {
-    if (metin && cumleler.length > 0) oynat(0);
+    // A2: bayraklıda otomatik başlama TERCİHE bağlı (ilk seferde bir kez sorulur).
+    let iptal = false;
+    if (metin && cumleler.length > 0) {
+      void otoBaslatTercihi(!!otomatikSor).then((basla) => {
+        if (!iptal && basla) oynat(0);
+      });
+    }
     return () => {
+      iptal = true;
       nesilRef.current += 1;
       oynuyorRef.current = false;
       void Speech.stop();

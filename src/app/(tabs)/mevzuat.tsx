@@ -721,6 +721,19 @@ function KanunSatir({
 
   function satiraBas() {
     if (kilitli) {
+      // GECE KARARI M3 (bayraklı): doğrudan ödeme ekranı AÇILMAZ — önce ne
+      // kazanacağını söyleyen kısa panel, "gör" derse ödeme ekranı.
+      if (talimAc) {
+        Alert.alert(
+          'Tam Erişim',
+          `"${law.ad}" Tam Erişim paketindedir.\n\nTam Erişim'de: tüm müşterek ve branş mevzuatı, görsel hafıza kartları, sesli anlatımlar, deneme sınavları ve oyunların tamamı.`,
+          [
+            { text: 'Şimdi değil', style: 'cancel' },
+            { text: 'Tam Erişimi Gör', onPress: () => router.push('/paywall') },
+          ],
+        );
+        return;
+      }
       router.push('/paywall');
       return;
     }

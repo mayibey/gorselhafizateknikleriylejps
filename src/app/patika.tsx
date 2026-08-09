@@ -3,6 +3,7 @@ import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import {
   ActivityIndicator,
+  Alert,
   Animated,
   Easing,
   Modal,
@@ -20,6 +21,7 @@ import { KilitKarti } from '@/components/premium/kilit-karti';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { LAW_KLASOR } from '@/db/seed';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { ICERIK_TABANI } from '@/constants/config';
 import {
   indirmeDestekli,
@@ -184,6 +186,8 @@ function segmentPostallari(p0: Pt, p1: Pt, anahtar: string): ReactNode[] {
 
 export default function PatikaScreen() {
   const router = useRouter();
+  // GECE KARARI M5 (bayraklı): düğüm kapsam seçimi yalnız başkan+Ahmet'te.
+  const kapsamSecimi = useKisiselOzellik('talim-mevzuata');
   const { brans } = useBrans();
   const { kanunErisilebilir } = useUyelik();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
@@ -387,7 +391,26 @@ export default function PatikaScreen() {
         <Harita
           dugumler={dugumler}
           aktifIndex={aktifIndex}
-          onDugumBas={(id) => akisAc({ bolumId: String(id) })}
+          // GECE KARARI M5 (bayraklı): düğüme basınca ne kadar açılacağı BELLİ olsun —
+          // "yalnız bu bölüm" mü, "buradan kanun sonuna zincir" mi kullanıcı seçer.
+          onDugumBas={(id) => {
+            if (!kapsamSecimi) {
+              akisAc({ bolumId: String(id) });
+              return;
+            }
+            const d = dugumler?.find((x) => x.bolum.id === id);
+            Alert.alert(d?.bolum.ad ?? 'Bölüm', 'Ne kadarını çalışalım?', [
+              { text: 'Vazgeç', style: 'cancel' },
+              {
+                text: 'Yalnız bu bölüm',
+                onPress: () => akisAc({ bolumId: String(id), kapsam: 'bolum' }),
+              },
+              {
+                text: 'Buradan patikayı sürdür',
+                onPress: () => akisAc({ bolumId: String(id) }),
+              },
+            ]);
+          }}
         />
       )}
 

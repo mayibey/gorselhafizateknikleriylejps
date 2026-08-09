@@ -15,6 +15,7 @@ import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { sesKaynak } from '@/lib/ses-kaynak';
 import { Palette, Spacing } from '@/constants/theme';
 import { SES_HIZLARI, sesHizDurum } from '@/lib/ses-hiz';
+import { otoBaslatTercihi } from '@/lib/ses-tercih';
 
 /**
  * GERÇEK ses (mp3) oynatıcı — kartın insan-seslendirme dosyasını çalar (expo-audio).
@@ -34,11 +35,14 @@ function bicimSure(s: number): string {
 export function SesOynatici({
   sesYolu,
   onBitti,
+  otomatikSor,
 }: {
   /** Ses anahtarı = kartın gorsel_yolu (KART_SESLERI ile aynı namespace). */
   sesYolu: string | null;
   /** Ses sonuna kadar çalınıp bitince çağrılır (kullanıcı durdurursa ÇAĞRILMAZ). */
   onBitti?: () => void;
+  /** GECE KARARI A2 (bayraklı): ilk kartta "otomatik başlasın mı?" bir kez sorulur. */
+  otomatikSor?: boolean;
 }) {
   useImzaliTazele(); // web imzalı modda mp3 URL'i gelince yeniden çiz (native no-op)
   const kaynak = sesKaynak(sesYolu);
@@ -54,18 +58,26 @@ export function SesOynatici({
   const oran = sure > 0 ? Math.min(1, Math.max(0, an / sure)) : 0;
 
   // Mount'ta OTOMATİK başla (kart açılınca; akis key=card.id → her kartta yeniden mount).
+  // A2 (bayraklı): otomatik başlama TERCİHE bağlı — ilk seferde bir kez sorulur.
   const basladiRef = useRef(false);
   useEffect(() => {
     if (basladiRef.current || kaynak === null) return;
     basladiRef.current = true;
-    try {
-      player.shouldCorrectPitch = true; // hızlanınca ses tizleşmesin (konuşma doğal kalsın)
-      player.play();
-    } catch (e) {
-      // Sessizce yutma → teşhis (native private-bucket / imzalı-URL sorunları görünür olsun).
-      console.warn('[ses] otomatik başlatma hatası', sesYolu, e);
-    }
-  }, [player, kaynak, sesYolu]);
+    let iptal = false;
+    void otoBaslatTercihi(!!otomatikSor).then((basla) => {
+      if (iptal || !basla) return;
+      try {
+        player.shouldCorrectPitch = true; // hızlanınca ses tizleşmesin (konuşma doğal kalsın)
+        player.play();
+      } catch (e) {
+        // Sessizce yutma → teşhis (native private-bucket / imzalı-URL sorunları görünür olsun).
+        console.warn('[ses] otomatik başlatma hatası', sesYolu, e);
+      }
+    });
+    return () => {
+      iptal = true;
+    };
+  }, [player, kaynak, sesYolu, otomatikSor]);
 
   // Hızı player'a uygula (yeni kart/oynatıcı VE hız değişiminde) → seçilen hız korunur.
   // TUZAK (kullanıcı bildirdi, 6 Ağu 2026): expo-audio kaynağı YÜKLEYİNCE hızı 1x'e

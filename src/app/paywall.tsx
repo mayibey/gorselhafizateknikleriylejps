@@ -35,6 +35,7 @@ import { kalanMetin } from '@/lib/geri-sayim';
 import { type IndirimDurumu, indirimDurumuOku } from '@/lib/indirim';
 import { DogrulamaReddi, satinAlmaDogrula } from '@/lib/satinalma';
 import { useUyelik } from '@/lib/uyelik-context';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 /** Google Play abonelik yönetimi (yükseltme sonrası yıllığı iptal için). */
 const PLAY_ABONELIKLER = 'https://play.google.com/store/account/subscriptions';
@@ -49,12 +50,14 @@ const KAPSAM = [
 
 export default function PaywallScreen() {
   const router = useRouter();
+  // GECE KARARI S2 (bayraklı): "MEVZU Premium" değil "Tam Erişim" — satış sakin, değer önce.
+  const tamErisim = useKisiselOzellik('talim-mevzuata');
   return (
-    <Screen title="Premium" onGeri={() => router.back()} headerAltinCizgi>
+    <Screen title={tamErisim ? 'Tam Erişim' : 'Premium'} onGeri={() => router.back()} headerAltinCizgi>
       <View style={styles.marka}>
         <Arma />
         <AppText variant="baslik" bold color="lacivert" style={styles.ortali}>
-          MEVZU Premium
+          {tamErisim ? 'Tam Erişim' : 'MEVZU Premium'}
         </AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
           TCK ve denemesi herkese ücretsiz. Uygulamanın TAMAMINA erişim için bir plan seç —
@@ -81,6 +84,8 @@ function WebNot() {
 }
 
 function PaywallIcerik() {
+  // GECE KARARLARI S2+S3 (bayraklı): taç → kalkan-yıldız; saniyeli geri sayım yasak.
+  const sakinSatis = useKisiselOzellik('talim-mevzuata');
   const router = useRouter();
   const { hazir, kullanici } = useAuth();
   const { aktifHaklar, cihazKilit, yenile } = useUyelik();
@@ -418,7 +423,11 @@ function PaywallIcerik() {
       <View style={styles.kart}>
         <View style={styles.kartUst}>
           <View style={styles.kartIkon}>
-            <MaterialCommunityIcons name="crown-outline" size={24} color={Palette.altinKoyu} />
+            <MaterialCommunityIcons
+              name={sakinSatis ? 'shield-star-outline' : 'crown-outline'}
+              size={24}
+              color={Palette.altinKoyu}
+            />
           </View>
           <View style={styles.esnek}>
             <AppText variant="govde" bold>
@@ -492,15 +501,22 @@ function PaywallIcerik() {
                   size={18}
                   color={Palette.yesil}
                 />
+                {/* S3 (bayraklı): "SON X SAAT!" tık-tık geri sayımı yok — sakin kampanya adı. */}
                 <AppText variant="kucuk" color="yesil" bold style={styles.esnek}>
                   %{indirim.yuzde} indirimin uygulanıyor — {indirimKapsam} geçerli.
-                  {geriSayim
+                  {sakinSatis
                     ? indirim.kaynak === 'kampanya'
-                      ? ` Kampanya bitişine ${geriSayim} kaldı!`
-                      : ` İlk gün fırsatı: ${geriSayim} kaldı!`
-                    : indirim.kaynak === 'ilk_giris'
-                      ? ' (ilk gün fırsatı)'
-                      : ''}
+                      ? ' (kampanya)'
+                      : indirim.kaynak === 'ilk_giris'
+                        ? ' (ilk gün fırsatı)'
+                        : ''
+                    : geriSayim
+                      ? indirim.kaynak === 'kampanya'
+                        ? ` Kampanya bitişine ${geriSayim} kaldı!`
+                        : ` İlk gün fırsatı: ${geriSayim} kaldı!`
+                      : indirim.kaynak === 'ilk_giris'
+                        ? ' (ilk gün fırsatı)'
+                        : ''}
                 </AppText>
               </View>
             ) : null}

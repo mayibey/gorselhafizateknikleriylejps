@@ -8,7 +8,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
-import { Modal, Pressable, StyleSheet, TextInput, View } from 'react-native';
+import { Alert, Modal, Pressable, Share, StyleSheet, TextInput, View } from 'react-native';
 
 import { TakdirBelgesi } from '@/components/sicil/takdir-belgesi';
 import { AppText } from '@/components/ui/app-text';
@@ -16,6 +16,7 @@ import { Palette, Radius, Spacing } from '@/constants/theme';
 import { profilGetir, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
 import { belgeIsimOnayla, belgeIsimOnayliMi } from '@/lib/belge-isim';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 export function TakdirBelgeAlani({ kanunAd, tarih }: { kanunAd: string; tarih: string }) {
   const { kullanici } = useAuth();
@@ -68,9 +69,39 @@ export function TakdirBelgeAlani({ kanunAd, tarih }: { kanunAd: string; tarih: s
 
   const tamAd = `${ad.trim()} ${soyad.trim()}`.trim();
 
+  // GECE KARARI E2 (bayraklı): belgeye PAYLAŞ — açık dokunuş + "adın görünecek" onayı.
+  const paylasVar = useKisiselOzellik('talim-mevzuata');
+  function paylas() {
+    const metin =
+      `🎖️ TAKDİR BELGESİ\n\n${tamAd || 'Bir personel'}, "${kanunAd}" eğitimini ` +
+      `başarıyla tamamlayarak takdir almaya hak kazanmıştır. (${tarih})\n\n` +
+      'Mevzu JSPS — görsel hafıza teknikleriyle JSPS hazırlığı · https://mevzujsps.com';
+    const gonder = () => void Share.share({ message: metin }).catch(() => {});
+    if (tamAd) {
+      Alert.alert('Paylaş', `Belgede adın görünecek: ${tamAd}. Paylaşılsın mı?`, [
+        { text: 'Vazgeç', style: 'cancel' },
+        { text: 'Paylaş', onPress: gonder },
+      ]);
+    } else {
+      gonder();
+    }
+  }
+
   return (
     <>
       <TakdirBelgesi kanunAd={kanunAd} tarih={tarih} isim={tamAd || null} />
+      {paylasVar ? (
+        <Pressable
+          style={({ pressed }) => [styles.paylasBtn, pressed && styles.pressed]}
+          onPress={paylas}
+          accessibilityRole="button"
+          accessibilityLabel="Takdir belgesini paylaş">
+          <MaterialCommunityIcons name="share-variant" size={17} color={Palette.lacivert} />
+          <AppText variant="kucuk" bold color="lacivert">
+            Paylaş
+          </AppText>
+        </Pressable>
+      ) : null}
 
       <Modal
         visible={hazir && onayGoster}
@@ -170,5 +201,17 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.85,
+  },
+  paylasBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    alignSelf: 'center',
+    backgroundColor: Palette.altinSolukYuzey,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+    marginTop: Spacing.two,
   },
 });
