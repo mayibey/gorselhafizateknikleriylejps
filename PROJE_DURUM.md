@@ -1205,3 +1205,8 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   Karargah'ta geri sayımın altında `KaldiginYerKarti` (components/karargah/kaldigin-yer.tsx,
   kendi veri hattı, çalışma yoksa görünmez). Mükerrerlik bitti.
 - OTA production ARTIK 5 runtime'a: 1.0.40–1.0.44 (Ahmet Samet eski sürümde olabilir).
+
+## 9 Ağu 2026 (9) — Genel Tatbikat girişi Karargah'a (karar verildi)
+- Başkan: "tatbikatı da al oraya (geri sayımın altına)". Karargah'ta geri sayım
+  altında artık ikili: `KaldiginYerKarti` + `TatbikatGirisi` (→ /tatbikat; rota
+  href:null yaşıyor). AÇIK KARAR kapandı. Bayraklı; OTA 5 runtime (1.0.40-44).
