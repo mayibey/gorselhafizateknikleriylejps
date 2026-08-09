@@ -40,6 +40,7 @@ import { useUyelik } from '@/lib/uyelik-context';
 import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '@/lib/er-meydani';
 import { maddeEtiket } from '@/lib/madde-etiket';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -153,6 +154,8 @@ function GsAyrac() {
 export default function KarargahScreen() {
   const { premium } = useUyelik();
   const router = useRouter();
+  // Bayraklı modda arama TEK yerde (Mevzuat'taki kutu → /ara) → buradaki büyüteç gizlenir.
+  const aramaMevzuatta = useKisiselOzellik('talim-mevzuata');
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [hicCalisilan, setHicCalisilan] = useState(false); // hiç kart çalışmamış (yeni üye)
@@ -418,14 +421,16 @@ export default function KarargahScreen() {
       title="Karargah"
       headerSag={
         <View style={styles.headerIkonlar}>
-          {/* Ara — eski alt sekme yerine başlıkta büyüteç. */}
-          <Pressable
-            onPress={() => router.push('/ara')}
-            hitSlop={10}
-            accessibilityRole="button"
-            accessibilityLabel="Ara">
-            <MaterialCommunityIcons name="magnify" size={24} color={Palette.altin} />
-          </Pressable>
+          {/* Ara — eski alt sekme yerine başlıkta büyüteç (bayraklıda Mevzuat'a taşındı). */}
+          {!aramaMevzuatta ? (
+            <Pressable
+              onPress={() => router.push('/ara')}
+              hitSlop={10}
+              accessibilityRole="button"
+              accessibilityLabel="Ara">
+              <MaterialCommunityIcons name="magnify" size={24} color={Palette.altin} />
+            </Pressable>
+          ) : null}
           {/* Premium'sa altın taç (dokununca Üyelik ekranı) — premium değilse görünmez. */}
           <UyelikTaci boyut={18} />
           {/* Duyurular (eski çan yerine) — okunmamış varsa kırmızı nokta. */}

@@ -301,8 +301,23 @@ function MevzuatIcerik() {
         </>
       ) : null}
 
-      {/* Arama + filtre butonu (listeyle birlikte kayar) */}
+      {/* Arama + filtre butonu (listeyle birlikte kayar).
+          Bayraklı modda (başkan, 9 Ağu gece: "iki aramayı birleştirip tek yere toplayalım")
+          kutu yazı almaz; dokununca TAM arama ekranı (/ara: kanun metni + madde no + kartlar)
+          açılır. Karargah'taki büyüteç de bayraklıda gizlenir → arama tek yerde. */}
       <View style={st.aramaSatir}>
+        {talimBurada ? (
+          <Pressable
+            style={st.aramaKutu}
+            onPress={() => router.push('/ara')}
+            accessibilityRole="button"
+            accessibilityLabel="Ara — kanun, madde, kart">
+            <MaterialCommunityIcons name="magnify" size={20} color={Palette.solukMetin} />
+            <AppText variant="govde" color="solukMetin" style={st.aramaSahte}>
+              Kanun, madde, konu veya kart ara…
+            </AppText>
+          </Pressable>
+        ) : (
         <View style={st.aramaKutu}>
           <MaterialCommunityIcons name="magnify" size={20} color={Palette.solukMetin} />
           <TextInput
@@ -320,6 +335,7 @@ function MevzuatIcerik() {
             </Pressable>
           ) : null}
         </View>
+        )}
         <Pressable
           onPress={() => setCipGoster((v) => !v)}
           style={[st.filtreBtn, cipGoster && st.filtreBtnAktif]}
@@ -1128,6 +1144,7 @@ const st = StyleSheet.create({
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kenarlik,
   },
+  aramaSahte: { flex: 1 },
   aramaInput: {
     flex: 1,
     color: Palette.anaMetin,
