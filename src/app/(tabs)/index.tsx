@@ -593,7 +593,12 @@ export default function KarargahScreen() {
       {/* HERO — ETÜT = zayıf havuz (eksik/zorlandığın kartları düzelt). Boşsa "zayıf yok". */}
       {bos ? (
         <Pressable
-          style={({ pressed }) => [styles.hero, styles.heroBitti, pressed && styles.pressed]}
+          style={({ pressed }) => [
+            styles.hero,
+            styles.heroBitti,
+            aramaMevzuatta && styles.heroKrem,
+            pressed && styles.pressed,
+          ]}
           onPress={() => router.push('/mevzuat')}
           accessibilityRole="button"
           accessibilityLabel="Mevzuat'tan konu çalış">
@@ -601,41 +606,46 @@ export default function KarargahScreen() {
             {/* YENİ ÜYE ile GÜNÜ BİTİREN aynı değil: ikisinde de zayıf havuz boş, ama hiç kart
                 çalışmamış birine "Tüm görevleri yaptın" demek yanlış — nereden başlayacağını
                 söylemek gerekiyor. (Başkan tespiti, 7 Ağu 2026.) */}
-            <AppText variant="etiket" color="altin" bold>
+            <AppText variant="etiket" color={aramaMevzuatta ? 'altinMetin' : 'altin'} bold>
               {aramaMevzuatta ? 'BUGÜNÜN EMRİ 🎖️' : hicCalisilan ? 'BURADAN BAŞLA 🎖️' : 'GÜNÜ TAMAMLADIN 🎖️'}
             </AppText>
-            <AppText variant="baslik" color="beyaz" bold>
+            <AppText variant="baslik" color={aramaMevzuatta ? 'lacivert' : 'beyaz'} bold>
               {hicCalisilan ? 'İlk mevzini seç' : 'Tüm görevleri yaptın'}
             </AppText>
-            <AppText variant="kucuk" color="kenarlik">
+            <AppText variant="kucuk" color={aramaMevzuatta ? 'solukMetin' : 'kenarlik'}>
               {hicCalisilan
                 ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla ›"
                 : "Tekrar edilecek mevzi kalmadı — Mevzuat'tan yeni konu çalış ›"}
             </AppText>
           </View>
-          <MaterialCommunityIcons name="book-open-variant" size={52} color={Palette.altin} />
+          <MaterialCommunityIcons
+            name="book-open-variant"
+            size={52}
+            color={aramaMevzuatta ? Palette.altinKoyu : Palette.altin}
+          />
         </Pressable>
       ) : (
         <Pressable
-          style={({ pressed }) => [styles.hero, pressed && styles.pressed]}
+          style={({ pressed }) => [styles.hero, aramaMevzuatta && styles.heroKrem, pressed && styles.pressed]}
           onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
           accessibilityRole="button"
           accessibilityLabel="Geri Besleme — zayıf mevzileri çalış">
           <View style={styles.heroUst}>
             <View style={styles.heroMetin}>
               {/* GECE KARARI K1+K7 (bayraklı): "ZAYIF MEVZİLER" değil "BUGÜNÜN EMRİ";
-                  alarm dili yerine altın "güçlendir" dili. */}
-              <AppText variant="etiket" color="altin" bold>
+                  alarm dili yerine altın "güçlendir" dili. Zemin KREM (başkan, 10 Ağu:
+                  "koyu içimizi karartıyor — Codex'te onaylanan renk dili"). */}
+              <AppText variant="etiket" color={aramaMevzuatta ? 'altinMetin' : 'altin'} bold>
                 {aramaMevzuatta ? 'BUGÜNÜN EMRİ 🎖️' : 'ZAYIF MEVZİLER'}
               </AppText>
-              <AppText variant="baslik" color="beyaz" bold>
+              <AppText variant="baslik" color={aramaMevzuatta ? 'lacivert' : 'beyaz'} bold>
                 {aramaMevzuatta ? `Zorlandığın ${bekleyen} kartı güçlendir` : 'Kart Çalışması'}
               </AppText>
               {/* Etüt = hata + zorlandıklarını düzeltme bölümü (tekrar-hatırlat + denemede yanlış). */}
-              <AppText variant="etiket" color="altinAcik2">
+              <AppText variant="etiket" color={aramaMevzuatta ? 'altinMetin' : 'altinAcik2'}>
                 Eksik ve zorlandığın kartları tekrar et
               </AppText>
-              <AppText variant="kucuk" color="kenarlik">
+              <AppText variant="kucuk" color={aramaMevzuatta ? 'solukMetin' : 'kenarlik'}>
                 {bekleyen > 0
                   ? `${bekleyen} zayıf mevzi seni bekliyor`
                   : 'Şu an düzeltilecek mevzi yok'}
@@ -654,8 +664,10 @@ export default function KarargahScreen() {
           {/* Bilgi SÜTUNLARI — gerçek/türetilmiş veri. (Günlük hedef sütunu kaldırıldı; hedef
               artık Karargah'ta sabit gösterilmiyor — kullanıcı Ayarlar → Eğitim Planı'ndan ayarlar.) */}
           <View style={styles.heroBilgi}>
-            <HeroBilgi ikon="clock-outline" etiket="Tahmini süre" deger={`${bekleyen} dk`} />
-            {sonKonu ? <HeroBilgi ikon="book-outline" etiket="Son konu" deger={sonKonu} /> : null}
+            <HeroBilgi ikon="clock-outline" etiket="Tahmini süre" deger={`${bekleyen} dk`} krem={aramaMevzuatta} />
+            {sonKonu ? (
+              <HeroBilgi ikon="book-outline" etiket="Son konu" deger={sonKonu} krem={aramaMevzuatta} />
+            ) : null}
           </View>
         </Pressable>
       )}
@@ -897,20 +909,28 @@ function HeroBilgi({
   ikon,
   etiket,
   deger,
+  krem,
 }: {
   ikon: keyof typeof MaterialCommunityIcons.glyphMap;
   etiket: string;
   deger: string;
+  /** Bayraklı krem hero içinde: açık zemin + lacivert metin (Codex dili). */
+  krem?: boolean;
 }) {
   return (
-    <View style={styles.heroKutu}>
+    <View style={[styles.heroKutu, krem && styles.heroKutuKrem]}>
       <View style={styles.heroKutuUst}>
-        <MaterialCommunityIcons name={ikon} size={15} color={Palette.altinAcik2} />
-        <AppText variant="kucuk" color="beyaz" bold numberOfLines={2} style={styles.heroKutuDeger}>
+        <MaterialCommunityIcons name={ikon} size={15} color={krem ? Palette.altinKoyu : Palette.altinAcik2} />
+        <AppText
+          variant="kucuk"
+          color={krem ? 'lacivert' : 'beyaz'}
+          bold
+          numberOfLines={2}
+          style={styles.heroKutuDeger}>
           {deger}
         </AppText>
       </View>
-      <AppText variant="etiket" color="kenarlik" numberOfLines={1}>
+      <AppText variant="etiket" color={krem ? 'solukMetin' : 'kenarlik'} numberOfLines={1}>
         {etiket}
       </AppText>
     </View>
@@ -1059,6 +1079,17 @@ const styles = StyleSheet.create({
     borderRadius: Radius.l,
     padding: Spacing.four,
     gap: Spacing.three,
+  },
+  // Bayraklı (başkan, 10 Ağu): koyu lacivert hero "içimizi karartıyor" → Codex'te onaylanan
+  // krem dil: kart kremi zemin + altın kenarlık + lacivert metin.
+  heroKrem: {
+    backgroundColor: Palette.kartKremi,
+    borderWidth: 1,
+    borderColor: Palette.altin,
+  },
+  heroKutuKrem: {
+    backgroundColor: Palette.kremZemin,
+    borderColor: Palette.kenarlik,
   },
   heroBitti: {
     flexDirection: 'row',
