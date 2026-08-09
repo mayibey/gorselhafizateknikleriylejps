@@ -1219,3 +1219,12 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
   kırmızı ödül-ceza emir kartı (K5+K7) · başlıktaki taç + megafon ikonları (K5 — duyuru
   erişimi geçici bildirim-only; kalıcı yer KARARLAŞACAK).
 - OTA 5 runtime. Commit: index.tsx tek dosya.
+
+## 9 Ağu 2026 (11) — Taşınanlar yeni evlerine (bayraklı; silme YOK)
+- Evsaf başına: `IstatistikKutulari` (Genel ilerleme/Nöbet serisi/Zayıf mevzi; zayıf
+  kutusu → /akis zayif) + `DuyurularSatiri` (megafonun yeni evi; okunmamış kırmızı nokta)
+  — components/evsaf/karargah-tasinanlar.tsx.
+- Mevzuat listesi altına: `GununMaddesiKarti` (components/mevzuat/gunun-maddesi.tsx;
+  Karargah'takiyle aynı seçim + premium sızıntı kapısı; inmemiş kanunda patikaya düşer).
+- Eski hâlleri kodda aynen duruyor (bayrak kapalı herkes eskisini görüyor) — geri almak
+  bayrak satırı silmek kadar kolay. OTA 5 runtime.
