@@ -467,7 +467,16 @@ function Monogram({
   return (
     <View style={[st.monogram, { width: boyut, height: boyut }]}>
       {no ? (
-        <AppText variant={variant} bold color="altin">
+        // 4 haneli numara (5237) küçük kutuda satıra BÖLÜNMESİN: tek satır zorunlu,
+        // sığmazsa punto kendiliğinden küçülür (başkanın 9 Ağu "523/7" ekran görüntüsü).
+        <AppText
+          variant={variant}
+          bold
+          color="altin"
+          numberOfLines={1}
+          adjustsFontSizeToFit
+          minimumFontScale={0.5}
+          style={{ paddingHorizontal: 2, textAlign: 'center' }}>
           {no}
         </AppText>
       ) : (
