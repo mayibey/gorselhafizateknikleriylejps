@@ -796,13 +796,7 @@ function KanunSatir({
             <Pressable
               onPress={(e) => {
                 e.stopPropagation();
-                if (!tam) {
-                  Alert.alert(
-                    'Önce kartları bitir',
-                    `Talim için kanunun tüm kartları çalışılmalı (${calisilan}/${toplam}).`,
-                  );
-                  return;
-                }
+                // Başkan kararı (9 Ağu): "önce tüm kartları bitir" şartı YOK — talim her zaman açık.
                 if (testAdedi <= 1) {
                   router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: '1' } });
                   return;
@@ -812,11 +806,7 @@ function KanunSatir({
               style={({ pressed }) => [st.talimBtn, pressed && st.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Talim yap">
-              <MaterialCommunityIcons
-                name={tam ? 'target' : 'lock'}
-                size={16}
-                color={Palette.altinKoyu}
-              />
+              <MaterialCommunityIcons name="target" size={16} color={Palette.altinKoyu} />
               <AppText variant="kucuk" bold color="altinMetin">
                 Talim Yap{testAdedi > 1 ? ` · ${testAdedi}` : ''}
               </AppText>
