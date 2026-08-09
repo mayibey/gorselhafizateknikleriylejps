@@ -15,6 +15,7 @@ import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
+import { GununMaddesiKarti } from '@/components/mevzuat/gunun-maddesi';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
 import { ICERIK_TABANI } from '@/constants/config';
 import { KILIT_AKTIF, ucretsizKanun } from '@/constants/urunler';
@@ -465,6 +466,8 @@ function MevzuatIcerik() {
               />
             ))
           )}
+          {/* GECE KARARI K4 (bayraklı): Günün Maddesi Karargah'tan buraya, listenin altına. */}
+          {talimBurada ? <GununMaddesiKarti /> : null}
         </>
       )}
         </>

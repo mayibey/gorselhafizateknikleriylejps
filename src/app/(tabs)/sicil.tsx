@@ -33,6 +33,8 @@ import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
 import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
+import { DuyurularSatiri, IstatistikKutulari } from '@/components/evsaf/karargah-tasinanlar';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 // liste = ÇALIŞILABİLİR (indirilmiş) zayıflar; kilitli = üyelik gerektiren kanunlarda (indirilemez);
 // inebilir = erişilebilir ama henüz indirilmemiş (Mevzuat'tan inince çalışılır).
@@ -55,6 +57,7 @@ const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '�
 export default function SicilScreen() {
   const router = useRouter();
   const { kanunErisilebilir } = useUyelik();
+  const karargahTasindi = useKisiselOzellik('talim-mevzuata');
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
@@ -115,6 +118,14 @@ export default function SicilScreen() {
 
   return (
     <Screen title="Evsaf">
+      {/* GECE KARARLARI K3+K5 (bayraklı): Karargah'tan taşınan istatistik kutuları +
+          Duyurular girişi (megafonun yeni evi). Hiçbir şey silinmedi, yer değişti. */}
+      {karargahTasindi ? (
+        <>
+          <IstatistikKutulari />
+          <DuyurularSatiri />
+        </>
+      ) : null}
       {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
       <Pressable
         style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
