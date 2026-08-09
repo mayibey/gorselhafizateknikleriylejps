@@ -116,27 +116,10 @@ export default function SicilScreen() {
   const hazirlikN = toplamN > 0 ? Math.round((ogrenilenN / toplamN) * 100) : 0;
   const kalanN = toplamN > 0 ? 100 - hazirlikN : 0;
 
-  return (
-    <Screen title="Evsaf">
-      {/* GECE KARARLARI K3+K5 (bayraklı): Karargah'tan taşınan istatistik kutuları +
-          Duyurular girişi (megafonun yeni evi). Hiçbir şey silinmedi, yer değişti. */}
-      {karargahTasindi ? (
-        <>
-          <IstatistikKutulari />
-          <DuyurularSatiri />
-        </>
-      ) : null}
-      {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
-      <Pressable
-        style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
-        onPress={() => router.push('/ayarlar')}>
-        <MaterialCommunityIcons name="cog-outline" size={20} color={Palette.lacivert} />
-        <AppText variant="kucuk" bold style={styles.planAd}>
-          Ayarlar (Branş · Rütbe · Bildirimler · Yasal)
-        </AppText>
-        <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
-      </Pressable>
-
+  // GECE KARARI E1 (bayraklı): teknik satırlar başı işgal etmesin — Ayarlar sağ üst
+  // dişliye, Hata Bildir + Destek en alttaki "YARDIM" grubuna. Bayraksızda hepsi eski yerinde.
+  const yardimSatirlari = (
+    <>
       {/* Genel hata/öneri bildirimi (kart-bağımsız) — karttaki bildirimle aynı yere (Supabase
           geri_bildirim tablosu) düşer, sadece kart bilgisi olmadan. */}
       <Pressable
@@ -159,6 +142,46 @@ export default function SicilScreen() {
         </AppText>
         <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
       </Pressable>
+    </>
+  );
+
+  return (
+    <Screen
+      title="Evsaf"
+      headerSag={
+        karargahTasindi ? (
+          <Pressable
+            onPress={() => router.push('/ayarlar')}
+            hitSlop={10}
+            accessibilityRole="button"
+            accessibilityLabel="Ayarlar">
+            <MaterialCommunityIcons name="cog-outline" size={24} color={Palette.altin} />
+          </Pressable>
+        ) : undefined
+      }>
+      {/* GECE KARARLARI K3+K5 (bayraklı): Karargah'tan taşınan istatistik kutuları +
+          Duyurular girişi (megafonun yeni evi). Hiçbir şey silinmedi, yer değişti. */}
+      {karargahTasindi ? (
+        <>
+          <IstatistikKutulari />
+          <DuyurularSatiri />
+        </>
+      ) : null}
+      {!karargahTasindi ? (
+        <>
+          {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
+          <Pressable
+            style={({ pressed }) => [styles.planKart, pressed && styles.pressed]}
+            onPress={() => router.push('/ayarlar')}>
+            <MaterialCommunityIcons name="cog-outline" size={20} color={Palette.lacivert} />
+            <AppText variant="kucuk" bold style={styles.planAd}>
+              Ayarlar (Branş · Rütbe · Bildirimler · Yasal)
+            </AppText>
+            <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+          </Pressable>
+          {yardimSatirlari}
+        </>
+      ) : null}
 
       <KisiselBilgiler />
 
@@ -238,6 +261,16 @@ export default function SicilScreen() {
           </View>
         </>
       )}
+
+      {/* E1 (bayraklı): yardım satırları en altta kendi grubunda. */}
+      {karargahTasindi ? (
+        <>
+          <AppText variant="etiket" color="solukMetin" bold>
+            YARDIM
+          </AppText>
+          {yardimSatirlari}
+        </>
+      ) : null}
 
       {/* Resmî kurum bağlantısı reddi — mağaza impersonation riskine karşı görünür ibare. */}
       <AppText variant="etiket" color="solukMetin" style={styles.resmiNot}>

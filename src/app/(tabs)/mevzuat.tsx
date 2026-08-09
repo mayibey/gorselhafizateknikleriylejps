@@ -234,8 +234,13 @@ function MevzuatIcerik() {
                 size={16}
                 color={aktif ? Palette.beyaz : Palette.solukMetin}
               />
-              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
-                {b === 'müşterek' ? 'Müşterek' : 'Branş'}
+              {/* GECE KARARI M7 (bayraklı): gerçek adlar — "Müşterek Mevzuat / Jandarma Mevzuatı". */}
+              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'} numberOfLines={1}>
+                {b === 'müşterek'
+                  ? 'Müşterek Mevzuat'
+                  : brans === 'jandarma'
+                    ? 'Jandarma Mevzuatı'
+                    : 'Branş Mevzuatı'}
               </AppText>
             </Pressable>
           );
@@ -786,8 +791,9 @@ function KanunSatir({
     <View style={st.satirSag}>
       <View style={st.kilitChip}>
         <MaterialCommunityIcons name="lock" size={15} color={Palette.altinKoyu} />
+        {/* GECE KARARI M3 (bayraklı): "Kilidi Aç" emri değil, ait olduğu paketi söyleyen rozet. */}
         <AppText variant="etiket" bold color="altinMetin">
-          Kilidi Aç
+          {talimAc ? "Tam Erişim'de" : 'Kilidi Aç'}
         </AppText>
       </View>
       <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
@@ -870,9 +876,17 @@ function KanunSatir({
         </View>
       ) : null}
 
-      <AppText variant="kucuk" color="solukMetin">
-        {calisilan} / {toplam} kart tamamlandı
-      </AppText>
+      {/* GECE KARARI M2 (bayraklı): sıfır asla görünmez — başlanmamış kanunda "0/31" ve
+          boş çubuk yerine kanunun ne sunduğu yazar. */}
+      {talimAc && bos ? (
+        <AppText variant="kucuk" color="solukMetin">
+          {toplam} kart · sesli anlatım
+        </AppText>
+      ) : (
+        <AppText variant="kucuk" color="solukMetin">
+          {calisilan} / {toplam} kart tamamlandı
+        </AppText>
+      )}
       {/* En son ne zaman çalışıldı — hiç başlanmadıysa kırmızı uyarı. Bayraklı modda
           İndir + Başla/Devam kümesi de BU satırın sağını paylaşır (başkan, 9 Ağu gece:
           "henüz başlamadın ile aynı satırı paylaşsalar") — kart bir satır daha kısalır.
@@ -896,12 +910,15 @@ function KanunSatir({
         {talimAc && kilitli ? <View style={st.ustAksiyonBosluk} /> : null}
         {talimAc && kilitli ? aksiyonKumesi : null}
       </View>
-      <View style={st.barSatir}>
-        <Bar yuzde={yuzde} />
-        <AppText variant="etiket" bold color="altinMetin" style={st.barYuzde}>
-          %{yuzde}
-        </AppText>
-      </View>
+      {/* M2: başlanmamışta boş çubuk + %0 hiç çizilmez (bayraklı). */}
+      {talimAc && bos ? null : (
+        <View style={st.barSatir}>
+          <Bar yuzde={yuzde} />
+          <AppText variant="etiket" bold color="altinMetin" style={st.barYuzde}>
+            %{yuzde}
+          </AppText>
+        </View>
+      )}
 
       {/* ALT SAĞ: kalp + Başla/Devam/tik — yalnız NORMAL modda (bayraklıda küme üstte). */}
       {!talimAc ? (
