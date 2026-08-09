@@ -18,6 +18,8 @@ type ScreenProps = {
   headerAltinCizgi?: boolean;
   /** İçerik kaydırılabilir mi (varsayılan: evet). */
   scroll?: boolean;
+  /** Opsiyonel: kaydırmanın DIŞINDA, başlığın altında sabit duran şerit (ör. sekme seçici). */
+  sabitUst?: ReactNode;
   children: ReactNode;
 };
 
@@ -28,6 +30,7 @@ export function Screen({
   headerSag,
   headerAltinCizgi,
   scroll = true,
+  sabitUst,
   children,
 }: ScreenProps) {
   const body = <View style={styles.body}>{children}</View>;
@@ -53,6 +56,7 @@ export function Screen({
         </View>
       ) : null}
       {title && headerAltinCizgi ? <View style={styles.altinCizgi} /> : null}
+      {sabitUst ? <View style={styles.sabitUst}>{sabitUst}</View> : null}
       {scroll ? (
         <ScrollView ref={scrollRef} contentContainerStyle={styles.scrollContent}>
           {body}
@@ -83,6 +87,14 @@ const styles = StyleSheet.create({
   altinCizgi: {
     height: 1,
     backgroundColor: Palette.altin,
+  },
+  sabitUst: {
+    width: '100%',
+    maxWidth: MaxContentWidth,
+    alignSelf: 'center',
+    paddingHorizontal: Spacing.four,
+    paddingTop: Spacing.three,
+    backgroundColor: Palette.kremZemin,
   },
   scrollContent: {
     flexGrow: 1,
