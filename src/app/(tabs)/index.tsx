@@ -111,13 +111,15 @@ function SinavGeriSayim({ kompakt }: { kompakt?: boolean }) {
   if (kompakt) {
     return (
       <View style={styles.geriSayimKompakt}>
-        <MaterialCommunityIcons name="calendar-clock" size={16} color={Palette.altin} />
-        <AppText variant="kucuk" bold color="beyaz">
-          JSPS sınavına {gun} gün · 19 Eylül 14.00
-        </AppText>
+        <View style={styles.geriSayimKompaktSatir}>
+          <MaterialCommunityIcons name="calendar-clock" size={16} color={Palette.altin} />
+          <AppText variant="kucuk" bold color="beyaz" numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.8}>
+            JSPS sınavına {gun} gün · 19 Eylül 14.00
+          </AppText>
+        </View>
         {basvuru ? (
-          <AppText variant="etiket" bold color={basvuru.vurgu ? 'kirmizi' : 'altinAcik2'}>
-            · {basvuru.metin}
+          <AppText variant="etiket" bold color={basvuru.vurgu ? 'kirmizi' : 'altinAcik2'} numberOfLines={1}>
+            {basvuru.metin}
           </AppText>
         ) : null}
       </View>
@@ -982,17 +984,22 @@ const styles = StyleSheet.create({
 
   // Sınav geri sayımı (en üst, koyu lacivert şerit + altın rakamlar — komuta-konsolu aksanı)
   // K2 (bayraklı): tek satırlık sayaç — koca bloğun yerine ince şerit.
+  // Başvuru uyarısı AYRI ikinci satırda (aynı satıra sıkışıp taşıyordu — başkan, 9 Ağu gece).
   geriSayimKompakt: {
-    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: Spacing.one,
+    gap: 2,
     backgroundColor: Palette.kartYuzeyKoyu,
     borderRadius: Radius.m,
     borderWidth: 1,
     borderColor: Palette.altinKoyu,
     paddingVertical: Spacing.two,
     paddingHorizontal: Spacing.two,
+  },
+  geriSayimKompaktSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    maxWidth: '100%',
   },
   geriSayim: {
     backgroundColor: Palette.kartYuzeyKoyu,
