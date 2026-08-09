@@ -1210,3 +1210,12 @@ Jandarma, MEBS, Havacılık, Personel, Maliye, İstihkam, İkmal, Bakım, Bando,
 - Başkan: "tatbikatı da al oraya (geri sayımın altına)". Karargah'ta geri sayım
   altında artık ikili: `KaldiginYerKarti` + `TatbikatGirisi` (→ /tatbikat; rota
   href:null yaşıyor). AÇIK KARAR kapandı. Bayraklı; OTA 5 runtime (1.0.40-44).
+
+## 9 Ağu 2026 (10) — Gece kararları GERÇEK Karargah'a uygulandı (bayraklı)
+- K1: hero "BUGÜNÜN EMRİ 🎖️ · Zorlandığın N kartı güçlendir" diline geçti (altın, K7 alarm dili yok).
+- K2: saniyeli koca sayaç → tek satır şerit "JSPS sınavına N gün · 19 Eylül 14.00" (+başvuru).
+- KALKANLAR (bayraklıda): 3 istatistik kutusu (K3; Evsaf'a taşınması YAPILACAK) ·
+  Günün Maddesi kartı (K4; Mevzuat altına taşınması YAPILACAK) · "GERİ BESLEME" başlığı +
+  kırmızı ödül-ceza emir kartı (K5+K7) · başlıktaki taç + megafon ikonları (K5 — duyuru
+  erişimi geçici bildirim-only; kalıcı yer KARARLAŞACAK).
+- OTA 5 runtime. Commit: index.tsx tek dosya.
