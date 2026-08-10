@@ -41,7 +41,7 @@ import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '@/lib/er-meydani';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
-import { KaldiginYerKarti, TatbikatGirisi } from '@/components/karargah/kaldigin-yer';
+import { KaldiginYerKarti, TatbikatYarim } from '@/components/karargah/kaldigin-yer';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -70,7 +70,7 @@ function ikiHane(n: number): string {
 /** Karargah en üstü: JSPS sınavına canlı geri sayım (gün/saat/dk/sn). Her saniye işler.
  *  kompakt (GECE KARARI K2, bayraklı): saniyeli koca sayaç yerine tek satır —
  *  uygulamanın ilk sözü "vaktin tükeniyor" olmasın. */
-function SinavGeriSayim({ kompakt }: { kompakt?: boolean }) {
+function SinavGeriSayim({ kompakt, buyuk }: { kompakt?: boolean; buyuk?: boolean }) {
   const [kalanMs, setKalanMs] = useState(() => SINAV_TARIHI.getTime() - Date.now());
   useEffect(() => {
     const t = setInterval(() => setKalanMs(SINAV_TARIHI.getTime() - Date.now()), 1000);
@@ -108,6 +108,23 @@ function SinavGeriSayim({ kompakt }: { kompakt?: boolean }) {
       : { metin: 'BAŞVURULAR: 3–23 AĞUSTOS', vurgu: false };
   }
 
+  // 10 Ağu gece yerleşimi: başlığın altında İRİ, kutusuz sayaç + altın başvuru bandı.
+  if (buyuk) {
+    return (
+      <View style={styles.geriSayimBuyuk}>
+        <AppText variant="dev" bold color="lacivert" style={styles.geriSayimBuyukYazi}>
+          19 Eylül'e {gun} gün
+        </AppText>
+        {basvuru ? (
+          <View style={[styles.basvuruBant, basvuru.vurgu && styles.basvuruBantVurgu]}>
+            <AppText variant="etiket" bold color={basvuru.vurgu ? 'beyaz' : 'lacivert'}>
+              {basvuru.vurgu ? basvuru.metin : 'Sınav Başvuru Dönemi Açıldı · 3–23 Ağustos'}
+            </AppText>
+          </View>
+        ) : null}
+      </View>
+    );
+  }
   if (kompakt) {
     return (
       <View style={styles.geriSayimKompakt}>
@@ -177,6 +194,8 @@ export default function KarargahScreen() {
   const router = useRouter();
   // Bayraklı modda arama TEK yerde (Mevzuat'taki kutu → /ara) → buradaki büyüteç gizlenir.
   const aramaMevzuatta = useKisiselOzellik('talim-mevzuata');
+  // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
+  const [tekrarAcik, setTekrarAcik] = useState(false);
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [hicCalisilan, setHicCalisilan] = useState(false); // hiç kart çalışmamış (yeni üye)
@@ -479,16 +498,9 @@ export default function KarargahScreen() {
       {/* İlk gün indirimi hatırlatma modalı (koşullar tutunca kendi çıkar). */}
       <IndirimHatirlatma />
 
-      {/* Duyurular başlık köşesine taşındı (10 Ağu gece); pano şeridi kaldırıldı. */}
-      <SinavGeriSayim kompakt={aramaMevzuatta} />
-      {/* Bayraklı: Mevzuat'ın üstündeki "kaldığın yer" kartı + Genel Tatbikat girişi
-          buraya taşındı (başkan, 9 Ağu gece). */}
-      {aramaMevzuatta ? (
-        <View style={styles.karargahGiris}>
-          <KaldiginYerKarti />
-          <TatbikatGirisi />
-        </View>
-      ) : null}
+      {/* 10 Ağu gece yerleşimi (başkanın beğendiği düzen): iri sayaç + başvuru bandı →
+          BUGÜNÜN EMRİ (aşağıdaki hero) → Kaldığın Yer → [Tatbikat | Tekrar Zamanı] ikizleri. */}
+      <SinavGeriSayim kompakt={false} buyuk={aramaMevzuatta} />
 
       {/* 3 KUTU — Genel ilerleme · Nöbet serisi · Zayıf mevzi (sayacın hemen altında).
           GECE KARARI K3 (bayraklı): kutular Karargah'tan kalkar (Evsaf'a taşınacak) —
@@ -540,7 +552,8 @@ export default function KarargahScreen() {
       )}
 
       {/* UNUTMA UYARISI — ≥7 gündür tekrar edilmemiş kanunlar (tedbir bandı). */}
-      {unutulan.length > 0 ? (
+      {/* Bayraklıda bu bant otomatik çıkmaz — Tekrar Zamanı yarım kartından açılır (10 Ağu gece). */}
+      {unutulan.length > 0 && !aramaMevzuatta ? (
         <View style={styles.unutBanner}>
           <View style={styles.unutBaslik}>
             <MaterialCommunityIcons name="clock-alert-outline" size={18} color={Palette.amber} />
@@ -630,8 +643,32 @@ export default function KarargahScreen() {
           />
         </Pressable>
       ) : (
+        aramaMevzuatta ? (
+        /* 10 Ağu gece yerleşimi: BUGÜNÜN EMRİ merkezli — rozet, emir, süre, tek CTA. */
+        <View style={[styles.hero, styles.heroKrem, styles.heroMerkez]}>
+          <MaterialCommunityIcons name="shield-star" size={30} color={Palette.altinKoyu} />
+          <AppText variant="etiket" bold color="altinMetin" style={styles.emirEtiket}>
+            BUGÜNÜN EMRİ
+          </AppText>
+          <AppText variant="baslik" bold color="lacivert" style={styles.emirBaslik}>
+            Zorlandığın {bekleyen} kartı güçlendir
+          </AppText>
+          <AppText variant="etiket" color="solukMetin">
+            Tahmini süre: {bekleyen} dk{sonKonu ? ` · Son konu: ${sonKonu}` : ''}
+          </AppText>
+          <Pressable
+            style={({ pressed }) => [styles.emirCta, pressed && styles.pressed]}
+            onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+            accessibilityRole="button"
+            accessibilityLabel="Taarruza başla — zayıf kartları çalış">
+            <AppText variant="govde" bold color="lacivert">
+              TAARRUZA BAŞLA
+            </AppText>
+          </Pressable>
+        </View>
+        ) : (
         <Pressable
-          style={({ pressed }) => [styles.hero, aramaMevzuatta && styles.heroKrem, pressed && styles.pressed]}
+          style={({ pressed }) => [styles.hero, pressed && styles.pressed]}
           onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
           accessibilityRole="button"
           accessibilityLabel="Geri Besleme — zayıf mevzileri çalış">
@@ -675,7 +712,58 @@ export default function KarargahScreen() {
             ) : null}
           </View>
         </Pressable>
+        )
       )}
+
+      {/* 10 Ağu gece yerleşimi: emirden sonra Kaldığın Yer + [Tatbikat | Tekrar Zamanı] ikizleri. */}
+      {aramaMevzuatta ? (
+        <>
+          <KaldiginYerKarti />
+          <View style={styles.ikizSatir}>
+            <TatbikatYarim />
+            <Pressable
+              onPress={() => setTekrarAcik((v) => !v)}
+              style={({ pressed }) => [styles.tekrarYarim, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
+              <MaterialCommunityIcons name="bell-ring-outline" size={28} color={Palette.altinKoyu} />
+              <AppText variant="kucuk" bold color="lacivert" style={styles.tekrarBaslik}>
+                TEKRAR ZAMANI
+              </AppText>
+              <AppText
+                variant="etiket"
+                color={unutulan.length > 0 ? 'amber' : 'solukMetin'}
+                style={styles.tekrarBaslik}>
+                {unutulan.length > 0 ? `Paslanma riski: ${unutulan.length} kanun` : 'Paslanan kanun yok'}
+              </AppText>
+            </Pressable>
+          </View>
+          {tekrarAcik && unutulan.length > 0 ? (
+            <View style={styles.unutBanner}>
+              {unutulan.slice(0, 5).map((u) => (
+                <Pressable
+                  key={u.lawId}
+                  style={({ pressed }) => [styles.unutSatir, pressed && styles.pressed]}
+                  onPress={() => router.push({ pathname: '/patika', params: { lawId: String(u.lawId) } })}>
+                  <MaterialCommunityIcons name="history" size={16} color={Palette.altinKoyu} />
+                  <AppText variant="kucuk" bold color="lacivert" style={styles.unutAd} numberOfLines={1}>
+                    {u.ad}
+                  </AppText>
+                  <AppText variant="etiket" color="solukMetin">
+                    {u.gun} gün
+                  </AppText>
+                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                </Pressable>
+              ))}
+              {unutulan.length > 5 ? (
+                <AppText variant="etiket" color="solukMetin">
+                  +{unutulan.length - 5} kanun daha
+                </AppText>
+              ) : null}
+            </View>
+          ) : null}
+        </>
+      ) : null}
 
       {/* Er Meydanı'nda zorlandığın konular (ücretsiz görür; gidermek için premium) — Geri Besleme altında.
           Başkan (10 Ağu): bayraklıda bu kart EVSAF'a taşındı (Zayıf Mevziler → Oyunlar sekmesi). */}
@@ -1009,6 +1097,28 @@ const styles = StyleSheet.create({
   },
 
   // Sınav geri sayımı (en üst, koyu lacivert şerit + altın rakamlar — komuta-konsolu aksanı)
+  // Büyük sayaç (10 Ağu gece yerleşimi): kutusuz iri yazı + altın başvuru bandı.
+  geriSayimBuyuk: {
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  geriSayimBuyukYazi: {
+    textAlign: 'center',
+  },
+  basvuruBant: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.altin,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.two,
+    paddingHorizontal: Spacing.two,
+  },
+  basvuruBantVurgu: {
+    backgroundColor: Palette.kirmizi,
+    borderColor: Palette.kirmizi,
+  },
   // K2 (bayraklı): tek satırlık sayaç — koca bloğun yerine ince şerit.
   // Başvuru uyarısı AYRI ikinci satırda (aynı satıra sıkışıp taşıyordu — başkan, 9 Ağu gece).
   geriSayimKompakt: {
@@ -1085,6 +1195,44 @@ const styles = StyleSheet.create({
     borderRadius: Radius.l,
     padding: Spacing.four,
     gap: Spacing.three,
+  },
+  // 10 Ağu gece yerleşimi: merkezli emir + CTA + ikiz yarım kartlar.
+  heroMerkez: {
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  emirEtiket: {
+    letterSpacing: 2,
+  },
+  emirBaslik: {
+    textAlign: 'center',
+  },
+  emirCta: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    backgroundColor: Palette.altin,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+    marginTop: Spacing.one,
+  },
+  ikizSatir: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+  },
+  tekrarYarim: {
+    flex: 1,
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.three,
+  },
+  tekrarBaslik: {
+    textAlign: 'center',
+    letterSpacing: 1,
   },
   // Bayraklı (başkan, 10 Ağu): koyu lacivert hero "içimizi karartıyor" → Codex'te onaylanan
   // krem dil: kart kremi zemin + altın kenarlık + lacivert metin.

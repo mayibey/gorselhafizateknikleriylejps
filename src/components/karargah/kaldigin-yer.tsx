@@ -69,42 +69,76 @@ export function KaldiginYerKarti() {
   const yuzde = durum.toplam > 0 ? Math.round((durum.calisilan / durum.toplam) * 100) : 0;
   const no = durum.law.ad.match(/^(\d+)/)?.[1] ?? null;
 
+  // 10 Ağu gece yerleşimi (başkanın beğendiği düzen): üstte "KALDIĞIN YER" başlığı,
+  // içerikte kanun + İLERLEME BARI + sağda DEVAM düğmesi.
   return (
     <Pressable
       onPress={() => router.push({ pathname: '/patika', params: { lawId: String(durum.law.id) } })}
       style={({ pressed }) => [st.kart, pressed && st.basili]}
       accessibilityRole="button"
       accessibilityLabel="Çalışmaya devam et">
-      <View style={st.monogram}>
-        {no ? (
-          <AppText
-            variant="govde"
-            bold
-            color="altin"
-            numberOfLines={1}
-            adjustsFontSizeToFit
-            minimumFontScale={0.5}
-            style={st.monogramYazi}>
-            {no}
+      <AppText variant="etiket" bold color="solukMetin" style={st.kartBaslik}>
+        KALDIĞIN YER
+      </AppText>
+      <View style={st.icSatir}>
+        <View style={st.monogram}>
+          {no ? (
+            <AppText
+              variant="govde"
+              bold
+              color="altin"
+              numberOfLines={1}
+              adjustsFontSizeToFit
+              minimumFontScale={0.5}
+              style={st.monogramYazi}>
+              {no}
+            </AppText>
+          ) : (
+            <MaterialCommunityIcons name="book-outline" size={17} color={Palette.altin} />
+          )}
+        </View>
+        <View style={st.orta}>
+          <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1}>
+            {durum.siradaki ? 'Sıradaki: ' : ''}
+            {durum.law.ad}
           </AppText>
-        ) : (
-          <MaterialCommunityIcons name="book-outline" size={17} color={Palette.altin} />
-        )}
+          <View style={st.barSatir}>
+            <View style={st.bar}>
+              {yuzde > 0 ? <View style={[st.barDolu, { flex: yuzde }]} /> : null}
+              <View style={{ flex: Math.max(1, 100 - yuzde) }} />
+            </View>
+            <AppText variant="etiket" bold color="altinMetin">
+              {durum.calisilan}/{durum.toplam} · %{yuzde}
+            </AppText>
+          </View>
+        </View>
+        <View style={st.buton}>
+          <MaterialCommunityIcons name="play" size={15} color={Palette.lacivert} />
+          <AppText variant="etiket" bold color="lacivert">
+            Devam
+          </AppText>
+        </View>
       </View>
-      <View style={st.orta}>
-        <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1}>
-          {durum.law.ad}
-        </AppText>
-        <AppText variant="etiket" color="solukMetin">
-          {durum.siradaki ? 'Sıradaki kanun' : 'Kaldığın yer'} · {durum.calisilan}/{durum.toplam} · %{yuzde}
-        </AppText>
-      </View>
-      <View style={st.buton}>
-        <MaterialCommunityIcons name="play" size={15} color={Palette.lacivert} />
-        <AppText variant="etiket" bold color="lacivert">
-          Devam
-        </AppText>
-      </View>
+    </Pressable>
+  );
+}
+
+/** GENEL TATBİKAT — yarım kart (yan yana ikili düzen; 10 Ağu gece yerleşimi). */
+export function TatbikatYarim() {
+  const router = useRouter();
+  return (
+    <Pressable
+      onPress={() => router.push('/tatbikat')}
+      style={({ pressed }) => [st.yarim, pressed && st.basili]}
+      accessibilityRole="button"
+      accessibilityLabel="Genel Tatbikat — deneme sınavları">
+      <MaterialCommunityIcons name="target" size={28} color={Palette.altinKoyu} />
+      <AppText variant="kucuk" bold color="lacivert" style={st.yarimBaslik}>
+        GENEL TATBİKAT
+      </AppText>
+      <AppText variant="etiket" color="solukMetin" style={st.yarimAlt}>
+        Karma sınavlarla kendini sına
+      </AppText>
     </Pressable>
   );
 }
@@ -140,15 +174,56 @@ export function TatbikatGirisi() {
 
 const st = StyleSheet.create({
   kart: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
+    gap: Spacing.one,
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.altin,
     borderWidth: 1,
     borderRadius: Radius.m,
-    paddingHorizontal: Spacing.two,
+    paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.two,
+  },
+  kartBaslik: {
+    textAlign: 'center',
+    letterSpacing: 1,
+  },
+  icSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  barSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  bar: {
+    flex: 1,
+    flexDirection: 'row',
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: Palette.ilerlemeTrack,
+    overflow: 'hidden',
+  },
+  barDolu: {
+    backgroundColor: Palette.altin,
+  },
+  yarim: {
+    flex: 1,
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.three,
+  },
+  yarimBaslik: {
+    letterSpacing: 1,
+    textAlign: 'center',
+  },
+  yarimAlt: {
+    textAlign: 'center',
   },
   basili: { opacity: 0.85 },
   monogram: {
