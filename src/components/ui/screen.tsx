@@ -7,6 +7,7 @@ import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
+import { TopcuAtesi } from '@/components/ui/topcu-atesi';
 import { UfukNefesi, YildizKatmani } from '@/components/ui/yildiz-katmani';
 import { BottomTabInset, MaxContentWidth, Palette, Spacing } from '@/constants/theme';
 
@@ -96,6 +97,8 @@ export function Screen({
           />
           <UfukNefesi />
           <YildizKatmani />
+          {/* Uzak topçu ateşi: dağ sırtında seyrek, gerçekçi ışık patlamaları (build 71+). */}
+          <TopcuAtesi />
           {/* Açık gök üstünde saat/pil görünür kalsın — gece ekranında beyaz durum çubuğu. */}
           <StatusBar style="light" />
         </>
