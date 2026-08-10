@@ -200,6 +200,20 @@ export default function KarargahScreen() {
   const [tekrarAcik, setTekrarAcik] = useState(false);
   // ŞAFAK SAHNESİ verileri (bayraklı): kalan gün + başvuru penceresi + haftalık gün halkaları.
   const kalanGun = Math.max(0, Math.ceil((SINAV_TARIHI.getTime() - Date.now()) / 86400000));
+  // CANLI geri sayım (başkan, 11 Ağu): tek satır "39 GÜN 13:07:42" — saniyede bir işler.
+  const [kalanSn, setKalanSn] = useState(() =>
+    Math.max(0, Math.floor((SINAV_TARIHI.getTime() - Date.now()) / 1000)),
+  );
+  useEffect(() => {
+    if (!aramaMevzuatta) return;
+    const t = setInterval(
+      () => setKalanSn(Math.max(0, Math.floor((SINAV_TARIHI.getTime() - Date.now()) / 1000))),
+      1000,
+    );
+    return () => clearInterval(t);
+  }, [aramaMevzuatta]);
+  const p2 = (n: number) => String(n).padStart(2, '0');
+  const geriSayim = `${Math.floor(kalanSn / 86400)} GÜN ${p2(Math.floor((kalanSn % 86400) / 3600))}:${p2(Math.floor((kalanSn % 3600) / 60))}:${p2(kalanSn % 60)}`;
   const basvuruAcik = Date.now() >= BASVURU_BASLANGIC.getTime() && Date.now() <= BASVURU_BITIS.getTime();
   const [hafta, setHafta] = useState<{ harf: string; tamam: boolean }[]>([]);
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
@@ -531,65 +545,33 @@ export default function KarargahScreen() {
                 ekran görüntüsü). Arkada SVG ufuk silüeti — fotoğraf yok, OTA-güvenli. */}
             {/* SVG dağ silüeti kaldırıldı (11 Ağu): arka planda artık GERÇEK dağ görseli var
                 (screen.tsx koyu modu) — çizim taklidi onunla çakışıyordu. */}
-            <View style={styles.takvimSahne}>
-              <View style={styles.takvimSol}>
-                <View style={styles.takvimIkonKutu}>
-                  <MaterialCommunityIcons name="calendar-month-outline" size={24} color={Palette.altinParlak} />
-                </View>
-                <AppText variant="etiket" bold color="altinParlak" style={styles.takvimEtiket}>
-                  SINAV TAKVİMİ
-                </AppText>
-                <AppText variant="baslik" bold color="beyaz">
-                  {basvuruAcik
-                    ? 'Başvurular açık'
-                    : Date.now() < BASVURU_BASLANGIC.getTime()
-                      ? 'Başvurular yakında'
-                      : 'Başvurular kapandı'}
-                </AppText>
-                <AppText variant="govde" bold color="altinParlak">
-                  3 – 23 Ağustos
-                </AppText>
-                <View style={styles.takvimCizgi} />
-                <Pressable
-                  onPress={() =>
-                    Alert.alert(
-                      'Sınav Takvimi',
-                      'Başvuru dönemi: 3 – 23 Ağustos 2026\nSınav: 19 Eylül 2026, 14:00',
-                    )
-                  }
-                  hitSlop={8}
-                  style={styles.detayLink}
-                  accessibilityRole="button"
-                  accessibilityLabel="Sınav takvimi detayları">
-                  <AppText variant="kucuk" bold color="beyaz">
-                    Detaylar
-                  </AppText>
-                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.altinParlak} />
-                </Pressable>
+            {/* Başkan (11 Ağu): SINAV TAKVİMİ bloğu + tarih SİLİNDİ (süreli içerik derdi yok).
+                Yerine: ortada TEK SATIR canlı geri sayım (dev serif font, saniye işler) +
+                mühür + "JSPS sınavına kalan süre". Başvuru tarihi küçük satır — 23 Ağustos
+                geçince kendiliğinden kaybolur. */}
+            <View style={styles.sayacMerkez}>
+              <AppText
+                variant="dev"
+                bold
+                color="beyaz"
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                style={styles.devTekSatir}>
+                {geriSayim}
+              </AppText>
+              <View style={[styles.sagMuhurSatir, styles.muhurDar]}>
+                <View style={styles.sagMuhurCizgi} />
+                <MaterialCommunityIcons name="shield-star" size={14} color={Palette.altinParlak} />
+                <View style={styles.sagMuhurCizgi} />
               </View>
-              <View style={styles.takvimDikey} />
-              <View style={styles.takvimSag}>
-                <AppText variant="etiket" bold color="altinParlak" style={styles.takvimEtiket}>
-                  19 EYLÜL 2026
+              <AppText variant="kucuk" bold color="beyaz" style={styles.sagAltYazi}>
+                JSPS sınavına kalan süre
+              </AppText>
+              {basvuruAcik ? (
+                <AppText variant="etiket" bold color="altinParlak" style={styles.basvuruMini}>
+                  Başvurular: 3 – 23 Ağustos
                 </AppText>
-                <AppText variant="dev" bold color="beyaz" style={styles.devGun}>
-                  {kalanGun}
-                </AppText>
-                <AppText variant="baslik" bold color="beyaz" style={styles.devGunAlt}>
-                  GÜN
-                </AppText>
-                <View style={styles.sagMuhurSatir}>
-                  <View style={styles.sagMuhurCizgi} />
-                  <MaterialCommunityIcons name="shield-star" size={14} color={Palette.altinParlak} />
-                  <View style={styles.sagMuhurCizgi} />
-                </View>
-                <AppText variant="etiket" bold color="altinParlak" style={styles.jspsEtiket}>
-                  JSPS SINAVI
-                </AppText>
-                <AppText variant="kucuk" color="beyaz" style={styles.sagAltYazi}>
-                  Sınava kalan süre
-                </AppText>
-              </View>
+              ) : null}
             </View>
 
             {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası. */}
@@ -1536,6 +1518,29 @@ const styles = StyleSheet.create({
   takvimSahne: {
     flexDirection: 'row',
     gap: Spacing.three,
+  },
+  // Ortalı tek-satır canlı sayaç sahnesi (11 Ağu)
+  sayacMerkez: {
+    alignItems: 'center',
+    gap: 2,
+    paddingVertical: Spacing.two,
+  },
+  devTekSatir: {
+    fontSize: 44,
+    lineHeight: 52,
+    letterSpacing: 1,
+    textAlign: 'center',
+    fontVariant: ['tabular-nums'],
+    alignSelf: 'stretch',
+  },
+  muhurDar: {
+    alignSelf: 'center',
+    width: '62%',
+    paddingHorizontal: 0,
+  },
+  basvuruMini: {
+    letterSpacing: 1,
+    marginTop: Spacing.one,
   },
   takvimSol: {
     flex: 1.15,
