@@ -130,7 +130,7 @@ function Sorti({
           name="airplane"
           size={15}
           color="rgba(10,18,26,0.9)"
-          style={{ transform: [{ rotate: sagdan ? '-90deg' : '90deg' }] }}
+          style={{ transform: [{ rotate: sagdan ? '225deg' : '45deg' }] }}
         />
         <Animated.View style={[st.fener, fenerStil]} />
       </Animated.View>

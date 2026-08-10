@@ -83,7 +83,11 @@ export default function TabsLayout() {
       {/* ORTA — Oyunlar (altın vurgulu). Er Meydanı bu bölümün ilk oyunu. */}
       <Tabs.Screen
         name="er-meydani"
-        options={{ title: 'Oyunlar', tabBarIcon: oyunlarIcon() }}
+        options={{
+          title: 'Oyunlar',
+          // Ref v5 (bayraklı): altın daire yok — diğer sekmelerle aynı sade ikon.
+          tabBarIcon: talimMevzuata ? icon('gamepad-variant') : oyunlarIcon(),
+        }}
       />
       {/* Talim (kanun bazlı deneme/alıştırma) — 25 müşterek kanunun küratörlü soruları.
           Bayrak açıkken bardan gizlenir (href:null) ama rota yaşar → Mevzuat'tan açılır. */}

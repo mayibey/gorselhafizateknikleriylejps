@@ -581,28 +581,33 @@ export default function KarargahScreen() {
 
             {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası.
                 Sağ üst köşede çapraz KURDELE (ref v3): rozet değil, kırmızı şerit. */}
-            <View style={[styles.gecePanel, styles.emirPanelKirp]}>
-              {!bos ? (
-                <View pointerEvents="none" style={styles.kurdele}>
-                  <LinearGradient
-                    colors={['#F25048', '#B42318']}
-                    start={{ x: 0.5, y: 0 }}
-                    end={{ x: 0.5, y: 1 }}
-                    style={styles.kurdeleSerit}>
-                    <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
-                      ZAYIF MEVZİLER
-                    </AppText>
-                  </LinearGradient>
+            <View style={[styles.gecePanel, styles.emirPanelUst]}>
+              {/* Ref v5 SOL PLAKA: kalkan armalı "BUGÜNÜN / EMRİ" — kartın üstüne taşar. */}
+              <View style={styles.emirPlaka}>
+                <View style={styles.plakaArma}>
+                  <MaterialCommunityIcons name="shield-star" size={24} color={Palette.altinParlak} />
                 </View>
-              ) : null}
-              <View style={styles.emirUst}>
-                <View style={styles.emirIkonHalka}>
-                  <MaterialCommunityIcons name="target" size={22} color={Palette.altinParlak} />
+                <View>
+                  <AppText variant="etiket" bold color="altinParlak" style={styles.plakaUst}>
+                    BUGÜNÜN
+                  </AppText>
+                  <AppText variant="baslik" bold color="beyaz" style={styles.plakaAlt}>
+                    EMRİ
+                  </AppText>
                 </View>
-                <AppText variant="etiket" bold color="beyaz" style={styles.emirEtiket}>
-                  BUGÜNÜN EMRİ
-                </AppText>
               </View>
+              {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
+              {!bos ? (
+                <LinearGradient
+                  colors={['#E0392B', '#A61B12']}
+                  start={{ x: 0.5, y: 0 }}
+                  end={{ x: 0.5, y: 1 }}
+                  style={styles.zayifPlaka}>
+                  <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
+                    ZAYIF MEVZİLER
+                  </AppText>
+                </LinearGradient>
+              ) : null}
               <View style={styles.emirSatir}>
                 <View style={styles.emirSol}>
                   {bos ? (
@@ -652,7 +657,7 @@ export default function KarargahScreen() {
                           color={Palette.beyaz}
                         />
                         <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
-                          {sonKonu}
+                          {sonKonu.replace(' m.', ' · Madde ')}
                         </AppText>
                       </View>
                     </>
@@ -975,7 +980,7 @@ export default function KarargahScreen() {
                 Karma sınavlarla kendini sına.
               </AppText>
               <MaterialCommunityIcons
-                name="chevron-right"
+                name="arrow-right"
                 size={20}
                 color={Palette.altinParlak}
                 style={styles.yarimOk}
@@ -1003,7 +1008,7 @@ export default function KarargahScreen() {
                 {'Bilgini düelloda dene.\nRakibin seni bekliyor.'}
               </AppText>
               <MaterialCommunityIcons
-                name="chevron-right"
+                name="arrow-right"
                 size={20}
                 color={Palette.altinParlak}
                 style={styles.yarimOk}
@@ -1586,7 +1591,54 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   emirPanelKirp: {
-    overflow: 'hidden', // köşe kurdelesi kart dışına taşmasın
+    overflow: 'hidden', // (kullanım dışı — kurdele dönemi)
+  },
+  emirPanelUst: {
+    paddingTop: 56, // plakalar kartın üstüne biner, içerik altından başlar
+  },
+  emirPlaka: {
+    position: 'absolute',
+    top: -10,
+    left: -6,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: '#0B2F44',
+    borderWidth: 1.5,
+    borderColor: 'rgba(243,194,74,0.8)',
+    borderTopLeftRadius: Radius.l,
+    borderTopRightRadius: 8,
+    borderBottomRightRadius: 26,
+    borderBottomLeftRadius: 8,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: 5,
+  },
+  plakaArma: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    borderWidth: 1,
+    borderColor: 'rgba(243,194,74,0.5)',
+    backgroundColor: 'rgba(2,20,30,0.7)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  plakaUst: {
+    letterSpacing: 2,
+  },
+  plakaAlt: {
+    fontSize: 20,
+    lineHeight: 23,
+  },
+  zayifPlaka: {
+    position: 'absolute',
+    top: -10,
+    right: -4,
+    borderWidth: 1.5,
+    borderColor: 'rgba(243,194,74,0.85)',
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: 6,
   },
   kurdele: {
     ...StyleSheet.absoluteFillObject,
@@ -1615,8 +1667,8 @@ const styles = StyleSheet.create({
   kirmiziSolCubuk: {
     position: 'absolute',
     left: 0,
-    top: 12,
-    bottom: 12,
+    top: 8,
+    bottom: 8,
     width: 4,
     borderTopRightRadius: 2,
     borderBottomRightRadius: 2,
