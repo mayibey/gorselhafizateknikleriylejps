@@ -47,6 +47,15 @@ import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
 import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
 import { useEvsafIstatistik } from '@/components/evsaf/karargah-tasinanlar';
+import { EvsafKategori } from '@/components/evsaf/kategori';
+import {
+  CalismaAnalizi,
+  DenemeGecmisi,
+  ErMeydaniOzeti,
+  GuvenceNotu,
+  KanunHaritasi,
+  SinavProjeksiyonu,
+} from '@/components/evsaf/analiz';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
 import { RUTBELER } from '@/lib/rutbe-store';
@@ -162,8 +171,14 @@ export default function SicilScreen() {
       }>
       {/* 10 Ağu REDESIGN (bayraklı): sıra = Profil+Üyelik özeti → istatistikler →
           Zayıf Mevziler (ana odak) → Ödül-Ceza → Yardım → yasal link. */}
-      {/* 10 Ağu akşam: ASKERİ KÜNYE BANDI — profil kartı + istatistik kutularının yerine. */}
-      {karargahTasindi ? <KunyeBandi /> : null}
+      {/* 10 Ağu akşam: ASKERİ KÜNYE BANDI — profil kartı + istatistik kutularının yerine.
+          Ardından analiz kategorileri: projeksiyon (kimlikten hemen sonra en can alıcı soru). */}
+      {karargahTasindi ? (
+        <>
+          <KunyeBandi />
+          <SinavProjeksiyonu />
+        </>
+      ) : null}
       {!karargahTasindi ? (
         <>
           {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
@@ -291,6 +306,16 @@ export default function SicilScreen() {
           </View>
           )}
 
+          {/* Analiz kategorileri (10 Ağu akşam): harita → deneme geçmişi → çalışma analizi → Er Meydanı. */}
+          {karargahTasindi ? (
+            <>
+              <KanunHaritasi />
+              <DenemeGecmisi />
+              <CalismaAnalizi />
+              <ErMeydaniOzeti />
+            </>
+          ) : null}
+
           {/* Ödül-Ceza Sicili — takdir/başarı ödülleri + geri-bes ceza merdiveni.
               Bayraklıda kategori (dokun → açılır). */}
           {karargahTasindi ? (
@@ -361,6 +386,7 @@ export default function SicilScreen() {
       {/* Resmî kurum bağlantısı reddi — mağaza impersonation riskine karşı görünür ibare.
           10 Ağu redesign (bayraklı): dev paragraf yerine küçük link; metin SİLİNMEDİ,
           dokununca aynen gösteriliyor. Bayraksızda paragraf aynen. */}
+      {karargahTasindi ? <GuvenceNotu /> : null}
       {karargahTasindi ? (
         <Pressable
           onPress={() => Alert.alert('Yasal bilgilendirme', RESMI_BAGLANTI_YOK, [{ text: 'Tamam' }])}
@@ -578,50 +604,7 @@ function ProfilUyelikKarti() {
   );
 }
 
-// --- Evsaf Kategorisi (başkan 10 Ağu: "alanlar kategori kategori, tıklayınca aşağı açılsın") ---
-
-function EvsafKategori({
-  ikon,
-  baslik,
-  altYazi,
-  children,
-}: {
-  ikon: keyof typeof MaterialCommunityIcons.glyphMap;
-  baslik: string;
-  altYazi?: string;
-  children: ReactNode;
-}) {
-  const [acik, setAcik] = useState(false);
-  return (
-    <View style={styles.istatistikKart}>
-      <Pressable
-        style={styles.kategoriBaslik}
-        onPress={() => setAcik((v) => !v)}
-        accessibilityRole="button"
-        accessibilityLabel={`${baslik} bölümünü aç/kapat`}>
-        <View style={styles.kategoriIkon}>
-          <MaterialCommunityIcons name={ikon} size={22} color={Palette.lacivert} />
-        </View>
-        <View style={styles.kategoriAd}>
-          <AppText variant="govde" bold color="lacivert" numberOfLines={1}>
-            {baslik}
-          </AppText>
-          {altYazi ? (
-            <AppText variant="etiket" color="solukMetin" numberOfLines={1}>
-              {altYazi}
-            </AppText>
-          ) : null}
-        </View>
-        <MaterialCommunityIcons
-          name={acik ? 'chevron-up' : 'chevron-down'}
-          size={22}
-          color={Palette.solukMetin}
-        />
-      </Pressable>
-      {acik ? children : null}
-    </View>
-  );
-}
+// EvsafKategori components/evsaf/kategori.tsx'e taşındı (analiz kategorileri de kullanıyor).
 
 // --- Oyun Zayıfları (Er Meydanı + Oyun Merkezi yanlışları — 10 Ağu) ---
 
