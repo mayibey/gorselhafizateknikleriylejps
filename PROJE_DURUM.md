@@ -1385,3 +1385,13 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
 - Duyurular Karargah başlık satırının SAĞ ÜST köşesine: ikon değil YAZI — çerçevesiz
   altın "Duyurular" + okunmamışta kırmızı nokta (DuyuruIkonu etiketli modu yeniden yazıldı).
 - Pano şeridi kaldırıldı. OTA 5 runtime.
+
+## 10 Ağu 2026 (15) — Karargah YENİ YERLEŞİM (başkanın seçtiği düzen; bayraklı)
+- Başkan masaüstündeki "yerleşim.jpg" düzenini beğendi (koyu rengini değil) → iskelet
+  alındı, krem-lacivert-altın dille giydirildi: İRİ kutusuz sayaç ("19 Eylül'e N gün") +
+  altın başvuru bandı → MERKEZLİ BUGÜNÜN EMRİ (rozet + emir + tahmini süre + altın
+  "TAARRUZA BAŞLA" CTA) → barlı KALDIĞIN YER (DEVAM) → [GENEL TATBİKAT | TEKRAR ZAMANI]
+  ikiz yarım kartlar. Tekrar Zamanı kartı "Paslanma riski: N kanun" der; dokununca
+  paslanan kanun listesi altında açılır (otomatik bant bayraklıda kalktı).
+- kaldigin-yer.tsx: KALDIĞIN YER başlıklı + ilerleme barlı yeni form; TatbikatYarim eklendi.
+- SinavGeriSayim'a `buyuk` modu. OTA 5 runtime.
