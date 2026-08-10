@@ -46,7 +46,11 @@ import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
 import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
-import { IstatistikKutulari } from '@/components/evsaf/karargah-tasinanlar';
+import { useEvsafIstatistik } from '@/components/evsaf/karargah-tasinanlar';
+import { useBrans } from '@/lib/brans-context';
+import { useRutbe } from '@/lib/rutbe-context';
+import { RUTBELER } from '@/lib/rutbe-store';
+import { getBranches } from '@/db/database';
 import { useKisiselOzellik } from '@/lib/ozellik';
 
 // liste = ÇALIŞILABİLİR (indirilmiş) zayıflar; kilitli = üyelik gerektiren kanunlarda (indirilemez);
@@ -158,12 +162,8 @@ export default function SicilScreen() {
       }>
       {/* 10 Ağu REDESIGN (bayraklı): sıra = Profil+Üyelik özeti → istatistikler →
           Zayıf Mevziler (ana odak) → Ödül-Ceza → Yardım → yasal link. */}
-      {karargahTasindi ? (
-        <>
-          <ProfilUyelikKarti />
-          <IstatistikKutulari />
-        </>
-      ) : null}
+      {/* 10 Ağu akşam: ASKERİ KÜNYE BANDI — profil kartı + istatistik kutularının yerine. */}
+      {karargahTasindi ? <KunyeBandi /> : null}
       {!karargahTasindi ? (
         <>
           {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
@@ -378,6 +378,127 @@ export default function SicilScreen() {
         </AppText>
       )}
     </Screen>
+  );
+}
+
+// --- ASKERİ KÜNYE BANDI (10 Ağu akşam; başkan "genel olarak hoşuma gitmedi" → seçilen yön) ---
+// Lacivert kimlik bandı: avatar + ad + rütbe/branş + üyelik mührü + altın istatistikler.
+// Dokununca altında kişisel bilgi + üyelik detayı (mevcut gomulu bileşenler) açılır.
+
+function KunyeBandi() {
+  const { kullanici, hazir } = useAuth();
+  const { aktifHaklar } = useUyelik();
+  const { brans } = useBrans();
+  const { rutbe } = useRutbe();
+  const { hazirlik, streak, bekleyen } = useEvsafIstatistik();
+  const [profil, setProfil] = useState<Profil | null | undefined>(undefined);
+  const [bransAd, setBransAd] = useState<string | null>(null);
+  const [acik, setAcik] = useState(false);
+
+  useFocusEffect(
+    useCallback(() => {
+      let iptal = false;
+      if (!kullanici) {
+        setProfil(null);
+        return;
+      }
+      void profilGetir().then((p) => {
+        if (!iptal) setProfil(p);
+      });
+      void getBranches()
+        .then((bs) => {
+          if (!iptal) setBransAd(bs.find((b) => b.slug === brans)?.ad ?? null);
+        })
+        .catch(() => {});
+      return () => {
+        iptal = true;
+      };
+    }, [kullanici, brans]),
+  );
+
+  if (!hazir || !kullanici) return null;
+  const adSoyad = profil ? `${profil.ad ?? ''} ${profil.soyad ?? ''}`.trim() : '';
+  const rutbeAd = RUTBELER.find((r) => r.slug === rutbe)?.ad ?? null;
+  const gorevSatiri = [rutbeAd, bransAd].filter(Boolean).join(' · ');
+  // Mühür: paket adının kısa hâli ("Tam Erişim – Ömür Boyu" → "Tam Erişim").
+  const muhur =
+    aktifHaklar.length > 0
+      ? (urunBilgi(aktifHaklar[0].urun)?.ad ?? 'Tam Erişim').split('–')[0].trim()
+      : null;
+
+  return (
+    <>
+      <Pressable
+        style={({ pressed }) => [styles.kunye, pressed && styles.pressed]}
+        onPress={() => setAcik((v) => !v)}
+        accessibilityRole="button"
+        accessibilityLabel="Künye — kişisel bilgi ve üyelik detayını aç/kapat">
+        <View style={styles.kunyeUst}>
+          <View style={styles.kunyeAvatar}>
+            <MaterialCommunityIcons name="account" size={26} color={Palette.altin} />
+          </View>
+          <View style={styles.kunyeAdBlok}>
+            <AppText variant="baslik" bold color="beyaz" numberOfLines={1}>
+              {adSoyad || 'Hesabım'}
+            </AppText>
+            <View style={styles.kunyeGorevSatir}>
+              {gorevSatiri ? (
+                <AppText variant="etiket" color="altinAcik2" numberOfLines={1} style={styles.kunyeGorev}>
+                  {gorevSatiri}
+                </AppText>
+              ) : null}
+              {muhur ? (
+                <View style={styles.kunyeMuhur}>
+                  <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altin} />
+                  <AppText variant="etiket" bold color="altinAcik2">
+                    {muhur}
+                  </AppText>
+                </View>
+              ) : null}
+            </View>
+          </View>
+          <MaterialCommunityIcons
+            name={acik ? 'chevron-up' : 'chevron-down'}
+            size={22}
+            color={Palette.altinAcik2}
+          />
+        </View>
+        <View style={styles.kunyeAyrac} />
+        <View style={styles.kunyeIstSatir}>
+          <View style={styles.kunyeIst}>
+            <AppText variant="dev" bold color="altinAcik2">
+              %{hazirlik ?? 0}
+            </AppText>
+            <AppText variant="etiket" color="kenarlik">
+              İlerleme
+            </AppText>
+          </View>
+          <View style={styles.kunyeIst}>
+            <AppText variant="dev" bold color="altinAcik2">
+              {streak === null || streak === 0 ? '—' : streak}
+            </AppText>
+            <AppText variant="etiket" color="kenarlik">
+              Çalışma serisi
+            </AppText>
+          </View>
+          <View style={styles.kunyeIst}>
+            <AppText variant="dev" bold color="altinAcik2">
+              {bekleyen}
+            </AppText>
+            <AppText variant="etiket" color="kenarlik">
+              Zayıf mevzi
+            </AppText>
+          </View>
+        </View>
+      </Pressable>
+      {acik ? (
+        <View style={styles.istatistikKart}>
+          <KisiselBilgiler gomulu onProfil={profil ?? null} onDegisti={(p) => setProfil(p)} />
+          <View style={styles.kisiAyrac} />
+          <UyelikKarti gomulu />
+        </View>
+      ) : null}
+    </>
   );
 }
 
@@ -1521,6 +1642,65 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: Spacing.two,
+  },
+  // ASKERİ KÜNYE BANDI — lacivert kimlik kartı (Karargah geri sayımıyla aynı aile).
+  kunye: {
+    backgroundColor: Palette.lacivert,
+    borderColor: Palette.altinKoyu,
+    borderWidth: 1,
+    borderRadius: Radius.l,
+    padding: Spacing.three,
+    gap: Spacing.two,
+  },
+  kunyeUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  kunyeAvatar: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    borderWidth: 1.5,
+    borderColor: Palette.altin,
+    backgroundColor: 'rgba(255,255,255,0.06)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  kunyeAdBlok: {
+    flex: 1,
+    gap: 2,
+  },
+  kunyeGorevSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  kunyeGorev: {
+    flexShrink: 1,
+  },
+  kunyeMuhur: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.one,
+    paddingVertical: 1,
+  },
+  kunyeAyrac: {
+    height: 1,
+    backgroundColor: Palette.altinKoyu,
+    opacity: 0.5,
+  },
+  kunyeIstSatir: {
+    flexDirection: 'row',
+  },
+  kunyeIst: {
+    flex: 1,
+    alignItems: 'center',
+    gap: 1,
   },
   gomuluBlok: {
     gap: Spacing.two,

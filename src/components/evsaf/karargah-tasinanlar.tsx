@@ -19,8 +19,13 @@ import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
 import { useUyelik } from '@/lib/uyelik-context';
 
-export function IstatistikKutulari() {
-  const router = useRouter();
+/** Evsaf istatistikleri (ilerleme % · çalışma serisi · bekleyen zayıf) — hem kutu
+ *  satırı hem Künye Bandı aynı gerçek veriyi bu kancadan alır (10 Ağu). */
+export function useEvsafIstatistik(): {
+  hazirlik: number | null;
+  streak: number | null;
+  bekleyen: number;
+} {
   const [hazirlik, setHazirlik] = useState<number | null>(null);
   const [streak, setStreak] = useState<number | null>(null);
   const [bekleyen, setBekleyen] = useState(0);
@@ -40,6 +45,12 @@ export function IstatistikKutulari() {
       .catch(() => setBekleyen(0));
   }, []);
   useFocusEffect(yukle);
+  return { hazirlik, streak, bekleyen };
+}
+
+export function IstatistikKutulari() {
+  const router = useRouter();
+  const { hazirlik, streak, bekleyen } = useEvsafIstatistik();
 
   return (
     <View style={st.kutuSatir}>
