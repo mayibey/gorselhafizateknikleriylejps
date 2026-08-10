@@ -24,6 +24,8 @@ type ScreenProps = {
   koyu?: boolean;
   /** Opsiyonel: başlık MARKA yazısı olur — harf aralıklı büyük yazı + altın çizgi + kalkan (11 Ağu). */
   marka?: boolean;
+  /** Opsiyonel: marka başlığı BÜYÜTME — mock'taki gibi küçük harfli serif kalır (Mevzuat). */
+  markaKucukHarf?: boolean;
   /** Opsiyonel: header ile gövde arasında ince altın çizgi. Default: yok. */
   headerAltinCizgi?: boolean;
   /** İçerik kaydırılabilir mi (varsayılan: evet). */
@@ -42,6 +44,7 @@ export function Screen({
   kompaktBaslik,
   koyu,
   marka,
+  markaKucukHarf,
   scroll = true,
   sabitUst,
   children,
@@ -114,8 +117,12 @@ export function Screen({
             /* MARKA BAŞLIK (11 Ağu ekran görüntüsü): "K A R A R G Â H" + altında
                ortası kalkanlı ince altın çizgi — sayfaya mühür kimliği. */
             <View style={styles.marka}>
-              <AppText variant="baslik" color="beyaz" bold style={styles.markaYazi}>
-                {title.toLocaleUpperCase('tr-TR')}
+              <AppText
+                variant="baslik"
+                color="beyaz"
+                bold
+                style={markaKucukHarf ? styles.markaYaziDuz : styles.markaYazi}>
+                {markaKucukHarf ? title : title.toLocaleUpperCase('tr-TR')}
               </AppText>
               <View style={styles.markaAltSatir}>
                 <View style={styles.markaCizgi} />
@@ -177,6 +184,10 @@ const styles = StyleSheet.create({
   markaYazi: {
     fontSize: 23, // tek-ekran sığdırma (11 Ağu): 28 → 23
     letterSpacing: 5,
+  },
+  markaYaziDuz: {
+    fontSize: 30, // Mevzuat mock: küçük harfli büyük serif
+    letterSpacing: 0.5,
   },
   markaAltSatir: {
     flexDirection: 'row',

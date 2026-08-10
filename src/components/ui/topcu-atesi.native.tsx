@@ -20,10 +20,11 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 
-/* ⚠️ TEST DOZU (başkan görsün diye sık). GERÇEK DOZ önerisi: periyotlar 45000/62000. */
+/* ÜRÜN DOZU (11 Ağu sabaha): ilk sorti ~6. sn'de gelir (yeni bakan hemen görür),
+   sonrası seyrek — 45/62 sn periyot. Test dozu gerekirse: 14000/19000. */
 const SORTILER = [
-  { hedefX: 57, sirtY: 27.5, ucakY: 12, sagdan: false, boy: 58, periyot: 14000, gecikme: 1500 },
-  { hedefX: 22, sirtY: 29, ucakY: 10, sagdan: true, boy: 46, periyot: 19000, gecikme: 9000 },
+  { hedefX: 57, sirtY: 27.5, ucakY: 12, sagdan: false, boy: 58, periyot: 45000, gecikme: 1000 },
+  { hedefX: 22, sirtY: 29, ucakY: 10, sagdan: true, boy: 46, periyot: 62000, gecikme: 24000 },
 ];
 
 const UCUS_MS = 5200; // göğü geçme süresi

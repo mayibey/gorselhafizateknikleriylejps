@@ -220,9 +220,19 @@ function MevzuatIcerik() {
       // GECE TEMASI (IMG_3129 mock, 11 Ağu): bayraklıda Mevzuat da petrol gece + marka başlık.
       koyu={talimBurada}
       marka={talimBurada}
+      markaKucukHarf
       kompaktBaslik={talimBurada}
       // Bayrak açıkken Müşterek/Branş şeridi kaydırmanın DIŞINDA sabit durur (başkan isteği).
       sabitUst={talimBurada ? (
+        <View>
+        {/* Mock: başlık altı mühür satırı — "N kanun • tüm müfredat". */}
+        <View style={st.muhurSatir}>
+          <View style={st.muhurCizgi} />
+          <AppText variant="etiket" bold color="beyaz" style={st.muhurYazi}>
+            {musterek.length} kanun • tüm müfredat
+          </AppText>
+          <View style={st.muhurCizgi} />
+        </View>
         <View style={st.blokSecici}>
         {(['müşterek', 'brans'] as const).map((b) => {
           const aktif = blok === b;
@@ -250,6 +260,7 @@ function MevzuatIcerik() {
           );
         })}
       </View>
+        </View>
       ) : undefined}>
       {!talimBurada ? (
         <View style={st.blokSecici}>
@@ -1146,6 +1157,22 @@ function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k:
 
 const st = StyleSheet.create({
   // ── GECE (IMG_3129 mock) stilleri — yalniz bayrakli dal ──
+  muhurSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    marginBottom: 10,
+  },
+  muhurCizgi: {
+    width: 34,
+    height: 1,
+    backgroundColor: 'rgba(240,183,51,0.7)',
+  },
+  muhurYazi: {
+    letterSpacing: 1,
+    opacity: 0.95,
+  },
   satirGece: {
     backgroundColor: 'rgba(3,47,69,0.88)',
     borderWidth: 1,
