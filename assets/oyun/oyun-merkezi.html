@@ -1065,6 +1065,18 @@ function zerreCiz(){
 const kc=$('#konfeti'), kx=kc.getContext('2d');
 let parcalar=[];
 function konfetiKur(){kc.width=kc.clientWidth;kc.height=kc.clientHeight;}
+/* G3 KÖPRÜSÜ (10 Ağu, başkan isteği): oyun yanlışları "tekrar adayı" defterine yazılır —
+   köprü uygulamaya taşır, Evsaf'taki Zayıf Mevziler → Oyunlar sekmesi okur.
+   SRS'e/çalışma ilerlemesine DOKUNMAZ; yalnız kaynak künyesi + sayaç.
+   İlk üç oyun: Doğru-Yanlış, Rütbe Merdiveni, TCK mı CMK mı (doğrulanınca yayılacak). */
+function zayifNotEkle(kaynak){
+  try{
+    if(!kaynak) return;
+    const m=JSON.parse(localStorage.getItem('mevzu_zayif_oyun')||'{}');
+    m[kaynak]=(m[kaynak]||0)+1;
+    localStorage.setItem('mevzu_zayif_oyun',JSON.stringify(m));
+  }catch(e){}
+}
 function konfetiAt(adet){
   /* GECE KARARI G5: her doğruda mikro haptik (Android WebView titreşimi; iOS sessizce yok sayar). */
   try{ if(navigator.vibrate) navigator.vibrate(15); }catch(e){}
@@ -2035,7 +2047,7 @@ function ayCiz(){
   [...document.querySelectorAll('.sik')].forEach(b=>b.onclick=()=>aySec(b.dataset.v));
 }
 function aySec(v){
-  const s=ayL[ayi],ok=v===s.c;if(ok){ayD++;konfetiAt(26);}
+  const s=ayL[ayi],ok=v===s.c;if(ok){ayD++;konfetiAt(26);}else{zayifNotEkle(s.ref);}
   [...document.querySelectorAll('.sik')].forEach(b=>{b.disabled=true;b.style.pointerEvents='none';
     if(b.dataset.v===s.c)b.classList.add('ok');else if(b.dataset.v===v)b.classList.add('hata');});
   $('#aySA').innerHTML=`<div class="kaynak" style="margin-top:12px"><div class="rf">${s.ref}</div>
@@ -2097,7 +2109,7 @@ function dCev(c){
   $('#dRef').innerHTML=ok
     ? `<span style="color:var(--yesil);font-weight:800">Bildin</span> · ${s.ref}${not}`
     : `<span style="color:var(--kirmizi);font-weight:800">Doğrusu: ${s.d?'DOĞRU':'YANLIŞ'}</span> · ${s.ref}${not}`;
-  if(ok)dD++;else dY++;
+  if(ok)dD++;else{dY++;zayifNotEkle(s.ref);}
   $('#dSk').textContent=dD;$('#dHt').textContent=dY;
   // BEKLEME SÜRESİ: doğru bilince 300ms'ti; üst üste iki-üç doğru yapınca kartlar
   // okunmadan akıp gidiyordu. Doğruda da metni ve künyeyi görecek kadar duruyor;
@@ -2230,7 +2242,7 @@ function mSec(j){
   const s=MILYONER[mi],ok=j===s.d;
   [...document.querySelectorAll('.sik')].forEach(b=>{b.style.pointerEvents='none';
     if(+b.dataset.j===s.d)b.classList.add('ok');else if(+b.dataset.j===j)b.classList.add('hata');});
-  if(ok)konfetiAt(mi>=8?60:28);
+  if(ok)konfetiAt(mi>=8?60:28);else zayifNotEkle(s.ref);
   $('#mSA').innerHTML=`<div class="kaynak" style="margin-top:12px"><div class="rf">${s.ref}</div>
     <div class="mt">${ok?'Doğru.':'Yanlış.'} Doğru cevap: ${'ABCDE'[s.d]}) ${s.sik[s.d]}</div></div>
     <button class="btn ${ok?'ana':'hafif'}" id="mI" style="margin-top:10px">${ok?(mi+1<MILYONER.length?'SONRAKİ RÜTBE ▸':'BİTİR'):'ELENDİN — SONUÇ'}</button>`;

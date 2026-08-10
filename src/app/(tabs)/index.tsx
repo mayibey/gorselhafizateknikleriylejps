@@ -42,7 +42,6 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { KaldiginYerKarti, TatbikatGirisi } from '@/components/karargah/kaldigin-yer';
-import { DuyurularSatiri } from '@/components/evsaf/karargah-tasinanlar';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -453,23 +452,26 @@ export default function KarargahScreen() {
               <MaterialCommunityIcons name="magnify" size={24} color={Palette.altin} />
             </Pressable>
           ) : null}
-          {/* GECE KARARI K5 (bayraklı): açıklanmasız taç + megafon başlıktan kalkar.
-              (Duyurulara erişim geçici olarak yalnız bildirimlerden — kalıcı yeri kararlaşacak.) */}
+          {/* GECE KARARI K5 (bayraklı): açıklanmasız taç kalktı. Başkan (10 Ağu): sağ üst
+              köşede ayarlar DEĞİL Duyurular dursun (okunmamışta kırmızı nokta) — ayarlara
+              Evsaf'taki dişliden gidiliyor. */}
           {!aramaMevzuatta ? (
             <>
               {/* Premium'sa altın taç (dokununca Üyelik ekranı) — premium değilse görünmez. */}
               <UyelikTaci boyut={18} />
               {/* Duyurular (eski çan yerine) — okunmamış varsa kırmızı nokta. */}
               <DuyuruIkonu boyut={22} />
+              <Pressable
+                onPress={() => router.push('/ayarlar')}
+                hitSlop={10}
+                accessibilityRole="button"
+                accessibilityLabel="Profil ve ayarlar">
+                <MaterialCommunityIcons name="account-circle-outline" size={24} color={Palette.altin} />
+              </Pressable>
             </>
-          ) : null}
-          <Pressable
-            onPress={() => router.push('/ayarlar')}
-            hitSlop={10}
-            accessibilityRole="button"
-            accessibilityLabel="Profil ve ayarlar">
-            <MaterialCommunityIcons name="account-circle-outline" size={24} color={Palette.altin} />
-          </Pressable>
+          ) : (
+            <DuyuruIkonu boyut={24} />
+          )}
         </View>
       }>
       {/* EN ÜST — JSPS sınavına canlı geri sayım (tarih SINAV_TARIHI sabitinde). */}
@@ -483,8 +485,6 @@ export default function KarargahScreen() {
         <View style={styles.karargahGiris}>
           <KaldiginYerKarti />
           <TatbikatGirisi />
-          {/* Başkan (10 Ağu): duyuruların yeri Evsaf değil KARARGAH. */}
-          <DuyurularSatiri />
         </View>
       ) : null}
 

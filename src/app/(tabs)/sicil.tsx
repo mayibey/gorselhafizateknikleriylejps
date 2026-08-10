@@ -29,6 +29,9 @@ import {
   zayifKanunlar as erMeydaniZayifKanunlar,
   zayifMaddeler as erMeydaniZayifMaddeler,
 } from '@/lib/er-meydani';
+import { oyunKaydiYukle } from '@/lib/oyun-kayit';
+import { eslesenKartIdleri } from '@/lib/sinav';
+import type { CardWithLaw } from '@/db/schema';
 import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 
 const OYUN_KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
@@ -264,7 +267,14 @@ export default function SicilScreen() {
               }
             />
             ) : (
-              <OyunZayiflari />
+              <OyunZayiflari
+                karttanCalis={(lawId, cardId) =>
+                  router.push({
+                    pathname: '/akis',
+                    params: { lawId: String(lawId), kart: String(cardId) },
+                  })
+                }
+              />
             )}
           </View>
 
@@ -324,14 +334,43 @@ export default function SicilScreen() {
   );
 }
 
-// --- Oyun Zayıfları (Er Meydanı yanlışları — Karargah'tan taşındı, 10 Ağu) ---
+// --- Oyun Zayıfları (Er Meydanı + Oyun Merkezi yanlışları — 10 Ağu) ---
 
-function OyunZayiflari() {
+/** Oyun künyesinden ("5271 Ceza Muhakemesi Kanunu m.140") kartı bul: önce kanun no ile
+ *  kanun süz, sonra madde eşleştir. Yönetmelik/karşılıksız künyede null (kart yok). */
+function oyunKaynagindanKart(ref: string, cards: CardWithLaw[]): CardWithLaw | null {
+  const no = ref.match(/\b(\d{3,5})\b/);
+  if (!no) return null;
+  const havuz = cards.filter((c) => c.law_ad.includes(no[1]));
+  if (havuz.length === 0) return null;
+  const ids = eslesenKartIdleri(ref, havuz);
+  return ids.length > 0 ? (havuz.find((c) => c.id === ids[0]) ?? null) : null;
+}
+
+function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, cardId: number) => void }) {
   const [liste, setListe] = useState<ZayifKanunSatir[] | null>(null);
+  // Oyun Merkezi defteri (mevzu_zayif_oyun: künye → yanlış sayısı) + kart eşleşmesi.
+  const [merkez, setMerkez] = useState<{ ref: string; yanlis: number; kart: CardWithLaw | null }[]>([]);
   const yukle = useCallback(() => {
     void erMeydaniZayifKanunlar()
       .then(setListe)
       .catch(() => setListe([]));
+    void Promise.all([oyunKaydiYukle(), getAllCards()])
+      .then(([kayit, cards]) => {
+        const ham = kayit['mevzu_zayif_oyun'];
+        if (!ham) {
+          setMerkez([]);
+          return;
+        }
+        const m = JSON.parse(ham) as Record<string, number>;
+        setMerkez(
+          Object.entries(m)
+            .map(([ref, yanlis]) => ({ ref, yanlis, kart: oyunKaynagindanKart(ref, cards) }))
+            .sort((a, b) => b.yanlis - a.yanlis)
+            .slice(0, 8),
+        );
+      })
+      .catch(() => setMerkez([]));
   }, []);
   useFocusEffect(yukle);
 
@@ -342,10 +381,10 @@ function OyunZayiflari() {
       </AppText>
     );
   }
-  if (liste.length === 0) {
+  if (liste.length === 0 && merkez.length === 0) {
     return (
       <AppText variant="kucuk" color="solukMetin">
-        Er Meydanı'nda henüz zorlandığın konu yok — maç yaptıkça yanlışların burada toplanır.
+        Oyunlarda henüz zorlandığın konu yok — oynadıkça yanlışların burada toplanır.
       </AppText>
     );
   }
@@ -365,31 +404,74 @@ function OyunZayiflari() {
   }
   return (
     <>
-      <AppText variant="kucuk" color="anaMetin">
-        Er Meydanı maçlarında en çok bu konularda yanlış yaptın (dokun → maddeler):
-      </AppText>
-      {liste.slice(0, 6).map((z) => (
-        <Pressable
-          key={z.kanun}
-          onPress={() => detayGoster(z.kanun)}
-          style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
-          accessibilityRole="button">
-          <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
-            {OYUN_KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
+      {merkez.length > 0 ? (
+        <>
+          <AppText variant="etiket" color="solukMetin" bold>
+            OYUN MERKEZİ
           </AppText>
-          <View style={styles.zayifRozet}>
-            <AppText variant="etiket" color="beyaz" bold>
-              {z.yanlis} yanlış
+          <AppText variant="kucuk" color="anaMetin">
+            Oyunlarda yanlış yaptığın konular (dokun → o maddeyi çalış):
+          </AppText>
+          {merkez.map((z) => (
+            <Pressable
+              key={z.ref}
+              disabled={!z.kart}
+              onPress={() => z.kart && karttanCalis(z.kart.law_id, z.kart.id)}
+              style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel="Bu maddeyi çalış">
+              <MaterialCommunityIcons
+                name="gamepad-variant-outline"
+                size={16}
+                color={Palette.altinKoyu}
+              />
+              <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
+                {z.kart ? maddeEtiket(z.kart.madde_no, z.kart.baslik) : z.ref}
+              </AppText>
+              <View style={styles.zayifRozet}>
+                <AppText variant="etiket" color="beyaz" bold>
+                  {z.yanlis} yanlış
+                </AppText>
+              </View>
+              {z.kart ? (
+                <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+              ) : null}
+            </Pressable>
+          ))}
+        </>
+      ) : null}
+      {liste.length > 0 ? (
+        <>
+          <AppText variant="etiket" color="solukMetin" bold>
+            ER MEYDANI
+          </AppText>
+          <AppText variant="kucuk" color="anaMetin">
+            Maçlarda en çok bu konularda yanlış yaptın (dokun → maddeler):
+          </AppText>
+          {liste.slice(0, 6).map((z) => (
+            <Pressable
+              key={z.kanun}
+              onPress={() => detayGoster(z.kanun)}
+              style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
+              accessibilityRole="button">
+              <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
+              <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
+                {OYUN_KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
+              </AppText>
+              <View style={styles.zayifRozet}>
+                <AppText variant="etiket" color="beyaz" bold>
+                  {z.yanlis} yanlış
+                </AppText>
+              </View>
+              <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+            </Pressable>
+          ))}
+          {liste.length > 6 ? (
+            <AppText variant="etiket" color="solukMetin">
+              +{liste.length - 6} konu daha
             </AppText>
-          </View>
-          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
-        </Pressable>
-      ))}
-      {liste.length > 6 ? (
-        <AppText variant="etiket" color="solukMetin">
-          +{liste.length - 6} konu daha
-        </AppText>
+          ) : null}
+        </>
       ) : null}
     </>
   );
