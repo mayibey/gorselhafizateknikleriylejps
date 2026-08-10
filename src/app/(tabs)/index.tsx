@@ -599,7 +599,7 @@ export default function KarargahScreen() {
                 <View style={styles.emirIkonHalka}>
                   <MaterialCommunityIcons name="target" size={22} color={Palette.altinParlak} />
                 </View>
-                <AppText variant="etiket" bold color="altinParlak" style={styles.emirEtiket}>
+                <AppText variant="etiket" bold color="beyaz" style={styles.emirEtiket}>
                   BUGÜNÜN EMRİ
                 </AppText>
               </View>
@@ -610,53 +610,55 @@ export default function KarargahScreen() {
                       {hicCalisilan ? 'İLK MEVZİNİ SEÇ' : 'TÜM GÖREVLERİ YAPTIN 🎖️'}
                     </AppText>
                   ) : (
-                    /* Üç satırlık manşet — orta satır altın (ekran görüntüsündeki vurgu). */
+                    /* Ref v4: iki satır — "ZAYIF 8 MEVZİNİ" (MEVZİNİ altın) / "GÜÇLENDİR". */
                     <>
                       <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
-                        ZAYIF {bekleyen}
-                      </AppText>
-                      <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
-                        MEVZİNİ
+                        {`ZAYIF ${bekleyen} `}
+                        <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
+                          MEVZİNİ
+                        </AppText>
                       </AppText>
                       <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
                         GÜÇLENDİR
                       </AppText>
                     </>
                   )}
-                  <View style={styles.emirMeta}>
-                    {bos ? (
-                      <AppText variant="kucuk" bold color="beyaz" style={styles.emirAlt}>
-                        {hicCalisilan
-                          ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla"
-                          : 'Tekrar edilecek mevzi kalmadı — yeni konu çalış'}
-                      </AppText>
-                    ) : (
-                      <>
-                        <MaterialCommunityIcons name="clock-outline" size={16} color={Palette.beyaz} />
-                        <AppText variant="kucuk" bold color="beyaz">
-                          {bekleyen} dk
-                        </AppText>
-                        {sonKonu ? (
-                          <>
-                            <AppText variant="kucuk" bold color="beyaz" style={styles.metaNokta}>
-                              ·
-                            </AppText>
-                            <MaterialCommunityIcons
-                              name="file-document-outline"
-                              size={16}
-                              color={Palette.beyaz}
-                            />
-                            <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
-                              Son konu: {sonKonu}
-                            </AppText>
-                          </>
-                        ) : null}
-                      </>
-                    )}
-                  </View>
+                  {bos ? (
+                    <AppText variant="kucuk" bold color="beyaz" style={styles.emirAlt}>
+                      {hicCalisilan
+                        ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla"
+                        : 'Tekrar edilecek mevzi kalmadı — yeni konu çalış'}
+                    </AppText>
+                  ) : null}
                 </View>
                 {!bos ? <EmirHalka tamam={bugunSayi} toplam={bugunSayi + bekleyen} /> : null}
               </View>
+              {!bos ? (
+                /* Ref v4: çerçeveli meta alt-paneli — süre | dikey ayraç | son konu. */
+                <View style={styles.emirMetaPanel}>
+                  <View style={styles.emirMetaKol}>
+                    <MaterialCommunityIcons name="clock-outline" size={16} color={Palette.beyaz} />
+                    <AppText variant="kucuk" bold color="beyaz">
+                      {bekleyen} dk
+                    </AppText>
+                  </View>
+                  {sonKonu ? (
+                    <>
+                      <View style={styles.emirMetaAyrac} />
+                      <View style={styles.emirMetaKol}>
+                        <MaterialCommunityIcons
+                          name="file-document-outline"
+                          size={16}
+                          color={Palette.beyaz}
+                        />
+                        <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
+                          {sonKonu}
+                        </AppText>
+                      </View>
+                    </>
+                  ) : null}
+                </View>
+              ) : null}
               <Nabiz>
                 <Pressable
                   style={({ pressed }) => [styles.safakCta, pressed && styles.pressed]}
@@ -953,7 +955,7 @@ export default function KarargahScreen() {
               accessibilityLabel="Tatbikat — karma deneme sınavları">
               <View style={styles.madalyon}>
                 <View style={styles.madalyonIc}>
-                  <MaterialCommunityIcons name="target" size={30} color={Palette.altinParlak} />
+                  <MaterialCommunityIcons name="target" size={24} color={Palette.altinParlak} />
                 </View>
               </View>
               <View style={styles.tileBaslikSatir}>
@@ -981,7 +983,7 @@ export default function KarargahScreen() {
               accessibilityLabel="Er Meydanı — düelloya gir">
               <View style={styles.madalyon}>
                 <View style={styles.madalyonIc}>
-                  <MaterialCommunityIcons name="sword-cross" size={30} color={Palette.altinParlak} />
+                  <MaterialCommunityIcons name="sword-cross" size={24} color={Palette.altinParlak} />
                 </View>
               </View>
               <View style={styles.tileBaslikSatir}>
@@ -1485,7 +1487,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     alignItems: 'center',
     borderRadius: Radius.m,
-    paddingVertical: Spacing.three,
+    paddingVertical: Spacing.two,
     overflow: 'hidden', // zemin = altın degrade (LinearGradient absoluteFill)
   },
   // 10 Ağu gece yerleşimi: merkezli emir + CTA + ikiz yarım kartlar.
@@ -1559,8 +1561,8 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.one,
   },
   devTekSatir: {
-    fontSize: 44,
-    lineHeight: 52,
+    fontSize: 40,
+    lineHeight: 46,
     letterSpacing: 1,
     textAlign: 'center',
     fontVariant: ['tabular-nums'],
@@ -1586,11 +1588,11 @@ const styles = StyleSheet.create({
   },
   kurdeleSerit: {
     position: 'absolute',
-    top: 24,
-    right: -52,
-    width: 200,
+    top: 40,
+    right: -70,
+    width: 260,
     transform: [{ rotate: '45deg' }],
-    paddingVertical: 5,
+    paddingVertical: 4,
     alignItems: 'center',
     borderTopWidth: 1,
     borderBottomWidth: 1,
@@ -1609,9 +1611,9 @@ const styles = StyleSheet.create({
     gap: Spacing.one,
   },
   madalyon: {
-    width: 74,
-    height: 74,
-    borderRadius: 37,
+    width: 58,
+    height: 58,
+    borderRadius: 29,
     borderWidth: 2,
     borderColor: Palette.altinKoyu,
     backgroundColor: 'rgba(2,20,30,0.85)',
@@ -1620,9 +1622,9 @@ const styles = StyleSheet.create({
     marginTop: Spacing.one,
   },
   madalyonIc: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 46,
+    height: 46,
+    borderRadius: 23,
     borderWidth: 1.5,
     borderColor: 'rgba(243,194,74,0.6)',
     alignItems: 'center',
@@ -1770,6 +1772,29 @@ const styles = StyleSheet.create({
   },
   metaNokta: {
     marginHorizontal: 2,
+  },
+  emirMetaPanel: {
+    alignSelf: 'stretch',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+    borderRadius: Radius.m,
+    backgroundColor: 'rgba(3,40,56,0.5)',
+    paddingVertical: Spacing.two,
+    marginTop: Spacing.one,
+  },
+  emirMetaKol: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  emirMetaAyrac: {
+    width: 1,
+    alignSelf: 'stretch',
+    marginVertical: 2,
+    backgroundColor: 'rgba(214,236,239,0.25)',
   },
   ctaOk: {
     position: 'absolute',

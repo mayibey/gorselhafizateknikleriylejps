@@ -254,8 +254,8 @@ export function EmirHalka({ tamam, toplam }: { tamam: number; toplam: number }) 
       <AppText variant="govde" bold color="beyaz">
         {tamam} / {toplam}
       </AppText>
-      <AppText variant="etiket" color="beyaz" style={st.halkaAlt}>
-        tamamlandı
+      <AppText variant="etiket" bold color="beyaz" style={st.halkaAlt}>
+        KART
       </AppText>
     </View>
   );
@@ -339,7 +339,8 @@ const st = StyleSheet.create({
     justifyContent: 'center',
   },
   halkaAlt: {
-    opacity: 0.85,
+    opacity: 0.6,
+    letterSpacing: 1.5,
     marginTop: -2,
   },
 });
