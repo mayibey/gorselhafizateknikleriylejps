@@ -887,7 +887,12 @@ export default function KarargahScreen() {
         <>
           <Pressable
             onPress={() => setTekrarAcik((v) => !v)}
-            style={({ pressed }) => [styles.gecePanel, styles.tekrarSatir, pressed && styles.pressed]}
+            style={({ pressed }) => [
+              styles.gecePanel,
+              styles.tekrarSatir,
+              styles.blokArasi,
+              pressed && styles.pressed,
+            ]}
             accessibilityRole="button"
             accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
             {/* Handoff şartnamesi: uyarı KIRMIZI kalır ama PARLAK kırmızı (#F04438) —
@@ -930,7 +935,7 @@ export default function KarargahScreen() {
               color={unutulan.length > 0 ? Palette.kirmiziParlak : Palette.altinParlak}
             />
           </Pressable>
-          <View style={styles.ikizSatir}>
+          <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
               onPress={() => router.push('/tatbikat')}
               style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
@@ -939,7 +944,7 @@ export default function KarargahScreen() {
               <View style={styles.emirIkonHalka}>
                 <MaterialCommunityIcons name="target" size={24} color={Palette.altinParlak} />
               </View>
-              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimBaslik2}>
+              <AppText variant="kucuk" bold color="altinParlak" style={styles.yarimBaslik2}>
                 TATBİKAT
               </AppText>
               <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
@@ -960,7 +965,7 @@ export default function KarargahScreen() {
               <View style={styles.emirIkonHalka}>
                 <MaterialCommunityIcons name="sword-cross" size={24} color={Palette.altinParlak} />
               </View>
-              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimBaslik2}>
+              <AppText variant="kucuk" bold color="altinParlak" style={styles.yarimBaslik2}>
                 ER MEYDANI
               </AppText>
               <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
@@ -1456,7 +1461,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     alignItems: 'center',
     borderRadius: Radius.m,
-    paddingVertical: Spacing.two, // tek-ekran sığdırma
+    paddingVertical: Spacing.three,
     overflow: 'hidden', // zemin = altın degrade (LinearGradient absoluteFill)
   },
   // 10 Ağu gece yerleşimi: merkezli emir + CTA + ikiz yarım kartlar.
@@ -1516,7 +1521,7 @@ const styles = StyleSheet.create({
     gap: Spacing.two,
   },
   gokAkis: {
-    gap: Spacing.two, // tek-ekran sığdırma (11 Ağu)
+    gap: Spacing.four, // eşit blok ritmi (başkan, 11 Ağu: "arayı eşitçe aç")
   },
   // ═══ 11 Ağu "%100 aynısı" ekran görüntüsü stilleri ═══
   takvimSahne: {
@@ -1548,6 +1553,9 @@ const styles = StyleSheet.create({
   },
   basvuruMini: {
     letterSpacing: 1,
+  },
+  blokArasi: {
+    marginTop: Spacing.three, // gövde gap'iyle birlikte bloklar arası eşit ~24
   },
   basvuruKapsul: {
     marginTop: Spacing.two, // nefes boşluğu (sıkışıklık eleştirisi)
@@ -1705,7 +1713,8 @@ const styles = StyleSheet.create({
   yarimPanel: {
     flex: 1,
     alignItems: 'flex-start',
-    gap: Spacing.one,
+    gap: Spacing.two,
+    paddingVertical: Spacing.four,
   },
   yarimBaslik2: {
     letterSpacing: 1,
