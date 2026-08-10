@@ -892,18 +892,23 @@ export default function KarargahScreen() {
       {aramaMevzuatta ? (
         <>
           <Pressable
-            onPress={() => { hafifDokun(); setTekrarAcik((v) => !v); }}
+            onPress={() => {
+              hafifDokun();
+              if (unutulan.length === 1)
+                router.push({ pathname: '/patika', params: { lawId: String(unutulan[0].lawId) } });
+              else setTekrarAcik((v) => !v);
+            }}
             style={({ pressed }) => [
               styles.gecePanel,
               styles.tekrarSatir,
               styles.blokArasi,
-              unutulan.length > 0 && styles.tekrarKirmiziKenar,
               pressed && styles.pressed,
             ]}
             accessibilityRole="button"
             accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
             {/* Handoff şartnamesi: uyarı KIRMIZI kalır ama PARLAK kırmızı (#F04438) —
                 koyu kırmızının okunmama derdi böyle çözüldü. Paslanma yoksa altın-sakin. */}
+            {unutulan.length > 0 ? <View style={styles.kirmiziSolCubuk} /> : null}
             <View style={styles.emirIkonHalka}>
               <Sallan aktif={unutulan.length > 0}>
                 <MaterialCommunityIcons
@@ -1010,9 +1015,9 @@ export default function KarargahScreen() {
               {unutulan.slice(0, 5).map((u) => (
                 <Pressable
                   key={u.lawId}
-                  style={({ pressed }) => [styles.unutSatir, pressed && styles.pressed]}
+                  style={({ pressed }) => [styles.unutSatir, styles.unutSatirGece, pressed && styles.pressed]}
                   onPress={() => router.push({ pathname: '/patika', params: { lawId: String(u.lawId) } })}>
-                  <MaterialCommunityIcons name="history" size={16} color={Palette.altin} />
+                  <MaterialCommunityIcons name="history" size={16} color={Palette.altinParlak} />
                   <AppText variant="kucuk" bold color="beyaz" style={styles.unutAd} numberOfLines={1}>
                     {u.ad}
                   </AppText>
@@ -1601,9 +1606,21 @@ const styles = StyleSheet.create({
   kurdeleYazi: {
     letterSpacing: 1,
   },
-  tekrarKirmiziKenar: {
-    borderLeftWidth: 4,
-    borderLeftColor: Palette.kirmiziParlak,
+  unutSatirGece: {
+    backgroundColor: 'rgba(3,47,69,0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.35)',
+    borderRadius: Radius.m,
+  },
+  kirmiziSolCubuk: {
+    position: 'absolute',
+    left: 0,
+    top: 12,
+    bottom: 12,
+    width: 4,
+    borderTopRightRadius: 2,
+    borderBottomRightRadius: 2,
+    backgroundColor: Palette.kirmiziParlak,
   },
   tekrarEt: {
     flexDirection: 'row',
