@@ -6,6 +6,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
@@ -47,19 +48,50 @@ export function UyelikKarti() {
   // GECE KARARI S2 + başkan 10 Ağu ("amatör"): taç yasak → kalkan-yıldız; yeşil tik gibi
   // ikinci ikon dili yok; "hep senin" tekrarı yok. Bayraksızda eski hâl aynen.
   const sade = useKisiselOzellik('talim-mevzuata');
+  // Başkan 10 Ağu: kategoriler tıklayınca aşağı açılsın — bayraklıda başlık satırı
+  // kapalı başlar (özet altyazıyla), dokununca detay iner.
+  const [acik, setAcik] = useState(false);
   if (aktifHaklar.length === 0) return null;
+  const ozet = aktifHaklar
+    .map((h) => {
+      const b = urunBilgi(h.urun);
+      return b ? b.ad : h.urun;
+    })
+    .join(' · ');
+  const govdeGizli = sade && !acik;
   return (
     <View style={styles.kart}>
-      <View style={styles.kartBaslik}>
+      <Pressable
+        style={styles.kartBaslik}
+        disabled={!sade}
+        onPress={() => setAcik((v) => !v)}
+        accessibilityRole={sade ? 'button' : undefined}
+        accessibilityLabel="Üyelik bölümünü aç/kapat">
         <MaterialCommunityIcons
           name={sade ? 'shield-star' : 'crown'}
           size={20}
           color={Palette.altinKoyu}
         />
-        <AppText variant="govde" bold color="lacivert">
-          Üyeliğim
-        </AppText>
-      </View>
+        <View style={styles.baslikMetin}>
+          <AppText variant="govde" bold color="lacivert">
+            Üyeliğim
+          </AppText>
+          {govdeGizli ? (
+            <AppText variant="etiket" color="solukMetin" numberOfLines={1}>
+              {ozet}
+            </AppText>
+          ) : null}
+        </View>
+        {sade ? (
+          <MaterialCommunityIcons
+            name={govdeGizli ? 'chevron-down' : 'chevron-up'}
+            size={22}
+            color={Palette.solukMetin}
+          />
+        ) : null}
+      </Pressable>
+      {govdeGizli ? null : (
+      <>
       {aktifHaklar.map((h) => {
         const bilgi = urunBilgi(h.urun);
         const alt =
@@ -96,6 +128,8 @@ export function UyelikKarti() {
         </AppText>
         <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.lacivert} />
       </Pressable>
+      </>
+      )}
     </View>
   );
 }
@@ -123,6 +157,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
+  },
+  baslikMetin: {
+    flex: 1,
+    gap: 1,
   },
   satir: {
     flexDirection: 'row',

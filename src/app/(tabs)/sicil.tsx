@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useEffect, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator, Alert, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
@@ -227,13 +227,13 @@ export default function SicilScreen() {
 
           {/* Zayıf Mevziler — geri besleme havuzu (son denemede zor/yanlış).
               Başkan (10 Ağu): iki sekme — Denemeler (kart/sınav kaynaklı) · Oyunlar
-              (Er Meydanı yanlışları; Karargah'taki "Güç Kazandırma" kartı buraya taşındı). */}
-          <View style={styles.istatistikKart}>
-            <View style={styles.zayifBaslikSatir}>
-              <AppText variant="etiket" color="solukMetin" bold>
-                ZAYIF MEVZİLER
-              </AppText>
-              {karargahTasindi ? (
+              (Er Meydanı yanlışları). Bayraklıda KATEGORİ: başlığa dokun → aşağı açılır. */}
+          {karargahTasindi ? (
+            <EvsafKategori
+              ikon="target"
+              baslik="Zayıf Mevziler"
+              altYazi={`${zayifN} tekrar adayı`}>
+              <View style={styles.zayifSekmelerSag}>
                 <View style={styles.zayifSekmeler}>
                   {(['denemeler', 'oyunlar'] as const).map((s) => (
                     <Pressable
@@ -250,35 +250,54 @@ export default function SicilScreen() {
                     </Pressable>
                   ))}
                 </View>
-              ) : null}
+              </View>
+              {zayifSekme === 'denemeler' ? (
+                <ZayifBolum
+                  zayif={zayif}
+                  onCalis={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+                  karttanCalis={(lawId, cardId) =>
+                    router.push({
+                      pathname: '/akis',
+                      params: { lawId: String(lawId), kart: String(cardId) },
+                    })
+                  }
+                />
+              ) : (
+                <OyunZayiflari
+                  karttanCalis={(lawId, cardId) =>
+                    router.push({
+                      pathname: '/akis',
+                      params: { lawId: String(lawId), kart: String(cardId) },
+                    })
+                  }
+                />
+              )}
+            </EvsafKategori>
+          ) : (
+          <View style={styles.istatistikKart}>
+            <View style={styles.zayifBaslikSatir}>
+              <AppText variant="etiket" color="solukMetin" bold>
+                ZAYIF MEVZİLER
+              </AppText>
             </View>
-            {!karargahTasindi || zayifSekme === 'denemeler' ? (
             <ZayifBolum
               zayif={zayif}
               onCalis={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
-              karttanCalis={
-                karargahTasindi
-                  ? (lawId, cardId) =>
-                      router.push({
-                        pathname: '/akis',
-                        params: { lawId: String(lawId), kart: String(cardId) },
-                      })
-                  : undefined
-              }
             />
-            ) : (
-              <OyunZayiflari
-                karttanCalis={(lawId, cardId) =>
-                  router.push({
-                    pathname: '/akis',
-                    params: { lawId: String(lawId), kart: String(cardId) },
-                  })
-                }
-              />
-            )}
           </View>
+          )}
 
-          {/* Ödül-Ceza Sicili — takdir/başarı ödülleri + geri-bes ceza merdiveni */}
+          {/* Ödül-Ceza Sicili — takdir/başarı ödülleri + geri-bes ceza merdiveni.
+              Bayraklıda kategori (dokun → açılır). */}
+          {karargahTasindi ? (
+            <EvsafKategori ikon="medal-outline" baslik="Ödül-Ceza Sicili">
+              <SicilBolum
+                sicil={sicil}
+                zayifSayisi={zayif?.liste.length ?? 0}
+                onGeriBes={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+              />
+            </EvsafKategori>
+          ) : (
           <View style={styles.istatistikKart}>
             <AppText variant="etiket" color="solukMetin" bold>
               ÖDÜL-CEZA SİCİLİ
@@ -313,17 +332,15 @@ export default function SicilScreen() {
               </View>
             ) : null}
           </View>
+          )}
         </>
       )}
 
-      {/* E1 (bayraklı): yardım satırları en altta kendi grubunda. */}
+      {/* E1 (bayraklı): yardım satırları en altta kendi KATEGORİSİNDE (dokun → açılır). */}
       {karargahTasindi ? (
-        <>
-          <AppText variant="etiket" color="solukMetin" bold>
-            YARDIM
-          </AppText>
+        <EvsafKategori ikon="lifebuoy" baslik="Yardım" altYazi="Hata bildir · Destek">
           {yardimSatirlari}
-        </>
+        </EvsafKategori>
       ) : null}
 
       {/* Resmî kurum bağlantısı reddi — mağaza impersonation riskine karşı görünür ibare. */}
@@ -331,6 +348,51 @@ export default function SicilScreen() {
         {RESMI_BAGLANTI_YOK}
       </AppText>
     </Screen>
+  );
+}
+
+// --- Evsaf Kategorisi (başkan 10 Ağu: "alanlar kategori kategori, tıklayınca aşağı açılsın") ---
+
+function EvsafKategori({
+  ikon,
+  baslik,
+  altYazi,
+  children,
+}: {
+  ikon: keyof typeof MaterialCommunityIcons.glyphMap;
+  baslik: string;
+  altYazi?: string;
+  children: ReactNode;
+}) {
+  const [acik, setAcik] = useState(false);
+  return (
+    <View style={styles.istatistikKart}>
+      <Pressable
+        style={styles.kategoriBaslik}
+        onPress={() => setAcik((v) => !v)}
+        accessibilityRole="button"
+        accessibilityLabel={`${baslik} bölümünü aç/kapat`}>
+        <View style={styles.kategoriIkon}>
+          <MaterialCommunityIcons name={ikon} size={22} color={Palette.lacivert} />
+        </View>
+        <View style={styles.kategoriAd}>
+          <AppText variant="govde" bold color="lacivert" numberOfLines={1}>
+            {baslik}
+          </AppText>
+          {altYazi ? (
+            <AppText variant="etiket" color="solukMetin" numberOfLines={1}>
+              {altYazi}
+            </AppText>
+          ) : null}
+        </View>
+        <MaterialCommunityIcons
+          name={acik ? 'chevron-up' : 'chevron-down'}
+          size={22}
+          color={Palette.solukMetin}
+        />
+      </Pressable>
+      {acik ? children : null}
+    </View>
   );
 }
 
@@ -1121,6 +1183,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: Spacing.two,
+  },
+  kategoriBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  kategoriIkon: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: Palette.altinSolukYuzey,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  kategoriAd: {
+    flex: 1,
+    gap: 1,
+  },
+  zayifSekmelerSag: {
+    alignItems: 'flex-end',
   },
   zayifBaslikSatir: {
     flexDirection: 'row',
