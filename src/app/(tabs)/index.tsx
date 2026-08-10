@@ -1521,7 +1521,7 @@ const styles = StyleSheet.create({
     gap: Spacing.two,
   },
   gokAkis: {
-    gap: Spacing.four, // eşit blok ritmi (başkan, 11 Ağu: "arayı eşitçe aç")
+    gap: Spacing.three, // eşit blok ritmi — taşınca kısıldı (11 Ağu)
   },
   // ═══ 11 Ağu "%100 aynısı" ekran görüntüsü stilleri ═══
   takvimSahne: {
@@ -1532,7 +1532,7 @@ const styles = StyleSheet.create({
   sayacMerkez: {
     alignItems: 'center',
     gap: 2,
-    paddingVertical: Spacing.two,
+    paddingVertical: Spacing.one,
   },
   devTekSatir: {
     fontSize: 44,
@@ -1555,7 +1555,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   blokArasi: {
-    marginTop: Spacing.three, // gövde gap'iyle birlikte bloklar arası eşit ~24
+    marginTop: Spacing.one, // gövde gap'iyle birlikte bloklar arası eşit ~16 (taşma fixi)
   },
   basvuruKapsul: {
     marginTop: Spacing.two, // nefes boşluğu (sıkışıklık eleştirisi)
@@ -1714,7 +1714,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-start',
     gap: Spacing.two,
-    paddingVertical: Spacing.four,
   },
   yarimBaslik2: {
     letterSpacing: 1,
