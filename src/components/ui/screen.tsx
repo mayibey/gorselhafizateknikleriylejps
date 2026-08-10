@@ -2,7 +2,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useScrollToTop } from '@react-navigation/native';
 import { type ReactNode, useRef } from 'react';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
@@ -56,12 +56,20 @@ export function Screen({
       {koyu ? (
         <>
           {/* GECE DENİZİ v4 (handoff v2 COLOR_SPEC): 5 duraklı açık petrol aile —
-              ortada en zengin turkuaz (#087087), uçlara doğru koyulaşır (near-black YASAK). */}
+              görsel yüklenene kadarki taban; üstüne GERÇEK dağ görseli biner. */}
           <LinearGradient
             colors={['#064B62', '#075D72', '#087087', '#064E66', '#043C54']}
             start={{ x: 0.5, y: 0 }}
             end={{ x: 0.5, y: 1 }}
             style={StyleSheet.absoluteFill}
+          />
+          {/* GERÇEK ARKA PLAN (başkan, 11 Ağu): ChatGPT üretimi temiz dağ görseli.
+              İki aday sırayla deneniyor — DEĞİŞTİRMEK İÇİN sadece require yolunu çevir:
+              karargah-arka-turkuaz.webp ↔ karargah-arka-mavi.webp */}
+          <Image
+            source={require('../../../assets/images/karargah-arka-turkuaz.webp')}
+            style={styles.arkaGorsel}
+            resizeMode="cover"
           />
           <UfukNefesi />
           <YildizKatmani />
@@ -115,6 +123,11 @@ const styles = StyleSheet.create({
   },
   safeKoyu: {
     backgroundColor: '#043C54', // gece denizi v4 taban — petrol (degrade üstüne biner)
+  },
+  arkaGorsel: {
+    ...StyleSheet.absoluteFillObject,
+    width: undefined,
+    height: undefined,
   },
   marka: {
     gap: 2,

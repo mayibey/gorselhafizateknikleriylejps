@@ -43,7 +43,7 @@ import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
-import { EmirHalka, IsiltiSerit, Nabiz, Sallan, UfukSiluet } from '@/components/karargah/safak';
+import { EmirHalka, IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -529,8 +529,9 @@ export default function KarargahScreen() {
         <View style={styles.gokAkis}>
             {/* ═══ ÜST BLOK — sol: sınav takvimi · sağ: dev geri sayım (11 Ağu "%100 aynısı"
                 ekran görüntüsü). Arkada SVG ufuk silüeti — fotoğraf yok, OTA-güvenli. */}
+            {/* SVG dağ silüeti kaldırıldı (11 Ağu): arka planda artık GERÇEK dağ görseli var
+                (screen.tsx koyu modu) — çizim taklidi onunla çakışıyordu. */}
             <View style={styles.takvimSahne}>
-              <UfukSiluet />
               <View style={styles.takvimSol}>
                 <View style={styles.takvimIkonKutu}>
                   <MaterialCommunityIcons name="calendar-month-outline" size={24} color={Palette.altinParlak} />
