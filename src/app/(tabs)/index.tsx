@@ -42,6 +42,7 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { KaldiginYerKarti, TatbikatGirisi } from '@/components/karargah/kaldigin-yer';
+import { DuyurularSatiri } from '@/components/evsaf/karargah-tasinanlar';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -482,6 +483,8 @@ export default function KarargahScreen() {
         <View style={styles.karargahGiris}>
           <KaldiginYerKarti />
           <TatbikatGirisi />
+          {/* Başkan (10 Ağu): duyuruların yeri Evsaf değil KARARGAH. */}
+          <DuyurularSatiri />
         </View>
       ) : null}
 
@@ -672,8 +675,9 @@ export default function KarargahScreen() {
         </Pressable>
       )}
 
-      {/* Er Meydanı'nda zorlandığın konular (ücretsiz görür; gidermek için premium) — Geri Besleme altında. */}
-      {zayifKanun.length > 0 ? (
+      {/* Er Meydanı'nda zorlandığın konular (ücretsiz görür; gidermek için premium) — Geri Besleme altında.
+          Başkan (10 Ağu): bayraklıda bu kart EVSAF'a taşındı (Zayıf Mevziler → Oyunlar sekmesi). */}
+      {zayifKanun.length > 0 && !aramaMevzuatta ? (
         <View style={styles.gbKart}>
           <View style={styles.gbBasrow}>
             <MaterialCommunityIcons name="target-account" size={18} color={Palette.kirmizi} />

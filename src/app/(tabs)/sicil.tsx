@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { ActivityIndicator, Alert, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
@@ -24,6 +24,14 @@ import {
 import type { GeriBesDurum, SicilDerece, SicilKaydi } from '@/db/schema';
 import { type Cinsiyet, type Profil, profilGetir, profilKaydet } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
+import {
+  type ZayifKanun as ZayifKanunSatir,
+  zayifKanunlar as erMeydaniZayifKanunlar,
+  zayifMaddeler as erMeydaniZayifMaddeler,
+} from '@/lib/er-meydani';
+import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
+
+const OYUN_KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
 import { calisilabilirZayifMevzi, kartKlasoru } from '@/lib/gorsel-kaynak';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -33,7 +41,7 @@ import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
 import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
-import { DuyurularSatiri, IstatistikKutulari } from '@/components/evsaf/karargah-tasinanlar';
+import { IstatistikKutulari } from '@/components/evsaf/karargah-tasinanlar';
 import { useKisiselOzellik } from '@/lib/ozellik';
 
 // liste = ÇALIŞILABİLİR (indirilmiş) zayıflar; kilitli = üyelik gerektiren kanunlarda (indirilemez);
@@ -58,6 +66,8 @@ export default function SicilScreen() {
   const router = useRouter();
   const { kanunErisilebilir } = useUyelik();
   const karargahTasindi = useKisiselOzellik('talim-mevzuata');
+  // Zayıf Mevziler sekmesi: Denemeler (kart/sınav) · Oyunlar (Er Meydanı yanlışları).
+  const [zayifSekme, setZayifSekme] = useState<'denemeler' | 'oyunlar'>('denemeler');
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
@@ -161,12 +171,8 @@ export default function SicilScreen() {
       }>
       {/* GECE KARARLARI K3+K5 (bayraklı): Karargah'tan taşınan istatistik kutuları +
           Duyurular girişi (megafonun yeni evi). Hiçbir şey silinmedi, yer değişti. */}
-      {karargahTasindi ? (
-        <>
-          <IstatistikKutulari />
-          <DuyurularSatiri />
-        </>
-      ) : null}
+      {/* Duyurular satırı Karargah'a taşındı (başkan, 10 Ağu). */}
+      {karargahTasindi ? <IstatistikKutulari /> : null}
       {!karargahTasindi ? (
         <>
           {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
@@ -200,7 +206,9 @@ export default function SicilScreen() {
         <Loading metin="İstatistikler yükleniyor…" />
       ) : (
         <>
-          {/* İlerleme özeti */}
+          {/* İlerleme özeti — bayraklıda GİZLİ (başkan, 10 Ağu: "2 farklı ilerleme bölümü
+              var"; üstteki kutu satırı tek ilerleme göstergesi olarak kaldı). */}
+          {karargahTasindi ? null : (
           <View style={styles.istatistikKart}>
             <BolumBaslik
               baslik="İLERLEME"
@@ -212,12 +220,36 @@ export default function SicilScreen() {
               <Stat deger={`%${kalanN}`} etiket="Kalan" />
             </View>
           </View>
+          )}
 
-          {/* Zayıf Mevziler — geri besleme havuzu (son denemede zor/yanlış) */}
+          {/* Zayıf Mevziler — geri besleme havuzu (son denemede zor/yanlış).
+              Başkan (10 Ağu): iki sekme — Denemeler (kart/sınav kaynaklı) · Oyunlar
+              (Er Meydanı yanlışları; Karargah'taki "Güç Kazandırma" kartı buraya taşındı). */}
           <View style={styles.istatistikKart}>
-            <AppText variant="etiket" color="solukMetin" bold>
-              ZAYIF MEVZİLER
-            </AppText>
+            <View style={styles.zayifBaslikSatir}>
+              <AppText variant="etiket" color="solukMetin" bold>
+                ZAYIF MEVZİLER
+              </AppText>
+              {karargahTasindi ? (
+                <View style={styles.zayifSekmeler}>
+                  {(['denemeler', 'oyunlar'] as const).map((s) => (
+                    <Pressable
+                      key={s}
+                      onPress={() => setZayifSekme(s)}
+                      style={[styles.zayifSekme, zayifSekme === s && styles.zayifSekmeAktif]}
+                      accessibilityRole="button">
+                      <AppText
+                        variant="etiket"
+                        bold
+                        color={zayifSekme === s ? 'beyaz' : 'solukMetin'}>
+                        {s === 'denemeler' ? 'Denemeler' : 'Oyunlar'}
+                      </AppText>
+                    </Pressable>
+                  ))}
+                </View>
+              ) : null}
+            </View>
+            {!karargahTasindi || zayifSekme === 'denemeler' ? (
             <ZayifBolum
               zayif={zayif}
               onCalis={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
@@ -231,6 +263,9 @@ export default function SicilScreen() {
                   : undefined
               }
             />
+            ) : (
+              <OyunZayiflari />
+            )}
           </View>
 
           {/* Ödül-Ceza Sicili — takdir/başarı ödülleri + geri-bes ceza merdiveni */}
@@ -289,6 +324,77 @@ export default function SicilScreen() {
   );
 }
 
+// --- Oyun Zayıfları (Er Meydanı yanlışları — Karargah'tan taşındı, 10 Ağu) ---
+
+function OyunZayiflari() {
+  const [liste, setListe] = useState<ZayifKanunSatir[] | null>(null);
+  const yukle = useCallback(() => {
+    void erMeydaniZayifKanunlar()
+      .then(setListe)
+      .catch(() => setListe([]));
+  }, []);
+  useFocusEffect(yukle);
+
+  if (liste === null) {
+    return (
+      <AppText variant="kucuk" color="solukMetin">
+        Yükleniyor…
+      </AppText>
+    );
+  }
+  if (liste.length === 0) {
+    return (
+      <AppText variant="kucuk" color="solukMetin">
+        Er Meydanı'nda henüz zorlandığın konu yok — maç yaptıkça yanlışların burada toplanır.
+      </AppText>
+    );
+  }
+  function detayGoster(kanun: number) {
+    void erMeydaniZayifMaddeler(kanun)
+      .then((maddeler) => {
+        const govde =
+          maddeler.length > 0
+            ? maddeler
+                .slice(0, 6)
+                .map((m) => `• ${m.madde} — ${m.yanlis} yanlış`)
+                .join('\n')
+            : 'Madde detayı yok (eski maçlar madde kaydetmiyordu).';
+        Alert.alert(OYUN_KANUN_AD.get(kanun) ?? `Kanun ${kanun}`, govde, [{ text: 'Tamam' }]);
+      })
+      .catch(() => {});
+  }
+  return (
+    <>
+      <AppText variant="kucuk" color="anaMetin">
+        Er Meydanı maçlarında en çok bu konularda yanlış yaptın (dokun → maddeler):
+      </AppText>
+      {liste.slice(0, 6).map((z) => (
+        <Pressable
+          key={z.kanun}
+          onPress={() => detayGoster(z.kanun)}
+          style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
+          accessibilityRole="button">
+          <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
+          <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
+            {OYUN_KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
+          </AppText>
+          <View style={styles.zayifRozet}>
+            <AppText variant="etiket" color="beyaz" bold>
+              {z.yanlis} yanlış
+            </AppText>
+          </View>
+          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+        </Pressable>
+      ))}
+      {liste.length > 6 ? (
+        <AppText variant="etiket" color="solukMetin">
+          +{liste.length - 6} konu daha
+        </AppText>
+      ) : null}
+    </>
+  );
+}
+
 // --- Kişisel Bilgiler (Evsaf) ---
 
 const CINSIYET_AD: Record<Cinsiyet, string> = {
@@ -312,6 +418,9 @@ function KisiselBilgiler() {
   // omuz üstünden bakan görmesin; "Göster"e basınca açılır.
   const varsayilanGizli = useKisiselOzellik('talim-mevzuata');
   const [bilgiGoster, setBilgiGoster] = useState(false);
+  // Başkan (10 Ağu): bilgiler ekranda dizili durmasın — tek "Kişisel Bilgiler" satırı,
+  // dokununca AÇILIR (akordeon). Bayraksızda eski açık hâl.
+  const [panelAcik, setPanelAcik] = useState(false);
   const [adG, setAdG] = useState('');
   const [soyadG, setSoyadG] = useState('');
   const [kaydediliyor, setKaydediliyor] = useState(false);
@@ -357,9 +466,17 @@ function KisiselBilgiler() {
     },
   ];
 
+  // Bayraklı: kapalıyken tek satır; başlığa dokununca panel açılır/kapanır.
+  const kapali = varsayilanGizli && !panelAcik;
+
   return (
     <View style={styles.istatistikKart}>
-      <View style={styles.kisiUst}>
+      <Pressable
+        style={styles.kisiUst}
+        disabled={!varsayilanGizli}
+        onPress={() => setPanelAcik((v) => !v)}
+        accessibilityRole={varsayilanGizli ? 'button' : undefined}
+        accessibilityLabel="Kişisel bilgileri aç/kapat">
         <View style={styles.kisiAvatar}>
           <MaterialCommunityIcons name="account" size={28} color={Palette.lacivert} />
         </View>
@@ -371,14 +488,23 @@ function KisiselBilgiler() {
             KİŞİSEL BİLGİLER
           </AppText>
         </View>
-        {!isimYok ? (
+        {!isimYok && !kapali ? (
           <Pressable hitSlop={10} onPress={duzenleAc} accessibilityRole="button" accessibilityLabel="Adını düzenle">
             <AppText variant="kucuk" color="lacivert" bold>
               Düzenle
             </AppText>
           </Pressable>
         ) : null}
-      </View>
+        {varsayilanGizli ? (
+          <MaterialCommunityIcons
+            name={kapali ? 'chevron-down' : 'chevron-up'}
+            size={22}
+            color={Palette.solukMetin}
+          />
+        ) : null}
+      </Pressable>
+      {kapali ? null : (
+      <>
 
       {/* İsim yoksa (çoğunlukla Apple ile girenler) belirgin çağrı — belge/sicil/takip için gerekli. */}
       {isimYok ? (
@@ -424,6 +550,8 @@ function KisiselBilgiler() {
           </AppText>
         </Pressable>
       ) : null}
+      </>
+      )}
 
       <Modal visible={duzenle} transparent animationType="fade" onRequestClose={() => setDuzenle(false)}>
         <View style={styles.adPerde}>
@@ -898,6 +1026,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: Spacing.two,
+  },
+  zayifBaslikSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: Spacing.two,
+  },
+  zayifSekmeler: {
+    flexDirection: 'row',
+    backgroundColor: Palette.kremZemin,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    padding: 2,
+    gap: 2,
+  },
+  zayifSekme: {
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 4,
+    borderRadius: Radius.s,
+  },
+  zayifSekmeAktif: {
+    backgroundColor: Palette.lacivert,
   },
   zayifAd: {
     flex: 1,
