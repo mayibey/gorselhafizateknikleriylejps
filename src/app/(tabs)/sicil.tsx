@@ -411,14 +411,11 @@ function ProfilUyelikKarti() {
 
   if (!hazir || !kullanici) return null;
   const adSoyad = profil ? `${profil.ad ?? ''} ${profil.soyad ?? ''}`.trim() : '';
+  // Ürün adı ("Tam Erişim – Ömür Boyu") süreyi zaten içeriyor — tekrar ekleme
+  // ("Ömür Boyu · Ömür Boyu" tekrarını başkan yakaladı, 10 Ağu).
   const uyelikOzet =
     aktifHaklar.length > 0
-      ? aktifHaklar
-          .map((h) => {
-            const b = urunBilgi(h.urun);
-            return `${b ? b.ad : h.urun} · ${h.tip === 'abonelik' ? 'Yıllık' : 'Ömür Boyu'}`;
-          })
-          .join(' · ')
+      ? aktifHaklar.map((h) => urunBilgi(h.urun)?.ad ?? h.urun).join(' · ')
       : 'Ücretsiz hesap';
 
   return (
