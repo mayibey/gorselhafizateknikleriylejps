@@ -1380,3 +1380,8 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
 - EvsafKategori paylaşılan bileşene taşındı (components/evsaf/kategori.tsx).
 - Yeni Evsaf sırası: Künye bandı → Projeksiyon → Zayıf Mevziler → Harita → Deneme →
   Analiz → Er Meydanı → Ödül-Ceza → Yardım → güvence → yasal. OTA 5 runtime.
+
+## 10 Ağu 2026 (14) — Duyurular köşe yazısı (bayraklı)
+- Duyurular Karargah başlık satırının SAĞ ÜST köşesine: ikon değil YAZI — çerçevesiz
+  altın "Duyurular" + okunmamışta kırmızı nokta (DuyuruIkonu etiketli modu yeniden yazıldı).
+- Pano şeridi kaldırıldı. OTA 5 runtime.
