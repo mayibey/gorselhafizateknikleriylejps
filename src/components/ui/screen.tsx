@@ -132,7 +132,7 @@ export function Screen({
         </View>
       ) : null}
       {title && headerAltinCizgi ? <View style={styles.altinCizgi} /> : null}
-      {sabitUst ? <View style={styles.sabitUst}>{sabitUst}</View> : null}
+      {sabitUst ? <View style={[styles.sabitUst, koyu && styles.sabitUstKoyu]}>{sabitUst}</View> : null}
       {scroll ? (
         <ScrollView ref={scrollRef} contentContainerStyle={styles.scrollContent}>
           {body}
@@ -217,6 +217,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.four,
     paddingTop: Spacing.three,
     backgroundColor: Palette.kremZemin,
+  },
+  sabitUstKoyu: {
+    backgroundColor: 'transparent', // gece ekranında krem şerit sırıtmasın
   },
   scrollContent: {
     flexGrow: 1,

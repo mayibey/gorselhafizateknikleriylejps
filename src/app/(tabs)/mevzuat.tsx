@@ -217,6 +217,10 @@ function MevzuatIcerik() {
   return (
     <Screen
       title="Mevzuat"
+      // GECE TEMASI (IMG_3129 mock, 11 Ağu): bayraklıda Mevzuat da petrol gece + marka başlık.
+      koyu={talimBurada}
+      marka={talimBurada}
+      kompaktBaslik={talimBurada}
       // Bayrak açıkken Müşterek/Branş şeridi kaydırmanın DIŞINDA sabit durur (başkan isteği).
       sabitUst={talimBurada ? (
         <View style={st.blokSecici}>
@@ -226,16 +230,16 @@ function MevzuatIcerik() {
             <Pressable
               key={b}
               onPress={() => setBlok(b)}
-              style={[st.blokSeg, aktif && st.blokSegAktif]}
+              style={[st.blokSeg, st.blokSegGece, aktif && st.blokSegAktifGece]}
               accessibilityRole="button"
               accessibilityLabel={b === 'müşterek' ? 'Müşterek mevzuat' : 'Branş mevzuatı'}>
               <MaterialCommunityIcons
                 name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
                 size={16}
-                color={aktif ? Palette.beyaz : Palette.solukMetin}
+                color={aktif ? Palette.altinParlak : 'rgba(226,236,240,0.8)'}
               />
-              {/* GECE KARARI M7 (bayraklı): gerçek adlar — "Müşterek Mevzuat / Jandarma Mevzuatı". */}
-              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'} numberOfLines={1}>
+              {/* Mock IMG_3129: aktif pil altın çerçeve + altın yazı, pasif soluk beyaz. */}
+              <AppText variant="etiket" bold color={aktif ? 'altinParlak' : 'beyaz'} numberOfLines={1}>
                 {b === 'müşterek'
                   ? 'Müşterek Mevzuat'
                   : brans === 'jandarma'
@@ -314,13 +318,13 @@ function MevzuatIcerik() {
       <View style={st.aramaSatir}>
         {talimBurada ? (
           <Pressable
-            style={st.aramaKutu}
+            style={[st.aramaKutu, st.aramaKutuGece]}
             onPress={() => router.push('/arama')}
             accessibilityRole="button"
             accessibilityLabel="Ara — kanun, madde, kart">
-            <MaterialCommunityIcons name="magnify" size={20} color={Palette.solukMetin} />
-            <AppText variant="govde" color="solukMetin" style={st.aramaSahte}>
-              Kanun, madde, konu veya kart ara…
+            <MaterialCommunityIcons name="magnify" size={20} color="rgba(226,236,240,0.75)" />
+            <AppText variant="govde" style={[st.aramaSahte, st.aramaSahteGece]}>
+              Kanun, madde veya konu ara...
             </AppText>
           </Pressable>
         ) : (
@@ -344,7 +348,7 @@ function MevzuatIcerik() {
         )}
         <Pressable
           onPress={() => setCipGoster((v) => !v)}
-          style={[st.filtreBtn, cipGoster && st.filtreBtnAktif]}
+          style={[st.filtreBtn, talimBurada && st.filtreBtnGece, cipGoster && st.filtreBtnAktif]}
           accessibilityRole="button"
           accessibilityLabel="Filtreleri aç/kapat">
           <MaterialCommunityIcons
@@ -356,7 +360,7 @@ function MevzuatIcerik() {
       </View>
 
       {/* Filtre çipleri (ilerleme bazlı). Favori filtresi açıkken gizli (kafa karışmasın). */}
-      {cipGoster && !favoriAcik ? (
+      {(cipGoster || talimBurada) && !favoriAcik ? (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -368,10 +372,17 @@ function MevzuatIcerik() {
               <Pressable
                 key={c.k}
                 onPress={() => setAktifCip(c.k)}
-                style={[st.cip, aktif ? st.cipAktif : st.cipPasif]}
+                style={[
+                  st.cip,
+                  aktif ? st.cipAktif : st.cipPasif,
+                  talimBurada && (aktif ? st.cipAktifGece : st.cipPasifGece),
+                ]}
                 accessibilityRole="button"
                 accessibilityLabel={c.ad}>
-                <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+                <AppText
+                  variant="etiket"
+                  bold
+                  color={talimBurada ? (aktif ? 'altinParlak' : 'beyaz') : aktif ? 'beyaz' : 'anaMetin'}>
                   {c.ad}
                 </AppText>
               </Pressable>
@@ -433,7 +444,8 @@ function MevzuatIcerik() {
           ) : null
           ) : null}
 
-          {/* TÜM MEVZUAT bölüm başlığı */}
+          {/* TÜM MEVZUAT bölüm başlığı — mock'ta yok, bayraklıda gizli. */}
+          {talimBurada ? null : (
           <View style={st.sectionBaslik}>
             <MaterialCommunityIcons name="scale-balance" size={18} color={Palette.solukMetin} />
             <AppText variant="etiket" bold color="solukMetin" style={st.sectionAd}>
@@ -443,6 +455,7 @@ function MevzuatIcerik() {
               Toplam {gosterilen.length} kanun
             </AppText>
           </View>
+          )}
 
           {gosterilen.length === 0 ? (
             <AppText variant="kucuk" color="solukMetin">
@@ -1102,6 +1115,42 @@ function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k:
 }
 
 const st = StyleSheet.create({
+  // ── GECE (IMG_3129 mock) stilleri — yalniz bayrakli dal ──
+  blokSegGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+    borderRadius: 999,
+  },
+  blokSegAktifGece: {
+    backgroundColor: 'rgba(3,47,69,0.9)',
+    borderColor: '#F3C24A',
+  },
+  aramaKutuGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+    borderRadius: 999,
+  },
+  aramaSahteGece: {
+    color: 'rgba(226,236,240,0.75)',
+  },
+  filtreBtnGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+  },
+  cipAktifGece: {
+    backgroundColor: 'rgba(3,47,69,0.9)',
+    borderWidth: 1,
+    borderColor: '#F3C24A',
+  },
+  cipPasifGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+  },
+
   talimKart: {
     flexDirection: 'row',
     alignItems: 'center',
