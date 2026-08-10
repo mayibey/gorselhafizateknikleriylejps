@@ -42,7 +42,7 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { KaldiginYerKarti, TatbikatYarim } from '@/components/karargah/kaldigin-yer';
-import { DalgaGecis, GunHalkalari, IsiltiSerit, YildizliZemin } from '@/components/karargah/safak';
+import { DalgaGecis, IsiltiSerit, YildizliZemin } from '@/components/karargah/safak';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -532,7 +532,6 @@ export default function KarargahScreen() {
                 </AppText>
               </View>
             ) : null}
-            {hafta.length > 0 ? <GunHalkalari gunler={hafta} /> : null}
             <View style={styles.safakEmir}>
               <MaterialCommunityIcons name="shield-star" size={30} color={Palette.altin} />
               <AppText variant="etiket" bold color="altinAcik2" style={styles.emirEtiket}>
@@ -776,14 +775,11 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.tekrarYarim, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
-              <MaterialCommunityIcons name="bell-ring-outline" size={28} color={Palette.altinKoyu} />
-              <AppText variant="kucuk" bold color="lacivert" style={styles.tekrarBaslik}>
+              <MaterialCommunityIcons name="bell-ring-outline" size={28} color={Palette.altin} />
+              <AppText variant="kucuk" bold color="beyaz" style={styles.tekrarBaslik}>
                 TEKRAR ZAMANI
               </AppText>
-              <AppText
-                variant="etiket"
-                color={unutulan.length > 0 ? 'amber' : 'solukMetin'}
-                style={styles.tekrarBaslik}>
+              <AppText variant="etiket" color="altinAcik2" style={styles.tekrarBaslik}>
                 {unutulan.length > 0 ? `Paslanma riski: ${unutulan.length} kanun` : 'Paslanan kanun yok'}
               </AppText>
             </Pressable>
@@ -1293,16 +1289,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: Spacing.two,
   },
+  // Renk mozaiği dersi (Drops): ikizlerin her biri kendi doygun kimliğinde —
+  // Tatbikat ALTIN, Tekrar LACİVERT. Çerçeveli beyaz yok.
   tekrarYarim: {
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
+    backgroundColor: Palette.lacivert,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.three,
+    shadowColor: 'rgba(11,31,58,0.15)',
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 2,
   },
   tekrarBaslik: {
     textAlign: 'center',

@@ -78,7 +78,7 @@ export function KaldiginYerKarti() {
       style={({ pressed }) => [st.kart, pressed && st.basili]}
       accessibilityRole="button"
       accessibilityLabel="Çalışmaya devam et">
-      <AppText variant="etiket" bold color="solukMetin" style={st.kartBaslik}>
+      <AppText variant="etiket" bold color="altinAcik2" style={st.kartBaslik}>
         KALDIĞIN YER
       </AppText>
       <View style={st.icSatir}>
@@ -99,7 +99,7 @@ export function KaldiginYerKarti() {
           )}
         </View>
         <View style={st.orta}>
-          <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1}>
+          <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
             {durum.siradaki ? 'Sıradaki: ' : ''}
             {durum.law.ad}
           </AppText>
@@ -110,7 +110,7 @@ export function KaldiginYerKarti() {
               <View style={{ flex: Math.max(1, 100 - yuzde) }} />
               <IsiltiSerit egik={false} />
             </View>
-            <AppText variant="etiket" bold color="altinMetin">
+            <AppText variant="etiket" bold color="altinAcik2">
               {durum.calisilan}/{durum.toplam} · %{yuzde}
             </AppText>
           </View>
@@ -135,11 +135,11 @@ export function TatbikatYarim() {
       style={({ pressed }) => [st.yarim, pressed && st.basili]}
       accessibilityRole="button"
       accessibilityLabel="Genel Tatbikat — deneme sınavları">
-      <MaterialCommunityIcons name="target" size={28} color={Palette.altinKoyu} />
+      <MaterialCommunityIcons name="target" size={28} color={Palette.lacivert} />
       <AppText variant="kucuk" bold color="lacivert" style={st.yarimBaslik}>
         GENEL TATBİKAT
       </AppText>
-      <AppText variant="etiket" color="solukMetin" style={st.yarimAlt}>
+      <AppText variant="etiket" color="lacivert" style={st.yarimAlt}>
         Karma sınavlarla kendini sına
       </AppText>
     </Pressable>
@@ -176,14 +176,18 @@ export function TatbikatGirisi() {
 }
 
 const st = StyleSheet.create({
+  // Gece kartı (Şafak dokusu, alt yarıya taşındı): lacivert dolgu + altın vurgular.
   kart: {
     gap: Spacing.one,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.altin,
-    borderWidth: 1,
+    backgroundColor: Palette.lacivert,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.two,
+    shadowColor: 'rgba(11,31,58,0.15)',
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 2,
   },
   kartBaslik: {
     textAlign: 'center',
@@ -204,22 +208,22 @@ const st = StyleSheet.create({
     flexDirection: 'row',
     height: 6,
     borderRadius: 3,
-    backgroundColor: Palette.ilerlemeTrack,
+    backgroundColor: 'rgba(255,246,220,0.18)', // gece kartında koyu-şeffaf ray
     overflow: 'hidden',
   },
   barDolu: {
     backgroundColor: Palette.altin,
   },
-  // Dolgu dersi (Ref 1/8): çerçeveli beyaz yerine sıcak altın dolgu + gölge.
+  // Renk mozaiği dersi (Ref 5/8): Tatbikat TAM ALTIN dolgu — çekinme yok.
   yarim: {
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.altinSolukYuzey,
+    backgroundColor: Palette.altin,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.three,
-    shadowColor: 'rgba(11,31,58,0.08)',
+    shadowColor: 'rgba(11,31,58,0.15)',
     shadowOpacity: 1,
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 3 },
@@ -238,6 +242,8 @@ const st = StyleSheet.create({
     height: 40,
     borderRadius: Radius.m,
     backgroundColor: Palette.lacivert,
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -247,7 +253,7 @@ const st = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.altinSolukYuzey,
+    backgroundColor: Palette.altin, // gece kartında parlak altın CTA
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.one,
