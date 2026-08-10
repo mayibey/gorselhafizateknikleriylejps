@@ -32,35 +32,47 @@ export function DuyuruIkonu({ boyut = 22, etiketli }: { boyut?: number; etiketli
     }, [premium]),
   );
 
+  // etiketli (başkan, 10 Ağu gece): köşede İKON DEĞİL YAZI — çerçevesiz, sade
+  // "Duyurular" (navbar metin düğmesi); okunmamışta yanında kırmızı nokta.
+  if (etiketli) {
+    return (
+      <Pressable
+        onPress={() => router.push('/duyurular')}
+        hitSlop={10}
+        style={styles.yaziSatir}
+        accessibilityRole="button"
+        accessibilityLabel="Duyurular">
+        <AppText variant="kucuk" bold color="altin">
+          Duyurular
+        </AppText>
+        {okunmamis ? <View style={styles.yaziNokta} /> : null}
+      </Pressable>
+    );
+  }
   return (
     <Pressable
       onPress={() => router.push('/duyurular')}
       hitSlop={10}
-      style={etiketli ? styles.etiketliKutu : undefined}
       accessibilityRole="button"
       accessibilityLabel="Duyurular"
     >
-      <MaterialCommunityIcons name="bullhorn-outline" size={etiketli ? 18 : boyut} color={Palette.altin} />
-      {etiketli ? (
-        <AppText variant="etiket" bold color="altinAcik2">
-          DUYURULAR
-        </AppText>
-      ) : null}
+      <MaterialCommunityIcons name="bullhorn-outline" size={boyut} color={Palette.altin} />
       {okunmamis ? <View style={styles.nokta} /> : null}
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  etiketliKutu: {
+  yaziSatir: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
-    borderWidth: 1,
-    borderColor: Palette.altinKoyu,
-    borderRadius: Radius.m,
-    paddingHorizontal: Spacing.two,
-    paddingVertical: 4,
+  },
+  yaziNokta: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: Palette.kirmizi,
   },
   nokta: {
     position: 'absolute',

@@ -470,9 +470,8 @@ export default function KarargahScreen() {
               </Pressable>
             </>
           ) : (
-            /* Başkan (10 Ağu gece): duyurular başlık satırının sağ üst köşesinde —
-               megafon + okunmamışta kırmızı nokta. */
-            <DuyuruIkonu boyut={24} />
+            /* Başkan (10 Ağu gece): köşede ikon değil YAZI — "Duyurular" + okunmamış noktası. */
+            <DuyuruIkonu etiketli />
           )}
         </View>
       }>
