@@ -1298,3 +1298,10 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   · kırmızı GERİ BESLEME emir kartı Evsaf'tan da kalktı (Bugünün Emri devralıyor)
   · "Zayıfları çalış (geri-bes)"→"Zayıfları güçlendir" · istatistik kutuları tek tipografi.
 - OTA 5 runtime (1.0.40 publish timeout'a takıldı, elle tamamlandı — sürüm geri alındı).
+
+## 10 Ağu 2026 (6) — Test ekibi 3 kişi + bugünün satışları
+- TEST EKİBİ (ozellik_kisi + anlik-guncelleme + oyun_surum_kisi ÜÇÜNDE DE): başkan
+  98be2c62 · Ahmet Samet ÖZER c342d164 · Kemalettin CANKURT 90501c0f (MEBS uzman erbaş,
+  8 Ağu manuel ömür boyu). Yeni taslak/bayrak açarken ÜÇ kişiyi birden yaz.
+- Bugün 3 satış: Resul Yıldırım (iOS ömür boyu 09:56) · Çetin BİRGÜL (Android yıllık
+  %20 indirimli 10:47) · Uğur Yıldırım (Android ömür boyu 11:38, jandarma asb).
