@@ -39,7 +39,8 @@ const OYUN_KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const))
 import { calisilabilirZayifMevzi, kartKlasoru } from '@/lib/gorsel-kaynak';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useUyelik } from '@/lib/uyelik-context';
-import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
+import { type ZayifKart } from '@/lib/performans';
+import { type ZayifVeri, zayifVeriYukle } from '@/lib/zayif-veri';
 import { ornekKayitlar, TAKDIR_PER_BASARI } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
@@ -50,16 +51,7 @@ import { useKisiselOzellik } from '@/lib/ozellik';
 
 // liste = ÇALIŞILABİLİR (indirilmiş) zayıflar; kilitli = üyelik gerektiren kanunlarda (indirilemez);
 // inebilir = erişilebilir ama henüz indirilmemiş (Mevzuat'tan inince çalışılır).
-type ZayifVeri = {
-  liste: ZayifKart[];
-  ozet: EksikOzet;
-  kilitli: number;
-  inebilir: number;
-  /** 7 gün önceki havuz büyüklüğü (gelişim cümlesi için; saf yeniden hesap). */
-  haftaOnce: number;
-  /** Bugünkü TÜM havuz (çalışılabilir süzgeci öncesi) — haftaOnce ile aynı ölçek. */
-  simdiki: number;
-};
+// ZayifVeri + yükleyici lib/zayif-veri.ts'e taşındı (10 Ağu) — /zayif-mevziler sayfası da kullanıyor.
 type SicilVeri = { kayitlar: SicilKaydi[]; durum: GeriBesDurum };
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
@@ -98,37 +90,8 @@ export default function SicilScreen() {
     // Zayıf analizi AYRI: hatası İLERLEME/KUTU DAĞILIMI'nı bozmaz. Liste ÇALIŞILABİLİR (indirilmiş)
     // mevzilere indirgenir → Karargah/akış sayacıyla tutarlı; içeriği inmemiş zayıflar `indirilmemis`
     // olarak ayrı sayılır (kullanıcı "indir de çalış" uyarısı görsün, sessizce kaybolmasın).
-    void Promise.all([getPerformans(), getAllCards()])
-      .then(([perf, cards]) => {
-        const tum = zayifKartlar(perf, cards);
-        // PREMIUM SIZINTI KAPISI: çalışılabilir zayıf listesi yalnız ERİŞİLEBİLİR kanunları içerir →
-        // süresi biten kullanıcı premium bir zayıf mevzinin no+başlığını listede görmez. Kilitliler
-        // aşağıda `disari`→`kilitli` sayacına düşer (zaten "üyelik gerek" uyarısı veriliyor). (Denetim.)
-        const liste = calisilabilirZayifMevzi(tum).filter((z) =>
-          kanunErisilebilir(kartKlasoru(z.card.gorsel_yolu), z.card.blok),
-        );
-        const calisSet = new Set(liste.map((z) => z.card.id));
-        // Çalışılamayan (indirilmemiş) zayıfları kilit durumuna göre ayır: kilitli kanunun mevzisi
-        // İNDİRİLEMEZ (üyelik gerek) → "indir" demek yanıltıcı; erişilebilir olan indirilebilir.
-        const disari = tum.filter((z) => !calisSet.has(z.card.id));
-        const kilitli = disari.filter(
-          (z) => !kanunErisilebilir(kartKlasoru(z.card.gorsel_yolu), z.card.blok),
-        ).length;
-        // GELİŞİM (10 Ağu): havuz saf fonksiyon → 7 gün önceki kayıtlarla yeniden hesapla,
-        // "geçen hafta X → bugün Y" cümlesi GERÇEK veriden çıksın. Ek sorgu yok.
-        const esik = new Date(Date.parse(`${bugunISO()}T00:00:00Z`) - 7 * 86400000)
-          .toISOString()
-          .slice(0, 10);
-        const haftaOnce = zayifKartlar(perf.filter((p) => p.tarih <= esik), cards).length;
-        setZayif({
-          liste,
-          ozet: eksikOzet(perf, cards),
-          kilitli,
-          inebilir: disari.length - kilitli,
-          haftaOnce,
-          simdiki: tum.length,
-        });
-      })
+    void zayifVeriYukle(kanunErisilebilir)
+      .then(setZayif)
       .catch(() => setZayif(null));
     // Ödül/Ceza: önce değerlendir (yeni kayıt/ceza işle), sonra sicil + emir durumunu yükle. AYRI catch.
     void degerlendirSicil()
@@ -252,14 +215,16 @@ export default function SicilScreen() {
               Başkan (10 Ağu): iki sekme — Denemeler (kart/sınav kaynaklı) · Oyunlar
               (Er Meydanı yanlışları). Bayraklıda KATEGORİ: başlığa dokun → aşağı açılır. */}
           {karargahTasindi ? (
-            <View style={styles.istatistikKart}>
-              {/* 10 Ağu REDESIGN: sayfanın ana odağı — özet + en zayıf 3 + altın CTA
-                  hep görünür; ok'a dokununca tam detay (sekmeler) açılır. */}
-              <Pressable
-                style={styles.kategoriBaslik}
-                onPress={() => setZayifDetay((v) => !v)}
-                accessibilityRole="button"
-                accessibilityLabel="Zayıf mevziler detayını aç/kapat">
+            /* 10 Ağu v2 (başkan: "neye tıkladığım belli değil, ok'la açılan detay kötü"):
+               kart TEK işe odaklı — kartın kendisi TAM SAYFAYA götürür (/zayif-mevziler),
+               içindeki tek düğme çalışmaya başlatır ve ne olacağını söyler. En zayıf 3
+               satır SALT BİLGİ (tıklanmaz) → tıklama hedefi yalnız iki tane, ikisi de net. */
+            <Pressable
+              style={({ pressed }) => [styles.istatistikKart, pressed && styles.pressed]}
+              onPress={() => router.push('/zayif-mevziler')}
+              accessibilityRole="button"
+              accessibilityLabel="Zayıf mevziler — tümünü gör">
+              <View style={styles.kategoriBaslik}>
                 <View style={styles.kategoriIkon}>
                   <MaterialCommunityIcons name="target" size={22} color={Palette.lacivert} />
                 </View>
@@ -268,98 +233,50 @@ export default function SicilScreen() {
                     Zayıf Mevziler
                   </AppText>
                   <AppText variant="etiket" color="solukMetin">
-                    {zayifN > 0 ? `${zayifN} konu tekrar bekliyor` : 'Tekrar bekleyen konu yok'}
+                    {zayifN > 0
+                      ? `${zayifN} konu tekrar bekliyor · tümünü gör`
+                      : 'Tekrar bekleyen konu yok'}
                   </AppText>
                 </View>
-                <MaterialCommunityIcons
-                  name={zayifDetay ? 'chevron-up' : 'chevron-down'}
-                  size={22}
-                  color={Palette.solukMetin}
-                />
-              </Pressable>
+                <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+              </View>
               {zayif && zayif.liste.length > 0 ? (
                 <>
                   {zayif.liste.slice(0, 3).map((z) => (
-                    <Pressable
-                      key={z.card.id}
-                      onPress={() =>
-                        router.push({
-                          pathname: '/akis',
-                          params: { lawId: String(z.card.law_id), kart: String(z.card.id) },
-                        })
-                      }
-                      style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
-                      accessibilityRole="button"
-                      accessibilityLabel="Bu maddeyi çalış">
+                    <View key={z.card.id} style={styles.zayifSatir}>
                       <AppText variant="kucuk" bold color="anaMetin" style={styles.zayifAd} numberOfLines={1}>
                         {maddeEtiket(z.card.madde_no, z.card.baslik)}
                       </AppText>
                       <AppText variant="etiket" bold color="solukMetin">
                         ×{z.yanlisSayisi}
                       </AppText>
-                      <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
-                    </Pressable>
+                    </View>
                   ))}
                   <Pressable
                     style={({ pressed }) => [styles.zayifCta, pressed && styles.pressed]}
-                    onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+                    onPress={(e) => {
+                      e.stopPropagation();
+                      router.push({ pathname: '/akis', params: { mod: 'zayif' } });
+                    }}
                     accessibilityRole="button"
                     accessibilityLabel="Zayıf konuları çalış">
                     <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.lacivert} />
-                    <AppText variant="kucuk" bold color="lacivert">
-                      Zayıf Konuları Çalış
-                    </AppText>
+                    <View>
+                      <AppText variant="kucuk" bold color="lacivert">
+                        Zayıf Konuları Çalış
+                      </AppText>
+                      <AppText variant="etiket" color="lacivert">
+                        {zayifN} kart · yaklaşık {zayifN} dk · kart akışı açılır
+                      </AppText>
+                    </View>
                   </Pressable>
                 </>
               ) : (
                 <AppText variant="kucuk" color="solukMetin">
-                  Henüz zayıf mevzu bulunmuyor.
+                  Henüz zayıf mevzu bulunmuyor — Tatbikatta kendini dene.
                 </AppText>
               )}
-              {zayifDetay ? (
-              <>
-              <View style={styles.zayifSekmelerSag}>
-                <View style={styles.zayifSekmeler}>
-                  {(['denemeler', 'oyunlar'] as const).map((s) => (
-                    <Pressable
-                      key={s}
-                      onPress={() => setZayifSekme(s)}
-                      style={[styles.zayifSekme, zayifSekme === s && styles.zayifSekmeAktif]}
-                      accessibilityRole="button">
-                      <AppText
-                        variant="etiket"
-                        bold
-                        color={zayifSekme === s ? 'beyaz' : 'solukMetin'}>
-                        {s === 'denemeler' ? 'Denemeler' : 'Oyunlar'}
-                      </AppText>
-                    </Pressable>
-                  ))}
-                </View>
-              </View>
-              {zayifSekme === 'denemeler' ? (
-                <ZayifBolum
-                  zayif={zayif}
-                  onCalis={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
-                  karttanCalis={(lawId, cardId) =>
-                    router.push({
-                      pathname: '/akis',
-                      params: { lawId: String(lawId), kart: String(cardId) },
-                    })
-                  }
-                />
-              ) : (
-                <OyunZayiflari
-                  karttanCalis={(lawId, cardId) =>
-                    router.push({
-                      pathname: '/akis',
-                      params: { lawId: String(lawId), kart: String(cardId) },
-                    })
-                  }
-                />
-              )}
-              </>
-              ) : null}
-            </View>
+            </Pressable>
           ) : (
           <View style={styles.istatistikKart}>
             <View style={styles.zayifBaslikSatir}>
@@ -598,7 +515,7 @@ function oyunKaynagindanKart(ref: string, cards: CardWithLaw[]): CardWithLaw | n
   return ids.length > 0 ? (havuz.find((c) => c.id === ids[0]) ?? null) : null;
 }
 
-function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, cardId: number) => void }) {
+export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, cardId: number) => void }) {
   const [liste, setListe] = useState<ZayifKanunSatir[] | null>(null);
   // Oyun Merkezi defteri (mevzu_zayif_oyun: künye → yanlış sayısı) + kart eşleşmesi.
   const [merkez, setMerkez] = useState<{ ref: string; yanlis: number; kart: CardWithLaw | null }[]>([]);
@@ -1162,7 +1079,7 @@ function SicilBolum({
 }
 
 /** Geri besleme havuzu: top-5 zayıf kart + özet + "Zayıfları çalış" (geri-bes oturumu). */
-function ZayifBolum({
+export function ZayifBolum({
   zayif,
   onCalis,
   karttanCalis,
