@@ -730,12 +730,19 @@ function KisiselBilgiler({ gomulu }: { gomulu?: boolean } = {}) {
   const [soyadG, setSoyadG] = useState('');
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
+  // Profil gelmeden gövde ÇİZİLMEZ (10 Ağu: "ad-soyad gir" çağrısı bir kare parlayıp
+  // sönüyordu — profil async geldiği için isimYok ilk karede yanlış hesaplanıyordu).
+  const [profilHazir, setProfilHazir] = useState(false);
   useEffect(() => {
     if (!kullanici) {
       setProfil(null);
+      setProfilHazir(false);
       return;
     }
-    void profilGetir().then(setProfil);
+    setProfilHazir(false);
+    void profilGetir()
+      .then(setProfil)
+      .finally(() => setProfilHazir(true));
   }, [kullanici]);
 
   function duzenleAc() {
@@ -825,7 +832,11 @@ function KisiselBilgiler({ gomulu }: { gomulu?: boolean } = {}) {
         ) : null}
       </Pressable>
       )}
-      {kapali ? null : (
+      {kapali ? null : !profilHazir ? (
+        <AppText variant="etiket" color="solukMetin">
+          Yükleniyor…
+        </AppText>
+      ) : (
       <>
 
       {/* İsim yoksa (çoğunlukla Apple ile girenler) belirgin çağrı — belge/sicil/takip için gerekli. */}

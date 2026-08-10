@@ -22,6 +22,12 @@ import { ayarOku } from '@/lib/uzak-ayar';
 
 const ONBELLEK_ONEK = 'ozellik-kisi:';
 
+// EŞZAMANLI bellek önbelleği (10 Ağu: Ödül-Ceza açılınca kırmızı kart bir kare
+// parlayıp sönüyordu). Sebep: her useKisiselOzellik false başlayıp async'te true'ya
+// dönüyor → bayraksız ilk kare çiziliyor. Oturum içinde bir kez çözüldükten sonra
+// SONRAKİ her bileşen ilk karede doğru değerle başlar; titreme biter.
+const bellekHarita = new Map<string, boolean>();
+
 export async function kisiselOzellikAcikMi(ad: string): Promise<boolean> {
   try {
     if (!supabase) return false;
@@ -38,21 +44,27 @@ export async function kisiselOzellikAcikMi(ad: string): Promise<boolean> {
   }
 }
 
-/** Bileşen içinden: bayrak açık mı? İlk çizimde son bilinen (önbellek) değer, sunucu cevabı gelince kesin değer. */
+/** Bileşen içinden: bayrak açık mı? İlk çizimde son bilinen değer (oturum belleği →
+ *  titreme yok), arkada AsyncStorage + sunucu ile tazelenir. */
 export function useKisiselOzellik(ad: string): boolean {
-  const [acik, setAcik] = useState(false);
+  // Oturumda daha önce çözüldüyse İLK KARE doğru değerle başlar (bayraksız kare = titreme).
+  const [acik, setAcik] = useState(() => bellekHarita.get(ad) ?? false);
   useEffect(() => {
     let yasiyor = true;
     let sunucuGeldi = false;
     // 1) Yerel önbellek — sunucudan önce yetişir; sunucu cevabı geldiyse artık dokunmaz.
     AsyncStorage.getItem(ONBELLEK_ONEK + ad)
       .then((v) => {
-        if (yasiyor && !sunucuGeldi && v === '1') setAcik(true);
+        if (v === '1' || v === '0') {
+          if (!sunucuGeldi) bellekHarita.set(ad, v === '1');
+          if (yasiyor && !sunucuGeldi && v === '1') setAcik(true);
+        }
       })
       .catch(() => {});
-    // 2) Sunucu — kesin değer; önbelleği tazele.
+    // 2) Sunucu — kesin değer; iki önbelleği de tazele.
     void kisiselOzellikAcikMi(ad).then((v) => {
       sunucuGeldi = true;
+      bellekHarita.set(ad, v);
       if (yasiyor) setAcik(v);
       AsyncStorage.setItem(ONBELLEK_ONEK + ad, v ? '1' : '0').catch(() => {});
     });
