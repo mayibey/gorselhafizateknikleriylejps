@@ -1288,3 +1288,13 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   eşleşmesi (kanun no + eslesenKartIdleri) ile listeler; dokun → TEK KART oturumu.
   Eşleşmeyen künye (yönetmelik) düz satır. Taslak damga 20260810-0318 (başkan+Ahmet).
 - Doğrulanınca kalan 11 oyuna aynı kalıp yayılacak.
+
+## 10 Ağu 2026 (5) — Duyuru panosu + Evsaf "yakışıklı" paketi (bayraklı)
+- Duyurular: köşe rozeti tamamen kalktı → KIŞLA PANOSU şeridi (components/duyuru/
+  duyuru-panosu.tsx): yalnız okunmamış duyuru varken başlık altında altın şerit,
+  duyurunun gerçek başlığıyla; okununca kaybolur.
+- Evsaf: kırmızı "N yanlış" hapları → sessiz ×N (Denemeler+Oyunlar) · "Talim" rozeti
+  yalnız kaynaklar karışıksa · Üyeliğim taç→kalkan-yıldız, yeşil tik ve "hep senin" gitti
+  · kırmızı GERİ BESLEME emir kartı Evsaf'tan da kalktı (Bugünün Emri devralıyor)
+  · "Zayıfları çalış (geri-bes)"→"Zayıfları güçlendir" · istatistik kutuları tek tipografi.
+- OTA 5 runtime (1.0.40 publish timeout'a takıldı, elle tamamlandı — sürüm geri alındı).
