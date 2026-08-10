@@ -527,10 +527,10 @@ function Monogram({
 }
 
 /** Altın ilerleme barı (track + dolu). Flex-oranlı dolum → %100'de tam dolar. */
-function Bar({ yuzde }: { yuzde: number }) {
+function Bar({ yuzde, gece }: { yuzde: number; gece?: boolean }) {
   const w = Math.min(100, Math.max(0, yuzde));
   return (
-    <View style={st.barTrack}>
+    <View style={[st.barTrack, gece && st.barTrackGece]}>
       {w > 0 ? <View style={[st.barFill, { flex: w }]} /> : null}
       {w < 100 ? <View style={{ flex: 100 - w }} /> : null}
     </View>
@@ -815,10 +815,14 @@ function KanunSatir({
   // normal modda eskisi gibi alt satırda. Tek tanım, iki yerleşim.
   const aksiyonKumesi = kilitli ? (
     <View style={st.satirSag}>
-      <View style={st.kilitChip}>
-        <MaterialCommunityIcons name="lock" size={15} color={Palette.altinKoyu} />
+      <View style={[st.kilitChip, talimAc && st.kilitChipGece]}>
+        <MaterialCommunityIcons
+          name="lock"
+          size={15}
+          color={talimAc ? Palette.altinParlak : Palette.altinKoyu}
+        />
         {/* GECE KARARI M3 (bayraklı): "Kilidi Aç" emri değil, ait olduğu paketi söyleyen rozet. */}
-        <AppText variant="etiket" bold color="altinMetin">
+        <AppText variant="etiket" bold color={talimAc ? 'altinParlak' : 'altinMetin'}>
           {talimAc ? "Tam Erişim'de" : 'Kilidi Aç'}
         </AppText>
       </View>
@@ -856,7 +860,7 @@ function KanunSatir({
 
   return (
     <Pressable
-      style={({ pressed }) => [st.satir, pressed && st.pressed]}
+      style={({ pressed }) => [st.satir, talimAc && st.satirGece, pressed && st.pressed]}
       onPress={satiraBas}
       accessibilityRole="button"
       accessibilityLabel={law.ad}>
@@ -864,7 +868,7 @@ function KanunSatir({
           Bayraklıda sağda indirme durumu ikonu: bulut=inmemiş, tik=inmiş, inerken %. */}
       <View style={st.satirUst}>
         <Monogram no={no} boyut={56} variant="govde" />
-        <AppText variant="govde" bold color="anaMetin" style={st.kanunAd}>
+        <AppText variant="govde" bold color={talimAc ? 'beyaz' : 'anaMetin'} style={st.kanunAd}>
           {law.ad}
         </AppText>
         {bulutVar ? (
@@ -886,7 +890,15 @@ function KanunSatir({
               <MaterialCommunityIcons
                 name={indirme.durum === 'indirildi' ? 'cloud-check-outline' : 'cloud-download-outline'}
                 size={24}
-                color={indirme.durum === 'indirildi' ? Palette.altinKoyu : Palette.solukMetin}
+                color={
+                  indirme.durum === 'indirildi'
+                    ? talimAc
+                      ? Palette.altinParlak
+                      : Palette.altinKoyu
+                    : talimAc
+                      ? 'rgba(226,236,240,0.8)'
+                      : Palette.solukMetin
+                }
               />
             )}
           </Pressable>
@@ -905,11 +917,11 @@ function KanunSatir({
       {/* GECE KARARI M2 (bayraklı): sıfır asla görünmez — başlanmamış kanunda "0/31" ve
           boş çubuk yerine kanunun ne sunduğu yazar. */}
       {talimAc && bos ? (
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" bold={talimAc} color={talimAc ? 'beyaz' : 'solukMetin'} style={talimAc && st.geceIkincil}>
           {toplam} kart · sesli anlatım
         </AppText>
       ) : (
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" bold={talimAc} color={talimAc ? 'beyaz' : 'solukMetin'} style={talimAc && st.geceIkincil}>
           {calisilan} / {toplam} kart tamamlandı
         </AppText>
       )}
@@ -921,12 +933,22 @@ function KanunSatir({
         <MaterialCommunityIcons
           name={sonGun === null ? 'alert-circle-outline' : 'clock-outline'}
           size={13}
-          color={sonGun === null ? Palette.kirmizi : Palette.solukMetin}
+          color={
+            sonGun === null
+              ? talimAc
+                ? Palette.kirmiziParlak
+                : Palette.kirmizi
+              : talimAc
+                ? 'rgba(226,236,240,0.75)'
+                : Palette.solukMetin
+          }
         />
         <AppText
           variant="etiket"
           bold={sonGun === null}
-          color={sonGun === null ? 'kirmizi' : 'solukMetin'}
+          color={
+            sonGun === null ? (talimAc ? 'kirmiziParlak' : 'kirmizi') : talimAc ? 'beyaz' : 'solukMetin'
+          }
           numberOfLines={1}
           style={talimAc ? st.sonMetinEsnek : undefined}>
           {sonMetin}
@@ -939,8 +961,8 @@ function KanunSatir({
       {/* M2: başlanmamışta boş çubuk + %0 hiç çizilmez (bayraklı). */}
       {talimAc && bos ? null : (
         <View style={st.barSatir}>
-          <Bar yuzde={yuzde} />
-          <AppText variant="etiket" bold color="altinMetin" style={st.barYuzde}>
+          <Bar yuzde={yuzde} gece={talimAc} />
+          <AppText variant="etiket" bold color={talimAc ? 'altinParlak' : 'altinMetin'} style={st.barYuzde}>
             %{yuzde}
           </AppText>
         </View>
@@ -976,7 +998,7 @@ function KanunSatir({
               e.stopPropagation();
               satiraBas();
             }}
-            style={({ pressed }) => [st.calisBtn, pressed && st.pressed]}
+            style={({ pressed }) => [st.calisBtn, talimAc && st.calisBtnGece, pressed && st.pressed]}
             accessibilityRole="button"
             accessibilityLabel="Çalış">
             <MaterialCommunityIcons
@@ -996,11 +1018,15 @@ function KanunSatir({
                 // soru sayısı görünsün (6698 doğrudan sorulara atlıyordu — tutarsızdı).
                 setTestlerAcik((a) => !a);
               }}
-              style={({ pressed }) => [st.talimBtn, pressed && st.pressed]}
+              style={({ pressed }) => [st.talimBtn, talimAc && st.talimBtnGece, pressed && st.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Talim yap">
-              <MaterialCommunityIcons name="target" size={16} color={Palette.altinKoyu} />
-              <AppText variant="kucuk" bold color="altinMetin">
+              <MaterialCommunityIcons
+                name="target"
+                size={16}
+                color={talimAc ? Palette.altinParlak : Palette.altinKoyu}
+              />
+              <AppText variant="kucuk" bold color={talimAc ? 'altinParlak' : 'altinMetin'}>
                 Talim Yap · {testAdedi}
               </AppText>
             </Pressable>
@@ -1016,16 +1042,20 @@ function KanunSatir({
                 // sinav.tsx `test` parametresini 0-TABANLI bekler (testNum).
                 router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(indeks) } });
               }}
-              style={({ pressed }) => [st.denemeSatir, pressed && st.pressed]}
+              style={({ pressed }) => [st.denemeSatir, talimAc && st.denemeSatirGece, pressed && st.pressed]}
               accessibilityRole="button"
               accessibilityLabel={`Test ${indeks + 1}`}>
-              <AppText variant="kucuk" bold color="anaMetin">
+              <AppText variant="kucuk" bold color={talimAc ? 'beyaz' : 'anaMetin'}>
                 Test {indeks + 1}
               </AppText>
-              <AppText variant="etiket" color="solukMetin">
+              <AppText variant="etiket" bold color={talimAc ? 'altinParlak' : 'solukMetin'}>
                 {testSoruSayisi(law.id, indeks)} soru
               </AppText>
-              <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+              <MaterialCommunityIcons
+                name="chevron-right"
+                size={16}
+                color={talimAc ? Palette.altinParlak : Palette.solukMetin}
+              />
             </Pressable>
           ))
         : null}
@@ -1116,6 +1146,35 @@ function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k:
 
 const st = StyleSheet.create({
   // ── GECE (IMG_3129 mock) stilleri — yalniz bayrakli dal ──
+  satirGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.5)',
+  },
+  geceIkincil: {
+    opacity: 0.92,
+  },
+  barTrackGece: {
+    backgroundColor: 'rgba(255,246,220,0.18)',
+  },
+  calisBtnGece: {
+    backgroundColor: Palette.altinParlak,
+  },
+  talimBtnGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderWidth: 1,
+    borderColor: '#F3C24A',
+  },
+  denemeSatirGece: {
+    backgroundColor: 'rgba(3,40,56,0.6)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+  },
+  kilitChipGece: {
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderWidth: 1,
+    borderColor: 'rgba(243,194,74,0.55)',
+  },
   blokSegGece: {
     backgroundColor: 'rgba(3,40,56,0.55)',
     borderWidth: 1,
