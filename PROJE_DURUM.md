@@ -1368,3 +1368,15 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   bayraklıda kalktı (kod rollback için duruyor). "Ömür Boyu ×2" tekrar hatası da düzeltildi.
 - Veri: profil/branş adı DB'den, rütbe RUTBELER'den, istatistik useEvsafIstatistik
   kancasından (kutu satırıyla aynı kaynak). OTA 5 runtime.
+
+## 10 Ağu 2026 (13) — Evsaf analiz kategorileri (bayraklı; "olması gereken her şey")
+- Yeni kategoriler (components/evsaf/analiz.tsx; hepsi MEVCUT veriden, kapalı başlar,
+  altyazıları özet söyler): SINAV PROJEKSİYONU (son 14 gün temposu → "sınav günü %X'te
+  olursun" + gereken günlük kart; SINAV_TARIHI 19 Eyl) · KANUN HARİTASI (müşterek
+  kanunlar % çubuklu, satır→patika) · DENEME GEÇMİŞİ (sinav_sonuclari tablosu İLK KEZ
+  ekranda; son 8 sonuç) · ÇALIŞMA ANALİZİM (son 7 gün çubukları + SRS kutu dağılımı:
+  sağlam kutu≥4 / tanışık 1-3 / el değmemiş) · ER MEYDANI (özet+son 3 maç→geçmiş ekranı;
+  maç yoksa görünmez) · en altta veri güvence notu.
+- EvsafKategori paylaşılan bileşene taşındı (components/evsaf/kategori.tsx).
+- Yeni Evsaf sırası: Künye bandı → Projeksiyon → Zayıf Mevziler → Harita → Deneme →
+  Analiz → Er Meydanı → Ödül-Ceza → Yardım → güvence → yasal. OTA 5 runtime.
