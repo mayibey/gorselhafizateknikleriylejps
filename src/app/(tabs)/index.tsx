@@ -3,7 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Alert, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import Svg, { Circle, Path } from 'react-native-svg';
+import Svg, { Circle, Defs, LinearGradient as SvgGradient, Path, Stop } from 'react-native-svg';
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
 import { AppText } from '@/components/ui/app-text';
@@ -600,7 +600,11 @@ export default function KarargahScreen() {
                 </Svg>
                 <View style={styles.plakaIc}>
                   <View style={styles.plakaArma}>
-                    <MaterialCommunityIcons name="shield-star" size={22} color={Palette.altinParlak} />
+                    <MaterialCommunityIcons
+                      name={bos && hicCalisilan ? 'script-text-outline' : 'shield-star'}
+                      size={22}
+                      color={Palette.altinParlak}
+                    />
                   </View>
                   <View>
                     <AppText variant="etiket" bold color="altinParlak" style={styles.plakaUst}>
@@ -615,25 +619,94 @@ export default function KarargahScreen() {
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
                 <View style={styles.zayifPlakaSar} pointerEvents="none">
-                  <LinearGradient
-                    colors={['#E0392B', '#A61B12']}
-                    start={{ x: 0.5, y: 0 }}
-                    end={{ x: 0.5, y: 1 }}
-                    style={styles.zayifPlaka}>
+                  {/* KURDELE (SVG): uçları pahlı kırmızı şerit + altın kontur — düz kutu değil. */}
+                  <View style={styles.zayifKurdele}>
+                    <Svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 176 34"
+                      preserveAspectRatio="none"
+                      style={StyleSheet.absoluteFill}>
+                      <Defs>
+                        <SvgGradient id="zayifKG" x1="0" y1="0" x2="0" y2="1">
+                          <Stop offset="0" stopColor="#E8473A" />
+                          <Stop offset="1" stopColor="#9E170F" />
+                        </SvgGradient>
+                      </Defs>
+                      <Path
+                        d="M12,1 L174,1 L164,33 L2,33 Z"
+                        fill="url(#zayifKG)"
+                        stroke="#F3C24A"
+                        strokeWidth={1.5}
+                      />
+                    </Svg>
                     <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
                       ZAYIF MEVZİLER
                     </AppText>
-                  </LinearGradient>
-                  {/* Kıvrım: plaka kartın arkasına dolanıyormuş hissi veren koyu üçgen. */}
+                  </View>
+                  {/* Kıvrım: şerit kartın arkasına dolanıyormuş hissi veren koyu üçgen. */}
                   <View style={styles.plakaKivrim} />
+                </View>
+              ) : bos && hicCalisilan ? (
+                /* Yeni kullanıcı: kırmızı değil ALTIN kurdele — İLK EMİR (mock). */
+                <View style={styles.zayifPlakaSar} pointerEvents="none">
+                  <View style={styles.zayifKurdele}>
+                    <Svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 176 34"
+                      preserveAspectRatio="none"
+                      style={StyleSheet.absoluteFill}>
+                      <Defs>
+                        <SvgGradient id="ilkEmirG" x1="0" y1="0" x2="0" y2="1">
+                          <Stop offset="0" stopColor="#F6CE5B" />
+                          <Stop offset="1" stopColor="#D99A16" />
+                        </SvgGradient>
+                      </Defs>
+                      <Path
+                        d="M12,1 L174,1 L164,33 L2,33 Z"
+                        fill="url(#ilkEmirG)"
+                        stroke="#FFE9A8"
+                        strokeWidth={1.2}
+                      />
+                    </Svg>
+                    <AppText variant="etiket" bold style={[styles.kurdeleYazi, styles.ctaYazi]}>
+                      İLK EMİR
+                    </AppText>
+                  </View>
                 </View>
               ) : null}
               <View style={styles.emirSatir}>
                 <View style={styles.emirSol}>
                   {bos ? (
-                    <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
-                      {hicCalisilan ? 'İLK MEVZİNİ SEÇ' : 'TÜM GÖREVLERİ YAPTIN 🎖️'}
-                    </AppText>
+                    hicCalisilan ? (
+                      <>
+                        <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                          {'İLK '}
+                          <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
+                            MEVZİNİ
+                          </AppText>
+                        </AppText>
+                        <AppText
+                          variant="baslik"
+                          bold
+                          color="beyaz"
+                          numberOfLines={1}
+                          adjustsFontSizeToFit
+                          style={styles.emirManset}>
+                          GÖZETLEME GÖREVİ
+                        </AppText>
+                      </>
+                    ) : (
+                      <>
+                        <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                          TÜM GÖREVLERİ
+                        </AppText>
+                        <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
+                          YAPTIN 🎖️
+                        </AppText>
+                      </>
+                    )
                   ) : (
                     /* Ref v4: iki satır — "ZAYIF 8 MEVZİNİ" (MEVZİNİ altın) / "GÜÇLENDİR". */
                     <>
@@ -648,15 +721,18 @@ export default function KarargahScreen() {
                       </AppText>
                     </>
                   )}
-                  {bos ? (
+                  {bos && !hicCalisilan ? (
                     <AppText variant="kucuk" bold color="beyaz" style={styles.emirAlt}>
-                      {hicCalisilan
-                        ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla"
-                        : 'Tekrar edilecek mevzi kalmadı — yeni konu çalış'}
+                      Tekrar edilecek mevzi kalmadı — yeni konu çalış
                     </AppText>
                   ) : null}
                 </View>
-                {!bos ? <EmirHalka tamam={bugunSayi} toplam={bugunSayi + bekleyen} /> : null}
+                {!bos ? (
+                  <EmirHalka tamam={bugunSayi} toplam={bugunSayi + bekleyen} />
+                ) : hicCalisilan ? (
+                  /* İlk görev hedefi: 8 kartlık gözetleme turu. */
+                  <EmirHalka tamam={0} toplam={8} />
+                ) : null}
               </View>
               {!bos ? (
                 /* Ref v4: çerçeveli meta alt-paneli — süre | dikey ayraç | son konu. */
@@ -683,6 +759,22 @@ export default function KarargahScreen() {
                     </>
                   ) : null}
                 </View>
+              ) : bos && hicCalisilan ? (
+                <View style={styles.emirMetaPanel}>
+                  <View style={styles.emirMetaKol}>
+                    <MaterialCommunityIcons name="cards-outline" size={16} color={Palette.beyaz} />
+                    <AppText variant="kucuk" bold color="beyaz">
+                      8 kart
+                    </AppText>
+                  </View>
+                  <View style={styles.emirMetaAyrac} />
+                  <View style={styles.emirMetaKol}>
+                    <MaterialCommunityIcons name="timer-outline" size={16} color={Palette.beyaz} />
+                    <AppText variant="kucuk" bold color="beyaz">
+                      ≈ 8 dk
+                    </AppText>
+                  </View>
+                </View>
               ) : null}
               <Nabiz>
                 <Pressable
@@ -701,7 +793,7 @@ export default function KarargahScreen() {
                     style={StyleSheet.absoluteFill}
                   />
                   <AppText variant="govde" bold style={styles.ctaYazi}>
-                    {bos ? (hicCalisilan ? 'MEVZUATA GİT' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
+                    {bos ? (hicCalisilan ? 'GÖZETLEMEYE BAŞLA' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
                   </AppText>
                   <MaterialCommunityIcons
                     name="arrow-right"
@@ -712,6 +804,15 @@ export default function KarargahScreen() {
                   <IsiltiSerit />
                 </Pressable>
               </Nabiz>
+              {bos && hicCalisilan ? (
+                <View style={styles.emirNot}>
+                  <View style={styles.notNokta} />
+                  <AppText variant="etiket" color="beyaz" style={styles.notYazi}>
+                    İlk çalışmandan sonra emirlerin sana özel hazırlanacak.
+                  </AppText>
+                  <View style={styles.notNokta} />
+                </View>
+              ) : null}
             </View>
         </View>
       ) : (
@@ -916,6 +1017,32 @@ export default function KarargahScreen() {
           bloğun üstüne <KaldiginYerKarti /> ve altına moral satırını ekle. */}
       {aramaMevzuatta ? (
         <>
+          {hicCalisilan ? (
+            /* Yeni kullanıcı: paslanma yok — TEKRAR SİSTEMİ tanıtım bandı (mock). */
+            <View style={[styles.gecePanel, styles.tekrarSatir, styles.blokArasi]}>
+              <View style={styles.emirIkonHalka}>
+                <MaterialCommunityIcons name="sync" size={22} color={Palette.altinParlak} />
+              </View>
+              <View style={styles.erMetin}>
+                <AppText variant="kucuk" bold color="altinParlak" style={styles.tekrarBaslik2}>
+                  TEKRAR SİSTEMİ
+                </AppText>
+                <AppText variant="kucuk" bold color="beyaz">
+                  {'Çalıştıkça tekrar zamanını\nbiz takip edeceğiz.'}
+                </AppText>
+              </View>
+              <View style={styles.tekrarEtSag}>
+                <AppText variant="etiket" bold color="altinParlak" style={styles.tekrarBaslik2}>
+                  HAZIR
+                </AppText>
+                <MaterialCommunityIcons
+                  name="chevron-right-circle-outline"
+                  size={20}
+                  color={Palette.altinParlak}
+                />
+              </View>
+            </View>
+          ) : (
           <Pressable
             onPress={() => {
               hafifDokun();
@@ -944,13 +1071,6 @@ export default function KarargahScreen() {
               </Sallan>
             </View>
             <View style={styles.erMetin}>
-              <AppText
-                variant="kucuk"
-                bold
-                color={unutulan.length > 0 ? 'kirmiziParlak' : 'altinParlak'}
-                style={styles.tekrarBaslik2}>
-                TEKRAR ZAMANI
-              </AppText>
               {unutulan.length > 0 ? (
                 <View style={styles.paslanmaSatir}>
                   <AppText variant="kucuk" bold color="kirmiziParlak">
@@ -967,16 +1087,17 @@ export default function KarargahScreen() {
               )}
             </View>
             {unutulan.length > 0 ? (
-              <View style={styles.tekrarEt}>
+              <View style={styles.tekrarEtKose}>
                 <AppText variant="etiket" bold color="kirmiziParlak" style={styles.tekrarBaslik2}>
                   TEKRAR ET
                 </AppText>
-                <MaterialCommunityIcons name="arrow-right" size={18} color={Palette.kirmiziParlak} />
+                <MaterialCommunityIcons name="arrow-right" size={16} color={Palette.kirmiziParlak} />
               </View>
             ) : (
               <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinParlak} />
             )}
           </Pressable>
+          )}
           <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
               onPress={() => { hafifDokun(); router.push('/tatbikat'); }}
@@ -1654,12 +1775,11 @@ const styles = StyleSheet.create({
     top: -16,
     right: 10,
   },
-  zayifPlaka: {
-    borderWidth: 1.5,
-    borderColor: 'rgba(243,194,74,0.85)',
-    borderRadius: Radius.m,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: 7,
+  zayifKurdele: {
+    width: 176,
+    height: 34,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   plakaKivrim: {
     position: 'absolute',
@@ -1706,10 +1826,34 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 2,
     backgroundColor: Palette.kirmiziParlak,
   },
-  tekrarEt: {
+  tekrarEtSag: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.one,
+    gap: 4,
+  },
+  emirNot: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    marginTop: 2,
+  },
+  notNokta: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: Palette.altinParlak,
+  },
+  notYazi: {
+    opacity: 0.9,
+  },
+  tekrarEtKose: {
+    position: 'absolute',
+    right: Spacing.three,
+    bottom: Spacing.one + 2,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
   },
   madalyon: {
     width: 58,

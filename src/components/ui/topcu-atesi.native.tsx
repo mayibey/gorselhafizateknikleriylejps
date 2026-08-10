@@ -22,8 +22,8 @@ import Animated, {
 
 /* ⚠️ TEST DOZU (başkan görsün diye sık). GERÇEK DOZ önerisi: periyotlar 45000/62000. */
 const SORTILER = [
-  { hedefX: 57, sirtY: 21, ucakY: 10.5, sagdan: false, boy: 58, periyot: 14000, gecikme: 1500 },
-  { hedefX: 22, sirtY: 22.5, ucakY: 8.5, sagdan: true, boy: 46, periyot: 19000, gecikme: 9000 },
+  { hedefX: 57, sirtY: 27.5, ucakY: 12, sagdan: false, boy: 58, periyot: 14000, gecikme: 1500 },
+  { hedefX: 22, sirtY: 29, ucakY: 10, sagdan: true, boy: 46, periyot: 19000, gecikme: 9000 },
 ];
 
 const UCUS_MS = 5200; // göğü geçme süresi
@@ -128,8 +128,8 @@ function Sorti({
       <Animated.View style={[st.ucak, ucakStil]}>
         <MaterialCommunityIcons
           name="airplane"
-          size={15}
-          color="rgba(10,18,26,0.9)"
+          size={17}
+          color="rgba(205,222,232,0.95)"
           style={{ transform: [{ rotate: sagdan ? '225deg' : '45deg' }] }}
         />
         <Animated.View style={[st.fener, fenerStil]} />
