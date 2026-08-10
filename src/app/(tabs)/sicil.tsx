@@ -420,10 +420,13 @@ function KunyeBandi() {
   const adSoyad = profil ? `${profil.ad ?? ''} ${profil.soyad ?? ''}`.trim() : '';
   const rutbeAd = RUTBELER.find((r) => r.slug === rutbe)?.ad ?? null;
   const gorevSatiri = [rutbeAd, bransAd].filter(Boolean).join(' · ');
-  // Mühür: paket adının kısa hâli ("Tam Erişim – Ömür Boyu" → "Tam Erişim").
+  // Mühür: paket adının kısa hâli. Ayırıcı üründe "·" / "–" / "-" olabiliyor —
+  // hangisi gelirse gelsin İLK parça alınır ("Tam Erişim · Ömür Boyu" → "Tam Erişim").
+  // (10 Ağu: yalnız "–" bölünüyordu, uzun mühür görev satırını eziyordu.)
   const muhur =
     aktifHaklar.length > 0
-      ? (urunBilgi(aktifHaklar[0].urun)?.ad ?? 'Tam Erişim').split('–')[0].trim()
+      ? ((urunBilgi(aktifHaklar[0].urun)?.ad ?? 'Tam Erişim').split(/[·–-]/)[0].trim() ||
+        'Tam Erişim')
       : null;
 
   return (
@@ -1678,11 +1681,13 @@ const styles = StyleSheet.create({
   },
   kunyeGorev: {
     flexShrink: 1,
+    flex: 1,
   },
   kunyeMuhur: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 3,
+    flexShrink: 0,
     borderWidth: 1,
     borderColor: Palette.altinKoyu,
     borderRadius: Radius.s,
