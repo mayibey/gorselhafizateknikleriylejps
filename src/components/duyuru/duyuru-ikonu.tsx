@@ -46,7 +46,7 @@ export function DuyuruIkonu({ boyut = 22, etiketli }: { boyut?: number; etiketli
           <MaterialCommunityIcons name="bell-outline" size={22} color={Palette.beyaz} />
           {okunmamis ? <View style={styles.zilNokta} /> : null}
         </View>
-        <AppText variant="kucuk" bold color="altin" style={styles.yaziEtiket}>
+        <AppText variant="kucuk" bold color="altinParlak" style={styles.yaziEtiket}>
           DUYURULAR
         </AppText>
       </Pressable>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     width: 9,
     height: 9,
     borderRadius: 5,
-    backgroundColor: Palette.altin,
+    backgroundColor: Palette.altinParlak,
   },
   nokta: {
     position: 'absolute',

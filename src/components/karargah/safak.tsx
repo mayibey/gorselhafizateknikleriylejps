@@ -19,7 +19,13 @@ import Animated, {
   withSequence,
   withTiming,
 } from 'react-native-reanimated';
-import Svg, { Circle, Path } from 'react-native-svg';
+import Svg, {
+  Circle,
+  Defs,
+  LinearGradient as SvgGradient,
+  Path,
+  Stop,
+} from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
@@ -171,16 +177,37 @@ export function Sallan({ aktif, children }: { aktif: boolean; children: ReactNod
  * OTA-güvenli, zemin degradesiyle kaynaşan iki koyu sırt katmanı.
  */
 export function UfukSiluet() {
+  // Gerçekçilik (başkan, 11 Ağu: "bizimki yapay olmuş"): keskin zikzak DEĞİL —
+  // üç kavisli sırt katmanı + atmosfer pusu (uzak sırt açık/silik, yakın sırt koyu)
+  // + her katman dibe doğru degrade eriyip zeminle kaynaşır.
   return (
     <View style={st.ufuk} pointerEvents="none">
-      <Svg width="100%" height="100%" viewBox="0 0 100 32" preserveAspectRatio="none">
+      <Svg width="100%" height="100%" viewBox="0 0 100 40" preserveAspectRatio="none">
+        <Defs>
+          <SvgGradient id="sirtUzak" x1="0" y1="0" x2="0" y2="1">
+            <Stop offset="0" stopColor="rgb(120,180,200)" stopOpacity="0.20" />
+            <Stop offset="1" stopColor="rgb(20,70,90)" stopOpacity="0.04" />
+          </SvgGradient>
+          <SvgGradient id="sirtOrta" x1="0" y1="0" x2="0" y2="1">
+            <Stop offset="0" stopColor="rgb(10,45,60)" stopOpacity="0.50" />
+            <Stop offset="1" stopColor="rgb(8,36,50)" stopOpacity="0.14" />
+          </SvgGradient>
+          <SvgGradient id="sirtYakin" x1="0" y1="0" x2="0" y2="1">
+            <Stop offset="0" stopColor="rgb(4,22,32)" stopOpacity="0.68" />
+            <Stop offset="1" stopColor="rgb(4,20,30)" stopOpacity="0.32" />
+          </SvgGradient>
+        </Defs>
         <Path
-          d="M0,22 L13,15 L24,20 L38,11 L52,19 L66,13 L80,18 L100,12 L100,32 L0,32 Z"
-          fill="rgba(5,26,36,0.30)"
+          d="M0,20 C8,17 14,13.5 22,15.5 C30,17.5 36,12.5 44,14 C52,15.5 58,10.5 66,13 C74,15.5 82,12 90,14.5 C95,16 98,15.5 100,15 L100,40 L0,40 Z"
+          fill="url(#sirtUzak)"
         />
         <Path
-          d="M0,27 L16,22 L32,26 L50,19 L68,25 L84,21 L100,24 L100,32 L0,32 Z"
-          fill="rgba(4,20,29,0.42)"
+          d="M0,26 C6,24 12,20 20,21.5 C28,23 34,18.5 42,20.5 C50,22.5 58,18.5 66,21 C74,23.5 82,20.5 92,23 C96,24 98,24 100,23.5 L100,40 L0,40 Z"
+          fill="url(#sirtOrta)"
+        />
+        <Path
+          d="M0,32 C10,29.5 18,27.5 28,29.5 C38,31.5 46,27 56,29 C66,31 76,28 86,30 C92,31.2 96,30.8 100,30.5 L100,40 L0,40 Z"
+          fill="url(#sirtYakin)"
         />
       </Svg>
     </View>
@@ -193,8 +220,8 @@ export function UfukSiluet() {
  * Gerçek veriden; sahte sayı yok.
  */
 export function EmirHalka({ tamam, toplam }: { tamam: number; toplam: number }) {
-  const boyut = 104;
-  const kalin = 7;
+  const boyut = 86; // tek-ekran sığdırma (11 Ağu): 104 → 86
+  const kalin = 6;
   const r = (boyut - kalin) / 2;
   const cevre = 2 * Math.PI * r;
   const oran = toplam > 0 ? Math.min(1, tamam / toplam) : 0;
@@ -205,15 +232,15 @@ export function EmirHalka({ tamam, toplam }: { tamam: number; toplam: number }) 
           cx={boyut / 2}
           cy={boyut / 2}
           r={r}
-          stroke="rgba(255,246,220,0.16)"
+          stroke="rgba(126,205,218,0.25)"
           strokeWidth={kalin}
-          fill="rgba(5,26,36,0.35)"
+          fill="rgba(3,40,56,0.75)"
         />
         <Circle
           cx={boyut / 2}
           cy={boyut / 2}
           r={r}
-          stroke={Palette.altin}
+          stroke={Palette.altinParlak}
           strokeWidth={kalin}
           fill="none"
           strokeLinecap="round"
@@ -221,7 +248,7 @@ export function EmirHalka({ tamam, toplam }: { tamam: number; toplam: number }) 
           transform={`rotate(-90 ${boyut / 2} ${boyut / 2})`}
         />
       </Svg>
-      <AppText variant="baslik" bold color="beyaz">
+      <AppText variant="govde" bold color="beyaz">
         {tamam} / {toplam}
       </AppText>
       <AppText variant="etiket" color="beyaz" style={st.halkaAlt}>

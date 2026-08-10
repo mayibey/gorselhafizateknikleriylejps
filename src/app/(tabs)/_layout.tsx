@@ -59,12 +59,12 @@ export default function TabsLayout() {
         headerShown: false,
         // 11 Ağu "%100 aynısı" (bayraklı): sekme çubuğu da gece — koyu petrol zemin,
         // aktif ALTIN, pasif kırık beyaz. Bayraksızda krem krom aynen.
-        tabBarActiveTintColor: talimMevzuata ? Palette.altin : Palette.lacivert,
+        tabBarActiveTintColor: talimMevzuata ? Palette.altinParlak : Palette.lacivert,
         tabBarInactiveTintColor: talimMevzuata ? 'rgba(226,236,240,0.75)' : Palette.solukMetin,
         tabBarStyle: talimMevzuata
           ? {
-              backgroundColor: '#0A2E3C',
-              borderTopColor: 'rgba(126,200,224,0.18)',
+              backgroundColor: '#04283A', // handoff: koyu petrol sekme çubuğu
+              borderTopColor: 'rgba(126,205,218,0.2)',
             }
           : {
               backgroundColor: Palette.kartKremi,

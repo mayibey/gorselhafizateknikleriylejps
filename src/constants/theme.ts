@@ -42,6 +42,8 @@ export const Palette = {
   kartMetinIkincil: '#D8CFBD', // koyu üstünde ikincil metin
   kartKenarKoyu: 'rgba(255,255,255,0.14)', // koyu üstünde ince kenar
   altinAcik2: '#E7BC56', // koyu üstünde altın accent (waveform/playhead)
+  altinParlak: '#F3C24A', // GECE ekranında TAM PARLAK sıcak altın (handoff v2 COLOR_SPEC "bright") — kanonik altin'a dokunma, bu EK
+  kirmiziParlak: '#F04438', // GECE ekranında uyarı kırmızısı (koyu zeminde #C00000 okunmuyordu; handoff #F04438) — EK
 
   // Korunan yardımcı tonlar (mevcut ekranlar kullanıyor)
   ten: '#E8C9A8',

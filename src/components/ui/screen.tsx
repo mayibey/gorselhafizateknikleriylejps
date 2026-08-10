@@ -55,10 +55,10 @@ export function Screen({
     <SafeAreaView style={[styles.safe, koyu && styles.safeKoyu]} edges={['top', 'left', 'right']}>
       {koyu ? (
         <>
-          {/* GECE DENİZİ v2 (başkan, 11 Ağu — "%100 aynısı" ekran görüntüsü): mavi değil
-              PETROL/TURKUAZ ton — ufukta turkuaz aydınlanma, üst ve alt koyu petrol. */}
+          {/* GECE DENİZİ v4 (handoff v2 COLOR_SPEC): 5 duraklı açık petrol aile —
+              ortada en zengin turkuaz (#087087), uçlara doğru koyulaşır (near-black YASAK). */}
           <LinearGradient
-            colors={['#0C3A4A', '#15586C', '#0B3242']}
+            colors={['#064B62', '#075D72', '#087087', '#064E66', '#043C54']}
             start={{ x: 0.5, y: 0 }}
             end={{ x: 0.5, y: 1 }}
             style={StyleSheet.absoluteFill}
@@ -83,7 +83,7 @@ export function Screen({
               </AppText>
               <View style={styles.markaAltSatir}>
                 <View style={styles.markaCizgi} />
-                <MaterialCommunityIcons name="shield-star" size={13} color={Palette.altin} />
+                <MaterialCommunityIcons name="shield-star" size={13} color={Palette.altinParlak} />
                 <View style={styles.markaCizgi} />
               </View>
             </View>
@@ -114,14 +114,14 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.kremZemin,
   },
   safeKoyu: {
-    backgroundColor: '#0B3242', // gece denizi v2 taban — petrol (degrade üstüne biner)
+    backgroundColor: '#043C54', // gece denizi v4 taban — petrol (degrade üstüne biner)
   },
   marka: {
-    gap: 4,
+    gap: 2,
   },
   markaYazi: {
-    fontSize: 28,
-    letterSpacing: 6,
+    fontSize: 23, // tek-ekran sığdırma (11 Ağu): 28 → 23
+    letterSpacing: 5,
   },
   markaAltSatir: {
     flexDirection: 'row',
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   markaCizgi: {
     flex: 1,
     height: 1,
-    backgroundColor: 'rgba(201,162,39,0.65)',
+    backgroundColor: 'rgba(240,183,51,0.8)', // sıcak parlak altın (handoff)
   },
   header: {
     flexDirection: 'row',
