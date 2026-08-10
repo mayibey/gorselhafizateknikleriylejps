@@ -1278,3 +1278,13 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   Oyunlar (Er Meydanı yanlışları, dokun→madde listesi Alert) — Karargah'taki "Güç
   Kazandırma" kartı bayraklıda kalktı, işi bu sekmeye geçti.
 - OTA 5 runtime.
+
+## 10 Ağu 2026 (4) — Duyuru köşesi + G3 köprüsü ilk üç oyun (bayraklı/taslak)
+- Karargah sağ üst: ayarlar ikonu yerine DUYURU ikonu (okunmamışta kırmızı nokta);
+  Duyurular satırı gruptan kalktı. Ayarlara giriş: Evsaf sağ üst dişli.
+- G3 köprüsü vol.1: Doğru-Yanlış + Rütbe Merdiveni + TCK/CMK yanlışları
+  `mevzu_zayif_oyun` defterine (localStorage → köprü → oyun_ilerleme.veri; SRS'e
+  dokunmaz). Evsaf → Zayıf Mevziler → Oyunlar: OYUN MERKEZİ bölümü künye→kart
+  eşleşmesi (kanun no + eslesenKartIdleri) ile listeler; dokun → TEK KART oturumu.
+  Eşleşmeyen künye (yönetmelik) düz satır. Taslak damga 20260810-0318 (başkan+Ahmet).
+- Doğrulanınca kalan 11 oyuna aynı kalıp yayılacak.
