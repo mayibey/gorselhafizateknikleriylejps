@@ -32,8 +32,8 @@ export function DuyuruIkonu({ boyut = 22, etiketli }: { boyut?: number; etiketli
     }, [premium]),
   );
 
-  // etiketli (başkan, 10 Ağu gece): köşede İKON DEĞİL YAZI — çerçevesiz, sade
-  // "Duyurular" (navbar metin düğmesi); okunmamışta yanında kırmızı nokta.
+  // etiketli (11 Ağu — "%100 aynısı" ekran görüntüsü): zil ikonu + "DUYURULAR" yazısı;
+  // okunmamış varsa zilin üstünde altın nokta (mühür rengi, kırmızı değil).
   if (etiketli) {
     return (
       <Pressable
@@ -42,10 +42,13 @@ export function DuyuruIkonu({ boyut = 22, etiketli }: { boyut?: number; etiketli
         style={styles.yaziSatir}
         accessibilityRole="button"
         accessibilityLabel="Duyurular">
-        <AppText variant="kucuk" bold color="altin">
-          Duyurular
+        <View>
+          <MaterialCommunityIcons name="bell-outline" size={22} color={Palette.beyaz} />
+          {okunmamis ? <View style={styles.zilNokta} /> : null}
+        </View>
+        <AppText variant="kucuk" bold color="altin" style={styles.yaziEtiket}>
+          DUYURULAR
         </AppText>
-        {okunmamis ? <View style={styles.yaziNokta} /> : null}
       </Pressable>
     );
   }
@@ -73,6 +76,18 @@ const styles = StyleSheet.create({
     height: 8,
     borderRadius: 4,
     backgroundColor: Palette.kirmizi,
+  },
+  yaziEtiket: {
+    letterSpacing: 1,
+  },
+  zilNokta: {
+    position: 'absolute',
+    top: -2,
+    right: -2,
+    width: 9,
+    height: 9,
+    borderRadius: 5,
+    backgroundColor: Palette.altin,
   },
   nokta: {
     position: 'absolute',

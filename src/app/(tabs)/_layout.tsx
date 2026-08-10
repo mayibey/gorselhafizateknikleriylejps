@@ -57,15 +57,25 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: Palette.lacivert,
-        tabBarInactiveTintColor: Palette.solukMetin,
-        tabBarStyle: {
-          backgroundColor: Palette.kartKremi,
-          borderTopColor: Palette.kenarlik,
-        },
+        // 11 Ağu "%100 aynısı" (bayraklı): sekme çubuğu da gece — koyu petrol zemin,
+        // aktif ALTIN, pasif kırık beyaz. Bayraksızda krem krom aynen.
+        tabBarActiveTintColor: talimMevzuata ? Palette.altin : Palette.lacivert,
+        tabBarInactiveTintColor: talimMevzuata ? 'rgba(226,236,240,0.75)' : Palette.solukMetin,
+        tabBarStyle: talimMevzuata
+          ? {
+              backgroundColor: '#0A2E3C',
+              borderTopColor: 'rgba(126,200,224,0.18)',
+            }
+          : {
+              backgroundColor: Palette.kartKremi,
+              borderTopColor: Palette.kenarlik,
+            },
         tabBarLabelStyle: { fontFamily: FontFamily, fontWeight: '700' },
       }}>
-      <Tabs.Screen name="index" options={{ title: 'Karargah', tabBarIcon: icon('home') }} />
+      <Tabs.Screen
+        name="index"
+        options={{ title: talimMevzuata ? 'Karargâh' : 'Karargah', tabBarIcon: icon('home') }}
+      />
       <Tabs.Screen
         name="mevzuat"
         options={{ title: 'Mevzuat', tabBarIcon: icon('book-open-variant') }}

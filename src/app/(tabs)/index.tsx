@@ -41,8 +41,9 @@ import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '@/lib/er-meydani';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
-import { KaldiginYerKarti, TatbikatYarim } from '@/components/karargah/kaldigin-yer';
-import { IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
+// KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
+// (bileşenler duruyor — geri istenirse import edip yerine koy).
+import { EmirHalka, IsiltiSerit, Nabiz, Sallan, UfukSiluet } from '@/components/karargah/safak';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -476,8 +477,9 @@ export default function KarargahScreen() {
 
   return (
     <Screen
-      title="Karargah"
+      title={aramaMevzuatta ? 'Karargâh' : 'Karargah'}
       koyu={aramaMevzuatta}
+      marka={aramaMevzuatta}
       headerSag={
         <View style={styles.headerIkonlar}>
           {/* Ara — eski alt sekme yerine başlıkta büyüteç (bayraklıda Mevzuat'a taşındı). */}
@@ -524,53 +526,163 @@ export default function KarargahScreen() {
         /* Doğal yerleşim (başkan, 10 Ağu gece): panel/kutu YOK — içerik doğrudan gece
            göğünde; bölümleri ince altın ayraçlar ve nefes boşlukları ayırır. */
         <View style={styles.gokAkis}>
-            <AppText variant="dev" bold color="beyaz" style={styles.safakSayac}>
-              19 Eylül'e {kalanGun} gün
-            </AppText>
-            {basvuruAcik ? (
-              <View style={styles.safakBasvuru}>
-                <AppText variant="etiket" bold color="lacivert">
-                  Sınav Başvuru Dönemi Açıldı · 3–23 Ağustos
+            {/* ═══ ÜST BLOK — sol: sınav takvimi · sağ: dev geri sayım (11 Ağu "%100 aynısı"
+                ekran görüntüsü). Arkada SVG ufuk silüeti — fotoğraf yok, OTA-güvenli. */}
+            <View style={styles.takvimSahne}>
+              <UfukSiluet />
+              <View style={styles.takvimSol}>
+                <View style={styles.takvimIkonKutu}>
+                  <MaterialCommunityIcons name="calendar-month-outline" size={26} color={Palette.altin} />
+                </View>
+                <AppText variant="etiket" bold color="altinAcik2" style={styles.takvimEtiket}>
+                  SINAV TAKVİMİ
+                </AppText>
+                <AppText variant="baslik" bold color="beyaz">
+                  {basvuruAcik
+                    ? 'Başvurular açık'
+                    : Date.now() < BASVURU_BASLANGIC.getTime()
+                      ? 'Başvurular yakında'
+                      : 'Başvurular kapandı'}
+                </AppText>
+                <AppText variant="govde" bold color="altin">
+                  3 – 23 Ağustos
+                </AppText>
+                <View style={styles.takvimCizgi} />
+                <Pressable
+                  onPress={() =>
+                    Alert.alert(
+                      'Sınav Takvimi',
+                      'Başvuru dönemi: 3 – 23 Ağustos 2026\nSınav: 19 Eylül 2026, 14:00',
+                    )
+                  }
+                  hitSlop={8}
+                  style={styles.detayLink}
+                  accessibilityRole="button"
+                  accessibilityLabel="Sınav takvimi detayları">
+                  <AppText variant="kucuk" bold color="beyaz">
+                    Detaylar
+                  </AppText>
+                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.altin} />
+                </Pressable>
+              </View>
+              <View style={styles.takvimSag}>
+                <AppText variant="etiket" bold color="altin" style={styles.takvimEtiket}>
+                  19 EYLÜL 2026
+                </AppText>
+                <AppText variant="dev" bold color="beyaz" style={styles.devGun}>
+                  {kalanGun}
+                </AppText>
+                <AppText variant="baslik" bold color="beyaz" style={styles.devGunAlt}>
+                  GÜN
+                </AppText>
+                <View style={styles.sagMuhurSatir}>
+                  <View style={styles.sagMuhurCizgi} />
+                  <MaterialCommunityIcons name="shield-star" size={14} color={Palette.altin} />
+                  <View style={styles.sagMuhurCizgi} />
+                </View>
+                <AppText variant="etiket" bold color="altin" style={styles.jspsEtiket}>
+                  JSPS SINAVI
+                </AppText>
+                <AppText variant="kucuk" color="beyaz" style={styles.sagAltYazi}>
+                  Sınava kalan süre
                 </AppText>
               </View>
-            ) : null}
-            <View style={styles.safakEmir}>
-              <MaterialCommunityIcons name="shield-star" size={30} color={Palette.altin} />
-              <AppText variant="etiket" bold color="altinAcik2" style={styles.emirEtiket}>
-                BUGÜNÜN EMRİ
-              </AppText>
-              <AppText variant="baslik" bold color="beyaz" style={styles.emirBaslik}>
-                {bos
-                  ? hicCalisilan
-                    ? 'İlk mevzini seç'
-                    : 'Tüm görevleri yaptın 🎖️'
-                  : `Zorlandığın ${bekleyen} kartı güçlendir`}
-              </AppText>
-              {/* Okunabilirlik (başkan): koyu zeminde küçük yazı PARLAK ve bir boy büyük. */}
-              <AppText variant="kucuk" bold color="beyaz" style={styles.emirAlt}>
-                {bos
-                  ? hicCalisilan
-                    ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla"
-                    : 'Tekrar edilecek mevzi kalmadı — yeni konu çalış'
-                  : `Tahmini süre: ${bekleyen} dk${sonKonu ? ` · Son konu: ${sonKonu}` : ''}`}
-              </AppText>
             </View>
-            <Nabiz>
-              <Pressable
-                style={({ pressed }) => [styles.safakCta, pressed && styles.pressed]}
-                onPress={() =>
-                  bos
-                    ? router.push('/mevzuat')
-                    : router.push({ pathname: '/akis', params: { mod: 'zayif' } })
-                }
-                accessibilityRole="button"
-                accessibilityLabel={bos ? 'Mevzuata git' : 'Taarruza başla — zayıf kartları çalış'}>
-                <AppText variant="govde" bold color="lacivert">
-                  {bos ? (hicCalisilan ? 'MEVZUATA GİT' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
+
+            {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası. */}
+            <View style={styles.gecePanel}>
+              <View style={styles.emirUst}>
+                <View style={styles.emirIkonHalka}>
+                  <MaterialCommunityIcons name="target" size={22} color={Palette.altin} />
+                </View>
+                <AppText variant="etiket" bold color="beyaz" style={styles.emirEtiket}>
+                  BUGÜNÜN EMRİ
                 </AppText>
-                <IsiltiSerit />
-              </Pressable>
-            </Nabiz>
+                {!bos ? (
+                  <View style={styles.zayifRozet}>
+                    <AppText variant="etiket" bold color="beyaz">
+                      ZAYIF MEVZİLER
+                    </AppText>
+                  </View>
+                ) : null}
+              </View>
+              <View style={styles.emirSatir}>
+                <View style={styles.emirSol}>
+                  {bos ? (
+                    <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                      {hicCalisilan ? 'İLK MEVZİNİ SEÇ' : 'TÜM GÖREVLERİ YAPTIN 🎖️'}
+                    </AppText>
+                  ) : (
+                    /* Üç satırlık manşet — orta satır altın (ekran görüntüsündeki vurgu). */
+                    <>
+                      <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                        ZAYIF {bekleyen}
+                      </AppText>
+                      <AppText variant="baslik" bold color="altin" style={styles.emirManset}>
+                        MEVZİNİ
+                      </AppText>
+                      <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                        GÜÇLENDİR
+                      </AppText>
+                    </>
+                  )}
+                  <View style={styles.emirMeta}>
+                    {bos ? (
+                      <AppText variant="kucuk" bold color="beyaz" style={styles.emirAlt}>
+                        {hicCalisilan
+                          ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla"
+                          : 'Tekrar edilecek mevzi kalmadı — yeni konu çalış'}
+                      </AppText>
+                    ) : (
+                      <>
+                        <MaterialCommunityIcons name="clock-outline" size={16} color={Palette.beyaz} />
+                        <AppText variant="kucuk" bold color="beyaz">
+                          {bekleyen} dk
+                        </AppText>
+                        {sonKonu ? (
+                          <>
+                            <AppText variant="kucuk" bold color="beyaz" style={styles.metaNokta}>
+                              ·
+                            </AppText>
+                            <MaterialCommunityIcons
+                              name="file-document-outline"
+                              size={16}
+                              color={Palette.beyaz}
+                            />
+                            <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
+                              Son konu: {sonKonu}
+                            </AppText>
+                          </>
+                        ) : null}
+                      </>
+                    )}
+                  </View>
+                </View>
+                {!bos ? <EmirHalka tamam={bugunSayi} toplam={bugunSayi + bekleyen} /> : null}
+              </View>
+              <Nabiz>
+                <Pressable
+                  style={({ pressed }) => [styles.safakCta, pressed && styles.pressed]}
+                  onPress={() =>
+                    bos
+                      ? router.push('/mevzuat')
+                      : router.push({ pathname: '/akis', params: { mod: 'zayif' } })
+                  }
+                  accessibilityRole="button"
+                  accessibilityLabel={bos ? 'Mevzuata git' : 'Taarruza başla — zayıf kartları çalış'}>
+                  <AppText variant="govde" bold color="lacivert">
+                    {bos ? (hicCalisilan ? 'MEVZUATA GİT' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
+                  </AppText>
+                  <MaterialCommunityIcons
+                    name="arrow-right"
+                    size={20}
+                    color={Palette.lacivert}
+                    style={styles.ctaOk}
+                  />
+                  <IsiltiSerit />
+                </Pressable>
+              </Nabiz>
+            </View>
         </View>
       ) : (
         <SinavGeriSayim />
@@ -767,55 +879,100 @@ export default function KarargahScreen() {
         )
       )}
 
-      {/* 10 Ağu gece yerleşimi: emirden sonra Kaldığın Yer + [Tatbikat | Tekrar Zamanı] ikizleri. */}
+      {/* 11 Ağu "%100 aynısı" yerleşimi: TEKRAR ZAMANI tam satır (kırmızı uyarı dili —
+          tema kuralı: kırmızı SADECE uyarı, burası uyarı) + [TATBİKAT | ER MEYDANI] paneller.
+          NOT: Kaldığın Yer kartı + moral satırı ekran görüntüsünde YOK → gizlendi, silinmedi
+          (başkan kuralı: "bir şey silme, sonra geri isteyebiliriz"). Geri almak için bu
+          bloğun üstüne <KaldiginYerKarti /> ve altına moral satırını ekle. */}
       {aramaMevzuatta ? (
         <>
-          <View style={styles.altinAyrac} />
-          <KaldiginYerKarti />
-          <View style={styles.altinAyrac} />
-          <View style={styles.ikizSatir}>
-            <TatbikatYarim />
-            <View style={styles.dikeyAyrac} />
-            <Pressable
-              onPress={() => setTekrarAcik((v) => !v)}
-              style={({ pressed }) => [styles.tekrarYarim, pressed && styles.pressed]}
-              accessibilityRole="button"
-              accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
+          <Pressable
+            onPress={() => setTekrarAcik((v) => !v)}
+            style={({ pressed }) => [styles.gecePanel, styles.tekrarSatir, pressed && styles.pressed]}
+            accessibilityRole="button"
+            accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
+            <View style={styles.emirIkonHalka}>
               <Sallan aktif={unutulan.length > 0}>
-                <MaterialCommunityIcons name="bell-ring-outline" size={28} color={Palette.altin} />
+                <MaterialCommunityIcons
+                  name="alarm"
+                  size={24}
+                  color={unutulan.length > 0 ? Palette.kirmizi : Palette.altin}
+                />
               </Sallan>
-              <AppText variant="kucuk" bold color="beyaz" style={styles.tekrarBaslik}>
+            </View>
+            <View style={styles.erMetin}>
+              <AppText
+                variant="kucuk"
+                bold
+                color={unutulan.length > 0 ? 'kirmizi' : 'altinAcik2'}
+                style={styles.tekrarBaslik2}>
                 TEKRAR ZAMANI
               </AppText>
-              <AppText variant="kucuk" bold color="altinAcik2" style={styles.tekrarBaslik}>
-                {unutulan.length > 0 ? `Paslanma riski: ${unutulan.length} kanun` : 'Paslanan kanun yok'}
+              {unutulan.length > 0 ? (
+                <View style={styles.paslanmaSatir}>
+                  <AppText variant="kucuk" bold color="beyaz">
+                    Paslanma riski:{' '}
+                  </AppText>
+                  <AppText variant="kucuk" bold color="kirmizi">
+                    {unutulan.length} kanun
+                  </AppText>
+                </View>
+              ) : (
+                <AppText variant="kucuk" bold color="beyaz">
+                  Paslanan kanun yok
+                </AppText>
+              )}
+            </View>
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={22}
+              color={unutulan.length > 0 ? Palette.kirmizi : Palette.altin}
+            />
+          </Pressable>
+          <View style={styles.ikizSatir}>
+            <Pressable
+              onPress={() => router.push('/tatbikat')}
+              style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel="Tatbikat — karma deneme sınavları">
+              <View style={styles.emirIkonHalka}>
+                <MaterialCommunityIcons name="target" size={24} color={Palette.altin} />
+              </View>
+              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimBaslik2}>
+                TATBİKAT
               </AppText>
+              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
+                Karma sınavlarla kendini sına.
+              </AppText>
+              <MaterialCommunityIcons
+                name="chevron-right"
+                size={20}
+                color={Palette.altin}
+                style={styles.yarimOk}
+              />
             </Pressable>
-          </View>
-          <View style={styles.altinAyrac} />
-          {/* ER MEYDANI çağrısı — alt boşluk dolduruldu (başkan, 10 Ağu gece): düello funnel'ı. */}
-          <Pressable
-            onPress={() => router.push('/er-meydani')}
-            style={({ pressed }) => [styles.erKart, pressed && styles.pressed]}
-            accessibilityRole="button"
-            accessibilityLabel="Er Meydanı — düelloya gir">
-            <MaterialCommunityIcons name="sword-cross" size={30} color={Palette.altin} />
-            <View style={styles.erMetin}>
-              <AppText variant="kucuk" bold color="beyaz" style={styles.tekrarBaslik}>
+            <Pressable
+              onPress={() => router.push('/er-meydani')}
+              style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel="Er Meydanı — düelloya gir">
+              <View style={styles.emirIkonHalka}>
+                <MaterialCommunityIcons name="sword-cross" size={24} color={Palette.altin} />
+              </View>
+              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimBaslik2}>
                 ER MEYDANI
               </AppText>
-              <AppText variant="kucuk" bold color="altinAcik2">
-                Bilgini düelloda dene — rakibin seni bekliyor
+              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
+                Bilgini düelloda dene. Rakibin seni bekliyor.
               </AppText>
-            </View>
-            <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altin} />
-          </Pressable>
-          {/* Günün moral satırı (Ref 6/9: insan dili) — gerçek veriden. */}
-          <AppText variant="kucuk" bold color="beyaz" style={styles.moralSatir}>
-            {bugunSayi > 0
-              ? `Bugün ${bugunSayi} kart çalıştın 🎖️${streak && streak > 1 ? ` · Seri: ${streak} gün` : ''}`
-              : 'Bugün henüz kart çalışmadın — ilk kartla seriyi başlat.'}
-          </AppText>
+              <MaterialCommunityIcons
+                name="chevron-right"
+                size={20}
+                color={Palette.altin}
+                style={styles.yarimOk}
+              />
+            </Pressable>
+          </View>
           {tekrarAcik && unutulan.length > 0 ? (
             <View style={styles.tekrarListe}>
               {unutulan.slice(0, 5).map((u) => (
@@ -1360,6 +1517,158 @@ const styles = StyleSheet.create({
   },
   gokAkis: {
     gap: Spacing.three,
+  },
+  // ═══ 11 Ağu "%100 aynısı" ekran görüntüsü stilleri ═══
+  takvimSahne: {
+    flexDirection: 'row',
+    gap: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  takvimSol: {
+    flex: 1.15,
+    gap: Spacing.one,
+    alignItems: 'flex-start',
+  },
+  takvimIkonKutu: {
+    width: 52,
+    height: 52,
+    borderRadius: Radius.m,
+    borderWidth: 1,
+    borderColor: 'rgba(201,162,39,0.55)',
+    backgroundColor: 'rgba(5,26,36,0.35)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: Spacing.one,
+  },
+  takvimEtiket: {
+    letterSpacing: 1.5,
+  },
+  takvimCizgi: {
+    alignSelf: 'stretch',
+    height: 1,
+    backgroundColor: 'rgba(255,246,220,0.25)',
+    marginVertical: Spacing.one,
+  },
+  detayLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  takvimSag: {
+    flex: 1,
+    alignItems: 'center',
+    gap: 2,
+  },
+  devGun: {
+    fontSize: 84,
+    lineHeight: 92,
+  },
+  devGunAlt: {
+    letterSpacing: 6,
+    marginTop: -8,
+  },
+  sagMuhurSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    alignSelf: 'stretch',
+    paddingHorizontal: Spacing.four,
+    marginTop: Spacing.one,
+  },
+  sagMuhurCizgi: {
+    flex: 1,
+    height: 1,
+    backgroundColor: 'rgba(201,162,39,0.6)',
+  },
+  jspsEtiket: {
+    letterSpacing: 4,
+  },
+  sagAltYazi: {
+    opacity: 0.9,
+  },
+  // Yumuşak petrol panel — kutu hissi vermeyen düşük kontrastlı kart (mock'taki gibi).
+  gecePanel: {
+    backgroundColor: 'rgba(18,74,94,0.40)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,200,224,0.16)',
+    borderRadius: Radius.l,
+    padding: Spacing.three,
+    gap: Spacing.two,
+  },
+  emirUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  emirIkonHalka: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: 'rgba(5,26,36,0.45)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  zayifRozet: {
+    backgroundColor: Palette.kirmizi,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 3,
+  },
+  emirSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+  },
+  emirSol: {
+    flex: 1,
+    gap: 2,
+  },
+  emirManset: {
+    fontSize: 30,
+    lineHeight: 36,
+  },
+  emirMeta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    marginTop: Spacing.one,
+    flexWrap: 'wrap',
+  },
+  metaNokta: {
+    marginHorizontal: 2,
+  },
+  ctaOk: {
+    position: 'absolute',
+    right: Spacing.three,
+    top: '50%',
+    marginTop: -10,
+  },
+  tekrarSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+  },
+  tekrarBaslik2: {
+    letterSpacing: 1,
+  },
+  paslanmaSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  yarimPanel: {
+    flex: 1,
+    alignItems: 'flex-start',
+    gap: Spacing.one,
+  },
+  yarimBaslik2: {
+    letterSpacing: 1,
+    marginTop: Spacing.one,
+  },
+  yarimAlt2: {
+    opacity: 0.92,
+  },
+  yarimOk: {
+    alignSelf: 'flex-end',
   },
   altinAyrac: {
     height: 1,

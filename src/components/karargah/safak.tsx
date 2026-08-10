@@ -19,7 +19,7 @@ import Animated, {
   withSequence,
   withTiming,
 } from 'react-native-reanimated';
-import Svg, { Path } from 'react-native-svg';
+import Svg, { Circle, Path } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
@@ -165,6 +165,72 @@ export function Sallan({ aktif, children }: { aktif: boolean; children: ReactNod
   return <Animated.View style={stil}>{children}</Animated.View>;
 }
 
+/**
+ * UFUK SİLÜETİ — geri sayım bloğunun arkasında katmanlı dağ sırtları (11 Ağu,
+ * başkanın "%100 aynısı" istediği ekran görüntüsünden). Fotoğraf değil SVG:
+ * OTA-güvenli, zemin degradesiyle kaynaşan iki koyu sırt katmanı.
+ */
+export function UfukSiluet() {
+  return (
+    <View style={st.ufuk} pointerEvents="none">
+      <Svg width="100%" height="100%" viewBox="0 0 100 32" preserveAspectRatio="none">
+        <Path
+          d="M0,22 L13,15 L24,20 L38,11 L52,19 L66,13 L80,18 L100,12 L100,32 L0,32 Z"
+          fill="rgba(5,26,36,0.30)"
+        />
+        <Path
+          d="M0,27 L16,22 L32,26 L50,19 L68,25 L84,21 L100,24 L100,32 L0,32 Z"
+          fill="rgba(4,20,29,0.42)"
+        />
+      </Svg>
+    </View>
+  );
+}
+
+/**
+ * EMİR HALKASI — Bugünün Emri kartındaki ilerleme çemberi ("2/8 tamamlandı").
+ * tamam = bugün çalışılan kart, toplam = tamam + kalan zayıf mevzi (gün sonu hedefi).
+ * Gerçek veriden; sahte sayı yok.
+ */
+export function EmirHalka({ tamam, toplam }: { tamam: number; toplam: number }) {
+  const boyut = 104;
+  const kalin = 7;
+  const r = (boyut - kalin) / 2;
+  const cevre = 2 * Math.PI * r;
+  const oran = toplam > 0 ? Math.min(1, tamam / toplam) : 0;
+  return (
+    <View style={[st.halkaSar, { width: boyut, height: boyut }]}>
+      <Svg width={boyut} height={boyut} style={StyleSheet.absoluteFill}>
+        <Circle
+          cx={boyut / 2}
+          cy={boyut / 2}
+          r={r}
+          stroke="rgba(255,246,220,0.16)"
+          strokeWidth={kalin}
+          fill="rgba(5,26,36,0.35)"
+        />
+        <Circle
+          cx={boyut / 2}
+          cy={boyut / 2}
+          r={r}
+          stroke={Palette.altin}
+          strokeWidth={kalin}
+          fill="none"
+          strokeLinecap="round"
+          strokeDasharray={`${cevre * oran} ${cevre}`}
+          transform={`rotate(-90 ${boyut / 2} ${boyut / 2})`}
+        />
+      </Svg>
+      <AppText variant="baslik" bold color="beyaz">
+        {tamam} / {toplam}
+      </AppText>
+      <AppText variant="etiket" color="beyaz" style={st.halkaAlt}>
+        tamamlandı
+      </AppText>
+    </View>
+  );
+}
+
 /** Lacivert sahneden krem gövdeye kavisli dalga dikişi. */
 export function DalgaGecis() {
   return (
@@ -230,5 +296,20 @@ const st = StyleSheet.create({
   },
   dalgaSar: {
     marginTop: -1, // sahnenin dibine dişsiz kenetlensin
+  },
+  ufuk: {
+    position: 'absolute',
+    left: -12, // gövde padding'ini taşarak kenardan kenara uzansın
+    right: -12,
+    bottom: 0,
+    height: 120,
+  },
+  halkaSar: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  halkaAlt: {
+    opacity: 0.85,
+    marginTop: -2,
   },
 });
