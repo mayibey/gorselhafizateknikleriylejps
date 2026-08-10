@@ -28,6 +28,7 @@ import Svg, {
 } from 'react-native-svg';
 
 import { AppText } from '@/components/ui/app-text';
+import { ParlakYay } from '@/components/karargah/parlak-yay';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 
 /* Deterministik yıldız haritası (x%, y%, boyut, parlaklık) — her açılışta aynı gökyüzü. */
@@ -248,6 +249,8 @@ export function EmirHalka({ tamam, toplam }: { tamam: number; toplam: number }) 
           transform={`rotate(-90 ${boyut / 2} ${boyut / 2})`}
         />
       </Svg>
+      {/* Skia IŞIMA katmanı (build 71+): keskin yayın altında yumuşak altın parlama. */}
+      <ParlakYay boyut={boyut} kalin={kalin} oran={oran} />
       <AppText variant="govde" bold color="beyaz">
         {tamam} / {toplam}
       </AppText>

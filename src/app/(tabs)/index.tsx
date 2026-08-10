@@ -40,6 +40,7 @@ import { useUyelik } from '@/lib/uyelik-context';
 import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '@/lib/er-meydani';
 import { maddeEtiket } from '@/lib/madde-etiket';
+import { hafifDokun, ortaDokun } from '@/lib/dokunus';
 import { useKisiselOzellik } from '@/lib/ozellik';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
@@ -656,11 +657,11 @@ export default function KarargahScreen() {
               <Nabiz>
                 <Pressable
                   style={({ pressed }) => [styles.safakCta, pressed && styles.pressed]}
-                  onPress={() =>
-                    bos
-                      ? router.push('/mevzuat')
-                      : router.push({ pathname: '/akis', params: { mod: 'zayif' } })
-                  }
+                  onPress={() => {
+                    ortaDokun();
+                    if (bos) router.push('/mevzuat');
+                    else router.push({ pathname: '/akis', params: { mod: 'zayif' } });
+                  }}
                   accessibilityRole="button"
                   accessibilityLabel={bos ? 'Mevzuata git' : 'Taarruza başla — zayıf kartları çalış'}>
                   <LinearGradient
@@ -886,7 +887,7 @@ export default function KarargahScreen() {
       {aramaMevzuatta ? (
         <>
           <Pressable
-            onPress={() => setTekrarAcik((v) => !v)}
+            onPress={() => { hafifDokun(); setTekrarAcik((v) => !v); }}
             style={({ pressed }) => [
               styles.gecePanel,
               styles.tekrarSatir,
@@ -937,7 +938,7 @@ export default function KarargahScreen() {
           </Pressable>
           <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
-              onPress={() => router.push('/tatbikat')}
+              onPress={() => { hafifDokun(); router.push('/tatbikat'); }}
               style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tatbikat — karma deneme sınavları">
@@ -958,7 +959,7 @@ export default function KarargahScreen() {
               />
             </Pressable>
             <Pressable
-              onPress={() => router.push('/er-meydani')}
+              onPress={() => { hafifDokun(); router.push('/er-meydani'); }}
               style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Er Meydanı — düelloya gir">
