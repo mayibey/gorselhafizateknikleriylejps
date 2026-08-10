@@ -3,7 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Alert, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import Svg, { Circle } from 'react-native-svg';
+import Svg, { Circle, Path } from 'react-native-svg';
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
 import { AppText } from '@/components/ui/app-text';
@@ -582,31 +582,51 @@ export default function KarargahScreen() {
             {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası.
                 Sağ üst köşede çapraz KURDELE (ref v3): rozet değil, kırmızı şerit. */}
             <View style={[styles.gecePanel, styles.emirPanelUst]}>
-              {/* Ref v5 SOL PLAKA: kalkan armalı "BUGÜNÜN / EMRİ" — kartın üstüne taşar. */}
-              <View style={styles.emirPlaka}>
-                <View style={styles.plakaArma}>
-                  <MaterialCommunityIcons name="shield-star" size={24} color={Palette.altinParlak} />
-                </View>
-                <View>
-                  <AppText variant="etiket" bold color="altinParlak" style={styles.plakaUst}>
-                    BUGÜNÜN
-                  </AppText>
-                  <AppText variant="baslik" bold color="beyaz" style={styles.plakaAlt}>
-                    EMRİ
-                  </AppText>
+              {/* SOL PLAKA (mock birebir): FLAMA kesimli zemin — sağ kenar çapraz,
+                  altın konturlu; kartın üst çizgisine BİNER (kopuk pill değil). */}
+              <View style={styles.emirPlaka} pointerEvents="none">
+                <Svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 186 56"
+                  preserveAspectRatio="none"
+                  style={StyleSheet.absoluteFill}>
+                  <Path
+                    d="M8,2 L170,2 L184,2 L152,54 L8,54 Q2,54 2,48 L2,8 Q2,2 8,2 Z"
+                    fill="#0B2F44"
+                    stroke="#F3C24A"
+                    strokeWidth={1.6}
+                  />
+                </Svg>
+                <View style={styles.plakaIc}>
+                  <View style={styles.plakaArma}>
+                    <MaterialCommunityIcons name="shield-star" size={22} color={Palette.altinParlak} />
+                  </View>
+                  <View>
+                    <AppText variant="etiket" bold color="altinParlak" style={styles.plakaUst}>
+                      BUGÜNÜN
+                    </AppText>
+                    <AppText variant="baslik" bold color="beyaz" style={styles.plakaAlt}>
+                      EMRİ
+                    </AppText>
+                  </View>
                 </View>
               </View>
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
-                <LinearGradient
-                  colors={['#E0392B', '#A61B12']}
-                  start={{ x: 0.5, y: 0 }}
-                  end={{ x: 0.5, y: 1 }}
-                  style={styles.zayifPlaka}>
-                  <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
-                    ZAYIF MEVZİLER
-                  </AppText>
-                </LinearGradient>
+                <View style={styles.zayifPlakaSar} pointerEvents="none">
+                  <LinearGradient
+                    colors={['#E0392B', '#A61B12']}
+                    start={{ x: 0.5, y: 0 }}
+                    end={{ x: 0.5, y: 1 }}
+                    style={styles.zayifPlaka}>
+                    <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
+                      ZAYIF MEVZİLER
+                    </AppText>
+                  </LinearGradient>
+                  {/* Kıvrım: plaka kartın arkasına dolanıyormuş hissi veren koyu üçgen. */}
+                  <View style={styles.plakaKivrim} />
+                </View>
               ) : null}
               <View style={styles.emirSatir}>
                 <View style={styles.emirSol}>
@@ -1594,29 +1614,28 @@ const styles = StyleSheet.create({
     overflow: 'hidden', // (kullanım dışı — kurdele dönemi)
   },
   emirPanelUst: {
-    paddingTop: 56, // plakalar kartın üstüne biner, içerik altından başlar
+    paddingTop: 40, // plakalar kart çizgisine biner, içerik altından başlar
+    marginTop: 26, // plakaların üstteki sayaç alanına taşma payı
   },
   emirPlaka: {
     position: 'absolute',
-    top: -10,
-    left: -6,
+    top: -26,
+    left: -2,
+    width: 186,
+    height: 56,
+  },
+  plakaIc: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.two,
-    backgroundColor: '#0B2F44',
-    borderWidth: 1.5,
-    borderColor: 'rgba(243,194,74,0.8)',
-    borderTopLeftRadius: Radius.l,
-    borderTopRightRadius: 8,
-    borderBottomRightRadius: 26,
-    borderBottomLeftRadius: 8,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: 5,
+    paddingLeft: Spacing.two,
+    paddingRight: Spacing.four,
   },
   plakaArma: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
+    width: 34,
+    height: 34,
+    borderRadius: 17,
     borderWidth: 1,
     borderColor: 'rgba(243,194,74,0.5)',
     backgroundColor: 'rgba(2,20,30,0.7)',
@@ -1630,15 +1649,28 @@ const styles = StyleSheet.create({
     fontSize: 20,
     lineHeight: 23,
   },
-  zayifPlaka: {
+  zayifPlakaSar: {
     position: 'absolute',
-    top: -10,
-    right: -4,
+    top: -16,
+    right: 10,
+  },
+  zayifPlaka: {
     borderWidth: 1.5,
     borderColor: 'rgba(243,194,74,0.85)',
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
-    paddingVertical: 6,
+    paddingVertical: 7,
+  },
+  plakaKivrim: {
+    position: 'absolute',
+    left: 10,
+    bottom: -7,
+    width: 0,
+    height: 0,
+    borderTopWidth: 7,
+    borderTopColor: '#7A120C',
+    borderLeftWidth: 8,
+    borderLeftColor: 'transparent',
   },
   kurdele: {
     ...StyleSheet.absoluteFillObject,
@@ -1878,6 +1910,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.three,
+    paddingVertical: Spacing.two, // mock: kompakt uyarı satırı, hero gibi kabarık değil
   },
   tekrarBaslik2: {
     letterSpacing: 1,
