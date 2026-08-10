@@ -30,6 +30,7 @@ import {
   zayifMaddeler as erMeydaniZayifMaddeler,
 } from '@/lib/er-meydani';
 import { oyunKaydiYukle } from '@/lib/oyun-kayit';
+import { urunBilgi } from '@/constants/urunler';
 import { eslesenKartIdleri } from '@/lib/sinav';
 import type { CardWithLaw } from '@/db/schema';
 import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
@@ -71,6 +72,8 @@ export default function SicilScreen() {
   const karargahTasindi = useKisiselOzellik('talim-mevzuata');
   // Zayıf Mevziler sekmesi: Denemeler (kart/sınav) · Oyunlar (Er Meydanı yanlışları).
   const [zayifSekme, setZayifSekme] = useState<'denemeler' | 'oyunlar'>('denemeler');
+  // Zayıf Mevziler ana kartı: özet + ilk 3 hep açık; tam detay (sekmeler) ok ile açılır.
+  const [zayifDetay, setZayifDetay] = useState(false);
   const [ist, setIst] = useState<Istatistik | null>(null);
   const [zayif, setZayif] = useState<ZayifVeri | null>(null);
   const [sicil, setSicil] = useState<SicilVeri | null>(null);
@@ -161,6 +164,7 @@ export default function SicilScreen() {
   return (
     <Screen
       title="Evsaf"
+      kompaktBaslik={karargahTasindi}
       headerSag={
         karargahTasindi ? (
           <Pressable
@@ -172,10 +176,14 @@ export default function SicilScreen() {
           </Pressable>
         ) : undefined
       }>
-      {/* GECE KARARLARI K3+K5 (bayraklı): Karargah'tan taşınan istatistik kutuları +
-          Duyurular girişi (megafonun yeni evi). Hiçbir şey silinmedi, yer değişti. */}
-      {/* Duyurular satırı Karargah'a taşındı (başkan, 10 Ağu). */}
-      {karargahTasindi ? <IstatistikKutulari /> : null}
+      {/* 10 Ağu REDESIGN (bayraklı): sıra = Profil+Üyelik özeti → istatistikler →
+          Zayıf Mevziler (ana odak) → Ödül-Ceza → Yardım → yasal link. */}
+      {karargahTasindi ? (
+        <>
+          <ProfilUyelikKarti />
+          <IstatistikKutulari />
+        </>
+      ) : null}
       {!karargahTasindi ? (
         <>
           {/* Ayarlar — branş/rütbe/bildirim/yasal girişleri burada toplandı (Evsaf sadeleşti). */}
@@ -189,13 +197,11 @@ export default function SicilScreen() {
             <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
           </Pressable>
           {yardimSatirlari}
+          <KisiselBilgiler />
+          {/* Premium'sa "Üyeliğim" kartı (aktif paketler) — değilse görünmez. */}
+          <UyelikKarti />
         </>
       ) : null}
-
-      <KisiselBilgiler />
-
-      {/* Premium'sa "Üyeliğim" kartı (aktif paketler) — değilse görünmez. */}
-      <UyelikKarti />
 
       {hata ? (
         <EmptyState
@@ -229,10 +235,72 @@ export default function SicilScreen() {
               Başkan (10 Ağu): iki sekme — Denemeler (kart/sınav kaynaklı) · Oyunlar
               (Er Meydanı yanlışları). Bayraklıda KATEGORİ: başlığa dokun → aşağı açılır. */}
           {karargahTasindi ? (
-            <EvsafKategori
-              ikon="target"
-              baslik="Zayıf Mevziler"
-              altYazi={`${zayifN} tekrar adayı`}>
+            <View style={styles.istatistikKart}>
+              {/* 10 Ağu REDESIGN: sayfanın ana odağı — özet + en zayıf 3 + altın CTA
+                  hep görünür; ok'a dokununca tam detay (sekmeler) açılır. */}
+              <Pressable
+                style={styles.kategoriBaslik}
+                onPress={() => setZayifDetay((v) => !v)}
+                accessibilityRole="button"
+                accessibilityLabel="Zayıf mevziler detayını aç/kapat">
+                <View style={styles.kategoriIkon}>
+                  <MaterialCommunityIcons name="target" size={22} color={Palette.lacivert} />
+                </View>
+                <View style={styles.kategoriAd}>
+                  <AppText variant="govde" bold color="lacivert">
+                    Zayıf Mevziler
+                  </AppText>
+                  <AppText variant="etiket" color="solukMetin">
+                    {zayifN > 0 ? `${zayifN} konu tekrar bekliyor` : 'Tekrar bekleyen konu yok'}
+                  </AppText>
+                </View>
+                <MaterialCommunityIcons
+                  name={zayifDetay ? 'chevron-up' : 'chevron-down'}
+                  size={22}
+                  color={Palette.solukMetin}
+                />
+              </Pressable>
+              {zayif && zayif.liste.length > 0 ? (
+                <>
+                  {zayif.liste.slice(0, 3).map((z) => (
+                    <Pressable
+                      key={z.card.id}
+                      onPress={() =>
+                        router.push({
+                          pathname: '/akis',
+                          params: { lawId: String(z.card.law_id), kart: String(z.card.id) },
+                        })
+                      }
+                      style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
+                      accessibilityRole="button"
+                      accessibilityLabel="Bu maddeyi çalış">
+                      <AppText variant="kucuk" bold color="anaMetin" style={styles.zayifAd} numberOfLines={1}>
+                        {maddeEtiket(z.card.madde_no, z.card.baslik)}
+                      </AppText>
+                      <AppText variant="etiket" bold color="solukMetin">
+                        ×{z.yanlisSayisi}
+                      </AppText>
+                      <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                    </Pressable>
+                  ))}
+                  <Pressable
+                    style={({ pressed }) => [styles.zayifCta, pressed && styles.pressed]}
+                    onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+                    accessibilityRole="button"
+                    accessibilityLabel="Zayıf konuları çalış">
+                    <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.lacivert} />
+                    <AppText variant="kucuk" bold color="lacivert">
+                      Zayıf Konuları Çalış
+                    </AppText>
+                  </Pressable>
+                </>
+              ) : (
+                <AppText variant="kucuk" color="solukMetin">
+                  Henüz zayıf mevzu bulunmuyor.
+                </AppText>
+              )}
+              {zayifDetay ? (
+              <>
               <View style={styles.zayifSekmelerSag}>
                 <View style={styles.zayifSekmeler}>
                   {(['denemeler', 'oyunlar'] as const).map((s) => (
@@ -272,7 +340,9 @@ export default function SicilScreen() {
                   }
                 />
               )}
-            </EvsafKategori>
+              </>
+              ) : null}
+            </View>
           ) : (
           <View style={styles.istatistikKart}>
             <View style={styles.zayifBaslikSatir}>
@@ -290,7 +360,14 @@ export default function SicilScreen() {
           {/* Ödül-Ceza Sicili — takdir/başarı ödülleri + geri-bes ceza merdiveni.
               Bayraklıda kategori (dokun → açılır). */}
           {karargahTasindi ? (
-            <EvsafKategori ikon="medal-outline" baslik="Ödül-Ceza Sicili">
+            <EvsafKategori
+              ikon="medal-outline"
+              baslik="Ödül-Ceza Sicili"
+              altYazi={
+                sicil && sicil.kayitlar.length > 0
+                  ? `Toplam ${sicil.kayitlar.filter((k) => k.tip === 'odul').length} ödül · ${sicil.kayitlar.filter((k) => k.tip === 'ceza').length} ceza`
+                  : 'Kayıt yok'
+              }>
               <SicilBolum
                 sicil={sicil}
                 zayifSayisi={zayif?.liste.length ?? 0}
@@ -343,11 +420,99 @@ export default function SicilScreen() {
         </EvsafKategori>
       ) : null}
 
-      {/* Resmî kurum bağlantısı reddi — mağaza impersonation riskine karşı görünür ibare. */}
-      <AppText variant="etiket" color="solukMetin" style={styles.resmiNot}>
-        {RESMI_BAGLANTI_YOK}
-      </AppText>
+      {/* Resmî kurum bağlantısı reddi — mağaza impersonation riskine karşı görünür ibare.
+          10 Ağu redesign (bayraklı): dev paragraf yerine küçük link; metin SİLİNMEDİ,
+          dokununca aynen gösteriliyor. Bayraksızda paragraf aynen. */}
+      {karargahTasindi ? (
+        <Pressable
+          onPress={() => Alert.alert('Yasal bilgilendirme', RESMI_BAGLANTI_YOK, [{ text: 'Tamam' }])}
+          style={({ pressed }) => [styles.yasalLink, pressed && styles.pressed]}
+          accessibilityRole="button"
+          accessibilityLabel="Yasal bilgilendirme">
+          <MaterialCommunityIcons name="shield-outline" size={15} color={Palette.solukMetin} />
+          <AppText variant="etiket" color="solukMetin" bold>
+            Yasal bilgilendirme
+          </AppText>
+        </Pressable>
+      ) : (
+        <AppText variant="etiket" color="solukMetin" style={styles.resmiNot}>
+          {RESMI_BAGLANTI_YOK}
+        </AppText>
+      )}
     </Screen>
+  );
+}
+
+// --- Profil + Üyelik BİRLEŞİK özet kartı (10 Ağu redesign: iki kart → tek kart) ---
+// Veri: ad profiles'tan (profilGetir), üyelik useUyelik.aktifHaklar'dan — hard-code YOK.
+// Dokununca mevcut kişisel bilgi (maskeli alanlar + ad düzenleme) ve üyelik detayı açılır.
+
+function ProfilUyelikKarti() {
+  const { kullanici, hazir } = useAuth();
+  const { aktifHaklar } = useUyelik();
+  const [adSoyad, setAdSoyad] = useState('');
+  const [acik, setAcik] = useState(false);
+
+  useFocusEffect(
+    useCallback(() => {
+      let iptal = false;
+      if (!kullanici) {
+        setAdSoyad('');
+        return;
+      }
+      void profilGetir().then((p) => {
+        if (!iptal) setAdSoyad(`${p?.ad ?? ''} ${p?.soyad ?? ''}`.trim());
+      });
+      return () => {
+        iptal = true;
+      };
+    }, [kullanici]),
+  );
+
+  if (!hazir || !kullanici) return null;
+  const uyelikOzet =
+    aktifHaklar.length > 0
+      ? aktifHaklar
+          .map((h) => {
+            const b = urunBilgi(h.urun);
+            return `${b ? b.ad : h.urun} · ${h.tip === 'abonelik' ? 'Yıllık' : 'Ömür Boyu'}`;
+          })
+          .join(' · ')
+      : 'Ücretsiz hesap';
+
+  return (
+    <View style={styles.istatistikKart}>
+      <Pressable
+        style={styles.kategoriBaslik}
+        onPress={() => setAcik((v) => !v)}
+        accessibilityRole="button"
+        accessibilityLabel="Profil ve üyelik detayını aç/kapat">
+        <View style={styles.kategoriIkon}>
+          <MaterialCommunityIcons name="account" size={24} color={Palette.lacivert} />
+        </View>
+        <View style={styles.kategoriAd}>
+          <AppText variant="govde" bold color="lacivert" numberOfLines={1}>
+            {adSoyad || 'Hesabım'}
+          </AppText>
+          <AppText variant="etiket" color="solukMetin" numberOfLines={1}>
+            {uyelikOzet}
+          </AppText>
+        </View>
+        <MaterialCommunityIcons
+          name={acik ? 'chevron-up' : 'chevron-down'}
+          size={22}
+          color={Palette.solukMetin}
+        />
+      </Pressable>
+      {acik ? (
+        <>
+          <View style={styles.kisiAyrac} />
+          <KisiselBilgiler gomulu />
+          <View style={styles.kisiAyrac} />
+          <UyelikKarti gomulu />
+        </>
+      ) : null}
+    </View>
   );
 }
 
@@ -550,7 +715,7 @@ function tarihTR(iso: string | null): string | null {
 }
 
 /** Evsaf üst kartı: hesap + ad/soyad/telefon/doğum/cinsiyet (profilden çekilir). */
-function KisiselBilgiler() {
+function KisiselBilgiler({ gomulu }: { gomulu?: boolean } = {}) {
   const { kullanici, hazir } = useAuth();
   const [profil, setProfil] = useState<Profil | null>(null);
   const [duzenle, setDuzenle] = useState(false);
@@ -607,10 +772,26 @@ function KisiselBilgiler() {
   ];
 
   // Bayraklı: kapalıyken tek satır; başlığa dokununca panel açılır/kapanır.
-  const kapali = varsayilanGizli && !panelAcik;
+  // gomulu (10 Ağu redesign): birleşik Profil kartının İÇİNDE — kendi kartı/başlığı yok,
+  // hep açık; yalnız "KİŞİSEL BİLGİLER" etiketi + Düzenle + satırlar.
+  const kapali = !gomulu && varsayilanGizli && !panelAcik;
 
   return (
-    <View style={styles.istatistikKart}>
+    <View style={gomulu ? styles.gomuluBlok : styles.istatistikKart}>
+      {gomulu ? (
+        <View style={styles.gomuluBaslik}>
+          <AppText variant="etiket" color="solukMetin" bold style={styles.gomuluBaslikAd}>
+            KİŞİSEL BİLGİLER
+          </AppText>
+          {!isimYok ? (
+            <Pressable hitSlop={10} onPress={duzenleAc} accessibilityRole="button" accessibilityLabel="Adını düzenle">
+              <AppText variant="kucuk" color="lacivert" bold>
+                Düzenle
+              </AppText>
+            </Pressable>
+          ) : null}
+        </View>
+      ) : (
       <Pressable
         style={styles.kisiUst}
         disabled={!varsayilanGizli}
@@ -643,6 +824,7 @@ function KisiselBilgiler() {
           />
         ) : null}
       </Pressable>
+      )}
       {kapali ? null : (
       <>
 
@@ -1184,6 +1366,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: Spacing.two,
   },
+  gomuluBlok: {
+    gap: Spacing.two,
+  },
+  gomuluBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  gomuluBaslikAd: {
+    flex: 1,
+  },
   kategoriBaslik: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1203,6 +1396,23 @@ const styles = StyleSheet.create({
   },
   zayifSekmelerSag: {
     alignItems: 'flex-end',
+  },
+  // 10 Ağu redesign: altın CTA (Zayıf Konuları Çalış) + küçük yasal link.
+  zayifCta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.altin,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.three,
+  },
+  yasalLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.one,
+    paddingVertical: Spacing.two,
   },
   zayifBaslikSatir: {
     flexDirection: 'row',

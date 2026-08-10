@@ -79,8 +79,9 @@ export function IstatistikKutulari() {
             </AppText>
           ) : null}
         </View>
+        {/* 10 Ağu redesign: kullanıcı diliyle "Çalışma serisi" (hesap aynı — hesaplaStreak). */}
         <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
-          {streak && streak > 0 ? 'Nöbet serisi' : 'Yeni nöbet bugün başlar'}
+          {streak && streak > 0 ? 'Çalışma serisi' : 'Yeni nöbet bugün başlar'}
         </AppText>
         {!streak ? (
           <View style={st.hazirOl}>

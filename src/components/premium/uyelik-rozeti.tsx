@@ -42,7 +42,7 @@ function tarihGoster(iso: string | null): string {
 
 /** "Üyeliğim" kartı — aktif paketleri listeler. Premium değilse hiç gösterilmez (Ayarlar'daki
  *  "Premium" satırı zaten paywall'a götürür → burada tekrarlamayız). */
-export function UyelikKarti() {
+export function UyelikKarti({ gomulu }: { gomulu?: boolean } = {}) {
   const { aktifHaklar } = useUyelik();
   const router = useRouter();
   // GECE KARARI S2 + başkan 10 Ağu ("amatör"): taç yasak → kalkan-yıldız; yeşil tik gibi
@@ -58,7 +58,47 @@ export function UyelikKarti() {
       return b ? b.ad : h.urun;
     })
     .join(' · ');
-  const govdeGizli = sade && !acik;
+  const govdeGizli = !gomulu && sade && !acik;
+  // gomulu (10 Ağu redesign): birleşik Profil kartının içinde — kendi kartı yok,
+  // "ÜYELİK" etiketi + haklar + yönet; hep açık.
+  if (gomulu) {
+    return (
+      <View style={styles.gomuluBlok}>
+        <AppText variant="etiket" color="solukMetin" bold>
+          ÜYELİK
+        </AppText>
+        {aktifHaklar.map((h) => {
+          const bilgi = urunBilgi(h.urun);
+          const alt =
+            h.tip === 'abonelik' && h.bitis
+              ? `Yıllık · yenilenme ${tarihGoster(h.bitis)}`
+              : 'Ömür boyu';
+          return (
+            <View key={h.urun} style={styles.satir}>
+              <View style={styles.satirMetin}>
+                <AppText variant="kucuk" bold color="anaMetin">
+                  {bilgi ? bilgi.ad : h.urun}
+                </AppText>
+                <AppText variant="etiket" color="solukMetin">
+                  {alt}
+                </AppText>
+              </View>
+            </View>
+          );
+        })}
+        <Pressable
+          onPress={() => router.push('/paywall')}
+          hitSlop={8}
+          accessibilityRole="button"
+          style={({ pressed }) => [styles.yonet, pressed && styles.pressed]}>
+          <AppText variant="etiket" bold color="lacivert">
+            Üyeliği yönet
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.lacivert} />
+        </Pressable>
+      </View>
+    );
+  }
   return (
     // Sade (bayraklı, başkan 10 Ağu): diğer Evsaf kategorileriyle BİREBİR aynı biçim —
     // yuvarlak ikon + "Üyelik Bilgilerim" + ok; altın çerçeve yerine standart kenarlık.
@@ -155,6 +195,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.m,
     padding: Spacing.three,
+    gap: Spacing.two,
+  },
+  gomuluBlok: {
     gap: Spacing.two,
   },
   // Sade (kategori) hâl: diğer Evsaf kartlarıyla aynı kenarlık.

@@ -14,6 +14,8 @@ type ScreenProps = {
   onGeri?: () => void;
   /** Opsiyonel: başlık şeridinde SAĞ üstte içerik (ikon vb.). Default: yok. */
   headerSag?: ReactNode;
+  /** Opsiyonel: başlık şeridi dikeyde daha az yer kaplar (Evsaf yeniden tasarımı, 10 Ağu). */
+  kompaktBaslik?: boolean;
   /** Opsiyonel: header ile gövde arasında ince altın çizgi. Default: yok. */
   headerAltinCizgi?: boolean;
   /** İçerik kaydırılabilir mi (varsayılan: evet). */
@@ -29,6 +31,7 @@ export function Screen({
   onGeri,
   headerSag,
   headerAltinCizgi,
+  kompaktBaslik,
   scroll = true,
   sabitUst,
   children,
@@ -43,7 +46,7 @@ export function Screen({
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
       {title ? (
-        <View style={styles.header}>
+        <View style={[styles.header, kompaktBaslik && styles.headerKompakt]}>
           {onGeri ? (
             <Pressable onPress={onGeri} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
               <MaterialCommunityIcons name="arrow-left" size={26} color={Palette.beyaz} />
@@ -80,6 +83,9 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.lacivert,
     paddingHorizontal: Spacing.four,
     paddingVertical: Spacing.three,
+  },
+  headerKompakt: {
+    paddingVertical: Spacing.two,
   },
   headerSag: {
     marginLeft: 'auto', // başlığı solda bırak, sağ slotu en sağa it
