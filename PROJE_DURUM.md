@@ -1328,3 +1328,13 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   Yardım → "Yasal bilgilendirme" küçük link (Alert; metin silinmedi).
 - Not: prompttaki %'li konu örnekleri veri modelimizde yok → gerçek madde+yanlış sayısı
   kullanıldı (uydurma yasak kuralı). OTA 5 runtime; yalnız test ekibi görür.
+
+## 10 Ağu 2026 (9) — Ödül-Ceza sicili yenileme + titreme fixleri (bayraklı)
+- Titreme kökten: useKisiselOzellik oturum-içi EŞZAMANLI bellek (bayraksız ilk kare yok
+  → kırmızı kart parlarması bitti) + KisiselBilgiler profil ön-yükleme (ProfilUyelikKarti
+  ekran açılırken çeker, panele hazır verir — "Yükleniyor" görünmez; onDegisti ile başlık adı tazelenir).
+- Sicil: kategori altyazısı SİCİL NOTU (Pekiyi/İyi/Orta/Gelişmeye açık + X ödül · Y ceza)
+  · ödül yoksa altın HEDEF satırı ("İlk Takdir Belgen için denemeyi tam puanla geç" → /tatbikat)
+  · aynı derece+sebepli cezalar ×N gruplu · zayıf=0 iken cezalara "TELAFİ EDİLDİ" damgası
+  (yalnız görünüm kuralı — kayıt/iş mantığı değişmedi) · ödül=altın madalya, ceza=soluk mühür noktası.
+- OTA 5 runtime.
