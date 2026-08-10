@@ -16,6 +16,7 @@ import Animated, {
   useSharedValue,
   withDelay,
   withRepeat,
+  withSequence,
   withTiming,
 } from 'react-native-reanimated';
 import Svg, { Path } from 'react-native-svg';
@@ -119,6 +120,49 @@ export function GunHalkalari({ gunler }: { gunler: { harf: string; tamam: boolea
       ))}
     </View>
   );
+}
+
+/** NABIZ: çocuğu 4 sn'de bir belli belirsiz büyütüp indirir (%2) — CTA mıknatısı. */
+export function Nabiz({ children }: { children: ReactNode }) {
+  const olcek = useSharedValue(1);
+  useEffect(() => {
+    olcek.value = withRepeat(
+      withSequence(
+        withTiming(1.02, { duration: 900, easing: Easing.inOut(Easing.sin) }),
+        withTiming(1, { duration: 900, easing: Easing.inOut(Easing.sin) }),
+        withDelay(2200, withTiming(1, { duration: 0 })),
+      ),
+      -1,
+      false,
+    );
+  }, [olcek]);
+  const stil = useAnimatedStyle(() => ({ transform: [{ scale: olcek.value }] }));
+  return <Animated.View style={stil}>{children}</Animated.View>;
+}
+
+/** ÇAN SALLANMASI: aktifken 30 sn'de bir ~1 sn hafifçe çalar. */
+export function Sallan({ aktif, children }: { aktif: boolean; children: ReactNode }) {
+  const aci = useSharedValue(0);
+  useEffect(() => {
+    if (!aktif) {
+      aci.value = 0;
+      return;
+    }
+    aci.value = withRepeat(
+      withSequence(
+        withDelay(8000, withTiming(-12, { duration: 120 })),
+        withTiming(10, { duration: 140 }),
+        withTiming(-7, { duration: 130 }),
+        withTiming(5, { duration: 120 }),
+        withTiming(0, { duration: 140 }),
+        withDelay(22000, withTiming(0, { duration: 0 })),
+      ),
+      -1,
+      false,
+    );
+  }, [aci, aktif]);
+  const stil = useAnimatedStyle(() => ({ transform: [{ rotate: `${aci.value}deg` }] }));
+  return <Animated.View style={stil}>{children}</Animated.View>;
 }
 
 /** Lacivert sahneden krem gövdeye kavisli dalga dikişi. */

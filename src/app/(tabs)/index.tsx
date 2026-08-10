@@ -42,7 +42,7 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { KaldiginYerKarti, TatbikatYarim } from '@/components/karargah/kaldigin-yer';
-import { IsiltiSerit } from '@/components/karargah/safak';
+import { IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -555,20 +555,22 @@ export default function KarargahScreen() {
                   : `Tahmini süre: ${bekleyen} dk${sonKonu ? ` · Son konu: ${sonKonu}` : ''}`}
               </AppText>
             </View>
-            <Pressable
-              style={({ pressed }) => [styles.safakCta, pressed && styles.pressed]}
-              onPress={() =>
-                bos
-                  ? router.push('/mevzuat')
-                  : router.push({ pathname: '/akis', params: { mod: 'zayif' } })
-              }
-              accessibilityRole="button"
-              accessibilityLabel={bos ? 'Mevzuata git' : 'Taarruza başla — zayıf kartları çalış'}>
-              <AppText variant="govde" bold color="lacivert">
-                {bos ? (hicCalisilan ? 'MEVZUATA GİT' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
-              </AppText>
-              <IsiltiSerit />
-            </Pressable>
+            <Nabiz>
+              <Pressable
+                style={({ pressed }) => [styles.safakCta, pressed && styles.pressed]}
+                onPress={() =>
+                  bos
+                    ? router.push('/mevzuat')
+                    : router.push({ pathname: '/akis', params: { mod: 'zayif' } })
+                }
+                accessibilityRole="button"
+                accessibilityLabel={bos ? 'Mevzuata git' : 'Taarruza başla — zayıf kartları çalış'}>
+                <AppText variant="govde" bold color="lacivert">
+                  {bos ? (hicCalisilan ? 'MEVZUATA GİT' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
+                </AppText>
+                <IsiltiSerit />
+              </Pressable>
+            </Nabiz>
         </View>
       ) : (
         <SinavGeriSayim />
@@ -779,7 +781,9 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.tekrarYarim, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
-              <MaterialCommunityIcons name="bell-ring-outline" size={28} color={Palette.altin} />
+              <Sallan aktif={unutulan.length > 0}>
+                <MaterialCommunityIcons name="bell-ring-outline" size={28} color={Palette.altin} />
+              </Sallan>
               <AppText variant="kucuk" bold color="beyaz" style={styles.tekrarBaslik}>
                 TEKRAR ZAMANI
               </AppText>

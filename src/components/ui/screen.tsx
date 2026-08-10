@@ -6,7 +6,7 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
-import { YildizKatmani } from '@/components/ui/yildiz-katmani';
+import { UfukNefesi, YildizKatmani } from '@/components/ui/yildiz-katmani';
 import { BottomTabInset, MaxContentWidth, Palette, Spacing } from '@/constants/theme';
 
 type ScreenProps = {
@@ -60,6 +60,7 @@ export function Screen({
             end={{ x: 0.5, y: 1 }}
             style={StyleSheet.absoluteFill}
           />
+          <UfukNefesi />
           <YildizKatmani />
         </>
       ) : null}

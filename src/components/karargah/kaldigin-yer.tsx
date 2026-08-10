@@ -10,8 +10,15 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
+import Animated, {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withDelay,
+  withTiming,
+} from 'react-native-reanimated';
 
 import { AppText } from '@/components/ui/app-text';
 import { IsiltiSerit } from '@/components/karargah/safak';
@@ -104,10 +111,9 @@ export function KaldiginYerKarti() {
             {durum.law.ad}
           </AppText>
           <View style={st.barSatir}>
-            {/* "Şarj oluyor" ışıltısı (Ref 2): bar üstünde soldan sağa süpüren altın parlama. */}
+            {/* "Şarj" ikilisi: ekrana gelince 0'dan akarak dolar + üstünde altın ışıltı süpürmesi. */}
             <View style={st.bar}>
-              {yuzde > 0 ? <View style={[st.barDolu, { flex: yuzde }]} /> : null}
-              <View style={{ flex: Math.max(1, 100 - yuzde) }} />
+              <SarjBari yuzde={yuzde} />
               <IsiltiSerit egik={false} />
             </View>
             <AppText variant="kucuk" bold color="altinAcik2">
@@ -124,6 +130,20 @@ export function KaldiginYerKarti() {
       </View>
     </Pressable>
   );
+}
+
+/** ŞARJ BARI: ekrana her gelişte 0'dan gerçek yüzdeye akarak dolar (efekt paketi 4). */
+function SarjBari({ yuzde }: { yuzde: number }) {
+  const dolum = useSharedValue(0);
+  useEffect(() => {
+    dolum.value = 0;
+    dolum.value = withDelay(
+      350,
+      withTiming(yuzde, { duration: 900, easing: Easing.out(Easing.cubic) }),
+    );
+  }, [dolum, yuzde]);
+  const stil = useAnimatedStyle(() => ({ width: `${dolum.value}%` }));
+  return <Animated.View style={[st.barDolu, stil]} />;
 }
 
 /** GENEL TATBİKAT — yarım kart (yan yana ikili düzen; 10 Ağu gece yerleşimi). */
@@ -205,6 +225,11 @@ const st = StyleSheet.create({
     overflow: 'hidden',
   },
   barDolu: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    borderRadius: 3,
     backgroundColor: Palette.altin,
   },
   // Doğal yerleşim: şeffaf sütun — kutu hissi yok.
