@@ -1314,3 +1314,17 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
 - Karargah duyuru şeridi HEP görünür: duyuru yokken sade krem "Duyurular" satırı;
   yeni duyuru varsa altın dolgulu "📌 Yeni duyuru — başlığı".
 - OTA 5 runtime.
+
+## 10 Ağu 2026 (8) — Evsaf REDESIGN (başkanın promptu; bayraklı)
+- Kurallar: renk paleti dokunulmadı · veri/iş mantığı değişmedi · hard-code yok ·
+  sahte akış yok · her şey mevcut kaynaklardan (profilGetir, useUyelik.aktifHaklar,
+  hesaplaStreak, zayifKartlar, sicil kayıtları).
+- Yeni düzen: kompakt başlık (Screen kompaktBaslik) → ProfilUyelikKarti (tek özet kart;
+  açılınca gomulu KisiselBilgiler + gomulu UyelikKarti — maskeli alanlar/ad düzenleme/
+  yönet aynen) → 3 istatistik ("Nöbet serisi"→"Çalışma serisi", hesap aynı) →
+  ZAYIF MEVZİLER ANA KART (özet "N konu tekrar bekliyor" + en zayıf 3 GERÇEK madde ×N,
+  satır→tek kart + altın "Zayıf Konuları Çalış" CTA→akis zayif; ok→tam detay sekmeleri;
+  boşsa "Henüz zayıf mevzu bulunmuyor") → Ödül-Ceza (gerçek "X ödül · Y ceza" özet) →
+  Yardım → "Yasal bilgilendirme" küçük link (Alert; metin silinmedi).
+- Not: prompttaki %'li konu örnekleri veri modelimizde yok → gerçek madde+yanlış sayısı
+  kullanıldı (uydurma yasak kuralı). OTA 5 runtime; yalnız test ekibi görür.
