@@ -1368,3 +1368,13 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   bayraklıda kalktı (kod rollback için duruyor). "Ömür Boyu ×2" tekrar hatası da düzeltildi.
 - Veri: profil/branş adı DB'den, rütbe RUTBELER'den, istatistik useEvsafIstatistik
   kancasından (kutu satırıyla aynı kaynak). OTA 5 runtime.
+
+## 10 Ağu 2026 (12) — Evsaf ASKERİ KÜNYE BANDI (başkan seçimi; bayraklı)
+- Başkan "genel olarak hoşuma gitmedi" → 3 yön sunuldu (Künye / Durum panosu / Doku),
+  KÜNYE seçildi. Üstte lacivert kimlik bandı: altın çerçeveli avatar + ad (Playfair) +
+  "Subay · Jandarma" görev satırı + kalkan-yıldız üyelik mührü + ince altın ayraç +
+  üç ALTIN istatistik (%ilerleme / çalışma serisi / zayıf). Banda dokun → kişisel
+  bilgi + üyelik detayı (gomulu) açılır. ProfilUyelikKarti + IstatistikKutulari
+  bayraklıda kalktı (kod rollback için duruyor). "Ömür Boyu ×2" tekrar hatası da düzeltildi.
+- Veri: profil/branş adı DB'den, rütbe RUTBELER'den, istatistik useEvsafIstatistik
+  kancasından. OTA 5 runtime.
