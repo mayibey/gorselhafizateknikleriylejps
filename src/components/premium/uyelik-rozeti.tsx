@@ -60,21 +60,25 @@ export function UyelikKarti() {
     .join(' · ');
   const govdeGizli = sade && !acik;
   return (
-    <View style={styles.kart}>
+    // Sade (bayraklı, başkan 10 Ağu): diğer Evsaf kategorileriyle BİREBİR aynı biçim —
+    // yuvarlak ikon + "Üyelik Bilgilerim" + ok; altın çerçeve yerine standart kenarlık.
+    <View style={[styles.kart, sade && styles.kartSade]}>
       <Pressable
         style={styles.kartBaslik}
         disabled={!sade}
         onPress={() => setAcik((v) => !v)}
         accessibilityRole={sade ? 'button' : undefined}
         accessibilityLabel="Üyelik bölümünü aç/kapat">
-        <MaterialCommunityIcons
-          name={sade ? 'shield-star' : 'crown'}
-          size={20}
-          color={Palette.altinKoyu}
-        />
+        {sade ? (
+          <View style={styles.sadeIkon}>
+            <MaterialCommunityIcons name="shield-star" size={22} color={Palette.lacivert} />
+          </View>
+        ) : (
+          <MaterialCommunityIcons name="crown" size={20} color={Palette.altinKoyu} />
+        )}
         <View style={styles.baslikMetin}>
           <AppText variant="govde" bold color="lacivert">
-            Üyeliğim
+            {sade ? 'Üyelik Bilgilerim' : 'Üyeliğim'}
           </AppText>
           {govdeGizli ? (
             <AppText variant="etiket" color="solukMetin" numberOfLines={1}>
@@ -152,6 +156,18 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.three,
     gap: Spacing.two,
+  },
+  // Sade (kategori) hâl: diğer Evsaf kartlarıyla aynı kenarlık.
+  kartSade: {
+    borderColor: Palette.kenarlik,
+  },
+  sadeIkon: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: Palette.altinSolukYuzey,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   kartBaslik: {
     flexDirection: 'row',
