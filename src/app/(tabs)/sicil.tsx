@@ -50,7 +50,16 @@ import { useKisiselOzellik } from '@/lib/ozellik';
 
 // liste = ÇALIŞILABİLİR (indirilmiş) zayıflar; kilitli = üyelik gerektiren kanunlarda (indirilemez);
 // inebilir = erişilebilir ama henüz indirilmemiş (Mevzuat'tan inince çalışılır).
-type ZayifVeri = { liste: ZayifKart[]; ozet: EksikOzet; kilitli: number; inebilir: number };
+type ZayifVeri = {
+  liste: ZayifKart[];
+  ozet: EksikOzet;
+  kilitli: number;
+  inebilir: number;
+  /** 7 gün önceki havuz büyüklüğü (gelişim cümlesi için; saf yeniden hesap). */
+  haftaOnce: number;
+  /** Bugünkü TÜM havuz (çalışılabilir süzgeci öncesi) — haftaOnce ile aynı ölçek. */
+  simdiki: number;
+};
 type SicilVeri = { kayitlar: SicilKaydi[]; durum: GeriBesDurum };
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 
@@ -105,11 +114,19 @@ export default function SicilScreen() {
         const kilitli = disari.filter(
           (z) => !kanunErisilebilir(kartKlasoru(z.card.gorsel_yolu), z.card.blok),
         ).length;
+        // GELİŞİM (10 Ağu): havuz saf fonksiyon → 7 gün önceki kayıtlarla yeniden hesapla,
+        // "geçen hafta X → bugün Y" cümlesi GERÇEK veriden çıksın. Ek sorgu yok.
+        const esik = new Date(Date.parse(`${bugunISO()}T00:00:00Z`) - 7 * 86400000)
+          .toISOString()
+          .slice(0, 10);
+        const haftaOnce = zayifKartlar(perf.filter((p) => p.tarih <= esik), cards).length;
         setZayif({
           liste,
           ozet: eksikOzet(perf, cards),
           kilitli,
           inebilir: disari.length - kilitli,
+          haftaOnce,
+          simdiki: tum.length,
         });
       })
       .catch(() => setZayif(null));
@@ -1155,6 +1172,9 @@ function ZayifBolum({
   /** Bayraklı (10 Ağu, ChatGPT fikri): satıra dokun → YALNIZ o maddeyi çalış (tek kart oturumu). */
   karttanCalis?: (lawId: number, cardId: number) => void;
 }) {
+  const router = useRouter();
+  // Sade mod: kanun grupları katlanır; ilk grup açık başlar (10 Ağu).
+  const [acikKanunlar, setAcikKanunlar] = useState<Set<number> | null>(null);
   if (zayif === null) {
     return (
       <AppText variant="kucuk" color="solukMetin">
@@ -1190,6 +1210,21 @@ function ZayifBolum({
         </>
       );
     }
+    // (10 Ağu) Boş durum kutlama + yönlendirme: kuru "yok" yerine sıradaki adım.
+    if (karttanCalis) {
+      return (
+        <Pressable
+          onPress={() => router.push('/tatbikat')}
+          style={({ pressed }) => [styles.sicilHedef, pressed && styles.pressed]}
+          accessibilityRole="button"
+          accessibilityLabel="Tatbikata git">
+          <AppText variant="kucuk" color="anaMetin" style={styles.sicilHedefMetin}>
+            Tüm mevziler sağlam 🎖️ — Tatbikatta kendini dene.
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+        </Pressable>
+      );
+    }
     return (
       <AppText variant="kucuk" color="yesil" bold>
         Zayıf mevzin yok 🎖️
@@ -1204,6 +1239,113 @@ function ZayifBolum({
   const sade = !!karttanCalis;
   const karisik =
     ilk5.some((z) => z.kaynaklar.talim) && ilk5.some((z) => z.kaynaklar.tatbikat);
+
+  if (sade) {
+    // 10 Ağu Zayıf Mevziler yenilemesi: gelişim cümlesi + kanun bazlı katlanır gruplar +
+    // her maddede kurtulma (X/2 ✓) ve bekleme süresi. Veriler zayifKartlar'dan — uydurma yok.
+    const bugunMs = Date.parse(`${bugunISO()}T00:00:00Z`);
+    const gunFarki = (t: string) =>
+      Math.max(0, Math.round((bugunMs - Date.parse(`${t}T00:00:00Z`)) / 86400000));
+    // Kanun grupları (liste zaten yanlış sayısına göre sıralı → grup içi sıra korunur).
+    const gruplar = (() => {
+      const m = new Map<number, { ad: string; liste: ZayifKart[] }>();
+      for (const z of zayif.liste) {
+        const g = m.get(z.card.law_id);
+        if (g) g.liste.push(z);
+        else m.set(z.card.law_id, { ad: z.card.law_ad, liste: [z] });
+      }
+      return [...m.entries()].sort((a, b) => b[1].liste.length - a[1].liste.length);
+    })();
+    const acik = acikKanunlar ?? new Set(gruplar.length > 0 ? [gruplar[0][0]] : []);
+    const kapat = zayif.simdiki < zayif.haftaOnce;
+    return (
+      <>
+        {kapat ? (
+          <AppText variant="etiket" color="altinMetin" bold>
+            Geçen hafta {zayif.haftaOnce} zayıftın, bugün {zayif.simdiki} —{' '}
+            {zayif.haftaOnce - zayif.simdiki} mevzi kapattın 🎖️
+          </AppText>
+        ) : zayif.ozet.enZayifKanun ? (
+          <AppText variant="etiket" color="solukMetin">
+            En zayıf: {zayif.ozet.enZayifKanun}
+          </AppText>
+        ) : null}
+        {gruplar.map(([lawId, g]) => (
+          <View key={lawId} style={styles.zayifGrup}>
+            <Pressable
+              onPress={() => {
+                const yeni = new Set(acik);
+                if (yeni.has(lawId)) yeni.delete(lawId);
+                else yeni.add(lawId);
+                setAcikKanunlar(yeni);
+              }}
+              style={styles.zayifGrupBaslik}
+              accessibilityRole="button"
+              accessibilityLabel={`${g.ad} zayıflarını aç/kapat`}>
+              <AppText variant="etiket" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
+                {g.ad}
+              </AppText>
+              <AppText variant="etiket" color="solukMetin">
+                {g.liste.length} madde
+              </AppText>
+              <MaterialCommunityIcons
+                name={acik.has(lawId) ? 'chevron-up' : 'chevron-down'}
+                size={18}
+                color={Palette.solukMetin}
+              />
+            </Pressable>
+            {acik.has(lawId)
+              ? g.liste.map((z) => (
+                  <Pressable
+                    key={z.card.id}
+                    onPress={() => karttanCalis?.(z.card.law_id, z.card.id)}
+                    style={({ pressed }) => [styles.zayifMadde, pressed && styles.pressed]}
+                    accessibilityRole="button"
+                    accessibilityLabel="Bu maddeyi çalış">
+                    <View style={styles.zayifMaddeUst}>
+                      <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
+                        {maddeEtiket(z.card.madde_no, z.card.baslik)}
+                      </AppText>
+                      {/* Kurtulma: son 2 deneme iyi olunca havuzdan çıkar — kural aynı, artık GÖRÜNÜR. */}
+                      <View style={[styles.kurtulma, z.ardisikIyi > 0 && styles.kurtulmaYakin]}>
+                        <AppText
+                          variant="etiket"
+                          bold
+                          color={z.ardisikIyi > 0 ? 'altinMetin' : 'solukMetin'}>
+                          {z.ardisikIyi}/2 ✓
+                        </AppText>
+                      </View>
+                    </View>
+                    <View style={styles.zayifMaddeAlt}>
+                      <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.zayifAd}>
+                        ×{z.yanlisSayisi}
+                        {' · '}
+                        {gunFarki(z.sonTarih) === 0
+                          ? 'bugün denendi'
+                          : gunFarki(z.sonTarih) === 1
+                            ? 'dün denendi'
+                            : `${gunFarki(z.sonTarih)} gündür bekliyor`}
+                        {z.ardisikIyi === 1 ? ' · bir iyi deneme kaldı' : ''}
+                      </AppText>
+                      <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+                    </View>
+                  </Pressable>
+                ))
+              : null}
+          </View>
+        ))}
+        <Pressable
+          style={({ pressed }) => [styles.zayifCalisBtn, pressed && styles.pressed]}
+          onPress={onCalis}>
+          <MaterialCommunityIcons name="target" size={18} color={Palette.beyaz} />
+          <AppText variant="kucuk" color="beyaz" bold>
+            Zayıfları güçlendir
+          </AppText>
+        </Pressable>
+      </>
+    );
+  }
+
   return (
     <>
       {zayif.ozet.enZayifKanun ? (
@@ -1211,14 +1353,9 @@ function ZayifBolum({
           En zayıf: {zayif.ozet.enZayifKanun}
         </AppText>
       ) : null}
+      {/* Eski (bayraksız) görünüm — satırlar tıklanmaz, karttanCalis bu dalda hiç gelmez. */}
       {ilk5.map((z) => (
-        <Pressable
-          key={z.card.id}
-          disabled={!karttanCalis}
-          onPress={() => karttanCalis?.(z.card.law_id, z.card.id)}
-          style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
-          accessibilityRole={karttanCalis ? 'button' : undefined}
-          accessibilityLabel={karttanCalis ? 'Bu maddeyi çalış' : undefined}>
+        <View key={z.card.id} style={styles.zayifSatir}>
           <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
             {maddeEtiket(z.card.madde_no, z.card.baslik)}
           </AppText>
@@ -1249,10 +1386,7 @@ function ZayifBolum({
               </AppText>
             </View>
           )}
-          {karttanCalis ? (
-            <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
-          ) : null}
-        </Pressable>
+        </View>
       ))}
       {kalan > 0 ? (
         <AppText variant="etiket" color="solukMetin">
@@ -1264,7 +1398,7 @@ function ZayifBolum({
         onPress={onCalis}>
         <MaterialCommunityIcons name="target" size={18} color={Palette.beyaz} />
         <AppText variant="kucuk" color="beyaz" bold>
-          {sade ? 'Zayıfları güçlendir' : 'Zayıfları çalış (geri-bes)'}
+          Zayıfları çalış (geri-bes)
         </AppText>
       </Pressable>
     </>
@@ -1504,6 +1638,48 @@ const styles = StyleSheet.create({
   },
   zayifSekmelerSag: {
     alignItems: 'flex-end',
+  },
+  // 10 Ağu zayıf yenileme: kanun grupları + kurtulma rozeti + iki satırlı madde.
+  zayifGrup: {
+    borderColor: Palette.ayirici,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.one,
+    gap: Spacing.one,
+  },
+  zayifGrupBaslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    paddingVertical: Spacing.one,
+  },
+  zayifMadde: {
+    gap: 2,
+    paddingVertical: Spacing.one,
+    borderTopColor: Palette.ayirici,
+    borderTopWidth: 1,
+  },
+  zayifMaddeUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  zayifMaddeAlt: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  kurtulma: {
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.one,
+    paddingVertical: 1,
+  },
+  kurtulmaYakin: {
+    borderColor: Palette.altinKoyu,
+    backgroundColor: Palette.altinSolukYuzey,
   },
   // 10 Ağu sicil yenileme: zaman çizelgesi noktaları + telafi damgası + hedef satırı.
   sicilNokta: {

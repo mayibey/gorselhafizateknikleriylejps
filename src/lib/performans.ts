@@ -33,6 +33,9 @@ export type ZayifKart = {
   sonTarih: string;
   /** Nereden zayıf düştü — Talim/Tatbikat etiketi için (tek havuz, ayrı rozet). */
   kaynaklar: ZayifKaynaklar;
+  /** Havuzdan çıkışa ilerleme: sondan ardışık iyi deneme sayısı (0 veya 1; 2 = çıkmış).
+   *  10 Ağu: "kurtulma" göstergesi için — çıkış KURALI değişmedi, yalnız görünür oldu. */
+  ardisikIyi: number;
 };
 
 export type KanunPerf = {
@@ -76,6 +79,7 @@ export function zayifKartlar(performans: PerformansSatir[], cards: CardWithLaw[]
       card,
       yanlisSayisi: kotuSatirlar.length,
       sonTarih: satirlar[satirlar.length - 1].tarih,
+      ardisikIyi,
       kaynaklar: {
         talim: kotuSatirlar.some((s) => s.kaynak === 'calisma' || s.kaynak === 'quiz'),
         tatbikat: kotuSatirlar.some((s) => s.kaynak === 'genel'),
