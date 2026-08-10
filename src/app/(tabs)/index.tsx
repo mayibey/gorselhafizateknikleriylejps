@@ -568,9 +568,13 @@ export default function KarargahScreen() {
                 JSPS sınavına kalan süre
               </AppText>
               {basvuruAcik ? (
-                <AppText variant="etiket" bold color="altinParlak" style={styles.basvuruMini}>
-                  Başvurular: 3 – 23 Ağustos
-                </AppText>
+                /* Okunurluk (başkan eleştirisi): altın yazı dağ sırtında eriyordu →
+                   yarı saydam koyu KAPSÜL içinde; her zeminde okunur. */
+                <View style={styles.basvuruKapsul}>
+                  <AppText variant="etiket" bold color="altinParlak" style={styles.basvuruMini}>
+                    Başvurular: 3 – 23 Ağustos
+                  </AppText>
+                </View>
               ) : null}
             </View>
 
@@ -1532,6 +1536,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontVariant: ['tabular-nums'],
     alignSelf: 'stretch',
+    // Açık gökte keskinlik: yumuşak koyu iz (başkan eleştirisi, 11 Ağu)
+    textShadowColor: 'rgba(0,0,0,0.45)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 6,
   },
   muhurDar: {
     alignSelf: 'center',
@@ -1540,7 +1548,15 @@ const styles = StyleSheet.create({
   },
   basvuruMini: {
     letterSpacing: 1,
-    marginTop: Spacing.one,
+  },
+  basvuruKapsul: {
+    marginTop: Spacing.two, // nefes boşluğu (sıkışıklık eleştirisi)
+    backgroundColor: 'rgba(3,32,46,0.6)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.25)',
+    borderRadius: 999,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: 4,
   },
   takvimSol: {
     flex: 1.15,

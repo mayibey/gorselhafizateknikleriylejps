@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import { StatusBar } from 'expo-status-bar';
 import { useScrollToTop } from '@react-navigation/native';
 import { type ReactNode, useRef } from 'react';
 import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native';
@@ -71,8 +72,20 @@ export function Screen({
             style={styles.arkaGorsel}
             resizeMode="cover"
           />
+          {/* KARARTMA PERDESİ (başkan eleştirisi, 11 Ağu): dağ kırpılınca tepe fazla
+              açık kaldı — durum çubuğu/başlık/sayaç soluyordu. Üstten %38'e eriyen
+              koyu degrade; dağlara dokunmaz, üst yazılar kontrast kazanır. */}
+          <LinearGradient
+            colors={['rgba(3,26,38,0.78)', 'rgba(3,26,38,0.38)', 'rgba(3,26,38,0)']}
+            locations={[0, 0.5, 1]}
+            start={{ x: 0.5, y: 0 }}
+            end={{ x: 0.5, y: 1 }}
+            style={styles.tepePerde}
+          />
           <UfukNefesi />
           <YildizKatmani />
+          {/* Açık gök üstünde saat/pil görünür kalsın — gece ekranında beyaz durum çubuğu. */}
+          <StatusBar style="light" />
         </>
       ) : null}
       {title ? (
@@ -128,6 +141,13 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     width: undefined,
     height: undefined,
+  },
+  tepePerde: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: '38%',
   },
   marka: {
     gap: 2,
