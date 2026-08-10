@@ -110,7 +110,7 @@ export function KaldiginYerKarti() {
               <View style={{ flex: Math.max(1, 100 - yuzde) }} />
               <IsiltiSerit egik={false} />
             </View>
-            <AppText variant="etiket" bold color="altinAcik2">
+            <AppText variant="kucuk" bold color="altinAcik2">
               {durum.calisilan}/{durum.toplam} · %{yuzde}
             </AppText>
           </View>
@@ -139,7 +139,7 @@ export function TatbikatYarim() {
       <AppText variant="kucuk" bold color="lacivert" style={st.yarimBaslik}>
         GENEL TATBİKAT
       </AppText>
-      <AppText variant="etiket" color="lacivert" style={st.yarimAlt}>
+      <AppText variant="kucuk" bold color="lacivert" style={st.yarimAlt}>
         Karma sınavlarla kendini sına
       </AppText>
     </Pressable>

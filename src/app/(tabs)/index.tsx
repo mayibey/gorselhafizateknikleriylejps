@@ -544,7 +544,8 @@ export default function KarargahScreen() {
                     : 'Tüm görevleri yaptın 🎖️'
                   : `Zorlandığın ${bekleyen} kartı güçlendir`}
               </AppText>
-              <AppText variant="etiket" color="kenarlik">
+              {/* Okunabilirlik (başkan): koyu zeminde küçük yazı PARLAK ve bir boy büyük. */}
+              <AppText variant="kucuk" bold color="beyaz" style={styles.emirAlt}>
                 {bos
                   ? hicCalisilan
                     ? "Mevzuat'tan bir kanun aç, kartları çalışmaya başla"
@@ -779,11 +780,34 @@ export default function KarargahScreen() {
               <AppText variant="kucuk" bold color="beyaz" style={styles.tekrarBaslik}>
                 TEKRAR ZAMANI
               </AppText>
-              <AppText variant="etiket" color="altinAcik2" style={styles.tekrarBaslik}>
+              <AppText variant="kucuk" bold color="altinAcik2" style={styles.tekrarBaslik}>
                 {unutulan.length > 0 ? `Paslanma riski: ${unutulan.length} kanun` : 'Paslanan kanun yok'}
               </AppText>
             </Pressable>
           </View>
+          {/* ER MEYDANI çağrısı — alt boşluk dolduruldu (başkan, 10 Ağu gece): düello funnel'ı. */}
+          <Pressable
+            onPress={() => router.push('/er-meydani')}
+            style={({ pressed }) => [styles.erKart, pressed && styles.pressed]}
+            accessibilityRole="button"
+            accessibilityLabel="Er Meydanı — düelloya gir">
+            <MaterialCommunityIcons name="sword-cross" size={30} color={Palette.altin} />
+            <View style={styles.erMetin}>
+              <AppText variant="kucuk" bold color="beyaz" style={styles.tekrarBaslik}>
+                ER MEYDANI
+              </AppText>
+              <AppText variant="kucuk" bold color="altinAcik2">
+                Bilgini düelloda dene — rakibin seni bekliyor
+              </AppText>
+            </View>
+            <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altin} />
+          </Pressable>
+          {/* Günün moral satırı (Ref 6/9: insan dili) — gerçek veriden. */}
+          <AppText variant="kucuk" bold color="anaMetin" style={styles.moralSatir}>
+            {bugunSayi > 0
+              ? `Bugün ${bugunSayi} kart çalıştın 🎖️${streak && streak > 1 ? ` · Seri: ${streak} gün` : ''}`
+              : 'Bugün henüz kart çalışmadın — ilk kartla seriyi başlat.'}
+          </AppText>
           {tekrarAcik && unutulan.length > 0 ? (
             <View style={styles.unutBanner}>
               {unutulan.slice(0, 5).map((u) => (
@@ -1258,6 +1282,10 @@ const styles = StyleSheet.create({
     gap: Spacing.one,
     marginTop: Spacing.one,
   },
+  emirAlt: {
+    textAlign: 'center',
+    opacity: 0.95,
+  },
   safakCta: {
     alignSelf: 'stretch',
     alignItems: 'center',
@@ -1308,6 +1336,28 @@ const styles = StyleSheet.create({
   tekrarBaslik: {
     textAlign: 'center',
     letterSpacing: 1,
+  },
+  erKart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.three,
+    shadowColor: 'rgba(11,31,58,0.15)',
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 2,
+  },
+  erMetin: {
+    flex: 1,
+    gap: 2,
+  },
+  moralSatir: {
+    textAlign: 'center',
+    paddingVertical: Spacing.one,
   },
   // Bayraklı (başkan, 10 Ağu): koyu lacivert hero "içimizi karartıyor" → Codex'te onaylanan
   // krem dil: kart kremi zemin + altın kenarlık + lacivert metin.
