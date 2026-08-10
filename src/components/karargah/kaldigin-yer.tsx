@@ -176,20 +176,11 @@ export function TatbikatGirisi() {
 }
 
 const st = StyleSheet.create({
-  // Gece paneli (tam koyu sayfada bir ton AÇIK lacivert — mock dili).
+  // Doğal yerleşim (10 Ağu gece): kutu yok — içerik doğrudan gökyüzünde.
   kart: {
     gap: Spacing.one,
-    backgroundColor: Palette.lacivert2,
-    borderWidth: 1,
-    borderColor: 'rgba(255,246,220,0.12)',
-    borderRadius: Radius.m,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.two,
-    shadowColor: 'rgba(11,31,58,0.15)',
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 2,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.one,
   },
   kartBaslik: {
     textAlign: 'center',
@@ -216,22 +207,13 @@ const st = StyleSheet.create({
   barDolu: {
     backgroundColor: Palette.altin,
   },
-  // Gece paneli: mock dili — açık lacivert panel + altın vurgular (altın enflasyonu yok).
+  // Doğal yerleşim: şeffaf sütun — kutu hissi yok.
   yarim: {
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.lacivert2,
-    borderWidth: 1,
-    borderColor: 'rgba(255,246,220,0.12)',
-    borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
-    paddingVertical: Spacing.three,
-    shadowColor: 'rgba(11,31,58,0.15)',
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 2,
+    paddingVertical: Spacing.two,
   },
   yarimBaslik: {
     letterSpacing: 1,

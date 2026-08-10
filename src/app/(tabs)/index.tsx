@@ -42,7 +42,7 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { KaldiginYerKarti, TatbikatYarim } from '@/components/karargah/kaldigin-yer';
-import { IsiltiSerit, YildizliZemin } from '@/components/karargah/safak';
+import { IsiltiSerit } from '@/components/karargah/safak';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -521,8 +521,9 @@ export default function KarargahScreen() {
           sayaç + başvuru + gün halkaları + BUGÜNÜN EMRİ + ışıltılı TAARRUZA BAŞLA;
           altta dalgayla krem gövdeye iniş. Bayraksızda eski tam sayaç. */}
       {aramaMevzuatta ? (
-        <View>
-          <YildizliZemin>
+        /* Doğal yerleşim (başkan, 10 Ağu gece): panel/kutu YOK — içerik doğrudan gece
+           göğünde; bölümleri ince altın ayraçlar ve nefes boşlukları ayırır. */
+        <View style={styles.gokAkis}>
             <AppText variant="dev" bold color="beyaz" style={styles.safakSayac}>
               19 Eylül'e {kalanGun} gün
             </AppText>
@@ -568,7 +569,6 @@ export default function KarargahScreen() {
               </AppText>
               <IsiltiSerit />
             </Pressable>
-          </YildizliZemin>
         </View>
       ) : (
         <SinavGeriSayim />
@@ -768,9 +768,12 @@ export default function KarargahScreen() {
       {/* 10 Ağu gece yerleşimi: emirden sonra Kaldığın Yer + [Tatbikat | Tekrar Zamanı] ikizleri. */}
       {aramaMevzuatta ? (
         <>
+          <View style={styles.altinAyrac} />
           <KaldiginYerKarti />
+          <View style={styles.altinAyrac} />
           <View style={styles.ikizSatir}>
             <TatbikatYarim />
+            <View style={styles.dikeyAyrac} />
             <Pressable
               onPress={() => setTekrarAcik((v) => !v)}
               style={({ pressed }) => [styles.tekrarYarim, pressed && styles.pressed]}
@@ -785,6 +788,7 @@ export default function KarargahScreen() {
               </AppText>
             </Pressable>
           </View>
+          <View style={styles.altinAyrac} />
           {/* ER MEYDANI çağrısı — alt boşluk dolduruldu (başkan, 10 Ağu gece): düello funnel'ı. */}
           <Pressable
             onPress={() => router.push('/er-meydani')}
@@ -1319,21 +1323,13 @@ const styles = StyleSheet.create({
   },
   // Renk mozaiği dersi (Drops): ikizlerin her biri kendi doygun kimliğinde —
   // Tatbikat ALTIN, Tekrar LACİVERT. Çerçeveli beyaz yok.
+  // Doğal yerleşim: kutu yok — şeffaf sütun, ayrımı dikey altın kıl çizgi yapar.
   tekrarYarim: {
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.lacivert2,
-    borderWidth: 1,
-    borderColor: 'rgba(255,246,220,0.12)',
-    borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
-    paddingVertical: Spacing.three,
-    shadowColor: 'rgba(11,31,58,0.15)',
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 2,
+    paddingVertical: Spacing.two,
   },
   tekrarBaslik: {
     textAlign: 'center',
@@ -1343,17 +1339,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.three,
-    backgroundColor: Palette.lacivert2,
-    borderWidth: 1,
-    borderColor: 'rgba(255,246,220,0.12)',
-    borderRadius: Radius.m,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.three,
-    shadowColor: 'rgba(11,31,58,0.15)',
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 2,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.one,
   },
   erMetin: {
     flex: 1,
@@ -1364,12 +1351,21 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.one,
   },
   tekrarListe: {
-    backgroundColor: Palette.lacivert2,
-    borderWidth: 1,
-    borderColor: 'rgba(255,246,220,0.12)',
-    borderRadius: Radius.m,
-    padding: Spacing.three,
+    paddingHorizontal: Spacing.two,
     gap: Spacing.two,
+  },
+  gokAkis: {
+    gap: Spacing.three,
+  },
+  altinAyrac: {
+    height: 1,
+    backgroundColor: 'rgba(201,162,39,0.28)',
+    marginVertical: Spacing.one,
+  },
+  dikeyAyrac: {
+    width: 1,
+    alignSelf: 'stretch',
+    backgroundColor: 'rgba(201,162,39,0.28)',
   },
   // Bayraklı (başkan, 10 Ağu): koyu lacivert hero "içimizi karartıyor" → Codex'te onaylanan
   // krem dil: kart kremi zemin + altın kenarlık + lacivert metin.
