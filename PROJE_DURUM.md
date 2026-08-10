@@ -1338,3 +1338,12 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   · aynı derece+sebepli cezalar ×N gruplu · zayıf=0 iken cezalara "TELAFİ EDİLDİ" damgası
   (yalnız görünüm kuralı — kayıt/iş mantığı değişmedi) · ödül=altın madalya, ceza=soluk mühür noktası.
 - OTA 5 runtime.
+
+## 10 Ağu 2026 (10) — Zayıf Mevziler yenileme (bayraklı)
+- performans.ts ZayifKart'a `ardisikIyi` eklendi (saf ek alan; çıkış kuralı AYNI).
+- Sade modda: KANUN GRUPLARI (katlanır, ilk grup açık) · her maddede KURTULMA "X/2 ✓"
+  (1/2 altın vurgulu + "bir iyi deneme kaldı") · "N gündür bekliyor" · başlıkta GELİŞİM
+  ("Geçen hafta 14 zayıftın, bugün 9" — 7 gün önceki kayıtlarla saf yeniden hesap) ·
+  boş durumda "Tüm mevziler sağlam 🎖 — Tatbikatta kendini dene" (→/tatbikat).
+- Bayraksız görünüm dokunulmadı (satırlar artık View; işlevleri zaten yoktu).
+- OTA 5 runtime. SIRADA (başkan seçerse): "5 soruluk hızlı yoklama" ayrı iş.
