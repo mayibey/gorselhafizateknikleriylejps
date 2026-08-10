@@ -12,6 +12,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { urunBilgi } from '@/constants/urunler';
 import { useUyelik } from '@/lib/uyelik-context';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 /** Küçük altın taç rozeti — premium değilse hiç render edilmez. Dokununca Üyelik ekranı. */
 export function UyelikTaci({ boyut = 16 }: { boyut?: number }) {
@@ -43,11 +44,18 @@ function tarihGoster(iso: string | null): string {
 export function UyelikKarti() {
   const { aktifHaklar } = useUyelik();
   const router = useRouter();
+  // GECE KARARI S2 + başkan 10 Ağu ("amatör"): taç yasak → kalkan-yıldız; yeşil tik gibi
+  // ikinci ikon dili yok; "hep senin" tekrarı yok. Bayraksızda eski hâl aynen.
+  const sade = useKisiselOzellik('talim-mevzuata');
   if (aktifHaklar.length === 0) return null;
   return (
     <View style={styles.kart}>
       <View style={styles.kartBaslik}>
-        <MaterialCommunityIcons name="crown" size={20} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons
+          name={sade ? 'shield-star' : 'crown'}
+          size={20}
+          color={Palette.altinKoyu}
+        />
         <AppText variant="govde" bold color="lacivert">
           Üyeliğim
         </AppText>
@@ -57,12 +65,16 @@ export function UyelikKarti() {
         const alt =
           h.tip === 'abonelik' && h.bitis
             ? `Yıllık · yenilenme ${tarihGoster(h.bitis)}`
-            : 'Ömür boyu · hep senin';
+            : sade
+              ? 'Ömür boyu'
+              : 'Ömür boyu · hep senin';
         return (
           <View key={h.urun} style={styles.satir}>
-            <View style={styles.satirIkon}>
-              <MaterialCommunityIcons name="check-decagram" size={18} color={Palette.yesil} />
-            </View>
+            {sade ? null : (
+              <View style={styles.satirIkon}>
+                <MaterialCommunityIcons name="check-decagram" size={18} color={Palette.yesil} />
+              </View>
+            )}
             <View style={styles.satirMetin}>
               <AppText variant="kucuk" bold color="anaMetin">
                 {bilgi ? bilgi.ad : h.urun}

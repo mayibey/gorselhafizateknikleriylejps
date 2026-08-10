@@ -43,11 +43,15 @@ export function IstatistikKutulari() {
 
   return (
     <View style={st.kutuSatir}>
+      {/* Üç kutu TEK dil: [ikon + dev sayı] üstte, etiket altta (10 Ağu "amatör" düzeltmesi). */}
       <View style={st.kutu}>
-        <AppText variant="dev" bold color="anaMetin">
-          %{hazirlik ?? 0}
-        </AppText>
-        <AppText variant="etiket" color="solukMetin">
+        <View style={st.kutuDeger}>
+          <MaterialCommunityIcons name="trending-up" size={20} color={Palette.altinKoyu} />
+          <AppText variant="dev" bold color="anaMetin">
+            %{hazirlik ?? 0}
+          </AppText>
+        </View>
+        <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
           Genel ilerleme
         </AppText>
       </View>
@@ -98,7 +102,7 @@ export function IstatistikKutulari() {
             {bekleyen}
           </AppText>
         </View>
-        <AppText variant="etiket" color="solukMetin">
+        <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
           Zayıf mevzi
         </AppText>
       </Pressable>

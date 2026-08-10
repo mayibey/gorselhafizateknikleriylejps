@@ -428,11 +428,9 @@ function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, cardId:
               <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
                 {z.kart ? maddeEtiket(z.kart.madde_no, z.kart.baslik) : z.ref}
               </AppText>
-              <View style={styles.zayifRozet}>
-                <AppText variant="etiket" color="beyaz" bold>
-                  {z.yanlis} yanlış
-                </AppText>
-              </View>
+              <AppText variant="etiket" bold color="solukMetin">
+                ×{z.yanlis}
+              </AppText>
               {z.kart ? (
                 <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
               ) : null}
@@ -458,11 +456,9 @@ function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, cardId:
               <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
                 {OYUN_KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
               </AppText>
-              <View style={styles.zayifRozet}>
-                <AppText variant="etiket" color="beyaz" bold>
-                  {z.yanlis} yanlış
-                </AppText>
-              </View>
+              <AppText variant="etiket" bold color="solukMetin">
+                ×{z.yanlis}
+              </AppText>
               <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
             </Pressable>
           ))}
@@ -704,6 +700,9 @@ function SicilBolum({
   zayifSayisi: number;
   onGeriBes: () => void;
 }) {
+  // Bayraklı (başkan 10 Ağu): kırmızı emir kartı Evsaf'tan da kalkar — aynı işi
+  // Karargah'taki altın "Bugünün Emri" yapıyor; burada sicil DEFTERİ kalır.
+  const sadeEvsaf = useKisiselOzellik('talim-mevzuata');
   const [secili, setSecili] = useState<SicilKaydi | null>(null);
   if (sicil === null) {
     return (
@@ -726,7 +725,9 @@ function SicilBolum({
   const siradakiCeza = KADEME_AD[Math.min(durum.kademe + 1, KADEME_AD.length - 1)];
   return (
     <>
-      <GeriBeslemeEmri durum={durum} zayifSayisi={zayifSayisi} onBasla={onGeriBes} />
+      {sadeEvsaf ? null : (
+        <GeriBeslemeEmri durum={durum} zayifSayisi={zayifSayisi} onBasla={onGeriBes} />
+      )}
 
 
       {kayitlar.length === 0 ? (
@@ -846,6 +847,11 @@ function ZayifBolum({
 
   const ilk5 = zayif.liste.slice(0, 5);
   const kalan = zayif.liste.length - ilk5.length;
+  // SADE mod (bayraklı; başkan 10 Ağu "amatör görünüyor"): kırmızı hap duvarı yok
+  // (sessiz ×N), tek tip kaynak rozeti tekrarı yok (yalnız KARIŞIKSA gösterilir).
+  const sade = !!karttanCalis;
+  const karisik =
+    ilk5.some((z) => z.kaynaklar.talim) && ilk5.some((z) => z.kaynaklar.tatbikat);
   return (
     <>
       {zayif.ozet.enZayifKanun ? (
@@ -864,26 +870,33 @@ function ZayifBolum({
           <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
             {maddeEtiket(z.card.madde_no, z.card.baslik)}
           </AppText>
-          {/* Nereden zayıf düştü — Talim (çalışma/kanun sınavı) ve/veya Tatbikat (genel deneme). */}
-          {z.kaynaklar.tatbikat ? (
+          {/* Nereden zayıf düştü — Talim (çalışma/kanun sınavı) ve/veya Tatbikat (genel deneme).
+              Sade modda yalnız kaynaklar KARIŞIKSA gösterilir (beş kez "Talim" tekrarı ucuz). */}
+          {(!sade || karisik) && z.kaynaklar.tatbikat ? (
             <View style={[styles.kaynakRozet, styles.kaynakTatbikat]}>
               <AppText variant="etiket" color="amber" bold>
                 Tatbikat
               </AppText>
             </View>
           ) : null}
-          {z.kaynaklar.talim ? (
+          {(!sade || karisik) && z.kaynaklar.talim ? (
             <View style={[styles.kaynakRozet, styles.kaynakTalim]}>
               <AppText variant="etiket" color="lacivert" bold>
                 Talim
               </AppText>
             </View>
           ) : null}
-          <View style={styles.zayifRozet}>
-            <AppText variant="etiket" color="beyaz" bold>
-              {z.yanlisSayisi} yanlış
+          {sade ? (
+            <AppText variant="etiket" bold color="solukMetin">
+              ×{z.yanlisSayisi}
             </AppText>
-          </View>
+          ) : (
+            <View style={styles.zayifRozet}>
+              <AppText variant="etiket" color="beyaz" bold>
+                {z.yanlisSayisi} yanlış
+              </AppText>
+            </View>
+          )}
           {karttanCalis ? (
             <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
           ) : null}
@@ -899,7 +912,7 @@ function ZayifBolum({
         onPress={onCalis}>
         <MaterialCommunityIcons name="target" size={18} color={Palette.beyaz} />
         <AppText variant="kucuk" color="beyaz" bold>
-          Zayıfları çalış (geri-bes)
+          {sade ? 'Zayıfları güçlendir' : 'Zayıfları çalış (geri-bes)'}
         </AppText>
       </Pressable>
     </>
