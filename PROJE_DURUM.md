@@ -1305,3 +1305,12 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   8 Ağu manuel ömür boyu). Yeni taslak/bayrak açarken ÜÇ kişiyi birden yaz.
 - Bugün 3 satış: Resul Yıldırım (iOS ömür boyu 09:56) · Çetin BİRGÜL (Android yıllık
   %20 indirimli 10:47) · Uğur Yıldırım (Android ömür boyu 11:38, jandarma asb).
+
+## 10 Ağu 2026 (7) — Evsaf kategori düzeni + duyuru şeridi kalıcı (bayraklı)
+- Evsaf artık KATEGORİ KATEGORİ (EvsafKategori bileşeni; hepsi kapalı başlar,
+  başlığa dokun → aşağı açılır): Kişisel Bilgiler (zaten) · Üyeliğim (özet altyazılı)
+  · Zayıf Mevziler (altyazı: N tekrar adayı; sekmeler içeride) · Ödül-Ceza Sicili ·
+  Yardım. Bayraksızda eski düz görünüm aynen.
+- Karargah duyuru şeridi HEP görünür: duyuru yokken sade krem "Duyurular" satırı;
+  yeni duyuru varsa altın dolgulu "📌 Yeni duyuru — başlığı".
+- OTA 5 runtime.
