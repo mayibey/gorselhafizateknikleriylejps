@@ -14,6 +14,7 @@ import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { IsiltiSerit } from '@/components/karargah/safak';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
 import type { LawWithCount } from '@/db/schema';
@@ -103,9 +104,11 @@ export function KaldiginYerKarti() {
             {durum.law.ad}
           </AppText>
           <View style={st.barSatir}>
+            {/* "Şarj oluyor" ışıltısı (Ref 2): bar üstünde soldan sağa süpüren altın parlama. */}
             <View style={st.bar}>
               {yuzde > 0 ? <View style={[st.barDolu, { flex: yuzde }]} /> : null}
               <View style={{ flex: Math.max(1, 100 - yuzde) }} />
+              <IsiltiSerit egik={false} />
             </View>
             <AppText variant="etiket" bold color="altinMetin">
               {durum.calisilan}/{durum.toplam} · %{yuzde}
@@ -207,16 +210,20 @@ const st = StyleSheet.create({
   barDolu: {
     backgroundColor: Palette.altin,
   },
+  // Dolgu dersi (Ref 1/8): çerçeveli beyaz yerine sıcak altın dolgu + gölge.
   yarim: {
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
-    borderWidth: 1,
+    backgroundColor: Palette.altinSolukYuzey,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.three,
+    shadowColor: 'rgba(11,31,58,0.08)',
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 2,
   },
   yarimBaslik: {
     letterSpacing: 1,
