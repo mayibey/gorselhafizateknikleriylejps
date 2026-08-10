@@ -42,7 +42,6 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { KaldiginYerKarti, TatbikatGirisi } from '@/components/karargah/kaldigin-yer';
-import { DuyuruPanosu } from '@/components/duyuru/duyuru-panosu';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -470,15 +469,18 @@ export default function KarargahScreen() {
                 <MaterialCommunityIcons name="account-circle-outline" size={24} color={Palette.altin} />
               </Pressable>
             </>
-          ) : null}
+          ) : (
+            /* Başkan (10 Ağu gece): duyurular başlık satırının sağ üst köşesinde —
+               megafon + okunmamışta kırmızı nokta. */
+            <DuyuruIkonu boyut={24} />
+          )}
         </View>
       }>
       {/* EN ÜST — JSPS sınavına canlı geri sayım (tarih SINAV_TARIHI sabitinde). */}
       {/* İlk gün indirimi hatırlatma modalı (koşullar tutunca kendi çıkar). */}
       <IndirimHatirlatma />
 
-      {/* Kışla panosu: okunmamış duyuru VARSA başlığın altında şerit (yoksa görünmez). */}
-      {aramaMevzuatta ? <DuyuruPanosu /> : null}
+      {/* Duyurular başlık köşesine taşındı (10 Ağu gece); pano şeridi kaldırıldı. */}
       <SinavGeriSayim kompakt={aramaMevzuatta} />
       {/* Bayraklı: Mevzuat'ın üstündeki "kaldığın yer" kartı + Genel Tatbikat girişi
           buraya taşındı (başkan, 9 Ağu gece). */}
