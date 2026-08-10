@@ -76,11 +76,23 @@ export function Screen({
               açık kaldı — durum çubuğu/başlık/sayaç soluyordu. Üstten %38'e eriyen
               koyu degrade; dağlara dokunmaz, üst yazılar kontrast kazanır. */}
           <LinearGradient
+            pointerEvents="none"
             colors={['rgba(3,26,38,0.78)', 'rgba(3,26,38,0.38)', 'rgba(3,26,38,0)']}
             locations={[0, 0.5, 1]}
             start={{ x: 0.5, y: 0 }}
             end={{ x: 0.5, y: 1 }}
             style={styles.tepePerde}
+          />
+          {/* ALT PERDE (başkan, 11 Ağu): kart altındaki orman dokusu sekme çubuğu
+              yazılarıyla karışıyordu — sayfa alta doğru sakinleşip çubuğun rengine
+              (#04283A) kaynar; kartlar/çubuk ayrımı netleşir. */}
+          <LinearGradient
+            pointerEvents="none"
+            colors={['rgba(4,30,45,0)', 'rgba(4,30,45,0.55)', 'rgba(4,40,58,0.92)']}
+            locations={[0, 0.55, 1]}
+            start={{ x: 0.5, y: 0 }}
+            end={{ x: 0.5, y: 1 }}
+            style={styles.altPerde}
           />
           <UfukNefesi />
           <YildizKatmani />
@@ -148,6 +160,13 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     height: '38%',
+  },
+  altPerde: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: '30%',
   },
   marka: {
     gap: 2,
