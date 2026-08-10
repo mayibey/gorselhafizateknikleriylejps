@@ -1347,3 +1347,14 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   boş durumda "Tüm mevziler sağlam 🎖 — Tatbikatta kendini dene" (→/tatbikat).
 - Bayraksız görünüm dokunulmadı (satırlar artık View; işlevleri zaten yoktu).
 - OTA 5 runtime. SIRADA (başkan seçerse): "5 soruluk hızlı yoklama" ayrı iş.
+
+## 10 Ağu 2026 (11) — Zayıf Mevziler v2 (başkan geri bildirimi; bayraklı)
+- Şikayet: "neye tıkladığım belli değil; ok'la açılan detay çok kötü."
+- Çözüm: Evsaf kartında tıklama hedefi İKİYE indi ve ikisi de açıklamalı:
+  (1) kartın tamamı → TAM SAYFA /zayif-mevziler ("tümünü gör" altyazısı, sağ ok);
+  (2) altın CTA → çalışma; artık ne olacağını söylüyor ("9 kart · ~9 dk · kart akışı açılır").
+  En zayıf 3 satır SALT BİLGİ (tıklanmaz). Kart-içi akordeon detay KALDIRILDI.
+- Yeni sayfa app/zayif-mevziler.tsx: büyük Denemeler/Oyunlar sekmeleri + ZayifBolum/
+  OyunZayiflari (sicil'den export edildi). Veri tek kaynaktan: lib/zayif-veri.ts
+  (premium sızıntı kapısı + gelişim hesabı buraya taşındı; sicil de bunu kullanıyor).
+- OTA 5 runtime.
