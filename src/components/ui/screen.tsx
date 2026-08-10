@@ -1,4 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useScrollToTop } from '@react-navigation/native';
 import { type ReactNode, useRef } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
@@ -49,9 +50,21 @@ export function Screen({
 
   return (
     <SafeAreaView style={[styles.safe, koyu && styles.safeKoyu]} edges={['top', 'left', 'right']}>
-      {koyu ? <YildizKatmani /> : null}
+      {koyu ? (
+        <>
+          {/* GECE DENİZİ (başkan, 10 Ağu: "koyu sevmiyorum — deniz gibi açık mavi olsa"):
+              kapkara lacivert yerine ferah okyanus mavisi degrade — ufukta hafif aydınlanma. */}
+          <LinearGradient
+            colors={['#0E3A5F', '#17567F', '#123F63']}
+            start={{ x: 0.5, y: 0 }}
+            end={{ x: 0.5, y: 1 }}
+            style={StyleSheet.absoluteFill}
+          />
+          <YildizKatmani />
+        </>
+      ) : null}
       {title ? (
-        <View style={[styles.header, kompaktBaslik && styles.headerKompakt]}>
+        <View style={[styles.header, kompaktBaslik && styles.headerKompakt, koyu && styles.headerKoyu]}>
           {onGeri ? (
             <Pressable onPress={onGeri} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
               <MaterialCommunityIcons name="arrow-left" size={26} color={Palette.beyaz} />
@@ -82,7 +95,7 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.kremZemin,
   },
   safeKoyu: {
-    backgroundColor: Palette.lacivert,
+    backgroundColor: '#123F63', // gece denizi taban (degrade üstüne biner)
   },
   header: {
     flexDirection: 'row',
@@ -94,6 +107,9 @@ const styles = StyleSheet.create({
   },
   headerKompakt: {
     paddingVertical: Spacing.two,
+  },
+  headerKoyu: {
+    backgroundColor: 'transparent', // gece denizinde başlık zeminle kaynaşır
   },
   headerSag: {
     marginLeft: 'auto', // başlığı solda bırak, sağ slotu en sağa it
