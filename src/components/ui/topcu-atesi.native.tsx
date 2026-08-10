@@ -20,10 +20,12 @@ import Animated, {
 /* Sabit atış noktaları: [sol%, üst%, çap, ilk gecikme ms, periyot ms].
    Üst %19-23 = kırpılmış görselde dağ sırtı hattı. Periyotlar asal-ımsı →
    aynı anda patlamazlar, ritim makineleşmez. */
+/* ⚠️ TEST DOZU (başkan görsün diye sıklaştırıldı, 11 Ağu). GERÇEK DOZ:
+   [16,21,46,6000,26000] · [57,19.5,58,15000,37000] · [79,22.5,42,27000,45000] */
 const NOKTALAR: [number, number, number, number, number][] = [
-  [16, 21, 46, 6000, 26000],
-  [57, 19.5, 58, 15000, 37000],
-  [79, 22.5, 42, 27000, 45000],
+  [16, 21, 46, 1000, 4000],
+  [57, 19.5, 58, 2500, 6000],
+  [79, 22.5, 42, 4000, 7500],
 ];
 
 function Patlama({ boy, gecikme, periyot }: { boy: number; gecikme: number; periyot: number }) {

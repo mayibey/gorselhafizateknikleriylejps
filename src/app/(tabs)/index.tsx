@@ -579,8 +579,22 @@ export default function KarargahScreen() {
               ) : null}
             </View>
 
-            {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası. */}
-            <View style={styles.gecePanel}>
+            {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası.
+                Sağ üst köşede çapraz KURDELE (ref v3): rozet değil, kırmızı şerit. */}
+            <View style={[styles.gecePanel, styles.emirPanelKirp]}>
+              {!bos ? (
+                <View pointerEvents="none" style={styles.kurdele}>
+                  <LinearGradient
+                    colors={['#F25048', '#B42318']}
+                    start={{ x: 0.5, y: 0 }}
+                    end={{ x: 0.5, y: 1 }}
+                    style={styles.kurdeleSerit}>
+                    <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
+                      ZAYIF MEVZİLER
+                    </AppText>
+                  </LinearGradient>
+                </View>
+              ) : null}
               <View style={styles.emirUst}>
                 <View style={styles.emirIkonHalka}>
                   <MaterialCommunityIcons name="target" size={22} color={Palette.altinParlak} />
@@ -588,17 +602,6 @@ export default function KarargahScreen() {
                 <AppText variant="etiket" bold color="altinParlak" style={styles.emirEtiket}>
                   BUGÜNÜN EMRİ
                 </AppText>
-                {!bos ? (
-                  <LinearGradient
-                    colors={['#F25048', '#B42318']}
-                    start={{ x: 0.5, y: 0 }}
-                    end={{ x: 0.5, y: 1 }}
-                    style={styles.zayifRozet}>
-                    <AppText variant="etiket" bold color="beyaz">
-                      ZAYIF MEVZİLER
-                    </AppText>
-                  </LinearGradient>
-                ) : null}
               </View>
               <View style={styles.emirSatir}>
                 <View style={styles.emirSol}>
@@ -892,6 +895,7 @@ export default function KarargahScreen() {
               styles.gecePanel,
               styles.tekrarSatir,
               styles.blokArasi,
+              unutulan.length > 0 && styles.tekrarKirmiziKenar,
               pressed && styles.pressed,
             ]}
             accessibilityRole="button"
@@ -917,11 +921,11 @@ export default function KarargahScreen() {
               </AppText>
               {unutulan.length > 0 ? (
                 <View style={styles.paslanmaSatir}>
-                  <AppText variant="kucuk" bold color="beyaz">
-                    {'Paslanma riski: '}
-                  </AppText>
                   <AppText variant="kucuk" bold color="kirmiziParlak">
                     {unutulan.length} kanun
+                  </AppText>
+                  <AppText variant="kucuk" bold color="beyaz">
+                    {' paslanmaya başladı'}
                   </AppText>
                 </View>
               ) : (
@@ -930,11 +934,16 @@ export default function KarargahScreen() {
                 </AppText>
               )}
             </View>
-            <MaterialCommunityIcons
-              name="chevron-right"
-              size={22}
-              color={unutulan.length > 0 ? Palette.kirmiziParlak : Palette.altinParlak}
-            />
+            {unutulan.length > 0 ? (
+              <View style={styles.tekrarEt}>
+                <AppText variant="etiket" bold color="kirmiziParlak" style={styles.tekrarBaslik2}>
+                  TEKRAR ET
+                </AppText>
+                <MaterialCommunityIcons name="arrow-right" size={18} color={Palette.kirmiziParlak} />
+              </View>
+            ) : (
+              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinParlak} />
+            )}
           </Pressable>
           <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
@@ -942,12 +951,19 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tatbikat — karma deneme sınavları">
-              <View style={styles.emirIkonHalka}>
-                <MaterialCommunityIcons name="target" size={24} color={Palette.altinParlak} />
+              <View style={styles.madalyon}>
+                <View style={styles.madalyonIc}>
+                  <MaterialCommunityIcons name="target" size={30} color={Palette.altinParlak} />
+                </View>
               </View>
-              <AppText variant="kucuk" bold color="altinParlak" style={styles.yarimBaslik2}>
-                TATBİKAT
-              </AppText>
+              <View style={styles.tileBaslikSatir}>
+                <View style={styles.tileCizgi} />
+                <AppText variant="baslik" bold color="altinParlak" style={styles.tileBaslik}>
+                  TATBİKAT
+                </AppText>
+                <View style={styles.tileCizgi} />
+              </View>
+              <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altinParlak} />
               <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
                 Karma sınavlarla kendini sına.
               </AppText>
@@ -963,12 +979,19 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Er Meydanı — düelloya gir">
-              <View style={styles.emirIkonHalka}>
-                <MaterialCommunityIcons name="sword-cross" size={24} color={Palette.altinParlak} />
+              <View style={styles.madalyon}>
+                <View style={styles.madalyonIc}>
+                  <MaterialCommunityIcons name="sword-cross" size={30} color={Palette.altinParlak} />
+                </View>
               </View>
-              <AppText variant="kucuk" bold color="altinParlak" style={styles.yarimBaslik2}>
-                ER MEYDANI
-              </AppText>
+              <View style={styles.tileBaslikSatir}>
+                <View style={styles.tileCizgi} />
+                <AppText variant="baslik" bold color="altinParlak" style={styles.tileBaslik}>
+                  ER MEYDANI
+                </AppText>
+                <View style={styles.tileCizgi} />
+              </View>
+              <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altinParlak} />
               <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
                 {'Bilgini düelloda dene.\nRakibin seni bekliyor.'}
               </AppText>
@@ -1555,6 +1578,70 @@ const styles = StyleSheet.create({
   basvuruMini: {
     letterSpacing: 1,
   },
+  emirPanelKirp: {
+    overflow: 'hidden', // köşe kurdelesi kart dışına taşmasın
+  },
+  kurdele: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  kurdeleSerit: {
+    position: 'absolute',
+    top: 24,
+    right: -52,
+    width: 200,
+    transform: [{ rotate: '45deg' }],
+    paddingVertical: 5,
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: 'rgba(255,255,255,0.35)',
+  },
+  kurdeleYazi: {
+    letterSpacing: 1,
+  },
+  tekrarKirmiziKenar: {
+    borderLeftWidth: 4,
+    borderLeftColor: Palette.kirmiziParlak,
+  },
+  tekrarEt: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  madalyon: {
+    width: 74,
+    height: 74,
+    borderRadius: 37,
+    borderWidth: 2,
+    borderColor: Palette.altinKoyu,
+    backgroundColor: 'rgba(2,20,30,0.85)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: Spacing.one,
+  },
+  madalyonIc: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    borderWidth: 1.5,
+    borderColor: 'rgba(243,194,74,0.6)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tileBaslikSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  tileBaslik: {
+    fontSize: 15,
+    letterSpacing: 1,
+  },
+  tileCizgi: {
+    width: 14,
+    height: 1,
+    backgroundColor: 'rgba(243,194,74,0.6)',
+  },
   blokArasi: {
     marginTop: Spacing.one, // gövde gap'iyle birlikte bloklar arası eşit ~16 (taşma fixi)
   },
@@ -1713,8 +1800,8 @@ const styles = StyleSheet.create({
   },
   yarimPanel: {
     flex: 1,
-    alignItems: 'flex-start',
-    gap: Spacing.two,
+    alignItems: 'center',
+    gap: Spacing.one,
   },
   yarimBaslik2: {
     letterSpacing: 1,
@@ -1722,6 +1809,7 @@ const styles = StyleSheet.create({
   },
   yarimAlt2: {
     opacity: 0.92,
+    textAlign: 'center',
   },
   yarimOk: {
     alignSelf: 'flex-end',
