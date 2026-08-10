@@ -40,7 +40,7 @@ import { calisilabilirZayifMevzi, kartKlasoru } from '@/lib/gorsel-kaynak';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useUyelik } from '@/lib/uyelik-context';
 import { eksikOzet, type EksikOzet, type ZayifKart, zayifKartlar } from '@/lib/performans';
-import { ornekKayitlar } from '@/lib/sicil';
+import { ornekKayitlar, TAKDIR_PER_BASARI } from '@/lib/sicil';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, type Istatistik } from '@/lib/stats';
@@ -363,11 +363,15 @@ export default function SicilScreen() {
             <EvsafKategori
               ikon="medal-outline"
               baslik="Ödül-Ceza Sicili"
-              altYazi={
-                sicil && sicil.kayitlar.length > 0
-                  ? `Toplam ${sicil.kayitlar.filter((k) => k.tip === 'odul').length} ödül · ${sicil.kayitlar.filter((k) => k.tip === 'ceza').length} ceza`
-                  : 'Kayıt yok'
-              }>
+              altYazi={(() => {
+                // Sicil notu (10 Ağu): tek bakışta durum — dikkat çeksin, defteri açtırsın.
+                const o = sicil?.kayitlar.filter((k) => k.tip === 'odul').length ?? 0;
+                const c = sicil?.kayitlar.filter((k) => k.tip === 'ceza').length ?? 0;
+                if (o === 0 && c === 0) return 'Tertemiz — ilk takdirini kazan';
+                const not =
+                  c === 0 ? 'Pekiyi' : o > c ? 'İyi' : o === c ? 'Orta' : 'Gelişmeye açık';
+                return `Sicil notun: ${not} · ${o} ödül · ${c} ceza`;
+              })()}>
               <SicilBolum
                 sicil={sicil}
                 zayifSayisi={zayif?.liste.length ?? 0}
@@ -975,6 +979,7 @@ function SicilBolum({
   // Bayraklı (başkan 10 Ağu): kırmızı emir kartı Evsaf'tan da kalkar — aynı işi
   // Karargah'taki altın "Bugünün Emri" yapıyor; burada sicil DEFTERİ kalır.
   const sadeEvsaf = useKisiselOzellik('talim-mevzuata');
+  const router = useRouter();
   const [secili, setSecili] = useState<SicilKaydi | null>(null);
   if (sicil === null) {
     return (
@@ -995,45 +1000,120 @@ function SicilBolum({
       )
     : 0;
   const siradakiCeza = KADEME_AD[Math.min(durum.kademe + 1, KADEME_AD.length - 1)];
+  // 10 Ağu SİCİL YENİLEME (sade mod): not + hedef + telafi + gruplanmış zaman çizelgesi.
+  const oduller = kayitlar.filter((k) => k.tip === 'odul');
+  const cezalar = kayitlar.filter((k) => k.tip === 'ceza');
+  // Aynı derece+sebepli cezalar tek satırda toplanır ("Yazılı İkaz ×2") — kopyala-yapıştır hissi biter.
+  const cezaGruplari = (() => {
+    const m = new Map<string, { kayit: SicilKaydi; adet: number }>();
+    for (const k of cezalar) {
+      const anahtar = `${k.derece}|${k.sebep}`;
+      const g = m.get(anahtar);
+      if (!g) m.set(anahtar, { kayit: k, adet: 1 });
+      else {
+        g.adet += 1;
+        if (k.tarih > g.kayit.tarih) g.kayit = k; // en yeni kayıt temsilci
+      }
+    }
+    return [...m.values()];
+  })();
+  // TELAFİ (görünüm kuralı, kayda dokunmaz): cezalar geri-bes ihmalinden gelir; şu an
+  // bekleyen zayıf yoksa görev kapatılmış demektir → cezalara "telafi edildi" damgası.
+  const telafiEdildi = zayifSayisi === 0;
+
+  function sicilSatiri(k: SicilKaydi, adet: number, damga: boolean) {
+    const b = DERECE_BILGI[k.derece];
+    const odulMu = k.tip === 'odul';
+    return (
+      <Pressable
+        key={`${k.id}-${adet}`}
+        onPress={() => setSecili(k)}
+        accessibilityRole="button"
+        accessibilityLabel={`${k.baslik} belgesini aç`}
+        style={({ pressed }) => [styles.sicilSatir, pressed && styles.pressed]}>
+        <View style={styles.sicilUst}>
+          {sadeEvsaf ? (
+            <View style={[styles.sicilNokta, odulMu ? styles.sicilNoktaOdul : styles.sicilNoktaCeza]}>
+              <MaterialCommunityIcons
+                name={odulMu ? 'medal' : b.ikon}
+                size={16}
+                color={odulMu ? Palette.altinKoyu : Palette[b.renk]}
+              />
+            </View>
+          ) : (
+            <MaterialCommunityIcons name={b.ikon} size={20} color={Palette[b.renk]} />
+          )}
+          <AppText variant="kucuk" bold style={styles.sicilAd} numberOfLines={1}>
+            {k.baslik}
+            {adet > 1 ? ` ×${adet}` : ''}
+          </AppText>
+          {damga ? (
+            <View style={styles.telafiDamga}>
+              <AppText variant="etiket" bold color="altinMetin">
+                TELAFİ EDİLDİ
+              </AppText>
+            </View>
+          ) : null}
+          <AppText variant="etiket" color="solukMetin">
+            {tarihFmt(k.tarih)}
+          </AppText>
+        </View>
+        <View style={styles.sicilAltSatir}>
+          <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.sicilSebep}>
+            {k.sebep}
+          </AppText>
+          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+        </View>
+      </Pressable>
+    );
+  }
+
   return (
     <>
       {sadeEvsaf ? null : (
         <GeriBeslemeEmri durum={durum} zayifSayisi={zayifSayisi} onBasla={onGeriBes} />
       )}
 
+      {/* SİCİL NOTU + YOL GÖSTERME (sade mod) — defter pasif kalmasın, koçluk yapsın. */}
+      {sadeEvsaf ? (
+        <>
+          {oduller.length === 0 ? (
+            <Pressable
+              onPress={() => router.push('/tatbikat')}
+              style={({ pressed }) => [styles.sicilHedef, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel="Denemelere git">
+              <MaterialCommunityIcons name="medal-outline" size={18} color={Palette.altinKoyu} />
+              <AppText variant="etiket" color="anaMetin" style={styles.sicilHedefMetin}>
+                🎖 İlk <AppText variant="etiket" bold color="altinMetin">Takdir Belgen</AppText> için:
+                bir kanunun deneme sınavını tam puanla geç.
+              </AppText>
+              <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+            </Pressable>
+          ) : (
+            <AppText variant="etiket" color="solukMetin">
+              {TAKDIR_PER_BASARI - (oduller.length % TAKDIR_PER_BASARI)} takdir daha → Başarı Belgesi.
+            </AppText>
+          )}
+          {cezalar.length > 0 && !telafiEdildi ? (
+            <AppText variant="etiket" color="amber">
+              Zayıflarını kapatırsan cezaların "telafi edildi" sayılır ve kademe yükselmez.
+            </AppText>
+          ) : null}
+        </>
+      ) : null}
 
       {kayitlar.length === 0 ? (
         <AppText variant="kucuk" color="solukMetin">
           Sicilin tertemiz. Mevzileri öğrendikçe takdir, ihmal edince ceza burada işlenir.
         </AppText>
+      ) : sadeEvsaf ? (
+        <>
+          {oduller.map((k) => sicilSatiri(k, 1, false))}
+          {cezaGruplari.map((g) => sicilSatiri(g.kayit, g.adet, telafiEdildi))}
+        </>
       ) : (
-        kayitlar.map((k) => {
-          const b = DERECE_BILGI[k.derece];
-          return (
-            <Pressable
-              key={k.id}
-              onPress={() => setSecili(k)}
-              accessibilityRole="button"
-              accessibilityLabel={`${k.baslik} belgesini aç`}
-              style={({ pressed }) => [styles.sicilSatir, pressed && styles.pressed]}>
-              <View style={styles.sicilUst}>
-                <MaterialCommunityIcons name={b.ikon} size={20} color={Palette[b.renk]} />
-                <AppText variant="kucuk" bold style={styles.sicilAd} numberOfLines={1}>
-                  {k.baslik}
-                </AppText>
-                <AppText variant="etiket" color="solukMetin">
-                  {tarihFmt(k.tarih)}
-                </AppText>
-              </View>
-              <View style={styles.sicilAltSatir}>
-                <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.sicilSebep}>
-                  {k.sebep}
-                </AppText>
-                <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
-              </View>
-            </Pressable>
-          );
-        })
+        kayitlar.map((k) => sicilSatiri(k, 1, false))
       )}
 
       {/* Görsel belge modalı — kayda basınca tam sertifika/ceza yazısı. */}
@@ -1424,6 +1504,46 @@ const styles = StyleSheet.create({
   },
   zayifSekmelerSag: {
     alignItems: 'flex-end',
+  },
+  // 10 Ağu sicil yenileme: zaman çizelgesi noktaları + telafi damgası + hedef satırı.
+  sicilNokta: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  sicilNoktaOdul: {
+    backgroundColor: Palette.altinSolukYuzey,
+    borderWidth: 1,
+    borderColor: Palette.altin,
+  },
+  sicilNoktaCeza: {
+    backgroundColor: Palette.kremZemin,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+  },
+  telafiDamga: {
+    borderWidth: 1,
+    borderColor: Palette.altinKoyu,
+    borderRadius: Radius.s,
+    paddingHorizontal: Spacing.one,
+    paddingVertical: 1,
+  },
+  sicilHedef: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.altin,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.two,
+  },
+  sicilHedefMetin: {
+    flex: 1,
+    flexShrink: 1,
   },
   // 10 Ağu redesign: altın CTA (Zayıf Konuları Çalış) + küçük yasal link.
   zayifCta: {
