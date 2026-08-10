@@ -470,7 +470,7 @@ export default function KarargahScreen() {
               </Pressable>
             </>
           ) : (
-            <DuyuruIkonu boyut={24} />
+            <DuyuruIkonu etiketli />
           )}
         </View>
       }>
