@@ -42,7 +42,7 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { KaldiginYerKarti, TatbikatYarim } from '@/components/karargah/kaldigin-yer';
-import { DalgaGecis, IsiltiSerit, YildizliZemin } from '@/components/karargah/safak';
+import { IsiltiSerit, YildizliZemin } from '@/components/karargah/safak';
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -477,6 +477,7 @@ export default function KarargahScreen() {
   return (
     <Screen
       title="Karargah"
+      koyu={aramaMevzuatta}
       headerSag={
         <View style={styles.headerIkonlar}>
           {/* Ara — eski alt sekme yerine başlıkta büyüteç (bayraklıda Mevzuat'a taşındı). */}
@@ -521,7 +522,7 @@ export default function KarargahScreen() {
           altta dalgayla krem gövdeye iniş. Bayraksızda eski tam sayaç. */}
       {aramaMevzuatta ? (
         <View>
-          <YildizliZemin dalgali>
+          <YildizliZemin>
             <AppText variant="dev" bold color="beyaz" style={styles.safakSayac}>
               19 Eylül'e {kalanGun} gün
             </AppText>
@@ -568,7 +569,6 @@ export default function KarargahScreen() {
               <IsiltiSerit />
             </Pressable>
           </YildizliZemin>
-          <DalgaGecis />
         </View>
       ) : (
         <SinavGeriSayim />
@@ -803,30 +803,30 @@ export default function KarargahScreen() {
             <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altin} />
           </Pressable>
           {/* Günün moral satırı (Ref 6/9: insan dili) — gerçek veriden. */}
-          <AppText variant="kucuk" bold color="anaMetin" style={styles.moralSatir}>
+          <AppText variant="kucuk" bold color="beyaz" style={styles.moralSatir}>
             {bugunSayi > 0
               ? `Bugün ${bugunSayi} kart çalıştın 🎖️${streak && streak > 1 ? ` · Seri: ${streak} gün` : ''}`
               : 'Bugün henüz kart çalışmadın — ilk kartla seriyi başlat.'}
           </AppText>
           {tekrarAcik && unutulan.length > 0 ? (
-            <View style={styles.unutBanner}>
+            <View style={styles.tekrarListe}>
               {unutulan.slice(0, 5).map((u) => (
                 <Pressable
                   key={u.lawId}
                   style={({ pressed }) => [styles.unutSatir, pressed && styles.pressed]}
                   onPress={() => router.push({ pathname: '/patika', params: { lawId: String(u.lawId) } })}>
-                  <MaterialCommunityIcons name="history" size={16} color={Palette.altinKoyu} />
-                  <AppText variant="kucuk" bold color="lacivert" style={styles.unutAd} numberOfLines={1}>
+                  <MaterialCommunityIcons name="history" size={16} color={Palette.altin} />
+                  <AppText variant="kucuk" bold color="beyaz" style={styles.unutAd} numberOfLines={1}>
                     {u.ad}
                   </AppText>
-                  <AppText variant="etiket" color="solukMetin">
+                  <AppText variant="kucuk" bold color="altinAcik2">
                     {u.gun} gün
                   </AppText>
-                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kenarlik} />
                 </Pressable>
               ))}
               {unutulan.length > 5 ? (
-                <AppText variant="etiket" color="solukMetin">
+                <AppText variant="kucuk" bold color="altinAcik2">
                   +{unutulan.length - 5} kanun daha
                 </AppText>
               ) : null}
@@ -1323,7 +1323,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.lacivert,
+    backgroundColor: Palette.lacivert2,
+    borderWidth: 1,
+    borderColor: 'rgba(255,246,220,0.12)',
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.three,
@@ -1341,7 +1343,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.three,
-    backgroundColor: Palette.lacivert,
+    backgroundColor: Palette.lacivert2,
+    borderWidth: 1,
+    borderColor: 'rgba(255,246,220,0.12)',
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.three,
@@ -1358,6 +1362,14 @@ const styles = StyleSheet.create({
   moralSatir: {
     textAlign: 'center',
     paddingVertical: Spacing.one,
+  },
+  tekrarListe: {
+    backgroundColor: Palette.lacivert2,
+    borderWidth: 1,
+    borderColor: 'rgba(255,246,220,0.12)',
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    gap: Spacing.two,
   },
   // Bayraklı (başkan, 10 Ağu): koyu lacivert hero "içimizi karartıyor" → Codex'te onaylanan
   // krem dil: kart kremi zemin + altın kenarlık + lacivert metin.

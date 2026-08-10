@@ -136,6 +136,8 @@ const st = StyleSheet.create({
   gok: {
     borderRadius: Radius.l,
     overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: 'rgba(255,246,220,0.12)', // gece sayfasında panel kenarı hafif seçilsin
   },
   gokDalgali: {
     borderBottomLeftRadius: 0,

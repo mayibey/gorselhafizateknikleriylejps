@@ -5,6 +5,7 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
+import { YildizKatmani } from '@/components/ui/yildiz-katmani';
 import { BottomTabInset, MaxContentWidth, Palette, Spacing } from '@/constants/theme';
 
 type ScreenProps = {
@@ -16,6 +17,8 @@ type ScreenProps = {
   headerSag?: ReactNode;
   /** Opsiyonel: başlık şeridi dikeyde daha az yer kaplar (Evsaf yeniden tasarımı, 10 Ağu). */
   kompaktBaslik?: boolean;
+  /** Opsiyonel: GECE MODU — tüm sayfa lacivert + yıldız katmanı (Şafak dokusu; 10 Ağu). */
+  koyu?: boolean;
   /** Opsiyonel: header ile gövde arasında ince altın çizgi. Default: yok. */
   headerAltinCizgi?: boolean;
   /** İçerik kaydırılabilir mi (varsayılan: evet). */
@@ -32,6 +35,7 @@ export function Screen({
   headerSag,
   headerAltinCizgi,
   kompaktBaslik,
+  koyu,
   scroll = true,
   sabitUst,
   children,
@@ -44,7 +48,8 @@ export function Screen({
   useScrollToTop(scrollRef);
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+    <SafeAreaView style={[styles.safe, koyu && styles.safeKoyu]} edges={['top', 'left', 'right']}>
+      {koyu ? <YildizKatmani /> : null}
       {title ? (
         <View style={[styles.header, kompaktBaslik && styles.headerKompakt]}>
           {onGeri ? (
@@ -75,6 +80,9 @@ const styles = StyleSheet.create({
   safe: {
     flex: 1,
     backgroundColor: Palette.kremZemin,
+  },
+  safeKoyu: {
+    backgroundColor: Palette.lacivert,
   },
   header: {
     flexDirection: 'row',

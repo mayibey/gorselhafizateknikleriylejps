@@ -135,11 +135,11 @@ export function TatbikatYarim() {
       style={({ pressed }) => [st.yarim, pressed && st.basili]}
       accessibilityRole="button"
       accessibilityLabel="Genel Tatbikat — deneme sınavları">
-      <MaterialCommunityIcons name="target" size={28} color={Palette.lacivert} />
-      <AppText variant="kucuk" bold color="lacivert" style={st.yarimBaslik}>
+      <MaterialCommunityIcons name="target" size={28} color={Palette.altin} />
+      <AppText variant="kucuk" bold color="beyaz" style={st.yarimBaslik}>
         GENEL TATBİKAT
       </AppText>
-      <AppText variant="kucuk" bold color="lacivert" style={st.yarimAlt}>
+      <AppText variant="kucuk" bold color="altinAcik2" style={st.yarimAlt}>
         Karma sınavlarla kendini sına
       </AppText>
     </Pressable>
@@ -176,10 +176,12 @@ export function TatbikatGirisi() {
 }
 
 const st = StyleSheet.create({
-  // Gece kartı (Şafak dokusu, alt yarıya taşındı): lacivert dolgu + altın vurgular.
+  // Gece paneli (tam koyu sayfada bir ton AÇIK lacivert — mock dili).
   kart: {
     gap: Spacing.one,
-    backgroundColor: Palette.lacivert,
+    backgroundColor: Palette.lacivert2,
+    borderWidth: 1,
+    borderColor: 'rgba(255,246,220,0.12)',
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.two,
@@ -214,12 +216,14 @@ const st = StyleSheet.create({
   barDolu: {
     backgroundColor: Palette.altin,
   },
-  // Renk mozaiği dersi (Ref 5/8): Tatbikat TAM ALTIN dolgu — çekinme yok.
+  // Gece paneli: mock dili — açık lacivert panel + altın vurgular (altın enflasyonu yok).
   yarim: {
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.altin,
+    backgroundColor: Palette.lacivert2,
+    borderWidth: 1,
+    borderColor: 'rgba(255,246,220,0.12)',
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.two,
     paddingVertical: Spacing.three,
