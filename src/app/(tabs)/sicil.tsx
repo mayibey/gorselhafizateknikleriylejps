@@ -450,18 +450,20 @@ export default function SicilScreen() {
 function ProfilUyelikKarti() {
   const { kullanici, hazir } = useAuth();
   const { aktifHaklar } = useUyelik();
-  const [adSoyad, setAdSoyad] = useState('');
+  // Profil EKRAN AÇILIRKEN çekilir (panel açılmadan) → panele hazır verilir,
+  // kullanıcı "Yükleniyor" görmez (başkan, 10 Ağu).
+  const [profil, setProfil] = useState<Profil | null | undefined>(undefined);
   const [acik, setAcik] = useState(false);
 
   useFocusEffect(
     useCallback(() => {
       let iptal = false;
       if (!kullanici) {
-        setAdSoyad('');
+        setProfil(null);
         return;
       }
       void profilGetir().then((p) => {
-        if (!iptal) setAdSoyad(`${p?.ad ?? ''} ${p?.soyad ?? ''}`.trim());
+        if (!iptal) setProfil(p);
       });
       return () => {
         iptal = true;
@@ -470,6 +472,7 @@ function ProfilUyelikKarti() {
   );
 
   if (!hazir || !kullanici) return null;
+  const adSoyad = profil ? `${profil.ad ?? ''} ${profil.soyad ?? ''}`.trim() : '';
   const uyelikOzet =
     aktifHaklar.length > 0
       ? aktifHaklar
@@ -507,7 +510,7 @@ function ProfilUyelikKarti() {
       {acik ? (
         <>
           <View style={styles.kisiAyrac} />
-          <KisiselBilgiler gomulu />
+          <KisiselBilgiler gomulu onProfil={profil ?? null} onDegisti={(p) => setProfil(p)} />
           <View style={styles.kisiAyrac} />
           <UyelikKarti gomulu />
         </>
@@ -715,7 +718,17 @@ function tarihTR(iso: string | null): string | null {
 }
 
 /** Evsaf üst kartı: hesap + ad/soyad/telefon/doğum/cinsiyet (profilden çekilir). */
-function KisiselBilgiler({ gomulu }: { gomulu?: boolean } = {}) {
+function KisiselBilgiler({
+  gomulu,
+  onProfil,
+  onDegisti,
+}: {
+  gomulu?: boolean;
+  /** Üst kart profili ZATEN çekmişse buradan gelir → panel ANINDA açılır ("Yükleniyor" yok). */
+  onProfil?: Profil | null;
+  /** Ad kaydedilince üst karta haber (başlıktaki isim tazelensin). */
+  onDegisti?: (p: Profil | null) => void;
+} = {}) {
   const { kullanici, hazir } = useAuth();
   const [profil, setProfil] = useState<Profil | null>(null);
   const [duzenle, setDuzenle] = useState(false);
@@ -731,15 +744,18 @@ function KisiselBilgiler({ gomulu }: { gomulu?: boolean } = {}) {
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
   // Profil gelmeden gövde ÇİZİLMEZ (10 Ağu: "ad-soyad gir" çağrısı bir kare parlayıp
-  // sönüyordu — profil async geldiği için isimYok ilk karede yanlış hesaplanıyordu).
-  const [profilHazir, setProfilHazir] = useState(false);
+  // sönüyordu). Üst kart ön-yükleme geçtiyse (onProfil) hiç beklenmez; kendi çekimi
+  // arkada sessizce tazeler — "Yükleniyor" yalnız hiç veri yokken görünür.
+  const [profilHazir, setProfilHazir] = useState(onProfil !== undefined);
+  useEffect(() => {
+    if (onProfil !== undefined) setProfil(onProfil);
+  }, [onProfil]);
   useEffect(() => {
     if (!kullanici) {
       setProfil(null);
       setProfilHazir(false);
       return;
     }
-    setProfilHazir(false);
     void profilGetir()
       .then(setProfil)
       .finally(() => setProfilHazir(true));
@@ -756,6 +772,7 @@ function KisiselBilgiler({ gomulu }: { gomulu?: boolean } = {}) {
       await profilKaydet({ ad: adG.trim(), soyad: soyadG.trim() });
       const yeni = await profilGetir();
       setProfil(yeni);
+      onDegisti?.(yeni);
     } catch {
       /* sessiz — kayıt olmazsa pencere kapanır, tekrar denenebilir */
     }
