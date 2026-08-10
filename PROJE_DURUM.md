@@ -1269,3 +1269,12 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   bugün başlar + HAZIR OL" daveti (dokununca çalışmaya götürür). (4) Ayarlar'a
   "Telegram'a Bağlan" satırı (t.me/Mevzujspsbot; bot /baglan akışı hazır).
 - OTA 5 runtime, bayrak yalnız başkan+Ahmet.
+
+## 10 Ağu 2026 (3) — Başkan gece düzeltmeleri (bayraklı)
+- Duyurular satırı Evsaf'tan KARARGAH'a (geri sayım grubunun altı).
+- Evsaf: çift ilerleme bitti (büyük İLERLEME kartı bayraklıda gizli; kutu satırı tek
+  gösterge) · Kişisel Bilgiler AKORDEON (tek satır, dokununca açılır; Göster/Gizle içeride)
+  · ZAYIF MEVZİLER sekmeli: Denemeler (kart/sınav zayıfları, satıra dokun→tek kart) |
+  Oyunlar (Er Meydanı yanlışları, dokun→madde listesi Alert) — Karargah'taki "Güç
+  Kazandırma" kartı bayraklıda kalktı, işi bu sekmeye geçti.
+- OTA 5 runtime.
