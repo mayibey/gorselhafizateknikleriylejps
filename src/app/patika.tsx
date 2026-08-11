@@ -736,6 +736,12 @@ function SinematikHarita({
               />
             );
           })}
+          {/* HEDEF — yolculuğun sonu (dünyanın en üstü, son durağın ilerisi). */}
+          <View
+            style={{ position: 'absolute', left: W / 2 - 11, top: durakDunyaY(Math.max(0, n - 1)) - 60, alignItems: 'center' }}
+            pointerEvents="none">
+            <MaterialCommunityIcons name="flag-checkered" size={24} color={Palette.altinParlak} />
+          </View>
         </Animated.View>
 
         {/* ARAÇ — ekranda dikey SABİT (alt ~%34); yatayda yol kıvrımını takip eder, virajda döner. */}
