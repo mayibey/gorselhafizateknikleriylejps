@@ -1712,14 +1712,14 @@ const styles = StyleSheet.create({
     height: 56,
   },
   plakaKap: {
-    width: 190,
+    width: 218,
     height: 58,
     marginBottom: Spacing.one, // akış içinde: binme imkânsız
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.two,
+    gap: Spacing.one,
     paddingLeft: 8,
-    paddingRight: 30,
+    paddingRight: 52, // çapraz kesiğin altına yazı giremez
   },
   plakaArmaGorsel: {
     width: 44,
@@ -1758,7 +1758,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   plakaUst: {
-    letterSpacing: 2,
+    letterSpacing: 1.5,
+    fontSize: 11,
   },
   plakaAlt: {
     fontSize: 20,
