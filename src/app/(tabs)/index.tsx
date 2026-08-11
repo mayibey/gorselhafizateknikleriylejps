@@ -586,7 +586,7 @@ export default function KarargahScreen() {
                   altın konturlu; kartın üst çizgisine BİNER (kopuk pill değil). */}
               {/* Mock'tan kesilen GERÇEK plaka (defne armalı) — %100 birebir. */}
               <Image
-                source={require('../../../assets/images/mock-plaka-emri.webp')}
+                source={require('../../../assets/images/mock-plaka-emri-seffaf.webp')}
                 style={styles.emirPlakaGorsel}
                 resizeMode="stretch"
               />
@@ -1699,8 +1699,8 @@ const styles = StyleSheet.create({
   emirPlakaGorsel: {
     position: 'absolute',
     top: -18,
-    left: -2,
-    width: 189, // 600x200 kesitin 3:1 oranı
+    left: -4,
+    width: 198, // 680x216 şeffaf kesit oranı
     height: 63,
   },
   zayifKurdeleGorsel: {
