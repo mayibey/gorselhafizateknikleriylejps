@@ -584,21 +584,8 @@ export default function KarargahScreen() {
             <View style={[styles.gecePanel, styles.emirPanelUst]}>
               {/* SOL PLAKA (mock birebir): FLAMA kesimli zemin — sağ kenar çapraz,
                   altın konturlu; kartın üst çizgisine BİNER (kopuk pill değil). */}
-              {/* PLAKA: kod çizimi flama (kesik uç PÜRÜZSÜZ) + mock'tan yuvarlak kesilen defne arması. */}
+              {/* PLAKA: oval köşeli dikdörtgen çerçeve (başkan, 11 Ağu) + defne arması. */}
               <View style={styles.plakaKap}>
-                <Svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 190 58"
-                  preserveAspectRatio="none"
-                  style={StyleSheet.absoluteFill}>
-                  <Path
-                    d="M7,2 L182,2 L148,56 L7,56 Q2,56 2,51 L2,7 Q2,2 7,2 Z"
-                    fill="#0B2F44"
-                    stroke="#F3C24A"
-                    strokeWidth={1.6}
-                  />
-                </Svg>
                 <Image
                   source={require('../../../assets/images/mock-arma.webp')}
                   style={styles.plakaArmaGorsel}
@@ -1712,14 +1699,17 @@ const styles = StyleSheet.create({
     height: 56,
   },
   plakaKap: {
-    width: 218,
-    height: 58,
+    alignSelf: 'flex-start',
     marginBottom: Spacing.one, // akış içinde: binme imkânsız
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.one,
-    paddingLeft: 8,
-    paddingRight: 52, // çapraz kesiğin altına yazı giremez
+    gap: Spacing.two,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    backgroundColor: '#0B2F44',
+    borderWidth: 1.6,
+    borderColor: '#F3C24A',
+    borderRadius: 16, // oval köşeli dikdörtgen
   },
   plakaArmaGorsel: {
     width: 44,
