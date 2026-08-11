@@ -630,7 +630,10 @@ function SinematikHarita({
   const y0 = durakDunyaY(0);
   const y1 = durakDunyaY(Math.max(0, n - 1));
 
-  const ilerleme = toplamKart > 0 ? Math.max(0, Math.min(1, calisilanKart / toplamKart)) : 0;
+  // Araç DURAK konumunda (aktif checkpoint), kart oranı değil. travel birimi = durak/(n-1).
+  const ilerleme = n > 1 ? Math.max(0, aktifIndex) / (n - 1) : 0;
+  // KİLİT: aktif checkpoint + ~1.3 durak ötesine gidilemez (ilerisi kilitli).
+  const maxTravel = n > 1 ? Math.min(1, (Math.max(0, aktifIndex) + 1.3) / (n - 1)) : 1;
   const travel = useRef(new Animated.Value(ilerleme)).current;
   const travelRef = useRef(ilerleme);
   const titre = useRef(new Animated.Value(0)).current;
@@ -642,14 +645,14 @@ function SinematikHarita({
         onMoveShouldSetPanResponder: (_, g) => Math.abs(g.dy) > 5,
         onPanResponderMove: (_, g) => {
           const menzil = y0 - y1 || 1;
-          travel.setValue(Math.max(0, Math.min(1, travelRef.current + -g.dy / menzil)));
+          travel.setValue(Math.max(0, Math.min(maxTravel, travelRef.current + -g.dy / menzil)));
         },
         onPanResponderRelease: (_, g) => {
           const menzil = y0 - y1 || 1;
-          travelRef.current = Math.max(0, Math.min(1, travelRef.current + -g.dy / menzil));
+          travelRef.current = Math.max(0, Math.min(maxTravel, travelRef.current + -g.dy / menzil));
         },
       }),
-    [travel, y0, y1],
+    [travel, y0, y1, maxTravel],
   );
   // Bölüm bitince araç ilerleme noktasına yumuşak kayar.
   useEffect(() => {
@@ -671,6 +674,32 @@ function SinematikHarita({
   const dunyaTY = travel.interpolate({ inputRange: [0, 1], outputRange: [AY - y0, AY - y1] });
   const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2] });
   const tileN = Math.ceil(DH / dilimH) + 1;
+
+  // ARAÇ yol kıvrımına oturur + virajda döner. Araç dünya-y (kamera merkezi) = y0−travel·(y0−y1);
+  // o dünya-y'nin tile-içi fazı → görsel yol eğrisi (yolNokta) → ekran x + tangent açısı.
+  const fazAt = (u: number) => {
+    const adY = y0 - u * (y0 - y1);
+    const r = (((adY % dilimH) + dilimH) % dilimH) / dilimH;
+    return 1 - r; // görsel yol t (üst=uzak, alt=yakın)
+  };
+  const ORNEK_A = 40;
+  const inRA = Array.from({ length: ORNEK_A + 1 }, (_, k) => k / ORNEK_A);
+  const aracLeft = travel.interpolate({
+    inputRange: inRA,
+    outputRange: inRA.map((u) => yolNokta(fazAt(u)).x * W - AW / 2),
+  });
+  const aracRot = travel.interpolate({
+    inputRange: inRA,
+    outputRange: inRA.map((u) => {
+      const t = fazAt(u);
+      const a = yolNokta(Math.max(0, t - 0.04));
+      const b = yolNokta(Math.min(1, t + 0.04));
+      const dx = (b.x - a.x) * W;
+      const dy = (b.y - a.y) * dilimH;
+      const deg = Math.atan2(dx, -dy) * (180 / Math.PI) * 0.55;
+      return `${Math.max(-22, Math.min(22, deg))}deg`;
+    }),
+  });
 
   return (
     <>
@@ -709,9 +738,9 @@ function SinematikHarita({
           })}
         </Animated.View>
 
-        {/* ARAÇ — ekranda SABİT (alt ~%34); dünya altından akar, kamera aracı takip eder. */}
+        {/* ARAÇ — ekranda dikey SABİT (alt ~%34); yatayda yol kıvrımını takip eder, virajda döner. */}
         <Animated.View
-          style={[st.aracKap, { width: AW, height: AH, left: W / 2 - AW / 2, top: AY - AH * 0.62 }]}
+          style={[st.aracKap, { width: AW, height: AH, left: aracLeft, top: AY - AH * 0.62, transform: [{ rotate: aracRot }] }]}
           pointerEvents="none">
           <View style={st.far} pointerEvents="none" />
           <AnimatedImage
