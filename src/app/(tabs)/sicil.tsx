@@ -49,9 +49,7 @@ import { UyelikKarti } from '@/components/premium/uyelik-rozeti';
 import { useEvsafIstatistik } from '@/components/evsaf/karargah-tasinanlar';
 import { EvsafKategori } from '@/components/evsaf/kategori';
 import {
-  CalismaAnalizi,
   DenemeGecmisi,
-  ErMeydaniOzeti,
   GuvenceNotu,
   KanunHaritasi,
   SinavProjeksiyonu,
@@ -272,13 +270,33 @@ export default function SicilScreen() {
           </View>
           )}
 
-          {/* Analiz kategorileri (10 Ağu akşam): harita → deneme geçmişi → çalışma analizi → Er Meydanı. */}
+          {/* Analiz kategorileri (11 Ağu, başkan): Ayarlar girişi en üstte; Çalışma Analizi
+              ve Er Meydanı Evsaf'tan kaldırıldı. */}
           {karargahTasindi ? (
             <>
+              <Pressable
+                style={({ pressed }) => [
+                  styles.istatistikKart,
+                  styles.istatistikKartGece,
+                  pressed && styles.pressed,
+                ]}
+                onPress={() => router.push('/ayarlar')}
+                accessibilityRole="button"
+                accessibilityLabel="Ayarlar">
+                <View style={styles.kategoriBaslik}>
+                  <View style={[styles.kategoriIkon, styles.kategoriIkonGece]}>
+                    <MaterialCommunityIcons name="cog-outline" size={22} color={Palette.altinParlak} />
+                  </View>
+                  <View style={styles.kategoriAd}>
+                    <AppText variant="govde" bold color="beyaz">
+                      Ayarlar
+                    </AppText>
+                  </View>
+                  <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinParlak} />
+                </View>
+              </Pressable>
               <KanunHaritasi />
               <DenemeGecmisi />
-              <CalismaAnalizi />
-              <ErMeydaniOzeti />
             </>
           ) : null}
 

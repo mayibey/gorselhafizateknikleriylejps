@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Linking, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
@@ -21,7 +21,7 @@ type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
 /** Ayarlar — Evsaf'tan açılır. Profil (branş/rütbe) + bildirim + yasal girişleri burada toplanır. */
 export default function AyarlarScreen() {
   const router = useRouter();
-  const telegramSatiri = useKisiselOzellik('talim-mevzuata');
+  const gece = useKisiselOzellik('talim-mevzuata');
   const { brans } = useBrans();
   const { rutbe } = useRutbe();
   const { kullanici, hazir } = useAuth();
@@ -51,8 +51,8 @@ export default function AyarlarScreen() {
   const rutbeAd = RUTBELER.find((r) => r.slug === rutbe)?.ad ?? '—';
 
   return (
-    <Screen title="Ayarlar" onGeri={() => router.back()}>
-      <AppText variant="etiket" color="solukMetin" bold>
+    <Screen title="Ayarlar" onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
+      <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
         PROFİL
       </AppText>
       <Satir
@@ -75,7 +75,11 @@ export default function AyarlarScreen() {
         />
       ) : null}
 
-      <AppText variant="etiket" color="solukMetin" bold style={styles.baslikUst}>
+      <AppText
+        variant="etiket"
+        color={gece ? 'kartMetinIkincil' : 'solukMetin'}
+        bold
+        style={styles.baslikUst}>
         UYGULAMA
       </AppText>
       <Satir
@@ -96,15 +100,6 @@ export default function AyarlarScreen() {
         etiket="Eğitim Planı (Bildirimler)"
         onPress={() => router.push('/egitim-plani')}
       />
-      {/* Bayraklı (10 Ağu, ChatGPT fikri): Telegram topluluğu + bot eşleşmesi tek dokunuşla.
-          Bot tarafında /baglan akışı zaten var; buradan Telegram'da bot açılır. */}
-      {telegramSatiri ? (
-        <Satir
-          ikon="send-circle-outline"
-          etiket="Telegram'a Bağlan"
-          onPress={() => void Linking.openURL('https://t.me/Mevzujspsbot').catch(() => {})}
-        />
-      ) : null}
       <Satir
         ikon="lifebuoy"
         etiket="Destek / Taleplerim"
@@ -147,31 +142,43 @@ function Satir({
   onPress?: () => void;
   kilitli?: boolean;
 }) {
+  // Gece dili (bayraklı): satır kendi bayrağını okur — koyu kart + parlak metin/ikon.
+  const gece = useKisiselOzellik('talim-mevzuata');
   const icerik = (
     <>
-      <MaterialCommunityIcons name={ikon} size={22} color={Palette.lacivert} />
-      <AppText variant="kucuk" bold style={styles.etiket}>
+      <MaterialCommunityIcons
+        name={ikon}
+        size={22}
+        color={gece ? Palette.altinParlak : Palette.lacivert}
+      />
+      <AppText variant="kucuk" bold color={gece ? 'beyaz' : 'anaMetin'} style={styles.etiket}>
         {etiket}
       </AppText>
-      {rozet ? <View style={styles.rozetNokta} /> : null}
+      {rozet ? <View style={[styles.rozetNokta, gece && styles.rozetNoktaGece]} /> : null}
       {deger ? (
-        <AppText variant="kucuk" color="solukMetin" numberOfLines={1} style={styles.deger}>
+        <AppText
+          variant="kucuk"
+          color={gece ? 'kartMetinIkincil' : 'solukMetin'}
+          numberOfLines={1}
+          style={styles.deger}>
           {deger}
         </AppText>
       ) : null}
       <MaterialCommunityIcons
         name={kilitli ? 'lock-outline' : 'chevron-right'}
         size={22}
-        color={Palette.solukMetin}
+        color={gece ? (kilitli ? Palette.kartMetinIkincil : Palette.altinParlak) : Palette.solukMetin}
       />
     </>
   );
   // Kilitli ya da onPress yoksa -> salt-okunur (dokunulamaz) satır.
   if (kilitli || !onPress) {
-    return <View style={styles.satir}>{icerik}</View>;
+    return <View style={[styles.satir, gece && styles.satirGece]}>{icerik}</View>;
   }
   return (
-    <Pressable style={({ pressed }) => [styles.satir, pressed && styles.pressed]} onPress={onPress}>
+    <Pressable
+      style={({ pressed }) => [styles.satir, gece && styles.satirGece, pressed && styles.pressed]}
+      onPress={onPress}>
       {icerik}
     </Pressable>
   );
@@ -202,6 +209,13 @@ const styles = StyleSheet.create({
     height: 9,
     borderRadius: 5,
     backgroundColor: Palette.kirmizi,
+  },
+  satirGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderColor: 'rgba(126,205,218,0.5)',
+  },
+  rozetNoktaGece: {
+    backgroundColor: Palette.kirmiziParlak,
   },
   pressed: {
     opacity: 0.75,
