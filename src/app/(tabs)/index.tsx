@@ -1693,8 +1693,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden', // (kullanım dışı — kurdele dönemi)
   },
   emirPanelUst: {
-    paddingTop: 66, // plaka içeri 45px sarkar + 21px NEFES — 'iç içe' hissi tamamen bitti (11 Ağu)
-    marginTop: 26, // plakaların üstteki sayaç alanına taşma payı
+    // Plaka akışa alındı (11 Ağu) — özel dolgu gerekmez; kalıntı stil boş.
   },
   emirPlaka: {
     position: 'absolute',
@@ -1704,16 +1703,14 @@ const styles = StyleSheet.create({
     height: 56,
   },
   emirPlakaGorsel: {
-    position: 'absolute',
-    top: -18,
-    left: -4,
     width: 198, // 680x216 şeffaf kesit oranı
     height: 63,
+    marginBottom: Spacing.one, // akış içinde: altındakiyle binmesi imkânsız
   },
   zayifKurdeleGorsel: {
     position: 'absolute',
-    top: -14,
-    right: -6,
+    top: 10,
+    right: 10,
     width: 168, // 442x126 kesitin ~3.5:1 oranı
     height: 48,
   },
@@ -1744,7 +1741,7 @@ const styles = StyleSheet.create({
   },
   zayifPlakaSar: {
     position: 'absolute',
-    top: -16,
+    top: 10,
     right: 10,
   },
   zayifKurdele: {
