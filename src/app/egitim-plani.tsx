@@ -16,12 +16,14 @@ import {
   setAyar,
   uzakPushTokenAl,
 } from '@/lib/bildirim';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 const pad = (n: number) => n.toString().padStart(2, '0');
 const ssMM = (saat: number, dakika: number) => `${pad(saat)}:${pad(dakika)}`;
 
 export default function EgitimPlaniScreen() {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   const [ayar, setAyarState] = useState<BildirimAyar | null>(null);
   const [durum, setDurum] = useState<string | null>(null);
   const [izinYok, setIzinYok] = useState(false);
@@ -65,84 +67,91 @@ export default function EgitimPlaniScreen() {
 
   if (!ayar) {
     return (
-      <Screen title="Eğitim Planı" onGeri={() => router.back()}>
+      <Screen title="Eğitim Planı" onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
         <Loading metin="Yükleniyor…" />
       </Screen>
     );
   }
 
   return (
-    <Screen title="Eğitim Planı" onGeri={() => router.back()}>
-      <View style={styles.kart}>
+    <Screen title="Eğitim Planı" onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
+      <View style={[styles.kart, gece && styles.kartGece]}>
         <View style={styles.satir}>
           <View style={styles.satirMetin}>
-            <AppText variant="govde" bold>
+            <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'}>
               Bildirimler
             </AppText>
-            <AppText variant="etiket" color="solukMetin">
+            <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
               Günde 3 içtima: sabah, gece ve fırsat eğitimi.
             </AppText>
           </View>
           <Switch
             value={ayar.aktif}
             onValueChange={(v) => guncelle({ aktif: v })}
-            trackColor={{ true: Palette.lacivert, false: Palette.kenarlik }}
+            trackColor={{ true: gece ? Palette.altin : Palette.lacivert, false: gece ? 'rgba(255,246,220,0.3)' : Palette.kenarlik }}
             thumbColor={Palette.beyaz}
             accessibilityLabel="Bildirimleri aç/kapat"
           />
         </View>
       </View>
 
-      <View style={styles.kart}>
+      <View style={[styles.kart, gece && styles.kartGece]}>
         <SaatSatir
+          gece={gece}
           ikon="weather-sunset-up"
           ad="Sabah İçtiması"
           saat={ayar.sabahSaat}
           dakika={ayar.sabahDakika}
           onDegis={(s, d) => guncelle({ sabahSaat: s, sabahDakika: d })}
         />
-        <View style={styles.ayrac} />
+        <View style={[styles.ayrac, gece && styles.ayracGece]} />
         <SaatSatir
+          gece={gece}
           ikon="weather-night"
           ad="Gece Eğitimi"
           saat={ayar.geceSaat}
           dakika={ayar.geceDakika}
           onDegis={(s, d) => guncelle({ geceSaat: s, geceDakika: d })}
         />
-        <View style={styles.ayrac} />
+        <View style={[styles.ayrac, gece && styles.ayracGece]} />
         <View style={styles.satir}>
           <View style={styles.satirMetin}>
             <View style={styles.adSatir}>
-              <MaterialCommunityIcons name="flash-outline" size={20} color={Palette.amber} />
-              <AppText variant="govde" bold>
+              <MaterialCommunityIcons
+                name="flash-outline"
+                size={20}
+                color={gece ? Palette.altinParlak : Palette.amber}
+              />
+              <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'}>
                 Fırsat Eğitimi
               </AppText>
             </View>
-            <AppText variant="etiket" color="solukMetin">
+            <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
               Sabah ve gece arasında rastgele bir saatte (sürpriz hatırlatma).
             </AppText>
           </View>
           <Switch
             value={ayar.firsatAktif}
             onValueChange={(v) => guncelle({ firsatAktif: v })}
-            trackColor={{ true: Palette.lacivert, false: Palette.kenarlik }}
+            trackColor={{ true: gece ? Palette.altin : Palette.lacivert, false: gece ? 'rgba(255,246,220,0.3)' : Palette.kenarlik }}
             thumbColor={Palette.beyaz}
             accessibilityLabel="Fırsat eğitimini aç/kapat"
           />
         </View>
       </View>
 
-      <View style={styles.kart}>
+      <View style={[styles.kart, gece && styles.kartGece]}>
         <View style={styles.satir}>
           <View style={styles.satirMetin}>
-            <AppText variant="govde" bold>
+            <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'}>
               Oturum başına kart
             </AppText>
-            <AppText variant="etiket" color="solukMetin">
+            <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
               İçtimada kaç kart çalışacağın (günlük kuyruğu sınırlar).
             </AppText>
           </View>
           <Stepper
+            gece={gece}
             deger={ayar.gunlukKart}
             etiket={`${ayar.gunlukKart}`}
             ad="kart sayısı"
@@ -153,14 +162,14 @@ export default function EgitimPlaniScreen() {
       </View>
 
       {durum ? (
-        <AppText variant="kucuk" color="lacivert" bold style={styles.durum}>
+        <AppText variant="kucuk" color={gece ? 'altinParlak' : 'lacivert'} bold style={styles.durum}>
           {durum}
         </AppText>
       ) : null}
 
       {/* Uzak bildirim tanısı — SADECE sorun varsa görünür. Sorun yoksa kullanıcıyı meşgul etmez. */}
       {tani && tani.asama !== 'tamam' && tani.asama !== 'web' ? (
-        <AppText variant="etiket" color="solukMetin" style={styles.durum}>
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.durum}>
           {tani.asama === 'izin-verilmedi'
             ? 'Uzak bildirimler kapalı: telefon ayarlarından bu uygulamaya bildirim izni ver.'
             : tani.asama === 'gercek-cihaz-degil'
@@ -171,18 +180,22 @@ export default function EgitimPlaniScreen() {
 
       {izinYok ? (
         <Pressable
-          style={({ pressed }) => [styles.testBtn, pressed && styles.pressed]}
+          style={({ pressed }) => [styles.testBtn, gece && styles.testBtnGece, pressed && styles.pressed]}
           onPress={() => void Linking.openSettings()}
           accessibilityRole="button">
-          <MaterialCommunityIcons name="cog-outline" size={18} color={Palette.lacivert} />
-          <AppText variant="kucuk" color="lacivert" bold>
+          <MaterialCommunityIcons
+            name="cog-outline"
+            size={18}
+            color={gece ? Palette.altinParlak : Palette.lacivert}
+          />
+          <AppText variant="kucuk" color={gece ? 'altinParlak' : 'lacivert'} bold>
             Bildirim ayarlarını aç
           </AppText>
         </Pressable>
       ) : null}
 
       <Pressable
-        style={({ pressed }) => [styles.kaydet, pressed && styles.pressed, kaydediyor && styles.pasif]}
+        style={({ pressed }) => [styles.kaydet, gece && styles.kaydetGece, pressed && styles.pressed, kaydediyor && styles.pasif]}
         disabled={kaydediyor}
         onPress={() => void kaydet()}
         accessibilityRole="button">
@@ -196,12 +209,14 @@ export default function EgitimPlaniScreen() {
 }
 
 function SaatSatir({
+  gece,
   ikon,
   ad,
   saat,
   dakika,
   onDegis,
 }: {
+  gece: boolean;
   ikon: keyof typeof MaterialCommunityIcons.glyphMap;
   ad: string;
   saat: number;
@@ -211,36 +226,42 @@ function SaatSatir({
   return (
     <View style={styles.saatSatir}>
       <View style={styles.adSatir}>
-        <MaterialCommunityIcons name={ikon} size={20} color={Palette.lacivert} />
-        <AppText variant="govde" bold>
+        <MaterialCommunityIcons
+          name={ikon}
+          size={20}
+          color={gece ? Palette.altinParlak : Palette.lacivert}
+        />
+        <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'}>
           {ad}
         </AppText>
-        <AppText variant="govde" bold color="altinKoyu" style={styles.saatBuyuk}>
+        <AppText variant="govde" bold color={gece ? 'altinParlak' : 'altinKoyu'} style={styles.saatBuyuk}>
           {ssMM(saat, dakika)}
         </AppText>
       </View>
       <View style={styles.saatKontrol}>
         <View style={styles.saatGrup}>
           <Stepper
+            gece={gece}
             deger={saat}
             etiket={pad(saat)}
             ad={`${ad} saati`}
             onAzalt={() => onDegis((saat + 23) % 24, dakika)}
             onArtir={() => onDegis((saat + 1) % 24, dakika)}
           />
-          <AppText variant="etiket" color="solukMetin">
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
             saat
           </AppText>
         </View>
         <View style={styles.saatGrup}>
           <Stepper
+            gece={gece}
             deger={dakika}
             etiket={pad(dakika)}
             ad={`${ad} dakikası`}
             onAzalt={() => onDegis(saat, (dakika + 55) % 60)}
             onArtir={() => onDegis(saat, (dakika + 5) % 60)}
           />
-          <AppText variant="etiket" color="solukMetin">
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
             dakika (5'er)
           </AppText>
         </View>
@@ -250,11 +271,13 @@ function SaatSatir({
 }
 
 function Stepper({
+  gece,
   etiket,
   ad,
   onAzalt,
   onArtir,
 }: {
+  gece: boolean;
   deger: number;
   etiket: string;
   ad?: string;
@@ -264,18 +287,18 @@ function Stepper({
   return (
     <View style={styles.stepper}>
       <Pressable
-        style={({ pressed }) => [styles.stepBtn, pressed && styles.pressed]}
+        style={({ pressed }) => [styles.stepBtn, gece && styles.stepBtnGece, pressed && styles.pressed]}
         onPress={onAzalt}
         hitSlop={10}
         accessibilityRole="button"
         accessibilityLabel={ad ? `${ad} azalt` : 'Azalt'}>
         <MaterialCommunityIcons name="minus" size={20} color={Palette.beyaz} />
       </Pressable>
-      <AppText variant="govde" bold style={styles.stepDeger}>
+      <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'} style={styles.stepDeger}>
         {etiket}
       </AppText>
       <Pressable
-        style={({ pressed }) => [styles.stepBtn, pressed && styles.pressed]}
+        style={({ pressed }) => [styles.stepBtn, gece && styles.stepBtnGece, pressed && styles.pressed]}
         onPress={onArtir}
         hitSlop={10}
         accessibilityRole="button"
@@ -373,5 +396,26 @@ const styles = StyleSheet.create({
   },
   pasif: {
     opacity: 0.6,
+  },
+  // Gece dili (bayraklı)
+  kartGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderColor: 'rgba(126,205,218,0.5)',
+  },
+  ayracGece: {
+    backgroundColor: 'rgba(126,205,218,0.3)',
+  },
+  testBtnGece: {
+    borderColor: '#F3C24A',
+  },
+  kaydetGece: {
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderWidth: 1,
+    borderColor: '#F3C24A',
+  },
+  stepBtnGece: {
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.7)',
   },
 });

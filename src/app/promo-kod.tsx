@@ -8,12 +8,14 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { useAuth } from '@/lib/auth-context';
 import { indirimKoduKullan } from '@/lib/indirim';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { promoKodKullan } from '@/lib/promo';
 import { useUyelik } from '@/lib/uyelik-context';
 
 /** Promosyon kodu ekranı — kod gir → premium aç. Sunucu doğrular, başarılıysa üyelik yenilenir. */
 export default function PromoKodScreen() {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   const { kullanici } = useAuth();
   const { yenile } = useUyelik();
 
@@ -56,13 +58,17 @@ export default function PromoKodScreen() {
   // Giriş yoksa: kod kullanmak için hesap gerekir.
   if (!kullanici) {
     return (
-      <Screen title="Promosyon Kodu" onGeri={() => router.back()}>
+      <Screen title="Promosyon Kodu" onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
         <View style={styles.merkez}>
-          <MaterialCommunityIcons name="account-lock-outline" size={56} color={Palette.solukMetin} />
-          <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+          <MaterialCommunityIcons
+            name="account-lock-outline"
+            size={56}
+            color={gece ? Palette.kartMetinIkincil : Palette.solukMetin}
+          />
+          <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
             Kodu kullanmak için önce giriş yapmalısın.
           </AppText>
-          <Pressable style={styles.buton} onPress={() => router.push('/giris')}>
+          <Pressable style={[styles.buton, gece && styles.butonGece]} onPress={() => router.push('/giris')}>
             <AppText variant="govde" color="beyaz" bold>
               Giriş Yap
             </AppText>
@@ -76,19 +82,19 @@ export default function PromoKodScreen() {
   if (basari) {
     const indirimMi = basari.tip === 'indirim';
     return (
-      <Screen title="Promosyon Kodu" onGeri={() => router.back()}>
+      <Screen title="Promosyon Kodu" onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
         <View style={styles.merkez}>
           <MaterialCommunityIcons name="check-decagram" size={64} color={Palette.yesil} />
-          <AppText variant="baslik" bold style={styles.ortala}>
+          <AppText variant="baslik" bold color={gece ? 'beyaz' : 'anaMetin'} style={styles.ortala}>
             {indirimMi ? `%${basari.yuzde} indirim tanımlandı` : 'Kod kabul edildi 🎖️'}
           </AppText>
-          <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+          <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
             {indirimMi
               ? 'Yıllık ya da ömür boyu üyeliği seçtiğinde indirim fiyatına yansıyacak.'
               : 'Erişimin açıldı. İyi çalışmalar!'}
           </AppText>
           <Pressable
-            style={styles.buton}
+            style={[styles.buton, gece && styles.butonGece]}
             onPress={() => (indirimMi ? router.replace('/paywall') : router.back())}>
             <AppText variant="govde" color="beyaz" bold>
               {indirimMi ? 'Yıllık Planı Gör' : 'Tamam'}
@@ -102,21 +108,21 @@ export default function PromoKodScreen() {
   const pasif = kod.trim().length === 0 || gonderiliyor;
 
   return (
-    <Screen title="Promosyon Kodu" onGeri={() => router.back()}>
-      <AppText variant="govde" color="solukMetin">
+    <Screen title="Promosyon Kodu" onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
+      <AppText variant="govde" color={gece ? 'beyaz' : 'solukMetin'}>
         Elindeki promosyon veya indirim kodunu gir. Bedava erişim kodları anında açar; indirim
         kodları üyelik fiyatına yansır.
       </AppText>
 
       <TextInput
-        style={styles.giris}
+        style={[styles.giris, gece && styles.girisGece]}
         value={kod}
         onChangeText={(t) => {
           setKod(t.toUpperCase());
           if (hata) setHata(null);
         }}
         placeholder="ÖRN: JSPS2026"
-        placeholderTextColor={Palette.solukMetin}
+        placeholderTextColor={gece ? 'rgba(226,236,240,0.5)' : Palette.solukMetin}
         autoCapitalize="characters"
         autoCorrect={false}
         autoComplete="off"
@@ -127,12 +133,15 @@ export default function PromoKodScreen() {
       />
 
       {hata ? (
-        <AppText variant="kucuk" color="kirmizi" bold>
+        <AppText variant="kucuk" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold>
           {hata}
         </AppText>
       ) : null}
 
-      <Pressable style={[styles.buton, pasif && styles.butonPasif]} disabled={pasif} onPress={() => void kullan()}>
+      <Pressable
+        style={[styles.buton, gece && styles.butonGece, pasif && styles.butonPasif]}
+        disabled={pasif}
+        onPress={() => void kullan()}>
         {gonderiliyor ? (
           <ActivityIndicator color={Palette.beyaz} />
         ) : (
@@ -176,5 +185,16 @@ const styles = StyleSheet.create({
   },
   ortala: {
     textAlign: 'center',
+  },
+  // Gece dili (bayraklı)
+  girisGece: {
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderColor: 'rgba(126,205,218,0.5)',
+    color: Palette.beyaz,
+  },
+  butonGece: {
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderWidth: 1,
+    borderColor: '#F3C24A',
   },
 });

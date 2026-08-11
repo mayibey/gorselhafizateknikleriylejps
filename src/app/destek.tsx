@@ -16,6 +16,7 @@ import {
   yeniTalep,
 } from '@/lib/destek';
 import { destekGoruldu } from '@/lib/destek-okundu';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 type Goruntu = 'liste' | 'thread' | 'yeni';
 
@@ -34,6 +35,7 @@ const DURUM_ETIKET: Record<DestekDurum, string> = {
 /** Destek / Taleplerim — tek ekranda üç görünüm: talep listesi · thread · yeni talep formu. */
 export default function DestekScreen() {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   const [goruntu, setGoruntu] = useState<Goruntu>('liste');
   const [talepler, setTalepler] = useState<DestekTalebi[] | null>(null);
   const [seciliTalep, setSeciliTalep] = useState<DestekTalebi | null>(null);
@@ -75,7 +77,7 @@ export default function DestekScreen() {
         : 'Destek / Taleplerim';
 
   return (
-    <Screen title={baslik} onGeri={geriBas}>
+    <Screen title={baslik} onGeri={geriBas} koyu={gece} kompaktBaslik={gece}>
       {goruntu === 'yeni' ? (
         <YeniTalepForm
           onGonderildi={async () => {
@@ -110,9 +112,12 @@ function ListeGorunum({
   onYeni: () => void;
   onSec: (t: DestekTalebi) => void;
 }) {
+  const gece = useKisiselOzellik('talim-mevzuata');
   return (
     <>
-      <Pressable style={({ pressed }) => [styles.yeniBtn, pressed && styles.pressed]} onPress={onYeni}>
+      <Pressable
+        style={({ pressed }) => [styles.yeniBtn, gece && styles.btnGece, pressed && styles.pressed]}
+        onPress={onYeni}>
         <MaterialCommunityIcons name="plus-circle-outline" size={22} color={Palette.beyaz} />
         <AppText variant="govde" color="beyaz" bold>
           Yeni Talep
@@ -121,8 +126,12 @@ function ListeGorunum({
 
       {talepler === null ? null : talepler.length === 0 ? (
         <View style={styles.bos}>
-          <MaterialCommunityIcons name="lifebuoy" size={44} color={Palette.solukMetin} />
-          <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+          <MaterialCommunityIcons
+            name="lifebuoy"
+            size={44}
+            color={gece ? Palette.kartMetinIkincil : Palette.solukMetin}
+          />
+          <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
             Henüz bir talebin yok. Bir sorun veya sorun için "Yeni Talep" ile bize yazabilirsin.
           </AppText>
         </View>
@@ -130,15 +139,20 @@ function ListeGorunum({
         talepler.map((t) => (
           <Pressable
             key={t.id}
-            style={({ pressed }) => [styles.kart, pressed && styles.pressed]}
+            style={({ pressed }) => [styles.kart, gece && styles.kartGece, pressed && styles.pressed]}
             onPress={() => onSec(t)}>
             <View style={styles.kartUst}>
-              <AppText variant="govde" bold style={styles.konu} numberOfLines={2}>
+              <AppText
+                variant="govde"
+                bold
+                color={gece ? 'beyaz' : 'anaMetin'}
+                style={styles.konu}
+                numberOfLines={2}>
                 {t.konu}
               </AppText>
               <DurumRozet durum={t.durum} />
             </View>
-            <AppText variant="kucuk" color="solukMetin">
+            <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
               {tarihBicim(t.guncelleme_at)}
             </AppText>
           </Pressable>
@@ -158,6 +172,7 @@ function ThreadGorunum({
   mesajlar: DestekMesaj[] | null;
   onYenile: () => void;
 }) {
+  const gece = useKisiselOzellik('talim-mevzuata');
   const [metin, setMetin] = useState('');
   const [gonderiliyor, setGonderiliyor] = useState(false);
   const [hata, setHata] = useState(false);
@@ -185,43 +200,50 @@ function ThreadGorunum({
     <>
       <View style={styles.threadUst}>
         <DurumRozet durum={talep.durum} />
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
           {tarihBicim(talep.created_at)}
         </AppText>
       </View>
 
       {mesajlar === null ? (
-        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+        <ActivityIndicator
+          color={gece ? Palette.altinParlak : Palette.lacivert}
+          style={styles.yukleniyor}
+        />
       ) : (
         mesajlar.map((m) => <Baloncuk key={m.id} mesaj={m} />)
       )}
 
       {kapali ? (
-        <View style={styles.kapaliNot}>
-          <MaterialCommunityIcons name="lock-check-outline" size={22} color={Palette.solukMetin} />
-          <AppText variant="kucuk" color="solukMetin" style={styles.kapaliNotYazi}>
+        <View style={[styles.kapaliNot, gece && styles.kartGece]}>
+          <MaterialCommunityIcons
+            name="lock-check-outline"
+            size={22}
+            color={gece ? Palette.kartMetinIkincil : Palette.solukMetin}
+          />
+          <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.kapaliNotYazi}>
             Bu talep kapatıldı. Yeni bir sorunun olursa yeni talep açabilirsin.
           </AppText>
         </View>
       ) : (
         <>
           <TextInput
-            style={styles.girdi}
+            style={[styles.girdi, gece && styles.girdiGece]}
             value={metin}
             onChangeText={setMetin}
             placeholder="Cevap yaz…"
-            placeholderTextColor={Palette.solukMetin}
+            placeholderTextColor={gece ? 'rgba(226,236,240,0.5)' : Palette.solukMetin}
             multiline
             textAlignVertical="top"
             editable={!gonderiliyor}
           />
           {hata ? (
-            <AppText variant="kucuk" color="kirmizi" bold>
+            <AppText variant="kucuk" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold>
               Gönderilemedi, tekrar dene.
             </AppText>
           ) : null}
           <Pressable
-            style={[styles.gonderBtn, gonderPasif && styles.pasif]}
+            style={[styles.gonderBtn, gece && styles.btnGece, gonderPasif && styles.pasif]}
             disabled={gonderPasif}
             onPress={() => void gonder()}>
             {gonderiliyor ? (
@@ -240,6 +262,7 @@ function ThreadGorunum({
 
 /** (c) YENİ TALEP formu — konu + ilk mesaj + gönder. */
 function YeniTalepForm({ onGonderildi }: { onGonderildi: () => void | Promise<void> }) {
+  const gece = useKisiselOzellik('talim-mevzuata');
   const [konu, setKonu] = useState('');
   const [mesaj, setMesaj] = useState('');
   const [gonderiliyor, setGonderiliyor] = useState(false);
@@ -265,41 +288,41 @@ function YeniTalepForm({ onGonderildi }: { onGonderildi: () => void | Promise<vo
 
   return (
     <>
-      <AppText variant="etiket" color="solukMetin" bold>
+      <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
         KONU
       </AppText>
       <TextInput
-        style={styles.konuGirdi}
+        style={[styles.konuGirdi, gece && styles.girdiGece]}
         value={konu}
         onChangeText={setKonu}
         placeholder="Kısa bir başlık"
-        placeholderTextColor={Palette.solukMetin}
+        placeholderTextColor={gece ? 'rgba(226,236,240,0.5)' : Palette.solukMetin}
         editable={!gonderiliyor}
         maxLength={120}
       />
 
-      <AppText variant="etiket" color="solukMetin" bold style={styles.aralik}>
+      <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold style={styles.aralik}>
         MESAJ
       </AppText>
       <TextInput
-        style={styles.girdi}
+        style={[styles.girdi, gece && styles.girdiGece]}
         value={mesaj}
         onChangeText={setMesaj}
         placeholder="Sorununu veya önerini yaz…"
-        placeholderTextColor={Palette.solukMetin}
+        placeholderTextColor={gece ? 'rgba(226,236,240,0.5)' : Palette.solukMetin}
         multiline
         textAlignVertical="top"
         editable={!gonderiliyor}
       />
 
       {hata ? (
-        <AppText variant="kucuk" color="kirmizi" bold>
+        <AppText variant="kucuk" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold>
           Gönderilemedi, tekrar dene.
         </AppText>
       ) : null}
 
       <Pressable
-        style={[styles.gonderBtn, gonderPasif && styles.pasif]}
+        style={[styles.gonderBtn, gece && styles.btnGece, gonderPasif && styles.pasif]}
         disabled={gonderPasif}
         onPress={() => void gonder()}>
         {gonderiliyor ? (
@@ -315,15 +338,24 @@ function YeniTalepForm({ onGonderildi }: { onGonderildi: () => void | Promise<vo
 }
 
 function Baloncuk({ mesaj }: { mesaj: DestekMesaj }) {
+  const gece = useKisiselOzellik('talim-mevzuata');
   const kullanici = mesaj.gonderen === 'kullanici';
   return (
     <View style={[styles.baloncukSarma, kullanici ? styles.sag : styles.sol]}>
-      <View style={[styles.baloncuk, kullanici ? styles.baloncukKullanici : styles.baloncukAdmin]}>
-        <AppText variant="kucuk" color={kullanici ? 'beyaz' : 'anaMetin'}>
+      <View
+        style={[
+          styles.baloncuk,
+          kullanici ? styles.baloncukKullanici : styles.baloncukAdmin,
+          gece && (kullanici ? styles.baloncukKullaniciGece : styles.kartGece),
+        ]}>
+        <AppText variant="kucuk" color={kullanici || gece ? 'beyaz' : 'anaMetin'}>
           {mesaj.metin}
         </AppText>
       </View>
-      <AppText variant="etiket" color="solukMetin" style={kullanici ? styles.ortala : undefined}>
+      <AppText
+        variant="etiket"
+        color={gece ? 'kartMetinIkincil' : 'solukMetin'}
+        style={kullanici ? styles.ortala : undefined}>
         {kullanici ? 'Sen' : 'Destek'} · {tarihBicim(mesaj.created_at)}
       </AppText>
     </View>
@@ -331,10 +363,19 @@ function Baloncuk({ mesaj }: { mesaj: DestekMesaj }) {
 }
 
 function DurumRozet({ durum }: { durum: DestekDurum }) {
+  const gece = useKisiselOzellik('talim-mevzuata');
+  // Gece: amber/soluk koyu zeminde kaybolur → parlak karşılıkları.
+  const renk: PaletteColor = gece
+    ? durum === 'acik'
+      ? 'altinParlak'
+      : durum === 'cevaplandi'
+        ? 'yesil'
+        : 'kartMetinIkincil'
+    : DURUM_RENK[durum];
   return (
-    <View style={styles.rozet}>
-      <View style={[styles.rozetNokta, { backgroundColor: Palette[DURUM_RENK[durum]] }]} />
-      <AppText variant="etiket" color={DURUM_RENK[durum]} bold>
+    <View style={[styles.rozet, gece && styles.rozetGece]}>
+      <View style={[styles.rozetNokta, { backgroundColor: Palette[renk] }]} />
+      <AppText variant="etiket" color={renk} bold>
         {DURUM_ETIKET[durum]}
       </AppText>
     </View>
@@ -486,5 +527,31 @@ const styles = StyleSheet.create({
   },
   kapaliNotYazi: {
     flex: 1,
+  },
+  // Gece dili (bayraklı)
+  kartGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderColor: 'rgba(126,205,218,0.5)',
+    borderWidth: 1,
+  },
+  btnGece: {
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderWidth: 1,
+    borderColor: '#F3C24A',
+  },
+  girdiGece: {
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderColor: 'rgba(126,205,218,0.5)',
+    color: Palette.beyaz,
+  },
+  baloncukKullaniciGece: {
+    backgroundColor: 'rgba(3,40,56,0.95)',
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.6)',
+  },
+  rozetGece: {
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.35)',
   },
 });
