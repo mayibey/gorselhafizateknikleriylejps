@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
@@ -254,54 +254,9 @@ export default function SicilScreen() {
                   <AppText variant="govde" bold color="beyaz">
                     Zayıf Mevziler
                   </AppText>
-                  <AppText variant="etiket" bold color="beyaz" style={styles.geceSolukYazi}>
-                    {zayifN > 0
-                      ? `${zayifN} konu tekrar bekliyor · tümünü gör`
-                      : 'Tekrar bekleyen konu yok'}
-                  </AppText>
                 </View>
-                <MaterialCommunityIcons
-                  name="chevron-right"
-                  size={22}
-                  color="rgba(226,236,240,0.75)"
-                />
+                <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinParlak} />
               </View>
-              {zayif && zayif.liste.length > 0 ? (
-                <>
-                  {zayif.liste.slice(0, 3).map((z) => (
-                    <View key={z.card.id} style={styles.zayifSatir}>
-                      <AppText variant="kucuk" bold color="beyaz" style={styles.zayifAd} numberOfLines={1}>
-                        {maddeEtiket(z.card.madde_no, z.card.baslik)}
-                      </AppText>
-                      <AppText variant="etiket" bold color="altinParlak">
-                        ×{z.yanlisSayisi}
-                      </AppText>
-                    </View>
-                  ))}
-                  <Pressable
-                    style={({ pressed }) => [styles.zayifCta, pressed && styles.pressed]}
-                    onPress={(e) => {
-                      e.stopPropagation();
-                      router.push({ pathname: '/akis', params: { mod: 'zayif' } });
-                    }}
-                    accessibilityRole="button"
-                    accessibilityLabel="Zayıf konuları çalış">
-                    <MaterialCommunityIcons name="book-open-variant" size={18} color={Palette.lacivert} />
-                    <View>
-                      <AppText variant="kucuk" bold color="lacivert">
-                        Zayıf Konuları Çalış
-                      </AppText>
-                      <AppText variant="etiket" color="lacivert">
-                        {zayifN} kart · yaklaşık {zayifN} dk · kart akışı açılır
-                      </AppText>
-                    </View>
-                  </Pressable>
-                </>
-              ) : (
-                <AppText variant="kucuk" bold color="beyaz" style={styles.geceSolukYazi}>
-                  Henüz zayıf mevzu bulunmuyor — Tatbikatta kendini dene.
-                </AppText>
-              )}
             </Pressable>
           ) : (
           <View style={styles.istatistikKart}>
@@ -423,6 +378,7 @@ export default function SicilScreen() {
 // Dokununca altında kişisel bilgi + üyelik detayı (mevcut gomulu bileşenler) açılır.
 
 function KunyeBandi() {
+  const router = useRouter();
   const { kullanici, hazir } = useAuth();
   const { aktifHaklar } = useUyelik();
   const { brans } = useBrans();
@@ -474,23 +430,24 @@ function KunyeBandi() {
         accessibilityRole="button"
         accessibilityLabel="Künye — kişisel bilgi ve üyelik detayını aç/kapat">
         <View style={styles.kunyeUst}>
-          <View style={styles.kunyeAvatar}>
-            <MaterialCommunityIcons name="account" size={26} color={Palette.altin} />
-          </View>
+          <Image
+            source={require('../../../assets/images/mock-arma.webp')}
+            style={styles.kunyeAvatarGorsel}
+          />
           <View style={styles.kunyeAdBlok}>
             <AppText variant="baslik" bold color="beyaz" numberOfLines={1}>
               {adSoyad || 'Hesabım'}
             </AppText>
             <View style={styles.kunyeGorevSatir}>
               {gorevSatiri ? (
-                <AppText variant="etiket" color="altinAcik2" numberOfLines={1} style={styles.kunyeGorev}>
+                <AppText variant="etiket" bold color="altinParlak" numberOfLines={1} style={styles.kunyeGorev}>
                   {gorevSatiri}
                 </AppText>
               ) : null}
               {muhur ? (
-                <View style={styles.kunyeMuhur}>
-                  <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altin} />
-                  <AppText variant="etiket" bold color="altinAcik2">
+                <View style={[styles.kunyeMuhur, styles.muhurKapsul]}>
+                  <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altinParlak} />
+                  <AppText variant="etiket" bold color="altinParlak">
                     {muhur}
                   </AppText>
                 </View>
@@ -506,29 +463,35 @@ function KunyeBandi() {
         <View style={styles.kunyeAyrac} />
         <View style={styles.kunyeIstSatir}>
           <View style={styles.kunyeIst}>
-            <AppText variant="dev" bold color="altinAcik2">
+            <AppText variant="dev" bold color="altinParlak">
               %{hazirlik ?? 0}
             </AppText>
-            <AppText variant="etiket" color="kenarlik">
+            <AppText variant="etiket" bold color="beyaz" style={styles.kunyeIstEtiket}>
               İlerleme
             </AppText>
           </View>
+          <View style={styles.kunyeDikey} />
           <View style={styles.kunyeIst}>
-            <AppText variant="dev" bold color="altinAcik2">
+            <AppText variant="dev" bold color="altinParlak">
               {streak === null || streak === 0 ? '—' : streak}
             </AppText>
-            <AppText variant="etiket" color="kenarlik">
+            <AppText variant="etiket" bold color="beyaz" style={styles.kunyeIstEtiket}>
               Çalışma serisi
             </AppText>
           </View>
-          <View style={styles.kunyeIst}>
-            <AppText variant="dev" bold color="altinAcik2">
+          <View style={styles.kunyeDikey} />
+          <Pressable
+            style={styles.kunyeIst}
+            onPress={() => router.push('/zayif-mevziler')}
+            accessibilityRole="button"
+            accessibilityLabel="Zayıf mevziler">
+            <AppText variant="dev" bold color="altinParlak">
               {bekleyen}
             </AppText>
-            <AppText variant="etiket" color="kenarlik">
+            <AppText variant="etiket" bold color="beyaz" style={styles.kunyeIstEtiket}>
               Zayıf mevzi
             </AppText>
-          </View>
+          </Pressable>
         </View>
       </Pressable>
       {acik ? (
@@ -1509,6 +1472,29 @@ function Stat({
 }
 
 const styles = StyleSheet.create({
+  kunyeAvatarGorsel: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    borderWidth: 1.5,
+    borderColor: '#F3C24A',
+  },
+  kunyeDikey: {
+    width: 1,
+    alignSelf: 'stretch',
+    marginVertical: 4,
+    backgroundColor: 'rgba(240,183,51,0.35)',
+  },
+  kunyeIstEtiket: {
+    opacity: 0.9,
+  },
+  muhurKapsul: {
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.8)',
+    borderRadius: 999,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 2,
+  },
   istatistikKartGece: {
     backgroundColor: 'rgba(3,47,69,0.88)',
     borderColor: 'rgba(126,205,218,0.5)',
@@ -1658,10 +1644,10 @@ const styles = StyleSheet.create({
   },
   // ASKERİ KÜNYE BANDI — lacivert kimlik kartı (Karargah geri sayımıyla aynı aile).
   kunye: {
-    backgroundColor: Palette.lacivert,
-    borderColor: Palette.altinKoyu,
+    backgroundColor: 'rgba(3,40,56,0.5)',
+    borderColor: 'rgba(240,183,51,0.7)',
     borderWidth: 1,
-    borderRadius: Radius.l,
+    borderRadius: 18,
     padding: Spacing.three,
     gap: Spacing.two,
   },
