@@ -560,11 +560,13 @@ function SinematikHarita({
   // Uzun içerik: durak sayısı kadar uzar; en az bir ekran.
   const icerikY = Math.max(gorunurH, PAD_ALT + PAD_UST + Math.max(1, n - 1) * DURAK_ARA);
   const durakY = (i: number) => icerikY - PAD_ALT - i * DURAK_ARA; // i=0 altta (başlangıç)
-  // Global y → yol dilimi içi x: dilim üstü UZAK (eğri t=1), altı YAKIN (t=0). Yol her
-  // dilimde aynı S'i çizdiği için duraklar/araç bu fazla gerçek asfaltın üstüne oturur.
+  // Global y → yol dilimi içi x. Yol SEAMLESS akması için dilimler AYNALI tekrarlanır
+  // (bir düz, bir dikey-flip). Tek dilimlerde eğri de ters okunur ki araç/duraklar yine
+  // gerçek asfaltın üstüne otursun. Böylece ek yerinde yol-yola, gök-göğe değer.
   const fazX = (y: number) => {
+    const dilim = Math.floor(y / dilimH);
     const r = (((y % dilimH) + dilimH) % dilimH) / dilimH;
-    return yolNokta(1 - r).x;
+    return dilim % 2 !== 0 ? yolNokta(r).x : yolNokta(1 - r).x;
   };
   const y0 = durakY(0);
   const y1 = durakY(Math.max(0, n - 1));
@@ -619,12 +621,19 @@ function SinematikHarita({
           ref={scrollRef}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ height: icerikY }}>
-          {/* YOL — aynı dilim dikey tekrar (uzun yol). */}
+          {/* YOL — aynalı dikey tekrar (seamless sonsuz yol; tek dilimler dikey-flip). */}
           {Array.from({ length: tileN }, (_, k) => (
             <Image
               key={`yol-${k}`}
               source={gece ? YOL_GECE : YOL_GUNDUZ}
-              style={{ position: 'absolute', left: 0, top: k * dilimH, width: W, height: dilimH }}
+              style={{
+                position: 'absolute',
+                left: 0,
+                top: k * dilimH,
+                width: W,
+                height: dilimH,
+                transform: k % 2 !== 0 ? [{ scaleY: -1 }] : undefined,
+              }}
               contentFit="cover"
               pointerEvents="none"
             />
