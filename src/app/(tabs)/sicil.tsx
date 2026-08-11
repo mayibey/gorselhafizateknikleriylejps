@@ -1441,6 +1441,7 @@ export function ZayifBolum({
 /** Bölüm başlığı + ⓘ; dokununca altında sade bilgilendirici metin açılır. */
 function BolumBaslik({ baslik, bilgi }: { baslik: string; bilgi: string }) {
   const [acik, setAcik] = useState(false);
+  const gece = useKisiselOzellik('talim-mevzuata');
   return (
     <>
       <Pressable
@@ -1478,6 +1479,7 @@ function Stat({
   onPress?: () => void;
   aktif?: boolean;
 }) {
+  const gece = useKisiselOzellik('talim-mevzuata');
   const ic = (
     <>
       <AppText variant="baslik" bold>
