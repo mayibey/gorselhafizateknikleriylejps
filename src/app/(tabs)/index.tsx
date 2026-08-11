@@ -683,7 +683,14 @@ export default function KarargahScreen() {
                 ) : hicCalisilan ? (
                   /* İlk görev hedefi: 8 kartlık gözetleme turu. */
                   <EmirHalka tamam={0} toplam={8} />
-                ) : null}
+                ) : (
+                  /* Görev bitti: sağda denge unsuru — altın madalya (halkanın yerini alır). */
+                  <View style={styles.madalyon}>
+                    <View style={styles.madalyonIc}>
+                      <MaterialCommunityIcons name="medal" size={28} color={Palette.altinParlak} />
+                    </View>
+                  </View>
+                )}
               </View>
               {!bos ? (
                 /* Ref v4: çerçeveli meta alt-paneli — süre | dikey ayraç | son konu. */
@@ -1686,7 +1693,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden', // (kullanım dışı — kurdele dönemi)
   },
   emirPanelUst: {
-    paddingTop: 40, // plakalar kart çizgisine biner, içerik altından başlar
+    paddingTop: 54, // plaka kart içine 45px sarkıyor — içerik her durumda altında başlar (binme fixi)
     marginTop: 26, // plakaların üstteki sayaç alanına taşma payı
   },
   emirPlaka: {
