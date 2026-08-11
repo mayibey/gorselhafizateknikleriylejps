@@ -1714,7 +1714,7 @@ const styles = StyleSheet.create({
   },
   plakaKap: {
     position: 'absolute',
-    top: -9, // etiketle aynı hiza — kart çizgisine biner
+    top: -4, // başkan: 5 piksel aşağı
     left: 10,
     width: 218,
     height: 58,
