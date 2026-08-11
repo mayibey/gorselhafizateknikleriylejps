@@ -57,6 +57,8 @@ const ARKA_PLAN_ORAN = 1844 / 853;
 const YOL_GECE = require('../../assets/images/patika-yol-gece.webp');
 const YOL_GUNDUZ = require('../../assets/images/patika-yol-gunduz.webp');
 const PATIKA_ARAC = require('../../assets/images/patika-arac.webp');
+// expo-image'i Animated'e sar — araç konumu/titreşimi animasyonlanabilsin.
+const AnimatedImage = Animated.createAnimatedComponent(Image);
 // Arka plandaki asfalt yolun eğrisi — normalize (x soldan, y üstten). Bölümler bu eğri
 // boyunca dizilir (alt=başlangıç, üst=hedefe yakın). Görsel değişirse bu noktalar ayarlanır.
 const YOL_EGRI = [
@@ -427,6 +429,8 @@ export default function PatikaScreen() {
           dugumler={dugumler}
           aktifIndex={aktifIndex}
           kanunAd={kanunAd}
+          calisilanKart={calisilanKart}
+          toplamKart={toplamKart}
           onDugumBas={(id) => {
             const d = dugumler?.find((x) => x.bolum.id === id);
             Alert.alert(d?.bolum.ad ?? 'Bölüm', 'Ne kadarını çalışalım?', [
@@ -521,23 +525,57 @@ function SinematikHarita({
   onDugumBas,
   onDevam,
   kanunAd,
+  calisilanKart,
+  toplamKart,
 }: {
   dugumler: BolumDugum[];
   aktifIndex: number;
   onDugumBas: (bolumId: number) => void;
   onDevam: () => void;
   kanunAd: string | null;
+  calisilanKart: number;
+  toplamKart: number;
 }) {
   const { width: WW, height: WH } = useWindowDimensions();
   const W = Math.min(WW - Spacing.four * 2, 460);
-  const H = Math.round(Math.min(WH * 0.62, W * 1.18));
+  const H = Math.round(Math.min(WH * 0.66, W * 1.32));
   const gece = patikaGeceMi();
   const n = dugumler.length;
   const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
   const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
-  // Aktif bölümün araç konumu (yoksa yolun başı).
-  const aracT = aktifIndex >= 0 && n > 1 ? aktifIndex / (n - 1) : 0;
-  const aracP = yolNokta(aracT);
+  // ARAÇ KONUMU = gerçek ilerleme (çalışılan kart / toplam kart). Kart bitirdikçe araç
+  // yol boyunca öne kayar; bölüm değil, sürekli oran → "gerçekten ilerliyor" hissi.
+  const ilerleme = toplamKart > 0 ? Math.max(0.02, calisilanKart / toplamKart) : 0.02;
+
+  const AW = 100;
+  const AH = 88;
+  const aracAnim = useRef(new Animated.Value(ilerleme)).current;
+  const titre = useRef(new Animated.Value(0)).current;
+  // İlerleme değişince araç yeni konuma yumuşak kayar (ileri gider).
+  useEffect(() => {
+    Animated.timing(aracAnim, {
+      toValue: ilerleme,
+      duration: 1200,
+      easing: Easing.inOut(Easing.cubic),
+      useNativeDriver: false,
+    }).start();
+  }, [ilerleme, aracAnim]);
+  // Motor rölanti titreşimi — araç "duruyor ama çalışıyor" gibi hafif titrer.
+  useEffect(() => {
+    const l = Animated.loop(
+      Animated.sequence([
+        Animated.timing(titre, { toValue: 1, duration: 460, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
+        Animated.timing(titre, { toValue: 0, duration: 460, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
+      ]),
+    );
+    l.start();
+    return () => l.stop();
+  }, [titre]);
+
+  const inR = YOL_EGRI.map((_, i) => i / (YOL_EGRI.length - 1));
+  const aracLeft = aracAnim.interpolate({ inputRange: inR, outputRange: YOL_EGRI.map((p) => p.x * W - AW / 2) });
+  const aracTop = aracAnim.interpolate({ inputRange: inR, outputRange: YOL_EGRI.map((p) => p.y * H - AH * 0.6) });
+  const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2.5] });
 
   return (
     <>
@@ -548,29 +586,24 @@ function SinematikHarita({
           contentFit="cover"
           pointerEvents="none"
         />
-        {/* Okunurluk için hafif koyu tül (üst + alt). */}
         <View style={st.sahneTul} pointerEvents="none" />
 
         {/* Hedef bayrağı — yolun en uzak ucu. */}
-        <View style={[st.hedefRoz, { left: yolNokta(1).x * W - 10, top: yolNokta(1).y * H - 34 }]}>
-          <MaterialCommunityIcons name="flag-variant" size={20} color={Palette.altinParlak} />
-          <AppText variant="etiket" bold color="altinParlak" style={st.hedefYazi}>
-            JSPS
-          </AppText>
+        <View style={[st.hedefRoz, { left: yolNokta(1).x * W - 9, top: yolNokta(1).y * H - 30 }]}>
+          <MaterialCommunityIcons name="flag-variant" size={18} color={Palette.altinParlak} />
         </View>
 
-        {/* Bölüm durakları — yol eğrisine dizili. */}
+        {/* Bölüm durakları — yol eğrisine dizili SADE noktalar (tabela yok, yığılma yok). */}
         {dugumler.map((d, i) => {
-          const t = n === 1 ? 0 : i / (n - 1);
+          const t = n === 1 ? 0.06 : i / (n - 1);
           const p = yolNokta(t);
           const durum = durumCoz(d, i === aktifIndex);
-          const solda = p.x >= 0.5; // nokta sağdaysa tabela SOLA açılır
-          const yuzde = d.toplam > 0 ? Math.round((d.calisilan / d.toplam) * 100) : 0;
           return (
             <Pressable
               key={d.bolum.id}
               onPress={() => onDugumBas(d.bolum.id)}
               style={[st.durak, { left: p.x * W, top: p.y * H }]}
+              hitSlop={12}
               accessibilityRole="button"
               accessibilityLabel={`${d.bolum.ad} bölümü`}>
               <View
@@ -581,32 +614,29 @@ function SinematikHarita({
                   durum === 'baslanmadi' && st.durakKilit,
                 ]}>
                 {durum === 'tamam' ? (
-                  <MaterialCommunityIcons name="check-bold" size={12} color="#07334B" />
+                  <MaterialCommunityIcons name="check-bold" size={11} color="#07334B" />
                 ) : durum === 'baslanmadi' ? (
-                  <MaterialCommunityIcons name="lock" size={11} color="rgba(226,236,240,0.8)" />
-                ) : null}
-              </View>
-              <View style={[st.tabela, solda ? st.tabelaSol : st.tabelaSag]}>
-                <AppText variant="etiket" bold color="altinParlak" numberOfLines={1}>
-                  {String(i + 1).padStart(2, '0')} · {d.bolum.ad}
-                </AppText>
-                <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
-                  {d.toplam === 0 ? 'yakında' : `${d.calisilan}/${d.toplam} · %${yuzde}`}
-                </AppText>
+                  <MaterialCommunityIcons name="lock" size={10} color="rgba(226,236,240,0.85)" />
+                ) : (
+                  <AppText variant="etiket" bold color="lacivert">
+                    {i + 1}
+                  </AppText>
+                )}
               </View>
             </Pressable>
           );
         })}
 
-        {/* Aktif bölümde araç. */}
-        {aktif ? (
-          <Image
-            source={PATIKA_ARAC}
-            style={[st.arac, { left: aracP.x * W - 34, top: aracP.y * H - 30 }]}
-            contentFit="contain"
-            pointerEvents="none"
-          />
-        ) : null}
+        {/* ARAÇ — ilerleme oranına bağlı, yol boyunca kayan + motor titreşimi. */}
+        <AnimatedImage
+          source={PATIKA_ARAC}
+          contentFit="contain"
+          style={[
+            st.arac,
+            { width: AW, height: AH, left: aracLeft, top: aracTop, transform: [{ translateY: aracTitre }] },
+          ]}
+          pointerEvents="none"
+        />
       </View>
 
       {/* Alt panel — ŞU ANKİ MEVZİ + DEVAM ET. */}
