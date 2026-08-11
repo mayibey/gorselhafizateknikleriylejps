@@ -45,6 +45,7 @@ import { useKisiselOzellik } from '@/lib/ozellik';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
 import { EmirHalka, IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
+import { Image as ExpoImage } from 'expo-image';
 
 // Tatbikat/Oyun panel arka planları (sinematik gece; hedef+bayrak / satranç atı).
 const TATBIKAT_ARKA = require('../../../assets/images/tatbikat-arka.webp');
@@ -1075,7 +1076,7 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
-              <Image source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} resizeMode="cover" />
+              <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" />
               <LinearGradient
                 colors={['rgba(4,26,40,0.05)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
                 style={StyleSheet.absoluteFill}
@@ -1097,7 +1098,7 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Oyun Merkezi — oynayarak öğren">
-              <Image source={OYUN_ARKA} style={StyleSheet.absoluteFill} resizeMode="cover" />
+              <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" />
               <LinearGradient
                 colors={['rgba(4,26,40,0.05)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
                 style={StyleSheet.absoluteFill}
