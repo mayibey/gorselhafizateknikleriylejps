@@ -57,101 +57,35 @@ const ARKA_PLAN_ORAN = 1844 / 853;
 
 // ── SİNEMATİK PATİKA (bayraklı) — dağ yolu manzarası + yol eğrisine dizili bölümler + araç.
 const PATIKA_ARAC = require('../../assets/images/patika-arac.webp');
-// expo-image'i Animated'e sar — araç titreşimi animasyonlanabilsin.
+// Tek parça UZUN gerçek yol görseli (900×1800, oran 2:1). Ek yeri yok.
+const YOL_UZUN = require('../../assets/images/patika-yol-uzun.webp');
+const YOL_UZUN_ORAN = 1800 / 900;
+// expo-image'i Animated'e sar — dünya kaydırma + araç titreşimi animasyonlanabilsin.
 const AnimatedImage = Animated.createAnimatedComponent(Image);
-
-// ── SUBWAY-TARZI PERSPEKTİF YOL (bayraklı) — araç sabit, yol+duraklar ufuktan akar.
-// f: perspektif faktörü (0 = ufuk/uzak/küçük, 1 = yakın/alt/büyük). Yaklaşınca hızlanır (f²).
-function perspY(f: number, uY: number, tY: number): number {
-  const c = Math.max(0, Math.min(1, f));
-  return uY + (tY - uY) * (c * c);
-}
-function perspScale(f: number): number {
-  const c = Math.max(0, Math.min(1, f));
-  return 0.16 + c * c * 1.5;
-}
-
-/** Akan yol orta-çizgi segmenti — ufuktan öne perspektifle kayar (sonsuz, staggered loop). */
-function DashSeg({ i, adet, period, uY, tY, midX }: { i: number; adet: number; period: number; uY: number; tY: number; midX: number }) {
-  const v = useRef(new Animated.Value(0)).current;
-  useEffect(() => {
-    const a = Animated.loop(
-      Animated.timing(v, { toValue: 1, duration: period, delay: (i * period) / adet, easing: Easing.linear, useNativeDriver: false }),
-    );
-    a.start();
-    return () => a.stop();
-  }, [v, i, adet, period]);
-  const inR = [0, 0.25, 0.5, 0.75, 1];
-  const top = v.interpolate({ inputRange: inR, outputRange: inR.map((f) => perspY(f, uY, tY)) });
-  const sc = v.interpolate({ inputRange: inR, outputRange: inR.map((f) => perspScale(f)) });
-  const op = v.interpolate({ inputRange: [0, 0.12, 1], outputRange: [0, 0.85, 0.95] });
-  return (
-    <Animated.View
-      pointerEvents="none"
-      style={{ position: 'absolute', left: midX - 3, top, width: 6, height: 24, borderRadius: 3, backgroundColor: 'rgba(243,194,74,0.95)', opacity: op, transform: [{ scaleY: sc }] }}
-    />
-  );
-}
-
-/** Yol durağı — araç ilerledikçe (currentAnim) ufuktan öne akıp yaklaşır, geçilince kaybolur. */
-function DurakItem({
-  i,
-  currentAnim,
-  cs,
-  fArac,
-  df,
-  uY,
-  tY,
-  midX,
-  durum,
-  no,
-  onPress,
-}: {
-  i: number;
-  currentAnim: Animated.Value;
-  cs: number[];
-  fArac: number;
-  df: number;
-  uY: number;
-  tY: number;
-  midX: number;
-  durum: Durum;
-  no: number;
-  onPress: () => void;
-}) {
-  const fOf = (c: number) => fArac - (i - c) * df; // araç bu bölümdeyken(c) durağın f'si
-  const top = currentAnim.interpolate({ inputRange: cs, outputRange: cs.map((c) => perspY(fOf(c), uY, tY)) });
-  const sc = currentAnim.interpolate({ inputRange: cs, outputRange: cs.map((c) => perspScale(fOf(c))) });
-  const op = currentAnim.interpolate({
-    inputRange: cs,
-    outputRange: cs.map((c) => {
-      const f = fOf(c);
-      return f <= 0.03 || f >= 1.08 ? 0 : 1;
-    }),
-  });
-  return (
-    <Animated.View style={{ position: 'absolute', left: midX - 16, top, opacity: op, transform: [{ scale: sc }] }}>
-      <Pressable onPress={onPress} hitSlop={12} style={st.durakBas} accessibilityRole="button" accessibilityLabel={`Bölüm ${no}`}>
-        <View
-          style={[
-            st.durakNokta,
-            durum === 'tamam' && st.durakTamam,
-            durum === 'aktif' && st.durakAktif,
-            durum === 'baslanmadi' && st.durakKilit,
-          ]}>
-          {durum === 'tamam' ? (
-            <MaterialCommunityIcons name="check-bold" size={13} color="#07334B" />
-          ) : durum === 'baslanmadi' ? (
-            <MaterialCommunityIcons name="lock" size={12} color="rgba(226,236,240,0.9)" />
-          ) : (
-            <AppText variant="etiket" bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
-              {no}
-            </AppText>
-          )}
-        </View>
-      </Pressable>
-    </Animated.View>
-  );
+// Görseldeki gerçek asfalt yolun eğrisi — normalize (x soldan, y üstten), alt=başlangıç →
+// üst=ufuk/hedef. Araç bu eğri boyunca ilerler; kamera onu takip eder, arkada yol uzar.
+const YOL_EGRI = [
+  { x: 0.48, y: 0.98 },
+  { x: 0.43, y: 0.91 },
+  { x: 0.53, y: 0.84 },
+  { x: 0.57, y: 0.79 },
+  { x: 0.47, y: 0.71 },
+  { x: 0.44, y: 0.65 },
+  { x: 0.53, y: 0.59 },
+  { x: 0.55, y: 0.54 },
+  { x: 0.5, y: 0.49 },
+  { x: 0.52, y: 0.44 },
+  { x: 0.52, y: 0.39 },
+  { x: 0.53, y: 0.35 },
+];
+function yolNokta(t: number): { x: number; y: number } {
+  const s = Math.max(0, Math.min(1, t)) * (YOL_EGRI.length - 1);
+  const i = Math.min(YOL_EGRI.length - 2, Math.floor(s));
+  const f = s - i;
+  return {
+    x: YOL_EGRI[i].x + (YOL_EGRI[i + 1].x - YOL_EGRI[i].x) * f,
+    y: YOL_EGRI[i].y + (YOL_EGRI[i + 1].y - YOL_EGRI[i].y) * f,
+  };
 }
 
 // Çift bot izi sprite'ı (1254×1254, şeffaf): SOL yarı=sol ayak, SAĞ yarı=sağ ayak.
@@ -608,30 +542,30 @@ function SinematikHarita({
 }) {
   const { width: WW, height: WH } = useWindowDimensions();
   const W = Math.min(WW - Spacing.four * 2, 460);
-  const gorunurH = Math.round(Math.min(WH * 0.7, 660));
+  const H = Math.round(W * YOL_UZUN_ORAN); // tek uzun gerçek yol görselinin yüksekliği (kaydırılır)
+  const gorunurH = Math.round(Math.min(WH * 0.68, 640));
   const n = dugumler.length;
   const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
   const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
 
-  // Perspektif geometri: yol ufuktan (üst, dar) öne (alt, geniş) açılır.
-  const midX = Math.round(W / 2);
-  const uY = Math.round(gorunurH * 0.24);
-  const tY = Math.round(gorunurH * 1.02);
-  const gU = Math.round(W * 0.03);
-  const gT = Math.round(W * 0.34);
-  const fArac = 0.82; // aracın perspektif konumu (ön-alt, en büyük)
-  const df = 0.15; // duraklar arası perspektif adımı
-  const AW = 120;
-  const AH = 106;
+  const AW = 92;
+  const AH = 82;
+  // Görsel tam boyda (W×H) → yol eğrisi doğrudan piksele çevrilir.
+  const egriPx = (t: number) => {
+    const p = yolNokta(t);
+    return { x: p.x * W, y: p.y * H };
+  };
+  const ilerleme = toplamKart > 0 ? Math.max(0.02, calisilanKart / toplamKart) : 0.02;
+  const aracP = egriPx(ilerleme);
 
-  const current = Math.max(0, aktifIndex);
-  const cs = Array.from({ length: Math.max(2, n) }, (_, k) => k);
-  const currentAnim = useRef(new Animated.Value(current)).current;
+  const aracYv = useRef(new Animated.Value(ilerleme)).current;
   const titre = useRef(new Animated.Value(0)).current;
-  // Araç DURAK DURAK ilerler → currentAnim yeni bölüme yumuşak geçer, duraklar akıp yaklaşır.
+  const scrollRef = useRef<ScrollView>(null);
+  // Araç DÜNYADA sabit: bölüm bitince ilerleme noktasına yumuşak geçer, sonra orada DURUR.
+  // Kullanıcı yolu elle kaydırır; araç takip etmez, geride sabit kalır.
   useEffect(() => {
-    Animated.timing(currentAnim, { toValue: current, duration: 1600, easing: Easing.inOut(Easing.cubic), useNativeDriver: false }).start();
-  }, [current, currentAnim]);
+    Animated.timing(aracYv, { toValue: ilerleme, duration: 1500, easing: Easing.inOut(Easing.cubic), useNativeDriver: false }).start();
+  }, [ilerleme, aracYv]);
   // Motor rölanti titreşimi.
   useEffect(() => {
     const l = Animated.loop(
@@ -643,64 +577,94 @@ function SinematikHarita({
     l.start();
     return () => l.stop();
   }, [titre]);
-  const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2.5] });
-  const aracY = perspY(fArac, uY, tY);
-  const DASHN = 7;
+  // Açılışta aracın olduğu yere kaydır (sonra kullanıcı serbestçe gezer).
+  useEffect(() => {
+    const to = Math.max(0, aracP.y - gorunurH * 0.55);
+    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: to, animated: true }), 450);
+    return () => clearTimeout(id);
+  }, [aracP.y, gorunurH]);
+
+  // Araç konumu ilerleme (0..1) → gerçek yol eğrisi (örnek noktalarla yumuşak interpolate).
+  const ORNEK = 24;
+  const inRA = Array.from({ length: ORNEK + 1 }, (_, k) => k / ORNEK);
+  const aracLeft = aracYv.interpolate({ inputRange: inRA, outputRange: inRA.map((u) => egriPx(u).x - AW / 2) });
+  const aracTop = aracYv.interpolate({ inputRange: inRA, outputRange: inRA.map((u) => egriPx(u).y - AH * 0.62) });
+  const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2] });
 
   return (
     <>
       <View style={[st.sahne, { width: W, height: gorunurH }]}>
-        {/* Gece göğü */}
-        <LinearGradient colors={['#06233A', '#0B3A57', '#0A2B41']} style={StyleSheet.absoluteFill} pointerEvents="none" />
-        {/* Perspektif asfalt yol (ufuktan öne açılır) */}
-        <Svg width={W} height={gorunurH} style={StyleSheet.absoluteFill} pointerEvents="none">
-          <Defs>
-            <SvgGradient id="asf" x1="0" y1="0" x2="0" y2="1">
-              <Stop offset="0" stopColor="#0C1A28" />
-              <Stop offset="1" stopColor="#22323F" />
-            </SvgGradient>
-          </Defs>
-          <Polygon points={`${midX - gU},${uY} ${midX + gU},${uY} ${midX + gT},${tY} ${midX - gT},${tY}`} fill="url(#asf)" />
-          <Line x1={midX - gU} y1={uY} x2={midX - gT} y2={tY} stroke="rgba(230,238,242,0.5)" strokeWidth={2.5} />
-          <Line x1={midX + gU} y1={uY} x2={midX + gT} y2={tY} stroke="rgba(230,238,242,0.5)" strokeWidth={2.5} />
-        </Svg>
-        {/* Akan orta çizgi — ufuktan öne kayar (sonsuz "yol akıyor") */}
-        {Array.from({ length: DASHN }, (_, k) => (
-          <DashSeg key={k} i={k} adet={DASHN} period={2600} uY={uY} tY={tY} midX={midX} />
-        ))}
-        {/* Hedef bayrağı — ufukta (yolculuğun sonu) */}
-        <View style={{ position: 'absolute', left: midX - 9, top: uY - 22, alignItems: 'center' }} pointerEvents="none">
-          <MaterialCommunityIcons name="flag-variant" size={18} color={Palette.altinParlak} />
-        </View>
-        {/* KANUN DURAKLARI — ufuktan akıp araca yaklaşır; araç durak durak ilerler */}
-        {dugumler.map((d, i) => (
-          <DurakItem
-            key={d.bolum.id}
-            i={i}
-            currentAnim={currentAnim}
-            cs={cs}
-            fArac={fArac}
-            df={df}
-            uY={uY}
-            tY={tY}
-            midX={midX}
-            durum={durumCoz(d, i === aktifIndex)}
-            no={i + 1}
-            onPress={() => onDugumBas(d.bolum.id)}
-          />
-        ))}
-        {/* ARAÇ — sabit, ön-altta (en yakın/büyük), motor titreşimi */}
-        <Animated.View
-          style={[st.aracKap, { width: AW, height: AH, left: midX - AW / 2, top: aracY - AH * 0.66 }]}
-          pointerEvents="none">
-          <View style={st.far} pointerEvents="none" />
-          <AnimatedImage
-            source={PATIKA_ARAC}
-            contentFit="contain"
-            style={[st.aracImg, { transform: [{ translateY: aracTitre }] }]}
-            pointerEvents="none"
-          />
-        </Animated.View>
+        <ScrollView
+          ref={scrollRef}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ height: H }}>
+          {/* TEK UZUN gerçek yol görseli (ek yeri yok; elle kaydırılır, sona kadar). */}
+          <Image source={YOL_UZUN} style={{ width: W, height: H }} contentFit="cover" pointerEvents="none" />
+
+          {/* Hedef bayrağı — yolun ufuktaki ucu (yolculuğun sonu). */}
+          <View style={[st.hedefRoz, { left: egriPx(1).x - 9, top: egriPx(1).y - 24 }]}>
+            <MaterialCommunityIcons name="flag-variant" size={20} color={Palette.altinParlak} />
+          </View>
+
+          {/* KANUN DURAKLARI — gerçek yolun kıvrımına oturur. */}
+          {dugumler.map((d, i) => {
+            const t = n === 1 ? 0.06 : i / (n - 1);
+            const p = egriPx(t);
+            const durum = durumCoz(d, i === aktifIndex);
+            return (
+              <Pressable
+                key={d.bolum.id}
+                onPress={() => onDugumBas(d.bolum.id)}
+                style={[st.durak, { left: p.x, top: p.y }]}
+                hitSlop={12}
+                accessibilityRole="button"
+                accessibilityLabel={`${d.bolum.ad} bölümü`}>
+                <View
+                  style={[
+                    st.durakNokta,
+                    durum === 'tamam' && st.durakTamam,
+                    durum === 'aktif' && st.durakAktif,
+                    durum === 'baslanmadi' && st.durakKilit,
+                  ]}>
+                  {durum === 'tamam' ? (
+                    <MaterialCommunityIcons name="check-bold" size={12} color="#07334B" />
+                  ) : durum === 'baslanmadi' ? (
+                    <MaterialCommunityIcons name="lock" size={11} color="rgba(226,236,240,0.9)" />
+                  ) : (
+                    <AppText variant="etiket" bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
+                      {i + 1}
+                    </AppText>
+                  )}
+                </View>
+              </Pressable>
+            );
+          })}
+
+          {/* ARAÇ — gerçek yolun üstünde, DÜNYADA sabit (kullanıcı kaydırınca geride kalır). */}
+          <Animated.View
+            style={[st.aracKap, { width: AW, height: AH, left: aracLeft, top: aracTop }]}
+            pointerEvents="none">
+            <View style={st.far} pointerEvents="none" />
+            <AnimatedImage
+              source={PATIKA_ARAC}
+              contentFit="contain"
+              style={[st.aracImg, { transform: [{ translateY: aracTitre }] }]}
+              pointerEvents="none"
+            />
+          </Animated.View>
+        </ScrollView>
+
+        {/* Aracıma dön — nerede gezersen gez, aracın olduğu yere döndürür. */}
+        <Pressable
+          style={({ pressed }) => [st.konumBtn, pressed && st.basili]}
+          onPress={() => scrollRef.current?.scrollTo({ y: Math.max(0, aracP.y - gorunurH * 0.55), animated: true })}
+          accessibilityRole="button"
+          accessibilityLabel="Aracıma dön">
+          <MaterialCommunityIcons name="crosshairs-gps" size={15} color={Palette.altinParlak} />
+          <AppText variant="etiket" bold color="altinParlak">
+            Aracım
+          </AppText>
+        </Pressable>
       </View>
 
       {/* Alt panel — ŞU ANKİ MEVZİ + DEVAM ET. */}
