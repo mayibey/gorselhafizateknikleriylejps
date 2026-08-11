@@ -180,6 +180,22 @@ body{margin:0;min-height:100vh;background:#EDE7DA;color:var(--metin);
 .tile .ad{font-weight:800;font-size:16.5px;color:var(--lacivert);margin-bottom:2px}
 .tile .ac{font-size:13.5px;color:var(--soluk);line-height:1.45}
 .rz{display:none}
+/* Başlık yanı altın rozet + sağ kategori etiketi + ok (mock düzeni). */
+.tRoz{color:var(--altin);font-size:12px;margin-left:6px;vertical-align:middle}
+.tile .katEtk{flex:none;font-size:10px;font-weight:800;letter-spacing:.05em;color:var(--altinMetin);
+  border:1px solid var(--altin);border-radius:8px;padding:5px 9px;white-space:nowrap;text-align:center}
+.tile .tOk{flex:none;font-size:22px;line-height:1;color:var(--altin);font-weight:800}
+/* Kategori şeridi — yatay kaydırmalı, sayaçlı süzgeç. */
+.katSerit{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;margin:0 -2px;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none}
+.katSerit::-webkit-scrollbar{display:none}
+.katBtn{flex:none;min-width:94px;display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:11px 12px;border-radius:14px;border:1px solid var(--kenar);background:var(--kart);
+  cursor:pointer;font-family:inherit;transition:border-color .16s,background .16s}
+.katBtn.ac{border-color:var(--altin);background:var(--altinYuzey)}
+.katBtn .katIk{font-size:20px}
+.katBtn .katAd{font-size:12px;font-weight:800;color:var(--lacivert);white-space:nowrap}
+.katBtn .katSay{font-size:11px;color:var(--soluk)}
 
 /* ---------- düğmeler ---------- */
 .btn{border:none;border-radius:13px;padding:17px 15px;font-size:16.5px;font-weight:800;cursor:pointer;
@@ -1107,7 +1123,8 @@ addEventListener('resize',()=>{zerreKur();konfetiKur();});
 function ay(n){const y=Math.floor(n/12),a=n%12;return (y?y+' yıl':'')+(y&&a?' ':'')+(a?a+' ay':'')||'0';}
 
 const OYUNLAR=[
- /* EN ÜSTTE: bulmaca + bölüm haritası ile merkezdeki en dolu oyun. */
+ /* EN ÜSTTE: bulmaca + bölüm haritası ile merkezdeki en dolu oyun.
+    (Er Meydanı üreteç tarafından en başa eklenir — dis:'ermeydani' köprüsüyle.) */
  {g:'Öne Çıkanlar',id:'cengel',ad:'Çengel Bulmaca',ik:'🔡',rz:['ders','Puan'],ac:'Soruyu oku, cevabı harf harf kutulara yaz.'},
  {g:'Öne Çıkanlar',id:'dy',ad:'Doğru mu Yanlış mı',ik:'⚡',rz:['rek','Reklamlık'],ac:'İfade doğru mu yanlış mı? 60 saniyen var.'},
  {g:'Öne Çıkanlar',id:'milyoner',ad:'Rütbe Merdiveni',ik:'🎖️',rz:['rek','Reklamlık'],ac:'12 soruda er’den generale. Üç joker hakkın var.'},
@@ -1124,6 +1141,17 @@ const OYUNLAR=[
  {g:'Rekabet',id:'kusatma',ad:'Kuşatma',ik:'🏰',rz:['sos','Sosyal'],ac:'Kaleni 3 konudan kur, kuşat; sonra arkadaşın aynı kaleye girsin.'},
  {g:'Rekabet',id:'bayrak',ad:'Bayrak Yarışı',ik:'🚩',rz:['sos','Sosyal'],ac:'8 soruluk koşu. Süreni arkadaşına gönder, o kovalasın.'}
 ];
+
+/* Menü kategori şeridi — OYUNLAR'daki `g` alanına göre süzer. Sayılar otomatik. */
+const KATEGORILER=[
+  {k:'hepsi', ad:'Tümü', ik:'🎯'},
+  {k:'Gerçek Rakip', ad:'Gerçek Rakip', ik:'⚔️'},
+  {k:'Öne Çıkanlar', ad:'Öne Çıkanlar', ik:'⭐'},
+  {k:'Öğreten', ad:'Öğreten', ik:'🎓'},
+  {k:'Eğlence', ad:'Eğlence', ik:'😄'},
+  {k:'Rekabet', ad:'Rekabet', ik:'🏆'}
+];
+let menuFiltre='hepsi';
 
 /* Bağlantıyla gelen meydan okuma: ?meydan=KOD veya adres sonundaki /oyun/KOD parçası. */
 function meydanBaglantidanAc(){
@@ -1149,13 +1177,27 @@ function menu(){
     +'<span><b>Çıkmış sınav sorularından üretilmiştir</b><br>'
     +'Gerçek JSPS sorularıyla çalış — her sorunun kaynağı sonunda görünür.</span></div>'
     +'<div class="aciklamaS">Her oyunun sonunda dayandığı <b>madde metni</b> çıkar. Bilmiş ya da bilmemiş fark etmez — kaynağı görür.</div>';
-  let son='';
-  for(const o of OYUNLAR){
-    if(o.g!==son){h+=`<div class="grupBas">${o.g}</div>`;son=o.g;}
-    h+=`<button class="tile" data-id="${o.id}" style="--t:var(--altin)"><div class="ikon">${o.ik}</div>
-      <div class="yz"><div class="ad">${o.ad}${o.bekle?'<span class="bekle">sunucu bekliyor</span>':''}</div>
+  // KATEGORİ ŞERİDİ (yatay, sayaçlı) — dokununca liste o kategoriye süzülür.
+  h+='<div class="katSerit">';
+  for(const c of KATEGORILER){
+    const say=c.k==='hepsi'?OYUNLAR.length:OYUNLAR.filter(o=>o.g===c.k).length;
+    if(c.k!=='hepsi' && say===0) continue;
+    h+=`<button class="katBtn${menuFiltre===c.k?' ac':''}" data-kat="${c.k}">
+      <div class="katIk">${c.ik}</div><div class="katAd">${c.ad}</div>
+      <div class="katSay">${say} oyun</div></button>`;
+  }
+  h+='</div>';
+  // OYUN SATIRLARI — filtreye göre; her satır sağında kategori etiketi + ok.
+  const gorunen=OYUNLAR.filter(o=>menuFiltre==='hepsi'||o.g===menuFiltre);
+  for(const o of gorunen){
+    const etk=(o.g||'').toLocaleUpperCase('tr');
+    h+=`<button class="tile" data-id="${o.id}" style="--t:var(--altin)">
+      <div class="ikon">${o.ik}</div>
+      <div class="yz"><div class="ad">${o.ad}<span class="tRoz">★</span>${o.bekle?'<span class="bekle">sunucu bekliyor</span>':''}</div>
         <div class="ac">${o.ac}</div></div>
-      </button>`;
+      <div class="katEtk">${etk}</div>
+      <div class="tOk">›</div>
+    </button>`;
   }
   h+=`<div class="premSat">
       <span style="font-size:20px">${TEST_MODU?'🔓':'🔒'}</span>
@@ -1170,6 +1212,7 @@ function menu(){
       <div class="mkSat"><input id="mkKod" placeholder="bağlantıyı veya kodu yapıştır" autocomplete="off">
         <button id="mkGir">GİR</button></div></div>`;
   G().innerHTML=h;
+  [...document.querySelectorAll('.katBtn')].forEach(b=>b.onclick=()=>{ menuFiltre=b.dataset.kat; menu(); });
   [...document.querySelectorAll('.tile')].forEach(b=>b.onclick=()=>oyunAc(b.dataset.id));
   $('#premAnahtar').onclick=()=>{ testModuAyarla(!TEST_MODU); menu(); };
   $('#mkGir').onclick=()=>{
