@@ -2,7 +2,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Alert, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import Svg, { Circle, Defs, LinearGradient as SvgGradient, Path, Stop } from 'react-native-svg';
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
@@ -584,69 +584,22 @@ export default function KarargahScreen() {
             <View style={[styles.gecePanel, styles.emirPanelUst]}>
               {/* SOL PLAKA (mock birebir): FLAMA kesimli zemin — sağ kenar çapraz,
                   altın konturlu; kartın üst çizgisine BİNER (kopuk pill değil). */}
-              <View style={styles.emirPlaka} pointerEvents="none">
-                <Svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 186 56"
-                  preserveAspectRatio="none"
-                  style={StyleSheet.absoluteFill}>
-                  <Path
-                    d="M8,2 L170,2 L184,2 L152,54 L8,54 Q2,54 2,48 L2,8 Q2,2 8,2 Z"
-                    fill="#0B2F44"
-                    stroke="#F3C24A"
-                    strokeWidth={1.6}
-                  />
-                </Svg>
-                <View style={styles.plakaIc}>
-                  <View style={styles.plakaArma}>
-                    <MaterialCommunityIcons
-                      name={bos && hicCalisilan ? 'script-text-outline' : 'shield-star'}
-                      size={22}
-                      color={Palette.altinParlak}
-                    />
-                  </View>
-                  <View>
-                    <AppText variant="etiket" bold color="altinParlak" style={styles.plakaUst}>
-                      BUGÜNÜN
-                    </AppText>
-                    <AppText variant="baslik" bold color="beyaz" style={styles.plakaAlt}>
-                      EMRİ
-                    </AppText>
-                  </View>
-                </View>
-              </View>
+              {/* Mock'tan kesilen GERÇEK plaka (defne armalı) — %100 birebir. */}
+              <Image
+                source={require('../../../assets/images/mock-plaka-emri.webp')}
+                style={styles.emirPlakaGorsel}
+                resizeMode="stretch"
+                pointerEvents="none"
+              />
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
-                <View style={styles.zayifPlakaSar} pointerEvents="none">
-                  {/* KURDELE (SVG): uçları pahlı kırmızı şerit + altın kontur — düz kutu değil. */}
-                  <View style={styles.zayifKurdele}>
-                    <Svg
-                      width="100%"
-                      height="100%"
-                      viewBox="0 0 176 34"
-                      preserveAspectRatio="none"
-                      style={StyleSheet.absoluteFill}>
-                      <Defs>
-                        <SvgGradient id="zayifKG" x1="0" y1="0" x2="0" y2="1">
-                          <Stop offset="0" stopColor="#E8473A" />
-                          <Stop offset="1" stopColor="#9E170F" />
-                        </SvgGradient>
-                      </Defs>
-                      <Path
-                        d="M12,1 L174,1 L164,33 L2,33 Z"
-                        fill="url(#zayifKG)"
-                        stroke="#F3C24A"
-                        strokeWidth={1.5}
-                      />
-                    </Svg>
-                    <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
-                      ZAYIF MEVZİLER
-                    </AppText>
-                  </View>
-                  {/* Kıvrım: şerit kartın arkasına dolanıyormuş hissi veren koyu üçgen. */}
-                  <View style={styles.plakaKivrim} />
-                </View>
+                /* Mock'tan kesilen GERÇEK kurdele (saten kıvrımlar dahil) — %100 birebir. */
+                <Image
+                  source={require('../../../assets/images/mock-kurdele-zayif.webp')}
+                  style={styles.zayifKurdeleGorsel}
+                  resizeMode="stretch"
+                  pointerEvents="none"
+                />
               ) : bos && hicCalisilan ? (
                 /* Yeni kullanıcı: kırmızı değil ALTIN kurdele — İLK EMİR (mock). */
                 <View style={styles.zayifPlakaSar} pointerEvents="none">
@@ -1744,6 +1697,20 @@ const styles = StyleSheet.create({
     left: -2,
     width: 186,
     height: 56,
+  },
+  emirPlakaGorsel: {
+    position: 'absolute',
+    top: -18,
+    left: -2,
+    width: 189, // 600x200 kesitin 3:1 oranı
+    height: 63,
+  },
+  zayifKurdeleGorsel: {
+    position: 'absolute',
+    top: -14,
+    right: -6,
+    width: 168, // 442x126 kesitin ~3.5:1 oranı
+    height: 48,
   },
   plakaIc: {
     flex: 1,
