@@ -59,15 +59,20 @@ const YOL_GUNDUZ = require('../../assets/images/patika-yol-gunduz.webp');
 const PATIKA_ARAC = require('../../assets/images/patika-arac.webp');
 // expo-image'i Animated'e sar — araç konumu/titreşimi animasyonlanabilsin.
 const AnimatedImage = Animated.createAnimatedComponent(Image);
-// Arka plandaki asfalt yolun eğrisi — normalize (x soldan, y üstten). Bölümler bu eğri
-// boyunca dizilir (alt=başlangıç, üst=hedefe yakın). Görsel değişirse bu noktalar ayarlanır.
+// Arka plan görselinin doğal boyutu (patika-yol-*.webp) — cover kırpma hesabı için.
+const YOL_IMG_W = 828;
+const YOL_IMG_H = 869;
+// Asfalt yolun eğrisi — GÖRSELİN kendi koordinatında normalize (x soldan, y üstten),
+// alt=başlangıç → üst=hedef. Görseldeki gerçek yola oturur; cover kayması kodda düzeltilir.
 const YOL_EGRI = [
-  { x: 0.5, y: 0.95 },
-  { x: 0.63, y: 0.83 },
-  { x: 0.55, y: 0.72 },
-  { x: 0.44, y: 0.63 },
-  { x: 0.53, y: 0.55 },
-  { x: 0.49, y: 0.48 },
+  { x: 0.5, y: 0.97 },
+  { x: 0.57, y: 0.88 },
+  { x: 0.6, y: 0.79 },
+  { x: 0.5, y: 0.72 },
+  { x: 0.44, y: 0.65 },
+  { x: 0.5, y: 0.59 },
+  { x: 0.51, y: 0.54 },
+  { x: 0.5, y: 0.5 },
 ];
 function yolNokta(t: number): { x: number; y: number } {
   const s = Math.max(0, Math.min(1, t)) * (YOL_EGRI.length - 1);
@@ -540,6 +545,15 @@ function SinematikHarita({
   const W = Math.min(WW - Spacing.four * 2, 460);
   const H = Math.round(Math.min(WH * 0.66, W * 1.32));
   const gece = patikaGeceMi();
+  // COVER DÜZELTME: arka plan yüksekliğe ölçeklenip yatayda kırpılıyor. Yol eğrisi
+  // görselin kendi koordinatında; burada ekrandaki gerçek piksele çeviriyoruz ki
+  // duraklar/araç asfaltın TAM üstüne otursun (havada kalmasın).
+  const imgW = H * (YOL_IMG_W / YOL_IMG_H);
+  const kirpX = (imgW - W) / 2;
+  const egriPx = (t: number) => {
+    const p = yolNokta(t);
+    return { x: p.x * imgW - kirpX, y: p.y * H };
+  };
   const n = dugumler.length;
   const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
   const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
@@ -588,8 +602,8 @@ function SinematikHarita({
   }, [titre]);
 
   const inR = YOL_EGRI.map((_, i) => i / (YOL_EGRI.length - 1));
-  const aracLeft = aracAnim.interpolate({ inputRange: inR, outputRange: YOL_EGRI.map((p) => p.x * W - AW / 2) });
-  const aracTop = aracAnim.interpolate({ inputRange: inR, outputRange: YOL_EGRI.map((p) => p.y * H - AH * 0.6) });
+  const aracLeft = aracAnim.interpolate({ inputRange: inR, outputRange: inR.map((t) => egriPx(t).x - AW / 2) });
+  const aracTop = aracAnim.interpolate({ inputRange: inR, outputRange: inR.map((t) => egriPx(t).y - AH * 0.6) });
   const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2.5] });
 
   return (
@@ -604,21 +618,21 @@ function SinematikHarita({
         <View style={st.sahneTul} pointerEvents="none" />
 
         {/* Hedef bayrağı — yolun en uzak ucu. */}
-        <View style={[st.hedefRoz, { left: yolNokta(1).x * W - 9, top: yolNokta(1).y * H - 30 }]}>
+        <View style={[st.hedefRoz, { left: egriPx(1).x - 9, top: egriPx(1).y - 30 }]}>
           <MaterialCommunityIcons name="flag-variant" size={18} color={Palette.altinParlak} />
         </View>
 
-        {/* Bölüm durakları — yol eğrisine dizili SADE noktalar (tabela yok, yığılma yok). */}
+        {/* KANUN DURAKLARI — yol boyunca numaralı işaretler (ralli durağı gibi). */}
         {dugumler.map((d, i) => {
-          const t = n === 1 ? 0.06 : i / (n - 1);
-          const p = yolNokta(t);
+          const t = n === 1 ? 0.08 : i / (n - 1);
+          const p = egriPx(t);
           const durum = durumCoz(d, i === aktifIndex);
           return (
             <Pressable
               key={d.bolum.id}
               onPress={() => onDugumBas(d.bolum.id)}
-              style={[st.durak, { left: p.x * W, top: p.y * H }]}
-              hitSlop={12}
+              style={[st.durak, { left: p.x, top: p.y }]}
+              hitSlop={10}
               accessibilityRole="button"
               accessibilityLabel={`${d.bolum.ad} bölümü`}>
               <View
@@ -629,11 +643,11 @@ function SinematikHarita({
                   durum === 'baslanmadi' && st.durakKilit,
                 ]}>
                 {durum === 'tamam' ? (
-                  <MaterialCommunityIcons name="check-bold" size={11} color="#07334B" />
+                  <MaterialCommunityIcons name="check-bold" size={12} color="#07334B" />
                 ) : durum === 'baslanmadi' ? (
-                  <MaterialCommunityIcons name="lock" size={10} color="rgba(226,236,240,0.85)" />
+                  <MaterialCommunityIcons name="lock" size={11} color="rgba(226,236,240,0.9)" />
                 ) : (
-                  <AppText variant="etiket" bold color="lacivert">
+                  <AppText variant="etiket" bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
                     {i + 1}
                   </AppText>
                 )}
@@ -1034,37 +1048,42 @@ const st = StyleSheet.create({
   },
   durak: {
     position: 'absolute',
-    width: 16,
-    height: 16,
-    marginLeft: -8,
-    marginTop: -8,
+    width: 26,
+    height: 26,
+    marginLeft: -13,
+    marginTop: -13,
     alignItems: 'center',
     justifyContent: 'center',
   },
   durakNokta: {
-    width: 16,
-    height: 16,
-    borderRadius: 8,
-    backgroundColor: 'rgba(3,40,56,0.85)',
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    backgroundColor: 'rgba(3,40,56,0.92)',
     borderWidth: 2,
-    borderColor: 'rgba(226,236,240,0.7)',
+    borderColor: 'rgba(226,236,240,0.8)',
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.45,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4,
   },
   durakTamam: {
     backgroundColor: Palette.altinParlak,
-    borderColor: Palette.altinParlak,
+    borderColor: '#FFFFFF',
   },
   durakAktif: {
     backgroundColor: Palette.altinParlak,
     borderColor: '#FFFFFF',
-    width: 20,
-    height: 20,
-    borderRadius: 10,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
   },
   durakKilit: {
-    backgroundColor: 'rgba(3,40,56,0.7)',
-    borderColor: 'rgba(126,205,218,0.4)',
+    backgroundColor: 'rgba(3,40,56,0.8)',
+    borderColor: 'rgba(126,205,218,0.5)',
   },
   tabela: {
     position: 'absolute',
