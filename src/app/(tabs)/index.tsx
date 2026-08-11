@@ -2096,7 +2096,7 @@ const styles = StyleSheet.create({
   // Sinematik arka planlı panel (Tatbikat / Oyun Merkezi) — görsel kutuya oturur, taşmaz.
   gorselPanel: {
     flex: 1,
-    height: 288,
+    height: 246,
     borderRadius: Radius.l,
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
