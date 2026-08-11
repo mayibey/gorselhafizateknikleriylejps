@@ -589,7 +589,6 @@ export default function KarargahScreen() {
                 source={require('../../../assets/images/mock-plaka-emri.webp')}
                 style={styles.emirPlakaGorsel}
                 resizeMode="stretch"
-                pointerEvents="none"
               />
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
@@ -598,7 +597,6 @@ export default function KarargahScreen() {
                   source={require('../../../assets/images/mock-kurdele-zayif.webp')}
                   style={styles.zayifKurdeleGorsel}
                   resizeMode="stretch"
-                  pointerEvents="none"
                 />
               ) : bos && hicCalisilan ? (
                 /* Yeni kullanıcı: kırmızı değil ALTIN kurdele — İLK EMİR (mock). */
