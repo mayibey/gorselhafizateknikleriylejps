@@ -615,33 +615,12 @@ export default function KarargahScreen() {
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
                 /* Başkan (12 Ağu görseli): uçları pahlı kırmızı bant + altın kontur. */
-                <View style={styles.zayifBant} pointerEvents="none">
-                  <Svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 176 34"
-                    preserveAspectRatio="none"
-                    style={StyleSheet.absoluteFill}>
-                    <Defs>
-                      <SvgGradient id="zayifBantG" x1="0" y1="0" x2="0" y2="1">
-                        <Stop offset="0" stopColor="#E8473A" />
-                        <Stop offset="1" stopColor="#9E170F" />
-                      </SvgGradient>
-                    </Defs>
-                    {/* Sol uç pahlı, sağ uç düz (etiket kartın sağından taşar). */}
-                    <Path
-                      d="M14,1 L175,1 L175,33 L2,33 Z"
-                      fill="url(#zayifBantG)"
-                      stroke="#F3C24A"
-                      strokeWidth={1.5}
-                    />
-                  </Svg>
-                  <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
-                    ZAYIF MEVZİLER
-                  </AppText>
-                  {/* Taşan ucun altındaki kıvrım: şerit kartın ARKASINA dolanıyor hissi. */}
-                  <View style={styles.bantKivrim} />
-                </View>
+                /* Mock'tan kesilen GERÇEK etiket (kıvrım + altın şerit + yazı gömülü). */
+                <Image
+                  source={require('../../../assets/images/mock-zayif-etiket.webp')}
+                  style={styles.zayifEtiketGorsel}
+                  resizeMode="contain"
+                />
               ) : bos && hicCalisilan ? (
                 /* Yeni kullanıcı: ALTIN oval rozet — İLK EMİR. */
                 <LinearGradient
@@ -1744,30 +1723,12 @@ const styles = StyleSheet.create({
     height: 44,
     borderRadius: 22,
   },
-  zayifBant: {
+  zayifEtiketGorsel: {
     position: 'absolute',
-    top: -8, // kartın üst çizgisine biner
-    right: -22, // sağdan dışarı taşar — etiket hissi
-    width: 176,
-    height: 34,
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.35,
-    shadowRadius: 4,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 4,
-  },
-  bantKivrim: {
-    position: 'absolute',
-    right: 1,
-    bottom: -8,
-    width: 0,
-    height: 0,
-    borderTopWidth: 8,
-    borderTopColor: '#7A120C',
-    borderRightWidth: 10,
-    borderRightColor: 'transparent',
+    top: -12, // kartın üst çizgisine biner (mock hizası)
+    right: -12, // kart kenarından ekran kenarına dayanır (mock gibi)
+    width: 188,
+    height: 57, // 362x110 kesit oranı
   },
   zayifOval: {
     position: 'absolute',
