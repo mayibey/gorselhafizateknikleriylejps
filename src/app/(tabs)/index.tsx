@@ -584,12 +584,34 @@ export default function KarargahScreen() {
             <View style={[styles.gecePanel, styles.emirPanelUst]}>
               {/* SOL PLAKA (mock birebir): FLAMA kesimli zemin — sağ kenar çapraz,
                   altın konturlu; kartın üst çizgisine BİNER (kopuk pill değil). */}
-              {/* Mock'tan kesilen GERÇEK plaka (defne armalı) — %100 birebir. */}
-              <Image
-                source={require('../../../assets/images/mock-plaka-emri-seffaf.webp')}
-                style={styles.emirPlakaGorsel}
-                resizeMode="stretch"
-              />
+              {/* PLAKA: kod çizimi flama (kesik uç PÜRÜZSÜZ) + mock'tan yuvarlak kesilen defne arması. */}
+              <View style={styles.plakaKap}>
+                <Svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 190 58"
+                  preserveAspectRatio="none"
+                  style={StyleSheet.absoluteFill}>
+                  <Path
+                    d="M7,2 L182,2 L148,56 L7,56 Q2,56 2,51 L2,7 Q2,2 7,2 Z"
+                    fill="#0B2F44"
+                    stroke="#F3C24A"
+                    strokeWidth={1.6}
+                  />
+                </Svg>
+                <Image
+                  source={require('../../../assets/images/mock-arma.webp')}
+                  style={styles.plakaArmaGorsel}
+                />
+                <View>
+                  <AppText variant="etiket" bold color="altinParlak" style={styles.plakaUst}>
+                    BUGÜNÜN
+                  </AppText>
+                  <AppText variant="baslik" bold color="beyaz" style={styles.plakaAlt}>
+                    EMRİ
+                  </AppText>
+                </View>
+              </View>
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
                 /* Başkan (11 Ağu): katlama uçları OLMASIN — temiz oval rozet. */
@@ -1689,10 +1711,20 @@ const styles = StyleSheet.create({
     width: 186,
     height: 56,
   },
-  emirPlakaGorsel: {
-    width: 198, // 680x216 şeffaf kesit oranı
-    height: 63,
-    marginBottom: Spacing.one, // akış içinde: altındakiyle binmesi imkânsız
+  plakaKap: {
+    width: 190,
+    height: 58,
+    marginBottom: Spacing.one, // akış içinde: binme imkânsız
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    paddingLeft: 8,
+    paddingRight: 30,
+  },
+  plakaArmaGorsel: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
   },
   zayifOval: {
     position: 'absolute',

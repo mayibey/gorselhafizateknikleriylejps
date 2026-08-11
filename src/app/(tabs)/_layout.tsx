@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Tabs } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet, View, useWindowDimensions, type ColorValue } from 'react-native';
 import Animated, {
   Easing,
@@ -20,59 +20,75 @@ import { useKisiselOzellik } from '@/lib/ozellik';
  * Sekme değişiminde: yumuşak turkuaz sis ekrana çöker (~220ms), sonra iki yarım
  * perde yanlara kayarak aralanır ve solar (~650ms). Dokunuşları engellemez.
  */
-function SisPerdesi({ sinyal }: { sinyal: number }) {
-  const { width: W } = useWindowDimensions();
-  const yog = useSharedValue(0); // sis yoğunluğu
-  const ac = useSharedValue(0); // perdenin aralanması
+function SisPerdesi({ sinyal, ortada }: { sinyal: number; ortada: () => void }) {
+  const { width: W, height: H } = useWindowDimensions();
+  const yog = useSharedValue(0); // 0=açık gök, 1=tam sis
   useEffect(() => {
     if (!sinyal) return;
     yog.value = 0;
-    ac.value = 0;
     yog.value = withSequence(
-      withTiming(1, { duration: 220, easing: Easing.out(Easing.quad) }),
-      withDelay(120, withTiming(0, { duration: 620, easing: Easing.out(Easing.quad) })),
+      withTiming(1, { duration: 380, easing: Easing.in(Easing.quad) }), // sis çöker
+      withTiming(1, { duration: 140 }), // tam kapalı — menü bu kör anda değişir
+      withTiming(0, { duration: 780, easing: Easing.out(Easing.quad) }), // sis dağılır
     );
-    ac.value = withDelay(300, withTiming(1, { duration: 620, easing: Easing.inOut(Easing.quad) }));
-  }, [sinyal, yog, ac]);
-  const solStil = useAnimatedStyle(() => ({
-    opacity: yog.value,
-    transform: [{ translateX: -ac.value * W * 0.65 }],
-  }));
-  const sagStil = useAnimatedStyle(() => ({
-    opacity: yog.value,
-    transform: [{ translateX: ac.value * W * 0.65 }],
-  }));
+    const t = setTimeout(ortada, 430);
+    return () => clearTimeout(t);
+  }, [sinyal, yog, ortada]);
+  // Dört bulut katmanı: farklı hız çarpanları → perde değil SİS hissi (parallax).
+  const bulut = (yonX: number, yonY: number, hiz: number) =>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useAnimatedStyle(() => ({
+      opacity: Math.min(1, yog.value * 1.25),
+      transform: [
+        { translateX: yonX * W * 0.62 * (1 - yog.value) * hiz },
+        { translateY: yonY * H * 0.3 * (1 - yog.value) * hiz },
+      ],
+    }));
+  const solUst = bulut(-1, -0.4, 1);
+  const sagUst = bulut(1, -0.3, 0.75);
+  const solAlt = bulut(-1, 0.35, 0.85);
+  const sagAlt = bulut(1, 0.45, 1.1);
+  const ortStil = useAnimatedStyle(() => ({ opacity: yog.value * 0.98 }));
+  const katmanlar: [object, object][] = [
+    [sisSt.solUst, solUst],
+    [sisSt.sagUst, sagUst],
+    [sisSt.solAlt, solAlt],
+    [sisSt.sagAlt, sagAlt],
+  ];
   return (
     <View style={StyleSheet.absoluteFill} pointerEvents="none">
-      <Animated.View style={[sisSt.yarim, sisSt.sol, solStil]}>
-        <LinearGradient
-          colors={['rgba(150,196,212,0.55)', 'rgba(150,196,212,0.25)', 'rgba(150,196,212,0)']}
-          start={{ x: 0, y: 0.5 }}
-          end={{ x: 1, y: 0.5 }}
-          style={StyleSheet.absoluteFill}
-        />
-      </Animated.View>
-      <Animated.View style={[sisSt.yarim, sisSt.sag, sagStil]}>
-        <LinearGradient
-          colors={['rgba(150,196,212,0)', 'rgba(150,196,212,0.25)', 'rgba(150,196,212,0.55)']}
-          start={{ x: 0, y: 0.5 }}
-          end={{ x: 1, y: 0.5 }}
-          style={StyleSheet.absoluteFill}
-        />
-      </Animated.View>
+      {katmanlar.map(([yer, stil], i) => (
+        <Animated.View key={i} style={[sisSt.bulut, yer, stil]}>
+          <LinearGradient
+            colors={['rgba(206,224,233,0.98)', 'rgba(206,224,233,0.8)', 'rgba(206,224,233,0)']}
+            start={{ x: 0.5, y: 0.5 }}
+            end={{ x: 1, y: 1 }}
+            style={sisSt.bulutDolgu}
+          />
+        </Animated.View>
+      ))}
+      {/* Tepe yoğunlukta ekranı tamamen örten ince tül — geçiş bu örtünün ardında olur. */}
+      <Animated.View style={[StyleSheet.absoluteFill, sisSt.tul, ortStil]} />
     </View>
   );
 }
 
 const sisSt = StyleSheet.create({
-  yarim: {
+  bulut: {
     position: 'absolute',
-    top: 0,
-    bottom: 0,
-    width: '58%',
+    width: '85%',
+    height: '60%',
+    borderRadius: 999,
+    overflow: 'hidden',
   },
-  sol: { left: 0 },
-  sag: { right: 0 },
+  bulutDolgu: { flex: 1 },
+  solUst: { left: '-20%', top: '-12%' },
+  sagUst: { right: '-22%', top: '-8%' },
+  solAlt: { left: '-18%', bottom: '-10%' },
+  sagAlt: { right: '-20%', bottom: '-14%' },
+  tul: {
+    backgroundColor: 'rgb(206,224,233)',
+  },
 });
 
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
@@ -124,13 +140,28 @@ export default function TabsLayout() {
   // içinden ulaşılır. Bayrak yalnız başkanda açık; kapalıyken bugünkü beş sekme aynen.
   const talimMevzuata = useKisiselOzellik('talim-mevzuata');
   const [sisSinyal, setSisSinyal] = useState(0);
+  const bekleyenGecis = useRef<(() => void) | null>(null);
+  const sisOrtada = useCallback(() => {
+    bekleyenGecis.current?.();
+    bekleyenGecis.current = null;
+  }, []);
   return (
     <View style={sisSt2.kap}>
     <Tabs
-      screenListeners={
+      screenListeners={({ navigation }) =>
         talimMevzuata
-          ? { tabPress: () => setSisSinyal((n) => n + 1) }
-          : undefined
+          ? {
+              tabPress: (e: { target?: string; preventDefault: () => void }) => {
+                const hedef = e.target;
+                if (!hedef) return;
+                // Gerçek sis: önce yoğunlaş, KÖR ANDA menü değişsin (başkan, 11 Ağu).
+                e.preventDefault();
+                const ad = hedef.substring(0, hedef.lastIndexOf('-'));
+                bekleyenGecis.current = () => navigation.navigate(ad as never);
+                setSisSinyal((n) => n + 1);
+              },
+            }
+          : {}
       }
       screenOptions={{
         headerShown: false,
@@ -180,7 +211,7 @@ export default function TabsLayout() {
       {/* Ara — bar'dan gizli (href:null); üstteki büyüteç ikonundan açılır. */}
       <Tabs.Screen name="ara" options={{ href: null, title: 'Ara' }} />
     </Tabs>
-    {talimMevzuata ? <SisPerdesi sinyal={sisSinyal} /> : null}
+    {talimMevzuata ? <SisPerdesi sinyal={sisSinyal} ortada={sisOrtada} /> : null}
     </View>
   );
 }
