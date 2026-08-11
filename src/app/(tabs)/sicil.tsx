@@ -597,6 +597,7 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
   const [liste, setListe] = useState<ZayifKanunSatir[] | null>(null);
   // Oyun Merkezi defteri (mevzu_zayif_oyun: künye → yanlış sayısı) + kart eşleşmesi.
   const [merkez, setMerkez] = useState<{ ref: string; yanlis: number; kart: CardWithLaw | null }[]>([]);
+  const [hepsi, setHepsi] = useState(false);
   const yukle = useCallback(() => {
     void erMeydaniZayifKanunlar()
       .then(setListe)
@@ -692,7 +693,7 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
           <AppText variant="kucuk" color="beyaz">
             Maçlarda en çok bu konularda yanlış yaptın (dokun → maddeler):
           </AppText>
-          {liste.slice(0, 6).map((z) => (
+          {(hepsi ? liste : liste.slice(0, 6)).map((z) => (
             <Pressable
               key={z.kanun}
               onPress={() => detayGoster(z.kanun)}
@@ -709,9 +710,15 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
             </Pressable>
           ))}
           {liste.length > 6 ? (
-            <AppText variant="etiket" color="kartMetinIkincil">
-              +{liste.length - 6} konu daha
-            </AppText>
+            <Pressable
+              onPress={() => setHepsi((v) => !v)}
+              style={({ pressed }) => pressed && styles.pressed}
+              accessibilityRole="button"
+              accessibilityLabel={hepsi ? 'Daha az göster' : 'Tüm konuları göster'}>
+              <AppText variant="etiket" bold color="altinParlak">
+                {hepsi ? 'Daha az göster' : `+${liste.length - 6} konu daha — tümünü gör`}
+              </AppText>
+            </Pressable>
           ) : null}
         </>
       ) : null}
