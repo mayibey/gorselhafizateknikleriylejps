@@ -86,20 +86,20 @@ export function SinavProjeksiyonu() {
       baslik="Sınav Projeksiyonu"
       altYazi={`Bu tempoyla sınav günü: kartların %${tahminiYuzde}'i`}>
       <View style={st.satirlar}>
-        <AppText variant="kucuk" color="anaMetin">
-          Sınava <AppText variant="kucuk" bold color="altinMetin">{veri.kalanGun} gün</AppText> var.
+        <AppText variant="kucuk" color="beyaz">
+          Sınava <AppText variant="kucuk" bold color="altinParlak">{veri.kalanGun} gün</AppText> var.
           Şu ana kadar {veri.calisilan}/{veri.toplam} kart çalıştın.
         </AppText>
-        <AppText variant="kucuk" color="anaMetin">
+        <AppText variant="kucuk" color="beyaz">
           Son 14 gündeki temponla (günde ~{Math.round(veri.tempo)} kart) sınav gününe kadar{' '}
-          <AppText variant="kucuk" bold color="altinMetin">
+          <AppText variant="kucuk" bold color="altinParlak">
             {tahmini} kart (%{tahminiYuzde})
           </AppText>{' '}
           bitirmiş olursun.
         </AppText>
-        <AppText variant="kucuk" color="anaMetin">
+        <AppText variant="kucuk" color="beyaz">
           Tamamını bitirmek için günde{' '}
-          <AppText variant="kucuk" bold color="altinMetin">{gerekliGunluk} kart</AppText> gerekiyor.
+          <AppText variant="kucuk" bold color="altinParlak">{gerekliGunluk} kart</AppText> gerekiyor.
         </AppText>
       </View>
     </EvsafKategori>
@@ -159,7 +159,7 @@ export function KanunHaritasi() {
             style={({ pressed }) => [st.kanunSatir, pressed && st.basili]}
             accessibilityRole="button"
             accessibilityLabel={`${s.law.ad} patikası`}>
-            <AppText variant="etiket" bold color="anaMetin" style={st.kanunAd} numberOfLines={1}>
+            <AppText variant="etiket" bold color="beyaz" style={st.kanunAd} numberOfLines={1}>
               {s.law.ad}
             </AppText>
             <View style={st.kanunBar}>
@@ -211,7 +211,7 @@ export function DenemeGecmisi() {
           : `${sonuclar.length} deneme · son: %${sonYuzde ?? 0}`
       }>
       {son.length === 0 ? (
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" color="kartMetinIkincil">
           Kanun kartlarındaki "Talim Yap" ile ilk denemeni çöz — sonuçların burada birikir.
         </AppText>
       ) : (
@@ -220,10 +220,10 @@ export function DenemeGecmisi() {
           const kanun = lawAd.get(s.law_id) ?? `Kanun ${s.law_id}`;
           return (
             <View key={s.id} style={st.denemeSatir}>
-              <AppText variant="etiket" bold color="anaMetin" style={st.kanunAd} numberOfLines={1}>
+              <AppText variant="etiket" bold color="beyaz" style={st.kanunAd} numberOfLines={1}>
                 {kanun} · Test {s.test + 1}
               </AppText>
-              <AppText variant="etiket" color="solukMetin">
+              <AppText variant="etiket" color="kartMetinIkincil">
                 {tarihTRKisa(s.tarih)}
               </AppText>
               <AppText
@@ -297,17 +297,17 @@ export function CalismaAnalizi() {
                 ]}
               />
             </View>
-            <AppText variant="etiket" color="solukMetin">
+            <AppText variant="etiket" color="kartMetinIkincil">
               {GUN_HARF[new Date(`${g.gun}T00:00:00Z`).getUTCDay()]}
             </AppText>
-            <AppText variant="etiket" bold color={g.adet > 0 ? 'altinMetin' : 'solukMetin'}>
+            <AppText variant="etiket" bold color={g.adet > 0 ? 'altinParlak' : 'kartMetinIkincil'}>
               {g.adet}
             </AppText>
           </View>
         ))}
       </View>
       {/* Öğrenme derinliği — SRS kutu dağılımı tek çubukta. */}
-      <AppText variant="etiket" color="solukMetin" bold>
+      <AppText variant="etiket" color="kartMetinIkincil" bold>
         ÖĞRENME DERİNLİĞİ
       </AppText>
       <View style={st.kutuBar}>
@@ -315,7 +315,7 @@ export function CalismaAnalizi() {
         {veri.tanisik > 0 ? <View style={[st.kutuTanisik, { flex: veri.tanisik }]} /> : null}
         {veri.yeni > 0 ? <View style={[st.kutuYeni, { flex: veri.yeni }]} /> : null}
       </View>
-      <AppText variant="etiket" color="solukMetin">
+      <AppText variant="etiket" color="kartMetinIkincil">
         {veri.saglam} sağlam · {veri.tanisik} tanışık · {veri.yeni} el değmemiş ({kutuToplam} kart)
       </AppText>
     </EvsafKategori>
@@ -349,12 +349,12 @@ export function ErMeydaniOzeti() {
           <MaterialCommunityIcons
             name={m.kazandim ? 'trophy-outline' : 'shield-outline'}
             size={16}
-            color={m.kazandim ? Palette.altinKoyu : Palette.solukMetin}
+            color={m.kazandim ? Palette.altinParlak : Palette.kartMetinIkincil}
           />
-          <AppText variant="etiket" bold color="anaMetin" style={st.kanunAd} numberOfLines={1}>
+          <AppText variant="etiket" bold color="beyaz" style={st.kanunAd} numberOfLines={1}>
             {m.rakip_rumuz ?? 'Rakip'}
           </AppText>
-          <AppText variant="etiket" bold color={m.kazandim ? 'altinMetin' : 'solukMetin'}>
+          <AppText variant="etiket" bold color={m.kazandim ? 'altinParlak' : 'kartMetinIkincil'}>
             {m.benim_puan}–{m.rakip_puan} {m.kazandim ? 'G' : 'M'}
           </AppText>
         </View>
@@ -364,10 +364,10 @@ export function ErMeydaniOzeti() {
         style={({ pressed }) => [st.tumu, pressed && st.basili]}
         accessibilityRole="button"
         accessibilityLabel="Tüm maçlar">
-        <AppText variant="etiket" bold color="lacivert">
+        <AppText variant="etiket" bold color="altinParlak">
           Tüm maçlar
         </AppText>
-        <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.lacivert} />
+        <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.altinParlak} />
       </Pressable>
     </EvsafKategori>
   );
@@ -378,8 +378,8 @@ export function ErMeydaniOzeti() {
 export function GuvenceNotu() {
   return (
     <View style={st.guvence}>
-      <MaterialCommunityIcons name="cloud-check-outline" size={15} color={Palette.solukMetin} />
-      <AppText variant="etiket" color="solukMetin">
+      <MaterialCommunityIcons name="cloud-check-outline" size={15} color={Palette.kartMetinIkincil} />
+      <AppText variant="etiket" color="kartMetinIkincil">
         İlerlemen sunucuya yedekli — telefon değişse de kaldığın yerden devam edersin.
       </AppText>
     </View>
@@ -400,7 +400,7 @@ const st = StyleSheet.create({
     width: 90,
     height: 6,
     borderRadius: 3,
-    backgroundColor: Palette.ilerlemeTrack,
+    backgroundColor: 'rgba(255,246,220,0.18)',
     overflow: 'hidden',
   },
   kanunBarDolu: { backgroundColor: Palette.altin },
@@ -420,22 +420,22 @@ const st = StyleSheet.create({
     height: 44,
     width: 14,
     justifyContent: 'flex-end',
-    backgroundColor: Palette.ilerlemeTrack,
+    backgroundColor: 'rgba(255,246,220,0.18)',
     borderRadius: 4,
     overflow: 'hidden',
   },
   haftaCubuk: { backgroundColor: Palette.altin, borderRadius: 4 },
-  haftaCubukBos: { backgroundColor: Palette.kenarlik },
+  haftaCubukBos: { backgroundColor: 'rgba(255,246,220,0.12)' },
   kutuBar: {
     flexDirection: 'row',
     height: 10,
     borderRadius: 5,
     overflow: 'hidden',
-    backgroundColor: Palette.ilerlemeTrack,
+    backgroundColor: 'rgba(255,246,220,0.18)',
   },
   kutuSaglam: { backgroundColor: Palette.altinKoyu },
   kutuTanisik: { backgroundColor: Palette.altin },
-  kutuYeni: { backgroundColor: Palette.ilerlemeTrack },
+  kutuYeni: { backgroundColor: 'rgba(255,246,220,0.18)' },
   macSatir: {
     flexDirection: 'row',
     alignItems: 'center',
