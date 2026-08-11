@@ -112,6 +112,7 @@ export function KanunHaritasi() {
   const router = useRouter();
   const { brans } = useBrans();
   const [liste, setListe] = useState<{ law: LawWithCount; calisilan: number; toplam: number }[] | null>(null);
+  const [sekme, setSekme] = useState<'musterek' | 'brans'>('musterek');
 
   useFocusEffect(
     useCallback(() => {
@@ -175,28 +176,38 @@ export function KanunHaritasi() {
       ikon="map-outline"
       baslik="Kanun Haritası"
       altYazi={`${liste.length} kanunun ${baslanan}'inde başladın`}>
-      {/* Liste sabit yükseklikte kalır, kendi içinde kayar (başkan: "çok aşağı uzamasın"). */}
+      {/* Yan yana blok seçici — seçilen blokun listesi sabit alanda kayar. */}
+      <View style={st.haritaSekmeler}>
+        <Pressable
+          style={[st.haritaSekme, sekme === 'musterek' && st.haritaSekmeAktif]}
+          onPress={() => setSekme('musterek')}
+          accessibilityRole="button"
+          accessibilityLabel="Müşterek mevzuat">
+          <AppText variant="etiket" bold color={sekme === 'musterek' ? 'altinParlak' : 'beyaz'}>
+            MÜŞTEREK
+          </AppText>
+        </Pressable>
+        <Pressable
+          style={[st.haritaSekme, sekme === 'brans' && st.haritaSekmeAktif]}
+          onPress={() => setSekme('brans')}
+          accessibilityRole="button"
+          accessibilityLabel="Branş mevzuatı">
+          <AppText variant="etiket" bold color={sekme === 'brans' ? 'altinParlak' : 'beyaz'}>
+            BRANŞ
+          </AppText>
+        </Pressable>
+      </View>
       <ScrollView
         style={st.haritaAlan}
         contentContainerStyle={st.haritaIcerik}
         nestedScrollEnabled
         showsVerticalScrollIndicator>
-        {musterek.length > 0 ? (
-          <AppText variant="etiket" bold color="altinParlak" style={st.haritaBolum}>
-            MÜŞTEREK MEVZUAT
+        {(sekme === 'musterek' ? musterek : bransGrubu).map(satirCiz)}
+        {sekme === 'brans' && bransGrubu.length === 0 ? (
+          <AppText variant="etiket" color="kartMetinIkincil">
+            Bu blokta henüz kart yok.
           </AppText>
         ) : null}
-        {musterek.map(satirCiz)}
-        {bransGrubu.length > 0 ? (
-          <AppText
-            variant="etiket"
-            bold
-            color="altinParlak"
-            style={[st.haritaBolum, musterek.length > 0 && st.haritaBolumAra]}>
-            BRANŞ MEVZUATI
-          </AppText>
-        ) : null}
-        {bransGrubu.map(satirCiz)}
       </ScrollView>
     </EvsafKategori>
   );
@@ -423,8 +434,20 @@ const st = StyleSheet.create({
   kanunAd: { flex: 1, flexShrink: 1 },
   haritaAlan: { maxHeight: 300 },
   haritaIcerik: { gap: Spacing.two, paddingRight: 2 },
-  haritaBolum: { letterSpacing: 1.2 },
-  haritaBolumAra: { marginTop: Spacing.one },
+  haritaSekmeler: { flexDirection: 'row', gap: Spacing.one },
+  haritaSekme: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 8,
+    borderRadius: 999,
+    borderWidth: 1,
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderColor: 'rgba(126,205,218,0.3)',
+  },
+  haritaSekmeAktif: {
+    backgroundColor: 'rgba(3,47,69,0.95)',
+    borderColor: '#F3C24A',
+  },
   kanunBar: {
     flexDirection: 'row',
     width: 90,
