@@ -659,14 +659,14 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
 
   if (liste === null) {
     return (
-      <AppText variant="kucuk" color="solukMetin">
+      <AppText variant="kucuk" color="kartMetinIkincil">
         Yükleniyor…
       </AppText>
     );
   }
   if (liste.length === 0 && merkez.length === 0) {
     return (
-      <AppText variant="kucuk" color="solukMetin">
+      <AppText variant="kucuk" color="kartMetinIkincil">
         Oyunlarda henüz zorlandığın konu yok — oynadıkça yanlışların burada toplanır.
       </AppText>
     );
@@ -689,10 +689,10 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
     <>
       {merkez.length > 0 ? (
         <>
-          <AppText variant="etiket" color="solukMetin" bold>
+          <AppText variant="etiket" color="kartMetinIkincil" bold>
             OYUN MERKEZİ
           </AppText>
-          <AppText variant="kucuk" color="anaMetin">
+          <AppText variant="kucuk" color="beyaz">
             Oyunlarda yanlış yaptığın konular (dokun → o maddeyi çalış):
           </AppText>
           {merkez.map((z) => (
@@ -706,16 +706,16 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
               <MaterialCommunityIcons
                 name="gamepad-variant-outline"
                 size={16}
-                color={Palette.altinKoyu}
+                color={Palette.altinParlak}
               />
-              <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
+              <AppText variant="kucuk" bold color="altinParlak" style={styles.zayifAd} numberOfLines={1}>
                 {z.kart ? maddeEtiket(z.kart.madde_no, z.kart.baslik) : z.ref}
               </AppText>
-              <AppText variant="etiket" bold color="solukMetin">
+              <AppText variant="etiket" bold color="kartMetinIkincil">
                 ×{z.yanlis}
               </AppText>
               {z.kart ? (
-                <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+                <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kartMetinIkincil} />
               ) : null}
             </Pressable>
           ))}
@@ -723,10 +723,10 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
       ) : null}
       {liste.length > 0 ? (
         <>
-          <AppText variant="etiket" color="solukMetin" bold>
+          <AppText variant="etiket" color="kartMetinIkincil" bold>
             ER MEYDANI
           </AppText>
-          <AppText variant="kucuk" color="anaMetin">
+          <AppText variant="kucuk" color="beyaz">
             Maçlarda en çok bu konularda yanlış yaptın (dokun → maddeler):
           </AppText>
           {liste.slice(0, 6).map((z) => (
@@ -735,18 +735,18 @@ export function OyunZayiflari({ karttanCalis }: { karttanCalis: (lawId: number, 
               onPress={() => detayGoster(z.kanun)}
               style={({ pressed }) => [styles.zayifSatir, pressed && styles.pressed]}
               accessibilityRole="button">
-              <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinKoyu} />
-              <AppText variant="kucuk" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
+              <MaterialCommunityIcons name="book-alert-outline" size={16} color={Palette.altinParlak} />
+              <AppText variant="kucuk" bold color="altinParlak" style={styles.zayifAd} numberOfLines={1}>
                 {OYUN_KANUN_AD.get(z.kanun) ?? `Kanun ${z.kanun}`}
               </AppText>
-              <AppText variant="etiket" bold color="solukMetin">
+              <AppText variant="etiket" bold color="kartMetinIkincil">
                 ×{z.yanlis}
               </AppText>
-              <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+              <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kartMetinIkincil} />
             </Pressable>
           ))}
           {liste.length > 6 ? (
-            <AppText variant="etiket" color="solukMetin">
+            <AppText variant="etiket" color="kartMetinIkincil">
               +{liste.length - 6} konu daha
             </AppText>
           ) : null}
@@ -857,12 +857,12 @@ function KisiselBilgiler({
     <View style={gomulu ? styles.gomuluBlok : styles.istatistikKart}>
       {gomulu ? (
         <View style={styles.gomuluBaslik}>
-          <AppText variant="etiket" color="solukMetin" bold style={styles.gomuluBaslikAd}>
+          <AppText variant="etiket" color="kartMetinIkincil" bold style={styles.gomuluBaslikAd}>
             KİŞİSEL BİLGİLER
           </AppText>
           {!isimYok ? (
             <Pressable hitSlop={10} onPress={duzenleAc} accessibilityRole="button" accessibilityLabel="Adını düzenle">
-              <AppText variant="kucuk" color="lacivert" bold>
+              <AppText variant="kucuk" color="altinParlak" bold>
                 Düzenle
               </AppText>
             </Pressable>
@@ -876,19 +876,19 @@ function KisiselBilgiler({
         accessibilityRole={varsayilanGizli ? 'button' : undefined}
         accessibilityLabel="Kişisel bilgileri aç/kapat">
         <View style={styles.kisiAvatar}>
-          <MaterialCommunityIcons name="account" size={28} color={Palette.lacivert} />
+          <MaterialCommunityIcons name="account" size={28} color={Palette.altinParlak} />
         </View>
         <View style={styles.kisiAdBlok}>
-          <AppText variant="govde" bold color="lacivert" numberOfLines={1}>
+          <AppText variant="govde" bold color="altinParlak" numberOfLines={1}>
             {adSoyad || 'Hesabım'}
           </AppText>
-          <AppText variant="etiket" color="solukMetin">
+          <AppText variant="etiket" color="kartMetinIkincil">
             KİŞİSEL BİLGİLER
           </AppText>
         </View>
         {!isimYok && !kapali ? (
           <Pressable hitSlop={10} onPress={duzenleAc} accessibilityRole="button" accessibilityLabel="Adını düzenle">
-            <AppText variant="kucuk" color="lacivert" bold>
+            <AppText variant="kucuk" color="altinParlak" bold>
               Düzenle
             </AppText>
           </Pressable>
@@ -897,13 +897,13 @@ function KisiselBilgiler({
           <MaterialCommunityIcons
             name={kapali ? 'chevron-down' : 'chevron-up'}
             size={22}
-            color={Palette.solukMetin}
+            color={Palette.kartMetinIkincil}
           />
         ) : null}
       </Pressable>
       )}
       {kapali ? null : !profilHazir ? (
-        <AppText variant="etiket" color="solukMetin">
+        <AppText variant="etiket" color="kartMetinIkincil">
           Yükleniyor…
         </AppText>
       ) : (
@@ -916,22 +916,22 @@ function KisiselBilgiler({
           style={({ pressed }) => [styles.adCagri, pressed && styles.adCagriBasili]}
           accessibilityRole="button"
           accessibilityLabel="Ad ve soyadını gir">
-          <MaterialCommunityIcons name="account-edit-outline" size={20} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" color="anaMetin" bold style={styles.adCagriMetin}>
+          <MaterialCommunityIcons name="account-edit-outline" size={20} color={Palette.altinParlak} />
+          <AppText variant="kucuk" color="beyaz" bold style={styles.adCagriMetin}>
             Ad ve soyadını gir — sicilin, takdir/başarı belgelerin ve kişisel takibin için.
           </AppText>
-          <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+          <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.kartMetinIkincil} />
         </Pressable>
       ) : null}
 
       <View style={styles.kisiAyrac} />
       {satirlar.map((s) => (
         <View key={s.etiket} style={styles.kisiSatir}>
-          <MaterialCommunityIcons name={s.ikon} size={18} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" color="solukMetin" style={styles.kisiEtiket}>
+          <MaterialCommunityIcons name={s.ikon} size={18} color={Palette.altinParlak} />
+          <AppText variant="kucuk" color="kartMetinIkincil" style={styles.kisiEtiket}>
             {s.etiket}
           </AppText>
-          <AppText variant="kucuk" bold color="anaMetin" numberOfLines={1} style={styles.kisiDeger}>
+          <AppText variant="kucuk" bold color="beyaz" numberOfLines={1} style={styles.kisiDeger}>
             {varsayilanGizli && !bilgiGoster && s.deger ? '••••••••' : (s.deger ?? '—')}
           </AppText>
         </View>
@@ -946,9 +946,9 @@ function KisiselBilgiler({
           <MaterialCommunityIcons
             name={bilgiGoster ? 'eye-off-outline' : 'eye-outline'}
             size={16}
-            color={Palette.solukMetin}
+            color={Palette.kartMetinIkincil}
           />
-          <AppText variant="etiket" color="solukMetin" bold>
+          <AppText variant="etiket" color="kartMetinIkincil" bold>
             {bilgiGoster ? 'Gizle' : 'Göster'}
           </AppText>
         </Pressable>
@@ -959,11 +959,11 @@ function KisiselBilgiler({
       <Modal visible={duzenle} transparent animationType="fade" onRequestClose={() => setDuzenle(false)}>
         <View style={styles.adPerde}>
           <View style={styles.adKutu}>
-            <MaterialCommunityIcons name="account-circle-outline" size={38} color={Palette.altinKoyu} />
-            <AppText variant="baslik" bold color="lacivert" style={styles.adOrtali}>
+            <MaterialCommunityIcons name="account-circle-outline" size={38} color={Palette.altinParlak} />
+            <AppText variant="baslik" bold color="altinParlak" style={styles.adOrtali}>
               Ad ve Soyad
             </AppText>
-            <AppText variant="kucuk" color="solukMetin" style={styles.adOrtali}>
+            <AppText variant="kucuk" color="kartMetinIkincil" style={styles.adOrtali}>
               Belgende ve sicilinde görünecek. İstediğin zaman değiştirebilirsin.
             </AppText>
             <TextInput
@@ -991,7 +991,7 @@ function KisiselBilgiler({
                 style={({ pressed }) => [styles.adVazgec, pressed && styles.adCagriBasili]}
                 onPress={() => setDuzenle(false)}
                 disabled={kaydediliyor}>
-                <AppText variant="govde" color="solukMetin" bold>
+                <AppText variant="govde" color="kartMetinIkincil" bold>
                   Vazgeç
                 </AppText>
               </Pressable>
@@ -1032,7 +1032,7 @@ function SicilBolum({
   const [secili, setSecili] = useState<SicilKaydi | null>(null);
   if (sicil === null) {
     return (
-      <AppText variant="kucuk" color="solukMetin">
+      <AppText variant="kucuk" color="kartMetinIkincil">
         Yükleniyor…
       </AppText>
     );
@@ -1098,20 +1098,20 @@ function SicilBolum({
           </AppText>
           {damga ? (
             <View style={styles.telafiDamga}>
-              <AppText variant="etiket" bold color="altinMetin">
+              <AppText variant="etiket" bold color="altinParlak">
                 TELAFİ EDİLDİ
               </AppText>
             </View>
           ) : null}
-          <AppText variant="etiket" color="solukMetin">
+          <AppText variant="etiket" color="kartMetinIkincil">
             {tarihFmt(k.tarih)}
           </AppText>
         </View>
         <View style={styles.sicilAltSatir}>
-          <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.sicilSebep}>
+          <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1} style={styles.sicilSebep}>
             {k.sebep}
           </AppText>
-          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.solukMetin} />
+          <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kartMetinIkincil} />
         </View>
       </Pressable>
     );
@@ -1132,15 +1132,15 @@ function SicilBolum({
               style={({ pressed }) => [styles.sicilHedef, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Denemelere git">
-              <MaterialCommunityIcons name="medal-outline" size={18} color={Palette.altinKoyu} />
-              <AppText variant="etiket" color="anaMetin" style={styles.sicilHedefMetin}>
-                🎖 İlk <AppText variant="etiket" bold color="altinMetin">Takdir Belgen</AppText> için:
+              <MaterialCommunityIcons name="medal-outline" size={18} color={Palette.altinParlak} />
+              <AppText variant="etiket" color="beyaz" style={styles.sicilHedefMetin}>
+                🎖 İlk <AppText variant="etiket" bold color="altinParlak">Takdir Belgen</AppText> için:
                 bir kanunun deneme sınavını tam puanla geç.
               </AppText>
-              <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+              <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.kartMetinIkincil} />
             </Pressable>
           ) : (
-            <AppText variant="etiket" color="solukMetin">
+            <AppText variant="etiket" color="kartMetinIkincil">
               {TAKDIR_PER_BASARI - (oduller.length % TAKDIR_PER_BASARI)} takdir daha → Başarı Belgesi.
             </AppText>
           )}
@@ -1153,7 +1153,7 @@ function SicilBolum({
       ) : null}
 
       {kayitlar.length === 0 ? (
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" color="kartMetinIkincil">
           Sicilin tertemiz. Mevzileri öğrendikçe takdir, ihmal edince ceza burada işlenir.
         </AppText>
       ) : sadeEvsaf ? (
@@ -1205,18 +1205,19 @@ export function ZayifBolum({
   karttanCalis?: (lawId: number, cardId: number) => void;
 }) {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   // Sade mod: kanun grupları katlanır; ilk grup açık başlar (10 Ağu).
   const [acikKanunlar, setAcikKanunlar] = useState<Set<number> | null>(null);
   if (zayif === null) {
     return (
-      <AppText variant="kucuk" color="solukMetin">
+      <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
         Yükleniyor…
       </AppText>
     );
   }
   if (zayif.ozet.toplamDeneme === 0) {
     return (
-      <AppText variant="kucuk" color="solukMetin">
+      <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
         Henüz yeterli veri yok — çalış veya quiz çöz, zayıf konuların burada toplanır.
       </AppText>
     );
@@ -1228,13 +1229,13 @@ export function ZayifBolum({
       return (
         <>
           {zayif.kilitli > 0 ? (
-            <AppText variant="kucuk" color="amber">
+            <AppText variant="kucuk" color={gece ? 'altinParlak' : 'amber'}>
               {zayif.kilitli} zayıf mevzin, üyelik gerektiren kanunlarda. Üyeliğini aldığında bu
               mevziler açılır ve burada çalışabilirsin.
             </AppText>
           ) : null}
           {zayif.inebilir > 0 ? (
-            <AppText variant="kucuk" color="amber">
+            <AppText variant="kucuk" color={gece ? 'altinParlak' : 'amber'}>
               {zayif.inebilir} zayıf mevzin, henüz indirilmemiş kanunlarda. Mevzuat'tan o kanunları
               indirince burada çalışabilirsin.
             </AppText>
@@ -1247,13 +1248,13 @@ export function ZayifBolum({
       return (
         <Pressable
           onPress={() => router.push('/tatbikat')}
-          style={({ pressed }) => [styles.sicilHedef, pressed && styles.pressed]}
+          style={({ pressed }) => [styles.sicilHedef, gece && styles.istatistikKartGece, pressed && styles.pressed]}
           accessibilityRole="button"
           accessibilityLabel="Tatbikata git">
-          <AppText variant="kucuk" color="anaMetin" style={styles.sicilHedefMetin}>
+          <AppText variant="kucuk" color={gece ? 'beyaz' : 'anaMetin'} style={styles.sicilHedefMetin}>
             Tüm mevziler sağlam 🎖️ — Tatbikatta kendini dene.
           </AppText>
-          <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+          <MaterialCommunityIcons name="chevron-right" size={16} color={gece ? Palette.kartMetinIkincil : Palette.solukMetin} />
         </Pressable>
       );
     }
@@ -1293,12 +1294,12 @@ export function ZayifBolum({
     return (
       <>
         {kapat ? (
-          <AppText variant="etiket" color="altinMetin" bold>
+          <AppText variant="etiket" color={gece ? 'altinParlak' : 'altinMetin'} bold>
             Geçen hafta {zayif.haftaOnce} zayıftın, bugün {zayif.simdiki} —{' '}
             {zayif.haftaOnce - zayif.simdiki} mevzi kapattın 🎖️
           </AppText>
         ) : zayif.ozet.enZayifKanun ? (
-          <AppText variant="etiket" color="solukMetin">
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
             En zayıf: {zayif.ozet.enZayifKanun}
           </AppText>
         ) : null}
@@ -1314,16 +1315,16 @@ export function ZayifBolum({
               style={styles.zayifGrupBaslik}
               accessibilityRole="button"
               accessibilityLabel={`${g.ad} zayıflarını aç/kapat`}>
-              <AppText variant="etiket" bold color="lacivert" style={styles.zayifAd} numberOfLines={1}>
+              <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'lacivert'} style={styles.zayifAd} numberOfLines={1}>
                 {g.ad}
               </AppText>
-              <AppText variant="etiket" color="solukMetin">
+              <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
                 {g.liste.length} madde
               </AppText>
               <MaterialCommunityIcons
                 name={acik.has(lawId) ? 'chevron-up' : 'chevron-down'}
                 size={18}
-                color={Palette.solukMetin}
+                color={gece ? Palette.kartMetinIkincil : Palette.solukMetin}
               />
             </Pressable>
             {acik.has(lawId)
@@ -1349,7 +1350,7 @@ export function ZayifBolum({
                       </View>
                     </View>
                     <View style={styles.zayifMaddeAlt}>
-                      <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.zayifAd}>
+                      <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} numberOfLines={1} style={styles.zayifAd}>
                         ×{z.yanlisSayisi}
                         {' · '}
                         {gunFarki(z.sonTarih) === 0
@@ -1359,7 +1360,7 @@ export function ZayifBolum({
                             : `${gunFarki(z.sonTarih)} gündür bekliyor`}
                         {z.ardisikIyi === 1 ? ' · bir iyi deneme kaldı' : ''}
                       </AppText>
-                      <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.solukMetin} />
+                      <MaterialCommunityIcons name="chevron-right" size={16} color={gece ? Palette.kartMetinIkincil : Palette.solukMetin} />
                     </View>
                   </Pressable>
                 ))
@@ -1381,7 +1382,7 @@ export function ZayifBolum({
   return (
     <>
       {zayif.ozet.enZayifKanun ? (
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
           En zayıf: {zayif.ozet.enZayifKanun}
         </AppText>
       ) : null}
@@ -1395,20 +1396,20 @@ export function ZayifBolum({
               Sade modda yalnız kaynaklar KARIŞIKSA gösterilir (beş kez "Talim" tekrarı ucuz). */}
           {(!sade || karisik) && z.kaynaklar.tatbikat ? (
             <View style={[styles.kaynakRozet, styles.kaynakTatbikat]}>
-              <AppText variant="etiket" color="amber" bold>
+              <AppText variant="etiket" color={gece ? 'altinParlak' : 'amber'} bold>
                 Tatbikat
               </AppText>
             </View>
           ) : null}
           {(!sade || karisik) && z.kaynaklar.talim ? (
             <View style={[styles.kaynakRozet, styles.kaynakTalim]}>
-              <AppText variant="etiket" color="lacivert" bold>
+              <AppText variant="etiket" color={gece ? 'altinParlak' : 'lacivert'} bold>
                 Talim
               </AppText>
             </View>
           ) : null}
           {sade ? (
-            <AppText variant="etiket" bold color="solukMetin">
+            <AppText variant="etiket" bold color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
               ×{z.yanlisSayisi}
             </AppText>
           ) : (
@@ -1421,7 +1422,7 @@ export function ZayifBolum({
         </View>
       ))}
       {kalan > 0 ? (
-        <AppText variant="etiket" color="solukMetin">
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
           +{kalan} daha
         </AppText>
       ) : null}
@@ -1448,17 +1449,17 @@ function BolumBaslik({ baslik, bilgi }: { baslik: string; bilgi: string }) {
         hitSlop={8}
         accessibilityRole="button"
         accessibilityLabel={`${baslik} — bilgi`}>
-        <AppText variant="etiket" color="solukMetin" bold>
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
           {baslik}
         </AppText>
         <MaterialCommunityIcons
           name={acik ? 'information' : 'information-outline'}
           size={15}
-          color={Palette.lacivert}
+          color={gece ? Palette.altinParlak : Palette.lacivert}
         />
       </Pressable>
       {acik ? (
-        <AppText variant="etiket" color="solukMetin" style={styles.bolumBilgi}>
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.bolumBilgi}>
           {bilgi}
         </AppText>
       ) : null}
@@ -1490,7 +1491,7 @@ function Stat({
           <MaterialCommunityIcons
             name={aktif ? 'chevron-up' : 'chevron-down'}
             size={14}
-            color={Palette.lacivert}
+            color={gece ? Palette.altinParlak : Palette.lacivert}
           />
         ) : null}
       </View>
