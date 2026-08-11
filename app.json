@@ -8,7 +8,10 @@
     "scheme": "mevzu",
     "userInterfaceStyle": "automatic",
     "updates": {
-      "url": "https://u.expo.dev/37237509-6816-434d-b5d0-95bacad71797"
+      "url": "https://u.expo.dev/37237509-6816-434d-b5d0-95bacad71797",
+      "requestHeaders": {
+        "expo-channel-name": "production"
+      }
     },
     "runtimeVersion": {
       "policy": "appVersion"
@@ -30,11 +33,12 @@
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 55,
+      "versionCode": 56,
       "googleServicesFile": "./google-services.json",
       "allowBackup": false,
       "permissions": [
-        "android.permission.POST_NOTIFICATIONS"
+        "android.permission.POST_NOTIFICATIONS",
+        "com.google.android.gms.permission.AD_ID"
       ],
       "intentFilters": [
         {
