@@ -152,12 +152,15 @@ export default function TabsLayout() {
         talimMevzuata
           ? {
               tabPress: (e: { target?: string; preventDefault: () => void }) => {
-                const hedef = e.target;
-                if (!hedef) return;
-                // Gerçek sis: önce yoğunlaş, KÖR ANDA menü değişsin (başkan, 11 Ağu).
+                const hedefKey = e.target;
+                // Rota adını TAHMİN ETME — navigasyon kaydından birebir bul
+                // (anahtar içinde tire olabiliyor; kırpma yöntemi 'sicil'i bozuyordu).
+                const rota = hedefKey
+                  ? navigation.getState().routes.find((r) => r.key === hedefKey)
+                  : undefined;
+                if (!rota) return; // çözülemezse sissiz normal geçiş — asla kilitlenme
                 e.preventDefault();
-                const ad = hedef.substring(0, hedef.lastIndexOf('-'));
-                bekleyenGecis.current = () => navigation.navigate(ad as never);
+                bekleyenGecis.current = () => navigation.navigate(rota.name as never);
                 setSisSinyal((n) => n + 1);
               },
             }
