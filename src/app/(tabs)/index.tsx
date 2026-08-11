@@ -45,6 +45,10 @@ import { useKisiselOzellik } from '@/lib/ozellik';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
 import { EmirHalka, IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
+
+// Tatbikat/Oyun panel arka planları (sinematik gece; hedef+bayrak / satranç atı).
+const TATBIKAT_ARKA = require('../../../assets/images/tatbikat-arka.webp');
+const OYUN_ARKA = require('../../../assets/images/oyun-arka.webp');
 import type { QueueCard } from '@/lib/queue';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
@@ -1068,59 +1072,47 @@ export default function KarargahScreen() {
           <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
               onPress={() => { hafifDokun(); router.push('/tatbikat'); }}
-              style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel="Tatbikat — karma deneme sınavları">
-              <View style={styles.madalyon}>
-                <View style={styles.madalyonIc}>
-                  <MaterialCommunityIcons name="target" size={24} color={Palette.altinParlak} />
-                </View>
-              </View>
-              <View style={styles.tileBaslikSatir}>
-                <View style={styles.tileCizgi} />
-                <AppText variant="baslik" bold color="altinParlak" style={styles.tileBaslik}>
-                  TATBİKAT
-                </AppText>
-                <View style={styles.tileCizgi} />
-              </View>
-              <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altinParlak} />
-              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
-                Karma sınavlarla kendini sına.
-              </AppText>
-              <MaterialCommunityIcons
-                name="arrow-right"
-                size={20}
-                color={Palette.altinParlak}
-                style={styles.yarimOk}
+              accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
+              <Image source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} resizeMode="cover" />
+              <LinearGradient
+                colors={['rgba(4,26,40,0.05)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
+                style={StyleSheet.absoluteFill}
+                pointerEvents="none"
               />
+              <View style={styles.gorselAlt}>
+                <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={1}>
+                  TATBİKAT MERKEZİ
+                </AppText>
+                <View style={styles.gorselCizgi} />
+                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama}>
+                  Karma sınavlarla kendini sına.
+                </AppText>
+                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} style={styles.gorselOk} />
+              </View>
             </Pressable>
             <Pressable
               onPress={() => { hafifDokun(); router.push('/er-meydani'); }}
-              style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel="Öğretici Oyunlar">
-              <View style={styles.madalyon}>
-                <View style={styles.madalyonIc}>
-                  <MaterialCommunityIcons name="controller-classic-outline" size={24} color={Palette.altinParlak} />
-                </View>
-              </View>
-              <View style={styles.tileBaslikSatir}>
-                <View style={styles.tileCizgi} />
-                <AppText variant="baslik" bold color="altinParlak" style={styles.tileBaslik}>
-                  ÖĞRETİCİ OYUNLAR
-                </AppText>
-                <View style={styles.tileCizgi} />
-              </View>
-              <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altinParlak} />
-              <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
-                {'Oynayarak öğren.\nBilgini oyunla pekiştir.'}
-              </AppText>
-              <MaterialCommunityIcons
-                name="arrow-right"
-                size={20}
-                color={Palette.altinParlak}
-                style={styles.yarimOk}
+              accessibilityLabel="Oyun Merkezi — oynayarak öğren">
+              <Image source={OYUN_ARKA} style={StyleSheet.absoluteFill} resizeMode="cover" />
+              <LinearGradient
+                colors={['rgba(4,26,40,0.05)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
+                style={StyleSheet.absoluteFill}
+                pointerEvents="none"
               />
+              <View style={styles.gorselAlt}>
+                <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={1}>
+                  OYUN MERKEZİ
+                </AppText>
+                <View style={styles.gorselCizgi} />
+                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama}>
+                  Oynayarak öğren. Bilgini oyunla pekiştir.
+                </AppText>
+                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} style={styles.gorselOk} />
+              </View>
             </Pressable>
           </View>
           {tekrarAcik && unutulan.length > 0 ? (
@@ -2097,6 +2089,39 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     gap: Spacing.one,
+  },
+  // Sinematik arka planlı panel (Tatbikat / Oyun Merkezi) — görsel kutuya oturur, taşmaz.
+  gorselPanel: {
+    flex: 1,
+    height: 218,
+    borderRadius: Radius.l,
+    borderWidth: 1,
+    borderColor: 'rgba(67,203,218,0.5)',
+    overflow: 'hidden',
+    justifyContent: 'flex-end',
+  },
+  gorselAlt: {
+    alignItems: 'center',
+    paddingHorizontal: Spacing.two,
+    paddingBottom: Spacing.three,
+    gap: 5,
+  },
+  gorselBaslik: {
+    fontSize: 17,
+    letterSpacing: 0.5,
+    textAlign: 'center',
+  },
+  gorselCizgi: {
+    width: 34,
+    height: 1.5,
+    backgroundColor: 'rgba(201,162,39,0.6)',
+  },
+  gorselAciklama: {
+    opacity: 0.94,
+    textAlign: 'center',
+  },
+  gorselOk: {
+    marginTop: 2,
   },
   yarimBaslik2: {
     letterSpacing: 1,
