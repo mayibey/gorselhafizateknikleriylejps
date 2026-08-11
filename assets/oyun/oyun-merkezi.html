@@ -196,6 +196,28 @@ body{margin:0;min-height:100vh;background:#EDE7DA;color:var(--metin);
 .katBtn .katIk{font-size:20px}
 .katBtn .katAd{font-size:12px;font-weight:800;color:var(--lacivert);white-space:nowrap}
 .katBtn .katSay{font-size:11px;color:var(--soluk)}
+/* ---------- MENÜ GECE TEMASI (mock: petrol koyu zemin) ----------
+   body.geceMenu yalnız menü ekranında (temaUygula) eklenir; oyun içi ekranlar krem kalır. */
+body.geceMenu{background:#04283A}
+body.geceMenu #tel{background:#043C54;border-color:rgba(126,205,218,.35)}
+body.geceMenu .sinavRozet{background:rgba(3,40,56,.75);border-color:rgba(240,183,51,.6)}
+body.geceMenu .aciklamaS{color:#C7D6DC}
+body.geceMenu .aciklamaS b{color:#F3C24A}
+body.geceMenu .katBtn{background:rgba(3,47,69,.72);border-color:rgba(126,205,218,.3)}
+body.geceMenu .katBtn.ac{background:rgba(3,40,56,.95);border-color:#F3C24A}
+body.geceMenu .katBtn .katAd{color:#fff}
+body.geceMenu .katBtn .katSay{color:#9FB6BE}
+body.geceMenu .tile{background:rgba(3,47,69,.88);border-color:rgba(126,205,218,.35);box-shadow:none}
+body.geceMenu .tile .ikon{background:rgba(3,40,56,.7);border-color:rgba(126,205,218,.3)}
+body.geceMenu .tile .ad{color:#fff}
+body.geceMenu .tile .ac{color:#AFC2C9}
+body.geceMenu .tile .katEtk{color:#F3C24A;border-color:rgba(240,183,51,.7)}
+body.geceMenu .tile .tOk{color:#F3C24A}
+body.geceMenu .tRoz{color:#F3C24A}
+body.geceMenu .meydanKutu{background:rgba(3,47,69,.72);border-color:rgba(240,183,51,.55)}
+body.geceMenu .mkBas{color:#fff}
+body.geceMenu .mkAlt{color:#AFC2C9}
+body.geceMenu #mkKod{background:rgba(3,40,56,.7);border-color:rgba(126,205,218,.4);color:#fff}
 
 /* ---------- düğmeler ---------- */
 .btn{border:none;border-radius:13px;padding:17px 15px;font-size:16.5px;font-weight:800;cursor:pointer;
@@ -1046,6 +1068,8 @@ function temaUygula(id){
   // Tek marka kimligi: krem premium. Oyun basina renk degistirme KALDIRILDI
   // (13 ayri neon "yapay zeka yapmis" izlenimi veriyordu ve uygulamaya aykiriydi).
   temaSuan=id;
+  // Menü ekranı mock'a göre petrol koyu zemin; oyun içi ekranlar krem kalır.
+  document.body.classList.toggle('geceMenu', id==='menu');
   // üst bardaki altın çizgi her geçişte yeniden çizilsin
   const b=$('#bar'); b.style.animation='none'; void b.offsetWidth; b.style.animation='';
 }
