@@ -60,30 +60,6 @@ const YOL_GUNDUZ = require('../../assets/images/patika-yol-gunduz.webp');
 const PATIKA_ARAC = require('../../assets/images/patika-arac.webp');
 // expo-image'i Animated'e sar — araç konumu/titreşimi animasyonlanabilsin.
 const AnimatedImage = Animated.createAnimatedComponent(Image);
-// Arka plan görselinin doğal boyutu (patika-yol-*.webp) — cover kırpma hesabı için.
-const YOL_IMG_W = 828;
-const YOL_IMG_H = 869;
-// Asfalt yolun eğrisi — GÖRSELİN kendi koordinatında normalize (x soldan, y üstten),
-// alt=başlangıç → üst=hedef. Görseldeki gerçek yola oturur; cover kayması kodda düzeltilir.
-const YOL_EGRI = [
-  { x: 0.5, y: 0.97 },
-  { x: 0.57, y: 0.88 },
-  { x: 0.6, y: 0.79 },
-  { x: 0.5, y: 0.72 },
-  { x: 0.44, y: 0.65 },
-  { x: 0.5, y: 0.59 },
-  { x: 0.51, y: 0.54 },
-  { x: 0.5, y: 0.5 },
-];
-function yolNokta(t: number): { x: number; y: number } {
-  const s = Math.max(0, Math.min(1, t)) * (YOL_EGRI.length - 1);
-  const i = Math.min(YOL_EGRI.length - 2, Math.floor(s));
-  const f = s - i;
-  return {
-    x: YOL_EGRI[i].x + (YOL_EGRI[i + 1].x - YOL_EGRI[i].x) * f,
-    y: YOL_EGRI[i].y + (YOL_EGRI[i + 1].y - YOL_EGRI[i].y) * f,
-  };
-}
 /** Cihaz saatine göre gece mi — arka plan gece/gündüz seçimi (başkan: atmosfer saate uysun). */
 function patikaGeceMi(): boolean {
   const s = new Date().getHours();
@@ -545,38 +521,30 @@ function SinematikHarita({
   const { width: WW, height: WH } = useWindowDimensions();
   const W = Math.min(WW - Spacing.four * 2, 460);
   const gorunurH = Math.round(Math.min(WH * 0.68, 640));
-  // Tek yol dilimi doğal oranda (W × W*oran) → kırpma yok. Dilim dikey tekrarlanır = uzun yol.
-  const dilimH = Math.round(W * (YOL_IMG_H / YOL_IMG_W));
   const gece = patikaGeceMi();
   const n = dugumler.length;
   const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
   const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
 
-  const AW = 104;
-  const AH = 92;
-  const DURAK_ARA = Math.round(dilimH * 0.4); // duraklar arası dikey mesafe
-  const PAD_ALT = 96;
-  const PAD_UST = 88;
-  // Uzun içerik: durak sayısı kadar uzar; en az bir ekran.
+  const AW = 92;
+  const AH = 82;
+  const YOL_GEN = Math.round(W * 0.5); // kod-çizilen asfalt şerit genişliği
+  const yolMid = Math.round(W / 2);
+  const DURAK_ARA = 128;
+  const PAD_ALT = 118;
+  const PAD_UST = 96;
   const icerikY = Math.max(gorunurH, PAD_ALT + PAD_UST + Math.max(1, n - 1) * DURAK_ARA);
   const durakY = (i: number) => icerikY - PAD_ALT - i * DURAK_ARA; // i=0 altta (başlangıç)
-  // Global y → yol dilimi içi x. Yol SEAMLESS akması için dilimler AYNALI tekrarlanır
-  // (bir düz, bir dikey-flip). Tek dilimlerde eğri de ters okunur ki araç/duraklar yine
-  // gerçek asfaltın üstüne otursun. Böylece ek yerinde yol-yola, gök-göğe değer.
-  const fazX = (y: number) => {
-    const dilim = Math.floor(y / dilimH);
-    const r = (((y % dilimH) + dilimH) % dilimH) / dilimH;
-    return dilim % 2 !== 0 ? yolNokta(r).x : yolNokta(1 - r).x;
-  };
   const y0 = durakY(0);
   const y1 = durakY(Math.max(0, n - 1));
 
   const ilerleme = toplamKart > 0 ? Math.max(0.02, calisilanKart / toplamKart) : 0.02;
-  const aracYnow = y0 - ilerleme * (y0 - y1); // aracın dünya-y konumu (ilerlemeye bağlı)
+  const aracYnow = y0 - ilerleme * (y0 - y1);
   const aracYv = useRef(new Animated.Value(ilerleme)).current;
   const titre = useRef(new Animated.Value(0)).current;
+  const akis = useRef(new Animated.Value(0)).current;
   const scrollRef = useRef<ScrollView>(null);
-  // Kart bitince araç yeni konuma yumuşak çıkar.
+  // Kart bitince araç yolun ilerisine yumuşak çıkar.
   useEffect(() => {
     Animated.timing(aracYv, { toValue: ilerleme, duration: 1400, easing: Easing.inOut(Easing.cubic), useNativeDriver: false }).start();
   }, [ilerleme, aracYv]);
@@ -584,77 +552,68 @@ function SinematikHarita({
   useEffect(() => {
     const l = Animated.loop(
       Animated.sequence([
-        Animated.timing(titre, { toValue: 1, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
-        Animated.timing(titre, { toValue: 0, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
+        Animated.timing(titre, { toValue: 1, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
+        Animated.timing(titre, { toValue: 0, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
       ]),
     );
     l.start();
     return () => l.stop();
   }, [titre]);
-  // Açılışta araca kaydır (araç görünür ortada başlasın).
+  const DASH = 30; // kesik orta çizgi periyodu (çizgi + boşluk)
+  // Kesik çizgiler SÜREKLİ aşağı akar → "yol akıyor / araç gidiyor" hissi (araç dursa da).
+  useEffect(() => {
+    const l = Animated.loop(Animated.timing(akis, { toValue: 1, duration: 780, easing: Easing.linear, useNativeDriver: true }));
+    l.start();
+    return () => l.stop();
+  }, [akis]);
+  // Açılışta araca kaydır.
   useEffect(() => {
     const to = Math.max(0, aracYnow - gorunurH * 0.5);
     const id = setTimeout(() => scrollRef.current?.scrollTo({ y: to, animated: true }), 450);
     return () => clearTimeout(id);
   }, [aracYnow, gorunurH]);
 
-  const AW2 = AW;
-  // Araç konumu ilerleme (0..1) → dünya (x fazlı, y düz). Örnek noktalarla interpolate.
-  const ORNEK = 24;
-  const inRA = Array.from({ length: ORNEK + 1 }, (_, k) => k / ORNEK);
-  const aracLeft = aracYv.interpolate({
-    inputRange: inRA,
-    outputRange: inRA.map((u) => fazX(y0 - u * (y0 - y1)) * W - AW2 / 2),
-  });
-  const aracTop = aracYv.interpolate({
-    inputRange: inRA,
-    outputRange: inRA.map((u) => y0 - u * (y0 - y1) - AH * 0.6),
-  });
-  const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2.5] });
-
-  const tileN = Math.ceil(icerikY / dilimH) + 1;
+  const aracTop = aracYv.interpolate({ inputRange: [0, 1], outputRange: [y0 - AH * 0.62, y1 - AH * 0.62] });
+  const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2] });
+  const akisY = akis.interpolate({ inputRange: [0, 1], outputRange: [0, DASH] });
+  const dashN = Math.ceil(icerikY / DASH) + 2;
 
   return (
     <>
       <View style={[st.sahne, { width: W, height: gorunurH }]}>
+        {/* Sabit atmosfer arka plan (kaymaz) + koyu tül → kod yol öne çıksın. */}
+        <Image source={gece ? YOL_GECE : YOL_GUNDUZ} style={StyleSheet.absoluteFill} contentFit="cover" pointerEvents="none" />
+        <View style={st.yolTul} pointerEvents="none" />
+
         <ScrollView
           ref={scrollRef}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ height: icerikY }}>
-          {/* YOL — aynalı dikey tekrar (seamless sonsuz yol; tek dilimler dikey-flip). */}
-          {Array.from({ length: tileN }, (_, k) => (
-            <Image
-              key={`yol-${k}`}
-              source={gece ? YOL_GECE : YOL_GUNDUZ}
-              style={{
-                position: 'absolute',
-                left: 0,
-                top: k * dilimH,
-                width: W,
-                height: dilimH,
-                transform: k % 2 !== 0 ? [{ scaleY: -1 }] : undefined,
-              }}
-              contentFit="cover"
-              pointerEvents="none"
-            />
-          ))}
-          <View style={[st.sahneTulUzun, { height: icerikY }]} pointerEvents="none" />
+          {/* KOD YOL — dikey asfalt şerit (sonsuz, seamless; asset yok). */}
+          <View style={[st.yolSerit, { left: yolMid - YOL_GEN / 2, width: YOL_GEN, height: icerikY }]} pointerEvents="none" />
+          {/* Kesik orta çizgi — sürekli akar. */}
+          <View style={[st.cizgiKap, { left: yolMid - 3, height: icerikY }]} pointerEvents="none">
+            <Animated.View style={{ transform: [{ translateY: akisY }] }}>
+              {Array.from({ length: dashN }, (_, k) => (
+                <View key={k} style={[st.dash, { top: (k - 1) * DASH }]} />
+              ))}
+            </Animated.View>
+          </View>
 
           {/* Hedef bayrağı — yolun en üst ucu. */}
-          <View style={[st.hedefRoz, { left: fazX(y1 - DURAK_ARA * 0.7) * W - 9, top: y1 - DURAK_ARA * 0.7 }]}>
+          <View style={[st.hedefRoz, { left: yolMid - 9, top: y1 - DURAK_ARA * 0.7 }]}>
             <MaterialCommunityIcons name="flag-variant" size={20} color={Palette.altinParlak} />
           </View>
 
-          {/* KANUN DURAKLARI — uzun yol boyunca dizili numaralı işaretler. */}
+          {/* KANUN DURAKLARI — yol boyunca numaralı işaretler. */}
           {dugumler.map((d, i) => {
             const y = durakY(i);
-            const x = fazX(y) * W;
             const durum = durumCoz(d, i === aktifIndex);
             return (
               <Pressable
                 key={d.bolum.id}
                 onPress={() => onDugumBas(d.bolum.id)}
-                style={[st.durak, { left: x, top: y }]}
+                style={[st.durak, { left: yolMid, top: y }]}
                 hitSlop={10}
                 accessibilityRole="button"
                 accessibilityLabel={`${d.bolum.ad} bölümü`}>
@@ -679,12 +638,11 @@ function SinematikHarita({
             );
           })}
 
-          {/* ARAÇ — dünyaya sabit: kaydırınca geride kalır, kart bitince yukarı çıkar. */}
+          {/* ARAÇ — yol ortasında; dünyaya sabit (kaydırınca geride kalır), kart bitince yukarı çıkar. */}
           <Animated.View
-            style={[st.aracKap, { width: AW, height: AH, left: aracLeft, top: aracTop }]}
+            style={[st.aracKap, { width: AW, height: AH, left: yolMid - AW / 2, top: aracTop }]}
             pointerEvents="none">
             <View style={st.far} pointerEvents="none" />
-            <View style={st.iz} pointerEvents="none" />
             <AnimatedImage
               source={PATIKA_ARAC}
               contentFit="contain"
@@ -1079,6 +1037,33 @@ const st = StyleSheet.create({
     left: 0,
     right: 0,
     backgroundColor: 'rgba(4,32,48,0.16)',
+  },
+  // Kod-çizilen sonsuz yol
+  yolTul: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(4,26,40,0.55)',
+  },
+  yolSerit: {
+    position: 'absolute',
+    top: 0,
+    backgroundColor: 'rgba(9,14,22,0.9)',
+    borderLeftWidth: 2.5,
+    borderRightWidth: 2.5,
+    borderColor: 'rgba(230,238,242,0.55)',
+  },
+  cizgiKap: {
+    position: 'absolute',
+    top: 0,
+    width: 6,
+    overflow: 'hidden',
+  },
+  dash: {
+    position: 'absolute',
+    left: 1,
+    width: 4,
+    height: 16,
+    borderRadius: 2,
+    backgroundColor: 'rgba(243,194,74,0.92)',
   },
   konumBtn: {
     position: 'absolute',
