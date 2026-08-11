@@ -543,30 +543,49 @@ function SinematikHarita({
 }) {
   const { width: WW, height: WH } = useWindowDimensions();
   const W = Math.min(WW - Spacing.four * 2, 460);
-  const H = Math.round(W * YOL_UZUN_ORAN); // tek uzun gerçek yol görselinin yüksekliği (kaydırılır)
-  const gorunurH = Math.round(Math.min(WH * 0.68, 640));
+  const gorunurH = Math.round(Math.min(WH * 0.72, 680));
+  const dilimH = Math.round(W * YOL_UZUN_ORAN); // tek yol görseli dilimi (dünya bundan tile'lanır)
   const n = dugumler.length;
   const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
   const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
 
-  const AW = 92;
-  const AH = 82;
-  // Görsel tam boyda (W×H) → yol eğrisi doğrudan piksele çevrilir.
-  const egriPx = (t: number) => {
-    const p = yolNokta(t);
-    return { x: p.x * W, y: p.y * H };
-  };
-  const ilerleme = toplamKart > 0 ? Math.max(0.02, calisilanKart / toplamKart) : 0.02;
-  const aracP = egriPx(ilerleme);
+  const AW = 88;
+  const AH = 78;
+  const AY = Math.round(gorunurH * 0.66); // araç ekranda SABİT y (kamera kilidi, alt ~%34)
+  const DURAK_ARA = Math.round(gorunurH * 0.55); // iki durak arası dünya-px
+  const PAD_ALT = Math.round(gorunurH * 0.5);
+  const PAD_UST = Math.round(gorunurH * 0.55);
+  const DH = PAD_ALT + PAD_UST + Math.max(1, n - 1) * DURAK_ARA; // uzun "dünya" yüksekliği
+  const durakDunyaY = (i: number) => DH - PAD_ALT - i * DURAK_ARA; // i=0 altta (başlangıç)
+  const y0 = durakDunyaY(0);
+  const y1 = durakDunyaY(Math.max(0, n - 1));
 
-  const aracYv = useRef(new Animated.Value(ilerleme)).current;
+  const ilerleme = toplamKart > 0 ? Math.max(0, Math.min(1, calisilanKart / toplamKart)) : 0;
+  const travel = useRef(new Animated.Value(ilerleme)).current;
+  const travelRef = useRef(ilerleme);
   const titre = useRef(new Animated.Value(0)).current;
-  const scrollRef = useRef<ScrollView>(null);
-  // Araç DÜNYADA sabit: bölüm bitince ilerleme noktasına yumuşak geçer, sonra orada DURUR.
-  // Kullanıcı yolu elle kaydırır; araç takip etmez, geride sabit kalır.
+  // TRAVEL (scroll DEĞİL): parmakla dikey sürükleme → yolculuk mesafesi. Araç ekranda sabit,
+  // dünya (yol + duraklar) kamerayla kayar → araç yol boyunca ilerliyormuş hissi.
+  const pan = useMemo(
+    () =>
+      PanResponder.create({
+        onMoveShouldSetPanResponder: (_, g) => Math.abs(g.dy) > 5,
+        onPanResponderMove: (_, g) => {
+          const menzil = y0 - y1 || 1;
+          travel.setValue(Math.max(0, Math.min(1, travelRef.current + -g.dy / menzil)));
+        },
+        onPanResponderRelease: (_, g) => {
+          const menzil = y0 - y1 || 1;
+          travelRef.current = Math.max(0, Math.min(1, travelRef.current + -g.dy / menzil));
+        },
+      }),
+    [travel, y0, y1],
+  );
+  // Bölüm bitince araç ilerleme noktasına yumuşak kayar.
   useEffect(() => {
-    Animated.timing(aracYv, { toValue: ilerleme, duration: 1500, easing: Easing.inOut(Easing.cubic), useNativeDriver: false }).start();
-  }, [ilerleme, aracYv]);
+    travelRef.current = ilerleme;
+    Animated.timing(travel, { toValue: ilerleme, duration: 1100, easing: Easing.inOut(Easing.cubic), useNativeDriver: false }).start();
+  }, [ilerleme, travel]);
   // Motor rölanti titreşimi.
   useEffect(() => {
     const l = Animated.loop(
@@ -578,45 +597,36 @@ function SinematikHarita({
     l.start();
     return () => l.stop();
   }, [titre]);
-  // Açılışta aracın olduğu yere kaydır (sonra kullanıcı serbestçe gezer).
-  useEffect(() => {
-    const to = Math.max(0, aracP.y - gorunurH * 0.55);
-    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: to, animated: true }), 450);
-    return () => clearTimeout(id);
-  }, [aracP.y, gorunurH]);
-
-  // Araç konumu ilerleme (0..1) → gerçek yol eğrisi (örnek noktalarla yumuşak interpolate).
-  const ORNEK = 24;
-  const inRA = Array.from({ length: ORNEK + 1 }, (_, k) => k / ORNEK);
-  const aracLeft = aracYv.interpolate({ inputRange: inRA, outputRange: inRA.map((u) => egriPx(u).x - AW / 2) });
-  const aracTop = aracYv.interpolate({ inputRange: inRA, outputRange: inRA.map((u) => egriPx(u).y - AH * 0.62) });
+  // Kamera: dünya translateY. Araç dünya-y = y0 − travel·(y0−y1); ekranda AY sabit → translateY = AY − aracDünyaY.
+  const dunyaTY = travel.interpolate({ inputRange: [0, 1], outputRange: [AY - y0, AY - y1] });
   const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2] });
+  const tileN = Math.ceil(DH / dilimH) + 1;
 
   return (
     <>
-      <View style={[st.sahne, { width: W, height: gorunurH }]}>
-        <ScrollView
-          ref={scrollRef}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ height: H }}>
-          {/* TEK UZUN gerçek yol görseli (ek yeri yok; elle kaydırılır, sona kadar). */}
-          <Image source={YOL_UZUN} style={{ width: W, height: H }} contentFit="cover" pointerEvents="none" />
-
-          {/* Hedef bayrağı — yolun ufuktaki ucu (yolculuğun sonu). */}
-          <View style={[st.hedefRoz, { left: egriPx(1).x - 9, top: egriPx(1).y - 24 }]}>
-            <MaterialCommunityIcons name="flag-variant" size={20} color={Palette.altinParlak} />
-          </View>
-
-          {/* KANUN DURAKLARI — gerçek yolun kıvrımına oturur. */}
+      <View style={[st.sahne, { width: W, height: gorunurH }]} {...pan.panHandlers}>
+        {/* DÜNYA — kamerayla kayar (yol tile + duraklar). Araç ekranda sabit kalır. */}
+        <Animated.View
+          style={{ position: 'absolute', left: 0, top: 0, width: W, height: DH, transform: [{ translateY: dunyaTY }] }}>
+          {/* Yol — uzun dünya için dikey tile (geçici; Faz 4'te tek uzun görselle değişecek). */}
+          {Array.from({ length: tileN }, (_, k) => (
+            <Image
+              key={`yol-${k}`}
+              source={YOL_UZUN}
+              style={{ position: 'absolute', left: 0, top: k * dilimH, width: W, height: dilimH }}
+              contentFit="cover"
+              pointerEvents="none"
+            />
+          ))}
+          {/* KANUN DURAKLARI — dünya konumunda, yol boyunca. */}
           {dugumler.map((d, i) => {
-            const t = n === 1 ? 0.06 : i / (n - 1);
-            const p = egriPx(t);
+            const y = durakDunyaY(i);
             const durum = durumCoz(d, i === aktifIndex);
             return (
               <Pressable
                 key={d.bolum.id}
                 onPress={() => onDugumBas(d.bolum.id)}
-                style={[st.durak, { left: p.x, top: p.y }]}
+                style={[st.durak, { left: W / 2, top: y }]}
                 hitSlop={12}
                 accessibilityRole="button"
                 accessibilityLabel={`${d.bolum.ad} bölümü`}>
@@ -640,32 +650,20 @@ function SinematikHarita({
               </Pressable>
             );
           })}
+        </Animated.View>
 
-          {/* ARAÇ — gerçek yolun üstünde, DÜNYADA sabit (kullanıcı kaydırınca geride kalır). */}
-          <Animated.View
-            style={[st.aracKap, { width: AW, height: AH, left: aracLeft, top: aracTop }]}
-            pointerEvents="none">
-            <View style={st.far} pointerEvents="none" />
-            <AnimatedImage
-              source={PATIKA_ARAC}
-              contentFit="contain"
-              style={[st.aracImg, { transform: [{ translateY: aracTitre }] }]}
-              pointerEvents="none"
-            />
-          </Animated.View>
-        </ScrollView>
-
-        {/* Aracıma dön — nerede gezersen gez, aracın olduğu yere döndürür. */}
-        <Pressable
-          style={({ pressed }) => [st.konumBtn, pressed && st.basili]}
-          onPress={() => scrollRef.current?.scrollTo({ y: Math.max(0, aracP.y - gorunurH * 0.55), animated: true })}
-          accessibilityRole="button"
-          accessibilityLabel="Aracıma dön">
-          <MaterialCommunityIcons name="crosshairs-gps" size={15} color={Palette.altinParlak} />
-          <AppText variant="etiket" bold color="altinParlak">
-            Aracım
-          </AppText>
-        </Pressable>
+        {/* ARAÇ — ekranda SABİT (alt ~%34); dünya altından akar, kamera aracı takip eder. */}
+        <Animated.View
+          style={[st.aracKap, { width: AW, height: AH, left: W / 2 - AW / 2, top: AY - AH * 0.62 }]}
+          pointerEvents="none">
+          <View style={st.far} pointerEvents="none" />
+          <AnimatedImage
+            source={PATIKA_ARAC}
+            contentFit="contain"
+            style={[st.aracImg, { transform: [{ translateY: aracTitre }] }]}
+            pointerEvents="none"
+          />
+        </Animated.View>
       </View>
 
       {/* Alt panel — ŞU ANKİ MEVZİ + DEVAM ET. */}
