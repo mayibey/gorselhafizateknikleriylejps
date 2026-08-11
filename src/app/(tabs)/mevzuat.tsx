@@ -233,7 +233,7 @@ function MevzuatIcerik() {
           </AppText>
           <View style={st.muhurCizgi} />
         </View>
-        <View style={st.blokSecici}>
+        <View style={[st.blokSecici, st.blokSeciciGece]}>
         {(['müşterek', 'brans'] as const).map((b) => {
           const aktif = blok === b;
           return (
@@ -1201,6 +1201,10 @@ const st = StyleSheet.create({
     backgroundColor: 'rgba(3,40,56,0.7)',
     borderWidth: 1,
     borderColor: 'rgba(243,194,74,0.55)',
+  },
+  blokSeciciGece: {
+    backgroundColor: 'transparent', // gece: krem şerit yok, haplar zeminde yüzer
+    borderColor: 'transparent',
   },
   blokSegGece: {
     backgroundColor: 'rgba(3,40,56,0.55)',
