@@ -495,9 +495,9 @@ function KunyeBandi() {
         </View>
       </Pressable>
       {acik ? (
-        <View style={styles.istatistikKart}>
+        <View style={[styles.istatistikKart, styles.istatistikKartGece]}>
           <KisiselBilgiler gomulu onProfil={profil ?? null} onDegisti={(p) => setProfil(p)} />
-          <View style={styles.kisiAyrac} />
+          <View style={[styles.kisiAyrac, styles.geceYatayAyrac]} />
           <UyelikKarti gomulu />
         </View>
       ) : null}
@@ -1472,6 +1472,9 @@ function Stat({
 }
 
 const styles = StyleSheet.create({
+  geceYatayAyrac: {
+    backgroundColor: 'rgba(255,246,220,0.15)',
+  },
   kunyeAvatarGorsel: {
     width: 52,
     height: 52,

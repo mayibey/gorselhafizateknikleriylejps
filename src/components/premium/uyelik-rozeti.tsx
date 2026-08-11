@@ -64,7 +64,7 @@ export function UyelikKarti({ gomulu }: { gomulu?: boolean } = {}) {
   if (gomulu) {
     return (
       <View style={styles.gomuluBlok}>
-        <AppText variant="etiket" color="solukMetin" bold>
+        <AppText variant="etiket" color="kartMetinIkincil" bold>
           ÜYELİK
         </AppText>
         {aktifHaklar.map((h) => {
@@ -76,10 +76,10 @@ export function UyelikKarti({ gomulu }: { gomulu?: boolean } = {}) {
           return (
             <View key={h.urun} style={styles.satir}>
               <View style={styles.satirMetin}>
-                <AppText variant="kucuk" bold color="anaMetin">
+                <AppText variant="kucuk" bold color="beyaz">
                   {bilgi ? bilgi.ad : h.urun}
                 </AppText>
-                <AppText variant="etiket" color="solukMetin">
+                <AppText variant="etiket" color="kartMetinIkincil">
                   {alt}
                 </AppText>
               </View>
@@ -91,10 +91,10 @@ export function UyelikKarti({ gomulu }: { gomulu?: boolean } = {}) {
           hitSlop={8}
           accessibilityRole="button"
           style={({ pressed }) => [styles.yonet, pressed && styles.pressed]}>
-          <AppText variant="etiket" bold color="lacivert">
+          <AppText variant="etiket" bold color="altinParlak">
             Üyeliği yönet
           </AppText>
-          <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.lacivert} />
+          <MaterialCommunityIcons name="chevron-right" size={16} color={Palette.altinParlak} />
         </Pressable>
       </View>
     );
