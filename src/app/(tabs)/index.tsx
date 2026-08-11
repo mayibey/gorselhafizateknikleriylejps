@@ -1693,7 +1693,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden', // (kullanım dışı — kurdele dönemi)
   },
   emirPanelUst: {
-    paddingTop: 54, // plaka kart içine 45px sarkıyor — içerik her durumda altında başlar (binme fixi)
+    paddingTop: 66, // plaka içeri 45px sarkar + 21px NEFES — 'iç içe' hissi tamamen bitti (11 Ağu)
     marginTop: 26, // plakaların üstteki sayaç alanına taşma payı
   },
   emirPlaka: {
