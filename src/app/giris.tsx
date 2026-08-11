@@ -8,9 +8,11 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { girisDonusAdresi, type Profil, profilGetir } from '@/lib/auth';
 import { useAuth } from '@/lib/auth-context';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 export default function GirisScreen() {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   const { kullanici, hazir, girisYap, cikis, hesabiSil, reaktiveEdildi, reaktivasyonGizle } =
     useAuth();
   const [mesgul, setMesgul] = useState(false);
@@ -82,13 +84,17 @@ export default function GirisScreen() {
   }
 
   return (
-    <Screen title="Giriş" onGeri={() => router.back()}>
+    <Screen title="Giriş" onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
       <View style={styles.marka}>
-        <MaterialCommunityIcons name="shield-account" size={56} color={Palette.lacivert} />
-        <AppText variant="baslik" bold color="lacivert">
+        <MaterialCommunityIcons
+          name="shield-account"
+          size={56}
+          color={gece ? Palette.altinParlak : Palette.lacivert}
+        />
+        <AppText variant="baslik" bold color={gece ? 'beyaz' : 'lacivert'}>
           MEVZU · JSPS
         </AppText>
-        <AppText variant="kucuk" color="solukMetin" style={styles.ortali}>
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortali}>
           Hesabınla ilerlemen güvende olur; cihaz değiştirsen de kaybolmaz ve ileride
           satın alımların hesabına bağlanır.
         </AppText>
@@ -97,7 +103,7 @@ export default function GirisScreen() {
       {reaktiveEdildi ? (
         <View style={styles.reaktiveKart}>
           <MaterialCommunityIcons name="restore" size={22} color={Palette.yesil} />
-          <AppText variant="kucuk" color="anaMetin" style={styles.bilgiMetin}>
+          <AppText variant="kucuk" color={gece ? 'beyaz' : 'anaMetin'} style={styles.bilgiMetin}>
             Hoş geldin! Hesabın silinmek üzereydi — tekrar giriş yaptığın için geri getirildi.
           </AppText>
           <Pressable onPress={reaktivasyonGizle} hitSlop={8}>
@@ -108,28 +114,32 @@ export default function GirisScreen() {
 
       {!hazir ? (
         // Supabase anahtarları girilmemiş → üyelik uykuda (uygulama offline tam çalışır).
-        <View style={styles.bilgiKart}>
-          <MaterialCommunityIcons name="clock-outline" size={22} color={Palette.amber} />
-          <AppText variant="kucuk" color="solukMetin" style={styles.bilgiMetin}>
+        <View style={[styles.bilgiKart, gece && styles.kartGece]}>
+          <MaterialCommunityIcons
+            name="clock-outline"
+            size={22}
+            color={gece ? Palette.altinParlak : Palette.amber}
+          />
+          <AppText variant="kucuk" color={gece ? 'beyaz' : 'solukMetin'} style={styles.bilgiMetin}>
             Üyelik yakında açılacak. Şu an tüm özellikler girişsiz de kullanılabilir.
           </AppText>
         </View>
       ) : kullanici ? (
         // Oturum açık → hesap bilgisi + çıkış + hesabı sil.
         <>
-          <View style={styles.hesapKart}>
+          <View style={[styles.hesapKart, gece && styles.kartGece]}>
             <MaterialCommunityIcons name="check-circle" size={22} color={Palette.yesil} />
             <View style={styles.hesapMetin}>
               {profil?.ad || profil?.soyad ? (
-                <AppText variant="govde" bold numberOfLines={1}>
+                <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'} numberOfLines={1}>
                   {`${profil.ad ?? ''} ${profil.soyad ?? ''}`.trim()}
                 </AppText>
               ) : null}
-              <AppText variant="kucuk" color="anaMetin" numberOfLines={1}>
+              <AppText variant="kucuk" color={gece ? 'beyaz' : 'anaMetin'} numberOfLines={1}>
                 {kullanici.email ?? 'Gmail hesabı'}
               </AppText>
               {profil?.telefon ? (
-                <AppText variant="kucuk" color="solukMetin">
+                <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
                   {profil.telefon}
                 </AppText>
               ) : null}
@@ -138,14 +148,15 @@ export default function GirisScreen() {
               disabled={!!hesapIslemi}
               style={({ pressed }) => [
                 styles.cikisBtn,
+                gece && styles.cikisBtnGece,
                 pressed && styles.pressed,
                 hesapIslemi && styles.pasif,
               ]}
               onPress={() => void cikisYapGuvenli()}>
               {hesapIslemi === 'cikis' ? (
-                <ActivityIndicator size="small" color={Palette.kirmizi} />
+                <ActivityIndicator size="small" color={gece ? Palette.kirmiziParlak : Palette.kirmizi} />
               ) : (
-                <AppText variant="kucuk" color="kirmizi" bold>
+                <AppText variant="kucuk" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold>
                   Çıkış
                 </AppText>
               )}
@@ -160,15 +171,15 @@ export default function GirisScreen() {
             ]}
             onPress={hesabiSilOnay}>
             {hesapIslemi === 'sil' ? (
-              <ActivityIndicator size="small" color={Palette.kirmizi} />
+              <ActivityIndicator size="small" color={gece ? Palette.kirmiziParlak : Palette.kirmizi} />
             ) : (
               <>
                 <MaterialCommunityIcons
                   name="account-remove-outline"
                   size={18}
-                  color={Palette.kirmizi}
+                  color={gece ? Palette.kirmiziParlak : Palette.kirmizi}
                 />
-                <AppText variant="kucuk" color="kirmizi" bold>
+                <AppText variant="kucuk" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold>
                   Hesabı Sil
                 </AppText>
               </>
@@ -180,14 +191,23 @@ export default function GirisScreen() {
         <>
           <Pressable
             disabled={mesgul}
-            style={({ pressed }) => [styles.googleBtn, pressed && styles.pressed, mesgul && styles.pasif]}
+            style={({ pressed }) => [
+              styles.googleBtn,
+              gece && styles.googleBtnGece,
+              pressed && styles.pressed,
+              mesgul && styles.pasif,
+            ]}
             onPress={() => void giris()}>
             {mesgul ? (
-              <ActivityIndicator color={Palette.lacivert} />
+              <ActivityIndicator color={gece ? Palette.altinParlak : Palette.lacivert} />
             ) : (
               <>
-                <MaterialCommunityIcons name="google" size={22} color={Palette.lacivert} />
-                <AppText variant="govde" bold color="lacivert">
+                <MaterialCommunityIcons
+                  name="google"
+                  size={22}
+                  color={gece ? Palette.beyaz : Palette.lacivert}
+                />
+                <AppText variant="govde" bold color={gece ? 'beyaz' : 'lacivert'}>
                   Gmail ile giriş yap
                 </AppText>
               </>
@@ -195,16 +215,16 @@ export default function GirisScreen() {
           </Pressable>
 
           {hata ? (
-            <AppText variant="kucuk" color="kirmizi" bold style={styles.ortali}>
+            <AppText variant="kucuk" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold style={styles.ortali}>
               {__DEV__ ? `Hata: ${hata}` : 'Giriş yapılamadı, tekrar dene.'}
             </AppText>
           ) : null}
 
-          <AppText variant="etiket" color="solukMetin" style={styles.ortali}>
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortali}>
             Giriş yaparak{' '}
             <AppText
               variant="etiket"
-              color="lacivert"
+              color={gece ? 'altinParlak' : 'lacivert'}
               bold
               onPress={() => router.push({ pathname: '/yasal', params: { tip: 'gizlilik' } })}>
               Gizlilik Politikası ve Kullanım Şartları
@@ -229,7 +249,7 @@ export default function GirisScreen() {
       <Pressable
         style={({ pressed }) => [styles.misafirBtn, pressed && styles.pressed]}
         onPress={() => router.back()}>
-        <AppText variant="kucuk" color="solukMetin" bold>
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
           {kullanici ? 'Kapat' : 'Şimdilik girişsiz devam et'}
         </AppText>
       </Pressable>
@@ -326,5 +346,18 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.85,
+  },
+  // Gece dili (bayraklı)
+  kartGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderColor: 'rgba(126,205,218,0.5)',
+  },
+  cikisBtnGece: {
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderColor: 'rgba(240,68,56,0.55)',
+  },
+  googleBtnGece: {
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderColor: '#F3C24A',
   },
 });

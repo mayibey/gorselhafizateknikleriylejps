@@ -6,9 +6,11 @@ import { Screen } from '@/components/ui/screen';
 import { GIZLILIK_URL, SARTLAR_URL } from '@/constants/config';
 import { Palette, Spacing } from '@/constants/theme';
 import { GIZLILIK_METNI, SARTLAR_METNI } from '@/constants/yasal-metin';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 export default function YasalScreen() {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   const { tip } = useLocalSearchParams<{ tip?: string }>();
   const sartlar = tip === 'sartlar';
   const hamMetin = sartlar ? SARTLAR_METNI : GIZLILIK_METNI;
@@ -18,14 +20,14 @@ export default function YasalScreen() {
   const baslik = sartlar ? 'Kullanım Şartları' : 'Gizlilik Politikası';
 
   return (
-    <Screen title={baslik} onGeri={() => router.back()}>
+    <Screen title={baslik} onGeri={() => router.back()} koyu={gece} kompaktBaslik={gece}>
       <ScrollView contentContainerStyle={styles.icerik}>
-        <AppText variant="kucuk" style={styles.metin}>
+        <AppText variant="kucuk" style={[styles.metin, gece && styles.metinGece]}>
           {metin}
         </AppText>
         {url ? (
           <Pressable onPress={() => void Linking.openURL(url)}>
-            <AppText variant="etiket" color="altin" bold style={styles.link}>
+            <AppText variant="etiket" color={gece ? 'altinParlak' : 'altin'} bold style={styles.link}>
               Tam/güncel sürümü web'de aç
             </AppText>
           </Pressable>
@@ -34,7 +36,7 @@ export default function YasalScreen() {
           onPress={() =>
             router.replace({ pathname: '/yasal', params: { tip: sartlar ? 'gizlilik' : 'sartlar' } })
           }>
-          <AppText variant="etiket" color="lacivert" bold style={styles.link}>
+          <AppText variant="etiket" color={gece ? 'altinParlak' : 'lacivert'} bold style={styles.link}>
             {sartlar ? '→ Gizlilik Politikası' : '→ Kullanım Şartları'}
           </AppText>
         </Pressable>
@@ -51,6 +53,10 @@ const styles = StyleSheet.create({
   metin: {
     color: Palette.lacivert,
     lineHeight: 21,
+  },
+  metinGece: {
+    color: Palette.beyaz,
+    opacity: 0.92,
   },
   link: {
     textAlign: 'center',

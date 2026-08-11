@@ -177,6 +177,28 @@ export default function SicilScreen() {
       {karargahTasindi ? (
         <>
           <KunyeBandi />
+          {/* 11 Ağu başkan: Ayarlar girişi EN ÜSTTE (künyenin hemen altı). */}
+          <Pressable
+            style={({ pressed }) => [
+              styles.istatistikKart,
+              styles.istatistikKartGece,
+              pressed && styles.pressed,
+            ]}
+            onPress={() => router.push('/ayarlar')}
+            accessibilityRole="button"
+            accessibilityLabel="Ayarlar">
+            <View style={styles.kategoriBaslik}>
+              <View style={[styles.kategoriIkon, styles.kategoriIkonGece]}>
+                <MaterialCommunityIcons name="cog-outline" size={22} color={Palette.altinParlak} />
+              </View>
+              <View style={styles.kategoriAd}>
+                <AppText variant="govde" bold color="beyaz">
+                  Ayarlar
+                </AppText>
+              </View>
+              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinParlak} />
+            </View>
+          </Pressable>
           <SinavProjeksiyonu />
         </>
       ) : null}
@@ -270,31 +292,10 @@ export default function SicilScreen() {
           </View>
           )}
 
-          {/* Analiz kategorileri (11 Ağu, başkan): Ayarlar girişi en üstte; Çalışma Analizi
-              ve Er Meydanı Evsaf'tan kaldırıldı. */}
+          {/* Analiz kategorileri (11 Ağu, başkan): Çalışma Analizi ve Er Meydanı kaldırıldı;
+              Ayarlar girişi künyenin altına taşındı. */}
           {karargahTasindi ? (
             <>
-              <Pressable
-                style={({ pressed }) => [
-                  styles.istatistikKart,
-                  styles.istatistikKartGece,
-                  pressed && styles.pressed,
-                ]}
-                onPress={() => router.push('/ayarlar')}
-                accessibilityRole="button"
-                accessibilityLabel="Ayarlar">
-                <View style={styles.kategoriBaslik}>
-                  <View style={[styles.kategoriIkon, styles.kategoriIkonGece]}>
-                    <MaterialCommunityIcons name="cog-outline" size={22} color={Palette.altinParlak} />
-                  </View>
-                  <View style={styles.kategoriAd}>
-                    <AppText variant="govde" bold color="beyaz">
-                      Ayarlar
-                    </AppText>
-                  </View>
-                  <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinParlak} />
-                </View>
-              </Pressable>
               <KanunHaritasi />
               <DenemeGecmisi />
             </>
@@ -1144,7 +1145,7 @@ function SicilBolum({
           )}
           {cezalar.length > 0 && !telafiEdildi ? (
             <AppText variant="etiket" color="amber">
-              Zayıflarını kapatırsan cezaların "telafi edildi" sayılır ve kademe yükselmez.
+              Zayıflarını kapatırsan cezaların "telafi edildi" sayılır ve daha ağır ceza gelmez.
             </AppText>
           ) : null}
         </>

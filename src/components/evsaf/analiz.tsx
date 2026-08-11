@@ -183,7 +183,7 @@ export function KanunHaritasi() {
   return (
     <EvsafKategori
       ikon="map-outline"
-      baslik="Kanun Haritası"
+      baslik="Kanun İlerlemeleri"
       altYazi={`${liste.length} kanunun ${baslanan}'inde başladın`}>
       {/* Yan yana blok seçici — seçilen blokun listesi sabit alanda kayar. */}
       <View style={st.haritaSekmeler}>
