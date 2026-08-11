@@ -1076,9 +1076,10 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
-              <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" />
+              <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="top" />
               <LinearGradient
-                colors={['rgba(4,26,40,0.05)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
+                colors={['transparent', 'rgba(4,26,40,0.35)', 'rgba(4,26,40,0.88)', 'rgba(4,26,40,0.98)']}
+                locations={[0, 0.44, 0.74, 1]}
                 style={StyleSheet.absoluteFill}
                 pointerEvents="none"
               />
@@ -1098,9 +1099,10 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Oyun Merkezi — oynayarak öğren">
-              <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" />
+              <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="top" />
               <LinearGradient
-                colors={['rgba(4,26,40,0.05)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
+                colors={['transparent', 'rgba(4,26,40,0.35)', 'rgba(4,26,40,0.88)', 'rgba(4,26,40,0.98)']}
+                locations={[0, 0.44, 0.74, 1]}
                 style={StyleSheet.absoluteFill}
                 pointerEvents="none"
               />
@@ -2094,7 +2096,7 @@ const styles = StyleSheet.create({
   // Sinematik arka planlı panel (Tatbikat / Oyun Merkezi) — görsel kutuya oturur, taşmaz.
   gorselPanel: {
     flex: 1,
-    height: 218,
+    height: 288,
     borderRadius: Radius.l,
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
@@ -2105,7 +2107,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: Spacing.two,
     paddingBottom: Spacing.three,
-    gap: 5,
+    gap: 6,
   },
   gorselBaslik: {
     fontSize: 17,
