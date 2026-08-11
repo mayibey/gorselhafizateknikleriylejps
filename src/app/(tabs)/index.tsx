@@ -1038,7 +1038,7 @@ export default function KarargahScreen() {
                 />
               </Sallan>
             </View>
-            <View style={styles.erMetin}>
+            <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
               {unutulan.length > 0 ? (
                 <View style={styles.paslanmaSatir}>
                   <AppText variant="kucuk" bold color="kirmiziParlak">
@@ -1869,10 +1869,13 @@ const styles = StyleSheet.create({
   notYazi: {
     opacity: 0.9,
   },
+  tekrarYaziAlani: {
+    paddingBottom: 20, // altta TEKRAR ET'e yer — çapraz yerleşim
+  },
   tekrarEtKose: {
     position: 'absolute',
     right: Spacing.three,
-    bottom: Spacing.one + 2,
+    bottom: Spacing.two, // başkan: SAĞ ALTA hizalı
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
@@ -2074,9 +2077,9 @@ const styles = StyleSheet.create({
   },
   tekrarSatir: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start', // başkan: yazı SOL ÜSTE
     gap: Spacing.three,
-    paddingVertical: Spacing.two, // mock: kompakt uyarı satırı, hero gibi kabarık değil
+    paddingVertical: Spacing.two,
   },
   tekrarBaslik2: {
     letterSpacing: 1,
