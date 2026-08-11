@@ -80,26 +80,32 @@ export function SinavProjeksiyonu() {
   const tahminiYuzde = Math.round((tahmini / veri.toplam) * 100);
   const gerekliGunluk = Math.ceil((veri.toplam - veri.calisilan) / veri.kalanGun);
 
+  const tempoDusuk = veri.tempo < 1; // günde 1 karttan az → "~0 kart" saçmalığına düşme
   return (
     <EvsafKategori
       ikon="chart-line"
       baslik="Sınav Projeksiyonu"
-      altYazi={`Bu tempoyla sınav günü: kartların %${tahminiYuzde}'i`}>
+      altYazi={`Bu gidişle sınav gününe kadar kartların %${tahminiYuzde}'si biter`}>
       <View style={st.satirlar}>
         <AppText variant="kucuk" color="beyaz">
-          Sınava <AppText variant="kucuk" bold color="altinParlak">{veri.kalanGun} gün</AppText> var.
-          Şu ana kadar {veri.calisilan}/{veri.toplam} kart çalıştın.
+          Sınava <AppText variant="kucuk" bold color="altinParlak">{veri.kalanGun} gün</AppText>{' '}
+          kaldı. {veri.toplam} kartın{' '}
+          <AppText variant="kucuk" bold color="altinParlak">{veri.calisilan}</AppText>
+          {"'"}ünü bitirdin.
         </AppText>
         <AppText variant="kucuk" color="beyaz">
-          Son 14 gündeki temponla (günde ~{Math.round(veri.tempo)} kart) sınav gününe kadar{' '}
+          {tempoDusuk
+            ? 'Son iki haftada tempon epey düşmüş — böyle giderse sınav gününe kadar ancak '
+            : `Son iki haftada günde ortalama ${Math.round(veri.tempo)} kart çalıştın. Bu tempoyla sınav gününe kadar `}
           <AppText variant="kucuk" bold color="altinParlak">
-            {tahmini} kart (%{tahminiYuzde})
+            {tahmini} karta (%{tahminiYuzde})
           </AppText>{' '}
-          bitirmiş olursun.
+          ulaşırsın.
         </AppText>
         <AppText variant="kucuk" color="beyaz">
-          Tamamını bitirmek için günde{' '}
-          <AppText variant="kucuk" bold color="altinParlak">{gerekliGunluk} kart</AppText> gerekiyor.
+          Hepsini yetiştirmek istiyorsan bugünden itibaren günde{' '}
+          <AppText variant="kucuk" bold color="altinParlak">{gerekliGunluk} kart</AppText>{' '}
+          çalışman lazım.
         </AppText>
       </View>
     </EvsafKategori>

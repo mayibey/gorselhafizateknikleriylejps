@@ -1052,17 +1052,27 @@ function SicilBolum({
         style={({ pressed }) => [styles.sicilSatir, pressed && styles.pressed]}>
         <View style={styles.sicilUst}>
           {sadeEvsaf ? (
-            <View style={[styles.sicilNokta, odulMu ? styles.sicilNoktaOdul : styles.sicilNoktaCeza]}>
+            <View
+              style={[
+                styles.sicilNokta,
+                styles.sicilNoktaGece,
+                odulMu ? styles.sicilNoktaOdulGece : null,
+              ]}>
               <MaterialCommunityIcons
                 name={odulMu ? 'medal' : b.ikon}
                 size={16}
-                color={odulMu ? Palette.altinKoyu : Palette[b.renk]}
+                color={odulMu ? Palette.altinParlak : Palette.kirmiziParlak}
               />
             </View>
           ) : (
             <MaterialCommunityIcons name={b.ikon} size={20} color={Palette[b.renk]} />
           )}
-          <AppText variant="kucuk" bold style={styles.sicilAd} numberOfLines={1}>
+          <AppText
+            variant="kucuk"
+            bold
+            color={sadeEvsaf ? 'beyaz' : 'anaMetin'}
+            style={styles.sicilAd}
+            numberOfLines={1}>
             {k.baslik}
             {adet > 1 ? ` ×${adet}` : ''}
           </AppText>
@@ -1099,7 +1109,7 @@ function SicilBolum({
           {oduller.length === 0 ? (
             <Pressable
               onPress={() => router.push('/tatbikat')}
-              style={({ pressed }) => [styles.sicilHedef, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.sicilHedef, styles.sicilHedefGece, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Denemelere git">
               <MaterialCommunityIcons name="medal-outline" size={18} color={Palette.altinParlak} />
@@ -1830,6 +1840,19 @@ const styles = StyleSheet.create({
   sicilHedefMetin: {
     flex: 1,
     flexShrink: 1,
+  },
+  // Gece dili: takdir hedef kapsülü koyu zemin + altın çerçeve (krem üstüne beyaz yazı okunmuyordu).
+  sicilHedefGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderColor: 'rgba(240,183,51,0.8)',
+  },
+  sicilNoktaGece: {
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.35)',
+  },
+  sicilNoktaOdulGece: {
+    borderColor: 'rgba(240,183,51,0.8)',
   },
   // 10 Ağu redesign: altın CTA (Zayıf Konuları Çalış) + küçük yasal link.
   zayifCta: {
