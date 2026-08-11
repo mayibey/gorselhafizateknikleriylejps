@@ -238,34 +238,42 @@ export default function SicilScreen() {
                içindeki tek düğme çalışmaya başlatır ve ne olacağını söyler. En zayıf 3
                satır SALT BİLGİ (tıklanmaz) → tıklama hedefi yalnız iki tane, ikisi de net. */
             <Pressable
-              style={({ pressed }) => [styles.istatistikKart, pressed && styles.pressed]}
+              style={({ pressed }) => [
+                styles.istatistikKart,
+                styles.istatistikKartGece,
+                pressed && styles.pressed,
+              ]}
               onPress={() => router.push('/zayif-mevziler')}
               accessibilityRole="button"
               accessibilityLabel="Zayıf mevziler — tümünü gör">
               <View style={styles.kategoriBaslik}>
-                <View style={styles.kategoriIkon}>
-                  <MaterialCommunityIcons name="target" size={22} color={Palette.lacivert} />
+                <View style={[styles.kategoriIkon, styles.kategoriIkonGece]}>
+                  <MaterialCommunityIcons name="target" size={22} color={Palette.altinParlak} />
                 </View>
                 <View style={styles.kategoriAd}>
-                  <AppText variant="govde" bold color="lacivert">
+                  <AppText variant="govde" bold color="beyaz">
                     Zayıf Mevziler
                   </AppText>
-                  <AppText variant="etiket" color="solukMetin">
+                  <AppText variant="etiket" bold color="beyaz" style={styles.geceSolukYazi}>
                     {zayifN > 0
                       ? `${zayifN} konu tekrar bekliyor · tümünü gör`
                       : 'Tekrar bekleyen konu yok'}
                   </AppText>
                 </View>
-                <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.solukMetin} />
+                <MaterialCommunityIcons
+                  name="chevron-right"
+                  size={22}
+                  color="rgba(226,236,240,0.75)"
+                />
               </View>
               {zayif && zayif.liste.length > 0 ? (
                 <>
                   {zayif.liste.slice(0, 3).map((z) => (
                     <View key={z.card.id} style={styles.zayifSatir}>
-                      <AppText variant="kucuk" bold color="anaMetin" style={styles.zayifAd} numberOfLines={1}>
+                      <AppText variant="kucuk" bold color="beyaz" style={styles.zayifAd} numberOfLines={1}>
                         {maddeEtiket(z.card.madde_no, z.card.baslik)}
                       </AppText>
-                      <AppText variant="etiket" bold color="solukMetin">
+                      <AppText variant="etiket" bold color="altinParlak">
                         ×{z.yanlisSayisi}
                       </AppText>
                     </View>
@@ -290,7 +298,7 @@ export default function SicilScreen() {
                   </Pressable>
                 </>
               ) : (
-                <AppText variant="kucuk" color="solukMetin">
+                <AppText variant="kucuk" bold color="beyaz" style={styles.geceSolukYazi}>
                   Henüz zayıf mevzu bulunmuyor — Tatbikatta kendini dene.
                 </AppText>
               )}
@@ -1498,6 +1506,19 @@ function Stat({
 }
 
 const styles = StyleSheet.create({
+  istatistikKartGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderColor: 'rgba(126,205,218,0.5)',
+    borderWidth: 1,
+  },
+  kategoriIkonGece: {
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+  },
+  geceSolukYazi: {
+    opacity: 0.88,
+  },
   pressed: {
     opacity: 0.85,
   },
