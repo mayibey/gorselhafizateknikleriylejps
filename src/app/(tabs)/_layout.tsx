@@ -48,7 +48,7 @@ function SisPerdesi({ sinyal, ortada }: { sinyal: number; ortada: () => void }) 
   const sagUst = bulut(1, -0.3, 0.75);
   const solAlt = bulut(-1, 0.35, 0.85);
   const sagAlt = bulut(1, 0.45, 1.1);
-  const ortStil = useAnimatedStyle(() => ({ opacity: yog.value * 0.98 }));
+  const ortStil = useAnimatedStyle(() => ({ opacity: yog.value * 0.94 }));
   const katmanlar: [object, object][] = [
     [sisSt.solUst, solUst],
     [sisSt.sagUst, sagUst],
@@ -60,7 +60,7 @@ function SisPerdesi({ sinyal, ortada }: { sinyal: number; ortada: () => void }) 
       {katmanlar.map(([yer, stil], i) => (
         <Animated.View key={i} style={[sisSt.bulut, yer, stil]}>
           <LinearGradient
-            colors={['rgba(206,224,233,0.98)', 'rgba(206,224,233,0.8)', 'rgba(206,224,233,0)']}
+            colors={['rgba(96,130,146,0.6)', 'rgba(70,104,122,0.45)', 'rgba(70,104,122,0)']}
             start={{ x: 0.5, y: 0.5 }}
             end={{ x: 1, y: 1 }}
             style={sisSt.bulutDolgu}
@@ -87,7 +87,7 @@ const sisSt = StyleSheet.create({
   solAlt: { left: '-18%', bottom: '-10%' },
   sagAlt: { right: '-20%', bottom: '-14%' },
   tul: {
-    backgroundColor: 'rgb(206,224,233)',
+    backgroundColor: 'rgb(13,44,58)', // gece sisi — koyu petrol, göz almaz
   },
 });
 
