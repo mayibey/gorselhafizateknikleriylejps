@@ -584,8 +584,21 @@ export default function KarargahScreen() {
             <View style={[styles.gecePanel, styles.emirPanelUst]}>
               {/* SOL PLAKA (mock birebir): FLAMA kesimli zemin — sağ kenar çapraz,
                   altın konturlu; kartın üst çizgisine BİNER (kopuk pill değil). */}
-              {/* PLAKA: oval köşeli dikdörtgen çerçeve (başkan, 11 Ağu) + defne arması. */}
+              {/* PLAKA: kesik uçlu FLAMA (başkan, 12 Ağu görseli) + defne arması. */}
               <View style={styles.plakaKap}>
+                <Svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 218 58"
+                  preserveAspectRatio="none"
+                  style={StyleSheet.absoluteFill}>
+                  <Path
+                    d="M7,2 L210,2 L172,56 L7,56 Q2,56 2,51 L2,7 Q2,2 7,2 Z"
+                    fill="#0B2F44"
+                    stroke="#F3C24A"
+                    strokeWidth={1.6}
+                  />
+                </Svg>
                 <Image
                   source={require('../../../assets/images/mock-arma.webp')}
                   style={styles.plakaArmaGorsel}
@@ -601,16 +614,31 @@ export default function KarargahScreen() {
               </View>
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
-                /* Başkan (11 Ağu): katlama uçları OLMASIN — temiz oval rozet. */
-                <LinearGradient
-                  colors={['#E8473A', '#A61B12']}
-                  start={{ x: 0.5, y: 0 }}
-                  end={{ x: 0.5, y: 1 }}
-                  style={styles.zayifOval}>
+                /* Başkan (12 Ağu görseli): uçları pahlı kırmızı bant + altın kontur. */
+                <View style={styles.zayifBant} pointerEvents="none">
+                  <Svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 176 34"
+                    preserveAspectRatio="none"
+                    style={StyleSheet.absoluteFill}>
+                    <Defs>
+                      <SvgGradient id="zayifBantG" x1="0" y1="0" x2="0" y2="1">
+                        <Stop offset="0" stopColor="#E8473A" />
+                        <Stop offset="1" stopColor="#9E170F" />
+                      </SvgGradient>
+                    </Defs>
+                    <Path
+                      d="M12,1 L174,1 L164,33 L2,33 Z"
+                      fill="url(#zayifBantG)"
+                      stroke="#F3C24A"
+                      strokeWidth={1.5}
+                    />
+                  </Svg>
                   <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
                     ZAYIF MEVZİLER
                   </AppText>
-                </LinearGradient>
+                </View>
               ) : bos && hicCalisilan ? (
                 /* Yeni kullanıcı: ALTIN oval rozet — İLK EMİR. */
                 <LinearGradient
@@ -1699,22 +1727,28 @@ const styles = StyleSheet.create({
     height: 56,
   },
   plakaKap: {
-    alignSelf: 'flex-start',
+    width: 218,
+    height: 58,
     marginBottom: Spacing.one, // akış içinde: binme imkânsız
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.two,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    backgroundColor: '#0B2F44',
-    borderWidth: 1.6,
-    borderColor: '#F3C24A',
-    borderRadius: 16, // oval köşeli dikdörtgen
+    gap: Spacing.one,
+    paddingLeft: 10,
+    paddingRight: 54, // çapraz kesiğin altına yazı giremez
   },
   plakaArmaGorsel: {
     width: 44,
     height: 44,
     borderRadius: 22,
+  },
+  zayifBant: {
+    position: 'absolute',
+    top: 12,
+    right: 12,
+    width: 176,
+    height: 34,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   zayifOval: {
     position: 'absolute',
