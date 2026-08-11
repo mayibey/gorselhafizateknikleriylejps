@@ -1729,7 +1729,7 @@ const styles = StyleSheet.create({
   },
   zayifEtiketSar: {
     position: 'absolute',
-    top: -5, // başkan: 2 piksel yukarı
+    top: -7, // başkan: 2 piksel daha yukarı
     right: -12,
     width: 188, // TAM genişlik — sol üst kıvrım görünür (sağ alt gibi)
     height: 57,
