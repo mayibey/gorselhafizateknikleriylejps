@@ -549,23 +549,38 @@ function SinematikHarita({
 
   const AW = 100;
   const AH = 88;
-  const aracAnim = useRef(new Animated.Value(ilerleme)).current;
+  const aracAnim = useRef(new Animated.Value(Math.max(0.02, ilerleme - 0.14))).current;
   const titre = useRef(new Animated.Value(0)).current;
-  // İlerleme değişince araç yeni konuma yumuşak kayar (ileri gider).
+  // GİRİŞ + MANEVRA: araç açılışta biraz geriden ilerleme noktasına SÜREREK gelir,
+  // sonra o nokta etrafında ileri-geri manevra yapar (canlı "gidiyor" hissi).
   useEffect(() => {
-    Animated.timing(aracAnim, {
-      toValue: ilerleme,
-      duration: 1200,
-      easing: Easing.inOut(Easing.cubic),
-      useNativeDriver: false,
-    }).start();
+    const geri = Math.max(0.02, ilerleme - 0.14);
+    const ileri = Math.min(0.99, ilerleme + 0.012);
+    const cikis = Math.max(0.02, ilerleme - 0.012);
+    aracAnim.setValue(geri);
+    const anim = Animated.sequence([
+      Animated.timing(aracAnim, {
+        toValue: ilerleme,
+        duration: 2400,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: false,
+      }),
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(aracAnim, { toValue: ileri, duration: 1500, easing: Easing.inOut(Easing.sin), useNativeDriver: false }),
+          Animated.timing(aracAnim, { toValue: cikis, duration: 1500, easing: Easing.inOut(Easing.sin), useNativeDriver: false }),
+        ]),
+      ),
+    ]);
+    anim.start();
+    return () => anim.stop();
   }, [ilerleme, aracAnim]);
   // Motor rölanti titreşimi — araç "duruyor ama çalışıyor" gibi hafif titrer.
   useEffect(() => {
     const l = Animated.loop(
       Animated.sequence([
-        Animated.timing(titre, { toValue: 1, duration: 460, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
-        Animated.timing(titre, { toValue: 0, duration: 460, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
+        Animated.timing(titre, { toValue: 1, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
+        Animated.timing(titre, { toValue: 0, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: false }),
       ]),
     );
     l.start();
@@ -627,16 +642,21 @@ function SinematikHarita({
           );
         })}
 
-        {/* ARAÇ — ilerleme oranına bağlı, yol boyunca kayan + motor titreşimi. */}
-        <AnimatedImage
-          source={PATIKA_ARAC}
-          contentFit="contain"
-          style={[
-            st.arac,
-            { width: AW, height: AH, left: aracLeft, top: aracTop, transform: [{ translateY: aracTitre }] },
-          ]}
-          pointerEvents="none"
-        />
+        {/* ARAÇ — ilerleme oranına bağlı, yol boyunca kayan + far + iz + motor titreşimi. */}
+        <Animated.View
+          style={[st.aracKap, { width: AW, height: AH, left: aracLeft, top: aracTop }]}
+          pointerEvents="none">
+          {/* Far hüzmesi — aracın önünde (yolun ilerisi) soluk sarı ışık. */}
+          <View style={st.far} pointerEvents="none" />
+          {/* Yol izi — aracın arkasında soluk çizgi. */}
+          <View style={st.iz} pointerEvents="none" />
+          <AnimatedImage
+            source={PATIKA_ARAC}
+            contentFit="contain"
+            style={[st.aracImg, { transform: [{ translateY: aracTitre }] }]}
+            pointerEvents="none"
+          />
+        </Animated.View>
       </View>
 
       {/* Alt panel — ŞU ANKİ MEVZİ + DEVAM ET. */}
@@ -1067,6 +1087,30 @@ const st = StyleSheet.create({
     position: 'absolute',
     width: 68,
     height: 60,
+  },
+  aracKap: {
+    position: 'absolute',
+  },
+  aracImg: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  far: {
+    position: 'absolute',
+    top: -16,
+    left: '26%',
+    width: '48%',
+    height: 32,
+    borderRadius: 18,
+    backgroundColor: 'rgba(243,194,74,0.16)',
+  },
+  iz: {
+    position: 'absolute',
+    bottom: 2,
+    left: '36%',
+    width: '28%',
+    height: 5,
+    borderRadius: 3,
+    backgroundColor: 'rgba(226,236,240,0.16)',
   },
   altPanel: {
     flexDirection: 'row',
