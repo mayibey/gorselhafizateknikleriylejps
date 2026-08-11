@@ -23,9 +23,9 @@ import { type DestekDurum, type DestekMesaj, talepMesajlariGetir } from '@/lib/d
 type Sekme = 'talepler' | 'duyurular';
 
 const DURUM_RENK: Record<DestekDurum, PaletteColor> = {
-  acik: 'amber',
+  acik: 'altinParlak',
   cevaplandi: 'yesil',
-  kapandi: 'solukMetin',
+  kapandi: 'kartMetinIkincil',
 };
 
 const DURUM_ETIKET: Record<DestekDurum, string> = {
@@ -44,7 +44,7 @@ export default function AdminScreen() {
   const geriBas = seciliTalep ? () => setSeciliTalep(null) : () => router.back();
 
   return (
-    <Screen title={baslik} onGeri={geriBas}>
+    <Screen title={baslik} onGeri={geriBas} koyu kompaktBaslik>
       {seciliTalep ? (
         <TalepThread talep={seciliTalep} />
       ) : (
@@ -67,7 +67,7 @@ export default function AdminScreen() {
 function SekmeBtn({ etiket, aktif, onPress }: { etiket: string; aktif: boolean; onPress: () => void }) {
   return (
     <Pressable style={[styles.sekmeBtn, aktif && styles.sekmeBtnAktif]} onPress={onPress}>
-      <AppText variant="kucuk" color={aktif ? 'beyaz' : 'solukMetin'} bold>
+      <AppText variant="kucuk" color={aktif ? 'altinParlak' : 'beyaz'} bold>
         {etiket}
       </AppText>
     </Pressable>
@@ -91,12 +91,12 @@ function TaleplerSekmesi({ onSec }: { onSec: (t: AdminTalep) => void }) {
     }, []),
   );
 
-  if (talepler === null) return <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />;
+  if (talepler === null) return <ActivityIndicator color={Palette.altinParlak} style={styles.yukleniyor} />;
   if (talepler.length === 0) {
     return (
       <View style={styles.bos}>
-        <MaterialCommunityIcons name="lifebuoy" size={44} color={Palette.solukMetin} />
-        <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+        <MaterialCommunityIcons name="lifebuoy" size={44} color={Palette.kartMetinIkincil} />
+        <AppText variant="govde" color="kartMetinIkincil" style={styles.ortala}>
           Henüz destek talebi yok.
         </AppText>
       </View>
@@ -110,12 +110,12 @@ function TaleplerSekmesi({ onSec }: { onSec: (t: AdminTalep) => void }) {
           style={({ pressed }) => [styles.kart, pressed && styles.pressed]}
           onPress={() => onSec(t)}>
           <View style={styles.kartUst}>
-            <AppText variant="govde" bold style={styles.esnek} numberOfLines={2}>
+            <AppText variant="govde" bold color="beyaz" style={styles.esnek} numberOfLines={2}>
               {t.konu}
             </AppText>
             <DurumRozet durum={t.durum} />
           </View>
-          <AppText variant="kucuk" color="solukMetin">
+          <AppText variant="kucuk" color="kartMetinIkincil">
             {tarihBicimUzun(t.guncelleme_at)}
           </AppText>
         </Pressable>
@@ -175,13 +175,13 @@ function TalepThread({ talep }: { talep: AdminTalep }) {
     <>
       <View style={styles.threadUst}>
         <DurumRozet durum={durum} />
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" color="kartMetinIkincil">
           {tarihBicimUzun(talep.created_at)}
         </AppText>
       </View>
 
       {mesajlar === null ? (
-        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+        <ActivityIndicator color={Palette.altinParlak} style={styles.yukleniyor} />
       ) : (
         mesajlar.map((m) => <Baloncuk key={m.id} mesaj={m} />)
       )}
@@ -191,13 +191,13 @@ function TalepThread({ talep }: { talep: AdminTalep }) {
         value={metin}
         onChangeText={setMetin}
         placeholder="Cevap yaz…"
-        placeholderTextColor={Palette.solukMetin}
+        placeholderTextColor={'rgba(226,236,240,0.5)'}
         multiline
         textAlignVertical="top"
         editable={!gonderiliyor}
       />
       {hata ? (
-        <AppText variant="kucuk" color="kirmizi" bold>
+        <AppText variant="kucuk" color="kirmiziParlak" bold>
           Gönderilemedi, tekrar dene.
         </AppText>
       ) : null}
@@ -218,14 +218,14 @@ function TalepThread({ talep }: { talep: AdminTalep }) {
         <Pressable
           style={[styles.durumBtn, durum === 'cevaplandi' && styles.durumBtnAktif]}
           onPress={() => void durumaCevir('cevaplandi')}>
-          <AppText variant="kucuk" color={durum === 'cevaplandi' ? 'beyaz' : 'anaMetin'} bold>
+          <AppText variant="kucuk" color={durum === 'cevaplandi' ? 'altinParlak' : 'beyaz'} bold>
             Çözüldü
           </AppText>
         </Pressable>
         <Pressable
           style={[styles.durumBtn, durum === 'kapandi' && styles.durumBtnAktif]}
           onPress={() => void durumaCevir('kapandi')}>
-          <AppText variant="kucuk" color={durum === 'kapandi' ? 'beyaz' : 'anaMetin'} bold>
+          <AppText variant="kucuk" color={durum === 'kapandi' ? 'altinParlak' : 'beyaz'} bold>
             Kapat
           </AppText>
         </Pressable>
@@ -256,13 +256,13 @@ function DuyurularSekmesi() {
     <>
       <DuyuruForm onEklendi={yukle} />
 
-      <AppText variant="etiket" color="solukMetin" bold style={styles.bolumBaslik}>
+      <AppText variant="etiket" color="kartMetinIkincil" bold style={styles.bolumBaslik}>
         MEVCUT DUYURULAR
       </AppText>
       {duyurular === null ? (
-        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+        <ActivityIndicator color={Palette.altinParlak} style={styles.yukleniyor} />
       ) : duyurular.length === 0 ? (
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" color="kartMetinIkincil">
           Henüz duyuru yok.
         </AppText>
       ) : (
@@ -326,7 +326,7 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
 
   return (
     <View style={styles.form}>
-      <AppText variant="etiket" color="solukMetin" bold>
+      <AppText variant="etiket" color="kartMetinIkincil" bold>
         YENİ DUYURU
       </AppText>
       <TextInput
@@ -334,7 +334,7 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
         value={baslik}
         onChangeText={setBaslik}
         placeholder="Başlık"
-        placeholderTextColor={Palette.solukMetin}
+        placeholderTextColor={'rgba(226,236,240,0.5)'}
         editable={!gonderiliyor}
         maxLength={120}
       />
@@ -343,7 +343,7 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
         value={metin}
         onChangeText={setMetin}
         placeholder="Duyuru metni…"
-        placeholderTextColor={Palette.solukMetin}
+        placeholderTextColor={'rgba(226,236,240,0.5)'}
         multiline
         textAlignVertical="top"
         editable={!gonderiliyor}
@@ -361,7 +361,7 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
           value={email}
           onChangeText={setEmail}
           placeholder="Kullanıcı e-postası"
-          placeholderTextColor={Palette.solukMetin}
+          placeholderTextColor={'rgba(226,236,240,0.5)'}
           autoCapitalize="none"
           keyboardType="email-address"
           editable={!gonderiliyor}
@@ -377,15 +377,15 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
         <MaterialCommunityIcons
           name={paywall ? 'checkbox-marked' : 'checkbox-blank-outline'}
           size={22}
-          color={paywall ? Palette.altin : Palette.solukMetin}
+          color={paywall ? Palette.altinParlak : Palette.kartMetinIkincil}
         />
-        <AppText variant="kucuk" style={styles.esnek}>
+        <AppText variant="kucuk" color="beyaz" style={styles.esnek}>
           Dokununca satın alma ekranını aç (indirim duyurusu)
         </AppText>
       </Pressable>
 
       {hata ? (
-        <AppText variant="kucuk" color="kirmizi" bold>
+        <AppText variant="kucuk" color="kirmiziParlak" bold>
           {hata}
         </AppText>
       ) : null}
@@ -409,7 +409,7 @@ function DuyuruForm({ onEklendi }: { onEklendi: () => Promise<void> }) {
 function HedefBtn({ etiket, aktif, onPress }: { etiket: string; aktif: boolean; onPress: () => void }) {
   return (
     <Pressable style={[styles.hedefBtn, aktif && styles.hedefBtnAktif]} onPress={onPress}>
-      <AppText variant="etiket" color={aktif ? 'beyaz' : 'anaMetin'} bold>
+      <AppText variant="etiket" color={aktif ? 'altinParlak' : 'beyaz'} bold>
         {etiket}
       </AppText>
     </Pressable>
@@ -446,26 +446,26 @@ function DuyuruKarti({ duyuru, onDegisti }: { duyuru: AdminDuyuru; onDegisti: ()
   return (
     <View style={styles.kart}>
       <View style={styles.kartUst}>
-        <AppText variant="govde" bold style={styles.esnek} numberOfLines={2}>
+        <AppText variant="govde" bold color="beyaz" style={styles.esnek} numberOfLines={2}>
           {duyuru.baslik}
         </AppText>
-        <View style={[styles.durumNokta, { backgroundColor: duyuru.aktif ? Palette.yesil : Palette.solukMetin }]} />
+        <View style={[styles.durumNokta, { backgroundColor: duyuru.aktif ? Palette.yesil : Palette.kartMetinIkincil }]} />
       </View>
-      <AppText variant="kucuk" color="solukMetin" numberOfLines={3}>
+      <AppText variant="kucuk" color="kartMetinIkincil" numberOfLines={3}>
         {duyuru.metin}
       </AppText>
       <View style={styles.kartAlt}>
-        <AppText variant="etiket" color="solukMetin" bold>
+        <AppText variant="etiket" color="kartMetinIkincil" bold>
           {duyuru.hedef === 'premium' ? 'PREMİUM' : 'HERKES'} · {duyuru.aktif ? 'Aktif' : 'Pasif'}
         </AppText>
         <View style={styles.kartAksiyon}>
           <Pressable style={styles.kucukBtn} disabled={islemde} onPress={() => void aktifligiCevir()}>
-            <AppText variant="etiket" color="lacivert" bold>
+            <AppText variant="etiket" color="altinParlak" bold>
               {duyuru.aktif ? 'Pasifleştir' : 'Aktifleştir'}
             </AppText>
           </Pressable>
           <Pressable style={styles.kucukBtn} disabled={islemde} onPress={() => void sil()}>
-            <AppText variant="etiket" color="kirmizi" bold>
+            <AppText variant="etiket" color="kirmiziParlak" bold>
               Sil
             </AppText>
           </Pressable>
@@ -482,11 +482,11 @@ function Baloncuk({ mesaj }: { mesaj: DestekMesaj }) {
   return (
     <View style={[styles.baloncukSarma, kullanici ? styles.sol : styles.sag]}>
       <View style={[styles.baloncuk, kullanici ? styles.baloncukKullanici : styles.baloncukAdmin]}>
-        <AppText variant="kucuk" color={kullanici ? 'anaMetin' : 'beyaz'}>
+        <AppText variant="kucuk" color="beyaz">
           {mesaj.metin}
         </AppText>
       </View>
-      <AppText variant="etiket" color="solukMetin" style={kullanici ? undefined : styles.ortala}>
+      <AppText variant="etiket" color="kartMetinIkincil" style={kullanici ? undefined : styles.ortala}>
         {kullanici ? 'Kullanıcı' : 'Sen (Admin)'} · {tarihBicimUzun(mesaj.created_at)}
       </AppText>
     </View>
@@ -530,12 +530,12 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.two,
     borderRadius: Radius.m,
     borderWidth: 1,
-    borderColor: Palette.kenarlik,
-    backgroundColor: Palette.kartKremi,
+    borderColor: 'rgba(126,205,218,0.3)',
+    backgroundColor: 'rgba(3,40,56,0.55)',
   },
   sekmeBtnAktif: {
-    backgroundColor: Palette.lacivert,
-    borderColor: Palette.lacivert,
+    backgroundColor: 'rgba(3,47,69,0.95)',
+    borderColor: '#F3C24A',
   },
   yukleniyor: {
     marginVertical: Spacing.four,
@@ -554,10 +554,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   kart: {
-    backgroundColor: Palette.kartKremi,
+    backgroundColor: 'rgba(3,47,69,0.88)',
     borderRadius: Radius.l,
     borderWidth: 1,
-    borderColor: Palette.kenarlik,
+    borderColor: 'rgba(126,205,218,0.5)',
     padding: Spacing.three,
     gap: Spacing.one,
   },
@@ -611,34 +611,38 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.two,
   },
   baloncukKullanici: {
-    backgroundColor: Palette.kartKremi,
+    backgroundColor: 'rgba(3,47,69,0.88)',
     borderWidth: 1,
-    borderColor: Palette.kenarlik,
+    borderColor: 'rgba(126,205,218,0.5)',
   },
   baloncukAdmin: {
-    backgroundColor: Palette.lacivert,
+    backgroundColor: 'rgba(3,40,56,0.95)',
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.6)',
   },
   girdi: {
     minHeight: 120,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderColor: 'rgba(126,205,218,0.5)',
     borderWidth: 1,
     borderRadius: Radius.m,
     padding: Spacing.three,
     fontSize: 16,
-    color: Palette.anaMetin,
+    color: Palette.beyaz,
   },
   tekSatir: {
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderColor: 'rgba(126,205,218,0.5)',
     borderWidth: 1,
     borderRadius: Radius.m,
     padding: Spacing.three,
     fontSize: 16,
-    color: Palette.anaMetin,
+    color: Palette.beyaz,
   },
   anaBtn: {
-    backgroundColor: Palette.lacivert,
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderWidth: 1,
+    borderColor: '#F3C24A',
     borderRadius: Radius.m,
     paddingVertical: Spacing.three,
     alignItems: 'center',
@@ -659,18 +663,18 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.two,
     borderRadius: Radius.m,
     borderWidth: 1,
-    borderColor: Palette.kenarlik,
-    backgroundColor: Palette.kartKremi,
+    borderColor: 'rgba(126,205,218,0.3)',
+    backgroundColor: 'rgba(3,40,56,0.55)',
   },
   durumBtnAktif: {
-    backgroundColor: Palette.lacivert,
-    borderColor: Palette.lacivert,
+    backgroundColor: 'rgba(3,47,69,0.95)',
+    borderColor: '#F3C24A',
   },
   form: {
     gap: Spacing.two,
-    backgroundColor: Palette.kartKremi,
+    backgroundColor: 'rgba(3,47,69,0.88)',
     borderWidth: 1,
-    borderColor: Palette.kenarlik,
+    borderColor: 'rgba(126,205,218,0.5)',
     borderRadius: Radius.l,
     padding: Spacing.three,
   },
@@ -690,12 +694,12 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.two,
     borderRadius: Radius.s,
     borderWidth: 1,
-    borderColor: Palette.kenarlik,
-    backgroundColor: Palette.kremZemin,
+    borderColor: 'rgba(126,205,218,0.3)',
+    backgroundColor: 'rgba(3,40,56,0.55)',
   },
   hedefBtnAktif: {
-    backgroundColor: Palette.lacivert,
-    borderColor: Palette.lacivert,
+    backgroundColor: 'rgba(3,47,69,0.95)',
+    borderColor: '#F3C24A',
   },
   bolumBaslik: {
     marginTop: Spacing.two,
@@ -704,7 +708,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
-    backgroundColor: Palette.altinSolukYuzey,
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.35)',
     borderRadius: Radius.s,
     paddingHorizontal: Spacing.two,
     paddingVertical: 2,

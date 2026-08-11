@@ -298,10 +298,11 @@ function RootNavigator() {
         <Stack.Screen name="sifremi-unuttum" />
         <Stack.Screen name="telefon-giris" />
         <Stack.Screen name="tanitim" />
-        <Stack.Screen name="brans-sec" options={{ presentation: 'modal' }} />
-        <Stack.Screen name="rutbe-sec" options={{ presentation: 'modal' }} />
+        {/* 11 Ağu başkan: modal sunumda iOS kenar-kaydırma geri ÇALIŞMIYOR → normal sayfa geçişi. */}
+        <Stack.Screen name="brans-sec" />
+        <Stack.Screen name="rutbe-sec" />
         <Stack.Screen name="telegram-baglan" />
-        <Stack.Screen name="giris" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="giris" />
       </Stack>
       {/* Branş okunana kadar krom rengi overlay (flash önleme). */}
       {yukleniyor ? (

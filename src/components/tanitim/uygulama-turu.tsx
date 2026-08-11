@@ -14,6 +14,7 @@ import { Arma } from '@/components/auth/arma';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 type Ikon = keyof typeof MaterialCommunityIcons.glyphMap;
 
@@ -53,28 +54,30 @@ const TUR: { ikon: Ikon; ekran: string; baslik: string; metin: string }[] = [
 ];
 
 /** Merkezde parlayan ışık halkası içinde bir simge (karart-ve-parlat spotlight çekirdeği). */
-function Spot({ ikon }: { ikon: Ikon }) {
+function Spot({ ikon, gece }: { ikon: Ikon; gece?: boolean }) {
   return (
     <View style={styles.spotSahne}>
       <View style={styles.glowDis} />
       <View style={styles.glowOrta} />
-      <View style={styles.spotDaire}>
-        <MaterialCommunityIcons name={ikon} size={60} color={Palette.altin} />
+      <View style={[styles.spotDaire, gece && styles.spotDaireGece]}>
+        <MaterialCommunityIcons name={ikon} size={60} color={gece ? Palette.altinParlak : Palette.altin} />
       </View>
     </View>
   );
 }
 
 export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
+  // Gece dili (bayraklı): sahne lacivertten petrol geceye döner, vurgular parlak altın.
+  const gece = useKisiselOzellik('talim-mevzuata');
   const [adim, setAdim] = useState(0);
   const toplam = 1 + TUR.length; // 0 = kapak, 1..TUR.length = tur slaytları
   const sonMu = adim >= TUR.length;
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
-      {/* Sahne zemini: koyu lacivert dikey gradient (üstte biraz açık → derinlik). */}
+    <SafeAreaView style={[styles.safe, gece && styles.safeGece]} edges={['top', 'left', 'right', 'bottom']}>
+      {/* Sahne zemini: koyu dikey gradient (üstte biraz açık → derinlik). */}
       <LinearGradient
-        colors={[Palette.lacivert2, Palette.lacivert]}
+        colors={gece ? ['#0A4258', '#04283A'] : [Palette.lacivert2, Palette.lacivert]}
         start={{ x: 0.5, y: 0 }}
         end={{ x: 0.5, y: 1 }}
         style={StyleSheet.absoluteFill}
@@ -91,7 +94,7 @@ export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
         <ScrollView contentContainerStyle={styles.icerik}>
           <View style={styles.markaArma}>
             <Arma />
-            <AppText variant="etiket" bold color="altinMetin" style={styles.markaAd}>
+            <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'} style={styles.markaAd}>
               MEVZU · JSPS
             </AppText>
           </View>
@@ -109,7 +112,11 @@ export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
             {DEGERLER.map((d) => (
               <View key={d.baslik} style={styles.degerSatir}>
                 <View style={styles.degerIkon}>
-                  <MaterialCommunityIcons name={d.ikon} size={22} color={Palette.altin} />
+                  <MaterialCommunityIcons
+                    name={d.ikon}
+                    size={22}
+                    color={gece ? Palette.altinParlak : Palette.altin}
+                  />
                 </View>
                 <View style={styles.degerMetin}>
                   <AppText variant="govde" bold color="beyaz">
@@ -125,9 +132,9 @@ export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
         </ScrollView>
       ) : (
         <ScrollView contentContainerStyle={[styles.icerik, styles.turIcerik]}>
-          <Spot ikon={TUR[adim - 1].ikon} />
+          <Spot ikon={TUR[adim - 1].ikon} gece={gece} />
           <View style={styles.ekranRozet}>
-            <AppText variant="etiket" bold color="altinMetin" style={styles.ekranRozetMetin}>
+            <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'} style={styles.ekranRozetMetin}>
               {adim}/{TUR.length} · {TUR[adim - 1].ekran}
             </AppText>
           </View>
@@ -316,5 +323,12 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.85,
+  },
+  // Gece dili (bayraklı)
+  safeGece: {
+    backgroundColor: '#04283A',
+  },
+  spotDaireGece: {
+    borderColor: '#F3C24A',
   },
 });

@@ -1098,22 +1098,22 @@ export default function KarargahScreen() {
               onPress={() => { hafifDokun(); router.push('/er-meydani'); }}
               style={({ pressed }) => [styles.gecePanel, styles.yarimPanel, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel="Er Meydanı — düelloya gir">
+              accessibilityLabel="Öğretici Oyunlar">
               <View style={styles.madalyon}>
                 <View style={styles.madalyonIc}>
-                  <MaterialCommunityIcons name="sword-cross" size={24} color={Palette.altinParlak} />
+                  <MaterialCommunityIcons name="controller-classic-outline" size={24} color={Palette.altinParlak} />
                 </View>
               </View>
               <View style={styles.tileBaslikSatir}>
                 <View style={styles.tileCizgi} />
                 <AppText variant="baslik" bold color="altinParlak" style={styles.tileBaslik}>
-                  ER MEYDANI
+                  ÖĞRETİCİ OYUNLAR
                 </AppText>
                 <View style={styles.tileCizgi} />
               </View>
               <MaterialCommunityIcons name="shield-star" size={12} color={Palette.altinParlak} />
               <AppText variant="kucuk" bold color="beyaz" style={styles.yarimAlt2}>
-                {'Bilgini düelloda dene.\nRakibin seni bekliyor.'}
+                {'Oynayarak öğren.\nBilgini oyunla pekiştir.'}
               </AppText>
               <MaterialCommunityIcons
                 name="arrow-right"
