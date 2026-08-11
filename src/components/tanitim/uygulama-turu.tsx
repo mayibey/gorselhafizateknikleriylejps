@@ -7,10 +7,9 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Arma } from '@/components/auth/arma';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { RESMI_BAGLANTI_YOK } from '@/constants/yasal-metin';
@@ -19,9 +18,9 @@ import { useKisiselOzellik } from '@/lib/ozellik';
 type Ikon = keyof typeof MaterialCommunityIcons.glyphMap;
 
 const DEGERLER: { ikon: Ikon; baslik: string; metin: string }[] = [
-  { ikon: 'image-multiple', baslik: 'Görsel hafıza kartları', metin: 'Her kanun maddesi akılda kalıcı bir karikatür sahneye dönüşür.' },
-  { ikon: 'clipboard-check', baslik: 'Deneme sınavları', metin: 'Kendini sına; %100 yapınca Takdir Belgesi kazan.' },
-  { ikon: 'medal', baslik: 'Sicil & ödül', metin: 'İlerlemeni gör, takdir topla, zayıf mevzilerini kapat.' },
+  { ikon: 'image-multiple', baslik: 'Her madde bir görsel', metin: 'Kanun maddesini ezberlemek yerine akılda kalan tek bir sahneyle hatırlarsın.' },
+  { ikon: 'clipboard-check', baslik: 'Denemelerle yoklama', metin: 'Bir kanunu eksiksiz çözünce Takdir Belgesi senin olur.' },
+  { ikon: 'medal', baslik: 'Sicil ve ödül', metin: 'İlerlemeni görür, takdir toplar, eksik kaldığın konuları kapatırsın.' },
 ];
 
 // Uygulama turu slaytları (kapaktan sonra) — her bölümü + kartların nasıl çalıştığını tanıtır.
@@ -29,27 +28,27 @@ const DEGERLER: { ikon: Ikon; baslik: string; metin: string }[] = [
 const TUR: { ikon: Ikon; ekran: string; baslik: string; metin: string }[] = [
   {
     ikon: 'home-variant-outline',
-    ekran: 'KARARGAH',
-    baslik: 'Karargah — ana üssün',
-    metin: 'Günün maddesi, günlük görevin ve zayıf mevzilerin burada toplanır. Her gün çalışmaya buradan başlarsın.',
+    ekran: 'KARARGÂH',
+    baslik: 'Karargâh — her şeyin başladığı yer',
+    metin: 'Günlük görevin, tekrar zamanın ve eksik konuların hep burada. Güne buradan başlarsın.',
   },
   {
     ikon: 'card-text-outline',
     ekran: 'KARTLAR',
     baslik: 'Kartlar — her madde bir sahne',
-    metin: 'Kartı aç: karikatürü gör, sesli anlatımı dinle, istersen madde metnini oku. Parmağınla kaydırarak sıradakine geç; "Öğrendim" ya da "Tekrar" ile işaretle.',
+    metin: 'Kartı aç; görseli incele, sesli anlatımı dinle, istersen madde metnini oku. Kaydırıp sıradakine geç, "Öğrendim" ya da "Tekrar" de.',
   },
   {
     ikon: 'clipboard-check-outline',
     ekran: 'TALİM',
-    baslik: 'Talim — kendini sına',
-    metin: 'Deneme sınavlarıyla test et. Bir kanunun tüm testlerini %100 doğru çözünce Takdir Belgesi kazanırsın.',
+    baslik: 'Talim — kendini dene',
+    metin: 'Denemelerle ne kadar hazır olduğunu gör. Bir kanunun bütün testlerini eksiksiz çözersen Takdir Belgesi kazanırsın.',
   },
   {
     ikon: 'target',
     ekran: 'ZAYIF MEVZİ',
-    baslik: 'Zayıf mevzi — eksiğini kapat',
-    metin: 'Yanlış yaptığın maddeler zayıf mevzine düşer. Çalış, sonra o mevzinin sorusunu doğru çöz — böylece gerçekten öğrendiğin doğrulanır ve mevzi kapanır.',
+    baslik: 'Zayıf mevzi — açığını kapat',
+    metin: 'Yanlış yaptığın maddeler burada toplanır. Üzerine çalış, sonra o maddenin sorusunu doğru çöz; mevzi kapanır.',
   },
 ];
 
@@ -69,6 +68,7 @@ function Spot({ ikon, gece }: { ikon: Ikon; gece?: boolean }) {
 export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
   // Gece dili (bayraklı): sahne lacivertten petrol geceye döner, vurgular parlak altın.
   const gece = useKisiselOzellik('talim-mevzuata');
+  const insets = useSafeAreaInsets();
   const [adim, setAdim] = useState(0);
   const toplam = 1 + TUR.length; // 0 = kapak, 1..TUR.length = tur slaytları
   const sonMu = adim >= TUR.length;
@@ -83,8 +83,12 @@ export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
         style={StyleSheet.absoluteFill}
       />
 
-      {/* Sağ üst: Geç (turu atla). */}
-      <Pressable style={styles.gecLink} onPress={onTamam} hitSlop={10} accessibilityRole="button">
+      {/* Sağ üst: Geç (turu atla). Durum çubuğu/pil ikonuna binmesin diye güvenli alanın altı. */}
+      <Pressable
+        style={[styles.gecLink, { top: insets.top + Spacing.two }]}
+        onPress={onTamam}
+        hitSlop={10}
+        accessibilityRole="button">
         <AppText variant="kucuk" color="beyaz" bold style={styles.gecMetin}>
           Geç
         </AppText>
@@ -93,17 +97,20 @@ export function UygulamaTuru({ onTamam }: { onTamam: () => void }) {
       {adim === 0 ? (
         <ScrollView contentContainerStyle={styles.icerik}>
           <View style={styles.markaArma}>
-            <Arma />
+            <Image
+              source={require('../../../assets/images/mock-arma.webp')}
+              style={styles.armaGorsel}
+            />
             <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'} style={styles.markaAd}>
               MEVZU · JSPS
             </AppText>
           </View>
           <AppText variant="baslik" bold color="beyaz" style={styles.ortali}>
-            Kanunları görselle, kalıcı öğren
+            Kanunları gözünde canlandır, kalıcı öğren
           </AppText>
           <AppText variant="kucuk" color="beyaz" style={[styles.ortali, styles.altyazi, styles.solukBeyaz]}>
-            Kuru metni ezberleme; karikatür kartlar, deneme sınavları ve ödül-sicil temasıyla
-            JSPS'ye hazırlan.
+            Maddeleri kuru kuruya ezberlemeye çalışma. Her birini akılda kalan bir sahneyle,
+            denemelerle ve ödül-sicil düzeniyle çalış.
           </AppText>
           <AppText variant="etiket" color="beyaz" style={[styles.ortali, styles.disclaimer, styles.solukBeyaz]}>
             {RESMI_BAGLANTI_YOK}
@@ -186,6 +193,10 @@ const styles = StyleSheet.create({
     gap: Spacing.one,
     marginBottom: Spacing.two,
   },
+  armaGorsel: {
+    width: 88,
+    height: 88,
+  },
   markaAd: {
     letterSpacing: 1,
   },
@@ -237,7 +248,6 @@ const styles = StyleSheet.create({
   },
   gecLink: {
     position: 'absolute',
-    top: Spacing.three,
     right: Spacing.four,
     zIndex: 2,
     paddingVertical: Spacing.one,
