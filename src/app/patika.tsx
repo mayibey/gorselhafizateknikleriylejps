@@ -10,6 +10,7 @@ import {
   Platform,
   Pressable,
   StyleSheet,
+  useWindowDimensions,
   View,
   type LayoutChangeEvent,
 } from 'react-native';
@@ -51,6 +52,35 @@ const ARKA_PLAN = require('../../assets/images/patika-arkaplan.png');
 // Görselin doğal en-boy oranı (1844/853 = yükseklik/genişlik). Dikey TILE'da
 // her dilim W * ORAN yüksekliğinde → germe/esneme YOK, doğal oran korunur.
 const ARKA_PLAN_ORAN = 1844 / 853;
+
+// ── SİNEMATİK PATİKA (bayraklı) — dağ yolu manzarası + yol eğrisine dizili bölümler + araç.
+const YOL_GECE = require('../../assets/images/patika-yol-gece.webp');
+const YOL_GUNDUZ = require('../../assets/images/patika-yol-gunduz.webp');
+const PATIKA_ARAC = require('../../assets/images/patika-arac.webp');
+// Arka plandaki asfalt yolun eğrisi — normalize (x soldan, y üstten). Bölümler bu eğri
+// boyunca dizilir (alt=başlangıç, üst=hedefe yakın). Görsel değişirse bu noktalar ayarlanır.
+const YOL_EGRI = [
+  { x: 0.5, y: 0.95 },
+  { x: 0.63, y: 0.83 },
+  { x: 0.55, y: 0.72 },
+  { x: 0.44, y: 0.63 },
+  { x: 0.53, y: 0.55 },
+  { x: 0.49, y: 0.48 },
+];
+function yolNokta(t: number): { x: number; y: number } {
+  const s = Math.max(0, Math.min(1, t)) * (YOL_EGRI.length - 1);
+  const i = Math.min(YOL_EGRI.length - 2, Math.floor(s));
+  const f = s - i;
+  return {
+    x: YOL_EGRI[i].x + (YOL_EGRI[i + 1].x - YOL_EGRI[i].x) * f,
+    y: YOL_EGRI[i].y + (YOL_EGRI[i + 1].y - YOL_EGRI[i].y) * f,
+  };
+}
+/** Cihaz saatine göre gece mi — arka plan gece/gündüz seçimi (başkan: atmosfer saate uysun). */
+function patikaGeceMi(): boolean {
+  const s = new Date().getHours();
+  return s < 6 || s >= 19;
+}
 
 // Çift bot izi sprite'ı (1254×1254, şeffaf): SOL yarı=sol ayak, SAĞ yarı=sağ ayak.
 // Tek <Image>'ı 2×genişlikte verip yatay kaydır + overflow:hidden → tek ayak gösterilir.
@@ -337,7 +367,9 @@ export default function PatikaScreen() {
       onGeri={() => router.back()}
       headerAltinCizgi
       headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
-      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK) */}
+      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). Sinematik modda gizli (temiz sahne). */}
+      {kapsamSecimi ? null : (
+      <>
       <View style={st.ustBar}>
         <View style={st.statChip}>
           <MaterialCommunityIcons name="fire" size={18} color={Palette.altinKoyu} />
@@ -367,6 +399,8 @@ export default function PatikaScreen() {
           </AppText>
         ) : null}
       </View>
+      </>
+      )}
 
       {kilitli ? (
         <KilitKarti kanunAd={kanunAd} />
@@ -387,29 +421,31 @@ export default function PatikaScreen() {
       ) : bolumsuz ? (
         // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
         <TekDugum onPress={() => akisAc({ lawId: String(lawId) })} />
+      ) : kapsamSecimi ? (
+        // SİNEMATİK (bayraklı): dağ yolu manzarası + yol eğrisine dizili bölümler + araç.
+        <SinematikHarita
+          dugumler={dugumler}
+          aktifIndex={aktifIndex}
+          kanunAd={kanunAd}
+          onDugumBas={(id) => {
+            const d = dugumler?.find((x) => x.bolum.id === id);
+            Alert.alert(d?.bolum.ad ?? 'Bölüm', 'Ne kadarını çalışalım?', [
+              { text: 'Vazgeç', style: 'cancel' },
+              { text: 'Yalnız bu bölüm', onPress: () => akisAc({ bolumId: String(id), kapsam: 'bolum' }) },
+              { text: 'Buradan patikayı sürdür', onPress: () => akisAc({ bolumId: String(id) }) },
+            ]);
+          }}
+          onDevam={() => {
+            const a = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
+            if (a) akisAc({ bolumId: String(a.bolum.id) });
+          }}
+        />
       ) : (
         <Harita
           dugumler={dugumler}
           aktifIndex={aktifIndex}
-          // GECE KARARI M5 (bayraklı): düğüme basınca ne kadar açılacağı BELLİ olsun —
-          // "yalnız bu bölüm" mü, "buradan kanun sonuna zincir" mi kullanıcı seçer.
           onDugumBas={(id) => {
-            if (!kapsamSecimi) {
-              akisAc({ bolumId: String(id) });
-              return;
-            }
-            const d = dugumler?.find((x) => x.bolum.id === id);
-            Alert.alert(d?.bolum.ad ?? 'Bölüm', 'Ne kadarını çalışalım?', [
-              { text: 'Vazgeç', style: 'cancel' },
-              {
-                text: 'Yalnız bu bölüm',
-                onPress: () => akisAc({ bolumId: String(id), kapsam: 'bolum' }),
-              },
-              {
-                text: 'Buradan patikayı sürdür',
-                onPress: () => akisAc({ bolumId: String(id) }),
-              },
-            ]);
+            akisAc({ bolumId: String(id) });
           }}
         />
       )}
@@ -477,6 +513,136 @@ export default function PatikaScreen() {
 }
 
 /** Kıvrımlı yol + alternating düğümler. Genişlik onLayout ile ölçülür (path = düğüm koordinatları). */
+/** SİNEMATİK HARİTA (bayraklı) — dağ yolu manzarası; bölümler yol eğrisine dizili,
+ *  aktif bölümde Jandarma aracı, altta "DEVAM ET" paneli. Tek ekran (kaydırma yok). */
+function SinematikHarita({
+  dugumler,
+  aktifIndex,
+  onDugumBas,
+  onDevam,
+  kanunAd,
+}: {
+  dugumler: BolumDugum[];
+  aktifIndex: number;
+  onDugumBas: (bolumId: number) => void;
+  onDevam: () => void;
+  kanunAd: string | null;
+}) {
+  const { width: WW, height: WH } = useWindowDimensions();
+  const W = Math.min(WW - Spacing.four * 2, 460);
+  const H = Math.round(Math.min(WH * 0.62, W * 1.18));
+  const gece = patikaGeceMi();
+  const n = dugumler.length;
+  const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
+  const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
+  // Aktif bölümün araç konumu (yoksa yolun başı).
+  const aracT = aktifIndex >= 0 && n > 1 ? aktifIndex / (n - 1) : 0;
+  const aracP = yolNokta(aracT);
+
+  return (
+    <>
+      <View style={[st.sahne, { width: W, height: H }]}>
+        <Image
+          source={gece ? YOL_GECE : YOL_GUNDUZ}
+          style={StyleSheet.absoluteFill}
+          contentFit="cover"
+          pointerEvents="none"
+        />
+        {/* Okunurluk için hafif koyu tül (üst + alt). */}
+        <View style={st.sahneTul} pointerEvents="none" />
+
+        {/* Hedef bayrağı — yolun en uzak ucu. */}
+        <View style={[st.hedefRoz, { left: yolNokta(1).x * W - 10, top: yolNokta(1).y * H - 34 }]}>
+          <MaterialCommunityIcons name="flag-variant" size={20} color={Palette.altinParlak} />
+          <AppText variant="etiket" bold color="altinParlak" style={st.hedefYazi}>
+            JSPS
+          </AppText>
+        </View>
+
+        {/* Bölüm durakları — yol eğrisine dizili. */}
+        {dugumler.map((d, i) => {
+          const t = n === 1 ? 0 : i / (n - 1);
+          const p = yolNokta(t);
+          const durum = durumCoz(d, i === aktifIndex);
+          const solda = p.x >= 0.5; // nokta sağdaysa tabela SOLA açılır
+          const yuzde = d.toplam > 0 ? Math.round((d.calisilan / d.toplam) * 100) : 0;
+          return (
+            <Pressable
+              key={d.bolum.id}
+              onPress={() => onDugumBas(d.bolum.id)}
+              style={[st.durak, { left: p.x * W, top: p.y * H }]}
+              accessibilityRole="button"
+              accessibilityLabel={`${d.bolum.ad} bölümü`}>
+              <View
+                style={[
+                  st.durakNokta,
+                  durum === 'tamam' && st.durakTamam,
+                  durum === 'aktif' && st.durakAktif,
+                  durum === 'baslanmadi' && st.durakKilit,
+                ]}>
+                {durum === 'tamam' ? (
+                  <MaterialCommunityIcons name="check-bold" size={12} color="#07334B" />
+                ) : durum === 'baslanmadi' ? (
+                  <MaterialCommunityIcons name="lock" size={11} color="rgba(226,236,240,0.8)" />
+                ) : null}
+              </View>
+              <View style={[st.tabela, solda ? st.tabelaSol : st.tabelaSag]}>
+                <AppText variant="etiket" bold color="altinParlak" numberOfLines={1}>
+                  {String(i + 1).padStart(2, '0')} · {d.bolum.ad}
+                </AppText>
+                <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
+                  {d.toplam === 0 ? 'yakında' : `${d.calisilan}/${d.toplam} · %${yuzde}`}
+                </AppText>
+              </View>
+            </Pressable>
+          );
+        })}
+
+        {/* Aktif bölümde araç. */}
+        {aktif ? (
+          <Image
+            source={PATIKA_ARAC}
+            style={[st.arac, { left: aracP.x * W - 34, top: aracP.y * H - 30 }]}
+            contentFit="contain"
+            pointerEvents="none"
+          />
+        ) : null}
+      </View>
+
+      {/* Alt panel — ŞU ANKİ MEVZİ + DEVAM ET. */}
+      {aktif ? (
+        <Pressable
+          style={({ pressed }) => [st.altPanel, pressed && st.basili]}
+          onPress={onDevam}
+          accessibilityRole="button"
+          accessibilityLabel="Kaldığın yerden devam et">
+          <View style={st.altSol}>
+            <AppText variant="etiket" bold color="kartMetinIkincil" style={st.altUst}>
+              ŞU ANKİ MEVZİ
+            </AppText>
+            <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
+              {kanunAd ?? aktif.bolum.ad}
+            </AppText>
+            <View style={st.altBar}>
+              {aktifOran > 0 ? <View style={[st.altBarDolu, { flex: aktifOran }]} /> : null}
+              <View style={{ flex: Math.max(1, 100 - aktifOran) }} />
+            </View>
+            <AppText variant="etiket" color="kartMetinIkincil">
+              {aktif.toplam === 0 ? 'yakında' : `${aktif.calisilan}/${aktif.toplam} madde · %${aktifOran}`}
+            </AppText>
+          </View>
+          <View style={st.devamBtn}>
+            <AppText variant="kucuk" bold color="lacivert">
+              DEVAM ET
+            </AppText>
+            <MaterialCommunityIcons name="arrow-right" size={18} color="#07334B" />
+          </View>
+        </Pressable>
+      ) : null}
+    </>
+  );
+}
+
 function Harita({
   dugumler,
   aktifIndex,
@@ -796,6 +962,123 @@ function DurumKutu({
 }
 
 const st = StyleSheet.create({
+  // ── Sinematik patika (bayraklı) ──
+  sahne: {
+    alignSelf: 'center',
+    borderRadius: 18,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.35)',
+    marginTop: Spacing.one,
+  },
+  sahneTul: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(4,32,48,0.18)',
+  },
+  hedefRoz: {
+    position: 'absolute',
+    alignItems: 'center',
+  },
+  hedefYazi: {
+    letterSpacing: 1,
+  },
+  durak: {
+    position: 'absolute',
+    width: 16,
+    height: 16,
+    marginLeft: -8,
+    marginTop: -8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  durakNokta: {
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: 'rgba(3,40,56,0.85)',
+    borderWidth: 2,
+    borderColor: 'rgba(226,236,240,0.7)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  durakTamam: {
+    backgroundColor: Palette.altinParlak,
+    borderColor: Palette.altinParlak,
+  },
+  durakAktif: {
+    backgroundColor: Palette.altinParlak,
+    borderColor: '#FFFFFF',
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+  },
+  durakKilit: {
+    backgroundColor: 'rgba(3,40,56,0.7)',
+    borderColor: 'rgba(126,205,218,0.4)',
+  },
+  tabela: {
+    position: 'absolute',
+    top: -10,
+    backgroundColor: 'rgba(3,40,56,0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.55)',
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+    maxWidth: 172,
+  },
+  tabelaSag: {
+    left: 22,
+  },
+  tabelaSol: {
+    right: 22,
+  },
+  arac: {
+    position: 'absolute',
+    width: 68,
+    height: 60,
+  },
+  altPanel: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+    backgroundColor: 'rgba(3,47,69,0.92)',
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.5)',
+    borderRadius: 16,
+    padding: Spacing.three,
+    marginTop: Spacing.two,
+  },
+  altSol: {
+    flex: 1,
+    gap: 3,
+  },
+  altUst: {
+    letterSpacing: 1,
+  },
+  altBar: {
+    flexDirection: 'row',
+    height: 6,
+    borderRadius: 3,
+    overflow: 'hidden',
+    backgroundColor: 'rgba(255,246,220,0.18)',
+    marginTop: 2,
+  },
+  altBarDolu: {
+    backgroundColor: Palette.altinParlak,
+  },
+  devamBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: Palette.altinParlak,
+    borderRadius: 12,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  basili: {
+    opacity: 0.9,
+  },
   // Üst bar
   ustBar: {
     flexDirection: 'row',
