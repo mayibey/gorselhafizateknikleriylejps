@@ -291,6 +291,7 @@ function MevzuatIcerik() {
       {blok === 'brans' && kitaplar && kitaplar.length > 0 ? (
         <BransKitapListe
           kitaplar={kitaplar}
+          gece={talimBurada}
           onAc={(k) => router.push({ pathname: '/kitap', params: { yol: k.dosyaYolu, baslik: k.baslik } })}
         />
       ) : (
@@ -1115,14 +1116,26 @@ function DurumKutu({
  * Erişim yoksa satır "Kilidi Aç" gösterir ve paywall'a gider — aksi hâlde görüntüleyici açılıp
  * indirme 402 ile düşer ve kullanıcı sebepsiz "hata" ekranı görürdü (KanunSatir ile aynı davranış).
  */
-function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k: BransKitap) => void }) {
+function BransKitapListe({
+  kitaplar,
+  onAc,
+  gece,
+}: {
+  kitaplar: BransKitap[];
+  onAc: (k: BransKitap) => void;
+  gece?: boolean;
+}) {
   const router = useRouter();
   const { premium } = useUyelik();
   const kilitli = KILIT_AKTIF && !premium;
   return (
     <>
       <View style={st.ustSatir}>
-        <AppText variant="kucuk" color="solukMetin" style={st.aciklama}>
+        <AppText
+          variant="kucuk"
+          bold={gece}
+          color={gece ? 'beyaz' : 'solukMetin'}
+          style={[st.aciklama, gece && st.geceAciklama]}>
           Branşına özel özet kitaplar. Dokun, uygulama içinde oku — not al, işaretle.
         </AppText>
       </View>
@@ -1130,25 +1143,29 @@ function BransKitapListe({ kitaplar, onAc }: { kitaplar: BransKitap[]; onAc: (k:
         <Pressable
           key={k.id}
           onPress={() => (kilitli ? router.push('/paywall') : onAc(k))}
-          style={({ pressed }) => [st.kitapSatir, pressed && st.kitapBasili]}
+          style={({ pressed }) => [st.kitapSatir, gece && st.kitapSatirGece, pressed && st.kitapBasili]}
           accessibilityRole="button"
           accessibilityLabel={kilitli ? `${k.baslik} — kilitli` : k.baslik}>
           <MaterialCommunityIcons
             name={kilitli ? 'lock' : 'file-document-outline'}
             size={22}
-            color={Palette.altinKoyu}
+            color={gece ? Palette.altinParlak : Palette.altinKoyu}
           />
-          <AppText variant="govde" color="anaMetin" bold style={st.kitapAd} numberOfLines={2}>
+          <AppText variant="govde" color={gece ? 'beyaz' : 'anaMetin'} bold style={st.kitapAd} numberOfLines={2}>
             {k.baslik}
           </AppText>
           {kilitli ? (
-            <View style={st.kilitChip}>
-              <AppText variant="etiket" bold color="altinMetin">
+            <View style={[st.kilitChip, gece && st.kilitChipGece]}>
+              <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'}>
                 Kilidi Aç
               </AppText>
             </View>
           ) : null}
-          <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={20}
+            color={gece ? 'rgba(226,236,240,0.75)' : Palette.solukMetin}
+          />
         </Pressable>
       ))}
     </>
@@ -1201,6 +1218,15 @@ const st = StyleSheet.create({
     backgroundColor: 'rgba(3,40,56,0.7)',
     borderWidth: 1,
     borderColor: 'rgba(243,194,74,0.55)',
+  },
+  geceAciklama: {
+    opacity: 0.92,
+  },
+  kitapSatirGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.5)',
+    borderRadius: Radius.l,
   },
   blokSeciciGece: {
     backgroundColor: 'transparent', // gece: krem şerit yok, haplar zeminde yüzer
