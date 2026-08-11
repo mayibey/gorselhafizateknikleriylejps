@@ -1028,11 +1028,10 @@ export default function KarargahScreen() {
             accessibilityLabel="Tekrar zamanı — paslanan kanunlar">
             {/* Handoff şartnamesi: uyarı KIRMIZI kalır ama PARLAK kırmızı (#F04438) —
                 koyu kırmızının okunmama derdi böyle çözüldü. Paslanma yoksa altın-sakin. */}
-            {unutulan.length > 0 ? <View style={styles.kirmiziSolCubuk} /> : null}
             <View style={styles.emirIkonHalka}>
               <Sallan aktif={unutulan.length > 0}>
                 <MaterialCommunityIcons
-                  name="alarm"
+                  name="alert-circle-outline"
                   size={24}
                   color={unutulan.length > 0 ? Palette.kirmiziParlak : Palette.altinParlak}
                 />
@@ -2078,7 +2077,7 @@ const styles = StyleSheet.create({
   tekrarSatir: {
     flexDirection: 'row',
     alignItems: 'flex-start', // başkan: yazı SOL ÜSTE
-    gap: Spacing.three,
+    gap: Spacing.two, // yazı sola yakın
     paddingVertical: Spacing.two,
   },
   tekrarBaslik2: {
