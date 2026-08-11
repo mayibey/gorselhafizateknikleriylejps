@@ -1703,7 +1703,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden', // (kullanım dışı — kurdele dönemi)
   },
   emirPanelUst: {
-    // Plaka akışa alındı (11 Ağu) — özel dolgu gerekmez; kalıntı stil boş.
+    paddingTop: 62, // plaka -9'dan biner (49 içeride) + nefes — manşet altında başlar
   },
   emirPlaka: {
     position: 'absolute',
@@ -1713,9 +1713,11 @@ const styles = StyleSheet.create({
     height: 56,
   },
   plakaKap: {
+    position: 'absolute',
+    top: -9, // etiketle aynı hiza — kart çizgisine biner
+    left: 10,
     width: 218,
     height: 58,
-    marginBottom: Spacing.one, // akış içinde: binme imkânsız
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.one,
@@ -1729,7 +1731,7 @@ const styles = StyleSheet.create({
   },
   zayifEtiketSar: {
     position: 'absolute',
-    top: -7, // başkan: 2 piksel daha yukarı
+    top: -9, // başkan hizası
     right: -12,
     width: 188, // TAM genişlik — sol üst kıvrım görünür (sağ alt gibi)
     height: 57,
