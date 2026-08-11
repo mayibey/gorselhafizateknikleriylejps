@@ -592,40 +592,27 @@ export default function KarargahScreen() {
               />
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
-                /* Mock'tan kesilen GERÇEK kurdele (saten kıvrımlar dahil) — %100 birebir. */
-                <Image
-                  source={require('../../../assets/images/mock-kurdele-zayif.webp')}
-                  style={styles.zayifKurdeleGorsel}
-                  resizeMode="stretch"
-                />
+                /* Başkan (11 Ağu): katlama uçları OLMASIN — temiz oval rozet. */
+                <LinearGradient
+                  colors={['#E8473A', '#A61B12']}
+                  start={{ x: 0.5, y: 0 }}
+                  end={{ x: 0.5, y: 1 }}
+                  style={styles.zayifOval}>
+                  <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
+                    ZAYIF MEVZİLER
+                  </AppText>
+                </LinearGradient>
               ) : bos && hicCalisilan ? (
-                /* Yeni kullanıcı: kırmızı değil ALTIN kurdele — İLK EMİR (mock). */
-                <View style={styles.zayifPlakaSar} pointerEvents="none">
-                  <View style={styles.zayifKurdele}>
-                    <Svg
-                      width="100%"
-                      height="100%"
-                      viewBox="0 0 176 34"
-                      preserveAspectRatio="none"
-                      style={StyleSheet.absoluteFill}>
-                      <Defs>
-                        <SvgGradient id="ilkEmirG" x1="0" y1="0" x2="0" y2="1">
-                          <Stop offset="0" stopColor="#F6CE5B" />
-                          <Stop offset="1" stopColor="#D99A16" />
-                        </SvgGradient>
-                      </Defs>
-                      <Path
-                        d="M12,1 L174,1 L164,33 L2,33 Z"
-                        fill="url(#ilkEmirG)"
-                        stroke="#FFE9A8"
-                        strokeWidth={1.2}
-                      />
-                    </Svg>
-                    <AppText variant="etiket" bold style={[styles.kurdeleYazi, styles.ctaYazi]}>
-                      İLK EMİR
-                    </AppText>
-                  </View>
-                </View>
+                /* Yeni kullanıcı: ALTIN oval rozet — İLK EMİR. */
+                <LinearGradient
+                  colors={['#F6CE5B', '#D99A16']}
+                  start={{ x: 0.5, y: 0 }}
+                  end={{ x: 0.5, y: 1 }}
+                  style={[styles.zayifOval, styles.ilkEmirOval]}>
+                  <AppText variant="etiket" bold style={[styles.kurdeleYazi, styles.ctaYazi]}>
+                    İLK EMİR
+                  </AppText>
+                </LinearGradient>
               ) : null}
               <View style={styles.emirSatir}>
                 <View style={styles.emirSol}>
@@ -1707,12 +1694,18 @@ const styles = StyleSheet.create({
     height: 63,
     marginBottom: Spacing.one, // akış içinde: altındakiyle binmesi imkânsız
   },
-  zayifKurdeleGorsel: {
+  zayifOval: {
     position: 'absolute',
-    top: 10,
-    right: 10,
-    width: 168, // 442x126 kesitin ~3.5:1 oranı
-    height: 48,
+    top: 12,
+    right: 12,
+    borderRadius: 999, // oval köşeli rozet (katlama işaretsiz)
+    paddingHorizontal: Spacing.three,
+    paddingVertical: 6,
+    borderWidth: 1.5,
+    borderColor: 'rgba(243,194,74,0.9)',
+  },
+  ilkEmirOval: {
+    borderColor: '#FFE9A8',
   },
   plakaIc: {
     flex: 1,
