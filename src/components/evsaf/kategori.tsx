@@ -43,7 +43,7 @@ export function EvsafKategori({
           <AppText variant="govde" bold color={gece ? 'beyaz' : 'lacivert'} numberOfLines={1}>
             {baslik}
           </AppText>
-          {altYazi ? (
+          {altYazi && !gece ? (
             <AppText
               variant="etiket"
               bold={gece}
@@ -55,9 +55,9 @@ export function EvsafKategori({
           ) : null}
         </View>
         <MaterialCommunityIcons
-          name={acik ? 'chevron-up' : 'chevron-down'}
+          name={gece ? (acik ? 'chevron-down' : 'chevron-right') : acik ? 'chevron-up' : 'chevron-down'}
           size={22}
-          color={gece ? 'rgba(226,236,240,0.75)' : Palette.solukMetin}
+          color={gece ? Palette.altinParlak : Palette.solukMetin}
         />
       </Pressable>
       {acik ? children : null}
