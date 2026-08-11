@@ -157,6 +157,9 @@ export default function SicilScreen() {
   return (
     <Screen
       title="Evsaf"
+      koyu={karargahTasindi}
+      marka={karargahTasindi}
+      markaKucukHarf
       kompaktBaslik={karargahTasindi}
       headerSag={
         karargahTasindi ? (

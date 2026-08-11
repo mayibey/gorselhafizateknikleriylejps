@@ -2,6 +2,7 @@ import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, AppState, BackHandler, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
 import { type OyunHtml, oyunHtmlGetir } from '@/lib/oyun-kaynak';
@@ -23,6 +24,7 @@ import { useUyelik } from '@/lib/uyelik-context';
  * menüsünde takılmasın diye doğrudan lobiye aktarılıyor.
  */
 export default function OyunMerkeziScreen() {
+  const geceTema = useKisiselOzellik('talim-mevzuata');
   const router = useRouter();
   const params = useLocalSearchParams<{ katilKod?: string }>();
   const web = useRef<WebView>(null);
@@ -139,7 +141,7 @@ export default function OyunMerkeziScreen() {
   // ve genişlik sınırı var, oyun onların içinde panel gibi duruyordu (başkan gösterdi).
   if (!kayit || !oyunHtml || uyelikYukleniyor) {
     return (
-      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+      <SafeAreaView style={[styles.safe, geceTema && styles.safeGece]} edges={['top', 'left', 'right']}>
         <View style={styles.ortala}>
           <ActivityIndicator color={Palette.lacivert} />
         </View>
@@ -148,7 +150,7 @@ export default function OyunMerkeziScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+    <SafeAreaView style={[styles.safe, geceTema && styles.safeGece]} edges={['top', 'left', 'right']}>
       <View style={styles.kap}>
         <WebView
           ref={web}
@@ -180,6 +182,9 @@ export default function OyunMerkeziScreen() {
 }
 
 const styles = StyleSheet.create({
+  safeGece: {
+    backgroundColor: '#043C54', // gece taban — diğer sekmelerle aynı
+  },
   safe: { flex: 1, backgroundColor: Palette.kremZemin },
   kap: { flex: 1 },
   web: { flex: 1, backgroundColor: Palette.kremZemin },
