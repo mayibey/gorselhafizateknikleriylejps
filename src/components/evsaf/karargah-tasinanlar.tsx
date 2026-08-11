@@ -17,6 +17,7 @@ import { duyurulariGetir, okunmamisVarMi } from '@/lib/duyuru';
 import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaIstatistik, hesaplaStreak } from '@/lib/stats';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { useUyelik } from '@/lib/uyelik-context';
 
 /** Evsaf istatistikleri (ilerleme % · çalışma serisi · bekleyen zayıf) — hem kutu
@@ -50,19 +51,20 @@ export function useEvsafIstatistik(): {
 
 export function IstatistikKutulari() {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   const { hazirlik, streak, bekleyen } = useEvsafIstatistik();
 
   return (
     <View style={st.kutuSatir}>
       {/* Üç kutu TEK dil: [ikon + dev sayı] üstte, etiket altta (10 Ağu "amatör" düzeltmesi). */}
-      <View style={st.kutu}>
+      <View style={[st.kutu, gece && st.kutuGece]}>
         <View style={st.kutuDeger}>
-          <MaterialCommunityIcons name="trending-up" size={20} color={Palette.altinKoyu} />
-          <AppText variant="dev" bold color="anaMetin">
+          <MaterialCommunityIcons name="trending-up" size={20} color={gece ? Palette.altinParlak : Palette.altinKoyu} />
+          <AppText variant="dev" bold color={gece ? 'beyaz' : 'anaMetin'}>
             %{hazirlik ?? 0}
           </AppText>
         </View>
-        <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
+        <AppText variant="etiket" bold={gece} color={gece ? 'beyaz' : 'solukMetin'} style={[st.kutuEtiket, gece && st.geceSoluk]} numberOfLines={2}>
           Genel ilerleme
         </AppText>
       </View>
@@ -75,28 +77,28 @@ export function IstatistikKutulari() {
             bekleyen > 0 ? { pathname: '/akis', params: { mod: 'zayif' } } : ('/mevzuat' as never),
           )
         }
-        style={({ pressed }) => [st.kutu, pressed && st.soluk]}
+        style={({ pressed }) => [st.kutu, gece && st.kutuGece, pressed && st.soluk]}
         accessibilityRole="button"
         accessibilityLabel="Yeni nöbete başla">
         <View style={st.kutuDeger}>
           {streak && streak > 0 ? (
             <MaterialCommunityIcons name="fire" size={22} color={Palette.amber} />
           ) : (
-            <MaterialCommunityIcons name="compass-outline" size={22} color={Palette.altinKoyu} />
+            <MaterialCommunityIcons name="compass-outline" size={22} color={gece ? Palette.altinParlak : Palette.altinKoyu} />
           )}
           {streak && streak > 0 ? (
-            <AppText variant="dev" bold color="anaMetin">
+            <AppText variant="dev" bold color={gece ? 'beyaz' : 'anaMetin'}>
               {streak}
             </AppText>
           ) : null}
         </View>
         {/* 10 Ağu redesign: kullanıcı diliyle "Çalışma serisi" (hesap aynı — hesaplaStreak). */}
-        <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
+        <AppText variant="etiket" bold={gece} color={gece ? 'beyaz' : 'solukMetin'} style={[st.kutuEtiket, gece && st.geceSoluk]} numberOfLines={2}>
           {streak && streak > 0 ? 'Çalışma serisi' : 'Yeni nöbet bugün başlar'}
         </AppText>
         {!streak ? (
           <View style={st.hazirOl}>
-            <AppText variant="etiket" bold color="altinMetin">
+            <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'}>
               HAZIR OL
             </AppText>
           </View>
@@ -105,16 +107,16 @@ export function IstatistikKutulari() {
       <Pressable
         disabled={bekleyen === 0}
         onPress={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
-        style={({ pressed }) => [st.kutu, (pressed || bekleyen === 0) && st.soluk]}
+        style={({ pressed }) => [st.kutu, gece && st.kutuGece, (pressed || bekleyen === 0) && st.soluk]}
         accessibilityRole="button"
         accessibilityLabel="Zayıf mevzileri çalış">
         <View style={st.kutuDeger}>
-          <MaterialCommunityIcons name="target" size={20} color={Palette.altinKoyu} />
-          <AppText variant="dev" bold color="anaMetin">
+          <MaterialCommunityIcons name="target" size={20} color={gece ? Palette.altinParlak : Palette.altinKoyu} />
+          <AppText variant="dev" bold color={gece ? 'beyaz' : 'anaMetin'}>
             {bekleyen}
           </AppText>
         </View>
-        <AppText variant="etiket" color="solukMetin" style={st.kutuEtiket} numberOfLines={2}>
+        <AppText variant="etiket" bold={gece} color={gece ? 'beyaz' : 'solukMetin'} style={[st.kutuEtiket, gece && st.geceSoluk]} numberOfLines={2}>
           Zayıf mevzi
         </AppText>
       </Pressable>
@@ -124,6 +126,7 @@ export function IstatistikKutulari() {
 
 export function DuyurularSatiri() {
   const router = useRouter();
+  const gece = useKisiselOzellik('talim-mevzuata');
   const { premium } = useUyelik();
   const [okunmamis, setOkunmamis] = useState(false);
   const yukle = useCallback(() => {
@@ -142,20 +145,27 @@ export function DuyurularSatiri() {
   return (
     <Pressable
       onPress={() => router.push('/duyurular')}
-      style={({ pressed }) => [st.satir, pressed && st.soluk]}
+      style={({ pressed }) => [st.satir, gece && st.kutuGece, pressed && st.soluk]}
       accessibilityRole="button"
       accessibilityLabel="Duyurular">
-      <MaterialCommunityIcons name="bullhorn-outline" size={20} color={Palette.altinKoyu} />
-      <AppText variant="kucuk" bold color="anaMetin" style={st.satirAd}>
+      <MaterialCommunityIcons name="bullhorn-outline" size={20} color={gece ? Palette.altinParlak : Palette.altinKoyu} />
+      <AppText variant="kucuk" bold color={gece ? 'beyaz' : 'anaMetin'} style={st.satirAd}>
         Duyurular
       </AppText>
       {okunmamis ? <View style={st.nokta} /> : null}
-      <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
+      <MaterialCommunityIcons name="chevron-right" size={20} color={gece ? 'rgba(226,236,240,0.75)' : Palette.solukMetin} />
     </Pressable>
   );
 }
 
 const st = StyleSheet.create({
+  kutuGece: {
+    backgroundColor: 'rgba(3,47,69,0.88)',
+    borderColor: 'rgba(126,205,218,0.5)',
+  },
+  geceSoluk: {
+    opacity: 0.85,
+  },
   kutuSatir: {
     flexDirection: 'row',
     gap: Spacing.two,
