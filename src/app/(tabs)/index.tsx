@@ -615,12 +615,21 @@ export default function KarargahScreen() {
               {/* Ref v5 SAĞ PLAKA: altın kenarlı kırmızı ZAYIF MEVZİLER (kurdele emekli). */}
               {!bos ? (
                 /* Başkan (12 Ağu görseli): uçları pahlı kırmızı bant + altın kontur. */
-                /* Mock'tan kesilen GERÇEK etiket (kıvrım + altın şerit + yazı gömülü). */
-                <Image
-                  source={require('../../../assets/images/mock-zayif-etiket.webp')}
-                  style={styles.zayifEtiketGorsel}
-                  resizeMode="contain"
-                />
+                /* GERÇEK etiket — sol ucu KIRPIK: kırmızı kartın altına akar; kesim
+                   yerindeki dikey gölge 'kartın altına giriyor' hissini verir. */
+                <View style={styles.zayifEtiketSar} pointerEvents="none">
+                  <Image
+                    source={require('../../../assets/images/mock-zayif-etiket.webp')}
+                    style={styles.zayifEtiketGorsel}
+                    resizeMode="cover"
+                  />
+                  <LinearGradient
+                    colors={['rgba(2,16,24,0.75)', 'rgba(2,16,24,0)']}
+                    start={{ x: 0, y: 0.5 }}
+                    end={{ x: 1, y: 0.5 }}
+                    style={styles.etiketGirisGolgesi}
+                  />
+                </View>
               ) : bos && hicCalisilan ? (
                 /* Yeni kullanıcı: ALTIN oval rozet — İLK EMİR. */
                 <LinearGradient
@@ -1724,12 +1733,27 @@ const styles = StyleSheet.create({
     height: 44,
     borderRadius: 22,
   },
+  zayifEtiketSar: {
+    position: 'absolute',
+    top: -3, // başkan: 3 piksel daha aşağı
+    right: -12,
+    width: 158, // sol pahlı uç KIRPILIR — kırmızı kesilerek karta akar
+    height: 57,
+    overflow: 'hidden',
+  },
   zayifEtiketGorsel: {
     position: 'absolute',
-    top: -6, // kıvrım kart çizgisiyle kesişir — arkadan çıkma illüzyonu
-    right: -12, // kart kenarından ekran kenarına dayanır (mock gibi)
+    right: 0, // sağa hizalı; taşan sol kısım kırpılır
+    top: 0,
     width: 188,
     height: 57, // 362x110 kesit oranı
+  },
+  etiketGirisGolgesi: {
+    position: 'absolute',
+    left: 0,
+    top: 4,
+    bottom: 10,
+    width: 12, // kartın banda düşürdüğü giriş gölgesi
   },
   kenarUstuCizgi: {
     // Kart üst kenarını şeridin ÜZERİNE yeniden çizer → şeridin kart içindeki kısmı
