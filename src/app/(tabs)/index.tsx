@@ -628,8 +628,9 @@ export default function KarargahScreen() {
                         <Stop offset="1" stopColor="#9E170F" />
                       </SvgGradient>
                     </Defs>
+                    {/* Sol uç pahlı, sağ uç düz (etiket kartın sağından taşar). */}
                     <Path
-                      d="M12,1 L174,1 L164,33 L2,33 Z"
+                      d="M14,1 L175,1 L175,33 L2,33 Z"
                       fill="url(#zayifBantG)"
                       stroke="#F3C24A"
                       strokeWidth={1.5}
@@ -638,6 +639,8 @@ export default function KarargahScreen() {
                   <AppText variant="etiket" bold color="beyaz" style={styles.kurdeleYazi}>
                     ZAYIF MEVZİLER
                   </AppText>
+                  {/* Taşan ucun altındaki kıvrım: şerit kartın ARKASINA dolanıyor hissi. */}
+                  <View style={styles.bantKivrim} />
                 </View>
               ) : bos && hicCalisilan ? (
                 /* Yeni kullanıcı: ALTIN oval rozet — İLK EMİR. */
@@ -1743,12 +1746,28 @@ const styles = StyleSheet.create({
   },
   zayifBant: {
     position: 'absolute',
-    top: 12,
-    right: 12,
+    top: -8, // kartın üst çizgisine biner
+    right: -22, // sağdan dışarı taşar — etiket hissi
     width: 176,
     height: 34,
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.35,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4,
+  },
+  bantKivrim: {
+    position: 'absolute',
+    right: 1,
+    bottom: -8,
+    width: 0,
+    height: 0,
+    borderTopWidth: 8,
+    borderTopColor: '#7A120C',
+    borderRightWidth: 10,
+    borderRightColor: 'transparent',
   },
   zayifOval: {
     position: 'absolute',
