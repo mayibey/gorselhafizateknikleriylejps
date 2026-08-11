@@ -633,6 +633,7 @@ export default function KarargahScreen() {
                   </AppText>
                 </LinearGradient>
               ) : null}
+              <View style={styles.kenarUstuCizgi} pointerEvents="none" />
               <View style={styles.emirSatir}>
                 <View style={styles.emirSol}>
                   {bos ? (
@@ -1725,10 +1726,20 @@ const styles = StyleSheet.create({
   },
   zayifEtiketGorsel: {
     position: 'absolute',
-    top: -12, // kartın üst çizgisine biner (mock hizası)
+    top: -6, // kıvrım kart çizgisiyle kesişir — arkadan çıkma illüzyonu
     right: -12, // kart kenarından ekran kenarına dayanır (mock gibi)
     width: 188,
     height: 57, // 362x110 kesit oranı
+  },
+  kenarUstuCizgi: {
+    // Kart üst kenarını şeridin ÜZERİNE yeniden çizer → şeridin kart içindeki kısmı
+    // çizginin arkasında kalır; ekrandan taşan sağ ucu önde görünür (derinlik).
+    position: 'absolute',
+    top: -1,
+    left: 16,
+    right: 16,
+    height: 1.5,
+    backgroundColor: 'rgba(67,203,218,0.5)',
   },
   zayifOval: {
     position: 'absolute',
