@@ -89,6 +89,76 @@ function yolNokta(t: number): { x: number; y: number } {
   };
 }
 
+// PERSPEKTİF: bir durağın EKRAN-y'sine göre büyüklük/opaklık. Uzak (ufuğa yakın, üstte) küçük
+// ve silik; araç hizasında (AY) tam; geçilmiş (ekran altı) kaybolur.
+function perspScaleY(y: number, AY: number, H: number): number {
+  const ufuk = H * 0.14;
+  if (y <= ufuk) return 0.32;
+  if (y >= AY) return 1 + Math.min(0.14, ((y - AY) / H) * 0.4);
+  return 0.32 + ((y - ufuk) / (AY - ufuk)) * 0.68;
+}
+function perspOpY(y: number, AY: number, H: number): number {
+  const ufuk = H * 0.12;
+  if (y <= ufuk) return 0;
+  if (y <= ufuk + 44) return (y - ufuk) / 44;
+  if (y >= H + 70) return 0;
+  return 1;
+}
+
+/** Perspektifli kanun durağı — dünya katmanında konumlanır; EKRAN-y'sine göre ölçek+opaklık.
+ *  Kamera kaydıkça (dunyaTY) uzaktan gelip büyüyerek yaklaşır, geçilince silinir. */
+function DurakPersp({
+  dunyaTY,
+  C,
+  AY,
+  H,
+  tyMin,
+  tyMax,
+  W,
+  durum,
+  no,
+  onPress,
+}: {
+  dunyaTY: Animated.AnimatedInterpolation<number>;
+  C: number;
+  AY: number;
+  H: number;
+  tyMin: number;
+  tyMax: number;
+  W: number;
+  durum: Durum;
+  no: number;
+  onPress: () => void;
+}) {
+  const ORNEK = 14;
+  const inR = Array.from({ length: ORNEK + 1 }, (_, k) => tyMin + ((tyMax - tyMin) * k) / ORNEK);
+  const scale = dunyaTY.interpolate({ inputRange: inR, outputRange: inR.map((ty) => perspScaleY(C + ty, AY, H)) });
+  const opacity = dunyaTY.interpolate({ inputRange: inR, outputRange: inR.map((ty) => perspOpY(C + ty, AY, H)) });
+  return (
+    <Animated.View style={[st.durakPersp, { left: W / 2 - 17, top: C - 17, opacity, transform: [{ scale }] }]}>
+      <Pressable onPress={onPress} hitSlop={12} style={st.durakBas} accessibilityRole="button" accessibilityLabel={`Bölüm ${no}`}>
+        <View
+          style={[
+            st.durakNokta,
+            durum === 'tamam' && st.durakTamam,
+            durum === 'aktif' && st.durakAktif,
+            durum === 'baslanmadi' && st.durakKilit,
+          ]}>
+          {durum === 'tamam' ? (
+            <MaterialCommunityIcons name="check-bold" size={12} color="#07334B" />
+          ) : durum === 'baslanmadi' ? (
+            <MaterialCommunityIcons name="lock" size={11} color="rgba(226,236,240,0.9)" />
+          ) : (
+            <AppText variant="etiket" bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
+              {no}
+            </AppText>
+          )}
+        </View>
+      </Pressable>
+    </Animated.View>
+  );
+}
+
 // Çift bot izi sprite'ı (1254×1254, şeffaf): SOL yarı=sol ayak, SAĞ yarı=sağ ayak.
 // Tek <Image>'ı 2×genişlikte verip yatay kaydır + overflow:hidden → tek ayak gösterilir.
 const CIFT_AYAK = require('../../assets/images/ciftayak.png');
@@ -618,36 +688,23 @@ function SinematikHarita({
               pointerEvents="none"
             />
           ))}
-          {/* KANUN DURAKLARI — dünya konumunda, yol boyunca. */}
+          {/* KANUN DURAKLARI — perspektifli; sadece aktif çevresi render (culling). */}
           {dugumler.map((d, i) => {
-            const y = durakDunyaY(i);
-            const durum = durumCoz(d, i === aktifIndex);
+            if (Math.abs(i - Math.max(0, aktifIndex)) > 12) return null;
             return (
-              <Pressable
+              <DurakPersp
                 key={d.bolum.id}
+                dunyaTY={dunyaTY}
+                C={durakDunyaY(i)}
+                AY={AY}
+                H={gorunurH}
+                tyMin={AY - y0}
+                tyMax={AY - y1}
+                W={W}
+                durum={durumCoz(d, i === aktifIndex)}
+                no={i + 1}
                 onPress={() => onDugumBas(d.bolum.id)}
-                style={[st.durak, { left: W / 2, top: y }]}
-                hitSlop={12}
-                accessibilityRole="button"
-                accessibilityLabel={`${d.bolum.ad} bölümü`}>
-                <View
-                  style={[
-                    st.durakNokta,
-                    durum === 'tamam' && st.durakTamam,
-                    durum === 'aktif' && st.durakAktif,
-                    durum === 'baslanmadi' && st.durakKilit,
-                  ]}>
-                  {durum === 'tamam' ? (
-                    <MaterialCommunityIcons name="check-bold" size={12} color="#07334B" />
-                  ) : durum === 'baslanmadi' ? (
-                    <MaterialCommunityIcons name="lock" size={11} color="rgba(226,236,240,0.9)" />
-                  ) : (
-                    <AppText variant="etiket" bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
-                      {i + 1}
-                    </AppText>
-                  )}
-                </View>
-              </Pressable>
+              />
             );
           })}
         </Animated.View>
@@ -1097,6 +1154,13 @@ const st = StyleSheet.create({
     justifyContent: 'center',
   },
   durakBas: {
+    width: 34,
+    height: 34,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  durakPersp: {
+    position: 'absolute',
     width: 34,
     height: 34,
     alignItems: 'center',
