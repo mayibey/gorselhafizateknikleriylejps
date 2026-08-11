@@ -10,7 +10,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { EvsafKategori } from '@/components/evsaf/kategori';
@@ -129,7 +129,7 @@ export function KanunHaritasi() {
               ilerlemeMap.set(c.law_id, (ilerlemeMap.get(c.law_id) ?? 0) + 1);
           setListe(
             laws
-              .filter((l) => l.blok === 'müşterek' && (toplamMap.get(l.id) ?? 0) > 0)
+              .filter((l) => (toplamMap.get(l.id) ?? 0) > 0)
               .map((law) => ({
                 law,
                 calisilan: ilerlemeMap.get(law.id) ?? 0,
@@ -144,34 +144,60 @@ export function KanunHaritasi() {
 
   if (!liste || liste.length === 0) return null;
   const baslanan = liste.filter((s) => s.calisilan > 0).length;
+  const musterek = liste.filter((s) => s.law.blok === 'müşterek');
+  const bransGrubu = liste.filter((s) => s.law.blok !== 'müşterek');
+
+  const satirCiz = (s: { law: LawWithCount; calisilan: number; toplam: number }) => {
+    const yuzde = Math.round((s.calisilan / s.toplam) * 100);
+    return (
+      <Pressable
+        key={s.law.id}
+        onPress={() => router.push({ pathname: '/patika', params: { lawId: String(s.law.id) } })}
+        style={({ pressed }) => [st.kanunSatir, pressed && st.basili]}
+        accessibilityRole="button"
+        accessibilityLabel={`${s.law.ad} patikası`}>
+        <AppText variant="etiket" bold color="beyaz" style={st.kanunAd} numberOfLines={1}>
+          {s.law.ad}
+        </AppText>
+        <View style={st.kanunBar}>
+          {yuzde > 0 ? <View style={[st.kanunBarDolu, { flex: yuzde }]} /> : null}
+          <View style={{ flex: Math.max(1, 100 - yuzde) }} />
+        </View>
+        <AppText variant="etiket" bold color={yuzde > 0 ? 'altinMetin' : 'solukMetin'} style={st.kanunYuzde}>
+          %{yuzde}
+        </AppText>
+      </Pressable>
+    );
+  };
 
   return (
     <EvsafKategori
       ikon="map-outline"
       baslik="Kanun Haritası"
       altYazi={`${liste.length} kanunun ${baslanan}'inde başladın`}>
-      {liste.map((s) => {
-        const yuzde = Math.round((s.calisilan / s.toplam) * 100);
-        return (
-          <Pressable
-            key={s.law.id}
-            onPress={() => router.push({ pathname: '/patika', params: { lawId: String(s.law.id) } })}
-            style={({ pressed }) => [st.kanunSatir, pressed && st.basili]}
-            accessibilityRole="button"
-            accessibilityLabel={`${s.law.ad} patikası`}>
-            <AppText variant="etiket" bold color="beyaz" style={st.kanunAd} numberOfLines={1}>
-              {s.law.ad}
-            </AppText>
-            <View style={st.kanunBar}>
-              {yuzde > 0 ? <View style={[st.kanunBarDolu, { flex: yuzde }]} /> : null}
-              <View style={{ flex: Math.max(1, 100 - yuzde) }} />
-            </View>
-            <AppText variant="etiket" bold color={yuzde > 0 ? 'altinMetin' : 'solukMetin'} style={st.kanunYuzde}>
-              %{yuzde}
-            </AppText>
-          </Pressable>
-        );
-      })}
+      {/* Liste sabit yükseklikte kalır, kendi içinde kayar (başkan: "çok aşağı uzamasın"). */}
+      <ScrollView
+        style={st.haritaAlan}
+        contentContainerStyle={st.haritaIcerik}
+        nestedScrollEnabled
+        showsVerticalScrollIndicator>
+        {musterek.length > 0 ? (
+          <AppText variant="etiket" bold color="altinParlak" style={st.haritaBolum}>
+            MÜŞTEREK MEVZUAT
+          </AppText>
+        ) : null}
+        {musterek.map(satirCiz)}
+        {bransGrubu.length > 0 ? (
+          <AppText
+            variant="etiket"
+            bold
+            color="altinParlak"
+            style={[st.haritaBolum, musterek.length > 0 && st.haritaBolumAra]}>
+            BRANŞ MEVZUATI
+          </AppText>
+        ) : null}
+        {bransGrubu.map(satirCiz)}
+      </ScrollView>
     </EvsafKategori>
   );
 }
@@ -395,6 +421,10 @@ const st = StyleSheet.create({
     gap: Spacing.two,
   },
   kanunAd: { flex: 1, flexShrink: 1 },
+  haritaAlan: { maxHeight: 300 },
+  haritaIcerik: { gap: Spacing.two, paddingRight: 2 },
+  haritaBolum: { letterSpacing: 1.2 },
+  haritaBolumAra: { marginTop: Spacing.one },
   kanunBar: {
     flexDirection: 'row',
     width: 90,
