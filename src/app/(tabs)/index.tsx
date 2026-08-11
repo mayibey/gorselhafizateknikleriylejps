@@ -1714,7 +1714,7 @@ const styles = StyleSheet.create({
   },
   plakaKap: {
     position: 'absolute',
-    top: -4, // başkan: 5 piksel aşağı
+    top: -2, // başkan: 2 piksel daha aşağı
     left: 10,
     width: 218,
     height: 58,
