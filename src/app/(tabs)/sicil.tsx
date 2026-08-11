@@ -1299,7 +1299,12 @@ export function ZayifBolum({
                     accessibilityRole="button"
                     accessibilityLabel="Bu maddeyi çalış">
                     <View style={styles.zayifMaddeUst}>
-                      <AppText variant="kucuk" bold style={styles.zayifAd} numberOfLines={1}>
+                      <AppText
+                        variant="kucuk"
+                        bold
+                        color={gece ? 'beyaz' : 'anaMetin'}
+                        style={styles.zayifAd}
+                        numberOfLines={1}>
                         {maddeEtiket(z.card.madde_no, z.card.baslik)}
                       </AppText>
                       {/* Kurtulma: son 2 deneme iyi olunca havuzdan çıkar — kural aynı, artık GÖRÜNÜR. */}

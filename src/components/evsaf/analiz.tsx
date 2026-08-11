@@ -148,7 +148,7 @@ export function KanunHaritasi() {
   const musterek = liste.filter((s) => s.law.blok === 'müşterek');
   const bransGrubu = liste.filter((s) => s.law.blok !== 'müşterek');
 
-  const satirCiz = (s: { law: LawWithCount; calisilan: number; toplam: number }) => {
+  const satirCiz = (s: { law: LawWithCount; calisilan: number; toplam: number }, i: number) => {
     const yuzde = Math.round((s.calisilan / s.toplam) * 100);
     return (
       <Pressable
@@ -157,6 +157,9 @@ export function KanunHaritasi() {
         style={({ pressed }) => [st.kanunSatir, pressed && st.basili]}
         accessibilityRole="button"
         accessibilityLabel={`${s.law.ad} patikası`}>
+        <AppText variant="etiket" bold color="altinParlak" style={st.kanunSira}>
+          {i + 1}.
+        </AppText>
         <AppText variant="etiket" bold color="beyaz" style={st.kanunAd} numberOfLines={1}>
           {s.law.ad}
         </AppText>
@@ -432,6 +435,7 @@ const st = StyleSheet.create({
     gap: Spacing.two,
   },
   kanunAd: { flex: 1, flexShrink: 1 },
+  kanunSira: { width: 22, textAlign: 'right' },
   haritaAlan: { maxHeight: 300 },
   haritaIcerik: { gap: Spacing.two, paddingRight: 2 },
   haritaSekmeler: { flexDirection: 'row', gap: Spacing.one },
