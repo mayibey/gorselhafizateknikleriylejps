@@ -22,6 +22,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { AppText } from '@/components/ui/app-text';
 import { KilitKarti } from '@/components/premium/kilit-karti';
+import { Yolculuk } from '@/components/patika/yolculuk';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { LAW_KLASOR } from '@/db/seed';
@@ -490,13 +491,12 @@ export default function PatikaScreen() {
         // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
         <TekDugum onPress={() => akisAc({ lawId: String(lawId) })} />
       ) : kapsamSecimi ? (
-        // DUOLINGO (bayraklı): her madde bir level; dokununca kanunun akışı (kaldığın yerden) açılır.
-        // NOT (12 Ağu): "Sonsuz yolculuk" denemesi başkan isteğiyle GERİ ALINDI — kod ve varlıklar
-        // components/patika/yolculuk.tsx'te duruyor, tek satırla geri açılır.
-        <SinematikHarita
+        // SONSUZ YOLCULUK (bayraklı, 12 Ağu): tarayıcı taslağında onaylanan tasarım —
+        // dikişsiz sahne katları + görselden ölçülmüş gerçek yol izi + kuşbakışı araç.
+        // Eski Duolingo haritası (SinematikHarita) geri dönüş için kodda duruyor.
+        <Yolculuk
           dugumler={dugumler}
           aktifIndex={aktifIndex}
-          lawAnahtar={String(lawId ?? '')}
           kanunAd={kanunAd}
           calisilanKart={calisilanKart}
           toplamKart={toplamKart}
