@@ -1129,7 +1129,7 @@ export default function KarargahScreen() {
               </View>
               <View style={styles.gorselAltBar}>
                 <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
-                  Oynayarak öğren. Bilgini oyunla pekiştir.
+                  Oynayarak öğren, bilgini pekiştir.
                 </AppText>
                 <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} />
               </View>
