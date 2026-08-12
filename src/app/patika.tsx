@@ -1,6 +1,7 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
-import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -495,6 +496,7 @@ export default function PatikaScreen() {
         <SinematikHarita
           dugumler={dugumler}
           aktifIndex={aktifIndex}
+          lawAnahtar={String(lawId ?? '')}
           kanunAd={kanunAd}
           calisilanKart={calisilanKart}
           toplamKart={toplamKart}
@@ -579,6 +581,7 @@ export default function PatikaScreen() {
 function SinematikHarita({
   dugumler,
   aktifIndex,
+  lawAnahtar,
   onDugumBas,
   onDevam,
   kanunAd,
@@ -587,6 +590,7 @@ function SinematikHarita({
 }: {
   dugumler: BolumDugum[];
   aktifIndex: number;
+  lawAnahtar: string;
   onDugumBas: (bolumId: number) => void;
   onDevam: () => void;
   kanunAd: string | null;
@@ -613,11 +617,94 @@ function SinematikHarita({
   const nodeX = (i: number) => W * (i % 2 === 0 ? 0.33 : 0.67); // zigzag
   const aktifI = Math.max(0, aktifIndex);
   const scrollRef = useRef<ScrollView>(null);
+
+  /* ARACIN YOLCULUGU (baskan istegi, 12 Agu): eskiden arac isinlaniyordu - bir karede
+     eski durakta, digerinde yenisinde. Artik son birakildigi durak cihazda (kanun bazinda)
+     hatirlanir; donuste arac eski duraktan yenisine SURER, arkasinda altin iz yanar.
+     Konum tek Animated.Value'nun parca-parca interpolasyonuyla cozulur (native driver). */
+  const [gorselIndex, setGorselIndex] = useState(aktifI);
+  const [animBas, setAnimBas] = useState<number | null>(null);
+  const surucu = useRef(new Animated.Value(aktifI)).current;
+
+  // Yol uzerindeki ornek noktalar: kesirli durak indeksi -> ekran koordinati.
+  const ornek = useMemo(() => {
+    const idx: number[] = [];
+    const xs: number[] = [];
+    const ys: number[] = [];
+    const ADIM = 8;
+    for (let i = 0; i < Math.max(0, n - 1); i++) {
+      const p0 = { x: nodeX(i), y: nodeY(i) };
+      const p1 = { x: nodeX(i + 1), y: nodeY(i + 1) };
+      for (let k = 0; k < ADIM; k++) {
+        const f = k / ADIM;
+        const nk = bezierNokta(p0, p1, f);
+        idx.push(i + f);
+        xs.push(nk.x);
+        ys.push(nk.y);
+      }
+    }
+    const sonI = Math.max(0, n - 1);
+    idx.push(sonI);
+    xs.push(nodeX(sonI));
+    ys.push(nodeY(sonI));
+    if (idx.length < 2) {
+      idx.push(idx[0] + 1);
+      xs.push(xs[0]);
+      ys.push(ys[0]);
+    }
+    return { idx, xs, ys };
+  }, [n, W, contentH]);
+
   useEffect(() => {
-    const to = Math.max(0, nodeY(aktifI) - gorunurH * 0.5);
-    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: to, animated: true }), 400);
-    return () => clearTimeout(id);
-  }, [aktifI, gorunurH, contentH]);
+    let iptal = false;
+    const anahtar = `patika-son-durak:${lawAnahtar}`;
+    const kaydir = (i: number, ani: boolean) =>
+      scrollRef.current?.scrollTo({ y: Math.max(0, nodeY(i) - gorunurH * 0.5), animated: ani });
+    void (async () => {
+      let onceki = aktifI;
+      try {
+        const ham = await AsyncStorage.getItem(anahtar);
+        if (ham != null && ham !== '') onceki = Math.max(0, Math.min(n - 1, Number(ham)));
+      } catch {
+        /* okunamazsa animasyonsuz devam */
+      }
+      if (iptal) return;
+      const ilerleme = aktifI - onceki;
+      if (ilerleme > 0 && ilerleme <= 8) {
+        setAnimBas(onceki);
+        setGorselIndex(onceki);
+        surucu.setValue(onceki);
+        kaydir(onceki, false);
+        setTimeout(() => kaydir(aktifI, true), 220);
+        Animated.timing(surucu, {
+          toValue: aktifI,
+          duration: 700 + 450 * ilerleme,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: USE_NATIVE,
+        }).start(({ finished }) => {
+          if (iptal || !finished) return;
+          setGorselIndex(aktifI);
+          setAnimBas(null);
+        });
+      } else {
+        surucu.setValue(aktifI);
+        setGorselIndex(aktifI);
+        setAnimBas(null);
+        setTimeout(() => kaydir(aktifI, true), 400);
+      }
+      try {
+        await AsyncStorage.setItem(anahtar, String(aktifI));
+      } catch {
+        /* yazilamazsa sonraki acilista animasyon olmaz, zarar yok */
+      }
+    })();
+    return () => {
+      iptal = true;
+    };
+  }, [aktifI, lawAnahtar, n, gorunurH, contentH, surucu]);
+
+  const aracX = surucu.interpolate({ inputRange: ornek.idx, outputRange: ornek.xs, extrapolate: 'clamp' });
+  const aracY = surucu.interpolate({ inputRange: ornek.idx, outputRange: ornek.ys, extrapolate: 'clamp' });
 
   return (
     <>
@@ -635,7 +722,7 @@ function SinematikHarita({
             {dugumler.slice(0, -1).map((_, i) => {
               const p0 = { x: nodeX(i), y: nodeY(i) };
               const p1 = { x: nodeX(i + 1), y: nodeY(i + 1) };
-              const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
+              const gecildi = aktifIndex === -1 || i + 1 <= gorselIndex;
               return (
                 <Path
                   key={i}
@@ -703,14 +790,45 @@ function SinematikHarita({
               </AppText>,
             ];
           })}
-          {/* Jandarma aracı — AKTİF level'ın üstünde (Duolingo'daki karakter gibi). */}
+          {/* ALTIN IZ - arac gectikce yanan noktalar (yalniz surerken cizilir). */}
+          {animBas !== null
+            ? ornek.idx.map((t, k) =>
+                t > animBas && t <= aktifI ? (
+                  <Animated.View
+                    key={`iz${k}`}
+                    pointerEvents="none"
+                    style={{
+                      position: 'absolute',
+                      left: ornek.xs[k] - 4,
+                      top: ornek.ys[k] - 4,
+                      width: 8,
+                      height: 8,
+                      borderRadius: 4,
+                      backgroundColor: Palette.altinParlak,
+                      opacity: surucu.interpolate({
+                        inputRange: [Math.max(0, t - 0.08), t],
+                        outputRange: [0, 0.9],
+                        extrapolate: 'clamp',
+                      }),
+                    }}
+                  />
+                ) : null,
+              )
+            : null}
+          {/* Jandarma araci - ilerleyince eski duraktan yenisine SURER. */}
           {aktifIndex >= 0 && dugumler[aktifI] ? (
-            <Image
-              source={PATIKA_ARAC}
-              style={{ position: 'absolute', left: nodeX(aktifI) - 34, top: nodeY(aktifI) - HERO / 2 - 54, width: 68, height: 58 }}
-              contentFit="contain"
+            <Animated.View
               pointerEvents="none"
-            />
+              style={{
+                position: 'absolute',
+                left: -34,
+                top: -(HERO / 2 + 54),
+                width: 68,
+                height: 58,
+                transform: [{ translateX: aracX }, { translateY: aracY }],
+              }}>
+              <Image source={PATIKA_ARAC} style={StyleSheet.absoluteFill} contentFit="contain" />
+            </Animated.View>
           ) : null}
         </ScrollView>
       </View>
