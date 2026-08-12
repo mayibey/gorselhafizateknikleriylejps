@@ -1477,3 +1477,15 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   alt yazısı "Oynayarak öğren, bilgini pekiştir." olarak kısaltıldı (iki satıra sığmayıp
   "…peki…" diye kesiliyordu). Commit 1065440 + f319e7e, ikisi de OTA'landı ve
   Kemalettin'in telefonunda EKRANDAN doğrulandı (iki panel simetrik, kesilme yok).
+
+## 12 Ağu 2026 (4) — Başlık hizası (başkan: "sayfa değiştikçe hiza kayıyor")
+- Sebep: marka başlığının iki biçimi farklı puntoda (Karargâh 23 harf-aralıklı / Mevzuat-Evsaf 30
+  küçük harf). Yazı satırının yüksekliği punto ile değiştiği için altındaki altın çizgi+kalkan
+  her sekmede başka yükseklikte kalıyordu → şerit zıplıyordu.
+- Çözüm: marka başlık satırına ORTAK satır yüksekliği (38) verildi (screen.tsx). Punto ne olursa
+  olsun satır aynı yer kaplar. Commit e375d98, OTA basıldı.
+- Cihazda ölçüldü (üç sekmenin üst şeridi kırpılıp üst üste konuldu): altın çizgi+kalkan
+  Karargâh 270 / Mevzuat 272 / Evsaf 271 piksel → hiza oturdu (önce Karargâh ~25 px yukarıdaydı).
+- KALAN: Oyunlar sekmesi. Onun başlığı uygulamanın değil OYUN SAYFASININ kendi şeridi
+  (başlık ~16 px daha solda, biraz daha aşağıda, kalkan yok). Düzeltmek oyun sayfası
+  değişikliği ister (taslak kanalı; başkan + Kemalettin'de).
