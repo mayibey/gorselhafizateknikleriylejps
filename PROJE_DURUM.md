@@ -1434,3 +1434,23 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   paslanan kanun listesi altında açılır (otomatik bant bayraklıda kalktı).
 - kaldigin-yer.tsx: KALDIĞIN YER başlıklı + ilerleme barlı yeni form; TatbikatYarim eklendi.
 - SinavGeriSayim'a `buyuk` modu. OTA 5 runtime.
+
+## 12 Ağu 2026 (2) — Patika DUOLINGO düzeltmeleri (canlı cihaz tespiti; bayraklı)
+- Kemalettin'in telefonu (Xiaomi 15 Ultra, 1.0.44) USB'den adb ile ölçüldü: OTA SORUNSUZ
+  ("No update available" = en güncel), yeni Patika ekranda VARDI. Şikayet dağıtım değil,
+  ekranın kendi kusurlarıymış. Bayrak (talim-mevzuata) 3 kişide açık: Baki + Ahmet + Kemalettin.
+- Düzeltilen 4 kusur (yalnız DUOLINGO dalı, src/app/patika.tsx):
+  1) Etiket çifti: madde_no zaten "TCK m.38" iken başına "Madde" ekleniyordu →
+     "Madde TCK m.38". Yeni kisaMaddeEtiket(): "Madde 38" / "Madde Ek 1" / "Özet".
+  2) Aynı madde iki düğüm: m.35 normal kartı + m.35-36 ayırt/özet kartı (maddeSira'da
+     max üye+0.5 ile sıralanır → 35, 36, 35 görünüyordu). Artık madde_no'ya göre GRUPLAMA:
+     her madde TEK düğüm, toplam = o maddenin kart sayısı; sıra artan kaldı.
+  3) Düğüm içindeki sayı: sıra numarası (i+1, örn. "13") yerine MADDE numarası;
+     numarasız düğümde (özet) yazı yerine ikon.
+  4) Alt bant: aktif düğümün tek kartını sayıp "0/1 madde · %0" diyordu → artık KANUN
+     ilerlemesi ("17/54 kart · %31") + üst satırda "SIRADAKİ MEVZİ · MADDE 38".
+  Hazırlık yüzdesi de düğüm bazlıdan KART bazlına çevrildi (grup sonrası doğru payda).
+- DOKUNULMADI: aktif düğümün ÜSTÜNDE tikli düğüm çıkması. Bu kusur değil GERÇEK veri —
+  kullanıcı günlük kuyrukta ileri maddeleri de çalışmış olabiliyor; ilerlemeyi yalan
+  söylememek için olduğu gibi bırakıldı.
+- tsc temiz. OTA BASILMADI (başkan onayı bekliyor).

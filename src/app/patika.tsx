@@ -220,6 +220,26 @@ function segmentPostallari(p0: Pt, p1: Pt, anahtar: string): ReactNode[] {
   return izler;
 }
 
+/**
+ * Düğüm etiketi: madde_no zaten kanun etiketini taşır ("TCK m.38", "4733 m.8") →
+ * başına bir de "Madde" eklenince "Madde TCK m.38" gibi ÇİFT yazı çıkıyordu.
+ * Buradan kısa ve tek biçim döner: "Madde 38" · "Madde Ek 1" · "Özet".
+ */
+function kisaMaddeEtiket(maddeNo: string): string {
+  const m = maddeNo.match(/m\.\s*((?:Ek|Geçici)\s+)?(\d+(?:\/[A-Za-zÇĞİÖŞÜçğıöşü])?)/i);
+  if (m) return `Madde ${(m[1] ?? '').trim()} ${m[2]}`.replace(/\s+/g, ' ').trim();
+  // Madde numarası olmayanlar ("TCK özet") — kanun etiketini at, kalanı büyük harfle başlat.
+  const kalan = maddeNo.split(' ').slice(1).join(' ').trim();
+  if (!kalan) return maddeNo;
+  return kalan.charAt(0).toLocaleUpperCase('tr') + kalan.slice(1);
+}
+
+/** Düğümün İÇİNDE yazacak kısa numara ("38", "Ek 1"); numarasızda null (ikon çizilir). */
+function dugumNumara(etiket: string): string | null {
+  const m = etiket.match(/^Madde\s+(.+)$/);
+  return m ? m[1] : null;
+}
+
 export default function PatikaScreen() {
   const router = useRouter();
   // GECE KARARI M5 (bayraklı): düğüm kapsam seçimi yalnız başkan+Ahmet'te.
@@ -258,20 +278,40 @@ export default function PatikaScreen() {
     const id = Number(lawId);
     if (kapsamSecimi) {
       // DUOLINGO (bayraklı): HER MADDE bir level. Kanunun tüm kartları → düğümler (kutu=durum).
+      // AYNI MADDENİN BİRDEN ÇOK KARTI TEK DÜĞÜMDE: m.35'in normal kartı ile m.35–36
+      // ayırt/özet kartı ayrı düğüm olunca "m.35" listede İKİ KEZ çıkıyor ve sıra da bozuk
+      // görünüyordu (ayırt kartı en büyük üye+0.5 ile sıralanır → 35, 36, 35 …). madde_no'ya
+      // göre gruplayınca hem tekrar biter hem sıra artan kalır (grup sırası ilk görülme).
       void getCardsByLaw(id)
         .then((kartlar) => {
-          const madde = kartlar.map(
-            (k): BolumDugum => ({
-              bolum: { id: k.id, law_id: id, ad: `Madde ${k.madde_no}`, sira: 0 } as Bolum,
-              calisilan: k.kutu >= 1 ? 1 : 0,
-              toplam: 1,
-              oran: k.kutu >= 1 ? 1 : 0,
-            }),
-          );
+          const sira: string[] = [];
+          const grup = new Map<string, typeof kartlar>();
+          kartlar.forEach((k) => {
+            const mevcut = grup.get(k.madde_no);
+            if (mevcut) {
+              mevcut.push(k);
+            } else {
+              grup.set(k.madde_no, [k]);
+              sira.push(k.madde_no);
+            }
+          });
+          const madde = sira.map((anahtar): BolumDugum => {
+            const grubu = grup.get(anahtar) ?? [];
+            const calisilan = grubu.filter((k) => k.kutu >= 1).length;
+            const toplam = grubu.length;
+            return {
+              bolum: { id: grubu[0]?.id ?? 0, law_id: id, ad: kisaMaddeEtiket(anahtar), sira: 0 } as Bolum,
+              calisilan,
+              toplam,
+              oran: toplam > 0 ? calisilan / toplam : 0,
+            };
+          });
           setBolumsuz(false);
           setDugumler(madde);
-          const calisilan = madde.filter((d) => d.calisilan > 0).length;
-          setHazirlik(madde.length > 0 ? Math.round((calisilan / madde.length) * 100) : 0);
+          // Hazırlık KART bazlı (düğüm değil): madde başına birden çok kart olabiliyor.
+          const calisilan = madde.reduce((a, d) => a + d.calisilan, 0);
+          const toplam = madde.reduce((a, d) => a + d.toplam, 0);
+          setHazirlik(toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0);
         })
         .catch(() => {
           setHata(true);
@@ -556,7 +596,9 @@ function SinematikHarita({
   const gorunurH = Math.round(Math.min(WH * 0.72, 700));
   const n = dugumler.length;
   const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
-  const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
+  // Alt bant KANUNUN ilerlemesini gösterir (eskiden aktif düğümün kendi 1 kartını
+  // gösterip "0/1 madde · %0" diyordu — kanunun 17/54'ü bitmişken yanıltıcıydı).
+  const kanunOran = toplamKart > 0 ? Math.round((calisilanKart / toplamKart) * 100) : 0;
 
   // DUOLINGO tarzı level haritası: dikey zigzag düğümler, aralıklı (üst üste YOK), yukarı ilerleme.
   const ROW = 120;
@@ -610,6 +652,7 @@ function SinematikHarita({
             const durum = durumCoz(d, i === aktifIndex);
             const buyuk = durum === 'aktif';
             const boyut = buyuk ? HERO : NODE;
+            const numara = dugumNumara(d.bolum.ad);
             return [
               <Pressable
                 key={`n${d.bolum.id}`}
@@ -628,10 +671,23 @@ function SinematikHarita({
                   <MaterialCommunityIcons name="check-bold" size={buyuk ? 30 : 24} color="#07334B" />
                 ) : durum === 'baslanmadi' ? (
                   <MaterialCommunityIcons name="lock" size={22} color="rgba(226,236,240,0.85)" />
-                ) : (
-                  <AppText variant={buyuk ? 'baslik' : 'govde'} bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
-                    {i + 1}
+                ) : numara ? (
+                  // Düğümün içinde SIRA sayısı değil MADDE numarası (eskiden "13" gibi
+                  // anlamsız bir sayı çıkıyordu; kullanıcı hangi maddede olduğunu göremiyordu).
+                  <AppText
+                    variant={buyuk && numara.length <= 3 ? 'baslik' : 'govde'}
+                    bold
+                    numberOfLines={1}
+                    color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
+                    {numara}
                   </AppText>
+                ) : (
+                  // Madde numarası olmayan düğüm (özet/ayırt kartı) → yazı yerine ikon.
+                  <MaterialCommunityIcons
+                    name="text-box-outline"
+                    size={buyuk ? 26 : 22}
+                    color={durum === 'aktif' ? '#07334B' : 'rgba(226,236,240,0.9)'}
+                  />
                 )}
               </Pressable>,
               <AppText
@@ -666,17 +722,17 @@ function SinematikHarita({
           accessibilityLabel="Kaldığın yerden devam et">
           <View style={st.altSol}>
             <AppText variant="etiket" bold color="kartMetinIkincil" style={st.altUst}>
-              ŞU ANKİ MEVZİ
+              {aktifIndex >= 0 ? `SIRADAKİ MEVZİ · ${aktif.bolum.ad.toLocaleUpperCase('tr')}` : 'ŞU ANKİ MEVZİ'}
             </AppText>
             <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
               {kanunAd ?? aktif.bolum.ad}
             </AppText>
             <View style={st.altBar}>
-              {aktifOran > 0 ? <View style={[st.altBarDolu, { flex: aktifOran }]} /> : null}
-              <View style={{ flex: Math.max(1, 100 - aktifOran) }} />
+              {kanunOran > 0 ? <View style={[st.altBarDolu, { flex: kanunOran }]} /> : null}
+              <View style={{ flex: Math.max(1, 100 - kanunOran) }} />
             </View>
-            <AppText variant="etiket" color="kartMetinIkincil">
-              {aktif.toplam === 0 ? 'yakında' : `${aktif.calisilan}/${aktif.toplam} madde · %${aktifOran}`}
+            <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
+              {toplamKart === 0 ? 'yakında' : `${calisilanKart}/${toplamKart} kart · %${kanunOran}`}
             </AppText>
           </View>
           <View style={st.devamBtn}>
