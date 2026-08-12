@@ -16,7 +16,6 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useMemo, useRef } from 'react';
 import { Animated, Easing, Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
 
@@ -33,8 +32,11 @@ const ARAC = require('../../../assets/images/patika-arac-kus.webp');
 /** Sahne görselinin oranı (1620/1080) ve aracın oranı (702/420). */
 const SAHNE_ORAN = 1620 / 1080;
 const ARAC_ORAN = 702 / 420;
-/** Katların örtüşme payı — üst kenar bu kadarlık bir bantta eriyerek geçer. */
-const ORTUSME = 0.18;
+/** Katlar UÇ UCA dizilir (örtüşme YOK).
+ *  12 Ağu cihaz testi: %18 örtüşmede ekranda ÜSTTEKİ katın görüntüsü görünüyor ama yol
+ *  hesabı ALTTAKİ kattan geliyordu → duraklar ve araç yolun solunda kalıyordu ("kayma").
+ *  Görselin kendisi artık dikişsiz (ilk satır = son satır), bu yüzden örtüşmeye gerek yok. */
+const ORTUSME = 0;
 /** Dünyanın ekrandan kaç kat geniş çizileceği (yakın plan). */
 const YAKINLIK = 1.9;
 
@@ -214,13 +216,6 @@ export function Yolculuk({
           {dunya.katUst.map((ust, i) => (
             <View key={`kat${i}`} style={{ position: 'absolute', top: ust, left: 0, width: dunya.W, height: dunya.katY }}>
               <Image source={SAHNE} style={StyleSheet.absoluteFill} contentFit="fill" />
-              {i < dunya.katUst.length - 1 ? (
-                <LinearGradient
-                  colors={['rgba(9,20,28,1)', 'rgba(9,20,28,0)']}
-                  style={{ position: 'absolute', top: 0, left: 0, right: 0, height: dunya.katY * ORTUSME * 0.9 }}
-                  pointerEvents="none"
-                />
-              ) : null}
             </View>
           ))}
 
