@@ -256,34 +256,55 @@ export default function PatikaScreen() {
       return;
     }
     const id = Number(lawId);
-    void getBolumler(id)
-      .then(async (bolumler) => {
-        if (bolumler.length === 0) {
-          setBolumsuz(true);
-          setDugumler([]);
-          // Bölümsüz kanun: chip'i o kanunun GERÇEK kartından besle (kutu≥1/toplam).
-          const kartlar = await getCardsByLaw(id);
-          const calisilan = kartlar.filter((c) => c.kutu >= 1).length;
-          setHazirlik(kartlar.length > 0 ? Math.round((calisilan / kartlar.length) * 100) : 0);
-          return;
-        }
-        const dugum = await Promise.all(
-          bolumler.map(async (b): Promise<BolumDugum> => {
-            const kartlar = await getCardsByBolum(b.id);
-            return { bolum: b, ...bolumIlerleme(kartlar) };
-          }),
-        );
-        setBolumsuz(false);
-        setDugumler(dugum);
-        // Bölümlü kanun: "Çalışıldı %" = o kanunun kutu≥1 kart / toplam (bolumIlerleme'den).
-        const calisilan = dugum.reduce((a, d) => a + d.calisilan, 0);
-        const toplam = dugum.reduce((a, d) => a + d.toplam, 0);
-        setHazirlik(toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0);
-      })
-      .catch(() => {
-        setHata(true);
-        setHazirlik(null);
-      });
+    if (kapsamSecimi) {
+      // DUOLINGO (bayraklı): HER MADDE bir level. Kanunun tüm kartları → düğümler (kutu=durum).
+      void getCardsByLaw(id)
+        .then((kartlar) => {
+          const madde = kartlar.map(
+            (k): BolumDugum => ({
+              bolum: { id: k.id, law_id: id, ad: `Madde ${k.madde_no}`, sira: 0 } as Bolum,
+              calisilan: k.kutu >= 1 ? 1 : 0,
+              toplam: 1,
+              oran: k.kutu >= 1 ? 1 : 0,
+            }),
+          );
+          setBolumsuz(false);
+          setDugumler(madde);
+          const calisilan = madde.filter((d) => d.calisilan > 0).length;
+          setHazirlik(madde.length > 0 ? Math.round((calisilan / madde.length) * 100) : 0);
+        })
+        .catch(() => {
+          setHata(true);
+          setHazirlik(null);
+        });
+    } else {
+      void getBolumler(id)
+        .then(async (bolumler) => {
+          if (bolumler.length === 0) {
+            setBolumsuz(true);
+            setDugumler([]);
+            const kartlar = await getCardsByLaw(id);
+            const calisilan = kartlar.filter((c) => c.kutu >= 1).length;
+            setHazirlik(kartlar.length > 0 ? Math.round((calisilan / kartlar.length) * 100) : 0);
+            return;
+          }
+          const dugum = await Promise.all(
+            bolumler.map(async (b): Promise<BolumDugum> => {
+              const kartlar = await getCardsByBolum(b.id);
+              return { bolum: b, ...bolumIlerleme(kartlar) };
+            }),
+          );
+          setBolumsuz(false);
+          setDugumler(dugum);
+          const calisilan = dugum.reduce((a, d) => a + d.calisilan, 0);
+          const toplam = dugum.reduce((a, d) => a + d.toplam, 0);
+          setHazirlik(toplam > 0 ? Math.round((calisilan / toplam) * 100) : 0);
+        })
+        .catch(() => {
+          setHata(true);
+          setHazirlik(null);
+        });
+    }
 
     // Üst bar verisi (degrade olur — patika ana veriyi etkilemez).
     if (brans) {
@@ -301,7 +322,7 @@ export default function PatikaScreen() {
     void getStudyDays()
       .then((g) => setStreak(hesaplaStreak(g, bugunISO())))
       .catch(() => setStreak(null));
-  }, [lawId, brans]);
+  }, [lawId, brans, kapsamSecimi]);
 
   useFocusEffect(yukle);
 
@@ -428,25 +449,15 @@ export default function PatikaScreen() {
         // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
         <TekDugum onPress={() => akisAc({ lawId: String(lawId) })} />
       ) : kapsamSecimi ? (
-        // SİNEMATİK (bayraklı): dağ yolu manzarası + yol eğrisine dizili bölümler + araç.
+        // DUOLINGO (bayraklı): her madde bir level; dokununca kanunun akışı (kaldığın yerden) açılır.
         <SinematikHarita
           dugumler={dugumler}
           aktifIndex={aktifIndex}
           kanunAd={kanunAd}
           calisilanKart={calisilanKart}
           toplamKart={toplamKart}
-          onDugumBas={(id) => {
-            const d = dugumler?.find((x) => x.bolum.id === id);
-            Alert.alert(d?.bolum.ad ?? 'Bölüm', 'Ne kadarını çalışalım?', [
-              { text: 'Vazgeç', style: 'cancel' },
-              { text: 'Yalnız bu bölüm', onPress: () => akisAc({ bolumId: String(id), kapsam: 'bolum' }) },
-              { text: 'Buradan patikayı sürdür', onPress: () => akisAc({ bolumId: String(id) }) },
-            ]);
-          }}
-          onDevam={() => {
-            const a = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
-            if (a) akisAc({ bolumId: String(a.bolum.id) });
-          }}
+          onDugumBas={() => akisAc({ lawId: String(lawId) })}
+          onDevam={() => akisAc({ lawId: String(lawId) })}
         />
       ) : (
         <Harita
