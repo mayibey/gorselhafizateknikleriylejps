@@ -1454,3 +1454,9 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   kullanıcı günlük kuyrukta ileri maddeleri de çalışmış olabiliyor; ilerlemeyi yalan
   söylememek için olduğu gibi bırakıldı.
 - tsc temiz. OTA BASILMADI (başkan onayı bekliyor).
+- YAYINLANDI (12 Ağu 10:10 ve 10:15, iki OTA, runtime 1.0.44 android+ios): 033569f
+  (4 kusur) + 68228a4 (alt panel etiketi tek satır — canlı cihazda kart sayacını ekran
+  dışına ittiği görüldü). Kemalettin'in telefonunda adb ile DOĞRULANDI: etiketler
+  "Madde 37/36/35/23/22", aktif düğümde "35", alt bant "SIRADAKİ · MADDE 35" +
+  "17/54 kart · %31". Görünürlük hâlâ 3 kişilik bayrakla sınırlı (Baki+Ahmet+Kemalettin);
+  bayraksız kullanıcılar eski patikayı görür.
