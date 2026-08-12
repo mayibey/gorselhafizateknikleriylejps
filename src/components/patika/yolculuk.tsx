@@ -196,7 +196,8 @@ export function Yolculuk({
   const kameraX = konum.interpolate({ ...ara, outputRange: dunya.kamX });
   const kameraY = konum.interpolate({ ...ara, outputRange: dunya.kamY });
 
-  const aracG = Math.round(ekranG * 0.1);
+  // Araç da yol genişliğine göre ölçeklenir (gerçek araç yolun ~%60'ı kadardır).
+  const aracG = Math.round(dunya.W * 0.088 * 0.62);
   const aracYy = aracG * ARAC_ORAN;
 
   return (
@@ -248,34 +249,53 @@ export function Yolculuk({
             );
           })}
 
-          {/* DURAKLAR — yola oturan taş platform + direk + levha */}
+          {/* DURAKLAR — yola oturan taş platform + direk + levha.
+              ÖLÇÜ KURALI (cihazda görüldü, 12 Ağu): levha YOL GENİŞLİĞİNE göre ölçeklenir;
+              sabit ekran oranı verilince yol kadar iri çıkıp asfaltı kapatıyordu.
+              Platformun MERKEZİ yol noktasına oturur (eskiden yolun altında kalıyordu). */}
           {dunya.duraklar.map((p, i) => {
             const d = dugumler[i];
             if (!d) return null;
             const gecildi = d.toplam > 0 && d.calisilan >= d.toplam;
             const aktif = i === aktifIndex;
             const etiket = d.bolum.ad.replace(/^Madde\s+/i, '');
-            const boy = Math.round(ekranG * 0.115);
+            const yolG = dunya.W * 0.088; // sahnedeki asfaltın genişliği (ölçüldü)
+            const levhaB = Math.round(yolG * 0.72);
+            const direkY = Math.round(levhaB * 0.46);
+            const platG = Math.round(levhaB * 1.2);
+            const platY = Math.round(platG * 0.34);
+            const kap = platG;
             return (
               <Pressable
                 key={`d${d.bolum.id}`}
                 onPress={() => onDugumBas(d.bolum.id)}
-                style={{ position: 'absolute', left: p.x - boy, top: p.y - boy * 2.1, width: boy * 2, alignItems: 'center' }}
+                style={{
+                  position: 'absolute',
+                  left: p.x - kap / 2,
+                  top: p.y - (levhaB + direkY + platY / 2),
+                  width: kap,
+                  alignItems: 'center',
+                }}
                 accessibilityRole="button"
                 accessibilityLabel={d.bolum.ad}>
                 <View
                   style={[
                     st.levha,
-                    { width: boy * 1.5, height: boy * 1.5, borderRadius: boy * 0.3 },
+                    { width: levhaB, height: levhaB, borderRadius: levhaB * 0.26 },
                     aktif && st.levhaAktif,
                     gecildi && st.levhaGecildi,
                   ]}>
-                  <AppText variant="govde" bold color="beyaz" style={{ fontSize: boy * 0.62 }}>
+                  <AppText
+                    variant="govde"
+                    bold
+                    color={gecildi ? 'altinParlak' : 'beyaz'}
+                    numberOfLines={1}
+                    style={{ fontSize: levhaB * (gecildi ? 0.52 : 0.44) }}>
                     {gecildi ? '✓' : etiket}
                   </AppText>
                 </View>
-                <View style={[st.direk, { height: boy * 0.62 }]} />
-                <View style={[st.platform, { width: boy * 1.7, height: boy * 0.62, borderRadius: boy }]} />
+                <View style={[st.direk, { height: direkY }]} />
+                <View style={[st.platform, { width: platG, height: platY, borderRadius: platG }]} />
               </Pressable>
             );
           })}
@@ -363,13 +383,15 @@ const st = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'rgba(255,255,255,0.18)',
   },
-  levhaAktif: { borderColor: Palette.altinParlak, backgroundColor: 'rgba(20,28,38,0.95)' },
-  levhaGecildi: { borderColor: 'rgba(240,183,51,0.75)', backgroundColor: 'rgba(201,162,39,0.85)' },
-  direk: { width: 5, backgroundColor: '#2A313A' },
+  levhaAktif: { borderColor: Palette.altinParlak, backgroundColor: 'rgba(20,28,38,0.96)' },
+  // Tamamlanan durak da KOYU levha kalır, farkı altın çerçeve + altın tik (eskiden dolu altın
+  // blok oluyordu ve yolu kapatıyordu).
+  levhaGecildi: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(14,20,28,0.92)' },
+  direk: { width: 4, backgroundColor: 'rgba(38,45,54,0.95)' },
   platform: {
-    backgroundColor: 'rgba(120,130,142,0.85)',
+    backgroundColor: 'rgba(86,95,106,0.72)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.22)',
+    borderColor: 'rgba(255,255,255,0.18)',
   },
   aracGolge: {
     ...StyleSheet.absoluteFillObject,
