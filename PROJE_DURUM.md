@@ -1469,3 +1469,7 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   kırpılıyordu, artık tam yazıyor. Görsel hizası top→center.
 - Yayınlandı (OTA, runtime 1.0.44 android+ios, commit ea1cf97) ve Kemalettin'in
   telefonunda doğrulandı. Görünürlük yine 3 kişilik bayrakla sınırlı.
+- (12 Ağu, devam) Başkan denemek istedi: açıklama + ok panelin ALTINDA menü şeridine
+  alındı (üstünde ince altın ayraç, hafif koyu zemin, yazı solda ok sağda); başlık üstte
+  kaldı, karartma iki uçtan verildi → görselin ortası açık. Commit 908c6ae, OTA basıldı.
+  NOT: telefon USB'den çıktığı için bu son hâli CİHAZDA doğrulayamadım.
