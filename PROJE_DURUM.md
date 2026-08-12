@@ -1489,3 +1489,20 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
 - KALAN: Oyunlar sekmesi. Onun başlığı uygulamanın değil OYUN SAYFASININ kendi şeridi
   (başlık ~16 px daha solda, biraz daha aşağıda, kalkan yok). Düzeltmek oyun sayfası
   değişikliği ister (taslak kanalı; başkan + Kemalettin'de).
+
+## 12 Ağu 2026 (5) — Patika SONSUZ YOLCULUK (bayraklı; tarayıcı taslağından uygulamaya)
+- Duolingo level haritası TERK EDİLDİ. Yeni düzen başkanla tarayıcı taslağında (Artifact)
+  10+ tur çevrilerek oturdu; sonra uygulamaya taşındı (components/patika/yolculuk.tsx).
+- Kurgu: TEK dikişsiz sahne görseli alt alta ÖRTÜŞEREK (%18) diziliyor, üst kenarı eriyerek
+  alttakine karışıyor → yol bitmiyor, ek yeri görünmüyor. YOL ÇİZİLMİYOR; görseldeki gerçek
+  asfaltın orta çizgisi ölçülerek çıkarıldı (YOL_IZI sabiti). Duraklar (taş platform + direk +
+  levha) ve kuşbakışı jandarma aracı o çizgiye oturuyor. Kamera aracı takip ediyor.
+- Görsel hattı: başkan ChatGPT'de üretti (tepeden, ufuksuz, yol alttan-üstten ortadan).
+  Yol izi ÖLÇÜLDÜ (şerit-çizgisi taraması + Viterbi + gözle doğrulama), uçlar satır-kaydırmayla
+  ortalandı (4,6 px), dikiş üç kat üst üste konarak DOĞRULANDI. Araç görseli siyah zeminden
+  kesildi (çekirdek bileşen + morfolojik kapama; ilk denemede hale kutu gibi kalmıştı).
+- Teknik: RN Animated + NATIVE DRIVER; yol konumu tek Animated.Value'nun parça-parça
+  interpolasyonuyla (inputRange=yay uzunluğu, outputRange=koordinat). Reanimated/worklet YOK.
+- Varlıklar: patika-dongu-orman.webp (1080×1620, 163 KB) + patika-arac-kus.webp (43 KB).
+- Commit d7dbe4e, OTA basıldı (runtime 1.0.44). ⚠️ CİHAZDA DOĞRULANMADI — telefon USB'den
+  çıkmıştı; başkan kendi telefonunda deneyecek.
