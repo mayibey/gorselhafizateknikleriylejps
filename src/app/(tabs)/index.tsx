@@ -1076,15 +1076,16 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
-              <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="top" />
+              <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="center" />
+              {/* Karartma ÜSTTEN: yazılar artık üstte → okunurluk oradan gelmeli. */}
               <LinearGradient
-                colors={['transparent', 'rgba(4,26,40,0.35)', 'rgba(4,26,40,0.88)', 'rgba(4,26,40,0.98)']}
-                locations={[0, 0.44, 0.74, 1]}
+                colors={['rgba(4,26,40,0.97)', 'rgba(4,26,40,0.86)', 'rgba(4,26,40,0.3)', 'transparent']}
+                locations={[0, 0.3, 0.62, 1]}
                 style={StyleSheet.absoluteFill}
                 pointerEvents="none"
               />
               <View style={styles.gorselAlt}>
-                <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={1}>
+                <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   TATBİKAT MERKEZİ
                 </AppText>
                 <View style={styles.gorselCizgi} />
@@ -1099,15 +1100,15 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Oyun Merkezi — oynayarak öğren">
-              <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="top" />
+              <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="center" />
               <LinearGradient
-                colors={['transparent', 'rgba(4,26,40,0.35)', 'rgba(4,26,40,0.88)', 'rgba(4,26,40,0.98)']}
-                locations={[0, 0.44, 0.74, 1]}
+                colors={['rgba(4,26,40,0.97)', 'rgba(4,26,40,0.86)', 'rgba(4,26,40,0.3)', 'transparent']}
+                locations={[0, 0.3, 0.62, 1]}
                 style={StyleSheet.absoluteFill}
                 pointerEvents="none"
               />
               <View style={styles.gorselAlt}>
-                <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={1}>
+                <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   OYUN MERKEZİ
                 </AppText>
                 <View style={styles.gorselCizgi} />
@@ -2101,16 +2102,19 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
     overflow: 'hidden',
-    justifyContent: 'flex-end',
+    // Başkan (12 Ağu): yazılar kutunun dibinde kalıyordu → başlık EN ÜSTTE,
+    // açıklama hemen altında. Karartma katmanı da yukarı çevrildi (bkz. gradient).
+    justifyContent: 'flex-start',
   },
   gorselAlt: {
     alignItems: 'center',
     paddingHorizontal: Spacing.two,
-    paddingBottom: Spacing.three,
+    paddingTop: Spacing.two,
     gap: 6,
   },
   gorselBaslik: {
-    fontSize: 17,
+    // 17 punto yarım genişliğe sığmıyordu ("TATBİKAT MERKE…"). 16 + iki satır izni → kırpılmaz.
+    fontSize: 16,
     letterSpacing: 0.5,
     textAlign: 'center',
   },
