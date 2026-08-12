@@ -1077,22 +1077,32 @@ export default function KarargahScreen() {
               accessibilityRole="button"
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
               <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="center" />
-              {/* Karartma ÜSTTEN: yazılar artık üstte → okunurluk oradan gelmeli. */}
+              {/* Karartma İKİ UÇTAN: başlık üstte, açıklama+ok altta bir menü şeridinde;
+                  görselin ortası açık kalır. */}
               <LinearGradient
-                colors={['rgba(4,26,40,0.97)', 'rgba(4,26,40,0.86)', 'rgba(4,26,40,0.3)', 'transparent']}
-                locations={[0, 0.3, 0.62, 1]}
+                colors={[
+                  'rgba(4,26,40,0.96)',
+                  'rgba(4,26,40,0.5)',
+                  'rgba(4,26,40,0.14)',
+                  'rgba(4,26,40,0.6)',
+                  'rgba(4,26,40,0.96)',
+                ]}
+                locations={[0, 0.24, 0.5, 0.78, 1]}
                 style={StyleSheet.absoluteFill}
                 pointerEvents="none"
               />
-              <View style={styles.gorselAlt}>
+              <View style={styles.gorselUst}>
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   TATBİKAT MERKEZİ
                 </AppText>
                 <View style={styles.gorselCizgi} />
-                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama}>
+              </View>
+              {/* ALT MENÜ ŞERİDİ (başkan isteği): açıklama solda, ok sağda. */}
+              <View style={styles.gorselAltBar}>
+                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
                   Karma sınavlarla kendini sına.
                 </AppText>
-                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} style={styles.gorselOk} />
+                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} />
               </View>
             </Pressable>
             <Pressable
@@ -1102,20 +1112,28 @@ export default function KarargahScreen() {
               accessibilityLabel="Oyun Merkezi — oynayarak öğren">
               <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="center" />
               <LinearGradient
-                colors={['rgba(4,26,40,0.97)', 'rgba(4,26,40,0.86)', 'rgba(4,26,40,0.3)', 'transparent']}
-                locations={[0, 0.3, 0.62, 1]}
+                colors={[
+                  'rgba(4,26,40,0.96)',
+                  'rgba(4,26,40,0.5)',
+                  'rgba(4,26,40,0.14)',
+                  'rgba(4,26,40,0.6)',
+                  'rgba(4,26,40,0.96)',
+                ]}
+                locations={[0, 0.24, 0.5, 0.78, 1]}
                 style={StyleSheet.absoluteFill}
                 pointerEvents="none"
               />
-              <View style={styles.gorselAlt}>
+              <View style={styles.gorselUst}>
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   OYUN MERKEZİ
                 </AppText>
                 <View style={styles.gorselCizgi} />
-                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama}>
+              </View>
+              <View style={styles.gorselAltBar}>
+                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
                   Oynayarak öğren. Bilgini oyunla pekiştir.
                 </AppText>
-                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} style={styles.gorselOk} />
+                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} />
               </View>
             </Pressable>
           </View>
@@ -2102,15 +2120,26 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
     overflow: 'hidden',
-    // Başkan (12 Ağu): yazılar kutunun dibinde kalıyordu → başlık EN ÜSTTE,
-    // açıklama hemen altında. Karartma katmanı da yukarı çevrildi (bkz. gradient).
-    justifyContent: 'flex-start',
+    // Başkan (12 Ağu): başlık EN ÜSTTE, açıklama + ok ALTTA menü şeridi gibi →
+    // ikisi iki uca yaslanır, görselin ortası açıkta kalır.
+    justifyContent: 'space-between',
   },
-  gorselAlt: {
+  gorselUst: {
     alignItems: 'center',
     paddingHorizontal: Spacing.two,
     paddingTop: Spacing.two,
     gap: 6,
+  },
+  // Alt menü şeridi: açıklama solda, ok sağda; üstünde ince altın ayraç.
+  gorselAltBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.two,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(201,162,39,0.45)',
+    backgroundColor: 'rgba(4,26,40,0.55)',
   },
   gorselBaslik: {
     // 17 punto yarım genişliğe sığmıyordu ("TATBİKAT MERKE…"). 16 + iki satır izni → kırpılmaz.
@@ -2124,11 +2153,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(201,162,39,0.6)',
   },
   gorselAciklama: {
+    flex: 1,
     opacity: 0.94,
-    textAlign: 'center',
-  },
-  gorselOk: {
-    marginTop: 2,
+    textAlign: 'left',
   },
   yarimBaslik2: {
     letterSpacing: 1,
