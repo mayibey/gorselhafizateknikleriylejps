@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import { Image } from 'expo-image';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { AppText } from '@/components/ui/app-text';
 import { KilitKarti } from '@/components/premium/kilit-karti';
@@ -541,128 +542,84 @@ function SinematikHarita({
 }) {
   const { width: WW, height: WH } = useWindowDimensions();
   const W = Math.min(WW - Spacing.four * 2, 460);
-  const H = Math.round(W * YOL_UZUN_ORAN); // tek uzun görselin gerçek yüksekliği (kaydırılır)
-  const gorunurH = Math.round(Math.min(WH * 0.68, 640));
+  const gorunurH = Math.round(Math.min(WH * 0.72, 700));
   const n = dugumler.length;
   const aktif = aktifIndex >= 0 ? dugumler[aktifIndex] : dugumler[dugumler.length - 1];
   const aktifOran = aktif && aktif.toplam > 0 ? Math.round((aktif.calisilan / aktif.toplam) * 100) : 0;
 
-  const AW = 66; // gerçek araç oranı (küçük, yola oturur)
-  const AH = 59;
-  // Görsel tam boyda (W×H) → yol eğrisi doğrudan piksele çevrilir (kırpma yok).
-  const egriPx = (t: number) => {
-    const p = yolNokta(t);
-    return { x: p.x * W, y: p.y * H };
-  };
-  const ilerleme = toplamKart > 0 ? Math.max(0.02, calisilanKart / toplamKart) : 0.02;
-  const aracP = egriPx(ilerleme);
-
-  const aracYv = useRef(new Animated.Value(ilerleme)).current;
-  const titre = useRef(new Animated.Value(0)).current;
+  // DUOLINGO tarzı level haritası: dikey zigzag düğümler, aralıklı (üst üste YOK), yukarı ilerleme.
+  const ROW = 120;
+  const PAD_T = 90;
+  const PAD_B = 110;
+  const NODE = 62;
+  const HERO = 78;
+  const contentH = Math.max(gorunurH, PAD_T + PAD_B + Math.max(0, n - 1) * ROW);
+  const nodeY = (i: number) => contentH - PAD_B - i * ROW; // i=0 altta (başlangıç), yukarı ilerler
+  const nodeX = (i: number) => W * (i % 2 === 0 ? 0.33 : 0.67); // zigzag
+  const aktifI = Math.max(0, aktifIndex);
   const scrollRef = useRef<ScrollView>(null);
-  // Kart bitince araç yolun ilerisine yumuşak çıkar.
   useEffect(() => {
-    Animated.timing(aracYv, { toValue: ilerleme, duration: 1500, easing: Easing.inOut(Easing.cubic), useNativeDriver: false }).start();
-  }, [ilerleme, aracYv]);
-  // Motor rölanti titreşimi.
-  useEffect(() => {
-    const l = Animated.loop(
-      Animated.sequence([
-        Animated.timing(titre, { toValue: 1, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
-        Animated.timing(titre, { toValue: 0, duration: 440, easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
-      ]),
-    );
-    l.start();
-    return () => l.stop();
-  }, [titre]);
-  // Açılışta araca kaydır (araç görünür başlasın).
-  useEffect(() => {
-    const to = Math.max(0, aracP.y - gorunurH * 0.55);
-    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: to, animated: true }), 450);
+    const to = Math.max(0, nodeY(aktifI) - gorunurH * 0.5);
+    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: to, animated: true }), 400);
     return () => clearTimeout(id);
-  }, [aracP.y, gorunurH]);
-
-  // Araç konumu ilerleme (0..1) → gerçek yol eğrisi (örnek noktalarla yumuşak interpolate).
-  const ORNEK = 24;
-  const inRA = Array.from({ length: ORNEK + 1 }, (_, k) => k / ORNEK);
-  const aracLeft = aracYv.interpolate({ inputRange: inRA, outputRange: inRA.map((u) => egriPx(u).x - AW / 2) });
-  const aracTop = aracYv.interpolate({ inputRange: inRA, outputRange: inRA.map((u) => egriPx(u).y - AH * 0.62) });
-  const aracTitre = titre.interpolate({ inputRange: [0, 1], outputRange: [0, -2] });
+  }, [aktifI, gorunurH, contentH]);
 
   return (
     <>
-      <View style={[st.sahne, { width: W, height: gorunurH }]}>
-        <ScrollView
-          ref={scrollRef}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ height: H }}>
-          {/* TEK UZUN yol görseli (ek yeri yok; kaydırılır). */}
-          <Image source={YOL_UZUN} style={{ width: W, height: H }} contentFit="cover" pointerEvents="none" />
-
-          {/* Hedef bayrağı — yolun ufuktaki ucu. */}
-          <View style={[st.hedefRoz, { left: egriPx(1).x - 9, top: egriPx(1).y - 24 }]}>
-            <MaterialCommunityIcons name="flag-variant" size={20} color={Palette.altinParlak} />
-          </View>
-
-          {/* KANUN DURAKLARI — gerçek yolun kıvrımına oturur. */}
+      <View style={[st.duoSahne, { height: gorunurH }]}>
+        <LinearGradient colors={['#06243A', '#0B3A57', '#072536']} style={StyleSheet.absoluteFill} pointerEvents="none" />
+        <ScrollView ref={scrollRef} showsVerticalScrollIndicator={false} contentContainerStyle={{ height: contentH }}>
+          {/* Düğümler arası yol (bezier) — geçilen altın, ileri kesikli soluk */}
+          <Svg width={W} height={contentH} style={StyleSheet.absoluteFill} pointerEvents="none">
+            {dugumler.slice(0, -1).map((_, i) => {
+              const p0 = { x: nodeX(i), y: nodeY(i) };
+              const p1 = { x: nodeX(i + 1), y: nodeY(i + 1) };
+              const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
+              return (
+                <Path
+                  key={i}
+                  d={segmentYol(p0, p1)}
+                  stroke={gecildi ? Palette.altin : 'rgba(126,205,218,0.45)'}
+                  strokeWidth={gecildi ? 6 : 4}
+                  strokeDasharray={gecildi ? undefined : '2 13'}
+                  strokeLinecap="round"
+                  fill="none"
+                />
+              );
+            })}
+          </Svg>
+          {/* LEVEL DÜĞÜMLERİ (Duolingo tarzı) */}
           {dugumler.map((d, i) => {
-            const t = n === 1 ? 0.06 : i / (n - 1);
-            const p = egriPx(t);
             const durum = durumCoz(d, i === aktifIndex);
+            const buyuk = durum === 'aktif';
+            const boyut = buyuk ? HERO : NODE;
             return (
               <Pressable
                 key={d.bolum.id}
                 onPress={() => onDugumBas(d.bolum.id)}
-                style={[st.durak, { left: p.x, top: p.y }]}
-                hitSlop={10}
+                style={({ pressed }) => [
+                  st.duoNode,
+                  { left: nodeX(i) - boyut / 2, top: nodeY(i) - boyut / 2, width: boyut, height: boyut, borderRadius: boyut / 2 },
+                  durum === 'tamam' && st.duoTamam,
+                  durum === 'aktif' && st.duoAktif,
+                  durum === 'baslanmadi' && st.duoKilit,
+                  pressed && st.basili,
+                ]}
                 accessibilityRole="button"
-                accessibilityLabel={`${d.bolum.ad} bölümü`}>
-                <View
-                  style={[
-                    st.durakNokta,
-                    durum === 'tamam' && st.durakTamam,
-                    durum === 'aktif' && st.durakAktif,
-                    durum === 'baslanmadi' && st.durakKilit,
-                  ]}>
-                  {durum === 'tamam' ? (
-                    <MaterialCommunityIcons name="check-bold" size={12} color="#07334B" />
-                  ) : durum === 'baslanmadi' ? (
-                    <MaterialCommunityIcons name="lock" size={11} color="rgba(226,236,240,0.9)" />
-                  ) : (
-                    <AppText variant="etiket" bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
-                      {i + 1}
-                    </AppText>
-                  )}
-                </View>
+                accessibilityLabel={`${d.bolum.ad}`}>
+                {durum === 'tamam' ? (
+                  <MaterialCommunityIcons name="check-bold" size={buyuk ? 30 : 24} color="#07334B" />
+                ) : durum === 'baslanmadi' ? (
+                  <MaterialCommunityIcons name="lock" size={22} color="rgba(226,236,240,0.85)" />
+                ) : (
+                  <AppText variant={buyuk ? 'baslik' : 'govde'} bold color={durum === 'aktif' ? 'lacivert' : 'beyaz'}>
+                    {i + 1}
+                  </AppText>
+                )}
               </Pressable>
             );
           })}
-
-          {/* ARAÇ — gerçek yolun üstünde; dünyaya sabit (kaydırınca geride kalır), kart bitince ilerler. */}
-          <Animated.View
-            style={[st.aracKap, { width: AW, height: AH, left: aracLeft, top: aracTop }]}
-            pointerEvents="none">
-            <View style={st.far} pointerEvents="none" />
-            <AnimatedImage
-              source={PATIKA_ARAC}
-              contentFit="contain"
-              style={[st.aracImg, { transform: [{ translateY: aracTitre }] }]}
-              pointerEvents="none"
-            />
-          </Animated.View>
         </ScrollView>
-
-        {/* Konumuma dön — aracın olduğu yere kaydırır. */}
-        <Pressable
-          style={({ pressed }) => [st.konumBtn, pressed && st.basili]}
-          onPress={() => scrollRef.current?.scrollTo({ y: Math.max(0, aracP.y - gorunurH * 0.55), animated: true })}
-          accessibilityRole="button"
-          accessibilityLabel="Aracıma dön">
-          <MaterialCommunityIcons name="crosshairs-gps" size={15} color={Palette.altinParlak} />
-          <AppText variant="etiket" bold color="altinParlak">
-            Aracım
-          </AppText>
-        </Pressable>
       </View>
 
       {/* Alt panel — ŞU ANKİ MEVZİ + DEVAM ET. */}
@@ -1018,6 +975,44 @@ function DurumKutu({
 }
 
 const st = StyleSheet.create({
+  // ── DUOLINGO tarzı level haritası (bayraklı) ──
+  duoSahne: {
+    alignSelf: 'center',
+    width: '100%',
+    borderRadius: 18,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: 'rgba(67,203,218,0.4)',
+    backgroundColor: '#072536',
+  },
+  duoNode: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(3,47,69,0.95)',
+    borderWidth: 3,
+    borderColor: 'rgba(126,205,218,0.55)',
+    shadowColor: '#000',
+    shadowOpacity: 0.45,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 5,
+  },
+  duoTamam: {
+    backgroundColor: Palette.altin,
+    borderColor: '#FFF7E0',
+  },
+  duoAktif: {
+    backgroundColor: Palette.altinParlak,
+    borderColor: '#FFFFFF',
+    shadowColor: Palette.altinParlak,
+    shadowOpacity: 0.7,
+    shadowRadius: 12,
+  },
+  duoKilit: {
+    backgroundColor: 'rgba(3,40,56,0.85)',
+    borderColor: 'rgba(126,205,218,0.35)',
+  },
   // ── Sinematik patika (bayraklı) ──
   sahne: {
     alignSelf: 'center',
