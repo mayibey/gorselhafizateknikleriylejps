@@ -721,8 +721,10 @@ function SinematikHarita({
           accessibilityRole="button"
           accessibilityLabel="Kaldığın yerden devam et">
           <View style={st.altSol}>
-            <AppText variant="etiket" bold color="kartMetinIkincil" style={st.altUst}>
-              {aktifIndex >= 0 ? `SIRADAKİ MEVZİ · ${aktif.bolum.ad.toLocaleUpperCase('tr')}` : 'ŞU ANKİ MEVZİ'}
+            {/* TEK SATIR olmalı: "SIRADAKİ MEVZİ · MADDE 35" iki satıra sarınca alt panel
+                uzayıp kart sayacını ekranın dışına itiyordu (canlı cihazda görüldü). */}
+            <AppText variant="etiket" bold color="kartMetinIkincil" numberOfLines={1} style={st.altUst}>
+              {aktifIndex >= 0 ? `SIRADAKİ · ${aktif.bolum.ad.toLocaleUpperCase('tr')}` : 'ŞU ANKİ MEVZİ'}
             </AppText>
             <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
               {kanunAd ?? aktif.bolum.ad}
