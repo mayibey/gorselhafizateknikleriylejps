@@ -578,7 +578,13 @@ function SinematikHarita({
   return (
     <>
       <View style={[st.duoSahne, { height: gorunurH }]}>
-        <LinearGradient colors={['#06243A', '#0B3A57', '#072536']} style={StyleSheet.absoluteFill} pointerEvents="none" />
+        {/* Sabit dağ manzarası (atmosfer parallax) + koyu tül → düğümler öne çıksın. */}
+        <Image source={YOL_UZUN} style={StyleSheet.absoluteFill} contentFit="cover" pointerEvents="none" />
+        <LinearGradient
+          colors={['rgba(4,26,40,0.62)', 'rgba(4,26,40,0.48)', 'rgba(4,26,40,0.72)']}
+          style={StyleSheet.absoluteFill}
+          pointerEvents="none"
+        />
         <ScrollView ref={scrollRef} showsVerticalScrollIndicator={false} contentContainerStyle={{ height: contentH }}>
           {/* Düğümler arası yol (bezier) — geçilen altın, ileri kesikli soluk */}
           <Svg width={W} height={contentH} style={StyleSheet.absoluteFill} pointerEvents="none">
@@ -599,14 +605,14 @@ function SinematikHarita({
               );
             })}
           </Svg>
-          {/* LEVEL DÜĞÜMLERİ (Duolingo tarzı) */}
-          {dugumler.map((d, i) => {
+          {/* LEVEL DÜĞÜMLERİ + madde etiketi (Duolingo tarzı) */}
+          {dugumler.flatMap((d, i) => {
             const durum = durumCoz(d, i === aktifIndex);
             const buyuk = durum === 'aktif';
             const boyut = buyuk ? HERO : NODE;
-            return (
+            return [
               <Pressable
-                key={d.bolum.id}
+                key={`n${d.bolum.id}`}
                 onPress={() => onDugumBas(d.bolum.id)}
                 style={({ pressed }) => [
                   st.duoNode,
@@ -627,9 +633,27 @@ function SinematikHarita({
                     {i + 1}
                   </AppText>
                 )}
-              </Pressable>
-            );
+              </Pressable>,
+              <AppText
+                key={`e${d.bolum.id}`}
+                variant="etiket"
+                bold
+                color="beyaz"
+                numberOfLines={1}
+                style={[st.duoEtiket, { top: nodeY(i) + boyut / 2 + 3, left: nodeX(i) - 60 }]}>
+                {d.bolum.ad}
+              </AppText>,
+            ];
           })}
+          {/* Jandarma aracı — AKTİF level'ın üstünde (Duolingo'daki karakter gibi). */}
+          {aktifIndex >= 0 && dugumler[aktifI] ? (
+            <Image
+              source={PATIKA_ARAC}
+              style={{ position: 'absolute', left: nodeX(aktifI) - 34, top: nodeY(aktifI) - HERO / 2 - 54, width: 68, height: 58 }}
+              contentFit="contain"
+              pointerEvents="none"
+            />
+          ) : null}
         </ScrollView>
       </View>
 
@@ -1023,6 +1047,13 @@ const st = StyleSheet.create({
   duoKilit: {
     backgroundColor: 'rgba(3,40,56,0.85)',
     borderColor: 'rgba(126,205,218,0.35)',
+  },
+  duoEtiket: {
+    position: 'absolute',
+    width: 120,
+    textAlign: 'center',
+    textShadowColor: 'rgba(0,0,0,0.8)',
+    textShadowRadius: 4,
   },
   // ── Sinematik patika (bayraklı) ──
   sahne: {
