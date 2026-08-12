@@ -1095,7 +1095,6 @@ export default function KarargahScreen() {
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   TATBİKAT MERKEZİ
                 </AppText>
-                <View style={styles.gorselCizgi} />
               </View>
               {/* ALT MENÜ ŞERİDİ (başkan isteği): açıklama solda, ok sağda. */}
               <View style={styles.gorselAltBar}>
@@ -1127,7 +1126,6 @@ export default function KarargahScreen() {
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   OYUN MERKEZİ
                 </AppText>
-                <View style={styles.gorselCizgi} />
               </View>
               <View style={styles.gorselAltBar}>
                 <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
@@ -2146,11 +2144,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     letterSpacing: 0.5,
     textAlign: 'center',
-  },
-  gorselCizgi: {
-    width: 34,
-    height: 1.5,
-    backgroundColor: 'rgba(201,162,39,0.6)',
   },
   gorselAciklama: {
     flex: 1,
