@@ -1473,3 +1473,7 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   alındı (üstünde ince altın ayraç, hafif koyu zemin, yazı solda ok sağda); başlık üstte
   kaldı, karartma iki uçtan verildi → görselin ortası açık. Commit 908c6ae, OTA basıldı.
   NOT: telefon USB'den çıktığı için bu son hâli CİHAZDA doğrulayamadım.
+- (12 Ağu, son) Başlık altındaki ortalı altın çizgi kaldırıldı (başkan) + Oyun Merkezi
+  alt yazısı "Oynayarak öğren, bilgini pekiştir." olarak kısaltıldı (iki satıra sığmayıp
+  "…peki…" diye kesiliyordu). Commit 1065440 + f319e7e, ikisi de OTA'landı ve
+  Kemalettin'in telefonunda EKRANDAN doğrulandı (iki panel simetrik, kesilme yok).
