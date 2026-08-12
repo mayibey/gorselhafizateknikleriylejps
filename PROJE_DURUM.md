@@ -1460,3 +1460,12 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
   "Madde 37/36/35/23/22", aktif düğümde "35", alt bant "SIRADAKİ · MADDE 35" +
   "17/54 kart · %31". Görünürlük hâlâ 3 kişilik bayrakla sınırlı (Baki+Ahmet+Kemalettin);
   bayraksız kullanıcılar eski patikayı görür.
+
+## 12 Ağu 2026 (3) — Karargah ikiz panelleri: yazı ÜSTE (başkan isteği; bayraklı)
+- Tatbikat Merkezi / Oyun Merkezi panellerinde yazılar kutunun dibinde kalıyordu →
+  başlık EN ÜSTTE, açıklama hemen altında, ok onun altında. Karartma gradyanı da
+  ters çevrildi (koyu üstte, alt kısım açık) → görselin kendisi aşağıda görünür kalıyor.
+- Başlık 17→16 punto + iki satır izni: yarım genişlikte "TATBİKAT MERKE…" diye
+  kırpılıyordu, artık tam yazıyor. Görsel hizası top→center.
+- Yayınlandı (OTA, runtime 1.0.44 android+ios, commit ea1cf97) ve Kemalettin'in
+  telefonunda doğrulandı. Görünürlük yine 3 kişilik bayrakla sınırlı.
