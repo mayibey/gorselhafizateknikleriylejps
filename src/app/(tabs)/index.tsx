@@ -1076,32 +1076,18 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
-              <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="center" />
-              {/* Karartma İKİ UÇTAN: başlık üstte, açıklama+ok altta bir menü şeridinde;
-                  görselin ortası açık kalır. */}
-              <LinearGradient
-                colors={[
-                  'rgba(4,26,40,0.96)',
-                  'rgba(4,26,40,0.5)',
-                  'rgba(4,26,40,0.14)',
-                  'rgba(4,26,40,0.6)',
-                  'rgba(4,26,40,0.96)',
-                ]}
-                locations={[0, 0.24, 0.5, 0.78, 1]}
-                style={StyleSheet.absoluteFill}
-                pointerEvents="none"
-              />
-              <View style={styles.gorselUst}>
+              {/* SEMBOL ÜSTTE, küçültülmüş (contain) — başkan: "logoyu küçült, yukarı taşı".
+                  Yazılar ALTTA: başlık, hemen altında açıklama. */}
+              <View style={styles.panelGorselKap}>
+                <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="contain" />
+              </View>
+              <View style={styles.panelYazi}>
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   TATBİKAT MERKEZİ
                 </AppText>
-              </View>
-              {/* ALT MENÜ ŞERİDİ (başkan isteği): açıklama solda, ok sağda. */}
-              <View style={styles.gorselAltBar}>
                 <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
                   Karma sınavlarla kendini sına.
                 </AppText>
-                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} />
               </View>
             </Pressable>
             <Pressable
@@ -1109,29 +1095,16 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Oyun Merkezi — oynayarak öğren">
-              <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="cover" contentPosition="center" />
-              <LinearGradient
-                colors={[
-                  'rgba(4,26,40,0.96)',
-                  'rgba(4,26,40,0.5)',
-                  'rgba(4,26,40,0.14)',
-                  'rgba(4,26,40,0.6)',
-                  'rgba(4,26,40,0.96)',
-                ]}
-                locations={[0, 0.24, 0.5, 0.78, 1]}
-                style={StyleSheet.absoluteFill}
-                pointerEvents="none"
-              />
-              <View style={styles.gorselUst}>
+              <View style={styles.panelGorselKap}>
+                <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="contain" />
+              </View>
+              <View style={styles.panelYazi}>
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   OYUN MERKEZİ
                 </AppText>
-              </View>
-              <View style={styles.gorselAltBar}>
                 <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
                   Oynayarak öğren, bilgini pekiştir.
                 </AppText>
-                <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.altinParlak} />
               </View>
             </Pressable>
           </View>
@@ -2113,42 +2086,38 @@ const styles = StyleSheet.create({
   // Sinematik arka planlı panel (Tatbikat / Oyun Merkezi) — görsel kutuya oturur, taşmaz.
   gorselPanel: {
     flex: 1,
-    height: 246,
+    // 246 iPhone'da alt sekme çubuğuna taşıyordu (başkan ekran görüntüsü, 13 Ağu) → kısaltıldı.
+    height: 198,
     borderRadius: Radius.l,
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
     overflow: 'hidden',
-    // Başkan (12 Ağu): başlık EN ÜSTTE, açıklama + ok ALTTA menü şeridi gibi →
-    // ikisi iki uca yaslanır, görselin ortası açıkta kalır.
-    justifyContent: 'space-between',
+    // Sembol üstte (küçük), yazılar altta.
+    justifyContent: 'flex-start',
+    backgroundColor: 'rgba(5,32,48,0.55)',
   },
-  gorselUst: {
-    alignItems: 'center',
-    paddingHorizontal: Spacing.two,
-    paddingTop: Spacing.two,
-    gap: 6,
+  panelGorselKap: {
+    width: '100%',
+    height: 112,
+    marginTop: Spacing.one,
   },
-  // Alt menü şeridi: açıklama solda, ok sağda; üstünde ince altın ayraç.
-  gorselAltBar: {
-    flexDirection: 'row',
+  panelYazi: {
+    flex: 1,
     alignItems: 'center',
-    gap: Spacing.one,
+    justifyContent: 'center',
     paddingHorizontal: Spacing.two,
-    paddingVertical: Spacing.two,
-    borderTopWidth: 1,
-    borderTopColor: 'rgba(201,162,39,0.45)',
-    backgroundColor: 'rgba(4,26,40,0.55)',
+    gap: 4,
   },
   gorselBaslik: {
-    // 17 punto yarım genişliğe sığmıyordu ("TATBİKAT MERKE…"). 16 + iki satır izni → kırpılmaz.
-    fontSize: 16,
+    // 17 punto yarım genişliğe sığmıyordu ("TATBİKAT MERKE…"). 15 + iki satır izni → kırpılmaz.
+    fontSize: 15,
     letterSpacing: 0.5,
     textAlign: 'center',
   },
   gorselAciklama: {
-    flex: 1,
     opacity: 0.94,
-    textAlign: 'left',
+    textAlign: 'center',
+    fontSize: 12,
   },
   yarimBaslik2: {
     letterSpacing: 1,
