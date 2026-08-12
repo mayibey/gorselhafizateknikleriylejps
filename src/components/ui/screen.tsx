@@ -151,6 +151,9 @@ export function Screen({
   );
 }
 
+/** Marka başlığının satır yüksekliği — tüm sekmelerde AYNI (hiza kaymasın diye). */
+const MarkaSatirYuksekligi = 38;
+
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
@@ -181,12 +184,18 @@ const styles = StyleSheet.create({
   marka: {
     gap: 2,
   },
+  // HİZA (başkan, 12 Ağu): sekme değiştikçe başlık şeridi zıplıyordu. Sebep, iki marka
+  // biçiminin punto farkı (23 ↔ 30): yazı satırının yüksekliği değişince altındaki altın
+  // çizgi+kalkan farklı yükseklikte kalıyor, şerit boyu da her sayfada başka oluyordu.
+  // ORTAK SATIR YÜKSEKLİĞİ ile punto ne olursa olsun satır aynı yer kaplar → hiza sabit.
   markaYazi: {
     fontSize: 23, // tek-ekran sığdırma (11 Ağu): 28 → 23
+    lineHeight: MarkaSatirYuksekligi,
     letterSpacing: 5,
   },
   markaYaziDuz: {
     fontSize: 30, // Mevzuat mock: küçük harfli büyük serif
+    lineHeight: MarkaSatirYuksekligi,
     letterSpacing: 0.5,
   },
   markaAltSatir: {
