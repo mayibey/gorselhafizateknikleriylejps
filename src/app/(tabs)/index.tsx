@@ -1078,9 +1078,18 @@ export default function KarargahScreen() {
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
               {/* SEMBOL ÜSTTE, küçültülmüş (contain) — başkan: "logoyu küçült, yukarı taşı".
                   Yazılar ALTTA: başlık, hemen altında açıklama. */}
-              <View style={styles.panelGorselKap}>
-                <ExpoImage source={TATBIKAT_ARKA} style={StyleSheet.absoluteFill} contentFit="contain" />
-              </View>
+              <ExpoImage
+                source={TATBIKAT_ARKA}
+                style={StyleSheet.absoluteFill}
+                contentFit="cover"
+                contentPosition="top"
+              />
+              <LinearGradient
+                colors={['rgba(4,26,40,0)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
+                locations={[0.32, 0.6, 1]}
+                style={StyleSheet.absoluteFill}
+                pointerEvents="none"
+              />
               <View style={styles.panelYazi}>
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   TATBİKAT MERKEZİ
@@ -1095,9 +1104,18 @@ export default function KarargahScreen() {
               style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Oyun Merkezi — oynayarak öğren">
-              <View style={styles.panelGorselKap}>
-                <ExpoImage source={OYUN_ARKA} style={StyleSheet.absoluteFill} contentFit="contain" />
-              </View>
+              <ExpoImage
+                source={OYUN_ARKA}
+                style={StyleSheet.absoluteFill}
+                contentFit="cover"
+                contentPosition="top"
+              />
+              <LinearGradient
+                colors={['rgba(4,26,40,0)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
+                locations={[0.32, 0.6, 1]}
+                style={StyleSheet.absoluteFill}
+                pointerEvents="none"
+              />
               <View style={styles.panelYazi}>
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   OYUN MERKEZİ
@@ -2092,21 +2110,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
     overflow: 'hidden',
-    // Sembol üstte (küçük), yazılar altta.
-    justifyContent: 'flex-start',
-    backgroundColor: 'rgba(5,32,48,0.55)',
-  },
-  panelGorselKap: {
-    width: '100%',
-    height: 112,
-    marginTop: Spacing.one,
+    // Görsel paneli TAM kaplar (contain'de kenarlarda boşluk kalıyordu — başkan, 13 Ağu);
+    // yazılar dibe yaslanır, üstlerine koyu degrade biner.
+    justifyContent: 'flex-end',
+    backgroundColor: '#05202F',
   },
   panelYazi: {
-    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     paddingHorizontal: Spacing.two,
-    gap: 4,
+    paddingBottom: Spacing.two,
+    gap: 3,
   },
   gorselBaslik: {
     // 17 punto yarım genişliğe sığmıyordu ("TATBİKAT MERKE…"). 15 + iki satır izni → kırpılmaz.
