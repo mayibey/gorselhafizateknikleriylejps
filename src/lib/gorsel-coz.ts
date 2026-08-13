@@ -27,6 +27,11 @@ export function cozHazir(yol: string): string | undefined {
 }
 
 /** Şifreli yerel görseli çöz → data-URI. Önbellekteyse anında döner. */
+/** Bozuk çıkan görseli önbellekten düşür (yeniden çözülsün / uzak kaynağa düşülsün). */
+export function cozTemizle(yol: string): void {
+  onbellek.delete(yol);
+}
+
 export async function gorselCoz(yol: string): Promise<string> {
   const hazir = onbellek.get(yol);
   if (hazir) {

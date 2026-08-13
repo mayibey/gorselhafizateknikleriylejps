@@ -8,7 +8,8 @@ import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { CardWithSrs } from '@/db/schema';
 import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
-import { cozHazir, gorselCoz } from '@/lib/gorsel-coz';
+import { cozHazir, cozTemizle, gorselCoz } from '@/lib/gorsel-coz';
+import { bozukIcerikSil } from '@/lib/indirme';
 import { gorselBekliyorMu, gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
@@ -47,14 +48,23 @@ export function StudyCard({
     };
   }, [sifreliYol, onGorundu]);
 
-  const gorsel = sifreliYol ? (cozulmus ? { uri: cozulmus } : undefined) : gorselKaynak(card.gorsel_yolu);
+  // KENDİNİ ONARMA: indirilmiş kopya bozuksa (nadiren yarım/hatalı iniyor) görsel açılmaz ve
+  // kart bomboş kalırdı. Yükleme hatasında yerel dosya atılır, kart UZAK kaynağa düşer,
+  // dosya bir sonraki indirmede yeniden iner.
+  const [yerelBozuk, setYerelBozuk] = useState(false);
+  const gorsel =
+    sifreliYol && !yerelBozuk
+      ? cozulmus
+        ? { uri: cozulmus }
+        : undefined
+      : gorselKaynak(card.gorsel_yolu);
   const [zoomAcik, setZoomAcik] = useState(false);
   // Forensic filigran artık SUNUCUDA görselin piksellerine basılıyor (gorsel Edge Function) →
   // client overlay kaldırıldı (gereksiz + bypass edilebilir; sunucununki cihaza zaten gömülü gelir).
 
   // Şifreli içerik henüz çözülmedi VEYA web imzalı URL yolda → "hazırlanıyor" bekleme kutusu
   // (Öğrendim kilitli kalır; placeholder ızgara YANLIŞ olur — görsel var, sadece yolda).
-  if ((sifreliYol && !cozulmus) || gorselBekliyorMu(card.gorsel_yolu)) {
+  if ((sifreliYol && !yerelBozuk && !cozulmus) || gorselBekliyorMu(card.gorsel_yolu)) {
     return (
       <View style={[styles.card, styles.cardGorsel, styles.cozuluyor]}>
         <ActivityIndicator size="large" color={Palette.altinKoyu} />
@@ -92,8 +102,16 @@ export function StudyCard({
               if (width > 0 && height > 0) onOran?.(width / height);
               onGorundu?.(); // görsel ekranda → "Öğrendim" kilidi açılsın
             }}
-            // Yüklenemese bile kilitlenip kalmasın (görmeden öğrendim engeli soft-lock olmasın).
-            onError={() => onGorundu?.()}
+            // Yüklenemezse: yerel (şifreli) kopya bozuksa at + uzak kaynağa düş; yine de
+            // "Öğrendim" kilidini açık bırak ki kullanıcı takılmasın.
+            onError={() => {
+              if (sifreliYol && !yerelBozuk) {
+                cozTemizle(sifreliYol);
+                void bozukIcerikSil(sifreliYol);
+                setYerelBozuk(true);
+              }
+              onGorundu?.();
+            }}
           />
         </Pressable>
         <GorselZoom gorsel={gorsel} gorunur={zoomAcik} onKapat={() => setZoomAcik(false)} />

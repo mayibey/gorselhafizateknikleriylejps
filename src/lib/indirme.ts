@@ -300,6 +300,19 @@ export function kanunIndirBaslat(klasor: string): Promise<void> {
 }
 
 /** İndirilen kanunu cihazdan sil. */
+/**
+ * BOZUK yerel içerik dosyasını siler (13 Ağu: TCK m.45'in indirilmiş kopyası bozuktu →
+ * kart beyaz açılıyordu; sunucudaki dosya sağlamdı). Silinince kart uzak kaynağa düşer,
+ * bir sonraki indirmede dosya yeniden iner. Hata YUTULUR — görüntüleme bundan etkilenmez.
+ */
+export async function bozukIcerikSil(yol: string): Promise<void> {
+  try {
+    await FileSystem.deleteAsync(KOK + yol, { idempotent: true });
+  } catch {
+    /* silinemezse sorun değil: kart yine uzak kaynaktan gösterilir */
+  }
+}
+
 export async function kanunSil(klasor: string): Promise<void> {
   if (!indirmeDestekli) return;
   await FileSystem.deleteAsync(KOK + klasor, { idempotent: true }).catch(() => {});
