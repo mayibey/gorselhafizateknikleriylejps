@@ -1045,10 +1045,10 @@ export default function KarargahScreen() {
             <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
               {unutulan.length > 0 ? (
                 <View style={styles.paslanmaSatir}>
-                  <AppText variant="kucuk" bold color="kirmiziParlak">
+                  <AppText variant="kucuk" bold color="kirmiziParlak" numberOfLines={1}>
                     {unutulan.length} kanun
                   </AppText>
-                  <AppText variant="kucuk" bold color="beyaz">
+                  <AppText variant="kucuk" bold color="beyaz" numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.85}>
                     {' paslanmaya başladı'}
                   </AppText>
                 </View>
@@ -1873,16 +1873,17 @@ const styles = StyleSheet.create({
   notYazi: {
     opacity: 0.9,
   },
+  // TEK SATIR (başkan, 13 Ağu): yazı solda, "TEKRAR ET" sağda, aynı hizada.
+  // Eskiden yazı alanı tüm satırı kaplayıp TEKRAR ET'i alt satıra itiyordu.
   tekrarYaziAlani: {
-    paddingBottom: 20, // altta TEKRAR ET'e yer — çapraz yerleşim
+    flex: 1,
+    minWidth: 0,
   },
   tekrarEtKose: {
-    position: 'absolute',
-    right: Spacing.three,
-    bottom: Spacing.two, // başkan: SAĞ ALTA hizalı
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
+    flexShrink: 0,
   },
   madalyon: {
     width: 58,
@@ -2081,8 +2082,8 @@ const styles = StyleSheet.create({
   },
   tekrarSatir: {
     flexDirection: 'row',
-    alignItems: 'flex-start', // başkan: yazı SOL ÜSTE
-    gap: Spacing.two, // yazı sola yakın
+    alignItems: 'center', // tek satır: ikon, yazı ve TEKRAR ET aynı hizada
+    gap: Spacing.two,
     paddingVertical: Spacing.two,
   },
   tekrarBaslik2: {
@@ -2091,6 +2092,7 @@ const styles = StyleSheet.create({
   paslanmaSatir: {
     flexDirection: 'row',
     alignItems: 'center',
+    flexShrink: 1,
   },
   takvimDikey: {
     width: 1,
