@@ -29,8 +29,10 @@ type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: numbe
 const SAHNE = require('../../../assets/images/patika-dongu-orman.webp');
 const ARAC = require('../../../assets/images/patika-arac-kus.webp');
 
-/** Sahne görselinin oranı (1620/1080) ve aracın oranı (702/420). */
-const SAHNE_ORAN = 1620 / 1080;
+/** Sahne görselinin oranı (1265/1080) ve aracın oranı (702/420).
+ *  13 Ağu: sahne "kaydırmalı çapraz geçiş" ile gerçek döngüye sokuldu (ek yeri görünmüyor),
+ *  bu işlem görselin bir bandını tükettiği için boy kısaldı → oran güncellendi. */
+const SAHNE_ORAN = 1265 / 1080;
 const ARAC_ORAN = 702 / 420;
 /** Katlar UÇ UCA dizilir (örtüşme YOK).
  *  12 Ağu cihaz testi: %18 örtüşmede ekranda ÜSTTEKİ katın görüntüsü görünüyor ama yol
@@ -47,11 +49,12 @@ const YAKINLIK = 1.55;
  * İki uç aynı x'te ve dik → kat üstüne kat binince yol kırılmıyor.
  */
 const YOL_IZI: readonly (readonly [number, number])[] = [
-  [0.4914, 0.0], [0.4906, 0.0417], [0.4904, 0.0833], [0.4988, 0.125], [0.4945, 0.1667],
-  [0.484, 0.2083], [0.4752, 0.25], [0.4623, 0.2917], [0.4463, 0.3333], [0.4427, 0.375],
-  [0.4555, 0.4167], [0.4805, 0.4583], [0.5096, 0.5], [0.5268, 0.5417], [0.5343, 0.5833],
-  [0.5343, 0.625], [0.5086, 0.6667], [0.4861, 0.7083], [0.4775, 0.75], [0.4849, 0.7917],
-  [0.4822, 0.8333], [0.4725, 0.875], [0.4876, 0.9167], [0.4914, 0.9583], [0.4914, 1],
+  [0.4789, 0.0], [0.4745, 0.0409], [0.4648, 0.0818], [0.4532, 0.1227], [0.4451, 0.1636],
+  [0.4446, 0.2045], [0.4541, 0.2454], [0.4713, 0.2863], [0.4921, 0.3272], [0.5122, 0.3681],
+  [0.5251, 0.409], [0.532, 0.4499], [0.5343, 0.4908], [0.5283, 0.5317], [0.509, 0.5726],
+  [0.4915, 0.6135], [0.4816, 0.6544], [0.4797, 0.6953], [0.4843, 0.7362], [0.4835, 0.7771],
+  [0.4806, 0.818], [0.4866, 0.8589], [0.4943, 0.8998], [0.4925, 0.9407], [0.4851, 0.9816],
+  [0.4848, 1],
 ];
 
 type Nokta = { x: number; y: number };
@@ -84,7 +87,7 @@ export function Yolculuk({
     const adim = katY * (1 - ORTUSME);
     // Duraklar arası mesafe (başkan, 13 Ağu: "çok kısa, artır") — kat yüksekliğinin ~%25'i,
     // ekranda ~2-3 durak görünür, aradaki yolculuk hissedilir.
-    const ara = katY * 0.25;
+    const ara = katY * 0.32;
     const gerekli = (N + 1.4) * ara;
     const kat = Math.max(3, Math.ceil(gerekli / adim) + 1);
     const yukseklik = (kat - 1) * adim + katY;
