@@ -22,7 +22,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { AppText } from '@/components/ui/app-text';
 import { KilitKarti } from '@/components/premium/kilit-karti';
-import { Yolculuk } from '@/components/patika/yolculuk';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { LAW_KLASOR } from '@/db/seed';
@@ -453,12 +452,9 @@ export default function PatikaScreen() {
     <Screen
       title="Patika"
       onGeri={() => router.back()}
-      // Yolculuk modunda sayfa KAYDIRILMAZ: harita kalan alanı tam doldurur, altta beyaz kalmaz.
-      scroll={!kapsamSecimi}
       headerAltinCizgi
       headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
-      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). Sinematik modda gizli (temiz sahne). */}
-      {kapsamSecimi ? null : (
+      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). */}
       <>
       <View style={st.ustBar}>
         <View style={st.statChip}>
@@ -490,7 +486,6 @@ export default function PatikaScreen() {
         ) : null}
       </View>
       </>
-      )}
 
       {kilitli ? (
         <KilitKarti kanunAd={kanunAd} />
@@ -511,27 +506,14 @@ export default function PatikaScreen() {
       ) : bolumsuz ? (
         // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
         <TekDugum onPress={() => akisAc({ lawId: String(lawId) })} />
-      ) : kapsamSecimi ? (
-        // SONSUZ YOLCULUK (bayraklı, 12 Ağu): tarayıcı taslağında onaylanan tasarım —
-        // dikişsiz sahne katları + görselden ölçülmüş gerçek yol izi + kuşbakışı araç.
-        // Eski Duolingo haritası (SinematikHarita) geri dönüş için kodda duruyor.
-        <Yolculuk
-          dugumler={dugumler}
-          aktifIndex={aktifIndex}
-          kanunAd={kanunAd}
-          calisilanKart={calisilanKart}
-          toplamKart={toplamKart}
-          basliklar={maddeBasliklari}
-          klasor={klasor ?? null}
-          // Dokunulan durak = O MADDENİN kartı (akış 'kart' ile o karttan başlar).
-          // 13 Ağu: her durak aynı kartı açıyordu — madde bilgisi akışa geçmiyordu.
-          onDugumBas={(kartId) => akisAc({ lawId: String(lawId), kart: String(kartId) })}
-          onDevam={() => akisAc({ lawId: String(lawId) })}
-        />
       ) : (
         <Harita
           dugumler={dugumler}
           aktifIndex={aktifIndex}
+          // 13 Ağu: ilk patikaya dönüldü (krem topografik harita + postal izleri).
+          // Araç YALNIZ bayraklıda: ayak izleri kalır, araç maddeler arasında sürer.
+          aracGoster={kapsamSecimi}
+          lawAnahtar={String(lawId ?? '')}
           onDugumBas={(id) => {
             akisAc({ bolumId: String(id) });
           }}
@@ -898,10 +880,16 @@ function Harita({
   dugumler,
   aktifIndex,
   onDugumBas,
+  aracGoster,
+  lawAnahtar,
 }: {
   dugumler: BolumDugum[];
   aktifIndex: number;
   onDugumBas: (bolumId: number) => void;
+  /** Bayraklı: yolda jandarma aracı görünsün ve ilerleyince duraktan durağa SÜRSÜN. */
+  aracGoster?: boolean;
+  /** Son bırakılan durağı kanun bazında hatırlamak için (animasyon buna göre). */
+  lawAnahtar?: string;
 }) {
   const [W, setW] = useState(0);
   const olc = (e: LayoutChangeEvent) => {
@@ -911,6 +899,80 @@ function Harita({
 
   const n = dugumler.length;
   const haritaY = PAD_TOP + (n - 1) * ROW_GAP + NODE + PAD_BOTTOM;
+
+  /* ── ARAÇ (bayraklı) ── Ayak izleri "buradan geçildi" der ama durağandır; araç
+     "şu an buradasın" der ve ilerleyince duraktan durağa sürer. Konum, tek bir
+     Animated.Value'nun parça-parça interpolasyonuyla çözülür (native driver). */
+  const aktifI = Math.max(0, aktifIndex);
+  const surucu = useRef(new Animated.Value(aktifI)).current;
+  const ornek = useMemo(() => {
+    const idx: number[] = [];
+    const xs: number[] = [];
+    const ys: number[] = [];
+    if (W <= 0) return { idx: [0, 1], xs: [0, 0], ys: [0, 0] };
+    const ADIM = 8;
+    for (let i = 0; i < Math.max(0, n - 1); i++) {
+      const p0 = dugumMerkez(i, W);
+      const p1 = dugumMerkez(i + 1, W);
+      for (let k = 0; k < ADIM; k++) {
+        const f = k / ADIM;
+        const nk = bezierNokta(p0, p1, f);
+        idx.push(i + f);
+        xs.push(nk.x);
+        ys.push(nk.y);
+      }
+    }
+    const son = dugumMerkez(Math.max(0, n - 1), W);
+    idx.push(Math.max(0, n - 1));
+    xs.push(son.x);
+    ys.push(son.y);
+    if (idx.length < 2) {
+      idx.push(idx[0] + 1);
+      xs.push(xs[0]);
+      ys.push(ys[0]);
+    }
+    return { idx, xs, ys };
+  }, [n, W]);
+
+  useEffect(() => {
+    if (!aracGoster || W <= 0) return;
+    let iptal = false;
+    const anahtar = `patika-son-durak:${lawAnahtar ?? ''}`;
+    void (async () => {
+      let onceki = aktifI;
+      try {
+        const ham = await AsyncStorage.getItem(anahtar);
+        if (ham != null && ham !== '') onceki = Math.max(0, Math.min(n - 1, Number(ham)));
+      } catch {
+        /* okunamazsa animasyonsuz */
+      }
+      if (iptal) return;
+      const ilerleme = aktifI - onceki;
+      if (ilerleme > 0 && ilerleme <= 8) {
+        surucu.setValue(onceki);
+        Animated.timing(surucu, {
+          toValue: aktifI,
+          duration: 700 + 450 * ilerleme,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: USE_NATIVE,
+        }).start();
+      } else {
+        surucu.setValue(aktifI);
+      }
+      try {
+        await AsyncStorage.setItem(anahtar, String(aktifI));
+      } catch {
+        /* yazılamazsa sonraki açılışta animasyon olmaz */
+      }
+    })();
+    return () => {
+      iptal = true;
+    };
+  }, [aktifI, aracGoster, lawAnahtar, n, W, surucu]);
+
+  const aracX = surucu.interpolate({ inputRange: ornek.idx, outputRange: ornek.xs, extrapolate: 'clamp' });
+  const aracY = surucu.interpolate({ inputRange: ornek.idx, outputRange: ornek.ys, extrapolate: 'clamp' });
+  const aracBoy = Math.max(30, Math.round(W * 0.11));
 
   return (
     <View style={[st.harita, { height: haritaY }]} onLayout={olc}>
@@ -979,6 +1041,22 @@ function Harita({
               onPress={() => onDugumBas(d.bolum.id)}
                   />
                 ))}
+                {/* JANDARMA ARACI (bayraklı) — ayak izleri geçmişi gösterir, araç ŞU AN
+                    nerede olduğunu; ilerleyince eski duraktan yenisine sürer. */}
+                {aracGoster ? (
+                  <Animated.View
+                    pointerEvents="none"
+                    style={{
+                      position: 'absolute',
+                      left: -aracBoy / 2,
+                      top: -aracBoy * 0.62,
+                      width: aracBoy,
+                      height: aracBoy * (59 / 66),
+                      transform: [{ translateX: aracX }, { translateY: aracY }],
+                    }}>
+                    <Image source={PATIKA_ARAC} style={StyleSheet.absoluteFill} contentFit="contain" />
+                  </Animated.View>
+                ) : null}
               </>
             );
           })()
