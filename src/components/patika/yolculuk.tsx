@@ -168,7 +168,7 @@ export function Yolculuk({
     const atlamalar: { u: number; p: Nokta; yazi: string }[] = [];
 
     // İz noktaları (araç geçtikçe yanan altın izler)
-    const izAdim = Math.max(18, toplamU / 260);
+    const izAdim = Math.max(14, W * 0.088 * 0.34); // yol genişliğine bağlı düzenli aralık
     const izler: { u: number; p: Nokta }[] = [];
     for (let u = 0; u <= toplamU; u += izAdim) izler.push({ u, p: noktaAt(u) });
 
@@ -201,7 +201,7 @@ export function Yolculuk({
         p: dunya.noktaAt(u),
         ad: bilgi?.ad ?? 'YENİ BÖLÜM',
         ornekler: bilgi?.ornekler ?? '',
-        alt: bilgi ? `MADDE ${bilgi.bas}–${bilgi.son} · ${adet} MADDE` : `MADDE ${b}'DEN DEVAM`,
+        alt: bilgi ? `${bilgi.bas}–${bilgi.son}. maddeler · ${adet} madde` : `${b}. maddeden devam`,
       });
     }
     return liste;
@@ -396,51 +396,59 @@ export function Yolculuk({
                 pointerEvents="none"
                 style={{
                   position: 'absolute',
-                  left: iz.p.x - 4.5,
-                  top: iz.p.y - 1.5,
-                  width: 9,
-                  height: 3,
-                  borderRadius: 2,
-                  backgroundColor: 'rgba(240,183,51,0.42)',
+                  left: iz.p.x - 3.5,
+                  top: iz.p.y - 3.5,
+                  width: 7,
+                  height: 7,
+                  borderRadius: 4,
+                  backgroundColor: 'rgba(240,183,51,0.75)',
                   opacity: gorunur,
                 }}
               />
             );
           })}
 
-          {/* BÖLÜM KAPISI — yolu boydan boya geçen tabela: bölüm adı + İÇİNDEKİ KONULAR +
-              madde aralığı. Yalnız resmî başlık bir şey anlatmıyordu (başkan, 13 Ağu). */}
+          {/* BÖLÜM KAPISI (başkanın maketi, 13 Ağu): ortada koyu kart — YENİ BÖLÜM,
+              terazi süsü, iri bölüm adı, altında madde aralığı; kartın iki yanından
+              sahne kenarlarına uzanan ince altın çizgi ve uç noktaları. */}
           {bolumKapilari.map((k) => {
-            const yolG = dunya.W * 0.088;
-            const g = Math.round(Math.min(ekranG * 0.88, dunya.W * 0.92));
-            const direkY = Math.round(yolG * 0.55);
+            const kartG = Math.round(Math.min(ekranG * 0.56, dunya.W * 0.52));
             return (
               <View
                 key={k.key}
                 pointerEvents="none"
-                style={{ position: 'absolute', left: k.p.x - g / 2, top: k.p.y - direkY - 92, width: g, alignItems: 'center' }}>
-                <View style={st.kapiLevha}>
+                style={{
+                  position: 'absolute',
+                  left: k.p.x - dunya.W / 2,
+                  top: k.p.y - 92,
+                  width: dunya.W,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View style={st.kapiCizgi} />
+                <View style={st.kapiUc} />
+                <View style={[st.kapiKart, { width: kartG }]}>
                   <AppText variant="etiket" bold color="altinParlak" style={st.kapiUst}>
                     YENİ BÖLÜM
                   </AppText>
-                  <AppText variant="baslik" bold color="beyaz" numberOfLines={2} style={st.kapiAd}>
+                  <View style={st.kapiSus}>
+                    <AppText variant="etiket" color="altinParlak" style={st.kapiSusYildiz}>
+                      ✦
+                    </AppText>
+                    <MaterialCommunityIcons name="scale-balance" size={15} color={Palette.altinParlak} />
+                    <AppText variant="etiket" color="altinParlak" style={st.kapiSusYildiz}>
+                      ✦
+                    </AppText>
+                  </View>
+                  <AppText variant="baslik" bold color="beyaz" numberOfLines={3} style={st.kapiAd}>
                     {k.ad}
                   </AppText>
-                  {k.ornekler ? (
-                    <AppText variant="kucuk" color="kartMetinIkincil" numberOfLines={2} style={st.kapiOrnek}>
-                      {k.ornekler}
-                    </AppText>
-                  ) : null}
-                  <View style={st.kapiAyrac} />
-                  <AppText variant="etiket" bold color="altinParlak" style={st.kapiAlt}>
+                  <AppText variant="kucuk" color="kartMetinIkincil" numberOfLines={1} style={st.kapiAlt}>
                     {k.alt}
                   </AppText>
                 </View>
-                <View style={[st.kapiDirekSatir, { width: Math.round(yolG * 1.25) }]}>
-                  <View style={[st.kapiDirek, { height: direkY }]} />
-                  <View style={[st.kapiDirek, { height: direkY }]} />
-                </View>
-                <View style={[st.kapiIsik, { width: Math.round(yolG * 1.02) }]} />
+                <View style={st.kapiUc} />
+                <View style={st.kapiCizgi} />
               </View>
             );
           })}
@@ -456,13 +464,8 @@ export function Yolculuk({
             const aktif = i === aktifIndex;
             const etiket = d.bolum.ad.replace(/^Madde\s+/i, '');
             const yolG = dunya.W * 0.088; // sahnedeki asfaltın genişliği (ölçüldü)
-            const levhaB = Math.round(yolG * 0.84);
-            const direkY = Math.round(levhaB * 0.46);
-            // Taş platform KALDIRILDI (başkan, 13 Ağu: "şeffaf durak gibi bir yer, kötü duruyor").
-            // Yerine asfalta çizilmiş ince DURAK ÇİZGİSİ: yola ait görünür, zemini kirletmez.
-            const cizgiG = Math.round(yolG * 0.84);
-            const cizgiY = 3;
-            const kap = Math.max(cizgiG, levhaB);
+            const levhaB = Math.round(yolG * 0.86);
+            const kap = Math.round(levhaB * 2.2);
             return (
               <Pressable
                 key={`d${d.bolum.id}`}
@@ -470,7 +473,7 @@ export function Yolculuk({
                 style={{
                   position: 'absolute',
                   left: p.x - kap / 2,
-                  top: p.y - (levhaB + direkY + cizgiY / 2),
+                  top: p.y - levhaB / 2,
                   width: kap,
                   alignItems: 'center',
                 }}
@@ -500,7 +503,6 @@ export function Yolculuk({
                     </AppText>
                   ) : null}
                 </View>
-                <View style={[st.direk, { height: direkY }]} />
                 {aktif && basliklar?.[d.bolum.id] ? (
                   <AppText
                     variant="etiket"
@@ -511,14 +513,6 @@ export function Yolculuk({
                     {basliklar[d.bolum.id]}
                   </AppText>
                 ) : null}
-                <View
-                  style={[
-                    st.durakCizgi,
-                    { width: cizgiG, height: cizgiY },
-                    aktif && st.durakCizgiAktif,
-                    gecildi && st.durakCizgiGecildi,
-                  ]}
-                />
               </Pressable>
             );
           })}
@@ -582,36 +576,22 @@ const st = StyleSheet.create({
   // Tamamlanan durak da KOYU levha kalır, farkı altın çerçeve + altın tik (eskiden dolu altın
   // blok oluyordu ve yolu kapatıyordu).
   levhaGecildi: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(14,20,28,0.92)' },
-  direk: { width: 4, backgroundColor: 'rgba(38,45,54,0.95)' },
-  kapiLevha: {
-    alignSelf: 'stretch',
+  kapiKart: {
     alignItems: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 14,
-    borderRadius: 14,
-    backgroundColor: 'rgba(6,22,34,0.96)',
-    borderWidth: 2,
-    borderColor: 'rgba(240,183,51,0.9)',
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+    backgroundColor: 'rgba(9,18,28,0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.14)',
   },
-  kapiUst: { fontSize: 10, letterSpacing: 2.4, opacity: 0.95 },
-  kapiAd: { fontSize: 17, letterSpacing: 0.4, textAlign: 'center', marginTop: 3 },
-  kapiOrnek: { fontSize: 12, textAlign: 'center', marginTop: 5, opacity: 0.95 },
-  kapiAyrac: {
-    width: 46,
-    height: 1,
-    marginTop: 9,
-    marginBottom: 6,
-    backgroundColor: 'rgba(240,183,51,0.6)',
-  },
-  kapiAlt: { fontSize: 10, letterSpacing: 1.2 },
-  kapiDirekSatir: { flexDirection: 'row', justifyContent: 'space-between' },
-  kapiDirek: { width: 5, backgroundColor: 'rgba(38,45,54,0.95)' },
-  kapiIsik: {
-    height: 6,
-    borderRadius: 4,
-    marginTop: 2,
-    backgroundColor: 'rgba(240,183,51,0.35)',
-  },
+  kapiUst: { fontSize: 11, letterSpacing: 2.6, opacity: 0.95 },
+  kapiSus: { flexDirection: 'row', alignItems: 'center', gap: 7, marginTop: 6, marginBottom: 8 },
+  kapiSusYildiz: { fontSize: 10, opacity: 0.9 },
+  kapiAd: { fontSize: 19, lineHeight: 25, letterSpacing: 0.3, textAlign: 'center' },
+  kapiAlt: { fontSize: 13, marginTop: 8, opacity: 0.95 },
+  kapiCizgi: { flex: 1, height: 1, backgroundColor: 'rgba(240,183,51,0.5)' },
+  kapiUc: { width: 5, height: 5, borderRadius: 3, backgroundColor: 'rgba(240,183,51,0.9)' },
   durakBaslik: {
     textAlign: 'center',
     fontSize: 11,
@@ -619,12 +599,6 @@ const st = StyleSheet.create({
     textShadowColor: 'rgba(0,0,0,0.85)',
     textShadowRadius: 4,
   },
-  durakCizgi: {
-    borderRadius: 2,
-    backgroundColor: 'rgba(226,236,242,0.32)',
-  },
-  durakCizgiAktif: { backgroundColor: 'rgba(240,183,51,0.9)' },
-  durakCizgiGecildi: { backgroundColor: 'rgba(240,183,51,0.55)' },
   aracGolge: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0,0,0,0.45)',
