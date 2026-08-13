@@ -467,14 +467,14 @@ export function Yolculuk({
                   ) : null}
                 </View>
                 {aktif && basliklar?.[d.bolum.id] ? (
-                  <AppText
-                    variant="etiket"
-                    bold
-                    color="beyaz"
-                    numberOfLines={1}
-                    style={[st.durakBaslik, { width: kap * 2.2, marginLeft: -kap * 0.6 }]}>
-                    {basliklar[d.bolum.id]}
-                  </AppText>
+                  // Madde başlığı: düz yazı "elle yazılmış" duruyordu → altın çerçeveli
+                  // koyu rozet (başkan, 13 Ağu).
+                  <View style={[st.baslikRozet, { maxWidth: kap }]}>
+                    <View style={st.baslikNokta} />
+                    <AppText variant="etiket" bold color="beyaz" numberOfLines={1} style={st.baslikYazi}>
+                      {basliklar[d.bolum.id]}
+                    </AppText>
+                  </View>
                 ) : null}
               </Pressable>
             );
@@ -608,13 +608,25 @@ const st = StyleSheet.create({
   kapiAlt: { fontSize: 12, marginTop: 7, opacity: 0.95 },
   kapiCizgi: { flex: 1, height: 1, backgroundColor: 'rgba(240,183,51,0.5)' },
   kapiUc: { width: 5, height: 5, borderRadius: 3, backgroundColor: 'rgba(240,183,51,0.9)' },
-  durakBaslik: {
-    textAlign: 'center',
-    fontSize: 11,
-    marginTop: 2,
-    textShadowColor: 'rgba(0,0,0,0.85)',
-    textShadowRadius: 4,
+  baslikRozet: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginTop: 7,
+    paddingHorizontal: 11,
+    paddingVertical: 5,
+    borderRadius: 999,
+    backgroundColor: 'rgba(9,18,28,0.92)',
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.55)',
+    shadowColor: '#000',
+    shadowOpacity: 0.45,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4,
   },
+  baslikNokta: { width: 5, height: 5, borderRadius: 3, backgroundColor: Palette.altinParlak },
+  baslikYazi: { fontSize: 11.5, letterSpacing: 0.3 },
   aracGolge: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0,0,0,0.45)',
