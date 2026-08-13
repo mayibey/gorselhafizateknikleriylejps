@@ -363,10 +363,6 @@ export function Yolculuk({
     return () => dongu.stop();
   }, [lamba]);
 
-  // Uzaklaşınca paneller KAYBOLMAZ: harita küçülürken panel ters ölçeklenip ekranda
-  // aynı boyda kalır → uzak planda da hangi durak hangi madde okunur (başkan, 13 Ağu).
-  const panelOlcek = Animated.divide(1, olcek);
-
   const ara = { inputRange: dunya.uler, extrapolate: 'clamp' as const };
   const aracX = konum.interpolate({ ...ara, outputRange: dunya.xler });
   const aracYk = konum.interpolate({ ...ara, outputRange: dunya.yler });
@@ -376,33 +372,6 @@ export function Yolculuk({
 
   return (
     <>
-      {/* PANEL — başkan (13 Ağu): en ÜSTTE dursun (kanun, ilerleme, DEVAM ET). */}
-      <Pressable style={({ pressed }) => [st.altPanel, pressed && st.basili]} onPress={onDevam}>
-        <View style={st.altSol}>
-          <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
-            {kanunAd ?? 'Kanun'}
-          </AppText>
-          <View style={st.altBar}>
-            {toplamKart > 0 && calisilanKart > 0 ? (
-              <View style={[st.altBarDolu, { flex: Math.round((calisilanKart / toplamKart) * 100) }]} />
-            ) : null}
-            <View style={{ flex: Math.max(1, 100 - Math.round((calisilanKart / Math.max(1, toplamKart)) * 100)) }} />
-          </View>
-          <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
-            {toplamKart === 0
-              ? 'yakında'
-              : `${calisilanKart}/${toplamKart} kart · %${Math.round(
-                  (calisilanKart / toplamKart) * 100,
-                )} · ${N} madde`}
-          </AppText>
-        </View>
-        <View style={st.devamBtn}>
-          <AppText variant="kucuk" bold color="lacivert">
-            DEVAM ET
-          </AppText>
-          <MaterialCommunityIcons name="arrow-right" size={18} color="#07334B" />
-        </View>
-      </Pressable>
       <View
         style={st.sahne}
         {...pan.panHandlers}
@@ -453,94 +422,33 @@ export function Yolculuk({
             );
           })}
 
-          {/* DURAKLAR — yolda yalnız BÖLÜM NUMARASI (1, 2, 3…); hangi madde olduğu
-              yanındaki bilgi panelinde yazar (başkan tasarımı, 13 Ağu). Panel sırayla
-              sağ-sol gider; kenara taşacaksa otomatik karşı tarafa geçer. Uzaklaştırınca
-              (iki parmak) paneller silinir, harita temiz kalır. */}
-          {dunya.duraklar.flatMap((p, i) => {
+          {/* DURAKLAR — levhada doğrudan "Madde 21" yazar (başkan, 13 Ağu). Yan bilgi
+              panelleri ve bağlantı çizgileri kaldırıldı; harita sadeleşti. */}
+          {dunya.duraklar.map((p, i) => {
             const d = dugumler[i];
-            if (!d) return [];
+            if (!d) return null;
             const gecildi = d.toplam > 0 && d.calisilan >= d.toplam;
             const aktif = i === aktifIndex;
             const yolG = dunya.W * 0.088;
-            const levhaB = Math.round(yolG * 0.86);
-            const kap = Math.round(levhaB * 2.2);
-            // GENİŞLİK EKRANA GÖRE: dünya ekrandan geniş, taşma kontrolünü dünyanın
-            // kenarına göre yapınca paneller ekranın dışında kalıyordu (başkan, 13 Ağu).
-            const panelG = Math.min(Math.round(ekranG * 0.36), Math.round(dunya.W * 0.28));
-            const bosluk = Math.round(levhaB * 0.55);
-            const yarim = ekranG / 2 - 8; // duraktan ekran kenarına kalan pay
-            const sigar = levhaB / 2 + bosluk + panelG <= yarim;
-            // Sırayla sağ-sol; ekrana sığmıyorsa karşı taraf.
-            let sagda = i % 2 === 0;
-            if (!sigar) sagda = p.x < dunya.W / 2; // dar ekranda yolun boş tarafına
-            if (sagda && p.x + levhaB / 2 + bosluk + panelG > dunya.W - 8) sagda = false;
-            if (!sagda && p.x - levhaB / 2 - bosluk - panelG < 8) sagda = true;
-            const panelX = sagda ? p.x + levhaB / 2 + bosluk : p.x - levhaB / 2 - bosluk - panelG;
-            const cizgiX = sagda ? p.x + levhaB / 2 : p.x - levhaB / 2 - bosluk;
-            const baslik = basliklar?.[d.bolum.id];
-            return [
-              // bağlantı çizgisi
-              <Animated.View
-                key={`c${d.bolum.id}`}
-                pointerEvents="none"
-                style={[
-                  st.panelCizgi,
-                  { left: cizgiX, top: p.y - 1, width: bosluk },
-                ]}
-              />,
-              // madde bilgi paneli
-              <Animated.View
-                key={`p${d.bolum.id}`}
-                pointerEvents="none"
-                style={[
-                  st.maddePanel,
-                  aktif && st.maddePanelAktif,
-                  {
-                    left: panelX,
-                    top: p.y - 26,
-                    width: panelG,
-                    // ters ölçek: harita uzaklaşsa da panel ekranda aynı boyda kalır
-                    transform: [{ scale: panelOlcek }],
-                    // Panel SOLDAYSA yazı sağa yaslanır → levhaya bakar, kenara taşmaz.
-                    alignItems: sagda ? 'flex-start' : 'flex-end',
-                  },
-                ]}>
-                <AppText
-                  variant="etiket"
-                  bold
-                  color={aktif ? 'altinParlak' : 'beyaz'}
-                  numberOfLines={1}
-                  style={[st.panelMaddeNo, { textAlign: sagda ? 'left' : 'right' }]}>
-                  {d.bolum.ad}
-                </AppText>
-                {baslik ? (
-                  <AppText
-                    variant="etiket"
-                    color="kartMetinIkincil"
-                    numberOfLines={2}
-                    style={[st.panelBaslik, { textAlign: sagda ? 'left' : 'right' }]}>
-                    {baslik}
-                  </AppText>
-                ) : null}
-              </Animated.View>,
-              // yolun üstündeki bölüm levhası
+            const levhaG = Math.round(yolG * 2.05);
+            const levhaY = Math.round(yolG * 0.72);
+            return (
               <Pressable
                 key={`d${d.bolum.id}`}
                 onPress={() => duragaSur(i, () => onDugumBas(d.bolum.id))}
                 style={{
                   position: 'absolute',
-                  left: p.x - kap / 2,
-                  top: p.y - levhaB / 2,
-                  width: kap,
+                  left: p.x - levhaG / 2,
+                  top: p.y - levhaY / 2,
+                  width: levhaG,
                   alignItems: 'center',
                 }}
                 accessibilityRole="button"
-                accessibilityLabel={`${i + 1}. bölüm — ${d.bolum.ad}`}>
+                accessibilityLabel={d.bolum.ad}>
                 <View
                   style={[
                     st.levha,
-                    { width: levhaB, height: levhaB, borderRadius: levhaB * 0.26 },
+                    { width: levhaG, height: levhaY, borderRadius: levhaY * 0.32, flexDirection: 'row', gap: 5 },
                     aktif && st.levhaAktif,
                     gecildi && st.levhaGecildi,
                   ]}>
@@ -550,17 +458,17 @@ export function Yolculuk({
                     color={gecildi ? 'altinParlak' : 'beyaz'}
                     numberOfLines={1}
                     adjustsFontSizeToFit
-                    style={{ fontSize: levhaB * 0.44 }}>
-                    {i + 1}
+                    style={{ fontSize: levhaY * 0.42 }}>
+                    {d.bolum.ad}
                   </AppText>
                   {gecildi ? (
-                    <AppText variant="etiket" bold color="altinParlak" style={{ fontSize: levhaB * 0.26, marginTop: -levhaB * 0.06 }}>
+                    <AppText variant="etiket" bold color="altinParlak" style={{ fontSize: levhaY * 0.36 }}>
                       ✓
                     </AppText>
                   ) : null}
                 </View>
-              </Pressable>,
-            ];
+              </Pressable>
+            );
           })}
 
           {/* ARAÇ */}
@@ -686,8 +594,46 @@ export function Yolculuk({
           ))}
         </Animated.View>
         </Animated.View>
-      </View>
 
+        {/* ARACIM — harita elle kaydırıldıysa kamerayı araca geri getirir (başkan, 13 Ağu). */}
+        <Pressable
+          onPress={elleSifirla}
+          style={({ pressed }) => [st.aracaDon, pressed && { opacity: 0.75 }]}
+          accessibilityRole="button"
+          accessibilityLabel="Aracıma dön">
+          <MaterialCommunityIcons name="crosshairs-gps" size={15} color={Palette.altinParlak} />
+          <AppText variant="etiket" bold color="altinParlak" style={st.aracaDonYazi}>
+            ARACIM
+          </AppText>
+        </Pressable>
+      </View>
+      {/* PANEL — başkan (13 Ağu): haritanın ALTINDA dursun (kanun, ilerleme, DEVAM ET). */}
+      <Pressable style={({ pressed }) => [st.altPanel, pressed && st.basili]} onPress={onDevam}>
+        <View style={st.altSol}>
+          <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
+            {kanunAd ?? 'Kanun'}
+          </AppText>
+          <View style={st.altBar}>
+            {toplamKart > 0 && calisilanKart > 0 ? (
+              <View style={[st.altBarDolu, { flex: Math.round((calisilanKart / toplamKart) * 100) }]} />
+            ) : null}
+            <View style={{ flex: Math.max(1, 100 - Math.round((calisilanKart / Math.max(1, toplamKart)) * 100)) }} />
+          </View>
+          <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
+            {toplamKart === 0
+              ? 'yakında'
+              : `${calisilanKart}/${toplamKart} kart · %${Math.round(
+                  (calisilanKart / toplamKart) * 100,
+                )} · ${N} madde`}
+          </AppText>
+        </View>
+        <View style={st.devamBtn}>
+          <AppText variant="kucuk" bold color="lacivert">
+            DEVAM ET
+          </AppText>
+          <MaterialCommunityIcons name="arrow-right" size={18} color="#07334B" />
+        </View>
+      </Pressable>
     </>
   );
 }
@@ -711,6 +657,21 @@ const st = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'rgba(255,255,255,0.18)',
   },
+  aracaDon: {
+    position: 'absolute',
+    right: 10,
+    bottom: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 11,
+    paddingVertical: 7,
+    borderRadius: 999,
+    backgroundColor: 'rgba(6,22,34,0.9)',
+    borderWidth: 1,
+    borderColor: 'rgba(240,183,51,0.6)',
+  },
+  aracaDonYazi: { fontSize: 10.5, letterSpacing: 1 },
   levhaAktif: { borderColor: Palette.altinParlak, backgroundColor: 'rgba(20,28,38,0.96)' },
   // Tamamlanan durak da KOYU levha kalır, farkı altın çerçeve + altın tik (eskiden dolu altın
   // blok oluyordu ve yolu kapatıyordu).
@@ -731,20 +692,6 @@ const st = StyleSheet.create({
   kapiAlt: { fontSize: 12, marginTop: 7, opacity: 0.95 },
   kapiCizgi: { flex: 1, height: 1, backgroundColor: 'rgba(240,183,51,0.5)' },
   kapiUc: { width: 5, height: 5, borderRadius: 3, backgroundColor: 'rgba(240,183,51,0.9)' },
-  maddePanel: {
-    position: 'absolute',
-    height: 52,
-    justifyContent: 'center',
-    paddingHorizontal: 10,
-    borderRadius: 10,
-    backgroundColor: 'rgba(9,18,28,0.9)',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.14)',
-  },
-  maddePanelAktif: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(12,24,36,0.95)' },
-  panelMaddeNo: { fontSize: 12.5, letterSpacing: 0.2 },
-  panelBaslik: { fontSize: 10.5, marginTop: 2, opacity: 0.95 },
-  panelCizgi: { position: 'absolute', height: 2, backgroundColor: 'rgba(240,183,51,0.55)' },
   aracGolge: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0,0,0,0.45)',
@@ -758,7 +705,7 @@ const st = StyleSheet.create({
     gap: Spacing.two,
     alignSelf: 'center',
     width: '100%',
-    marginBottom: Spacing.two,
+    marginTop: Spacing.two,
     padding: Spacing.three,
     borderRadius: Radius.l,
     backgroundColor: 'rgba(6,38,58,0.92)',
