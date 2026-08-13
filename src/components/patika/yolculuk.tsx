@@ -161,8 +161,15 @@ export function Yolculuk({
     return { W, katY, katUst, yukseklik, toplamU, uler, xler, yler, aciler, kamX, kamY, durakU, duraklar, izler };
   }, [ekranG, sahneY, N]);
 
+  // Araç ölçüsü (yol genişliğine göre) — park payı bundan hesaplanır.
+  const aracG = Math.round(dunya.W * 0.088 * 0.66);
+  const aracYy = aracG * ARAC_ORAN;
+  /** Araç durağa TAM ÜSTÜNE değil, biraz gerisine park eder → taş platform kapanmaz. */
+  const parkPayi = aracYy * 0.62;
+
   /* ── Sürücü: yol üzerindeki konum ── */
-  const hedefU = dunya.durakU[Math.max(0, Math.min(N - 1, aktifIndex < 0 ? N - 1 : aktifIndex))] ?? 0;
+  const durakYeri = (i: number) => Math.max(0, (dunya.durakU[i] ?? 0) - parkPayi);
+  const hedefU = durakYeri(Math.max(0, Math.min(N - 1, aktifIndex < 0 ? N - 1 : aktifIndex)));
   const konum = useRef(new Animated.Value(hedefU)).current;
   const oncekiU = useRef(hedefU);
 
@@ -191,7 +198,7 @@ export function Yolculuk({
   const mevcutU = useRef(hedefU);
   const surusteMi = useRef(false);
   const duragaSur = (i: number, bitince: () => void) => {
-    const varis = dunya.durakU[i];
+    const varis = dunya.durakU[i] == null ? null : durakYeri(i);
     if (varis == null || surusteMi.current) {
       bitince();
       return;
@@ -237,10 +244,6 @@ export function Yolculuk({
   const kameraX = konum.interpolate({ ...ara, outputRange: dunya.kamX });
   const kameraY = konum.interpolate({ ...ara, outputRange: dunya.kamY });
 
-  // Araç da yol genişliğine göre ölçeklenir (gerçek araç yolun ~%60'ı kadardır).
-  const aracG = Math.round(dunya.W * 0.088 * 0.66);
-  const aracYy = aracG * ARAC_ORAN;
-
   return (
     <>
       <View style={[st.sahne, { height: sahneY }]}>
@@ -271,12 +274,12 @@ export function Yolculuk({
                 pointerEvents="none"
                 style={{
                   position: 'absolute',
-                  left: iz.p.x - 7,
-                  top: iz.p.y - 3,
-                  width: 14,
-                  height: 6,
-                  borderRadius: 3,
-                  backgroundColor: 'rgba(240,183,51,0.5)',
+                  left: iz.p.x - 4.5,
+                  top: iz.p.y - 1.5,
+                  width: 9,
+                  height: 3,
+                  borderRadius: 2,
+                  backgroundColor: 'rgba(240,183,51,0.42)',
                   opacity: gorunur,
                 }}
               />
@@ -319,14 +322,22 @@ export function Yolculuk({
                     aktif && st.levhaAktif,
                     gecildi && st.levhaGecildi,
                   ]}>
+                  {/* Numara HER durakta yazar (başkan, 13 Ağu: "bazılarında görünmüyor" —
+                      tamamlananlarda numara yerine tik konuyordu). Tik numaranın altında küçük. */}
                   <AppText
                     variant="govde"
                     bold
                     color={gecildi ? 'altinParlak' : 'beyaz'}
                     numberOfLines={1}
-                    style={{ fontSize: levhaB * (gecildi ? 0.52 : 0.44) }}>
-                    {gecildi ? '✓' : etiket}
+                    adjustsFontSizeToFit
+                    style={{ fontSize: levhaB * 0.42 }}>
+                    {etiket}
                   </AppText>
+                  {gecildi ? (
+                    <AppText variant="etiket" bold color="altinParlak" style={{ fontSize: levhaB * 0.28, marginTop: -levhaB * 0.06 }}>
+                      ✓
+                    </AppText>
+                  ) : null}
                 </View>
                 <View style={[st.direk, { height: direkY }]} />
                 <View style={[st.platform, { width: platG, height: platY, borderRadius: platG }]} />
