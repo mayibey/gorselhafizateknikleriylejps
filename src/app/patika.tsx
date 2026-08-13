@@ -513,6 +513,7 @@ export default function PatikaScreen() {
           calisilanKart={calisilanKart}
           toplamKart={toplamKart}
           basliklar={maddeBasliklari}
+          klasor={klasor ?? null}
           // Dokunulan durak = O MADDENİN kartı (akış 'kart' ile o karttan başlar).
           // 13 Ağu: her durak aynı kartı açıyordu — madde bilgisi akışa geçmiyordu.
           onDugumBas={(kartId) => akisAc({ lawId: String(lawId), kart: String(kartId) })}

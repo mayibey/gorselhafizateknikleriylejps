@@ -22,6 +22,7 @@ import { Animated, Easing, PanResponder, Pressable, StyleSheet, useWindowDimensi
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { Bolum } from '@/db/schema';
+import { bolumAdi } from '@/lib/kanun-bolumleri';
 
 /** Patika düğümü — patika.tsx ile aynı şekil (orada yerel tip olarak duruyor). */
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
@@ -66,6 +67,7 @@ export function Yolculuk({
   calisilanKart,
   toplamKart,
   basliklar,
+  klasor,
   onDugumBas,
   onDevam,
 }: {
@@ -76,6 +78,8 @@ export function Yolculuk({
   toplamKart: number;
   /** Durak kimliği → madde başlığı (numara tek başına anlam taşımıyordu). */
   basliklar?: Record<number, string>;
+  /** Kanun klasörü (tck…) — bölüm adlarını çözmek için. */
+  klasor?: string | null;
   onDugumBas: (bolumId: number) => void;
   onDevam: () => void;
 }) {
@@ -171,22 +175,26 @@ export function Yolculuk({
     return { W, katY, katUst, yukseklik, toplamU, uler, xler, yler, aciler, kamX, kamY, durakU, duraklar, izler, atlamalar, noktaAt };
   }, [ekranG, sahneY, N]);
 
-  /** İki durak arasında madde numarası atlıyor mu? Atlıyorsa yolun üstüne bant. */
-  const atlamaBantlari = useMemo(() => {
+  /** Konu bloğu değişimi: madde numarası atlıyorsa yola BÖLÜM KAPISI konur. */
+  const bolumKapilari = useMemo(() => {
     const no = (i: number) => {
       const m = dugumler[i]?.bolum.ad.match(/(\d+)/);
       return m ? Number(m[1]) : null;
     };
-    const liste: { key: string; p: Nokta; yazi: string }[] = [];
+    const liste: { key: string; p: Nokta; ad: string }[] = [];
     for (let i = 0; i < N - 1; i++) {
       const a = no(i);
       const b = no(i + 1);
       if (a == null || b == null || b <= a + 1) continue;
       const u = ((dunya.durakU[i] ?? 0) + (dunya.durakU[i + 1] ?? 0)) / 2;
-      liste.push({ key: `atla${i}`, p: dunya.noktaAt(u), yazi: `${a + 1}–${b - 1} ARASI MADDE YOK` });
+      liste.push({
+        key: `kapi${i}`,
+        p: dunya.noktaAt(u),
+        ad: bolumAdi(klasor, b) ?? 'YENİ BÖLÜM',
+      });
     }
     return liste;
-  }, [dugumler, dunya, N]);
+  }, [dugumler, dunya, N, klasor]);
 
   // Araç ölçüsü (yol genişliğine göre) — park payı bundan hesaplanır.
   const aracG = Math.round(dunya.W * 0.088 * 0.66);
@@ -389,14 +397,29 @@ export function Yolculuk({
             );
           })}
 
-          {/* ATLAMA BANTLARI — "46–246 ARASI MADDE YOK" */}
-          {atlamaBantlari.map((b) => {
-            const g = Math.round(dunya.W * 0.088 * 1.5);
+          {/* BÖLÜM KAPISI — konu değişimini yolda tabela gibi duyurur (başkan, 13 Ağu:
+              "küçük not amatörce duruyor, geçtiğim belli olsun"). */}
+          {bolumKapilari.map((k) => {
+            const yolG = dunya.W * 0.088;
+            const g = Math.round(yolG * 2.1);
+            const direkY = Math.round(yolG * 0.5);
             return (
-              <View key={b.key} pointerEvents="none" style={[st.atlamaBant, { left: b.p.x - g / 2, top: b.p.y - 13, width: g }]}>
-                <AppText variant="etiket" bold color="altinParlak" numberOfLines={1} style={st.atlamaYazi}>
-                  {b.yazi}
-                </AppText>
+              <View key={k.key} pointerEvents="none" style={{ position: 'absolute', left: k.p.x - g / 2, top: k.p.y - direkY - 34, width: g, alignItems: 'center' }}>
+                <View style={st.kapiLevha}>
+                  <AppText variant="etiket" bold color="altinParlak" style={st.kapiUst}>
+                    YENİ BÖLÜM
+                  </AppText>
+                  <AppText variant="govde" bold color="beyaz" numberOfLines={2} style={st.kapiAd}>
+                    {k.ad}
+                  </AppText>
+                </View>
+                {/* iki yanda direkler */}
+                <View style={[st.kapiDirekSatir, { width: g }]}>
+                  <View style={[st.kapiDirek, { height: direkY }]} />
+                  <View style={[st.kapiDirek, { height: direkY }]} />
+                </View>
+                {/* asfalta düşen altın ışık bandı */}
+                <View style={[st.kapiIsik, { width: Math.round(yolG * 1.02) }]} />
               </View>
             );
           })}
@@ -539,18 +562,26 @@ const st = StyleSheet.create({
   // blok oluyordu ve yolu kapatıyordu).
   levhaGecildi: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(14,20,28,0.92)' },
   direk: { width: 4, backgroundColor: 'rgba(38,45,54,0.95)' },
-  atlamaBant: {
-    position: 'absolute',
+  kapiLevha: {
+    alignSelf: 'stretch',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 4,
-    borderRadius: 6,
-    backgroundColor: 'rgba(6,20,30,0.82)',
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderColor: 'rgba(240,183,51,0.55)',
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    backgroundColor: 'rgba(6,22,34,0.95)',
+    borderWidth: 2,
+    borderColor: 'rgba(240,183,51,0.85)',
   },
-  atlamaYazi: { fontSize: 10, letterSpacing: 0.8 },
+  kapiUst: { fontSize: 9, letterSpacing: 2, opacity: 0.9 },
+  kapiAd: { fontSize: 13, letterSpacing: 0.6, textAlign: 'center', marginTop: 2 },
+  kapiDirekSatir: { flexDirection: 'row', justifyContent: 'space-between' },
+  kapiDirek: { width: 5, backgroundColor: 'rgba(38,45,54,0.95)' },
+  kapiIsik: {
+    height: 6,
+    borderRadius: 4,
+    marginTop: 2,
+    backgroundColor: 'rgba(240,183,51,0.35)',
+  },
   durakBaslik: {
     textAlign: 'center',
     fontSize: 11,
