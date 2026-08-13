@@ -416,54 +416,6 @@ export function Yolculuk({
             );
           })}
 
-          {/* BÖLÜM KAPISI (başkanın maketi, 13 Ağu): ortada koyu kart — YENİ BÖLÜM,
-              terazi süsü, iri bölüm adı, altında madde aralığı; kartın iki yanından
-              sahne kenarlarına uzanan ince altın çizgi ve uç noktaları. */}
-          {bolumKapilari.map((k) => {
-            const kartG = Math.round(Math.min(ekranG * 0.56, dunya.W * 0.52));
-            return (
-              <View
-                key={k.key}
-                pointerEvents="none"
-                style={{
-                  position: 'absolute',
-                  left: k.p.x - dunya.W / 2,
-                  top: k.p.y - 130,
-                  height: 260,
-                  width: dunya.W,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <View style={st.kapiCizgi} />
-                <View style={st.kapiUc} />
-                <View
-                  style={[st.kapiKart, { width: kartG }]}>
-                  <AppText variant="etiket" bold color="altinParlak" style={st.kapiUst}>
-                    YENİ BÖLÜM
-                  </AppText>
-                  <View style={st.kapiSus}>
-                    <AppText variant="etiket" color="altinParlak" style={st.kapiSusYildiz}>
-                      ✦
-                    </AppText>
-                    <MaterialCommunityIcons name="scale-balance" size={15} color={Palette.altinParlak} />
-                    <AppText variant="etiket" color="altinParlak" style={st.kapiSusYildiz}>
-                      ✦
-                    </AppText>
-                  </View>
-                  <AppText variant="baslik" bold color="beyaz" numberOfLines={3} style={st.kapiAd}>
-                    {k.ad}
-                  </AppText>
-                  <AppText variant="kucuk" color="kartMetinIkincil" numberOfLines={1} style={st.kapiAlt}>
-                    {k.alt}
-                  </AppText>
-                </View>
-                <View style={st.kapiUc} />
-                <View style={st.kapiCizgi} />
-              </View>
-            );
-          })}
-
           {/* DURAKLAR — yola oturan taş platform + direk + levha.
               ÖLÇÜ KURALI (cihazda görüldü, 12 Ağu): levha YOL GENİŞLİĞİNE göre ölçeklenir;
               sabit ekran oranı verilince yol kadar iri çıkıp asfaltı kapatıyordu.
@@ -557,6 +509,59 @@ export function Yolculuk({
               ]}
             />
           </Animated.View>
+        </Animated.View>
+
+        {/* BÖLÜM KAPILARI — dünyayla birlikte dikeyde kayar ama YATAYDA HEP EKRAN ORTASI.
+            Önceden dünyanın içindeydi ve yolun o noktadaki x'ine göre ortalanıyordu; kamera
+            başka yeri gösterince kart sola kaçıyordu (başkan, 13 Ağu). */}
+        <Animated.View
+          pointerEvents="none"
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            transform: [{ translateY: Animated.add(kameraY, elle) }],
+          }}>
+          {bolumKapilari.map((k) => (
+            <View
+              key={k.key}
+              style={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: k.p.y - 130,
+                height: 260,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <View style={st.kapiCizgi} />
+              <View style={st.kapiUc} />
+              <View style={[st.kapiKart, { width: Math.round(ekranG * 0.56) }]}>
+                <AppText variant="etiket" bold color="altinParlak" style={st.kapiUst}>
+                  YENİ BÖLÜM
+                </AppText>
+                <View style={st.kapiSus}>
+                  <AppText variant="etiket" color="altinParlak" style={st.kapiSusYildiz}>
+                    ✦
+                  </AppText>
+                  <MaterialCommunityIcons name="scale-balance" size={15} color={Palette.altinParlak} />
+                  <AppText variant="etiket" color="altinParlak" style={st.kapiSusYildiz}>
+                    ✦
+                  </AppText>
+                </View>
+                <AppText variant="baslik" bold color="beyaz" numberOfLines={3} style={st.kapiAd}>
+                  {k.ad}
+                </AppText>
+                <AppText variant="kucuk" color="kartMetinIkincil" numberOfLines={1} style={st.kapiAlt}>
+                  {k.alt}
+                </AppText>
+              </View>
+              <View style={st.kapiUc} />
+              <View style={st.kapiCizgi} />
+            </View>
+          ))}
         </Animated.View>
       </View>
 
