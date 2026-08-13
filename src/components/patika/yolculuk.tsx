@@ -87,6 +87,7 @@ export function Yolculuk({
   // Harita kalan alanı TAM doldurur: yükseklik onLayout ile ÖLÇÜLÜR (sabit oran verilince
   // altta beyaz boşluk kalıyor, sayfa kaydırmalı oluyordu — başkan, 13 Ağu).
   const [olcumY, setOlcumY] = useState(0);
+  const [kapiYuk, setKapiYuk] = useState(0); // bölüm kartının gerçek yüksekliği (ortalamak için)
   const sahneY = olcumY > 0 ? olcumY : Math.round(Math.min(ekranY * 0.74, 780));
   const N = dugumler.length;
 
@@ -97,7 +98,7 @@ export function Yolculuk({
     const adim = katY * (1 - ORTUSME);
     // Duraklar arası mesafe (başkan, 13 Ağu: "çok kısa, artır") — kat yüksekliğinin ~%25'i,
     // ekranda ~2-3 durak görünür, aradaki yolculuk hissedilir.
-    const ara = katY * 0.32;
+    const ara = katY * 0.44;
     const gerekli = (N + 1.4) * ara;
     const kat = Math.max(3, Math.ceil(gerekli / adim) + 1);
     const yukseklik = (kat - 1) * adim + katY;
@@ -420,14 +421,19 @@ export function Yolculuk({
                 style={{
                   position: 'absolute',
                   left: k.p.x - dunya.W / 2,
-                  top: k.p.y - 92,
+                  top: k.p.y - (kapiYuk > 0 ? kapiYuk / 2 : 92),
                   width: dunya.W,
                   flexDirection: 'row',
                   alignItems: 'center',
                 }}>
                 <View style={st.kapiCizgi} />
                 <View style={st.kapiUc} />
-                <View style={[st.kapiKart, { width: kartG }]}>
+                <View
+                  style={[st.kapiKart, { width: kartG }]}
+                  onLayout={(e) => {
+                    const h = Math.round(e.nativeEvent.layout.height);
+                    if (h > 0 && Math.abs(h - kapiYuk) > 2) setKapiYuk(h);
+                  }}>
                   <AppText variant="etiket" bold color="altinParlak" style={st.kapiUst}>
                     YENİ BÖLÜM
                   </AppText>
@@ -578,8 +584,8 @@ const st = StyleSheet.create({
   levhaGecildi: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(14,20,28,0.92)' },
   kapiKart: {
     alignItems: 'center',
-    paddingVertical: 14,
-    paddingHorizontal: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
     borderRadius: 20,
     backgroundColor: 'rgba(9,18,28,0.9)',
     borderWidth: 1,
@@ -588,8 +594,8 @@ const st = StyleSheet.create({
   kapiUst: { fontSize: 11, letterSpacing: 2.6, opacity: 0.95 },
   kapiSus: { flexDirection: 'row', alignItems: 'center', gap: 7, marginTop: 6, marginBottom: 8 },
   kapiSusYildiz: { fontSize: 10, opacity: 0.9 },
-  kapiAd: { fontSize: 19, lineHeight: 25, letterSpacing: 0.3, textAlign: 'center' },
-  kapiAlt: { fontSize: 13, marginTop: 8, opacity: 0.95 },
+  kapiAd: { fontSize: 17, lineHeight: 22, letterSpacing: 0.3, textAlign: 'center' },
+  kapiAlt: { fontSize: 12, marginTop: 7, opacity: 0.95 },
   kapiCizgi: { flex: 1, height: 1, backgroundColor: 'rgba(240,183,51,0.5)' },
   kapiUc: { width: 5, height: 5, borderRadius: 3, backgroundColor: 'rgba(240,183,51,0.9)' },
   durakBaslik: {
