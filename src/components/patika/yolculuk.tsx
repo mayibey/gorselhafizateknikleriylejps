@@ -363,6 +363,9 @@ export function Yolculuk({
     return () => dongu.stop();
   }, [lamba]);
 
+  // Uzaklaştıkça (0.85x altı) yan paneller silinir → uzak planda harita temiz kalır.
+  const panelGorunur = olcek.interpolate({ inputRange: [0.72, 0.9], outputRange: [0, 1], extrapolate: 'clamp' });
+
   const ara = { inputRange: dunya.uler, extrapolate: 'clamp' as const };
   const aracX = konum.interpolate({ ...ara, outputRange: dunya.xler });
   const aracYk = konum.interpolate({ ...ara, outputRange: dunya.yler });
@@ -449,20 +452,56 @@ export function Yolculuk({
             );
           })}
 
-          {/* DURAKLAR — yola oturan taş platform + direk + levha.
-              ÖLÇÜ KURALI (cihazda görüldü, 12 Ağu): levha YOL GENİŞLİĞİNE göre ölçeklenir;
-              sabit ekran oranı verilince yol kadar iri çıkıp asfaltı kapatıyordu.
-              Platformun MERKEZİ yol noktasına oturur (eskiden yolun altında kalıyordu). */}
-          {dunya.duraklar.map((p, i) => {
+          {/* DURAKLAR — yolda yalnız BÖLÜM NUMARASI (1, 2, 3…); hangi madde olduğu
+              yanındaki bilgi panelinde yazar (başkan tasarımı, 13 Ağu). Panel sırayla
+              sağ-sol gider; kenara taşacaksa otomatik karşı tarafa geçer. Uzaklaştırınca
+              (iki parmak) paneller silinir, harita temiz kalır. */}
+          {dunya.duraklar.flatMap((p, i) => {
             const d = dugumler[i];
-            if (!d) return null;
+            if (!d) return [];
             const gecildi = d.toplam > 0 && d.calisilan >= d.toplam;
             const aktif = i === aktifIndex;
-            const etiket = d.bolum.ad.replace(/^Madde\s+/i, '');
-            const yolG = dunya.W * 0.088; // sahnedeki asfaltın genişliği (ölçüldü)
+            const yolG = dunya.W * 0.088;
             const levhaB = Math.round(yolG * 0.86);
             const kap = Math.round(levhaB * 2.2);
-            return (
+            const panelG = Math.round(dunya.W * 0.3);
+            const bosluk = Math.round(levhaB * 0.55);
+            // Sırayla sağ-sol; taşacaksa karşı tarafa.
+            let sagda = i % 2 === 0;
+            if (sagda && p.x + levhaB / 2 + bosluk + panelG > dunya.W - 8) sagda = false;
+            if (!sagda && p.x - levhaB / 2 - bosluk - panelG < 8) sagda = true;
+            const panelX = sagda ? p.x + levhaB / 2 + bosluk : p.x - levhaB / 2 - bosluk - panelG;
+            const cizgiX = sagda ? p.x + levhaB / 2 : p.x - levhaB / 2 - bosluk;
+            const baslik = basliklar?.[d.bolum.id];
+            return [
+              // bağlantı çizgisi
+              <Animated.View
+                key={`c${d.bolum.id}`}
+                pointerEvents="none"
+                style={[
+                  st.panelCizgi,
+                  { left: cizgiX, top: p.y - 1, width: bosluk, opacity: panelGorunur },
+                ]}
+              />,
+              // madde bilgi paneli
+              <Animated.View
+                key={`p${d.bolum.id}`}
+                pointerEvents="none"
+                style={[
+                  st.maddePanel,
+                  aktif && st.maddePanelAktif,
+                  { left: panelX, top: p.y - 26, width: panelG, opacity: panelGorunur },
+                ]}>
+                <AppText variant="etiket" bold color={aktif ? 'altinParlak' : 'beyaz'} numberOfLines={1} style={st.panelMaddeNo}>
+                  {d.bolum.ad}
+                </AppText>
+                {baslik ? (
+                  <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={2} style={st.panelBaslik}>
+                    {baslik}
+                  </AppText>
+                ) : null}
+              </Animated.View>,
+              // yolun üstündeki bölüm levhası
               <Pressable
                 key={`d${d.bolum.id}`}
                 onPress={() => duragaSur(i, () => onDugumBas(d.bolum.id))}
@@ -474,7 +513,7 @@ export function Yolculuk({
                   alignItems: 'center',
                 }}
                 accessibilityRole="button"
-                accessibilityLabel={d.bolum.ad}>
+                accessibilityLabel={`${i + 1}. bölüm — ${d.bolum.ad}`}>
                 <View
                   style={[
                     st.levha,
@@ -482,35 +521,23 @@ export function Yolculuk({
                     aktif && st.levhaAktif,
                     gecildi && st.levhaGecildi,
                   ]}>
-                  {/* Numara HER durakta yazar (başkan, 13 Ağu: "bazılarında görünmüyor" —
-                      tamamlananlarda numara yerine tik konuyordu). Tik numaranın altında küçük. */}
                   <AppText
                     variant="govde"
                     bold
                     color={gecildi ? 'altinParlak' : 'beyaz'}
                     numberOfLines={1}
                     adjustsFontSizeToFit
-                    style={{ fontSize: levhaB * 0.42 }}>
-                    {etiket}
+                    style={{ fontSize: levhaB * 0.44 }}>
+                    {i + 1}
                   </AppText>
                   {gecildi ? (
-                    <AppText variant="etiket" bold color="altinParlak" style={{ fontSize: levhaB * 0.28, marginTop: -levhaB * 0.06 }}>
+                    <AppText variant="etiket" bold color="altinParlak" style={{ fontSize: levhaB * 0.26, marginTop: -levhaB * 0.06 }}>
                       ✓
                     </AppText>
                   ) : null}
                 </View>
-                {aktif && basliklar?.[d.bolum.id] ? (
-                  // Rozet levhanın ÜSTÜNDE (altta araç üstüne biniyordu) ve kırpılmıyor:
-                  // uzun başlık iki satıra sarar (başkan, 13 Ağu).
-                  <View style={[st.baslikRozet, { bottom: levhaB + 8, maxWidth: kap * 1.8 }]}>
-                    <View style={st.baslikNokta} />
-                    <AppText variant="etiket" bold color="beyaz" numberOfLines={2} style={st.baslikYazi}>
-                      {basliklar[d.bolum.id]}
-                    </AppText>
-                  </View>
-                ) : null}
-              </Pressable>
-            );
+              </Pressable>,
+            ];
           })}
 
           {/* ARAÇ */}
@@ -681,26 +708,20 @@ const st = StyleSheet.create({
   kapiAlt: { fontSize: 12, marginTop: 7, opacity: 0.95 },
   kapiCizgi: { flex: 1, height: 1, backgroundColor: 'rgba(240,183,51,0.5)' },
   kapiUc: { width: 5, height: 5, borderRadius: 3, backgroundColor: 'rgba(240,183,51,0.9)' },
-  baslikRozet: {
+  maddePanel: {
     position: 'absolute',
-    alignSelf: 'center',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: 11,
-    paddingVertical: 5,
-    borderRadius: 999,
-    backgroundColor: 'rgba(9,18,28,0.92)',
+    height: 52,
+    justifyContent: 'center',
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    backgroundColor: 'rgba(9,18,28,0.9)',
     borderWidth: 1,
-    borderColor: 'rgba(240,183,51,0.55)',
-    shadowColor: '#000',
-    shadowOpacity: 0.45,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 4,
+    borderColor: 'rgba(255,255,255,0.14)',
   },
-  baslikNokta: { width: 5, height: 5, borderRadius: 3, backgroundColor: Palette.altinParlak },
-  baslikYazi: { fontSize: 11.5, letterSpacing: 0.3, flexShrink: 1, textAlign: 'center' },
+  maddePanelAktif: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(12,24,36,0.95)' },
+  panelMaddeNo: { fontSize: 12.5, letterSpacing: 0.2 },
+  panelBaslik: { fontSize: 10.5, marginTop: 2, opacity: 0.95 },
+  panelCizgi: { position: 'absolute', height: 2, backgroundColor: 'rgba(240,183,51,0.55)' },
   aracGolge: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0,0,0,0.45)',
