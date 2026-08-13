@@ -2,7 +2,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import { useScrollToTop } from '@react-navigation/native';
-import { type ReactNode, useRef } from 'react';
+import { type ReactNode, useEffect, useRef } from 'react';
 import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -30,6 +30,8 @@ type ScreenProps = {
   headerAltinCizgi?: boolean;
   /** İçerik kaydırılabilir mi (varsayılan: evet). */
   scroll?: boolean;
+  /** Açılışta bu Y'ye kaydır (px). Patika: kullanıcının kaldığı durak ekrana gelsin. */
+  baslangicKaydirma?: number;
   /** Opsiyonel: kaydırmanın DIŞINDA, başlığın altında sabit duran şerit (ör. sekme seçici). */
   sabitUst?: ReactNode;
   children: ReactNode;
@@ -47,6 +49,7 @@ export function Screen({
   markaKucukHarf,
   scroll = true,
   sabitUst,
+  baslangicKaydirma,
   children,
 }: ScreenProps) {
   const body = <View style={styles.body}>{children}</View>;
@@ -55,6 +58,16 @@ export function Screen({
   // scroll=false ekranlarda ref bağlanmaz → no-op.
   const scrollRef = useRef<ScrollView>(null);
   useScrollToTop(scrollRef);
+  // Açılışta istenen yere kaydır (ör. Patika'da kaldığın durak). Değer değişince tekrar dener;
+  // yerleşim oturmadan çağrılmasın diye bir kare beklenir.
+  const sonKaydirma = useRef<number | null>(null);
+  useEffect(() => {
+    if (baslangicKaydirma == null || baslangicKaydirma <= 0) return;
+    if (sonKaydirma.current === baslangicKaydirma) return;
+    sonKaydirma.current = baslangicKaydirma;
+    const id = setTimeout(() => scrollRef.current?.scrollTo({ y: baslangicKaydirma, animated: false }), 60);
+    return () => clearTimeout(id);
+  }, [baslangicKaydirma]);
 
   return (
     <SafeAreaView style={[styles.safe, koyu && styles.safeKoyu]} edges={['top', 'left', 'right']}>

@@ -244,6 +244,7 @@ function dugumNumara(etiket: string): string | null {
 }
 
 export default function PatikaScreen() {
+  const { height: pencereY } = useWindowDimensions();
   const router = useRouter();
   // GECE KARARI M5 (bayraklı): düğüm kapsam seçimi yalnız başkan+Ahmet'te.
   const kapsamSecimi = useKisiselOzellik('talim-mevzuata');
@@ -262,6 +263,8 @@ export default function PatikaScreen() {
   // Durak kimliği → madde başlığı ("Kast", "Zimmet"…). Numaranın yanında gösterilir;
   // yalnız sayı görünce kullanıcı "sayılar rastgele" sanıyordu (başkan, 13 Ağu).
   const [maddeBasliklari, setMaddeBasliklari] = useState<Record<number, string>>({});
+  // Haritanın sayfa içindeki üst konumu (ölçülür) — açılışta kaldığın durağa kaydırmak için.
+  const [haritaUst, setHaritaUst] = useState(0);
   const [hata, setHata] = useState(false);
   // Üst bar — yalnızca GERÇEK veri.
   const [kanunAd, setKanunAd] = useState<string | null>(null);
@@ -452,6 +455,13 @@ export default function PatikaScreen() {
     <Screen
       title="Patika"
       onGeri={() => router.back()}
+      // AÇILIŞTA KALDIĞIN DURAK (başkan, 14 Ağu): kanunu açınca patika 1. maddeden
+      // başlıyordu; artık aktif düğüm ekranın üst-orta bandına gelecek şekilde kaydırılır.
+      baslangicKaydirma={
+        kapsamSecimi && haritaUst > 0 && aktifIndex > 0
+          ? Math.max(0, haritaUst + PAD_TOP + aktifIndex * ROW_GAP - pencereY * 0.38)
+          : undefined
+      }
       headerAltinCizgi
       headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
       {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). */}
@@ -507,6 +517,10 @@ export default function PatikaScreen() {
         // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
         <TekDugum onPress={() => akisAc({ lawId: String(lawId) })} />
       ) : (
+        <View onLayout={(e) => {
+          const y = Math.round(e.nativeEvent.layout.y);
+          if (y > 0 && Math.abs(y - haritaUst) > 2) setHaritaUst(y);
+        }}>
         <Harita
           dugumler={dugumler}
           aktifIndex={aktifIndex}
@@ -518,6 +532,7 @@ export default function PatikaScreen() {
             akisAc({ bolumId: String(id) });
           }}
         />
+        </View>
       )}
 
       {/* İçerik indir + aç modalı — inmemiş kanunun düğümüne basınca; biter bitmez kart açılır. */}

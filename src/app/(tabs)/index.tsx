@@ -1110,7 +1110,7 @@ export default function KarargahScreen() {
                 source={OYUN_ARKA}
                 style={StyleSheet.absoluteFill}
                 contentFit="cover"
-                contentPosition={{ top: -96 }}
+                contentPosition={{ top: -52 }}
               />
               <LinearGradient
                 colors={['rgba(4,26,40,0)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
