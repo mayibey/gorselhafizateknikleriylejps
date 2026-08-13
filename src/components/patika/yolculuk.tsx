@@ -17,7 +17,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Animated, Easing, Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { Animated, Easing, PanResponder, Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
@@ -212,6 +212,7 @@ export function Yolculuk({
       return;
     }
     surusteMi.current = true;
+    elleSifirla();
     Animated.timing(konum, {
       toValue: varis,
       duration: Math.min(2200, 380 + fark * 1.1),
@@ -226,6 +227,45 @@ export function Yolculuk({
       }
     });
   };
+
+  /* ── ELLE KAYDIRMA (başkan, 13 Ağu: "45'ten 1'e gidemiyorum") ──
+     Kamera aracı takip eder ama kullanıcı parmakla yolu yukarı/aşağı gezebilir.
+     Ofset kameranın ÜSTÜNE eklenir; bir durağa dokunulunca yumuşakça sıfırlanır
+     (araç yeniden ortalanır). Dokunuşları bozmamak için 6 px'den kısa hareket
+     kaydırma sayılmaz → duraklara dokunma çalışmaya devam eder. */
+  const elle = useRef(new Animated.Value(0)).current;
+  const elleDeger = useRef(0);
+  const elleBaslangic = useRef(0);
+  /** O anki kamera Y'si (dizideki örneklerden) — kaydırma sınırlarını hesaplamak için. */
+  const kameraSuanki = () => {
+    const u = mevcutU.current;
+    const dizi = dunya.uler;
+    let i = 1;
+    while (i < dizi.length - 1 && dizi[i] < u) i++;
+    const o = (u - dizi[i - 1]) / Math.max(1, dizi[i] - dizi[i - 1]);
+    return dunya.kamY[i - 1] + (dunya.kamY[i] - dunya.kamY[i - 1]) * o;
+  };
+  const elleSifirla = () => {
+    if (Math.abs(elleDeger.current) < 1) return;
+    elleDeger.current = 0;
+    Animated.timing(elle, { toValue: 0, duration: 260, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
+  };
+  const pan = useRef(
+    PanResponder.create({
+      onMoveShouldSetPanResponder: (_e, g) => Math.abs(g.dy) > 6,
+      onPanResponderGrant: () => {
+        elleBaslangic.current = elleDeger.current;
+      },
+      onPanResponderMove: (_e, g) => {
+        const kam = kameraSuanki();
+        const enAz = -(dunya.yukseklik - sahneY) - kam; // dünyanın tepesi
+        const enCok = -kam; // dünyanın dibi
+        const v = Math.max(enAz, Math.min(enCok, elleBaslangic.current + g.dy));
+        elleDeger.current = v;
+        elle.setValue(v);
+      },
+    }),
+  ).current;
 
   /* ── Tepe lambası: sürekli yanıp söner ── */
   const lamba = useRef(new Animated.Value(0)).current;
@@ -276,6 +316,7 @@ export function Yolculuk({
       </Pressable>
       <View
         style={st.sahne}
+        {...pan.panHandlers}
         onLayout={(e) => {
           const h = Math.round(e.nativeEvent.layout.height);
           if (h > 0 && Math.abs(h - olcumY) > 2) setOlcumY(h);
@@ -285,7 +326,10 @@ export function Yolculuk({
             position: 'absolute',
             width: dunya.W,
             height: dunya.yukseklik,
-            transform: [{ translateX: kameraX }, { translateY: kameraY }],
+            transform: [
+              { translateX: kameraX },
+              { translateY: Animated.add(kameraY, elle) },
+            ],
           }}>
           {/* KATLAR — üstteki önce, alttakinin üst kenarı eriyerek üstüne biner */}
           {dunya.katUst.map((ust, i) => (
