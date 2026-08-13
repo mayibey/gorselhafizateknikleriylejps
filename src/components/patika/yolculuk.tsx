@@ -526,19 +526,58 @@ export function Yolculuk({
             }}>
             <View style={[st.aracGolge, { borderRadius: aracG }]} />
             <Image source={ARAC} style={StyleSheet.absoluteFill} contentFit="contain" />
+            {/* TEPE LAMBASI — iki katman: geniş yumuşak HALE + küçük parlak ÇEKİRDEK.
+                Tek katman soluk kalıyordu, hangi renk yandığı seçilmiyordu (başkan, 13 Ağu). */}
             <Animated.View
               style={[
-                st.lamba,
-                { left: aracG * 0.16, top: aracYy * 0.51, width: aracG * 0.3, height: aracYy * 0.06,
-                  backgroundColor: '#2E74E0', opacity: lamba },
+                st.lambaHale,
+                {
+                  left: aracG * 0.02,
+                  top: aracYy * 0.44,
+                  width: aracG * 0.58,
+                  height: aracYy * 0.2,
+                  backgroundColor: '#3D8BFF',
+                  opacity: lamba.interpolate({ inputRange: [0, 1], outputRange: [0.05, 0.5] }),
+                },
               ]}
             />
             <Animated.View
               style={[
                 st.lamba,
-                { right: aracG * 0.16, top: aracYy * 0.51, width: aracG * 0.3, height: aracYy * 0.06,
-                  backgroundColor: '#D02A31',
-                  opacity: lamba.interpolate({ inputRange: [0, 1], outputRange: [1, 0] }) },
+                {
+                  left: aracG * 0.15,
+                  top: aracYy * 0.51,
+                  width: aracG * 0.32,
+                  height: aracYy * 0.07,
+                  backgroundColor: '#5BA6FF',
+                  opacity: lamba.interpolate({ inputRange: [0, 1], outputRange: [0.12, 1] }),
+                },
+              ]}
+            />
+            <Animated.View
+              style={[
+                st.lambaHale,
+                {
+                  right: aracG * 0.02,
+                  top: aracYy * 0.44,
+                  width: aracG * 0.58,
+                  height: aracYy * 0.2,
+                  backgroundColor: '#FF3B30',
+                  opacity: lamba.interpolate({ inputRange: [0, 1], outputRange: [0.5, 0.05] }),
+                },
+              ]}
+            />
+            <Animated.View
+              style={[
+                st.lamba,
+                {
+                  right: aracG * 0.15,
+                  top: aracYy * 0.51,
+                  width: aracG * 0.32,
+                  height: aracYy * 0.07,
+                  backgroundColor: '#FF5A50',
+                  opacity: lamba.interpolate({ inputRange: [0, 1], outputRange: [1, 0.12] }),
+                },
               ]}
             />
           </Animated.View>
@@ -668,6 +707,7 @@ const st = StyleSheet.create({
     transform: [{ translateY: 3 }, { scale: 0.92 }],
   },
   lamba: { position: 'absolute', borderRadius: 8 },
+  lambaHale: { position: 'absolute', borderRadius: 999 },
   altPanel: {
     flexDirection: 'row',
     alignItems: 'center',
