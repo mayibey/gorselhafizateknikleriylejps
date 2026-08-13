@@ -467,11 +467,11 @@ export function Yolculuk({
                   ) : null}
                 </View>
                 {aktif && basliklar?.[d.bolum.id] ? (
-                  // Madde başlığı: düz yazı "elle yazılmış" duruyordu → altın çerçeveli
-                  // koyu rozet (başkan, 13 Ağu).
-                  <View style={[st.baslikRozet, { maxWidth: kap }]}>
+                  // Rozet levhanın ÜSTÜNDE (altta araç üstüne biniyordu) ve kırpılmıyor:
+                  // uzun başlık iki satıra sarar (başkan, 13 Ağu).
+                  <View style={[st.baslikRozet, { bottom: levhaB + 8, maxWidth: kap * 1.8 }]}>
                     <View style={st.baslikNokta} />
-                    <AppText variant="etiket" bold color="beyaz" numberOfLines={1} style={st.baslikYazi}>
+                    <AppText variant="etiket" bold color="beyaz" numberOfLines={2} style={st.baslikYazi}>
                       {basliklar[d.bolum.id]}
                     </AppText>
                   </View>
@@ -609,10 +609,11 @@ const st = StyleSheet.create({
   kapiCizgi: { flex: 1, height: 1, backgroundColor: 'rgba(240,183,51,0.5)' },
   kapiUc: { width: 5, height: 5, borderRadius: 3, backgroundColor: 'rgba(240,183,51,0.9)' },
   baslikRozet: {
+    position: 'absolute',
+    alignSelf: 'center',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    marginTop: 7,
     paddingHorizontal: 11,
     paddingVertical: 5,
     borderRadius: 999,
@@ -626,7 +627,7 @@ const st = StyleSheet.create({
     elevation: 4,
   },
   baslikNokta: { width: 5, height: 5, borderRadius: 3, backgroundColor: Palette.altinParlak },
-  baslikYazi: { fontSize: 11.5, letterSpacing: 0.3 },
+  baslikYazi: { fontSize: 11.5, letterSpacing: 0.3, flexShrink: 1, textAlign: 'center' },
   aracGolge: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0,0,0,0.45)',
