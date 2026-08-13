@@ -16,7 +16,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Animated, Easing, Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
@@ -77,8 +77,10 @@ export function Yolculuk({
   onDevam: () => void;
 }) {
   const { width: ekranG, height: ekranY } = useWindowDimensions();
-  // Panel yukarı alınınca altta boşluk kalıyordu (başkan, 13 Ağu) → harita aşağı uzatıldı.
-  const sahneY = Math.round(Math.min(ekranY * 0.74, 780));
+  // Harita kalan alanı TAM doldurur: yükseklik onLayout ile ÖLÇÜLÜR (sabit oran verilince
+  // altta beyaz boşluk kalıyor, sayfa kaydırmalı oluyordu — başkan, 13 Ağu).
+  const [olcumY, setOlcumY] = useState(0);
+  const sahneY = olcumY > 0 ? olcumY : Math.round(Math.min(ekranY * 0.74, 780));
   const N = dugumler.length;
 
   /* ── Dünya geometrisi (ölçüler değişmedikçe bir kez hesaplanır) ── */
@@ -272,7 +274,12 @@ export function Yolculuk({
           <MaterialCommunityIcons name="arrow-right" size={18} color="#07334B" />
         </View>
       </Pressable>
-      <View style={[st.sahne, { height: sahneY }]}>
+      <View
+        style={st.sahne}
+        onLayout={(e) => {
+          const h = Math.round(e.nativeEvent.layout.height);
+          if (h > 0 && Math.abs(h - olcumY) > 2) setOlcumY(h);
+        }}>
         <Animated.View
           style={{
             position: 'absolute',
@@ -418,6 +425,8 @@ export function Yolculuk({
 
 const st = StyleSheet.create({
   sahne: {
+    flex: 1,
+    minHeight: 320,
     alignSelf: 'center',
     width: '100%',
     borderRadius: Radius.l,

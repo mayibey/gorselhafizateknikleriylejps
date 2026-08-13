@@ -434,6 +434,8 @@ export default function PatikaScreen() {
     <Screen
       title="Patika"
       onGeri={() => router.back()}
+      // Yolculuk modunda sayfa KAYDIRILMAZ: harita kalan alanı tam doldurur, altta beyaz kalmaz.
+      scroll={!kapsamSecimi}
       headerAltinCizgi
       headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
       {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). Sinematik modda gizli (temiz sahne). */}
