@@ -299,9 +299,11 @@ export function Yolculuk({
             const yolG = dunya.W * 0.088; // sahnedeki asfaltın genişliği (ölçüldü)
             const levhaB = Math.round(yolG * 0.84);
             const direkY = Math.round(levhaB * 0.46);
-            const platG = Math.round(levhaB * 1.2);
-            const platY = Math.round(platG * 0.34);
-            const kap = platG;
+            // Taş platform KALDIRILDI (başkan, 13 Ağu: "şeffaf durak gibi bir yer, kötü duruyor").
+            // Yerine asfalta çizilmiş ince DURAK ÇİZGİSİ: yola ait görünür, zemini kirletmez.
+            const cizgiG = Math.round(yolG * 0.84);
+            const cizgiY = 3;
+            const kap = Math.max(cizgiG, levhaB);
             return (
               <Pressable
                 key={`d${d.bolum.id}`}
@@ -309,7 +311,7 @@ export function Yolculuk({
                 style={{
                   position: 'absolute',
                   left: p.x - kap / 2,
-                  top: p.y - (levhaB + direkY + platY / 2),
+                  top: p.y - (levhaB + direkY + cizgiY / 2),
                   width: kap,
                   alignItems: 'center',
                 }}
@@ -340,7 +342,14 @@ export function Yolculuk({
                   ) : null}
                 </View>
                 <View style={[st.direk, { height: direkY }]} />
-                <View style={[st.platform, { width: platG, height: platY, borderRadius: platG }]} />
+                <View
+                  style={[
+                    st.durakCizgi,
+                    { width: cizgiG, height: cizgiY },
+                    aktif && st.durakCizgiAktif,
+                    gecildi && st.durakCizgiGecildi,
+                  ]}
+                />
               </Pressable>
             );
           })}
@@ -433,11 +442,12 @@ const st = StyleSheet.create({
   // blok oluyordu ve yolu kapatıyordu).
   levhaGecildi: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(14,20,28,0.92)' },
   direk: { width: 4, backgroundColor: 'rgba(38,45,54,0.95)' },
-  platform: {
-    backgroundColor: 'rgba(86,95,106,0.72)',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.18)',
+  durakCizgi: {
+    borderRadius: 2,
+    backgroundColor: 'rgba(226,236,242,0.32)',
   },
+  durakCizgiAktif: { backgroundColor: 'rgba(240,183,51,0.9)' },
+  durakCizgiGecildi: { backgroundColor: 'rgba(240,183,51,0.55)' },
   aracGolge: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0,0,0,0.45)',
