@@ -258,6 +258,9 @@ export default function PatikaScreen() {
   // null = yükleniyor; bolumsuz = kanunun bölümü yok (tek düğüm).
   const [dugumler, setDugumler] = useState<BolumDugum[] | null>(null);
   const [bolumsuz, setBolumsuz] = useState(false);
+  // Durak kimliği → madde başlığı ("Kast", "Zimmet"…). Numaranın yanında gösterilir;
+  // yalnız sayı görünce kullanıcı "sayılar rastgele" sanıyordu (başkan, 13 Ağu).
+  const [maddeBasliklari, setMaddeBasliklari] = useState<Record<number, string>>({});
   const [hata, setHata] = useState(false);
   // Üst bar — yalnızca GERÇEK veri.
   const [kanunAd, setKanunAd] = useState<string | null>(null);
@@ -308,6 +311,13 @@ export default function PatikaScreen() {
               oran: toplam > 0 ? calisilan / toplam : 0,
             };
           });
+          const basliklar: Record<number, string> = {};
+          sira.forEach((anahtar) => {
+            const g = grup.get(anahtar);
+            const bas = g?.[0]?.baslik?.trim();
+            if (g?.[0] && bas) basliklar[g[0].id] = bas;
+          });
+          setMaddeBasliklari(basliklar);
           setBolumsuz(false);
           setDugumler(madde);
           // Hazırlık KART bazlı (düğüm değil): madde başına birden çok kart olabiliyor.
@@ -502,6 +512,7 @@ export default function PatikaScreen() {
           kanunAd={kanunAd}
           calisilanKart={calisilanKart}
           toplamKart={toplamKart}
+          basliklar={maddeBasliklari}
           // Dokunulan durak = O MADDENİN kartı (akış 'kart' ile o karttan başlar).
           // 13 Ağu: her durak aynı kartı açıyordu — madde bilgisi akışa geçmiyordu.
           onDugumBas={(kartId) => akisAc({ lawId: String(lawId), kart: String(kartId) })}

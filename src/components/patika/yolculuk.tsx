@@ -65,6 +65,7 @@ export function Yolculuk({
   kanunAd,
   calisilanKart,
   toplamKart,
+  basliklar,
   onDugumBas,
   onDevam,
 }: {
@@ -73,6 +74,8 @@ export function Yolculuk({
   kanunAd: string | null;
   calisilanKart: number;
   toplamKart: number;
+  /** Durak kimliği → madde başlığı (numara tek başına anlam taşımıyordu). */
+  basliklar?: Record<number, string>;
   onDugumBas: (bolumId: number) => void;
   onDevam: () => void;
 }) {
@@ -156,13 +159,34 @@ export function Yolculuk({
     for (let i = 0; i < N; i++) durakU.push(ara * (i + 0.8));
     const duraklar = durakU.map((u) => noktaAt(u));
 
+    // ATLAMA BANTLARI: kanunun her maddesi kart değil (TCK'da 45'ten 247'ye atlıyor).
+    // Atlamanın olduğu yere yolun üstüne şerit konur → "sayılar rastgele" hissi biter.
+    const atlamalar: { u: number; p: Nokta; yazi: string }[] = [];
+
     // İz noktaları (araç geçtikçe yanan altın izler)
     const izAdim = Math.max(18, toplamU / 260);
     const izler: { u: number; p: Nokta }[] = [];
     for (let u = 0; u <= toplamU; u += izAdim) izler.push({ u, p: noktaAt(u) });
 
-    return { W, katY, katUst, yukseklik, toplamU, uler, xler, yler, aciler, kamX, kamY, durakU, duraklar, izler };
+    return { W, katY, katUst, yukseklik, toplamU, uler, xler, yler, aciler, kamX, kamY, durakU, duraklar, izler, atlamalar, noktaAt };
   }, [ekranG, sahneY, N]);
+
+  /** İki durak arasında madde numarası atlıyor mu? Atlıyorsa yolun üstüne bant. */
+  const atlamaBantlari = useMemo(() => {
+    const no = (i: number) => {
+      const m = dugumler[i]?.bolum.ad.match(/(\d+)/);
+      return m ? Number(m[1]) : null;
+    };
+    const liste: { key: string; p: Nokta; yazi: string }[] = [];
+    for (let i = 0; i < N - 1; i++) {
+      const a = no(i);
+      const b = no(i + 1);
+      if (a == null || b == null || b <= a + 1) continue;
+      const u = ((dunya.durakU[i] ?? 0) + (dunya.durakU[i + 1] ?? 0)) / 2;
+      liste.push({ key: `atla${i}`, p: dunya.noktaAt(u), yazi: `${a + 1}–${b - 1} ARASI MADDE YOK` });
+    }
+    return liste;
+  }, [dugumler, dunya, N]);
 
   // Araç ölçüsü (yol genişliğine göre) — park payı bundan hesaplanır.
   const aracG = Math.round(dunya.W * 0.088 * 0.66);
@@ -304,7 +328,9 @@ export function Yolculuk({
           <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
             {toplamKart === 0
               ? 'yakında'
-              : `${calisilanKart}/${toplamKart} kart · %${Math.round((calisilanKart / toplamKart) * 100)}`}
+              : `${calisilanKart}/${toplamKart} kart · %${Math.round(
+                  (calisilanKart / toplamKart) * 100,
+                )} · ${N} madde`}
           </AppText>
         </View>
         <View style={st.devamBtn}>
@@ -360,6 +386,18 @@ export function Yolculuk({
                   opacity: gorunur,
                 }}
               />
+            );
+          })}
+
+          {/* ATLAMA BANTLARI — "46–246 ARASI MADDE YOK" */}
+          {atlamaBantlari.map((b) => {
+            const g = Math.round(dunya.W * 0.088 * 1.5);
+            return (
+              <View key={b.key} pointerEvents="none" style={[st.atlamaBant, { left: b.p.x - g / 2, top: b.p.y - 13, width: g }]}>
+                <AppText variant="etiket" bold color="altinParlak" numberOfLines={1} style={st.atlamaYazi}>
+                  {b.yazi}
+                </AppText>
+              </View>
             );
           })}
 
@@ -419,6 +457,16 @@ export function Yolculuk({
                   ) : null}
                 </View>
                 <View style={[st.direk, { height: direkY }]} />
+                {aktif && basliklar?.[d.bolum.id] ? (
+                  <AppText
+                    variant="etiket"
+                    bold
+                    color="beyaz"
+                    numberOfLines={1}
+                    style={[st.durakBaslik, { width: kap * 2.2, marginLeft: -kap * 0.6 }]}>
+                    {basliklar[d.bolum.id]}
+                  </AppText>
+                ) : null}
                 <View
                   style={[
                     st.durakCizgi,
@@ -491,6 +539,25 @@ const st = StyleSheet.create({
   // blok oluyordu ve yolu kapatıyordu).
   levhaGecildi: { borderColor: 'rgba(240,183,51,0.85)', backgroundColor: 'rgba(14,20,28,0.92)' },
   direk: { width: 4, backgroundColor: 'rgba(38,45,54,0.95)' },
+  atlamaBant: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 4,
+    borderRadius: 6,
+    backgroundColor: 'rgba(6,20,30,0.82)',
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: 'rgba(240,183,51,0.55)',
+  },
+  atlamaYazi: { fontSize: 10, letterSpacing: 0.8 },
+  durakBaslik: {
+    textAlign: 'center',
+    fontSize: 11,
+    marginTop: 2,
+    textShadowColor: 'rgba(0,0,0,0.85)',
+    textShadowRadius: 4,
+  },
   durakCizgi: {
     borderRadius: 2,
     backgroundColor: 'rgba(226,236,242,0.32)',
