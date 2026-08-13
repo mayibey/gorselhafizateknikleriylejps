@@ -186,8 +186,16 @@ export function Yolculuk({
       const a = no(i);
       const b = no(i + 1);
       if (a == null || b == null || b <= a + 1) continue;
-      const u = ((dunya.durakU[i] ?? 0) + (dunya.durakU[i + 1] ?? 0)) / 2;
+      // KAPI YALNIZ BÖLÜM DEĞİŞİNCE (başkan, 13 Ağu: 262→264 arasında da kapı çıkıyordu —
+      // 263 kart olmadığı için "atlama" sayılıyordu, oysa ikisi de aynı bölümün içinde).
       const bilgi = bolumBilgi(klasor, b);
+      const oncekiBilgi = bolumBilgi(klasor, a);
+      if (bilgi) {
+        if (oncekiBilgi && oncekiBilgi.ad === bilgi.ad) continue; // aynı bölüm → kapı yok
+      } else if (b - a < 20) {
+        continue; // bölüm tablosu yoksa yalnız BÜYÜK atlamada kapı
+      }
+      const u = ((dunya.durakU[i] ?? 0) + (dunya.durakU[i + 1] ?? 0)) / 2;
       // Bu blokta KAÇ madde var (patikadaki gerçek durak sayısı) → "20 madde".
       let adet = 0;
       if (bilgi) {
