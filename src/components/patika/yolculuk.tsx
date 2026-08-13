@@ -363,8 +363,9 @@ export function Yolculuk({
     return () => dongu.stop();
   }, [lamba]);
 
-  // Uzaklaştıkça (0.85x altı) yan paneller silinir → uzak planda harita temiz kalır.
-  const panelGorunur = olcek.interpolate({ inputRange: [0.72, 0.9], outputRange: [0, 1], extrapolate: 'clamp' });
+  // Uzaklaşınca paneller KAYBOLMAZ: harita küçülürken panel ters ölçeklenip ekranda
+  // aynı boyda kalır → uzak planda da hangi durak hangi madde okunur (başkan, 13 Ağu).
+  const panelOlcek = Animated.divide(1, olcek);
 
   const ara = { inputRange: dunya.uler, extrapolate: 'clamp' as const };
   const aracX = konum.interpolate({ ...ara, outputRange: dunya.xler });
@@ -485,7 +486,7 @@ export function Yolculuk({
                 pointerEvents="none"
                 style={[
                   st.panelCizgi,
-                  { left: cizgiX, top: p.y - 1, width: bosluk, opacity: panelGorunur },
+                  { left: cizgiX, top: p.y - 1, width: bosluk },
                 ]}
               />,
               // madde bilgi paneli
@@ -499,7 +500,8 @@ export function Yolculuk({
                     left: panelX,
                     top: p.y - 26,
                     width: panelG,
-                    opacity: panelGorunur,
+                    // ters ölçek: harita uzaklaşsa da panel ekranda aynı boyda kalır
+                    transform: [{ scale: panelOlcek }],
                     // Panel SOLDAYSA yazı sağa yaslanır → levhaya bakar, kenara taşmaz.
                     alignItems: sagda ? 'flex-start' : 'flex-end',
                   },
