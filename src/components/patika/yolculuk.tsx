@@ -529,14 +529,14 @@ export function Yolculuk({
             <Animated.View
               style={[
                 st.lamba,
-                { left: aracG * 0.16, top: aracYy * 0.36 + 2, width: aracG * 0.3, height: aracYy * 0.06,
+                { left: aracG * 0.16, top: aracYy * 0.51, width: aracG * 0.3, height: aracYy * 0.06,
                   backgroundColor: '#2E74E0', opacity: lamba },
               ]}
             />
             <Animated.View
               style={[
                 st.lamba,
-                { right: aracG * 0.16, top: aracYy * 0.36 + 2, width: aracG * 0.3, height: aracYy * 0.06,
+                { right: aracG * 0.16, top: aracYy * 0.51, width: aracG * 0.3, height: aracYy * 0.06,
                   backgroundColor: '#D02A31',
                   opacity: lamba.interpolate({ inputRange: [0, 1], outputRange: [1, 0] }) },
               ]}
