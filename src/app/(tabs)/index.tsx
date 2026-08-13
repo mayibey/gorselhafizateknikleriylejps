@@ -1078,11 +1078,13 @@ export default function KarargahScreen() {
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
               {/* SEMBOL ÜSTTE, küçültülmüş (contain) — başkan: "logoyu küçült, yukarı taşı".
                   Yazılar ALTTA: başlık, hemen altında açıklama. */}
+              {/* Sembol bloğun ÜST tarafına çekildi (başkan, 13 Ağu): görselin daha ALT
+                  bandı gösterilince hedef tahtası yukarı çıkar, yazılar yerinde kalır. */}
               <ExpoImage
                 source={TATBIKAT_ARKA}
                 style={StyleSheet.absoluteFill}
                 contentFit="cover"
-                contentPosition="top"
+                contentPosition={{ top: -46 }}
               />
               <LinearGradient
                 colors={['rgba(4,26,40,0)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
@@ -1108,7 +1110,7 @@ export default function KarargahScreen() {
                 source={OYUN_ARKA}
                 style={StyleSheet.absoluteFill}
                 contentFit="cover"
-                contentPosition="top"
+                contentPosition={{ top: -96 }}
               />
               <LinearGradient
                 colors={['rgba(4,26,40,0)', 'rgba(4,26,40,0.55)', 'rgba(4,26,40,0.96)']}
