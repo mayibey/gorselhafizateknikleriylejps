@@ -27,6 +27,8 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { LAW_KLASOR } from '@/db/seed';
 import { useKisiselOzellik } from '@/lib/ozellik';
+import { gorselOnCoz } from '@/lib/gorsel-coz';
+import { indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { ICERIK_TABANI } from '@/constants/config';
 import {
   indirmeDestekli,
@@ -320,6 +322,13 @@ export default function PatikaScreen() {
           setMaddeBasliklari(basliklar);
           setBolumsuz(false);
           setDugumler(madde);
+          // ÖNDEN ÇÖZME (13 Ağu): indirilen görseller cihazda şifreli durduğu için karta
+          // basınca yarım-bir saniye "hazırlanıyor" bekleniyordu. Patika açılırken SIRADAKİ
+          // maddenin görseli arkada (etkileşim bitince, tek tane) çözülür → bekleme kalmaz.
+          // Dar tutuldu: tek kart. Fazlası boşuna pil/hafıza harcar.
+          const siradaki = madde.findIndex((d) => d.toplam > 0 && d.calisilan < d.toplam);
+          const hedefKart = siradaki >= 0 ? grup.get(sira[siradaki])?.[0] : undefined;
+          if (hedefKart) gorselOnCoz([indirilmisGorsel(hedefKart.gorsel_yolu)]);
           // Hazırlık KART bazlı (düğüm değil): madde başına birden çok kart olabiliyor.
           const calisilan = madde.reduce((a, d) => a + d.calisilan, 0);
           const toplam = madde.reduce((a, d) => a + d.toplam, 0);
