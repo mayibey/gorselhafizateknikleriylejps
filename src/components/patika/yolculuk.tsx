@@ -87,7 +87,6 @@ export function Yolculuk({
   // Harita kalan alanı TAM doldurur: yükseklik onLayout ile ÖLÇÜLÜR (sabit oran verilince
   // altta beyaz boşluk kalıyor, sayfa kaydırmalı oluyordu — başkan, 13 Ağu).
   const [olcumY, setOlcumY] = useState(0);
-  const [kapiYuk, setKapiYuk] = useState(0); // bölüm kartının gerçek yüksekliği (ortalamak için)
   const sahneY = olcumY > 0 ? olcumY : Math.round(Math.min(ekranY * 0.74, 780));
   const N = dugumler.length;
 
@@ -421,19 +420,17 @@ export function Yolculuk({
                 style={{
                   position: 'absolute',
                   left: k.p.x - dunya.W / 2,
-                  top: k.p.y - (kapiYuk > 0 ? kapiYuk / 2 : 92),
+                  top: k.p.y - 130,
+                  height: 260,
                   width: dunya.W,
                   flexDirection: 'row',
                   alignItems: 'center',
+                  justifyContent: 'center',
                 }}>
                 <View style={st.kapiCizgi} />
                 <View style={st.kapiUc} />
                 <View
-                  style={[st.kapiKart, { width: kartG }]}
-                  onLayout={(e) => {
-                    const h = Math.round(e.nativeEvent.layout.height);
-                    if (h > 0 && Math.abs(h - kapiYuk) > 2) setKapiYuk(h);
-                  }}>
+                  style={[st.kapiKart, { width: kartG }]}>
                   <AppText variant="etiket" bold color="altinParlak" style={st.kapiUst}>
                     YENİ BÖLÜM
                   </AppText>
