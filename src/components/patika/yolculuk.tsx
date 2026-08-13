@@ -81,8 +81,9 @@ export function Yolculuk({
     const W = Math.round(ekranG * YAKINLIK);
     const katY = W * SAHNE_ORAN;
     const adim = katY * (1 - ORTUSME);
-    // Duraklar arası mesafe: ekranda ~3-4 durak görünsün (kat yüksekliğinin ~%16'sı).
-    const ara = katY * 0.16;
+    // Duraklar arası mesafe (başkan, 13 Ağu: "çok kısa, artır") — kat yüksekliğinin ~%25'i,
+    // ekranda ~2-3 durak görünür, aradaki yolculuk hissedilir.
+    const ara = katY * 0.25;
     const gerekli = (N + 1.4) * ara;
     const kat = Math.max(3, Math.ceil(gerekli / adim) + 1);
     const yukseklik = (kat - 1) * adim + katY;
@@ -171,12 +172,46 @@ export function Yolculuk({
         duration: 1500,
         easing: Easing.inOut(Easing.quad),
         useNativeDriver: true,
-      }).start();
+      }).start(({ finished }) => {
+        if (finished) mevcutU.current = hedefU;
+      });
     } else {
       konum.setValue(hedefU);
+      mevcutU.current = hedefU;
     }
     oncekiU.current = hedefU;
   }, [hedefU, konum, dunya.toplamU]);
+
+  /* ── Durağa dokununca: önce araç oraya sürer, VARINCA kart akışı açılır ──
+     Başkan (13 Ağu): "ileriye tıklayınca araba ilerlemiyor, direk madde açılıyor". */
+  const mevcutU = useRef(hedefU);
+  const surusteMi = useRef(false);
+  const duragaSur = (i: number, bitince: () => void) => {
+    const varis = dunya.durakU[i];
+    if (varis == null || surusteMi.current) {
+      bitince();
+      return;
+    }
+    const fark = Math.abs(varis - mevcutU.current);
+    if (fark < 4) {
+      bitince();
+      return;
+    }
+    surusteMi.current = true;
+    Animated.timing(konum, {
+      toValue: varis,
+      duration: Math.min(2200, 380 + fark * 1.1),
+      easing: Easing.inOut(Easing.quad),
+      useNativeDriver: true,
+    }).start(({ finished }) => {
+      surusteMi.current = false;
+      if (finished) {
+        mevcutU.current = varis;
+        oncekiU.current = varis;
+        bitince();
+      }
+    });
+  };
 
   /* ── Tepe lambası: sürekli yanıp söner ── */
   const lamba = useRef(new Animated.Value(0)).current;
@@ -263,7 +298,7 @@ export function Yolculuk({
             return (
               <Pressable
                 key={`d${d.bolum.id}`}
-                onPress={() => onDugumBas(d.bolum.id)}
+                onPress={() => duragaSur(i, () => onDugumBas(d.bolum.id))}
                 style={{
                   position: 'absolute',
                   left: p.x - kap / 2,
