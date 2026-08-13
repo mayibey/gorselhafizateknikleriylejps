@@ -464,10 +464,15 @@ export function Yolculuk({
             const yolG = dunya.W * 0.088;
             const levhaB = Math.round(yolG * 0.86);
             const kap = Math.round(levhaB * 2.2);
-            const panelG = Math.round(dunya.W * 0.3);
+            // GENİŞLİK EKRANA GÖRE: dünya ekrandan geniş, taşma kontrolünü dünyanın
+            // kenarına göre yapınca paneller ekranın dışında kalıyordu (başkan, 13 Ağu).
+            const panelG = Math.min(Math.round(ekranG * 0.36), Math.round(dunya.W * 0.28));
             const bosluk = Math.round(levhaB * 0.55);
-            // Sırayla sağ-sol; taşacaksa karşı tarafa.
+            const yarim = ekranG / 2 - 8; // duraktan ekran kenarına kalan pay
+            const sigar = levhaB / 2 + bosluk + panelG <= yarim;
+            // Sırayla sağ-sol; ekrana sığmıyorsa karşı taraf.
             let sagda = i % 2 === 0;
+            if (!sigar) sagda = p.x < dunya.W / 2; // dar ekranda yolun boş tarafına
             if (sagda && p.x + levhaB / 2 + bosluk + panelG > dunya.W - 8) sagda = false;
             if (!sagda && p.x - levhaB / 2 - bosluk - panelG < 8) sagda = true;
             const panelX = sagda ? p.x + levhaB / 2 + bosluk : p.x - levhaB / 2 - bosluk - panelG;
@@ -490,13 +495,29 @@ export function Yolculuk({
                 style={[
                   st.maddePanel,
                   aktif && st.maddePanelAktif,
-                  { left: panelX, top: p.y - 26, width: panelG, opacity: panelGorunur },
+                  {
+                    left: panelX,
+                    top: p.y - 26,
+                    width: panelG,
+                    opacity: panelGorunur,
+                    // Panel SOLDAYSA yazı sağa yaslanır → levhaya bakar, kenara taşmaz.
+                    alignItems: sagda ? 'flex-start' : 'flex-end',
+                  },
                 ]}>
-                <AppText variant="etiket" bold color={aktif ? 'altinParlak' : 'beyaz'} numberOfLines={1} style={st.panelMaddeNo}>
+                <AppText
+                  variant="etiket"
+                  bold
+                  color={aktif ? 'altinParlak' : 'beyaz'}
+                  numberOfLines={1}
+                  style={[st.panelMaddeNo, { textAlign: sagda ? 'left' : 'right' }]}>
                   {d.bolum.ad}
                 </AppText>
                 {baslik ? (
-                  <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={2} style={st.panelBaslik}>
+                  <AppText
+                    variant="etiket"
+                    color="kartMetinIkincil"
+                    numberOfLines={2}
+                    style={[st.panelBaslik, { textAlign: sagda ? 'left' : 'right' }]}>
                     {baslik}
                   </AppText>
                 ) : null}
