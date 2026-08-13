@@ -1506,3 +1506,14 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
 - Varlıklar: patika-dongu-orman.webp (1080×1620, 163 KB) + patika-arac-kus.webp (43 KB).
 - Commit d7dbe4e, OTA basıldı (runtime 1.0.44). ⚠️ CİHAZDA DOĞRULANMADI — telefon USB'den
   çıkmıştı; başkan kendi telefonunda deneyecek.
+
+## 13 Ağu 2026 — Patika yolculuk + Karargah panelleri (cihazda ayarlandı)
+- Patika kayma ÇÖZÜLDÜ: katlar uç uca (örtüşme kaldırıldı) + görsel gerçekten dikişsiz
+  (ilk satır = son satır). Örtüşen bantta ekranda üstteki kat görünürken yol hesabı alttaki
+  kattan geliyordu → duraklar/araç asfaltın solunda kalıyordu.
+- Ölçüler yol genişliğine bağlandı (ekran oranına değil): levha 0.84×yol, araç 0.66×yol.
+- Durağa dokununca ÖNCE ARAÇ SÜRÜYOR, varınca kart akışı açılıyor (başkan isteği).
+- Madde araları 0.16 → 0.25 kat yüksekliği; kamera yakınlığı 1.9 → 1.55 (madde kenarda kalmasın).
+- Karargah ikiz panelleri: görsel paneli TAM kaplıyor (contain'de kenarda boşluk kalıyordu),
+  üstten hizalı; başlık dipte, altında açıklama; panel 246 → 198 (iPhone'da sekme çubuğuna
+  taşıyordu). Hepsi cihazda ekran görüntüsüyle doğrulandı.
