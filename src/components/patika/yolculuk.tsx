@@ -22,7 +22,7 @@ import { Animated, Easing, PanResponder, Pressable, StyleSheet, useWindowDimensi
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { Bolum } from '@/db/schema';
-import { bolumAdi } from '@/lib/kanun-bolumleri';
+import { bolumBilgi } from '@/lib/kanun-bolumleri';
 
 /** Patika düğümü — patika.tsx ile aynı şekil (orada yerel tip olarak duruyor). */
 type BolumDugum = { bolum: Bolum; calisilan: number; toplam: number; oran: number };
@@ -181,16 +181,27 @@ export function Yolculuk({
       const m = dugumler[i]?.bolum.ad.match(/(\d+)/);
       return m ? Number(m[1]) : null;
     };
-    const liste: { key: string; p: Nokta; ad: string }[] = [];
+    const liste: { key: string; p: Nokta; ad: string; ornekler: string; alt: string }[] = [];
     for (let i = 0; i < N - 1; i++) {
       const a = no(i);
       const b = no(i + 1);
       if (a == null || b == null || b <= a + 1) continue;
       const u = ((dunya.durakU[i] ?? 0) + (dunya.durakU[i + 1] ?? 0)) / 2;
+      const bilgi = bolumBilgi(klasor, b);
+      // Bu blokta KAÇ madde var (patikadaki gerçek durak sayısı) → "20 madde".
+      let adet = 0;
+      if (bilgi) {
+        for (let k = 0; k < N; k++) {
+          const n = no(k);
+          if (n != null && n >= bilgi.bas && n <= bilgi.son) adet++;
+        }
+      }
       liste.push({
         key: `kapi${i}`,
         p: dunya.noktaAt(u),
-        ad: bolumAdi(klasor, b) ?? 'YENİ BÖLÜM',
+        ad: bilgi?.ad ?? 'YENİ BÖLÜM',
+        ornekler: bilgi?.ornekler ?? '',
+        alt: bilgi ? `MADDE ${bilgi.bas}–${bilgi.son} · ${adet} MADDE` : `MADDE ${b}'DEN DEVAM`,
       });
     }
     return liste;
@@ -397,28 +408,38 @@ export function Yolculuk({
             );
           })}
 
-          {/* BÖLÜM KAPISI — konu değişimini yolda tabela gibi duyurur (başkan, 13 Ağu:
-              "küçük not amatörce duruyor, geçtiğim belli olsun"). */}
+          {/* BÖLÜM KAPISI — yolu boydan boya geçen tabela: bölüm adı + İÇİNDEKİ KONULAR +
+              madde aralığı. Yalnız resmî başlık bir şey anlatmıyordu (başkan, 13 Ağu). */}
           {bolumKapilari.map((k) => {
             const yolG = dunya.W * 0.088;
-            const g = Math.round(yolG * 2.1);
-            const direkY = Math.round(yolG * 0.5);
+            const g = Math.round(Math.min(ekranG * 0.88, dunya.W * 0.92));
+            const direkY = Math.round(yolG * 0.55);
             return (
-              <View key={k.key} pointerEvents="none" style={{ position: 'absolute', left: k.p.x - g / 2, top: k.p.y - direkY - 34, width: g, alignItems: 'center' }}>
+              <View
+                key={k.key}
+                pointerEvents="none"
+                style={{ position: 'absolute', left: k.p.x - g / 2, top: k.p.y - direkY - 92, width: g, alignItems: 'center' }}>
                 <View style={st.kapiLevha}>
                   <AppText variant="etiket" bold color="altinParlak" style={st.kapiUst}>
                     YENİ BÖLÜM
                   </AppText>
-                  <AppText variant="govde" bold color="beyaz" numberOfLines={2} style={st.kapiAd}>
+                  <AppText variant="baslik" bold color="beyaz" numberOfLines={2} style={st.kapiAd}>
                     {k.ad}
                   </AppText>
+                  {k.ornekler ? (
+                    <AppText variant="kucuk" color="kartMetinIkincil" numberOfLines={2} style={st.kapiOrnek}>
+                      {k.ornekler}
+                    </AppText>
+                  ) : null}
+                  <View style={st.kapiAyrac} />
+                  <AppText variant="etiket" bold color="altinParlak" style={st.kapiAlt}>
+                    {k.alt}
+                  </AppText>
                 </View>
-                {/* iki yanda direkler */}
-                <View style={[st.kapiDirekSatir, { width: g }]}>
+                <View style={[st.kapiDirekSatir, { width: Math.round(yolG * 1.25) }]}>
                   <View style={[st.kapiDirek, { height: direkY }]} />
                   <View style={[st.kapiDirek, { height: direkY }]} />
                 </View>
-                {/* asfalta düşen altın ışık bandı */}
                 <View style={[st.kapiIsik, { width: Math.round(yolG * 1.02) }]} />
               </View>
             );
@@ -565,15 +586,24 @@ const st = StyleSheet.create({
   kapiLevha: {
     alignSelf: 'stretch',
     alignItems: 'center',
-    paddingVertical: 7,
-    paddingHorizontal: 10,
-    borderRadius: 10,
-    backgroundColor: 'rgba(6,22,34,0.95)',
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    borderRadius: 14,
+    backgroundColor: 'rgba(6,22,34,0.96)',
     borderWidth: 2,
-    borderColor: 'rgba(240,183,51,0.85)',
+    borderColor: 'rgba(240,183,51,0.9)',
   },
-  kapiUst: { fontSize: 9, letterSpacing: 2, opacity: 0.9 },
-  kapiAd: { fontSize: 13, letterSpacing: 0.6, textAlign: 'center', marginTop: 2 },
+  kapiUst: { fontSize: 10, letterSpacing: 2.4, opacity: 0.95 },
+  kapiAd: { fontSize: 17, letterSpacing: 0.4, textAlign: 'center', marginTop: 3 },
+  kapiOrnek: { fontSize: 12, textAlign: 'center', marginTop: 5, opacity: 0.95 },
+  kapiAyrac: {
+    width: 46,
+    height: 1,
+    marginTop: 9,
+    marginBottom: 6,
+    backgroundColor: 'rgba(240,183,51,0.6)',
+  },
+  kapiAlt: { fontSize: 10, letterSpacing: 1.2 },
   kapiDirekSatir: { flexDirection: 'row', justifyContent: 'space-between' },
   kapiDirek: { width: 5, backgroundColor: 'rgba(38,45,54,0.95)' },
   kapiIsik: {
