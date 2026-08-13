@@ -37,8 +37,9 @@ const ARAC_ORAN = 702 / 420;
  *  hesabı ALTTAKİ kattan geliyordu → duraklar ve araç yolun solunda kalıyordu ("kayma").
  *  Görselin kendisi artık dikişsiz (ilk satır = son satır), bu yüzden örtüşmeye gerek yok. */
 const ORTUSME = 0;
-/** Dünyanın ekrandan kaç kat geniş çizileceği (yakın plan). */
-const YAKINLIK = 1.9;
+/** Dünyanın ekrandan kaç kat geniş çizileceği. Büyük değer = daha yakın plan.
+ *  13 Ağu (başkan): "kamerayı biraz uzaklaştır, madde sınırda görünüyor" → 1.9'dan 1.55'e. */
+const YAKINLIK = 1.55;
 
 /**
  * Sahnedeki gerçek yolun orta çizgisi — normalize (x, y), 0..1.
@@ -141,7 +142,7 @@ export function Yolculuk({
       yler.push(p.y);
       aciler.push(`${aci.toFixed(1)}deg`);
       kamX.push(Math.max(-(W - ekranG), Math.min(0, ekranG / 2 - p.x)));
-      kamY.push(Math.max(-(yukseklik - sahneY), Math.min(0, sahneY * 0.62 - p.y)));
+      kamY.push(Math.max(-(yukseklik - sahneY), Math.min(0, sahneY * 0.6 - p.y)));
     }
 
     // Durak konumları
@@ -234,7 +235,7 @@ export function Yolculuk({
   const kameraY = konum.interpolate({ ...ara, outputRange: dunya.kamY });
 
   // Araç da yol genişliğine göre ölçeklenir (gerçek araç yolun ~%60'ı kadardır).
-  const aracG = Math.round(dunya.W * 0.088 * 0.62);
+  const aracG = Math.round(dunya.W * 0.088 * 0.66);
   const aracYy = aracG * ARAC_ORAN;
 
   return (
@@ -290,7 +291,7 @@ export function Yolculuk({
             const aktif = i === aktifIndex;
             const etiket = d.bolum.ad.replace(/^Madde\s+/i, '');
             const yolG = dunya.W * 0.088; // sahnedeki asfaltın genişliği (ölçüldü)
-            const levhaB = Math.round(yolG * 0.72);
+            const levhaB = Math.round(yolG * 0.84);
             const direkY = Math.round(levhaB * 0.46);
             const platG = Math.round(levhaB * 1.2);
             const platY = Math.round(platG * 0.34);
