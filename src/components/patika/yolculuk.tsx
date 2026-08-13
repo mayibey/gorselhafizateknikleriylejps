@@ -244,19 +244,33 @@ export function Yolculuk({
   const kameraX = konum.interpolate({ ...ara, outputRange: dunya.kamX });
   const kameraY = konum.interpolate({ ...ara, outputRange: dunya.kamY });
 
-  const siradaki =
-    aktifIndex >= 0 && dugumler[aktifIndex]
-      ? `SIRADAKİ · ${dugumler[aktifIndex].bolum.ad.toLocaleUpperCase('tr')}`
-      : 'ŞU ANKİ MEVZİ';
-
   return (
     <>
-      {/* Sıradaki madde ÜSTTE (başkan, 13 Ağu) — haritanın hemen üstünde ince şerit. */}
-      <View style={st.ustSerit}>
-        <AppText variant="etiket" bold color="altinParlak" numberOfLines={1} style={st.ustSeritYazi}>
-          {siradaki}
-        </AppText>
-      </View>
+      {/* PANEL — başkan (13 Ağu): en ÜSTTE dursun (kanun, ilerleme, DEVAM ET). */}
+      <Pressable style={({ pressed }) => [st.altPanel, pressed && st.basili]} onPress={onDevam}>
+        <View style={st.altSol}>
+          <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
+            {kanunAd ?? 'Kanun'}
+          </AppText>
+          <View style={st.altBar}>
+            {toplamKart > 0 && calisilanKart > 0 ? (
+              <View style={[st.altBarDolu, { flex: Math.round((calisilanKart / toplamKart) * 100) }]} />
+            ) : null}
+            <View style={{ flex: Math.max(1, 100 - Math.round((calisilanKart / Math.max(1, toplamKart)) * 100)) }} />
+          </View>
+          <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
+            {toplamKart === 0
+              ? 'yakında'
+              : `${calisilanKart}/${toplamKart} kart · %${Math.round((calisilanKart / toplamKart) * 100)}`}
+          </AppText>
+        </View>
+        <View style={st.devamBtn}>
+          <AppText variant="kucuk" bold color="lacivert">
+            DEVAM ET
+          </AppText>
+          <MaterialCommunityIcons name="arrow-right" size={18} color="#07334B" />
+        </View>
+      </Pressable>
       <View style={[st.sahne, { height: sahneY }]}>
         <Animated.View
           style={{
@@ -397,43 +411,11 @@ export function Yolculuk({
         </Animated.View>
       </View>
 
-      {/* ALT PANEL */}
-      <Pressable style={({ pressed }) => [st.altPanel, pressed && st.basili]} onPress={onDevam}>
-        <View style={st.altSol}>
-          <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
-            {kanunAd ?? 'Kanun'}
-          </AppText>
-          <View style={st.altBar}>
-            {toplamKart > 0 && calisilanKart > 0 ? (
-              <View style={[st.altBarDolu, { flex: Math.round((calisilanKart / toplamKart) * 100) }]} />
-            ) : null}
-            <View style={{ flex: Math.max(1, 100 - Math.round((calisilanKart / Math.max(1, toplamKart)) * 100)) }} />
-          </View>
-          <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
-            {toplamKart === 0
-              ? 'yakında'
-              : `${calisilanKart}/${toplamKart} kart · %${Math.round((calisilanKart / toplamKart) * 100)}`}
-          </AppText>
-        </View>
-        <View style={st.devamBtn}>
-          <AppText variant="kucuk" bold color="lacivert">
-            DEVAM ET
-          </AppText>
-          <MaterialCommunityIcons name="arrow-right" size={18} color="#07334B" />
-        </View>
-      </Pressable>
     </>
   );
 }
 
 const st = StyleSheet.create({
-  ustSerit: {
-    alignSelf: 'center',
-    width: '100%',
-    alignItems: 'center',
-    paddingBottom: Spacing.one,
-  },
-  ustSeritYazi: { letterSpacing: 1.4 },
   sahne: {
     alignSelf: 'center',
     width: '100%',
@@ -473,7 +455,7 @@ const st = StyleSheet.create({
     gap: Spacing.two,
     alignSelf: 'center',
     width: '100%',
-    marginTop: Spacing.two,
+    marginBottom: Spacing.two,
     padding: Spacing.three,
     borderRadius: Radius.l,
     backgroundColor: 'rgba(6,38,58,0.92)',
