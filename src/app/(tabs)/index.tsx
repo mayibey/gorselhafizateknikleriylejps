@@ -1096,7 +1096,7 @@ export default function KarargahScreen() {
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   TATBİKAT MERKEZİ
                 </AppText>
-                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
+                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.85}>
                   Karma sınavlarla kendini sına.
                 </AppText>
               </View>
@@ -1122,8 +1122,8 @@ export default function KarargahScreen() {
                 <AppText variant="baslik" bold color="altinParlak" style={styles.gorselBaslik} numberOfLines={2}>
                   OYUN MERKEZİ
                 </AppText>
-                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={2}>
-                  Oynayarak öğren, bilgini pekiştir.
+                <AppText variant="kucuk" bold color="beyaz" style={styles.gorselAciklama} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.85}>
+                  Oynayarak öğren, pekiştir.
                 </AppText>
               </View>
             </Pressable>
