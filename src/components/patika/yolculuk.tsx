@@ -244,8 +244,19 @@ export function Yolculuk({
   const kameraX = konum.interpolate({ ...ara, outputRange: dunya.kamX });
   const kameraY = konum.interpolate({ ...ara, outputRange: dunya.kamY });
 
+  const siradaki =
+    aktifIndex >= 0 && dugumler[aktifIndex]
+      ? `SIRADAKİ · ${dugumler[aktifIndex].bolum.ad.toLocaleUpperCase('tr')}`
+      : 'ŞU ANKİ MEVZİ';
+
   return (
     <>
+      {/* Sıradaki madde ÜSTTE (başkan, 13 Ağu) — haritanın hemen üstünde ince şerit. */}
+      <View style={st.ustSerit}>
+        <AppText variant="etiket" bold color="altinParlak" numberOfLines={1} style={st.ustSeritYazi}>
+          {siradaki}
+        </AppText>
+      </View>
       <View style={[st.sahne, { height: sahneY }]}>
         <Animated.View
           style={{
@@ -389,11 +400,6 @@ export function Yolculuk({
       {/* ALT PANEL */}
       <Pressable style={({ pressed }) => [st.altPanel, pressed && st.basili]} onPress={onDevam}>
         <View style={st.altSol}>
-          <AppText variant="etiket" bold color="kartMetinIkincil" numberOfLines={1} style={st.altUst}>
-            {aktifIndex >= 0 && dugumler[aktifIndex]
-              ? `SIRADAKİ · ${dugumler[aktifIndex].bolum.ad.toLocaleUpperCase('tr')}`
-              : 'ŞU ANKİ MEVZİ'}
-          </AppText>
           <AppText variant="govde" bold color="beyaz" numberOfLines={1}>
             {kanunAd ?? 'Kanun'}
           </AppText>
@@ -421,6 +427,13 @@ export function Yolculuk({
 }
 
 const st = StyleSheet.create({
+  ustSerit: {
+    alignSelf: 'center',
+    width: '100%',
+    alignItems: 'center',
+    paddingBottom: Spacing.one,
+  },
+  ustSeritYazi: { letterSpacing: 1.4 },
   sahne: {
     alignSelf: 'center',
     width: '100%',
