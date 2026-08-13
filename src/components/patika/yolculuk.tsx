@@ -284,6 +284,16 @@ export function Yolculuk({
      Ofset kameranın ÜSTÜNE eklenir; bir durağa dokunulunca yumuşakça sıfırlanır
      (araç yeniden ortalanır). Dokunuşları bozmamak için 6 px'den kısa hareket
      kaydırma sayılmaz → duraklara dokunma çalışmaya devam eder. */
+  /* ── İKİ PARMAKLA YAKINLAŞTIR/UZAKLAŞTIR (başkan, 13 Ağu) ──
+     Uzaklaştıkça ekranda daha çok madde görünür. Ölçek sahnenin ORTASINA göre uygulanır;
+     duraklar, iz ve araç birlikte küçülüp büyür. Sınır 0.55x–1.3x (daha küçüğünde levha
+     yazıları okunmuyor, daha büyüğünde yol ekrandan taşıyor). */
+  const olcek = useRef(new Animated.Value(1)).current;
+  const olcekDeger = useRef(1);
+  const pinchBaslangic = useRef<{ mesafe: number; olcek: number } | null>(null);
+  const ikiParmakMesafe = (dokunuslar: { pageX: number; pageY: number }[]) =>
+    Math.hypot(dokunuslar[0].pageX - dokunuslar[1].pageX, dokunuslar[0].pageY - dokunuslar[1].pageY);
+
   const elle = useRef(new Animated.Value(0)).current;
   const elleDeger = useRef(0);
   const elleBaslangic = useRef(0);
@@ -303,17 +313,39 @@ export function Yolculuk({
   };
   const pan = useRef(
     PanResponder.create({
-      onMoveShouldSetPanResponder: (_e, g) => Math.abs(g.dy) > 6,
+      onMoveShouldSetPanResponder: (e, g) =>
+        e.nativeEvent.touches.length === 2 || Math.abs(g.dy) > 6,
       onPanResponderGrant: () => {
         elleBaslangic.current = elleDeger.current;
+        pinchBaslangic.current = null;
       },
-      onPanResponderMove: (_e, g) => {
+      onPanResponderMove: (e, g) => {
+        const dokunuslar = e.nativeEvent.touches;
+        if (dokunuslar.length === 2) {
+          const mesafe = ikiParmakMesafe(dokunuslar as { pageX: number; pageY: number }[]);
+          if (!pinchBaslangic.current) {
+            pinchBaslangic.current = { mesafe, olcek: olcekDeger.current };
+            return;
+          }
+          const oran = mesafe / Math.max(1, pinchBaslangic.current.mesafe);
+          const yeni = Math.max(0.55, Math.min(1.3, pinchBaslangic.current.olcek * oran));
+          olcekDeger.current = yeni;
+          olcek.setValue(yeni);
+          return;
+        }
+        pinchBaslangic.current = null;
         const kam = kameraSuanki();
         const enAz = -(dunya.yukseklik - sahneY) - kam; // dünyanın tepesi
         const enCok = -kam; // dünyanın dibi
         const v = Math.max(enAz, Math.min(enCok, elleBaslangic.current + g.dy));
         elleDeger.current = v;
         elle.setValue(v);
+      },
+      onPanResponderRelease: () => {
+        pinchBaslangic.current = null;
+      },
+      onPanResponderTerminate: () => {
+        pinchBaslangic.current = null;
       },
     }),
   ).current;
@@ -374,6 +406,7 @@ export function Yolculuk({
           const h = Math.round(e.nativeEvent.layout.height);
           if (h > 0 && Math.abs(h - olcumY) > 2) setOlcumY(h);
         }}>
+        <Animated.View style={[StyleSheet.absoluteFill, { transform: [{ scale: olcek }] }]}>
         <Animated.View
           style={{
             position: 'absolute',
@@ -496,14 +529,14 @@ export function Yolculuk({
             <Animated.View
               style={[
                 st.lamba,
-                { left: aracG * 0.16, top: aracYy * 0.36, width: aracG * 0.3, height: aracYy * 0.06,
+                { left: aracG * 0.16, top: aracYy * 0.36 + 2, width: aracG * 0.3, height: aracYy * 0.06,
                   backgroundColor: '#2E74E0', opacity: lamba },
               ]}
             />
             <Animated.View
               style={[
                 st.lamba,
-                { right: aracG * 0.16, top: aracYy * 0.36, width: aracG * 0.3, height: aracYy * 0.06,
+                { right: aracG * 0.16, top: aracYy * 0.36 + 2, width: aracG * 0.3, height: aracYy * 0.06,
                   backgroundColor: '#D02A31',
                   opacity: lamba.interpolate({ inputRange: [0, 1], outputRange: [1, 0] }) },
               ]}
@@ -562,6 +595,7 @@ export function Yolculuk({
               <View style={st.kapiCizgi} />
             </View>
           ))}
+        </Animated.View>
         </Animated.View>
       </View>
 
