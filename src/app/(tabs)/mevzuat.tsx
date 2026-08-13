@@ -36,7 +36,22 @@ const CIPLER = [
 ] as const;
 type Cip = (typeof CIPLER)[number]['k'];
 
+/**
+ * Mevzuat ekranı ODAKTA mı? "İndir ve başla" akışı indirme bitince o kanunun patikasını
+ * açıyor; kullanıcı bu arada başka ekrana geçtiyse (başkan, 13 Ağu: 5237'nin patikasındayken
+ * arka planda inen kanunların patikaları peş peşe açılıyordu) AÇMAMALI.
+ */
+let mevzuatOdakli = false;
+
 export default function MevzuatScreen() {
+  useFocusEffect(
+    useCallback(() => {
+      mevzuatOdakli = true;
+      return () => {
+        mevzuatOdakli = false;
+      };
+    }, []),
+  );
   // E-POSTA DOĞRULAMA KAPISI: doğrulanmamış hesap içeriğe giremez (girişe izin var, içerik kilitli).
   return (
     <DogrulamaKapisi>
@@ -768,7 +783,9 @@ function KanunSatir({
       // çalışmaya girer. Normal modda eski davranış (indir, kullanıcı tekrar basar).
       const indirVeGir = async () => {
         await indirme.indir();
-        if (talimAc && klasorAdi && kanunIndirilmisMi(klasorAdi)) onPress(law);
+        // Ekran hâlâ Mevzuat'ta mı? Değilse (kullanıcı başka kanunun patikasına geçtiyse)
+        // otomatik açma YAPILMAZ — arka planda biten indirmeler ekranı ele geçiriyordu.
+        if (mevzuatOdakli && talimAc && klasorAdi && kanunIndirilmisMi(klasorAdi)) onPress(law);
       };
       // A4 — ÜCRETSİZ kanunda SORMA, doğrudan indir. Yeni kullanıcı zaten "ne yapacağım"
       // aşamasında; araya bir de "indirilsin mi?" kararı koymak ikinci engel oluyordu.
