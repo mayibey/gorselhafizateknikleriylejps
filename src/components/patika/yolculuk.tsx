@@ -77,7 +77,8 @@ export function Yolculuk({
   onDevam: () => void;
 }) {
   const { width: ekranG, height: ekranY } = useWindowDimensions();
-  const sahneY = Math.round(Math.min(ekranY * 0.62, 620));
+  // Panel yukarı alınınca altta boşluk kalıyordu (başkan, 13 Ağu) → harita aşağı uzatıldı.
+  const sahneY = Math.round(Math.min(ekranY * 0.74, 780));
   const N = dugumler.length;
 
   /* ── Dünya geometrisi (ölçüler değişmedikçe bir kez hesaplanır) ── */
