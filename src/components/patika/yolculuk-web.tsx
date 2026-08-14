@@ -36,12 +36,19 @@ export function YolculukWeb({ duraklar, aktif, kanunAd, onDurakBas }: Props) {
   const web = useRef<WebView>(null);
   const [hazir, setHazir] = useState(false);
 
-  // Veriyi motora ver. Motor 'hazir' dediğinde VE veri değiştiğinde tekrar gönderilir
-  // (kart çalışılınca 'tamam' değişir → tabela altına döner).
+  // İLK veri dünyayı kurar; SONRAKİ değişiklikler dünyayı yeniden kurmaz — araç
+  // sıradaki durağa SÜRER (kart çalışılıp madde bitince ışınlanma olmasın diye).
+  const kuruldu = useRef(false);
   const gonder = useCallback(() => {
+    // TUZAK: WebView, kartlar veritabanından gelmeden hazır olabiliyor. Boş listeyle
+    // "kur" çağrılırsa motor hiç kurulmuyor, sonrakiler de "güncelleme" sayılıp
+    // boşa gidiyordu → ekran bomboş kalıyordu. Dünya ANCAK gerçek veriyle kurulur.
+    if (duraklar.length === 0) return;
     const veri = JSON.stringify({ kanun: kanunAd ?? '', duraklar, aktif });
+    const cagri = kuruldu.current ? 'patikaDurum' : 'patikaKur';
+    kuruldu.current = true;
     web.current?.injectJavaScript(
-      `window.patikaKur && window.patikaKur(${JSON.stringify(veri)}); true;`,
+      `window.${cagri} && window.${cagri}(${JSON.stringify(veri)}); true;`,
     );
   }, [duraklar, aktif, kanunAd]);
 

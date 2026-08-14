@@ -2,7 +2,21 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 14 Ağustos 2026
+> Son güncelleme: 14 Ağustos 2026 (akşam)
+>
+> ### ▶ 14 Ağu — 🏔️ PATİKA 3B: GERÇEK WebGL YOLCULUK UYGULAMAYA GİRDİ (bayraklı)
+> **Karar:** 2.5B izdüşüm motoru bırakıldı, three.js (0.160.1, UMD gömülü) ile GERÇEK 3B kuruldu. Başkanın zirve görseli ATILMADI — 7:1 panoramaya genişletilip (iki yan bulanık uzatma + üst/alt alfa geçişi) kameraya bağlı uzak sıradağ olarak korundu.
+> **Dünya:** yol bir CatmullRom EĞRİSİ; son %42'de serpantinle GERÇEK tırmanış. Zirve TAM son maddenin mesafesine oturur (iki turlu ayar: eğri kurulur, yay-uzunluğu ölçülür, gerekirse gerilir). `ZIRVE_YUK = clamp(L*0.34, 130, 430)` → yol madde sayısıyla ölçeklenir. Tırmanış bölgesinde arazi şeridi DARALIR ve yanlar DÜŞER → sırt/zirve hissi, viraj katlanması biter.
+> **Hareket:** üçüncü şahıs takip kamerası (eğriyi geriden örnekleme DEĞİL, aracın yön vektörü boyunca — virajda araç kadrajın kenarına kayıyordu). Madde tamamlanınca `duragaSur()` ile 1,5–2,5 sn senaryolu sürüş (ışınlanma yok). Parmakla sürükleme + tabelaya dokunma korunur.
+> **Sahne:** farlar SpotLight, ağaç/kaya InstancedMesh, dört etap kesintisiz harmanlanır, iki şeritte koyu sarı mevzuat adı (yol yönünde sıkıştırılmış, ~195 m'de bir), zirvede Türk bayrağı + taş platform, %100'de bitiş sineması (kamera yükselir, arayüz silinir, "<KANUN> TAMAMLANDI").
+> **UYGULAMAYA TAŞIMA — 4 TUR HATA (hepsi telefonda ölçülerek bulundu):**
+>  1. WebView kartlar gelmeden "hazır" diyor → boş listeyle kurulup bir daha kurulmuyordu. Dünya ancak gerçek veriyle kurulur (`duraklar.length===0 → gönderme`).
+>  2. `haber()` (RN köprüsü) 3B sürümde hiç tanımlı değildi → 'hazir' mesajı gitmiyordu. Üstelik hata satırı `body.app` ile gizlendiği için görünmüyordu.
+>  3. WebGL bağlam dinleyicisi `kur()`'dan ÖNCE eklenmişti → `cizer` undefined, motor çöküyordu.
+>  4. RN `injectJavaScript` veriyi METİN yollar; 3B `patikaKur` JSON çözmüyordu → `adet=0`, sayaç "1 / 0".
+> **Ders:** `window.onerror` → ekrana yaz. Kare sayacı "—" ise motor çökmüştür. Hata satırını gizleyen CSS koyma.
+> **Yayın:** 6 OTA (runtime 1.0.44), bayrak `patika-yolculuk` — YALNIZ başkan + Kemalettin. Doğrulandı: TCK 48 madde, "ORMAN 18/48" → zirvede "5237 SAYILI TÜRK CEZA KANUNU TAMAMLANDI". 58–60 fps.
+> **Not:** motor+görseller pakete ~930 KB ekliyor. İleride oyun sayfası gibi sunucudan yüklenirse paket şişmez, OTA'sız güncellenir.
 >
 > ### ▶ 14 Ağu gece — 🚗 PATİKA YOLCULUK: GERÇEK PERSPEKTİF MOTORU (bayraklı: başkan + Kemalettin)
 > **Karar zinciri:** Başkan 3B ister mi diye sordu → cevap: HAYIR şimdilik. Sebep: 3B dünya 3B MODEL ister, görsel üreticiler model üretmez (GPT'den istenen 12 kenar nesnesi + araç + panorama boşa gider); kıvrımlı yol ve tepe/iniş 3B'ye geçmeden bu motora eklenebilir (OutRun usulü). Sıra: (1) gerçek görseller, (2) yola kıvrım+tepe, (3) ancak ondan sonra 3B tartışılır.
