@@ -22,6 +22,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { AppText } from '@/components/ui/app-text';
 import { KilitKarti } from '@/components/premium/kilit-karti';
+import { YolculukWeb, type YolculukDurak } from '@/components/patika/yolculuk-web';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { LAW_KLASOR } from '@/db/seed';
@@ -248,6 +249,11 @@ export default function PatikaScreen() {
   const router = useRouter();
   // GECE KARARI M5 (bayraklı): düğüm kapsam seçimi yalnız başkan+Ahmet'te.
   const kapsamSecimi = useKisiselOzellik('talim-mevzuata');
+  // YOLCULUK (bayraklı deneme, 14 Ağu): krem haritanın yerine gerçek perspektifli
+  // gece yolculuğu. Bayrak kapalıysa BU EKRAN BUGÜNKÜYLE BİREBİR AYNI kalır.
+  // Web'de WebView yok → yalnız telefonda.
+  const yolculukBayrak = useKisiselOzellik('patika-yolculuk');
+  const yolculuk = yolculukBayrak && Platform.OS !== 'web';
   const { brans } = useBrans();
   const { kanunErisilebilir } = useUyelik();
   const { lawId } = useLocalSearchParams<{ lawId?: string }>();
@@ -451,10 +457,25 @@ export default function PatikaScreen() {
   // zaten _blok param'ını kullanmaz. Şalter kapalıysa hep true → kilitli asla true olmaz.
   const kilitli = !kanunErisilebilir(klasor);
 
+  // Yolculuk motorunun beklediği biçim: tabelada numara, düğmede başlık, tamamlananda tik.
+  const yolculukDuraklar: YolculukDurak[] = useMemo(
+    () =>
+      (dugumler ?? []).map((d) => ({
+        id: d.bolum.id,
+        no: dugumNumara(d.bolum.ad) ?? '',
+        ad: maddeBasliklari[d.bolum.id] ?? d.bolum.ad,
+        tamam: d.toplam > 0 && d.calisilan >= d.toplam,
+      })),
+    [dugumler, maddeBasliklari],
+  );
+  // Yolculuk tek ekranlık sahne — sayfa kaydırması kapalı olmalı (sürükleme motorun işi).
+  const yolculukSahne = yolculuk && !kilitli && !hata && dugumler !== null && !bolumsuz;
+
   return (
     <Screen
       title="Patika"
       onGeri={() => router.back()}
+      scroll={!yolculukSahne}
       // AÇILIŞTA KALDIĞIN DURAK (başkan, 14 Ağu): kanunu açınca patika 1. maddeden
       // başlıyordu; artık aktif düğüm ekranın üst-orta bandına gelecek şekilde kaydırılır.
       baslangicKaydirma={
@@ -464,7 +485,9 @@ export default function PatikaScreen() {
       }
       headerAltinCizgi
       headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
-      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). */}
+      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). Yolculukta sahne tam ekran
+          olsun diye gizlenir; kanun adı ve ilerleme motorun kendi şeridinde yazar. */}
+      {yolculukSahne ? null : (
       <>
       <View style={st.ustBar}>
         <View style={st.statChip}>
@@ -496,6 +519,7 @@ export default function PatikaScreen() {
         ) : null}
       </View>
       </>
+      )}
 
       {kilitli ? (
         <KilitKarti kanunAd={kanunAd} />
@@ -516,6 +540,19 @@ export default function PatikaScreen() {
       ) : bolumsuz ? (
         // Bölümü olmayan kanun (TCK gibi) → tek varsayılan düğüm.
         <TekDugum onPress={() => akisAc({ lawId: String(lawId) })} />
+      ) : yolculuk ? (
+        // YOLCULUK (bayraklı): krem haritanın yerine perspektifli gece yolculuğu.
+        // Kenar boşluğu iptal — sahne tam ekran aksın.
+        <View style={st.yolculukSar}>
+          <YolculukWeb
+            duraklar={yolculukDuraklar}
+            aktif={aktifIndex}
+            kanunAd={kanunAd}
+            onDurakBas={(id) => {
+              akisAc({ bolumId: String(id) });
+            }}
+          />
+        </View>
       ) : (
         <View onLayout={(e) => {
           const y = Math.round(e.nativeEvent.layout.y);
@@ -1306,6 +1343,14 @@ function DurumKutu({
 }
 
 const st = StyleSheet.create({
+  // Yolculuk sahnesi tam ekran: Screen gövdesinin kenar boşluğunu geri alır.
+  yolculukSar: {
+    flex: 1,
+    marginHorizontal: -Spacing.three,
+    marginTop: -Spacing.three,
+    marginBottom: -Spacing.three,
+    backgroundColor: '#04222e',
+  },
   // ── DUOLINGO tarzı level haritası (bayraklı) ──
   duoSahne: {
     alignSelf: 'center',

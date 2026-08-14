@@ -2,7 +2,16 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 12 Ağustos 2026
+> Son güncelleme: 14 Ağustos 2026
+>
+> ### ▶ 14 Ağu gece — 🚗 PATİKA YOLCULUK: GERÇEK PERSPEKTİF MOTORU (bayraklı: başkan + Kemalettin)
+> **Karar zinciri:** Başkan 3B ister mi diye sordu → cevap: HAYIR şimdilik. Sebep: 3B dünya 3B MODEL ister, görsel üreticiler model üretmez (GPT'den istenen 12 kenar nesnesi + araç + panorama boşa gider); kıvrımlı yol ve tepe/iniş 3B'ye geçmeden bu motora eklenebilir (OutRun usulü). Sıra: (1) gerçek görseller, (2) yola kıvrım+tepe, (3) ancak ondan sonra 3B tartışılır.
+> **MOTOR (`src/assets/patika-yolculuk.ts`, WebView):** Katman kaydırma DEĞİL, gerçek izdüşüm — `olcek = ODAK*W/uzaklik`. Kamera Z ekseninde ilerler; tabela uzakta doğar, yaklaşırken büyür, aracın yanından geçip arkada kalır. Yol/kesikli çizgi/derz/reflektörlü dikmeler dünyada sabit, kamera içinden geçer. Dört etap (VADİ→ORMAN→YÜKSELİŞ→ZİRVE) progress'e bağlı KESİNTİSİZ harmanlanır (sis/zemin/ağaç türü+sıklığı). Zirve, yolun ötesinde gerçek uzaklıkta durur → kalan mesafe azaldıkça büyür. %100'de bitiş sineması (kamera yükselir, burun kalkar, "… TAMAMLANDI").
+> **Etkileşim:** parmakla sürükleme = ileri/geri (atalet + en yakın maddeye yay ile oturma), tabelaya dokunma = o maddenin kartı, alt düğme = bulunduğun madde. `DURAK_GERI=17` — araç tabelanın GERİSİNDE durur; yoksa bulunduğun maddenin tabelası kameranın üstünde kalıp görünmüyordu (başkan: "tabela hala görünmüyor" — 9'ken ekrandan taşıyordu).
+> **Araç:** 3/4 açılı fotoğraf bu bakış açısında yanlış duruyordu. Kameraya yakın yarı aynalanıp TAM ARKADAN üretildi; ters çıkan plaka/JANDARMA yazısı elle düzeltildi, aynalamadan doğan ÇİFT ANTEN kırpıldı, yatayda daraltılıp gerçek oran verildi (`arac-duz4.webp`, gömülü).
+> **Bağlantı:** `src/components/patika/yolculuk-web.tsx` (RN→motor `patikaKur`, motor→RN `durak`); `patika.tsx` bayrak `patika-yolculuk` — KAPALIYSA ekran bugünküyle birebir aynı (krem harita + ayak izleri + araç). Açıkken üst şerit/kanun kartı gizlenir, sahne tam ekran, sayfa kaydırması kapalı.
+> **Yayın:** OTA update group `88b984c6` (runtime 1.0.44) + `ozellik_kisi`'ye `patika-yolculuk` YALNIZ 98be2c62 (mayibey) ve 90501c0f (kemalettin) — Ahmet HARİÇ (başkan: "sadece Kemalettin ve ben"). Geri dönüş: bayrağı sunucudan sil.
+> **KALAN:** GPT'den 12 kenar nesnesi (çam/yapraklı/kaya/karlı çam/çalı) + tam arkadan araç + temiz zirve panoraması + boş tabela + bayrak. Ağaçlar hâlâ kodla çizilmiş siluet — sahnenin "amatör" duran tek yeri o. Sonra yola kıvrım+tepe.
 >
 > ### ▶ 12 Ağu gece — 🌙 OTONOM GECE: PATİKA SİNEMATİK YOLCULUK MOTORU (Faz 1-3) + Karargâh paneller (bayraklı)
 > **Başkan yattı, tam otonom yetki ("iş bitene kadar durma, kendini doğrula").** Kendini-kontrol: her faz tsc temiz + EAS export başarılı (=bundle çalışıyor kanıtı) + mantık review; güvenli teknoloji (RN Animated + PanResponder — babel/native worklet riski YOK, göremediğim runtime'da patlamaz).
