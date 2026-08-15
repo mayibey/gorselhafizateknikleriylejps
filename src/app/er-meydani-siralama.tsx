@@ -69,7 +69,7 @@ export default function ErMeydaniSiralamaScreen() {
   return (
     <Screen koyu={gece} title="Sıralama" onGeri={() => router.back()} headerAltinCizgi>
       <View style={styles.baslikSatir}>
-        <MaterialCommunityIcons name="calendar-week" size={20} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons name="calendar-week" size={20} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
           Bu haftanın Er Meydanı sıralaması · Pazartesi sıfırlanır
         </AppText>

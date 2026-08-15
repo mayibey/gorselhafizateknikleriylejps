@@ -40,7 +40,7 @@ export default function ErMeydaniGecmisScreen() {
   return (
     <Screen koyu={gece} title="Geçmiş Maçlar" onGeri={() => router.back()} headerAltinCizgi>
       <View style={styles.baslikSatir}>
-        <MaterialCommunityIcons name="history" size={20} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons name="history" size={20} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
           Son 60 maçın · en yeni üstte
         </AppText>
@@ -134,11 +134,11 @@ function MacSatiri({ mac }: { mac: GecmisMac }) {
         <AppText variant="altBaslik" color={gece ? 'altinParlak' : 'altinMetin'} bold>{mac.benim_puan}</AppText>
       ) : (
         <View style={styles.skorSatir}>
-          <AppText variant="altBaslik" color={kazandi ? 'yesil' : 'anaMetin'} bold>
+          <AppText variant="altBaslik" color={kazandi ? (gece ? 'yesilParlak' : 'yesil') : (gece ? 'kartMetinAcik' : 'anaMetin')} bold>
             {mac.benim_puan}
           </AppText>
           <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>–</AppText>
-          <AppText variant="altBaslik" color={kazandi ? 'anaMetin' : 'kirmizi'} bold>
+          <AppText variant="altBaslik" color={kazandi ? (gece ? 'kartMetinAcik' : 'anaMetin') : (gece ? 'kirmiziParlak' : 'kirmizi')} bold>
             {mac.rakip_puan}
           </AppText>
         </View>

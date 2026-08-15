@@ -37,7 +37,7 @@ export default function ErMeydaniLigScreen() {
   return (
     <Screen koyu={gece} title="Lig" onGeri={() => router.back()} headerAltinCizgi>
       <View style={styles.baslikSatir}>
-        <MaterialCommunityIcons name="chevron-triple-up" size={20} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons name="chevron-triple-up" size={20} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
           {durum ? `Sezon ${durum.sezon} · her ay sıfırlanır` : 'Dereceli lig · her ay sıfırlanır'}
         </AppText>

@@ -111,7 +111,7 @@ export default function ErMeydaniOdaScreen() {
       </View>
 
       <View style={styles.oyuncuBaslik}>
-        <MaterialCommunityIcons name="account-group" size={20} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons name="account-group" size={20} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>OYUNCULAR ({oyuncular.length}/{maxO})</AppText>
       </View>
 
@@ -123,7 +123,7 @@ export default function ErMeydaniOdaScreen() {
             <MaterialCommunityIcons
               name={i === 0 ? 'crown' : 'account'}
               size={18}
-              color={i === 0 ? Palette.altin : Palette.solukMetin}
+              color={i === 0 ? Palette.altin : (gece ? Palette.kartMetinIkincil : Palette.solukMetin)}
             />
             <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold style={styles.oyuncuAd} numberOfLines={1}>
               {o.rumuz}{o.ben ? ' (sen)' : ''}{i === 0 ? ' · kurucu' : ''}
@@ -166,7 +166,7 @@ export default function ErMeydaniOdaScreen() {
         </>
       ) : (
         <View style={styles.bekleKuran}>
-          <ActivityIndicator size="small" color={Palette.altinKoyu} />
+          <ActivityIndicator size="small" color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
           <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
             Kurucunun maçı başlatması bekleniyor…
           </AppText>

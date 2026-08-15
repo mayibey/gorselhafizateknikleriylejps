@@ -345,7 +345,7 @@ export default function ErMeydaniMacScreen() {
       <Screen koyu={gece} title="Oda Sonucu" onGeri={() => router.replace('/er-meydani')}>
         {odaSonuc == null ? (
           <View style={styles.odaBekle}>
-            <ActivityIndicator size="large" color={Palette.altinKoyu} />
+            <ActivityIndicator size="large" color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
             <AppText variant="baslik" color={gece ? 'altinParlak' : 'altinMetin'} bold style={styles.ortala}>Skorun: {benSkor}</AppText>
             <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
               Diğer oyuncular hâlâ oynuyor — hepsi bitince sıralama burada çıkacak.
@@ -409,7 +409,7 @@ export default function ErMeydaniMacScreen() {
       <Screen koyu={gece} title="Dereceli Maç" onGeri={() => router.replace('/er-meydani')}>
         {!bitti ? (
           <View style={styles.odaBekle}>
-            <ActivityIndicator size="large" color={Palette.altinKoyu} />
+            <ActivityIndicator size="large" color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
             <AppText variant="baslik" color={gece ? 'altinParlak' : 'altinMetin'} bold style={styles.ortala}>Skorun: {benSkor}</AppText>
             <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
               Maçını tamamladın. Rakibin sınavını bitirdiğinde sonuç hesaplanacak ve dereceni
@@ -429,9 +429,9 @@ export default function ErMeydaniMacScreen() {
               <MaterialCommunityIcons
                 name={berabere ? 'shield-half-full' : kazandim ? 'trophy' : 'shield-outline'}
                 size={64}
-                color={kazandim ? Palette.altin : berabere ? Palette.solukMetin : Palette.lacivert2}
+                color={kazandim ? Palette.altin : berabere ? (gece ? Palette.kartMetinIkincil : Palette.solukMetin) : (gece ? Palette.kartMetinIkincil : Palette.lacivert2)}
               />
-              <AppText variant="dev" color={kazandim ? 'altinMetin' : 'anaMetin'} bold style={styles.ortala}>
+              <AppText variant="dev" color={kazandim ? (gece ? 'altinParlak' : 'altinMetin') : (gece ? 'kartMetinAcik' : 'anaMetin')} bold style={styles.ortala}>
                 {berabere ? 'Berabere!' : kazandim ? 'Kazandın!' : 'Kaybettin'}
               </AppText>
             </View>
@@ -453,9 +453,9 @@ export default function ErMeydaniMacScreen() {
                 <MaterialCommunityIcons
                   name={d >= 0 ? 'trending-up' : 'trending-down'}
                   size={24}
-                  color={d >= 0 ? Palette.yesil : Palette.kirmizi}
+                  color={d >= 0 ? (gece ? Palette.yesilParlak : Palette.yesil) : (gece ? Palette.kirmiziParlak : Palette.kirmizi)}
                 />
-                <AppText variant="baslik" color={d >= 0 ? 'yesil' : 'kirmizi'} bold>
+                <AppText variant="baslik" color={d >= 0 ? (gece ? 'yesilParlak' : 'yesil') : (gece ? 'kirmiziParlak' : 'kirmizi')} bold>
                   {d >= 0 ? '+' : ''}{d}
                 </AppText>
               </View>
@@ -514,8 +514,8 @@ export default function ErMeydaniMacScreen() {
             SORU {index + 1}/{adet}
           </AppText>
           <View style={[styles.sureRozet, saniye <= 5 && styles.sureRozetAcil]}>
-            <MaterialCommunityIcons name="timer-outline" size={16} color={saniye <= 5 ? Palette.beyaz : Palette.lacivert} />
-            <AppText variant="kucuk" color={saniye <= 5 ? 'beyaz' : 'lacivert'} bold>
+            <MaterialCommunityIcons name="timer-outline" size={16} color={saniye <= 5 ? Palette.beyaz : (gece ? Palette.kartMetinIkincil : Palette.lacivert)} />
+            <AppText variant="kucuk" color={saniye <= 5 ? 'beyaz' : (gece ? 'kartMetinIkincil' : 'lacivert')} bold>
               {saniye}
             </AppText>
           </View>
@@ -580,11 +580,11 @@ export default function ErMeydaniMacScreen() {
                 yanlisSecim && styles.sikYanlis,
               ]}>
               <View style={[styles.sikHarf, (dogruSik || yanlisSecim) && styles.sikHarfVurgu]}>
-                <AppText variant="kucuk" color={dogruSik || yanlisSecim ? 'beyaz' : 'lacivert'} bold>
+                <AppText variant="kucuk" color={dogruSik || yanlisSecim ? 'beyaz' : (gece ? 'kartMetinIkincil' : 'lacivert')} bold>
                   {String.fromCharCode(65 + i)}
                 </AppText>
               </View>
-              <AppText variant="kucuk" color={dogruSik ? 'yesil' : yanlisSecim ? 'kirmizi' : 'anaMetin'} style={styles.sikMetin}>
+              <AppText variant="kucuk" color={dogruSik ? (gece ? 'yesilParlak' : 'yesil') : yanlisSecim ? (gece ? 'kirmiziParlak' : 'kirmizi') : (gece ? 'kartMetinAcik' : 'anaMetin')} style={styles.sikMetin}>
                 {s}
               </AppText>
             </Pressable>
@@ -611,10 +611,10 @@ function SkorKutu({
   const styles = useMemo(() => stilOlustur(gece), [gece]);
   return (
     <View style={styles.skorKutu}>
-      <AppText variant="etiket" color={vurgu ? 'lacivert' : 'solukMetin'} bold numberOfLines={1}>
+      <AppText variant="etiket" color={vurgu ? (gece ? 'kartMetinIkincil' : 'lacivert') : (gece ? 'kartMetinIkincil' : 'solukMetin')} bold numberOfLines={1}>
         {ad}
       </AppText>
-      <AppText variant="altBaslik" color={vurgu ? 'altinMetin' : 'anaMetin'} bold>
+      <AppText variant="altBaslik" color={vurgu ? (gece ? 'altinParlak' : 'altinMetin') : (gece ? 'kartMetinAcik' : 'anaMetin')} bold>
         {skor}
       </AppText>
       {altEtiket ? (
@@ -674,9 +674,9 @@ function SonucGorunum({
         <MaterialCommunityIcons
           name={berabere ? 'shield-half-full' : kazandim ? 'trophy' : 'shield-outline'}
           size={64}
-          color={kazandim ? Palette.altin : berabere ? Palette.solukMetin : Palette.lacivert2}
+          color={kazandim ? Palette.altin : berabere ? (gece ? Palette.kartMetinIkincil : Palette.solukMetin) : (gece ? Palette.kartMetinIkincil : Palette.lacivert2)}
         />
-        <AppText variant="dev" color={kazandim ? 'altinMetin' : 'anaMetin'} bold style={styles.ortala}>
+        <AppText variant="dev" color={kazandim ? (gece ? 'altinParlak' : 'altinMetin') : (gece ? 'kartMetinAcik' : 'anaMetin')} bold style={styles.ortala}>
           {berabere ? 'Berabere!' : kazandim ? 'Kazandın!' : 'Kaybettin'}
         </AppText>
       </View>
@@ -703,9 +703,9 @@ function SonucGorunum({
             <MaterialCommunityIcons
               name={ligS.delta >= 0 ? 'trending-up' : 'trending-down'}
               size={24}
-              color={ligS.delta >= 0 ? Palette.yesil : Palette.kirmizi}
+              color={ligS.delta >= 0 ? (gece ? Palette.yesilParlak : Palette.yesil) : (gece ? Palette.kirmiziParlak : Palette.kirmizi)}
             />
-            <AppText variant="baslik" color={ligS.delta >= 0 ? 'yesil' : 'kirmizi'} bold>
+            <AppText variant="baslik" color={ligS.delta >= 0 ? (gece ? 'yesilParlak' : 'yesil') : (gece ? 'kirmiziParlak' : 'kirmizi')} bold>
               {ligS.delta >= 0 ? '+' : ''}{ligS.delta}
             </AppText>
           </View>
@@ -715,7 +715,7 @@ function SonucGorunum({
         </View>
       ) : !ligMod && sunucu ? (
         <View style={styles.puanBilgi}>
-          <MaterialCommunityIcons name="star-four-points" size={18} color={Palette.altinKoyu} />
+          <MaterialCommunityIcons name="star-four-points" size={18} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
           <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'}>
             {sunucu.verilen > 0
               ? `Bu haftaki puanına +${sunucu.verilen} eklendi (toplam ${sunucu.haftalik_toplam}).`
@@ -816,12 +816,12 @@ function InceleGorunum({
               const benimYanlis = j === a.secilen && j !== soru.dogru;
               return (
                 <View key={j} style={[styles.inceleSik, dogruSik && styles.sikDogru, benimYanlis && styles.sikYanlis]}>
-                  <AppText variant="kucuk" color={dogruSik ? 'yesil' : benimYanlis ? 'kirmizi' : 'solukMetin'} bold>
+                  <AppText variant="kucuk" color={dogruSik ? (gece ? 'yesilParlak' : 'yesil') : benimYanlis ? (gece ? 'kirmiziParlak' : 'kirmizi') : (gece ? 'kartMetinIkincil' : 'solukMetin')} bold>
                     {String.fromCharCode(65 + j)}
                   </AppText>
                   <AppText
                     variant="kucuk"
-                    color={dogruSik ? 'yesil' : benimYanlis ? 'kirmizi' : 'anaMetin'}
+                    color={dogruSik ? (gece ? 'yesilParlak' : 'yesil') : benimYanlis ? (gece ? 'kirmiziParlak' : 'kirmizi') : (gece ? 'kartMetinAcik' : 'anaMetin')}
                     style={styles.inceleSikMetin}>
                     {s}
                   </AppText>
@@ -831,7 +831,7 @@ function InceleGorunum({
 
             {soru.aciklama ? (
               <View style={styles.aciklamaKutu}>
-                <AppText variant="etiket" color="altinKoyu" bold>AÇIKLAMA</AppText>
+                <AppText variant="etiket" color={gece ? 'altinParlak' : 'altinKoyu'} bold>AÇIKLAMA</AppText>
                 <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'} style={styles.aciklamaMetin}>{soru.aciklama}</AppText>
                 {soru.celdirici ? (
                   <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.celdiriciMetin}>
@@ -860,7 +860,7 @@ function InceleGorunum({
           <View style={styles.modalKart}>
             {durum === 'ok' ? (
               <>
-                <MaterialCommunityIcons name="check-circle" size={40} color={Palette.yesil} style={styles.ortala} />
+                <MaterialCommunityIcons name="check-circle" size={40} color={(gece ? Palette.yesilParlak : Palette.yesil)} style={styles.ortala} />
                 <AppText variant="govde" bold color={gece ? 'kartMetinAcik' : 'anaMetin'} style={styles.ortala}>Teşekkürler! Bildirimin bize ulaştı.</AppText>
                 <Pressable style={({ pressed }) => [styles.modalTekBtn, pressed && styles.basili]} onPress={kapatModal}>
                   <AppText variant="govde" color="beyaz" bold>Tamam</AppText>

@@ -44,6 +44,7 @@ export const Palette = {
   altinAcik2: '#E7BC56', // koyu üstünde altın accent (waveform/playhead)
   altinParlak: '#F3C24A', // GECE ekranında TAM PARLAK sıcak altın (handoff v2 COLOR_SPEC "bright") — kanonik altin'a dokunma, bu EK
   kirmiziParlak: '#F04438', // GECE ekranında uyarı kırmızısı (koyu zeminde #C00000 okunmuyordu; handoff #F04438) — EK
+  yesilParlak: '#3DBF6E', // GECE ekranında olumlu/kazandı yeşili (koyu zeminde #2E7D32 = 2.97:1, ikon eşiğini bile geçmiyordu) — EK
 
   // Korunan yardımcı tonlar (mevcut ekranlar kullanıyor)
   ten: '#E8C9A8',

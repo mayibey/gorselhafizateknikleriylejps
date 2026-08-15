@@ -194,7 +194,7 @@ export default function ErMeydaniLobiScreen() {
   return (
     <Screen koyu={gece} title="Er Meydanı" headerAltinCizgi onGeri={() => router.back()}>
       <View style={styles.girisKart}>
-        <MaterialCommunityIcons name="sword-cross" size={30} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons name="sword-cross" size={30} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'} style={styles.girisMetin}>
           10 soru, tek rakip. En hızlı ve en doğru cevaplayan kazanır. Ücretsiz — arkadaşını çağır, meydana çık!
         </AppText>
@@ -211,7 +211,7 @@ export default function ErMeydaniLobiScreen() {
               Oda kurmak, arkadaşını çağırmak ve rakip bulmak için aşağıya bir takma ad yazıp kaydet. Butonlar ondan sonra açılır.
             </AppText>
           </View>
-          <MaterialCommunityIcons name="arrow-down" size={22} color={Palette.altinKoyu} />
+          <MaterialCommunityIcons name="arrow-down" size={22} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         </View>
       ) : null}
 
@@ -256,7 +256,7 @@ export default function ErMeydaniLobiScreen() {
         disabled={!playAktif || eslesiyor}
         onPress={() => router.push('/dereceli-kuyruk')}
         style={({ pressed }) => [styles.ligBtn, (!playAktif || eslesiyor) && styles.pasif, pressed && styles.basili]}>
-        <MaterialCommunityIcons name="chevron-triple-up" size={26} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons name="chevron-triple-up" size={26} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         <View style={styles.btnMetin}>
           <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>Dereceli Maç</AppText>
           <AppText variant="etiket" color={gece ? 'altinParlak' : 'altinMetin'} bold>
@@ -267,7 +267,7 @@ export default function ErMeydaniLobiScreen() {
                 : 'Seviyene göre rakip · kazan puan al, kaybet puan ver'}
           </AppText>
         </View>
-        {eslesiyor ? <ActivityIndicator color={Palette.altinKoyu} /> : null}
+        {eslesiyor ? <ActivityIndicator color={(gece ? Palette.altinParlak : Palette.altinKoyu)} /> : null}
       </Pressable>
 
       {/* Oda kur (ayarlı) */}
@@ -304,7 +304,7 @@ export default function ErMeydaniLobiScreen() {
       {benimOdalar.length > 0 ? (
         <>
           <View style={styles.odalarBaslik}>
-            <MaterialCommunityIcons name="door-closed" size={18} color={Palette.altinKoyu} />
+            <MaterialCommunityIcons name="door-closed" size={18} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
             <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>ODALARIM</AppText>
           </View>
           {benimOdalar.map((o) => (
@@ -320,7 +320,7 @@ export default function ErMeydaniLobiScreen() {
                   {o.soru_sayisi} soru · {o.sure_sn} sn · {o.durum === 'oynaniyor' ? 'başladı' : 'bekliyor'}
                 </AppText>
               </View>
-              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altinKoyu} />
+              <MaterialCommunityIcons name="chevron-right" size={22} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
             </Pressable>
           ))}
         </>
@@ -328,7 +328,7 @@ export default function ErMeydaniLobiScreen() {
 
       {/* Açık odalar */}
       <View style={styles.odalarBaslik}>
-        <MaterialCommunityIcons name="door-open" size={18} color={Palette.altinKoyu} />
+        <MaterialCommunityIcons name="door-open" size={18} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
         <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>AÇIK ODALAR</AppText>
         <Pressable hitSlop={10} onPress={odalariYukle} style={styles.yenileBtn}>
           <MaterialCommunityIcons name="refresh" size={18} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
@@ -397,7 +397,7 @@ export default function ErMeydaniLobiScreen() {
       <Modal visible={onayOda != null} transparent animationType="fade" onRequestClose={() => setOnayOda(null)}>
         <View style={styles.modalKatman}>
           <View style={styles.modalKart}>
-            <MaterialCommunityIcons name="sword-cross" size={34} color={Palette.altinKoyu} />
+            <MaterialCommunityIcons name="sword-cross" size={34} color={(gece ? Palette.altinParlak : Palette.altinKoyu)} />
             <AppText variant="baslik" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold style={styles.mOrtali}>
               {onayOda?.kuran_rumuz} · Oda
             </AppText>
@@ -586,14 +586,14 @@ function OdaKurPanel({
         <Pressable
           onPress={() => setGizli(false)}
           style={({ pressed }) => [styles.tipChip, !gizli && styles.tipSecili, pressed && styles.basili]}>
-          <MaterialCommunityIcons name="earth" size={16} color={!gizli ? Palette.beyaz : Palette.lacivert} />
-          <AppText variant="kucuk" color={!gizli ? 'beyaz' : 'lacivert'} bold>Herkese Açık</AppText>
+          <MaterialCommunityIcons name="earth" size={16} color={!gizli ? Palette.beyaz : (gece ? Palette.kartMetinIkincil : Palette.lacivert)} />
+          <AppText variant="kucuk" color={!gizli ? 'beyaz' : (gece ? 'kartMetinIkincil' : 'lacivert')} bold>Herkese Açık</AppText>
         </Pressable>
         <Pressable
           onPress={() => setGizli(true)}
           style={({ pressed }) => [styles.tipChip, gizli && styles.tipSecili, pressed && styles.basili]}>
-          <MaterialCommunityIcons name="lock" size={16} color={gizli ? Palette.beyaz : Palette.lacivert} />
-          <AppText variant="kucuk" color={gizli ? 'beyaz' : 'lacivert'} bold>Şifreli</AppText>
+          <MaterialCommunityIcons name="lock" size={16} color={gizli ? Palette.beyaz : (gece ? Palette.kartMetinIkincil : Palette.lacivert)} />
+          <AppText variant="kucuk" color={gizli ? 'beyaz' : (gece ? 'kartMetinIkincil' : 'lacivert')} bold>Şifreli</AppText>
         </Pressable>
       </View>
       <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
@@ -628,7 +628,7 @@ function ChipSatir({ secenekler, secili, onSec }: { secenekler: number[]; secili
           key={n}
           onPress={() => onSec(n)}
           style={({ pressed }) => [styles.chip, secili === n && styles.chipSecili, pressed && styles.basili]}>
-          <AppText variant="govde" color={secili === n ? 'beyaz' : 'lacivert'} bold>{n}</AppText>
+          <AppText variant="govde" color={secili === n ? 'beyaz' : (gece ? 'kartMetinIkincil' : 'lacivert')} bold>{n}</AppText>
         </Pressable>
       ))}
     </View>
