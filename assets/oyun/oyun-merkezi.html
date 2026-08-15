@@ -78,10 +78,13 @@ body{margin:0;min-height:100vh;background:#EDE7DA;color:var(--metin);
 .asAdam.yandi .vc line,.asAdam.yandi .vc circle{stroke:var(--kirmizi)}
 .asHak{font-size:13px;color:var(--soluk);font-weight:600}
 .asHak b{color:var(--ana);font-size:15px}
-/* İki kelimeli cevaplarda boşluk ÇENGELDEKİ GİBİ koyu blok çizilir (.asH.blok) — oyuncu bu
-   dili çengelden zaten biliyor: koyu kutu = doldurulmaz. Önceden boşluk da normal bir harf
-   kutusu gibi görünüyordu; oyuncu iki kelime olduğunu anlamıyordu. */
-.asKelime{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:4px 0}
+/* İki kelimeli cevaplarda HER KELİME KENDİ SATIRINDA durur (.asKl = bir kelime).
+   Önce harfler tek bir akış hâlinde diziliyordu; satır dolunca kelime ortadan bölünüyor,
+   ikinci kelimenin ilk harfi üstte kalıp gerisi alta düşüyordu ("MAHKEME K / ARARI").
+   Kelimeyi satır grubuna almak bunu bitirir; boşluk kutusuna da gerek kalmaz, iki kelime
+   olduğu zaten iki satırdan anlaşılır. */
+.asKelime{display:flex;flex-direction:column;align-items:center;gap:6px;margin:4px 0}
+.asKl{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .asH.blok{background:var(--lacivert);opacity:.85;border-color:transparent}
 .asH{width:clamp(28px,8vw,38px);height:clamp(36px,10vw,46px);border-radius:9px;
   display:grid;place-items:center;font-size:clamp(17px,5vw,22px);font-weight:800;
@@ -2402,10 +2405,10 @@ function asCiz(){
     <div class="asUst">${asAdam(asYanlis.length,yandi)}
       <div class="asHak"><b>${Math.max(0,kalan)}</b> hakkın kaldı</div></div>
     <div class="kaynak"><div class="rf">${asKelime.ref}</div><div class="mt">${String(asKelime.ip).replace(/^\[[^\]]*\]\s*/,'')}</div></div>
-    <div class="asKelime">${[...asKelime.k].map(h=> h===' '
-      ? `<span class="asH blok"></span>`
-      : `<span class="asH ${asBulunan.has(h)||yandi?'ac':''}${yandi&&!asBulunan.has(h)?' kacan':''}">${
-          asBulunan.has(h)||yandi?h:''}</span>`).join('')}</div>
+    <div class="asKelime">${asKelime.k.split(' ').filter(k=>k).map(kel=>
+      `<div class="asKl">`+[...kel].map(h=>
+        `<span class="asH ${asBulunan.has(h)||yandi?'ac':''}${yandi&&!asBulunan.has(h)?' kacan':''}">${
+          asBulunan.has(h)||yandi?h:''}</span>`).join('')+`</div>`).join('')}</div>
     ${asYanlis.length?`<div class="asYanlis">Denediklerin: ${asYanlis.join(' · ')}</div>`:''}
     <div id="asSon"></div>
     <div id="altSabit"><div id="asKlavye"></div></div>`;
