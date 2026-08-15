@@ -1,6 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useKisiselOzellik } from '@/lib/ozellik';
+import { useCallback, useState, useMemo } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
@@ -10,6 +11,10 @@ import { type LigDurum, type LigTabloSatir, ligDurum, ligTablo } from '@/lib/er-
 
 /** ER MEYDANI — LİG TABLOSU. Kendi derecen (rating/kademe/sıra) + bu sezonun sıralaması. */
 export default function ErMeydaniLigScreen() {
+  // GECE TEMASI (bayraklı, 15 Ağu): yalnız başkan + Kemalettin. Bayrak kapalıysa
+  // ekran BİREBİR eskisi gibi kalır — orijinal renklere dokunulmadı.
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   const router = useRouter();
   const [durum, setDurum] = useState<LigDurum | null>(null);
   const [tablo, setTablo] = useState<LigTabloSatir[] | null>(null);
@@ -30,10 +35,10 @@ export default function ErMeydaniLigScreen() {
   );
 
   return (
-    <Screen title="Lig" onGeri={() => router.back()} headerAltinCizgi>
+    <Screen koyu={gece} title="Lig" onGeri={() => router.back()} headerAltinCizgi>
       <View style={styles.baslikSatir}>
         <MaterialCommunityIcons name="chevron-triple-up" size={20} color={Palette.altinKoyu} />
-        <AppText variant="kucuk" color="solukMetin" bold>
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
           {durum ? `Sezon ${durum.sezon} · her ay sıfırlanır` : 'Dereceli lig · her ay sıfırlanır'}
         </AppText>
       </View>
@@ -61,11 +66,11 @@ export default function ErMeydaniLigScreen() {
 
       {/* Tablo */}
       {tablo === null ? (
-        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+        <ActivityIndicator color={gece ? Palette.kartMetinAcik : Palette.lacivert} style={styles.yukleniyor} />
       ) : tablo.length === 0 ? (
         <View style={styles.bos}>
-          <MaterialCommunityIcons name="trophy-outline" size={44} color={Palette.solukMetin} />
-          <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+          <MaterialCommunityIcons name="trophy-outline" size={44} color={gece ? Palette.kartMetinIkincil : Palette.solukMetin} />
+          <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
             Bu sezon henüz dereceli maç oynanmadı. İlk dereceli maçı sen oyna, zirveye kur!
           </AppText>
         </View>
@@ -74,17 +79,17 @@ export default function ErMeydaniLigScreen() {
           {tablo.map((r) => (
             <View key={`${r.sira}-${r.rumuz}`} style={[styles.satir, r.ben && styles.satirBen]}>
               <View style={styles.siraNo}>
-                <AppText variant="kucuk" color="lacivert" bold>{r.sira}</AppText>
+                <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>{r.sira}</AppText>
               </View>
               <View style={styles.satirOrta}>
-                <AppText variant="govde" color="anaMetin" bold numberOfLines={1}>
+                <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold numberOfLines={1}>
                   {r.rumuz}{r.ben ? ' (sen)' : ''}
                 </AppText>
-                <AppText variant="etiket" color="solukMetin">
+                <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
                   {r.kademe} · {r.mac} maç · {r.galip} galibiyet
                 </AppText>
               </View>
-              <AppText variant="altBaslik" color="altinMetin" bold>{r.puan}</AppText>
+              <AppText variant="altBaslik" color={gece ? 'altinParlak' : 'altinMetin'} bold>{r.puan}</AppText>
             </View>
           ))}
         </View>
@@ -94,6 +99,8 @@ export default function ErMeydaniLigScreen() {
 }
 
 function DurumIstat({ etiket, deger }: { etiket: string; deger: number }) {
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   return (
     <View style={styles.istat}>
       <AppText variant="altBaslik" color="beyaz" bold>{deger}</AppText>
@@ -102,7 +109,7 @@ function DurumIstat({ etiket, deger }: { etiket: string; deger: number }) {
   );
 }
 
-const styles = StyleSheet.create({
+const stilOlustur = (gece: boolean) => StyleSheet.create({
   ortala: { textAlign: 'center' },
   baslikSatir: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   durumKart: { backgroundColor: Palette.lacivert, borderRadius: Radius.l, padding: Spacing.three, gap: Spacing.three },
@@ -121,10 +128,10 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three,
   },
-  satirBen: { borderColor: Palette.altin, backgroundColor: Palette.altinSolukYuzey },
+  satirBen: { borderColor: Palette.altin, backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey },
   siraNo: {
     width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center',
-    backgroundColor: Palette.altinSolukYuzey,
+    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey,
   },
   satirOrta: { flex: 1, gap: 2 },
 });

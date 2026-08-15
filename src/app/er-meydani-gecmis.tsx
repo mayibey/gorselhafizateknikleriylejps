@@ -1,6 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useKisiselOzellik } from '@/lib/ozellik';
+import { useCallback, useState, useMemo } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
@@ -14,6 +15,10 @@ import { type GecmisMac, gecmisOzet, macGecmisi, modAdi } from '@/lib/er-meydani
  * Oda maçlarında tek bir rakip yok (çok oyuncu) → orada rakip skoru yerine kendi skorun gösterilir.
  */
 export default function ErMeydaniGecmisScreen() {
+  // GECE TEMASI (bayraklı, 15 Ağu): yalnız başkan + Kemalettin. Bayrak kapalıysa
+  // ekran BİREBİR eskisi gibi kalır — orijinal renklere dokunulmadı.
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   const router = useRouter();
   const [liste, setListe] = useState<GecmisMac[] | null>(null);
 
@@ -33,10 +38,10 @@ export default function ErMeydaniGecmisScreen() {
   const oran = ozet && ozet.toplam ? Math.round((ozet.galibiyet / ozet.toplam) * 100) : 0;
 
   return (
-    <Screen title="Geçmiş Maçlar" onGeri={() => router.back()} headerAltinCizgi>
+    <Screen koyu={gece} title="Geçmiş Maçlar" onGeri={() => router.back()} headerAltinCizgi>
       <View style={styles.baslikSatir}>
         <MaterialCommunityIcons name="history" size={20} color={Palette.altinKoyu} />
-        <AppText variant="kucuk" color="solukMetin" bold>
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
           Son 60 maçın · en yeni üstte
         </AppText>
       </View>
@@ -68,11 +73,11 @@ export default function ErMeydaniGecmisScreen() {
       ) : null}
 
       {liste === null ? (
-        <ActivityIndicator color={Palette.lacivert} style={styles.yukleniyor} />
+        <ActivityIndicator color={gece ? Palette.kartMetinAcik : Palette.lacivert} style={styles.yukleniyor} />
       ) : liste.length === 0 ? (
         <View style={styles.bos}>
-          <MaterialCommunityIcons name="sword-cross" size={44} color={Palette.solukMetin} />
-          <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+          <MaterialCommunityIcons name="sword-cross" size={44} color={gece ? Palette.kartMetinIkincil : Palette.solukMetin} />
+          <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
             Henüz maç oynamadın. Meydana çık — buradan tüm maçlarını takip edebilirsin.
           </AppText>
         </View>
@@ -82,7 +87,7 @@ export default function ErMeydaniGecmisScreen() {
             <MacSatiri key={m.id} mac={m} />
           ))}
           {liste.length >= 60 ? (
-            <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+            <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
               Yalnız son 60 maç gösteriliyor.
             </AppText>
           ) : null}
@@ -104,6 +109,8 @@ function tarihYaz(iso: string): string {
 }
 
 function MacSatiri({ mac }: { mac: GecmisMac }) {
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   const oda = mac.mod === 'oda';
   const kazandi = mac.kazandim;
   const rakip = mac.rakip_rumuz?.trim() || (mac.golge ? 'Gölge rakip' : 'Rakip');
@@ -114,23 +121,23 @@ function MacSatiri({ mac }: { mac: GecmisMac }) {
       </View>
 
       <View style={styles.satirOrta}>
-        <AppText variant="govde" color="anaMetin" bold numberOfLines={1}>
+        <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold numberOfLines={1}>
           {oda ? modAdi(mac.mod) : rakip}
         </AppText>
-        <AppText variant="etiket" color="solukMetin" numberOfLines={1}>
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} numberOfLines={1}>
           {oda ? tarihYaz(mac.created_at) : `${modAdi(mac.mod)}${mac.golge ? ' · bot' : ''} · ${tarihYaz(mac.created_at)}`}
         </AppText>
       </View>
 
       {/* Oda maçında tek rakip yok (çok oyuncu) → yalnız kendi skorun anlamlı. */}
       {oda ? (
-        <AppText variant="altBaslik" color="altinMetin" bold>{mac.benim_puan}</AppText>
+        <AppText variant="altBaslik" color={gece ? 'altinParlak' : 'altinMetin'} bold>{mac.benim_puan}</AppText>
       ) : (
         <View style={styles.skorSatir}>
           <AppText variant="altBaslik" color={kazandi ? 'yesil' : 'anaMetin'} bold>
             {mac.benim_puan}
           </AppText>
-          <AppText variant="kucuk" color="solukMetin">–</AppText>
+          <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>–</AppText>
           <AppText variant="altBaslik" color={kazandi ? 'anaMetin' : 'kirmizi'} bold>
             {mac.rakip_puan}
           </AppText>
@@ -140,7 +147,7 @@ function MacSatiri({ mac }: { mac: GecmisMac }) {
   );
 }
 
-const styles = StyleSheet.create({
+const stilOlustur = (gece: boolean) => StyleSheet.create({
   ortala: { textAlign: 'center' },
   baslikSatir: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
   ozetKart: {

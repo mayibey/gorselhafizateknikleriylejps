@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ActivityIndicator, Modal, Pressable, ScrollView, Share, StyleSheet, TextInput, View } from 'react-native';
 
@@ -46,6 +47,10 @@ function maddeAyikla(kaynak: string): string {
 
 /** ER MEYDANI — MAÇ. 10 soru, süreli, gölge rakibe karşı hız yarışı. Sonuç aynı ekranda. */
 export default function ErMeydaniMacScreen() {
+  // GECE TEMASI (bayraklı, 15 Ağu): yalnız başkan + Kemalettin. Bayrak kapalıysa
+  // ekran BİREBİR eskisi gibi kalır — orijinal renklere dokunulmadı.
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   const router = useRouter();
   const params = useLocalSearchParams<{
     seed?: string;
@@ -322,8 +327,8 @@ export default function ErMeydaniMacScreen() {
 
   if (sorular.length === 0) {
     return (
-      <Screen title="Er Meydanı" onGeri={() => router.back()}>
-        <AppText variant="govde" color="solukMetin" style={styles.ortala}>
+      <Screen koyu={gece} title="Er Meydanı" onGeri={() => router.back()}>
+        <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
           Soru havuzu yüklenemedi. Lütfen tekrar dene.
         </AppText>
       </Screen>
@@ -337,27 +342,27 @@ export default function ErMeydaniMacScreen() {
   // Oda modu: herkes bitene kadar bekleme, sonra ODA SIRALAMASI (tüm oyuncular).
   if (faz === 'bitti' && odaMod) {
     return (
-      <Screen title="Oda Sonucu" onGeri={() => router.replace('/er-meydani')}>
+      <Screen koyu={gece} title="Oda Sonucu" onGeri={() => router.replace('/er-meydani')}>
         {odaSonuc == null ? (
           <View style={styles.odaBekle}>
             <ActivityIndicator size="large" color={Palette.altinKoyu} />
-            <AppText variant="baslik" color="altinMetin" bold style={styles.ortala}>Skorun: {benSkor}</AppText>
-            <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+            <AppText variant="baslik" color={gece ? 'altinParlak' : 'altinMetin'} bold style={styles.ortala}>Skorun: {benSkor}</AppText>
+            <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
               Diğer oyuncular hâlâ oynuyor — hepsi bitince sıralama burada çıkacak.
             </AppText>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
-              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
-              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
+              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
+              <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>İncele / Hata Bildir</AppText>
             </Pressable>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
-              <AppText variant="govde" color="solukMetin" bold>Çıkış</AppText>
+              <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>Çıkış</AppText>
             </Pressable>
           </View>
         ) : (
           <>
             <View style={styles.sonucUst}>
               <MaterialCommunityIcons name="podium-gold" size={56} color={Palette.altin} />
-              <AppText variant="dev" color="altinMetin" bold style={styles.ortala}>Oda Sıralaması</AppText>
+              <AppText variant="dev" color={gece ? 'altinParlak' : 'altinMetin'} bold style={styles.ortala}>Oda Sıralaması</AppText>
             </View>
             {odaSonuc.map((o, i) => {
               const kazanan = i === 0;
@@ -367,22 +372,22 @@ export default function ErMeydaniMacScreen() {
                     {kazanan ? (
                       <MaterialCommunityIcons name="crown" size={18} color={Palette.beyaz} />
                     ) : (
-                      <AppText variant="kucuk" color="lacivert" bold>{i + 1}</AppText>
+                      <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>{i + 1}</AppText>
                     )}
                   </View>
                   <View style={styles.odaSiraAdKol}>
-                    <AppText variant="govde" color="anaMetin" bold numberOfLines={1}>
+                    <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold numberOfLines={1}>
                       {o.rumuz}{o.ben ? ' (sen)' : ''}
                     </AppText>
-                    {kazanan ? <AppText variant="etiket" color="altinMetin" bold>👑 KAZANAN</AppText> : null}
+                    {kazanan ? <AppText variant="etiket" color={gece ? 'altinParlak' : 'altinMetin'} bold>👑 KAZANAN</AppText> : null}
                   </View>
-                  <AppText variant="altBaslik" color="altinMetin" bold>{o.skor ?? 0}</AppText>
+                  <AppText variant="altBaslik" color={gece ? 'altinParlak' : 'altinMetin'} bold>{o.skor ?? 0}</AppText>
                 </View>
               );
             })}
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
-              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
-              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
+              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
+              <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>İncele / Hata Bildir</AppText>
             </Pressable>
             <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
               <MaterialCommunityIcons name="sword-cross" size={22} color={Palette.beyaz} />
@@ -401,21 +406,21 @@ export default function ErMeydaniMacScreen() {
     const kazandim = bitti && d > 0;
     const berabere = bitti && d === 0;
     return (
-      <Screen title="Dereceli Maç" onGeri={() => router.replace('/er-meydani')}>
+      <Screen koyu={gece} title="Dereceli Maç" onGeri={() => router.replace('/er-meydani')}>
         {!bitti ? (
           <View style={styles.odaBekle}>
             <ActivityIndicator size="large" color={Palette.altinKoyu} />
-            <AppText variant="baslik" color="altinMetin" bold style={styles.ortala}>Skorun: {benSkor}</AppText>
-            <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+            <AppText variant="baslik" color={gece ? 'altinParlak' : 'altinMetin'} bold style={styles.ortala}>Skorun: {benSkor}</AppText>
+            <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
               Maçını tamamladın. Rakibin sınavını bitirdiğinde sonuç hesaplanacak ve dereceni
               bildirimle öğreneceksin. Beklemen gerekmez — çıkabilirsin.
             </AppText>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
-              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
-              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
+              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
+              <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>İncele / Hata Bildir</AppText>
             </Pressable>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani')}>
-              <AppText variant="govde" color="solukMetin" bold>Çıkış</AppText>
+              <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>Çıkış</AppText>
             </Pressable>
           </View>
         ) : (
@@ -432,15 +437,15 @@ export default function ErMeydaniMacScreen() {
             </View>
             <View style={styles.sonucSkorlar}>
               <View style={styles.sonucSkorKutu}>
-                <AppText variant="etiket" color="solukMetin" bold>SEN</AppText>
-                <AppText variant="dev" color="altinMetin" bold>{benSkor}</AppText>
+                <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>SEN</AppText>
+                <AppText variant="dev" color={gece ? 'altinParlak' : 'altinMetin'} bold>{benSkor}</AppText>
               </View>
-              <AppText variant="baslik" color="solukMetin">–</AppText>
+              <AppText variant="baslik" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>–</AppText>
               <View style={styles.sonucSkorKutu}>
-                <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>
+                <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold numberOfLines={1}>
                   {(dereceliSonuc?.rakip_rumuz ?? 'RAKİP').toUpperCase()}
                 </AppText>
-                <AppText variant="dev" color="anaMetin" bold>{dereceliSonuc?.rakip_skor ?? 0}</AppText>
+                <AppText variant="dev" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold>{dereceliSonuc?.rakip_skor ?? 0}</AppText>
               </View>
             </View>
             <View style={styles.ligSonucKutu}>
@@ -454,21 +459,21 @@ export default function ErMeydaniMacScreen() {
                   {d >= 0 ? '+' : ''}{d}
                 </AppText>
               </View>
-              <AppText variant="kucuk" color="anaMetin" bold>
+              <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold>
                 Yeni derecen: {dereceliSonuc?.yeni_rating} · {dereceliSonuc?.kademe}
               </AppText>
             </View>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => setFaz('inceleme')}>
-              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
-              <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
+              <MaterialCommunityIcons name="book-open-page-variant" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
+              <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>İncele / Hata Bildir</AppText>
             </Pressable>
             <Pressable style={({ pressed }) => [styles.anaBtn, pressed && styles.basili]} onPress={() => router.replace('/dereceli-kuyruk')}>
               <MaterialCommunityIcons name="sword-cross" size={22} color={Palette.beyaz} />
               <AppText variant="govde" color="beyaz" bold>Yeni Dereceli Maç</AppText>
             </Pressable>
             <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={() => router.replace('/er-meydani-lig')}>
-              <MaterialCommunityIcons name="podium-gold" size={20} color={Palette.lacivert} />
-              <AppText variant="govde" color="lacivert" bold>Lig Tablosu</AppText>
+              <MaterialCommunityIcons name="podium-gold" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
+              <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>Lig Tablosu</AppText>
             </Pressable>
           </>
         )}
@@ -500,12 +505,12 @@ export default function ErMeydaniMacScreen() {
   const sureOran = Math.max(0, kalanMs / sureMs);
 
   return (
-    <Screen title="Er Meydanı" onGeri={() => router.back()} scroll={false}>
+    <Screen koyu={gece} title="Er Meydanı" onGeri={() => router.back()} scroll={false}>
       {/* Skor barı: Sen vs Rakip */}
       <View style={styles.skorBar}>
         <SkorKutu ad="Sen" skor={benSkor} vurgu />
         <View style={styles.ortaBilgi}>
-          <AppText variant="etiket" color="solukMetin" bold>
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>
             SORU {index + 1}/{adet}
           </AppText>
           <View style={[styles.sureRozet, saniye <= 5 && styles.sureRozetAcil]}>
@@ -519,19 +524,19 @@ export default function ErMeydaniMacScreen() {
           <SkorKutu ad={ligRakip.rumuz} skor={ligRakip.skor} altEtiket="hedef" />
         ) : odaMod ? (
           <View style={styles.skorKutu}>
-            <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>
+            <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold numberOfLines={1}>
               {odaRakipler.length > 1 ? 'RAKİPLER' : 'RAKİP'}
             </AppText>
-            <MaterialCommunityIcons name="account-group" size={20} color={Palette.solukMetin} />
-            <AppText variant="etiket" color="anaMetin" bold numberOfLines={2} style={styles.ortala}>
+            <MaterialCommunityIcons name="account-group" size={20} color={gece ? Palette.kartMetinIkincil : Palette.solukMetin} />
+            <AppText variant="etiket" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold numberOfLines={2} style={styles.ortala}>
               {odaRakipler.length ? odaRakipler.join(', ') : 'bekleniyor'}
             </AppText>
           </View>
         ) : dereceliMod ? (
           <View style={styles.skorKutu}>
-            <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>RAKİP</AppText>
-            <MaterialCommunityIcons name="sword-cross" size={20} color={Palette.solukMetin} />
-            <AppText variant="etiket" color="anaMetin" bold numberOfLines={1} style={styles.ortala}>
+            <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold numberOfLines={1}>RAKİP</AppText>
+            <MaterialCommunityIcons name="sword-cross" size={20} color={gece ? Palette.kartMetinIkincil : Palette.solukMetin} />
+            <AppText variant="etiket" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold numberOfLines={1} style={styles.ortala}>
               {params.rakip_rumuz || 'Rakip'}
             </AppText>
           </View>
@@ -602,6 +607,8 @@ function SkorKutu({
   vurgu?: boolean;
   altEtiket?: string;
 }) {
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   return (
     <View style={styles.skorKutu}>
       <AppText variant="etiket" color={vurgu ? 'lacivert' : 'solukMetin'} bold numberOfLines={1}>
@@ -611,7 +618,7 @@ function SkorKutu({
         {skor}
       </AppText>
       {altEtiket ? (
-        <AppText variant="etiket" color="solukMetin">
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
           {altEtiket}
         </AppText>
       ) : null}
@@ -646,6 +653,8 @@ function SonucGorunum({
   onSiralama: () => void;
   onCik: () => void;
 }) {
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   const kazandim = benSkor > rakipSkor;
   const berabere = benSkor === rakipSkor;
 
@@ -660,7 +669,7 @@ function SonucGorunum({
   }
 
   return (
-    <Screen title={ligMod ? 'Dereceli Maç' : 'Er Meydanı'} onGeri={onCik}>
+    <Screen koyu={gece} title={ligMod ? 'Dereceli Maç' : 'Er Meydanı'} onGeri={onCik}>
       <View style={styles.sonucUst}>
         <MaterialCommunityIcons
           name={berabere ? 'shield-half-full' : kazandim ? 'trophy' : 'shield-outline'}
@@ -674,18 +683,18 @@ function SonucGorunum({
 
       <View style={styles.sonucSkorlar}>
         <View style={styles.sonucSkorKutu}>
-          <AppText variant="etiket" color="solukMetin" bold>SEN</AppText>
-          <AppText variant="dev" color="altinMetin" bold>{benSkor}</AppText>
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>SEN</AppText>
+          <AppText variant="dev" color={gece ? 'altinParlak' : 'altinMetin'} bold>{benSkor}</AppText>
         </View>
-        <AppText variant="baslik" color="solukMetin">–</AppText>
+        <AppText variant="baslik" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>–</AppText>
         <View style={styles.sonucSkorKutu}>
-          <AppText variant="etiket" color="solukMetin" bold numberOfLines={1}>{rakipRumuz.toUpperCase()}</AppText>
-          <AppText variant="dev" color="anaMetin" bold>{rakipSkor}</AppText>
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold numberOfLines={1}>{rakipRumuz.toUpperCase()}</AppText>
+          <AppText variant="dev" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold>{rakipSkor}</AppText>
         </View>
       </View>
 
       {kaydediliyor ? (
-        <AppText variant="kucuk" color="solukMetin" style={styles.ortala}>
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.ortala}>
           {ligMod ? 'Derece hesaplanıyor…' : 'Puan kaydediliyor…'}
         </AppText>
       ) : ligMod && ligS ? (
@@ -700,14 +709,14 @@ function SonucGorunum({
               {ligS.delta >= 0 ? '+' : ''}{ligS.delta}
             </AppText>
           </View>
-          <AppText variant="kucuk" color="anaMetin" bold>
+          <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'} bold>
             Yeni derecen: {ligS.rating} · {ligS.kademe}
           </AppText>
         </View>
       ) : !ligMod && sunucu ? (
         <View style={styles.puanBilgi}>
           <MaterialCommunityIcons name="star-four-points" size={18} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" color="anaMetin">
+          <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'}>
             {sunucu.verilen > 0
               ? `Bu haftaki puanına +${sunucu.verilen} eklendi (toplam ${sunucu.haftalik_toplam}).`
               : 'Bugünkü sınıra ulaştın; bu maç sıralamaya sayılmadı ama pratik oldu.'}
@@ -722,21 +731,21 @@ function SonucGorunum({
         <AppText variant="govde" color="beyaz" bold>{ligMod ? 'Yeni Dereceli Maç' : 'Yeni Rakip'}</AppText>
       </Pressable>
       <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={onIncele}>
-        <MaterialCommunityIcons name="book-open-page-variant" size={20} color={Palette.lacivert} />
+        <MaterialCommunityIcons name="book-open-page-variant" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
         <View style={styles.inceleBtnMetin}>
-          <AppText variant="govde" color="lacivert" bold>İncele / Hata Bildir</AppText>
-          <AppText variant="etiket" color="solukMetin">Doğru cevaplar + açıklamalarıyla öğren</AppText>
+          <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>İncele / Hata Bildir</AppText>
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>Doğru cevaplar + açıklamalarıyla öğren</AppText>
         </View>
       </Pressable>
       {!ligMod ? (
         <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={paylas}>
-          <MaterialCommunityIcons name="share-variant" size={20} color={Palette.lacivert} />
-          <AppText variant="govde" color="lacivert" bold>Sonucu Paylaş</AppText>
+          <MaterialCommunityIcons name="share-variant" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
+          <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>Sonucu Paylaş</AppText>
         </Pressable>
       ) : null}
       <Pressable style={({ pressed }) => [styles.ikincilBtn, pressed && styles.basili]} onPress={onSiralama}>
-        <MaterialCommunityIcons name="podium-gold" size={20} color={Palette.lacivert} />
-        <AppText variant="govde" color="lacivert" bold>{ligMod ? 'Lig Tablosu' : 'Sıralamayı Gör'}</AppText>
+        <MaterialCommunityIcons name="podium-gold" size={20} color={gece ? Palette.kartMetinAcik : Palette.lacivert} />
+        <AppText variant="govde" color={gece ? 'kartMetinAcik' : 'lacivert'} bold>{ligMod ? 'Lig Tablosu' : 'Sıralamayı Gör'}</AppText>
       </Pressable>
     </Screen>
   );
@@ -752,6 +761,8 @@ function InceleGorunum({
   adimlar: MacAdim[];
   onGeri: () => void;
 }) {
+  const gece = useKisiselOzellik('gece-er-meydani');
+  const styles = useMemo(() => stilOlustur(gece), [gece]);
   const [hataSoru, setHataSoru] = useState<DuelloSoru | null>(null);
   const [hataMetin, setHataMetin] = useState('');
   const [durum, setDurum] = useState<'yaz' | 'gonderiliyor' | 'ok' | 'hata'>('yaz');
@@ -782,7 +793,7 @@ function InceleGorunum({
   }
 
   return (
-    <Screen title="İncele / Hata Bildir" onGeri={onGeri} headerAltinCizgi>
+    <Screen koyu={gece} title="İncele / Hata Bildir" onGeri={onGeri} headerAltinCizgi>
       {adimlar.map((a, i) => {
         const soru = sorular[i];
         if (!soru) return null;
@@ -793,12 +804,12 @@ function InceleGorunum({
                 <MaterialCommunityIcons name={a.dogru ? 'check' : 'close'} size={14} color={Palette.beyaz} />
                 <AppText variant="etiket" color="beyaz" bold>{a.dogru ? 'Doğru' : a.secilen == null ? 'Boş' : 'Yanlış'}</AppText>
               </View>
-              <AppText variant="etiket" color="solukMetin" numberOfLines={1} style={styles.inceleKaynak}>
+              <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} numberOfLines={1} style={styles.inceleKaynak}>
                 {i + 1}/{adimlar.length}{soru.kaynak ? ` · ${soru.kaynak}` : ''}
               </AppText>
             </View>
 
-            <AppText variant="kucuk" bold color="anaMetin" style={styles.inceleSoru}>{soru.soru}</AppText>
+            <AppText variant="kucuk" bold color={gece ? 'kartMetinAcik' : 'anaMetin'} style={styles.inceleSoru}>{soru.soru}</AppText>
 
             {soru.siklar.map((s, j) => {
               const dogruSik = j === soru.dogru;
@@ -821,9 +832,9 @@ function InceleGorunum({
             {soru.aciklama ? (
               <View style={styles.aciklamaKutu}>
                 <AppText variant="etiket" color="altinKoyu" bold>AÇIKLAMA</AppText>
-                <AppText variant="kucuk" color="anaMetin" style={styles.aciklamaMetin}>{soru.aciklama}</AppText>
+                <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'} style={styles.aciklamaMetin}>{soru.aciklama}</AppText>
                 {soru.celdirici ? (
-                  <AppText variant="etiket" color="solukMetin" style={styles.celdiriciMetin}>
+                  <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={styles.celdiriciMetin}>
                     Neden diğerleri yanlış: {soru.celdirici}
                   </AppText>
                 ) : null}
@@ -837,8 +848,8 @@ function InceleGorunum({
                 setDurum('yaz');
               }}
               style={({ pressed }) => [styles.hataBildirBtn, pressed && styles.basili]}>
-              <MaterialCommunityIcons name="flag-outline" size={15} color={Palette.kirmizi} />
-              <AppText variant="etiket" color="kirmizi" bold>Bu soruda hata var — bildir</AppText>
+              <MaterialCommunityIcons name="flag-outline" size={15} color={gece ? Palette.kirmiziParlak : Palette.kirmizi} />
+              <AppText variant="etiket" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold>Bu soruda hata var — bildir</AppText>
             </Pressable>
           </View>
         );
@@ -850,16 +861,16 @@ function InceleGorunum({
             {durum === 'ok' ? (
               <>
                 <MaterialCommunityIcons name="check-circle" size={40} color={Palette.yesil} style={styles.ortala} />
-                <AppText variant="govde" bold color="anaMetin" style={styles.ortala}>Teşekkürler! Bildirimin bize ulaştı.</AppText>
+                <AppText variant="govde" bold color={gece ? 'kartMetinAcik' : 'anaMetin'} style={styles.ortala}>Teşekkürler! Bildirimin bize ulaştı.</AppText>
                 <Pressable style={({ pressed }) => [styles.modalTekBtn, pressed && styles.basili]} onPress={kapatModal}>
                   <AppText variant="govde" color="beyaz" bold>Tamam</AppText>
                 </Pressable>
               </>
             ) : (
               <>
-                <AppText variant="altBaslik" bold color="anaMetin">Hata Bildir</AppText>
-                <AppText variant="etiket" color="solukMetin">Seçilen soru: {hataSoru?.id} · {hataSoru?.kaynak}</AppText>
-                <AppText variant="kucuk" color="anaMetin" numberOfLines={3} style={styles.modalSoru}>{hataSoru?.soru}</AppText>
+                <AppText variant="altBaslik" bold color={gece ? 'kartMetinAcik' : 'anaMetin'}>Hata Bildir</AppText>
+                <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>Seçilen soru: {hataSoru?.id} · {hataSoru?.kaynak}</AppText>
+                <AppText variant="kucuk" color={gece ? 'kartMetinAcik' : 'anaMetin'} numberOfLines={3} style={styles.modalSoru}>{hataSoru?.soru}</AppText>
                 <TextInput
                   value={hataMetin}
                   onChangeText={setHataMetin}
@@ -868,10 +879,10 @@ function InceleGorunum({
                   multiline
                   style={styles.modalInput}
                 />
-                {durum === 'hata' ? <AppText variant="etiket" color="kirmizi" bold>Gönderilemedi, tekrar dene.</AppText> : null}
+                {durum === 'hata' ? <AppText variant="etiket" color={gece ? 'kirmiziParlak' : 'kirmizi'} bold>Gönderilemedi, tekrar dene.</AppText> : null}
                 <View style={styles.modalBtnSatir}>
                   <Pressable style={({ pressed }) => [styles.modalVazgec, pressed && styles.basili]} onPress={kapatModal}>
-                    <AppText variant="govde" color="solukMetin" bold>Vazgeç</AppText>
+                    <AppText variant="govde" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold>Vazgeç</AppText>
                   </Pressable>
                   <Pressable
                     disabled={!hataMetin.trim() || durum === 'gonderiliyor'}
@@ -889,7 +900,7 @@ function InceleGorunum({
   );
 }
 
-const styles = StyleSheet.create({
+const stilOlustur = (gece: boolean) => StyleSheet.create({
   ortala: { textAlign: 'center' },
   odaBekle: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.three, paddingBottom: Spacing.six },
   odaSira: {
@@ -897,13 +908,13 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three,
   },
-  odaSiraBen: { borderColor: Palette.altin, backgroundColor: Palette.altinSolukYuzey },
+  odaSiraBen: { borderColor: Palette.altin, backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey },
   odaSiraNo: {
     width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center',
-    backgroundColor: Palette.altinSolukYuzey,
+    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey,
   },
   odaSiraNoAltin: { backgroundColor: Palette.altin },
-  odaSiraKazanan: { borderColor: Palette.altin, backgroundColor: Palette.altinSolukYuzey },
+  odaSiraKazanan: { borderColor: Palette.altin, backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey },
   odaSiraAd: { flex: 1 },
   odaSiraAdKol: { flex: 1, gap: 2 },
   inceleBtnMetin: { flex: 1, gap: 2 },
@@ -927,7 +938,7 @@ const styles = StyleSheet.create({
   },
   inceleSikMetin: { flex: 1, lineHeight: 20 },
   aciklamaKutu: {
-    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three, gap: 3,
+    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three, gap: 3,
   },
   aciklamaMetin: { lineHeight: 21 },
   celdiriciMetin: { lineHeight: 18, marginTop: Spacing.one, fontStyle: 'italic' },
@@ -946,11 +957,11 @@ const styles = StyleSheet.create({
   ortaBilgi: { alignItems: 'center', gap: Spacing.one, minWidth: 64 },
   sureRozet: {
     flexDirection: 'row', alignItems: 'center', gap: 4,
-    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.s,
+    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey, borderRadius: Radius.s,
     paddingHorizontal: Spacing.two, paddingVertical: 2,
   },
   sureRozetAcil: { backgroundColor: Palette.kirmizi },
-  sureTrack: { height: 6, backgroundColor: Palette.ilerlemeTrack, borderRadius: 3, overflow: 'hidden' },
+  sureTrack: { height: 6, backgroundColor: gece ? 'rgba(255,255,255,0.13)' : Palette.ilerlemeTrack, borderRadius: 3, overflow: 'hidden' },
   sureDolu: { height: '100%', backgroundColor: Palette.altin },
   sureDoluAcil: { backgroundColor: Palette.kirmizi },
   soruKart: {
@@ -971,7 +982,7 @@ const styles = StyleSheet.create({
   sikYanlis: { borderColor: Palette.kirmizi, backgroundColor: '#FBF0F0' },
   sikHarf: {
     width: 28, height: 28, borderRadius: 14, alignItems: 'center', justifyContent: 'center',
-    backgroundColor: Palette.altinSolukYuzey,
+    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey,
   },
   sikHarfVurgu: { backgroundColor: Palette.lacivert },
   sikMetin: { flex: 1, lineHeight: 21 },
@@ -980,11 +991,11 @@ const styles = StyleSheet.create({
   sonucSkorKutu: { alignItems: 'center', gap: 2, minWidth: 96 },
   puanBilgi: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
-    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three,
+    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three,
   },
   ligSonucKutu: {
     alignItems: 'center', gap: Spacing.one,
-    backgroundColor: Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three,
+    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three,
   },
   ligDeltaSatir: { flexDirection: 'row', alignItems: 'center', gap: Spacing.one },
   anaBtn: {
@@ -1015,8 +1026,8 @@ const styles = StyleSheet.create({
   modalSoru: { marginTop: Spacing.one },
   modalInput: {
     minHeight: 90, textAlignVertical: 'top',
-    backgroundColor: Palette.kremZemin, borderWidth: 1, borderColor: Palette.kenarlik,
-    borderRadius: Radius.m, padding: Spacing.three, color: Palette.anaMetin,
+    backgroundColor: gece ? '#08202F' : Palette.kremZemin, borderWidth: 1, borderColor: Palette.kenarlik,
+    borderRadius: Radius.m, padding: Spacing.three, color: gece ? Palette.kartMetinAcik : Palette.anaMetin,
   },
   modalBtnSatir: { flexDirection: 'row', gap: Spacing.two, marginTop: Spacing.one },
   modalVazgec: {
