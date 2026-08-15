@@ -125,7 +125,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   listeSarma: { gap: Spacing.two },
   satir: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three,
   },
   satirBen: { borderColor: Palette.altin, backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey },

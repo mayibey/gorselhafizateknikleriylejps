@@ -161,10 +161,10 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   listeSarma: { gap: Spacing.two },
   satir: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderRadius: Radius.m, padding: Spacing.three,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderRadius: Radius.m, padding: Spacing.three,
   },
-  satirGalip: { borderColor: Palette.kenarlik, borderLeftWidth: 4, borderLeftColor: Palette.yesil },
-  satirMaglup: { borderColor: Palette.kenarlik, borderLeftWidth: 4, borderLeftColor: Palette.kirmizi },
+  satirGalip: { borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik, borderLeftWidth: 4, borderLeftColor: Palette.yesil },
+  satirMaglup: { borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik, borderLeftWidth: 4, borderLeftColor: Palette.kirmizi },
   rozet: { width: 28, height: 28, borderRadius: 14, alignItems: 'center', justifyContent: 'center' },
   satirOrta: { flex: 1, gap: 2 },
   skorSatir: { flexDirection: 'row', alignItems: 'baseline', gap: 4 },

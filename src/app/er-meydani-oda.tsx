@@ -190,13 +190,13 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   paylasBtn: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.one,
     marginTop: Spacing.one, paddingHorizontal: Spacing.three, paddingVertical: Spacing.one,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik, borderRadius: Radius.m,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik, borderRadius: Radius.m,
   },
   oyuncuBaslik: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two, marginTop: Spacing.two },
   yukleniyor: { marginVertical: Spacing.three },
   oyuncuSatir: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m, paddingHorizontal: Spacing.three, paddingVertical: Spacing.two,
   },
   oyuncuBen: { borderColor: Palette.altin, backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey },
@@ -213,11 +213,11 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   },
   iptalBtn: {
     alignItems: 'center', justifyContent: 'center',
-    borderWidth: 1, borderColor: Palette.kenarlik, borderRadius: Radius.m, paddingVertical: Spacing.three,
+    borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik, borderRadius: Radius.m, paddingVertical: Spacing.three,
   },
   bekleKuran: {
     alignItems: 'center', gap: Spacing.two,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three, marginTop: Spacing.two,
   },
   geriNot: { textAlign: 'center', marginTop: Spacing.one },

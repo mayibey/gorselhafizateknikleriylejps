@@ -905,7 +905,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   odaBekle: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.three, paddingBottom: Spacing.six },
   odaSira: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three,
   },
   odaSiraBen: { borderColor: Palette.altin, backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey },
@@ -919,7 +919,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   odaSiraAdKol: { flex: 1, gap: 2 },
   inceleBtnMetin: { flex: 1, gap: 2 },
   inceleKart: {
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.l, padding: Spacing.three, gap: Spacing.two,
   },
   inceleUst: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two },
@@ -933,7 +933,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   inceleSoru: { lineHeight: 21 },
   inceleSik: {
     flexDirection: 'row', alignItems: 'flex-start', gap: Spacing.two,
-    borderWidth: 1, borderColor: Palette.kenarlik, borderRadius: Radius.m,
+    borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik, borderRadius: Radius.m,
     paddingHorizontal: Spacing.two, paddingVertical: Spacing.two,
   },
   inceleSikMetin: { flex: 1, lineHeight: 20 },
@@ -946,9 +946,9 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   skorKutu: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: Palette.kartKremi,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi,
     borderWidth: 1,
-    borderColor: Palette.kenarlik,
+    borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m,
     paddingVertical: Spacing.two,
     paddingHorizontal: Spacing.one,
@@ -965,7 +965,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   sureDolu: { height: '100%', backgroundColor: Palette.altin },
   sureDoluAcil: { backgroundColor: Palette.kirmizi },
   soruKart: {
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.l, padding: Spacing.three,
   },
   soruMetin: { lineHeight: 26 },
@@ -974,7 +974,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   oyunKaydirIc: { gap: Spacing.three, paddingBottom: Spacing.four },
   sik: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.two,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three,
   },
   sikBasili: { opacity: 0.7 },
@@ -1004,7 +1004,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   },
   ikincilBtn: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.two,
-    backgroundColor: Palette.kartKremi, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m, paddingVertical: Spacing.three,
   },
   basili: { opacity: 0.8 },
@@ -1020,19 +1020,19 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   },
   modalKart: {
     width: '100%', maxWidth: 420, gap: Spacing.two,
-    backgroundColor: Palette.kartKremi, borderRadius: Radius.l, padding: Spacing.four,
-    borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderRadius: Radius.l, padding: Spacing.four,
+    borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
   },
   modalSoru: { marginTop: Spacing.one },
   modalInput: {
     minHeight: 90, textAlignVertical: 'top',
-    backgroundColor: gece ? '#08202F' : Palette.kremZemin, borderWidth: 1, borderColor: Palette.kenarlik,
+    backgroundColor: gece ? '#08202F' : Palette.kremZemin, borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik,
     borderRadius: Radius.m, padding: Spacing.three, color: gece ? Palette.kartMetinAcik : Palette.anaMetin,
   },
   modalBtnSatir: { flexDirection: 'row', gap: Spacing.two, marginTop: Spacing.one },
   modalVazgec: {
     flex: 1, alignItems: 'center', justifyContent: 'center',
-    borderWidth: 1, borderColor: Palette.kenarlik, borderRadius: Radius.m, paddingVertical: Spacing.three,
+    borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik, borderRadius: Radius.m, paddingVertical: Spacing.three,
   },
   modalGonder: {
     flex: 1, alignItems: 'center', justifyContent: 'center',
