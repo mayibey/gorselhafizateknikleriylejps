@@ -35,7 +35,7 @@ const KLASOR = FileSystem.documentDirectory ? `${FileSystem.documentDirectory}js
 const IMZALAR = ['OYUNLAR', 'mevzuKopru', "tip:'hazir'", 'let TEST_MODU = false'];
 const ASGARI_HANE = 200_000;
 /** İlk indirme için beklenecek azami süre; aşılırsa gömülüyle açılır, indirme arka planda sürer. */
-const BEKLEME_MS = 5000;
+const BEKLEME_MS = 12000;   // 5 sn 1 MB'a yetmiyordu: ilk açılış hep eski sürümle açılıyordu
 
 /**
  * KİŞİYE ÖZEL SÜRÜM (9 Ağu 2026, başkan kararı): yeni oyun sürümleri önce YALNIZ
@@ -45,14 +45,30 @@ const BEKLEME_MS = 5000;
  * Kayıt yoksa/okunamazsa hiçbir şey değişmez — herkes genel sürümde kalır.
  * ASLA hata fırlatmaz; oturum yoksa sessizce null döner.
  */
+/** Oturum açılışta ASENKRON geri yükleniyor; Oyunlar sekmesi ondan önce açılabiliyor.
+ *  Kullanıcı id'si için kısa süre beklenir (en fazla ~1,5 sn). Bulunamazsa null. */
+async function kullaniciId(): Promise<string | null> {
+  if (!supabase) return null;
+  for (let i = 0; i < 6; i++) {
+    try {
+      const { data } = await supabase.auth.getSession();
+      const uid = data.session?.user?.id;
+      if (uid) return uid;
+    } catch {
+      /* oturum okunamadı → tekrar dene */
+    }
+    await new Promise((c) => setTimeout(c, 250));
+  }
+  return null;
+}
+
 async function kisiyeOzelSurum(): Promise<string | null> {
   try {
     if (!supabase) return null;
     const ham = (await ayarOku('oyun_surum_kisi'))?.trim();
     if (!ham) return null;
     const harita = JSON.parse(ham) as Record<string, string>;
-    const { data } = await supabase.auth.getUser();
-    const uid = data.user?.id;
+    const uid = await kullaniciId();
     if (!uid) return null;
     const damga = harita[uid]?.trim();
     return damga || null;
