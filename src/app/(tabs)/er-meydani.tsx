@@ -1,6 +1,6 @@
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, BackHandler, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, AppState, BackHandler, ImageBackground, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
@@ -25,6 +25,11 @@ import { useUyelik } from '@/lib/uyelik-context';
  */
 export default function OyunMerkeziScreen() {
   const geceTema = useKisiselOzellik('talim-mevzuata');
+  // YÜKLEME EKRANI (bayraklı, 16 Ağu — yalnız başkan + Kemalettin): sekmeye
+  // dokunulduğu ANDA dağ görseli + "Oyunlar hazırlanıyor…" görünür. Eskiden
+  // önce karanlık ekranda çıplak bir çember dönüyor, yazı ancak sayfa inince
+  // bir anlığına görünüyordu. Bayrak kapalıysa davranış BİREBİR eski hâli.
+  const geceYukleme = useKisiselOzellik('gece-er-meydani');
   const router = useRouter();
   const params = useLocalSearchParams<{ katilKod?: string }>();
   const web = useRef<WebView>(null);
@@ -140,6 +145,16 @@ export default function OyunMerkeziScreen() {
   // yazıyordu. Ortak `Screen` sarmalayıcısı da kullanılmıyor: onun gövdesinde kenar boşluğu
   // ve genişlik sınırı var, oyun onların içinde panel gibi duruyordu (başkan gösterdi).
   if (!kayit || !oyunHtml || uyelikYukleniyor) {
+    if (geceYukleme) {
+      return (
+        <SafeAreaView style={styles.safeKoyu} edges={['top', 'left', 'right']}>
+          <ImageBackground source={OYUN_YUKLEME_ARKA} style={styles.ortala} resizeMode="cover">
+            <ActivityIndicator color={Palette.altinParlak} />
+            <AppText variant="kucuk" color="kartMetinAcik" bold>Oyunlar hazırlanıyor…</AppText>
+          </ImageBackground>
+        </SafeAreaView>
+      );
+    }
     return (
       <SafeAreaView style={[styles.safe, geceTema && styles.safeGece]} edges={['top', 'left', 'right']}>
         <View style={styles.ortala}>
@@ -171,19 +186,36 @@ export default function OyunMerkeziScreen() {
           style={styles.web}
         />
         {!hazir ? (
-          <View style={styles.yukleniyor}>
-            <ActivityIndicator color={Palette.lacivert} />
-            <AppText variant="kucuk" color="solukMetin">Oyunlar hazırlanıyor…</AppText>
-          </View>
+          geceYukleme ? (
+            <ImageBackground source={OYUN_YUKLEME_ARKA} style={styles.yuklemeGece} resizeMode="cover">
+              <ActivityIndicator color={Palette.altinParlak} />
+              <AppText variant="kucuk" color="kartMetinAcik" bold>Oyunlar hazırlanıyor…</AppText>
+            </ImageBackground>
+          ) : (
+            <View style={styles.yukleniyor}>
+              <ActivityIndicator color={Palette.lacivert} />
+              <AppText variant="kucuk" color="solukMetin">Oyunlar hazırlanıyor…</AppText>
+            </View>
+          )
         ) : null}
       </View>
     </SafeAreaView>
   );
 }
 
+// Oyun sayfasındaki zeminin aynısı — yükleme anı ile sayfa arasında sıçrama olmasın.
+const OYUN_YUKLEME_ARKA = require('../../../assets/images/oyun-yukleme.webp');
+
 const styles = StyleSheet.create({
   safeGece: {
     backgroundColor: '#043C54', // gece taban — diğer sekmelerle aynı
+  },
+  safeKoyu: { flex: 1, backgroundColor: '#0A2434' },
+  yuklemeGece: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
   },
   safe: { flex: 1, backgroundColor: Palette.kremZemin },
   kap: { flex: 1 },
