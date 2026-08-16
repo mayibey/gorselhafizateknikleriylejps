@@ -3,6 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Tabs } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet, View, useWindowDimensions, type ColorValue } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, {
   Easing,
   useAnimatedStyle,
@@ -139,6 +140,10 @@ export default function TabsLayout() {
   // GECE KARARI K4 (kişiye özel deneme): dört sekme — Talim bardan kalkar, Mevzuat'ın
   // içinden ulaşılır. Bayrak yalnız başkanda açık; kapalıyken bugünkü beş sekme aynen.
   const talimMevzuata = useKisiselOzellik('talim-mevzuata');
+  // KOMPAKT SEKME ÇUBUĞU (bayraklı, 17 Ağu — başkan: "alt taraftan tasarruf").
+  // iPhone'da ev çizgisi güvenli alanı çubuğu şişiriyordu; ikon-yazı arası da genişti.
+  const kompakt = useKisiselOzellik('gece-er-meydani');
+  const kenar = useSafeAreaInsets();
   const [sisSinyal, setSisSinyal] = useState(0);
   const bekleyenGecis = useRef<(() => void) | null>(null);
   const sisOrtada = useCallback(() => {
@@ -176,12 +181,18 @@ export default function TabsLayout() {
           ? {
               backgroundColor: '#04283A', // handoff: koyu petrol sekme çubuğu
               borderTopColor: 'rgba(126,205,218,0.2)',
+              // Kompakt: çubuk 49yerine 44, ev çizgisi boşluğu yarıya — oyun alanı büyür.
+              ...(kompakt
+                ? { height: 44 + Math.max(kenar.bottom * 0.55, 6), paddingTop: 3 }
+                : null),
             }
           : {
               backgroundColor: Palette.kartKremi,
               borderTopColor: Palette.kenarlik,
             },
-        tabBarLabelStyle: { fontFamily: FontFamily, fontWeight: '700' },
+        tabBarLabelStyle: kompakt
+          ? { fontFamily: FontFamily, fontWeight: '700', fontSize: 11, marginTop: -3 }
+          : { fontFamily: FontFamily, fontWeight: '700' },
       }}>
       <Tabs.Screen
         name="index"
