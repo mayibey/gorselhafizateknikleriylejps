@@ -7,6 +7,7 @@ import { Image, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { TopcuAtesi } from '@/components/ui/topcu-atesi';
 import { UfukNefesi, YildizKatmani } from '@/components/ui/yildiz-katmani';
 import { BottomTabInset, MaxContentWidth, Palette, Spacing } from '@/constants/theme';
@@ -52,6 +53,9 @@ export function Screen({
   baslangicKaydirma,
   children,
 }: ScreenProps) {
+  // YENİ ZEMİN (bayraklı, 16 Ağu — yalnız başkan + Kemalettin): Oyun Merkezi'ndeki
+  // uzun dağ görseli BÜTÜN koyu ekranların zemini olur. Bayrak kapalıysa eski görsel.
+  const yeniZemin = useKisiselOzellik('gece-er-meydani');
   const body = <View style={styles.body}>{children}</View>;
 
   // Aktif sekmeye tekrar dokununca içeriği EN ÜSTE kaydır (React Navigation davranışı).
@@ -85,7 +89,9 @@ export function Screen({
               İki aday sırayla deneniyor — DEĞİŞTİRMEK İÇİN sadece require yolunu çevir:
               karargah-arka-turkuaz.webp ↔ karargah-arka-mavi.webp */}
           <Image
-            source={require('../../../assets/images/karargah-arka-turkuaz.webp')}
+            source={yeniZemin
+              ? require('../../../assets/images/oyun-yukleme.webp')
+              : require('../../../assets/images/karargah-arka-turkuaz.webp')}
             style={styles.arkaGorsel}
             resizeMode="cover"
           />
