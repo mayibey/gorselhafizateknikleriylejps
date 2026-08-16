@@ -35,6 +35,7 @@ import {
   kanunIndirilmisMi,
 } from '@/lib/indirme';
 import { useBrans } from '@/lib/brans-context';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { getSonAramalar, sonAramaEkle, sonAramalariTemizle } from '@/lib/son-aramalar';
 import { useUyelik } from '@/lib/uyelik-context';
 
@@ -108,6 +109,17 @@ export default function AraScreen() {
     [cards],
   );
   const sonuclar = useMemo(() => araKanunlar(indeks, sorgu, kapsam), [indeks, sorgu, kapsam]);
+
+  // KANUN EŞLEŞMELERİ (bayraklı, 16 Ağu — başkan: "trafik yazınca yönetmeliğin
+  // kendisine gidebileyim, illa karta düşmeyeyim"). Sorgu kanun ADINA uyuyorsa
+  // sonuçların EN ÜSTÜNDE kanun satırları çıkar; dokununca Mevzuat'taki gibi
+  // kanunun kendi sayfası açılır. Bayrak kapalıysa hiçbir şey değişmez.
+  const kanunSatiri = useKisiselOzellik('gece-er-meydani');
+  const kanunEs = useMemo(() => {
+    const q = trKucuk(sorgu.trim());
+    if (!kanunSatiri || q.length < 2) return [];
+    return laws.filter((l) => trKucuk(l.ad).includes(q)).slice(0, 5);
+  }, [kanunSatiri, laws, sorgu]);
 
   // Son arama kaydı: sorgu ~700ms durunca + ≥2 harf (debounce, spam yok).
   useEffect(() => {
@@ -373,7 +385,7 @@ export default function AraScreen() {
             </View>
           </View>
         </ScrollView>
-      ) : sonuclar.length === 0 ? (
+      ) : sonuclar.length === 0 && kanunEs.length === 0 ? (
         <EmptyState
           ikon="file-search-outline"
           baslik="Sonuç yok"
@@ -387,9 +399,29 @@ export default function AraScreen() {
           keyboardDismissMode="on-drag"
           contentContainerStyle={styles.liste}
           ListHeaderComponent={
-            <AppText variant="kucuk" color="solukMetin" style={styles.sayac}>
-              {sonuclar.length} madde bulundu
-            </AppText>
+            <>
+              {kanunEs.map((l) => (
+                <Pressable
+                  key={`kanun-${l.id}`}
+                  onPress={() => router.push({ pathname: '/patika', params: { lawId: String(l.id) } })}
+                  style={({ pressed }) => [styles.kanunSatir, pressed && styles.pressed]}
+                  accessibilityLabel={`${l.ad} sayfasını aç`}>
+                  <MaterialCommunityIcons name="book-open-variant" size={20} color={Palette.altin} />
+                  <View style={styles.kanunSatirYazi}>
+                    <AppText variant="govde" bold color="lacivert" numberOfLines={2}>
+                      {l.ad}
+                    </AppText>
+                    <AppText variant="etiket" color="solukMetin">
+                      Mevzuatın kendisine git
+                    </AppText>
+                  </View>
+                  <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.altin} />
+                </Pressable>
+              ))}
+              <AppText variant="kucuk" color="solukMetin" style={styles.sayac}>
+                {sonuclar.length} madde bulundu
+              </AppText>
+            </>
           }
           renderItem={({ item }) => (
             <Sonuc
@@ -692,6 +724,22 @@ const styles = StyleSheet.create({
   },
   sayac: {
     paddingVertical: Spacing.one,
+  },
+  // Kanun eşleşme satırı: sonuçların en üstünde, altın kitap ikonlu belirgin kart.
+  kanunSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.altinSolukYuzey,
+    borderColor: Palette.altin,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.two,
+    paddingHorizontal: Spacing.two,
+  },
+  kanunSatirYazi: {
+    flex: 1,
+    gap: 2,
   },
   kart: {
     backgroundColor: Palette.kartKremi,
