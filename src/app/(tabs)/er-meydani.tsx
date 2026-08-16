@@ -177,7 +177,7 @@ export default function OyunMerkeziScreen() {
         <SafeAreaView style={styles.safeKoyu} edges={['top', 'left', 'right']}>
           <ImageBackground source={OYUN_YUKLEME_ARKA} style={styles.ortala} resizeMode="cover">
             <ActivityIndicator color={Palette.altinParlak} />
-            <AppText variant="kucuk" color="kartMetinAcik" bold>Oyunlar hazırlanıyor…</AppText>
+            <AppText variant="baslik" color="kirmiziParlak" bold>Oyunlar hazırlanıyor…</AppText>
           </ImageBackground>
         </SafeAreaView>
       );
@@ -216,7 +216,7 @@ export default function OyunMerkeziScreen() {
           geceYukleme ? (
             <ImageBackground source={OYUN_YUKLEME_ARKA} style={styles.yuklemeGece} resizeMode="cover">
               <ActivityIndicator color={Palette.altinParlak} />
-              <AppText variant="kucuk" color="kartMetinAcik" bold>Oyunlar hazırlanıyor…</AppText>
+              <AppText variant="baslik" color="kirmiziParlak" bold>Oyunlar hazırlanıyor…</AppText>
             </ImageBackground>
           ) : (
             <View style={styles.yukleniyor}>
