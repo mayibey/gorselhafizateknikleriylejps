@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useMemo, useState } from 'react';
 import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import Svg, { Circle, Defs, LinearGradient as SvgGradient, Path, Stop } from 'react-native-svg';
 
@@ -42,6 +42,7 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { hafifDokun, ortaDokun } from '@/lib/dokunus';
 import { useKisiselOzellik } from '@/lib/ozellik';
+import { useDikeyOlcek } from '@/lib/olcek';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
 import { EmirHalka, IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
@@ -202,6 +203,22 @@ export default function KarargahScreen() {
   const router = useRouter();
   // Bayraklı modda arama TEK yerde (Mevzuat'taki kutu → /ara) → buradaki büyüteç gizlenir.
   const aramaMevzuatta = useKisiselOzellik('talim-mevzuata');
+  // DİKEY ÖLÇEK (16 Ağu): sayfa iPhone yüksekliğine göre "tek ekrana" ayarlandı;
+  // kısa Android ekranlarında sabit ölçüler taşıp kaydırıyordu. Dikey yer yiyen
+  // ölçüler bu katsayıyla çarpılır — kısa ekranda orantılı küçülür, uzunda aynı kalır.
+  const olc = useDikeyOlcek();
+  const olcS = useMemo(
+    () => ({
+      akis: { gap: Spacing.three * olc },
+      sayac: { fontSize: 40 * olc, lineHeight: 46 * olc },
+      emirUst: { paddingTop: 62 * olc },
+      manset: { fontSize: 24 * olc, lineHeight: 30 * olc },
+      madalyon: { width: 58 * olc, height: 58 * olc, borderRadius: 29 * olc },
+      madalyonIc: { width: 46 * olc, height: 46 * olc, borderRadius: 23 * olc },
+      gorsel: { height: 198 * olc },
+    }),
+    [olc],
+  );
   // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
   const [tekrarAcik, setTekrarAcik] = useState(false);
   // ŞAFAK SAHNESİ verileri (bayraklı): kalan gün + başvuru penceresi + haftalık gün halkaları.
@@ -546,7 +563,7 @@ export default function KarargahScreen() {
       {aramaMevzuatta ? (
         /* Doğal yerleşim (başkan, 10 Ağu gece): panel/kutu YOK — içerik doğrudan gece
            göğünde; bölümleri ince altın ayraçlar ve nefes boşlukları ayırır. */
-        <View style={styles.gokAkis}>
+        <View style={[styles.gokAkis, olcS.akis]}>
             {/* ═══ ÜST BLOK — sol: sınav takvimi · sağ: dev geri sayım (11 Ağu "%100 aynısı"
                 ekran görüntüsü). Arkada SVG ufuk silüeti — fotoğraf yok, OTA-güvenli. */}
             {/* SVG dağ silüeti kaldırıldı (11 Ağu): arka planda artık GERÇEK dağ görseli var
@@ -562,7 +579,7 @@ export default function KarargahScreen() {
                 color="beyaz"
                 numberOfLines={1}
                 adjustsFontSizeToFit
-                style={styles.devTekSatir}>
+                style={[styles.devTekSatir, olcS.sayac]}>
                 {geriSayim}
               </AppText>
               <View style={[styles.sagMuhurSatir, styles.muhurDar]}>
@@ -586,7 +603,7 @@ export default function KarargahScreen() {
 
             {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası.
                 Sağ üst köşede çapraz KURDELE (ref v3): rozet değil, kırmızı şerit. */}
-            <View style={[styles.gecePanel, styles.emirPanelUst]}>
+            <View style={[styles.gecePanel, styles.emirPanelUst, olcS.emirUst]}>
               {/* SOL PLAKA (mock birebir): FLAMA kesimli zemin — sağ kenar çapraz,
                   altın konturlu; kartın üst çizgisine BİNER (kopuk pill değil). */}
               {/* PLAKA: kesik uçlu FLAMA (başkan, 12 Ağu görseli) + defne arması. */}
@@ -647,9 +664,9 @@ export default function KarargahScreen() {
                   {bos ? (
                     hicCalisilan ? (
                       <>
-                        <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                        <AppText variant="baslik" bold color="beyaz" style={[styles.emirManset, olcS.manset]}>
                           {'İLK '}
-                          <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
+                          <AppText variant="baslik" bold color="altinParlak" style={[styles.emirManset, olcS.manset]}>
                             MEVZİNİ
                           </AppText>
                         </AppText>
@@ -659,16 +676,16 @@ export default function KarargahScreen() {
                           color="beyaz"
                           numberOfLines={1}
                           adjustsFontSizeToFit
-                          style={styles.emirManset}>
+                          style={[styles.emirManset, olcS.manset]}>
                           GÖZETLEME GÖREVİ
                         </AppText>
                       </>
                     ) : (
                       <>
-                        <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                        <AppText variant="baslik" bold color="beyaz" style={[styles.emirManset, olcS.manset]}>
                           TÜM GÖREVLERİ
                         </AppText>
-                        <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
+                        <AppText variant="baslik" bold color="altinParlak" style={[styles.emirManset, olcS.manset]}>
                           YAPTIN 🎖️
                         </AppText>
                       </>
@@ -676,13 +693,13 @@ export default function KarargahScreen() {
                   ) : (
                     /* Ref v4: iki satır — "ZAYIF 8 MEVZİNİ" (MEVZİNİ altın) / "GÜÇLENDİR". */
                     <>
-                      <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                      <AppText variant="baslik" bold color="beyaz" style={[styles.emirManset, olcS.manset]}>
                         {`ZAYIF ${bekleyen} `}
-                        <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
+                        <AppText variant="baslik" bold color="altinParlak" style={[styles.emirManset, olcS.manset]}>
                           MEVZİNİ
                         </AppText>
                       </AppText>
-                      <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
+                      <AppText variant="baslik" bold color="beyaz" style={[styles.emirManset, olcS.manset]}>
                         GÜÇLENDİR
                       </AppText>
                     </>
@@ -700,8 +717,8 @@ export default function KarargahScreen() {
                   <EmirHalka tamam={0} toplam={8} />
                 ) : (
                   /* Görev bitti: sağda denge unsuru — altın madalya (halkanın yerini alır). */
-                  <View style={styles.madalyon}>
-                    <View style={styles.madalyonIc}>
+                  <View style={[styles.madalyon, olcS.madalyon]}>
+                    <View style={[styles.madalyonIc, olcS.madalyonIc]}>
                       <MaterialCommunityIcons name="medal" size={28} color={Palette.altinParlak} />
                     </View>
                   </View>
@@ -1073,7 +1090,7 @@ export default function KarargahScreen() {
           <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
               onPress={() => { hafifDokun(); router.push('/tatbikat'); }}
-              style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.gorselPanel, olcS.gorsel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Tatbikat Merkezi — karma deneme sınavları">
               {/* SEMBOL ÜSTTE, küçültülmüş (contain) — başkan: "logoyu küçült, yukarı taşı".
@@ -1103,7 +1120,7 @@ export default function KarargahScreen() {
             </Pressable>
             <Pressable
               onPress={() => { hafifDokun(); router.push('/er-meydani'); }}
-              style={({ pressed }) => [styles.gorselPanel, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.gorselPanel, olcS.gorsel, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Oyun Merkezi — oynayarak öğren">
               <ExpoImage
