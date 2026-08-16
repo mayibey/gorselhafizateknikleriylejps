@@ -1,4 +1,4 @@
-import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, AppState, BackHandler, ImageBackground, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -83,6 +83,33 @@ export default function OyunMerkeziScreen() {
     });
     return () => abone.remove();
   }, []);
+
+  // OYUNLAR SEKMESİNE TEKRAR BASINCA MENÜYE DÖN (bayraklı, 16 Ağu — başkan:
+  // "rütbe merdivenindeyken sekmeye tıklayınca hâlâ o ekranda kalıyor").
+  // Sekme zaten açıkken tekrar basılırsa oyun sayfasına "menüye dön" komutu gider;
+  // başka sekmeden dönüşte kalınan yer korunur (yarım oyun kaydı zaten sayfada).
+  const navigation = useNavigation();
+  useEffect(() => {
+    if (!geceYukleme) return;
+    // expo-router'ın tip haritasında 'tabPress' yok ama Bottom Tabs çalışma anında
+    // bu olayı yayınlıyor — tip tarafında genişletmek gerekiyor.
+    const abone = (navigation as unknown as {
+      addListener: (tip: 'tabPress', cb: () => void) => () => void;
+    }).addListener('tabPress', () => {
+      if (!navigation.isFocused()) return;   // başka sekmeden geliş: yerine dokunma
+      web.current?.injectJavaScript(
+        `(function(){try{
+           if(typeof acikOyun!=='undefined'&&(acikOyun||haritada)){
+             if(typeof yeniTur==='function')yeniTur();
+             acikOyun=null;haritada=false;
+             var n=document.getElementById('nasil'); if(n)n.style.display='none';
+             if(typeof menu==='function')menu();
+           }
+         }catch(e){}})(); true;`,
+      );
+    });
+    return abone;
+  }, [navigation, geceYukleme]);
 
   // Android geri tuşu: oyun içindeysek menüye dön, menüdeysek sekmeden çık.
   useFocusEffect(
