@@ -52,12 +52,15 @@ import { bolumIlerleme } from '@/lib/patika';
 import { bugunISO } from '@/lib/srs';
 import { hesaplaStreak } from '@/lib/stats';
 
-// Patika manzara arka planı (dağ/orman/pusula — krem topografik). Görsel patika
-// alanını kaplar; düğüm/bot izi/etiketler bunun ÜSTÜnde render edilir.
+// Patika manzara arka planı. Görsel patika alanını kaplar; düğüm/bot izi/etiketler
+// bunun ÜSTÜnde render edilir.
+// 16 Ağu 2026 (başkan): patika kendi ayrı görselini kullanıyordu; artık UYGULAMANIN
+// HER YERİNDE kullanılan dağ görseli konuyor — ekranlar arasında kopukluk kalmasın.
+// Bayrak kapalıyken eski görsel duruyor (kimse etkilenmesin).
 const ARKA_PLAN = require('../../assets/images/patika-arkaplan.png');
-// Görselin doğal en-boy oranı (1844/853 = yükseklik/genişlik). Dikey TILE'da
-// her dilim W * ORAN yüksekliğinde → germe/esneme YOK, doğal oran korunur.
 const ARKA_PLAN_ORAN = 1844 / 853;
+const ARKA_PLAN_UYG = require('../../assets/images/karargah-arka-turkuaz.webp');
+const ARKA_PLAN_UYG_ORAN = 1057 / 863;
 
 // ── SİNEMATİK PATİKA (bayraklı) — dağ yolu manzarası + yol eğrisine dizili bölümler + araç.
 const PATIKA_ARAC = require('../../assets/images/patika-arac.webp');
@@ -956,6 +959,11 @@ function Harita({
      "şu an buradasın" der ve ilerleyince duraktan durağa sürer. Konum, tek bir
      Animated.Value'nun parça-parça interpolasyonuyla çözülür (native driver). */
   const aktifI = Math.max(0, aktifIndex);
+  // Arka plan: bayrak açıksa uygulamanın her yerinde kullanılan dağ görseli,
+  // kapalıysa patikanın eski kendi görseli (kimse etkilenmesin).
+  const uygArka = useKisiselOzellik('patika-arka');
+  const bgKaynak = uygArka ? ARKA_PLAN_UYG : ARKA_PLAN;
+  const bgOran = uygArka ? ARKA_PLAN_UYG_ORAN : ARKA_PLAN_ORAN;
   const surucu = useRef(new Animated.Value(aktifI)).current;
   const ornek = useMemo(() => {
     const idx: number[] = [];
