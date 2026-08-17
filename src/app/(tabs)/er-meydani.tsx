@@ -31,7 +31,7 @@ export default function OyunMerkeziScreen() {
   // bir anlığına görünüyordu. Bayrak kapalıysa davranış BİREBİR eski hâli.
   const geceYukleme = useKisiselOzellik('gece-er-meydani');
   const router = useRouter();
-  const params = useLocalSearchParams<{ katilKod?: string }>();
+  const params = useLocalSearchParams<{ katilKod?: string; oyunKod?: string }>();
   const web = useRef<WebView>(null);
   const [kayit, setKayit] = useState<OyunKayit | null>(null);
   // Oyun sayfası SUNUCUDAN gelir, cihazda önbelleklenir, olmazsa gömülüye döner (lib/oyun-kaynak).
@@ -60,6 +60,18 @@ export default function OyunMerkeziScreen() {
       router.push({ pathname: '/er-meydani-lobi', params: { katilKod: params.katilKod } });
     }
   }, [params.katilKod, router]);
+
+  // OYUN DAVETİ DERİN BAĞLANTISI (/oyun/KOD → oyunKod): oyun sayfası HAZIR olunca kodu içeri
+  // ilet; `meydanKabul` aynı bölüm/soruları açar (arkadaşın "meydan oku" linkindeki oyuna
+  // birebir aynı sorularla girilir). Sayfa file:// yüklendiği için link kodu URL'de gelmiyor →
+  // RN köprüsüyle enjekte ediyoruz. Savunmacı: meydanKabul yoksa sessiz no-op.
+  useEffect(() => {
+    if (hazir && params.oyunKod) {
+      web.current?.injectJavaScript(
+        `(function(){try{if(typeof meydanKabul==='function')meydanKabul(${JSON.stringify(params.oyunKod)});}catch(e){}})(); true;`,
+      );
+    }
+  }, [hazir, params.oyunKod]);
 
   // Kayıt sayfa yüklenmeden ÖNCE hazır olmalı (oyun açılışta okuyor) → önce yükle, sonra bas.
   useEffect(() => {

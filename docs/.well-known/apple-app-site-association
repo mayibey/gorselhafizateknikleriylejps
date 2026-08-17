@@ -4,11 +4,15 @@
     "details": [
       {
         "appID": "BPJR5S85TK.app.mevzujsps.ios",
-        "paths": ["/oda/*"],
+        "paths": ["/oda/*", "/oyun/*"],
         "components": [
           {
             "/": "/oda/*",
             "comment": "Er Meydani oda daveti"
+          },
+          {
+            "/": "/oyun/*",
+            "comment": "Oyun daveti (Kim Yapar vb. meydan okuma)"
           }
         ]
       }

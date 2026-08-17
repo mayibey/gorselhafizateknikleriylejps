@@ -49,6 +49,11 @@
               "scheme": "https",
               "host": "mevzujsps.com",
               "pathPrefix": "/oda"
+            },
+            {
+              "scheme": "https",
+              "host": "mevzujsps.com",
+              "pathPrefix": "/oyun"
             }
           ],
           "category": [
