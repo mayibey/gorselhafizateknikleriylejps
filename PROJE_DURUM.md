@@ -2,7 +2,13 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 17 Ağustos 2026
+> Son güncelleme: 18 Ağustos 2026 (gece — otonom)
+>
+> ### ▶ 17-18 Ağu — 🎮 OYUN MERKEZİ TOPLU DÜZELTME + OYUN DAVETİ DERİN BAĞLANTI (bayraklı taslak)
+> **Oyun HTML (taslak 20260818-0004, başkan+Kemalettin):** cevap paneli alt-sheet (yeşil doğru şık artık görünür, blur kalktı) · Günün Maddesi Wordle-grid kaldırıldı + aktif kutu vurgusu + silme bug'ı · Adam Asmaca & Çengel başlık flash (asHizli / bar süsleme koruma) · Sıraya Diz görev başlığı+rozet · Kim Yapar makam tepsisi · Rütbe elenme gecikmesi · Terazi "artırılır" (toLocaleLowerCase tr) · RÜTBE Astsb→Asb · ${IKON.kopya} buton · "en fazla X yanlış" metni · menü üst boşluk. Detay: hafıza [[oyun-canli-enjekte-ve-flash-dersi]].
+> **RN (OTA):** Er Meydanı soru metni gece · Er Meydanı konu seçici gece (beyaz kutu düzeldi) · Karargâh alt kart 198→220.
+> **OYUN DAVETİ /oyun/KOD:** çalışmıyordu (config sadece /oda). Eklendi: docs aasa /oyun/* (iOS build gerekmez) + app.json intentFilters /oyun (Android build gerek) + src/app/oyun/[kod].tsx route + er-meydani.tsx injectJavaScript meydanKabul. CDP doğrulandı (kod→doğru oyun). Gerçek cihaz link testi + Android build kaldı. Detay: [[derin-baglanti-deep-link]].
+> **Kapsamlı denetim (gece, otonom):** her oyun kendi klasöründe tüm bölüm/ekran görüntüleri → Masaüstü/mevzu-oyun-denetim (283 bölüm). Proaktif bug taraması sürüyor.
 >
 > ### ▶ 17 Ağu — 🔧 PATİKA MADDE KAYMASI ÇÖZÜLDÜ + 2911 KAPSAM TEMİZLİĞİ (OTA 1.0.44)
 > **Sorun (başkan telefonda):** patikada "Madde 8" düğümüne basınca içindeki kart "Madde 9"u anlatıyordu (2911'de bariz). **Kök sebep:** kart id'leri ile bölüm id'leri AYNI sayı uzayında (`law*1000+sıra`) çakışıyor. Duolingo (kapsamSecimi, `talim-mevzuata` bayraklı) modunda düğümün `bolum.id`'sine gerçek bölüm-id değil o maddenin KART id'si konuyordu (`patika.tsx` `bolum:{id:grubu[0].id}`); düğüme basınca kart-id `bolumId` diye /akis'e gidip `getCardsByBolumChain` SAYICA ÇAKIŞAN yanlış bölümü açıyordu. 2911 m1 kartı olmadığı (m2'den başlıyor) + araya ayırt/özet düğümleri girdiği için fark büyüyordu.
