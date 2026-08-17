@@ -2,7 +2,14 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 14 Ağustos 2026 (akşam)
+> Son güncelleme: 17 Ağustos 2026
+>
+> ### ▶ 17 Ağu — 🔧 PATİKA MADDE KAYMASI ÇÖZÜLDÜ + 2911 KAPSAM TEMİZLİĞİ (OTA 1.0.44)
+> **Sorun (başkan telefonda):** patikada "Madde 8" düğümüne basınca içindeki kart "Madde 9"u anlatıyordu (2911'de bariz). **Kök sebep:** kart id'leri ile bölüm id'leri AYNI sayı uzayında (`law*1000+sıra`) çakışıyor. Duolingo (kapsamSecimi, `talim-mevzuata` bayraklı) modunda düğümün `bolum.id`'sine gerçek bölüm-id değil o maddenin KART id'si konuyordu (`patika.tsx` `bolum:{id:grubu[0].id}`); düğüme basınca kart-id `bolumId` diye /akis'e gidip `getCardsByBolumChain` SAYICA ÇAKIŞAN yanlış bölümü açıyordu. 2911 m1 kartı olmadığı (m2'den başlıyor) + araya ayırt/özet düğümleri girdiği için fark büyüyordu.
+> **Fix:** kapsamSecimi düğümü artık `akisAc({lawId, maddeKart:id})` gönderiyor (bolumId değil); `/akis` yeni `maddeKart` paramıyla tüm kanunu yükleyip kuyruğu o kart id'sinden dilimliyor (eski "o maddeden kanun sonuna" zinciri korunur ama DOĞRU çıpayla). Düğümler zaten aynı `kanunKuyrugu` sırasından üretildiği için çakışma imkânsız. Commit a9e5a0a. Bkz. hafıza [[madde-kaymasi-id-cakismasi]].
+> **2911 kapsam temizliği (Ahmet Çil bildirimi):** içini açıp doğrulayarak 4 kapsam-dışı kart kaldırıldı — m9 (düzenleme kurulu), m10 (bildirim), m14-19 (erteleme/yasak), m29-34 (ceza hükümleri; Ahmet'in sorduğu m.29 burada). JSPS Ek-1 kapsamı = 1-8,11,12,22-27. `GIZLI_KART_ANAHTARLARI`+`SEED_KAPSAM[28]`+schema v30 migration (DELETE+reseed, srs korunur). Resmî kapsama girerse listeden silince geri gelir. Commit e50b191.
+> **Yayın:** tek OTA (runtime 1.0.44, android+ios, 90 asset), yeni native modül yok → OTA yeter. Filo 1.0.44'te tek runtime.
+> **Kalan Ahmet Çil borcu:** alkolmetre kartını fabrikadan yeniden üretme (içerik hatalı, şu an gizli) + oyun havuzundaki 2 alkolmetre sorusu.
 >
 > ### ▶ 14 Ağu — 🏔️ PATİKA 3B: GERÇEK WebGL YOLCULUK UYGULAMAYA GİRDİ (bayraklı)
 > **Karar:** 2.5B izdüşüm motoru bırakıldı, three.js (0.160.1, UMD gömülü) ile GERÇEK 3B kuruldu. Başkanın zirve görseli ATILMADI — 7:1 panoramaya genişletilip (iki yan bulanık uzatma + üst/alt alfa geçişi) kameraya bağlı uzak sıradağ olarak korundu.
