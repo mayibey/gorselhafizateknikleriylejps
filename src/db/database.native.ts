@@ -320,6 +320,17 @@ class SqliteBackend implements Backend {
       version = 28;
     }
 
+    if (version < 29) {
+      // GİZLİ KART (17 Ağu — başkan onayı): Trafik Yön. m.97 alkolmetre kartları
+      // (yontrafik_m97_*) içeriği hatalı; SEED'den çıkarıldı. Mevcut cihazlarda hâlâ
+      // duruyor → DELETE+yeniden tohumla ile temizlenir. cards SALT REFERANS, srs KORUNUR.
+      // Düzeltilince GIZLI_KART_ANAHTARLARI boşaltılıp bir sonraki sürümde geri gelir.
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 29;
+    }
+
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
     }

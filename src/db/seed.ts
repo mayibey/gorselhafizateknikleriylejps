@@ -223,11 +223,25 @@ export const LAW_KLASOR: Record<number, string> = Object.fromEntries(
  * madde_no'su ile o düğüme bağlanır; genel özet (madde no'suz) bağlanmaz, kanun akışında görünür.
  * Sıra: kanun → bağlandığı madde → tip (normal<özet<ayırt<genelözet) → panel.
  */
+/**
+ * GEÇİCİ GİZLİ KARTLAR (17 Ağu — başkan onayı): içeriği hatalı olduğu bilinen
+ * kartlar patikadan/mevzuattan çıkarılır; DÜZELTİLİNCE bu listeden silinince geri gelir.
+ *  - yontrafik_m97_* : Trafik Yön. m.97 alkolmetre kartları. Ahmet Çil bildirdi;
+ *    2918 m.48 değişti (üflemeyi ret 2 yıl → 5 yıl), yönetmelik metni eski kaldı.
+ * Kartlar hiç ÜRETİLMEZ → hiçbir sorguda görünmez; mevcut cihazlarda migration siler.
+ */
+export const GIZLI_KART_ANAHTARLARI = new Set<string>([
+  'yontrafik_m97_1',
+  'yontrafik_m97_2',
+  'yontrafik_m97_3',
+]);
+
 function gorselKartlari(): Card[] {
   type Tip = 'normal' | 'ozet' | 'ayirt' | 'genelozet';
   type Ham = { key: string; lawId: number; etiket: string; link: number; rank: number; panel: string; tip: Tip; nums: number[]; tag: string; mlabel?: string; om?: OzetMadde };
   const ham: Ham[] = [];
   for (const key of KART_ANAHTARLARI) {
+    if (GIZLI_KART_ANAHTARLARI.has(key)) continue; // hatalı kart — geçici gizli
     const us = key.indexOf('_');
     const bilgi = KANUN_BILGI[key.slice(0, us)];
     if (!bilgi) continue;
