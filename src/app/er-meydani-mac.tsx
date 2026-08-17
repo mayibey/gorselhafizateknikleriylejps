@@ -557,7 +557,7 @@ export default function ErMeydaniMacScreen() {
         showsVerticalScrollIndicator>
       {/* Soru */}
       <View style={styles.soruKart}>
-        <AppText variant="govde" bold style={styles.soruMetin}>
+        <AppText variant="govde" bold color={gece ? 'kartMetinAcik' : 'anaMetin'} style={styles.soruMetin}>
           {soru.soru}
         </AppText>
       </View>
