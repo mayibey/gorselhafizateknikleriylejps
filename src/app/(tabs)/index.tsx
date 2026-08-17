@@ -203,30 +203,28 @@ export default function KarargahScreen() {
   const router = useRouter();
   // Bayraklı modda arama TEK yerde (Mevzuat'taki kutu → /ara) → buradaki büyüteç gizlenir.
   const aramaMevzuatta = useKisiselOzellik('talim-mevzuata');
-  // DİKEY ÖLÇEK (16 Ağu): sayfa iPhone yüksekliğine göre "tek ekrana" ayarlandı;
-  // kısa Android ekranlarında sabit ölçüler taşıp kaydırıyordu. Dikey yer yiyen
-  // ölçüler bu katsayıyla çarpılır — kısa ekranda orantılı küçülür, uzunda aynı kalır.
-  // İÇERİĞE GÖRE ÖLÇEK (17 Ağu — Android taşma fix). Eski useDikeyOlcek(ekran/852)
-  // çoğu cihazda 1 çıkıp HİÇ küçültmüyordu; gerçek darlık ekranın TOPLAM boyunda değil,
-  // üst çentik + koyu başlık (~58) + kompakt sekme çubuğu düşülünce KALAN alanda. gokAkis'in
-  // doğal yüksekliğini (dogalY) bir kez ölçüp (GUARD: yalnız ilk/olc=1 ölçümü; küçülünce
-  // yeniden ölçüp döngüye girmesin) kalan alana oranlıyoruz → tam sığar, iPhone'da 1 kalır.
+  // İÇERİĞE GÖRE ÖLÇEK (17 Ağu — Android taşma fix, v2 = transform:scale katmanı).
+  // gokAkis HER ZAMAN tam boyda render edilir (olcS artık küçültmez); küçültmeyi ayrı bir
+  // transform:scale katmanı yapar. transform layout ÖLÇÜMÜNÜ etkilemediği için onLayout
+  // her zaman TAM boyu verir → guard'a gerek yok, içerik geç yüklense (kartlar/görsel) bile
+  // dogalY doğru büyür. (v1'de guard, içerik dolmadan ölçülen eksik 442'yi kilitleyip
+  // olc'yi 1'de bırakıyordu.) kullanY = pencere - üst çentik - başlık - kompakt sekme.
   const { height: pencereY } = useWindowDimensions();
   const kenarlar = useSafeAreaInsets();
   const [dogalY, setDogalY] = useState(0);
-  const kullanY = pencereY - kenarlar.top - 58 - (44 + kenarlar.bottom * 0.55);
-  const olc = dogalY > 0 && kullanY > 0 ? Math.max(0.72, Math.min(1, kullanY / dogalY)) : 1;
+  const kullanY = pencereY - kenarlar.top - 72 - (44 + kenarlar.bottom * 0.55);
+  const olc = dogalY > 0 && kullanY > 0 ? Math.max(0.6, Math.min(1, kullanY / dogalY)) : 1;
   const olcS = useMemo(
     () => ({
-      akis: { gap: Spacing.three * olc },
-      sayac: { fontSize: 40 * olc, lineHeight: 46 * olc },
-      emirUst: { paddingTop: 62 * olc },
-      manset: { fontSize: 24 * olc, lineHeight: 30 * olc },
-      madalyon: { width: 58 * olc, height: 58 * olc, borderRadius: 29 * olc },
-      madalyonIc: { width: 46 * olc, height: 46 * olc, borderRadius: 23 * olc },
-      gorsel: { height: 198 * olc },
+      akis: { gap: Spacing.three },
+      sayac: { fontSize: 40, lineHeight: 46 },
+      emirUst: { paddingTop: 62 },
+      manset: { fontSize: 24, lineHeight: 30 },
+      madalyon: { width: 58, height: 58, borderRadius: 29 },
+      madalyonIc: { width: 46, height: 46, borderRadius: 23 },
+      gorsel: { height: 198 },
     }),
-    [olc],
+    [],
   );
   // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
   const [tekrarAcik, setTekrarAcik] = useState(false);
@@ -572,13 +570,15 @@ export default function KarargahScreen() {
       {aramaMevzuatta ? (
         /* Doğal yerleşim (başkan, 10 Ağu gece): panel/kutu YOK — içerik doğrudan gece
            göğünde; bölümleri ince altın ayraçlar ve nefes boşlukları ayırır. */
+        <View style={{ height: dogalY > 0 ? Math.round(dogalY * olc) : undefined, overflow: 'hidden' }}>
         <View
-          style={[styles.gokAkis, olcS.akis]}
+          style={[styles.gokAkis, olcS.akis, { transform: [{ scale: olc }], transformOrigin: 'top center' }]}
           onLayout={(e) => {
-            // Doğal yükseklik yalnız İLK ölçümde (olc=1, tam boy) yazılır; küçülünce
-            // yeniden yazılmaz (dogalY===0 guard) → ölç-küçült-ölç döngüsü olmaz.
+            // transform:scale layout ölçümünü ETKİLEMEZ → h HER ZAMAN tam boy. İçerik geç
+            // dolunca (kartlar/görsel) tekrar tetiklenir, dogalY büyür; scale layout'u
+            // değiştirmediği için titreme/döngü olmaz (>2 eşiği gürültüyü süzer).
             const h = e.nativeEvent.layout.height;
-            if (h > 0 && dogalY === 0) setDogalY(h);
+            if (h > 0 && Math.abs(h - dogalY) > 2) setDogalY(h);
           }}>
             {/* ═══ ÜST BLOK — sol: sınav takvimi · sağ: dev geri sayım (11 Ağu "%100 aynısı"
                 ekran görüntüsü). Arkada SVG ufuk silüeti — fotoğraf yok, OTA-güvenli. */}
@@ -820,6 +820,7 @@ export default function KarargahScreen() {
                 </View>
               ) : null}
             </View>
+        </View>
         </View>
       ) : (
         <SinavGeriSayim />
