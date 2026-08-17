@@ -224,16 +224,24 @@ export const LAW_KLASOR: Record<number, string> = Object.fromEntries(
  * Sıra: kanun → bağlandığı madde → tip (normal<özet<ayırt<genelözet) → panel.
  */
 /**
- * GEÇİCİ GİZLİ KARTLAR (17 Ağu — başkan onayı): içeriği hatalı olduğu bilinen
- * kartlar patikadan/mevzuattan çıkarılır; DÜZELTİLİNCE bu listeden silinince geri gelir.
- *  - yontrafik_m97_* : Trafik Yön. m.97 alkolmetre kartları. Ahmet Çil bildirdi;
+ * GEÇİCİ/KALICI GİZLİ KARTLAR (17 Ağu — başkan onayı): içeriği hatalı VEYA JSPS kapsamı
+ * DIŞINDA olan kartlar patikadan/mevzuattan çıkarılır. Kartlar hiç ÜRETİLMEZ → hiçbir
+ * sorguda görünmez; mevcut cihazlarda migration siler.
+ *  - yontrafik_m97_* : Trafik Yön. m.97 alkolmetre kartları (İÇERİK HATALI, geçici).
  *    2918 m.48 değişti (üflemeyi ret 2 yıl → 5 yıl), yönetmelik metni eski kaldı.
- * Kartlar hiç ÜRETİLMEZ → hiçbir sorguda görünmez; mevcut cihazlarda migration siler.
+ *    DÜZELTİLİNCE bu listeden silinince geri gelir.
+ *  - toplantigosteri_m9/m10/m14-19/m29-34 : 2911 KAPSAM DIŞI maddeler (Ahmet Çil bildirdi,
+ *    içini açıp doğruladık — m29-34 ceza hükümleri, m14-19 erteleme/yasaklama, m9 düzenleme
+ *    kurulu, m10 bildirim; JSPS Ek-1 kapsamı 1-8,11,12,22-27). Resmî kapsama girerse geri ekle.
  */
 export const GIZLI_KART_ANAHTARLARI = new Set<string>([
   'yontrafik_m97_1',
   'yontrafik_m97_2',
   'yontrafik_m97_3',
+  'toplantigosteri_m9_1',
+  'toplantigosteri_m10_1',
+  'toplantigosteri_m14_19',
+  'toplantigosteri_m29_34',
 ]);
 
 function gorselKartlari(): Card[] {
@@ -468,7 +476,7 @@ Object.assign(SEED_KAPSAM, {
 Object.assign(SEED_KAPSAM, {
   26: ['2','8','12','22','38/A','39','43','74','75','79','83','85','90','91','93','94','95','98','100','101','102','109','110/A','116','118','119','122','127','128/A','135','137','139','140','141','145','147','148','149','157','158','160','161','164','165','168','170','175','182','206','231','234','253','268','272'], // cmk
   27: ['1','2','3','4','6','7','9','10','11','15','Ek 1','Ek 3'], // kimlikbildirme
-  28: ['2','3','4','5','6','7','8','9','10','11','12','14','22','23','24','25','26','27','29'], // toplantigosteri
+  28: ['2','3','4','5','6','7','8','11','12','22','23','24','25','26','27'], // toplantigosteri (9,10,14,29 JSPS kapsam DIŞI → çıkarıldı; kartları da GIZLI_KART_ANAHTARLARI'nda)
   29: ['3','4','5','6','12','13','15','18','20','21','22','23','24','25','26','28','29','30'], // karaavciligi
   30: ['2','3','19','20','21','22','23','24','25','33','34','35','36'], // suurunleri
   31: ['3','4','5','6','7','52','53','54','55','56','57','57/A','58','59','60','61','62','63','64','102'], // yabancilar

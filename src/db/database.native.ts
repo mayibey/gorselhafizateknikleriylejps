@@ -331,6 +331,17 @@ class SqliteBackend implements Backend {
       version = 29;
     }
 
+    if (version < 30) {
+      // 2911 KAPSAM DIŞI kartlar çıkarıldı (17 Ağu — Ahmet Çil bildirimi, içini açıp doğrulandı):
+      // toplantigosteri m9/m10/m14-19/m29-34 JSPS Ek-1 kapsamında değil (kapsam 1-8,11,12,22-27).
+      // GIZLI_KART_ANAHTARLARI'na eklendi → SEED'den çıktı. Mevcut cihazlarda DELETE+reseed ile
+      // temizlenir. cards SALT REFERANS, srs KORUNUR. Resmî kapsama girerse listeden silinince döner.
+      await db.execAsync('DELETE FROM cards; DELETE FROM bolum_kartlari; DELETE FROM bolumler;');
+      await this.seedReference();
+      await this.seedBolumler();
+      version = 30;
+    }
+
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
     }
