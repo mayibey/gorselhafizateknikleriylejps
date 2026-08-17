@@ -67,12 +67,18 @@ export default function AkisScreen() {
   // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
   useImzaliTazele(); // web imzalı modda görsel URL'leri gelince yeniden çiz (native no-op)
   const router = useRouter();
-  const { lawId, bolumId, mod, kart, kapsam } = useLocalSearchParams<{
+  const { lawId, bolumId, mod, kart, kapsam, maddeKart } = useLocalSearchParams<{
     lawId?: string;
     bolumId?: string;
     mod?: string;
     kart?: string; // Arama'dan gelince: kuyrukta bu kart id'sinden başla.
     kapsam?: string; // GECE KARARI M5 (bayraklı): 'bolum' = yalnız o bölüm, zincir yok.
+    // PATİKA MADDE ÇIPASI (17 Ağu, madde-kayması fix): kapsamSecimi (Duolingo) düğümü
+    // ESKİDEN kart id'sini bolumId sanıp gönderiyordu; kart-id ve bölüm-id AYNI sayı
+    // uzayında (law*1000+n) çakıştığı için getCardsByBolumChain YANLIŞ bölümü açıyordu
+    // ("Madde 3 → içi Madde 4"). Artık lawId + maddeKart geliyor: tüm kanun yüklenir,
+    // bu kart id'sine atlanır. Kanun kuyruğu düğümlerle aynı sıradan → çakışma imkânsız.
+    maddeKart?: string;
   }>();
   const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
@@ -221,15 +227,23 @@ export default function AkisScreen() {
             return;
           }
         }
-        setQueue(liste);
-        // Arama sonucundan gelindiyse eşleşen karta atla (yoksa baştan).
+        // PATİKA MADDE ÇIPASI: eski getCardsByBolumChain "o maddeden kanun sonuna dek"
+        // zincirini AYNEN üretir ama DOĞRU kart id'siyle → madde-kayması biter. Kuyruğu
+        // çıpa kartından dilimle (paydayı/ilerlemeyi eski davranışla birebir korur).
+        let sonListe = liste;
+        if (maddeKart) {
+          const i = liste.findIndex((c) => c.id === Number(maddeKart));
+          if (i > 0) sonListe = liste.slice(i);
+        }
+        setQueue(sonListe);
+        // Arama sonucundan (kart) gelindiyse eşleşen karta atla (whole queue, index atlar).
         if (kart) {
-          const i = liste.findIndex((c) => c.id === Number(kart));
+          const i = sonListe.findIndex((c) => c.id === Number(kart));
           if (i >= 0) setIndex(i);
         }
       })
       .catch(() => setHata(true));
-  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId, kart, kapsam, premium, router, geceKarari]);
+  }, [zayifModu, bolumModu, bolumId, kanunModu, lawId, kart, maddeKart, kapsam, premium, router, geceKarari]);
 
   useEffect(() => {
     yukle();

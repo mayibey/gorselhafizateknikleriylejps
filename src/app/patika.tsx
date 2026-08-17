@@ -552,7 +552,9 @@ export default function PatikaScreen() {
             aktif={aktifIndex}
             kanunAd={kanunAd}
             onDurakBas={(id) => {
-              akisAc({ bolumId: String(id) });
+              // Bkz. onDugumBas: kapsamSecimi'nde id = kart id → madde çıpası gönder.
+              if (kapsamSecimi) akisAc({ lawId: String(lawId), maddeKart: String(id) });
+              else akisAc({ bolumId: String(id) });
             }}
           />
         </View>
@@ -569,7 +571,12 @@ export default function PatikaScreen() {
           aracGoster={kapsamSecimi}
           lawAnahtar={String(lawId ?? '')}
           onDugumBas={(id) => {
-            akisAc({ bolumId: String(id) });
+            // MADDE-KAYMASI FIX (17 Ağu): kapsamSecimi'nde düğümün id'si KART id'sidir
+            // (bkz. bolum.id = grubu[0].id). Bunu bolumId olarak göndermek yanlış bölümü
+            // açıyordu (kart-id/bölüm-id aynı law*1000+n uzayında çakışıyor). Kart çıpası
+            // olarak gönder → /akis tüm kanunu yükleyip bu karta atlar (doğru madde).
+            if (kapsamSecimi) akisAc({ lawId: String(lawId), maddeKart: String(id) });
+            else akisAc({ bolumId: String(id) });
           }}
         />
         </View>
