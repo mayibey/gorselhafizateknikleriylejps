@@ -434,7 +434,7 @@ export default function ErMeydaniLobiScreen() {
               Seçmezsen müşterek + branşından karışık gelir.
             </AppText>
             <ScrollView style={styles.hizliListe} contentContainerStyle={styles.hizliListeIcerik}>
-              <KanunSecici musterek={hizliScope.musterek} brans={hizliScope.brans} kanunlar={hizliKanunlar} setKanunlar={setHizliKanunlar} />
+              <KanunSecici musterek={hizliScope.musterek} brans={hizliScope.brans} kanunlar={hizliKanunlar} setKanunlar={setHizliKanunlar} gece={gece} />
             </ScrollView>
             <View style={styles.btnSatir}>
               <Pressable style={({ pressed }) => [styles.vazgecBtn, pressed && styles.basili]} onPress={() => setHizliAcik(false)}>
@@ -578,7 +578,7 @@ function OdaKurPanel({
         <MaterialCommunityIcons name={kanunAcik ? 'chevron-up' : 'chevron-down'} size={20} color={gece ? Palette.kartMetinIkincil : Palette.solukMetin} />
       </Pressable>
       {kanunAcik ? (
-        <KanunSecici musterek={musterek} brans={bransKanunlar} kanunlar={kanunlar} setKanunlar={setKanunlar} />
+        <KanunSecici musterek={musterek} brans={bransKanunlar} kanunlar={kanunlar} setKanunlar={setKanunlar} gece={gece} />
       ) : null}
 
       <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} bold style={styles.aralik}>ODA TİPİ</AppText>

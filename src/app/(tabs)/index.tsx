@@ -2108,8 +2108,9 @@ const styles = StyleSheet.create({
   // Sinematik arka planlı panel (Tatbikat / Oyun Merkezi) — görsel kutuya oturur, taşmaz.
   gorselPanel: {
     flex: 1,
-    // 246 iPhone'da alt sekme çubuğuna taşıyordu (başkan ekran görüntüsü, 13 Ağu) → kısaltıldı.
-    height: 198,
+    // 246 iPhone'da alt sekme çubuğuna taşıyordu (13 Ağu) → 198. 17 Ağu: başkan "alt boşluk
+    // fazla, kartlar biraz büyüsün" → 220 (246 ile 198 arası güvenli orta; taşmadan boşluğu doldurur).
+    height: 220,
     borderRadius: Radius.l,
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
