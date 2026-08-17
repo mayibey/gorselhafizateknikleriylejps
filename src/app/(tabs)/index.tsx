@@ -2,7 +2,8 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useMemo, useState } from 'react';
-import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Circle, Defs, LinearGradient as SvgGradient, Path, Stop } from 'react-native-svg';
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
@@ -42,7 +43,6 @@ import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { hafifDokun, ortaDokun } from '@/lib/dokunus';
 import { useKisiselOzellik } from '@/lib/ozellik';
-import { useDikeyOlcek } from '@/lib/olcek';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
 import { EmirHalka, IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
@@ -206,7 +206,16 @@ export default function KarargahScreen() {
   // DİKEY ÖLÇEK (16 Ağu): sayfa iPhone yüksekliğine göre "tek ekrana" ayarlandı;
   // kısa Android ekranlarında sabit ölçüler taşıp kaydırıyordu. Dikey yer yiyen
   // ölçüler bu katsayıyla çarpılır — kısa ekranda orantılı küçülür, uzunda aynı kalır.
-  const olc = useDikeyOlcek();
+  // İÇERİĞE GÖRE ÖLÇEK (17 Ağu — Android taşma fix). Eski useDikeyOlcek(ekran/852)
+  // çoğu cihazda 1 çıkıp HİÇ küçültmüyordu; gerçek darlık ekranın TOPLAM boyunda değil,
+  // üst çentik + koyu başlık (~58) + kompakt sekme çubuğu düşülünce KALAN alanda. gokAkis'in
+  // doğal yüksekliğini (dogalY) bir kez ölçüp (GUARD: yalnız ilk/olc=1 ölçümü; küçülünce
+  // yeniden ölçüp döngüye girmesin) kalan alana oranlıyoruz → tam sığar, iPhone'da 1 kalır.
+  const { height: pencereY } = useWindowDimensions();
+  const kenarlar = useSafeAreaInsets();
+  const [dogalY, setDogalY] = useState(0);
+  const kullanY = pencereY - kenarlar.top - 58 - (44 + kenarlar.bottom * 0.55);
+  const olc = dogalY > 0 && kullanY > 0 ? Math.max(0.72, Math.min(1, kullanY / dogalY)) : 1;
   const olcS = useMemo(
     () => ({
       akis: { gap: Spacing.three * olc },
@@ -563,7 +572,14 @@ export default function KarargahScreen() {
       {aramaMevzuatta ? (
         /* Doğal yerleşim (başkan, 10 Ağu gece): panel/kutu YOK — içerik doğrudan gece
            göğünde; bölümleri ince altın ayraçlar ve nefes boşlukları ayırır. */
-        <View style={[styles.gokAkis, olcS.akis]}>
+        <View
+          style={[styles.gokAkis, olcS.akis]}
+          onLayout={(e) => {
+            // Doğal yükseklik yalnız İLK ölçümde (olc=1, tam boy) yazılır; küçülünce
+            // yeniden yazılmaz (dogalY===0 guard) → ölç-küçült-ölç döngüsü olmaz.
+            const h = e.nativeEvent.layout.height;
+            if (h > 0 && dogalY === 0) setDogalY(h);
+          }}>
             {/* ═══ ÜST BLOK — sol: sınav takvimi · sağ: dev geri sayım (11 Ağu "%100 aynısı"
                 ekran görüntüsü). Arkada SVG ufuk silüeti — fotoğraf yok, OTA-güvenli. */}
             {/* SVG dağ silüeti kaldırıldı (11 Ağu): arka planda artık GERÇEK dağ görseli var
