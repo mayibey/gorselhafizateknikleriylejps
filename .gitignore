@@ -61,3 +61,7 @@ satin-alanlar.csv
 
 # Yapay zeka ajanlarinin yerel bilgi tabani — GIZLI, asla commitlenmez (bu depo PUBLIC)
 .agents/
+
+# Scratchpad: gecici tarayici profilleri + agir uretim ciktilari commite girmesin (18 Agu: git add -A 21k dosya kapti)
+scratchpad/chrome-*/
+scratchpad/**/User Data/
