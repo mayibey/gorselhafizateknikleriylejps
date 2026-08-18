@@ -480,6 +480,40 @@ export default function PatikaScreen() {
   // Yolculuk tek ekranlık sahne — sayfa kaydırması kapalı olmalı (sürükleme motorun işi).
   const yolculukSahne = yolculuk && !kilitli && !hata && dugumler !== null && !bolumsuz;
 
+  // ÜST BİLGİ (streak/%çalışıldı + kanun kartı). OYUNVARİ'de Screen `sabitUst`'üne verilir →
+  // TEPEDE SABİT kalır (başkan 18 Ağu); değilse akışın içinde (kaydırılır).
+  const ustBilgi = (
+    <>
+      <View style={st.ustBar}>
+        <View style={st.statChip}>
+          <MaterialCommunityIcons name="fire" size={18} color={Palette.altinKoyu} />
+          <AppText variant="kucuk" bold color="altinMetin">
+            {streak === null ? '—' : streak}
+          </AppText>
+        </View>
+        <View style={st.statChip}>
+          <AppText variant="kucuk" bold color="lacivert">
+            {hazirlik === null ? '—' : `%${hazirlik}`}
+          </AppText>
+          <AppText variant="etiket" color="solukMetin">
+            Çalışıldı
+          </AppText>
+        </View>
+      </View>
+      <View style={st.kanunKart}>
+        <MaterialCommunityIcons name="book-open-variant" size={22} color={Palette.altin} />
+        <AppText variant="govde" color="anaMetin" numberOfLines={2} style={st.seritAd}>
+          {kanunAd ?? 'Mevzuat'}
+        </AppText>
+        {!bolumsuz && dugumler !== null ? (
+          <AppText variant="kucuk" bold color="altinMetin">
+            {toplamKart === 0 ? '0 kart' : `${calisilanKart}/${toplamKart} kart`}
+          </AppText>
+        ) : null}
+      </View>
+    </>
+  );
+
   return (
     <Screen
       title="Patika"
@@ -503,42 +537,11 @@ export default function PatikaScreen() {
           : undefined
       }
       headerAltinCizgi
+      // OYUNVARİ: üst bilgi kaydırmanın DIŞINDA sabit dursun (başkan: "en üstte sabit kalsın").
+      sabitUst={oyunVari && !yolculukSahne ? ustBilgi : undefined}
       headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
-      {/* ÜST BAR — gerçek veri (uydurma can/elmas YOK). Yolculukta sahne tam ekran
-          olsun diye gizlenir; kanun adı ve ilerleme motorun kendi şeridinde yazar. */}
-      {yolculukSahne ? null : (
-      <>
-      <View style={st.ustBar}>
-        <View style={st.statChip}>
-          <MaterialCommunityIcons name="fire" size={18} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" bold color="altinMetin">
-            {streak === null ? '—' : streak}
-          </AppText>
-        </View>
-        <View style={st.statChip}>
-          <AppText variant="kucuk" bold color="lacivert">
-            {hazirlik === null ? '—' : `%${hazirlik}`}
-          </AppText>
-          <AppText variant="etiket" color="solukMetin">
-            Çalışıldı
-          </AppText>
-        </View>
-      </View>
-
-      {/* Kanun özet kartı — kitap + ad + gerçek kart ilerlemesi (kart bazlı) */}
-      <View style={st.kanunKart}>
-        <MaterialCommunityIcons name="book-open-variant" size={22} color={Palette.altin} />
-        <AppText variant="govde" color="anaMetin" numberOfLines={2} style={st.seritAd}>
-          {kanunAd ?? 'Mevzuat'}
-        </AppText>
-        {!bolumsuz && dugumler !== null ? (
-          <AppText variant="kucuk" bold color="altinMetin">
-            {toplamKart === 0 ? '0 kart' : `${calisilanKart}/${toplamKart} kart`}
-          </AppText>
-        ) : null}
-      </View>
-      </>
-      )}
+      {/* ÜST BAR — OYUNVARİ değilse akışın içinde (kaydırılır); yolculukta gizli. */}
+      {!yolculukSahne && !oyunVari ? ustBilgi : null}
 
       {kilitli ? (
         <KilitKarti kanunAd={kanunAd} />
@@ -1108,6 +1111,19 @@ function Harita({
                     strokeLinecap="round"
                     strokeDasharray="2 12"
                     opacity={0.9}
+                  />,
+                );
+              } else if (oyunVari) {
+                // OYUNVARİ (başkan 18 Ağu): ayak izleri KALDIRILDI → yürünmüş ara DÜZ altın çizgi.
+                konnektorler.push(
+                  <Path
+                    key={anahtar}
+                    d={segmentYol(p0, p1)}
+                    fill="none"
+                    stroke={Palette.altinAcik2}
+                    strokeWidth={4}
+                    strokeLinecap="round"
+                    opacity={0.95}
                   />,
                 );
               } else {
