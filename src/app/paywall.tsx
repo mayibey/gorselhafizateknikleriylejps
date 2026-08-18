@@ -26,6 +26,7 @@ import {
   ABONELIK_URUNLERI,
   TEK_SEFERLIK_URUNLERI,
   INDIRIMLI_OMURBOYU_URUNLERI,
+  URUN_AYLIK,
   URUN_OMURBOYU,
   URUN_YILLIK,
   URUN_YUKSELTME,
@@ -521,6 +522,14 @@ function PaywallIcerik() {
               </View>
             ) : null}
             <View style={styles.planlar}>
+              <PlanButon
+                baslik="Aylık"
+                fiyat={fiyat(URUN_AYLIK)}
+                altYazi="/ay · yenilenir"
+                mesgul={islemUrun === URUN_AYLIK}
+                pasif={!connected || (!!islemUrun && islemUrun !== URUN_AYLIK)}
+                onPress={() => void satinAl(URUN_AYLIK, true)}
+              />
               <PlanButon
                 baslik="Yıllık"
                 fiyat={yillikGosterFiyat()}
