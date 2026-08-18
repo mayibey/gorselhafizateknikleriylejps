@@ -484,6 +484,10 @@ export default function PatikaScreen() {
     <Screen
       title="Patika"
       onGeri={() => router.back()}
+      // OYUNVARİ (başkan 18 Ağu): Patika, oyunların TEK SABİT dağ arka planını kullansın
+      // (tiled/karanlık değil). Screen koyu modu oyun-yukleme.webp'i sabit zemin yapar;
+      // düğümler üzerinde kayar. Bayrak kapalıysa eski krem topografik harita.
+      koyu={oyunVari}
       scroll={!yolculukSahne}
       // AÇILIŞTA KALDIĞIN DURAK (başkan, 14 Ağu): kanunu açınca patika 1. maddeden
       // başlıyordu; artık aktif düğüm ekranın üst-orta bandına gelecek şekilde kaydırılır.
@@ -1064,7 +1068,9 @@ function Harita({
     <View style={[st.harita, { height: haritaY }]} onLayout={olc}>
       {/* Manzara arka planı — DİKEY TILE: görsel doğal oranında (W × W*ORAN) alt
           alta tekrarlanır → uzun patikada germe/esneme YOK. Düğüm/postal üstte. */}
-      {W > 0
+      {/* OYUNVARİ'de kendi arka planımızı ÇİZMEYİZ — Screen koyu modunun TEK SABİT oyun
+          dağı zemini görünür (tiled/karanlık tekrar yok). */}
+      {W > 0 && !oyunVari
         ? Array.from({ length: Math.max(1, Math.ceil(haritaY / (W * bgOran))) }, (_, i) => (
             <Image
               key={`bg-${i}`}
@@ -1124,6 +1130,7 @@ function Harita({
               index={i}
               durum={durumCoz(d, i === aktifIndex)}
               merkez={dugumMerkez(i, W, n, oyunVari)}
+              koyu={oyunVari}
               onPress={() => onDugumBas(d.bolum.id)}
                   />
                 ))}
@@ -1166,17 +1173,22 @@ function Dugum({
   index,
   durum,
   merkez,
+  koyu,
   onPress,
 }: {
   dugum: BolumDugum;
   index: number;
   durum: Durum;
   merkez: { x: number; y: number };
+  /** OYUNVARİ (koyu zemin): etiketler açık renk + okunur; başlanmamış düğümde boş nokta
+   *  yerine madde numarası yazılır (başkan: "beyaz kilitli daireye ayar ver"). */
+  koyu?: boolean;
   onPress: () => void;
 }) {
   const aktif = durum === 'aktif';
   const cap = aktif ? HERO : NODE;
   const yuzde = dugum.toplam > 0 ? Math.round((dugum.calisilan / dugum.toplam) * 100) : 0;
+  const numara = dugumNumara(dugum.bolum.ad);
 
   // Giriş (fade + scale, sıralı) + aktifte yumuşak pulse.
   const enter = useRef(new Animated.Value(0)).current;
@@ -1271,6 +1283,11 @@ function Dugum({
             <AppText variant="kucuk" bold color="lacivert">
               %{yuzde}
             </AppText>
+          ) : koyu && numara ? (
+            // OYUNVARİ: boş nokta yerine madde numarası (kremdaire üstünde lacivert, okunur).
+            <AppText variant={numara.length <= 3 ? 'govde' : 'kucuk'} bold color="lacivert" numberOfLines={1}>
+              {numara}
+            </AppText>
           ) : (
             <View style={st.nokta} />
           )}
@@ -1291,9 +1308,9 @@ function Dugum({
           <AppText
             variant="etiket"
             bold
-            color={durum === 'baslanmadi' ? 'solukMetin' : 'lacivert'}
+            color={koyu ? 'kartMetinAcik' : durum === 'baslanmadi' ? 'solukMetin' : 'lacivert'}
             numberOfLines={1}
-            style={st.adMetin}>
+            style={[st.adMetin, koyu && st.adMetinKoyu]}>
             {dugum.bolum.ad}
           </AppText>
         )}
@@ -1738,6 +1755,12 @@ const st = StyleSheet.create({
   },
   adMetin: {
     textAlign: 'center',
+  },
+  // OYUNVARİ: koyu dağ zemininde madde etiketi okunur kalsın — koyu gölge kontrastı.
+  adMetinKoyu: {
+    textShadowColor: 'rgba(3,18,28,0.9)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 4,
   },
   pressed: {
     opacity: 0.8,
