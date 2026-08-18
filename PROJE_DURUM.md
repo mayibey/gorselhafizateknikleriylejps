@@ -2,7 +2,15 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 18 Ağustos 2026 (gece — otonom)
+> Son güncelleme: 18 Ağustos 2026 (aylık abonelik)
+>
+> ### ▶ 18 Ağu — 💳 AYLIK ABONELİK EKLENDİ (musterek_aylik · 489 TL/ay · Tam Erişim)
+> **İstek (başkan):** yıllık + ömür boyu yanına 1 aylık üyelik, fiyat 489 TL, kapsam yıllıkla AYNI (Tam Erişim). Hem Apple hem Google.
+> **Kod altyapısı (commit 65564ab):** `urunler.ts` URUN_AYLIK='musterek_aylik'; ABONELIK_URUNLERI=[AYLIK,YILLIK]; PREMIUM_URUNLERI'ye eklendi. Supabase `dogrula-satinalma` URUNLER set'ine musterek_aylik (deploy edildi). Sunucu abonelik tipini client `tip` paramından anlıyor (ürün id'sinden değil), aylık zaten destekli.
+> **Paywall (commit d5a0ac9 + guard):** Yıllık'tan ÖNCE "Aylık 489 TL /ay · yenilenir" butonu. GUARD: aylık ürün mağazadan yüklendiği halde yoksa buton GİZLENİR (`aylikGizle = subscriptions.length>0 && !some(id===AYLIK)`) → iOS'ta Apple onaylanana kadar "Aylık —" bozuk buton çıkmaz; Android'de görünür.
+> **Apple (ASC API):** musterek_aylik, Tam Erişim Aylık, 489 TRY tüm bölgeler, review screenshot 1290×2796 → **READY_TO_SUBMIT.** Sandbox'ta çalışır; CANLI satış için sonraki app sürümüyle İncelemeye gönderilmeli (ilk abonelik build'e bağlanır).
+> **Google Play (CDP, port 9500):** Abonelik "Tam Erişim Aylık" (musterek_aylik) + temel plan "aylik" (Aylık otomatik yenileme, 7 gün ek süre) → **ETKİN.** Fiyat: bulk 489 TRY girince Türkiye KDV EKLENEREK 589,99 gösteriyordu (bulk = vergi hariç baz); Türkiye satırı tek tek 489'a çekildi → **müşteri tam 489 TL öder** (Apple ile tutarlı). Diğer 176 ülke 489-baz dönüşümü (TR-dışı önemsiz).
+> **DURUM:** Google CANLI. Apple hazır (sonraki sürüm onayı bekliyor). Paywall kodu commit+push, tsc 0. **OTA YAPILMADI** — herkese yayın başkan "yay" onayına bağlı (Android hemen çalışır, iOS aylık sonraki App Store sürümüyle görünür). Bkz. [[odeme-modeli-ve-gating]].
 >
 > ### ▶ 17-18 Ağu — 🎮 OYUN MERKEZİ TOPLU DÜZELTME + OYUN DAVETİ DERİN BAĞLANTI (bayraklı taslak)
 > **Oyun HTML (taslak 20260818-0004, başkan+Kemalettin):** cevap paneli alt-sheet (yeşil doğru şık artık görünür, blur kalktı) · Günün Maddesi Wordle-grid kaldırıldı + aktif kutu vurgusu + silme bug'ı · Adam Asmaca & Çengel başlık flash (asHizli / bar süsleme koruma) · Sıraya Diz görev başlığı+rozet · Kim Yapar makam tepsisi · Rütbe elenme gecikmesi · Terazi "artırılır" (toLocaleLowerCase tr) · RÜTBE Astsb→Asb · ${IKON.kopya} buton · "en fazla X yanlış" metni · menü üst boşluk. Detay: hafıza [[oyun-canli-enjekte-ve-flash-dersi]].
