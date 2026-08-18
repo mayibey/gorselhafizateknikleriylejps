@@ -1099,7 +1099,22 @@ function Harita({
               const p1 = dugumMerkez(i + 1, W, n, oyunVari);
               const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
               const anahtar = String(dugumler[i].bolum.id);
-              if (!gecildi) {
+              if (oyunVari) {
+                // OYUNVARİ (mockup, başkan 18 Ağu): NOKTALI bağlantı — TAMAMLANDIYSA SARI,
+                // tamamlanmadıysa BEYAZ. Ayak izi YOK. (gecildi = o ara yürünmüş/tamam.)
+                konnektorler.push(
+                  <Path
+                    key={anahtar}
+                    d={segmentYol(p0, p1)}
+                    fill="none"
+                    stroke={gecildi ? Palette.altinAcik2 : 'rgba(255,255,255,0.92)'}
+                    strokeWidth={gecildi ? 5 : 4}
+                    strokeLinecap="round"
+                    strokeDasharray="1 14"
+                    opacity={0.95}
+                  />,
+                );
+              } else if (!gecildi) {
                 // Yürünmemiş ara: kesikli soluk konnektör (SVG, postal YOK).
                 konnektorler.push(
                   <Path
@@ -1111,19 +1126,6 @@ function Harita({
                     strokeLinecap="round"
                     strokeDasharray="2 12"
                     opacity={0.9}
-                  />,
-                );
-              } else if (oyunVari) {
-                // OYUNVARİ (başkan 18 Ağu): ayak izleri KALDIRILDI → yürünmüş ara DÜZ altın çizgi.
-                konnektorler.push(
-                  <Path
-                    key={anahtar}
-                    d={segmentYol(p0, p1)}
-                    fill="none"
-                    stroke={Palette.altinAcik2}
-                    strokeWidth={4}
-                    strokeLinecap="round"
-                    opacity={0.95}
                   />,
                 );
               } else {
@@ -1205,6 +1207,8 @@ function Dugum({
   const cap = aktif ? HERO : NODE;
   const yuzde = dugum.toplam > 0 ? Math.round((dugum.calisilan / dugum.toplam) * 100) : 0;
   const numara = dugumNumara(dugum.bolum.ad);
+  // OYUNVARİ mockup: sol sütun düğümün etiketi SAĞA, sağ sütununki SOLA yaslanır.
+  const labelRight = index % 2 === 0;
 
   // Giriş (fade + scale, sıralı) + aktifte yumuşak pulse.
   const enter = useRef(new Animated.Value(0)).current;
@@ -1257,15 +1261,31 @@ function Dugum({
           transform: [{ scale: girisScale }],
         },
       ]}>
-      {/* Aktif düğüm: sağ-üstte altın yıldız rozeti */}
-      {aktif ? (
+      {/* Aktif düğüm (NON-koyu): sağ-üstte altın yıldız rozeti */}
+      {!koyu && aktif ? (
         <View style={[st.yildizBadge, { left: BOX / 2 + cap / 2 - 13, top: -4 }]} pointerEvents="none">
           <MaterialCommunityIcons name="star" size={14} color={Palette.lacivert} />
         </View>
       ) : null}
 
+      {/* OYUNVARİ (mockup): yan etiket pili — aktif=altın çerçeve/yazı, değil=koyu translucent. */}
+      {koyu ? (
+        <View
+          pointerEvents="none"
+          style={[
+            st.etiketPill,
+            aktif && st.etiketPillAktif,
+            { top: cap / 2 - 15 },
+            labelRight ? { left: BOX / 2 + cap / 2 + 4 } : { right: BOX / 2 + cap / 2 + 4 },
+          ]}>
+          <AppText variant="etiket" bold color={aktif ? 'altinParlak' : 'kartMetinAcik'} numberOfLines={1}>
+            {dugum.bolum.ad}
+          </AppText>
+        </View>
+      ) : null}
+
       <Animated.View style={{ transform: [{ scale: pulseScale }] }}>
-        {/* Aktif düğüm: yumuşak altın glow (iki katman, daire arkasında) */}
+        {/* Glow: aktif → altın (iki katman); oyunvari pasif → yumuşak teal halka. */}
         {aktif ? (
           <>
             <View
@@ -1277,6 +1297,11 @@ function Dugum({
               style={[st.glow2, { width: cap + 28, height: cap + 28, borderRadius: (cap + 28) / 2, top: -14, left: -14 }]}
             />
           </>
+        ) : koyu ? (
+          <View
+            pointerEvents="none"
+            style={[st.glowTeal, { width: cap + 26, height: cap + 26, borderRadius: (cap + 26) / 2, top: -13, left: -13 }]}
+          />
         ) : null}
         <Pressable
           onPress={onPress}
@@ -1285,13 +1310,24 @@ function Dugum({
           style={({ pressed }) => [
             st.daire,
             { width: cap, height: cap, borderRadius: cap / 2 },
-            durum === 'aktif' && st.daireAktif,
-            durum === 'tamam' && st.daireTamam,
-            durum === 'baslanmis' && st.daireBaslanmis,
-            durum === 'baslanmadi' && st.daireBaslanmadi,
+            koyu && !aktif && st.daireKoyu,
+            koyu && aktif && st.daireKoyuAktif,
+            !koyu && durum === 'aktif' && st.daireAktif,
+            !koyu && durum === 'tamam' && st.daireTamam,
+            !koyu && durum === 'baslanmis' && st.daireBaslanmis,
+            !koyu && durum === 'baslanmadi' && st.daireBaslanmadi,
             pressed && st.pressed,
           ]}>
-          {durum === 'aktif' ? (
+          {koyu ? (
+            // OYUNVARİ (mockup): daima madde numarası, camsı daire üstünde beyaz.
+            <AppText
+              variant={(numara?.length ?? 0) > 3 ? 'kucuk' : aktif ? 'baslik' : 'govde'}
+              bold
+              color="kartMetinAcik"
+              numberOfLines={1}>
+              {numara ?? '•'}
+            </AppText>
+          ) : durum === 'aktif' ? (
             <MaterialCommunityIcons name="play" size={36} color={Palette.lacivert} />
           ) : durum === 'tamam' ? (
             <MaterialCommunityIcons name="check-bold" size={36} color={Palette.altinKoyu} />
@@ -1299,38 +1335,48 @@ function Dugum({
             <AppText variant="kucuk" bold color="lacivert">
               %{yuzde}
             </AppText>
-          ) : koyu && numara ? (
-            // OYUNVARİ: boş nokta yerine madde numarası (kremdaire üstünde lacivert, okunur).
-            <AppText variant={numara.length <= 3 ? 'govde' : 'kucuk'} bold color="lacivert" numberOfLines={1}>
-              {numara}
-            </AppText>
           ) : (
             <View style={st.nokta} />
           )}
         </Pressable>
+        {/* OYUNVARİ (mockup): sağ-üstte kilit rozeti (aktif=altın). */}
+        {koyu ? (
+          <View
+            pointerEvents="none"
+            style={[st.kilitRozet, aktif && st.kilitRozetAktif, { left: BOX / 2 + cap / 2 - 18, top: -2 }]}>
+            <MaterialCommunityIcons
+              name="lock"
+              size={13}
+              color={aktif ? Palette.lacivert : 'rgba(206,236,244,0.95)'}
+            />
+          </View>
+        ) : null}
       </Animated.View>
 
-      <View style={[st.adKutu, { top: cap + 8 }]}>
-        {aktif ? (
-          <View style={st.aktifEtiket}>
-            <AppText variant="etiket" bold color="beyaz" numberOfLines={1}>
+      {/* Alt etiket — yalnız NON-koyu (oyunvari'de yan pil kullanılır). */}
+      {!koyu ? (
+        <View style={[st.adKutu, { top: cap + 8 }]}>
+          {aktif ? (
+            <View style={st.aktifEtiket}>
+              <AppText variant="etiket" bold color="beyaz" numberOfLines={1}>
+                {dugum.bolum.ad}
+              </AppText>
+              <AppText variant="etiket" bold color="altinAcik2" style={st.aktifEtiketAlt}>
+                • ŞU ANKİ KONUM
+              </AppText>
+            </View>
+          ) : (
+            <AppText
+              variant="etiket"
+              bold
+              color={durum === 'baslanmadi' ? 'solukMetin' : 'lacivert'}
+              numberOfLines={1}
+              style={st.adMetin}>
               {dugum.bolum.ad}
             </AppText>
-            <AppText variant="etiket" bold color="altinAcik2" style={st.aktifEtiketAlt}>
-              • ŞU ANKİ KONUM
-            </AppText>
-          </View>
-        ) : (
-          <AppText
-            variant="etiket"
-            bold
-            color={koyu ? 'kartMetinAcik' : durum === 'baslanmadi' ? 'solukMetin' : 'lacivert'}
-            numberOfLines={1}
-            style={[st.adMetin, koyu && st.adMetinKoyu]}>
-            {dugum.bolum.ad}
-          </AppText>
-        )}
-      </View>
+          )}
+        </View>
+      ) : null}
     </Animated.View>
   );
 }
@@ -1726,6 +1772,54 @@ const st = StyleSheet.create({
   daireBaslanmadi: {
     backgroundColor: Palette.kartKremi,
     borderColor: Palette.kenarlik,
+  },
+  // OYUNVARİ (mockup): camsı koyu-teal daire + parlak teal halka; aktif = altın halka.
+  daireKoyu: {
+    backgroundColor: 'rgba(8,40,56,0.55)',
+    borderColor: 'rgba(126,205,218,0.75)',
+    borderWidth: 3,
+  },
+  daireKoyuAktif: {
+    backgroundColor: 'rgba(6,26,40,0.62)',
+    borderColor: Palette.altinParlak,
+    borderWidth: 3,
+  },
+  glowTeal: {
+    position: 'absolute',
+    backgroundColor: 'rgba(126,205,218,0.16)', // pasif düğüm çevresinde yumuşak teal ışık
+  },
+  // OYUNVARİ (mockup): düğümün yanındaki madde etiketi — koyu translucent pill.
+  etiketPill: {
+    position: 'absolute',
+    maxWidth: 130,
+    backgroundColor: 'rgba(6,24,38,0.82)',
+    borderColor: 'rgba(126,205,218,0.35)',
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: Spacing.half + 2,
+    zIndex: 2,
+  },
+  etiketPillAktif: {
+    backgroundColor: 'rgba(10,32,48,0.92)',
+    borderColor: Palette.altinParlak,
+  },
+  // OYUNVARİ (mockup): sağ-üstte küçük kilit rozeti.
+  kilitRozet: {
+    position: 'absolute',
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: 'rgba(6,26,40,0.92)',
+    borderWidth: 1.5,
+    borderColor: 'rgba(126,205,218,0.6)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 3,
+  },
+  kilitRozetAktif: {
+    backgroundColor: Palette.altinParlak,
+    borderColor: Palette.altinKoyu,
   },
   nokta: {
     width: 10,
