@@ -2,7 +2,14 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 18 Ağustos 2026 (aylık abonelik)
+> Son güncelleme: 18 Ağustos 2026 (Oyun Merkezi grid)
+>
+> ### ▶ 18 Ağu — 🎮 OYUN MERKEZİ YENİDEN DÜZENLENDİ (kategori şeridi → 2 sütun grid)
+> **İstek (başkan, Flutter-dili spec + mockup ekran):** oyun listesi yeniden tasarlansın. NOT: spec Flutter için yazılmıştı ama ekran **HTML** (`assets/oyun/oyun-merkezi.html`, WebView). Ekran görüntüsü **mockup**tu (dağ arka planı + monoline ikon) — gerçek uygulama düz lacivert + emoji; CDP ile render edilip ground-truth doğrulandı (ölç, ezberleme).
+> **Değişen:** yatay kaydırmalı kategori şeridi (Tümü/Öne Çıkanlar/Öğreten...) TAMAMEN kaldırıldı → tek "TÜM OYUNLAR" bölümü. Yatay büyük `.tile` satırları → **2 sütun kompakt kart**: `.tUst`(ikon 46px + sağ üst ★) / serif başlık (2 satır clamp) / açıklama (3 satır clamp) / alta yaslı (`margin-top:auto`) altın çerçeveli şeffaf **BAŞLA ›** düğmesi. `.oyunGrid{grid 1fr 1fr;gap12}`. Er Meydanı üreteçle en başa eklendiği için otomatik grid'in ilk kartı oldu.
+> **Korunan:** gece teması (#04283A), altın aksan, `--serif`(Georgia), meydan okuma kutusu, `oyunAc`/köprü, üreteç yamaları (IMZALAR: `.tile onclick` satırı dokunulmadı). Yeni tema/font YOK.
+> **Doğrulama:** `npm run oyun:uret` sorunsuz (yamalar tuttu) · tsc 0 · CDP render 360+393px: yatay taşma YOK, eşit kart yüksekliği, 16 kart/16 BAŞLA, kategori şeridi 0. Commit'lendi+push.
+> **YAYIN:** henüz yayınlanmadı — kaynak+üretilmiş .ts commit'te; Supabase'e taslak/genel yükleme başkan onayına bağlı ([[oyunlar-sunucudan-yayin]] [[kisiye-ozel-oyun-surumu]]).
 >
 > ### ▶ 18 Ağu — 💳 AYLIK ABONELİK EKLENDİ (musterek_aylik · 489 TL/ay · Tam Erişim)
 > **İstek (başkan):** yıllık + ömür boyu yanına 1 aylık üyelik, fiyat 489 TL, kapsam yıllıkla AYNI (Tam Erişim). Hem Apple hem Google.
