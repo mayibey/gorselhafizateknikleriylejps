@@ -172,33 +172,33 @@ body{margin:0;min-height:100vh;background:#EDE7DA;color:var(--metin);
 .grupBas::after{content:'';flex:1;height:1px;background:var(--ayirici)}
 
 /* ---------- menü ---------- */
-.tile{display:flex;gap:11px;align-items:center;border-radius:16px;padding:12px;cursor:pointer;
-  text-align:left;font-family:inherit;background:var(--kart);border:1px solid var(--kenar);
+/* TÜM OYUNLAR bölüm başlığı — sade section header (eski kategori şeridi kaldırıldı). */
+.bolumBas{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.09em;
+  color:var(--altinMetin);margin:20px 2px 12px;display:flex;align-items:center;gap:10px}
+.bolumBas::after{content:'';flex:1;height:1px;background:var(--ayirici)}
+/* Oyun ızgarası — 2 sütun, kompakt dikey oyun kartları. Kartlar telefona göre esner. */
+.oyunGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.tile{display:flex;flex-direction:column;gap:9px;border-radius:20px;padding:15px;cursor:pointer;
+  text-align:left;font-family:inherit;min-height:198px;background:var(--kart);border:1px solid var(--kenar);
   box-shadow:0 2px 10px var(--golge);transition:transform .16s,border-color .16s,box-shadow .16s}
 .tile:hover{transform:translateY(-2px);border-color:var(--altin);box-shadow:0 8px 20px var(--golge)}
 .tile:active{transform:translateY(0)}
-.tile .ikon{flex:none;width:48px;height:48px;border-radius:13px;display:grid;place-items:center;
-  font-size:22px;background:var(--altinYuzey);border:1px solid var(--kenar)}
-.tile .yz{flex:1;min-width:0}
-.tile .ad{font-weight:800;font-size:15px;color:var(--lacivert);margin-bottom:2px;line-height:1.25}
-.tile .ac{font-size:13px;color:var(--soluk);line-height:1.4}
+.tile .tUst{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.tile .ikon{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+  font-size:24px;background:var(--altinYuzey);border:1px solid var(--kenar)}
+.tile .ad{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--lacivert);line-height:1.1;
+  margin:2px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tile .ac{font-size:13.5px;color:var(--soluk);line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .rz{display:none}
-/* Başlık yanı altın rozet + sağ kategori etiketi + ok (mock düzeni). */
-.tRoz{color:var(--altin);font-size:12px;margin-left:6px;vertical-align:middle}
-.tile .katEtk{flex:none;font-size:9px;font-weight:800;letter-spacing:.03em;color:var(--altinMetin);
-  border:1px solid var(--altin);border-radius:7px;padding:4px 7px;white-space:nowrap;text-align:center}
-.tile .tOk{flex:none;font-size:19px;line-height:1;color:var(--altin);font-weight:800}
-/* Kategori şeridi — yatay kaydırmalı, sayaçlı süzgeç. */
-.katSerit{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;margin:0 -2px;
-  -webkit-overflow-scrolling:touch;scrollbar-width:none}
-.katSerit::-webkit-scrollbar{display:none}
-.katBtn{flex:none;min-width:94px;display:flex;flex-direction:column;align-items:center;gap:3px;
-  padding:11px 12px;border-radius:14px;border:1px solid var(--kenar);background:var(--kart);
-  cursor:pointer;font-family:inherit;transition:border-color .16s,background .16s}
-.katBtn.ac{border-color:var(--altin);background:var(--altinYuzey)}
-.katBtn .katIk{font-size:20px}
-.katBtn .katAd{font-size:12px;font-weight:800;color:var(--lacivert);white-space:nowrap}
-.katBtn .katSay{font-size:11px;color:var(--soluk)}
+/* Sağ üst altın yıldız (öne çıkarma işareti). */
+.tRoz{flex:none;color:var(--altin);font-size:18px;line-height:1;margin-top:3px}
+/* BAŞLA aksiyonu — kart tabanına yaslı (Spacer=margin-top:auto), altın çerçeveli şeffaf düğme. */
+.tile .basla{margin-top:auto;height:38px;border-radius:19px;display:flex;align-items:center;
+  justify-content:center;gap:6px;border:1px solid rgba(201,162,39,.5);background:transparent;
+  color:var(--altinMetin);font-weight:700;font-size:13px;letter-spacing:1px}
+.tile .basla .bOk{font-size:17px;line-height:1;font-weight:700}
+@media (max-width:360px){.tile .ad{font-size:17px}.tile{padding:13px;min-height:190px}}
 /* ---------- MENÜ GECE TEMASI (mock: petrol koyu zemin) ----------
    body.geceMenu yalnız menü ekranında (temaUygula) eklenir; oyun içi ekranlar krem kalır. */
 body.geceMenu{background:#04283A}
@@ -217,6 +217,9 @@ body.geceMenu .tile .ac{color:#AFC2C9}
 body.geceMenu .tile .katEtk{color:#F3C24A;border-color:rgba(240,183,51,.7)}
 body.geceMenu .tile .tOk{color:#F3C24A}
 body.geceMenu .tRoz{color:#F3C24A}
+body.geceMenu .bolumBas{color:#F3C24A}
+body.geceMenu .bolumBas::after{background:rgba(126,205,218,.25)}
+body.geceMenu .tile .basla{border-color:rgba(240,183,51,.55);color:#F3C24A}
 body.geceMenu .meydanKutu{background:rgba(3,47,69,.72);border-color:rgba(240,183,51,.55)}
 body.geceMenu .mkBas{color:#fff}
 body.geceMenu .mkAlt{color:#AFC2C9}
@@ -1204,28 +1207,19 @@ function menu(){
     +'<span><b>Çıkmış sınav sorularından üretilmiştir</b><br>'
     +'Gerçek JSPS sorularıyla çalış.</span></div>'
     +'<div class="aciklamaS">Ezber yok, <b>oyun</b> var. Oynadıkça mevzuat aklında kalır — hem de sıkılmadan.</div>';
-  // KATEGORİ ŞERİDİ (yatay, sayaçlı) — dokununca liste o kategoriye süzülür.
-  h+='<div class="katSerit">';
-  for(const c of KATEGORILER){
-    const say=c.k==='hepsi'?OYUNLAR.length:OYUNLAR.filter(o=>o.g===c.k).length;
-    if(c.k!=='hepsi' && say===0) continue;
-    h+=`<button class="katBtn${menuFiltre===c.k?' ac':''}" data-kat="${c.k}">
-      <div class="katIk">${c.ik}</div><div class="katAd">${c.ad}</div>
-      <div class="katSay">${say} oyun</div></button>`;
-  }
-  h+='</div>';
-  // OYUN SATIRLARI — filtreye göre; her satır sağında kategori etiketi + ok.
-  const gorunen=OYUNLAR.filter(o=>menuFiltre==='hepsi'||o.g===menuFiltre);
-  for(const o of gorunen){
-    const etk=(o.g||'').toLocaleUpperCase('tr');
+  // TEK BÖLÜM: TÜM OYUNLAR — kategori şeridi kaldırıldı, bütün oyunlar 2 sütun grid'de.
+  h+='<div class="bolumBas">TÜM OYUNLAR</div>';
+  h+='<div class="oyunGrid">';
+  for(const o of OYUNLAR){
     h+=`<button class="tile" data-id="${o.id}" style="--t:var(--altin)">
-      <div class="ikon">${o.ik}</div>
-      <div class="yz"><div class="ad">${o.ad}<span class="tRoz">★</span>${o.bekle?'<span class="bekle">sunucu bekliyor</span>':''}</div>
-        <div class="ac">${o.ac}</div></div>
-      <div class="katEtk">${etk}</div>
-      <div class="tOk">›</div>
+      <div class="tUst"><div class="ikon">${o.ik}</div><span class="tRoz">★</span></div>
+      <div class="ad">${o.ad}</div>
+      <div class="ac">${o.ac}</div>
+      ${o.bekle?'<span class="bekle">sunucu bekliyor</span>':''}
+      <div class="basla">BAŞLA<span class="bOk">›</span></div>
     </button>`;
   }
+  h+='</div>';
   h+=`<div class="premSat">
       <span style="font-size:20px">${TEST_MODU?'🔓':'🔒'}</span>
       <span class="pz">${TEST_MODU
@@ -1239,7 +1233,6 @@ function menu(){
       <div class="mkSat"><input id="mkKod" placeholder="bağlantıyı veya kodu yapıştır" autocomplete="off">
         <button id="mkGir">GİR</button></div></div>`;
   G().innerHTML=h;
-  [...document.querySelectorAll('.katBtn')].forEach(b=>b.onclick=()=>{ menuFiltre=b.dataset.kat; menu(); });
   [...document.querySelectorAll('.tile')].forEach(b=>b.onclick=()=>oyunAc(b.dataset.id));
   $('#premAnahtar').onclick=()=>{ testModuAyarla(!TEST_MODU); menu(); };
   $('#mkGir').onclick=()=>{
