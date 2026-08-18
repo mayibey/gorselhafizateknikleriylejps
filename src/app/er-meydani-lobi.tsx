@@ -772,7 +772,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   },
   ligBtn: {
     flexDirection: 'row', alignItems: 'center', gap: Spacing.three,
-    backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey, borderWidth: 1, borderColor: Palette.altinKoyu,
+    backgroundColor: gece ? '#0B283A' : Palette.kartKremi, borderWidth: 1, borderColor: gece ? Palette.altin : Palette.altinKoyu,
     borderRadius: Radius.m, padding: Spacing.three,
   },
   btnMetin: { flex: 1, gap: 2 },
