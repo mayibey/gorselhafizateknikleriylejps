@@ -2,7 +2,19 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 18 Ağustos 2026 (Oyun Merkezi grid)
+> Son güncelleme: 18 Ağustos 2026 (RN önizleme paketi + Patika v2)
+>
+> ### ▶ 18 Ağu (gece) — 📦 RN ÖNİZLEME PAKETİ (`on-izleme` bayrağı, yalnız başkan+Kemalettin) + OTA
+> **Mekanizma:** RN OTA herkese gider (bundle global); davranış **kişi bayrağıyla** kısıldı. Yeni bayrak `on-izleme` (ozellik_kisi → başkan 98be2c62 + Kemalettin 90501c0f). Herkeste ESKİ hâl; sizde yeni. Onaylanınca bayrak koşulu kaldırılıp genele açılır. OTA: `production` / runtime **1.0.44** (grup 807a07b7, sonra Patika v2 grup 864186f7). Başkan `anlik-guncelleme` açık → ~30 sn'de kendini yeniler.
+> **6 iş (hepsi `on-izleme` arkasında):**
+> 1. **Oyunlar boş-ekran fix** (`er-meydani.tsx`): iOS arka plandan dönünce WebView içerik süreci ölüp sayfa boş kalıyordu → `onContentProcessDidTerminate`/`onRenderProcessGone` ile `setHazir(false)+reload`. (GERÇEK bug; en kısa sürede genele açılmalı.)
+> 2. **Ses hep otomatik** (`lib/ses-tercih.ts`): `otoBaslatTercihi` önizlemede daima true (soru yok, hatırlanan '0' yok sayılır). Herkeste eski sor-hatırla.
+> 3. **Ekran hep açık** (`_layout.tsx`): `useEkranAcikTut(onIzleme,'uygulama-geneli')` — tüm ekranlar+oyunlar (keep-awake global, bayraklı).
+> 4. **Kart akışı** (`akis.tsx` + `SesOynatici`/`TtsBar` yeni `onIlerleme` prop): "Hata bildir" sağ üst köşe (meta mutlak-ortalı), sesli anlatım sarı ilerleme çizgisi görselin altında + en sağda kalan saniye **geri sayım** (mp3). Herkeste eski alt "Hata/öneri bildir" linki.
+> 5. **Evsaf düzenleme** (`sicil.tsx`): pencere gece temaya uydu (krem uyumsuzluk bitti) + **telefon (opsiyonel)** + doğum (`DogumTarihiSecici`) + cinsiyet çipleri düzenlenebilir. Herkeste eski "Ad ve Soyad" (ad/soyad, krem).
+> 6. **Patika** (`patika.tsx`): `patika-oyunvari` bayrağı → jandarma aracı yok + maddeler aşağıdan yukarıya. **v2 (başkan geri bildirimi "salakça"):** artık `<Screen koyu>` ile **oyunların TEK SABİT dağ zemini** (oyun-yukleme.webp; tiled/karanlık kaldırıldı), başlanmamış düğümde boş nokta yerine **madde numarası**, etiketler açık renk+gölge (okunur). `dugumMerkez(i,W,n,ters)` yön çevrimi; Screen `body` şeffaf olduğu için koyu zemin görünür + kaydırmada sabit (tekrar yok).
+> **Doğrulama:** tsc 0 (her adımda). Commit'ler: 8162faa (paket), 87e4fea (.gitignore scratchpad chrome profilleri — `git add -A` 21k dosya kapmıştı), 080d441 (Patika v2). **Ders:** `git add -A` scratchpad'deki dev tarayıcı profilini yutuyor → SADECE hedef dosyaları `git add`; scratchpad/chrome-*/ artık ignore'da. **Manifest dansı:** OTA öncesi `npm run icerik:manifest` (asset>2000 limiti), sonra `git checkout -- kart-gorselleri.ts kart-sesleri.ts` (repo full registry'de kalsın).
+> **AÇIK:** başkan onayınca (`herkese aç`) her dosyada `onIzleme`/`oyunVari` koşulunu kaldır → genele. Boş-ekran fix'i (madde 1) öncelikli genele.
 >
 > ### ▶ 18 Ağu — 🎮 OYUN MERKEZİ YENİDEN DÜZENLENDİ (kategori şeridi → 2 sütun grid)
 > **İstek (başkan, Flutter-dili spec + mockup ekran):** oyun listesi yeniden tasarlansın. NOT: spec Flutter için yazılmıştı ama ekran **HTML** (`assets/oyun/oyun-merkezi.html`, WebView). Ekran görüntüsü **mockup**tu (dağ arka planı + monoline ikon) — gerçek uygulama düz lacivert + emoji; CDP ile render edilip ground-truth doğrulandı (ölç, ezberleme).
