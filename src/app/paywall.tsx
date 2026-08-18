@@ -207,6 +207,12 @@ function PaywallIcerik() {
     return p?.displayPrice ?? '—';
   }
 
+  // Aylık aboneliği yalnızca mağazadan GELMİŞSE göster. Abonelikler yüklendiği halde aylık
+  // ürün yoksa (ör. iOS'ta Apple aboneliği henüz onaylanmadı) butonu gizle → "Aylık —" bozuk
+  // buton/başarısız satın alma olmaz. Yüklenmeden önce (length 0) yıllıkla aynı şekilde gösterilir.
+  const aylikGizle =
+    subscriptions.length > 0 && !subscriptions.some((x) => x.id === URUN_AYLIK);
+
   // Yıllık için indirimli teklif (durum + Play'de o offerId varsa). Yoksa undefined.
   function yillikIndirimliTeklif() {
     if (!indirimGecerli) return undefined;
@@ -522,14 +528,16 @@ function PaywallIcerik() {
               </View>
             ) : null}
             <View style={styles.planlar}>
-              <PlanButon
-                baslik="Aylık"
-                fiyat={fiyat(URUN_AYLIK)}
-                altYazi="/ay · yenilenir"
-                mesgul={islemUrun === URUN_AYLIK}
-                pasif={!connected || (!!islemUrun && islemUrun !== URUN_AYLIK)}
-                onPress={() => void satinAl(URUN_AYLIK, true)}
-              />
+              {aylikGizle ? null : (
+                <PlanButon
+                  baslik="Aylık"
+                  fiyat={fiyat(URUN_AYLIK)}
+                  altYazi="/ay · yenilenir"
+                  mesgul={islemUrun === URUN_AYLIK}
+                  pasif={!connected || (!!islemUrun && islemUrun !== URUN_AYLIK)}
+                  onPress={() => void satinAl(URUN_AYLIK, true)}
+                />
+              )}
               <PlanButon
                 baslik="Yıllık"
                 fiyat={yillikGosterFiyat()}
