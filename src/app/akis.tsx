@@ -57,6 +57,14 @@ type AcikPanel = 'yok' | 'ses' | 'madde';
 // Swipe için yatay eşik (px): bundan fazla yatay sürükleme kartı değiştirir.
 const SWIPE_ESIK = 45;
 
+/** Saniye → "d:ss" (kalan süre geri sayımı). */
+function bicimSure(s: number): string {
+  const v = Number.isFinite(s) && s > 0 ? s : 0;
+  const dk = Math.floor(v / 60);
+  const sn = Math.floor(v % 60);
+  return `${dk}:${sn.toString().padStart(2, '0')}`;
+}
+
 /** Günlük kuyruğu kullanıcının "oturum başına kart" hedefine göre sınırlar (Eğitim Planı). */
 async function gunlukSinirli(): Promise<QueueCard[]> {
   const [ayar, kuyruk] = await Promise.all([getAyar(), getDailyQueue()]);
@@ -86,6 +94,9 @@ export default function AkisScreen() {
   const { premium } = useUyelik();
   // GECE KARARLARI A2/A3/A4/A5 (bayraklı — yalnız başkan + Ahmet Samet).
   const geceKarari = useKisiselOzellik('talim-mevzuata');
+  // ÖNİZLEME (18 Ağu): hata-bildir sağ üste + sesli anlatım ilerleme çizgisi + kalan saniye
+  // geri sayımı YALNIZ başkan+Kemalettin'de; herkeste eski düzen. Onaylanınca genele açılır.
+  const onIzleme = useKisiselOzellik('on-izleme');
   // Patika/kanun/zayıf modu = günlük kuyruk DEĞİL (mesaj/etiket bunu kullanır).
   const tekKanun = bolumModu || kanunModu || zayifModu;
   // Öğrenme modu (kanun/bölüm) → akış bitince "aktif hatırlama" mini-quiz çıkar (zayıf'ta YOK).
@@ -112,6 +123,10 @@ export default function AkisScreen() {
   // Ses OTOMATİK çalar (TtsBar mount'ta, panel kapalıyken de); bu bayrak yalnız
   // hangi panelin görselin üstüne açılacağını seçer (biri açılınca diğeri kapanır).
   const [acikPanel, setAcikPanel] = useState<AcikPanel>('yok');
+  // Sesli anlatım ilerlemesi — panel KAPALIYKEN de görünsün diye dışarı taşınır (görselin
+  // altındaki ince bar + kalan saniye geri sayımı). SesOynatici/TtsBar onIlerleme ile besler.
+  const [sesOran, setSesOran] = useState(0);
+  const [sesKalan, setSesKalan] = useState<number | null>(null);
 
   // Görsel alanı ölçüsü (onLayout) → görsel kutusu doğal orana göre boyutlanır,
   // kalan alana sığar (contain mantığı; boşluk/kırpma yok). Bkz. gorselBoyut.
@@ -146,6 +161,8 @@ export default function AkisScreen() {
   useEffect(() => {
     setAnlatimBitti(false);
     setAcikPanel('yok');
+    setSesOran(0);
+    setSesKalan(null);
     setMaddeUzun(false);
     setMaddeSonda(false);
     maddeOfsetRef.current = 0;
@@ -417,15 +434,58 @@ export default function AkisScreen() {
           <Pressable onPress={() => router.back()} hitSlop={12} accessibilityLabel="Kapat">
             <MaterialCommunityIcons name="close" size={26} color={Palette.kartMetinAcik} />
           </Pressable>
-          {/* GECE KARARI A4 (bayraklı): "5/8 · %62" değil "Kart 5/8". */}
-          <AppText variant="etiket" bold color="kartMetinAcik" style={styles.headerMetaMetin}>
-            {aktif
-              ? geceKarari
-                ? `Kart ${index + 1}/${queue!.length}`
-                : `${index + 1}/${queue!.length} · %${yuzde}`
-              : 'Kart Akışı'}
-          </AppText>
-          <View style={styles.headerSpacer} />
+          {onIzleme ? (
+            <>
+              {/* ÖNİZLEME: meta MUTLAK-ortalı → sağ üstteki "Hata bildir" eklenince bile ortada. */}
+              <View pointerEvents="none" style={styles.headerMetaSar}>
+                <AppText variant="etiket" bold color="kartMetinAcik">
+                  {aktif
+                    ? geceKarari
+                      ? `Kart ${index + 1}/${queue!.length}`
+                      : `${index + 1}/${queue!.length} · %${yuzde}`
+                    : 'Kart Akışı'}
+                </AppText>
+              </View>
+              {/* Hata/öneri bildir — SAĞ ÜST köşe (başkan, 18 Ağu). Kart context'iyle Supabase'e. */}
+              {aktif ? (
+                <Pressable
+                  style={({ pressed }) => [styles.headerBildir, pressed && styles.pressed]}
+                  hitSlop={8}
+                  onPress={() =>
+                    router.push({
+                      pathname: '/geri-bildirim',
+                      params: {
+                        card_id: String(queue![index].id),
+                        madde_no: queue![index].madde_no,
+                        baslik: queue![index].baslik,
+                        kanun: queue![index].law_ad,
+                      },
+                    })
+                  }
+                  accessibilityRole="button"
+                  accessibilityLabel="Hata/öneri bildir">
+                  <MaterialCommunityIcons name="alert-circle-outline" size={15} color={Palette.kartMetinIkincil} />
+                  <AppText variant="etiket" color="kartMetinIkincil">
+                    Hata bildir
+                  </AppText>
+                </Pressable>
+              ) : (
+                <View style={styles.headerSpacer} />
+              )}
+            </>
+          ) : (
+            <>
+              {/* GECE KARARI A4 (bayraklı): "5/8 · %62" değil "Kart 5/8". */}
+              <AppText variant="etiket" bold color="kartMetinAcik" style={styles.headerMetaMetin}>
+                {aktif
+                  ? geceKarari
+                    ? `Kart ${index + 1}/${queue!.length}`
+                    : `${index + 1}/${queue!.length} · %${yuzde}`
+                  : 'Kart Akışı'}
+              </AppText>
+              <View style={styles.headerSpacer} />
+            </>
+          )}
         </View>
 
         {aktif ? (
@@ -604,6 +664,10 @@ export default function AkisScreen() {
                       sesYolu={queue[index].gorsel_yolu}
                       onBitti={() => setAnlatimBitti(true)}
                       otomatikSor={geceKarari}
+                      onIlerleme={(o, k) => {
+                        setSesOran(o);
+                        setSesKalan(k);
+                      }}
                     />
                   ) : (
                     <TtsBar
@@ -611,6 +675,10 @@ export default function AkisScreen() {
                       gorselYolu={queue[index].gorsel_yolu}
                       onBitti={() => setAnlatimBitti(true)}
                       otomatikSor={geceKarari}
+                      onIlerleme={(o, k) => {
+                        setSesOran(o);
+                        setSesKalan(k);
+                      }}
                     />
                   )
                 ) : null}
@@ -723,25 +791,39 @@ export default function AkisScreen() {
             </Pressable>
           </View>
 
-          {/* Hata/öneri bildir — HER kartta görünür; kart context'iyle Supabase'e yazılır. */}
-          <Pressable
-            style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
-            onPress={() =>
-              router.push({
-                pathname: '/geri-bildirim',
-                params: {
-                  card_id: String(queue[index].id),
-                  madde_no: queue[index].madde_no,
-                  baslik: queue[index].baslik,
-                  kanun: queue[index].law_ad,
-                },
-              })
-            }>
-            <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.kartMetinIkincil} />
-            <AppText variant="etiket" color="kartMetinIkincil">
-              Hata/öneri bildir
-            </AppText>
-          </Pressable>
+          {onIzleme ? (
+            /* ÖNİZLEME: sesli anlatım ilerlemesi — ince sarı bar + en SAĞDA kalan saniye GERİ
+               SAYIMI (başkan, 18 Ağu; hata-bildir sağ üste taşındı, çizgi onun yerine geldi).
+               Panel kapalıyken de görünür (onIlerleme mount kaldıkça besler); ses yoksa —. */
+            <View style={styles.sesIlerleme}>
+              <View style={styles.sesTrack}>
+                <View style={[styles.sesFill, { width: `${Math.round(sesOran * 100)}%` }]} />
+              </View>
+              <AppText variant="etiket" bold color="kartMetinIkincil" style={styles.sesKalanMetin}>
+                {sesKalan != null ? bicimSure(sesKalan) : '—'}
+              </AppText>
+            </View>
+          ) : (
+            /* Herkes: eski "Hata/öneri bildir" bağlantısı (görselin altında). */
+            <Pressable
+              style={({ pressed }) => [styles.bildir, pressed && styles.pressed]}
+              onPress={() =>
+                router.push({
+                  pathname: '/geri-bildirim',
+                  params: {
+                    card_id: String(queue[index].id),
+                    madde_no: queue[index].madde_no,
+                    baslik: queue[index].baslik,
+                    kanun: queue[index].law_ad,
+                  },
+                })
+              }>
+              <MaterialCommunityIcons name="alert-circle-outline" size={16} color={Palette.kartMetinIkincil} />
+              <AppText variant="etiket" color="kartMetinIkincil">
+                Hata/öneri bildir
+              </AppText>
+            </Pressable>
+          )}
 
           {/* SABİT footer — cevap butonları her zaman altta. Ses bitince footer NORMAL
               kalır (Öğrendim/Tekrar Hatırlat); "geçelim mi?" sorusu EK modalda sorulur. */}
@@ -909,6 +991,42 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 3,
     backgroundColor: Palette.altinAcik2,
+  },
+  // Header ortası MUTLAK-ortalı (sağ üstteki "Hata bildir" eklenince kaymasın).
+  headerMetaSar: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerBildir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  // Sesli anlatım ilerlemesi (görselin altında) — ince sarı bar + kalan saniye geri sayımı.
+  sesIlerleme: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.one,
+  },
+  sesTrack: {
+    flex: 1,
+    height: 5,
+    borderRadius: 3,
+    backgroundColor: Palette.kartKenarKoyu,
+    overflow: 'hidden',
+  },
+  sesFill: {
+    height: '100%',
+    borderRadius: 3,
+    backgroundColor: Palette.altinAcik2,
+  },
+  sesKalanMetin: {
+    minWidth: 34,
+    textAlign: 'right',
+    fontVariant: ['tabular-nums'],
   },
   // Ortak "telefon kolonu": web'de ortalanır, dar ekranda tam en. TEK ekran sabit
   // (scroll YOK) → flex column: görsel alanı (flex) + ikon satırı + footer.

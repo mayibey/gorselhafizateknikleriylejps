@@ -118,8 +118,11 @@ const PAD_BOTTOM = 60;
 const COL_SOL = 0.3; // sola alternating düğüm merkez x oranı
 const COL_SAG = 0.7; // sağa alternating düğüm merkez x oranı
 
-function dugumMerkez(i: number, W: number): { x: number; y: number } {
-  return { x: W * (i % 2 === 0 ? COL_SOL : COL_SAG), y: PAD_TOP + i * ROW_GAP + NODE / 2 };
+// ters=true → OYUNVARİ dizilim: Madde 1 EN ALTTA, yukarı doğru çıkar (oyun haritaları gibi;
+// başkan 18 Ağu). Toplam yükseklik aynı; yalnız dikey sıra ters çevrilir. ters=false eski hâl.
+function dugumMerkez(i: number, W: number, n = 0, ters = false): { x: number; y: number } {
+  const sira = ters ? n - 1 - i : i;
+  return { x: W * (i % 2 === 0 ? COL_SOL : COL_SAG), y: PAD_TOP + sira * ROW_GAP + NODE / 2 };
 }
 
 /** İki düğüm merkezini birleştiren yumuşak (dikey S) bezier segmenti. */
@@ -252,6 +255,9 @@ export default function PatikaScreen() {
   const router = useRouter();
   // GECE KARARI M5 (bayraklı): düğüm kapsam seçimi yalnız başkan+Ahmet'te.
   const kapsamSecimi = useKisiselOzellik('talim-mevzuata');
+  // OYUNVARİ PATİKA (bayraklı, 18 Ağu — başkan): jandarma aracı YOK, arka plan uygulamanın
+  // turkuaz dağı, maddeler AŞAĞIDAN YUKARIYA (oyun haritaları gibi). Bayrak kapalıysa eski hâl.
+  const oyunVari = useKisiselOzellik('patika-oyunvari');
   // YOLCULUK (bayraklı deneme, 14 Ağu): krem haritanın yerine gerçek perspektifli
   // gece yolculuğu. Bayrak kapalıysa BU EKRAN BUGÜNKÜYLE BİREBİR AYNI kalır.
   // Web'de WebView yok → yalnız telefonda.
@@ -482,8 +488,14 @@ export default function PatikaScreen() {
       // AÇILIŞTA KALDIĞIN DURAK (başkan, 14 Ağu): kanunu açınca patika 1. maddeden
       // başlıyordu; artık aktif düğüm ekranın üst-orta bandına gelecek şekilde kaydırılır.
       baslangicKaydirma={
-        kapsamSecimi && haritaUst > 0 && aktifIndex > 0
-          ? Math.max(0, haritaUst + PAD_TOP + aktifIndex * ROW_GAP - pencereY * 0.38)
+        (kapsamSecimi || oyunVari) && haritaUst > 0 && aktifIndex > 0 && dugumler
+          ? Math.max(
+              0,
+              haritaUst +
+                PAD_TOP +
+                (oyunVari ? dugumler.length - 1 - aktifIndex : aktifIndex) * ROW_GAP -
+                pencereY * 0.38,
+            )
           : undefined
       }
       headerAltinCizgi
@@ -568,7 +580,9 @@ export default function PatikaScreen() {
           aktifIndex={aktifIndex}
           // 13 Ağu: ilk patikaya dönüldü (krem topografik harita + postal izleri).
           // Araç YALNIZ bayraklıda: ayak izleri kalır, araç maddeler arasında sürer.
-          aracGoster={kapsamSecimi}
+          // OYUNVARİ'de araç YOK (başkan 18 Ağu) → aracGoster kapatılır.
+          aracGoster={kapsamSecimi && !oyunVari}
+          oyunVari={oyunVari}
           lawAnahtar={String(lawId ?? '')}
           onDugumBas={(id) => {
             // MADDE-KAYMASI FIX (17 Ağu): kapsamSecimi'nde düğümün id'si KART id'sidir
@@ -943,6 +957,7 @@ function Harita({
   aktifIndex,
   onDugumBas,
   aracGoster,
+  oyunVari,
   lawAnahtar,
 }: {
   dugumler: BolumDugum[];
@@ -950,6 +965,8 @@ function Harita({
   onDugumBas: (bolumId: number) => void;
   /** Bayraklı: yolda jandarma aracı görünsün ve ilerleyince duraktan durağa SÜRSÜN. */
   aracGoster?: boolean;
+  /** OYUNVARİ (başkan 18 Ağu): uygulama turkuaz dağı + maddeler AŞAĞIDAN YUKARIYA + araç YOK. */
+  oyunVari?: boolean;
   /** Son bırakılan durağı kanun bazında hatırlamak için (animasyon buna göre). */
   lawAnahtar?: string;
 }) {
@@ -969,8 +986,10 @@ function Harita({
   // Arka plan: bayrak açıksa uygulamanın her yerinde kullanılan dağ görseli,
   // kapalıysa patikanın eski kendi görseli (kimse etkilenmesin).
   const uygArka = useKisiselOzellik('patika-arka');
-  const bgKaynak = uygArka ? ARKA_PLAN_UYG : ARKA_PLAN;
-  const bgOran = uygArka ? ARKA_PLAN_UYG_ORAN : ARKA_PLAN_ORAN;
+  // OYUNVARİ ya da 'patika-arka' bayrağı → uygulamanın turkuaz dağ arka planı.
+  const uygulamaArka = oyunVari || uygArka;
+  const bgKaynak = uygulamaArka ? ARKA_PLAN_UYG : ARKA_PLAN;
+  const bgOran = uygulamaArka ? ARKA_PLAN_UYG_ORAN : ARKA_PLAN_ORAN;
   const surucu = useRef(new Animated.Value(aktifI)).current;
   const ornek = useMemo(() => {
     const idx: number[] = [];
@@ -979,8 +998,8 @@ function Harita({
     if (W <= 0) return { idx: [0, 1], xs: [0, 0], ys: [0, 0] };
     const ADIM = 8;
     for (let i = 0; i < Math.max(0, n - 1); i++) {
-      const p0 = dugumMerkez(i, W);
-      const p1 = dugumMerkez(i + 1, W);
+      const p0 = dugumMerkez(i, W, n, oyunVari);
+      const p1 = dugumMerkez(i + 1, W, n, oyunVari);
       for (let k = 0; k < ADIM; k++) {
         const f = k / ADIM;
         const nk = bezierNokta(p0, p1, f);
@@ -989,7 +1008,7 @@ function Harita({
         ys.push(nk.y);
       }
     }
-    const son = dugumMerkez(Math.max(0, n - 1), W);
+    const son = dugumMerkez(Math.max(0, n - 1), W, n, oyunVari);
     idx.push(Math.max(0, n - 1));
     xs.push(son.x);
     ys.push(son.y);
@@ -999,7 +1018,7 @@ function Harita({
       ys.push(ys[0]);
     }
     return { idx, xs, ys };
-  }, [n, W]);
+  }, [n, W, oyunVari]);
 
   useEffect(() => {
     if (!aracGoster || W <= 0) return;
@@ -1046,16 +1065,16 @@ function Harita({
       {/* Manzara arka planı — DİKEY TILE: görsel doğal oranında (W × W*ORAN) alt
           alta tekrarlanır → uzun patikada germe/esneme YOK. Düğüm/postal üstte. */}
       {W > 0
-        ? Array.from({ length: Math.max(1, Math.ceil(haritaY / (W * ARKA_PLAN_ORAN))) }, (_, i) => (
+        ? Array.from({ length: Math.max(1, Math.ceil(haritaY / (W * bgOran))) }, (_, i) => (
             <Image
               key={`bg-${i}`}
-              source={ARKA_PLAN}
+              source={bgKaynak}
               style={{
                 position: 'absolute',
                 left: 0,
-                top: i * W * ARKA_PLAN_ORAN,
+                top: i * W * bgOran,
                 width: W,
-                height: W * ARKA_PLAN_ORAN,
+                height: W * bgOran,
               }}
               contentFit="cover"
               pointerEvents="none"
@@ -1067,8 +1086,8 @@ function Harita({
             const konnektorler: ReactNode[] = [];
             const ayaklar: ReactNode[] = [];
             dugumler.slice(0, -1).forEach((_, i) => {
-              const p0 = dugumMerkez(i, W);
-              const p1 = dugumMerkez(i + 1, W);
+              const p0 = dugumMerkez(i, W, n, oyunVari);
+              const p1 = dugumMerkez(i + 1, W, n, oyunVari);
               const gecildi = aktifIndex === -1 || i + 1 <= aktifIndex;
               const anahtar = String(dugumler[i].bolum.id);
               if (!gecildi) {
@@ -1104,7 +1123,7 @@ function Harita({
               dugum={d}
               index={i}
               durum={durumCoz(d, i === aktifIndex)}
-              merkez={dugumMerkez(i, W)}
+              merkez={dugumMerkez(i, W, n, oyunVari)}
               onPress={() => onDugumBas(d.bolum.id)}
                   />
                 ))}

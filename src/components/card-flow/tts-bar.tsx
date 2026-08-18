@@ -50,18 +50,27 @@ export function TtsBar({
   gorselYolu,
   onBitti,
   otomatikSor,
+  onIlerleme,
 }: {
   gorselYolu: string | null;
   /** Son cümle de okunup anlatım bitince çağrılır (kullanıcı durdurursa ÇAĞRILMAZ). */
   onBitti?: () => void;
   /** GECE KARARI A2 (bayraklı): ilk kartta "otomatik başlasın mı?" bir kez sorulur. */
   otomatikSor?: boolean;
+  /** İlerlemeyi dışarı bildir (akış üstteki bar). TTS cümle-tabanlı → gerçek saniye YOK
+   *  (kalanSn = null; akış geri sayım göstermez, yalnız bar dolar). */
+  onIlerleme?: (oran: number, kalanSn: number | null) => void;
 }) {
   const metin = gorselYolu ? KART_SES_METINLERI[gorselYolu] : undefined;
   const cumleler = useMemo(() => (metin ? cumlelereBol(metin) : []), [metin]);
 
   const [aktif, setAktif] = useState(0); // okunan cümle indeksi
   const [oynuyor, setOynuyor] = useState(false);
+  // İlerlemeyi dışarı bildir — cümle oranı (aktif/N); saniye geri sayımı yok (kalanSn=null).
+  useEffect(() => {
+    const N = cumleler.length;
+    onIlerleme?.(N > 0 ? Math.min(1, aktif / N) : 0, null);
+  }, [aktif, cumleler.length, onIlerleme]);
   const [hizIdx, setHizIdx] = useState(sesHizDurum.idx); // paylaşılan hız (mp3 ile aynı, korunur)
   const [W, setW] = useState(0); // waveform genişliği (onLayout)
   const aktifRef = useRef(0);

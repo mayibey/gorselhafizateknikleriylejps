@@ -36,6 +36,7 @@ export function SesOynatici({
   sesYolu,
   onBitti,
   otomatikSor,
+  onIlerleme,
 }: {
   /** Ses anahtarı = kartın gorsel_yolu (KART_SESLERI ile aynı namespace). */
   sesYolu: string | null;
@@ -43,6 +44,9 @@ export function SesOynatici({
   onBitti?: () => void;
   /** GECE KARARI A2 (bayraklı): ilk kartta "otomatik başlasın mı?" bir kez sorulur. */
   otomatikSor?: boolean;
+  /** İlerleme dışarı (akış header/satırı) taşınsın diye: oran 0..1, kalanSn = biten saniye
+   *  geri sayımı (mp3 gerçek süre). Panel kapalıyken de mount kaldığı için sürekli akar. */
+  onIlerleme?: (oran: number, kalanSn: number | null) => void;
 }) {
   useImzaliTazele(); // web imzalı modda mp3 URL'i gelince yeniden çiz (native no-op)
   const kaynak = sesKaynak(sesYolu);
@@ -56,6 +60,11 @@ export function SesOynatici({
   const sure = durum?.duration ?? 0;
   const an = durum?.currentTime ?? 0;
   const oran = sure > 0 ? Math.min(1, Math.max(0, an / sure)) : 0;
+
+  // İlerlemeyi dışarı bildir (akış ekranı üstteki ince bar + geri sayımı buradan çizer).
+  useEffect(() => {
+    onIlerleme?.(oran, sure > 0 ? Math.max(0, Math.ceil(sure - an)) : null);
+  }, [oran, sure, an, onIlerleme]);
 
   // Mount'ta OTOMATİK başla (kart açılınca; akis key=card.id → her kartta yeniden mount).
   // A2 (bayraklı): otomatik başlama TERCİHE bağlı — ilk seferde bir kez sorulur.

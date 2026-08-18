@@ -6,6 +6,7 @@ import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleShe
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
 import { AppText } from '@/components/ui/app-text';
+import { DogumTarihiSecici } from '@/components/auth/dogum-tarihi-secici';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
@@ -759,6 +760,14 @@ function tarihTR(iso: string | null): string | null {
   return y && a && g ? `${g}.${a}.${y}` : iso;
 }
 
+/** Date → 'YYYY-MM-DD' (yerel; profilKaydet bu biçimi bekler). */
+function isoTarih(d: Date): string {
+  const y = d.getFullYear();
+  const a = String(d.getMonth() + 1).padStart(2, '0');
+  const g = String(d.getDate()).padStart(2, '0');
+  return `${y}-${a}-${g}`;
+}
+
 /** Evsaf üst kartı: hesap + ad/soyad/telefon/doğum/cinsiyet (profilden çekilir). */
 function KisiselBilgiler({
   gomulu,
@@ -777,12 +786,21 @@ function KisiselBilgiler({
   // GECE KARARI E1 (bayraklı): e-posta/telefon gibi kişisel bilgiler VARSAYILAN GİZLİ —
   // omuz üstünden bakan görmesin; "Göster"e basınca açılır.
   const varsayilanGizli = useKisiselOzellik('talim-mevzuata');
+  // ÖNİZLEME (18 Ağu): yeni düzenleme penceresi (gece tema + telefon/doğum/cinsiyet) yalnız
+  // başkan+Kemalettin'de; herkeste eski "Ad ve Soyad" penceresi. Onaylanınca genele açılır.
+  const onIzleme = useKisiselOzellik('on-izleme');
   const [bilgiGoster, setBilgiGoster] = useState(false);
   // Başkan (10 Ağu): bilgiler ekranda dizili durmasın — tek "Kişisel Bilgiler" satırı,
   // dokununca AÇILIR (akordeon). Bayraksızda eski açık hâl.
   const [panelAcik, setPanelAcik] = useState(false);
   const [adG, setAdG] = useState('');
   const [soyadG, setSoyadG] = useState('');
+  // 18 Ağu (başkan): düzenleme penceresi artık telefon (İSTEĞE BAĞLI) + doğum + cinsiyeti de
+  // kapsıyor — "buradaki bilgiler güncellenebilmeli". Telefon zorunlu DEĞİL, boş bırakılabilir.
+  const [telG, setTelG] = useState('');
+  const [cinsG, setCinsG] = useState<Cinsiyet | null>(null);
+  const [dogumG, setDogumG] = useState<Date | null>(null);
+  const [dogumAcik, setDogumAcik] = useState(false);
   const [kaydediliyor, setKaydediliyor] = useState(false);
 
   // Profil gelmeden gövde ÇİZİLMEZ (10 Ağu: "ad-soyad gir" çağrısı bir kare parlayıp
@@ -806,12 +824,22 @@ function KisiselBilgiler({
   function duzenleAc() {
     setAdG(profil?.ad ?? '');
     setSoyadG(profil?.soyad ?? '');
+    setTelG(profil?.telefon ?? '');
+    setCinsG(profil?.cinsiyet ?? null);
+    setDogumG(profil?.dogumTarihi ? new Date(profil.dogumTarihi + 'T00:00:00') : null);
     setDuzenle(true);
   }
   async function adKaydet() {
     setKaydediliyor(true);
     try {
-      await profilKaydet({ ad: adG.trim(), soyad: soyadG.trim() });
+      await profilKaydet({
+        ad: adG.trim(),
+        soyad: soyadG.trim(),
+        // Telefon opsiyonel: boşsa profilKaydet dokunmaz (zorunlu değil).
+        telefon: telG.trim(),
+        cinsiyet: cinsG,
+        dogumTarihi: dogumG ? isoTarih(dogumG) : null,
+      });
       const yeni = await profilGetir();
       setProfil(yeni);
       onDegisti?.(yeni);
@@ -947,37 +975,93 @@ function KisiselBilgiler({
 
       <Modal visible={duzenle} transparent animationType="fade" onRequestClose={() => setDuzenle(false)}>
         <View style={styles.adPerde}>
-          <View style={styles.adKutu}>
+          <View style={[styles.adKutu, onIzleme && styles.adKutuGece]}>
             <MaterialCommunityIcons name="account-circle-outline" size={38} color={Palette.altinParlak} />
             <AppText variant="baslik" bold color="altinParlak" style={styles.adOrtali}>
-              Ad ve Soyad
+              {onIzleme ? 'Bilgilerini Düzenle' : 'Ad ve Soyad'}
             </AppText>
             <AppText variant="kucuk" color="kartMetinIkincil" style={styles.adOrtali}>
-              Belgende ve sicilinde görünecek. İstediğin zaman değiştirebilirsin.
+              {onIzleme
+                ? 'Ad ve soyad belgende/sicilinde görünür. Telefon isteğe bağlıdır. İstediğin zaman değiştirebilirsin.'
+                : 'Belgende ve sicilinde görünecek. İstediğin zaman değiştirebilirsin.'}
             </AppText>
-            <TextInput
-              style={styles.adGirdi}
-              value={adG}
-              onChangeText={setAdG}
-              placeholder="Ad"
-              placeholderTextColor={Palette.solukMetin}
-              autoCapitalize="words"
-              maxLength={40}
-              editable={!kaydediliyor}
-            />
-            <TextInput
-              style={styles.adGirdi}
-              value={soyadG}
-              onChangeText={setSoyadG}
-              placeholder="Soyad"
-              placeholderTextColor={Palette.solukMetin}
-              autoCapitalize="words"
-              maxLength={40}
-              editable={!kaydediliyor}
-            />
+            <ScrollView
+              style={styles.adForm}
+              contentContainerStyle={styles.adFormIcerik}
+              showsVerticalScrollIndicator={false}
+              keyboardShouldPersistTaps="handled">
+              <TextInput
+                style={[styles.adGirdi, onIzleme && styles.adGirdiGece]}
+                value={adG}
+                onChangeText={setAdG}
+                placeholder="Ad"
+                placeholderTextColor={onIzleme ? Palette.kartMetinIkincil : Palette.solukMetin}
+                autoCapitalize="words"
+                maxLength={40}
+                editable={!kaydediliyor}
+              />
+              <TextInput
+                style={[styles.adGirdi, onIzleme && styles.adGirdiGece]}
+                value={soyadG}
+                onChangeText={setSoyadG}
+                placeholder="Soyad"
+                placeholderTextColor={onIzleme ? Palette.kartMetinIkincil : Palette.solukMetin}
+                autoCapitalize="words"
+                maxLength={40}
+                editable={!kaydediliyor}
+              />
+              {/* Telefon (opsiyonel) + doğum + cinsiyet — YALNIZ önizlemede (başkan+Kemalettin).
+                  Herkeste eski pencere yalnız ad/soyad. Onaylanınca genele açılır. */}
+              {onIzleme ? (
+                <>
+                  <TextInput
+                    style={[styles.adGirdi, styles.adGirdiGece]}
+                    value={telG}
+                    onChangeText={setTelG}
+                    placeholder="Telefon (isteğe bağlı)"
+                    placeholderTextColor={Palette.kartMetinIkincil}
+                    keyboardType="phone-pad"
+                    maxLength={20}
+                    editable={!kaydediliyor}
+                  />
+                  {/* Doğum tarihi — dokununca TR seçici açılır. */}
+                  <Pressable
+                    style={[styles.adGirdi, styles.adSecimSatir, styles.adGirdiGece]}
+                    onPress={() => setDogumAcik(true)}
+                    disabled={kaydediliyor}>
+                    <MaterialCommunityIcons name="calendar-outline" size={18} color={Palette.altinParlak} />
+                    <AppText variant="kucuk" color="beyaz" style={styles.adSecimMetin}>
+                      {dogumG ? (tarihTR(isoTarih(dogumG)) ?? 'Doğum tarihi') : 'Doğum tarihi (isteğe bağlı)'}
+                    </AppText>
+                    <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kartMetinIkincil} />
+                  </Pressable>
+                  {/* Cinsiyet — üç seçenek çipi. */}
+                  <View style={styles.cinsSatir}>
+                    {(Object.keys(CINSIYET_AD) as Cinsiyet[]).map((c) => {
+                      const sec = cinsG === c;
+                      return (
+                        <Pressable
+                          key={c}
+                          onPress={() => setCinsG(sec ? null : c)}
+                          disabled={kaydediliyor}
+                          style={[styles.cinsCip, styles.cinsCipGece, sec && styles.cinsCipSeciliGece]}>
+                          <AppText variant="etiket" bold color={sec ? 'lacivert' : 'kartMetinIkincil'}>
+                            {CINSIYET_AD[c]}
+                          </AppText>
+                        </Pressable>
+                      );
+                    })}
+                  </View>
+                </>
+              ) : null}
+            </ScrollView>
             <View style={styles.adBtnSatir}>
               <Pressable
-                style={({ pressed }) => [styles.adVazgec, pressed && styles.adCagriBasili]}
+                style={({ pressed }) => [
+                  styles.adVazgec,
+                  onIzleme && styles.adVazgecGece,
+                  pressed && styles.adCagriBasili,
+                ]}
                 onPress={() => setDuzenle(false)}
                 disabled={kaydediliyor}>
                 <AppText variant="govde" color="kartMetinIkincil" bold>
@@ -985,13 +1069,17 @@ function KisiselBilgiler({
                 </AppText>
               </Pressable>
               <Pressable
-                style={({ pressed }) => [styles.adKaydet, pressed && styles.adCagriBasili]}
+                style={({ pressed }) => [
+                  styles.adKaydet,
+                  onIzleme && styles.adKaydetGece,
+                  pressed && styles.adCagriBasili,
+                ]}
                 onPress={() => void adKaydet()}
                 disabled={kaydediliyor}>
                 {kaydediliyor ? (
-                  <ActivityIndicator color={Palette.beyaz} />
+                  <ActivityIndicator color={onIzleme ? Palette.lacivert : Palette.beyaz} />
                 ) : (
-                  <AppText variant="govde" color="beyaz" bold>
+                  <AppText variant="govde" color={onIzleme ? 'lacivert' : 'beyaz'} bold>
                     Kaydet
                   </AppText>
                 )}
@@ -999,6 +1087,15 @@ function KisiselBilgiler({
             </View>
           </View>
         </View>
+        <DogumTarihiSecici
+          acik={dogumAcik}
+          deger={dogumG}
+          onSec={(d) => {
+            setDogumG(d);
+            setDogumAcik(false);
+          }}
+          onKapat={() => setDogumAcik(false)}
+        />
       </Modal>
     </View>
   );
@@ -1618,7 +1715,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Spacing.two,
   },
+  // GECE (talim-mevzuata bayrağı): Evsaf koyu olunca krem modal göze batıyordu (başkan,
+  // 18 Ağu "renk uyumsuzluğu") → koyu lacivert + turkuaz kenar, oyun/gece kartlarıyla aynı dil.
+  adKutuGece: {
+    backgroundColor: 'rgba(6,26,43,0.98)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.5)',
+  },
   adOrtali: { textAlign: 'center' },
+  adForm: { width: '100%', maxHeight: 340 },
+  adFormIcerik: { gap: Spacing.two, paddingVertical: Spacing.one },
   adGirdi: {
     width: '100%',
     backgroundColor: Palette.kremZemin,
@@ -1629,6 +1735,44 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.two,
     color: Palette.anaMetin,
     fontSize: 16,
+  },
+  adGirdiGece: {
+    backgroundColor: 'rgba(3,20,34,0.9)',
+    borderColor: 'rgba(126,205,218,0.35)',
+    color: Palette.beyaz,
+  },
+  adSecimSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  adSecimMetin: { flex: 1 },
+  cinsSatir: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    width: '100%',
+  },
+  cinsCip: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.m,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    backgroundColor: Palette.kremZemin,
+  },
+  cinsCipGece: {
+    borderColor: 'rgba(126,205,218,0.35)',
+    backgroundColor: 'rgba(3,20,34,0.9)',
+  },
+  cinsCipSecili: {
+    borderColor: Palette.lacivert,
+    backgroundColor: Palette.lacivert,
+  },
+  cinsCipSeciliGece: {
+    borderColor: Palette.altinParlak,
+    backgroundColor: Palette.altinParlak,
   },
   adBtnSatir: {
     flexDirection: 'row',
@@ -1645,6 +1789,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: Palette.kenarlik,
   },
+  adVazgecGece: { borderColor: 'rgba(126,205,218,0.4)' },
   adKaydet: {
     flex: 1,
     alignItems: 'center',
@@ -1653,6 +1798,7 @@ const styles = StyleSheet.create({
     borderRadius: Radius.m,
     backgroundColor: Palette.lacivert,
   },
+  adKaydetGece: { backgroundColor: Palette.altinParlak },
   kisiSatir: {
     flexDirection: 'row',
     alignItems: 'center',

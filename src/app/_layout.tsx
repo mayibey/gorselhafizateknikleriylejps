@@ -32,6 +32,8 @@ import { ZorunluGuncelleme } from '@/components/guncelleme/zorunlu-guncelleme';
 import { zorunluGuncellemeGerekli } from '@/lib/guncelleme';
 import { otaGuncellemeUygula } from '@/lib/ota';
 import { useEkranKoruma } from '@/lib/ekran-koruma';
+import { useEkranAcikTut } from '@/hooks/use-ekran-acik-tut';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { indirmeDurumYukle } from '@/lib/indirme';
 import { senkronKaydet } from '@/lib/senkron';
 import { takipIzniVeMetaBaslat } from '@/lib/takip-izni';
@@ -56,6 +58,13 @@ export default function RootLayout() {
   // Ekran görüntüsü + VİDEO KAYDI engeli — GLOBAL (tüm ekranlar; Android FLAG_SECURE).
   // (Önce sadece /akis + sesli-nöbette'ydi; içerik arama/sheet'lerde de görünüyor → app geneli.)
   useEkranKoruma();
+
+  // EKRAN HEP AÇIK (18 Ağu, başkan): uygulamanın HİÇBİR penceresinde (oyunlar dahil) telefon
+  // ekranı kararmasın; YouTube/Udemy gibi hep açık kalsın. Kök bileşen önplandayken hiç unmount
+  // olmaz → tüm sekmeler/ekranlar. ÖNİZLEME bayrağıyla sınırlı (yalnız başkan+Kemalettin);
+  // herkeste eski davranış (yalnız ses çalarken açık). Onaylanınca herkese açılır.
+  const onIzlemeEkran = useKisiselOzellik('on-izleme');
+  useEkranAcikTut(onIzlemeEkran, 'uygulama-geneli');
 
   useEffect(() => {
     void initDatabase();

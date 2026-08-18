@@ -30,6 +30,9 @@ export default function OyunMerkeziScreen() {
   // önce karanlık ekranda çıplak bir çember dönüyor, yazı ancak sayfa inince
   // bir anlığına görünüyordu. Bayrak kapalıysa davranış BİREBİR eski hâli.
   const geceYukleme = useKisiselOzellik('gece-er-meydani');
+  // ÖNİZLEME (18 Ağu): boş-ekran düzeltmesi (süreç ölünce reload) yalnız başkan+Kemalettin'de
+  // dener; onaylanınca herkese açılır (gerçek bir hata düzeltmesi olduğu için sonra genele).
+  const onIzleme = useKisiselOzellik('on-izleme');
   const router = useRouter();
   const params = useLocalSearchParams<{ katilKod?: string; oyunKod?: string }>();
   const web = useRef<WebView>(null);
@@ -216,6 +219,27 @@ export default function OyunMerkeziScreen() {
             mevzu_premium: premium ? '1' : '0',
           })}; true;`}
           onMessage={mesaj}
+          // BOŞ EKRAN FIX (18 Ağu — başkan: "Patika'dayken arka plana aldım, dönünce
+          // Oyunlar boş kaldı"). iOS uygulamayı arka planda tutarken bellek baskısıyla
+          // WebView'in içerik sürecini öldürür; Android'de de render süreci gidebilir.
+          // Süreç ölünce sayfa yeniden yüklenmezse gövde bomboş (krem) kalır. Her iki
+          // platformda süreç ölümünü yakala → hazır bayrağını sıfırla + reload.
+          onContentProcessDidTerminate={
+            onIzleme
+              ? () => {
+                  setHazir(false);
+                  web.current?.reload();
+                }
+              : undefined
+          }
+          onRenderProcessGone={
+            onIzleme
+              ? () => {
+                  setHazir(false);
+                  web.current?.reload();
+                }
+              : undefined
+          }
           javaScriptEnabled
           domStorageEnabled
           allowFileAccess={false}
