@@ -28,7 +28,7 @@ const APPLE_HOSTLAR = [
 // satın almalar premium saymaya devam eder). Bilinmeyen ürün reddedilir.
 const URUNLER = new Set([
   // satılan
-  'musterek_yillik', 'musterek_omurboyu', 'musterek_omurboyu_yukseltme',
+  'musterek_aylik', 'musterek_yillik', 'musterek_omurboyu', 'musterek_omurboyu_yukseltme',
   // indirimli ömür boyu (ayrı Play ürünü; kod/ilk-giriş indirimiyle bu SKU satın alınır — tip: omurboyu)
   'musterek_omurboyu_i20', 'musterek_omurboyu_i30',
   // eski model (artık satılmaz ama tanınır)

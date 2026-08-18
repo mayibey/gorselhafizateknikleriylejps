@@ -10,12 +10,13 @@
  */
 
 // SATILAN ürünler
+export const URUN_AYLIK = 'musterek_aylik'; // abonelik — tüm içerik 1 ay (18 Ağu eklendi, 489 TL)
 export const URUN_YILLIK = 'musterek_yillik'; // abonelik — tüm içerik 1 yıl
 export const URUN_OMURBOYU = 'musterek_omurboyu'; // tek seferlik — tüm içerik ömür boyu
 export const URUN_YUKSELTME = 'musterek_omurboyu_yukseltme'; // tek seferlik — yıllıktan ömür boyuna FARK
 
 // expo-iap sorgu listeleri (abonelik vs tek-seferlik ayrı API)
-export const ABONELIK_URUNLERI = [URUN_YILLIK];
+export const ABONELIK_URUNLERI = [URUN_AYLIK, URUN_YILLIK];
 export const TEK_SEFERLIK_URUNLERI = [URUN_OMURBOYU, URUN_YUKSELTME];
 
 // PROMOSYON ürünleri — Play'de SATILMAZ; promo kodu kullanınca sunucu (promo_kullan RPC)
@@ -54,6 +55,7 @@ export const ESKI_PREMIUM_URUNLERI = [
 
 /** uyelik_haklari'nda premium sayılan TÜM ürünler (satılan + indirimli ömür boyu + promo + eski). */
 export const PREMIUM_URUNLERI = [
+  URUN_AYLIK,
   URUN_YILLIK,
   URUN_OMURBOYU,
   URUN_YUKSELTME,
