@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { type ReactNode, useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, Alert, Animated, Easing, Image, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
@@ -80,6 +80,52 @@ const DERECE_BILGI: Record<SicilDerece, { ikon: IconName; renk: PaletteColor }> 
 };
 const KADEME_AD = ['—', 'Yazılı İkaz', 'Uyarı', 'Kınama', 'Aylıktan Kesme'];
 const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '—');
+
+/** Premium CTA üzerinde periyodik ELMAS PARILTISI — diagonal ışık süpürmesi (~2.6s'de bir).
+ *  (başkan 19 Ağu: "elmas parlaması gibi parlama efekti".) */
+function PremiumParilti() {
+  const x = useRef(new Animated.Value(0)).current;
+  const [w, setW] = useState(0);
+  useEffect(() => {
+    if (w <= 0) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(x, {
+          toValue: 1,
+          duration: 1050,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.delay(2600),
+      ]),
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [w, x]);
+  const tx = x.interpolate({ inputRange: [0, 1], outputRange: [-130, w + 130] });
+  return (
+    <View
+      pointerEvents="none"
+      style={StyleSheet.absoluteFill}
+      onLayout={(e) => setW(e.nativeEvent.layout.width)}>
+      <Animated.View style={[styles.parilti, { transform: [{ translateX: tx }, { skewX: '-18deg' }] }]}>
+        <LinearGradient
+          colors={[
+            'transparent',
+            'rgba(255,255,255,0.0)',
+            'rgba(255,255,255,0.5)',
+            'rgba(247,215,116,0.35)',
+            'transparent',
+          ]}
+          locations={[0, 0.35, 0.5, 0.62, 1]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={StyleSheet.absoluteFill}
+        />
+      </Animated.View>
+    </View>
+  );
+}
 
 export default function SicilScreen() {
   const router = useRouter();
@@ -223,6 +269,8 @@ export default function SicilScreen() {
               <View style={styles.premiumOk}>
                 <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.altinParlak} />
               </View>
+              {/* Elmas parıltısı — en üst katman, dokunmayı engellemez. */}
+              <PremiumParilti />
             </Pressable>
           ) : null}
           {/* 11 Ağu başkan: Ayarlar girişi EN ÜSTTE (künyenin hemen altı). */}
@@ -1724,6 +1772,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   premiumEyebrow: { letterSpacing: 1.6, marginBottom: 1, opacity: 0.95 },
+  parilti: { position: 'absolute', top: -24, bottom: -24, width: 92 },
   premiumCagriMetin: { flex: 1 },
   premiumCagriAlt: { marginTop: 2 },
   premiumOk: {
