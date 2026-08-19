@@ -1243,8 +1243,6 @@ function Dugum({
   const cap = aktif ? HERO : NODE;
   const yuzde = dugum.toplam > 0 ? Math.round((dugum.calisilan / dugum.toplam) * 100) : 0;
   const numara = dugumNumara(dugum.bolum.ad);
-  // OYUNVARİ mockup: sol sütun düğümün etiketi SAĞA, sağ sütununki SOLA yaslanır.
-  const labelRight = index % 2 === 0;
 
   // Giriş (fade + scale, sıralı) + aktifte yumuşak pulse.
   const enter = useRef(new Animated.Value(0)).current;
@@ -1304,22 +1302,6 @@ function Dugum({
         </View>
       ) : null}
 
-      {/* OYUNVARİ (mockup): yan etiket pili — aktif=altın çerçeve/yazı, değil=koyu translucent. */}
-      {koyu ? (
-        <View
-          pointerEvents="none"
-          style={[
-            st.etiketPill,
-            aktif && st.etiketPillAktif,
-            { top: cap / 2 - 15 },
-            labelRight ? { left: BOX / 2 + cap / 2 + 4 } : { right: BOX / 2 + cap / 2 + 4 },
-          ]}>
-          <AppText variant="etiket" bold color={aktif ? 'altinParlak' : 'kartMetinAcik'} numberOfLines={1}>
-            {dugum.bolum.ad}
-          </AppText>
-        </View>
-      ) : null}
-
       <Animated.View style={{ transform: [{ scale: pulseScale }] }}>
         {/* Glow: aktif → altın (iki katman); oyunvari pasif → yumuşak teal halka. */}
         {aktif ? (
@@ -1356,14 +1338,22 @@ function Dugum({
             pressed && st.pressed,
           ]}>
           {koyu ? (
-            // OYUNVARİ (mockup): daima madde numarası, camsı daire üstünde beyaz.
-            <AppText
-              variant={(numara?.length ?? 0) > 3 ? 'kucuk' : aktif ? 'baslik' : 'govde'}
-              bold
-              color="kartMetinAcik"
-              numberOfLines={1}>
-              {numara ?? '•'}
-            </AppText>
+            // OYUNVARİ (başkan 18 Ağu): madde ETİKETİ dairenin İÇİNDE — "Madde" üstte küçük,
+            // numara altta büyük (yan pil kaldırıldı). Numarasızsa tam ad 2 satır.
+            numara ? (
+              <View style={st.dugumIcMetin}>
+                <AppText variant="etiket" bold color="kartMetinAcik" style={st.dugumIcUst}>
+                  Madde
+                </AppText>
+                <AppText variant={aktif ? 'baslik' : 'govde'} bold color="kartMetinAcik" numberOfLines={1}>
+                  {numara}
+                </AppText>
+              </View>
+            ) : (
+              <AppText variant="etiket" bold color="kartMetinAcik" numberOfLines={2} style={st.dugumIcAd}>
+                {dugum.bolum.ad}
+              </AppText>
+            )
           ) : durum === 'aktif' ? (
             <MaterialCommunityIcons name="play" size={36} color={Palette.lacivert} />
           ) : durum === 'tamam' ? (
@@ -1868,6 +1858,20 @@ const st = StyleSheet.create({
   glowTeal: {
     position: 'absolute',
     backgroundColor: 'rgba(126,205,218,0.16)', // pasif düğüm çevresinde yumuşak teal ışık
+  },
+  // OYUNVARİ: madde etiketi dairenin İÇİNDE — "Madde" üstte küçük, numara altta büyük.
+  dugumIcMetin: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dugumIcUst: {
+    opacity: 0.9,
+    marginBottom: -3,
+    letterSpacing: 0.3,
+  },
+  dugumIcAd: {
+    textAlign: 'center',
+    paddingHorizontal: 4,
   },
   // OYUNVARİ (mockup): düğümün yanındaki madde etiketi — koyu translucent pill.
   etiketPill: {
