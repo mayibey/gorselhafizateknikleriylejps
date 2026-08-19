@@ -1348,6 +1348,12 @@ function Dugum({
                 <AppText variant={aktif ? 'baslik' : 'govde'} bold color="kartMetinAcik" numberOfLines={1}>
                   {numara}
                 </AppText>
+                {/* Durum işareti dairenin İÇİNDE (başkan): tamam=yeşil tik · başlanmadı=kilit. */}
+                {durum === 'tamam' ? (
+                  <MaterialCommunityIcons name="check-bold" size={15} color={Palette.yesilParlak} style={st.dugumIcRozet} />
+                ) : durum === 'baslanmadi' ? (
+                  <MaterialCommunityIcons name="lock" size={13} color="rgba(206,236,244,0.9)" style={st.dugumIcRozet} />
+                ) : null}
               </View>
             ) : (
               <AppText variant="etiket" bold color="kartMetinAcik" numberOfLines={2} style={st.dugumIcAd}>
@@ -1366,17 +1372,6 @@ function Dugum({
             <View style={st.nokta} />
           )}
         </Pressable>
-        {/* OYUNVARİ: sağ-üst rozet DURUMA göre (başkan: "öğrenince kilit açılsın+yeşil tik").
-            tamam → YEŞİL TİK · başlanmadı → KİLİT · aktif/başlanmış → rozet yok (erişilebilir). */}
-        {koyu && durum === 'tamam' ? (
-          <View pointerEvents="none" style={[st.tikRozet, { left: BOX / 2 + cap / 2 - 18, top: -2 }]}>
-            <MaterialCommunityIcons name="check-bold" size={14} color={Palette.beyaz} />
-          </View>
-        ) : koyu && durum === 'baslanmadi' ? (
-          <View pointerEvents="none" style={[st.kilitRozet, { left: BOX / 2 + cap / 2 - 18, top: -2 }]}>
-            <MaterialCommunityIcons name="lock" size={13} color="rgba(206,236,244,0.95)" />
-          </View>
-        ) : null}
       </Animated.View>
 
       {/* Alt etiket — yalnız NON-koyu (oyunvari'de yan pil kullanılır). */}
@@ -1868,6 +1863,9 @@ const st = StyleSheet.create({
     opacity: 0.9,
     marginBottom: -3,
     letterSpacing: 0.3,
+  },
+  dugumIcRozet: {
+    marginTop: 1,
   },
   dugumIcAd: {
     textAlign: 'center',
