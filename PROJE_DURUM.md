@@ -2,7 +2,17 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 18 Ağustos 2026 (RN önizleme paketi + Patika v2)
+> Son güncelleme: 20 Ağustos 2026 (🚀 1.0.45 TAM YAYIN — iOS+Android ikisi de mağaza incelemesinde)
+>
+> ### ▶ 19-20 Ağu — 🚀 1.0.45 TAM ÜRETİM YAYINI (iOS + Android, önizleme özellikleri genele)
+> **İstek (başkan):** "Yayına alalım" → "ben uyuyorum, sabah görseller yüklenmiş ve buildlerim incelemede olsun." Play **Üretim** (dahili test değil — herkese).
+> **Bayrak genele:** `constants/config.ts` `YAYIN_HERKESE=true` + `ozellik.ts` `YAYIN_BAYRAKLARI={on-izleme,patika-oyunvari}` → önizleme davranışı herkese açıldı (kişi bayrağı gerekmeden). app.json 1.0.44→**1.0.45** (EAS autoIncrement: iOS build 72, Android vCode 62).
+> **EAS build tuzağı ÇÖZÜLDÜ:** "archive too big 2GB" = EAS `.easignore`'a rağmen node_modules'ü katıyor → **`EAS_NO_VCS=1`** ile arşiv 17MB'a düştü, 15sn yüklendi. Bkz [[eas-build-arsiv-no-vcs]]. `.easignore`'a scratchpad/buildler/*-tmp eklendi.
+> **iOS (ASC API, TAM):** sürüm 1.0.45 oluştur + build 72 (VALID) bağla + metadata (açıklama/keywords[86]/whatsNew/promo) + **6 yeni oyun ekran görüntüsü** (kare-1..6: menü/çengel/boşluk/doğru-yanlış/asmaca/rütbe, 1290×2796, set COMPLETE) + reviewSubmission → **WAITING_FOR_REVIEW ✅.**
+> **Android (Play CDP, port 9500):** AAB imza uyuşmazlığı (EAS 4D:A3 vs upload E2:E5) → jarsigner re-sign + python zipfile ile ÇİFT imza temizliği → `mevzu-1045-clean.aab`. Üretim sürümüne yüklendi + sürüm notları + AD_ID hatası "İzin olmadan yayınla" ile geçildi + Kaydet → Yayın özeti → **"1 değişikliği incelemeye gönder" → İncelenmekte ✅.**
+> **Sunucu tarafı (canlı):** oyun_surum güncel (--onayla, oyun+güvenlik fixleri global), ekran_koruma=1, premium geri yüklendi (başkan+Kemal), başkan ilerleme geri yüklendi.
+> **⚠️ AÇIK — Play mağaza görselleri:** Play telefon ekran görüntüleri **9:16 olmalı** (eski 8 markalı görsel 1080×1920 canlıda duruyor). Yeni 6 kare 1290×2796'yı 1080×1920 9:16'ya çevirdim (sharp, dikişsiz kenar-kopya bant) ama Play kütüphanesine yüklenen görseller "**Kırpılması gerekiyor**" işaretleniyor → Play kırpma aracı TAM-9:16'da kimlik-kırpması olup "**Resim kırpılamadı**" ile başarısız (hazır görseller "Cropped-" ön ekli, daha büyük kaynaktan kırpılmış). Büyütme/pad denemeleri de yükleme takıldı. **Sonuç:** Play mağaza girişi görselleri YENİLENMEDİ, canlı 8 markalı set duruyor (taslak değişiklikler KAYDEDİLMEDİ → canlı sağlam; reload Google re-auth duvarına düştü). iOS'ta 6 yeni görsel VAR. Play görsel yenilemesi build incelemesinden bağımsız, sonra yapılabilir. Bkz [[play-magaza-gorseli-kirpma-tuzagi]].
+> **DURUM:** iOS 1.0.45 WAITING_FOR_REVIEW · Android 1.0.45 (v62) İncelenmekte · canlı 1.0.43(iOS)/eski(Android). Onaylanınca ikisi de otomatik yayınlanır (yönetilen yayınlama kapalı).
 >
 > ### ▶ 18 Ağu (gece) — 📦 RN ÖNİZLEME PAKETİ (`on-izleme` bayrağı, yalnız başkan+Kemalettin) + OTA
 > **Mekanizma:** RN OTA herkese gider (bundle global); davranış **kişi bayrağıyla** kısıldı. Yeni bayrak `on-izleme` (ozellik_kisi → başkan 98be2c62 + Kemalettin 90501c0f). Herkeste ESKİ hâl; sizde yeni. Onaylanınca bayrak koşulu kaldırılıp genele açılır. OTA: `production` / runtime **1.0.44** (grup 807a07b7, sonra Patika v2 grup 864186f7). Başkan `anlik-guncelleme` açık → ~30 sn'de kendini yeniler.
