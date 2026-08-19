@@ -559,18 +559,23 @@ export default function PatikaScreen() {
       // düğümler üzerinde kayar. Bayrak kapalıysa eski krem topografik harita.
       koyu={oyunVari}
       scroll={!yolculukSahne}
-      // AÇILIŞTA KALDIĞIN DURAK (başkan, 14 Ağu): kanunu açınca patika 1. maddeden
-      // başlıyordu; artık aktif düğüm ekranın üst-orta bandına gelecek şekilde kaydırılır.
+      // AÇILIŞTA KALDIĞIN DURAK (başkan): kanunu açınca patika, KALDIĞIN madde (ilk
+      // tamamlanmamış = aktif düğüm) ekranın üst-orta bandına gelecek şekilde kaydırılır.
+      // OYUNVARİ'de üst bilgi sabit-üste taşındı → Harita en üstte (haritaUst≈0); bu yüzden
+      // eski "haritaUst>0" şartı kaydırmayı iptal ediyordu. Artık haritaUst şart değil.
       baslangicKaydirma={
-        (kapsamSecimi || oyunVari) && haritaUst > 0 && aktifIndex > 0 && dugumler
+        oyunVari && dugumler && dugumler.length > 0 && aktifIndex >= 0
           ? Math.max(
               0,
               haritaUst +
                 PAD_TOP +
-                (oyunVari ? dugumler.length - 1 - aktifIndex : aktifIndex) * ROW_GAP -
-                pencereY * 0.38,
+                (dugumler.length - 1 - aktifIndex) * ROW_GAP +
+                NODE / 2 -
+                pencereY * 0.42,
             )
-          : undefined
+          : kapsamSecimi && haritaUst > 0 && aktifIndex > 0
+            ? Math.max(0, haritaUst + PAD_TOP + aktifIndex * ROW_GAP - pencereY * 0.38)
+            : undefined
       }
       headerAltinCizgi
       // OYUNVARİ: üst bilgi TEK BLOK + kaydırmanın DIŞINDA sabit (başkan: "tek blok içine al").
