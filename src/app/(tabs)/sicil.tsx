@@ -5,6 +5,8 @@ import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleShe
 
 import { SicilBelgesi } from '@/components/sicil/takdir-belgesi';
 import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
+import { LinearGradient } from 'expo-linear-gradient';
+
 import { AppText } from '@/components/ui/app-text';
 import { DogumTarihiSecici } from '@/components/auth/dogum-tarihi-secici';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -185,22 +187,42 @@ export default function SicilScreen() {
               Premium'da GÖRÜNMEZ. (başkan 19 Ağu: standart hesapta yönlendirme yoktu.) */}
           {!premium && onIzleme ? (
             <Pressable
-              style={({ pressed }) => [styles.premiumCagri, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.premiumCagri, pressed && styles.premiumCagriBasili]}
               onPress={() => router.push('/paywall')}
               accessibilityRole="button"
               accessibilityLabel="Tam Erişim'e geç">
-              <View style={styles.premiumCagriIkon}>
-                <MaterialCommunityIcons name="shield-star" size={24} color={Palette.altinParlak} />
+              {/* Altın parıltı katmanı (köşeden yumuşak ışık) — koyu kart üstünde premium his. */}
+              <LinearGradient
+                colors={['rgba(243,194,74,0.18)', 'rgba(243,194,74,0.04)', 'transparent']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                style={StyleSheet.absoluteFill}
+                pointerEvents="none"
+              />
+              <View style={styles.premiumEmblemSar}>
+                <View style={styles.premiumGlow} pointerEvents="none" />
+                <LinearGradient
+                  colors={['#F7D774', '#C9A227']}
+                  start={{ x: 0.1, y: 0 }}
+                  end={{ x: 0.9, y: 1 }}
+                  style={styles.premiumEmblem}>
+                  <MaterialCommunityIcons name="shield-star" size={24} color={Palette.lacivert} />
+                </LinearGradient>
               </View>
               <View style={styles.premiumCagriMetin}>
-                <AppText variant="govde" bold color="lacivert">
+                <AppText variant="etiket" bold color="altinParlak" style={styles.premiumEyebrow}>
+                  PREMİUM
+                </AppText>
+                <AppText variant="govde" bold color="beyaz">
                   Tam Erişim&apos;e Geç
                 </AppText>
-                <AppText variant="etiket" color="lacivert" style={styles.premiumCagriAlt}>
-                  Tüm kanunlar, tüm oyunlar, sınırsız — kilit yok.
+                <AppText variant="etiket" color="kartMetinIkincil" style={styles.premiumCagriAlt}>
+                  Tüm kanunlar · tüm oyunlar · sınırsız — kilitsiz.
                 </AppText>
               </View>
-              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.lacivert} />
+              <View style={styles.premiumOk}>
+                <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.altinParlak} />
+              </View>
             </Pressable>
           ) : null}
           {/* 11 Ağu başkan: Ayarlar girişi EN ÜSTTE (künyenin hemen altı). */}
@@ -1666,27 +1688,54 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(126,205,218,0.5)',
     borderWidth: 1,
   },
-  // FREE hesap için TAM ERİŞİM çağrısı — altın dolu kart (koyu ekranda öne çıksın).
+  // FREE hesap için TAM ERİŞİM çağrısı — KOYU premium kart + altın degrade amblem/parıltı/kenar.
   premiumCagri: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.three,
-    backgroundColor: Palette.altinParlak,
+    backgroundColor: 'rgba(7,26,41,0.94)',
+    borderWidth: 1,
+    borderColor: 'rgba(201,162,39,0.55)',
     borderRadius: Radius.l,
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.three,
     marginBottom: Spacing.three,
+    overflow: 'hidden',
+    shadowColor: Palette.altin,
+    shadowOpacity: 0.28,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 5,
   },
-  premiumCagriIkon: {
+  premiumCagriBasili: { opacity: 0.9, transform: [{ scale: 0.99 }] },
+  premiumEmblemSar: { width: 48, height: 48, alignItems: 'center', justifyContent: 'center' },
+  premiumGlow: {
+    position: 'absolute',
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    backgroundColor: 'rgba(243,194,74,0.22)',
+  },
+  premiumEmblem: {
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: 'rgba(11,31,58,0.14)',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  premiumEyebrow: { letterSpacing: 1.6, marginBottom: 1, opacity: 0.95 },
   premiumCagriMetin: { flex: 1 },
-  premiumCagriAlt: { marginTop: 2, opacity: 0.85 },
+  premiumCagriAlt: { marginTop: 2 },
+  premiumOk: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(201,162,39,0.16)',
+    borderWidth: 1,
+    borderColor: 'rgba(201,162,39,0.4)',
+  },
   kategoriIkonGece: {
     backgroundColor: 'rgba(3,40,56,0.7)',
     borderWidth: 1,
