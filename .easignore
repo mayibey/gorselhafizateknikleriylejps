@@ -52,6 +52,13 @@ JSPS MESLEK KONULARI MEHAZLARI/
 docs/
 .git/
 
+# Geçici / otomasyon çıktıları — build'e GEREKMEZ (chrome profilleri, ekran çekimleri ~900MB;
+# 19 Ağu: bu klasör tarball'ı 2.5GB yapıp EAS 2GB limitini aşırdı).
+scratchpad/
+buildler/
+*-tmp/
+easbuild-tmp/
+
 # İÇERİK BİNARY'LERİ (webp/mp3 ~2.2GB) — build arşivine GİRMEZ. Registry manifest-only (require-map
 # boş); app içeriği SUNUCUDAN (imzalı-URL) çeker. Bunlar arşive girerse 2GB EAS limitini aşar.
 assets/kartlar/

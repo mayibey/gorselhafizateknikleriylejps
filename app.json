@@ -18,7 +18,7 @@
     },
     "ios": {
       "bundleIdentifier": "app.mevzujsps.ios",
-      "buildNumber": "71",
+      "buildNumber": "72",
       "icon": "./assets/images/mevzu-icon-1024.png",
       "usesAppleSignIn": true,
       "associatedDomains": [
@@ -33,7 +33,7 @@
     },
     "android": {
       "package": "app.mevzujsps.android",
-      "versionCode": 57,
+      "versionCode": 62,
       "googleServicesFile": "./google-services.json",
       "allowBackup": false,
       "permissions": [
