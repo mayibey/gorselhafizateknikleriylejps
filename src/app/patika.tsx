@@ -520,29 +520,29 @@ export default function PatikaScreen() {
     <View style={st.ustBlok}>
       <View style={st.ustBlokUst}>
         <View style={st.ustBlokChip}>
-          <MaterialCommunityIcons name="fire" size={17} color={Palette.altinKoyu} />
-          <AppText variant="kucuk" bold color="altinMetin">
+          <MaterialCommunityIcons name="fire" size={17} color={Palette.altinParlak} />
+          <AppText variant="kucuk" bold color="altinParlak">
             {streak === null ? '—' : streak}
           </AppText>
         </View>
         <View style={st.ustBlokBoluc} />
         <View style={st.ustBlokChip}>
-          <AppText variant="kucuk" bold color="lacivert">
+          <AppText variant="kucuk" bold color="beyaz">
             {hazirlik === null ? '—' : `%${hazirlik}`}
           </AppText>
-          <AppText variant="etiket" color="solukMetin">
+          <AppText variant="etiket" color="kartMetinIkincil">
             Çalışıldı
           </AppText>
         </View>
       </View>
       <View style={st.ustBlokAyrac} />
       <View style={st.ustBlokKanun}>
-        <MaterialCommunityIcons name="book-open-variant" size={20} color={Palette.altin} />
-        <AppText variant="kucuk" bold color="anaMetin" numberOfLines={2} style={st.ustBlokAd}>
+        <MaterialCommunityIcons name="book-open-variant" size={20} color={Palette.altinParlak} />
+        <AppText variant="kucuk" bold color="kartMetinAcik" numberOfLines={2} style={st.ustBlokAd}>
           {kanunAd ?? 'Mevzuat'}
         </AppText>
         {!bolumsuz && dugumler !== null ? (
-          <AppText variant="kucuk" bold color="altinMetin">
+          <AppText variant="kucuk" bold color="altinParlak">
             {toplamKart === 0 ? '0 kart' : `${calisilanKart}/${toplamKart} kart`}
           </AppText>
         ) : null}
@@ -1346,8 +1346,9 @@ function Dugum({
           style={({ pressed }) => [
             st.daire,
             { width: cap, height: cap, borderRadius: cap / 2 },
-            koyu && !aktif && st.daireKoyu,
+            koyu && durum === 'tamam' && st.daireKoyuTamam,
             koyu && aktif && st.daireKoyuAktif,
+            koyu && !aktif && durum !== 'tamam' && st.daireKoyu,
             !koyu && durum === 'aktif' && st.daireAktif,
             !koyu && durum === 'tamam' && st.daireTamam,
             !koyu && durum === 'baslanmis' && st.daireBaslanmis,
@@ -1375,16 +1376,15 @@ function Dugum({
             <View style={st.nokta} />
           )}
         </Pressable>
-        {/* OYUNVARİ (mockup): sağ-üstte kilit rozeti (aktif=altın). */}
-        {koyu ? (
-          <View
-            pointerEvents="none"
-            style={[st.kilitRozet, aktif && st.kilitRozetAktif, { left: BOX / 2 + cap / 2 - 18, top: -2 }]}>
-            <MaterialCommunityIcons
-              name="lock"
-              size={13}
-              color={aktif ? Palette.lacivert : 'rgba(206,236,244,0.95)'}
-            />
+        {/* OYUNVARİ: sağ-üst rozet DURUMA göre (başkan: "öğrenince kilit açılsın+yeşil tik").
+            tamam → YEŞİL TİK · başlanmadı → KİLİT · aktif/başlanmış → rozet yok (erişilebilir). */}
+        {koyu && durum === 'tamam' ? (
+          <View pointerEvents="none" style={[st.tikRozet, { left: BOX / 2 + cap / 2 - 18, top: -2 }]}>
+            <MaterialCommunityIcons name="check-bold" size={14} color={Palette.beyaz} />
+          </View>
+        ) : koyu && durum === 'baslanmadi' ? (
+          <View pointerEvents="none" style={[st.kilitRozet, { left: BOX / 2 + cap / 2 - 18, top: -2 }]}>
+            <MaterialCommunityIcons name="lock" size={13} color="rgba(206,236,244,0.95)" />
           </View>
         ) : null}
       </Animated.View>
@@ -1776,17 +1776,14 @@ const st = StyleSheet.create({
   },
   // OYUNVARİ: üst bilgi TEK BLOK — streak/%çalışıldı + kanun aynı kremen kartın içinde.
   ustBlok: {
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.kenarlik,
+    // Uygulamanın diğer GECE kartlarıyla aynı dil (başkan: "diğer tarz gibi"): koyu-teal
+    // translucent + teal kenar (bkz. istatistikKartGece). Krem panel yerine.
+    backgroundColor: 'rgba(3,47,69,0.9)',
+    borderColor: 'rgba(126,205,218,0.45)',
     borderWidth: 1,
     borderRadius: Radius.m,
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.two,
-    shadowColor: Palette.lacivert,
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 3,
   },
   ustBlokUst: {
     flexDirection: 'row',
@@ -1801,11 +1798,11 @@ const st = StyleSheet.create({
   ustBlokBoluc: {
     width: 1,
     height: 16,
-    backgroundColor: Palette.ayirici,
+    backgroundColor: 'rgba(126,205,218,0.3)',
   },
   ustBlokAyrac: {
     height: 1,
-    backgroundColor: Palette.ayirici,
+    backgroundColor: 'rgba(126,205,218,0.22)',
     marginVertical: Spacing.two,
   },
   ustBlokKanun: {
@@ -1862,6 +1859,12 @@ const st = StyleSheet.create({
     borderColor: Palette.altinParlak,
     borderWidth: 3,
   },
+  daireKoyuTamam: {
+    // Tamamlanan bölüm: yeşil halka (öğrenildi).
+    backgroundColor: 'rgba(8,44,40,0.55)',
+    borderColor: Palette.yesilParlak,
+    borderWidth: 3,
+  },
   glowTeal: {
     position: 'absolute',
     backgroundColor: 'rgba(126,205,218,0.16)', // pasif düğüm çevresinde yumuşak teal ışık
@@ -1898,6 +1901,19 @@ const st = StyleSheet.create({
   kilitRozetAktif: {
     backgroundColor: Palette.altinParlak,
     borderColor: Palette.altinKoyu,
+  },
+  // Tamamlanan bölüm rozeti: yeşil daire + beyaz tik.
+  tikRozet: {
+    position: 'absolute',
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: Palette.yesilParlak,
+    borderWidth: 1.5,
+    borderColor: 'rgba(255,255,255,0.5)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 3,
   },
   nokta: {
     width: 10,
