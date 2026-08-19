@@ -17,8 +17,13 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react';
 
+import { YAYIN_HERKESE } from '@/constants/config';
 import { supabase } from '@/lib/supabase';
 import { ayarOku } from '@/lib/uzak-ayar';
+
+// YAYIN (1.0.45): önizleme bayrakları herkese açılır (bkz. config.YAYIN_HERKESE).
+const YAYIN_BAYRAKLARI = new Set(['on-izleme', 'patika-oyunvari']);
+const yayindaAcik = (ad: string) => YAYIN_HERKESE && YAYIN_BAYRAKLARI.has(ad);
 
 const ONBELLEK_ONEK = 'ozellik-kisi:';
 
@@ -29,6 +34,7 @@ const ONBELLEK_ONEK = 'ozellik-kisi:';
 const bellekHarita = new Map<string, boolean>();
 
 export async function kisiselOzellikAcikMi(ad: string): Promise<boolean> {
+  if (yayindaAcik(ad)) return true; // YAYIN: herkese açık
   try {
     if (!supabase) return false;
     const ham = (await ayarOku('ozellik_kisi'))?.trim();
@@ -47,8 +53,10 @@ export async function kisiselOzellikAcikMi(ad: string): Promise<boolean> {
 /** Bileşen içinden: bayrak açık mı? İlk çizimde son bilinen değer (oturum belleği →
  *  titreme yok), arkada AsyncStorage + sunucu ile tazelenir. */
 export function useKisiselOzellik(ad: string): boolean {
+  // YAYIN: herkese açık bayraklar sunucu beklemeden İLK KAREDE true (bkz. yayindaAcik).
+  const zorla = yayindaAcik(ad);
   // Oturumda daha önce çözüldüyse İLK KARE doğru değerle başlar (bayraksız kare = titreme).
-  const [acik, setAcik] = useState(() => bellekHarita.get(ad) ?? false);
+  const [acik, setAcik] = useState(() => zorla || (bellekHarita.get(ad) ?? false));
   useEffect(() => {
     let yasiyor = true;
     let sunucuGeldi = false;
@@ -72,5 +80,5 @@ export function useKisiselOzellik(ad: string): boolean {
       yasiyor = false;
     };
   }, [ad]);
-  return acik;
+  return zorla || acik;
 }

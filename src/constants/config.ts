@@ -7,6 +7,15 @@
 export const FORMSPREE_ENDPOINT = '';
 
 /**
+ * YAYIN ŞALTERİ (1.0.45): önizleme aşamasında yalnız başkan+Kemalettin'e açık olan yeni
+ * özellikler (on-izleme + patika-oyunvari bayrakları) HERKESE açılır. Release build'i bununla
+ * çıkar. Tekrar önizlemeye dönmek istenirse `false` yap → yalnız bayraklı kişiler görür.
+ * Kapsam: Oyunlar boş-ekran fix, ses hep otomatik, ekran hep açık, kart akışı ilerleme çizgisi,
+ * Evsaf telefon/gece modal + Tam Erişim CTA, Patika oyunvari (turkuaz dağ + numaralı düğümler).
+ */
+export const YAYIN_HERKESE = true;
+
+/**
  * Gizlilik Politikası ve Kullanım Şartları'nın YAYINLANMIŞ web adresleri.
  * docs/GIZLILIK_POLITIKASI.md ve docs/KULLANIM_SARTLARI.md bir sayfada yayınlanınca
  * URL'leri buraya yaz (mağaza + giriş ekranı + Hesap ekranı buraya bağlanır).
