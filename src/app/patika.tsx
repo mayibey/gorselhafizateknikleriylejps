@@ -514,6 +514,42 @@ export default function PatikaScreen() {
     </>
   );
 
+  // OYUNVARİ (başkan 18 Ağu): üst bilgi TEK BLOK — streak/%çalışıldı + kanun aynı kremen
+  // kartın içinde (dağınık yüzen parçalar değil), kendi içinde ayraçla düzenli.
+  const ustBlok = (
+    <View style={st.ustBlok}>
+      <View style={st.ustBlokUst}>
+        <View style={st.ustBlokChip}>
+          <MaterialCommunityIcons name="fire" size={17} color={Palette.altinKoyu} />
+          <AppText variant="kucuk" bold color="altinMetin">
+            {streak === null ? '—' : streak}
+          </AppText>
+        </View>
+        <View style={st.ustBlokBoluc} />
+        <View style={st.ustBlokChip}>
+          <AppText variant="kucuk" bold color="lacivert">
+            {hazirlik === null ? '—' : `%${hazirlik}`}
+          </AppText>
+          <AppText variant="etiket" color="solukMetin">
+            Çalışıldı
+          </AppText>
+        </View>
+      </View>
+      <View style={st.ustBlokAyrac} />
+      <View style={st.ustBlokKanun}>
+        <MaterialCommunityIcons name="book-open-variant" size={20} color={Palette.altin} />
+        <AppText variant="kucuk" bold color="anaMetin" numberOfLines={2} style={st.ustBlokAd}>
+          {kanunAd ?? 'Mevzuat'}
+        </AppText>
+        {!bolumsuz && dugumler !== null ? (
+          <AppText variant="kucuk" bold color="altinMetin">
+            {toplamKart === 0 ? '0 kart' : `${calisilanKart}/${toplamKart} kart`}
+          </AppText>
+        ) : null}
+      </View>
+    </View>
+  );
+
   return (
     <Screen
       title="Patika"
@@ -537,8 +573,8 @@ export default function PatikaScreen() {
           : undefined
       }
       headerAltinCizgi
-      // OYUNVARİ: üst bilgi kaydırmanın DIŞINDA sabit dursun (başkan: "en üstte sabit kalsın").
-      sabitUst={oyunVari && !yolculukSahne ? ustBilgi : undefined}
+      // OYUNVARİ: üst bilgi TEK BLOK + kaydırmanın DIŞINDA sabit (başkan: "tek blok içine al").
+      sabitUst={oyunVari && !yolculukSahne ? ustBlok : undefined}
       headerSag={<MaterialCommunityIcons name="scale-balance" size={24} color={Palette.altinAcik2} />}>
       {/* ÜST BAR — OYUNVARİ değilse akışın içinde (kaydırılır); yolculukta gizli. */}
       {!yolculukSahne && !oyunVari ? ustBilgi : null}
@@ -1736,6 +1772,48 @@ const st = StyleSheet.create({
     elevation: 3,
   },
   seritAd: {
+    flex: 1,
+  },
+  // OYUNVARİ: üst bilgi TEK BLOK — streak/%çalışıldı + kanun aynı kremen kartın içinde.
+  ustBlok: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+    shadowColor: Palette.lacivert,
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 3,
+  },
+  ustBlokUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+  },
+  ustBlokChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.one,
+  },
+  ustBlokBoluc: {
+    width: 1,
+    height: 16,
+    backgroundColor: Palette.ayirici,
+  },
+  ustBlokAyrac: {
+    height: 1,
+    backgroundColor: Palette.ayirici,
+    marginVertical: Spacing.two,
+  },
+  ustBlokKanun: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+  },
+  ustBlokAd: {
     flex: 1,
   },
 
