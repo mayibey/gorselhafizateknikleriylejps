@@ -81,8 +81,11 @@ const tarihFmt = (iso: string) => (iso ? iso.split('-').reverse().join('.') : '�
 
 export default function SicilScreen() {
   const router = useRouter();
-  const { kanunErisilebilir } = useUyelik();
+  const { kanunErisilebilir, premium } = useUyelik();
   const karargahTasindi = useKisiselOzellik('talim-mevzuata');
+  // ÖNİZLEME (19 Ağu): free (standart) hesapta Evsaf'ta premium yönlendirmesi YOKTU (başkan).
+  // Künyenin altına "Tam Erişim'e Geç" çağrısı — yalnız premium OLMAYANDA + önizlemede.
+  const onIzleme = useKisiselOzellik('on-izleme');
   // Zayıf Mevziler sekmesi: Denemeler (kart/sınav) · Oyunlar (Er Meydanı yanlışları).
   const [zayifSekme, setZayifSekme] = useState<'denemeler' | 'oyunlar'>('denemeler');
   // Zayıf Mevziler ana kartı: özet + ilk 3 hep açık; tam detay (sekmeler) ok ile açılır.
@@ -178,6 +181,28 @@ export default function SicilScreen() {
       {karargahTasindi ? (
         <>
           <KunyeBandi />
+          {/* FREE (standart) hesapta TAM ERİŞİM çağrısı — künyenin hemen altında, altın CTA.
+              Premium'da GÖRÜNMEZ. (başkan 19 Ağu: standart hesapta yönlendirme yoktu.) */}
+          {!premium && onIzleme ? (
+            <Pressable
+              style={({ pressed }) => [styles.premiumCagri, pressed && styles.pressed]}
+              onPress={() => router.push('/paywall')}
+              accessibilityRole="button"
+              accessibilityLabel="Tam Erişim'e geç">
+              <View style={styles.premiumCagriIkon}>
+                <MaterialCommunityIcons name="shield-star" size={24} color={Palette.altinParlak} />
+              </View>
+              <View style={styles.premiumCagriMetin}>
+                <AppText variant="govde" bold color="lacivert">
+                  Tam Erişim&apos;e Geç
+                </AppText>
+                <AppText variant="etiket" color="lacivert" style={styles.premiumCagriAlt}>
+                  Tüm kanunlar, tüm oyunlar, sınırsız — kilit yok.
+                </AppText>
+              </View>
+              <MaterialCommunityIcons name="chevron-right" size={22} color={Palette.lacivert} />
+            </Pressable>
+          ) : null}
           {/* 11 Ağu başkan: Ayarlar girişi EN ÜSTTE (künyenin hemen altı). */}
           <Pressable
             style={({ pressed }) => [
@@ -1641,6 +1666,27 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(126,205,218,0.5)',
     borderWidth: 1,
   },
+  // FREE hesap için TAM ERİŞİM çağrısı — altın dolu kart (koyu ekranda öne çıksın).
+  premiumCagri: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+    backgroundColor: Palette.altinParlak,
+    borderRadius: Radius.l,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.three,
+    marginBottom: Spacing.three,
+  },
+  premiumCagriIkon: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: 'rgba(11,31,58,0.14)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  premiumCagriMetin: { flex: 1 },
+  premiumCagriAlt: { marginTop: 2, opacity: 0.85 },
   kategoriIkonGece: {
     backgroundColor: 'rgba(3,40,56,0.7)',
     borderWidth: 1,
