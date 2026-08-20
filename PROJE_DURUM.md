@@ -2,7 +2,19 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 20 Ağustos 2026 (🔔 Android push anahtarı ÖLMÜŞ → yenilendi ve canlı doğrulandı)
+> Son güncelleme: 20 Ağustos 2026 (🧩 Oyun kaynak senkron borcu KAPANDI + iki yeni hata bildirimi)
+>
+> ### ▶ 20 Ağu — 🧩 OYUN MERKEZİ KAYNAK SENKRON BORCU KAPANDI (görünmez ama kritik)
+> **Borç neydi:** son haftaların oyun düzeltmeleri doğrudan CANLIYA işlenmişti; repo **kaynağı** 2.600 satır geride kalmıştı (kaynak 3.089 satır / 1,16 MB · canlı 5.676 satır / 1,53 MB). Kaynaktan üretip yayınlasak canlıdaki o iş **sessizce silinecekti** — patlayana kadar belirti vermeyen bir tuzak.
+> **Ölçüm önce:** canlı sayfa (`20260819-1632`) indirildi; uygulamanın **gömülü yedeği** (`src/assets/oyun-merkezi-html.ts`) canlıyla **birebir aynı** çıktı (1.529.687 karakter) → yani içerik repoda vardı, sadece ÜRETİM KAYNAĞI yoktu.
+> **Yöntem — üreticiyi TERSİNE çalıştırmak** (`scratchpad/kaynak-geri-uret.mjs`): canlıdan üreticinin ekledikleri çıkarıldı (kayıt köprüsü, Er Meydanı kutusu+tıklaması, nerede bildirimleri, tam-ekran kabuk CSS, viewport metası, TEST_MODU/BEDAVA/TEST_GECIS yayın ayarları) ve sildikleri geri kondu (prototip açıklaması, geliştirici notları, test-modu satırı + düğme bağlayıcısı).
+> **DOĞRULAMA (kendi kendini ispatlayan döngü):** yeni kaynaktan `npm run oyun:uret` → çıktı canlı sayfayla **BİREBİR AYNI** (1.529.687 = 1.529.687, karakter karakter). İlk turda 2 karakterlik girinti farkı çıktı (silinen satırın girintisi bir sonraki satıra ekleniyor) → düzeltildi, ikinci turda tam eşleşme.
+> **Sonuç:** gömülü dosyanın HTML dizesi DEĞİŞMEDİ (yalnız elle eklenmiş bir not satırı düştü) → **kullanıcıya giden hiçbir şey değişmedi, yayın yapılmadı.** tsc 0 hata. Commit `1ab00c5`.
+> **Ders:** üretici tek yönlü sanılıyordu; tersine çevrilebilir olması kaynağı kurtardı. Bundan sonra oyun düzeltmesi doğrudan canlıya işlenirse **aynı gün kaynağa da işlenmeli** — yoksa borç yine birikir. [[oyunlar-sunucudan-yayin]]
+>
+> ### ▶ 20 Ağu — 📨 İKİ YENİ HATA BİLDİRİMİ (biri GERÇEK, biri tekrarlanamadı)
+> 1. **Enes Yurtalan (20 Ağu 13:03) — OHAL m.2 kartı, kart 8002: HAKLI.** Görselde sağdaki **"her tür OHAL"** oku 5. dala (YÖNETİM USULÜ) bakıyor. Resmî metin: *"…olağanüstü hallerin her türü için ayrı ayrı geçerli olmak üzere, temel hak ve hürriyetlerin nasıl sınırlanacağı…"* → "her tür OHAL" ibaresi **2. daldan (HAK SINIRLAMA) başlayıp 2–5'i kapsıyor**, yalnız 5'i değil. Sesli anlatım ve alttaki özet rozetleri ZATEN doğru ("hak sınırlama (her tür OHAL)"); yanlış olan tek şey okun hedefi. **Düzeltme görsel yeniden üretimi ister (fabrika hattı) — alkolmetre kartıyla aynı kuyruk.**
+> 2. **Onur Duru (19 Ağu 21:39) — Türk Bayrağı m.3, kart 11002: "Slayt yok" — TEKRARLANAMADI.** Ölçüm: görsel hem pakette hem sunucuda VAR (`bayrak/bayrak_m3_1.webp`, 215 KB), sesi de VAR (mp3). Kart kaydında görsel anahtarı doğru. Muhtemelen o anlık yükleme/bağlantı hatası. Kullanıcıya sorulmadan kesin sebep bulunamaz.
 >
 > ### ▶ 20 Ağu — 🔔 ANDROID PUSH ÖLÜYDÜ, ÇÖZÜLDÜ (FCM V1 servis hesabı anahtarı yenilendi)
 > **Nasıl çıktı:** başkan "Kemalettin'in telefonuna 'yanıma gel' bildirimi at, SADECE ona gitsin" dedi. Gönderim yapıldı, Expo bileti `status: ok` verdi ama makbuz (receipt) hata döndü → kimlik hatası.
