@@ -2,7 +2,15 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 20 Ağustos 2026 (🚀 1.0.45 TAM YAYIN — iOS+Android ikisi de mağaza incelemesinde)
+> Son güncelleme: 20 Ağustos 2026 (🔔 Android push anahtarı ÖLMÜŞ → yenilendi ve canlı doğrulandı)
+>
+> ### ▶ 20 Ağu — 🔔 ANDROID PUSH ÖLÜYDÜ, ÇÖZÜLDÜ (FCM V1 servis hesabı anahtarı yenilendi)
+> **Nasıl çıktı:** başkan "Kemalettin'in telefonuna 'yanıma gel' bildirimi at, SADECE ona gitsin" dedi. Gönderim yapıldı, Expo bileti `status: ok` verdi ama makbuz (receipt) hata döndü → kimlik hatası.
+> **KÖK SEBEP:** EAS'e yüklü FCM V1 servis hesabı anahtarı (Private Key Id `cfab8a96…`) Google tarafında **silinmiş/iptal edilmiş** → token isteği `invalid_grant: account not found`. Yani **TÜM Android kullanıcılarına** push gitmiyordu (Kemalettin'e özel değil). Bilet "ok" görünüp makbuzda patladığı için sessizdi — **ders: push'u bilete değil MAKBUZA bakarak doğrula.**
+> **ÇÖZÜM (build/OTA GEREKMEDİ, sunucu tarafı):** Firebase Console → proje `mevzu-jsps-59639` → Proje ayarları → Servis hesapları → yeni özel anahtar (JSON, masaüstüne indi: `mevzu-jsps-59639-firebase-adminsdk-fbsvc-9ef9cb207a.json`, repo DIŞINDA) → `eas credentials -p android` (TTY-only; otomasyon `scratchpad/fcm-yukle.mjs` ile sürüldü) → Google Service Account → FCM V1 → **Upload** + sonra **"Select an existing"** ile YENİ anahtarı ata. ⚠️ **TUZAK: yüklemek YETMEZ** — yükledikten sonra ayrıca FCM V1'e ATAMAK gerekiyor, yoksa eski bozuk anahtar atanmış kalıyor. Sonuç: `✓ Google Service Account Key assigned to app.mevzujsps.android for FCM V1` (yeni Private Key Id `9ef9cb207a…`).
+> **DOĞRULAMA (canlı):** Kemalettin'e tekrar "yanıma gel" → bilet ok **+ makbuz `ok`** → telefona düştü. Android push tamamen çalışıyor.
+> **Yan not:** Apple Developer Program lisans sözleşmesi güncellenmişti (ASC uyarısı) → başkan kabul etti, uyarı kalktı.
+> **Terminal çöküşü:** aynı gün 13:46'da konsol kendiliğinden kapandı (Windows'ta çökme kaydı YOK; sohbet dosyası 430 MB'a şişmişti → bellek). **Kayıp yok:** çalışma ağacı temiz + origin/master ile aynı; push düzeltmesi sunucu tarafında zaten bitmişti.
 >
 > ### ▶ 19-20 Ağu — 🚀 1.0.45 TAM ÜRETİM YAYINI (iOS + Android, önizleme özellikleri genele)
 > **İstek (başkan):** "Yayına alalım" → "ben uyuyorum, sabah görseller yüklenmiş ve buildlerim incelemede olsun." Play **Üretim** (dahili test değil — herkese).
