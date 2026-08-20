@@ -2,7 +2,19 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 20 Ağustos 2026 (🧩 Oyun kaynak senkron borcu KAPANDI + iki yeni hata bildirimi)
+> Son güncelleme: 20 Ağustos 2026 (📋 TÜM geri bildirimler tarandı — 28 kayıt tek tek ayıklandı)
+>
+> ### ▶ 20 Ağu — 📋 GERİ BİLDİRİM TAM TARAMASI (28 kayıt · 9 Tem – 20 Ağu)
+> Kanallar: `geri_bildirim` **28** · `destek_talebi` **3 (üçü de KAPALI)** · `er_meydani_sikayet` **1 (14 Tem)**.
+> **AÇIK / GERÇEK (3):**
+> 1. **Alkolmetre** `yontrafik_m97_2` — kart gizli, düzeltilmedi. Başkan: beklesin.
+> 2. **OHAL m.2** `ohal_m2_1` — "her tür OHAL" oku yanlış dala bakıyor (Enes Yurtalan, 20 Ağu). Başkan: beklesin.
+> 3. **🆕 46 KANUN-ÖZETİ KARTINDA MADDE METNİ BOŞ** — Ünal Kutlu 25 Tem'de İKİ KEZ bildirmiş (Türk Bayrağı özet, E-İmza özet), bugüne kadar ele alınmamış. Sebep ölçüldü: kanun-geneli özet kartlarının `madde_no`'su `"<Kanun> özet"` biçiminde; metin kayıtları ise `"<Kanun> m.N"` anahtarlı → eşleşme yok, panel **"Madde metni yakında"** gösteriyor. Etkilenen: `*_ozet_ozet` **46 kart** (1511 kartın ~%3'ü). Grup özetleri (`ozet`/`ayirt`, 192 kart) etkilenmiyor — onların `madde_no`'su gerçek madde numarası. **Seçenek:** ya o kartlarda paneli hiç gösterme, ya da özetin kapsadığı maddelerin metnini birleştirip bas.
+> **TEKRARLANAMADI (1):** Türk Bayrağı m.3 "Slayt yok" (Onur Duru, 19 Ağu) — görsel+ses hem pakette hem sunucuda VAR.
+> **BİLDİREN YANILMIŞ (1):** Jandarma Ek m.5 özeti "3 ay değil 3 gün olacak" (Sezai Doğan, 24 Tem) — **kart DOĞRU.** 2803 Ek m.5: *"Kararlar, en fazla üç ay için verilebilir; …üçer ayı geçmeyecek şekilde en fazla üç defa uzatılabilir."* Karttaki 24 saat / 48 saat / 3 ay×3 / 10 gün rakamlarının hepsi resmî metinle birebir.
+> **ÇÖZÜLMÜŞ:** ses hızı sıfırlanması (6 Ağu) · TM m.21 haç→hilal (31 Tem) · 2911 m.29 kapsam dışı (8 Ağu) · uzun seste ses kesilmesi (16 Ağu) · ekran açık kalsın önerisi (Zülküf, 9 Tem).
+> **TEMMUZ "ses yok / görsel açılmıyor" KÜMESİ (6 bildirim) — ARTIK GEÇERSİZ:** içerik sunucuya tam yüklenmeden önceki döneme ait. Ölçüldü: şikayet edilen dosyaların hepsi bugün sunucuda VAR (tck_m322 görsel+ses, yontrafik_m3, kvkk_m6, sozlesmeliyon_m3, tck_m1, jandarmakanun_m1).
+> **ŞAKA/TEST (4):** "Seviyorum seni", "Çok güzelsin bebeğim", "Test", "Bence hata yok deneme".
 >
 > ### ▶ 20 Ağu — 🧩 OYUN MERKEZİ KAYNAK SENKRON BORCU KAPANDI (görünmez ama kritik)
 > **Borç neydi:** son haftaların oyun düzeltmeleri doğrudan CANLIYA işlenmişti; repo **kaynağı** 2.600 satır geride kalmıştı (kaynak 3.089 satır / 1,16 MB · canlı 5.676 satır / 1,53 MB). Kaynaktan üretip yayınlasak canlıdaki o iş **sessizce silinecekti** — patlayana kadar belirti vermeyen bir tuzak.
