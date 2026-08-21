@@ -2,7 +2,18 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 21 Ağustos 2026 (✅ Apple AYLIK ABONELİĞİ ONAYLADI · 1.0.46 hâlâ incelemede)
+> Son güncelleme: 21-22 Ağustos 2026 (🤖 Android 1.0.46 CANLI · alt çubuk çakışması düzeltildi · anlık güncelleme ÇİFT KADEMELİ)
+>
+> ### ▶ 21 Ağu (gece) — 🤖 ANDROID 1.0.46 CANLI + İLK GERİ BİLDİRİM + ÇİFT KADEMELİ ANLIK GÜNCELLEME
+> **Android 1.0.46 YAYINDA (ölçüldü):** Google Reviewer 15:46, ardından gerçek kullanıcılar (Murat Karataş 18:23 · Bekir Gökkaya 21:11 · Oğuzhan baki İlter 22:00 · Duysal Kuyucu 22:31 · Bünyamin Ak 23:07). iOS 1.0.46 hâlâ WAITING_FOR_REVIEW (08:46'dan beri).
+> **🔴 İLK GERİ BİLDİRİM = GERÇEK REGRESYON (Bünyamin Ak, 23:09 — güncellemeden 2 dk sonra):** *"alttaki butonlar telefonun ana butonlarıyla çakışıyor"*. **KÖK SEBEP:** `(tabs)/_layout.tsx` kompakt sekme çubuğu `height = 44 + kenar.bottom * 0.55`. Bu oran YALNIZ ince ev çizgisinde (kaydırmalı gezinme, inset ~20) doğru; **ÜÇ TUŞLU gezinmede inset ~48**, %55'i (~26) verilince çubuk sistem tuşlarının ALTINA giriyor → dokunulamıyor. **Test edenlerin hepsi kaydırmalı gezinme kullandığı için hiç görülmemişti.** FIX: inset > 24 ise TAMAMI + `paddingBottom`; küçükse kompakt kırpma aynen. Commit `28af9e6`, OTA basıldı.
+> **DERS:** Android'de gezinme çubuğu iki farklı dünyadır (kaydırmalı ~20 / üç tuşlu ~48). Safe-area inset'i ORANLA kırpma — büyük inset'te kırpma çakışma demektir.
+> **📣 Bünyamin'e kişiye özel duyuru + push:** hata + sebebi + "tamamen kapatıp aç" yönergesi. **Makbuz 1/1 teslim ✅.**
+> **⚡ ANLIK GÜNCELLEME ARTIK ÇİFT KADEMELİ (başkan: "çift bayrak gibi yani"):**
+> · **1. kademe (deneme):** kişi bayrağı `anlik-guncelleme` — başkan + Kemalettin. Sert kip: 30 sn'de bir + öne gelişte denetler, ANINDA yeniler.
+> · **2. kademe (herkes):** sunucu şalteri **`uygulama_ayar.anlik_guncelleme_herkes` = '1'** → **BUILD GEREKMEZ**, tek satırla açılır/kapanır. **Nazik kip:** sürekli denetim yok; yalnız uygulama arka plandan dönerken ve **en az 60 sn** kapalı kaldıysa yeniler → kimse kart dinlerken/sınavdayken ekranı sıfırlanmaz.
+> · Şalter oluşturuldu, değeri **'0' (kapalı)**. Commit `a3b421e`, OTA basıldı (runtime 1.0.46).
+> **⚠️ NOT:** her iki OTA da runtime **1.0.46**'ya gitti → yalnız 1.0.46'daki kullanıcılara ulaşır ve **bir sonraki açılışta** uygulanır (2. kademe şalteri açılana kadar kapat-aç şart).
 >
 > ### ▶ 21 Ağu (gece) — ✅ AYLIK ABONELİK APPLE'DAN ONAY ALDI
 > Apple maili: *"Gönderinizin incelemesi tamamlandı. Kabul edilen ürünler → Abonelikler: Tam Erişim Aylık · 1 Ay · musterek_aylik"* (gönderim `76158dc3` COMPLETE). API teyidi: **`musterek_aylik` APPROVED** (yıllık da APPROVED). Mağaza tarafı artık hazır, fiyat **389 TL** (iki mağazada da).

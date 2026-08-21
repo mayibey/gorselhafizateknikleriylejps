@@ -16,7 +16,7 @@ const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // Bilerek herkese AÇILMAYAN bayraklar — sebebiyle birlikte.
 const KASITLI_KAPALI = {
-  'anlik-guncelleme': 'Uygulamayı 30 sn\'de bir kendiliğinden yeniler; kullanıcı kart/sınav ortasındayken ekran yenilenemez.',
+  'anlik-guncelleme': '1. KADEME (deneme) — başkan + Kemalettin; 30 sn\'de bir kendiliğinden yeniler. Herkese açmak için bu bayrak DEĞİL, sunucu şalteri kullanılır: uygulama_ayar.anlik_guncelleme_herkes = 1 (nazik kip).',
   'patika-yolculuk': 'Sinematik 3B yolculuk motoru YARIM (ağaç görselleri/doku/ses eksik) — iş durduruldu, bitmeden açılmaz.',
   'ekran-goruntusu-serbest': 'EKRAN GÖRÜNTÜSÜ YASAĞI MUAFİYETİ — sadece başkan + Kemalettin. Herkese açılırsa telifli kart görsellerinin koruması TAMAMEN biter. ASLA yayın listesine ekleme.',
 };
