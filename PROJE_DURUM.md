@@ -2,7 +2,15 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 20 Ağustos 2026 (📋 TÜM geri bildirimler tarandı — 28 kayıt tek tek ayıklandı)
+> Son güncelleme: 21 Ağustos 2026 (🍏 Apple 1.0.45'i REDDETTİ — 3.1.2 EULA linki · düzeltildi · Android YAYINDA)
+>
+> ### ▶ 21 Ağu — 🍏 APPLE REDDİ (3.1.2) DÜZELTİLDİ · 🤖 ANDROID 1.0.45 CANLI
+> **RED:** iOS 1.0.45 → `REJECTED`, submission `UNRESOLVED_ISSUES`. Gerekçe **Guideline 3.1.2 (Payments – Subscriptions)**, Apple'ın OTOMATİK mesajı: *"offers auto-renewable subscriptions but does not include a functional link to the Terms of Use (EULA) in the app metadata that appears on the app's App Store product page."*
+> **Teşhis:** eksik olan uygulama değil **mağaza metniydi**. Ödeme ekranında Kullanım Şartları + Gizlilik linkleri ZATEN var (`paywall.tsx` 630-646) — Apple ÜRÜN SAYFASINDA arıyor. ASC'de custom EULA da yoktu (`endUserLicenseAgreement` → `data:null`). Tetikleyici: 18 Ağu'da eklenen **aylık abonelik**; aynı açıklamayla önceki sürümler geçmişti.
+> **DÜZELTME (build YOK, salt metadata):** mağaza açıklamasının sonuna "ABONELİK ve SATIN ALMA" bloğu (otomatik yenileme + 24 saat kuralı + Ayarlar>Abonelikler) + **Kullanım Şartları (EULA): https://mevzujsps.com/sartlar.html** + Gizlilik linki. `PATCH appStoreVersionLocalizations` → 200, doğrulandı. Açıklama 2348 → 2925 / 4000. Betik `scratchpad/asc-eula-ekle.mjs`. Şartlar sayfası zaten canlı (docs/sartlar.html → GitHub Pages, HTTP 200).
+> **⚠️ TEKRAR GÖNDERME TUZAĞI:** metadata düzeltildikten hemen sonra submit **409** veriyor — *"Version is not ready to be submitted yet, please try again later"*; ayrıca `UNRESOLVED_ISSUES` submission'a yeni item EKLENEMİYOR. Çözüm: aralıklı yeniden deneme (`scratchpad/asc-tekrar-gonder.mjs`, 2,5 dk × 12).
+> **🤖 ANDROID 1.0.45 YAYINDA (ölçüldü, varsayılmadı):** `istemci_surum` → "Google Reviewer" 20 Ağu 15:15'te girmiş, ardından gerçek kullanıcılar (Veli Ali, Mustafa Gür, Caner Kaya, Turan Karahan) 1.0.45'e geçmiş. **Aynı sürüm Google'da geçti, Apple'da yalnız mağaza metni yüzünden takıldı.** Android dağılımı: 1.0.45 → 6 kişi · 1.0.41 → 38 kişi (henüz güncellememiş). iOS: 1.0.43 → 46 kişi.
+> Bkz [[apple-3-1-2-eula-reddi]].
 >
 > ### ▶ 20 Ağu — 📋 GERİ BİLDİRİM TAM TARAMASI (28 kayıt · 9 Tem – 20 Ağu)
 > Kanallar: `geri_bildirim` **28** · `destek_talebi` **3 (üçü de KAPALI)** · `er_meydani_sikayet` **1 (14 Tem)**.
