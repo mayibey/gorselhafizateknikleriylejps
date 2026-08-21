@@ -181,9 +181,19 @@ export default function TabsLayout() {
           ? {
               backgroundColor: '#04283A', // handoff: koyu petrol sekme çubuğu
               borderTopColor: 'rgba(126,205,218,0.2)',
-              // Kompakt: çubuk 49yerine 44, ev çizgisi boşluğu yarıya — oyun alanı büyür.
+              // Kompakt: çubuk 49 yerine 44, EV ÇİZGİSİ boşluğu yarıya — oyun alanı büyür.
+              //
+              // 🔴 21 Ağu 2026 DÜZELTME (Bünyamin Ak bildirdi, 1.0.46'yı indirdikten 2 dk sonra):
+              // "alttaki butonlar telefonun ana butonlarıyla çakışıyor". Sebep: alt boşluğun
+              // %55'ini almak YALNIZCA ince ev çizgisinde (kaydırmalı gezinme, ~20) doğru.
+              // ÜÇ TUŞLU gezinmede alt boşluk ~48 olur; %55'i (~26) verince çubuk sistem
+              // tuşlarının ALTINA giriyor → dokunulamıyor. Test edenlerin hepsi kaydırmalı
+              // gezinme kullandığı için fark edilmemişti (orada fark 9 birim, göze batmıyor).
+              // ÇÖZÜM: boşluk büyükse (üç tuşlu) TAMAMINI kullan, küçükse kırpmaya devam et.
               ...(kompakt
-                ? { height: 44 + Math.max(kenar.bottom * 0.55, 6), paddingTop: 3 }
+                ? kenar.bottom > 24
+                  ? { height: 44 + kenar.bottom, paddingBottom: kenar.bottom, paddingTop: 3 }
+                  : { height: 44 + Math.max(kenar.bottom * 0.55, 6), paddingTop: 3 }
                 : null),
             }
           : {
