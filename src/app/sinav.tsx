@@ -32,6 +32,7 @@ import {
 import { bugunISO } from '@/lib/srs';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
+import { useMesgul } from '@/lib/mesgul';
 
 /** Doğru/yanlış geri bildirim renkleri (tema: yeşil onay, kırmızı uyarı). */
 const DOGRU_YESIL = Palette.yesil;
@@ -214,6 +215,8 @@ export default function SinavScreen() {
   const bitti = sorular !== null && index >= sorular.length;
   const aktif = sorular !== null && !bitti;
   const soru = aktif ? sorular[index] : null;
+  // Sınav sürerken uygulama kendini YENİLEMESİN — cevaplar uçmasın.
+  useMesgul(aktif, 'sinav');
 
   // Puanlama/sonuç için cevap listesi — secimler'den türetilir (cevaplanmayan -1 = yanlış sayılır).
   const cevaplar = useMemo<SinavCevap[]>(

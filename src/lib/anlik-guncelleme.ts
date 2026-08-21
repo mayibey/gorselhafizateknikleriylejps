@@ -1,14 +1,11 @@
 /**
- * ANLIK OTA DENETİMİ — yalnız başkanın cihazında (9 Ağu 2026 isteği):
- * "her seferinde kapatıp açmak zorunda kalıyorum; sürekli anlık denetleyen sistem olsun."
+ * ANLIK OTA DENETİMİ (9 Ağu 2026: "her seferinde kapatıp açmak zorunda kalıyorum").
+ * Uygulama 30 sn'de bir + öne her gelişte OTA denetler; güncelleme varsa indirir ve
+ * KENDİNİ YENİLER (reloadAsync) — kullanıcının kapat-aç yapması gerekmez.
  *
- * Bayrak (`anlik-guncelleme`, ozellik_kisi) açık olan cihazda 30 saniyede bir ve
- * uygulama öne her gelişte OTA denetlenir; güncelleme varsa indirilir ve UYGULAMA
- * KENDİNİ YENİLER (reloadAsync) — kapat-aç gerekmez.
- *
- * HERKESTE KAPALI kalmasının sebebi: kullanıcı kart çalışırken/sınavdayken ekranın
- * kendiliğinden yenilenmesi kabul edilemez; ayrıca sürekli denetim sunucuyu yorar.
- * Normal kullanıcı için açılışta denetleyen varsayılan expo-updates davranışı yeter.
+ * 21 Ağu 2026'dan beri ÇİFT KADEMELİ (aşağıya bak): önce yalnız başkan + Kemalettin,
+ * sonra tek satır sunucu şalteriyle herkes. Herkes kipinde kullanıcı işin ortasındaysa
+ * (sesli anlatım / sınav) yenileme BEKLETİLİR.
  *
  * ASLA hata fırlatmaz; geliştirme modunda (__DEV__) hiç çalışmaz (checkForUpdate
  * dev istemcide desteklenmez).
@@ -17,6 +14,7 @@ import * as Updates from 'expo-updates';
 import { useEffect, useRef } from 'react';
 import { AppState } from 'react-native';
 
+import { mesgulMu } from '@/lib/mesgul';
 import { kisiselOzellikAcikMi } from '@/lib/ozellik';
 import { ayarOku } from '@/lib/uzak-ayar';
 
@@ -48,18 +46,16 @@ async function denetleVeUygula(mesgulRef: { current: boolean }): Promise<void> {
  *
  *  2. KADEME — HERKES (sunucu şalteri `uygulama_ayar.anlik_guncelleme_herkes` = '1'):
  *     BUILD GEREKMEZ, tek satır sunucu değişikliği ile açılır/kapanır.
- *     Davranış DAHA NAZİK: sürekli denetim YOK; yalnız uygulama arka plandan geri
- *     dönerken ve en az DINGIN_MS kadar kapalı kaldıysa yeniler. Böylece kimse
- *     kart dinlerken / sınav çözerken ekranı sıfırlanmaz — eskiden herkese
- *     açılamamasının tek sebebi buydu.
+ *     Davranış: aynı sıklıkta bakar AMA kullanıcı İŞİN ORTASINDAYSA dokunmaz.
+ *     Başkan (21 Ağu): "kart dinlerken yapmasın ama menüler arasında gezerken yenilesin."
+ *     Meşgul sayılan işler `lib/mesgul.ts` kaydında: sesli anlatım çalıyor · sınav sürüyor.
+ *     Menüde/listede gezerken anında yenilenir — eskiden herkese açılamamasının tek
+ *     sebebi ekranın iş ortasında sıfırlanmasıydı, artık o durumda bekliyor.
  *
  *  Kapatmak: şalteri '0' yap. Kişi bayrağı olanlar 1. kademede kalmaya devam eder.
  */
-const DINGIN_MS = 60_000; // en az bu kadar arka planda kaldıysa "işin ortasında değil" say
-
 export function useAnlikGuncelleme(): void {
   const mesgul = useRef(false);
-  const arkaPlanAn = useRef<number | null>(null);
   useEffect(() => {
     if (__DEV__) return;
     let zamanlayici: ReturnType<typeof setInterval> | null = null;
@@ -81,18 +77,17 @@ export function useAnlikGuncelleme(): void {
         return;
       }
 
-      // 2. kademe — nazik: yalnız yeterince uzun süre arka planda kaldıktan sonra.
+      // 2. kademe — nazik: aynı sıklıkta bakar AMA kullanıcı işin ortasındaysa dokunmaz.
+      // Başkan (21 Ağu): "kart dinlerken yapmasın ama menüler arasında gezerken yenilesin."
+      // Meşgul sayılan işler: sesli anlatım çalıyor · sınav sürüyor (bkz. lib/mesgul.ts).
+      const nazikDenetle = () => {
+        if (mesgulMu()) return; // iş bitince bir sonraki turda yakalanır
+        void denetleVeUygula(mesgul);
+      };
+      nazikDenetle();
+      zamanlayici = setInterval(nazikDenetle, ARALIK_MS);
       dinleyici = AppState.addEventListener('change', (d) => {
-        if (d === 'background' || d === 'inactive') {
-          if (arkaPlanAn.current === null) arkaPlanAn.current = Date.now();
-          return;
-        }
-        if (d !== 'active') return;
-        const gittiGeldi = arkaPlanAn.current;
-        arkaPlanAn.current = null;
-        if (gittiGeldi !== null && Date.now() - gittiGeldi >= DINGIN_MS) {
-          void denetleVeUygula(mesgul);
-        }
+        if (d === 'active') nazikDenetle();
       });
     })();
 

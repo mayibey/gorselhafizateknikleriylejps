@@ -12,6 +12,7 @@ import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useEffect, useState } from 'react';
 
 import { useEkranAcikTut } from '@/hooks/use-ekran-acik-tut';
+import { useMesgul } from '@/lib/mesgul';
 import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { sesKaynak } from '@/lib/ses-kaynak';
 import { onbellekUri, sesiOnbellekle } from '@/lib/ses-onbellek';
@@ -68,6 +69,8 @@ export function useKartSesi(sesYolu: string | null | undefined): KartSesi {
 
   // Sesli anlatım çalarken ekran kapanmasın (kullanıcı önerisi).
   useEkranAcikTut(oynuyor, 'mevzu-kart-ses');
+  // Sesli anlatım çalarken uygulama kendini YENİLEMESİN (anlık güncelleme bunu sorar).
+  useMesgul(oynuyor, 'kart-sesi');
 
   // Kart değişince / ekran kapanınca sesi durdur (web'de auto-release kesmiyordu).
   useEffect(() => () => {

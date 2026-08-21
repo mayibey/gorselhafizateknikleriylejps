@@ -66,6 +66,7 @@
     "typescript": "~5.9.2"
   },
   "scripts": {
+    "yayin:musait": "node scripts/yayin-musait-mi.mjs",
     "bayrak:denetle": "node scripts/bayrak-denetle.mjs",
     "postinstall": "patch-package",
     "start": "expo start",
