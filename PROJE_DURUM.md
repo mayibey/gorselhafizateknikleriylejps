@@ -2,7 +2,17 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 21 Ağustos 2026 (📣 Android toplu bildirim gönderildi · 💰 Apple aylık 389 TL)
+> Son güncelleme: 21 Ağustos 2026 (🚨 1.0.46 — UNUTULAN TASARIM BAYRAKLARI AÇILDI, iki mağazaya da gönderildi)
+>
+> ### ▶ 21 Ağu — 🚨 1.0.46: TASARIM BAYRAKLARI UNUTULMUŞTU (en pahalı hata)
+> **BAŞKANIN TESPİTİ:** "adam güncelleyecek, girecek bir bok görmeyecek." HAKLIYDI.
+> **KÖK SEBEP:** 1.0.45'te `YAYIN_BAYRAKLARI` listesine SADECE `on-izleme` + `patika-oyunvari` konmuş. Asıl tasarımı taşıyan **`talim-mevzuata` (22 dosya / 35 yer:** gece teması TÜM uygulamada, Karargâh taşınanları, sade Evsaf, ödeme ekranı, Talim→Mevzuat**)** ve **`gece-er-meydani` (10 dosya / 21 yer:** tüm Er Meydanı + ana zemin**)** ve `patika-arka` UNUTULMUŞ. Sonuç: **Play'den güncelleyen kullanıcı tasarımın büyük kısmını GÖRMÜYORDU** — başkanın telefonunda gece teması, kullanıcıda krem.
+> **NEDEN OTA/SUNUCU ÇÖZMEZ:** bayrak listesi bundle'a GÖMÜLÜ. OTA da her zaman BİR SONRAKİ açılışta uygulanır → "güncelle, aç, gör" olmaz; kapat-aç gerekir. Tek çözüm: bayrağı build'in içine koymak. (`anlik-guncelleme` kendini yeniler ama 3 kişide açık — kart/sınav ortasında ekran yenilenemeyeceği için herkese açılamaz.)
+> **DÜZELTME (commit `db74447`):** üç bayrak yayın listesine eklendi (56 yer birden) + **sunucudan açma yolu** (`uygulama_ayar.ozellik_herkes` JSON dizi; gömülü liste TABAN, sunucu yalnız üstüne ekler → bundan sonra özellik açmak için BUILD GEREKMEZ) + **`npm run bayrak:denetle`** (koddaki her bayrağı tarar, yayın listesinde olmayanı hata verir; bilerek kapalı olanlar sebebiyle kayıtlı). Denetim ilk çalıştırmada 7. bayrağı da yakaladı: `patika-yolculuk` (yarım 3B motor, bilerek kapalı). tsc 0.
+> **🤖 ANDROID 1.0.46 (vc63) → PLAY ÜRETİM, GÖNDERİLDİ ✅** EAS build → **imza re-sign şart** (EAS kendi anahtarıyla imzalıyor; META-INF/A6E221C9.SF+RSA python zipfile ile atıldı, `upload-keystore.jks` ile jarsigner, `jar verified`, tek imza kaldı) → **servis hesabı API ile yüklendi** (`D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json` — tarayıcı GEREKMEDİ) → production track `completed` + tr-TR notlar → commit.
+> **🍏 iOS 1.0.46 (build 73) → WAITING_FOR_REVIEW ✅** Başkan "zaman kaybetme": incelemedeki 1.0.45 **iptal edildi** (`canceled:true` → CANCELING → COMPLETE, sürüm DEVELOPER_REJECTED) → **sürüm sıfırdan kurulmadı, adı 1.0.45 → 1.0.46 yapıldı** (metadata korunsun) → build 73 bağlandı → yeni gönderim → submit.
+> **ÖNCEKİ RED KAÇIRILMADI — tek tek doğrulandı:** 3.1.2 EULA linki ✅ · abonelik bloğu ✅ · gizlilik linki ✅ · 6 ekran görüntüsü COMPLETE ✅ · inceleme hesabı+şifre ✅ · keywords 86/100 ✅ · sürüm notu emojisiz ✅. İnceleme notu YENİLENDİ (Apple'a "3.1.2 reddini şöyle düzelttik, link şurada" diye açık yazıldı). Tüm metadata yedeği: `scratchpad/asc-1045-yedek.json`.
+> **⚠️ AÇIK:** aylık abonelik (`musterek_aylik`, READY_TO_SUBMIT) incelemeye **API ile eklenemiyor** — `reviewSubmissionItems` `subscription` ilişkisini kabul etmiyor (409 RELATIONSHIP.UNKNOWN), `appStoreVersions`'ta da IAP ilişkisi yok. **ASC panelinden elle gönderilmeli**, yoksa aylık paket iPhone'da satılamaz. (Fiyatı 489→389 TL yapıldı, o hazır.)
 >
 > ### ▶ 21 Ağu — 📣 TOPLU BİLDİRİM (Android) + 💰 AYLIK FİYAT 489→389 TL
 > **Bildirim (başkan isteği, 09:35'e zamanlandı):** *"Mevzu yenilendi 🎮 / Oyun Merkezi açıldı: 14 oyunla mevzuatı oynayarak öğren…"* → **257 Android cihaza** gönderildi (`platform='android'` + platformu boş eski kayıtlar). Oyun sayısı ezberden değil canlı sayfadan SAYILDI (14).
