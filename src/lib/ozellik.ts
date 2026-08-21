@@ -21,8 +21,39 @@ import { YAYIN_HERKESE } from '@/constants/config';
 import { supabase } from '@/lib/supabase';
 import { ayarOku } from '@/lib/uzak-ayar';
 
-// YAYIN (1.0.45): önizleme bayrakları herkese açılır (bkz. config.YAYIN_HERKESE).
-const YAYIN_BAYRAKLARI = new Set(['on-izleme', 'patika-oyunvari']);
+// YAYIN: önizleme bayrakları herkese açılır (bkz. config.YAYIN_HERKESE).
+//
+// ⚠️ 21 AĞU 2026 — PAHALI DERS: 1.0.45'te bu listeye SADECE iki bayrak konmuştu; asıl
+// tasarımı taşıyan `talim-mevzuata` (22 dosya/35 yer: gece teması, Karargâh taşınanları,
+// sade Evsaf, ödeme ekranı, Talim→Mevzuat) ve `gece-er-meydani` (10 dosya/21 yer: tüm
+// Er Meydanı + ana zemin) UNUTULDU. Sonuç: kullanıcı "güncelledim" deyip açtığında
+// tasarımın büyük kısmını GÖRMÜYORDU. Yeni bir bayrak açılırken BU LİSTEYE eklemeyi
+// unutma — kontrolü `npm run bayrak:denetle` yapar.
+const YAYIN_BAYRAKLARI = new Set([
+  'on-izleme',
+  'patika-oyunvari',
+  'talim-mevzuata',
+  'gece-er-meydani',
+  'patika-arka',
+]);
+
+// SUNUCUDAN AÇILANLAR (21 Ağu): bundan sonra bir özelliği herkese açmak için YENİ BUILD
+// GEREKMESİN diye. `uygulama_ayar.ozellik_herkes` = JSON dizi ["bayrak-adi", ...].
+// Gömülü liste TABANDIR (eşzamanlı, titremesiz); sunucu listesi yalnız ÜSTÜNE EKLER,
+// hiçbir şeyi kapatmaz → sunucu erişilemese bile bugünkü davranış aynen sürer.
+let sunucuListe: Set<string> | null = null;
+async function sunucudaAcikMi(ad: string): Promise<boolean> {
+  try {
+    if (sunucuListe) return sunucuListe.has(ad);
+    const ham = (await ayarOku('ozellik_herkes'))?.trim();
+    const dizi = ham ? (JSON.parse(ham) as string[]) : [];
+    sunucuListe = new Set(Array.isArray(dizi) ? dizi : []);
+    return sunucuListe.has(ad);
+  } catch {
+    return false;
+  }
+}
+
 const yayindaAcik = (ad: string) => YAYIN_HERKESE && YAYIN_BAYRAKLARI.has(ad);
 
 const ONBELLEK_ONEK = 'ozellik-kisi:';
@@ -34,7 +65,8 @@ const ONBELLEK_ONEK = 'ozellik-kisi:';
 const bellekHarita = new Map<string, boolean>();
 
 export async function kisiselOzellikAcikMi(ad: string): Promise<boolean> {
-  if (yayindaAcik(ad)) return true; // YAYIN: herkese açık
+  if (yayindaAcik(ad)) return true; // YAYIN: herkese açık (gömülü liste)
+  if (await sunucudaAcikMi(ad)) return true; // YAYIN: sunucudan açılmış (build gerekmez)
   try {
     if (!supabase) return false;
     const ham = (await ayarOku('ozellik_kisi'))?.trim();

@@ -66,6 +66,7 @@
     "typescript": "~5.9.2"
   },
   "scripts": {
+    "bayrak:denetle": "node scripts/bayrak-denetle.mjs",
     "postinstall": "patch-package",
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
