@@ -2,7 +2,16 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 21 Ağustos 2026 (🍏 Apple 1.0.45'i REDDETTİ — 3.1.2 EULA linki · düzeltildi · Android YAYINDA)
+> Son güncelleme: 21 Ağustos 2026 (📣 Android toplu bildirim gönderildi · 💰 Apple aylık 389 TL)
+>
+> ### ▶ 21 Ağu — 📣 TOPLU BİLDİRİM (Android) + 💰 AYLIK FİYAT 489→389 TL
+> **Bildirim (başkan isteği, 09:35'e zamanlandı):** *"Mevzu yenilendi 🎮 / Oyun Merkezi açıldı: 14 oyunla mevzuatı oynayarak öğren…"* → **257 Android cihaza** gönderildi (`platform='android'` + platformu boş eski kayıtlar). Oyun sayısı ezberden değil canlı sayfadan SAYILDI (14).
+> **SONUÇ (makbuzla ölçüldü, biletle değil):** bilet 257/257 kabul · **TESLİM 154 cihaz** · **103 `DeviceNotRegistered`** (uygulamayı silmiş/yeniden kurmuş cihazlar). Yani kayıtlı adreslerin **%40'ı ölü**. Betik: `scratchpad/bildirim-android-tum.mjs` (kuru prova / `--gonder` / `--saat SS:DD`).
+> **KAPSAM GERÇEĞİ:** 1017 üye · bildirim adresi kayıtlı Android **259** · gerçekten ulaşılan **154** (≈%15). İyileştirme fikri: sonraki gönderimde `DeviceNotRegistered` dönen token'ları tabloda SİL (bilet→token eşlemesini kaydet).
+> **💰 Apple aylık fiyat:** `musterek_aylik` Türkiye **489 → 389 TL** (`POST subscriptionPrices`, price point `…MTAyNzAifQ`, 201 + doğrulandı; bize kalan 329,06 → 261,76 TL).
+> **🔴 YENİ TESPİT — AYLIK PAKET iOS'TA SATIŞA AÇIK DEĞİL:** `subscriptions/6802571887` state **`READY_TO_SUBMIT`** (yıllık `APPROVED`). Yani aylık üyelik hiç Apple incelemesine sokulmamış → iPhone'da satın alınamaz. İnceleme ekran görüntüsü yüklü, tek eksik gönderim. **1.0.45 onaylandıktan SONRA gönderilmeli** (şu an sürüm incelemede, dokunmak sırayı bozar).
+> **⏳ Google aylık fiyat:** Play API kimliğimiz yok → panelden elle yapılacak; abonelikler sayfası başkanın önüne açıldı.
+> **Hedefleme (sonraki bildirim için ölçüldü):** aktif premium **134 kişi** · **premium OLMAYAN + Android adresi kayıtlı 214 kişi** (sınava 1 ay kala aylık üyelik kampanyası bunlara gidecek).
 >
 > ### ▶ 21 Ağu — 🍏 APPLE REDDİ (3.1.2) DÜZELTİLDİ · 🤖 ANDROID 1.0.45 CANLI
 > **RED:** iOS 1.0.45 → `REJECTED`, submission `UNRESOLVED_ISSUES`. Gerekçe **Guideline 3.1.2 (Payments – Subscriptions)**, Apple'ın OTOMATİK mesajı: *"offers auto-renewable subscriptions but does not include a functional link to the Terms of Use (EULA) in the app metadata that appears on the app's App Store product page."*
