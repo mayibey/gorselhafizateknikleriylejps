@@ -2,7 +2,13 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 21 Ağustos 2026 (🚨 1.0.46 — UNUTULAN TASARIM BAYRAKLARI AÇILDI, iki mağazaya da gönderildi)
+> Son güncelleme: 21 Ağustos 2026 (✅ Apple AYLIK ABONELİĞİ ONAYLADI · 1.0.46 hâlâ incelemede)
+>
+> ### ▶ 21 Ağu (gece) — ✅ AYLIK ABONELİK APPLE'DAN ONAY ALDI
+> Apple maili: *"Gönderinizin incelemesi tamamlandı. Kabul edilen ürünler → Abonelikler: Tam Erişim Aylık · 1 Ay · musterek_aylik"* (gönderim `76158dc3` COMPLETE). API teyidi: **`musterek_aylik` APPROVED** (yıllık da APPROVED). Mağaza tarafı artık hazır, fiyat **389 TL** (iki mağazada da).
+> **⚠️ AMA iPHONE'DA HENÜZ GÖRÜNMEZ:** aylık ürün uygulama koduna **18 Ağu**'da girdi (`urunler.ts`, commit 65564ab); App Store'da canlı sürüm hâlâ **1.0.43 (7 Ağu)** → o binary'nin ödeme ekranında aylık seçeneği YOK. Aylık paketin iPhone'da satılabilmesi **1.0.46'nın onayına bağlı** (şu an WAITING_FOR_REVIEW). Android'de 1.0.46 zaten Play'de inceleme sırasında.
+> Apple notu: onaylanan ürünlerin herkese açılması yayından sonra **24 saati bulabilir**.
+> **Ayrıca (21 Ağu):** `katikliekmek123@gmail.com` hesabına başkan isteğiyle **ömür boyu premium** (`musterek_omurboyu`, platform `manuel`) + **ekran görüntüsü muafiyeti** verildi; muafiyeti olan toplam **3 kişi** (başkan, Kemalettin, bu hesap). Betik: `scratchpad/yetki-ver.mjs <eposta> --yaz` (kuru prova + doğrulamalı).
 >
 > ### ▶ 21 Ağu — 🚨 1.0.46: TASARIM BAYRAKLARI UNUTULMUŞTU (en pahalı hata)
 > **BAŞKANIN TESPİTİ:** "adam güncelleyecek, girecek bir bok görmeyecek." HAKLIYDI.
