@@ -18,6 +18,7 @@ import { useEffect, useRef } from 'react';
 import { AppState } from 'react-native';
 
 import { kisiselOzellikAcikMi } from '@/lib/ozellik';
+import { ayarOku } from '@/lib/uzak-ayar';
 
 const ARALIK_MS = 30_000;
 
@@ -37,23 +38,63 @@ async function denetleVeUygula(mesgulRef: { current: boolean }): Promise<void> {
   }
 }
 
-/** Kök _layout'ta bir kez bağlanır. Bayrak kapalıysa hiçbir şey yapmaz. */
+/**
+ * ÇİFT KADEMELİ YAYIN (21 Ağu 2026, başkan isteği): "önce bana ve Kemalettin'e anında
+ * gelsin; biz 'yay' dedikten sonra herkese de anında yayılsın."
+ *
+ *  1. KADEME — DENEME (kişi bayrağı `anlik-guncelleme`, başkan + Kemalettin):
+ *     30 sn'de bir + öne her gelişte denetler, güncelleme varsa ANINDA yeniler.
+ *     Sert davranış bilinçli: değişikliği saniyeler içinde görmek için.
+ *
+ *  2. KADEME — HERKES (sunucu şalteri `uygulama_ayar.anlik_guncelleme_herkes` = '1'):
+ *     BUILD GEREKMEZ, tek satır sunucu değişikliği ile açılır/kapanır.
+ *     Davranış DAHA NAZİK: sürekli denetim YOK; yalnız uygulama arka plandan geri
+ *     dönerken ve en az DINGIN_MS kadar kapalı kaldıysa yeniler. Böylece kimse
+ *     kart dinlerken / sınav çözerken ekranı sıfırlanmaz — eskiden herkese
+ *     açılamamasının tek sebebi buydu.
+ *
+ *  Kapatmak: şalteri '0' yap. Kişi bayrağı olanlar 1. kademede kalmaya devam eder.
+ */
+const DINGIN_MS = 60_000; // en az bu kadar arka planda kaldıysa "işin ortasında değil" say
+
 export function useAnlikGuncelleme(): void {
   const mesgul = useRef(false);
+  const arkaPlanAn = useRef<number | null>(null);
   useEffect(() => {
     if (__DEV__) return;
     let zamanlayici: ReturnType<typeof setInterval> | null = null;
     let dinleyici: { remove: () => void } | null = null;
     let yasiyor = true;
 
-    void kisiselOzellikAcikMi('anlik-guncelleme').then((acik) => {
-      if (!acik || !yasiyor) return;
-      void denetleVeUygula(mesgul);
-      zamanlayici = setInterval(() => void denetleVeUygula(mesgul), ARALIK_MS);
+    void (async () => {
+      const deneme = await kisiselOzellikAcikMi('anlik-guncelleme');
+      const herkes = !deneme && (await ayarOku('anlik_guncelleme_herkes')) === '1';
+      if (!yasiyor || (!deneme && !herkes)) return;
+
+      if (deneme) {
+        // 1. kademe — sert: hemen, sonra 30 sn'de bir, ayrıca öne gelişte.
+        void denetleVeUygula(mesgul);
+        zamanlayici = setInterval(() => void denetleVeUygula(mesgul), ARALIK_MS);
+        dinleyici = AppState.addEventListener('change', (d) => {
+          if (d === 'active') void denetleVeUygula(mesgul);
+        });
+        return;
+      }
+
+      // 2. kademe — nazik: yalnız yeterince uzun süre arka planda kaldıktan sonra.
       dinleyici = AppState.addEventListener('change', (d) => {
-        if (d === 'active') void denetleVeUygula(mesgul);
+        if (d === 'background' || d === 'inactive') {
+          if (arkaPlanAn.current === null) arkaPlanAn.current = Date.now();
+          return;
+        }
+        if (d !== 'active') return;
+        const gittiGeldi = arkaPlanAn.current;
+        arkaPlanAn.current = null;
+        if (gittiGeldi !== null && Date.now() - gittiGeldi >= DINGIN_MS) {
+          void denetleVeUygula(mesgul);
+        }
       });
-    });
+    })();
 
     return () => {
       yasiyor = false;
