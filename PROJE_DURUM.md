@@ -2,7 +2,15 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 23 Ağustos 2026 (🍏 2.3.3 reddi düzeltildi + yeniden gönderildi · 🔧 Bünyamin'in 2 hatası · 🏷️ IG zorunlu etiket)
+> Son güncelleme: 23 Ağustos 2026 (📥 İndirme kapısı tek bileşende + çalışma ekranına kondu)
+>
+> ### ▶ 23 Ağu — 📥 İNDİRME KAPISI: 3 KOPYA → 1 BİLEŞEN, ARTIK ÇALIŞMA EKRANINDA DA
+> **Başkan:** *"adam kanunu indirmeden nasıl çalışıyor, önce sorgulasın."*
+> **ÖNCE ÖLÇÜM (dünkü teşhisim YANLIŞTI, düzeltildi):** Bünyamin'in `icerik_erisim_log` kaydı → **1.979 görsel isteği, 0 ses isteği** (6 haftada). Donduğu dakikada (00:12) **tek dakikada 12 farklı kart görseli**. Yani donmanın sebebi ses indirmeleri DEĞİL, **görsellerin kart kart akıtılması**. (Ses düzeltmesi yine de geçerli bir iyileştirme ama onun vakası değildi.) **Ders: teşhisi koymadan önce erişim kaydına bak.**
+> **Kapı zaten vardı:** Mevzuat ("İndir ve Başla") ve Patika ikisi de indirmeden açmıyor — kod okundu. Ama kayıt adamın akıttığını kanıtlıyor → bir giriş yolu atlıyor.
+> **ÇÖZÜM:** kapıyı her çağırana ayrı ayrı koymak yerine **SON NOKTAYA** — `/akis` ekranının kendisine — koydum. Kuyruk gelince bir kez sorar: *"Bu kanun henüz inmedi (74 MB) — İndir / İndirmeden devam"*. İnmişse hiç görünmez. Zayıf kuyruğu hariç (karma kanun, zaten yalnız inmişler geliyor).
+> **TEKRAR TEMİZLİĞİ:** aynı iş 3 yerde ayrı yazılıydı (Arama · Günün Maddesi · yeni kapı). Hepsi **`components/mevzuat/indir-kapisi.tsx` (`useIndirKapisi`)** üzerine alındı; her ekrandan 3 state + 1 efekt + 2 fonksiyon + ~60 satır Modal JSX ve artık kullanılmayan importlar silindi. Metin ortaklaştı: boyut söyleniyor + "İndirmeden devam" her yerde var. Commit `59f6dbf` + `1da9c07`, OTA 1.0.45+1.0.46.
+> **📣 Bünyamin'e KİŞİYE ÖZEL duyuru + push** (başkan: "duyuru ona özel olsun"): iki düzeltme + yeni indirme sorusu + **"tamamen kapatıp aç"** talimatı + **"düzelmediyse yine yaz"**. Makbuz 1/1 teslim. İki günde 3 gerçek hata buldu — en iyi test edenimiz.
 >
 > ### ▶ 22-23 Ağu — 🍏 APPLE 2.3.3 REDDİ (ekran görüntüleri) DÜZELTİLDİ
 > **Red:** *"6.7 inç iPhone ekran görüntüleri uygulamanın arayüzündeki son değişiklikleri yansıtmıyor."* Haklıydı: 6.5" takımı **eski krem tasarımı**, 6.7" takımı ise **başlıklı/çerçeveli tanıtım kompozisyonlarını** (yalnız oyunlar) gösteriyordu. Kuralda ayrıca *"uygulamanın arayüzünü yansıtmayan pazarlama malzemeleri uygun değildir"* yazıyor.
