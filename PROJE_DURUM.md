@@ -2,7 +2,15 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 21-22 Ağustos 2026 (🤖 Android 1.0.46 CANLI · alt çubuk çakışması düzeltildi · anlık güncelleme ÇİFT KADEMELİ)
+> Son güncelleme: 22 Ağustos 2026 (⚡ ANLIK GÜNCELLEME HERKESE AÇILDI · iOS 1.0.46 hâlâ incelemede)
+>
+> ### ▶ 22 Ağu — ⚡ ANLIK GÜNCELLEME 2. KADEME AÇILDI (herkes)
+> Başkan onayıyla **`uygulama_ayar.anlik_guncelleme_herkes` = '1'** (doğrulandı). Artık 1.0.46'daki kullanıcılar da güncellemeyi kapat-aç yapmadan alır; kart dinlerken/sınavdayken bekler, menüde gezerken anında yeniler.
+> **Açmadan önce `npm run yayin:musait` çalıştırıldı** (yeni araç): son 5 dk'da 1 kişi çalışıyordu (Onur Onur) — ama o **Android 1.0.45**'te, mekanizma yalnız 1.0.46 paketinde olduğu için etkilenmiyor. Ayrıca o an bekleyen bir OTA yok → kimsenin ekranı yenilenmedi.
+> **Kapatmak:** aynı satırı '0' yap. Kişi bayrağı (`anlik-guncelleme`, 3 kişi) 1. kademede kalmaya devam eder.
+> **Kapsam sınırı:** yalnız 1.0.46+ · 1.0.41'de kalan 12 kişi için önce güncelleme şart.
+> **💰 Gece satışı:** Ünal Kutlu, 22 Ağu 01:45, iOS, **ömür boyu** (25 Tem'de özet kartlarında madde metni eksikliğini bildiren kişi).
+> **Durum:** Android 1.0.46 canlı (10 kişi geçti) · iOS 1.0.46 WAITING_FOR_REVIEW (26+ saat) · Bünyamin'in hatası sonrası yeni şikayet YOK.
 >
 > ### ▶ 21 Ağu (gece) — 🤖 ANDROID 1.0.46 CANLI + İLK GERİ BİLDİRİM + ÇİFT KADEMELİ ANLIK GÜNCELLEME
 > **Android 1.0.46 YAYINDA (ölçüldü):** Google Reviewer 15:46, ardından gerçek kullanıcılar (Murat Karataş 18:23 · Bekir Gökkaya 21:11 · Oğuzhan baki İlter 22:00 · Duysal Kuyucu 22:31 · Bünyamin Ak 23:07). iOS 1.0.46 hâlâ WAITING_FOR_REVIEW (08:46'dan beri).
