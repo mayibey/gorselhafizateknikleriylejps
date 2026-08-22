@@ -17,7 +17,7 @@ import { Palette } from '@/constants/theme';
 
 export const TELEGRAM_GRUP = 'https://t.me/mevzujsps';
 
-export function TelegramKatil({ boyut = 15 }: { boyut?: number }) {
+export function TelegramKatil({ boyut = 19 }: { boyut?: number }) {
   return (
     <Pressable
       onPress={() => {
@@ -28,7 +28,7 @@ export function TelegramKatil({ boyut = 15 }: { boyut?: number }) {
       accessibilityRole="link"
       accessibilityLabel="Telegram grubuna katıl">
       <FontAwesome name="telegram" size={boyut} color={Palette.altin} />
-      <AppText variant="etiket" bold color="altinAcik2">
+      <AppText variant="kucuk" bold color="altinAcik2" style={st.yazi}>
         KATIL
       </AppText>
     </Pressable>
@@ -36,15 +36,19 @@ export function TelegramKatil({ boyut = 15 }: { boyut?: number }) {
 }
 
 const st = StyleSheet.create({
+  // 23 Ağu (başkan: "çok küçük kalmış"): ikon 15→19, yazı etiket→küçük, iç boşluk
+  // ve çerçeve kalınlaştı, hafif altın zemin eklendi — DUYURULAR ile aynı ağırlıkta dursun.
   hap: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 5,
-    paddingVertical: 3,
-    paddingHorizontal: 9,
+    gap: 7,
+    paddingVertical: 7,
+    paddingHorizontal: 14,
     borderRadius: 999,
-    borderWidth: 1,
-    borderColor: 'rgba(201,162,39,0.55)',
+    borderWidth: 1.5,
+    borderColor: 'rgba(201,162,39,0.75)',
+    backgroundColor: 'rgba(201,162,39,0.12)',
   },
+  yazi: { letterSpacing: 0.5 },
   basili: { opacity: 0.7 },
 });
