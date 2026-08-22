@@ -45,14 +45,25 @@ export function useKartSesi(sesYolu: string | null | undefined): KartSesi {
     if (!uzakMi || !sesYolu || typeof kaynak !== 'object' || !kaynak) return;
     if (onbellekUri(sesYolu)) return;
     let iptal = false;
-    setIniyor(true);
-    void sesiOnbellekle(sesYolu, kaynak.uri).then((yerel) => {
+    const uri = kaynak.uri;
+    const yol = sesYolu;
+    // 🔴 23 Ağu 2026 — DONMA FIX (Bünyamin Ak): hızlı kart geçerken her kart için indirme
+    // başlıyordu; onlarca 1-2 MB'lık mp3 aynı anda inince uygulama kilitleniyordu.
+    // Kart ekranda BEKLE_MS kadar durmadan indirmeye başlamıyoruz → hızlı geçişte hiç
+    // indirme olmaz. `halaGerekli` de sıraya girmiş işi kullanıcı gitmişse iptal ettirir.
+    const BEKLE_MS = 500;
+    const zaman = setTimeout(() => {
       if (iptal) return;
-      if (yerel) setYerelIndi(yerel);
-      setIniyor(false);
-    });
+      setIniyor(true);
+      void sesiOnbellekle(yol, uri, () => !iptal).then((yerel) => {
+        if (iptal) return;
+        if (yerel) setYerelIndi(yerel);
+        setIniyor(false);
+      });
+    }, BEKLE_MS);
     return () => {
       iptal = true;
+      clearTimeout(zaman);
     };
     // kaynak.uri imzalı URL'de değişebilir; onu izliyoruz.
   }, [sesYolu, uzakMi, typeof kaynak === 'object' && kaynak ? kaynak.uri : null]);

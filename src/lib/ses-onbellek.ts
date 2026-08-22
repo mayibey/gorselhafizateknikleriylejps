@@ -35,15 +35,43 @@ export function onbellekUri(yol: string): string | null {
  * mp3'ü önbelleğe indirir; yerel file:// uri döndürür. Zaten indirildiyse anında döner.
  * Başarısızsa null (çağıran stream'e düşer). ASLA throw etmez.
  */
-export async function sesiOnbellekle(yol: string, uzakUri: string): Promise<string | null> {
+/**
+ * 🔴 23 Ağu 2026 — DONMA (Bünyamin Ak bildirdi: "hızlı kart geçmeye başlayınca uygulama
+ * donuyor"). Sebep: her kart değişiminde YENİ bir mp3 indirmesi başlıyordu ve öncekiler
+ * iptal edilmiyordu. Hızlı geçen kullanıcıda onlarca indirme aynı anda koşuyor; sesler
+ * 1-2 MB olduğu için ağ ve bellek boğuluyor, arayüz kilitleniyor.
+ *
+ * ÇÖZÜM (üç katman):
+ *  1. use-kart-sesi: kart ekranda YARIM SANİYE durmadan indirme başlamaz (hızlı geçişte hiç).
+ *  2. Burada: aynı anda EN FAZLA BİR indirme — gerisi sıraya girer.
+ *  3. Sıradaki iş başlarken kullanıcı o karttan ayrıldıysa (`halaGerekli`) indirme İPTAL.
+ * En kötü hâlde eski davranışa (uzaktan akıtma) düşer; ses kaybolmaz.
+ */
+let sira: Promise<unknown> = Promise.resolve();
+
+export async function sesiOnbellekle(
+  yol: string,
+  uzakUri: string,
+  halaGerekli?: () => boolean,
+): Promise<string | null> {
   if (!KLASOR) return null;
+  const klasor = KLASOR; // iç fonksiyonda daralma korunsun (TS)
   const hazir = bellek.get(yol);
   if (hazir) return hazir;
   const mevcut = suren.get(yol);
   if (mevcut) return mevcut;
 
-  const gorev = (async (): Promise<string | null> => {
-    const hedef = `${KLASOR}${dosyaAdi(yol)}`;
+  const gorev = sira.then(async (): Promise<string | null> => {
+    // Sıra bize gelene kadar kullanıcı başka karta geçmiş olabilir → boşuna indirme.
+    if (halaGerekli && !halaGerekli()) { suren.delete(yol); return null; }
+    return isiYap();
+  });
+  sira = gorev.catch(() => {});
+  suren.set(yol, gorev);
+  return gorev;
+
+  async function isiYap(): Promise<string | null> {
+    const hedef = `${klasor}${dosyaAdi(yol)}`;
     try {
       // Diskte önceki oturumdan kalmış olabilir → indirmeden kullan.
       const bilgi = await FileSystem.getInfoAsync(hedef);
@@ -51,7 +79,7 @@ export async function sesiOnbellekle(yol: string, uzakUri: string): Promise<stri
         bellek.set(yol, hedef);
         return hedef;
       }
-      await FileSystem.makeDirectoryAsync(KLASOR, { intermediates: true }).catch(() => {});
+      await FileSystem.makeDirectoryAsync(klasor, { intermediates: true }).catch(() => {});
       const sonuc = await FileSystem.downloadAsync(uzakUri, hedef);
       if (sonuc.status !== 200) {
         await FileSystem.deleteAsync(hedef, { idempotent: true }).catch(() => {});
@@ -65,8 +93,5 @@ export async function sesiOnbellekle(yol: string, uzakUri: string): Promise<stri
     } finally {
       suren.delete(yol);
     }
-  })();
-
-  suren.set(yol, gorev);
-  return gorev;
+  }
 }

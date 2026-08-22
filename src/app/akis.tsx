@@ -34,6 +34,7 @@ import {
   getCardsByBolumChain,
   getCardsByLaw,
   getDailyQueue,
+  getStudyCards,
   getZayifKuyruk,
   kaydetPerformans,
   recordReview,
@@ -107,6 +108,10 @@ export default function AkisScreen() {
   const kanunKilitli = useKanunKilidi(kanunModu ? Number(lawId) : null);
   const [hata, setHata] = useState(false);
   const [index, setIndex] = useState(0);
+  // OTURUM BAŞINDAKİ tamamlanmış kartlar (SRS kutu>=1). "Öğrendim" dedikçe ileri giderken
+  // bunların ÜSTÜNDEN ATLANIR: başkan kuralı — 1-2-3 bitmiş, 6-7-8 de bitmişse 4-5'i
+  // tamamladıktan sonra 9'a geçilir, bitmişler tekrar gösterilmez. Geri kaydırma serbest.
+  const bitmisRef = useRef<Set<number>>(new Set());
   const [cozulen, setCozulen] = useState<Cozulen>({ tekrar: 0, yeni: 0 });
   // Aktif hatırlama: akış bitince yüklenen 2-3 soru + tamamlanma bayrağı.
   const [hatirlaSorular, setHatirlaSorular] = useState<KartSoru[] | null>(null);
@@ -257,6 +262,27 @@ export default function AkisScreen() {
         if (kart) {
           const i = sonListe.findIndex((c) => c.id === Number(kart));
           if (i >= 0) setIndex(i);
+          return;
+        }
+        // KALDIĞI YERDEN DEVAM (23 Ağu 2026 — Bünyamin Ak bildirdi: "kapatıp açınca
+        // 1'inci karttan başlıyor"). Eskiden kart akışı HER AÇILIŞTA sıfırdan başlıyordu;
+        // kaldığı yer hiçbir yere yazılmıyordu.
+        //
+        // BAŞKANIN KURALI: "son tamamladığı yer" değil, İLK BOŞLUK. Örnek: 1-2-3'ü
+        // bitirmiş, sonra 6-7-8'e çalışmışsa DÖRTTEN devam etsin. Yani sırayla ilerleyip
+        // atladıklarını da tamamlasın; en sondan devam edip boşluk bırakmasın.
+        //
+        // "Tamamlandı" ölçütü Mevzuat ekranıyla AYNI: SRS kutusu >= 1 (bir kez öğrenilmiş).
+        // Hepsi tamamlanmışsa baştan başlar (tekrar turu). Hata olursa 0'da kalır.
+        if (!maddeKart) {
+          void getStudyCards()
+            .then((calisilmis) => {
+              const bitmis = new Set(calisilmis.filter((c) => c.kutu >= 1).map((c) => c.id));
+              bitmisRef.current = bitmis;
+              const bosluk = sonListe.findIndex((c) => !bitmis.has(c.id));
+              if (bosluk > 0) setIndex(bosluk);
+            })
+            .catch(() => {});
         }
       })
       .catch(() => setHata(true));
@@ -266,6 +292,15 @@ export default function AkisScreen() {
     yukle();
   }, [yukle]);
 
+  /** Bir sonraki ÇALIŞILMAMIŞ kartın sırası. Oturum başında zaten bitmiş olanlar atlanır
+   *  (4-5 bitince 6-7-8 zaten bitmişse 9'a geçer). Sonrası hep bitmişse akış sonuna gider. */
+  function sonrakiCalisilacak(su: number): number {
+    if (!queue) return su + 1;
+    let j = su + 1;
+    while (j < queue.length && bitmisRef.current.has(queue[j].id)) j++;
+    return j;
+  }
+
   async function cevapla(cevap: SrsCevap) {
     if (!queue) return;
     const card = queue[index];
@@ -273,7 +308,7 @@ export default function AkisScreen() {
       setCevapHatasi(false);
       await recordReview(card.id, card.kutu, cevap);
       setCozulen((c) => (card.yeni ? { ...c, yeni: c.yeni + 1 } : { ...c, tekrar: c.tekrar + 1 }));
-      setIndex((i) => i + 1);
+      setIndex((i) => sonrakiCalisilacak(i));
     } catch {
       // Buton kilitlenmez; kullanıcı tekrar deneyebilir.
       setCevapHatasi(true);
