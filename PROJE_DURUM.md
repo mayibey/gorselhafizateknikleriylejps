@@ -2,7 +2,22 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 22 Ağustos 2026 (🔴 SİYAH EKRAN yakalandı ve düzeltildi · anlık güncelleme tekrar açık)
+> Son güncelleme: 23 Ağustos 2026 (🍏 2.3.3 reddi düzeltildi + yeniden gönderildi · 🔧 Bünyamin'in 2 hatası · 🏷️ IG zorunlu etiket)
+>
+> ### ▶ 22-23 Ağu — 🍏 APPLE 2.3.3 REDDİ (ekran görüntüleri) DÜZELTİLDİ
+> **Red:** *"6.7 inç iPhone ekran görüntüleri uygulamanın arayüzündeki son değişiklikleri yansıtmıyor."* Haklıydı: 6.5" takımı **eski krem tasarımı**, 6.7" takımı ise **başlıklı/çerçeveli tanıtım kompozisyonlarını** (yalnız oyunlar) gösteriyordu. Kuralda ayrıca *"uygulamanın arayüzünü yansıtmayan pazarlama malzemeleri uygun değildir"* yazıyor.
+> **Görselleri nasıl aldım (ders):** başkan telefondan sohbete attı; sohbetteki görseli diske yazamıyorum → **oturum kaydından (`~/.claude/projects/.../<session>.jsonl`) base64 çıkararak** aldım (`scratchpad/sohbet-gorsel-cikar.mjs`). Mail/aktarım gerekmedi. ⚠️ Ara mesajda ("user sent a new message while you were working") gelen görsel kayda DÜŞMÜYOR — Karargâh o yüzden alınamadı.
+> **Hazırlık:** durum çubuğu (saat/5G/şarj) kesildi · **kart görselindeki filigran** (`98be2c62…`) kartın temiz aslıyla değiştirildi · 6.7" (1290×2796) + 6.5" (1242×2688) üretildi, içerik bozulmadan sığdırılıp üst bant görselin kendi rengiyle dolduruldu (`scratchpad/magaza-ss-hazirla.mjs`).
+> **Yükleme:** eski 7+6 görsel silindi, **7'şer AYRI görsel** yüklendi, sıra: kart → Mevzuat → Talim → Oyun Merkezi → Çengel → Asmaca → Rütbe. Hepsi COMPLETE. İnceleme notu yenilendi. `resolved:true` + `submitted:true` → **WAITING_FOR_REVIEW**.
+> **⚠️ Tespit:** Talim (sınav) ekranı hâlâ ESKİ KREM temada — tasarım geçişinde atlanmış. Sırası gelince koyuya çevrilecek.
+>
+> ### ▶ 23 Ağu — 🔧 BÜNYAMİN AK'IN 2 HATASI (aynı gece düzeltildi + yayınlandı)
+> **1. "Kapatıp açınca 1'inci karttan başlıyor."** Doğruydu — kart akışı her açılışta `useState(0)`; kaldığı yer hiç yazılmıyordu. **Başkan kuralı: 'son tamamladığı' değil İLK BOŞLUK.** 1-2-3 bitmiş + 6-7-8 çalışılmışsa **4'ten** devam eder; 4-5 bitince 6-7-8 zaten bitmiş olduğu için **atlanır, 9'a geçer**. Ölçüt Mevzuat ekranıyla aynı (SRS kutu≥1). Geri kaydırma serbest; arama/patika çıpası dokunulmaz.
+> **2. "Hızlı kart geçince donuyor."** Sebep **17 Ağu'daki kendi ses düzeltmemiz**: her kart değişiminde yeni mp3 indirmesi başlıyor, öncekiler iptal edilmiyordu → onlarca 1-2 MB indirme aynı anda. **Üç katman:** 500 ms beklemeden indirme başlamaz · aynı anda tek indirme (sıra) · sıra gelince kullanıcı gittiyse iptal. Commit `797dd31`, OTA 1.0.45+1.0.46.
+> **Not:** kanun indirilince **sesler ZATEN tam iniyor** (`indirme.ts` → `[...gorseller, ...sesler]`). Donma yalnız İNDİRMEMİŞ kullanıcıda (akış yolu). **Açık fikir:** kullanıcıyı kanun indirmeye yönlendir → donma+kesilme+sunucu yükü biter. Ölçü: tüm içerik 1.855 MB, kanun başına ~70-80 MB.
+>
+> ### ▶ 22 Ağu — 🏷️ INSTAGRAM ZORUNLU ETİKET KURALI
+> Başkan: "tüm paylaşılan içeriklerde şu etiketler olsun" → **#jsps #jandarma #uzmanerbas #uzmancavus #astsubay #subay #uzman**. `D:\mevzu-remotion\hat\instagram_gunluk.mjs` → `etiketleriEkle()`; Reels ve karusel aynı betiği kullandığı için ikisi de kapsanır. Pakette varsa tekrarlanmaz (harf duyarsız), `#uzman`/`#uzmanerbas` karışmaz, 2200 karakteri aşarsa metin korunur. ⚠️ `D:\mevzu-remotion` **git deposu DEĞİL** — yedeği yok.
 >
 > ### ▶ 22 Ağu — 🔴 SİYAH EKRAN (anlık güncelleme) — YAKALANDI, DÜZELTİLDİ
 > **Olay:** başkan kampanya bildirimine tıkladı → uygulama **açılırken** bekleyen OTA'yı bulup `reloadAsync()` çağırdı → **açılış yarıda kesildi, siyah ekranda kaldı** (kapat-aç ile düzeldi).
