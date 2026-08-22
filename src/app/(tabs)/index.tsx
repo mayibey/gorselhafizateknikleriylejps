@@ -6,11 +6,11 @@ import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleShe
 import Svg, { Circle, Defs, LinearGradient as SvgGradient, Path, Stop } from 'react-native-svg';
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
+import { useIndirKapisi } from '@/components/mevzuat/indir-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
-import { ICERIK_TABANI } from '@/constants/config';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import {
   getAllCards,
@@ -24,14 +24,6 @@ import {
 import type { CardWithLaw, GeriBesDurum } from '@/db/schema';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { GeriBeslemeEmri } from '@/components/sicil/geri-besleme-emri';
-import { LAW_KLASOR } from '@/db/seed';
-import {
-  indirmeDestekli,
-  indirmeDinle,
-  indirmeDurumuAl,
-  kanunIndirBaslat,
-  kanunIndirilmisMi,
-} from '@/lib/indirme';
 import { calisilabilirZayif } from '@/lib/gorsel-kaynak';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -277,21 +269,11 @@ export default function KarargahScreen() {
   const [hata, setHata] = useState(false);
   // Günün Maddesi indirilmemiş kanundansa: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
   // (Arama/Patika'daki İNDİRME KAPISI ile aynı; Günün Maddesi bu kapıyı atlayıp boş kart açıyordu.)
-  const [indirModal, setIndirModal] = useState<CardWithLaw | null>(null);
-  const [indirYuzde, setIndirYuzde] = useState(0);
-  const [indirDurum, setIndirDurum] = useState<'iniyor' | 'hata'>('iniyor');
+  // ORTAK İNDİRME KAPISI (23 Ağu): bu ekranın kendi kopyası kaldırıldı, tek yere alındı.
+  const { kapidanGec, IndirModal } = useIndirKapisi();
   // Bitince OTOMATİK karta gidilecek mi (kullanıcı "arka planda indir" derse iptal → gitme).
-  const acilacakRef = useRef<CardWithLaw | null>(null);
 
   // İndirme modalı açıkken yüzdeyi durum yöneticisinden dinle (arka planda ilerledikçe güncellensin).
-  useEffect(() => {
-    if (!indirModal) return;
-    const klasor = LAW_KLASOR[indirModal.law_id];
-    if (!klasor) return;
-    const guncelle = () => setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
-    guncelle();
-    return indirmeDinle(klasor, guncelle);
-  }, [indirModal]);
 
   // Günün Maddesi kartını aç. DOĞRUDAN o maddenin kartını açar (tüm patikayı değil).
   const gunMaddeGit = useCallback(
@@ -301,54 +283,17 @@ export default function KarargahScreen() {
   );
 
   // İndir + biter bitmez Günün Maddesi kartına git (Arama'daki indirVeAc ile aynı desen).
-  const indirVeAc = useCallback(
-    (g: CardWithLaw, klasor: string) => {
-      setIndirModal(g);
-      setIndirDurum('iniyor');
-      setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
-      acilacakRef.current = g;
-      kanunIndirBaslat(klasor).then(
-        () => {
-          // Kullanıcı "arka planda indir" demediyse (niyet hâlâ bu kart) → karta git.
-          if (acilacakRef.current === g) {
-            acilacakRef.current = null;
-            setIndirModal(null);
-            gunMaddeGit(g);
-          }
-        },
-        () => {
-          if (acilacakRef.current === g) setIndirDurum('hata');
-        },
-      );
-    },
-    [gunMaddeGit],
-  );
 
   // Modalı kapat (otomatik-açmayı iptal et; indirme arka planda sürebilir).
-  const indirModalKapat = useCallback(() => {
-    acilacakRef.current = null;
-    setIndirModal(null);
-  }, []);
+
 
   // Günün Maddesi'ne basınca: içerik inmemişse ÖNCE indir (yüzdeli modal), sonra kartı aç.
   // (Aday seçimi zaten lawErisilebilirSaf ile erişilebilir kanunlardan → paywall gerekmez.)
   const gunMaddeAc = useCallback(
     (g: CardWithLaw) => {
-      const klasor = LAW_KLASOR[g.law_id];
-      if (klasor && indirmeDestekli && ICERIK_TABANI && !kanunIndirilmisMi(klasor)) {
-        Alert.alert(
-          'Kanun indirilmemiş',
-          'Bu maddenin görsel kartını görmek için önce kanunun içeriğini indirmek gerekiyor. Şimdi indirilip açılsın mı?',
-          [
-            { text: 'Vazgeç', style: 'cancel' },
-            { text: 'İndir ve aç', onPress: () => indirVeAc(g, klasor) },
-          ],
-        );
-        return;
-      }
-      gunMaddeGit(g);
+      kapidanGec(g.law_id, g.law_ad ?? 'Bu kanun', () => gunMaddeGit(g));
     },
-    [gunMaddeGit, indirVeAc],
+    [gunMaddeGit, kapidanGec],
   );
 
   // Ekrana her dönüldüğünde tazele. Kuyruk = ana veri (hata → retry); gerisi degrade olur.
@@ -1324,66 +1269,8 @@ export default function KarargahScreen() {
         </Pressable>
       ) : null}
 
-      {/* İndir ve aç modalı — Günün Maddesi'nin kanunu inmemişse; biter bitmez kart açılır. */}
-      <Modal
-        visible={indirModal !== null}
-        transparent
-        animationType="fade"
-        onRequestClose={indirModalKapat}>
-        <View style={styles.modalKatman}>
-          <View style={styles.modalKart}>
-            {indirDurum === 'hata' ? (
-              <>
-                <MaterialCommunityIcons name="wifi-off" size={40} color={Palette.kirmizi} />
-                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
-                  İndirilemedi
-                </AppText>
-                <AppText variant="kucuk" color="solukMetin" style={styles.modalOrtali}>
-                  Bağlantını kontrol et, tekrar dene.
-                </AppText>
-                <View style={styles.modalBtnlar}>
-                  <Pressable
-                    style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
-                    onPress={indirModalKapat}>
-                    <AppText variant="kucuk" bold color="lacivert">
-                      Kapat
-                    </AppText>
-                  </Pressable>
-                  <Pressable
-                    style={({ pressed }) => [styles.modalBtn, pressed && styles.pressed]}
-                    onPress={() =>
-                      indirModal && indirVeAc(indirModal, LAW_KLASOR[indirModal.law_id] ?? '')
-                    }>
-                    <AppText variant="kucuk" bold color="beyaz">
-                      Tekrar dene
-                    </AppText>
-                  </Pressable>
-                </View>
-              </>
-            ) : (
-              <>
-                <ActivityIndicator size="large" color={Palette.lacivert} />
-                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
-                  İndiriliyor… %{indirYuzde}
-                </AppText>
-                <AppText variant="kucuk" color="solukMetin" numberOfLines={2} style={styles.modalOrtali}>
-                  {indirModal?.law_ad} indiriliyor. Bitince madde otomatik açılacak.
-                </AppText>
-                <View style={styles.modalBar}>
-                  <View style={[styles.modalBarDolu, { width: `${indirYuzde}%` }]} />
-                </View>
-                <Pressable
-                  style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
-                  onPress={indirModalKapat}>
-                  <AppText variant="kucuk" bold color="lacivert">
-                    Arka planda indir
-                  </AppText>
-                </Pressable>
-              </>
-            )}
-          </View>
-        </View>
-      </Modal>
+      {/* Ortak indirme kapısı modalı (components/mevzuat/indir-kapisi). */}
+      <IndirModal />
     </Screen>
   );
 }

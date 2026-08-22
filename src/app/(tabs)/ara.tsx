@@ -2,10 +2,8 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, usePathname, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  ActivityIndicator,
   Alert,
   FlatList,
-  Modal,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -15,6 +13,7 @@ import {
 
 // Seslendirme metni registry'si ('@/assets' alias gerçek assets/'a gittiği için göreli).
 import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
+import { useIndirKapisi } from '@/components/mevzuat/indir-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
@@ -27,13 +26,6 @@ import type { CardWithLaw, LawWithCount } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
 import { araIndeksHazirla, araKanunlar, trKucuk, type AraKapsam, type AramaSonuc } from '@/lib/ara';
 import { maddeEtiket } from '@/lib/madde-etiket';
-import {
-  indirmeDestekli,
-  indirmeDinle,
-  indirmeDurumuAl,
-  kanunIndirBaslat,
-  kanunIndirilmisMi,
-} from '@/lib/indirme';
 import { useBrans } from '@/lib/brans-context';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { getSonAramalar, sonAramaEkle, sonAramalariTemizle } from '@/lib/son-aramalar';
@@ -75,9 +67,7 @@ export default function AraScreen() {
   const [sonAramalar, setSonAramalar] = useState<string[]>([]);
   const [hata, setHata] = useState(false);
   // İndirilmemiş kanunun sonucuna basınca: "indir ve aç" modalı (yüzdeli), biter bitmez karta git.
-  const [indirModal, setIndirModal] = useState<AramaSonuc | null>(null);
-  const [indirYuzde, setIndirYuzde] = useState(0);
-  const [indirDurum, setIndirDurum] = useState<'iniyor' | 'hata'>('iniyor');
+  const { kapidanGec, IndirModal } = useIndirKapisi();
   // Bitince OTOMATİK karta gidilecek mi (kullanıcı "arka planda indir" derse iptal → gitme).
   const acilacakRef = useRef<AramaSonuc | null>(null);
 
@@ -132,14 +122,6 @@ export default function AraScreen() {
   }, [sorgu]);
 
   // İndirme modalı açıkken yüzdeyi durum yöneticisinden dinle (arka planda ilerledikçe güncellensin).
-  useEffect(() => {
-    if (!indirModal) return;
-    const klasor = LAW_KLASOR[indirModal.lawId];
-    if (!klasor) return;
-    const guncelle = () => setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
-    guncelle();
-    return indirmeDinle(klasor, guncelle);
-  }, [indirModal]);
 
   function degis(t: string) {
     sonSorgu = t;
@@ -151,31 +133,10 @@ export default function AraScreen() {
   }
 
   // İndir + biter bitmez aranan KARTA git (Mevzuat'a atma yok → kullanıcı aradığı karta ulaşır).
-  function indirVeAc(s: AramaSonuc, klasor: string) {
-    setIndirModal(s);
-    setIndirDurum('iniyor');
-    setIndirYuzde(indirmeDurumuAl(klasor)?.yuzde ?? 0);
-    acilacakRef.current = s; // bu sonuç için otomatik-açma niyeti
-    kanunIndirBaslat(klasor).then(
-      () => {
-        // Kullanıcı "arka planda indir" demediyse (niyet hâlâ bu sonuç) → karta git.
-        if (acilacakRef.current === s) {
-          acilacakRef.current = null;
-          setIndirModal(null);
-          kartaGit(s);
-        }
-      },
-      () => {
-        if (acilacakRef.current === s) setIndirDurum('hata');
-      },
-    );
-  }
+
 
   // Modalı kapat (otomatik-açmayı iptal et; indirme arka planda sürebilir).
-  function indirModalKapat() {
-    acilacakRef.current = null;
-    setIndirModal(null);
-  }
+
 
   function ac(s: AramaSonuc) {
     const klasor = LAW_KLASOR[s.lawId];
@@ -185,18 +146,8 @@ export default function AraScreen() {
       router.push('/paywall');
       return;
     }
-    if (klasor && indirmeDestekli && ICERIK_TABANI && !kanunIndirilmisMi(klasor)) {
-      Alert.alert(
-        'Kanun indirilmemiş',
-        'Bu maddenin kartlarını görmek için önce kanunu indirmek gerekiyor. Şimdi indirilip açılsın mı?',
-        [
-          { text: 'Vazgeç', style: 'cancel' },
-          { text: 'İndir ve aç', onPress: () => indirVeAc(s, klasor) },
-        ],
-      );
-      return;
-    }
-    kartaGit(s);
+    // ORTAK İNDİRME KAPISI (23 Ağu): eskiden bu ekranın kendi kopyası vardı; tek yere alındı.
+    kapidanGec(s.lawId, s.kanun, () => kartaGit(s));
   }
 
   function temizle() {
@@ -434,66 +385,8 @@ export default function AraScreen() {
         />
       )}
 
-      {/* İndir ve aç modalı — indirilmemiş kanunun sonucuna basınca; biter bitmez karta gider. */}
-      <Modal
-        visible={indirModal !== null}
-        transparent
-        animationType="fade"
-        onRequestClose={indirModalKapat}>
-        <View style={styles.modalKatman}>
-          <View style={styles.modalKart}>
-            {indirDurum === 'hata' ? (
-              <>
-                <MaterialCommunityIcons name="wifi-off" size={40} color={Palette.kirmizi} />
-                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
-                  İndirilemedi
-                </AppText>
-                <AppText variant="kucuk" color="solukMetin" style={styles.modalOrtali}>
-                  Bağlantını kontrol et, tekrar dene.
-                </AppText>
-                <View style={styles.modalBtnlar}>
-                  <Pressable
-                    style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
-                    onPress={indirModalKapat}>
-                    <AppText variant="kucuk" bold color="lacivert">
-                      Kapat
-                    </AppText>
-                  </Pressable>
-                  <Pressable
-                    style={({ pressed }) => [styles.modalBtn, pressed && styles.pressed]}
-                    onPress={() =>
-                      indirModal && indirVeAc(indirModal, LAW_KLASOR[indirModal.lawId] ?? '')
-                    }>
-                    <AppText variant="kucuk" bold color="beyaz">
-                      Tekrar dene
-                    </AppText>
-                  </Pressable>
-                </View>
-              </>
-            ) : (
-              <>
-                <ActivityIndicator size="large" color={Palette.lacivert} />
-                <AppText variant="govde" bold color="lacivert" style={styles.modalOrtali}>
-                  İndiriliyor… %{indirYuzde}
-                </AppText>
-                <AppText variant="kucuk" color="solukMetin" numberOfLines={2} style={styles.modalOrtali}>
-                  {indirModal?.kanun} indiriliyor. Bitince madde otomatik açılacak.
-                </AppText>
-                <View style={styles.modalBar}>
-                  <View style={[styles.modalBarDolu, { width: `${indirYuzde}%` }]} />
-                </View>
-                <Pressable
-                  style={({ pressed }) => [styles.modalBtnIkincil, pressed && styles.pressed]}
-                  onPress={indirModalKapat}>
-                  <AppText variant="kucuk" bold color="lacivert">
-                    Arka planda indir
-                  </AppText>
-                </Pressable>
-              </>
-            )}
-          </View>
-        </View>
-      </Modal>
+      {/* Ortak indirme kapısı modalı (components/mevzuat/indir-kapisi). */}
+      <IndirModal />
     </Screen>
   );
 }
