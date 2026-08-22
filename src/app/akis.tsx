@@ -19,6 +19,7 @@ import { gorselOnCoz } from '@/lib/gorsel-coz';
 import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { calisilabilirZayif, gorselKaynak, gorselVarMi, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { sesVarMi } from '@/lib/ses-kaynak';
+import { useIndirKapisi } from '@/components/mevzuat/indir-kapisi';
 import { HatirlaQuiz } from '@/components/card-flow/hatirla-quiz';
 import { SesOynatici } from '@/components/card-flow/ses-oynatici';
 import { StudyCard } from '@/components/card-flow/study-card';
@@ -108,6 +109,12 @@ export default function AkisScreen() {
   const kanunKilitli = useKanunKilidi(kanunModu ? Number(lawId) : null);
   const [hata, setHata] = useState(false);
   const [index, setIndex] = useState(0);
+  // SON KAPI (23 Ağu 2026, başkan: "adam kanunu indirmeden nasıl çalışıyor, önce sorgulasın").
+  // Mevzuat ve Patika'da indirme kapısı ZATEN vardı; ama ölçüm gösterdi ki kullanıcı yine de
+  // akıtarak çalışabiliyor (giriş yolu ne olursa olsun). Kapıyı ÇALIŞMA EKRANININ KENDİSİNE
+  // koyduk: hangi yoldan gelinirse gelinsin, kanun inmemişse bir kez sorulur.
+  const { kapidanGec, IndirModal } = useIndirKapisi();
+  const kapiSorulduRef = useRef(false);
   // OTURUM BAŞINDAKİ tamamlanmış kartlar (SRS kutu>=1). "Öğrendim" dedikçe ileri giderken
   // bunların ÜSTÜNDEN ATLANIR: başkan kuralı — 1-2-3 bitmiş, 6-7-8 de bitmişse 4-5'i
   // tamamladıktan sonra 9'a geçilir, bitmişler tekrar gösterilmez. Geri kaydırma serbest.
@@ -291,6 +298,17 @@ export default function AkisScreen() {
   useEffect(() => {
     yukle();
   }, [yukle]);
+
+  // Kuyruk gelince BİR KEZ: bu kanun inmiş mi? İnmemişse indirmeyi teklif et (akış devam
+  // eder; "İndirmeden devam" derse eskisi gibi akıtarak çalışır). Zayıf kuyruğu karma
+  // kanunlardan geldiği için tek kanun kapısı UYGULANMAZ (zaten yalnız inmişler gelir).
+  useEffect(() => {
+    if (zayifModu || kapiSorulduRef.current) return;
+    const ilk = queue?.[0];
+    if (!ilk) return;
+    kapiSorulduRef.current = true;
+    kapidanGec(ilk.law_id, ilk.law_ad ?? 'Bu kanun', () => {});
+  }, [queue, zayifModu, kapidanGec]);
 
   /** Bir sonraki ÇALIŞILMAMIŞ kartın sırası. Oturum başında zaten bitmiş olanlar atlanır
    *  (4-5 bitince 6-7-8 zaten bitmişse 9'a geçer). Sonrası hep bitmişse akış sonuna gider. */
@@ -987,6 +1005,8 @@ export default function AkisScreen() {
           }}
         />
       ) : null}
+      {/* İndirme kapısı modalı (yüzdeli) — kanun inmemişse yukarıdaki efekt tetikler. */}
+      <IndirModal />
     </SafeAreaView>
   );
 }
