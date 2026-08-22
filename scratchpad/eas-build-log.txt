@@ -1,0 +1,19 @@
+
+No environment variables with visibility "Plain text" and "Sensitive" found for the "production" environment on EAS.
+Environment variables loaded from the "production" build profile "env" configuration: EXPO_PUBLIC_SUPABASE_URL, EXPO_PUBLIC_SUPABASE_ANON_KEY, EXPO_PUBLIC_ICERIK_TABANI, EXPO_PUBLIC_IMZALI_URL.
+
+
+
+🤖 Android build
+✔ Using remote Android credentials (Expo server)
+✔ Using Keystore from configuration: Build Credentials jcfC9c7k1i (default)
+
+Bumping expo.android.versionCode from 58 to 59
+
+Compressing project files and uploading to EAS Build. Learn more: https://expo.fyi/eas-build-archive
+- Compressing project files
+Your project archive is 2.5 GB. You can reduce its size and the time it takes to upload by excluding files that are unnecessary for the build process in .easignore file. Learn more: https://expo.fyi/eas-build-archive
+Failed to upload the project tarball to EAS Build
+
+Reason: Project archive is too big. Maximum allowed size is 2.0 GB.
+    Error: build command failed.

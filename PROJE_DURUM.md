@@ -2,7 +2,12 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 22 Ağustos 2026 (⚡ ANLIK GÜNCELLEME HERKESE AÇILDI · iOS 1.0.46 hâlâ incelemede)
+> Son güncelleme: 22 Ağustos 2026 (📣 Aylık üyelik kampanya bildirimi · bildirime tıklayınca ödeme ekranı)
+>
+> ### ▶ 22 Ağu — 📣 AYLIK ÜYELİK KAMPANYA BİLDİRİMİ (satın almamış Android'e)
+> **Önce eksik bulundu:** bildirime tıklayınca HEP Karargah açılıyordu — bildirimin taşıdığı veri hiç okunmuyordu. `lib/bildirim.ts` + `_layout.tsx`: artık `data.rota` okunuyor, `/paywall` gibi uygulama-içi yollar açılıyor (yalnız '/' ile başlayanlar; '//' reddedilir → dış bağlantı imkânsız). Önce Karargah'a gidip sonra hedefe push ediliyor ki GERİ tuşu çalışsın. Commit `0e197c5`, OTA **1.0.46 + 1.0.45**'e basıldı.
+> **Gönderim:** *"Aylık üyelik başladı 📚 / JSPS'ye 28 gün kaldı. Artık aylık üyelik de var: 389 TL…"* → **219 Android cihaz** (aktif premium'u olan 136 kişi HARİÇ; toplam üye 1039). **TESLİM 116 · 103 DeviceNotRegistered.**
+> **⚠️ SINIR:** tıkla→ödeme ekranı yalnız **1.0.45/1.0.46**'daki kullanıcılarda çalışır. Hedeflenen 219 kişinin sürüm dağılımı: 153 (bilinmiyor/eski) · 55 → 1.0.41 · 6 → 1.0.45 · 5 → 1.0.46. Yani çoğunluk yine Karargah'a düşüyor; ödeme ekranına elle gitmeleri gerekiyor. **Eski sürümdekiler için asıl çözüm güncellemeleri.**
 >
 > ### ▶ 22 Ağu — ⚡ ANLIK GÜNCELLEME 2. KADEME AÇILDI (herkes)
 > Başkan onayıyla **`uygulama_ayar.anlik_guncelleme_herkes` = '1'** (doğrulandı). Artık 1.0.46'daki kullanıcılar da güncellemeyi kapat-aç yapmadan alır; kart dinlerken/sınavdayken bekler, menüde gezerken anında yeniler.

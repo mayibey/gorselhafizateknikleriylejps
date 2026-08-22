@@ -1,0 +1,314 @@
+[
+  {
+    "user_id": "98be2c62-4309-4960-9ef3-0a2e032d2f4a",
+    "veri": {
+      "srs": [
+        {
+          "kutu": 3,
+          "card_id": 1001,
+          "sonraki_tarih": "2026-08-26"
+        },
+        {
+          "kutu": 3,
+          "card_id": 1002,
+          "sonraki_tarih": "2026-08-26"
+        },
+        {
+          "kutu": 2,
+          "card_id": 1003,
+          "sonraki_tarih": "2026-08-23"
+        },
+        {
+          "kutu": 3,
+          "card_id": 1004,
+          "sonraki_tarih": "2026-08-17"
+        },
+        {
+          "kutu": 2,
+          "card_id": 1005,
+          "sonraki_tarih": "2026-08-14"
+        },
+        {
+          "kutu": 1,
+          "card_id": 1006,
+          "sonraki_tarih": "2026-08-21"
+        },
+        {
+          "kutu": 1,
+          "card_id": 1007,
+          "sonraki_tarih": "2026-08-03"
+        },
+        {
+          "kutu": 1,
+          "card_id": 1008,
+          "sonraki_tarih": "2026-08-03"
+        },
+        {
+          "kutu": 1,
+          "card_id": 1009,
+          "sonraki_tarih": "2026-08-03"
+        },
+        {
+          "kutu": 1,
+          "card_id": 1010,
+          "sonraki_tarih": "2026-07-30"
+        },
+        {
+          "kutu": 1,
+          "card_id": 26001,
+          "sonraki_tarih": "2026-07-19"
+        },
+        {
+          "kutu": 1,
+          "card_id": 26002,
+          "sonraki_tarih": "2026-07-19"
+        },
+        {
+          "kutu": 1,
+          "card_id": 26003,
+          "sonraki_tarih": "2026-07-19"
+        },
+        {
+          "kutu": 1,
+          "card_id": 26004,
+          "sonraki_tarih": "2026-07-19"
+        }
+      ],
+      "sicil": [
+        {
+          "tip": "ceza",
+          "metin": "MEVZU · JSPS — AYLIKTAN KESME CEZASI\n\nIsrarlı devamsızlığınız nedeniyle tarafınıza (temsili) AYLIKTAN KESME cezası tertip edilmiştir. Zayıf mevzileriniz kapatılmadan siciliniz temizlenmeyecektir.\n\n— Mevzu · JSPS",
+          "sebep": "Geri besleme eğitimine süresinde icabet etmediniz",
+          "tarih": "2026-08-17",
+          "baslik": "Aylıktan Kesme Cezası",
+          "derece": "ayliktan_kesme",
+          "anahtar": null
+        },
+        {
+          "tip": "ceza",
+          "metin": "MEVZU · JSPS — KINAMA CEZASI\n\nMüteaddit ikaz ve uyarıya rağmen geri besleme eğitimine icabet etmediniz. Tarafınıza KINAMA cezası tertip edilmiştir. Eğitim disiplinine riayet etmeniz son kez hatırlatılır.\n\n— Mevzu · JSPS",
+          "sebep": "Geri besleme eğitimine süresinde icabet etmediniz",
+          "tarih": "2026-08-13",
+          "baslik": "Kınama Cezası",
+          "derece": "kinama",
+          "anahtar": null
+        },
+        {
+          "tip": "ceza",
+          "metin": "MEVZU · JSPS — UYARI CEZASI\n\nGeri besleme eğitimindeki devamsızlığınız tekerrür etmiştir. Tarafınıza UYARI cezası tertip edilmiştir. Zayıf mevzilerinizi derhal toparlamanız beklenmektedir.\n\n— Mevzu · JSPS",
+          "sebep": "Geri besleme eğitimine süresinde icabet etmediniz",
+          "tarih": "2026-08-09",
+          "baslik": "Uyarı Cezası",
+          "derece": "uyari",
+          "anahtar": null
+        },
+        {
+          "tip": "ceza",
+          "metin": "MEVZU · JSPS — YAZILI İKAZ\n\nGeri besleme eğitim emrine süresi içinde icabet etmediniz. İşbu yazı tarafınıza İKAZ mahiyetindedir; zayıf mevzilerinizin ivedi takviyesi tembih olunur.\n\n— Mevzu · JSPS",
+          "sebep": "Geri besleme eğitimine süresinde icabet etmediniz",
+          "tarih": "2026-07-21",
+          "baslik": "Yazılı İkaz",
+          "derece": "yazili_ikaz",
+          "anahtar": null
+        },
+        {
+          "tip": "ceza",
+          "metin": "MEVZU · JSPS — YAZILI İKAZ\n\nGeri besleme eğitim emrine süresi içinde icabet etmediniz. İşbu yazı tarafınıza İKAZ mahiyetindedir; zayıf mevzilerinizin ivedi takviyesi tembih olunur.\n\n— Mevzu · JSPS",
+          "sebep": "Geri besleme eğitimine süresinde icabet etmediniz",
+          "tarih": "2026-08-05",
+          "baslik": "Yazılı İkaz",
+          "derece": "yazili_ikaz",
+          "anahtar": null
+        }
+      ],
+      "surum": 1,
+      "geriBes": {
+        "acik": true,
+        "acilis": "2026-08-17",
+        "kademe": 4,
+        "sonTarih": "2026-08-20"
+      },
+      "sinavlar": [],
+      "studyDays": [
+        "2026-07-14",
+        "2026-07-17",
+        "2026-07-25",
+        "2026-07-28",
+        "2026-08-01",
+        "2026-08-10",
+        "2026-08-19"
+      ],
+      "performans": [
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-14",
+          "kaynak": "calisma",
+          "card_id": 1001
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-14",
+          "kaynak": "calisma",
+          "card_id": 1002
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-14",
+          "kaynak": "calisma",
+          "card_id": 1003
+        },
+        {
+          "sonuc": "zor",
+          "tarih": "2026-07-17",
+          "kaynak": "calisma",
+          "card_id": 26001
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-17",
+          "kaynak": "calisma",
+          "card_id": 26002
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-17",
+          "kaynak": "calisma",
+          "card_id": 26003
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-17",
+          "kaynak": "calisma",
+          "card_id": 26004
+        },
+        {
+          "sonuc": "zor",
+          "tarih": "2026-07-17",
+          "kaynak": "calisma",
+          "card_id": 1004
+        },
+        {
+          "sonuc": "zor",
+          "tarih": "2026-07-17",
+          "kaynak": "calisma",
+          "card_id": 1005
+        },
+        {
+          "sonuc": "yanlis",
+          "tarih": "2026-07-17",
+          "kaynak": "quiz",
+          "card_id": 26021
+        },
+        {
+          "sonuc": "yanlis",
+          "tarih": "2026-07-24",
+          "kaynak": "quiz",
+          "card_id": 67067
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-25",
+          "kaynak": "calisma",
+          "card_id": 1001
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-25",
+          "kaynak": "calisma",
+          "card_id": 1002
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-07-28",
+          "kaynak": "calisma",
+          "card_id": 1010
+        },
+        {
+          "sonuc": "zor",
+          "tarih": "2026-08-01",
+          "kaynak": "calisma",
+          "card_id": 1007
+        },
+        {
+          "sonuc": "zor",
+          "tarih": "2026-08-01",
+          "kaynak": "calisma",
+          "card_id": 1009
+        },
+        {
+          "sonuc": "zor",
+          "tarih": "2026-08-01",
+          "kaynak": "calisma",
+          "card_id": 1008
+        },
+        {
+          "sonuc": "yanlis",
+          "tarih": "2026-08-01",
+          "kaynak": "quiz",
+          "card_id": 1020
+        },
+        {
+          "sonuc": "yanlis",
+          "tarih": "2026-08-01",
+          "kaynak": "quiz",
+          "card_id": 1021
+        },
+        {
+          "sonuc": "yanlis",
+          "tarih": "2026-08-01",
+          "kaynak": "quiz",
+          "card_id": 1022
+        },
+        {
+          "sonuc": "yanlis",
+          "tarih": "2026-08-01",
+          "kaynak": "quiz",
+          "card_id": 1015
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-08-10",
+          "kaynak": "calisma",
+          "card_id": 1004
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-08-10",
+          "kaynak": "calisma",
+          "card_id": 1004
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-08-10",
+          "kaynak": "calisma",
+          "card_id": 1005
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-08-19",
+          "kaynak": "calisma",
+          "card_id": 1001
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-08-19",
+          "kaynak": "calisma",
+          "card_id": 1002
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-08-19",
+          "kaynak": "calisma",
+          "card_id": 1003
+        },
+        {
+          "sonuc": "biliyorum",
+          "tarih": "2026-08-19",
+          "kaynak": "calisma",
+          "card_id": 1006
+        }
+      ]
+    },
+    "guncelleme": "2026-08-19T11:50:55.398+00:00"
+  }
+]

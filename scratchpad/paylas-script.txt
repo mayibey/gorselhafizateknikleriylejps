@@ -1,0 +1,70 @@
+<script id="sonuc-paylas">
+/* SONUC PAYLAS — canvas ile premium sonuc karti uretir, navigator.share ile WhatsApp durumu vb.
+   Arkadasla YARIS (meydan okuma) kaldirildi; artik sadece "sonucunu paylas, gorsel uret". */
+var PAYLAS_IKON = { cengel: '🔡', dy: '⚡', milyoner: '🎖️', asmaca: '🪢', ayrim: '⚖️', bosluk: '✍️', terazi: '⚖️', esles: '🔗', sure: '⏱️', sira: '🪜', hangi: '📚', yalan: '🕵️', kelime: '🟩', kusatma: '🏰', bayrak: '🚩' };
+window.sonucPaylas = async function (o) {
+  // o: {id, ad, buyuk, alt, yildiz(0-3 | null)}
+  const W = 1080, H = 1920;
+  const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+  const c = cv.getContext('2d');
+  const gr = c.createLinearGradient(0, 0, 0, H);
+  gr.addColorStop(0, '#0c2740'); gr.addColorStop(.55, '#08203a'); gr.addColorStop(1, '#050f1e');
+  c.fillStyle = gr; c.fillRect(0, 0, W, H);
+  const rg = c.createRadialGradient(W / 2, -120, 60, W / 2, -120, 900);
+  rg.addColorStop(0, 'rgba(240,183,51,.20)'); rg.addColorStop(1, 'rgba(240,183,51,0)');
+  c.fillStyle = rg; c.fillRect(0, 0, W, 760);
+  c.fillStyle = 'rgba(255,255,255,.10)';
+  for (let i = 0; i < 90; i++) { const x = (i * 137.5) % W, yv = (i * 263.9) % 760; c.beginPath(); c.arc(x, yv, i % 7 === 0 ? 2.2 : 1.1, 0, 7); c.fill(); }
+  c.textAlign = 'center';
+  c.fillStyle = '#F3C24A'; c.font = '700 42px Georgia,serif';
+  c.fillText('MEVZU JSPS', W / 2, 190);
+  c.strokeStyle = 'rgba(240,183,51,.55)'; c.lineWidth = 3;
+  c.beginPath(); c.moveTo(W / 2 - 160, 225); c.lineTo(W / 2 + 160, 225); c.stroke();
+  c.fillStyle = '#9FB6BE'; c.font = '400 30px system-ui';
+  c.fillText('Ezber yok, oyun var.', W / 2, 278);
+  c.beginPath(); c.arc(W / 2, 480, 122, 0, 7);
+  c.fillStyle = 'rgba(240,183,51,.12)'; c.fill();
+  c.strokeStyle = 'rgba(240,183,51,.5)'; c.lineWidth = 4; c.stroke();
+  c.font = '124px system-ui'; c.textBaseline = 'middle'; c.fillStyle = '#fff';
+  c.fillText(PAYLAS_IKON[o.id] || o.ikon || '🎮', W / 2, 488); c.textBaseline = 'alphabetic';
+  c.fillStyle = '#F2F7FA'; c.font = '700 84px Georgia,serif';
+  wrap(c, o.ad || 'Oyun', W / 2, 730, 920, 90);
+  let y0 = 860;
+  if (o.yildiz != null) {
+    c.font = '96px system-ui';
+    const bw = 96; const bas = W / 2 - (3 * bw) / 2 + bw / 2;
+    for (let i = 0; i < 3; i++) { c.fillStyle = i < o.yildiz ? '#F3C24A' : 'rgba(255,255,255,.22)'; c.fillText(i < o.yildiz ? '★' : '☆', bas + i * bw, y0 + 30); }
+    y0 += 120;
+  }
+  c.fillStyle = '#F3C24A'; c.font = '800 150px Georgia,serif';
+  c.fillText(o.buyuk || '', W / 2, y0 + 120);
+  if (o.alt) { c.fillStyle = '#C6D6DD'; c.font = '400 48px system-ui'; wrap(c, o.alt, W / 2, y0 + 220, 940, 60); }
+  c.fillStyle = 'rgba(240,183,51,.10)'; roundRect(c, 130, 1610, 820, 190, 30); c.fill();
+  c.strokeStyle = 'rgba(240,183,51,.4)'; c.lineWidth = 2; roundRect(c, 130, 1610, 820, 190, 30); c.stroke();
+  c.fillStyle = '#F3C24A'; c.font = '700 46px Georgia,serif'; c.fillText('Sen de oyna, hazırlan!', W / 2, 1695);
+  c.fillStyle = '#9FB6BE'; c.font = '600 42px system-ui'; c.fillText('mevzujsps.com', W / 2, 1758);
+  function wrap(cc, txt, cx, cy, maxw, lh) { const ws = ('' + txt).split(' '); let line = ''; const lines = []; for (const w of ws) { const test = line ? line + ' ' + w : w; if (cc.measureText(test).width > maxw && line) { lines.push(line); line = w; } else line = test; } lines.push(line); const startY = cy - ((lines.length - 1) * lh) / 2; lines.forEach((l, i) => cc.fillText(l, cx, startY + i * lh)); }
+  function roundRect(cc, x, y, w, h, r) { cc.beginPath(); cc.moveTo(x + r, y); cc.arcTo(x + w, y, x + w, y + h, r); cc.arcTo(x + w, y + h, x, y + h, r); cc.arcTo(x, y + h, x, y, r); cc.arcTo(x, y, x + w, y, r); cc.closePath(); }
+  const blob = await new Promise(res => cv.toBlob(res, 'image/png', .92));
+  const dosya = new File([blob], 'mevzu-sonuc.png', { type: 'image/png' });
+  const metin = (o.ad ? o.ad + ' ' : '') + '— JSPS için oyunla çalışıyorum! mevzujsps.com';
+  try {
+    if (navigator.canShare && navigator.canShare({ files: [dosya] })) { await navigator.share({ files: [dosya], text: metin }); return; }
+  } catch (e) { if (e && e.name === 'AbortError') return; }
+  paylasYedek(URL.createObjectURL(blob));
+};
+function paylasYedek(url) {
+  const k = document.createElement('div'); k.id = 'paylasOrtu';
+  k.style.cssText = 'position:fixed;inset:0;z-index:80;background:rgba(3,12,20,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px';
+  const not = document.createElement('div');
+  not.style.cssText = 'color:#EAF2F5;font-size:15px;text-align:center;max-width:340px;line-height:1.5';
+  not.innerHTML = 'Gorseli kaydetmek icin <b style="color:#F3C24A">basili tut &rarr; Kaydet</b>, sonra WhatsApp durumuna at.';
+  const im = document.createElement('img'); im.src = url;
+  im.style.cssText = 'max-width:78%;max-height:62vh;border-radius:16px;border:1px solid rgba(240,183,51,.4)';
+  const btn = document.createElement('button'); btn.textContent = 'Kapat';
+  btn.style.cssText = 'border:1px solid rgba(240,183,51,.5);background:transparent;color:#F3C24A;font-weight:800;padding:12px 26px;border-radius:14px;font-size:15px';
+  btn.onclick = () => k.remove();
+  k.appendChild(not); k.appendChild(im); k.appendChild(btn);
+  document.body.appendChild(k);
+}
+</script>

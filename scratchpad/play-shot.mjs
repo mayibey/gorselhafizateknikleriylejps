@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const PORT=9500;
+const t=await(await fetch(`http://127.0.0.1:${PORT}/json`)).json();
+const p=t.find(x=>x.type==='page'&&(x.url||'').includes('play.google.com/console'));
+const ws=new WebSocket(p.webSocketDebuggerUrl);let id=0;const b=new Map();
+ws.addEventListener('message',e=>{const m=JSON.parse(e.data);if(m.id&&b.has(m.id)){b.get(m.id)(m);b.delete(m.id);}});
+await new Promise(r=>ws.addEventListener('open',r));
+const g=(me,pa)=>new Promise((res,rej)=>{const i=++id;const to=setTimeout(()=>rej(new Error('t')),15000);b.set(i,m=>{clearTimeout(to);res(m.result);});ws.send(JSON.stringify({id:i,method:me,params:pa}));});
+const s=await g('Page.captureScreenshot',{format:'png'});
+fs.writeFileSync('scratchpad/play.png',Buffer.from(s.data,'base64'));
+console.log('shot ok');
+process.exit(0);
