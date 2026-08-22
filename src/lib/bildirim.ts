@@ -196,15 +196,23 @@ export async function testBildirimi(): Promise<PlanSonuc> {
  * v1'de tüm içtimalar Karargah'a götürür (deep-link veri taşımıyor). Web'de no-op.
  * Dönen fonksiyon dinleyiciyi kaldırır (useEffect cleanup).
  */
-export function bildirimTiklamaDinle(onTikla: () => void): () => void {
+export function bildirimTiklamaDinle(onTikla: (rota?: string) => void): () => void {
   if (WEB) return () => {};
+  // 22 Ağu 2026: bildirim artık HEDEF taşıyabiliyor. Gönderirken `data: { rota: '/paywall' }`
+  // konursa tıklayan doğrudan oraya gider; yoksa eskisi gibi Karargah'a döner.
+  // Güvenlik: yalnız '/' ile başlayan uygulama-içi yollar kabul edilir (dış bağlantı YOK).
+  const rotaCoz = (yanit: Notifications.NotificationResponse | null): string | undefined => {
+    const ham = yanit?.notification?.request?.content?.data as { rota?: unknown } | undefined;
+    const r = typeof ham?.rota === 'string' ? ham.rota : undefined;
+    return r && r.startsWith('/') && !r.startsWith('//') ? r : undefined;
+  };
   // Uygulama TAMAMEN kapalıyken bildirime tıklanıp açıldıysa: son yanıtı bir kez işle.
   Notifications.getLastNotificationResponseAsync()
     .then((yanit) => {
-      if (yanit) onTikla();
+      if (yanit) onTikla(rotaCoz(yanit));
     })
     .catch(() => {});
-  const sub = Notifications.addNotificationResponseReceivedListener(() => onTikla());
+  const sub = Notifications.addNotificationResponseReceivedListener((yanit) => onTikla(rotaCoz(yanit)));
   return () => sub.remove();
 }
 

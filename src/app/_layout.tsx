@@ -258,9 +258,14 @@ function RootNavigator() {
     else if (!eksik && onboardingDe) router.replace('/');
   }, [eksik, yukleniyor, tanitimTamam, segments, router]);
 
-  // Bildirime tıklayınca uygulama açılıp Karargah'a gitsin (uygulama kapalıyken açılış dahil).
+  // Bildirime tıklayınca uygulama açılır. Bildirim bir HEDEF taşıyorsa (data.rota, örn.
+  // '/paywall' — kampanya bildirimleri) oraya götürür; taşımıyorsa Karargah'a döner.
+  // (22 Ağu 2026: eskiden hedef ne olursa olsun hep Karargah açılıyordu.)
   useEffect(() => {
-    return bildirimTiklamaDinle(() => router.replace('/'));
+    return bildirimTiklamaDinle((rota) => {
+      router.replace('/');
+      if (rota && rota !== '/') setTimeout(() => router.push(rota as never), 350);
+    });
   }, [router]);
 
   // EN ÜST KAPI: zorunlu güncelleme varsa HER ŞEYDEN önce (giriş/tur/profil dahil) kapatılamaz ekran.
