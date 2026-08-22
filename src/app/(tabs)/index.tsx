@@ -7,6 +7,7 @@ import Svg, { Circle, Defs, LinearGradient as SvgGradient, Path, Stop } from 're
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
 import { useIndirKapisi } from '@/components/mevzuat/indir-kapisi';
+import { TelegramKatil } from '@/components/ui/telegram-katil';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
@@ -476,8 +477,13 @@ export default function KarargahScreen() {
               </Pressable>
             </>
           ) : (
-            /* Başkan (10 Ağu gece): köşede ikon değil YAZI — "Duyurular" + okunmamış noktası. */
-            <DuyuruIkonu etiketli />
+            /* Başkan (10 Ağu gece): köşede ikon değil YAZI — "Duyurular" + okunmamış noktası.
+               23 Ağu: hemen ALTINA Telegram "KATIL" hapı (başkan isteği) — grup ikinci
+               iletişim kanalımız; eskiden Ayarlar'da üç tık derindeydi, kimse bulmuyordu. */
+            <View style={styles.sagUstSutun}>
+              <DuyuruIkonu etiketli />
+              <TelegramKatil />
+            </View>
           )}
         </View>
       }>
@@ -1356,6 +1362,8 @@ function Gorev({ sayi, etiket }: { sayi: number; etiket: string }) {
 }
 
 const styles = StyleSheet.create({
+  // Sağ üst: DUYURULAR üstte, Telegram KATIL hapı hemen altında (sağa hizalı).
+  sagUstSutun: { alignItems: 'flex-end', gap: 6 },
   pressed: {
     opacity: 0.85,
   },

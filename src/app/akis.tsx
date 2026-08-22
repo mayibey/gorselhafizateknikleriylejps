@@ -26,6 +26,7 @@ import { StudyCard } from '@/components/card-flow/study-card';
 import { TtsBar } from '@/components/card-flow/tts-bar';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
+import { TelegramDaveti } from '@/components/ui/telegram-daveti';
 import { Loading } from '@/components/ui/loading';
 import { CardFlowMaxWidth, Palette, Spacing } from '@/constants/theme';
 import { getAyar } from '@/lib/bildirim';
@@ -620,6 +621,9 @@ export default function AkisScreen() {
               sinavGoster ? { etiket: geriEtiket, onPress: () => router.back() } : undefined
             }
           />
+          {/* ÖDÜL ANI (23 Ağu, başkan seçimi): turu bitiren kullanıcı davete en açık olduğu
+              anda Telegram grubu teklif edilir. Ayda en fazla bir kez, katılınca bir daha yok. */}
+          <TelegramDaveti />
         </View>
       ) : (
         <View style={styles.kolon}>
