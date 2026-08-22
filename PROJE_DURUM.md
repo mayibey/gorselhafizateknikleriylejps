@@ -2,7 +2,14 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 22 Ağustos 2026 (📣 Aylık üyelik kampanya bildirimi · bildirime tıklayınca ödeme ekranı)
+> Son güncelleme: 22 Ağustos 2026 (🔴 SİYAH EKRAN yakalandı ve düzeltildi · anlık güncelleme tekrar açık)
+>
+> ### ▶ 22 Ağu — 🔴 SİYAH EKRAN (anlık güncelleme) — YAKALANDI, DÜZELTİLDİ
+> **Olay:** başkan kampanya bildirimine tıkladı → uygulama **açılırken** bekleyen OTA'yı bulup `reloadAsync()` çağırdı → **açılış yarıda kesildi, siyah ekranda kaldı** (kapat-aç ile düzeldi).
+> **Sıra:** ① şalter (`anlik_guncelleme_herkes`) **hemen '0'** — kimse aynı şeye düşmesin ② fix ③ OTA (1.0.45 + 1.0.46) ④ başkan doğruladı: **"temiz"** ⑤ şalter tekrar **'1'**.
+> **FIX (`lib/anlik-guncelleme.ts`, commit `d794de3`):** `ACILIS_BEKLE_MS = 12_000` (açılıştan sonraki ilk 12 sn denetim YOK) + `AppState !== 'active'` ise ne denetle ne yenile + indirme bittikten SONRA tekrar 'active' kontrolü.
+> **KURAL:** uygulama ilk çizimini tamamlamadan **ASLA** `reloadAsync` çağrılmaz. Bkz [[anlik-guncelleme-cift-kademe]].
+> **Şans:** şalter iki saat açıktı ama bekleyen OTA'ya denk gelen normal kullanıcı olmadı; hatayı başkanın telefonu yakaladı.
 >
 > ### ▶ 22 Ağu — 📣 AYLIK ÜYELİK KAMPANYA BİLDİRİMİ (satın almamış Android'e)
 > **Önce eksik bulundu:** bildirime tıklayınca HEP Karargah açılıyordu — bildirimin taşıdığı veri hiç okunmuyordu. `lib/bildirim.ts` + `_layout.tsx`: artık `data.rota` okunuyor, `/paywall` gibi uygulama-içi yollar açılıyor (yalnız '/' ile başlayanlar; '//' reddedilir → dış bağlantı imkânsız). Önce Karargah'a gidip sonra hedefe push ediliyor ki GERİ tuşu çalışsın. Commit `0e197c5`, OTA **1.0.46 + 1.0.45**'e basıldı.
