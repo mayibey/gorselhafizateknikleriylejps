@@ -20,13 +20,27 @@ import { ayarOku } from '@/lib/uzak-ayar';
 
 const ARALIK_MS = 30_000;
 
+/**
+ * 🔴 22 Ağu 2026 — SİYAH EKRAN: başkan bildirime tıkladı, uygulama AÇILIRKEN güncellemeyi
+ * bulup kendini yeniledi ve SİYAH EKRANDA KALDI. Sebep: `reloadAsync()` daha uygulama ilk
+ * çizimini/açılış ekranını tamamlamadan çağrılırsa açılış yarıda kesiliyor.
+ * ÇÖZÜM: açılıştan sonra ACILIS_BEKLE kadar hiç dokunma + yalnız uygulama ÖNDEYKEN yenile.
+ */
+const ACILIS_BEKLE_MS = 12_000;
+const acilisAni = Date.now();
+const acilisOturdu = () => Date.now() - acilisAni >= ACILIS_BEKLE_MS;
+
 async function denetleVeUygula(mesgulRef: { current: boolean }): Promise<void> {
   if (mesgulRef.current) return;
+  if (!acilisOturdu()) return; // açılış otursun; yoksa siyah ekran
+  if (AppState.currentState !== 'active') return; // arka planda yenileme YOK
   mesgulRef.current = true;
   try {
     const sonuc = await Updates.checkForUpdateAsync();
     if (sonuc.isAvailable) {
       await Updates.fetchUpdateAsync();
+      // İndirme sürerken kullanıcı işe başlamış ya da uygulama arkaya düşmüş olabilir.
+      if (AppState.currentState !== 'active') return;
       await Updates.reloadAsync(); // anında uygula — dönüşü olmayan çağrı
     }
   } catch {
