@@ -418,10 +418,13 @@ export default function SinavScreen() {
           genelModu={genelModu}
           belgeHak={belgeHak}
           katsayi={katsayi}
-          onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
+          // Burada da PUSH: yanlışları çalışıp geri gelince sonuç ekranı yerinde dursun.
+          onZayif={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
-          onSonuclar={genelModu ? () => router.replace('/sonuclar') : undefined}
+          // PUSH (replace DEĞİL): başkan "sonuç ekranından geri gelince başa atıyor" dedi.
+          // replace sınav ekranını yığından siliyordu; geri tuşu sonuç ekranına dönemiyordu.
+          onSonuclar={genelModu ? () => router.push('/sonuclar') : undefined}
           sonraki={sonraki}
           onSonraki={() =>
             sonraki && router.replace({ pathname: '/sinav', params: sonraki.params })
