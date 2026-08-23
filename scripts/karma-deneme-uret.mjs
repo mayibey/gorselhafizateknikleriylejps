@@ -22,6 +22,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
+import { konuAnahtari, mevzuatBul } from './soru-standart.mjs';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DENEME_SAYISI = 5;
@@ -42,6 +43,16 @@ function veriOku(dosya, degisken) {
   return new Function('return ' + s.slice(bas, son + 1))();
 }
 
+// ÇIKMIŞ SINAV ÖLÇÜSÜ — hangi mevzuattan 100 soruda kaç soru çıkıyor (scripts/cikmis-referans.json).
+// Başkan (23 Ağu): "gerçek sınavların her birini analiz etsin, hangi konudan kaç soru çıkmış;
+// bizim deneme bu standarda uyuyor mu; soru dağılımları ona göre ayarlansın."
+let REFERANS_KONU = [];
+try {
+  REFERANS_KONU = JSON.parse(readFileSync(join(kok, 'scripts/cikmis-referans.json'), 'utf8')).konuAgirlik;
+} catch {
+  console.log('UYARI: cikmis-referans.json yok — konu kotası uygulanmayacak (npm run referans:uret).');
+}
+
 const KART_SORULARI = veriOku('src/assets/kart-sorulari.ts', 'KART_SORULARI');
 const DUELLO = veriOku('src/assets/duello-sorulari.ts', 'DUELLO_SORULARI');
 const MUSTEREK_DENEME = veriOku('src/assets/genel-denemeler.ts', 'GENEL_DENEMELER');
@@ -54,7 +65,12 @@ for (const m of seed.matchAll(/\{ id: (\d+), blok: '([^']+)'/g)) blokMap.set(Num
 
 // --- kullanılmışlar + kara liste ---
 const kullanilan = new Set();
-for (const d of [...MUSTEREK_DENEME, ...BRANS_DENEME]) for (const s of d.sorular) kullanilan.add(s.id);
+// Küratörlü denemelerdeki yedek sorular '-Y' ekiyle duruyor; TABAN kimlik de dışarıda
+// kalmalı yoksa aynı soru karma denemeye ikinci kez giriyor.
+for (const d of [...MUSTEREK_DENEME, ...BRANS_DENEME]) for (const s of d.sorular) {
+  kullanilan.add(s.id);
+  kullanilan.add(String(s.id).replace(/-Y$/, ''));
+}
 const karaListe = new Set(SORU_KARA_LISTE ?? []);
 
 const sadeMetin = (s) => String(s).toLocaleLowerCase('tr')
@@ -95,6 +111,7 @@ function ekle(lawId, s) {
   gorulenMetin.add(anahtar);
   if (!havuz.has(lawId)) havuz.set(lawId, []);
   havuz.get(lawId).push({
+    __law: lawId, // konu/blok sayımı için (çıktıya YAZILMAZ)
     id: s.id, soru: s.soru, siklar: s.siklar, dogru: s.dogru,
     aciklama: s.aciklama ?? '', kaynak: s.kaynak ?? '', zorluk: s.zorluk ?? 'orta',
     kartId: s.kartId ?? '',
@@ -164,8 +181,79 @@ function dagit(kanunlar, adet, imlec, tip) {
   return secilen;
 }
 
-/** Bir yarı deneme (50 soru): önce tip kotaları, kalan boşluk serbest doldurulur. */
+/** Konu adı → o konudaki (henüz alınmamış) sorular. Tek seferlik kurulur. */
+let _konuHavuz = null;
+function konuHavuzu() {
+  if (_konuHavuz) return _konuHavuz;
+  _konuHavuz = new Map();
+  for (const [lawId, liste] of havuz) {
+    for (const q of liste) {
+      const anah = konuAnahtari(mevzuatBul(q.soru, q.kaynak, lawId));
+      if (!anah) continue;
+      if (!_konuHavuz.has(anah)) _konuHavuz.set(anah, []);
+      _konuHavuz.get(anah).push(q);
+    }
+  }
+  return _konuHavuz;
+}
+
+/** Belirli bir konudan n soru al (tip tercihi varsa önce onu dener). */
+function konudanAl(ad, adet, tipSirasi, serbestDusme = false) {
+  const liste = konuHavuzu().get(ad) ?? [];
+  const alinan = [];
+  // DİKKAT: tip verildiyse BAŞKA tipe DÜŞÜLMEZ. İlk sürümde sona null (=herhangi tip)
+  // ekliydi ve konu kotası tip kotasını deliyordu (olumsuz %38 hedefi %27'ye düşmüştü).
+  for (const tip of serbestDusme ? [...tipSirasi, null] : tipSirasi) {
+    for (const q of liste) {
+      if (alinan.length >= adet) break;
+      if (q.alindi) continue;
+      if (tip && soruTipi(q) !== tip) continue;
+      q.alindi = true;
+      alinan.push(q);
+    }
+    if (alinan.length >= adet) break;
+  }
+  return alinan;
+}
+
+/**
+ * Bir deneme (100 soru): ÖNCE çıkmış sınavdaki konu ağırlıkları (en ağır konudan
+ * başlayarak), SONRA tip kotasıyla serbest dolum, kalan boşluk round-robin.
+ * Konu kotası tutmazsa (o konuda sorumuz kalmadıysa) eksik kalan pay serbest dolumla kapanır.
+ */
+function denemeKur(adet, imlecM, imlecB) {
+  const secilen = [];
+  // DIŞ HALKA: tip kotası (çıkmış sınav oranı) — böylece tip dağılımı birebir tutar.
+  // İÇ HALKA: o tipteki soruları çıkmış sınavın KONU ağırlığına göre dağıt.
+  for (const [tip, kota50] of KOTA) {
+    let kalan = Math.round((kota50 * adet) / 50);
+    for (const k of REFERANS_KONU) {
+      if (kalan <= 0) break;
+      const pay = Math.max(1, Math.round((k.yuz * kalan) / 100));
+      const alinan = konudanAl(k.anahtar ?? konuAnahtari(k.ad), Math.min(pay, kalan), [tip]);
+      secilen.push(...alinan);
+      kalan -= alinan.length;
+    }
+    // O tipte konu havuzu yetmediyse: serbest (yarı müşterek / yarı branş).
+    if (kalan > 0) {
+      const m = dagit(karistir(musterekKanunlar), Math.ceil(kalan / 2), imlecM, tip);
+      secilen.push(...m);
+      secilen.push(...dagit(karistir(bransKanunlar), kalan - m.length, imlecB, tip));
+    }
+  }
+  // Yuvarlamadan artan boşluk: tipsiz serbest dolum.
+  const eksik = adet - secilen.length;
+  if (eksik > 0) {
+    const m = dagit(karistir(musterekKanunlar), Math.ceil(eksik / 2), imlecM);
+    secilen.push(...m);
+    secilen.push(...dagit(karistir(bransKanunlar), eksik - m.length, imlecB));
+  }
+  return secilen.slice(0, adet);
+}
+
+/** Tip kotasıyla serbest dolum (konu kotasından artan boşluk için). */
 function yariDeneme(kanunlar, adet, imlec) {
+  if (adet <= 0) return [];
   const secilen = [];
   for (const [tip, kota] of KOTA) {
     secilen.push(...dagit(karistir(kanunlar), Math.round((kota * adet) / 50), imlec, tip));
@@ -177,10 +265,11 @@ function yariDeneme(kanunlar, adet, imlec) {
 const imlecM = new Map(), imlecB = new Map();
 const denemeler = [];
 for (let no = 1; no <= DENEME_SAYISI; no++) {
-  const yari = SORU_SAYISI / 2;
-  const m = yariDeneme(musterekKanunlar, yari, imlecM);
-  const b = yariDeneme(bransKanunlar, SORU_SAYISI - m.length, imlecB);
-  const sorular = karistir([...m, ...b]).map(({ alindi, ...q }) => q);
+  
+  const secilen = denemeKur(SORU_SAYISI, imlecM, imlecB);
+  const m = secilen.filter((q) => blokMap.get(q.__law) === 'müşterek');
+  const b = secilen.filter((q) => blokMap.get(q.__law) !== 'müşterek');
+  const sorular = karistir(secilen).map(({ alindi, __law, ...q }) => q);
   denemeler.push({ no, baslik: `Karma Deneme ${no}`, sorular });
   console.log(`  Karma Deneme ${no}: ${sorular.length} soru (${m.length} müşterek + ${b.length} branş)`);
 }

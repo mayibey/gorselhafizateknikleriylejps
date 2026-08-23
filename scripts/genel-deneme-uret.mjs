@@ -52,8 +52,15 @@ for (let i = 0; i < DOSYALAR.length; i++) {
     const id = String(s.soru_id ?? '').trim();
     if (SORU_KARA_LISTE.has(id)) { atlanan++; continue; } // salakça/mülga → atla [[soru-kara-liste]]
     if (gorulenId.has(id)) {
+      // Kaynakta aynı soru iki denemede geçiyor. Atlarsak deneme 50'den düşüyor →
+      // yerine standart bir yedek konur.
       cakisma++;
-      console.log(`CAKISMA: soru_id "${id}" tekrar (deneme ${i + 1}) — atlandı`);
+      const y = yedekSoru(String(s.soru), String(s.kaynak_madde ?? ''), gorulenId);
+      if (y) {
+        const yd = denetle(y, null);
+        sorular.push({ ...y, soru: yd.tamam ? yd.soru : y.soru, kartId: '' });
+        stdDegistirilen++;
+      }
       continue;
     }
     gorulenId.add(id);

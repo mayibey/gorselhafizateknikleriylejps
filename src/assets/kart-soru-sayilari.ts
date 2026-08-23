@@ -115,7 +115,7 @@ export const KART_SORU_SAYILARI: Record<number, number> = {
   113: 15,
   114: 34,
   115: 38,
-  116: 56,
+  116: 55,
   117: 51,
   118: 63,
   119: 124,

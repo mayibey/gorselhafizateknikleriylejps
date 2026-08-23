@@ -122,7 +122,8 @@ export function kunye(ad) {
 const MADDE = /\bm\.\s?\d|\bmd\.\s?\d|\bmadde\s?\d|\d+\s*(inci|ıncı|üncü|uncu)\s*madde|\d+\s*\.\s*madde|\bek\s+madde\s*\d/i;
 const AD_DESEN = [
   /(\d{3,4}\s*sayılı\s+[^,;:.()]{4,90}?(?:Kanunu|Kanun))\b/,
-  /((?:[A-ZÇĞİÖŞÜ][^,;:.()]{4,90}?)(?:Yönetmeliği|Yönetmelik|Yönergesi|Yönerge|Tebliği|Tebliğ))\b/,
+  // Ek almış biçimler de yakalanır ("…Yönetmeliğe göre"); ad sonradan sadeleştirilir.
+  /((?:[A-ZÇĞİÖŞÜ][^,;:.()]{4,90}?)(?:Yönetmeliğ|Yönetmelik|Yönergesi|Yönerge|Tebliğ)[a-zçğıöşü]*)\b/,
   /(Türkiye Cumhuriyeti Anayasası|Anayasa)\b/,
 ];
 const DOGRU_MU = /doğru mudur|yanlış mıdır|doğru mu\?|yanlış mı\?/i;
@@ -224,16 +225,43 @@ const KARTID_LAW = {
   YON26: 50, YON29: 53, YON30: 54, YON36: 60, YON41: 65, YON42: 66,
 };
 
+/**
+ * KONU ANAHTARI — aynı mevzuatın yazım farkları tek sayıda toplansın diye.
+ * "2559 sayılı Polis Vazife ve Salâhiyet Kanunu" / "…Salahiyet…" / "…Selahiyet…" üç ayrı
+ * konu sayılıyordu; kanun numarası varsa ANAHTAR ODUR, yoksa sadeleştirilmiş ad.
+ */
+export function konuAnahtari(ad) {
+  if (!ad) return null;
+  const no = String(ad).match(/(\d{3,4})\s*[Ss]ayılı/);
+  if (no) return no[1];
+  return String(ad)
+    .toLocaleLowerCase('tr')
+    .replace(/[^\p{L}\p{N}]+/gu, '')
+    .slice(0, 44);
+}
+
 /** Sorunun hangi mevzuata ait olduğunu bulur (kök → kaynak → law id sırasıyla). */
 export function mevzuatBul(soru, kaynak, lawId) {
   const bulunan = mevzuatAra(soru, kaynak, lawId);
   return adGecerliMi(bulunan) ? bulunan : null;
 }
 
+/** Ad sonundaki hâl ekini söker: "Yönetmeliğe/Yönetmeliğin/Yönetmelikte" → "Yönetmelik". */
+function adNormal(ad) {
+  return String(ad)
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/Yönetmeliğinde$|Yönetmeliğine$|Yönetmeliğinin$|Yönetmeliğin$|Yönetmeliğe$|Yönetmeliğ$/, 'Yönetmeliği')
+    .replace(/Yönetmelikte$|Yönetmeliktir$/, 'Yönetmelik')
+    .replace(/Yönergesine$|Yönergesinde$|Yönergesinin$/, 'Yönergesi')
+    .replace(/Tebliğinde$|Tebliğine$|Tebliğinin$|Tebliğin$/, 'Tebliği')
+    .replace(/Kanununun$|Kanununa$|Kanununda$/, 'Kanunu');
+}
+
 function mevzuatAra(soru, kaynak, lawId) {
   for (const r of AD_DESEN) {
     const m = soru.match(r);
-    if (m) return m[1].replace(/\s+/g, ' ').trim();
+    if (m) return adNormal(m[1]);
   }
   // Kökte çıplak "6284 sayılı Kanun" geçiyorsa NUMARASI esastır — kaynak künyesi
   // bazen uygulama yönetmeliğini gösteriyor ve soruyu yanlış mevzuata yazdırıyordu.
@@ -369,8 +397,45 @@ function yedekHavuz() {
   return _yedek;
 }
 
-/** Aynı mevzuattan, henüz kullanılmamış standart bir yedek soru döndürür (yoksa null). */
-export function yedekSoru(soru, kaynak, kullanilanIdler) {
+/**
+ * Aynı mevzuattan, henüz kullanılmamış standart bir yedek soru döndürür.
+ * Aynı mevzuattan bulunamazsa (ve `herhangi` açıksa) ÇIKMIŞ SINAVDA EN AĞIR konulardan
+ * sırayla aranır — deneme eksik kalmasın, hem de ölçüye yaklaşsın.
+ */
+export function yedekSoru(soru, kaynak, kullanilanIdler, herhangi = true) {
+  const ad = mevzuatBul(String(soru), kaynak, null);
+  const havuz = yedekHavuz();
+  const sira = [];
+  if (ad) sira.push(ad);
+  if (herhangi) {
+    for (const k of agirKonular()) if (k !== ad) sira.push(k);
+    for (const k of havuz.keys()) if (!sira.includes(k)) sira.push(k);
+  }
+  for (const konu of sira) {
+    for (const q of havuz.get(konu) ?? []) {
+      if (kullanilanIdler.has(q.id)) continue;
+      kullanilanIdler.add(q.id);
+      return { ...q, id: q.id + '-Y', kartId: '' };
+    }
+  }
+  return null;
+}
+
+/** Çıkmış sınav referansındaki konu sırası (ağırdan hafife). Referans yoksa boş. */
+let _agir = null;
+function agirKonular() {
+  if (_agir) return _agir;
+  try {
+    const r = JSON.parse(readFileSync(join(kok, 'scripts/cikmis-referans.json'), 'utf8'));
+    _agir = r.konuAgirlik.map((k) => k.ad);
+  } catch {
+    _agir = [];
+  }
+  return _agir;
+}
+
+/** (eski imza korunur) */
+function yedekSoruEski(soru, kaynak, kullanilanIdler) {
   const ad = mevzuatBul(String(soru), kaynak, null);
   if (!ad) return null;
   for (const q of yedekHavuz().get(ad) ?? []) {

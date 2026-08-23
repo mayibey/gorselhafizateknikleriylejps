@@ -38,7 +38,16 @@ for (let i = 0; i < DOSYALAR.length; i++) {
     if (!s.soru || siklar.length < 2 || dogruIdx < 0 || dogruIdx >= siklar.length) { atlanan++; continue; }
     const id = String(s.soru_id ?? '').trim();
     if (SORU_KARA_LISTE.has(id)) { atlanan++; continue; } // salakça/mülga → atla [[soru-kara-liste]]
-    if (gorulenId.has(id)) { cakisma++; console.log(`CAKISMA: soru_id "${id}" tekrar — atlandı`); continue; }
+    if (gorulenId.has(id)) {
+      cakisma++;
+      const y = yedekSoru(String(s.soru), String(s.kaynak_madde ?? ''), gorulenId);
+      if (y) {
+        const yd = denetle(y, null);
+        sorular.push({ ...y, soru: yd.tamam ? yd.soru : y.soru, kartId: '' });
+        stdDegistirilen++;
+      }
+      continue;
+    }
     gorulenId.add(id);
     const kayit = {
       id, soru: String(s.soru).trim(), siklar: siklar.map(sikTemizle), dogru: dogruIdx,
