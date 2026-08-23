@@ -135,10 +135,17 @@ const DOGRU_MU = /doğru mudur|yanlış mıdır|doğru mu\?|yanlış mı\?/i;
 const TARIHCE_SORU = /hangi şekilde değiştiril|nasıl değiştiril|ne zaman yürürlü|yürürlük tarihi|hangi tarihte yürürlü|hangi tarihli ve|hangi tarih ve sayı|hangi bakanlar kurulu karar|hangi cumhurbaşkanı karar|kaç sayılı (bakanlar|cumhurbaşkanı)|resm[îi] gazete['’]?de yayımlan\w*\s*(tarih|sayı)/i;
 const TARIH = /\b\d{1,2}\s*\/\s*\d{1,2}\s*\/\s*\d{4}\b/;
 
+// DAYANAK SORUSU — "Bu Yönetmelik, … tarihli ve … sayılı Kanunun … maddesine dayanılarak
+// hazırlanmıştır" cümlesinin boşluklarını doldurtan sorular. Çıkmış sınavda bu kalıp
+// 1.760 soruda 2 kez geçiyor (%0,1) ve o ikisi de boşluk doldurma değil. Mevzuatın
+// KÜNYESİ değil HÜKMÜ sorulur → bu tip de bankaya alınmaz.
+const DAYANAK_SORU = /dayanılarak hazırlan|dayanağını oluştur|maddesine dayanılarak|dayanak (maddesi|hükmü)/i;
+
 function tarihceMi(q) {
   const k = String(q.soru);
   const son = k.split(/(?<=\?)\s+/).slice(-2).join(' ');
   if (TARIHCE_SORU.test(son)) return true;
+  if (DAYANAK_SORU.test(k)) return true;
   const siklar = Array.isArray(q.siklar) ? q.siklar : [];
   // Şıkların çoğu tarih ya da "… ibaresi … olarak değiştirilmiştir" ise: tarihçe sorusu.
   if (siklar.filter((s) => TARIH.test(String(s))).length >= 3) return true;
