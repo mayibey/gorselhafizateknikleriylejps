@@ -81,7 +81,7 @@ function TatbikatIcerik() {
   return (
     <Screen title="Denemeler" koyu={geceTema} kompaktBaslik={geceTema}>
       {/* TAKIM SEÇİMİ: Müşterek Konular · Branş · Karma (Genel). */}
-      <View style={styles.blokSecici}>
+      <View style={[styles.blokSecici, geceTema && styles.blokSeciciGece]}>
         {(karmaAcik
           ? (['müşterek', 'brans', 'karma'] as const)
           : (['müşterek', 'brans'] as const)
@@ -251,6 +251,15 @@ const styles = StyleSheet.create({
     borderRadius: Radius.l,
     padding: Spacing.half,
     gap: Spacing.half,
+  },
+  // Gece temasında krem çerçeve sırıtıyordu (başkan, 23 Ağu) → zemin ve kenar kalkar,
+  // haplar kendi saydam petrol zeminleriyle durur.
+  blokSeciciGece: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    padding: 0,
+    gap: Spacing.one,
   },
   blokSeg: {
     flex: 1,
