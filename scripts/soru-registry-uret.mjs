@@ -14,6 +14,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync, mkdirSync } from 
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
+import { denetle } from './soru-standart.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
@@ -92,6 +93,8 @@ const KAYNAKLAR = [
   { kok: KAYNAK_DIGER, map: DIGER_KLASOR_LAW, ad: 'DİĞER' },
 ];
 
+const standartDisi = new Map();
+let duzeltilen = 0;
 for (const { kok, map, ad } of KAYNAKLAR) {
   const tumKlasorler = existsSync(kok) ? readdirSync(kok) : [];
   for (const [klasor, lawId] of Object.entries(map)) {
@@ -125,7 +128,7 @@ for (const { kok, map, ad } of KAYNAKLAR) {
         atlanan++;
         continue;
       }
-      sorular.push({
+      const kayit = {
         id: String(s.soru_id ?? ''),
         soru: String(s.soru).trim(),
         siklar: siklar.map(sikTemizle),
@@ -133,7 +136,14 @@ for (const { kok, map, ad } of KAYNAKLAR) {
         aciklama: String(s.aciklama ?? '').trim(),
         kaynak: String(s.kaynak_madde ?? '').trim(),
         zorluk: String(s.zorluk ?? '').trim(),
-      });
+      };
+      // ÇIKMIŞ SINAV STANDARDI (23 Ağu 2026) — bkz. scripts/soru-standart.mjs.
+      // Gerçek sınav "m.4/b'ye göre" demez, mevzuatın TAM ADINI yazar; doğru/yanlış sorusu
+      // sormaz. Künye burada kanonikleştirilir, standarda giremeyen soru bankaya ALINMAZ.
+      const std = denetle(kayit, lawId);
+      if (std.at) { standartDisi.set(std.at, (standartDisi.get(std.at) ?? 0) + 1); atlanan++; continue; }
+      if (std.degisti) { kayit.soru = std.soru; duzeltilen++; }
+      sorular.push(kayit);
     }
     if (sorular.length === 0) {
       rapor.push(`[${ad}] ${klasor.padEnd(28)} → law ${lawId}: 0 geçerli soru`);
@@ -205,3 +215,7 @@ console.log('--- Kanun bazında entegre edilen soru sayısı ---');
 for (const r of rapor) console.log(r);
 console.log(`\nTOPLAM: ${siraliLaw.length} kanun · ${toplamSoru} soru → ${outFile}`);
 if (atlanan) console.log(`ATLANAN (geçersiz) soru: ${atlanan}`);
+console.log(`STANDART: ${duzeltilen} sorunun künyesi kanonikleştirildi`);
+for (const [sebep, n] of [...standartDisi].sort((x, y) => y[1] - x[1])) {
+  console.log(`  kenara: ${String(n).padStart(4)}  ${sebep}`);
+}

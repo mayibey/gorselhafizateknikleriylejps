@@ -10,6 +10,7 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
+import { denetle } from './soru-standart.mjs';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = join(scriptDir, '..');
@@ -52,6 +53,8 @@ const ham = Array.isArray(veri)
 
 const sorular = [];
 let atlanan = 0;
+const standartDisi = new Map();
+let standartDuzeltilen = 0;
 const seen = new Set();
 for (const s of ham) {
   const siklar = Array.isArray(s.siklar) ? s.siklar : [];
@@ -69,7 +72,7 @@ for (const s of ham) {
   }
   if (id) seen.add(id);
   const kanun = ONEK_LAW[id.slice(0, 2)] ?? 0;
-  sorular.push({
+  const kayit = {
     id,
     kanun,
     soru: String(s.soru).trim(),
@@ -79,7 +82,14 @@ for (const s of ham) {
     kaynak: String(s.kaynak_madde ?? '').trim(),
     celdirici: String(s.celdirici_mantigi ?? '').trim(),
     zorluk: String(s.zorluk ?? '').trim(),
-  });
+  };
+  // ÇIKMIŞ SINAV STANDARDI (bkz. scripts/soru-standart.mjs): künye kanonikleştirilir,
+  // standarda girmeyen soru (doğru/yanlış, madde atfı sökülemeyen) bankaya ALINMAZ.
+  // Branş yarısı zaten kart-sorulari.ts'ten geliyor; orası üretimde süzülmüş durumda.
+  const std = denetle(kayit, kanun);
+  if (std.at) { standartDisi.set(std.at, (standartDisi.get(std.at) ?? 0) + 1); atlanan++; continue; }
+  if (std.degisti) { kayit.soru = std.soru; standartDuzeltilen++; }
+  sorular.push(kayit);
 }
 
 // ── BRANŞ SORULARI ──────────────────────────────────────────────────────────
@@ -121,6 +131,8 @@ for (const [lawIdStr, arr] of Object.entries(KART)) {
     bransEklenen++;
   }
 }
+console.log(`STANDART: ${standartDuzeltilen} müşterek düello sorusunun künyesi düzeltildi`);
+for (const [sebep, n] of [...standartDisi].sort((x, y) => y[1] - x[1])) console.log(`  kenara: ${String(n).padStart(4)}  ${sebep}`);
 console.log(`Branş soruları eklendi (Tatbikat law_id>=26): ${bransEklenen}`);
 
 // ── KANUN META (id -> {ad, blok, branslar}) — seed.ts + seed-brans-diger.ts'ten (oda seçici gruplaması). ──

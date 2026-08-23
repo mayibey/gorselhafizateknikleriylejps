@@ -117,8 +117,34 @@ console.log('HAVUZ (kullanılmış/kara liste/tekrar çıkarılmış)');
 console.log('  müşterek:', musterekKanunlar.length, 'kanun ·', sayim(musterekKanunlar), 'soru');
 console.log('  branş   :', bransKanunlar.length, 'kanun ·', sayim(bransKanunlar), 'soru');
 
-/** Kanunlar arasında SIRAYLA çekerek n soru al (tek kanuna yığılmasın). */
-function dagit(kanunlar, adet, imlec) {
+/**
+ * SORU TİPİ — denemeyi çıkmış sınavdaki tip dağılımına oturtmak için.
+ * Ölçüm (23 Ağu 2026, 9 kitapçık / 1.760 mevzuat sorusu): olumsuz %38 · yetkili makam-süre %15 ·
+ * düz bilgi %14 · ceza/yaptırım %12 · boşluk doldurma %6 · olumlu %4 · öncüllü %3 · tanım %2.
+ * Bizim havuzda "hangisi yanlıştır" tipi yalnız %7,6 — denemeye alırken KOTA ile dengelenir.
+ */
+function soruTipi(q) {
+  const k = String(q.soru);
+  const son = k.split(/(?<=\?)\s+/).slice(-2).join(' ').toLocaleLowerCase('tr');
+  const tam = k.toLocaleLowerCase('tr');
+  if (/boş bırakılan|boşluğa|……|\.\.\.\.|getirilmelidir/.test(tam)) return 'bosluk';
+  if (/\bII\.\s/.test(k) && /yukarıdakiler|hangileri|verilenler/.test(tam)) return 'onculu';
+  if (/yanlıştır|değildir|olamaz|yer almaz|söylenemez|gerekmez|biri değil/.test(son)) return 'olumsuz';
+  if (/tanımlamaktadır|hangi kavram|ifade eder/.test(son)) return 'tanim';
+  if (/ceza|cezalandırılır|disiplin cezası|yaptırım/.test(son)) return 'ceza';
+  if (/kim|makam|merci|yetkili|tarafından|onayıyla|verilir|kaç gün|kaç ay|süre/.test(son)) return 'makam';
+  if (/doğrudur|doğru olarak|tam ve doğru/.test(son)) return 'olumlu';
+  return 'duz';
+}
+
+// Yarım denemedeki (50 soru) tip kotaları — gerçek sınav oranlarının yarısı.
+const KOTA = [
+  ['olumsuz', 19], ['makam', 8], ['duz', 7], ['ceza', 6],
+  ['bosluk', 3], ['olumlu', 2], ['onculu', 2], ['tanim', 1],
+];
+
+/** Kanunlar arasında SIRAYLA çekerek n soru al (tek kanuna yığılmasın). tip verilirse o tipten. */
+function dagit(kanunlar, adet, imlec, tip) {
   const secilen = [];
   let bos = 0;
   while (secilen.length < adet && bos < kanunlar.length) {
@@ -126,25 +152,43 @@ function dagit(kanunlar, adet, imlec) {
     for (const k of kanunlar) {
       if (secilen.length >= adet) break;
       const liste = havuz.get(k);
-      const i = imlec.get(k) ?? 0;
+      let i = imlec.get(k) ?? 0;
+      while (i < liste.length && (liste[i].alindi || (tip && soruTipi(liste[i]) !== tip))) i++;
       if (i >= liste.length) { bos++; continue; }
+      liste[i].alindi = true;
       secilen.push(liste[i]);
-      imlec.set(k, i + 1);
+      // İmleç yalnız tip süzgeci YOKKEN ilerler; tipli çekimde liste baştan taranır.
+      if (!tip) imlec.set(k, i + 1);
     }
   }
   return secilen;
+}
+
+/** Bir yarı deneme (50 soru): önce tip kotaları, kalan boşluk serbest doldurulur. */
+function yariDeneme(kanunlar, adet, imlec) {
+  const secilen = [];
+  for (const [tip, kota] of KOTA) {
+    secilen.push(...dagit(karistir(kanunlar), Math.round((kota * adet) / 50), imlec, tip));
+  }
+  if (secilen.length < adet) secilen.push(...dagit(karistir(kanunlar), adet - secilen.length, imlec));
+  return secilen.slice(0, adet);
 }
 
 const imlecM = new Map(), imlecB = new Map();
 const denemeler = [];
 for (let no = 1; no <= DENEME_SAYISI; no++) {
   const yari = SORU_SAYISI / 2;
-  const m = dagit(karistir(musterekKanunlar), yari, imlecM);
-  const b = dagit(karistir(bransKanunlar), SORU_SAYISI - m.length, imlecB);
-  const sorular = karistir([...m, ...b]);
+  const m = yariDeneme(musterekKanunlar, yari, imlecM);
+  const b = yariDeneme(bransKanunlar, SORU_SAYISI - m.length, imlecB);
+  const sorular = karistir([...m, ...b]).map(({ alindi, ...q }) => q);
   denemeler.push({ no, baslik: `Karma Deneme ${no}`, sorular });
   console.log(`  Karma Deneme ${no}: ${sorular.length} soru (${m.length} müşterek + ${b.length} branş)`);
 }
+
+const tipSay = {};
+for (const d of denemeler) for (const q of d.sorular) tipSay[soruTipi(q)] = (tipSay[soruTipi(q)] ?? 0) + 1;
+console.log('\nTİP DAĞILIMI (hedef %: olumsuz 38 · makam 15 · duz 14 · ceza 12 · bosluk 6 · olumlu 4 · onculu 3 · tanim 2)');
+for (const [t, n] of Object.entries(tipSay).sort((x, y) => y[1] - x[1])) console.log('  ' + t.padEnd(9) + String(n).padStart(4) + '  %' + (100 * n / 500).toFixed(1));
 
 // --- doğrulama ---
 const tumId = new Set();
