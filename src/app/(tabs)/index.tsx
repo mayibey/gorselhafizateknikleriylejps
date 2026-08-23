@@ -1583,7 +1583,7 @@ const styles = StyleSheet.create({
     gap: Spacing.two, // 23 Ağu: her şey tek ekrana sığsın diye blok arası daraltıldı
     // Başkan: "kalan süre yazısından aşağısı biraz daha yukarı kalksın." Screen'in ortak
     // gövde üst boşluğu (16) burada geri alınır — paylaşılan bileşene dokunmadan.
-    marginTop: -Spacing.three,ca kısıldı (11 Ağu)
+    marginTop: -Spacing.three,
   },
   // ═══ 11 Ağu "%100 aynısı" ekran görüntüsü stilleri ═══
   takvimSahne: {
