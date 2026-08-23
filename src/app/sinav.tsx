@@ -31,6 +31,7 @@ import {
   sinavIlerlemeOku,
   sinavIlerlemeSil,
 } from '@/lib/sinav-ilerleme';
+import { soruBicimle } from '@/lib/soru-bicim';
 import { bugunISO } from '@/lib/srs';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
@@ -380,7 +381,7 @@ export default function SinavScreen() {
 
             <View style={styles.soruKart}>
               <AppText variant="altBaslik" bold>
-                {soru!.soru}
+                {soruBicimle(soru!.soru)}
               </AppText>
             </View>
 
@@ -538,7 +539,7 @@ function HataKart({
   return (
     <View style={styles.hataKart}>
       <AppText variant="kucuk" bold color="anaMetin">
-        {soru.soru}
+        {soruBicimle(soru.soru)}
       </AppText>
       <View style={styles.hataSatir}>
         <MaterialCommunityIcons name="close-circle" size={16} color={Palette.kirmizi} />

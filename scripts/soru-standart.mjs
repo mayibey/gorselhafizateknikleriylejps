@@ -127,6 +127,25 @@ const AD_DESEN = [
 ];
 const DOGRU_MU = /doğru mudur|yanlış mıdır|doğru mu\?|yanlış mı\?/i;
 
+// MEVZUAT TARİHÇESİ SORUSU — başkan yakaladı (23 Ağu): "…Geçici 2 nci fıkrasına göre
+// öngörülen tarih, 6/2/2017 tarihli ve 2017/9854 sayılı BKK ile hangi şekilde
+// değiştirilmiştir?" Ölçüm: 1.760 çıkmış sınav sorusunun SIFIRI bu tipte. Gerçek sınav
+// mevzuatın DEĞİŞİKLİK GEÇMİŞİNİ, yürürlük tarihini, hangi kararla değiştiğini SORMAZ;
+// hükmün KENDİSİNİ sorar. Bu tip soru bankaya alınmaz.
+const TARIHCE_SORU = /hangi şekilde değiştiril|nasıl değiştiril|ne zaman yürürlü|yürürlük tarihi|hangi tarihte yürürlü|hangi tarihli ve|hangi tarih ve sayı|hangi bakanlar kurulu karar|hangi cumhurbaşkanı karar|kaç sayılı (bakanlar|cumhurbaşkanı)|resm[îi] gazete['’]?de yayımlan\w*\s*(tarih|sayı)/i;
+const TARIH = /\b\d{1,2}\s*\/\s*\d{1,2}\s*\/\s*\d{4}\b/;
+
+function tarihceMi(q) {
+  const k = String(q.soru);
+  const son = k.split(/(?<=\?)\s+/).slice(-2).join(' ');
+  if (TARIHCE_SORU.test(son)) return true;
+  const siklar = Array.isArray(q.siklar) ? q.siklar : [];
+  // Şıkların çoğu tarih ya da "… ibaresi … olarak değiştirilmiştir" ise: tarihçe sorusu.
+  if (siklar.filter((s) => TARIH.test(String(s))).length >= 3) return true;
+  if (siklar.filter((s) => /ibaresi.{0,40}değiştiril/i.test(String(s))).length >= 2) return true;
+  return false;
+}
+
 // Künyeye girecek ad, mevzuat adı gibi BİTMELİ. "Uygulama Yönetmeliği" gibi genel bir ad
 // neyin yönetmeliği olduğunu söylemiyor — o da geçersiz. Geçersizse soru kenara kalkar.
 const AD_SONU = /(Kanunu|Kanun|Yönetmeliği|Yönetmelik|Yönergesi|Yönerge|Tebliği|Tebliğ|Anayasası|Anayasa|Genelgesi|Kararname|Kararnamesi|Esasları|Rehberi|Kuralları)$/;
@@ -303,6 +322,7 @@ export function denetle(q, lawId) {
   if (!Array.isArray(q.siklar) || q.siklar.length < 4) return { at: '4 şıktan az (doğru/yanlış)' };
   if (typeof q.dogru !== 'number' || q.dogru < 0 || q.dogru >= q.siklar.length) return { at: 'cevap indeksi bozuk' };
   if (DOGRU_MU.test(q.soru)) return { at: '"doğru mudur" kalıbı' };
+  if (tarihceMi(q)) return { at: 'mevzuat tarihçesi/yürürlük sorusu' };
   const r = standartlastir(q.soru, q.kaynak, lawId);
   if (r.at) return r;
   const ad = mevzuatBul(r.soru, q.kaynak, lawId);
