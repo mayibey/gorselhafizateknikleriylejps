@@ -17,7 +17,7 @@ import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
-import { genelDenemeler, PUAN_KATSAYI, sinavSoruSayisi, sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
+import { genelDenemeler, puanKatsayisi, sinavSoruSayisi, sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
 import { useUyelik } from '@/lib/uyelik-context';
 
 /** Bir kanunun deneme sınavı durumu (kilit + ilerleme). */
@@ -208,7 +208,7 @@ function TatbikatIcerik() {
         <>
           <AppText variant="kucuk" color="solukMetin">
             {blok === 'karma'
-              ? 'Karma denemeler müşterek + branş konularından 100 sorudur (50 + 50) — gerçek sınav uzunluğu. Yanlışların zayıf mevzilerine düşer.'
+              ? 'Karma denemeler müşterek + branş konularından 100 sorudur (50 + 50) — gerçek sınav uzunluğu. Her soru 1 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
               : blok === 'brans'
                 ? 'Branş genel denemeleri 5 sınav × 50 karma sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
                 : 'Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'}
@@ -217,6 +217,7 @@ function TatbikatIcerik() {
             <GenelDenemeSatir
               key={d.no}
               deneme={d}
+              katsayi={puanKatsayisi(blok === 'müşterek' ? undefined : blok)}
               // Sanal law_id: karma -(200+no), branş -(100+no), müşterek -no (sinav.tsx ile birebir).
               sonuc={sonucMap
                 .get(blok === 'karma' ? -(200 + d.no) : blok === 'brans' ? -(100 + d.no) : -d.no)
@@ -268,11 +269,13 @@ function TatbikatIcerik() {
 /** Genel deneme (Tatbikat) satırı: başlık + soru sayısı + son puan + kilit. */
 function GenelDenemeSatir({
   deneme,
+  katsayi,
   sonuc,
   kilitli,
   onGit,
 }: {
   deneme: { no: number; baslik: string; soruSayisi: number };
+  katsayi: number;
   sonuc: SinavSonuc | undefined;
   kilitli: boolean;
   onGit: () => void;
@@ -291,8 +294,8 @@ function GenelDenemeSatir({
           {deneme.baslik}
         </AppText>
         <AppText variant="etiket" color="solukMetin">
-          {deneme.soruSayisi} soru · {deneme.soruSayisi * PUAN_KATSAYI} puan
-          {sonuc ? ` · Son: ${sonuc.dogru * PUAN_KATSAYI}/${sonuc.toplam * PUAN_KATSAYI} puan` : ''}
+          {deneme.soruSayisi} soru · {deneme.soruSayisi * katsayi} puan
+          {sonuc ? ` · Son: ${sonuc.dogru * katsayi}/${sonuc.toplam * katsayi} puan` : ''}
         </AppText>
       </View>
       <MaterialCommunityIcons

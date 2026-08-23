@@ -253,9 +253,18 @@ export function teyitSorulari(
 /** Her doğru cevabın puanı (deneme puanı — 50 soruluk genel deneme = 100 puan). */
 export const PUAN_KATSAYI = 2;
 
+/**
+ * Bir genel denemede soru başına puan. Karma denemeler 100 soruluk (gerçek sınav uzunluğu),
+ * orada soru başına 1 puan → toplam 100 (başkan, 23 Ağu). 50 soruluk denemelerde 2 puan.
+ */
+export function puanKatsayisi(blok?: GenelBlok): number {
+  return blok === 'karma' ? 1 : PUAN_KATSAYI;
+}
+
 export function puanlaSinav(
   cevaplar: SinavCevap[],
   sorular: KartSoru[],
+  katsayi: number = PUAN_KATSAYI,
 ): { dogru: number; toplam: number; yuzde: number; puan: number; toplamPuan: number } {
   const toplam = sorular.length;
   let dogru = 0;
@@ -264,5 +273,5 @@ export function puanlaSinav(
     if (soru && c.secilenIndex === soru.dogru) dogru++;
   }
   const yuzde = toplam > 0 ? Math.round((dogru / toplam) * 100) : 0;
-  return { dogru, toplam, yuzde, puan: dogru * PUAN_KATSAYI, toplamPuan: toplam * PUAN_KATSAYI };
+  return { dogru, toplam, yuzde, puan: dogru * katsayi, toplamPuan: toplam * katsayi };
 }

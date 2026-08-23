@@ -22,6 +22,7 @@ import {
   puanlaSinav,
   type SinavCevap,
   genelDenemeSayisi,
+  puanKatsayisi,
   testSayisi,
   testSoruSayisi,
 } from '@/lib/sinav';
@@ -62,6 +63,7 @@ export default function SinavScreen() {
   const genelBrans = genelBlok === 'brans';
   // Karma denemenin sanal law_id'si -(200+no) (-201..-205) → müşterek/branş sonuçlarına karışmaz.
   const genelKarma = genelBlok === 'karma';
+  const katsayi = puanKatsayisi(genelBlok); // karma 100 soru -> soru basi 1 puan
   const genelNo = genel != null && genel !== '' ? Number(genel) : null;
   const genelModu = genelNo != null && !Number.isNaN(genelNo);
   const lawIdNum = genelModu
@@ -345,6 +347,7 @@ export default function SinavScreen() {
           lawId={lawIdNum}
           genelModu={genelModu}
           belgeHak={belgeHak}
+          katsayi={katsayi}
           onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
@@ -563,6 +566,7 @@ function Sonuc({
   lawId,
   genelModu,
   belgeHak,
+  katsayi,
   onZayif,
   onTekrar,
   onBitir,
@@ -576,6 +580,7 @@ function Sonuc({
   lawId: number | null;
   genelModu: boolean;
   belgeHak: boolean;
+  katsayi: number;
   onZayif: () => void;
   onTekrar: () => void;
   onBitir: () => void;
@@ -584,7 +589,7 @@ function Sonuc({
   onSonraki: () => void;
 }) {
   const [ozetAcik, setOzetAcik] = useState(false);
-  const { dogru, toplam, yuzde, puan, toplamPuan } = puanlaSinav(cevaplar, sorular);
+  const { dogru, toplam, yuzde, puan, toplamPuan } = puanlaSinav(cevaplar, sorular, katsayi);
   // Takdir Belgesi yalnız KANUN denemesinde + kanunun tümü %100 ise.
   const tamBelge = !genelModu && lawId != null && (testSayisi(lawId) === 1 || belgeHak);
   const yanlislar = sorular
