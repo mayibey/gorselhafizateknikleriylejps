@@ -52,6 +52,10 @@ function TatbikatIcerik() {
   // denemeler açılır (başkan, 23 Ağu: "oradan o 3 denemenin göründüğü sayfayı açtır").
   const { mod: modParam } = useLocalSearchParams<{ mod?: string }>();
   const [mod, setMod] = useState<'talim' | 'tatbikat'>(modParam === 'tatbikat' ? 'tatbikat' : 'talim');
+  // Karargâh'taki "Genel deneme çöz" şeridinden gelen kullanıcı zaten DENEME için giriyor →
+  // Talim/Tatbikat seçicisi gereksiz (başkan, 23 Ağu: "talimi de tatbikatı da kaldır").
+  // Parametresiz girişler (Sicil, Kaldığın Yer) eski düzeni görmeye devam eder.
+  const denemeModu = modParam === 'tatbikat';
   // Üst seçim: Müşterek (mevcut) / Branş (içerik güncellemelerle eklenecek → "hazırlanıyor").
   // 23 Ağu (başkan: "hem müşterek hem branş konulardan 5 deneme, 100 soru"): üçüncü takım
   // KARMA — yalnız Tatbikat'ta görünür (Talim'de kanun listesi müşterek/branş ikilisiyle çalışır).
@@ -135,7 +139,7 @@ function TatbikatIcerik() {
   const genelKilitli = !genelDenemeErisilebilir();
 
   return (
-    <Screen title="Talim">
+    <Screen title={denemeModu ? 'Denemeler' : 'Talim'}>
       {/* ÜST SEÇİM: Müşterek (mevcut) / Branş (içerik hazırlanıyor, güncellemelerle eklenir). */}
       <View style={styles.blokSecici}>
         {(mod === 'tatbikat' && karmaAcik
@@ -169,6 +173,7 @@ function TatbikatIcerik() {
         <>
       {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). Müşterek + Branş İKİSİNDE
           de gösterilir (aynı düzen). Branş genel denemesi henüz yok → Tatbikat'ta "yakında". */}
+      {denemeModu ? null : (
       <View style={styles.blokSecici}>
         {(['talim', 'tatbikat'] as const).map((m) => {
           const aktif = mod === m;
@@ -194,6 +199,7 @@ function TatbikatIcerik() {
           );
         })}
       </View>
+      )}
 
       {mod === 'tatbikat' ? (
         // Branş genel denemeleri YALNIZ Jandarma'ya özgü (5×50). Diğer branşlarda genel deneme
@@ -208,15 +214,15 @@ function TatbikatIcerik() {
         <>
           <AppText variant="kucuk" color="solukMetin">
             {blok === 'karma'
-              ? 'Karma denemeler müşterek + branş konularından 100 sorudur (50 + 50) — gerçek sınav uzunluğu. Her soru 1 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
+              ? 'Genel denemeler müşterek + branş konularından 100 sorudur (50 + 50) — gerçek sınav uzunluğu. Her soru 1 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
               : blok === 'brans'
-                ? 'Branş genel denemeleri 5 sınav × 50 karma sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
-                : 'Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'}
+                ? 'Branş denemeleri branş kanunlarından karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
+                : 'Müşterek Konular denemeleri 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'}
           </AppText>
           {genelDenemeler(blok === 'müşterek' ? undefined : blok).map((d) => (
             <GenelDenemeSatir
               key={d.no}
-              deneme={d}
+              deneme={{ ...d, baslik: denemeAdi(blok, d.no) }}
               katsayi={puanKatsayisi(blok === 'müşterek' ? undefined : blok)}
               // Sanal law_id: karma -(200+no), branş -(100+no), müşterek -no (sinav.tsx ile birebir).
               sonuc={sonucMap
@@ -264,6 +270,17 @@ function TatbikatIcerik() {
       )}
     </Screen>
   );
+}
+
+/**
+ * Deneme adı (başkan, 23 Ağu): müşterek → "Müşterek Konular Deneme 1",
+ * branş → "Branş Deneme 1", karma → "Genel Deneme 1". Veri dosyalarındaki `baslik`
+ * yerine burada üretilir (üreteçleri yeniden çalıştırmaya gerek kalmasın).
+ */
+function denemeAdi(blok: 'müşterek' | 'brans' | 'karma', no: number): string {
+  if (blok === 'karma') return `Genel Deneme ${no}`;
+  if (blok === 'brans') return `Branş Deneme ${no}`;
+  return `Müşterek Konular Deneme ${no}`;
 }
 
 /** Genel deneme (Tatbikat) satırı: başlık + soru sayısı + son puan + kilit. */
