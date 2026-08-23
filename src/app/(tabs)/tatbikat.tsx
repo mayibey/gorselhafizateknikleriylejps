@@ -116,6 +116,19 @@ function TatbikatIcerik() {
         })}
       </View>
 
+      {/* Başkan (23 Ağu): "sonuçlar bölümü olsun orada kalsın, istediği zaman baksın." */}
+      <Pressable
+        onPress={() => router.push('/sonuclar')}
+        style={({ pressed }) => [styles.sonucSerit, geceTema && styles.genelSatirGece, pressed && styles.pressed]}
+        accessibilityRole="button"
+        accessibilityLabel="Sonuçlarım ve puan sıralaması">
+        <MaterialCommunityIcons name="history" size={20} color={geceTema ? Palette.altinParlak : Palette.lacivert} />
+        <AppText variant="kucuk" bold color={geceTema ? 'beyaz' : 'anaMetin'} style={styles.sonucSeritYazi}>
+          Sonuçlarım ve puan sıralaması
+        </AppText>
+        <MaterialCommunityIcons name="chevron-right" size={20} color={geceTema ? Palette.altinParlak : Palette.solukMetin} />
+      </Pressable>
+
       {/* Branş denemeleri YALNIZ Jandarma'ya özgü (5×50). Diğer branşlarda henüz yok.
           Karma denemeler tüm branşlara açık. */}
       {blok === 'brans' && brans !== 'jandarma' ? (
@@ -292,6 +305,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(243,194,74,0.45)',
   },
+  sonucSerit: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.two,
+    paddingHorizontal: Spacing.three,
+  },
+  sonucSeritYazi: { flex: 1 },
   genelSatirGece: {
     backgroundColor: 'rgba(3,40,56,0.55)',
     borderColor: 'rgba(126,205,218,0.3)',

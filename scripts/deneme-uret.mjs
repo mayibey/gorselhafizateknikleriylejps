@@ -156,6 +156,10 @@ function denemeKur(adet, uygunMu) {
   }
   // 3) yuvarlamadan artan boşluk
   if (secilen.length < adet) cek(adet - secilen.length, () => true);
+  // ÜST SINIR: kotalar yuvarlanırken toplam 1-2 soru taşabiliyor (başkan 51 soruluk
+  // deneme gördü). Fazlası kesilir ve havuza GERİ BIRAKILIR ki başka denemede kullanılsın.
+  const fazla = secilen.splice(adet);
+  for (const h of fazla) h.alindi = false;
   return karistir(secilen).map((h) => h.q);
 }
 

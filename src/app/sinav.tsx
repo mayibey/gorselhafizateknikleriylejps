@@ -31,6 +31,8 @@ import {
   sinavIlerlemeOku,
   sinavIlerlemeSil,
 } from '@/lib/sinav-ilerleme';
+import { HataBildirDugmesi } from '@/components/sinav/hata-bildir';
+import { sonucKaydet, type Yanlis } from '@/lib/deneme-servis';
 import { soruBicimle } from '@/lib/soru-bicim';
 import { bugunISO } from '@/lib/srs';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
@@ -73,6 +75,14 @@ export default function SinavScreen() {
       ? Number(lawId)
       : null;
   const testNum = test != null && test !== '' ? Number(test) : 0; // kanunun kaçıncı testi (0 tabanlı)
+  // Hata bildiriminde ve sonuç kaydında "nerede" bilgisi: karma-3 / musterek-1 / talim-12-0
+  const takim: 'musterek' | 'brans' | 'karma' = genelKarma ? 'karma' : genelBrans ? 'brans' : 'musterek';
+  const nereden = genelModu ? `${takim}-${genelNo}` : `talim-${lawId ?? '?'}-${testNum}`;
+  // Sınav süresi (sonuç kaydında tutulur).
+  const baslangicRef = useRef<number>(Date.now());
+  const denemeBasligi = genelModu
+    ? `${takim === 'karma' ? 'Genel Deneme' : takim === 'brans' ? 'Branş Deneme' : 'Müşterek Konular Deneme'} ${genelNo}`
+    : '';
   // PREMIUM KAPISI: genel deneme → premium şart; kanun sınavı → o kanun erişilebilir olmalı. Erişim
   // yoksa (yükleme bitince) soru+cevap GÖSTERİLMEDEN paywall'a. (Sınav soruları gömülü, tek kapı bu.)
   const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
@@ -278,7 +288,35 @@ export default function SinavScreen() {
     if (!bitti || !sorular || lawIdNum == null || kaydedildiRef.current) return;
     kaydedildiRef.current = true;
     void sinavIlerlemeSil(lawIdNum, testNum); // sınav bitti → "devam" kaydı temizlenir
-    const { dogru, toplam } = puanlaSinav(cevaplar, sorular);
+    const { dogru, toplam, puan, toplamPuan } = puanlaSinav(cevaplar, sorular, katsayi);
+    // DENEME SONUCU (başkan, 23 Ağu): "hangi kanun maddesinde yanlış yapmış, kaç puan
+    // almış görebilsin, sonuçlar bölümünde kalsın." Yanlışların TAMAMI künyesiyle
+    // kaydedilir; önce cihaza, sonra sunucuya (bkz. lib/deneme-servis).
+    if (genelModu) {
+      const yanlislar: Yanlis[] = sorular
+        .map((q, i) => ({ q, secilen: secimler[i] ?? -1 }))
+        .filter((x) => x.secilen !== x.q.dogru)
+        .map(({ q, secilen }) => ({
+          id: q.id,
+          kaynak: q.kaynak ?? '',
+          soru: q.soru,
+          siklar: q.siklar,
+          secilen,
+          dogru: q.dogru,
+          aciklama: q.aciklama,
+        }));
+      void sonucKaydet({
+        takim,
+        denemeNo: genelNo ?? 0,
+        baslik: denemeBasligi,
+        dogru,
+        toplam,
+        puan,
+        toplamPuan,
+        sureSn: Math.max(0, Math.round((Date.now() - baslangicRef.current) / 1000)),
+        yanlislar,
+      });
+    }
     void (async () => {
       try {
         await ekleSinavSonucu(lawIdNum, testNum, dogru, toplam, bugunISO());
@@ -328,7 +366,22 @@ export default function SinavScreen() {
             </AppText>
           ) : null}
         </View>
-        <View style={styles.headerSpacer} />
+        {/* Başkan (23 Ağu): her soruda sağ üstte HATA BİLDİR. Kayıt sunucuya gerçekten
+            yazılır (kim, hangi soru, hangi denemede) — bkz. lib/deneme-servis. */}
+        {soru ? (
+          <HataBildirDugmesi
+            soru={{
+              soruId: soru.id,
+              soruMetni: soru.soru,
+              siklar: soru.siklar,
+              dogru: soru.dogru,
+              kaynak: soru.kaynak ?? '',
+              nerede: nereden,
+            }}
+          />
+        ) : (
+          <View style={styles.headerSpacer} />
+        )}
       </View>
 
       {hata ? (
@@ -362,6 +415,7 @@ export default function SinavScreen() {
           onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
+          onSonuclar={genelModu ? () => router.replace('/sonuclar') : undefined}
           sonraki={sonraki}
           onSonraki={() =>
             sonraki && router.replace({ pathname: '/sinav', params: sonraki.params })
@@ -580,6 +634,7 @@ function Sonuc({
   onTekrar,
   onBitir,
   onKartGit,
+  onSonuclar,
   sonraki,
   onSonraki,
 }: {
@@ -594,6 +649,7 @@ function Sonuc({
   onTekrar: () => void;
   onBitir: () => void;
   onKartGit: (soru: KartSoru) => void;
+  onSonuclar?: () => void;
   sonraki: { etiket: string } | null;
   onSonraki: () => void;
 }) {
@@ -703,6 +759,13 @@ function Sonuc({
 
       {/* Başkan (23 Ağu): sınav bitince sıradakine geçiş yoktu; ana eylem olarak eklendi. */}
       {sonraki ? <SonrakiBtn etiket={sonraki.etiket} onPress={onSonraki} /> : null}
+      {onSonuclar ? (
+        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onSonuclar}>
+          <AppText variant="govde" bold color="lacivert">
+            Sonuçlarım ve sıralama
+          </AppText>
+        </Pressable>
+      ) : null}
 
       <View style={styles.sonucButonlar}>
         <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onTekrar}>
