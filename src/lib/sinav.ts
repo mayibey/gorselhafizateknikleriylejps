@@ -91,14 +91,13 @@ export function genelDenemeler(blok?: GenelBlok): { no: number; baslik: string; 
 }
 
 /** Bir genel denemenin sorularını (karışık) döndürür. GenelSoru KartSoru-uyumlu (+ kartId). */
-export function getGenelDenemeSorulari(
-  no: number,
-  blok?: GenelBlok,
-  rastgele: () => number = Math.random,
-): KartSoru[] {
+export function getGenelDenemeSorulari(no: number, blok?: GenelBlok): KartSoru[] {
   const d = genelKaynak(blok).find((x) => x.no === no);
   if (!d || d.sorular.length === 0) return [];
-  return karistir(d.sorular, rastgele);
+  // SIRA SABİT (başkan, 23 Ağu: "denemelerin hepsinde sorular random olmamalı, her soru
+  // ve sırası sabit olmalı"). Deneme gerçek sınav gibi hep aynı kitapçık: "Soru 14"
+  // herkeste aynı soru, yanlış listesindeki numara sonradan da anlamını korur.
+  return [...d.sorular];
 }
 
 /** Genel denemede kaç soru var (yoksa 0). blok='brans' → branş denemeleri. */
@@ -178,7 +177,55 @@ export function kaynakMaddeNolari(kaynak: string): number[] {
 }
 
 /** Zayıf havuz eşleştirmesi için karttan gereken minimum alanlar. */
-export type EslesmeKart = { id: number; madde_no: string; gorsel_yolu: string | null };
+export type EslesmeKart = { id: number; madde_no: string; gorsel_yolu: string | null }
+
+/**
+ * SORUNUN KANUNU — "İlgili kartı çalış" doğru karta gitsin diye (başkan, 23 Ağu).
+ *
+ * Eski hâli YANLIŞTI: eşleştirme yalnız MADDE NUMARASINA bakıyordu. Genel denemede
+ * havuzda TÜM kanunların kartları olduğu için "6284 m.5" sorusu, madde 5 olan ilk
+ * karta (TCK m.5 olabilir) gidiyordu. Önce kanun bulunur, sonra o kanunun kartları
+ * içinde madde eşleştirilir.
+ *
+ * Kanun iki yoldan çıkarılır: (1) kaynak künyesindeki kanun numarası ("6284 m.5"),
+ * (2) soru metninin başındaki tam ad ("6284 sayılı Ailenin Korunması… Kanun'a göre").
+ */
+export function soruKanunId(
+  soruMetni: string,
+  kaynak: string,
+  kartlar: readonly { law_id: number; law_ad: string }[],
+): number | null {
+  if (kartlar.length === 0) return null;
+  const kanunlar = new Map<number, string>();
+  for (const k of kartlar) if (!kanunlar.has(k.law_id)) kanunlar.set(k.law_id, k.law_ad ?? '');
+
+  // 1) Kanun numarası (kaynak künyesi ya da soru metninin başı)
+  const no =
+    kaynak.match(/(\d{3,4})/)?.[1] ?? soruMetni.slice(0, 140).match(/(\d{3,4})\s*sayılı/)?.[1] ?? null;
+  if (no) {
+    for (const [id, ad] of kanunlar) if (ad.includes(no)) return id;
+  }
+
+  // 2) Ad benzerliği — soru metninin ilk cümlesindeki kelimeler kanun adıyla örtüşsün.
+  const sade = (x: string) =>
+    x.toLocaleLowerCase('tr').replace(/[^\p{L}\p{N}]+/gu, ' ').split(' ').filter((w) => w.length > 4);
+  const bas = new Set(sade(soruMetni.slice(0, 160)));
+  if (bas.size === 0) return null;
+  let enIyi: number | null = null;
+  let enSkor = 0;
+  for (const [id, ad] of kanunlar) {
+    const kel = sade(ad);
+    if (kel.length === 0) continue;
+    let ortak = 0;
+    for (const w of kel) if (bas.has(w)) ortak++;
+    const skor = ortak / kel.length;
+    if (skor > enSkor) {
+      enSkor = skor;
+      enIyi = id;
+    }
+  }
+  return enSkor >= 0.5 ? enIyi : null;
+};
 
 /**
  * Verilen soru kaynağıyla eşleşen kart id'lerini bulur (saf).

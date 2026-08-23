@@ -16,6 +16,7 @@ import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
 import { useUyelik } from '@/lib/uyelik-context';
 import {
   eslesenKartIdleri,
+  soruKanunId,
   getGenelDenemeSorulari,
   getTestSorulari,
   type KartSoru,
@@ -38,6 +39,7 @@ import { bugunISO } from '@/lib/srs';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
 import { useMesgul } from '@/lib/mesgul';
+import { useKisiselOzellik } from '@/lib/ozellik';
 
 /** Doğru/yanlış geri bildirim renkleri (tema: yeşil onay, kırmızı uyarı). */
 const DOGRU_YESIL = Palette.yesil;
@@ -66,6 +68,9 @@ export default function SinavScreen() {
   const genelBrans = genelBlok === 'brans';
   // Karma denemenin sanal law_id'si -(200+no) (-201..-205) → müşterek/branş sonuçlarına karışmaz.
   const genelKarma = genelBlok === 'karma';
+  // Uygulamanın gece teması sınav ekranında da geçerli (başkan, 23 Ağu:
+  // "bu bölümün arka plan tasarımı uygulamaya uyumlu değil").
+  const gece = useKisiselOzellik('talim-mevzuata');
   const katsayi = puanKatsayisi(genelBlok); // karma 100 soru -> soru basi 1 puan
   const genelNo = genel != null && genel !== '' ? Number(genel) : null;
   const genelModu = genelNo != null && !Number.isNaN(genelNo);
@@ -234,8 +239,13 @@ export default function SinavScreen() {
   function kartaGit(soru: KartSoru) {
     const kartlar = kartlarRef.current;
     if (!kartlar) return;
-    const ids = eslesenKartIdleri(soru.kaynak, kartlar);
-    const kart = ids.length > 0 ? kartlar.find((k) => k.id === ids[0]) : undefined;
+    // ÖNCE KANUN (başkan, 23 Ağu: "ilgili kartı çalış doğru karta götürmüyor").
+    // Genel denemede havuzda TÜM kanunların kartları var; yalnız madde numarasına
+    // bakınca "6284 m.5" sorusu TCK m.5 kartına gidiyordu.
+    const kanunId = soruKanunId(soru.soru, soru.kaynak ?? '', kartlar);
+    const havuz = kanunId != null ? kartlar.filter((k) => k.law_id === kanunId) : kartlar;
+    const ids = eslesenKartIdleri(soru.kaynak, havuz.length > 0 ? havuz : kartlar);
+    const kart = ids.length > 0 ? (havuz.find((k) => k.id === ids[0]) ?? kartlar.find((k) => k.id === ids[0])) : undefined;
     if (!kart) return;
     router.push({ pathname: '/akis', params: { lawId: String(kart.law_id), kart: String(kart.id) } });
   }
@@ -350,7 +360,7 @@ export default function SinavScreen() {
   if (kilitli) return null;
 
   return (
-    <SafeAreaView style={styles.safe} edges={['top', 'left', 'right', 'bottom']}>
+    <SafeAreaView style={[styles.safe, gece && styles.safeGece]} edges={['top', 'left', 'right', 'bottom']}>
       {/* Üst krom: kapat + ilerleme */}
       <View style={styles.header}>
         <Pressable onPress={() => router.back()} hitSlop={12} accessibilityLabel="Kapat">
@@ -412,6 +422,7 @@ export default function SinavScreen() {
           genelModu={genelModu}
           belgeHak={belgeHak}
           katsayi={katsayi}
+          gece={gece}
           onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
@@ -433,8 +444,8 @@ export default function SinavScreen() {
                 kullanıcıya bir şey ifade etmiyor, üstelik cevabı ele veriyor. Kaynak, sınav
                 bitince yanlış özetinde (HataKart) duruyor; asıl işe yaradığı yer orası. */}
 
-            <View style={styles.soruKart}>
-              <AppText variant="altBaslik" bold>
+            <View style={[styles.soruKart, gece && styles.yuzeyGece]}>
+              <AppText variant="altBaslik" bold color={gece ? 'beyaz' : 'anaMetin'}>
                 {soruBicimle(soru!.soru)}
               </AppText>
             </View>
@@ -448,6 +459,7 @@ export default function SinavScreen() {
                   durum={secenekDurum(i, secilen, soru!.dogru)}
                   onPress={() => sec(i)}
                   disabled={secilen !== null}
+                  gece={gece}
                 />
               ))}
             </View>
@@ -465,7 +477,7 @@ export default function SinavScreen() {
                   color={secilen === soru!.dogru ? 'yesil' : 'kirmizi'}>
                   {secilen === soru!.dogru ? 'Doğru' : 'Yanlış'}
                 </AppText>
-                <AppText variant="kucuk" color="anaMetin" style={styles.aciklamaMetin}>
+                <AppText variant="kucuk" color={gece ? 'beyaz' : 'anaMetin'} style={styles.aciklamaMetin}>
                   {soru!.aciklama}
                 </AppText>
               </View>
@@ -544,16 +556,24 @@ function Secenek({
   durum,
   onPress,
   disabled,
+  gece,
 }: {
   harf: string;
   metin: string;
   durum: SecenekDurum;
   onPress: () => void;
   disabled: boolean;
+  gece?: boolean;
 }) {
   const arka =
-    durum === 'dogru' ? DOGRU_YESIL : durum === 'yanlis' ? YANLIS_KIRMIZI : Palette.kartKremi;
-  const metinRenk = durum === 'dogru' || durum === 'yanlis' ? 'beyaz' : 'anaMetin';
+    durum === 'dogru'
+      ? DOGRU_YESIL
+      : durum === 'yanlis'
+        ? YANLIS_KIRMIZI
+        : gece
+          ? 'rgba(3,40,56,0.55)'
+          : Palette.kartKremi;
+  const metinRenk = durum === 'dogru' || durum === 'yanlis' ? 'beyaz' : gece ? 'beyaz' : 'anaMetin';
   return (
     <Pressable
       disabled={disabled}
@@ -581,18 +601,27 @@ function Secenek({
 
 /** Sonuç ekranındaki tek yanlış soru kartı: soru + senin cevabın + doğru cevap + açıklama + karta git. */
 function HataKart({
+  no,
   soru,
   secilen,
+  gece,
   onKartGit,
 }: {
+  /** Sınavdaki soru numarası (1 tabanlı) — başkan: "soru numarası yazmıyor". */
+  no: number;
   soru: KartSoru;
   secilen: number;
+  gece?: boolean;
   onKartGit: () => void;
 }) {
   const H = ['A', 'B', 'C', 'D', 'E'];
   return (
-    <View style={styles.hataKart}>
-      <AppText variant="kucuk" bold color="anaMetin">
+    <View style={[styles.hataKart, gece && styles.yuzeyGece]}>
+      <AppText variant="etiket" bold color="altinMetin">
+        SORU {no}
+        {soru.kaynak ? ` · ${soru.kaynak}` : ''}
+      </AppText>
+      <AppText variant="kucuk" bold color={gece ? 'beyaz' : 'anaMetin'}>
         {soruBicimle(soru.soru)}
       </AppText>
       <View style={styles.hataSatir}>
@@ -630,6 +659,7 @@ function Sonuc({
   genelModu,
   belgeHak,
   katsayi,
+  gece,
   onZayif,
   onTekrar,
   onBitir,
@@ -645,6 +675,7 @@ function Sonuc({
   genelModu: boolean;
   belgeHak: boolean;
   katsayi: number;
+  gece?: boolean;
   onZayif: () => void;
   onTekrar: () => void;
   onBitir: () => void;
@@ -657,8 +688,9 @@ function Sonuc({
   const { dogru, toplam, yuzde, puan, toplamPuan } = puanlaSinav(cevaplar, sorular, katsayi);
   // Takdir Belgesi yalnız KANUN denemesinde + kanunun tümü %100 ise.
   const tamBelge = !genelModu && lawId != null && (testSayisi(lawId) === 1 || belgeHak);
+  // Soru numarası da taşınır (başkan: "yanlış yapılan soruların soru numarası yazmıyor").
   const yanlislar = sorular
-    .map((s, i) => ({ soru: s, secilen: cevaplar[i]?.secilenIndex ?? -1 }))
+    .map((s, i) => ({ soru: s, secilen: cevaplar[i]?.secilenIndex ?? -1, no: i + 1 }))
     .filter((x) => x.secilen !== x.soru.dogru);
 
   // %100 — tam isabet.
@@ -686,7 +718,7 @@ function Sonuc({
         )}
         {sonraki ? <SonrakiBtn etiket={sonraki.etiket} onPress={onSonraki} /> : null}
         <View style={styles.sonucButonlar}>
-          <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onTekrar}>
+          <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, gece && styles.yuzeyGece, pressed && styles.pressed]} onPress={onTekrar}>
             <AppText variant="govde" bold color="lacivert">
               Tekrar çöz
             </AppText>
@@ -706,20 +738,20 @@ function Sonuc({
   const basarili = yuzde >= 70;
   return (
     <ScrollView style={styles.kolon} contentContainerStyle={styles.sonucContent}>
-      <View style={styles.skorOzet}>
+      <View style={[styles.skorOzet, gece && styles.yuzeyGece]}>
         <MaterialCommunityIcons
           name={basarili ? 'trophy-outline' : 'school-outline'}
           size={48}
           color={basarili ? Palette.altin : Palette.solukMetin}
         />
-        <AppText variant="altBaslik" bold color="lacivert">
+        <AppText variant="altBaslik" bold color={gece ? 'beyaz' : 'lacivert'}>
           Skorun: {dogru}/{toplam}
         </AppText>
         {/* Her soru 2 puan → toplam puan (başkan: "kaç aldığı yazılsın"). */}
         <AppText variant="govde" bold color="altinMetin">
           {puan} / {toplamPuan} puan
         </AppText>
-        <AppText variant="kucuk" color="solukMetin">
+        <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
           %{yuzde} doğru{basarili ? ' — tebrikler!' : ' — biraz daha çalış.'}
         </AppText>
       </View>
@@ -738,7 +770,7 @@ function Sonuc({
       {yanlislar.length > 0 ? (
         <>
           <Pressable
-            style={({ pressed }) => [styles.ozetBtn, pressed && styles.pressed]}
+            style={({ pressed }) => [styles.ozetBtn, gece && styles.yuzeyGece, pressed && styles.pressed]}
             onPress={() => setOzetAcik((a) => !a)}>
             <MaterialCommunityIcons
               name={ozetAcik ? 'chevron-up' : 'clipboard-list-outline'}
@@ -751,7 +783,7 @@ function Sonuc({
           </Pressable>
           {ozetAcik
             ? yanlislar.map((y, i) => (
-                <HataKart key={i} soru={y.soru} secilen={y.secilen} onKartGit={() => onKartGit(y.soru)} />
+                <HataKart key={i} no={y.no} soru={y.soru} secilen={y.secilen} gece={gece} onKartGit={() => onKartGit(y.soru)} />
               ))
             : null}
         </>
@@ -760,7 +792,7 @@ function Sonuc({
       {/* Başkan (23 Ağu): sınav bitince sıradakine geçiş yoktu; ana eylem olarak eklendi. */}
       {sonraki ? <SonrakiBtn etiket={sonraki.etiket} onPress={onSonraki} /> : null}
       {onSonuclar ? (
-        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onSonuclar}>
+        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, gece && styles.yuzeyGece, pressed && styles.pressed]} onPress={onSonuclar}>
           <AppText variant="govde" bold color="lacivert">
             Sonuçlarım ve sıralama
           </AppText>
@@ -768,12 +800,12 @@ function Sonuc({
       ) : null}
 
       <View style={styles.sonucButonlar}>
-        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onTekrar}>
+        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, gece && styles.yuzeyGece, pressed && styles.pressed]} onPress={onTekrar}>
           <AppText variant="govde" bold color="lacivert">
             Tekrar çöz
           </AppText>
         </Pressable>
-        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onBitir}>
+        <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, gece && styles.yuzeyGece, pressed && styles.pressed]} onPress={onBitir}>
           <AppText variant="govde" bold color="lacivert">
             Bitir
           </AppText>
@@ -809,6 +841,12 @@ const styles = StyleSheet.create({
   safe: {
     flex: 1,
     backgroundColor: Palette.kremZemin,
+  },
+  // GECE TEMASI (Karargâh/Mevzuat/Denemeler ile aynı dil).
+  safeGece: { backgroundColor: '#08182E' },
+  yuzeyGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderColor: 'rgba(126,205,218,0.3)',
   },
   header: {
     flexDirection: 'row',
