@@ -2,7 +2,18 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 23 Ağustos 2026 (📥 İndirme kapısı tek bileşende + çalışma ekranına kondu)
+> Son güncelleme: 23 Ağustos 2026 (🎯 Karma denemeler 5×100 + sıradaki test düğmesi)
+>
+> ### ▶ 23 Ağu — 🎯 KARMA DENEMELER (5×100) + SINAV AKIŞI DÜZELTMELERİ
+> **Başkan:** *"hem müşterek hem branş konularından 5 deneme, 100 soru; sorular birbirinin benzeri olabilir ama AYNISI olmasın."*
+> **YENİ SORU UYDURULMADI.** `scripts/karma-deneme-uret.mjs` (`npm run karma:uret`) doğrulanmış havuzdan seçiyor (kart soruları 6.723 + düello 7.824). Üç katman eleme: mevcut 8 denemede kullanılanlar + kara liste + metni normalize edilip tekilleştirme. Kanunlar arası round-robin, tohumlu karıştırma (her çalıştırmada aynı sonuç). **Ölçüm: 500 tekil soru, çakışma 0, doğru şık dağılımı A119/B125/C96/D89/E71** — "cevap hep A" tuzağı yok.
+> **Nerede:** Talim → Tatbikat → üçüncü segment **Karma** (Talim modunda gizli). Sanal law_id **-(200+no)** → karma skorları müşterek/branş sonuçlarına karışmaz.
+> **⚠️ BAYRAK `karma-deneme`:** başkan *"ben kontrol edip öyle yayınlayalım"* dedi → sunucuda YALNIZ başkanın hesabında açık (`ozellik_kisi`). **Herkese açmak için yeni yayın GEREKMEZ:** `uygulama_ayar.ozellik_herkes` dizisine `"karma-deneme"` eklenir.
+> **Puanlama:** karma denemede soru başına **1 puan → toplam 100** (başkan isteği; 2 puanla 200 çıkıyordu). `puanKatsayisi(blok)` + `puanlaSinav(..., katsayi)`; diğer sınavlar 2 puanla aynen kaldı.
+> **🔁 "Sıradaki test / Sıradaki deneme":** başkan *"deneme bitince sıradaki denemeye geç gelmiyor."* Sonuç ekranında yalnız Tekrar çöz / Bitir vardı; kullanıcı geri çıkıp kanunu tekrar bulmak zorundaydı. Artık kanun sınavında sonraki test, genel denemede sonraki deneme ana eylem. `router.replace` + `yukle` bağımlılıkları → sınav baştan kurulur. Son testte düğme çıkmaz.
+> **📚 Mevzuat üst seçici:** "Müşterek Mevzuat / Jandarma Mevzuatı" → **"Müşterek Konular / Branş Konuları"** (başkan isteği; sekme kanunu değil konu kümesini ayırıyor).
+> **📣 Duyuru + bildirim (HERKESE):** "JSPS başvuruları için son gün". **279 cihaza gitti, 167'si telefona düştü** (112 adres ölü — uygulamayı silmiş/bildirimi kapatmış). **DERS:** ilk yazdığım metni başkan reddetti (*"illa süsleyecen"*) — duyuru **kısa ve düz** olacak, "bir daha bak / emin ol / kaçırma" gibi süsleme YOK.
+> **Yayın:** hepsi production kanalı, **1.0.45 + 1.0.46** runtime'larına ayrı ayrı basıldı.
 >
 > ### ▶ 23 Ağu — 📥 İNDİRME KAPISI: 3 KOPYA → 1 BİLEŞEN, ARTIK ÇALIŞMA EKRANINDA DA
 > **Başkan:** *"adam kanunu indirmeden nasıl çalışıyor, önce sorgulasın."*
@@ -944,30 +955,6 @@
 > - **Kart görselini sağa/sola kaydırarak değiştirme** (kullanıcı "sonra" dedi).
 > - Genel yayında istenirse `armeabi-v7a` ABI'sini de ekle (RAM uygunken).
 > - R8/proguard "kod gösterme dosyası" uyarısı = ZARARSIZ, görmezden gel (kod karartma yok).
-
----
-
-## 23 Ağustos 2026 — Karma denemeler + sınav akışı düzeltmeleri
-
-**Karma genel denemeler (5 × 100 soru)** — başkan: "hem müşterek hem branş konularından 5 deneme, 100 soru, sorular birbirinin benzeri olabilir ama aynısı olmasın."
-- `scripts/karma-deneme-uret.mjs` (`npm run karma:uret`): YENİ SORU UYDURULMAZ. Doğrulanmış havuzdan (kart soruları 6.723 + düello 7.824) seçer; mevcut 8 denemede kullanılanlar, kara listedekiler ve metni aynı olanlar dışarıda. Kanunlar arası round-robin, tohumlu karıştırma.
-- `src/assets/genel-denemeler-karma.ts`: 500 tekil soru, çakışma 0, doğru şık dağılımı dengeli (A119/B125/C96/D89/E71 — "cevap hep A" tuzağı yok).
-- Tatbikat'ta üçüncü segment "Karma" (Talim'de gizli). Sanal law_id -(200+no) → skorlar müşterek/branş sonuçlarına karışmaz.
-- **Bayrak: `karma-deneme`** — başkan "ben kontrol edip öyle yayınlayalım" dedi; sunucuda YALNIZ başkanın hesabında açık. Herkese açmak için yeni yayın GEREKMEZ: `uygulama_ayar.ozellik_herkes` dizisine `"karma-deneme"` eklenir.
-- Puanlama: karma denemede soru başına **1 puan** (toplam 100). `puanKatsayisi(blok)` + `puanlaSinav(..., katsayi)`; diğer sınavlar 2 puanla aynen kalır.
-
-**Sınav sonucu: "Sıradaki test / Sıradaki deneme"** — başkan: "deneme bitince sıradaki denemeye geç gelmiyor." Sonuç ekranında yalnız Tekrar çöz / Bitir vardı. Artık kanun sınavında sonraki test, genel denemede sonraki deneme ana eylem olarak çıkıyor (son testte çıkmaz).
-
-**Mevzuat üst seçici** — "Müşterek Mevzuat / Jandarma Mevzuatı" → **"Müşterek Konular / Branş Konuları"** (başkan isteği).
-
-**Duyuru + bildirim (herkese)** — "JSPS başvuruları için son gün". 279 cihaza gönderildi, 167'si telefona düştü (112 adres ölü: uygulamayı silmiş/bildirimi kapatmış cihazlar). Başkan uzun/süslü metni reddetti → sade tek cümle. **Ders: duyuru metni kısa ve düz olacak, "bir daha bak/emin ol" gibi süsleme yok.**
-
-**Yayın** — hepsi production kanalına, 1.0.45 ve 1.0.46 runtime'larına ayrı ayrı basıldı.
-
-## 1. Nerede kaldık (özet)
-Çalışan bir iskelet var: 4 sekmeli navigasyon, gerçek SRS döngüsü, gerçek TCK görselleri, kanun seçip çalışma, branş sistemi + onboarding + DB migration. **Mevzuat artık 66 gerçek kanun başlığıyla dolu (25 müşterek + 41 jandarma, `51ab4bb`); kartlar TCK hariç boş ("yakında").** Android EAS build config de hazır (`e256f95`, profiller: preview/development/production). Sırada: içerik maratonu (49 TCK görselini gerçek kartlara bağlamak).
-
-Geliştirme web'de yürüyor (`npx expo start --web` → localhost). **iPhone Expo Go artık çalışıyor** — bunun için proje SDK 54'e indirildi (`88983ca`; Apple App Store'daki Expo Go en fazla SDK 54 destekliyor). VirtualView/onModeChange hatası gitti.
 
 ---
 
