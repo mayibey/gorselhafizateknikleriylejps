@@ -45,6 +45,9 @@ function TatbikatIcerik() {
   // 23 Ağu: karma denemeler ÖNCE BAŞKANDA. Onay gelince sunucudan (ozellik_herkes)
   // herkese açılır — yeni yayın gerekmez.
   const karmaAcik = useKisiselOzellik('karma-deneme');
+  // Başkan (23 Ağu): "bu alandaki arka planı uygulamada neyse öyle yap." Karargâh ve
+  // Mevzuat gece temasındayken Denemeler krem kalıyordu — aynı bayrağa bağlandı.
+  const geceTema = useKisiselOzellik('talim-mevzuata');
   const yukle = useCallback(() => {
     // Son deneme skorları (law_id → en güncel; getSinavSonuclari id artan → son yazan kalır).
     void getSinavSonuclari()
@@ -76,7 +79,7 @@ function TatbikatIcerik() {
   const genelKilitli = !genelDenemeErisilebilir();
 
   return (
-    <Screen title="Denemeler">
+    <Screen title="Denemeler" koyu={geceTema} kompaktBaslik={geceTema}>
       {/* TAKIM SEÇİMİ: Müşterek Konular · Branş · Karma (Genel). */}
       <View style={styles.blokSecici}>
         {(karmaAcik
@@ -88,7 +91,11 @@ function TatbikatIcerik() {
             <Pressable
               key={b}
               onPress={() => setBlok(b)}
-              style={[styles.blokSeg, aktif && styles.blokSegAktif]}
+              style={[
+                styles.blokSeg,
+                geceTema && styles.blokSegGece,
+                aktif && (geceTema ? styles.blokSegAktifGece : styles.blokSegAktif),
+              ]}
               accessibilityRole="button"
               accessibilityLabel={
                 b === 'müşterek' ? 'Müşterek sınavlar' : b === 'brans' ? 'Branş sınavları' : 'Karma genel denemeler'
@@ -96,9 +103,12 @@ function TatbikatIcerik() {
               <MaterialCommunityIcons
                 name={b === 'müşterek' ? 'account-group' : b === 'brans' ? 'medal-outline' : 'shuffle-variant'}
                 size={16}
-                color={aktif ? Palette.beyaz : Palette.solukMetin}
+                color={aktif ? (geceTema ? Palette.altinParlak : Palette.beyaz) : geceTema ? 'rgba(226,236,240,0.75)' : Palette.solukMetin}
               />
-              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
+              <AppText
+                variant="etiket"
+                bold
+                color={aktif ? (geceTema ? 'altinParlak' : 'beyaz') : geceTema ? 'beyaz' : 'anaMetin'}>
                 {b === 'müşterek' ? 'Müşterek' : b === 'brans' ? 'Branş' : 'Karma'}
               </AppText>
             </Pressable>
@@ -116,7 +126,7 @@ function TatbikatIcerik() {
           />
         ) : (
         <>
-          <AppText variant="kucuk" color="solukMetin">
+          <AppText variant="kucuk" color={geceTema ? 'kartMetinIkincil' : 'solukMetin'}>
             {blok === 'karma'
               ? 'Genel denemeler müşterek + branş konularından 100 sorudur (50 + 50) — gerçek sınav uzunluğu. Her soru 1 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
               : blok === 'brans'
@@ -133,6 +143,7 @@ function TatbikatIcerik() {
                 .get(blok === 'karma' ? -(200 + d.no) : blok === 'brans' ? -(100 + d.no) : -d.no)
                 ?.get(0)}
               kilitli={genelKilitli}
+              gece={geceTema}
               onGit={() => (genelKilitli ? router.push('/paywall') : genelDenemeGit(d.no, blok))}
             />
           ))}
@@ -159,28 +170,30 @@ function GenelDenemeSatir({
   katsayi,
   sonuc,
   kilitli,
+  gece,
   onGit,
 }: {
   deneme: { no: number; baslik: string; soruSayisi: number };
   katsayi: number;
   sonuc: SinavSonuc | undefined;
   kilitli: boolean;
+  gece?: boolean;
   onGit: () => void;
 }) {
   return (
     <Pressable
-      style={({ pressed }) => [styles.genelSatir, pressed && styles.pressed]}
+      style={({ pressed }) => [styles.genelSatir, gece && styles.genelSatirGece, pressed && styles.pressed]}
       onPress={onGit}
       accessibilityRole="button"
       accessibilityLabel={deneme.baslik}>
-      <View style={styles.monogram}>
+      <View style={[styles.monogram, gece && styles.monogramGece]}>
         <MaterialCommunityIcons name="flag-checkered" size={22} color={Palette.altin} />
       </View>
       <View style={styles.satirMetin}>
-        <AppText variant="govde" bold color="anaMetin">
+        <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'}>
           {deneme.baslik}
         </AppText>
-        <AppText variant="etiket" color="solukMetin">
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
           {deneme.soruSayisi} soru · {deneme.soruSayisi * katsayi} puan
           {sonuc ? ` · Son: ${sonuc.dogru * katsayi}/${sonuc.toplam * katsayi} puan` : ''}
         </AppText>
@@ -250,6 +263,29 @@ const styles = StyleSheet.create({
   },
   blokSegAktif: {
     backgroundColor: Palette.lacivert,
+  },
+  // GECE TEMASI (Mevzuat ekranıyla aynı dil): saydam petrol hap + altın kenar.
+  blokSegGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderWidth: 1,
+    borderColor: 'rgba(126,205,218,0.3)',
+    borderRadius: 999,
+  },
+  blokSegAktifGece: {
+    backgroundColor: 'rgba(3,47,69,0.9)',
+    borderWidth: 1,
+    borderColor: '#F3C24A',
+    borderRadius: 999,
+  },
+  // Lacivert monogram, koyu kartın üstünde kayboluyordu → altın tuşlu saydam kare.
+  monogramGece: {
+    backgroundColor: 'rgba(243,194,74,0.14)',
+    borderWidth: 1,
+    borderColor: 'rgba(243,194,74,0.45)',
+  },
+  genelSatirGece: {
+    backgroundColor: 'rgba(3,40,56,0.55)',
+    borderColor: 'rgba(126,205,218,0.3)',
   },
   satir: {
     backgroundColor: Palette.kartKremi,

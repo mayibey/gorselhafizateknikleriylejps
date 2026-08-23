@@ -507,6 +507,22 @@ export default function KarargahScreen() {
                 mühür + "JSPS sınavına kalan süre". Başvuru tarihi küçük satır — 23 Ağustos
                 geçince kendiliğinden kaybolur. */}
             <View style={styles.sayacMerkez}>
+              {/* Başkan (23 Ağu): açıklama ve başvuru bandı sayacın ALTINDA üç satır yer
+                  kaplıyor, oyunlara/tatbikata giden kartlar ekranın altında kalıyordu.
+                  İkisi de sayacın HEMEN ÜSTÜNDE tek satıra alındı — solda ne olduğu,
+                  sağda başvuru penceresi. Mühür ayracı da kaldırıldı (yer açmak için). */}
+              <View style={styles.sayacUstSatir}>
+                <AppText variant="etiket" bold color="beyaz" numberOfLines={1}>
+                  JSPS sınavına kalan süre
+                </AppText>
+                {basvuruAcik ? (
+                  <View style={styles.basvuruKapsul}>
+                    <AppText variant="etiket" bold color="altinParlak" numberOfLines={1}>
+                      Başvurular: 3 – 23 Ağustos
+                    </AppText>
+                  </View>
+                ) : null}
+              </View>
               <AppText
                 variant="dev"
                 bold
@@ -516,23 +532,6 @@ export default function KarargahScreen() {
                 style={styles.devTekSatir}>
                 {geriSayim}
               </AppText>
-              <View style={[styles.sagMuhurSatir, styles.muhurDar]}>
-                <View style={styles.sagMuhurCizgi} />
-                <MaterialCommunityIcons name="shield-star" size={14} color={Palette.altinParlak} />
-                <View style={styles.sagMuhurCizgi} />
-              </View>
-              <AppText variant="kucuk" bold color="beyaz" style={styles.sagAltYazi}>
-                JSPS sınavına kalan süre
-              </AppText>
-              {basvuruAcik ? (
-                /* Okunurluk (başkan eleştirisi): altın yazı dağ sırtında eriyordu →
-                   yarı saydam koyu KAPSÜL içinde; her zeminde okunur. */
-                <View style={styles.basvuruKapsul}>
-                  <AppText variant="etiket" bold color="altinParlak" style={styles.basvuruMini}>
-                    Başvurular: 3 – 23 Ağustos
-                  </AppText>
-                </View>
-              ) : null}
             </View>
 
             {/* ═══ BUGÜNÜN EMRİ KARTI — yumuşak petrol panel + ilerleme halkası.
@@ -1035,7 +1034,7 @@ export default function KarargahScreen() {
             </View>
             <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
               <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
-                Genel deneme çöz — kendini sına
+                Genel deneme çöz
               </AppText>
             </View>
             <View style={styles.tekrarEtKose}>
@@ -1600,7 +1599,16 @@ const styles = StyleSheet.create({
   sayacMerkez: {
     alignItems: 'center',
     gap: 2,
-    paddingVertical: Spacing.one,
+    paddingVertical: 2, // 23 Ağu: ekran tek sayfaya sığsın diye dikey boşluk kısıldı
+  },
+  // Sayacın hemen ÜSTÜ: solda "ne kadar kaldı" açıklaması, sağda başvuru penceresi.
+  sayacUstSatir: {
+    alignSelf: 'stretch',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: Spacing.two,
+    marginBottom: 1,
   },
   devTekSatir: {
     fontSize: 40,
@@ -1842,13 +1850,13 @@ const styles = StyleSheet.create({
     marginTop: Spacing.one, // gövde gap'iyle birlikte bloklar arası eşit ~16 (taşma fixi)
   },
   basvuruKapsul: {
-    marginTop: Spacing.two, // nefes boşluğu (sıkışıklık eleştirisi)
+    // Artık sayacın üstünde, açıklamanın sağında duruyor → üstten boşluk yok.
     backgroundColor: 'rgba(3,32,46,0.6)',
     borderWidth: 1,
     borderColor: 'rgba(126,205,218,0.25)',
     borderRadius: 999,
-    paddingHorizontal: Spacing.three,
-    paddingVertical: 4,
+    paddingHorizontal: Spacing.two,
+    paddingVertical: 2,
   },
   takvimSol: {
     flex: 1.15,
