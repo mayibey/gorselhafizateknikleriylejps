@@ -1,33 +1,27 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
-import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { genelDenemeErisilebilir } from '@/constants/urunler';
-import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards } from '@/db/database';
-import type { LawWithCount, SinavSonuc } from '@/db/schema';
-import { LAW_KLASOR } from '@/db/seed';
-import { ucretsizKanun } from '@/constants/urunler';
+import { getSinavSonuclari } from '@/db/database';
+import type { SinavSonuc } from '@/db/schema';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
-import { useRutbe } from '@/lib/rutbe-context';
-import { rutbeGorur } from '@/lib/rutbe-kapsam';
-import { genelDenemeler, puanKatsayisi, sinavSoruSayisi, sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
-import { useUyelik } from '@/lib/uyelik-context';
-
-/** Bir kanunun deneme sınavı durumu (kilit + ilerleme). */
-type Durum = { calisilan: number; toplam: number; tamam: boolean };
+import { genelDenemeler, puanKatsayisi } from '@/lib/sinav';
 
 /**
- * Tatbikat — kanun bazlı deneme sınavı.
- * Bir kanunun TÜM (bölüme bağlı) kartları çalışılınca (Mevzuat'taki "Tamamlananlar"
- * ile birebir) o kanunun deneme sınavı AÇILIR; aksi hâlde KİLİTLİ ("önce çalış").
- * Yalnız soru havuzu olan müşterek kanunlar listelenir; branş içeriği "çok yakında".
+ * DENEMELER — üç takım deneme sınavı: Müşterek Konular (3×50) · Branş (5×50, Jandarma) ·
+ * Karma/Genel (5×100, müşterek + branş).
+ *
+ * 23 Ağu (başkan): "talimi de tatbikatı da kaldır, adam direkt deneme için giriyor zaten;
+ * kaldığı yere gidecekse ya da zayıf mevzisini çalışacaksa çalışma bölümüne gitsin —
+ * orası ayrı, burası ayrı." Kanun kanun talim artık YALNIZ Mevzuat'taki "Talim Yap"
+ * düğmesinden; bu ekranda kanun listesi YOK.
  */
 export default function TatbikatScreen() {
   // E-POSTA DOĞRULAMA KAPISI: doğrulanmamış hesap içeriğe giremez (girişe izin var, içerik kilitli).
@@ -41,37 +35,17 @@ export default function TatbikatScreen() {
 function TatbikatIcerik() {
   const router = useRouter();
   const { brans } = useBrans();
-  const { rutbe } = useRutbe();
-  const [laws, setLaws] = useState<LawWithCount[] | null>(null);
-  // law_id → kilit/ilerleme durumu (Mevzuat ile aynı: bölüme bağlı + kutu≥1).
-  const [durumMap, setDurumMap] = useState<Map<number, Durum>>(new Map());
-  // law_id → (test → SON deneme sonucu). Her testin son skoru ayrı ("Son: X/Y").
+  // law_id → (test → SON deneme sonucu). Genel denemelerde sanal law_id kullanılır.
   const [sonucMap, setSonucMap] = useState<Map<number, Map<number, SinavSonuc>>>(new Map());
-  // Üst seçim: Talim (kanun denemeleri) / Tatbikat (Genel Deneme 1/2/3).
-  // Karargâh'taki "Genel deneme çöz" şeridi ?mod=tatbikat ile gelir → doğrudan genel
-  // denemeler açılır (başkan, 23 Ağu: "oradan o 3 denemenin göründüğü sayfayı açtır").
-  const { mod: modParam } = useLocalSearchParams<{ mod?: string }>();
-  const [mod, setMod] = useState<'talim' | 'tatbikat'>(modParam === 'tatbikat' ? 'tatbikat' : 'talim');
-  // Karargâh'taki "Genel deneme çöz" şeridinden gelen kullanıcı zaten DENEME için giriyor →
-  // Talim/Tatbikat seçicisi gereksiz (başkan, 23 Ağu: "talimi de tatbikatı da kaldır").
-  // Parametresiz girişler (Sicil, Kaldığın Yer) eski düzeni görmeye devam eder.
-  const denemeModu = modParam === 'tatbikat';
-  // Üst seçim: Müşterek (mevcut) / Branş (içerik güncellemelerle eklenecek → "hazırlanıyor").
-  // 23 Ağu (başkan: "hem müşterek hem branş konulardan 5 deneme, 100 soru"): üçüncü takım
-  // KARMA — yalnız Tatbikat'ta görünür (Talim'de kanun listesi müşterek/branş ikilisiyle çalışır).
+  // 23 Ağu (başkan: "talimi de tatbikatı da kaldır, adam direkt deneme için giriyor"):
+  // bu ekran ARTIK YALNIZ DENEMELER. Kanun kanun talim Mevzuat'taki "Talim Yap" düğmesinde,
+  // kaldığın yer / zayıf mevzi ise çalışma bölümünde — burası ayrı, orası ayrı.
+  // Takım seçimi: Müşterek Konular / Branş / Karma (Genel).
   const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma'>('müşterek');
   // 23 Ağu: karma denemeler ÖNCE BAŞKANDA. Onay gelince sunucudan (ozellik_herkes)
   // herkese açılır — yeni yayın gerekmez.
   const karmaAcik = useKisiselOzellik('karma-deneme');
-  const { kanunErisilebilir } = useUyelik();
-  const [hata, setHata] = useState(false);
-
   const yukle = useCallback(() => {
-    if (!brans) return;
-    setHata(false);
-    void getLaws(brans)
-      .then(setLaws)
-      .catch(() => setHata(true));
     // Son deneme skorları (law_id → en güncel; getSinavSonuclari id artan → son yazan kalır).
     void getSinavSonuclari()
       .then((sonuclar) => {
@@ -87,46 +61,9 @@ function TatbikatIcerik() {
         setSonucMap(sm);
       })
       .catch(() => setSonucMap(new Map()));
-    // İlerleme/kilit: Mevzuat'taki "tamam" tanımı (bölüme bağlı kart kümesi + kutu≥1).
-    void Promise.all([getStudyCards(), getAllCards(), getBolumKartIds()])
-      .then(([studied, allCards, bolumKartIds]) => {
-        const bagli = new Set(bolumKartIds);
-        const toplam = new Map<number, number>();
-        for (const c of allCards) {
-          if (bagli.has(c.id)) toplam.set(c.law_id, (toplam.get(c.law_id) ?? 0) + 1);
-        }
-        const calisilan = new Map<number, number>();
-        for (const c of studied) {
-          if (c.kutu >= 1 && bagli.has(c.id)) {
-            calisilan.set(c.law_id, (calisilan.get(c.law_id) ?? 0) + 1);
-          }
-        }
-        const m = new Map<number, Durum>();
-        for (const lawId of toplam.keys()) {
-          const top = toplam.get(lawId) ?? 0;
-          const cal = calisilan.get(lawId) ?? 0;
-          m.set(lawId, { calisilan: cal, toplam: top, tamam: top > 0 && cal >= top });
-        }
-        setDurumMap(m);
-      })
-      .catch(() => setDurumMap(new Map()));
-  }, [brans]);
+  }, []);
 
   useFocusEffect(yukle);
-
-  // Sınavı (soru havuzu) olan + rütbe kapsamındaki kanunlar. Müşterek sekmesi: müşterek;
-  // Branş sekmesi: branş kanunları (Jandarma deneme soruları law 26-66'ya yüklendi).
-  const musterek = (
-    laws?.filter(
-      (l) => l.blok === (blok === 'brans' ? 'branş' : 'müşterek') && sinavVarMi(l.id) && rutbeGorur(l.id, rutbe),
-    ) ?? []
-  ).sort((a, b) =>
-    blok === 'brans' ? (a.id === 67 ? 0 : a.id) - (b.id === 67 ? 0 : b.id) : 0,
-  ); // branş sekmesinde TCK (67) en üstte
-
-  function sinavaGit(law: LawWithCount, test: number) {
-    router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(test) } });
-  }
 
   function genelDenemeGit(no: number, takim: 'müşterek' | 'brans' | 'karma' = 'müşterek') {
     router.push({
@@ -139,10 +76,10 @@ function TatbikatIcerik() {
   const genelKilitli = !genelDenemeErisilebilir();
 
   return (
-    <Screen title={denemeModu ? 'Denemeler' : 'Talim'}>
-      {/* ÜST SEÇİM: Müşterek (mevcut) / Branş (içerik hazırlanıyor, güncellemelerle eklenir). */}
+    <Screen title="Denemeler">
+      {/* TAKIM SEÇİMİ: Müşterek Konular · Branş · Karma (Genel). */}
       <View style={styles.blokSecici}>
-        {(mod === 'tatbikat' && karmaAcik
+        {(karmaAcik
           ? (['müşterek', 'brans', 'karma'] as const)
           : (['müşterek', 'brans'] as const)
         ).map((b) => {
@@ -169,46 +106,13 @@ function TatbikatIcerik() {
         })}
       </View>
 
-      {(
-        <>
-      {/* ALT SEÇİM: Talim (kanun denemeleri) / Tatbikat (genel denemeler). Müşterek + Branş İKİSİNDE
-          de gösterilir (aynı düzen). Branş genel denemesi henüz yok → Tatbikat'ta "yakında". */}
-      {denemeModu ? null : (
-      <View style={styles.blokSecici}>
-        {(['talim', 'tatbikat'] as const).map((m) => {
-          const aktif = mod === m;
-          return (
-            <Pressable
-              key={m}
-              onPress={() => {
-                setMod(m);
-                if (m === 'talim' && blok === 'karma') setBlok('müşterek'); // Talim'de karma takım yok
-              }}
-              style={[styles.blokSeg, aktif && styles.blokSegAktif]}
-              accessibilityRole="button"
-              accessibilityLabel={m === 'talim' ? 'Talim — kanun denemeleri' : 'Tatbikat — genel denemeler'}>
-              <MaterialCommunityIcons
-                name={m === 'talim' ? 'clipboard-check-outline' : 'flag-checkered'}
-                size={16}
-                color={aktif ? Palette.beyaz : Palette.solukMetin}
-              />
-              <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
-                {m === 'talim' ? 'Talim' : 'Tatbikat'}
-              </AppText>
-            </Pressable>
-          );
-        })}
-      </View>
-      )}
-
-      {mod === 'tatbikat' ? (
-        // Branş genel denemeleri YALNIZ Jandarma'ya özgü (5×50). Diğer branşlarda genel deneme
-        // yok (talim denemeleri var) → "Yakında". Müşterek + Jandarma branş genel denemeyi görür.
-        blok === 'brans' && brans !== 'jandarma' ? (
+      {/* Branş denemeleri YALNIZ Jandarma'ya özgü (5×50). Diğer branşlarda henüz yok.
+          Karma denemeler tüm branşlara açık. */}
+      {blok === 'brans' && brans !== 'jandarma' ? (
           <DurumKutu
             ikon="flag-checkered"
             baslik="Yakında"
-            aciklama="Bu branşın genel denemeleri hazırlanıyor. Talim (kanun) denemeleri hazır — üstteki Talim sekmesinden çözebilirsin."
+            aciklama="Bu branşın denemeleri hazırlanıyor. Müşterek ve Karma denemeleri üstteki sekmelerden çözebilirsin."
           />
         ) : (
         <>
@@ -232,40 +136,6 @@ function TatbikatIcerik() {
               onGit={() => (genelKilitli ? router.push('/paywall') : genelDenemeGit(d.no, blok))}
             />
           ))}
-        </>
-        )
-      ) : hata ? (
-        <DurumKutu
-          ikon="alert-circle-outline"
-          baslik="Yüklenemedi"
-          aciklama="Sınav listesi yüklenemedi."
-          buton={{ etiket: 'Tekrar dene', onPress: yukle }}
-        />
-      ) : laws === null ? (
-        <Loading metin="Yükleniyor…" />
-      ) : (
-        <>
-          <AppText variant="kucuk" color="solukMetin">
-            Uzun kanunlar 20'şer soruluk testlere bölündü. Her soru 2 puan. İstersen önce Mevzuat'tan çalış,
-            sonra kendini sına.
-          </AppText>
-          {musterek.length === 0 ? (
-            <AppText variant="kucuk" color="solukMetin">
-              Bu branşta deneme sınavı olan kanun yok.
-            </AppText>
-          ) : (
-            musterek.map((law) => (
-              <KanunSatir
-                key={law.id}
-                law={law}
-                durum={durumMap.get(law.id)}
-                sonuclar={sonucMap.get(law.id)}
-                onSinav={sinavaGit}
-              />
-            ))
-          )}
-        </>
-      )}
         </>
       )}
     </Screen>
@@ -324,170 +194,6 @@ function GenelDenemeSatir({
   );
 }
 
-/** Lacivert kare monogram: ad'dan kanun no (altın), yoksa kitap ikonu. */
-function Monogram({ no }: { no: string | null }) {
-  return (
-    <View style={styles.monogram}>
-      {no ? (
-        <AppText
-          variant="govde"
-          bold
-          color="altin"
-          numberOfLines={1}
-          adjustsFontSizeToFit
-          style={styles.monoNo}>
-          {no}
-        </AppText>
-      ) : (
-        <MaterialCommunityIcons name="book-outline" size={24} color={Palette.altin} />
-      )}
-    </View>
-  );
-}
-
-function KanunSatir({
-  law,
-  durum,
-  sonuclar,
-  onSinav,
-}: {
-  law: LawWithCount;
-  durum: Durum | undefined;
-  sonuclar: Map<number, SinavSonuc> | undefined;
-  onSinav: (law: LawWithCount, test: number) => void;
-}) {
-  const [acik, setAcik] = useState(false);
-  const calisilan = durum?.calisilan ?? 0;
-  const toplam = durum?.toplam ?? law.kartSayisi;
-  const no = law.ad.match(/^(\d+)/)?.[1] ?? null;
-  const router = useRouter();
-  const { kanunErisilebilir } = useUyelik();
-  // Premium kilidi: erişim yoksa sınav yerine paywall. Şalter kapalıysa hep açık.
-  const kilitli = !kanunErisilebilir(LAW_KLASOR[law.id], law.blok);
-  // ÜCRETSİZ ROZETİ — Mevzuat'takiyle AYNI. Başkan: "TCK ücretsiz diye Mevzuat'a yazdık,
-  // Talim'de denemelerin olduğu yere de yazalım." Kilitli satırda gösterilmez (kilitliyse
-  // zaten ücretsiz değildir); yani rozet ile kilit asla birlikte çıkmaz.
-  const ucretsiz = !kilitli && ucretsizKanun(LAW_KLASOR[law.id]);
-
-  const testN = testSayisi(law.id);
-  const toplamSoru = sinavSoruSayisi(law.id);
-  const tekTest = testN <= 1; // ≤20 soru → tek test: başlığa basınca doğrudan aç
-
-  function basHeader() {
-    if (kilitli) {
-      router.push('/paywall');
-      return;
-    }
-    if (tekTest) {
-      onSinav(law, 0);
-      return;
-    }
-    setAcik((v) => !v);
-  }
-
-  const sagIkon = kilitli ? 'lock' : tekTest ? 'play-circle' : acik ? 'chevron-up' : 'chevron-down';
-  const tekSon = sonuclar?.get(0);
-
-  return (
-    <View style={styles.satir}>
-      <Pressable
-        onPress={basHeader}
-        style={({ pressed }) => [styles.satirBas, pressed && styles.pressed]}
-        accessibilityRole="button"
-        accessibilityLabel={`${law.ad} deneme sınavı`}>
-        <View style={styles.satirUst}>
-          <Monogram no={no} />
-          <AppText variant="govde" bold color="anaMetin" style={styles.kanunAd}>
-            {law.ad}
-          </AppText>
-          <MaterialCommunityIcons
-            name={sagIkon}
-            size={28}
-            color={kilitli ? Palette.altinKoyu : Palette.lacivert}
-          />
-        </View>
-
-        {ucretsiz ? (
-          <View style={styles.ucretsizChip}>
-            <MaterialCommunityIcons name="gift-outline" size={14} color={Palette.beyaz} />
-            <AppText variant="etiket" bold color="beyaz">
-              ÜCRETSİZ
-            </AppText>
-          </View>
-        ) : null}
-
-        <View style={styles.altSatir}>
-          <MaterialCommunityIcons
-            name={kilitli ? 'lock-open-outline' : 'clipboard-check-outline'}
-            size={16}
-            color={Palette.altinKoyu}
-          />
-          <AppText variant="kucuk" bold color="altinMetin">
-            {kilitli
-              ? 'Kilidi Aç'
-              : tekTest
-                ? `Deneme Sınavı · ${toplamSoru} soru`
-                : `${testN} test · ${toplamSoru} soru`}
-          </AppText>
-        </View>
-
-        {/* Hazırlık (kilit DEĞİL — sadece bilgi: ne kadarını çalıştın). */}
-        {toplam > 0 ? (
-          <View style={styles.altSatir}>
-            <MaterialCommunityIcons name="book-clock-outline" size={16} color={Palette.solukMetin} />
-            <AppText variant="etiket" color="solukMetin">
-              Hazırlık: {calisilan}/{toplam} kart çalışıldı
-            </AppText>
-          </View>
-        ) : null}
-
-        {/* Tek testli kanunda son skor başlıkta (çok testli → her testin altında). */}
-        {tekTest && !kilitli && tekSon ? (
-          <View style={styles.altSatir}>
-            <MaterialCommunityIcons name="history" size={16} color={Palette.solukMetin} />
-            <AppText variant="etiket" bold color="solukMetin">
-              Son deneme: {tekSon.dogru}/{tekSon.toplam}
-            </AppText>
-          </View>
-        ) : null}
-      </Pressable>
-
-      {/* Çok testli kanun → açılınca Test 1..N (her biri ayrı sınav + kendi son skoru). */}
-      {acik && !tekTest && !kilitli ? (
-        <View style={styles.testler}>
-          {Array.from({ length: testN }, (_, t) => {
-            const ss = sonuclar?.get(t);
-            const soru = testSoruSayisi(law.id, t);
-            const aced = !!ss && ss.toplam > 0 && ss.dogru === ss.toplam;
-            return (
-              <Pressable
-                key={t}
-                onPress={() => onSinav(law, t)}
-                style={({ pressed }) => [styles.testSatir, pressed && styles.pressed]}
-                accessibilityRole="button"
-                accessibilityLabel={`Test ${t + 1}`}>
-                <MaterialCommunityIcons
-                  name={aced ? 'check-circle' : 'play-circle-outline'}
-                  size={22}
-                  color={aced ? Palette.altinKoyu : Palette.lacivert}
-                />
-                <View style={styles.testOrta}>
-                  <AppText variant="kucuk" bold color="anaMetin">
-                    Test {t + 1}
-                  </AppText>
-                  <AppText variant="etiket" color="solukMetin">
-                    {soru} soru{ss ? ` · Son: ${ss.dogru}/${ss.toplam}` : ''}
-                  </AppText>
-                </View>
-                <MaterialCommunityIcons name="chevron-right" size={20} color={Palette.solukMetin} />
-              </Pressable>
-            );
-          })}
-        </View>
-      ) : null}
-    </View>
-  );
-}
 
 /** Yükleniyor/hata/placeholder kutusu (krem zemin). */
 function DurumKutu({
