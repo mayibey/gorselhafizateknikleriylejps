@@ -13,7 +13,8 @@
  *   <IndirModal />
  *
  * Davranış: inmişse doğrudan açar. İnmemişse boyutu söyleyip sorar —
- * "İndir ve aç" (yüzdeli modal, bitince açar) · "İndirmeden devam" (eski akış, akıtarak).
+ * "İndir ve aç" (yüzdeli modal, bitince açar) · "Vazgeç". Akıtarak çalışma seçeneği
+ * KALDIRILDI (23 Ağu): donmaya ve seslerin kesilmesine yol açıyordu.
  * İndirme desteklenmiyorsa/uzak içerik kapalıysa hiç sormaz, doğrudan açar.
  */
 import { useCallback, useRef, useState } from 'react';
@@ -74,13 +75,15 @@ export function useIndirKapisi() {
         return;
       }
       const boyut = boyutMetni(kanunTahminiBoyut(klasor));
+      // Başkan (23 Ağu): "'indirmeden devam' ne alaka, indirsin." Akıtarak çalışmak
+      // donmaya ve seslerin kesilmesine yol açıyordu (Bünyamin vakası) — o seçenek
+      // kaldırıldı: ya indirilir ya vazgeçilir.
       Alert.alert(
         'Bu kanun henüz inmedi',
         `${lawAdi} içeriği (görseller + sesli anlatım, ${boyut}) telefonunda yok.\n\n`
-          + 'İndirirsen kartlar anında açılır, sesler kesilmez ve internetsiz de çalışırsın. '
-          + 'İndirmeden de çalışabilirsin ama her kart için bağlantı gerekir.',
+          + 'İndirince kartlar anında açılır, sesler kesilmez ve internetsiz de çalışırsın.',
         [
-          { text: 'İndirmeden devam', style: 'cancel', onPress: ac },
+          { text: 'Vazgeç', style: 'cancel' },
           { text: `İndir (${boyut})`, onPress: () => indirVeAc(klasor, lawAdi, ac) },
         ],
       );
@@ -104,7 +107,7 @@ export function useIndirKapisi() {
                   İndirme tamamlanamadı
                 </AppText>
                 <AppText variant="kucuk" color="solukMetin" style={st.ortali}>
-                  Bağlantını kontrol edip tekrar dene. İndirmeden de çalışabilirsin.
+                  Bağlantını kontrol edip tekrar dene.
                 </AppText>
                 <Pressable
                   style={({ pressed }) => [st.btn, pressed && st.basili]}

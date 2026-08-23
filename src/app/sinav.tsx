@@ -265,6 +265,12 @@ export default function SinavScreen() {
   function kartaGit(soru: KartSoru) {
     const hedef = kartHedefi(soru);
     if (!hedef) return;
+    // Başkan (23 Ağu): "deneme ücretsiz olacak ama ilgili karta git deyince, premium
+    // değilse ve TCK dışıysa üyelik ekranı gelsin." Kart içeriği ücretli; kapı burada.
+    if (!lawErisilebilirSaf(hedef.lawId, premium)) {
+      router.push('/paywall');
+      return;
+    }
     router.push({
       pathname: '/akis',
       params: hedef.kartId
