@@ -22,18 +22,21 @@ import { BOYUTLAR, profilAnahtari, soruProfili } from './soru-profil.mjs';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-// Kitapçık dosyası → okunur ad + rütbe.
-const KITAPCIK = {
-  'k1.txt': { ad: 'Astsubay kitapçığı (2)', rutbe: 'astsubay' },
-  'k2.txt': { ad: '2020 Gazi denemesi', rutbe: 'karma' },
-  'k3.txt': { ad: 'Astsubay kitapçığı (3)', rutbe: 'astsubay' },
-  'k4.txt': { ad: 'Subay Jandarma A', rutbe: 'subay' },
-  'k5.txt': { ad: 'Subay kitapçığı', rutbe: 'subay' },
-  'k6.txt': { ad: 'Astsubay 2019', rutbe: 'astsubay' },
-  'k7.txt': { ad: 'Astsubay 2020', rutbe: 'astsubay' },
-  'k8.txt': { ad: 'Mobil kitapçık', rutbe: 'karma' },
-  'k9.txt': { ad: 'Soru havuzu (kitapçık değil)', rutbe: 'havuz' },
+// Kitapçık adları. soru (1).pdf TEK DOSYA ama içinde 18 AYRI JSPS kitapçığı var
+// (başkan: "o büyük havuz dediğin bir sürü çıkmış sınav sorusunun birleşimi, düzgün ayır").
+// Ayrıştırıcı soru numarası geriye sıçradığında yeni kitapçık başlatıp k9-01…k9-18 diye
+// etiketliyor. Rütbe, kitapçık sayfa başlığından okunuyor.
+const DOSYA_AD = {
+  k1: 'Astsubay kitapçığı (2)',
+  k2: '2020 Gazi denemesi',
+  k3: 'Astsubay kitapçığı (3)',
+  k4: 'Subay Jandarma A',
+  k5: 'Subay kitapçığı',
+  k6: 'Astsubay 2019',
+  k7: 'Astsubay 2020',
+  k8: 'Mobil kitapçık',
 };
+const kitapcikAdi = (d) => DOSYA_AD[d] ?? (d.startsWith('k7-') ? 'Astsubay 2020' : `Toplu kitapçık ${d.replace('k9-', '#')}`);
 
 const MEVZUAT = /\d{3,4}\s*sayılı|Yönetmeliğ|Yönetmelik|Kanunu|Kanun[’']|Yönerge|Tebliğ|Anayasa|Genelge/i;
 
@@ -75,8 +78,16 @@ const birlesikTip = new Map();
 let konusuz = 0;
 const rutbeOlcu = new Map();
 
-for (const [dosya, bilgi] of Object.entries(KITAPCIK)) {
+const DOSYALAR = [...new Set(ham.map((q) => q.dosya))].sort();
+const rutbeBul = (liste) => {
+  const c = new Map();
+  for (const q of liste) if (q.rutbe) c.set(q.rutbe, (c.get(q.rutbe) ?? 0) + 1);
+  return [...c].sort((a, b) => b[1] - a[1])[0]?.[0] ?? 'bilinmiyor';
+};
+for (const dosya of DOSYALAR) {
   const liste = mev.filter((q) => q.dosya === dosya);
+  if (liste.length < 12) continue; // kırıntı blok
+  const bilgi = { ad: kitapcikAdi(dosya), rutbe: rutbeBul(liste) };
   if (!liste.length) continue;
   const konu = new Map();
   for (const q of liste) {
@@ -88,9 +99,9 @@ for (const [dosya, bilgi] of Object.entries(KITAPCIK)) {
     const anah = konuAnahtari(ad);
     konu.set(anah, (konu.get(anah) ?? 0) + 1);
     konuAd.set(anah, konuAd.get(anah) ?? ad);
-    if (bilgi.rutbe !== 'havuz') birlesikKonu.set(anah, (birlesikKonu.get(anah) ?? 0) + 1);
+    birlesikKonu.set(anah, (birlesikKonu.get(anah) ?? 0) + 1);
     const t = soruTipi(q.kok);
-    if (bilgi.rutbe !== 'havuz') birlesikTip.set(t, (birlesikTip.get(t) ?? 0) + 1);
+    birlesikTip.set(t, (birlesikTip.get(t) ?? 0) + 1);
   }
   const kokU = liste.map((q) => q.kok.length).sort((a, b) => a - b);
   const sikU = liste.flatMap((q) => q.siklar.map((s) => s.length)).sort((a, b) => a - b);
@@ -106,7 +117,7 @@ for (const [dosya, bilgi] of Object.entries(KITAPCIK)) {
       .sort((a, b) => b[1] - a[1]),
   };
   kitapciklar.push(kayit);
-  if (bilgi.rutbe !== 'havuz') {
+  {
     if (!rutbeOlcu.has(bilgi.rutbe)) rutbeOlcu.set(bilgi.rutbe, { soru: 0, kok: 0, sik: 0, sikAdet: 0 });
     const r = rutbeOlcu.get(bilgi.rutbe);
     r.soru += liste.length;
@@ -130,8 +141,7 @@ const tipAgirlik = [...birlesikTip]
 const boyutSay = Object.fromEntries(BOYUTLAR.map((b) => [b, new Map()]));
 const bilesikSay = new Map();
 let boyutToplam = 0;
-for (const [dosya, bilgi] of Object.entries(KITAPCIK)) {
-  if (bilgi.rutbe === 'havuz') continue;
+for (const dosya of DOSYALAR) {
   for (const q of mev.filter((x) => x.dosya === dosya)) {
     const pr = soruProfili({ soru: q.kok, siklar: q.siklar });
     boyutToplam++;
