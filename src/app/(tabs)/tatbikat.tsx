@@ -13,6 +13,7 @@ import { getAllCards, getBolumKartIds, getLaws, getSinavSonuclari, getStudyCards
 import type { LawWithCount, SinavSonuc } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
 import { ucretsizKanun } from '@/constants/urunler';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
 import { rutbeGorur } from '@/lib/rutbe-kapsam';
@@ -55,6 +56,9 @@ function TatbikatIcerik() {
   // 23 Ağu (başkan: "hem müşterek hem branş konulardan 5 deneme, 100 soru"): üçüncü takım
   // KARMA — yalnız Tatbikat'ta görünür (Talim'de kanun listesi müşterek/branş ikilisiyle çalışır).
   const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma'>('müşterek');
+  // 23 Ağu: karma denemeler ÖNCE BAŞKANDA. Onay gelince sunucudan (ozellik_herkes)
+  // herkese açılır — yeni yayın gerekmez.
+  const karmaAcik = useKisiselOzellik('karma-deneme');
   const { kanunErisilebilir } = useUyelik();
   const [hata, setHata] = useState(false);
 
@@ -134,7 +138,7 @@ function TatbikatIcerik() {
     <Screen title="Talim">
       {/* ÜST SEÇİM: Müşterek (mevcut) / Branş (içerik hazırlanıyor, güncellemelerle eklenir). */}
       <View style={styles.blokSecici}>
-        {(mod === 'tatbikat'
+        {(mod === 'tatbikat' && karmaAcik
           ? (['müşterek', 'brans', 'karma'] as const)
           : (['müşterek', 'brans'] as const)
         ).map((b) => {

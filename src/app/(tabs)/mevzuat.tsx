@@ -257,7 +257,7 @@ function MevzuatIcerik() {
               onPress={() => setBlok(b)}
               style={[st.blokSeg, st.blokSegGece, aktif && st.blokSegAktifGece]}
               accessibilityRole="button"
-              accessibilityLabel={b === 'müşterek' ? 'Müşterek mevzuat' : 'Branş mevzuatı'}>
+              accessibilityLabel={b === 'müşterek' ? 'Müşterek konular' : 'Branş konuları'}>
               <MaterialCommunityIcons
                 name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
                 size={16}
@@ -265,11 +265,9 @@ function MevzuatIcerik() {
               />
               {/* Mock IMG_3129: aktif pil altın çerçeve + altın yazı, pasif soluk beyaz. */}
               <AppText variant="etiket" bold color={aktif ? 'altinParlak' : 'beyaz'} numberOfLines={1}>
-                {b === 'müşterek'
-                  ? 'Müşterek Mevzuat'
-                  : brans === 'jandarma'
-                    ? 'Jandarma Mevzuatı'
-                    : 'Branş Mevzuatı'}
+                {/* 23 Ağu (başkan): "Müşterek Mevzuat / Jandarma Mevzuatı" -> "Müşterek Konular /
+                    Branş Konuları". Sekme kanun listesini değil KONU kümesini ayırıyor. */}
+                {b === 'müşterek' ? 'Müşterek Konular' : 'Branş Konuları'}
               </AppText>
             </Pressable>
           );
@@ -287,7 +285,7 @@ function MevzuatIcerik() {
               onPress={() => setBlok(b)}
               style={[st.blokSeg, aktif && st.blokSegAktif]}
               accessibilityRole="button"
-              accessibilityLabel={b === 'müşterek' ? 'Müşterek mevzuat' : 'Branş mevzuatı'}>
+              accessibilityLabel={b === 'müşterek' ? 'Müşterek konular' : 'Branş konuları'}>
               <MaterialCommunityIcons
                 name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
                 size={16}
