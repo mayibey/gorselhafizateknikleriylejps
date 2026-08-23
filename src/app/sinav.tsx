@@ -232,18 +232,41 @@ export default function SinavScreen() {
   }
 
   /** Sonuç ekranındaki yanlış soru → ilgili kartın akışına git (o kanunun kartında). */
-  function kartaGit(soru: KartSoru) {
+  /**
+   * Bir sorunun çalışma hedefi: önce KANUN, sonra o kanunun içinde madde kartı.
+   *
+   * Başkan (23 Ağu): önce "yanlış karta götürüyor" (kanun bakılmıyordu), sonra
+   * "branşta hiç çalışmıyor" dedi. İkincisinin sebebi: kanunla sınırlayınca o
+   * kanunda O MADDENİN kartı yoksa düğme sessizce hiçbir şey yapmıyordu. Ölçüm:
+   * branş 250 sorunun 28'inde, karmada 500'ün 125'inde madde kartı yok.
+   * Artık kart yoksa KANUNUN kendisine gidiliyor; kanunun da kartı yoksa düğme
+   * hiç çizilmiyor (ölü düğme kalmasın).
+   */
+  function kartHedefi(soru: KartSoru): { lawId: number; kartId?: number } | null {
     const kartlar = kartlarRef.current;
-    if (!kartlar) return;
-    // ÖNCE KANUN (başkan, 23 Ağu: "ilgili kartı çalış doğru karta götürmüyor").
-    // Genel denemede havuzda TÜM kanunların kartları var; yalnız madde numarasına
-    // bakınca "6284 m.5" sorusu TCK m.5 kartına gidiyordu.
+    if (!kartlar || kartlar.length === 0) return null;
     const kanunId = soruKanunId(soru.soru, soru.kaynak ?? '', kartlar);
-    const havuz = kanunId != null ? kartlar.filter((k) => k.law_id === kanunId) : kartlar;
-    const ids = eslesenKartIdleri(soru.kaynak, havuz.length > 0 ? havuz : kartlar);
-    const kart = ids.length > 0 ? (havuz.find((k) => k.id === ids[0]) ?? kartlar.find((k) => k.id === ids[0])) : undefined;
-    if (!kart) return;
-    router.push({ pathname: '/akis', params: { lawId: String(kart.law_id), kart: String(kart.id) } });
+    const havuz = kanunId != null ? kartlar.filter((k) => k.law_id === kanunId) : [];
+    if (havuz.length > 0) {
+      const ids = eslesenKartIdleri(soru.kaynak, havuz);
+      const kart = ids.length > 0 ? havuz.find((k) => k.id === ids[0]) : undefined;
+      return kart ? { lawId: kart.law_id, kartId: kart.id } : { lawId: havuz[0].law_id };
+    }
+    // Kanun çözülemediyse eski davranış: madde numarasıyla en yakın kart.
+    const ids = eslesenKartIdleri(soru.kaynak, kartlar);
+    const kart = ids.length > 0 ? kartlar.find((k) => k.id === ids[0]) : undefined;
+    return kart ? { lawId: kart.law_id, kartId: kart.id } : null;
+  }
+
+  function kartaGit(soru: KartSoru) {
+    const hedef = kartHedefi(soru);
+    if (!hedef) return;
+    router.push({
+      pathname: '/akis',
+      params: hedef.kartId
+        ? { lawId: String(hedef.lawId), kart: String(hedef.kartId) }
+        : { lawId: String(hedef.lawId) },
+    });
   }
 
   // Bu sorunun seçili şıkkı (yoksa null). Önceki soruya dönünce o sorunun cevabı BURADAN gelir.
@@ -420,6 +443,7 @@ export default function SinavScreen() {
           katsayi={katsayi}
           // Burada da PUSH: yanlışları çalışıp geri gelince sonuç ekranı yerinde dursun.
           onZayif={() => router.push({ pathname: '/akis', params: { mod: 'zayif' } })}
+          kartHedefi={kartHedefi}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
           // PUSH (replace DEĞİL): başkan "sonuç ekranından geri gelince başa atıyor" dedi.
@@ -593,12 +617,14 @@ function HataKart({
   no,
   soru,
   secilen,
+  hedef,
   onKartGit,
 }: {
   /** Sınavdaki soru numarası (1 tabanlı) — başkan: "soru numarası yazmıyor". */
   no: number;
   soru: KartSoru;
   secilen: number;
+  hedef: { lawId: number; kartId?: number } | null;
   onKartGit: () => void;
 }) {
   const H = ['A', 'B', 'C', 'D', 'E'];
@@ -628,12 +654,16 @@ function HataKart({
           {soru.aciklama}
         </AppText>
       ) : null}
-      <Pressable style={({ pressed }) => [styles.kartGitBtn, pressed && styles.pressed]} onPress={onKartGit}>
-        <MaterialCommunityIcons name="card-text-outline" size={15} color={Palette.lacivert} />
-        <AppText variant="etiket" bold color="lacivert">
-          İlgili kartı çalış
-        </AppText>
-      </Pressable>
+      {/* Hedef yoksa düğme ÇİZİLMEZ (dokunup hiçbir şey olmasın diye). Madde kartı
+          bulunamadıysa kanunun kendisine götürür ve etiketi ona göre değişir. */}
+      {hedef ? (
+        <Pressable style={({ pressed }) => [styles.kartGitBtn, pressed && styles.pressed]} onPress={onKartGit}>
+          <MaterialCommunityIcons name="card-text-outline" size={15} color={Palette.lacivert} />
+          <AppText variant="etiket" bold color="lacivert">
+            {hedef.kartId ? 'İlgili kartı çalış' : 'Bu kanunu çalış'}
+          </AppText>
+        </Pressable>
+      ) : null}
     </View>
   );
 }
@@ -647,6 +677,7 @@ function Sonuc({
   belgeHak,
   katsayi,
   onZayif,
+  kartHedefi,
   onTekrar,
   onBitir,
   onKartGit,
@@ -662,6 +693,7 @@ function Sonuc({
   belgeHak: boolean;
   katsayi: number;
   onZayif: () => void;
+  kartHedefi: (soru: KartSoru) => { lawId: number; kartId?: number } | null;
   onTekrar: () => void;
   onBitir: () => void;
   onKartGit: (soru: KartSoru) => void;
@@ -768,7 +800,14 @@ function Sonuc({
           </Pressable>
           {ozetAcik
             ? yanlislar.map((y, i) => (
-                <HataKart key={i} no={y.no} soru={y.soru} secilen={y.secilen} onKartGit={() => onKartGit(y.soru)} />
+                <HataKart
+                  key={i}
+                  no={y.no}
+                  soru={y.soru}
+                  secilen={y.secilen}
+                  hedef={kartHedefi(y.soru)}
+                  onKartGit={() => onKartGit(y.soru)}
+                />
               ))
             : null}
         </>
