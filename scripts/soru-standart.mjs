@@ -69,7 +69,12 @@ function buyukDuzelt(ad) {
 const seed = readFileSync(join(kok, 'src/db/seed.ts'), 'utf8');
 export const KANUN_ADI = new Map(); // law_id -> tam ad
 export const NO_ADI = new Map(); // "3713" -> tam ad
-for (const m of seed.matchAll(/\{ id: (\d+), blok: '[^']+', ad: '([^']+)'/g)) {
+// TUZAK (23 Ağu, başkan "7068'de niye 1 soru var" deyince bulundu): seed.ts'te adında
+// kesme işareti olan kanun ÇİFT TIRNAKLA yazılmış (7068 — "…KHK'nın Kabul Edilmesine
+// Dair Kanun"). Yalnız tek tırnağı tanıyan desen o kanunu HİÇ görmüyordu; adı
+// çözülemediği için 7068'in 49 sorusunun TAMAMI bankadan eleniyordu.
+for (const m of seed.matchAll(/\{ id: (\d+), blok: '[^']+', ad: (?:'([^']+)'|"([^"]+)")/g)) {
+  m[2] = m[2] ?? m[3];
   KANUN_ADI.set(Number(m[1]), adTemizle(m[2]));
   const no = m[2].match(/^(\d{3,4})\s*sayılı/);
   if (no && (/Kanunu?$/.test(m[2]) || !NO_ADI.has(no[1]))) NO_ADI.set(no[1], adTemizle(m[2]));
@@ -238,6 +243,61 @@ export function konuAnahtari(ad) {
     .toLocaleLowerCase('tr')
     .replace(/[^\p{L}\p{N}]+/gu, '')
     .slice(0, 44);
+}
+
+/**
+ * MÜFREDAT — 2026 emrindeki 67 mevzuat (seed.ts SEED_LAWS). Çıkmış sınav sorusundan
+ * çıkarılan mevzuat adı BUNA oturtulur; oturmuyorsa soru "müfredat dışı" sayılır.
+ *
+ * Başkan (23 Ağu): "diğere nasıl o kadar kanun olabilir, bu sene yayınlanan emirdeki
+ * konularda toplam 67 mevzuat var." Haklı: eski kitapçıklar bugün müfredatta olmayan
+ * mevzuattan da soruyor (Anayasa, Pasaport, Seçim Kanunu…) ve ayrıştırmada kırık adlar
+ * ("Görev ve Yetkileri Yönetmeliği") ayrı konu gibi görünüyordu. İkisi de ayıklanır.
+ */
+const sadeAd = (a) =>
+  String(a)
+    .toLocaleLowerCase('tr')
+    .replace(/sayılı|hakkında|hakkındaki|dair|ilişkin|kanunu?n?u?|yönetmeliğ?i?k?|khk/g, ' ')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim();
+
+let _mufredat = null;
+function mufredat() {
+  if (_mufredat) return _mufredat;
+  _mufredat = [];
+  for (const [id, ad] of KANUN_ADI) {
+    _mufredat.push({ id, ad, anahtar: konuAnahtari(ad), sade: sadeAd(ad), kelimeler: new Set(sadeAd(ad).split(' ').filter((w) => w.length > 3)) });
+  }
+  return _mufredat;
+}
+
+/** Verilen mevzuat adını müfredattaki kanuna oturtur; oturmazsa null. */
+export function mufredataOtur(ad) {
+  if (!ad) return null;
+  const anah = konuAnahtari(ad);
+  const liste = mufredat();
+  // 1) kanun numarası birebir
+  if (/^\d{3,4}$/.test(anah)) {
+    const bul = liste.find((m) => m.anahtar === anah);
+    return bul ? bul.ad : null;
+  }
+  // 2) ad benzerliği (ortak anlamlı kelime oranı)
+  const sade = sadeAd(ad);
+  const kel = new Set(sade.split(' ').filter((w) => w.length > 3));
+  if (!kel.size) return null;
+  let enIyi = null;
+  let enSkor = 0;
+  for (const m of liste) {
+    if (!m.kelimeler.size) continue;
+    let ortak = 0;
+    for (const w of kel) if (m.kelimeler.has(w)) ortak++;
+    const skor = ortak / Math.min(kel.size, m.kelimeler.size);
+    if (skor > enSkor) {
+      enSkor = skor;
+      enIyi = m;
+    }
+  }
+  return enSkor >= 0.7 && enIyi ? enIyi.ad : null;
 }
 
 /** Sorunun hangi mevzuata ait olduğunu bulur (kök → kaynak → law id sırasıyla). */

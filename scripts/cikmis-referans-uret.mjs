@@ -17,7 +17,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { konuAnahtari, mevzuatBul, NO_ADI } from './soru-standart.mjs';
+import { konuAnahtari, mevzuatBul, mufredataOtur, NO_ADI } from './soru-standart.mjs';
 import { BOYUTLAR, profilAnahtari, soruProfili } from './soru-profil.mjs';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -57,12 +57,18 @@ export function soruTipi(kok2) {
 
 /** Konu adı: bizim sözlükten kanonik ad; bulunamazsa kanun numarası; o da yoksa null. */
 function konuAdi(q) {
-  const ad = mevzuatBul(q.kok, '', null);
-  if (ad) return ad;
-  const no = q.kok.match(/\b(\d{3,4})\s*[Ss]ayılı/);
-  if (no) return NO_ADI.get(no[1]) ?? `${no[1]} sayılı Kanun`;
-  if (/Anayasa/.test(q.kok)) return 'Türkiye Cumhuriyeti Anayasası';
-  return null;
+  let ad = mevzuatBul(q.kok, '', null);
+  if (!ad) {
+    const no = q.kok.match(/\b(\d{3,4})\s*[Ss]ayılı/);
+    if (no) ad = NO_ADI.get(no[1]) ?? `${no[1]} sayılı Kanun`;
+    else if (/Anayasa/.test(q.kok)) ad = 'Türkiye Cumhuriyeti Anayasası';
+  }
+  if (!ad) return null;
+  // 2026 emrinde 67 mevzuat var. Eski kitapçıklar bugün müfredatta OLMAYAN mevzuattan da
+  // soruyor (Anayasa, Pasaport, Seçim Kanunu…); ayrıştırmadaki kırık adlar da ayrı konu
+  // gibi görünüyordu. Müfredata oturmayan soru ölçüye girmez, ayrı sayılır.
+  const oturan = mufredataOtur(ad);
+  return oturan ?? { disi: ad };
 }
 
 // Bu dosya hem KİTAPLIK (denetçi soruTipi'ni içeri alır) hem ÇALIŞTIRILABİLİR üreteç.
@@ -76,6 +82,8 @@ const birlesikKonu = new Map();
 const konuAd = new Map(); // anahtar -> gösterilecek tam ad
 const birlesikTip = new Map();
 let konusuz = 0;
+const mufredatDisi = new Map();
+let disiToplam = 0;
 const rutbeOlcu = new Map();
 
 const DOSYALAR = [...new Set(ham.map((q) => q.dosya))].sort();
@@ -92,6 +100,11 @@ for (const dosya of DOSYALAR) {
   const konu = new Map();
   for (const q of liste) {
     const ad = konuAdi(q);
+    if (ad && typeof ad !== 'string') {
+      mufredatDisi.set(ad.disi, (mufredatDisi.get(ad.disi) ?? 0) + 1);
+      disiToplam++;
+      continue;
+    }
     if (!ad) {
       konusuz++;
       continue;
@@ -143,6 +156,7 @@ const bilesikSay = new Map();
 let boyutToplam = 0;
 for (const dosya of DOSYALAR) {
   for (const q of mev.filter((x) => x.dosya === dosya)) {
+    if (typeof konuAdi(q) !== 'string') continue; // müfredat dışı soru ölçüye girmez
     const pr = soruProfili({ soru: q.kok, siklar: q.siklar });
     boyutToplam++;
     for (const b of BOYUTLAR) boyutSay[b].set(pr[b], (boyutSay[b].get(pr[b]) ?? 0) + 1);
@@ -167,6 +181,8 @@ const cikti = {
   toplamAyristirilan: ham.length,
   mevzuatSorusu: mev.length,
   konusuBulunamayan: konusuz,
+  mufredatDisiSoru: disiToplam,
+  mufredatDisi: [...mufredatDisi].sort((a, b) => b[1] - a[1]).map(([ad, adet]) => ({ ad, adet })),
   kitapciklar,
   konuAgirlik,
   tipAgirlik,
@@ -182,7 +198,9 @@ const cikti = {
 
 writeFileSync(join(kok, 'scripts/cikmis-referans.json'), JSON.stringify(cikti, null, 1), 'utf8');
 console.log('REFERANS ÜRETİLDİ — scripts/cikmis-referans.json');
-console.log(`  kitapçık: ${kitapciklar.length} · mevzuat sorusu: ${mev.length} · konusu çözülemeyen: ${konusuz}`);
+console.log(`  kitapçık: ${kitapciklar.length} · ayrıştırılan mevzuat sorusu: ${mev.length}`);
+console.log(`  MÜFREDAT İÇİ: ${kitapcikToplam} soru · müfredat DIŞI: ${disiToplam} (${mufredatDisi.size} ayrı mevzuat) · konusu çözülemeyen: ${konusuz}`);
+console.log('  müfredat dışı ilk 8: ' + [...mufredatDisi].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([a2, n]) => `${a2.slice(0, 26)} (${n})`).join(' · '));
 console.log('\n  EN AĞIR 15 KONU (kitapçıklarda, 100 soruda kaç soru):');
 for (const k of konuAgirlik.slice(0, 15)) {
   console.log(`    ${String(k.yuz).padStart(5)}  ${k.ad.slice(0, 62)}`);
