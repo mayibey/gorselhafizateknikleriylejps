@@ -64,8 +64,30 @@ const sadeMetin = (s) => String(s).toLocaleLowerCase('tr')
 /** law_id → soru[] (tekilleştirilmiş) */
 const havuz = new Map();
 const gorulenMetin = new Set();
+/**
+ * ELENEN SORU DESENLERİ (başkan, 23 Ağu):
+ *  - "genel denemede doğru/yanlış soruları olmaz" → 4'ten az şıklı soru alınmaz.
+ *  - "m.4'e göre diyor ama hangi kanunun 4'ü yazmıyor" → hangi mevzuattan söz ettiği
+ *    kendi metninden anlaşılmayan sorular alınmaz. Kaynak künyesi artık sınav sırasında
+ *    gösterilmediği için soru KENDİ BAŞINA anlaşılır olmak zorunda.
+ */
+const BELIRSIZ_BASLANGIC = [
+  /^["']?m\.\s?\d/i,
+  /^madde\s?\d/i,
+  /^yönetmeliğe göre/i,
+  /^yönetmelik m\./i,
+  /^yönetmeliğin m\./i,
+  /^kanun'?a göre/i,
+  /^bu (kanun|yönetmelik|tebliğ)/i,
+  /^anılan (kanun|yönetmelik)/i,
+  /^söz konusu (kanun|yönetmelik)/i,
+  /^ilgili mevzuata göre/i,
+  /^tebliğe göre/i,
+];
+
 function ekle(lawId, s) {
-  if (!s || !s.id || !Array.isArray(s.siklar) || s.siklar.length < 2) return;
+  if (!s || !s.id || !Array.isArray(s.siklar) || s.siklar.length < 4) return;
+  if (BELIRSIZ_BASLANGIC.some((r) => r.test(String(s.soru).trim()))) return;
   if (kullanilan.has(s.id) || karaListe.has(s.id)) return;
   if (typeof s.dogru !== 'number' || s.dogru < 0 || s.dogru >= s.siklar.length) return;
   const anahtar = sadeMetin(s.soru);

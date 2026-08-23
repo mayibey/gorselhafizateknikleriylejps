@@ -364,11 +364,9 @@ export default function SinavScreen() {
               <View style={[styles.fill, { width: `${((index + 1) / sorular.length) * 100}%` }]} />
             </View>
 
-            {soru!.kaynak ? (
-              <AppText variant="etiket" bold color="altinMetin">
-                {soru!.kaynak}
-              </AppText>
-            ) : null}
+            {/* 23 Ağu (başkan): soru sorulurken kaynak künyesi ("5070 m.4/b") GÖSTERİLMEZ —
+                kullanıcıya bir şey ifade etmiyor, üstelik cevabı ele veriyor. Kaynak, sınav
+                bitince yanlış özetinde (HataKart) duruyor; asıl işe yaradığı yer orası. */}
 
             <View style={styles.soruKart}>
               <AppText variant="altBaslik" bold>
