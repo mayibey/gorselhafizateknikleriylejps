@@ -21,6 +21,7 @@ import {
   type KartSoru,
   puanlaSinav,
   type SinavCevap,
+  genelDenemeSayisi,
   testSayisi,
   testSoruSayisi,
 } from '@/lib/sinav';
@@ -145,6 +146,30 @@ export default function SinavScreen() {
       kartlariYukle();
     })();
   }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo, genelBlok]);
+
+  /**
+   * SIRADAKİ SINAV (başkan, 23 Ağu: "deneme bitince sıradaki denemeye geç gelmiyor").
+   * Kanun sınavında bir sonraki test, genel denemede bir sonraki deneme. Yoksa null.
+   * router.replace ile aynı ekrana yeni parametrelerle gidilir; `yukle` bağımlılıkları
+   * (testNum/genelNo) değiştiği için sınav baştan kurulur — ayrı sıfırlama gerekmez.
+   */
+  const sonraki = (() => {
+    if (genelModu) {
+      const toplam = genelDenemeSayisi(genelBlok);
+      if (genelNo == null || genelNo + 1 > toplam) return null;
+      return {
+        etiket: 'Sıradaki deneme',
+        params: genelBlok
+          ? { genel: String(genelNo + 1), gblok: genelBlok }
+          : { genel: String(genelNo + 1) },
+      };
+    }
+    if (lawIdNum == null || testNum + 1 >= testSayisi(lawIdNum)) return null;
+    return {
+      etiket: `Sıradaki test (${testNum + 2}/${testSayisi(lawIdNum)})`,
+      params: { lawId: String(lawIdNum), test: String(testNum + 1) },
+    };
+  })();
 
   // "Tekrar çöz" → kaydı sil + YENİ karıştırılmış sınav (baştan).
   const yenidenBasla = useCallback(() => {
@@ -323,6 +348,10 @@ export default function SinavScreen() {
           onZayif={() => router.replace({ pathname: '/akis', params: { mod: 'zayif' } })}
           onTekrar={yenidenBasla}
           onBitir={() => router.back()}
+          sonraki={sonraki}
+          onSonraki={() =>
+            sonraki && router.replace({ pathname: '/sinav', params: sonraki.params })
+          }
           onKartGit={(s) => kartaGit(s)}
         />
       ) : (
@@ -538,6 +567,8 @@ function Sonuc({
   onTekrar,
   onBitir,
   onKartGit,
+  sonraki,
+  onSonraki,
 }: {
   cevaplar: SinavCevap[];
   sorular: KartSoru[];
@@ -549,6 +580,8 @@ function Sonuc({
   onTekrar: () => void;
   onBitir: () => void;
   onKartGit: (soru: KartSoru) => void;
+  sonraki: { etiket: string } | null;
+  onSonraki: () => void;
 }) {
   const [ozetAcik, setOzetAcik] = useState(false);
   const { dogru, toplam, yuzde, puan, toplamPuan } = puanlaSinav(cevaplar, sorular);
@@ -581,14 +614,17 @@ function Sonuc({
             ) : null}
           </>
         )}
+        {sonraki ? <SonrakiBtn etiket={sonraki.etiket} onPress={onSonraki} /> : null}
         <View style={styles.sonucButonlar}>
           <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onTekrar}>
             <AppText variant="govde" bold color="lacivert">
               Tekrar çöz
             </AppText>
           </Pressable>
-          <Pressable style={({ pressed }) => [styles.sonucBtn, pressed && styles.pressed]} onPress={onBitir}>
-            <AppText variant="govde" bold color="beyaz">
+          <Pressable
+            style={({ pressed }) => [sonraki ? styles.sonucBtnIkincil : styles.sonucBtn, pressed && styles.pressed]}
+            onPress={onBitir}>
+            <AppText variant="govde" bold color={sonraki ? 'lacivert' : 'beyaz'}>
               Bitir
             </AppText>
           </Pressable>
@@ -651,6 +687,9 @@ function Sonuc({
         </>
       ) : null}
 
+      {/* Başkan (23 Ağu): sınav bitince sıradakine geçiş yoktu; ana eylem olarak eklendi. */}
+      {sonraki ? <SonrakiBtn etiket={sonraki.etiket} onPress={onSonraki} /> : null}
+
       <View style={styles.sonucButonlar}>
         <Pressable style={({ pressed }) => [styles.sonucBtnIkincil, pressed && styles.pressed]} onPress={onTekrar}>
           <AppText variant="govde" bold color="lacivert">
@@ -667,7 +706,29 @@ function Sonuc({
   );
 }
 
+/** Sonuç ekranının ana eylemi: bir sonraki test/denemeye geç. */
+function SonrakiBtn({ etiket, onPress }: { etiket: string; onPress: () => void }) {
+  return (
+    <Pressable style={({ pressed }) => [styles.sonrakiBtn, pressed && styles.pressed]} onPress={onPress}>
+      <AppText variant="govde" bold color="beyaz">
+        {etiket}
+      </AppText>
+      <MaterialCommunityIcons name="arrow-right" size={20} color={Palette.beyaz} />
+    </Pressable>
+  );
+}
+
 const styles = StyleSheet.create({
+  sonrakiBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.two,
+    backgroundColor: Palette.lacivert,
+    borderRadius: Radius.m,
+    paddingVertical: 14,
+    paddingHorizontal: Spacing.three,
+  },
   safe: {
     flex: 1,
     backgroundColor: Palette.kremZemin,
