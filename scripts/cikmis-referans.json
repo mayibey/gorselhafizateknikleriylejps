@@ -3,8 +3,8 @@
  "kaynak": "9 çıkmış JSPS kitapçığı (scripts/veri/cikmis-sinav-sorulari.json)",
  "toplamAyristirilan": 2336,
  "mevzuatSorusu": 1760,
- "konusuBulunamayan": 77,
- "mufredatDisiSoru": 395,
+ "konusuBulunamayan": 88,
+ "mufredatDisiSoru": 389,
  "mufredatDisi": [
   {
    "ad": "Türkiye Cumhuriyeti Anayasası",
@@ -175,10 +175,6 @@
    "adet": 3
   },
   {
-   "ad": "Aşağıdakilerden hangisi İnsan Ticaretiyle Mücadele ve Mağdurların Korunması Hakkında Yönetmelik",
-   "adet": 2
-  },
-  {
    "ad": "Yabancıların Çalışma İzinleri Hakkında Kanunun Uygulama Yönetmelik",
    "adet": 2
   },
@@ -204,10 +200,6 @@
   },
   {
    "ad": "2692 sayılı Sahil Güvenlik Komutanlığı Kanunu",
-   "adet": 2
-  },
-  {
-   "ad": "Aşağıdakilerden hangisi İnsan Ticaretiy- le Mücadele ve Mağdurlarının Korun- ması Hakkında Yönetmeliği",
    "adet": 2
   },
   {
@@ -247,15 +239,7 @@
    "adet": 1
   },
   {
-   "ad": "Aşağıdakilerden hangisi Karayolu Taşıma Yönetmeliği",
-   "adet": 1
-  },
-  {
    "ad": "Sayılı Kıyı Kanununun Uygulanmasına Dair Yönetmelik",
-   "adet": 1
-  },
-  {
-   "ad": "Kanun ve bu Yönetmelik",
    "adet": 1
   },
   {
@@ -385,10 +369,6 @@
      2
     ],
     [
-     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
-     2
-    ],
-    [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
      2
     ],
@@ -438,6 +418,10 @@
     ],
     [
      "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
      1
     ],
     [
@@ -1881,10 +1865,6 @@
      2
     ],
     [
-     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
-     2
-    ],
-    [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
      2
     ],
@@ -1934,6 +1914,10 @@
     ],
     [
      "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
      1
     ],
     [
@@ -2297,10 +2281,6 @@
      2
     ],
     [
-     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
-     2
-    ],
-    [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
      2
     ],
@@ -2342,6 +2322,10 @@
     ],
     [
      "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
      1
     ],
     [
@@ -3305,10 +3289,6 @@
      2
     ],
     [
-     "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
-     2
-    ],
-    [
      "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
      2
     ],
@@ -3354,6 +3334,10 @@
     ],
     [
      "2893 sayılı Türk Bayrağı Kanunu",
+     1
+    ],
+    [
+     "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
      1
     ],
     [
@@ -4293,10 +4277,6 @@
      1
     ],
     [
-     "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
-     1
-    ],
-    [
      "5442 sayılı İl İdaresi Kanunu",
      1
     ],
@@ -4906,73 +4886,73 @@
    "anahtar": "5237",
    "ad": "5237 sayılı Türk Ceza Kanunu",
    "adet": 91,
-   "yuz": 7.1
+   "yuz": 7.13
   },
   {
    "anahtar": "2803",
    "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
    "adet": 89,
-   "yuz": 6.94
+   "yuz": 6.97
   },
   {
    "anahtar": "6284",
    "ad": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
    "adet": 65,
-   "yuz": 5.07
+   "yuz": 5.09
   },
   {
    "anahtar": "7068",
    "ad": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
    "adet": 54,
-   "yuz": 4.21
+   "yuz": 4.23
   },
   {
    "anahtar": "5326",
    "ad": "5326 sayılı Kabahatler Kanunu",
    "adet": 46,
-   "yuz": 3.59
+   "yuz": 3.6
   },
   {
    "anahtar": "6136",
    "ad": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
    "adet": 46,
-   "yuz": 3.59
+   "yuz": 3.6
   },
   {
    "anahtar": "5271",
    "ad": "5271 sayılı Ceza Muhakemesi Kanunu",
    "adet": 46,
-   "yuz": 3.59
+   "yuz": 3.6
   },
   {
    "anahtar": "3713",
    "ad": "3713 sayılı Terörle Mücadele Kanunu",
    "adet": 42,
-   "yuz": 3.28
+   "yuz": 3.29
   },
   {
    "anahtar": "2918",
    "ad": "2918 sayılı Karayolları Trafik Kanunu",
    "adet": 35,
-   "yuz": 2.73
+   "yuz": 2.74
   },
   {
    "anahtar": "jandarmavesahilgüvenlikpersonelininhizmetesa",
    "ad": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
    "adet": 34,
-   "yuz": 2.65
-  },
-  {
-   "anahtar": "jandarmagenelkomutanlığıvesahilgüvenlikkomut",
-   "ad": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
-   "adet": 33,
-   "yuz": 2.57
+   "yuz": 2.66
   },
   {
    "anahtar": "5442",
    "ad": "5442 sayılı İl İdaresi Kanunu",
    "adet": 30,
-   "yuz": 2.34
+   "yuz": 2.35
+  },
+  {
+   "anahtar": "jandarmagenelkomutanlığıvesahilgüvenlikkomut",
+   "ad": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+   "adet": 30,
+   "yuz": 2.35
   },
   {
    "anahtar": "5607",
@@ -4984,19 +4964,19 @@
    "anahtar": "2559",
    "ad": "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
    "adet": 26,
-   "yuz": 2.03
+   "yuz": 2.04
   },
   {
    "anahtar": "1774",
    "ad": "1774 sayılı Kimlik Bildirme Kanunu",
    "adet": 24,
-   "yuz": 1.87
+   "yuz": 1.88
   },
   {
    "anahtar": "2863",
    "ad": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu",
    "adet": 23,
-   "yuz": 1.79
+   "yuz": 1.8
   },
   {
    "anahtar": "sözleşmelisubayveastsubayyönetmeliği",
@@ -5038,49 +5018,49 @@
    "anahtar": "7201",
    "ad": "7201 sayılı Tebligat Kanunu",
    "adet": 20,
-   "yuz": 1.56
+   "yuz": 1.57
   },
   {
    "anahtar": "2935",
    "ad": "2935 sayılı Olağanüstü Hal Kanunu",
    "adet": 20,
-   "yuz": 1.56
+   "yuz": 1.57
   },
   {
    "anahtar": "resmîyazışmalardauygulanacakusulveesaslarhak",
    "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
    "adet": 19,
-   "yuz": 1.48
+   "yuz": 1.49
   },
   {
    "anahtar": "5070",
    "ad": "5070 sayılı Elektronik İmza Kanunu",
    "adet": 18,
-   "yuz": 1.4
-  },
-  {
-   "anahtar": "bilgiedinmehakkıkanunununuygulanmasınailişki",
-   "ad": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
-   "adet": 18,
-   "yuz": 1.4
+   "yuz": 1.41
   },
   {
    "anahtar": "2521",
    "ad": "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
    "adet": 18,
-   "yuz": 1.4
+   "yuz": 1.41
   },
   {
    "anahtar": "5199",
    "ad": "5199 sayılı Hayvanları Koruma Kanunu",
    "adet": 18,
-   "yuz": 1.4
+   "yuz": 1.41
   },
   {
    "anahtar": "adlikollukyönetmeliği",
    "ad": "Adli Kolluk Yönetmeliği",
    "adet": 18,
-   "yuz": 1.4
+   "yuz": 1.41
+  },
+  {
+   "anahtar": "bilgiedinmehakkıkanunununuygulanmasınailişki",
+   "ad": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+   "adet": 17,
+   "yuz": 1.33
   },
   {
    "anahtar": "kişiselverilerinsilinmesiyokedilmesiveyaanon",
@@ -5115,20 +5095,20 @@
   {
    "anahtar": "5188",
    "ad": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
-   "adet": 15,
-   "yuz": 1.17
+   "adet": 14,
+   "yuz": 1.1
   },
   {
    "anahtar": "3091",
    "ad": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
    "adet": 13,
-   "yuz": 1.01
+   "yuz": 1.02
   },
   {
    "anahtar": "6458",
    "ad": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
    "adet": 13,
-   "yuz": 1.01
+   "yuz": 1.02
   },
   {
    "anahtar": "6222",
@@ -5200,19 +5180,19 @@
    "anahtar": "4207",
    "ad": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
    "adet": 8,
-   "yuz": 0.62
+   "yuz": 0.63
   },
   {
    "anahtar": "1380",
    "ad": "1380 sayılı Su Ürünleri Kanunu",
    "adet": 8,
-   "yuz": 0.62
+   "yuz": 0.63
   },
   {
    "anahtar": "çocukkorumakanunununuygulanmasınailişkinusul",
    "ad": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
    "adet": 8,
-   "yuz": 0.62
+   "yuz": 0.63
   },
   {
    "anahtar": "6831",
@@ -5267,77 +5247,77 @@
   {
    "ad": "olumsuz",
    "adet": 504,
-   "yuz": 39.31
+   "yuz": 39.47
   },
   {
    "ad": "makam",
    "adet": 244,
-   "yuz": 19.03
+   "yuz": 19.11
   },
   {
    "ad": "duz",
-   "adet": 187,
-   "yuz": 14.59
+   "adet": 182,
+   "yuz": 14.25
   },
   {
    "ad": "ceza",
    "adet": 161,
-   "yuz": 12.56
+   "yuz": 12.61
   },
   {
    "ad": "bosluk",
    "adet": 67,
-   "yuz": 5.23
+   "yuz": 5.25
   },
   {
    "ad": "olumlu",
    "adet": 47,
-   "yuz": 3.67
+   "yuz": 3.68
   },
   {
    "ad": "onculu",
    "adet": 44,
-   "yuz": 3.43
+   "yuz": 3.45
   },
   {
    "ad": "tanim",
    "adet": 28,
-   "yuz": 2.18
+   "yuz": 2.19
   }
  ],
  "boyutlar": {
   "yon": [
    {
     "ad": "olumlu",
-    "adet": 767,
-    "yuz": 59.83
+    "adet": 762,
+    "yuz": 59.67
    },
    {
     "ad": "olumsuz",
     "adet": 515,
-    "yuz": 40.17
+    "yuz": 40.33
    }
   ],
   "bicim": [
    {
     "ad": "duz",
-    "adet": 1033,
+    "adet": 1029,
     "yuz": 80.58
    },
    {
     "ad": "alinti",
-    "adet": 134,
-    "yuz": 10.45
+    "adet": 133,
+    "yuz": 10.42
    },
    {
     "ad": "bosluk",
     "adet": 68,
-    "yuz": 5.3
+    "yuz": 5.32
    },
    {
     "ad": "onculu",
     "adet": 46,
-    "yuz": 3.59
+    "yuz": 3.6
    },
    {
     "ad": "vaka",
@@ -5348,55 +5328,55 @@
   "bilgi": [
    {
     "ad": "genel",
-    "adet": 478,
-    "yuz": 37.29
+    "adet": 474,
+    "yuz": 37.12
    },
    {
     "ad": "ceza",
     "adet": 295,
-    "yuz": 23.01
+    "yuz": 23.1
    },
    {
     "ad": "makam",
     "adet": 218,
-    "yuz": 17
+    "yuz": 17.07
    },
    {
     "ad": "sure",
     "adet": 137,
-    "yuz": 10.69
+    "yuz": 10.73
    },
    {
     "ad": "usul",
-    "adet": 76,
-    "yuz": 5.93
+    "adet": 75,
+    "yuz": 5.87
    },
    {
     "ad": "kapsam",
     "adet": 49,
-    "yuz": 3.82
+    "yuz": 3.84
    },
    {
     "ad": "kavram",
     "adet": 29,
-    "yuz": 2.26
+    "yuz": 2.27
    }
   ],
   "sik": [
    {
     "ad": "orta",
-    "adet": 451,
-    "yuz": 35.18
+    "adet": 449,
+    "yuz": 35.16
    },
    {
     "ad": "uzun",
-    "adet": 429,
-    "yuz": 33.46
+    "adet": 427,
+    "yuz": 33.44
    },
    {
     "ad": "kisa",
-    "adet": 400,
-    "yuz": 31.2
+    "adet": 399,
+    "yuz": 31.25
    },
    {
     "ad": "kombinasyon",
@@ -5407,18 +5387,18 @@
   "boy": [
    {
     "ad": "orta",
-    "adet": 599,
-    "yuz": 46.72
+    "adet": 595,
+    "yuz": 46.59
    },
    {
     "ad": "uzun",
-    "adet": 347,
-    "yuz": 27.07
+    "adet": 346,
+    "yuz": 27.09
    },
    {
     "ad": "kisa",
     "adet": 336,
-    "yuz": 26.21
+    "yuz": 26.31
    }
   ]
  },
@@ -5426,67 +5406,67 @@
   {
    "ad": "olumsuz|genel",
    "adet": 295,
-   "yuz": 23.01
+   "yuz": 23.1
   },
   {
    "ad": "olumlu|ceza",
    "adet": 188,
-   "yuz": 14.66
+   "yuz": 14.72
   },
   {
    "ad": "olumlu|genel",
-   "adet": 183,
-   "yuz": 14.27
+   "adet": 179,
+   "yuz": 14.02
   },
   {
    "ad": "olumlu|makam",
    "adet": 170,
-   "yuz": 13.26
+   "yuz": 13.31
   },
   {
    "ad": "olumlu|sure",
    "adet": 124,
-   "yuz": 9.67
+   "yuz": 9.71
   },
   {
    "ad": "olumsuz|ceza",
    "adet": 107,
-   "yuz": 8.35
+   "yuz": 8.38
   },
   {
    "ad": "olumsuz|makam",
    "adet": 48,
-   "yuz": 3.74
+   "yuz": 3.76
   },
   {
    "ad": "olumlu|usul",
-   "adet": 46,
-   "yuz": 3.59
+   "adet": 45,
+   "yuz": 3.52
   },
   {
    "ad": "olumlu|kapsam",
    "adet": 30,
-   "yuz": 2.34
+   "yuz": 2.35
   },
   {
    "ad": "olumsuz|usul",
    "adet": 30,
-   "yuz": 2.34
+   "yuz": 2.35
   },
   {
    "ad": "olumlu|kavram",
    "adet": 26,
-   "yuz": 2.03
+   "yuz": 2.04
   },
   {
    "ad": "olumsuz|kapsam",
    "adet": 19,
-   "yuz": 1.48
+   "yuz": 1.49
   },
   {
    "ad": "olumsuz|sure",
    "adet": 13,
-   "yuz": 1.01
+   "yuz": 1.02
   },
   {
    "ad": "olumsuz|kavram",

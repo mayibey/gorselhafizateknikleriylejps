@@ -245,7 +245,11 @@ export default function SinavScreen() {
   function kartHedefi(soru: KartSoru): { lawId: number; kartId?: number } | null {
     const kartlar = kartlarRef.current;
     if (!kartlar || kartlar.length === 0) return null;
-    const kanunId = soruKanunId(soru.soru, soru.kaynak ?? '', kartlar);
+    // Deneme soruları kanun kimliğini ÜSTÜNDE taşır (üreteç yazıyor) → tahmin yok.
+    // Kanun talimlerinde zaten ekranın law_id'si var. Kalanlarda metinden çıkarılır.
+    const kanunId =
+      (soru as { lawId?: number }).lawId ??
+      (genelModu ? soruKanunId(soru.soru, soru.kaynak ?? '', kartlar) : lawIdNum);
     const havuz = kanunId != null ? kartlar.filter((k) => k.law_id === kanunId) : [];
     if (havuz.length > 0) {
       const ids = eslesenKartIdleri(soru.kaynak, havuz);

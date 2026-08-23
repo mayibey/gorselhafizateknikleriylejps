@@ -23,7 +23,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
-import { konuAnahtari, mevzuatBul, veriOku } from './soru-standart.mjs';
+import { denetle, konuAnahtari, mevzuatBul, mufredataOtur, veriOku } from './soru-standart.mjs';
 import { profilAnahtari, soruProfili } from './soru-profil.mjs';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -66,7 +66,14 @@ function ekle(law, s) {
   const anahtar = sadeMetin(s.soru);
   if (anahtar.length < 25 || gorulenMetin.has(anahtar)) return;
   gorulenMetin.add(anahtar);
-  const ad = mevzuatBul(s.soru, s.kaynak, law);
+  // TAM DENETİM: havuz süzgeci ayrı yazılmıştı ve bankadaki denetimden GEÇMEYEN
+  // sorular denemeye sızabiliyordu (başkan: "kanunu olmayan sorumuz mu var?").
+  // Artık deneme havuzu da soru-standart.mjs denetle()'sinden geçer.
+  const std = denetle(s, law);
+  if (std.at) return;
+  const ad = mevzuatBul(std.soru ?? s.soru, s.kaynak, law);
+  // MÜFREDAT DIŞI mevzuat denemeye girmez (2026 emrinde 67 mevzuat var).
+  if (!ad || !mufredataOtur(ad)) return;
   havuz.push({
     law,
     konu: ad ? konuAnahtari(ad) : null,
@@ -74,7 +81,10 @@ function ekle(law, s) {
     sik: soruProfili(s).sik,
     bicim: soruProfili(s).bicim,
     alindi: false,
-    q: { id: s.id, soru: s.soru, siklar: s.siklar, dogru: s.dogru, aciklama: s.aciklama ?? '', kaynak: s.kaynak ?? '', zorluk: s.zorluk ?? 'orta', kartId: '' },
+    // lawId SORUNUN ÜSTÜNDE taşınır: "ilgili kartı çalış" uygulamada kanun TAHMİN
+    // etmeye çalışıyordu ve adı metninde geçmeyen sorularda bulamıyordu (başkan:
+    // "kanunu olmayan sorumuz mu var?"). Artık tahmin yok, kimlik hazır.
+    q: { id: s.id, lawId: law, soru: std.soru ?? s.soru, siklar: s.siklar, dogru: s.dogru, aciklama: s.aciklama ?? '', kaynak: s.kaynak ?? '', zorluk: s.zorluk ?? 'orta', kartId: '' },
   });
 }
 for (const [law, liste] of Object.entries(KART)) for (const s of liste) ekle(Number(law), s);
@@ -221,6 +231,8 @@ for (const t of TAKIMLAR) {
 /** Genel deneme sorusu (kart-sorulari KartSoru + kartId yönlendirme). */
 export type GenelSoru = {
   id: string;
+  /** Sorunun kanunu (seed law_id) — "ilgili kartı çalış" tahmin yapmasın diye. */
+  lawId?: number;
   soru: string;
   siklar: string[];
   dogru: number;

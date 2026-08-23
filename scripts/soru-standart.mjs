@@ -160,7 +160,15 @@ const KOPUK_ATIF = /\s-\s?[a-zçğıöşü]\b/;
 // ezberletiyor; gerçek sınavda bu kalıp yok.
 const COK_MADDE = /maddeler[iı]\s+(birlikte|bir\s+arada)|maddeler[iı]n[iı]?n?\s+karşılaştır|birlikte değerlendirildiğinde/i;
 
+// Mevzuat metninden kopyalanan EDİTÖRYAL NOT ("(Değişik:RG-21/8/2021-31575) hükmüne
+// göre…") soru köküne sızmış. Sınavda böyle bir şey yok; soru da anlaşılmıyor.
+const EDITORYAL = /\((\s*)(değişik|ek|mülga)\s*:/i;
+// "Aynı Yönetmeliğin bütünü dikkate alındığında…" — hangi yönetmelik olduğu yok.
+const AYNI_MEVZUAT = /ayn[ıi]\s+(yönetmeli|kanun|tebliğ|yönerge)/i;
+
 function ezberSorusuMu(q) {
+  if (EDITORYAL.test(String(q.soru))) return true;
+  if (AYNI_MEVZUAT.test(String(q.soru))) return true;
   const k = String(q.soru);
   if (BENT_SORU.test(k)) return true;
   if (KOPUK_ATIF.test(k)) return true;
@@ -187,11 +195,17 @@ function tarihceMi(q) {
 // neyin yönetmeliği olduğunu söylemiyor — o da geçersiz. Geçersizse soru kenara kalkar.
 const AD_SONU = /(Kanunu|Kanun|Yönetmeliği|Yönetmelik|Yönergesi|Yönerge|Tebliği|Tebliğ|Anayasası|Anayasa|Genelgesi|Kararname|Kararnamesi|Esasları|Rehberi|Kuralları)$/;
 const AD_GENEL = /^(bu\s+)?(uygulama\s+)?(yönetmeliğ\w*|yönetmelik|yönerge\w*|tebliğ\w*|kanun\w*|esaslar\w*)$/i;
+// Soru cümlesinin kendisi "ad" sanılmasın: AD_DESEN'in başındaki büyük harf + esnek
+// gövde, "Aşağıdakilerden hangisi Yönetmelikte…" gibi açılışları da yakalıyordu ve
+// ortaya "Aşağıdakilerden hangisi Yönetmelik" diye sahte bir mevzuat adı çıkıyordu.
+const AD_SORU_KELIMESI = /aşağıdaki|hangisi|hangileri|yukarıdaki|aynı\s|söz konusu|ilgili mevzuat|bu kanun|bu yönetmelik/i;
+
 function adGecerliMi(ad) {
   if (!ad) return false;
   const t = ad.trim();
   if (!AD_SONU.test(t)) return false;
   if (AD_GENEL.test(t)) return false;
+  if (AD_SORU_KELIMESI.test(t)) return false;
   return /\d{3,4}\s*[Ss]ayılı/.test(t) || t.split(/\s+/).length >= 2;
 }
 
