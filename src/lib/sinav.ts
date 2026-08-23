@@ -26,8 +26,15 @@ function bank(): Record<number, KartSoru[]> {
 }
 let _genelM: GenelDeneme[] | null = null;
 let _genelB: GenelDeneme[] | null = null;
-/** Genel deneme kaynağı (lazy; blok'a göre): müşterek (3) veya branş (5). */
-function genelKaynak(blok?: 'brans'): GenelDeneme[] {
+let _genelK: GenelDeneme[] | null = null;
+/** Genel deneme takımı: müşterek (varsayılan) · branş · karma. */
+export type GenelBlok = 'brans' | 'karma';
+/** Genel deneme kaynağı (lazy; blok'a göre): müşterek (3) · branş (5) · karma (5×100). */
+function genelKaynak(blok?: GenelBlok): GenelDeneme[] {
+  if (blok === 'karma')
+    return (_genelK ??= (
+      require('../assets/genel-denemeler-karma') as { GENEL_DENEMELER_KARMA: GenelDeneme[] }
+    ).GENEL_DENEMELER_KARMA);
   if (blok === 'brans')
     return (_genelB ??= (
       require('../assets/genel-denemeler-brans') as { GENEL_DENEMELER_BRANS: GenelDeneme[] }
@@ -74,19 +81,19 @@ export function getSinavSorulari(lawId: number, rastgele: () => number = Math.ra
 // --- GENEL DENEMELER (Tatbikat) — karma, çok-kanun; "Genel Deneme 1/2/3" ---
 
 /** Kaç genel deneme var (Tatbikat listesi). blok='brans' → branş denemeleri. */
-export function genelDenemeSayisi(blok?: 'brans'): number {
+export function genelDenemeSayisi(blok?: GenelBlok): number {
   return genelKaynak(blok).length;
 }
 
 /** Genel deneme meta bilgisi (no/başlık/soru sayısı). blok='brans' → branş denemeleri. */
-export function genelDenemeler(blok?: 'brans'): { no: number; baslik: string; soruSayisi: number }[] {
+export function genelDenemeler(blok?: GenelBlok): { no: number; baslik: string; soruSayisi: number }[] {
   return genelKaynak(blok).map((d) => ({ no: d.no, baslik: d.baslik, soruSayisi: d.sorular.length }));
 }
 
 /** Bir genel denemenin sorularını (karışık) döndürür. GenelSoru KartSoru-uyumlu (+ kartId). */
 export function getGenelDenemeSorulari(
   no: number,
-  blok?: 'brans',
+  blok?: GenelBlok,
   rastgele: () => number = Math.random,
 ): KartSoru[] {
   const d = genelKaynak(blok).find((x) => x.no === no);
@@ -95,7 +102,7 @@ export function getGenelDenemeSorulari(
 }
 
 /** Genel denemede kaç soru var (yoksa 0). blok='brans' → branş denemeleri. */
-export function genelDenemeSoruSayisi(no: number, blok?: 'brans'): number {
+export function genelDenemeSoruSayisi(no: number, blok?: GenelBlok): number {
   return genelKaynak(blok).find((x) => x.no === no)?.sorular.length ?? 0;
 }
 

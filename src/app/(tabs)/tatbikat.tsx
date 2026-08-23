@@ -52,7 +52,9 @@ function TatbikatIcerik() {
   const { mod: modParam } = useLocalSearchParams<{ mod?: string }>();
   const [mod, setMod] = useState<'talim' | 'tatbikat'>(modParam === 'tatbikat' ? 'tatbikat' : 'talim');
   // Üst seçim: Müşterek (mevcut) / Branş (içerik güncellemelerle eklenecek → "hazırlanıyor").
-  const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
+  // 23 Ağu (başkan: "hem müşterek hem branş konulardan 5 deneme, 100 soru"): üçüncü takım
+  // KARMA — yalnız Tatbikat'ta görünür (Talim'de kanun listesi müşterek/branş ikilisiyle çalışır).
+  const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma'>('müşterek');
   const { kanunErisilebilir } = useUyelik();
   const [hata, setHata] = useState(false);
 
@@ -118,10 +120,10 @@ function TatbikatIcerik() {
     router.push({ pathname: '/sinav', params: { lawId: String(law.id), test: String(test) } });
   }
 
-  function genelDenemeGit(no: number, brans = false) {
+  function genelDenemeGit(no: number, takim: 'müşterek' | 'brans' | 'karma' = 'müşterek') {
     router.push({
       pathname: '/sinav',
-      params: brans ? { genel: String(no), gblok: 'brans' } : { genel: String(no) },
+      params: takim === 'müşterek' ? { genel: String(no) } : { genel: String(no), gblok: takim },
     });
   }
 
@@ -132,7 +134,10 @@ function TatbikatIcerik() {
     <Screen title="Talim">
       {/* ÜST SEÇİM: Müşterek (mevcut) / Branş (içerik hazırlanıyor, güncellemelerle eklenir). */}
       <View style={styles.blokSecici}>
-        {(['müşterek', 'brans'] as const).map((b) => {
+        {(mod === 'tatbikat'
+          ? (['müşterek', 'brans', 'karma'] as const)
+          : (['müşterek', 'brans'] as const)
+        ).map((b) => {
           const aktif = blok === b;
           return (
             <Pressable
@@ -140,14 +145,16 @@ function TatbikatIcerik() {
               onPress={() => setBlok(b)}
               style={[styles.blokSeg, aktif && styles.blokSegAktif]}
               accessibilityRole="button"
-              accessibilityLabel={b === 'müşterek' ? 'Müşterek sınavlar' : 'Branş sınavları'}>
+              accessibilityLabel={
+                b === 'müşterek' ? 'Müşterek sınavlar' : b === 'brans' ? 'Branş sınavları' : 'Karma genel denemeler'
+              }>
               <MaterialCommunityIcons
-                name={b === 'müşterek' ? 'account-group' : 'medal-outline'}
+                name={b === 'müşterek' ? 'account-group' : b === 'brans' ? 'medal-outline' : 'shuffle-variant'}
                 size={16}
                 color={aktif ? Palette.beyaz : Palette.solukMetin}
               />
               <AppText variant="etiket" bold color={aktif ? 'beyaz' : 'anaMetin'}>
-                {b === 'müşterek' ? 'Müşterek' : 'Branş'}
+                {b === 'müşterek' ? 'Müşterek' : b === 'brans' ? 'Branş' : 'Karma'}
               </AppText>
             </Pressable>
           );
@@ -164,7 +171,10 @@ function TatbikatIcerik() {
           return (
             <Pressable
               key={m}
-              onPress={() => setMod(m)}
+              onPress={() => {
+                setMod(m);
+                if (m === 'talim' && blok === 'karma') setBlok('müşterek'); // Talim'de karma takım yok
+              }}
               style={[styles.blokSeg, aktif && styles.blokSegAktif]}
               accessibilityRole="button"
               accessibilityLabel={m === 'talim' ? 'Talim — kanun denemeleri' : 'Tatbikat — genel denemeler'}>
@@ -193,20 +203,22 @@ function TatbikatIcerik() {
         ) : (
         <>
           <AppText variant="kucuk" color="solukMetin">
-            {blok === 'brans'
-              ? 'Branş genel denemeleri 5 sınav × 50 karma sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
-              : 'Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'}
+            {blok === 'karma'
+              ? 'Karma denemeler müşterek + branş konularından 100 sorudur (50 + 50) — gerçek sınav uzunluğu. Yanlışların zayıf mevzilerine düşer.'
+              : blok === 'brans'
+                ? 'Branş genel denemeleri 5 sınav × 50 karma sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
+                : 'Genel denemeler 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'}
           </AppText>
-          {genelDenemeler(blok === 'brans' ? 'brans' : undefined).map((d) => (
+          {genelDenemeler(blok === 'müşterek' ? undefined : blok).map((d) => (
             <GenelDenemeSatir
               key={d.no}
               deneme={d}
-              // Sanal law_id: branş -(100+no), müşterek -no (sinav.tsx ile birebir).
-              sonuc={sonucMap.get(blok === 'brans' ? -(100 + d.no) : -d.no)?.get(0)}
+              // Sanal law_id: karma -(200+no), branş -(100+no), müşterek -no (sinav.tsx ile birebir).
+              sonuc={sonucMap
+                .get(blok === 'karma' ? -(200 + d.no) : blok === 'brans' ? -(100 + d.no) : -d.no)
+                ?.get(0)}
               kilitli={genelKilitli}
-              onGit={() =>
-                genelKilitli ? router.push('/paywall') : genelDenemeGit(d.no, blok === 'brans')
-              }
+              onGit={() => (genelKilitli ? router.push('/paywall') : genelDenemeGit(d.no, blok))}
             />
           ))}
         </>

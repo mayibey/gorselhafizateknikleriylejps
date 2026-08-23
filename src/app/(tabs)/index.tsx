@@ -1040,7 +1040,7 @@ export default function KarargahScreen() {
             </View>
             <View style={styles.tekrarEtKose}>
               <AppText variant="etiket" bold color="altinParlak" style={styles.tekrarBaslik2}>
-                3 DENEME
+                DENEMELER
               </AppText>
               <MaterialCommunityIcons name="arrow-right" size={16} color={Palette.altinParlak} />
             </View>

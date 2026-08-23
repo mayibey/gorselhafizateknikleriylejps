@@ -54,14 +54,17 @@ export default function SinavScreen() {
     genel?: string;
     gblok?: string;
   }>();
-  // GENEL DENEME (Tatbikat): genel=1/2/3 (müşterek) veya gblok=brans ile 1..5 (branş).
+  // GENEL DENEME (Tatbikat): genel=1/2/3 (müşterek) · gblok=brans 1..5 (branş) · gblok=karma 1..5 (karma, 100 soru).
   // Sanal law_id: müşterek -genelNo (-1..-3), branş -(100+genelNo) (-101..-105) → sonuç/skor
   // AYRIŞIR (getSinavSonuclari law_id<0 ile genel deneme sayar; iki blok çakışmaz).
-  const genelBrans = gblok === 'brans';
+  const genelBlok = gblok === 'brans' || gblok === 'karma' ? (gblok as 'brans' | 'karma') : undefined;
+  const genelBrans = genelBlok === 'brans';
+  // Karma denemenin sanal law_id'si -(200+no) (-201..-205) → müşterek/branş sonuçlarına karışmaz.
+  const genelKarma = genelBlok === 'karma';
   const genelNo = genel != null && genel !== '' ? Number(genel) : null;
   const genelModu = genelNo != null && !Number.isNaN(genelNo);
   const lawIdNum = genelModu
-    ? -(genelBrans ? 100 + genelNo! : genelNo!)
+    ? -(genelKarma ? 200 + genelNo! : genelBrans ? 100 + genelNo! : genelNo!)
     : lawId != null && lawId !== ''
       ? Number(lawId)
       : null;
@@ -130,7 +133,7 @@ export default function SinavScreen() {
         setSecimler(kayit.secimler);
         setIndex(Math.min(kayit.index, kayit.sorular.length));
       } else {
-        const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBrans ? 'brans' : undefined) : getTestSorulari(lawIdNum, testNum);
+        const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok) : getTestSorulari(lawIdNum, testNum);
         if (liste.length === 0) {
           setBos(true);
           return;
@@ -141,18 +144,18 @@ export default function SinavScreen() {
       }
       kartlariYukle();
     })();
-  }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo, genelBrans]);
+  }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo, genelBlok]);
 
   // "Tekrar çöz" → kaydı sil + YENİ karıştırılmış sınav (baştan).
   const yenidenBasla = useCallback(() => {
     if (lawIdNum == null) return;
     void sinavIlerlemeSil(lawIdNum, testNum);
-    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBrans ? 'brans' : undefined) : getTestSorulari(lawIdNum, testNum);
+    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok) : getTestSorulari(lawIdNum, testNum);
     setSorular(liste);
     setSecimler(new Array(liste.length).fill(null));
     setIndex(0);
     kaydedildiRef.current = false;
-  }, [lawIdNum, testNum, genelModu, genelNo, genelBrans]);
+  }, [lawIdNum, testNum, genelModu, genelNo, genelBlok]);
 
   useEffect(() => {
     yukle();
