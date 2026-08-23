@@ -43,6 +43,15 @@ export function veriOku(dosya, ad) {
 // --- kanun adları: seed.ts (kart bankası) + duello-kanunlar.ts (düello, 135 mevzuat) ---
 // Düello listesinde müşterek kanunlar KISALTMALI ("TCK", "İzin Yön.") → onlarda seed adı esas.
 // Bazı adlar TAMAMI BÜYÜK yazılmış; soru metnine öyle girmesin diye düzeltilir.
+// Kaynak listesindeki BOZUK/KESİK adlar — başkan denemede yakaladı (23 Ağu): kesik ad
+// künyeye girince "…Şuabatı San'e göre" saçmalığı çıkıyordu.
+const AD_DUZELTME = {
+  9: '5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun',
+  25: '6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun',
+  96: "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+  116: 'Ön Ödeme Usul ve Esasları Hakkında Yönetmelik',
+};
+
 function adTemizle(ad) {
   // Adın sonundaki parantezli kapsam/atıf notu ('(Madde 7 mali hükümleri + Ek Madde 2)',
   // '(BKK 2016/9431)') soru metnine girmemeli — içindeki 'Madde' madde atfı sanılıyordu.
@@ -71,7 +80,10 @@ export const DUELLO_ADI = new Map(); // düello law_id -> tam ad
   // o tipteki köşeli paranteze düşüyordu → veriOku ile "export const" çıpalanır.
   const dizi = veriOku('src/assets/duello-kanunlar.ts', 'DUELLO_KANUNLAR').veri;
   for (const k of dizi) {
-    const ad = adTemizle(buyukDuzelt(String(k.ad)));
+    // SIRA ÖNEMLİ: önce parantezli not sökülür, SONRA büyük harf düzeltilir. Ters sırada
+    // "ÖN ÖDEME … YÖNETMELİK (Cumhurbaşkanı Kararı …)" içindeki küçük harfler yüzünden
+    // ad "tamamı büyük" sayılmıyor, parantez atılınca BAĞIRAN ad geriye kalıyordu.
+    const ad = AD_DUZELTME[k.id] ?? buyukDuzelt(adTemizle(String(k.ad)));
     if (/\.$/.test(ad) || ad.length < 18) continue; // kısaltma kabul edilmez, tam ad gerek
     DUELLO_ADI.set(k.id, ad);
     const no = ad.match(/^(\d{3,4})\s*[Ss]ayılı/);
@@ -115,6 +127,18 @@ const AD_DESEN = [
 ];
 const DOGRU_MU = /doğru mudur|yanlış mıdır|doğru mu\?|yanlış mı\?/i;
 
+// Künyeye girecek ad, mevzuat adı gibi BİTMELİ. "Uygulama Yönetmeliği" gibi genel bir ad
+// neyin yönetmeliği olduğunu söylemiyor — o da geçersiz. Geçersizse soru kenara kalkar.
+const AD_SONU = /(Kanunu|Kanun|Yönetmeliği|Yönetmelik|Yönergesi|Yönerge|Tebliği|Tebliğ|Anayasası|Anayasa|Genelgesi|Kararname|Kararnamesi|Esasları|Rehberi|Kuralları)$/;
+const AD_GENEL = /^(bu\s+)?(uygulama\s+)?(yönetmeliğ\w*|yönetmelik|yönerge\w*|tebliğ\w*|kanun\w*|esaslar\w*)$/i;
+function adGecerliMi(ad) {
+  if (!ad) return false;
+  const t = ad.trim();
+  if (!AD_SONU.test(t)) return false;
+  if (AD_GENEL.test(t)) return false;
+  return /\d{3,4}\s*[Ss]ayılı/.test(t) || t.split(/\s+/).length >= 2;
+}
+
 // Künye eklenirken küçük harfe ÇEVRİLMEYECEK baş kelimeler. "A, bir yıl içinde…" → "a, …"
 // ya da "Cumhurbaşkanı" → "cumhurbaşkanı" olmasın diye.
 const OZEL_AD = new Set(['Cumhurbaşkanı', 'Cumhurbaşkanlığı', 'Bakan', 'Bakanlık', 'Bakanlar', 'Vali',
@@ -142,10 +166,23 @@ function onEkle(k, govde) {
     .trim()
     .replace(/^[.…\s]+/, '')
     // "Yönetmeliğe göre," · "6698 sayılı Kanun'a göre," gibi ADI TAM VERMEYEN girişler
-    .replace(/^(bu\s+)?(\d{3,4}\s*sayılı\s+)?(yönetmeliğin|yönetmelik|yönetmeliğe|kanunun|kanuna|kanun|tebliğin|tebliğe|yönergeye|yönergenin)['’]?[a-zçğıöşü]{0,3}(\s+[^,]{0,45}?madde[a-zçğıöşü]*)?\s+göre[,:]?\s+/i, '');
+    // Ek/iyelik biçimleri: "Kanuna", "Kanunun", "Kanunu'na", "Yönetmeliğe", "Yönetmeliği'ne"…
+    .replace(/^(bu\s+)?(\d{3,4}\s*sayılı\s+)?(yönetmeliğ|yönetmelik|kanun|tebliğ|yönerge)[a-zçğıöşü]*['’]?[a-zçğıöşü]*(\s+[^,]{0,45}?madde[a-zçğıöşü]*)?\s+göre[,:]?\s+/i, '');
+  // Gövde AYNI mevzuatın adıyla başlayan bir "…göre," girişi taşıyorsa (kısaltılmış ya da
+  // ek almış hâliyle) künye iki kez okunur → o giriş de sökülür.
+  const bas = g.match(/^(.{0,170}?\bgöre)[,:]?\s+/);
+  const sade = (x) => x.toLocaleLowerCase('tr').replace(/[^\p{L}\p{N}]+/gu, '');
+  let gt = g;
+  if (bas && !/\.\s/.test(bas[1]) && !/\bI+\.\s/.test(bas[1])) {
+    const a = sade(bas[1]);
+    const b = sade(k);
+    if (a.length >= 14 && (b.includes(a.slice(0, 40)) || a.includes(b.slice(0, 40)))) {
+      gt = g.slice(bas[0].length);
+    }
+  }
   const g2 = kNo
-    ? g.replace(new RegExp(kNo[1] + String.raw`\s*sayılı\s+Kanun['’]?[a-zçğıöşü]*\s+göre[,]?\s*`, 'gi'), '')
-    : g;
+    ? gt.replace(new RegExp(kNo[1] + String.raw`\s*sayılı\s+Kanun[a-zçğıöşü]*['’]?[a-zçğıöşü]*\s+göre[,]?\s*`, 'gi'), '')
+    : gt;
   return (k + ', ' + kucukBasla(g2))
     .replace(/,\s*,/g, ',')
     .replace(/,\s*([;:.])/g, '$1')
@@ -163,6 +200,11 @@ const KARTID_LAW = {
 
 /** Sorunun hangi mevzuata ait olduğunu bulur (kök → kaynak → law id sırasıyla). */
 export function mevzuatBul(soru, kaynak, lawId) {
+  const bulunan = mevzuatAra(soru, kaynak, lawId);
+  return adGecerliMi(bulunan) ? bulunan : null;
+}
+
+function mevzuatAra(soru, kaynak, lawId) {
   for (const r of AD_DESEN) {
     const m = soru.match(r);
     if (m) return m[1].replace(/\s+/g, ' ').trim();
@@ -224,8 +266,12 @@ export function standartlastir(soru, kaynak, lawId) {
   const k = kunye(ad);
 
   // 1) baştaki "… göre," girişi
-  const giris = s.match(/^(.{0,190}?\bgöre)([,:]?)\s+/);
-  if (giris && MADDE.test(giris[1])) {
+  // Giriş kırpması YALNIZ gerçek künye girişinde yapılır: cümle bitmemiş olmalı ve içinde
+  // öncül listesi (I. / II.) bulunmamalı. Aksi hâlde sorunun ilk öncülü yeniyordu
+  // ("…göre, tahsil edilir. II. Nafaka…" — başkan yakaladı, 23 Ağu).
+  const giris = s.match(/^(.{0,150}?\bgöre)([,:]?)\s+/);
+  const girisTemiz = !!giris && !/\.\s/.test(giris[1]) && !/\bI+\.\s/.test(giris[1]);
+  if (giris && girisTemiz && MADDE.test(giris[1])) {
     const kalan = s.slice(giris[0].length);
     if (kalan.length >= 25) {
       const yeni = onEkle(k, kalan);
@@ -265,8 +311,10 @@ export function denetle(q, lawId) {
   // Künye zaten kökün başında duruyor mu? AD_DESEN ile bakmak YANLIŞTI: adında virgül olan
   // kanunlarda ("Jandarma Teşkilat, Görev ve Yetkileri Kanunu") desen tutmuyor ve künye
   // İKİNCİ KEZ yazılıyordu (1.166 soruda). Doğrusu: çözülen adın kendisini aramak.
-  const iz = ad.slice(0, Math.min(28, ad.length));
-  if (!nihai.slice(0, 260).includes(iz)) {
+  // Karşılaştırma BÜYÜK/küçük harf duyarsız: kaynak metinde ad bazen TAMAMI BÜYÜK yazılı
+  // ve künye ikinci kez ekleniyordu.
+  const iz = ad.slice(0, Math.min(28, ad.length)).toLocaleLowerCase('tr');
+  if (!nihai.slice(0, 260).toLocaleLowerCase('tr').includes(iz)) {
     nihai = onEkle(kunye(ad), nihai);
   }
   // Son kapı: düzeltmeden sonra hâlâ madde atfı kaldıysa soru standarda GİRMEZ.
