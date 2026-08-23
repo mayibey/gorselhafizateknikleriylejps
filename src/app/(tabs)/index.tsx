@@ -213,7 +213,6 @@ export default function KarargahScreen() {
   }, [aramaMevzuatta]);
   const p2 = (n: number) => String(n).padStart(2, '0');
   const geriSayim = `${Math.floor(kalanSn / 86400)} GÜN ${p2(Math.floor((kalanSn % 86400) / 3600))}:${p2(Math.floor((kalanSn % 3600) / 60))}:${p2(kalanSn % 60)}`;
-  const basvuruAcik = Date.now() >= BASVURU_BASLANGIC.getTime() && Date.now() <= BASVURU_BITIS.getTime();
   const [hafta, setHafta] = useState<{ harf: string; tamam: boolean }[]>([]);
   const [queue, setQueue] = useState<QueueCard[] | null>(null);
   const [hazirlik, setHazirlik] = useState<number | null>(null);
@@ -511,18 +510,11 @@ export default function KarargahScreen() {
                   kaplıyor, oyunlara/tatbikata giden kartlar ekranın altında kalıyordu.
                   İkisi de sayacın HEMEN ÜSTÜNDE tek satıra alındı — solda ne olduğu,
                   sağda başvuru penceresi. Mühür ayracı da kaldırıldı (yer açmak için). */}
-              <View style={styles.sayacUstSatir}>
-                <AppText variant="etiket" bold color="beyaz" numberOfLines={1}>
-                  JSPS sınavına kalan süre
-                </AppText>
-                {basvuruAcik ? (
-                  <View style={styles.basvuruKapsul}>
-                    <AppText variant="etiket" bold color="altinParlak" numberOfLines={1}>
-                      Başvurular: 3 – 23 Ağustos
-                    </AppText>
-                  </View>
-                ) : null}
-              </View>
+              {/* 23 Ağu (başkan): başvuru tarihi satırı KALDIRILDI — başvuru dönemi bitti,
+                  yer kaplıyordu. Kalan tek satır ortalı ve biraz iri. */}
+              <AppText variant="kucuk" bold color="beyaz" numberOfLines={1} style={styles.sayacUstYazi}>
+                JSPS sınavına kalan süre
+              </AppText>
               <AppText
                 variant="dev"
                 bold
@@ -1588,7 +1580,7 @@ const styles = StyleSheet.create({
     gap: Spacing.two,
   },
   gokAkis: {
-    gap: Spacing.three, // eşit blok ritmi — taşınca kısıldı (11 Ağu)
+    gap: Spacing.two, // 23 Ağu: her şey tek ekrana sığsın diye blok arası daraltıldıca kısıldı (11 Ağu)
   },
   // ═══ 11 Ağu "%100 aynısı" ekran görüntüsü stilleri ═══
   takvimSahne: {
@@ -1601,14 +1593,12 @@ const styles = StyleSheet.create({
     gap: 2,
     paddingVertical: 2, // 23 Ağu: ekran tek sayfaya sığsın diye dikey boşluk kısıldı
   },
-  // Sayacın hemen ÜSTÜ: solda "ne kadar kaldı" açıklaması, sağda başvuru penceresi.
-  sayacUstSatir: {
-    alignSelf: 'stretch',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: Spacing.two,
-    marginBottom: 1,
+  // Sayacın hemen ÜSTÜ: tek satır, ortalı açıklama.
+  sayacUstYazi: {
+    textAlign: 'center',
+    fontSize: 15,
+    letterSpacing: 0.2,
+    marginBottom: 0,
   },
   devTekSatir: {
     fontSize: 40,
@@ -1847,7 +1837,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(243,194,74,0.6)',
   },
   blokArasi: {
-    marginTop: Spacing.one, // gövde gap'iyle birlikte bloklar arası eşit ~16 (taşma fixi)
+    marginTop: 0, // 23 Ağu: şeritlerin üstündeki fazladan boşluk kaldırıldı
   },
   basvuruKapsul: {
     // Artık sayacın üstünde, açıklamanın sağında duruyor → üstten boşluk yok.
