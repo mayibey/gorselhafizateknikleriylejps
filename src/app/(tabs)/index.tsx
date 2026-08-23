@@ -1580,7 +1580,10 @@ const styles = StyleSheet.create({
     gap: Spacing.two,
   },
   gokAkis: {
-    gap: Spacing.two, // 23 Ağu: her şey tek ekrana sığsın diye blok arası daraltıldıca kısıldı (11 Ağu)
+    gap: Spacing.two, // 23 Ağu: her şey tek ekrana sığsın diye blok arası daraltıldı
+    // Başkan: "kalan süre yazısından aşağısı biraz daha yukarı kalksın." Screen'in ortak
+    // gövde üst boşluğu (16) burada geri alınır — paylaşılan bileşene dokunmadan.
+    marginTop: -Spacing.three,ca kısıldı (11 Ağu)
   },
   // ═══ 11 Ağu "%100 aynısı" ekran görüntüsü stilleri ═══
   takvimSahne: {
@@ -1591,7 +1594,7 @@ const styles = StyleSheet.create({
   sayacMerkez: {
     alignItems: 'center',
     gap: 2,
-    paddingVertical: 2, // 23 Ağu: ekran tek sayfaya sığsın diye dikey boşluk kısıldı
+    paddingVertical: 0, // 23 Ağu: ekran tek sayfaya sığsın diye dikey boşluk kaldırıldı
   },
   // Sayacın hemen ÜSTÜ: tek satır, ortalı açıklama.
   sayacUstYazi: {
