@@ -1,5 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useFocusEffect, useRouter } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
@@ -47,7 +47,10 @@ function TatbikatIcerik() {
   // law_id → (test → SON deneme sonucu). Her testin son skoru ayrı ("Son: X/Y").
   const [sonucMap, setSonucMap] = useState<Map<number, Map<number, SinavSonuc>>>(new Map());
   // Üst seçim: Talim (kanun denemeleri) / Tatbikat (Genel Deneme 1/2/3).
-  const [mod, setMod] = useState<'talim' | 'tatbikat'>('talim');
+  // Karargâh'taki "Genel deneme çöz" şeridi ?mod=tatbikat ile gelir → doğrudan genel
+  // denemeler açılır (başkan, 23 Ağu: "oradan o 3 denemenin göründüğü sayfayı açtır").
+  const { mod: modParam } = useLocalSearchParams<{ mod?: string }>();
+  const [mod, setMod] = useState<'talim' | 'tatbikat'>(modParam === 'tatbikat' ? 'tatbikat' : 'talim');
   // Üst seçim: Müşterek (mevcut) / Branş (içerik güncellemelerle eklenecek → "hazırlanıyor").
   const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
   const { kanunErisilebilir } = useUyelik();

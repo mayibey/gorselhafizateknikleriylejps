@@ -1021,6 +1021,30 @@ export default function KarargahScreen() {
             )}
           </Pressable>
           )}
+          {/* GENEL DENEME ŞERİDİ (başkan, 23 Ağu): paslanma şeridinin hemen altında.
+              Genel denemeler Tatbikat Merkezi'nin içinde ikinci sekmede duruyordu, kimse
+              bulamıyordu — başkan bile aradı. Buradan doğrudan o sekme açılır; müşterek/branş
+              seçimi orada kullanıcıya bırakılır. */}
+          <Pressable
+            onPress={() => { hafifDokun(); router.push({ pathname: '/tatbikat', params: { mod: 'tatbikat' } }); }}
+            style={({ pressed }) => [styles.gecePanel, styles.tekrarSatir, styles.blokArasi, pressed && styles.pressed]}
+            accessibilityRole="button"
+            accessibilityLabel="Genel deneme sınavı çöz">
+            <View style={styles.emirIkonHalka}>
+              <MaterialCommunityIcons name="clipboard-check-outline" size={24} color={Palette.altinParlak} />
+            </View>
+            <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
+              <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
+                Genel deneme çöz — kendini sına
+              </AppText>
+            </View>
+            <View style={styles.tekrarEtKose}>
+              <AppText variant="etiket" bold color="altinParlak" style={styles.tekrarBaslik2}>
+                3 DENEME
+              </AppText>
+              <MaterialCommunityIcons name="arrow-right" size={16} color={Palette.altinParlak} />
+            </View>
+          </Pressable>
           <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
               onPress={() => { hafifDokun(); router.push('/tatbikat'); }}
