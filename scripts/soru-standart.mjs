@@ -124,7 +124,7 @@ export function kunye(ad) {
 
 // --- desenler ---
 // "4. maddesine" biçimi de madde atfıdır — ilk sürümde kaçmıştı, künye iki kez yazılıyordu.
-const MADDE = /\bm\.\s?\d|\bmd\.\s?\d|\bmadde\s?\d|\d+\s*(inci|ıncı|üncü|uncu)\s*madde|\d+\s*\.\s*madde|\bek\s+madde\s*\d/i;
+const MADDE = /\bm\.\s?\d|\bmd\.\s?\d|\bmadde\s?\d|\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*madde|\d+\s*\.\s*madde|\bek\s+madde\s*\d/i;
 const AD_DESEN = [
   /(\d{3,4}\s*sayılı\s+[^,;:.()]{4,90}?(?:Kanunu|Kanun))\b/,
   // Ek almış biçimler de yakalanır ("…Yönetmeliğe göre"); ad sonradan sadeleştirilir.
@@ -146,6 +146,30 @@ const TARIH = /\b\d{1,2}\s*\/\s*\d{1,2}\s*\/\s*\d{4}\b/;
 // 1.760 soruda 2 kez geçiyor (%0,1) ve o ikisi de boşluk doldurma değil. Mevzuatın
 // KÜNYESİ değil HÜKMÜ sorulur → bu tip de bankaya alınmaz.
 const DAYANAK_SORU = /dayanılarak hazırlan|dayanağını oluştur|maddesine dayanılarak|dayanak (maddesi|hükmü)/i;
+
+// BENT/FIKRA EZBERİ — başkan yakaladı (23 Ağu): "…-a ve b bentleri karşılaştırıldığında
+// hangisi doğrudur?" Kimse hangi hükmün (a) hangisinin (b) bendinde olduğunu ezberlemez.
+// ÖLÇÜM: 1.762 çıkmış sınav sorusunda "bent" kelimesi SIFIR kez geçiyor; bizde 236 soruda
+// vardı. Şıklarında madde numarası taşıyan soru da aynı ezber mantığı ("Hediye yasağı
+// (m.38)" gibi): çıkmış sınavda 14 soru (binde 8), bizde 512.
+const BENT_SORU = /\bbend(i|in|inde|ine|indeki)?\b|\bbentler/i;
+// Madde atfı sökülürken geriye kalan kopuk ek ("Yönetmeliği -a ve b"): cümle bozuk demektir.
+const KOPUK_ATIF = /\s-\s?[a-zçğıöşü]\b/;
+// ÇOK MADDELİ KARŞILAŞTIRMA — başkan (23 Ağu): "2803 sayılı Kanun'un 1, 4, 5 ve 6 ncı
+// maddeleri birlikte değerlendirildiğinde…" Hangi hükmün kaçıncı maddede olduğunu
+// ezberletiyor; gerçek sınavda bu kalıp yok.
+const COK_MADDE = /maddeler[iı]\s+(birlikte|bir\s+arada)|maddeler[iı]n[iı]?n?\s+karşılaştır|birlikte değerlendirildiğinde/i;
+
+function ezberSorusuMu(q) {
+  const k = String(q.soru);
+  if (BENT_SORU.test(k)) return true;
+  if (KOPUK_ATIF.test(k)) return true;
+  if (COK_MADDE.test(k)) return true;
+  if (COK_MADDE.test(k)) return true;
+  const siklar = Array.isArray(q.siklar) ? q.siklar : [];
+  if (siklar.some((x) => MADDE.test(String(x)))) return true;
+  return false;
+}
 
 function tarihceMi(q) {
   const k = String(q.soru);
@@ -257,7 +281,7 @@ export function konuAnahtari(ad) {
 const sadeAd = (a) =>
   String(a)
     .toLocaleLowerCase('tr')
-    .replace(/sayılı|hakkında|hakkındaki|dair|ilişkin|kanunu?n?u?|yönetmeliğ?i?k?|khk/g, ' ')
+    .replace(/sayılı|hakkında|hakkındaki|dair|ilişkin|kanunu?n?u?|yönetmeliğ?i?k?|khk/g, ' ')
     .replace(/[^\p{L}\p{N}]+/gu, ' ')
     .trim();
 
@@ -395,8 +419,8 @@ export function standartlastir(soru, kaynak, lawId) {
   // 2) yerinde temizlik — önce atıflar künyeye çevrilir, sonra artıklar süpürülür
   let t = atifSadelestir(s)
     .replace(/\s*[,(]?\s*\bm\.\s?\d+(?:\/[\wçğıöşüÇĞİÖŞÜ-]+)*(?:['’][a-zçğıöşü]+)?\s*\)?/g, ' ')
-    .replace(/\s*['’](nin|nın|nun|nün|in|ın|un|ün)\s+\d+\s*(inci|ıncı|üncü|uncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
-    .replace(/\s*(nin|nın|nun|nün)?\s*\b\d+\s*(inci|ıncı|üncü|uncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
+    .replace(/\s*['’](nin|nın|nun|nün|in|ın|un|ün)\s+\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
+    .replace(/\s*(nin|nın|nun|nün)?\s*\b\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
     .replace(/\s*\bmadde\s?\d+(\/\d+)?\s*['’]?[a-zçğıöşü]*\s*/gi, ' ')
     .replace(/\s{2,}/g, ' ')
     .replace(/\s+([,.;:?])/g, '$1')
@@ -418,6 +442,7 @@ export function denetle(q, lawId) {
   if (typeof q.dogru !== 'number' || q.dogru < 0 || q.dogru >= q.siklar.length) return { at: 'cevap indeksi bozuk' };
   if (DOGRU_MU.test(q.soru)) return { at: '"doğru mudur" kalıbı' };
   if (tarihceMi(q)) return { at: 'mevzuat tarihçesi/yürürlük sorusu' };
+  if (ezberSorusuMu(q)) return { at: 'bent/madde numarası ezberi' };
   const r = standartlastir(q.soru, q.kaynak, lawId);
   if (r.at) return r;
   const ad = mevzuatBul(r.soru, q.kaynak, lawId);
@@ -432,6 +457,9 @@ export function denetle(q, lawId) {
   if (!nihai.slice(0, 260).toLocaleLowerCase('tr').includes(iz)) {
     nihai = onEkle(kunye(ad), nihai);
   }
+  // Son kapı: kopuk atıf ("… Yönetmeliği -c: '…'") düzeltmeden SONRA oluşuyor; ezber
+  // denetimi bir kez de NİHAİ metinde yapılır.
+  if (ezberSorusuMu({ ...q, soru: nihai })) return { at: 'bent/madde numarası ezberi' };
   // Son kapı: düzeltmeden sonra hâlâ madde atfı kaldıysa soru standarda GİRMEZ.
   if (MADDE.test(nihai)) return { at: 'madde atfı sökülemedi' };
   const asil = String(q.soru).replace(/\s+/g, ' ').trim();

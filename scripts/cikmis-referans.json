@@ -4,7 +4,7 @@
  "toplamAyristirilan": 2336,
  "mevzuatSorusu": 1760,
  "konusuBulunamayan": 77,
- "mufredatDisiSoru": 413,
+ "mufredatDisiSoru": 395,
  "mufredatDisi": [
   {
    "ad": "Türkiye Cumhuriyeti Anayasası",
@@ -33,10 +33,6 @@
   {
    "ad": "3466 sayılı Uzman Jandarma Kanunu",
    "adet": 11
-  },
-  {
-   "ad": "Bıçaklar ve Diğer Aletler Hakkındaki Yönetmeliği",
-   "adet": 10
   },
   {
    "ad": "Sınır Yönetimi Alanında Kurumlararası İşbirliği ve Koordinasyon Hakkında Yönetmeliği",
@@ -108,10 +104,6 @@
   },
   {
    "ad": "İşlettirilmesi ve Denetimi Hakkında Yönetmeliği",
-   "adet": 5
-  },
-  {
-   "ad": "Yabancılar ve Uluslararası Koruma Kanununun Uygulanmasına İlişkin Yönetmeliği",
    "adet": 5
   },
   {
@@ -259,19 +251,7 @@
    "adet": 1
   },
   {
-   "ad": "Görev ve Yetkileri Hakkında Yönetmelik",
-   "adet": 1
-  },
-  {
    "ad": "Sayılı Kıyı Kanununun Uygulanmasına Dair Yönetmelik",
-   "adet": 1
-  },
-  {
-   "ad": "Uyuşturucu Maddelerin Murakabesi Hakkında Kanunun Uygulanmasına İlişkin Yönetmelik",
-   "adet": 1
-  },
-  {
-   "ad": "Uygulanmasına İlişkin Yönetmeliği",
    "adet": 1
   },
   {
@@ -280,6 +260,10 @@
   },
   {
    "ad": "Esaslar ile Telekomünikasyon İletişim Başkanlığının Kuruluş Görev ve Yetkileri Hakkında Yönetmelik",
+   "adet": 1
+  },
+  {
+   "ad": "Adlî ve Önleme Aramaları Yönetmeliği",
    "adet": 1
   },
   {
@@ -343,10 +327,6 @@
    "adet": 1
   },
   {
-   "ad": "Türk Vatandaşlığı Kanunu’nun Uygulanmasına İlişkin Yönetmeliği",
-   "adet": 1
-  },
-  {
    "ad": "3497 sayılı Kara Sınırlarının Korunması ve Güvenliği Hakkında Kanun",
    "adet": 1
   },
@@ -373,12 +353,12 @@
      6
     ],
     [
-     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
-     3
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     2
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     3
     ],
     [
      "5326 sayılı Kabahatler Kanunu",
@@ -393,7 +373,7 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      2
     ],
     [
@@ -401,7 +381,7 @@
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -458,10 +438,6 @@
     ],
     [
      "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
-     1
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
      1
     ],
     [
@@ -709,12 +685,16 @@
    "sikOrt": 44,
    "konular": [
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      3
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     2
+     "2918 sayılı Karayolları Trafik Kanunu",
+     3
     ],
     [
      "5326 sayılı Kabahatler Kanunu",
@@ -729,15 +709,11 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
-     2
-    ],
-    [
      "Sözleşmeli Subay ve Astsubay Yönetmeliği",
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -797,19 +773,11 @@
      1
     ],
     [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
-     1
-    ],
-    [
      "1774 sayılı Kimlik Bildirme Kanunu",
      1
     ],
     [
      "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
-     1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -925,12 +893,12 @@
      5
     ],
     [
-     "5271 sayılı Ceza Muhakemesi Kanunu",
-     3
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     2
+     "5271 sayılı Ceza Muhakemesi Kanunu",
+     3
     ],
     [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
@@ -941,7 +909,7 @@
      2
     ],
     [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -997,11 +965,7 @@
      1
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
-     1
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -1045,7 +1009,7 @@
      1
     ],
     [
-     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
      1
     ],
     [
@@ -1097,12 +1061,12 @@
    "sikOrt": 51,
    "konular": [
     [
-     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
-     3
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     2
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     3
     ],
     [
      "5326 sayılı Kabahatler Kanunu",
@@ -1121,7 +1085,7 @@
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -1169,7 +1133,7 @@
      1
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -1182,10 +1146,6 @@
     ],
     [
      "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
-     1
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
      1
     ],
     [
@@ -1246,6 +1206,10 @@
     ],
     [
      "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
      1
     ],
     [
@@ -1438,7 +1402,15 @@
    "konular": [
     [
      "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
-     1
+     2
+    ],
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     2
+    ],
+    [
+     "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
+     2
     ],
     [
      "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
@@ -1446,14 +1418,6 @@
     ],
     [
      "1774 sayılı Kimlik Bildirme Kanunu",
-     1
-    ],
-    [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     1
-    ],
-    [
-     "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
      1
     ],
     [
@@ -1486,10 +1450,6 @@
     ],
     [
      "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
-     1
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
      1
     ]
    ],
@@ -1529,19 +1489,19 @@
      5
     ],
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      3
     ],
     [
+     "2918 sayılı Karayolları Trafik Kanunu",
+     3
+    ],
+    [
      "5326 sayılı Kabahatler Kanunu",
-     2
-    ],
-    [
-     "Karayolları Trafik Yönetmeliği",
-     2
-    ],
-    [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
      2
     ],
     [
@@ -1554,10 +1514,6 @@
     ],
     [
      "Sözleşmeli Subay ve Astsubay Yönetmeliği",
-     2
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
      2
     ],
     [
@@ -1695,10 +1651,6 @@
     [
      "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
      1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
-     1
     ]
    ],
    "tipler": [
@@ -1757,7 +1709,7 @@
      2
     ],
     [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -1841,10 +1793,6 @@
      1
     ],
     [
-     "Adli ve Önleme Aramaları Yönetmeliği",
-     1
-    ],
-    [
      "Suç Eşyası Yönetmeliği",
      1
     ],
@@ -1901,12 +1849,12 @@
      6
     ],
     [
-     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
-     3
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     2
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     3
     ],
     [
      "5326 sayılı Kabahatler Kanunu",
@@ -1921,7 +1869,7 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      2
     ],
     [
@@ -1929,7 +1877,7 @@
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -1986,10 +1934,6 @@
     ],
     [
      "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
-     1
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
      1
     ],
     [
@@ -2117,12 +2061,12 @@
      6
     ],
     [
-     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
      4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     3
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     4
     ],
     [
      "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
@@ -2141,6 +2085,10 @@
      2
     ],
     [
+     "2918 sayılı Karayolları Trafik Kanunu",
+     2
+    ],
+    [
      "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
      2
     ],
@@ -2150,10 +2098,6 @@
     ],
     [
      "5271 sayılı Ceza Muhakemesi Kanunu",
-     2
-    ],
-    [
-     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
      2
     ],
     [
@@ -2185,14 +2129,6 @@
      1
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
-     1
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
-     1
-    ],
-    [
      "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
      1
     ],
@@ -2210,10 +2146,6 @@
     ],
     [
      "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
-     1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -2253,6 +2185,10 @@
      1
     ],
     [
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+     1
+    ],
+    [
      "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
      1
     ],
@@ -2270,6 +2206,10 @@
     ],
     [
      "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
      1
     ],
     [
@@ -2329,12 +2269,12 @@
      6
     ],
     [
-     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
-     4
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     5
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     3
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     4
     ],
     [
      "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
@@ -2349,11 +2289,11 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -2453,6 +2393,10 @@
      1
     ],
     [
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+     1
+    ],
+    [
      "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
      1
     ],
@@ -2521,15 +2465,19 @@
    "sikOrt": 42,
    "konular": [
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     5
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
      3
     ],
     [
-     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     "2918 sayılı Karayolları Trafik Kanunu",
      3
     ],
     [
@@ -2541,11 +2489,7 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
-     2
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -2554,6 +2498,10 @@
     ],
     [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
      2
     ],
     [
@@ -2597,10 +2545,6 @@
      1
     ],
     [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
-     1
-    ],
-    [
      "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
      1
     ],
@@ -2613,15 +2557,7 @@
      1
     ],
     [
-     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
-     1
-    ],
-    [
      "4342 sayılı Mera Kanunu",
-     1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -2737,12 +2673,16 @@
    "sikOrt": 44,
    "konular": [
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      3
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     2
+     "2918 sayılı Karayolları Trafik Kanunu",
+     3
     ],
     [
      "5326 sayılı Kabahatler Kanunu",
@@ -2757,15 +2697,11 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
-     2
-    ],
-    [
      "Sözleşmeli Subay ve Astsubay Yönetmeliği",
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -2825,19 +2761,11 @@
      1
     ],
     [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
-     1
-    ],
-    [
      "1774 sayılı Kimlik Bildirme Kanunu",
      1
     ],
     [
      "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
-     1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -2949,12 +2877,12 @@
    "sikOrt": 51,
    "konular": [
     [
-     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
-     3
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     2
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     3
     ],
     [
      "5326 sayılı Kabahatler Kanunu",
@@ -2973,7 +2901,7 @@
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -3021,7 +2949,7 @@
      1
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -3034,10 +2962,6 @@
     ],
     [
      "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
-     1
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
      1
     ],
     [
@@ -3101,6 +3025,10 @@
      1
     ],
     [
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+     1
+    ],
+    [
      "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
      1
     ],
@@ -3161,15 +3089,19 @@
    "sikOrt": 44,
    "konular": [
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     5
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      4
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
      3
     ],
     [
-     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      3
     ],
     [
@@ -3181,7 +3113,7 @@
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      2
     ],
     [
@@ -3221,19 +3153,11 @@
      1
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
-     1
-    ],
-    [
      "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
      1
     ],
     [
      "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
-     1
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
      1
     ],
     [
@@ -3246,10 +3170,6 @@
     ],
     [
      "6831 sayılı Orman Kanunu",
-     1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -3293,6 +3213,10 @@
      1
     ],
     [
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+     1
+    ],
+    [
      "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
      1
     ],
@@ -3302,10 +3226,6 @@
     ],
     [
      "Adli ve Önleme Aramaları Yönetmeliği",
-     1
-    ],
-    [
-     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      1
     ],
     [
@@ -3385,6 +3305,10 @@
      2
     ],
     [
+     "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+     2
+    ],
+    [
      "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
      2
     ],
@@ -3430,14 +3354,6 @@
     ],
     [
      "2893 sayılı Türk Bayrağı Kanunu",
-     1
-    ],
-    [
-     "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
-     1
-    ],
-    [
-     "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
      1
     ],
     [
@@ -3877,19 +3793,19 @@
      5
     ],
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     4
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      3
     ],
     [
+     "2918 sayılı Karayolları Trafik Kanunu",
+     3
+    ],
+    [
      "5326 sayılı Kabahatler Kanunu",
-     2
-    ],
-    [
-     "Karayolları Trafik Yönetmeliği",
-     2
-    ],
-    [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
      2
     ],
     [
@@ -3902,10 +3818,6 @@
     ],
     [
      "Sözleşmeli Subay ve Astsubay Yönetmeliği",
-     2
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
      2
     ],
     [
@@ -4043,10 +3955,6 @@
     [
      "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
      1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
-     1
     ]
    ],
    "tipler": [
@@ -4093,6 +4001,10 @@
      3
     ],
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
      "5237 sayılı Türk Ceza Kanunu",
      3
     ],
@@ -4113,11 +4025,7 @@
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
-     2
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -4129,7 +4037,7 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ],
     [
@@ -4138,10 +4046,6 @@
     ],
     [
      "2893 sayılı Türk Bayrağı Kanunu",
-     1
-    ],
-    [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
      1
     ],
     [
@@ -4189,7 +4093,7 @@
      1
     ],
     [
-     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
      1
     ],
     [
@@ -4321,16 +4225,16 @@
    "sikOrt": 44,
    "konular": [
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     5
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      4
     ],
     [
      "5237 sayılı Türk Ceza Kanunu",
      4
-    ],
-    [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     3
     ],
     [
      "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
@@ -4341,15 +4245,15 @@
      2
     ],
     [
+     "2918 sayılı Karayolları Trafik Kanunu",
+     2
+    ],
+    [
      "3713 sayılı Terörle Mücadele Kanunu",
      2
     ],
     [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
-     2
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -4361,16 +4265,8 @@
      2
     ],
     [
-     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
-     2
-    ],
-    [
      "5271 sayılı Ceza Muhakemesi Kanunu",
      2
-    ],
-    [
-     "Karayolları Trafik Yönetmeliği",
-     1
     ],
     [
      "2935 sayılı Olağanüstü Hal Kanunu",
@@ -4413,6 +4309,14 @@
      1
     ],
     [
+     "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+     1
+    ],
+    [
+     "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
      "5395 sayılı Çocuk Koruma Kanunu",
      1
     ],
@@ -4438,6 +4342,10 @@
     ],
     [
      "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
      1
     ],
     [
@@ -4486,10 +4394,6 @@
     ],
     [
      "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun",
-     1
-    ],
-    [
-     "2918 sayılı Karayolları Trafik Kanunu",
      1
     ]
    ],
@@ -4541,6 +4445,10 @@
      6
     ],
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     5
+    ],
+    [
      "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
      4
     ],
@@ -4549,15 +4457,7 @@
      3
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     3
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
-     2
-    ],
-    [
-     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
      2
     ],
     [
@@ -4569,7 +4469,7 @@
      2
     ],
     [
-     "Karayolları Trafik Yönetmeliği",
+     "2918 sayılı Karayolları Trafik Kanunu",
      2
     ],
     [
@@ -4741,19 +4641,15 @@
    "sikOrt": 33,
    "konular": [
     [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     7
+    ],
+    [
      "5237 sayılı Türk Ceza Kanunu",
      5
     ],
     [
-     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-     4
-    ],
-    [
      "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
-     3
-    ],
-    [
-     "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
      3
     ],
     [
@@ -4778,6 +4674,10 @@
     ],
     [
      "1774 sayılı Kimlik Bildirme Kanunu",
+     2
+    ],
+    [
+     "2918 sayılı Karayolları Trafik Kanunu",
      2
     ],
     [
@@ -4861,10 +4761,6 @@
      1
     ],
     [
-     "2918 sayılı Karayolları Trafik Kanunu",
-     1
-    ],
-    [
      "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
      1
     ],
@@ -4922,10 +4818,6 @@
     ],
     [
      "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
-     1
-    ],
-    [
-     "Karayolları Trafik Yönetmeliği",
      1
     ],
     [
@@ -5014,325 +4906,313 @@
    "anahtar": "5237",
    "ad": "5237 sayılı Türk Ceza Kanunu",
    "adet": 91,
-   "yuz": 7.2
+   "yuz": 7.1
+  },
+  {
+   "anahtar": "2803",
+   "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+   "adet": 89,
+   "yuz": 6.94
   },
   {
    "anahtar": "6284",
    "ad": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
    "adet": 65,
-   "yuz": 5.14
-  },
-  {
-   "anahtar": "2803",
-   "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-   "adet": 54,
-   "yuz": 4.27
+   "yuz": 5.07
   },
   {
    "anahtar": "7068",
    "ad": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
    "adet": 54,
-   "yuz": 4.27
+   "yuz": 4.21
   },
   {
    "anahtar": "5326",
    "ad": "5326 sayılı Kabahatler Kanunu",
    "adet": 46,
-   "yuz": 3.64
+   "yuz": 3.59
+  },
+  {
+   "anahtar": "6136",
+   "ad": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+   "adet": 46,
+   "yuz": 3.59
   },
   {
    "anahtar": "5271",
    "ad": "5271 sayılı Ceza Muhakemesi Kanunu",
    "adet": 46,
-   "yuz": 3.64
+   "yuz": 3.59
   },
   {
    "anahtar": "3713",
    "ad": "3713 sayılı Terörle Mücadele Kanunu",
    "adet": 42,
-   "yuz": 3.32
+   "yuz": 3.28
   },
   {
-   "anahtar": "jandarmateşkilatgörevveyetkileriyönetmeliği",
-   "ad": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
-   "adet": 34,
-   "yuz": 2.69
+   "anahtar": "2918",
+   "ad": "2918 sayılı Karayolları Trafik Kanunu",
+   "adet": 35,
+   "yuz": 2.73
   },
   {
    "anahtar": "jandarmavesahilgüvenlikpersonelininhizmetesa",
    "ad": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
    "adet": 34,
-   "yuz": 2.69
+   "yuz": 2.65
   },
   {
    "anahtar": "jandarmagenelkomutanlığıvesahilgüvenlikkomut",
    "ad": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
    "adet": 33,
-   "yuz": 2.61
+   "yuz": 2.57
   },
   {
    "anahtar": "5442",
    "ad": "5442 sayılı İl İdaresi Kanunu",
    "adet": 30,
-   "yuz": 2.37
+   "yuz": 2.34
   },
   {
    "anahtar": "5607",
    "ad": "5607 sayılı Kaçakçılıkla Mücadele Kanunu",
    "adet": 27,
-   "yuz": 2.14
-  },
-  {
-   "anahtar": "karayollarıtrafikyönetmeliği",
-   "ad": "Karayolları Trafik Yönetmeliği",
-   "adet": 26,
-   "yuz": 2.06
+   "yuz": 2.11
   },
   {
    "anahtar": "2559",
    "ad": "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
    "adet": 26,
-   "yuz": 2.06
+   "yuz": 2.03
   },
   {
    "anahtar": "1774",
    "ad": "1774 sayılı Kimlik Bildirme Kanunu",
    "adet": 24,
-   "yuz": 1.9
+   "yuz": 1.87
   },
   {
    "anahtar": "2863",
    "ad": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu",
    "adet": 23,
-   "yuz": 1.82
+   "yuz": 1.79
   },
   {
    "anahtar": "sözleşmelisubayveastsubayyönetmeliği",
    "ad": "Sözleşmeli Subay ve Astsubay Yönetmeliği",
    "adet": 22,
-   "yuz": 1.74
+   "yuz": 1.72
   },
   {
    "anahtar": "2911",
    "ad": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
    "adet": 22,
-   "yuz": 1.74
+   "yuz": 1.72
   },
   {
    "anahtar": "5395",
    "ad": "5395 sayılı Çocuk Koruma Kanunu",
    "adet": 22,
-   "yuz": 1.74
+   "yuz": 1.72
   },
   {
    "anahtar": "5816",
    "ad": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun",
    "adet": 21,
-   "yuz": 1.66
+   "yuz": 1.64
   },
   {
    "anahtar": "2893",
    "ad": "2893 sayılı Türk Bayrağı Kanunu",
    "adet": 21,
-   "yuz": 1.66
+   "yuz": 1.64
   },
   {
    "anahtar": "2872",
    "ad": "2872 sayılı Çevre Kanunu",
    "adet": 21,
-   "yuz": 1.66
+   "yuz": 1.64
   },
   {
    "anahtar": "7201",
    "ad": "7201 sayılı Tebligat Kanunu",
    "adet": 20,
-   "yuz": 1.58
+   "yuz": 1.56
   },
   {
    "anahtar": "2935",
    "ad": "2935 sayılı Olağanüstü Hal Kanunu",
    "adet": 20,
-   "yuz": 1.58
+   "yuz": 1.56
   },
   {
    "anahtar": "resmîyazışmalardauygulanacakusulveesaslarhak",
    "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
    "adet": 19,
-   "yuz": 1.5
+   "yuz": 1.48
   },
   {
    "anahtar": "5070",
    "ad": "5070 sayılı Elektronik İmza Kanunu",
    "adet": 18,
-   "yuz": 1.42
+   "yuz": 1.4
+  },
+  {
+   "anahtar": "bilgiedinmehakkıkanunununuygulanmasınailişki",
+   "ad": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+   "adet": 18,
+   "yuz": 1.4
   },
   {
    "anahtar": "2521",
    "ad": "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
    "adet": 18,
-   "yuz": 1.42
-  },
-  {
-   "anahtar": "ateşlisilahlarvebıçaklarilediğeraletlerhakkı",
-   "ad": "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
-   "adet": 18,
-   "yuz": 1.42
+   "yuz": 1.4
   },
   {
    "anahtar": "5199",
    "ad": "5199 sayılı Hayvanları Koruma Kanunu",
    "adet": 18,
-   "yuz": 1.42
+   "yuz": 1.4
   },
   {
    "anahtar": "adlikollukyönetmeliği",
    "ad": "Adli Kolluk Yönetmeliği",
    "adet": 18,
-   "yuz": 1.42
-  },
-  {
-   "anahtar": "6136",
-   "ad": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
-   "adet": 18,
-   "yuz": 1.42
-  },
-  {
-   "anahtar": "bilgiedinmehakkıkanunununuygulanmasınailişki",
-   "ad": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
-   "adet": 17,
-   "yuz": 1.34
+   "yuz": 1.4
   },
   {
    "anahtar": "kişiselverilerinsilinmesiyokedilmesiveyaanon",
    "ad": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
    "adet": 17,
-   "yuz": 1.34
-  },
-  {
-   "anahtar": "adliveönlemearamalarıyönetmeliği",
-   "ad": "Adli ve Önleme Aramaları Yönetmeliği",
-   "adet": 17,
-   "yuz": 1.34
+   "yuz": 1.33
   },
   {
    "anahtar": "yakalamagözaltınaalmaveifadealmayönetmeliği",
    "ad": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği",
    "adet": 17,
-   "yuz": 1.34
+   "yuz": 1.33
+  },
+  {
+   "anahtar": "adliveönlemearamalarıyönetmeliği",
+   "ad": "Adli ve Önleme Aramaları Yönetmeliği",
+   "adet": 16,
+   "yuz": 1.25
   },
   {
    "anahtar": "suçeşyasıyönetmeliği",
    "ad": "Suç Eşyası Yönetmeliği",
    "adet": 16,
-   "yuz": 1.27
+   "yuz": 1.25
   },
   {
    "anahtar": "6698",
    "ad": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
    "adet": 15,
-   "yuz": 1.19
+   "yuz": 1.17
   },
   {
    "anahtar": "5188",
    "ad": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
-   "adet": 14,
-   "yuz": 1.11
+   "adet": 15,
+   "yuz": 1.17
   },
   {
    "anahtar": "3091",
    "ad": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
    "adet": 13,
-   "yuz": 1.03
+   "yuz": 1.01
+  },
+  {
+   "anahtar": "6458",
+   "ad": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+   "adet": 13,
+   "yuz": 1.01
   },
   {
    "anahtar": "6222",
    "ad": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
    "adet": 12,
-   "yuz": 0.95
-  },
-  {
-   "anahtar": "özelgüvenlikhizmetlerinedairkanununuygulanma",
-   "ad": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
-   "adet": 12,
-   "yuz": 0.95
+   "yuz": 0.94
   },
   {
    "anahtar": "çocukkorumakanununagöreverilenkoruyucuvedest",
    "ad": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik",
    "adet": 12,
-   "yuz": 0.95
-  },
-  {
-   "anahtar": "çocukkorumakanunununuygulanmasınailişkinusul",
-   "ad": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
-   "adet": 12,
-   "yuz": 0.95
+   "yuz": 0.94
   },
   {
    "anahtar": "sesvegazfişeğiatabilensilahlarhakkındayönetm",
    "ad": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
    "adet": 11,
-   "yuz": 0.87
+   "yuz": 0.86
+  },
+  {
+   "anahtar": "özelgüvenlikhizmetlerinedairkanununuygulanma",
+   "ad": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+   "adet": 11,
+   "yuz": 0.86
   },
   {
    "anahtar": "2860",
    "ad": "2860 sayılı Yardım Toplama Kanunu",
    "adet": 11,
-   "yuz": 0.87
+   "yuz": 0.86
   },
   {
    "anahtar": "4733",
    "ad": "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun",
    "adet": 11,
-   "yuz": 0.87
+   "yuz": 0.86
   },
   {
    "anahtar": "4678",
    "ad": "4678 sayılı Türk Silahlı Kuvvetlerinde İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun",
    "adet": 10,
-   "yuz": 0.79
+   "yuz": 0.78
   },
   {
    "anahtar": "6415",
    "ad": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun",
    "adet": 10,
-   "yuz": 0.79
+   "yuz": 0.78
   },
   {
    "anahtar": "4915",
    "ad": "4915 sayılı Kara Avcılığı Kanunu",
    "adet": 9,
-   "yuz": 0.71
+   "yuz": 0.7
   },
   {
-   "anahtar": "2918",
-   "ad": "2918 sayılı Karayolları Trafik Kanunu",
+   "anahtar": "2313",
+   "ad": "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
    "adet": 9,
-   "yuz": 0.71
+   "yuz": 0.7
   },
   {
    "anahtar": "taşınırkültürvetabiatvarlıklarınıbulanlaraha",
    "ad": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
    "adet": 9,
-   "yuz": 0.71
+   "yuz": 0.7
   },
   {
    "anahtar": "4207",
    "ad": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
    "adet": 8,
-   "yuz": 0.63
+   "yuz": 0.62
   },
   {
    "anahtar": "1380",
    "ad": "1380 sayılı Su Ürünleri Kanunu",
    "adet": 8,
-   "yuz": 0.63
+   "yuz": 0.62
   },
   {
-   "anahtar": "2313",
-   "ad": "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
+   "anahtar": "çocukkorumakanunununuygulanmasınailişkinusul",
+   "ad": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
    "adet": 8,
-   "yuz": 0.63
+   "yuz": 0.62
   },
   {
    "anahtar": "6831",
@@ -5350,31 +5230,25 @@
    "anahtar": "3298",
    "ad": "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun",
    "adet": 5,
-   "yuz": 0.4
+   "yuz": 0.39
   },
   {
    "anahtar": "tütünmamullerivealkollüiçkilerinsatışınavesu",
    "ad": "Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik",
    "adet": 4,
-   "yuz": 0.32
-  },
-  {
-   "anahtar": "6458",
-   "ad": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
-   "adet": 4,
-   "yuz": 0.32
+   "yuz": 0.31
   },
   {
    "anahtar": "türkvatandaşlığıkanunununuygulanmasınailişki",
    "ad": "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik",
-   "adet": 3,
-   "yuz": 0.24
+   "adet": 4,
+   "yuz": 0.31
   },
   {
    "anahtar": "4342",
    "ad": "4342 sayılı Mera Kanunu",
    "adet": 3,
-   "yuz": 0.24
+   "yuz": 0.23
   },
   {
    "anahtar": "jandarmagenelkomutanlığıizinyönetmeliği",
@@ -5392,78 +5266,78 @@
  "tipAgirlik": [
   {
    "ad": "olumsuz",
-   "adet": 500,
-   "yuz": 39.56
+   "adet": 504,
+   "yuz": 39.31
   },
   {
    "ad": "makam",
-   "adet": 241,
-   "yuz": 19.07
+   "adet": 244,
+   "yuz": 19.03
   },
   {
    "ad": "duz",
-   "adet": 182,
-   "yuz": 14.4
+   "adet": 187,
+   "yuz": 14.59
   },
   {
    "ad": "ceza",
-   "adet": 159,
-   "yuz": 12.58
+   "adet": 161,
+   "yuz": 12.56
   },
   {
    "ad": "bosluk",
    "adet": 67,
-   "yuz": 5.3
+   "yuz": 5.23
   },
   {
    "ad": "olumlu",
    "adet": 47,
-   "yuz": 3.72
+   "yuz": 3.67
   },
   {
    "ad": "onculu",
-   "adet": 40,
-   "yuz": 3.16
+   "adet": 44,
+   "yuz": 3.43
   },
   {
    "ad": "tanim",
    "adet": 28,
-   "yuz": 2.22
+   "yuz": 2.18
   }
  ],
  "boyutlar": {
   "yon": [
    {
     "ad": "olumlu",
-    "adet": 754,
-    "yuz": 59.65
+    "adet": 767,
+    "yuz": 59.83
    },
    {
     "ad": "olumsuz",
-    "adet": 510,
-    "yuz": 40.35
+    "adet": 515,
+    "yuz": 40.17
    }
   ],
   "bicim": [
    {
     "ad": "duz",
-    "adet": 1020,
-    "yuz": 80.7
+    "adet": 1033,
+    "yuz": 80.58
    },
    {
     "ad": "alinti",
-    "adet": 133,
-    "yuz": 10.52
+    "adet": 134,
+    "yuz": 10.45
    },
    {
     "ad": "bosluk",
     "adet": 68,
-    "yuz": 5.38
+    "yuz": 5.3
    },
    {
     "ad": "onculu",
-    "adet": 42,
-    "yuz": 3.32
+    "adet": 46,
+    "yuz": 3.59
    },
    {
     "ad": "vaka",
@@ -5474,55 +5348,55 @@
   "bilgi": [
    {
     "ad": "genel",
-    "adet": 472,
-    "yuz": 37.34
+    "adet": 478,
+    "yuz": 37.29
    },
    {
     "ad": "ceza",
-    "adet": 293,
-    "yuz": 23.18
+    "adet": 295,
+    "yuz": 23.01
    },
    {
     "ad": "makam",
-    "adet": 215,
-    "yuz": 17.01
+    "adet": 218,
+    "yuz": 17
    },
    {
     "ad": "sure",
-    "adet": 133,
-    "yuz": 10.52
+    "adet": 137,
+    "yuz": 10.69
    },
    {
     "ad": "usul",
-    "adet": 73,
-    "yuz": 5.78
+    "adet": 76,
+    "yuz": 5.93
    },
    {
     "ad": "kapsam",
     "adet": 49,
-    "yuz": 3.88
+    "yuz": 3.82
    },
    {
     "ad": "kavram",
     "adet": 29,
-    "yuz": 2.29
+    "yuz": 2.26
    }
   ],
   "sik": [
    {
     "ad": "orta",
-    "adet": 447,
-    "yuz": 35.36
+    "adet": 451,
+    "yuz": 35.18
    },
    {
     "ad": "uzun",
-    "adet": 425,
-    "yuz": 33.62
+    "adet": 429,
+    "yuz": 33.46
    },
    {
     "ad": "kisa",
-    "adet": 390,
-    "yuz": 30.85
+    "adet": 400,
+    "yuz": 31.2
    },
    {
     "ad": "kombinasyon",
@@ -5533,91 +5407,91 @@
   "boy": [
    {
     "ad": "orta",
-    "adet": 590,
-    "yuz": 46.68
+    "adet": 599,
+    "yuz": 46.72
    },
    {
     "ad": "uzun",
-    "adet": 338,
-    "yuz": 26.74
+    "adet": 347,
+    "yuz": 27.07
    },
    {
     "ad": "kisa",
     "adet": 336,
-    "yuz": 26.58
+    "yuz": 26.21
    }
   ]
  },
  "bilesikAgirlik": [
   {
    "ad": "olumsuz|genel",
-   "adet": 293,
-   "yuz": 23.18
+   "adet": 295,
+   "yuz": 23.01
   },
   {
    "ad": "olumlu|ceza",
-   "adet": 186,
-   "yuz": 14.72
+   "adet": 188,
+   "yuz": 14.66
   },
   {
    "ad": "olumlu|genel",
-   "adet": 179,
-   "yuz": 14.16
+   "adet": 183,
+   "yuz": 14.27
   },
   {
    "ad": "olumlu|makam",
-   "adet": 167,
-   "yuz": 13.21
+   "adet": 170,
+   "yuz": 13.26
   },
   {
    "ad": "olumlu|sure",
-   "adet": 121,
-   "yuz": 9.57
+   "adet": 124,
+   "yuz": 9.67
   },
   {
    "ad": "olumsuz|ceza",
    "adet": 107,
-   "yuz": 8.47
+   "yuz": 8.35
   },
   {
    "ad": "olumsuz|makam",
    "adet": 48,
-   "yuz": 3.8
+   "yuz": 3.74
   },
   {
    "ad": "olumlu|usul",
-   "adet": 45,
-   "yuz": 3.56
+   "adet": 46,
+   "yuz": 3.59
   },
   {
    "ad": "olumlu|kapsam",
    "adet": 30,
-   "yuz": 2.37
+   "yuz": 2.34
   },
   {
    "ad": "olumsuz|usul",
-   "adet": 28,
-   "yuz": 2.22
+   "adet": 30,
+   "yuz": 2.34
   },
   {
    "ad": "olumlu|kavram",
    "adet": 26,
-   "yuz": 2.06
+   "yuz": 2.03
   },
   {
    "ad": "olumsuz|kapsam",
    "adet": 19,
-   "yuz": 1.5
+   "yuz": 1.48
   },
   {
    "ad": "olumsuz|sure",
-   "adet": 12,
-   "yuz": 0.95
+   "adet": 13,
+   "yuz": 1.01
   },
   {
    "ad": "olumsuz|kavram",
    "adet": 3,
-   "yuz": 0.24
+   "yuz": 0.23
   }
  ],
  "rutbe": [
