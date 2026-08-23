@@ -23,6 +23,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SORU_KARA_LISTE } from './soru-kara-liste.mjs';
 import { konuAnahtari, mevzuatBul } from './soru-standart.mjs';
+import { profilAnahtari, soruProfili } from './soru-profil.mjs';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DENEME_SAYISI = 5;
@@ -47,8 +48,15 @@ function veriOku(dosya, degisken) {
 // Başkan (23 Ağu): "gerçek sınavların her birini analiz etsin, hangi konudan kaç soru çıkmış;
 // bizim deneme bu standarda uyuyor mu; soru dağılımları ona göre ayarlansın."
 let REFERANS_KONU = [];
+let REFERANS_BILESIK = [];
+let REFERANS_SIK = new Map();
+let REFERANS_BICIM = new Map();
 try {
-  REFERANS_KONU = JSON.parse(readFileSync(join(kok, 'scripts/cikmis-referans.json'), 'utf8')).konuAgirlik;
+  const _r = JSON.parse(readFileSync(join(kok, 'scripts/cikmis-referans.json'), 'utf8'));
+  REFERANS_KONU = _r.konuAgirlik;
+  REFERANS_BILESIK = _r.bilesikAgirlik ?? [];
+  REFERANS_SIK = new Map((_r.boyutlar?.sik ?? []).map((x) => [x.ad, x.yuz]));
+  REFERANS_BICIM = new Map((_r.boyutlar?.bicim ?? []).map((x) => [x.ad, x.yuz]));
 } catch {
   console.log('UYARI: cikmis-referans.json yok — konu kotası uygulanmayacak (npm run referans:uret).');
 }
@@ -223,32 +231,96 @@ function konudanAl(ad, adet, tipSirasi, serbestDusme = false) {
  */
 function denemeKur(adet, imlecM, imlecB) {
   const secilen = [];
-  // DIŞ HALKA: tip kotası (çıkmış sınav oranı) — böylece tip dağılımı birebir tutar.
-  // İÇ HALKA: o tipteki soruları çıkmış sınavın KONU ağırlığına göre dağıt.
-  for (const [tip, kota50] of KOTA) {
-    let kalan = Math.round((kota50 * adet) / 50);
-    for (const k of REFERANS_KONU) {
+  // ŞIK DENGESİ: çıkmış sınavda şıkların ~%37'si UZUN (bir fıkra/cümle). Bizim havuzda
+  // bu oran %8; denemeye alırken uzun şıklı sorulara ÖNCELİK verilir ki zorluk tutsun.
+  const sikHedef = new Map([...REFERANS_SIK].map(([ad, yuz]) => [ad, Math.round((yuz * adet) / 100)]));
+  const sikSayac = new Map();
+  // BİÇİM DENGESİ de kotalı: "boşluk doldurma" bizde %14'e çıkıyordu, sınavda %5,7.
+  const bicimHedef = new Map([...REFERANS_BICIM].map(([ad, yuz]) => [ad, Math.round((yuz * adet) / 100)]));
+  const bicimSayac = new Map();
+  const acik = (harita, sayac, ad) => (harita.get(ad) ?? 0) - (sayac.get(ad) ?? 0);
+  // 1. geçiş: açığı EN BÜYÜK olan şık türü (pratikte "uzun şıklı" sorular) öncelikli.
+  const sikOncelik = (q) => {
+    const pr = soruProfili(q);
+    if (acik(bicimHedef, bicimSayac, pr.bicim) <= 0) return false;
+    const enAcik = [...sikHedef.keys()].sort((x, y) => acik(sikHedef, sikSayac, y) - acik(sikHedef, sikSayac, x))[0];
+    return pr.sik === enAcik;
+  };
+  // 2. geçiş: kotasını aşmayan her soru.
+  const sikUygun = (q) => {
+    const pr = soruProfili(q);
+    return acik(sikHedef, sikSayac, pr.sik) > 0 && acik(bicimHedef, bicimSayac, pr.bicim) > 0;
+  };
+  const isle = (liste) => {
+    for (const q of liste) {
+      const pr = soruProfili(q);
+      sikSayac.set(pr.sik, (sikSayac.get(pr.sik) ?? 0) + 1);
+      bicimSayac.set(pr.bicim, (bicimSayac.get(pr.bicim) ?? 0) + 1);
+    }
+    secilen.push(...liste);
+  };
+
+  // DIŞ HALKA: bileşik profil kotası (yön + neyi sorduğu) — çıkmış sınav oranı.
+  // İÇ HALKA: o profildeki soruları çıkmış sınavın KONU ağırlığına göre dağıt.
+  for (const bk of REFERANS_BILESIK) {
+    let kalan = Math.round((bk.yuz * adet) / 100);
+    if (kalan < 1) continue;
+    for (const tur of ['oncelik', 'kotali', 'serbest']) {
+      for (const k of REFERANS_KONU) {
+        if (kalan <= 0) break;
+        const pay = Math.max(1, Math.round((k.yuz * kalan) / 100));
+        const alinan = konudanAlProfil(
+          k.anahtar ?? konuAnahtari(k.ad),
+          Math.min(pay, kalan),
+          bk.ad,
+          tur === 'oncelik' ? sikOncelik : tur === 'kotali' ? sikUygun : null,
+        );
+        isle(alinan);
+        kalan -= alinan.length;
+      }
       if (kalan <= 0) break;
-      const pay = Math.max(1, Math.round((k.yuz * kalan) / 100));
-      const alinan = konudanAl(k.anahtar ?? konuAnahtari(k.ad), Math.min(pay, kalan), [tip]);
-      secilen.push(...alinan);
-      kalan -= alinan.length;
     }
-    // O tipte konu havuzu yetmediyse: serbest (yarı müşterek / yarı branş).
-    if (kalan > 0) {
-      const m = dagit(karistir(musterekKanunlar), Math.ceil(kalan / 2), imlecM, tip);
-      secilen.push(...m);
-      secilen.push(...dagit(karistir(bransKanunlar), kalan - m.length, imlecB, tip));
-    }
+    // O profilde konu havuzu yetmediyse: tüm havuzdan serbest.
+    if (kalan > 0) isle(tumHavuzdanProfil(kalan, bk.ad));
   }
-  // Yuvarlamadan artan boşluk: tipsiz serbest dolum.
+  // Yuvarlamadan artan boşluk: serbest dolum (yarı müşterek / yarı branş).
   const eksik = adet - secilen.length;
   if (eksik > 0) {
     const m = dagit(karistir(musterekKanunlar), Math.ceil(eksik / 2), imlecM);
-    secilen.push(...m);
-    secilen.push(...dagit(karistir(bransKanunlar), eksik - m.length, imlecB));
+    isle(m);
+    isle(dagit(karistir(bransKanunlar), eksik - m.length, imlecB));
   }
   return secilen.slice(0, adet);
+}
+
+/** Bir konudan, belirli BİLEŞİK profile (yön|bilgi) uyan n soru al. */
+function konudanAlProfil(anahtar, adet, bilesik, sikSuzgec) {
+  const liste = konuHavuzu().get(anahtar) ?? [];
+  const alinan = [];
+  for (const q of liste) {
+    if (alinan.length >= adet) break;
+    if (q.alindi) continue;
+    if (profilAnahtari(soruProfili(q)) !== bilesik) continue;
+    if (sikSuzgec && !sikSuzgec(q)) continue;
+    q.alindi = true;
+    alinan.push(q);
+  }
+  return alinan;
+}
+
+/** Konu kotası tutmadıysa: tüm havuzdan o profile uyan soru. */
+function tumHavuzdanProfil(adet, bilesik) {
+  const alinan = [];
+  for (const [, liste] of havuz) {
+    for (const q of liste) {
+      if (alinan.length >= adet) return alinan;
+      if (q.alindi) continue;
+      if (profilAnahtari(soruProfili(q)) !== bilesik) continue;
+      q.alindi = true;
+      alinan.push(q);
+    }
+  }
+  return alinan;
 }
 
 /** Tip kotasıyla serbest dolum (konu kotasından artan boşluk için). */

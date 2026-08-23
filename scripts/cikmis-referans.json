@@ -3152,6 +3152,195 @@
    "yuz": 1.42
   }
  ],
+ "boyutlar": {
+  "yon": [
+   {
+    "ad": "olumlu",
+    "adet": 293,
+    "yuz": 57.12
+   },
+   {
+    "ad": "olumsuz",
+    "adet": 220,
+    "yuz": 42.88
+   }
+  ],
+  "bicim": [
+   {
+    "ad": "duz",
+    "adet": 416,
+    "yuz": 81.09
+   },
+   {
+    "ad": "alinti",
+    "adet": 55,
+    "yuz": 10.72
+   },
+   {
+    "ad": "bosluk",
+    "adet": 29,
+    "yuz": 5.65
+   },
+   {
+    "ad": "onculu",
+    "adet": 12,
+    "yuz": 2.34
+   },
+   {
+    "ad": "vaka",
+    "adet": 1,
+    "yuz": 0.19
+   }
+  ],
+  "bilgi": [
+   {
+    "ad": "genel",
+    "adet": 213,
+    "yuz": 41.52
+   },
+   {
+    "ad": "ceza",
+    "adet": 112,
+    "yuz": 21.83
+   },
+   {
+    "ad": "makam",
+    "adet": 78,
+    "yuz": 15.2
+   },
+   {
+    "ad": "sure",
+    "adet": 55,
+    "yuz": 10.72
+   },
+   {
+    "ad": "usul",
+    "adet": 26,
+    "yuz": 5.07
+   },
+   {
+    "ad": "kapsam",
+    "adet": 20,
+    "yuz": 3.9
+   },
+   {
+    "ad": "kavram",
+    "adet": 9,
+    "yuz": 1.75
+   }
+  ],
+  "sik": [
+   {
+    "ad": "uzun",
+    "adet": 188,
+    "yuz": 36.65
+   },
+   {
+    "ad": "orta",
+    "adet": 174,
+    "yuz": 33.92
+   },
+   {
+    "ad": "kisa",
+    "adet": 150,
+    "yuz": 29.24
+   },
+   {
+    "ad": "kombinasyon",
+    "adet": 1,
+    "yuz": 0.19
+   }
+  ],
+  "boy": [
+   {
+    "ad": "orta",
+    "adet": 249,
+    "yuz": 48.54
+   },
+   {
+    "ad": "kisa",
+    "adet": 134,
+    "yuz": 26.12
+   },
+   {
+    "ad": "uzun",
+    "adet": 130,
+    "yuz": 25.34
+   }
+  ]
+ },
+ "bilesikAgirlik": [
+  {
+   "ad": "olumsuz|genel",
+   "adet": 135,
+   "yuz": 26.32
+  },
+  {
+   "ad": "olumlu|genel",
+   "adet": 78,
+   "yuz": 15.2
+  },
+  {
+   "ad": "olumlu|ceza",
+   "adet": 69,
+   "yuz": 13.45
+  },
+  {
+   "ad": "olumlu|makam",
+   "adet": 60,
+   "yuz": 11.7
+  },
+  {
+   "ad": "olumlu|sure",
+   "adet": 52,
+   "yuz": 10.14
+  },
+  {
+   "ad": "olumsuz|ceza",
+   "adet": 43,
+   "yuz": 8.38
+  },
+  {
+   "ad": "olumsuz|makam",
+   "adet": 18,
+   "yuz": 3.51
+  },
+  {
+   "ad": "olumlu|kapsam",
+   "adet": 13,
+   "yuz": 2.53
+  },
+  {
+   "ad": "olumsuz|usul",
+   "adet": 13,
+   "yuz": 2.53
+  },
+  {
+   "ad": "olumlu|usul",
+   "adet": 13,
+   "yuz": 2.53
+  },
+  {
+   "ad": "olumlu|kavram",
+   "adet": 8,
+   "yuz": 1.56
+  },
+  {
+   "ad": "olumsuz|kapsam",
+   "adet": 7,
+   "yuz": 1.36
+  },
+  {
+   "ad": "olumsuz|sure",
+   "adet": 3,
+   "yuz": 0.58
+  },
+  {
+   "ad": "olumsuz|kavram",
+   "adet": 1,
+   "yuz": 0.19
+  }
+ ],
  "rutbe": [
   {
    "rutbe": "astsubay",

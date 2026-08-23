@@ -18,6 +18,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { konuAnahtari, mevzuatBul, NO_ADI } from './soru-standart.mjs';
+import { BOYUTLAR, profilAnahtari, soruProfili } from './soru-profil.mjs';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -125,6 +126,31 @@ const tipAgirlik = [...birlesikTip]
   .map(([ad, n]) => ({ ad, adet: n, yuz: +((100 * n) / tipToplam).toFixed(2) }))
   .sort((a, b) => b.adet - a.adet);
 
+// --- BEŞ BOYUTLU ÖLÇÜ (başkan: "tek boyutta düşünmeyelim") ---
+const boyutSay = Object.fromEntries(BOYUTLAR.map((b) => [b, new Map()]));
+const bilesikSay = new Map();
+let boyutToplam = 0;
+for (const [dosya, bilgi] of Object.entries(KITAPCIK)) {
+  if (bilgi.rutbe === 'havuz') continue;
+  for (const q of mev.filter((x) => x.dosya === dosya)) {
+    const pr = soruProfili({ soru: q.kok, siklar: q.siklar });
+    boyutToplam++;
+    for (const b of BOYUTLAR) boyutSay[b].set(pr[b], (boyutSay[b].get(pr[b]) ?? 0) + 1);
+    const a2 = profilAnahtari(pr);
+    bilesikSay.set(a2, (bilesikSay.get(a2) ?? 0) + 1);
+  }
+}
+const boyutlar = Object.fromEntries(
+  BOYUTLAR.map((b) => [
+    b,
+    [...boyutSay[b]].map(([ad, n]) => ({ ad, adet: n, yuz: +((100 * n) / boyutToplam).toFixed(2) }))
+      .sort((x, y) => y.adet - x.adet),
+  ]),
+);
+const bilesikAgirlik = [...bilesikSay]
+  .map(([ad, n]) => ({ ad, adet: n, yuz: +((100 * n) / boyutToplam).toFixed(2) }))
+  .sort((x, y) => y.adet - x.adet);
+
 const cikti = {
   uretim: 'npm run referans:uret',
   kaynak: '9 çıkmış JSPS kitapçığı (scripts/veri/cikmis-sinav-sorulari.json)',
@@ -134,6 +160,8 @@ const cikti = {
   kitapciklar,
   konuAgirlik,
   tipAgirlik,
+  boyutlar,
+  bilesikAgirlik,
   rutbe: [...rutbeOlcu].map(([r, v]) => ({
     rutbe: r,
     soru: v.soru,

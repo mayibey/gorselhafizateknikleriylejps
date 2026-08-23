@@ -25,7 +25,7 @@ import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { denetle, konuAnahtari, mevzuatBul, veriOku } from './soru-standart.mjs';
-import { soruTipi } from './cikmis-referans-uret.mjs';
+import { BOYUTLAR, soruProfili } from './soru-profil.mjs';
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 const bayrak = (a) => process.argv.includes(a);
@@ -124,17 +124,28 @@ for (const d of denemeler) {
   const tip = new Map();
   const konu = new Map();
   for (const q of d.sorular) {
-    const t = soruTipi(q.soru);
+    const t = soruProfili(q).bilgi;
     tip.set(t, (tip.get(t) ?? 0) + 1);
     const a = konuAdi(q, null);
     konu.set(a, (konu.get(a) ?? 0) + 1);
   }
-  // TİP SAPMASI: her tipte |bizim% − ölçü%| toplamının yarısı = "kaç soruluk kayma".
-  let tipSapma = 0;
-  for (const t of new Set([...tip.keys(), ...refTip.keys()])) {
-    tipSapma += Math.abs(yuzde(tip.get(t) ?? 0, n) - (refTip.get(t) ?? 0));
+  // BEŞ BOYUT SAPMASI (başkan: "tek boyutta düşünmeyelim"). Her boyutta
+  // |bizim% − ölçü%| toplamının yarısı = o boyutta "kaç soruluk kayma".
+  const boyutSapma = {};
+  for (const b of BOYUTLAR) {
+    const bizim = new Map();
+    for (const q of d.sorular) {
+      const p = soruProfili(q)[b];
+      bizim.set(p, (bizim.get(p) ?? 0) + 1);
+    }
+    const ref = new Map((REF.boyutlar?.[b] ?? []).map((x) => [x.ad, x.yuz]));
+    let s2 = 0;
+    for (const a of new Set([...bizim.keys(), ...ref.keys()])) {
+      s2 += Math.abs(yuzde(bizim.get(a) ?? 0, n) - (ref.get(a) ?? 0));
+    }
+    boyutSapma[b] = s2 / 2;
   }
-  tipSapma = tipSapma / 2;
+  const tipSapma = (boyutSapma.yon + boyutSapma.bilgi + boyutSapma.bicim) / 3;
   // KONU SAPMASI: aynı hesap, ölçüdeki ağırlıklı konular üzerinden.
   let konuSapma = 0;
   for (const a of new Set([...konu.keys(), ...refKonu.keys()])) {
@@ -144,10 +155,17 @@ for (const d of denemeler) {
   const kokOrt = Math.round(d.sorular.reduce((t, q) => t + q.soru.length, 0) / n);
   const isaret = (s, esik) => (s <= esik ? '✓' : s <= esik * 1.6 ? '~' : '✗');
   karneToplam++;
-  if (tipSapma <= 12 && konuSapma <= 45) karne++;
+  // GEÇME ÖLÇÜSÜ: profil (yön+biçim+bilgi ortalaması) %8'i, konu sapması %55'i aşmamalı.
+  // Konu eşiği daha gevşek: çıkmış sınavın %6,5'i bizde hiç sorusu olmayan konularda
+  // (Anayasa, Pasaport Kanunu) — o pay kapanana kadar sıfır sapma mümkün değil.
+  if (tipSapma <= 8 && konuSapma <= 55) karne++;
   console.log(
-    `   ${isaret(tipSapma, 12)} ${d.takim} Deneme ${d.no} (${n} soru) — ` +
-      `tip sapması %${tipSapma.toFixed(1)} · konu sapması %${konuSapma.toFixed(1)} · kök ${kokOrt} krk`,
+    `   ${isaret(tipSapma, 8)} ${d.takim} Deneme ${d.no} (${n} soru) — ` +
+      `profil sapması %${tipSapma.toFixed(1)} · konu sapması %${konuSapma.toFixed(1)} · kök ${kokOrt} krk`,
+  );
+  console.log(
+    '       boyutlar: ' +
+      BOYUTLAR.map((b) => `${b} %${boyutSapma[b].toFixed(0)}`).join(' · '),
   );
   if (!kisa) {
     const eksik = [...refKonu]
