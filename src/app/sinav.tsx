@@ -130,13 +130,23 @@ export default function SinavScreen() {
     }
     void (async () => {
       const kayit = await sinavIlerlemeOku(lawIdNum, testNum).catch(() => null);
-      if (kayit && kayit.sorular.length > 0) {
+      const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok) : getTestSorulari(lawIdNum, testNum);
+      // Yarım sınav SORULARIYLA BİRLİKTE kaydediliyor. Soru bankası güncellenince (23 Ağu:
+      // sorular çıkmış sınav standardına çekildi) kayıt ESKİ METNİ oynatmaya devam ediyordu —
+      // başkan düzeltilmiş soruyu eski hâliyle gördü. Kaydın metinleri bankayla uyuşmuyorsa
+      // kayıt geçersiz sayılır ve sınav baştan (güncel metinle) kurulur.
+      const guncelMetin = new Map(liste.map((s) => [s.id, s.soru]));
+      const kayitGecerli =
+        !!kayit &&
+        kayit.sorular.length === liste.length &&
+        kayit.sorular.every((s) => guncelMetin.get(s.id) === s.soru);
+      if (kayit && kayitGecerli) {
         // Devam: saklanan soru sırası + işaretler + konum.
         setSorular(kayit.sorular);
         setSecimler(kayit.secimler);
         setIndex(Math.min(kayit.index, kayit.sorular.length));
       } else {
-        const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok) : getTestSorulari(lawIdNum, testNum);
+        if (kayit) void sinavIlerlemeSil(lawIdNum, testNum); // bayat kayıt temizlenir
         if (liste.length === 0) {
           setBos(true);
           return;
