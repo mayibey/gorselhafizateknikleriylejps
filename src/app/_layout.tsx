@@ -24,6 +24,7 @@ import { oauthUrlIsle, tanitimSunucudanOku, tanitimSunucuyaYaz } from '@/lib/aut
 import { AuthProvider, useAuth } from '@/lib/auth-context';
 import { bildirimTiklamaDinle, getAyar, planla } from '@/lib/bildirim';
 import { pushTokenGuncelle } from '@/lib/er-meydani';
+import { bayatIcerikTazele } from '@/lib/bayat-icerik';
 import { istemciSurumBildir } from '@/lib/istemci-surum';
 import { tanitimTamamla, tanitimTamamMi } from '@/lib/ipuclari';
 import { UygulamaTuru } from '@/components/tanitim/uygulama-turu';
@@ -116,6 +117,12 @@ export default function RootLayout() {
   // İndirilmiş kanun listesini belleğe al → görsel çözümleyici yerel dosyaları görsün.
   useEffect(() => {
     void indirmeDurumYukle();
+  }, []);
+
+  // Sunucuda DÜZELTİLEN kart görselini, o kanunu zaten indirmiş cihaza da ulaştır
+  // (dosya adı aynı kaldığı için indirme "var" deyip atlıyordu). Damga değişmedikçe no-op.
+  useEffect(() => {
+    void indirmeDurumYukle().then(() => bayatIcerikTazele());
   }, []);
 
   // GOOGLE GİRİŞ DÖNÜŞÜ (deep-link): Android'de OAuth redirect app'e `mevzu://?code=...` deep-link
