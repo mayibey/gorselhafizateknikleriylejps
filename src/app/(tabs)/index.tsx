@@ -32,6 +32,7 @@ import { useUyelik } from '@/lib/uyelik-context';
 // üzerinden gelince 1.5MB DUELLO_SORULARI boot'ta yükleniyordu; doğrudan import boot'u hafifletir.
 import { DUELLO_KANUNLAR } from '../../assets/duello-kanunlar';
 import { type ZayifKanun, type ZayifMadde, zayifKanunlar, zayifMaddeler } from '@/lib/er-meydani';
+import { LAW_KLASOR } from '@/db/seed';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { hafifDokun, ortaDokun } from '@/lib/dokunus';
 import { useKisiselOzellik } from '@/lib/ozellik';
@@ -51,6 +52,12 @@ import { IndirimHatirlatma } from '@/components/premium/indirim-hatirlatma';
 
 // Metalik-ish altın gradyan (açık → ana → koyu altın). Play diski + geri besleme diski.
 const ALTIN_GRADYAN = [Palette.altinAcik2, Palette.altin, Palette.altinKoyu] as const;
+
+// İlk keşif görevi ÜCRETSİZ TCK'dan başlar (başkan, 24 Ağu). id elle yazılmaz:
+// içerik klasöründen türetilir — seed'de TCK pinli olsa da tek kaynak orası kalsın.
+const TCK_LAW_ID = Number(
+  Object.entries(LAW_KLASOR).find(([, klasor]) => klasor === 'tck')?.[0] ?? 1,
+);
 
 // Düello kanun id → kısa ad (zayıf-kanun / Geri Besleme kartı).
 const KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
@@ -590,9 +597,9 @@ export default function KarargahScreen() {
                     hicCalisilan ? (
                       <>
                         <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
-                          {'İLK '}
+                          {'KEŞİF VE '}
                           <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
-                            MEVZİNİ
+                            GÖZETLEME
                           </AppText>
                         </AppText>
                         <AppText
@@ -602,7 +609,7 @@ export default function KarargahScreen() {
                           numberOfLines={1}
                           adjustsFontSizeToFit
                           style={styles.emirManset}>
-                          GÖZETLEME GÖREVİ
+                          GÖREVİ
                         </AppText>
                       </>
                     ) : (
@@ -616,10 +623,13 @@ export default function KarargahScreen() {
                       </>
                     )
                   ) : (
-                    /* Ref v4: iki satır — "ZAYIF 8 MEVZİNİ" (MEVZİNİ altın) / "GÜÇLENDİR". */
+                    /* Ref v4: iki satır — "ZAYIF MEVZİNİ" (MEVZİNİ altın) / "GÜÇLENDİR".
+                       24 Ağu (başkan): manşetten RAKAM çıkarıldı — Playfair'in rakamları
+                       kapitallerin yanında yamuk duruyordu ("1 değişik görünüyor").
+                       Sayı, rakamları Inter olan alt meta panelinde ("N kart · N dk"). */
                     <>
                       <AppText variant="baslik" bold color="beyaz" style={styles.emirManset}>
-                        {`ZAYIF ${bekleyen} `}
+                        {'ZAYIF '}
                         <AppText variant="baslik" bold color="altinParlak" style={styles.emirManset}>
                           MEVZİNİ
                         </AppText>
@@ -638,8 +648,13 @@ export default function KarargahScreen() {
                 {!bos ? (
                   <EmirHalka tamam={bugunSayi} toplam={bugunSayi + bekleyen} />
                 ) : hicCalisilan ? (
-                  /* İlk görev hedefi: 8 kartlık gözetleme turu. */
-                  <EmirHalka tamam={0} toplam={8} />
+                  /* 24 Ağu: burada "0/8 KART" yazıyordu — 8 sayısı UYDURMAYDI (ilk turun
+                     kaç kart olduğu kanuna göre değişir). Sayı yerine keşif amblemi. */
+                  <View style={styles.madalyon}>
+                    <View style={styles.madalyonIc}>
+                      <MaterialCommunityIcons name="binoculars" size={26} color={Palette.altinParlak} />
+                    </View>
+                  </View>
                 ) : (
                   /* Görev bitti: sağda denge unsuru — altın madalya (halkanın yerini alır). */
                   <View style={styles.madalyon}>
@@ -655,7 +670,7 @@ export default function KarargahScreen() {
                   <View style={styles.emirMetaKol}>
                     <MaterialCommunityIcons name="clock-outline" size={16} color={Palette.beyaz} />
                     <AppText variant="kucuk" bold color="beyaz">
-                      {bekleyen} dk
+                      {bekleyen} kart · {bekleyen} dk
                     </AppText>
                   </View>
                   {sonKonu ? (
@@ -674,33 +689,30 @@ export default function KarargahScreen() {
                     </>
                   ) : null}
                 </View>
-              ) : bos && hicCalisilan ? (
-                <View style={styles.emirMetaPanel}>
-                  <View style={styles.emirMetaKol}>
-                    <MaterialCommunityIcons name="cards-outline" size={16} color={Palette.beyaz} />
-                    <AppText variant="kucuk" bold color="beyaz">
-                      8 kart
-                    </AppText>
-                  </View>
-                  <View style={styles.emirMetaAyrac} />
-                  <View style={styles.emirMetaKol}>
-                    <MaterialCommunityIcons name="timer-outline" size={16} color={Palette.beyaz} />
-                    <AppText variant="kucuk" bold color="beyaz">
-                      ≈ 8 dk
-                    </AppText>
-                  </View>
-                </View>
               ) : null}
               <Nabiz>
                 <Pressable
                   style={({ pressed }) => [styles.safakCta, pressed && styles.pressed]}
                   onPress={() => {
                     ortaDokun();
-                    if (bos) router.push('/mevzuat');
+                    // 24 Ağu (başkan): "ilk keşif gözetleme görevi ücretsiz olan TCK, ona göre
+                    // yönlendir." Hiç çalışmamış kullanıcıyı kanun listesinde seçim yapmaya
+                    // bırakmıyoruz — doğrudan ücretsiz TCK patikası (indirme kapısından geçerek).
+                    if (bos && hicCalisilan) {
+                      kapidanGec(TCK_LAW_ID, 'Türk Ceza Kanunu', () =>
+                        router.push({ pathname: '/patika', params: { lawId: String(TCK_LAW_ID) } }),
+                      );
+                    } else if (bos) router.push('/mevzuat');
                     else router.push({ pathname: '/akis', params: { mod: 'zayif' } });
                   }}
                   accessibilityRole="button"
-                  accessibilityLabel={bos ? 'Mevzuata git' : 'Taarruza başla — zayıf kartları çalış'}>
+                  accessibilityLabel={
+                    bos
+                      ? hicCalisilan
+                        ? 'Keşfe başla — ücretsiz Türk Ceza Kanunu'
+                        : 'Mevzuata git'
+                      : 'Taarruza başla — zayıf kartları çalış'
+                  }>
                   <LinearGradient
                     colors={['#F5C34F', '#EFB12F', '#E29B17']}
                     start={{ x: 0.5, y: 0 }}
@@ -708,7 +720,7 @@ export default function KarargahScreen() {
                     style={StyleSheet.absoluteFill}
                   />
                   <AppText variant="govde" bold style={styles.ctaYazi}>
-                    {bos ? (hicCalisilan ? 'GÖZETLEMEYE BAŞLA' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
+                    {bos ? (hicCalisilan ? 'KEŞFE BAŞLA' : 'YENİ KONU SEÇ') : 'TAARRUZA BAŞLA'}
                   </AppText>
                   <MaterialCommunityIcons
                     name="arrow-right"
@@ -723,7 +735,10 @@ export default function KarargahScreen() {
                 <View style={styles.emirNot}>
                   <View style={styles.notNokta} />
                   <AppText variant="etiket" color="beyaz" style={styles.notYazi}>
-                    İlk çalışmandan sonra emirlerin sana özel hazırlanacak.
+                    {/* 24 Ağu (başkan): "8 kart · ≈8 dk" UYDURMAYDI (ilk turun kart sayısı
+                        kanuna göre değişir) — meta paneli kalktı, DOĞRU bilgi bu satırda:
+                        keşif ücretsiz TCK'da başlar. Bir satır da yer kazandırdı. */}
+                    Keşif ücretsiz Türk Ceza Kanunu'nda başlar.
                   </AppText>
                   <View style={styles.notNokta} />
                 </View>
