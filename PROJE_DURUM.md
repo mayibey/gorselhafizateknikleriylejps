@@ -2,7 +2,21 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 24 Ağustos 2026 gece (bayat kart görselleri düzeltildi + tazeleme mekanizması; e-posta 922 kişiye gitti; eski sürüm OTA hattı açık)
+> Son güncelleme: 25 Ağustos 2026 (ARAMA 522→1511 kart; bayat görseller düzeltildi + tazeleme mekanizması; e-posta 922 kişiye gitti)
+>
+> ### ▶ 25 Ağu — 🔎 ARAMA: 1511 KARTIN TAMAMI ARANABİLİYOR (522 → 1511)
+> **Başkan:** *"arama kısmını düzeltebilirsin."* Arama metni registry'si 16 Haziran'dan kalmaydı:
+> 1511 kartın yalnız **522**'sinin metni vardı, onların **396**'sı bayattı, **branş kanunlarının
+> hiçbiri aranamıyordu** (CMK, Trafik, Orman, Çevre, Kaçakçılık, Çocuk Koruma…).
+> **Yeni:** `scripts/ses-metni-uret.mjs` (`npm run sesmetni:uret`) — registry'yi fabrika
+> raporundan üretir. Artık **1511/1511**, 67 kanunun tamamı.
+> **⚠️ BOYUT TUZAĞI:** dosya 580 KB → **1,9 MB**. Doğrudan import edilirse kart akışı (TtsBar)
+> her açılışta ayrıştırma bedelini öderdi. Ölçüm: **sesi olmayan kart YOK** → bu metnin tek
+> gerçek tüketicisi ARAMA. → `src/lib/ses-metni.ts` TEMBEL erişim; `ara.tsx` + `tts-bar.tsx`
+> oradan alıyor. **`kart-ses-metinleri` artık hiçbir yerden doğrudan import EDİLMİYOR.**
+> **Ölçüm (aynı sorgu, eski→yeni kart sayısı):** trafik 6→95 · çocuk 11→112 · çevre 17→87 ·
+> orman 6→55 · alkol 2→45 · yakalama 5→39 · gümrük 2→31 · pasaport 0→13 · zilyet 1→9.
+> **YAYIN:** 10 runtime (1.0.36 → 1.0.46), hepsi ✔.
 >
 > ### ▶ 24 Ağu (gece) — 🖼️ BAYAT KART GÖRSELİ + TAZELEME MEKANİZMASI
 > **Simge Yiğit (subay) bildirdi:** "Jandarma Teşkilat Yön m.1 kartı 7 sütun diyor ama 4 sütun var."
