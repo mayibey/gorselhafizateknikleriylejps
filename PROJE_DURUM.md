@@ -2,7 +2,24 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 24 Ağustos 2026 akşam (Karargâh ilk görev → Keşif ve Gözetleme Görevi + ücretsiz TCK; anlık güncelleme şalteri KAPALI)
+> Son güncelleme: 24 Ağustos 2026 akşam (zorunlu güncelleme KAPATILDI=0; güncelle kampanyası 247 kişi; anlık güncelleme şalteri KAPALI)
+>
+> ### ▶ 24 Ağu (akşam) — 🔴 ZORUNLU GÜNCELLEME KAPATILDI + "MAĞAZADAN GÜNCELLE" KAMPANYASI
+> **Başkan:** *"başka bi iOS'tan baktım güncelle butonu hâlâ Google'a atıyor, bu ciddi bi sorun."*
+> **Teşhis:** "Yeni Sürüm Gerekli" ekranı yalnız `versionCode < zorunlu_min_surum` olanlara çıkıyor.
+> Eşik 48 idi → **1.0.36 ve öncesi** (vCode ≤47) kilitleniyordu. O bundle'ların İÇİNDE eski Play-only
+> düğme var; 24 Ağu'daki platform düzeltmesi onlara **ASLA ulaşamaz** (OTA yalnız aynı sürüme iner).
+> **ÇÖZÜM: `zorunlu_min_surum = 0`** (kapalı). Kimse o ekranı görmüyor. Anon uçtan doğrulandı.
+> **DERS: zorunlu güncelleme ekranı OTA ile düzeltilemez** — ekranı GÖREN kişi, tanımı gereği
+> düzeltmenin ulaşamadığı sürümdedir. Bu ekranı açmadan önce içindeki her şey KUSURSUZ olmalı.
+>
+> **SÜRÜM ÖLÇÜMÜ (`istemci_surum`)** — iOS'un neredeyse tamamı eski:
+> iOS 1.0.43 → **141 kişi** · iOS 1.0.46 → 8 · iOS 1.0.40 → 5 · Android 1.0.46 → 100 ·
+> Android 1.0.41 → 89 · Android 1.0.45 → 11. Yani yeni işlerin hiçbirini görmüyorlar.
+> **Kampanya gönderildi** (`scratchpad/guncelle-kampanya.mjs`): 247 kişiye **kişiye özel** duyuru
+> (RLS `hedef_user_id` → güncel olan kimse görmez, teyit edildi) + 235 adrese push → **131 teslim**,
+> 104 `DeviceNotRegistered` (uygulamayı silmişler).
+> **TUZAK:** duyuruya mağaza LİNKİ konmadı — tek link iOS kullanıcısını yine Play'e düşürürdü.
 >
 > ### ▶ 24 Ağu (akşam) — KARARGÂH İLK GÖREV: "Keşif ve Gözetleme Görevi" + ÜCRETSİZ TCK
 > **Başkan (arkadaşının telefonu):** App Store'dan güncelledi → tasarım geldi ama **siyah ekranda takıldı**.
