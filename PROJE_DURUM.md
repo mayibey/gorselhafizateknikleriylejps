@@ -2,7 +2,30 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 24 Ağustos 2026 akşam (zorunlu güncelleme KAPATILDI=0; güncelle kampanyası 247 kişi; anlık güncelleme şalteri KAPALI)
+> Son güncelleme: 24 Ağustos 2026 akşam (ESKİ SÜRÜMLERE OTA hattı açıldı 1.0.36→1.0.43; zorunlu güncelleme KAPALI=0)
+>
+> ### ▶ 24 Ağu (akşam) — 🎯 ESKİ SÜRÜMLERE OTA HATTI AÇILDI (1.0.36 → 1.0.43)
+> **Başkan:** *"eski sürümde oyunlar sunucudan çekilmiyor mu, o bölümden güncellemeye yönlendirsek?"*
+> Ölçüm: oyun-sunucudan 8 Ağu'da kuruldu, 1.0.43 build'i 7 Ağu → o kullanıcılarda oyun GÖMÜLÜ.
+> Fikir hedefe ulaşmıyordu. Ama araştırırken ÇOK DAHA BÜYÜK bir şey çıktı:
+>
+> **KEŞİF: 1.0.43 cihazları zaten OTA paketi çalıştırıyor** (`istemci_surum.paket` = updateId,
+> 122 cihaz 11 Ağu paketinde, 'gomulu' DEĞİL). Yani o hatta OTA basılabiliyordu; 11 Ağu'da Skia
+> eklenince farkında olmadan kapanmış.
+> **Paket farkı ölçüldü** (1.0.43 build'i → bugün): eklenen telefon-tarafı modül SADECE ÜÇ —
+> skia, expo-haptics, lottie. Eklenti/izin/`updates.url`/runtimeVersion farkı **YOK**.
+> · haptics zaten güvenli (async throw → yakalanıyor) · lottie hiç kullanılmıyor
+> · **skia tek engeldi**: `NativeSetup.js` modülü bulamayınca `throw` → statik import eden bundle
+>   eski binary'de HİÇ AÇILMIYOR. → `src/lib/skia-var.ts` (try/catch require + `skiaVar`);
+>   `parlak-yay.native` ve `topcu-atesi.native` oradan alıyor. Skia yoksa yalnız ışıma çizilmez.
+> · `takip-izni.ts` (ATT + fbsdk) ZATEN korumalıydı (dinamik import + `surum < '1.0.42'` kapısı).
+>
+> **YAYIN: güncel bundle 1.0.36 · 1.0.37 · 1.0.38 · 1.0.39 · 1.0.40 · 1.0.41 · 1.0.42 · 1.0.43 ·
+> 1.0.45 · 1.0.46 runtime'larına basıldı** (`scratchpad/eski-runtime-yayin.sh`).
+> **1.0.35 ve altına BASMA** — orada `react-native-webview` + pdfjs de eksik (oyunlar WebView).
+> **CANLI DOĞRULAMA** (`scratchpad/ota-izle.mjs`): yeni paketle açılan cihaz sayısı izleniyor;
+> ilk 15 dakikada 1.0.43'te 3 cihaz sorunsuz açıldı. Ölçüm dayanağı: cihaz açılışta
+> `Updates.updateId`'yi `istemci_surum.paket`'e yazıyor → çöken cihaz kayıt YAZAMAZ.
 >
 > ### ▶ 24 Ağu (akşam) — 🔴 ZORUNLU GÜNCELLEME KAPATILDI + "MAĞAZADAN GÜNCELLE" KAMPANYASI
 > **Başkan:** *"başka bi iOS'tan baktım güncelle butonu hâlâ Google'a atıyor, bu ciddi bi sorun."*
