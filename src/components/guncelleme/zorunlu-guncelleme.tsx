@@ -1,11 +1,17 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Linking, Modal, Pressable, StyleSheet, View } from 'react-native';
+import { Linking, Modal, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 
+// PLATFORMA GÖRE MAĞAZA (24 Ağu 2026 — CANLI HATA): burada YALNIZ Play adresi vardı;
+// iOS kullanıcısı "Güncelle"ye basınca Google Play sayfasına düşüyordu ve kapatılamayan
+// ekranda sıkışıyordu. Zorunlu güncelleme açıldığı anda başkana bildirildi.
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=app.mevzujsps.android';
+const APPSTORE_URL = 'https://apps.apple.com/tr/app/id6787908212';
+const MAGAZA_URL = Platform.OS === 'ios' ? APPSTORE_URL : PLAY_URL;
+const MAGAZA_AD = Platform.OS === 'ios' ? 'App Store' : 'Google Play';
 
 /**
  * KAPATILAMAZ zorunlu güncelleme ekranı. Sunucu min sürüm > cihaz sürümü olunca _layout kök kapısı
@@ -23,18 +29,23 @@ export function ZorunluGuncelleme() {
             Yeni Sürüm Gerekli
           </AppText>
           <AppText variant="govde" color="anaMetin" style={styles.ortali}>
-            Uygulamanın yeni bir sürümü yayınlandı. Devam edebilmek için lütfen uygulamayı güncelle.
+            Uygulamanın yeni bir sürümü yayınlandı. Devam edebilmek için {MAGAZA_AD}'dan güncelle.
           </AppText>
           <Pressable
             style={({ pressed }) => [styles.btn, pressed && styles.basili]}
-            onPress={() => void Linking.openURL(PLAY_URL)}>
-            <MaterialCommunityIcons name="google-play" size={20} color={Palette.beyaz} />
+            onPress={() => void Linking.openURL(MAGAZA_URL)}>
+            <MaterialCommunityIcons
+              name={Platform.OS === 'ios' ? 'apple' : 'google-play'}
+              size={20}
+              color={Palette.beyaz}
+            />
             <AppText variant="govde" color="beyaz" bold>
               Güncelle
             </AppText>
           </Pressable>
           <AppText variant="etiket" color="solukMetin" style={styles.ortali}>
-            Güncelledikten sonra uygulamayı yeniden aç.
+            Güncelledikten sonra uygulamayı yeniden aç. Düğme çalışmazsa {MAGAZA_AD}'da
+            "Mevzu JSPS" araması yapabilirsin.
           </AppText>
         </View>
       </SafeAreaView>
