@@ -4,12 +4,17 @@
  * hedefin üstünde bombayı bırakır → bomba yerçekimiyle düşer → dağ sırtında
  * patlama (Skia radyal ışıma). Patlama artık gökte değil, İNİŞ NOKTASINDA.
  * Zamanlama tek saatten türetilir (aynı gecikme/periyot) → uçak-bomba-patlama senkron.
- * Build 71+ (runtime 1.0.44); web karşılığı null döndürür.
+ * Web karşılığı null döndürür.
+ *
+ * 24 Ağu 2026: Skia DOĞRUDAN import edilmiyor — `lib/skia-var` üzerinden korumalı
+ * alınıyor (eski 1.0.43 binary'sinde native RNSkia yok, statik import uygulamayı
+ * açılışta düşürüyordu). Skia yoksa yalnız patlama IŞIMASI çizilmez; uçak, bomba
+ * ve tüm animasyonlar aynen çalışır.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { BlurMask, Canvas, Circle, RadialGradient, vec } from '@shopify/react-native-skia';
 import { useEffect } from 'react';
 import { StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Skia2, skiaVar } from '@/lib/skia-var';
 import Animated, {
   Easing,
   useAnimatedStyle,
@@ -29,6 +34,24 @@ const SORTILER = [
 
 const UCUS_MS = 5200; // göğü geçme süresi
 const DUSME_MS = 750; // bombanın düşüşü
+
+/** Patlamanın Skia ışıması — Skia yoksa (eski binary) hiç çizilmez. */
+function PatlamaIsimasi({ boy }: { boy: number }) {
+  if (!skiaVar) return null;
+  const { BlurMask, Canvas, Circle, RadialGradient, vec } = Skia2;
+  return (
+    <Canvas style={StyleSheet.absoluteFill}>
+      <Circle cx={boy / 2} cy={boy / 2} r={boy / 2 - 2}>
+        <RadialGradient
+          c={vec(boy / 2, boy / 2)}
+          r={boy / 2}
+          colors={['rgba(255,238,196,0.95)', 'rgba(255,178,92,0.40)', 'rgba(255,150,70,0)']}
+        />
+        <BlurMask blur={4} style="normal" />
+      </Circle>
+    </Canvas>
+  );
+}
 
 function Sorti({
   hedefX,
@@ -144,16 +167,7 @@ function Sorti({
           { left: hedefPx - boy / 2, top: sirtYPx - boy / 2, width: boy, height: boy },
           patlamaStil,
         ]}>
-        <Canvas style={StyleSheet.absoluteFill}>
-          <Circle cx={boy / 2} cy={boy / 2} r={boy / 2 - 2}>
-            <RadialGradient
-              c={vec(boy / 2, boy / 2)}
-              r={boy / 2}
-              colors={['rgba(255,238,196,0.95)', 'rgba(255,178,92,0.40)', 'rgba(255,150,70,0)']}
-            />
-            <BlurMask blur={4} style="normal" />
-          </Circle>
-        </Canvas>
+        <PatlamaIsimasi boy={boy} />
       </Animated.View>
     </>
   );
