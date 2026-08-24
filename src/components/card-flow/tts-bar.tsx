@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import Svg, { Rect } from 'react-native-svg';
 
-import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
+import { sesMetni } from '@/lib/ses-metni';
 import { AppText } from '@/components/ui/app-text';
 import { Palette, Spacing } from '@/constants/theme';
 import { otoBaslatTercihi } from '@/lib/ses-tercih';
@@ -61,7 +61,7 @@ export function TtsBar({
    *  (kalanSn = null; akış geri sayım göstermez, yalnız bar dolar). */
   onIlerleme?: (oran: number, kalanSn: number | null) => void;
 }) {
-  const metin = gorselYolu ? KART_SES_METINLERI[gorselYolu] : undefined;
+  const metin = sesMetni(gorselYolu) ?? undefined;
   const cumleler = useMemo(() => (metin ? cumlelereBol(metin) : []), [metin]);
 
   const [aktif, setAktif] = useState(0); // okunan cümle indeksi

@@ -11,8 +11,6 @@ import {
   View,
 } from 'react-native';
 
-// Seslendirme metni registry'si ('@/assets' alias gerçek assets/'a gittiği için göreli).
-import { KART_SES_METINLERI } from '../../assets/kart-ses-metinleri';
 import { useIndirKapisi } from '@/components/mevzuat/indir-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -25,6 +23,7 @@ import { maddeMetni } from '@/db/madde-metinleri';
 import type { CardWithLaw, LawWithCount } from '@/db/schema';
 import { LAW_KLASOR } from '@/db/seed';
 import { araIndeksHazirla, araKanunlar, trKucuk, type AraKapsam, type AramaSonuc } from '@/lib/ara';
+import { tumSesMetinleri } from '@/lib/ses-metni';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { useBrans } from '@/lib/brans-context';
 import { useKisiselOzellik } from '@/lib/ozellik';
@@ -94,7 +93,11 @@ export default function AraScreen() {
   const indeks = useMemo(
     () =>
       cards
-        ? araIndeksHazirla(cards, maddeMetni, (g) => (g ? KART_SES_METINLERI[g] ?? null : null))
+        ? (() => {
+            // 1,9 MB'lık metin haritası YALNIZ burada, indeks kurulurken yüklenir.
+            const metinler = tumSesMetinleri();
+            return araIndeksHazirla(cards, maddeMetni, (g) => (g ? metinler[g] ?? null : null));
+          })()
         : [],
     [cards],
   );
