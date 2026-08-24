@@ -2,7 +2,24 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 24 Ağustos 2026 gece (e-posta kampanyası 922 kişiye gitti; eski sürümlere OTA hattı açık; zorunlu güncelleme KAPALI=0)
+> Son güncelleme: 24 Ağustos 2026 gece (bayat kart görselleri düzeltildi + tazeleme mekanizması; e-posta 922 kişiye gitti; eski sürüm OTA hattı açık)
+>
+> ### ▶ 24 Ağu (gece) — 🖼️ BAYAT KART GÖRSELİ + TAZELEME MEKANİZMASI
+> **Simge Yiğit (subay) bildirdi:** "Jandarma Teşkilat Yön m.1 kartı 7 sütun diyor ama 4 sütun var."
+> **Teşhis: SES DOĞRUYDU, GÖRSEL ESKİYDİ.** Fabrikada 21 Haz'da 7 sütunlu doğrusu üretilmiş,
+> uygulamadaki kopya 16 Haz'dan kalmış. Tarama (`scratchpad/bayat-gorsel-tara.py`) 5 kanunda
+> **9 bayat görsel** buldu → hepsi aktarıldı, sunucuya yüklendi, sha256 ile doğrulandı.
+> **⛔ TUZAK:** `icerik-yerlestir.py` hedefteki webp'i SİLİP png bırakıyor. Arkasından
+> `png-webp.mjs` çalışmazsa kanun görselsiz kalır (565 dosya silindi, `git checkout` ile geri alındı).
+> **YENİ: `src/lib/bayat-icerik.ts`** — düzeltilen dosya, kanunu ZATEN indirmiş cihaza da ulaşıyor.
+> Sunucu: `bayat_icerik` (yol listesi) + `bayat_icerik_damga`. Damga değişmedikçe no-op; değişince
+> dosyalar silinip kanun indirmesi tetiklenir (mevcut kod yalnız eksiği indirir). Silme–inme
+> arasında kart açılırsa `StudyCard onError` uzak kaynağa düşer → bozuk kart YOK.
+> **Ses metni:** bu 5 kanunun 50 kaydı 16 Haz'dan kalmaydı (sesler 27 Haz'da YENİ metinden
+> üretilmişti) → tazelendi; satır sayısı ve diğer kanunlar aynen korundu (522 kayıt).
+> **YAYIN:** 10 runtime'a birden (1.0.36 → 1.0.46).
+> **⚠️ AÇIK BORÇ:** arama metni listesinin **522 kaydından 396'sı bayat**, branş kanunlarının
+> metni hiç yok → 1511 kartın yalnız 522'si metniyle aranabiliyor. Başkana bildirildi, karar bekliyor.
 >
 > ### ▶ 24 Ağu (gece) — 📧 E-POSTA KAMPANYASI GÖNDERİLDİ (922 kişi, 0 hata)
 > Metin başkanın (ChatGPT ile yazdırdı, uzun + kısa iki sürüm — ikisi de
