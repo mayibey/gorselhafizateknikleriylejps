@@ -2,7 +2,21 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 24 Ağustos 2026 (🚀 1.0.46 iki mağazada canlı; karma denemeler herkese, zorunlu güncelleme 62)
+> Son güncelleme: 24 Ağustos 2026 akşam (Karargâh ilk görev → Keşif ve Gözetleme Görevi + ücretsiz TCK; anlık güncelleme şalteri KAPALI)
+>
+> ### ▶ 24 Ağu (akşam) — KARARGÂH İLK GÖREV: "Keşif ve Gözetleme Görevi" + ÜCRETSİZ TCK
+> **Başkan (arkadaşının telefonu):** App Store'dan güncelledi → tasarım geldi ama **siyah ekranda takıldı**.
+> Sebep: anlık güncelleme şalteri herkese açıktı (`anlik_guncelleme_herkes=1`) → açılışta `reloadAsync`.
+> **ŞALTER KAPATILDI (`0`).** Kök sebep henüz kanıtlanmadı; şalter kapalı kaldıkça tekrar etmez.
+> **Üç düzeltme (commit `6ea8a36`, OTA 1.0.46 + 1.0.45):**
+> 1. "İLK MEVZİNİ GÖZETLEME GÖREVİ" → **"KEŞİF VE GÖZETLEME GÖREVİ"**, düğme **"KEŞFE BAŞLA"**.
+> 2. **"8 kart · ≈8 dk" ve "0/8 KART" halkası UYDURMAYDI** → kaldırıldı (ilk turun kart sayısı seçilen
+>    kanuna göre değişir). Yerine keşif amblemi + "Keşif ücretsiz Türk Ceza Kanunu'nda başlar." satırı.
+>    Bir satır yer de kazandı (başkan: "tasarım tek ekrana sığmamış").
+> 3. İlk görev CTA'sı artık kanun listesine değil, **indirme kapısından geçerek doğrudan ücretsiz TCK
+>    patikasına** gidiyor (`/patika?lawId=TCK`). TCK id elle yazılmadı, `LAW_KLASOR`'dan türetildi.
+> **Font tuzağı:** manşetteki "ZAYIF **1** MEVZİNİ" — Playfair Display'in rakamları kapitallerin yanında
+> yamuk duruyor. Manşetten rakam çıkarıldı; sayı, rakamları Inter olan meta satırında ("N kart · N dk").
 >
 > ### ▶ 24 Ağu — 🚀 1.0.46 İKİ MAĞAZADA CANLI · KARMA DENEMELER HERKESE AÇILDI
 > **App Store 1.0.46 Ready for Sale · Play 1.0.46 (vCode 63) yayında.** iOS'a güncelleyen herkes OTA'yı da alıyor → 23-24 Ağu'daki her şey (karma denemeler, hata bildir, sonuçlar, sıralama, soru temizliği) onlara gidiyor; ek yayın gerekmedi.
