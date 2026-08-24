@@ -2,7 +2,16 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 23 Ağustos 2026 (🎯 Karma denemeler 5×100 + sıradaki test düğmesi)
+> Son güncelleme: 24 Ağustos 2026 (🚀 1.0.46 iki mağazada canlı; karma denemeler herkese, zorunlu güncelleme 62)
+>
+> ### ▶ 24 Ağu — 🚀 1.0.46 İKİ MAĞAZADA CANLI · KARMA DENEMELER HERKESE AÇILDI
+> **App Store 1.0.46 Ready for Sale · Play 1.0.46 (vCode 63) yayında.** iOS'a güncelleyen herkes OTA'yı da alıyor → 23-24 Ağu'daki her şey (karma denemeler, hata bildir, sonuçlar, sıralama, soru temizliği) onlara gidiyor; ek yayın gerekmedi.
+> **Karma denemeler HERKESE açıldı:** `uygulama_ayar.ozellik_herkes = ["karma-deneme"]`. Build gerekmedi — bayrak mekanizması işini gördü. iOS 1.0.43'tekiler etkilenmedi (o bundle sunucu bayrak listesini okuyan koda bile sahip değil).
+> **ZORUNLU GÜNCELLEME açıldı:** `zorunlu_min_surum` 48 → **62**. Ölçüm: 222 kişi eski sürümdeydi (iOS 1.0.43'te 130, Android 1.0.41'de 92). Eşiği yükseltmeden ÖNCE iki mağazada da güncellemenin hazır olduğu doğrulandı (Play production vCode 63 + ASC READY_FOR_SALE) — yoksa güncellemesi olmayan kullanıcı kilitlenirdi. Geri alma: değeri 0 yap.
+> **DİKKAT:** `suankiSurum()` cihazın binary'sini değil **JS bundle'ındaki** `android.versionCode`'u okur; OTA bundle 62 taşıyor, Play binary 63 → ikisi de eşiği geçiyor.
+> **Telegram duyurusu** gönderildi (duyurular konusu, mesaj 1308).
+> **CANLI DOĞRULAMA:** ilk gün 5 kişi 8 deneme çözdü (en iyi: Ram 82 puan) → sonuç kaydı + sıralama zinciri gerçek veriyle çalıştı. Aylık üyelikten 2 satış (ikisi de Android).
+> **Sıradaki iş (bekliyor):** uzun şıklı soru yazımı (sınavda %37, bizde %8) + Anayasa & 5682 Pasaport soruları (sınavın %5,4'ü, bankada sıfır).
 >
 > ### ▶ 23 Ağu — 🎯 KARMA DENEMELER (5×100) + SINAV AKIŞI DÜZELTMELERİ
 > **Başkan:** *"hem müşterek hem branş konularından 5 deneme, 100 soru; sorular birbirinin benzeri olabilir ama AYNISI olmasın."*
