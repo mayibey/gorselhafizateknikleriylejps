@@ -2,7 +2,32 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 24 Ağustos 2026 akşam (ESKİ SÜRÜMLERE OTA hattı açıldı 1.0.36→1.0.43; zorunlu güncelleme KAPALI=0)
+> Son güncelleme: 24 Ağustos 2026 gece (e-posta kampanyası 922 kişiye gitti; eski sürümlere OTA hattı açık; zorunlu güncelleme KAPALI=0)
+>
+> ### ▶ 24 Ağu (gece) — 📧 E-POSTA KAMPANYASI GÖNDERİLDİ (922 kişi, 0 hata)
+> Metin başkanın (ChatGPT ile yazdırdı, uzun + kısa iki sürüm — ikisi de
+> `scratchpad/eposta/metin-*.md`'de duruyor). **Denetimden geçirildi**
+> (`scratchpad/eposta/metin-hukuki-denetim.md`), 4 yer düzeltildi:
+> 1. **Aylık üyelik satış çağrısı kaldırıldı** → mail ticari ileti değil, hizmet
+>    bilgilendirmesi olarak duruyor (6563 / İYS onayımız YOK, İYS kaydı ayrı iş).
+> 2. **"14 yeni oyun" YANLIŞTI** → Oyun Merkezi 6 Ağu'da 15 oyunla birden girdi,
+>    bu güncellemede yeni oyun eklenmedi. "15 oyun" yazıldı.
+> 3. "en çok gelen talep" → "gelen taleplerden biri" (öyle bir ölçümümüz yok).
+> 4. Alta şartlar/gizlilik bağlantısı + ret hakkı (ÇIK). Ticari unvan/adres başkanın
+>    kararıyla KONMADI (hiçbir yerde yayınlı değil).
+> **Başkan isteği (gönderim başladıktan sonra):** üste **⏳ JSPS sınavına N gün kaldı**
+> altın şeridi. Sayı ELLE YAZILMIYOR, gönderim anında hesaplanıyor (`sablon.mjs kalanGun()`,
+> uygulamadaki geri sayımla aynı kaynak: 19 Eylül 2026 14:00). İlk 50 kişiye bu şerit
+> olmadan gitti.
+> **Sonuç:** 1.165 üyeden 241'i Apple gizli adresi (elendi), 2 kişi listeden çıkmış →
+> **922 gönderim, 0 hata.** Liste `scratchpad/eposta/gonderilenler.txt` (tekrar gönderimi
+> engelliyor). Konu: "Mevzu JSPS güncellendi — 13 deneme sınavı ve yenilenen soru havuzu".
+>
+> **DOĞRULANAN OLGULAR** (hepsi ölçüldü): aylık üyelik iki mağazada da AKTİF 389 TL ·
+> 13 deneme (3+5+5) · 900 soru · 15 oyun · ~2.637 oyun sorusu · 5.384 kart sorusu ·
+> 6.391 düello sorusu · 67 mevzuat (25+42) · 1.511 görsel kart.
+> **Sayı tuzağı:** ses 1.512, görsel 1.511 — fark `4733_m8_6.mp3`; 4733'ün görselleri hiç
+> üretilmemiş, ses sahipsiz kalmış. Kullanıcıya etkisi yok (kart yoksa ses çalmaz).
 >
 > ### ▶ 24 Ağu (akşam) — 🎯 ESKİ SÜRÜMLERE OTA HATTI AÇILDI (1.0.36 → 1.0.43)
 > **Başkan:** *"eski sürümde oyunlar sunucudan çekilmiyor mu, o bölümden güncellemeye yönlendirsek?"*
