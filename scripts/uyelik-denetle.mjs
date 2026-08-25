@@ -15,8 +15,9 @@
  *    "iptal edildi" cevabı (Google purchaseState=1 / Apple revocationDate) silmeye yol açar.
  *    Şüpheli her durum "bilinmiyor" olarak raporlanır, dokunulmaz.
  *
- * Google: Play Developer API (service account). Apple: App Store Server API — IAP anahtarı
- * gerekir (Supabase Edge secret'ında; yerelde yoksa iOS satırları "anahtar yok" diye atlanır).
+ * Google: Play Developer API (service account JSON).
+ * Apple: App Store Server API — masaüstündeki SubscriptionKey_JPFAY6DKU3.p8 (In-App Purchase
+ * anahtarı; ASC anahtarı DEĞİL). İkisi de yerelde çalışır, Edge secret'ına gerek yok.
  */
 import fs from 'node:fs';
 import crypto from 'node:crypto';
@@ -24,6 +25,10 @@ import crypto from 'node:crypto';
 const PROJE = 'vwmjrvolkbiofpkzzwef';
 const PAKET = 'app.mevzujsps.android';
 const SA_YOL = 'D:/mazzzza üstü/vızzz/mevzu-jsps-0857dbdd570f.json';
+const BUNDLE_IOS = 'app.mevzujsps.ios';
+const APPLE_KEYID = 'JPFAY6DKU3';
+const APPLE_ISS = '6ad2e590-a37b-41d0-bcd6-0462ff64781f';
+const APPLE_KEY_YOL = 'C:/Users/GIGABYTE/OneDrive/Desktop/SubscriptionKey_JPFAY6DKU3.p8';
 const SIL = process.argv.includes('--sil');
 
 const env = Object.fromEntries(
@@ -96,6 +101,46 @@ async function googleAbonelik(token) {
   return { durum: 'BILINMIYOR', not: s, bitis };
 }
 
+/** Apple: App Store Server API ile işlemi sorgula → iade edilmiş mi? */
+let appleKey = null;
+function appleJwt() {
+  if (appleKey === null) appleKey = fs.readFileSync(APPLE_KEY_YOL, 'utf8');
+  const h = b64u(JSON.stringify({ alg: 'ES256', kid: APPLE_KEYID, typ: 'JWT' }));
+  const now = Math.floor(Date.now() / 1000);
+  const p = b64u(JSON.stringify({ iss: APPLE_ISS, iat: now, exp: now + 1500, aud: 'appstoreconnect-v1', bid: BUNDLE_IOS }));
+  const sig = crypto.sign('SHA256', Buffer.from(`${h}.${p}`), { key: appleKey, dsaEncoding: 'ieee-p1363' }).toString('base64url');
+  return `${h}.${p}.${sig}`;
+}
+function jwsGovde(t) {
+  const p = String(t).split('.');
+  if (p.length < 2) return null;
+  try { return JSON.parse(Buffer.from(p[1], 'base64url').toString('utf8')); } catch { return null; }
+}
+async function appleDurum(token, tip) {
+  const ham = String(token || '');
+  // Saklanan iOS belirteci ZATEN işlem numarası; JWS geldiyse gövdesinden çıkar.
+  const g = /^\d+$/.test(ham) ? null : jwsGovde(ham);
+  const txId = /^\d+$/.test(ham) ? ham : String(g?.transactionId ?? g?.originalTransactionId ?? '');
+  if (!txId) return { durum: 'BILINMIYOR', not: 'işlem numarası okunamadı' };
+  const r = await fetch(`https://api.storekit.itunes.apple.com/inApps/v1/transactions/${txId}`, {
+    headers: { Authorization: `Bearer ${appleJwt()}` },
+  });
+  if (r.status === 404) return { durum: 'BILINMIYOR', not: 'Apple: işlem bulunamadı (404)' };
+  if (!r.ok) return { durum: 'BILINMIYOR', not: `HTTP ${r.status}` };
+  const j = await r.json();
+  const bilgi = jwsGovde(j.signedTransactionInfo || '');
+  if (!bilgi) return { durum: 'BILINMIYOR', not: 'gövde çözülemedi' };
+  if (bilgi.revocationDate) {
+    return { durum: 'IPTAL', not: `Apple iade: ${new Date(bilgi.revocationDate).toISOString().slice(0, 10)}` };
+  }
+  if (tip === 'abonelik') {
+    const bitis = bilgi.expiresDate ? new Date(bilgi.expiresDate) : null;
+    if (bitis && bitis.getTime() < Date.now()) return { durum: 'SURE_DOLDU', not: 'expiresDate geçmiş', bitis: bitis.toISOString() };
+    return { durum: 'GECERLI', not: 'aktif', bitis: bitis ? bitis.toISOString() : null };
+  }
+  return { durum: 'GECERLI', not: bilgi.type || 'Non-Consumable' };
+}
+
 // ---- ÇALIŞTIR ----
 const satirlar = await sql(`select h.user_id, h.urun, h.tip, h.platform, h.bitis, h.satin_alma_token,
    p.ad, p.soyad, p.email
@@ -113,7 +158,7 @@ for (const s of satirlar) {
     if (s.platform === 'android') {
       sonuc = s.tip === 'abonelik' ? await googleAbonelik(s.satin_alma_token) : await googleUrun(s.urun, s.satin_alma_token);
     } else if (s.platform === 'ios') {
-      sonuc = { durum: 'ATLANDI', not: 'Apple IAP anahtarı yerelde yok' };
+      sonuc = await appleDurum(s.satin_alma_token, s.tip);
     } else {
       sonuc = { durum: 'ATLANDI', not: `platform=${s.platform}` };
     }
