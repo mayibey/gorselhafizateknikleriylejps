@@ -2,7 +2,7 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 26 Ağustos 2026 (abonelik yenilemesi düzeltildi + üyelik denetçisi; ARAMA 522→1511 kart)
+> Son güncelleme: 26 Ağustos 2026 (iade denetimi OTOMATİK — her gece pg_cron; abonelik yenilemesi düzeltildi)
 >
 > ### ▶ 26 Ağu — 💳 ABONELİK YENİLEMESİ DÜZELTİLDİ + ÜYELİK DENETÇİSİ
 > **Başkan sordu:** *"biri satın alıp Apple'dan iptal etse premium düşüyor mu, hiç iptal eden var mı?"*
@@ -17,8 +17,17 @@
 > **İLK DENETİM (139 kayıt):** 57 geçerli · **3 abonelik iptal** (Metehan Yıldız aylık, Çetin
 > Birgül + Neşe DerT AşK yıllık — süreleri sürüyor, doğru davranış) · **İADE YOK** ·
 > 11 doğrulanamayan (10-13 Tem TEST dönemi + promo, SİLME) · 70 iOS atlandı.
-> **AÇIK İŞ:** iOS denetimi — `APPLE_IAP_*` yalnız Edge secret'ında; masaüstündeki
-> `AuthKey_RGL99F5D25.p8` ASC anahtarı, App Store Server API için AYRI anahtar gerekir.
+> **iOS denetimi ÇÖZÜLDÜ:** Apple anahtarı `AuthKey_*` değil **`SubscriptionKey_JPFAY6DKU3.p8`**
+> adıyla masaüstünde duruyormuş (In-App Purchase anahtarı). Issuer ASC ile aynı. Ayrıca saklanan
+> iOS `satin_alma_token` JWS DEĞİL, doğrudan işlem numarası.
+> **TAM DENETİM (139 kayıt, iki mağaza):** 123 geçerli · 3 abonelik iptal (süresi sürüyor) ·
+> **1 İADE: Furkan Büşra** (26 Tem ömür boyu → 6 Ağu Apple iadesi; 20 gün bedava premium,
+> 55 kart açmış) → **kapatıldı** · 9 doğrulanamayan (Temmuz test) · 3 promo/manuel.
+> **🤖 OTOMATİKLEŞTİRİLDİ (başkan: "her seferinde biz takip edemeyiz"):**
+> `supabase/functions/uyelik-denetle` + **pg_cron `uyelik-denetim` her gece 03:30 UTC**.
+> Yalnız NET iptalde siler (Apple `revocationDate` / Google `purchaseState=1`|410); ağ/HTTP
+> hatası ASLA silmez; aboneliğe dokunmaz. `uyelik_denetim_log` tablosuna yazar ve **biri
+> kapatılırsa başkana push bildirim** gider. Yetki: gizli `x-denetim` başlığı.
 > **YAYIN:** 10 runtime (1.0.36 → 1.0.46), hepsi ✔.
 >
 > ### ▶ 25 Ağu — 🔎 ARAMA: 1511 KARTIN TAMAMI ARANABİLİYOR (522 → 1511)
