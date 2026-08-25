@@ -94,7 +94,9 @@
     "boyut:uret": "node scripts/boyut-manifest-uret.mjs",
     "genel:brans": "node scripts/genel-deneme-brans-uret.mjs",
     "diger:seed": "node scripts/brans-diger-seed-uret.mjs",
-    "sesmetni:uret": "node scripts/ses-metni-uret.mjs --yaz"
+    "sesmetni:uret": "node scripts/ses-metni-uret.mjs --yaz",
+    "sinav:analiz": "node scripts/sinav-kritik-cikar.mjs",
+    "sinav:denetle": "node scripts/sinav-analiz-denetle.mjs"
   },
   "overrides": {
     "expo-asset": "12.0.13"
