@@ -2,7 +2,24 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 25 Ağustos 2026 (ARAMA 522→1511 kart; bayat görseller düzeltildi + tazeleme mekanizması; e-posta 922 kişiye gitti)
+> Son güncelleme: 26 Ağustos 2026 (abonelik yenilemesi düzeltildi + üyelik denetçisi; ARAMA 522→1511 kart)
+>
+> ### ▶ 26 Ağu — 💳 ABONELİK YENİLEMESİ DÜZELTİLDİ + ÜYELİK DENETÇİSİ
+> **Başkan sordu:** *"biri satın alıp Apple'dan iptal etse premium düşüyor mu, hiç iptal eden var mı?"*
+> **Bulunan 1 (asıl tehlike):** `uyelik_haklari.bitis` yalnız satın alma anında yazılıyordu;
+> yenilenen abonelik UZAMIYORDU → **parasını ödeyen aylık abone dönem sonunda premium'unu
+> kaybedecekti** (ilk 4 abone 24-25 Eylül). → `src/lib/uyelik-tazele.ts`: bitişine <3 gün kalan
+> aboneliği açılışta sessizce mağazadan yeniden doğrulatır. Dar kapsam: yalnız native · yalnız
+> aboneliği olanda · 6 saatte bir · **HİÇBİR HAK SİLMEZ** (ağ hatası erişimi kapatmaz).
+> **Bulunan 2 (iade):** Apple/Google iade bildirimi göndermiyor (ASSN/RTDN kurulu değil);
+> `dogrula-satinalma` iadeyi tanıyor ama kaydı silmiyor → iade alan ömür boyu sonsuza kadar
+> premium kalır. → `node scripts/uyelik-denetle.mjs` (rapor; `--sil` yalnız NET iptalde siler).
+> **İLK DENETİM (139 kayıt):** 57 geçerli · **3 abonelik iptal** (Metehan Yıldız aylık, Çetin
+> Birgül + Neşe DerT AşK yıllık — süreleri sürüyor, doğru davranış) · **İADE YOK** ·
+> 11 doğrulanamayan (10-13 Tem TEST dönemi + promo, SİLME) · 70 iOS atlandı.
+> **AÇIK İŞ:** iOS denetimi — `APPLE_IAP_*` yalnız Edge secret'ında; masaüstündeki
+> `AuthKey_RGL99F5D25.p8` ASC anahtarı, App Store Server API için AYRI anahtar gerekir.
+> **YAYIN:** 10 runtime (1.0.36 → 1.0.46), hepsi ✔.
 >
 > ### ▶ 25 Ağu — 🔎 ARAMA: 1511 KARTIN TAMAMI ARANABİLİYOR (522 → 1511)
 > **Başkan:** *"arama kısmını düzeltebilirsin."* Arama metni registry'si 16 Haziran'dan kalmaydı:
