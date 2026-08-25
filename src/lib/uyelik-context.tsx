@@ -12,6 +12,7 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from '
 import { AppState } from 'react-native';
 
 import { kanunErisilebilirSaf, PREMIUM_URUNLERI } from '@/constants/urunler';
+import { abonelikTazele } from '@/lib/uyelik-tazele';
 import { getCihazKimlik } from '@/lib/cihaz-kimlik';
 import { supabase, supabaseHazir } from '@/lib/supabase';
 
@@ -91,7 +92,13 @@ export function UyelikProvider({ children }: { children: ReactNode }) {
   };
 
   useEffect(() => {
-    void yenile();
+    // ABONELİK TAZELEME (26 Ağu): bitişi yaklaşan/geçmiş aboneliği mağazadan yeniden
+    // doğrulat → yenilenen dönem `bitis`e yazılsın. Yalnız gerekince çalışır, hiçbir hak
+    // silmez, hata yutulur. Tazelendiyse hakları TEKRAR oku.
+    void (async () => {
+      await yenile();
+      if (await abonelikTazele()) await yenile();
+    })();
     const authSub = supabase?.auth.onAuthStateChange(() => {
       void yenile();
     });
