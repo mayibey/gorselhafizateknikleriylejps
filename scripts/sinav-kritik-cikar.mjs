@@ -37,7 +37,8 @@ for (const q of adaylar) {
     kanunlar.set(r.kanun, {
       kanun: r.kanun, soru: 0, kitapciklar: new Set(), rutbeler: new Map(),
       turler: new Map(), bicimler: new Map(), maddeler: new Map(),
-      sureler: new Map(), makamlar: new Map(), cezalar: new Map(),
+      sureler: new Map(), makamlar: new Map(), cezalar: new Map(), tekrarlar: new Map(),
+      maddeKesin: new Map(), maddeTahmin: new Map(),
       ornekler: [],
     });
   }
@@ -49,7 +50,26 @@ for (const q of adaylar) {
   k.turler.set(t, (k.turler.get(t) || 0) + 1);
   const b = soruBicimi(q.kok, q.siklar);
   k.bicimler.set(b, (k.bicimler.get(b) || 0) + 1);
-  if (r.madde) k.maddeler.set(r.madde, (k.maddeler.get(r.madde) || 0) + 1);
+  if (r.madde) {
+    k.maddeler.set(r.madde, (k.maddeler.get(r.madde) || 0) + 1);
+    // ⛔ Madde ataması iki KALİTEDE gelir ve karıştırılmamalı:
+    //   'kökte yazıyor' → soru zaten maddeyi söylüyor (KESİN)
+    //   'benzerlik'     → metin benzerliğinden tahmin (GÜVENİLMEZ; TCK'da "süreli hapis"
+    //                     sorusuna m.188 dediği görüldü, doğrusu m.49)
+    const hedef = r.maddeKaynak === 'kökte yazıyor' ? k.maddeKesin : k.maddeTahmin;
+    hedef.set(r.madde, (hedef.get(r.madde) || 0) + 1);
+  }
+  // TEKRAR SİNYALİ: aynı soru farklı kitapçıklarda yeniden çıkmışsa, o bilgi "kesin gelir".
+  // ⛔ TUZAK: yalnız KÖKE bakan parmak izi, "…hangisi yanlıştır?" gibi genel köklerde FARKLI
+  // soruları aynı sanır ve "4 kitapçıkta çıktı" diye yanlış sinyal üretir. Şıklar da katılır.
+  const sade = (x) => String(x || '').toLocaleLowerCase('tr').replace(/[^\p{L}\p{N}]+/gu, '');
+  const parmak = sade(q.kok).slice(0, 80) + '|' + (q.siklar || []).map(sade).sort().join('').slice(0, 120);
+  if (parmak.length > 60) {
+    const t0 = k.tekrarlar.get(parmak) || { kez: 0, kitapciklar: new Set(), kok: q.kok, madde: r.madde, maddeKesin: r.maddeKaynak === 'kökte yazıyor' };
+    t0.kez++; t0.kitapciklar.add(q.dosya);
+    if (!t0.madde && r.madde) t0.madde = r.madde;
+    k.tekrarlar.set(parmak, t0);
+  }
   for (const d of sureDegerleri(siklarMetni)) k.sureler.set(d, (k.sureler.get(d) || 0) + 1);
   for (const d of eslesenler(siklarMetni, MAKAMLAR)) k.makamlar.set(d, (k.makamlar.get(d) || 0) + 1);
   for (const d of eslesenler(siklarMetni, CEZALAR)) k.cezalar.set(d, (k.cezalar.get(d) || 0) + 1);
@@ -67,7 +87,13 @@ const sonuc = [...kanunlar.values()]
     rutbe: Object.fromEntries([...k.rutbeler].sort((a, b) => b[1] - a[1])),
     turDagilimi: Object.fromEntries([...k.turler].sort((a, b) => b[1] - a[1])),
     bicimDagilimi: Object.fromEntries([...k.bicimler].sort((a, b) => b[1] - a[1])),
-    sicakMaddeler: dizi(k.maddeler, 10),
+    sicakMaddelerKesin: dizi(k.maddeKesin, 12),
+    sicakMaddelerTahmini: dizi(k.maddeTahmin, 12),
+    tekrarEdenSorular: [...k.tekrarlar.values()]
+      .filter((t) => t.kitapciklar.size >= 2)
+      .sort((a, b) => b.kitapciklar.size - a.kitapciklar.size)
+      .slice(0, 12)
+      .map((t) => ({ kitapcik: t.kitapciklar.size, kez: t.kez, madde: t.madde, maddeKesin: t.maddeKesin, kok: String(t.kok).replace(/\s+/g, ' ').slice(0, 190) })),
     karistirilanSureler: dizi(k.sureler, 20),
     karistirilanMakamlar: dizi(k.makamlar, 12),
     karistirilanCezalar: dizi(k.cezalar, 10),
@@ -109,7 +135,10 @@ if (!sec) {
   console.log('rütbe:', JSON.stringify(k.rutbe));
   console.log('NE soruluyor :', JSON.stringify(k.turDagilimi));
   console.log('NASIL soruluyor:', JSON.stringify(k.bicimDagilimi));
-  console.log('\nSICAK MADDELER:', k.sicakMaddeler.map((x) => `m.${x.deger}(${x.kez})`).join(' · ') || '—');
+  console.log('\n✅ SICAK MADDELER (soruda AÇIKÇA yazan — kesin):');
+  console.log('   ', k.sicakMaddelerKesin.map((x) => `m.${x.deger}×${x.kez}`).join(' · ') || '—');
+  console.log('~  Tahmini maddeler (benzerlikten — TEK BAŞINA GÜVENME, ölçülen kesinlik payı %17):');
+  console.log('   ', k.sicakMaddelerTahmini.map((x) => `m.${x.deger}×${x.kez}`).join(' · ') || '—');
   console.log('\nKARIŞTIRILAN SÜRELER:', k.karistirilanSureler.map((x) => `${x.deger}×${x.kez}`).join(' · ') || '—');
   console.log('\nKARIŞTIRILAN MAKAMLAR:', k.karistirilanMakamlar.map((x) => `${x.deger}×${x.kez}`).join(' · ') || '—');
   console.log('\nKARIŞTIRILAN CEZALAR:', k.karistirilanCezalar.map((x) => `${x.deger}×${x.kez}`).join(' · ') || '—');

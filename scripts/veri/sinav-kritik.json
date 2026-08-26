@@ -34,7 +34,35 @@
     "DÜZ": 14,
     "BOŞLUK": 9
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "85",
+     "kez": 2
+    },
+    {
+     "deger": "76",
+     "kez": 2
+    },
+    {
+     "deger": "35",
+     "kez": 1
+    },
+    {
+     "deger": "38",
+     "kez": 1
+    },
+    {
+     "deger": "2",
+     "kez": 1
+    },
+    {
+     "deger": "267",
+     "kez": 1
+    },
+    {
+     "deger": "271",
+     "kez": 1
+    },
     {
      "deger": "73",
      "kez": 1
@@ -44,12 +72,113 @@
      "kez": 1
     },
     {
-     "deger": "21",
+     "deger": "23",
      "kez": 1
     },
     {
-     "deger": "4",
+     "deger": "324",
      "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "109",
+     "kez": 4
+    },
+    {
+     "deger": "255/1",
+     "kez": 3
+    },
+    {
+     "deger": "188",
+     "kez": 2
+    },
+    {
+     "deger": "45",
+     "kez": 2
+    },
+    {
+     "deger": "2",
+     "kez": 2
+    },
+    {
+     "deger": "21",
+     "kez": 2
+    },
+    {
+     "deger": "33",
+     "kez": 2
+    },
+    {
+     "deger": "20",
+     "kez": 2
+    },
+    {
+     "deger": "31",
+     "kez": 2
+    },
+    {
+     "deger": "191",
+     "kez": 1
+    },
+    {
+     "deger": "42",
+     "kez": 1
+    },
+    {
+     "deger": "257/1",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "85",
+     "maddeKesin": true,
+     "kok": "5237 sayılı Türk Ceza Kanunu’nun 85’nci maddesi gereğince “Taksirle bir insanın ölümüne neden olan kişi, iki yıldan altı yıla kadar hapis cezası ile cezalandırılır. Birden fazla insanın ölüm"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "76",
+     "maddeKesin": true,
+     "kok": "5237 sayılı Türk Ceza Kanunu’nun “İnsanlığa karşı suçlar” başlıklı 76. maddesi “Aşağıdaki fiillerin, siyasal, felsefi, ırki veya dini saiklerle toplumun bir kesimine karşı bir plan doğrultus"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "188",
+     "maddeKesin": false,
+     "kok": "5237 sayılı Türk Ceza Kanunu’na göre, “süreli hapis cezası, kanunda aksi belirtil- meyen hâllerde …..… az, …….. fazla ola- maz.” Yukarıdaki cümlede boş bırakılan yerle- re sırasıyla aşağıdak"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "255/1",
+     "maddeKesin": false,
+     "kok": "5237 sayılı Türk Ceza Kanunu’na göre, “hükmedilen …….. veya daha az süreli ha- pis cezası, kısa süreli hapis cezasıdır. Yukarıdaki cümlede boş bırakılan yere aşağıdakilerden hangisi yazılmal"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "109",
+     "maddeKesin": false,
+     "kok": "5237 sayılı Türk Ceza Kanunu’na göre kişi, kasten işlemiş olduğu suçtan dolayı hapis cezasına mahkûmiyetin kanuni sonucu ola- rak bazı haklardan yoksun bırakılır. Aşağıdakilerden hangisi, yo"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "109",
+     "maddeKesin": false,
+     "kok": "5237 sayılı Türk Ceza Kanunu’na göre, “Tekerrür hükümleri, önceden işlenen suç- tan dolayı;…… fazla süreyle hapis cezasına mahkûmiyet hâlinde, bu cezanın infaz edil- diği tarihten itibaren…."
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "45",
+     "maddeKesin": false,
+     "kok": "5237 sayılı Türk Ceza Kanunu’na göre, aşağıdaki ifadelerden hangisi yanlıştır?"
     }
    ],
    "karistirilanSureler": [
@@ -148,7 +277,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "85",
      "kaynak": "ad"
     },
     {
@@ -164,7 +293,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "76",
      "kaynak": "ad"
     },
     {
@@ -180,7 +309,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "188",
      "kaynak": "ad"
     },
     {
@@ -196,7 +325,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "255/1",
      "kaynak": "ad"
     },
     {
@@ -212,7 +341,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "109",
      "kaynak": "ad"
     },
     {
@@ -228,7 +357,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "109",
      "kaynak": "ad"
     },
     {
@@ -244,7 +373,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "45",
      "kaynak": "ad"
     },
     {
@@ -260,7 +389,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "191",
      "kaynak": "ad"
     },
     {
@@ -276,7 +405,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "35",
      "kaynak": "ad"
     },
     {
@@ -292,7 +421,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "38",
      "kaynak": "ad"
     },
     {
@@ -308,7 +437,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "42",
      "kaynak": "ad"
     },
     {
@@ -324,7 +453,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -340,7 +469,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "85",
      "kaynak": "ad"
     },
     {
@@ -356,7 +485,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "76",
      "kaynak": "ad"
     },
     {
@@ -372,7 +501,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "257/1",
      "kaynak": "ad"
     },
     {
@@ -388,7 +517,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "267",
      "kaynak": "ad"
     },
     {
@@ -404,7 +533,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "94",
      "kaynak": "ad"
     },
     {
@@ -420,7 +549,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "271",
      "kaynak": "ad"
     },
     {
@@ -468,7 +597,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -484,7 +613,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "21",
      "kaynak": "ad"
     },
     {
@@ -500,7 +629,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -516,7 +645,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "33",
      "kaynak": "ad"
     },
     {
@@ -532,7 +661,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "265/1",
      "kaynak": "ad"
     },
     {
@@ -548,7 +677,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "188",
      "kaynak": "ad"
     },
     {
@@ -564,7 +693,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "255/1",
      "kaynak": "ad"
     },
     {
@@ -580,7 +709,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "109",
      "kaynak": "ad"
     },
     {
@@ -596,7 +725,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "109",
      "kaynak": "ad"
     },
     {
@@ -612,7 +741,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "45",
      "kaynak": "ad"
     },
     {
@@ -628,7 +757,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "20",
      "kaynak": "ad"
     },
     {
@@ -644,7 +773,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "20",
      "kaynak": "ad"
     },
     {
@@ -660,7 +789,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "24",
      "kaynak": "ad"
     },
     {
@@ -676,7 +805,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "25",
      "kaynak": "ad"
     },
     {
@@ -692,7 +821,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "31",
      "kaynak": "ad"
     },
     {
@@ -708,7 +837,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "23",
      "kaynak": "ad"
     },
     {
@@ -724,7 +853,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "255/1",
      "kaynak": "ad"
     },
     {
@@ -740,7 +869,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "324",
      "kaynak": "ad"
     },
     {
@@ -772,7 +901,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "78",
      "kaynak": "ad"
     },
     {
@@ -804,7 +933,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "31",
      "kaynak": "ad"
     },
     {
@@ -820,7 +949,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "33",
      "kaynak": "ad"
     },
     {
@@ -836,7 +965,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "265",
      "kaynak": "ad"
     }
    ]
@@ -863,9 +992,34 @@
     "OLUMSUZ": 9,
     "ÖNCÜLLÜ": 2
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "54",
+     "kez": 2
+    },
+    {
+     "deger": "51",
+     "kez": 2
+    },
+    {
+     "deger": "19",
+     "kez": 2
+    },
+    {
+     "deger": "47/2",
+     "kez": 2
+    },
+    {
+     "deger": "11",
+     "kez": 2
+    },
+    {
+     "deger": "24/1",
+     "kez": 2
+    },
+    {
+     "deger": "46/4",
      "kez": 2
     },
     {
@@ -881,16 +1035,42 @@
      "kez": 1
     },
     {
-     "deger": "56",
+     "deger": "10",
      "kez": 1
     },
     {
-     "deger": "11",
+     "deger": "15/1",
      "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "54",
+     "maddeKesin": false,
+     "kok": "Aşağıdakilerden hangisi Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği’nde ifade edilen “resmî üniforma” kurallarından biridir?"
     },
     {
-     "deger": "66",
-     "kez": 1
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "51",
+     "maddeKesin": false,
+     "kok": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği’ne göre “Görevden uzaklaştırma; devlet kamu hizmetlerinin gerektirdiği hallerde, görevi başında kalmasında sakın"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "19",
+     "maddeKesin": false,
+     "kok": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği gereğince, lüzum görüldüğü hallerde genel kolluk kuvvetleri arası geçici görevlendirme aşağıdaki makamlardan han"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "47/2",
+     "maddeKesin": false,
+     "kok": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği gereğince, üç defa başarı belgesi alan personele aşağıdaki ödüllerden hangisi verilir?"
     }
    ],
    "karistirilanSureler": [],
@@ -959,7 +1139,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "51",
      "kaynak": "ad"
     },
     {
@@ -975,7 +1155,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -991,7 +1171,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "47/2",
      "kaynak": "ad"
     },
     {
@@ -1007,7 +1187,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -1039,7 +1219,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "51",
      "kaynak": "ad"
     },
     {
@@ -1071,7 +1251,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "24/1",
      "kaynak": "ad"
     },
     {
@@ -1087,7 +1267,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -1103,7 +1283,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "46/4",
      "kaynak": "ad"
     },
     {
@@ -1119,7 +1299,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -1135,7 +1315,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "47/2",
      "kaynak": "ad"
     },
     {
@@ -1151,7 +1331,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "15/1",
      "kaynak": "ad"
     },
     {
@@ -1167,7 +1347,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "46/4",
      "kaynak": "ad"
     },
     {
@@ -1263,7 +1443,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "38",
      "kaynak": "ad"
     },
     {
@@ -1279,7 +1459,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "24/1",
      "kaynak": "ad"
     },
     {
@@ -1311,7 +1491,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "45",
      "kaynak": "ad"
     },
     {
@@ -1354,14 +1534,89 @@
     "ÖNCÜLLÜ": 5,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "57",
+     "kez": 2
+    },
+    {
+     "deger": "6",
+     "kez": 1
+    },
+    {
+     "deger": "24",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "12",
+     "kez": 5
+    },
+    {
+     "deger": "10",
+     "kez": 4
+    },
+    {
+     "deger": "5",
+     "kez": 3
+    },
+    {
+     "deger": "15",
+     "kez": 3
+    },
     {
      "deger": "7",
+     "kez": 2
+    },
+    {
+     "deger": "8",
+     "kez": 1
+    },
+    {
+     "deger": "Ek 2",
      "kez": 1
     },
     {
      "deger": "13",
      "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "I. Emniyet ve asayiş durumu II. Suç oranları, suç haritaları gibi benzeri suç analizlerinin sonuçları III. Yerleşim alanlarının durumu IV. Nüfus yoğunluğu Jandarma Teşkilat, Görev ve Yetkile"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "10",
+     "maddeKesin": false,
+     "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğinde yer alan mülki görevler ve açıklamaları aşağıdaki tabloda karışık olarak verilmiştir. Mülki görevler ve açıklamalarının eşleştirmesi yapı"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "15",
+     "maddeKesin": false,
+     "kok": "2803 sayılı Jandarma Teşkilât, Görev ve Yetkileri Kanunu’na göre Jandarma personeli hakkındaki disiplin ve soruş- turma işlemleri bakımından, aşağıdaki ifadelerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "12",
+     "maddeKesin": false,
+     "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği gereğince, jandarmanın “özel hayatın ve aile hayatının gizliliğini koruma” yükümlülüğü aşağıdaki görevlerden hangisinin kapsamına girmektedi"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "57",
+     "maddeKesin": true,
+     "kok": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliğinin 57. maddesi gereğince, aşağıdakilerden hangisi Jandarma Karakol Komutanının görev, yetki ve sorumlulukları arasında yer almaz?"
     }
    ],
    "karistirilanSureler": [
@@ -1423,7 +1678,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -1439,7 +1694,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -1455,7 +1710,7 @@
      ],
      "kitapcik": "k2",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -1471,7 +1726,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -1487,7 +1742,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "57",
      "kaynak": "ad"
     },
     {
@@ -1503,7 +1758,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -1519,7 +1774,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -1535,7 +1790,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -1551,7 +1806,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -1567,7 +1822,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -1583,7 +1838,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -1599,7 +1854,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -1615,7 +1870,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "57",
      "kaynak": "ad"
     },
     {
@@ -1631,7 +1886,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     },
     {
@@ -1647,7 +1902,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "24",
      "kaynak": "ad"
     },
     {
@@ -1679,7 +1934,7 @@
      ],
      "kitapcik": "k9-12",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -1695,7 +1950,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -1711,7 +1966,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -1727,7 +1982,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -1743,7 +1998,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "Ek 2",
      "kaynak": "ad"
     },
     {
@@ -1759,7 +2014,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -1775,7 +2030,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -1818,7 +2073,87 @@
     "DÜZ": 10,
     "ÖNCÜLLÜ": 3
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "16",
+     "kez": 4
+    },
+    {
+     "deger": "66",
+     "kez": 1
+    },
+    {
+     "deger": "68",
+     "kez": 1
+    },
+    {
+     "deger": "3",
+     "kez": 1
+    },
+    {
+     "deger": "71",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "11",
+     "kez": 9
+    },
+    {
+     "deger": "1",
+     "kez": 3
+    },
+    {
+     "deger": "12/3",
+     "kez": 2
+    },
+    {
+     "deger": "4/1",
+     "kez": 1
+    },
+    {
+     "deger": "13/1",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "16",
+     "maddeKesin": true,
+     "kok": "I. Ateşli silahla işlenen suçlardan mahkûm olanlara II. Kısıtlı olanlar ile kamu hizmetinden yasaklılara III. Yirmi bir yaşını bitirmemiş olanlara 6136 sayılı Ateşli Silahlar ve Bıçaklar ile"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "11",
+     "maddeKesin": false,
+     "kok": "6136 Sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanu’nun Uygulamasını Gösteren 91/1779 Karar Sayılı Ateşli Silahlar, Bıçaklar ve Diğer Aletler Hakkındaki Yönetmelikte yer "
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "1",
+     "maddeKesin": false,
+     "kok": "Ateşli Silahlar, Bıçaklar ve Diğer Aletler Hakkındaki Yönetmelik gereğince, aşağıdakilerden hangisine talepleri halinde, can güvenliği nedeni ile silah taşıma ruhsatı verilmez?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "16",
+     "maddeKesin": true,
+     "kok": "Ateşli Silahlar, Bıçaklar ve Diğer Aletler Hakkındaki Yönetmeliğin 16. maddesi gereğince, ruhsatlı silahını geçici de olsa başkalarına verdiği için mahkum olan bir kişiye, silah taşıma ve ru"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "12/3",
+     "maddeKesin": false,
+     "kok": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkındaki Kanun’a göre, aşağıdakilerden hangisi ateşli silah ka- çakçılığı suçunun cezayı artıran nitelikli hâllerinden biri değild"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "1 yıl",
@@ -1947,7 +2282,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -1963,7 +2298,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -1979,7 +2314,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -1995,7 +2330,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -2011,7 +2346,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "12/3",
      "kaynak": "ad"
     },
     {
@@ -2027,7 +2362,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "4/1",
      "kaynak": "ad"
     },
     {
@@ -2043,7 +2378,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2059,7 +2394,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2075,7 +2410,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -2091,7 +2426,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2107,7 +2442,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -2123,7 +2458,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2139,7 +2474,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2155,7 +2490,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "66",
      "kaynak": "ad"
     },
     {
@@ -2171,7 +2506,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -2187,7 +2522,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -2203,7 +2538,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "13/1",
      "kaynak": "ad"
     },
     {
@@ -2219,7 +2554,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "68",
      "kaynak": "ad"
     },
     {
@@ -2235,7 +2570,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "12/3",
      "kaynak": "ad"
     },
     {
@@ -2251,7 +2586,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2267,7 +2602,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -2283,7 +2618,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2299,7 +2634,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2315,7 +2650,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "71",
      "kaynak": "ad"
     }
    ]
@@ -2339,7 +2674,80 @@
     "OLUMSUZ": 10,
     "DÜZ": 7
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "19",
+     "kez": 4
+    },
+    {
+     "deger": "15",
+     "kez": 3
+    },
+    {
+     "deger": "8",
+     "kez": 2
+    },
+    {
+     "deger": "17",
+     "kez": 2
+    },
+    {
+     "deger": "18",
+     "kez": 1
+    },
+    {
+     "deger": "11",
+     "kez": 1
+    },
+    {
+     "deger": "10",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "13/3",
+     "kez": 1
+    },
+    {
+     "deger": "14",
+     "kez": 1
+    },
+    {
+     "deger": "9",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "15",
+     "maddeKesin": true,
+     "kok": "Aşağıdakilerden hangisi, Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Hakkında Yönetmelik’in 15’nci maddesinde tanımlanan “Kılık ve kıyafet” işlemleri konusunda yanlış bir ifadedi"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "8",
+     "maddeKesin": true,
+     "kok": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Hakkında Yönetmelik’in 8’nci maddesinde tanımlanan “Astın görevleri” ile ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "17",
+     "maddeKesin": true,
+     "kok": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Hakkında Yönetmeliğin 17. maddesi gereğince, “Esas duruş” ile ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "19",
+     "maddeKesin": true,
+     "kok": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Hakkında Yönetmeliğin 19. maddesi gereğince, “Cumhuriyetin ve milletin korunması uğrunda bir vücut gibi çalışmaktır.” ifadesi aşağıdak"
+    }
+   ],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [],
    "karistirilanCezalar": [
@@ -2362,7 +2770,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -2378,7 +2786,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -2394,7 +2802,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "17",
      "kaynak": "ad"
     },
     {
@@ -2410,7 +2818,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -2426,7 +2834,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -2442,7 +2850,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -2458,7 +2866,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "18",
      "kaynak": "ad"
     },
     {
@@ -2474,7 +2882,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "13/3",
      "kaynak": "ad"
     },
     {
@@ -2490,7 +2898,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -2506,7 +2914,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -2522,7 +2930,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -2538,7 +2946,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "17",
      "kaynak": "ad"
     },
     {
@@ -2554,7 +2962,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -2570,7 +2978,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -2586,7 +2994,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -2602,7 +3010,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "14",
      "kaynak": "ad"
     },
     {
@@ -2618,7 +3026,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "9",
      "kaynak": "ad"
     }
    ]
@@ -2645,7 +3053,33 @@
     "OLUMSUZ": 7,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "7",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "8",
+     "kez": 4
+    },
+    {
+     "deger": "8/2",
+     "kez": 2
+    },
+    {
+     "deger": "8/4",
+     "kez": 2
+    },
+    {
+     "deger": "30",
+     "kez": 1
+    },
+    {
+     "deger": "7/1",
+     "kez": 1
+    },
     {
      "deger": "4",
      "kez": 1
@@ -2653,6 +3087,45 @@
     {
      "deger": "6",
      "kez": 1
+    },
+    {
+     "deger": "20/1",
+     "kez": 1
+    },
+    {
+     "deger": "7/5",
+     "kez": 1
+    },
+    {
+     "deger": "30/1",
+     "kez": 1
+    },
+    {
+     "deger": "34/2",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "8",
+     "maddeKesin": false,
+     "kok": "7068 sayılı Kanun’a göre aşağıdakilerden hangisi, üç günlüğe kadar aylıktan kesme cezasını gerektiren fiillerden biri değil- dir?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "8",
+     "maddeKesin": false,
+     "kok": "7068 sayılı Kanun’a göre aşağıdakilerden hangisi, on bir ila on beş güne kadar ay- lıktan kesme cezasını gerektiren fiiller- den biri değildir?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "8/4",
+     "maddeKesin": false,
+     "kok": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun Hükmünde Kararnamenin Kabul Edilmesine Dair Kanun gereğince, “Mevzuatta belirlenmiş usul ve kurallara riayet etmeden sözlü, yazılı "
     }
    ],
    "karistirilanSureler": [
@@ -2791,7 +3264,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -2807,7 +3280,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -2823,7 +3296,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": null,
-     "madde": null,
+     "madde": "30",
      "kaynak": "ad"
     },
     {
@@ -2839,7 +3312,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8/2",
      "kaynak": "ad"
     },
     {
@@ -2855,7 +3328,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -2871,7 +3344,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8/4",
      "kaynak": "ad"
     },
     {
@@ -2887,7 +3360,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "7/1",
      "kaynak": "ad"
     },
     {
@@ -2903,7 +3376,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "8/4",
      "kaynak": "ad"
     },
     {
@@ -2919,7 +3392,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "8/2",
      "kaynak": "ad"
     },
     {
@@ -2967,7 +3440,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -2983,7 +3456,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -2999,7 +3472,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "20/1",
      "kaynak": "ad"
     },
     {
@@ -3015,7 +3488,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7/5",
      "kaynak": "ad"
     },
     {
@@ -3031,7 +3504,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "30/1",
      "kaynak": "ad"
     },
     {
@@ -3047,7 +3520,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "34/2",
      "kaynak": "ad"
     }
    ]
@@ -3075,7 +3548,47 @@
     "OLUMSUZ": 4,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "3",
+     "kez": 2
+    },
+    {
+     "deger": "19",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "19",
+     "kez": 5
+    },
+    {
+     "deger": "2",
+     "kez": 3
+    },
+    {
+     "deger": "7",
+     "kez": 2
+    },
+    {
+     "deger": "1",
+     "kez": 1
+    },
+    {
+     "deger": "15",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3",
+     "maddeKesin": true,
+     "kok": "12.4.1991 tarih ve 3713 sayılı Terörle Mü- cadele Kanunu’nda 26.9.2004 tarih ve 5237 sayılı Türk Ceza Kanunu’nda (TCK) düzen- lenen belirli suçlar terör suçları olarak belir- tilmektedir. Aş"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "sekiz saat",
@@ -3123,7 +3636,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -3139,7 +3652,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -3155,7 +3668,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -3171,7 +3684,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -3187,7 +3700,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -3203,7 +3716,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -3219,7 +3732,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -3235,7 +3748,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -3251,7 +3764,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -3267,7 +3780,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -3283,7 +3796,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -3299,7 +3812,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -3315,7 +3828,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -3331,7 +3844,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -3347,7 +3860,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     }
    ]
@@ -3374,10 +3887,75 @@
     "OLUMSUZ": 9,
     "DÜZ": 6
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "1",
+     "kez": 1
+    },
+    {
+     "deger": "14",
+     "kez": 1
+    },
+    {
+     "deger": "22",
+     "kez": 1
+    },
+    {
+     "deger": "25",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "5",
+     "kez": 2
+    },
+    {
+     "deger": "8",
+     "kez": 2
+    },
     {
      "deger": "26/4",
      "kez": 2
+    },
+    {
+     "deger": "20/2",
+     "kez": 2
+    },
+    {
+     "deger": "22/2",
+     "kez": 1
+    },
+    {
+     "deger": "17/6",
+     "kez": 1
+    },
+    {
+     "deger": "33",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "5326 sayılı Kabahatler Kanunu’na göre, aşağıdakilerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "8",
+     "maddeKesin": false,
+     "kok": "5326 sayılı Kabahatler Kanunu’na gö- re,aşağıdakilerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "26/4",
+     "maddeKesin": false,
+     "kok": "Elektronik yolla yapılan tebligatta, tebli- gat hangi anda yapılmış sayılır?"
     }
    ],
    "karistirilanSureler": [],
@@ -3419,7 +3997,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -3435,7 +4013,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -3467,7 +4045,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "20/2",
      "kaynak": "ad"
     },
     {
@@ -3483,7 +4061,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "22/2",
      "kaynak": "ad"
     },
     {
@@ -3499,7 +4077,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -3515,7 +4093,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "14",
      "kaynak": "ad"
     },
     {
@@ -3531,7 +4109,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "22",
      "kaynak": "ad"
     },
     {
@@ -3547,7 +4125,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "17/6",
      "kaynak": "ad"
     },
     {
@@ -3563,7 +4141,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "33",
      "kaynak": "ad"
     },
     {
@@ -3579,7 +4157,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -3595,7 +4173,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -3627,7 +4205,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "20/2",
      "kaynak": "ad"
     },
     {
@@ -3643,7 +4221,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "25",
      "kaynak": "ad"
     }
    ]
@@ -3667,7 +4245,59 @@
     "DÜZ": 7,
     "OLUMSUZ": 7
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "5",
+     "kez": 5
+    },
+    {
+     "deger": "11/a",
+     "kez": 5
+    },
+    {
+     "deger": "3",
+     "kez": 2
+    },
+    {
+     "deger": "15",
+     "kez": 1
+    },
+    {
+     "deger": "26",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3",
+     "maddeKesin": false,
+     "kok": "Aşağıda Sözleşmeli Subay ve Astsubay Yönetmeliğinde yer alan tanımlamalar açıklamaları ile birlikte verilmiştir. Hangi tanımlamanın açıklamasında yanlışlık yapılmıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "Sözleşmeli Subay ve Astsubay Yönetmeliği içerisinde yer alan ve aşağıda verilen sözleşmeli astsubay adaylar için aranacak niteliklerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "Sözleşmeli Subay ve Astsubay Yönetmeliği gereğince, sözleşmeli astsubay adaylarında aranacak niteliklerle ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "11/a",
+     "maddeKesin": false,
+     "kok": "Sözleşmeli Subay ve Astsubay Yönetmeliği gereğince, muvazzaf subaylığa geçiş için aranan fiili hizmet süresi aralığı aşağıdaki seçeneklerden hangisinde tam ve doğru olarak verilmiştir?"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "dört yıl",
@@ -3719,7 +4349,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -3735,7 +4365,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -3751,7 +4381,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -3767,7 +4397,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11/a",
      "kaynak": "ad"
     },
     {
@@ -3783,7 +4413,7 @@
      ],
      "kitapcik": "k4",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11/a",
      "kaynak": "ad"
     },
     {
@@ -3799,7 +4429,7 @@
      ],
      "kitapcik": "k4",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -3815,7 +4445,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -3831,7 +4461,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11/a",
      "kaynak": "ad"
     },
     {
@@ -3847,7 +4477,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -3863,7 +4493,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -3879,7 +4509,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -3895,7 +4525,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11/a",
      "kaynak": "ad"
     },
     {
@@ -3911,7 +4541,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "11/a",
      "kaynak": "ad"
     },
     {
@@ -3927,7 +4557,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "26",
      "kaynak": "ad"
     }
    ]
@@ -3954,7 +4584,62 @@
     "OLUMSUZ": 5,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "1",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "9/1",
+     "kez": 5
+    },
+    {
+     "deger": "3",
+     "kez": 2
+    },
+    {
+     "deger": "5",
+     "kez": 1
+    },
+    {
+     "deger": "3/1",
+     "kez": 1
+    },
+    {
+     "deger": "1",
+     "kez": 1
+    },
+    {
+     "deger": "4/1",
+     "kez": 1
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    },
+    {
+     "deger": "8/2",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "9/1",
+     "maddeKesin": false,
+     "kok": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun hükümlerine göre verilen idari kararlara karşı Kanun’da ilgililere itiraz hakkı tanın- mıştır. Bu hakkın kullanı"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3",
+     "maddeKesin": false,
+     "kok": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun’da ve 6284 Sayılı Ailenin Korunması ve Kadı- na Karşı Şiddetin Önlenmesine Dair Ka- nun’a İlişkin Uygulama Yönet"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "iki hafta",
@@ -4042,7 +4727,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "9/1",
      "kaynak": "ad"
     },
     {
@@ -4058,7 +4743,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -4074,7 +4759,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -4090,7 +4775,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "9/1",
      "kaynak": "ad"
     },
     {
@@ -4106,7 +4791,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3/1",
      "kaynak": "ad"
     },
     {
@@ -4122,7 +4807,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "9/1",
      "kaynak": "ad"
     },
     {
@@ -4138,7 +4823,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -4154,7 +4839,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -4170,7 +4855,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "9/1",
      "kaynak": "ad"
     },
     {
@@ -4186,7 +4871,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -4202,7 +4887,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "4/1",
      "kaynak": "ad"
     },
     {
@@ -4218,7 +4903,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -4234,7 +4919,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8/2",
      "kaynak": "ad"
     },
     {
@@ -4250,7 +4935,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "9/1",
      "kaynak": "ad"
     }
    ]
@@ -4274,7 +4959,61 @@
     "DÜZ": 4,
     "BOŞLUK": 2
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "16",
+     "kez": 1
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "12/1",
+     "kez": 4
+    },
+    {
+     "deger": "3/1",
+     "kez": 3
+    },
+    {
+     "deger": "4",
+     "kez": 2
+    },
+    {
+     "deger": "38",
+     "kez": 1
+    },
+    {
+     "deger": "6/1",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "4",
+     "maddeKesin": false,
+     "kok": "6284 Sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanuna İlişkin Uygulama Yönetmeliği gereğince, “Kişinin, şiddete uğraması veya şiddete uğrama tehlikesi altında bulunm"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "12/1",
+     "maddeKesin": false,
+     "kok": "6284 Sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanuna İlişkin Uygulama Yönetmeliği gereğince, aşağıdakilerden hangisi MÜLKİ AMİR tarafından verilecek koruyucu tedbir"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "12/1",
+     "maddeKesin": false,
+     "kok": "6284 Sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanuna İlişkin Uygulama Yönetmeliği gereğince, önleyici tedbir kararlarının yerine getirilip getirilmediği karar süres"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "altı ay",
@@ -4342,7 +5081,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -4358,7 +5097,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12/1",
      "kaynak": "ad"
     },
     {
@@ -4374,7 +5113,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3/1",
      "kaynak": "ad"
     },
     {
@@ -4390,7 +5129,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -4406,7 +5145,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -4422,7 +5161,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3/1",
      "kaynak": "ad"
     },
     {
@@ -4438,7 +5177,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "12/1",
      "kaynak": "ad"
     },
     {
@@ -4454,7 +5193,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "38",
      "kaynak": "ad"
     },
     {
@@ -4470,7 +5209,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12/1",
      "kaynak": "ad"
     },
     {
@@ -4486,7 +5225,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "3/1",
      "kaynak": "ad"
     },
     {
@@ -4502,7 +5241,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "12/1",
      "kaynak": "ad"
     },
     {
@@ -4518,7 +5257,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "6/1",
      "kaynak": "ad"
     },
     {
@@ -4534,7 +5273,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     }
    ]
@@ -4560,14 +5299,46 @@
     "DÜZ": 7,
     "OLUMSUZ": 6
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "3",
+     "kez": 5
+    },
+    {
+     "deger": "74",
      "kez": 3
     },
     {
      "deger": "6",
-     "kez": 1
+     "kez": 3
+    },
+    {
+     "deger": "26",
+     "kez": 2
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "74",
+     "maddeKesin": false,
+     "kok": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu’na göre define arama yapılabilmesi için aşağıda verilen bilgi- lerden hangisi yanlıştır?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3",
+     "maddeKesin": false,
+     "kok": "Koruma bölge kurulunca onaylanan her ölçek ve nitelikteki plan ve proje uygu- lamalarının uygulama sorumluluğunun serbest meslek mensuplarınca üstlenil- mesi hâlinde bunların denetimini aşağ"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "6",
+     "maddeKesin": false,
+     "kok": "Aşağıdakilerden hangisi 2863 sayılı Kül- tür ve Tabiat Varlıklarını Koruma Ka- nunu’na göre, Koruma Kurullarınca ak- sine bir karar alınmadığı sürece, korun- ması gerekli taşınmaz kültür ve "
     }
    ],
    "karistirilanSureler": [],
@@ -4604,7 +5375,7 @@
      ],
      "kitapcik": "k2",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "74",
      "kaynak": "ad"
     },
     {
@@ -4636,7 +5407,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     },
     {
@@ -4652,7 +5423,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "74",
      "kaynak": "ad"
     },
     {
@@ -4668,7 +5439,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "26",
      "kaynak": "ad"
     },
     {
@@ -4684,7 +5455,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     },
     {
@@ -4700,7 +5471,7 @@
      ],
      "kitapcik": "k9-12",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "74",
      "kaynak": "ad"
     },
     {
@@ -4764,7 +5535,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "26",
      "kaynak": "ad"
     },
     {
@@ -4780,7 +5551,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -4796,7 +5567,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     }
    ]
@@ -4821,10 +5592,62 @@
     "BOŞLUK": 4,
     "DÜZ": 3
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "33",
+     "kez": 4
+    },
     {
      "deger": "4",
      "kez": 2
+    },
+    {
+     "deger": "3",
+     "kez": 1
+    },
+    {
+     "deger": "6",
+     "kez": 1
+    },
+    {
+     "deger": "5/1",
+     "kez": 1
+    },
+    {
+     "deger": "17",
+     "kez": 1
+    },
+    {
+     "deger": "10/1",
+     "kez": 1
+    },
+    {
+     "deger": "11/1",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "4",
+     "maddeKesin": false,
+     "kok": "I. Kamu kurum ve kuruluşlarınca resmî yazışmalar, elektronik ortamda e-Yazışma Teknik Rehberi’ne uygun olarak hazırlanan ve güvenli elektronik imza ile imzalanan belgelerle yapılır. II. Elek"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "33",
+     "maddeKesin": false,
+     "kok": "Resmi Yazışmalarda Uygulanacak Usul ve Esaslar Hakkındaki Yönetmelik gereğince, idareler, ilgili mevzuattaki özel hükümler saklı kalmak kaydıyla, süre belirtilmeyen bilgi ve görüş taleplerin"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "33",
+     "maddeKesin": false,
+     "kok": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik’e göre “İda- reler, ilgili mevzuattaki özel hükümler saklı kalmak kaydıyla, süre belirtilmeyen belge taleplerini talebin ke"
     }
    ],
    "karistirilanSureler": [
@@ -4913,7 +5736,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "33",
      "kaynak": "ad"
     },
     {
@@ -4929,7 +5752,7 @@
      ],
      "kitapcik": "k4",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -4945,7 +5768,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "33",
      "kaynak": "ad"
     },
     {
@@ -4977,7 +5800,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "33",
      "kaynak": "ad"
     },
     {
@@ -4993,7 +5816,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     },
     {
@@ -5009,7 +5832,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "5/1",
      "kaynak": "ad"
     },
     {
@@ -5025,7 +5848,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "33",
      "kaynak": "ad"
     },
     {
@@ -5041,7 +5864,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "17",
      "kaynak": "ad"
     },
     {
@@ -5057,7 +5880,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10/1",
      "kaynak": "ad"
     },
     {
@@ -5073,7 +5896,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "11/1",
      "kaynak": "ad"
     }
    ]
@@ -5100,10 +5923,48 @@
     "DÜZ": 11,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "5",
+     "kez": 1
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "5",
+     "kez": 6
+    },
     {
      "deger": "3",
      "kez": 2
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    },
+    {
+     "deger": "2",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 4,
+     "kez": 4,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik gereğince, bilgi edinme hakkı hususunda karşılıklılık ilkesi kapsamına giren ülkeler aşağıdaki makamlar"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3",
+     "maddeKesin": false,
+     "kok": "Bilgi edinme hakkı uyarınca talep edilen bilgi, birden fazla kurum veya kuruluşu ilgilendirecek nitelikteyse, başvuru sahi- bine en geç kaç gün içinde bilgi ya da belgeye erişim sağlanması z"
     }
    ],
    "karistirilanSureler": [
@@ -5145,7 +6006,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -5161,7 +6022,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -5193,7 +6054,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": null,
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -5209,7 +6070,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -5225,7 +6086,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -5241,7 +6102,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -5257,7 +6118,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -5273,7 +6134,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -5289,7 +6150,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -5321,7 +6182,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     }
    ]
@@ -5345,10 +6206,56 @@
    "bicimDagilimi": {
     "DÜZ": 11
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
     {
      "deger": "18",
      "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "19/1",
+     "kez": 3
+    },
+    {
+     "deger": "16/A",
+     "kez": 2
+    },
+    {
+     "deger": "19",
+     "kez": 1
+    },
+    {
+     "deger": "11/8",
+     "kez": 1
+    },
+    {
+     "deger": "9",
+     "kez": 1
+    },
+    {
+     "deger": "3/1",
+     "kez": 1
+    },
+    {
+     "deger": "18",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "16/A",
+     "maddeKesin": false,
+     "kok": "5607 sayılı Kaçakçılık Kanunu uyarınca el konulan kaçak akaryakıttan teknik düzenlemelere uygun olanlar, hangi bi- rim tarafından numune alınmak suretiy- le kamu kurum ve kuruluşları ile mah"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "19/1",
+     "maddeKesin": false,
+     "kok": "Aşağıdakilerden hangisi 5607 sayılı Ka- çakçılık Kanunu uyarınca kaçakçılığı ön- leme, izleme ve araştırmakla görevli ola- rak sayılmamıştır?"
     }
    ],
    "karistirilanSureler": [],
@@ -5393,7 +6300,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "16/A",
      "kaynak": "ad"
     },
     {
@@ -5409,7 +6316,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19/1",
      "kaynak": "ad"
     },
     {
@@ -5425,7 +6332,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -5441,7 +6348,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "19/1",
      "kaynak": "ad"
     },
     {
@@ -5457,7 +6364,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "18",
      "kaynak": "ad"
     },
     {
@@ -5473,7 +6380,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11/8",
      "kaynak": "ad"
     },
     {
@@ -5489,7 +6396,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "9",
      "kaynak": "ad"
     },
     {
@@ -5505,7 +6412,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "16/A",
      "kaynak": "ad"
     },
     {
@@ -5521,7 +6428,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19/1",
      "kaynak": "ad"
     },
     {
@@ -5537,7 +6444,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3/1",
      "kaynak": "ad"
     },
     {
@@ -5578,14 +6485,39 @@
     "OLUMSUZ": 2,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "10/b",
+     "kez": 5
+    },
+    {
+     "deger": "14/e",
+     "kez": 3
+    },
     {
      "deger": "14",
      "kez": 1
     },
     {
-     "deger": "14/e",
+     "deger": "1",
      "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 3,
+     "kez": 3,
+     "madde": "10/b",
+     "maddeKesin": false,
+     "kok": "2521 Sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik gereğince verilen"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "14/e",
+     "maddeKesin": false,
+     "kok": "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik’te; avda ve spord"
     }
    ],
    "karistirilanSureler": [
@@ -5684,7 +6616,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "14/e",
      "kaynak": "ad"
     },
     {
@@ -5700,7 +6632,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10/b",
      "kaynak": "ad"
     },
     {
@@ -5716,7 +6648,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "14/e",
      "kaynak": "ad"
     },
     {
@@ -5732,7 +6664,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10/b",
      "kaynak": "ad"
     },
     {
@@ -5748,7 +6680,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10/b",
      "kaynak": "ad"
     },
     {
@@ -5764,7 +6696,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10/b",
      "kaynak": "ad"
     },
     {
@@ -5812,7 +6744,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -5828,7 +6760,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10/b",
      "kaynak": "ad"
     }
    ]
@@ -5855,7 +6787,54 @@
     "OLUMSUZ": 2,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "10",
+     "kez": 2
+    },
+    {
+     "deger": "9",
+     "kez": 1
+    },
+    {
+     "deger": "8",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "8/1",
+     "kez": 3
+    },
+    {
+     "deger": "7",
+     "kez": 1
+    },
+    {
+     "deger": "11/3",
+     "kez": 1
+    },
+    {
+     "deger": "10/1",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 4,
+     "kez": 4,
+     "madde": "10",
+     "maddeKesin": true,
+     "kok": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmeliğinin 10. maddesi gereğince, “kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kiml"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "8/1",
+     "maddeKesin": false,
+     "kok": "I. Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. II. Kişisel verilerin yok edilmesi, ki"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "bir ay",
@@ -5899,7 +6878,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8/1",
      "kaynak": "ad"
     },
     {
@@ -5915,7 +6894,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -5931,7 +6910,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -5947,7 +6926,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8/1",
      "kaynak": "ad"
     },
     {
@@ -5963,7 +6942,7 @@
      ],
      "kitapcik": "k9-03",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11/3",
      "kaynak": "ad"
     },
     {
@@ -5979,7 +6958,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "9",
      "kaynak": "ad"
     },
     {
@@ -5995,7 +6974,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -6011,7 +6990,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -6027,7 +7006,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "8/1",
      "kaynak": "ad"
     },
     {
@@ -6043,7 +7022,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "10/1",
      "kaynak": "ad"
     }
    ]
@@ -6065,7 +7044,8 @@
    "bicimDagilimi": {
     "DÜZ": 10
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "75",
      "kez": 4
@@ -6077,6 +7057,29 @@
     {
      "deger": "10",
      "kez": 2
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "10",
+     "maddeKesin": false,
+     "kok": "Motorlu araç sürücülerinin yetiştirilmesi için sürücü kursları açmak, özel sürücü kursu açılmasına izin vermek ve bu kurs- ları denetlemek yetki ve görevi aşağıda- kilerden hangisindedir?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "75",
+     "maddeKesin": false,
+     "kok": "Lastik tekerlekli traktör kullanacaklara verilen sürücü belgesi sınıfı aşağıdakiler- den hangisidir?"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "76",
+     "maddeKesin": false,
+     "kok": "F ve G sınıfı sürücü belgesi alacakların kaç yaşını bitirmiş olmaları zorunludur?"
     }
    ],
    "karistirilanSureler": [],
@@ -6272,7 +7275,41 @@
     "DÜZ": 5,
     "OLUMSUZ": 4
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "3/",
+     "kez": 4
+    },
+    {
+     "deger": "4",
+     "kez": 3
+    },
+    {
+     "deger": "5",
+     "kez": 1
+    },
+    {
+     "deger": "3/b",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3/",
+     "maddeKesin": false,
+     "kok": "“İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıttır.” 5070 sayılı Elektronik İmza Kanunu’nda yer alan ve yukarıda açıklaması verilen ifade aş"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "4",
+     "maddeKesin": false,
+     "kok": "5070 sayılı Elektronik İmza Kanunu gereğince, güvenli elektronik imza ile ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?"
+    }
+   ],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -6295,7 +7332,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3/",
      "kaynak": "ad"
     },
     {
@@ -6311,7 +7348,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -6327,7 +7364,7 @@
      ],
      "kitapcik": "k4",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3/",
      "kaynak": "ad"
     },
     {
@@ -6343,7 +7380,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -6359,7 +7396,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3/",
      "kaynak": "ad"
     },
     {
@@ -6375,7 +7412,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -6391,7 +7428,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "3/",
      "kaynak": "ad"
     },
     {
@@ -6407,7 +7444,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3/b",
      "kaynak": "ad"
     },
     {
@@ -6423,7 +7460,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     }
    ]
@@ -6449,10 +7486,36 @@
     "BOŞLUK": 3,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "76",
+     "kez": 3
+    }
+   ],
+   "sicakMaddelerTahmini": [
     {
      "deger": "22",
+     "kez": 5
+    },
+    {
+     "deger": "5",
      "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "22",
+     "maddeKesin": false,
+     "kok": "Emniyet Genel Müdürlüğünce yapılacak sınavlarda başarılı olan Emniyet Genel Müdürlüğü personeline ve Emniyet Genel Müdürlüğüne bağlı eğitim ve öğretim kurumlarında öğrenim görenlere sürücü b"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "76",
+     "maddeKesin": true,
+     "kok": "Karayolları Trafik Yönetmeliğinin 76. maddesi gereğince, A sınıfı sürücü belgesi alacak adaylardan, kaç yaşını doldurmuş olması koşulu ile deneyim bakımından en az iki yıllık A2 sınıfı sürüc"
     }
    ],
    "karistirilanSureler": [],
@@ -6489,7 +7552,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "22",
      "kaynak": "ad"
     },
     {
@@ -6505,7 +7568,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "76",
      "kaynak": "ad"
     },
     {
@@ -6521,7 +7584,7 @@
      ],
      "kitapcik": "k4",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "22",
      "kaynak": "ad"
     },
     {
@@ -6537,7 +7600,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "22",
      "kaynak": "ad"
     },
     {
@@ -6553,7 +7616,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -6569,7 +7632,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "76",
      "kaynak": "ad"
     },
     {
@@ -6585,7 +7648,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "76",
      "kaynak": "ad"
     },
     {
@@ -6617,7 +7680,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "22",
      "kaynak": "ad"
     }
    ]
@@ -6642,14 +7705,24 @@
     "DÜZ": 6,
     "OLUMSUZ": 3
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "3",
-     "kez": 3
+     "kez": 6
     },
     {
      "deger": "1",
-     "kez": 1
+     "kez": 3
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3",
+     "maddeKesin": false,
+     "kok": "2935 sayılı Olağanüstü Hâl Kanunu’nda yer alan düzenlemelere göre aşağıdaki- lerden hangisi yanlıştır?"
     }
    ],
    "karistirilanSureler": [
@@ -6699,7 +7772,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -6731,7 +7804,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -6763,7 +7836,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -6795,7 +7868,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -6827,7 +7900,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     }
    ]
@@ -6853,7 +7926,35 @@
     "DÜZ": 2,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "16",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "13/A",
+     "kez": 6
+    },
+    {
+     "deger": "7",
+     "kez": 1
+    },
+    {
+     "deger": "16",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "13/A",
+     "maddeKesin": false,
+     "kok": "2559 sayılı Polis Vazife ve Salahiyet Kanu- nu hükümlerine göre “Kamu düzeni ve ka- mu güvenliğinin sağlanmasından sorumlu olan polis; amirinden aldığı emri, kanun, Cumhurbaşkanlığı kararnam"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "bir ay",
@@ -6917,7 +8018,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "13/A",
      "kaynak": "ad"
     },
     {
@@ -6933,7 +8034,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "13/A",
      "kaynak": "ad"
     },
     {
@@ -6949,7 +8050,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "13/A",
      "kaynak": "ad"
     },
     {
@@ -6965,7 +8066,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -6981,7 +8082,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -6997,7 +8098,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "13/A",
      "kaynak": "ad"
     },
     {
@@ -7013,7 +8114,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "13/A",
      "kaynak": "ad"
     },
     {
@@ -7029,7 +8130,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -7045,7 +8146,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "13/A",
      "kaynak": "ad"
     }
    ]
@@ -7070,7 +8171,21 @@
     "OLUMSUZ": 5,
     "DÜZ": 3
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "8",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "13/2",
+     "kez": 2
+    },
+    {
+     "deger": "11/1",
+     "kez": 2
+    },
     {
      "deger": "2",
      "kez": 2
@@ -7078,6 +8193,22 @@
     {
      "deger": "12/3",
      "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "13/2",
+     "maddeKesin": false,
+     "kok": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanuna göre mal- varlığı dondurulan gerçek kişinin ve bakmakla yükümlü olduğu yakınlarının asgari geçimlerini sağlamak veya ticari işl"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "11/1",
+     "maddeKesin": false,
+     "kok": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun’a göre mal- varlığının dondurulması kararı ve bu kararın kaldırılmasına ilişkin kararın- hukuki sonuçlarını doğurması ne zaman o"
     }
    ],
    "karistirilanSureler": [
@@ -7119,7 +8250,7 @@
      ],
      "kitapcik": "k2",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "13/2",
      "kaynak": "ad"
     },
     {
@@ -7135,7 +8266,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11/1",
      "kaynak": "ad"
     },
     {
@@ -7183,7 +8314,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -7199,7 +8330,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "11/1",
      "kaynak": "ad"
     },
     {
@@ -7215,7 +8346,7 @@
      ],
      "kitapcik": "k9-12",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "13/2",
      "kaynak": "ad"
     },
     {
@@ -7256,7 +8387,35 @@
     "OLUMSUZ": 2,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "28",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "28",
+     "kez": 5
+    },
+    {
+     "deger": "15",
+     "kez": 1
+    },
+    {
+     "deger": "12",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "28",
+     "maddeKesin": false,
+     "kok": "2872 sayılı Çevre Kanunu’nda, çevrenin korunmasına, iyileştirilmesine ve kirliliği- nin önlenmesine ilişkin genel ilkeler düzen- lenmektedir. Aşağıdakilerden hangisi Kanunda dü- zenlenen ilk"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "2 yıl",
@@ -7324,7 +8483,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "28",
      "kaynak": "ad"
     },
     {
@@ -7340,7 +8499,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "28",
      "kaynak": "ad"
     },
     {
@@ -7356,7 +8515,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "28",
      "kaynak": "ad"
     },
     {
@@ -7372,7 +8531,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "28",
      "kaynak": "ad"
     },
     {
@@ -7388,7 +8547,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "28",
      "kaynak": "ad"
     },
     {
@@ -7404,7 +8563,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "15",
      "kaynak": "ad"
     },
     {
@@ -7420,7 +8579,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -7436,7 +8595,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "28",
      "kaynak": "ad"
     }
    ]
@@ -7459,7 +8618,8 @@
     "DÜZ": 4,
     "OLUMSUZ": 3
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "3",
      "kez": 4
@@ -7467,6 +8627,23 @@
     {
      "deger": "22",
      "kez": 1
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    },
+    {
+     "deger": "26",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "3",
+     "maddeKesin": false,
+     "kok": "Mera, yaylak ve kışlaklarda, çiftçilerin her birinin müşterek otlatabileceği bü- yükbaş hayvan birimi sayısı aşağıdaki kavramlardan hangisiyle karşılanır?"
     }
    ],
    "karistirilanSureler": [
@@ -7532,7 +8709,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -7596,7 +8773,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "26",
      "kaynak": "ad"
     }
    ]
@@ -7620,10 +8797,37 @@
     "DÜZ": 3,
     "OLUMSUZ": 3
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "7",
+     "kez": 2
+    }
+   ],
+   "sicakMaddelerTahmini": [
     {
      "deger": "6",
      "kez": 1
+    },
+    {
+     "deger": "14",
+     "kez": 1
+    },
+    {
+     "deger": "31",
+     "kez": 1
+    },
+    {
+     "deger": "7",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "7",
+     "maddeKesin": true,
+     "kok": "Adli ve Önleme Aramaları Yönetmeliği’nin “Adlî aramalarda karar ve emir verme yetkisi” başlıklı 7’nci maddesi gereğince, Konutta, iş yerinde ve kamuya açık olmayan kapalı alanlarda arama yet"
     }
    ],
    "karistirilanSureler": [],
@@ -7668,7 +8872,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -7700,7 +8904,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -7716,7 +8920,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "14",
      "kaynak": "ad"
     },
     {
@@ -7732,7 +8936,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "31",
      "kaynak": "ad"
     },
     {
@@ -7748,7 +8952,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     }
    ]
@@ -7774,7 +8978,35 @@
     "BOŞLUK": 1,
     "ÖNCÜLLÜ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "21",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "5",
+     "kez": 3
+    },
+    {
+     "deger": "16",
+     "kez": 1
+    },
+    {
+     "deger": "23",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "Suç Eşyası Yönetmeliği gereğince, “Emanet bürosundaki suç eşyasının başka yere gönderilmesi” yetkisi konusunda aşağıdakilerden hangisi doğrudur?"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "72 saat",
@@ -7846,7 +9078,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -7862,7 +9094,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -7878,7 +9110,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -7894,7 +9126,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "21",
      "kaynak": "ad"
     },
     {
@@ -7910,7 +9142,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "16",
      "kaynak": "ad"
     },
     {
@@ -7926,7 +9158,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "23",
      "kaynak": "ad"
     }
    ]
@@ -7952,10 +9184,39 @@
     "OLUMSUZ": 2,
     "ÖNCÜLLÜ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "4",
+     "kez": 2
+    },
     {
      "deger": "11",
      "kez": 2
+    },
+    {
+     "deger": "23",
+     "kez": 1
+    },
+    {
+     "deger": "5",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "4",
+     "maddeKesin": false,
+     "kok": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği gereğince “Kamu güvenliğine, kamu düzenine veya kişinin vücut veya hayatına yönelik var olan bir tehlikenin giderilmesi için denetim altına"
+    },
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "11",
+     "maddeKesin": false,
+     "kok": "Aşağıdakilerden hangisi Yakalama, Gö- zaltına Alma ve İfade Alma Yönetmeli- ği’ne göre uygulanan nezarethane işlem- lerinden biri değildir?"
     }
    ],
    "karistirilanSureler": [],
@@ -7975,7 +9236,7 @@
      ],
      "kitapcik": "k1",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -8007,7 +9268,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -8039,7 +9300,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "23",
      "kaynak": "ad"
     },
     {
@@ -8055,7 +9316,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     }
    ]
@@ -8081,7 +9342,13 @@
     "BOŞLUK": 2,
     "DÜZ": 2
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "14",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
     {
      "deger": "5",
      "kez": 2
@@ -8097,10 +9364,15 @@
     {
      "deger": "9",
      "kez": 1
-    },
+    }
+   ],
+   "tekrarEdenSorular": [
     {
-     "deger": "35/f",
-     "kez": 1
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönet- meliği’ne göre aşağıdakilerden hangisi, hizmetin aksatılmadan yürütülmesi esa- sına ve hizmet ihtiyacı prensibine uyg"
     }
    ],
    "karistirilanSureler": [
@@ -8234,7 +9506,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": "35/f",
+     "madde": "14",
      "kaynak": "benzerlik"
     }
    ]
@@ -8258,7 +9530,39 @@
     "DÜZ": 2,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "2",
+     "kez": 1
+    },
+    {
+     "deger": "14",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "7",
+     "kez": 2
+    },
+    {
+     "deger": "10",
+     "kez": 1
+    },
+    {
+     "deger": "6",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "7",
+     "maddeKesin": false,
+     "kok": "Türk hukukunda yardım toplamaya yetkili kişi ve kuruluşları ve bunların hangi amaçla yardım toplayabileceklerini belirleme, yar- dımın toplanmasına, kullanılmasına ve de- netlenmesine ilişki"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "3 ay",
@@ -8293,7 +9597,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -8309,7 +9613,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -8325,7 +9629,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "14",
      "kaynak": "ad"
     },
     {
@@ -8341,7 +9645,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     },
     {
@@ -8357,7 +9661,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -8373,7 +9677,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     }
    ]
@@ -8397,10 +9701,36 @@
     "DÜZ": 2,
     "ÖNCÜLLÜ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "6",
+     "kez": 2
+    },
+    {
+     "deger": "3",
+     "kez": 1
+    },
     {
      "deger": "5",
      "kez": 1
+    },
+    {
+     "deger": "11",
+     "kez": 1
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "6",
+     "maddeKesin": false,
+     "kok": "Adli Kolluk Yönetmeliği’ne göre, aşağı- dakilerden hangisi adli kolluğun görev ve yetkilerinden biri değildir?"
     }
    ],
    "karistirilanSureler": [],
@@ -8441,7 +9771,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     },
     {
@@ -8457,7 +9787,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -8473,7 +9803,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     },
     {
@@ -8505,7 +9835,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "11",
      "kaynak": "ad"
     },
     {
@@ -8521,7 +9851,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     }
    ]
@@ -8544,14 +9874,37 @@
     "OLUMSUZ": 5,
     "DÜZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [
+    {
+     "deger": "55",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
     {
      "deger": "63",
      "kez": 2
     },
     {
+     "deger": "64",
+     "kez": 1
+    },
+    {
      "deger": "59",
      "kez": 1
+    },
+    {
+     "deger": "6",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "63",
+     "maddeKesin": false,
+     "kok": "Aşağıdakilerden hangisi geçici koruma sağlanacak yabancılardan değildir?"
     }
    ],
    "karistirilanSureler": [
@@ -8597,7 +9950,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "64",
      "kaynak": "ad"
     },
     {
@@ -8645,7 +9998,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "55",
      "kaynak": "ad"
     },
     {
@@ -8661,7 +10014,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     }
    ]
@@ -8685,7 +10038,22 @@
     "ÖNCÜLLÜ": 1,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "24",
+     "kez": 3
+    },
+    {
+     "deger": "21",
+     "kez": 2
+    },
+    {
+     "deger": "22",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -8708,7 +10076,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "21",
      "kaynak": "ad"
     },
     {
@@ -8724,7 +10092,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "24",
      "kaynak": "ad"
     },
     {
@@ -8740,7 +10108,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "21",
      "kaynak": "ad"
     },
     {
@@ -8756,7 +10124,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "24",
      "kaynak": "ad"
     },
     {
@@ -8772,7 +10140,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "22",
      "kaynak": "ad"
     },
     {
@@ -8788,7 +10156,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "24",
      "kaynak": "ad"
     }
    ]
@@ -8814,7 +10182,27 @@
    "bicimDagilimi": {
     "DÜZ": 6
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "1",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "2/1",
+     "kez": 2
+    },
+    {
+     "deger": "1/1",
+     "kez": 2
+    },
+    {
+     "deger": "3",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [
     {
      "deger": "altı ay",
@@ -8887,7 +10275,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "2/1",
      "kaynak": "ad"
     },
     {
@@ -8903,7 +10291,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1/1",
      "kaynak": "ad"
     },
     {
@@ -8919,7 +10307,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "2/1",
      "kaynak": "ad"
     },
     {
@@ -8935,7 +10323,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "1/1",
      "kaynak": "ad"
     },
     {
@@ -8951,7 +10339,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "1",
      "kaynak": "ad"
     },
     {
@@ -8967,7 +10355,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     }
    ]
@@ -8988,10 +10376,28 @@
     "OLUMSUZ": 4,
     "DÜZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "12",
+     "kez": 2
+    },
+    {
+     "deger": "4",
+     "kez": 2
+    },
     {
      "deger": "5/2",
      "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "12",
+     "maddeKesin": false,
+     "kok": "6698 sayılı Kişisel Verilerin Korunması Kanunu’na göre, kişisel verilerin elde edil- mesi sırasında veri sorumlusu veya yetki- lendirdiği kişi, ilgili kişilere bazı hakları hakkında bilgi ve"
     }
    ],
    "karistirilanSureler": [],
@@ -9011,7 +10417,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -9027,7 +10433,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -9043,7 +10449,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -9059,7 +10465,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -9100,7 +10506,35 @@
     "OLUMSUZ": 4,
     "DÜZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "5",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "5",
+     "kez": 2
+    },
+    {
+     "deger": "3",
+     "kez": 1
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "5",
+     "maddeKesin": false,
+     "kok": "Türkiye Cumhuriyeti sınırları içinde bulunan taşınır kültür ve tabiat varlıkla- rını bulanlara, varlığını haber verenler ile bunları yakalayan kamu görevlilerine Devlet tarafından verilecek "
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "1976 gün",
@@ -9152,7 +10586,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -9168,7 +10602,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -9184,7 +10618,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -9200,7 +10634,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -9216,7 +10650,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     }
    ]
@@ -9241,7 +10675,22 @@
     "ÖNCÜLLÜ": 1,
     "BOŞLUK": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "4",
+     "kez": 2
+    },
+    {
+     "deger": "3",
+     "kez": 2
+    },
+    {
+     "deger": "5",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -9280,7 +10729,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -9296,7 +10745,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -9312,7 +10761,7 @@
      ],
      "kitapcik": "k9-08",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -9328,7 +10777,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -9344,7 +10793,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     }
    ]
@@ -9368,7 +10817,30 @@
     "ÖNCÜLLÜ": 1,
     "DÜZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "4",
+     "kez": 1
+    },
+    {
+     "deger": "25",
+     "kez": 1
+    },
+    {
+     "deger": "26",
+     "kez": 1
+    },
+    {
+     "deger": "41/C",
+     "kez": 1
+    },
+    {
+     "deger": "7",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -9412,7 +10884,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -9428,7 +10900,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "25",
      "kaynak": "ad"
     },
     {
@@ -9444,7 +10916,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "26",
      "kaynak": "ad"
     },
     {
@@ -9460,7 +10932,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "41/C",
      "kaynak": "ad"
     },
     {
@@ -9476,7 +10948,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     }
    ]
@@ -9497,7 +10969,31 @@
     "OLUMSUZ": 3,
     "DÜZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "13",
+     "kez": 2
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "3/b",
+     "kez": 1
+    },
+    {
+     "deger": "12",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "13",
+     "maddeKesin": true,
+     "kok": "4678 sayılı TSK’da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanunun 13. maddesi gereğince, Sözleşmeli subay veya sözleşmeli astsubayların sözleşmelerinin süresi bitiminden "
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "bir ay",
@@ -9541,7 +11037,7 @@
      ],
      "kitapcik": "k3",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "13",
      "kaynak": "ad"
     },
     {
@@ -9557,7 +11053,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "3/b",
      "kaynak": "ad"
     },
     {
@@ -9573,7 +11069,7 @@
      ],
      "kitapcik": "k9-06",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "13",
      "kaynak": "ad"
     },
     {
@@ -9589,7 +11085,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     }
    ]
@@ -9612,7 +11108,26 @@
     "DÜZ": 3,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "19",
+     "kez": 2
+    },
+    {
+     "deger": "10",
+     "kez": 2
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "19",
+     "maddeKesin": false,
+     "kok": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanuna göre: “Özel hukuk tüzel kişi- leri ve özel güvenlik şirketleri, istihdam et- tikleri özel güvenlik görevlilerinin üçüncü kişilere verecekle"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "sekiz yıl",
@@ -9653,7 +11168,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -9669,7 +11184,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -9685,7 +11200,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -9701,7 +11216,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     }
    ]
@@ -9723,10 +11238,24 @@
    "bicimDagilimi": {
     "DÜZ": 4
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "6/3",
-     "kez": 2
+     "kez": 3
+    },
+    {
+     "deger": "7/1",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "6/3",
+     "maddeKesin": false,
+     "kok": "Aşağıdakilerden hangisi suç gelirlerinin aklanmasının ve terörün finansmanının önlenmesi amacıyla şüpheli işlemleri bil- dirmekle yükümlü olanlardan biri değil- dir?"
     }
    ],
    "karistirilanSureler": [],
@@ -9762,7 +11291,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7/1",
      "kaynak": "ad"
     },
     {
@@ -9794,7 +11323,7 @@
      ],
      "kitapcik": "k9-13",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "6/3",
      "kaynak": "ad"
     }
    ]
@@ -9815,7 +11344,22 @@
    "bicimDagilimi": {
     "OLUMSUZ": 4
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "31",
+     "kez": 4
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "31",
+     "maddeKesin": false,
+     "kok": "5442 sayılı İl İdaresi Kanunu’na gö- re,aşağıdakilerden hangisi kaymakamın görevlerinden biri değildir?"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "üç gün",
@@ -9864,7 +11408,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "31",
      "kaynak": "ad"
     },
     {
@@ -9880,7 +11424,7 @@
      ],
      "kitapcik": "k9-02",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "31",
      "kaynak": "ad"
     },
     {
@@ -9896,7 +11440,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "31",
      "kaynak": "ad"
     },
     {
@@ -9912,7 +11456,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "31",
      "kaynak": "ad"
     }
    ]
@@ -9934,10 +11478,24 @@
     "DÜZ": 3,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "7",
-     "kez": 2
+     "kez": 3
+    },
+    {
+     "deger": "2",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "7",
+     "maddeKesin": false,
+     "kok": "Kimlik Bildirimi Mevzuatı uyarınca, yaylak ve kışlak gibi yerlere mevsimlik olarak göçenler için aşağıdakilerden hangisi doğrudur?"
     }
    ],
    "karistirilanSureler": [
@@ -9982,7 +11540,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "2",
      "kaynak": "ad"
     },
     {
@@ -10014,7 +11572,7 @@
      ],
      "kitapcik": "k9-14",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     }
    ]
@@ -10038,7 +11596,22 @@
     "DÜZ": 3,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "10",
+     "kez": 2
+    },
+    {
+     "deger": "12",
+     "kez": 1
+    },
+    {
+     "deger": "22",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [
     {
      "deger": "10 gün",
@@ -10106,7 +11679,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     },
     {
@@ -10122,7 +11695,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -10138,7 +11711,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "22",
      "kaynak": "ad"
     },
     {
@@ -10154,7 +11727,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     }
    ]
@@ -10176,12 +11749,18 @@
     "DÜZ": 2,
     "BOŞLUK": 2
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "36",
      "kez": 3
+    },
+    {
+     "deger": "6",
+     "kez": 1
     }
    ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -10216,7 +11795,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "astsubay",
-     "madde": null,
+     "madde": "6",
      "kaynak": "ad"
     },
     {
@@ -10286,7 +11865,27 @@
     "OLUMSUZ": 2,
     "DÜZ": 2
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "8",
+     "kez": 1
+    },
+    {
+     "deger": "5",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "3",
+     "kez": 1
+    },
+    {
+     "deger": "10",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -10309,7 +11908,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -10325,7 +11924,7 @@
      ],
      "kitapcik": "k9-05",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5",
      "kaynak": "ad"
     },
     {
@@ -10341,7 +11940,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "3",
      "kaynak": "ad"
     },
     {
@@ -10357,7 +11956,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "10",
      "kaynak": "ad"
     }
    ]
@@ -10382,7 +11981,14 @@
     "DÜZ": 3,
     "ÖNCÜLLÜ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "8",
+     "kez": 4
+    }
+   ],
+   "sicakMaddelerTahmini": [],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [
     {
      "deger": "bir yıl",
@@ -10439,7 +12045,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -10455,7 +12061,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -10471,7 +12077,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     },
     {
@@ -10487,7 +12093,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "8",
      "kaynak": "ad"
     }
    ]
@@ -10507,7 +12113,26 @@
     "DÜZ": 2,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "23",
+     "kez": 2
+    },
+    {
+     "deger": "20",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "23",
+     "maddeKesin": false,
+     "kok": "2313 sayılı Uyuşturucu Maddelerin Mu- rakabesi Hakkında Kanun’a göre lif, to- hum, sap ve benzeri amaçlarla kenevir ekimine ilişkin aşağıda verilen bilgiler- den hangisi doğrudur?"
+    }
+   ],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -10550,7 +12175,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "23",
      "kaynak": "ad"
     },
     {
@@ -10566,7 +12191,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "20",
      "kaynak": "ad"
     },
     {
@@ -10582,7 +12207,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "23",
      "kaynak": "ad"
     }
    ]
@@ -10603,7 +12228,26 @@
     "OLUMSUZ": 2,
     "DÜZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "4",
+     "kez": 2
+    },
+    {
+     "deger": "9",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [
+    {
+     "kitapcik": 2,
+     "kez": 2,
+     "madde": "4",
+     "maddeKesin": false,
+     "kok": "3091 sayılı Taşınmaz Mal Zilyetliğine Yapılan Tecavüzlerin Önlenmesi Hak- kında Kanun’a göre taşınmaz mallara yapılan tecavüz veya müdahalelerin ön- lenmesine ilişkin verilen bilgilerden han"
+    }
+   ],
    "karistirilanSureler": [
     {
      "deger": "otuz gün",
@@ -10635,7 +12279,7 @@
      ],
      "kitapcik": "k6",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -10651,7 +12295,7 @@
      ],
      "kitapcik": "k9-11",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     },
     {
@@ -10667,7 +12311,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "9",
      "kaynak": "ad"
     }
    ]
@@ -10687,7 +12331,19 @@
    "bicimDagilimi": {
     "DÜZ": 2
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [
+    {
+     "deger": "35",
+     "kez": 1
+    }
+   ],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "23",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [
     {
      "deger": "bir yıl",
@@ -10727,7 +12383,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "23",
      "kaynak": "ad"
     },
     {
@@ -10743,7 +12399,7 @@
      ],
      "kitapcik": "k9-04",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "35",
      "kaynak": "ad"
     }
    ]
@@ -10764,7 +12420,18 @@
    "bicimDagilimi": {
     "DÜZ": 2
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "19",
+     "kez": 1
+    },
+    {
+     "deger": "7",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -10803,7 +12470,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     },
     {
@@ -10819,7 +12486,7 @@
      ],
      "kitapcik": "k9-15",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "7",
      "kaynak": "ad"
     }
    ]
@@ -10838,7 +12505,18 @@
    "bicimDagilimi": {
     "OLUMSUZ": 2
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "14",
+     "kez": 1
+    },
+    {
+     "deger": "79",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -10861,7 +12539,7 @@
      ],
      "kitapcik": "k9-10",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "14",
      "kaynak": "ad"
     },
     {
@@ -10877,7 +12555,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "79",
      "kaynak": "ad"
     }
    ]
@@ -10898,7 +12576,18 @@
     "DÜZ": 1,
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "12",
+     "kez": 1
+    },
+    {
+     "deger": "4",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {
@@ -10921,7 +12610,7 @@
      ],
      "kitapcik": "k9-16",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "12",
      "kaynak": "ad"
     },
     {
@@ -10937,7 +12626,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "4",
      "kaynak": "ad"
     }
    ]
@@ -10956,7 +12645,14 @@
    "bicimDagilimi": {
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "109",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [],
    "karistirilanCezalar": [],
@@ -10974,7 +12670,7 @@
      ],
      "kitapcik": "k4",
      "rutbe": "subay",
-     "madde": null,
+     "madde": "109",
      "kaynak": "ad"
     }
    ]
@@ -10993,7 +12689,14 @@
    "bicimDagilimi": {
     "DÜZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "5/8",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [
     {
      "deger": "1 ay",
@@ -11032,7 +12735,7 @@
      ],
      "kitapcik": "k7-02",
      "rutbe": "uzman erbas",
-     "madde": null,
+     "madde": "5/8",
      "kaynak": "ad"
     }
    ]
@@ -11051,7 +12754,14 @@
    "bicimDagilimi": {
     "DÜZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "2/4",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [],
    "karistirilanCezalar": [],
@@ -11069,7 +12779,7 @@
      ],
      "kitapcik": "k9-01",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "2/4",
      "kaynak": "ad"
     }
    ]
@@ -11088,12 +12798,14 @@
    "bicimDagilimi": {
     "DÜZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "5",
      "kez": 1
     }
    ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [],
    "karistirilanCezalar": [],
@@ -11130,12 +12842,14 @@
    "bicimDagilimi": {
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "24",
      "kez": 1
     }
    ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [],
    "karistirilanCezalar": [],
@@ -11172,12 +12886,14 @@
    "bicimDagilimi": {
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "22",
      "kez": 1
     }
    ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [
     {
      "deger": "üç yıl",
@@ -11224,7 +12940,14 @@
    "bicimDagilimi": {
     "OLUMSUZ": 1
    },
-   "sicakMaddeler": [],
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
+    {
+     "deger": "19",
+     "kez": 1
+    }
+   ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [],
    "karistirilanCezalar": [],
@@ -11242,7 +12965,7 @@
      ],
      "kitapcik": "k9-17",
      "rutbe": "uzman jandarma",
-     "madde": null,
+     "madde": "19",
      "kaynak": "ad"
     }
    ]
@@ -11261,12 +12984,14 @@
    "bicimDagilimi": {
     "DÜZ": 1
    },
-   "sicakMaddeler": [
+   "sicakMaddelerKesin": [],
+   "sicakMaddelerTahmini": [
     {
      "deger": "32",
      "kez": 1
     }
    ],
+   "tekrarEdenSorular": [],
    "karistirilanSureler": [],
    "karistirilanMakamlar": [
     {

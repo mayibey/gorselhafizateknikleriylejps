@@ -191,14 +191,59 @@ function adiSil(metin) {
 
 // ---------- DIŞARIYA AÇILAN ----------
 export { korpus, enIyi, adaylar };
+/**
+ * Kökte AÇIKÇA yazan madde numarası: "85'nci maddesi", "76. maddesi", "m.128/A", "madde 24".
+ * Bu çıkarım TAHMİN DEĞİL, metnin kendisi → en yüksek kesinlik. Önce buna bakılır.
+ */
+export function maddeNoCikar(kok) {
+  const k = String(kok || '');
+  const kaliplar = [
+    /(\d{1,3})\s*['’]?\s*(?:nci|ncı|üncü|uncu|inci|ıncı)\s*madde/i,
+    /(\d{1,3})\s*\.\s*madde/i,
+    /madde\s*(\d{1,3})/i,
+    /m\.\s*(\d{1,3})/i,
+  ];
+  for (const re of kaliplar) {
+    const m = k.match(re);
+    if (m) return m[1];
+  }
+  return null;
+}
+
+/** Belirli bir kanunun maddeleri arasında en yakınını bul (kanun zaten biliniyorsa). */
+export function kanunIcindeMadde(kanun, metin) {
+  const s = benzerlikler(metin);
+  let enIyiI = -1, enIyiS = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (korpus[i].kanun !== kanun || !korpus[i].maddeNo) continue;
+    if (s[i] > enIyiS) { enIyiS = s[i]; enIyiI = i; }
+  }
+  return enIyiI >= 0 ? { madde: korpus[enIyiI].maddeNo, skor: enIyiS } : { madde: null, skor: 0 };
+}
+
 export function siniflandir(kok, siklar) {
+  const metin = `${kok} ${(siklar || []).join(' ')}`;
   // 1) Kanun adı yazılıysa KESİN bilgi — sınıflandırıcıya gerek yok.
   const ad = mevzuatBul(kok || '', '', null);
   const oturan = ad ? mufredataOtur(ad) : null;
-  if (oturan) return { kanun: oturan, kaynak: 'ad', guven: 1, madde: null };
+  if (oturan) {
+    // Madde: önce kökte YAZAN numara (kesin), yoksa o kanunun maddeleri içinde en yakını.
+    const acik = maddeNoCikar(kok);
+    const ic = acik ? null : kanunIcindeMadde(oturan, adiSil(metin));
+    return {
+      kanun: oturan, kaynak: 'ad', guven: 1,
+      madde: acik ?? ic?.madde ?? null,
+      maddeKaynak: acik ? 'kökte yazıyor' : (ic?.madde ? 'benzerlik' : null),
+    };
+  }
   // 2) Değilse içerik benzerliği (ölçülen isabet: güven≥0.65 → %86).
-  const r = enIyi(adiSil(`${kok} ${(siklar || []).join(' ')}`));
-  return { kanun: r.kanun, kaynak: 'benzerlik', guven: r.guven, madde: r.madde };
+  const r = enIyi(adiSil(metin));
+  const acik = maddeNoCikar(kok);
+  return {
+    kanun: r.kanun, kaynak: 'benzerlik', guven: r.guven,
+    madde: acik ?? r.madde ?? null,
+    maddeKaynak: acik ? 'kökte yazıyor' : (r.madde ? 'benzerlik' : null),
+  };
 }
 
 // ---------- 4) DÜRÜST ÖLÇÜM ----------
