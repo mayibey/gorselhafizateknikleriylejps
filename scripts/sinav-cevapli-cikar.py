@@ -149,6 +149,7 @@ for yol in sorted(glob.glob(os.path.join(KLASOR, "*.pdf"))):
     aktif = None
     son_no = 0
     baslik = None
+    yeni_sinav_zorla = False
     try:
         with pdfplumber.open(yol) as pdf:
             for sayfa_no, sayfa in enumerate(pdf.pages, 1):
@@ -157,11 +158,23 @@ for yol in sorted(glob.glob(os.path.join(KLASOR, "*.pdf"))):
                     if t in duz:
                         baslik = t
                         break
+                # 0) KAPAK SAYFASI = yeni sınavın kesin başlangıcı. Numara sıfırlanmasına
+                # bakmak yanılttı: bir kitapçıkta GENEL bölümü 1..N, MESLEK bölümü yine 1..M
+                # diye numaralanıyor; bunu "yeni sınav" sanınca kitapçık ikiye bölünüyor ve
+                # anahtar yalnız ikinci parçaya yapışıyordu (s.77'deki 68 soru cevapsız kaldı).
+                if ("ADAYIN" in duz and "ADI SOYADI" in duz) or "Bu kitapçıkta" in duz:
+                    yeni_sinav_zorla = True
+                    continue
                 # 1) Anahtar sayfası mı?
                 anah = anahtar_sayfasi_mi(duz)
                 if anah:
+                    # ⛔ ANAHTAR SAYFASI = O SINAVIN SONU. Bunu kurala baglamazsan bir sonraki
+                    # sinavin sorulari ayni segmentte kalir, anahtar onlara da yapisir ve
+                    # ARKASINDAKI sinav cevapsiz kalir (olculdu: s.129'daki 100 cevap yanlis
+                    # sinava yapisti, 130+ sinavi bos kaldi).
                     if aktif is not None:
                         aktif["anahtar"].update(anah)
+                    yeni_sinav_zorla = True
                     continue
                 # 2) Soru sayfası
                 soru_no = None
@@ -175,7 +188,19 @@ for yol in sorted(glob.glob(os.path.join(KLASOR, "*.pdf"))):
                             # sınav ilerlemişse (son_no>=20). Her küçük düşüşte bölersen
                             # tek sınav 20 parçaya ayrılır, anahtar sayfası da yanlış
                             # segmente düşer (ölçtüm: 18 sınav 72 göründü).
-                            if aktif is None or (no <= 3 and son_no >= 20):
+                            # ⛔ Metin icindeki "1." gibi sayilar yeni sinav sanilip sinavi
+                            # ORTADAN boluyordu (100 soruluk sinav 66+39 diye ikiye ayrildi,
+                            # anahtar yalniz bir parcaya yapisti). Bolme artik SADECE:
+                            #  (a) anahtar sayfasi gecildiginde, ya da
+                            #  (b) numara basa dondu VE mevcut sinav zaten dolmus (>=60 soru).
+                            # Bölme sebepleri (uc tanesi de gerekli):
+                            #  (a) kapak sayfasi / anahtar sayfasi gecildi  -> yeni_sinav_zorla
+                            #  (b) numara basa dondu VE segment zaten dolmus (>=60): ayni
+                            #      kitapcikta GENEL ve MESLEK bolumleri ayri ayri 1'den
+                            #      numaralaniyor; birlestirirsen ayni numarali sorular
+                            #      birbirini EZER (olculdu: 2.300 soru -> 1.785'e dustu).
+                            if aktif is None or yeni_sinav_zorla or (no <= 2 and len(aktif["sorular"]) >= 60):
+                                yeni_sinav_zorla = False
                                 aktif = {"dosya": ad, "kitapcik": baslik, "baslangicSayfa": sayfa_no,
                                          "sorular": {}, "anahtar": {}}
                                 sinavlar.append(aktif)
