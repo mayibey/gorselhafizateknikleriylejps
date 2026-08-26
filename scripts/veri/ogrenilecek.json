@@ -1,0 +1,4457 @@
+{
+ "uretim": "ogrenilecek-cikar.mjs",
+ "aciklama": "Resmî madde metninden çıkarılan atomik bilgiler, çıkmış sınavla eşleştirilmiş",
+ "kanunlar": [
+  {
+   "kanun": "5237 sayılı Türk Ceza Kanunu",
+   "sinavSorusu": 44,
+   "bilgiSayisi": 130,
+   "kanitli": 115,
+   "turDagilimi": {
+    "CEZA": 120,
+    "SÜRE": 9,
+    "MAKAM": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "257",
+     "tur": "CEZA",
+     "bilgi": ") üç aydan bir yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "265",
+     "tur": "CEZA",
+     "bilgi": "(2) Suçun yargı görevi yapan kişilere karşı işlenmesi halinde, iki yıldan dört yıla kadar hapis cezasına hükmolunur.",
+     "deger": "iki yıldan dört yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "324",
+     "tur": "CEZA",
+     "bilgi": "(1) Sulh zamanında seferberlikle ilgili görevlerini ihmal eden veya geciktiren kamu görevlisine altı aydan üç yıla kadar hapis cezası verilir.",
+     "deger": "altı aydan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "73",
+     "tur": "SÜRE",
+     "bilgi": "(1) Soruşturulması ve kovuşturulması şikayete bağlı olan suç hakkında yetkili kimse altı ay içinde şikayette bulunmadığı takdirde soruşturma ve kovuşturma yapılamaz.",
+     "deger": "altı ay",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "85",
+     "tur": "CEZA",
+     "bilgi": "Madde 85- (1) Taksirle bir insanın ölümüne neden olan kişi, iki yıldan altı yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan altı yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "85",
+     "tur": "CEZA",
+     "bilgi": "(2) Fiil, birden fazla insanın ölümüne ya da bir veya birden fazla kişinin ölümü ile birlikte bir veya birden fazla kişinin yaralanmasına neden olmuş ise, kişi iki yıldan onbeş yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan onbeş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "89",
+     "tur": "CEZA",
+     "bilgi": "(4) Fiilin birden fazla kişinin yaralanmasına neden olması halinde, dokuz aydan beş yıla kadar hapis cezasına hükmolunur.",
+     "deger": "dokuz aydan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "94",
+     "tur": "CEZA",
+     "bilgi": "Madde 94- (1) Bir kişiye karşı insan onuruyla bağdaşmayan ve bedensel veya ruhsal yönden acı çekmesine, algılama veya irade yeteneğinin etkilenmesine, aşağılanmasına yol açacak davranışları gerçekleştiren kamu görevlisi hakkında üç yıldan oniki yıla kadar hapis cezasına hükmolunur.",
+     "deger": "üç yıldan oniki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "321",
+     "tur": "CEZA",
+     "bilgi": "(1) Savaş zamanında Devletin yetkili makam ve mercilerinin emir veya kararlarına bilerek aykırı harekette bulunan kimseye bir yıldan altı yıla kadar hapis cezası verilir.",
+     "deger": "bir yıldan altı yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.94
+    },
+    {
+     "madde": "96",
+     "tur": "CEZA",
+     "bilgi": "Madde 96- (1) Bir kimsenin eziyet çekmesine yol açacak davranışları gerçekleştiren kişi hakkında iki yıldan beş yıla kadar hapis cezasına hükmolunur.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.92
+    },
+    {
+     "madde": "197",
+     "tur": "CEZA",
+     "bilgi": "(2) Sahte parayı bilerek kabul eden kişi, bir yıldan üç yıla kadar hapis ve adlî para cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.89
+    },
+    {
+     "madde": "319",
+     "tur": "CEZA",
+     "bilgi": "(2) Fiil, aleni olarak işlenmişse iki yıldan beş yıla kadar hapis cezası verilir.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.88
+    },
+    {
+     "madde": "84",
+     "tur": "CEZA",
+     "bilgi": "(2) İntiharın gerçekleşmesi durumunda, kişi dört yıldan on yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "dört yıldan on yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.88
+    },
+    {
+     "madde": "250",
+     "tur": "CEZA",
+     "bilgi": ") bir kimseyi ikna eden kamu görevlisi, üç yıldan beş yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.86
+    },
+    {
+     "madde": "132",
+     "tur": "CEZA",
+     "bilgi": "(2) Kişiler arasındaki haberleşme içeriklerini hukuka aykırı olarak ifşa eden kimse, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.85
+    },
+    {
+     "madde": "262",
+     "tur": "CEZA",
+     "bilgi": "(1) Bir kamu görevini, kanun ve nizamlara aykırı olarak yerine getirmeye teşebbüs eden veya terk emri kendisine bildirilmiş olduğu halde görevi sürdüren kimseye üç aydan iki yıla kadar hapis cezası verilir.",
+     "deger": "üç aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.85
+    },
+    {
+     "madde": "83",
+     "tur": "CEZA",
+     "bilgi": "(3) Belli bir yükümlülüğün ihmali ile ölüme neden olan kişi hakkında, temel ceza olarak, ağırlaştırılmış müebbet hapis cezası yerine yirmi yıldan yirmibeş yıla kadar, müebbet hapis cezası yerine onbeş yıldan yirmi yıla kadar, diğer hallerde ise on yıldan onbeş yıla kadar hapis cezasına hükmolunabileceği gibi, cezada indirim de yapılmayabilir.",
+     "deger": "on yıldan onbeş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.84
+    },
+    {
+     "madde": "135",
+     "tur": "CEZA",
+     "bilgi": "135** (1) Hukuka aykırı olarak kişisel verileri kaydeden kimseye bir yıldan üç yıla kadar hapis cezası verilir.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.83
+    },
+    {
+     "madde": "267",
+     "tur": "CEZA",
+     "bilgi": "(1) Yetkili makamlara ihbar veya şikayette bulunarak ya da basın ve yayın yoluyla, işlemediğini bildiği halde, hakkında soruşturma ve kovuşturma başlatılmasını ya da idari bir yaptırım uygulanmasını sağlamak için bir kimseye hukuka aykırı bir fiil isnat eden kişi, bir yıldan dört yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan dört yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.82
+    },
+    {
+     "madde": "251",
+     "tur": "CEZA",
+     "bilgi": "(2) Denetim görevini ihmal ederek, zimmet veya irtikap suçunun işlenmesine imkan sağlayan kamu görevlisi, üç aydan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç aydan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.81
+    },
+    {
+     "madde": "86",
+     "tur": "CEZA",
+     "bilgi": "Madde 86- (1) Kasten başkasının vücuduna acı veren veya sağlığının ya da algılama yeteneğinin bozulmasına neden olan kişi, bir yıl altı aydan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.8
+    },
+    {
+     "madde": "89",
+     "tur": "CEZA",
+     "bilgi": "Madde 89- (1) Taksirle başkasının vücuduna acı veren veya sağlığının ya da algılama yeteneğinin bozulmasına neden olan kişi, dört aydan iki yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+     "deger": "dört aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.8
+    },
+    {
+     "madde": "134",
+     "tur": "CEZA",
+     "bilgi": "(2) Kişilerin özel hayatına ilişkin görüntü veya sesleri hukuka aykırı olarak ifşa eden kimse iki yıldan beş yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.79
+    },
+    {
+     "madde": "135",
+     "tur": "CEZA",
+     "bilgi": "136** (1) Kişisel verileri, hukuka aykırı olarak bir başkasına veren, yayan veya ele geçiren kişi, iki yıldan dört yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan dört yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.79
+    },
+    {
+     "madde": "260",
+     "tur": "CEZA",
+     "bilgi": "(1) Hukuka aykırı olarak ve toplu biçimde, görevlerini terk eden, görevlerine gelmeyen, görevlerini geçici de olsa kısmen veya tamamen yapmayan veya yavaşlatan kamu görevlilerinin her biri hakkında üç aydan bir yıla kadar hapis cezası verilir.",
+     "deger": "üç aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.79
+    },
+    {
+     "madde": "133",
+     "tur": "CEZA",
+     "bilgi": "(3) Kişiler arasındaki aleni olmayan konuşmaların kaydedilmesi suretiyle elde edilen verileri hukuka aykırı olarak ifşa eden kişi, iki yıldan beş yıla kadar hapis ve dörtbin güne kadar adlî para cezası ile cezalandırılır.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.78
+    },
+    {
+     "madde": "277",
+     "tur": "CEZA",
+     "bilgi": "bir karar vermesi veya bir işlem tesis etmesi ya da beyanda bulunması için, yargı görevi yapanı, bilirkişiyi veya tanığı hukuka aykırı olarak etkilemeye teşebbüs eden kişi, iki yıldan dört yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan dört yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.77
+    },
+    {
+     "madde": "94",
+     "tur": "CEZA",
+     "bilgi": "(3) Fiilin cinsel yönden taciz şeklinde gerçekleşmesi halinde, on yıldan onbeş yıla kadar hapis cezasına hükmolunur.",
+     "deger": "on yıldan onbeş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.77
+    },
+    {
+     "madde": "157",
+     "tur": "CEZA",
+     "bilgi": "(1) Hileli davranışlarla bir kimseyi aldatıp, onun veya başkasının zararına olarak, kendisine veya başkasına bir yarar sağlayan kişiye bir yıldan beş yıla kadar hapis ve beşbin güne kadar adlî para cezası verilir.",
+     "deger": "bir yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.76
+    },
+    {
+     "madde": "322",
+     "tur": "CEZA",
+     "bilgi": ") ile iş yapmak veya eşya vermek üzere yaptıkları sözleşmedeki yükümlülükleri kısmen veya tamamen yerine getirmeyen kimseye üç yıldan on yıla kadar hapis ve onbin güne kadar adlî para cezası verilir.",
+     "deger": "üç yıldan on yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.76
+    },
+    {
+     "madde": "250",
+     "tur": "CEZA",
+     "bilgi": ") bir kimseyi icbar eden kamu görevlisi, beş yıldan on yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "beş yıldan on yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.75
+    },
+    {
+     "madde": "132",
+     "tur": "CEZA",
+     "bilgi": "(1) Kişiler arasındaki haberleşmenin gizliliğini ihlal eden kimse, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.73
+    },
+    {
+     "madde": "250",
+     "tur": "CEZA",
+     "bilgi": "(3) İkinci fıkrada tanımlanan suçun kişinin hatasından yararlanarak işlenmiş olması halinde, bir yıldan üç yıla kadar hapis cezasına hükmolunur.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.73
+    },
+    {
+     "madde": "257",
+     "tur": "CEZA",
+     "bilgi": "(1) Kanunda ayrıca suç olarak tanımlanan haller dışında, görevinin gereklerine aykırı hareket etmek suretiyle, kişilerin mağduriyetine veya kamunun zararına neden olan ya da kişilere haksız bir menfaat sağlayan kamu görevlisi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.73
+    },
+    {
+     "madde": "132",
+     "tur": "CEZA",
+     "bilgi": "(3) Kendisiyle yapılan haberleşmelerin içeriğini diğer tarafın rızası olmaksızın hukuka aykırı olarak alenen ifşa eden kişi, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "261",
+     "tur": "CEZA",
+     "bilgi": "(1) İlgili kanunlarda belirlenen koşullara aykırı olduğunu bilerek, kişilerin taşınır veya taşınmaz malları üzerinde, karşılık ödenmek suretiyle de olsa, zorla tasarrufta bulunan kamu görevlisi, fiil daha ağır cezayı gerektiren bir suç oluşturmadığı takdirde, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "272",
+     "tur": "CEZA",
+     "bilgi": "(1) Hukuka aykırı bir fiil nedeniyle başlatılan bir soruşturma kapsamında tanık dinlemeye yetkili kişi veya kurul önünde gerçeğe aykırı olarak tanıklık yapan kimseye, dört aydan bir yıla kadar hapis cezası verilir.",
+     "deger": "dört aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "279",
+     "tur": "CEZA",
+     "bilgi": "(1) Kamu adına soruşturma ve kovuşturmayı gerektiren bir suçun işlendiğini göreviyle bağlantılı olarak öğrenip de yetkili makamlara bildirimde bulunmayı ihmal eden veya bu hususta gecikme gösteren kamu görevlisi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "299",
+     "tur": "CEZA",
+     "bilgi": "(1) Cumhurbaşkanına hakaret eden kişi, bir yıldan dört yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan dört yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "94",
+     "tur": "CEZA",
+     "bilgi": "a) Çocuğa, beden veya ruh bakımından kendisini savunamayacak durumda bulunan kişiye ya da gebe kadına karşı, b) Avukata veya diğer kamu görevlisine karşı görevi dolayısıyla, İşlenmesi halinde, sekiz yıldan onbeş yıla kadar hapis cezasına hükmolunur.",
+     "deger": "sekiz yıldan onbeş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "134",
+     "tur": "CEZA",
+     "bilgi": "(1) Kişilerin özel hayatının gizliliğini ihlal eden kimse, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.7
+    },
+    {
+     "madde": "320",
+     "tur": "CEZA",
+     "bilgi": "(3) Birinci fıkradaki hizmeti kabul eden kimseye bir yıldan üç yıla kadar hapis cezası verilir.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.7
+    },
+    {
+     "madde": "170",
+     "tur": "CEZA",
+     "bilgi": "(…) Suçun ses ve gaz fişeği atabilen silahla ateş etmek suretiyle işlenmesi halinde kişi, altı aydan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.69
+    },
+    {
+     "madde": "247",
+     "tur": "CEZA",
+     "bilgi": "(1) Görevi nedeniyle zilyedliği kendisine devredilmiş olan veya koruma ve gözetimiyle yükümlü olduğu malı kendisinin veya başkasının zimmetine geçiren kamu görevlisi, beş yıldan oniki yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "beş yıldan oniki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.68
+    },
+    {
+     "madde": "95",
+     "tur": "CEZA",
+     "bilgi": "(3) İşkence fiillerinin vücutta kemik kırılmasına neden olması halinde, kırığın hayat fonksiyonlarındaki etkisine göre sekiz yıldan onbeş yıla kadar hapis cezasına hükmolunur.",
+     "deger": "sekiz yıldan onbeş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.68
+    },
+    {
+     "madde": "84",
+     "tur": "CEZA",
+     "bilgi": "Madde 84- (1) Başkasını intihara azmettiren, teşvik eden, başkasının intihar kararını kuvvetlendiren ya da başkasının intiharına herhangi bir şekilde yardım eden kişi, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "135",
+     "tur": "CEZA",
+     "bilgi": "138** (1) Kanunların belirlediği sürelerin geçmiş olmasına karşın verileri sistem içinde yok etmekle yükümlü olanlara görevlerini yerine getirmediklerinde bir yıldan iki yıla kadar hapis cezası verilir.",
+     "deger": "bir yıldan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.65
+    },
+    {
+     "madde": "204",
+     "tur": "CEZA",
+     "bilgi": "(2) Görevi gereği düzenlemeye yetkili olduğu resmi bir belgeyi sahte olarak düzenleyen, gerçek bir belgeyi başkalarını aldatacak şekilde değiştiren, gerçeğe aykırı olarak belge düzenleyen veya sahte resmi belgeyi kullanan kamu görevlisi üç yıldan sekiz yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç yıldan sekiz yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.64
+    },
+    {
+     "madde": "206",
+     "tur": "CEZA",
+     "bilgi": "(1) Bir resmi belgeyi düzenlemek yetkisine sahip olan kamu görevlisine yalan beyanda bulunan kişi, üç aydan iki yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+     "deger": "üç aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.64
+    },
+    {
+     "madde": "153",
+     "tur": "CEZA",
+     "bilgi": "(2) Bu yerleri ve yapıları kirleten kişi, üç aydan bir yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+     "deger": "üç aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.63
+    },
+    {
+     "madde": "190",
+     "tur": "CEZA",
+     "bilgi": "(2) Uyuşturucu veya uyarıcı madde kullanılmasını alenen özendiren veya bu nitelikte yayın yapan kişi, beş yıldan on yıla kadar hapis ve bin günden onbin güne kadar adlî para cezası ile cezalandırılır.",
+     "deger": "beş yıldan on yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.63
+    },
+    {
+     "madde": "191",
+     "tur": "CEZA",
+     "bilgi": "(1) Kullanmak için uyuşturucu veya uyarıcı madde satın alan, kabul eden veya bulunduran ya da uyuşturucu veya uyarıcı madde kullanan kişi, iki yıldan beş yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.62
+    },
+    {
+     "madde": "130",
+     "tur": "CEZA",
+     "bilgi": "(2) Bir ölünün kısmen veya tamamen ceset veya kemiklerini alan veya ceset veya kemikler hakkında tahkir edici fiillerde bulunan kişi, üç aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "151",
+     "tur": "CEZA",
+     "bilgi": "(1) Başkasının taşınır veya taşınmaz malını kısmen veya tamamen yıkan, tahrip eden, yok eden, bozan, kullanılamaz hale getiren veya kirleten kişi, mağdurun şikayeti üzerine, dört aydan üç yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+     "deger": "dört aydan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "155",
+     "tur": "CEZA",
+     "bilgi": "(2) Suçun, meslek ve sanat, ticaret veya hizmet ilişkisinin ya da (…) başkasının mallarını idare etmek yetkisinin gereği olarak tevdi ve teslim edilmiş eşya hakkında işlenmesi halinde, bir yıldan yedi yıla kadar hapis ve üçbin güne kadar adlî para cezasına hükmolunur.",
+     "deger": "bir yıldan yedi yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "207",
+     "tur": "CEZA",
+     "bilgi": "(1) Bir özel belgeyi sahte olarak düzenleyen veya gerçek bir özel belgeyi başkalarını aldatacak şekilde değiştiren ve kullanan kişi, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "314",
+     "tur": "CEZA",
+     "bilgi": "(2) Birinci fıkrada tanımlanan örgüte üye olanlara, beş yıldan on yıla kadar hapis cezası verilir.",
+     "deger": "beş yıldan on yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "78",
+     "tur": "CEZA",
+     "bilgi": "üye olanlar beş yıldan on yıla kadar hapisle cezalandırılır.",
+     "deger": "beş yıldan on yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "84",
+     "tur": "CEZA",
+     "bilgi": "(3) Başkalarını intihara alenen teşvik eden kişi, üç yıldan sekiz yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç yıldan sekiz yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "156",
+     "tur": "CEZA",
+     "bilgi": "(1) Bedelsiz kalmış bir senedi kullanan kimseye, şikayet üzerine, altı aydan iki yıla kadar hapis ve adlî para cezası verilir.",
+     "deger": "altı aydan iki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.58
+    }
+   ]
+  },
+  {
+   "kanun": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+   "sinavSorusu": 25,
+   "bilgiSayisi": 9,
+   "kanitli": 7,
+   "turDagilimi": {
+    "MAKAM": 7,
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "51",
+     "tur": "MAKAM",
+     "bilgi": "(2) Valiler ve kaymakamlar tarafından alınan görevden uzaklaştırma tedbiri, personelin kurumuna derhal bildirilir.",
+     "deger": "kaymakam",
+     "kanit": "KANITLI",
+     "ortusme": 0.82
+    },
+    {
+     "madde": "14",
+     "tur": "MAKAM",
+     "bilgi": "Bu atamalar, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından önceden duyurulabilir.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.78
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": "a) Jandarma ve Sahil Güvenlik Akademisi tarafından, b) Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bünyesindeki eğitim komutanlıklarındaki eğitimlerini başarıyla tamamlayanlardan, karşılanır.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.69
+    },
+    {
+     "madde": "14",
+     "tur": "MAKAM",
+     "bilgi": "(3) Genel atamalar, hizmet gerekleri dikkate alınarak Bakanlık tarafından belirlenen diğer zamanlarda da yapılabilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "25",
+     "tur": "MAKAM",
+     "bilgi": "Bu konuda gerekli bilgi ancak illerde valiler ve Bakanın yetkili kılacağı görevli tarafından verilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "46",
+     "tur": "MAKAM",
+     "bilgi": ") somut olaylara ve verilere dayalı olarak katkı sağladıkları tespit edilen personele, merkezde Bakan, illerde valiler, ilçelerde kaymakamlar tarafından başarı belgesi verilebilir.",
+     "deger": "kaymakam / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": ") Bakanlık tarafından onaylanan insan gücü planına göre karşılanır.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "35",
+     "tur": "SÜRE",
+     "bilgi": "(3) Eşleri, reşit olmayan veya mahcur olan çocukları, yasaklanan faaliyetlerde bulunan personel, bu durumu onbeş gün içinde bağlı oldukları kuruma bildirmekle yükümlüdürler.",
+     "deger": "onbeş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.47
+    },
+    {
+     "madde": "15",
+     "tur": "SÜRE",
+     "bilgi": ") (4) Atama emrinde aksi belirlenmedikçe atama emrinin amire ulaşmasından itibaren en geç on gün içerisinde ilgilisine tebliğ edilir.",
+     "deger": "on gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.45
+    }
+   ]
+  },
+  {
+   "kanun": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+   "sinavSorusu": 24,
+   "bilgiSayisi": 54,
+   "kanitli": 43,
+   "turDagilimi": {
+    "MAKAM": 44,
+    "SÜRE": 10
+   },
+   "bilgiler": [
+    {
+     "madde": "10",
+     "tur": "MAKAM",
+     "bilgi": ") İçişleri Bakanının kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir.",
+     "deger": "bakan/bakanlık / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "10",
+     "tur": "MAKAM",
+     "bilgi": ") İl ve ilçelerdeki jandarma ve polis sorumluluk alanlarının sınırları, ilçelerde kaymakam, illerde vali veya görevlendireceği vali yardımcısı başkanlığında jandarma ve emniyet temsilcilerinin katılacağı bir komisyon tarafından belirlenir.",
+     "deger": "vali / kaymakam / emniyet / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "10",
+     "tur": "MAKAM",
+     "bilgi": "Jandarma veya Emniyet Teşkilatı, kendi sorumluluk sahasında yetersiz kaldıkları veya kalacaklarının değerlendirilmesi halinde, mahalli mülki amirler tarafından birbirlerinin sorumluluk sahalarında geçici olarak görevlendirilebilirler.",
+     "deger": "mülki amir / emniyet / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "e) Jandarma personelinin kişisel suçlarında genel hükümlere göre işlem yapılır.",
+     "deger": "jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": ") Jandarma personeline askeri görev verildiği takdirde bu görevlerden doğan suçların muhakemesi, Jandarma personelinin emrine verildiği askeri birlik personelini muhakeme etmekle görevli ve yetkili olan mahkemede görülür.",
+     "deger": "mahkeme / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.94
+    },
+    {
+     "madde": "13",
+     "tur": "SÜRE",
+     "bilgi": ") Rütbelerindeki bekleme süresinin dolması ya da kadrosuzluk nedenleri ile emekliliğe sevk edilme durumunda olan, ancak hizmetlerine ihtiyaç duyulan albaylar 60 yaşına, generaller ise 65 yaşına kadar İçişleri Bakanının onayıyla görevde bırakılabilirler.",
+     "deger": "on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.91
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "Genelkurmay Başkanlığının talebi üzerine İçişleri Bakanının, illerde ise garnizon komutanının talep etmesi halinde valinin onayıyla kendilerine verilen askeri görevleri de yaparlar.",
+     "deger": "bakan/bakanlık / komutan",
+     "kanit": "KANITLI",
+     "ortusme": 0.84
+    },
+    {
+     "madde": "Ek 2",
+     "tur": "MAKAM",
+     "bilgi": "Ek Madde 2: \"İl jandarma komutanı ile merkez ilçe jandarma komutanı hakkında il valisince, ilçe jandarma komutanı hakkında kaymakamın değerlendirmesi alınarak il valisi tarafından her yıl sonunda söz konusu kişilerin (…) görevleri ile ilgili olarak değerlendirme raporu düzenlenir.",
+     "deger": "kaymakam / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.84
+    },
+    {
+     "madde": "14",
+     "tur": "MAKAM",
+     "bilgi": ") Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.",
+     "deger": "bakan/bakanlık / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.82
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": ") Lüzum görüldüğü hallerde İçişleri Bakanı tarafından, Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı arasında her kademedeki personel, geçici olarak görevlendirilebilir.",
+     "deger": "bakan/bakanlık / komutan / emniyet / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.79
+    },
+    {
+     "madde": "10",
+     "tur": "MAKAM",
+     "bilgi": "Komisyon tarafından alınan kararlar İçişleri Bakanının onayıyla yürürlüğe girer.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.78
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": ") Jandarma personeli hakkında disiplin ve soruşturma işlemleri aşağıdaki usullere göre yapılır.",
+     "deger": "jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.78
+    },
+    {
+     "madde": "13",
+     "tur": "MAKAM",
+     "bilgi": "Subaylığa ve astsubaylığa nasıp (…) işlemleri, İçişleri Bakanlığının onayıyla yapılır.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.75
+    },
+    {
+     "madde": "Ek 3",
+     "tur": "MAKAM",
+     "bilgi": ") İçişleri Bakanlığı tarafından yürürlüğe konulacak yönetmelik ile belirlenir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "MAKAM",
+     "bilgi": "Bu faaliyetler Cumhurbaşkanlığınca görevlendirilen denetim elemanları tarafından da denetlenebilir.",
+     "deger": "cumhurbaşkanı",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "13",
+     "tur": "MAKAM",
+     "bilgi": "Uzman jandarma ve uzman erbaşların nasıp ve terfileri Jandarma Genel Komutanlığınca özel kanunlarına göre yapılır.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "Geçici 7",
+     "tur": "MAKAM",
+     "bilgi": "Geçici Madde 7: \"Jandarma Genel Komutanlığının halihazırda devam eden yabancı ülkeler ile eğitim ve işbirliği faaliyetleri askeri eğitim işbirliği anlaşmaları ve protokollerinde belirtilen esaslara göre İçişleri Bakanlığı tarafından yürütülür.",
+     "deger": "bakan/bakanlık / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Bu Kanunda bu maddeyi ihdas eden Kanun ile yapılan düzenlemeler sebebiyle teşkilat, personel, eğitim ve diğer hususlarla ilgili olarak yeni ihtiyaçların ortaya çıkması halinde, buna ilişkin düzenleme yapmaya Cumhurbaşkanı yetkilidir.",
+     "deger": "cumhurbaşkanı",
+     "kanit": "KANITLI",
+     "ortusme": 0.64
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "seferberlik ve savaş hallerinde, Cumhurbaşkanı kararıyla belirlenecek bölümleriyle Kuvvet Komutanlıkları emrine girer, kalan bölümüyle normal görevlerine devam eder.",
+     "deger": "komutan / cumhurbaşkanı",
+     "kanit": "KANITLI",
+     "ortusme": 0.63
+    },
+    {
+     "madde": "19",
+     "tur": "MAKAM",
+     "bilgi": "Jandarma Genel Komutanlığının ihtiyaçları, İçişleri Bakanlığı tarafından Savunma Sanayii Müsteşarlığına doğrudan teklif edilir.",
+     "deger": "bakan/bakanlık / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.62
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Bu Kanunun uygulanmasıyla ilgili tereddütleri gidermeye ve bu yönde düzenleyici ve yönlendirici işlemler yapmaya İçişleri Bakanlığı yetkilidir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.62
+    },
+    {
+     "madde": "13/A",
+     "tur": "MAKAM",
+     "bilgi": "Akademi Başkanına yardımcı olmak üzere albaylar veya öğretim üyeleri arasından İçişleri Bakanı tarafından en fazla dört başkan yardımcısı atanır.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "Ek 3",
+     "tur": "MAKAM",
+     "bilgi": "c) Yurt dışı izin verme yetkisi İçişleri Bakanlığınca devredilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "MAKAM",
+     "bilgi": "sıralı kurum amirleri, mülki idare amirleri, Jandarma Genel Komutanlığı ve ilgili bakanlığın teftiş elemanları tarafından yılda en az bir defa yapılır.",
+     "deger": "bakan/bakanlık / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "Geçici 5",
+     "tur": "MAKAM",
+     "bilgi": "Geçici Madde 5: \"Jandarma Genel Komutanlığının er ve erbaş ile askerlik yükümlüsü ihtiyacı, 21/6/1927 tarihli ve 1111 sayılı Askerlik Kanunu hükümleri çerçevesinde Milli Savunma Bakanlığı tarafından üç yıl süreyle karşılanır.",
+     "deger": "bakan/bakanlık / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "Ek 1",
+     "tur": "MAKAM",
+     "bilgi": "Ek Madde 1: \"Jandarmanın (…) eylem ve işlemleri İçişleri Bakanlığı, mülki idare amirleri ve kendi amirleri tarafından denetlenir ve teftiş edilir.",
+     "deger": "bakan/bakanlık / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.57
+    },
+    {
+     "madde": "13/A",
+     "tur": "MAKAM",
+     "bilgi": "ğ) Bakanlıkça belirlenen devamsızlık süresi sonunda ilişik kesilmesine karar verilenler.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "14",
+     "tur": "MAKAM",
+     "bilgi": "Nokta ataması yapılmayan subay, astsubay ve uzman jandarmalar valilik emrine atanır ve bunların istihdam yerleri, il içi yer değiştirmeleri vali tarafından yapılır.",
+     "deger": "vali / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "Ek 14",
+     "tur": "MAKAM",
+     "bilgi": ") Durumları birinci fıkra hükümlerine uyanlardan mecburi hizmetle yükümlü olduğu süre içinde istifa edenler veya sağlık sebebi hariç her ne suretle olursa olsun ilişiği kesilenler, Jandarma Genel Komutanlığı tarafından belirlenen;",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "13/A",
+     "tur": "MAKAM",
+     "bilgi": "Hizmetin gerektirdiği hallerde İçişleri Bakanının onayıyla, diğer birim ve kurullar da teşkil edilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "13",
+     "tur": "MAKAM",
+     "bilgi": ") İlgili personel, personel kaynağı planlaması, iç güvenlik politikaları ve gelişen güvenlik ihtiyaçlarına göre albay ve üstü rütbelerde bekleme süreleri dolmadan kadrosuzluk tazminatı ödenmek suretiyle Cumhurbaşkanı onayı ile emekliye sevk edilebilir.",
+     "deger": "cumhurbaşkanı",
+     "kanit": "KANITLI",
+     "ortusme": 0.52
+    },
+    {
+     "madde": "Ek 14",
+     "tur": "MAKAM",
+     "bilgi": "İçişleri Bakanlığı ile Hazine ve Maliye Bakanlığı tarafından müştereken yürürlüğe konulan yönetmelikle belirlenir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "Ek 3",
+     "tur": "MAKAM",
+     "bilgi": ") b) Yabancı bir memlekette veya uluslararası kuruluşlarda görev alacaklara İçişleri Bakanlığının onayı ile beş yıla kadar aylıksız izin verilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "13/A",
+     "tur": "MAKAM",
+     "bilgi": "Akademi Başkanı, en az yüksek lisans düzeyinde akademik kariyere sahip Jandarma veya Sahil Güvenlik Hizmetleri Sınıfından general, amiral veya albaylar ya da yükseköğretim kurumlarının profesör öğretim üyeleri arasından İçişleri Bakanı tarafından atanır.",
+     "deger": "bakan/bakanlık / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.48
+    },
+    {
+     "madde": "Ek 9",
+     "tur": "MAKAM",
+     "bilgi": ") Jandarma Genel Komutanlığı personelinden kendisine tevdi edilen görevleri cesaret, feragat, kahramanlık veya üstün başarı ile yerine getirenlere İçişleri Bakanı tarafından aşağıda isimleri yazılı madalyalar verilebilir: a) Jandarma Üstün Cesaret ve Feragat Madalyası, b) Jandarma Şeref Madalyası, c) Jandarma Üstün Hizmet Madalyası.",
+     "deger": "bakan/bakanlık / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.48
+    },
+    {
+     "madde": "13",
+     "tur": "MAKAM",
+     "bilgi": ") Jandarma Genel Komutanlığı nam ve hesabına eğitim-öğrenim görecekler ile Jandarma ve Sahil Güvenlik Akademisi ve buna bağlı eğitim-öğretim kurumlarında eğitim-öğrenim görecekler hakkında Güvenlik Soruşturması ve Arşiv Araştırması Kanununa göre güvenlik soruşturması ve arşiv araştırması yapılır.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.47
+    },
+    {
+     "madde": "Ek 13",
+     "tur": "MAKAM",
+     "bilgi": "Muvazzaf askerlik yükümlülüğüne başlamadan Jandarma Genel Komutanlığında uzman erbaşlığa kabul edilenler ile beş yıllık sözleşme yapılır ve her türlü askerlik işlemleri ertelenir.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.47
+    },
+    {
+     "madde": "Ek 3",
+     "tur": "MAKAM",
+     "bilgi": "a) Yabancı memleketlerin emsal kurum ve kuruluşlarında hizmet yapmak üzere gönderileceklere İçişleri Bakanlığınca dört yıla kadar aylıklı izin verilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.43
+    },
+    {
+     "madde": "Ek 18",
+     "tur": "MAKAM",
+     "bilgi": ") Emsalleri arasında temayüz etmiş, hizmetine ihtiyaç duyulduğu tespit edilen ve sicil notu ortalaması, sicil tam notunun %90'ının (dâhil) üzerinde olan istekli astsubay kıdemli başçavuşların yaş haddi, Jandarma Genel Komutanlığının teklifi üzerine veya resen İçişleri Bakanı tarafından 60 yaşına kadar uzatılabilir.",
+     "deger": "bakan/bakanlık / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.39
+    },
+    {
+     "madde": "Ek 3",
+     "tur": "MAKAM",
+     "bilgi": ") barış gücünde görevlendirilenlere Cumhurbaşkanı kararı ile beş yıla kadar aylıklı izin verilebilir.",
+     "deger": "cumhurbaşkanı",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "SÜRE",
+     "bilgi": "Gecikmesinde sakınca bulunan hallerde verilen yazılı emir, yirmidört saat içinde yetkili ve görevli hâkimin onayına sunulur.",
+     "deger": "dört saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "Ek 14",
+     "tur": "SÜRE",
+     "bilgi": "Statü değiştirerek subaylığa geçirilenlerin mecburi hizmet süreleri Jandarma Genel Komutanlığındaki ilk statülerine nasbedildikleri veya ilk sözleşmelerinin onaylandığı tarihten itibaren on beş yıldır.",
+     "deger": "on ay / onbeş yıl",
+     "kanit": "KANITLI",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "13/A",
+     "tur": "MAKAM",
+     "bilgi": "İlgili devletlerle yapılacak uluslararası anlaşmalara bağlı olarak yabancı uyruklu öğrencilerin Akademiye kabul edilmeleri Bakan onayı ile olur.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.27
+    },
+    {
+     "madde": "Ek 14",
+     "tur": "SÜRE",
+     "bilgi": ") Jandarma Genel Komutanlığında muvazzaf subay ve astsubay olanlar için mecburi hizmet yükümlülükleri aşağıda belirtilmiştir: a) Muvazzaf subay veya astsubayların mecburi hizmetleri, subay veya astsubay nasbedildikleri tarihten itibaren fiilen on beş yıldır.",
+     "deger": "onbeş yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "Ek 3",
+     "tur": "SÜRE",
+     "bilgi": "b) Yangın, deprem, su baskını gibi olağanüstü bir mazeret dolayısıyla bir yıl içinde otuz güne kadar mazeret izni verilebilir.",
+     "deger": "bir yıl / otuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "SÜRE",
+     "bilgi": "Uygulanan tedbirin sona ermesi halinde, dinlemenin içeriğine ilişkin kayıtlar en geç on gün içinde yok edilir;",
+     "deger": "on gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "Ek 13",
+     "tur": "SÜRE",
+     "bilgi": "Birinci fıkra kapsamındakilerden, Jandarma Genel Komutanlığında üç yıllık hizmet süresini tamamlayanlar askerlik hizmetini yerine getirmiş sayılır.",
+     "deger": "üç yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.47
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "SÜRE",
+     "bilgi": "Bu halde dinlemenin içeriğine ilişkin kayıtlar en geç on gün içinde yok edilir;",
+     "deger": "on gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.43
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "MAKAM",
+     "bilgi": "Bu fıkra hükümlerine aykırı hareket edenler hakkında, görev sırasında veya görevden dolayı işlenmiş olsa bile Cumhuriyet savcılarınca doğrudan soruşturma yapılır.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "MAKAM",
+     "bilgi": "Sürenin dolması veya hâkim tarafından aksine karar verilmesi halinde tedbir derhal kaldırılır.",
+     "deger": "hâkim",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.36
+    },
+    {
+     "madde": "10",
+     "tur": "SÜRE",
+     "bilgi": "Büyükşehir, il veya ilçe belediyesi kurulması, kaldırılması ya da kentleşme veya diğer sebeplerle sınırlarda değişiklik olması halinde, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir.",
+     "deger": "üç ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.35
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "MAKAM",
+     "bilgi": "Ancak, terör örgütünün faaliyeti çerçevesinde devam eden tehlikelere ilişkin olarak gerekli görülmesi halinde, hâkim üç aydan fazla olmamak üzere sürenin müteaddit defalar uzatılmasına karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.35
+    },
+    {
+     "madde": "Ek 5",
+     "tur": "MAKAM",
+     "bilgi": ") Yetkili ve görevli hâkim, Ankara ağır ceza mahkemesi üyesidir.",
+     "deger": "hâkim / mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "Ek 3",
+     "tur": "SÜRE",
+     "bilgi": "e) En az yüzde 70 oranında engelli ya da süreğen hastalığı olan çocuğunun (çocuğun evli olması durumunda eşinin de en az yüzde 70 oranında engelli olması kaydıyla) hastalanması hâlinde hastalık raporuna dayalı olarak ana veya babadan sadece biri tarafından kullanılması kaydıyla bir yıl içinde toptan veya bölümler hâlinde on güne kadar mazeret izni verilir.",
+     "deger": "bir yıl / on gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.32
+    }
+   ]
+  },
+  {
+   "kanun": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+   "sinavSorusu": 24,
+   "bilgiSayisi": 17,
+   "kanitli": 11,
+   "turDagilimi": {
+    "CEZA": 13,
+    "MAKAM": 2,
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "12",
+     "tur": "CEZA",
+     "bilgi": ") sayı veya nitelik bakımından vahim olması halinde beş yıldan sekiz yıla kadar hapis (.",
+     "deger": "beş yıldan sekiz yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "13",
+     "tur": "CEZA",
+     "bilgi": ") sayı veya nitelik bakımından vahim olması halinde beş yıldan sekiz yıla kadar hapis (.",
+     "deger": "beş yıldan sekiz yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": "Bunlardan bir sanat veya mesleğin icrası için kullanılması zorunlu bulunanların yapımına İçişleri Bakanlığınca yapılacak bir yönetmelikte belirlenen kurallara göre izin verilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.53
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": "Bu Kanunun uygulanmasında hatıra silah deyimi: a) Yurt içinde ve yurt dışında yabancı Devlet veya hükümet başkanları ya da hükümet üyeleri tarafından ya da hükümet adına kendilerine hediye edilip, hediye edildiği usulüne göre belgelenmiş olan, b) Devlet Başkanı, Başbakan veya Genelkurmay Başkanı tarafından hediye edilen ve hediye edildiği belgelendirilen (.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "12",
+     "tur": "CEZA",
+     "bilgi": ") ev veya işyerinde bulundurulması halinde verilecek ceza bir yıldan üç yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasıdır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "13",
+     "tur": "CEZA",
+     "bilgi": ") ev veya işyerinde bulundurulması halinde verilecek ceza bir yıldan üç yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasıdır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "15",
+     "tur": "CEZA",
+     "bilgi": "Bu Kanun hükümlerine aykırı olarak 4 üncü maddede yazılı olan bıçak veya diğer aletleri veya benzerlerini satanlar, satmaya aracılık edenler, satın alanlar, taşıyanlar veya bulunduranlar hakkında altı aydan bir yıla kadar hapis ve yirmibeş günden az olmamak üzere adlî para cezasına hükmolunur.",
+     "deger": "altı aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "12",
+     "tur": "CEZA",
+     "bilgi": ") pek az sayıda bulundurulmasının veya taşınmasının mahkemece vahim olarak takdir edilmemesi durumunda hükmolunacak ceza altı aya kadar hapis ve otuz günden beşyüz güne kadar adlî para cezasıdır.",
+     "deger": "otuz günden beşyüz güne kadar adlî para",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "13",
+     "tur": "CEZA",
+     "bilgi": ") parçaların pek az sayıda bulundurulmasının veya taşınmasının mahkemece vahim olarak takdir edilmemesi durumunda hükmolunacak ceza altı aya kadar hapis ve otuz günden beşyüz güne kadar adlî para cezasıdır.",
+     "deger": "otuz günden beşyüz güne kadar adlî para",
+     "kanit": "KANITLI",
+     "ortusme": 0.31
+    },
+    {
+     "madde": "12",
+     "tur": "CEZA",
+     "bilgi": ") bir yerden diğer bir yere taşır veya yollar veya taşımaya bilerek aracılık eder, satar veya satmaya aracılık ederse veya bu amaçla bulundurursa beş yıldan oniki yıla kadar hapis ve beşyüz günden beşbin güne kadar adlî para cezasıyla cezalandırılır.",
+     "deger": "beş yıldan oniki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.24
+    },
+    {
+     "madde": "12",
+     "tur": "CEZA",
+     "bilgi": ") bir yerden diğer bir yere taşır veya yollar veya taşımaya bilerek aracılık eder, satar veya satmaya aracılık ederse veya bu amaçla bulundurursa beş yıldan oniki yıla kadar hapis ve beşyüz günden beşbin güne kadar adlî para cezasıyla cezalandırılır.",
+     "deger": "beş yıldan oniki yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.24
+    },
+    {
+     "madde": "13",
+     "tur": "CEZA",
+     "bilgi": ") satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.",
+     "deger": "iki yıldan dört yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "15",
+     "tur": "CEZA",
+     "bilgi": ") (Bu Kanunun 4 üncü maddesinin üçüncü fıkrasında yazılı olan yivli ve yivsiz silahlarla bıçak ve diğer aletleri, hal ve şartlara göre sırf saldırıda kullanmak amacıyla taşıyanlar, üç aya kadar hapis veya adlî para cezası ile cezalandırılır.",
+     "deger": "hapis / adli para cezası",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "12",
+     "tur": "CEZA",
+     "bilgi": ") ana veya balistik önemi haiz parçaları ya da ses veya gaz fişeği atabilen silah iken bu Kanun hükümlerine tabi silah vasfına dönüştürülen silahları satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.",
+     "deger": "iki yıldan dört yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "Ek 1",
+     "tur": "SÜRE",
+     "bilgi": "(A), (B) ve (C) bentlerinde sayılan yerlere silahla giren veya buralarda silah taşıyan kişiler, fiilleri daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, elli günden az olmamak üzere adlî para cezası ile cezalandırılır.",
+     "deger": "elli gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "Ek 1",
+     "tur": "SÜRE",
+     "bilgi": "(A), (B) ve (C) bentlerinde sayılan yerlere silahla giren veya buralarda silah taşıyan kişiler, fiilleri daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, elli günden az olmamak üzere adlî para cezası ile cezalandırılır.",
+     "deger": "elli gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "12",
+     "tur": "CEZA",
+     "bilgi": ") sekiz yıldan onbeş yıla kadar hapis ve bin günden onbin güne kadar adlî para cezasına hükmolunur.",
+     "deger": "sekiz yıldan onbeş yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+   "sinavSorusu": 17,
+   "bilgiSayisi": 3,
+   "kanitli": 0,
+   "turDagilimi": {
+    "MAKAM": 2,
+    "SÜRE": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "34",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 35 - (1) Bu Yönetmelik hükümleri Bakan tarafından yürütülür.",
+     "deger": "bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "22",
+     "tur": "MAKAM",
+     "bilgi": "Bu konuda gerekli bilgi ancak illerde valiler ve Bakanın yetkili kılacağı görevli tarafından verilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "24",
+     "tur": "SÜRE",
+     "bilgi": "(1) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmaların haftalık çalışma süresi genel olarak 40 saattir.",
+     "deger": "40 saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+   "sinavSorusu": 17,
+   "bilgiSayisi": 29,
+   "kanitli": 22,
+   "turDagilimi": {
+    "MAKAM": 16,
+    "SÜRE": 11,
+    "CEZA": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "30",
+     "tur": "MAKAM",
+     "bilgi": "İtiraz, bir üst disiplin amirine yazılı olarak yapılır.",
+     "deger": "disiplin amiri",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "30",
+     "tur": "SÜRE",
+     "bilgi": "(2) İtiraz, yetkili merci tarafından otuz gün içinde karara bağlanır.",
+     "deger": "otuz gün",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "30",
+     "tur": "SÜRE",
+     "bilgi": "MADDE 30- (1) Disiplin amirleri tarafından verilen disiplin cezalarına karşı, cezanın tebliğ edilmesinden itibaren on gün içinde itiraz edilebilir.",
+     "deger": "on gün",
+     "kanit": "KANITLI",
+     "ortusme": 0.93
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": "1) İzinsiz veya kurumunca kabul edilebilir bir özrü olmaksızın iki günden fazla ve üç güne kadar (üçüncü gün dahil) görevine gelmemek.",
+     "deger": "iki gün / üç gün",
+     "kanit": "KANITLI",
+     "ortusme": 0.83
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": "5) İzinsiz veya kurumunca kabul edilebilir bir özrü olmaksızın yirmidört saatten fazla ve iki güne kadar (ikinci gün dahil) göreve gelmemek.",
+     "deger": "dört saat / iki gün",
+     "kanit": "KANITLI",
+     "ortusme": 0.77
+    },
+    {
+     "madde": "25",
+     "tur": "MAKAM",
+     "bilgi": "(3) Bakanlık Yüksek Disiplin Kurulunun bu maddedeki görevlerine ilişkin sekretarya hizmetleri Bakanlık Personel Genel Müdürlüğü tarafından yerine getirilir.",
+     "deger": "bakan/bakanlık / disiplin kurulu / yüksek disiplin kurulu",
+     "kanit": "KANITLI",
+     "ortusme": 0.73
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": "3) İzinsiz ya da kurumca kabul edilebilir özrü olmaksızın kesintisiz olarak üç günden fazla ve beş güne kadar (beşinci gün dahil) göreve gelmemek.",
+     "deger": "üç gün / beş gün",
+     "kanit": "KANITLI",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "25",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 25- (1) Emniyet Genel Müdürü, Jandarma Genel Komutanı ve Sahil Güvenlik Komutanının disiplin cezasını gerektiren fiilleri öğrenildiğinde haklarında Bakan onayıyla Bakanlık müfettişleri görevlendirilir.",
+     "deger": "bakan/bakanlık / komutan / emniyet / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.68
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": ") a) Albay rütbesindeki personele meslekten çıkarma cezasını, b) Generaller hakkında tüm disiplin cezalarını, vermeye Bakanlık Yüksek Disiplin Kurulu yetkilidir.",
+     "deger": "bakan/bakanlık / disiplin kurulu / yüksek disiplin kurulu",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 21- (1) a) İl jandarma disiplin kurulunun meslekten çıkarma cezası dışındaki kararları valinin onayıyla;",
+     "deger": "disiplin kurulu / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.64
+    },
+    {
+     "madde": "29",
+     "tur": "SÜRE",
+     "bilgi": "(2) Disiplin cezasını gerektiren fiillerin işlendiği tarihten itibaren iki yıl içinde disiplin cezası verilmediği takdirde ceza verme yetkisi zamanaşımına uğrar.",
+     "deger": "iki yıl",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "19",
+     "tur": "MAKAM",
+     "bilgi": "Bakanlık Yüksek Disiplin Kurulu ve Jandarma Genel Komutanlığı Yüksek Disiplin Kurulu hariç olmak üzere diğer disiplin kurullarında, hakkında disiplin soruşturması yapılandan daha kıdemli bir astsubay üyeye de yer verilir.",
+     "deger": "bakan/bakanlık / komutan / disiplin kurulu / yüksek disiplin kurulu / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.58
+    },
+    {
+     "madde": "25",
+     "tur": "MAKAM",
+     "bilgi": ") Ast memur ile üst memurun aynı fiile iştiraki halinde yetkili disiplin kurulu, üst memur hakkında disiplin cezası vermeye yetkili disiplin kuruludur.",
+     "deger": "disiplin kurulu",
+     "kanit": "KANITLI",
+     "ortusme": 0.58
+    },
+    {
+     "madde": "29",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 29- (1) Bu Kanunda sayılan fiilleri işleyenler hakkında bu fiillerin işlendiğinin disiplin amiri tarafından öğrenildiği tarihten itibaren;",
+     "deger": "disiplin amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.46
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": "meslekten çıkarma cezası kararları valinin önerisi, Jandarma Genel Komutanlığı Yüksek Disiplin Kurulunun uygun görüşü ve Bakanın onayıyla, b) Asayiş kolordu komutanlıkları, komando tugay/alay komutanlıkları, (.",
+     "deger": "bakan/bakanlık / komutan / disiplin kurulu / yüksek disiplin kurulu / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.45
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 11- (1) Jandarma Genel Komutanlığının terörle mücadele harekatı kapsamındaki operasyonlarında ve Sahil Güvenlik Komutanlığının seyir halindeki gemi ve botlarında, bunların komutanları, diğer kanunlar ile verilmiş yakalama yetkisi haricinde aşağıdaki durumlardan birisi bulunduğunda veya benzer bir amaçla emri altındakileri geçici olarak kontrol altına almaya veya aldırmaya yetkilidir.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.43
+    },
+    {
+     "madde": "31",
+     "tur": "MAKAM",
+     "bilgi": "(2) Disiplin amirince veya yetkili disiplin kurulu başkanı ya da görevlendireceği kurul üyelerinden biri tarafından ilgiliden savunma istenir.",
+     "deger": "disiplin amiri / disiplin kurulu",
+     "kanit": "KANITLI",
+     "ortusme": 0.42
+    },
+    {
+     "madde": "1",
+     "tur": "MAKAM",
+     "bilgi": "a) Amir: Kadro ve kuruluş yönünden bağlı olunan kimse ile amir olarak yetkilendirilmiş olan diğer kişileri, b) Bakan: İçişleri Bakanını, c) Bakanlık: İçişleri Bakanlığını, ç) Disiplinsizlik: Bu Kanuna göre disiplin cezası ile cezalandırılan fiilleri, d) Disiplin amiri: Bu Kanun ile disiplin cezası vermeye yetkili kılınmış ilk amiri, (.",
+     "deger": "bakan/bakanlık / disiplin amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "Bu hallerde, disiplin amirliği yetkisi, üst konumdaki disiplin amiri tarafından kullanılır.",
+     "deger": "disiplin amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "1",
+     "tur": "MAKAM",
+     "bilgi": ") memurları, j) Üst: Makam, rütbe veya kıdem büyüklüğünü, k) Üst disiplin amirleri: Disiplin amirinin kadro ve kuruluş yönünden bağlı bulunduğu ve disiplin cezası verilecek personelden makam, rütbe veya kıdemce büyük olan yetkili sıralı tüm amirleri, ifade eder.",
+     "deger": "disiplin amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 15- (2) Disiplin amiri olarak tayin edilen unvanlara ait görevleri vekâleten, ikinci görevle, geçici görevle veya kanunlarda yazılı diğer hallerde yetkili olarak yürütenler de bu görevi yürüttükleri sürece disiplin amirlerine tanınan yetkileri kullanabilirler.",
+     "deger": "disiplin amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "3",
+     "tur": "MAKAM",
+     "bilgi": "d) Disiplin amiri: Bu Kanun ile disiplin cezası vermeye yetkili kılınmış ilk amiri, e) Disiplin amirleri: Disiplin amiri ile üst disiplin amirlerini, j) Üst: Makam, rütbe veya kıdem büyüklüğünü, k) Üst disiplin amirleri: Disiplin amirinin kadro ve kuruluş yönünden bağlı bulunduğu ve disiplin cezası verilecek personelden makam, rütbe veya kıdemce büyük olan yetkili sıralı tüm amirleri, ifade eder.",
+     "deger": "disiplin amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": "1) İzinsiz veya kurumca kabul edilebilir özrü olmaksızın kesintisiz olarak beş günden fazla ve dokuz güne kadar (dokuzuncu gün dahil) görevine gelmemek.",
+     "deger": "beş gün / dokuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.73
+    },
+    {
+     "madde": "29",
+     "tur": "SÜRE",
+     "bilgi": "a) Uyarma, kınama, aylıktan kesme ve kısa ve uzun süreli durdurma cezalarında bir ay içinde, b) Meslekten çıkarma cezası ve Devlet memurluğundan çıkarma cezasında altı ay içinde, disiplin soruşturmasına başlanmadığı takdirde disiplin cezası verme yetkisi zamanaşımına uğrar.",
+     "deger": "bir ay / altı ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.68
+    },
+    {
+     "madde": "33",
+     "tur": "CEZA",
+     "bilgi": "(2) Aylıktan kesme cezası, kesinleşme tarihini takip eden aybaşında uygulanır.",
+     "deger": "aylıktan kesme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.63
+    },
+    {
+     "madde": "9",
+     "tur": "CEZA",
+     "bilgi": "Ayrıca, aşağıdaki filleri işleyen personel de Devlet memurluğundan çıkarma cezası ile cezalandırılır;",
+     "deger": "devlet memurluğundan çıkarma",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "12",
+     "tur": "SÜRE",
+     "bilgi": "b) En son alınan disiplin cezasının kesinleştiği tarihten geriye doğru son beş yıl içinde kırk disiplin cezası puanı veya en az iki farklı disiplin amirinden toplam yirmibeş defa veya daha fazla disiplin cezası almak.",
+     "deger": "onbeş yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "11",
+     "tur": "SÜRE",
+     "bilgi": "Tedbir süresinin oniki saati geçmesi halinde, personelin yakınlarına ve tedbiri uygulayan komutanın üstüne en kısa sürede bilgi verilir.",
+     "deger": "oniki saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.47
+    },
+    {
+     "madde": "11",
+     "tur": "SÜRE",
+     "bilgi": "(2) Kontrol altında bulundurma, bu amaç için hazırlanacak mahallerde, Jandarma Genel Komutanlığı için operasyon komutanının uygun gördüğü mahallerde ve yirmidört saati geçmeyecek şekilde uygulanır.",
+     "deger": "dört saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "3713 sayılı Terörle Mücadele Kanunu",
+   "sinavSorusu": 15,
+   "bilgiSayisi": 1,
+   "kanitli": 0,
+   "turDagilimi": {
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "6",
+     "tur": "CEZA",
+     "bilgi": "Yukarıdaki fıkralarda belirtilen fiillerin basın ve yayın yoluyla işlenmesi hâlinde, basın ve yayın organlarının suçun işlenişine iştirak etmemiş olan (…) yayın sorumluları hakkında da bin günden beşbin güne kadar adlî para cezasına hükmolunur.",
+     "deger": "bin günden beşbin güne kadar adlî para",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "5326 sayılı Kabahatler Kanunu",
+   "sinavSorusu": 15,
+   "bilgiSayisi": 18,
+   "kanitli": 3,
+   "turDagilimi": {
+    "MAKAM": 11,
+    "SÜRE": 6,
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "23",
+     "tur": "MAKAM",
+     "bilgi": "(1) Cumhuriyet savcısı, kanunda açıkça hüküm bulunan hallerde bir kabahat dolayısıyla idarî yaptırım kararı vermeye yetkilidir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.86
+    },
+    {
+     "madde": "43/B",
+     "tur": "MAKAM",
+     "bilgi": "bildirim yükümlülüğü yerine getirilmediği takdirde, bu tüzel kişilere Cumhuriyet savcısı tarafından bin Türk Lirasından beşbin Türk Lirasına kadar idarî para cezası verilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "17",
+     "tur": "MAKAM",
+     "bilgi": "Cumhuriyet başsavcılıkları ve mahkemeler tarafından verilen idarî para cezaları Genel Bütçeye gelir kaydedilir.",
+     "deger": "mahkeme / cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.45
+    },
+    {
+     "madde": "20",
+     "tur": "SÜRE",
+     "bilgi": "(3) Nispî idarî para cezasını gerektiren kabahatlerde zamanaşımı süresi sekiz yıldır.",
+     "deger": "sekiz yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.89
+    },
+    {
+     "madde": "3",
+     "tur": "CEZA",
+     "bilgi": "a) İdarî yaptırım kararlarına karşı kanun yoluna ilişkin hükümleri, diğer kanunlarda aksine hüküm bulunmaması halinde, b) Diğer genel hükümleri, idarî para cezası veya mülkiyetin kamuya geçirilmesi yaptırımını gerektiren bütün fiiller hakkında, uygulanır.",
+     "deger": "idari para cezası",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.71
+    },
+    {
+     "madde": "37",
+     "tur": "MAKAM",
+     "bilgi": "(2) Bu kabahat dolayısıyla idarî para cezası vermeye kolluk veya belediye zabıta görevlileri yetkilidir.",
+     "deger": "belediye",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.7
+    },
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": "(1) Kovuşturma konusu fiilin kabahat oluşturduğunun anlaşılması halinde mahkeme tarafından idarî yaptırım kararı verilir.",
+     "deger": "mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.69
+    },
+    {
+     "madde": "30",
+     "tur": "MAKAM",
+     "bilgi": "(2) İlgili kamu kurum ve kuruluşu da mahkeme tarafından karar verilinceye kadar kanun yolu başvurusunu kabul ederek idarî yaptırım kararını geri alabilir.",
+     "deger": "mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.69
+    },
+    {
+     "madde": "36",
+     "tur": "MAKAM",
+     "bilgi": "(3) Bu kabahat dolayısıyla idarî para cezasına kolluk veya belediye zabıta görevlileri karar verir.",
+     "deger": "belediye",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "21",
+     "tur": "SÜRE",
+     "bilgi": "(3) Mülkiyetin kamuya geçirilmesine ilişkin zamanaşımı süresi on yıldır.",
+     "deger": "on yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.57
+    },
+    {
+     "madde": "42/A",
+     "tur": "SÜRE",
+     "bilgi": "(3) Bu maddede yazılı fiillerin bir yıl içinde tekrarı halinde idari para cezası iki katı olarak uygulanır.",
+     "deger": "bir yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "34",
+     "tur": "MAKAM",
+     "bilgi": "(2) Bu kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir karar verir.",
+     "deger": "mülki amir",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.46
+    },
+    {
+     "madde": "41",
+     "tur": "MAKAM",
+     "bilgi": "(7) Bu kabahatler dolayısıyla idarî para cezasına belediye sınırları içerisinde belediye zabıta görevlileri, belediye sınırları dışında kolluk görevlileri karar verir.",
+     "deger": "belediye",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.46
+    },
+    {
+     "madde": "28",
+     "tur": "MAKAM",
+     "bilgi": "yetkisizlik halinde dosyanın yetkili mahkemeye gönderilmesine, süresinde yapılmama/incelenebilir karar olmama/hak bulunmama halinde başvurunun reddine, aksi halde başvurunun usulden kabulüne karar verilir.",
+     "deger": "mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.39
+    },
+    {
+     "madde": "33",
+     "tur": "MAKAM",
+     "bilgi": "(2) Bu kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk veya belediye zabıta görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir veya belediye encümeni karar verir.",
+     "deger": "mülki amir / belediye",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "27",
+     "tur": "SÜRE",
+     "bilgi": "(1) İdarî para cezası ve mülkiyetin kamuya geçirilmesine ilişkin idarî yaptırım kararına karşı, kararın tebliği veya tefhimi tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir.",
+     "deger": "onbeş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.35
+    },
+    {
+     "madde": "17",
+     "tur": "SÜRE",
+     "bilgi": "Kişinin ekonomik durumunun müsait olmaması halinde, idarî para cezasının, ilk taksitinin peşin ödenmesi koşuluyla, bir yıl içinde ve dört eşit taksit halinde ödenmesine karar verilebilir.",
+     "deger": "bir yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    },
+    {
+     "madde": "27",
+     "tur": "SÜRE",
+     "bilgi": "(2) Mücbir sebebin varlığı dolayısıyla bu sürenin geçirilmiş olması halinde bu sebebin ortadan kalktığı tarihten itibaren en geç yedi gün içinde karara karşı başvuruda bulunulabilir.",
+     "deger": "yedi gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    }
+   ]
+  },
+  {
+   "kanun": "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+   "sinavSorusu": 14,
+   "bilgiSayisi": 9,
+   "kanitli": 3,
+   "turDagilimi": {
+    "SÜRE": 6,
+    "MAKAM": 3
+   },
+   "bilgiler": [
+    {
+     "madde": "5",
+     "tur": "SÜRE",
+     "bilgi": "en az dört yıllık fakülte veya yüksekokulları bitirenlerden (.",
+     "deger": "dört yıl",
+     "kanit": "KANITLI",
+     "ortusme": 0.75
+    },
+    {
+     "madde": "31",
+     "tur": "MAKAM",
+     "bilgi": ") ön sözleşme ve ön sözleşmeden sonraki ilk sözleşmeyi yapmaya yetkili makamlar, kuvvet komutanlıkları, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Temin Merkezi Komutanı veya eşidi birim amiridir.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.59
+    },
+    {
+     "madde": "31",
+     "tur": "MAKAM",
+     "bilgi": ") Müteakip sözleşmeleri yapmaya yetkili makamlar, kuvvet komutanlıkları, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Tayin/Atama Daire Başkanı veya eşidi birim amiridir.",
+     "deger": "komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.39
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "j) Haklarında yüksek disiplin kurulları tarafından Silahlı Kuvvetlerden ayırma cezası verilmiş olmak.",
+     "deger": "yüksek disiplin kurulu",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.64
+    },
+    {
+     "madde": "12",
+     "tur": "SÜRE",
+     "bilgi": "Madde 12 - Sözleşme süreleri en az üç yıl olarak düzenlenir.",
+     "deger": "üç yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "14",
+     "tur": "SÜRE",
+     "bilgi": ") a) Sözleşmeli subay ve astsubaylardan, sözleşmesini yenilemek isteyenler sözleşme süresinin sona erme tarihinden 6 ay önceden başlamak suretiyle dilekçe ile ilk amirine müracaat eder.",
+     "deger": "6 ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.54
+    },
+    {
+     "madde": "15",
+     "tur": "SÜRE",
+     "bilgi": ") bir sözleşme yılı içinde alınan hava değişimi, istirahat ve benzeri sıhhi izin süresi toplamı doksan günü geçmek.",
+     "deger": "doksan gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.45
+    },
+    {
+     "madde": "22",
+     "tur": "SÜRE",
+     "bilgi": ") hizmet edilen süre kadar ve en çok on yılı, b) Sözleşme süresi sonunda kendi istekleriyle sözleşmeleri yenilenmeyenler (.",
+     "deger": "on yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "14",
+     "tur": "SÜRE",
+     "bilgi": ") d) Her sözleşme süresinin sona erme tarihinden en az 3 ay önce taraflar sözleşmeyi yenileyeceklerine dair yazılı bildirimde bulunmadıkları taktirde sözleşme kendiliğinden sona erer.",
+     "deger": "3 ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.3
+    }
+   ]
+  },
+  {
+   "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+   "sinavSorusu": 14,
+   "bilgiSayisi": 12,
+   "kanitli": 9,
+   "turDagilimi": {
+    "SÜRE": 5,
+    "MAKAM": 7
+   },
+   "bilgiler": [
+    {
+     "madde": "9",
+     "tur": "SÜRE",
+     "bilgi": "MADDE 9 – (1) Bu Kanun hükümlerine göre verilen kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir.",
+     "deger": "iki hafta",
+     "kanit": "KANITLI",
+     "ortusme": 0.94
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 8 – (1) Tedbir kararı, ilgilinin talebi, Bakanlık veya kolluk görevlileri ya da Cumhuriyet savcısının başvurusu üzerine verilir.",
+     "deger": "cumhuriyet savcısı / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.85
+    },
+    {
+     "madde": "1",
+     "tur": "MAKAM",
+     "bilgi": ") g) Şiddet uygulayan: Bu Kanunda şiddet olarak tanımlanan tutum ve davranışları uygulayan veya uygulama tehlikesi bulunan kişileri, ğ) Tedbir kararı: Bu Kanun kapsamında, şiddet mağdurları ve şiddet uygulayanlar hakkında hâkim, kolluk görevlileri ve mülkî amirler tarafından, istem üzerine veya resen verilecek tedbir kararlarını, ifade eder.",
+     "deger": "hâkim / mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.76
+    },
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 4 – (1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki koruyucu tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir: a) İşyerinin değiştirilmesi.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.76
+    },
+    {
+     "madde": "3",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 3 – (1) Bu Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere mülkî amir tarafından karar verilebilir: a) Kendisine ve gerekiyorsa beraberindeki çocuklara, bulunduğu yerde veya başka bir yerde uygun barınma yeri sağlanması.",
+     "deger": "mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.63
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "Ancak şiddet veya şiddet uygulanma tehlikesinin devam edeceğinin anlaşıldığı hâllerde, resen, korunan kişinin ya da Bakanlık veya kolluk görevlilerinin talebi üzerine tedbirlerin süresinin veya şeklinin değiştirilmesine, bu tedbirlerin kaldırılmasına veya aynen devam etmesine karar verilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 5 – (1) Şiddet uygulayanlarla ilgili olarak aşağıdaki önleyici tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere hâkim tarafından karar verilebilir: a) Şiddet mağduruna yönelik olarak şiddet tehdidi, hakaret, aşağılama veya küçük düşürmeyi içeren söz ve davranışlarda bulunmaması.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "5",
+     "tur": "SÜRE",
+     "bilgi": "Hâkim tarafından yirmidört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
+     "deger": "dört saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "13",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 13 – (1) Bu Kanun hükümlerine göre hakkında tedbir kararı verilen şiddet uygulayan, bu kararın gereklerine aykırı hareket etmesi hâlinde, fiili bir suç oluştursa bile ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre hâkim kararıyla üç günden on güne kadar zorlama hapsine tabi tutulur.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.37
+    },
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": "Mülkî amir tarafından kırksekiz saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
+     "deger": "sekiz saat / on ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": "Kolluk amiri evrakı en geç kararın alındığı tarihi takip eden ilk işgünü içinde mülkî amirin onayına sunar.",
+     "deger": "on ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "5",
+     "tur": "SÜRE",
+     "bilgi": "Kolluk amiri evrakı en geç kararın alındığı tarihi takip eden ilk işgünü içinde hâkimin onayına sunar.",
+     "deger": "on ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanuna İlişkin Uygulama Yönetmeliği",
+   "sinavSorusu": 13,
+   "bilgiSayisi": 24,
+   "kanitli": 18,
+   "turDagilimi": {
+    "MAKAM": 17,
+    "SÜRE": 7
+   },
+   "bilgiler": [
+    {
+     "madde": "34",
+     "tur": "MAKAM",
+     "bilgi": ") hâkim tarafından verilen koruyucu veya önleyici tedbir kararları ile (.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": ") (4) Hâkim veya mülki amir tarafından verilen kararlar ivedilikle ŞÖNİM'e bildirilir.",
+     "deger": "hâkim / mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.88
+    },
+    {
+     "madde": "30",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 30 – (1) Tedbir kararı ilgilinin talebi, müdürlük, ŞÖNİM veya kolluk görevlileri ya da Cumhuriyet savcısının başvurusu üzerine verilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.86
+    },
+    {
+     "madde": "29",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 29 – (1) Mülkî amir tarafından alınabilecek barınma yeri sağlanmasına ve geçici koruma altına alınmasına ilişkin tedbirler, gecikmesinde sakınca bulunan hâllerde ilgili kolluk amirince de alınabilir.",
+     "deger": "mülki amir / kolluk amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.79
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 12 –(1) Kanun kapsamında korunan kişilerle ilgili olarak hâkim tarafından, (.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.78
+    },
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": "(4) Müdürlük veya ŞÖNİM'e yapılan şikâyet ve ihbarlar, bunlar tarafından olayın özelliğine göre, kolluğa, mülki amire, Cumhuriyet başsavcılığına veya hâkime gecikmeksizin bildirilir.",
+     "deger": "hâkim / cumhuriyet savcısı / mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.76
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": "(2) Cumhuriyet başsavcılığı, yapılan ihbar ve şikâyet üzerine evrakın bir örneğini ivedilikle olayın niteliğine göre uygulanabilecek olan koruyucu veya önleyici tedbir hakkında karar verilmek üzere hâkime veya mülki amire gönderir.",
+     "deger": "hâkim / cumhuriyet savcısı / mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.7
+    },
+    {
+     "madde": "29",
+     "tur": "MAKAM",
+     "bilgi": "(2) 18, 19, 20 ve 22 nci maddelerde belirtilen ve hâkim tarafından karar altına alınabilecek önleyici tedbirler, gecikmesinde sakınca bulunan hâllerde ilgili kolluk amirince alınabilir.",
+     "deger": "hâkim / kolluk amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.69
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 7 –(1) Hakkında barınma yeri sağlanmasına karar verilen kişiler, Bakanlığa ait veya Bakanlığın gözetim ve denetimi altında bulunan yerlerde;",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.69
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": "Gecikmesinde sakınca bulunan hallerde Kanun kapsamında almış olduğu koruyucu ve önleyici tedbirleri onaylanmak üzere tedbirin niteliğine göre mülki amire veya hâkime sunar.",
+     "deger": "hâkim / mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.63
+    },
+    {
+     "madde": "6",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 6 – (1) Kanun kapsamında korunan kişilerle ilgili olarak aşağıdaki tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere delil veya belge aranmaksızın mülkî amir tarafından ilgilinin talebi, Bakanlık veya kolluk görevlilerinin başvurusu üzerine ya da resen karar verilebilir: a) (.",
+     "deger": "mülki amir / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.62
+    },
+    {
+     "madde": "37",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 37 –(1) Hâkim, tedbir kararlarının uygulanmasında teknik araç ve yöntemler kullanılmasına karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": ") şiddetin uygulandığı hususunda delil veya belge aranmaksızın aşağıdaki koruyucu tedbirlerden birine, birkaçına veya olayın özelliğine göre mülki amir tarafından alınabilecek tedbirler de dâhil olmak üzere, uygun görülecek benzer tedbirlere karar verilebilir: a) İş yerinin değiştirilmesi.",
+     "deger": "mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.58
+    },
+    {
+     "madde": "38",
+     "tur": "MAKAM",
+     "bilgi": ") hakkında tedbir kararlarına aykırı hareket eden şiddet uygulayana, fiili bir suç oluştursa bile, ihlal edilen tedbirin niteliğine ve aykırılığın ağırlığına göre hâkim tarafından üç günden on güne kadar zorlama hapsine tâbi tutulmasına karar verilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.54
+    },
+    {
+     "madde": "17",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 17 –(1) Hâkim tarafından şiddet uygulayanlarla ilgili olarak aşağıdaki önleyici tedbirlerden birine, birkaçına veya uygun görülecek benzer tedbirlere karar verilebilir: a) Şiddet mağduruna yönelik olarak şiddet tehdidi, hakaret, aşağılama veya küçük düşürmeyi içeren söz ve davranışlarda bulunmaması.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.52
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": ") (5) Mülki amirin veya kolluk amirinin kararı ile kamu kurum ve kuruluşlarına ait barınma yerlerine getirilen şiddet mağduru, başka herhangi bir karar veya onay aranmaksızın barınma yerine derhal kabul edilir.",
+     "deger": "mülki amir / kolluk amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "39",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 40 –(1) Kanun hükümlerinin yerine getirilmesinde kurumlararası ve sivil toplum kuruluşları ile koordinasyon Bakanlık tarafından gerçekleştirilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.46
+    },
+    {
+     "madde": "29",
+     "tur": "SÜRE",
+     "bilgi": "Hâkim tarafından yirmi dört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
+     "deger": "dört saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "34",
+     "tur": "SÜRE",
+     "bilgi": ") mülki amir tarafından verilen koruyucu tedbir kararına karşı, tefhim veya tebliğ tarihinden itibaren iki hafta içinde, ilgililer tarafından aile mahkemesine itiraz edilebilir.",
+     "deger": "iki hafta",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.53
+    },
+    {
+     "madde": "38",
+     "tur": "SÜRE",
+     "bilgi": ") zorlama hapsinin süresi onbeş günden otuz güne kadardır.",
+     "deger": "onbeş gün / otuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "34",
+     "tur": "SÜRE",
+     "bilgi": ") zorlama hapsi kararlarına karşı, tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir.",
+     "deger": "iki hafta",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.47
+    },
+    {
+     "madde": "42",
+     "tur": "SÜRE",
+     "bilgi": ") tebliğ tarihinden itibaren bir ay içinde ödenmesi hususu şiddet uygulayana tebliğ edilir.",
+     "deger": "bir ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "29",
+     "tur": "SÜRE",
+     "bilgi": "Mülkî amir tarafından kırk sekiz saat içinde onaylanmayan tedbirler kendiliğinden kalkar.",
+     "deger": "sekiz saat / on ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "29",
+     "tur": "SÜRE",
+     "bilgi": "Kolluk amiri, evrakı en geç tedbirin alındığı tarihi takip eden ilk işgünü içinde mülkî amirin onayına sunar.",
+     "deger": "on ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu",
+   "sinavSorusu": 13,
+   "bilgiSayisi": 8,
+   "kanitli": 0,
+   "turDagilimi": {
+    "CEZA": 5,
+    "SÜRE": 2,
+    "MAKAM": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "74",
+     "tur": "CEZA",
+     "bilgi": "Kültür varlıkları bulmak amacıyla, izinsiz olarak kazı veya sondaj yapan kişi, iki yıldan beş yıla kadar hapis cezasıyla cezalandırılır.",
+     "deger": "iki yıldan beş yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.54
+    },
+    {
+     "madde": "4",
+     "tur": "SÜRE",
+     "bilgi": "mülki amir ve diğer makamlar ise on gün içinde, yazı ile Kültür ve Turizm Bakanlığına ve en yakın müze müdürlüğüne bildirir.",
+     "deger": "on gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "74",
+     "tur": "CEZA",
+     "bilgi": "İzinsiz olarak define araştıranlar, üç aydan iki yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç aydan iki yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "4",
+     "tur": "SÜRE",
+     "bilgi": "Taşınır ve taşınmaz kültür ve tabiat varlıklarını bulanlar, malik oldukları veya kullandıkları arazinin içinde kültür ve tabiat varlığı bulunduğunu bilenler veya yeni haberdar olan malik ve zilyetler, bunu en geç üç gün içinde, en yakın müze müdürlüğüne veya köyde muhtara veya diğer yerlerde mülki idare amirlerine bildirmeye mecburdurlar.",
+     "deger": "üç gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.37
+    },
+    {
+     "madde": "67",
+     "tur": "CEZA",
+     "bilgi": "Ticareti yasak olmayan taşınır kültür varlıklarının izinsiz olarak ticaretini yapan kişi, altı aydan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan üç yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.36
+    },
+    {
+     "madde": "74",
+     "tur": "MAKAM",
+     "bilgi": "İzinsiz olarak define araştıran kişinin, hakkında kovuşturma başlayıncaya kadar, kendisini bu fiili işlemeye gerekli cihazları temin etmek suretiyle sevk eden kişilerin kimliklerini açıklaması ve yakalanmasını sağlaması hâlinde, mahkeme verilecek cezada indirim yapabileceği gibi, ceza verilmesine yer olmadığına da karar verebilir.",
+     "deger": "mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.34
+    },
+    {
+     "madde": "68",
+     "tur": "CEZA",
+     "bilgi": "Kültür ve tabiat varlıklarını bu Kanuna aykırı olarak yurt dışına çıkaran kişi, beş yıldan oniki yıla kadar hapis ve beşbin güne kadar adlî para cezası ile cezalandırılır.",
+     "deger": "beş yıldan oniki yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "67",
+     "tur": "CEZA",
+     "bilgi": "Kültür ve tabiat varlıklarıyla ilgili olarak bildirim yükümlülüğüne mazereti olmaksızın ve bilerek aykırı hareket eden kişi, altı aydan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan üç yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    }
+   ]
+  },
+  {
+   "kanun": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+   "sinavSorusu": 12,
+   "bilgiSayisi": 3,
+   "kanitli": 2,
+   "turDagilimi": {
+    "SÜRE": 2,
+    "MAKAM": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "33",
+     "tur": "SÜRE",
+     "bilgi": "İdareler, ilgili mevzuattaki özel hükümler saklı kalmak kaydıyla süre belirtilmeyen belge taleplerini, talebin kendilerine ulaşmasından itibaren en geç beş iş günü;",
+     "deger": "beş iş günü",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "33",
+     "tur": "SÜRE",
+     "bilgi": "süre belirtilmeyen bilgi ve görüş taleplerini ise talebin kendilerine ulaşmasından itibaren en geç on beş iş günü içinde yerine getirir.",
+     "deger": "onbeş iş günü",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "16",
+     "tur": "MAKAM",
+     "bilgi": "ç) 1 sayılı Cumhurbaşkanlığı Kararnamesinin 6 ncı maddesi gereğince bakanlıklarla yapılan yazışmalar, Cumhurbaşkanlığı İdari İşler Başkanı tarafından veya adına imzalandığında \"Rica ederim.",
+     "deger": "bakan/bakanlık / cumhurbaşkanı",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+   "sinavSorusu": 12,
+   "bilgiSayisi": 1,
+   "kanitli": 0,
+   "turDagilimi": {
+    "SÜRE": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "14",
+     "tur": "SÜRE",
+     "bilgi": ") Başvuru dilekçesi veya formu kaydedildikten sonra, en geç iki iş günü içinde kurum veya kuruluşun ilgili birimlerine gönderilir.",
+     "deger": "iki iş günü",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.55
+    }
+   ]
+  },
+  {
+   "kanun": "5607 sayılı Kaçakçılıkla Mücadele Kanunu",
+   "sinavSorusu": 11,
+   "bilgiSayisi": 3,
+   "kanitli": 0,
+   "turDagilimi": {
+    "CEZA": 1,
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "3",
+     "tur": "CEZA",
+     "bilgi": "(1) Eşyayı, gümrük işlemlerine tabi tutmaksızın ülkeye sokan kişi, bir yıldan beş yıla kadar hapis ve on bin güne kadar adlî para cezası ile cezalandırılır.",
+     "deger": "bir yıldan beş yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "10",
+     "tur": "SÜRE",
+     "bilgi": ") hakkında elkoyma kararı bulunmakla birlikte ikinci fıkra uyarınca alıkonulmayan taşıtlar, gümrük idaresince yapılacak tebligattan itibaren doksan gün içinde (.",
+     "deger": "doksan gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.35
+    },
+    {
+     "madde": "10",
+     "tur": "SÜRE",
+     "bilgi": "Sahibinin taşıtın değeri kadar teminatı alıkoyma tarihinden itibaren otuz gün içinde gümrük idaresine teslim etmesi halinde, taşıt sahibine iade edilir.",
+     "deger": "otuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+   "sinavSorusu": 10,
+   "bilgiSayisi": 3,
+   "kanitli": 2,
+   "turDagilimi": {
+    "MAKAM": 2,
+    "SÜRE": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": ") Test Merkezleri, İçişleri Bakanlığı ile Sanayi ve Teknoloji Bakanlığı temsilcilerinden oluşan komisyon tarafından yılda en az bir defa denetlenir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.36
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "Madde 7 - (Değişik:RG-11/7/2025-32953) Yivsiz av tüfeği imal eden fabrika ve imalathanelerde üretilen tüfeklerin ilgili Türk standartlarına uygun imal edilip edilmediği hususundaki denetimler İçişleri Bakanlığı ile Sanayi ve Teknoloji Bakanlığınca ilgili mevzuat çerçevesinde müştereken yapılır.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "12",
+     "tur": "SÜRE",
+     "bilgi": "Devreden ve devralan kişiler en geç bir ay içinde ruhsatname düzenleyen makamlara başvurarak devrettikleri tüfeği belgelerinden sildirmek ve devraldıkları tüfeği belgelerine işletmek zorundadır.",
+     "deger": "bir ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    }
+   ]
+  },
+  {
+   "kanun": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+   "sinavSorusu": 10,
+   "bilgiSayisi": 3,
+   "kanitli": 1,
+   "turDagilimi": {
+    "SÜRE": 3
+   },
+   "bilgiler": [
+    {
+     "madde": "11",
+     "tur": "SÜRE",
+     "bilgi": ") yükümlülüğünün ortaya çıktığı tarihi takip eden üç ay içinde, kişisel verileri siler, yok eder veya anonim hale getirir.",
+     "deger": "üç ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.91
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": ") (3) Kişisel verilerin silinmesi, yok edilmesi ve anonim hale getirilmesiyle ilgili yapılan bütün işlemler kayıt altına alınır ve söz konusu kayıtlar, diğer hukuki yükümlülükler hariç olmak üzere en az üç yıl süreyle saklanır.",
+     "deger": "üç yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.35
+    },
+    {
+     "madde": "12",
+     "tur": "SÜRE",
+     "bilgi": "Veri sorumlusu, ilgili kişinin talebini en geç otuz gün içinde sonuçlandırır ve ilgili kişiye bilgi verir.",
+     "deger": "otuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "Karayolları Trafik Yönetmeliği",
+   "sinavSorusu": 10,
+   "bilgiSayisi": 3,
+   "kanitli": 2,
+   "turDagilimi": {
+    "MAKAM": 2,
+    "SAYI": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": "Kurulun sekreterya görevi Emniyet Genel Müdürlüğünce yapılır.",
+     "deger": "emniyet",
+     "kanit": "KANITLI",
+     "ortusme": 0.57
+    },
+    {
+     "madde": "79",
+     "tur": "MAKAM",
+     "bilgi": "(İçişleri Bakanlığınca yetkilendirilen gerçek veya tüzel kişilerce verilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.14
+    },
+    {
+     "madde": "85",
+     "tur": "SAYI",
+     "bilgi": "Madde 86 — B, C, C1, D ve D1 sınıfı sürücü belgesi sahipleri araçlarını, azami yüklü ağırlığı 750 kilograma kadar olan (750 kilogram dahil) hafif römork takarak da kullanabilirler.",
+     "deger": "750 kilogram",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "5070 sayılı Elektronik İmza Kanunu",
+   "sinavSorusu": 9,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "2918 sayılı Karayolları Trafik Kanunu",
+   "sinavSorusu": 9,
+   "bilgiSayisi": 10,
+   "kanitli": 4,
+   "turDagilimi": {
+    "MAKAM": 7,
+    "SÜRE": 2,
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "22",
+     "tur": "MAKAM",
+     "bilgi": "Emniyet Genel Müdürlüğü veya bağlı trafik tescil kuruluşlarınca yapılır.",
+     "deger": "emniyet",
+     "kanit": "KANITLI",
+     "ortusme": 0.75
+    },
+    {
+     "madde": "114",
+     "tur": "MAKAM",
+     "bilgi": "Bu Kanunda yazılı trafik suçlarını işleyenler hakkında yetki sınırları içinde Emniyet Genel Müdürlüğü ve Jandarma Genel Komutanlığı personeli ile Ulaştırma ve Altyapı Bakanlığının ve Karayolları Genel Müdürlüğünün ilgili birimlerinin il ve ilçe kuruluşlarında görevli ve yetkili kılınmış personelince tutanak düzenlenir.",
+     "deger": "bakan/bakanlık / komutan / emniyet / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "50",
+     "tur": "MAKAM",
+     "bilgi": "İçişleri Bakanlığı yol standartlarını dikkate alarak yukarıda belirtilen hız sınırlarını otomobiller için 20 km/s artırmaya yetkilidir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.45
+    },
+    {
+     "madde": "34",
+     "tur": "MAKAM",
+     "bilgi": "İzin verilen süre sonunda, muayenesi yapılmadan veya muayene sonucunda emniyetsiz raporu verilen araçların trafiğe çıkarılması hâlinde, araç sahibine 488 Türk lirası idari para cezası verilir.",
+     "deger": "emniyet",
+     "kanit": "KANITLI",
+     "ortusme": 0.25
+    },
+    {
+     "madde": "Ek 16",
+     "tur": "MAKAM",
+     "bilgi": "Belediyelerce veya sermayesinin tamamı belediyelere ait şirketler tarafından .",
+     "deger": "belediye",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "112",
+     "tur": "MAKAM",
+     "bilgi": "Bu Kanunun 6 ncı maddesinde sayılan görevlilerin ve trafik tescil kuruluşlarının yetkilendirildiği hâller hariç olmak üzere, sürücü belgelerinin geri alınmasına ve iptaline sulh ceza mahkemeleri karar verir.",
+     "deger": "sulh ceza hâkimi / mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.37
+    },
+    {
+     "madde": "36",
+     "tur": "MAKAM",
+     "bilgi": "000 Türk lirası, b) Mahkemelerce veya Cumhuriyet savcılıklarınca ya da bu Kanunda belirtilen yetkililerce sürücü belgesi geçici olarak ya da tedbiren geri alındığı halde motorlu araçları kullananlara 200.",
+     "deger": "mahkeme / cumhuriyet savcısı",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.35
+    },
+    {
+     "madde": "Ek 17",
+     "tur": "SÜRE",
+     "bilgi": "İlk defa sürücü belgesi alanlar en az bir yıl süre ile aday sürücü olarak kabul edilirler.",
+     "deger": "bir yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "118",
+     "tur": "SÜRE",
+     "bilgi": ") Bir yıl içinde üç defa 100 ceza puanını dolduran sürücülerin sürücü belgeleri süresiz olarak iptal edilir.",
+     "deger": "bir yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.3
+    },
+    {
+     "madde": "69",
+     "tur": "CEZA",
+     "bilgi": "idari para cezası uygulanır ve sürücü belgeleri iki yıl süreyle geri alınır.",
+     "deger": "idari para cezası",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    }
+   ]
+  },
+  {
+   "kanun": "2935 sayılı Olağanüstü Hal Kanunu",
+   "sinavSorusu": 9,
+   "bilgiSayisi": 3,
+   "kanitli": 2,
+   "turDagilimi": {
+    "SÜRE": 2,
+    "SAYI": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": "Yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere olağanüstü hal ilan edebilir.",
+     "deger": "altı ay",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "11",
+     "tur": "SÜRE",
+     "bilgi": ") İşçinin isteği, ahlak ve iyi niyet kurallarına uymayan haller, sağlık sebepleri, normal emeklilik ve belirli süresinin bitişi nedeniyle hizmet aktinin sona ermesi veya feshi dışında kalan hallerde işçi çıkartmalarını işverenin de durumunu dikkate alarak üç aylık bir süreyi aşmamak kaydıyla izne bağlamak veya ertelemek, o) (Ek: 14/11/1984 - 3076/1 md.",
+     "deger": "üç ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.06
+    },
+    {
+     "madde": "8",
+     "tur": "SAYI",
+     "bilgi": "Madde 8 – Tabii afet ve tehlikeli salgın hastalıklar sebepleriyle olağanüstü hal ilan edilen bölgelerde bulunan 18 - 60 yaşları arasındaki bütün vatandaşlar, olağanüstü hal sebebiyle kendilerine verilecek işleri yapmakla yükümlüdürler.",
+     "deger": "60 yaş",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.45
+    }
+   ]
+  },
+  {
+   "kanun": "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
+   "sinavSorusu": 9,
+   "bilgiSayisi": 10,
+   "kanitli": 10,
+   "turDagilimi": {
+    "MAKAM": 8,
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "13/A",
+     "tur": "MAKAM",
+     "bilgi": "Mülki idare amirinin kararı, derhal mahkemenin onayına sunulur.",
+     "deger": "mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "SÜRE",
+     "bilgi": "Gecikmesinde sakınca bulunan hallerde verilen yazılı emir, yirmidört saat içinde yetkili ve görevli hâkimin onayına sunulur.",
+     "deger": "dört saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.92
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "SÜRE",
+     "bilgi": "Gecikmesinde sakınca bulunan hallerde verilen yazılı emir, yirmidört saat içinde yetkili ve görevli hâkimin onayına sunulur.",
+     "deger": "dört saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.92
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Sürenin dolması veya hâkim tarafından aksine karar verilmesi halinde tedbir derhal kaldırılır.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Sürenin dolması veya hâkim tarafından aksine karar verilmesi halinde tedbir derhal kaldırılır.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Yetkili ve görevli hâkim, Ankara ağır ceza mahkemesi üyesidir.",
+     "deger": "hâkim / mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Ancak, terör örgütünün faaliyeti çerçevesinde devam eden tehlikelere ilişkin olarak gerekli görülmesi halinde, hâkim üç aydan fazla olmamak üzere sürenin müteaddit defalar uzatılmasına karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.43
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Ancak, terör örgütünün faaliyeti çerçevesinde devam eden tehlikelere ilişkin olarak gerekli görülmesi halinde, hâkim üç aydan fazla olmamak üzere sürenin müteaddit defalar uzatılmasına karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.43
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Polis, Devletin ülkesi ve milletiyle bölünmez bütünlüğüne, Anayasa düzenine ve genel güvenliğine dair önleyici ve koruyucu tedbirleri almak, emniyet ve asayişi sağlamak üzere, ülke seviyesinde istihbarat faaliyetlerinde bulunur, bu amaçla bilgi toplar, değerlendirir, yetkili mercilere veya kullanma alanına ulaştırır.",
+     "deger": "emniyet",
+     "kanit": "KANITLI",
+     "ortusme": 0.32
+    },
+    {
+     "madde": "Ek 7",
+     "tur": "MAKAM",
+     "bilgi": "Polis, Devletin ülkesi ve milletiyle bölünmez bütünlüğüne, Anayasa düzenine ve genel güvenliğine dair önleyici ve koruyucu tedbirleri almak, emniyet ve asayişi sağlamak üzere, ülke seviyesinde ve sanal ortamda istihbarat faaliyetlerinde bulunur, bu amaçla bilgi toplar, değerlendirir, yetkili mercilere veya kullanma alanına ulaştırır.",
+     "deger": "emniyet",
+     "kanit": "KANITLI",
+     "ortusme": 0.3
+    }
+   ]
+  },
+  {
+   "kanun": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun",
+   "sinavSorusu": 8,
+   "bilgiSayisi": 12,
+   "kanitli": 5,
+   "turDagilimi": {
+    "MAKAM": 3,
+    "SÜRE": 8,
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "6",
+     "tur": "MAKAM",
+     "bilgi": "(1) Bir yabancı devlet hükûmeti tarafından bir kişi, kuruluş veya organizasyonun tasarrufunda bulunan malvarlığının dondurulmasına ilişkin olarak Türkiye'den talepte bulunulması hâlinde, Değerlendirme Komisyonunca değerlendirilen talep Cumhurbaşkanı tarafından karara bağlanır.",
+     "deger": "cumhurbaşkanı",
+     "kanit": "KANITLI",
+     "ortusme": 0.45
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": ") Değerlendirme Komisyonunun önerisi üzerine Hazine ve Maliye Bakanı ile İçişleri Bakanı tarafından birlikte karar verilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.42
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "(3) 5 inci ve 6 ncı maddelerde düzenlenen hususlar dışında, mahkemelerce terör örgütü olduğuna kesin olarak karar verildikten sonra 3 üncü ve 4 üncü madde kapsamına giren fiilleri gerçekleştirdiği hususunda makul sebeplerin varlığına istinaden kişi, kuruluş veya organizasyonların Türkiye'de bulunan malvarlığının dondurulmasına (.",
+     "deger": "mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 0.41
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": ") karar derhâl uygulanır ve kırk sekiz saat içinde, Hâkimler ve Savcılar Kurulu tarafından belirlenen Ankara ağır ceza mahkemesinin onayına sunulur.",
+     "deger": "sekiz saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": ") karar derhâl uygulanır ve kırk sekiz saat içinde, Hâkimler ve Savcılar Kurulu tarafından belirlenen Ankara ağır ceza mahkemesinin onayına sunulur.",
+     "deger": "sekiz saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "12",
+     "tur": "SÜRE",
+     "bilgi": ") bulunuyor ise dondurulan malvarlığına ilişkin bilgileri talep tarihinden itibaren yedi gün içinde Başkanlığa bildirir.",
+     "deger": "yedi gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.73
+    },
+    {
+     "madde": "12",
+     "tur": "SÜRE",
+     "bilgi": "bunlardan alacağı veya borcu olan gerçek ve tüzel kişiler ise alacak veya borcun miktarı ile dayanağına ilişkin bilgileri, malvarlığının dondurulması kararının Resmî Gazete'de yayımlandığı tarihten itibaren en geç otuz gün içinde Başkanlığa bildirirler.",
+     "deger": "otuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.65
+    },
+    {
+     "madde": "6",
+     "tur": "SÜRE",
+     "bilgi": ") (5) Bu madde uyarınca verilen malvarlığının dondurulması kararının Resmî Gazete'de yayımlandığı tarihten itibaren bir yıl içinde, talep eden devlet tarafından soruşturma başlatılmadığı takdirde ilgili karar kaldırılabilir.",
+     "deger": "bir yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.62
+    },
+    {
+     "madde": "13",
+     "tur": "SÜRE",
+     "bilgi": ") ödeme bilgileri, hakkın tesis edildiği tarihten itibaren en geç on beş gün içinde Başkanlığa verilir.",
+     "deger": "onbeş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": ") malvarlığının dondurulması kararının devamına veya kaldırılmasına beş gün içinde karar verir ve sonucu derhâl Başkanlığa bildirir.",
+     "deger": "beş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": "Mahkeme, makul sebeplerin varlığı yönünden yapacağı inceleme neticesinde malvarlığının dondurulması kararının devamına veya kaldırılmasına beş gün içinde karar verir ve sonucu derhâl Başkanlığa bildirir.",
+     "deger": "beş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.45
+    },
+    {
+     "madde": "15",
+     "tur": "CEZA",
+     "bilgi": "(1) Bu Kanun hükümlerine göre malvarlığının dondurulmasıyla ilgili alınan kararın gereğini yerine getirmeyen veya yerine getirmekte ihmal veya gecikme gösteren kişilere, fiil daha ağır bir cezayı gerektiren başka bir suç oluşturmadığı takdirde, altı aydan iki yıla kadar hapis veya adli para cezası verilir.",
+     "deger": "altı aydan iki yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.42
+    }
+   ]
+  },
+  {
+   "kanun": "2872 sayılı Çevre Kanunu",
+   "sinavSorusu": 8,
+   "bilgiSayisi": 9,
+   "kanitli": 9,
+   "turDagilimi": {
+    "SÜRE": 1,
+    "MAKAM": 7,
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "28",
+     "tur": "SÜRE",
+     "bilgi": "Çevreye verilen zararların tazminine ilişkin talepler zarar görenin zararı ve tazminat yükümlüsünü öğrendiği tarihten itibaren beş yıl sonra zamanaşımına uğrar.",
+     "deger": "beş yıl",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": "Denetimler, Bakanlığın belirlediği denetim usûl ve esasları çerçevesinde yapılır.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "Çevresel Etki Değerlendirmesi incelemesi yapılmaksızın başlanan faaliyetler Bakanlıkça, proje tanıtım dosyası hazırlanmaksızın başlanan faaliyetler ise mahallin en büyük mülkî amiri tarafından süre verilmeksizin durdurulur.",
+     "deger": "mülki amir / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "Bu Kanun ve bu Kanun uyarınca yayımlanan yönetmeliklere aykırı davrananlara söz konusu aykırı faaliyeti düzeltmek üzere Bakanlıkça ya da 12 nci maddenin birinci fıkrası uyarınca denetim yetkisinin devredildiği kurum ve merciler tarafından bir defaya mahsus olmak üzere esasları yönetmelikle belirlenen ve bir yılı aşmamak üzere süre verilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "26",
+     "tur": "CEZA",
+     "bilgi": "Bu Kanunun 12 nci maddesinde öngörülen bildirim ve bilgi verme yükümlülüğüne aykırı olarak yanlış ve yanıltıcı bilgi verenler, altı aydan bir yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "altı aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": "Genelkurmay Başkanlığı, Millî Savunma Bakanlığı, İçişleri Bakanlığı ve Bakanlık tarafından müştereken hazırlanacak yönetmeliğe göre yürütülür.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.27
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": "İlgililer, çevre kirliliğine neden olabilecek faaliyetleri ile ilgili olarak, kullandıkları hammadde, yakıt, çıkardıkları ürün ve atıklar ile üretim şemalarını, acil durum plânlarını, izleme sistemleri ve kirlilik raporları ile diğer bilgi ve belgeleri talep edilmesi halinde Bakanlığa veya yetkili denetim birimine vermek zorundadırlar.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.22
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "süre verilmemesi halinde derhal, süre verilmesi durumunda, bu süre sonunda aykırılık düzeltilmez ise Bakanlıkça ya da 12 nci maddenin birinci fıkrası uyarınca denetim yetkisinin devredildiği kurum ve merciler tarafından kısmen veya tamamen, süreli veya süresiz olarak durdurulur.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.21
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": "İlgililer, Bakanlığın veya denetimle yetkili diğer mercilerin isteyecekleri bilgi ve belgeleri vermek, yetkililerin yaptıracakları analiz ve ölçümlerin giderlerini karşılamak, denetim esnasında her türlü kolaylığı göstermek zorundadırlar.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.15
+    }
+   ]
+  },
+  {
+   "kanun": "4342 sayılı Mera Kanunu",
+   "sinavSorusu": 7,
+   "bilgiSayisi": 4,
+   "kanitli": 2,
+   "turDagilimi": {
+    "SÜRE": 2,
+    "MAKAM": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "22",
+     "tur": "SÜRE",
+     "bilgi": "Çiftçi ailelerinin bir mera, yaylak ve kışlaktan yararlanabilmeleri için, bu yerin bulunduğu köy veya belediye sınırları içinde, tahsisin yapıldığı tarihte en az altı aydan beri ikamet ediyor olmaları gerekir.",
+     "deger": "altı ay",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "26",
+     "tur": "MAKAM",
+     "bilgi": "Muhtarlık veya belediyeler tarafından bu amaçla yapılacak tahsilat, o yerin mera alanlarının ıslah ve geliştirilmesi amacı ile köy sandığına veya belediye bütçesinde ayrı bir hesaba gelir kaydedilir ve amacı dışında kullanılamaz.",
+     "deger": "belediye",
+     "kanit": "KANITLI",
+     "ortusme": 0.61
+    },
+    {
+     "madde": "6",
+     "tur": "MAKAM",
+     "bilgi": "Mera, yaylak ve kışlakların tespit, tahdit ve tahsisi Gıda, Tarım ve Hayvancılık Bakanlığınca yapılır.",
+     "deger": "bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "27",
+     "tur": "SÜRE",
+     "bilgi": "26 ncı maddede öngörülen hususlara riayet etmeyen ve yükümlülüklerini yerine getirmeyenlerin mera, yaylak ve kışlaklardan yararlanma hakları, Bakanlık taşra teşkilatının teklifi ve valilik onayı ile en az 7 gün, en çok 30 gün süre ile geçici olarak, aynı fiilin tekrarı halinde ise yararlanma hakkı bir otlatma dönemi için iptal edilir.",
+     "deger": "on ay / 7 gün / 30 gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.36
+    }
+   ]
+  },
+  {
+   "kanun": "Adli ve Önleme Aramaları Yönetmeliği",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 7,
+   "kanitli": 7,
+   "turDagilimi": {
+    "MAKAM": 7
+   },
+   "bilgiler": [
+    {
+     "madde": "13",
+     "tur": "MAKAM",
+     "bilgi": "Askerî mahallerde yapılacak arama Cumhuriyet savcısının talep ve katılımı ile askerî makamlar tarafından yerine getirilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "Hâkim kararı veya gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının, Cumhuriyet savcısına ulaşılamadığı hâllerde ise kolluk âmirinin yazılı emriyle arama yapılabilir.",
+     "deger": "hâkim / cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.93
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "Sayılan bu yerlerde arama ancak hâkim kararı veya gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısının yazılı emriyle yapılabilir.",
+     "deger": "hâkim / cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.8
+    },
+    {
+     "madde": "10",
+     "tur": "MAKAM",
+     "bilgi": "Cumhuriyet savcısına ulaşılamadığı hâllerde ise kolluk âmirinin yazılı emriyle kolluk görevlileri elkoyma işlemini gerçekleştirebilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": ") Yetkili merci, kolluğun talebini uygun bulursa, hâkimden arama kararı talep eder;",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.3
+    },
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": ") ve gerektiğinde hâkimden karar almak için vakit bulunmaması hâlini, Suçüstü: a) İşlenmekte olan suçu, b) Henüz işlenmiş olan fiil ile fiilin işlenmesinden hemen sonra kolluk, suçtan zarar gören veya başkaları tarafından takip edilerek yakalanan kişinin işlediği suçu, c) Fiilin pek az önce işlendiğini gösteren eşya veya delille yakalanan kimsenin işlediği suçu, ifade eder.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.27
+    },
+    {
+     "madde": "25",
+     "tur": "MAKAM",
+     "bilgi": ") sıkıyönetim komutanının emriyle aranmasında, e) Kanunların, muhafaza altına alınmalarına olanak verdiği kişilerin, üst veya eşyalarının aranmasında, f) (.",
+     "deger": "komutan",
+     "kanit": "KANITLI",
+     "ortusme": 0.17
+    }
+   ]
+  },
+  {
+   "kanun": "Suç Eşyası Yönetmeliği",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 18,
+   "kanitli": 14,
+   "turDagilimi": {
+    "SÜRE": 6,
+    "MAKAM": 12
+   },
+   "bilgiler": [
+    {
+     "madde": "21",
+     "tur": "SÜRE",
+     "bilgi": "(1) İadesine karar verilmiş olup usulüne uygun meşruhatlı tebligata rağmen sahipleri tarafından bir ay içinde alınmayan veya kendilerine tebligat yapılamayan kimselere ait eşya en geç iki ay içerisinde satılarak bedeli millî bankalardan birinde ilgilisi adına açılacak vadeli hesaba yatırılır.",
+     "deger": "bir ay / iki ay",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": ") (9) Zilyetliğinde bulunan eşya veya diğer malvarlığı değerlerine elkonulan kimse, hâkimden her zaman elkoymanın kaldırılması konusunda bir karar verilmesini isteyebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.93
+    },
+    {
+     "madde": "5",
+     "tur": "SÜRE",
+     "bilgi": "(5) Hâkim kararı olmaksızın yapılan elkoyma işlemi yirmi dört saat içinde görevli hâkimin onayına sunulur.",
+     "deger": "dört saat / on ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.92
+    },
+    {
+     "madde": "18",
+     "tur": "MAKAM",
+     "bilgi": "b) Bu işlemler, Cumhuriyet savcısının huzurunda yerine getirilir ve düzenlenen teslim ve tesellüm tutanağına Cumhuriyet savcısı ve emanet memurunun imzaları ile şerh verilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.57
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": "Bir nüshası teslim alana verilir, diğer nüshalarından biri emanet bürosunda, biri de Cumhuriyet başsavcılığında saklanır.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": "(1) İadesine karar verilmiş olup da mahkeme kararı kendilerine tebliğ edildiği hâlde sahipleri tarafından 21 inci maddede yazılı süre içerisinde alınmayan ve ekonomik değeri bulunmayan eşyanın, Cumhuriyet savcısı başkanlığında, emanet memuru ve bir zabıt kâtibinden oluşan komisyonca imhasına karar verilir.",
+     "deger": "mahkeme / cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.53
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": ") sonra, mahkemece haklarında bir karar verilinceye kadar Cumhuriyet başsavcılığının yazılı emri ile mahallî jandarma birlik komutanlıklarına ait mahfuz bina ve depolarda muhafaza altına alınırlar.",
+     "deger": "mahkeme / cumhuriyet savcısı / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "9",
+     "tur": "MAKAM",
+     "bilgi": "(1) Emanet memuru, mahkeme ve diğer resmî daireler tarafından incelenmek üzere UYAP üzerinden veya yazılı olarak istenilen suç eşyasını, üzerindeki etiketlerde yazılı bilgiyi kapsayan bir yazı ile isteyen makama, Cumhuriyet savcısının onayıyla zimmet kaydına görevlinin imzasını almak suretiyle teslim eder ve teslim işlemini suç eşyası kaydına derhâl kaydeder.",
+     "deger": "mahkeme / cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.42
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": ") soruşturma sırasında Cumhuriyet savcısı tarafından bilirkişi marifetiyle belirlendikten (.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "21",
+     "tur": "MAKAM",
+     "bilgi": "Satışa karar verecek merci suç eşyasının bulunduğu yer sulh ceza hâkimidir.",
+     "deger": "hâkim / sulh ceza hâkimi",
+     "kanit": "KANITLI",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "10",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 10 – (1) Cumhuriyet başsavcılığı, emanet bürosuna tevdi edilen eşyadan, kıymetli maden veya taşlardan mamul, antika ve sair vasıfları dolayısıyla fazla değerde oldukları bilirkişi tarafından tespit olunanlar, (.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.27
+    },
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": "Emanet memurunun atanmasına lüzum görülmeyen hâllerde bu görev, ilgili yer Cumhuriyet başsavcısının teklifi üzerine adalet komisyonunca, adalet komisyonu bulunmayan yerlerde bu yer Cumhuriyet başsavcısınca belirlenecek yazı işleri müdürü veya zabıt kâtiplerinden birine geçici olarak verilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.24
+    },
+    {
+     "madde": "21",
+     "tur": "MAKAM",
+     "bilgi": "(3) Satılacak suç eşyasının değerinin, satış masraflarını karşılamayacağının belli olması hâlinde, satışa karar veren hâkimin kararı üzerine 24 üncü madde uyarınca işlem yapılır.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.21
+    },
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": "(2) Birinci fıkrada belirtilen imha komisyonuna hangi zabıt kâtibinin katılacağı, adalet komisyonlarınca, bulunmayan yerlerde kıdemli hâkim tarafından belirlenir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.13
+    },
+    {
+     "madde": "16",
+     "tur": "SÜRE",
+     "bilgi": "MADDE 16 – (1) Cumhuriyet savcısı, hâkim veya mahkeme tarafından emanet eşyasının iadesine veya elden çıkarılmasına ilişkin verilen kararlar, dosyadaki emanet makbuzu ile birlikte en geç iki gün içerisinde Cumhuriyet başsavcılığına tevdi edilir.",
+     "deger": "iki gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.76
+    },
+    {
+     "madde": "20",
+     "tur": "SÜRE",
+     "bilgi": "a) Emanet memuru, emanet bürosuna teslimi tarihinden itibaren bir yıl içerisinde, hakkında herhangi bir karar verilmemiş olan eşya veya paraları, ilgili mahkemeden sorulmak üzere, Cumhuriyet başsavcılığı soruşturma veya esas kaydı sayısını ihtiva eden bir yazı ile Cumhuriyet başsavcılığına bildirir.",
+     "deger": "bir yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.57
+    },
+    {
+     "madde": "20",
+     "tur": "SÜRE",
+     "bilgi": "Mahkeme veya daire yazı işleri müdürü ile Cumhuriyet başsavcılığı yazı işleri müdürü en geç on beş gün içinde bu eşya ve paraların ilgili bulundukları iş veya davaların karara bağlanıp bağlanmadıklarını, hakkında bir karar verilmiş ise, kararın bir suretini de eklemek suretiyle aynı yoldan durumu emanet bürosuna bildirirler.",
+     "deger": "onbeş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.46
+    },
+    {
+     "madde": "5",
+     "tur": "SÜRE",
+     "bilgi": "Hâkim, kararını elkoymadan itibaren kırk sekiz saat içinde açıklar;",
+     "deger": "sekiz saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.43
+    }
+   ]
+  },
+  {
+   "kanun": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 6,
+   "kanitli": 0,
+   "turDagilimi": {
+    "MAKAM": 4,
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": "Şüphelinin aynı olayla ilgili olarak yeniden ifadesinin alınması ihtiyacı ortaya çıktığında, bu işlem ancak Cumhuriyet savcısı tarafından yapılabilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "İLGİLİ",
+     "ortusme": 1
+    },
+    {
+     "madde": "6",
+     "tur": "MAKAM",
+     "bilgi": ") Kolluk kuvveti tarafından yapılan yakalama hâlinde işlem, yakalanan kişi ve uygulanan tedbirler derhâl Cumhuriyet savcısına bildirilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "13",
+     "tur": "SÜRE",
+     "bilgi": "Yakalama yerine en yakın hâkim veya mahkemeye gönderilme için zorunlu süre oniki saatten fazla olamaz.",
+     "deger": "oniki saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.36
+    },
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": "\"Gözaltına alma: Kanunun verdiği yetkiye göre, yakalanan kişinin hakkındaki işlemlerin tamamlanması amacıyla, yetkili hâkim önüne çıkarılmasına veya serbest bırakılmasına kadar kanunî süre içinde sağlığına zarar vermeyecek şekilde özgürlüğünün geçici olarak kısıtlanıp alıkonulmasını\";",
+     "deger": "hâkim",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.36
+    },
+    {
+     "madde": "14",
+     "tur": "SÜRE",
+     "bilgi": "Toplu olarak işlenen suçlarda, delillerin toplanmasında güçlük veya şüpheli sayısının çokluğu nedeniyle Cumhuriyet savcısı gözaltı süresini her defasında bir günü geçmemek üzere, üç gün süreyle uzatılmasına yazılı olarak emir verebilir.",
+     "deger": "bir gün / üç gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.32
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "Yakalanan kişinin dilekçesi yetkili hâkime en seri şekilde ulaştırılır.",
+     "deger": "hâkim",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    }
+   ]
+  },
+  {
+   "kanun": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 6,
+   "kanitli": 5,
+   "turDagilimi": {
+    "MAKAM": 4,
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 7- (2) Jandarma Bölge Komutanlığı ve il jandarma komutanlığı personelinin izin sıra çizelgeleri vali tarafından, ilçe jandarma komutanlığı personelinin izin sıra çizelgeleri kaymakam tarafından onaylanır.",
+     "deger": "vali / kaymakam / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": ") d) Jandarma bölge komutanları ve il jandarma komutanları için konuşlu bulunduğu ilin valisi, e) İlçe jandarma komutanları için kaymakam, tarafından verilir.",
+     "deger": "kaymakam / komutan / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "18",
+     "tur": "SÜRE",
+     "bilgi": ") başvuru tarihinden itibaren geriye doğru son beş yıl içinde, toplamda on iki ay veya daha fazla durdurma cezası almamış olmak.",
+     "deger": "onbeş yıl / iki ay",
+     "kanit": "KANITLI",
+     "ortusme": 0.25
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": ") c) Yurt dışı izin verme yetkisi İçişleri Bakanlığınca devredilebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.2
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": "(2) Yurt dışına izinli gidecek personele bağlı bulunduğu birlik, karargâh ve kurum amirlikleri ve komutanlıkları tarafından, yurt dışındaki hareket tarzları hakkında, istihbarata karşı koyma ve koruyucu güvenlik önlemleri konularında uyarıcı bilgiler verilir.",
+     "deger": "komutan",
+     "kanit": "KANITLI",
+     "ortusme": 0.19
+    },
+    {
+     "madde": "16",
+     "tur": "SÜRE",
+     "bilgi": ") (4) c) Yurt dışı izin müracaatı, asgari alay ve eşiti birimlerin amirlerince izin tarihinden en az otuz gün önce, Jandarma Genel Komutanlığı Personel Başkanlığında hazır bulundurulur.",
+     "deger": "otuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    }
+   ]
+  },
+  {
+   "kanun": "2860 sayılı Yardım Toplama Kanunu",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 2,
+   "kanitli": 0,
+   "turDagilimi": {
+    "SÜRE": 1,
+    "MAKAM": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "11",
+     "tur": "SÜRE",
+     "bilgi": "Sorumlu kurulda görev alanlar ile değişikliklerin, izin veren makama on gün içinde bildirilmesi gerekir.",
+     "deger": "on gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "Yardım toplama faaliyeti birden fazla ili kapsıyorsa yardım toplama faaliyetine girişecek gerçek veya tüzel kişilerin yerleşim yerinin bulunduğu ilin valisinden izin alınır ve izni veren valilik tarafından ilgili valiliklere ve İçişleri Bakanlığına bilgi verilir.",
+     "deger": "vali / bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.39
+    }
+   ]
+  },
+  {
+   "kanun": "Adli Kolluk Yönetmeliği",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 4,
+   "kanitli": 2,
+   "turDagilimi": {
+    "MAKAM": 4
+   },
+   "bilgiler": [
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": "Cumhuriyet savcılarınca, adlî görevler ile ilgili emir ve talimatlar, kolluk birimlerinin aralarındaki işbölümü ile kolluk teşkilâtlarının görev ve yetki alanlarına göre verilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.86
+    },
+    {
+     "madde": "3",
+     "tur": "MAKAM",
+     "bilgi": "Adlî kolluk sorumlusu: Mahallin en büyük mülki idare amiri tarafından görevlendirilen adlî kolluğun komutanını, amirini veya sorumlusunu, (.",
+     "deger": "komutan",
+     "kanit": "KANITLI",
+     "ortusme": 0.75
+    },
+    {
+     "madde": "6",
+     "tur": "MAKAM",
+     "bilgi": "Bu durumda adlî kolluk görevlileri, sulh ceza hâkimi tarafından emredilen tedbirleri alır ve araştırmaları yerine getirir.",
+     "deger": "hâkim / sulh ceza hâkimi",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": "c) En üst dereceli kolluk amiri adlî olayları, suç işlenmesini önlemek, kamu düzen ve güvenini korumakla ve bu konuda gerekli tedbirleri almakla görevli ve yetkili olan mülki idare amirine derhal bildirir.",
+     "deger": "kolluk amiri",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    }
+   ]
+  },
+  {
+   "kanun": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 8,
+   "kanitli": 1,
+   "turDagilimi": {
+    "SÜRE": 6,
+    "MAKAM": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "6",
+     "tur": "SÜRE",
+     "bilgi": ") (5) Bu maddenin uygulanmasında, kapsamlı kontrole tabi tutulması gerekli görülenler en fazla dört saat bekletilebilir.",
+     "deger": "dört saat",
+     "kanit": "KANITLI",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "57",
+     "tur": "MAKAM",
+     "bilgi": "Bu kişilerden, sınır dışı etme kararı alınması gerektiği değerlendirilenler hakkında, sınır dışı etme kararı valilik tarafından alınır.",
+     "deger": "vali",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "58",
+     "tur": "MAKAM",
+     "bilgi": "(2) Geri gönderme merkezleri Bakanlık tarafından işletilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "57",
+     "tur": "SÜRE",
+     "bilgi": "(3) Geri gönderme merkezlerindeki idari gözetim süresi altı ayı geçemez.",
+     "deger": "altı ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "57",
+     "tur": "SÜRE",
+     "bilgi": "Hakkında idari gözetim kararı alınan yabancılar, yakalamayı yapan kolluk birimince geri gönderme merkezlerine kırk sekiz saat içinde götürülür.",
+     "deger": "sekiz saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": ") t) Vize: Türkiye'de en fazla doksan güne kadar kalma hakkı tanıyan ya da transit geçişi sağlayan izni, (.",
+     "deger": "doksan gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.3
+    },
+    {
+     "madde": "56",
+     "tur": "SÜRE",
+     "bilgi": "MADDE 56 – (1) Sınır dışı etme kararı alınanlara, sınır dışı etme kararında belirtilmek kaydıyla, Türkiye'yi terk edebilmeleri için on beş günden az olmamak üzere otuz güne kadar süre tanınır.",
+     "deger": "onbeş gün / otuz gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "57",
+     "tur": "SÜRE",
+     "bilgi": "Ancak bu süre, sınır dışı etme işlemlerinin yabancının iş birliği yapmaması veya ülkesiyle ilgili doğru bilgi ya da belgeleri vermemesi nedeniyle tamamlanamaması hâlinde, en fazla altı ay daha uzatılabilir.",
+     "deger": "altı ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    }
+   ]
+  },
+  {
+   "kanun": "7201 sayılı Tebligat Kanunu",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun",
+   "sinavSorusu": 6,
+   "bilgiSayisi": 2,
+   "kanitli": 2,
+   "turDagilimi": {
+    "CEZA": 1,
+    "MAKAM": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "1",
+     "tur": "CEZA",
+     "bilgi": "Atatürk'ün hatırasına alenen hakaret eden veya söven kimse bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "3",
+     "tur": "MAKAM",
+     "bilgi": "Bu kanunda yazılı suçlardan dolayı Cumhuriyet savcılıklarınca re'sen takibat yapılır.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.13
+    }
+   ]
+  },
+  {
+   "kanun": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
+   "sinavSorusu": 5,
+   "bilgiSayisi": 1,
+   "kanitli": 0,
+   "turDagilimi": {
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "18",
+     "tur": "CEZA",
+     "bilgi": ") Birinci fıkranın (a), (b), (c) ve (ç) bentlerinde öngörülen idari para cezaları veri sorumlusu, (d) bendinde öngörülen idari para cezası veri sorumlusu veya veri işleyen gerçek kişiler ile özel hukuk tüzel kişileri hakkında uygulanır.",
+     "deger": "idari para cezası",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
+   "sinavSorusu": 5,
+   "bilgiSayisi": 2,
+   "kanitli": 1,
+   "turDagilimi": {
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": "bunu en geç üç gün içinde en yakın müzeye, köyde muhtara veya diğer yerlerde mülki idare amirlerine haber verenlere;",
+     "deger": "üç gün",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": "Bir yıl içinde sahiplerince alınmayan varlıklar müzelerde saklanabilir veya usulüne uygun olarak Devletçe satılabilirler.",
+     "deger": "bir yıl",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.55
+    }
+   ]
+  },
+  {
+   "kanun": "2893 sayılı Türk Bayrağı Kanunu",
+   "sinavSorusu": 5,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "5395 sayılı Çocuk Koruma Kanunu",
+   "sinavSorusu": 5,
+   "bilgiSayisi": 17,
+   "kanitli": 11,
+   "turDagilimi": {
+    "MAKAM": 11,
+    "SÜRE": 5,
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "26",
+     "tur": "MAKAM",
+     "bilgi": "(2) Çocuk ağır ceza mahkemesi, çocuklar tarafından işlenen ve ağır ceza mahkemesinin görev alanına giren suçlarla ilgili davalara bakar.",
+     "deger": "mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "çocuğun anası, babası, vasisi, bakım ve gözetiminden sorumlu kimse, Sosyal Hizmetler ve Çocuk Esirgeme Kurumu ve Cumhuriyet savcısının istemi üzerine veya re'sen çocuk hâkimi tarafından alınabilir.",
+     "deger": "hâkim / cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.8
+    },
+    {
+     "madde": "41/A",
+     "tur": "MAKAM",
+     "bilgi": "(1) Çocuk teslimi veya çocukla kişisel ilişki kurulmasına dair aile mahkemeleri tarafından verilen ilam veya tedbir kararları, çocuğun üstün yararı esas alınarak, Adalet Bakanlığınca kurulan adli destek ve mağdur hizmetleri müdürlüklerince bu Kısım hükümlerine göre yerine getirilir.",
+     "deger": "mahkeme / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.65
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "(1) Suça sürüklenen çocuk hakkındaki soruşturma çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.64
+    },
+    {
+     "madde": "9",
+     "tur": "MAKAM",
+     "bilgi": "Hâkim, çocuğun bulunduğu yerin gizli tutulmasına ve gerektiğinde kişisel ilişkinin tesisine karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "41/A",
+     "tur": "MAKAM",
+     "bilgi": ") (3) Müdürlük bulunmayan yerlerde bu Kısım kapsamında yer alan görevler, Adalet Bakanlığınca belirlenen hukuk mahkemeleri yazı işleri müdürlüğü tarafından yerine getirilir.",
+     "deger": "mahkeme / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.47
+    },
+    {
+     "madde": "9",
+     "tur": "MAKAM",
+     "bilgi": ") Çocuğun, ailesine teslim edilip edilmeyeceğine veya uygun görülen başkaca bir tedbire hâkim tarafından karar verilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.46
+    },
+    {
+     "madde": "30",
+     "tur": "MAKAM",
+     "bilgi": "(2) Gecikmesinde sakınca bulunan hâllerde, bu görevler çocuk bürosunda görevli olmayan Cumhuriyet savcıları tarafından da yerine getirilebilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.43
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "(4) Hâkim, hakkında koruyucu ve destekleyici tedbire karar verdiği çocuğun denetim altına alınmasına da karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.42
+    },
+    {
+     "madde": "23",
+     "tur": "MAKAM",
+     "bilgi": "(1) Çocuğa yüklenen suçtan dolayı yapılan yargılama sonunda, Ceza Muhakemesi Kanunundaki koşulların varlığı halinde, mahkemece hükmün açıklanmasının geri bırakılmasına karar verilebilir.",
+     "deger": "mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "Ancak hâkim, eğitim ve öğrenimine devam edebilmesi için ve rızası alınmak suretiyle tedbirin uygulanmasına belli bir süre daha devam edilmesine karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.27
+    },
+    {
+     "madde": "41/C",
+     "tur": "SÜRE",
+     "bilgi": ") (7) Hak sahibi, emrin yükümlüye tebliğinden sonraki dönemde, teslim saatinden en az kırk sekiz saat önce çocuğu teslim almaya geleceğini müdürlüğe (.",
+     "deger": "sekiz saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 1
+    },
+    {
+     "madde": "9",
+     "tur": "SÜRE",
+     "bilgi": "Hâkim tarafından, üç gün içinde talep hakkında karar verilir.",
+     "deger": "üç gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.57
+    },
+    {
+     "madde": "41/E",
+     "tur": "SÜRE",
+     "bilgi": "— MADDE 41/F- (1) Çocuk teslimine dair ilam veya tedbir kararlarının yerine getirilmesine ilişkin teslim emrine aykırı hareket edenler ile emrin gereğinin yerine getirilmesini engelleyenler, bir ay içinde yapılacak şikâyet üzerine, fiil suç teşkil etse dahi, üç aya kadar disiplin hapsi ile cezalandırılır.",
+     "deger": "bir ay / üç ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "9",
+     "tur": "SÜRE",
+     "bilgi": "(1) Derhâl korunma altına alınmasını gerektiren bir durumun varlığı hâlinde çocuk, Sosyal Hizmetler ve Çocuk Esirgeme Kurumu tarafından bakım ve gözetim altına alındıktan sonra acil korunma kararının alınması için Kurum tarafından çocuğun Kuruma geldiği tarihten itibaren en geç beş gün içinde çocuk hâkimine müracaat edilir.",
+     "deger": "beş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.41
+    },
+    {
+     "madde": "19",
+     "tur": "CEZA",
+     "bilgi": "(2) Ceza Muhakemesi Kanununun 171 inci maddesinin ikinci fıkrasında belirtilen hapis cezasının üst sınırı, on beş yaşını doldurmamış çocuklar bakımından beş yıl olarak uygulanır.",
+     "deger": "hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "41/E",
+     "tur": "SÜRE",
+     "bilgi": ") müdürlükçe yapılan işlem ve verilen kararlara karşı, öğrenme veya tebliğ tarihinden itibaren bir hafta içinde, işlemi yapan müdürlüğün bulunduğu yer aile mahkemesine şikâyette bulunulabilir.",
+     "deger": "bir hafta",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "4678 sayılı Türk Silahlı Kuvvetlerinde İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 2,
+   "kanitli": 1,
+   "turDagilimi": {
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": "sözleşmeli astsubaylar için ise astsubaylığa nasbedildikleri yıl astsubay meslek yüksekokullarından mezun olan muvazzaf astsubayları, ı) Sözleşme yılı: Sözleşmenin yürürlüğe girdiği ay ve günü başlangıç olarak kabul eden ve bu tarihten itibaren geçen her bir yıllık süreyi, ifade eder.",
+     "deger": "bir yıl",
+     "kanit": "KANITLI",
+     "ortusme": 0.22
+    },
+    {
+     "madde": "12",
+     "tur": "SÜRE",
+     "bilgi": ") Her sözleşme süresinin sona erme tarihinden en az üç ay önce taraflar sözleşmeyi yenileyeceklerine dair yazılı bildirimde bulunmadıkları takdirde, sözleşme kendiliğinden sona erer.",
+     "deger": "üç ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.3
+    }
+   ]
+  },
+  {
+   "kanun": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 4,
+   "kanitli": 3,
+   "turDagilimi": {
+    "SÜRE": 2,
+    "CEZA": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "10",
+     "tur": "SÜRE",
+     "bilgi": "b) Silahsız olarak görev yapacaklar için en az sekiz yıllık ilköğretim veya ortaokul;",
+     "deger": "sekiz yıl",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "19",
+     "tur": "CEZA",
+     "bilgi": ") c) Bu Kanunun 11 inci maddesine göre çalışma izni verilmeyen kişileri özel güvenlik görevlisi olarak istihdam eden kişi, kurum, kuruluş veya şirketlerin yetkilileri, üç aydan bir yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.39
+    },
+    {
+     "madde": "19",
+     "tur": "CEZA",
+     "bilgi": "Bu Kanunda öngörülen adlî suçlar ve cezalar şunlardır: a) Bu Kanunun 3 üncü maddesinde belirtilen özel güvenlik iznini almadan özel güvenlik görevlisi istihdam eden kişiler veya kuruluşların yöneticileri üç aydan bir yıla kadar hapis veya adlî para cezası ile cezalandırılır.",
+     "deger": "üç aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "5",
+     "tur": "SÜRE",
+     "bilgi": "Özel güvenlik şirketleri, şubelerini bir ay içinde Bakanlığa ve ilgili valiliğe yazılı olarak;",
+     "deger": "bir ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    }
+   ]
+  },
+  {
+   "kanun": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 3,
+   "kanitli": 0,
+   "turDagilimi": {
+    "MAKAM": 2,
+    "SÜRE": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "MADDE 7 – (1) Müsabaka güvenlik amiri veya yardımcısı, spor müsabakalarında alınacak güvenlik önlemlerinin yürütülmesi ve denetlenmesi konularında, müsabakanın güvenliği ile ilgili tüm kişi ve kuruluşlarla gerekli koordinasyonu sağlamakla yetkili ve görevlidir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.94
+    },
+    {
+     "madde": "6",
+     "tur": "SÜRE",
+     "bilgi": ") Müsabakada görevlendirilecek özel güvenlik görevlilerinin kimlik bilgileri müsabakanın başlangıç saatinden en geç kırk sekiz saat önce ilgili kolluk birimine bildirilir.",
+     "deger": "sekiz saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.92
+    },
+    {
+     "madde": "4",
+     "tur": "MAKAM",
+     "bilgi": "(2) İlçe spor güvenlik kurulu, kaymakam başkanlığında il spor güvenlik kurulunda yer alan kurum ve kuruluşların ilçedeki temsilcileri ve kaymakam tarafından belirlenecek bir hukukçu ile varsa farklı spor kulüplerine mensup stat güvenliğinden sorumlu yönetim kurulu üyesi (.",
+     "deger": "kaymakam",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.37
+    }
+   ]
+  },
+  {
+   "kanun": "5442 sayılı İl İdaresi Kanunu",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 8,
+   "kanitli": 3,
+   "turDagilimi": {
+    "MAKAM": 7,
+    "SÜRE": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": "Bu maksatla Devletin genel ve özel kolluk kuvvetlerini istihdam eder, bu teşkilat amir ve memurları vali tarafından verilen emirleri derhal yerine getirmekle yükümlüdür.",
+     "deger": "vali",
+     "kanit": "KANITLI",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "B) Bunun dışında kalan bütün memurlar Bakanlıklar veya tüzelkişiliği haiz genel müdürlükler tarafından valilik emrine tayin edilerek il idare şube başkanının inhası üzerine valiler tarafından istihdam yerleri tesbit olunur;",
+     "deger": "vali / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.3
+    },
+    {
+     "madde": "Ek 1",
+     "tur": "MAKAM",
+     "bilgi": "İçişleri Bakanlığının uygun göreceği bu yerlerde vali tarafından mülki idare amiri görevlendirilir.",
+     "deger": "vali / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.3
+    },
+    {
+     "madde": "32",
+     "tur": "MAKAM",
+     "bilgi": ") Bu teşkilat amir ve memurları kaymakam tarafından verilen emirleri derhal yerine getirmekle ödevlidir;",
+     "deger": "kaymakam",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "31",
+     "tur": "SÜRE",
+     "bilgi": ") J) Kaymakam, ilçe idare şube başkanlarına acele hallerde (8 güne kadar) ve tayini kendisine ait memurlara, Memurlar Kanunundaki yıllık izin, süresine mahsup edilmek üzere bir aya kadar izin verebilir.",
+     "deger": "8 gün / bir ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": ") I) (H) fıkrası ile valiye verilmiş olan yetkiler, ilçede kaymakam tarafından da kullanılabilir.",
+     "deger": "kaymakam",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": ") Askeri birliklerin belirli görevleri genel kolluk kuvvetleriyle birlikte yapması hâlinde komuta, sevk ve idare askeri birliklerin en kıdemli komutanı tarafından üstlenilir.",
+     "deger": "komutan",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "C) Yukardaki fıkralarda yazılı bütün memurların lüzumu halinde il içinde nakil ve tahvilleri mensup olduğu il idare şube başkanlarının inhası üzerine valiler tarafından icra edilmekle beraber mensup oldukları Bakanlıklar veya genel müdürlüklere sebepleriyle bildirilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "1774 sayılı Kimlik Bildirme Kanunu",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 4,
+   "kanitli": 2,
+   "turDagilimi": {
+    "SÜRE": 4
+   },
+   "bilgiler": [
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": "b) Yaylak ve kışlak gibi yerlere mevsimlik olarak göçenler için de aile reisi tarafından, örneğine uygun bildirim, Üç gün içinde kolluk örgütüne verilir.",
+     "deger": "üç gün",
+     "kanit": "KANITLI",
+     "ortusme": 0.87
+    },
+    {
+     "madde": "6",
+     "tur": "SÜRE",
+     "bilgi": "tarafından örneğine uygun kimlik belgesi doldurularak üç gün içinde genel kolluk örgütüne verilmesi zorunludur.",
+     "deger": "üç gün",
+     "kanit": "KANITLI",
+     "ortusme": 0.42
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": "a) Konutlarda 30 günden fazla kalacak misafir için aile reisi;",
+     "deger": "30 gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.83
+    },
+    {
+     "madde": "4",
+     "tur": "SÜRE",
+     "bilgi": "İkinci maddedeki tesislerin sorumlu işleticileri, müesseselerinde sürekli veya geçici olarak çalıştırdıkları kimseleri ve bunların ayrılışlarını, örneğine uygun kimlik bildirme belgesi doldurarak, 24 saat içinde bağlı oldukları en yakın kolluk örgütüne bildirirler.",
+     "deger": "24 saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 9,
+   "kanitli": 2,
+   "turDagilimi": {
+    "MAKAM": 5,
+    "SÜRE": 3,
+    "CEZA": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": "Mahallin en büyük mülki amiri tarafından toplantının sona erdirilip erdirilmeyeceğine dair karar alınır.",
+     "deger": "mülki amir",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": "b) Düzenleme kurulunun veya kurul başkanının bu görevi yerine getirmemesi hâlinde, durum yetkili kolluk amiri tarafından mahallin en büyük mülki amirine bildirilir.",
+     "deger": "mülki amir / kolluk amiri",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "10",
+     "tur": "SÜRE",
+     "bilgi": ") Toplantı yapılabilmesi için, düzenleme kurulu üyelerinin tamamının imzalayacakları bir bildirim, toplantının yapılmasından en az kırksekiz saat önce ve çalışma saatleri içinde, toplantının yapılacağı yerin bağlı bulunduğu valilik veya kaymakamlığa verilir.",
+     "deger": "sekiz saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.95
+    },
+    {
+     "madde": "14",
+     "tur": "SÜRE",
+     "bilgi": "14: Toplantı, toplantının yapılacağı saatten en az yirmidört saat önce düzenleme kurulunun çoğunluğu tarafından, bildirimin verildiği valilik veya kaymakamlığa yazı ile bildirilmek şartıyla kırksekiz saati geçmemek üzere yalnız bir kez geri bırakılabilir.",
+     "deger": "dört saat / sekiz saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.42
+    },
+    {
+     "madde": "3",
+     "tur": "SÜRE",
+     "bilgi": "Yabancıların bu Kanuna göre düzenlenen toplantı ve gösteri yürüyüşlerinde topluluğa hitap etmeleri, afiş, pankart, resim, flama, levha, araç ve gereçler taşımaları, toplantının yapılacağı mahallin en büyük mülkî idare amirliğine toplantıdan en az kırksekiz saat önce yapılacak bildirimle mümkündür.",
+     "deger": "sekiz saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": ") Bu yükümlülüğün yerine getirildiğine dair tutulan tutanak, düzenleme kurulu tarafından hazırlanarak yetkili kolluk amirine teslim edilir.",
+     "deger": "kolluk amiri",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.36
+    },
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": ") Kanuna uygun olarak başlayan bir toplantı veya gösteri yürüyüşü, daha sonra 23 üncü maddede belirtilen kanuna aykırı durumlardan bir veya birkaçının vuku bulması sebebiyle, Kanuna aykırı toplantı veya gösteri yürüyüşü hâline dönüşürse: a) Düzenleme kurulu veya kurul başkanı toplantı veya gösteri yürüyüşünün sona erdiğini topluluğa ilan eder ve durumu derhâl yetkili kolluk amirine bildirir.",
+     "deger": "kolluk amiri",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    },
+    {
+     "madde": "29",
+     "tur": "CEZA",
+     "bilgi": ") bir yıl altı aydan dört yıla, toplantı ve yürüyüş zorla dağıtılmış ise üç yıldan beş yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "üç yıldan beş yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.3
+    },
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": ") Toplantının amacı dışına çıktığı veya düzen içinde gerçekleşmesini imkânsız gördüğü takdirde kurul veya toplanamadığı takdirde kurul başkanı dağılma kararı alır ve durumu derhâl yetkili kolluk amirine bildirir.",
+     "deger": "kolluk amiri",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    }
+   ]
+  },
+  {
+   "kanun": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 8,
+   "kanitli": 2,
+   "turDagilimi": {
+    "MAKAM": 2,
+    "SÜRE": 4,
+    "SAYI": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "36",
+     "tur": "MAKAM",
+     "bilgi": "Bakanlıkça belirlenen sayıda yazılı sınav gözlemcisi ve illerde yapılacak uygulamalı sınav komisyonlarında görevlendirilecek personel valilik tarafından belirlenir.",
+     "deger": "vali / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.57
+    },
+    {
+     "madde": "43",
+     "tur": "MAKAM",
+     "bilgi": "Bakanlık adına denetimler, sorumluluk bölgesi esasına göre Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü merkez teşkilatına bağlı ilgili birimler tarafından yerine getirilir.",
+     "deger": "bakan/bakanlık / komutan / emniyet / jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.26
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": "Özel güvenlik izni için yapılan müracaatlar en geç on iş günü içinde neticelendirilir.",
+     "deger": "on iş günü",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "37",
+     "tur": "SÜRE",
+     "bilgi": "Yazılı sınavın yeri, tarihi, başvuru süresi, başvuru sırasında istenecek belgeler ve diğer hususlar en az on beş gün önceden Komisyon tarafından belirlenerek ilan edilir.",
+     "deger": "onbeş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.53
+    },
+    {
+     "madde": "43",
+     "tur": "SÜRE",
+     "bilgi": ") ilgili kişi ve kuruluşa en az yedi gün süre verilerek savunması istenir.",
+     "deger": "yedi gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": ") Özel güvenlik izni verilen kişilerde veya yerlerde istihdam edilen özel güvenlik personelinin listesi ve özel güvenlik mali sorumluluk sigortası poliçelerinin birer sureti, personelin göreve başladığı tarihten itibaren on beş gün içinde, geçici veya acil özel güvenlik izinlerinde ise müracaat sırasında valiliğe verilir.",
+     "deger": "onbeş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "33",
+     "tur": "SAYI",
+     "bilgi": "Kursiyerlerin atış eğitiminde başarılı kabul edilmesi için 25 adet fişeğin en az 15 adedinin hedefe isabet etmesi gerekir.",
+     "deger": "25 adet",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.36
+    },
+    {
+     "madde": "38",
+     "tur": "SAYI",
+     "bilgi": ") Bakanlıkça belirlenen mesafeden ve 5 adet fişek üzerinden yaptırılacak atış ile adayların atış becerisi ölçülür.",
+     "deger": "5 adet",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "5199 sayılı Hayvanları Koruma Kanunu",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 1,
+   "kanitli": 1,
+   "turDagilimi": {
+    "MAKAM": 1
+   },
+   "bilgiler": [
+    {
+     "madde": "10",
+     "tur": "MAKAM",
+     "bilgi": ") Ev hayvanı satış yerlerinde kedi ve köpek bulundurulamaz, ancak buralarda Bakanlıkça izin verilen ev hayvanı üretim yerlerindeki kedi ve köpeklerin satışı yapılabilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.54
+    }
+   ]
+  },
+  {
+   "kanun": "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun",
+   "sinavSorusu": 4,
+   "bilgiSayisi": 8,
+   "kanitli": 3,
+   "turDagilimi": {
+    "CEZA": 2,
+    "SÜRE": 1,
+    "MAKAM": 1,
+    "SAYI": 4
+   },
+   "bilgiler": [
+    {
+     "madde": "8",
+     "tur": "CEZA",
+     "bilgi": ") [tesis kuran ve işletenler] bir yıldan üç yıla kadar hapis ve beşbin günden onbin güne kadar adlî para cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 1
+    },
+    {
+     "madde": "8",
+     "tur": "CEZA",
+     "bilgi": "tütün işleyenler veya tütün mamulleri, makaron, yaprak sigara kâğıdı, sigara filtresi, etil alkol, metanol ya da alkollü içki üretmek üzere fabrika, tesis veya imalathane kuran ve işletenler bir yıldan üç yıla kadar hapis ve beşbin günden onbin güne kadar adlî para cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.96
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": "(a), (b), (d), (e), (f), (j), (k), (1), (m), (n), (o), (p), (r) ve (s) bentlerinde sayılan fiillerin, ilk fiilin işlenmesinden sonraki beş yıl içinde üçüncü defa işlenmesi halinde ise belgelerin iptaline karar verilir.",
+     "deger": "beş yıl",
+     "kanit": "KANITLI",
+     "ortusme": 0
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "f) Gıda, Tarım ve Hayvancılık Bakanlığından belge almamış kişilerden ürün alan veya bu kişilere ürün satan ya da belgesinde belirtilen işyeri dışında satış yapan toptan veya perakende tütün mamulü, makaron, yaprak sigara kâğıdı, etil alkol, metanol veya alkollü içki satıcıları ya da açık içki satıcılarına bin Yeni Türk Lirasından onbin Yeni Türk Lirasına kadar idarî para cezası verilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.52
+    },
+    {
+     "madde": "8",
+     "tur": "SAYI",
+     "bilgi": "50 kilograma kadar (50 kilogram dâhil) olması halinde 250 TL.",
+     "deger": "50 kilogram / 250 TL",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "8",
+     "tur": "SAYI",
+     "bilgi": "50 kilogramdan 100 kilograma kadar (100 kilogram dâhil) olması halinde 500 TL.",
+     "deger": "100 kilogram / 500 TL",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "8",
+     "tur": "SAYI",
+     "bilgi": "100 kilogramdan 250 kilograma kadar (250 kilogram dâhil) olması halinde 1.",
+     "deger": "250 kilogram",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "8",
+     "tur": "SAYI",
+     "bilgi": "250 kilogramdan 500 kilograma kadar (500 kilogram dâhil) olması halinde 3.",
+     "deger": "500 kilogram",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    }
+   ]
+  },
+  {
+   "kanun": "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
+   "sinavSorusu": 3,
+   "bilgiSayisi": 6,
+   "kanitli": 3,
+   "turDagilimi": {
+    "MAKAM": 3,
+    "SÜRE": 1,
+    "CEZA": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "21",
+     "tur": "MAKAM",
+     "bilgi": "Müsaderesine karar verilen uyuşturucu maddeler, valinin görevlendireceği bir yetkilinin başkanlığındaki ve il savcısının veya yardımcısının nezaretçi olarak katıldığı heyet huzurunda imha edilir.",
+     "deger": "cumhuriyet savcısı",
+     "kanit": "KANITLI",
+     "ortusme": 0.29
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": "Gerek bunlar, gerekse izinsiz imal edilen veya ihraç edilmek istenirken Gümrük ve Ticaret Bakanlığı tarafından zaptolunanlar sahipleri belli olsun veya olmasın suç delili olarak Cumhuriyet Savcılığınca muhafaza altına alınırlar.",
+     "deger": "cumhuriyet savcısı / bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.21
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": "Uyuşturucu maddelerin kesin olarak raporları alındıktan sonra, yönetmelikte belirlenen usule uygun olarak alınacak örneklerin saklanması kaydıyla müsaderesine sulh ceza hâkimliğince soruşturmanın her safhasında karar verilir.",
+     "deger": "hâkim / sulh ceza hâkimi",
+     "kanit": "KANITLI",
+     "ortusme": 0.19
+    },
+    {
+     "madde": "23",
+     "tur": "SÜRE",
+     "bilgi": "İzin belgesi almadan ya da izin belgesi almasına rağmen bilerek belgesinde belirtilen alandan fazla yerde veya izin belgesinde kayıtlı yerden başka yerde kenevir ekimi yapan kişi, elli günden az olmamak üzere adlî para cezası ile cezalandırılır.",
+     "deger": "elli gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "23",
+     "tur": "CEZA",
+     "bilgi": "Münhasıran kendi kullanımı için ihtiyaç duyduğu esrarı elde etmek amacıyla kenevir ekimi yapan kişi bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.",
+     "deger": "bir yıldan üç yıla kadar hapis",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "23",
+     "tur": "CEZA",
+     "bilgi": "Esrar elde etmek amacıyla kenevir ekimi yapan kişi dört yıldan on iki yıla kadar hapis ve beşyüz günden onbin güne kadar adlî para cezası ile cezalandırılır.",
+     "deger": "beşyüz günden onbin güne kadar adlî para",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.43
+    }
+   ]
+  },
+  {
+   "kanun": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
+   "sinavSorusu": 3,
+   "bilgiSayisi": 7,
+   "kanitli": 2,
+   "turDagilimi": {
+    "SÜRE": 3,
+    "CEZA": 1,
+    "MAKAM": 3
+   },
+   "bilgiler": [
+    {
+     "madde": "4",
+     "tur": "SÜRE",
+     "bilgi": "Ancak, tecavüz veya müdahalenin oluşundan itibaren bir yıl geçtikten sonra bu makamlara başvuruda bulunulamaz.",
+     "deger": "bir yıl",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "15",
+     "tur": "CEZA",
+     "bilgi": "şayet taşınmaz mal diğer tüzelkişilere veya gerçek kişilere ait ise üç aydan bir yıla kadar hapis cezasına hükmolunur.",
+     "deger": "üç aydan bir yıla kadar hapis",
+     "kanit": "KANITLI",
+     "ortusme": 0.09
+    },
+    {
+     "madde": "9",
+     "tur": "SÜRE",
+     "bilgi": "Karar gereğinin, kararın infaz memuruna geldiği tarihten itibaren en geç 5 gün içinde yerine getirilmesi zorunludur.",
+     "deger": "5 gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.75
+    },
+    {
+     "madde": "4",
+     "tur": "SÜRE",
+     "bilgi": "tecavüz veya müdahalenin yapıldığını öğrendikleri tarihten altmış gün içinde, idari makama başvuruda bulunmaları gerekir.",
+     "deger": "altmış gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": "Mahkeme kararıyla kendisine teslim edilmeksizin aynı taşınmaz mala ikinci defa yapılan tecavüz veya müdahale, (.",
+     "deger": "mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.4
+    },
+    {
+     "madde": "5",
+     "tur": "MAKAM",
+     "bilgi": "Taşınmaz mal, aynı il'e bağlı ilçelerarası sınır anlaşmazlığı bulunan bir yerde ise yetkili kaymakamlığı vali;",
+     "deger": "vali / kaymakam",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "2",
+     "tur": "MAKAM",
+     "bilgi": "taşınmaz mal merkez ilçe sınırları içinde ise, il valisi veya görevlendireceği vali yardımcısı, diğer ilçelerde ise kaymakamlar tarafından bu tecavüz veya müdahalenin önlenmesine karar verilir ve taşınmaz mal yerinde zilyedine teslim edilir.",
+     "deger": "vali / kaymakam",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.3
+    }
+   ]
+  },
+  {
+   "kanun": "1774 sayılı Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik",
+   "sinavSorusu": 2,
+   "bilgiSayisi": 4,
+   "kanitli": 1,
+   "turDagilimi": {
+    "MAKAM": 2,
+    "SÜRE": 2
+   },
+   "bilgiler": [
+    {
+     "madde": "3",
+     "tur": "MAKAM",
+     "bilgi": "a) Aile reisi: Eşlerden biri, eşlerin yerleşim yerinin ayrı olması halinde ayrı ayrı eşleri ya da aynı konutu paylaşan aile fertlerinden yaşça en büyük olanı, b) En yakın yetkili genel kolluk örgütü: Tesis, iş yeri veya konutun bulunduğu yerin sürekli olarak genel güvenliğini sağlayan polis veya jandarma karakollarını, (.",
+     "deger": "jandarma",
+     "kanit": "KANITLI",
+     "ortusme": 0.27
+    },
+    {
+     "madde": "8",
+     "tur": "SÜRE",
+     "bilgi": "buralarda sürekli veya geçici olarak çalıştırılanların kimlikleri, iki örnek ÇALIŞANLARA AİT KİMLİK BİLDİRME BELGESİ (Form: 2) ne yazılır ve (a) bendi kapsamında olanların belgesi 24 saat, (b) bendi kapsamında olanların belgesi üç gün içinde en yakın yetkili genel kolluk örgütüne verilir.",
+     "deger": "24 saat / üç gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.55
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": "Sorumlu işleticinin değişmesi halinde, tesisin sahip, kanuni temsilci veya kiracısı tarafından, 24 saat içinde, yeni işleticiye ait kimlik bildirme belgesi, ayrılan işleticinin adı ve ayrılış tarihi de yazılarak yukarıdaki maddede belirtilen yönteme göre en yakın yetkili genel kolluk örgütüne verilir.",
+     "deger": "24 saat",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.43
+    },
+    {
+     "madde": "24",
+     "tur": "MAKAM",
+     "bilgi": "24) \"Yetkili resmi örgütler dışında, mahkeme kararı olmadıkça, hiç kimsenin konaklama belgelerinden ve konaklama yeri kayıt defterlerinden yararlanmasına müsaade edilemez.",
+     "deger": "mahkeme",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    }
+   ]
+  },
+  {
+   "kanun": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik",
+   "sinavSorusu": 2,
+   "bilgiSayisi": 19,
+   "kanitli": 16,
+   "turDagilimi": {
+    "MAKAM": 16,
+    "SÜRE": 3
+   },
+   "bilgiler": [
+    {
+     "madde": "12",
+     "tur": "MAKAM",
+     "bilgi": ") Aile ve Sosyal Politikalar Bakanlığı Çocuk Hizmetleri Genel Müdürlüğü ve yerel yönetimler tarafından yerine getirilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.75
+    },
+    {
+     "madde": "15",
+     "tur": "MAKAM",
+     "bilgi": ") Aile ve Sosyal Politikalar Bakanlığı il ve ilçe müdürlükleri, Millî Eğitim Bakanlığı ve yerel yönetimler tarafından yerine getirilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.73
+    },
+    {
+     "madde": "13",
+     "tur": "MAKAM",
+     "bilgi": ") (8) Eğitim tedbiri, Millî Eğitim Bakanlığı ile Çalışma ve Sosyal Güvenlik Bakanlığının ilgili birimleri tarafından yerine getirilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "16",
+     "tur": "MAKAM",
+     "bilgi": ") (15) Sağlık tedbiri, Sağlık Bakanlığı tarafından yerine getirilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "20",
+     "tur": "MAKAM",
+     "bilgi": ") Aile ve Sosyal Politikalar Bakanlığı il müdürlüğü tarafından yürütülür.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.67
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": ") (15) Çocuk hâkimi veya mahkeme, hakkında koruyucu ve destekleyici tedbir kararı verdiği çocuğun denetim altına alınmasına da karar verebilir.",
+     "deger": "hâkim / mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 0.6
+    },
+    {
+     "madde": "22",
+     "tur": "MAKAM",
+     "bilgi": "Mahkeme veya çocuk hâkimi tedbir kararının yerine getirilmesi için çocuğun bulunması ve ilgili kuruma tesliminin kolluğun çocuk birimi tarafından sağlanmasına karar verebilir.",
+     "deger": "hâkim / mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 0.56
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "Gerektiğinde koruyucu ve destekleyici tedbir kararını istemeye yetkili olan çocuğun anası, babası, vasisi, bakım ve gözetiminden sorumlu kimse ile Aile ve Sosyal Politikalar Bakanlığı Çocuk Hizmetleri Genel Müdürlüğü temsilcileri de dinlenebilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.46
+    },
+    {
+     "madde": "17",
+     "tur": "MAKAM",
+     "bilgi": ") yapılan her türlü yardım ve destek talepleri Millî Eğitim Bakanlığı, İçişleri Bakanlığı, Sağlık Bakanlığı, ilgili diğer bakanlıklar ile kamu kurum ve kuruluşları tarafından geciktirilmeksizin yerine getirilir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.39
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": "Bu karar acele hâllerde, çocuğun bulunduğu yer hâkimi tarafından da verilebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": ") (12) Mahkeme veya çocuk hâkimi bir veya birden fazla tedbire karar verebilir.",
+     "deger": "hâkim / mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "8",
+     "tur": "MAKAM",
+     "bilgi": "(12) Mahkeme veya çocuk hâkimi bir veya birden fazla tedbire karar verebilir.",
+     "deger": "hâkim / mahkeme",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "14",
+     "tur": "MAKAM",
+     "bilgi": ") Aile ve Sosyal Politikalar Bakanlığı il ve ilçe müdürlükleri tarafından çocuğun resmî veya özel bakım yurduna yerleştirilmesi ya da koruyucu aile hizmetlerinden veya Kurumun bu kapsamda yürüttüğü hizmet modellerinden yararlandırılmasına yönelik tedbirdir.",
+     "deger": "bakan/bakanlık",
+     "kanit": "KANITLI",
+     "ortusme": 0.35
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": "Hâkim, çocuğun gelişimini göz önünde bulundurarak koruyucu ve destekleyici tedbirin kaldırılmasına karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.27
+    },
+    {
+     "madde": "11",
+     "tur": "MAKAM",
+     "bilgi": "Ancak hâkim, eğitim ve öğrenimine devam edebilmesi için ve çocuğun rızası alınmak suretiyle tedbirin uygulanmasına belli bir süre daha devam edilmesine karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.19
+    },
+    {
+     "madde": "7",
+     "tur": "MAKAM",
+     "bilgi": "Hâkim, çocuğun bulunduğu yerin gizli tutulmasına ve gerektiğinde kişisel ilişkinin tesisine karar verebilir.",
+     "deger": "hâkim",
+     "kanit": "KANITLI",
+     "ortusme": 0.08
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": "Acil korunma kararının alınması için Kurum tarafından çocuğun Kuruma geldiği tarihten itibaren en geç beş gün içinde çocuk hâkimine müracaat edilir.",
+     "deger": "beş gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.87
+    },
+    {
+     "madde": "18",
+     "tur": "SÜRE",
+     "bilgi": "Bu plân çocuğun teslim edildiği ya da teslim alındığı tarihten itibaren en geç on gün içerisinde mahkeme veya çocuk hâkiminin onayına sunulur.",
+     "deger": "on gün / on ay",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.5
+    },
+    {
+     "madde": "7",
+     "tur": "SÜRE",
+     "bilgi": "Hâkim tarafından, üç gün içinde talep hakkında karar verilir.",
+     "deger": "üç gün",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.29
+    }
+   ]
+  },
+  {
+   "kanun": "6831 sayılı Orman Kanunu",
+   "sinavSorusu": 2,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "4915 sayılı Kara Avcılığı Kanunu",
+   "sinavSorusu": 2,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "5271 sayılı Ceza Muhakemesi Kanunu",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 3,
+   "kanitli": 0,
+   "turDagilimi": {
+    "MAKAM": 3
+   },
+   "bilgiler": [
+    {
+     "madde": "140",
+     "tur": "MAKAM",
+     "bilgi": "(2) İzlemeye hâkim, gecikmesinde sakınca bulunan hâllerde savcı karar verir;",
+     "deger": "hâkim / cumhuriyet savcısı",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.44
+    },
+    {
+     "madde": "83",
+     "tur": "MAKAM",
+     "bilgi": "hâkim veya mahkeme veya naip hâkim ya da istinabe olunan hâkim veya mahkeme ile gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısı tarafından yapılır.",
+     "deger": "hâkim / mahkeme / cumhuriyet savcısı",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.33
+    },
+    {
+     "madde": "75",
+     "tur": "MAKAM",
+     "bilgi": "Cumhuriyet savcısı veya mağdurun istemiyle ya da re'sen hâkim veya mahkeme, gecikmesinde sakınca bulunan hâllerde Cumhuriyet savcısı tarafından karar verilebilir.",
+     "deger": "hâkim / mahkeme / cumhuriyet savcısı",
+     "kanit": "İLGİLİ",
+     "ortusme": 0.31
+    }
+   ]
+  },
+  {
+   "kanun": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "Kum, Çakıl ve Benzeri Maddelerin Alınması, İşletilmesi ve Kontrolü Yönetmeliği",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "1380 sayılı Su Ürünleri Kanunu",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 0,
+   "kanitli": 0,
+   "turDagilimi": {},
+   "bilgiler": []
+  },
+  {
+   "kanun": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik",
+   "sinavSorusu": 1,
+   "bilgiSayisi": 3,
+   "kanitli": 3,
+   "turDagilimi": {
+    "MAKAM": 3
+   },
+   "bilgiler": [
+    {
+     "madde": "32",
+     "tur": "MAKAM",
+     "bilgi": ") Umuma açık istirahat ve eğlence yerinin açılması ve faaliyette bulunmasına belediye sınırları ve mücavir alan sınırları içinde belediye, bu alanlar dışında il özel idaresi tarafından izin verilir.",
+     "deger": "belediye",
+     "kanit": "KANITLI",
+     "ortusme": 0.38
+    },
+    {
+     "madde": "29",
+     "tur": "MAKAM",
+     "bilgi": "Madde 29- İçkili yer bölgesi, mülkî idare amirinin genel güvenlik ve asayiş durumu hakkındaki görüşü doğrultusunda belediye sınırları ve mücavir alanlar içinde belediye meclisi, bu sınırlar dışında il genel meclisi tarafından tespit edilir.",
+     "deger": "belediye",
+     "kanit": "KANITLI",
+     "ortusme": 0.3
+    },
+    {
+     "madde": "33",
+     "tur": "MAKAM",
+     "bilgi": "Madde 33- Umuma açık istirahat ve eğlence yerlerinin açılış ve kapanış saatleri belediye sınırları içinde belediye encümeni, bu yerler dışında il encümeni tarafından tespit edilir.",
+     "deger": "belediye",
+     "kanit": "KANITLI",
+     "ortusme": 0.24
+    }
+   ]
+  }
+ ]
+}
