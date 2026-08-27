@@ -2,7 +2,41 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 26 Ağustos 2026 (iade denetimi OTOMATİK — her gece pg_cron; abonelik yenilemesi düzeltildi)
+> Son güncelleme: 27 Ağustos 2026 (destek/hata bildirimleri: kopuk madde atifi 82 soru + bayat disiplin sorusu)
+>
+> ### ▶ 27 Ağu — 🧾 DESTEK + HATA BİLDİRİMLERİ TEMİZLENDİ
+> **Başkan:** *"2 hata destek bildirimi var bak bakalım"* → kuyrukta 9 soru hatası + 2 geri
+> bildirim + 1 destek talebi birikmişti; hepsi resmî mevzuat metniyle tek tek denetlendi.
+> **1) Kopuk madde atıfı — ÜRETEÇ HATASI (Bilal Ceylan yakaladı).** *"…hangisi BU MADDEDE yer
+> almaz?"* diyen soru hangi maddeyi kastettiğini söylemiyordu. Kök sebep: `soru-standart.mjs`
+> standartlaştırması, madde numarası ezberi doğmasın diye kökten madde atfını SÖKÜYOR — geri
+> atıflı sorularda soru cevaplanamaz kalıyordu. Tarama: **82 soru (36 benzersiz)**.
+> → `geriAtifAc/kaynakMadde/siraEki` eklendi: tüm kapılardan SONRA kalan "bu maddede" atıfları
+> `kaynak` alanındaki numarayla açılır ("19 uncu maddede"), mevzuat yazım geleneğine göre sıra
+> eki (19 uncu · 4 üncü · 47 nci · 136 ncı). **Çoğul "bu maddeler" KASTEN dışarıda** — orada
+> madde = kimyasal madde (5237 m.188, Gıda Hijyeni Yön.). 5 bankada 82 kök yerinde düzeltildi
+> (şık/cevap/sıra dokunulmadı). Kopuk atıf taraması **82 → 0**.
+> **2) Bayat disiplin sorusu (Halil İbrahim Ulukaplan).** 06-D-154'ün cevabı "Emniyet Teşkilatı
+> disiplin mevzuatı", 2803 Geçici m.4/a'ya dayanıyordu; o özel kanun 2018'de çıktı (**7068**) ve
+> geçici hüküm işlevini yitirdi — bugünkü 2803 metninde Geçici Madde 4 YOK. Soru silinmedi,
+> yürürlükteki hâline çevrildi (2803 m.15/a + 7068 m.1-2). Fabrika kaynağı da güncellendi.
+> **3) Haksız çıkan 7 bildirim** metinden teyit edildi (5442 m.11 15 gün · 5442 m.66 3 ay-1 yıl ·
+> 5816 m.2 iki kişi · 3713 m.7 3-5 yıl · 5326 m.21/3 on yıl · Hizmet Esasları m.15/8 · 4678).
+> **4) Ahmet Çil "ses gidiyor":** 1512 sesin TAMAMI ffprobe ile tarandı, **kesik dosya YOK**.
+> Erişim kaydı gösterdi: TCK'yı indirmemiş, görselleri tek tek akıtıyor → ses de akıyor, bağlantı
+> zayıflayınca düşüyor. Kendisine "(yeniden) indir" reçetesi + 1.0.41→1.0.46 hatırlatması yazıldı.
+> **5) Simge Yiğit "7 sütun diyor 4 var":** haklıydı ama 24 Ağu'da düzeltilmişti (yeni görselde
+> 7 etiketli sütun; bayat_icerik listesi sunucuda).
+> **6) Destek talebi "Atatürk İlkeleri var mı?":** yok. 2300 çıkmış soru tarandı → saf tarih/ilke
+> **%1,5 (100 soruda 1-2)**. Başkan kararı: "uygulama yeni + sınava az kaldı, ilerleyen günlerde
+> eklenecek" diye cevaplandı.
+> **Gönderilenler:** destek talebine admin cevabı (durum→cevaplandı) · Ahmet Çil'e kişiye özel
+> duyuru+push · Bilal Ceylan'a "82 soru düzeltildi" duyuru+push · Ulukaplan'a "6 bildirim
+> incelendi, 1'i haklı + 5 doğru cevabın özeti" duyuru (push tokeni yok).
+> **Commit:** `45ce2e4` · **AÇIK İŞ: bu 82 soruluk düzeltme henüz YAYINLANMADI (OTA gerekiyor).**
+> **DERS (tekrar yandı):** kabuk heredoc'u ters bölüyü yiyor — python/bash ile yazılan betikte
+> `\b` GERÇEK backspace karakterine döndü, regex sessizce hiçbir şeyle eşleşmedi. Kaçış içeren
+> betikleri Write ile yaz, ya da `String.fromCharCode(92)` kullan.
 >
 > ### ▶ 26 Ağu — 💳 ABONELİK YENİLEMESİ DÜZELTİLDİ + ÜYELİK DENETÇİSİ
 > **Başkan sordu:** *"biri satın alıp Apple'dan iptal etse premium düşüyor mu, hiç iptal eden var mı?"*
