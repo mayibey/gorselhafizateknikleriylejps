@@ -14,6 +14,14 @@
 import fs from 'node:fs';
 
 const veri = JSON.parse(fs.readFileSync('scripts/veri/kanun-bilgi-listesi.json', 'utf8'));
+
+// ⛔ SIZINTI SÜZGECİ (27 Ağu, başkan yakaladı): TCK kartının 1. panelinde "Ses olayları en
+// fazla hangi cümlede?" çıktı — o bir TÜRKÇE sorusu. Kitapçıklardaki genel kültür bölümü ve
+// hatta SINAV KURALLARI metni, zayıf benzerlikle kanunlara yapışmış (497 bilginin 30'u).
+// Hukuki işaret taşımayan ve sınav yönergesi olan metinler artık görsele GİRMEZ.
+const HUKUK = /(kanun|yönetmelik|madde|khk|kararname|ceza|hukuk|jandarma|kolluk|suç|görev|yetki|amir|hâkim|hakim|savcı|vali|kaymakam|disiplin|tutanak|arama|elkoyma|el koyma|gözaltı|trafik|silah|ruhsat|tebligat|kabahat|terör|kaçakçılık|çevre|orman|nüfus|kimlik|pasaport|memur|personel|sözleşme|izin|rütbe|teşkilat|komutan)/i;
+const YONERGE = /(sınav salonu|cevap kâğıd|cevap kagid|soru kitapçığ|adaylar sınava|dışarı çıkarmanız|kurallara uyma|sınav esnasında|bulundurduğ)/i;
+const temizMi = (b) => HUKUK.test(b.soru) && !YONERGE.test(b.soru) && b.soru.length > 40;
 const ONCELIK = { 'SÜRE': 0, 'SAYI/EŞİK': 1, 'MAKAM/KİŞİ': 2, 'CEZA/YAPTIRIM': 3, 'GÖREV/YETKİ': 4, 'TANIM': 5, 'KAPSAM/UNSUR': 6 };
 const PANEL = 5;
 
@@ -37,7 +45,7 @@ for (const k of veri.kanunlar) {
   // Olumsuz sorular görsele UYGUN DEĞİL: doğru cevap "yanlış olan ifade", çizince ters
   // ezber riski var. Yalnız düz bilgiler alınır.
   const uygun = k.bilgiler
-    .filter((b) => b.bicim !== 'OLUMSUZ')
+    .filter((b) => b.bicim !== 'OLUMSUZ' && temizMi(b))
     .sort((a, b) => (ONCELIK[a.tur] ?? 9) - (ONCELIK[b.tur] ?? 9))
     .map(cekirdek);
   if (uygun.length < 3) continue;
@@ -55,27 +63,69 @@ for (const k of veri.kanunlar) {
       kanun: k.kanun,
       bilgiSayisi: grup.length,
       istem:
-`Türk Jandarma/Sahil Güvenlik sınavına (JSPS) hazırlananlar için TEK BİR GÖRSEL hafıza kartı çiz.
+`Sen bir HAFIZA TEKNİKLERİ uzmanısın. Türk Jandarma/Sahil Güvenlik sınavına (JSPS) çalışanlar için,
+BİR KEZ BAKINCA BİR DAHA UNUTULMAYACAK tek bir görsel hafıza kartı çiz.
 
 KANUN: ${k.kanun}
 
-Aşağıda, gerçek sınavda çıkmış ${grup.length} bilgi var. Görselde bu ${grup.length} bilgi ${grup.length} ayrı DİKEY PANELDE, soldan sağa sıralı dursun.
+Aşağıdaki ${grup.length} bilgi, ${grup.length} ayrı dikey panelde soldan sağa yer alacak:
 
 ${bilgiMetni}
 
-GÖRSEL KURALLARI:
-- Üstte koyu lacivert şerit içinde beyaz büyük başlık: "${k.kanun.toLocaleUpperCase('tr')}"
-- Her panelin ÜSTÜNDE: renkli daire içinde panel numarası + o bilginin kısa sorusu (küçük punto) + ALTINDA cevabın kilit değeri ÇOK BÜYÜK ve RENKLİ yazıyla.
-- Her panelde, o bilgiyi hatırlatan KARİKATÜR TARZI, abartılı ama ANLAMLI bir sahne olsun.
-- Metafor kuralı: çağrışım bilgiyi TAŞIMALI, rastgele komiklik olmamalı. Örnek doğru mantık: "yalan söyleyen kişi" → burnu uzayan Pinokyo; "5 yıl" → havada açılmış 5 parmak; "48 saat" → üstünde 48 yazan araç. Sayı varsa sahnede o sayı GÖRÜNSÜN (parmak, takvim yaprağı, plaka, rozet).
-- Makam/kişi bilgisi varsa o makamı ÜNİFORMASIYLA/simgesiyle ayırt et (jandarma bereli/lacivert üniformalı, hâkim cübbeli, vali takım elbiseli, komutan apoletli). Yanlış makamla karıştırılmasın diye her biri belirgin farklı görünsün.
-- Her panelin ALTINDA beyaz kutu içinde tek cümlelik hatırlatma: sahnedeki unsur hangi bilgiyi temsil ediyor.
-- Türkiye bağlamı: Türk jandarma üniforması (lacivert), Türk bayrağı, Türkçe metin.
-- TÜM YAZILAR TÜRKÇE ve DOĞRU YAZILMIŞ olmalı; harf hatası olmasın. Türkçe karakterler (ç, ğ, ı, ö, ş, ü) doğru çıksın.
-- Sayılar ve makam adları yukarıdaki bilgilerle BİREBİR aynı olsun; kendinden bilgi ekleme, değiştirme.
-- Gerçekçi dijital illüstrasyon, canlı renkler, yüksek kontrast, okunaklı; yatay (geniş) format.
+═══ EN ÖNEMLİ KURAL: SAYIYI YAZMA, SAYDIR ═══
+Bir sayıyı hatırlatmanın yolu onu takvime yazmak DEĞİLDİR. Takvimde "2 YIL" yazması hiç kimseye
+hiçbir şey hatırlatmaz. Sayı, sahnedeki NESNENİN KENDİSİNDEN sayılarak çıkmalı:
+  • 5 yıl  → havada açılmış EL, beş parmak; beşi de belirgin
+  • 3 gün  → üç kişi / üç mum / üç yıldız / üç kapı
+  • 2 yıl  → İKİZLER, iki kanat, çift namlu
+  • 15 gün → bir elin beş parmağı + üç kişi ... gibi sahnede SAYILABİLEN unsurlar
+  • 20 yıl → yirmi parmaklık hapis penceresi, sayılabilir parmaklıklar
+  • 48 saat → üstünde 48 yazan bir ARAÇ PLAKASI (nesneyle bütünleşmiş, ayrı tabela değil)
+İzleyici sahneye bakınca sayıyı SAYARAK bulabilmeli.
+BÜYÜK SAYILARDA GRUPLA: 15 → ÜÇ açık el (3×5 parmak), 20 → DÖRT açık el, 30 → altı el ya da
+üç sıra on'luk düzen. Tek tek saymak zorunda kalınacak kalabalık YAPMA; grup net görünsün.
+
+═══ TÜRKÇE KELİME OYUNU KULLAN (çok güçlü) ═══
+Türkçede bir kelime iki anlama geliyorsa görselde İKİNCİ anlamı çiz — akılda böyle kalır:
+  • "bir AY" → gökyüzünde tek bir AY (hilal). "üç ay" → üç hilal.
+  • "VALİ" → elinde VALİZ taşıyan takım elbiseli adam
+  • "MÜSADERE" → devasa bir SANDIK ağzı
+  • "kısa süreli DURDURMA" → dev bir DUR levhası önünde çakılıp kalan personel
+Böyle bir bağ kurabildiğin her bilgide MUTLAKA kullan.
+
+═══ HER PANEL FARKLI MEKÂNDA GEÇSİN ═══
+Beş panelin beşi de hapishane/adliye olmasın — bakan kişi panelleri birbirinden ayırt
+edemezse hafıza çalışmaz. Her panele KENDİ mekânını ver (gökyüzü, çöl, deniz, dağ başı,
+karakol avlusu, köy meydanı, otoyol, ofis…) ve zemin rengini değiştir.
+
+═══ KESİNLİKLE YASAK ═══
+✗ Takvim yaprağı üstünde yazan sayı
+✗ Duvar saati, kum saati
+✗ Sayının yazdığı düz tabela/levha/pano/kitapçık
+✗ Elinde belge tutan adliye/hâkim/masa başı stok sahnesi
+✗ Sadece "adam duruyor, yanında sayı yazıyor" düzeni
+Bunlar hafıza kartı değil, etikettir. Kullanma.
+
+═══ SAHNE KURALI ═══
+Her panelde ABARTILI, İMKÂNSIZ, akılda kalıcı TEK bir olay olsun — ama olay bilgiyi TAŞISIN,
+rastgele komiklik olmasın. Doğru mantık örnekleri:
+  • "yalan söylemek" → burnu uzayıp duvarı delen kişi (Pinokyo)
+  • "izinden geri çağırma" → tatildeki askeri kementle çeken dev bir el
+  • "el koyma" → eşyayı yutan kocaman bir kilit ağzı
+Kişi/makam kimse OYNAYAN O OLSUN: hâkim cübbeli, vali takım elbiseli, jandarma lacivert
+üniformalı ve bereli, komutan apoletli — birbirine karışmasın, bakınca hangisi olduğu anlaşılsın.
+
+═══ DÜZEN ═══
+- Üstte koyu lacivert şerit, beyaz büyük başlık: "${k.kanun.toLocaleUpperCase('tr')}"
+- Her panelin üstünde: renkli daire içinde numara + kısa soru (küçük punto) + cevabın kilit
+  değeri BÜYÜK ve renkli.
+- Her panelin altında beyaz kutuda tek cümle: "Sahnedeki X = bilgi Y" şeklinde çağrışımı açıkla.
+- Canlı renkler, yüksek kontrast, karikatürize ama kaliteli dijital illüstrasyon; yatay format.
+- Tüm yazılar TÜRKÇE ve hatasız; Türkçe karakterler (ç, ğ, ı, ö, ş, ü) doğru çıksın.
+- Sayılar ve makam adları yukarıdaki bilgilerle BİREBİR aynı; kendinden bilgi ekleme.
 
 Sadece görseli üret, açıklama yazma.`,
+
     });
   }
 }
