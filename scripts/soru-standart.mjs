@@ -122,6 +122,48 @@ export function kunye(ad) {
   return t + "'e göre";
 }
 
+// --- GERİ ATIF AÇMA (27 Ağu 2026) ---
+// Standartlaştırma, ezber sorusu doğmasın diye kökten madde numarasını SÖKÜYOR. Ama soru
+// "…hangisi BU MADDEDE yer almaz?" diyorsa numara sökülünce hangi maddeden bahsettiği
+// kalmıyor ve soru cevaplanamaz hâle geliyor. (Bilal Ceylan bildirdi; taramada 36 soru.)
+// Çözüm: gate'lerden SONRA, kalan geri atıflar `kaynak` alanındaki madde numarasıyla açılır.
+const SIRA_BIRLER = { 1: 'inci', 2: 'nci', 3: 'üncü', 4: 'üncü', 5: 'inci', 6: 'ncı', 7: 'nci', 8: 'inci', 9: 'uncu' };
+const SIRA_ONLAR = { 10: 'uncu', 20: 'nci', 30: 'uncu', 40: 'ıncı', 50: 'nci', 60: 'ıncı', 70: 'inci', 80: 'inci', 90: 'ıncı' };
+
+/** Mevzuat yazım geleneğine göre sıra eki: 19 → "uncu", 4 → "üncü", 47 → "nci". */
+export function siraEki(n) {
+  const birler = n % 10;
+  if (birler !== 0) return SIRA_BIRLER[birler];
+  return SIRA_ONLAR[n % 100] ?? 'üncü';
+}
+
+/** kaynak alanından madde: "2803 m.19" → {no:19} · "5543 Geçici m.2" → {no:2, tur:'geçici'} */
+export function kaynakMadde(kaynak) {
+  const t = String(kaynak ?? '');
+  const m = t.match(/(ek|geçici)?\s*(?:m\.|md\.|madde)\s*(\d{1,3})/i);
+  if (!m) return null;
+  const tur = m[1] ? m[1].toLocaleLowerCase('tr') : null;
+  return { no: Number(m[2]), tur };
+}
+
+const GERI_ATIF = /\b(bu|söz konusu|anılan|ilgili|adı geçen)\s+madde(sindeki|sinde|sine|ndeki|deki|de|den|nin|ne|ye|yi|si)?\b/gi;
+
+/**
+ * "bu maddede" → "19 uncu maddede". Numara bulunamazsa köke DOKUNULMAZ (uydurma yapmaz).
+ */
+export function geriAtifAc(soru, kaynak) {
+  const s = String(soru);
+  if (!GERI_ATIF.test(s)) { GERI_ATIF.lastIndex = 0; return s; }
+  GERI_ATIF.lastIndex = 0;
+  const md = kaynakMadde(kaynak);
+  if (!md) return s;
+  const onek = md.tur ? `${md.tur} ` : '';
+  const acik = `${onek}${md.no} ${siraEki(md.no)} madde`;
+  return s.replace(GERI_ATIF, (_t, _b, ek) => acik + (ek ? ek : ''))
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
 // --- desenler ---
 // "4. maddesine" biçimi de madde atfıdır — ilk sürümde kaçmıştı, künye iki kez yazılıyordu.
 const MADDE = /\bm\.\s?\d|\bmd\.\s?\d|\bmadde\s?\d|\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*madde|\d+\s*\.\s*madde|\bek\s+madde\s*\d/i;
@@ -476,6 +518,8 @@ export function denetle(q, lawId) {
   if (ezberSorusuMu({ ...q, soru: nihai })) return { at: 'bent/madde numarası ezberi' };
   // Son kapı: düzeltmeden sonra hâlâ madde atfı kaldıysa soru standarda GİRMEZ.
   if (MADDE.test(nihai)) return { at: 'madde atfı sökülemedi' };
+  // Gate'lerden SONRA: kökte kalan "bu maddede" geri atıfları açık madde numarasına çevrilir.
+  nihai = geriAtifAc(nihai, q.kaynak);
   const asil = String(q.soru).replace(/\s+/g, ' ').trim();
   return { tamam: true, soru: nihai, degisti: nihai !== asil };
 }
