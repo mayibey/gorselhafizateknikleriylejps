@@ -140,6 +140,24 @@ export default function AkisScreen() {
   // altındaki ince bar + kalan saniye geri sayımı). SesOynatici/TtsBar onIlerleme ile besler.
   const [sesOran, setSesOran] = useState(0);
   const [sesKalan, setSesKalan] = useState<number | null>(null);
+  // Alttaki ince çubuktan sarma (30 Ağu). Sarma işlevini SesOynatici veriyor; süre bilinmeden
+  // null gelir → çubuk o ana kadar sadece gösterge kalır (yanlış yere atlama olmaz).
+  const sesSarRef = useRef<((oran: number) => void) | null>(null);
+  const [sesBarW, setSesBarW] = useState(0);
+  const sesSar = useCallback(
+    (x: number) => {
+      const sar = sesSarRef.current;
+      if (!sar || sesBarW <= 0 || !Number.isFinite(x)) return;
+      sar(Math.min(1, Math.max(0, x / sesBarW)));
+    },
+    [sesBarW],
+  );
+  // SABİT referans şart: ses çalarken ilerleme her saniye birkaç kez render tetikliyor;
+  // satır içi ok fonksiyonu verilirse SesOynatici'deki effect her render'da sökülüp
+  // kuruluyor ve sarma işlevi bir an null kalıyor (tam o anda basılırsa sarma yutulur).
+  const sarHazir = useCallback((sar: ((oran: number) => void) | null) => {
+    sesSarRef.current = sar;
+  }, []);
 
   // Görsel alanı ölçüsü (onLayout) → görsel kutusu doğal orana göre boyutlanır,
   // kalan alana sığar (contain mantığı; boşluk/kırpma yok). Bkz. gorselBoyut.
@@ -725,6 +743,7 @@ export default function AkisScreen() {
                         setSesOran(o);
                         setSesKalan(k);
                       }}
+                      onSarHazir={sarHazir}
                     />
                   ) : (
                     <TtsBar
@@ -853,8 +872,23 @@ export default function AkisScreen() {
                SAYIMI (başkan, 18 Ağu; hata-bildir sağ üste taşındı, çizgi onun yerine geldi).
                Panel kapalıyken de görünür (onIlerleme mount kaldıkça besler); ses yoksa —. */
             <View style={styles.sesIlerleme}>
-              <View style={styles.sesTrack}>
-                <View style={[styles.sesFill, { width: `${Math.round(sesOran * 100)}%` }]} />
+              {/* 30 Ağu (başkan): bu çubuk yalnız GÖSTERGEYDİ; insan videoyu geri alır gibi
+                  basıp hiçbir şey olmuyordu. Artık dokunulan yere atlıyor ve parmak
+                  sürüklenirken takip ediyor. Dokunma alanı çubuktan yüksek (5px'e isabet
+                  ettirmek imkânsız) → şeffaf sarmalayıcı + hitSlop. */}
+              <View
+                style={styles.sesDokunmaAlani}
+                onLayout={(e) => setSesBarW(e.nativeEvent.layout.width)}
+                onStartShouldSetResponder={() => sesSarRef.current != null}
+                onMoveShouldSetResponder={() => sesSarRef.current != null}
+                onResponderGrant={(e) => sesSar(e.nativeEvent.locationX)}
+                onResponderMove={(e) => sesSar(e.nativeEvent.locationX)}
+                hitSlop={{ top: 10, bottom: 10, left: 4, right: 4 }}
+                accessibilityRole="adjustable"
+                accessibilityLabel="Sesli anlatımda ileri/geri sar">
+                <View style={styles.sesTrack}>
+                  <View style={[styles.sesFill, { width: `${Math.round(sesOran * 100)}%` }]} />
+                </View>
               </View>
               <AppText variant="etiket" bold color="kartMetinIkincil" style={styles.sesKalanMetin}>
                 {sesKalan != null ? bicimSure(sesKalan) : '—'}
@@ -1070,8 +1104,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.three,
     paddingVertical: Spacing.one,
   },
-  sesTrack: {
+  // Çubuk 5px; parmakla isabet ettirilemez → şeffaf, yüksek bir dokunma alanı sarmalar.
+  sesDokunmaAlani: {
     flex: 1,
+    height: 22,
+    justifyContent: 'center',
+  },
+  sesTrack: {
     height: 5,
     borderRadius: 3,
     backgroundColor: Palette.kartKenarKoyu,

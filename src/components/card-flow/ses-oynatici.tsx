@@ -37,6 +37,7 @@ export function SesOynatici({
   onBitti,
   otomatikSor,
   onIlerleme,
+  onSarHazir,
 }: {
   /** Ses anahtarı = kartın gorsel_yolu (KART_SESLERI ile aynı namespace). */
   sesYolu: string | null;
@@ -47,6 +48,9 @@ export function SesOynatici({
   /** İlerleme dışarı (akış header/satırı) taşınsın diye: oran 0..1, kalanSn = biten saniye
    *  geri sayımı (mp3 gerçek süre). Panel kapalıyken de mount kaldığı için sürekli akar. */
   onIlerleme?: (oran: number, kalanSn: number | null) => void;
+  /** Dışarıdaki ince ilerleme çubuğunun sesi sarabilmesi için "şu orana git" işlevini verir.
+   *  (30 Ağu, başkan: "insan videoyu geri alır gibi almak istiyor ama çalışmıyor.") */
+  onSarHazir?: (sar: ((oran: number) => void) | null) => void;
 }) {
   useImzaliTazele(); // web imzalı modda mp3 URL'i gelince yeniden çiz (native no-op)
   const kaynak = sesKaynak(sesYolu);
@@ -127,6 +131,25 @@ export function SesOynatici({
       onBitti?.();
     }
   }, [durum?.didJustFinish, onBitti]);
+
+  // Kartın ALTINDAKİ ince çubuk da sarabilsin (30 Ağu, başkan: "insan videoyu geri alır gibi
+  // almak istiyor ama o kısımdan ileri geri sarma çalışmıyor"). Oynatıcının kendi barı zaten
+  // sarıyordu; aynı yetenek dışarı veriliyor. Süre bilinmeden sarılamaz → o zamana kadar null.
+  useEffect(() => {
+    if (!onSarHazir) return;
+    onSarHazir(
+      sure > 0
+        ? (o: number) => {
+            const hedef = Math.min(1, Math.max(0, o)) * sure;
+            bittiRef.current = false;
+            try {
+              player.seekTo(hedef);
+            } catch {}
+          }
+        : null,
+    );
+    return () => onSarHazir(null);
+  }, [onSarHazir, player, sure]);
 
   // Unmount / kart değişince sesi durdur (web'de auto-release kesmiyordu).
   useEffect(
