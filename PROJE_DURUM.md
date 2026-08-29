@@ -2,7 +2,44 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 27 Ağustos 2026 (destek/hata bildirimleri: kopuk madde atifi 82 soru + bayat disiplin sorusu)
+> Son güncelleme: 30 Ağustos 2026 (oyun kopuk atıf yayını · içerik hata listesi)
+>
+> ### ▶ 30 Ağu — 🎮 OYUN YAYINI + AÇIK İÇERİK HATALARI
+> **YAYINLANDI (herkese):** oyun sürümü **20260830-0138**. Geri alma tek satır:
+> `uygulama_ayar.oyun_surum = 20260819-1632`.
+> İçerik: (a) "Bu maddenin…" diyen 28 ifadeye madde numarası yazıldı ("81 inci maddenin…"),
+> (b) "yukarıdaki fıkra hükmü / birinci fıkranın (d) bendi" diyen 8 ifade havuzdan ÇIKARILDI
+> (hangi fıkra olduğu hiçbir yerde yok → Doğru/Yanlış'ta cevaplanamaz), (c) beş oyundaki
+> **Sıralama tablosu düğmesi** stillendi (hiç CSS'i yoktu, tarayıcının gri düğmesi çıkıyordu).
+> **⚠️ TUZAK (tekrar yandı, not):** depodaki `assets/oyun/oyun-merkezi.html` ile CANLI dosya
+> AYNI DEĞİL — canlıya doğrudan enjekte edilmiş düzeltmeler var. Yayın için canlı dosya
+> İNDİRİLİP üstüne yama uygulandı; depo dosyasını basmak canlı düzeltmeleri siler.
+> **⚠️ EKSİK KALDI:** tarama yalnız `s` ve `ger` biçimli havuzları kapsadı. Aynı kusur
+> `k` (boşluk doldurma), `metin`, `ipucu`, `ip`, `on`, `son` alanlarında **~23 yerde daha**
+> duruyor. Tam geçiş yapılmadı — sıradaki iş.
+>
+> ### 📌 AÇIK İÇERİK HATALARI (kullanıcı bildirimi, hepsi doğrulandı)
+> 1. **TCK m.261 kartı — görsel VE ses yanlış.** Kanun: "karşılık ödenmek suretiyle de olsa
+>    zorla tasarrufta bulunan KAMU GÖREVLİSİ". Yani parayı ÖDEYEN, el koyan memurdur.
+>    Kartta parayı malı elinden alınan VATANDAŞ uzatıyor ("Karşılığını ödeyim!") — madde
+>    tersine dönmüş. Sesli anlatım da aynı hatayı tekrarlıyor ("vatandaş elinde parayla…").
+>    → görsel + ses birlikte düzeltilmeli. (Başkan bildirdi, 30 Ağu.)
+> 2. **Jandarma Teşkilat Yön. m.8 ayırt kartı** — görselde "BAKANLAR KURULU uygun gördüğü
+>    bölümlerle"; doğrusu **Cumhurbaşkanı** (2803 m.8, 2016 değişikliği). Aynı bilginin
+>    2803 Kanunu kartında DOĞRUSU yazıyor → iki kart çelişiyor. (Bünyamin Ak, 29 Ağu.)
+> 3. **OHAL m.2 kartı** — "her tür OHAL" oku YÖNETİM USULÜ koluna bakıyor; doğrusu
+>    HAK SINIRLAMA kolu. Alt özet ve ses doğru, yalnız ok yanlış. (Enes Yurtalan, 20 Ağu.)
+> 4. **2803 m.15/A sorusu** (musterek-2) — cevap hukuken doğru ama kök "suç delili" diyerek
+>    ADLİ arama tarif ediyor, oysa 15/A ÖNLEME araması maddesi. İki kullanıcı takıldı
+>    (yunus emre karakoç, Oğuzhan Büyükduran). Kök maddenin diline çevrilmeli.
+>
+> ### 📌 AÇIK İŞLER
+> - 82 soruluk kopuk-atıf düzeltmesi (commit 45ce2e4) **hâlâ YAYINLANMADI** — OTA gerekiyor.
+> - Instagram: 29 Ağu gönderisi silindi, düzeltilmiş video hazır ama **basılamadı**
+>   (tarayıcıda Instagram sekmesi kapanmıştı). Video: `D:/mevzu-kart-videolari/jandteskyon/`.
+> - Ahmet Çil'e güncelleme mesajı (1.0.41'de kalmış).
+> - `icerik_erisim_log` isteğin yalnız İLK yolunu kaydediyor → ses/görsel ölçümü yanıltıyor.
+>   (Bu yüzden "800 kişide ses bozuk" analizi geçersiz çıktı.) Tüm yolları yazdır.
 >
 > ### ▶ 27 Ağu — 🧾 DESTEK + HATA BİLDİRİMLERİ TEMİZLENDİ
 > **Başkan:** *"2 hata destek bildirimi var bak bakalım"* → kuyrukta 9 soru hatası + 2 geri
