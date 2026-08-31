@@ -11,6 +11,8 @@ import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { cozHazir, cozTemizle, gorselCoz } from '@/lib/gorsel-coz';
 import { bozukIcerikSil } from '@/lib/indirme';
 import { gorselBekliyorMu, gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
+import { imzaliUnut } from '@/lib/imzali-cache';
+import { KART_GORSEL_YOLLARI } from '@/assets/kart-gorselleri';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
 export function StudyCard({
@@ -58,6 +60,8 @@ export function StudyCard({
         ? { uri: cozulmus }
         : undefined
       : gorselKaynak(card.gorsel_yolu);
+  // Uzak görsel yüklenemezse sayılı yeniden deneme (31 Ağu). Kart değişince sıfırlanır.
+  const [deneme, setDeneme] = useState(0);
   const [zoomAcik, setZoomAcik] = useState(false);
   // Forensic filigran artık SUNUCUDA görselin piksellerine basılıyor (gorsel Edge Function) →
   // client overlay kaldırıldı (gereksiz + bypass edilebilir; sunucununki cihaza zaten gömülü gelir).
@@ -93,7 +97,7 @@ export function StudyCard({
             source={gorsel}
             style={styles.gorsel}
             contentFit="contain"
-            recyclingKey={String(card.id)}
+            recyclingKey={String(card.id) + ":" + deneme}
             cachePolicy="memory-disk"
             transition={150}
             // Görsel yüklenince GERÇEK boyut → doğal oran (web+native aynı; crash yok).
@@ -109,6 +113,19 @@ export function StudyCard({
                 cozTemizle(sifreliYol);
                 void bozukIcerikSil(sifreliYol);
                 setYerelBozuk(true);
+                onGorundu?.();
+                return;
+              }
+              // 31 Ağu 2026 (Ömer Faruk: "Görsel görünmüyor") — İNDİRMEDEN çalışan kullanıcıda
+              // burada yapacak bir şey yoktu: görsel bir kez yüklenemeyince kart SONSUZA KADAR
+              // boş kalıyordu (elde geçerli görünen bir URL var, yeniden denenmiyor). Adam boş
+              // karta bakıp 10 dakika bekledi. Artık imzalı URL unutulup TAZESİ alınıyor ve
+              // görsel en fazla 2 kez daha deneniyor; sonsuz döngü yok.
+              const yol = KART_GORSEL_YOLLARI[card.gorsel_yolu ?? ''];
+              if (yol && deneme < 2) {
+                imzaliUnut(yol);
+                setDeneme((n) => n + 1);
+                return; // kilidi açma: görsel hâlâ gelebilir
               }
               onGorundu?.();
             }}

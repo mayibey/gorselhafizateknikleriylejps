@@ -70,6 +70,19 @@ export function imzaliUriSync(yol: string): string | null {
   return null;
 }
 
+/**
+ * Bir yolun imzalı URL'ini UNUT → sonraki sorguda YENİSİ istenir.
+ *
+ * 31 Ağu 2026 (Ömer Faruk bildirdi: "Görsel görünmüyor"): indirmeden çalışan kullanıcıda
+ * görsel bir kez yüklenemeyince kart SONSUZA KADAR boş kalıyordu — elde geçerli görünen bir
+ * URL vardı, yeniden denenmiyordu. Adam boş karta bakıp 10 dakika bekledi. Yükleme hatasında
+ * bu çağrılır, taze URL alınır ve görsel bir kez daha denenir.
+ */
+export function imzaliUnut(yol: string): void {
+  cache.delete(yol);
+  istendi.delete(yol);
+}
+
 /** Önbelleğe yeni URL düştüğünde haber al (aboneliği geri verilen fonksiyonla kes). */
 export function imzaliDinle(cb: () => void): () => void {
   dinleyiciler.add(cb);
