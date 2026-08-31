@@ -12,7 +12,7 @@ import { cozHazir, cozTemizle, gorselCoz } from '@/lib/gorsel-coz';
 import { bozukIcerikSil } from '@/lib/indirme';
 import { gorselBekliyorMu, gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
 import { imzaliUnut } from '@/lib/imzali-cache';
-import { KART_GORSEL_YOLLARI } from '@/assets/kart-gorselleri';
+import { KART_GORSEL_YOLLARI } from '../../assets/kart-gorselleri';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
 export function StudyCard({
