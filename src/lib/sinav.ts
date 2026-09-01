@@ -362,3 +362,26 @@ export function puanlaSinav(
   const yuzde = toplam > 0 ? Math.round((dogru / toplam) * 100) : 0;
   return { dogru, toplam, yuzde, puan: dogru * katsayi, toplamPuan: toplam * katsayi };
 }
+
+/** Branş slug → seed branş id (sanal kimlik için; seed.ts ile birebir). */
+const BRANS_ID: Record<string, number> = {
+  jandarma: 1, mebs: 2, havacilik: 3, personel: 4, maliye: 5, istihkam: 6, ikmal: 7,
+  bakim: 8, bando: 9, tabip: 10, eczaci: 12, saglik: 13, kimyager: 14, veteriner: 15,
+  muhendis: 16,
+};
+
+/**
+ * Genel denemenin SANAL kanun kimliği (sonuç/skor bu kimlikle saklanır).
+ *
+ * 1 Eyl 2026: branş denemelerinde BRANŞ da hesaba katılır. Eskiden yalnız -(100+no) idi;
+ * kullanıcı branşını değiştirince başka branşın denemesinin puanı görünüyordu (başkan
+ * bildirdi: MEBS Deneme 1'de eski Jandarma skoru çıktı). Jandarma ESKİ kimliği korur ki
+ * geçmiş puanlar kaybolmasın.
+ */
+export function genelSanalLawId(blok: GenelBlok | undefined, no: number, brans?: string | null): number {
+  if (blok === 'karma') return -(200 + no);
+  if (blok !== 'brans') return -no;
+  if (!brans || brans === 'jandarma') return -(100 + no);
+  const bid = BRANS_ID[brans] ?? 99;
+  return -(3000 + bid * 100 + no);
+}

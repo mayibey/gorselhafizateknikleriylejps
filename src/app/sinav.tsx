@@ -18,6 +18,7 @@ import { useUyelik } from '@/lib/uyelik-context';
 import {
   eslesenKartIdleri,
   soruKanunId,
+  genelSanalLawId,
   getGenelDenemeSorulari,
   getTestSorulari,
   type KartSoru,
@@ -74,7 +75,7 @@ export default function SinavScreen() {
   const genelNo = genel != null && genel !== '' ? Number(genel) : null;
   const genelModu = genelNo != null && !Number.isNaN(genelNo);
   const lawIdNum = genelModu
-    ? -(genelKarma ? 200 + genelNo! : genelBrans ? 100 + genelNo! : genelNo!)
+    ? genelSanalLawId(genelBlok, genelNo!, brans)
     : lawId != null && lawId !== ''
       ? Number(lawId)
       : null;

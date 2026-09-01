@@ -12,7 +12,7 @@ import { getSinavSonuclari } from '@/db/database';
 import type { SinavSonuc } from '@/db/schema';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
-import { genelDenemeler, puanKatsayisi } from '@/lib/sinav';
+import { genelDenemeler, genelSanalLawId, puanKatsayisi } from '@/lib/sinav';
 
 /**
  * DENEMELER — üç takım deneme sınavı: Müşterek Konular (3×50) · Branş (5×50, Jandarma) ·
@@ -152,11 +152,12 @@ function TatbikatIcerik() {
           {genelDenemeler(blok === 'müşterek' ? undefined : blok, brans).map((d) => (
             <GenelDenemeSatir
               key={d.no}
-              deneme={{ ...d, baslik: denemeAdi(blok, d.no) }}
+              // Branş denemesi kendi başlığını taşır ("MEBS Branş Denemesi 1") — ezme.
+              deneme={{ ...d, baslik: blok === 'brans' ? d.baslik : denemeAdi(blok, d.no) }}
               katsayi={puanKatsayisi(blok === 'müşterek' ? undefined : blok)}
               // Sanal law_id: karma -(200+no), branş -(100+no), müşterek -no (sinav.tsx ile birebir).
               sonuc={sonucMap
-                .get(blok === 'karma' ? -(200 + d.no) : blok === 'brans' ? -(100 + d.no) : -d.no)
+                .get(genelSanalLawId(blok === 'müşterek' ? undefined : blok, d.no, brans))
                 ?.get(0)}
               kilitli={genelKilitli}
               gece={geceTema}
@@ -176,6 +177,7 @@ function TatbikatIcerik() {
  */
 function denemeAdi(blok: 'müşterek' | 'brans' | 'karma', no: number): string {
   if (blok === 'karma') return `Genel Deneme ${no}`;
+  // Başlık branşı söyler: kullanıcı branş değiştirince hangi denemeye baktığı belli olsun.
   if (blok === 'brans') return `Branş Deneme ${no}`;
   return `Müşterek Konular Deneme ${no}`;
 }
