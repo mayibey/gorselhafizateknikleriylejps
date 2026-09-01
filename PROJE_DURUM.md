@@ -1936,3 +1936,17 @@ Başkan: "tüm yapılacakları yap, onay bekleme; güncelleme sadece ben ve Ahme
 - Karargah ikiz panelleri: görsel paneli TAM kaplıyor (contain'de kenarda boşluk kalıyordu),
   üstten hizalı; başlık dipte, altında açıklama; panel 246 → 198 (iPhone'da sekme çubuğuna
   taşıyordu). Hepsi cihazda ekran görüntüsüyle doğrulandı.
+
+## 1 Eylül 2026 — Talim testlerinde durum etiketi
+Mevzuat'ta kanunun altındaki "Test 1 · 20 soru" satırları testin durumunu da söylüyor:
+bitmiş test → "17/20 doğru" (yeşil, son deneme skoru) · yarım kalmış → "devam ediyor"
+(yarım sınav kaydı bitmiş skordan ÖNCE gelir) · hiç girilmemiş → "çözülmedi".
+Veri zaten vardı: `sinav_sonuclari` (DB, ORDER BY id → son yazan) + AsyncStorage
+`jsps.sinav.ilerleme.<law>.<test>`. Yeni DB fonksiyonu YOK → 4-dosya senkronu gerekmedi;
+yalnız toplu anahtar okuyucu eklendi (`sinavIlerlemeAnahtarlari`).
+Commit b6e0f35 · OTA: 1.0.46 / 1.0.45 / 1.0.43. Bölüm `talim-mevzuata` bayrağı arkasında
+(ozellik_herkes'te DEĞİL) → şimdilik yalnız başkan + 2 önizleme kullanıcısı görüyor.
+
+## 1 Eylül 2026 — Bakım branşı PDF'leri
+26 mevzuat PDF'i Supabase `icerik` kovasından masaüstüne toplandı
+(`Masaüstü/BAKIM BRANSI MEVZUAT`, 7,9 MB, hepsi PDF imzası doğrulanarak).
