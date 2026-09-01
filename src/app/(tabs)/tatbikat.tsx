@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
@@ -42,6 +42,8 @@ function TatbikatIcerik() {
   // kaldığın yer / zayıf mevzi ise çalışma bölümünde — burası ayrı, orası ayrı.
   // Takım seçimi: Müşterek Konular / Branş / Karma (Genel).
   const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma'>('müşterek');
+  // Bu branşta kaç branş denemesi var? (0 ise "Yakında" gösterilir)
+  const bransDenemeSayisi = useMemo(() => genelDenemeler('brans', brans).length, [brans]);
   // 23 Ağu: karma denemeler ÖNCE BAŞKANDA. Onay gelince sunucudan (ozellik_herkes)
   // herkese açılır — yeni yayın gerekmez.
   const karmaAcik = useKisiselOzellik('karma-deneme');
@@ -129,9 +131,10 @@ function TatbikatIcerik() {
         <MaterialCommunityIcons name="chevron-right" size={20} color={geceTema ? Palette.altinParlak : Palette.solukMetin} />
       </Pressable>
 
-      {/* Branş denemeleri YALNIZ Jandarma'ya özgü (5×50). Diğer branşlarda henüz yok.
-          Karma denemeler tüm branşlara açık. */}
-      {blok === 'brans' && brans !== 'jandarma' ? (
+      {/* 1 Eyl 2026: branş denemeleri artık 15 branşta da var (Jandarma'nın kendi 5×50'si,
+          diğerlerinde bankadaki branş kanunu sorularından derlenmiş 5×50). Kapı artık
+          "Jandarma mı?" diye değil, "bu branşta deneme VAR MI?" diye soruyor. */}
+      {blok === 'brans' && bransDenemeSayisi === 0 ? (
           <DurumKutu
             ikon="flag-checkered"
             baslik="Yakında"
@@ -146,7 +149,7 @@ function TatbikatIcerik() {
                 ? 'Branş denemeleri branş kanunlarından karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'
                 : 'Müşterek Konular denemeleri 25 müşterek kanundan karma 50 sorudur. Her soru 2 puan (toplam 100). Yanlışların zayıf mevzilerine düşer.'}
           </AppText>
-          {genelDenemeler(blok === 'müşterek' ? undefined : blok).map((d) => (
+          {genelDenemeler(blok === 'müşterek' ? undefined : blok, brans).map((d) => (
             <GenelDenemeSatir
               key={d.no}
               deneme={{ ...d, baslik: denemeAdi(blok, d.no) }}

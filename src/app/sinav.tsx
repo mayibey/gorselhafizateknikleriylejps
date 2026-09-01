@@ -10,6 +10,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { ekleSinavSonucu, getAllCards, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
+import { useBrans } from '@/lib/brans-context';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { genelDenemeErisilebilir } from '@/constants/urunler';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
@@ -54,6 +55,8 @@ const YANLIS_KIRMIZI = Palette.kirmizi;
  */
 export default function SinavScreen() {
   const router = useRouter();
+  // Branş denemesinde sorular kullanıcının branşına göre çözülür (1 Eyl 2026).
+  const { brans } = useBrans();
   const { lawId, test, genel, gblok } = useLocalSearchParams<{
     lawId?: string;
     test?: string;
@@ -142,7 +145,7 @@ export default function SinavScreen() {
     }
     void (async () => {
       const kayit = await sinavIlerlemeOku(lawIdNum, testNum).catch(() => null);
-      const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok) : getTestSorulari(lawIdNum, testNum);
+      const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum);
       // Yarım sınav SORULARIYLA BİRLİKTE kaydediliyor. Soru bankası güncellenince (23 Ağu:
       // sorular çıkmış sınav standardına çekildi) kayıt ESKİ METNİ oynatmaya devam ediyordu —
       // başkan düzeltilmiş soruyu eski hâliyle gördü. Kaydın metinleri bankayla uyuşmuyorsa
@@ -199,7 +202,7 @@ export default function SinavScreen() {
   const yenidenBasla = useCallback(() => {
     if (lawIdNum == null) return;
     void sinavIlerlemeSil(lawIdNum, testNum);
-    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok) : getTestSorulari(lawIdNum, testNum);
+    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum);
     setSorular(liste);
     setSecimler(new Array(liste.length).fill(null));
     setIndex(0);

@@ -99,7 +99,8 @@
     "sinav:denetle": "node scripts/sinav-analiz-denetle.mjs",
     "sinav:cevapli": "python scripts/sinav-cevapli-cikar.py --yaz",
     "sinav:bilgi": "node scripts/kanun-bilgi-listesi.mjs",
-    "hafiza:brief": "node scripts/hafiza-brief-uret.mjs --hepsi"
+    "hafiza:brief": "node scripts/hafiza-brief-uret.mjs --hepsi",
+    "brans:deneme": "node scripts/brans-deneme-uret.mjs --yaz"
   },
   "overrides": {
     "expo-asset": "12.0.13"

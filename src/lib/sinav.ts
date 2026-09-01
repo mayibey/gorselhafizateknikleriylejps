@@ -30,15 +30,55 @@ let _genelK: GenelDeneme[] | null = null;
 /** Genel deneme takımı: müşterek (varsayılan) · branş · karma. */
 export type GenelBlok = 'brans' | 'karma';
 /** Genel deneme kaynağı (lazy; blok'a göre): müşterek (3) · branş (5) · karma (5×100). */
-function genelKaynak(blok?: GenelBlok): GenelDeneme[] {
+
+/** Branş denemesi önbelleği (slug -> çözülmüş denemeler). */
+const _digerB: Record<string, GenelDeneme[]> = {};
+
+/**
+ * Kimlik listesini gerçek sorulara çevirir. Banka lawId'ye göre dizili olduğu için
+ * bir kez id->soru haritası kurulur (lazy; yalnız branş denemesi açılınca).
+ */
+let _idHarita: Map<string, KartSoru> | null = null;
+function idHarita(): Map<string, KartSoru> {
+  if (_idHarita) return _idHarita;
+  _idHarita = new Map();
+  for (const liste of Object.values(bank())) {
+    for (const q of liste as KartSoru[]) if (q?.id) _idHarita.set(String(q.id), q);
+  }
+  return _idHarita;
+}
+function bransDigerCoz(brans: string): GenelDeneme[] {
+  const kaynak = (
+    require('../assets/genel-denemeler-brans-diger') as {
+      GENEL_DENEMELER_BRANS_DIGER: Record<string, { no: number; baslik: string; idler: string[] }[]>;
+    }
+  ).GENEL_DENEMELER_BRANS_DIGER;
+  const liste = kaynak[brans];
+  if (!liste) return [];
+  const harita = idHarita();
+  return liste.map((d) => ({
+    no: d.no,
+    baslik: d.baslik,
+    // Bankada bulunamayan kimlik ATLANIR (soru silinmiş olabilir) — sınav yine de açılır.
+    sorular: d.idler.map((id) => harita.get(id)).filter(Boolean) as GenelDeneme['sorular'],
+  })).filter((d) => d.sorular.length > 0);
+}
+
+function genelKaynak(blok?: GenelBlok, brans?: string | null): GenelDeneme[] {
   if (blok === 'karma')
     return (_genelK ??= (
       require('../assets/genel-denemeler-karma') as { GENEL_DENEMELER_KARMA: GenelDeneme[] }
     ).GENEL_DENEMELER_KARMA);
-  if (blok === 'brans')
-    return (_genelB ??= (
-      require('../assets/genel-denemeler-brans') as { GENEL_DENEMELER_BRANS: GenelDeneme[] }
-    ).GENEL_DENEMELER_BRANS);
+  if (blok === 'brans') {
+    // JANDARMA: kendi hazır dosyası (5×50, metinli).
+    if (!brans || brans === 'jandarma')
+      return (_genelB ??= (
+        require('../assets/genel-denemeler-brans') as { GENEL_DENEMELER_BRANS: GenelDeneme[] }
+      ).GENEL_DENEMELER_BRANS);
+    // DİĞER 14 BRANŞ (1 Eyl 2026): denemeler yalnız soru KİMLİĞİ olarak tutulur; metin
+    // uygulamanın kendi bankasından çözülür (kopyalasaydık uygulama ~4 MB şişerdi).
+    return (_digerB[brans] ??= bransDigerCoz(brans));
+  }
   return (_genelM ??= (
     require('../assets/genel-denemeler') as { GENEL_DENEMELER: GenelDeneme[] }
   ).GENEL_DENEMELER);
@@ -86,13 +126,13 @@ export function genelDenemeSayisi(blok?: GenelBlok): number {
 }
 
 /** Genel deneme meta bilgisi (no/başlık/soru sayısı). blok='brans' → branş denemeleri. */
-export function genelDenemeler(blok?: GenelBlok): { no: number; baslik: string; soruSayisi: number }[] {
-  return genelKaynak(blok).map((d) => ({ no: d.no, baslik: d.baslik, soruSayisi: d.sorular.length }));
+export function genelDenemeler(blok?: GenelBlok, brans?: string | null): { no: number; baslik: string; soruSayisi: number }[] {
+  return genelKaynak(blok, brans).map((d) => ({ no: d.no, baslik: d.baslik, soruSayisi: d.sorular.length }));
 }
 
 /** Bir genel denemenin sorularını (karışık) döndürür. GenelSoru KartSoru-uyumlu (+ kartId). */
-export function getGenelDenemeSorulari(no: number, blok?: GenelBlok): KartSoru[] {
-  const d = genelKaynak(blok).find((x) => x.no === no);
+export function getGenelDenemeSorulari(no: number, blok?: GenelBlok, brans?: string | null): KartSoru[] {
+  const d = genelKaynak(blok, brans).find((x) => x.no === no);
   if (!d || d.sorular.length === 0) return [];
   // SIRA SABİT (başkan, 23 Ağu: "denemelerin hepsinde sorular random olmamalı, her soru
   // ve sırası sabit olmalı"). Deneme gerçek sınav gibi hep aynı kitapçık: "Soru 14"
