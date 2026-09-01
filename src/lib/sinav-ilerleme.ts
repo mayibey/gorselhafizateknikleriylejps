@@ -66,3 +66,17 @@ export async function sinavIlerlemeSil(lawId: number, test: number): Promise<voi
     // sessiz
   }
 }
+
+/**
+ * Yarım kalan TÜM sınavlar: "<lawId>.<test>" kümesi. Mevzuat listesi her satır için tek tek
+ * okumasın diye toplu (anahtar yeter; değer ayrıştırmak 50 soruluk JSON'ları boşuna açardı).
+ * Kayıt YALNIZ en az bir soru cevaplanınca yazılır → anahtarın varlığı "başlanmış" demektir.
+ */
+export async function sinavIlerlemeAnahtarlari(): Promise<Set<string>> {
+  try {
+    const hepsi = await AsyncStorage.getAllKeys();
+    return new Set(hepsi.filter((k) => k.startsWith(ONEK)).map((k) => k.slice(ONEK.length)));
+  } catch {
+    return new Set();
+  }
+}

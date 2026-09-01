@@ -6,15 +6,16 @@ import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react
 import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
 import { AppText } from '@/components/ui/app-text';
 import { Screen } from '@/components/ui/screen';
-import { Palette, Radius, Spacing } from '@/constants/theme';
-import { getAllCards, getBolumKartIds, getLaws, getPerformans, getStudyCards } from '@/db/database';
-import type { LawWithCount, PerformansSatir } from '@/db/schema';
+import { Palette, type PaletteColor, Radius, Spacing } from '@/constants/theme';
+import { getAllCards, getBolumKartIds, getLaws, getPerformans, getSinavSonuclari, getStudyCards } from '@/db/database';
+import type { LawWithCount, PerformansSatir, SinavSonuc } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
+import { sinavIlerlemeAnahtarlari } from '@/lib/sinav-ilerleme';
 import { GununMaddesiKarti } from '@/components/mevzuat/gunun-maddesi';
 import { KanunIndirButon } from '@/components/mevzuat/kanun-indir-buton';
 import { ICERIK_TABANI } from '@/constants/config';
@@ -88,6 +89,9 @@ function MevzuatIcerik() {
   const [blok, setBlok] = useState<'müşterek' | 'brans'>('müşterek');
   // Branşın PDF özet kitapları (Jandarma dışı branşlarda dolu; branş sekmesinde liste olarak gösterilir).
   const [kitaplar, setKitaplar] = useState<BransKitap[] | null>(null);
+  // Talim testlerinin durumu: law_id → (test → bitmiş sonuç) ve "law.test" → yarım kalmış.
+  const [testSonuc, setTestSonuc] = useState<Map<number, Map<number, SinavSonuc>>>(new Map());
+  const [testYarim, setTestYarim] = useState<Set<string>>(new Set());
 
   // Branş değişince + odağa her dönüşte tazele (çalışıp dönünce ilerleme/Devam Et güncel).
   const yukle = useCallback(() => {
@@ -134,6 +138,25 @@ function MevzuatIcerik() {
         setPerf([]);
         setSonCalisma(new Map());
       });
+    // Talim testi durumu (çözüldü / yarım / hiç): satırlarda etiket olarak görünür.
+    // Sonuçlar id artan geldiği için son yazan (en güncel) deneme kalır.
+    void getSinavSonuclari()
+      .then((sonuclar) => {
+        const sm = new Map<number, Map<number, SinavSonuc>>();
+        for (const s of sonuclar) {
+          let mp = sm.get(s.law_id);
+          if (!mp) {
+            mp = new Map();
+            sm.set(s.law_id, mp);
+          }
+          mp.set(s.test, s);
+        }
+        setTestSonuc(sm);
+      })
+      .catch(() => setTestSonuc(new Map()));
+    void sinavIlerlemeAnahtarlari()
+      .then(setTestYarim)
+      .catch(() => setTestYarim(new Set()));
     // Favoriler (AsyncStorage) — focus'ta tazelenir.
     void getFavoriler()
       .then((ids) => setFavoriler(new Set(ids)))
@@ -506,6 +529,8 @@ function MevzuatIcerik() {
                 onFavori={favoriToggle}
                 onPress={kanunaGit}
                 talimAc={talimBurada}
+                testSonuclari={testSonuc.get(law.id)}
+                testYarim={testYarim}
               />
             ))
           )}
@@ -724,6 +749,8 @@ function KanunSatir({
   onFavori,
   onPress,
   talimAc,
+  testSonuclari,
+  testYarim,
 }: {
   law: LawWithCount;
   calisilan: number;
@@ -733,6 +760,10 @@ function KanunSatir({
   onFavori: (lawId: number) => void;
   onPress: (law: LawWithCount) => void;
   talimAc?: boolean;
+  /** Bu kanunun bitmiş testleri: test → son sonuç (yoksa hiç bitirilmemiş). */
+  testSonuclari?: Map<number, SinavSonuc>;
+  /** Yarım kalmış sınavlar ("lawId.test") — tüm kanunlar için ortak küme. */
+  testYarim?: Set<string>;
 }) {
   // Durum TAM SAYI sayımıyla (yuvarlama YOK) → filtreyle BİREBİR tutarlı (sınır
   // durumlarında çoklu/yanlış sekme sorunu biter). yüzde yalnız bar/etiket için.
@@ -756,6 +787,22 @@ function KanunSatir({
   // Uzak modda (içerik sunucuda): bir kanunu çalışmak için ÖNCE indirilmeli.
   const indirGerek =
     !!klasorAdi && indirmeDestekli && !!ICERIK_TABANI && indirme.durum !== 'indirildi';
+
+  /**
+   * Testin durumu (başkan, 1 Eyl 2026): çözdüyse kaç doğru, yarım bıraktıysa "devam ediyor",
+   * hiç girmediyse "çözülmedi". Yarım kayıt bitmiş sonuçtan ÖNCE gelir: kullanıcı testi
+   * yeniden çözmeye başlamışsa ekranda eski skor değil "devam ediyor" görünmeli.
+   */
+  function testDurum(indeks: number): { metin: string; renk: PaletteColor } {
+    if (testYarim?.has(`${law.id}.${indeks}`)) {
+      return { metin: 'devam ediyor', renk: talimAc ? 'altinParlak' : 'amber' };
+    }
+    const s = testSonuclari?.get(indeks);
+    if (s && s.toplam > 0) {
+      return { metin: `${s.dogru}/${s.toplam} doğru`, renk: talimAc ? 'yesilParlak' : 'yesil' };
+    }
+    return { metin: 'çözülmedi', renk: talimAc ? 'kartMetinIkincil' : 'solukMetin' };
+  }
 
   function satiraBas() {
     if (kilitli) {
@@ -1075,9 +1122,14 @@ function KanunSatir({
               <AppText variant="kucuk" bold color={talimAc ? 'beyaz' : 'anaMetin'}>
                 Test {indeks + 1}
               </AppText>
-              <AppText variant="etiket" bold color={talimAc ? 'altinParlak' : 'solukMetin'}>
-                {testSoruSayisi(law.id, indeks)} soru
-              </AppText>
+              <View style={st.denemeDurum}>
+                <AppText variant="etiket" bold color={talimAc ? 'altinParlak' : 'solukMetin'}>
+                  {testSoruSayisi(law.id, indeks)} soru
+                </AppText>
+                <AppText variant="etiket" bold color={testDurum(indeks).renk}>
+                  {testDurum(indeks).metin}
+                </AppText>
+              </View>
               <MaterialCommunityIcons
                 name="chevron-right"
                 size={16}
@@ -1651,6 +1703,13 @@ const st = StyleSheet.create({
     borderColor: Palette.altin,
     borderRadius: Radius.s,
     paddingVertical: Spacing.one + 2,
+  },
+  // Soru sayısı + durum etiketi tek grup (satırın sağında, chevron'dan önce).
+  denemeDurum: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    flexShrink: 1,
   },
   denemeSatir: {
     flexDirection: 'row',
