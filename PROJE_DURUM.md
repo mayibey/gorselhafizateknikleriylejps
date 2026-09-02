@@ -1970,3 +1970,24 @@ iade alsa fark etmeyecektik.
 
 Yan ürün: `scratchpad/siparis-haritasi.json` — sipariş numarası → kim (150 satın alma,
 139'unda numara var). İade bildirimi gelince kimin olduğu numaradan anında bulunur.
+
+## 2 Eylül 2026 — Branş konuları müşterek gibi: Çalış + Talim Yap
+**Kusur:** 23 Ağu'da Tatbikat'tan kanun listesi kaldırılınca (61c5140) branşlı kullanıcının
+konu testlerine ulaştığı TEK kapı kapandı. Branş içeriği PDF kitap olduğu için müşterekteki
+"kanunu bitir → deneme sınavına gir" yolu yok; Mevzuat'taki "Talim Yap" ise `talim-mevzuata`
+bayrağı arkasında. Sonuç: **167 konu / 9.587 soru** 10 gün boyunca görünmez kaldı
+(168 branş kullanıcısı, 19'u ödemiş). Kullanıcı Ülkü (personel) bildirdi.
+
+**Çözüm (başkan kararı):** branş kitabı da müşterek kanun kartı gibi — başlığın altında
+"Çalış" (PDF) + "Talim Yap · N" (o konunun testleri), test satırları müşterekle aynı etiketle
+("20 soru · 17/20 doğru / devam ediyor / çözülmedi"; etiket artık `testDurumEtiketi` ile TEK
+yerden). Bayrak YOK — tüm branş kullanıcıları görür.
+
+**Kitap → soru havuzu bağı:** yeni sütun `brans_kitaplari.law_id`. Kural sıkı tutuldu
+(mevzuat numarası aynı + tür aynı [kanun/yönetmelik] + yüksek kelime örtüşmesi + ikinci adaya
+belirgin fark); şüpheli kalan BAĞLANMADI → o kitapta yalnız "Çalış" çıkar. 191 kitabın 174'ü
+bağlı; 17'si bilerek bağsız (kapsam farkı: kitap "Personel Hükümleri" ↔ havuz "Mali Hükümler";
+ya da o mevzuatın branş havuzu hiç yok: Çevre Kanunu, Taşınmaz Mal Zilyedliği, TCK m.240,
+Tasarruf Tedbirleri Genelgesi). **Açılan:** 516 test / 10.122 soru.
+Commit 2a8cbb0 · tsc 0 hata. AÇIK İŞ: bağsız 17 kitabın soru havuzu (özellikle personelin
+"Personel Hükümleri" kapsamı — 72/73/74'te yalnız mali hüküm soruları var).
