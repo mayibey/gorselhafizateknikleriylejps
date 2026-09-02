@@ -2013,3 +2013,28 @@ Seed üreteci yalnız `_SORULAR.json` olan klasörü kanun yaptığı için bu k
 - Resmî metni İNDİRİLECEK: 2872 Çevre Kanunu (6 branş), 5237 TCK m.240 (2 branş),
   2803 Jandarma Teşkilat mali hükümler, 4678 Sözleşmeli Sb/Asb mali hükümler,
   2024/7 Tasarruf Tedbirleri Genelgesi.
+
+## 2 Eylül 2026 — Sorusu olmayan konulara soru üretimi (1. tur: PERSONEL)
+**Kök sebep (ölçüldü, tahmin değil):** fabrikadaki `BRANS_DIGER/30..42` klasörlerinde YALNIZ özet
+kitap dosyaları (`_ozet_govde.html`, `_ozet_meta.json`) var; soru üretimi için gereken
+`MASTER.md` + `KAPSAM_HARITASI.md` + `_META.json` + `_SORULAR.json` hiç üretilmemiş. Seed üreteci
+yalnız `_SORULAR.json` olan klasörü kanun yaptığı için bu konular kanun bile olmamış.
+
+**Üretildi (resmî metinden, kitabın kapsam maddeleriyle birebir):**
+- 926 TSK Personel K. (m.3,4,31-38,79-85,93,109,112) → **law 136 · 42 soru**
+- 3269 Uzman Erbaş K. (m.3,4,5,6,9,11,12,14,15) → **law 137 · 25 soru**
+- 3466 Uzman Jandarma K. (m.8,9,13,18) → **law 138 · 12 soru**
+Mülga/AYM iptal ibareler kullanılmadı; güncel değişiklikler işlendi. Şık dengeleme:
+uygulama şıkları karıştırmadığı için doğru cevaplar A-E'ye dağıtıldı (`scratchpad/cevap-dengele.mjs`).
+Soru standardı denetiminden düşen 2 soru (madde NUMARASI ezberi) esas hükmü soran sorularla
+değiştirildi. Migration 31 (eklemeli). **PERSONEL branşının 14 kitabının tamamında artık test var.**
+Commit 2d2bf6d · OTA 5 runtime.
+
+**KİMLİK ÇİVİLEME (kritik):** `brans-diger-seed-uret.mjs` law_id'leri klasör sırasına göre
+veriyordu; yeni klasör araya girince tüm sonraki kimlikler kayacaktı (kullanıcı skorları +
+sunucudaki kitap-kanun bağı bozulurdu). Artık eski harita korunuyor, yeni klasöre en sondan
+kimlik veriliyor (136/137/138). Commit 2e56a78.
+
+**KALAN (metni indirilecek):** 2872 Çevre Kanunu (6 branş · 6 kitap), 5237 TCK m.240 (2),
+2803 Jandarma Teşkilat mali hükümler (1), 4678 Sözleşmeli Sb/Asb mali hükümler (1),
+2024/7 Tasarruf Tedbirleri Genelgesi (1) → toplam 11 kitap satırı.
