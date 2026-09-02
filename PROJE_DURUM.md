@@ -2038,3 +2038,22 @@ kimlik veriliyor (136/137/138). Commit 2e56a78.
 **KALAN (metni indirilecek):** 2872 Çevre Kanunu (6 branş · 6 kitap), 5237 TCK m.240 (2),
 2803 Jandarma Teşkilat mali hükümler (1), 4678 Sözleşmeli Sb/Asb mali hükümler (1),
 2024/7 Tasarruf Tedbirleri Genelgesi (1) → toplam 11 kitap satırı.
+
+## 2 Eylül 2026 — Sorusu olmayan konu KALMADI (191/191)
+İkinci tur: kalan 5 konunun havuzu üretildi. Resmî metinler mevzuat.gov.tr'den indirilmedi —
+**bot arşivinde (D:/jsps-community-bot/data/maddeler.json) zaten güncel metinler duruyordu**
+(Çevre 2872 · TCK 5237 · 4678 · Jandarma Kanunu · 2024/7 Genelge).
+- 2872 Çevre Kanunu → law 143 · 25 soru (6 branşın ortak kitabı)
+- 2803 mali hükümler (m.13, 13/A, 21) → law 140 · 14 soru
+- 4678 mali hükümler (m.14-18) → law 141 · 14 soru
+- 2024/7 Tasarruf Genelgesi (haberleşme) → law 142 · 8 soru
+- TCK m.240 → law 139 · 3 soru
+Migration 32-33 (eklemeli). **191 kitabın 191'inde test var; bağsız kitap 0.**
+
+**DENETÇİ TUZAĞI (ölçüldü):** `soru-standart` kanun adlarını yalnız `seed.ts`ten okuyordu;
+diğer branş kanunları (id 68+) ayrı dosyada olduğu için Genelge gibi AD_DESEN'e uymayan
+mevzuatın TÜM soruları "mevzuat adı bulunamadı" ile eleniyordu. Diğer-branş seed'i de okunuyor
+AMA yalnız `law_id → ad` için ve yalnız **künye olarak kullanılabilir** adlar alınıyor: ilk
+denemede hepsini almak, "(Mali Hükümler kapsamı: …)" gibi parantezle biten adlar yüzünden
+bankayı 5494 → 5208'e düşürmüştü. Son doğrulama: hiçbir mevcut kanunun sorusu AZALMADI
+(5463 → 5527). Commit 2991bb9 · OTA 5 runtime.
