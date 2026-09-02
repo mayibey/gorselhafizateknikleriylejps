@@ -8,7 +8,14 @@
  */
 import { supabase } from '@/lib/supabase';
 
-export type BransKitap = { id: number; baslik: string; dosyaYolu: string; sira: number };
+export type BransKitap = {
+  id: number;
+  baslik: string;
+  dosyaYolu: string;
+  sira: number;
+  /** Bu kitabın soru havuzu olan kanun kimliği (yoksa null → "Talim Yap" düğmesi çıkmaz). */
+  lawId: number | null;
+};
 
 /** Bir sayfanın not/çizim verisi (freehand path'ler + işaretlemeler + metin notları). Şekil
  * görüntüleyici katmanında belirlenir; burada opak jsonb olarak taşınır. */
@@ -20,15 +27,16 @@ export async function bransKitaplari(slug: string): Promise<BransKitap[]> {
   try {
     const { data, error } = await supabase
       .from('brans_kitaplari')
-      .select('id, baslik, dosya_yolu, sira')
+      .select('id, baslik, dosya_yolu, sira, law_id')
       .eq('brans_slug', slug)
       .order('sira');
     if (error || !data) return [];
-    return (data as { id: number; baslik: string; dosya_yolu: string; sira: number }[]).map((r) => ({
+    return (data as { id: number; baslik: string; dosya_yolu: string; sira: number; law_id: number | null }[]).map((r) => ({
       id: r.id,
       baslik: r.baslik,
       dosyaYolu: r.dosya_yolu,
       sira: r.sira,
+      lawId: r.law_id ?? null,
     }));
   } catch {
     return [];

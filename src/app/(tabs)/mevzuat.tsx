@@ -328,6 +328,8 @@ function MevzuatIcerik() {
         <BransKitapListe
           kitaplar={kitaplar}
           gece={talimBurada}
+          testSonuc={testSonuc}
+          testYarim={testYarim}
           onAc={(k) => router.push({ pathname: '/kitap', params: { yol: k.dosyaYolu, baslik: k.baslik } })}
         />
       ) : (
@@ -542,6 +544,29 @@ function MevzuatIcerik() {
       )}
     </Screen>
   );
+}
+
+/**
+ * Bir testin durum etiketi: çözdüyse kaç doğru, yarım bıraktıysa "devam ediyor", hiç
+ * girmediyse "çözülmedi". Yarım kayıt bitmiş sonuçtan ÖNCE gelir (yeniden başlamışsa
+ * ekranda eski skor değil "devam ediyor" görünmeli). Müşterek satırı ve branş kitabı
+ * AYNI fonksiyonu kullanır → iki yerde ayrı kural olmaz.
+ */
+function testDurumEtiketi(
+  lawId: number,
+  indeks: number,
+  sonuclar: Map<number, SinavSonuc> | undefined,
+  yarim: Set<string> | undefined,
+  gece: boolean,
+): { metin: string; renk: PaletteColor } {
+  if (yarim?.has(`${lawId}.${indeks}`)) {
+    return { metin: 'devam ediyor', renk: gece ? 'altinParlak' : 'amber' };
+  }
+  const s = sonuclar?.get(indeks);
+  if (s && s.toplam > 0) {
+    return { metin: `${s.dogru}/${s.toplam} doğru`, renk: gece ? 'yesilParlak' : 'yesil' };
+  }
+  return { metin: 'çözülmedi', renk: gece ? 'kartMetinIkincil' : 'solukMetin' };
 }
 
 /** Lacivert kare monogram: ad'dan kanun no (altın), yoksa kitap ikonu. */
@@ -793,16 +818,8 @@ function KanunSatir({
    * hiç girmediyse "çözülmedi". Yarım kayıt bitmiş sonuçtan ÖNCE gelir: kullanıcı testi
    * yeniden çözmeye başlamışsa ekranda eski skor değil "devam ediyor" görünmeli.
    */
-  function testDurum(indeks: number): { metin: string; renk: PaletteColor } {
-    if (testYarim?.has(`${law.id}.${indeks}`)) {
-      return { metin: 'devam ediyor', renk: talimAc ? 'altinParlak' : 'amber' };
-    }
-    const s = testSonuclari?.get(indeks);
-    if (s && s.toplam > 0) {
-      return { metin: `${s.dogru}/${s.toplam} doğru`, renk: talimAc ? 'yesilParlak' : 'yesil' };
-    }
-    return { metin: 'çözülmedi', renk: talimAc ? 'kartMetinIkincil' : 'solukMetin' };
-  }
+  const testDurum = (indeks: number) =>
+    testDurumEtiketi(law.id, indeks, testSonuclari, testYarim, !!talimAc);
 
   function satiraBas() {
     if (kilitli) {
@@ -1187,12 +1204,16 @@ function BransKitapListe({
   kitaplar,
   onAc,
   gece,
+  testSonuc,
+  testYarim,
 }: {
   kitaplar: BransKitap[];
   onAc: (k: BransKitap) => void;
   gece?: boolean;
+  /** law_id → (test → son sonuç); konu kartındaki test satırları buradan etiketlenir. */
+  testSonuc?: Map<number, Map<number, SinavSonuc>>;
+  testYarim?: Set<string>;
 }) {
-  const router = useRouter();
   const { premium } = useUyelik();
   const kilitli = KILIT_AKTIF && !premium;
   return (
@@ -1207,35 +1228,132 @@ function BransKitapListe({
         </AppText>
       </View>
       {kitaplar.map((k) => (
-        <Pressable
+        <BransKitapKart
           key={k.id}
-          onPress={() => (kilitli ? router.push('/paywall') : onAc(k))}
-          style={({ pressed }) => [st.kitapSatir, gece && st.kitapSatirGece, pressed && st.kitapBasili]}
-          accessibilityRole="button"
-          accessibilityLabel={kilitli ? `${k.baslik} — kilitli` : k.baslik}>
-          <MaterialCommunityIcons
-            name={kilitli ? 'lock' : 'file-document-outline'}
-            size={22}
-            color={gece ? Palette.altinParlak : Palette.altinKoyu}
-          />
-          <AppText variant="govde" color={gece ? 'beyaz' : 'anaMetin'} bold style={st.kitapAd} numberOfLines={2}>
-            {k.baslik}
-          </AppText>
-          {kilitli ? (
-            <View style={[st.kilitChip, gece && st.kilitChipGece]}>
-              <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'}>
-                Kilidi Aç
-              </AppText>
-            </View>
-          ) : null}
-          <MaterialCommunityIcons
-            name="chevron-right"
-            size={20}
-            color={gece ? 'rgba(226,236,240,0.75)' : Palette.solukMetin}
-          />
-        </Pressable>
+          kitap={k}
+          gece={gece}
+          kilitli={kilitli}
+          onAc={onAc}
+          testSonuclari={k.lawId != null ? testSonuc?.get(k.lawId) : undefined}
+          testYarim={testYarim}
+        />
       ))}
     </>
+  );
+}
+
+/**
+ * BRANŞ KONU KARTI — müşterek kanun kartıyla aynı düzen (başkan, 2 Eyl 2026: "aynı müşterek
+ * konular gibi görünsün"): başlık + "Çalış" (PDF'i aç) + "Talim Yap · N" (o konunun testleri).
+ * Testler 23 Ağu'da Tatbikat'tan kanun listesi kaldırılınca branşlılar için görünmez olmuştu.
+ * Soru havuzu bağı sunucudan gelir (brans_kitaplari.law_id); bağ yoksa yalnız "Çalış" çıkar.
+ */
+function BransKitapKart({
+  kitap,
+  gece,
+  kilitli,
+  onAc,
+  testSonuclari,
+  testYarim,
+}: {
+  kitap: BransKitap;
+  gece?: boolean;
+  kilitli: boolean;
+  onAc: (k: BransKitap) => void;
+  testSonuclari?: Map<number, SinavSonuc>;
+  testYarim?: Set<string>;
+}) {
+  const router = useRouter();
+  const [testlerAcik, setTestlerAcik] = useState(false);
+  const lawId = kitap.lawId;
+  const testAdedi = lawId != null && sinavVarMi(lawId) ? testSayisi(lawId) : 0;
+  const paywall = () => router.push('/paywall');
+  return (
+    <View style={[st.kitapKart, gece && st.kitapSatirGece]}>
+      <Pressable
+        onPress={() => (kilitli ? paywall() : onAc(kitap))}
+        style={({ pressed }) => [st.kitapUst, pressed && st.kitapBasili]}
+        accessibilityRole="button"
+        accessibilityLabel={kilitli ? `${kitap.baslik} — kilitli` : kitap.baslik}>
+        <MaterialCommunityIcons
+          name={kilitli ? 'lock' : 'file-document-outline'}
+          size={22}
+          color={gece ? Palette.altinParlak : Palette.altinKoyu}
+        />
+        <AppText variant="govde" color={gece ? 'beyaz' : 'anaMetin'} bold style={st.kitapAd} numberOfLines={2}>
+          {kitap.baslik}
+        </AppText>
+        {kilitli ? (
+          <View style={[st.kilitChip, gece && st.kilitChipGece]}>
+            <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'}>
+              Kilidi Aç
+            </AppText>
+          </View>
+        ) : null}
+      </Pressable>
+
+      <View style={st.ikiliButon}>
+        <Pressable
+          onPress={() => (kilitli ? paywall() : onAc(kitap))}
+          style={({ pressed }) => [st.calisBtn, gece && st.calisBtnGece, pressed && st.pressed]}
+          accessibilityRole="button"
+          accessibilityLabel="Çalış">
+          <MaterialCommunityIcons name="book-open-variant" size={17} color={Palette.lacivert} />
+          <AppText variant="kucuk" bold color="lacivert">
+            Çalış
+          </AppText>
+        </Pressable>
+        {testAdedi > 0 ? (
+          <Pressable
+            onPress={() => (kilitli ? paywall() : setTestlerAcik((a) => !a))}
+            style={({ pressed }) => [st.talimBtn, gece && st.talimBtnGece, pressed && st.pressed]}
+            accessibilityRole="button"
+            accessibilityLabel="Talim yap">
+            <MaterialCommunityIcons
+              name="target"
+              size={16}
+              color={gece ? Palette.altinParlak : Palette.altinKoyu}
+            />
+            <AppText variant="kucuk" bold color={gece ? 'altinParlak' : 'altinMetin'}>
+              Talim Yap · {testAdedi}
+            </AppText>
+          </Pressable>
+        ) : null}
+      </View>
+
+      {testlerAcik && lawId != null && !kilitli
+        ? Array.from({ length: testAdedi }, (_, i) => i).map((indeks) => {
+            const durum = testDurumEtiketi(lawId, indeks, testSonuclari, testYarim, !!gece);
+            return (
+              <Pressable
+                key={indeks}
+                onPress={() =>
+                  router.push({ pathname: '/sinav', params: { lawId: String(lawId), test: String(indeks) } })
+                }
+                style={({ pressed }) => [st.denemeSatir, gece && st.denemeSatirGece, pressed && st.pressed]}
+                accessibilityRole="button"
+                accessibilityLabel={`Test ${indeks + 1}`}>
+                <AppText variant="kucuk" bold color={gece ? 'beyaz' : 'anaMetin'}>
+                  Test {indeks + 1}
+                </AppText>
+                <View style={st.denemeDurum}>
+                  <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'solukMetin'}>
+                    {testSoruSayisi(lawId, indeks)} soru
+                  </AppText>
+                  <AppText variant="etiket" bold color={durum.renk}>
+                    {durum.metin}
+                  </AppText>
+                </View>
+                <MaterialCommunityIcons
+                  name="chevron-right"
+                  size={16}
+                  color={gece ? Palette.altinParlak : Palette.solukMetin}
+                />
+              </Pressable>
+            );
+          })
+        : null}
+    </View>
   );
 }
 
@@ -1365,6 +1483,20 @@ const st = StyleSheet.create({
     borderRadius: Radius.m,
     padding: Spacing.three,
     marginTop: Spacing.two,
+  },
+  // Branş konu kartı: başlık satırı + Çalış/Talim düğmeleri + test satırları (dikey).
+  kitapKart: {
+    backgroundColor: Palette.kartKremi,
+    borderWidth: 1,
+    borderColor: Palette.kenarlik,
+    borderRadius: Radius.m,
+    padding: Spacing.three,
+    marginTop: Spacing.two,
+  },
+  kitapUst: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
   },
   kitapAd: { flex: 1 },
   kitapBasili: { opacity: 0.85 },
