@@ -31,7 +31,15 @@ const laws = [];
 const lawBranches = [];
 const klasorLaw = {};
 const bilinmeyenBrans = new Set();
-let lawId = ILK_LAW_ID;
+
+// KİMLİK ÇİVİLEME (2 Eyl 2026): law_id'ler eskiden klasör SIRASINA göre veriliyordu; araya
+// yeni bir klasör girince TÜM sonraki kimlikler kayıyordu. Kimlik kullanıcı verisine (deneme
+// skoru) ve sunucudaki kitap-kanun bağına gömülü → kayması sessiz veri bozulmasıdır.
+// Artık: daha önce verilmiş kimlik AYNEN korunur, yeni klasöre en büyük kimlikten sonrası verilir.
+const ESKI_MAP_YOL = join(scriptDir, '_brans-diger-law-map.json');
+const eskiMap = existsSync(ESKI_MAP_YOL) ? JSON.parse(readFileSync(ESKI_MAP_YOL, 'utf8')) : {};
+let sonrakiYeniId = Math.max(ILK_LAW_ID - 1, ...Object.values(eskiMap).map(Number)) + 1;
+const yeniler = [];
 
 for (const klasor of klasorler) {
   const dir = join(KOK, klasor);
@@ -58,11 +66,14 @@ for (const klasor of klasorler) {
     console.log(`!! ${klasor}: branş bağı YOK (branslar: ${branslar.join(',')||'boş'}) — ATLANDI`);
     continue;
   }
-  laws.push({ id: lawId, blok: 'branş', ad });
-  for (const bid of branchIds) lawBranches.push({ law_id: lawId, branch_id: bid });
-  klasorLaw[klasor] = lawId;
-  lawId++;
+  const id = eskiMap[klasor] ?? sonrakiYeniId++;
+  if (!eskiMap[klasor]) yeniler.push(`${klasor} → ${id}`);
+  laws.push({ id, blok: 'branş', ad });
+  for (const bid of branchIds) lawBranches.push({ law_id: id, branch_id: bid });
+  klasorLaw[klasor] = id;
 }
+laws.sort((a, b) => a.id - b.id);
+lawBranches.sort((a, b) => a.law_id - b.law_id || a.branch_id - b.branch_id);
 
 // TS seed dosyası.
 const lawsSatir = laws.map((l) => `  { id: ${l.id}, blok: 'branş', ad: ${JSON.stringify(l.ad)} },`).join('\n');
@@ -83,7 +94,9 @@ ${lbSatir}
 writeFileSync(join(root, 'src', 'db', 'seed-brans-diger.ts'), ts, 'utf8');
 writeFileSync(join(root, 'scripts', '_brans-diger-law-map.json'), JSON.stringify(klasorLaw, null, 1), 'utf8');
 
-console.log(`${laws.length} kanun (id ${ILK_LAW_ID}-${lawId - 1}) · ${lawBranches.length} branş bağı`);
+console.log(`${laws.length} kanun (id ${laws[0]?.id}-${laws[laws.length - 1]?.id}) · ${lawBranches.length} branş bağı`);
+if (yeniler.length) console.log('YENİ KİMLİK:', yeniler.join(' · '));
+else console.log('yeni kimlik yok (hepsi çivili)');
 if (bilinmeyenBrans.size) console.log('BİLİNMEYEN BRANŞ:', [...bilinmeyenBrans].join(', '));
 // Branş başına kanun sayısı raporu
 const say = {};
