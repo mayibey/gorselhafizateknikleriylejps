@@ -1268,30 +1268,6 @@ function BransKitapKart({
   const lawId = kitap.lawId;
   const testAdedi = lawId != null && sinavVarMi(lawId) ? testSayisi(lawId) : 0;
   const paywall = () => router.push('/paywall');
-  // Müşterekteki kart ile AYNI mantık: orada "kart tamamlandı" + çubuk + son çalışma satırı
-  // var; burada kartın karşılığı TEST. Çözülmüş test = sonucu kayıtlı test (uydurma sayı yok).
-  const cozulen = testAdedi > 0 && testSonuclari
-    ? Array.from({ length: testAdedi }, (_, i) => i).filter((i) => (testSonuclari.get(i)?.toplam ?? 0) > 0).length
-    : 0;
-  const yuzde = testAdedi > 0 ? Math.min(100, Math.round((cozulen / testAdedi) * 100)) : 0;
-  const no = kitap.baslik.match(/^(\d+)/)?.[1] ?? null;
-  // En son ne zaman test çözülmüş? (sonuç tarihleri YYYY-MM-DD → gün farkı)
-  const sonGun = (() => {
-    if (!testSonuclari || testSonuclari.size === 0) return null;
-    let enSon: string | null = null;
-    for (const s of testSonuclari.values()) if (!enSon || s.tarih > enSon) enSon = s.tarih;
-    if (!enSon) return null;
-    const fark = Math.floor((Date.parse(bugunISO()) - Date.parse(enSon)) / 86400000);
-    return Number.isFinite(fark) ? Math.max(0, fark) : null;
-  })();
-  const sonMetin =
-    sonGun === null
-      ? 'Henüz test çözmedin'
-      : sonGun <= 0
-        ? 'En son bugün çözdün'
-        : sonGun === 1
-          ? 'En son dün çözdün'
-          : `En son ${sonGun} gün önce çözdün`;
   return (
     <View style={[st.kitapKart, gece && st.kitapSatirGece]}>
       <Pressable
@@ -1299,8 +1275,12 @@ function BransKitapKart({
         style={({ pressed }) => [st.kitapUst, pressed && st.kitapBasili]}
         accessibilityRole="button"
         accessibilityLabel={kilitli ? `${kitap.baslik} — kilitli` : kitap.baslik}>
-        <Monogram no={no} boyut={56} variant="govde" />
-        <AppText variant="govde" color={gece ? 'beyaz' : 'anaMetin'} bold style={st.kitapAd} numberOfLines={3}>
+        <MaterialCommunityIcons
+          name={kilitli ? 'lock' : 'file-document-outline'}
+          size={22}
+          color={gece ? Palette.altinParlak : Palette.altinKoyu}
+        />
+        <AppText variant="govde" color={gece ? 'beyaz' : 'anaMetin'} bold style={st.kitapAd} numberOfLines={2}>
           {kitap.baslik}
         </AppText>
         {kilitli ? (
@@ -1309,56 +1289,8 @@ function BransKitapKart({
               Kilidi Aç
             </AppText>
           </View>
-        ) : (
-          <MaterialCommunityIcons
-            name="file-document-outline"
-            size={22}
-            color={gece ? Palette.altinParlak : Palette.altinKoyu}
-          />
-        )}
+        ) : null}
       </Pressable>
-
-      {/* Müşterekteki "X / Y kart tamamlandı" + çubuk + son çalışma satırının karşılığı.
-          Testi olmayan kitapta sayı uydurulmaz — yalnız kitap olduğu yazar. */}
-      {testAdedi > 0 ? (
-        <>
-          <AppText variant="kucuk" bold={gece} color={gece ? 'beyaz' : 'solukMetin'} style={gece && st.geceIkincil}>
-            {cozulen} / {testAdedi} test tamamlandı
-          </AppText>
-          <View style={st.sonSatir}>
-            <MaterialCommunityIcons
-              name={sonGun === null ? 'alert-circle-outline' : 'clock-outline'}
-              size={13}
-              color={
-                sonGun === null
-                  ? gece
-                    ? Palette.kirmiziParlak
-                    : Palette.kirmizi
-                  : gece
-                    ? 'rgba(226,236,240,0.75)'
-                    : Palette.solukMetin
-              }
-            />
-            <AppText
-              variant="etiket"
-              bold={sonGun === null}
-              color={sonGun === null ? (gece ? 'kirmiziParlak' : 'kirmizi') : gece ? 'beyaz' : 'solukMetin'}
-              numberOfLines={1}>
-              {sonMetin}
-            </AppText>
-          </View>
-          <View style={st.barSatir}>
-            <Bar yuzde={yuzde} gece={gece} />
-            <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'} style={st.barYuzde}>
-              %{yuzde}
-            </AppText>
-          </View>
-        </>
-      ) : (
-        <AppText variant="kucuk" bold={gece} color={gece ? 'beyaz' : 'solukMetin'} style={gece && st.geceIkincil}>
-          Özet kitap · uygulama içinde oku
-        </AppText>
-      )}
 
       <View style={st.ikiliButon}>
         <Pressable
