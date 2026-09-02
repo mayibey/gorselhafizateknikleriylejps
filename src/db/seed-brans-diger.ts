@@ -75,6 +75,11 @@ export const SEED_LAWS_DIGER: Law[] = [
   { id: 136, blok: 'branş', ad: "926 sayılı Türk Silâhlı Kuvvetleri Personel Kanunu (Personel Hükümleri: m.3, 4, 31-38, 79-85, 93, 109, 112)" },
   { id: 137, blok: 'branş', ad: "3269 sayılı Uzman Erbaş Kanunu (Personel Hükümleri: m.3, 4, 5, 6, 9, 11, 12, 14, 15)" },
   { id: 138, blok: 'branş', ad: "3466 sayılı Uzman Jandarma Kanunu (Personel Hükümleri: m.8, 9, 13, 18)" },
+  { id: 139, blok: 'branş', ad: "5237 sayılı Türk Ceza Kanunu — Mal veya Hizmet Satımından Kaçınma (m.240)" },
+  { id: 140, blok: 'branş', ad: "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu (Mali Hükümler: m.13, 13/A, 21)" },
+  { id: 141, blok: 'branş', ad: "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun (Mali Hükümler: m.14-18)" },
+  { id: 142, blok: 'branş', ad: "Tasarruf Tedbirleri Konulu 2024/7 Sayılı Cumhurbaşkanlığı Genelgesi" },
+  { id: 143, blok: 'branş', ad: "2872 sayılı Çevre Kanunu" },
 ];
 
 export const SEED_LAW_BRANCHES_DIGER: LawBranch[] = [
@@ -258,4 +263,15 @@ export const SEED_LAW_BRANCHES_DIGER: LawBranch[] = [
   { law_id: 136, branch_id: 4 },
   { law_id: 137, branch_id: 4 },
   { law_id: 138, branch_id: 4 },
+  { law_id: 139, branch_id: 10 },
+  { law_id: 139, branch_id: 11 },
+  { law_id: 140, branch_id: 5 },
+  { law_id: 141, branch_id: 5 },
+  { law_id: 142, branch_id: 2 },
+  { law_id: 143, branch_id: 10 },
+  { law_id: 143, branch_id: 11 },
+  { law_id: 143, branch_id: 12 },
+  { law_id: 143, branch_id: 13 },
+  { law_id: 143, branch_id: 14 },
+  { law_id: 143, branch_id: 15 },
 ];

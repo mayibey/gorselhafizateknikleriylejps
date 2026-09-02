@@ -353,6 +353,21 @@ class SqliteBackend implements Backend {
       version = 31;
     }
 
+    if (version < 32) {
+      // Kitabı olup soru havuzu üretilmemiş dört konu daha: TCK m.240 (tabip/diş tabibi),
+      // 2803 mali hükümler ve 4678 mali hükümler (maliye), 2024/7 Tasarruf Genelgesi
+      // haberleşme giderleri (MEBS) → yeni laws 139-142 + branş bağları. TAMAMEN EKLEMELİ.
+      await this.seedReference();
+      version = 32;
+    }
+
+    if (version < 33) {
+      // 2872 Çevre Kanunu havuzu (6 sağlık/kimya branşının ortak kitabı) → yeni law 143.
+      // TAMAMEN EKLEMELİ; kart içermez, yalnız talim soruları.
+      await this.seedReference();
+      version = 33;
+    }
+
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
     }

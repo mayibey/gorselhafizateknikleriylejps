@@ -79,6 +79,23 @@ for (const m of seed.matchAll(/\{ id: (\d+), blok: '[^']+', ad: (?:'([^']+)'|"([
   const no = m[2].match(/^(\d{3,4})\s*sayılı/);
   if (no && (/Kanunu?$/.test(m[2]) || !NO_ADI.has(no[1]))) NO_ADI.set(no[1], adTemizle(m[2]));
 }
+// DİĞER BRANŞLAR (id 68+) ayrı dosyada. YALNIZ law_id->ad eşlemesi alınır; NO_ADI'ya
+// DOKUNULMAZ — 2 Eyl 2026'da bu dosya seed.ts ile birlikte okununca müşterek kanun
+// adları eziliyor ve bankadan 286 soru düşüyordu (ölçüldü: 5494 -> 5208).
+{
+  const digerSeed = readFileSync(join(kok, 'src/db/seed-brans-diger.ts'), 'utf8');
+  for (const m of digerSeed.matchAll(/\{ id: (\d+), blok: '[^']+', ad: (?:'([^']+)'|"([^"]+)")/g)) {
+    const ad = m[2] ?? m[3];
+    const id = Number(m[1]);
+    // YALNIZ künye olarak KULLANILABİLİR adlar alınır. Diğer branş adlarının çoğu
+    // "(Mali Hükümler kapsamı: m.10, …)" gibi parantezle biter; böyle bir ad künye
+    // süzgecinden geçmez ve mevzuatBul null döndürüp O KANUNUN TÜM sorularını eler
+    // (ölçüldü: hepsini eklemek bankayı 5494'ten 5208'e düşürüyordu).
+    const kullanilir = /(Kanunu|Kanun|Yönetmeliği|Yönetmelik|Yönergesi|Yönerge|Tebliği|Tebliğ|Anayasası|Anayasa|Genelgesi|Kararname|Kararnamesi|Esasları|Rehberi|Kuralları)$/.test(ad.trim());
+    if (kullanilir && !KANUN_ADI.has(id)) KANUN_ADI.set(id, adTemizle(ad));
+  }
+}
+
 export const DUELLO_ADI = new Map(); // düello law_id -> tam ad
 {
   // DİKKAT: dosyada önce TİP yazıyor (`…branslar: number[] }[] = [`). Ham `indexOf('[')`
