@@ -1950,3 +1950,23 @@ Commit b6e0f35 · OTA: 1.0.46 / 1.0.45 / 1.0.43. Bölüm `talim-mevzuata` bayra�
 ## 1 Eylül 2026 — Bakım branşı PDF'leri
 26 mevzuat PDF'i Supabase `icerik` kovasından masaüstüne toplandı
 (`Masaüstü/BAKIM BRANSI MEVZUAT`, 7,9 MB, hepsi PDF imzası doğrulanarak).
+
+## 2 Eylül 2026 — İade denetimi kör noktası kapandı
+1 Eyl'de bir kullanıcı (yalcintekin007@gmail.com) ömür boyu paketi Apple'dan **tam iade**
+aldı (satın alma 31 Ağu 21:00 → iade 1 Eyl 19:15, ~22 saat; sebep kodu 0 = "diğer/yanlışlıkla",
+uygulama kusuru DEĞİL). Gece denetimi 2 Eyl 03:30'da yakalayıp erişimi kapattı ve başkana
+bildirdi — sistem tasarlandığı gibi çalıştı. Başkan kararı: **bir şey yapma** (itiraz/mesaj yok).
+
+Ararken çıkan asıl kusur: denetim, satın almayı hangi mağazaya soracağını `platform`
+etiketinden seçiyordu. Temmuz başındaki **9 iOS satın alması 'android' etiketliydi**
+(sunucunun eski varsayılanı; kod 230. satırda çoktan düzeltilmişti, veri kalmıştı) →
+Google'a sorulup HTTP 400 alınıyor, "bilinmiyor" diye geçiliyordu. O dokuz kişiden biri
+iade alsa fark etmeyecektik.
+- Veri: 9 satır `platform='ios'` yapıldı (ters yönde yanlış etiket yok — ölçüldü).
+- Kod: mağaza artık **jeton şeklinden** seçilir (Apple işlem kimliği salt rakam ~15 hane,
+  Google jetonu 144 karakter) → etiket yine bozulsa bile doğru mağazaya sorulur.
+- Ölçüm: denetim 129 geçerli + 9 bilinmiyor → **139 geçerli / 0 bilinmiyor** (canlı kuru
+  çalıştırma). `uyelik-denetle` fonksiyonu deploy edildi. Commit 2e56a78.
+
+Yan ürün: `scratchpad/siparis-haritasi.json` — sipariş numarası → kim (150 satın alma,
+139'unda numara var). İade bildirimi gelince kimin olduğu numaradan anında bulunur.
