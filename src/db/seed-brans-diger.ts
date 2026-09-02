@@ -72,6 +72,9 @@ export const SEED_LAWS_DIGER: Law[] = [
   { id: 133, blok: 'branş', ad: "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik" },
   { id: 134, blok: 'branş', ad: "İlkyardım Yönetmeliği" },
   { id: 135, blok: 'branş', ad: "Yataklı Sağlık Tesislerinde Acil Servis Hizmetlerinin Uygulama Usul ve Esasları Hakkında Tebliğ" },
+  { id: 136, blok: 'branş', ad: "926 sayılı Türk Silâhlı Kuvvetleri Personel Kanunu (Personel Hükümleri: m.3, 4, 31-38, 79-85, 93, 109, 112)" },
+  { id: 137, blok: 'branş', ad: "3269 sayılı Uzman Erbaş Kanunu (Personel Hükümleri: m.3, 4, 5, 6, 9, 11, 12, 14, 15)" },
+  { id: 138, blok: 'branş', ad: "3466 sayılı Uzman Jandarma Kanunu (Personel Hükümleri: m.8, 9, 13, 18)" },
 ];
 
 export const SEED_LAW_BRANCHES_DIGER: LawBranch[] = [
@@ -252,4 +255,7 @@ export const SEED_LAW_BRANCHES_DIGER: LawBranch[] = [
   { law_id: 134, branch_id: 15 },
   { law_id: 135, branch_id: 10 },
   { law_id: 135, branch_id: 11 },
+  { law_id: 136, branch_id: 4 },
+  { law_id: 137, branch_id: 4 },
+  { law_id: 138, branch_id: 4 },
 ];

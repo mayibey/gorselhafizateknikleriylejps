@@ -342,6 +342,17 @@ class SqliteBackend implements Backend {
       version = 30;
     }
 
+    if (version < 31) {
+      // PERSONEL branşı: kitabı olup soru havuzu HİÇ üretilmemiş üç konu için havuz üretildi
+      // (2 Eyl 2026) → yeni laws 136-138 + branş bağları. 926 (TSK Personel K. personel
+      // hükümleri), 3269 (Uzman Erbaş K. personel hükümleri), 3466 (Uzman Jandarma K. personel
+      // hükümleri). TAMAMEN EKLEMELİ: seedReference() INSERT OR IGNORE → mevcut veri ve srs
+      // DEĞİŞMEZ. Bu kanunlar KART İÇERMEZ (yalnız talim soruları). Kanun kimlikleri ÇİVİLİ
+      // (brans-diger-seed-uret.mjs eski haritayı korur) → eski kimlikler kaymaz.
+      await this.seedReference();
+      version = 31;
+    }
+
     if (version !== (row?.user_version ?? 0)) {
       await db.execAsync(`PRAGMA user_version = ${version}`);
     }
