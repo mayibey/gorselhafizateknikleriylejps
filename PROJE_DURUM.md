@@ -1991,3 +1991,25 @@ ya da o mevzuatın branş havuzu hiç yok: Çevre Kanunu, Taşınmaz Mal Zilyedl
 Tasarruf Tedbirleri Genelgesi). **Açılan:** 516 test / 10.122 soru.
 Commit 2a8cbb0 · tsc 0 hata. AÇIK İŞ: bağsız 17 kitabın soru havuzu (özellikle personelin
 "Personel Hükümleri" kapsamı — 72/73/74'te yalnız mali hüküm soruları var).
+
+## 2 Eylül 2026 — Branş konu kartı yayında + sorusuz kitapların kökü
+Branş kartı sadeleştirildi (başkan: "branşta kart yok, tek kitap var"): kart ilerlemesi/çubuk
+geri alındı, kalan format müşterekle aynı → "Çalış" kitabı açar, "Talim Yap · N" testleri alta
+listeler, satır etiketi "20 soru · 17/20 doğru / devam ediyor / çözülmedi". Commit 0a6a050.
+**OTA 5 runtime'a basıldı** (1.0.46 / 1.0.45 / 1.0.43 / 1.0.41 / 1.0.40) — hepsi kapsandı.
+DERS: bildiren kullanıcı 1.0.41'deydi; yalnız güncel üç sürüme basmak onu KAPSAMIYORDU →
+yayından önce `istemci_surum` dağılımına bak.
+
+### Sorusu olmayan kitaplar — KÖK SEBEP ÖLÇÜLDÜ
+3091 kitabı (istihkam/ikmal/bakım) mevcut havuza bağlandı (law 47, 21 soru) → 177/191 kitapta
+test var. Kalan **14 kitap satırı / 8 konu**. Sebep uygulamada değil FABRİKADA:
+`D:/JSPS Fabrika/.../BRANS_DIGER` altında 30–42 numaralı klasörlerde YALNIZ özet kitap
+dosyaları var (`_ozet_govde.html`, `_ozet_meta.json`); soru üretimi için gereken
+`MASTER.md` + `KAPSAM_HARITASI.md` + `_META.json` + `_SORULAR.json` HİÇ üretilmemiş.
+Seed üreteci yalnız `_SORULAR.json` olan klasörü kanun yaptığı için bu konular kanun bile olmadı.
+- Resmî metni ELDE OLAN (hemen üretilebilir): 926 (TSK Personel K.), 3269 (Uzman Erbaş),
+  3466 (Uzman Jandarma) — üçü de **personel branşı**, kapsam "Personel Hükümleri"
+  (elimizdeki 72/73/74 havuzları "Mali Hükümler" kapsamında → o yüzden bağlanamadı).
+- Resmî metni İNDİRİLECEK: 2872 Çevre Kanunu (6 branş), 5237 TCK m.240 (2 branş),
+  2803 Jandarma Teşkilat mali hükümler, 4678 Sözleşmeli Sb/Asb mali hükümler,
+  2024/7 Tasarruf Tedbirleri Genelgesi.
