@@ -172,7 +172,11 @@ Deno.serve(async (req) => {
   for (const s of data ?? []) {
     let sonuc: Sonuc;
     try {
-      if (s.platform === 'ios') sonuc = await appleDurum(s.satin_alma_token as string);
+      // Mağaza ETİKETTEN DEĞİL JETON ŞEKLİNDEN seçilir (2 Eyl 2026): 9 iOS satın alması
+      // 'android' etiketiyle kayıtlıydı, Google'a sorulup "bilinmiyor" diye geçiliyordu →
+      // iade alsalar fark etmezdik. Apple işlem kimliği salt rakam; Google jetonu 144 karakter.
+      const appleJeton = /^[0-9]{8,25}$/.test(String(s.satin_alma_token));
+      if (s.platform === 'ios' || appleJeton) sonuc = await appleDurum(s.satin_alma_token as string);
       else if (s.tip === 'abonelik') sonuc = { durum: 'GECERLI', not: 'abonelik: bitis ile düşer' };
       else sonuc = await googleUrunDurum(s.urun as string, s.satin_alma_token as string);
     } catch (e) {

@@ -155,10 +155,13 @@ for (const s of satirlar) {
   const kim = [s.ad, s.soyad].filter(Boolean).join(' ') || s.email || s.user_id.slice(0, 8);
   let sonuc;
   try {
-    if (s.platform === 'android') {
-      sonuc = s.tip === 'abonelik' ? await googleAbonelik(s.satin_alma_token) : await googleUrun(s.urun, s.satin_alma_token);
-    } else if (s.platform === 'ios') {
+    // Mağaza jeton ŞEKLİNDEN seçilir; etiket yanlışsa bile doğru mağazaya sorulur
+    // (2 Eyl 2026: 9 iOS satın alması 'android' etiketliydi → sessizce denetim dışı kalıyordu).
+    const appleJeton = /^[0-9]{8,25}$/.test(String(s.satin_alma_token));
+    if (appleJeton || s.platform === 'ios') {
       sonuc = await appleDurum(s.satin_alma_token, s.tip);
+    } else if (s.platform === 'android') {
+      sonuc = s.tip === 'abonelik' ? await googleAbonelik(s.satin_alma_token) : await googleUrun(s.urun, s.satin_alma_token);
     } else {
       sonuc = { durum: 'ATLANDI', not: `platform=${s.platform}` };
     }
