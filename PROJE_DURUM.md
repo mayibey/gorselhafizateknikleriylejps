@@ -2057,3 +2057,10 @@ AMA yalnız `law_id → ad` için ve yalnız **künye olarak kullanılabilir** a
 denemede hepsini almak, "(Mali Hükümler kapsamı: …)" gibi parantezle biten adlar yüzünden
 bankayı 5494 → 5208'e düşürmüştü. Son doğrulama: hiçbir mevcut kanunun sorusu AZALMADI
 (5463 → 5527). Commit 2991bb9 · OTA 5 runtime.
+
+## 3 Eylül 2026 — "Sınava 15 gün kaldı" bildirimi (herkese)
+Başkan kararı; metin kısa tutuldu (bildirim ve duyuru aynı cümle).
+Başlık "SINAVA 15 GÜN KALDI" · "Günde 3 saat ayır komutan, JSPS'yi bitir. 15 gün yeter."
+**512 cihazın 512'si Expo tarafından kabul edildi, 0 hata.** Duyuru id ee89f308.
+NOT: takvimde 16 gün vardı (3 Eyl → 19 Eyl); başkan dikkat çekmek için 15 dedi — 31 Ağu'daki
+"17 gün" turunda da aynı tercih yapılmıştı. Kitle 104 → **512 cihaza** çıkmış.
