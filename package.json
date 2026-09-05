@@ -83,6 +83,7 @@
     "icerik:manifest": "node scripts/gorsel-registry-uret.mjs --manifest && node scripts/ses-registry-uret.mjs --manifest",
     "icerik:tam": "node scripts/gorsel-registry-uret.mjs && node scripts/ses-registry-uret.mjs",
     "madde:uret": "node scripts/madde-metni-uret.mjs",
+    "emir:kapsam": "node scripts/emir-kapsam-uret.mjs",
     "soru:uret": "node scripts/soru-registry-uret.mjs",
     "soru:duello": "node scripts/duello-registry-uret.mjs",
     "soru:denetci": "node scripts/soru-denetci.mjs",

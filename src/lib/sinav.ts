@@ -10,6 +10,7 @@
 import { type KartSoru } from '../assets/kart-sorulari';
 import { type GenelDeneme } from '../assets/genel-denemeler';
 import { KART_SORU_SAYILARI } from '../assets/kart-soru-sayilari';
+import { EMIR_MADDE_KAPSAM, EMIR_SORU_SAYILARI } from '../assets/emir-madde-kapsam';
 import { birlesikUyeler } from '@/lib/birlesik';
 
 export type { KartSoru } from '../assets/kart-sorulari';
@@ -87,13 +88,41 @@ function genelKaynak(blok?: GenelBlok, brans?: string | null): GenelDeneme[] {
 /** Bir sınav cevabı: hangi soru, hangi şık seçildi. */
 export type SinavCevap = { soruIndex: number; secilenIndex: number };
 
+/**
+ * EMİR SÜZGECİ — Ek-1'de her branş için yalnız kanun değil, sınava girebilecek MADDELER de yazılı.
+ * Emir bir kanunun sadece birkaç maddesini kapsıyorsa (örn. MEBS'te Merkezî Yönetim Harcama
+ * Belgeleri Yönetmeliği: 5, 43, 46, 48, 63, 66, 67) aday, sınavda karşılaşmayacağı maddeye
+ * çalışmasın diye o kanunun diğer soruları Talim'de GÖSTERİLMEZ.
+ *
+ * Aynı kitap başka branşta geniş kapsamlı olabilir (Harcama Belgeleri Maliye'de "1-34 ve 40-46"),
+ * bu yüzden süzgeç BRANŞA göredir. Süzgeçte olmayan kanunda süzme yapılmaz (güvenli taraf).
+ */
+function emirIzin(lawId: number, brans?: string | null): number[] | null {
+  if (!brans) return null;
+  return EMIR_MADDE_KAPSAM[brans]?.[lawId] ?? EMIR_MADDE_KAPSAM['müşterek']?.[lawId] ?? null;
+}
+function emirdeMi(kaynak: string | undefined, izin: number[]): boolean {
+  const m = /m\.\s*(\d{1,3})/.exec(kaynak ?? '');
+  return !m || izin.includes(Number(m[1]));   // madde bilgisi yoksa eleme
+}
+/** Bir kanunun, branşın emrine göre süzülmüş soru havuzu (süzgeç yoksa havuzun kendisi). */
+function havuz(lawId: number, brans?: string | null): KartSoru[] {
+  const sorular = bank()[lawId] ?? [];
+  const izin = emirIzin(lawId, brans);
+  return izin ? sorular.filter((q) => emirdeMi(q.kaynak, izin)) : sorular;
+}
+
 /** Bir kanunun deneme sınavı var mı (en az 1 soru)? (sayı manifestinden — banka yüklenmez.) */
-export function sinavVarMi(lawId: number): boolean {
-  return (KART_SORU_SAYILARI[lawId] ?? 0) > 0;
+export function sinavVarMi(lawId: number, brans?: string | null): boolean {
+  return sinavSoruSayisi(lawId, brans) > 0;
 }
 
 /** Bir kanunun deneme sınavı soru sayısı (yoksa 0). (sayı manifestinden — banka yüklenmez.) */
-export function sinavSoruSayisi(lawId: number): number {
+export function sinavSoruSayisi(lawId: number, brans?: string | null): number {
+  if (brans) {
+    const suzulmus = EMIR_SORU_SAYILARI[brans]?.[lawId] ?? EMIR_SORU_SAYILARI['müşterek']?.[lawId];
+    if (suzulmus != null) return suzulmus;
+  }
   return KART_SORU_SAYILARI[lawId] ?? 0;
 }
 
@@ -112,9 +141,13 @@ function karistir<T>(dizi: readonly T[], rastgele: () => number): T[] {
  * `rastgele` enjekte edilebilir → saf/test edilebilir (default Math.random).
  * Kanunun sorusu yoksa boş dizi.
  */
-export function getSinavSorulari(lawId: number, rastgele: () => number = Math.random): KartSoru[] {
-  const sorular = bank()[lawId];
-  if (!sorular || sorular.length === 0) return [];
+export function getSinavSorulari(
+  lawId: number,
+  rastgele: () => number = Math.random,
+  brans?: string | null,
+): KartSoru[] {
+  const sorular = havuz(lawId, brans);
+  if (sorular.length === 0) return [];
   return karistir(sorular, rastgele);
 }
 
@@ -169,14 +202,14 @@ function testSinirlari(toplam: number): [number, number][] {
   return out;
 }
 
-/** Bir kanunun test sayısı (0 = sınav yok). */
-export function testSayisi(lawId: number): number {
-  return testSinirlari(sinavSoruSayisi(lawId)).length;
+/** Bir kanunun test sayısı (0 = sınav yok). Branş verilirse emir süzgecinden sonraki sayı. */
+export function testSayisi(lawId: number, brans?: string | null): number {
+  return testSinirlari(sinavSoruSayisi(lawId, brans)).length;
 }
 
 /** Bir testin soru sayısı (geçersiz test index → 0). */
-export function testSoruSayisi(lawId: number, testIndex: number): number {
-  const s = testSinirlari(sinavSoruSayisi(lawId))[testIndex];
+export function testSoruSayisi(lawId: number, testIndex: number, brans?: string | null): number {
+  const s = testSinirlari(sinavSoruSayisi(lawId, brans))[testIndex];
   return s ? s[1] - s[0] : 0;
 }
 
@@ -188,9 +221,10 @@ export function getTestSorulari(
   lawId: number,
   testIndex: number,
   rastgele: () => number = Math.random,
+  brans?: string | null,
 ): KartSoru[] {
-  const sorular = bank()[lawId];
-  if (!sorular || sorular.length === 0) return [];
+  const sorular = havuz(lawId, brans);
+  if (sorular.length === 0) return [];
   const s = testSinirlari(sorular.length)[testIndex];
   if (!s) return [];
   return karistir(sorular.slice(s[0], s[1]), rastgele);

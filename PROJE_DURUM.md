@@ -2092,3 +2092,39 @@ Kalan iş: Taşınır Mal (m.25,32), Bilgi Güvenliği Rehberi ve Tasarruf Tedbi
 küçük olduğu için denemede sınavdaki ağırlığın altında kalıyor — soru üretilmeli. Ayrıca
 "Talim" (kitap içi test) hâlâ süzgeçsiz: MEBS adayı Harcama kitabını açınca emir dışı 71 soruyu
 da görüyor. Müşterek/Jandarma denemelerinde emir dışı yalnız 4 soru var (dokunulmadı).
+
+### 5 Eylül 2026 (2) — Emir süzgeci Talim'e de kondu + 91 yeni soru
+Başkan "düzelt hepsini sonra yay" dedi. Yapılanlar:
+
+**1) İnce havuzlara soru üretildi (66 yeni).** MEBS denemesi gerçek sınav dağılımına ancak
+havuzlar yeterli olursa yaklaşıyordu. Resmî metin kaynakları: fabrikadaki MASTER.md (Taşınır Mal)
+ve **bot arşivi `D:/jsps-community-bot/data/maddeler.json`** (Harcama Belgeleri m.5/43/46/48/63/66/67,
+Bilgi ve İletişim Güvenliği Rehberi'nin GERÇEK tedbir metni, 2024/7 Genelge haberleşme bölümü).
+- Taşınır Mal (m.25, 32): 12 → 28 · Harcama Belgeleri (MEBS 7 maddesi): 10 → 28
+- Bilgi Güvenliği Rehberi: 12 → 30 · Tasarruf Tedbirleri: 8 → 22
+- **Rehber'in gövde metni fabrikada YOKTU** (yalnız 1 sayfalık KPMG broşürü vardı); bu yüzden
+  eldeki 12 soru "Rehber kaç maddeden oluşur" tipi meta sorularıydı. Gerçek tedbir metni bot
+  arşivinden alındı; 2024 sınavının sorduğu "ağların izole edilmesi" artık kapsanıyor.
+
+**2) 2024 kitapçığındaki gerçek boşluklar kapatıldı (12 yeni + 17 kurtarma).**
+TCK m.323 (savaşta yalan haber) · 2893 m.8 (cezayı mahallî mülki amir verir) · Personel Yön. m.8
+(branş belirleme) · 5809 m.3 (geçiş hakkı / geçiş hakkı sağlayıcısı) · Bilgi Edinme Yön. m.2-5.
+**Bilgi Edinme kitabı 1 → 18 soru:** 26 sorunun 25'i "madde atfı sökülemedi" ile eleniyordu, çünkü
+kökler "Yönetmeliğin 2. maddesine göre" diye başlayıp hangi yönetmelik olduğunu söylemiyordu.
+Kökler kanonikleştirildi (içeriğe dokunulmadı). Banka 5527 → 5618.
+
+**3) Emir süzgeci artık Talim'de de çalışıyor.** `src/assets/emir-madde-kapsam.ts`
+(`npm run emir:kapsam` ile üretilir) iki tablo verir: branş→kanun→izinli maddeler ve branş→kanun→
+süzülmüş soru adedi (banka yüklemeden test sayısı için). `sinav.ts`'in Talim fonksiyonları
+opsiyonel `brans` alır; mevzuat.tsx ve sinav.tsx `useBrans()` ile besler. Etkilenen kitaplar:
+MEBS Harcama 99→28 soru (5→2 test), personel 5510 109→46, Şehitlik 36→12, Kantin 56→25,
+maliye 2629 79→52 vb. **TUZAK:** test sayısı azalan kitapta eski test kayıtları (Test 3/4/5)
+öksüz kalır — ekranda görünmez, çökme yok.
+
+**4) MEBS denemeleri 5×50'ye döndü ve dağılım sınava oturdu** (en büyük sapma 3 puan):
+Yetkilendirme %13 (sınav %10) · 2019/12 %12 (%13) · Rehber %12 (%10) · Taşınır %11 (%13) ·
+Harcama %11 (%10) · Telsiz %10 (%13) · 5809 %10 (%13) · Kodlu %9 (%7) · Tasarruf %8 (%10).
+
+Doğrulama: `npx tsc --noEmit` 0 hata · 3200 deneme sorusunun tamamı bankada ve emir içinde.
+AÇIK: genel yetenek/genel kültür bölümü (sınavın %20'si — Türkçe, inkılap, Anayasa, güncel,
+muhakeme) hâlâ YOK; ayrı bir iş olarak başkanın kararını bekliyor.

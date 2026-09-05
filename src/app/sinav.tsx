@@ -146,7 +146,7 @@ export default function SinavScreen() {
     }
     void (async () => {
       const kayit = await sinavIlerlemeOku(lawIdNum, testNum).catch(() => null);
-      const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum);
+      const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum, undefined, brans);
       // Yarım sınav SORULARIYLA BİRLİKTE kaydediliyor. Soru bankası güncellenince (23 Ağu:
       // sorular çıkmış sınav standardına çekildi) kayıt ESKİ METNİ oynatmaya devam ediyordu —
       // başkan düzeltilmiş soruyu eski hâliyle gördü. Kaydın metinleri bankayla uyuşmuyorsa
@@ -192,9 +192,9 @@ export default function SinavScreen() {
           : { genel: String(genelNo + 1) },
       };
     }
-    if (lawIdNum == null || testNum + 1 >= testSayisi(lawIdNum)) return null;
+    if (lawIdNum == null || testNum + 1 >= testSayisi(lawIdNum, brans)) return null;
     return {
-      etiket: `Sıradaki test (${testNum + 2}/${testSayisi(lawIdNum)})`,
+      etiket: `Sıradaki test (${testNum + 2}/${testSayisi(lawIdNum, brans)})`,
       params: { lawId: String(lawIdNum), test: String(testNum + 1) },
     };
   })();
@@ -203,7 +203,7 @@ export default function SinavScreen() {
   const yenidenBasla = useCallback(() => {
     if (lawIdNum == null) return;
     void sinavIlerlemeSil(lawIdNum, testNum);
-    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum);
+    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum, undefined, brans);
     setSorular(liste);
     setSecimler(new Array(liste.length).fill(null));
     setIndex(0);
@@ -370,10 +370,10 @@ export default function SinavScreen() {
           const hepsi = (await getSinavSonuclari()).filter((s) => s.law_id === lawIdNum);
           const aced = new Set(
             hepsi
-              .filter((s) => s.toplam > 0 && s.dogru === s.toplam && s.toplam === testSoruSayisi(lawIdNum, s.test))
+              .filter((s) => s.toplam > 0 && s.dogru === s.toplam && s.toplam === testSoruSayisi(lawIdNum, s.test, brans))
               .map((s) => s.test),
           );
-          setBelgeHak(aced.size >= testSayisi(lawIdNum));
+          setBelgeHak(aced.size >= testSayisi(lawIdNum, brans));
         }
       } catch {
         // sessiz geç (skor/ödül kaydı başarısızsa sonuç ekranı yine görünsün)
@@ -403,9 +403,9 @@ export default function SinavScreen() {
           <AppText variant="govde" color="beyaz" bold>
             {aktif ? `Soru ${index + 1} / ${sorular!.length}` : 'Deneme Sınavı'}
           </AppText>
-          {lawIdNum != null && testSayisi(lawIdNum) > 1 ? (
+          {lawIdNum != null && testSayisi(lawIdNum, brans) > 1 ? (
             <AppText variant="etiket" color="altinAcik2" bold>
-              TEST {testNum + 1} / {testSayisi(lawIdNum)}
+              TEST {testNum + 1} / {testSayisi(lawIdNum, brans)}
             </AppText>
           ) : null}
         </View>

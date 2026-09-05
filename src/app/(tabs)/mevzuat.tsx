@@ -790,6 +790,7 @@ function KanunSatir({
   /** Yarım kalmış sınavlar ("lawId.test") — tüm kanunlar için ortak küme. */
   testYarim?: Set<string>;
 }) {
+  const { brans } = useBrans();
   // Durum TAM SAYI sayımıyla (yuvarlama YOK) → filtreyle BİREBİR tutarlı (sınır
   // durumlarında çoklu/yanlış sekme sorunu biter). yüzde yalnız bar/etiket için.
   const tam = toplam > 0 && calisilan >= toplam;
@@ -802,8 +803,8 @@ function KanunSatir({
   // Premium kilidi: erişim yoksa satır → paywall (indir/çalış yerine). Şalter kapalıysa hep açık.
   const kilitli = !kanunErisilebilir(klasorAdi, law.blok);
   // GECE KARARI M-K4 (bayraklı): her kanunun denemeleri kendi kartının altında.
-  const denemeVar = !!talimAc && !kilitli && sinavVarMi(law.id);
-  const testAdedi = denemeVar ? testSayisi(law.id) : 0;
+  const denemeVar = !!talimAc && !kilitli && sinavVarMi(law.id, brans);
+  const testAdedi = denemeVar ? testSayisi(law.id, brans) : 0;
   // A1 — ÜCRETSİZ ROZETİ: TCK bedava ama bunu hiçbir yer SÖYLEMİYORDU; ücretsizlik yalnızca
   // "kilit rozeti yok" olmasından anlaşılıyordu. 66 satırın 65'i kilitli olduğu için yeni
   // kullanıcı "her şey kilitli" sanıp çıkıyordu (başkan bildirdi, 7 Ağu 2026). Kilit varken
@@ -1101,7 +1102,7 @@ function KanunSatir({
               {indirGerek ? 'İndir ve Başla' : bos ? 'Başla' : 'Çalış'}
             </AppText>
           </Pressable>
-          {sinavVarMi(law.id) ? (
+          {sinavVarMi(law.id, brans) ? (
             <Pressable
               onPress={(e) => {
                 e.stopPropagation();
@@ -1141,7 +1142,7 @@ function KanunSatir({
               </AppText>
               <View style={st.denemeDurum}>
                 <AppText variant="etiket" bold color={talimAc ? 'altinParlak' : 'solukMetin'}>
-                  {testSoruSayisi(law.id, indeks)} soru
+                  {testSoruSayisi(law.id, indeks, brans)} soru
                 </AppText>
                 <AppText variant="etiket" bold color={testDurum(indeks).renk}>
                   {testDurum(indeks).metin}
@@ -1263,10 +1264,11 @@ function BransKitapKart({
   testSonuclari?: Map<number, SinavSonuc>;
   testYarim?: Set<string>;
 }) {
+  const { brans } = useBrans();
   const router = useRouter();
   const [testlerAcik, setTestlerAcik] = useState(false);
   const lawId = kitap.lawId;
-  const testAdedi = lawId != null && sinavVarMi(lawId) ? testSayisi(lawId) : 0;
+  const testAdedi = lawId != null && sinavVarMi(lawId, brans) ? testSayisi(lawId, brans) : 0;
   const paywall = () => router.push('/paywall');
   return (
     <View style={[st.kitapKart, gece && st.kitapSatirGece]}>
@@ -1338,7 +1340,7 @@ function BransKitapKart({
                 </AppText>
                 <View style={st.denemeDurum}>
                   <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'solukMetin'}>
-                    {testSoruSayisi(lawId, indeks)} soru
+                    {testSoruSayisi(lawId, indeks, brans)} soru
                   </AppText>
                   <AppText variant="etiket" bold color={durum.renk}>
                     {durum.metin}
