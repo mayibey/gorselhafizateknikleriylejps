@@ -2064,3 +2064,31 @@ Başlık "SINAVA 15 GÜN KALDI" · "Günde 3 saat ayır komutan, JSPS'yi bitir. 
 **512 cihazın 512'si Expo tarafından kabul edildi, 0 hata.** Duyuru id ee89f308.
 NOT: takvimde 16 gün vardı (3 Eyl → 19 Eyl); başkan dikkat çekmek için 15 dedi — 31 Ağu'daki
 "17 gün" turunda da aynı tercih yapılmıştı. Kitle 104 → **512 cihaza** çıkmış.
+
+## 5 Eylül 2026 — Branş denemeleri EMİR (Ek-1) süzgecinden geçirildi
+Başkan, 2024 MEBS çıkmış kitapçığını inceletirken sordu: "bizim için önemli olan BU SENEKİ
+konu değil mi?" — haklı çıktı ve asıl arıza bizim tarafımızda bulundu.
+
+**Emir maddeyi de sınırlıyor.** `docs/jsps konuları.pdf` (Ek-1, 21 May 2026) her branş için
+yalnız kanunu değil **hangi maddeleri** de yazıyor. MEBS'te Merkezî Yönetim Harcama Belgeleri
+Yönetmeliği sadece **m.5,43,46,48,63,66,67**; bizim o yönetmelikten 81 sorumuzun sadece 10'u
+o maddelerden. MEBS branş denemelerinin **%26'sı (250'de 66 soru)** adayın sınavda
+karşılaşamayacağı maddelerdendi (sorular Maliye/İkmal/Bakım için üretilmiş, orada "Tamamı" yazıyor).
+
+Yapılanlar:
+- `scripts/_emir-madde-kapsam.json` — Ek-1'den {branş → kanun → izinli maddeler} tablosu
+  (81 kalem). PDF tablosu PyMuPDF `find_tables` ile okundu. **Güvenli taraf:** "Tamamı",
+  "8'inci Bölüm" gibi sözel tarifler ve güvenle eşleşmeyen satırlar SÜZÜLMEZ. Bir süzgeç o
+  kanunun sorularının HEPSİNİ düşürüyorsa eşleştirme hatası sayılıp atlanır (havacılık Sağlık
+  Yeteneği Yön. ve personel 3466 böyle yakalandı).
+- `scripts/brans-deneme-uret.mjs`: (1) emir madde süzgeci, (2) düz karıştırma yerine
+  **kanunlar arasında sırayla toplama** — tek mevzuat denemeyi ele geçiremiyor.
+- Yeniden üretildi: 338 emir dışı soru denemelerden çıktı (mebs 71 · personel 118 · maliye 86
+  · tabip 63). MEBS 5 → 4 deneme (emir içi havuz tam 200 soru). Diğer branşlar 5'te kaldı.
+  MEBS'te Harcama payı %30 → %5, Tasarruf Tedbirleri %0 → %4 (sınavda %10 gelmişti).
+- Doğrulama: 3150 soru, bankada olmayan 0, emir dışı kalan 0, `npx tsc --noEmit` 0 hata.
+
+Kalan iş: Taşınır Mal (m.25,32), Bilgi Güvenliği Rehberi ve Tasarruf Tedbirleri havuzları
+küçük olduğu için denemede sınavdaki ağırlığın altında kalıyor — soru üretilmeli. Ayrıca
+"Talim" (kitap içi test) hâlâ süzgeçsiz: MEBS adayı Harcama kitabını açınca emir dışı 71 soruyu
+da görüyor. Müşterek/Jandarma denemelerinde emir dışı yalnız 4 soru var (dokunulmadı).

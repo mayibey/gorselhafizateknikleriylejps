@@ -35,6 +35,19 @@ const digerTs = readFileSync(join(kok, 'src/db/seed-brans-diger.ts'), 'utf8');
 const bag = [...digerTs.matchAll(/\{ law_id: (\d+), branch_id: (\d+) \}/g)]
   .map((m) => ({ law: Number(m[1]), brans: Number(m[2]) }));
 
+// EMİR SÜZGECİ: Ek-1'de her branş için sınava girebilecek MADDELER yazılı. Emir bir kanunun
+// yalnız birkaç maddesini kapsıyorsa (örn. MEBS'te Harcama Belgeleri Yön. sadece 7 madde),
+// diğer maddelerden soru o branşın denemesine GİRMEZ — aday sınavda karşılaşmayacağı
+// maddeye çalışmasın. Kanun süzgeçte yoksa süzme yapılmaz (güvenli taraf).
+const EMIR = JSON.parse(readFileSync(join(kok, 'scripts/_emir-madde-kapsam.json'), 'utf8')).kapsam;
+function emirdeMi(slug, lawId, kaynak) {
+  const izin = EMIR[slug]?.[String(lawId)];
+  if (!izin) return true;                       // bu kanun için madde sınırı yok
+  const m = /m\.\s*(\d{1,3})/.exec(kaynak ?? '');
+  if (!m) return true;                          // madde bilgisi yoksa eleme
+  return izin.includes(Number(m[1]));
+}
+
 const bankaTs = readFileSync(join(kok, 'src/assets/kart-sorulari.ts'), 'utf8');
 const banka = new Map();
 {
@@ -66,31 +79,43 @@ const rapor = [];
 for (const [bid, b] of branslar) {
   if (b.slug === 'jandarma') continue;
   const kanunlar = [...new Set(bag.filter((x) => x.brans === bid).map((x) => x.law))];
-  const havuz = [];
+  const kuyruklar = [];   // her kanun kendi kuyruğu — deneme içinde dengeli dağılsın
   const gorulen = new Set();
+  let elenen = 0;
   for (const l of kanunlar) {
+    const kendi = [];
     for (const q of banka.get(l) ?? []) {
       if (gorulen.has(q.id)) continue;      // aynı soru iki kanuna bağlıysa bir kez
       gorulen.add(q.id);
-      havuz.push({ id: q.id, lawId: l });
+      if (!emirdeMi(b.slug, l, q.kaynak)) { elenen += 1; continue; }
+      kendi.push({ id: q.id, lawId: l });
     }
+    if (kendi.length) kuyruklar.push(karistir(kendi, bid * 104729 + l));
+  }
+  // SIRAYLA TOPLA: kanunlar arasında dönerek al → tek bir mevzuat denemeyi ele geçirmesin
+  // (eskiden düz karıştırma vardı; MEBS'te denemenin %30'u tek yönetmelikten geliyordu).
+  kuyruklar.sort((x, y) => y.length - x.length);
+  const havuz = [];
+  for (let tur = 0; havuz.length < kuyruklar.reduce((a, k) => a + k.length, 0); tur += 1) {
+    for (const k of kuyruklar) if (tur < k.length) havuz.push(k[tur]);
   }
   const mumkun = Math.floor(havuz.length / SORU_ADEDI);
   const adet = Math.min(mumkun, EN_COK_DENEME);
-  rapor.push({ slug: b.slug, ad: b.ad, kanun: kanunlar.length, soru: havuz.length, mumkun, adet });
+  rapor.push({ slug: b.slug, ad: b.ad, kanun: kanunlar.length, soru: havuz.length, elenen, mumkun, adet });
   if (adet < 1) continue;
-  const karisik = karistir(havuz, bid * 7919 + 13);
   cikti[b.slug] = Array.from({ length: adet }, (_, i) => ({
     no: i + 1,
     baslik: `${b.ad} Branş Denemesi ${i + 1}`,
-    idler: karisik.slice(i * SORU_ADEDI, (i + 1) * SORU_ADEDI).map((x) => x.id),
+    idler: havuz.filter((_, j) => j % adet === i).slice(0, SORU_ADEDI).map((x) => x.id),
   }));
 }
 
-console.log('branş'.padEnd(13) + 'kanun'.padStart(6) + 'soru'.padStart(7) + 'mümkün'.padStart(8) + 'üretilen'.padStart(10));
+console.log('branş'.padEnd(13) + 'kanun'.padStart(6) + 'soru'.padStart(7) + 'emirdışı'.padStart(10)
+  + 'mümkün'.padStart(8) + 'üretilen'.padStart(10));
 for (const r of rapor.sort((a, b) => b.soru - a.soru)) {
   console.log(r.slug.padEnd(13) + String(r.kanun).padStart(6) + String(r.soru).padStart(7)
-    + String(r.mumkun).padStart(8) + String(r.adet).padStart(10) + (r.adet ? '' : '  ← 50 soru yok'));
+    + String(r.elenen).padStart(10) + String(r.mumkun).padStart(8) + String(r.adet).padStart(10)
+    + (r.adet ? '' : '  ← 50 soru yok'));
 }
 const toplam = Object.values(cikti).reduce((a, v) => a + v.length, 0);
 console.log(`\n${Object.keys(cikti).length} branş · ${toplam} deneme · ${toplam * SORU_ADEDI} soru (metin kopyalanmadı, kimlikle bağlandı)`);
