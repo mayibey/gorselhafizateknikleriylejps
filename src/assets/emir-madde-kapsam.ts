@@ -1204,13 +1204,13 @@ export const EMIR_SORU_SAYILARI: Record<string, Record<number, number>> = {
     "4": 19,
     "5": 32,
     "7": 20,
-    "8": 21,
+    "8": 22,
     "10": 28,
     "12": 43,
     "13": 31,
     "14": 18,
     "16": 37,
-    "18": 15,
+    "18": 16,
     "19": 18,
     "20": 23,
     "24": 27
@@ -1258,7 +1258,7 @@ export const EMIR_SORU_SAYILARI: Record<string, Record<number, number>> = {
   },
   "personel": {
     "75": 46,
-    "76": 55,
+    "76": 56,
     "105": 35,
     "106": 12,
     "109": 25,
@@ -1269,7 +1269,7 @@ export const EMIR_SORU_SAYILARI: Record<string, Record<number, number>> = {
     "70": 52,
     "72": 57,
     "73": 29,
-    "74": 15,
+    "74": 17,
     "75": 95,
     "78": 50,
     "80": 31,
@@ -1282,15 +1282,15 @@ export const EMIR_SORU_SAYILARI: Record<string, Record<number, number>> = {
     "141": 14
   },
   "istihkam": {
-    "77": 66,
+    "77": 72,
     "121": 39
   },
   "ikmal": {
-    "77": 66,
+    "77": 72,
     "121": 39
   },
   "bakim": {
-    "77": 66,
+    "77": 72,
     "121": 39
   },
   "tabip": {
@@ -1298,9 +1298,9 @@ export const EMIR_SORU_SAYILARI: Record<string, Record<number, number>> = {
     "139": 3
   },
   "veteriner": {
-    "77": 66
+    "77": 72
   },
   "muhendis": {
-    "77": 66
+    "77": 72
   }
 };

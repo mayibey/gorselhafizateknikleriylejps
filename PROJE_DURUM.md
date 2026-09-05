@@ -2128,3 +2128,25 @@ Harcama %11 (%10) · Telsiz %10 (%13) · 5809 %10 (%13) · Kodlu %9 (%7) · Tasa
 Doğrulama: `npx tsc --noEmit` 0 hata · 3200 deneme sorusunun tamamı bankada ve emir içinde.
 AÇIK: genel yetenek/genel kültür bölümü (sınavın %20'si — Türkçe, inkılap, Anayasa, güncel,
 muhakeme) hâlâ YOK; ayrı bir iş olarak başkanın kararını bekliyor.
+
+### 5 Eylül 2026 (3) — Kesik soru kökü hatası (başkan uygulamada yakaladı)
+Başkan MEBS denemesinde "5809 sayılı Elektronik Haberleşme Kanunu'na göre, **5809 sayılı Kanu ki
+ilkeler** arasında..." diye kesik bir soru gördü.
+
+**Kök sebep** `scripts/soru-standart.mjs`: cümle içi madde atfını süpüren
+`(nin|nın|nun|nün)?\s*\d+\s*(inci|…)\s*maddesi…` deseni, iyelik ekini BAĞIMSIZ bir kelime sanıyordu.
+Oysa ek mevzuat adına yapışık ("Kanun**un** 4 üncü maddesindeki"), bu yüzden süpürge kelimenin son
+üç harfini de yiyip geriye **"Kanu"** bırakıyordu. Tarandı: **27 soru** bu şekilde bozuktu.
+
+**Düzeltme (üç parça):**
+1. Cümle içi tekrar atfı, süpürgelere GİRMEDEN bütün hâlinde yakalanıp okunur karşılığıyla
+   değiştiriliyor: "Kanunun 4 üncü maddesindeki" → "kanunda sayılan", "Yönetmeliğin 21 inci
+   maddesindeki" → "Yönetmelikte sayılan". Kısa sıra sayıları da destekleniyor ("7 nci").
+2. Ardından **edat** geliyorsa yalın hâl kullanılıyor ("kanunda uyarınca" değil "Kanun uyarınca").
+   Atıf BAŞKA bir kanunaysa numarası korunuyor ("…tarihli ve 6749 sayılı Kanunda sayılan kişiler");
+   aynı kanunsa künye zaten başta olduğu için tekrarlanmıyor.
+3. "Madde 2'ye" sökülünce baştaki künye eksiz kalıyordu ("Şehitlik Yönetmeliği Geçici göre") →
+   önündeki "Geçici/Ek" de sökülüyor ve giriş doğru künyeye çevriliyor.
+
+**Sonuç:** kesik/bozuk kök **0**. Yan kazanç: "madde atfı sökülemedi" ile elenen soru 176 → 115,
+banka **5618 → 5667**. Deneme ve emir-kapsam dosyaları yeniden üretildi, `npx tsc --noEmit` 0 hata.

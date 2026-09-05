@@ -490,15 +490,50 @@ export function standartlastir(soru, kaynak, lawId) {
     }
   }
   // 2) yerinde temizlik — önce atıflar künyeye çevrilir, sonra artıklar süpürülür
-  let t = atifSadelestir(s)
+  //
+  // CÜMLE İÇİ TEKRAR ATFI (başkan yakaladı, 5 Eyl 2026 — uygulamada kesik soru gördü):
+  // "5809 sayılı Kanunun 4 üncü maddesindeki ilkeler" ifadesinde iyelik eki ("nun") mevzuat
+  // adının SONUNA yapışıktır. Aşağıdaki genel süpürgeler eki bağımsız bir kelime sanıp
+  // siliyor ve geriye "5809 sayılı Kanu ki ilkeler" gibi kesik bir kök kalıyordu (27 soru).
+  // Çözüm: bu kalıbı süpürgelere GİRMEDEN ÖNCE bütün hâlinde yakala ve okunur karşılığıyla
+  // değiştir. Künye zaten cümlenin başında olduğu için ikinci atıf gereksizdir.
+  const iciAtifDuzelt = (metin) => metin
+    .replace(
+      /(?:\b(\d{3,4})\s*sayılı\s+)?\bKanun['’]?(?:un|ün|ın|in)\s+(?:ek\s+)?(?:geçici\s+)?\d+\s*(?:\.|i?nci|ı?ncı|u?ncu|ü?ncü)?\s*madde(?:si|sine|sinde|sinin)?(ki)?\b(\s*(?:uyarınca|gereğince))?/gi,
+      (tam, no, ki, edat, konum, butun) => {
+        // Edat (uyarınca/gereğince) varsa bulunma hâli bozuk okunur: "kanunda uyarınca".
+        const govde = edat ? 'Kanun' : ki ? 'Kanunda sayılan' : 'Kanunda';
+        // Atıf BAŞKA bir kanuna ise numarası bilgi taşır, korunur ("…tarihli ve 6749 sayılı
+        // Kanunda sayılan kişiler"). Aynı kanunsa künye zaten başta; numara tekrarlanmaz.
+        const tekrar = no && new RegExp('\\b' + no + '\\b').test(butun.slice(0, konum));
+        return (no && !tekrar ? no + ' sayılı ' : '') + govde + (edat ?? '');
+      },
+    )
+    .replace(
+      /\b(Yönetmeliğ|Yönerge|Tebliğ)[a-zçğıöşü]*['’]?(?:in|ın|un|ün)\s+(?:ek\s+)?(?:geçici\s+)?\d+\s*(?:\.|i?nci|ı?ncı|u?ncu|ü?ncü)?\s*madde(?:si|sine|sinde|sinin)?(ki)?\b/gi,
+      (_, kok, ki) => {
+        const ad = /^Yönetmeliğ/i.test(kok) ? 'Yönetmelikte' : /^Yönerge/i.test(kok) ? 'Yönergede' : 'Tebliğde';
+        return ki ? `${ad} sayılan` : ad;
+      },
+    );
+  let t = iciAtifDuzelt(atifSadelestir(s))
     .replace(/\s*[,(]?\s*\bm\.\s?\d+(?:\/[\wçğıöşüÇĞİÖŞÜ-]+)*(?:['’][a-zçğıöşü]+)?\s*\)?/g, ' ')
     .replace(/\s*['’](nin|nın|nun|nün|in|ın|un|ün)\s+\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
     .replace(/\s*(nin|nın|nun|nün)?\s*\b\d+\s*(i?nci|ı?ncı|ü?ncü|u?ncu)\s*maddesi(nde|ne|nin|n)?\s*/gi, ' ')
-    .replace(/\s*\bmadde\s?\d+(\/\d+)?\s*['’]?[a-zçğıöşü]*\s*/gi, ' ')
+    .replace(/\s*\b(?:geçici\s+|ek\s+)?madde\s?\d+(\/\d+)?\s*['’]?[a-zçğıöşü]*\s*/gi, ' ')
     .replace(/\s{2,}/g, ' ')
     .replace(/\s+([,.;:?])/g, '$1')
     .trim();
   t = t.replace(/,\s*,/g, ',').replace(/,\s*([;:.])/g, '$1').replace(/\s{2,}/g, ' ').trim();
+  // "Madde 2'ye" sökülünce baştaki künye eksiz kalabiliyor ("Şehitlik Yönetmeliği göre").
+  // Mevzuat adıyla başlayıp eksiz "göre" ile devam eden girişi doğru künyeye çevir.
+  {
+    const adKacis = ad.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    t = t.replace(
+      new RegExp('^' + adKacis + "(?:['’][a-zçğıöşü]+)?(?:\\s+(?:geçici|ek))?\\s+göre", 'i'),
+      kunye(ad),
+    );
+  }
   if (!MADDE.test(t) && t.length >= 25) {
     const bas = ad.slice(0, 18).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     if (!new RegExp(bas, 'i').test(t.slice(0, 220))) {
