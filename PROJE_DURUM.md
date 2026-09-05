@@ -2150,3 +2150,27 @@ Oysa ek mevzuat adına yapışık ("Kanun**un** 4 üncü maddesindeki"), bu yüz
 
 **Sonuç:** kesik/bozuk kök **0**. Yan kazanç: "madde atfı sökülemedi" ile elenen soru 176 → 115,
 banka **5618 → 5667**. Deneme ve emir-kapsam dosyaları yeniden üretildi, `npx tsc --noEmit` 0 hata.
+
+### 6 Eylül 2026 — Kesik kök hatası DİĞER bankalarda da varmış
+Başkan iki yeni hata bildirimi sordu. İkincisi (Murat Demir, 5 Eyl, karma-1) **yine kesik kök**:
+"6136 sayılı Kanun ki satış, satın alma, taşıma ve bulundurma yasağı kimler için geçerlidir?"
+
+**Ders:** dün kökü `soru-standart.mjs`'te düzelttim ama YALNIZ `kart-sorulari.ts`'i yeniden
+ürettim. Soru metnini GÖMÜLÜ tutan diğer bankalar bozuk kaldı: düello 11, Jandarma branş denemesi
+3, karma deneme 1 kayıt.
+
+Yapılan:
+- `npm run soru:duello` → düello bankası yeniden üretildi (11 → 0). Düelloda sabit "deneme"
+  kavramı yok, yeniden üretmek güvenli.
+- Genel deneme dosyaları (branş + karma) YENİDEN ÜRETİLMEDİ — soru dizilimi sabittir, kullanıcı
+  yarım bıraktığı denemeye dönüyor. Onun yerine **cerrahi onarım**: yalnız bozuk 4 kökün metni,
+  düzeltilmiş bankadaki aynı kimliğin köküyle değiştirildi (scratchpad/deneme-kok-onar.py).
+  Deneme kompozisyonuna dokunulmadı.
+- Doğrulama: beş bankanın hepsinde bozuk kök **0**, `npx tsc --noEmit` 0 hata.
+
+**KURAL:** `soru-standart.mjs` değişirse metni gömülü tutan BEŞ dosyanın hepsi taranmalı:
+kart-sorulari · duello-sorulari · genel-denemeler · genel-denemeler-brans · genel-denemeler-karma.
+
+Diğer bildirim (Murat Demir, 2863-S-020 "anlaşılmıyor"): resmî metinle karşılaştırıldı,
+**cevap DOĞRU** (m.66: belge verenler 1-3 yıl, ilan/tebligat 3 ay-1 yıl → D şıkkı). İçerik hatası
+yok; soru iki boşluklu ve yoğun, okunurluk şikâyeti.
