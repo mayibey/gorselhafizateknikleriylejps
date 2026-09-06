@@ -2197,3 +2197,23 @@ sayfa numaraları madde metinlerinin ORTASINA** düşmüş. Kullanıcı ekranda 
 Temizlendi (`scratchpad/dipnot-temizle.py`): 1 dipnot bloğu + 3 sayfa numarası.
 **Tuzak:** sayfa numarası süzgeci "7179 sayılı Kanun" gibi GERÇEK künyeleri de yakalıyordu;
 ardından "sayılı/tarihli" gelen sayılar hariç tutuldu. `npx tsc --noEmit` 0 hata.
+
+### 6 Eylül 2026 (3) — m.8 ve m.41'e "Bakanlar Kurulu" güncel notu
+Başkan: "emin ol, en son yayınlananı bul, mülga olmuş mu bak, CB kararnamesine bak."
+
+**Canlı doğrulama (mevzuat.gov.tr, tarayıcıyla — curl SPA kabuğu döndürüyor):** yönetmelik
+**Cumhurbaşkanlığı Yönetmelikleri** bölümünde, `MevzuatNo=20169741&MevzuatTur=21`. **Yürürlükte,
+mülga değil.** m.41 bugün de "Bakanlar Kurulu kararıyla", m.8/1-c "Bakanlar Kurulunun uygun
+gördüğü bölümleriyle" diyor. Resmî değişiklik tablosu — bugüne kadarki TÜM değişiklikler:
+| CB Kararı | Tarih | Değişen madde |
+|---|---|---|
+| 1721 | 24/10/2019 | 10, 82 |
+| 2361 | 3/4/2020 | 3, 6 |
+| 8090 | 15/1/2024 | 46 |
+Yani **m.8 ve m.41 hiç değişmemiş.** Ayrıca 703 sayılı KHK'de Bakanlar Kurulu atıflarını topluca
+aktaran genel bir hüküm ARANDI, YOK (m.218 yalnız Başbakanlık atıflarını düzenliyor) — bu yüzden
+notta böyle bir hükme atıf yapılmadı.
+
+Not iki yere eklendi (uygulamadaki mevcut "GÜNCEL NOT" kalıbıyla, bkz. E-İmza m.3/BTK):
+m.41 → fabrika MASTER.md (`npm run madde:uret` ile aktarıldı) · m.8 → `src/db/madde-metinleri.ts`
+(maddeMetni() önce elle yazılan dosyaya bakıyor). `npx tsc --noEmit` 0 hata.
