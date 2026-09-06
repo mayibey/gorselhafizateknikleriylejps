@@ -2236,3 +2236,19 @@ zaten etkisizdi (en çok 35 kişi).
 `coalesce(nullif(trim(ad||' '||soyad ilk harf),''),'Aday')` diyor; **rumuz**'a düşmüyor. Düzeltmek
 DDL gerektiriyor → **Supabase yönetim anahtarı (SUPABASE_ACCESS_TOKEN) bugün 401 vermeye başladı,
 yenilenmeli.** Servis anahtarı (PostgREST) çalışıyor, okuma işleri onunla yapıldı.
+
+### 7 Eylül 2026 — Supabase yönetim anahtarı yenilendi + sıralamada "Aday" düzeltildi
+Başkan "tarayıcıdan aç üret" dedi; anahtar tarayıcı otomasyonuyla üretildi (adı
+**claude-code-mevzu**, eski tip sbp_, **90 gün**, ≈5 Aralık'ta dolar). `.env` güncellendi,
+doğrulandı: management `/projects` 200, serbest SQL 201.
+
+**Reçetenin üç tuzağı** (hafızaya da yazıldı): (1) Brave açıkken debug portu açılmıyor →
+force-kill + gerçek profille headed aç; (2) ad kutusunun doğru seçicisi
+`input[name="tokenName"]` — gevşek seçici sayfadaki "Filter tokens" ARAMA kutusunu dolduruyor;
+(3) süre `<select>` ve değerleri metin ('90d'), sayı karşılaştırması hep 24 saati seçiyor.
+
+Anahtar gelince bekleyen iş yapıldı: `deneme_siralama` fonksiyonunda ad çözümü artık
+**Ad S → yoksa RUMUZ → yoksa 'Aday'** sırasını izliyor. Eski ifade `p.ad || ' ' || …` idi;
+ad NULL olunca tüm ifade NULL olup 'Aday'a düşüyordu. Ölçüm: adı girilmemiş 198 kullanıcının
+25'inin rumuzu var. Müşterek 1 listesinde "Aday" satırı 13 → **11**'e indi (kalanların ne adı
+ne rumuzu var). **Sunucu tarafı olduğu için OTA gerekmedi, anında canlı.**
