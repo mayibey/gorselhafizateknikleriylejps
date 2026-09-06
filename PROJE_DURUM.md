@@ -2174,3 +2174,26 @@ kart-sorulari · duello-sorulari · genel-denemeler · genel-denemeler-brans · 
 Diğer bildirim (Murat Demir, 2863-S-020 "anlaşılmıyor"): resmî metinle karşılaştırıldı,
 **cevap DOĞRU** (m.66: belge verenler 1-3 yıl, ilan/tebligat 3 ay-1 yıl → D şıkkı). İçerik hatası
 yok; soru iki boşluklu ve yoğun, okunurluk şikâyeti.
+
+### 6 Eylül 2026 (2) — Serhat Ceyhan'ın bildirimleri: içerik doğru, ama kartlarda dipnot kiri vardı
+Serhat Ceyhan (astsubay, jandarma) 3-5 Eylül'de 6 bildirim gönderdi; sonuncusu
+"jandarma teşkilat yönetmeliğini baştan sona gözden geçirin, yanlışlık çok fazla".
+
+**İddiaların denetimi (resmî metin: fabrika `_txt/jandarma_jsga.txt`, jsga.edu.tr yayını):**
+- m.41 "Cumhurbaşkanı olmalı" → **HAYIR.** 24/10/2019 tarihli **1721 sayılı Cumhurbaşkanı Kararı**
+  bu yönetmelikte YALNIZ **iki maddeyi** değiştirdi: m.10 ("mülki amirin"→"İçişleri Bakanının")
+  ve m.82 ("Bakanlar Kurulu"→"Cumhurbaşkanı", yürütme maddesi). **m.41 metni değişmedi**,
+  hâlâ "Bakanlar Kurulu kararıyla" diyor. Kartımız metne sadık.
+- m.45 "internet kafeye 12 yaş altı giremez, 15 yaş velisiyle" → **HAYIR.** Bu yönetmelikte
+  ölçü **onsekiz yaş** ("veli ve vasileri olsa bile"). Adayın karıştırdığı kural İnternet Toplu
+  Kullanım Sağlayıcıları Yönetmeliği'nde.
+- İki soru bildirimi (JANDYON-S-002 "Emniyet" tanımı, JANDYON-S-016 askeri görevler) → **ikisi de doğru.**
+
+**AMA haklı olduğu bir şey vardı:** resmî PDF'ten metin çıkarılırken **dipnot bloğu ve Düstur
+sayfa numaraları madde metinlerinin ORTASINA** düşmüş. Kullanıcı ekranda şunu görüyordu:
+- m.8: "(a) …görevleri yapmak. **_____ (1) 4/4/2020 tarihli ve 31089 sayılı … eklenmiştir. 6849** b) Adli görevler…"
+- m.19: "…lokaller, **6853** b) Mevzuata aykırı…" · m.45: "…satanları, **6860** herhangi bir şikâyet…"
+
+Temizlendi (`scratchpad/dipnot-temizle.py`): 1 dipnot bloğu + 3 sayfa numarası.
+**Tuzak:** sayfa numarası süzgeci "7179 sayılı Kanun" gibi GERÇEK künyeleri de yakalıyordu;
+ardından "sayılı/tarihli" gelen sayılar hariç tutuldu. `npx tsc --noEmit` 0 hata.
