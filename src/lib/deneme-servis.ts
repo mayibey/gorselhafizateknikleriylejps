@@ -159,7 +159,10 @@ export async function siralamaGetir(takim: DenemeTakim, denemeNo: number): Promi
   const { data, error } = await supabase.rpc('deneme_siralama', {
     p_takim: takim,
     p_deneme: denemeNo,
-    p_limit: 50,
+    // TÜM LİSTE (başkan istedi, 6 Eyl 2026): eskiden 50 idi ve Müşterek 1'de 111 kişiden
+    // 61'i tabloda hiç görünmüyordu. Sınırsız yerine yüksek bir tavan bırakıldı — kişi sayısı
+    // binleri bulursa ekran tek seferde o kadar satır çizmesin.
+    p_limit: 1000,
   });
   if (error || !Array.isArray(data)) return [];
   return data as SiraSatiri[];

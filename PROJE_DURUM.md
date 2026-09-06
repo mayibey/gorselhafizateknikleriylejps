@@ -2217,3 +2217,22 @@ notta böyle bir hükme atıf yapılmadı.
 Not iki yere eklendi (uygulamadaki mevcut "GÜNCEL NOT" kalıbıyla, bkz. E-İmza m.3/BTK):
 m.41 → fabrika MASTER.md (`npm run madde:uret` ile aktarıldı) · m.8 → `src/db/madde-metinleri.ts`
 (maddeMetni() önce elle yazılan dosyaya bakıyor). `npx tsc --noEmit` 0 hata.
+
+### 6 Eylül 2026 (4) — Sıralama artık TÜM listeyi gösteriyor
+Başkan ekran görüntüsüyle sordu: "bu bölüm 50 kişi mi listeliyor?" Evet — `deneme-servis.ts`
+içinde `p_limit: 50` sabitti. Ölçüm: Müşterek 1'i **111 kişi** çözmüş, **61'i tabloda hiç
+görünmüyordu**; Müşterek 2'de 52 kişiden 2'si dışarıda kalıyordu. Diğer denemelerde 50 sınırı
+zaten etkisizdi (en çok 35 kişi).
+
+- `p_limit: 50 → 1000`. Sunucu fonksiyonuna DOKUNULMADI (`deneme_siralama` zaten `limit p_limit`
+  alıyor) — yönetim anahtarı bugün 401 verdiği için DDL de yapılamazdı zaten.
+  Sınırsız yerine tavan bırakıldı: kişi sayısı binleri bulursa ekran tek seferde o kadar satır çizmesin.
+- Listenin başına "N kişi · en yüksek puana göre" satırı eklendi (kullanıcı listenin tam
+  olduğunu görsün).
+- Uçtan uca test (anon anahtarla RPC): musterek 1 → 50 satır yerine **111**; musterek 2 → **52**.
+  `npx tsc --noEmit` 0 hata.
+
+**AÇIK İŞ:** adı girilmemiş kullanıcılar tabloda "Aday" görünüyor (111. sıra "Aday"). Fonksiyon
+`coalesce(nullif(trim(ad||' '||soyad ilk harf),''),'Aday')` diyor; **rumuz**'a düşmüyor. Düzeltmek
+DDL gerektiriyor → **Supabase yönetim anahtarı (SUPABASE_ACCESS_TOKEN) bugün 401 vermeye başladı,
+yenilenmeli.** Servis anahtarı (PostgREST) çalışıyor, okuma işleri onunla yapıldı.

@@ -269,7 +269,11 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
           aciklama="Bu denemeyi çözen ilk kişi sen olabilirsin. Sonuçlar kaydedildikçe tablo dolar."
         />
       ) : (
-        satirlar.map((r) => (
+        <>
+        <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} style={st.siraBaslik}>
+          {satirlar.length} kişi · en yüksek puana göre
+        </AppText>
+        {satirlar.map((r) => (
           <View key={`${r.sira}-${r.ad}`} style={[st.siraSatir, gece && st.kartGece, r.benim && st.siraBenim]}>
             <AppText
               variant="govde"
@@ -286,7 +290,8 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
               {r.puan}
             </AppText>
           </View>
-        ))
+        ))}
+        </>
       )}
     </>
   );
@@ -361,6 +366,7 @@ const st = StyleSheet.create({
     padding: Spacing.three,
     gap: 2,
   },
+  siraBaslik: { marginBottom: Spacing.one, marginTop: Spacing.one },
   siraSatir: {
     flexDirection: 'row',
     alignItems: 'center',
