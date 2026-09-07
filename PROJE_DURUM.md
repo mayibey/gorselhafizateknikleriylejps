@@ -2,7 +2,28 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 30 Ağustos 2026 (oyun kopuk atıf yayını · içerik hata listesi)
+> Son güncelleme: 7 Eylül 2026 (öksüz edat temizliği · özet kartı madde metni · destek cevapları)
+>
+> ### ▶ 7 Eyl — ÖKSÜZ EDAT TEMİZLİĞİ + ÖZET KARTI MADDE METNİ + DESTEK CEVAPLARI
+> **Sebep:** Murat Demir "soru anlaşılmıyor", Ünal Kutlu "özet kartında madde metni yok" bildirdi.
+> (a) `scripts/soru-standart.mjs`'e **artikEdatTemizle** eklendi: madde atfı sökülünce cümlede
+> öksüz kalan "uyarınca/gereğince" toparlanıyor ("…Kanunu'na göre uyarınca…", "…'nun Ek uyarınca…",
+> "…(3/b) gereğince…", "…hangisi 7179 uyarınca…", "…(İşgal) uyarınca…"). **31 soru** düzeldi;
+> banka 5667 · düello 6663 (sayılar DEĞİŞMEDİ).
+> **TUZAK (yandı, not):** ilk sürüm "edattan önceki kelime isim değilse edatı sil" diye GENEL
+> yazılmıştı; "TCK uyarınca", "hükmü uyarınca" (Türkçe ünlü düşmesi: hüküm→hükmü!) gibi SAĞLAM
+> cümleleri bozdu. Ayrıca ".N uyarınca" kuralı meşru "m.7 uyarınca" atıflarını yiyip metinde " m "
+> bıraktı. Kural DAR KALIP LİSTESİNE çevrildi; her turda değişen soru kökleri tek tek gözle denetlendi.
+> Denemeler yeniden ÜRETİLMEDİ (sınavlar yeniden karılmasın diye) — 3 bozuk kök cerrahi değiştirildi.
+> (b) `src/db/madde-metinleri.ts`'e **57 özet-kart anahtarı** eklendi ("<etiket> özet"): 25 kanunda
+> özetlenen maddelerin resmî metni, 32 uzun kanunda nereye bakılacağını söyleyen yönlendirme.
+> 141 özet kartında boş duran "madde metni" bölümü doldu.
+> (c) **18-D-022** (6136 m.5) kökü sadeleştirildi — fabrika kaynağında düzeltildi.
+> (d) **6222-S-015** düzeltmesi 10 sürüme (1.0.36–1.0.46) OTA ile yayınlandı.
+> (e) Ahmet ALTUNTAŞ'ın "Jandarma TCK kartları açılmıyor" talebi cevaplandı: içerik/kayıt tarafı
+> temiz (102 görsel + 102 ses eksiksiz), aynı sürümde 20 kişi aynı kanunu sorunsuz açıyor;
+> kendisi BUGÜN yeni cihaza geçmiş ve 151 MB'lık bu kanun için sunucuya tek istek bile gelmemiş
+> → yer darlığı/indirme başlangıcı şüphesi, cihaz bilgisi istendi.
 >
 > ### ▶ 30 Ağu — 🎮 OYUN YAYINI + AÇIK İÇERİK HATALARI
 > **YAYINLANDI (herkese):** oyun sürümü **20260830-0138**. Geri alma tek satır:

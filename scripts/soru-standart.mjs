@@ -469,9 +469,38 @@ function atifSadelestir(s) {
  * 1) Başta "…göre," girişi varsa ve içinde madde atfı geçiyorsa, giriş KANONİK künyeyle değişir.
  * 2) Değilse madde atfı yerinde temizlenir (yalnız güvenli kalıplar).
  */
+/** Madde atfı sökülünce cümlede ÖKSÜZ kalan edatı toparlar (Murat Demir bildirdi, 5 Eyl 2026:
+ * "soru anlaşılmıyor"). YALNIZ dayanağını kesin olarak kaybetmiş kalıplar; sağlam kullanımlara
+ * ("TCK uyarınca", "hükmü uyarınca", "Anayasa gereğince", "m.7 uyarınca") DOKUNULMAZ. */
+function artikEdatTemizle(metin) {
+  return metin
+    // "…Kanunu'nun Ek uyarınca…" → madde numarası sökülmüş, "Ek maddesi" ile tamamlanır.
+    .replace(/(['’](?:nın|nin|nun|nün)\s+)Ek\s+(uyarınca|gereğince)\b/gi, '$1Ek maddesi $2')
+    // "…göre, (3/b) gereğince ilan edilen…" — söküm artığı çıplak parantez.
+    .replace(/\s*\(\s*\d+\s*\/\s*[a-zçğıöşü\d]+\s*\)\s*(?:uyarınca|gereğince)\s*/gi, ' ')
+    // Künye/soru kalıbından ya da bulunma hâlinden sonra edat gelemez: dayanağı yok.
+    .replace(/\b(göre|için|hangisi|hangisinin|Kanunda|Yönetmelikte|Yönergede|Tebliğde)\s+(?:uyarınca|gereğince)\b/gi, '$1')
+    // "…hangisi 6284 UYG uyarınca hâkim…" — üretim etiketi kalıntısı, komple düşer.
+    .replace(/\s*\b\d{3,5}\s+[A-ZÇĞİÖŞÜ]{2,5}\s+(?:uyarınca|gereğince)\s*/g, ' ')
+    // "…hangisi 7179 uyarınca…" — geriye yalnız kanun NUMARASI kalmış. ("m.7 uyarınca" korunur.)
+    .replace(/(?<!m\.)\b\d{3,5}\s+(uyarınca|gereğince)\b/g, 'bu Kanun $1')
+    // "…amacıyla.2 uyarınca hangi personel…" — fıkra numarası kırıntısı ("m.2" korunur).
+    .replace(/([a-zçğıöşü]{3,})\.\d+\s+(?:uyarınca|gereğince)\s*/gi, '$1 ')
+    // "…Yönetmeliği /c uyarınca…" — bent kırıntısı düşer, edat kalır.
+    .replace(/\s*\/\s*[a-zçğıöşü\d]{1,3}\s+(uyarınca|gereğince)\b/gi, ' $1')
+    // "…(İşgal) uyarınca aşağıdakilerden…" — konu etiketinden sonra edat gelemez.
+    .replace(/(\([A-ZÇĞİÖŞÜ][a-zçğıöşü]{2,}\))\s+(?:uyarınca|gereğince)\b/g, '$1')
+    // "…durumu uyarınca nedir?" — dayanağı sökülmüş edat, soru kalıbının önünde kalmış.
+    .replace(/\s+(?:uyarınca|gereğince)(\s+nedir\b)/gi, '$1')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
 export function standartlastir(soru, kaynak, lawId) {
-  const s = String(soru).replace(/\s+/g, ' ').trim();
-  if (!MADDE.test(s)) return { soru: s, degisti: false };
+  const s0 = String(soru).replace(/\s+/g, ' ').trim();
+  // Artık edat temizliği madde atfı OLMAYAN sorulara da uygulanır (erken dönüş öncesi).
+  const s = artikEdatTemizle(s0);
+  if (!MADDE.test(s)) return { soru: s, degisti: s !== s0 };
   const ad = mevzuatBul(s, kaynak, lawId);
   if (!ad) return { at: 'mevzuat adı bulunamadı' };
   const k = kunye(ad);
@@ -525,6 +554,7 @@ export function standartlastir(soru, kaynak, lawId) {
     .replace(/\s+([,.;:?])/g, '$1')
     .trim();
   t = t.replace(/,\s*,/g, ',').replace(/,\s*([;:.])/g, '$1').replace(/\s{2,}/g, ' ').trim();
+  t = artikEdatTemizle(t);
   // "Madde 2'ye" sökülünce baştaki künye eksiz kalabiliyor ("Şehitlik Yönetmeliği göre").
   // Mevzuat adıyla başlayıp eksiz "göre" ile devam eden girişi doğru künyeye çevir.
   {
