@@ -28,7 +28,8 @@
 > bildirdi; 703 sayılı KHK ile yetki Cumhurbaşkanında). Cevap değişmedi (E).
 > (g) **CEVAPSIZ BİLDİRİM KALMADI:** 22 + 1 kişiye kendi konusunun resmî metinle doğrulanmış
 > cevabı gönderildi (kişisel duyuru + push, 17 push ulaştı). soru_hata_bildirim'de "yeni" 0.
-> Ülkü Yavuz'un Temmuz'daki şifre talebi cevapsız kapatılmıştı — özürle cevaplandı.
+> Ülkü Yavuz'un Temmuz'daki şifre talebine cevap gönderilmişti ama BAŞKAN o sorunu zaten
+> kendisi çözmüş; gönderilen mesaj ve talep kaydı SİLİNDİ, talep kapalı bırakıldı.
 > Pano artifact: Bildirim Nöbet Defteri (rapor scratchpad/rapor-html.mjs ile yeniden üretilir).
 > **TUZAK:** kişisel duyuru satırı olması "cevap yazıldı" demek DEĞİL; toplu kampanyalar
 > (Yeni sürümü kaçırma / %20 indirim / Adını gir / Haftanın Şampiyonu) da kişi kişi satır açıyor.
