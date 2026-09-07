@@ -24,6 +24,14 @@
 > temiz (102 görsel + 102 ses eksiksiz), aynı sürümde 20 kişi aynı kanunu sorunsuz açıyor;
 > kendisi BUGÜN yeni cihaza geçmiş ve 151 MB'lık bu kanun için sunucuya tek istek bile gelmemiş
 > → yer darlığı/indirme başlangıcı şüphesi, cihaz bilgisi istendi.
+> (f) **JANDYON-S-016** A şıkkındaki kaldırılmış "Bakanlar Kurulu" ibaresi çıkarıldı (Serhat Ceyhan
+> bildirdi; 703 sayılı KHK ile yetki Cumhurbaşkanında). Cevap değişmedi (E).
+> (g) **CEVAPSIZ BİLDİRİM KALMADI:** 22 + 1 kişiye kendi konusunun resmî metinle doğrulanmış
+> cevabı gönderildi (kişisel duyuru + push, 17 push ulaştı). soru_hata_bildirim'de "yeni" 0.
+> Ülkü Yavuz'un Temmuz'daki şifre talebi cevapsız kapatılmıştı — özürle cevaplandı.
+> Pano artifact: Bildirim Nöbet Defteri (rapor scratchpad/rapor-html.mjs ile yeniden üretilir).
+> **TUZAK:** kişisel duyuru satırı olması "cevap yazıldı" demek DEĞİL; toplu kampanyalar
+> (Yeni sürümü kaçırma / %20 indirim / Adını gir / Haftanın Şampiyonu) da kişi kişi satır açıyor.
 >
 > ### ▶ 30 Ağu — 🎮 OYUN YAYINI + AÇIK İÇERİK HATALARI
 > **YAYINLANDI (herkese):** oyun sürümü **20260830-0138**. Geri alma tek satır:
