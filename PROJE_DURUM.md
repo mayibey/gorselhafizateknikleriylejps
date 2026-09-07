@@ -2252,3 +2252,25 @@ Anahtar gelince bekleyen iş yapıldı: `deneme_siralama` fonksiyonunda ad çöz
 ad NULL olunca tüm ifade NULL olup 'Aday'a düşüyordu. Ölçüm: adı girilmemiş 198 kullanıcının
 25'inin rumuzu var. Müşterek 1 listesinde "Aday" satırı 13 → **11**'e indi (kalanların ne adı
 ne rumuzu var). **Sunucu tarafı olduğu için OTA gerekmedi, anında canlı.**
+
+### 7 Eylül 2026 (2) — 6222-S-015 düzeltildi (iki kullanıcı bildirdi)
+Ahmet ALTUNTAŞ (6 Eyl) "kök 'yasaklanmıştır' diyor, 'yasaklanmamıştır' olmalı" dedi; Onur Ergün
+de 4 Eyl'de aynı soruyu "anlaşılmıyor" diye işaretlemişti. **İkisi de haklı, soruda İKİ hata vardı:**
+
+1. **Polarite:** sorunun `tip` alanı zaten `hangisi_degildir`, doğru cevap "Alkollü içecekler" ve
+   açıklaması "alkol mutlak yasak DEĞİL, federasyon düzenlemesine tabi" diyordu — ama kök olumlu
+   yazılmıştı. Resmî metin (6222 m.12/1) doğruluyor: (a) ateşli silahlar, (b) kesici/patlayıcı,
+   (c) uyuşturucu yasak; alkol AYRI cümlede ve "usul ve esasları ilgili federasyonlar belirler".
+   Kök olumsuza çevrildi (MUTLAK OLARAK YASAKLANMAMIŞTIR).
+2. **Artık edat:** kökte "sokulması **m.12/1 uyarınca** mutlak biçimde…" yazıyordu; standartlaştırıcı
+   madde atfını söküp geriye tek başına "uyarınca" bırakıyordu. Atıf kökten kaldırıldı.
+
+Banka + düello yeniden üretildi (5667 / 6663), tsc 0 hata. Genel deneme dosyalarında bu soru yok.
+
+**YENİ BULGU — artık edat taraması:** aynı kalıptan beş bankada toplam 61 şüpheli, elle ayıklayınca
+**~25 gerçek bozukluk** var: `göre uyarınca` (6) · `Ek uyarınca` (6) · `Yönetmelikte uyarınca` (2) ·
+`sokulması uyarınca` (2) · `için/hangisi uyarınca` (4) · yarım kalmış atıf artıkları (`7 uyarınca`,
+`7179 uyarınca`, `/c uyarınca`, `3/b gereğince`). Kök sebep `soru-standart.mjs`: madde atfı
+sökülürken ardındaki edat cümlede öksüz kalıyor. **Kalıcı çözüm** edatı da süpürmek (önündeki
+kelime geçerli bir isim değilse) — henüz YAPILMADI, başkan onayı bekliyor; riskli olduğu için
+tek soru elle düzeltildi.
