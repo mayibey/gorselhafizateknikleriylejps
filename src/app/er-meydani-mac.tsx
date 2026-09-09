@@ -936,7 +936,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
     borderWidth: 1, borderColor: gece ? 'rgba(126,205,218,0.28)' : Palette.kenarlik, borderRadius: Radius.m,
     paddingHorizontal: Spacing.two, paddingVertical: Spacing.two,
   },
-  inceleSikMetin: { flex: 1, lineHeight: 20 },
+  inceleSikMetin: { flex: 1, flexShrink: 1, minWidth: 0, lineHeight: 20 },
   aciklamaKutu: {
     backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey, borderRadius: Radius.m, padding: Spacing.three, gap: 3,
   },
@@ -985,7 +985,7 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
     backgroundColor: gece ? 'rgba(201,162,39,0.16)' : Palette.altinSolukYuzey,
   },
   sikHarfVurgu: { backgroundColor: Palette.lacivert },
-  sikMetin: { flex: 1, lineHeight: 21 },
+  sikMetin: { flex: 1, flexShrink: 1, minWidth: 0, lineHeight: 21 },
   sonucUst: { alignItems: 'center', gap: Spacing.two, marginTop: Spacing.three },
   sonucSkorlar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.four },
   sonucSkorKutu: { alignItems: 'center', gap: 2, minWidth: 96 },

@@ -945,7 +945,10 @@ const styles = StyleSheet.create({
     minWidth: 20,
   },
   secenekMetin: {
+    // Uzun şık alt satıra geçsin (bkz. hatirla-quiz sikMetin, 8 Eyl 2026).
     flex: 1,
+    flexShrink: 1,
+    minWidth: 0,
   },
   aciklama: {
     borderWidth: 1,

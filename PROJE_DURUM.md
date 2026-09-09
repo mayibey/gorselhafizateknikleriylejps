@@ -2,7 +2,16 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 7 Eylül 2026 (öksüz edat temizliği · özet kartı madde metni · destek cevapları)
+> Son güncelleme: 9 Eylül 2026 (öksüz edat temizliği · özet kartı madde metni · destek cevapları)
+>
+> ### ▶ 8/9 Eyl — ŞIK YAZISI KESİLMESİ (sarmama) DÜZELTİLDİ
+> Başkan kart akışındaki HATIRLAMA sorusunda yakaladı: E şıkkı tek satırda kesiliyor, alt satıra
+> geçmiyordu. Şık metni `flex: 1` ile satır içinde duruyordu; Yoga'da satır öğesi kendi
+> "en dar hâli"nin altına kendiliğinden inmediği için uzun şıkta yazı kutudan taşıp kırpılıyor.
+> `flexShrink: 1` + `minWidth: 0` eklendi → yazı artık sarmak zorunda.
+> AYNI DESEN üç yerde vardı, üçü de düzeltildi: `hatirla-quiz.tsx` (kart akışı/teyit),
+> `sinav.tsx` (Tatbikat şıkları), `er-meydani-mac.tsx` (maç + inceleme şıkları).
+> tsc 0 hata. YAYIN: başkan onayı bekliyor.
 >
 > ### ▶ 7 Eyl — ÖKSÜZ EDAT TEMİZLİĞİ + ÖZET KARTI MADDE METNİ + DESTEK CEVAPLARI
 > **Sebep:** Murat Demir "soru anlaşılmıyor", Ünal Kutlu "özet kartında madde metni yok" bildirdi.

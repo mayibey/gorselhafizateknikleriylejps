@@ -171,7 +171,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   sikMetin: {
+    // ŞIK YAZISI SARMALI (başkan yakaladı, 8 Eyl 2026: E şıkkı tek satırda kesiliyordu).
+    // Yoga'da satır içindeki bir öğe, kendi "en dar hâli"nin altına KENDİLİĞİNDEN inmez;
+    // flex:1 tek başına yetmiyor, uzun şıkta yazı kutudan taşıp kırpılabiliyor.
+    // flexShrink + minWidth:0 bu otomatik alt sınırı kaldırır → yazı alt satıra geçer.
     flex: 1,
+    flexShrink: 1,
+    minWidth: 0,
   },
   aciklama: {
     borderRadius: Radius.m,
