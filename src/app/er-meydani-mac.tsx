@@ -106,6 +106,7 @@ export default function ErMeydaniMacScreen() {
   const golge = useMemo<GolgeRakip>(() => golgeRakipUret(seed, adet, sureMs), [seed, adet, sureMs]);
 
   const [index, setIndex] = useState(0);
+  const onIzleme = useKisiselOzellik('on-izleme');
   const [faz, setFaz] = useState<Faz>('oyun');
   const [secili, setSecili] = useState<number | null>(null);
   const [kalanMs, setKalanMs] = useState(sureMs);
@@ -570,7 +571,7 @@ export default function ErMeydaniMacScreen() {
           const yanlisSecim = gosterCevap && i === secili && i !== soru.dogru;
           return (
             <Pressable
-              key={i}
+              key={onIzleme ? `${index}-${i}` : i}
               disabled={faz !== 'oyun'}
               onPress={() => soruyuBitir(i)}
               style={({ pressed }) => [
@@ -584,9 +585,17 @@ export default function ErMeydaniMacScreen() {
                   {String.fromCharCode(65 + i)}
                 </AppText>
               </View>
-              <AppText variant="kucuk" color={dogruSik ? (gece ? 'yesilParlak' : 'yesil') : yanlisSecim ? (gece ? 'kirmiziParlak' : 'kirmizi') : (gece ? 'kartMetinAcik' : 'anaMetin')} style={styles.sikMetin}>
-                {s}
-              </AppText>
+              {onIzleme ? (
+                <View style={styles.sikMetinSar}>
+                  <AppText variant="kucuk" color={dogruSik ? (gece ? 'yesilParlak' : 'yesil') : yanlisSecim ? (gece ? 'kirmiziParlak' : 'kirmizi') : (gece ? 'kartMetinAcik' : 'anaMetin')} style={styles.sikMetinIc}>
+                    {s}
+                  </AppText>
+                </View>
+              ) : (
+                <AppText variant="kucuk" color={dogruSik ? (gece ? 'yesilParlak' : 'yesil') : yanlisSecim ? (gece ? 'kirmiziParlak' : 'kirmizi') : (gece ? 'kartMetinAcik' : 'anaMetin')} style={styles.sikMetin}>
+                  {s}
+                </AppText>
+              )}
             </Pressable>
           );
         })}
@@ -986,6 +995,9 @@ const stilOlustur = (gece: boolean) => StyleSheet.create({
   },
   sikHarfVurgu: { backgroundColor: Palette.lacivert },
   sikMetin: { flex: 1, flexShrink: 1, minWidth: 0, lineHeight: 21 },
+  // Bkz. hatirla-quiz.tsx sikMetinSar (şık sarma 2. deneme, 11 Eyl 2026).
+  sikMetinSar: { flex: 1, minWidth: 0 },
+  sikMetinIc: { lineHeight: 21 },
   sonucUst: { alignItems: 'center', gap: Spacing.two, marginTop: Spacing.three },
   sonucSkorlar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: Spacing.four },
   sonucSkorKutu: { alignItems: 'center', gap: 2, minWidth: 96 },

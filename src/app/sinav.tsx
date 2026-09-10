@@ -5,6 +5,7 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { AppText } from '@/components/ui/app-text';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { TakdirBelgeAlani } from '@/components/sicil/takdir-belge-alani';
 import { EmptyState } from '@/components/ui/empty-state';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
@@ -104,6 +105,7 @@ export default function SinavScreen() {
   const [hata, setHata] = useState(false);
   const [bos, setBos] = useState(false);
   const [index, setIndex] = useState(0);
+  const onIzleme = useKisiselOzellik('on-izleme');
   // Kanunun TÜM testleri %100 mü → sonuç ekranında Takdir Belgesi görseli SADECE o zaman çıkar
   // (tek testi %100 yapmak belgeyi hak ettirmez; sicile de öyle yazılıyor — gösterim eşiği ile hizalı).
   const [belgeHak, setBelgeHak] = useState(false);
@@ -489,7 +491,7 @@ export default function SinavScreen() {
             <View style={styles.secenekler}>
               {soru!.siklar.map((metin, i) => (
                 <Secenek
-                  key={i}
+                  key={onIzleme ? `${index}-${i}` : i}
                   harf={String.fromCharCode(65 + i)}
                   metin={metin}
                   durum={secenekDurum(i, secilen, soru!.dogru)}
@@ -601,6 +603,7 @@ function Secenek({
   const arka =
     durum === 'dogru' ? DOGRU_YESIL : durum === 'yanlis' ? YANLIS_KIRMIZI : Palette.kartKremi;
   const metinRenk = durum === 'dogru' || durum === 'yanlis' ? 'beyaz' : 'anaMetin';
+  const onIzleme = useKisiselOzellik('on-izleme');
   return (
     <Pressable
       disabled={disabled}
@@ -614,9 +617,17 @@ function Secenek({
       <AppText variant="govde" bold color={metinRenk} style={styles.secenekHarf}>
         {harf}
       </AppText>
-      <AppText variant="govde" color={metinRenk} style={styles.secenekMetin}>
-        {metin}
-      </AppText>
+      {onIzleme ? (
+        <View style={styles.secenekMetinSar}>
+          <AppText variant="govde" color={metinRenk}>
+            {metin}
+          </AppText>
+        </View>
+      ) : (
+        <AppText variant="govde" color={metinRenk} style={styles.secenekMetin}>
+          {metin}
+        </AppText>
+      )}
       {durum === 'dogru' ? (
         <MaterialCommunityIcons name="check-circle" size={22} color={Palette.beyaz} />
       ) : durum === 'yanlis' ? (
@@ -948,6 +959,11 @@ const styles = StyleSheet.create({
     // Uzun şık alt satıra geçsin (bkz. hatirla-quiz sikMetin, 8 Eyl 2026).
     flex: 1,
     flexShrink: 1,
+    minWidth: 0,
+  },
+  // Bkz. hatirla-quiz.tsx sikMetinSar (şık sarma 2. deneme, 11 Eyl 2026).
+  secenekMetinSar: {
+    flex: 1,
     minWidth: 0,
   },
   aciklama: {

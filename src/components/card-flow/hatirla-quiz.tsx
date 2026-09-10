@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import type { KartSoru } from '@/lib/sinav';
 
@@ -28,6 +29,7 @@ export function HatirlaQuiz({
 }) {
   const [index, setIndex] = useState(0);
   const [secilen, setSecilen] = useState<number | null>(null);
+  const onIzleme = useKisiselOzellik('on-izleme');
   const soru = sorular[index];
   const sonMu = index >= sorular.length - 1;
 
@@ -84,7 +86,7 @@ export function HatirlaQuiz({
           const renk = durum === 'dogru' || durum === 'yanlis' ? 'beyaz' : 'anaMetin';
           return (
             <Pressable
-              key={i}
+              key={onIzleme ? `${index}-${i}` : i}
               disabled={secilen !== null}
               style={({ pressed }) => [
                 styles.sik,
@@ -96,9 +98,17 @@ export function HatirlaQuiz({
               <AppText variant="govde" bold color={renk} style={styles.sikHarf}>
                 {String.fromCharCode(65 + i)}
               </AppText>
-              <AppText variant="kucuk" color={renk} style={styles.sikMetin}>
-                {m}
-              </AppText>
+              {onIzleme ? (
+                <View style={styles.sikMetinSar}>
+                  <AppText variant="kucuk" color={renk}>
+                    {m}
+                  </AppText>
+                </View>
+              ) : (
+                <AppText variant="kucuk" color={renk} style={styles.sikMetin}>
+                  {m}
+                </AppText>
+              )}
             </Pressable>
           );
         })}
@@ -177,6 +187,16 @@ const styles = StyleSheet.create({
     // flexShrink + minWidth:0 bu otomatik alt sınırı kaldırır → yazı alt satıra geçer.
     flex: 1,
     flexShrink: 1,
+    minWidth: 0,
+  },
+  // ŞIK SARMA — 2. DENEME (11 Eyl 2026, on-izleme bayrağı arkasında). 8 Eyl'deki flexShrink/minWidth
+  // eki İŞE YARAMADI (başkanın cihazında paket doğrulandı, C şıkkı yine tek satırda kesildi):
+  // o ikisi zaten flex:1'in varsayılanıydı. Gözlem: kutu 2 satır yüksekliğinde, yazı 1 satır çizili →
+  // iOS metin ölçümü yanlış. İki bağımsız çare birden: (1) yazıyı kendi View'ına sar → genişliği
+  // ebeveynden kesin alır (iOS'ta bilinen çare); (2) soru değişince şık kutularını key ile sıfırdan
+  // kur → eski ölçüm yeni yazıya taşınmaz. Başkan onaylayınca bayrak kalkar, herkese gider.
+  sikMetinSar: {
+    flex: 1,
     minWidth: 0,
   },
   aciklama: {
