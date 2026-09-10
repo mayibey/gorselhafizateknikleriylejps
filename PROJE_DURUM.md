@@ -2,7 +2,7 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 9 Eylül 2026 (öksüz edat temizliği · özet kartı madde metni · destek cevapları)
+> Son güncelleme: 10 Eylül 2026 (şık sarma OTA yayını teyit edildi)
 >
 > ### ▶ 8/9 Eyl — ŞIK YAZISI KESİLMESİ (sarmama) DÜZELTİLDİ
 > Başkan kart akışındaki HATIRLAMA sorusunda yakaladı: E şıkkı tek satırda kesiliyor, alt satıra
@@ -11,7 +11,9 @@
 > `flexShrink: 1` + `minWidth: 0` eklendi → yazı artık sarmak zorunda.
 > AYNI DESEN üç yerde vardı, üçü de düzeltildi: `hatirla-quiz.tsx` (kart akışı/teyit),
 > `sinav.tsx` (Tatbikat şıkları), `er-meydani-mac.tsx` (maç + inceleme şıkları).
-> tsc 0 hata. YAYIN: başkan onayı bekliyor.
+> tsc 0 hata. **YAYINLANDI (9 Eyl):** 10 sürüme (1.0.36–1.0.46) OTA basıldı
+> (`scratchpad/ota-sik-sarma.sh`); app.json 1.0.46'ya geri döndü. 10 Eyl teyit: EAS listesinde
+> 10 runtime da "Sik yazisi kesilmesi duzeltildi" mesajıyla görünüyor.
 >
 > ### ▶ 7 Eyl — ÖKSÜZ EDAT TEMİZLİĞİ + ÖZET KARTI MADDE METNİ + DESTEK CEVAPLARI
 > **Sebep:** Murat Demir "soru anlaşılmıyor", Ünal Kutlu "özet kartında madde metni yok" bildirdi.
