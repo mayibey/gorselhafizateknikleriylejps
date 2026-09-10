@@ -2,7 +2,34 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 10 Eylül 2026 (şık sarma OTA yayını teyit edildi)
+> Son güncelleme: 11 Eylül 2026 (şık sarma 2. deneme · Rütbe Merdiveni tekrar-oyna · Er Meydanı oda keşfi)
+>
+> ### ▶ 11 Eyl — ŞIK SARMA 2. DENEME + RÜTBE MERDİVENİ "TEKRAR OYNA" + ER MEYDANI ODA KEŞFİ
+> **(a) Şık sarma — 8 Eyl düzeltmesi İŞE YARAMADI.** Başkanın cihazındaki paket (`istemci_surum.paket`
+> = 01a084ba…, 1.0.46 iOS) düzeltmeyi içeren OTA'nın ta kendisi; buna rağmen 2521-OO-003'te C şıkkı
+> yine tek satırda kesildi. Sebep: eklenen `flexShrink:1`+`minWidth:0` zaten `flex:1`'in varsayılanı
+> → etkisiz. Şık metninde bozuk karakter yok; kod doğru cevaba farklı davranmıyor (iki vakada da
+> kesilen şık doğru cevaptı ama kodda buna bağlı bir dal yok — tesadüf sayıldı). Gözlem: kutu 2 satır
+> yüksekliğinde, yazı 1 satır çizili → iOS metin ölçüm hatası. **2. deneme (commit 4781bc4, `on-izleme`
+> bayrağı arkasında, 3 ekran):** yazı kendi `View`'ına sarıldı + `Pressable key`'ine soru indeksi
+> eklendi (eski ölçüm taşınmasın). OTA yalnız **1.0.46**'ya basıldı (grup 6ea64d62). **BEKLENEN:**
+> başkan "iki satır oldu" derse bayrak kaldırılıp 10 sürüme basılacak; olmadıysa üçüncü yol
+> (ör. `Text` yerine `width:'100%'` ya da `numberOfLines`siz `TextInput` değil — önce cihazda ölçüm).
+> **(b) Rütbe Merdiveni "Tekrar oyna" (commit d7d7479):** yanlış cevapta `mevzu_mily_yarim` kaydı
+> siliniyor ama `mSec` sarmalayıcısı 50 ms sonra YENİDEN yazıyordu → "Tekrar oyna" elendiği
+> basamaktan sürüyordu. Artık yalnız doğru cevapta kaydedilir; düğme de başlatmadan önce kaydı siler.
+> `--taslak` ile yalnız başkana: **20260911-0011**. Beğenirse `node scripts/oyun-sunucuya-yukle.mjs --onayla`.
+> Depo (üretilmiş) ile canlı 20260830-0155 tek fark `.siraBtn` CSS'inin yeri → kaynak senkron, güvenle basıldı.
+> **(c) Er Meydanı oda — KEŞİF (kod değişmedi, başkan onayı bekliyor):** başkan + arkadaşı (rumuz 2B4955,
+> Apple relay hesap) 3 oda oynadı: 9191 ve 4741 `bitti`; **0395 `oynaniyor`da takılı** — başkan skor 1934,
+> arkadaşın skoru NULL, arkadaşın o odaya ait maç kaydı da yok (istemcisi maçı hiç bitirmemiş: çıkmış /
+> arka plana atılmış). Sonuç ekranı `durum='bitti'` bekliyor → herkes bitmeden gelmez → sonsuz "hâlâ oynuyor".
+> **ADALETSİZLİK:** lobide oda "başladı" görünüyor → tıklayınca `er-meydani-oda` poll `oynaniyor` görüp maçı
+> SIFIRDAN başlatıyor; `er_meydani_oda_skor` skoru koşulsuz `update` ediyor → ikinci oynayış ilkini eziyor
+> (başkanda maç kaydı 1100, oda skoru 1934 = ezildi). **ÖNERİ (3 parça):** (1) sunucu: skor yalnız ilk kez
+> yazılır (`skor is null` şartı); (2) istemci: skoru olan oyuncu odaya girince maç değil "sonuç bekleniyor"
+> ekranı; (3) sunucu: `basladi_at` kolonu + `oda_durum`'da süre (soru×sn+90 sn) dolunca skoru olmayan = 0
+> ve oda `bitti` → bir oyuncu kaçınca diğerleri sonsuza dek beklemez.
 >
 > ### ▶ 8/9 Eyl — ŞIK YAZISI KESİLMESİ (sarmama) DÜZELTİLDİ
 > Başkan kart akışındaki HATIRLAMA sorusunda yakaladı: E şıkkı tek satırda kesiliyor, alt satıra
