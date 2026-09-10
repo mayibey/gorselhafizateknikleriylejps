@@ -2443,7 +2443,7 @@ function mSec(j){
         <div class="elendiBas">Sonuç: <b>Elendin</b> · Rütben: ${mi?RUTBE[mi-1]:'—'}</div>
         <button class="btn altin" id="mTekrar" style="margin-top:10px">↻ Tekrar oyna</button>
         <button class="btn hafif" id="mGeri" style="margin-top:8px">‹ Geri</button>`;
-      var t=document.getElementById('mTekrar'); if(t)t.onclick=()=>{ acMilyoner(); };
+      var t=document.getElementById('mTekrar'); if(t)t.onclick=()=>{ /* 11 Eyl: 'Tekrar oyna' kaldığı basamaktan sürüyordu — yarım kaydı silmeden başlatıyordu. */ try{ localStorage.removeItem('mevzu_mily_yarim'); }catch(e){} acMilyoner(); };
       var gg=document.getElementById('mGeri'); if(gg)gg.onclick=()=>{ $('#geri').click(); };
     }, 1900);
   }
@@ -5335,7 +5335,11 @@ body.menuDeri .tile .tOk{color:rgba(243,194,74,.9)}
   }
   if (typeof mSec==='function'){
     var eskiSec=mSec;
-    mSec=function(j){ var r=eskiSec.apply(this,arguments); setTimeout(kaydet,50); return r; };
+    mSec=function(j){
+      // 11 Eyl: yanlış cevapta mSec kaydı siliyor ama bu sarmalayıcı 50 ms sonra YENİDEN yazıyordu
+      // → 'Tekrar oyna' ve sonraki açılış elendiği basamaktan devam ediyordu. Yalnız doğru cevap kaydedilir.
+      var s=(typeof MILYONER!=='undefined'&&MILYONER)?MILYONER[mi]:null; var dogru=!!(s&&s.d===j);
+      var r=eskiSec.apply(this,arguments); if(dogru) setTimeout(kaydet,50); else sil(); return r; };
   }
   if (typeof mCiz==='function'){
     var eskiCiz=mCiz;
