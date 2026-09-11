@@ -115,6 +115,43 @@ const HERO = 98; // aktif düğüm (büyük / hero)
 const ROW_GAP = 134; // düğümler arası dikey ritim
 const PAD_TOP = 70; // üstte "buradasın" pill'ine yer
 const PAD_BOTTOM = 60;
+
+/**
+ * ANDROID 100 MB ÇİZİM SINIRI (11 Eyl 2026 — 2 destek talebi + Play çökme kaydı).
+ * react-native-svg her <Svg>'yi Android'de TEK bitmap'e çizer (SvgView.onDraw). Yol SVG'sinin
+ * yüksekliği kart sayısıyla büyüyor: Branş TCK 102 düğüm → ~12.300 dp; 1080 px genişlikte
+ * 12.300 × 2,75 × 1080 × 4 bayt ≈ 146 MB > Android'in 100 MB kanvas sınırı →
+ * "Canvas: trying to draw too large bitmap" → uygulama KAPANIYORDU (iPhone'da sınır yok).
+ * 54 düğümlü ikinci en büyük kanun bile QHD ekranda (S24+) sınırı aşabiliyordu.
+ * ÇARE: uzun SVG'yi viewBox pencereleriyle DİLİMLE — aynı çocuklar, her dilim yalnız kendi
+ * penceresini çizer; hiçbir dilim sınıra yaklaşmaz. Kısa SVG'de tek parça (davranış aynı).
+ */
+const SVG_DILIM = 1500;
+function DilimliSvg({ width, height, children }: { width: number; height: number; children: ReactNode }) {
+  if (height <= SVG_DILIM) {
+    return (
+      <Svg width={width} height={height} style={StyleSheet.absoluteFill} pointerEvents="none">
+        {children}
+      </Svg>
+    );
+  }
+  const dilimler: ReactNode[] = [];
+  for (let y = 0; y < height; y += SVG_DILIM) {
+    const h = Math.min(SVG_DILIM, height - y);
+    dilimler.push(
+      <Svg
+        key={y}
+        width={width}
+        height={h}
+        viewBox={`0 ${y} ${width} ${h}`}
+        style={{ position: 'absolute', left: 0, top: y, width, height: h }}
+        pointerEvents="none">
+        {children}
+      </Svg>,
+    );
+  }
+  return <>{dilimler}</>;
+}
 const COL_SOL = 0.3; // sola alternating düğüm merkez x oranı
 const COL_SAG = 0.7; // sağa alternating düğüm merkez x oranı
 
@@ -849,7 +886,7 @@ function SinematikHarita({
         />
         <ScrollView ref={scrollRef} showsVerticalScrollIndicator={false} contentContainerStyle={{ height: contentH }}>
           {/* Düğümler arası yol (bezier) — geçilen altın, ileri kesikli soluk */}
-          <Svg width={W} height={contentH} style={StyleSheet.absoluteFill} pointerEvents="none">
+          <DilimliSvg width={W} height={contentH}>
             {dugumler.slice(0, -1).map((_, i) => {
               const p0 = { x: nodeX(i), y: nodeY(i) };
               const p1 = { x: nodeX(i + 1), y: nodeY(i + 1) };
@@ -866,7 +903,7 @@ function SinematikHarita({
                 />
               );
             })}
-          </Svg>
+          </DilimliSvg>
           {/* LEVEL DÜĞÜMLERİ + madde etiketi (Duolingo tarzı) */}
           {dugumler.flatMap((d, i) => {
             const durum = durumCoz(d, i === aktifIndex);
@@ -1177,9 +1214,9 @@ function Harita({
             return (
               <>
                 {/* Kesikli konnektörler (yürünmemiş) — en altta */}
-                <Svg width={W} height={haritaY} style={StyleSheet.absoluteFill} pointerEvents="none">
+                <DilimliSvg width={W} height={haritaY}>
                   {konnektorler}
-                </Svg>
+                </DilimliSvg>
                 {/* PNG ayak izleri (yürünmüş) — konnektörün üstünde, düğümlerin altında */}
                 {ayaklar}
                 {dugumler.map((d, i) => (
