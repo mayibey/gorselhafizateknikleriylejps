@@ -1,10 +1,10 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useKisiselOzellik } from '@/lib/ozellik';
 import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import { ActivityIndicator, Alert, Pressable, Share, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
 import { type OdaDurum, odaAt, odaAyril, odaBaslat, odaDavetMetni, odaDurum, odaIptal } from '@/lib/er-meydani';
@@ -19,7 +19,6 @@ export default function ErMeydaniOdaScreen() {
   const params = useLocalSearchParams<{ oda?: string; kod?: string }>();
   const odaId = params.oda ?? '';
   const [durum, setDurum] = useState<OdaDurum | null>(null);
-  const onIzleme = useKisiselOzellik('on-izleme');
   const [baslatiliyor, setBaslatiliyor] = useState(false);
   const gittiRef = useRef(false);
 
@@ -34,11 +33,11 @@ export default function ErMeydaniOdaScreen() {
       setDurum(d);
       if (d.durum === 'oynaniyor' || d.durum === 'bitti') {
         gittiRef.current = true;
-        // ODA ADALETİ (11 Eyl 2026, on-izleme): skorum zaten yazılmışsa maçı SIFIRDAN oynatma —
+        // ODA ADALETİ (11 Eyl 2026): skorum zaten yazılmışsa maçı SIFIRDAN oynatma —
         // "sonuç bekleniyor / sıralama" ekranına git. (Eskiden lobide "başladı" görünen odaya
         // tekrar giren oyuncu maçı yeniden oynuyor, sunucu ikinci skoru ilkinin üstüne yazıyordu.)
         const ben = d.oyuncular.find((o) => o.ben);
-        const sonuc = onIzleme && ben != null && ben.skor != null;
+        const sonuc = ben != null && ben.skor != null;
         router.replace({
           pathname: '/er-meydani-mac',
           params: {
@@ -62,7 +61,7 @@ export default function ErMeydaniOdaScreen() {
       dur = true;
       clearInterval(t);
     };
-  }, [odaId, router, onIzleme]);
+  }, [odaId, router]);
 
   const kod = durum?.kod ?? params.kod ?? '';
   const oyuncular = durum?.oyuncular ?? [];
