@@ -20,7 +20,11 @@
 > basamaktan sürüyordu. Artık yalnız doğru cevapta kaydedilir; düğme de başlatmadan önce kaydı siler.
 > `--taslak` ile yalnız başkana: **20260911-0011**. Beğenirse `node scripts/oyun-sunucuya-yukle.mjs --onayla`.
 > Depo (üretilmiş) ile canlı 20260830-0155 tek fark `.siraBtn` CSS'inin yeri → kaynak senkron, güvenle basıldı.
-> **(c) Er Meydanı oda — KEŞİF (kod değişmedi, başkan onayı bekliyor):** başkan + arkadaşı (rumuz 2B4955,
+> **(c) Er Meydanı oda — YAPILDI (commit 427d298; başkan "yap" dedi):** sunucu `docs/v2/55` CANLIYA
+> uygulandı (ilk skor kalır · `basladi_at` + zaman aşımı → eksik skor 0, oda `bitti`; takılı 0395 kapandı,
+> arkadaş 0). İstemci (on-izleme): skoru olan oyuncu odaya girince maç yerine sonuç/bekleme ekranı
+> (`sonuc=1`+`skor` parametresi). OTA 1.0.46 (şık sarma ile aynı paket). Başkan onaylarsa bayrak kalkar.
+> **Keşif özeti:** başkan + arkadaşı (rumuz 2B4955,
 > Apple relay hesap) 3 oda oynadı: 9191 ve 4741 `bitti`; **0395 `oynaniyor`da takılı** — başkan skor 1934,
 > arkadaşın skoru NULL, arkadaşın o odaya ait maç kaydı da yok (istemcisi maçı hiç bitirmemiş: çıkmış /
 > arka plana atılmış). Sonuç ekranı `durum='bitti'` bekliyor → herkes bitmeden gelmez → sonsuz "hâlâ oynuyor".
