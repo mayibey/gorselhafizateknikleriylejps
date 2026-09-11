@@ -19,6 +19,7 @@ export default function ErMeydaniOdaScreen() {
   const params = useLocalSearchParams<{ oda?: string; kod?: string }>();
   const odaId = params.oda ?? '';
   const [durum, setDurum] = useState<OdaDurum | null>(null);
+  const onIzleme = useKisiselOzellik('on-izleme');
   const [baslatiliyor, setBaslatiliyor] = useState(false);
   const gittiRef = useRef(false);
 
@@ -33,6 +34,11 @@ export default function ErMeydaniOdaScreen() {
       setDurum(d);
       if (d.durum === 'oynaniyor' || d.durum === 'bitti') {
         gittiRef.current = true;
+        // ODA ADALETİ (11 Eyl 2026, on-izleme): skorum zaten yazılmışsa maçı SIFIRDAN oynatma —
+        // "sonuç bekleniyor / sıralama" ekranına git. (Eskiden lobide "başladı" görünen odaya
+        // tekrar giren oyuncu maçı yeniden oynuyor, sunucu ikinci skoru ilkinin üstüne yazıyordu.)
+        const ben = d.oyuncular.find((o) => o.ben);
+        const sonuc = onIzleme && ben != null && ben.skor != null;
         router.replace({
           pathname: '/er-meydani-mac',
           params: {
@@ -42,6 +48,7 @@ export default function ErMeydaniOdaScreen() {
             soru: String(d.soru_sayisi),
             sure: String(d.sure_sn),
             ...(d.kanunlar && d.kanunlar.length ? { kanun: d.kanunlar.join(',') } : {}),
+            ...(sonuc ? { sonuc: '1', skor: String(ben.skor) } : {}),
           },
         });
       } else if (d.durum === 'kapandi') {
@@ -55,7 +62,7 @@ export default function ErMeydaniOdaScreen() {
       dur = true;
       clearInterval(t);
     };
-  }, [odaId, router]);
+  }, [odaId, router, onIzleme]);
 
   const kod = durum?.kod ?? params.kod ?? '';
   const oyuncular = durum?.oyuncular ?? [];

@@ -63,6 +63,8 @@ export default function ErMeydaniMacScreen() {
     rakip_rating?: string;
     rakip_id?: string;
     rakip_rumuz?: string;
+    sonuc?: string; // '1' → oda maçı zaten oynandı; maç yerine sonuç/bekleme ekranı
+    skor?: string; // sonuc=1 iken sunucudaki skorum
   }>();
 
   // Tohum: verilmezse üret (doğrudan açılırsa). useMemo → tek sefer sabit.
@@ -74,6 +76,9 @@ export default function ErMeydaniMacScreen() {
   const odaMod = params.mod === 'oda';
   const dereceliMod = params.mod === 'dereceli';
   const odaId = params.oda ?? '';
+  // ODA ADALETİ (11 Eyl 2026): skoru olan oyuncu odaya tekrar girince maç oynatılmaz.
+  const sonucModu = odaMod && params.sonuc === '1';
+  const sunucuSkor = Math.max(0, Number(params.skor) || 0);
   const mod = (params.mod === 'arkadas' ? 'arkadas' : 'hizli') as 'hizli' | 'arkadas';
   // Dereceli maçta rakip = eşleşmeden gelen gölge (yenilecek hedef skor).
   const ligRakip = useMemo(
@@ -107,7 +112,7 @@ export default function ErMeydaniMacScreen() {
 
   const [index, setIndex] = useState(0);
   const onIzleme = useKisiselOzellik('on-izleme');
-  const [faz, setFaz] = useState<Faz>('oyun');
+  const [faz, setFaz] = useState<Faz>(sonucModu ? 'bitti' : 'oyun');
   const [secili, setSecili] = useState<number | null>(null);
   const [kalanMs, setKalanMs] = useState(sureMs);
   const [benAdimlar, setBenAdimlar] = useState<MacAdim[]>([]);
@@ -120,9 +125,9 @@ export default function ErMeydaniMacScreen() {
 
   const baslangicRef = useRef<number>(Date.now());
   const cevaplandiRef = useRef(false); // bu soru cevaplandı mı (süre+tıklama çift tetik guard)
-  const kaydettiRef = useRef(false); // sonuç bir kez yazıldı mı (offline'da bile döngü olmasın)
+  const kaydettiRef = useRef(sonucModu); // sonuç bir kez yazıldı mı (offline'da bile döngü olmasın)
 
-  const benSkor = toplamPuan(benAdimlar);
+  const benSkor = sonucModu ? sunucuSkor : toplamPuan(benAdimlar);
   const golgeSkorSuana = golge.adimlar.slice(0, benAdimlar.length).reduce((t, a) => t + a.puan, 0);
 
   // Bir soruyu bitir: adımı kaydet, geri bildirim fazına geç. Ref guard → çift sayım yok
@@ -293,16 +298,16 @@ export default function ErMeydaniMacScreen() {
   // Yeni tohum/ayar (Yeni Rakip / Kodla Katıl aynı ekrana replace edince) → maçı baştan başlat.
   useEffect(() => {
     setIndex(0);
-    setFaz('oyun');
+    setFaz(sonucModu ? 'bitti' : 'oyun');
     setSecili(null);
     setKalanMs(sureMs);
     setBenAdimlar([]);
     setSunucu(null);
     setLigSonucState(null);
     setOdaSonuc(null);
-    kaydettiRef.current = false;
+    kaydettiRef.current = sonucModu;
     cevaplandiRef.current = false;
-  }, [seed, adet, sureMs]);
+  }, [seed, adet, sureMs, sonucModu]);
 
   // Dereceli: yeni rakip bul → aynı ekrana lig paramlarıyla replace.
   const yeniLigMac = useCallback(async () => {
