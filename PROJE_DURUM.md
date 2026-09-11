@@ -5,6 +5,13 @@
 > Son güncelleme: 11 Eylül 2026 (şık sarma 2. deneme · Rütbe Merdiveni tekrar-oyna · Er Meydanı oda keşfi)
 >
 > ### ▶ 11 Eyl — ŞIK SARMA 2. DENEME + RÜTBE MERDİVENİ "TEKRAR OYNA" + ER MEYDANI ODA KEŞFİ
+> **▶▶ HERKESE YAYINLANDI (11 Eyl gece, başkan: "sen yay, sorun görürsem söylerim"):** on-izleme
+> bayrakları kaldırıldı (commit ab0d907; tsc 0, `bayrak:denetle` temiz) → 10 sürüme OTA
+> (`scratchpad/ota-11eyl.sh`, mesaj "Sik sarma 2. deneme + Er Meydani oda adaleti (herkese)").
+> Oyun sürümü **20260911-0011** `--onayla` ile genel işaretçiye alındı (Rütbe Merdiveni tekrar-oyna).
+> Başkan şık sarmayı cihazda DOĞRULAMADI ("güveniyor musun" → dürüstçe: şık sarmaya güvenmiyorum dedim,
+> yine de yay dedi). Şikâyet gelirse: şık sarma için üçüncü yol cihazda ölçülerek; geri alma = 10 sürüme
+> önceki commit'ten OTA. Oyun geri alma: `--geri 20260830-0155`.
 > **(a) Şık sarma — 8 Eyl düzeltmesi İŞE YARAMADI.** Başkanın cihazındaki paket (`istemci_surum.paket`
 > = 01a084ba…, 1.0.46 iOS) düzeltmeyi içeren OTA'nın ta kendisi; buna rağmen 2521-OO-003'te C şıkkı
 > yine tek satırda kesildi. Sebep: eklenen `flexShrink:1`+`minWidth:0` zaten `flex:1`'in varsayılanı
