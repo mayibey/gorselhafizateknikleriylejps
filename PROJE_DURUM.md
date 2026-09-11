@@ -4,6 +4,26 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 11 Eylül 2026 (şık sarma 2. deneme · Rütbe Merdiveni tekrar-oyna · Er Meydanı oda keşfi)
 >
+> ### ▶ 11/12 Eyl — 🔴 BRANŞ TCK ANDROID ÇÖKMESİ ÇÖZÜLDÜ (Patika dilimli SVG, commit 190204f)
+> **Bildirim:** Ahmet Altuntaş (7 Eyl) + Onur Duru (11 Eyl): "Branş konularındaki 102 kartlık TCK açılınca
+> uygulama kapanıyor". Onur ekran kaydı gönderdi (kişiye özel `ekran-goruntusu-serbest` bayrağı açıldı):
+> indirme bitiyor, kanuna girince düşüyor.
+> **Keşif tuzağı:** 7 Eyl cevabındaki "sunucuya istek gelmemiş" YANLIŞTI — `icerik_erisim_log` yalnız görselleri
+> tutuyor; ikisi de görselleri 3-4 kez tam indirmişti. Kod/veri elemeleri (eski kart id, şifre, ses biçimi,
+> ilerleme verisi) hepsi temiz çıktı → gerçek çökme kaydı şarttı.
+> **Play Developer Reporting API açıldı** (başkan GCP'de etkinleştirdi; ilk seferde yanlış proje, doğrusu
+> `1065249322807`). `scratchpad/play-cokme-cek.mjs` → en sık çökme: `com.horcrux.svg.SvgView.onDraw` →
+> `RecordingCanvas.throwIfCannotDraw` = **"trying to draw too large bitmap"** (Android 100 MB kanvas sınırı).
+> Zamanlar Ahmet'in denemeleriyle birebir; cihazlar Redmi Note 11S/12, Galaxy S24+.
+> **Kök sebep:** `patika.tsx` tüm yolu TEK `<Svg height={contentH}>` çiziyor; Branş TCK (law 67) 102 düğüm
+> = ~12.300 dp → 1080 px'te ~146 MB > 100 MB. İkinci en büyük kanun 54 düğüm (~78 MB; QHD'de o da aşar).
+> iOS'ta sınır yok → yalnız Android. **Çare:** `DilimliSvg` — viewBox pencereleriyle 1500 dp'lik dilimler
+> (aynı çocuklar), iki SVG bloğunda da. tsc 0. **10 sürüme OTA basıldı** (başkan: "sen yap, Onur'da düzelirse
+> herkeste düzelir"). Onur + Ahmet'e talep cevabı + push (`scratchpad/cevap-brtck-cokme.mjs`).
+> **DERS:** Android'de uzun listeyi tek SVG'ye çizme; yükseklik kart sayısıyla büyüyen her SVG dilimlensin.
+> **DİĞER ÇÖKMELER (Play, açık):** `libexpo-modules-core.so jsi::Object` SIGSEGV (6 kişi, 1.0.46, 6 Eyl) +
+> Karargâh/safak SVG'leri (Reanimated'lı) de SvgView ise ayrı bakılmalı — henüz incelenmedi.
+>
 > ### ▶ 11 Eyl — ŞIK SARMA 2. DENEME + RÜTBE MERDİVENİ "TEKRAR OYNA" + ER MEYDANI ODA KEŞFİ
 > **▶▶ HERKESE YAYINLANDI (11 Eyl gece, başkan: "sen yay, sorun görürsem söylerim"):** on-izleme
 > bayrakları kaldırıldı (commit ab0d907; tsc 0, `bayrak:denetle` temiz) → 10 sürüme OTA
