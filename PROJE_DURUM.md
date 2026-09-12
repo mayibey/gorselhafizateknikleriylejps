@@ -2,7 +2,22 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 11 Eylül 2026 (şık sarma 2. deneme · Rütbe Merdiveni tekrar-oyna · Er Meydanı oda keşfi)
+> Son güncelleme: 12 Eylül 2026 (soru kökü kimlik kayması · Branş TCK Android çökmesi · Er Meydanı oda adaleti)
+>
+> ### ▶ 12 Eyl — SORU KÖKÜ KİMLİK KAYMASI (commit aaff740, 10 sürüme OTA)
+> **Bildirim:** Ersin Canıtez, Er Meydanı 20-D-042: Sözleşmeli Yön. sorusu "2521 Tüfekler Yön.'e göre"
+> diye başlıyordu (cevap doğru, künye yanlış). **Kök sebep `scripts/soru-standart.mjs`:** (1) `KARTID_LAW`
+> kaynak-ipucu tablosu KLASÖR numarasını kanun id'si sanıyordu (SOZLESMELI:20→2521, JANDYON:25→6136;
+> 6 giriş yanlıştı); (2) kökün ORTASINDA geçen başka kanun adı/numarası (1111, 2803, 6191, 6136, 926)
+> künyeyi ele geçiriyordu. **DAR kural:** kökün başındaki ad her zaman geçerli; ortadaki ad/numara sorunun
+> kendi kanunundan AÇIKÇA farklıysa (numara farklı ya da kanun↔yönetmelik türü farklı) künye sayılmaz.
+> **Dersler (4 tur gerekti):** (a) ilk deneme "lawId önce" diye GENİŞ yazıldı → 300 kök değişti, 5 yeni çift
+> künye (1219/2010/926 kozmetik "sayılı/Sayılı", kısa adlar tam ada döndü) → geri alındı; (b) Türkçe büyük İ
+> tuzağı: `/Yönetmeli/i` "YÖNETMELİĞİ"yi tutmuyor → tr-küçültme şart; (c) her turda eski/yeni registry
+> id-bazlı diff (`scratchpad/_regen_diff.py`) + çift künye sayımı ölçüldü. **Sonuç:** düello 6549→6550,
+> kart 5476→5477, şık/cevap değişen 0, çift künye 88→86, değişen 50+12 kök tek tek okundu (hepsi düzelme).
+> Denemeler yeniden üretilmedi; 12 kök `scratchpad/_deneme_kok_yama.py` ile cerrahi eşitlendi.
+> Ersin'e kişiye özel duyuru + push (`scratchpad/cevap-ersin-kok.mjs`).
 >
 > ### ▶ 11/12 Eyl — 🔴 BRANŞ TCK ANDROID ÇÖKMESİ ÇÖZÜLDÜ (Patika dilimli SVG, commit 190204f)
 > **Bildirim:** Ahmet Altuntaş (7 Eyl) + Onur Duru (11 Eyl): "Branş konularındaki 102 kartlık TCK açılınca
