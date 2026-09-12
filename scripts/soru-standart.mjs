@@ -321,9 +321,13 @@ function onEkle(k, govde) {
 // Fabrikadaki kart kimliği öneki → law_id. Küratörlü genel denemelerde soru metni bazen
 // mevzuatı adıyla anmıyor ve `kaynak` da "Yön. m.24/1" gibi künyesiz; tek ipucu kart_id öneki.
 // (Önek → klasör eşlemesi fabrikada aranarak bulundu, 23 Ağu 2026.)
+// 12 Eyl 2026 — TUZAK (Ersin Canıtez bildirdi, 20-D-042): bu tablo KLASÖR numarasını kanun
+// id'si sanıyordu (SOZLESMELI: 20 → law 20 = 2521 Tüfekler Yön; JANDYON: 25 → law 25 = 6136).
+// 31 Er Meydanı sorusu yanlış kanun adıyla başlıyordu. Değerler soru-registry-uret KLASOR_LAW ile
+// birebir kanun id'sidir: 16_KVK→18, 17_BILGI→19, 20_SOZLESMELI→16, 22_IZIN→24, 24_PERSONEL→22, 25_JANDYON→17.
 const KARTID_LAW = {
-  RESMIYAZISMA: 15, KVKSILME: 16, BILGIEDINME: 17, SOZLESMELI: 20, '6284UYG': 21,
-  JGKIZIN: 22, JSGKHIZMET: 23, PERSONELYON: 24, JANDYON: 25,
+  RESMIYAZISMA: 15, KVKSILME: 18, BILGIEDINME: 19, SOZLESMELI: 16, '6284UYG': 21,
+  JGKIZIN: 24, JSGKHIZMET: 23, PERSONELYON: 22, JANDYON: 17,
   YON26: 50, YON29: 53, YON30: 54, YON36: 60, YON41: 65, YON42: 66,
 };
 
@@ -415,15 +419,39 @@ function adNormal(ad) {
     .replace(/Kanununun$|Kanununa$|Kanununda$/, 'Kanunu');
 }
 
+// 12 Eyl 2026 (Ersin Canıtez, 20-D-042): "ad" sorunun kendi kanunundan AÇIKÇA farklı mı?
+// Yalnız iki kesin işaret sayılır — ikisi de numaralıyken numaralar farklı, ya da biri Kanun öbürü
+// Yönetmelik/Yönerge/Tebliğ. Yazım farkı / kısa ad ("Jandarma Teşkilat Yön." gibi) FARKLI SAYILMAZ;
+// böylece eski davranış olduğu gibi kalır, yalnız yanlış-kanun künyeleri düzelir.
+function acikcaFarkli(ad, lawId) {
+  const hedef = lawId == null ? null : (KANUN_ADI.get(lawId) ?? DUELLO_ADI.get(lawId));
+  if (!hedef) return false;
+  // Türkçe büyük İ tuzağı: /i bayrağı 'YÖNETMELİĞİ' içindeki İ'yi i saymaz → önce tr küçült.
+  const tur = (x) => (/yönetmeli|yönerge|tebliğ|genelge|rehber/.test(String(x).toLocaleLowerCase('tr')) ? 'yon' : 'kanun');
+  if (tur(ad) !== tur(hedef)) return true;
+  const n1 = String(ad).match(/^(\d{3,4})\s*sayılı/i);
+  const n2 = String(hedef).match(/^(\d{3,4})\s*sayılı/i);
+  return !!(n1 && n2 && n1[1] !== n2[1]);
+}
+
 function mevzuatAra(soru, kaynak, lawId) {
   for (const r of AD_DESEN) {
     const m = soru.match(r);
-    if (m) return adNormal(m[1]);
+    if (!m) continue;
+    const ad = adNormal(m[1]);
+    // Kökün BAŞINDAKİ ad her zaman geçerli (çapraz atıf korunur). ORTADAKİ ad ise sorunun
+    // kendi kanunundan açıkça farklıysa künye değildir ("…'e göre, 1111 sayılı Askerlik Kanunu,
+    // 2918 sayılı… gibi özel kanunlarda" → Kabahatler; "…2803 sayılı Kanunun ek maddesi…" → İzin Yön).
+    if (m.index <= 2 || !acikcaFarkli(ad, lawId)) return ad;
+    break;
   }
   // Kökte çıplak "6284 sayılı Kanun" geçiyorsa NUMARASI esastır — kaynak künyesi
   // bazen uygulama yönetmeliğini gösteriyor ve soruyu yanlış mevzuata yazdırıyordu.
+  // (12 Eyl) Numara sorunun kendi kanunundan açıkça farklıysa ortadaki bir atıftır → sayılmaz.
   const noSoru = soru.match(/\b(\d{3,4})\s*sayılı/);
-  if (noSoru && NO_ADI.has(noSoru[1])) return NO_ADI.get(noSoru[1]);
+  if (noSoru && NO_ADI.has(noSoru[1]) && !acikcaFarkli(NO_ADI.get(noSoru[1]), lawId)) {
+    return NO_ADI.get(noSoru[1]);
+  }
   const no = String(kaynak || '').match(/^(\d{3,4})\b/);
   if (no && NO_ADI.has(no[1])) return NO_ADI.get(no[1]);
   const ipucu = String(kaynak || '').toLocaleUpperCase('tr');

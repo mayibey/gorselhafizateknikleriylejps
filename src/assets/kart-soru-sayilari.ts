@@ -23,7 +23,7 @@ export const KART_SORU_SAYILARI: Record<number, number> = {
   20: 23,
   21: 28,
   22: 35,
-  23: 32,
+  23: 33,
   24: 27,
   25: 23,
   26: 44,
