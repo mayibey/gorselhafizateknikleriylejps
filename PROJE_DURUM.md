@@ -2,7 +2,14 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 12 Eylül 2026 (soru kökü kimlik kayması · Branş TCK Android çökmesi · Er Meydanı oda adaleti)
+> Son güncelleme: 13 Eylül 2026 (Karargâh paslanan liste yeri · soru kökü kimlik kayması · Branş TCK Android çökmesi)
+>
+> ### ▶ 13 Eyl — KARARGÂH: PASLANAN KANUN LİSTESİ SATIRIN HEMEN ALTINDA (commit 43eca54, 10 sürüme OTA)
+> Başkan: "TEKRAR ET"e basınca liste Tatbikat/Oyun kartlarının ALTINDA açılıyordu, kaydırmadan görünmüyordu.
+> Liste bloğu paslanma satırının hemen altına taşındı (kartlar aşağı iner, tekrar basınca kapanır).
+> Önce on-izleme bayrağıyla 1.0.46'ya (390bae3), başkan "yay herkese" → bayrak kaldırıldı, eski konum silindi.
+> TUZAK: blok sonu ararken `"          ) : null}"` 14-boşluklu iç satırın SONEKİ olarak tutuyor → JSX kapanışı
+> eksik kaldı (tsc 3 hata); başa hizalı arama şart. "+9 kanun daha" hâlâ tıklanamaz (açık öneri).
 >
 > ### ▶ 12 Eyl — SORU KÖKÜ KİMLİK KAYMASI (commit aaff740, 10 sürüme OTA)
 > **Bildirim:** Ersin Canıtez, Er Meydanı 20-D-042: Sözleşmeli Yön. sorusu "2521 Tüfekler Yön.'e göre"
