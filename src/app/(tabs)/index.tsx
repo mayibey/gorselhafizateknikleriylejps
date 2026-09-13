@@ -204,9 +204,8 @@ export default function KarargahScreen() {
   const aramaMevzuatta = useKisiselOzellik('talim-mevzuata');
   // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
   const [tekrarAcik, setTekrarAcik] = useState(false);
-  // PASLANAN LİSTE YERİ (başkan, 13 Eyl 2026): liste tıklanan satırın HEMEN ALTINDA açılsın,
-  // merkez kartları aşağı insin (eskiden kartların altında açılıyordu, kaydırmadan görünmüyordu).
-  const onIzleme = useKisiselOzellik('on-izleme');
+  // PASLANAN LİSTE YERİ (başkan, 13 Eyl 2026): liste tıklanan satırın HEMEN ALTINDA açılır,
+  // merkez kartları aşağı iner (eskiden kartların altındaydı, kaydırmadan görünmüyordu).
   // ŞAFAK SAHNESİ verileri (bayraklı): kalan gün + başvuru penceresi + haftalık gün halkaları.
   const kalanGun = Math.max(0, Math.ceil((SINAV_TARIHI.getTime() - Date.now()) / 86400000));
   // CANLI geri sayım (başkan, 11 Ağu): tek satır "39 GÜN 13:07:42" — saniyede bir işler.
@@ -1030,7 +1029,7 @@ export default function KarargahScreen() {
             )}
           </Pressable>
           )}
-          {onIzleme && tekrarAcik && unutulan.length > 0 ? (
+          {tekrarAcik && unutulan.length > 0 ? (
             <View style={styles.tekrarListe}>
               {unutulan.slice(0, 5).map((u) => (
                 <Pressable
@@ -1136,30 +1135,6 @@ export default function KarargahScreen() {
               </View>
             </Pressable>
           </View>
-          {!onIzleme && tekrarAcik && unutulan.length > 0 ? (
-            <View style={styles.tekrarListe}>
-              {unutulan.slice(0, 5).map((u) => (
-                <Pressable
-                  key={u.lawId}
-                  style={({ pressed }) => [styles.unutSatir, styles.unutSatirGece, pressed && styles.pressed]}
-                  onPress={() => router.push({ pathname: '/patika', params: { lawId: String(u.lawId) } })}>
-                  <MaterialCommunityIcons name="history" size={16} color={Palette.altinParlak} />
-                  <AppText variant="kucuk" bold color="beyaz" style={styles.unutAd} numberOfLines={1}>
-                    {u.ad}
-                  </AppText>
-                  <AppText variant="kucuk" bold color="altinAcik2">
-                    {u.gun} gün
-                  </AppText>
-                  <MaterialCommunityIcons name="chevron-right" size={18} color={Palette.kenarlik} />
-                </Pressable>
-              ))}
-              {unutulan.length > 5 ? (
-                <AppText variant="kucuk" bold color="altinAcik2">
-                  +{unutulan.length - 5} kanun daha
-                </AppText>
-              ) : null}
-            </View>
-          ) : null}
         </>
       ) : null}
 
