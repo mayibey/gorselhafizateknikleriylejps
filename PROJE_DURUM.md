@@ -2,7 +2,18 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 13 Eylül 2026 (Karargâh paslanan liste yeri · soru kökü kimlik kayması · Branş TCK Android çökmesi)
+> Son güncelleme: 16 Eylül 2026 (Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 16 Eyl — SUPABASE VERİTABANI MAKİNESİ ~6 SAAT DÜŞTÜ (kod değişikliği yok, restart ile çözüldü)
+> **Şikâyetler:** Ünal Kutlu "Sunucu Apple girişini kabul etmedi" + botta 30 soru sınırı (ömür boyu üye);
+> Ceyhun Balık "uygulama beni attı, giremiyorum". İkisi de aynı arıza: veritabanı makinesi ~11:50-17:09
+> arasında düştü (Cloudflare 522; health ucu db/auth/rest UNHEALTHY; havuz "tenant not found"; disk 2 GB'ın
+> 387 MB'ı, dolu değil; Supabase status'ta bölgemiz için arıza yok, aynı gün 10:17-12:33 Auth kesintisi vardı).
+> **Çözüm:** başkan onayıyla `POST /v1/projects/<ref>/restart` 17:52 → 17:57 db+auth, 17:58 rest sağlıklı.
+> 18:00'de Ünal ve Ceyhun dâhil kullanıcılar geri girdi (auth hatasız 68 istek). Kesinti penceresinde
+> 50 kullanıcı uygulamayı açmıştı. **Yan etki:** bot `premiumMi` 522'de false döndürüp sqlite'a yazdı →
+> Ünal 17:28'de "ücretsiz" sayıldı (49 soru ≥ 30). 30 dk önbellek doldu, düzeldi. Bot düzeltmesi (hata anında
+> son bilinen durumu koru) ONAY BEKLİYOR. Reçete hafızada: supabase-sunucu-cokmesi-16eyl.
 >
 > ### ▶ 13 Eyl — KARARGÂH: PASLANAN KANUN LİSTESİ SATIRIN HEMEN ALTINDA (commit 43eca54, 10 sürüme OTA)
 > Başkan: "TEKRAR ET"e basınca liste Tatbikat/Oyun kartlarının ALTINDA açılıyordu, kaydırmadan görünmüyordu.
