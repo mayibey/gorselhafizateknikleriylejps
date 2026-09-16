@@ -11,7 +11,7 @@ import { useImzaliTazele } from '@/hooks/use-imzali-tazele';
 import { cozHazir, cozTemizle, gorselCoz } from '@/lib/gorsel-coz';
 import { bozukIcerikSil } from '@/lib/indirme';
 import { gorselBekliyorMu, gorselKaynak, indirilmisGorsel } from '@/lib/gorsel-kaynak';
-import { imzaliUnut } from '@/lib/imzali-cache';
+import { imzaliUnut, imzaliYenidenDene } from '@/lib/imzali-cache';
 import { KART_GORSEL_YOLLARI } from '../../assets/kart-gorselleri';
 
 /** Tek bir kart: görseli varsa tek kare görsel, yoksa 2x2 yer tutucu ızgara. */
@@ -33,6 +33,10 @@ export function StudyCard({
   const [cozulmus, setCozulmus] = useState<string | null>(() =>
     sifreliYol ? (cozHazir(sifreliYol) ?? null) : null,
   );
+  // KENDİNİ ONARMA: indirilmiş kopya bozuksa (nadiren yarım/hatalı iniyor) görsel açılmaz ve
+  // kart bomboş kalırdı. Yükleme hatasında yerel dosya atılır, kart UZAK kaynağa düşer,
+  // dosya bir sonraki indirmede yeniden iner.
+  const [yerelBozuk, setYerelBozuk] = useState(false);
   useEffect(() => {
     if (!sifreliYol) return;
     const hazir = cozHazir(sifreliYol);
@@ -44,16 +48,41 @@ export function StudyCard({
     let iptal = false;
     gorselCoz(sifreliYol)
       .then((d) => !iptal && setCozulmus(d))
-      .catch(() => !iptal && onGorundu?.()); // çözülemezse kilitlenip kalmasın
+      .catch(() => {
+        // 16 Eyl 2026: çözülemeyen (eksik/bozuk/anahtarı değişmiş) yerel dosya sonsuz
+        // "hazırlanıyor" bırakıyordu. Artık yerel kopya atılır, kart uzak kaynağa düşer.
+        if (iptal) return;
+        cozTemizle(sifreliYol);
+        void bozukIcerikSil(sifreliYol);
+        setYerelBozuk(true);
+        onGorundu?.();
+      });
     return () => {
       iptal = true;
     };
   }, [sifreliYol, onGorundu]);
 
-  // KENDİNİ ONARMA: indirilmiş kopya bozuksa (nadiren yarım/hatalı iniyor) görsel açılmaz ve
-  // kart bomboş kalırdı. Yükleme hatasında yerel dosya atılır, kart UZAK kaynağa düşer,
-  // dosya bir sonraki indirmede yeniden iner.
-  const [yerelBozuk, setYerelBozuk] = useState(false);
+  // 16 Eyl 2026 (Ünal, kesinti gecesi): bağlantı 15 sn'de gelmezse kullanıcıya söyle ve
+  // "Yeniden dene" ver — sonsuza kadar dönen çarka bakmasın. Kart değişince sayaç sıfırlanır.
+  const bekliyor = (!!sifreliYol && !yerelBozuk && !cozulmus) || gorselBekliyorMu(card.gorsel_yolu);
+  const [gecikti, setGecikti] = useState(false);
+  useEffect(() => {
+    setGecikti(false);
+    if (!bekliyor) return;
+    const t = setTimeout(() => setGecikti(true), 15000);
+    return () => clearTimeout(t);
+  }, [bekliyor, card.id]);
+  const yenidenDene = () => {
+    setGecikti(false);
+    if (sifreliYol && !yerelBozuk) {
+      cozTemizle(sifreliYol);
+      void bozukIcerikSil(sifreliYol);
+      setYerelBozuk(true); // uzak kaynağa düş
+      return;
+    }
+    const yol = KART_GORSEL_YOLLARI[card.gorsel_yolu ?? ''];
+    if (yol) imzaliYenidenDene(yol);
+  };
   const gorsel =
     sifreliYol && !yerelBozuk
       ? cozulmus
@@ -68,17 +97,28 @@ export function StudyCard({
 
   // Şifreli içerik henüz çözülmedi VEYA web imzalı URL yolda → "hazırlanıyor" bekleme kutusu
   // (Öğrendim kilitli kalır; placeholder ızgara YANLIŞ olur — görsel var, sadece yolda).
-  if ((sifreliYol && !yerelBozuk && !cozulmus) || gorselBekliyorMu(card.gorsel_yolu)) {
+  if (bekliyor) {
     return (
       <View style={[styles.card, styles.cardGorsel, styles.cozuluyor]}>
         <ActivityIndicator size="large" color={Palette.altinKoyu} />
         <AppText variant="govde" bold color="lacivert" style={styles.cozuluyorMetin}>
-          Görsel hazırlanıyor…
+          {gecikti ? 'Sunucu yavaş görünüyor' : 'Görsel hazırlanıyor…'}
         </AppText>
         <AppText variant="kucuk" color="solukMetin" style={styles.cozuluyorAlt}>
-          İlk açılışta görseller cihazında güvenle hazırlanıyor (şifre çözülüyor). Bu işlem
-          ilk seferde biraz sürebilir — bozuk değil, lütfen bekle. 🔒
+          {gecikti
+            ? 'Görsel bağlantısı beklenenden geç geldi. Yeniden deneyebilir ya da bir sonraki karta geçip sonra dönebilirsin.'
+            : 'İlk açılışta görseller cihazında güvenle hazırlanıyor (şifre çözülüyor). Bu işlem ilk seferde biraz sürebilir — bozuk değil, lütfen bekle. 🔒'}
         </AppText>
+        {gecikti ? (
+          <Pressable
+            onPress={yenidenDene}
+            style={({ pressed }) => [styles.yenidenDene, pressed && styles.yenidenDeneBasili]}
+            accessibilityRole="button">
+            <AppText variant="govde" bold color="beyaz">
+              Yeniden dene
+            </AppText>
+          </Pressable>
+        ) : null}
       </View>
     );
   }
@@ -205,6 +245,16 @@ const styles = StyleSheet.create({
   cozuluyorAlt: {
     textAlign: 'center',
     lineHeight: 18,
+  },
+  yenidenDene: {
+    marginTop: Spacing.two,
+    backgroundColor: Palette.lacivert,
+    paddingHorizontal: Spacing.five,
+    paddingVertical: Spacing.two,
+    borderRadius: Radius.m,
+  },
+  yenidenDeneBasili: {
+    opacity: 0.85,
   },
   gorsel: {
     // Kutu görselin doğal oranında → görsel kutuyu tam doldurur (boşluk/kırpma yok).

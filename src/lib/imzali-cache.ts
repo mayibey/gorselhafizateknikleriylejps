@@ -40,19 +40,61 @@ function yay(): void {
   for (const d of dinleyiciler) d();
 }
 
+// 16 Eyl 2026 (Ünal Kutlu, sunucu kesintisi gecesi): cevap GELMEYEN ya da EKSİK gelen yol
+// `istendi`de kalıyor, bir daha hiç istenmiyordu → kart uygulama kapanana kadar "Görsel
+// hazırlanıyor"da takılıyordu (Branş TCK ilk 3 kart, her girişte aynı). Artık eksik/başarısız
+// yollar listeden düşer VE artan aralıkla (3s, 6s, 12s, 24s, 48s) kendiliğinden yeniden istenir.
+const basarisiz = new Map<string, number>(); // yol -> deneme sayısı
+const MAX_DENEME = 5;
+let tekrarZamanlayici: ReturnType<typeof setTimeout> | null = null;
+
+function tekrarPlanla(yollar: string[]): void {
+  let enKisa = Infinity;
+  for (const y of yollar) {
+    const n = (basarisiz.get(y) ?? 0) + 1;
+    basarisiz.set(y, n);
+    istendi.delete(y); // yeniden istenebilsin (render tetiklerse hemen)
+    if (n <= MAX_DENEME) enKisa = Math.min(enKisa, 3000 * 2 ** (n - 1));
+  }
+  if (!Number.isFinite(enKisa) || tekrarZamanlayici) return;
+  tekrarZamanlayici = setTimeout(() => {
+    tekrarZamanlayici = null;
+    for (const y of yollar) {
+      if (cache.has(y) || istendi.has(y) || (basarisiz.get(y) ?? 0) > MAX_DENEME) continue;
+      istendi.add(y);
+      kuyruk.add(y);
+    }
+    if (kuyruk.size && !zamanlayici) zamanlayici = setTimeout(bosalt, 50);
+  }, enKisa);
+}
+
 async function bosalt(): Promise<void> {
   zamanlayici = null;
   const yollar = [...kuyruk];
   kuyruk.clear();
   if (yollar.length === 0) return;
+  let eksik: string[] = [];
   try {
     const harita = await imzaliUrller(yollar);
-    for (const [yol, url] of harita) cache.set(yol, url);
+    for (const [yol, url] of harita) {
+      cache.set(yol, url);
+      basarisiz.delete(yol);
+    }
+    eksik = yollar.filter((y) => !harita.has(y));
   } catch {
-    // Alınamadı → tekrar istenebilsin (oturum henüz kurulmamış olabilir).
-    for (const y of yollar) istendi.delete(y);
+    // Alınamadı (ağ/oturum/sunucu) → hepsi yeniden denenecek.
+    eksik = yollar;
   }
+  if (eksik.length) tekrarPlanla(eksik);
   yay();
+}
+
+/** Bekleyen yolu hemen yeniden iste (kullanıcı "Yeniden dene" dedi). Deneme sayacı sıfırlanır. */
+export function imzaliYenidenDene(yol: string): void {
+  basarisiz.delete(yol);
+  cache.delete(yol);
+  istendi.delete(yol);
+  imzaliUriSync(yol);
 }
 
 /**
