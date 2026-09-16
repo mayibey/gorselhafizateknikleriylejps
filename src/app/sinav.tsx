@@ -500,7 +500,10 @@ export default function SinavScreen() {
             </View>
 
             {/* Açıklama — cevaptan sonra görünür (doğru cevabın gerekçesi). */}
-            {secilen !== null && soru!.aciklama ? (
+            {/* 16 Eyl (Ünal Kutlu önerisi, başkan onayı): cevaptan SONRA dayanak künyesi
+                ("5237 m.240") + "İlgili kartı çalış" düğmesi de burada; sınav sonunu beklemeden
+                yanlış yapılan maddeye gidilir. Cevaptan ÖNCE yine gösterilmez (23 Ağu kararı). */}
+            {secilen !== null && (soru!.aciklama || soru!.kaynak) ? (
               <View
                 style={[
                   styles.aciklama,
@@ -512,9 +515,26 @@ export default function SinavScreen() {
                   color={secilen === soru!.dogru ? 'yesil' : 'kirmizi'}>
                   {secilen === soru!.dogru ? 'Doğru' : 'Yanlış'}
                 </AppText>
-                <AppText variant="kucuk" color="anaMetin" style={styles.aciklamaMetin}>
-                  {soru!.aciklama}
-                </AppText>
+                {soru!.aciklama ? (
+                  <AppText variant="kucuk" color="anaMetin" style={styles.aciklamaMetin}>
+                    {soru!.aciklama}
+                  </AppText>
+                ) : null}
+                {soru!.kaynak ? (
+                  <AppText variant="etiket" bold color="altinMetin">
+                    Dayanak: {soru!.kaynak}
+                  </AppText>
+                ) : null}
+                {kartHedefi(soru!) ? (
+                  <Pressable
+                    style={({ pressed }) => [styles.kartGitBtn, pressed && styles.pressed]}
+                    onPress={() => kartaGit(soru!)}>
+                    <MaterialCommunityIcons name="card-text-outline" size={15} color={Palette.lacivert} />
+                    <AppText variant="etiket" bold color="lacivert">
+                      {kartHedefi(soru!)?.kartId ? 'İlgili kartı çalış' : 'Bu kanunu çalış'}
+                    </AppText>
+                  </Pressable>
+                ) : null}
               </View>
             ) : null}
           </ScrollView>
