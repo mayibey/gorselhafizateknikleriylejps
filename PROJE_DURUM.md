@@ -2,7 +2,17 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 16 Eylül 2026 (Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 16 Eyl (gece 2) — SINAV/DENEME: CEVAPTAN SONRA DAYANAK KÜNYESİ (commit 82aafb1, 10 sürüme OTA)
+> **Öneri (Ünal Kutlu, Telegram):** "yanlış yapınca hangi maddeye ait olduğunu göremiyorum, sınav
+> sonuna kadar bekliyorum." 23 Ağu'da başkan künyeyi soru sorulurken KALDIRTMIŞTI (cevabı ele
+> veriyor). Uzlaşma: cevap verildikten SONRA açılan Doğru/Yanlış kutusuna "Dayanak: 5237 m.240" +
+> "İlgili kartı çalış / Bu kanunu çalış" düğmesi (mevcut kartHedefi/kartaGit; paywall kapısı aynı).
+> Cevaptan önce yine gösterilmiyor. Açıklaması olmayan sorularda da kutu (künye varsa) çıkar.
+> **OTA DERSİ:** yayın döngüsü sürerken `git checkout -- app.json` yapıldı → 1.0.40 turu 1.0.46'ya
+> gitti; birleşik yayınla (bu iki düzeltme) 10 sürüme yeniden basıldı. Yayın sürerken app.json'a
+> ve src/assets registry'sine DOKUNMA; log'da her "=== V ===" altındaki "Runtime version" V olmalı.
 >
 > ### ▶ 16 Eyl (gece) — GÖRSEL HAZIRLANIYOR TAKILMASI (commit e7f4f14, 10 sürüme OTA) + MICRO GEÇİŞİ
 > **Bildirim:** Ünal Kutlu, Branş TCK/TCK'da kart "Görsel hazırlanıyor"da sonsuza kadar kalıyor; Trafik vb.
