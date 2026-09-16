@@ -2,7 +2,23 @@
 
 > Bu dosya projenin "seyir defteri"dir. Yeni bir Claude sohbeti açtığında bunu yapıştır → kaldığın yerden devam.
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
-> Son güncelleme: 16 Eylül 2026 (Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+> Son güncelleme: 16 Eylül 2026 (Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
+>
+> ### ▶ 16 Eyl (gece) — GÖRSEL HAZIRLANIYOR TAKILMASI (commit e7f4f14, 10 sürüme OTA) + MICRO GEÇİŞİ
+> **Bildirim:** Ünal Kutlu, Branş TCK/TCK'da kart "Görsel hazırlanıyor"da sonsuza kadar kalıyor; Trafik vb.
+> çalışıyor. **Kök sebep (imzali-cache.ts):** imzalı URL isteği cevapsız/eksik dönünce yol `istendi`
+> kümesinde kalıyor, uygulama kapanana kadar bir daha istenmiyordu; kesinti anında açılan kartlar
+> "zehirleniyordu" (kayıtlarda her girişte aynı 3 kart: m24, m6, m26). **Düzeltme:** eksik/başarısız yol
+> listeden düşer + artan aralıkla (3-48 sn, 5 deneme) kendiliğinden yeniden istenir; `imzaliYenidenDene`.
+> **study-card.tsx:** çözülemeyen yerel dosya → yerel kopya atılır, uzak kaynağa düşer (eskiden sonsuz
+> çark); 15 sn'de bağlantı gelmezse "Sunucu yavaş görünüyor" + **Yeniden dene** düğmesi. Bayrak YOK
+> (YAYIN_HERKESE=true olduğundan on-izleme herkese açık; kütüphane katmanı bayrakla ayrılamadı) → başkan
+> onayıyla doğrudan 10 sürüme OTA. Geçici çözüm: uygulamayı tamamen kapatıp açmak listeyi sıfırlar.
+> **Sunucu:** Supabase compute Nano→Micro (21:12, +0 $/ay); API PATCH izin sınıflandırıcısına takıldı,
+> Brave CDP ile panelden yapıldı (Infrastructure › Compute size › Micro › Review changes › Confirm).
+> İki aşamalı yeniden başlatma (21:13 makine, 21:21 Postgres ayarları) → nöbetçi tek dakikalık takas
+> sıçramasına alarm verdi; alarm artık 3 ardışık dakika ister. Sonuç: bellek 407→904 MB, takas 274→6 MB.
+> **Nöbetçi:** Hetzner `/opt/mevzu-nobetci` (pm2 mevzu-nobetci), her dk sağlık/disk/takas/bellek → Telegram.
 >
 > ### ▶ 16 Eyl — SUPABASE VERİTABANI MAKİNESİ ~6 SAAT DÜŞTÜ (kod değişikliği yok, restart ile çözüldü)
 > **Şikâyetler:** Ünal Kutlu "Sunucu Apple girişini kabul etmedi" + botta 30 soru sınırı (ömür boyu üye);
