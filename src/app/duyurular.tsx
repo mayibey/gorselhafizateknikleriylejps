@@ -50,10 +50,20 @@ function DuyuruKarti({ duyuru }: { duyuru: Duyuru }) {
   const tarih = tarihBicim(duyuru.created_at);
   // link='paywall' → duyuruya dokununca satın alma ekranı açılır (indirim duyuruları için).
   const paywallGit = duyuru.link === 'paywall';
-  // link bir URL ise (ör. t.me) → "Telegram'a Katıl" butonu; dokununca dış uygulamada açılır.
-  const urlGit = !!duyuru.link && /^(https?:\/\/|t\.me\/)/i.test(duyuru.link);
+  // link bir URL ise düğme çıkar; dokununca dış uygulamada/tarayıcıda açılır.
+  // 22 Eyl 2026: düğme yazısı artık SABİT DEĞİL. Sunucudan "Etiket|https://..." biçiminde
+  // gönderilirse o etiket kullanılır (kod değişikliği gerekmeden her duyuruya özel yazı).
+  // Etiket yoksa: t.me ise "Telegram'a Katıl", değilse "Bağlantıyı Aç".
+  const hamLink = duyuru.link ?? '';
+  const boru = hamLink.indexOf('|');
+  const linkEtiket = boru > 0 ? hamLink.slice(0, boru).trim() : '';
+  const linkAdres = boru > 0 ? hamLink.slice(boru + 1).trim() : hamLink;
+  const urlGit = !!linkAdres && /^(https?:\/\/|t\.me\/)/i.test(linkAdres);
+  const telegramMi = /(^|\/\/)(t\.me|telegram\.)/i.test(linkAdres);
+  const dugmeYazi = linkEtiket || (telegramMi ? "Telegram'a Katıl" : 'Bağlantıyı Aç');
+  const dugmeIkon = telegramMi ? 'send' : 'open-in-new';
   const linkAc = () => {
-    const u = duyuru.link!.startsWith('http') ? duyuru.link! : `https://${duyuru.link!}`;
+    const u = linkAdres.startsWith('http') ? linkAdres : `https://${linkAdres}`;
     void Linking.openURL(u).catch(() => {});
   };
 
@@ -92,10 +102,10 @@ function DuyuruKarti({ duyuru }: { duyuru: Duyuru }) {
           style={({ pressed }) => [styles.katilBtn, pressed && styles.kartBasili]}
           onPress={linkAc}
           accessibilityRole="button"
-          accessibilityLabel="Telegram'a katıl">
-          <MaterialCommunityIcons name="send" size={16} color={Palette.beyaz} />
+          accessibilityLabel={dugmeYazi}>
+          <MaterialCommunityIcons name={dugmeIkon} size={16} color={Palette.beyaz} />
           <AppText variant="kucuk" color="beyaz" bold>
-            Telegram'a Katıl
+            {dugmeYazi}
           </AppText>
         </Pressable>
       ) : null}
