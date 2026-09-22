@@ -125,7 +125,14 @@ function PaywallIcerik() {
 
   // Sahiplik TİPE göre: ömür boyu → tam; abonelik → yükseltme teklif edilir.
   const sahipOmur = aktifHaklar.some((h) => h.tip === 'omurboyu');
-  const aboneHak = sahipOmur ? undefined : aktifHaklar.find((h) => h.tip === 'abonelik');
+  // ÖNCE YILLIK ARA (22 Eyl 2026): aylıktan yıllığa geçince iki hak satırı bir süre YAN YANA
+  // durur (aylığın bitişi gelene kadar). Sıradaki ilk satır alınırsa yıllığa geçmiş kişiye hâlâ
+  // "aylık" muamelesi yapılır: boşuna "Yıllığa geç" gösterilir VE ömür boyu yükseltmesi fark
+  // fiyatı yerine TAM fiyattan çıkar — yani adam fazla öder. Yıllık varsa o kazanır.
+  const aboneHak = sahipOmur
+    ? undefined
+    : (aktifHaklar.find((h) => h.tip === 'abonelik' && h.urun === URUN_YILLIK) ??
+       aktifHaklar.find((h) => h.tip === 'abonelik'));
   const sahipAbone = !!aboneHak;
   // AYLIK / YILLIK AYRIMI ŞART (22 Eyl 2026): önce her abonelik "yıllık" sayılıyordu; aylık abone
   // yıllığa özel FARK ürününü görüyor, satın alıyor, sunucu "aktif yıllık gerekli" deyip reddediyordu
