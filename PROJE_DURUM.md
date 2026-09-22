@@ -2432,3 +2432,47 @@ Banka + düello yeniden üretildi (5667 / 6663), tsc 0 hata. Genel deneme dosyal
 sökülürken ardındaki edat cümlede öksüz kalıyor. **Kalıcı çözüm** edatı da süpürmek (önündeki
 kelime geçerli bir isim değilse) — henüz YAPILMADI, başkan onayı bekliyor; riskli olduğu için
 tek soru elle düzeltildi.
+
+---
+
+## 22 Eylül 2026 — Ödeme hattında üç hata kapatıldı (commit fb78402)
+
+Telegram'da iki gündür gelen `⚠️ Ödeme sorunu (reddedildi)` uyarısının kökü kazındı. Uyarının
+kendisi **yanlış alarmdı** (aşağıda 4. madde), ama log açılınca üç gerçek hata çıktı.
+
+**1) Parası alınan müşteriye erişim verilmiyordu.** `paywall.tsx` her aboneye "Yıllık planın aktif,
+farkı ödeyerek ömür boyuna geç" diyordu (`sahipYillik = h.tip === 'abonelik'`), sunucu ise yalnız
+YILLIK aboneyi kabul ediyordu. Dahası kontrol Google doğrulamasından **önce** çalışıyordu: para
+çekiliyor, sonra 412 dönülüyordu. Gerçek vaka Arif Korkmaz (GPA.3334-1584-9088-82639) — 21–22 Eyl'de
+4 kez reddedildi, hakkı elle tanımlandı.
+→ İstemcide aylık/yıllık ayrımı yapıldı (aylık abone artık fark ürününü görmüyor, tam fiyat görüyor).
+→ Sunucuda **şart artık reddetme sebebi değil**: ödeme geçerliyse hak verilir, şart dışıysa
+  `dogrulandi` satırına uyarı notu düşer. *Ödenmiş satın alma bir daha geri çevrilmez.*
+
+**2) İptal edilmiş ama süresi dolmamış abonelik reddediliyordu.**
+`SUBSCRIPTION_STATE_CANCELED` = "otomatik yenileme kapalı", iade DEĞİL — kullanıcı parasını ödemiş,
+süresi devam ediyor. Sunucu bunlara "Abonelik aktif değil" diyordu. Canlı ölçüm: 13 Android
+aboneliğinin **7'si** tam bu durumdaydı. Artık süresi ileride olan CANCELED abonelik kabul ediliyor.
+
+**3) Denetçi abonelik iadelerini görmüyordu.** Kural `IPTAL && tip !== 'abonelik'` idi — yani
+aylık/yıllık fark etmeksizin **hiçbir** abonelik kapanmıyordu; üstelik Android abonelikleri Google'a
+hiç sorulmuyordu (`abonelik: bitis ile düşer` deyip geçiliyordu). Melike E. K.'nin 20 Eyl Apple
+iadesi bu yüzden görülüp geçilmişti.
+→ Android abonelikleri `subscriptionsv2` ile sorgulanıyor; iade tespiti `voidedpurchases` ucundan.
+→ **Tuzak:** Google `voidedpurchases`'ta 30 günden eskisini kabul etmiyor (`400 must be within [30]
+  days of data`). İlk yazımda 60 gün vardı → liste komple boş döner ve iadeler **sessizce görünmez**
+  olurdu. 29 güne çekildi; ayrıca ucun sağlık bilgisi (`google_iade_listesi`) özete yazıldı.
+→ **Değişmez ayrım korundu:** iade = kapat, yenilemeyi iptal = DOKUNMA.
+  Kuru çalıştırma sonucu: `denetlenen: 150, kapatilan: [], google_iade_listesi: "ok"`.
+
+**4) Telegram yanlış alarmı.** İade edilen üyeliği elle kapatınca `satin_alma_log`'a `reddedildi`
+iz kaydı düşüyoruz; bot bunu gerçek ödeme arızası sanıp başkanı uyandırıyordu (22 Eyl 09:36
+`musterek_yillik` uyarısının sebebi buydu). Bot süzgecine elle-kayıt filtresi eklendi
+(`jsps-community-bot`, VPS'e deploy edildi, pm2 online).
+
+**Durum:** Edge fonksiyonlarının ikisi de **canlı** (`dogrula-satinalma`, `uyelik-denetle`), tsc 0 hata.
+**AÇIK İŞ:** `paywall.tsx` düzeltmesi OTA ile kullanıcıya gitmedi. Gidene kadar eski uygulamadaki
+aylık aboneler yükseltme düğmesini görmeye devam ediyor ve sunucu artık onları kabul ettiği için
+ömür boyu erişimi fark fiyatına (479,99) alabilirler → **OTA öncelikli**.
+**ERTELENEN:** aylık→ömür boyu için ayrı Play ürünü (öneri 1.170,99 TL) — Play Console'dan elle
+oluşturulması gerekiyor, API tek seferlik ürün yaratamıyor.
