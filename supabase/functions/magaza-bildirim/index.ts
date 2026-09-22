@@ -441,7 +441,12 @@ async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: str
       detay: `Apple iade sorgusu cevaplandi (${gonderildi}) — ${ozet} · riza=${govde.customerConsented}`,
       platform: 'ios',
     });
-    await baskanaBildir(db, '📋 Apple iade sorgusu', `Cevap gönderildi (${gonderildi}). Kullanım: ${ozet}`);
+    // Yalnız Apple cevabı GERÇEKTEN kabul ettiğinde haber ver. Başarısız denemede bildirim
+    // atmak gürültü üretiyor (22 Eyl testinde başkanın telefonu boşuna öttü) — kayda zaten
+    // yazılıyor, oradan görülür.
+    if (gonderildi === 'ok') {
+      await baskanaBildir(db, '📋 Apple iade sorgusu', `Cevap gönderildi. Kullanım: ${ozet}`);
+    }
     return { ok: true, not: `CONSUMPTION_REQUEST: ${gonderildi} · ${ozet}` };
   }
 
