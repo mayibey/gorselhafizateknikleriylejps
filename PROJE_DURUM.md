@@ -2533,3 +2533,42 @@ sertifika, kök parmak izi tuttu, ES256 imza geçerli. Böylece Apple iadeleri a
 `4040007` döner; (b) Apple adresi kaydederken **boş gövdeli yoklama** gönderiyor — ilk sürüm ona
 500 dönüyordu, düzeltildi (500 artık yalnız mağazadan teyit alınamadığında dönülüyor).
 Kalan: Google Pub/Sub (isteğe bağlı) · Apple rıza cümlesi · OTA.
+
+## 22 Eylül (üçüncü tur) — Denetim turu: ödeyen müşteriyi kesecek hata yakalandı (commit e6a1dbd)
+
+Başkan: *"önce bi test yap, düşünemediğimiz eksik bir şey var mı kontrol et."* Tarama yapıldı,
+altı bulgu çıktı — biri **bu gece ödeyen müşteriyi kesecekti**.
+
+**1) 🔴 Apple `originalTransactionId` yeniden satın almada AYNI kalıyor.** Tek tek işleme bakan
+denetim sonsuza kadar "iade edilmiş" der. Melike E. K.: 10 Eyl aldı → 20 Eyl iade → 22 Eyl 09:35
+kapatıldı → **22 Eyl 10:29 YENİDEN satın aldı** (2027'ye kadar geçerli). Kayıtlı numara hâlâ eskiyi
+gösteriyordu. Kuru denetim kanıtı: **öncesi** `IPTAL 1 — Apple iade 2026-09-20` ·
+**sonrası** `GECERLI 151, kapatilan 0`. Ayrıntı: `memory/apple-islem-numarasi-tuzagi.md`.
+
+**2) 🔴 Apple'ın `status` alanı yanıltıyor.** İlk düzeltmede ona bakmıştım; ölçünce iade almış
+Melike'de bile `status=1/aktif` döndüğü görüldü → o hâliyle gerçek iadeleri KAÇIRIRDI. Doğru ölçüt:
+aboneliğin **en son işleminin** `revocationDate`'i.
+
+**3) ⚠️ Ömür boyu alanın aboneliği durmuyordu.** Ekran "sen iptal et" diyordu, unutan her ay boşuna
+öderdi. Artık ömür boyu doğrulanır doğrulanmaz sunucu Android abonelik yenilemesini kendisi
+durduruyor (iade değil, yalnız yenileme kapatma). Ekran metni platforma göre ayrıldı (iOS'ta API
+yok, orada elle iptal şart). Ölçüm: şu an çifte ödeyen kimse yok.
+
+**4) ⚠️ Apple tüketim verisi ömür boyunda çalışmıyor.** Rıza açılınca hata değişti:
+`4000047 doesn't represent a supported in-app purchase type`. Apple yalnız tüketilebilir ürün ve
+otomatik yenilenen abonelik kabul ediyor → **abonelik iadesine itiraz var, ömür boyu iadesine YOK.**
+*Alt hata:* süzgeç kalıp aramasıyla yazılmıştı, `"Non-Consumable"` içinde `"Consumable"` geçtiği
+için sessizce deliniyordu — test yakaladı, tam eşleşmeye çevrildi.
+
+**5) ⚠️ Tüketim verisinde "hiç iade almadı" sabitti** → gerçek geçmişten hesaplanıyor.
+
+**6) ✅ Kontrol edilip temiz çıkanlar:** iOS aylık+yıllık **aynı abonelik grubunda** (ASC API ile
+doğrulandı) → yeni "yıllığa geç" düğmesi çifte abonelik doğurmaz · jetonsuz 8 hak: hepsi
+promo/inceleme hesabı · süresi bitmişe yükseltme kapısı zaten kapalı · Android değiştirme için hem
+eski hem yeni biçim gönderiliyor.
+
+**RIZA CÜMLESİ EKLENDİ** (başkan onayıyla) — `docs/sartlar.html` + uygulama içi metin. Uygulama içi
+metin ayrıca güncel değildi (yalnız Google Play diyordu, App Store'u anmıyordu), eşitlendi.
+`uygulama_ayar.apple_tuketim_rizasi = 1`.
+
+**KALAN:** OTA (paywall + yasal metin kullanıcıya gitmedi) · Google Pub/Sub (isteğe bağlı).
