@@ -4,597 +4,168 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="index,follow" />
-<title>19 Eylül 2026 JSPS Sınavı — Tutturduğumuz Sorular | Mevzu · JSPS</title>
-<meta name="description" content="İptal edilen 19 Eylül 2026 JSPS sınavının 720 mevzuat sorusu soru soru incelendi. 543'ünün karşılığı soru bankamızda birebir vardı. Rütbe ve branş seç, tutturduğumuz soruların tamamını gör." />
-<meta property="og:title" content="Gerçek Sorular. Gerçek Sonuç. — 19 Eylül 2026 JSPS Analizi" />
-<meta property="og:description" content="720 mevzuat sorusu incelendi, 543'ü bankamızda birebir vardı. Genel oran %75." />
+<title>19 Eylül 2026 JSPS Sınavı — Kaçını Tutturduk? | Mevzu · JSPS</title>
+<meta name="description" content="İptal edilen 19 Eylül 2026 JSPS sınavında kaç soruyu tutturduk? Rütbeni ve branşını seç, tutturduğumuz soruların tamamını PDF olarak indir." />
+<meta property="og:title" content="İptal edilen 2026 JSPS sınavında kaçını tutturduk?" />
+<meta property="og:description" content="Rütbeni ve branşını seç, tutturduğumuz soruların tamamını PDF olarak indir." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#0B1F3A" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0B1F3A; --navy2:#173B6B; --gold:#C9A227; --goldDark:#B88917;
-  --cream:#F7F3EA; --card:#FFFCF5; --line:#E7DCC7; --line2:#EFE6D6;
-  --text:#1B2A4A; --muted:#6E6047; --green:#2E7D32; --greenBg:#EAF3EA;
-  --amber:#8A5A12; --goldBg:#F3E7C1;
-  --w:1200px; --r:14px;
-  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:64px; --s6:96px;
+  --navy:#0B1F3A; --gold:#C9A227; --goldDark:#B88917;
+  --cream:#F7F3EA; --card:#FFFCF5; --line:#E7DCC7; --text:#1B2A4A; --muted:#6E6047;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{margin:0;background:var(--cream);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.14;letter-spacing:-.012em;color:var(--navy);margin:0}
+body{margin:0;background:var(--navy);color:var(--text);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  min-height:100vh;display:flex;flex-direction:column}
+h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.15;margin:0}
 p{margin:0}
-a{color:var(--goldDark)}
-.kap{max-width:var(--w);margin:0 auto;padding:0 20px}
-.gizli{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.sar{width:100%;max-width:620px;margin:0 auto;padding:0 20px}
 
-/* ---- düğmeler ---- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;cursor:pointer;
-  font:700 .95rem/1 Inter,sans-serif;padding:15px 24px;border-radius:11px;border:1px solid transparent;
-  min-height:48px;transition:background .16s,border-color .16s,color .16s}
-.btn-gold{background:var(--gold);color:var(--navy)}
-.btn-gold:hover{background:var(--goldDark);color:#fff}
-.btn-outline{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
-.btn-outline:hover{border-color:var(--gold);color:var(--goldBg)}
-.magaza{display:flex;gap:10px;flex-wrap:wrap}
-.magaza a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;min-height:48px;
-  padding:9px 16px;border-radius:11px;border:1px solid var(--line);background:var(--card);color:var(--text);
-  font:600 .82rem Inter,sans-serif;transition:border-color .16s}
-.magaza a:hover{border-color:var(--gold)}
-.magaza b{display:block;font-size:.95rem;font-weight:700;line-height:1.15}
-.magaza span{display:block;font-size:.68rem;color:var(--muted);letter-spacing:.04em}
-.tepe .magaza a{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.22);color:#fff}
-.tepe .magaza span{color:#9FB2CC}
-
-/* ---- başlık çubuğu ---- */
-.ust{position:sticky;top:0;z-index:60;background:rgba(11,31,58,.97);backdrop-filter:blur(8px);
-  border-bottom:1px solid rgba(255,255,255,.09)}
-.ust .kap{display:flex;align-items:center;gap:var(--s3);height:64px}
-.marka{font-family:"Playfair Display",Georgia,serif;font-size:1.22rem;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.01em}
+header{padding:34px 0 24px;text-align:center}
+.marka{font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;color:#fff;font-weight:700;text-decoration:none}
 .marka i{font-style:normal;color:var(--gold)}
-.ustnav{display:flex;gap:var(--s3);margin-left:auto}
-.ustnav a{color:#C6D2E4;text-decoration:none;font:500 .9rem Inter,sans-serif;padding:6px 0}
-.ustnav a:hover{color:#fff}
-.ust .btn{padding:11px 18px;min-height:42px;font-size:.87rem}
-@media(max-width:900px){.ustnav{display:none}.ust .kap{height:58px}.ust .btn{margin-left:auto}}
+header h1{color:#fff;font-size:clamp(1.55rem,5.8vw,2.3rem);margin:20px 0 10px}
+header h1 em{font-style:normal;color:var(--gold);display:block}
+header p{color:#A9BAD2;font-size:.95rem;max-width:44ch;margin:0 auto}
 
-/* ---- hero ---- */
-.tepe{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding:var(--s5) 0 var(--s4)}
-.tepe::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(900px 420px at 88% 8%,rgba(201,162,39,.16),transparent 62%),
-    linear-gradient(180deg,transparent 60%,rgba(0,0,0,.18));}
-.tepe::after{content:"";position:absolute;right:-6%;top:12%;width:min(46vw,520px);height:min(46vw,520px);
-  border:1px solid rgba(201,162,39,.22);border-radius:50%;pointer-events:none}
-.tepe .kap{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--s4);align-items:center}
-.etiket{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--goldBg);border:1px solid rgba(201,162,39,.4);border-radius:999px;padding:6px 14px}
-.tepe h1{color:#fff;font-size:clamp(2.15rem,6.2vw,4rem);margin:var(--s3) 0 var(--s2)}
-.tepe h1 span{display:block}
-.giris{color:#C6D2E4;max-width:52ch;font-size:clamp(.98rem,2.3vw,1.06rem)}
-.giris b{color:#fff;font-weight:600}
-.oran-kart{display:flex;align-items:center;gap:var(--s3);margin:var(--s3) 0 0;padding:18px 24px;
-  background:rgba(247,243,234,.07);border:1px solid rgba(201,162,39,.38);border-radius:var(--r);max-width:440px}
-.oran-kart .buyuk{font-family:"Playfair Display",Georgia,serif;font-size:clamp(3rem,9vw,4.1rem);line-height:.9;color:var(--gold)}
-.oran-kart .yan b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--goldBg);font-weight:700}
-.oran-kart .yan span{font-size:.9rem;color:#C6D2E4}
-.metrik{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);margin-top:var(--s3);
-  padding-top:var(--s3);border-top:1px solid rgba(255,255,255,.14)}
-.metrik b{display:block;font-family:"Playfair Display",Georgia,serif;font-size:1.55rem;color:#fff;line-height:1}
-.metrik span{display:block;font-size:.78rem;color:#9FB2CC;margin-top:4px;line-height:1.35}
-.sinav-notu{margin-top:var(--s3);font-size:.92rem;color:var(--goldBg)}
-.tepe-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:var(--s3)}
-.tepe-gorsel{position:relative;min-height:280px;display:grid;place-items:center}
-.pusula{width:min(78%,340px);aspect-ratio:1;border-radius:50%;position:relative;
-  background:
-    repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 22px),
-    repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 22px),
-    radial-gradient(circle at 50% 50%,rgba(201,162,39,.14),transparent 68%);
-  border:1px solid rgba(201,162,39,.3)}
-.pusula::before{content:"";position:absolute;inset:16%;border-radius:50%;border:1px dashed rgba(201,162,39,.35)}
-.pusula .ic{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
-.pusula .ic b{display:block;font-family:"Playfair Display",Georgia,serif;font-size:2.6rem;color:#fff;line-height:1}
-.pusula .ic span{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#9FB2CC;margin-top:6px}
-@media(max-width:920px){
-  .tepe{padding:var(--s4) 0 var(--s4)}
-  .tepe .kap{grid-template-columns:1fr;gap:var(--s3)}
-  .tepe-gorsel{display:none}
-  .oran-kart{max-width:none}
-}
+main{flex:1;padding-bottom:40px}
+.kutu{background:var(--cream);border-radius:18px;padding:26px 22px 28px;box-shadow:0 18px 44px rgba(0,0,0,.28)}
+.adim{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.adim span{color:var(--goldDark)}
+.secenekler{display:grid;gap:8px;margin-bottom:24px}
+.r3{grid-template-columns:repeat(3,1fr)}
+.b2{grid-template-columns:repeat(2,1fr)}
+.secenekler button{border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;
+  font:600 .95rem/1.25 Inter,sans-serif;padding:14px 10px;border-radius:12px;min-height:52px;
+  transition:border-color .15s,background .15s,color .15s}
+.secenekler button:hover{border-color:var(--gold)}
+.secenekler button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+@media(max-width:480px){.r3{grid-template-columns:1fr}.b2{grid-template-columns:1fr 1fr}}
 
-/* ---- bölüm ortak ---- */
-section{padding:var(--s6) 0;scroll-margin-top:78px}
-#sorular,#secim,#yontem,#indir{scroll-margin-top:78px}
-@media(max-width:820px){section{padding:var(--s5) 0}}
-.bas{max-width:62ch;margin-bottom:var(--s4)}
-.bas h2{font-size:clamp(1.55rem,4.2vw,2.3rem)}
-.bas p{color:var(--muted);margin-top:10px}
+.sonuc{border-top:1px solid var(--line);padding-top:22px;text-align:center}
+.sonuc h2{font-size:1.12rem;color:var(--navy);margin-bottom:14px}
+.oran{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.oran .buyuk{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.6rem,11vw,3.6rem);
+  line-height:.95;color:var(--goldDark)}
+.oran .yan{text-align:left}
+.oran .yan b{display:block;font-size:1.05rem;color:var(--navy);line-height:1.2}
+.oran .yan span{font-size:.84rem;color:var(--muted)}
+.kirilim{font-size:.86rem;color:var(--muted);margin-bottom:20px}
+.indir{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  background:var(--gold);color:var(--navy);text-decoration:none;font:700 1rem Inter,sans-serif;
+  padding:17px 20px;border-radius:12px;min-height:56px;transition:background .15s}
+.indir:hover{background:var(--goldDark);color:#fff}
+.indir small{font-weight:500;opacity:.75}
+.notu{font-size:.8rem;color:var(--muted);margin-top:12px;line-height:1.5}
 
-/* ---- seçici ---- */
-#secim{padding-top:var(--s5)}
-.secim-kutu{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);
-  display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
-.alan label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.sec{position:relative}
-.sec select{appearance:none;width:100%;min-height:52px;padding:14px 44px 14px 16px;border:1px solid var(--line);
-  border-radius:11px;background:var(--cream);color:var(--text);font:600 1rem Inter,sans-serif;cursor:pointer}
-.sec::after{content:"";position:absolute;right:18px;top:50%;width:9px;height:9px;margin-top:-6px;
-  border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);pointer-events:none}
-@media(max-width:620px){.secim-kutu{grid-template-columns:1fr;gap:var(--s2)}}
-
-/* ---- sonuç ---- */
-.sonuc-bas{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:baseline;justify-content:space-between;margin:var(--s4) 0 var(--s3)}
-.sonuc-bas h3{font-size:clamp(1.3rem,3.6vw,1.8rem)}
-.sonuc-bas p{color:var(--muted);font-size:.9rem}
-.kartlar{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:var(--s2)}
-.kart{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3)}
-.kart .k-ad{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.kart .k-oran{font-family:"Playfair Display",Georgia,serif;font-size:2.1rem;color:var(--navy);line-height:1.05;margin-top:6px}
-.kart .k-alt{font-size:.86rem;color:var(--muted)}
-.kart.ana{background:var(--navy);border-color:var(--navy);color:#fff;display:flex;align-items:center;gap:var(--s3)}
-.kart.ana .k-ad{color:#9FB2CC}
-.kart.ana .k-oran{color:var(--gold);font-size:2.4rem}
-.kart.ana .k-alt{color:#C6D2E4}
-.halka{--p:0;width:86px;height:86px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;
-  background:conic-gradient(var(--gold) calc(var(--p)*1%),rgba(255,255,255,.16) 0)}
-.halka i{width:66px;height:66px;border-radius:50%;background:var(--navy);display:grid;place-items:center;
-  font-style:normal;font-family:"Playfair Display",Georgia,serif;font-size:1.12rem;color:#fff}
-@media (prefers-reduced-motion:no-preference){.halka{transition:--p .45s ease}}
-.yontem-notu{margin-top:var(--s2);font-size:.86rem;color:var(--muted)}
-.sonuc-alt{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;justify-content:space-between}
-.btn-ince{background:var(--card);border-color:var(--line);color:var(--navy);padding:12px 20px;min-height:46px;font-size:.88rem}
-.btn-ince:hover{border-color:var(--gold)}
-@media(max-width:1000px){.kartlar{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.kartlar{grid-template-columns:1fr}.kart.ana{gap:var(--s2)}}
-
-/* ---- sticky mini seçici (mobil) ---- */
-.mini{position:sticky;top:58px;z-index:50;display:none;background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:8px 10px;margin:0 0 var(--s2);box-shadow:0 6px 18px rgba(11,31,58,.07)}
-.mini button{width:100%;min-height:44px;border:0;background:transparent;cursor:pointer;color:var(--text);
-  font:600 .9rem Inter,sans-serif;display:flex;align-items:center;justify-content:center;gap:8px}
-.mini button::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-top:-4px}
-@media(max-width:900px){.mini.acik{display:block}}
-
-/* ---- sorular ---- */
-.arac{display:grid;grid-template-columns:1fr auto;gap:var(--s2);margin-bottom:var(--s2)}
-.ara input{width:100%;min-height:52px;border:1px solid var(--line);background:var(--card);border-radius:11px;
-  padding:14px 16px;font:400 .97rem Inter,sans-serif;color:var(--text)}
-.ara input::placeholder{color:var(--muted)}
-.suzgecler{display:flex;gap:10px;flex-wrap:wrap}
-.suzgec{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:5px}
-.suzgec button{border:0;background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap;
-  font:600 .87rem/1 Inter,sans-serif;padding:11px 16px;border-radius:8px;min-height:42px}
-.suzgec button[aria-pressed="true"]{background:var(--navy);color:#fff}
-.sayac{font-size:.88rem;color:var(--muted);margin:0 0 var(--s2)}
-@media(max-width:700px){.arac{grid-template-columns:1fr}.suzgecler{flex-direction:column}
-.suzgec{justify-content:space-between}.suzgec button{flex:1}}
-
-.soru{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
-.soru-bas{width:100%;border:0;background:transparent;cursor:pointer;text-align:left;padding:18px 20px;
-  display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;min-height:56px}
-.soru-bas:hover{background:#fff}
-.sira{font-family:"Playfair Display",Georgia,serif;font-size:1rem;color:var(--goldDark);line-height:1.5;min-width:2.4ch}
-.soru-ozet{min-width:0}
-.rozetler{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:7px}
-.rz{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
-.rz-mus{background:var(--goldBg);color:var(--amber)}
-.rz-bra{background:#E8EEF7;color:var(--navy2)}
-.rz-bir{background:var(--greenBg);color:#1E5720}
-.rz-ben{background:#FBF1DC;color:var(--amber)}
-.rz-kay{background:var(--cream);color:var(--muted);border:1px solid var(--line);text-transform:none;letter-spacing:0;font-weight:600}
-.soru-metin{font-weight:500;line-height:1.55;color:var(--text)}
-.ok{color:var(--muted);font-size:.8rem;padding-top:4px}
-@media (prefers-reduced-motion:no-preference){.ok{transition:transform .2s}}
-.soru[data-acik="1"] .ok{transform:rotate(90deg)}
-.govde{display:none;padding:0 20px 20px;border-top:1px solid var(--line2)}
-.soru[data-acik="1"] .govde{display:block}
-.ic{display:grid;grid-template-columns:1.35fr .9fr;gap:var(--s3);margin-top:var(--s3)}
-@media(max-width:820px){.ic{grid-template-columns:1fr;gap:var(--s2)}}
-.siklar{list-style:none;margin:0;padding:0;display:grid;gap:7px}
-.siklar li{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:start;
-  padding:12px 14px;border-radius:9px;background:var(--cream);font-size:.95rem}
-.siklar li b{font-weight:700;color:var(--muted);min-width:1.5ch}
-.siklar li.dogru{background:var(--greenBg);color:#1E5720;font-weight:600}
-.siklar li.dogru b{color:var(--green)}
-.tik{color:var(--green);font-weight:700}
-.dayanak{background:var(--cream);border:1px solid var(--line);border-radius:11px;padding:16px 18px;align-self:start}
-.dayanak dt{font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.dayanak dd{margin:0 0 14px;font-size:.92rem;line-height:1.5}
-.dayanak dd:last-child{margin-bottom:0}
-.dayanak .cevap{font-family:"Playfair Display",Georgia,serif;font-size:1.5rem;color:var(--green);line-height:1}
-.dayanak .kanun{font-weight:600;color:var(--navy)}
-.dayanak .acik{color:var(--muted);font-size:.88rem}
-.daha{display:block;width:100%;margin-top:var(--s3);min-height:52px;border:1px solid var(--line);
-  background:var(--card);border-radius:11px;cursor:pointer;font:700 .93rem Inter,sans-serif;color:var(--navy)}
-.daha:hover{border-color:var(--gold)}
-.bos{color:var(--muted);text-align:center;padding:var(--s4) 0}
-
-/* ---- çağrı bölümleri ---- */
-.cagri{background:var(--navy);color:#fff}
-.cagri h2{color:#fff;font-size:clamp(1.5rem,4vw,2.2rem)}
-.cagri p{color:#C6D2E4;max-width:54ch;margin-top:10px}
-.cagri .alt{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:var(--s3)}
-.cagri .magaza a{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.22);color:#fff}
-.cagri .magaza span{color:#9FB2CC}
-
-/* ---- metodoloji ---- */
-.adimlar{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3);counter-reset:a}
-.adim{counter-increment:a;border-top:2px solid var(--gold);padding-top:var(--s2)}
-.adim::before{content:"0" counter(a);font-family:"Playfair Display",Georgia,serif;font-size:1.3rem;color:var(--gold);display:block;margin-bottom:6px}
-.adim p{font-size:.93rem;color:var(--muted)}
-.adim b{color:var(--navy);display:block;margin-bottom:3px;font-weight:600}
-@media(max-width:900px){.adimlar{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.adimlar{grid-template-columns:1fr;gap:var(--s2)}}
-
-/* ---- alt bilgi ---- */
-footer{background:var(--navy);color:#9FB2CC;padding:var(--s4) 0}
-footer .kap{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;justify-content:space-between}
-footer .marka{font-size:1.1rem}
-footer nav{display:flex;gap:var(--s3);flex-wrap:wrap}
-footer a{color:#C6D2E4;text-decoration:none;font-size:.88rem}
-footer a:hover{color:#fff}
-footer .kucuk{font-size:.8rem;width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:var(--s2);line-height:1.6}
+footer{background:rgba(0,0,0,.22);padding:26px 0 30px;text-align:center}
+footer p{color:#A9BAD2;font-size:.9rem;margin-bottom:14px}
+.magaza{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.magaza a{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;
+  text-decoration:none;font:600 .88rem Inter,sans-serif;padding:12px 20px;border-radius:11px;min-height:46px;
+  display:inline-flex;align-items:center}
+.magaza a:hover{border-color:var(--gold)}
+.kucuk{color:#7E93B0;font-size:.74rem;margin-top:18px;line-height:1.6}
+.kucuk a{color:#A9BAD2}
 </style>
 </head>
 <body>
 
-<header class="ust">
-  <div class="kap">
-    <a class="marka" href="#">Mevzu<i>JSPS</i></a>
-    <nav class="ustnav" aria-label="Sayfa içi">
-      <a href="#secim">Analiz</a>
-      <a href="#sorular">Sorular</a>
-      <a href="#yontem">Nasıl Hesaplandı?</a>
-    </nav>
-    <a class="btn btn-gold" href="#indir">Uygulamayı İndir</a>
+<header>
+  <div class="sar">
+    <a class="marka" href="https://mevzujsps.com">Mevzu<i>JSPS</i></a>
+    <h1>İptal edilen 2026 JSPS sınavında<em>kaçını tutturduk?</em></h1>
+    <p>Rütbeni ve branşını seç, o sınavda tutturduğumuz soruların tamamını indir.</p>
   </div>
 </header>
 
-<div class="tepe">
-  <div class="kap">
-    <div>
-      <span class="etiket">19 Eylül 2026 · İptal edilen JSPS sınavı</span>
-      <h1><span>Gerçek Sorular.</span><span>Gerçek Sonuç.</span></h1>
-      <p class="giris">19 Eylül'de yapılan JSPS sınavındaki 720 mevzuat sorusunu kendi soru bankamızla
-        tek tek karşılaştırdık. <b>614 sorunun karşılığı bankamızda vardı.</b></p>
+<main>
+  <div class="sar">
+    <div class="kutu">
+      <p class="adim"><span>1</span> · Rütbeni seç</p>
+      <div class="secenekler r3" id="rutbeler" role="group" aria-label="Rütbe"></div>
 
-      <div class="oran-kart">
-        <div class="buyuk">%85</div>
-        <div class="yan">
-          <b>Karşılık oranı</b>
-          <span>720 sorudan 614'ü bankamızda</span>
+      <p class="adim"><span>2</span> · Branşını seç</p>
+      <div class="secenekler b2" id="branslar" role="group" aria-label="Branş"></div>
+
+      <div class="sonuc">
+        <h2 id="ad"></h2>
+        <div class="oran">
+          <div class="buyuk" id="yuzde"></div>
+          <div class="yan"><b id="sayi"></b><span>soruyu tutturduk</span></div>
         </div>
+        <p class="kirilim" id="kirilim"></p>
+        <a class="indir" id="indir" href="#" download>
+          <span>Tutturduğumuz soruları indir <small>(PDF)</small></span>
+        </a>
+        <p class="notu">Kitapçıktaki soruların tamamı bize aittir; Mevzu JSPS soru bankasından
+          alınmıştır. Sınav sorularının metni yayımlanmamaktadır.</p>
       </div>
-
-      <div class="metrik">
-        <div><b>720</b><span>mevzuat sorusu değerlendirildi</span></div>
-        <div><b>543</b><span>soru <strong style="color:#fff">birebir</strong> eşleşti</span></div>
-        <div><b>71</b><span>soru çok benzer çıktı</span></div>
-      </div>
-
-      <p class="sinav-notu">Yeni JSPS sınavı <strong>10 Ekim Cumartesi, saat 10.00</strong>'da.</p>
-
-      <div class="tepe-cta">
-        <a class="btn btn-gold" href="#indir">Hazırlanmaya Başla</a>
-        <a class="btn btn-outline" href="#secim">Kendi branşımı gör</a>
-      </div>
-    </div>
-
-    <div class="tepe-gorsel" aria-hidden="true">
-      <div class="pusula"><div class="ic"><div><b>614</b><span>soruda karşılık</span></div></div></div>
     </div>
   </div>
-</div>
-
-<main>
-  <section id="secim">
-    <div class="kap">
-      <div class="bas">
-        <h2>Sana Özel Sonuçları Gör</h2>
-        <p>Rütbeni ve branşını seç; kendi sınavındaki tutturma oranını, bölüm bazlı dökümü ve
-           tutturduğumuz soruların tamamını incele.</p>
-      </div>
-
-      <div class="secim-kutu">
-        <div class="alan">
-          <label for="rutbe">Rütbeniz</label>
-          <div class="sec"><select id="rutbe"></select></div>
-        </div>
-        <div class="alan">
-          <label for="brans">Branşınız</label>
-          <div class="sec"><select id="brans"></select></div>
-        </div>
-      </div>
-
-      <div class="sonuc-bas">
-        <h3 id="sinavAdi"></h3>
-        <p>19 Eylül 2026 · İptal edilen sınav analizi</p>
-      </div>
-
-      <div class="kartlar" id="kartlar"></div>
-      <div class="sonuc-alt">
-        <p class="yontem-notu">Bu sonuç, 9 farklı sınav kitapçığındaki soruların soru bankamızla
-          tek tek karşılaştırılmasıyla hazırlanmıştır.</p>
-        <a class="btn btn-ince" id="pdfLink" href="#" download>Bu sınavın kitapçığını indir (PDF)</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="sorular" style="padding-top:0">
-    <div class="kap">
-      <div class="bas">
-        <h2>Tutturduğumuz Sorular</h2>
-        <p>Aşağıdaki soruların tamamı <strong>bizim soru bankamızdan</strong>. Her birinin yanında
-           doğru cevabı, dayandığı mevzuat maddesi ve sınavda hangi konunun ölçüldüğü yazıyor.
-           <strong>Birebir</strong> aynı bilgiyi ölçenler ile <strong>çok benzer</strong> olanlar
-           ayrı rozetle işaretli.</p>
-      </div>
-
-      <div class="mini" id="mini"><button type="button" id="miniBtn"></button></div>
-
-      <div class="arac">
-        <div class="ara">
-          <label class="gizli" for="araKutu">Soru ara</label>
-          <input id="araKutu" type="search" placeholder="Soru ara: anahtar kelime, kanun, madde…" />
-        </div>
-        <div class="suzgecler">
-          <div class="suzgec" id="sgBolum" role="group" aria-label="Bölüm süzgeci">
-            <button type="button" data-bolum="hepsi" aria-pressed="true">Tümü</button>
-            <button type="button" data-bolum="musterek" aria-pressed="false">Müşterek</button>
-            <button type="button" data-bolum="brans" aria-pressed="false">Branş</button>
-          </div>
-          <div class="suzgec" id="sgTip" role="group" aria-label="Eşleşme süzgeci">
-            <button type="button" data-tip="hepsi" aria-pressed="true">Hepsi</button>
-            <button type="button" data-tip="birebir" aria-pressed="false">Birebir</button>
-            <button type="button" data-tip="benzer" aria-pressed="false">Çok benzer</button>
-          </div>
-        </div>
-      </div>
-
-      <p class="sayac" id="sayac" role="status" aria-live="polite"></p>
-      <div id="liste"></div>
-      <button class="daha" id="daha" type="button" hidden></button>
-      <p class="bos" id="bosSonuc" hidden>Aramanla eşleşen soru yok.</p>
-    </div>
-  </section>
-
-  <section class="cagri">
-    <div class="kap">
-      <h2>Sen de doğru kaynakla hazırlan.</h2>
-      <p>Yukarıdaki 614 sorunun hepsi uygulamadaki bankadan çıktı. 115 kanun ve yönetmelik,
-         1.511 görsel hafıza kartı — müşterek de branş da.</p>
-      <div class="alt">
-        <a class="btn btn-gold" href="#indir">Uygulamayı İndir</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="yontem">
-    <div class="kap">
-      <div class="bas">
-        <h2>Bu oran nasıl hesaplandı?</h2>
-        <p>Rakamı size inanmanız için sunmuyoruz — her eşleşmenin sorusunu, cevabını ve mevzuat
-           dayanağını yukarıdaki listeden tek tek inceleyebilirsiniz.</p>
-      </div>
-      <div class="adimlar">
-        <div class="adim"><p><b>Kitapçıklar toplandı</b>9 farklı sınav kitapçığı (subay, astsubay ve uzman erbaş) soru soru yazıya döküldü.</p></div>
-        <div class="adim"><p><b>Kapsam belirlendi</b>İlk 20 soru genel kültür, genel yetenek ve Anayasa. Bu konular uygulamada olmadığı için değerlendirmeye alınmadı; ölçüm 21–100 arası 80 mevzuat sorusu üzerinden yapıldı.</p></div>
-        <div class="adim"><p><b>Karşılaştırma yapıldı</b>Her soru, soru bankamızdaki içerikle karşılaştırıldı. Ölçüt: cevabın aynı bilgiye çıkması — yani bizim soruyu çalışan aday sınavdaki doğru şıkkı işaretleyebiliyor mu?</p></div>
-        <div class="adim"><p><b>Sınıflandırıldı</b>Eşleşen sorular müşterek ve branş bölümlerine ayrılarak her sınav için ayrı ayrı oranlandı.</p></div>
-      </div>
-      <p class="yontem-notu">Analiz verileri: 19 Eylül 2026 JSPS sınavı. Bu sayfada sınav sorularının
-        metni yayımlanmamaktadır; yalnızca hangi konunun ölçüldüğü belirtilir.</p>
-    </div>
-  </section>
-
-  <section class="cagri" id="indir">
-    <div class="kap">
-      <h2>10 Ekim JSPS Sınavına Daha Hazır Gir.</h2>
-      <p>Yeni sınava 10 Ekim Cumartesi saat 10.00'da girilecek. Mevzuatın tamamı uygulamada,
-         görsel hafıza kartlarıyla.</p>
-      <div class="alt">
-        <div class="magaza">
-          <a href="https://apps.apple.com/tr/app/id6787908212" target="_blank" rel="noopener">
-            <span>App Store'dan</span><b>İndirin</b></a>
-          <a href="https://play.google.com/store/apps/details?id=app.mevzujsps.android" target="_blank" rel="noopener">
-            <span>Google Play'den</span><b>Alın</b></a>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
-  <div class="kap">
-    <a class="marka" href="#">Mevzu<i>JSPS</i></a>
-    <nav aria-label="Alt bağlantılar">
-      <a href="https://mevzujsps.com/sartlar.html">Kullanım Şartları</a>
-      <a href="https://mevzujsps.com/index.html">Gizlilik</a>
-      <a href="https://mevzujsps.com/iletisim.html">İletişim</a>
-      <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a>
-    </nav>
-    <p class="kucuk">Disiplinli çalışma, güçlü gelecek. · © 2026 Mevzu · JSPS<br>
-      Bağımsız bir sınav hazırlık uygulamasıdır; Jandarma Genel Komutanlığı, Sahil Güvenlik
-      Komutanlığı veya herhangi bir resmî kurumla bağlantılı, ilişkili ya da onlar tarafından
-      onaylanmış değildir.</p>
+  <div class="sar">
+    <p>Yeni sınav <strong style="color:#fff">10 Ekim Cumartesi, saat 10.00</strong>'da.</p>
+    <div class="magaza">
+      <a href="https://play.google.com/store/apps/details?id=app.mevzujsps.android" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://apps.apple.com/tr/app/id6787908212" target="_blank" rel="noopener">App Store</a>
+    </div>
+    <p class="kucuk">© 2026 Mevzu · JSPS · <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a><br>
+      Bağımsız bir sınav hazırlık uygulamasıdır; hiçbir resmî kurumla bağlantılı değildir.</p>
   </div>
 </footer>
 
 <script>
-const RUTBELER = {
-  subay:{ad:'Subay', branslar:[['subay-bakim','Bakım'],['subay-jandarma','Jandarma'],['subay-havacilik','Havacılık'],
-    ['subay-personel','Personel'],['subay-maliye','Maliye'],['subay-mebs','MEBS']]},
+const RUTBELER={
+  subay:{ad:'Subay', branslar:[['subay-bakim','Bakım'],['subay-jandarma','Jandarma'],
+    ['subay-havacilik','Havacılık'],['subay-personel','Personel'],['subay-maliye','Maliye'],['subay-mebs','MEBS']]},
   astsubay:{ad:'Astsubay', branslar:[['astsubay-mebs','MEBS'],['astsubay-jandarma','Jandarma']]},
   uzmanerbas:{ad:'Uzman Erbaş', branslar:[['uzman-erbas','Jandarma / Sahil Güvenlik']]}
 };
-/* Rakamlar ilgili PDF raporunun kapağından okunmuştur; elle yazılmamıştır. */
-const OLCUM = {
-  'subay-bakim':{ad:'Subay — Bakım', oran:92.5, bir:65, ben:9, yok:6, mus:[40,35,87.5], bra:["Bakım Branş Mevzuatı",40,39,97.5], top:[80,74,92.5]},
-  'subay-jandarma':{ad:'Subay — Jandarma', oran:85.0, bir:62, ben:6, yok:12, mus:[40,35,87.5], bra:["Jandarma Branş Mevzuatı",40,33,82.5], top:[80,68,85.0]},
-  'subay-havacilik':{ad:'Subay — Havacılık', oran:85.0, bir:61, ben:7, yok:12, mus:[50,43,86.0], bra:["Havacılık Branş Mevzuatı",30,25,83.3], top:[80,68,85.0]},
-  'subay-personel':{ad:'Subay — Personel', oran:85.0, bir:61, ben:7, yok:12, mus:[40,35,87.5], bra:["Personel Branş Mevzuatı",40,33,82.5], top:[80,68,85.0]},
-  'subay-maliye':{ad:'Subay — Maliye', oran:85.0, bir:60, ben:8, yok:12, mus:[40,35,87.5], bra:["Maliye Branş Mevzuatı",40,33,82.5], top:[80,68,85.0]},
-  'subay-mebs':{ad:'Subay — MEBS', oran:73.8, bir:56, ben:3, yok:21, mus:[50,43,86.0], bra:["MEBS Branş Mevzuatı",30,16,53.3], top:[80,59,73.8]},
-  'astsubay-mebs':{ad:'Astsubay — MEBS', oran:85.0, bir:62, ben:6, yok:12, mus:[50,49,98.0], bra:["MEBS Branş Mevzuatı",30,19,63.3], top:[80,68,85.0]},
-  'astsubay-jandarma':{ad:'Astsubay — Jandarma', oran:88.8, bir:59, ben:12, yok:9, mus:[40,39,97.5], bra:["Jandarma Branş Mevzuatı",40,32,80.0], top:[80,71,88.8]},
-  'uzman-erbas':{ad:'Uzman Erbaş', oran:87.5, bir:57, ben:13, yok:10, mus:[40,33,82.5], bra:["Jandarma/SG Branş Mevzuatı",40,37,92.5], top:[80,70,87.5]},
+/* Rakamlar sınav raporlarından okunmuştur; karşılık = birebir + çok benzer (afişle aynı ölçü). */
+const OLCUM={
+  'subay-bakim':{ad:'Subay — Bakım', oran:'92,5', kar:74, bir:65, ben:9, yok:6},
+  'subay-jandarma':{ad:'Subay — Jandarma', oran:'85', kar:68, bir:62, ben:6, yok:12},
+  'subay-havacilik':{ad:'Subay — Havacılık', oran:'85', kar:68, bir:61, ben:7, yok:12},
+  'subay-personel':{ad:'Subay — Personel', oran:'85', kar:68, bir:61, ben:7, yok:12},
+  'subay-maliye':{ad:'Subay — Maliye', oran:'85', kar:68, bir:60, ben:8, yok:12},
+  'subay-mebs':{ad:'Subay — MEBS', oran:'73,8', kar:59, bir:56, ben:3, yok:21},
+  'astsubay-mebs':{ad:'Astsubay — MEBS', oran:'85', kar:68, bir:62, ben:6, yok:12},
+  'astsubay-jandarma':{ad:'Astsubay — Jandarma', oran:'88,8', kar:71, bir:59, ben:12, yok:9},
+  'uzman-erbas':{ad:'Uzman Erbaş', oran:'87,5', kar:70, bir:57, ben:13, yok:10}
 };
-
-const HARF='ABCDE';
 const $=(s)=>document.querySelector(s);
-const kac=(t)=>String(t??'').replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const bellek={};
-let rutbe='subay', brans='subay-bakim', sorular=[], bolum='hepsi', tip='hepsi', gosterilen=0;
-const ADIM=12;
+let rutbe='subay', brans='subay-bakim';
 
-function seceneklerCiz(){
-  $('#rutbe').innerHTML = Object.entries(RUTBELER).map(([k,v])=>
-    `<option value="${k}"${k===rutbe?' selected':''}>${v.ad}</option>`).join('');
-  $('#brans').innerHTML = RUTBELER[rutbe].branslar.map(([k,ad])=>
-    `<option value="${k}"${k===brans?' selected':''}>${ad}</option>`).join('');
-  const b=RUTBELER[rutbe].branslar.find(([k])=>k===brans);
-  $('#miniBtn').textContent = `${RUTBELER[rutbe].ad} · ${b?b[1]:''}`;
-}
-
-function istatistikCiz(){
+function ciz(){
+  $('#rutbeler').innerHTML=Object.entries(RUTBELER).map(([k,v])=>
+    `<button type="button" data-rutbe="${k}" aria-pressed="${k===rutbe}">${v.ad}</button>`).join('');
+  $('#branslar').innerHTML=RUTBELER[rutbe].branslar.map(([k,ad])=>
+    `<button type="button" data-brans="${k}" aria-pressed="${k===brans}">${ad}</button>`).join('');
   const o=OLCUM[brans];
-  $('#sinavAdi').textContent=o.ad;
-  $('#pdfLink').href=`pdf/${brans}.pdf`;
-  const k=(ad,soru,dogru,yuzde)=>`<div class="kart">
-      <div class="k-ad">${kac(ad)}</div>
-      <div class="k-oran">%${yuzde}</div>
-      <div class="k-alt">${dogru} / ${soru} soru</div></div>`;
-  const y=(n)=>String(n).replace('.',',');
-  $('#kartlar').innerHTML =
-    `<div class="kart ana">
-       <div class="halka" style="--p:${o.oran}"><i>%${y(o.oran)}</i></div>
-       <div><div class="k-ad">Karşılık oranı</div>
-         <div class="k-oran">${o.top[1]} / ${o.top[0]}</div>
-         <div class="k-alt">${o.bir} birebir · ${o.ben} çok benzer · ${o.yok} soruda karşılık yok</div></div>
-     </div>`
-    + k('Müşterek bölüm', o.mus[0], o.mus[1], y(o.mus[2]))
-    + k(o.bra[0], o.bra[1], o.bra[2], y(o.bra[3]))
-    + k('Toplam', o.top[0], o.top[1], y(o.top[2]));
-}
-
-function suzulmus(){
-  const q=$('#araKutu').value.trim().toLocaleLowerCase('tr');
-  return sorular.filter((s)=>{
-    if(bolum!=='hepsi' && s.bolum!==bolum) return false;
-    if(tip!=='hepsi' && s.tip!==tip) return false;
-    if(!q) return true;
-    return `${s.soru} ${s.konu} ${s.kaynak} ${(s.siklar||[]).join(' ')}`.toLocaleLowerCase('tr').includes(q);
-  });
-}
-
-function kart(s,sira){
-  const siklar=(s.siklar||[]).map((m,i)=>
-    `<li class="${i===s.dogru?'dogru':''}"><b>${HARF[i]}</b><span>${kac(m)}</span>${i===s.dogru?'<span class="tik" aria-label="doğru cevap">✓</span>':'<span></span>'}</li>`).join('');
-  const rozet = (s.bolum==='musterek'
-      ? '<span class="rz rz-mus">Müşterek</span>' : '<span class="rz rz-bra">Branş</span>')
-    + (s.tip==='birebir'
-      ? '<span class="rz rz-bir">Birebir</span>' : '<span class="rz rz-ben">Çok benzer</span>');
-  return `<article class="soru" data-acik="0">
-    <h3 style="margin:0">
-      <button class="soru-bas" type="button" aria-expanded="false" aria-controls="g${sira}">
-        <span class="sira">${sira}</span>
-        <span class="soru-ozet">
-          <span class="rozetler">${rozet}${s.kaynak?`<span class="rz rz-kay">${kac(s.kaynak)}</span>`:''}</span>
-          <span class="soru-metin">${kac(s.soru)}</span>
-        </span>
-        <span class="ok" aria-hidden="true">▸</span>
-      </button>
-    </h3>
-    <div class="govde" id="g${sira}">
-      <div class="ic">
-        <ul class="siklar">${siklar}</ul>
-        <dl class="dayanak">
-          <dt>Doğru cevap</dt><dd class="cevap">${HARF[s.dogru]||'—'}</dd>
-          ${s.kaynak?`<dt>Dayandığı mevzuat</dt><dd class="kanun">${kac(s.kaynak)}</dd>`:''}
-          ${s.aciklama?`<dt>Açıklama</dt><dd class="acik">${kac(s.aciklama)}</dd>`:''}
-          ${s.konu?`<dt>Sınavda ölçülen konu</dt><dd class="acik">${kac(s.konu)}</dd>`:''}
-        </dl>
-      </div>
-    </div>
-  </article>`;
-}
-
-function listeCiz(sifirla){
-  const v=suzulmus();
-  if(sifirla) gosterilen=Math.min(ADIM,v.length);
-  else gosterilen=Math.min(gosterilen,v.length);
-  $('#liste').innerHTML=v.slice(0,gosterilen).map((s,i)=>kart(s,i+1)).join('');
-  $('#bosSonuc').hidden=v.length>0;
-  const kalan=v.length-gosterilen;
-  $('#daha').hidden=kalan<=0;
-  if(kalan>0) $('#daha').textContent=`Daha fazla soru göster (${kalan} soru daha)`;
-  const q=$('#araKutu').value.trim();
-  const bir=sorular.filter((x)=>x.tip==='birebir').length;
-  $('#sayac').textContent = (q||bolum!=='hepsi'||tip!=='hepsi')
-    ? `${v.length} soru listeleniyor · toplam ${sorular.length}`
-    : `${sorular.length} soru — ${bir} birebir, ${sorular.length-bir} çok benzer`;
-}
-
-async function soruYukle(){
-  $('#liste').innerHTML='<p class="bos">Yükleniyor…</p>';
-  if(!bellek[brans]){
-    try{ const r=await fetch(`veri/${brans}.json`); bellek[brans]=r.ok?await r.json():[]; }
-    catch{ bellek[brans]=[]; }
-  }
-  sorular=bellek[brans];
-  listeCiz(true);
-}
-
-function sec(yeniRutbe,yeniBrans){
-  rutbe=yeniRutbe;
-  brans=yeniBrans ?? RUTBELER[rutbe].branslar[0][0];
-  seceneklerCiz(); istatistikCiz(); soruYukle();
+  $('#ad').textContent=o.ad;
+  $('#yuzde').textContent='%'+o.oran;
+  $('#sayi').textContent=`${o.kar} / 80`;
+  $('#kirilim').textContent=`${o.bir} soru birebir, ${o.ben} soru çok benzer · ${o.yok} soruda karşılık yok`;
+  $('#indir').href=`pdf/${brans}.pdf`;
   history.replaceState(null,'','#'+brans);
 }
+function sec(r,b){ rutbe=r; brans=b ?? RUTBELER[r].branslar[0][0]; ciz(); }
+$('#rutbeler').addEventListener('click',(e)=>{const d=e.target.closest('[data-rutbe]'); if(d) sec(d.dataset.rutbe);});
+$('#branslar').addEventListener('click',(e)=>{const d=e.target.closest('[data-brans]'); if(d) sec(rutbe,d.dataset.brans);});
 
-$('#rutbe').addEventListener('change',(e)=>sec(e.target.value));
-$('#brans').addEventListener('change',(e)=>sec(rutbe,e.target.value));
-$('#daha').addEventListener('click',()=>{ gosterilen+=ADIM; listeCiz(false); });
-$('#miniBtn').addEventListener('click',()=>{
-  document.getElementById('secim').scrollIntoView({block:'start'});
-  setTimeout(()=>$('#rutbe').focus(),350);
-});
-let zaman;
-$('#araKutu').addEventListener('input',()=>{ clearTimeout(zaman); zaman=setTimeout(()=>listeCiz(true),150); });
-$('#sgBolum').addEventListener('click',(e)=>{
-  const b=e.target.closest('[data-bolum]'); if(!b) return;
-  bolum=b.dataset.bolum;
-  $('#sgBolum').querySelectorAll('button').forEach((x)=>x.setAttribute('aria-pressed',String(x===b)));
-  listeCiz(true);
-});
-$('#sgTip').addEventListener('click',(e)=>{
-  const b=e.target.closest('[data-tip]'); if(!b) return;
-  tip=b.dataset.tip;
-  $('#sgTip').querySelectorAll('button').forEach((x)=>x.setAttribute('aria-pressed',String(x===b)));
-  listeCiz(true);
-});
-// Akordeon: tıklama + klavye (button zaten Enter/Space alır)
-$('#liste').addEventListener('click',(e)=>{
-  const b=e.target.closest('.soru-bas'); if(!b) return;
-  const k=b.closest('.soru'); const acik=k.dataset.acik==='1';
-  k.dataset.acik=acik?'0':'1';
-  b.setAttribute('aria-expanded',String(!acik));
-});
-// Mobilde soru listesine gelince mini seçici belirsin
-const gozcu=new IntersectionObserver((g)=>{
-  $('#mini').classList.toggle('acik', !g[0].isIntersecting && g[0].boundingClientRect.top < 0);
-},{threshold:0});
-gozcu.observe(document.querySelector('.secim-kutu'));
-
-const hedef=location.hash.replace('#','');
-const acilis=Object.keys(RUTBELER).find((k)=>RUTBELER[k].branslar.some(([a])=>a===hedef));
-sec(acilis ?? 'subay', acilis ? hedef : null);
+const h=location.hash.replace('#','');
+const r=Object.keys(RUTBELER).find((k)=>RUTBELER[k].branslar.some(([a])=>a===h));
+sec(r ?? 'subay', r ? h : null);
 </script>
 </body>
 </html>
