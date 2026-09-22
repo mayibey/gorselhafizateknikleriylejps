@@ -1,14 +1,14 @@
 {
  "uretim": "npm run referans:uret",
  "kaynak": "9 çıkmış JSPS kitapçığı (scripts/veri/cikmis-sinav-sorulari.json)",
- "toplamAyristirilan": 2336,
- "mevzuatSorusu": 1760,
- "konusuBulunamayan": 88,
- "mufredatDisiSoru": 389,
+ "toplamAyristirilan": 3236,
+ "mevzuatSorusu": 2367,
+ "konusuBulunamayan": 314,
+ "mufredatDisiSoru": 468,
  "mufredatDisi": [
   {
    "ad": "Türkiye Cumhuriyeti Anayasası",
-   "adet": 69
+   "adet": 100
   },
   {
    "ad": "5682 sayılı Pasaport Kanunu",
@@ -19,20 +19,20 @@
    "adet": 19
   },
   {
-   "ad": "2941 sayılı Seferberlik ve Savaş Hali Kanunu",
-   "adet": 13
-  },
-  {
-   "ad": "4925 sayılı Karayolu Taşıma Kanunu",
-   "adet": 13
-  },
-  {
-   "ad": "Karayolu Taşıma Yönetmeliği",
-   "adet": 12
+   "ad": "657 sayılı Devlet Memurları Kanunu",
+   "adet": 19
   },
   {
    "ad": "3466 sayılı Uzman Jandarma Kanunu",
-   "adet": 11
+   "adet": 15
+  },
+  {
+   "ad": "926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu",
+   "adet": 14
+  },
+  {
+   "ad": "2941 sayılı Seferberlik ve Savaş Hali Kanunu",
+   "adet": 13
   },
   {
    "ad": "Sınır Yönetimi Alanında Kurumlararası İşbirliği ve Koordinasyon Hakkında Yönetmeliği",
@@ -95,6 +95,10 @@
    "adet": 6
   },
   {
+   "ad": "Türk Silahlı Kuvvetleri Sınıf Okulları/Eğitim Merkezi Komutanlıkları Yönetmeliği",
+   "adet": 6
+  },
+  {
    "ad": "5275 sayılı Ceza ve Güvenlik Tedbirleri- nin İnfazı Hakkında Kanun",
    "adet": 5
   },
@@ -104,6 +108,10 @@
   },
   {
    "ad": "İşlettirilmesi ve Denetimi Hakkında Yönetmeliği",
+   "adet": 5
+  },
+  {
+   "ad": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği",
    "adet": 5
   },
   {
@@ -140,6 +148,14 @@
   },
   {
    "ad": "Geçici Koruma Sağlanan Yabancıların Çalışma İzinlerine Dair Yönetmeliği",
+   "adet": 4
+  },
+  {
+   "ad": "3269 sayılı Uzman Erbaş Kanunu",
+   "adet": 4
+  },
+  {
+   "ad": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği",
    "adet": 4
   },
   {
@@ -207,10 +223,6 @@
    "adet": 2
   },
   {
-   "ad": "657 sayılı Devlet Memurları Kanunu",
-   "adet": 2
-  },
-  {
    "ad": "Suç Gelirlerinin Aklanmasının ve Terörün Finansmanının Önlenmesine Dair Tedbirler Hakkında Yönetmeliği",
    "adet": 2
   },
@@ -235,8 +247,28 @@
    "adet": 2
   },
   {
-   "ad": "4925 sayılı Karayolları Taşıma Kanunu",
-   "adet": 1
+   "ad": "2946 sayılı Kanun",
+   "adet": 2
+  },
+  {
+   "ad": "Cümlede boş bırakılan yere Merkezî Yönetim Harcama Belgeleri Yönetmeliği",
+   "adet": 2
+  },
+  {
+   "ad": "Kamu Konutları Yönetmeliği",
+   "adet": 2
+  },
+  {
+   "ad": "5018 sayılı Kamu Mali Yönetimi ve Kontrol Kanunu",
+   "adet": 2
+  },
+  {
+   "ad": "Yapım İşleri İhaleleri Uygulama Yönetmeliği",
+   "adet": 2
+  },
+  {
+   "ad": "Ön Ödeme Usul ve Esasları Hakkında Yönetmelik",
+   "adet": 2
   },
   {
    "ad": "Sayılı Kıyı Kanununun Uygulanmasına Dair Yönetmelik",
@@ -264,10 +296,6 @@
   },
   {
    "ad": "6735 sayılı Kanun",
-   "adet": 1
-  },
-  {
-   "ad": "3269 sayılı Uzman Erbaş Kanunu",
    "adet": 1
   },
   {
@@ -320,6 +348,42 @@
   },
   {
    "ad": "4982 sayılı Bilgi Edinme Hakkı Kanunu",
+   "adet": 1
+  },
+  {
+   "ad": "Gıda Hijyeni Yönetmeliği",
+   "adet": 1
+  },
+  {
+   "ad": "Ön Ödeme Usul ve Esasları Hakkında Yönetmeliği",
+   "adet": 1
+  },
+  {
+   "ad": "Sağlık Yeteneği Yönetmeliği",
+   "adet": 1
+  },
+  {
+   "ad": "5729 sayılı Kanun",
+   "adet": 1
+  },
+  {
+   "ad": "Merkezi Yönetim Harcama Belgeleri Yönetmeliği",
+   "adet": 1
+  },
+  {
+   "ad": "5434 sayılı Kanun",
+   "adet": 1
+  },
+  {
+   "ad": "926 Sayılı Türk Silahlı Kuvvetleri Personel Kanunu",
+   "adet": 1
+  },
+  {
+   "ad": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+   "adet": 1
+  },
+  {
+   "ad": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
    "adet": 1
   }
  ],
@@ -374,6 +438,10 @@
     ],
     [
      "5271 sayılı Ceza Muhakemesi Kanunu",
+     2
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
      2
     ],
     [
@@ -709,6 +777,10 @@
      2
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     2
+    ],
+    [
      "6698 sayılı Kişisel Verilerin Korunması Kanunu",
      1
     ],
@@ -977,6 +1049,10 @@
      1
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     1
+    ],
+    [
      "2860 sayılı Yardım Toplama Kanunu",
      1
     ],
@@ -1078,6 +1154,10 @@
     ],
     [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
      2
     ],
     [
@@ -1521,6 +1601,10 @@
      2
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     2
+    ],
+    [
      "2935 sayılı Olağanüstü Hal Kanunu",
      1
     ],
@@ -1873,6 +1957,10 @@
      2
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     2
+    ],
+    [
      "6698 sayılı Kişisel Verilerin Korunması Kanunu",
      1
     ],
@@ -2133,6 +2221,10 @@
      1
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     1
+    ],
+    [
      "5395 sayılı Çocuk Koruma Kanunu",
      1
     ],
@@ -2381,6 +2473,10 @@
      1
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     1
+    ],
+    [
      "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
      1
     ],
@@ -2585,6 +2681,10 @@
      1
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     1
+    ],
+    [
      "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
      1
     ],
@@ -2694,6 +2794,10 @@
     ],
     [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
      2
     ],
     [
@@ -2894,6 +2998,10 @@
     ],
     [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
      2
     ],
     [
@@ -3154,6 +3262,10 @@
     ],
     [
      "6831 sayılı Orman Kanunu",
+     1
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
      1
     ],
     [
@@ -3825,6 +3937,10 @@
      2
     ],
     [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     2
+    ],
+    [
      "2935 sayılı Olağanüstü Hal Kanunu",
      1
     ],
@@ -4018,6 +4134,10 @@
     ],
     [
      "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
      2
     ],
     [
@@ -4375,6 +4495,10 @@
     [
      "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun",
      1
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     1
     ]
    ],
    "tipler": [
@@ -4462,6 +4586,10 @@
     ],
     [
      "5271 sayılı Ceza Muhakemesi Kanunu",
+     2
+    ],
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
      2
     ],
     [
@@ -4879,619 +5007,1721 @@
      2
     ]
    ]
+  },
+  {
+   "dosya": "s26-astsubay-jandarma",
+   "ad": "2026 Astsubay Jandarma",
+   "rutbe": "astsubay",
+   "soru": 58,
+   "kokOrt": 207,
+   "sikOrt": 29,
+   "konular": [
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     2
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     2
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     1
+    ],
+    [
+     "Adli Kolluk Yönetmeliği",
+     1
+    ],
+    [
+     "Adli ve Önleme Aramaları Yönetmeliği",
+     1
+    ],
+    [
+     "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği",
+     1
+    ],
+    [
+     "Suç Eşyası Yönetmeliği",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "olumsuz",
+     14
+    ],
+    [
+     "duz",
+     13
+    ],
+    [
+     "makam",
+     13
+    ],
+    [
+     "onculu",
+     10
+    ],
+    [
+     "ceza",
+     7
+    ],
+    [
+     "olumlu",
+     1
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-astsubay-mebs",
+   "ad": "2026 Astsubay MEBS",
+   "rutbe": "astsubay",
+   "soru": 58,
+   "kokOrt": 254,
+   "sikOrt": 20,
+   "konular": [
+    [
+     "5809 sayılı Elektronik Haberleşme Kanunu",
+     7
+    ],
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     5
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     2
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     2
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+     2
+    ],
+    [
+     "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik",
+     2
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     1
+    ],
+    [
+     "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+     1
+    ],
+    [
+     "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "duz",
+     21
+    ],
+    [
+     "makam",
+     15
+    ],
+    [
+     "onculu",
+     6
+    ],
+    [
+     "ceza",
+     6
+    ],
+    [
+     "olumsuz",
+     5
+    ],
+    [
+     "bosluk",
+     3
+    ],
+    [
+     "olumlu",
+     2
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-subay-bakim",
+   "ad": "2026 Subay Bakım",
+   "rutbe": "subay",
+   "soru": 76,
+   "kokOrt": 212,
+   "sikOrt": 31,
+   "konular": [
+    [
+     "4925 sayılı Karayolu Taşıma Kanunu",
+     4
+    ],
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     3
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     3
+    ],
+    [
+     "Kamu İdarelerine Ait Taşınmazların Kaydına İlişkin Yönetmelik",
+     2
+    ],
+    [
+     "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     2
+    ],
+    [
+     "Mal Alımı İhaleleri Uygulama Yönetmeliği",
+     2
+    ],
+    [
+     "4735 Sayılı Kamu İhale Sözleşmeleri Kanunu",
+     2
+    ],
+    [
+     "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
+     2
+    ],
+    [
+     "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik",
+     2
+    ],
+    [
+     "Şehitlik Yönetmeliği",
+     2
+    ],
+    [
+     "4734 Sayılı Kamu İhale Kanunu",
+     2
+    ],
+    [
+     "5668 sayılı Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Besleme Kanunu",
+     2
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+     2
+    ],
+    [
+     "5070 sayılı Elektronik İmza Kanunu",
+     1
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     1
+    ],
+    [
+     "2893 sayılı Türk Bayrağı Kanunu",
+     1
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Yapım İşleri Muayene ve Kabul Yönetmeliği",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "duz",
+     28
+    ],
+    [
+     "makam",
+     21
+    ],
+    [
+     "olumsuz",
+     11
+    ],
+    [
+     "ceza",
+     10
+    ],
+    [
+     "onculu",
+     5
+    ],
+    [
+     "olumlu",
+     1
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-subay-havacilik",
+   "ad": "2026 Subay Havacılık",
+   "rutbe": "subay",
+   "soru": 75,
+   "kokOrt": 270,
+   "sikOrt": 31,
+   "konular": [
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+     11
+    ],
+    [
+     "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu",
+     11
+    ],
+    [
+     "2920 sayılı Türk Sivil Havacılık Kanunu",
+     8
+    ],
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     3
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     3
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     2
+    ],
+    [
+     "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "5070 sayılı Elektronik İmza Kanunu",
+     1
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     1
+    ],
+    [
+     "2893 sayılı Türk Bayrağı Kanunu",
+     1
+    ],
+    [
+     "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "duz",
+     21
+    ],
+    [
+     "makam",
+     19
+    ],
+    [
+     "ceza",
+     10
+    ],
+    [
+     "onculu",
+     8
+    ],
+    [
+     "olumsuz",
+     7
+    ],
+    [
+     "bosluk",
+     7
+    ],
+    [
+     "olumlu",
+     3
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-subay-jandarma",
+   "ad": "2026 Subay Jandarma",
+   "rutbe": "subay",
+   "soru": 68,
+   "kokOrt": 193,
+   "sikOrt": 49,
+   "konular": [
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     3
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     3
+    ],
+    [
+     "2918 sayılı Karayolları Trafik Kanunu",
+     2
+    ],
+    [
+     "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik",
+     2
+    ],
+    [
+     "5070 sayılı Elektronik İmza Kanunu",
+     1
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     1
+    ],
+    [
+     "2893 sayılı Türk Bayrağı Kanunu",
+     1
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
+     1
+    ],
+    [
+     "Adli ve Önleme Aramaları Yönetmeliği",
+     1
+    ],
+    [
+     "Suç Eşyası Yönetmeliği",
+     1
+    ],
+    [
+     "5271 sayılı Ceza Muhakemesi Kanunu",
+     1
+    ],
+    [
+     "1380 sayılı Su Ürünleri Kanunu",
+     1
+    ],
+    [
+     "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
+     1
+    ],
+    [
+     "Adli Kolluk Yönetmeliği",
+     1
+    ],
+    [
+     "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği",
+     1
+    ],
+    [
+     "2872 sayılı Çevre Kanunu",
+     1
+    ],
+    [
+     "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+     1
+    ],
+    [
+     "5395 sayılı Çocuk Koruma Kanunu",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "olumsuz",
+     19
+    ],
+    [
+     "duz",
+     17
+    ],
+    [
+     "makam",
+     15
+    ],
+    [
+     "ceza",
+     13
+    ],
+    [
+     "onculu",
+     3
+    ],
+    [
+     "olumlu",
+     1
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-subay-maliye",
+   "ad": "2026 Subay Maliye",
+   "rutbe": "subay",
+   "soru": 67,
+   "kokOrt": 205,
+   "sikOrt": 48,
+   "konular": [
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     3
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     3
+    ],
+    [
+     "Jandarma Kantin Yönetmeliği",
+     2
+    ],
+    [
+     "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     2
+    ],
+    [
+     "5070 sayılı Elektronik İmza Kanunu",
+     1
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     1
+    ],
+    [
+     "2893 sayılı Türk Bayrağı Kanunu",
+     1
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "257 sayılı Er ve Erbaş Harçlıkları Kanunu",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "olumsuz",
+     18
+    ],
+    [
+     "makam",
+     18
+    ],
+    [
+     "duz",
+     16
+    ],
+    [
+     "ceza",
+     10
+    ],
+    [
+     "onculu",
+     4
+    ],
+    [
+     "olumlu",
+     1
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-subay-mebs",
+   "ad": "2026 Subay MEBS",
+   "rutbe": "subay",
+   "soru": 67,
+   "kokOrt": 253,
+   "sikOrt": 26,
+   "konular": [
+    [
+     "5809 sayılı Elektronik Haberleşme Kanunu",
+     8
+    ],
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     3
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     3
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+     3
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     2
+    ],
+    [
+     "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     2
+    ],
+    [
+     "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik",
+     2
+    ],
+    [
+     "5070 sayılı Elektronik İmza Kanunu",
+     1
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     1
+    ],
+    [
+     "2893 sayılı Türk Bayrağı Kanunu",
+     1
+    ],
+    [
+     "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+     1
+    ],
+    [
+     "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "duz",
+     18
+    ],
+    [
+     "makam",
+     17
+    ],
+    [
+     "ceza",
+     10
+    ],
+    [
+     "olumsuz",
+     7
+    ],
+    [
+     "bosluk",
+     7
+    ],
+    [
+     "onculu",
+     6
+    ],
+    [
+     "olumlu",
+     2
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-subay-personel",
+   "ad": "2026 Subay Personel",
+   "rutbe": "subay",
+   "soru": 77,
+   "kokOrt": 247,
+   "sikOrt": 30,
+   "konular": [
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     3
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     3
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     3
+    ],
+    [
+     "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği",
+     2
+    ],
+    [
+     "Jandarma Kantin Yönetmeliği",
+     2
+    ],
+    [
+     "5070 sayılı Elektronik İmza Kanunu",
+     1
+    ],
+    [
+     "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+     1
+    ],
+    [
+     "2893 sayılı Türk Bayrağı Kanunu",
+     1
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "Subay Sicil Yönetmeliği",
+     1
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+     1
+    ],
+    [
+     "7179 sayılı Askeralma Kanunu",
+     1
+    ],
+    [
+     "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "makam",
+     21
+    ],
+    [
+     "duz",
+     18
+    ],
+    [
+     "olumsuz",
+     11
+    ],
+    [
+     "ceza",
+     10
+    ],
+    [
+     "bosluk",
+     10
+    ],
+    [
+     "onculu",
+     6
+    ],
+    [
+     "olumlu",
+     1
+    ]
+   ]
+  },
+  {
+   "dosya": "s26-uzman-erbas",
+   "ad": "2026 Uzman Erbaş",
+   "rutbe": "uzman erbas",
+   "soru": 61,
+   "kokOrt": 206,
+   "sikOrt": 28,
+   "konular": [
+    [
+     "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+     5
+    ],
+    [
+     "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+     3
+    ],
+    [
+     "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+     2
+    ],
+    [
+     "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
+     2
+    ],
+    [
+     "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
+     1
+    ],
+    [
+     "5070 sayılı Elektronik İmza Kanunu",
+     1
+    ],
+    [
+     "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
+     1
+    ],
+    [
+     "3713 sayılı Terörle Mücadele Kanunu",
+     1
+    ],
+    [
+     "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
+     1
+    ],
+    [
+     "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun",
+     1
+    ],
+    [
+     "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun",
+     1
+    ],
+    [
+     "2918 sayılı Karayolları Trafik Kanunu",
+     1
+    ],
+    [
+     "Suç Eşyası Yönetmeliği",
+     1
+    ],
+    [
+     "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
+     1
+    ],
+    [
+     "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
+     1
+    ],
+    [
+     "1774 sayılı Kimlik Bildirme Kanunu",
+     1
+    ],
+    [
+     "5543 sayılı İskân Kanunu",
+     1
+    ],
+    [
+     "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
+     1
+    ],
+    [
+     "4915 sayılı Kara Avcılığı Kanunu",
+     1
+    ],
+    [
+     "2860 sayılı Yardım Toplama Kanunu",
+     1
+    ],
+    [
+     "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+     1
+    ],
+    [
+     "Kum, Çakıl ve Benzeri Maddelerin Alınması, İşletilmesi ve Kontrolü Yönetmeliği",
+     1
+    ],
+    [
+     "Adli Kolluk Yönetmeliği",
+     1
+    ]
+   ],
+   "tipler": [
+    [
+     "makam",
+     24
+    ],
+    [
+     "duz",
+     13
+    ],
+    [
+     "ceza",
+     11
+    ],
+    [
+     "olumsuz",
+     6
+    ],
+    [
+     "onculu",
+     5
+    ],
+    [
+     "olumlu",
+     2
+    ]
+   ]
   }
  ],
  "konuAgirlik": [
   {
+   "anahtar": "2803",
+   "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
+   "adet": 120,
+   "yuz": 7.6
+  },
+  {
    "anahtar": "5237",
    "ad": "5237 sayılı Türk Ceza Kanunu",
    "adet": 91,
-   "yuz": 7.13
-  },
-  {
-   "anahtar": "2803",
-   "ad": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu",
-   "adet": 89,
-   "yuz": 6.97
+   "yuz": 5.76
   },
   {
    "anahtar": "6284",
    "ad": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun",
-   "adet": 65,
-   "yuz": 5.09
+   "adet": 76,
+   "yuz": 4.81
   },
   {
    "anahtar": "7068",
    "ad": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun",
-   "adet": 54,
-   "yuz": 4.23
+   "adet": 75,
+   "yuz": 4.75
+  },
+  {
+   "anahtar": "jandarmagenelkomutanlığıvesahilgüvenlikkomut",
+   "ad": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+   "adet": 51,
+   "yuz": 3.23
+  },
+  {
+   "anahtar": "6136",
+   "ad": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
+   "adet": 47,
+   "yuz": 2.98
+  },
+  {
+   "anahtar": "5271",
+   "ad": "5271 sayılı Ceza Muhakemesi Kanunu",
+   "adet": 47,
+   "yuz": 2.98
   },
   {
    "anahtar": "5326",
    "ad": "5326 sayılı Kabahatler Kanunu",
    "adet": 46,
-   "yuz": 3.6
+   "yuz": 2.91
   },
   {
-   "anahtar": "6136",
-   "ad": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun",
-   "adet": 46,
-   "yuz": 3.6
-  },
-  {
-   "anahtar": "5271",
-   "ad": "5271 sayılı Ceza Muhakemesi Kanunu",
-   "adet": 46,
-   "yuz": 3.6
+   "anahtar": "resmîyazışmalardauygulanacakusulveesaslarhak",
+   "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
+   "adet": 44,
+   "yuz": 2.79
   },
   {
    "anahtar": "3713",
    "ad": "3713 sayılı Terörle Mücadele Kanunu",
-   "adet": 42,
-   "yuz": 3.29
-  },
-  {
-   "anahtar": "2918",
-   "ad": "2918 sayılı Karayolları Trafik Kanunu",
-   "adet": 35,
-   "yuz": 2.74
+   "adet": 43,
+   "yuz": 2.72
   },
   {
    "anahtar": "jandarmavesahilgüvenlikpersonelininhizmetesa",
    "ad": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği",
-   "adet": 34,
-   "yuz": 2.66
+   "adet": 41,
+   "yuz": 2.6
+  },
+  {
+   "anahtar": "2918",
+   "ad": "2918 sayılı Karayolları Trafik Kanunu",
+   "adet": 38,
+   "yuz": 2.41
+  },
+  {
+   "anahtar": "sözleşmelisubayveastsubayyönetmeliği",
+   "ad": "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+   "adet": 32,
+   "yuz": 2.03
   },
   {
    "anahtar": "5442",
    "ad": "5442 sayılı İl İdaresi Kanunu",
    "adet": 30,
-   "yuz": 2.35
+   "yuz": 1.9
   },
   {
-   "anahtar": "jandarmagenelkomutanlığıvesahilgüvenlikkomut",
-   "ad": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği",
+   "anahtar": "4925",
+   "ad": "4925 sayılı Karayolu Taşıma Kanunu",
    "adet": 30,
-   "yuz": 2.35
+   "yuz": 1.9
+  },
+  {
+   "anahtar": "2893",
+   "ad": "2893 sayılı Türk Bayrağı Kanunu",
+   "adet": 27,
+   "yuz": 1.71
   },
   {
    "anahtar": "5607",
    "ad": "5607 sayılı Kaçakçılıkla Mücadele Kanunu",
    "adet": 27,
-   "yuz": 2.11
+   "yuz": 1.71
   },
   {
    "anahtar": "2559",
    "ad": "2559 sayılı Polis Vazife ve Salahiyet Kanunu",
    "adet": 26,
-   "yuz": 2.04
+   "yuz": 1.65
+  },
+  {
+   "anahtar": "5070",
+   "ad": "5070 sayılı Elektronik İmza Kanunu",
+   "adet": 25,
+   "yuz": 1.58
   },
   {
    "anahtar": "1774",
    "ad": "1774 sayılı Kimlik Bildirme Kanunu",
-   "adet": 24,
-   "yuz": 1.88
+   "adet": 25,
+   "yuz": 1.58
+  },
+  {
+   "anahtar": "2911",
+   "ad": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+   "adet": 23,
+   "yuz": 1.46
+  },
+  {
+   "anahtar": "5395",
+   "ad": "5395 sayılı Çocuk Koruma Kanunu",
+   "adet": 23,
+   "yuz": 1.46
   },
   {
    "anahtar": "2863",
    "ad": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu",
    "adet": 23,
-   "yuz": 1.8
+   "yuz": 1.46
   },
   {
-   "anahtar": "sözleşmelisubayveastsubayyönetmeliği",
-   "ad": "Sözleşmeli Subay ve Astsubay Yönetmeliği",
+   "anahtar": "2521",
+   "ad": "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
    "adet": 22,
-   "yuz": 1.72
+   "yuz": 1.39
   },
   {
-   "anahtar": "2911",
-   "ad": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu",
+   "anahtar": "2872",
+   "ad": "2872 sayılı Çevre Kanunu",
    "adet": 22,
-   "yuz": 1.72
-  },
-  {
-   "anahtar": "5395",
-   "ad": "5395 sayılı Çocuk Koruma Kanunu",
-   "adet": 22,
-   "yuz": 1.72
+   "yuz": 1.39
   },
   {
    "anahtar": "5816",
    "ad": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun",
    "adet": 21,
-   "yuz": 1.64
-  },
-  {
-   "anahtar": "2893",
-   "ad": "2893 sayılı Türk Bayrağı Kanunu",
-   "adet": 21,
-   "yuz": 1.64
-  },
-  {
-   "anahtar": "2872",
-   "ad": "2872 sayılı Çevre Kanunu",
-   "adet": 21,
-   "yuz": 1.64
-  },
-  {
-   "anahtar": "7201",
-   "ad": "7201 sayılı Tebligat Kanunu",
-   "adet": 20,
-   "yuz": 1.57
-  },
-  {
-   "anahtar": "2935",
-   "ad": "2935 sayılı Olağanüstü Hal Kanunu",
-   "adet": 20,
-   "yuz": 1.57
-  },
-  {
-   "anahtar": "resmîyazışmalardauygulanacakusulveesaslarhak",
-   "ad": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik",
-   "adet": 19,
-   "yuz": 1.49
-  },
-  {
-   "anahtar": "5070",
-   "ad": "5070 sayılı Elektronik İmza Kanunu",
-   "adet": 18,
-   "yuz": 1.41
-  },
-  {
-   "anahtar": "2521",
-   "ad": "2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
-   "adet": 18,
-   "yuz": 1.41
-  },
-  {
-   "anahtar": "5199",
-   "ad": "5199 sayılı Hayvanları Koruma Kanunu",
-   "adet": 18,
-   "yuz": 1.41
-  },
-  {
-   "anahtar": "adlikollukyönetmeliği",
-   "ad": "Adli Kolluk Yönetmeliği",
-   "adet": 18,
-   "yuz": 1.41
-  },
-  {
-   "anahtar": "bilgiedinmehakkıkanunununuygulanmasınailişki",
-   "ad": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
-   "adet": 17,
    "yuz": 1.33
   },
   {
    "anahtar": "kişiselverilerinsilinmesiyokedilmesiveyaanon",
    "ad": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
-   "adet": 17,
+   "adet": 21,
    "yuz": 1.33
   },
   {
-   "anahtar": "yakalamagözaltınaalmaveifadealmayönetmeliği",
-   "ad": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği",
-   "adet": 17,
+   "anahtar": "adlikollukyönetmeliği",
+   "ad": "Adli Kolluk Yönetmeliği",
+   "adet": 21,
    "yuz": 1.33
   },
   {
-   "anahtar": "adliveönlemearamalarıyönetmeliği",
-   "ad": "Adli ve Önleme Aramaları Yönetmeliği",
-   "adet": 16,
-   "yuz": 1.25
+   "anahtar": "7201",
+   "ad": "7201 sayılı Tebligat Kanunu",
+   "adet": 20,
+   "yuz": 1.27
+  },
+  {
+   "anahtar": "2935",
+   "ad": "2935 sayılı Olağanüstü Hal Kanunu",
+   "adet": 20,
+   "yuz": 1.27
+  },
+  {
+   "anahtar": "bilgiedinmehakkıkanunununuygulanmasınailişki",
+   "ad": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik",
+   "adet": 20,
+   "yuz": 1.27
   },
   {
    "anahtar": "suçeşyasıyönetmeliği",
    "ad": "Suç Eşyası Yönetmeliği",
-   "adet": 16,
-   "yuz": 1.25
+   "adet": 19,
+   "yuz": 1.2
+  },
+  {
+   "anahtar": "yakalamagözaltınaalmaveifadealmayönetmeliği",
+   "ad": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği",
+   "adet": 19,
+   "yuz": 1.2
+  },
+  {
+   "anahtar": "5199",
+   "ad": "5199 sayılı Hayvanları Koruma Kanunu",
+   "adet": 18,
+   "yuz": 1.14
+  },
+  {
+   "anahtar": "adliveönlemearamalarıyönetmeliği",
+   "ad": "Adli ve Önleme Aramaları Yönetmeliği",
+   "adet": 18,
+   "yuz": 1.14
   },
   {
    "anahtar": "6698",
    "ad": "6698 sayılı Kişisel Verilerin Korunması Kanunu",
    "adet": 15,
-   "yuz": 1.17
+   "yuz": 0.95
   },
   {
    "anahtar": "5188",
    "ad": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun",
-   "adet": 14,
-   "yuz": 1.1
+   "adet": 15,
+   "yuz": 0.95
+  },
+  {
+   "anahtar": "sesvegazfişeğiatabilensilahlarhakkındayönetm",
+   "ad": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
+   "adet": 15,
+   "yuz": 0.95
+  },
+  {
+   "anahtar": "5809",
+   "ad": "5809 sayılı Elektronik Haberleşme Kanunu",
+   "adet": 15,
+   "yuz": 0.95
   },
   {
    "anahtar": "3091",
    "ad": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun",
+   "adet": 14,
+   "yuz": 0.89
+  },
+  {
+   "anahtar": "6222",
+   "ad": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
    "adet": 13,
-   "yuz": 1.02
+   "yuz": 0.82
+  },
+  {
+   "anahtar": "çocukkorumakanununagöreverilenkoruyucuvedest",
+   "ad": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik",
+   "adet": 13,
+   "yuz": 0.82
   },
   {
    "anahtar": "6458",
    "ad": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu",
    "adet": 13,
-   "yuz": 1.02
-  },
-  {
-   "anahtar": "6222",
-   "ad": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun",
-   "adet": 12,
-   "yuz": 0.94
-  },
-  {
-   "anahtar": "çocukkorumakanununagöreverilenkoruyucuvedest",
-   "ad": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik",
-   "adet": 12,
-   "yuz": 0.94
-  },
-  {
-   "anahtar": "sesvegazfişeğiatabilensilahlarhakkındayönetm",
-   "ad": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik",
-   "adet": 11,
-   "yuz": 0.86
+   "yuz": 0.82
   },
   {
    "anahtar": "özelgüvenlikhizmetlerinedairkanununuygulanma",
    "ad": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik",
-   "adet": 11,
-   "yuz": 0.86
+   "adet": 12,
+   "yuz": 0.76
   },
   {
    "anahtar": "2860",
    "ad": "2860 sayılı Yardım Toplama Kanunu",
-   "adet": 11,
-   "yuz": 0.86
+   "adet": 12,
+   "yuz": 0.76
   },
   {
    "anahtar": "4733",
    "ad": "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun",
+   "adet": 12,
+   "yuz": 0.76
+  },
+  {
+   "anahtar": "2629",
+   "ad": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu",
    "adet": 11,
-   "yuz": 0.86
+   "yuz": 0.7
   },
   {
    "anahtar": "4678",
    "ad": "4678 sayılı Türk Silahlı Kuvvetlerinde İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun",
    "adet": 10,
-   "yuz": 0.78
+   "yuz": 0.63
   },
   {
    "anahtar": "6415",
    "ad": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun",
    "adet": 10,
-   "yuz": 0.78
+   "yuz": 0.63
   },
   {
    "anahtar": "4915",
    "ad": "4915 sayılı Kara Avcılığı Kanunu",
-   "adet": 9,
-   "yuz": 0.7
+   "adet": 10,
+   "yuz": 0.63
   },
   {
    "anahtar": "2313",
    "ad": "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun",
-   "adet": 9,
-   "yuz": 0.7
-  },
-  {
-   "anahtar": "taşınırkültürvetabiatvarlıklarınıbulanlaraha",
-   "ad": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
-   "adet": 9,
-   "yuz": 0.7
-  },
-  {
-   "anahtar": "4207",
-   "ad": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
-   "adet": 8,
-   "yuz": 0.63
-  },
-  {
-   "anahtar": "1380",
-   "ad": "1380 sayılı Su Ürünleri Kanunu",
-   "adet": 8,
+   "adet": 10,
    "yuz": 0.63
   },
   {
    "anahtar": "çocukkorumakanunununuygulanmasınailişkinusul",
    "ad": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik",
-   "adet": 8,
+   "adet": 10,
    "yuz": 0.63
+  },
+  {
+   "anahtar": "cezamuhakemesindebedenmuayenesigenetikincele",
+   "ad": "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik",
+   "adet": 10,
+   "yuz": 0.63
+  },
+  {
+   "anahtar": "4207",
+   "ad": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
+   "adet": 9,
+   "yuz": 0.57
+  },
+  {
+   "anahtar": "1380",
+   "ad": "1380 sayılı Su Ürünleri Kanunu",
+   "adet": 9,
+   "yuz": 0.57
+  },
+  {
+   "anahtar": "taşınırkültürvetabiatvarlıklarınıbulanlaraha",
+   "ad": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik",
+   "adet": 9,
+   "yuz": 0.57
+  },
+  {
+   "anahtar": "2920",
+   "ad": "2920 sayılı Türk Sivil Havacılık Kanunu",
+   "adet": 8,
+   "yuz": 0.51
   },
   {
    "anahtar": "6831",
    "ad": "6831 sayılı Orman Kanunu",
    "adet": 7,
-   "yuz": 0.55
-  },
-  {
-   "anahtar": "cezamuhakemesindebedenmuayenesigenetikincele",
-   "ad": "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik",
-   "adet": 7,
-   "yuz": 0.55
+   "yuz": 0.44
   },
   {
    "anahtar": "3298",
    "ad": "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun",
+   "adet": 6,
+   "yuz": 0.38
+  },
+  {
+   "anahtar": "türkvatandaşlığıkanunununuygulanmasınailişki",
+   "ad": "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik",
    "adet": 5,
-   "yuz": 0.39
+   "yuz": 0.32
+  },
+  {
+   "anahtar": "jandarmagenelkomutanlığıizinyönetmeliği",
+   "ad": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
+   "adet": 5,
+   "yuz": 0.32
   },
   {
    "anahtar": "tütünmamullerivealkollüiçkilerinsatışınavesu",
    "ad": "Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik",
    "adet": 4,
-   "yuz": 0.31
+   "yuz": 0.25
   },
   {
-   "anahtar": "türkvatandaşlığıkanunununuygulanmasınailişki",
-   "ad": "Türk Vatandaşlığı Kanununun Uygulanmasına İlişkin Yönetmelik",
+   "anahtar": "işyeriaçmaveçalışmaruhsatlarınailişkinyönetm",
+   "ad": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik",
    "adet": 4,
-   "yuz": 0.31
+   "yuz": 0.25
+  },
+  {
+   "anahtar": "kamukurumvekuruluşlarıilegerçekvetüzelkişile",
+   "ad": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik",
+   "adet": 4,
+   "yuz": 0.25
+  },
+  {
+   "anahtar": "kamuzararlarınıntahsilineilişkinusulveesasla",
+   "ad": "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+   "adet": 4,
+   "yuz": 0.25
+  },
+  {
+   "anahtar": "jandarmakantinyönetmeliği",
+   "ad": "Jandarma Kantin Yönetmeliği",
+   "adet": 4,
+   "yuz": 0.25
   },
   {
    "anahtar": "4342",
    "ad": "4342 sayılı Mera Kanunu",
    "adet": 3,
-   "yuz": 0.23
+   "yuz": 0.19
   },
   {
-   "anahtar": "jandarmagenelkomutanlığıizinyönetmeliği",
-   "ad": "Jandarma Genel Komutanlığı İzin Yönetmeliği",
-   "adet": 1,
-   "yuz": 0.08
+   "anahtar": "telsizişlemlerineilişkinusulveesaslarhakkınd",
+   "ad": "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik",
+   "adet": 2,
+   "yuz": 0.13
   },
   {
-   "anahtar": "işyeriaçmaveçalışmaruhsatlarınailişkinyönetm",
-   "ad": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik",
+   "anahtar": "kamuidarelerineaittaşınmazlarınkaydınailişki",
+   "ad": "Kamu İdarelerine Ait Taşınmazların Kaydına İlişkin Yönetmelik",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "malalımıihaleleriuygulamayönetmeliği",
+   "ad": "Mal Alımı İhaleleri Uygulama Yönetmeliği",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "4735",
+   "ad": "4735 Sayılı Kamu İhale Sözleşmeleri Kanunu",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "malalımlarıdenetimmuayenevekabulişlemlerined",
+   "ad": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "şehitlikyönetmeliği",
+   "ad": "Şehitlik Yönetmeliği",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "4734",
+   "ad": "4734 Sayılı Kamu İhale Kanunu",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "5668",
+   "ad": "5668 sayılı Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Besleme Kanunu",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "jandarmagenelkomutanlığısubayastsubayveuzman",
+   "ad": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği",
+   "adet": 2,
+   "yuz": 0.13
+  },
+  {
+   "anahtar": "ateşlisilahlarvebıçaklarilediğeraletlerhakkı",
+   "ad": "Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Yönetmelik",
    "adet": 1,
-   "yuz": 0.08
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "hazinetaşınmazlarınınidaresihakkındayönetmel",
+   "ad": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik",
+   "adet": 1,
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "yapımişlerimuayenevekabulyönetmeliği",
+   "ad": "Yapım İşleri Muayene ve Kabul Yönetmeliği",
+   "adet": 1,
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "257",
+   "ad": "257 sayılı Er ve Erbaş Harçlıkları Kanunu",
+   "adet": 1,
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "subaysicilyönetmeliği",
+   "ad": "Subay Sicil Yönetmeliği",
+   "adet": 1,
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "7179",
+   "ad": "7179 sayılı Askeralma Kanunu",
+   "adet": 1,
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "orduevleriaskerîgazinolarkışlagazinolarıveva",
+   "ad": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği",
+   "adet": 1,
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "5543",
+   "ad": "5543 sayılı İskân Kanunu",
+   "adet": 1,
+   "yuz": 0.06
+  },
+  {
+   "anahtar": "kumçakılvebenzerimaddelerinalınmasıişletilme",
+   "ad": "Kum, Çakıl ve Benzeri Maddelerin Alınması, İşletilmesi ve Kontrolü Yönetmeliği",
+   "adet": 1,
+   "yuz": 0.06
   }
  ],
  "tipAgirlik": [
   {
    "ad": "olumsuz",
-   "adet": 504,
-   "yuz": 39.47
+   "adet": 545,
+   "yuz": 34.52
   },
   {
    "ad": "makam",
-   "adet": 244,
-   "yuz": 19.11
+   "adet": 333,
+   "yuz": 21.09
   },
   {
    "ad": "duz",
-   "adet": 182,
-   "yuz": 14.25
+   "adet": 270,
+   "yuz": 17.1
   },
   {
    "ad": "ceza",
-   "adet": 161,
-   "yuz": 12.61
+   "adet": 190,
+   "yuz": 12.03
   },
   {
    "ad": "bosluk",
-   "adet": 67,
-   "yuz": 5.25
-  },
-  {
-   "ad": "olumlu",
-   "adet": 47,
-   "yuz": 3.68
+   "adet": 80,
+   "yuz": 5.07
   },
   {
    "ad": "onculu",
-   "adet": 44,
-   "yuz": 3.45
+   "adet": 75,
+   "yuz": 4.75
+  },
+  {
+   "ad": "olumlu",
+   "adet": 58,
+   "yuz": 3.67
   },
   {
    "ad": "tanim",
    "adet": 28,
-   "yuz": 2.19
+   "yuz": 1.77
   }
  ],
  "boyutlar": {
   "yon": [
    {
     "ad": "olumlu",
-    "adet": 762,
-    "yuz": 59.67
+    "adet": 1018,
+    "yuz": 64.47
    },
    {
     "ad": "olumsuz",
-    "adet": 515,
-    "yuz": 40.33
+    "adet": 561,
+    "yuz": 35.53
    }
   ],
   "bicim": [
    {
     "ad": "duz",
-    "adet": 1029,
-    "yuz": 80.58
+    "adet": 1283,
+    "yuz": 81.25
    },
    {
     "ad": "alinti",
-    "adet": 133,
-    "yuz": 10.42
+    "adet": 137,
+    "yuz": 8.68
    },
    {
     "ad": "bosluk",
-    "adet": 68,
-    "yuz": 5.32
+    "adet": 81,
+    "yuz": 5.13
    },
    {
     "ad": "onculu",
-    "adet": 46,
-    "yuz": 3.6
+    "adet": 77,
+    "yuz": 4.88
    },
    {
     "ad": "vaka",
     "adet": 1,
-    "yuz": 0.08
+    "yuz": 0.06
    }
   ],
   "bilgi": [
    {
     "ad": "genel",
-    "adet": 474,
-    "yuz": 37.12
+    "adet": 570,
+    "yuz": 36.1
    },
    {
     "ad": "ceza",
-    "adet": 295,
-    "yuz": 23.1
+    "adet": 328,
+    "yuz": 20.77
    },
    {
     "ad": "makam",
-    "adet": 218,
-    "yuz": 17.07
+    "adet": 302,
+    "yuz": 19.13
    },
    {
     "ad": "sure",
-    "adet": 137,
-    "yuz": 10.73
+    "adet": 182,
+    "yuz": 11.53
    },
    {
     "ad": "usul",
-    "adet": 75,
-    "yuz": 5.87
+    "adet": 104,
+    "yuz": 6.59
    },
    {
     "ad": "kapsam",
-    "adet": 49,
-    "yuz": 3.84
+    "adet": 60,
+    "yuz": 3.8
    },
    {
     "ad": "kavram",
-    "adet": 29,
-    "yuz": 2.27
+    "adet": 33,
+    "yuz": 2.09
    }
   ],
   "sik": [
    {
     "ad": "orta",
-    "adet": 449,
-    "yuz": 35.16
-   },
-   {
-    "ad": "uzun",
-    "adet": 427,
-    "yuz": 33.44
+    "adet": 568,
+    "yuz": 35.97
    },
    {
     "ad": "kisa",
-    "adet": 399,
-    "yuz": 31.25
+    "adet": 531,
+    "yuz": 33.63
+   },
+   {
+    "ad": "uzun",
+    "adet": 452,
+    "yuz": 28.63
    },
    {
     "ad": "kombinasyon",
-    "adet": 2,
-    "yuz": 0.16
+    "adet": 28,
+    "yuz": 1.77
    }
   ],
   "boy": [
    {
     "ad": "orta",
-    "adet": 595,
-    "yuz": 46.59
+    "adet": 736,
+    "yuz": 46.61
    },
    {
     "ad": "uzun",
-    "adet": 346,
-    "yuz": 27.09
+    "adet": 430,
+    "yuz": 27.23
    },
    {
     "ad": "kisa",
-    "adet": 336,
-    "yuz": 26.31
+    "adet": 413,
+    "yuz": 26.16
    }
   ]
  },
  "bilesikAgirlik": [
   {
    "ad": "olumsuz|genel",
-   "adet": 295,
-   "yuz": 23.1
-  },
-  {
-   "ad": "olumlu|ceza",
-   "adet": 188,
-   "yuz": 14.72
-  },
-  {
-   "ad": "olumlu|genel",
-   "adet": 179,
-   "yuz": 14.02
+   "adet": 328,
+   "yuz": 20.77
   },
   {
    "ad": "olumlu|makam",
-   "adet": 170,
-   "yuz": 13.31
+   "adet": 249,
+   "yuz": 15.77
+  },
+  {
+   "ad": "olumlu|genel",
+   "adet": 242,
+   "yuz": 15.33
+  },
+  {
+   "ad": "olumlu|ceza",
+   "adet": 219,
+   "yuz": 13.87
   },
   {
    "ad": "olumlu|sure",
-   "adet": 124,
-   "yuz": 9.71
+   "adet": 168,
+   "yuz": 10.64
   },
   {
    "ad": "olumsuz|ceza",
-   "adet": 107,
-   "yuz": 8.38
-  },
-  {
-   "ad": "olumsuz|makam",
-   "adet": 48,
-   "yuz": 3.76
+   "adet": 109,
+   "yuz": 6.9
   },
   {
    "ad": "olumlu|usul",
-   "adet": 45,
-   "yuz": 3.52
+   "adet": 71,
+   "yuz": 4.5
+  },
+  {
+   "ad": "olumsuz|makam",
+   "adet": 53,
+   "yuz": 3.36
   },
   {
    "ad": "olumlu|kapsam",
-   "adet": 30,
-   "yuz": 2.35
+   "adet": 40,
+   "yuz": 2.53
   },
   {
    "ad": "olumsuz|usul",
-   "adet": 30,
-   "yuz": 2.35
+   "adet": 33,
+   "yuz": 2.09
   },
   {
    "ad": "olumlu|kavram",
-   "adet": 26,
-   "yuz": 2.04
+   "adet": 29,
+   "yuz": 1.84
   },
   {
    "ad": "olumsuz|kapsam",
-   "adet": 19,
-   "yuz": 1.49
+   "adet": 20,
+   "yuz": 1.27
   },
   {
    "ad": "olumsuz|sure",
-   "adet": 13,
-   "yuz": 1.02
+   "adet": 14,
+   "yuz": 0.89
   },
   {
    "ad": "olumsuz|kavram",
-   "adet": 3,
-   "yuz": 0.23
+   "adet": 4,
+   "yuz": 0.25
   }
  ],
  "rutbe": [
   {
    "rutbe": "astsubay",
-   "soru": 703,
+   "soru": 819,
    "kokOrt": 231,
-   "sikOrt": 60
+   "sikOrt": 55
   },
   {
    "rutbe": "uzman erbas",
-   "soru": 667,
-   "kokOrt": 227,
-   "sikOrt": 51
+   "soru": 728,
+   "kokOrt": 226,
+   "sikOrt": 49
   },
   {
    "rutbe": "subay",
-   "soru": 222,
-   "kokOrt": 232,
-   "sikOrt": 76
+   "soru": 652,
+   "kokOrt": 231,
+   "sikOrt": 49
   },
   {
    "rutbe": "uzman jandarma",

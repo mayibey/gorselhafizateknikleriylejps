@@ -2,7 +2,8 @@
  * ÇIKMIŞ SINAV REFERANSI ÜRETİCİ — `npm run referans:uret`
  *
  * Girdi : scripts/veri/cikmis-sinav-sorulari.json
- *         (9 çıkmış JSPS kitapçığından ayrıştırılmış 2.336 soru; sütunlu PDF metni
+ *         (çıkmış JSPS kitapçıklarından ayrıştırılmış sorular; 22 Eyl 2026'da iptal edilen
+ *          19 Eylül 2026 sınavının 9 kitapçığı da eklendi -> 3.236 soru; sütunlu PDF metni
  *          sütunlara bölünüp "N." kökü + "A)..E)" şıkları toplanarak çıkarıldı.)
  * Çıktı : scripts/cikmis-referans.json
  *         Denetçinin ve deneme üreticinin ÖLÇÜ olarak kullandığı özet:
@@ -35,6 +36,17 @@ const DOSYA_AD = {
   k6: 'Astsubay 2019',
   k7: 'Astsubay 2020',
   k8: 'Mobil kitapçık',
+  // 22 Eyl 2026: iptal edilen 19 Eylül 2026 sınavının 9 kitapçığı eklendi. EN TAZE ölçü —
+  // 2024'ten 2026'ya %16 soru tekrarı ölçüldüğü için yeni sınavın en iyi habercisi bunlar.
+  's26-subay-bakim': '2026 Subay Bakım',
+  's26-subay-jandarma': '2026 Subay Jandarma',
+  's26-subay-havacilik': '2026 Subay Havacılık',
+  's26-subay-personel': '2026 Subay Personel',
+  's26-subay-maliye': '2026 Subay Maliye',
+  's26-subay-mebs': '2026 Subay MEBS',
+  's26-astsubay-mebs': '2026 Astsubay MEBS',
+  's26-astsubay-jandarma': '2026 Astsubay Jandarma',
+  's26-uzman-erbas': '2026 Uzman Erbaş',
 };
 const kitapcikAdi = (d) => DOSYA_AD[d] ?? (d.startsWith('k7-') ? 'Astsubay 2020' : `Toplu kitapçık ${d.replace('k9-', '#')}`);
 
