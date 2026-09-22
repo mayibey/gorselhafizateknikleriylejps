@@ -360,9 +360,14 @@ async function hakkiKapat(
 }
 
 // ---------------- Apple bildirimi ----------------
-type Sonuc = { ok: boolean; not: string; tekrar?: boolean };
+type Sonuc = { ok: boolean; not: string; tekrar?: boolean; imzali?: boolean };
 
 async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: string): Promise<Sonuc> {
+  const s = await appleIsleIc(db, signedPayload);
+  return { ...s, imzali: await appleImzaDogru(signedPayload) };
+}
+
+async function appleIsleIc(db: ReturnType<typeof createClient>, signedPayload: string): Promise<Sonuc> {
   // İmza denetimi DANIŞMA niteliğinde, ENGELLEYİCİ değil — bilerek.
   // Gerçek güvenlik garantisi "her yıkıcı işlemden önce Apple'a tekrar sor" kuralıdır; imza
   // onun üstüne bir kat. Engelleyici yapılırsa bizim sertifika ayrıştırma kodumuzdaki tek bir
@@ -377,7 +382,10 @@ async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: str
   const veri = (bildirim.data ?? {}) as Record<string, unknown>;
   if (veri.bundleId && String(veri.bundleId) !== BUNDLE_IOS) return { ok: false, not: 'baska uygulama' };
 
-  if (!imzali) console.warn('magaza-bildirim: Apple imzasi dogrulanamadi, magazaya teyit ile devam:', tip);
+  // İmza sonucu KAYDA yazılır: hangi bildirim gerçekten Apple'dan geldi, hangisi sahte —
+  // 22 Eyl 2026'da dışarıdan sahte bir ONE_TIME_CHARGE geldi ve ayırt edemedik (zarar yok,
+  // mağaza teyidi elemişti, ama görünmez kalmıştı).
+  if (!imzali) console.warn('magaza-bildirim: Apple imzasi dogrulanamadi (SAHTE olabilir):', tip);
   const tx = jwsPayload(String(veri.signedTransactionInfo ?? '')) ?? {};
   const orijinal = String(tx.originalTransactionId ?? '');
   const islem = String(tx.transactionId ?? orijinal);
