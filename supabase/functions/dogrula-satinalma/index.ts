@@ -39,7 +39,13 @@ const URUNLER = new Set([
 // Yükseltme ürünü şartı: AKTİF yıllık abonelik olmalı — manipüle edilmiş bir istemci fark
 // fiyatına düz ömür boyu alamasın. (Geri yüklemede aranmaz: hak bir kez doğrulandıysa kalıcı.)
 // Tek kapsam: herhangi bir yıllık (yeni musterek_yillik ya da eski brans/paket) yeterli.
-const AKTIF_YILLIK_URUNLER = ['musterek_yillik', 'brans_yillik', 'paket_yillik'];
+// Yükseltme ürününü hak eden abonelikler. AYLIK da dahil (22 Eyl 2026): istemci aylık aboneye de
+// yükseltme düğmesi gösteriyordu, sunucu ise yalnız yıllığı kabul ediyordu → PARASI ALINMIŞ müşteri
+// 412 ile reddediliyordu. İki taraf artık aynı listeye bakıyor.
+const AKTIF_YILLIK_URUNLER = [
+  'musterek_yillik', 'brans_yillik', 'paket_yillik',
+  'musterek_aylik', 'brans_aylik', 'paket_aylik',
+];
 const YUKSELTME_SARTI: Record<string, string[]> = {
   musterek_omurboyu_yukseltme: AKTIF_YILLIK_URUNLER,
   brans_omurboyu_yukseltme: AKTIF_YILLIK_URUNLER,
@@ -279,7 +285,15 @@ Deno.serve(async (req) => {
       });
     }
 
-    // Yükseltme ürünü: aktif yıllık abonelik ŞARTI (yalnız İLK doğrulamada; geri yüklemede aranmaz).
+    // Yükseltme ürünü: aktif abonelik ŞARTI (yalnız İLK doğrulamada; geri yüklemede aranmaz).
+    //
+    // ⛔ DEĞİŞMEZ (22 Eyl 2026): ŞART TUTMUYOR DİYE ÖDENMİŞ SATIN ALMA REDDEDİLMEZ.
+    // Eskiden burada 412 dönülüyordu — ama bu kontrol Google doğrulamasından ÖNCE çalışıyordu,
+    // yani parası çoktan çekilmiş müşteriye "olmaz" deniyordu (gerçek vaka: Arif Korkmaz,
+    // GPA.3334-1584-9088-82639, iki gün boyunca 4 kez reddedildi, hakkı elle tanımlandı).
+    // Artık şart tutmazsa yalnızca İŞARETLENİR; hak, Google ödemeyi onayladıktan sonra verilir
+    // ve durum 'dogrulandi' satırına not düşülür (başkan Telegram'dan görür).
+    let sartUyari = '';
     const sart = YUKSELTME_SARTI[urun];
     if (sart) {
       const { data: mevcutHak } = await admin
@@ -290,7 +304,7 @@ Deno.serve(async (req) => {
         .limit(1)
         .maybeSingle();
       if (!mevcutHak) {
-        const { data: aktifYillik } = await admin
+        const { data: aktifAbone } = await admin
           .from('uyelik_haklari')
           .select('urun, bitis')
           .eq('user_id', user.id)
@@ -298,10 +312,7 @@ Deno.serve(async (req) => {
           .gt('bitis', new Date().toISOString())
           .limit(1)
           .maybeSingle();
-        if (!aktifYillik) {
-          await log('reddedildi', 'yukseltme sarti yok (aktif yillik gerekli)', null);
-          return hata('Yükseltme için aktif bir yıllık üyelik gerekir.', 412, 'yukseltme-sart');
-        }
+        if (!aktifAbone) sartUyari = ' [UYARI: aktif abonelik bulunamadan yukseltme alindi]';
       }
     }
 
@@ -334,7 +345,7 @@ Deno.serve(async (req) => {
       await admin.from('uyelik_haklari').upsert({
         user_id: user.id, urun, tip: 'omurboyu', bitis: null, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(), platform: magaza,
       });
-      await log('dogrulandi', 'omurboyu', p);
+      await log('dogrulandi', 'omurboyu' + sartUyari, p);
       return new Response(JSON.stringify({ ok: true, premium: true }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
     }
 
@@ -343,8 +354,15 @@ Deno.serve(async (req) => {
       headers: { Authorization: `Bearer ${gToken}` },
     });
     const s = await r.json();
-    const aktif = s.subscriptionState === 'SUBSCRIPTION_STATE_ACTIVE' || s.subscriptionState === 'SUBSCRIPTION_STATE_IN_GRACE_PERIOD';
     const bitis = s.lineItems?.[s.lineItems.length - 1]?.expiryTime ?? null;
+    // CANCELED = "otomatik yenileme kapalı", İPTAL DEĞİL: kullanıcı parasını ödemiş, süresi doluncaya
+    // kadar erişim hakkı var (22 Eyl 2026: 7 abonemiz bu durumdaydı, her doğrulamada "Abonelik aktif
+    // değil" hatası alıyorlardı). Süresi GEÇMİŞSE zaten aşağıdaki süre kontrolü eler.
+    const sureVar = !!bitis && new Date(bitis).getTime() > Date.now();
+    const aktif =
+      s.subscriptionState === 'SUBSCRIPTION_STATE_ACTIVE' ||
+      s.subscriptionState === 'SUBSCRIPTION_STATE_IN_GRACE_PERIOD' ||
+      (s.subscriptionState === 'SUBSCRIPTION_STATE_CANCELED' && sureVar);
     if (!r.ok || !aktif) {
       await log('reddedildi', `subState=${s.subscriptionState} http=${r.status}`, s);
       return hata('Abonelik aktif değil', 402);

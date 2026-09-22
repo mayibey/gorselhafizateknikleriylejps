@@ -18,8 +18,15 @@
  *    Diğer her şey "bilinmiyor" olarak loglanır, kayda DOKUNULMAZ. Yanlışlıkla ödeme yapmış
  *    kullanıcının erişimini kapatmak, iade alan birine bedava içerik vermekten daha kötüdür.
  *
- * NOT: Abonelikler zaten `bitis` ile kendiliğinden düşüyor; bu fonksiyon onları SİLMEZ,
- * yalnız raporlar. Silme YALNIZ iade/iptal edilmiş satın almalar içindir.
+ * ABONELİKLER (22 Eyl 2026'da eklendi): eskiden "bitis ile düşer" denip HİÇ sorulmuyordu. Ama iade
+ * alan abonenin parası anında geri gider, `bitis` ise aylar sonrasıdır → aradaki sürede bedava kalır.
+ * (Gerçek vaka: Melike E. K., yıllık aboneliği 20 Eyl'de iade aldı, denetçi gördü ama kuralı gereği
+ *  dokunmadı, elle kapatıldı.) Artık abonelikler de sorgulanıyor.
+ *
+ * ⚠️ ABONELİKTE EN KRİTİK AYRIM — İADE ≠ YENİLEMEYİ İPTAL:
+ *   SUBSCRIPTION_STATE_CANCELED  → otomatik yenileme kapalı, PARASI ÖDENMİŞ süre DEVAM EDİYOR → DOKUNMA
+ *   Apple revocationDate / Google voidedpurchases → para geri gitmiş → KAPAT
+ * Bu ayrım yapılmazsa yenilemeyi kapatan (şu an 7 kişi) ödeyen müşterinin erişimi kesilir.
  */
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.4';
 
@@ -142,6 +149,58 @@ async function googleUrunDurum(urun: string, token: string): Promise<Sonuc> {
   return { durum: 'GECERLI', not: 'purchaseState=0' };
 }
 
+/** Google abonelik: iade edilmiş mi? CANCELED (yenileme kapalı) İPTAL SAYILMAZ. */
+async function googleAbonelikDurum(token: string): Promise<Sonuc> {
+  const tok = await googleToken();
+  const u = `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${PAKET_ANDROID}/purchases/subscriptionsv2/tokens/${encodeURIComponent(token)}`;
+  const r = await fetch(u, { headers: { Authorization: `Bearer ${tok}` } });
+  if (r.status === 410) return { durum: 'IPTAL', not: 'Google 410 (iade)' };
+  if (!r.ok) return { durum: 'BILINMIYOR', not: `HTTP ${r.status}` };
+  const j = await r.json();
+  const durum = String(j.subscriptionState ?? '');
+  const bitis = j.lineItems?.[j.lineItems.length - 1]?.expiryTime ?? null;
+  const sureVar = !!bitis && new Date(bitis).getTime() > Date.now();
+  // İade, Google'da ayrı bir uçta durur (voidedpurchases). subscriptionState iadeyi göstermez.
+  if (durum === 'SUBSCRIPTION_STATE_EXPIRED' && !sureVar) return { durum: 'SURE_DOLDU', not: 'süresi doldu' };
+  if (durum === 'SUBSCRIPTION_STATE_CANCELED') {
+    return sureVar
+      ? { durum: 'GECERLI', not: 'yenileme kapalı, süresi devam ediyor' }
+      : { durum: 'SURE_DOLDU', not: 'iptal + süresi doldu' };
+  }
+  return { durum: 'GECERLI', not: durum || 'ok' };
+}
+
+/** Google'ın iade/geri alma listesi — tek çağrıda TÜM iadeler. Jeton eşleşmesi = net iade.
+ *  Liste alınamazsa `saglik` hata metnini taşır: sessiz körlük olmasın diye özete yazılır. */
+const iadeListesiSaglik = { durum: 'ok' as string };
+async function googleIadeJetonlari(): Promise<Set<string>> {
+  const kume = new Set<string>();
+  try {
+    const tok = await googleToken();
+    // Google 30 GÜNDEN ESKİSİNİ KABUL ETMİYOR (400 "must be within [30] days of data") — daha uzun
+    // istenirse liste komple boş döner ve iadeler SESSİZCE görünmez olur. 29 gün güvenli sınır;
+    // denetçi her gece çalıştığı için fazlası gerekmiyor.
+    const baslangic = Date.now() - 29 * 24 * 60 * 60 * 1000;
+    let sayfa: string | null = null;
+    for (let i = 0; i < 10; i++) {
+      const u = new URL(`https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${PAKET_ANDROID}/purchases/voidedpurchases`);
+      u.searchParams.set('startTime', String(baslangic));
+      u.searchParams.set('maxResults', '1000');
+      if (sayfa) u.searchParams.set('token', sayfa);
+      const r = await fetch(u, { headers: { Authorization: `Bearer ${tok}` } });
+      if (!r.ok) { iadeListesiSaglik.durum = `HTTP ${r.status}`; break; }
+      const j = await r.json();
+      for (const v of j.voidedPurchases ?? []) if (v.purchaseToken) kume.add(String(v.purchaseToken));
+      sayfa = j.tokenPagination?.nextPageToken ?? null;
+      if (!sayfa) break;
+    }
+  } catch (e) {
+    // liste alınamazsa iade bilgisi yok sayılır — ASLA silme sebebi olmaz, ama SESSİZ de kalmaz
+    iadeListesiSaglik.durum = String(e).slice(0, 80);
+  }
+  return kume;
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
 
@@ -169,6 +228,8 @@ Deno.serve(async (req) => {
 
   const sayac: Record<string, number> = {};
   const kapatilan: { user_id: string; urun: string; platform: string; not: string }[] = [];
+  // Google iade listesi bir kez çekilir (abonelik + tek seferlik hepsini kapsar).
+  const iadeJetonlari = await googleIadeJetonlari();
   for (const s of data ?? []) {
     let sonuc: Sonuc;
     try {
@@ -177,14 +238,16 @@ Deno.serve(async (req) => {
       // iade alsalar fark etmezdik. Apple işlem kimliği salt rakam; Google jetonu 144 karakter.
       const appleJeton = /^[0-9]{8,25}$/.test(String(s.satin_alma_token));
       if (s.platform === 'ios' || appleJeton) sonuc = await appleDurum(s.satin_alma_token as string);
-      else if (s.tip === 'abonelik') sonuc = { durum: 'GECERLI', not: 'abonelik: bitis ile düşer' };
+      else if (iadeJetonlari.has(String(s.satin_alma_token))) sonuc = { durum: 'IPTAL', not: 'Google iade listesinde' };
+      else if (s.tip === 'abonelik') sonuc = await googleAbonelikDurum(s.satin_alma_token as string);
       else sonuc = await googleUrunDurum(s.urun as string, s.satin_alma_token as string);
     } catch (e) {
       sonuc = { durum: 'BILINMIYOR', not: String(e).slice(0, 60) };
     }
     sayac[sonuc.durum] = (sayac[sonuc.durum] ?? 0) + 1;
-    // SİLME YALNIZ NET İPTALDE — ve abonelikte asla (o zaten bitis ile düşer).
-    if (sonuc.durum === 'IPTAL' && s.tip !== 'abonelik') {
+    // SİLME YALNIZ NET İPTALDE (= para geri gitmiş). Abonelik de dahil — ama 'IPTAL' yalnızca
+    // gerçek iadede üretilir; yenilemesini kapatan abone yukarıda 'GECERLI' döner, dokunulmaz.
+    if (sonuc.durum === 'IPTAL') {
       kapatilan.push({ user_id: s.user_id as string, urun: s.urun as string, platform: s.platform as string, not: sonuc.not });
       if (!kuru) {
         await db.from('uyelik_haklari').delete().eq('user_id', s.user_id).eq('urun', s.urun);
@@ -192,7 +255,10 @@ Deno.serve(async (req) => {
     }
   }
 
-  const ozet = { tarih: new Date().toISOString(), kuru, denetlenen: data?.length ?? 0, sayac, kapatilan };
+  const ozet = {
+    tarih: new Date().toISOString(), kuru, denetlenen: data?.length ?? 0, sayac, kapatilan,
+    google_iade_listesi: iadeListesiSaglik.durum, google_iade_sayisi: iadeJetonlari.size,
+  };
   // Log tablosu varsa yaz (yoksa sessizce geç — denetim log yüzünden durmasın).
   await db.from('uyelik_denetim_log').insert({ ozet }).then(() => {}, () => {});
 

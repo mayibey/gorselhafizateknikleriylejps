@@ -123,13 +123,19 @@ function PaywallIcerik() {
     return () => clearInterval(t);
   }, [geriSayimVar]);
 
-  // Sahiplik TİPE göre: ömür boyu → tam; yalnız yıllık → yükseltme teklif edilir.
+  // Sahiplik TİPE göre: ömür boyu → tam; abonelik → yükseltme teklif edilir.
   const sahipOmur = aktifHaklar.some((h) => h.tip === 'omurboyu');
-  const sahipYillik = !sahipOmur && aktifHaklar.some((h) => h.tip === 'abonelik');
+  const aboneHak = sahipOmur ? undefined : aktifHaklar.find((h) => h.tip === 'abonelik');
+  const sahipAbone = !!aboneHak;
+  // AYLIK / YILLIK AYRIMI ŞART (22 Eyl 2026): önce her abonelik "yıllık" sayılıyordu; aylık abone
+  // yıllığa özel FARK ürününü görüyor, satın alıyor, sunucu "aktif yıllık gerekli" deyip reddediyordu
+  // → parası alınmış müşteri erişim alamıyordu. Aylık abonenin fark ürününde hakkı yok: TAM fiyat.
+  const sahipYillik = !!aboneHak && aboneHak.urun === URUN_YILLIK;
+  const sahipAylik = !!aboneHak && !sahipYillik;
   // iOS'ta ayrı "farkla yükseltme" ürünü YOK (URUN_YUKSELTME oluşturulmadı) → yıllık sahibi ömür boyuna
   // TAM fiyatla geçer. Abonelik yönetimi de platforma göre (Apple / Google).
   const ios = Platform.OS === 'ios';
-  const yukseltUrun = ios ? URUN_OMURBOYU : URUN_YUKSELTME;
+  const yukseltUrun = ios || sahipAylik ? URUN_OMURBOYU : URUN_YUKSELTME;
   const ABONELIK_YONETIM = ios
     ? 'https://apps.apple.com/account/subscriptions'
     : PLAY_ABONELIKLER;
@@ -444,11 +450,11 @@ function PaywallIcerik() {
               Tek paket — uygulamadaki her şey dahil.
             </AppText>
           </View>
-          {sahipOmur || sahipYillik ? (
+          {sahipOmur || sahipAbone ? (
             <View style={styles.sahipRozet}>
               <MaterialCommunityIcons name="check-decagram" size={16} color={Palette.yesil} />
               <AppText variant="etiket" color="yesil" bold>
-                {sahipOmur ? 'Aktif' : 'Yıllık aktif'}
+                {sahipOmur ? 'Aktif' : sahipAylik ? 'Aylık aktif' : 'Yıllık aktif'}
               </AppText>
             </View>
           ) : null}
@@ -469,26 +475,28 @@ function PaywallIcerik() {
           <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
             Ömür boyu tam erişimin var — her şey açık.
           </AppText>
-        ) : sahipYillik ? (
-          // Yıllık sahibi → ömür boyuna geçiş. Android: FARK fiyatıyla (URUN_YUKSELTME).
-          // iOS: fark ürünü yok → TAM fiyatla ömür boyu (URUN_OMURBOYU).
+        ) : sahipAbone ? (
+          // Abone → ömür boyuna geçiş. Android + YILLIK: FARK fiyatıyla (URUN_YUKSELTME).
+          // iOS ya da AYLIK abone: fark ürünü yok/hak yok → TAM fiyatla ömür boyu (URUN_OMURBOYU).
           <View style={styles.yukseltmeSar}>
             <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
-              {ios
-                ? 'Yıllık planın aktif. İstersen ömür boyu tam erişime geçebilirsin.'
-                : 'Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.'}
+              {sahipAylik
+                ? 'Aylık planın aktif. İstersen ömür boyu tam erişime geçebilirsin.'
+                : ios
+                  ? 'Yıllık planın aktif. İstersen ömür boyu tam erişime geçebilirsin.'
+                  : 'Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.'}
             </AppText>
             <PlanButon
-              baslik={ios ? 'Ömür boyuna geç' : 'Ömür boyuna yükselt'}
+              baslik={ios || sahipAylik ? 'Ömür boyuna geç' : 'Ömür boyuna yükselt'}
               fiyat={fiyat(yukseltUrun)}
-              altYazi={ios ? 'tek seferlik — tam erişim' : 'tek seferlik fark ödemesi'}
+              altYazi={ios || sahipAylik ? 'tek seferlik — tam erişim' : 'tek seferlik fark ödemesi'}
               vurgu
               mesgul={islemUrun === yukseltUrun}
               pasif={!connected || (!!islemUrun && islemUrun !== yukseltUrun)}
               onPress={() => void satinAl(yukseltUrun, false)}
             />
             <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
-              Geçtikten sonra yıllık aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
+              Geçtikten sonra mevcut aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
               <AppText
                 variant="etiket"
                 color="lacivert"
@@ -496,7 +504,7 @@ function PaywallIcerik() {
                 onPress={() => void Linking.openURL(ABONELIK_YONETIM)}>
                 {ios ? 'Ayarlar → Abonelikler' : 'Google Play → Abonelikler'}
               </AppText>
-              'den yıllığı iptal et (kalan süren zaten ömür boyu erişimin içinde).
+              'den aboneliğini iptal et (kalan süren zaten ömür boyu erişimin içinde).
             </AppText>
           </View>
         ) : (
