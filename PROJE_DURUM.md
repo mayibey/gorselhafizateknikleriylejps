@@ -2524,3 +2524,12 @@ kalırsa kayda `[UYARI: ...]` düşüyor; bot bunu yakalayıp bildiriyor.
   (isteğe bağlı, nöbet zaten yakalıyor).
 - **OTA hâlâ basılmadı** — paywall düzeltmeleri (aylık/yıllık ayrımı + yıllığa geçiş) kullanıcıya
   gitmedi, "yay" onayı bekliyor.
+
+**GÜNCELLEME (22 Eyl, aynı gün):** Apple bildirim adresi **kuruldu ve doğrulandı**. Apple'ın kendi
+test bildirimi tetiklendi → teslimat **SUCCESS**, sürüm **2.0**, uygulama `app.mevzujsps.ios`;
+bizim kayda da düştü. İmza doğrulama kodu **gerçek Apple imzalı bildirimle** sınandı: zincir 3
+sertifika, kök parmak izi tuttu, ES256 imza geçerli. Böylece Apple iadeleri artık anında kesiliyor.
+İki tuzak not edildi: (a) Apple adresi kaydettikten sonra ~5 dk yaymıyor, hemen denenirse
+`4040007` döner; (b) Apple adresi kaydederken **boş gövdeli yoklama** gönderiyor — ilk sürüm ona
+500 dönüyordu, düzeltildi (500 artık yalnız mağazadan teyit alınamadığında dönülüyor).
+Kalan: Google Pub/Sub (isteğe bağlı) · Apple rıza cümlesi · OTA.
