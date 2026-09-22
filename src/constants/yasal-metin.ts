@@ -104,12 +104,14 @@ girersen geri gelir).
 
 Ücretlendirme: Türk Ceza Kanunu içeriği ve deneme kartları ücretsizdir. Diğer içeriklere
 tam erişim için isteğe bağlı, süreli abonelik (örn. yıllık; dönem sonunda otomatik yenilenir)
-veya tek seferlik ömür boyu erişim satın alabilirsin. Tüm ödemeler Google Play üzerinden alınır.
-Abonelik, iptal etmediğin sürece dönem sonunda otomatik yenilenir; aboneliğini istediğin an
-Google Play hesabından yönetebilir veya iptal edebilirsin (iptal, süren dolunca geçerli olur).
-Dijital içerik anında sunulduğundan, satın alımlar — yürürlükteki tüketici mevzuatının tanıdığı
-haklar saklı kalmak üzere — kural olarak iade edilmez; iade/iptal işlemleri Google Play üzerinden
-yürür.
+veya tek seferlik ömür boyu erişim satın alabilirsin. Tüm ödemeler Google Play / App Store
+üzerinden alınır. Abonelik, iptal etmediğin sürece dönem sonunda otomatik yenilenir; aboneliğini
+istediğin an Google Play / App Store hesabından yönetebilir veya iptal edebilirsin (iptal, süren
+dolunca geçerli olur). Dijital içerik anında sunulduğundan, satın alımlar — yürürlükteki tüketici
+mevzuatının tanıdığı haklar saklı kalmak üzere — kural olarak iade edilmez; iade/iptal işlemleri
+Google Play / App Store üzerinden yürür. Mağaza üzerinden bir iade talebinde bulunursan, talebi
+değerlendirebilmesi için Apple'ın/Google'ın istediği kullanım bilgilerini (ör. içeriği ne ölçüde
+görüntülediğin, üyelik süren) ilgili mağazayla paylaşabiliriz.
 
 5) SORUMLULUĞUN SINIRI
 Uygulama "olduğu gibi" sunulur. Hukukun izin verdiği ölçüde dolaylı zararlardan sorumlu değiliz.

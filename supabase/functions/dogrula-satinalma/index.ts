@@ -345,7 +345,34 @@ Deno.serve(async (req) => {
       await admin.from('uyelik_haklari').upsert({
         user_id: user.id, urun, tip: 'omurboyu', bitis: null, satin_alma_token: kayitToken, son_dogrulama: new Date().toISOString(), platform: magaza,
       });
-      await log('dogrulandi', 'omurboyu' + sartUyari, p);
+      // ÖMÜR BOYU ALDI → ANDROID ABONELİĞİNİ OTOMATİK DURDUR (22 Eyl 2026).
+      // Eskiden ekranda "Google Play'den aboneliğini de iptal et" yazıyordu ve iş kullanıcıya
+      // bırakılıyordu; unutan her ay boşuna ödemeye devam ederdi. Artık kendimiz durduruyoruz.
+      // NOT: bu İADE DEĞİL — yalnız otomatik yenilemeyi kapatır. Ödediği süre sonuna kadar
+      // durur (zaten ömür boyu erişimi var), hiçbir hak kaybı olmaz.
+      const iptalNotlari: string[] = [];
+      try {
+        const { data: abonelikler } = await admin
+          .from('uyelik_haklari')
+          .select('urun, satin_alma_token')
+          .eq('user_id', user.id)
+          .eq('tip', 'abonelik')
+          .eq('platform', 'android')
+          .gt('bitis', new Date().toISOString());
+        for (const a of abonelikler ?? []) {
+          if (!a.satin_alma_token) continue;
+          const c = await fetch(
+            `${base}/purchases/subscriptions/${a.urun}/tokens/${encodeURIComponent(String(a.satin_alma_token))}:cancel`,
+            { method: 'POST', headers: { Authorization: `Bearer ${gToken}` } },
+          );
+          iptalNotlari.push(`${a.urun}:${c.ok ? 'durduruldu' : 'HTTP ' + c.status}`);
+        }
+      } catch (e) {
+        // Abonelik durdurulamazsa satın alma yine geçerlidir — kullanıcıyı burada bekletmeyiz.
+        iptalNotlari.push('hata:' + String(e).slice(0, 40));
+      }
+      const iptalEk = iptalNotlari.length ? ` · abonelik yenilemesi: ${iptalNotlari.join(', ')}` : '';
+      await log('dogrulandi', 'omurboyu' + sartUyari + iptalEk, p);
       return new Response(JSON.stringify({ ok: true, premium: true }), { headers: { ...CORS, 'Content-Type': 'application/json' } });
     }
 

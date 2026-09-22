@@ -181,6 +181,38 @@ async function appleTeyit(txId: string): Promise<Teyit> {
   return { iade: false, bilinmiyor: true, not: 'Apple yanıt vermedi' };
 }
 
+/**
+ * Apple aboneliği HÂLÂ GEÇERLİ Mİ? Ölçüt: aboneliğin EN SON işlemi.
+ *
+ * ⛔ `status` alanına BAKMA — yanıltıyor: iade almış Melike'de bile 1/aktif dönüyordu.
+ * Ayrıca `originalTransactionId` yeniden satın almada AYNI kaldığı için, eski iade edilmiş
+ * işleme bakmak parasını yeni ödemiş müşteriyi keser (22 Eyl'de kuru denetimde yakalandı).
+ * Doğrusu: en son işlem geri alınmışsa iade; değilse ve süresi ileride ise geçerli.
+ */
+async function appleAbonelikAktifMi(orijinalTx: string): Promise<boolean | null> {
+  try {
+    const jwt = await appleJwt();
+    for (const host of APPLE_HOSTLAR) {
+      const r = await fetch(`${host}/inApps/v1/subscriptions/${orijinalTx}`, { headers: { Authorization: `Bearer ${jwt}` } });
+      if (!r.ok) continue;
+      const d = await r.json();
+      let enYeni: Record<string, unknown> | null = null;
+      for (const grup of d?.data ?? []) {
+        for (const t of grup?.lastTransactions ?? []) {
+          const bilgi = jwsPayload(String(t?.signedTransactionInfo ?? ''));
+          if (!bilgi) continue;
+          if (!enYeni || Number(bilgi.purchaseDate ?? 0) > Number(enYeni.purchaseDate ?? 0)) enYeni = bilgi;
+        }
+      }
+      if (!enYeni) return null;
+      if (enYeni.revocationDate) return false;                 // en son işlem geri alınmış → iade
+      const bitis = Number(enYeni.expiresDate ?? 0);
+      return !bitis || bitis > Date.now();                     // süresi ileride ise hâlâ geçerli
+    }
+    return null; // sorulamadı → "bilinmiyor", karar verme
+  } catch { return null; }
+}
+
 /** Google: jeton iade listesinde mi? (tek seferlik + abonelik hepsi burada) */
 async function googleIadeMi(token: string): Promise<Teyit> {
   try {
@@ -244,6 +276,10 @@ async function tuketimVerisi(db: ReturnType<typeof createClient>, userId: string
   const { count: erisim } = await db.from('icerik_erisim_log').select('*', { count: 'exact', head: true }).eq('user_id', userId);
   const { count: deneme } = await db.from('deneme_sonuc').select('*', { count: 'exact', head: true }).eq('user_id', userId);
   const { data: haklar } = await db.from('uyelik_haklari').select('urun').eq('user_id', userId);
+  // Daha önce bu hesaba iade yapıldı mı? Apple'a "hiç iade almadı" demek, almışsa YALAN olur
+  // ve Apple bunu zaten kendi kayıtlarından görür — güvenilirliğimizi yakar.
+  const { count: iadeSayisi } = await db.from('satin_alma_log')
+    .select('*', { count: 'exact', head: true }).eq('user_id', userId).eq('durum', 'iade');
 
   const gun = kisi?.created_at ? Math.floor((Date.now() - new Date(kisi.created_at as string).getTime()) / 86400000) : 0;
   const erisimSayi = erisim ?? 0;
@@ -265,12 +301,12 @@ async function tuketimVerisi(db: ReturnType<typeof createClient>, userId: string
   return {
     govde: {
       accountTenure: kovaHesapTenure(gun),
-      appAccountToken: appAccountToken ?? '',
+      ...(appAccountToken ? { appAccountToken } : {}),
       consumptionStatus: tuketim,
       customerConsented: riza,
       deliveryStatus: 0,                       // içerik teslim edildi ve çalışıyor
       lifetimeDollarsPurchased: kovaDolar(toplamTL / TL_USD),
-      lifetimeDollarsRefunded: 1,              // bu hesaba daha önce iade yapılmadı
+      lifetimeDollarsRefunded: (iadeSayisi ?? 0) > 0 ? 2 : 1,  // ölçülür, varsayılmaz
       platform: 1,                             // Apple
       playTime: kovaPlayTime(dakika),
       refundPreference: erisimSayi >= 100 ? 2 : 3,  // çok kullandıysa "iade etmeyin", az ise görüş bildirmeyiz
@@ -348,6 +384,14 @@ async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: str
     const teyit = await appleTeyit(islem);
     if (teyit.bilinmiyor) return { ok: false, tekrar: true, not: `${tip}: Apple teyit vermedi (${teyit.not}) — DOKUNULMADI` };
     if (!teyit.iade) return { ok: true, not: `${tip}: Apple iadeyi gostermiyor — DOKUNULMADI` };
+    // ABONELİKSE: tek bir dönemin iadesi bütün aboneliği bitirmez. Abonelik hâlâ aktifse
+    // erişime DOKUNMA — ödeyen müşteriyi kesmek, iade alana bedava vermekten kötüdür.
+    const { data: hakTip } = await db.from('uyelik_haklari').select('tip').eq('satin_alma_token', orijinal).maybeSingle();
+    if (hakTip?.tip === 'abonelik') {
+      const aktif = await appleAbonelikAktifMi(orijinal);
+      if (aktif === null) return { ok: false, tekrar: true, not: `${tip}: abonelik durumu sorulamadi — DOKUNULMADI` };
+      if (aktif) return { ok: true, not: `${tip}: bir donem iade edilmis ama abonelik AKTIF — DOKUNULMADI` };
+    }
     const s = await hakkiKapat(db, { sutun: 'satin_alma_token', deger: orijinal }, teyit.not, 'ios');
     return { ok: true, not: `${tip}: ${s.kapatilan} hak kapatildi (${s.kim})` };
   }
@@ -368,6 +412,18 @@ async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: str
   if (tip === 'CONSUMPTION_REQUEST') {
     const { data: hak } = await db.from('uyelik_haklari').select('user_id').eq('satin_alma_token', orijinal).maybeSingle();
     if (!hak) return { ok: true, not: 'CONSUMPTION_REQUEST: kullanici bulunamadi' };
+    // APPLE SINIRI (22 Eyl 2026'da ölçüldü): tüketim verisi YALNIZ tüketilebilir ürünler ve
+    // OTOMATİK YENİLENEN ABONELİKLER için kabul ediliyor. Ömür boyu (non-consumable) için
+    // Apple zaten CONSUMPTION_REQUEST göndermiyor; elle denenince
+    // `4000047 The transaction id doesn't represent a supported in-app purchase type` dönüyor.
+    // Boşuna deneyip kayda kafa karıştıran hata yazmayalım.
+    // TAM eşleşme şart: "Non-Consumable" içinde "Consumable" geçiyor; kalıp aramasıyla
+    // süzgeç sessizce delinir (ilk denemede tam bu oldu, test yakaladı).
+    const urunTipi = String(tx.type ?? '');
+    const KABUL = ['Auto-Renewable Subscription', 'Consumable'];
+    if (urunTipi && !KABUL.includes(urunTipi)) {
+      return { ok: true, not: `CONSUMPTION_REQUEST: ${urunTipi} icin Apple tuketim verisi kabul etmiyor` };
+    }
     const { govde, ozet } = await tuketimVerisi(db, hak.user_id as string, String(tx.appAccountToken ?? '') || null);
     const jwt = await appleJwt();
     let gonderildi = '';

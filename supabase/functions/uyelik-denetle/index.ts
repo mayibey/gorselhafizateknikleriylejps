@@ -136,6 +136,46 @@ async function appleDurum(token: string): Promise<Sonuc> {
   return { durum: 'BILINMIYOR', not: 'Apple yanıt vermedi' };
 }
 
+/**
+ * ⛔ APPLE ABONELİĞİ: ESKİ İŞLEME DEĞİL, ABONELİĞİN GÜNCEL DURUMUNA BAK (22 Eyl 2026).
+ *
+ * Apple'da `originalTransactionId` abonelik boyunca AYNI kalır — kullanıcı iade alıp sonra
+ * YENİDEN satın alsa bile. Biz o numarayı sakladığımız için, tek tek işleme bakan denetim
+ * sonsuza kadar "bu iade edilmiş" der ve yeni parasını ödemiş müşteriyi keser.
+ *
+ * GERÇEK VAKA: Melike E. K. 10 Eyl'de yıllık aldı → 20 Eyl'de iade etti → erişimi kapatıldı →
+ * 22 Eyl 10:29'da YENİDEN SATIN ALDI (2027'ye kadar geçerli). Kayıtlı numara hâlâ eski, iade
+ * edilmiş işlemi gösteriyordu; o geceki denetim erişimini tekrar silecekti. Kuru çalıştırmada
+ * yakalandı: `IPTAL 1 — Apple iade 2026-09-20`.
+ *
+ * DOĞRU ÖLÇÜT: aboneliğin EN SON işlemi. En son işlem geri alınmışsa → iade. Değilse ve süresi
+ * ileride ise → geçerli. (`status` alanına BAKMA: iade alan Melike'de bile 1/aktif dönüyordu.)
+ */
+async function appleAbonelikDurum(orijinalTx: string): Promise<Sonuc> {
+  const jwt = await appleJwt();
+  for (const host of APPLE_HOSTLAR) {
+    const r = await fetch(`${host}/inApps/v1/subscriptions/${orijinalTx}`, { headers: { Authorization: `Bearer ${jwt}` } });
+    if (!r.ok) continue;
+    const d = await r.json();
+    let enYeni: Record<string, unknown> | null = null;
+    for (const grup of d?.data ?? []) {
+      for (const t of grup?.lastTransactions ?? []) {
+        const bilgi = jwsPayload(String(t?.signedTransactionInfo ?? ''));
+        if (!bilgi) continue;
+        if (!enYeni || Number(bilgi.purchaseDate ?? 0) > Number(enYeni.purchaseDate ?? 0)) enYeni = bilgi;
+      }
+    }
+    if (!enYeni) return { durum: 'BILINMIYOR', not: 'abonelik işlemi okunamadı' };
+    if (enYeni.revocationDate) {
+      return { durum: 'IPTAL', not: `Apple iade ${new Date(Number(enYeni.revocationDate)).toISOString().slice(0, 10)}` };
+    }
+    const bitis = Number(enYeni.expiresDate ?? 0);
+    if (bitis && bitis < Date.now()) return { durum: 'SURE_DOLDU', not: 'abonelik süresi doldu' };
+    return { durum: 'GECERLI', not: `abonelik geçerli (bitis ${new Date(bitis).toISOString().slice(0, 10)})` };
+  }
+  return { durum: 'BILINMIYOR', not: 'Apple yanıt vermedi' };
+}
+
 /** Google tek seferlik ürün: purchaseState 0=alındı 1=iptal 2=beklemede */
 async function googleUrunDurum(urun: string, token: string): Promise<Sonuc> {
   const tok = await googleToken();
@@ -256,7 +296,10 @@ Deno.serve(async (req) => {
       // 'android' etiketiyle kayıtlıydı, Google'a sorulup "bilinmiyor" diye geçiliyordu →
       // iade alsalar fark etmezdik. Apple işlem kimliği salt rakam; Google jetonu 144 karakter.
       const appleJeton = /^[0-9]{8,25}$/.test(String(s.satin_alma_token));
-      if (s.platform === 'ios' || appleJeton) sonuc = await appleDurum(s.satin_alma_token as string);
+      const apple = s.platform === 'ios' || appleJeton;
+      // Apple ABONELİĞİNDE tek işleme bakmak YANLIŞ (yukarıdaki açıklama) → abonelik durumu ucu.
+      if (apple && s.tip === 'abonelik') sonuc = await appleAbonelikDurum(s.satin_alma_token as string);
+      else if (apple) sonuc = await appleDurum(s.satin_alma_token as string);
       else if (iadeJetonlari.has(String(s.satin_alma_token))) sonuc = { durum: 'IPTAL', not: 'Google iade listesinde' };
       else if (s.tip === 'abonelik') sonuc = await googleAbonelikDurum(s.satin_alma_token as string);
       else sonuc = await googleUrunDurum(s.urun as string, s.satin_alma_token as string);

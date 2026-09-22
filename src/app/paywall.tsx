@@ -331,10 +331,21 @@ function PaywallIcerik() {
               skus: [urun],
               subscriptionOffers: token ? [{ sku: urun, offerToken: token }] : [],
               obfuscatedAccountId: hesapId,
-              // replacementMode 2 = WITH_TIME_PRORATION: aylıktan kalan süre yıllığa gün olarak
-              // aktarılır, kullanıcı yeni dönemin ücretini hemen öder. Çift abonelik OLUŞMAZ.
+              // WITH_TIME_PRORATION: aylıktan kalan süre yıllığa gün olarak aktarılır, kullanıcı
+              // yeni dönemin ücretini hemen öder. Çift abonelik OLUŞMAZ.
+              // İKİ BİÇİM BİRDEN gönderiliyor (ikisi de aynı anlama geliyor): sayısal
+              // `replacementMode` kullanımdan kalkmış ama hâlâ iletiliyor, yeni
+              // `subscriptionProductReplacementParams` ise güncel yol. Hangisini okursa okusun
+              // sonuç aynı — kütüphane sürümü değişirse sessizce çift abonelik doğmasın.
               ...(degistirilecekJeton
-                ? { purchaseToken: degistirilecekJeton, replacementMode: 2 }
+                ? {
+                    purchaseToken: degistirilecekJeton,
+                    replacementMode: 2,
+                    subscriptionProductReplacementParams: {
+                      oldProductId: URUN_AYLIK,
+                      replacementMode: 'with-time-proration' as const,
+                    },
+                  }
                 : {}),
             },
           },
@@ -548,15 +559,35 @@ function PaywallIcerik() {
               onPress={() => void satinAl(yukseltUrun, false)}
             />
             <AppText variant="etiket" color="solukMetin" style={styles.yukseltmeNot}>
-              Geçtikten sonra mevcut aboneliğin otomatik iptal OLMAZ — çift ödeme olmaması için{' '}
-              <AppText
-                variant="etiket"
-                color="lacivert"
-                bold
-                onPress={() => void Linking.openURL(ABONELIK_YONETIM)}>
-                {ios ? 'Ayarlar → Abonelikler' : 'Google Play → Abonelikler'}
-              </AppText>
-              'den aboneliğini iptal et (kalan süren zaten ömür boyu erişimin içinde).
+              {/* Android'de aboneliğin yenilenmesini ömür boyu satın alma doğrulanır doğrulanmaz
+                  SUNUCU durduruyor (22 Eyl 2026) — kullanıcıya iş bırakmıyoruz. iOS'ta bunu
+                  yapabileceğimiz bir yol yok, orada elle iptal şart. */}
+              {ios ? (
+                <>
+                  Geçtikten sonra aboneliğin kendiliğinden durmaz — çift ödeme olmaması için{' '}
+                  <AppText
+                    variant="etiket"
+                    color="lacivert"
+                    bold
+                    onPress={() => void Linking.openURL(ABONELIK_YONETIM)}>
+                    Ayarlar → Abonelikler
+                  </AppText>
+                  'den aboneliğini iptal et (kalan süren zaten ömür boyu erişimin içinde).
+                </>
+              ) : (
+                <>
+                  Ömür boyuna geçtiğinde aboneliğinin yenilenmesini biz durdururuz, bir daha
+                  ücret alınmaz. Kalan süren zaten ömür boyu erişiminin içinde.{' '}
+                  <AppText
+                    variant="etiket"
+                    color="lacivert"
+                    bold
+                    onPress={() => void Linking.openURL(ABONELIK_YONETIM)}>
+                    Google Play → Abonelikler
+                  </AppText>
+                  'den kontrol edebilirsin.
+                </>
+              )}
             </AppText>
           </View>
         ) : (
