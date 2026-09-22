@@ -2476,3 +2476,51 @@ aylık aboneler yükseltme düğmesini görmeye devam ediyor ve sunucu artık on
 ömür boyu erişimi fark fiyatına (479,99) alabilirler → **OTA öncelikli**.
 **ERTELENEN:** aylık→ömür boyu için ayrı Play ürünü (öneri 1.170,99 TL) — Play Console'dan elle
 oluşturulması gerekiyor, API tek seferlik ürün yaratamıyor.
+
+## 22 Eylül 2026 (ikinci tur) — Mağaza bildirim ucu + anlık iade + aylıktan yıllığa (commit 90fb1e0)
+
+Başkanın saydığı dört eksik kapatıldı. Ayrıntılı kurulum/tuzak belgesi:
+`docs/MAGAZA_BILDIRIM_KURULUM.md`.
+
+**1) `magaza-bildirim` — yeni sunucu ucu (canlı).** Apple ve Google artık anlık haber veriyor.
+Apple `REFUND`/`REVOKE` ve Google `voidedPurchase`/`REVOKED` → hak anında kapanır.
+Apple `CONSUMPTION_REQUEST` → "bu kişi ne kadar kullandı" sorusuna otomatik cevap
+(içerik erişimi, deneme sayısı, üyelik yaşı, tahmini süre). Yenileme olaylarında bitiş tazelenir.
+- **Güvenlik temeli "bildirime değil mağazaya inan":** gelen bildirim tek başına hiçbir hakkı
+  silmez, her yıkıcı işlemden önce mağazanın kendi API'sine sorulur.
+  **Canlı doğrulama:** iade edilmemiş gerçek bir üyelik için SAHTE iade bildirimi gönderildi →
+  `REFUND: Apple iadeyi gostermiyor — DOKUNULMADI`, hak yerinde kaldı.
+- Apple imzası x5c + **Apple Root CA G3** parmak iziyle doğrulanıyor. Parmak izini ezberden
+  yazmıştım, **YANLIŞTI**; Apple'dan indirilip hesaplandı (`63343abf…9179`). ASN.1 ayrıştırıcı
+  gerçek Apple sertifikasıyla test edildi (WebCrypto anahtar olarak kabul etti).
+- İmza denetimi **bilerek engelleyici değil**: engelleyici olsaydı kendi ayrıştırma kodumuzdaki
+  tek hata bütün bildirimleri sessizce çöpe atardı (Apple 500 görüp sonsuza kadar tekrar denerdi).
+- **TUZAK:** yeni Supabase fonksiyonu varsayılan JWT istiyor; Apple/Google öyle bir şey göndermez
+  → `--no-verify-jwt` şart. İlk yayında her istek 401 aldı, test ederken yakalandı.
+
+**2) Anlık iade kesintisi — panel beklemeden.** `uyelik-denetle`'ye `hizli` kipi eklendi: tek Google
+çağrısıyla iade listesini çekip eşleşenleri kapatır. `iade-nobeti` cron'u **15 dakikada bir**
+çalışıyor. Yani Android iadeleri panel ayarı yapılmasa da en fazla 15 dakikada kesiliyor.
+Apple'da toplu sorgu ucu olmadığı için Apple'ın anında kesilmesi panel adımına bağlı.
+
+**3) Aylıktan yıllığa geçiş — daha önce HİÇ YOKTU.** Abone olan kişi fiyat listesini hiç
+görmüyordu; aylık abonenin tek çıkışı aboneliği iptal edip süresinin dolmasını beklemekti.
+Android'de `replacementMode=WITH_TIME_PRORATION` ile kalan süre yıllığa aktarılıyor.
+**KRİTİK:** mevcut aboneliğin jetonu bulunamazsa satın alma BAŞLATILMIYOR — yoksa Google bunu
+ikinci abonelik sayar ve kullanıcı aynı anda iki abonelik öder. iOS'ta jeton gerekmez.
+
+**4) Şartsız yükseltme görünür oldu.** Sunucu ödenmiş satın almayı reddetmiyor ama şart dışı
+kalırsa kayda `[UYARI: ...]` düşüyor; bot bunu yakalayıp bildiriyor.
+
+**Süresi bitmiş aboneye yükseltme kapısı:** uygulamada zaten kapalı — süresi geçmiş abonelik
+"aktif hak" sayılmıyor, o kişi yükseltme kutusunu değil normal fiyat listesini görüyor.
+
+### AÇIK İŞLER
+- **Apple iade itirazı tek cümleye bağlı.** Apple tüketim cevabını ancak müşteri rızası beyan
+  edilirse kabul ediyor: `HTTP 400 errorCode 4000035 "The customer consented field is required"`.
+  Şartlarımızda o cümle yok → `apple_tuketim_rizasi` **kapalı**, mekanizma boşta bekliyor.
+  Önerilen cümle belgede; başkan onaylayınca eklenip ayar 1 yapılacak.
+- **Panel adımları başkanda:** Apple bildirim adresi (V2) — asıl kıymetli olan; Google Pub/Sub
+  (isteğe bağlı, nöbet zaten yakalıyor).
+- **OTA hâlâ basılmadı** — paywall düzeltmeleri (aylık/yıllık ayrımı + yıllığa geçiş) kullanıcıya
+  gitmedi, "yay" onayı bekliyor.
