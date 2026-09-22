@@ -320,7 +320,9 @@ async function hakkiKapat(
 }
 
 // ---------------- Apple bildirimi ----------------
-async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: string) {
+type Sonuc = { ok: boolean; not: string; tekrar?: boolean };
+
+async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: string): Promise<Sonuc> {
   // İmza denetimi DANIŞMA niteliğinde, ENGELLEYİCİ değil — bilerek.
   // Gerçek güvenlik garantisi "her yıkıcı işlemden önce Apple'a tekrar sor" kuralıdır; imza
   // onun üstüne bir kat. Engelleyici yapılırsa bizim sertifika ayrıştırma kodumuzdaki tek bir
@@ -344,7 +346,7 @@ async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: str
   // 1) İADE / GERİ ALMA → mağazaya teyit ettir, sonra kapat.
   if (tip === 'REFUND' || tip === 'REVOKE') {
     const teyit = await appleTeyit(islem);
-    if (teyit.bilinmiyor) return { ok: false, not: `${tip}: Apple teyit vermedi (${teyit.not}) — DOKUNULMADI` };
+    if (teyit.bilinmiyor) return { ok: false, tekrar: true, not: `${tip}: Apple teyit vermedi (${teyit.not}) — DOKUNULMADI` };
     if (!teyit.iade) return { ok: true, not: `${tip}: Apple iadeyi gostermiyor — DOKUNULMADI` };
     const s = await hakkiKapat(db, { sutun: 'satin_alma_token', deger: orijinal }, teyit.not, 'ios');
     return { ok: true, not: `${tip}: ${s.kapatilan} hak kapatildi (${s.kim})` };
@@ -401,7 +403,7 @@ async function appleIsle(db: ReturnType<typeof createClient>, signedPayload: str
 }
 
 // ---------------- Google bildirimi ----------------
-async function googleIsle(db: ReturnType<typeof createClient>, govde: Record<string, unknown>) {
+async function googleIsle(db: ReturnType<typeof createClient>, govde: Record<string, unknown>): Promise<Sonuc> {
   const ham = (govde?.message as { data?: string } | undefined)?.data;
   if (!ham) return { ok: false, not: 'message.data yok' };
   let bildirim: Record<string, unknown>;
@@ -413,7 +415,7 @@ async function googleIsle(db: ReturnType<typeof createClient>, govde: Record<str
   if (iadeBildirim?.purchaseToken) {
     const token = String(iadeBildirim.purchaseToken);
     const teyit = await googleIadeMi(token);
-    if (teyit.bilinmiyor) return { ok: false, not: `Google teyit vermedi (${teyit.not}) — DOKUNULMADI` };
+    if (teyit.bilinmiyor) return { ok: false, tekrar: true, not: `Google teyit vermedi (${teyit.not}) — DOKUNULMADI` };
     if (!teyit.iade) return { ok: true, not: 'Google iade listesinde yok — DOKUNULMADI' };
     const s = await hakkiKapat(db, { sutun: 'satin_alma_token', deger: token }, teyit.not, 'android');
     return { ok: true, not: `iade: ${s.kapatilan} hak kapatildi (${s.kim})` };
@@ -425,7 +427,7 @@ async function googleIsle(db: ReturnType<typeof createClient>, govde: Record<str
     const token = String(abone.purchaseToken);
     if (abone.notificationType === 12) {
       const teyit = await googleIadeMi(token);
-      if (teyit.bilinmiyor) return { ok: false, not: `REVOKED ama teyit yok (${teyit.not}) — DOKUNULMADI` };
+      if (teyit.bilinmiyor) return { ok: false, tekrar: true, not: `REVOKED ama teyit yok (${teyit.not}) — DOKUNULMADI` };
       if (teyit.iade) {
         const s = await hakkiKapat(db, { sutun: 'satin_alma_token', deger: token }, teyit.not, 'android');
         return { ok: true, not: `REVOKED: ${s.kapatilan} hak kapatildi (${s.kim})` };
@@ -459,7 +461,7 @@ async function googleIsle(db: ReturnType<typeof createClient>, govde: Record<str
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
   const db = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SERVICE_ROLE_KEY')!);
-  let sonuc: { ok: boolean; not: string } = { ok: false, not: 'bos istek' };
+  let sonuc: Sonuc = { ok: true, not: 'bos/taninmayan istek — gecildi' };
   try {
     const govde = await req.json();
     if (govde?.signedPayload) {
@@ -473,20 +475,26 @@ Deno.serve(async (req) => {
       }
       sonuc = await googleIsle(db, govde);
     } else {
-      sonuc = { ok: false, not: 'taninmayan govde' };
+      // Boş ya da tanınmayan gövde: Apple adresi kaydederken yoklama isteği gönderiyor.
+      // Buna hata dönmek yanlış — tekrar gönderilse de sonuç değişmez.
+      sonuc = { ok: true, not: 'taninmayan govde — gecildi' };
     }
   } catch (e) {
-    sonuc = { ok: false, not: String(e).slice(0, 200) };
+    // Gövde hiç okunamadıysa (boş yoklama) tekrar istemeye gerek yok; gerçek bir işlem
+    // hatasıysa zaten yukarıdaki dallar tekrar bayrağını koyuyor.
+    const m = String(e);
+    sonuc = m.includes('JSON') ? { ok: true, not: 'govdesiz istek — gecildi' } : { ok: false, tekrar: true, not: m.slice(0, 200) };
   }
 
   // İz kaydı — ne geldi, ne yapıldı. (Tablo yoksa iş durmasın.)
   await db.from('uyelik_denetim_log').insert({ ozet: { kaynak: 'magaza-bildirim', ...sonuc, tarih: new Date().toISOString() } })
     .then(() => {}, () => {});
 
-  // Apple/Google 200 görmezse tekrar gönderir. Teyit alamadığımız (bilinmiyor) hâllerde
-  // BİLEREK 500 dönüyoruz ki mağaza tekrar denesin — bildirimi kaybetmeyelim.
+  // Apple/Google 200 görmezse tekrar gönderir. 500 YALNIZ tekrar denemenin işe yarayacağı
+  // hâllerde dönülür (mağazadan teyit alınamadı). Bozuk/boş gövdeye 500 dönmek sonsuz
+  // tekrar üretir ve hiçbir şeyi düzeltmez — ona 200 denir.
   return new Response(JSON.stringify(sonuc), {
-    status: sonuc.ok ? 200 : 500,
+    status: sonuc.tekrar ? 500 : 200,
     headers: { ...CORS, 'Content-Type': 'application/json' },
   });
 });

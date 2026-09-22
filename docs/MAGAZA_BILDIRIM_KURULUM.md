@@ -24,7 +24,17 @@ sorgulayabileceğimiz bir uç yok, tek tek sormak da pahalı.
 
 ## BAŞKANIN YAPACAĞI İKİ PANEL ADIMI
 
-### 1) Apple — App Store Server Notifications (asıl kıymetli olan)
+### 1) Apple — App Store Server Notifications ✅ KURULDU (22 Eyl 2026, doğrulandı)
+Üretim ve sandbox adresleri girildi. **Canlı kanıt:** Apple'ın kendi test bildirimi tetiklendi →
+teslimat sonucu **SUCCESS**, sürüm **2.0**, uygulama `app.mevzujsps.ios`; bizim kayda da düştü
+(`TEST: islem numarasi yok, gecildi`). İmza doğrulama kodu **gerçek Apple imzalı bildirimle**
+sınandı: zincir 3 sertifika, kök parmak izi tuttu, ES256 imza geçerli.
+*Not: Apple kaydettikten sonra adresi ~5 dakika yaymıyor; hemen denenirse
+`4040007 No App Store Server Notification URL found` döner — panik yok, bekle.*
+*Apple sürüm sormuyorsa sorun değil: yeni kurulan adresler V2 olarak çalışıyor (test bunu doğruladı).*
+
+<details><summary>Kurulum adımları (tekrar gerekirse)</summary>
+
 App Store Connect › Uygulama › **App Information** › sayfanın altındaki
 **App Store Server Notifications** bölümü:
 - **Production Server URL**: `https://vwmjrvolkbiofpkzzwef.supabase.co/functions/v1/magaza-bildirim`
@@ -32,6 +42,7 @@ App Store Connect › Uygulama › **App Information** › sayfanın altındaki
 - Sandbox URL'ine de aynı adres yazılabilir (zararı yok, test bildirimleri de aynı yere düşer).
 
 Kaydettikten sonra aynı ekrandaki test düğmesiyle deneme bildirimi gönderilebilir.
+</details>
 
 ### 2) Google — Real-time developer notifications
 Play Console › Uygulama › **Monetization setup** › **Real-time developer notifications**:
@@ -103,4 +114,6 @@ sonsuza kadar tekrar denerdi). Sahte bildirim zaten mağaza teyidinde eleniyor.
   alanı `"ok"` değilse bu uç bozulmuş demektir.
 - **Yeni Supabase fonksiyonu varsayılan olarak JWT ister.** Mağaza uçları `--no-verify-jwt`
   ile yayınlanmalı.
-- **Teyit alınamazsa 500 dönülür** (bilerek) → mağaza bildirimi tekrar gönderir, kaybolmaz.
+- **500 YALNIZ tekrar denemenin işe yarayacağı hâlde dönülür** (mağazadan teyit alınamadı).
+  Bozuk/boş gövdeye 500 dönmek sonsuz tekrar üretir, hiçbir şeyi düzeltmez → ona 200 denir.
+  Apple adresi kaydederken **boş gövdeli yoklama** gönderiyor; ilk sürümde ona hata dönüyorduk.
