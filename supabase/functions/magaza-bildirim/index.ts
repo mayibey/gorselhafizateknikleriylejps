@@ -349,6 +349,10 @@ async function hakkiKapat(
     durum: 'iade', detay: `${not} — anlik bildirim, premium kapatildi`, platform,
   });
   await db.from('uyelik_haklari').delete().eq(kosul.sutun, kosul.deger);
+  // Kalıcı iade işareti — indirim kapısı buna bakar (satın almayı engellemez, indirimi kapatır).
+  await db.from('iade_kaydi').insert({
+    user_id: userId, urun: haklar[0].urun, platform, kaynak: 'bildirim',
+  }).then(() => {}, () => {});
   const { data: kisi } = await db.from('profiles').select('ad, soyad').eq('id', userId).maybeSingle();
   const kim = [kisi?.ad, kisi?.soyad].filter(Boolean).join(' ') || userId.slice(0, 8);
   await baskanaBildir(db, '💳 İade — erişim kapatıldı', `${kim}: ${not}`);

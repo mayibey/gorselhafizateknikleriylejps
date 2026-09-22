@@ -313,6 +313,12 @@ Deno.serve(async (req) => {
       kapatilan.push({ user_id: s.user_id as string, urun: s.urun as string, platform: s.platform as string, not: sonuc.not });
       if (!kuru) {
         await db.from('uyelik_haklari').delete().eq('user_id', s.user_id).eq('urun', s.urun);
+        // Kalıcı iade işareti. KURU çalıştırmada YAZILMAZ — kuru kip yalnız rapordur; yazsaydı
+        // deneme sonuçları gerçek iade sanılır (22 Eyl'de tam bu oldu, bir müşteri haksız yere
+        // indirim engeline takıldı, elle temizlendi).
+        await db.from('iade_kaydi').insert({
+          user_id: s.user_id, urun: s.urun, platform: s.platform, kaynak: 'denetci',
+        }).then(() => {}, () => {});
       }
     }
   }
