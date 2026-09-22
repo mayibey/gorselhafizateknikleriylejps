@@ -211,10 +211,17 @@ Deno.serve(async (req) => {
   }
 
   let kuru = false;
+  let hizli = false;
   try {
     const g = await req.json();
     kuru = g?.kuru === true;
+    hizli = g?.hizli === true;
   } catch { /* gövdesiz çağrı → normal mod */ }
+
+  // HIZLI KİP (22 Eyl 2026): 15 dakikada bir çalışır, TEK Google çağrısıyla iade listesini çeker ve
+  // yalnız eşleşen jetonları kapatır. Amaç "iade anında kesilsin" — Apple/Google bildirim adresleri
+  // panelden kurulana kadar Android tarafı için anlık koruma sağlar. Kimseye tek tek sormaz,
+  // dolayısıyla ucuzdur; tam denetim yine her gece yapılır.
 
   const db = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SERVICE_ROLE_KEY')!);
   const { data, error } = await db
@@ -232,6 +239,18 @@ Deno.serve(async (req) => {
   const iadeJetonlari = await googleIadeJetonlari();
   for (const s of data ?? []) {
     let sonuc: Sonuc;
+    // Hızlı kipte mağazaya TEK TEK sorulmaz: yalnız iade listesiyle karşılaştırılır.
+    if (hizli) {
+      sonuc = iadeJetonlari.has(String(s.satin_alma_token))
+        ? { durum: 'IPTAL', not: 'Google iade listesinde' }
+        : { durum: 'GECERLI', not: 'hizli kip: iade listesinde yok' };
+      sayac[sonuc.durum] = (sayac[sonuc.durum] ?? 0) + 1;
+      if (sonuc.durum === 'IPTAL') {
+        kapatilan.push({ user_id: s.user_id as string, urun: s.urun as string, platform: s.platform as string, not: sonuc.not });
+        if (!kuru) await db.from('uyelik_haklari').delete().eq('user_id', s.user_id).eq('urun', s.urun);
+      }
+      continue;
+    }
     try {
       // Mağaza ETİKETTEN DEĞİL JETON ŞEKLİNDEN seçilir (2 Eyl 2026): 9 iOS satın alması
       // 'android' etiketiyle kayıtlıydı, Google'a sorulup "bilinmiyor" diye geçiliyordu →
@@ -256,7 +275,7 @@ Deno.serve(async (req) => {
   }
 
   const ozet = {
-    tarih: new Date().toISOString(), kuru, denetlenen: data?.length ?? 0, sayac, kapatilan,
+    tarih: new Date().toISOString(), kuru, hizli, denetlenen: data?.length ?? 0, sayac, kapatilan,
     google_iade_listesi: iadeListesiSaglik.durum, google_iade_sayisi: iadeJetonlari.size,
   };
   // Log tablosu varsa yaz (yoksa sessizce geç — denetim log yüzünden durmasın).

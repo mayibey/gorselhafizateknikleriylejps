@@ -295,7 +295,12 @@ function PaywallIcerik() {
     return temel?.offerToken;
   }
 
-  async function satinAl(urun: string, abonelik: boolean) {
+  /**
+   * @param degistirilecekJeton Android'de mevcut aboneliğin jetonu. Verilirse Google satın almayı
+   *   YENİ abonelik değil DEĞİŞTİRME sayar (kalan süre yeni plana aktarılır, çift abonelik olmaz).
+   *   iOS'ta gerekmez: aynı abonelik grubundaki plan değişimini StoreKit kendisi yönetir.
+   */
+  async function satinAl(urun: string, abonelik: boolean, degistirilecekJeton?: string) {
     if (!connected || islemUrun) return;
     setMesaj(null);
     setIslemUrun(urun);
@@ -326,6 +331,11 @@ function PaywallIcerik() {
               skus: [urun],
               subscriptionOffers: token ? [{ sku: urun, offerToken: token }] : [],
               obfuscatedAccountId: hesapId,
+              // replacementMode 2 = WITH_TIME_PRORATION: aylıktan kalan süre yıllığa gün olarak
+              // aktarılır, kullanıcı yeni dönemin ücretini hemen öder. Çift abonelik OLUŞMAZ.
+              ...(degistirilecekJeton
+                ? { purchaseToken: degistirilecekJeton, replacementMode: 2 }
+                : {}),
             },
           },
         });
@@ -342,6 +352,36 @@ function PaywallIcerik() {
       setIslemUrun(null);
       setMesaj({ tip: 'hata', metin: __DEV__ ? `İstek hatası: ${e instanceof Error ? e.message : e}` : 'İşlem başlatılamadı.' });
     }
+  }
+
+  /**
+   * AYLIKTAN YILLIĞA GEÇİŞ (22 Eyl 2026 — başkan: "aylıktan yıllığa seçeneği var mı?" → yoktu).
+   * Android'de Google'a "bu abonelik DEĞİŞİYOR" demek için mevcut aboneliğin jetonu şart. Jeton
+   * bulunamazsa satın alma BAŞLATILMAZ — yoksa Google bunu ikinci bir abonelik sayar ve kullanıcı
+   * aynı anda iki abonelik öder. iOS'ta jeton gerekmez, StoreKit plan değişimini kendi yönetir.
+   */
+  async function yilligaGec() {
+    if (ios) {
+      await satinAl(URUN_YILLIK, true);
+      return;
+    }
+    setIslemUrun(URUN_YILLIK);
+    let jeton: string | undefined;
+    try {
+      const alinmis = await getAvailablePurchases();
+      jeton = alinmis.find((x) => x.productId === URUN_AYLIK)?.purchaseToken ?? undefined;
+    } catch {
+      jeton = undefined;
+    }
+    setIslemUrun(null);
+    if (!jeton) {
+      setMesaj({
+        tip: 'hata',
+        metin: 'Mevcut aboneliğin bulunamadı. Önce "Satın alımlarımı geri yükle"yi dene.',
+      });
+      return;
+    }
+    await satinAl(URUN_YILLIK, true, jeton);
   }
 
   // iOS: Apple'ın NATIVE indirim/teklif kodu ekranını uygulama içinden açar (App Store offer code).
@@ -481,11 +521,23 @@ function PaywallIcerik() {
           <View style={styles.yukseltmeSar}>
             <AppText variant="kucuk" color="yesil" bold style={styles.sahipMetin}>
               {sahipAylik
-                ? 'Aylık planın aktif. İstersen ömür boyu tam erişime geçebilirsin.'
+                ? 'Aylık planın aktif. İstersen yıllığa ya da ömür boyu tam erişime geçebilirsin.'
                 : ios
                   ? 'Yıllık planın aktif. İstersen ömür boyu tam erişime geçebilirsin.'
                   : 'Yıllık planın aktif. İstersen aradaki farkı ödeyerek ömür boyuna geçebilirsin.'}
             </AppText>
+            {/* Aylık aboneye YILLIĞA geçiş de sunulur (22 Eyl 2026'da eklendi — daha önce aylık
+                abonenin tek çıkışı aboneliği iptal edip süresinin dolmasını beklemekti). */}
+            {sahipAylik ? (
+              <PlanButon
+                baslik="Yıllığa geç"
+                fiyat={fiyat(URUN_YILLIK)}
+                altYazi="kalan süren yıllığa aktarılır"
+                mesgul={islemUrun === URUN_YILLIK}
+                pasif={!connected || (!!islemUrun && islemUrun !== URUN_YILLIK)}
+                onPress={() => void yilligaGec()}
+              />
+            ) : null}
             <PlanButon
               baslik={ios || sahipAylik ? 'Ömür boyuna geç' : 'Ömür boyuna yükselt'}
               fiyat={fiyat(yukseltUrun)}
