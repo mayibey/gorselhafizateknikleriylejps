@@ -147,6 +147,9 @@ section{padding:var(--s6) 0;scroll-margin-top:78px}
   font-style:normal;font-family:"Playfair Display",Georgia,serif;font-size:1.12rem;color:#fff}
 @media (prefers-reduced-motion:no-preference){.halka{transition:--p .45s ease}}
 .yontem-notu{margin-top:var(--s2);font-size:.86rem;color:var(--muted)}
+.sonuc-alt{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;justify-content:space-between}
+.btn-ince{background:var(--card);border-color:var(--line);color:var(--navy);padding:12px 20px;min-height:46px;font-size:.88rem}
+.btn-ince:hover{border-color:var(--gold)}
 @media(max-width:1000px){.kartlar{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.kartlar{grid-template-columns:1fr}.kart.ana{gap:var(--s2)}}
 
@@ -163,12 +166,14 @@ section{padding:var(--s6) 0;scroll-margin-top:78px}
 .ara input{width:100%;min-height:52px;border:1px solid var(--line);background:var(--card);border-radius:11px;
   padding:14px 16px;font:400 .97rem Inter,sans-serif;color:var(--text)}
 .ara input::placeholder{color:var(--muted)}
+.suzgecler{display:flex;gap:10px;flex-wrap:wrap}
 .suzgec{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:5px}
 .suzgec button{border:0;background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap;
   font:600 .87rem/1 Inter,sans-serif;padding:11px 16px;border-radius:8px;min-height:42px}
 .suzgec button[aria-pressed="true"]{background:var(--navy);color:#fff}
 .sayac{font-size:.88rem;color:var(--muted);margin:0 0 var(--s2)}
-@media(max-width:700px){.arac{grid-template-columns:1fr}.suzgec{justify-content:space-between}.suzgec button{flex:1}}
+@media(max-width:700px){.arac{grid-template-columns:1fr}.suzgecler{flex-direction:column}
+.suzgec{justify-content:space-between}.suzgec button{flex:1}}
 
 .soru{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
 .soru-bas{width:100%;border:0;background:transparent;cursor:pointer;text-align:left;padding:18px 20px;
@@ -180,6 +185,8 @@ section{padding:var(--s6) 0;scroll-margin-top:78px}
 .rz{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
 .rz-mus{background:var(--goldBg);color:var(--amber)}
 .rz-bra{background:#E8EEF7;color:var(--navy2)}
+.rz-bir{background:var(--greenBg);color:#1E5720}
+.rz-ben{background:#FBF1DC;color:var(--amber)}
 .rz-kay{background:var(--cream);color:var(--muted);border:1px solid var(--line);text-transform:none;letter-spacing:0;font-weight:600}
 .soru-metin{font-weight:500;line-height:1.55;color:var(--text)}
 .ok{color:var(--muted);font-size:.8rem;padding-top:4px}
@@ -255,20 +262,20 @@ footer .kucuk{font-size:.8rem;width:100%;border-top:1px solid rgba(255,255,255,.
       <span class="etiket">19 Eylül 2026 · İptal edilen JSPS sınavı</span>
       <h1><span>Gerçek Sorular.</span><span>Gerçek Sonuç.</span></h1>
       <p class="giris">19 Eylül'de yapılan JSPS sınavındaki 720 mevzuat sorusunu kendi soru bankamızla
-        tek tek karşılaştırdık. <b>543 sorunun karşılığı bankamızda birebir vardı.</b></p>
+        tek tek karşılaştırdık. <b>614 sorunun karşılığı bankamızda vardı.</b></p>
 
       <div class="oran-kart">
-        <div class="buyuk">%75</div>
+        <div class="buyuk">%85</div>
         <div class="yan">
-          <b>Tutturma oranı</b>
-          <span>720 sorudan 543'ü bankamızda</span>
+          <b>Karşılık oranı</b>
+          <span>720 sorudan 614'ü bankamızda</span>
         </div>
       </div>
 
       <div class="metrik">
-        <div><b>9</b><span>farklı kitapçık incelendi</span></div>
         <div><b>720</b><span>mevzuat sorusu değerlendirildi</span></div>
-        <div><b>543</b><span>soru birebir eşleşti</span></div>
+        <div><b>543</b><span>soru <strong style="color:#fff">birebir</strong> eşleşti</span></div>
+        <div><b>71</b><span>soru çok benzer çıktı</span></div>
       </div>
 
       <p class="sinav-notu">Yeni JSPS sınavı <strong>10 Ekim Cumartesi, saat 10.00</strong>'da.</p>
@@ -280,7 +287,7 @@ footer .kucuk{font-size:.8rem;width:100%;border-top:1px solid rgba(255,255,255,.
     </div>
 
     <div class="tepe-gorsel" aria-hidden="true">
-      <div class="pusula"><div class="ic"><div><b>543</b><span>birebir eşleşme</span></div></div></div>
+      <div class="pusula"><div class="ic"><div><b>614</b><span>soruda karşılık</span></div></div></div>
     </div>
   </div>
 </div>
@@ -311,8 +318,11 @@ footer .kucuk{font-size:.8rem;width:100%;border-top:1px solid rgba(255,255,255,.
       </div>
 
       <div class="kartlar" id="kartlar"></div>
-      <p class="yontem-notu">Bu sonuç, 9 farklı sınav kitapçığındaki soruların soru bankamızla
-        tek tek karşılaştırılmasıyla hazırlanmıştır.</p>
+      <div class="sonuc-alt">
+        <p class="yontem-notu">Bu sonuç, 9 farklı sınav kitapçığındaki soruların soru bankamızla
+          tek tek karşılaştırılmasıyla hazırlanmıştır.</p>
+        <a class="btn btn-ince" id="pdfLink" href="#" download>Bu sınavın kitapçığını indir (PDF)</a>
+      </div>
     </div>
   </section>
 
@@ -321,7 +331,9 @@ footer .kucuk{font-size:.8rem;width:100%;border-top:1px solid rgba(255,255,255,.
       <div class="bas">
         <h2>Tutturduğumuz Sorular</h2>
         <p>Aşağıdaki soruların tamamı <strong>bizim soru bankamızdan</strong>. Her birinin yanında
-           doğru cevabı, dayandığı mevzuat maddesi ve sınavda hangi konunun ölçüldüğü yazıyor.</p>
+           doğru cevabı, dayandığı mevzuat maddesi ve sınavda hangi konunun ölçüldüğü yazıyor.
+           <strong>Birebir</strong> aynı bilgiyi ölçenler ile <strong>çok benzer</strong> olanlar
+           ayrı rozetle işaretli.</p>
       </div>
 
       <div class="mini" id="mini"><button type="button" id="miniBtn"></button></div>
@@ -331,10 +343,17 @@ footer .kucuk{font-size:.8rem;width:100%;border-top:1px solid rgba(255,255,255,.
           <label class="gizli" for="araKutu">Soru ara</label>
           <input id="araKutu" type="search" placeholder="Soru ara: anahtar kelime, kanun, madde…" />
         </div>
-        <div class="suzgec" role="group" aria-label="Bölüm süzgeci">
-          <button type="button" data-bolum="hepsi" aria-pressed="true">Tümü</button>
-          <button type="button" data-bolum="musterek" aria-pressed="false">Müşterek</button>
-          <button type="button" data-bolum="brans" aria-pressed="false">Branş</button>
+        <div class="suzgecler">
+          <div class="suzgec" id="sgBolum" role="group" aria-label="Bölüm süzgeci">
+            <button type="button" data-bolum="hepsi" aria-pressed="true">Tümü</button>
+            <button type="button" data-bolum="musterek" aria-pressed="false">Müşterek</button>
+            <button type="button" data-bolum="brans" aria-pressed="false">Branş</button>
+          </div>
+          <div class="suzgec" id="sgTip" role="group" aria-label="Eşleşme süzgeci">
+            <button type="button" data-tip="hepsi" aria-pressed="true">Hepsi</button>
+            <button type="button" data-tip="birebir" aria-pressed="false">Birebir</button>
+            <button type="button" data-tip="benzer" aria-pressed="false">Çok benzer</button>
+          </div>
         </div>
       </div>
 
@@ -348,7 +367,7 @@ footer .kucuk{font-size:.8rem;width:100%;border-top:1px solid rgba(255,255,255,.
   <section class="cagri">
     <div class="kap">
       <h2>Sen de doğru kaynakla hazırlan.</h2>
-      <p>Yukarıdaki soruların hepsi uygulamadaki bankadan çıktı. 115 kanun ve yönetmelik,
+      <p>Yukarıdaki 614 sorunun hepsi uygulamadaki bankadan çıktı. 115 kanun ve yönetmelik,
          1.511 görsel hafıza kartı — müşterek de branş da.</p>
       <div class="alt">
         <a class="btn btn-gold" href="#indir">Uygulamayı İndir</a>
@@ -416,22 +435,22 @@ const RUTBELER = {
 };
 /* Rakamlar ilgili PDF raporunun kapağından okunmuştur; elle yazılmamıştır. */
 const OLCUM = {
-  'subay-bakim':      {ad:'Subay — Bakım',      oran:81, mus:[40,34,85], bra:['Bakım Branş Mevzuatı',40,31,78],       top:[80,65,81]},
-  'subay-jandarma':   {ad:'Subay — Jandarma',   oran:78, mus:[40,34,85], bra:['Jandarma Branş Mevzuatı',40,28,70],    top:[80,62,78]},
-  'subay-havacilik':  {ad:'Subay — Havacılık',  oran:76, mus:[50,42,84], bra:['Havacılık Branş Mevzuatı',30,19,63],   top:[80,61,76]},
-  'subay-personel':   {ad:'Subay — Personel',   oran:76, mus:[40,34,85], bra:['Personel Branş Mevzuatı',40,27,68],    top:[80,61,76]},
-  'subay-maliye':     {ad:'Subay — Maliye',     oran:75, mus:[40,34,85], bra:['Maliye Branş Mevzuatı',40,26,65],      top:[80,60,75]},
-  'subay-mebs':       {ad:'Subay — MEBS',       oran:70, mus:[50,42,84], bra:['MEBS Branş Mevzuatı',30,14,47],        top:[80,56,70]},
-  'astsubay-mebs':    {ad:'Astsubay — MEBS',    oran:78, mus:[50,45,90], bra:['MEBS Branş Mevzuatı',30,17,57],        top:[80,62,78]},
-  'astsubay-jandarma':{ad:'Astsubay — Jandarma',oran:74, mus:[40,36,90], bra:['Jandarma Branş Mevzuatı',40,23,57],    top:[80,59,74]},
-  'uzman-erbas':      {ad:'Uzman Erbaş',        oran:71, mus:[40,29,72], bra:['Jandarma/SG Branş Mevzuatı',40,28,70], top:[80,57,71]}
+  'subay-bakim':{ad:'Subay — Bakım', oran:92.5, bir:65, ben:9, yok:6, mus:[40,35,87.5], bra:["Bakım Branş Mevzuatı",40,39,97.5], top:[80,74,92.5]},
+  'subay-jandarma':{ad:'Subay — Jandarma', oran:85.0, bir:62, ben:6, yok:12, mus:[40,35,87.5], bra:["Jandarma Branş Mevzuatı",40,33,82.5], top:[80,68,85.0]},
+  'subay-havacilik':{ad:'Subay — Havacılık', oran:85.0, bir:61, ben:7, yok:12, mus:[50,43,86.0], bra:["Havacılık Branş Mevzuatı",30,25,83.3], top:[80,68,85.0]},
+  'subay-personel':{ad:'Subay — Personel', oran:85.0, bir:61, ben:7, yok:12, mus:[40,35,87.5], bra:["Personel Branş Mevzuatı",40,33,82.5], top:[80,68,85.0]},
+  'subay-maliye':{ad:'Subay — Maliye', oran:85.0, bir:60, ben:8, yok:12, mus:[40,35,87.5], bra:["Maliye Branş Mevzuatı",40,33,82.5], top:[80,68,85.0]},
+  'subay-mebs':{ad:'Subay — MEBS', oran:73.8, bir:56, ben:3, yok:21, mus:[50,43,86.0], bra:["MEBS Branş Mevzuatı",30,16,53.3], top:[80,59,73.8]},
+  'astsubay-mebs':{ad:'Astsubay — MEBS', oran:85.0, bir:62, ben:6, yok:12, mus:[50,49,98.0], bra:["MEBS Branş Mevzuatı",30,19,63.3], top:[80,68,85.0]},
+  'astsubay-jandarma':{ad:'Astsubay — Jandarma', oran:88.8, bir:59, ben:12, yok:9, mus:[40,39,97.5], bra:["Jandarma Branş Mevzuatı",40,32,80.0], top:[80,71,88.8]},
+  'uzman-erbas':{ad:'Uzman Erbaş', oran:87.5, bir:57, ben:13, yok:10, mus:[40,33,82.5], bra:["Jandarma/SG Branş Mevzuatı",40,37,92.5], top:[80,70,87.5]},
 };
 
 const HARF='ABCDE';
 const $=(s)=>document.querySelector(s);
 const kac=(t)=>String(t??'').replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const bellek={};
-let rutbe='subay', brans='subay-bakim', sorular=[], bolum='hepsi', gosterilen=0;
+let rutbe='subay', brans='subay-bakim', sorular=[], bolum='hepsi', tip='hepsi', gosterilen=0;
 const ADIM=12;
 
 function seceneklerCiz(){
@@ -446,26 +465,29 @@ function seceneklerCiz(){
 function istatistikCiz(){
   const o=OLCUM[brans];
   $('#sinavAdi').textContent=o.ad;
+  $('#pdfLink').href=`pdf/${brans}.pdf`;
   const k=(ad,soru,dogru,yuzde)=>`<div class="kart">
       <div class="k-ad">${kac(ad)}</div>
       <div class="k-oran">%${yuzde}</div>
       <div class="k-alt">${dogru} / ${soru} soru</div></div>`;
+  const y=(n)=>String(n).replace('.',',');
   $('#kartlar').innerHTML =
     `<div class="kart ana">
-       <div class="halka" style="--p:${o.oran}"><i>%${o.oran}</i></div>
-       <div><div class="k-ad">Tutturma oranı</div>
-         <div class="k-oran">%${o.oran}</div>
-         <div class="k-alt">${o.top[1]} / ${o.top[0]} mevzuat sorusu</div></div>
+       <div class="halka" style="--p:${o.oran}"><i>%${y(o.oran)}</i></div>
+       <div><div class="k-ad">Karşılık oranı</div>
+         <div class="k-oran">${o.top[1]} / ${o.top[0]}</div>
+         <div class="k-alt">${o.bir} birebir · ${o.ben} çok benzer · ${o.yok} soruda karşılık yok</div></div>
      </div>`
-    + k('Müşterek bölüm', o.mus[0], o.mus[1], o.mus[2])
-    + k(o.bra[0], o.bra[1], o.bra[2], o.bra[3])
-    + k('Toplam', o.top[0], o.top[1], o.top[2]);
+    + k('Müşterek bölüm', o.mus[0], o.mus[1], y(o.mus[2]))
+    + k(o.bra[0], o.bra[1], o.bra[2], y(o.bra[3]))
+    + k('Toplam', o.top[0], o.top[1], y(o.top[2]));
 }
 
 function suzulmus(){
   const q=$('#araKutu').value.trim().toLocaleLowerCase('tr');
   return sorular.filter((s)=>{
     if(bolum!=='hepsi' && s.bolum!==bolum) return false;
+    if(tip!=='hepsi' && s.tip!==tip) return false;
     if(!q) return true;
     return `${s.soru} ${s.konu} ${s.kaynak} ${(s.siklar||[]).join(' ')}`.toLocaleLowerCase('tr').includes(q);
   });
@@ -474,8 +496,10 @@ function suzulmus(){
 function kart(s,sira){
   const siklar=(s.siklar||[]).map((m,i)=>
     `<li class="${i===s.dogru?'dogru':''}"><b>${HARF[i]}</b><span>${kac(m)}</span>${i===s.dogru?'<span class="tik" aria-label="doğru cevap">✓</span>':'<span></span>'}</li>`).join('');
-  const rozet = s.bolum==='musterek'
-    ? '<span class="rz rz-mus">Müşterek</span>' : '<span class="rz rz-bra">Branş</span>';
+  const rozet = (s.bolum==='musterek'
+      ? '<span class="rz rz-mus">Müşterek</span>' : '<span class="rz rz-bra">Branş</span>')
+    + (s.tip==='birebir'
+      ? '<span class="rz rz-bir">Birebir</span>' : '<span class="rz rz-ben">Çok benzer</span>');
   return `<article class="soru" data-acik="0">
     <h3 style="margin:0">
       <button class="soru-bas" type="button" aria-expanded="false" aria-controls="g${sira}">
@@ -511,9 +535,10 @@ function listeCiz(sifirla){
   $('#daha').hidden=kalan<=0;
   if(kalan>0) $('#daha').textContent=`Daha fazla soru göster (${kalan} soru daha)`;
   const q=$('#araKutu').value.trim();
-  $('#sayac').textContent = (q||bolum!=='hepsi')
+  const bir=sorular.filter((x)=>x.tip==='birebir').length;
+  $('#sayac').textContent = (q||bolum!=='hepsi'||tip!=='hepsi')
     ? `${v.length} soru listeleniyor · toplam ${sorular.length}`
-    : `${sorular.length} soru — hepsi soru bankamızdan`;
+    : `${sorular.length} soru — ${bir} birebir, ${sorular.length-bir} çok benzer`;
 }
 
 async function soruYukle(){
@@ -542,10 +567,16 @@ $('#miniBtn').addEventListener('click',()=>{
 });
 let zaman;
 $('#araKutu').addEventListener('input',()=>{ clearTimeout(zaman); zaman=setTimeout(()=>listeCiz(true),150); });
-document.querySelector('.suzgec').addEventListener('click',(e)=>{
+$('#sgBolum').addEventListener('click',(e)=>{
   const b=e.target.closest('[data-bolum]'); if(!b) return;
   bolum=b.dataset.bolum;
-  document.querySelectorAll('.suzgec button').forEach((x)=>x.setAttribute('aria-pressed',String(x===b)));
+  $('#sgBolum').querySelectorAll('button').forEach((x)=>x.setAttribute('aria-pressed',String(x===b)));
+  listeCiz(true);
+});
+$('#sgTip').addEventListener('click',(e)=>{
+  const b=e.target.closest('[data-tip]'); if(!b) return;
+  tip=b.dataset.tip;
+  $('#sgTip').querySelectorAll('button').forEach((x)=>x.setAttribute('aria-pressed',String(x===b)));
   listeCiz(true);
 });
 // Akordeon: tıklama + klavye (button zaten Enter/Space alır)
