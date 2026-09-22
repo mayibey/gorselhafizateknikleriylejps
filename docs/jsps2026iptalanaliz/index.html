@@ -109,7 +109,8 @@ a{color:var(--goldDark)}
 }
 
 /* ---- bölüm ortak ---- */
-section{padding:var(--s6) 0}
+section{padding:var(--s6) 0;scroll-margin-top:78px}
+#sorular,#secim,#yontem,#indir{scroll-margin-top:78px}
 @media(max-width:820px){section{padding:var(--s5) 0}}
 .bas{max-width:62ch;margin-bottom:var(--s4)}
 .bas h2{font-size:clamp(1.55rem,4.2vw,2.3rem)}
@@ -179,7 +180,7 @@ section{padding:var(--s6) 0}
 .rz{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
 .rz-mus{background:var(--goldBg);color:var(--amber)}
 .rz-bra{background:#E8EEF7;color:var(--navy2)}
-.rz-kay{background:var(--cream);color:var(--muted);border:1px solid var(--line)}
+.rz-kay{background:var(--cream);color:var(--muted);border:1px solid var(--line);text-transform:none;letter-spacing:0;font-weight:600}
 .soru-metin{font-weight:500;line-height:1.55;color:var(--text)}
 .ok{color:var(--muted);font-size:.8rem;padding-top:4px}
 @media (prefers-reduced-motion:no-preference){.ok{transition:transform .2s}}
@@ -556,9 +557,9 @@ $('#liste').addEventListener('click',(e)=>{
 });
 // Mobilde soru listesine gelince mini seçici belirsin
 const gozcu=new IntersectionObserver((g)=>{
-  $('#mini').classList.toggle('acik', !g[0].isIntersecting && g[0].boundingClientRect.top<0);
+  $('#mini').classList.toggle('acik', !g[0].isIntersecting && g[0].boundingClientRect.top < 0);
 },{threshold:0});
-gozcu.observe(document.getElementById('secim'));
+gozcu.observe(document.querySelector('.secim-kutu'));
 
 const hedef=location.hash.replace('#','');
 const acilis=Object.keys(RUTBELER).find((k)=>RUTBELER[k].branslar.some(([a])=>a===hedef));
