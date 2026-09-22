@@ -2572,3 +2572,42 @@ metin ayrıca güncel değildi (yalnız Google Play diyordu, App Store'u anmıyo
 `uygulama_ayar.apple_tuketim_rizasi = 1`.
 
 **KALAN:** OTA (paywall + yasal metin kullanıcıya gitmedi) · Google Pub/Sub (isteğe bağlı).
+
+## 22 Eylül (dördüncü tur) — İade kötüye kullanımı + Pub/Sub (commit ca178ca)
+
+Başkan: *"ömür boyu alan adam bir ay kullanıp sınavdan sonra iade alabiliyor, çok saçma değil mi?"*
+
+**ÖLÇÜM (tahmin değil):** 153 satın almada **3 iade (%2)**, **üçü de Apple**, Google'da **sıfır**.
+| Kişi | Kullanım | İade |
+|---|---|---|
+| Aslan | 4 günde 1.146 içerik | 3 gün sonra |
+| (isimsiz) | 494 içerik | ertesi gün |
+| Melike | 13 günde 2.509 içerik + 4 deneme | **sınavın ertesi günü** |
+iOS ömür boyu ortalaması **925 TL** (79 satış) → toplam kayıp **~2.900 TL**.
+Google'da iade olmamasının sebebi: Play'de 48 saatten sonra kararı **biz** veriyoruz.
+
+**YAPILDI — `iade_kaydi` + indirim kapısı.** İade eden kampanya/ilk giriş indiriminden ve indirim
+kodundan yararlanamaz; **satın alması engellenmez**, tam fiyattan alabilir. Sunucu taraflı →
+**OTA gerekmiyor**. *Adil kural:* iade ettikten **sonra** yeniden satın alan iadeci sayılmaz
+(Melike 20 Eyl iade → 22 Eyl tam fiyattan yeniden aldı → engeli yok).
+*TUZAK:* kuru denetim de "kapatılacaklar" üretiyor; geçmişi doldururken onları gerçek iade sanıp
+bir müşteriyi haksız yere engelledim. Temizlendi, kuru kipte artık iz yazılmıyor (3→3 doğrulandı).
+*Sınırı:* kişi yeni hesap açarsa işaret takip etmez.
+
+**REDDEDİLDİ — ömür boyu ürününü aboneliğe çevirme.** Başkana riskler anlatıldı, *"yapmayalım"*
+dedi. Gerekçe: Apple'da **en uzun abonelik 1 yıl** → "ömür boyu" diye bir abonelik yok, sattığın
+ürün değişir; tüketilebilir ürün yolu 3.1.1 ret riski taşır; ürün tipi sonradan değişmez (yeni
+ürün + fiyat/kampanya kurulumu baştan); Android'de böyle bir sorun yok. **Mevcut 137 üye
+etkilenmezdi** (yetki mağazada değil bizim veritabanımızda, hesaba bağlı) — risk orada değildi.
+
+**Apple iade penceresi:** pratikte **90 gün** (Apple'ın yayımladığı politika). Bir yıl sonra iade
+mümkün değil. Bizim üç vakamız da ≤10 gün. Google otomatik pencere **48 saat**.
+Süre tanımayan tek şey **banka itirazı (chargeback, ~120 gün)** — mağaza politikasından bağımsız,
+ama bizim tespitimiz onu da yakalıyor (voidedpurchases / revocation).
+
+**Pub/Sub:** `scripts/pubsub-kur.mjs` yazıldı (konu + Play yayıncı yetkisi + push aboneliği,
+tekrar çalıştırılabilir). **Başkanın iki konsol adımı bekliyor:** Pub/Sub API'sini aç +
+`play-dogrulama@mevzu-jsps.iam.gserviceaccount.com` hesabına **Pub/Sub Admin** rolü. Servis
+hesabının Google Cloud'da hiç yetkisi yok, betik bunu söyleyerek duruyor.
+
+**KALAN TEK BÜYÜK İŞ: OTA.** Bugünkü istemci düzeltmelerinin hiçbiri kullanıcıda değil.
