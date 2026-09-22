@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow" />
+<title>19 Eylül 2026 JSPS Sınavı — Bizdeki Hâli / Sınavdaki Hâli</title>
+<meta name="description" content="İptal edilen 19 Eylül 2026 JSPS sınavının 720 mevzuat sorusu, soru soru Mevzu JSPS soru bankasıyla karşılaştırıldı. Rütbe ve branş seç, karşılaştırmayı kendi gözünle gör." />
+<meta property="og:title" content="19 Eylül 2026 JSPS Sınavı — Bizdeki Hâli / Sınavdaki Hâli" />
+<meta property="og:description" content="9 sınav, 720 mevzuat sorusu tek tek karşılaştırıldı. Genel tutturma: %75." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lacivert:#0B1F3A; --lacivert2:#173B6B; --metin:#1B2A4A;
+    --krem:#F7F3EA; --kart:#FFFCF5; --kenar:#E7DCC7; --ayirici:#EFE6D6;
+    --soluk:#6E6047; --altin:#C9A227; --altinKoyu:#B88917; --altinYuzey:#F3E7C1;
+    --yesil:#2E7D32; --amber:#8A5A12; --golge:rgba(11,31,58,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--krem);color:var(--metin);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 16px 72px}
+
+  /* ---------- tepe ---------- */
+  .hero{background:linear-gradient(160deg,var(--lacivert) 0%,var(--lacivert2) 100%);color:#fff;
+    padding:44px 16px 120px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto -10% -40% -10%;height:220px;
+    background:radial-gradient(ellipse at center,rgba(201,162,39,.18),transparent 70%)}
+  .hero-ic{max-width:900px;margin:0 auto;position:relative;z-index:1}
+  .rozet{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,.16);
+    border:1px solid rgba(201,162,39,.45);color:var(--altinYuzey);
+    padding:6px 13px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.04em}
+  h1{font-family:"Playfair Display",Georgia,serif;font-weight:700;
+    font-size:clamp(1.9rem,5.2vw,3rem);line-height:1.15;margin:16px 0 10px;color:#fff}
+  .hero p{margin:0;color:#D9E2F0;max-width:620px;font-size:clamp(.95rem,2.4vw,1.05rem)}
+  .genel{display:flex;flex-wrap:wrap;gap:26px;margin-top:26px}
+  .genel div{min-width:96px}
+  .genel b{display:block;font-family:"Playfair Display",Georgia,serif;font-size:2rem;color:var(--altinYuzey);line-height:1}
+  .genel span{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:#B9C6DA}
+
+  /* ---------- seçici ---------- */
+  .secici{background:var(--kart);border:1px solid var(--kenar);border-radius:18px;
+    box-shadow:0 10px 30px var(--golge);padding:20px;margin-top:-84px;position:relative;z-index:2}
+  .etiket{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;color:var(--soluk);
+    font-weight:700;margin:0 0 9px}
+  .rutbeler{display:flex;gap:8px;background:var(--krem);border:1px solid var(--kenar);
+    border-radius:13px;padding:5px}
+  .rutbeler button{flex:1;border:0;background:transparent;color:var(--metin);cursor:pointer;
+    font:600 .93rem Inter,sans-serif;padding:11px 8px;border-radius:9px;transition:.16s}
+  .rutbeler button:hover{background:var(--ayirici)}
+  .rutbeler button[aria-selected="true"]{background:var(--lacivert);color:#fff;
+    box-shadow:0 4px 12px rgba(11,31,58,.25)}
+  .branslar{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .branslar button{border:1px solid var(--kenar);background:var(--krem);color:var(--metin);
+    cursor:pointer;font:600 .88rem Inter,sans-serif;padding:9px 15px;border-radius:999px;transition:.16s}
+  .branslar button:hover{border-color:var(--altin);background:#fff}
+  .branslar button[aria-selected="true"]{background:var(--altinYuzey);border-color:var(--altin);
+    color:var(--amber)}
+  .tekbrans{margin-top:18px;color:var(--soluk);font-size:.88rem}
+
+  /* ---------- sonuç ---------- */
+  .sonuc{margin-top:22px;background:var(--kart);border:1px solid var(--kenar);border-radius:18px;
+    box-shadow:0 10px 30px var(--golge);overflow:hidden}
+  .sonuc-ust{display:flex;flex-wrap:wrap;gap:22px;align-items:center;padding:24px;
+    border-bottom:1px solid var(--ayirici)}
+  .halka{--p:75;width:112px;height:112px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+    background:conic-gradient(var(--altin) calc(var(--p)*1%),var(--ayirici) 0)}
+  .halka i{width:88px;height:88px;border-radius:50%;background:var(--kart);display:grid;
+    place-items:center;font-style:normal;font-family:"Playfair Display",Georgia,serif;
+    font-size:1.65rem;color:var(--lacivert)}
+  .sonuc-ust h2{margin:0 0 4px;font-family:"Playfair Display",Georgia,serif;font-weight:700;
+    font-size:1.45rem;color:var(--lacivert)}
+  .sonuc-ust p{margin:0;color:var(--soluk);font-size:.93rem;max-width:430px}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{padding:11px 24px;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--soluk);
+    font-weight:700;border-bottom:1px solid var(--ayirici)}
+  tbody tr+tr td{border-top:1px solid var(--ayirici)}
+  tbody tr:last-child td{font-weight:700;background:var(--altinYuzey);color:var(--amber)}
+  .oran{font-weight:700;color:var(--lacivert)}
+  .dugmeler{display:flex;flex-wrap:wrap;gap:10px;padding:20px 24px 24px}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:700 .92rem Inter,sans-serif;
+    padding:12px 20px;border-radius:11px;transition:.16s;border:1px solid transparent}
+  .btn-ana{background:var(--lacivert);color:#fff}
+  .btn-ana:hover{background:var(--lacivert2)}
+  .btn-ikincil{background:var(--krem);border-color:var(--kenar);color:var(--metin)}
+  .btn-ikincil:hover{border-color:var(--altin)}
+  .onizleme{border-top:1px solid var(--ayirici);background:var(--krem)}
+  .onizleme iframe{display:block;width:100%;height:620px;border:0}
+  @media(max-width:760px){.onizleme{display:none}}
+
+  /* ---------- alt ---------- */
+  .aciklama{margin-top:34px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .kutu{background:var(--kart);border:1px solid var(--kenar);border-radius:14px;padding:18px 20px}
+  .kutu h3{margin:0 0 6px;font-size:.96rem;color:var(--lacivert)}
+  .kutu p{margin:0;font-size:.89rem;color:var(--soluk)}
+  .cagri{margin-top:34px;background:linear-gradient(160deg,var(--lacivert),var(--lacivert2));
+    color:#fff;border-radius:18px;padding:30px 26px;text-align:center}
+  .cagri h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;margin:0 0 8px;font-size:1.5rem}
+  .cagri p{margin:0 auto 18px;color:#D9E2F0;max-width:480px;font-size:.95rem}
+  .magazalar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .magazalar a{background:var(--altin);color:var(--lacivert);text-decoration:none;
+    font:700 .92rem Inter,sans-serif;padding:12px 22px;border-radius:11px}
+  .magazalar a:hover{background:var(--altinKoyu);color:#fff}
+  footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--kenar);
+    color:var(--soluk);font-size:.84rem;text-align:center}
+  footer a{color:var(--altinKoyu)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-ic">
+    <span class="rozet">19 EYLÜL 2026 · SINAV İPTAL EDİLDİ</span>
+    <h1>Sınav iptal oldu.<br>Peki sorular bizde var mıydı?</h1>
+    <p>İptal edilen sınavın <strong>9 ayrı kitapçığı</strong>, toplam <strong>720 mevzuat sorusu</strong>
+       tek tek soru bankamızla karşılaştırıldı. Sonuçları saklamıyoruz — aşağıdan rütbeni ve branşını
+       seç, karşılaştırmayı kendi gözünle gör.</p>
+    <div class="genel">
+      <div><b>%75</b><span>Genel tutturma</span></div>
+      <div><b>543</b><span>Birebir çıkan soru</span></div>
+      <div><b>720</b><span>İncelenen soru</span></div>
+      <div><b>9</b><span>Sınav kitapçığı</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="secici">
+    <p class="etiket">1 · Rütbeni seç</p>
+    <div class="rutbeler" id="rutbeler" role="tablist"></div>
+    <p class="etiket" style="margin-top:20px">2 · Branşını seç</p>
+    <div class="branslar" id="branslar" role="tablist"></div>
+    <p class="tekbrans" id="tekbrans" hidden></p>
+  </section>
+
+  <section class="sonuc" id="sonuc" hidden>
+    <div class="sonuc-ust">
+      <div class="halka" id="halka"><i id="halkaYazi">%0</i></div>
+      <div>
+        <h2 id="sonucBaslik"></h2>
+        <p id="sonucOzet"></p>
+      </div>
+    </div>
+    <table>
+      <thead><tr><th>Bölüm</th><th>Soru</th><th>Birebir</th><th>Kısmi</th><th>Oran</th></tr></thead>
+      <tbody id="tablo"></tbody>
+    </table>
+    <div class="dugmeler">
+      <a class="btn btn-ana" id="acPdf" href="#" target="_blank" rel="noopener">Karşılaştırmayı aç →</a>
+      <a class="btn btn-ikincil" id="indirPdf" href="#" download>PDF olarak indir</a>
+    </div>
+    <div class="onizleme"><iframe id="onizleme" title="Karşılaştırma önizleme"></iframe></div>
+  </section>
+
+  <div class="aciklama">
+    <div class="kutu">
+      <h3>“Birebir” ne demek?</h3>
+      <p>Soru cümlesinin harfi harfine aynı olması değil — <strong>cevabın aynı bilgiye çıkması</strong>.
+         Bizim soruyu çalışmış bir aday sınavdaki doğru şıkkı işaretleyebiliyorsa birebir sayıldı.</p>
+    </div>
+    <div class="kutu">
+      <h3>İlk 20 soru neden yok?</h3>
+      <p>Sınavın ilk 20 sorusu genel kültür / genel yetenek / Anayasa. Uygulamamızda bu konular hiç
+         olmadığı için değerlendirmeye alınmadı. Ölçüm <strong>21–100 arası 80 mevzuat sorusu</strong> üzerinden.</p>
+    </div>
+    <div class="kutu">
+      <h3>Hepsini tek dosyada isteyen</h3>
+      <p>Dokuz sınavın tamamı, bölüm bölüm tek bir kitapta:
+         <a href="pdf/tum-branslar.pdf" target="_blank" rel="noopener">Tüm Branşlar — 2026 Sınav Analizi (PDF)</a></p>
+    </div>
+  </div>
+
+  <section class="cagri">
+    <h3>Sınav ertelendi, hazırlık ertelenmedi</h3>
+    <p>Yukarıdaki sorular bir soru bankasının içinden çıktı. Yeni tarih açıklandığında
+       hazır olmak isteyenler için aynı banka uygulamada seni bekliyor.</p>
+    <div class="magazalar">
+      <a href="https://play.google.com/store/apps/details?id=app.mevzujsps.android" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://apps.apple.com/tr/app/id6787908212" target="_blank" rel="noopener">App Store</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Mevzu · JSPS · <a href="mailto:iletisim@mevzujsps.com">iletisim@mevzujsps.com</a><br>
+    Bağımsız bir sınav hazırlık uygulamasıdır; hiçbir resmî kurumla bağlantılı değildir.
+  </footer>
+</div>
+
+<script>
+const VERI = {
+  subay: {
+    ad: 'Subay',
+    branslar: [
+      { anahtar:'subay-bakim',     ad:'Bakım' },
+      { anahtar:'subay-jandarma',  ad:'Jandarma' },
+      { anahtar:'subay-havacilik', ad:'Havacılık' },
+      { anahtar:'subay-personel',  ad:'Personel' },
+      { anahtar:'subay-maliye',    ad:'Maliye' },
+      { anahtar:'subay-mebs',      ad:'MEBS' }
+    ]
+  },
+  astsubay: {
+    ad: 'Astsubay',
+    branslar: [
+      { anahtar:'astsubay-mebs',     ad:'MEBS' },
+      { anahtar:'astsubay-jandarma', ad:'Jandarma' }
+    ]
+  },
+  uzmanerbas: {
+    ad: 'Uzman Erbaş',
+    not: 'Uzman erbaş sınavı tek kitapçık — Jandarma ve Sahil Güvenlik birlikte.',
+    branslar: [ { anahtar:'uzman-erbas', ad:'Jandarma / Sahil Güvenlik' } ]
+  }
+};
+
+/* Rakamların tamamı ilgili PDF'in kapağından okunmuştur — elle yazılmamıştır. */
+const OLCUM = {
+  'subay-bakim':     { baslik:'2026 Subay Bakım Sınavı',     oran:81, satir:[['Müşterek Mevzuat',40,34,1,'%85'],['Bakım Branş Mevzuatı',40,31,8,'%78'],['Karma (müşterek + branş)',80,65,9,'%81']] },
+  'subay-jandarma':  { baslik:'2026 Subay Jandarma Sınavı',  oran:78, satir:[['Müşterek Mevzuat',40,34,1,'%85'],['Jandarma Branş Mevzuatı',40,28,5,'%70'],['Karma (müşterek + branş)',80,62,6,'%78']] },
+  'subay-havacilik': { baslik:'2026 Subay Havacılık Sınavı', oran:76, satir:[['Müşterek Mevzuat',50,42,1,'%84'],['Havacılık Branş Mevzuatı',30,19,6,'%63'],['Karma (müşterek + branş)',80,61,7,'%76']] },
+  'subay-personel':  { baslik:'2026 Subay Personel Sınavı',  oran:76, satir:[['Müşterek Mevzuat',40,34,1,'%85'],['Personel Branş Mevzuatı',40,27,6,'%68'],['Karma (müşterek + branş)',80,61,7,'%76']] },
+  'subay-maliye':    { baslik:'2026 Subay Maliye Sınavı',    oran:75, satir:[['Müşterek Mevzuat',40,34,1,'%85'],['Maliye Branş Mevzuatı',40,26,7,'%65'],['Karma (müşterek + branş)',80,60,8,'%75']] },
+  'subay-mebs':      { baslik:'2026 Subay MEBS Sınavı',      oran:70, satir:[['Müşterek Mevzuat',50,42,1,'%84'],['MEBS Branş Mevzuatı',30,14,2,'%47'],['Karma (müşterek + branş)',80,56,3,'%70']] },
+  'astsubay-mebs':     { baslik:'2026 Astsubay MEBS Sınavı',     oran:78, satir:[['Müşterek Mevzuat',50,45,4,'%90'],['MEBS Branş Mevzuatı',30,17,2,'%57'],['Karma (müşterek + branş)',80,62,6,'%78']] },
+  'astsubay-jandarma': { baslik:'2026 Astsubay Jandarma Sınavı', oran:74, satir:[['Müşterek Mevzuat',40,36,3,'%90'],['Jandarma Branş Mevzuatı',40,23,9,'%57'],['Karma (müşterek + branş)',80,59,12,'%74']] },
+  'uzman-erbas':       { baslik:'2026 Uzman Erbaş Sınavı',       oran:71, satir:[['Müşterek Mevzuat',40,29,4,'%72'],['Jandarma/SG Branş Mevzuatı',40,28,9,'%70'],['Karma (müşterek + branş)',80,57,13,'%71']] }
+};
+
+const $ = (s) => document.querySelector(s);
+let rutbe = 'subay', brans = null;
+
+function rutbeleriCiz() {
+  $('#rutbeler').innerHTML = Object.entries(VERI).map(([k, v]) =>
+    `<button role="tab" data-rutbe="${k}" aria-selected="${k === rutbe}">${v.ad}</button>`).join('');
+}
+function branslariCiz() {
+  const r = VERI[rutbe];
+  $('#branslar').innerHTML = r.branslar.map((b) =>
+    `<button role="tab" data-brans="${b.anahtar}" aria-selected="${b.anahtar === brans}">${b.ad}</button>`).join('');
+  const not = $('#tekbrans');
+  if (r.not) { not.textContent = r.not; not.hidden = false; } else { not.hidden = true; }
+}
+function sonucCiz() {
+  const o = OLCUM[brans];
+  if (!o) { $('#sonuc').hidden = true; return; }
+  $('#sonuc').hidden = false;
+  $('#halka').style.setProperty('--p', o.oran);
+  $('#halkaYazi').textContent = '%' + o.oran;
+  $('#sonucBaslik').textContent = o.baslik;
+  const karma = o.satir[o.satir.length - 1];
+  $('#sonucOzet').textContent =
+    `${karma[1]} mevzuat sorusunun ${karma[2]} tanesi bankamızda birebir vardı; ${karma[3]} tanesi kısmi eşleşti.`;
+  $('#tablo').innerHTML = o.satir.map((s) =>
+    `<tr><td>${s[0]}</td><td>${s[1]}</td><td>${s[2]}</td><td>${s[3]}</td><td class="oran">${s[4]}</td></tr>`).join('');
+  const yol = `pdf/${brans}.pdf`;
+  $('#acPdf').href = yol;
+  $('#indirPdf').href = yol;
+  // Önizleme yalnız geniş ekranda yüklenir (mobilde CSS ile gizli, boşuna indirilmesin).
+  if (window.matchMedia('(min-width:761px)').matches) $('#onizleme').src = yol + '#view=FitH';
+}
+function sec(yeniRutbe, yeniBrans) {
+  rutbe = yeniRutbe;
+  brans = yeniBrans ?? VERI[rutbe].branslar[0].anahtar;
+  rutbeleriCiz(); branslariCiz(); sonucCiz();
+  history.replaceState(null, '', '#' + brans);
+}
+$('#rutbeler').addEventListener('click', (e) => {
+  const d = e.target.closest('[data-rutbe]'); if (d) sec(d.dataset.rutbe);
+});
+$('#branslar').addEventListener('click', (e) => {
+  const d = e.target.closest('[data-brans]'); if (d) sec(rutbe, d.dataset.brans);
+});
+
+// Adres çubuğunda branş varsa onunla aç (paylaşılan link doğrudan o branşı gösterir).
+const hedef = location.hash.replace('#', '');
+const baslangicRutbe = Object.keys(VERI).find((k) => VERI[k].branslar.some((b) => b.anahtar === hedef));
+sec(baslangicRutbe ?? 'subay', baslangicRutbe ? hedef : null);
+</script>
+</body>
+</html>
