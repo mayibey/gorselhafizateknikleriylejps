@@ -2709,3 +2709,16 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   tek temiz döngü basıldı ve `eas update:list` ile 8/8 doğrulandı.
 - **SIRADA:** Jandarma kitabını yükle (`--brans jandarma` → `altin_jandarma`), sonra 13 branş kitabı; branş kitabı
   yüklenince o branşın listesinde müşterek satırı sira=-1'e çekilir (betik yapıyor).
+
+### 24 Eylül 2026 — Personel Altın Özet basıldı ve YÜKLENDİ (commit 2e48c29)
+
+- `icerik/ozet_P_personel.md`: 14 mevzuat, 152 altın nokta, 39 ★ (yalnız fiilen çıkmış), 88 sayfa, 17 yer imi.
+  Ölçüm: Tuzak %100 · Ne demek %100 · Örnek %28. `BRANSLAR`'a `personel` eklendi.
+- Sunucu: `pdf/personel/JSPS-2026-Altin-Ozet-personel.pdf` (3,5→2,4 MB); satırlar `altin_personel` + `personel`.
+- Kaynak dersleri: 926 paketinin başlığında numara yok → süzgeç tüm çıkmışı düşürdü, ham köklerden okundu.
+  657 paketinde m.59/m.122 yoktu, Uzman Jandarma paketinde 14 madde vardı → bot arşivinden (`maddeler.json`) çekildi.
+  Atama Yön./Astsubay Sicil paketlerinin "çıkmış" listesi "subay/astsubay" kelimesi yüzünden 4678 sorularıyla doluydu;
+  gerçek çıkmış yalnız m.18 ve m.25.
+  Subay Sicil Yön. m.105 (üstçavuş, 6-9. yıl) eski metin; sınav 926 m.109'u (kıdemli çavuş, 4-7. yıl) sorar — kitapta uyarıldı.
+- Ayrıca: Google OAuth marka doğrulama maili (mevzu-jsps projesi, son tarih 22 Ara 2026) hafızaya not edildi; Cloud Console işi başkanda.
+- **SIRADA:** ikmal(16) · bakım(14) · istihkam(10) · maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
