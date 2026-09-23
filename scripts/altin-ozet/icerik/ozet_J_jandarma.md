@@ -161,3 +161,403 @@ Kapsam: Jandarma branşının emirde sorumlu olduğu 42 mevzuat — ceza muhakem
 - "Uzlaşma teklifine cevap verilmezse kabul sayılır." → **Reddedilmiş** sayılır (m.253/4).
 - "Adlî kolluk her işte savcının emrindedir." → Adlî görev dışındaki hizmetlerde **üstlerinin** emrindedir (m.164/3).
 - "İtiraz doğrudan üst mercie yapılır." → Önce **kararı veren mercie** yapılır (m.268/1).
+
+---
+
+## 1774 sayılı Kimlik Bildirme Kanunu — Sınav kapsamı: m.1, 2, 3, 4, 6, 7, 9, 10, 11, 15, Ek 1, Ek 3
+
+### Bu mevzuattan nasıl soruluyor
+- Kısa bir kanun, sorular hep aynı üç yerden geliyor: **kapsam dışı yerler** (askerî tesisler, ordu evleri), **bildirim süreleri** (24 saat, 3 gün, 30 gün) ve **kim bildirir** (işletici, aile reisi, yönetici).
+- "Hangisi kapsamda değildir" kalıbı: otel, pansiyon, huzurevi, öğrenci yurdu sayılır; **orduevi** kapsam dışıdır. 2026 uzman erbaş kitapçığı tam bu ayrımı sordu.
+- Süre sorusu: "misafir kaç günden fazla kalırsa aile reisi bildirir" → **30 gün**.
+
+### Altın noktalar
+- ★ çıkmış **Kapsam dışı yerler** — Her türlü konaklama, dinlenme, bakım ve tedavi tesisleri, marinalar, liman tesisleri, işyerleri ve konutlar kapsamdadır; **askerî konaklama, dinlenme ve kamp tesisleri ile ordu evleri** kapsam dışıdır (m.1). · **Ne demek:** Kanun sivil tesisleri sayar; askerî tesis ve orduevi bu kanunla değil kendi mevzuatıyla yürür. · *Örnek:* Orduevinde kalan misafir için kimlik bildirimi yapılmaz; aynı kişi otelde kalırsa yapılır. · *Tuzak:* orduevi de kapsamda gösterilir — 2026'da özel sağlık müessesesi doğru cevaptı, dört askerî tesis çeldiriciydi.
+- **Konaklama yerlerinin yükümlülüğü** — Otel, motel, pansiyon, kamp, tatil köyü, marina, özel sağlık müesseseleri, dinlenme ve huzur evleri, dinî ve hayır kurumlarının sosyal tesislerinin **sorumlu işleticileri**; ücretli-ücretsiz, gündüz-gece fark etmeksizin yatacak yer gösterdikleri **yerli veya yabancı herkesin** kimlik ve geliş-ayrılış kayıtlarını **günü gününe** tutmak ve **genel kolluğun her an incelemesine hazır** bulundurmak zorundadır (m.2). · **Ne demek:** Kayıt ertesi güne bırakılamaz; kolluk gece de gelip bakabilir. · *Tuzak:* "yalnız ücretli konaklamalarda" veya "yalnız yabancılar için" denir.
+- **İşletici kimliğinin bildirimi** — Tesislerin sorumlu işleticilerinin kimlikleri, **tesis açılmadan önce** müessese sahibi veya kanunî temsilcisi tarafından **en yakın kolluk örgütüne** bildirilir; işletici değişirse **24 saat** içinde bildirilir. İşletici görevlerini yöneticiye devredebilir; bu hâlde **müştereken sorumlu** olurlar. Kamu tesislerinin amir ve müdürleri işletici gibi sorumludur (m.3). · **Ne demek:** Devir sorumluluğu paylaştırır, ortadan kaldırmaz. · *Tuzak:* "devirle işleticinin sorumluluğu biter" denir.
+- **Çalışanların bildirimi** — Sorumlu işleticiler, sürekli veya geçici çalıştırdıkları kimseleri ve ayrılışlarını kimlik bildirme belgesiyle **24 saat** içinde en yakın kolluk örgütüne bildirir; bildirilenlere işletici tarafından onaylı bir **kimlik kartı** verilir ve kolluk her istediğinde gösterilmesi zorunludur (m.4). · **Ne demek:** Konaklama tesisi çalışanı için süre 24 saattir; diğer işyerlerinden (3 gün) daha kısadır. · *Tuzak:* süre 3 gün yapılır.
+- **Diğer işyeri ve yurtların bildirimi** — Kanunun 2. maddesi dışındaki her çeşit ticaret ve sanat amaçlı işyerlerinde çalışanlar ve barındırılanlar için işyerinin sorumlu işleticisi; **öğrenci yurtlarında** çalışanlar ve kalan öğrenciler için yurdun sorumlu işleticisi tarafından kimlik belgesi **üç gün** içinde genel kolluğa verilir. Bildirimler kolluğa verilmeden önce **mahalle veya köy muhtarına onaylatılır**; **elektronik ortamda** yapılan bildirimlerde muhtar onayı aranmaz (m.6). · **Ne demek:** Kâğıt bildirim muhtardan geçer, e-bildirim geçmez. · *Tuzak:* "elektronik bildirimde de muhtar onayı şart" denir.
+- ★ çıkmış **Misafir ve mevsimlik göç bildirimi** — Konutlarda **30 günden fazla** kalacak misafir için ve yaylak-kışlak gibi yerlere mevsimlik göçenler için **aile reisi** tarafından bildirim **üç gün** içinde kolluğa verilir; mevsimlik tarım işçilerinin bildirimi ise **doğrudan kolluk kuvvetlerince** alınır (m.7). · **Ne demek:** İki ayrı sayı: misafir eşiği 30 gün, bildirim süresi 3 gün. · *Örnek:* Yazlığa gelen akraba 25 gün kalırsa bildirim gerekmez; 35 gün kalacaksa ilk üç gün içinde bildirilir. · *Tuzak:* 30 gün yerine 15, 45, 60 verilir.
+- **Kimliğini ispat edemeyen** — Bildirim yükümlüsü olanlar, kimliğini nüfus cüzdanı ve diğer resmî geçerli belgelerle **ispat edemeyen** kimseleri tesislerinde **barındıramaz**, konut ve işyerlerinde **çalıştıramaz** (m.9). · **Ne demek:** Belgesiz kişiye oda verilmez, iş verilmez. · *Tuzak:* "sözlü beyanla yetinilebilir" denir.
+- **Yatısız işyerlerinde kalma** — Kahvehane, oyun salonu, kulüp, lokal gibi yatısız işyerlerinde özel kanunları izin verirse **ancak sahipleri ve çalıştırdıkları** yatabilir, başkaları kalamaz. İskele, istasyon, hava meydanı, garaj, benzin istasyonu gibi ulaşım merkezleri ile fuar-panayır-pazar gibi zorunluluk olan yerlerde **sabahçı kahvesi** ve benzeri tesislere, **kolluğun görüşü alınarak belediye veya il özel idaresince** izin verilebilir; **buralarda kalanlar için bildirim yapılmaz** (m.10). · **Ne demek:** Sabahçı kahvesinin izni belediyeden, görüşü kolluktan. · *Tuzak:* izin makamı kolluk yapılır.
+- **Apartman yöneticisi ve kapıcı** — Kat mülkiyetine tâbi taşınmaz yöneticileri ve kapıcıları, binada **bildirim dışı kimselerin** oturup oturmadığını, garaj-kömürlük-boş daire gibi bölümlere **saklanma ve eşya gizleme** olup olmadığını kontrolle yükümlüdür; kat sahipleri, kiracılar ve çalışanlar yöneticiye yardımcı olmak zorundadır; aykırılıkları ve şüpheli hususları genel kolluğa bildirir (m.11). · **Ne demek:** Yönetici ve kapıcı, kolluğun bina içindeki gözü olarak tanımlanmıştır. · *Tuzak:* yükümlülük yalnız kapıcıya yüklenir.
+- **İdarî para cezası** — m.3 ve m.4'teki yükümlülüklerden her birine aykırı hareket edenlere idarî para cezası verilir (m.15). · **Ne demek:** İşletici kimliğini bildirmeme ve çalışan bildirimi yapmama ayrı ayrı cezalandırılır.
+- **Bilgisayar terminali zorunluluğu** — Konaklama tesisleri tüm kayıtlarını **bilgisayarda günü gününe** tutmak ve genel kolluğun terminallerine bağlanarak bilgileri **anlık** bildirmek zorundadır; terminale **bağlanmayana** daha ağır, **anlık veri göndermeyen veya gerçeğe aykırı kayıt tutana** daha hafif idarî para cezasını **mülki idare amiri** verir; aynı takvim yılında tekrarda ceza **iki katı**, **dördüncü** kez işlenirse **işletme ruhsatı iptal** edilir; ceza tebliğden itibaren **bir ay** içinde ödenir (Ek m.1). · **Ne demek:** Kademe sırası: bağlanmama > anlık göndermeme; tekrar katlar, dördüncüde ruhsat gider. · *Tuzak:* ceza makamı kolluk yapılır ya da ruhsat iptali "ikinci tekrarda" denir.
+- **Araç ve deniz aracı kiralama** — Kiralama işletmeleri; kiralanan araç bilgileri, kiralayanların kimlik bilgileri ve kira sözleşmesini bilgisayarda tutmak, kolluk terminallerine bağlanmak, araç teslimi esnasında kiralayan ve araç bilgilerini **anlık** bildirmek ve araçlarda **GPS cihazı** bulundurup konum kayıtlarını **üç yıl** saklamak zorundadır. Kiralamada **gerçeğe aykırı kimlik kullananlar** ile bu bilgileri hukuka aykırı kullanan, veren, yayan veya ele geçirenler **TCK'ya göre** cezalandırılır (Ek m.3). · **Ne demek:** Kiralık araçla işlenen suçların takibi için getirilmiş bir zincir: kimlik + anlık bildirim + üç yıllık konum kaydı. · *Tuzak:* saklama süresi bir yıl yapılır.
+
+### Sayılar ve süreler
+| Konu | Değer | Madde |
+|---|---|---|
+| İşletici değişikliği bildirimi | 24 saat | m.3 |
+| Konaklama tesisi çalışanı bildirimi | 24 saat | m.4 |
+| Diğer işyeri / yurt bildirimi | 3 gün | m.6 |
+| Misafir bildirim eşiği / süresi | 30 günden fazla / 3 gün | m.7 |
+| Terminal cezasında tekrar / ruhsat iptali | 2 kat / 4. kez | Ek m.1 |
+| Ceza ödeme süresi | 1 ay | Ek m.1 |
+| Kiralık araç konum kaydı | 3 yıl | Ek m.3 |
+
+### Yetkili makamlar
+| İş | Yetkili | Madde |
+|---|---|---|
+| Kimlik bildirimlerinin alınması | En yakın genel kolluk örgütü | m.3, 4, 6, 7 |
+| Kâğıt bildirimin onayı | Mahalle / köy muhtarı | m.6 |
+| Sabahçı kahvesi izni | Belediye veya il özel idaresi (kolluk görüşüyle) | m.10 |
+| Terminal cezaları | Mülki idare amiri | Ek m.1 |
+| Mevsimlik tarım işçisi bildirimi | Doğrudan kolluk | m.7 |
+
+### "Yanlıştır/değildir" tuzakları
+- "Orduevleri kanun kapsamındadır." → **Kapsam dışıdır** (m.1).
+- "Konaklama çalışanı 3 gün içinde bildirilir." → **24 saat** (m.4).
+- "Misafir 15 günden fazla kalırsa bildirilir." → **30 günden fazla** (m.7).
+- "Elektronik bildirimde de muhtar onayı gerekir." → **Gerekmez** (m.6).
+- "Sabahçı kahvesine izni kolluk verir." → **Belediye / il özel idaresi** verir, kolluk görüş bildirir (m.10).
+
+---
+
+## 2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu — Sınav kapsamı: m.2-8, 11, 12, 22-27
+
+### Bu mevzuattan nasıl soruluyor
+- Üç ana damar: **tanımlar** (mülki amir, güvenlik amirleri), **yasak yerler** (park, mabet, kamu binası, TBMM'ye 1 km) ve **dağıtma usulü** (kim karar verir, ihtar ne zaman gerekmez).
+- "Hangisi yanlıştır" kalıbında düzenleme kurulunun sorumluluğu ve yer belirleme yetkisi bozuluyor: "yetki belediyededir" (yanlış — mülki amirdedir), "sorumluluk toplantı bitince biter" (yanlış — topluluk dağılıncaya kadar sürer).
+- 2026 uzman erbaş kitapçığı doğrudan m.24'ün zor kullanma sıralamasını ve ilçe-belediye sınırı istisnasını sordu.
+
+### Altın noktalar
+- **Toplantı ve gösteri yürüyüşü tanımı** — Her ikisi de belirli konular üzerinde **halkı aydınlatmak ve kamuoyu yaratmak** suretiyle o konuyu benimsetmek için gerçek ve tüzel kişilerce düzenlenir; toplantı **açık ve kapalı yer** toplantısıdır, gösteri yürüyüşü ise yürüyüştür (m.2/a,b). · **Ne demek:** Amaç ortak, biçim farklı: biri durarak, diğeri yürüyerek. · *Tuzak:* toplantının yalnız açık yerde olduğu söylenir.
+- ★ çıkmış **Mülki amir ve güvenlik amirleri** — Mahallin en büyük mülki amiri: illerde **vali**, ilçelerde **kaymakam**. Mahallin güvenlik amirleri: illerde **il emniyet müdürü ve il jandarma komutanı**; ilçelerde ilçe emniyet amiri veya komiseri ve **ilçe jandarma komutanı**; Sahil Güvenlik için bölge, grup, karakol ve gemi/bot komutanları. **Bir ile bağlı ilçelerin, o ilin belediye sınırları içindeki kısımlarında mülki amir ilin valisidir** (m.2/c,d). · **Ne demek:** Büyükşehir sınırı içindeki ilçede kaymakam değil vali yetkilidir. · *Örnek:* İstanbul'da Kadıköy'de yapılacak gösteri için muhatap Kadıköy Kaymakamı değil İstanbul Valisidir. · *Tuzak:* "her ilçede kaymakam" denir — 2026'da doğru cevap tam bu istisnaydı.
+- **Hak ve yabancılar** — Herkes **önceden izin almaksızın**, silahsız ve saldırısız, kanunların suç saymadığı amaçlarla toplantı ve gösteri düzenleme hakkına sahiptir. **Yabancıların** toplantı düzenlemesi **İçişleri Bakanlığının iznine** bağlıdır; yabancıların topluluğa hitap etmesi, afiş-pankart-flama taşıması ise mülki amirliğe **en az kırk sekiz saat önce** bildirimle mümkündür (m.3). · **Ne demek:** Vatandaş için bildirim, yabancı için düzenlemede izin + hitapta bildirim. · *Tuzak:* "vatandaş da izin alır" ya da "yabancı hiç düzenleyemez" denir.
+- **Kanuna tâbi olmayan toplantılar** — Siyasi partiler, meslek kuruluşları, sendikalar, vakıflar, dernekler ve tüzel kişilerin kendi tüzüklerine göre yapacakları **kapalı yer** toplantıları; kanun veya gelenek-göreneğe göre yapılan tören, şenlik, karşılama ve uğurlamalar; **spor, bilimsel, ticarî ve ekonomik** amaçlı toplantılar; Cumhurbaşkanı, yardımcıları ve bakanların Devlet işleri hakkındaki toplantıları ile milletvekillerinin halkla sohbet niteliğindeki görüşmeleri (m.4). · **Ne demek:** Bu dört grup için bildirim düzeni işlemez. · *Tuzak:* derneklerin **açık yer** toplantısı da istisna sayılır — istisna yalnız kapalı yerdir.
+- **Seçim zamanı** — Seçim zamanlarında yapılacak propaganda toplantıları hakkında **ilgili kanun hükümleri saklıdır** (m.5). · **Ne demek:** Seçim döneminde bu kanun değil seçim mevzuatı uygulanır.
+- ★ çıkmış **Yer ve güzergâhı kim belirler** — Toplantı ve gösteri yürüyüşü yer ve güzergâhı; TBMM'de grubu bulunan partilerin il-ilçe temsilcileri, güzergâhın geçeceği belediye başkanları, en çok üyeli **üç sendika** ve meslek kuruluşlarının temsilcilerinin **görüşleri alınarak mahallin en büyük mülki amirince** belirlenir; **yerel gazeteler, internet haber siteleri ve valilik-kaymakamlık siteleri**nde ilan edilir; sonradan yapılan değişiklikler duyurudan **on beş gün** sonra geçerli olur (m.6). · **Ne demek:** Görüş alınır ama karar mülki amirindir; belediyenin yetkisi yoktur. · *Tuzak:* "belediye belirler" denir — 2026'nın çeldiricisi buydu.
+- **Zaman** — Toplantı ve yürüyüşlere **güneş doğmadan başlanamaz** (m.7). · **Ne demek:** Gece toplantısı yasağı; bitiş saatine ilişkin hüküm Anayasa Mahkemesince iptal edildi. · *Tuzak:* "güneş batmadan bitirilir" hükmü hâlâ yürürlükteymiş gibi sorulur.
+- **Umuma açık yer** — Toplantının yapıldığı yer, **toplantı süresince umuma açık yer** sayılır (m.8). · **Ne demek:** Özel bir salon bile toplantı boyunca kolluk açısından umuma açık yer hükmüne girer.
+- **Düzenleme kurulunun toplantıdaki yükümlülüğü** — Kurul, kendi üyelerinden **başkan dâhil en az yedi kişiyi** toplantı yerinde bulundurmakla yükümlüdür; buna dair tutanak **yetkili kolluk amirine** teslim edilir. Kolluk, katılımcı ve konuşmacıların ses ve görüntülerini **yapıldığı belli olacak şekilde** kaydedebilir; kayıtlar **şüphelilerin ve suç delillerinin tespiti dışında** kullanılamaz (m.11). · **Ne demek:** Gizli kayıt yok, açık kayıt var; kullanım amacı sınırlı. · *Tuzak:* "beş kişi" denir ya da gizli kayıt yapılabileceği söylenir.
+- ★ çıkmış **Düzenleme kurulunun sorumluluğu** — Kurul; toplantının **sükûn ve düzenini** ve bildirimdeki **amaç dışına çıkılmamasını** sağlamakla yükümlüdür, gerektiğinde güvenlik kuvvetlerinin yardımını ister. Toplantı amaç dışına çıkarsa kurul, toplanamazsa **kurul başkanı** dağılma kararı alır ve derhâl yetkili kolluk amirine bildirir. Sorumluluk, **topluluk toplantı yerinden tamamen dağılıncaya kadar** sürer (m.12). · **Ne demek:** "Toplantı bitti" demekle sorumluluk bitmez; kalabalık dağılana kadar devam eder. · *Tuzak:* "sorumluluk toplantının sona ermesiyle biter" denir.
+- ★ çıkmış **Yasak yerler** — **Parklarda, mabetlerde, kamu hizmeti görülen bina ve tesislerde ve eklentilerinde, TBMM'ye bir kilometre uzaklıktaki alan içinde** toplantı yapılamaz; genel meydanlardaki toplantılarda halkın ve araçların geçişi için valilik ve kaymakamlıkça yapılan düzenlemelere uyulması zorunludur (m.22). · **Ne demek:** Dört yasak yer + bir kilometre kuralı; "genel yollar" ibaresi Anayasa Mahkemesince iptal edildi. · *Tuzak:* mesafe 500 metre veya 2 km yapılır.
+- **Kanuna aykırı sayılan toplantılar** — Bildirim verilmeden ya da belirtilen gün-saat dışında; **ateşli silah, havai fişek, molotof, patlayıcı, kesici-delici alet, taş, sopa, demir bilye, sapan, zincir**, yakıcı-aşındırıcı eczalar, sis-gaz maddeleri ile; **yasadışı örgüt amblemi** taşıyarak veya **üniformayı andırır giysi** giyerek; **kimliği gizlemek için yüzü kısmen veya tamamen örterek**; belirlenen yerler dışında; **bildirimdeki amaç dışına çıkılarak**; yasaklama veya erteleme süresi bitmeden; dağılma kararı verildiği hâlde yapılan toplantılar kanuna aykırıdır (m.23). · **Ne demek:** Liste uzun ama mantık basit: silah, gizleme, yer, zaman ve amaç ihlali. · *Tuzak:* yüzü örtme listeden çıkarılır.
+- ★ çıkmış **Sonradan aykırı hâle gelen toplantının dağıtılması** — Kanuna uygun başlayıp sonradan aykırı hâle dönüşen toplantıda: (a) **düzenleme kurulu veya başkanı** sona erdiğini ilan eder ve kolluk amirine bildirir; (b) kurul bunu yapmazsa durum **yetkili kolluk amiri** tarafından **mülki amire** bildirilir ve sona erdirilip erdirilmeyeceğine **mülki amir** karar verir; (c) mülki amir yazılı veya sonradan yazıyla teyit edilmek kaydıyla **sözlü emirle** güvenlik amirlerini olay yerine gönderir; bu amir topluluğa **dağılmalarını, dağılmazlarsa zor kullanılacağını ihtar eder**; dağılmazsa zor kullanılır (m.24/1). · **Ne demek:** Sıra: düzenleme kurulu → kolluk amiri → mülki amir → güvenlik amiri → ihtar → zor. Kolluk amiri kendi kafasına göre dağıtamaz. · *Örnek:* Miting sırasında sopalı grup ortaya çıkarsa jandarma komutanı önce valiye bildirir, valinin görevlendirmesiyle ihtar edip dağıtır. · *Tuzak:* kolluk amirine doğrudan sona erdirme yetkisi verilir — 2026'da tam bu çeldiriciydi.
+- **İhtarsız zor kullanma** — Güvenlik kuvvetlerine karşı **fiilî saldırı veya mukavemet** ya da korudukları yer ve kişilere karşı fiilî saldırı varsa **ihtara gerek olmaksızın** zor kullanılır. Silah, alet veya sloganla katılanlar güvenlik kuvvetlerince **uzaklaştırılarak toplantıya devam edilir**; sayı ve davranışları dağıtmayı gerektirecek derecedeyse dağıtma usulü uygulanır. Bu kişilerin tanınması ve uzaklaştırılmasında **düzenleme kurulu yardımla yükümlüdür** (m.24/2-4). · **Ne demek:** Birkaç provokatör toplantıyı bitirmez, uzaklaştırılır; saldırı varsa ihtar beklenmez. · *Tuzak:* "silahlı bir kişi görülünce toplantı derhâl dağıtılır" denir.
+- **Kanuna aykırı başlayan toplantı** — Toplantı kanuna aykırı **başlamışsa**; güvenlik kuvvetleri olayı en seri şekilde mülki amire haber vermekle beraber **mevcut imkânlarla gerekli tedbirleri alır** (m.24 son). · **Ne demek:** Baştan aykırı olanda kolluk beklemeden tedbir alabilir; sonradan aykırı hâle gelende mülki amir kararı gerekir. · *Tuzak:* iki durum birbirine karıştırılır.
+- **Suç işleyenlerin yakalanması** — Topluluk içinde **suç işleyenleri ve suçluları yakalamak** için m.24'teki **emir ve ihtarların yapılmasına gerek yoktur** (m.25). · **Ne demek:** Dağıtmak için ihtar gerekir, suçluyu yakalamak için gerekmez; ikisi ayrı iştir. · *Tuzak:* "suçluyu yakalamak için de ihtar şart" denir.
+- **Çağrı ve propaganda araçları** — Davetiye, levha ve ilanlarda düzenleme kurulu **başkanı ile en az altı üyesinin** ad, soyad ve imzası bulunur; asılacaklar valilik veya kaymakamlıkça **önceden tespit edilmiş yerlere** asılır; halkı suç işlemeye özendiren yazı-resim yasaktır. Ses yükselten araçla çağrı, toplantıdan **bir önceki günden** başlayacağı saate kadar ve yalnız **güneşin doğuşundan batışına** kadar yapılabilir; kapalı yer toplantılarında dışarıya ses yayını yapılamaz (m.26). · **Ne demek:** Başkan + 6 üye = m.11'deki yedi kişiyle aynı sayı. · *Tuzak:* "gece de hoparlörle çağrı yapılabilir" denir.
+- **Kışkırtma yasağı** — Halkı, söz, ses aracı, afiş yapıştırma veya dağıtma yoluyla **kanuna aykırı toplantı veya yürüyüşe özendirmek veya kışkırtmak** yasaktır; bu hareketler güvenlik kuvvetlerince **derhâl men edilir** (m.27). · **Ne demek:** Kışkırtma için ayrıca emir beklenmez, kolluk anında müdahale eder.
+
+### Sayılar ve süreler
+| Konu | Değer | Madde |
+|---|---|---|
+| Yabancının hitap/afiş bildirimi | en az 48 saat önce | m.3 |
+| Görüşü alınacak sendika sayısı | en çok üyeli 3 sendika | m.6 |
+| Yer/güzergâh değişikliğinin geçerliliği | duyurudan 15 gün sonra | m.6 |
+| Toplantı yerinde bulunacak kurul üyesi | başkan dâhil en az 7 | m.11 |
+| İlanlarda imza | başkan + en az 6 üye | m.26 |
+| TBMM'ye yasak mesafe | 1 kilometre | m.22 |
+| Başlama zamanı | güneş doğmadan başlanamaz | m.7 |
+
+### Yetkili makamlar
+| İş | Yetkili | Madde |
+|---|---|---|
+| Yabancıların toplantı düzenlemesi | İçişleri Bakanlığı izni | m.3 |
+| Yer ve güzergâh belirleme | Mahallin en büyük mülki amiri | m.6 |
+| Sonradan aykırı toplantıyı sona erdirme kararı | Mahallin en büyük mülki amiri | m.24/1-b |
+| Dağılma ihtarı ve zor kullanma | Mülki amirce görevlendirilen güvenlik amiri | m.24/1-c |
+| İl belediye sınırı içindeki ilçelerde mülki amir | Vali | m.2 |
+| Kışkırtmanın men edilmesi | Güvenlik kuvvetleri (derhâl) | m.27 |
+
+### "Yanlıştır/değildir" tuzakları
+- "Toplantı düzenlemek için önceden izin alınır." → **İzin değil bildirim**; yalnız yabancılar için izin (m.3).
+- "Yer ve güzergâhı belediye belirler." → **Mülki amir** belirler (m.6).
+- "Kurulun sorumluluğu toplantı bitince sona erer." → **Topluluk tamamen dağılıncaya kadar** sürer (m.12).
+- "Sonradan aykırı hâle gelen toplantıyı kolluk amiri doğrudan sona erdirir." → **Mülki amir** karar verir (m.24).
+- "Suçluyu yakalamak için de ihtar gerekir." → **Gerekmez** (m.25).
+- "TBMM'ye 500 metre içinde toplantı yapılamaz." → **Bir kilometre** (m.22).
+
+---
+
+## 4915 sayılı Kara Avcılığı Kanunu — Sınav kapsamı: m.3-6, 12, 13, 15, 18, 20-26, 28-30
+
+### Bu mevzuattan nasıl soruluyor
+- Ağırlık **m.6 avlanma yasakları** ve **m.20 kolluk yetkileri**nde: "hangisi avda kullanılamaz" (öncüllü), "avcı kime belge göstermek zorunda değildir" (liste).
+- 2026 uzman erbaş kitapçığı m.6'yı beş öncülle sordu: zehir, havalı tüfek, sınırlandırılmış yarı otomatik, sınırlandırılmamış pompalı, ses-manyetik dalga cihazı — doğru cevap sınırlandırılmış olan **hariç** hepsi.
+- Ceza sorularında **zehirle avlanma = hapis**, diğerleri idarî para cezası ayrımı ve **tekrarda belge iptali + 2 yıl** sorulur.
+
+### Altın noktalar
+- **Merkez Av Komisyonu** — Bakanın veya Bakan Yardımcısının başkanlığında; Genel Müdürlükten üç, Bakanlığın diğer birimlerinden iki, **JGK, Orman Genel Müdürlüğü ve EGM'den birer**, orman fakültesi ve biyoloji bölümlerinden iki bilim insanı, doğa koruma STK'larından dört, dokuz coğrafi bölgeden dokuz avcı kuruluşu temsilcisi ve bir avlak temsilcisi olmak üzere **toplam yirmi beş üyeden** oluşur; **kararı kesindir** (m.3). · **Ne demek:** Jandarmanın komisyonda bir sandalyesi var ve komisyon kararına itiraz mercii yoktur. · *Tuzak:* JGK listeden çıkarılır ya da karar "Bakanlık onayına tâbi" denir.
+- **İl av komisyonu** — Valinin veya vali yardımcısının başkanlığında; ilgili müdürlükler, **il emniyet müdürlüğü, jandarma teşkilatı** ve gönüllü kuruluş temsilcileri ile mahallî avcı kuruluşlarından üç üye olmak üzere **toplam on bir üyeden** oluşur; gerekirse valilik **ilçe av komisyonu** kurabilir. İlçe kararları ilde, il kararları Merkez Av Komisyonunda değerlendirilir (m.3). · **Ne demek:** Üç kademeli yapı: ilçe → il → merkez. · *Tuzak:* il komisyonunun sayısı 25 yapılır.
+- **Koruma altındaki yaban hayvanları** — Korunması gereken av hayvanları **Merkez Av Komisyonunca**, av hayvanı dışındaki yaban hayvanları **Bakanlıkça** koruma altına alınır; karar **Resmî Gazete'de** yayımlanır. Koruma altındaki yaban hayvanları avlanamaz; yaban hayvanları **üreme, tüy değiştirme ve göç** dönemlerinde rahatsız edilemez, yavru ve yumurtaları toplanamaz, memeliler **kış uykusunda** rahatsız edilemez (m.4). · **Ne demek:** Avlamak dışında rahatsız etmek de yasak. · *Tuzak:* "yalnız avlanması yasaktır" denir.
+- **Av süreleri ve miktarları** — Avlanma sürelerinin başlama-bitiş tarihlerini, avlanma günlerini ve av miktarlarını **il av komisyonlarının görüşü doğrultusunda Merkez Av Komisyonu**; özel ve örnek avlaklarda **Genel Müdürlük** belirler. Merkez Av Komisyonunca tespit edilen av miktarı ve süreleri **dışında avlanılamaz**. Radyo ve televizyonlar av sezonunun başlamasından **on beş gün önce ve sona ermesinden itibaren on beş gün** eğitici yayın yapmak zorundadır; yılda **üç saatten** az olamaz (m.5). · **Ne demek:** Av takvimini komisyon çizer, avcı takvim dışında av yapamaz. · *Tuzak:* yayın süresi 30 gün yapılır.
+- ★ çıkmış **Avlanma yasakları** — Avlanma, **avcılık belgesi ve avlanma izni** almak şartıyla, izin verilen silah, araç ve eğitilmiş hayvanlarla yapılır. **Zehirle avlanmak yasaktır.** **Haznesi iki fişek alacak şekilde sınırlandırılmamış** otomatik, yarı otomatik, pompalı yivsiz av tüfekleri ile **havalı tüfek ve tabancalar** avda kullanılamaz. Kara, hava ve yüzer araçlarla, **ses, manyetik dalga, ışık yayan** araçlarla, canlı mühre, tuzak, kapan ile avlanılamaz; men edilen bu cihazların pazar ve ticarethanelerde **bulundurulması ve satışı** da yasaktır (m.6). · **Ne demek:** Ölçü haznenin sınırlandırılmış olup olmamasıdır: iki fişekle sınırlanmış yarı otomatik serbest, sınırlanmamış pompalı yasak. · *Örnek:* Haznesi iki fişeğe düşürülmüş yarı otomatik tüfekle av serbesttir; havalı tüfekle av yasaktır. · *Tuzak:* sınırlandırılmış tüfek de yasaklar arasına konur — 2026'nın öncül III'ü buydu.
+- **Avlak izinleri** — **Özel avlaklarda** avlanmak **avlak sahibinin**, Devlet, genel ve örnek avlaklarda **Genel Müdürlüğün** iznine bağlıdır. Yasak yerlerde avlanmaya ancak av hayvanlarının **çoğaldığı ve zararlı olduğu** hâllerde Bakanlıkça izin verilebilir. Av yılı içinde bir türün nesli tehlikeye girerse avlanmanın açık olduğu avlaklarda avı **geçici yasaklamaya Bakanlık** yetkilidir (m.12). · *Tuzak:* özel avlakta izin makamı Genel Müdürlük yapılır.
+- **Avcılık belgesi** — Türk vatandaşlarına **bir defaya mahsus** verilir ve **her yıl vize** edilir; alacak olanlar **eğitim ve yeterlik sınavına** tâbi tutulur. 6136'ya göre yivli av tüfeği alanlar da avlanmak için **ayrıca** avcılık belgesi almak zorundadır. Türkiye'de ikamet eden yabancılara belge verilmesinde **mütekabiliyet** aranır; avcı turistlere **geçici avcılık belgesi** verilir (m.13). · **Ne demek:** Silah ruhsatı av belgesi yerine geçmez. · *Tuzak:* "yivli tüfek ruhsatı olan ayrıca belge almaz" denir.
+- **Av turizmi** — Av turu, fotoğraf-film çekimi ve gözlem turu yaptıracak seyahat acenteleri Genel Müdürlükten **av turizmi izin belgesi** almaya; avcı turistler **geçici avcılık belgesi** alıp avlayacakları hayvanları bu belgeye **kaydettirmeye** mecburdur; Askerî Yasak Bölgeler Kanunu hükümleri saklıdır (m.15). · *Tuzak:* turistin sürekli belge alabileceği söylenir.
+- **Ticaret yasağı** — Uluslararası sözleşmelerle ticareti yasaklanan ve avlanma esaslarına aykırı avlanan yaban hayvanları canlı veya cansız olarak, et, yumurta, deri, post, boynuz ve türevleri **satılamaz, satın alınamaz, nakledilemez, ithal ve ihraç edilemez**; sergilenmek için ithaline izin verilenler de satılamaz (m.18). · **Ne demek:** Kaçak avın ürünü de kaçaktır; taşıyan da sorumludur.
+- ★ çıkmış **Kolluğun av yetkisi** — Avcılığın kontrolü Genel Müdürlük ve Orman Genel Müdürlüğünce yapılır; **PVSK ve 2803 hükümleri saklıdır**. Genel kolluk ile orman muhafaza memurları, av ve doğa koruma memurları ve saha bekçileri; aykırı davrananları **avlanmadan men etmeye, tutanak düzenlemeye**, hayvanlara ve yasak eşyaya **elkoymaya ve yakalamaya** yetkilidir. Av yasağına aykırı davrananlar tutanaktan sonra **derhâl serbest bırakılır**; kimliği tespit edilemeyenler **en yakın köy muhtarı veya ihtiyar heyetine**, olmazsa en yakın zabıta merkezine götürülür. Görevli memurun bulunmadığı yerlerde **kır ve köy bekçileri ile köy muhtarları** da aynı yetkiyi haizdir. Elkonulan silahlar soruşturma evrakıyla **Cumhuriyet başsavcılığına** gönderilir; canlı av hayvanları hemen, yaralılar tedaviden sonra **doğaya salınır** (m.20). · **Ne demek:** Kaçak avcı gözaltına alınmaz; tutanak yazılır, bırakılır; yalnız kimliği belirsizse muhtara götürülür. · *Örnek:* Jandarma devriyesi av yasağında keklik vuran kişinin tüfeğine ve avına el koyar, tutanağı yazar, kişiyi serbest bırakır. · *Tuzak:* "gözaltına alınır" denir.
+- ★ çıkmış **Belge gösterme zorunluluğu** — Avcılar talep hâlinde **orman muhafaza memurlarına, av ve doğa koruma memurlarına, saha bekçilerine, polis ve jandarmaya, köy ve kır bekçilerine, köy muhtarı ve ihtiyar heyeti üyelerine** belge ve izinleri ile avladıkları hayvanları **ibraz etmek zorundadır**; köy ve kır bekçileri, muhtar ve ihtiyar heyeti üyeleri ihbarda ve takipte orman memurlarına **yardıma mecburdur** (m.20). · **Ne demek:** Liste kapalıdır; av komisyonundaki STK temsilcisi bu listede yoktur. · *Tuzak:* "komisyon üyelerine de gösterilir" denir — çıkmış soruda tam bu çeldiriciydi.
+- **Fahri av müfettişi** — Genel Müdürlükçe belirlenen kişilere fahri av müfettişliği verilebilir; yasak avlanmayı tespit ettiklerinde tutanağı **en geç bir hafta** içinde en yakın Genel Müdürlük taşra birimine teslim ederler; yasak fiili **fahri av müfettişi işlerse ceza iki misli** uygulanır, belgeleri iptal edilir ve bir daha verilmez (m.20, m.21). · **Ne demek:** Denetleyen ihlal ederse daha ağır cezalanır. · *Tuzak:* "aynı ceza uygulanır" denir.
+- **Orman memurlarının silahı** — Orman muhafaza memurları, av ve doğa koruma memurları ve saha bekçilerine Cumhurbaşkanınca belirlenen silahlar **demirbaş** olarak verilir; silahlarını **6831 sayılı Orman Kanunu m.78'deki hâllerde** kullanabilirler (m.20). · **Ne demek:** Av memuru kendi kanununda değil Orman Kanunu'ndaki kurala göre silah kullanır.
+- **Ağır cezalar: zehir ve ekosistem** — Yaban hayvanlarının beslendiği ortamı **zehirleyenler iki yıldan beş yıla kadar hapis**; **zehirle avlananlar bir yıldan üç yıla kadar hapis ve elli günden az olmamak üzere adlî para cezası**; avlanma yoluyla bir türün **yok olması** ya da **ekolojik dengenin bozulması** tehlikesine neden olanlar **iki yıldan beş yıla kadar hapis**; bu hâllerde avcılık belgesi iptal edilir ve **bir daha verilmez** (m.21, m.24). · **Ne demek:** Ortamı zehirlemek (2-5 yıl) zehirle avlanmaktan (1-3 yıl) daha ağırdır. · *Tuzak:* iki hapis aralığı yer değiştirilir.
+- **Belgesiz avlanma cezası** — Avcılık belgesi almadan avlananlara ağır, avlanma izni olmadan veya avlakta izinsiz avlananlara daha hafif, yabancı avcılık belgesi olmadan avlananlara daha da hafif idarî para cezası verilir; belgeyi **yanında taşımadan** avlananlara küçük bir ceza vardır. Bu maddedeki fiillerin **beş yıl içinde tekrarında ceza üç katı** uygulanır (m.24). · **Ne demek:** Belgesiz avlanmakla belgeyi yanında unutmak bambaşka iki şey. · *Tuzak:* "beş yıl içinde tekrarda iki katı" denir.
+- **Avdan men ve mülkiyetin kamuya geçirilmesi** — Yasak fiili işleyenler **derhâl avdan men edilir**; elkonulan av hayvanları ve eşyanın **mülkiyetinin kamuya geçirilmesine mahallî mülkî amir** karar verir; cansız hayvanlar ve ürünler Genel Müdürlükçe satılır, canlılar doğaya bırakılır; tahribat nedeniyle hükmolunacak tazminat türlere göre **Genel Müdürlükçe tespit edilen değerler** üzerinden hesaplanır (m.28). · *Tuzak:* mülkiyet kararı mahkemeye verilir.
+- **Tekrarda belge iptali** — m.21, m.23 ve m.24'teki fiillerin **tekrarı** hâlinde avcılık belgesi iptal edilir ve **iki yıl** süreyle belge verilmez; iki yıl sonunda yeniden belge için idarî para cezalarının ve tazminatın **tahsil edilmiş olması** şarttır; yenilenen belgeden sonra tekrar edilirse belge **bir daha verilmez** (m.29). · **Ne demek:** İkinci ihlal iki yıl, üçüncü ihlal ömür boyu. · *Tuzak:* süre bir yıl yapılır.
+- **Cezayı kim verir** — Bu Kanuna göre idarî para cezaları **Genel Müdürlük bölge müdürü veya yetki verdiği personeli** ile **orman işletme şefi** tarafından verilir (m.30). · **Ne demek:** Jandarma tutanağı yazar, cezayı orman idaresi keser. · *Tuzak:* ceza yetkisi kolluğa veya mülki amire verilir.
+
+### Sayılar ve süreler
+| Konu | Değer | Madde |
+|---|---|---|
+| Merkez Av Komisyonu üye sayısı | 25 | m.3 |
+| İl av komisyonu üye sayısı | 11 | m.3 |
+| Radyo-TV eğitici yayın | sezondan 15 gün önce + 15 gün sonra, yılda en az 3 saat | m.5 |
+| Av tüfeği hazne sınırı | 2 fişek | m.6 |
+| Fahri müfettiş tutanak teslimi | en geç 1 hafta | m.20 |
+| Ortamı zehirleme | 2-5 yıl hapis | m.21 |
+| Zehirle avlanma | 1-3 yıl hapis + adlî para cezası | m.24 |
+| Tür yok olma / ekolojik denge | 2-5 yıl hapis | m.21 |
+| m.24 fiillerinin tekrarı | 5 yıl içinde, ceza 3 katı | m.24 |
+| Tekrarda belge yasağı | 2 yıl | m.29 |
+| Fahri müfettişin ihlali | ceza 2 misli | m.21 |
+
+### Yetkili makamlar
+| İş | Yetkili | Madde |
+|---|---|---|
+| Av süreleri ve miktarları | Merkez Av Komisyonu (il komisyonu görüşüyle) | m.5 |
+| Özel avlakta avlanma izni | Avlak sahibi | m.12 |
+| Devlet / genel / örnek avlakta izin | Genel Müdürlük | m.12 |
+| Geçici av yasağı (nesil tehlikesi) | Bakanlık | m.12 |
+| Avdan men, tutanak, elkoyma, yakalama | Genel kolluk + orman/av koruma memurları | m.20 |
+| Mülkiyetin kamuya geçirilmesi | Mahallî mülkî amir | m.28 |
+| İdarî para cezası | Bölge müdürü / orman işletme şefi | m.30 |
+
+### "Yanlıştır/değildir" tuzakları
+- "Haznesi iki fişekle sınırlandırılmış yarı otomatik tüfek avda kullanılamaz." → **Kullanılabilir**; yasak olan sınırlandırılmamış olandır (m.6).
+- "Yivli av tüfeği ruhsatı olan ayrıca avcılık belgesi almaz." → **Alır** (m.13).
+- "Av yasağına aykırı davranan gözaltına alınır." → Tutanaktan sonra **derhâl serbest bırakılır** (m.20).
+- "İdarî para cezasını jandarma verir." → **Bölge müdürü / orman işletme şefi** verir (m.30).
+- "Merkez Av Komisyonu kararı Bakanlık onayıyla kesinleşir." → Karar **kesindir** (m.3).
+
+---
+
+## 1380 sayılı Su Ürünleri Kanunu — Sınav kapsamı: m.2, 3, 19-25, 33-36
+
+### Bu mevzuattan nasıl soruluyor
+- İki soru damarı: **m.19 yasak av yöntemleri** ("hangisi yasak değildir" → kankava) ve **m.3 ruhsat hükümleri** ("hangisi yanlıştır", 2026 subay jandarma kitapçığı).
+- Kolluk için kritik yer **m.33**: jandarma da zabıt tutar, elkoyar, idarî para cezası keser; jandarma olmayan yerde muhtar ve ihtiyar heyeti de yetkilidir.
+- Trol yasağı coğrafyası (içsular, Marmara, Boğazlar) ve mülkiyetin kamuya geçirilmesi kararını **valinin** vermesi tekrarlanan noktalar.
+
+### Altın noktalar
+- **Su ürünleri tanımı** — Denizlerde ve içsularda bulunan **bitkiler ile hayvanlar ve bunların yumurtaları**dır; Kara Avcılığı Kanunu kapsamındaki hayvanlar hariçtir. **İçsular**: göller, suni göller, lagünler, baraj gölleri, bentler, kanallar, akarsular, mansaplar, üretme-yetiştirme yerleri; **lagün**: denizle irtibatı olan göl; **mansap**: akarsuyun göl veya denize açıldığı bölge (m.2). · **Ne demek:** Su bitkisi de su ürünüdür; su kuşu ise Kara Avcılığı'na girer. · *Tuzak:* "yalnız balıklar" denir.
+- **Trol türleri ve gemi** — **Dip trolü** zemin üzerinde sürütülerek; **orta su trolü** dibe temas etmeden suyun ortasından çekilen ağdır; **kombine trol** her ikisine elverişlidir. **Gemi**: tonajı ve adı ne olursa olsun kayık, sandal, yelkenli, salmavna dâhil her türlü yüzer vasıtadır (m.2). · **Ne demek:** Sandal da bu kanunda gemidir; ruhsat ve ceza hükümleri ona da uygulanır.
+- ★ çıkmış **Ruhsat tezkeresi** — **Ticarî amaçlı** su ürünleri avcılığı yapacak gerçek ve tüzel kişiler ile bu işte kullanılacak gemiler için **Tarım ve Orman Bakanlığından** ruhsat tezkeresi veya izin alınması zorunludur; ruhsat ve izinlerin **talep hâlinde yetkililere gösterilmesi** zorunludur; **amatör avcılık** ile yerli ve yabancıların amatör avcılığına ilişkin usul ve esaslar yönetmelikle belirlenir; **4922 sayılı Denizde Can ve Mal Koruma Hakkında Kanun hükümleri saklıdır** (m.3). · **Ne demek:** Ruhsat ticarî avcılık içindir; amatör avcılık yönetmelikle düzenlenir, ruhsata değil sınırlamaya tâbidir. · *Tuzak:* "amatör avcılık için de ruhsat tezkeresi alınır" denir — 2026'da yanlış şık buydu.
+- ★ çıkmış **Yasak av yöntemleri** — **Bomba, torpil, dinamit, kapsül** ve benzeri patlayıcılar; **öldürücü veya uyuşturucu maddeler**; **sönmemiş kireç**; Bakanlık izni olmaksızın **elektrik cereyanı, elektroşok ve hava tazyiki** ile avlanmak yasaktır. Belli aydınlatma gücünü geçmeyen elektrikle aydınlatma ve yalnız denizde oltayla avlanan ürünün sudan çıkarılmasında elektroşok izne bağlı değildir (m.19). · **Ne demek:** Elektrik mutlak yasak değil, izne bağlıdır; patlayıcı ve zehir mutlak yasaktır. · *Örnek:* Gece lambayla balık toplamak serbest, elektroşokla bayıltıp toplamak yasaktır. · *Tuzak:* "münhasıran sünger avında kullanılan kankava" yasak sayılır — kankava troldan sayılmaz ve yasak değildir.
+- **Sulara zararlı madde** — Su ürünlerine, tüketenlerin sağlığına veya av vasıtalarına zarar veren maddelerin içsulara ve denizlerdeki istihsal yerlerine **dökülmesi** veya döküleceği şekilde **tesisat yapılması** yasaktır (m.20). · **Ne demek:** Fabrikanın atığı suya ulaşıyorsa fiilen dökmese de yasak kapsamındadır.
+- **Yabancıların avcılık yasağı** — **Türk vatandaşı olmayanların** karasularına veya içsulara girip su ürünleri avcılığı yapmaları yasaktır; **yabancı turistler** ile Bakanlık izniyle etüt-araştırma işlerinde çalışacak yabancılar müstesnadır (m.21). · *Tuzak:* istisna tamamen kaldırılır.
+- **Akarsularda engel ve balık geçidi** — Bakanlık izni olmadan akarsularda su ürünlerinin geçmesine engel olacak **ağ, bent, çit** yapılması yasaktır. Baraj ve regülatör gibi su yapılarında **balık geçidi** yapılması ve **işler durumda tutulması** zorunludur; yüksekliği **yirmi metreden fazla** yapılarda geçit işlevsiz olacaksa **asansörle taşıma, yapay üretim** gibi tedbirler alınabilir; projelerin onay ve kabulü **DSİ** tarafından yapılır (m.22). · **Ne demek:** Geçidi yapmak yetmez, çalışır tutmak da zorunludur. · *Tuzak:* "yirmi metrenin üstünde geçit zorunluluğu kalkar" denir — kalkmaz, alternatif tedbir aranır.
+- **Yönetmelikle konulan yasaklar** — Av vasıtalarının asgarî vasıf ve şartları ile bölge, mevsim, zaman, tür, ağırlık, irilik gibi vasıflar bakımından yasak, sınırlama ve yükümlülükler **yönetmelikle** düzenlenir (m.23). · **Ne demek:** "Hangi balık hangi boyda avlanır" kanunda değil yönetmelikte yazar.
+- ★ çıkmış **Trol yasağı** — **İçsular, Marmara Denizi, İstanbul ve Çanakkale Boğazlarında her çeşit trol ile** avlanma yasaktır (ilmî inceleme hariç); karasularında **dip trolü** ayrı yönetmelikle düzenlenir; **orta su trolünün dip trolü olarak kullanılması** yasaktır; **münhasıran sünger avında kullanılan kankava troldan sayılmaz** (m.24). · **Ne demek:** Marmara ve Boğazlar'da trol tamamen kapalı; Karadeniz ve Ege'de kurallı. · *Tuzak:* Karadeniz yasak bölgeye eklenir.
+- **Yasak ürünün satışı** — İstihsali yasak olan su ürünlerinin yasak süresince **satışı, nakli, imalatta kullanılması** yasaktır; m.19 ve m.24'e aykırı avlanan ürünlere **elkonulup mülkiyeti kamuya geçirilir**; su ürünlerinin **yurt dışına çıkarılması ve canlı olarak yurt içine sokulması izne** tâbidir (m.25). · *Tuzak:* "nakli serbesttir" denir.
+- ★ çıkmış **Koruma ve kontrolde kolluk** — Bakanlık personeli ile **emniyet, jandarma, sahil güvenlik, gümrük ve orman muhafaza** teşkilatı mensupları, **belediye zabıtası**, kamu tüzel kişilerinin muhafız, bekçi ve korucuları ile **emniyet ve jandarmanın bulunmadığı yerlerde köy muhtarı ve ihtiyar heyeti üyeleri**; bu Kanun kapsamındaki kabahat ve suçlar hakkında **zabıt varakası tutmak**, av vasıtalarına ve ürünlere **elkoymak** ve **idarî para cezalarını kesmekle** görevli ve yetkilidir (m.33). · **Ne demek:** Kara avcılığından farklı olarak burada jandarma cezayı da kesebiliyor. · *Örnek:* Baraj gölünde dinamitle avlanan kişiye jandarma zabıt tutar, tekneye ve balıklara el koyar, para cezasını yazar. · *Tuzak:* ceza yetkisi yalnız Bakanlığa verilir.
+- **Elkonulan ürün ve vasıtalar** — Muhafazası mümkün olmayan cansız ürünler gerekirse **veteriner veya tabibe muayene** ettirilip **Bakanlıkça açık artırmayla** satılır; **asgarî boydan küçük** veya **av yasağı döneminde** avlananlar perakende satılamaz, yem hammaddesi olarak satılabilir; **avlanması tamamen yasak türler** kamu, bilim veya sosyal yardım kuruluşlarına bağışlanabilir. Sahibi belli av vasıtaları karar kesinleşinceye kadar **yediemin**de tutulur; mülkiyeti kamuya geçen vasıtalar **satılamaz**, bağışlanabilir; bağışlanamayanlar **imha** edilir. **Mülkiyetin kamuya geçirilmesi kararlarını vali verir** (m.34). · **Ne demek:** Ürün satılır, tekne satılmaz; karar valinin. · *Tuzak:* mülkiyet kararı mahkemeye veya Bakanlığa verilir.
+- **Kesinleşen mülkiyet** — Mülkiyeti kamuya geçirilen su ürünleri satılıp bedeli **genel bütçeye** gelir kaydedilir; av vasıtaları kamu veya bilim kuruluşlarına bağışlanır, bağışlanamayanlar imha edilir (m.35).
+- **Ceza yapısı** — Ruhsatsız ticarî avcılıkta kişiye ve gemi sahibine ayrı ayrı idarî para cezası; **yönetmeliğe aykırı ticarî avcılıkta** ruhsat tezkeresi **ilk seferde bir ay, ikincide üç ay** geri alınır, tekrarında **iptal** edilir; içsular, Karadeniz, Marmara ve Boğazlar'da ağla avlanma amaçlı **ışık kullanan** gemi sahibine ağır ceza ve ışık donanımına elkoyma; m.19'a aykırı (patlayıcı-zehir) avcılıkta ürün ve aletlere elkoyma ve mülkiyetin kamuya geçirilmesi; balık geçidi yapmayana **on sekiz aya kadar** süre verilip giderilmezse ağır ceza (m.36). · **Ne demek:** Kademeli yaptırım: ceza → ruhsat askıya → ruhsat iptali. · *Tuzak:* "ilk ihlalde ruhsat iptal edilir" denir.
+
+### Sayılar ve süreler
+| Konu | Değer | Madde |
+|---|---|---|
+| Balık geçidi alternatif tedbir eşiği | yüksekliği 20 metreden fazla su yapıları | m.22 |
+| Ruhsatın geri alınması | 1. ihlal 1 ay · 2. ihlal 3 ay · tekrarda iptal | m.36 |
+| Balık geçidi için verilecek süre | en çok 18 ay | m.36 |
+| Trol yasak bölgeleri | içsular · Marmara · İstanbul ve Çanakkale Boğazları | m.24 |
+
+### Yetkili makamlar
+| İş | Yetkili | Madde |
+|---|---|---|
+| Ruhsat tezkeresi ve izin | Tarım ve Orman Bakanlığı | m.3 |
+| Elektrik/elektroşokla avlanma izni | Tarım ve Orman Bakanlığı | m.19 |
+| Balık geçidi projesinin onayı | DSİ Genel Müdürlüğü | m.22 |
+| Zabıt, elkoyma, idarî para cezası | Jandarma, polis, sahil güvenlik, gümrük, orman muhafaza, zabıta; kolluk yoksa muhtar ve ihtiyar heyeti | m.33 |
+| Mülkiyetin kamuya geçirilmesi | Vali | m.34 |
+| Elkonulan ürünün satışı | Bakanlık (açık artırma) | m.34 |
+
+### "Yanlıştır/değildir" tuzakları
+- "Sünger avında kullanılan kankava yasaktır." → **Troldan sayılmaz, yasak değildir** (m.24).
+- "Amatör avcılık için ruhsat tezkeresi zorunludur." → Ruhsat **ticarî** avcılık içindir (m.3).
+- "Elektrikle avlanmak her hâlde yasaktır." → **Bakanlık izniyle** mümkündür (m.19).
+- "Karadeniz'de her çeşit trol yasaktır." → Yasak bölge **içsular, Marmara ve Boğazlar**dır (m.24).
+- "Mülkiyetin kamuya geçirilmesine mahkeme karar verir." → **Vali** karar verir (m.34).
+- "Jandarma yalnız tutanak tutar, ceza kesemez." → **İdarî para cezası kesmeye de yetkilidir** (m.33).
+
+---
+
+## 6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu — Sınav kapsamı: m.3-7, 52-64, 102
+
+### Bu mevzuattan nasıl soruluyor
+- Kolluğa bakan yüzü **sınır dışı etme ve idari gözetim**: yakalanan yabancı **48 saat** içinde valiliğe, karar 48 saat, geri gönderme merkezine 48 saat, gözetim en çok **6+6 ay**, itiraz **sulh ceza hâkimine 5 gün**.
+- "Hangisi sınır dışı edilmez" listesi (m.55) çıkmış soruda çeldiriciyle sorulmuş: Türk vatandaşıyla evli olmak listede **yoktur**.
+- Kapsamlı kontrol süresi (**4 saat**) ve tanımlar (mülteci / şartlı mülteci / ikincil koruma farkı) sık sorulur.
+
+### Altın noktalar
+- **Temel tanımlar** — **Yabancı**: Türkiye ile vatandaşlık bağı bulunmayan kişi; **vatansız**: hiçbir devlete vatandaşlık bağıyla bağlı olmayan ve yabancı sayılan kişi; **çocuk**: on sekiz yaşını doldurmamış ve ergin olmamış kişi; **vize**: Türkiye'de **en fazla doksan güne** kadar kalma hakkı tanıyan izin; **sınır kapısı**: Cumhurbaşkanı kararıyla belirlenen geçiş noktası; **kabul edilemeyen yolcu**: koşulları taşımadığından girişine izin verilmeyen kişi; **taşıyıcı**: yabancı yolcu taşıyan taşıt sahipleri ve işletmecileri; **Genel Müdürlük**: Göç İdaresi Genel Müdürlüğü (m.3). · **Ne demek:** Vize 90 günlük bir izindir; daha uzun kalış ikamet iznine girer. · *Tuzak:* vize süresi 180 gün yapılır.
+- **Geri göndermeme ilkesi** — Bu Kanun kapsamındaki **hiç kimse**, işkenceye, insanlık dışı ya da onur kırıcı ceza veya muameleye tâbi tutulacağı veya ırkı, dini, tabiiyeti, toplumsal grubu veya siyasi fikirleri dolayısıyla hayatı veya hürriyeti tehdit altında bulunacağı **bir yere gönderilemez** (m.4). · **Ne demek:** Sınır dışı kararı bile bu ilkeye çarpınca uygulanamaz. · *Tuzak:* "yalnız mülteciler için geçerlidir" denir.
+- **Giriş ve çıkış** — Türkiye'ye giriş ve çıkış **sınır kapılarından**, geçerli **pasaport veya pasaport yerine geçen belgelerle** yapılır (m.5). · **Ne demek:** Sınır kapısı dışından geçiş yasa dışı giriştir ve m.102'ye göre cezalandırılır.
+- ★ çıkmış **Belge kontrolü ve kapsamlı kontrol** — Yabancı, belgelerini giriş ve çıkışta görevlilere göstermek zorundadır; kontroller **taşıtlarda seyir hâlinde** de yapılabilir; havalimanı **transit** alanlarını kullananlar da kontrole tâbi tutulabilir. Kapsamlı kontrole tâbi tutulanlar **en fazla dört saat** bekletilebilir; yabancı bu süre içinde **her an ülkesine dönebileceği gibi** dört saatle sınırlı kalmaksızın işlemlerin sonuçlanmasını da bekleyebilir (m.6). · **Ne demek:** Dört saat bir bekletme tavanı; yabancı isterse dönebilir, isterse daha uzun bekleyebilir. · *Tuzak:* "kapsamlı kontrol süresince yabancı ülkesine dönemez" denir — çıkmış soruda yanlış şık buydu.
+- **Kabul edilemeyen yolcu** — Pasaportu, vizesi veya ikamet/çalışma izni olmayanlar ya da bunları **hileli yolla edinen veya sahte** olanlar; vize veya ikamet süresinin bitiminden itibaren **en az altmış gün** süreli pasaportu olmayanlar; giriş yasağı kapsamındakiler **kabul edilemeyen yolcu** sayılıp geri çevrilir; işlem tebliğ edilir, itiraz hakları bildirilir; işlemleri sonuçlanıncaya kadar sınır kapılarında belirlenen alanlarda bekletilir (m.7). · **Ne demek:** Pasaportun süresi vize bitiminden sonra en az iki ay daha uzamalı. · *Tuzak:* süre otuz gün yapılır.
+- **Sınır dışı etme kararı** — Yabancılar **menşe ülkesine, transit gideceği ülkeye ya da üçüncü bir ülkeye** sınır dışı edilebilir; karar **Genel Müdürlüğün talimatı üzerine veya re'sen valiliklerce** alınır ve gerekçesiyle yabancıya, yasal temsilcisine veya avukatına tebliğ edilir (m.52, m.53/1-2). · **Ne demek:** Karar makamı valiliktir; Göç İdaresi talimat verir ama kararı valilik alır. · *Tuzak:* karar makamı "Göç İdaresi Genel Müdürlüğü" ya da "mahkeme" yapılır.
+- ★ çıkmış **Sınır dışı kararına itiraz** — Yabancı, kararın tebliğinden itibaren **yedi gün** içinde **idare mahkemesine** başvurabilir; başvuru **on beş gün** içinde sonuçlandırılır ve mahkeme kararı **kesindir**. Yabancının rızası saklı kalmak kaydıyla, **dava açma süresi içinde veya yargılama sonuçlanıncaya kadar yabancı sınır dışı edilmez** (m.53/3). · **Ne demek:** Yargı yolu açıkken sınır dışı işlemi bekler; yabancı istemezse beklemez. · *Tuzak:* süre on beş gün, mahkeme "sulh ceza" yapılır — sulh ceza idari gözetim itirazının merciidir, karıştırılır.
+- **Sınır dışı edilecekler** — TCK m.59 kapsamında sınır dışı edilmesi gerekenler; **terör veya çıkar amaçlı suç örgütü** yöneticisi, üyesi, destekleyicisi; giriş-vize-ikamet işlemlerinde **sahte belge** kullananlar; geçimini **meşru olmayan yollardan** sağlayanlar; **kamu düzeni, güvenliği veya sağlığı** açısından tehdit oluşturanlar; vize süresini **on günden fazla** aşanlar; ikamet izni iptal edilenler veya süresini **on günden fazla** ihlal edenler; **çalışma izni olmadan** çalışanlar; yasal giriş-çıkış hükümlerini ihlal edenler; giriş yasağına rağmen gelenler; uluslararası koruma başvurusu reddedilenler; ikamet uzatması reddedilip **on gün** içinde çıkmayanlar (m.54). · **Ne demek:** On gün eşiği üç ayrı bentte tekrarlanır: vize aşımı, ikamet ihlali, uzatma reddi. · *Tuzak:* "vizeyi bir gün aşan sınır dışı edilir" denir.
+- ★ çıkmış **Sınır dışı edilmeyecekler** — m.54 kapsamında olsalar dahi; gönderileceği ülkede **ölüm cezası, işkence, insanlık dışı muamele** riski olanlar; **ciddi sağlık sorunu, yaş ve hamilelik** nedeniyle seyahati riskli olanlar; hayatî tehlike arz eden hastalığının tedavisi gönderileceği ülkede bulunmayanlar; destek sürecindeki **insan ticareti mağdurları**; tedavileri tamamlanıncaya kadar **psikolojik, fiziksel veya cinsel şiddet mağdurları**. Değerlendirme **herkes için ayrı** yapılır; bu kişilerden belli adreste ikamet ve bildirim istenebilir (m.55). · **Ne demek:** Beş grup insanî koruma; Türk vatandaşıyla evlilik bu listede yok. · *Tuzak:* "Türk vatandaşıyla evli olup aile birliği içinde yaşayan" listeye eklenir — çıkmış soruda yanlış şık buydu.
+- **Türkiye'yi terke davet** — Sınır dışı kararı alınanlara, kararda belirtilmek kaydıyla Türkiye'yi terk için **on beş günden az olmamak üzere otuz güne kadar** süre tanınır; **kaçma-kaybolma riski** olanlara, yasal giriş-çıkışı ihlal edenlere, sahte belge kullananlara, kamu düzeni-güvenliği-sağlığı için tehdit oluşturanlara bu süre **tanınmaz**. Süre tanınanlara **Çıkış İzin Belgesi** verilir ve bu belge **hiçbir harca tâbi değildir** (m.56). · **Ne demek:** Riskli gruplara mühlet yok, doğrudan idari gözetim yolu. · *Tuzak:* süre "en az otuz gün" yapılır.
+- ★ çıkmış **Yakalanan yabancı ve idari gözetim** — m.54 kapsamındaki yabancılar **kolluk tarafından yakalandığında derhâl valiliğe** bildirilir; sınır dışı kararı **valilikçe** alınır ve değerlendirme-karar süresi **kırk sekiz saati** geçemez. Kaçma-kaybolma riski olan, giriş-çıkış kurallarını ihlal eden, sahte belge kullanan, tanınan sürede çıkmayan veya tehdit oluşturanlar hakkında valilik **idari gözetim kararı** alır ya da alternatif yükümlülük getirir; idari gözetime alınanlar **yakalamayı yapan kolluk birimince** geri gönderme merkezine **kırk sekiz saat** içinde götürülür (m.57/1-2). · **Ne demek:** Jandarmanın işi: yakala → valiliğe bildir → karar gelirse 48 saatte merkeze götür. · *Örnek:* Yol kontrolünde belgesiz yakalanan yabancıyı jandarma karakolda tutmaz; valiliğe bildirir, idari gözetim kararı gelirse 48 saat içinde geri gönderme merkezine teslim eder. · *Tuzak:* kararı kolluğun aldığı ya da süre 24 saat denir.
+- ★ çıkmış **İdari gözetim süresi ve denetimi** — Geri gönderme merkezlerinde idari gözetim **altı ayı** geçemez; yabancının **iş birliği yapmaması** veya ülkesiyle ilgili doğru bilgi vermemesi nedeniyle tamamlanamazsa **en fazla altı ay daha** uzatılabilir. Gözetimin devamında zaruret olup olmadığı **valilikçe her ay** değerlendirilir; zaruret görülmeyen için gözetim **derhâl** sonlandırılır ve alternatif yükümlülük getirilir (m.57/3-4). · **Ne demek:** Tavan 6+6=12 ay; ama her ay yeniden gerekçelendirilmesi şart. · *Tuzak:* toplam süre "on sekiz ay" yapılır veya aylık denetim "üç ayda bir" denir.
+- **İdari gözetime itiraz** — İdari gözetim kararına karşı **sulh ceza hâkimine** başvurulabilir; başvuru **gözetimi durdurmaz**; hâkim incelemeyi **beş gün** içinde sonuçlandırır ve kararı **kesindir**; şartlar değiştiği iddiasıyla **yeniden** başvurulabilir; avukat ücretini karşılayamayanlara talep hâlinde Avukatlık Kanunu'na göre avukat sağlanır; uyruğun tespiti için yabancının **elektronik ve iletişim cihazları incelenebilir** (m.57/5-8). · **Ne demek:** Sınır dışı kararının itiraz mercii idare mahkemesi, idari gözetimin itiraz mercii sulh ceza hâkimidir; iki yol birbirinden ayrı. · *Tuzak:* iki merci yer değiştirilir.
+- **İdari gözetime alternatif yükümlülükler** — Belirli adreste ikamet, bildirimde bulunma, aile temelli geri dönüş, geri dönüş danışmanlığı, kamu yararına gönüllü görev, **teminat** ve **elektronik izleme**; bu yükümlülüklerin süresi **yirmi dört ayı** geçemez; elektronik izlemeye karşı sulh ceza hâkimine başvurulur, hâkim **beş gün** içinde karar verir (m.57/A). · **Ne demek:** Merkeze kapatmak yerine adres ve kelepçe tedbirleri; tavan iki yıl. · *Tuzak:* süre on iki ay yapılır.
+- **Geri gönderme merkezleri** — İdari gözetime alınanlar geri gönderme merkezlerinde tutulur; merkezler **Bakanlıkça** işletilir; kamu kurumları, **Türkiye Kızılay Derneği** veya göç alanında uzman kamu yararına derneklerle protokol yapılarak işlettirilebilir (m.58). · *Tuzak:* "yalnız Bakanlık işletir" denir.
+- **Merkezlerdeki hizmetler** — Bedeli karşılanamayan **acil ve temel sağlık hizmetleri ücretsiz**; yakınlarına, notere, yasal temsilciye ve avukata erişim ile telefon imkânı; ziyaretçi, **konsolosluk yetkilisi ve BMMYK görevlisiyle** görüşme; çocukların yüksek yararı gözetilir, **aileler ayrı yerlerde** barındırılır; çocukların eğitimi için MEB tedbir alır; STK temsilcileri **Genel Müdürlüğün izniyle** ziyaret edebilir (m.59). · *Tuzak:* STK ziyaretinin izinsiz olduğu söylenir.
+- **Sınır dışının yerine getirilmesi ve masraflar** — Merkezlerdeki yabancılar **kolluk birimince** sınır kapılarına götürülür; merkeze sevk gerekmeyenler Genel Müdürlük taşra teşkilatının koordinesinde kolluk birimlerince götürülür. Seyahat masrafları **yabancının kendisince** karşılanır; parası yetiyorsa oradan alınır, artan kendisine bırakılır; hiç parası yoksa **Genel Müdürlükçe** karşılanır; kısmen yetiyorsa temel gereksinim tutarı bırakılıp kalanı Hazineye gelir kaydedilir; **masraflar geri ödenmediği sürece yabancının Türkiye'ye girişine izin verilmeyebilir**. Pasaportları sınır dışı edilinceye kadar tutulabilir, biletleri paraya çevrilebilir; kalışını **garanti edenler** ve **izinsiz çalıştıran işveren** masraflardan sorumludur (m.60). · **Ne demek:** Nakil görevi kolluğun; fatura önce yabancının, sonra kefilinin. · *Tuzak:* "masraflar her hâlde Devletçe karşılanır" denir.
+- **Mülteci** — **Avrupa ülkelerinde** meydana gelen olaylar nedeniyle ırkı, dini, tabiiyeti, toplumsal grubu veya siyasi düşüncesi dolayısıyla zulme uğrayacağından haklı sebeplerle korktuğu için ülkesi dışında bulunan ve ülkesinin korumasından yararlanamayan yabancıya veya vatansız kişiye statü belirleme sonrasında **mülteci** statüsü verilir (m.61). · **Ne demek:** Türkiye'nin coğrafî sınırlaması: "mülteci" statüsü yalnız Avrupa kaynaklı olaylar için verilir.
+- **Şartlı mülteci** — Aynı sebeplerle **Avrupa ülkeleri dışında** meydana gelen olaylar nedeniyle ülkesi dışında bulunan kişiye **şartlı mülteci** statüsü verilir; **üçüncü ülkeye yerleştirilinceye kadar** Türkiye'de kalmasına izin verilir (m.62). · **Ne demek:** Fark yalnız coğrafyadır: olay Avrupa'daysa mülteci, dışındaysa şartlı mülteci. · *Örnek:* Suriye'den zulüm nedeniyle kaçan kişi mülteci değil, şartlı mülteci statüsüne girer. · *Tuzak:* iki tanım yer değiştirilir.
+- **İkincil koruma** — Mülteci veya şartlı mülteci olarak nitelendirilemeyen, ancak geri gönderildiğinde **ölüm cezasına** mahkûm olacak, **işkence veya onur kırıcı muameleye** maruz kalacak ya da **silahlı çatışmada ayrım gözetmeyen şiddet** nedeniyle ciddi tehditle karşılaşacak yabancı veya vatansız kişiye **ikincil koruma** statüsü verilir (m.63). · **Ne demek:** Zulüm sebebi kişisel değil genel şiddetse ikincil koruma devreye girer. · *Tuzak:* ikincil koruma "mültecinin bir alt derecesi" gibi sunulur — ayrı bir statüdür.
+- **Korumadan hariçte tutulma** — BMMYK dışında başka bir BM organından koruma görenler; ikamet ettiği ülkede o ülke vatandaşlarıyla aynı haklara sahip olanlar; Sözleşme m.1/F'deki fiillerden (savaş suçu, insanlığa karşı suç, ağır adi suç) suçlu olduğuna dair **ciddi kanaat** bulunanlar uluslararası korumadan hariçte tutulur; Türkiye dışında **zalimce eylem** yaptığı düşünülenler de değerlendirilir. **Kamu düzeni veya güvenliği** için tehlike oluşturanlar ile ceza çekmemek için ülkesini terk edenler **ikincil korumadan** hariçte tutulur. Başvuru sahibinin hariçte tutulması **aile üyelerinin** de hariçte tutulmasını gerektirmez (m.64). · *Tuzak:* "aile üyeleri de otomatik hariçte tutulur" denir.
+- **İdarî para cezaları** — Türkiye'ye **yasa dışı giren veya terk eden ya da buna teşebbüs eden** yabancıya; giriş yasağına rağmen girebilenlere; tanınan sürede ayrılmayanlara; işlemler sırasında **kaçanlara**; yükümlülüklerine uymayan taşıyıcılara idarî para cezası verilir. Geçerli belgesi olmayan yabancıların **ülkeye girmesine, seyahat etmesine, barınmasına, konaklamasına imkân sağlayanlar ile gayrimenkulünü kiralayanlara**, fiil suç değilse **tespit edilen her bir yabancı sayısınca** ceza verilir. Bir takvim yılı içinde gerçek kişilerce tekrarda cezalar **yarı oranında artırılır**; cezalar **valilik, Genel Müdürlük ya da kolluk birimlerince** uygulanır ve tebliğden itibaren **otuz gün** içinde ödenir (m.102). · **Ne demek:** Kaçak göçmene ev kiralayan da, taşıyan da yabancı başına ayrı ceza öder; kolluk cezayı doğrudan kesebilir. · *Tuzak:* tekrarda "iki katı" denir ya da ceza yetkisi kolluktan alınır.
+
+### Sayılar ve süreler
+| Konu | Değer | Madde |
+|---|---|---|
+| Vize ile kalış | en fazla 90 gün | m.3 |
+| Kapsamlı kontrolde bekletme | en fazla 4 saat | m.6 |
+| Pasaportun vize bitiminden sonraki asgarî süresi | 60 gün | m.7 |
+| Sınır dışı kararına itiraz / karar | 7 gün (idare mahkemesi) / 15 gün | m.53 |
+| Vize / ikamet aşım eşiği | 10 günden fazla | m.54 |
+| Terke davet süresi | 15-30 gün | m.56 |
+| Yakalanan yabancıda valilik kararı | en çok 48 saat | m.57/1 |
+| Geri gönderme merkezine götürme | 48 saat | m.57/2 |
+| İdari gözetim | 6 ay + en fazla 6 ay | m.57/3 |
+| Gözetimin aylık denetimi | her ay | m.57/4 |
+| İdari gözetime itiraz kararı | sulh ceza hâkimi, 5 gün | m.57/6 |
+| Alternatif yükümlülük süresi | en çok 24 ay | m.57/A |
+| İdarî para cezasında tekrar | yarı oranında artırım | m.102 |
+| Cezanın ödenmesi | 30 gün | m.102 |
+
+### Yetkili makamlar
+| İş | Yetkili | Madde |
+|---|---|---|
+| Sınır dışı etme kararı | Valilik (Genel Müdürlük talimatıyla veya re'sen) | m.53 |
+| Sınır dışı kararına itiraz | İdare mahkemesi | m.53 |
+| İdari gözetim kararı | Valilik | m.57 |
+| İdari gözetime itiraz | Sulh ceza hâkimi | m.57 |
+| Merkeze götürme ve sınır kapısına nakil | Kolluk birimleri | m.57, m.60 |
+| Geri gönderme merkezlerinin işletilmesi | Bakanlık (protokolle Kızılay vb.) | m.58 |
+| İdarî para cezası | Valilik, Genel Müdürlük veya kolluk | m.102 |
+| Sınır kapılarının belirlenmesi | Cumhurbaşkanı | m.3 |
+
+### "Yanlıştır/değildir" tuzakları
+- "Kapsamlı kontrol süresince yabancı ülkesine dönemez." → **Her an dönebilir** (m.6).
+- "Sınır dışı kararını Göç İdaresi Genel Müdürlüğü alır." → **Valilik** alır (m.53).
+- "Sınır dışı kararına sulh ceza hâkimine itiraz edilir." → **İdare mahkemesine**; sulh ceza, idari gözetimin merciidir (m.53, m.57).
+- "Türk vatandaşıyla evli yabancı sınır dışı edilmez." → Listede **yoktur** (m.55).
+- "İdari gözetim en çok on sekiz aydır." → **6 + 6 ay** (m.57).
+- "Suriye'den zulüm nedeniyle kaçana mülteci statüsü verilir." → **Şartlı mülteci** (m.62).
+- "Kaçak göçmene ev kiralayan cezalandırılmaz." → **Her yabancı için ayrı idarî para cezası** (m.102).
+
+---
+
+## 6831 sayılı Orman Kanunu — Sınav kapsamı: m.14-19, 41, 42, 68, 76-79, 83, 84, 88
+
+### Bu mevzuattan nasıl soruluyor
+- Jandarma için önemli olan yerler: **orman memurlarının kolluk sıfatı ve silah kullanma hâlleri** (m.77-78), **yangın ihbar yükümlülüğü** (m.68), **savcıya ulaşılamazsa arama ve elkoyma emrini orman işletme şefinin vermesi** (m.79, m.88).
+- "Hangisi orman yasağı değildir" kalıbı m.14'ün altı bendini kullanır; "kim yardıma mecburdur" sorusu m.79'un listesini.
+- 2026 uzman erbaş kitapçığı orman yangını suçunu CMK'daki tutuklama nedenleri listesi üzerinden sordu — iki kanun birbirine bağlı.
+
+### Altın noktalar
+- ★ çıkmış **Devlet ormanlarında yasaklar** — (A) Fidan kesmek-sökmek, ekim sahasını bozmak, yaş ağaçları boğmak, yaralamak, dal kesmek, yalamuk-pedavra çıkarmak; (B) dikili yaş veya kuru ağaçları kesmek, kökünden sökmek, kabuk-çıra-katran-sakız çıkarmak, kömür yapmak; (C) palamut, ıhlamur çiçeği, orman örtüsü, mazı kozalağı, tıbbî-sınaî nebat ve orman tohumu toplayıp götürmek; (D) ormanlardaki göl, gölet, baraj ve derelerde **dinamit atmak veya zehir bırakarak avlanmak**; (E) ticaret amacı olmaksızın kendi ihtiyacı için **toprak, kum ve çakıl** çıkarmak; (F) nakil vasıtalarıyla ormana **yıkıntı, inşaat atığı, hafriyat veya çöp** dökmek yasaktır (m.14). · **Ne demek:** Liste yalnız ağaç kesmeyi değil, tohum toplamayı ve çöp dökmeyi de kapsar. · *Tuzak:* "izin alarak zararlı ağaççık kökü sökmek" yasak sayılır — izinli iş yasak değildir.
+- **İzne bağlı işler** — Ormanın gelişmesi için idarenin fennî işleri dışında; fidan sökmek ve dal kesmek, orman hasılatı elde etmek ve (C) bendindeki faydaları sağlamak **orman idaresinin izin ve müsaadesine** bağlıdır (m.15). · **Ne demek:** m.14'ün bazı fiilleri izinle serbestleşir; izin makamı orman idaresidir.
+- **Maden izni** — Devlet ormanlarında maden aranması ve işletilmesi ile zorunlu tesislere, bedeli alınarak **Tarım ve Orman Bakanlığınca** izin verilir; **tohum meşcereleri, gen koruma alanları, muhafaza ormanları, verimli orman alanları, orman parkları ve nadir ekosistem alanlarında** maden faaliyeti Bakanlığın **muvafakatine** bağlıdır; genel bütçeli idarelerin dolgu amaçlı hammadde üretiminden **bedel alınmaz**; faaliyet sona erince alanlar **rehabilite** edilir (m.16). · *Tuzak:* izin makamı Orman Genel Müdürlüğü yapılır.
+- **Ormanda yapı ve yerleşme yasağı** — Devlet ormanlarında korunma, istihsal ve imarla ilgili tesisler ve planlı otlatma için geçici çevirmeler dışında **her çeşit bina, ağıl, tarla açılması ve orman içinde yerleşilmesi** yasaktır. Ormanların yanmasından veya açıklıklarından faydalanılarak işgal edilen yerler ve yapılar **şahıslar adına tapuya tescil olunamaz**, doğrudan **orman idaresince el konulur**, yapılar **hiçbir karar alınmasına gerek kalmaksızın** OGM tarafından **derhâl yıkılır**. Savunma, ulaşım, enerji, haberleşme, su, baraj, sağlık-eğitim-spor tesisleri gibi kamu yararı ve zaruret bulunan işlere Bakanlıkça **en çok kırk dokuz yıl** izin verilebilir, uzatmayla **doksan dokuz yıla** kadar çıkabilir; süre sonunda tesisler **eksiksiz ve bedelsiz** OGM'ye geçer (m.17). · **Ne demek:** Yanan ormana yapılan ev mahkeme kararı beklenmeden yıkılır; kamu tesisi izni 49+50 yıldır. · *Örnek:* Yangından sonra açılan alana yapılan yazlık, tapuya tescil edilemez ve OGM'ce yıkılır. · *Tuzak:* "yıkım için mahkeme kararı gerekir" denir.
+- **Diğer tesis izinleri** — Arkeolojik kazı ve restorasyon, odun kömürü-terebentin-katran-sakız ocakları, orman içi su kaynaklarında balık üretim yerleri, yeraltı depolama alanı gibi işlere **OGM'ce bedeli alınarak yirmi dokuz yıla kadar** izin verilebilir; saha tesliminden itibaren **iki yıl** içinde işletmeye alınmayan tesisin izni iptal edilir; **yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılan** sahalarda bu faaliyetlere **hiçbir surette** izin verilemez (m.18). · **Ne demek:** m.17'deki 49 yıl kamu altyapısı için, m.18'deki 29 yıl daha küçük ticarî işler için. · *Tuzak:* iki süre yer değiştirilir.
+- **Hayvan sokma yasağı** — Ormanlara **her türlü hayvan sokulması yasaktır**; kamu yararına uygun olarak orman idaresince belirlenen alanlarda ve esaslar çerçevesinde **otlatmaya izin verilebilir**; **yangın görmüş, gençleştirmeye ayrılmış veya ağaçlandırılmış** sahalarda **hiçbir surette** hayvan otlatılamaz (m.19). · **Ne demek:** Kural yasak, istisna izinli otlatma; yanan ormanda istisna bile yok. · *Tuzak:* "başıboş hayvanın girmesine sebep olmak" yasak dışı gösterilir.
+- **Orman emvalinin nakli** — Satışı yapılmış orman emvali; **bedeli ödenmeden veya teminatı verilmeden, damgalanmadan, taşıma belgesi olmaksızın** nakledilemez; belgede emvalin adedi, cinsi, ebadı, bedeli, **hareket tarihi ve saati** ile geçerlilik süresi gösterilir; malın başka yere taşınmasında belge **yeniletilir**. Belgeye uygun emvalde **hacmen yüzde on ve ağırlığın yüzde on beşine** kadar fazlalık, bedeli ve **yüzde on fazlası** alınarak serbest bırakılır; bu hadleri aşan miktar **bütün fazlalığa şamil olmak üzere kaçak sayılarak müsadere** edilir (m.41). · **Ne demek:** Küçük fazlalık ceza ile affedilir; sınır aşılırsa yalnız aşan kısım değil fazlalığın tamamı kaçak olur. · *Tuzak:* "yalnız sınırı aşan kısım müsadere edilir" denir.
+- **Nakliyat yolu ve belge** — Orman içinde nakliyat orman idaresinin göstereceği **yollardan** yapılır; **taşıma belgesi emval taşıyanların daima üzerinde bulunur** ve memurlar istediğinde gösterilmesi zorunludur; şehir içindeki ticarethanelerden alınan emval **fatura veya sevk irsaliyesiyle** taşınabilir, belgeler araçta bulundurulur (m.42). · **Ne demek:** Jandarma yol kontrolünde odun yüklü aracın taşıma belgesini veya faturasını isteyebilir. · *Tuzak:* "fatura yeterli değildir, her hâlde taşıma belgesi gerekir" denir — şehir içinde fatura yeter.
+- **Yangın ihbarı** — Orman içinde veya yakınında **ateş ve yangın belirtisi görenler** bunu **derhâl orman idaresine veya en yakın muhtarlığa, jandarma dairelerine veya mülkiye amirlerine** haber vermeye **mecburdur**; ihbarda Devlete ait her türlü askerî ve mülkî haberleşme vasıtalarından **derhâl ve parasız** yararlanılır; yangın telgraf ve telefonlarından ücret alınmaz; orman telefon devreleri PTT santrali olmayan yerlerde **jandarma santrallerine** bağlanabilir (m.68). · **Ne demek:** İhbar herkese yüklenmiş bir görevdir ve jandarma karakolu ihbar noktalarından biridir. · *Tuzak:* ihbar "yalnız orman idaresine" yapılır denir.
+- ★ çıkmış **Yangınla ilgili yasaklar** — Devlet ormanlarında belirlenen **konak yerlerinden başka yerde gecelemek**; izin verilen ve ocak yeri olarak belirlenen yerler dışında **ateş yakmak** veya yakılan ateşi **söndürmeden terk etmek**; ormanlara **sönmemiş sigara** veya yangına yol açabilecek madde atmak; ormanlara **dört kilometre** mesafede veya orman köyleri sınırları içinde **anız veya bitki örtüsü yakmak** yasaktır (m.76). · **Ne demek:** Anız yakma yasağının ölçüsü dört kilometredir. · *Tuzak:* mesafe bir veya iki kilometre yapılır.
+- ★ çıkmış **Orman memurunun kolluk sıfatı** — Orman memurları, bu Kanundaki suçların **önlenmesi** veya soruşturmadaki görevleri kapsamında **kolluk görevlisi sıfatını** taşır; lüzum görülenler **Cumhurbaşkanınca seçilecek silahla** teçhiz olunur, silahlar **demirbaş** olarak verilir; kolluk görevi yapan orman memurları **özel kıyafetle** donatılır; Devlet ormanları dışındaki ormanlarda çalışan orman bekçilerine de genel hükümlere göre silah taşıma izni verilebilir (m.77). · **Ne demek:** Orman muhafaza memuru orman suçunda kolluktur; sınırlı ama gerçek bir kolluk yetkisi. · *Tuzak:* "yalnız jandarma kolluk sıfatı taşır" denir.
+- ★ çıkmış **Orman memurunun silah kullanma hâlleri** — Silah taşımaya yetkili olanlar görevleri sırasında: (A) TCK'daki **hakkın kullanılması, meşru savunma veya zorunluluk** hâllerinde; (B) tecavüz veya taarruza yarayan alet ve silah taşıyanlara **derhâl teslim emredildiği hâlde** uyulmayıp **fiilen tecavüz ve taarruzda** bulunulması ve bunun **başka şekilde def'ine imkân olmaması**; (C) teslim edilen alet ve silahları, elkonan nakil vasıtaları ile orman emvalini veya **memurun silahını almak** ya da **orman bölge ve muhafaza binalarına zorla girmek** maksadıyla yapılan tecavüzün başka şekilde def'ine imkân bulunamaması hâllerinde silahlarını kullanabilir (m.78). · **Ne demek:** Üç hâlde de ortak şart "başka şekilde önlenememesi"; silah son çaredir. Kara Avcılığı memurları da bu maddeye göre silah kullanır. · *Tuzak:* "kaçan kaçak odun taşıyıcısına ateş edilebilir" denir — kaçma tek başına silah kullanma sebebi değildir.
+- ★ çıkmış **Suçların takibi ve yardım** — Orman memurları aykırılık delillerini **tutanakla** tespit eder; elde edilen orman malları ile suçta kullanılan nakil vasıtası ve eşyaya **CMK hükümlerine göre** elkonulur; **Cumhuriyet savcısına ulaşılamadığı hâllerde elkoyma, orman işletme şefinin yazılı emriyle** yapılır; orman muhafaza memurları CMK'ya göre **şüphelileri yakalama yetkisine** sahiptir. **Talep vukuunda polis, jandarma, köy muhtar ve bekçileri orman memurlarına yardıma mecburdur**; kanunda hüküm bulunmayan hâllerde CMK uygulanır (m.79). · **Ne demek:** CMK'da savcıya ulaşılamazsa emri kolluk amiri verirdi; orman suçunda bu yetki işletme şefindedir. Yardım listesi kapalıdır: ihtiyar heyeti üyesi listede yoktur. · *Örnek:* Kaçak kesim ihbarına giden orman memuru jandarmadan destek isterse jandarma gitmek zorundadır. · *Tuzak:* yardıma mecbur olanlara "köy ihtiyar heyeti üyeleri" eklenir — çıkmış soruda tam bu çeldiriciydi.
+- **Görevli mahkeme** — Orman suçlarına ilişkin davalardan m.110/3'tekiler **asliye ceza**, m.110/4'tekiler **ağır ceza**, m.110/5'tekiler özel görevli ağır ceza mahkemesinde, diğerleri **sulh ceza** mahkemesinde görülür; orman davaları mahkemelerce **acele işlerden** sayılır (m.83). · **Ne demek:** Kasten orman yakma ağır cezalıktır ve öncelikle görülür.
+- **Elkonulan emvalin muhafazası** — Elkonulan ağaç, tomruk, kereste ve mahsuller orman memurlarınca **orman depolarına**; depo yoksa belediye sınırında **belediyeye**, köy sınırında **köy muhtarına, yokluğunda vekiline, onun da yokluğunda ihtiyar heyeti üyelerinden birine** yediemin senedi karşılığı teslim edilir; **çürüyecek veya muhafazası zor** olanlar CMK m.132'ye uygun olarak müsadereli mallar satış komisyonlarınca **derhâl satılır**; satış bedelinin tamamı **OGM hesabına** irat kaydedilir (m.84). · *Tuzak:* teslim sırası bozulur.
+- ★ çıkmış **Arama** — Bu Kanundaki suçlardan dolayı arama **CMK hükümlerine** göre yapılır; ancak CMK m.119/1'e göre **Cumhuriyet savcısına ulaşılamadığı hâllerde arama, orman şefinin yazılı emriyle** yapılır (m.88). · **Ne demek:** Elkoymada (m.79) ve aramada (m.88) aynı istisna: savcı yoksa işletme şefi. · *Tuzak:* yetki "orman bölge müdürü" veya "kolluk amiri" yapılır.
+
+### Sayılar ve süreler
+| Konu | Değer | Madde |
+|---|---|---|
+| Kamu altyapı tesisi izni | en çok 49 yıl, uzatmayla 99 yıla kadar | m.17 |
+| Ocak, kazı, balık üretimi vb. izin | 29 yıla kadar | m.18 |
+| İzinli tesisin işletmeye alınması | saha tesliminden itibaren 2 yıl | m.18 |
+| Emvalde tolerans | hacmen %10 · ağırlıkta %15 · bedelin %10 fazlası | m.41 |
+| Anız yakma yasak mesafesi | ormana 4 kilometre | m.76 |
+| Yayla alanı tespit ilanı / itiraz | 1 ay / 1 ay | m.17 |
+
+### Yetkili makamlar
+| İş | Yetkili | Madde |
+|---|---|---|
+| Maden ve kamu tesisi izni | Tarım ve Orman Bakanlığı | m.16, m.17 |
+| Ocak, kazı, depolama izni | Orman Genel Müdürlüğü | m.18 |
+| İşgal yapılarının yıkımı | OGM, karar gerekmeksizin | m.17 |
+| Otlatma izni | Orman idaresi | m.19 |
+| Orman memuru silahının seçimi | Cumhurbaşkanı | m.77 |
+| Savcıya ulaşılamazsa elkoyma / arama emri | Orman işletme şefi (yazılı) | m.79, m.88 |
+| Yangın ihbar noktaları | Orman idaresi, muhtarlık, jandarma, mülki amir | m.68 |
+| Elkonulan emvalin satışı | Müsadereli mallar satış komisyonu | m.84 |
+
+### "Yanlıştır/değildir" tuzakları
+- "İzin alarak zararlı ağaççık kökü sökmek yasaktır." → **İzinli** iş yasak değildir (m.14-15).
+- "Orman memurlarına yardıma köy ihtiyar heyeti üyeleri de mecburdur." → Liste: **polis, jandarma, köy muhtar ve bekçileri** (m.79).
+- "Savcıya ulaşılamazsa elkoyma emrini kolluk amiri verir." → **Orman işletme şefi** verir (m.79).
+- "Anıza ormana iki kilometre mesafede yakılabilir." → **Dört kilometre** içinde yasak (m.76).
+- "Yanan ormana yapılan bina mahkeme kararıyla yıkılır." → **Karar gerekmeksizin OGM yıkar** (m.17).
+- "Toleransı aşan emvalde yalnız aşan kısım müsadere edilir." → **Bütün fazlalık** kaçak sayılır (m.41).
+
+---
+
+## 4342 sayılı Mera Kanunu — Sınav kapsamı: m.3, 4, 6, 19, 20, 22, 23, 26, 27
+
+### Bu mevzuattan nasıl soruluyor
+- Kısa kapsam, iki damar: **tanımlar** (mera / yaylak / kışlak / çayır / otlak ve tahsis / tahdit / tespit) ve **mera komisyonunun bileşimi** (on bir üye, **genel kolluk temsilcisi** dâhil).
+- Yaptırım sorusu: yükümlülüğe uymayanın hakkı **7-30 gün** askıya alınır, tekrarda **bir otlatma dönemi** iptal; tecavüzde **3091 sayılı Kanun** devreye girer.
+
+### Altın noktalar
+- **Tanımlar** — **Mera**: hayvan otlatılması için tahsis edilen veya kadimden beri bu amaçla kullanılan yer; **yaylak**: çiftçilerin hayvanlarıyla **yaz** mevsimini geçirdiği yer; **kışlak**: hayvanların **kış** mevsiminde barındırıldığı yer; **çayır**: taban suyu yüksek veya sulanabilen, **biçilmeye elverişli**, genellikle **kuru ot** üretimi için kullanılan yer; **otlak**: mera ile aynı nitelikte yer; **otlatma hakkı**: çiftçilerin her birinin otlatabileceği büyükbaş hayvan birimi sayısı; **otlatma kapasitesi**: bir alanda doğal kaynaklara zarar vermeden otlatılabilecek birim miktarı; **büyükbaş hayvan birimi**: 500 kg canlı ağırlık (m.3). · **Ne demek:** Çayır biçilir, mera otlatılır; yaylak yazlık, kışlak kışlıktır. · *Tuzak:* çayır ile mera yer değiştirilir.
+- **Tahsis, tahdit, tespit** — **Tahsis**: mera, yaylak ve kışlakların bir veya birkaç köy ya da belediyeye bırakılması; **tahdit**: mera olduğuna karar verilen yerlerin sınırlarının **1/5000 ölçekli haritalarda** belirtilip arazide kalıcı işaretlerle işaretlenmesi; **tespit**: bir yerin mera olup olmadığının resmî evrak ve bilirkişi ifadeleriyle belgelenmesi (m.3). · **Ne demek:** Sıra: tespit (mera mı?) → tahdit (sınırı nerede?) → tahsis (kime?). · *Tuzak:* üç kavram birbirine karıştırılır.
+- **Hukukî durum** — Mera, yaylak ve kışlakların **kullanma hakkı** köy veya belediyeye aittir; bu yerler **Devletin hüküm ve tasarrufu** altındadır; **özel mülkiyete geçirilemez, amacı dışında kullanılamaz, zamanaşımı uygulanamaz, sınırları daraltılamaz**; ancak kullanım hakkı **kiralanabilir**. Amaç dışı kullanımla bozulan meraların eski hâline getirilme masrafları **sebebiyet verenlerden** tahsil edilir (m.4). · **Ne demek:** Mera, ne kadar süre işgal edilirse edilsin işgalcinin olmaz; zamanaşımı işlemez. · *Tuzak:* "kullanım hakkı kiralanamaz" denir.
+- ★ çıkmış **Mera komisyonu** — Tespit, tahdit ve tahsis **Tarım ve Orman Bakanlığınca** yapılır; bu amaçla **vali yardımcısı başkanlığında**; Bakanlık il müdürü, konu uzmanı ziraat mühendisi, **DSİ**, **OGM** temsilcileri, ilgili köy veya mahalle **muhtarı**, defterdarlıktan bir hukukçu, Millî Emlak, Kadastro, **Ziraat Odası** temsilcileri ve **ilgisine göre genel kolluk biriminde görevli bir temsilci** olmak üzere **on bir kişiden** oluşan komisyon kurulur; komisyonlar **valilik onayıyla** oluşturulur; ölçme ve harita işleri için komisyona bağlı **teknik ekipler** kurulur (m.6). · **Ne demek:** Jandarma bölgesindeyse jandarma temsilcisi komisyon üyesidir; kolluğun mera işindeki resmî koltuğu budur. · *Tuzak:* kolluk temsilcisi listeden çıkarılır ya da üye sayısı on yapılır.
+- ★ çıkmış **Muhtar ve belediye başkanının sorumluluğu** — Muhtarlar ve belediye başkanları; mera, yaylak ve kışlakların ve **sınır işaretlerinin korunmasından** ve tahsis amacına uygun kullanılmasından sorumludur; bu amaçla **Mera Yönetim Birlikleri** kurulur. **Tecavüz** olduğunda durumu derhâl Bakanlık il veya ilçe müdürlüğüne, müdürlükler de **valilik veya kaymakamlığa** bildirir; bu makamlarca **3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun** veya Devlet İhale Kanunu m.75 uyarınca işlem yapılır (m.19). · **Ne demek:** Mera işgalinin kolluk yolu 3091'den geçer; jandarma tahliye kararını o kanuna göre uygular. · *Örnek:* Meraya ahır yapan kişi hakkında muhtar il müdürlüğüne, oradan kaymakamlığa bildirim gider; kaymakamlık 3091'e göre men kararı verir, jandarma infaz eder. · *Tuzak:* bildirim zinciri atlanıp "muhtar doğrudan tahliye eder" denir.
+- **İnşaat yasağı** — Yaylak ve kışlaklarda; Köy Kanunu'ndaki inşaatlar ile **valiliklerden izin alınarak** imar mevzuatına göre yapılacak **mandıra, suluk, sundurma ve süreklilik göstermeyen barınak ve ağıllar** ile turizme açılan bölgelerdeki **ahşap yapılar** dışında **ev, ahır ve benzeri inşaat yapılamaz** (m.20). · **Ne demek:** Geçici ve kullanım amacına uygun yapı izinle olur; kalıcı ev-ahır olmaz. · *Tuzak:* "ahır yapılabilir" denir.
+- **Yararlanma şartı** — Çiftçi ailelerinin meradan yararlanabilmesi için köy veya belediye sınırları içinde tahsis tarihinde **en az altı aydan beri** ikamet ediyor olmaları gerekir; **Devletçe naklen yerleştirilenler** için bu şart aranmaz; başka yere yerleşmek amacıyla ayrılanlar hakkını **kaybeder**, sürekli ikamet amacıyla geri dönenlere hak **komisyon kararıyla** tanınabilir; **göçerler** hakkında da bu Kanun uygulanır (m.22). · *Tuzak:* süre bir yıl yapılır.
+- **Aşırı otlatma yasağı** — Meraya komisyonun tahsis kararında belirtilen miktardan **fazla hayvan sokulamaz**; bakım ve ıslah sonucu kapasite artarsa köy veya belediyenin teklifiyle ya da doğrudan **komisyonca** yeniden tespit yapılarak hayvan miktarı artırılabilir (m.23). · **Ne demek:** Tavanı komisyon koyar, yine komisyon yükseltir.
+- **Yararlananların yükümlülükleri** — Yararlanan çiftçi aileleri, komisyonca gerekli görülürse **valiliğin onayıyla** bakım ve ıslah giderlerine katılmakla yükümlüdür; katılım **nakdî** olabileceği gibi **işçilik, araç, makine** şeklinde de olabilir; her yıl komisyonca belirlenen **ücreti** öderler; otlatma hakkının üstünde hayvan otlatanlardan ücret, **fazla her hayvan için üç katı** olarak tahsil edilir; tahsilat köy sandığına veya belediye bütçesinde ayrı hesaba gelir kaydedilir ve **amacı dışında kullanılamaz**; takip ve tahsilde **6183 sayılı Kanun** uygulanır (m.26). · **Ne demek:** Fazla hayvan için ceza değil, üç kat ücret. · *Tuzak:* "iki katı" denir.
+- ★ çıkmış **Yükümlülüğü yerine getirmeyenler** — m.26'ya uymayanların yararlanma hakları, Bakanlık taşra teşkilatının teklifi ve **valilik onayıyla en az 7, en çok 30 gün** geçici olarak, **aynı fiilin tekrarında bir otlatma dönemi** için iptal edilir. **Yasaklanmış yerlerde otlatmaya devam edenler, mera arazisini sürerek tahrip edenler ve izinsiz inşaat yapanlar** hakkında **valilik** tarafından **3091 sayılı Kanun** ile TCK'ya göre işlem yapılır; bu fiilleri zamanında duyurmayan muhtar ve belediye başkanı hakkında genel hükümlere göre işlem yapılır (m.27). · **Ne demek:** İki ayrı yaptırım katmanı: ücret ödemeyen hakkını kaybeder; merayı süren-işgal eden 3091 ve TCK ile karşılaşır. · *Tuzak:* geçici askıya alma süresi "en çok 60 gün" denir.
+
+### Sayılar ve süreler
+| Konu | Değer | Madde |
+|---|---|---|
+| Büyükbaş hayvan birimi | 500 kg canlı ağırlık | m.3 |
+| Tahdit haritası ölçeği | 1/5000 | m.3 |
+| Mera komisyonu üye sayısı | 11 | m.6 |
+| Yararlanma için ikamet şartı | en az 6 ay | m.22 |
+| Fazla hayvan otlatma ücreti | 3 katı | m.26 |
+| Hakkın geçici askıya alınması | en az 7, en çok 30 gün | m.27 |
+| Tekrarda iptal | bir otlatma dönemi | m.27 |
+
+### Yetkili makamlar
+| İş | Yetkili | Madde |
+|---|---|---|
+| Tespit, tahdit, tahsis | Tarım ve Orman Bakanlığı (mera komisyonu) | m.6 |
+| Komisyonun oluşturulması | Valilik onayı | m.6 |
+| Komisyon başkanı | Vali yardımcısı | m.6 |
+| Yaylak-kışlakta geçici yapı izni | Valilik | m.20 |
+| Tecavüzde işlem | Valilik / kaymakamlık — 3091 sayılı Kanun | m.19, m.27 |
+| Hakkın geçici askıya alınması | Bakanlık taşra teklifi + valilik onayı | m.27 |
+| Ücret takibi | 6183 sayılı Kanun usulü | m.26 |
+
+### "Yanlıştır/değildir" tuzakları
+- "Meralar zamanaşımıyla kazanılabilir." → **Zamanaşımı uygulanamaz** (m.4).
+- "Mera kullanım hakkı kiralanamaz." → **Kiralanabilir** (m.4).
+- "Mera komisyonunda kolluk temsilcisi bulunmaz." → **Genel kolluk temsilcisi** üyedir (m.6).
+- "Yaylakta kalıcı ahır yapılabilir." → **Yapılamaz** (m.20).
+- "Fazla hayvan otlatandan iki kat ücret alınır." → **Üç kat** (m.26).
+- "Mera tecavüzünde muhtar doğrudan tahliye yapar." → Bildirir; valilik/kaymakamlık **3091'e göre** işlem yapar (m.19).
