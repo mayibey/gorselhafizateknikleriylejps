@@ -1420,3 +1420,249 @@ Tek madde (m.8) soruluyor ama sık: **izinsiz tesis kurma cezası** (1-3 yıl + 
 - "Pipo üretmek için tesis izni gerekir." → Pipo sayılmaz; **makaron, sigara kâğıdı, filtre, etil alkol, metanol** (m.8).
 - "İdari yaptırıma dava açmak infazı durdurur." → **Durdurmaz** (m.8).
 - "Dava süresi 30 gündür." → **15 gün** (m.8).
+
+## Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik — Sınav kapsamı: m.3, 4, 5, 6, 7, 8, 15, 19, 20, 23, 24, 28, Ek 1, Ek 2
+
+### Bu mevzuattan nasıl soruluyor
+1774 sayılı Kanunun uygulama yönetmeliği; kanunla birlikte sorulur. Sık gelenler: **hangi tesisler kapsamda** (m.6 listesi; orduevi gibi askerî tesisler kapsam DIŞI), **süreler** (24 saat / 3 gün / 30 gün), **defter ve belge saklama süreleri** (1 yıl / 5 yıl), **karakolun 3 ayda bir tarama** görevi.
+
+### Altın noktalar
+- ★ çıkmış **Kapsamdaki tesisler (m.6)** — Otel, motel, han, pansiyon, bekâr odaları, **günübirlik kiralanan evler**, kamp, kamping, tatil köyü, her türlü özel veya resmî konaklama yerleri (yatılı okul pansiyonları, yetiştirme yurtları, **köy odaları** dahil), **özel sağlık müesseseleri**, dinlenme ve huzur evleri, dinî ve hayır kurumlarının sosyal tesislerinde her an ulaşılabilecek bir **sorumlu işletici** bulunur (m.6). · **Ne demek:** Konaklatan her yer kapsamda; ama Kanunun kapsam dışı bıraktığı askerî tesisler (orduevi, askerî kamp, askerî dinlenme tesisi) burada yok. · *Örnek:* "Orduevi", "askerî kamp" şıkkı → kapsam dışı; "özel sağlık müessesesi", "huzurevi", "öğrenci yurdu" → kapsamda. · *Tuzak:* Şıkta "orduevi" konaklama yerleri arasında verilir; **kapsam dışıdır**.
+- **İşletici kimlik bildirme belgesi** — Sorumlu işleticinin kimliği, tesis **açılmadan önce** sahip/kanunî temsilci/kiracı tarafından iki örnek **İşletici Kimlik Bildirme Belgesi (Form 1)** ile en yakın yetkili genel kolluk örgütüne verilir; işletici değişirse **24 saat** içinde yeni belge verilir (m.6-7). · **Ne demek:** Tesisin "kim sorumlu" bilgisi kollukta önceden vardır. · *Tuzak:* İşletici değişikliği "3 gün" değil **24 saat**.
+- **Çalışanların bildirimi — 24 saat / 3 gün** — m.6 kapsamındaki tesislerde (otel, pansiyon vb.) çalışanların belgesi **24 saat**, diğer ticaret ve sanat amacı güden iş yerlerinde çalışanların belgesi **3 gün** içinde kolluğa verilir; köylerdeki iş yerlerinde belge önce **muhtara onaylatılır**; bildirim elektronik ortamda da yapılabilir, o zaman muhtar onayı aranmaz (m.8). · **Ne demek:** Konaklama tesisi daha sıkı (24 saat), sıradan dükkân daha gevşek (3 gün). · *Örnek:* Köydeki bakkala giren çırak → 3 gün içinde, muhtar onaylı belgeyle karakola. · *Tuzak:* İkisi çapraz sorulur: otel çalışanı 24 saat, dükkân çalışanı 3 gün.
+- **Süre tanımları** — "24 saat" işe başlama/ayrılmanın vuku bulduğu saatten itibaren geçen 24 saati; "3 gün" aynı saatten itibaren işlemeye başlayan **72 saati** kapsar (m.4). · **Ne demek:** Süreler takvim günü değil saat hesabıyla işler. · *Tuzak:* "Üç gün = iş günü" yanlış; 72 saat.
+- **Kimliğini ispat edemeyen barındırılamaz** — Bildirimle yükümlü olanlar, kimliğini nüfus cüzdanı veya diğer resmî geçerli belgeyle ispat edemeyen kişileri tesislerinde **barındıramaz**, konut ve iş yerinde **çalıştıramaz** (m.5). · **Ne demek:** "Kimliğim yanımda yok" diyen otelde kalamaz. · *Tuzak:* "Sözlü beyanla kayıt yapılabilir" yanlış.
+- ★ çıkmış **Misafir bildirimi — 30 günden fazla** — Konutlara misafir olarak gelip **30 günden fazla** kalacak kişilerin kimlikleri aile reisi (veya yalnız yaşayan kişi) tarafından **Form 6**'ya yazılır ve **3 gün** içinde kolluğa verilir (m.15). · **Ne demek:** Kısa süreli misafir bildirilmez; bir aydan uzun kalan bildirilir. · *Tuzak:* "15 gün" ve "60 gün" şıkları yanlış; 30 gün.
+- **Sabahçı kahvesi izin belgesi** — İskele, istasyon, terminal, garaj, benzin istasyonu gibi yerlerdeki sabahçı kahvesi ve benzeri tesisler, kolluk ile belediye/köy idaresinin olumlu görüşünden sonra **mahallin en büyük mülkî amiri** tarafından geçici veya sürekli açık tutulabilir; izin belgesi görünür yere asılır; **buralarda kalanlar için bildirim yapılmaz** (m.19). · **Ne demek:** Sabahçı kahvesinde gecelemek konaklama sayılmaz. · *Tuzak:* "Sabahçı kahvesinde kalanlar da bildirilir" yanlış.
+- **İşletici belgesinin alınışı ve saklanması** — Kolluk görevlisi, önceki işleticinin belgesiyle isim karşılaştırması yapıp yeni belgenin alınış hanelerini bizzat doldurur, bir örneği saklar, diğerini yükümlüye geri verir, eski belgeyi imha eder; belge örnekleri tesisin çalıştığı süre boyunca **tesiste saklanır** (m.20). · **Ne demek:** Belge zinciri kopmadan tutulur. · *Tuzak:* "Eski işletici belgesi kollukta saklanır" yanlış; imha edilir.
+- **Konaklama yeri kayıt defteri ve konaklama belgesi** — Yatacak yer gösterilen yerli-yabancı herkesin kimliği, geliş-ayrılış tarihleri **Konaklama Yeri Kayıt Defteri (Form 7)**'ne günü gününe geçirilir; kalan kişi **Konaklama Belgesi (Form 8)**'ni doldurup imzalar; bilgiler resmî kimlikle karşılaştırılır (m.23). · **Ne demek:** Otel defteri kolluğun kimlik takip aracıdır. · *Tuzak:* Form numaraları soruluyor: Form 7 defter, Form 8 belge.
+- **Defter onayı ve saklama süreleri** — Defter yıllık tutulur, kullanılmadan önce sonu **en yakın genel kolluk örgütüne** sayfa sayısı belirtilerek **onaylatılır**; defter **100 sayfadan az olamaz**; konaklama belgeleri izleyen yıldan başlayarak **1 yıl**, defterler dolduğu yılı izleyen yıldan başlayarak **5 yıl** tesiste saklanır; kesin kapanan tesisin defterleri kolluğa verilir (m.24). · **Ne demek:** Belge 1 yıl, defter 5 yıl. · *Tuzak:* "Defteri noter onaylar" yanlış; kolluk onaylar. Süreler çapraz sorulur.
+- **Karakolun 3 ayda bir tarama görevi** — Her karakol **üç ayda bir** ve gerektiğinde sürekli olarak bölgesini tarar; bölge krokisinde veya binalar cetvelinde olmayan yeni/yıkılan yapıları, ilave ve değişiklikleri saptayıp işler; belediyeler mülkî amirin istemesi hâlinde numarataj cetvelini verir (m.28). · **Ne demek:** Karakol kendi bölgesinin bina haritasını güncel tutar. · *Tuzak:* "6 ayda bir" veya "yılda bir" şıkları yanlış; 3 ay.
+- **Elektronik anlık bildirim ve 5 yıl saklama** — Konaklama tesisleri ve işletmeler kayıtlarını bilgisayarda günü gününe tutar ve genel kolluk terminallerine **anlık** bildirir; kayıtlar kolluk sisteminde **5 yıl** saklanır, süre dolunca otomatik silinir; **araç kiralama şirketleri** de kiralanan araç ve kiralayan kimlik bilgilerini günü gününe tutup kolluğun incelemesine hazır bulundurur, veriler **5 yıl** saklanır (Ek m.1-2). · **Ne demek:** Otel ve rent-a-car verisi kolluğa anlık akar. · *Tuzak:* "Kamu kurumu araç kiralarsa sadece sözleşme ve araç bilgisi girilir" — kimlik bilgisi girilmez (Ek m.2).
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| İşletici değişikliği bildirimi | 24 saat |
+| Çalışan bildirimi (konaklama tesisi / diğer iş yeri) | 24 saat / 3 gün |
+| "Üç gün" tanımı | 72 saat |
+| Misafir bildirimi | 30 günden fazla kalacaksa, 3 gün içinde |
+| Konaklama belgesi / defter saklama | 1 yıl / 5 yıl |
+| Defter asgari sayfa | 100 |
+| Karakol bölge taraması | 3 ayda bir |
+| Elektronik kayıt saklama (kolluk sistemi, araç kiralama) | 5 yıl |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Bildirimlerin verildiği yer | En yakın yetkili genel kolluk örgütü (polis/jandarma karakolu) |
+| Köy iş yerlerinde belge onayı | Muhtar (elektronik bildirimde aranmaz) |
+| Defter onayı | En yakın genel kolluk örgütü |
+| Sabahçı kahvesi izni | Mahallin en büyük mülkî amiri |
+| Numarataj cetveli | Belediye (mülkî amir isteyince) |
+
+### "Yanlıştır/değildir" tuzakları
+- "Orduevi Kimlik Bildirme Kanunu kapsamındadır." → **Kapsam dışı**; özel sağlık müessesesi, huzurevi, yurt kapsamda (m.6).
+- "İşletici değişikliği 3 gün içinde bildirilir." → **24 saat** (m.7).
+- "Otel çalışanı 3 gün içinde bildirilir." → **24 saat**; diğer iş yeri 3 gün (m.8).
+- "15 günden fazla kalacak misafir bildirilir." → **30 günden** fazla (m.15).
+- "Konaklama defteri 1 yıl saklanır." → Defter **5 yıl**, belge 1 yıl (m.24).
+- "Karakol bölgesini yılda bir tarar." → **3 ayda bir** (m.28).
+
+## Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik — Sınav kapsamı: m.4, 13, 14, 15, 17
+
+### Bu mevzuattan nasıl soruluyor
+Kurusıkı silah mevzuatı; 5729 sayılı Kanunla birlikte sorulur. Sorular: **tanımlar** (kolluk birimi, bilgi sistemi, şekil/sınıf), **satın alma yolu** (yetki belgesi → dağıtıcı → 1 ay içinde kolluğa bildirim kartı), **yetki belgesi süresi (6 ay)**, **nakil şartları** ve **kuruluş izni veren makam** (Sanayi ve Teknoloji Bakanlığı).
+
+### Altın noktalar
+- ★ çıkmış **Tanımlar — Bakanlık ve bilgi sistemi** — Bu yönetmelikte "Bakanlık" **Sanayi ve Teknoloji Bakanlığı**; "bilgi sistemi" **Bakanlık (Sanayi) tarafından oluşturulan** yazılım altyapısı; "merkezi kayıt sistemi" ise **İçişleri Bakanlığı** bünyesinde kurulan veri tabanıdır (m.4). · **Ne demek:** Üretim tarafı Sanayi Bakanlığı, satış-kayıt tarafı İçişleri. · *Tuzak:* "Bilgi sistemi İçişleri Bakanlığı bünyesindedir" ifadesi **yanlış** (çıkmış soruda I. öncül); merkezi kayıt sistemi İçişleri'nde.
+- ★ çıkmış **Tanımlar — kolluk birimi** — "Kolluk birimi": illerde **il emniyet müdürlükleri ve il jandarma komutanlıkları**, ilçelerde **ilçe emniyet müdürlüğü/amirliği ve ilçe jandarma komutanlıkları** (m.4). · **Ne demek:** Jandarma da kurusıkı bildirim kartı düzenleyen kolluk birimidir. · *Tuzak:* "Yalnız emniyet müdürlükleri" yanlış.
+- ★ çıkmış **Tanımlar — sınıf / şekil / tip** — **Sınıf**: silahın **çalışma prensibine** göre (tek tek atım, yarı otomatik, tam otomatik); **şekil**: **fişek beslemesine** göre (şarjörlü, toplu, kırma); **tip**: namlu borusunun iç yapısı (kapalı, pimli vb.) (m.4). · **Ne demek:** "Şekil = çalışma prensibi" demek yanlıştır. · *Tuzak:* Çıkmış soruda "Şekil: çalışma prensibine göre sınıflandırma" öncülü **yanlış**; o tanım "sınıf"tır.
+- **Ses ve gaz fişeği atabilen silah tanımı** — 6136 sayılı Kanuna tabi silah vasfında olmayan; mermi çekirdeği, saçma veya katı cisim ihtiva eden fişekleri **atamayacak şekilde** imal edilmiş, **kurusıkı** olarak da anılan silahlar (m.4). · **Ne demek:** Kurusıkı 6136 kapsamında değil, 5729 kapsamında. · *Tuzak:* "Kurusıkı silah 6136'ya tabidir" yanlış.
+- **Aksam tanımı** — Gövde (çerçeve), namlu, kapak (sürgü), toplu tabanca fişek haznesi, ateşleme tertibatı veya bunların yerine konabilen unsurlar "aksam"dır (m.4). · **Ne demek:** Namlu değişikliği aksam değişikliğidir, kayıt gerektirir. · *Tuzak:* "Şarjör aksamdır" listede yok.
+- **Satış yalnız ruhsatlı bayilerce, 1 ayda liste** — Ses ve gaz fişeği atabilen silahlar, mermi/av malzemesi ya da yivsiz tüfek satışı için **ruhsatlandırılmış yerlerce** (dağıtıcı) satılır; satan yerler sattıkları mamullerin cins, çap, seri numarası ve alıcı bilgilerini **bir ay** içinde kolluk birimlerine bildirir; merkezi kayıt sistemi devreye girince bildirim **anlık** yapılır; ambalajda yasal uyarı ve kullanım kılavuzu bulunur (m.13). · **Ne demek:** Kurusıkı markette satılmaz, av bayisinde satılır. · *Tuzak:* "İnternetten serbestçe satılır" yanlış.
+- **Yetki belgesi — 6 ay, bir silah** — Satın almak isteyen, Kanunun 3. maddesindeki şartları taşıyorsa (18 yaş, kasten suçtan 1 yıl+ hapis almamış vb.) **yetki belgesi** alır; belge **6 ay** geçerlidir; **her yetki belgesiyle bir adet** silah alınır; **yabancılara, turistlere, mültecilere, geçici koruma altındakilere** satılamaz (m.14). · **Ne demek:** Yetki belgesi, satın alma ön onayıdır. · *Örnek:* Suriyeli geçici koruma statüsündeki kişi → satın alamaz. · *Tuzak:* "Bir yetki belgesiyle iki silah alınabilir" yanlış.
+- **Şartsız satan bayinin belgesi 5 yıl iptal** — Dağıtıcının şartları sağlamayan veya yetki belgesi olmayan kişilere satış yapması hâlinde İçişleri Bakanlığınca verilen **bayilik belgesi 5 yıl** süreyle iptal edilir (m.14). · **Ne demek:** Bayiye ağır yaptırım. · *Tuzak:* "1 yıl" / "süresiz" şıkları yanlış; 5 yıl.
+- ★ çıkmış **Satın alma → kolluğa bildirim kartı** — Silah **sadece dağıtıcılardan**, **yetki belgesi ile** alınır; satın alan kişi **fatura tarihinden itibaren bir ay** içinde fatura ve silahla birlikte **kolluk birimine** müracaat eder; kolluk her silah için **Ses ve Gaz Fişeği Atabilen Silah Bildirim Kartı (Ek-3)** düzenler (m.15). · **Ne demek:** Sıra: yetki belgesi → dağıtıcıdan satın al → 1 ayda kolluğa bildir → bildirim kartı. · *Örnek:* Çıkmış soru: "Satın almak isteyen hangi belgeyle nereye başvurur?" → **Yetki belgesi ile dağıtıcıya**. · *Tuzak:* "Bildirim kartı ile dağıtıcıya" yanlış; bildirim kartı kolluğun sonradan verdiği belgedir.
+- **Film, tiyatro, tören silahları** — Film, tiyatro, şenlik, kutlama ve tören gibi etkinlikler için kullanılacak silahlarda yetkilendirme ve izin **Emniyet Genel Müdürlüğü** tarafından yapılır; genel satın alma şartları aranmaz, bildirim kartı düzenlenmez, süre sonunda **MKE'de imha** için EGM'ye teslim edilir veya ihraç edilir (m.15/3). · **Ne demek:** Dizi setindeki kurusıkılar özel rejimde. · *Tuzak:* "Tören silahları için de bildirim kartı düzenlenir" yanlış.
+- ★ çıkmış **Nakil şartları** — Silahlar **fişekleri boşaltılarak**, her an kullanıma ve erişime imkân vermeyecek şekilde ve **bir kutu içinde**, **bildirim kartı** ile nakledilebilir; bu şartların dışında nakil **taşıma** sayılır (Kanun m.4'e göre işlem); satın almadan sonraki 1 aylık sürede **fatura** ile nakledilebilir; posta/kargo ile de nakledilebilir (m.17). · **Ne demek:** Belde, dolu, kutusuz taşınan kurusıkı "taşıma" = suç. · *Örnek:* Belinde dolu kurusıkı ile yakalanan kişi → taşıma, Kanun m.4. · *Tuzak:* "Kurusıkı kargo ile gönderilemez" yanlış; usulüne uygun gönderilebilir.
+- ★ çıkmış **Kuruluş izni ve prototip süresi** — Ses ve gaz fişeği atabilen silah üretecek işletmelere **kuruluş izni** **Sanayi ve Teknoloji Bakanlığı** verir; kuruluş izni alındıktan sonra prototip üretim izni için **1 yıl** içinde başvurulmazsa kuruluş izni geçerliliğini yitirir (m.4 tanımlar + üretim bölümü). · **Ne demek:** Üretim izinleri İçişleri değil Sanayi Bakanlığında. · *Tuzak:* "Kuruluş iznini İçişleri Bakanlığı verir" yanlış.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Bayinin satış listesi bildirimi | 1 ay (merkezi sistemle anlık) |
+| Yetki belgesi geçerliliği | 6 ay |
+| Bir yetki belgesiyle alınabilecek silah | 1 adet |
+| Şartsız satış → bayilik belgesi iptali | 5 yıl |
+| Satın alma sonrası kolluğa bildirim | Fatura tarihinden 1 ay |
+| Kuruluş izni → prototip başvurusu | 1 yıl |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Kuruluş / üretim izni, bilgi sistemi | Sanayi ve Teknoloji Bakanlığı |
+| Merkezi kayıt sistemi, bayilik belgesi | İçişleri Bakanlığı |
+| Bildirim kartı | Kolluk birimi (il/ilçe emniyet ve jandarma) |
+| Etkinlik (film, tören) silahları | Emniyet Genel Müdürlüğü |
+| Satış | Ruhsatlı dağıtıcı (av bayii) |
+
+### "Yanlıştır/değildir" tuzakları
+- "Bilgi sistemi İçişleri Bakanlığı bünyesindedir." → **Sanayi ve Teknoloji Bakanlığı**; merkezi kayıt sistemi İçişleri (m.4).
+- "Şekil, çalışma prensibine göre sınıflandırmadır." → O **sınıf**tır; şekil fişek beslemesine göre (m.4).
+- "Satın almak isteyen bildirim kartı ile kolluğa başvurur." → **Yetki belgesi ile dağıtıcıya**; bildirim kartı sonra kolluktan (m.14-15).
+- "Yetki belgesi 1 yıl geçerlidir." → **6 ay** (m.14).
+- "Kuruluş iznini İçişleri Bakanlığı verir." → **Sanayi ve Teknoloji Bakanlığı** (m.4).
+- "Kutusuz, dolu taşınan kurusıkı nakil sayılır." → **Taşıma** sayılır (m.17).
+
+## Karayolları Trafik Yönetmeliği — Sınav kapsamı: m.3, 4, 5, 11, 13, 16, 17, 26, 75, 76, 79, 85, 87, 95, 96, 97, 98, 100, 102, 109, 113, 142, 150, 152, 154, 155, 157, 160, 166, 167, 168, 173, 174, 178, Ek 2, Ek 3
+
+### Bu mevzuattan nasıl soruluyor
+Jandarma trafik hizmeti verdiği için kanunla birlikte yönetmelik de sorulur. En sık: **m.76 sürücü adayı şartları** (yaş, deneyim, ilkokul; EGM ve JGK personeli sertifika eğitimlerinde teklif/onay makamları; zırhlı taşıt için en az B sınıfı), **m.97 alkol-uyuşturucu** (promil, geri alma süreleri), **m.100 hız sınırları**, **m.152-157 kaza işlemleri ve aslî kusur**, **m.167 ceza puanı**, **Ek 3 aday sürücü**. Tanımlar (tali yol, geçiş yolu) ve kurullar (m.4, m.17) da gelir.
+
+### Altın noktalar
+- ★ çıkmış **Tanımlar — yol türleri** — **Tali yol**: trafik yoğunluğu bakımından bağlandığı yoldan **daha az önemde** olan yol; **anayol**: kesen yoldaki trafiğin ilk geçiş hakkını vermesi gereken işaretlerle belirlenmiş yol; **geçiş yolu**: araçların bir **mülke girip çıkması** için yapılmış yolun karayoluna bağlanan kısmı; **bağlantı yolu**: kavşak yakınında taşıt yollarını birbirine bağlayan, tek yönlü trafiğe ayrılmış yol; **banket**: yaya yolu ayrılmamış karayolunda taşıt yolu kenarı ile şev başı arasında kalan kısım; **platform**: taşıt yolu + yaya yolu/banket (m.3). · **Ne demek:** "Bağlandığı yoldan daha az önemli" = tali yol. · *Tuzak:* Geçiş yolu (mülk girişi) ile bağlantı yolu (kavşak bağlantısı) karıştırılır.
+- **Tanımlar — hareket hâlleri** — **Durma**: kırmızı ışık, dur işareti gibi trafik zorunluluğu nedeniyle durdurma; **duraklama**: trafik zorunluluğu dışında indirme-bindirme, yükleme için **kısa süre** durdurma (bekleme amaçlıysa **en çok 5 dakika**); **parketme**: durma ve duraklama dışındaki bırakma; **trafikten men**: belgelerin alınıp aracın belirli yere çekilerek alıkonulması (m.3, 112). · **Ne demek:** 5 dakikayı geçen duraklama parketmedir. · *Tuzak:* "Kırmızı ışıkta beklemek duraklamadır" yanlış; durmadır.
+- **Tanımlar — kişiler** — **Sürücü**: motorlu/motorsuz araç veya taşıtı sevk ve idare eden; **şoför**: **ticari olarak tescilli** motorlu taşıtı süren; **işleten**: araç sahibi veya uzun süreli kiracı/ariyet/rehin alan, ya da aracı kendi hesabına işlettiği ispat edilen kişi; **yolcu**: sürücü ve hizmetliler dışında araçta bulunan (m.3). · **Ne demek:** Her şoför sürücüdür, her sürücü şoför değildir. · *Tuzak:* "Hususi aracını süren kişi şoför" yanlış.
+- **Karayolu Güvenliği Yüksek Kurulu ve Karayolu Trafik Güvenliği Kurulu** — Yüksek Kurul ilgili bakanlar, **Jandarma Genel Komutanı**, Emniyet Genel Müdürü, Karayolları Genel Müdüründen oluşur, **yılda iki defa** olağan toplanır, sekreterya **EGM**; Karayolu Trafik Güvenliği Kurulu **EGM Trafik Hizmetleri Başkanı** başkanlığında **ayda bir** toplanır, JGK temsilcisi de üye; fahri trafik müfettişi adaylarını Yüksek Kurula önerir (m.4). · **Ne demek:** Politika kurulu yılda iki, teknik kurul ayda bir. · *Tuzak:* İki kurulun başkanı ve toplantı sıklığı çapraz sorulur.
+- **Karayolları Genel Müdürlüğünün trafik görevleri** — Yapım ve bakımından sorumlu olduğu yollarda düzenleme-işaretleme, **tüm karayollarındaki işaretleme standartlarını tespit etmek**, İçişleri'nin uygun görüşüyle hız sınırlarını değiştirmek, Kanunun 13, 14, 16, 17, 18, 47/a ve 65. maddelerine aykırılıkta tutanak düzenlemek (m.11). · **Ne demek:** "İşaretleme standardı" KGM'nin işi, İçişleri'nin değil. · *Tuzak:* Çıkmış soru: İçişleri'nin görevleri arasında **olmayan** → "işaretleme standartlarını tespit etmek" (KGM'nindir).
+- **Ulaştırma Bakanlığı ve belediyeler** — Ulaştırma: araç muayenesi, muayene istasyonu denetimi, Kanun m.35 cezaları, ağırlık-boyut kontrolü (m.13); belediyeler: kendi yollarında işaretleme, park yeri, alt-üst geçit, Kanun m.17 tesislerine izin, **çocuk trafik eğitim parkları** yapmak; belediye **trafiği denetleyemez ve trafik ceza tutanağı düzenleyemez** (m.16). · **Ne demek:** Belediye zabıtası trafik cezası kesemez. · *Tuzak:* "Belediye trafik zabıtası ceza tutanağı düzenler" yanlış.
+- ★ çıkmış **Çocuk trafik eğitim parkları esasları** — Çocuk trafik eğitim parklarının yapılma, açılma, eğitim, denetim ve çalışma esaslarını belirleme görevi **Milli Eğitim Bakanlığına** aittir; belediyeler parkları yapar/izin verir (m.16 ve ilgili bölüm). · **Ne demek:** Eğitim içeriği MEB, inşaat belediye. · *Tuzak:* "Karayolları Genel Müdürlüğü belirler" yanlış; MEB.
+- **İl ve ilçe trafik komisyonları** — İllerde **vali veya yardımcısı** başkanlığında belediye, emniyet, **jandarma**, millî eğitim, karayolları ve Şoförler Odası temsilcileri + valilikçe uygun görülen üniversite/oda/vakıf/dernek temsilcileri (**en çok 3**); ilçelerde **kaymakam** başkanlığında; kararlar **oy çokluğu** ile, eşitlikte başkanın tarafı; il komisyonu kararları **valinin onayı** ile yürürlüğe girer; ilçe kararları il komisyonunca incelenip vali onayıyla yürürlüğe girer (m.17). · **Ne demek:** Yerel trafik düzenlemesi (tek yön, durak) buradan çıkar. · *Tuzak:* "İlçe komisyonu kararları kaymakam onayıyla yürürlüğe girer" yanlış; il komisyonu + vali.
+- **Karayolu kenarındaki tesisler** — Karayolu sınır çizgisine **50 metre** mesafe içinde akaryakıt istasyonu, servis, terminal, fabrika, çarşı, eğlence yeri gibi trafik güvenliğini etkileyecek tesisler için o karayolunun yapım-bakım-işletmesiyle ilgili kuruluştan **izin** alınması zorunludur; izinsiz tesis durdurulur, bağlantı yolu masrafı sorumluya ait olmak üzere kaldırılır (m.26). · **Ne demek:** Yol kenarına benzinlik açmak KGM/belediye iznine bağlı. · *Tuzak:* "100 metre" tuzak; 50 metre.
+- **Sürücü belgesi sınıfları** — **M**: moped; **A1**: 125 cc / 11 kW'a kadar motosiklet; **A2**: 35 kW'a kadar; **A**: tüm motosikletler; **B1**: 15 kW / 400 kg'a kadar dört tekerlekli motosiklet; **B**: otomobil ve kamyonet (eğitimle 4.250 kg'a kadar birleşik araç); **BE**: B + 3.500 kg'a kadar römork; **C1**: 3.500-7.500 kg kamyon; **C**: kamyon ve çekici; **D1**: minibüs; **D**: minibüs ve otobüs; **F**: lastik tekerlekli traktör; **G**: iş makinesi; **K**: sürücü aday belgesi (m.75). · **Ne demek:** Harf = araç türü; E eki = römork. · *Tuzak:* "D1 otobüs" yanlış; D1 minibüs, D minibüs+otobüs.
+- **Sürücü adayı — yaş şartları** — **M, A1, B1: 16**; **A2, B, BE, C1, C1E, F, G: 18**; **A: 20** (15 kW'ı aşan üç tekerlekli için 21); **C, CE, D1, D1E: 21**; **D, DE: 24** (m.76/a). · **Ne demek:** Ağır araç yaşla birlikte gelir. · *Tuzak:* "B sınıfı için 17 yaş" yanlış; 18.
+- ★ çıkmış **Sürücü adayı — deneyim ve öğrenim** — A sınıfı için en az **2 yıllık A2**; C1, C, D1, D için en az **B**; BE için B, CE için C, C1E için C1, DE için D, D1E için D1; öğrenim en az **ilkokul**; **A sınıfı alacak 24 yaşını doldurmuş adaylarda 2 yıllık A2 deneyimi aranmaz** (m.76/b-c, fıkra). · **Ne demek:** 24 yaşını dolduran doğrudan A sınıfına geçebilir. · *Örnek:* Çıkmış soru: "Kaç yaşını doldurmuş A adayında A2 deneyimi aranmaz?" → **24**. · *Tuzak:* "En az ortaokul" yanlış; **ilkokul**. Yaş sorusunda "20" (A sınıfı asgari yaşı) tuzak; deneyim muafiyeti 24.
+- **Sürücü adayı — adli sicil** — Adli sicilde TCK **188, 190, 191** (uyuşturucu imal-ticaret, kullanmayı kolaylaştırma, kullanma), 5607 sayılı Kanun m.4/7 ve 6136 sayılı Kanun m.12/2 vd. suçlarından hüküm bulunmaması; bu suçlardan hüküm giyenlerin sürücü belgesi adli sicil kaydı silininceye kadar geri alınır (m.76/e, m.168). · **Ne demek:** Uyuşturucu ve silah kaçakçılığı hükümlüsü ehliyet alamaz. · *Tuzak:* "Her suçtan hüküm giyen alamaz" yanlış; sayılı suçlar.
+- **Askerî/polis okulu mezunlarına yaş 20** — EGM eğitim kurumları ile TSK'nın subay/astsubay sınıf okulu, astsubay MYO ve temel kursunda eğitim gören/mezun olanlar için **A, C, D ve D1** sınıfı belgede yaş şartı **20** uygulanır ve deneyim şartı aranmaz (m.76). · **Ne demek:** Astsubay adayı 21 beklemeden C-D alabilir. · *Tuzak:* "B sınıfı için de 20" — B zaten 18.
+- ★ çıkmış **EGM personeline sertifika — teklif/onay** — EGM personeline ve EGM eğitim kurumlarındaki öğrencilere sürücü belgesine dönüştürülmek üzere sertifika verilir; eğitim ve sınavlar illerde **emniyet müdürünün teklifi ve valinin onayı**, merkez teşkilatında **Trafik Hizmetleri Başkanının teklifi ve Emniyet Genel Müdürünün onayı** ile yapılır (m.76). · **Ne demek:** İl → emniyet müdürü/vali; merkez → THB/EGM. · *Örnek:* Çıkmış boşluk doldurma: "Emniyet Genel Müdürünün – Valinin – Emniyet Genel Müdürünün" **yanlış**; doğrusu **(il) emniyet müdürünün – valinin – Emniyet Genel Müdürünün**. · *Tuzak:* Merkezde teklif makamı "Trafik Hizmetleri Başkanı"dır, "EGM" değil.
+- **Jandarma personeline sertifika — teklif/onay** — Jandarma teşkilatı mensubu subay, astsubay, uzman jandarma ve uzman erbaşlar ile JSGA öğrencilerine sertifika verilir; eğitim ve sınavlar illerde **il jandarma komutanlığının teklifi ve valinin onayı**, merkez için **Asayiş Başkanının teklifi ve Jandarma Genel Komutan Yardımcısının onayı** üzerine oluşturulan **Eğitim Yürütme Kurulları** tarafından yapılır (m.76). · **Ne demek:** Jandarma kendi sürücüsünü kendi yetiştirir. · *Tuzak:* Merkezde onay "Jandarma Genel Komutanı" değil **Komutan Yardımcısı**; teklif Asayiş Başkanı.
+- ★ çıkmış **Zırhlı taşıt — en az B sınıfı** — EGM, JGK ve SGK personelinden **en az B sınıfı** sürücü belgesine sahip ve birimlerince düzenlenen **Zırhlı Taşıt Sürücü Eğitimini** başarıyla tamamlayanlar, yeterlilik (sertifika) belgesiyle zırhlı araçları kullanmaya yetkilidir; MSB personeli için de askerî araç intibak eğitimi ve en az B sınıfı (m.76). · **Ne demek:** Zırhlı araç için C sınıfı şart değil, B + kurs. · *Tuzak:* "En az C sınıfı" tuzak; **B**.
+- **Psiko-teknik değerlendirme** — İlgili trafik suçlarını işleyen sürücüler il sağlık müdürlüğünce ruhsatlı merkezlerde **psikolog** gözetiminde psiko-teknik değerlendirmeye alınır; rapor ile **45 gün** içinde psikiyatri uzmanına başvurur; başvurmayan **6 ay** tekrar teste alınmaz; rapora **30 gün** içinde il sağlık müdürlüğüne itiraz; başarısız olan **2 yıl** tekrar teste alınmaz; raporlar sistemde **10 yıl** saklanır; sahte rapor veren merkezin cihazları **5 yıl** kullanılamaz (m.79). · **Ne demek:** Ehliyeti geri alınan sürücü psikolojik testten geçmeden belgesini alamaz. · *Tuzak:* 45 gün / 30 gün / 6 ay / 2 yıl süreleri çapraz sorulur.
+- **Araç sürme yetkisi (hangi belge neyi kapsar)** — B ile M, B1, F; BE ile M, B, B1, F; C ile M, B, B1, C1, F; CE ile ayrıca BE, C1E; D ile M, B, B1, D1, F; A ile M, A1, A2; A2 ile M, A1; F ve G ile M; **2 yıllık B sınıfı** + sağlık şartı + 5 yılda belgesi geri alınmamış olmak + MEB direksiyon eğitimi ile A1 sınıfı motosikletler de (ticari hariç) sürülebilir (m.85). · **Ne demek:** B belgesi traktör (F) de kullanır. · *Tuzak:* "B belgesi ile motosiklet kullanılamaz" — şartlı olarak A1 kullanılabilir (2024 eki).
+- **Belge geçerlilik süreleri** — M, A1, A2, A, B1, B, BE, F, G: **10 yıl**; C1, C1E, C, CE, D1, D1E, D, DE: **5 yıl**; yenileme herhangi bir tescil kuruluşuna veya dış temsilciliğe başvuruyla, **harçsız**; teslim edilinceye kadar **15 gün** geçerli geçici belge verilebilir (m.87). · **Ne demek:** Ağır araç belgeleri daha sık yenilenir (sağlık). · *Tuzak:* "C sınıfı 10 yıl" yanlış; 5 yıl.
+- **Uyma önceliği sırası** — Yolu kullananlar sırasıyla: (1) **trafik görevlilerinin** uyarı ve işaretleri, (2) **ışıklı ve sesli** işaretler, (3) **işaret levhaları ve yer işaretleri**, (4) Kanun ve Yönetmelikteki diğer kurallar; uymadaki öncelik bu sıraya göredir (m.95). · **Ne demek:** Polis/jandarma işareti kırmızı ışığı geçer. · *Tuzak:* "Işıklı işaret görevlinin işaretinden önce gelir" yanlış.
+- **Görevlinin trafiği yönetme hareketleri** — Bir kolun dik yukarı kaldırılması: **tüm yönler için DUR** (kavşağa yeni girmiş olanlar hariç); kolların yatay yana uzatılması: kolları **kesen yönler için DUR**, kol doğrultusundan gelenler geçebilir; kırmızı ışığın sallanması: yöneltilen yön için DUR; **kısa** düdük uyarma, **uzun** düdük DUR (m.96). · **Ne demek:** Kollar yatay = önündeki-arkandaki durur, yanlar geçer. · *Tuzak:* Uzun/kısa düdük anlamları çapraz sorulur.
+- ★ çıkmış **Alkol sınırları ve geri alma süreleri** — Hususi otomobil sürücülerinde **0,50 promil**, diğer araç sürücülerinde **0,20 promil** üstü yasak; sürücüler **her zaman** alkol kontrolüne tabi tutulabilir, uyuşturucu kontrolü **şüphe** üzerine; sınırı aşanların belgesi 5 yıl içinde **1. kez 6 ay, 2. kez 2 yıl, 3+ her seferinde 5 yıl** geri alınır; **teknik cihazı kabul etmeyenin** belgesi **2 yıl** geri alınır; **1,00 promil** üstü ayrıca TCK 179/3 için mahallî zabıtaya teslim; ölçüme itirazda tekrar ölçüm yapılmaz, itiraz Kabahatler Kanunu m.27'ye göre mahkemeye (m.97). · **Ne demek:** 0,50/0,20 eşik, 6 ay-2 yıl-5 yıl merdiven, 1,00 promil suç. · *Örnek:* Kamyon şoförü 0,30 promil → yasak ihlali (0,20 eşiği). · *Tuzak:* Çıkmış soru: "Ölçüm talebini yerine getirmeyenin belgesi **2 yıl** geri alınır" doğru; "beş yıl içinde ikinci defa **2 yıl**" doğru; şıklarda süreler kaydırılır.
+- ★ çıkmış **Uyuşturucu tespiti** — Test, solunum havası/tükürük gibi örneklerle **tek kullanımlık kit** ile yapılır; eşik değerleri Adalet ve Sağlık Bakanlığının görüşü alınarak **EGM ve JGK'ca müştereken** belirlenir; pozitif çıkan sürücü CMK m.75 kapsamında kan/idrar için **mahallî zabıtaya** teslim edilir; uyuşturucu kullandığı tespit edilenin belgesi **5 yıl** geri alınır; teknik cihazı reddedenin belgesi 2 yıl geri alınır, ayrıca tespit yaptırılır (m.97). · **Ne demek:** Uyuşturucu = tek seferde 5 yıl. · *Tuzak:* "Uyuşturucuda ilk seferde 6 ay" yanlış; 5 yıl.
+- **Kazada alkol tespiti ve saat başı 0,15 promil** — Yaralanmalı/ölümlü kazalarda ölçüme izin vermeyen sürücünün belgesi 2 yıl geri alınır ve sağlık kuruluşuna götürülür; teknik cihaz sonucuna itirazla sağlık kuruluşunda tespit yaptırılırsa iki tespit arasındaki süre için **her saat 0,15 promil** eklenerek alkol oranı belirlenir (m.97). · **Ne demek:** Hastaneye gidene kadar geçen süre sürücünün lehine sayılmaz. · *Tuzak:* "0,10 promil" tuzak; 0,15.
+- **Araç kullanma ve dinlenme süreleri** — 3,5 tonu geçen yük ve 9 kişiyi geçen yolcu taşıyan araç şoförleri 24 saatte **toplam 9 saat, sürekli 4,5 saatten** fazla süremez; 4,5 saat sonra **en az 45 dakika** mola (15'er dakika bölünebilir); günde **11 saat** kesintisiz dinlenme (haftada 3 kez 9 saate inebilir); 6 günde 1 gün hafta tatili (en az 24 saat); iki haftada toplam **90 saat**; takograf kayıtları **1 ay araçta, 5 yıl iş yerinde** saklanır (m.98). · **Ne demek:** Jandarma yol denetiminde takograf kontrol eder. · *Tuzak:* 9 saat/4,5 saat/45 dk üçlüsü çapraz sorulur.
+- **Hız sınırları** — Otomobil: yerleşim içi **50**, şehirlerarası çift yönlü **90**, bölünmüş yol **110**, otoyol **120**; minibüs-otobüs: 50/80/90/100; kamyonet 50/80/85/95; panelvan 50/85/100/110; kamyon-çekici 50/80/85/90; motosiklet 50/80/90/100; motorlu bisiklet 30/45/45/otoyola giremez; traktör 20/30/40/giremez; arızalı aracı çeken 20/20/30/40; römorklu araçlarda azami hız **10 km/s** düşük; asgari hız şehirlerarası **15**, otoyol **40**; servis freni bozuk aracı çeken **15 km/s** üstü süremez; hız sınırlayıcı: otobüs-minibüs 110, kamyon-çekici 99; İçişleri otomobiller için sınırı **20 km/s**'e kadar artırabilir; trafik komisyonları yerleşim içi bölünmüş yollarda **32 / 20 km/s** artırabilir (m.100). · **Ne demek:** Otomobilde 50-90-110-120 ezberlenmeli. · *Tuzak:* "Otoyolda otomobil 130" yanlış; 120. Römorklu 10 km/s eksik.
+- **Dönüş kuralları** — Sağa dönüş: sinyal, sağ şerit, yavaşlama, **dar kavis**, yaya-bisiklete geçiş hakkı, gidiş şeridine giriş; sola dönüş: en sol şerit (iki şeritli yolda sağ şeridin soluna), **geniş kavis**, sağdan gelene ilk geçiş hakkı, karşıdan gelen yaklaşmış araçları bekleme; dönel kavşakta sola/geriye dönecek orta adaya bitişik şeritten girer (m.102). · **Ne demek:** Sağ dar, sol geniş. · *Tuzak:* "Sola dönüş dar kavisle" yanlış.
+- **Kavşaklarda geçiş hakkı** — İşaretsiz kavşakta sıra: geçiş üstünlüğü olan araçlara, doğru geçen tramvaya, bölünmüş yola çıkan bölünmüş yoldakine, **tali yoldan ana yola çıkan ana yoldakine**, dönel kavşağa gelen içindekine, mülkten çıkan karayolundakine, dönüş yapan doğru gidene geçiş hakkı verir; yoğunluk farkı belirlenmemişse motorsuz → motorluya, traktör-iş makinesi → diğer motorluya, **soldaki sağdan gelene**; kavşak içinde durmaya zorlayacaksa ışık yeşil olsa da girmek yasak; ray üzerindeki taşıtlara her kavşakta öncelik (m.109). · **Ne demek:** "Sağdan gelen geçer" kuralı yalnız eşit yollarda. · *Tuzak:* "Sağdan gelen her zaman önce geçer" yanlış; önce ana yol/bölünmüş yol kuralı.
+- **Duraklama ve park yasakları — metreler** — Kavşak, tünel, köprü, bağlantı yollarına yerleşim içinde **5 m**, dışında **100 m** mesafede duraklamak yasak; işaret levhalarına yaklaşım yönünde yerleşim içinde **15 m**, dışında 100 m; park: yangın musluğuna **5 m**, durak levhalarına **15 m**, geçiş üstünlüğü olan araçların giriş-çıkış levhalarına 15 m, giriş-çıkış kapılarına 5 m, alt-üst geçit ve köprülere **10 m** (m.113, 115). · **Ne demek:** 5-15-10 üçlüsü park; 5-100 duraklama. · *Tuzak:* "Durak levhasına 5 m" yanlış; 15 m.
+- **Geçiş üstünlüğü olan araca yol verme** — Geçiş üstünlüğü bulunan aracın sesli/ışıklı işaretini alan sürücüler yol açar, gerekirse durur ve **tamamen geçilinceye kadar** bekler; kavşakta iken işaret alanlar **derhal kavşağı boşaltır** (m.142). · **Ne demek:** Ambulansa yol vermek yeterli değil, geçene kadar beklenir. · *Tuzak:* "Kavşakta olan olduğu yerde durur" yanlış; kavşağı boşaltır.
+- **Koruyucu tertibat — kask ve kemer** — Bisiklet, elektrikli bisiklet, motorlu bisiklet, motosiklet ve T3 traktör sürücüleri **koruma başlığı ve gözlüğü**, motosiklet sürücü ve yolcuları **koruyucu eldiven** (2025 eki); otomobil, kamyonet, kamyon, minibüs, otobüslerin bütün koltuklarında **emniyet kemeri**; taksilerde en az 1, şehirlerarası otobüslerde koltukların en az **1/10'u** kadar **çocuk bağlama sistemi**; **150 cm'den kısa ve 36 kg altı** çocuklar için çocuk koltuğu zorunlu, **135 cm'den uzun** çocuk ön koltukta oturmamak şartıyla kemer kullanabilir; çocuk koltuğu yoksa **3 yaş altı** taşınamaz; yerleşim içi ticari minibüs/otobüs yolcuları ve **25 km/s** altı geri gitme-park manevrası yapan sürücüler kemer muafiyetinde; sağlık raporu olan raporda belirtilen süre muaf (m.150). · **Ne demek:** Çocuk koltuğu 150 cm / 36 kg eşiği. · *Tuzak:* "Ambulanstaki tüm görevliler kemerden muaf" — yalnız hastaya müdahale eden görevliler.
+- **Kazaya karışanların yükümlülükleri** — Yaralanmamış veya hafif yaralı olanlar: hemen durmak, işaret koymak, **iz ve delilleri değiştirmemek**, kimlik-belge-sigorta göstermek, **yaralıya ilk yardım için ayrılma hariç** görevliler gelinceye kadar ayrılmamak; sahibi bulunmayan mal/araca zarar veren: ilgilisini bulmak, bulamazsa **yazılı bilgi bırakmak**, en kısa sürede yetkililere haber vermek (m.152). · **Ne demek:** Park hâlindeki araca çarpıp gitmek yasak; not bırakılır. · *Tuzak:* "Yaralıyı hastaneye götürmek için ayrılmak yasaktır" yanlış; bu istisnadır.
+- **Maddi hasarlı kaza tutanağı — ne zaman kolluk düzenler** — Yalnız maddi hasarlı kazada taraflar anlaşırsa kendi aralarında **Maddi Hasarlı Trafik Kazası Tespit Tutanağı** düzenleyip ayrılabilir; anlaşanlar sonradan yetkililerden tutanak isteyemez; şu hâllerde tutanağı **trafik zabıtası, yoksa genel kolluk** düzenler: (1) **tek araçlı** kaza, (2) taraflardan birinin **sürücü belgesi yok** veya yetersiz, (3) **zorunlu mali sorumluluk sigortası yok**, (4) **alkol/uyuşturucu şüphesi**, (5) araçlardan biri **kamu kurumuna ait** (Sağlık Bakanlığı ambulansları hariç), (6) **kamu malına veya üçüncü kişiye ait eşyaya** zarar (m.152). · **Ne demek:** Bu 6 hâlde "anlaşıp gidelim" olmaz, kolluk çağrılır. · *Örnek:* Jandarma aracıyla sivil aracın çarpışması → kamu aracı → kolluk tutanak düzenler. · *Tuzak:* "Ambulans dahil tüm kamu araçları" yanlış; Sağlık Bakanlığı ambulansları hariç.
+- **Kazaya el koyma** — Trafik kazalarına **adli yönden mahallî genel zabıta**, **kaza tespit tutanağı** için **trafik zabıtası (polis veya jandarma)** el koyar; trafik zabıtasının olmadığı yerlerde tutanağı **mahallî zabıta** düzenleyip bir örneğini trafik zabıtasına gönderir; ölümlü/ağır yaralanmalı kazada yol kapanmış, başka geçit yoksa ve **Cumhuriyet savcısı gecikecekse**, işaretleme ve tespitler yapılıp tutanağa bağlandıktan sonra yol trafiğe açılır (m.154). · **Ne demek:** Savcı beklenirken yol saatlerce kapalı kalmaz. · *Tuzak:* "Ölümlü kazada yol ancak savcı gelince açılır" yanlış.
+- **El koyanların görev ve yetkileri** — Ek tehlikeyi önleme, yaralıya ilk yardım ve sevk, yolu açma, **mal güvenliği** (araçların kurcalanmaması, izinsiz aranmaması; sahipleri ölmüş/ağır yaralıysa eşyanın tutanakla muhafazası), örneğine uygun kaza tespit tutanağı düzenleme (m.155). · **Ne demek:** Kaza yerindeki eşya da kolluğun sorumluluğunda. · *Tuzak:* "Kazaya el koyan kolluk aracı arayabilir" — sahibinin izni veya zorunlu hâlde tutanak gerekir.
+- **Aslî kusur sayılan hâller** — (1) Kırmızı ışıkta/dur işaretinde geçme, (2) taşıt giremez işaretli yola veya karşı yönün şeridine girme, (3) ikiden fazla şeritli yolda karşı yönün şeridine girme, (4) **arkadan çarpma**, (5) geçme yasağı olan yerden geçme, (6) doğrultu değiştirme manevralarını yanlış yapma, (7) **şeride tecavüz**, (8) kavşakta geçiş önceliğine uymama, (9) dar kaplamada geçiş önceliğine uymama, (10) manevra kurallarına uymama, (11) yerleşim dışı taşıt yolunda zorunlu hâl dışında park-duraklama ve tedbir almama, (12) **kurallara uygun park etmiş araca çarpma**; başkasının kural dışı hareketi yüzünden kural ihlaline mecbur kalan aslî kusurlu sayılmaz (m.157). · **Ne demek:** 12 hâl; arkadan çarpan neredeyse her zaman aslî kusurlu. · *Tuzak:* "Hız sınırını aşma" listede aslî kusur olarak **sayılmaz** (kusur ama aslî kusur listesinde değil).
+- **Sürücü belgesinin geri alınması ve iptaline karar** — Kanunda sayılı görevlilerin ve tescil kuruluşlarının yetkili olduğu hâller hariç, sürücü belgelerinin geri alınmasına ve iptaline **sulh ceza hâkimlikleri** karar verir; idari yaptırımlara itirazda **Kabahatler Kanunu** uygulanır; tutanak düzenleyen görevli birim adı, ad-soyad-sicil yazıp imzalar, ilgiliye imzalatıp bir nüsha verir, imzadan kaçınana "imza etmedi" notu düşer (m.160-162). · **Ne demek:** Kolluğun doğrudan geri alma yetkisi olmayan hâllerde hâkim. · *Tuzak:* "Sürücü belgesi iptaline vali karar verir" yanlış.
+- **Jandarmanın trafik yetkisi ve plakaya göre tutanak** — Trafik zabıtasının bulunmadığı/yetersiz olduğu yerlerde polis, polisin ve trafik teşkilatının görev alanı dışında kalan yerlerde **jandarma** (trafik eğitimi almış subay, astsubay ve uzman jandarmalar); tehlikeli/yasak yere park eden, sürücüsü tespit edilemeyen araçlara ve Kanun 26/1-2, 31/1-b, 36, 49'a uymayan sürücülerin araç sahiplerine **tescil plakasına göre** tutanak düzenlenir (m.166). · **Ne demek:** Sürücü yoksa ceza plaka sahibine. · *Tuzak:* "Jandarma her yerde trafik denetimi yapar" yanlış; polis/trafik alanı dışında.
+- **Ceza puanı — 100 puan** — Bir yıl içinde **100 ceza puanını** aşan sürücünün belgesi **1. kez 2 ay** (MEB eğitimi sonrası iade), **2. kez 4 ay** (psiko-teknik + psikiyatri muayenesi), **3. kez sulh ceza hâkimliğine sevk**; ölümlü kazaya aslî kusurlu sebep olan sürücünün belgesi mahkemece **1 yıl** geri alınır; puanlar EGM PolNet'e işlenir (m.167). · **Ne demek:** 2 ay → 4 ay → hâkim. · *Tuzak:* "1. kez 4 ay" yanlış; 2 ay.
+- **Mahkûmiyetle belge geri alma** — Mahkeme/savcılık geri alma kararı **hürriyeti bağlayıcı cezanın infazından sonra** uygulanır, tebliğle başlar; TCK 188-190-191, 5607 m.4/7 ve 6136 m.12/2 suçlarından hüküm giyenin belgesi **adli sicilden silininceye kadar** geri alınır (m.168). · **Ne demek:** Hapisten çıkınca ehliyet yasağı başlar. · *Tuzak:* "Hapis süresiyle birlikte işler" yanlış.
+- **Olağanüstü hâl ve savaşta askerî trafik** — Askerî trafik için kullanılacak karayolları **Genelkurmay Başkanlığınca** belirlenir; askerî trafiğe ayrılan yollarda yönetim ve denetim **askerî kişilerce**; kesişme ve geçitlerde trafik zabıtası askerî görevlilerin isteklerine uyar; askerî yönetimdeki yolda siviller asker görevlilerin, sivil yönetimdeki yolda askerler trafik görevlilerinin talimatına uyar (m.173). · **Ne demek:** Savaşta yol yönetimi ordunun. · *Tuzak:* "OHAL'de askerî yolları İçişleri belirler" yanlış; Genelkurmay.
+- **Terk edilmiş / uzun süre park edilmiş araçlar** — Karayolunu uzun süre etkileyecek şekilde park edilmiş, terk edilmiş veya hasarlı araçları tutanakla kaldırıp trafikten men etmeye **trafik zabıtası** yetkilidir; men işleminde Kanunun Ek-14 hükmü yazılı tebliğ edilir, **Trafikten Men Edilen Araç Defterine** kaydedilir; araçlar resmî/özel otoparkta muhafaza edilir; bilgiler men tarihinden itibaren **4 ay** içinde **Defterdarlık/Mal Müdürlüğüne** gönderilir (m.174). · **Ne demek:** Sahipsiz araç 4 ay sonra hazine sürecine girer. · *Tuzak:* "6 ay" tuzak; 4 ay.
+- **Okul geçidi görevlisi** — İlk ve orta dereceli okullarda istekli **öğretmenler, veliler ve 12 yaşını doldurmuş öğrenciler** olabilir; il emniyet müdürlüğü koordinatörlüğünde komisyonca seçilir, trafik zabıtasınca eğitilir, il emniyet müdürü imzalı belge alır; **taşıt trafiğini durdurma yetkisi** vardır, uymayan sürücü için tutanak düzenleyip **3 iş günü** içinde trafik kuruluşuna teslim eder; görev **fahri**dir; bir yüzü yeşil "GEÇ", diğer yüzü kırmızı "DUR" yazılı işaret çubuğu taşır (m.178). · **Ne demek:** 12 yaşındaki öğrenci trafiği durdurabilir. · *Tuzak:* "10 yaşını doldurmuş öğrenci" yanlış; 12.
+- **Belediye elektronik sistemleri — %30** — Belediyelerin kendi bütçesiyle kurduğu elektronik sistemler EGM'ce trafik ihlali tespitinde kullanılırsa, düzenlenen tutanaklardaki idari para cezasının **%30'u** izleyen ayın sonuna kadar EGM bütçesinden belediyeye hizmet bedeli olarak ödenir (Ek m.2). · **Ne demek:** Belediye kamerası ceza kestirir, payını alır. · *Tuzak:* "%50" tuzak; %30.
+- **Aday sürücü — 2 yıl, 75 puan** — İlk defa sürücü belgesi alanlar ve iptal edilip yeniden alanlar **2 yıl** süreyle **aday sürücü** sayılır; bu sürede Kanunun 47/1-b, 48, 51, 53/2, 74, 78. maddelerinden birinin **3 kez** ihlali, araç cinsine bakılmaksızın **0,20 promil** üzeri alkol veya toplam **75 ceza puanı** aşımında belge trafik görevlilerince **iptal edilir**; yeniden almak için kursa gidip sınavı geçmek gerekir (Ek m.3). · **Ne demek:** Aday sürücüde alkol eşiği 0,50 değil 0,20; puan sınırı 100 değil 75. · *Tuzak:* "Aday sürücüye de 100 puan uygulanır" yanlış; 75.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Yaş: M-A1-B1 / A2-B-C1-F-G / A / C-D1 / D | 16 / 18 / 20 / 21 / 24 |
+| A sınıfı A2 deneyimi muafiyeti | 24 yaşını doldurmuş |
+| Askerî/polis okulu mezunları (A, C, D, D1) | 20 yaş, deneyim aranmaz |
+| Belge geçerliliği (hafif / ağır sınıflar) | 10 yıl / 5 yıl; geçici belge 15 gün |
+| Alkol eşiği (hususi / diğer / aday sürücü) | 0,50 / 0,20 / 0,20 promil |
+| Alkol geri alma (1./2./3.+) | 6 ay / 2 yıl / 5 yıl; cihaz reddi 2 yıl |
+| Uyuşturucu geri alma | 5 yıl |
+| Alkol suçu (TCK 179/3) | 1,00 promil üstü |
+| Saat başı ekleme | 0,15 promil |
+| Otomobil hızı (içi / şehirlerarası / bölünmüş / otoyol) | 50 / 90 / 110 / 120 |
+| Asgari hız (şehirlerarası / otoyol) | 15 / 40 km/s |
+| Römorklu araç | 10 km/s düşük |
+| Sürüş süreleri | 9 saat/gün, 4,5 saat sürekli, 45 dk mola, 11 saat dinlenme, 90 saat/2 hafta |
+| Takograf saklama | 1 ay araçta, 5 yıl iş yerinde |
+| Duraklama yasağı mesafesi (kavşak: içi/dışı) | 5 m / 100 m |
+| Park yasağı (yangın musluğu / durak / geçit-köprü) | 5 m / 15 m / 10 m |
+| Duraklama süresi | En çok 5 dakika |
+| Çocuk koltuğu | 150 cm altı ve 36 kg altı; 135 cm üstü kemer; 3 yaş altı koltuksuz taşınamaz |
+| Ceza puanı 100 (1./2./3.) | 2 ay / 4 ay / sulh ceza hâkimliği |
+| Ölümlü kaza aslî kusur | 1 yıl (mahkeme) |
+| Aday sürücü | 2 yıl; 75 puan; 3 ihlal |
+| Psiko-teknik | 45 gün psikiyatri; 30 gün itiraz; 6 ay / 2 yıl bekleme |
+| Trafikten men → Defterdarlık | 4 ay |
+| Karayolu kenarı tesis izni | 50 m |
+| Belediye sistem payı | %30 |
+| Kurullar | Yüksek Kurul yılda 2; Trafik Güvenliği Kurulu ayda 1 |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Yüksek Kurul sekreteryası | EGM |
+| Karayolu Trafik Güvenliği Kurulu başkanı | EGM Trafik Hizmetleri Başkanı |
+| İşaretleme standartları | Karayolları Genel Müdürlüğü |
+| Araç muayenesi | Ulaştırma Bakanlığı |
+| Çocuk trafik eğitim parkı esasları | Milli Eğitim Bakanlığı |
+| İl / ilçe trafik komisyonu başkanı | Vali veya yardımcısı / kaymakam; onay vali |
+| EGM sertifika (il / merkez) | Emniyet müdürü teklif–vali onay / THB teklif–EGM onay |
+| JGK sertifika (il / merkez) | İl J.K. teklif–vali onay / Asayiş Bşk. teklif–JGK Yrd. onay |
+| Uyuşturucu eşik değerleri | EGM + JGK müştereken |
+| Belge geri alma/iptal (genel) | Sulh ceza hâkimliği |
+| Kaza tespit tutanağı | Trafik zabıtası (polis/jandarma), yoksa mahallî zabıta |
+| OHAL/savaşta askerî yollar | Genelkurmay Başkanlığı |
+| Terk edilmiş araç men | Trafik zabıtası |
+
+### "Yanlıştır/değildir" tuzakları
+- "Bağlandığı yoldan daha az önemli yol = bağlantı yolu." → **Tali yol** (m.3).
+- "İşaretleme standartlarını İçişleri Bakanlığı belirler." → **Karayolları Genel Müdürlüğü** (m.11).
+- "A sınıfı için 20 yaşını dolduranda A2 deneyimi aranmaz." → **24** yaş (m.76).
+- "Sürücü adayı en az ortaokul mezunu olmalı." → **İlkokul** (m.76).
+- "Merkez teşkilatında EGM sertifika sınavını EGM'nin teklifi ile yapılır." → **Trafik Hizmetleri Başkanının** teklifi, EGM onayı (m.76).
+- "Zırhlı taşıt için en az C sınıfı gerekir." → **B sınıfı** + eğitim (m.76).
+- "Alkol ölçümünü reddedenin belgesi 6 ay geri alınır." → **2 yıl** (m.97).
+- "Uyuşturucuda ilk seferde 6 ay." → **5 yıl** (m.97).
+- "Otoyolda otomobil 130 km/s." → **120** (m.100).
+- "Hız sınırını aşmak aslî kusurdur." → Listede **yok**; arkadan çarpma, şeride tecavüz vb. (m.157).
+- "Kamu aracının karıştığı her kazada kolluk tutanak tutar." → Sağlık Bakanlığı **ambulansları hariç** (m.152).
+- "Ölümlü kazada yol savcı gelmeden açılamaz." → Savcı gecikecekse tespit sonrası **açılır** (m.154).
+- "100 puanı ilk aşanın belgesi 4 ay alınır." → **2 ay**; ikinci 4 ay (m.167).
+- "Aday sürücü 100 puanla belge kaybeder." → **75** puan; 0,20 promil (Ek m.3).
+
+## Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği — Sınav kapsamı: m.3, 4, 5
+
+### Bu mevzuattan nasıl soruluyor
+Kısa yönetmelik; iki soru tipi var ve ikisi de çıkmış: **ikramiye esasları** (kendi mülkü → satın alınır, ikramiye yok; başkasının mülkü → %80 yarı yarıya; Devlet arazisi → %40) ve **gizlenmiş varlıkları haber verene/yakalayana kademeli oranlar** (%30-25-15-10-7,5).
+
+### Altın noktalar
+- ★ çıkmış **Bulanın mülkünde: satın alınır, ikramiye yok** — Taşınır kültür-tabiat varlığı bulunduğunu bilen malik/zilyet **3 gün** içinde müzeye, köyde muhtara, diğer yerlerde mülkî amire haber verir; varlık **bulanın mülkü içinde** ise değeri ödenerek **müzelerce satın alınır, ayrıca ikramiye verilmez** (m.3/a). · **Ne demek:** Kendi tarlanda bulduysan malın parasını alırsın, üstüne ödül yok. · *Tuzak:* "Bulanın mülkünde ise %80 ikramiye" yanlış; satın alınır.
+- ★ çıkmış **Başkasının mülkünde: %80 yarı yarıya** — Varlık **başkasının mülkü** içinde bulunmuşsa takdir edilen bedelin **%80'i**, **bulan ile mülk sahibi arasında eşit** paylaştırılır (m.3/b). · **Ne demek:** Komşunun tarlasında bulan %40, tarla sahibi %40 alır. · *Tuzak:* "Tamamı bulana" yanlış; yarı yarıya.
+- ★ çıkmış **Devlet arazisinde: %40 bulana** — Varlık **Devlete ait arazide** bulunmuşsa bedelin **%40'ı bulana** ikramiye olarak ödenir (m.3/c). · **Ne demek:** Devlet arazisinde mülk sahibi Devlet olduğundan yalnız bulana pay. · *Tuzak:* %80 / %40 rakamları ters verilir.
+- ★ çıkmış **Korunması gerekli değilse iade** — Haber verilen varlık korunması gerekli nitelikte değilse müzece verilecek **belge ile sahibine iade** edilir; belge varlık ve sahibini açıkça tanımlar; **1 yıl** içinde alınmayan varlıklar müzede saklanabilir veya Devletçe satılabilir (m.3/d). · **Ne demek:** "Eser değilmiş" denen şey belgeyle geri verilir. · *Tuzak:* "İade edilen varlık satılamaz" yanlış; belgeyle her türlü tasarruf serbest.
+- ★ çıkmış **Gizlenmiş varlıklar — kademeli ikramiye** — Süresinde haber verilmediği için gizlenmiş sayılan varlıkları haber verenlere ve yakalayan kamu görevlilerine tespit edilen değerin: **5.000 liraya kadar %30**, **25.000'e kadar (5.000 üstü kısım) %25**, **50.000'e kadar (25.000 üstü) %15**, **100.000'e kadar (50.000 üstü) %10**, **100.000 üstü %7,5** oranında ikramiye **ayrı ayrı** ödenir; birden fazla haber veren/yakalayan varsa **eşit paylaşılır** (m.4). · **Ne demek:** Jandarma kaçak eser yakalayınca bu cetvelden ikramiye alır; oran değer büyüdükçe düşer. · *Örnek:* Çıkmış soru: "100.000 TL üstü için %9" şıkkı **yanlış**; doğrusu %7,5. · *Tuzak:* Haber veren ve yakalayan **ayrı ayrı** alır; "aralarında bölüşür" yanlış (aynı sıfattakiler bölüşür).
+- **İkramiye ödenmeyecek hâller** — **Taşınmaz** kültür ve tabiat varlıkları ile varlığı **Bakanlıkça önceden bilinen** taşınır varlıklar için ihbar ikramiyesi ödenmez (m.5). · **Ne demek:** Zaten kayıtlı eseri "buldum" demekle ödül alınmaz. · *Tuzak:* "Taşınmaz varlık ihbarına da ikramiye verilir" yanlış.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Haber verme süresi | 3 gün |
+| Bulanın mülkünde | Satın alınır, ikramiye yok |
+| Başkasının mülkünde | %80, bulan–mülk sahibi yarı yarıya |
+| Devlet arazisinde | %40 bulana |
+| İade edilen varlığın alınma süresi | 1 yıl |
+| Gizlenmiş varlık ikramiyesi | %30 / %25 / %15 / %10 / %7,5 (5.000 / 25.000 / 50.000 / 100.000 / üstü) |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Haber verilecek yer | Müze / köyde muhtar / mülkî amir |
+| Değer takdiri ve satın alma | Müzeler (ilgili yönetmelik) |
+
+### "Yanlıştır/değildir" tuzakları
+- "Kendi mülkünde bulana %80 ikramiye." → **Satın alınır, ikramiye yok** (m.3/a).
+- "Devlet arazisinde bulana %80." → **%40** (m.3/c).
+- "100.000 lira üstü kısım için %9." → **%7,5** (m.4).
+- "Haber veren ve yakalayan ikramiyeyi bölüşür." → **Ayrı ayrı** alır (m.4).
+- "Taşınmaz varlık ihbarına ikramiye ödenir." → **Ödenmez** (m.5).
