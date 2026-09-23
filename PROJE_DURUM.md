@@ -2742,3 +2742,15 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
 - İstihkam paketi üretildi: ikmalden besleme bloğu (5668, Gıda Hijyeni, Tayın 132, Beslenme 130, Uygulama 129) çıkıyor,
   4 yeni kanun giriyor: 5543 İskân, 3194 İmar, 3402 Kadastro, 2565 Askeri Yasak Bölgeler (hiçbirinde çıkmış yok, İskân'da 1).
 - **SIRADA:** istihkam(10) · maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
+
+### 24 Eylül 2026 — İstihkam Altın Özet basıldı ve YÜKLENDİ (commit 7ee1fff)
+
+- `icerik/ozet_IS_istihkam.md`: 24 mevzuat, 150 altın nokta, 33 ★, 158 sayfa, 27 yer imi. Ölçüm: Tuzak %100 · Ne demek %100 · Örnek %26.
+  İkmal gövdesinden besleme bloğu (5668, Gıda Hijyeni, Tayın 132, Beslenme 130, Uygulama 129) çıkarıldı; istihkama özgü 4 kanun yazıldı:
+  2565 Askeri Yasak Bölgeler (7 nokta), 3194 İmar (5), 3402 Kadastro (5), 5543 İskân (5, ★ göçmen tanımı). `BRANSLAR`'a `istihkam` eklendi.
+- Sunucu: `pdf/istihkam/JSPS-2026-Altin-Ozet-istihkam.pdf` (4,9→3,7 MB); satırlar `altin_istihkam` + `istihkam`.
+- Maliye paketi üretildi (25 mevzuat, 1033 madde, 138 çıkmış): ikmalden 5 (5018 tam kapsam, Besleme, Harcama Belgeleri, Ön Ödeme, Kamu Zararı),
+  personelden 2 (5510 maliye kapsamı, Kantin Yön.) ortak; 18 mevzuat maliyeye özgü (926/Uzman Erbaş/Uzman J./6191/JTGYK/Sözleşmeli Subay mali hükümleri,
+  2629 Tazminat, Sayıştay, 257 Harçlık + Yön., Damga Vergisi, Tayın Bedeli K., Nakdi Tazminat, İhtiyaç Fazlası Mal, Harcırah, Bütçe K. cetvelleri,
+  Fazla-Yersiz Ödeme Yön., İç Kontrol). 5018 ve 5510 kapsamı ikmal/personelden FARKLI → bölümler genişletilerek yazılacak.
+- **SIRADA:** maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
