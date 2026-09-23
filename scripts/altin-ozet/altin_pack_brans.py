@@ -30,15 +30,34 @@ if not brans:
 ars = json.load(io.open('D:/jsps-community-bot/data/maddeler.json', encoding='utf-8'))
 kitaplar = [r for r in json.load(io.open(BURA + '/brans_kitaplari.json', encoding='utf-8'))
             if r['brans_slug'] == brans]
+
+# JANDARMA'nın PDF kitabı yok — çünkü o branşın mevzuatı uygulamada kanun kartı olarak duruyor.
+# Kapsamı iki yerden kuruyoruz: kanun listesi uygulamanın kendi tohum verisinden (blok='branş'),
+# madde sınırı ise emir kapsamından (scripts/_emir-madde-kapsam.json → "jandarma").
+if brans == 'jandarma' and not kitaplar:
+    tohum = io.open(KOK + 'src/db/seed.ts', encoding='utf-8').read()
+    kitaplar = [{'baslik': m.group(3).replace("\\'", "'"), 'law_id': int(m.group(1)),
+                 'sira': i, 'dosya_yolu': None}
+                for i, m in enumerate(re.finditer(
+                    r"\{\s*id:\s*(\d+)\s*,\s*blok:\s*'(branş)'\s*,\s*ad:\s*'((?:[^'\\]|\\.)*)'", tohum))]
+    EMIR = json.load(io.open(KOK + 'scripts/_emir-madde-kapsam.json', encoding='utf-8'))['kapsam'].get('jandarma', {})
+else:
+    EMIR = {}
+
 if not kitaplar:
     print(f'"{brans}" branşının kitabı yok'); raise SystemExit(1)
 cikmis = json.load(io.open(KOK + 'scripts/veri/cikmis-sinav-sorulari.json', encoding='utf-8'))
+try:
+    SEED_KAPSAM = json.load(io.open(BURA + '/seed_kapsam.json', encoding='utf-8'))
+except FileNotFoundError:
+    SEED_KAPSAM = {}   # uretimi: node scratchpad/_kapsam_cikar.mjs seed_kapsam.json
 
 TR = str.maketrans('ÇĞİÖŞÜçğıöşü', 'CGIOSUcgiosu')
 def norm(s): return re.sub(r'[^a-z0-9 ]', ' ', (s or '').translate(TR).lower())
 
 def kapsam_maddeleri(dosya_yolu):
     """Branş kitabı PDF'inden madde numaralarını çıkar. Dosya yoksa None (= tamamı)."""
+    if not dosya_yolu: return None, '(kitap PDF yok)'
     yerel = PDF_KOK + brans.upper() + '/' + os.path.basename(dosya_yolu)
     if not os.path.exists(yerel): return None, yerel
     d = fitz.open(yerel); t = ''.join(p.get_text() for p in d); d.close()
@@ -108,6 +127,11 @@ for r in kitaplar:
     onek = ALIAS.get(baslik)
     izin, yerel = kapsam_maddeleri(r['dosya_yolu'])
     izin_no = {x for x in (izin or set()) if isinstance(x, int)}
+    # Kapsamın EN GÜVENİLİR kaynağı uygulamanın kendi listesi (SEED_KAPSAM): kullanıcı
+    # ekranda hangi maddeleri görüyorsa kitapta da onlar olmalı. Yoksa kitap PDF'i, o da
+    # yoksa emir kapsamı kullanılır.
+    izin_etiket = set(SEED_KAPSAM.get(str(lid), {}).get('maddeler') or [])
+    if not izin_no and not izin_etiket and str(lid) in EMIR: izin_no = set(EMIR[str(lid)])
     maddeler = []
     if onek:
         for k, v in ars.items():
@@ -115,13 +139,15 @@ for r in kitaplar:
             mno = k.split(' m.', 1)[1]
             try: n = int(re.match(r'\d+', mno).group())
             except Exception: n = None
-            if izin_no and n is not None and n not in izin_no and 'ek' not in mno.lower(): continue
+            if izin_etiket:
+                if mno not in izin_etiket: continue
+            elif izin_no and n is not None and n not in izin_no and 'ek' not in mno.lower(): continue
             maddeler.append({'anahtar': k, 'no': mno, 'metin': v[:9000]})
     cs = cikmis_bul(baslik, onek); bs = banka_bul(baslik, onek)
     paket = {
         'brans': brans, 'law_id': lid, 'ad': baslik, 'sira': r['sira'],
         'arsiv_oneki': onek, 'kitap_pdf': yerel,
-        'kapsam_maddeleri': sorted(izin_no) if izin_no else 'Tamamı',
+        'kapsam_maddeleri': sorted(izin_etiket) if izin_etiket else (sorted(izin_no) if izin_no else 'Tamamı'),
         'madde_sayisi': len(maddeler), 'maddeler': maddeler,
         'cikmis_sorular': cs,
         'banka_sorulari': [{'soru': q['soru'], 'siklar': q['siklar'], 'dogru': q['dogru'],
@@ -130,7 +156,7 @@ for r in kitaplar:
             re.sub(r'\s+', ' ', (q.get('kaynak') or '')[:40]) for q in bs).most_common(25),
     }
     json.dump(paket, io.open(OUT + f'pack_{lid}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
-    ozet.append((lid, baslik[:46], len(izin_no) if izin_no else '-', len(maddeler), len(cs), len(bs)))
+    ozet.append((lid, baslik[:46], len(izin_etiket) or len(izin_no) or '-', len(maddeler), len(cs), len(bs)))
 
 print(f'{"id":>4} | {"mevzuat":<46} | {"kapsam":>6} | {"metin":>5} | {"çıkmış":>6} | {"banka":>5}')
 for o in ozet: print(f'{o[0]:>4} | {o[1]:<46} | {str(o[2]):>6} | {o[3]:>5} | {o[4]:>6} | {o[5]:>5}')
