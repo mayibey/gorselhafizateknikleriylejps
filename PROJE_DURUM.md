@@ -2660,3 +2660,30 @@ m.62-70/A. ★ işareti artık **2026** kitapçığını da tanıyor (önceden y
 istihkam 10 · maliye 7 · sağlık 3 · mühendis 2 · veteriner 1 · tabip · diş tabibi · eczacı ·
 kimyager · bando) + uygulamaya ekleme (`brans_kitaplari`'na en üst sıra; jandarma ve uzman erbaş
 için ayrı bir yer gerekiyor).
+
+### 23 Eylül 2026 (devam) — Jandarma Altın Özet kitabı TAMAMLANDI
+
+**Yapı kararı (başkan):** birleşik kitap yok; herkese aynı **Müşterek** kitap + her branşa **ayrı** branş kitabı.
+Eski birleşik PDF'ler (Musterek + MEBS / + Havacilik / SADECE MUSTEREK) Masaüstü'nde duruyor, silinmedi.
+
+**Jandarma branş kitabı** (`scripts/altin-ozet/icerik/ozet_J_jandarma.md` → `JSPS 2026 - ALTIN OZET (Jandarma).pdf`):
+- Kapsam = uygulamanın kendi `SEED_KAPSAM`'ı (42 mevzuat / 642 madde; emir Ek-1 ile sınırlı). Uzman erbaş da aynı listeden sorumlu.
+- **217 sayfa · 42 mevzuat · 690 altın nokta · 201 ★ çıkmış** (kapak rakamları metinden sayılıyor).
+- Kalite ölçümü: Tuzak %96 · Ne demek %94 · Örnek %17 (müşterek standardının üstünde).
+- ★ rozeti yalnız kitapçıkta **fiilen sorulan** noktalara verildi; 41-49 arası ilk yazımda 75 fazla rozet vardı,
+  paketlerdeki gerçek çıkmış listesiyle karşılaştırılıp düşürüldü (`_rozet_41_49.py` deseni).
+- Adli Kolluk Yön. paketi "kolluk" kelimesi yüzünden 70 sahte çıkmış topluyordu; süzülmüş liste ile yazıldı.
+- 9 commit hâlinde ilerledi (15/42 → 24 → 28 → 31 → 34 → 38 → 41 → 42); son: `7bfc356`.
+
+**Dört kitap (23 Eylül):**
+| Kitap | Sayfa | Mevzuat | Altın nokta | ★ |
+|---|---|---|---|---|
+| MUSTEREK | 265 | 25 | 1.007 | 367 |
+| Jandarma | 217 | 42 | 690 | 201 |
+| MEBS | 81 | 9 | 261 | 73 |
+| Havacilik | 34 | 3 | 101 | 23 |
+
+**SIRADA:** personel(41) · ikmal(16) · bakım(14) · istihkam(10) · maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) ·
+tabip · diş tabibi · eczacı · kimyager · bando. Sonra uygulama tarafı: "TATBİKAT MERKEZİ"→"DENEME MERKEZİ",
+"Genel deneme çöz" şeridi → Altın Özet girişi (ücretsizde kilitli), son sayfa hatırlama, brans_kitaplari satırları + PDF yükleme,
+premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → müşterek + branş kitabı).
