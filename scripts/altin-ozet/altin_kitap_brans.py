@@ -30,6 +30,8 @@ BRANSLAR = {
                'Uzman Erbaş · Uzman Jandarma · Askeralma · 657 · 926 · 5510 · Kimlik Kartı · Şehitlik · Kıyafet · Orduevleri · Kantin · Atama Yön. · Astsubay Sicil · Subay Sicil'),
   'ikmal': ('ozet_I_ikmal', 'Ikmal', 'İkmal Branş Mevzuatı',
             'Kamulaştırma · 3091 · 4734 · 4735 · 4925 · 5018 · 5668 Besleme · Gıda Hijyeni · Hekimlik Etiği · Tayın Bedeli · Beslenme Bedelleri · Besleme Uyg. · Yapım Muayene-Kabul · Hazine Taşınmazları · Taşınmaz Kaydı · Kamu Konutları · Kamu Zararları · Mal Muayene-Kabul · Ön Ödeme · Karayolu Taşıma Yön. · Mal Alımı İhale · Yapım İhale · Harcama Belgeleri · Taşınır Mal · Şehitlik'),
+  'bakim': ('ozet_B_bakim', 'Bakim', 'Bakım Branş Mevzuatı',
+            'İkmal ile ortak 25 mevzuat (Kamulaştırma · 4734 · 4735 · 5018 · Besleme · Hazine Taşınmazları · Harcama Belgeleri · Taşınır Mal · Şehitlik …) + Ses ve Gaz Fişeği Atabilen Silahlar Yön.'),
 }
 if not SADECE_MUSTEREK and BRANS not in BRANSLAR:
     print('bilinmeyen brans:', BRANS, '- tanimli:', ', '.join(BRANSLAR)); raise SystemExit(1)
