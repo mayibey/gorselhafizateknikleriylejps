@@ -36,7 +36,6 @@ import { LAW_KLASOR } from '@/db/seed';
 import { maddeEtiket } from '@/lib/madde-etiket';
 import { hafifDokun, ortaDokun } from '@/lib/dokunus';
 import { useKisiselOzellik } from '@/lib/ozellik';
-import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
 // KaldiginYerKarti/TatbikatYarim: 11 Ağu "%100 aynısı" yerleşiminde ekrandan kalktı
 // (bileşenler duruyor — geri istenirse import edip yerine koy).
 import { EmirHalka, IsiltiSerit, Nabiz, Sallan } from '@/components/karargah/safak';
@@ -213,14 +212,9 @@ export default function KarargahScreen() {
   // Altın Özet kitabına dönüştü (genel denemeler zaten Deneme Merkezi'nin ikinci sekmesinde),
   // "TATBİKAT MERKEZİ" başlığı "DENEME MERKEZİ" oldu. Kitap satırı sunucudan ('musterek' sanal
   // branşı) gelir; jandarma/uzman erbaş dâhil herkes buradan açar. Ücretsiz kullanıcı kilit görür →
-  // paywall (teşvik). Sunucuda satır yoksa (çevrimdışı ilk açılış) eski "Genel deneme" şeridi kalır.
+  // paywall (teşvik).
+  // Şerit KİTAP LİSTESİ ekranını açar (başkan: "direkt kitap açılmasın, kitaplar sıralansın").
   const altinOzetAcik = true;
-  const [altinOzet, setAltinOzet] = useState<BransKitap | null>(null);
-  useEffect(() => {
-    void bransKitaplari('musterek')
-      .then((liste) => setAltinOzet(liste[0] ?? null))
-      .catch(() => setAltinOzet(null));
-  }, []);
   // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
   const [tekrarAcik, setTekrarAcik] = useState(false);
   // PASLANAN LİSTE YERİ (başkan, 13 Eyl 2026): liste tıklanan satırın HEMEN ALTINDA açılır,
@@ -1076,27 +1070,23 @@ export default function KarargahScreen() {
               Genel denemeler Tatbikat Merkezi'nin içinde ikinci sekmede duruyordu, kimse
               bulamıyordu — başkan bile aradı. Buradan doğrudan o sekme açılır; müşterek/branş
               seçimi orada kullanıcıya bırakılır. */}
-          {altinOzetAcik && altinOzet ? (
+          {altinOzetAcik ? (
             <Pressable
-              onPress={() => {
-                hafifDokun();
-                if (!premium) router.push('/paywall');
-                else router.push({ pathname: '/kitap', params: { yol: altinOzet.dosyaYolu, baslik: altinOzet.baslik } });
-              }}
+              onPress={() => { hafifDokun(); router.push('/altin-ozet'); }}
               style={({ pressed }) => [styles.gecePanel, styles.tekrarSatir, styles.blokArasi, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel={premium ? 'Altın Özet kitabını aç' : 'Altın Özet kitabı — kilitli'}>
+              accessibilityLabel="Altın Özet kitapları">
               <View style={styles.emirIkonHalka}>
-                <MaterialCommunityIcons name={premium ? 'book-open-page-variant' : 'lock'} size={24} color={Palette.altinParlak} />
+                <MaterialCommunityIcons name="book-open-page-variant" size={24} color={Palette.altinParlak} />
               </View>
               <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
                 <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
-                  Altın Özet kitabını aç
+                  Altın Özet kitapları
                 </AppText>
               </View>
               <View style={styles.tekrarEtKose}>
                 <AppText variant="etiket" bold color="altinParlak" style={styles.tekrarBaslik2}>
-                  {premium ? 'KİTAP' : 'KİLİDİ AÇ'}
+                  KİTAPLAR
                 </AppText>
                 <MaterialCommunityIcons name="arrow-right" size={16} color={Palette.altinParlak} />
               </View>

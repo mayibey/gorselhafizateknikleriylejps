@@ -33,15 +33,13 @@ const arg = (ad) => { const i = process.argv.indexOf(ad); return i >= 0 ? proces
 const DOSYA = arg('--dosya');
 const BRANS = (arg('--brans') || '').toLowerCase();
 const MUSTEREK = process.argv.includes('--musterek');
-if (BRANS === 'jandarma') { console.error('jandarma branşına liste satırı yazılmaz (kanun kartlarını gizler); Karargâh yolu ayrı.'); process.exit(1); }
 if (!DOSYA || !existsSync(DOSYA) || (!BRANS && !MUSTEREK)) {
   console.error('Kullanım: --dosya <pdf> (--musterek | --brans <slug>)'); process.exit(1);
 }
 
-// Uygulamadaki 16 branş (seed.ts ile aynı). 'jandarma'ya SATIR YAZILMAZ: branş sekmesi kitap listesi
-// görünce kanun kartlarını gizliyor (23 Eyl'de bir kez yazıldı, hemen silindi). Jandarma ve uzman erbaş
-// kitabı Karargâh şeridinden alır ('musterek' sanal satırı; jandarma branş kitabı da 'jandarma_kitap' gibi
-// sanal bir satırla verilecek, listeye DEĞİL).
+// Uygulamadaki 16 branş (seed.ts ile aynı). 'jandarma' branş LİSTESİNE satır YAZILMAZ: branş sekmesi
+// kitap listesi görünce kanun kartlarını gizliyor (23 Eyl'de bir kez yazıldı, hemen silindi).
+// Altın Özet liste ekranı (Karargâh şeridi → /altin-ozet) 'musterek' + 'altin_<brans>' sanal satırlarını okur.
 const BRANSLAR = ['jandarma', 'mebs', 'havacilik', 'personel', 'maliye', 'istihkam', 'ikmal', 'bakim', 'bando',
   'tabip', 'dis_tabibi', 'eczaci', 'saglik', 'kimyager', 'veteriner', 'muhendis'];
 const BASLIK_MUSTEREK = 'Altın Özet — Müşterek Mevzuat (2026)';
@@ -71,7 +69,12 @@ console.log(uHata ? `dosya zaten vardı (FORCE=1 ile üzerine yaz): ${yol}` : `y
 // 3) Liste satırları.
 const satirlar = MUSTEREK
   ? ['musterek', ...BRANSLAR.filter((s) => s !== 'jandarma')].map((s) => ({ brans_slug: s, baslik: BASLIK_MUSTEREK, dosya_yolu: yol, sira: 0, law_id: null }))
-  : [{ brans_slug: slug, baslik: BASLIK_BRANS(slug), dosya_yolu: yol, sira: 0, law_id: null }];
+  : [
+      // Altın Özet liste ekranı (Karargâh şeridi) bu sanal satırı okur — jandarma dâhil her branş.
+      { brans_slug: `altin_${slug}`, baslik: BASLIK_BRANS(slug), dosya_yolu: yol, sira: 0, law_id: null },
+      // Jandarma dışı branşlarda Mevzuat>Branş listesine de en üste (jandarmada o liste kanun kartları).
+      ...(slug === 'jandarma' ? [] : [{ brans_slug: slug, baslik: BASLIK_BRANS(slug), dosya_yolu: yol, sira: 0, law_id: null }]),
+    ];
 const { error: dHata } = await sb.from('brans_kitaplari').upsert(satirlar, { onConflict: 'brans_slug,dosya_yolu' });
 if (dHata) { console.error('DB HATASI:', dHata.message); process.exit(1); }
 // Branş kitabı geldiyse o branşın müşterek satırı -1'e çekilir → liste: Müşterek, Branş, sonra diğer konular.
