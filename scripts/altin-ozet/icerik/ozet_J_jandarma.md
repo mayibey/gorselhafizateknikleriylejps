@@ -1005,3 +1005,418 @@ Kapsam: Jandarma branşının emirde sorumlu olduğu 42 mevzuat — ceza muhakem
 - "Toplu kuvvette her görevli zorun derecesini kendisi takdir eder." → **Kuvvetin amiri** tayin eder (m.16).
 - "Dur çağrısına uymayan kaçana doğrudan ateş edilir." → Önce **uyarı atışı**, sonra yakalayacak ölçüde atış (m.16).
 - "Kelepçe ve cop bedenî kuvvettir." → **Maddî güç**tür (m.16).
+
+## 5607 sayılı Kaçakçılıkla Mücadele Kanunu — Sınav kapsamı: m.2, 3, 4, 5, 9, 10, 11, 13, 16, 17, 18, 19, 20, 22, 23
+
+### Bu mevzuattan nasıl soruluyor
+Jandarma için en verimli kanunlardan biri. Sorular üç kümede toplanıyor: (1) m.3'teki **ceza tablosu** (hangi fiile kaç yıl, akaryakıt/tütün/alkol ağırlaştırması), (2) m.5 **etkin pişmanlık** oranları ve (3) **görevli kurumlar / silah kullanma / ikramiye** (m.19, 22, 23). Taşıt müsaderesi ve tasfiye süreleri de düzenli geliyor.
+
+### Altın noktalar
+- ★ çıkmış **Gümrük işlemine tabi tutmadan eşya sokma** — 1 yıldan 5 yıla kadar hapis ve 10.000 güne kadar adli para cezası; eşya gümrük kapıları **dışından** sokulmuşsa ceza 1/3'ten yarısına kadar artırılır (m.3/1). · **Ne demek:** Temel kaçakçılık suçu budur; kapı dışından (sınır hattından, kaçak yoldan) sokmak ağırlaştırıcı. · *Örnek:* Sınırdan patika yolla giren eşya → 1-5 yıl + artırım. · *Tuzak:* Ceza "5 yıla kadar" değil "1 yıldan 5 yıla"; alt sınır var.
+- **Aldatıcı işlem ve davranışla vergi kaçırma** — Eşyayı aldatıcı işlemle gümrük vergileri kısmen veya tamamen ödenmeksizin ülkeye sokan 2 yıldan 5 yıla kadar hapis ve 10.000 güne kadar adli para cezası (m.3/2). · **Ne demek:** Sahte fatura, yanlış beyan ile vergiyi kırmak; alt sınır 2 yıl, düz sokmadan ağır. · *Tuzak:* "1-5 yıl" diyen şık gümrüksüz sokma içindir, aldatıcı işlemde 2-5 yıl.
+- **Transit rejimi ihlali** — Transit rejimi çerçevesinde taşınan serbest dolaşımda bulunmayan eşyayı rejim hükümlerine aykırı olarak gümrük bölgesinde bırakan 1 yıldan 3 yıla kadar hapis ve 5.000 güne kadar adli para cezası (m.3/3). · **Ne demek:** Türkiye'den geçmesi gereken eşyanın içeride "buharlaşması". · *Tuzak:* Transit ve antrepo ihlalleri "1-3 yıl" bandında; "2-5" değil.
+- **İthali yasak eşya** — İthali kanun gereği yasak olan eşyayı ülkeye sokan 2 yıldan 6 yıla kadar hapis ve 20.000 güne kadar adli para cezası; fiil ayrıca daha ağır ceza gerektiren suç oluşturuyorsa yalnız o suçtan ceza verilir (m.3/7). · **Ne demek:** Yasak eşya (ör. bazı silah parçaları, belirli kimyasallar) sokmanın cezası tablodaki en yükseklerden biri. · *Tuzak:* "İhracı yasak eşya"nın cezası daha düşük (1-3 yıl) — ithal/ihraç karıştırılıyor.
+- **İhracı yasak eşya** — İhracı kanun gereği yasak olan eşyayı ülkeden çıkaran 1 yıldan 3 yıla kadar hapis ve 5.000 güne kadar adli para cezası (m.3/8). · **Ne demek:** Ülkeden çıkarılması yasak eşyayı (kültür varlığı hariç, o 2863'te) çıkarmak. · *Tuzak:* İthal yasağı 2-6 yıl, ihraç yasağı 1-3 yıl.
+- **Akaryakıt, tütün, alkol ağırlaştırması** — Kaçakçılık fiillerinin konusunu **akaryakıt, tütün, tütün mamulleri, etil alkol, metanol ve alkollü içkiler** oluşturuyorsa fıkralardaki cezalar **yarısından iki katına kadar** artırılır; hapis cezası **3 yıldan az olamaz** (m.3/10). · **Ne demek:** "Sigara-akaryakıt kaçakçılığı" en ağır dilim; alt sınır otomatik 3 yıl. · *Örnek:* Kaçak sigara sokan: 1-5 yıl yerine en az 3 yıldan başlayıp artırılmış ceza. · *Tuzak:* "En az 5 yıl" diyen şık yanlış; alt sınır 3 yıl.
+- ★ çıkmış **Ulusal marker (akaryakıt işaretleyici)** — Ulusal marker uygulamasına tabi olup marker içermeyen ya da standart dışı marker içeren akaryakıtı ticari amaçla üreten, bulunduran veya nakleden, satışa arz eden 2 yıldan 5 yıla kadar hapis ve 20.000 güne kadar adli para cezası (m.3/11). · **Ne demek:** Marker, akaryakıtın yasal olduğunu gösteren kimyasal işaret; yoksa kaçak sayılır. · *Tuzak:* Markersiz akaryakıt 2-5 yıl; "bandrolsüz sigara" 3-6 yıl — ikisi karıştırılıyor.
+- **Bandrolsüz / sahte bandrollü ürün** — Bandrol, etiket, hologram gibi işaretleri taşımayan tütün mamulü/alkol ürünlerini ticari amaçla üreten, bulunduran, nakleden, satan 3 yıldan 6 yıla kadar hapis ve 20.000 güne kadar adli para cezası (m.3/16). · **Ne demek:** Bandrol, ürünün vergilendirildiğini gösterir; sahte/yok ise kaçak. · *Tuzak:* Alt sınır 3 yıl; "1 yıldan 3 yıla" şıkkı tuzak.
+- **Teşebbüs tamamlanmış gibi cezalandırılır** — Kaçakçılık suçlarına teşebbüs, tamamlanmış suç gibi cezalandırılır (m.3/21). · **Ne demek:** TCK'daki teşebbüs indirimi (1/4-3/4) burada yok. · *Örnek:* Sınırda yakalanan, henüz eşyayı sokamamış kişi tam cezayı alır. · *Tuzak:* "Teşebbüs halinde ceza indirilir" şıkkı YANLIŞ.
+- **Eşyanın değerine göre artırım/indirim** — Eşyanın değeri **fahiş** ise ceza yarısından bir katına kadar artırılır; **hafif** ise yarısına kadar, **pek hafif** ise 1/3'üne kadar indirilir (m.3/22). · **Ne demek:** Değer büyüklüğü cezayı iki yönde etkiler. · *Tuzak:* "Fahiş değer → 2 kat artırım" yanlış, "yarısından bir katına kadar".
+- **Örgüt ve 3+ kişi** — Suç bir **örgütün faaliyeti çerçevesinde** işlenirse ceza **2 kat**; **üç veya daha fazla kişi** tarafından birlikte işlenirse **yarı oranında** artırılır (m.4/1-2). · **Ne demek:** Örgüt = iki kat, kalabalık ama örgütsüz = yarı. · *Tuzak:* "İki kişi birlikte → yarı artırım" şıkkı yanlış; en az üç kişi gerekir.
+- **Kamu görevlisi / meslek gereği işleyen** — Kaçakçılığı önlemek, izlemek, araştırmakla görevli kişi veya ticaret-meslek gereği işleyen kişi için ceza **yarı oranında** artırılır (m.4/3-4). · **Ne demek:** Gümrükçü, kolluk, nakliyeci kaçakçılık yaparsa daha ağır. · *Tuzak:* Kamu görevlisi için "2 kat" diyen şık yanlış, örgüt için 2 kat.
+- **Göz yuman görevli** — Kaçakçılığı önlemekle görevli kişi suçun işlenmesine kasten **göz yumarsa** işlenen suçun **müşterek faili** olarak sorumlu tutulur (m.4/5). · **Ne demek:** Görmezden gelen görevli, "yardım eden" değil doğrudan fail sayılır. · *Tuzak:* "Yardım eden sıfatıyla ceza alır" şıkkı yanlış.
+- **Devlet güvenliği / toplum sağlığı** — Kaçakçılık suçunun konusu Devletin güvenliği veya toplum sağlığı bakımından tehlike oluşturuyorsa ceza **10 yıldan az olamaz** (m.4/6). · **Ne demek:** Konusu itibarıyla tehlikeli kaçak eşyada taban 10 yıl. · *Tuzak:* "5 yıldan az olamaz" tuzak; 10 yıl.
+- **Etkin pişmanlık — haber alınmadan önce** — Suça iştirak etmiş kişi, resmi makamlarca haber alınmadan önce fiili, diğer failleri ve kaçak eşyanın saklandığı yerleri merciine haber verirse, verilen bilginin failler ve eşyanın ele geçmesini sağlaması hâlinde **ceza verilmez** (m.5/1). · **Ne demek:** Erken ihbar tam cezasızlık; şartı sonuç vermesi. · *Tuzak:* Haber alındıktan **sonra** yardım ederse ceza **2/3 oranında indirilir**, kalkmaz.
+- **Etkin pişmanlık — gümrüklenmiş değeri ödeme** — Eşyanın gümrüklenmiş değerinin **iki katını** ödeyen: **soruşturma** evresinde ceza **yarısı**, **kovuşturma** evresinde hüküm verilinceye kadar **1/3'ü** oranında indirilir; **mükerrirler** ve **örgüt** faaliyeti çerçevesinde işleyenler yararlanamaz (m.5/2). · **Ne demek:** Para ödeyerek indirim; erken ödeyen daha çok kazanır. · *Örnek:* Kovuşturma aşamasında 2 kat ödeyen → 1/3 indirim. · *Tuzak:* "Değerinin kendisini ödeme" değil "iki katı"; mükerrir ve örgüt üyesi yararlanamaz.
+- ★ çıkmış **Arama CMK'ya göre** — Kaçakçılık suçlarında arama ve elkoyma **CMK** hükümlerine göre yapılır (m.9). · **Ne demek:** Bu kanun özel arama usulü koymaz, CMK 116 vd. uygulanır. · *Tuzak:* "Kaçakçılık aramasında hâkim kararı gerekmez" şıkkı yanlış.
+- **Taşıta elkoyma ve teminat** — Kaçak eşya taşıyan taşıta CMK 128/4 uyarınca elkonur; sahibi kaçakçılığa iştirak etmemişse **gümrüklenmiş değer** kadar teminat karşılığı iade edilebilir; teminat elkoymadan itibaren **30 gün**, tebligattan itibaren **90 gün** içinde yatırılmalıdır (m.10). · **Ne demek:** Aracı kurtarmak için para bloke edilir. · *Tuzak:* İki süre birlikte soruluyor: 30 gün elkoymadan, 90 gün tebligattan.
+- ★ çıkmış **Kaçak akaryakıtın tasfiyesi** — Elkonan kaçak akaryakıt **il özel idaresi** (büyükşehirlerde büyükşehir belediyesi) tarafından teslim alınıp tasfiye edilir (m.11). · **Ne demek:** Yakıt gümrük deposuna değil il özel idaresine gider. · *Tuzak:* "Gümrük idaresi tasfiye eder" şıkkı akaryakıt için yanlış.
+- **Taşıt müsaderesi — 3 koşul** — Kaçak eşyanın taşınmasında kullanılan taşıt şu hallerde müsadere edilir: (a) taşıt kaçak eşya taşımak için **özel tertibat** yapılmış, (b) taşıtın **değeri kaçak eşyanın değerine göre düşük** ya da eşya taşıtın **ağırlığı/hacmi ile orantılı**, (c) taşıtın sahibi **fiile iştirak** etmiş (m.13). · **Ne demek:** Her araç müsadere edilmez, bu koşullardan biri lazım. · *Örnek:* Zula bölmesi açılmış kamyonet → müsadere. · *Tuzak:* "Kaçak eşya taşıyan her araç müsadere edilir" yanlış.
+- **Tasfiye süreleri** — Elkonan eşyanın **6 ay** içinde kaçak olup olmadığına karar verilmezse tasfiye edilebilir; bozulacak/tehlikeli eşya için süre **1 ay**; muhafazası masraflı eşyada ihaleyle satılıp bedeli emanete alınır (m.16). · **Ne demek:** Dava sürerken mal depoda çürümesin diye satılır, parası bekletilir. · *Tuzak:* 6 ay / 1 ay sürelerini "1 yıl / 3 ay" olarak veren şıklar.
+- **Görevli mahkeme** — Bu kanunda tanımlanan suçlara **asliye ceza** mahkemesinde bakılır; ancak **evrakta sahtecilik** gibi ağır ceza mahkemesinin görevine giren suçla birlikte işlenmişse **ağır ceza** bakar (m.17). · **Ne demek:** Kural asliye ceza; birleşen ağır suç varsa ağır ceza. · *Tuzak:* "Kaçakçılık suçlarına ağır ceza bakar" genellemesi yanlış.
+- ★ çıkmış **Gümrük idaresinin katılan sıfatı** — Kaçakçılık davalarında **gümrük idaresi** (ve fiilden zarar gören diğer idareler) **katılan** olarak yer alır; davaya katılma talebi aranmaz (m.18). · **Ne demek:** Devlet, davada taraf olarak hazırdır. · *Tuzak:* "Gümrük idaresi tanık olarak dinlenir" yanlış; katılan.
+- ★ çıkmış **Kaçakçılıkla görevli kurumlar** — Mülkî amirler, **Ticaret Bakanlığı** (gümrük) personeli, **Emniyet**, **Jandarma**, **Sahil Güvenlik** komutanlıkları kaçakçılığı önleme, izleme, soruşturmakla görevlidir; kara sınırlarında ve hudut kapılarında gerektiğinde **hudut birlikleri** de destek verir (m.19/1). · **Ne demek:** Kaçakçılık jandarmanın asli görevlerinden. · *Tuzak:* Şıklarda **MİT** sayılırsa yanlış; MİT bu kanunda görevli kurum değil.
+- **Mülkî amire bilgi ve muhbir gizliliği** — Görevliler operasyon sonucu yakaladıkları kaçakçılık olaylarını **mülkî amire bildirir**; muhbirlerin kimliği **açıklanamaz**, açıklayan görevli cezalandırılır (m.19-20). · **Ne demek:** Muhbir korunmazsa kimse ihbar etmez. · *Tuzak:* "Muhbir kimliği mahkemeye açıklanır" yanlış; gizli kalır.
+- **Silah kullanma — kara** — Kaçakçılığı önlemekle görevli olanlar, **dur ihtarına** uymayan ve kaçmaya devam eden şüpheli için önce **havaya uyarı atışı** yapar, buna da uymayan kişiye karşı sadece **meşru müdafaa** şartlarında hedefe ateş edilebilir; yakalamak amacıyla kaçan kişiye doğrudan ateş edilmez (m.22/1). · **Ne demek:** Kaçan kaçakçıya "yakalamak için" vurulmaz; ancak saldırı varsa. · *Tuzak:* PVSK 16'daki "yakalayacak ölçüde ateş" formülü burada geçerli değil; kaçakçılıkta sadece meşru müdafaa.
+- **Silah kullanma — deniz** — Deniz araçlarında: **ihtar** → **uyarı ateşi** → durmayan araca karşı **durdurucu ateş** (aracı hareketsiz kılmaya yönelik) (m.22/2). · **Ne demek:** Denizde kademeli uygulama; hedef araç, kişi değil. · *Tuzak:* Deniz için "durdurucu ateş" var, kara için yok.
+- **İkramiye dağılımı** — Kaçak eşyanın satışından/idari para cezasından elde edilen tutarın belirlenen kısmı ikramiye olarak dağıtılır: **%50 muhbirlere, %50 elkoyanlara**; muhbir yoksa tamamı elkoyanlara (m.23/1-2). · **Ne demek:** Yakalayan personel ödül alır. · *Tuzak:* "Muhbir yoksa hazineye kalır" yanlış; tamamı elkoyanlara.
+- **Görevliye muhbir ikramiyesi yok** — Kaçakçılığı önlemekle görevli kişiler **muhbir ikramiyesinden** yararlanamaz; yalnız elkoyan ikramiyesi alabilir (m.23). · **Ne demek:** Görevli, işini yaparak muhbir olamaz. · *Tuzak:* "Jandarma personeli muhbir olarak da ikramiye alır" yanlış.
+- **İkramiye vergiden istisna ve tavan** — İkramiyeler **damga vergisi hariç** her türlü vergiden müstesnadır; yılda her bir kişiye ödenecek ikramiye tavanı memur aylık katsayısının **30.000** (elkoyan) ve **120.000** (muhbir) gösterge rakamı ile çarpımını geçemez (m.23). · **Ne demek:** Ödül vergisiz ama sınırlı. · *Tuzak:* "Tüm vergilerden muaf" yanlış, damga vergisi hariç.
+- **Hudut birliklerine ikramiye** — Hudut hattında kaçak eşyayı ele geçiren **hudut birlikleri** personeli de elkoyan ikramiyesinden yararlanır (m.23). · **Ne demek:** Sınır karakolu askeri de yakalama ikramiyesi kapsamında. · *Tuzak:* "Yalnız jandarma ve emniyet alır" yanlış.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Gümrüksüz sokma | 1-5 yıl + 10.000 güne kadar APC (kapı dışı +1/3-½) |
+| Aldatıcı işlem | 2-5 yıl |
+| Transit / antrepo ihlali | 1-3 yıl |
+| İthali yasak eşya | 2-6 yıl |
+| İhracı yasak eşya | 1-3 yıl |
+| Akaryakıt/tütün/alkol | ½-2 kat artırım, hapis en az 3 yıl |
+| Markersiz akaryakıt | 2-5 yıl |
+| Bandrolsüz ürün | 3-6 yıl |
+| Örgüt / 3+ kişi / görevli | 2 kat / yarı / yarı |
+| Devlet güvenliği-toplum sağlığı | en az 10 yıl |
+| Etkin pişmanlık (haber alınmadan önce / sonra) | ceza yok / 2/3 indirim |
+| Değerin 2 katını ödeme (soruşturma / kovuşturma) | ½ / 1/3 indirim |
+| Taşıt teminatı | elkoymadan 30 gün, tebligattan 90 gün |
+| Tasfiye | 6 ay; bozulacak eşya 1 ay |
+| İkramiye | %50 muhbir / %50 elkoyan; tavan 30.000 / 120.000 gösterge |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Kaçakçılıkla görevliler | Mülkî amir, Ticaret Bakanlığı, Emniyet, Jandarma, Sahil Güvenlik (+ hudut birlikleri) |
+| Arama-elkoyma | CMK'ya göre (hâkim/savcı/kolluk amiri) |
+| Kaçak akaryakıt tasfiyesi | İl özel idaresi / büyükşehir belediyesi |
+| Görevli mahkeme | Asliye ceza (sahtecilikle birlikte → ağır ceza) |
+| Katılan | Gümrük idaresi |
+| Olay bildirimi | Mülkî amir |
+
+### "Yanlıştır/değildir" tuzakları
+- "Teşebbüs halinde ceza indirilir." → Tamamlanmış gibi cezalandırılır (m.3/21).
+- "Sigara kaçakçılığında hapis en az 5 yıl." → En az **3 yıl** (m.3/10).
+- "İki kişi birlikte işlerse yarı artırım." → **Üç** veya daha fazla kişi (m.4/2).
+- "Görevli göz yumarsa yardım eden olur." → **Müşterek fail** (m.4/5).
+- "Kovuşturmada 2 kat ödeyen yarı indirim alır." → Kovuşturmada **1/3**, soruşturmada ½ (m.5/2).
+- "MİT kaçakçılıkla görevli kurumdur." → **Değildir** (m.19).
+- "Kaçan kaçakçıya yakalamak için ateş edilir." → Yalnız **meşru müdafaa** şartlarında (m.22/1).
+- "Görevliler muhbir ikramiyesi alır." → Alamaz; yalnız **elkoyan ikramiyesi** (m.23).
+- "İkramiye tüm vergilerden muaftır." → **Damga vergisi hariç** (m.23).
+- "Kaçakçılık davalarına ağır ceza bakar." → **Asliye ceza**; sahtecilik birleşirse ağır ceza (m.17).
+
+## 3298 sayılı Uyuşturucu Maddelerle İlgili Kanun — Sınav kapsamı: m.1, 2, 4
+
+### Bu mevzuattan nasıl soruluyor
+Kısa kanun, iki soru tipi: **haşhaş ekimi** ile ilgili yetki (Cumhurbaşkanı, izin, 1 Temmuz) ve **cezalar** (izinsiz ekim 1-5 yıl, izinden fazla/farklı yer 6 ay-3 yıl, eksik teslim idari para cezası).
+
+### Altın noktalar
+- **Haşhaş ekimi Cumhurbaşkanı kararıyla** — Haşhaş ekilecek yerler ve ekimi yapacak kişiler **Cumhurbaşkanınca** belirlenir; bu karar her yıl **1 Temmuz**'a kadar ilân edilir (m.1). · **Ne demek:** Haşhaş serbest değil; hangi il/ilçede ekileceği her yıl yeniden belirlenir. · *Tuzak:* "Tarım ve Orman Bakanlığı belirler" şıkkı yanlış; Cumhurbaşkanı.
+- **İzin ve kontrol Toprak Mahsulleri Ofisi** — Ekim izni ve haşhaş kapsülü ile ham afyonun alımı-kontrolü **Toprak Mahsulleri Ofisi (TMO)** eliyle yürütülür; üretici ürününü TMO'ya teslim etmek zorundadır (m.2). · **Ne demek:** Devlet tekeli; üretici pazara satamaz. · *Tuzak:* "Üretici ham afyonu serbestçe satar" yanlış.
+- **Ekim tanımı** — "Ekim", **tohumun toprağa atılmasından** hasada kadar geçen bütün aşamaları kapsar (m.2). · **Ne demek:** Fide, büyütme, sulama hepsi "ekim" sayılır; ekmişken yakalanan da suçlu. · *Tuzak:* "Sadece tohum atma anı" diyen şık yanlış.
+- ★ çıkmış **İzinsiz haşhaş ekimi** — İzin verilen yerler dışında veya izin almadan haşhaş eken **1 yıldan 5 yıla kadar** hapis (m.4/1). · **Ne demek:** Hiç izni olmayan ekici ağır cezaya girer. · *Örnek:* İzin listesinde olmayan ilçede tarlasına haşhaş eken → 1-5 yıl. · *Tuzak:* "6 ay-3 yıl" izin sınırını aşana verilir, izinsiz ekene 1-5 yıl.
+- **İzin sınırını aşan ekim** — İzin belgesinde belirtilen alandan **fazla** veya **başka yerde** ekim yapan **6 aydan 3 yıla kadar** hapis (m.4/2). · **Ne demek:** İzni olan ama sınırı aşan daha hafif. · *Tuzak:* Şıklarda bu ikisi çapraz konur; "izinsiz" kelimesine dikkat.
+- **Eksik teslim → idari para cezası** — Ürettiği haşhaş kapsülü/ham afyonu TMO'ya **eksik teslim** eden veya **teslim etmeyen** üreticiye **mülkî amir** tarafından eksik ürünün değerinin **iki misli** idarî para cezası verilir (m.4). · **Ne demek:** Eksik teslim suç değil kabahat; mülkî amir cezayı keser. · *Tuzak:* "Eksik teslim hapis cezası gerektirir" yanlış; idari para cezası, mülki amir.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Ekim yerleri ilânı | Her yıl 1 Temmuz'a kadar |
+| İzinsiz ekim | 1-5 yıl hapis |
+| İzin alanını aşan / başka yerde ekim | 6 ay-3 yıl hapis |
+| Eksik teslim | Eksik değerin 2 misli İPC (mülkî amir) |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Ekim yerleri ve kişileri | Cumhurbaşkanı |
+| İzin, alım, kontrol | Toprak Mahsulleri Ofisi |
+| Eksik teslim cezası | Mülkî amir |
+
+### "Yanlıştır/değildir" tuzakları
+- "Haşhaş ekim yerlerini Tarım Bakanlığı belirler." → **Cumhurbaşkanı** (m.1).
+- "Ekim sadece tohum atma anıdır." → Tohumdan **hasada** kadar (m.2).
+- "İzinsiz ekim 6 ay-3 yıl." → **1-5 yıl**; izni aşan 6 ay-3 yıl (m.4).
+- "Eksik teslim edene hapis verilir." → **İdari para cezası** (2 misli, mülkî amir) (m.4).
+
+## 6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun — Sınav kapsamı: m.4, 6, 7, 12
+
+### Bu mevzuattan nasıl soruluyor
+Jandarma spor müsabakalarında görev aldığı için m.4 **il spor güvenlik kurulu** (kim başkan, kimler üye), m.6 **özel güvenlik–genel kolluk** ilişkisi, m.7 **müsabaka güvenlik amiri** ve m.12 **yasak maddeler** soruluyor.
+
+### Altın noktalar
+- **İl spor güvenlik kurulu başkanı** — Her ilde **vali yardımcısı** başkanlığında; belediye, il emniyet müdürlüğü, **il jandarma komutanlığı**, gençlik ve spor il müdürlüğü, sağlık, spor federasyonu, ev sahibi kulüp temsilcilerinden oluşan **il spor güvenlik kurulu** kurulur; ilçelerde **kaymakam** başkanlığında ilçe kurulu oluşturulabilir (m.4). · **Ne demek:** Müsabaka güvenliğinin karar organı vali yardımcısının başkanlığındadır. · *Tuzak:* "Vali başkanlık eder" şıkkı yanlış; **vali yardımcısı**. Jandarma üyedir.
+- **Kurulun görevi** — Kurul, müsabaka güvenliğine ilişkin **tedbirleri belirler**, güvenlik planlarını onaylar, riskli müsabakaları tespit eder ve genel/özel kolluk sayısını belirler (m.4). · **Ne demek:** Maç öncesi "kaç polis, kaç özel güvenlik" kararı burada alınır. · *Tuzak:* "Kurul sadece tavsiye verir, karar almaz" yanlış; tedbir kararı alır.
+- ★ çıkmış **Özel güvenlik kimlik bildirimi** — Müsabakada görev yapacak özel güvenlik görevlilerinin kimlikleri müsabakadan **en az 48 saat önce** kolluğa bildirilir (m.6). · **Ne demek:** Kolluk, kimin tribünde görev yapacağını önceden bilir. · *Tuzak:* "24 saat" tuzak; 48 saat.
+- **Özel güvenlik genel kolluğun gözetiminde** — Spor alanı içinde güvenlik **özel güvenlik** tarafından sağlanır; özel güvenlik **genel kolluğun gözetim ve denetiminde** görev yapar; yetersiz kalırsa genel kolluk müdahale eder (m.6). · **Ne demek:** İçeride özel güvenlik ön planda ama komuta genel kollukta. · *Tuzak:* "Genel kolluk tribüne hiç giremez" yanlış.
+- ★ çıkmış **Müsabakaya girişte arama** — Seyircilerin üst ve eşya araması müsabaka alanına girişte **özel güvenlik** tarafından, genel kolluğun gözetiminde ve **mülkî amirin yazılı emri** ile yapılır (m.6). · **Ne demek:** Stad girişindeki arama önleme araması niteliğindedir; mülki amir emri gerekir. · *Tuzak:* "Hâkim kararı gerekir" yanlış; mülkî amir yazılı emri.
+- ★ çıkmış **Müsabaka güvenlik amiri** — Her müsabaka için kolluk tarafından bir **müsabaka güvenlik amiri** görevlendirilir; genel kolluk, özel güvenlik ve federasyon görevlileri arasında **koordinasyonu** sağlar; müsabakayı izleyen **gözlemci kolluk** görevlisi rapor tutar (m.7). · **Ne demek:** Sahadaki tek koordinatör kolluğun amiri. · *Tuzak:* "Güvenlik amirini federasyon atar" yanlış; kolluk görevlendirir.
+- **Spor alanına sokulması yasak maddeler** — Silah (ruhsatlı olsa bile), kesici-delici aletler, patlayıcı, meşale, sis bombası, alkollü içki ve şişe gibi maddeler spor alanına sokulamaz; şüpheli kişiler alana alınmaz (m.12). · **Ne demek:** Ruhsat, stada silahla girme hakkı vermez. · *Örnek:* Ruhsatlı tabancasıyla tribüne girmek isteyen → alınmaz. · *Tuzak:* "Ruhsatlı silahla girilebilir" şıkkı yanlış.
+- **Seyyar satıcı ve alkol** — Spor alanı çevresinde **seyyar satıcılar** kolluk tarafından uzaklaştırılır; alkollü içki satışı ve alana sokulması yasaktır (m.12). · **Ne demek:** Stad çevresi de kolluğun kontrol alanı. · *Tuzak:* "Belediye zabıtası uzaklaştırır" yerine kolluk.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Özel güvenlik kimlik bildirimi | Müsabakadan en az 48 saat önce |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| İl spor güvenlik kurulu başkanı | Vali yardımcısı (ilçede kaymakam) |
+| Alan içi güvenlik | Özel güvenlik, genel kolluk gözetiminde |
+| Giriş araması emri | Mülkî amir (yazılı) |
+| Müsabaka güvenlik amiri | Kolluk görevlendirir |
+
+### "Yanlıştır/değildir" tuzakları
+- "İl spor güvenlik kuruluna vali başkanlık eder." → **Vali yardımcısı** (m.4).
+- "Jandarma kurulun üyesi değildir." → **Üyedir** (m.4).
+- "Özel güvenlik kimlikleri 24 saat önce bildirilir." → **48 saat** (m.6).
+- "Giriş araması için hâkim kararı gerekir." → **Mülkî amirin yazılı emri** (m.6).
+- "Ruhsatlı silah spor alanına sokulabilir." → **Sokulamaz** (m.12).
+
+## 2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun — Sınav kapsamı: m.20, 21, 23
+
+### Bu mevzuattan nasıl soruluyor
+Eski tarihli ama güncel maddeleri sorulan bir kanun: m.20 **zapt ve imha usulü** (kim zapt eder, mühürlü teslim, imha heyeti), m.21 **kenevir ekimi** (Tarım ve Orman izni, izinsiz ekimin imhası) ve m.23 **kenevir cezaları** (4-12 yıl, kendi kullanımı 1-3 yıl).
+
+### Altın noktalar
+- **Zapt yetkisi** — Uyuşturucu maddeler, zabıta (kolluk), gümrük, sağlık ve diğer görevli memurlarca **tutanakla** zaptedilir; zaptedilen madde **Cumhuriyet savcılığınca** muhafaza altına alınır (m.20). · **Ne demek:** Ele geçen uyuşturucu emanete girer, tutanak şart. · *Tuzak:* "Jandarma kendi deposunda saklar" yanlış; savcılık muhafaza.
+- **Müsadere ve mühürlü teslim** — Zaptedilen uyuşturucunun müsaderesine **sulh ceza hâkimliği** karar verir; müsadere edilen maddeler **mühürlü** olarak **mülkî amirliğe** teslim edilir (m.20). · **Ne demek:** Karar hâkimden, teslim mülkî amire. · *Tuzak:* "Müsadereye mülkî amir karar verir" yanlış; sulh ceza hâkimliği karar verir, mülkî amirlik teslim alır.
+- **İmha heyeti** — İmha, **vali** tarafından görevlendirilen memurlardan oluşan heyet tarafından **Cumhuriyet savcısı nezaretinde** yapılır ve tutanağa bağlanır (m.20). · **Ne demek:** Yakma/yok etme işlemi savcı gözetiminde olur. · *Tuzak:* "İmha kolluk amirinin kararıyla yapılır" yanlış.
+- ★ çıkmış **Kenevir ekimi izni** — Kenevir ekimi (lif, tohum, sap ve benzeri amaçlarla) **Tarım ve Orman Bakanlığı** iznine tabidir; **esrar elde etmek amacıyla** kenevir ekimi yasaktır (m.21). · **Ne demek:** Sanayi keneviri izinle ekilir, esrar amaçlı kesinlikle yasak. · *Tuzak:* "Kenevir ekimi tamamen yasaktır" yanlış; izinle mümkün.
+- ★ çıkmış **İzinsiz kenevirin imhası** — İzinsiz ekilen kenevir, **ziraat mühendisi raporu** ve **mülkî amirin emri** ile **zabıta** tarafından imha edilir; imhada kullanılan araç-gereç **Jandarma Genel Komutanlığı** bütçesinden karşılanır; masraflar ekiciden **6183** sayılı Kanuna göre tahsil edilir (m.21). · **Ne demek:** Tarla imhası jandarmanın operasyonel işi, masrafı çiftçiye. · *Örnek:* Dağ köyünde tespit edilen kenevir tarlası → ziraat mühendisi raporu + kaymakam emri → jandarma imha. · *Tuzak:* "Masraf hazineden karşılanır" yanlış; ekiciden 6183 ile tahsil.
+- **İzinsiz / fazla ekim (idari)** — İzinsiz veya izin alanından fazla kenevir eken kişiye (esrar amacı olmadan) **50 günden az olmamak** üzere adli para cezası (m.23). · **Ne demek:** Esrar amacı yoksa hafif ceza. · *Tuzak:* Bu hafif ceza esrar amacı yoksa; esrar amaçlı ekim ağır suç.
+- ★ çıkmış **Esrar elde etmek amacıyla kenevir ekimi** — **4 yıldan 12 yıla kadar** hapis ve **500 günden 10.000 güne kadar** adli para cezası; **münhasıran kendi kullanımı** için ekim **1 yıldan 3 yıla kadar** hapis (m.23). · **Ne demek:** Ticari esrar üretimi ağır, kişisel kullanım hafif. · *Tuzak:* "Kendi kullanımı için ekim 4-12 yıl" yanlış; 1-3 yıl.
+- **Koruma tedbirleri** — Bu suçlarla ilgili olarak CMK'nın **iletişimin denetlenmesi (m.135)** ve **teknik araçlarla izleme (m.140)** hükümleri uygulanabilir; gizli soruşturmacı hükmü sayılmamıştır (m.23). · **Ne demek:** Telefon dinleme ve teknik takip var, gizli soruşturmacı yok. · *Tuzak:* "Gizli soruşturmacı görevlendirilebilir" şıkkı bu kanun için yanlış; 135 ve 140.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| İzinsiz/fazla kenevir ekimi (esrar amacı yok) | ≥50 gün adli para cezası |
+| Esrar amaçlı ekim | 4-12 yıl + 500-10.000 gün APC |
+| Kendi kullanımı için ekim | 1-3 yıl |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Zapt | Zabıta, gümrük, sağlık memurları (tutanakla) |
+| Muhafaza | Cumhuriyet savcılığı |
+| Müsadere kararı | Sulh ceza hâkimliği |
+| Mühürlü teslim | Mülkî amirlik |
+| İmha | Vali'nin görevlendirdiği heyet, savcı nezaretinde |
+| Kenevir ekim izni | Tarım ve Orman Bakanlığı |
+| İzinsiz kenevir imhası | Ziraat müh. raporu + mülkî amir emri + zabıta; araç-gereç JGK bütçesi |
+
+### "Yanlıştır/değildir" tuzakları
+- "Müsadereye mülkî amir karar verir." → **Sulh ceza hâkimliği** (m.20).
+- "İmha kolluk amiri kararıyla yapılır." → Vali heyeti + **savcı nezareti** (m.20).
+- "Kenevir ekimi her hâlde yasaktır." → Tarım ve Orman **izniyle** mümkün (m.21).
+- "İmha masrafı hazineden karşılanır." → **Ekiciden** 6183'e göre tahsil (m.21).
+- "Kendi kullanımı için ekim 4-12 yıl." → **1-3 yıl** (m.23).
+- "Gizli soruşturmacı uygulanır." → CMK **135 ve 140** uygulanır (m.23).
+
+## 6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun — Sınav kapsamı: m.2-16, 18
+
+### Bu mevzuattan nasıl soruluyor
+Sorular üç noktada yoğunlaşıyor: **suçun tanımı ve cezası** (5-10 yıl, fonun kullanılması şart değil), **malvarlığının dondurulması** usulü (kim karar verir, 48 saat, 5 gün, 6 ay, RG) ve **Değerlendirme Komisyonu** (MASAK Başkanlığı, en az 5 oy). Jandarma için ayrıca "terörizmin finansmanı" ile "terör örgütüne yardım" ayrımı.
+
+### Altın noktalar
+- **Fon kavramı** — "Fon": para veya değeri para ile temsil edilebilen her türlü mal, hak, alacak, gelir ve menfaat ile bunların birbirine dönüştürülmesinden hasıl olan menfaat ve değerdir (m.2). · **Ne demek:** Sadece nakit değil; araç, ev, alacak da fon sayılır. · *Tuzak:* "Fon yalnız para ve dövizdir" yanlış.
+- **Suç tanımı ve ceza** — Terör suçlarının işlenmesinde tümüyle veya kısmen kullanılması amacıyla veya kullanılacağını bilerek fon sağlayan/toplayan **5 yıldan 10 yıla kadar** hapis; fonun **kullanılmış olması şart değildir** (m.4). · **Ne demek:** Para terörde kullanılmasa bile toplamak suçtur. · *Örnek:* Örgüte "bağış" toplayan → fon kullanılmasa da 5-10 yıl. · *Tuzak:* "Fonun fiilen kullanılması gerekir" yanlış.
+- **Ağırlaştırıcı hâl ve tüzel kişi** — Suç **kamu görevinin sağladığı nüfuz** kötüye kullanılarak işlenirse ceza **yarı oranında** artırılır; tüzel kişiler hakkında güvenlik tedbiri uygulanır; suç **yabancı devlet veya uluslararası kuruluş aleyhine** işlenmişse kovuşturma **Adalet Bakanının talebine** bağlıdır (m.4). · **Ne demek:** Memur nüfuzu ağırlaştırır; yabancı devlet aleyhine olan siyasi süzgeçten geçer. · *Tuzak:* "Yabancı devlet aleyhine işlenmişse re'sen soruşturulur" yanlış; Adalet Bakanı talebi.
+- **BM Güvenlik Konseyi kararlarının uygulanması** — BMGK'nın terörizmin finansmanına ilişkin kararları **Cumhurbaşkanı kararı** ile Resmî Gazete'de yayımlanarak uygulanır; malvarlığı bu kararla dondurulur (m.5). · **Ne demek:** BM listesi Türkiye'de kendiliğinden değil, Cumhurbaşkanı kararıyla hüküm doğurur. · *Tuzak:* "BM kararı doğrudan uygulanır" yanlış.
+- **Yabancı devlet talebi** — Yabancı devletin malvarlığı dondurma talebi **Cumhurbaşkanı** kararıyla yerine getirilir; talep eden devlet **1 yıl** içinde soruşturma/kovuşturma açıldığına ilişkin bilgi vermezse karar kaldırılabilir (m.6). · **Ne demek:** Yabancı talep süresiz dondurma sağlamaz. · *Tuzak:* "1 yıl" süresi "6 ay" olarak verilirse yanlış.
+- **Türkiye'deki malvarlığının dondurulması** — Türkiye'de bulunan malvarlığı, **Hazine ve Maliye Bakanı ile İçişleri Bakanının** birlikte kararıyla dondurulur; karar **48 saat** içinde **Ankara ağır ceza mahkemesinin** onayına sunulur, mahkeme **5 gün** içinde karar verir; dondurma kararı **6 ayda bir** yeniden değerlendirilir (m.7). · **Ne demek:** İki bakan + mahkeme onayı; süreli tedbir. · *Tuzak:* Süreler çapraz sorulur: 48 saat sunma, 5 gün karar, 6 ay değerlendirme.
+- ★ çıkmış **Mali araştırma Başkanlıkça yapılır** — Malvarlığının dondurulması kararları hakkında yapılacak **mali araştırma MASAK Başkanlığı** tarafından yerine getirilir; kamu kurumları ile gerçek ve tüzel kişiler istenen bilgileri gecikmeksizin Başkanlığa verir (m.8). · **Ne demek:** Kimin nerede ne malı var araştırmasını MİT değil MASAK yapar. · *Tuzak:* Şıkta "Millî İstihbarat Teşkilâtı" verilir; doğrusu MASAK.
+- ★ çıkmış **Kararın hüküm doğurması ve tebliği** — Malvarlığının dondurulması kararı **Resmî Gazete'de yayımı** ile hüküm doğurur ve **tebliğ edilmiş sayılır** (m.8-9). · **Ne demek:** İlgiliye ayrıca tebligat beklenmez. · *Tuzak:* "Karar ilgiliye tebliğ ile hüküm doğurur" yanlış; RG yayımı.
+- **Bildirim süreleri** — Dondurulan malvarlığına ilişkin bilgi, ilgili kişi/kurumlarca **30 gün** içinde Başkanlığa (MASAK) bildirilir; kurum ve kuruluşlar dondurma kararı kapsamındaki malvarlığını tespit ettiklerinde **7 gün** içinde bildirir (m.11-12). · **Ne demek:** Mal sahibi ve bankalar farklı sürelerle bildirir. · *Tuzak:* 30 gün (malvarlığı sahibi) ile 7 gün (kurum) karıştırılıyor.
+- ★ çıkmış **Yönetim ilgilide, işlemler izinle** — Dondurulan malvarlığının **yönetimi** hak sahibine aittir; ancak malvarlığında tasarruf, devir gibi işlemler **Başkanlığın (MASAK) izniyle** yapılır; kişinin ve bakmakla yükümlü olduğu kişilerin geçimi için harcamalara izin verilir (m.13). · **Ne demek:** Malı elinden alınmaz, kilitlenir. · *Tuzak:* "Malvarlığı hazineye devredilir" yanlış; yönetim ilgilide, tasarruf izne bağlı.
+- **Kamu ödemeleri ve banka hesabı** — Dondurulan kişiye kamu kurumlarınca yapılacak ödemeler için **izin gerekmez**; ödemeler kişinin **banka hesabına** yapılır ve hesap dondurma kapsamına girer (m.14). · **Ne demek:** Maaş yatar ama dondurulmuş hesaba. · *Tuzak:* "Kamu ödemesi elden yapılabilir" yanlış; banka hesabına.
+- **Dondurma kararına aykırılık** — Dondurma kararına aykırı işlem yapan **6 aydan 2 yıla kadar** hapis veya adli para cezası; dondurulan malvarlığından **bilerek fon sağlayan** **1 yıldan 3 yıla** kadar hapis (m.15). · **Ne demek:** Kararı delen de suç işler. · *Tuzak:* İki ceza aralığı çapraz konur.
+- **Değerlendirme Komisyonu** — Malvarlığının dondurulması kararlarına ilişkin **Değerlendirme Komisyonu** **MASAK Başkanının** başkanlığında; Komisyon kararları **en az 5 üyenin** aynı yöndeki oyuyla alınır; sekreterya MASAK'tadır (m.3, 16). · **Ne demek:** Karar mercii bakanlar, hazırlık mercii bu komisyon. · *Tuzak:* "Komisyona İçişleri Bakanı başkanlık eder" yanlış; MASAK Başkanı.
+- **Görevlilerin gizlilik yükümlülüğü** — Kanun kapsamındaki bilgi ve belgeler gizlidir; görevliler bu bilgileri açıklayamaz (m.18). · **Ne demek:** Dondurma kararı öncesinde sızıntı olursa mal kaçırılır. · *Tuzak:* "Bilgiler kamuya açıktır" yanlış.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Terörizmin finansmanı | 5-10 yıl (kamu nüfuzu: +½) |
+| Yabancı devlet talebi — bilgi vermeme | 1 yıl → karar kaldırılabilir |
+| Bakanlar kararı mahkemeye sunma | 48 saat |
+| Ankara ağır ceza karar süresi | 5 gün |
+| Yeniden değerlendirme | 6 ayda bir |
+| Malvarlığı bildirimi (ilgili / kurum) | 30 gün / 7 gün |
+| Karara aykırılık | 6 ay-2 yıl |
+| Dondurulmuş maldan bilerek fon sağlama | 1-3 yıl |
+| Komisyon kararı | En az 5 oy |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| BMGK kararları | Cumhurbaşkanı kararı (RG) |
+| Yabancı devlet talebi | Cumhurbaşkanı |
+| Türkiye'deki malvarlığı dondurma | Hazine ve Maliye Bakanı + İçişleri Bakanı |
+| Onay | Ankara ağır ceza mahkemesi |
+| Komisyon başkanı | MASAK Başkanı |
+| Tasarruf izni | MASAK Başkanlığı |
+| Yabancı devlet aleyhine kovuşturma | Adalet Bakanının talebi |
+
+### "Yanlıştır/değildir" tuzakları
+- "Fonun terörde kullanılması şarttır." → **Şart değil** (m.4).
+- "BM kararları Türkiye'de doğrudan uygulanır." → **Cumhurbaşkanı kararıyla** (m.5).
+- "Malvarlığını İçişleri Bakanı tek başına dondurur." → **İki bakan birlikte** + mahkeme onayı (m.7).
+- "Karar tebliğle hüküm doğurur." → **RG yayımıyla** (m.8-9).
+- "Dondurulan mal hazineye geçer." → Yönetim **ilgilide**, tasarruf izinle (m.13).
+- "Komisyon kararları oy çokluğuyla (3 oy) alınır." → **En az 5 oy** (m.16).
+
+## 2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu — Sınav kapsamı: m.3, 4, 6, 16, 23, 26, 64-68, 72, 74, 75
+
+### Bu mevzuattan nasıl soruluyor
+Jandarma bölgelerinde kaçak kazı ve tarihi eser kaçakçılığı yaygın; bu yüzden **bildirim süreleri** (m.4), **ceza maddeleri** (m.65-68, 74) ve **ikramiye oranları** (m.64) düzenli soruluyor. Tanımlar (sit, ören yeri, korunma alanı) ilk soru olarak gelir.
+
+### Altın noktalar
+- ★ çıkmış **Tanımlar** — **Kültür varlığı**: tarih öncesi ve tarihi devirlere ait, bilim-kültür-din-güzel sanatlarla ilgili yer üstünde, yer altında veya su altındaki taşınır-taşınmaz varlıklar; **tabiat varlığı**: jeolojik devirlerle tarih öncesi/tarihi devirlere ait, ender bulunan yer üstünde-altında-su altındaki değerler; **sit**: tarih öncesinden günümüze kadar gelen çeşitli medeniyetlerin ürünü olup yaşadıkları devirlerin sosyal, ekonomik, mimari özelliklerini yansıtan kent ve kent kalıntıları; **ören yeri**: tarih öncesinden günümüze kadar gelen medeniyetlerin ürünü olan, topoğrafik olarak tanımlanabilecek derecede yeterince belirgin ve mütecanis özelliklere sahip, aynı zamanda tarihsel, arkeolojik, sanatsal, bilimsel, sosyal veya teknik bakımlardan dikkate değer bir bütünlük gösteren yer (m.3). · **Ne demek:** "Sit" bir alanın koruma statüsü, "ören yeri" kalıntıların bulunduğu somut yer. · *Tuzak:* Şıklar tanımları çapraz eşleştirir; "kent kalıntıları" = sit.
+- **Korunma alanı ve doğal sit** — **Korunma alanı**: taşınmaz kültür ve tabiat varlıklarının muhafazaları veya tarihi çevre içinde korunmalarında etkinlik taşıyan alanlar; **doğal (tabii) sit**: jeolojik devirlere ait, ender bulunan özellikleriyle korunması gereken alanlar; **etkileşim-geçiş sahası**: korunması gerekli alanların etkilendiği, etkileşim içinde olduğu alanlar (m.3). · **Ne demek:** Korunma alanı, varlığın etrafındaki tampon bölgedir. · *Tuzak:* "Korunma alanı" ile "sit" karıştırılır; korunma alanı varlığın çevresidir.
+- **Bulan/haberi olan kişinin bildirim yükümü** — Taşınır ve taşınmaz kültür varlığı bulanlar, malik oldukları yerde bulanlar veya herhangi bir şekilde haber alanlar en geç **3 gün** içinde **en yakın müze müdürlüğüne**, köyde **muhtara**, diğer yerlerde **mülkî amire** bildirmek zorundadır (m.4/1). · **Ne demek:** "Buldum, sakladım" suçtur; 3 gün içinde bildirmek şart. · *Örnek:* Tarlasını sürerken küp bulan köylü → 3 gün içinde muhtara. · *Tuzak:* "7 gün" ve "kolluğa bildirir" şıkları yanlış.
+- **Muhtar ve mülkî amirin süresi** — Muhtar bildirimi **aynı gün** mülkî amire iletir; mülkî amir ve askerî bölgelerde bildirim alan üst komutanlık **10 gün** içinde Kültür ve Turizm Bakanlığına (müzeye) haber verir (m.4/2-3). · **Ne demek:** Zincir kısa tutulmuş, eser bekletilmesin diye. · *Tuzak:* Bildirim zinciri: kişi 3 gün → muhtar aynı gün → mülkî amir 10 gün.
+- **Askerî bölgede bulunan varlık** — Askerî yasak bölge ve güvenlik bölgelerinde bulunan kültür varlıkları için bildirim **üst komutanlığa** yapılır; komutanlık Bakanlığa bildirir (m.4). · **Ne demek:** Kışlada bulunan eser komuta zinciriyle bildirilir. · *Tuzak:* "Askerî bölgede de muhtara bildirilir" yanlış.
+- **Korunması gerekli taşınmaz kültür varlıkları** — Korunması gerekli taşınmaz kültür ve tabiat varlıkları: **19. yüzyıl sonuna kadar** yapılmış taşınmazlar; bu tarihten sonra yapılmış olup önem ve özellikleri bakımından korunmasına gerek görülenler; sit alanlarındaki taşınmazlar; **Millî Mücadele ve Türkiye Cumhuriyeti'nin kuruluşunda büyük tarihi olaylara sahne olmuş binalar ve Atatürk tarafından kullanılmış evler**; kaya mezarlıkları, höyükler, tümülüsler, kaleler, camiler, hanlar, kervansaraylar vb. (m.6). · **Ne demek:** Yaşı 19. yy'a kadar giden her yapı otomatik korunmalı; Atatürk evleri yaşına bakılmaksızın korunur. · *Tuzak:* "20. yüzyıl başına kadar" değil, "19. yüzyıl sonuna kadar".
+- **Ruhsatsız inşaat yasağı** — Korunması gerekli taşınmaz kültür ve tabiat varlıkları ile sit alanlarında **ruhsatsız** inşaat yapılamaz; ruhsat koruma bölge kurulu kararına bağlıdır (m.16). · **Ne demek:** Sit alanında tadilat bile kurul izniyle. · *Tuzak:* "Sit alanında belediye ruhsatı yeterlidir" yanlış; koruma kurulu kararı gerekir.
+- **Taşınır kültür varlıkları** — Korunması gerekli taşınır kültür varlıkları: jeolojik, tarih öncesi ve tarihi devirlere ait her çeşit heykel, sikke, yazma, mühür, silah, giysi ve benzeri ile **Millî Mücadele ve Atatürk'e ait** eşya ve belgeler (m.23). · **Ne demek:** Eski sikke de, Atatürk'ün kalemi de korunacak taşınır. · *Tuzak:* "Atatürk'e ait eşyalar kapsam dışıdır" yanlış.
+- ★ çıkmış **Koleksiyonculuk ve askerî müzeler** — Kültür varlığı koleksiyonculuğu Bakanlık iznine tabidir; koleksiyoncular varlıklarını **envanter defterine** kaydeder, koleksiyonda değişiklik olduğunda **15 gün önce** müzeye haber verir; **askerî müzeler Genelkurmay Başkanlığına** bağlı olarak kurulur (m.26). · **Ne demek:** Koleksiyoncu kayıtlı olur; askerî müze ordunun. · *Tuzak:* "Askerî müzeler Kültür Bakanlığına bağlıdır" yanlış; Genelkurmay.
+- **İkramiye** — Bulunan kültür varlığının değerinin **%80'i** bulan ve ihbar edene **yarı yarıya**; Devlete ait arazide bulunmuşsa bulan ve ihbar edene **%40** ödenir; müsadere edilen varlıklarda ihbarcı ve yakalayanlara ikramiye verilir (m.64). · **Ne demek:** Kendi arazisinde bulup bildiren daha çok alır. · *Tuzak:* %80 (kendi arazisi) / %40 (Devlet arazisi) rakamları ters verilir.
+- **Tahrip ve izinsiz tadilat** — Korunması gerekli taşınmaz varlıkları **yıkan, bozan, tahrip eden** **2 yıldan 5 yıla kadar** hapis ve adli para cezası; **yurt dışına çıkarmak amacıyla** tahrip ediliyorsa ceza **bir kat** artırılır; kurul kararı olmadan **izinsiz tadilat/inşaat** yapan **6 aydan 3 yıla kadar** hapis (m.65). · **Ne demek:** Yıkmak ağır, izinsiz onarmak daha hafif suç. · *Örnek:* Tarihi köprüden taş söken → 2-5 yıl. · *Tuzak:* "İzinsiz tadilat 2-5 yıl" yanlış; 6 ay-3 yıl.
+- **Belge ve ilan yükümlülüğü** — Taşınır kültür varlıklarının ticaretinde **belgesiz** satış yapan **1 yıldan 3 yıla** kadar hapis; kültür varlığını satılığa çıkarma **ilanı** yapan **3 aydan 1 yıla** kadar hapis (m.66). · **Ne demek:** Antikacı belgesiz satamaz, "satılık tarihi eser" ilanı veremez. · *Tuzak:* Belge / ilan cezaları çapraz konur.
+- **Bildirmeme ve bildirimsiz ticaret** — Bulduğu kültür varlığını **bildirmeyen** **6 aydan 3 yıla kadar** hapis; bildirim yapılmamış kültür varlığını **alan-satan-ticaretini yapan** **2 yıldan 5 yıla kadar** hapis (m.67). · **Ne demek:** Buldum-sakladım suç; sattım daha ağır suç. · *Tuzak:* "Bildirmeme sadece idari para cezasıdır" yanlış.
+- ★ çıkmış **Yurt dışına çıkarma** — Korunması gerekli kültür ve tabiat varlıklarını **yurt dışına çıkaran veya buna teşebbüs eden** **5 yıldan 12 yıla kadar** hapis ve adli para cezası (m.68). · **Ne demek:** Bu kanunun en ağır suçu. · *Tuzak:* Teşebbüs de aynı ceza; "teşebbüs indirimi" şıkkı yanlış.
+- **Bilirkişi ve sorumluluk** — Kültür varlığı niteliği ve değeri Bakanlık/müze uzmanlarının **bilirkişi** raporuyla belirlenir; kültür varlıklarının korunmasından sorumlu olan görevliler ihmalden sorumludur (m.72). · **Ne demek:** "Bu eser mi, taş mı" sorusunu müze uzmanı cevaplar. · *Tuzak:* "Bilirkişi ancak mahkemenin seçtiği herhangi bir uzman" yanlış; Bakanlık/müze uzmanı.
+- ★ çıkmış **İzinsiz kazı, sondaj ve define arama** — İzinsiz **kazı veya sondaj** yapan **2 yıldan 5 yıla kadar** hapis; sit alanı dışında yapılmışsa ceza **1/3** indirilir; izinsiz **define arayan** **3 aydan 2 yıla kadar** hapis; kazı, **görevliler** tarafından veya **yurt dışına kaçırma amacıyla** yapılmışsa ceza **2 kat**; kazıda bulunanları **mülkî amire teslim eden** hakkında ceza **2/3 indirilir** (m.74). · **Ne demek:** Kaçak kazı ile define arama farklı fiil; kazı daha ağır. · *Örnek:* Dedektörle höyükte define arayan → 3 ay-2 yıl; kepçeyle kazı yapan → 2-5 yıl. · *Tuzak:* "Kazıda bulunanı teslim edene ceza verilmez" yanlış; 2/3 indirim.
+- **Müzeye teslim** — Kazı, sondaj, define aramada ele geçen kültür varlıkları **Devlet müzesine** teslim edilir; müsadere edilenler müzeye verilir (m.75). · **Ne demek:** Ele geçen eser Devletindir. · *Tuzak:* "Bulan kişiye iade edilir" yanlış.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Bulanın bildirimi | 3 gün (müze / muhtar / mülkî amir) |
+| Muhtar → mülkî amir | Aynı gün |
+| Mülkî amir / üst komutanlık → Bakanlık | 10 gün |
+| Korunacak yapılar | 19. yüzyıl sonuna kadar yapılanlar |
+| Koleksiyon değişikliği bildirimi | 15 gün önce |
+| İkramiye | %80 (yarı yarıya) / Devlet arazisi %40 |
+| Tahrip / izinsiz tadilat | 2-5 yıl (+1 kat yurt dışı amaçlı) / 6 ay-3 yıl |
+| Belgesiz satış / ilan | 1-3 yıl / 3 ay-1 yıl |
+| Bildirmeme / bildirimsiz ticaret | 6 ay-3 yıl / 2-5 yıl |
+| Yurt dışına çıkarma (teşebbüs dahil) | 5-12 yıl |
+| İzinsiz kazı / define arama | 2-5 yıl (sit dışı -1/3) / 3 ay-2 yıl |
+| Görevli veya kaçırma amaçlı kazı | 2 kat; mülkî amire teslim -2/3 |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Bildirim mercii | Müze müdürlüğü / köyde muhtar / mülkî amir; askerî bölgede üst komutanlık |
+| Ruhsat | Koruma bölge kurulu kararı |
+| Askerî müzeler | Genelkurmay Başkanlığı |
+| Koleksiyon izni | Kültür ve Turizm Bakanlığı |
+| Bilirkişi | Bakanlık / müze uzmanı |
+| Ele geçen varlıklar | Devlet müzesi |
+
+### "Yanlıştır/değildir" tuzakları
+- "Bulunan kültür varlığı 7 gün içinde kolluğa bildirilir." → **3 gün** içinde **müze/muhtar/mülkî amire** (m.4).
+- "Atatürk'ün kullandığı evler yaşı yetmediği için korunmaz." → **Korunur** (m.6).
+- "Askerî müzeler Kültür Bakanlığına bağlıdır." → **Genelkurmay** (m.26).
+- "Devlet arazisinde bulana %80 ikramiye." → **%40** (m.64).
+- "Yurt dışına çıkarmaya teşebbüs indirimli cezalandırılır." → Aynı ceza, **5-12 yıl** (m.68).
+- "Define arama 2-5 yıl." → **3 ay-2 yıl**; kazı 2-5 yıl (m.74).
+- "Kazıda bulunanı mülkî amire teslim edene ceza verilmez." → **2/3 indirim** (m.74).
+
+## 3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun — Sınav kapsamı: m.2-10, 12, 15
+
+### Bu mevzuattan nasıl soruluyor
+Köylerde tarla-mera-yol kavgalarının hukuki aracı; jandarma bu kararların infazında görev alır. Sorular: **kim karar verir** (vali/kaymakam), **başvuru süreleri** (60 gün / 1 yıl), **soruşturma 15 gün**, **infaz 5 gün**, **ikinci tecavüzün cezası**.
+
+### Altın noktalar
+- **Karar mercii** — Taşınmaz mal zilyetliğine tecavüz ve müdahalenin önlenmesine **merkez ilçede vali veya görevlendireceği vali yardımcısı**, diğer ilçelerde **kaymakam** karar verir (m.2). · **Ne demek:** Mahkeme değil, mülkî amir hızlı çözer. · *Tuzak:* "Sulh hukuk mahkemesi karar verir" yanlış; bu kanun idari yol.
+- ★ çıkmış **Başvuru hakkı** — Başvuru **zilyet** tarafından yapılır; **köy tüzel kişiliğine ait** taşınmazlarda köy halkından **herhangi biri**, **kamuya ait** taşınmazlarda ilgili idare başvurabilir ya da mülkî amir **re'sen** harekete geçer (m.3). · **Ne demek:** Mera-yol gibi ortak mallar için her köylü şikâyetçi olabilir. · *Tuzak:* "Köy taşınmazı için yalnız muhtar başvurabilir" yanlış.
+- ★ çıkmış **Başvuru süreleri** — Tecavüzün **öğrenilmesinden itibaren 60 gün**, her hâlde tecavüzün **oluşundan itibaren 1 yıl** içinde başvurulmalıdır; **Devletin hüküm ve tasarrufundaki yerler ile umuma ait taşınmazlarda süre şartı yoktur** (m.4). · **Ne demek:** Özel malda geç kalan hakkını kaybeder, kamu malında süre işlemez. · *Örnek:* Komşusunun tarlasını sürdüğünü 3 ay sonra öğrenen → 60 günü kaçırmış, başvuramaz. · *Tuzak:* "Mera için de 1 yıl içinde başvurulmalıdır" yanlış; kamu mallarında süre yok.
+- **Soruşturma 15 gün** — Mülkî amir başvurudan itibaren **15 gün** içinde soruşturmayı tamamlayıp karar verir; soruşturmayı bizzat veya görevlendireceği memurlar eliyle yerinde yapar (m.5-6). · **Ne demek:** Hızlı usul; keşif yerinde yapılır. · *Tuzak:* "30 gün" tuzak; 15 gün.
+- **Kararların niteliği** — Mülkî amirin kararları **kesindir**, ancak **idari yargıya** başvurulabilir; karar zilyetliği belirler, **mülkiyeti belirlemez**; taraflar adli yargıda mülkiyet davası açabilir (m.7, 15). · **Ne demek:** "Kim kullanıyordu" sorusuna cevap verir, "kimin malı" sorusuna değil. · *Tuzak:* "Karar mülkiyeti belirler" yanlış.
+- **Tebliğ ve ilan** — Karar taraflara tebliğ edilir; infazdan en az **3 gün önce** karar taraflara ve gerekirse ilan yoluyla duyurulur (m.8). · **Ne demek:** Tecavüz eden, infazdan haberdar edilir. · *Tuzak:* İnfaz süresi (5 gün) ile ilan süresi (3 gün) karıştırılır.
+- ★ çıkmış **İnfaz 5 gün** — Karar, tebliğinden/ilanından itibaren **5 gün** içinde infaz edilir; infaz mülkî amirin görevlendireceği memurlarca yapılır (m.9). · **Ne demek:** İcra dairesi değil, mülkî amirin memurları uygular. · *Tuzak:* "Karar kesinleşince tarafın istemiyle icra dairesince infaz edilir" yanlış; mülkî amir memurları 5 günde.
+- **Güvenlik kuvvetlerinin rolü** — Kararın infazında gerekirse **mülkî amirin yazılı emri** ile **güvenlik kuvvetleri** (jandarma/polis) tedbir alır, direnme ve tekrar tecavüz önlenir (m.10). · **Ne demek:** Jandarma infaz heyetine eşlik eder ve tekrarı engeller. · *Tuzak:* "Jandarma kendiliğinden tecavüzü önler" yanlış; mülkî amirin yazılı emri.
+- **İkinci tecavüz — suç** — Önlenen tecavüzü **ikinci kez** yapan: kamuya ait taşınmazda **6 aydan 2 yıla kadar**, özel şahsa ait taşınmazda **3 aydan 1 yıla kadar** hapis; fiil **silahla** veya **birden fazla kişi** ile işlenirse ceza **bir kat** artırılır; taşınmazı **paylaşma amacıyla** işlenmişse **1/3**, silahlı ise **yarı** artırılır (m.12, 15). · **Ne demek:** İlk tecavüz idari mesele, ikinci tecavüz ceza mahkemesi işi. · *Örnek:* Kaymakam kararıyla çıkarıldığı meraya tekrar giren → 6 ay-2 yıl. · *Tuzak:* Kamu / özel cezaları ters verilir.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Başvuru | Öğrenmeden 60 gün, oluştan 1 yıl (kamu mallarında süre yok) |
+| Soruşturma ve karar | 15 gün |
+| İlan / tebliğ | İnfazdan en az 3 gün önce |
+| İnfaz | 5 gün |
+| İkinci tecavüz (kamu / özel) | 6 ay-2 yıl / 3 ay-1 yıl |
+| Silahlı veya çok kişi | 1 kat artırım |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Karar | Merkez ilçede vali/vali yrd., ilçelerde kaymakam |
+| Başvuru | Zilyet; köy taşınmazında köy halkından herhangi biri; kamu malında re'sen |
+| İnfaz | Mülkî amirin görevlendirdiği memurlar |
+| Güvenlik tedbiri | Mülkî amirin yazılı emriyle güvenlik kuvvetleri |
+| İtiraz | İdari yargı |
+
+### "Yanlıştır/değildir" tuzakları
+- "Zilyetlik tecavüzüne sulh hukuk mahkemesi karar verir." → **Vali/kaymakam** (m.2).
+- "Meraya tecavüzde de 1 yıl içinde başvurulmalıdır." → Kamu mallarında **süre yok** (m.4).
+- "Karar mülkiyeti belirler." → Yalnız **zilyetliği** (m.15).
+- "Jandarma kendiliğinden müdahale eder." → **Mülkî amirin yazılı emriyle** (m.10).
+- "İkinci tecavüz özel malda 6 ay-2 yıl." → **3 ay-1 yıl**; kamu malında 6 ay-2 yıl (m.15).
+
+## 4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun — Sınav kapsamı: m.2, 3, 4
+
+### Bu mevzuattan nasıl soruluyor
+Jandarma köy kahvesi ve okul çevresi denetiminde uygular. Sorular **nerede içilemez** (m.2 listesi ve istisnalar), **satış yasakları** (18 yaş, adet satış, otomat, internet, kargo) ve **uyarı yazısı / paket ölçüleri** (m.4) üzerinden gelir.
+
+### Altın noktalar
+- ★ çıkmış **Yasak yerler — kapalı alanlar** — Kamu hizmet binalarının **kapalı alanları**; koridorları dahil özel hukuk kişilerine ait iş yerlerinin, lokanta, kahvehane, kafeterya, birahane, nargile içilen yerlerin kapalı alanları; **taksi hizmeti** verenler dahil karayolu, demiryolu, denizyolu, havayolu toplu taşıma araçları; **hususi araçların sürücü koltuğunda** tütün ürünü tüketilemez (m.2/1). · **Ne demek:** Kahvehanenin kapalı bölümü, taksi, kendi arabasında sürücü — hepsi yasak. · *Örnek:* Kendi otomobilini kullanırken sigara içen sürücü → yasak kapsamında. · *Tuzak:* "Hususi araçta yolcu koltuğunda içmek yasaktır" yanlış; sürücü koltuğu.
+- ★ çıkmış **Yasak yerler — açık alanlar dahil** — **Okul öncesi, ilk ve orta öğretim** kurumları, **kültür ve sosyal hizmet** binaları ile özel eğitim kurumlarının **kapalı ve açık alanlarında** tütün ürünü tüketilemez; sağlık, spor, eğitim binalarının kapalı ve açık alanlarında da yasaktır (m.2/1). · **Ne demek:** Okul ve hastanede bahçe de yasak. · *Tuzak:* "Okul bahçesinde içilebilir" yanlış; okullarda açık alan da yasak.
+- ★ çıkmış **Açık hava etkinlikleri** — Açık havada yapılan sportif, kültürel, sosyal etkinliklerde seyir alanlarında tütün tüketilemez; ancak bu alanlarda tütün ürünü tüketilebilecek **ayrı yer** oluşturulabilir (m.2). · **Ne demek:** Tribün yasak, ayrılmış köşe serbest. · *Tuzak:* "Stad tribününde serbesttir" yanlış.
+- ★ çıkmış **İstisna alanları** — **Yaşlı bakım evleri, ruh ve sinir hastalıkları hastaneleri, cezaevleri** ile **şehirlerarası ve uluslararası deniz araçlarının güvertelerinde** tütün ürünü tüketilebilecek alan oluşturulabilir (**18 yaşını doldurmamışlar bu alanlara giremez**); **otel odaları** (konaklama yerleri) için de tütün tüketilebilecek oda tahsis edilebilir (m.2/2-3). · **Ne demek:** Bu yerlerde "sigara alanı" ayrılabilir, tamamen serbest değildir. · *Tuzak:* Şıkta "hastanelerin tümü" veya "askerî kışlalar" istisna diye verilirse yanlış.
+- ★ çıkmış **Taklit ürün de tütün ürünü sayılır** — Tütün içermese bile tütün ürünü gibi kullanılan, **nargile** gibi taklit ürünler bu kanun bakımından **tütün ürünü** sayılır; elektronik sigara da kapsama alınmıştır (m.2). · **Ne demek:** "Bitkisel" etiketi yasağı kaldırmaz. · *Tuzak:* "Bitkisel nargile yasak değildir" yanlış.
+- **Reklam ve sponsorluk yasağı** — Tütün ürünlerinin ve markalarının her türlü **reklam ve tanıtımı**, sponsorluğu, ürünlerin logo-amblemlerinin başka ürünlerde kullanılması yasaktır; tütün ürünleri **görünür şekilde teşhir edilemez** (m.3/1-2). · **Ne demek:** Bakkal rafında sigara paketleri görünmez, kapalı dolapta durur. · *Tuzak:* "Bayide rafta görünür satış serbesttir" yanlış; teşhir yasağı.
+- **18 yaş altı** — Tütün ürünleri **18 yaşını doldurmamış** kişilere satılamaz, tüketimine imkân verilemez; 18 yaş altı kişiler tütün ürünü satışında **istihdam edilemez**; bu kişilere yönelik (çocuk oyunları, şeker, giysi vb.) ürünlerde tütün şekli kullanılamaz (m.3/8-9). · **Ne demek:** Çocuğa satmak da, çocuğa sattırmak da yasak. · *Örnek:* Bakkalda 17 yaşındaki çırağa sigara sattırmak → yasak. · *Tuzak:* "16 yaş" şıkkı yanlış.
+- **Satış şekli yasakları** — Tütün ürünleri paketi açılarak **adet (tek) satış** yapılamaz; **otomatik satış makinesi**, **internet ve mesafeli satış**, **kargo/posta** ile satış ve teslim yasaktır; sağlık, eğitim, kültür, spor kurumlarında satılamaz (m.3/4-7, 12). · **Ne demek:** "Tek sigara" ve internetten sigara alma yasak. · *Tuzak:* "Alkol satan büfeler adet sigara satabilir" yanlış.
+- **Uyarı yazıları ve ölçüleri** — Tütün tüketiminin yasak olduğu yerlerde "Sigara içilmez" uyarısı ve tüketilebilecek alanlarda "Sağlığa zararlıdır" uyarısı, yasal uyarı yazıları en az **10 cm** büyüklüğünde ve okunaklı, cezai hükmün belirtildiği yazı en az **3 cm** punto ile asılır; tütün satış yerlerinde yaş sınırı uyarısı bulunur (m.4/1-2). · **Ne demek:** Levha ölçüleri kanunda yazılı, keyfi değil. · *Tuzak:* 10 cm / 3 cm rakamları çapraz sorulur.
+- **Paket uyarıları** — Tütün ürünü paketlerinde sağlık uyarıları paketin **%85'ini** kaplar; marka ismi paketin **%5'inden** fazla alan kaplayamaz; **düz ve standart paket** uygulanır; paket üzerinde "hafif, light" gibi yanıltıcı ibare bulunamaz (m.4/3-5). · **Ne demek:** Paket neredeyse tamamen uyarı, marka küçücük. · *Tuzak:* "%65" veya "%50" uyarı oranı şıkları yanlış; %85.
+- **Yayın süresi** — TRT ve diğer ulusal yayın kuruluşları tütün ürünlerinin zararlarına ilişkin **ayda en az 90 dakika** eğitici program yayınlar; bunun **30 dakikası 17:00-22:00** arasında olmalıdır (m.4/7). · **Ne demek:** Zorunlu kamu spotu süresi. · *Tuzak:* 90 dk / 30 dk / 17-22 üçlüsü.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Satış / istihdam yaş sınırı | 18 |
+| İstisna alanlarına giriş yaş sınırı | 18 |
+| Uyarı yazısı | En az 10 cm; ceza yazısı 3 cm punto |
+| Paket sağlık uyarısı / marka | %85 / %5 |
+| Yayın | Ayda 90 dk; 30 dk 17:00-22:00 |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Denetim ve idari yaptırım | Mülkî amir, belediye, kolluk (kabahatler kapsamında) |
+
+### "Yanlıştır/değildir" tuzakları
+- "Hususi araçta yolcu koltuğunda içmek yasaktır." → **Sürücü koltuğunda** (m.2).
+- "Okul bahçesinde içilebilir." → Okullarda **açık alan da yasak** (m.2).
+- "Cezaevinde tütün tamamen yasaktır." → **Alan oluşturulabilir** (m.2).
+- "Bitkisel nargile kapsam dışıdır." → **Tütün ürünü sayılır** (m.2).
+- "16 yaşından küçüğe satılamaz." → **18** (m.3).
+- "Paket uyarısı %65." → **%85** (m.4).
+
+## 4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun — Sınav kapsamı: m.8
+
+### Bu mevzuattan nasıl soruluyor
+Tek madde (m.8) soruluyor ama sık: **izinsiz tesis kurma cezası** (1-3 yıl + 5.000-10.000 gün), **şahsî üretim istisnası** (50 kg tütün / 350 litre içki), **idari para cezaları** ve **dava açma süresi**.
+
+### Altın noktalar
+- ★ çıkmış **İzinsiz tesis kurma** — Tarım ve Orman Bakanlığından tesis kurma ve faaliyet izni almadan tütün mamulü, **makaron, yaprak sigara kâğıdı, sigara filtresi, etil alkol, metanol** veya alkollü içki üretmek üzere fabrika, tesis veya imalathane kuran ve işleten **1 yıldan 3 yıla kadar** hapis ve **5.000 günden 10.000 güne kadar** adli para cezası (m.8/1). · **Ne demek:** Kaçak rakı imalathanesi, kaçak makaron atölyesi bu maddeden. · *Örnek:* Evinin bodrumunda satış için etil alkol üreten → 1-3 yıl + APC. · *Tuzak:* "Pipo" sayılmaz; makaron, sigara kâğıdı, metanol sayılır.
+- ★ çıkmış **Şahsî tüketim istisnası** — Ticari amaç olmaksızın kendi ürettiği ürünlerle şahsî tüketimi için **50 kg'ı aşmayan sarmalık kıyılmış tütün** veya **350 litreyi aşmayan fermente alkollü içki** üreten kişi bu ceza kapsamında değildir (m.8/1). · **Ne demek:** Köylünün kendi bağından şarap, kendi tütününden sarma yapması suç değil, sınır dahilinde. · *Tuzak:* Şıklarda 25 kg/250 L, 100 kg/500 L verilir; doğrusu **50 kg / 350 L**.
+- **İdari para cezaları** — Bakanlık düzenlemelerine aykırı raf/teşhir, özendirici kampanya-promosyon yapanlara, **otomatik satış makinesiyle** veya bahis/ödül yoluyla tütün-alkol verenlere idari para cezası; **satış belgesi olmadan** toptan/perakende satış yapanlara idari para cezası ve ürünlere elkoyma; satış belgesi olmadan internet üzerinden satış yapan sitelere **erişim engellenir** (m.8/5). · **Ne demek:** Belgesiz satış kabahat, kaçak üretim suç. · *Tuzak:* "Belgesiz satış hapis gerektirir" yanlış; idari para cezası (kaçak/bandrolsüz değilse).
+- ★ çıkmış **İdari yaptırım kararlarına dava** — İdari yaptırım kararlarına karşı kararın tebliğinden itibaren **15 gün** içinde **idare mahkemesinde** dava açılabilir; dava açılması kararın **yerine getirilmesini durdurmaz** (m.8). · **Ne demek:** Dava açsan da ceza tahsil edilir, kazanırsan geri alırsın. · *Tuzak:* "Dava açılması infazı durdurur" ve "30 gün" şıkları yanlış.
+- **Ürünlerin müsaderesi** — İzinsiz üretilen ürünler, üretimde kullanılan makine ve araçlar **müsadere** edilir; ele geçirilen alkollü içki ve tütün mamulleri tasfiyeye tabidir (m.8). · **Ne demek:** Sadece ceza değil, tezgâh da gider. · *Tuzak:* "Makine sahibine iade edilir" yanlış.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| İzinsiz tesis | 1-3 yıl + 5.000-10.000 gün APC |
+| Şahsî istisna | 50 kg sarmalık tütün / 350 L fermente içki |
+| İdari karara dava | 15 gün, idare mahkemesi (infazı durdurmaz) |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Tesis izni | Tarım ve Orman Bakanlığı |
+| İdari para cezası | Bakanlık / mülkî amir |
+| Dava | İdare mahkemesi |
+
+### "Yanlıştır/değildir" tuzakları
+- "Kendi tüketimi için 100 kg tütün üretilebilir." → **50 kg** (m.8).
+- "Pipo üretmek için tesis izni gerekir." → Pipo sayılmaz; **makaron, sigara kâğıdı, filtre, etil alkol, metanol** (m.8).
+- "İdari yaptırıma dava açmak infazı durdurur." → **Durdurmaz** (m.8).
+- "Dava süresi 30 gündür." → **15 gün** (m.8).
