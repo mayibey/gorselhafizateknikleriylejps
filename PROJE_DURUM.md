@@ -2722,3 +2722,13 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   Subay Sicil Yön. m.105 (üstçavuş, 6-9. yıl) eski metin; sınav 926 m.109'u (kıdemli çavuş, 4-7. yıl) sorar — kitapta uyarıldı.
 - Ayrıca: Google OAuth marka doğrulama maili (mevzu-jsps projesi, son tarih 22 Ara 2026) hafızaya not edildi; Cloud Console işi başkanda.
 - **SIRADA:** ikmal(16) · bakım(14) · istihkam(10) · maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
+
+### 24 Eylül 2026 — İkmal Altın Özet basıldı ve YÜKLENDİ (commit c7885f1)
+
+- `icerik/ozet_I_ikmal.md`: 25 mevzuat, 147 altın nokta, 38 ★ (yalnız fiilen çıkmış), 144 sayfa, 28 yer imi.
+  Ölçüm: Tuzak %100 · Ne demek %100 · Örnek %29. `BRANSLAR`'a `ikmal` eklendi. Şehitlik bölümü personel kitabından alındı.
+- Sunucu: `pdf/ikmal/JSPS-2026-Altin-Ozet-ikmal.pdf` (4,6→3,5 MB); satırlar `altin_ikmal` + `ikmal`.
+- Kaynak dersleri: Ön Ödeme paketinin "çıkmış" listesi "esaslar" kelimesi yüzünden Hizmet Esasları Yön. sorularıyla dolu
+  (46 ham → gerçek 3); Kamu Konutları paketine MEBS terör-yardım sorusu, Taşınır Mal paketine 2863 ikramiye soruları karışmış.
+  Karayolu Taşıma Yön. çok büyük (78 madde, 623 satır) → 7 nokta halinde; Harcama Belgeleri ikmalin en çok sorulanı (12 çıkmış).
+- **SIRADA:** bakım(14) · istihkam(10) · maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
