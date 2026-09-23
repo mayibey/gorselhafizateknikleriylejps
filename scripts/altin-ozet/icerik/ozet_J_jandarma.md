@@ -2002,3 +2002,192 @@ CMK 75-76'nın yönetmeliği; iki soru tipi çıkmış: **iç beden muayenesinde
 - "Üst sınırı 3 yıldan az suçlarda örnek alınamaz." → **2 yıldan** az (m.6).
 - "Anüs bölgesi muayenesi dış muayenedir." → **İç muayene** (m.4).
 - "Beraat edenin genetik verisi saklanır." → **Derhâl yok edilir** (m.16).
+
+## Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik — Sınav kapsamı: m.4-9, 11-18, 20, 22, 26
+
+### Bu mevzuattan nasıl soruluyor
+5395'in tedbir yönetmeliği. Çıkmış sorular: **acil korunma için 5 gün içinde hâkime müracaat**, **tedbir kararlarının gönderileceği yerler** (Tarım il müdürlüğü yok), **koordinasyonu kim sağlar** (il düzeyinde vali başkanlığında; sekretarya Aile Bakanlığı il müdürlüğü). Beş tedbir türü ve hangi kurumun yerine getirdiği ezber ister.
+
+### Altın noktalar
+- **Tanımlar** — **Çocuk**: erken ergin olsa bile **18 yaşını doldurmamış** kişi; **korunma ihtiyacı olan çocuk**: gelişimi/güvenliği tehlikede, ihmal-istismar edilen veya **suç mağduru** çocuk; **suça sürüklenen çocuk**: suç iddiasıyla soruşturma/kovuşturma yapılan veya güvenlik tedbirine karar verilen çocuk; **çocuk hâkimi**: kovuşturma başlatılmamış çocuklar hakkında tedbir kararı veren çocuk mahkemesi hâkimi; **sosyal çalışma görevlisi**: PDR, psikoloji, sosyal hizmet mezunu (m.4). · **Ne demek:** Evlenip ergin olan 17 yaşındaki de çocuktur. · *Tuzak:* "Evlenen çocuk kapsam dışıdır" yanlış.
+- **Beş tedbir** — Çocuğun yararı gözetilerek öncelikle **kendi aile ortamında** korunması esasıyla: **danışmanlık, eğitim, bakım, sağlık, barınma** tedbirleri (m.5). · **Ne demek:** DEBSB — beş tedbir; "kurumda bakım son çare". · *Tuzak:* "Denetim" beş tedbirden biri değildir, ek olarak karar verilebilir.
+- **Bildirim yükümlülüğü** — Adli-idari merciler, **kolluk**, köy-mahalle **muhtarları**, belediye zabıtası, sağlık ve eğitim kuruluşları, STK'lar ve haberdar olan **herkes** korunma ihtiyacı olan çocuğu il/ilçe **Aile ve Sosyal Hizmetler müdürlüklerine** bildirmekle yükümlüdür; müdürlükler basındaki haberleri ve her türlü duyumu **ihbar kabul edip** resmî duyuru beklemeden araştırır; tedbir gerekiyorsa **sosyal inceleme raporu** ile mahkeme/çocuk hâkimine talep sunar (m.6). · **Ne demek:** Jandarma korunmasız çocuğu Aile müdürlüğüne bildirir; müdürlük gazete haberini bile ihbar sayar. · *Tuzak:* "Bildirim savcılığa yapılır" yanlış; Aile müdürlüğüne.
+- ★ çıkmış **Acil korunma — 5 gün / 3 gün / 30 gün** — Derhâl korunması gereken çocuk **sağlık kontrolünden** sonra Kurumca bakım ve gözetime alınır; Kurum, çocuğun geldiği tarihten itibaren **en geç 5 gün** içinde **çocuk hâkimine** müracaat eder; hâkim **3 gün** içinde karar verir, çocuğun bulunduğu yerin gizli tutulmasına karar verebilir; acil korunma kararı **en fazla 30 gün**; bu sürede sosyal inceleme yapılır; tedbir gerekmiyorsa hâkime bildirilir, aileye teslime hâkim karar verir (m.7). · **Ne demek:** 5 gün Kurum başvurur, 3 gün hâkim karar verir, 30 gün azami. · *Örnek:* Çıkmış soru: çocuğun kuruma gelişinden itibaren hâkime müracaat süresi → **5 gün**. · *Tuzak:* "3 gün" hâkimin karar süresidir, müracaat süresi değil.
+- **Tedbir kararını kim alır** — Ana, baba, vasi, bakımından sorumlu kimse, **Aile Bakanlığı** ve **Cumhuriyet savcısının** istemi üzerine veya **re'sen**, çocuğun/ailesinin bulunduğu yerdeki **çocuk hâkimi**; çocuk mahkemesi yoksa **aile mahkemesi**, o da yoksa **asliye hukuk**; kovuşturma başlamış çocuk için **kovuşturmayı yapan mahkeme**; **12 yaşından küçükler** ve 15 yaşını doldurmamış sağır-dilsizler için TCK 31/1 ve 33 çocuklara özgü güvenlik tedbiri; **12-15 yaş** algılama yeteneği gelişmemişse TCK 31/2; 12-15 yaş çocukta algılama yeteneği için **sosyal inceleme zorunlu**; karar öncesi yeterli idrak gücü olan çocuğun **görüşü alınır**; kurumda bakım **son çare**; kararda tedbirin türü, uygulayacak kurum, gerekirse süre yazılır; hâkim ayrıca **denetim** kararı verebilir (m.8). · **Ne demek:** Karar hâkimden, öncelik aile içi tedbir. · *Tuzak:* "12-15 yaş için sosyal inceleme isteğe bağlıdır" yanlış; zorunlu.
+- ★ çıkmış **Kararların gönderileceği yerler** — **Danışmanlık ve barınma** → il millî eğitim müdürlükleri, Aile Bakanlığı il/ilçe müdürlükleri veya yerel yönetimler; **eğitim** → il millî eğitim müdürlükleri veya Çalışma Bakanlığı bölge müdürlükleri; **bakım** → Aile Bakanlığı il/ilçe müdürlükleri; **sağlık** → **il sağlık müdürlükleri**; kararlar **kesinleşmesi beklenmeksizin derhâl** uygulanır; kararı veren mahkemenin bulunduğu yerde uygulanması esas (m.9). · **Ne demek:** Aile, MEB, Çalışma, Sağlık, yerel yönetim — **Tarım il müdürlüğü yok**. · *Örnek:* Çıkmış soru: gönderilemeyecek yer → **Tarım il müdürlükleri**. · *Tuzak:* "Karar kesinleşince uygulanır" yanlış; derhâl.
+- **Tedbirin kaldırılması ve sona ermesi** — Hâkim çocuğun gelişimini göz önünde bulundurarak tedbiri kaldırabilir; acele hâlde **çocuğun bulunduğu yer hâkimi** de kaldırabilir (önceki hâkime bildirir); kaldırılmasını denetim görevlileri, veli/vasi, bakımını üstlenenler, uygulayan kurum ve **Cumhuriyet savcısı** isteyebilir; tedbir **18 yaşın doldurulmasıyla kendiliğinden** sona erer; hâkim eğitimine devam için **çocuğun rızasıyla** bir süre daha devam ettirebilir (m.11). · **Ne demek:** 18'de otomatik biter, okul için uzatılabilir. · *Tuzak:* "18 yaşında ayrıca karar gerekir" yanlış.
+- **Danışmanlık tedbiri** — Bakımdan sorumlu kimselere çocuk yetiştirme, çocuğa eğitim-gelişim sorunlarında **rehberlik**; anne-baba eğitimi, aile danışmanlığı; **Millî Eğitim Bakanlığı, Aile Bakanlığı ve yerel yönetimler** yerine getirir (m.12). · **Ne demek:** En hafif tedbir, aileyi dağıtmadan destek. · *Tuzak:* "Danışmanlığı Sağlık Bakanlığı yürütür" yanlış.
+- **Eğitim tedbiri** — Çocuğun eğitim kurumuna gündüzlü/yatılı devamı, evde eğitim, özel eğitim, **meslek/sanat kursu**, usta yanına veya iş yerine yerleştirme; **15 yaşını doldurmuş** çocuk için iş ve meslek edindirme; **MEB ve Çalışma ve Sosyal Güvenlik Bakanlığı** (İŞKUR) yerine getirir (m.13). · **Ne demek:** 15 yaş üstü çırak olarak yerleştirilebilir. · *Tuzak:* "12 yaşındaki iş yerine yerleştirilir" yanlış; 15.
+- **Bakım tedbiri** — Bakımından sorumlu kimse görevini yerine getiremiyorsa **Aile Bakanlığı il/ilçe müdürlüklerince** resmî/özel bakım yurduna yerleştirme veya **koruyucu aile**; ihmal-istismar mağduru ve rehabilitasyon gerekenler diğer çocuklarla **aynı ortamda bakılmaz**; kolluk teslim ederken **ilk sağlık kontrolü** yapılır; bulaşıcı hastalık tedavisi ve sağlık giderleri **Sağlık Bakanlığınca**; yabancı çocuk için **konsoloslukla** irtibat (m.14). · **Ne demek:** Jandarma çocuğu teslim etmeden önce sağlık kontrolü. · *Tuzak:* "Kolluk çocuğu doğrudan yurda teslim eder" yanlış; sağlık kontrolü sonrası.
+- **Barınma tedbiri** — Yeterli barınma yeri olmayan **çocuklu kimselere** veya **hayatı tehlikede olan hamile kadınlar** ile çocuklarına barınma; talep hâlinde kimlik ve adresleri **gizli**; **Aile Bakanlığı, MEB ve yerel yönetimler** yerine getirir (m.15). · **Ne demek:** Barınma tedbiri çocuğa değil, çocuklu kişiye/hamileye verilir. · *Tuzak:* "Barınma tedbiri yalnız çocuklara verilir" yanlış.
+- **Sağlık tedbiri** — Fiziksel-ruhsal sağlığın korunması, tedavi, rehabilitasyon ve **madde bağımlılığı** tedavisi; akıl hastası çocukta öncelikle sağlık tedbiri; akıl hastalığı/bağımlılıkta **resmî sağlık kurulu raporu** üzerine karar (açıkça belliyse rapor alınmadan da); toplum için tehlikeli akıl hastası çocuk **yüksek güvenlikli sağlık kurumunda**; tehlikelilik hakkında **en geç üçer aylık** dönemlerde hâkime bilgi; **madde bağımlısı çocuğun tedavisi için rızası aranmaz**; il sağlık müdürlüğü uygun kurumu belirler, gerekirse kolluktan güvenlik yardımı; **Sağlık Bakanlığı** yerine getirir (m.16). · **Ne demek:** Bağımlı çocuk "istemiyorum" diyemez. · *Tuzak:* "Bağımlılık tedavisinde çocuğun rızası şarttır" yanlış.
+- **Kolluk desteği ve uygulama planı** — Bakım ve barınma tedbirlerinde ihtiyaç duyulan kolluk hizmetleri talep edilir, kolluk **geciktirmeksizin** yerine getirir; Aile müdürlüklerinin yardım talepleri MEB, İçişleri, Sağlık ve diğer kurumlarca geciktirilmeksizin karşılanır (m.17); uygulayan kurum **uygulama planı** hazırlar, çocuğun teslim tarihinden itibaren **en geç 10 gün** içinde hâkim onayına sunar; hâkim tedbirin uygulanmasını **en geç üçer aylık** sürelerle **sosyal çalışma görevlilerine** incelettirir; inceleme raporu **10 gün** içinde hâkime verilir; ceza infaz kurumlarına görev yüklenemez (m.18). · **Ne demek:** 10 gün plan, 3 ayda bir denetim, 10 gün rapor. · *Tuzak:* "Plan 30 gün içinde sunulur" yanlış; 10 gün.
+- ★ çıkmış **İl koordinasyonu** — İllerde tedbirlerin eşgüdümü **vali veya vali yardımcısı** başkanlığında; Cumhuriyet başsavcısı/savcısı, il emniyet müdürü, **il jandarma komutanı**, il millî eğitim, il sağlık, belediye başkanları, Çalışma bölge müdürü/İŞKUR il müdürü, gençlik ve spor, **Aile Bakanlığı il müdürü**, il özel idaresi genel sekreteri, denetimli serbestlik şube müdürü ve **baro temsilcisi** marifetiyle; gündem **Aile Bakanlığı il müdürlüğünce** hazırlanır, **15 gün** önceden bildirilir; **sekretarya Aile Bakanlığı il müdürlüğü**; valinin koordinasyon emirleri ve toplantı kararları ilgili kurumlarca uygulanır (m.20). · **Ne demek:** İl koordinasyon başkanı vali, sekreteri Aile il müdürlüğü; merkezde koordinasyon Aile Bakanlığı Çocuk Hizmetleri Genel Müdürlüğü. · *Örnek:* Çıkmış soru (eski): kurumların koordinasyonunu sağlamakla görevli → **Sosyal Hizmetler ve Çocuk Esirgeme Kurumu Genel Müdürlüğü** (bugünkü adıyla Aile ve Sosyal Hizmetler Bakanlığı Çocuk Hizmetleri Gn. Md.). · *Tuzak:* "Adalet Bakanlığı koordine eder" yanlış.
+- **Kararın uygulanması ve kaçan çocuk** — Kararlar hâkim/mahkemece **tedbir kararları defterine** kaydedilir; uygulayan kurum karar tebliğinden itibaren çocuğu teslim alıp **derhâl** işlem başlatır; çocuk bulunamazsa **kolluğa** bildirilir, hâkim çocuğun bulunup teslimini **kolluğun çocuk birimine** yaptırabilir; kurumdan **izinsiz ayrılan** çocuk için tutanak tutulur, en seri iletişimle **kolluğa** bildirilir, sonra yazılı hâle getirilir, hâkime de bilgi verilir (m.22). · **Ne demek:** Yurttan kaçan çocuğu jandarma çocuk birimi bulur. · *Tuzak:* "Kaçan çocuk yalnız hâkime bildirilir" yanlış; önce kolluğa.
+- **Gizlilik** — Tedbir süreçlerinde **çocuğun avukatı hariç** çocuğun kimliği, adresi, fotoğrafları, yaşadığı travmalar gibi her türlü bilgi, rapor, belge ve kayıt **gizli** tutulur; yazışmalar gizlilik ilkesine uygun yapılır (m.26). · **Ne demek:** Çocuğun dosyası avukatı dışında kimseye açık değil. · *Tuzak:* "Ana-babaya her bilgi verilir" — gizlilik ilkesi geçerli.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Acil korunma: Kurum → hâkim / hâkim kararı / azami süre | 5 gün / 3 gün / 30 gün |
+| Uygulama planı → hâkim onayı | 10 gün |
+| Tedbirin incelenmesi | En geç üçer aylık |
+| İnceleme raporu | 10 gün |
+| Akıl hastası çocuk tehlikelilik bilgisi | Üçer aylık |
+| Koordinasyon toplantısı gündemi bildirimi | 15 gün önce |
+| İş-meslek yerleştirme yaşı | 15 yaşını doldurmuş |
+| Tedbirin sona ermesi | 18 yaş (kendiliğinden) |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Bildirim mercii | Aile ve Sosyal Hizmetler il/ilçe müdürlükleri |
+| Tedbir kararı | Çocuk hâkimi (yoksa aile, o da yoksa asliye hukuk mahkemesi); kovuşturmada o mahkeme |
+| Danışmanlık | MEB + Aile Bakanlığı + yerel yönetimler |
+| Eğitim | MEB + Çalışma ve Sosyal Güvenlik Bakanlığı (İŞKUR) |
+| Bakım | Aile Bakanlığı il/ilçe müdürlükleri |
+| Barınma | Aile Bakanlığı + MEB + yerel yönetimler |
+| Sağlık | Sağlık Bakanlığı (il sağlık müdürlükleri) |
+| İl koordinasyonu | Vali/vali yrd. başkanlığında; sekretarya Aile Bakanlığı il müdürlüğü |
+| Merkezî koordinasyon | Aile Bakanlığı Çocuk Hizmetleri Genel Müdürlüğü |
+| Kaçan/bulunamayan çocuk | Kolluğun çocuk birimi |
+
+### "Yanlıştır/değildir" tuzakları
+- "Acil korunma için 3 gün içinde hâkime başvurulur." → **5 gün**; hâkim 3 günde karar (m.7).
+- "Acil korunma kararı 60 gün verilebilir." → En fazla **30 gün** (m.7).
+- "Sağlık tedbiri kararı Tarım il müdürlüğüne gönderilir." → **İl sağlık müdürlüğüne**; Tarım il müdürlüğü hiçbir tedbirin muhatabı değil (m.9).
+- "Tedbir kararı kesinleşince uygulanır." → **Derhâl** (m.9).
+- "Madde bağımlısı çocuğun tedavisi için rızası gerekir." → **Aranmaz** (m.16).
+- "Barınma tedbiri çocuğa verilir." → **Çocuklu kimselere ve hamile kadınlara** (m.15).
+- "Koordinasyonu Adalet Bakanlığı sağlar." → İlde **vali**, sekretarya **Aile Bakanlığı il müdürlüğü** (m.20).
+
+## Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik — Sınav kapsamı: m.3, 5, 16
+
+### Bu mevzuattan nasıl soruluyor
+Üç madde ama m.16 **kolluğun çocuk birimi** jandarma için doğrudan uygulama: işleme başlandığında **kimlere bildirilir** (veli/vasi, baro, Aile Bakanlığı, kurum temsilcisi — **suça azmettiren yakına bildirilmez**), aileye teslim edilemeyen çocuğun **savcı talimatıyla Kuruma teslimi**. m.5'ten soruşturmayı **çocuk bürosu savcısının bizzat** yapması ve mağdur çocuğun **bir defa** dinlenmesi.
+
+### Altın noktalar
+- **Dayanak** — Yönetmelik, 5395 sayılı Çocuk Koruma Kanununun **32 ve 47.** maddelerine dayanılarak hazırlanmıştır (m.3). · **Ne demek:** Kanunun uygulama yönetmeliği. · *Tuzak:* Dayanak maddesi sorulursa 32 ve 47.
+- ★ çıkmış **Soruşturma — savcı bizzat** — Suça sürüklenen çocuk hakkındaki soruşturma **çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat** yapılır; gecikmesinde sakınca hâlinde çocuk bürosunda görevli olmayan savcılar da yapabilir; çocuk mahkemesi olmayan yerlerde başsavcılık iş bölümündeki savcı; suçun işlendiği yerin ağır ceza mahkemesi ile çocuk mahkemesi farklı yerdeyse savcı **fezleke** düzenleyip o yer başsavcılığına gönderir; ifade ve diğer işlemlerde çocuğun yanında **sosyal çalışma görevlisi** bulundurulabilir (m.5). · **Ne demek:** Çocuk şüphelinin ifadesini karakol değil savcı alır. · *Tuzak:* "Çocuğun ifadesi kolluk tarafından alınır" yanlış; savcı bizzat.
+- ★ çıkmış **Mağdur çocuğun dinlenmesi** — Mağdur çocuk tanık olarak dinlenirken **yemin hariç** CMK tanıklık hükümleri uygulanır; suçun etkisiyle psikolojisi bozulmuş mağdur çocuk soruşturmada tanık olarak **bir defa** dinlenebilir (zorunluluk hâlleri saklı); dinlenirken **psikoloji, psikiyatri, tıp veya eğitim** alanında uzman bulundurulur (bilirkişi hükümleri uygulanır) (m.5). · **Ne demek:** Mağdur çocuk tekrar tekrar anlattırılmaz, uzman eşliğinde bir kez. · *Tuzak:* "Mağdur çocuğa yemin verdirilir" yanlış.
+- **Savcının Kuruma bildirim yükümü ve yaş düzeltme** — Savcı soruşturmayı yürütürken korunma ihtiyacı olan çocuğu **Aile Bakanlığına bildirmekle yükümlü**; Kurum derhâl inceleme yapar, sosyal inceleme raporunu talep yazısıyla hâkime sunar, bir örneğini savcılığa gönderir; savcı da hâkimden tedbir isteyebilir; yakalama-gözaltı-ifadede **Yakalama Yönetmeliğinin çocuk hükümleri** uygulanır; **12 yaşından küçükler** ve 15 yaşını doldurmamış sağır-dilsizler için delil toplama ve başka failleri belirleme amacıyla soruşturma yapılabilir; görünüşte 12'den büyük ama nüfusta küçük olan veya nüfus yaşı gerçek yaşı olmayan çocuğun yaşı **hukuk mahkemesinde düzeltilmeden kamu davası açılamaz** (m.5). · **Ne demek:** Yaş şüphesi varsa önce yaş davası. · *Tuzak:* "12 yaş altı için hiç soruşturma yapılmaz" yanlış; delil ve diğer failler için yapılır.
+- ★ çıkmış **Kolluğun çocuk birimi — bildirim** — Çocuklarla ilgili kolluk görevi **öncelikle çocuk birimlerince**; çocukların kolluktaki **yetişkinlerle karşılaşması engellenir**; işleme başlandığında durum **derhâl** çocuğun **veli/vasisine veya bakımını üstlenene, baroya ve Aile Bakanlığına (SHÇEK)**, kurumda kalıyorsa **kurum temsilcisine** bildirilir; ancak çocuğu **suça azmettirdiğinden veya istismar ettiğinden şüphelenilen yakınlarına bilgi verilmez**, keyfiyet tutanakla savcıya bildirilir; çocuğun yararı aksini gerektirmedikçe kollukta yanında **yakınlarından biri devamlı** bulunabilir (azmettiren/istismar eden yakın bulundurulmaz) (m.16). · **Ne demek:** Çocuğu suça iten baba karakola çağrılmaz, savcıya yazılır. · *Örnek:* Çıkmış soru: bildirileceklerden **olmayan** → **Çocuğu suça azmettiren velisi**. · *Tuzak:* "Baroya bildirilmez" yanlış; baroya bildirilir.
+- ★ çıkmış **Aileye teslim edilemeyen çocuk** — Kolluğun çocuk birimi, suça sürüklenen çocuğun teslim edileceği veli/vasi/bakımını üstleneni **bulamaz** ya da bunların çocuğu **azmettirdiğinden/istismar ettiğinden şüphelenirse** teslim edemez; **Cumhuriyet savcısının talimatını alarak Aile Bakanlığına (SHÇEK)** teslim eder; teslim edilen çocuğun ailesinin yeterli gözetimi sağlayamadığını öğrenirse **derhâl Kuruma** bildirir; korunma ihtiyacı olan çocuk için bekleme yararına aykırıysa çocuk birimi güvenliği sağlayıp **en kısa sürede Kuruma** teslim eder; **suç mağduru** korunma ihtiyacı olan çocuğun Kuruma teslimi **savcı talimatıyla** (m.16). · **Ne demek:** Sahipsiz veya tehlikeli aileye sahip çocuk → savcı talimatı → Aile müdürlüğü. · *Tuzak:* "Kolluk çocuğu kendi kararıyla Kuruma teslim eder" — suça sürüklenen çocukta savcı talimatı şart.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Mağdur çocuğun tanık olarak dinlenmesi | Bir defa (zorunluluk saklı) |
+| Yaş eşikleri | <12 ve <15 sağır-dilsiz: ceza sorumluluğu yok |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Suça sürüklenen çocuk soruşturması | Çocuk bürosu Cumhuriyet savcısı (bizzat) |
+| Mağdur çocuk dinlenirken | Psikoloji/psikiyatri/tıp/eğitim uzmanı |
+| Çocukla ilgili kolluk görevi | Kolluğun çocuk birimi |
+| İşleme başlanınca bildirim | Veli/vasi/bakan kişi, baro, Aile Bakanlığı, kurum temsilcisi |
+| Aileye teslim edilemeyen çocuk | Savcı talimatıyla Aile Bakanlığına |
+| Yaş düzeltme | Hukuk mahkemesi (kamu davası öncesi) |
+
+### "Yanlıştır/değildir" tuzakları
+- "Suça sürüklenen çocuğun ifadesini kolluk alır." → **Çocuk bürosu savcısı bizzat** (m.5).
+- "Mağdur çocuk her aşamada tekrar dinlenir." → Soruşturmada **bir defa** (m.5).
+- "Mağdur çocuğa yemin verdirilir." → **Yemin hariç** (m.5).
+- "Çocuğu suça azmettiren veliye de bildirim yapılır." → **Yapılmaz**; savcıya tutanakla bildirilir (m.16).
+- "Kolluk çocuğu doğrudan Aile müdürlüğüne teslim eder." → **Savcı talimatıyla** (m.16).
+
+## İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik — Sınav kapsamı: m.3, 5, 6, 7, 8, 29, 30, 32, 33, 34, 36, 38, 43
+
+### Bu mevzuattan nasıl soruluyor
+Jandarma umuma açık yerleri (kahvehane, bar, internet kafe) denetler. Çıkmış sorular: **içkili yer bölgesini kim belirler** (belediye sınırında belediye meclisi, dışında il genel meclisi) ve **izinsiz açılan yerde kolluğun usulü** (tutanakla yetkili idareye bildirir, idare kapatır, 3 günde kolluğa bilgi). Mesafeler (100 m okul, 200 m karayolu), açılış-kapanış saatleri (encümen), 18 yaş ve sağlık raporu (6 ay) da gelir.
+
+### Altın noktalar
+- **Dayanak** — Umumi Hıfzıssıhha, 1608 sayılı Kanun, **PVSK**, 3572 sayılı İşyeri Açma Kanunu, Büyükşehir, İl Özel İdaresi ve Belediye Kanunları ile İmar Kanunu ek 11'e dayanır (m.3). · **Ne demek:** Kolluk yetkisinin kaynağı PVSK'dır. · *Tuzak:* "Yönetmelik yalnız Belediye Kanununa dayanır" yanlış.
+- **İş yerlerinde genel şartlar** — İş sağlığı-güvenliği tedbirleri; **mesken** olarak kayıtlı bağımsız bölümlerde kahvehane, bar, lokanta, imalathane vb. için kat maliklerinin **oy birliği**; tapuda iş yeri görünen yerde umuma açık yer için **oy çokluğu** (yönetim planında aksi yoksa); sinema, otel, hamam, akaryakıt istasyonu vb. için **yapı kullanma izni**; umuma açık yerlerde **kolluk görüşü**; tehlikeli madde tesislerine mevzuattaki uzaklık; **karayolu kenarında geçiş yolu izin belgesi**; umuma açık yerler, patlayıcı satış yerleri, **30'dan fazla çalışanı** olan yerler, iş hanı-çarşılar için **itfaiye raporu**; meyhane, bar, kahvehane, internet salonu ve açıkta alkol satan yerlerin **okul, yurt ve mabede** mevzuattaki uzaklıkta olması; LPG tüp satış yerlerinde **kamera** (kayıtlar **30 gün** saklanır); turizm işletme belgeli tesisleri yalnız **Kültür ve Turizm Bakanlığı** denetler; umuma açık yerler için şartlar ruhsat öncesi **yerinde kontrol** edilir (m.5). · **Ne demek:** Apartmanda kahvehane açmak için tüm kat malikleri "evet" demeli. · *Tuzak:* "Mesken bölümünde oy çokluğu yeter" yanlış; oy birliği.
+- **Ruhsatsız iş yeri açılamaz** — Yetkili idareden ruhsat alınmadan iş yeri açılamaz; başka kurumların izinleri ruhsat yükümlülüğünü kaldırmaz; ruhsatsız açılan yer **yetkili idarece kapatılır**; ruhsat yetkili idarenin **en üst amiri veya görevlendirdiği yetkili** tarafından imzalanır, ayrıca meclis/encümen kararı gerekmez; başvurana **alındı belgesi** verilir, eksiklikler alındıda gösterilir; süreler eksik belgelerin tamamlanmasıyla başlar (m.6). · **Ne demek:** Ruhsatı belediye başkanı/vali (veya yetkilisi) imzalar, meclis kararı yok. · *Tuzak:* "Ruhsat için encümen kararı gerekir" yanlış.
+- **Kolluğa bildirim — 7 gün** — Verilen ruhsat örnekleri aylık olarak sigorta il müdürlüğüne ve ticaret/esnaf siciline; **umuma açık istirahat ve eğlence yerleri** için düzenlenen ruhsatların bir örneği **en geç 7 gün** içinde yetkili idarece **kolluğa** gönderilir (m.7). · **Ne demek:** Jandarma bölgesinde açılan her kahvehanenin ruhsatı bir haftada karakola gelir. · *Tuzak:* "15 gün" tuzak; 7 gün.
+- **Devir, nakil, ölüm** — Faaliyet konusu, alanı ve adres değişmemek kaydıyla devirde devralan adına dosya esas alınarak **yeni ruhsat** düzenlenir; yeni ortak alınması/ayrılmasında yeni ruhsat düzenlenmez; **başka adrese nakilde yeniden ruhsat**; sokak adı/numara değişikliğinde yeni ruhsat yok, bilgiler güncellenir; sahibin **ölümünde** mirasçılar adına eski ruhsatın **intibakı**; yenileme/intibak için **en geç 3 ay** (mirasçılar **6 ay**) içinde başvuru; tespitte **15 gün** ek süre, sonunda ruhsat iptal (m.8). · **Ne demek:** Devirde yeni ruhsat, ortak değişiminde değil. · *Tuzak:* "Mirasçılar 3 ay içinde başvurur" yanlış; 6 ay.
+- ★ çıkmış **İçkili yer bölgesi** — İçkili yer bölgesi, **mülkî idare amirinin genel güvenlik ve asayiş görüşü** doğrultusunda belediye sınırları ve mücavir alan içinde **belediye meclisi**, bu sınırlar dışında **il genel meclisi** tarafından tespit edilir; içkili yer bölgesi dışında içkili yer açılamaz (m.29). · **Ne demek:** Mülkî amir görüş verir, meclis karar verir. · *Örnek:* Çıkmış soru: belediye sınırında içkili yer bölgesini kim belirler → **Belediye Meclisi**. · *Tuzak:* "Belediye encümeni" (açılış-kapanış saatini belirler) ve "mülkî idare amiri" (görüş verir) şıkları tuzak.
+- **İçkili yer bölgesi olamayacak yerler** — Hükümet binaları, hapishane ve ıslahevleri, mabetler, sanat müesseseleri, maden ocakları, inşaat yerleri, patlayıcı-yanıcı madde üretilen/satılan yerler ve gaz dolum tesisleri **yakınında**; konaklama yerleri hariç **otoyol ve karayollarının** her iki tarafında sınır çizgisine **200 metreden** yakın; **otogar ve terminallerde**; resmî ve özel **okul binaları, ilk-orta öğretim yurtları ve anaokullarına 100 metreden** yakın mesafede içkili yer bölgesi tespit edilemez (m.30). · **Ne demek:** 200 m karayolu, 100 m okul. · *Tuzak:* Mesafeler çapraz verilir.
+- ★ çıkmış **Umuma açık yer açma izni ve izinsiz açılan yer** — Umuma açık istirahat ve eğlence yeri açma izni belediye sınırları içinde **belediye**, dışında **il özel idaresi**; ruhsat öncesi **kolluk görüşü** alınır, kolluk yerin kolay kontrol edilebilir konumda olup olmadığını dikkate alarak görüşünü **mülkî idare amiri vasıtasıyla 7 gün** içinde bildirir; başvurular **1 ay** içinde sonuçlandırılır; meyhane, kahvehane, kıraathane, bar, elektronik oyun merkezi, internet salonu ve açık alkol satan yerler örgün eğitim kurumları, özel öğretim kursları, yükseköğretim hariç yurtlar ve anaokullarından **kapıdan kapıya en az 100 metre** uzakta olmalı (turizm yörelerinde okul tatilinde aranmaz; özel öğretim kurumlarıyla aynı binada olamaz); taşıtların umuma açık yer olarak kullanılmasında liman başkanlığı/ilgili kurum görüşü; **izin almadan açılan yerler yetkili idarece tutanakla ve mühürlenerek re'sen kapatılır**; **kollukça** izinsiz açıldığı tespit edilen yerler **tutanakla kapatılmak üzere yetkili idareye bildirilir**, yetkili idare kapatarak **en geç 3 gün** içinde kolluğa bilgi verir; açıkta alkol ve nargile sunan yerlere **kesinleşmemiş ruhsat** düzenlenir, **1 ay** içinde satış/sunum belgesi ibrazıyla kesinleşir, yoksa iptal (m.32). · **Ne demek:** Jandarma izinsiz kahvehaneyi kendisi mühürlemez; tutanak tutar, belediye/il özel idaresi kapatır ve 3 günde haber verir. · *Örnek:* Çıkmış soru: kolluğun izinsiz açılan yerdeki usulü → **Durum tutanakla yetkili idareye bildirilir; idare kapatıp 3 gün içinde kolluğa bilgi verir**. · *Tuzak:* "Kolluk re'sen mühürleyerek kapatır" yanlış; yetkili idare kapatır.
+- **Açılış-kapanış saatleri ve sabahçı kahvesi** — Umuma açık yerlerin açılış ve kapanış saatleri belediye sınırları içinde **belediye encümeni**, dışında **il encümeni** tarafından tespit edilir; iskele, istasyon, terminal, benzin istasyonu, fuar-panayır gibi zorunluluk arz eden yer ve zamanlarda **sabahçı kahvesi** ve benzeri tesislere **kolluk görüşü** alınarak yetkili idarece geçici veya sürekli izin (m.33). · **Ne demek:** Bölge = meclis; saat = encümen. · *Tuzak:* "Kapanış saatini belediye meclisi belirler" yanlış; encümen.
+- **Mesafe ölçümü** — 100 metre uzaklık ölçümünde bina/tesislerin varsa **bahçe kapısı**, yoksa bina kapısı, birden fazla kapı varsa **en yakını** esas alınır; ölçüm mevcut cadde-sokaklar üzerinden **yaya yolu** kullanılarak, yaya kurallarına göre **gidilebilecek en kısa mesafe**; yetkili idare okul mesafesini, özel öğretim kurumuyla aynı binada olup olmadığını ve içkili yer bölgesinde olup olmadığını tespit eder (m.34). · **Ne demek:** Kuş uçuşu değil, yürüyerek en kısa yol. · *Tuzak:* "Kuş uçuşu 100 m" yanlış.
+- **Çalıştırılacak kişiler** — Eğlence, oyun, içki amaçlı umuma açık yerlerde **18 yaşından küçükler çalıştırılamaz**; çalışanların ad-soyad, TC kimlik no, **adli sicil ve bulaşıcı hastalık** beyanları yetkili idareye verilir; bulaşıcı hastalık **sağlık raporu** işe başlamadan önce alınır ve **6 ayda bir** yenilenip iş yerinde hazır bulundurulur (ruhsat aşamasında istenmez, denetimde gösterilir); **genel kadın olarak tescil edilenler** çalıştırılamaz; sahne sanatçıları için bilgi-belge istenmez; **konsomatrisler yalnız pavyon ruhsatlı** yerlerde; yabancılar yabancı mevzuatına tabi (m.36). · **Ne demek:** Bar garsonu 18+ ve 6 aylık sağlık raporlu. · *Tuzak:* "Sağlık raporu yılda bir yenilenir" yanlış; 6 ay.
+- **Müzik yayını** — İş yerlerindeki müzik yayınları **Çevresel Gürültü Kontrol Yönetmeliği** kapsamında verilen **müzik yayın izni** ile yapılır; izin **ruhsata işlenmez**, görevliler sorunca gösterilmek üzere iş yerinde bulundurulur; izni iptal edilen yer müzik dışı faaliyete devam eder, iptale rağmen müzik yaparsa ek 3. maddeye göre işlem (m.38). · **Ne demek:** Müzik izni ayrı belge, ruhsatın parçası değil. · *Tuzak:* "Müzik yayın izni ruhsata işlenir" yanlış.
+- **Kimlik bildirme** — Her türlü **konaklama yeri** işleticisi yatacak kişilerin (TC veya yabancı; ücretli-ücretsiz, gündüz-gece) kimlik ve geliş-gidiş kayıtlarını **günü gününe** tutup **kolluk denetimine hazır** bulundurur; işletmeci veya mesul müdür çalışanın işe girişini/**ayrılışını** 1774 sayılı Kanun yönetmeliğindeki belgeyle **24 saat** içinde kolluğa bildirir; kolluğa bildirilen çalışana işletici **kimlik belgesi** verir, kolluk istediğinde gösterilir (m.43). · **Ne demek:** Kimlik Bildirme Kanunu ile aynı 24 saat kuralı. · *Tuzak:* "Çalışan ayrılışı 3 gün içinde bildirilir" yanlış; 24 saat.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Umuma açık yer ruhsatının kolluğa gönderilmesi | 7 gün |
+| Kolluğun görüş bildirmesi (mülkî amir vasıtasıyla) | 7 gün |
+| Başvurunun sonuçlandırılması | 1 ay |
+| İzinsiz yerin kapatılıp kolluğa bilgi | En geç 3 gün |
+| Okul-yurt-anaokulu mesafesi | Kapıdan kapıya en az 100 m (yaya yolu) |
+| Karayolu mesafesi (içkili yer bölgesi) | 200 m |
+| Yenileme/intibak başvurusu (mirasçı) | 3 ay (6 ay); ek süre 15 gün |
+| Kesinleşmemiş ruhsat → belge ibrazı | 1 ay |
+| Çalışan sağlık raporu | 6 ayda bir |
+| Çalışma yaşı | 18 |
+| LPG satış yeri kamera kaydı | 30 gün |
+| İtfaiye raporu eşiği | 30'dan fazla çalışan |
+| Çalışan işe giriş/ayrılış bildirimi | 24 saat |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| İçkili yer bölgesi | Belediye meclisi (belediye sınırı içi) / il genel meclisi (dışı); mülkî amir görüş verir |
+| Umuma açık yer açma izni | Belediye / il özel idaresi (kolluk görüşüyle) |
+| Açılış-kapanış saatleri | Belediye encümeni / il encümeni |
+| Ruhsat imzası | Yetkili idarenin en üst amiri veya görevlendirdiği yetkili |
+| İzinsiz yerin kapatılması | Yetkili idare (tutanak + mühür); kolluk bildirir |
+| Turizm işletme belgeli tesis denetimi | Kültür ve Turizm Bakanlığı |
+| Sabahçı kahvesi izni | Yetkili idare (kolluk görüşüyle) |
+
+### "Yanlıştır/değildir" tuzakları
+- "Belediye sınırında içkili yer bölgesini belediye encümeni belirler." → **Belediye meclisi**; encümen saatleri belirler (m.29, 33).
+- "Mülkî idare amiri içkili yer bölgesini tespit eder." → Yalnız **görüş** verir (m.29).
+- "Kolluk izinsiz açılan yeri re'sen mühürler." → **Yetkili idareye tutanakla bildirir**, idare kapatır, 3 günde bilgi verir (m.32).
+- "Okul mesafesi kuş uçuşu 100 m." → **Yaya yoluyla kapıdan kapıya** (m.34).
+- "16 yaşındaki kahvehanede çalışabilir." → **18** yaşından küçük çalıştırılamaz (m.36).
+- "Sağlık raporu yılda bir yenilenir." → **6 ayda bir** (m.36).
+- "Müzik yayın izni ruhsata işlenir." → **İşlenmez** (m.38).
+
+## Kum, Çakıl ve Benzeri Maddelerin Alınması, İşletilmesi ve Kontrolü Yönetmeliği — Sınav kapsamı: m.3, 5, 6, 7, 8, 10, 14, 15
+
+### Bu mevzuattan nasıl soruluyor
+Jandarma dere yataklarındaki kaçak kum ocaklarını denetlediği için kapsamda; bir kez çıkmış: **yasak yerler ve mesafeler** (köprüye menba 750 m / mansap 1000 m, denizde 20 m derinlik, akış rejimini bozmama, sulak alanlarda ayrıca Sulak Alan Yönetmeliği). Yaptırım (Çevre Kanunu m.20 idari para cezası + m.15 faaliyet durdurma) ve denetim yetkisi (Bakanlık/il müdürlüğü) de sorulabilir.
+
+### Altın noktalar
+- **Dayanak** — Yönetmelik, **2872 sayılı Çevre Kanununun Ek 1. maddesinin** (d) bendine dayanılarak hazırlanmıştır (m.3). · **Ne demek:** Kum-çakıl mevzuatı Maden Kanunu değil Çevre Kanunu kaynaklı. · *Tuzak:* "Maden Kanununa dayanır" yanlış.
+- ★ çıkmış **Ocak açılamayacak yerler** — İçme-kullanma suyu temin edilen yüzeysel su kaynakları ve bunları besleyen akar/kuru derelerde; termal su kaynaklarının **1. ve 2. derece koruma alanlarında**; yeraltı suyu rezervi olan akiferlerde; denizlerde **kıyı çizgisi ile kıyı kenar çizgisi arasında** ve sahil şeritlerinde; kıyıdan denize doğru **20 metreden az derin** denizlerde; her iki kıyısı taşkın tesisleriyle ıslah edilmiş mecralarda; menderes dış kurblarında; şev dibine şev yüksekliğinin **iki katından az** mesafede; yatağın genişletilmek istenmesinde; boğaz çıkışı sonrası **rüsup konisi** üzerinde; yerleşim ve tarım arazilerini **taşkına** maruz bırakacak yerlerde; **köprü, menfez ve sanat yapılarına menba yönünde 750 m ve mansap yönünde 1000 m'den** yakın; koruma altındaki alanlarda kum-çakıl ocağı açılmasına **izin verilmez** (m.5). · **Ne demek:** Köprünün yukarısında 750, aşağısında 1000 metre yasak; sığ denizde (20 m'den az) yasak. · *Örnek:* Çıkmış şıklar: "Köprüye menba yönünde 500 m'de ocak açılabilir" **yanlış** (750 m); "10 m'yi aşan derinlikte" **yanlış** (20 m). · *Tuzak:* Menba (yukarı) 750 / mansap (aşağı) 1000 çapraz verilir.
+- ★ çıkmış **Akarsu ve kuru derelerde işletme esasları** — Ocak sahası **beton kazıklarla** işaretlenir (en az **1,5 m** yüksek, sabit röper noktalarına); dere yatağının **doğal formu bozulmaz**, yükselti oluşturulmaz; yatak duraylılığını bozacak, akış yönünü değiştirecek, seddelere ve kıyıya zarar verecek çalışma **yasak**; servis yolu kesiti daraltmaz; ruhsat bitiminde **ıslah ve rehabilitasyon** yapılıp saha terk edilir; belirlenen **talveg kotundan** derine inilmez; malzeme alımı **akış rejimi bozulmadan ve mendereslenmeye meydan vermeyecek** şekilde; yıkama-eleme pasası ruhsat alanı içinde doğaya kazandırmada kullanılmak üzere depolanır; atık bırakılmaz; kimyasal yıkamada atık su deşarj standartları; **derinlik ölçüm ekipmanı** bulundurulur; su kalitesi Su Kirliliği Yönetmeliği Tablo-1'e göre korunur; **Tarım Bakanlığından su ürünleri görüşü** alınır (m.6). · **Ne demek:** Dere yatağı "delik deşik" edilemez, akış bozulamaz. · *Örnek:* Çıkmış doğru şık: "Akarsu ve kuru derelerden malzeme alımı, akış rejimi bozulmadan ve mendereslenmeye meydan vermeyecek şekilde yapılır". · *Tuzak:* "Talveg kotunun altına inilebilir" yanlış.
+- **Deniz ve göllerde işletme** — Ekosistem bütünlüğü ve doğal hayat korunur; kıyının **jeomorfolojik yapısı** korunur; su kalitesi Tablo-2/3/4'e göre; deniz ve göl rezervuarlarına su akışı engellenmez; **Tarım Bakanlığı su ürünleri görüşü**; atıklar mevzuata göre bertaraf; derinlik ölçüm ekipmanı (m.7). · **Ne demek:** Denizde de aynı mantık: kıyıyı ve canlıyı koru. · *Tuzak:* "Denizden kum alımında Tarım Bakanlığı görüşü gerekmez" yanlış.
+- ★ çıkmış **Sulak alanlar** — Sulak alanlardan kum-çakıl alınmasında bu Yönetmeliğe ilaveten **Sulak Alanların Korunması Yönetmeliği** hükümleri uygulanır; derinlik ölçüm ekipmanı bulundurulur (m.8). · **Ne demek:** Sulak alanda iki yönetmelik birden. · *Örnek:* Çıkmış şık: "Sulak alanlardaki kum alımlarında Sulak Alanların Korunması Yönetmeliği de uygulanır" **doğru**. · *Tuzak:* "Sulak alanda yalnız bu Yönetmelik uygulanır" yanlış.
+- **ÇED ve çevre yönetim planı** — ÇED raporu zorunlu faaliyet sahipleri **Doğaya Yeniden Kazandırma Planı**, çevre yönetim uygulama takvimi ve **noter tasdikli taahhüdü** ÇED ekinde sunar; "ÇED gerekli değildir" kararı alanlar ve ÇED dışı faaliyetler **Çevre Yönetim Planını** ve noter tasdikli taahhüdü **il çevre müdürlüğüne 3 nüsha** verir (m.10). · **Ne demek:** Ocak açan, kapatınca doğayı eski hâline getireceğini noterde taahhüt eder. · *Tuzak:* "ÇED gerekmeyen faaliyette plan istenmez" yanlış; Çevre Yönetim Planı istenir.
+- **Denetim ve yaptırım** — Denetimlerde Çevre Kanunu m.12 uyarınca **Bakanlık, il çevre müdürlüğü ve Bakanlıkça yetki devri yapılmış kurumlar** yetkilidir (m.14); aykırı faaliyette Çevre Kanunu **m.20/1-(l)** uyarınca **idari para cezası** ve **m.15** uyarınca **faaliyeti durdurma** (m.15). · **Ne demek:** Jandarma tespit eder, cezayı çevre idaresi keser; Çevre Kanunu m.20/(l) kum-çakıl bendidir (bkz. Çevre Kanunu bölümü). · *Tuzak:* "Cezayı jandarma keser" yanlış; Çevre Kanunu yetkilileri.
+
+### Sayılar ve süreler
+| Konu | Değer |
+|---|---|
+| Köprü/menfeze mesafe | Menba 750 m, mansap 1.000 m |
+| Deniz derinliği | 20 m'den az derinlikte yasak |
+| Şev dibine yaklaşma | Şev yüksekliğinin 2 katından az yasak |
+| Beton kazık | En az 1,5 m |
+| Çevre Yönetim Planı nüsha | 3 |
+
+### Yetkili makamlar
+| Konu | Yetkili |
+|---|---|
+| Denetim | Çevre Bakanlığı, il çevre müdürlüğü, yetki devri yapılan kurumlar |
+| Yaptırım | Çevre Kanunu m.20 (İPC) + m.15 (faaliyet durdurma) |
+| Su ürünleri görüşü | Tarım ve Orman Bakanlığı |
+| Plan ve taahhüt | İl çevre müdürlüğü (noter tasdikli) |
+
+### "Yanlıştır/değildir" tuzakları
+- "Köprüye menba yönünde 500 m'de ocak açılabilir." → **750 m**'den yakın yasak; mansap 1.000 m (m.5).
+- "Derinliği 10 m'yi aşan denizlerde alınabilir." → **20 m**'den az derinlikte yasak (m.5).
+- "Sulak alanda yalnız bu Yönetmelik uygulanır." → **Sulak Alanların Korunması Yönetmeliği de** uygulanır (m.8).
+- "Yönetmelik Maden Kanununa dayanır." → **Çevre Kanunu Ek 1** (m.3).
+- "Aykırılıkta ceza Maden Kanununa göre kesilir." → **Çevre Kanunu m.20 ve m.15** (m.15).
