@@ -9,6 +9,7 @@ export const PDF_VIEWER_HTML = `<!doctype html><html><head>
   .sayfa{position:relative;margin:0 auto 10px;max-width:900px;box-shadow:0 1px 6px rgba(0,0,0,.15);background:#fff;}
   .sayfa canvas{border-radius:2px;}
   .sayfa .ov{position:absolute;left:0;top:0;touch-action:auto;}
+  .sayfa .syf{position:absolute;right:6px;bottom:4px;font:11px/1 Arial,sans-serif;color:#8a7d62;background:rgba(255,255,255,.75);padding:2px 5px;border-radius:3px;pointer-events:none;}
   body[data-arac="kalem"] .ov,body[data-arac="fosfor"] .ov,body[data-arac="silgi"] .ov{touch-action:none;}
   /* Klavye yazı notu: sayfaya yapışık, düzenlenebilir kutu (sarı post-it görünümü). */
   .yazi{position:absolute;transform:translate(-1px,-1px);min-width:14px;min-height:1em;max-width:62%;
@@ -83,31 +84,83 @@ var pagesEl, araclar={};
 var boyut={ kalem:3, fosfor:18, silgi:24, yazi:16 };
 function rnPost(o){ if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(JSON.stringify(o)); }
 
-// RN çağırır: PDF base64 + kayıtlı notlar (sayfa->öğe dizisi: stroke veya yazı) + dosya yolu.
-window.baslat = function(b64, kayitli, yol){
+// RN çağırır: PDF base64 + kayıtlı notlar (sayfa->öğe dizisi: stroke veya yazı) + dosya yolu
+// + başlangıç sayfası (kaldığı yerden devam). Büyük kitaplar (250+ sayfa) için base64 tek
+// seferde DEĞİL parçalar hâlinde gelir (window.parcaEkle) — tek dev string Android'de takılıyordu.
+var parcalar=[], toplamSayfa=0, oran=1.414, sayfaKutular=[], aktifSayfa=0, cizilenler={}, kaydirBekle=null;
+var PENCERE=3; // görünen sayfanın ±3 komşusu çizili durur; uzaktakiler bellek için boşaltılır
+window.parcaEkle = function(s){ parcalar.push(s); };
+window.baslat = function(b64, kayitli, yol, baslangic){
   dosyaYolu = yol||''; notlar = kayitli||{};
+  if(!b64){ b64 = parcalar.join(''); parcalar=[]; }
   var bin = atob(b64), arr = new Uint8Array(bin.length);
   for (var i=0;i<bin.length;i++) arr[i]=bin.charCodeAt(i);
+  b64=null; bin=null;
   pdfjsLib.getDocument({data:arr}).promise.then(function(doc){
-    pdfDoc=doc; var p=Promise.resolve();
-    for (var n=1;n<=doc.numPages;n++){ (function(k){ p=p.then(function(){return sayfaCiz(k);}); })(n); }
-    p.then(function(){ rnPost({tip:'hazir', toplam:doc.numPages}); });
+    pdfDoc=doc; toplamSayfa=doc.numPages;
+    return doc.getPage(1).then(function(p1){
+      var vp=p1.getViewport({scale:1}); oran=vp.height/vp.width;
+      // TEMBEL ÇİZİM: her sayfa için önce boş kutu (doğru yükseklikte), canvas ancak görünürken.
+      // 265 sayfalık kitabı baştan sona 2x çizmek telefonda belleği patlatıyordu.
+      var w=window.innerWidth-12;
+      for (var n=1;n<=toplamSayfa;n++){
+        var wrap=document.createElement('div'); wrap.className='sayfa'; wrap.dataset.no=n;
+        wrap.style.height=Math.round(w*oran)+'px';
+        var etiket=document.createElement('div'); etiket.className='syf'; etiket.textContent=n+' / '+toplamSayfa;
+        wrap.appendChild(etiket); pagesEl.appendChild(wrap); sayfaKutular[n]=wrap;
+        if(!notlar[n]) notlar[n]=[];
+      }
+      var ilk = Math.max(1, Math.min(toplamSayfa, +baslangic||1));
+      if(ilk>1){ window.scrollTo(0, sayfaKutular[ilk].offsetTop-4); }
+      aktifSayfa=ilk;
+      return pencereCiz(ilk).then(function(){ rnPost({tip:'hazir', toplam:toplamSayfa, sayfa:ilk}); });
+    });
   }).catch(function(e){ rnPost({tip:'hata', mesaj:String(e)}); });
+  window.addEventListener('scroll', function(){
+    clearTimeout(kaydirBekle); kaydirBekle=setTimeout(kaydirmaBitti, 120);
+  }, {passive:true});
 };
 
+// Ekranın ortasındaki sayfayı bul → değiştiyse RN'e bildir + çizim penceresini kaydır.
+function kaydirmaBitti(){
+  if(!toplamSayfa) return;
+  var orta=window.scrollY+window.innerHeight/2, n=aktifSayfa;
+  for (var k=1;k<=toplamSayfa;k++){ var el=sayfaKutular[k]; if(el.offsetTop<=orta && el.offsetTop+el.offsetHeight>orta){ n=k; break; } }
+  if(n!==aktifSayfa){ aktifSayfa=n; rnPost({tip:'sayfa', sayfa:n, toplam:toplamSayfa}); }
+  pencereCiz(n);
+}
+
+// n çevresindeki pencereyi çiz, uzaktaki canvas'ları boşalt (yazı notları div olarak kalır).
+function pencereCiz(n){
+  var p=Promise.resolve();
+  for (var k=1;k<=toplamSayfa;k++){
+    if (Math.abs(k-n)<=PENCERE){ if(!cizilenler[k]) (function(kk){ p=p.then(function(){ return sayfaCiz(kk); }); })(k); }
+    else if (cizilenler[k]) { sayfaBosalt(k); }
+  }
+  return p;
+}
+function sayfaBosalt(n){
+  var wrap=sayfaKutular[n]; if(!wrap) return;
+  Array.prototype.slice.call(wrap.querySelectorAll('canvas')).forEach(function(c){ c.width=1; c.height=1; c.remove(); });
+  cizilenler[n]=false;
+}
+
 function sayfaCiz(n){
+  if (cizilenler[n]) return Promise.resolve();
+  cizilenler[n]=true;
   return pdfDoc.getPage(n).then(function(page){
+    var wrap=sayfaKutular[n]; if(!wrap || !cizilenler[n]) return;
     var taban = page.getViewport({scale:1});
     var scale = (window.innerWidth-12)/taban.width;
     var vp = page.getViewport({scale: scale*2}); // 2x net render
-    var wrap=document.createElement('div'); wrap.className='sayfa'; wrap.dataset.no=n;
+    wrap.style.height=Math.round(vp.height/2)+'px';
     var c=document.createElement('canvas'); c.width=vp.width; c.height=vp.height; c.style.width='100%'; c.style.display='block';
     var oc=document.createElement('canvas'); oc.width=vp.width; oc.height=vp.height; oc.className='ov'; oc.style.width='100%';
-    wrap.appendChild(c); wrap.appendChild(oc); pagesEl.appendChild(wrap);
+    wrap.insertBefore(oc, wrap.firstChild); wrap.insertBefore(c, wrap.firstChild);
     cizimKur(oc, n, wrap);
     if (notlar[n] && notlar[n].length){
       cizStroke(oc, notlar[n].filter(function(s){ return s.t!=='yazi'; }));      // çizgiler → canvas
-      notlar[n].filter(function(s){ return s.t==='yazi'; }).forEach(function(s){ yaziDiv(wrap, n, s); }); // yazılar → div
+      if(!wrap.querySelector('.yazi')) notlar[n].filter(function(s){ return s.t==='yazi'; }).forEach(function(s){ yaziDiv(wrap, n, s); }); // yazılar → div (bir kez)
     }
     return page.render({canvasContext:c.getContext('2d'), viewport:vp}).promise;
   });

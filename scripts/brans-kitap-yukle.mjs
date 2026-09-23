@@ -83,7 +83,7 @@ for (const klasor of klasorler) {
     if (uHata) atlandi++; else yuklendi++;
     // Liste kaydı (idempotent: dosya_yolu unique).
     const { error: dHata } = await sb.from('brans_kitaplari')
-      .upsert({ brans_slug: slug, baslik: baslikYap(dosya), dosya_yolu: yol, sira }, { onConflict: 'dosya_yolu' });
+      .upsert({ brans_slug: slug, baslik: baslikYap(dosya), dosya_yolu: yol, sira }, { onConflict: 'brans_slug,dosya_yolu' });
     if (dHata) { hata++; console.error(`  DB HATA ${yol}: ${dHata.message}`); } else kayit++;
   }
   console.log(`  [${slug}] ${pdfler.length} kitap işlendi`);

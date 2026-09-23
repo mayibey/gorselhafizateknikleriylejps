@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
@@ -18,12 +19,19 @@ import { useUyelik } from '@/lib/uyelik-context';
  * göster (zoom/sayfa) + çizim/not katmanı (kalem/fosfor/silgi). Çizimler KİŞİYE ÖZEL + KALICI:
  * sayfa değişince RN'e gönderilir → kitap_notlari'ya kaydedilir; açılışta yüklenip geri çizilir.
  */
+/** KALDIĞI YERDEN DEVAM (başkan, 23 Eyl 2026): kitap kapanınca son bakılan sayfa cihazda tutulur,
+ *  bir sonraki açılışta oradan başlar. Anahtar kitap yoluna bağlı — her kitap kendi yerini hatırlar. */
+const SON_SAYFA_ONEK = 'jsps.kitap.sonsayfa.';
+/** Büyük kitap (Altın Özet 7 MB) tek dev string olarak WebView'e verilmez; 512 KB'lık parçalar. */
+const PARCA = 512 * 1024;
+
 export default function KitapScreen() {
   const { yol, baslik } = useLocalSearchParams<{ yol?: string; baslik?: string }>();
   const [durum, setDurum] = useState<'yukleniyor' | 'hazir' | 'hata'>('yukleniyor');
   const [html, setHtml] = useState<string | null>(null);
   const pdfB64 = useRef<string | null>(null);
   const notlar = useRef<Record<number, unknown>>({});
+  const baslangicSayfa = useRef(1);
   const web = useRef<WebView>(null);
   const router = useRouter();
 
@@ -48,6 +56,12 @@ export default function KitapScreen() {
       const kayitli = await kitapNotlari(yol);
       const n: Record<number, unknown> = {};
       kayitli.forEach((v, k) => (n[k] = v));
+      try {
+        const son = await AsyncStorage.getItem(SON_SAYFA_ONEK + yol);
+        baslangicSayfa.current = Math.max(1, Number(son) || 1);
+      } catch {
+        baslangicSayfa.current = 1;
+      }
       if (iptal) return;
       pdfB64.current = bytesToB64(buf);
       notlar.current = n;
@@ -60,9 +74,14 @@ export default function KitapScreen() {
 
   // WebView yüklenince PDF'i + kayıtlı notları görüntüleyiciye enjekte et.
   const yuklenince = useCallback(() => {
-    if (!pdfB64.current) return;
+    const b64 = pdfB64.current;
+    if (!b64) return;
+    // PDF'i parça parça ver (tek dev injectJavaScript büyük kitapta takılıyordu), sonra başlat.
+    for (let i = 0; i < b64.length; i += PARCA) {
+      web.current?.injectJavaScript(`window.parcaEkle(${JSON.stringify(b64.slice(i, i + PARCA))}); true;`);
+    }
     web.current?.injectJavaScript(
-      `window.baslat(${JSON.stringify(pdfB64.current)}, ${JSON.stringify(notlar.current)}, ${JSON.stringify(yol ?? '')}); true;`,
+      `window.baslat(null, ${JSON.stringify(notlar.current)}, ${JSON.stringify(yol ?? '')}, ${baslangicSayfa.current}); true;`,
     );
   }, [yol]);
 
@@ -72,6 +91,8 @@ export default function KitapScreen() {
         const m = JSON.parse(e.nativeEvent.data) as { tip: string; sayfa?: number; veri?: unknown };
         if (m.tip === 'hazir') setDurum('hazir');
         else if (m.tip === 'hata') setDurum('hata');
+        else if (m.tip === 'sayfa' && yol && m.sayfa != null)
+          void AsyncStorage.setItem(SON_SAYFA_ONEK + yol, String(m.sayfa)).catch(() => undefined);
         else if (m.tip === 'kaydet' && yol && m.sayfa != null) void kitapNotuKaydet(yol, m.sayfa, m.veri);
       } catch {
         /* yoksay */
