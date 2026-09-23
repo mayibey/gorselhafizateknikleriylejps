@@ -2732,3 +2732,13 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   (46 ham → gerçek 3); Kamu Konutları paketine MEBS terör-yardım sorusu, Taşınır Mal paketine 2863 ikramiye soruları karışmış.
   Karayolu Taşıma Yön. çok büyük (78 madde, 623 satır) → 7 nokta halinde; Harcama Belgeleri ikmalin en çok sorulanı (12 çıkmış).
 - **SIRADA:** bakım(14) · istihkam(10) · maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
+
+### 24 Eylül 2026 — Bakım Altın Özet basıldı ve YÜKLENDİ (commit 051c60b)
+
+- `icerik/ozet_B_bakim.md`: 26 mevzuat, 152 altın nokta, 41 ★, 150 sayfa, 29 yer imi. Ölçüm: Tuzak %100 · Ne demek %100 · Örnek %30.
+  Bakım emri = ikmal emrinin 25 mevzuatı (kapsam maddeleri birebir aynı, betikle doğrulandı) + Ses ve Gaz Fişeği Atabilen Silahlar Yön.
+  → kitap ikmal içeriğinden türetildi, yalnız yeni bölüm yazıldı. `BRANSLAR`'a `bakim` eklendi.
+- Sunucu: `pdf/bakim/JSPS-2026-Altin-Ozet-bakim.pdf` (4,8→3,6 MB); satırlar `altin_bakim` + `bakim`.
+- İstihkam paketi üretildi: ikmalden besleme bloğu (5668, Gıda Hijyeni, Tayın 132, Beslenme 130, Uygulama 129) çıkıyor,
+  4 yeni kanun giriyor: 5543 İskân, 3194 İmar, 3402 Kadastro, 2565 Askeri Yasak Bölgeler (hiçbirinde çıkmış yok, İskân'da 1).
+- **SIRADA:** istihkam(10) · maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
