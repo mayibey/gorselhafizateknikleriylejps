@@ -1,0 +1,933 @@
+{
+"grup": "B",
+"law_id": 14,
+"ad": "5070 sayılı Elektronik İmza Kanunu",
+"emir_maddeleri": [
+2,
+3,
+4,
+5
+],
+"madde_sayisi": 12,
+"maddeler": [
+{
+"anahtar": "EIMZA 5070 m.3",
+"no": "3",
+"metin": "Bu Kanunda geçen; a) Elektronik veri: Elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtları, b) Elektronik imza: Başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veriyi, c) İmza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişiyi, d) İmza oluşturma verisi: İmza sahibine ait olan, imza sahibi tarafından elektronik imza oluşturma amacıyla kullanılan ve bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi verileri, e) İmza oluşturma aracı: Elektronik imza oluşturmak üzere, imza oluşturma verisini kullanan yazılım veya donanım aracını, f) İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri, g) İmza doğrulama aracı: Elektronik imzayı doğrulamak amacıyla imza doğrulama verisini kullanan yazılım veya donanım aracını, h) Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,\n1 5/11/2008 tarihli ve 5809 sayılı Elektronik Haberleşme Kanununun 65 inci maddesinin üçüncü fıkrasında “Diğer mevzuatta geçen “Telekomünikasyon Kurumu” ibaresinden “Kurum”; “Telekomünikasyon Kurulu” ibaresinden de “Kurul” anlaşılır.” hükmü yer almaktadır.\nı) Elektronik sertifika: İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kaydı,\nj) Kurum: Telekomünikasyon Kurumunu, ifade eder.\nİKİNCİ KISIM Güvenli Elektronik İmza ve Sertifika Hizmetleri\nBİRİNCİ BÖLÜM Güvenli Elektronik İmza, Güvenli Elektronik İmza\nOluşturma ve Doğrulama Araçları Güvenli elektronik imza"
+},
+{
+"anahtar": "EIMZA 5070 m.4",
+"no": "4",
+"metin": "Güvenli elektronik imza; a) Münhasıran imza sahibine bağlı olan, b) Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan, c) Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan, d) İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlayan, elektronik imzadır.\nGüvenli elektronik imzanın hukukî sonucu ve uygulama alanı"
+},
+{
+"anahtar": "EIMZA 5070 m.5",
+"no": "5",
+"metin": "Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur. Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.23\nGüvenli elektronik imza oluşturma araçları"
+},
+{
+"anahtar": "EIMZA 5070 m.2",
+"no": "2",
+"metin": "Bu Kanun, elektronik imzanın hukukî yapısını, elektronik sertifika hizmet sağlayıcılarının faaliyetlerini ve her alanda elektronik imzanın kullanımına ilişkin işlemleri kapsar.\nTanımlar"
+},
+{
+"anahtar": "EIMZA 5070 m.Ek 1",
+"no": "Ek",
+"metin": "(Ek:28/1/2021-7263/14 md.) Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir. Elektronik mühür sahibi; elektronik mührü oluşturan kamu kurum ve kuruluşları, kamu idareleri, kamu kurumu niteliğindeki meslek kuruluşları ve üst kuruluşları, kamu ve özel hukuk tüzel kişileri ile yargı mercileri ve noterliklerdir. Elektronik mühür, elektronik belgenin veya verinin mühür sahibi tarafından oluşturulduğunu, belgenin veya verinin kaynağını ve bütünlüğünü garanti eden delil kaydıdır. Elektronik mühür, resmî mühür dâhil her türlü fiziki mühür ile aynı hukuki niteliği haizdir. Elektronik mühür oluşturma amacı ile ilgili mühür sahibinin rızası veya talebi dışında; mühür oluşturma verisi veya mühür oluşturma aracını elde eden, veren, kopyalayan ve bu araçları yeniden oluşturanlar ile izinsiz elde edilen mühür oluşturma araçlarını kullanarak izinsiz elektronik mühür oluşturanlar bir yıldan üç yıla kadar hapis ve elli günden az olmamak üzere adlî para cezasıyla cezalandırılırlar. Suçun elektronik sertifika hizmet sağlayıcısı çalışanları tarafından işlenmesi halinde, bu cezalar yarısına kadar artırılır. Kanunlarda yer alan elektronik imzaya ilişkin hükümler, kıyasen elektronik mühür hakkında da uygulanır. Elektronik sertifika hizmet sağlayıcılarının kanunlarda yer alan elektronik imza ile ilgili hak, yetki ve yükümlülükleri, elektronik mühür hakkında da uygulanır. Bu yükümlülüklere aykırı hareket eden elektronik sertifika hizmet sağlayıcıları hakkında 18 inci maddede belirtilen idari para cezaları uygulanır.\nİnternet sitesi kimlik doğrulama sertifikası ve diğer elektronik sertifikalar"
+},
+{
+"anahtar": "EIMZA 5070 m.Ek 2",
+"no": "Ek",
+"metin": "(Ek:28/1/2021-7263/15 md.) İnternet sitesi kimlik doğrulama sertifikası, bir internet sitesi ile bu sitenin sahibi olan gerçek veya tüzel kişinin bilgilerini birbirine bağlayan elektronik kayıttır. Benzer altyapıyı kullanan diğer elektronik sertifikalar, elektronik veriyi şifreleme veya verinin bütünlüğünü, inkâr edilemezliğini ve kaynağını belirleme gibi amaçlarla kullanılmak üzere elektronik sertifika hizmet sağlayıcıları tarafından açık anahtar altyapısı vasıtasıyla üretilen sertifikalardır. Kanunlarda yer alan elektronik imzaya ilişkin hükümler, kıyasen internet sitesi kimlik doğrulama sertifikası ve benzer altyapıyı kullanan diğer elektronik sertifikalar hakkında da uygulanır. Elektronik sertifika hizmet sağlayıcılarının kanunlarda yer alan elektronik imza ile ilgili hak, yetki ve yükümlülükleri, internet sitesi kimlik doğrulama sertifikası ve benzer altyapıyı kullanan diğer elektronik sertifikalar hakkında da uygulanır. Bu yükümlülüklere aykırı hareket eden elektronik sertifika hizmet sağlayıcıları hakkında 18 inci maddede belirtilen idari para cezaları uygulanır.\nYürürlük"
+},
+{
+"anahtar": "E-İmza m.3",
+"no": "3",
+"metin": "Bu Kanunda geçen; a) Elektronik veri: Elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtları, b) Elektronik imza: Başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veriyi, c) İmza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişiyi, d) İmza oluşturma verisi: İmza sahibine ait olan, imza sahibi tarafından elektronik imza oluşturma amacıyla kullanılan ve bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi verileri, e) İmza oluşturma aracı: Elektronik imza oluşturmak üzere, imza oluşturma verisini kullanan yazılım veya donanım aracını, f) İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri, g) İmza doğrulama aracı: Elektronik imzayı doğrulamak amacıyla imza doğrulama verisini kullanan yazılım veya donanım aracını, h) Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve / veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı,\n1 5/11/2008 tarihli ve 5809 sayılı Elektronik Haberleşme Kanununun 65 inci maddesinin üçüncü fıkrasında “Diğer mevzuatta geçen “Telekomünikasyon Kurumu” ibaresinden “Kurum”; “Telekomünikasyon Kurulu” ibaresinden de “Kurul” anlaşılır.” hükmü yer almaktadır.\nı) Elektronik sertifika: İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kaydı,\nj) Kurum: Telekomünikasyon Kurumunu, ifade eder.\nİKİNCİ KISIM Güvenli Elektronik İmza ve Sertifika Hizmetleri\nBİRİNCİ BÖLÜM Güvenli Elektronik İmza, Güvenli Elektronik İmza\nOluşturma ve Doğrulama Araçları Güvenli elektronik imza"
+},
+{
+"anahtar": "E-İmza m.4",
+"no": "4",
+"metin": "Güvenli elektronik imza; a) Münhasıran imza sahibine bağlı olan, b) Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan, c) Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan, d) İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlayan, elektronik imzadır.\nGüvenli elektronik imzanın hukukî sonucu ve uygulama alanı"
+},
+{
+"anahtar": "E-İmza m.5",
+"no": "5",
+"metin": "Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur. Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ile banka teminat mektupları ve Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.23\nGüvenli elektronik imza oluşturma araçları"
+},
+{
+"anahtar": "E-İmza m.2",
+"no": "2",
+"metin": "Bu Kanun, elektronik imzanın hukukî yapısını, elektronik sertifika hizmet sağlayıcılarının faaliyetlerini ve her alanda elektronik imzanın kullanımına ilişkin işlemleri kapsar.\nTanımlar"
+},
+{
+"anahtar": "E-İmza m.Ek 1",
+"no": "Ek",
+"metin": "(Ek:28/1/2021-7263/14 md.) Elektronik mühür, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve mühür sahibinin bilgilerini doğrulama amacıyla kullanılan elektronik veridir. Elektronik mühür sahibi; elektronik mührü oluşturan kamu kurum ve kuruluşları, kamu idareleri, kamu kurumu niteliğindeki meslek kuruluşları ve üst kuruluşları, kamu ve özel hukuk tüzel kişileri ile yargı mercileri ve noterliklerdir. Elektronik mühür, elektronik belgenin veya verinin mühür sahibi tarafından oluşturulduğunu, belgenin veya verinin kaynağını ve bütünlüğünü garanti eden delil kaydıdır. Elektronik mühür, resmî mühür dâhil her türlü fiziki mühür ile aynı hukuki niteliği haizdir. Elektronik mühür oluşturma amacı ile ilgili mühür sahibinin rızası veya talebi dışında; mühür oluşturma verisi veya mühür oluşturma aracını elde eden, veren, kopyalayan ve bu araçları yeniden oluşturanlar ile izinsiz elde edilen mühür oluşturma araçlarını kullanarak izinsiz elektronik mühür oluşturanlar bir yıldan üç yıla kadar hapis ve elli günden az olmamak üzere adlî para cezasıyla cezalandırılırlar. Suçun elektronik sertifika hizmet sağlayıcısı çalışanları tarafından işlenmesi halinde, bu cezalar yarısına kadar artırılır. Kanunlarda yer alan elektronik imzaya ilişkin hükümler, kıyasen elektronik mühür hakkında da uygulanır. Elektronik sertifika hizmet sağlayıcılarının kanunlarda yer alan elektronik imza ile ilgili hak, yetki ve yükümlülükleri, elektronik mühür hakkında da uygulanır. Bu yükümlülüklere aykırı hareket eden elektronik sertifika hizmet sağlayıcıları hakkında 18 inci maddede belirtilen idari para cezaları uygulanır.\nİnternet sitesi kimlik doğrulama sertifikası ve diğer elektronik sertifikalar"
+},
+{
+"anahtar": "E-İmza m.Ek 2",
+"no": "Ek",
+"metin": "(Ek:28/1/2021-7263/15 md.) İnternet sitesi kimlik doğrulama sertifikası, bir internet sitesi ile bu sitenin sahibi olan gerçek veya tüzel kişinin bilgilerini birbirine bağlayan elektronik kayıttır. Benzer altyapıyı kullanan diğer elektronik sertifikalar, elektronik veriyi şifreleme veya verinin bütünlüğünü, inkâr edilemezliğini ve kaynağını belirleme gibi amaçlarla kullanılmak üzere elektronik sertifika hizmet sağlayıcıları tarafından açık anahtar altyapısı vasıtasıyla üretilen sertifikalardır. Kanunlarda yer alan elektronik imzaya ilişkin hükümler, kıyasen internet sitesi kimlik doğrulama sertifikası ve benzer altyapıyı kullanan diğer elektronik sertifikalar hakkında da uygulanır. Elektronik sertifika hizmet sağlayıcılarının kanunlarda yer alan elektronik imza ile ilgili hak, yetki ve yükümlülükleri, internet sitesi kimlik doğrulama sertifikası ve benzer altyapıyı kullanan diğer elektronik sertifikalar hakkında da uygulanır. Bu yükümlülüklere aykırı hareket eden elektronik sertifika hizmet sağlayıcıları hakkında 18 inci maddede belirtilen idari para cezaları uygulanır.\nYürürlük"
+}
+],
+"cikmis_sorular": [
+{
+"kok": "“İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıttır.” 5070 sayılı Elektronik İmza Kanunu’nda yer alan ve yukarıda açıklaması verilen ifade aşağıdakilerden hangisine aittir?",
+"siklar": [
+"Elektronik imza",
+"Elektronik veri",
+"İmza doğrulama verisi",
+"İmza sahibi",
+"Elektronik sertifika"
+],
+"rutbe": "astsubay",
+"kitapcik": "k1"
+},
+{
+"kok": "5070 sayılı Elektronik İmza Kanunu gereğince, güvenli elektronik imza ile ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?",
+"siklar": [
+"Elle atılan imzadan farklı hukuki sonuçlar doğurur.",
+"Münhasıran imza sahibine bağlıdır.",
+"Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulur.",
+"Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlar.",
+"İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlar."
+],
+"rutbe": "astsubay",
+"kitapcik": "k3"
+},
+{
+"kok": "5070 sayılı Elektronik İmza Kanunu’na göre elektronik imza oluşturmak üzere, imza oluşturma verisini kullanan yazılım veya donanım aracını aşağıdakilerden hangisi ifade eder?",
+"siklar": [
+"İmza doğrulama verisi",
+"İmza doğrulama aracı",
+"Elektronik sertifika",
+"Elektronik veri",
+"İmza oluşturma aracı"
+],
+"rutbe": "astsubay",
+"kitapcik": "k4"
+},
+{
+"kok": "5070 sayılı Elektronik İmza Kanunu'na göre güvenli elektronik imzanın hukuki sonucu ve uygulama alanına ilişkin aşağıdakilerden hangisi yanlıştır?",
+"siklar": [
+"Güvenli elektronik imza, elle atılan imza ile aynı hukuki sonucu doğurur.",
+"Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukuki işlemler güvenli elektronik imza ile gerçekleştirilemez.",
+"Banka teminat mektupları güvenli elektronik imza ile gerçekleştirilebilir.",
+"Elektronik ortamda güvenli elektronik imza kullanılarak dava açılamaz, harç ve avans ödenemez, dava dosyaları incelenemez.",
+"Türkiye’de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri güvenli elektronik imza ile gerçekleştirilebilir. 7 Diğer sayfaya geçiniz. T.C. İÇİŞLERİ BAKANLIĞI JANDARMA VE SAHİL GÜVENLİK AKADEMİSİ BAŞKANLIĞI JANDARMA VE SAHİL GÜVENLİK PERSONELİ (JSPS) YAZILI SINAVI JANDARMA ASTSUBAY 19.10.2024"
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-01"
+},
+{
+"kok": "“İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıttır.” 5070 sayılı Elektronik İmza Kanunu’nda yer alan ve yukarıda açıklaması verilen ifade aşağıdakilerden hangisine aittir?",
+"siklar": [
+"Elektronik imza",
+"Elektronik veri",
+"İmza doğrulama verisi",
+"İmza sahibi",
+"Elektronik sertifika"
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-02"
+},
+{
+"kok": "5070 sayılı Elektronik İmza Kanunu gereğince, güvenli elektronik imza ile ilgili olarak aşağıda verilen bilgilerden hangisi yanlıştır?",
+"siklar": [
+"Elle atılan imzadan farklı hukuki sonuçlar doğurur.",
+"Münhasıran imza sahibine bağlıdır.",
+"Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulur.",
+"Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlar.",
+"İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlar."
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-06"
+},
+{
+"kok": "5070 sayılı Elektronik İmza Kanunu gereğince, “İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıttır.” ifadesi aşağıdakilerden hangisini tanımlamaktadır?",
+"siklar": [
+"İmza oluşturma verisi",
+"İmza oluşturma aracı",
+"İmza doğrulama verisi",
+"İmza doğrulama aracı",
+"Elektronik sertifika"
+],
+"rutbe": "subay",
+"kitapcik": "k9-08"
+},
+{
+"kok": "5070 sayılı Elektronik İmza Kanunu’na göre, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veriye ne ad verilir?",
+"siklar": [
+"QR kodu",
+"Zaman damgası",
+"Elektronik sertifika",
+"Zaman belgesi",
+"Elektronik imza"
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-14"
+},
+{
+"kok": "5070 sayılı Elektronik İmza Kanunu’na göre, güvenli elektronik imza ile ilgili aşağıdakilerden hangisi yanlıştır?",
+"siklar": [
+"Münhasıran imza sahibine bağlıdır.",
+"Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlar.",
+"Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulur.",
+"İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlar.",
+"Elle atılan imza ile aynı hukuki sonucu doğurmaz."
+],
+"rutbe": "uzman jandarma",
+"kitapcik": "k9-17"
+}
+],
+"mebs2024": [
+{
+"soru": 50,
+"madde": "EIMZA 5070 m.3/e",
+"alinti": "e) İmza oluşturma aracı: Elektronik imza oluşturmak üzere, imza oluşturma verisini kullanan yazılım veya donanım aracını, f) İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri, g) İmza doğrulama aracı: Elektronik imzayı doğrulamak amacıyla imza doğrulama verisini kullanan yazılım veya donanım aracını",
+"aciklama": "E doğrudur. Soru kökü, m.3/e'deki 'imza oluşturma aracı' tanımının birebir kendisidir. İmza doğrulama aracı ise imzayı doğrulamak için doğrulama verisini kullanan araçtır (g bendi); elektronik sertifika, imza doğrulama verisi ile kimlik bilgilerini bağlayan kayıttır (ı bendi); elektronik veri ise elektronik yollarla üretilen kayıtları ifade eder (a bendi).",
+"guven": "kesin",
+"kok": "5070 sayılı Elektronik İmza Kanunu’na göre elektronik imza oluşturmak üzere, imza oluşturma verisini kullanan yazılım veya donanım aracını aşağıdakilerden hangisi ifade eder?",
+"siklar": {
+"A": "İmza doğrulama verisi",
+"B": "İmza doğrulama aracı",
+"C": "Elektronik sertifika",
+"D": "Elektronik veri",
+"E": "İmza oluşturma aracı"
+},
+"dogru": "E"
+}
+],
+"banka_sorulari": [
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, \"elektronik imza\" aşağıdakilerden hangisidir?",
+"siklar": [
+"İmza sahibinin parmak izinin dijital kopyası",
+"Elle atılan imzanın tarandıktan sonra elektronik ortama aktarılmış hâli",
+"Yalnızca nitelikli elektronik sertifika ile oluşturulan imza türü",
+"Bir kamu kurumunca onaylanmış dijital kimlik belgesi",
+"Başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veri"
+],
+"dogru": 4,
+"aciklama": "m.3/b: \"Elektronik imza: Başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veriyi... ifade eder.\"",
+"kaynak": "5070 m.3/b"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdakilerden hangisi bu tanımın bir unsuru DEĞİLDİR?",
+"siklar": [
+"Kimlik doğrulama amacıyla kullanılması",
+"Elektronik veri niteliğinde olması",
+"Elektronik veriyle mantıksal bağlantısının bulunması",
+"Başka bir elektronik veriye eklenmiş olması",
+"Elle atılan imza ile aynı hukuki sonucu doğurması"
+],
+"dogru": 4,
+"aciklama": "m.3/b tanımı yalnızca \"eklenen/mantıksal bağlı olma\", \"kimlik doğrulama amacı\" ve \"elektronik veri olma\" unsurlarını içerir; ıslak imzayla aynı hukuki sonucu doğurma niteliği elektronik imzanın değil, güvenli elektronik imzanın (ayrı bir hükmün) özelliğidir.",
+"kaynak": "5070 m.3/b"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, \"imza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan ________ kişiyi ifade eder.\" Boşluğa gelmesi gereken kelime hangisidir?",
+"siklar": [
+"gerçek",
+"nitelikli",
+"yetkili",
+"tüzel",
+"resmi"
+],
+"dogru": 0,
+"aciklama": "m.3/c: \"İmza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişiyi... ifade eder.\"",
+"kaynak": "5070 m.3/c"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu kapsamında: Kanunu'na göre \"elektronik veri\" tanımı aşağıdakilerden hangisidir?",
+"siklar": [
+"Kriptografik anahtarla şifrelenmiş bilgiler",
+"Yalnızca bilgisayar ortamında saklanan dijital dosyalar",
+"Elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtlar",
+"Nitelikli sertifika ile ilişkilendirilmiş kayıtlar",
+"İnternet üzerinden gönderilen her türlü mesaj"
+],
+"dogru": 2,
+"aciklama": "m.3/a: \"Elektronik veri: Elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtları... ifade eder.\"",
+"kaynak": "5070 m.3/a"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdakilerden hangisi doğrudur?",
+"siklar": [
+"İmza doğrulama verisi yalnızca Kurum tarafından üretilir",
+"İmza oluşturma verisi herkese açık olup imza doğrulama verisi gizlidir",
+"İmza oluşturma verisi zaman damgasıyla aynı anlama gelir",
+"İmza oluşturma verisi imza sahibine ait, bir eşi olmayan gizli veridir; imza doğrulama verisi ise imzayı doğrulamak için kullanılan verilerdir",
+"Her iki veri de aynı kişide, aynı gizlilik derecesinde bulunur"
+],
+"dogru": 3,
+"aciklama": "m.3/d imza oluşturma verisini imza sahibine ait, eşi olmayan şifreler/gizli anahtarlar olarak; m.3/f imza doğrulama verisini imzayı doğrulamak için kullanılan şifreler/açık anahtarlar olarak tanımlar.",
+"kaynak": "5070 m.3/d, m.3/f"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, imza oluşturma verisi, \"imza sahibi tarafından elektronik imza oluşturmak amacıyla kullanılan ve bir eşi daha olmayan ________ler, kriptografik gizli anahtarlar gibi verileri\" ifade eder. Boşluğa gelmesi gereken kelime hangisidir?",
+"siklar": [
+"parola",
+"şifre",
+"anahtar",
+"kod",
+"sertifika"
+],
+"dogru": 1,
+"aciklama": "m.3/d metninde ifade aynen \"...bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi verileri...\" şeklindedir.",
+"kaynak": "5070 m.3/d"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, \"imza doğrulama verisi\" nedir?",
+"siklar": [
+"Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi veriler",
+"Nitelikli sertifikanın başka adı",
+"Yalnızca Kurum tarafından saklanan gizli anahtarlar",
+"İmza sahibinin kimlik bilgilerini içeren belge",
+"Zaman damgasını oluşturan kriptografik kayıt"
+],
+"dogru": 0,
+"aciklama": "m.3/f: \"İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri... ifade eder.\"",
+"kaynak": "5070 m.3/f"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, \"zaman damgası\" tanımı aşağıdakilerden hangisidir?",
+"siklar": [
+"Nitelikli sertifikanın düzenlenme tarihi",
+"Kurum tarafından yıllık olarak yayımlanan onay listesi",
+"İmza sahibinin doğum tarihini gösteren resmi kayıt",
+"Bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespiti amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayıt",
+"Elektronik sertifikanın geçerlilik süresinin bitiş tarihi"
+],
+"dogru": 3,
+"aciklama": "m.3/h: \"Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı... ifade eder.\"",
+"kaynak": "5070 m.3/h"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, zaman damgası, bir elektronik verinin hangi hususlardaki zamanının tespiti amacıyla düzenlenir? Aşağıdakilerden hangisi bu hususlar arasında yer ALMAZ?",
+"siklar": [
+"Gönderildiği zaman",
+"Alındığı zaman",
+"Değiştirildiği zaman",
+"İmza sahibinin doğum tarihi",
+"Üretildiği zaman"
+],
+"dogru": 3,
+"aciklama": "m.3/h metninde sayılan hususlar üretilme, değiştirilme, gönderilme, alınma ve/veya kaydedilme zamanlarıdır; imza sahibinin doğum tarihi bu maddede geçmez.",
+"kaynak": "5070 m.3/h"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, \"elektronik sertifika\" tanımı hangisidir?",
+"siklar": [
+"Güvenli elektronik imza oluşturma aracının teknik onay belgesi",
+"Kurum tarafından verilen faaliyet izin belgesi",
+"İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kayıt",
+"Zaman damgasının başka adı",
+"İmza sahibinin gizli anahtarını içeren kriptografik dosya"
+],
+"dogru": 2,
+"aciklama": "m.3/ı: \"Elektronik sertifika: İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kaydı... ifade eder.\"",
+"kaynak": "5070 m.3/ı"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, kanun lafzında \"Kurum\" ibaresi, \"________ Kurumunu ifade eder.\" Boşluğa gelmesi gereken kelime hangisidir? (Kanunun birebir metnindeki asıl ibare esas alınmıştır.)",
+"siklar": [
+"Elektronik Haberleşme",
+"Telekomünikasyon",
+"Rekabet",
+"Sayıştay",
+"Bilgi Teknolojileri ve İletişim"
+],
+"dogru": 1,
+"aciklama": "m.3/j'nin kanun lafzı: \"Kurum: Telekomünikasyon Kurumunu... ifade eder.\" (Bu ibarenin güncelde BTK olarak anlaşıldığına dair ayrı bir kanuni düzenleme mevcuttur, ancak soru doğrudan madde lafzını sormaktadır.)",
+"kaynak": "5070 m.3/j"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, \"güvenli elektronik imza\"nın tanımında sayılan unsurlar arasında aşağıdakilerden hangisi YER ALMAZ?",
+"siklar": [
+"İmzalanmış veride sonradan değişiklik yapılıp yapılmadığının tespitini sağlaması",
+"Münhasıran imza sahibine bağlı olması",
+"Nitelikli elektronik sertifikaya dayanarak kimlik tespitini sağlaması",
+"Sadece imza sahibinin tasarrufunda bulunan araçla oluşturulması",
+"Noter tarafından onaylanmış olması"
+],
+"dogru": 4,
+"aciklama": "m.4 (a)-(d) bentlerinde sayılan dört unsur sahibine bağlılık, sahibinin tasarrufundaki araç, nitelikli sertifikayla kimlik tespiti ve sonradan değişiklik tespitidir; noter onayı kanunda aranan bir unsur değildir.",
+"kaynak": "5070 m.4"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, güvenli elektronik imza, \"sadece imza sahibinin ________ bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan\" imzadır. Boşluğa gelmesi gereken ifade hangisidir?",
+"siklar": [
+"zilyetliğinde",
+"denetiminde",
+"tasarrufunda",
+"mülkiyetinde",
+"yetkisinde"
+],
+"dogru": 2,
+"aciklama": "m.4/b: \"Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan...\"",
+"kaynak": "5070 m.4/b"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, nitelikli elektronik sertifikaya dayanarak neyin tespiti sağlanır?",
+"siklar": [
+"İmzanın atıldığı yerin tespiti",
+"İmza sahibinin kimliğinin tespiti",
+"İmza sahibinin adresinin tespiti",
+"İmza sahibinin banka hesabının tespiti",
+"İmzanın geçerlilik süresinin tespiti"
+],
+"dogru": 1,
+"aciklama": "m.4/c: \"Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan...\"",
+"kaynak": "5070 m.4/c"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, bir elektronik imzanın \"güvenli elektronik imza\" sayılabilmesi için aşağıdaki unsurlardan hangi dördü birlikte gerçekleşmelidir?",
+"siklar": [
+"Noter onayı – zaman damgası – kimlik tespiti – banka teminatı",
+"Münhasıran sahibine bağlı olma – sadece sahibinin tasarrufundaki araçla oluşturulma – nitelikli sertifikayla kimlik tespiti – sonradan değişiklik tespiti",
+"İmza sahibinin rızası – tanık – noter – resmi şekil",
+"Kamu kurumunca onay – ıslak imza eşdeğerliği – gizlilik – süre sınırı",
+"Kurum kaydı – sertifikasyon – açık anahtar – ücretsiz kullanım"
+],
+"dogru": 1,
+"aciklama": "m.4 (a)-(d) bentlerinde sayılan dört unsurun tamamının birlikte gerçekleşmesi gerekir: sahibine bağlılık, sahibinin tasarrufundaki araç, nitelikli sertifikayla kimlik tespiti, sonradan değişiklik tespiti.",
+"kaynak": "5070 m.4"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, elektronik imza, \"başka bir elektronik veriye eklenen veya elektronik veriyle ________ bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veri\"dir. Boşluğa gelmesi gereken kelime hangisidir?",
+"siklar": [
+"fiziksel",
+"hukuki",
+"mantıksal",
+"idari",
+"teknik"
+],
+"dogru": 2,
+"aciklama": "m.3/b metninde ifade \"...elektronik veriyle mantıksal bağlantısı bulunan...\" şeklindedir.",
+"kaynak": "5070 m.3/b"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, elektronik veri hangi yollarla üretilebilir, taşınabilir veya saklanabilir?",
+"siklar": [
+"Yalnızca yazılı belge şeklinde",
+"Yalnızca manyetik bant yoluyla",
+"Yalnızca kablosuz iletişim yoluyla",
+"Elektronik, optik veya benzeri yollarla",
+"Yalnızca uydu üzerinden"
+],
+"dogru": 3,
+"aciklama": "m.3/a: \"Elektronik veri: Elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtları... ifade eder.\"",
+"kaynak": "5070 m.3/a"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdakilerden hangisi 5070 sayılı Kanunda tanımlanan kavramlardan biri DEĞİLDİR?",
+"siklar": [
+"Elektronik ticaret",
+"İmza sahibi",
+"Elektronik veri",
+"Zaman damgası",
+"İmza oluşturma verisi"
+],
+"dogru": 0,
+"aciklama": "m.3'te elektronik veri, elektronik imza, imza sahibi, imza oluşturma verisi, imza doğrulama verisi, zaman damgası, elektronik sertifika ve Kurum tanımlanmıştır; \"elektronik ticaret\" bu maddede tanımlanan bir kavram değildir.",
+"kaynak": "5070 m.3"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdaki tanımlardan hangisi \"güvenli elektronik imza\"yı doğru ifade eder?",
+"siklar": [
+"Banka teminat mektuplarında kullanılan özel imza türü",
+"Herhangi bir elektronik veriye eklenmiş, kimlik doğrulama amaçlı her türlü imza",
+"Münhasıran imza sahibine bağlı, sadece onun tasarrufundaki araçla oluşturulan, nitelikli sertifikayla kimlik tespiti sağlayan ve sonradan değişiklik tespiti sağlayan elektronik imza",
+"Yalnızca kamu kurumlarının kullanabildiği özel imza türü",
+"Noter huzurunda atılan ve taranan imza"
+],
+"dogru": 2,
+"aciklama": "m.4, güvenli elektronik imzayı (a)-(d) bentlerinde sayılan dört unsuru birlikte taşıyan elektronik imza olarak tanımlar.",
+"kaynak": "5070 m.4"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, güvenli elektronik imza, hangi imza türü ile aynı hukuki sonucu doğurur?",
+"siklar": [
+"Kaşeli imza",
+"Noter onaylı vekâletname imzası",
+"Elle atılan (ıslak) imza",
+"Mühürlü imza",
+"Parmak izi ile onay"
+],
+"dogru": 2,
+"aciklama": "Madde lafzı açıktır: 'Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur.' Eşdeğerlik yalnız elle atılan (ıslak) imzayla kurulmuştur.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdakilerden hangisi güvenli elektronik imza ile gerçekleştirilemez?",
+"siklar": [
+"Resmi şekle tabi bir hukuki işlemin yapılması",
+"Türkiye'de yerleşik sigorta şirketince kefalet senedi düzenlenmesi",
+"Sıradan bir ticari yazışmanın gönderilmesi",
+"Banka teminat mektubu düzenlenmesi",
+"Adi yazılı bir sözleşmenin yapılması"
+],
+"dogru": 0,
+"aciklama": "Madde: 'Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ... güvenli elektronik imza ile gerçekleştirilemez.' Resmi şekle tabi işlemler açıkça yasak kapsamındadır.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, kanunların özel bir merasime tabi tuttuğu hukuki işlemler bakımından güvenli elektronik imzanın durumu nedir?",
+"siklar": [
+"Bu işlemler yalnızca güvenli elektronik imza ile yapılabilir",
+"Yalnızca noter huzurunda güvenli e-imzayla yapılabilir",
+"Bu işlemler güvenli elektronik imza ile gerçekleştirilemez",
+"Islak imzayla birlikte kullanılması zorunludur",
+"Islak imzadan daha üstün sayılır ve tercih edilir"
+],
+"dogru": 2,
+"aciklama": "Madde metni özel merasime tabi hukuki işlemleri, resmi şekle tabi işlemlerle birlikte güvenli elektronik imzayla gerçekleştirilemeyecek işlemler arasında saymıştır.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu genel kural uyarınca teminat sözleşmeleri kural olarak nasıl değerlendirilir?",
+"siklar": [
+"Güvenli elektronik imza ile gerçekleştirilemez, kanundaki istisnalar hariç",
+"Noter tasdikiyle her türlü teminat sözleşmesinde e-imza kullanılabilir",
+"Kanun teminat sözleşmeleri konusunda düzenleme yapmamıştır",
+"Yalnızca yazılı şekilde yapılabilir, e-imza hiçbir şekilde kullanılamaz",
+"Güvenli elektronik imzayla serbestçe yapılabilir"
+],
+"dogru": 0,
+"aciklama": "Madde teminat sözleşmelerini, banka teminat mektupları ve Türkiye'de yerleşik sigorta şirketi kefalet senetleri 'dışındaki' teminat sözleşmeleri olarak sınırlayıp güvenli e-imzayla yapılamayacağını belirtmiştir; demek ki kural yasak, istisna serbestliktir.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdaki teminat türlerinden hangisi istisna kapsamında güvenli elektronik imza ile düzenlenebilir?",
+"siklar": [
+"Taşınmaz üzerinde kurulan ipotek sözleşmesi",
+"Gerçek kişiler arasındaki adi kefalet sözleşmesi",
+"Türkiye'de yerleşik olmayan bir sigorta şirketinin kefalet senedi",
+"Banka teminat mektubu",
+"Menkul rehni sözleşmesi"
+],
+"dogru": 3,
+"aciklama": "Madde açıkça 'banka teminat mektupları ve Türkiye'de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri' ifadesiyle bu ikisini istisna tutmuştur; banka teminat mektubu güvenli e-imzayla düzenlenebilir.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdakilerden hangisi 5070 sayılı Kanun uyarınca güvenli elektronik imza ile gerçekleştirilemeyen işlemler arasında YER ALMAZ?",
+"siklar": [
+"İstisna dışındaki adi teminat sözleşmeleri",
+"Resmi şekle tabi hukuki işlemler",
+"Özel bir merasime tabi hukuki işlemler",
+"Banka teminat mektupları",
+"Türkiye'de yerleşik olmayan sigorta şirketinin kefalet senedi"
+],
+"dogru": 3,
+"aciklama": "Madde, banka teminat mektuplarını 'dışındaki teminat sözleşmeleri' ifadesiyle yasağın kapsamı dışında tutmuştur; dolayısıyla banka teminat mektupları güvenli e-imzayla yapılabilir ve yasaklılar listesinde yer almaz.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, 'Güvenli elektronik imza, elle atılan imza ile aynı ____ sonucu doğurur.' cümlesindeki boşluğa gelmesi gereken kelime hangisidir?",
+"siklar": [
+"mali",
+"hukuki",
+"ticari",
+"cezai",
+"idari"
+],
+"dogru": 1,
+"aciklama": "Madde lafzı birebir 'aynı hukukî sonucu doğurur' şeklindedir; boşluğa 'hukuki' kelimesi gelir.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu kapsamında: '...banka teminat mektupları ve Türkiye'de ____ sigorta şirketleri tarafından düzenlenen kefalet senetleri dışındaki teminat sözleşmeleri...' cümlesindeki boşluğa madde lafzına göre hangi kelime gelir?",
+"siklar": [
+"faaliyet gösteren",
+"ruhsatlı",
+"tescilli",
+"kurulu",
+"yerleşik"
+],
+"dogru": 4,
+"aciklama": "Madde metninde birebir 'Türkiye'de yerleşik sigorta şirketleri' ifadesi geçer; istisna yalnız Türkiye'de yerleşik olma şartına bağlanmıştır.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, Türkiye'de yerleşik olmayan (yabancı) bir sigorta şirketinin düzenlediği kefalet senedi hakkında 5070 sayılı Kanun uyarınca ne söylenebilir?",
+"siklar": [
+"Kanun bu konuda hiçbir düzenleme getirmemiştir",
+"Yalnızca bir bankanın onayıyla güvenli e-imzayla düzenlenebilir",
+"İstisna kapsamındadır, güvenli elektronik imzayla düzenlenebilir",
+"Resmi şekle tabi işlem sayılır ve ayrıca yasaklanmıştır",
+"İstisna kapsamı dışında kalır, güvenli elektronik imza ile gerçekleştirilemez"
+],
+"dogru": 4,
+"aciklama": "Madde istisnayı yalnız 'Türkiye'de yerleşik sigorta şirketleri' ile sınırlamıştır; yabancı sigorta şirketinin kefalet senedi bu şartı taşımadığından istisna dışında kalır ve teminat sözleşmesi olarak yasak kapsamına girer.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, aşağıdakilerden hangisi güvenli elektronik imza ile geçerli şekilde gerçekleştirilebilir?",
+"siklar": [
+"Özel bir merasime tabi bir hukuki işlem",
+"Resmi şekle tabi bir hukuki işlem",
+"Yukarıdakilerin hiçbiri",
+"Banka teminat mektubu düzenlenmesi",
+"Türkiye'de yerleşik olmayan sigorta şirketinin kefalet senedi"
+],
+"dogru": 3,
+"aciklama": "Madde banka teminat mektuplarını yasağın 'dışındaki' teminat sözleşmeleri ifadesiyle istisna tutmuştur; bu nedenle banka teminat mektubu güvenli elektronik imzayla düzenlenebilir.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, 5070 sayılı Kanun hükmünün yapısı bakımından aşağıdakilerden hangisi doğrudur?",
+"siklar": [
+"Özel merasime tabi işlemler güvenli elektronik imzayla serbestçe yapılabilir",
+"Resmi şekle tabi işlemler istisna kapsamına alınmıştır",
+"Banka teminat mektupları da resmi şekle tabi işlem sayılır ve bu yüzden yasaktır",
+"Teminat sözleşmeleri istisnasız olarak güvenli elektronik imzayla hiç yapılamaz",
+"Teminat sözleşmelerinde kural yasaktır; ancak banka teminat mektupları ile Türkiye'de yerleşik sigorta şirketi kefalet senetleri bu yasağın dışında tutulmuştur"
+],
+"dogru": 4,
+"aciklama": "Madde metni önce genel yasağı (resmi şekil/özel merasim işlemleri ve teminat sözleşmeleri) koymuş, ardından teminat sözleşmeleri için banka teminat mektupları ve Türkiye'de yerleşik sigorta şirketi kefalet senetlerini istisna olarak ayrık tutmuştur.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, güvenli elektronik imzanın ıslak imzayla eşdeğer sayılmasının istisnası (yani e-imzayla yapılamayan işlemler) kaç ana başlık altında düzenlenmiştir?",
+"siklar": [
+"İki",
+"Bir",
+"Üç",
+"Dört",
+"Beş"
+],
+"dogru": 0,
+"aciklama": "Madde iki ana başlık öngörmüştür: (1) kanunların resmi şekle veya özel bir merasime tabi tuttuğu hukuki işlemler, (2) teminat sözleşmeleri (banka teminat mektupları ve Türkiye'de yerleşik sigorta şirketi kefalet senetleri hariç).",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, 'Kanunların resmî şekle veya özel bir ____ tabi tuttuğu hukukî işlemler ... güvenli elektronik imza ile gerçekleştirilemez.' cümlesindeki boşluğa madde lafzına göre hangi kelime gelir?",
+"siklar": [
+"düzenlemeye",
+"yönteme",
+"prosedüre",
+"usule",
+"merasime"
+],
+"dogru": 4,
+"aciklama": "Madde metninde birebir 'özel bir merasime tabi tuttuğu' ifadesi kullanılmıştır.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, 5070 sayılı Kanun ile ilgili aşağıdaki önermeleri değerlendiriniz: I. Güvenli elektronik imza, elle atılan imza ile aynı hukuki sonucu doğurur. II. Resmi şekle tabi hukuki işlemler güvenli elektronik imzayla yapılabilir. III. Banka teminat mektupları güvenli elektronik imzayla düzenlenebilir. IV. Türkiye'de yerleşik olmayan bir sigorta şirketinin kefalet senedi güvenli elektronik imzayla düzenlenebilir. Bu önermelerin doğru (D) / yanlış (Y) olarak sınıflandırılması hangi seçenekte doğru verilmiştir?",
+"siklar": [
+"I-D, II-Y, III-Y, IV-D",
+"I-Y, II-D, III-Y, IV-D",
+"I-D, II-D, III-Y, IV-Y",
+"I-Y, II-Y, III-D, IV-D",
+"I-D, II-Y, III-D, IV-Y"
+],
+"dogru": 4,
+"aciklama": "Madde lafzına göre: I doğru (eşdeğerlik hükmü); II yanlış (resmi şekle tabi işlemler yasak kapsamındadır); III doğru (banka teminat mektupları istisna kapsamında serbesttir); IV yanlış (istisna yalnız Türkiye'de yerleşik sigorta şirketleri için geçerlidir, yabancı şirket bu şartı taşımaz).",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'ndaki tanıma göre, başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan elektronik imza esas olarak hangi amaçla kullanılır?",
+"siklar": [
+"Veriyi sıkıştırmak",
+"Veriyi yedeklemek",
+"Verinin oluşturulma zamanını damgalamak",
+"Kimlik doğrulamak",
+"Veriyi şifreleyerek üçüncü kişilerden gizlemek"
+],
+"dogru": 3,
+"aciklama": "m.3/b: 'Elektronik imza: Başka bir elektronik veriye eklenen veya elektronik veriyle mantıksal bağlantısı bulunan ve kimlik doğrulama amacıyla kullanılan elektronik veriyi' ifade eder. Tanımdaki kullanım amacı kimlik doğrulamadır.",
+"kaynak": "5070 m.3/b"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, 'elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtlar' aşağıdaki kavramlardan hangisini ifade eder?",
+"siklar": [
+"Elektronik sertifika",
+"Elektronik veri",
+"Elektronik imza",
+"İmza doğrulama verisi",
+"Zaman damgası"
+],
+"dogru": 1,
+"aciklama": "m.3/a: 'Elektronik veri: Elektronik, optik veya benzeri yollarla üretilen, taşınan veya saklanan kayıtları' ifade eder.",
+"kaynak": "5070 m.3/a"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre 'imza sahibi' ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+"siklar": [
+"İmza sahibi yalnızca tüzel kişi olabilir.",
+"İmza sahibi gerçek veya tüzel kişi olabilir.",
+"İmza sahibi, elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişidir.",
+"İmza sahibi, elektronik sertifika hizmet sağlayıcısıdır.",
+"İmza sahibi, imza doğrulama verisini elinde bulunduran kamu kurumudur."
+],
+"dogru": 2,
+"aciklama": "m.3/c: 'İmza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişiyi' ifade eder. İmza sahibi yalnızca gerçek kişidir.",
+"kaynak": "5070 m.3/c"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, 'imza sahibine ait olan, imza sahibi tarafından elektronik imza oluşturmak amacıyla kullanılan ve bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi veriler' aşağıdakilerden hangisini ifade eder?",
+"siklar": [
+"İmza doğrulama verisi",
+"İmza oluşturma verisi",
+"Elektronik sertifika",
+"Zaman damgası",
+"Elektronik veri"
+],
+"dogru": 1,
+"aciklama": "m.3/d: 'İmza oluşturma verisi: İmza sahibine ait olan, imza sahibi tarafından elektronik imza oluşturmak amacıyla kullanılan ve bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi verileri' ifade eder.",
+"kaynak": "5070 m.3/d"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi veriler aşağıdakilerden hangisidir?",
+"siklar": [
+"İmza oluşturma verisi",
+"Elektronik veri",
+"İmza doğrulama verisi",
+"İmza oluşturma aracı",
+"Zaman damgası"
+],
+"dogru": 2,
+"aciklama": "m.3/f: 'İmza doğrulama verisi: Elektronik imzayı doğrulamak için kullanılan şifreler, kriptografik açık anahtarlar gibi verileri' ifade eder.",
+"kaynak": "5070 m.3/f"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre elektronik sertifika, imza sahibinin hangi iki unsurunu birbirine bağlayan elektronik kayıttır?",
+"siklar": [
+"İmza oluşturma verisi ile imza doğrulama verisini",
+"İmza oluşturma verisi ile kimlik bilgilerini",
+"Elektronik veri ile zaman damgasını",
+"Kimlik bilgileri ile yerleşim yeri bilgilerini",
+"İmza doğrulama verisi ile kimlik bilgilerini"
+],
+"dogru": 4,
+"aciklama": "m.3/ı: 'Elektronik sertifika: İmza sahibinin imza doğrulama verisini ve kimlik bilgilerini birbirine bağlayan elektronik kaydı' ifade eder. Sertifika, imza doğrulama verisi ile kimlik bilgilerini bağlar.",
+"kaynak": "5070 m.3/ı"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre 'zaman damgası' ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+"siklar": [
+"Bir elektronik verinin üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kayıttır.",
+"İmza sahibinin kimlik bilgilerini doğrulama verisine bağlayan elektronik kayıttır.",
+"İmza sahibine ait, bir eşi daha olmayan gizli anahtardır.",
+"Elektronik imza oluşturmak amacıyla kullanılan yazılım veya donanım aracıdır.",
+"Elektronik, optik veya benzeri yollarla üretilen kayıtlardır."
+],
+"dogru": 0,
+"aciklama": "m.3/h: 'Zaman damgası: Bir elektronik verinin, üretildiği, değiştirildiği, gönderildiği, alındığı ve/veya kaydedildiği zamanın tespit edilmesi amacıyla, elektronik sertifika hizmet sağlayıcısı tarafından elektronik imzayla doğrulanan kaydı' ifade eder.",
+"kaynak": "5070 m.3/h"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'nda 'Kurum' ibaresi Kanun lafzında Telekomünikasyon Kurumunu ifade etmekle birlikte, 5809 sayılı Elektronik Haberleşme Kanunu gereği bugün yürürlükteki makam ............ olarak anlaşılır.",
+"siklar": [
+"Bilgi Teknolojileri ve İletişim Kurumu (BTK)",
+"Bilgi Teknolojileri Kurumu",
+"Radyo ve Televizyon Üst Kurulu",
+"Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
+"Kişisel Verileri Koruma Kurumu"
+],
+"dogru": 0,
+"aciklama": "m.3/j Kanun lafzı 'Kurum: Telekomünikasyon Kurumunu' der; ancak 5809 sayılı Kanun m.65/3 gereği bu ibare bugün Bilgi Teknolojileri ve İletişim Kurumu (BTK) olarak anlaşılır; güncel/yürürlükteki makam BTK'dır.",
+"kaynak": "5070 m.3/j"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre güvenli elektronik imzanın unsurlarından biri olarak aşağıdakilerden hangisi sayılmıştır?",
+"siklar": [
+"İki ayrı imza sahibinin ortak tasarrufunda bulunan araçla oluşturulması",
+"Münhasıran imza sahibine bağlı olması",
+"Noter tarafından onaylanmış olması",
+"Elektronik sertifika hizmet sağlayıcısının mührünü taşıması",
+"Telekomünikasyon Kurumunca ayrıca tescil edilmiş olması"
+],
+"dogru": 1,
+"aciklama": "m.4/a: Güvenli elektronik imza 'münhasıran imza sahibine bağlı olan' bir elektronik imzadır. Diğer üç unsur: sadece imza sahibinin tasarrufundaki güvenli araçla oluşturulan, nitelikli sertifikaya dayanarak kimlik tespiti sağlayan, sonradan değişiklik tespitini sağlayan.",
+"kaynak": "5070 m.4"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre aşağıdakilerden hangisi güvenli elektronik imzanın unsurlarından biri değildir?",
+"siklar": [
+"Münhasıran imza sahibine bağlı olan",
+"Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan",
+"İmza sahibinin yerleşim yerinin valilikçe onaylanmasını sağlayan",
+"Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan",
+"İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlayan"
+],
+"dogru": 2,
+"aciklama": "m.4'te sayılan dört unsur A, B, D ve E'dir. C ('yerleşim yerinin valilikçe onaylanması') Kanun'da yer almayan sahte unsurdur.",
+"kaynak": "5070 m.4"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre güvenli elektronik imza, aşağıdakilerden hangisiyle aynı hukukî sonucu doğurur?",
+"siklar": [
+"Noter tasdikiyle",
+"Elle atılan imza ile",
+"Parmak iziyle",
+"Mühürle",
+"Resmî senetle"
+],
+"dogru": 1,
+"aciklama": "m.5/1: 'Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur.'",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre aşağıdaki işlemlerden hangisi güvenli elektronik imza ile gerçekleştirilebilir?",
+"siklar": [
+"Kanunların özel bir merasime tabi tuttuğu hukukî işlemler",
+"Banka teminat mektupları",
+"Kanunların resmî şekle tabi tuttuğu hukukî işlemler",
+"Banka teminat mektupları ve sigorta şirketi kefalet senetleri dışındaki teminat sözleşmeleri",
+"Resmî merasime tabi tutulan teminat işlemleri"
+],
+"dogru": 1,
+"aciklama": "m.5/2'ye göre 'banka teminat mektupları ve Türkiye'de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri DIŞINDAKİ teminat sözleşmeleri' yapılamaz. Banka teminat mektupları bu yasağın dışında olduğundan güvenli e-imza ile YAPILABİLİR.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre elektronik imza ile güvenli elektronik imza ilişkisi hakkında aşağıdakilerden hangisi yanlıştır?",
+"siklar": [
+"Her elektronik imza güvenli elektronik imza değildir.",
+"Elle atılan imza ile aynı hukukî sonucu yalnızca güvenli elektronik imza doğurur.",
+"Güvenli elektronik imza nitelikli elektronik sertifikaya dayanarak kimlik tespitini sağlar.",
+"Elektronik imza, kimlik doğrulama amacıyla kullanılan elektronik veridir.",
+"Her elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur."
+],
+"dogru": 4,
+"aciklama": "Islak imzayla eşdeğerlik (m.5) yalnızca GÜVENLİ elektronik imzaya tanınmıştır; sıradan elektronik imza bu sonucu doğurmaz. E yanlıştır. A, B, C, D Kanun'a uygundur.",
+"kaynak": "5070 m.3/b, m.4, m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, A, sahibi olduğu taşınmazı (gayrimenkulü) B'ye satmak istemektedir. Tarafların noter veya tapu önüne gitmesini gereksiz bulan A, satış işlemini tamamen elektronik ortamda güvenli elektronik imzalarıyla yapmayı teklif eder. 5070 sayılı Kanun karşısında bu işlem bakımından aşağıdakilerden hangisi doğrudur?",
+"siklar": [
+"Güvenli e-imza ıslak imzayla eşdeğer olduğundan, taşınmaz satışı da güvenli e-imza ile geçerli biçimde yapılabilir.",
+"Taşınmaz satışı kanunen resmî şekle tabi bir işlem olduğundan güvenli elektronik imza ile gerçekleştirilemez.",
+"İşlem ancak iki tarafın da nitelikli sertifika sahibi olması hâlinde güvenli e-imza ile yapılabilir.",
+"İşlem güvenli e-imza ile yapılabilir; yalnızca sonradan notere onaylatılması gerekir.",
+"İşlem güvenli e-imza ile yapılabilir; yeter ki Bilgi Teknolojileri ve İletişim Kurumu önceden izin versin."
+],
+"dogru": 1,
+"aciklama": "m.5/2: 'Kanunların resmî şekle veya özel bir merasime tabi tuttuğu hukukî işlemler ... güvenli elektronik imza ile gerçekleştirilemez.' Taşınmaz satışı resmî şekle tabi olduğundan güvenli e-imza ile yapılamaz; m.5/1'deki ıslak imza eşdeğerliği bu işlemler için bir istisna oluşturmaz.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, X Bankası, bir kamu ihalesine katılan Y firması lehine bir banka teminat mektubunu tamamen elektronik ortamda, yetkililerinin güvenli elektronik imzasıyla düzenler. Aynı dönemde Z şirketi de bir başka borca güvence olmak üzere (banka teminat mektubu veya Türkiye'de yerleşik sigorta şirketi kefalet senedi niteliğinde olmayan) bir teminat sözleşmesini güvenli e-imza ile yapmaya çalışır. bu iki işlemin durumu nedir?",
+"siklar": [
+"Her iki işlem de güvenli e-imza ile geçerli biçimde yapılabilir.",
+"Her iki işlem de güvenli e-imza ile yapılamaz; teminata ilişkin tüm işlemler yasak kapsamındadır.",
+"Banka teminat mektubu güvenli e-imza ile yapılabilir; Z'nin teminat sözleşmesi ise güvenli e-imza ile yapılamaz.",
+"Banka teminat mektubu güvenli e-imza ile yapılamaz; Z'nin teminat sözleşmesi ise yapılabilir.",
+"İki işlem de ancak Bilgi Teknolojileri ve İletişim Kurumu'nun onayıyla yapılabilir."
+],
+"dogru": 2,
+"aciklama": "m.5/2: '...banka teminat mektupları ve Türkiye'de yerleşik sigorta şirketleri tarafından düzenlenen kefalet senetleri DIŞINDAKİ teminat sözleşmeleri, güvenli elektronik imza ile gerçekleştirilemez.' Banka teminat mektubu yasağın DIŞINDA olduğundan güvenli e-imza ile yapılabilir; bu istisnaya girmeyen Z'nin teminat sözleşmesi ise yapılamaz.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, A ile B, resmî şekle veya özel bir merasime tabi olmayan bir hizmet sözleşmesini tamamen elektronik ortamda, geçerli güvenli elektronik imzalarıyla imzalar. Sonradan yükümlülüklerinden kaçınmak isteyen B, 'sözleşmede elle (ıslak) atılmış bir imza bulunmadığı için sözleşme hukuken geçersizdir' iddiasında bulunur. bu iddia hakkında ne söylenebilir?",
+"siklar": [
+"İddia haklıdır; elektronik imza hiçbir zaman ıslak imza yerine geçmez.",
+"İddia haksızdır; güvenli elektronik imza elle atılan imza ile aynı hukukî sonucu doğurur, sözleşme geçerlidir.",
+"İddia haklıdır; sözleşmenin geçerliliği için ayrıca noter onayı şarttır.",
+"İddia haklıdır; elektronik sözleşmeler ancak çıktısı alınıp ıslak imzayla imzalanırsa geçerli olur.",
+"İddia haksızdır; çünkü sıradan elektronik imza da elle atılan imza ile her zaman aynı sonucu doğurur."
+],
+"dogru": 1,
+"aciklama": "m.5/1: 'Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur.' İşlem resmî şekle/özel merasime de tabi olmadığından m.5/2 istisnasına girmez; güvenli e-imza ile imzalanan sözleşme geçerlidir.",
+"kaynak": "5070 m.5"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, X İnşaat A.Ş., kurumsal işlemlerini hızlandırmak için elektronik imzayı doğrudan tüzel kişi olan şirketin kendi adına 'imza sahibi' sıfatıyla kullanmak ister; yani sertifikanın bir gerçek kişiye değil, doğrudan şirkete ait olmasını talep eder. 5070 sayılı Kanun'daki tanım karşısında bu talep bakımından doğru olan nedir?",
+"siklar": [
+"Talep yerindedir; imza sahibi gerçek veya tüzel kişi olabilir.",
+"Talep yerindedir; imza sahibi yalnızca tüzel kişi olabilir.",
+"İmza sahibi, imza oluşturma aracını kullanan gerçek kişidir; tüzel kişi doğrudan imza sahibi olamaz.",
+"Talep yerindedir; ancak şirketin önce elektronik sertifika hizmet sağlayıcısı olarak yetkilendirilmesi gerekir.",
+"İmza sahibi, imza doğrulama verisini elinde bulunduran kamu kurumu olduğundan talep reddedilir."
+],
+"dogru": 2,
+"aciklama": "m.3/c: 'İmza sahibi: Elektronik imza oluşturmak amacıyla bir imza oluşturma aracını kullanan gerçek kişiyi' ifade eder. İmza sahibi yalnızca gerçek kişi olabilir; tüzel kişi (şirket) doğrudan imza sahibi olamaz, ancak yetkili gerçek kişisi imza sahibi olur.",
+"kaynak": "5070 m.3/c"
+},
+{
+"soru": "5070 sayılı Elektronik İmza Kanunu'na göre, A, işlerini hızlandırmak için elektronik imza oluştururken kullandığı imza oluşturma verisini (gizli/kriptografik gizli anahtarını) iş arkadaşı B ile paylaşır; böylece B de A adına imza atabilir hâle gelir. 5070 sayılı Kanun'daki tanım ve niteliklere göre bu durumun değerlendirilmesi için en doğru ifade hangisidir?",
+"siklar": [
+"Sorun yoktur; imza oluşturma verisi herkese açık bir anahtar olduğundan paylaşılması doğaldır.",
+"İmza oluşturma verisi imza sahibine ait, bir eşi daha olmayan gizli bir veridir ve güvenli e-imza münhasıran imza sahibine bağlı olmalıdır; bu nedenle verinin paylaşılması bu nitelikleri zedeler.",
+"Sorun yoktur; imza oluşturma verisi ile imza doğrulama verisi aynı şey olduğundan paylaşımın bir önemi yoktur.",
+"Paylaşım gereklidir; çünkü güvenli e-imza ancak iki kişinin ortak tasarrufundaki araçla oluşturulabilir.",
+"Sorun yoktur; çünkü imza oluşturma verisini elektronik sertifika hizmet sağlayıcısı zaten herkesle paylaşır."
+],
+"dogru": 1,
+"aciklama": "m.3/d: imza oluşturma verisi 'imza sahibine ait olan ... bir eşi daha olmayan şifreler, kriptografik gizli anahtarlar gibi' GİZLİ veridir. m.4/a: güvenli e-imza 'münhasıran imza sahibine bağlı' olmalıdır. Gizli verinin başkasıyla paylaşılması hem verinin gizli/eşsiz niteliğini hem de imzanın münhasıran sahibine bağlılığını zedeler.",
+"kaynak": "5070 m.3/d, m.4/a"
+}
+],
+"banka_kaynak_sayim": [
+[
+"5070 m.5",
+19
+],
+[
+"5070 m.4",
+5
+],
+[
+"5070 m.3/b",
+4
+],
+[
+"5070 m.3/c",
+3
+],
+[
+"5070 m.3/a",
+3
+],
+[
+"5070 m.3/h",
+3
+],
+[
+"5070 m.3/d",
+2
+],
+[
+"5070 m.3/f",
+2
+],
+[
+"5070 m.3/ı",
+2
+],
+[
+"5070 m.3/j",
+2
+],
+[
+"5070 m.3/d, m.3/f",
+1
+],
+[
+"5070 m.4/b",
+1
+],
+[
+"5070 m.4/c",
+1
+],
+[
+"5070 m.3",
+1
+],
+[
+"5070 m.3/b, m.4, m.5",
+1
+],
+[
+"5070 m.3/d, m.4/a",
+1
+]
+]
+}

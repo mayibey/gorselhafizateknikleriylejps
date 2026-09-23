@@ -1,0 +1,454 @@
+{
+"grup": "D",
+"law_id": 100,
+"ad": "Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik",
+"emir_maddeleri": [
+0,
+2,
+4
+],
+"madde_sayisi": 2,
+"maddeler": [
+{
+"anahtar": "Kriptolu Haberleşme Yön m.2",
+"no": "2",
+"metin": "(1) Bu Yönetmelik, elektronik haberleşme hizmeti içinde kodlu veya kriptolu haberleşme yapmaya yetkili Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Milli İstihbarat Teşkilatı Müsteşarlığı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı ile bu kurumlara ait kodlu veya kriptolu elektronik haberleşme sistemlerinin kullanıldığı kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler hariç, diğer kamu kurum ve kuruluşları ile gerçek ve tüzel kişileri kapsar. (2) Kurum düzenlemelerinde belirlenen ve işletilmesi için frekans tahsisine ihtiyaç duyulmayan özel amaçlar için tahsis edilmiş frekans bantlarında ve çıkış gücünde çalışan Kurumca onaylı telsiz cihaz ve sistemleri bu Yönetmelik kapsamı dışındadır. Dayanak"
+},
+{
+"anahtar": "Kriptolu Haberleşme Yön m.4",
+"no": "4",
+"metin": "(1) Bu Yönetmelikte geçen; a) İhtisas sahibi kuruluşlar: Kurum ile kodlu veya kriptolu elektronik haberleşme sistemleri konusunda protokol yapılan enstitüleri, üniversiteleri veya bilimsel araştırma-geliştirme çalışmaları yürüten kuruluşları, b) İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi, c) Kurum: Bilgi Teknolojileri ve İletişim Kurumunu, ç) Kripto: Güvenli veri iletimi ve saklanması amacıyla mesajların şifrelenmesini, d) Kripto Algoritması: Kriptografik işlemlerin şifreleme, şifre çözme, kimlik doğrulama ve benzeri diğer adımlarında kullanılan tüm matematiksel fonksiyonlar ve protokollerini, e) Kripto Anahtarı: Bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisini, f) Kriptolu elektronik haberleşme: Kriptolu elektronik haberleşme cihazları ile kripto teknikleri kullanılarak gerçekleştirilen haberleşmeyi, g) Kriptolu elektronik haberleşme cihazı: Dahili ve/veya harici yazılım ve donanım tabanlı kriptolama elemanı ile birlikte kullanılan telli veya telsiz elektronik haberleşme cihazını, ğ) Kodlu haberleşme: Haberleşmenin üçüncü şahıslar tarafından anlaşılmaması için mesajların önceden üzerinde anlaşılmış bir koda göre değiştirilerek iletilmesini, h) Milli kripto cihazı: Milli Savunma Bakanlığınca üretim yapmasına yetki verilen kurumlarda ve Milli Kripto Klerans Belgesine sahip Türk vatandaşlarınca geliştirilen, üretilen, kriptografik algoritma, protokol ve anahtar yönetim sistemlerinin güvenlik düzeyi yetkili bir kamu kurumunca onaylanmış cihazları, ı) Telsiz: Aralarında herhangi bir fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu, ses, veri vermeye, almaya veya yalnızca vermeye veya almaya yarayan sistemleri, i) Üretici: Elektronik haberleşme cihazı imal eden, ıslah eden veya cihaza adını, ticari markasını veya ayırt edici işaretini koymak suretiyle kendini üretici olarak tanıtan gerçek veya tüzel kişiyi, üreticinin Ülke dışında olması halinde, üretici tarafından yetkilendirilen temsilciyi ve/veya ithalatçıyı; ayrıca, cihazın satış ve/veya tedarik zincirinde yer alan ve faaliyetleri cihazın güvenliğine ilişkin özelliklerini etkileyen gerçek veya tüzel kişiyi, ifade eder. İKİNCİ BÖLÜM Kodlu veya Kriptolu Elektronik Haberleşme Hizmetleri İçin Başvuru, Değerlendirme, İzin İşlemleri, Emniyet ve Muhafaza Tedbirleri Başvuru"
+}
+],
+"cikmis_sorular": [],
+"mebs2024": [
+{
+"soru": 85,
+"madde": "Kriptolu Haberleşme Yön m.2",
+"alinti": "(1) Bu Yönetmelik, … Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, MİT Müsteşarlığı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı ile … hariç, diğer kamu kurum ve kuruluşları ile gerçek ve tüzel kişileri kapsar. (2) … frekans tahsisine ihtiyaç duyulmayan özel amaçlar için tahsis edilmiş frekans bantlarında … çalışan Kurumca onaylı telsiz cihaz ve sistemleri bu Yönetmelik kapsamı dışındadır.",
+"aciklama": "I yanlış: Yönetmelik yalnızca kamu kurumlarını değil, gerçek ve tüzel kişileri de kapsar. II doğru: m.2/2 frekans tahsisi gerektirmeyen Kurumca onaylı telsiz cihazlarını kapsam dışında bırakır; öncül metnin aynısıdır. III yanlış: TSK, kapsam dışı tutulan altı kurumdan biridir. Doğru cevap Yalnız II (A). C şıkkı yanlıştır çünkü I öncülü metne aykırıdır; yönetmelik gerçek ve tüzel kişileri de kapsar.",
+"guven": "kesin",
+"kok": "I. Yönetmelik hükümleri yalnızca kamu kurum ve kuruluşlarını kapsar. II. Kurum düzenlemelerinde belirlenen ve işletilmesi için frekans tahsisine ihtiyaç duyulmayan özel amaçlar için tahsis edilmiş frekans bantlarında ve çıkış gücünde çalışan Kurumca onaylı telsiz cihaz ve sistemleri bu Yönetmelik kapsamı dışındadır. III. Türk Silahlı Kuvvetleri yönetmelik kapsamındadır. Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik’e göre yukarıdakilerden hangileri doğrudur?",
+"siklar": {
+"A": "Yalnız II",
+"B": "Yalnız III",
+"C": "I ve II",
+"D": "I ve III",
+"E": "I, II ve III"
+},
+"dogru": "A"
+},
+{
+"soru": 86,
+"madde": "Kriptolu Haberleşme Yön m.2/1",
+"alinti": "Bu Yönetmelik, elektronik haberleşme hizmeti içinde kodlu veya kriptolu haberleşme yapmaya yetkili Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Milli İstihbarat Teşkilatı Müsteşarlığı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı ile bu kurumlara ait … sistemlerinin kullanıldığı kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler hariç, diğer kamu kurum ve kuruluşları ile gerçek ve tüzel kişileri kapsar.",
+"aciklama": "Kapsam dışı tutulan kurumlar altı tanedir: TSK, JGK, SGK, MİT, EGM ve Dışişleri Bakanlığı. Şıklardaki JGK, MİT, Dışişleri ve EGM bu listededir, yani kapsam dışıdır. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı listede olmadığı için \"diğer kamu kurum ve kuruluşları\" olarak yönetmeliğe tabidir; kapsam dışında olmayan tek şık D'dir.",
+"guven": "kesin",
+"kok": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik’e göre aşağıdaki kamu idarelerinden hangisi yönetmelik kapsamı dışında değildir?",
+"siklar": {
+"A": "Jandarma Genel Komutanlığı",
+"B": "Millî İstihbarat Teşkilatı",
+"C": "Dışişleri Bakanlığı",
+"D": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+"E": "Emniyet Genel Müdürlüğü"
+},
+"dogru": "D"
+},
+{
+"soru": 87,
+"madde": "Kriptolu Haberleşme Yön m.4/1-e",
+"alinti": "e) Kripto Anahtarı: Bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisini, … ifade eder.",
+"aciklama": "Tanım maddesi soru kökündeki cümleyi birebir \"kripto anahtarı\" olarak tanımlar (E). Kripto algoritması ise şifreleme/çözme adımlarında kullanılan matematiksel fonksiyon ve protokollerdir; kripto, mesajların şifrelenmesidir; kodlu haberleşme, önceden anlaşılmış koda göre iletimdir. Değişken karakter dizisi yalnızca anahtarı tarif eder.",
+"guven": "kesin",
+"kok": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik’e göre bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisi aşağıdakilerden hangisidir?",
+"siklar": {
+"A": "Kripto algoritması",
+"B": "Kripto",
+"C": "Kodlu haberleşme",
+"D": "Telsiz",
+"E": "Kripto anahtarı"
+},
+"dogru": "E"
+}
+],
+"banka_sorulari": [
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik göre, aşağıdaki kurumlardan hangisi bu Yönetmeliğin kapsamı dışında tutulan altı kurumdan biri DEĞİLDİR?",
+"siklar": [
+"Milli Savunma Bakanlığı",
+"Türk Silahlı Kuvvetleri",
+"Jandarma Genel Komutanlığı",
+"Sahil Güvenlik Komutanlığı",
+"Dışişleri Bakanlığı"
+],
+"dogru": 0,
+"aciklama": "m.2/1: Kapsam dışı tutulan altı kurum sayılı biçimde şunlardır: Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Milli İstihbarat Teşkilatı Müsteşarlığı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı. Milli Savunma Bakanlığı bu listede madde metninde yer almaz.",
+"kaynak": "14387 m.2/1"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik uyarınca kapsam dışında tutulan altı kurumdan biri aşağıdakilerden hangisidir?",
+"siklar": [
+"İçişleri Bakanlığı",
+"Milli İstihbarat Teşkilatı Müsteşarlığı",
+"Cumhurbaşkanlığı",
+"Adalet Bakanlığı",
+"Hazine ve Maliye Bakanlığı"
+],
+"dogru": 1,
+"aciklama": "m.2/1'de sayılan altı kurumdan biri Milli İstihbarat Teşkilatı Müsteşarlığıdır; İçişleri Bakanlığı, Cumhurbaşkanlığı, Adalet Bakanlığı ve Hazine ve Maliye Bakanlığı madde metninde geçmez.",
+"kaynak": "14387 m.2/1"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik göre, Jandarma Genel Komutanlığına ait kodlu haberleşme sistemini kullanan bir kamu kurumu bu Yönetmelik kapsamında mıdır?",
+"siklar": [
+"Hayır, bu altı kuruma ait sistemleri kullanan kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler de kapsam dışıdır",
+"Evet, tüm kamu kurumları kapsam içindedir",
+"Yalnızca Kurumdan izin alırsa kapsam dışı sayılır",
+"Yalnızca gerçek kişiler için kapsam dışıdır, kamu kurumları için kapsam içindedir",
+"Yönetmelikte bu duruma ilişkin hüküm yoktur"
+],
+"dogru": 0,
+"aciklama": "m.2/1: '...bu kurumlara ait kodlu veya kriptolu elektronik haberleşme sistemlerinin kullanıldığı kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler hariç...' Yani altı kurumun sistemini kullanan üçüncü taraflar da kapsam dışıdır.",
+"kaynak": "14387 m.2/1"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik kapsam dışı bırakılan kurum sayısı ___'dır.",
+"siklar": [
+"6",
+"4",
+"5",
+"7",
+"8"
+],
+"dogru": 0,
+"aciklama": "m.2/1'de Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Milli İstihbarat Teşkilatı Müsteşarlığı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı olmak üzere tam olarak altı kurum sayılmıştır.",
+"kaynak": "14387 m.2/1"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik ikinci fıkrası uyarınca aşağıdaki telsiz cihaz ve sistemlerinden hangisi bu Yönetmelik kapsamı dışındadır?",
+"siklar": [
+"Herhangi bir kamu kurumunun kullandığı tüm telsiz cihazları",
+"Yalnızca askeri amaçlı kullanılan telsiz cihazları",
+"Kurum düzenlemelerinde belirlenen, frekans tahsisine ihtiyaç duyulmayan özel amaçlar için tahsis edilmiş frekans bandında ve çıkış gücünde çalışan, Kurumca onaylı telsiz cihaz ve sistemleri",
+"Yurt dışında üretilmiş tüm telsiz cihazları",
+"İhtisas sahibi kuruluşların ürettiği tüm cihazlar"
+],
+"dogru": 2,
+"aciklama": "m.2/2: 'Kurum düzenlemelerinde belirlenen ve işletilmesi için frekans tahsisine ihtiyaç duyulmayan özel amaçlar için tahsis edilmiş frekans bantlarında ve çıkış gücünde çalışan Kurumca onaylı telsiz cihaz ve sistemleri bu Yönetmelik kapsamı dışındadır.'",
+"kaynak": "14387 m.2/2"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik ikinci fıkrasındaki telsiz istisnasının uygulanabilmesi için aşağıdaki şartlardan hangisi ARANMAZ?",
+"siklar": [
+"Frekans tahsisine ihtiyaç duyulmaması",
+"Kurum düzenlemelerinde belirlenmiş olması",
+"Özel amaçlar için tahsis edilmiş frekans bandında ve çıkış gücünde çalışması",
+"Kurumca onaylı olması",
+"Dışişleri Bakanlığınca ayrıca onaylanmış olması"
+],
+"dogru": 4,
+"aciklama": "m.2/2 metninde onay makamı yalnızca Kurum'dur (Bilgi Teknolojileri ve İletişim Kurumu). Dışişleri Bakanlığının ayrıca onay vermesi gibi bir şart madde metninde bulunmamaktadır.",
+"kaynak": "14387 m.2/2"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik tanımlanan 'ihtisas sahibi kuruluşlar' ifadesi neyi kapsar?",
+"siklar": [
+"Kurum ile kodlu veya kriptolu elektronik haberleşme sistemleri konusunda protokol yapılan enstitü, üniversite veya bilimsel araştırma-geliştirme çalışmaları yürüten kuruluşları",
+"Elektronik haberleşme hizmeti sunan tüm şirketleri",
+"Yalnızca Milli Savunma Bakanlığına bağlı kuruluşları",
+"Cihaz üreten tüm gerçek ve tüzel kişileri",
+"Yalnızca kamu üniversitelerini"
+],
+"dogru": 0,
+"aciklama": "m.4/1-a: 'İhtisas sahibi kuruluşlar: Kurum ile kodlu veya kriptolu elektronik haberleşme sistemleri konusunda protokol yapılan enstitüleri, üniversiteleri veya bilimsel araştırma-geliştirme çalışmaları yürüten kuruluşları...' ifade eder.",
+"kaynak": "14387 m.4/a"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik ki 'ihtisas sahibi kuruluş' tanımının unsurlarından hangisi metinde YER ALMAZ?",
+"siklar": [
+"Kurum ile protokol yapılmış olması",
+"Enstitü niteliğinde olması",
+"Üniversite niteliğinde olması",
+"Bilimsel araştırma-geliştirme çalışmaları yürütmesi",
+"Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunması"
+],
+"dogru": 4,
+"aciklama": "E şıkkı İşletmeci tanımına (m.4/1-b) ait bir unsurdur; ihtisas sahibi kuruluş tanımında (m.4/1-a) yetkilendirme çerçevesinde hizmet sunmaktan söz edilmez.",
+"kaynak": "14387 m.4/a"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik tanımlanan 'İşletmeci' ifadesi kimi tanımlar?",
+"siklar": [
+"Cihaz üreten gerçek veya tüzel kişiyi",
+"Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayıp altyapısını işleten şirketi",
+"Kurum ile protokol yapan üniversiteyi",
+"Milli kripto cihazı üreten kurumu",
+"Bilgi Teknolojileri ve İletişim Kurumunu"
+],
+"dogru": 1,
+"aciklama": "m.4/1-b: 'İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi...' ifade eder.",
+"kaynak": "14387 m.4/b"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik geçen 'Kurum' ifadesi ___ anlamına gelir.",
+"siklar": [
+"Ulaştırma ve Altyapı Bakanlığı",
+"Milli Savunma Bakanlığı",
+"Bilgi Teknolojileri ve İletişim Kurumu",
+"Cumhurbaşkanlığı Dijital Dönüşüm Ofisi",
+"Bilgi Teknolojileri ve İletişim Kurulu"
+],
+"dogru": 2,
+"aciklama": "m.4/1-c: 'Kurum: Bilgi Teknolojileri ve İletişim Kurumunu... ifade eder.'",
+"kaynak": "14387 m.4/c"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik'e göre, üreticinin Ülke dışında olması halinde kim de üretici sayılır?",
+"siklar": [
+"Türkiye'deki her satıcı",
+"Kurum (BTK)",
+"Üretici tarafından yetkilendirilen temsilci ve/veya ithalatçı",
+"İhtisas sahibi kuruluş",
+"Cihazı satın alan nihai kullanıcı"
+],
+"dogru": 2,
+"aciklama": "m.4/1-i: '...üreticinin Ülke dışında olması halinde, üretici tarafından yetkilendirilen temsilciyi ve/veya ithalatçıyı; ayrıca, cihazın satış ve/veya tedarik zincirinde yer alan ve faaliyetleri cihazın güvenliğine ilişkin özelliklerini etkileyen gerçek veya tüzel kişiyi, ifade eder.'",
+"kaynak": "14387 m.4/i"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik ki 'Üretici' tanımı kapsamına aşağıdakilerden hangisi GİRMEZ?",
+"siklar": [
+"Cihazı imal eden gerçek veya tüzel kişi",
+"Cihazı ıslah eden gerçek veya tüzel kişi",
+"Cihaza kendi ticari markasını koyan gerçek veya tüzel kişi",
+"Cihazın tedarik zincirinde yer alıp cihazın güvenliğine ilişkin özelliklerini etkileyen gerçek veya tüzel kişi",
+"Cihazı yalnızca satın alıp kullanan nihai tüketici"
+],
+"dogru": 4,
+"aciklama": "m.4/1-i'de sayılan tüm unsurlar (imal eden, ıslah eden, marka koyan, temsilci/ithalatçı, güvenliği etkileyen tedarik zinciri üyesi) üretici sayılır; yalnızca cihazı satın alıp kullanan nihai tüketici bu tanıma girmez.",
+"kaynak": "14387 m.4/i"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik tanımlanan 'Kripto' ifadesi neyi tanımlar?",
+"siklar": [
+"Şifreleme işlemlerinde kullanılan matematiksel fonksiyon ve protokolleri",
+"Önceden anlaşılmış koda göre mesaj değiştirmeyi",
+"Güvenli veri iletimi ve saklanması amacıyla mesajların şifrelenmesini",
+"Algoritmaya uygulanan değişken karakter dizisini",
+"Elektromanyetik dalgalarla yapılan haberleşmeyi"
+],
+"dogru": 2,
+"aciklama": "m.4/1-ç: 'Kripto: Güvenli veri iletimi ve saklanması amacıyla mesajların şifrelenmesini... ifade eder.'",
+"kaynak": "14387 m.4/ç"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik 'şifreleme, şifre çözme, kimlik doğrulama ve benzeri diğer adımlarında kullanılan tüm matematiksel fonksiyonlar ve protokoller' şeklinde tanımlanan terim hangisidir?",
+"siklar": [
+"Kripto Anahtarı",
+"Milli kripto cihazı",
+"Kriptolu elektronik haberleşme cihazı",
+"Kripto Algoritması",
+"İhtisas sahibi kuruluş"
+],
+"dogru": 3,
+"aciklama": "m.4/1-d: 'Kripto Algoritması: Kriptografik işlemlerin şifreleme, şifre çözme, kimlik doğrulama ve benzeri diğer adımlarında kullanılan tüm matematiksel fonksiyonlar ve protokollerini... ifade eder.'",
+"kaynak": "14387 m.4/d"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik 'bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisi' şeklinde tanımlanan terim hangisidir?",
+"siklar": [
+"Kripto Algoritması",
+"Kripto",
+"Milli kripto cihazı",
+"Kripto Anahtarı",
+"Kriptolu elektronik haberleşme"
+],
+"dogru": 3,
+"aciklama": "m.4/1-e: 'Kripto Anahtarı: Bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisini... ifade eder.'",
+"kaynak": "14387 m.4/e"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik ki Kripto, Kripto Algoritması ve Kripto Anahtarı tanımları arasındaki farkla ilgili olarak aşağıdakilerden hangisi DOĞRUDUR?",
+"siklar": [
+"Kripto Anahtarı, mesajların şifrelenmesinin kendisidir; Kripto ise değişken karakter dizisidir",
+"Üçü de aynı anlama gelir ve madde metninde birbirinin yerine kullanılır",
+"Kripto Algoritması, yalnızca donanım bileşenlerini ifade eder",
+"Kripto, mesajların şifrelenmesini; Kripto Algoritması, bu işlemlerde kullanılan matematiksel fonksiyon ve protokolleri; Kripto Anahtarı ise algoritmaya uygulanan değişken karakter dizisini ifade eder",
+"Kripto Anahtarı, Milli Savunma Bakanlığınca belirlenen bir belgedir"
+],
+"dogru": 3,
+"aciklama": "m.4/1-ç,d,e sırasıyla: Kripto = mesajların şifrelenmesi; Kripto Algoritması = şifreleme/şifre çözme/kimlik doğrulamada kullanılan matematiksel fonksiyon ve protokoller; Kripto Anahtarı = algoritmaya uygulanan değişken karakter dizisi. Üçü ayrı ve birbirini tamamlayan kavramlardır.",
+"kaynak": "14387 m.4/ç-d-e"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik tanımlanan 'milli kripto cihazı', hangi kurumun yetki verdiği kuruluşlarda üretilir?",
+"siklar": [
+"Bilgi Teknolojileri ve İletişim Kurumu",
+"Dışişleri Bakanlığı",
+"Milli İstihbarat Teşkilatı Müsteşarlığı",
+"Milli Savunma Bakanlığı",
+"Cumhurbaşkanlığı"
+],
+"dogru": 3,
+"aciklama": "m.4/1-h: 'Milli kripto cihazı: Milli Savunma Bakanlığınca üretim yapmasına yetki verilen kurumlarda ve Milli Kripto Klerans Belgesine sahip Türk vatandaşlarınca geliştirilen, üretilen... cihazları' ifade eder.",
+"kaynak": "14387 m.4/h"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik'e göre, milli kripto cihazının geliştirilmesi veya üretilmesi için ilgili Türk vatandaşının ___ belgesine sahip olması gerekir.",
+"siklar": [
+"İş Güvenliği Uzmanlığı",
+"Adli Sicil",
+"Ticaret Sicil",
+"Milli Kripto Klerans",
+"Tip Onay"
+],
+"dogru": 3,
+"aciklama": "m.4/1-h: '...Milli Kripto Klerans Belgesine sahip Türk vatandaşlarınca geliştirilen, üretilen...' cihazlar milli kripto cihazı sayılır.",
+"kaynak": "14387 m.4/h"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik ki 'milli kripto cihazı' tanımının unsurlarından hangisi metinde YER ALMAZ?",
+"siklar": [
+"Milli Savunma Bakanlığınca üretim yapmasına yetki verilen kurumlarda geliştirilmesi/üretilmesi",
+"Milli Kripto Klerans Belgesine sahip Türk vatandaşınca geliştirilmesi/üretilmesi",
+"Kriptografik algoritma, protokol ve anahtar yönetim sistemlerinin güvenlik düzeyinin yetkili bir kamu kurumunca onaylanmış olması",
+"Kurum (BTK) tarafından yurt dışından ithal edilmiş olması",
+"Kriptografik algoritma, protokol ve anahtar yönetim sistemlerini içermesi"
+],
+"dogru": 3,
+"aciklama": "m.4/1-h tanımında yurt dışından ithal edilme diye bir unsur yoktur; tam tersine milli kripto cihazı Türkiye'de yetkili kurumda ve Türk vatandaşınca geliştirilip üretilen cihazdır.",
+"kaynak": "14387 m.4/h"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik 'kriptolu elektronik haberleşme cihazları ile kripto teknikleri kullanılarak gerçekleştirilen haberleşme' şeklinde tanımlanan terim hangisidir?",
+"siklar": [
+"Kodlu haberleşme",
+"Telsiz",
+"Kriptolu elektronik haberleşme",
+"İhtisas sahibi kuruluş",
+"Kripto Algoritması"
+],
+"dogru": 2,
+"aciklama": "m.4/1-f: 'Kriptolu elektronik haberleşme: Kriptolu elektronik haberleşme cihazları ile kripto teknikleri kullanılarak gerçekleştirilen haberleşmeyi... ifade eder.'",
+"kaynak": "14387 m.4/f"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik 'dahili ve/veya harici yazılım ve donanım tabanlı kriptolama elemanı ile birlikte kullanılan telli veya telsiz elektronik haberleşme cihazı' şeklinde tanımlanan terim hangisidir?",
+"siklar": [
+"Milli kripto cihazı",
+"Telsiz",
+"Kodlu haberleşme",
+"Üretici",
+"Kriptolu elektronik haberleşme cihazı"
+],
+"dogru": 4,
+"aciklama": "m.4/1-g: 'Kriptolu elektronik haberleşme cihazı: Dahili ve/veya harici yazılım ve donanım tabanlı kriptolama elemanı ile birlikte kullanılan telli veya telsiz elektronik haberleşme cihazını... ifade eder.'",
+"kaynak": "14387 m.4/g"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik 'haberleşmenin üçüncü şahıslar tarafından anlaşılmaması için mesajların önceden üzerinde anlaşılmış bir koda göre değiştirilerek iletilmesi' şeklinde tanımlanan terim hangisidir?",
+"siklar": [
+"Kriptolu elektronik haberleşme",
+"Telsiz",
+"Kodlu haberleşme",
+"Kripto",
+"Milli kripto cihazı"
+],
+"dogru": 2,
+"aciklama": "m.4/1-ğ: 'Kodlu haberleşme: Haberleşmenin üçüncü şahıslar tarafından anlaşılmaması için mesajların önceden üzerinde anlaşılmış bir koda göre değiştirilerek iletilmesini... ifade eder.'",
+"kaynak": "14387 m.4/ğ"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik tanımlanan 'Telsiz' ifadesi neyi tanımlar?",
+"siklar": [
+"Yalnızca kriptolu haberleşme yapan sistemleri",
+"Aralarında herhangi bir fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu ses/veri vermeye, almaya veya yalnızca vermeye ya da almaya yarayan sistemleri",
+"Yalnızca fiziki kablo bağlantısıyla çalışan sistemleri",
+"Yalnızca Milli Savunma Bakanlığınca onaylı cihazları",
+"Yalnızca üretici tarafından imal edilen cihazları"
+],
+"dogru": 1,
+"aciklama": "m.4/1-ı: 'Telsiz: Aralarında herhangi bir fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu, ses, veri vermeye, almaya veya yalnızca vermeye veya almaya yarayan sistemleri... ifade eder.'",
+"kaynak": "14387 m.4/ı"
+},
+{
+"soru": "Kamu Kurum ve Kuruluşları ile Gerçek ve Tüzel Kişilerin Elektronik Haberleşme Hizmeti İçinde Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik ki İhtisas sahibi kuruluş, İşletmeci ve Üretici tanımlarına ilişkin aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+"siklar": [
+"İşletmeci: Kurum ile protokol yapan üniversite; Üretici: şebeke işleten şirket",
+"Üretici: Kurum ile protokol yapan kuruluş; İhtisas sahibi kuruluş: cihaz imal eden kişi",
+"İşletmeci ve Üretici aynı tanıma sahiptir",
+"İhtisas sahibi kuruluş: cihaz ithal eden temsilci",
+"İhtisas sahibi kuruluş: Kurum ile protokol yapılan enstitü/üniversite/AR-GE kuruluşu; İşletmeci: yetkilendirme çerçevesinde şebeke sağlayıp işleten şirket; Üretici: cihazı imal eden veya markasını koyan gerçek/tüzel kişi"
+],
+"dogru": 4,
+"aciklama": "m.4/1-a,b,i sırasıyla: İhtisas sahibi kuruluş = Kurum ile protokol yapılan enstitü/üniversite/AR-GE kuruluşu; İşletmeci = yetkilendirme çerçevesinde şebeke sağlayıp altyapısını işleten şirket; Üretici = cihazı imal eden, ıslah eden veya markasını koyan gerçek/tüzel kişi (yurt dışı ise temsilci/ithalatçı da dahil).",
+"kaynak": "14387 m.4/a-b-i"
+}
+],
+"banka_kaynak_sayim": [
+[
+"14387 m.2/1",
+4
+],
+[
+"14387 m.4/h",
+3
+],
+[
+"14387 m.2/2",
+2
+],
+[
+"14387 m.4/a",
+2
+],
+[
+"14387 m.4/i",
+2
+],
+[
+"14387 m.4/b",
+1
+],
+[
+"14387 m.4/c",
+1
+],
+[
+"14387 m.4/ç",
+1
+],
+[
+"14387 m.4/d",
+1
+],
+[
+"14387 m.4/e",
+1
+],
+[
+"14387 m.4/ç-d-e",
+1
+],
+[
+"14387 m.4/f",
+1
+],
+[
+"14387 m.4/g",
+1
+],
+[
+"14387 m.4/ğ",
+1
+],
+[
+"14387 m.4/ı",
+1
+],
+[
+"14387 m.4/a-b-i",
+1
+]
+]
+}

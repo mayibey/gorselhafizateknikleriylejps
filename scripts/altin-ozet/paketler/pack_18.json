@@ -1,0 +1,541 @@
+{
+"grup": "C",
+"law_id": 18,
+"ad": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik",
+"emir_maddeleri": [
+8,
+9,
+10,
+11
+],
+"madde_sayisi": 8,
+"maddeler": [
+{
+"anahtar": "KV Silme Yön m.8",
+"no": "8",
+"metin": "(1)Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. (2) Veri sorumlusu, silinen kişisel verilerin ilgili kullanıcılar için erişilemez ve tekrar kullanılamaz olması için gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür. Kişisel verilerin yok edilmesi"
+},
+{
+"anahtar": "KV Silme Yön m.11",
+"no": "11",
+"metin": "(1) Kişisel veri saklama ve imha politikası hazırlamış olan veri sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden ilk periyodik imha işleminde, kişisel verileri siler, yok eder veya anonim hale getirir. (2) Periyodik imhanın gerçekleştirileceği zaman aralığı, veri sorumlusu tarafından kişisel veri saklama ve imha politikasında belirlenir. Bu süre her halde altı ayı geçemez. (3) Kişisel veri saklama ve imha politikası hazırlama yükümlülüğü olmayan veri sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden üç ay içinde, kişisel verileri siler, yok eder veya anonim hale getirir. (4) Kurul, telafisi güç veya imkansız zararların doğması ve açıkça hukuka aykırılık olması halinde, bu maddede belirlenen süreleri kısaltabilir. Kişisel verileri ilgili kişinin talep etmesi durumunda silme ve yok etme süreleri"
+},
+{
+"anahtar": "KV Silme Yön m.9",
+"no": "9",
+"metin": "(1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. (2) Veri sorumlusu, kişisel verilerin yok edilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür. Kişisel verilerin anonim hale getirilmesi"
+},
+{
+"anahtar": "KV Silme Yön m.10",
+"no": "10",
+"metin": "(1) Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir. (2) Kişisel verilerin anonim hale getirilmiş olması için; kişisel verilerin, veri sorumlusu, alıcı veya alıcı grupları tarafından geri döndürme ve verilerin başka verilerle eşleştirilmesi gibi kayıt ortamı ve ilgili faaliyet alanı açısından uygun tekniklerin kullanılması yoluyla dahi kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemez hale getirilmesi gerekir. (3) Veri sorumlusu, kişisel verilerin anonim hale getirilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür. Kişisel verileri resen silme, yok etme veya anonim hale getirme süreleri"
+},
+{
+"anahtar": "KVK SILME ANONIM m.8",
+"no": "8",
+"metin": "(1)Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. (2) Veri sorumlusu, silinen kişisel verilerin ilgili kullanıcılar için erişilemez ve tekrar kullanılamaz olması için gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür. Kişisel verilerin yok edilmesi"
+},
+{
+"anahtar": "KVK SILME ANONIM m.9",
+"no": "9",
+"metin": "(1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. (2) Veri sorumlusu, kişisel verilerin yok edilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür. Kişisel verilerin anonim hale getirilmesi"
+},
+{
+"anahtar": "KVK SILME ANONIM m.10",
+"no": "10",
+"metin": "(1) Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir. (2) Kişisel verilerin anonim hale getirilmiş olması için; kişisel verilerin, veri sorumlusu, alıcı veya alıcı grupları tarafından geri döndürme ve verilerin başka verilerle eşleştirilmesi gibi kayıt ortamı ve ilgili faaliyet alanı açısından uygun tekniklerin kullanılması yoluyla dahi kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemez hale getirilmesi gerekir. (3) Veri sorumlusu, kişisel verilerin anonim hale getirilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlüdür. Kişisel verileri resen silme, yok etme veya anonim hale getirme süreleri"
+},
+{
+"anahtar": "KVK SILME ANONIM m.11",
+"no": "11",
+"metin": "(1) Kişisel veri saklama ve imha politikası hazırlamış olan veri sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden ilk periyodik imha işleminde, kişisel verileri siler, yok eder veya anonim hale getirir. (2) Periyodik imhanın gerçekleştirileceği zaman aralığı, veri sorumlusu tarafından kişisel veri saklama ve imha politikasında belirlenir. Bu süre her halde altı ayı geçemez. (3) Kişisel veri saklama ve imha politikası hazırlama yükümlülüğü olmayan veri sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden üç ay içinde, kişisel verileri siler, yok eder veya anonim hale getirir. (4) Kurul, telafisi güç veya imkansız zararların doğması ve açıkça hukuka aykırılık olması halinde, bu maddede belirlenen süreleri kısaltabilir. Kişisel verileri ilgili kişinin talep etmesi durumunda silme ve yok etme süreleri"
+}
+],
+"cikmis_sorular": [
+{
+"kok": "I. Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. II. Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. III. Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir. IV. Veri sorumlusu, kişisel verilerin anonim hale getirilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlü değildir. Yukarıda verilen yargılardan hangisi ya da hangileri 30224 sayılı Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Yönetmeliğine göre yanlıştır?",
+"siklar": [
+"Yalnız IV",
+"Yalnız I ve IV",
+"Yalnız I, II ve III",
+"Yalnız II",
+"Yalnız III"
+],
+"rutbe": "astsubay",
+"kitapcik": "k1"
+},
+{
+"kok": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmeliğinin 10. maddesi gereğince, “kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesi işlemi”ne ne ad verilir?",
+"siklar": [
+"Kişisel verilerin kaybolması",
+"Kişisel verilerin silinmesi",
+"Kişisel verilerin yok edilmesi",
+"Kişisel verilerin anonim hale getirilmesi",
+"Kişisel verilerin çalınması"
+],
+"rutbe": "astsubay",
+"kitapcik": "k3"
+},
+{
+"kok": "Kişisel Verilerin Silinmesi Yok Edilmesi veya Anonim Hâle Getirilmesi Hakkında Yönetmelik’e göre kişisel verilerin silinmesi, yok edilmesi, anonim hâle getirilmesine ilişkin her türlü teknik ve idari tedbirleri almakla aşağıdakilerden hangisi yükümlüdür?",
+"siklar": [
+"Cumhuriyet savcısı",
+"Mülki amir",
+"Veri sorumlusu",
+"Bilgi Edinme ve Değerlendirme Kurulu",
+"Kişisel Verileri Koruma Kurulu"
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-01"
+},
+{
+"kok": "I. Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. II. Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir. III. Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir. IV. Veri sorumlusu, kişisel verilerin anonim hale getirilmesiyle ilgili gerekli her türlü teknik ve idari tedbirleri almakla yükümlü değildir. Yukarıda verilen yargılardan hangisi ya da hangileri 30224 sayılı Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Yönetmeliğine göre yanlıştır?",
+"siklar": [
+"Yalnız IV",
+"Yalnız I ve IV",
+"Yalnız I, II ve III",
+"Yalnız II",
+"Yalnız III"
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-02"
+},
+{
+"kok": "Veri Sorumlusu, kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden ........................................kişisel verileri siler, yok eder veya anonim hale getirir. 30224 Sayılı Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmeliğe göre yukarıda boş bırakılan yere aşağıdakilerden hangisi getirilmelidir?",
+"siklar": [
+"Bir ay içerisinde",
+"İki ay içerisinde",
+"Üç ay içerisinde",
+"Dört ay içerisinde",
+"Beş ay içerisinde"
+],
+"rutbe": "uzman erbas",
+"kitapcik": "k9-03"
+},
+{
+"kok": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmeliğinin 9. maddesi gereğince, “kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemi”ne ne ad verilir?",
+"siklar": [
+"Kişisel verilerin kaybolması",
+"Kişisel verilerin silinmesi",
+"Kişisel verilerin yok edilmesi",
+"Kişisel verilerin anonim hale getirilmesi",
+"Kişisel verilerin çalınması"
+],
+"rutbe": "uzman erbas",
+"kitapcik": "k9-05"
+},
+{
+"kok": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmeliğinin 10. maddesi gereğince, “kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesi işlemi”ne ne ad verilir?",
+"siklar": [
+"Kişisel verilerin kaybolması",
+"Kişisel verilerin silinmesi",
+"Kişisel verilerin yok edilmesi",
+"Kişisel verilerin anonim hale getirilmesi",
+"Kişisel verilerin çalınması"
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-06"
+},
+{
+"kok": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmeliğinin 8. maddesi gereğince, “kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemi”ne ne ad verilir?",
+"siklar": [
+"Kişisel verilerin kaybolması",
+"Kişisel verilerin silinmesi",
+"Kişisel verilerin yok edilmesi",
+"Kişisel verilerin anonim hale getirilmesi",
+"Kişisel verilerin çalınması"
+],
+"rutbe": "subay",
+"kitapcik": "k9-08"
+},
+{
+"kok": "Kişisel Verilerin Silinmesi Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmeliğe göre, kişisel verilerin silinmesi ile ilgili olarak aşağıdakilerden hangisi doğrudur?",
+"siklar": [
+"Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+"Kişisel verilerin silinmesi mümkün değildir.",
+"Veri sorumlusunun kişisel verileri silmeden önce mutlaka çıktısını alması gerekir.",
+"Kişisel verilerin silinmesi işlemi Kişisel Verileri Koruma Kurulu tarafından yapılır.",
+"Kişisel verilerin silinmesi ile anonim hale getirilmesi aynı anlamı taşır."
+],
+"rutbe": "astsubay",
+"kitapcik": "k9-14"
+},
+{
+"kok": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik’e göre, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesine ne ad verilir?",
+"siklar": [
+"Kişisel verilerin silinmesi",
+"Veri sorumlusunun kişisel verileri ortadan kaldırması",
+"Kişisel verilerin yok edilmesi",
+"Kişisel verilerin anonim hale getirilmesi",
+"Kişisel verilerin herkese açık ve kimliği bilinir hale getirilmesi"
+],
+"rutbe": "uzman jandarma",
+"kitapcik": "k9-17"
+}
+],
+"mebs2024": [
+{
+"soru": 24,
+"madde": "6698 KVKK m.4/2",
+"alinti": "Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma. b) Doğru ve gerektiğinde güncel olma. c) Belirli, açık ve meşru amaçlar için işlenme. ç) İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma. d) İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilme.",
+"aciklama": "KVKK 4. maddede sayılan beş genel ilke içinde 'her hâlde açık rıza alma' diye bir ilke yoktur; açık rıza, 5. maddedeki işleme şartlarından biridir ve kanunda sayılan istisnalarda rıza olmadan da veri işlenebilir. Bu nedenle ilke olmayan şık A'dır. B, C, D ve E şıkları maddede birebir sayılan ilkelerdir.",
+"guven": "kesin",
+"kok": "Kişisel verilerin işlenmesinde uyulması gereken genel ilkeler 6698 sayılı Kişisel Verilerin Korunması Kanunu’nda düzenlenmiştir. Aşağıdakilerden hangisi bu ilkelerden biri değildir?",
+"siklar": {
+"A": "Her hâlde ilgili kişinin açık rızasını alma",
+"B": "Belirli, açık ve meşru amaçlar için işlenme",
+"C": "Doğru ve gerektiğinde güncel olma",
+"D": "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma",
+"E": "Hukuka ve dürüstlük kurallarına uygun olma"
+},
+"dogru": "A"
+},
+{
+"soru": 58,
+"madde": "KV Silme Yön m.11/2",
+"alinti": "Periyodik imhanın gerçekleştirileceği zaman aralığı, veri sorumlusu tarafından kişisel veri saklama ve imha politikasında belirlenir. Bu süre her halde altı ayı geçemez.",
+"aciklama": "C doğrudur. Periyodik imha aralığını veri sorumlusu kendi politikasında belirler, ancak bu süre hiçbir halde altı ayı geçemez. Aynı maddenin 3. fıkrasındaki üç ay, politika hazırlama yükümlülüğü olmayan veri sorumlusunun imha süresidir; periyodik imha aralığıyla karıştırılmamalıdır.",
+"guven": "kesin",
+"kok": "Kişisel Verilerin Silinmesi Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik’e göre kişisel verileri saklama ve imha politikasında belirlenen periyodik imhanın gerçekleştirileceği zaman aralığı en fazla kaç ay olarak belirlenebilir?",
+"siklar": {
+"A": "2",
+"B": "3",
+"C": "6",
+"D": "9",
+"E": "12"
+},
+"dogru": "C"
+}
+],
+"banka_sorulari": [
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre \"kişisel verilerin silinmesi\" nasıl tanımlanmıştır?",
+"siklar": [
+"Kişisel verilerin başka verilerle eşleştirilse dahi kimliği belirli veya belirlenebilir bir kişiyle ilişkilendirilemeyecek hale getirilmesidir",
+"Kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir",
+"Kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir",
+"Kişisel verilerin yalnızca ilgili kişi tarafından erişilemez hale getirilmesi işlemidir",
+"Kişisel verilerin veri sorumlusu tarafından resen veya ilgili kişinin talebi üzerine imha edilmesidir"
+],
+"dogru": 2,
+"aciklama": "Yönetmelik m.8/1: \"Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.\"",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.8/1"
+},
+{
+"soru": "– (1) Kişisel verilerin silinmesi, kişisel verilerin ilgili kullanıcılar için hiçbir şekilde ______ ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+"siklar": [
+"geri getirilemez",
+"değiştirilemez",
+"kopyalanamaz",
+"erişilemez",
+"anonim hale getirilemez"
+],
+"dogru": 3,
+"aciklama": "Madde metninde boşluğa gelen kelime \"erişilemez\"dir; geri getirilemez ifadesi ise m.9'da yok etme tanımında yer alır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.8/1"
+},
+{
+"soru": "(Kişisel Veri Silme/İmha Yönetmeliği) – (1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, ______ ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+"siklar": [
+"anonim hale getirilemez",
+"geri getirilemez",
+"kopyalanamaz",
+"işlenemez",
+"paylaşılamaz"
+],
+"dogru": 1,
+"aciklama": "Madde metninde \"erişilemez, geri getirilemez ve tekrar kullanılamaz\" ibaresi yer alır; \"geri getirilemez\" unsuru yok etmeyi silmeden ayıran temel farktır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.9/1"
+},
+{
+"soru": "(Kişisel Veri Silme/İmha Yönetmeliği) Yönetmelikte sayılan \"kişisel verilerin yok edilmesi\" tanımında aşağıdakilerden hangisi YER ALMAZ?",
+"siklar": [
+"Tekrar kullanılamaz hale gelmesi",
+"Geri getirilemez hale gelmesi",
+"Hiç kimse tarafından erişilemez hale gelmesi",
+"Verinin başka verilerle eşleştirilse dahi kimliğinin belirlenememesi",
+"Verinin hiçbir şekilde erişilemez hale gelmesi"
+],
+"dogru": 3,
+"aciklama": "m.9 tanımı erişilemezlik, geri getirilemezlik ve tekrar kullanılamazlık unsurlarını içerir; kimliğin belirlenememesi ifadesi m.10'daki anonim hale getirme tanımına aittir.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.9/1"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, yönetmelikte sayılan \"kişisel verilerin silinmesi\" tanımında aşağıdakilerden hangisi YER ALMAZ?",
+"siklar": [
+"Hiç kimse tarafından geri getirilemez hale gelmesi",
+"Tekrar kullanılamaz hale gelmesi",
+"Bir işlem olarak tanımlanması",
+"Hiçbir şekilde erişilemez hale gelmesi",
+"İlgili kullanıcılar için erişilemez hale gelmesi"
+],
+"dogru": 0,
+"aciklama": "m.8 tanımı yalnızca \"ilgili kullanıcılar\" için erişilemezliği ve tekrar kullanılamazlığı içerir; \"hiç kimse tarafından geri getirilemez\" ifadesi m.9'daki yok etme tanımına özgüdür.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.8/1"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik kapsamında: Yönetmelik'e göre silme işleminde, veriye erişim kime karşı ortadan kaldırılmış olmalıdır?",
+"siklar": [
+"İlgili kullanıcılara karşı",
+"Yalnızca ilgili kişiye karşı",
+"Yalnızca veri sorumlusuna karşı",
+"Hiç kimseye karşı",
+"Yalnızca Kişisel Verileri Koruma Kuruluna karşı"
+],
+"dogru": 0,
+"aciklama": "m.8/1'de erişimsizlik \"ilgili kullanıcılar\" ölçütüyle sınırlandırılmıştır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.8/1"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik kapsamında: Yönetmelik'e göre yok etme işleminde, veriye erişim kime karşı ortadan kaldırılmış olmalıdır?",
+"siklar": [
+"Yalnızca üçüncü kişilere karşı",
+"Yalnızca ilgili kullanıcılara karşı",
+"Yalnızca veri sorumlusuna karşı",
+"Hiç kimseye karşı",
+"Yalnızca ilgili kişiye karşı"
+],
+"dogru": 3,
+"aciklama": "m.9/1'de erişimsizlik \"hiç kimse tarafından\" ölçütüyle, yani en geniş kapsamda düzenlenmiştir.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.9/1"
+},
+{
+"soru": "(Kişisel Veri Silme/İmha Yönetmeliği) – (1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar ______ hale getirilmesi işlemidir.",
+"siklar": [
+"işlenemez",
+"kullanılamaz",
+"görüntülenemez",
+"paylaşılamaz",
+"saklanamaz"
+],
+"dogru": 1,
+"aciklama": "Madde metninin tamamı \"erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir\" şeklindedir.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.9/1"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, \"kişisel verilerin silinmesi\" hukuken nasıl nitelendirilmiştir?",
+"siklar": [
+"Bir yükümlülük süresi olarak",
+"Bir idari para cezası olarak",
+"Bir başvuru usulü olarak",
+"Bir ilke olarak",
+"Bir işlem olarak"
+],
+"dogru": 4,
+"aciklama": "Madde metni açıkça \"...hale getirilmesi işlemidir\" ifadesiyle silmeyi bir işlem olarak tanımlamaktadır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.8/1"
+},
+{
+"soru": "(Kişisel Veri Silme/İmha Yönetmeliği) Yönetmelik'e göre \"kişisel verilerin yok edilmesi\" hukuken nasıl nitelendirilmiştir?",
+"siklar": [
+"Bir ilke olarak",
+"Bir hak olarak",
+"Bir işlem olarak",
+"Bir yaptırım olarak",
+"Bir politika olarak"
+],
+"dogru": 2,
+"aciklama": "Madde metni açıkça \"...hale getirilmesi işlemidir\" ifadesiyle yok etmeyi bir işlem olarak tanımlamaktadır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.9/1"
+},
+{
+"soru": "– (1) Kişisel verilerin silinmesi, kişisel verilerin ______ için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.",
+"siklar": [
+"ilgili kişiler",
+"veri sorumluları",
+"ilgili kullanıcılar",
+"üçüncü kişiler",
+"kamu kurumları"
+],
+"dogru": 2,
+"aciklama": "Madde metninde erişimsizliğin muhatabı olarak \"ilgili kullanıcılar\" ifadesi kullanılmıştır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.8/1"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik kapsamında: Yönetmelik'e göre yok etme işleminin gerçekleşmiş sayılması için aşağıdaki unsurlardan hangisinin BİRLİKTE gerçekleşmesi gerekir?",
+"siklar": [
+"İlgili kullanıcı tarafından erişilememesi ve otuz gün içinde bildirilmesi",
+"Verinin üç yıl saklanması ve resen incelenmesi",
+"Verinin altı ayda bir periyodik olarak kontrol edilmesi",
+"Kimliğin belirlenememesi ve verinin başka verilerle eşleştirilememesi",
+"Hiç kimse tarafından erişilememesi, geri getirilememesi ve tekrar kullanılamaması"
+],
+"dogru": 4,
+"aciklama": "m.9/1 yok etmeyi \"hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi\" olarak üç unsurun birlikte gerçekleşmesi şeklinde tanımlamaktadır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.9/1"
+},
+{
+"soru": "(Kişisel Veri Silme/İmha Yönetmeliği) Yönetmelikte tanımlanan silme işlemi hangi tür veriye uygulanır?",
+"siklar": [
+"Kişisel verilere",
+"Ticari sırlara",
+"Yalnızca sicil kayıtlarına",
+"Devlet sırrı niteliğindeki bilgilere",
+"Yalnızca elektronik imzalara"
+],
+"dogru": 0,
+"aciklama": "Madde metni açıkça \"kişisel verilerin silinmesi\" ifadesiyle konuyu kişisel verilerle sınırlandırmıştır.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.8/1"
+},
+{
+"soru": "(Kişisel Veri Silme/İmha Yönetmeliği) Yönetmelikte tanımlanan yok etme işlemi hangi tür veriye uygulanır?",
+"siklar": [
+"Yalnızca dijital ortamda tutulan verilere",
+"Kişisel verilere",
+"Yalnızca özel nitelikli kişisel verilere",
+"Yalnızca kamu kurumlarına ait verilere",
+"Yalnızca yurt dışına aktarılan verilere"
+],
+"dogru": 1,
+"aciklama": "Madde metni açıkça \"kişisel verilerin yok edilmesi\" ifadesiyle konuyu kişisel verilerle sınırlandırmıştır; özel nitelikli/dijital/yurt dışı gibi bir sınırlama getirilmemiştir.",
+"kaynak": "KVK Silme/İmha Yönetmeliği m.9/1"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre 'kişisel verilerin anonim hale getirilmesi' nasıl tanımlanmıştır?",
+"siklar": [
+"Kişisel verilerin yedeklenerek arşivde saklanması",
+"Kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi",
+"Kişisel verilerin ilgili kullanıcılar için hiçbir şekilde erişilemez ve tekrar kullanılamaz hale getirilmesi",
+"Kişisel verilerin sadece veri sorumlusu tarafından erişilebilir hale getirilmesi",
+"Kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesi"
+],
+"dogru": 4,
+"aciklama": "Madde 10/1 aynen şu şekildedir: 'Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir.'",
+"kaynak": "KVK Silme Yönetmeliği m.10"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, \"Kişisel verilerin anonim hale getirilmesi, kişisel verilerin başka verilerle eşleştirilse dahi hiçbir surette ______ bir gerçek kişiyle ilişkilendirilemeyecek hale getirilmesidir.\" Boşluğa gelmesi gereken ifade hangisidir?",
+"siklar": [
+"veri sorumlusunca onaylanmış",
+"geçmişte kayıt altına alınmış",
+"idari para cezasına muhatap olan",
+"yalnızca ad ve soyadı bilinen",
+"kimliği belirli veya belirlenebilir"
+],
+"dogru": 4,
+"aciklama": "Madde 10/1'in birebir lafzında geçen ifade 'kimliği belirli veya belirlenebilir'dir.",
+"kaynak": "KVK Silme Yönetmeliği m.10"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik kapsamında: Kişisel veri saklama ve imha politikası hazırlamış olan bir veri sorumlusu için periyodik imhanın gerçekleştirileceği zaman aralığı, en fazla ne kadar olabilir?",
+"siklar": [
+"Otuz gün",
+"Altı ay",
+"Bir yıl",
+"Üç ay",
+"İki yıl"
+],
+"dogru": 1,
+"aciklama": "Madde 11/2: 'Periyodik imhanın gerçekleştirileceği zaman aralığı, veri sorumlusu tarafından kişisel veri saklama ve imha politikasında belirlenir. Bu süre her halde altı ayı geçemez.'",
+"kaynak": "KVK Silme Yönetmeliği m.11/2"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, \"Kişisel veri saklama ve imha politikası hazırlama yükümlülüğü olmayan veri sorumlusu... yükümlülüğünün ortaya çıktığı tarihi takip eden ______ içinde, kişisel verileri siler, yok eder veya anonim hale getirir.\" Boşluğa gelmesi gereken süre hangisidir?",
+"siklar": [
+"on beş gün",
+"altı ay",
+"üç ay",
+"otuz gün",
+"bir yıl"
+],
+"dogru": 2,
+"aciklama": "Madde 11/3'te politika hazırlama yükümlülüğü olmayan veri sorumlusu için süre 'üç ay' olarak belirlenmiştir.",
+"kaynak": "KVK Silme Yönetmeliği m.11/3"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik kapsamında: Yönetmelikte (Resen İmha) ile ilgili aşağıdaki ifadelerden hangisi DOĞRU DEĞİLDİR?",
+"siklar": [
+"İlgili kişinin silme talebi, veri sorumlusu tarafından en geç otuz gün içinde sonuçlandırılır.",
+"Politika hazırlama yükümlülüğü olmayan veri sorumlusu, yükümlülüğün ortaya çıktığı tarihi takip eden üç ay içinde imha yapar.",
+"Periyodik imha aralığı veri sorumlusu tarafından politikada belirlenir ve altı ayı geçemez.",
+"Politikası olan veri sorumlusu, yükümlülüğün ortaya çıktığı tarihi takip eden ilk periyodik imha işleminde verileri siler, yok eder veya anonim hale getirir.",
+"Periyodik imha işleminde veriler silinebilir, yok edilebilir veya anonim hale getirilebilir."
+],
+"dogru": 0,
+"aciklama": "İlgili kişinin talebinin otuz gün içinde sonuçlandırılması Yönetmeliğin 12. maddesine ilişkindir; madde 11 resen (kendiliğinden) periyodik imha sürelerini düzenler, ilgili kişi talebinden söz etmez.",
+"kaynak": "KVK Silme Yönetmeliği m.11"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, kişisel veri saklama ve imha politikası hazırlamış olan bir veri sorumlusu, kişisel verileri hangi zamanda siler, yok eder veya anonim hale getirir?",
+"siklar": [
+"Her takvim yılının 1 Ocak tarihinde",
+"Talebin alındığı gün içinde",
+"Yükümlülüğün ortaya çıktığı tarihi takip eden ilk periyodik imha işleminde",
+"Kurul onayını aldığı ilk iş gününde",
+"Yükümlülüğün ortaya çıkmasından altı ay önce"
+],
+"dogru": 2,
+"aciklama": "Madde 11/1: 'Kişisel veri saklama ve imha politikası hazırlamış olan veri sorumlusu, ... yükümlülüğünün ortaya çıktığı tarihi takip eden ilk periyodik imha işleminde, kişisel verileri siler, yok eder veya anonim hale getirir.'",
+"kaynak": "KVK Silme Yönetmeliği m.11/1"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, anonim hale getirme işleminden sonra veri ile ilgili kişi arasındaki ilişki hakkında hangisi doğrudur?",
+"siklar": [
+"Veri saklanmaya devam eder ancak kimliği belirli veya belirlenebilir bir kişiyle ilişkilendirilemez hale gelir",
+"Veri üçüncü kişilere satılabilir hale gelir",
+"Veri, başka verilerle eşleştirilerek kişiyle yeniden ilişkilendirilebilir",
+"Veri yalnızca ilgili kullanıcı için erişilemez hale gelir, başkaları erişebilir",
+"Veri tamamen yok edilir, hiçbir kayıt kalmaz"
+],
+"dogru": 0,
+"aciklama": "Madde 10/1 uyarınca anonim hale getirme, veriyi 'başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hale getirme' işlemidir; veri var olmaya devam eder ama kişiyle bağı kopar.",
+"kaynak": "KVK Silme Yönetmeliği m.10"
+},
+{
+"soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre, \"Kişisel veri saklama ve imha politikası hazırlamış olan veri sorumlusu... yükümlülüğünün ortaya çıktığı tarihi takip eden ilk ______ imha işleminde, kişisel verileri siler, yok eder veya anonim hale getirir.\" Boşluğa gelmesi gereken kelime hangisidir?",
+"siklar": [
+"periyodik",
+"resen",
+"yıllık",
+"kısmi",
+"acil"
+],
+"dogru": 0,
+"aciklama": "Madde 11/1'in birebir lafzında geçen ifade 'ilk periyodik imha işlemi'dir.",
+"kaynak": "KVK Silme Yönetmeliği m.11/1"
+},
+{
+"soru": "(Kişisel Veri Silme/İmha Yönetmeliği) Yönetmelik uyarınca periyodik imhanın gerçekleştirileceği zaman aralığını kim belirler?",
+"siklar": [
+"Cumhurbaşkanlığı",
+"Adalet Bakanlığı",
+"Kişisel Verileri Koruma Kurulu",
+"Veri sorumlusu, kişisel veri saklama ve imha politikasında",
+"İlgili kişi"
+],
+"dogru": 3,
+"aciklama": "Madde 11/2: 'Periyodik imhanın gerçekleştirileceği zaman aralığı, veri sorumlusu tarafından kişisel veri saklama ve imha politikasında belirlenir. Bu süre her halde altı ayı geçemez.'",
+"kaynak": "KVK Silme Yönetmeliği m.11/2"
+}
+],
+"banka_kaynak_sayim": [
+[
+"KVK Silme/İmha Yönetmeliği m.8/1",
+7
+],
+[
+"KVK Silme/İmha Yönetmeliği m.9/1",
+7
+],
+[
+"KVK Silme Yönetmeliği m.10",
+3
+],
+[
+"KVK Silme Yönetmeliği m.11/2",
+2
+],
+[
+"KVK Silme Yönetmeliği m.11/1",
+2
+],
+[
+"KVK Silme Yönetmeliği m.11/3",
+1
+],
+[
+"KVK Silme Yönetmeliği m.11",
+1
+]
+]
+}

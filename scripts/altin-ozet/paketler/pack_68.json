@@ -1,0 +1,1821 @@
+{
+"grup": "D",
+"law_id": 68,
+"ad": "5809 sayılı Elektronik Haberleşme Kanunu",
+"emir_maddeleri": [
+2,
+3,
+4,
+36,
+39
+],
+"madde_sayisi": 15,
+"maddeler": [
+{
+"anahtar": "5809 Elektronik Haberleşme m.2",
+"no": "2",
+"metin": "(1) Elektronik haberleşme hizmetlerinin yürütülmesi ve elektronik haberleşme alt yapı ve şebekesinin tesisi ve işletilmesi ile her türlü elektronik haberleşme cihaz ve sistemlerinin imali, ithali, satışı, kurulması, işletilmesi, frekans dahil kıt kaynakların planlaması ve tahsisi ile bu konulara ilişkin düzenleme, yetkilendirme, denetleme ve uzlaştırma faaliyetlerinin yürütülmesi bu Kanuna tabidir. (2) Millî güvenlik ve kamu düzeni ile olağanüstü hal, (…)1 seferberlik, savaş hallerinde ve doğal afet durumlarında elektronik haberleşme hizmetlerinin sağlanmasına ilişkin özel kanunların ve 16/7/1965 tarihli ve 697 sayılı Ulaştırma ve Haberleşme Hizmetlerinin Olağanüstü Hallerde ve Savaşta Ne Suretle Yürütüleceğine Dair Kanun, 9/4/1987 tarihli ve 3348 sayılı Ulaştırma Bakanlığının Teşkilat ve Görevleri Hakkında Kanun, 16/6/2005 tarihli ve 5369 sayılı Evrensel Hizmetin Sağlanması ve Bazı Kanunlarda Değişiklik Yapılması Hakkında Kanun, 3/7/2005 tarihli ve 5397 sayılı Bazı Kanunlarda Değişiklik Yapılmasına Dair Kanun ile 4/5/2007 tarihli ve 5651 sayılı İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun hükümleri saklıdır. (3) Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığı ve kuruluş kanunları ile Cumhurbaşkanlığı kararnamelerinde belirtilen görev sahaları ile ilgili konularda olmak üzere Dışişleri Bakanlığı, Telekomünikasyon İletişim Başkanlığı, Millî İstihbarat Teşkilatı Müsteşarlığı ve Emniyet Genel Müdürlüğünün 1 2/7/2018 tarihli ve 703 sayılı Kanun Hükmünde Kararnamenin 205 inci maddesiyle bu fıkrada yer alan “sıkıyönetim,” ibaresi madde metninden çıkarılmıştır. elektronik haberleşme cihaz, sistem ve şebekeleri ile bedeli bu kurumlar tarafından ödenerek işletmeciler tarafından kurulan veya kurulacak elektronik haberleşme cihaz, sistem ve şebekeleri hakkında 36 ncı ve 39 uncu maddeler hariç, bu Kanun hükümleri uygulanmaz.2 Tanımlar ve kısaltmalar"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.3",
+"no": "3",
+"metin": "Tanımlar ve kısaltmalar\nMADDE 3 – (1) Bu Kanunda geçen;\na) Abone: Bir işletmeci ile elektronik haberleşme hizmetinin sunumuna yönelik olarak yapılan bir sözleşmeye taraf olan gerçek ya da tüzel kişiyi,\nb) Abonelik sözleşmesi: İşletmeci ile abone arasında akdedilen ve işletmecinin bir bedel karşılığında dönemsel ya da sürekli olarak bir hizmeti yerine getirmeyi veya mal teminini üstlendiği ya da her ikisini birden kapsayan sözleşmeyi,\nc) Abone kimlik ve iletişim bilgileri: İşletmeci tarafından aboneye tahsis edilen özel bilgileri,\nç) Adres taşınabilirliği: Abonenin numarasını değiştirmeden bulunduğu adresi değiştirmesini,\nd) Ana elektronik haberleşme şebekesi: Kamu kullanımına açık elektronik haberleşme hizmetlerinin üzerinden yürütüldüğü, belirli noktalar arasında elektronik haberleşme sağlayan transmisyon alt yapısı ve anahtarlama ekipmanları da dahil olmak üzere erişim ve iletim sistemleri şebekesini,\ne) Arabağlantı: Bir işletmecinin kullanıcılarının aynı veya diğer bir işletmecinin kullanıcılarıyla irtibatının veya başka bir işletmeci tarafından sunulan hizmetlere erişiminin sağlanmasını teminen, aynı veya farklı bir işletmeci tarafından kullanılan elektronik haberleşme şebekelerinin birbirlerine fiziksel ve mantıksal olarak bağlantısını,\nf) Arabağlantı yükümlüsü: Arabağlantı sağlama yükümlülüğü getirilen işletmeciyi,\ng) Bakanlık: Ulaştırma Bakanlığını,\nğ) Dağıtıcı: Cihazın satış ve/veya tedarik zincirinde yer alan ve faaliyetleri cihazın özelliklerini etkilemeyen gerçek veya tüzel kişiyi,\nh) Elektronik haberleşme: Elektriksel işaretlere dönüştürülebilen her türlü işaret, sembol, ses, görüntü ve verinin kablo, telsiz, optik, elektrik, manyetik, elektromanyetik, elektrokimyasal, elektromekanik ve diğer iletim sistemleri vasıtasıyla iletilmesini, gönderilmesini ve alınmasını,\nı) Elektronik haberleşme alt yapısı: Elektronik haberleşmenin, üzerinden veya aracılığıyla gerçekleştirildiği anahtarlama ekipmanları, donanım ve yazılımlar, terminaller ve hatlar da dahil olmak üzere her türlü şebeke birimlerini, ilgili tesisleri ve bunların bütünleyici parçalarını,\ni) Elektronik haberleşme alt yapısı işletimi: İlgili alt yapıya ilişkin gerekli elektronik haberleşme tesislerinin kurulması, kurdurulması, kiralanması veya herhangi bir surette temin alan “kuruluş kanunlarında” ibaresi “kuruluş kanunları ile Cumhurbaşkanlığı kararnamelerinde” şeklinde değiştirilmiştir. edilmesiyle bu tesisin diğer işletmecilerin veya talep eden gerçek veya tüzel kişilerin kullanımına sunulmasını,\nj) Elektronik haberleşme hizmeti: Elektronik haberleşme tanımına giren faaliyetlerin bir kısmının veya tamamının hizmet olarak sunulmasını,\nk) Elektronik haberleşme şebekesi: Bir veya daha fazla nokta arasında elektronik haberleşmeyi sağlamak için bu noktalar arası bağlantıyı teşkil eden anahtarlama ekipmanları ve hatlar da dahil olmak üzere her türlü iletim sistemleri ağını,\nl) Elektronik haberleşme sektörü: Elektronik haberleşme hizmeti verilmesi, elektronik haberleşme şebekesi sağlanması, elektronik haberleşme cihaz ve sistemlerine yönelik üretim, ithal, satış ve bakım-onarım hizmetlerinin yürütülmesi ile ilgili sektörü,\nm) Elektronik haberleşme şebekesi sağlanması: Elektronik haberleşme şebekesi kurulması, işletilmesi, kullanıma sunulması ve kontrolünü,\nn) Elektronik kimlik bilgisi: Elektronik haberleşme cihazlarına tek ve benzersiz olarak tahsis edilmiş kimlik tanımını,\no) Elektromanyetik girişim (Enterferans): İlgili mevzuat hükümlerine uygun olarak yapılan her türlü elektronik haberleşmeyi engelleyen, kesinti doğuran veya kalitesini bozan her türlü yayın veya elektromanyetik etkiyi,\nö) Erişim: Bu Kanunda belirtilen koşullarla, elektronik haberleşme şebekesi, alt yapısı ve/veya hizmetlerinin, diğer işletmecilere sunulmasını,\np) Erişim yükümlüsü: Erişim sağlama yükümlülüğü getirilen işletmeciyi,\nr) Etkin piyasa gücü: İşletmecinin, ilgili elektronik haberleşme pazarında, tek başına ya da diğer işletmecilerle birlikte, rakiplerinden, kullanıcılarından ve tüketicilerinden fark edilir bir şekilde bağımsız olarak hareket edebilmesine imkan sağlayan ekonomik gücü,\ns) Geçiş hakkı: İşletmecilere, elektronik haberleşme hizmeti sunmak için gerekli şebeke ve alt yapıyı kurmak, kaldırmak, bakım ve onarım yapmak gibi amaçlar ile kamu ve özel mülkiyet alanlarının altından, üstünden, üzerinden geçmeleri için tanınan hakları,\nş) Geçiş hakkı sağlayıcısı: Geçiş hakkına konu olan kamuya ait ya da kamunun ortak kullanımında olan taşınmazlar da dahil olmak üzere, taşınmaz sahipleri ve/veya taşınmaz üzerindeki hak sahiplerini,\nt) Hizmet taşınabilirliği: Abonenin numarasını değiştirmeden aldığı hizmet türünü değiştirmesini,\nu) İlgili pazar: Ülkenin tümünde veya bir bölümünde sunulmakta olan belirli bir elektronik haberleşme hizmeti ve onunla yüksek derecede ikame edilebilen diğer elektronik haberleşme hizmetlerinden oluşan pazarı,\nü) İlgili tesisler: İlgili şebeke ve/veya hizmet aracılığıyla hizmetlerin sunulmasını sağlayan ve/veya destekleyen bir elektronik haberleşme şebekesine ve/veya bir elektronik haberleşme hizmetine ilişkin tesisleri,\nv) İnternet alan adı: İnternet üzerinde bulunan bilgisayar veya internet sitelerinin adresini belirlemek için kullanılan internet protokol numarasını tanımlayan adları,\ny) İnternet alan adı sistemi: Okunması ve akılda tutulması kolay olan ve genelde aranan adres sahipleri ile ilişkilendirilebilen simgesel isimlerle yapılan adreslemede, karşılığı olan internet protokolü numarasını bulan ve kullanıcıya veren sistemi,\nz) İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi, aa) İşletmeci numara taşınabilirliği: Abonenin numarasını değiştirmeden hizmet aldığı işletmeciyi değiştirmesini, bb) Koşullu erişim sistemi: Radyo ve televizyon yayın sistemlerine abonelik veya başka bir yöntemle önceden izin verilmesi yoluyla koşullu olarak erişimi sağlayan her türlü teknik tedbir ve düzenlemeyi, cc) Kullanıcı: Aboneliği "
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.4",
+"no": "4",
+"metin": "(1) Her türlü elektronik haberleşme cihaz, sistem ve şebekelerinin kurulması ve işletilmesine müsaade edilmesi, gerekli frekans, numara, uydu pozisyonu ve benzeri kaynak tahsislerinin yapılması ile bunların düzenlenmesi Devletin yetki ve sorumluluğu altındadır. İlgili merciler tarafından elektronik haberleşme hizmetinin sunulmasında ve bu hususta yapılacak düzenlemelerde aşağıdaki ilkeler göz önüne alınır: a) Serbest ve etkin rekabet ortamının sağlanması ve korunması. b) Tüketici hak ve menfaatlerinin gözetilmesi. c) Kalkınma planları ve üst politika metinleri ile Bakanlık tarafından belirlenen stratejilerin gözetilmesi.3 ç) Herkesin, makul bir ücret karşılığında elektronik haberleşme şebeke ve hizmetlerinden yararlanmasını sağlayacak uygulamaların teşvik edilmesi. d) Aksini gerektiren objektif nedenler bulunmadıkça veya toplumdaki ihtiyaç sahibi kesimlere özel, kapsamı açık ve sınırları belirlenmiş kolaylıklar sağlanması halleri dışında, eşit şartlardaki aboneler, kullanıcılar ve işletmeciler arasında ayrım gözetilmemesi ve hizmetlerin benzer konumdaki kişiler tarafından eşit şartlarla ulaşılabilir olması. e) Bu Kanunda aksi belirtilmedikçe ya da objektif nedenler aksini gerektirmedikçe, niteliksel ve niceliksel devamlılık, düzenlilik, güvenilirlik, verimlilik, açıklık, şeffaflık ve kaynakların verimli kullanılmasının gözetilmesi. f) Elektronik haberleşme sistemlerinin uluslararası normlara uygun olması. g) Teknolojik yeniliklerin uygulanması ile araştırma-geliştirme faaliyet ve yatırımlarının teşvik edilmesi. 3 2/7/2018 tarihli ve 703 sayılı Kanun Hükmünde Kararnamenin 205 inci maddesiyle bu bentte yer alan “Hükümet programlarındaki hedefler ile Bakanlık tarafından belirlenen strateji ve politikaların gözetilmesi” ibaresi “üst politika metinleri ile Bakanlık tarafından belirlenen stratejilerin gözetilmesi” şeklinde değiştirilmiştir. ğ) Hizmet kalitesi artırımının teşvik edilmesi. h) Millî güvenlik ile kamu düzeni gereklerine ve acil durum ihtiyaçlarına öncelik verilmesi. ı) Bu Kanunda, ilgili mevzuatta ve yetkilendirmelerde açıkça belirlenen durumlar haricinde, işletmecilerin, arabağlantı da dahil olmak üzere erişim ücretleri ile hat ve devre kiralarını da kapsayacak biçimde, elektronik haberleşme hizmeti sunulması karşılığı alacakları ücretleri serbestçe belirlemesi. i) Elektronik haberleşme cihaz ve sistemlerinin kurulması, kullanılması ve işletilmesinde insan sağlığı, can ve mal güvenliği, çevre ve tüketicinin korunması açısından asgarî uluslararası normların dikkate alınması. j) Elektronik haberleşme hizmetlerinin sunulmasında ve bu hususlarda yapılacak düzenlemelerde tarafsızlığın sağlanması. k) Teknolojik yeniliklerin kullanılması da dahil olmak üzere engelli, yaşlı ve sosyal açıdan korunmaya muhtaç diğer kesimlerin özel ihtiyaçlarının dikkate alınması.4 l) Bilgi güvenliği ve haberleşme gizliliğinin gözetilmesi. İKİNCİ BÖLÜM Elektronik Haberleşme Sektöründe Yetkili Merciler ve Görevleri Bakanlığın görev ve yetkileri"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.36",
+"no": "36",
+"metin": "(1) Radyo ve televizyon yayınlarına ilişkin ilgili kanununda belirtilen hükümler saklı kalmak kaydıyla: a) Telsiz yayınlarının birbirleri üzerinde elektromanyetik girişim oluşturmaması ve frekans bantlarının etkin ve verimli şekilde kullanılmasını sağlamak amacıyla uluslararası frekans planlaması ve uluslararası kuruluşların aldığı kararlar da dikkate alınarak milli frekans planlaması, tahsisi, uluslararası koordinasyon ile tescil işlemleri Kurum tarafından yapılır ve uygulanır. b) Telsiz cihaz veya sistemi kurmak ve işletmek isteyenler Kuruma frekans tahsis ve tescil işlemlerini yaptırmak zorundadır. Ancak, bu Kanunun 37 nci maddesinde belirtilen, herhangi bir telsiz kurma ve kullanma iznine ve telsiz ruhsatnamesine ihtiyaç göstermeksizin kullanılan telsiz cihaz ve sistemlerinde kullanılacak frekanslar için tahsis ve tescil işlemi yapılmaz. (2) Frekans tahsislerinde Dışişleri Bakanlığı, Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığı ihtiyaçları da dahil Türk Silahlı Kuvvetlerine, Millî İstihbarat Teşkilatı Müsteşarlığına ve Emniyet Genel Müdürlüğüne öncelik tanınır. (3) Türk Silahlı Kuvvetleri ile Radyo ve Televizyon Üst Kurulu, milli frekans planı çerçevesinde kendilerine tahsis edilen frekans bantlarında frekans planlamasını yapar ve uygular. (4) Teknolojik gelişmeler ve Ülkemizin taraf olduğu uluslararası kuruluşların kararları doğrultusunda yapılabilecek yeni planlamalar çerçevesinde, Kurum, tahsis edilen frekans ve bantlar için Bakanlık ve ilgili kurumlar ile gerekli koordinasyonu sağlar. Kurum, Devlet güvenlik ve istihbaratında zafiyet yaratmayacak şekilde iptal dahil her türlü değişiklik yapabilir. Bu konuda yapılacak düzenlemeler sonucunda Kurum, herhangi bir yükümlülük altına girmez. Telsiz kurma ve kullanma izni, telsiz ruhsatnamesi ve kullanıma ilişkin esaslar"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.39",
+"no": "39",
+"metin": "(1) Telsiz haberleşme sistemleri üzerinden kriptolu haberleşme yapmaya Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı, Milli İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı yetkilidir. Ayrıca yukarıda belirtilen kurumlara ait olanlar dışında kamu kurum ve kuruluşları ile gerçek ve tüzel kişilerin elektronik haberleşme hizmeti içinde kodlu veya kriptolu haberleşme yapma usul ve esasları Kurum tarafından belirlenir. Spektrum izleme ve denetimi"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Ek 1",
+"no": "Ek",
+"metin": "(Ek: 6/2/2014-6518/106 md.) (Mülga: 12/3/2025-7545/19 md.)"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Ek 2",
+"no": "Ek",
+"metin": "(Ek: 2/7/2018-KHK-703/205 md.) (Mülga: 12/3/2025-7545/19 md.) Uygulama"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 1",
+"no": "Geçici",
+"metin": "(1) Bu Kanunda öngörülen düzenlemelerin yürürlüğe gireceği tarihe kadar mevcut düzenlemelerin bu Kanuna aykırı olmayan hükümlerinin uygulanmasına devam edilir. Kurum, bu Kanunun İkinci Kısım Birinci Bölümünde yer alan yetkilendirme ile ilgili hükümler yürürlüğe girinceye kadar mevcut mevzuat uyarınca yetkilendirme yapabilir. Bu Kanunun yürürlüğe girdiği tarihe kadar, işletmecilerin ilgili mevzuatına uygun olarak sahip oldukları geçiş hakları devam eder. (2) Bu Kanunun yürürlüğe girmesinden önce Kurum tarafından verilmiş ancak henüz tahsili gerçekleşmemiş olan idarî para cezaları hakkında da 61 inci madde hükmü uygulanır. Yetkilendirmede geçiş süreci"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 2",
+"no": "Geçici",
+"metin": "(1) Bu Kanunun yürürlüğe girdiği tarihten önce telekomünikasyon ruhsatı veya genel izin ile yetkilendirilmiş olan işletmeciler, bu Kanun uyarınca Kuruma bildirimde bulunmuş veya gerekli olduğu durumlarda yetkilendirmelerindeki süre ile sınırlı olarak kullanım hakkı almış sayılırlar. (2) Bu Kanunun yürürlüğe girdiği tarihten önce Kurumla imzalanmış olan görev ve imtiyaz sözleşmeleri; süre bitimi, fesih, iptal veya başkaca herhangi bir nedenle sona ermelerine kadar mevcut hükümleri uyarınca geçerliliklerini devam ettirirler. 406 sayılı Kanunun 1 inci maddesinin son fıkrasında yer alan tanımlar ilgili olduğu sözleşmenin konusu itibariyle bu fıkra uygulamasında geçerliliklerini sürdürürler. (3) Bu Kanunun yürürlüğe girdiği tarihten önce yetkilendirmeye tabi olmayan elektronik haberleşme hizmetleri için Kurum tarafından sistem kurma ve kullanma izni verilmiş olan kullanıcıların kaynak kullanım hakları devam eder. Telsiz ruhsatlarının yenilenmesi"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 3",
+"no": "Geçici",
+"metin": "(1) Özel kanunlarının verdiği yetkiye göre telsiz cihaz ve sistemleri kullanan kamu kurum ve kuruluşları hariç, bu Kanunun yürürlüğe girmesinden önce, telsiz cihaz ve sistemleri kullanan diğer kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler bu Kanunun 37 nci maddesinde belirtilen yönetmeliğin yayımı tarihinden itibaren altı ay içinde gerekli belgelerle birlikte Kuruma başvurarak durumlarını bu Kanun hükümlerine uygun hale getirirler. (2) Kurum, söz konusu kamu kurum ve kuruluşları ile gerçek ve tüzel kişilerin durumlarını inceleyerek uygun olanların telsiz ruhsatnamelerini yeniler. Uygun olmayanların ve süresi içinde başvuru yapmayanların telsiz ruhsatnamelerini iptal eder. (3) 2813 sayılı Kanun çerçevesinde telsiz kullanım ve ruhsatname ücretlerinin tahsili ile ilgili olarak yetkilendirmeleri ve özel protokolleri uyarınca işletmecilere getirilmiş olan tahsil ve Kuruma ödeme yükümlülüğü çerçevesinde tahakkuk ettirilmiş olanlar dışında, bu Kanunun yürürlüğe girmesinden önce 2813 sayılı Kanunun uygulamasından doğan ve her ne sebeple olursa olsun tahsil edilmemiş veya tahsili mümkün olmayan, miktarı ne olursa olsun genel bütçeye dahil daireler, katma bütçeli idareler, il özel idareleri, belediyeler ve köy tüzel kişilikleri tarafından kullanılan her türlü telsiz tesis ve sistemlerindeki cihazlar için tahakkuk ettirilmiş alacaklar ile yargı kararı ile kesinleşenler hariç gerçek ve tüzel kişiler tarafından kullanılan her türlü telsiz tesis ve sistemlerindeki cihazlar için tahakkuk ettirilmiş yüzelli lira ve altında kalan Kurum alacakları ve bunların fer’ilerinin tahsilinden herhangi bir işleme gerek kalmaksızın vazgeçilmiş sayılır. Bunlara ilişkin açılmış olan davalar ve yapılmış olan takipler iptal edilir. Görev sözleşmeleri ve devir"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 4",
+"no": "Geçici",
+"metin": "(1) Kurum ile Kıyı Emniyeti Genel Müdürlüğü arasında imzalanmış bulunan görev sözleşmesi herhangi bir işleme gerek kalmaksızın iptal edilmiş sayılır ve bu görev sözleşmesindeki hizmetler ile bu Kanunla Telsiz İşletme Müdürlüğüne verilen görevler herhangi bir yetkilendirmeye tabi olmaksızın yürütülmeye devam eder. Kıyı Emniyeti Genel Müdürlüğü, 5369 sayılı Kanun kapsamında evrensel hizmet yükümlüsü bir işletmeci olarak sayılmaya devam eder. (2) Bu Kanunun 42 nci ve 43 üncü maddeleriyle Telsiz İşletme Müdürlüğüne devredilen görev ve işlere ilişkin Kurumun tüm hak, alacak ve borçları, sözleşme, taahhüt ve yükümlülükleri, leh ve aleyhe açılmış ve açılacak olan dava ve icra takipleri, bu maddenin yürürlüğe girdiği tarihten itibaren altı ay içerisinde Kıyı Emniyeti Genel Müdürlüğü ile Kurum arasında yapılacak protokoller ile Telsiz İşletme Müdürlüğüne devredilir. Bu devre ilişkin bütün devir, temlik ve intikal işlemleri ve bu işlemlerle ilgili olarak düzenlenecek her türlü sözleşme, protokol ve kağıtlar, katma değer vergisi ve damga vergisi dahil her türlü vergi, resim, harç ve benzeri mali yükümlülüklerden istisnadır. Abonelik kayıtlarının güncellenmesi"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 5",
+"no": "Geçici",
+"metin": "(1) GSM mobil telefon hizmeti sunan işletmeciler nezdinde tutulan abonelik kayıtlarının tam, doğru ve güncel bilgilerden oluşmasını teminen, tüm abonelik kayıtları bu Kanunun yayımından itibaren bir yıl içinde güncellenir. Bu kapsamda ilgili işletmeciler nezdindeki bilgi ve belgelerinde eksiklik ve yanlışlıkları bulunan tüm aboneler, bu süre içerisinde kimliklerini ispatlayıcı belgelerle birlikte ilgili işletmeciye başvururlar. Başvuru esnasında abonelerden kimliklerini ispata yarar belgelerin birer örneği ile birlikte bireysel abonelerden Türkiye Cumhuriyeti kimlik numaraları, kurumsal abonelerden ise vergi numaraları alınır. Bu madde kapsamında bilgileri güncellenemeyen hatların elektronik haberleşme şebekesi ile bağlantısı kesilir. (2) Bu Kanunda tanımlanan son kullanıcılar, kullanmakta oldukları hatları, bir kereye mahsus olmak üzere verilen süre içerisinde, hiçbir vergi, resim, harç ve benzeri mali yükümlülüğe tabi olmaksızın kendi üzerlerine kaydettirmek için ilgili işletmeciyle abonelik sözleşmesi akdedebilir. Söz konusu hatların eski abonelerinin yapılan işleme bir yıllık zamanaşımı süresi içinde itiraz hakları saklıdır. (3) Bu maddenin uygulanmasına ilişkin düzenlemeler Kurum tarafından yapılır. Elektronik kimlik bilgisi değiştirilen ve borcu bulunan cihazlar"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 6",
+"no": "Geçici",
+"metin": "(Ek:17/7/2019-7186/24 md.) (1) Kurumun MCKS’sinde kayıtlı olmakla birlikte bu maddenin yürürlüğe girdiği tarihten önce elektronik kimlik bilgisi değiştirilmiş olan cihazlar ile Kurumun uluslararası dolaşım hizmetleri çerçevesinde yaptığı düzenlemelere uymayan cihazlara elektronik haberleşme hizmeti verilmesi dört ay içinde engellenir. Bu cihazların kullanıcılarının, bu maddenin yürürlüğe girdiği tarihten itibaren bir yıl içinde Kurum düzenlemeleri çerçevesinde başvuru yaparak iki yüz elli Türk lirası tutarındaki kayıt ücretini genel bütçeye gelir kaydedilmek üzere Hazine ve Maliye Bakanlığı muhasebe birimi hesabına yatırmaları hâlinde, cihazların elektronik kimlik bilgisi ilgili abonenin numaraları ile eşleştirilerek kullanılabilir. (2) Bu maddeyi ihdas eden Kanunla, bu Kanunun 57 nci maddesinin birinci fıkrasında yapılan değişiklik uyarınca finansman borcu bulunduğu bildirilen cihazların kısıtlanmasına ilişkin hüküm, bu maddenin yürürlük tarihinden sonraki iş ve işlemlere uygulanır. Dava ve cezaların ertelenmesi"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 7",
+"no": "Geçici",
+"metin": "(Ek: 1/7/2022-7417/52 md.) (1) 31/12/2021 tarihine kadar işlenen ve bu Kanunun 63 üncü maddesinin onuncu fıkrasında düzenlenen kişinin bilgisi ve rızası dışında işletmeci veya adına iş yapan temsilcisi tarafından abonelik tesisi veya işlemi yapmak veya yaptırmak suçundan dolayı; a) Soruşturma evresinde, Ceza Muhakemesi Kanununun 171 inci maddesindeki şartlar aranmaksızın kamu davasının açılmasının ertelenmesine, b) Kovuşturma evresinde, kovuşturmanın ertelenmesine, c) Kesinleşmiş olan mahkûmiyet hükmünün infazının ertelenmesine, karar verilir. (2) Hakkında kamu davasının açılmasının veya kovuşturmanın ya da infazın ertelenmesi kararı verilen kişinin, erteleme kararının verildiği tarihten itibaren bir yıl içinde birinci fıkra kapsamına giren yeni bir suç işlememesi hâlinde, kovuşturmaya yer olmadığı veya düşme kararı verilir; infazın ertelenmesine karar verilen hallerde ise, cezanın bütün sonuçlarıyla ortadan kaldırılmasına karar verilir. Bu süre zarfında birinci fıkra kapsamına giren yeni bir suç işlenmesi hâlinde, bu suçtan dolayı kesinleşmiş hükümle cezaya mahkûm olunduğu takdirde, ertelenen soruşturma veya kovuşturmaya ya da infaza devam olunur. (3) Bu madde hükümlerine göre erteleme kararı verilmesi hâlinde erteleme süresince dava ve ceza zamanaşımı durur. (4) Birinci fıkra kapsamına giren suçlardan dolayı hükmün açıklanmasının geri bırakılması kararının verilmiş olması hâlinde dahi, bu madde hükümleri uygulanır. (5) Birinci fıkra kapsamına giren suçlardan dolayı verilmiş mahkûmiyet hükmünün infazının tamamlanmış olması hâlinde kişinin adli sicil ve arşiv kayıtları bu Kanunun yayımıyla birlikte silinir ve bu mahkûmiyet hükmüne bağlı yasaklanmış hakların 25/5/2005 tarihli ve 5352 sayılı Adlî Sicil Kanununun 13/A maddesindeki şartlar aranmaksızın geri verilmesine karar verilir. (6) Bu madde hükümlerine göre verilen kamu davasının açılması, kovuşturmanın veya cezanın infazının ertelenmesi kararları adlî sicilde bunlara mahsus bir sisteme kaydedilir. Bu kayıtlar, ancak bir soruşturma veya kovuşturmayla bağlantılı olarak Cumhuriyet savcısı, hâkim veya mahkeme tarafından istenmesi hâlinde, bu maddede belirtilen amaç için kullanılabilir. (7) Bu madde hükümlerine göre kamu davasının açılması, kovuşturmanın veya cezanın infazının ertelenmesi kararlarının verildiği hâllerde, bu suçlar Türk Ceza Kanununun erteleme ve tekerrüre ilişkin hükümleri ile Ceza Muhakemesi Kanununun hükmün açıklanmasının geri bırakılmasına ilişkin hükümlerinin uygulanmasında göz önünde bulundurulmaz. Abonelik kayıtlarının güncellenmesi"
+},
+{
+"anahtar": "5809 Elektronik Haberleşme m.Geçici 8",
+"no": "Geçici",
+"metin": "(Ek:24/12/2025-7571/32 md.) (1) Mobil haberleşme hizmeti sunan işletmeciler nezdinde tutulan yabancı uyruklu gerçek kişilere ait abonelik kayıtlarının bu maddeyi ihdas eden Kanunla 50 nci maddede yapılan değişikliklere uygun hale getirilmesi amacıyla, bu fıkranın yürürlüğe girdiği tarihten itibaren altı ay içinde yabancı uyruklu gerçek kişiler, abonelik kayıtlarını güncellemek için ilgili işletmeciye başvurmak zorundadır. Kurum tarafından bu süre altı ay daha uzatılabilir. Başvuru üzerine ilgili işletmecilerce abonelik kayıtları, yapılan değişikliklere uygun hale getirilir. (2) Abonelik kayıtlarını güncellemek için ilgili işletmeciye başvurmayan veya kimliği teyit edilemeyen yabancı uyruklu gerçek kişilere ait mobil haberleşme hatlarının elektronik haberleşme şebekesiyle bağlantısı, birinci fıkraya göre abonelere verilen başvuru süresinin bitiminden itibaren bir ay içinde ilgili işletmeci tarafından kesilir. (3) Bu maddenin birinci fıkrası ve bu maddeyi ihdas eden Kanunla 50 nci maddeye eklenen sekizinci, dokuzuncu, onuncu, onbirinci ve onikinci fıkra hükümleri, bu maddeyi ihdas eden Kanunun yayımından itibaren altı ay sonra yürürlüğe girer. (4) Kurum, gerçek veya tüzel bir kişi adına açılabilecek hat sayısı ile aynı cihazla belirli süre içinde kullanılabilecek hat sayısını ve yabancı uyruklu kişilere özgü numara tahsisi ve kullanımına ilişkin usul ve esasları bu maddeyi ihdas eden Kanunun yayımından itibaren altı ay içinde belirler. (5) Adına Kurumun belirlediği sayıdan fazla abonelik kaydı bulunan gerçek veya tüzel kişilere, fazla olan mobil haberleşme hattını kullanıma kapatması veya devretmesi için dördüncü fıkra uyarınca Kurum tarafından yapılacak belirleme tarihinden itibaren altı ay süre tanınır. Kurum tarafından bu süre altı ay daha uzatılabilir. Bu süre içinde yükümlülüğünü yerine getirmeyen kişilere ait fazla hatların elektronik haberleşme şebekesiyle bağlantısı, en eski tarihli abonelikler korunmak suretiyle ilgili işletmeci tarafından kesilir. (6) Birinci, ikinci ve beşinci fıkralarda yer alan yükümlülükleri yerine getirmeyen mobil haberleşme hizmeti sunan işletmecilere, her bir mobil hat aboneliği başına Kurum tarafından yirmibin Türk Lirası idari para cezası verilir. (7) Bu maddenin beşinci fıkrası hükümlerinin uygulanması nedeniyle mobil haberleşme hatlarının devri veya kapatılması halinde vergi, resim, harç, cezai şart, cayma bedeli ve benzeri yükümlülükler uygulanmaz. Bu fıkra hükmü aynı hat bakımından bir kez uygulanır. (8) Bu maddenin uygulanmasına ilişkin usul ve esaslar Kurum tarafından belirlenir. Yürürlük"
+}
+],
+"cikmis_sorular": [],
+"mebs2024": [
+{
+"soru": 71,
+"madde": "5809 Elektronik Haberleşme m.2/1-3 (Kapsam)",
+"alinti": "(2) … olağanüstü hal, … savaş hallerinde ve doğal afet durumlarında elektronik haberleşme hizmetlerinin sağlanmasına ilişkin özel kanunların ve … 697 sayılı … Kanun … hükümleri saklıdır. (3) Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığı ve … Dışişleri Bakanlığı, … Millî İstihbarat Teşkilatı Müsteşarlığı ve Emniyet Genel Müdürlüğünün elektronik haberleşme cihaz, sistem ve şebekeleri … hakkında 36 ncı ve 39 uncu maddeler hariç, bu Kanun hükümleri uygulanmaz.",
+"aciklama": "Kapsam maddesine göre A (1. fıkra), B ve D (2. fıkra: doğal afet ve olağanüstü halde özel kanunlar ile 697 sayılı Kanun saklıdır) ve E (3. fıkra: EGM için 36 ve 39 hariç uygulanmaz) doğrudur. Dışişleri Bakanlığı da 3. fıkrada TSK, JGK, SGK, MİT ve EGM ile birlikte sayılmıştır; onun cihaz, sistem ve şebekeleri hakkında da Kanun'un tümü değil, yalnızca 36 ve 39. maddeler uygulanır. C şıkkı bu yüzden yanlıştır.",
+"guven": "kesin",
+"kok": "5809 sayılı Elektronik Haberleşme Kanunu’na göre aşağıdakilerden hangisi yanlıştır?",
+"siklar": {
+"A": "Elektronik haberleşme alt yapı ve şebekesinin tesisi ve işletilmesi bu kanun hükümlerine tabidir.",
+"B": "Doğal afet durumlarında elektronik haberleşme hizmetlerinin sağlanmasına ilişkin özel kanun hükümleri saklıdır.",
+"C": "Dışişleri Bakanlığı’nın elektronik haberleşme cihaz, sistem ve şebekeleri hakkında bu Kanun’un tümü uygulanır.",
+"D": "Olağanüstü halde 16/7/1965 tarihli ve 697 sayılı Ulaştırma ve Haberleşme Hizmetlerinin Olağanüstü Hâllerde ve Savaşta Ne Suretle Yürütüleceğine Dair Kanun hükümleri saklıdır.",
+"E": "Emniyet Genel Müdürlüğü’nün elektronik haberleşme cihaz, sistem ve şebekeleri hakkında 36’ncı ve 39’uncu maddeler hariç bu kanun hükümleri uygulanmaz."
+},
+"dogru": "C"
+},
+{
+"soru": 72,
+"madde": "5809 Elektronik Haberleşme m.36/1-4 (Frekans planlama, tahsis ve tescil)",
+"alinti": "a) … milli frekans planlaması, tahsisi, uluslararası koordinasyon ile tescil işlemleri Kurum tarafından yapılır ve uygulanır. b) Telsiz cihaz veya sistemi kurmak ve işletmek isteyenler Kuruma frekans tahsis ve tescil işlemlerini yaptırmak zorundadır. Ancak, bu Kanunun 37 nci maddesinde belirtilen, herhangi bir telsiz kurma ve kullanma iznine ve telsiz ruhsatnamesine ihtiyaç göstermeksizin kullanılan telsiz cihaz ve sistemlerinde kullanılacak frekanslar için tahsis ve tescil işlemi yapılmaz.",
+"aciklama": "36. maddede A (1-a), C (2. fıkra), D (3. fıkra) ve E (4. fıkra: Kurum, Bakanlık ve ilgili kurumlarla koordinasyonu sağlar) aynen vardır. 1. fıkranın (b) bendi ise telsiz cihaz veya sistemi kuracakların Kuruma (BTK) frekans tahsis ve tescil işlemlerini yaptırmak ZORUNDA olduğunu söyler; yalnızca 37. maddedeki izinsiz/ruhsatsız kullanılabilen cihazlar istisnadır. B şıkkı 'zorunda olmadan kurabilir' diyerek kuralı tersine çevirdiği için yanlıştır.",
+"guven": "kesin",
+"kok": "5809 sayılı Elektronik Haberleşme Kanunu’na göre frekans, planlama, tahsis ve tescile ilişkin aşağıdakilerden hangisi yanlıştır?",
+"siklar": {
+"A": "Millî frekans planlaması, tahsisi, uluslararası koordinasyon ile tescil işlemleri Bilgi Teknolojileri ve İletişim Kurumu tarafından yapılır ve uygulanır.",
+"B": "Telsiz cihaz veya sistemi kurmak ve işletmek isteyenler Bilgi Teknolojileri ve İletişim Kurumuna frekans tahsis ve tescil işlemlerini yaptırmak zorunda olmadan bu sistemleri kurabilir ve işletebilirler.",
+"C": "Frekans tahsislerinde Dışişleri Bakanlığı, Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığı ihtiyaçları da dahil Türk Silahlı Kuvvetlerine, Millî İstihbarat Teşkilatı Müsteşarlığına ve Emniyet Genel Müdürlüğüne öncelik tanınır.",
+"D": "Türk Silahlı Kuvvetleri ile Radyo ve Televizyon Üst Kurulu, millî frekans planı çerçevesinde kendilerine tahsis edilen frekans bantlarında frekans planlamasını yapar ve uygular.",
+"E": "Bilgi Teknolojileri ve İletişim Kurumu, tahsis edilen frekans ve bantlar için Ulaştırma ve Altyapı Bakanlığı ve ilgili kurumlar ile gerekli koordinasyonu sağlar."
+},
+"dogru": "B"
+},
+{
+"soru": 73,
+"madde": "5809 Elektronik Haberleşme m.3/1-ş (Tanımlar)",
+"alinti": "ş) Geçiş hakkı sağlayıcısı: Geçiş hakkına konu olan kamuya ait ya da kamunun ortak kullanımında olan taşınmazlar da dahil olmak üzere, taşınmaz sahipleri ve/veya taşınmaz üzerindeki hak sahiplerini, … s) Geçiş hakkı: İşletmecilere, elektronik haberleşme hizmeti sunmak için gerekli şebeke ve alt yapıyı kurmak … gibi amaçlar ile kamu ve özel mülkiyet alanlarının altından, üstünden, üzerinden geçmeleri için tanınan hakları,",
+"aciklama": "Soru kökündeki tanım, Kanunun 3. maddesinin (ş) bendindeki 'Geçiş hakkı sağlayıcısı' tanımının kendisidir. 'Geçiş hakkı' (E) ise işletmecilere kamu ve özel mülkiyetin altından/üstünden geçmeleri için tanınan hakkı anlatır; arabağlantı, erişim yükümlüsü ve elektronik kimlik bilgisi tamamen farklı kavramlardır. Doğru cevap A'dır.",
+"guven": "kesin",
+"kok": "5809 sayılı Elektronik Haberleşme Kanunu’na göre “Geçiş hakkına konu olan kamuya ait ya da kamunun ortak kullanımında olan taşınmazlar da dâhil olmak üzere, taşınmaz sahipleri ve/veya taşınmaz üzerindeki hak sahiplerini” ifade eden kavram aşağıdakilerden hangisidir?",
+"siklar": {
+"A": "Geçiş hakkı sağlayıcısı",
+"B": "Arabağlantı",
+"C": "Erişim yükümlüsü",
+"D": "Elektronik kimlik bilgisi",
+"E": "Geçiş hakkı"
+},
+"dogru": "A"
+},
+{
+"soru": 74,
+"madde": "5809 Elektronik Haberleşme m.4/1 (İlkeler)",
+"alinti": "a) Serbest ve etkin rekabet ortamının sağlanması ve korunması. b) Tüketici hak ve menfaatlerinin gözetilmesi. … f) Elektronik haberleşme sistemlerinin uluslararası normlara uygun olması. … h) Millî güvenlik ile kamu düzeni gereklerine ve acil durum ihtiyaçlarına öncelik verilmesi. … k) Teknolojik yeniliklerin kullanılması da dahil olmak üzere engelli, yaşlı ve sosyal açıdan korunmaya muhtaç diğer kesimlerin özel ihtiyaçlarının dikkate alınması.",
+"aciklama": "4. maddedeki ilkelere göre: I doğru (a bendi). II yanlış; metin 'satıcı' değil 'TÜKETİCİ hak ve menfaatlerinin gözetilmesi' der (b bendi). III yanlış; sistemler uluslararası normlara 'aykırı' değil 'UYGUN' olmalıdır (f bendi). IV doğru (k bendi). V doğru (h bendi). Doğru öncüller I, IV ve V olduğundan cevap D'dir.",
+"guven": "kesin",
+"kok": "I. Serbest ve etkin rekabet ortamının sağlanması ve korunması II. Satıcı hak ve menfaatlerinin gözetilmesi III. Elektronik haberleşme sistemlerinin uluslararası normlara aykırı olması IV. Teknolojik yeniliklerin kullanılması da dahil olmak üzere engelli, yaşlı ve sosyal açıdan korunmaya muhtaç diğer kesimlerin özel ihtiyaçlarının dikkate alınması V. Millî güvenlik ile kamu düzeni gereklerine ve acil durum ihtiyaçlarına öncelik verilmesi 5809 sayılı Elektronik Haberleşme Kanunu’na göre yukarıdakilerden hangileri elektronik haberleşme hizmetinin sunulmasında ve bu hususta yapılacak düzenlemelerde dikkat edilecek ilkelerdendir?",
+"siklar": {
+"A": "I ve III",
+"B": "III ve V",
+"C": "I, III ve IV",
+"D": "I, IV ve V",
+"E": "II, IV ve V"
+},
+"dogru": "D"
+}
+],
+"banka_sorulari": [
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, 'geçiş hakkına konu olan kamuya ait ya da kamunun ortak kullanımında olan taşınmazlar da dâhil olmak üzere, taşınmaz sahipleri ve/veya taşınmaz üzerindeki hak sahipleri' aşağıdaki kavramlardan hangisini ifade eder?",
+"siklar": [
+"Geçiş hakkı sağlayıcısı",
+"Erişim yükümlüsü",
+"Etkin piyasa gücü",
+"İlgili tesisler",
+"Taşıyıcı"
+],
+"dogru": 0,
+"aciklama": "Kanunun tanımlar hükmünde 'geçiş hakkı sağlayıcısı' bu şekilde tanımlanmıştır.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre 'geçiş hakkı' aşağıdakilerden hangisini ifade eder?",
+"siklar": [
+"İşletmecilere, elektronik haberleşme hizmeti sunmak için gerekli şebeke ve alt yapıyı kurmak, kaldırmak, bakım ve onarım yapmak gibi amaçlarla kamu ve özel mülkiyet alanlarının altından, üstünden ve üzerinden geçmeleri için tanınan haklar",
+"Frekans, numara ve uydu pozisyonu gibi kıt kaynakların kullanılması için verilen hak",
+"Abonenin numarasını değiştirmeden işletmecisini değiştirebilmesi",
+"Şebeke, altyapı ve hizmetlerin diğer işletmecilere sunulması",
+"Şirketlerin Kurum nezdinde kayıtlanması"
+],
+"dogru": 0,
+"aciklama": "Geçiş hakkı, işletmecilere şebeke ve altyapıyı kurmak, kaldırmak, bakım ve onarım yapmak gibi amaçlarla kamu ve özel mülkiyet alanlarının altından, üstünden, üzerinden geçmeleri için tanınan haklardır.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, aşağıdakilerden hangisi bu Kanuna tabi olan faaliyetler arasında sayılmıştır?",
+"siklar": [
+"Frekans dahil kıt kaynakların planlanması ve tahsisi",
+"Radyo ve televizyon yayın içeriklerinin basın ahlakı yönünden denetlenmesi",
+"Adli para cezalarının infazı",
+"Kamu ihale sözleşmelerinin denetimi",
+"İnternet alan adı uyuşmazlıklarının yargısal çözümü"
+],
+"dogru": 0,
+"aciklama": "m.2/f.1: '...frekans dahil kıt kaynakların planlaması ve tahsisi ile bu konulara ilişkin düzenleme, yetkilendirme, denetleme ve uzlaştırma faaliyetlerinin yürütülmesi bu Kanuna tabidir.'",
+"kaynak": "5809 m.2"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, aşağıdakilerden hangisi Kanuna tabi tutulan hususlar arasında YER ALMAZ?",
+"siklar": [
+"Elektronik haberleşme cihaz ve sistemlerinin imali, ithali ve satışı",
+"Radyo ve televizyon yayın içeriklerinin genel ahlaka uygunluk denetimi",
+"Elektronik haberleşme alt yapı ve şebekesinin tesisi ve işletilmesi",
+"Frekans dahil kıt kaynakların planlaması ve tahsisi",
+"Elektronik haberleşme hizmetlerine ilişkin düzenleme, yetkilendirme, denetleme ve uzlaştırma faaliyetleri"
+],
+"dogru": 1,
+"aciklama": "m.2/f.1'de sayılan hususlar arasında yayın içeriğinin ahlaka uygunluk denetimi yoktur; bu husus RTÜK mevzuatının konusudur. Diğer dört şık madde metninde birebir sayılmıştır.",
+"kaynak": "5809 m.2"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, 'elektronik haberleşme' tanımı aşağıdakilerden hangisidir?",
+"siklar": [
+"Elektriksel işaretlere dönüştürülebilen her türlü işaret, sembol, ses, görüntü ve verinin kablo, telsiz, optik ve diğer iletim sistemleri vasıtasıyla iletilmesi, gönderilmesi ve alınması",
+"Yalnızca telsiz sistemleri üzerinden yapılan ses iletişimi",
+"Kamu kurumları arasındaki resmi yazışma",
+"Radyo ve televizyon yayınlarının kablo ile dağıtımı",
+"İnternet üzerinden yapılan ticari işlemler"
+],
+"dogru": 0,
+"aciklama": "m.3/1-h: 'Elektronik haberleşme: Elektriksel işaretlere dönüştürülebilen her türlü işaret, sembol, ses, görüntü ve verinin kablo, telsiz, optik, elektrik, manyetik, elektromanyetik, elektrokimyasal, elektromekanik ve diğer iletim sistemleri vasıtasıyla iletilmesini, gönderilmesini ve alınmasını...' ifade eder.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, aşağıdaki eşleştirmelerden hangisi YANLIŞTIR?",
+"siklar": [
+"Abone – İşletmeci ile elektronik haberleşme hizmetinin sunumuna yönelik sözleşmeye taraf olan gerçek ya da tüzel kişi",
+"Son kullanıcı – Elektronik haberleşme hizmeti ve/veya şebekesi SAĞLAYAN gerçek veya tüzel kişi",
+"Kullanıcı – Aboneliği olup olmamasına bakılmaksızın hizmetlerden yararlanan gerçek veya tüzel kişi",
+"Tüketici – Hizmeti ticari veya mesleki olmayan amaçlarla kullanan veya talep eden gerçek veya tüzel kişi",
+"İşletmeci – Yetkilendirme çerçevesinde hizmet sunan ve/veya şebeke sağlayan şirket"
+],
+"dogru": 1,
+"aciklama": "m.3/1-jj: 'Son kullanıcı: Elektronik haberleşme hizmeti ve/veya elektronik haberleşme şebekesi SAĞLAMAYAN gerçek veya tüzel kişileri' ifade eder. B şıkkı tanımı tersine çevirmiştir.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirket aşağıdaki tanımlardan hangisiyle ifade edilir?",
+"siklar": [
+"Erişim yükümlüsü",
+"Arabağlantı yükümlüsü",
+"İşletmeci",
+"Taşıyıcı",
+"Onaylanmış kuruluş"
+],
+"dogru": 2,
+"aciklama": "m.3/1-z: 'İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi...' ifade eder.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, elektronik haberleşme tanımına giren faaliyetlerin bir kısmının veya tamamının ....(1).... olarak sunulması '....(2)....' olarak tanımlanır. Boşluklara sırasıyla gelmesi gereken ifadeler hangisidir?",
+"siklar": [
+"ürün – Elektronik haberleşme şebekesi",
+"kaynak – Elektronik haberleşme alt yapısı",
+"mal – Elektronik haberleşme sektörü",
+"hizmet – Elektronik haberleşme hizmeti",
+"yatırım – Elektronik haberleşme cihazı"
+],
+"dogru": 3,
+"aciklama": "m.3/1-j: 'Elektronik haberleşme hizmeti: Elektronik haberleşme tanımına giren faaliyetlerin bir kısmının veya tamamının hizmet olarak sunulmasını...' ifade eder.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, 'spektrum' tanımında belirtilen frekans aralığı aşağıdakilerden hangisidir?",
+"siklar": [
+"1 MHz - 300 GHz",
+"9 MHz - 3000 MHz",
+"30 kHz - 300 GHz",
+"9 kHz - 300 GHz",
+"9 kHz - 3000 GHz"
+],
+"dogru": 4,
+"aciklama": "m.3/1-kk: 'Spektrum: Elektronik haberleşme amacıyla kullanılan, frekansı 9 kHz-3000 GHz arasında olan ve uluslararası düzenleme yapılması halinde 3000 GHz'in üzerindeki frekanslar da dahil olmak üzere elektromanyetik dalgaların frekans aralığını...' ifade eder.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, 'telsiz' tanımı aşağıdakilerden hangisidir?",
+"siklar": [
+"Aralarında herhangi bir fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu ses ve veri vermeye, almaya veya yalnızca vermeye veya almaya yarayan sistemler",
+"Yalnızca askeri amaçlarla kullanılan kriptolu haberleşme cihazları",
+"Kablolu iletim sistemleri üzerinden yapılan her türlü haberleşme",
+"Uydu üzerinden yapılan görüntü ve ses iletimi",
+"Radyo ve televizyon yayın vericileri"
+],
+"dogru": 0,
+"aciklama": "m.3/1-ss: 'Telsiz: Aralarında herhangi bir fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu ses ve veri vermeye, almaya veya yalnızca vermeye veya almaya yarayan sistemleri' ifade eder.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, aşağıdakilerden hangisi 'telsiz ruhsatnamesi' ile 'telsiz kurma ve kullanma izni' tanımlarına ilişkin DOĞRU bir ifade DEĞİLDİR?",
+"siklar": [
+"Her ikisi de bu Kanun kapsamında kurulacak ve kullanılacak telsiz cihaz ve sistemleri içindir",
+"Telsiz ruhsatnamesi ile telsiz kurma ve kullanma izni aynı tanım içinde, birbirinin eş anlamlısı olarak kullanılır",
+"Her ikisi de Kurum tarafından verilir",
+"Telsiz kurma ve kullanma izni ile telsiz ruhsatnamesi, Kanunda ayrı ayrı bentlerde tanımlanmıştır",
+"Telsiz ruhsatnamesi (tt) bendinde, telsiz kurma ve kullanma izni ise ayrıca (şş) bendinde tanımlanmıştır"
+],
+"dogru": 1,
+"aciklama": "m.3/1-şş ve m.3/1-tt'de telsiz kurma ve kullanma izni ile telsiz ruhsatnamesi ayrı ayrı bentlerde, birbirinden farklı belgeler olarak tanımlanmıştır; eş anlamlı değildirler.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, kanunda geçen 'Kurum' ifadesi aşağıdakilerden hangisini karşılar?",
+"siklar": [
+"Ulaştırma Bakanlığı",
+"Bilgi Teknolojileri ve İletişim Kurulu",
+"Bilgi Teknolojileri ve İletişim Kurumu",
+"Radyo ve Televizyon Üst Kurulu",
+"Telekomünikasyon İletişim Başkanlığı"
+],
+"dogru": 2,
+"aciklama": "m.3/1-ee: 'Kurum: Bilgi Teknolojileri ve İletişim Kurumunu' ifade eder.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+"siklar": [
+"Bakanlık – Bilgi Teknolojileri ve İletişim Kurumu, Kurul – Ulaştırma Bakanlığı, Kurum – Bilgi Teknolojileri ve İletişim Kurulu",
+"Bakanlık – Dışişleri Bakanlığı, Kurul – Bilgi Teknolojileri ve İletişim Kurumu, Kurum – Ulaştırma Bakanlığı",
+"Bakanlık – Bilgi Teknolojileri ve İletişim Kurulu, Kurul – Ulaştırma Bakanlığı, Kurum – Bilgi Teknolojileri ve İletişim Kurumu",
+"Bakanlık – Ulaştırma Bakanlığı, Kurul – Bilgi Teknolojileri ve İletişim Kurulu, Kurum – Bilgi Teknolojileri ve İletişim Kurumu",
+"Bakanlık – Ulaştırma Bakanlığı, Kurul – Bilgi Teknolojileri ve İletişim Kurumu, Kurum – Bilgi Teknolojileri ve İletişim Kurulu"
+],
+"dogru": 3,
+"aciklama": "m.3/1-g, dd, ee: Bakanlık Ulaştırma Bakanlığı, Kurul Bilgi Teknolojileri ve İletişim Kurulu, Kurum ise Bilgi Teknolojileri ve İletişim Kurumudur.",
+"kaynak": "5809 m.3"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, 5809 sayılı Kanunda sayılan ilkeler arasında, 'millî güvenlik ile kamu düzeni gereklerine ve acil durum ihtiyaçlarına öncelik verilmesi' hangi bentte düzenlenmiştir?",
+"siklar": [
+"(a) bendi",
+"(c) bendi",
+"(ç) bendi",
+"(k) bendi",
+"(h) bendi"
+],
+"dogru": 4,
+"aciklama": "m.4/1-h: 'Millî güvenlik ile kamu düzeni gereklerine ve acil durum ihtiyaçlarına öncelik verilmesi.'",
+"kaynak": "5809 m.4"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, 5809 sayılı Kanunda sayılan ilkeler arasında 'bilgi güvenliği ve haberleşme gizliliğinin gözetilmesi' ilkesi hangi bentte yer alır?",
+"siklar": [
+"(l) bendi",
+"(h) bendi",
+"(i) bendi",
+"(j) bendi",
+"(ı) bendi"
+],
+"dogru": 0,
+"aciklama": "m.4/1-l: 'Bilgi güvenliği ve haberleşme gizliliğinin gözetilmesi.'",
+"kaynak": "5809 m.4"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, 5809 sayılı Kanunda sayılan ilkeler arasında aşağıdakilerden hangisi SAYILMAMIŞTIR?",
+"siklar": [
+"Serbest ve etkin rekabet ortamının sağlanması ve korunması",
+"Elektronik haberleşme hizmetlerinin yalnızca kamu işletmeciliği yoluyla sunulması",
+"Tüketici hak ve menfaatlerinin gözetilmesi",
+"Millî güvenlik ile kamu düzeni gereklerine ve acil durum ihtiyaçlarına öncelik verilmesi",
+"Bilgi güvenliği ve haberleşme gizliliğinin gözetilmesi"
+],
+"dogru": 1,
+"aciklama": "m.4/1'de (a)'dan (l)'ye kadar sayılan ilkeler arasında böyle bir hüküm yoktur; aksine (a) bendi serbest ve etkin rekabeti, (ı) bendi işletmecilerin ücretleri serbestçe belirlemesini esas alır — bu, kamu tekeli ilkesiyle bağdaşmaz.",
+"kaynak": "5809 m.4"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, frekans, numara, uydu pozisyonu ve benzeri kaynakların tahsisi ile bunların düzenlenmesi kimin yetki ve sorumluluğu altındadır?",
+"siklar": [
+"İlgili işletmecilerin",
+"Radyo ve Televizyon Üst Kurulunun",
+"Yerel yönetimlerin",
+"Devletin",
+"Sivil toplum kuruluşlarının"
+],
+"dogru": 3,
+"aciklama": "m.4/1: '...gerekli frekans, numara, uydu pozisyonu ve benzeri kaynak tahsislerinin yapılması ile bunların düzenlenmesi Devletin yetki ve sorumluluğu altındadır.'",
+"kaynak": "5809 m.4"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, milli frekans planlaması, tahsisi, uluslararası koordinasyon ile tescil işlemleri kim tarafından yapılır ve uygulanır?",
+"siklar": [
+"Bakanlık",
+"Kurul",
+"Radyo ve Televizyon Üst Kurulu",
+"Türk Silahlı Kuvvetleri",
+"Kurum"
+],
+"dogru": 4,
+"aciklama": "m.36/1-a: '...milli frekans planlaması, tahsisi, uluslararası koordinasyon ile tescil işlemleri Kurum tarafından yapılır ve uygulanır.'",
+"kaynak": "5809 m.36"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, frekans tahsislerinde Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığının ihtiyaçları da dahil edilerek öncelik tanınan kurum aşağıdakilerden hangisidir?",
+"siklar": [
+"Radyo ve Televizyon Üst Kurulu",
+"Türk Silahlı Kuvvetleri",
+"Milli Eğitim Bakanlığı",
+"Sağlık Bakanlığı",
+"Diyanet İşleri Başkanlığı"
+],
+"dogru": 1,
+"aciklama": "m.36/2: 'Frekans tahsislerinde Dışişleri Bakanlığı, Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığı ihtiyaçları da dahil Türk Silahlı Kuvvetlerine, Millî İstihbarat Teşkilatı Müsteşarlığına ve Emniyet Genel Müdürlüğüne öncelik tanınır.'",
+"kaynak": "5809 m.36"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, frekans tahsislerinde öncelik tanınan muhataplar arasında aşağıdakilerden hangisi SAYILMAMIŞTIR?",
+"siklar": [
+"Dışişleri Bakanlığı",
+"Türk Silahlı Kuvvetleri",
+"Jandarma Genel Komutanlığı (Türk Silahlı Kuvvetlerinden ayrı, bağımsız bir muhatap olarak)",
+"Millî İstihbarat Teşkilatı Müsteşarlığı",
+"Emniyet Genel Müdürlüğü"
+],
+"dogru": 2,
+"aciklama": "m.36/2'de Jandarma Genel Komutanlığı ile Sahil Güvenlik Komutanlığının ihtiyaçları Türk Silahlı Kuvvetlerine 'dahil' sayılarak öncelik tanınır; Jandarma ayrı/bağımsız bir öncelik muhatabı olarak sayılmamıştır. Öncelik tanınan dört muhatap Dışişleri Bakanlığı, Türk Silahlı Kuvvetleri, MİT Müsteşarlığı ve EGM'dir.",
+"kaynak": "5809 m.36"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, kurumun tahsis edilmiş frekans ve bantlarda iptal dahil her türlü değişikliği yapabilmesinin sınırı aşağıdakilerden hangisidir?",
+"siklar": [
+"Yalnızca Türk Silahlı Kuvvetlerinin onayının alınması",
+"Değişikliğin en az beş yıl önceden ilan edilmesi",
+"Değişiklik için Cumhurbaşkanlığı kararnamesi çıkarılması zorunluluğu",
+"Devlet güvenlik ve istihbaratında zafiyet yaratmayacak şekilde yapılması",
+"Değişikliğin yalnızca savaş hâlinde yapılabilmesi"
+],
+"dogru": 3,
+"aciklama": "m.36/4: 'Kurum, Devlet güvenlik ve istihbaratında zafiyet yaratmayacak şekilde iptal dahil her türlü değişiklik yapabilir.'",
+"kaynak": "5809 m.36"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, telsiz haberleşme sistemleri üzerinden kriptolu haberleşme yapmaya aşağıdaki kurumlardan hangisi YETKİLİ DEĞİLDİR?",
+"siklar": [
+"Türk Silahlı Kuvvetleri",
+"Jandarma Genel Komutanlığı",
+"Sahil Güvenlik Komutanlığı",
+"Millî İstihbarat Teşkilatı",
+"Radyo ve Televizyon Üst Kurulu"
+],
+"dogru": 4,
+"aciklama": "m.39/1 birinci cümlede kriptolu haberleşmeye yetkili altı kurum sayılmıştır: Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı. Radyo ve Televizyon Üst Kurulu bu listede yoktur.",
+"kaynak": "5809 m.39"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, telsiz haberleşme sistemleri üzerinden kriptolu haberleşme yapmaya yetkili kurumların TAMAMINI içeren seçenek aşağıdakilerden hangisidir?",
+"siklar": [
+"Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Dışişleri Bakanlığı",
+"Türk Silahlı Kuvvetleri, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Dışişleri Bakanlığı",
+"Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Dışişleri Bakanlığı, Telekomünikasyon İletişim Başkanlığı",
+"Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Millî İstihbarat Teşkilatı, Dışişleri Bakanlığı",
+"Türk Silahlı Kuvvetleri, Sahil Güvenlik Komutanlığı, Emniyet Genel Müdürlüğü, Radyo ve Televizyon Üst Kurulu"
+],
+"dogru": 0,
+"aciklama": "m.39/1 birinci cümle altı kurumu sayar: Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Dışişleri Bakanlığı.",
+"kaynak": "5809 m.39"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, telsiz haberleşme sistemleri üzerinden kriptolu haberleşme yapmaya yetkili kurum sayısı ....(1).... olup, bunlar arasında Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı ile ....(2).... Türk Silahlı Kuvvetlerinden bağımsız, ayrı ayrı sayılmıştır. Boşluklara sırasıyla gelmesi gereken ifadeler hangisidir?",
+"siklar": [
+"dört – Millî İstihbarat Teşkilatı ve Emniyet Genel Müdürlüğü",
+"altı – Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı",
+"beş – Dışişleri Bakanlığı ve Emniyet Genel Müdürlüğü",
+"yedi – Telekomünikasyon İletişim Başkanlığı",
+"altı – Radyo ve Televizyon Üst Kurulu ve Millî Eğitim Bakanlığı"
+],
+"dogru": 1,
+"aciklama": "m.39/1 altı kurumu ayrı ayrı sayar: Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Dışişleri Bakanlığı.",
+"kaynak": "5809 m.39"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, sayılan kurumlara ait olanlar dışında kamu kurum ve kuruluşları ile gerçek ve tüzel kişilerin elektronik haberleşme hizmeti içinde kodlu veya kriptolu haberleşme yapma usul ve esasları kim tarafından belirlenir?",
+"siklar": [
+"Bakanlık",
+"İçişleri Bakanlığı",
+"Kurum",
+"Millî Savunma Bakanlığı",
+"Cumhurbaşkanlığı"
+],
+"dogru": 2,
+"aciklama": "m.39/1 ikinci cümle: '...kamu kurum ve kuruluşları ile gerçek ve tüzel kişilerin elektronik haberleşme hizmeti içinde kodlu veya kriptolu haberleşme yapma usul ve esasları Kurum tarafından belirlenir.'",
+"kaynak": "5809 m.39"
+},
+{
+"soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre, frekans tahsisinde öncelik tanınan muhatap sayısı ....(1)...., kriptolu haberleşmeye yetkili kurum sayısı ise ....(2).... olarak düzenlenmiştir. Boşluklara sırasıyla gelmesi gereken sayılar hangisidir?",
+"siklar": [
+"altı – dört",
+"dört – dört",
+"altı – altı",
+"beş – yedi",
+"dört – altı"
+],
+"dogru": 4,
+"aciklama": "m.36/2'de öncelik tanınan dört muhatap (Dışişleri Bakanlığı, Türk Silahlı Kuvvetleri, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü); m.39/1'de kriptolu haberleşmeye yetkili altı kurum (Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Dışişleri Bakanlığı) sayılmıştır.",
+"kaynak": "5809 m.36, m.39"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'nin amacı ile ilgili olarak, Yönetmelikte sayılan konulardan hangisi bu Yönetmeliğin düzenleme alanı DIŞINDADIR?",
+"siklar": [
+"Astsubayların atama ve nakil esasları",
+"Rütbe terfii",
+"Rütbe kademeliliği",
+"Kademe ilerlemesi",
+"Silahlı Kuvvetlerden ayırma işlemleri"
+],
+"dogru": 0,
+"aciklama": "m.1: Yönetmelik astsubayların rütbe terfii, rütbe kademeliliği, kademe ilerlemesi ve Silahlı Kuvvetlerden ayırma işlemleri ile bu işlemlere esas sicil belgelerinin şekil/muhtevasını, düzenlenme/gönderilme usulünü ve sicil değerlendirme-denetleme kurullarının çalışma esaslarını düzenler. Atama ve nakil esasları bu maddede sayılmamıştır (bu konu başka mevzuatın alanıdır).",
+"kaynak": "Y_5809 m.1"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre, bu Yönetmelik Türk Silahlı Kuvvetlerine mensup astsubayların hangi hususlarda kapsama dahil edildiğini düzenler?",
+"siklar": [
+"Sadece sicil üstlerini",
+"Sicil üstlerini; terfi, kademelilik, kademe ilerlemesi işlemlerinde görevli personeli ve sicil değerlendirme ve denetleme kurulları üyelerini",
+"Sadece emeklilik işlemlerini",
+"Sadece atama işlemlerini",
+"Sadece disiplin cezalarını"
+],
+"dogru": 1,
+"aciklama": "m.2: Yönetmelik astsubayların sicil üstlerini; rütbe terfii, rütbe kademeliliği, kademe ilerlemesi işlemleri ile görevli personeli ve sicil değerlendirme ve denetleme kurulları üyelerini kapsar.",
+"kaynak": "Y_5809 m.2"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre \"terfi yılı\" tanımı aşağıdakilerden hangisidir?",
+"siklar": [
+"Her yılın 1 Ocak - 31 Aralık tarihleri arası",
+"Her yılın 2 Mayıs - 30 Mayıs tarihleri arası",
+"Her yılın 30 Ağustos tarihinden başlayıp ertesi yılın 30 Ağustos tarihine kadar geçen süre",
+"Her yılın 1 Temmuz - 30 Haziran tarihleri arası",
+"Her yılın 30 Mayıs - 30 Ağustos tarihleri arası"
+],
+"dogru": 2,
+"aciklama": "m.3/g: Terfi yılı, her yılın 30 Ağustos tarihinden başlayıp ertesi yılın 30 Ağustos tarihine kadar geçen süredir.",
+"kaynak": "Y_5809 m.3"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre, üstçavuş rütbesi için sicil notu ortalaması hesaplanırken, üstçavuş rütbesindeki sicil notu ortalamasının yüzde kaçı ile kıdemli çavuş rütbesindeki sicil notu ortalamasının yüzde kaçı esas alınır?",
+"siklar": [
+"%100 - %90",
+"%100 - %85",
+"%90 - %70",
+"%100 - %70",
+"%95 - %70"
+],
+"dogru": 3,
+"aciklama": "m.3/p-3: Üstçavuş rütbesi için sicil notu ortalaması, üstçavuş rütbesindeki sicil notu ortalamasının %100'ü ve kıdemli çavuş rütbesindeki sicil notu ortalamasının %70'i alınarak hesaplanır.",
+"kaynak": "Y_5809 m.3"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kıdemli başçavuş rütbesi için sicil notu ortalaması hesaplanırken, kıdemli başçavuş, başçavuş, kıdemli üstçavuş, üstçavuş ve kıdemli çavuş rütbelerindeki sicil notu ortalamalarına sırasıyla uygulanan yüzdeler aşağıdakilerden hangisinde doğru verilmiştir?",
+"siklar": [
+"100-90-85-70-60",
+"100-95-85-80-70",
+"95-90-85-80-70",
+"100-90-95-85-70",
+"%100 - %95 - %90 - %85 - %70"
+],
+"dogru": 4,
+"aciklama": "m.3/p-6: Kıdemli başçavuş rütbesi için sicil notu ortalaması, kıdemli başçavuş %100, başçavuş %95, kıdemli üstçavuş %90, üstçavuş %85, kıdemli çavuş %70 oranlarıyla hesaplanır.",
+"kaynak": "Y_5809 m.3"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'nin tanımlar maddesine göre \"Genel değerlendirme notu\" kategorilerinden BAŞARILI işaretlenmesi durumunda alınan not kaçtır?",
+"siklar": [
+"85",
+"93",
+"90",
+"71",
+"59,99"
+],
+"dogru": 0,
+"aciklama": "m.3/çç: ÜSTÜN BAŞARILI için 93, BAŞARILI için 85, YETERLİ için 71 ve YETERSİZ için 59,99 olarak alınır.",
+"kaynak": "Y_5809 m.3"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubay sicil belgesindeki ayırt edici nitelikler bölümünde yer alan ve her görev alanı için aynı olan \"ortak nitelikler\" ile her görev alanı için farklılaşan \"görev alanı nitelikleri\" sayıları aşağıdakilerden hangisinde doğru verilmiştir?",
+"siklar": [
+"Ortak nitelikler 5 - Görev alanı nitelikleri 10",
+"Ortak nitelikler 10 - Görev alanı nitelikleri 5",
+"Ortak nitelikler 15 - Görev alanı nitelikleri 5",
+"Ortak nitelikler 10 - Görev alanı nitelikleri 4",
+"Ortak nitelikler 8 - Görev alanı nitelikleri 7"
+],
+"dogru": 1,
+"aciklama": "m.3/gg-ğğ: Ortak nitelikler, her görev alanı için aynı olan on niteliktir; görev alanı nitelikleri, dört çeşit görev alanı için farklılaşan beş niteliktir.",
+"kaynak": "Y_5809 m.3"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil üstleri, sicil belgelerindeki nitelikleri hangi ilkelerle değerlendirmekten sorumludur?",
+"siklar": [
+"Sadece kıdem esasına göre",
+"Sadece emsalleriyle kıyaslayarak",
+"Sadece rütbe esasına göre",
+"Tam bir tarafsızlık, adalet ve vicdani kanaatle",
+"Sadece disiplin siciline göre"
+],
+"dogru": 3,
+"aciklama": "m.5: Sicil üstleri, sicil belgelerindeki nitelikleri tam bir tarafsızlık, adalet ve vicdani kanaatle değerlendirmekten sorumludur.",
+"kaynak": "Y_5809 m.5"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre birinci sicil üstlerinin en az hangi rütbede bulunması şarttır (Asteğmen hariç tutularak)?",
+"siklar": [
+"Astsubay kıdemli üstçavuş",
+"Astsubay üstçavuş",
+"Yüzbaşı",
+"Astsubay kıdemli başçavuş",
+"Astsubay başçavuş"
+],
+"dogru": 4,
+"aciklama": "m.6: Birinci sicil üstlerinin en az başçavuş (Asteğmen hariç) rütbesinde bulunması şarttır.",
+"kaynak": "Y_5809 m.6"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre Milli Savunma Bakanlığı teşkilatında görevli hangi sivil personel, kendi teşkilatındaki astsubayların kuruluş bağlantısına göre sicil üstü olabilir?",
+"siklar": [
+"Milli Savunma Bakanı ve Bakanlık teşkilatında görevli şube müdürleri dahil amir konumundaki sivil personel",
+"Sadece Bakan",
+"Sadece müsteşar",
+"Sadece daire başkanları",
+"Hiçbir sivil personel sicil üstü olamaz"
+],
+"dogru": 0,
+"aciklama": "m.6, 3. fıkra ek cümlesi: Milli Savunma Bakanı ve Bakanlık teşkilatında görevli şube müdürleri dahil amir konumunda bulunan sivil personel, kendi teşkilatındaki astsubayların kuruluş bağlantısına göre sicil üstüdür.",
+"kaynak": "Y_5809 m.6"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubaylar hakkında aşağıdakilerden hangisi doğrudur?",
+"siklar": [
+"Astsubaylar ikinci ve üçüncü sicil üstü olabilir",
+"Astsubaylar ikinci ve üçüncü sicil üstü olamaz",
+"Astsubaylar sadece üçüncü sicil üstü olabilir",
+"Astsubaylar sadece ikinci sicil üstü olabilir",
+"Astsubaylar birinci sicil üstü olamaz"
+],
+"dogru": 1,
+"aciklama": "m.7: İkinci ve üçüncü sicil üstleri, bir üst görev yerinde bulunan komutan veya amirlerdir; astsubaylar ikinci ve üçüncü sicil üstü olamazlar.",
+"kaynak": "Y_5809 m.7"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kuruluş bağlantısına göre sadece bir veya iki sicil üstü bulunan astsubayların sicilleri hakkında ne yapılır?",
+"siklar": [
+"Sicil düzenlenemez",
+"Üçüncü sicil üstü ataması beklenir",
+"Aynen işlem görür",
+"Genelkurmay Başkanlığı sicil düzenler",
+"Sicil iptal edilir"
+],
+"dogru": 2,
+"aciklama": "m.8: Kuruluş bağlantısına göre sadece bir veya iki sicil üstü bulunan astsubayların sicilleri, aynen işlem görür.",
+"kaynak": "Y_5809 m.8"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre atandığı görev yeri dışında geçici olarak görevlendirilen bir astsubayın sicil üstlerinin, görev yaptığı yerin kuruluş bağlantısına göre yetkili üstler olabilmesi için geçici görevlendirme süresinin en az kaç ay olması gerekir?",
+"siklar": [
+"1 ay",
+"2 ay",
+"6 ay",
+"3 ay",
+"1 yıl"
+],
+"dogru": 3,
+"aciklama": "m.9: Geçici görevlendirme süresi 3 ay ve daha fazla ise görev yaptıkları yerin kuruluş bağlantısına göre yetkili üstler sicil düzenler; 3 aydan az ise atamalı olduğu birlik veya kurum sicil belgesi düzenler.",
+"kaynak": "Y_5809 m.9"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre müttefik karargahlarda ve yurt dışı görev yerlerinde bulunan astsubayların sicil üstleri hangi makam tarafından saptanır?",
+"siklar": [
+"Milli Savunma Bakanlığı",
+"İlgili Kuvvet Komutanlığı",
+"Dışişleri Bakanlığı",
+"Milli İstihbarat Teşkilatı",
+"Genelkurmay Başkanlığınca"
+],
+"dogru": 4,
+"aciklama": "m.10: Milli temsilciliklerde, müttefik karargahlarda ve yurt dışı görev yerleri ile yurt dışındaki karargah ve birliklerde bulunan astsubayların sicil üstleri, Genelkurmay Başkanlığınca saptanır.",
+"kaynak": "Y_5809 m.10"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre Milli İstihbarat Teşkilatında görevli astsubayların sicillerini düzenlemeye yetkili sicil üstleri kim tarafından saptanır?",
+"siklar": [
+"Genelkurmay Başkanlığınca",
+"MİT Müsteşarlığınca",
+"Milli Savunma Bakanlığınca",
+"İçişleri Bakanlığınca",
+"İlgili Kuvvet Komutanlığınca"
+],
+"dogru": 0,
+"aciklama": "m.11: Milli İstihbarat Teşkilatında görevli astsubayların sicillerini düzenlemeye yetkili sicil üstleri, Genelkurmay Başkanlığınca saptanır.",
+"kaynak": "Y_5809 m.11"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre Türk Silahlı Kuvvetleri dışındaki Devlet hizmetleri ile Türk Hava Kurumu hizmetlerinde çalıştırılan astsubayların sicil üstleri kim tarafından saptanır?",
+"siklar": [
+"Çalıştırıldıkları kurumun en üst amiri",
+"Genelkurmay Başkanlığınca",
+"Milli Savunma Bakanlığınca",
+"İlgili Kuvvet Komutanlığınca",
+"Türk Hava Kurumu Genel Müdürlüğünce"
+],
+"dogru": 1,
+"aciklama": "m.12: Silahlı Kuvvetler dışındaki Devlet hizmetleri ile Türk Hava Kurumu hizmetlerinde çalıştırılan astsubayların sicil üstleri Genelkurmay Başkanlığınca saptanır.",
+"kaynak": "Y_5809 m.12"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil üstleri yukarıdaki maddeler gereğince saptanamayan hallerde sicil üstleri hangi makamlarca saptanır?",
+"siklar": [
+"Sadece Genelkurmay Başkanlığınca",
+"Sadece Milli Savunma Bakanlığınca",
+"Kuruluş bağlantısına göre Genelkurmay Başkanlığı, Milli Savunma Bakanlığı ve ilgili Kuvvet Komutanlıklarınca",
+"İlgili valiliklerce",
+"Astsubayın kendi talebiyle"
+],
+"dogru": 2,
+"aciklama": "m.13: Sicil üstleri saptanamayan hallerde, kuruluş bağlantısına göre Genelkurmay Başkanlığı, Milli Savunma Bakanlığı, ilgili Kuvvet Komutanlıkları tarafından saptanır.",
+"kaynak": "Y_5809 m.13"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre bir astsubayın sicil belgesinin düzenlendiği tarihte hangisi mümkün DEĞİLDİR?",
+"siklar": [
+"Birinci ve ikinci sicil üstünün farklı kişiler olması",
+"İkinci ve üçüncü sicil üstünün farklı kişiler olması",
+"Birinci sicil üstünün astsubay olması (uygun rütbede)",
+"Birinci, ikinci veya üçüncü sicil üstünün aynı şahıs olması",
+"Üçüncü sicil üstünün bir üst görev yerinde bulunması"
+],
+"dogru": 3,
+"aciklama": "m.14: Sicil belgesinin düzenlendiği tarihte bir astsubayın birinci, ikinci veya üçüncü sicil üstü aynı şahıs olamaz. Diğer seçenekler Yönetmeliğin öngördüğü normal ve mümkün durumlardır.",
+"kaynak": "Y_5809 m.14"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre bir sicil üstünün sicil düzenleyebilmesi için, sicili düzenlenecek kişi ile birlikte o sicil dönemi içinde fiilen en az kaç ay görev yapması şarttır?",
+"siklar": [
+"1 ay",
+"2 ay",
+"6 ay",
+"1 yıl",
+"3 ay"
+],
+"dogru": 4,
+"aciklama": "m.15: Bir sicil üstü, sicili düzenlenecek kimse ile beraber o sicil dönemi içinde fiilen en az üç ay görev yapmadıkça sicil düzenleyemez.",
+"kaynak": "Y_5809 m.15"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre aşağıdakilerden hangisi, önceki yıllarda birlikte çalıştığı kıta, kurum ve karargahlarda görevli personele üç aylık süreyi doldurma şartı aranmaksızın sicil düzenleyebilecek makamlardan biri DEĞİLDİR?",
+"siklar": [
+"Tugay komutanları",
+"Genelkurmay Başkanı",
+"Milli Savunma Bakanı",
+"Kuvvet Komutanları",
+"Orgeneral veya oramiral rütbesinde bulunanlar"
+],
+"dogru": 0,
+"aciklama": "m.15, 3. fıkra: Genelkurmay Başkanı, Milli Savunma Bakanı, Kuvvet Komutanları ile orgeneral veya oramiral rütbesinde bulunanlar üç aylık süreyi doldurma şartı aranmaksızın sicil düzenleyebilir. Tugay komutanları bu istisna kapsamında sayılmamıştır.",
+"kaynak": "Y_5809 m.15"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre aşağıdaki hallerden hangisinde sicil üstü, sicil düzenleyemez?",
+"siklar": [
+"Sicil üstünün, sicili düzenlenecek astsubaydan kıdemsiz olması",
+"Sicil belgelerinin düzenleneceği tarihte sicil üstünün açıkta veya tutuklu olması",
+"Sicil üstünün farklı sınıftan olması",
+"Sicil üstünün genç rütbede olması",
+"Sicil üstünün yeni atanmış olması"
+],
+"dogru": 1,
+"aciklama": "m.16/c: Sicil belgelerinin düzenleneceği tarihte sicil üstü açıkta veya tutuklu ise sicil düzenleyemez.",
+"kaynak": "Y_5809 m.16"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil üstü ile sicil düzenlenecek personel arasında, kan veya evlilik hısımlığı kalmasa bile sicil düzenlemeyi engelleyen sıhri civar hısımlık derecesi kaçıncı dereceye kadardır (bu derece dahil)?",
+"siklar": [
+"Birinci derece",
+"Üçüncü derece",
+"İkinci derece",
+"Dördüncü derece",
+"Beşinci derece"
+],
+"dogru": 2,
+"aciklama": "m.16/b: Üçüncü dereceye kadar (bu derece dahil) kan veya evlilik hısımlığı yahut ikinci dereceye kadar (bu derece dahil) sıhri civar hısımlığı bulunanlar hakkında sicil düzenlenemez; sıhri civar hısımlığı sınırı ikinci derecedir.",
+"kaynak": "Y_5809 m.16"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre yurt içi veya yurt dışı kıta, karargah ve kurumlarda görevli yabancı Silahlı Kuvvetlere mensup subay veya astsubaylar hakkında ne söylenebilir?",
+"siklar": [
+"Türk astsubaylarının birinci sicil üstü olabilirler",
+"Sadece ikinci sicil üstü olabilirler",
+"Genelkurmay onayıyla sicil üstü olabilirler",
+"Türk Silahlı Kuvvetlerine mensup astsubayların sicil üstü olamazlar",
+"Sadece yurt dışında sicil üstü olabilirler"
+],
+"dogru": 3,
+"aciklama": "m.17: Yabancı Silahlı Kuvvetlere mensup subay veya astsubaylar, Türk Silahlı Kuvvetlerine mensup astsubayların sicil üstü olamaz.",
+"kaynak": "Y_5809 m.17"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil belgelerindeki niteliklerin değerlendirilmesinde hangi durum söz konusudur?",
+"siklar": [
+"Bir üst komutan sicil üstüne doğrudan talimat verebilir",
+"Disiplin amiri sicil notunu değiştirebilir",
+"Personel başkanlığı doğrudan not verebilir",
+"Kurul üyeleri doğrudan sicil düzenleyebilir",
+"Herhangi bir makam ve amir sicil üstlerine müdahale edemez, telkinde bulunamaz"
+],
+"dogru": 4,
+"aciklama": "m.18: Sicil belgelerindeki niteliklerin değerlendirilmesinde herhangi bir makam ve amir, sicil üstlerine müdahale edemez, telkinde bulunamaz.",
+"kaynak": "Y_5809 m.18"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubay sicil belgesi kaç bölümden oluşur?",
+"siklar": [
+"Dört",
+"Altı",
+"Beş",
+"Yedi",
+"Sekiz"
+],
+"dogru": 1,
+"aciklama": "m.20: Astsubay sicil belgesi altı bölümden oluşmaktadır (temel nitelikler, sicil üstü değerlendirmesi, başarılı olabileceği görevler, müstakil görev yapma kabiliyeti, sicil üstü olabilme durumu, yurt dışı görev yapabilme durumu).",
+"kaynak": "Y_5809 m.20"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil belgesindeki \"Genel Değerlendirme (Kategori)\" bölümünde yer alan kategoriler aşağıdakilerden hangisidir?",
+"siklar": [
+"Çok İyi, İyi, Orta, Zayıf",
+"A, B, C, D",
+"ÜSTÜN BAŞARILI, BAŞARILI, YETERLİ, YETERSİZ",
+"Mükemmel, İyi, Yeterli, Yetersiz",
+"1. Kategori, 2. Kategori, 3. Kategori, 4. Kategori"
+],
+"dogru": 2,
+"aciklama": "m.20/b-(1): Genel değerlendirme kategorileri ÜSTÜN BAŞARILI, BAŞARILI, YETERLİ ve YETERSİZ şeklindedir.",
+"kaynak": "Y_5809 m.20"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre bir astsubay hakkında sicil düzenlenebilmesi için, o astsubayın sicil verecek amir ile birlikte o sicil süresi içinde fiilen en az kaç ay görev yapması şarttır?",
+"siklar": [
+"1 ay",
+"2 ay",
+"4 ay",
+"3 ay",
+"6 ay"
+],
+"dogru": 3,
+"aciklama": "m.21/a: Bir astsubay hakkında sicil düzenlenebilmesi için, o astsubayın sicil verecek amir ile birlikte o sicil süresi içinde en az üç ay fiilen görev yapması şarttır.",
+"kaynak": "Y_5809 m.21"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre birinci sicil üstleri tarafından ÜSTÜN BAŞARILI ve kategorisindeki emsallerinin üstünde ya da YETERSİZ ve kategorisindeki emsallerinin altında değerlendirilen nitelikler için yazılması zorunlu gerekçe en az kaç kelimeden (kaç karakter) oluşmalıdır?",
+"siklar": [
+"10 kelime (75 karakter)",
+"15 kelime (100 karakter)",
+"25 kelime (200 karakter)",
+"30 kelime (250 karakter)",
+"20 kelime (150 karakter)"
+],
+"dogru": 4,
+"aciklama": "m.21/d: Öncelikle NE ZAMAN, NEREDE ve NEDEN sorularına cevap verecek şekilde en az 20 kelimeden (150 karakter) oluşan gerekçe yazılması zorunludur.",
+"kaynak": "Y_5809 m.21"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre ikinci sicil üstü, birinci sicil üstünün işaretlemelerinin tamamına katılıyorsa sicil belgesinde ne yapar?",
+"siklar": [
+"Nitelikleri işaretlemez, \"Birinci Sicil Üstüne Katılıyorum\" bölümünü işaretler",
+"Nitelikleri yeniden işaretler",
+"Sicili iptal eder",
+"Üçüncü sicil üstüne devreder",
+"Sicili birinci sicil üstüne iade eder"
+],
+"dogru": 0,
+"aciklama": "m.21/e: İkinci sicil üstü, birinci sicil üstünün işaretlemelerinin tamamına katılıyorsa nitelikleri işaretlemez, \"2 nci Sicil Üstü Değerlendirmesi\" bölümündeki \"Birinci Sicil Üstüne Katılıyorum\" bölümünü işaretler.",
+"kaynak": "Y_5809 m.21"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre üçüncü sicil üstünün sicil belgesini tanzim etmesi kural olarak isteğe bağlı olmakla birlikte, hangi durumda -orgeneral veya oramiral rütbesindeki üçüncü sicil üstleri hariç- üçüncü sicil üstü mutlaka değerlendirme yapmak zorundadır?",
+"siklar": [
+"Sicil alan personelin talep etmesi halinde",
+"Birinci veya ikinci sicil üstlerinden herhangi birinin değerlendirme yapamaması veya birden fazla seviye farkı bulunması halinde",
+"Her sicil döneminde mutlaka",
+"Sadece terfi yılında",
+"Sadece kademe ilerlemesi yılında"
+],
+"dogru": 1,
+"aciklama": "m.21/g: Birinci veya ikinci sicil üstlerinden herhangi birinin değerlendirme yapamaması veya birden fazla seviye farkı bulunması halinde, orgeneral/oramiral rütbesindeki üçüncü sicil üstleri hariç, üçüncü sicil üstleri mutlaka değerlendirme yapar.",
+"kaynak": "Y_5809 m.21"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre personel başkanlıklarında yapılan incelemede, sicil üstlerinin sicil üstü değerlendirme notları arasında kaç veya daha fazla not farkı bulunması halinde personelin durumu Sicil Değerlendirme ve Denetleme Kurulunda görüşülür?",
+"siklar": [
+"10",
+"15",
+"20",
+"25",
+"30"
+],
+"dogru": 2,
+"aciklama": "m.21/ı: Sicil üstlerinin sicil üstü değerlendirme notlarının arasında 20 veya daha fazla not farkı bulunması halinde, personelin durumu Sicil Değerlendirme ve Denetleme Kurulunda görüşülür.",
+"kaynak": "Y_5809 m.21"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil belgeleri sicil üstlerince hangi tarih itibarıyla düzenlenir?",
+"siklar": [
+"1 Ocak",
+"30 Mayıs",
+"1 Temmuz",
+"30 Ağustos",
+"2 Mayıs"
+],
+"dogru": 4,
+"aciklama": "m.23: Sicil belgeleri, sicil üstlerince 2 Mayıs tarihi itibarıyla düzenlenir ve en geç 30 Mayıs tarihinde personel başkanlıklarında bulundurulur.",
+"kaynak": "Y_5809 m.23"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre üç aylık görev süresini doldurmadığı için haklarında sicil düzenlenmeyen astsubaylardan terfi sırasında bulunanlar, bu süreyi en geç hangi tarihe kadar tamamlıyorlarsa sicil tanzim edilir?",
+"siklar": [
+"1 Temmuz",
+"2 Mayıs",
+"30 Mayıs",
+"30 Ağustos",
+"31 Aralık"
+],
+"dogru": 0,
+"aciklama": "m.23, 3. fıkra: Terfi sırasında bulunmayanlar 30 Ağustos, terfi sırasında bulunanlar 1 Temmuz tarihine kadar bu süreyi dolduruyorlarsa sicil tanzim edilir.",
+"kaynak": "Y_5809 m.23"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre matbu sicil belgeleri sicil üstlerince nasıl gönderilir?",
+"siklar": [
+"Açık zarfla normal postayla",
+"Kapalı, mühürlü, \"ÖZEL\" gizlilik dereceli iç zarf, ikinci bir dış zarf içinde",
+"E-posta ile",
+"Kurye ile açık dosya halinde",
+"Faks ile"
+],
+"dogru": 1,
+"aciklama": "m.24: Matbu sicil belgeleri kapalı, mühürlü, \"ÖZEL\" gizlilik dereceli ve içinde sicil belgesi bulunduğunu belirtir bir kayıt taşıyan zarfa konulduktan sonra, ikinci bir zarfa konularak gönderilir.",
+"kaynak": "Y_5809 m.24"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil belgeleri hangi gizlilik derecesine sahiptir?",
+"siklar": [
+"Çok Gizli",
+"Gizli",
+"ÖZEL",
+"Hizmete Özel",
+"Tasnif Dışı"
+],
+"dogru": 2,
+"aciklama": "m.25: Sicil belgeleri \"ÖZEL\" gizlilik dereceli olup, yetkili olmayanlara gösterilemez.",
+"kaynak": "Y_5809 m.25"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil üstleri, astsubay sicil belgesinde yanında hangi işaret bulunan kıstasları işaretledikleri takdirde belge eklemek zorundadır?",
+"siklar": [
+"(+) işareti",
+"(-) işareti",
+"(#) işareti",
+"(*) işareti",
+"(!) işareti"
+],
+"dogru": 3,
+"aciklama": "m.26: Sicil üstleri, sicil belgesinde yanında (*) işareti olan kıstasları işaretlemeleri halinde, o sicil süresi içinde düzenlenmiş belge eklemek zorundadır.",
+"kaynak": "Y_5809 m.26"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre Astsubay Sicil Formu genel değerlendirme notunda \"BAŞARILI\" ifadesi hangi puan aralığına karşılık gelir?",
+"siklar": [
+"90,00-100",
+"60,00-74,99",
+"0-59,99",
+"71,00-85,00",
+"75,00-89,99"
+],
+"dogru": 4,
+"aciklama": "m.27/c: Kıstasların nota tahvilinde BAŞARILI için 75,00-89,99 puan aralığı ifade edilir (ÜSTÜN BAŞARILI 90,00-100, YETERLİ 60,00-74,99, YETERSİZ 0-59,99).",
+"kaynak": "Y_5809 m.27"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre EK-5'te belirtilen Ayırt Edici Nitelik Ağırlık Puanlarına göre, \"KATEGORİSİNDEKİ EMSALLERİNİN ÜSTÜNDE\" işaretlenen niteliklerde ÜSTÜN BAŞARILI kategorisi için uygulanacak ağırlık puanı kaçtır?",
+"siklar": [
+"7",
+"3",
+"4",
+"5",
+"10"
+],
+"dogru": 0,
+"aciklama": "m.27/c: KATEGORİSİNDEKİ EMSALLERİNİN ÜSTÜNDE işaretlenen niteliklerde ÜSTÜN BAŞARILI kategorisi için 7, BAŞARILI için 5, YETERLİ için 4'e tahvil edilir.",
+"kaynak": "Y_5809 m.27"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre 100 üzerinden hesaplanan sicil üstü değerlendirme notu kaça tahvil edilir ve FYDT sonucu 60 ve üzerinde olanlara kaç puan eklenir?",
+"siklar": [
+"90'a tahvil - 10 puan",
+"95'e tahvil - 5 puan",
+"100'e tahvil - 5 puan",
+"95'e tahvil - 10 puan",
+"90'a tahvil - 5 puan"
+],
+"dogru": 1,
+"aciklama": "m.27/d: 100 üzerinden hesaplanan sicil üstü değerlendirme notu 95'e tahvil edilir. FYDT sonucu 60 ve üzerinde ise FYDT notu 5, aksi takdirde 0 kabul edilerek eklenir.",
+"kaynak": "Y_5809 m.27"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil notu sicil tam notunun yüzde kaçının altında olanların listesi hazırlanarak kademe ilerlemesi yapamayan personel olarak birliklere yayımlanır?",
+"siklar": [
+"%50",
+"%55",
+"%60",
+"%65",
+"%70"
+],
+"dogru": 2,
+"aciklama": "m.27/f: Sicil notu %60'ın altında olanların listeleri hazırlanır, onaylatılarak kademe ilerlemesi yapamayan personel olarak birliklere yayımlanır.",
+"kaynak": "Y_5809 m.27"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre birinci temel niteliğin \"b\" kıstası işaretlenen astsubayların kimlikleri ve ilgili belgeleri incelenmek üzere nereye gönderilir?",
+"siklar": [
+"Sicil Değerlendirme ve Denetleme Kuruluna",
+"Yüksek Disiplin Kuruluna",
+"Adli makamlara",
+"İstihbarat başkanlıklarına",
+"Genelkurmay Başkanlığına"
+],
+"dogru": 3,
+"aciklama": "m.27/ı: Birinci temel niteliğin \"b\" kıstası işaretlenen astsubayların kimlikleri ve ilgili belgeler, incelenmek üzere istihbarat başkanlıklarına gönderilir.",
+"kaynak": "Y_5809 m.27"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kıdem sıraları, alınan siciller dikkate alınarak yeniden tespit edilen sicil notu ortalamalarına göre her yıl hangi aya kadar personele geri bildirim sağlamak üzere yayımlanır?",
+"siklar": [
+"Ocak",
+"Mayıs",
+"Ağustos",
+"Eylül",
+"Aralık"
+],
+"dogru": 4,
+"aciklama": "m.28/c: Kıdem sıraları, yeniden tespit edilen sicil notu ortalamalarına göre her yıl Aralık ayına kadar personele geri bildirim sağlamak üzere yayımlanır.",
+"kaynak": "Y_5809 m.28"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre \"Temel Nitelikler\" bölümünde niteliklerden birinin veya birden fazlasının gerektirdiği standartlara sahip olmadığından emin olunan astsubaylar hakkında hangi işlem yapılır?",
+"siklar": [
+"Doğrudan Silahlı Kuvvetlerden ayırma cezası verilir",
+"Sadece uyarı verilir",
+"Kademe ilerlemesi durdurulur",
+"Türk Silahlı Kuvvetleri Yüksek Disiplin Kurulları Yönetmeliği hükümlerine göre işlem tesis edilir",
+"Rütbesi geri alınır"
+],
+"dogru": 3,
+"aciklama": "m.29/c: Niteliklerden birine veya birden fazlasına sahip olmadıklarından emin olunan astsubaylardan Türk Silahlı Kuvvetleri Yüksek Disiplin Kurulları Yönetmeliğindeki şartları taşıyanlar hakkında bu yönetmelik hükümlerine göre işlem tesis edilir.",
+"kaynak": "Y_5809 m.29"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil üstlerinin tamamının, birinci temel niteliğin \"b\" kıstasını işaretlemeleri halinde hangi esaslara göre işlem yapılır?",
+"siklar": [
+"Türk Silahlı Kuvvetleri Yüksek Disiplin Kurulları Yönetmeliği",
+"Türk Silahlı Kuvvetleri İstihbarata Karşı Koyma, Koruyucu Güvenlik ve İşbirliği Yönergesi",
+"Askeri Ceza Kanunu",
+"Disiplin Kanunu",
+"Sicil Değerlendirme ve Denetleme Kurulu Yönergesi"
+],
+"dogru": 1,
+"aciklama": "m.30/b: Sicil üstlerinin tamamının birinci niteliğin \"b\" kıstasını işaretlemeleri halinde \"Türk Silahlı Kuvvetleri İstihbarata Karşı Koyma, Koruyucu Güvenlik ve İşbirliği Yönergesi\" esaslarına göre işlem yapılır.",
+"kaynak": "Y_5809 m.30"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre \"Sicil Değerlendirme ve Denetleme Kurulları\" nerede kurulur?",
+"siklar": [
+"Genelkurmay Başkanlığı bünyesinde",
+"Milli Savunma Bakanlığı bünyesinde",
+"Personel başkanlıkları bünyesinde",
+"Her birlik bünyesinde ayrı ayrı",
+"Askeri mahkemeler bünyesinde"
+],
+"dogru": 2,
+"aciklama": "m.31: Personel başkanlıkları bünyesinde yer alan \"Sicil Değerlendirme ve Denetleme Kurulları\" kurulur.",
+"kaynak": "Y_5809 m.31"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre Sicil Değerlendirme ve Denetleme Kurulları çalışmaları sırasında aşağıdakilerden hangisini yapmaz?",
+"siklar": [
+"Problemli sicil belgelerini inceleme",
+"Geri besleme amaçlı sicilleri inceleme",
+"Kuruluş bağlantısına göre çalışma",
+"Not takdiri",
+"Yönergedeki esaslara göre çalışma"
+],
+"dogru": 3,
+"aciklama": "m.32: Kurul, mevcut durumu değerlendirip herhangi bir not takdirinde bulunmaz; çalışmalarını kuruluş bağlantısına göre yürütür.",
+"kaynak": "Y_5809 m.32"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kasıtlı veya keyfi verilmiş sicilleri saptayan Sicil Değerlendirme ve Denetleme Kurulu, bu sicilleri kimin onayını müteakip iptal eder?",
+"siklar": [
+"Genelkurmay Başkanının",
+"Milli Savunma Bakanının",
+"Personel başkanının",
+"Sicil üstünün",
+"İlgili Kuvvet Komutanının"
+],
+"dogru": 4,
+"aciklama": "m.33/b: Kurul, kasıtlı veya keyfi verilmiş sicilleri saptar ve gerekiyorsa bunları Kuvvet Komutanının onayını müteakip iptal eder.",
+"kaynak": "Y_5809 m.33"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre Sicil Değerlendirme ve Denetleme Kurulları, sicil notu sicil tam notunun yüzde kaçının altında olan, kademe ilerlemesi yapamayacak personelin durumlarını görüşür?",
+"siklar": [
+"%60",
+"%50",
+"%55",
+"%65",
+"%70"
+],
+"dogru": 0,
+"aciklama": "m.33/d: Kurul, sicil notu %60'ın altında olan, kademe ilerlemesi yapamayacak personelin durumlarını görüşür ve gerektiğinde iptal eder.",
+"kaynak": "Y_5809 m.33"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubayların üst rütbeye yükselmelerine esas olan yeterlikleri hangi esasla saptanır?",
+"siklar": [
+"Kıdem sırasına göre",
+"Sadece yaş sırasına göre",
+"Sadece eğitim durumuna göre",
+"Rütbe terfii sırasına girdikleri yıllarda, Kanunda belirtilen esaslara göre bulunacak sicil notu ortalaması ile",
+"Kura ile"
+],
+"dogru": 3,
+"aciklama": "m.35: Astsubayların yeterlikleri, rütbe terfii sırasına girdikleri yıllarda, Kanunda belirtilen esaslara göre bulunacak sicil notu ortalaması ile saptanır.",
+"kaynak": "Y_5809 m.35"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubay çavuş rütbesi için sicil notu ortalaması nasıl bulunur?",
+"siklar": [
+"Rütbe sicil notu ortalaması ile rütbe sicil notu katsayısının çarpılmasıyla",
+"Sadece son sicil notu esas alınarak",
+"En yüksek sicil notu esas alınarak",
+"En düşük sicil notu esas alınarak",
+"Astsubay çavuşlukta alınan muteber sicil notları toplanıp muteber sicil notu sayısına bölünerek"
+],
+"dogru": 4,
+"aciklama": "m.36: Astsubay çavuş rütbesi için astsubay çavuşlukta alınan muteber sicil notları toplanır ve muteber sicil notu sayısına bölünerek sicil notu ortalaması bulunur.",
+"kaynak": "Y_5809 m.36"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre üstçavuş ve daha üst rütbedeki astsubaylar için sicil notu ortalaması hesaplanırken, her rütbeye ait \"rütbe sicil notu ortalaması\" ile çarpılan değer aşağıdakilerden hangisidir?",
+"siklar": [
+"Rütbe sicil notu katsayısı",
+"Sicil tam notu",
+"FYDT notu",
+"Genel değerlendirme notu",
+"Ayırt edici nitelik notu"
+],
+"dogru": 0,
+"aciklama": "m.36: Rütbe sicil notu ortalaması ile rütbe sicil notu katsayısı çarpılarak, sicil notu ortalamasına rütbe katkısı bulunur.",
+"kaynak": "Y_5809 m.36"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre terfi sırasındaki astsubaylardan, sicil notu ortalaması sicil tam notunun yüzde kaçı ve daha yukarısı olanlar, diğer terfi şartlarını da haiz olmaları halinde bir üst rütbeye yükseltilir?",
+"siklar": [
+"%50",
+"%60",
+"%55",
+"%65",
+"%70"
+],
+"dogru": 1,
+"aciklama": "m.37: Sicil notu ortalaması, sicil tam notunun %60'ı ve daha yukarısı olanlar, Kanunun 85. maddesindeki terfi şartlarını haiz olmaları halinde bir üst rütbeye yükseltilir.",
+"kaynak": "Y_5809 m.37"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubayların terfi işlemlerine hangi tarihte başlanır?",
+"siklar": [
+"2 Mayıs",
+"30 Mayıs",
+"1 Temmuz",
+"30 Ağustos",
+"1 Ocak"
+],
+"dogru": 2,
+"aciklama": "m.37, son fıkra: Kuvvet Komutanlığı Personel Başkanlıklarınca astsubayların terfi işlemlerine 1 Temmuz tarihinde başlanır.",
+"kaynak": "Y_5809 m.37"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre hava değişimi, atanma, kurs ve sair zorunlu nedenlerle belirli oranlarda sicil mecburiyetini tamamlayamayan astsubaylar, bu şartı tamamladıkları tarihi izleyen hangi tarihte terfi işlemine tabi tutulur?",
+"siklar": [
+"2 Mayıs",
+"30 Mayıs",
+"1 Temmuz",
+"30 Ağustos",
+"31 Aralık"
+],
+"dogru": 3,
+"aciklama": "m.38: Bu şartı tamamladıkları tarihi izleyen 30 Ağustos tarihinde terfi edeceklerle birlikte terfi işlemine tabi tutulurlar.",
+"kaynak": "Y_5809 m.38"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sicil notu ortalaması sicil tam notunun yüzde 50'si (dahil) ile yüzde kaçı arasında olan astsubay üstçavuş, astsubay kıdemli üstçavuş ve astsubay başçavuşlar, hizmete devam ettirildikleri sürece sonraki yıllarda yeniden terfi işlemine tabi tutulur?",
+"siklar": [
+"%55",
+"%58",
+"%65",
+"%70",
+"%60"
+],
+"dogru": 4,
+"aciklama": "m.39/b: Sicil notu ortalaması sicil tam notunun %50 (dahil)'sinden fazla ve %60'ından az olan astsubay üstçavuş, kıdemli üstçavuş ve başçavuşlar sonraki yıl yeniden terfi işlemine tabi tutulur.",
+"kaynak": "Y_5809 m.39"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre 926 sayılı Kanunu'na göre sonraki yıllarda rütbe terfii eden astsubayların yeni rütbelerindeki bekleme süresinin başlangıcı nedir?",
+"siklar": [
+"Rütbeye nasıp tarihi",
+"Terfi ettikleri yılın 30 Ağustos tarihi",
+"Sicil düzenleme tarihi",
+"Kurul kararının onay tarihi",
+"Bir önceki rütbeye yükselme tarihi"
+],
+"dogru": 0,
+"aciklama": "m.40: Sonraki yıllarda rütbe terfii eden astsubayların yeni rütbelerindeki bekleme süresinin başlangıcı, rütbeye nasıp tarihidir.",
+"kaynak": "Y_5809 m.40"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre rütbe terfi sırasına giren astsubaylardan, rütbe terfii yapacağı yılın 30 Ağustos tarihinde açıkları devam edenlerin terfileri nasıl işlem görür?",
+"siklar": [
+"Terfileri şartsız yapılır",
+"Terfileri yapılmaz, yapılmış olanlar iptal edilir",
+"Terfileri ertelenir ama iptal edilmez",
+"Terfileri kıdem esasına göre yapılır",
+"Terfileri kurul kararıyla yapılır"
+],
+"dogru": 1,
+"aciklama": "m.41/a-(1)-(a): Rütbe terfii yapacağı yılın 30 Ağustos tarihinde açıkları devam edenlerin terfileri yapılmaz, yapılmış olanlar iptal edilir.",
+"kaynak": "Y_5809 m.41"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre haklarında kovuşturmaya yer olmadığına, beraatine veya cezanın teciline karar verilmiş ve hükmü kesinleşmiş olan astsubayların terfi işlemleri, terfi eden emsallerinin şartlarını haiz olmaları kaydıyla ne şekilde yapılır?",
+"siklar": [
+"Bir sonraki yıla ertelenir",
+"Sadece kurul onayıyla yapılır",
+"Derhal yapılır ve nasıpları emsallerinin nasıp tarihine götürülür",
+"Yapılmaz",
+"Yeniden sınav şartı aranır"
+],
+"dogru": 2,
+"aciklama": "m.41/a-(2): Bu durumdaki astsubayların terfi işlemleri, m.37 esaslarına göre derhal yapılır; nasıpları emsallerinin nasıp tarihine götürülür.",
+"kaynak": "Y_5809 m.41"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kısa hapis cezası, tecil edilen, tedbire veya para cezasına çevrilen cezalar hariç olmak üzere, astsubayların gözaltı, tutukluluk ve hükümlülükte geçen süreleri ne olur?",
+"siklar": [
+"Kıdemlerine eklenir",
+"Etkisizdir, herhangi bir işlem yapılmaz",
+"Sadece sicil notunu etkiler",
+"Kıdemlerinden düşülür",
+"Emeklilik süresinden sayılır"
+],
+"dogru": 3,
+"aciklama": "m.42: Astsubayların şahsi hürriyeti bağlayıcı cezaya mahkumiyetleri halinde gözaltı, tutukluluk ve hükümlülükte geçen süreleri kıdemlerinden düşülür.",
+"kaynak": "Y_5809 m.42"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre savaş takdirnamesi alan astsubaylara bir defaya mahsus olmak üzere kaç yıl kıdem verilir?",
+"siklar": [
+"1 yıl",
+"3 yıl",
+"4 yıl",
+"5 yıl",
+"2 yıl"
+],
+"dogru": 4,
+"aciklama": "m.43: Savaş takdirnamesi alan astsubaylara, bir defaya mahsus olmak üzere iki yıl kıdem verilir.",
+"kaynak": "Y_5809 m.43"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre harp gaibi olanlar ile esaretten veya enterneden dönen astsubaylardan, terfiye engel halleri olmadığı anlaşılanların esarette geçen süreleri ne olarak sayılır?",
+"siklar": [
+"Bekleme süresinden sayılır",
+"Kıdemden düşülür",
+"Hiçbir şekilde dikkate alınmaz",
+"Sadece emeklilik hesabında dikkate alınır",
+"İki katı olarak sayılır"
+],
+"dogru": 0,
+"aciklama": "m.44: Terfiye engel halleri olmadığı anlaşılan astsubayların esarette geçen süreleri, bekleme süresinden sayılır.",
+"kaynak": "Y_5809 m.44"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sınıf değiştiren astsubaylar, terfi işlemlerinde nasıl değerlendirilir?",
+"siklar": [
+"Eski sınıflarındaki sicilleri hiç dikkate alınmaz",
+"Bekleme sürelerine ait eski ve varsa yeni sınıflarında aldıkları sicillerle yeni sınıfları içinde terfi işlemine tabi tutulurlar",
+"Sınıf değiştirenler terfi edemez",
+"Yeni sınıfta bekleme süresi sıfırlanır",
+"Sadece son sicil notu dikkate alınır"
+],
+"dogru": 1,
+"aciklama": "m.45: Sınıf değiştiren astsubaylar, bekleme sürelerine ait eski ve varsa yeni sınıflarında almış oldukları sicilleri ile yeni sınıfları içinde terfi işlemine tabi tutulurlar.",
+"kaynak": "Y_5809 m.45"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre sıhhi izin süresi içinde bulunan astsubayların terfileri hakkında ne söylenebilir?",
+"siklar": [
+"Sıhhi izin terfiye engel teşkil eder",
+"Sıhhi izin süresi kıdemden düşülür",
+"Sıhhi izin süreleri terfiye engel teşkil etmez, bekleme sürelerinden sayılır",
+"Sıhhi izindekiler terfi edemez",
+"Sıhhi izin sadece kademe ilerlemesini etkiler"
+],
+"dogru": 2,
+"aciklama": "m.46: Bulundukları rütbelerde terfi şartlarını kazanmış astsubayların sıhhi izin sürelerine tabi bulunmaları terfilerine engel teşkil etmez; sıhhi izin süreleri bekleme sürelerinden sayılır.",
+"kaynak": "Y_5809 m.46"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kademe ilerlemesi yapacak astsubaylar, Kanunun hangi cetveline göre kademe ilerlemesi yaparlar?",
+"siklar": [
+"EK-3",
+"EK-4",
+"EK-5",
+"EK-VIII Sayılı Cetvel (Gösterge Tablosu)",
+"EK-1"
+],
+"dogru": 3,
+"aciklama": "m.47: Kademe ilerlemesi şartlarını taşıyanlar, Kanunun EK-VIII Sayılı Cetvelindeki Gösterge Tablosuna göre kademe ilerlemesi yapabilirler (AMYO mezunları için EK-VIII/A).",
+"kaynak": "Y_5809 m.47"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre rütbe terfii veya rütbe kademeliliği sırasında bulunmayan astsubaylardan o yılki sicil notu sicil tam notunun %60'ının altında olanların kimliklerinin yer aldığı liste, personel başkanları tarafından onaylanıp asgari hangi seviyede yayımlanır?",
+"siklar": [
+"Tabur seviyesinde",
+"Tugay ve eşidi birlik seviyesinde",
+"Kolordu seviyesinde",
+"Ordu seviyesinde",
+"Müstakil bölük seviyesinde"
+],
+"dogru": 1,
+"aciklama": "m.49: Listenin altı personel başkanları tarafından onaylanır ve asgari tugay ve eşidi birlik seviyesinde yayımlanır.",
+"kaynak": "Y_5809 m.49"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre EK-3'te yer alan \"Kademe İlerlemesi Onay Çizelgesi\"nin altı asgari hangi seviyedeki komutanlık tarafından onaylanır?",
+"siklar": [
+"Tugay ve eşidi birlik komutanlığınca",
+"Alay ve eşidi birlik komutanlığınca",
+"Kolordu komutanlığınca",
+"Kuvvet komutanlığınca",
+"Bölük komutanlığınca"
+],
+"dogru": 1,
+"aciklama": "m.49: EK-3'te yer verilen \"Kademe İlerlemesi Onay Çizelgesi\"nin altı asgari alay ve eşidi birlik komutanlığınca onaylanır ve usulüne uygun tebligat yapılır.",
+"kaynak": "Y_5809 m.49"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre rütbe terfii veya rütbe kademeliliği yapma durumunda olup terfi edemeyen ya da rütbe kademeliliği yapamayan astsubaylardan, o yıl aldıkları sicil notları sicil tam notunun yüzde kaçı ve daha fazlası olanlar kademe ilerlemesi yapar?",
+"siklar": [
+"%50",
+"%55",
+"%60",
+"%65",
+"%70"
+],
+"dogru": 2,
+"aciklama": "m.50: O yıl almış bulundukları sicil notları, sicil tam notunun %60'ı ve daha fazlası olanlar, diğer şartları da taşıyorlarsa kademe ilerlemesi yaparlar.",
+"kaynak": "Y_5809 m.50"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre haklarında düzenlenmiş geçerli sicil belgesi bulunmayan astsubayların kademe ilerlemeleri hangi zamana kadar yapılmaz?",
+"siklar": [
+"Emekli oluncaya kadar",
+"Bir üst rütbeye terfi edinceye kadar",
+"5 yıl boyunca",
+"Olumlu bir sicil tanzim edilinceye kadar",
+"Kurul kararı verilinceye kadar"
+],
+"dogru": 3,
+"aciklama": "m.51: Haklarında düzenlenmiş geçerli sicil belgesi bulunmayanların kademe ilerlemeleri, olumlu bir sicil tanzim edilinceye kadar yapılmaz; olumlu sicil tanzim edilince emsalleri tarihinden geçerli olarak kademe ilerlemesi yaptırılır.",
+"kaynak": "Y_5809 m.51"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kademe ilerlemesi yapacak astsubaylardan, kademe ilerlemesi yapacağı yılın 30 Ağustos tarihinde açıkları devam edenlerin kademe ilerlemeleri hakkında ne yapılır?",
+"siklar": [
+"Kademe ilerlemeleri şartsız yapılır",
+"Kademe ilerlemeleri ertelenir ama iptal edilmez",
+"Kurul kararına bırakılır",
+"Sadece uyarı yapılır",
+"Kademe ilerlemeleri yapılmaz, yapılmış olanlar iptal edilir"
+],
+"dogru": 4,
+"aciklama": "m.52/a-(1)-(a): Kademe ilerlemesi yapacağı yılın 30 Ağustos tarihinde açıkları devam edenlerin kademe ilerlemeleri yapılmaz, yapılmış olanlar iptal edilir.",
+"kaynak": "Y_5809 m.52"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre çeşitli sebeplerle nasıp tarihleri lehlerine düzeltilerek bu suretle kademe ilerlemesi yapan astsubaylar, şartları taşımaları halinde hangi tarihte yeniden kademe ilerlemesi yapabilirler?",
+"siklar": [
+"Müteakip 30 Ağustos tarihinde",
+"Aynı yılın 2 Mayıs tarihinde",
+"Bir sonraki yılın 1 Temmuz tarihinde",
+"Beş yıl sonra",
+"Hiçbir zaman yapamazlar"
+],
+"dogru": 0,
+"aciklama": "m.53: Bu şekilde kademe ilerlemesi yapanlar, şartları taşıyorlarsa, müteakip 30 Ağustos tarihinde yeniden kademe ilerlemesi yapabilirler.",
+"kaynak": "Y_5809 m.53"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre nasıpları aleyhine düzeltilen astsubayların kademe ilerlemesi ne zamana kadar yapılmaz?",
+"siklar": [
+"Emekli oluncaya kadar hiç yapılmaz",
+"Yeni nasıplarına göre bulundukları kademe aylığına intibak edinceye kadar",
+"10 yıl boyunca",
+"Bir üst rütbeye terfi edinceye kadar",
+"Kurul kararı verilinceye kadar"
+],
+"dogru": 1,
+"aciklama": "m.54: Nasıpları aleyhe düzeltilen astsubayların kademe ilerlemesi, yeni nasıplarına göre bulundukları kademe aylığına intibak edinceye kadar yapılmaz.",
+"kaynak": "Y_5809 m.54"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre rütbe bekleme süresi içerisinde herhangi bir yıl nasıpları aleyhlerine düzeltilerek emsallerine göre bir kademe geri kalan astsubaylar, aleyhe nasıp düzeltilmesi toplamı ne kadarı geçmediği takdirde sonraki yıllara ait terfi yılını tamamlamış kabul edilirler?",
+"siklar": [
+"Altı ayı",
+"İki yılı",
+"Bir yılı",
+"Üç ayı",
+"Dokuz ayı"
+],
+"dogru": 2,
+"aciklama": "m.55: Aleyhe nasıp düzeltilmesi toplamı bir yılı geçmediği takdirde, sonraki yıllara ait terfi yılını tamamlamış kabul edilirler.",
+"kaynak": "Y_5809 m.55"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre harp gaibi olanlar ile esir veya enterne edilen astsubayların kademe ilerlemeleri ne zaman yapılır?",
+"siklar": [
+"Hiçbir zaman yapılmaz",
+"Esarette iken de düzenli yapılır",
+"Sadece kurul kararıyla yapılır",
+"Dönüşlerine kadar yapılmaz, isnat olunan suçları sabit görülmeyenlerin dönüşlerinde sicil şartı aranmaksızın derhal yapılır",
+"Emeklilik ile birlikte yapılır"
+],
+"dogru": 3,
+"aciklama": "m.56: Harp gaibi olanlar ile esir veya enterne edilen astsubayların kademe ilerlemeleri, dönüşlerine kadar yapılmaz; isnat olunan suçları sabit görülmeyenlerin dönüşlerinde sicil şartı aranmaksızın derhal yapılır.",
+"kaynak": "Y_5809 m.56"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubay çavuş rütbesi hariç olmak üzere, son on yıl içerisinde ikisi farklı birinci ve ikinci sicil üstlerinden olmak üzere kaçıncı kez sicil tam notunun %60'ından daha düşük sicil notu alan astsubaylar hakkında yetersizlik nedeniyle ayırma işlemi yapılır?",
+"siklar": [
+"Birinci kez",
+"İkinci kez",
+"Dördüncü kez",
+"Beşinci kez",
+"Üçüncü kez"
+],
+"dogru": 4,
+"aciklama": "m.57: Son on yıl içerisinde üçüncü kez sicil tam notunun %60'ından daha düşük sicil notu alan astsubaylar hakkında yetersizlik nedeniyle ayırma işlemi yapılır.",
+"kaynak": "Y_5809 m.57"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre yetersizlik nedeniyle ayırma işleminin yapılabilmesi için, düşük sicil notlarının en az kaç farklı birinci sicil üstü ve en az kaç farklı ikinci sicil üstü (asgari kaç farklı sicil üstü) tarafından verilmiş olması gerekir?",
+"siklar": [
+"En az 2 farklı birinci sicil üstü, 2 farklı ikinci sicil üstü (asgari 4 farklı sicil üstü)",
+"En az 1 farklı birinci, 1 farklı ikinci (asgari 2 farklı)",
+"En az 3 farklı birinci, 3 farklı ikinci (asgari 6 farklı)",
+"En az 2 farklı birinci, 1 farklı ikinci (asgari 3 farklı)",
+"En az 1 farklı birinci, 2 farklı ikinci (asgari 3 farklı)"
+],
+"dogru": 0,
+"aciklama": "m.57/b: Bu notların, asgari dört farklı sicil üstü olmak üzere, en az iki farklı birinci sicil üstü ve en az iki farklı ikinci sicil üstü tarafından verilmesi gerekir.",
+"kaynak": "Y_5809 m.57"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre başçavuş rütbesindeki astsubayların, rütbe bekleme sürelerinin üçüncü yılında aldıkları sicillerin not ortalaması sicil notunun yüzde kaçından aşağı ise \"Kendisinden İstifade Edilemez\" kabul edilir?",
+"siklar": [
+"%50",
+"%60",
+"%55",
+"%65",
+"%70"
+],
+"dogru": 1,
+"aciklama": "m.59: Başçavuş rütbesinde bulunan astsubayların bekleme sürelerinin üçüncü yılında aldıkları sicillerin not ortalaması sicil notunun %60'ından aşağı olanlar \"Kendisinden İstifade Edilemez\" kabul edilerek Kanunun 94. maddesi (a)(3) bendine göre emeklilik işlemi yapılır.",
+"kaynak": "Y_5809 m.59"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre çeşitli branşlara göre yetiştirilen aynı sınıfa mensup astsubayların sınıfları içindeki kıdem sırası saptanırken branş mevcutları kaç kabul edilerek başarı derecesi bulunur?",
+"siklar": [
+"50",
+"150",
+"100",
+"200",
+"1000"
+],
+"dogru": 2,
+"aciklama": "m.62/b: Çeşitli branşlara göre yetiştirilen aynı sınıfa mensup astsubayların sınıfları içindeki kıdem sırası, branş mevcutları 100 kabul edilerek bulunacak başarı derecelerine göre saptanır.",
+"kaynak": "Y_5809 m.62"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre aynı rütbe ve nasıplı olup değişik kaynaklardan yetiştiğinden yeterlilik derecesi kıyaslanamayan astsubaylar arasındaki kıdem sırasında, Astsubay Meslek Yüksek Okulu mezunlarından hemen sonra hangi kaynak gelir?",
+"siklar": [
+"Sivil kaynaktan muvazzaf astsubay olanlar",
+"Sözleşmeli astsubaylıktan muvazzaf astsubay olanlar",
+"Sözleşmeli astsubaylar",
+"Uzman erbaşlıktan astsubay olanlar",
+"Kıta erbaş ve erlerinden astsubay olanlar"
+],
+"dogru": 3,
+"aciklama": "m.62/c: Sıralama AMYO mezunları, uzman erbaşlıktan astsubay olanlar, kıta erbaş ve erlerinden astsubay olanlar, sözleşmeli astsubaylıktan muvazzaf astsubay olanlar, sivil kaynaktan muvazzaf astsubay olanlar, sözleşmeli astsubaylar şeklindedir.",
+"kaynak": "Y_5809 m.62"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kuvvetleri ayrı olan aynı rütbe ve aynı nasıplı astsubaylar arasında bütün şartların aynı olması halinde, mensup olduğu kuvvete göre kıdem sıralaması hangi sırayla uygulanır?",
+"siklar": [
+"Hava, deniz, kara",
+"Deniz, kara, hava",
+"Kara, hava, deniz",
+"Hava, kara, deniz",
+"Kara, deniz, hava"
+],
+"dogru": 4,
+"aciklama": "m.62/g-(3): Bütün şartların aynı olması halinde mensup olduğu kuvvete göre sıra ile kara, deniz, hava diğerlerine nazaran kıdemlidir.",
+"kaynak": "Y_5809 m.62"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre muvazzaf ve sözleşmeli astsubayların her birine astsubaylığa nasıpta kaçar adet özlük dosyası açılır?",
+"siklar": [
+"İkişer",
+"Bir",
+"Üçer",
+"Dörder",
+"Beşer"
+],
+"dogru": 0,
+"aciklama": "m.63: Muvazzaf ve sözleşmeli astsubayların her birine, astsubaylığa nasıpta ikişer adet özlük dosyası açılır.",
+"kaynak": "Y_5809 m.63"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre özlük dosyası aşağıdaki gruplardan hangisini İÇERMEZ?",
+"siklar": [
+"Özlük grubu",
+"Askerlik şubesi grubu",
+"Atanma grubu",
+"Terfi, kıdem ve kademe ilerlemesi grubu",
+"Sağlık grubu"
+],
+"dogru": 1,
+"aciklama": "m.63: Özlük dosyası özlük, atanma, terfi-kıdem-kademe ilerlemesi, takdir ve ödül, adli işlemler, sağlık, kurslar ve meslek programları, nasıp öncesi işlemler gruplarından oluşur; \"askerlik şubesi grubu\" bu sekiz grup arasında yer almaz.",
+"kaynak": "Y_5809 m.63"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubayların kıt'a özlük dosyası kimde bulunur?",
+"siklar": [
+"İkinci sicil üstünde",
+"Üçüncü sicil üstünde",
+"Birinci sicil üstünde",
+"Genelkurmay Başkanlığında",
+"Astsubayın kendisinde"
+],
+"dogru": 2,
+"aciklama": "m.64: Astsubayların kıt'a özlük dosyası birinci sicil üstünde bulunur. Diğer özlük dosyası Kuvvet Komutanlığı Personel Başkanlığında bulunur.",
+"kaynak": "Y_5809 m.64"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre yurt dışı sürekli göreve atananların kıt'a özlük dosyaları nereye gönderilir?",
+"siklar": [
+"Genelkurmay Başkanlığına",
+"Milli Savunma Bakanlığına",
+"Dışişleri Bakanlığına",
+"Atandıkları görevin kuruluş bağlantısına göre ilgili makamlara",
+"Askerlik şubesine"
+],
+"dogru": 3,
+"aciklama": "m.66: Yurt dışı sürekli göreve atananların kıt'a özlük dosyaları, atandıkları görevin kuruluş bağlantısına göre ilgili makamlara gönderilir.",
+"kaynak": "Y_5809 m.66"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre Silahlı Kuvvetlerden ayrılanların kıt'a özlük dosyaları nereye gönderilir?",
+"siklar": [
+"Genelkurmay Başkanlığına",
+"Milli Savunma Bakanlığına",
+"Askerlik şubesine",
+"Emniyet Genel Müdürlüğüne",
+"İlgili Kuvvet Komutanlığına"
+],
+"dogru": 4,
+"aciklama": "m.68: Silahlı Kuvvetlerden ayrılanların kıt'a özlük dosyaları ilgili Kuvvet Komutanlığına gönderilir.",
+"kaynak": "Y_5809 m.68"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre bu Yönetmelik esaslarına uygun şekilde düzenlenmemiş siciller ne yapılır?",
+"siklar": [
+"Üçüncü sicil üstlerine iade edilerek hatalar düzelttirilir",
+"Doğrudan imha edilir",
+"Kurul tarafından not takdir edilerek düzeltilir",
+"Astsubaya bildirilmeden dosyaya konur",
+"Sadece arşivlenir"
+],
+"dogru": 0,
+"aciklama": "m.71: Bu Yönetmelik esaslarına uygun şekilde düzenlenmemiş siciller, üçüncü sicil üstlerine iade edilerek hatalar düzelttirilir.",
+"kaynak": "Y_5809 m.71"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre matbu olarak doldurulan sicil belgelerinde yazılan kanaatlerde düzeltme yapılması gerektiğinde nasıl işlem yapılır?",
+"siklar": [
+"Üzeri kazınarak silinir",
+"Üzeri okunacak şekilde çizilerek yeniden yazılır ve düzeltilen yer sicil üstü tarafından imzalanır",
+"Belge tamamen yenilenir",
+"Beyaz düzeltici ile kapatılır",
+"Silinti yapılıp üstüne yazılır"
+],
+"dogru": 1,
+"aciklama": "m.72: İşaret ve yazıların üstü kazınmaz, silinmez, karartılmaz veya bozulmaz. Düzeltme gerekirse üzeri okunacak şekilde çizilerek yeniden yazılır ve düzeltilen yer sicil üstü tarafından imzalanır.",
+"kaynak": "Y_5809 m.72"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre üstün başarı nedeniyle terfi edebilmek için, ilgili rütbeye ait her yılki sicil notunun sicil tam notunun yüzde kaçı ve daha yukarısında, sicil notu ortalamasının da yüzde kaçı ve daha yukarısında olması gerekir?",
+"siklar": [
+"%90 ve %85",
+"%90 ve %90",
+"%95 ve %90",
+"%95 ve %95",
+"%100 ve %90"
+],
+"dogru": 2,
+"aciklama": "m.73: İlgili rütbeye ait her yılki sicil notu, sicil tam notunun %95'i ve daha yukarısında ve sicil notu ortalaması da sicil tam notunun %90 ve daha yukarısında olmalıdır.",
+"kaynak": "Y_5809 m.73"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre üstün başarı nedeniyle bir üst rütbeye yükseltilme kontenjanı, muharip sınıflar için kendi sınıf mevcudunun yüzde kaçı, yardımcı sınıflar için yüzde kaçıdır?",
+"siklar": [
+"Muharip %10, Yardımcı %5",
+"Muharip %5, Yardımcı %8",
+"Muharip %4, Yardımcı %8",
+"Muharip %8, Yardımcı %4",
+"Muharip %12, Yardımcı %6"
+],
+"dogru": 3,
+"aciklama": "m.73: Kontenjan, kendi sınıf mevcudunun, muharip sınıflar için %8'i, yardımcı sınıflar için %4'ü oranındadır.",
+"kaynak": "Y_5809 m.73"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre üstün başarı nedeniyle terfiden, üstçavuşluk, kıdemli üstçavuşluk ve başçavuşluk rütbelerinde birer defa olmak üzere en fazla kaç defa yararlanılabilir?",
+"siklar": [
+"1",
+"2",
+"4",
+"Sınırsız",
+"3"
+],
+"dogru": 4,
+"aciklama": "m.73, son fıkra: Üstün başarı nedeniyle terfiden, üstçavuşluk, kıdemli üstçavuşluk ve başçavuşluk rütbelerinde birer defa olmak üzere en fazla üç defa yararlanılır.",
+"kaynak": "Y_5809 m.73"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre yüksek lisans öğrenimini kendi nam ve hesabına yapanların öğrenim kıdemi alabilmesi için müracaat tarihinde sicil notu ortalamasının sicil tam notunun yüzde kaçı ve daha üstünde olması gerekir?",
+"siklar": [
+"%90",
+"%80",
+"%85",
+"%95",
+"%100"
+],
+"dogru": 0,
+"aciklama": "m.73/A/d-(2): Müracaat tarihinde sicil notu ortalamasının, sicil tam notunun %90 ve daha üstünde olması gerekir.",
+"kaynak": "Y_5809 m.73/A"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre yüksek lisans nedeniyle öğrenim kıdemi alacak astsubayların, taksirli suçlar hariç olmak üzere belirtilen suçlar dışındaki suçlardan toplam kaç gün ve daha fazla hapis veya oda hapsi cezası ile cezalandırılmamış olmaları gerekir?",
+"siklar": [
+"15 gün",
+"21 gün",
+"30 gün",
+"45 gün",
+"60 gün"
+],
+"dogru": 1,
+"aciklama": "m.73/A/d-(5): Belirtilen suçların dışındaki suçlardan toplam olarak 21 gün ve daha fazla hapis veya oda hapsi cezası ile mahkûm veya cezalandırılmamış olması gerekir.",
+"kaynak": "Y_5809 m.73/A"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kıdemden düşmeyi gerektiren bir cezanın infazı sırasında rütbe terfii, rütbe kademeliliği veya kademe ilerlemesi sırasına girenler hakkında ne yapılır?",
+"siklar": [
+"Bu işlemler derhal yapılır",
+"Sadece rütbe terfii yapılır",
+"Bu işlemler yapılmaz; cezanın infazını müteakip gerekli nasıp düzeltmeleri yapılır",
+"Sadece kademe ilerlemesi yapılır",
+"Kurul onayı ile işlem yapılır"
+],
+"dogru": 2,
+"aciklama": "m.74: Kıdemden düşmeyi gerektiren bir cezanın infazı sırasında bu işlemler yapılmaz; cezanın kısmen veya tamamen infazını müteakip tahliye edilenlerin gerekli nasıp düzeltmeleri yapılır.",
+"kaynak": "Y_5809 m.74"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre kaza veya idari kararlarla nasıpları lehe düzeltilenlerden emsalleri terfi etmiş olanların terfileri, diğer terfi şartlarını da haiz olmaları kaydıyla ne şekilde yapılır?",
+"siklar": [
+"Bir yıl sonra yapılır",
+"Yapılmaz",
+"Kurul kararı ile yapılır",
+"Derhal yapılır",
+"Sadece talep üzerine yapılır"
+],
+"dogru": 3,
+"aciklama": "m.75: Kaza veya idari kararlarla nasıpları lehe düzeltilenlerden emsalleri terfi etmiş olanların terfileri, diğer terfi şartlarını da haiz iseler derhal yapılır.",
+"kaynak": "Y_5809 m.75"
+},
+{
+"soru": "Astsubay Sicil Yönetmeliği'ne göre astsubay başçavuş ve kıdemli başçavuş rütbelerinde, kademeli kıdemli başçavuşluk veya ikinci kademeli kıdemli başçavuşluk için rütbe kademeliliği şartlarından biri, kıdemli başçavuşluğun kaçıncı yılında bulunmaktır?",
+"siklar": [
+"Birinci veya ikinci yılı",
+"Dördüncü veya sekizinci yılı",
+"Beşinci veya onuncu yılı",
+"İkinci veya dördüncü yılı",
+"Üçüncü veya altıncı yılı"
+],
+"dogru": 4,
+"aciklama": "m.76/a: Kademeli kıdemli başçavuşluk veya ikinci kademeli kıdemli başçavuşluk için, kıdemli başçavuşluğun üçüncü veya altıncı yılında bulunmak şarttır.",
+"kaynak": "Y_5809 m.76"
+}
+],
+"banka_kaynak_sayim": [
+[
+"5809 m.3",
+11
+],
+[
+"Y_5809 m.3",
+5
+],
+[
+"Y_5809 m.21",
+5
+],
+[
+"Y_5809 m.27",
+5
+],
+[
+"5809 m.4",
+4
+],
+[
+"5809 m.36",
+4
+],
+[
+"5809 m.39",
+4
+],
+[
+"Y_5809 m.62",
+3
+],
+[
+"Y_5809 m.73",
+3
+],
+[
+"5809 m.2",
+2
+],
+[
+"Y_5809 m.6",
+2
+],
+[
+"Y_5809 m.15",
+2
+],
+[
+"Y_5809 m.16",
+2
+],
+[
+"Y_5809 m.20",
+2
+],
+[
+"Y_5809 m.23",
+2
+],
+[
+"Y_5809 m.33",
+2
+],
+[
+"Y_5809 m.36",
+2
+],
+[
+"Y_5809 m.37",
+2
+],
+[
+"Y_5809 m.41",
+2
+],
+[
+"Y_5809 m.49",
+2
+],
+[
+"Y_5809 m.57",
+2
+],
+[
+"Y_5809 m.63",
+2
+],
+[
+"Y_5809 m.73/A",
+2
+],
+[
+"Y_5809 m.82",
+2
+],
+[
+"Y_5809 Ek Madde 2",
+2
+]
+]
+}

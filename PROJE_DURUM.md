@@ -2611,3 +2611,52 @@ tekrar çalıştırılabilir). **Başkanın iki konsol adımı bekliyor:** Pub/S
 hesabının Google Cloud'da hiç yetkisi yok, betik bunu söyleyerek duruyor.
 
 **KALAN TEK BÜYÜK İŞ: OTA.** Bugünkü istemci düzeltmelerinin hiçbiri kullanıcıda değil.
+
+---
+
+## 23 Eylül 2026 — ALTIN ÖZET branş kitapları: üretim hattı depoya alındı, havacılık basıldı
+
+**Durum tespiti.** Elimizde iki Altın Özet vardı: *Sadece Müşterek* ve *Müşterek + MEBS*. Yani
+15 branştan yalnız birinin (MEBS) kitabı var; **14 branş eksik**. Jandarma branşının branş mevzuatı
+yok, ona müşterek sürüm yetiyor — ama uygulamada hiçbir yerde görünmüyor (kitap listesi yalnız
+jandarma dışı branşlarda açılıyor).
+
+**Üretim hattı kurtarıldı.** Kitapları basan betikler oturuma özel geçici klasörde duruyordu
+(silinseydi kaybolacaktı). Depoya alındı: `scripts/altin-ozet/`
+- `altin_pack.py` — müşterek paketleyici (eski, olduğu gibi)
+- `altin_pack_brans.py` — **YENİ**: branş paketleyici. Sınav kapsamını branş kitabının kendi
+  PDF'inden okur (emir zaten o kitabı üretirken uygulanmıştı), resmî madde metnini bot arşivinden,
+  çıkmış soruları kitapçık arşivinden çeker.
+- `altin_kitap_brans.py` — **YENİ**: müşterek + seçilen branş → PDF. `python ... havacilik`
+- `_ao_alias.py` — 191 branş kitabı başlığı ↔ arşiv mevzuat adı eşleşmesi (elle kuruldu)
+- `icerik/`, `paketler/` — bölüm metinleri ve veri paketleri
+
+**Ölçüm: 191/191 mevzuatın resmî metni elimizde** (bot arşivi 141 mevzuat / 7.571 madde). Yani
+14 branşın hepsi üretilebilir durumda.
+
+**Düzeltilen üç hata:**
+1. Çıkmış soru eşleştirme kuralı fazla genişti ("jandarma + güvenlik" geçen her soruyu topluyordu;
+   Sağlık Yeteneği Yön. için 96 yanlış eşleşme). Kural daraltıldı → 2 doğru eşleşme.
+2. Kapak rakamları koda sabit yazılıydı (808/375/1.093); kitap büyüdükçe kapak yalan söylüyordu.
+   Artık **basılan metinden sayılıyor**.
+3. Kapak alt yazısı sayfadan taşıp son iki satırı kesiyordu (eski kitapta da vardı) — kapak
+   yüksekliği 252mm→214mm.
+
+**Giriş bölümü tazelendi.** İstatistikler 26 kitapçık / 2.336 soru üzerinden yazılmıştı; referans
+profili 34 kitapçık / 3.236 soruya çıkmıştı (iptal edilen 19 Eylül 2026 sınavı dâhil). Soru tipi
+yüzdeleri ve mevzuat ağırlık tablosu `cikmis-referans.json`'dan yeniden üretildi.
+
+**Basılan üç kitap (hepsi aynı tezgâhtan, 23 Eylül):**
+| Kitap | Sayfa | Mevzuat | Altın nokta | ★ çıkmış |
+|---|---|---|---|---|
+| Sadece Müşterek | 265 | 25 | 1.007 | 367 |
+| Müşterek + MEBS | 341 | 25+9 | 1.268 | 440 |
+| Müşterek + Havacılık | 289 | 25+3 | 1.108 | 391 |
+
+Havacılık bölümü (s.269-289): 2629 Tazminat Kanunu · 2920 Sivil Havacılık · Sağlık Yeteneği Yön.
+m.62-70/A. ★ işareti artık **2026** kitapçığını da tanıyor (önceden yalnız 2024).
+
+**SIRADA:** kalan 13 branş (kullanıcı sayısına göre: personel 41 · ikmal 16 · bakım 14 ·
+istihkam 10 · maliye 7 · sağlık 3 · mühendis 2 · veteriner 1 · tabip · diş tabibi · eczacı ·
+kimyager · bando) + uygulamaya ekleme (`brans_kitaplari`'na en üst sıra; jandarma ve uzman erbaş
+için ayrı bir yer gerekiyor).
