@@ -2687,3 +2687,25 @@ Eski birleşik PDF'ler (Musterek + MEBS / + Havacilik / SADECE MUSTEREK) Masaüs
 tabip · diş tabibi · eczacı · kimyager · bando. Sonra uygulama tarafı: "TATBİKAT MERKEZİ"→"DENEME MERKEZİ",
 "Genel deneme çöz" şeridi → Altın Özet girişi (ücretsizde kilitli), son sayfa hatırlama, brans_kitaplari satırları + PDF yükleme,
 premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → müşterek + branş kitabı).
+
+### 23 Eylül 2026 (gece) — Müşterek Altın Özet UYGULAMADA, herkese yayında
+
+- **Sunucu:** `pdf/musterek/JSPS-2026-Altin-Ozet-Musterek.pdf` (font alt-kümeli 7,3 MB) private bucket'ta;
+  `brans_kitaplari` unique anahtarı `(brans_slug, dosya_yolu)` oldu (aynı dosya birden çok listeye).
+  Satırlar: 'musterek' sanal branşı + jandarma dışı 15 branşın listesinde sira=0. Jandarmaya liste satırı YOK
+  (kitap listesi görünce kanun kartları gizleniyor; bir kez yazıldı, saniyeler içinde silindi).
+  Yükleme betiği: `node scripts/altin-ozet-yukle.mjs --dosya <pdf> --musterek | --brans <slug>`
+  (branş kitabı → `altin_<slug>` sanal satırı + jandarma dışı için branş listesi).
+- **Uygulama (OTA, 8 runtime 1.0.38-1.0.46, commit 59dbf20):** Karargâh şeridi "Altın Özet kitapları" →
+  `/altin-ozet` liste ekranı (müşterek + hazırsa branş kitabı; hazır değilse "hazırlanıyor" satırı);
+  "TATBİKAT MERKEZİ" → "DENEME MERKEZİ". Premium kilidi üç katman: liste ekranı → paywall, okuyucu kapısı, sunucu 402.
+- **Okuyucu (pdf-viewer, üretici betiğe de işlendi):** eski sürüm tüm sayfaları baştan 2x çiziyordu — 265 sayfa
+  telefonda belleği patlatırdı. Şimdi görünen sayfa ±3 pencere, uzaktaki canvas boşaltılır; sayfa etiketi "40 / 265";
+  kaldığı sayfadan devam (cihazda AsyncStorage `jsps.kitap.sonsayfa.<yol>`); PDF base64 512 KB parçalarla WebView'e.
+  Tarayıcıda gerçek kitapla ölçüldü: 40'tan açıldı, 150'ye kaydırınca 40 boşaldı, hata yok.
+- **Duyuru + push:** duyuru id 04c5aa63…, push 577 token ok / 0 hata ("Merhaba komutan!" hitabı).
+- **Kaza dersi:** TaskStop arka plan betiğin çocuklarını öldürmedi; ilk (bayraklı) OTA döngüsü ikinci döngüyle aynı anda
+  çalıştı ve app.json sürümünü karıştırdı → PowerShell ile tüm bash/eas süreçleri kapatıldı, app.json+registry geri alındı,
+  tek temiz döngü basıldı ve `eas update:list` ile 8/8 doğrulandı.
+- **SIRADA:** Jandarma kitabını yükle (`--brans jandarma` → `altin_jandarma`), sonra 13 branş kitabı; branş kitabı
+  yüklenince o branşın listesinde müşterek satırı sira=-1'e çekilir (betik yapıyor).
