@@ -24,6 +24,8 @@ BRANSLAR = {
            'Elektronik Haberleşme · Yetkilendirme · Taşınır Mal · Harcama Belgeleri · Kriptolu Haberleşme · Telsiz · 2019/12 · 2024/7 · Güvenlik Rehberi'),
   'havacilik': ('ozet_E_havacilik', 'Havacilik', 'Havacılık Branş Mevzuatı',
                 'Uçuş-Paraşüt-Dalış Tazminat Kanunu · Türk Sivil Havacılık Kanunu · Sağlık Yeteneği Yönetmeliği (uçucular)'),
+  'jandarma': ('ozet_J_jandarma', 'Jandarma', 'Jandarma Branş Mevzuatı',
+               'CMK · Kolluk yetkileri · Kaçakçılık · Uyuşturucu · Çocuk Koruma · Yabancılar · Trafik · Çevre-Orman-Av · Kültür Varlıkları · Silah mevzuatı · Uygulama yönetmelikleri · TCK (branş)'),
 }
 if not SADECE_MUSTEREK and BRANS not in BRANSLAR:
     print('bilinmeyen brans:', BRANS, '- tanimli:', ', '.join(BRANSLAR)); raise SystemExit(1)
