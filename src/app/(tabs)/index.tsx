@@ -209,19 +209,18 @@ export default function KarargahScreen() {
   const router = useRouter();
   // Bayraklı modda arama TEK yerde (Mevzuat'taki kutu → /ara) → buradaki büyüteç gizlenir.
   const aramaMevzuatta = useKisiselOzellik('talim-mevzuata');
-  // ALTIN ÖZET GİRİŞİ (başkan, 23 Eyl 2026 — önce yalnız başkanda): "Genel deneme çöz" şeridi
-  // Altın Özet kitabına dönüşür (genel denemeler zaten Deneme Merkezi'nin ikinci sekmesinde),
-  // "TATBİKAT MERKEZİ" başlığı "DENEME MERKEZİ" olur. Kitap satırı sunucudan ('musterek' sanal
+  // ALTIN ÖZET GİRİŞİ (başkan, 23 Eyl 2026; aynı gün "herkese yay"): "Genel deneme çöz" şeridi
+  // Altın Özet kitabına dönüştü (genel denemeler zaten Deneme Merkezi'nin ikinci sekmesinde),
+  // "TATBİKAT MERKEZİ" başlığı "DENEME MERKEZİ" oldu. Kitap satırı sunucudan ('musterek' sanal
   // branşı) gelir; jandarma/uzman erbaş dâhil herkes buradan açar. Ücretsiz kullanıcı kilit görür →
-  // paywall (teşvik). Başkan "yay" deyince koşul kalkar.
-  const altinOzetAcik = useKisiselOzellik('on-izleme');
+  // paywall (teşvik). Sunucuda satır yoksa (çevrimdışı ilk açılış) eski "Genel deneme" şeridi kalır.
+  const altinOzetAcik = true;
   const [altinOzet, setAltinOzet] = useState<BransKitap | null>(null);
   useEffect(() => {
-    if (!altinOzetAcik) return;
     void bransKitaplari('musterek')
       .then((liste) => setAltinOzet(liste[0] ?? null))
       .catch(() => setAltinOzet(null));
-  }, [altinOzetAcik]);
+  }, []);
   // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
   const [tekrarAcik, setTekrarAcik] = useState(false);
   // PASLANAN LİSTE YERİ (başkan, 13 Eyl 2026): liste tıklanan satırın HEMEN ALTINDA açılır,
