@@ -65,7 +65,13 @@ const KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
 // ⏳ JSPS SINAV TARİHİ — Karargah en üstteki geri sayım buna göre işler.
 // BAŞKAN: Tarih/saat değişirse SADECE bu satırları değiştir.
 // new Date(yıl, AY-1, gün, saat, dakika) — AY 0-tabanlı (8 = Eylül, 7 = Ağustos).
-const SINAV_TARIHI = new Date(2026, 8, 19, 14, 0, 0); // 19 Eylül 2026, 14:00 (RESMÎ)
+const SINAV_TARIHI = new Date(2026, 9, 10, 10, 0, 0); // 10 Ekim 2026 Cumartesi, 10:00 (RESMÎ)
+// 19 Eylül 2026 sınavı İPTAL edildi; yerine 10 Ekim'de yapılacak (22 Eyl 2026 duyuruldu).
+// Ekranda geçen tarih yazısı ARTIK ELLE YAZILMIYOR — SINAV_TARIHI'nden türetilir. Eskiden
+// "19 Eylül'e … gün" koda gömülüydü; tarih değişince sayaç 10 Ekim'i sayarken yazı hâlâ
+// 19 Eylül diyordu. Tek kaynak: SINAV_TARIHI.
+const SINAV_GUN_AY = SINAV_TARIHI.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' });
+const SINAV_SAAT = `${ikiHane(SINAV_TARIHI.getHours())}.${ikiHane(SINAV_TARIHI.getMinutes())}`;
 // 📋 BAŞVURU PENCERESİ — geri sayımın altındaki ince şerit buna göre işler:
 // açılmadan önce "şu tarihte açılıyor", açıkken son güne canlı sayaç, kapanınca gizlenir.
 const BASVURU_BASLANGIC = new Date(2026, 7, 3, 0, 0, 0); // 3 Ağustos 2026
@@ -121,7 +127,7 @@ function SinavGeriSayim({ kompakt, buyuk }: { kompakt?: boolean; buyuk?: boolean
     return (
       <View style={styles.geriSayimBuyuk}>
         <AppText variant="dev" bold color="lacivert" style={styles.geriSayimBuyukYazi}>
-          19 Eylül'e {gun} gün
+          {SINAV_GUN_AY}'e {gun} gün
         </AppText>
         {basvuru ? (
           <View style={[styles.basvuruBant, basvuru.vurgu && styles.basvuruBantVurgu]}>
@@ -139,7 +145,7 @@ function SinavGeriSayim({ kompakt, buyuk }: { kompakt?: boolean; buyuk?: boolean
         <View style={styles.geriSayimKompaktSatir}>
           <MaterialCommunityIcons name="calendar-clock" size={16} color={Palette.altin} />
           <AppText variant="kucuk" bold color="beyaz" numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.8}>
-            JSPS sınavına {gun} gün · 19 Eylül 14.00
+            JSPS sınavına {gun} gün · {SINAV_GUN_AY} {SINAV_SAAT}
           </AppText>
         </View>
         {basvuru ? (
