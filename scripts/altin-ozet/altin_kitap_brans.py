@@ -9,8 +9,15 @@ os.makedirs(GECICI, exist_ok=True)
 CHROME = r'C:/Program Files/Google/Chrome/Application/chrome.exe'
 FONT = r'C:/Windows/Fonts/segoeui.ttf'
 FONTB = r'C:/Windows/Fonts/segoeuib.ttf'
+# Başkan (23 Eyl 2026): "her branş için 2 kitap görünsün — müşterek zaten herkese aynı tek
+# kitap, bir de herkese ayrıca branş kitabı." Yani birleşik kitap ARTIK ÜRETİLMİYOR:
+#   python altin_kitap_brans.py musterek        → herkese aynı müşterek kitabı
+#   python altin_kitap_brans.py havacilik       → yalnız branş kitabı
+#   python altin_kitap_brans.py havacilik ikili → eski birleşik sürüm (gerekirse)
 BRANS = (sys.argv[1] if len(sys.argv) > 1 else 'musterek').strip().lower()
+BIRLESIK = len(sys.argv) > 2 and sys.argv[2] == 'ikili'
 SADECE_MUSTEREK = BRANS == 'musterek'
+YALNIZ_BRANS = not SADECE_MUSTEREK and not BIRLESIK
 # Branş bölümü: (içerik dosyası, kapaktaki ad, bölüm başlığı, bölüm alt açıklaması)
 BRANSLAR = {
   'mebs': ('ozet_D', 'MEBS', 'MEBS Branş Mevzuatı',
@@ -21,8 +28,9 @@ BRANSLAR = {
 if not SADECE_MUSTEREK and BRANS not in BRANSLAR:
     print('bilinmeyen brans:', BRANS, '- tanimli:', ', '.join(BRANSLAR)); raise SystemExit(1)
 MASA = 'C:/Users/GIGABYTE/OneDrive/Desktop/'
-OUT = MASA + ('JSPS 2026 - ALTIN OZET (SADECE MUSTEREK).pdf' if SADECE_MUSTEREK
-              else 'JSPS 2026 - ALTIN OZET (Musterek + ' + BRANSLAR[BRANS][1] + ').pdf')
+if SADECE_MUSTEREK: OUT = MASA + 'JSPS 2026 - ALTIN OZET (MUSTEREK).pdf'
+elif YALNIZ_BRANS: OUT = MASA + 'JSPS 2026 - ALTIN OZET (' + BRANSLAR[BRANS][1] + ').pdf'
+else: OUT = MASA + 'JSPS 2026 - ALTIN OZET (Musterek + ' + BRANSLAR[BRANS][1] + ').pdf'
 
 def ici(t):
     t = H.escape(t)
@@ -117,15 +125,25 @@ def dosya(ad):
         if os.path.exists(c): return c, ('_sade' in c or '_m' in c)
     return None, False
 
-bolumler = [('giris', 'Sınavı Yapan Kurumun Soru Mantığı', 'Bu yıl soruları ATA-AÖF yazıyor. Kurumun üslubu ve eski JSPS kitapçıklarının kalıpları.'),
+MUSTEREK_BOLUMLER = [
+            ('giris', 'Sınavı Yapan Kurumun Soru Mantığı', 'Bu yıl soruları ATA-AÖF yazıyor. Kurumun üslubu ve eski JSPS kitapçıklarının kalıpları.'),
             ('sozluk', 'Mevzuat Dilinin Sözlüğü', 'Kitapta geçen hukuk terimlerinin günlük Türkçe karşılığı. Anlamadığınız satırda buraya dönün.'),
             ('ozet_A', 'Müşterek Mevzuat I — Yedi Kanun', 'Türk Ceza Kanunu · Jandarma Teşkilat Kanunu · KVKK · Tebligat · İl İdaresi · Kabahatler · Terörle Mücadele'),
             ('ozet_B', 'Müşterek Mevzuat II — Yedi Kanun', 'Olağanüstü Hal · Atatürk Aleyhine Suçlar · Ailenin Korunması · Türk Bayrağı · Disiplin · Sözleşmeli Sb/Asb · Elektronik İmza'),
             ('ozet_C', 'Müşterek Mevzuat III — Yönetmelikler ve Ateşli Silahlar', 'Resmî Yazışma · Sözleşmeli Yön. · Jandarma Teşkilat Yön. · Veri Silme · Bilgi Edinme · Av Tüfekleri · 6284 Uygulama · Personel · Hizmet Esasları · İzin · 6136'),
             ]
-if not SADECE_MUSTEREK:
+# Branş kitabı TEK BAŞINA basılır (başkanın ikili düzeni): müşterek bölümleri girmez.
+# Sözlük her iki kitapta da lazım — branş kitabını tek başına okuyan da terimlere takılıyor.
+if YALNIZ_BRANS:
     dos_b, _ad_b, bas_b, alt_b = BRANSLAR[BRANS]
-    bolumler.append((dos_b, bas_b, alt_b))
+    bolumler = [('sozluk', 'Mevzuat Dilinin Sözlüğü',
+                 'Kitapta geçen hukuk terimlerinin günlük Türkçe karşılığı. Anlamadığınız satırda buraya dönün.'),
+                (dos_b, bas_b, alt_b)]
+else:
+    bolumler = list(MUSTEREK_BOLUMLER)
+    if not SADECE_MUSTEREK:
+        dos_b, _ad_b, bas_b, alt_b = BRANSLAR[BRANS]
+        bolumler.append((dos_b, bas_b, alt_b))
 def sayim(md):
     """Bir bölümün gerçek sayıları: kaç mevzuat, kaç altın nokta, kaçı çıkmışta sorulmuş.
     Sayım HTML'den değil METİNDEN yapılır: HTML'de 'nasıl soruluyor' ve 'tuzaklar'
@@ -182,8 +200,15 @@ try:
     incelenen_soru = _ref['toplamAyristirilan']; incelenen_kitapcik = len(_ref['kitapciklar'])
 except Exception:
     incelenen_soru = incelenen_kitapcik = 0
-kapak_alt = (f'Müşterek Mevzuat — {musterek_sayisi} Kanun ve Yönetmelik' if SADECE_MUSTEREK
-             else f'Müşterek Mevzuat ({musterek_sayisi}) &nbsp;+&nbsp; {BRANSLAR[BRANS][2]} ({brans_sayisi})')
+if SADECE_MUSTEREK:
+    kapak_alt = f'Müşterek Mevzuat — {musterek_sayisi} Kanun ve Yönetmelik'
+    kapak_ust = ' · MÜŞTEREK'
+elif YALNIZ_BRANS:
+    kapak_alt = f'{BRANSLAR[BRANS][2]} — {brans_sayisi} Kanun ve Yönetmelik'
+    kapak_ust = ' · ' + BRANSLAR[BRANS][2].replace(' Branş Mevzuatı', '').upper() + ' BRANŞI'
+else:
+    kapak_alt = f'Müşterek Mevzuat ({musterek_sayisi}) &nbsp;+&nbsp; {BRANSLAR[BRANS][2]} ({brans_sayisi})'
+    kapak_ust = ''
 print(f'kapak sayımı: {altin_nokta} altın nokta · {cikmis_nokta} çıkmış · '
       f'{mevzuat_sayisi} mevzuat ({musterek_sayisi}+{brans_sayisi}) · '
       f'{incelenen_kitapcik} kitapçık/{incelenen_soru} soru incelendi')
@@ -235,7 +260,7 @@ tr {{ page-break-inside: avoid; }} tbody tr:nth-child(even) td {{ background: #F
 p {{ margin: 1.4mm 0; }} code {{ background: #EFE6D6; padding: 0 1mm; border-radius: 1mm; }}
 </style></head><body>
 <div class="kapak">
- <div><div class="ust">JANDARMA VE SAHİL GÜVENLİK PERSONELİ SINAVI · 2026{" · MÜŞTEREK" if SADECE_MUSTEREK else ""}</div>
+ <div><div class="ust">JANDARMA VE SAHİL GÜVENLİK PERSONELİ SINAVI · 2026{kapak_ust}</div>
   <h1>ALTIN ÖZET</h1><div class="cizgi"></div>
   <h2>{kapak_alt}</h2>
   <div class="kutular">
