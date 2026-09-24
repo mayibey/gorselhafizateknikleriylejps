@@ -2783,3 +2783,4 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   (commit 727105f, OTA grup 5a2189c0, runtime 1.0.46, `on-izleme` bayrağı). `src/lib/aciklama-bicim.ts` + `components/sinav/aciklama-metni.tsx`:
   baştaki künye altın · süre/oran/yaş/para lacivert kalın · yetkili makam lacivert kalın · istisna/yasak ("yapılamaz", "hariç") kırmızı.
   Sınav ekranı, hata özeti ve Sonuçlar'da. Veriye dokunulmadı. **SIRADA:** başkan onaylarsa bayrağı kaldır → herkese OTA.
+- 24 Eyl 18:4x — Açıklama vurgusu HERKESE açıldı (başkan "yay"; commit 62146a3, OTA grup 6ff112b2, runtime 1.0.46).
