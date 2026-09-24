@@ -40,7 +40,7 @@ export function soruBicimle(metin: string): string {
  * VERİYE DOKUNULMAZ — yalnız gösterim.
  */
 export type SoruParca = { metin: string; olumsuz?: boolean };
-export type SoruBolum = { govde: string; soru: SoruParca[] };
+export type SoruBolum = { govde: string; soru: SoruParca[]; sonra: string };
 
 // Sınavın "ters" sorduğunu gösteren kelimeler — gerçek kitapçıklarda altı çizili basılır.
 const OLUMSUZ =
@@ -62,13 +62,27 @@ function olumsuzBol(s: string): SoruParca[] {
 export function soruAyir(metin: string): SoruBolum {
   const s = soruBicimle(metin).trim();
   const soruSonu = s.lastIndexOf('?');
-  if (soruSonu < 0) return { govde: s, soru: [] };
-  // Soru cümlesinin başı: soru işaretinden önceki son cümle sonu (". " / satır sonu / ":" ).
+  if (soruSonu < 0) return { govde: s, soru: [], sonra: '' };
+  // Soru cümlesinin başı: soru işaretinden önceki son cümle sonu (". " / satır sonu / ": ").
   const once = s.slice(0, soruSonu);
-  const sinir = Math.max(once.lastIndexOf('. '), once.lastIndexOf('\n'), once.lastIndexOf(': '));
-  const bas = sinir >= 0 ? sinir + (s[sinir] === '\n' ? 1 : 2) : 0;
+  // Öncüllü/boşluklu kalıplarda soru cümlesi "Yukarıdaki…/Buna göre…" ile başlar; öncül sonunda nokta
+  // olmayabileceği için ("V. 657 sayılı Kanun Yukarıdakilerden…") önce bu kelimeleri ara.
+  let bas = -1;
+  for (const m of once.matchAll(/(Yukarıdaki|Yukarıda|Buna göre|Bu durumda|Verilen bilgilere göre)/g)) bas = m.index ?? bas;
+  if (bas < 0) {
+    // Aksi hâlde son cümle sonu; "IV. " gibi öncül numarasındaki nokta cümle sonu sayılmaz.
+    let sinir = once.lastIndexOf('\n');
+    for (let i = once.lastIndexOf('. '); i > sinir; i = once.lastIndexOf('. ', i - 1)) {
+      if (!/(^|\s)(I{1,3}|IV|VI{0,3}|IX|X)$/.test(once.slice(0, i))) { sinir = i; break; }
+    }
+    sinir = Math.max(sinir, once.lastIndexOf(': '));
+    bas = sinir >= 0 ? sinir + (s[sinir] === '\n' ? 1 : 2) : 0;
+  }
   const govde = s.slice(0, bas).trim();
-  const soru = s.slice(bas).trim();
-  if (!govde) return { govde: '', soru: olumsuzBol(soru) };
-  return { govde, soru: olumsuzBol(soru) };
+  // "?" sonrası (soru başta, öncüller sonda gelen kalıp) normal yazıyla ayrıca gösterilir.
+  const sonra = s.slice(soruSonu + 1).trim();
+  const soruMetni = s.slice(bas, soruSonu + 1).trim();
+  // Ayrıştırma anlamsızsa (ör. "?" tırnak içinde, soru cümlesi boş kaldı) metne dokunma.
+  if (soruMetni.replace(/[?\s'"”’.]/g, '').length < 3) return { govde: s, soru: [], sonra: '' };
+  return { govde, soru: olumsuzBol(soruMetni), sonra };
 }

@@ -15,7 +15,8 @@ export function SoruMetni({ metin, gece, ...rest }: AppTextProps & { metin: stri
   const onIzleme = useKisiselOzellik('on-izleme');
   if (!onIzleme) return <AppText {...rest}>{soruBicimle(metin)}</AppText>;
 
-  const { govde, soru } = soruAyir(metin);
+  const { govde, soru, sonra } = soruAyir(metin);
+  if (!soru.length) return <AppText {...rest}>{soruBicimle(metin)}</AppText>;
   const vurgu = gece ? Palette.altinParlak : Palette.altinMetin;
   const olumsuz = gece ? Palette.kirmiziParlak : Palette.kirmizi;
   const soruKismi = soru.map((p, i) => (
@@ -24,7 +25,7 @@ export function SoruMetni({ metin, gece, ...rest }: AppTextProps & { metin: stri
       style={
         p.olumsuz
           ? { color: olumsuz, textDecorationLine: 'underline' }
-          : govde
+          : govde || sonra
             ? { color: vurgu, fontStyle: 'italic' }
             : undefined
       }>
@@ -32,12 +33,11 @@ export function SoruMetni({ metin, gece, ...rest }: AppTextProps & { metin: stri
     </Text>
   ));
 
-  if (!govde) return <AppText {...rest}>{soruKismi}</AppText>;
   return (
     <AppText {...rest}>
-      {govde}
-      {'\n\n'}
+      {govde ? `${govde}\n\n` : null}
       {soruKismi}
+      {sonra ? `\n${sonra}` : null}
     </AppText>
   );
 }
