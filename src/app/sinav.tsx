@@ -36,6 +36,7 @@ import {
 } from '@/lib/sinav-ilerleme';
 import { HataBildirDugmesi } from '@/components/sinav/hata-bildir';
 import { sonucKaydet, type Yanlis } from '@/lib/deneme-servis';
+import { AciklamaMetni } from '@/components/sinav/aciklama-metni';
 import { SoruMetni } from '@/components/sinav/soru-metni';
 import { bugunISO } from '@/lib/srs';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
@@ -514,9 +515,7 @@ export default function SinavScreen() {
                   {secilen === soru!.dogru ? 'Doğru' : 'Yanlış'}
                 </AppText>
                 {soru!.aciklama ? (
-                  <AppText variant="kucuk" color="anaMetin" style={styles.aciklamaMetin}>
-                    {soru!.aciklama}
-                  </AppText>
+                  <AciklamaMetni variant="kucuk" color="anaMetin" style={styles.aciklamaMetin} metin={soru!.aciklama} />
                 ) : null}
                 {soru!.kaynak ? (
                   <AppText variant="etiket" bold color="altinMetin">
@@ -682,9 +681,7 @@ function HataKart({
         </AppText>
       </View>
       {soru.aciklama ? (
-        <AppText variant="etiket" color="solukMetin" style={styles.hataAciklama}>
-          {soru.aciklama}
-        </AppText>
+        <AciklamaMetni variant="etiket" color="solukMetin" style={styles.hataAciklama} metin={soru.aciklama} />
       ) : null}
       {/* Hedef yoksa düğme ÇİZİLMEZ (dokunup hiçbir şey olmasın diye). Madde kartı
           bulunamadıysa kanunun kendisine götürür ve etiketi ona göre değişir. */}

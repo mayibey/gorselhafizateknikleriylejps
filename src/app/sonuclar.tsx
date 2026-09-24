@@ -32,6 +32,7 @@ import {
   type SiraSatiri,
 } from '@/lib/deneme-servis';
 import { useKisiselOzellik } from '@/lib/ozellik';
+import { AciklamaMetni } from '@/components/sinav/aciklama-metni';
 import { SoruMetni } from '@/components/sinav/soru-metni';
 
 const TAKIM_AD: Record<DenemeTakim, string> = {
@@ -189,9 +190,7 @@ function SonucKarti({
                   Doğrusu: {String.fromCharCode(65 + y.dogru)}) {y.siklar[y.dogru]}
                 </AppText>
                 {y.aciklama ? (
-                  <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
-                    {y.aciklama}
-                  </AppText>
+                  <AciklamaMetni variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'} gece={gece} metin={y.aciklama} />
                 ) : null}
               </View>
             ))}
