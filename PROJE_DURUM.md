@@ -2784,3 +2784,9 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   baştaki künye altın · süre/oran/yaş/para lacivert kalın · yetkili makam lacivert kalın · istisna/yasak ("yapılamaz", "hariç") kırmızı.
   Sınav ekranı, hata özeti ve Sonuçlar'da. Veriye dokunulmadı. **SIRADA:** başkan onaylarsa bayrağı kaldır → herkese OTA.
 - 24 Eyl 18:4x — Açıklama vurgusu HERKESE açıldı (başkan "yay"; commit 62146a3, OTA grup 6ff112b2, runtime 1.0.46).
+- 24 Eyl 21:4x — **Premium denemeler uygulamada (önizleme)** — commit fcbc6e2, OTA runtime 1.0.46, `on-izleme` bayrağı.
+  Denemeler ekranında sekmelerin altında altın çerçeveli "GERÇEK SINAV PROVASI · PREMIUM" satırı; dokununca kişinin
+  branş+rütbesine uyan denemeler açılır, yoksa "hazırlanıyor" + hazır olan örnek. Premium olmayan → kilit → paywall
+  (sinav.tsx'te de kapı). İlk deneme P-SB-JAN-01 (no 1, 80 soru, soru başı 1 puan, sanal law_id -6001, sunucuda takim='premium').
+  Veri: `node scripts/premium-deneme/uygulamaya.mjs` → `src/assets/premium-denemeler.ts` (yeni deneme = NO haritasına ekle).
+  Not: sorular uygulamaya gömülü (diğer denemeler gibi); sunucudan dağıtım ileride. **SIRADA:** başkan telefonda bakacak.
