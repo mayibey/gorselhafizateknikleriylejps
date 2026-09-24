@@ -2790,3 +2790,8 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   (sinav.tsx'te de kapı). İlk deneme P-SB-JAN-01 (no 1, 80 soru, soru başı 1 puan, sanal law_id -6001, sunucuda takim='premium').
   Veri: `node scripts/premium-deneme/uygulamaya.mjs` → `src/assets/premium-denemeler.ts` (yeni deneme = NO haritasına ekle).
   Not: sorular uygulamaya gömülü (diğer denemeler gibi); sunucudan dağıtım ileride. **SIRADA:** başkan telefonda bakacak.
+- 25 Eyl 00:0x — **Jandarma Uzman Erbaş Premium Deneme 1** (P-UE-JAN-01, no 2) eklendi — commit db93096, OTA runtime 1.0.46 (on-izleme).
+  Müşterek 40 (4678 + Sözleşmeli Sb/Asb Yön. hariç; dağılım 19 Eyl uzman erbaş sınavının 21-60'ına göre) + jandarma branş 40.
+  80/80 kanıt resmî metinde; A-E 16'şar; öncüllü 12 · olumsuz 24 · vaka 8. 4 ajan paralel yazdı, 14 riskli soru elle metinden teyit edildi.
+  birlestir.py: açıklama artık doğru cevabın kelimelerini en çok içeren kanıttan (pilotta 1 açıklama düzeldi, soru/cevap aynı).
+  Gerekçe: 24 Eyl'de 6 satışın 5'i uzman erbaş. Başkana iki PDF gönderildi; onay bekleniyor.
