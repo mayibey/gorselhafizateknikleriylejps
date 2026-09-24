@@ -32,7 +32,7 @@ import {
   type SiraSatiri,
 } from '@/lib/deneme-servis';
 import { useKisiselOzellik } from '@/lib/ozellik';
-import { soruBicimle } from '@/lib/soru-bicim';
+import { SoruMetni } from '@/components/sinav/soru-metni';
 
 const TAKIM_AD: Record<DenemeTakim, string> = {
   musterek: 'Müşterek Konular',
@@ -180,9 +180,7 @@ function SonucKarti({
                     {y.kaynak}
                   </AppText>
                 ) : null}
-                <AppText variant="kucuk" color={gece ? 'beyaz' : 'anaMetin'}>
-                  {soruBicimle(y.soru)}
-                </AppText>
+                <SoruMetni variant="kucuk" color={gece ? 'beyaz' : 'anaMetin'} gece={gece} metin={y.soru} />
                 <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
                   Senin cevabın:{' '}
                   {y.secilen >= 0 ? `${String.fromCharCode(65 + y.secilen)}) ${y.siklar[y.secilen]}` : 'boş bıraktın'}

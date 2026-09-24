@@ -36,7 +36,7 @@ import {
 } from '@/lib/sinav-ilerleme';
 import { HataBildirDugmesi } from '@/components/sinav/hata-bildir';
 import { sonucKaydet, type Yanlis } from '@/lib/deneme-servis';
-import { soruBicimle } from '@/lib/soru-bicim';
+import { SoruMetni } from '@/components/sinav/soru-metni';
 import { bugunISO } from '@/lib/srs';
 import { IpucuOverlay } from '@/components/tanitim/ipucu-overlay';
 import { ipucuGoruldu, ipucuIsaretle } from '@/lib/ipuclari';
@@ -481,9 +481,7 @@ export default function SinavScreen() {
                 bitince yanlış özetinde (HataKart) duruyor; asıl işe yaradığı yer orası. */}
 
             <View style={styles.soruKart}>
-              <AppText variant="altBaslik" bold>
-                {soruBicimle(soru!.soru)}
-              </AppText>
+              <SoruMetni variant="altBaslik" bold metin={soru!.soru} />
             </View>
 
             <View style={styles.secenekler}>
@@ -670,9 +668,7 @@ function HataKart({
         SORU {no}
         {soru.kaynak ? ` · ${soru.kaynak}` : ''}
       </AppText>
-      <AppText variant="kucuk" bold color="anaMetin">
-        {soruBicimle(soru.soru)}
-      </AppText>
+      <SoruMetni variant="kucuk" bold color="anaMetin" metin={soru.soru} />
       <View style={styles.hataSatir}>
         <MaterialCommunityIcons name="close-circle" size={16} color={Palette.kirmizi} />
         <AppText variant="etiket" color="kirmizi" style={styles.hataMetin}>

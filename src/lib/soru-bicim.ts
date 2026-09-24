@@ -30,3 +30,45 @@ export function soruBicimle(metin: string): string {
   if (sayi < 2) return s;
   return s.replace(ONCUL, '\n$1 ').replace(/\n{2,}/g, '\n');
 }
+
+/**
+ * SORU CÜMLESİNİ AYIR — "asıl sorulan" kısmı paragraftan ayırır (Ünal önerisi, 24 Eyl 2026:
+ * "soruyu 3 kez okuyorum anlamak için; sorulan kısım farklı renkte olsa").
+ *
+ * Son "?" işaretiyle biten cümle soru cümlesidir; ondan önceki kısım gövdedir (olay, bilgi,
+ * öncüller). Gövde yoksa (tek cümlelik soru) ayırma yapılmaz, yalnız olumsuz vurgu uygulanır.
+ * VERİYE DOKUNULMAZ — yalnız gösterim.
+ */
+export type SoruParca = { metin: string; olumsuz?: boolean };
+export type SoruBolum = { govde: string; soru: SoruParca[] };
+
+// Sınavın "ters" sorduğunu gösteren kelimeler — gerçek kitapçıklarda altı çizili basılır.
+const OLUMSUZ =
+  /(yanlıştır|yanlış olan|yanlış verilmiştir|değildir|değil midir|yer almaz|yer almamaktadır|sayılmaz|bulunmaz|gerekmez|uygulanmaz|söylenemez|ulaşılamaz)/gi;
+
+function olumsuzBol(s: string): SoruParca[] {
+  const out: SoruParca[] = [];
+  let son = 0;
+  for (const m of s.matchAll(OLUMSUZ)) {
+    const i = m.index ?? 0;
+    if (i > son) out.push({ metin: s.slice(son, i) });
+    out.push({ metin: m[0], olumsuz: true });
+    son = i + m[0].length;
+  }
+  if (son < s.length) out.push({ metin: s.slice(son) });
+  return out;
+}
+
+export function soruAyir(metin: string): SoruBolum {
+  const s = soruBicimle(metin).trim();
+  const soruSonu = s.lastIndexOf('?');
+  if (soruSonu < 0) return { govde: s, soru: [] };
+  // Soru cümlesinin başı: soru işaretinden önceki son cümle sonu (". " / satır sonu / ":" ).
+  const once = s.slice(0, soruSonu);
+  const sinir = Math.max(once.lastIndexOf('. '), once.lastIndexOf('\n'), once.lastIndexOf(': '));
+  const bas = sinir >= 0 ? sinir + (s[sinir] === '\n' ? 1 : 2) : 0;
+  const govde = s.slice(0, bas).trim();
+  const soru = s.slice(bas).trim();
+  if (!govde) return { govde: '', soru: olumsuzBol(soru) };
+  return { govde, soru: olumsuzBol(soru) };
+}
