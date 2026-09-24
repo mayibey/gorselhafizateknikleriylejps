@@ -39,7 +39,23 @@ export function soruBicimle(metin: string): string {
  * öncüller). Gövde yoksa (tek cümlelik soru) ayırma yapılmaz, yalnız olumsuz vurgu uygulanır.
  * VERİYE DOKUNULMAZ — yalnız gösterim.
  */
-export type SoruParca = { metin: string; olumsuz?: boolean };
+export type SoruParca = { metin: string; olumsuz?: boolean; bos?: boolean };
+
+// Boşluk doldurma: "______" / "……" / "....(1)...." gibi boşluklar.
+const BOSLUK = /(_{3,}|…{2,}|\.{4,}(?:\(\d\)\.{2,})?|\(\d\)\s*\.{3,})/g;
+
+function bosBol(s: string): SoruParca[] {
+  const out: SoruParca[] = [];
+  let son = 0;
+  for (const m of s.matchAll(BOSLUK)) {
+    const i = m.index ?? 0;
+    if (i > son) out.push(...olumsuzBol(s.slice(son, i)));
+    out.push({ metin: m[0], bos: true });
+    son = i + m[0].length;
+  }
+  if (son < s.length) out.push(...olumsuzBol(s.slice(son)));
+  return out;
+}
 /**
  * govdeKaynak/soruKaynak: "… Kanunu'na göre," gibi dayanak ifadesi (sabit renk — başkan, 24 Eyl).
  * soru: asıl sorulan kısım ("can alıcı yer", ayrı renk); sonra: soru başta gelen kalıpta öncüller.
@@ -84,7 +100,13 @@ export function soruAyir(metin: string): SoruBolum {
   const s = soruBicimle(metin).trim();
   const soruSonu = s.lastIndexOf('?');
   const bos = { govdeKaynak: '', govde: s, soruKaynak: '', soru: [], sonra: '' };
-  if (soruSonu < 0) return bos;
+  if (soruSonu < 0) {
+    // Soru işareti yok: boşluk doldurma cümlesi ("… ______ kullanırlar.") — dayanağı ayır, boşluğu vurgula.
+    if (!s.match(BOSLUK)) return bos;
+    const [soruKaynak, geri] = kaynakAyir(s);
+    const temiz = geri.replace(/^[-–]\s*(\(\d+\)\s*)?/, ''); // madde metninden kalan "- (1)" artığı
+    return { govdeKaynak: '', govde: '', soruKaynak, soru: bosBol(temiz), sonra: '' };
+  }
   // Soru cümlesinin başı: soru işaretinden önceki son cümle sonu (". " / satır sonu / ": ").
   const once = s.slice(0, soruSonu);
   // Öncüllü/boşluklu kalıplarda soru cümlesi "Yukarıdaki…/Buna göre…" ile başlar; öncül sonunda nokta

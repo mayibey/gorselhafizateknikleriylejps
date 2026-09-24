@@ -36,7 +36,13 @@ export function SoruMetni({ metin, gece, ...rest }: AppTextProps & { metin: stri
       {soru.map((p, i) => (
         <Text
           key={i}
-          style={p.olumsuz ? { color: renk.olumsuz, textDecorationLine: 'underline' } : { color: renk.soru }}>
+          style={
+            p.olumsuz
+              ? { color: renk.olumsuz, textDecorationLine: 'underline' }
+              : p.bos
+                ? { color: renk.kaynak }
+                : { color: renk.soru }
+          }>
           {p.metin}
         </Text>
       ))}

@@ -6,6 +6,8 @@
 //
 // 17 Tem 2026 — başkan dönütü ("mülgadan soru sormuş, ne salakça"). İlk 7 soru:
 export const SORU_KARA_LISTE = new Set([
+  // 24 Eyl 2026 — başkan ("sınav formatında böyle soru yok"): başka kanunun MADDE NUMARASINI soruyor.
+  '2803-S-015',  // jandarma adli görev suçlarında CMK'nın kaçıncı maddesinin 5. fıkrası uygulanır
   '657-S-006',   // 657 DMK m.4'te hangi bent MÜLGA edilmiştir (kalkmış bendi ezberletme)
   '2155-S-013',  // 2155 ile kaldırılan 4367 sayılı Kanun hangi KONUYU düzenlemekteydi (ölü içerik)
   '2330-S-055',  // 2330 ile kaldırılan 1929 tarihli kanun hangisidir (ölü kanun kimliği trivia)
