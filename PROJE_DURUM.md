@@ -2776,3 +2776,6 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
 - Telegram botu (commit 5140bbf, VPS'e alındı): başkan/anonim admin mesajına YALNIZ @etiketle cevap; diğerlerinde susar,
   bağlama "Başkan" adıyla yazar ("Group komutanım" hatası bitti); flood süzgecinden muaf.
 - Node PC'de komut yolunda yok (D:\node.exe silinmiş): Cursor'ın node.exe'si + %APPDATA%\npm\node_modules\eas-cli\bin\run ile OTA atıldı.
+- 24 Eyl 18:0x — Soru renklendirme HERKESE açıldı (commit 6b33a20, OTA grup 2323f4bc, runtime 1.0.46). Renkler: dayanak altın ·
+  sorulan kısım lacivert2 · olumsuz kırmızı altı çizili · gövde solukMetin · boşluk altın. 6.567 sorunun 6.560'ı renkleniyor.
+  Madde-no soran 2803-S-015 kara listede; Tatbikat müşterek Deneme 1'de yerine 2803-S-004 (tek soru değişimi, deneme yeniden üretilmedi).
