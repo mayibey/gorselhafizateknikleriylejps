@@ -20,7 +20,7 @@ import Constants from 'expo-constants';
 
 import { supabase } from '@/lib/supabase';
 
-export type DenemeTakim = 'musterek' | 'brans' | 'karma';
+export type DenemeTakim = 'musterek' | 'brans' | 'karma' | 'premium';
 
 /** Bir soruda yapılan yanlış — sonuç ekranında "nerede hata yaptım" listesi bunu kullanır. */
 export type Yanlis = {

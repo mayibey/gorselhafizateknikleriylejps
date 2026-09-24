@@ -39,6 +39,7 @@ const TAKIM_AD: Record<DenemeTakim, string> = {
   musterek: 'Müşterek Konular',
   brans: 'Branş',
   karma: 'Genel',
+  premium: 'Premium',
 };
 
 const tarihYaz = (iso: string) => {

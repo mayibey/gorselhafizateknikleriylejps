@@ -25,6 +25,7 @@ import {
   puanlaSinav,
   type SinavCevap,
   genelDenemeSayisi,
+  premiumDenemeBasligi,
   puanKatsayisi,
   testSayisi,
   testSoruSayisi,
@@ -68,7 +69,12 @@ export default function SinavScreen() {
   // GENEL DENEME (Tatbikat): genel=1/2/3 (müşterek) · gblok=brans 1..5 (branş) · gblok=karma 1..5 (karma, 100 soru).
   // Sanal law_id: müşterek -genelNo (-1..-3), branş -(100+genelNo) (-101..-105) → sonuç/skor
   // AYRIŞIR (getSinavSonuclari law_id<0 ile genel deneme sayar; iki blok çakışmaz).
-  const genelBlok = gblok === 'brans' || gblok === 'karma' ? (gblok as 'brans' | 'karma') : undefined;
+  const genelBlok =
+    gblok === 'brans' || gblok === 'karma' || gblok === 'premium'
+      ? (gblok as 'brans' | 'karma' | 'premium')
+      : undefined;
+  // Premium deneme (24 Eyl 2026): 80 soru, branş+rütbeye özel; sanal law_id -(6000+no).
+  const genelPremium = genelBlok === 'premium';
   const genelBrans = genelBlok === 'brans';
   // Karma denemenin sanal law_id'si -(200+no) (-201..-205) → müşterek/branş sonuçlarına karışmaz.
   const genelKarma = genelBlok === 'karma';
@@ -82,11 +88,19 @@ export default function SinavScreen() {
       : null;
   const testNum = test != null && test !== '' ? Number(test) : 0; // kanunun kaçıncı testi (0 tabanlı)
   // Hata bildiriminde ve sonuç kaydında "nerede" bilgisi: karma-3 / musterek-1 / talim-12-0
-  const takim: 'musterek' | 'brans' | 'karma' = genelKarma ? 'karma' : genelBrans ? 'brans' : 'musterek';
+  const takim: 'musterek' | 'brans' | 'karma' | 'premium' = genelPremium
+    ? 'premium'
+    : genelKarma
+      ? 'karma'
+      : genelBrans
+        ? 'brans'
+        : 'musterek';
   const nereden = genelModu ? `${takim}-${genelNo}` : `talim-${lawId ?? '?'}-${testNum}`;
   // Sınav süresi (sonuç kaydında tutulur).
   const baslangicRef = useRef<number>(Date.now());
-  const denemeBasligi = genelModu
+  const denemeBasligi = genelPremium
+    ? premiumDenemeBasligi(genelNo ?? 0)
+    : genelModu
     ? `${takim === 'karma' ? 'Genel Deneme' : takim === 'brans' ? 'Branş Deneme' : 'Müşterek Konular Deneme'} ${genelNo}`
     : '';
   // PREMIUM KAPISI: genel deneme → premium şart; kanun sınavı → o kanun erişilebilir olmalı. Erişim
@@ -94,7 +108,9 @@ export default function SinavScreen() {
   const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
   const kilitli =
     !uyelikYukleniyor &&
-    (genelModu
+    (genelPremium
+      ? !premium // Premium denemeler YALNIZ premium üyeye (başkan, 24 Eyl 2026)
+      : genelModu
       ? !genelDenemeErisilebilir() // Tatbikat sınavları HERKESE ücretsiz (başkan kararı)
       : lawId != null && lawId !== '' && !lawErisilebilirSaf(Number(lawId), premium));
   useEffect(() => {
@@ -183,6 +199,8 @@ export default function SinavScreen() {
    * (testNum/genelNo) değiştiği için sınav baştan kurulur — ayrı sıfırlama gerekmez.
    */
   const sonraki = (() => {
+    // Premium listede başka branşların denemeleri de var → "sıradaki" başka branşa atlamasın.
+    if (genelPremium) return null;
     if (genelModu) {
       const toplam = genelDenemeSayisi(genelBlok);
       if (genelNo == null || genelNo + 1 > toplam) return null;

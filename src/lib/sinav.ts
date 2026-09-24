@@ -9,6 +9,7 @@
 
 import { type KartSoru } from '../assets/kart-sorulari';
 import { type GenelDeneme } from '../assets/genel-denemeler';
+import { type PremiumDeneme } from '../assets/premium-denemeler';
 import { KART_SORU_SAYILARI } from '../assets/kart-soru-sayilari';
 import { EMIR_MADDE_KAPSAM, EMIR_SORU_SAYILARI } from '../assets/emir-madde-kapsam';
 import { birlesikUyeler } from '@/lib/birlesik';
@@ -28,8 +29,9 @@ function bank(): Record<number, KartSoru[]> {
 let _genelM: GenelDeneme[] | null = null;
 let _genelB: GenelDeneme[] | null = null;
 let _genelK: GenelDeneme[] | null = null;
-/** Genel deneme takımı: müşterek (varsayılan) · branş · karma. */
-export type GenelBlok = 'brans' | 'karma';
+/** Genel deneme takımı: müşterek (varsayılan) · branş · karma · premium (80 soru, branş+rütbeye özel). */
+export type GenelBlok = 'brans' | 'karma' | 'premium';
+let _genelP: GenelDeneme[] | null = null;
 /** Genel deneme kaynağı (lazy; blok'a göre): müşterek (3) · branş (5) · karma (5×100). */
 
 /** Branş denemesi önbelleği (slug -> çözülmüş denemeler). */
@@ -66,6 +68,9 @@ function bransDigerCoz(brans: string): GenelDeneme[] {
 }
 
 function genelKaynak(blok?: GenelBlok, brans?: string | null): GenelDeneme[] {
+  // PREMIUM (24 Eyl 2026): tüm branşların denemeleri tek listede; numara (no) küresel ve
+  // kalıcı. Kişiye göre süzme Denemeler ekranında (premiumDenemeler).
+  if (blok === 'premium') return (_genelP ??= premiumKaynak());
   if (blok === 'karma')
     return (_genelK ??= (
       require('../assets/genel-denemeler-karma') as { GENEL_DENEMELER_KARMA: GenelDeneme[] }
@@ -83,6 +88,23 @@ function genelKaynak(blok?: GenelBlok, brans?: string | null): GenelDeneme[] {
   return (_genelM ??= (
     require('../assets/genel-denemeler') as { GENEL_DENEMELER: GenelDeneme[] }
   ).GENEL_DENEMELER);
+}
+
+function premiumKaynak(): PremiumDeneme[] {
+  return (require('../assets/premium-denemeler') as { PREMIUM_DENEMELER: PremiumDeneme[] })
+    .PREMIUM_DENEMELER;
+}
+
+/** Premium deneme meta bilgisi (kişiye süzme için branş + rütbe dahil). */
+export function premiumDenemeler(): { no: number; baslik: string; soruSayisi: number; brans: string; rutbe: string }[] {
+  return premiumKaynak().map((d) => ({
+    no: d.no, baslik: d.baslik, soruSayisi: d.sorular.length, brans: d.brans, rutbe: d.rutbe,
+  }));
+}
+
+/** Premium denemenin görünen başlığı ("Jandarma Subay — Premium Deneme 1"). */
+export function premiumDenemeBasligi(no: number): string {
+  return premiumKaynak().find((d) => d.no === no)?.baslik ?? `Premium Deneme ${no}`;
 }
 
 /** Bir sınav cevabı: hangi soru, hangi şık seçildi. */
@@ -377,9 +399,10 @@ export const PUAN_KATSAYI = 2;
 /**
  * Bir genel denemede soru başına puan. Karma denemeler 100 soruluk (gerçek sınav uzunluğu),
  * orada soru başına 1 puan → toplam 100 (başkan, 23 Ağu). 50 soruluk denemelerde 2 puan.
+ * Premium 80 soru: soru başına 1 puan (sunucuda puan tam sayı; 1,25 kesirli olurdu).
  */
 export function puanKatsayisi(blok?: GenelBlok): number {
-  return blok === 'karma' ? 1 : PUAN_KATSAYI;
+  return blok === 'karma' || blok === 'premium' ? 1 : PUAN_KATSAYI;
 }
 
 export function puanlaSinav(
@@ -414,6 +437,8 @@ const BRANS_ID: Record<string, number> = {
  */
 export function genelSanalLawId(blok: GenelBlok | undefined, no: number, brans?: string | null): number {
   if (blok === 'karma') return -(200 + no);
+  // Premium: -(6000+no) — branş kimlikleri en fazla -(3000+16*100+no)'ya kadar gider, çakışmaz.
+  if (blok === 'premium') return -(6000 + no);
   if (blok !== 'brans') return -no;
   if (!brans || brans === 'jandarma') return -(100 + no);
   const bid = BRANS_ID[brans] ?? 99;
