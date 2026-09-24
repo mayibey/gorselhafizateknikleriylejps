@@ -40,11 +40,32 @@ export function soruBicimle(metin: string): string {
  * VERİYE DOKUNULMAZ — yalnız gösterim.
  */
 export type SoruParca = { metin: string; olumsuz?: boolean };
-export type SoruBolum = { govde: string; soru: SoruParca[]; sonra: string };
+/**
+ * govdeKaynak/soruKaynak: "… Kanunu'na göre," gibi dayanak ifadesi (sabit renk — başkan, 24 Eyl).
+ * soru: asıl sorulan kısım ("can alıcı yer", ayrı renk); sonra: soru başta gelen kalıpta öncüller.
+ */
+export type SoruBolum = {
+  govdeKaynak: string;
+  govde: string;
+  soruKaynak: string;
+  soru: SoruParca[];
+  sonra: string;
+};
 
 // Sınavın "ters" sorduğunu gösteren kelimeler — gerçek kitapçıklarda altı çizili basılır.
+// Büyük harf yazımlar ("TABİ DEĞİLDİR") ayrıca listede: JS'in /i bayrağı Türkçe İ/ı eşleştirmez.
 const OLUMSUZ =
-  /(yanlıştır|yanlış olan|yanlış verilmiştir|değildir|değil midir|yer almaz|yer almamaktadır|sayılmaz|bulunmaz|gerekmez|uygulanmaz|söylenemez|ulaşılamaz)/gi;
+  /(yanlıştır|yanlış olan|yanlış verilmiştir|değildir|değil midir|yer almaz|yer almamaktadır|sayılmaz|bulunmaz|gerekmez|uygulanmaz|söylenemez|ulaşılamaz|YANLIŞTIR|YANLIŞ OLAN|DEĞİLDİR|DEĞİL MİDİR|YER ALMAZ|SAYILMAZ|BULUNMAZ|GEREKMEZ|UYGULANMAZ|SÖYLENEMEZ)/g;
+
+// Dayanak ifadesi: cümle başında mevzuat adı + "göre/uyarınca" (en fazla 220 karakter, "?" içermez).
+const KAYNAK =
+  /^([^?]{0,220}?(?:Kanun|Yönetmeli|Tüzü|Genelge|Rehber|Esaslar|Kararname|Anayasa|Yönerge|KHK|Kuralları|Sözleşme)[^?,]{0,25}?\s(?:göre|uyarınca|ile ilgili|kapsamında))(,?\s+)/;
+
+function kaynakAyir(s: string): [string, string] {
+  const m = s.match(KAYNAK);
+  if (!m) return ['', s];
+  return [m[1] + (m[2].startsWith(',') ? ',' : ''), s.slice(m[0].length)];
+}
 
 function olumsuzBol(s: string): SoruParca[] {
   const out: SoruParca[] = [];
@@ -62,7 +83,8 @@ function olumsuzBol(s: string): SoruParca[] {
 export function soruAyir(metin: string): SoruBolum {
   const s = soruBicimle(metin).trim();
   const soruSonu = s.lastIndexOf('?');
-  if (soruSonu < 0) return { govde: s, soru: [], sonra: '' };
+  const bos = { govdeKaynak: '', govde: s, soruKaynak: '', soru: [], sonra: '' };
+  if (soruSonu < 0) return bos;
   // Soru cümlesinin başı: soru işaretinden önceki son cümle sonu (". " / satır sonu / ": ").
   const once = s.slice(0, soruSonu);
   // Öncüllü/boşluklu kalıplarda soru cümlesi "Yukarıdaki…/Buna göre…" ile başlar; öncül sonunda nokta
@@ -83,6 +105,8 @@ export function soruAyir(metin: string): SoruBolum {
   const sonra = s.slice(soruSonu + 1).trim();
   const soruMetni = s.slice(bas, soruSonu + 1).trim();
   // Ayrıştırma anlamsızsa (ör. "?" tırnak içinde, soru cümlesi boş kaldı) metne dokunma.
-  if (soruMetni.replace(/[?\s'"”’.]/g, '').length < 3) return { govde: s, soru: [], sonra: '' };
-  return { govde, soru: olumsuzBol(soruMetni), sonra };
+  if (soruMetni.replace(/[?\s'"”’.]/g, '').length < 3) return bos;
+  const [soruKaynak, soruGeri] = kaynakAyir(soruMetni);
+  const [govdeKaynak, govdeGeri] = govde ? kaynakAyir(govde) : ['', ''];
+  return { govdeKaynak, govde: govdeGeri, soruKaynak, soru: olumsuzBol(soruGeri), sonra };
 }

@@ -6,37 +6,40 @@ import { useKisiselOzellik } from '@/lib/ozellik';
 import { soruAyir, soruBicimle } from '@/lib/soru-bicim';
 
 /**
- * Soru kökünü gösterir. Uzun (paragraf) sorularda asıl sorulan cümle alt satıra iner ve
- * altın renkte, kalın-italik yazılır; "yanlıştır / değildir / yer almaz" gibi olumsuz
- * kelimeler kırmızı ve altı çizili olur (gerçek kitapçıktaki gibi).
- * Şimdilik yalnız 'on-izleme' bayraklı kişilerde (başkan onayından sonra herkese).
+ * Soru kökünü renk hiyerarşisiyle gösterir (Ünal önerisi + başkan, 24 Eyl 2026):
+ *  - Dayanak ("… Yönetmeliği'ne göre,")  → sabit ALTIN (her soruda aynı yer, aynı renk)
+ *  - Asıl sorulan kısım (can alıcı yer)   → LACİVERT-MAVİ (lacivert2), kalın
+ *  - "değildir / yanlıştır / yer almaz"   → KIRMIZI, altı çizili (gerçek kitapçıktaki gibi)
+ *  - Olay/bilgi gövdesi                   → sakin kahve (solukMetin); öncüller normal renk
+ * Veriye dokunulmaz. Şimdilik yalnız 'on-izleme' bayraklı kişilerde (başkan onayından sonra herkese).
  */
 export function SoruMetni({ metin, gece, ...rest }: AppTextProps & { metin: string; gece?: boolean }) {
   const onIzleme = useKisiselOzellik('on-izleme');
   if (!onIzleme) return <AppText {...rest}>{soruBicimle(metin)}</AppText>;
 
-  const { govde, soru, sonra } = soruAyir(metin);
+  const { govdeKaynak, govde, soruKaynak, soru, sonra } = soruAyir(metin);
   if (!soru.length) return <AppText {...rest}>{soruBicimle(metin)}</AppText>;
-  const vurgu = gece ? Palette.altinParlak : Palette.altinMetin;
-  const olumsuz = gece ? Palette.kirmiziParlak : Palette.kirmizi;
-  const soruKismi = soru.map((p, i) => (
-    <Text
-      key={i}
-      style={
-        p.olumsuz
-          ? { color: olumsuz, textDecorationLine: 'underline' }
-          : govde || sonra
-            ? { color: vurgu, fontStyle: 'italic' }
-            : undefined
-      }>
-      {p.metin}
-    </Text>
-  ));
+
+  const renk = {
+    kaynak: gece ? Palette.altinParlak : Palette.altinMetin,
+    soru: gece ? Palette.beyaz : Palette.lacivert2,
+    olumsuz: gece ? Palette.kirmiziParlak : Palette.kirmizi,
+    govde: gece ? Palette.kartMetinIkincil : Palette.solukMetin,
+  };
 
   return (
     <AppText {...rest}>
-      {govde ? `${govde}\n\n` : null}
-      {soruKismi}
+      {govdeKaynak ? <Text style={{ color: renk.kaynak }}>{govdeKaynak} </Text> : null}
+      {govde ? <Text style={{ color: renk.govde }}>{govde}</Text> : null}
+      {govdeKaynak || govde ? '\n\n' : null}
+      {soruKaynak ? <Text style={{ color: renk.kaynak }}>{soruKaynak} </Text> : null}
+      {soru.map((p, i) => (
+        <Text
+          key={i}
+          style={p.olumsuz ? { color: renk.olumsuz, textDecorationLine: 'underline' } : { color: renk.soru }}>
+          {p.metin}
+        </Text>
+      ))}
       {sonra ? `\n${sonra}` : null}
     </AppText>
   );
