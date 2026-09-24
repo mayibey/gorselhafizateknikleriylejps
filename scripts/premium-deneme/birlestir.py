@@ -17,8 +17,18 @@ for b in bloklar:
     for q in json.load(open(qf,encoding='utf-8')):
         p=json.load(open(base+f"pack_{q['law']}.json",encoding='utf-8'))
         bul=None
+        # Açıklama için, doğru cevabın kelimelerini en çok içeren kanıt seçilir (yalnız ilk kanıt
+        # alınınca açıklama bazen cevabın komşu cümlesini gösteriyordu).
+        dogru_k=set(w for w in re.findall(r'\w+',q['s'][0].lower()) if len(w)>2)
+        def puan(kn):
+            m0=next((m for m in p['maddeler'] if norm(kn) in norm(m['metin'])),None)
+            if not m0: return -1
+            t=m0['metin']; j=norm_map(t)[0].find(norm(kn)); a=norm_map(t)[1][j]
+            cumle=t[max(0,t.rfind('.',0,a)+1):(t.find('.',a)+1 or len(t))].lower()
+            return sum(1 for w in dogru_k if w in cumle)
+        kanit=max(q['kanit'],key=puan)
         for m in p['maddeler']:
-            n,idx=norm_map(m['metin']); k=norm(q['kanit'][0]); j=n.find(k)
+            n,idx=norm_map(m['metin']); k=norm(kanit); j=n.find(k)
             if j>=0:
                 a,z=idx[j],idx[j+len(k)-1]+1; t=m['metin']
                 s=max(0,t.rfind('.',0,a)+1 if t.rfind('.',0,a)>a-220 else a-160); e=t.find('.',z); e=len(t) if e<0 or e-z>220 else e+1

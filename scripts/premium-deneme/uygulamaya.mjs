@@ -5,7 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const NO = { 'P-SB-JAN-01': 1 };
+const NO = { 'P-SB-JAN-01': 1, 'P-UE-JAN-01': 2 };
 
 const kok = 'scripts/premium-deneme/cikti';
 const denemeler = [];
