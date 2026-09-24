@@ -2,7 +2,6 @@ import { Text } from 'react-native';
 
 import { AppText, type AppTextProps } from '@/components/ui/app-text';
 import { Palette } from '@/constants/theme';
-import { useKisiselOzellik } from '@/lib/ozellik';
 import { soruAyir, soruBicimle } from '@/lib/soru-bicim';
 
 /**
@@ -11,12 +10,9 @@ import { soruAyir, soruBicimle } from '@/lib/soru-bicim';
  *  - Asıl sorulan kısım (can alıcı yer)   → LACİVERT-MAVİ (lacivert2), kalın
  *  - "değildir / yanlıştır / yer almaz"   → KIRMIZI, altı çizili (gerçek kitapçıktaki gibi)
  *  - Olay/bilgi gövdesi                   → sakin kahve (solukMetin); öncüller normal renk
- * Veriye dokunulmaz. Şimdilik yalnız 'on-izleme' bayraklı kişilerde (başkan onayından sonra herkese).
+ * Veriye dokunulmaz. Başkan onayıyla 24 Eyl 2026'da herkese açıldı.
  */
 export function SoruMetni({ metin, gece, ...rest }: AppTextProps & { metin: string; gece?: boolean }) {
-  const onIzleme = useKisiselOzellik('on-izleme');
-  if (!onIzleme) return <AppText {...rest}>{soruBicimle(metin)}</AppText>;
-
   const { govdeKaynak, govde, soruKaynak, soru, sonra } = soruAyir(metin);
   if (!soru.length) return <AppText {...rest}>{soruBicimle(metin)}</AppText>;
 
