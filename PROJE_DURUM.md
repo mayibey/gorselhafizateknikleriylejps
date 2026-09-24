@@ -2766,3 +2766,13 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
 - PİLOT `P-SB-JAN-01`: 40 müşterek + 40 jandarma branş (2026 sınavındaki gibi her branş mevzuatından ~1 soru), öncüllü 6 · olumsuz 13 · vaka 4.
   80/80 kanıt doğrulandı; ilk turda 15 soru metinde bulunamadı → hepsi düzeltildi/değiştirildi (paket metinleri bazı maddelerde kesik).
 - Uygulama tarafı (Tatbikat'ta premium sekme + sunucudan dağıtım) HENÜZ YAPILMADI — pilot onayından sonra.
+
+### 24 Eylül 2026 — Soru vurgusu (Ünal önerisi) başkana önizlemede · Bot başkanı tanıyor
+
+- Uzun sorularda asıl sorulan cümle ayrı satırda altın/italik; "yanlıştır/değildir/yer almaz" kırmızı altı çizili
+  (`src/lib/soru-bicim.ts` soruAyir + `src/components/sinav/soru-metni.tsx`; sınav, hata özeti, Sonuçlar). Veriye dokunulmadı.
+  `on-izleme` bayrağı arkasında — commit 1067fd5 + 874d6a4, OTA production runtime 1.0.46 (grup 833b0a04).
+  Başkan onaylarsa: bayrak koşulunu kaldır → herkese OTA (eski runtime'lara da gerekirse eski-sürüm OTA hattı).
+- Telegram botu (commit 5140bbf, VPS'e alındı): başkan/anonim admin mesajına YALNIZ @etiketle cevap; diğerlerinde susar,
+  bağlama "Başkan" adıyla yazar ("Group komutanım" hatası bitti); flood süzgecinden muaf.
+- Node PC'de komut yolunda yok (D:\node.exe silinmiş): Cursor'ın node.exe'si + %APPDATA%\npm\node_modules\eas-cli\bin\run ile OTA atıldı.
