@@ -2779,3 +2779,7 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
 - 24 Eyl 18:0x — Soru renklendirme HERKESE açıldı (commit 6b33a20, OTA grup 2323f4bc, runtime 1.0.46). Renkler: dayanak altın ·
   sorulan kısım lacivert2 · olumsuz kırmızı altı çizili · gövde solukMetin · boşluk altın. 6.567 sorunun 6.560'ı renkleniyor.
   Madde-no soran 2803-S-015 kara listede; Tatbikat müşterek Deneme 1'de yerine 2803-S-004 (tek soru değişimi, deneme yeniden üretilmedi).
+- 24 Eyl 18:2x — **Açıklama vurgusu** (başkan: "açıklamalardaki önemli yerler de farklı renkte olsun") önizlemede
+  (commit 727105f, OTA grup 5a2189c0, runtime 1.0.46, `on-izleme` bayrağı). `src/lib/aciklama-bicim.ts` + `components/sinav/aciklama-metni.tsx`:
+  baştaki künye altın · süre/oran/yaş/para lacivert kalın · yetkili makam lacivert kalın · istisna/yasak ("yapılamaz", "hariç") kırmızı.
+  Sınav ekranı, hata özeti ve Sonuçlar'da. Veriye dokunulmadı. **SIRADA:** başkan onaylarsa bayrağı kaldır → herkese OTA.
