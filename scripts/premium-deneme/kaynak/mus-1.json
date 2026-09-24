@@ -1,0 +1,584 @@
+[
+{
+"law": 1,
+"k": "5237 sayılı Türk Ceza Kanunu'na göre kamu görevlisi ile kişinin rüşvet konusunda anlaşmaya varması hâlinde nasıl işlem yapılır?",
+"s": [
+"Suç tamamlanmış gibi cezaya hükmolunur.",
+"Teşebbüs hükümlerine göre ceza verilir.",
+"Hazırlık hareketi sayıldığından ceza verilmez.",
+"Ceza yarı oranında indirilerek verilir.",
+"Yalnızca kamu görevlisi cezalandırılır."
+],
+"kanit": [
+"suç tamamlanmış gibi cezaya hükmolunur"
+]
+},
+{
+"law": 1,
+"tip": "vaka",
+"k": "Kamu görevlisi A, görevinin gereklerine aykırı hareket ederek bir vatandaşın mağduriyetine neden olmuştur. Fiil ayrıca başka bir suç oluşturmamaktadır. 5237 sayılı Türk Ceza Kanunu'na göre A hakkında hangi ceza öngörülür?",
+"s": [
+"Altı aydan iki yıla kadar hapis",
+"Üç aydan bir yıla kadar hapis",
+"Bir yıldan dört yıla kadar hapis",
+"Dört yıldan on iki yıla kadar hapis",
+"Yalnızca adli para cezası"
+],
+"kanit": [
+"altı aydan iki yıla kadar hapis"
+]
+},
+{
+"law": 1,
+"tip": "olumsuz",
+"k": "5237 sayılı Türk Ceza Kanunu'na göre görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
+"s": [
+"Suç örgütüne yarar sağlamak maksadıyla işlenmesi",
+"Yargı görevi yapana karşı işlenmesi",
+"Kişinin kendisini tanınmayacak hâle koyarak işlemesi",
+"Birden fazla kişi tarafından birlikte işlenmesi",
+"Silahla işlenmesi"
+],
+"kanit": [
+"yargı görevi yapan",
+"tanınmayacak bir hale"
+]
+},
+{
+"law": 1,
+"tip": "onculu",
+"k": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Tüzel kişiler hakkında ceza yaptırımı uygulanamaz.\nII. Suç ve ceza içeren hükümlerin uygulanmasında kıyas yapılamaz.\nIII. Taksirle işlenen fiiller her hâlde cezalandırılır.",
+"s": [
+"I ve II",
+"Yalnız I",
+"Yalnız III",
+"II ve III",
+"I, II ve III"
+],
+"kanit": [
+"tüzel kişiler hakkında ceza yaptırımı uygulanamaz",
+"kıyas yapılamaz"
+]
+},
+{
+"law": 1,
+"k": "5237 sayılı Türk Ceza Kanunu'na göre zimmet suçunda, soruşturma başlamadan önce zararın aynen iade veya tazmin edilmesi hâlinde verilecek cezada ne kadar indirim yapılır?",
+"s": [
+"Üçte ikisi",
+"Yarısı",
+"Üçte biri",
+"Dörtte biri",
+"Dörtte üçü"
+],
+"kanit": [
+"üçte ikisi indirilir"
+]
+},
+{
+"law": 2,
+"k": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre bir il veya ilçenin tamamının jandarma sorumluluk alanı olarak belirlenmesine kim karar verir?",
+"s": [
+"İçişleri Bakanı",
+"Jandarma Genel Komutanı",
+"Vali",
+"Cumhurbaşkanı",
+"Emniyet Genel Müdürü"
+],
+"kanit": [
+"içişleri bakanınca"
+]
+},
+{
+"law": 2,
+"tip": "olumsuz",
+"k": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre önleme araması kararında aşağıdakilerden hangisinin bulunması gerekmez?",
+"s": [
+"Aramayı yapacak personelin adı ve soyadı",
+"Aramanın sebebi",
+"Aramanın konusu ve kapsamı",
+"Aramanın yapılacağı yer",
+"Aramanın zamanı ve süresi"
+],
+"kanit": [
+"aramanın sebebi, konusu ve kapsamı ile yapılacağı yer, zaman ve geçerli olacağı süre"
+]
+},
+{
+"law": 2,
+"k": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre komando ve sınır birliklerinde görevli personele ödenen asayiş tazminatı, en yüksek Devlet memuru aylığının yüzde kaçını geçemez?",
+"s": [
+"%52",
+"%40",
+"%35",
+"%60",
+"%75"
+],
+"kanit": [
+"komando ve sınır birliklerinde % 52"
+]
+},
+{
+"law": 2,
+"k": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarma personelinin kişisel suçları hakkında hangi hükümlere göre işlem yapılır?",
+"s": [
+"Genel hükümler",
+"4483 sayılı Kanun",
+"Askerî Ceza Kanunu",
+"7068 sayılı Kanun",
+"TSK İç Hizmet Kanunu"
+],
+"kanit": [
+"genel hükümlere göre"
+]
+},
+{
+"law": 3,
+"tip": "olumsuz",
+"k": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
+"s": [
+"Her hâlde ilgili kişinin açık rızasının alınması",
+"Hukuka ve dürüstlük kurallarına uygun olma",
+"Doğru ve gerektiğinde güncel olma",
+"Belirli, açık ve meşru amaçlar için işlenme",
+"İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma"
+],
+"kanit": [
+"dürüstlük kurallarına uygun",
+"sınırlı ve ölçülü"
+]
+},
+{
+"law": 4,
+"k": "7201 sayılı Tebligat Kanunu'na göre muhatap yerine tebliğ yapılacak kişinin görünüşe göre en az kaç yaşında olması gerekir?",
+"s": [
+"18",
+"15",
+"17",
+"21",
+"25"
+],
+"kanit": [
+"onsekiz yaşından"
+]
+},
+{
+"law": 5,
+"k": "5442 sayılı İl İdaresi Kanunu'na göre vali, kişilerin belirli yerlere giriş-çıkışını, dolaşmasını ve silah taşımasını en çok kaç gün süreyle kısıtlayabilir?",
+"s": [
+"15 gün",
+"7 gün",
+"30 gün",
+"3 gün",
+"45 gün"
+],
+"kanit": [
+"on beş günü geçmemek"
+]
+},
+{
+"law": 6,
+"k": "5326 sayılı Kabahatler Kanunu'na göre idari para cezasının ödeme süresi içinde ödenmesi hâlinde cezadan ne oranda indirim yapılır?",
+"s": [
+"%25",
+"%50",
+"%20",
+"%10",
+"%30"
+],
+"kanit": [
+"%25 oranında indirim yapılır"
+]
+},
+{
+"law": 6,
+"tip": "onculu",
+"k": "5326 sayılı Kabahatler Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kabahat, kanunda aksi belirtilmedikçe hem kasten hem de taksirle işlenebilir.\nII. Kabahatlerde tüzel kişilerin sorumluluğu benimsenmiştir.\nIII. Nispî idari para cezasında soruşturma zamanaşımı beş yıldır.",
+"s": [
+"I ve II",
+"Yalnız I",
+"Yalnız III",
+"II ve III",
+"I, II ve III"
+],
+"kanit": [
+"hem kasten hem de taksirle işlenebilir"
+]
+},
+{
+"law": 7,
+"k": "3713 sayılı Terörle Mücadele Kanunu'na göre terörle mücadele görevi nedeniyle hakkında soruşturma açılan kamu görevlisini savunan en fazla kaç avukatın ücreti ödenir?",
+"s": [
+"3",
+"1",
+"2",
+"4",
+"5"
+],
+"kanit": [
+"üç avukat"
+]
+},
+{
+"law": 7,
+"tip": "olumsuz",
+"k": "3713 sayılı Terörle Mücadele Kanunu'na göre aşağıdaki Türk Ceza Kanunu maddelerinden hangisinde yazılı suç terör suçu sayılmaz?",
+"s": [
+"304",
+"302",
+"309",
+"314",
+"315"
+],
+"kanit": [
+"302",
+"309",
+"314"
+]
+},
+{
+"law": 8,
+"k": "2935 sayılı Olağanüstü Hal Kanunu'na göre TBMM olağanüstü hâl süresini her defasında en fazla ne kadar uzatabilir?",
+"s": [
+"Dört ay",
+"Üç ay",
+"Altı ay",
+"İki ay",
+"Bir yıl"
+],
+"kanit": [
+"dört ayı geçmemek"
+]
+},
+{
+"law": 9,
+"k": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre Atatürk'ü temsil eden heykeli kıran veya bozan kişiye verilecek ceza aşağıdakilerden hangisidir?",
+"s": [
+"Bir yıldan beş yıla kadar ağır hapis",
+"Bir yıldan üç yıla kadar hapis",
+"Altı aydan iki yıla kadar hapis",
+"Üç yıldan beş yıla kadar hapis",
+"İki yıldan yedi yıla kadar hapis"
+],
+"kanit": [
+"bir yıldan beş yıla kadar ağır hapis"
+]
+},
+{
+"law": 10,
+"k": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre tedbir kararlarına karşı itiraz nereye yapılır?",
+"s": [
+"Aile mahkemesine",
+"Sulh ceza hâkimliğine",
+"Asliye ceza mahkemesine",
+"Mahallin mülki amirine",
+"İdare mahkemesine"
+],
+"kanit": [
+"aile mahkemesine"
+]
+},
+{
+"law": 10,
+"tip": "vaka",
+"k": "Kolluk amiri, gecikmesinde sakınca bulunan bir hâlde şiddet uygulayan kişinin konuttan uzaklaştırılmasına karar vermiştir. 6284 sayılı Kanun'a göre bu karar kaç saat içinde hâkim tarafından onaylanmazsa kendiliğinden kalkar?",
+"s": [
+"24",
+"48",
+"72",
+"12",
+"36"
+],
+"kanit": [
+"yirmidört saat"
+]
+},
+{
+"law": 11,
+"k": "2893 sayılı Türk Bayrağı Kanunu'na aykırı bayrak kullananlar hakkında idari para cezasına kim karar verir?",
+"s": [
+"Mahallin mülki amiri",
+"Sulh ceza hâkimi",
+"Cumhuriyet savcısı",
+"Belediye encümeni",
+"İl jandarma komutanı"
+],
+"kanit": [
+"mülki amir"
+]
+},
+{
+"law": 12,
+"k": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre kısa süreli durdurma cezası hangi sürelerde verilir?",
+"s": [
+"Dört, altı veya on ay",
+"Bir, üç veya beş ay",
+"İki, dört veya yedi ay",
+"Üç, beş veya sekiz ay",
+"Altı, on iki veya on sekiz ay"
+],
+"kanit": [
+"dört, altı veya on ay"
+]
+},
+{
+"law": 12,
+"k": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin cezalarına karşı itiraz süresi, kararın tebliğinden itibaren kaç gündür?",
+"s": [
+"10",
+"7",
+"15",
+"30",
+"5"
+],
+"kanit": [
+"on gün içinde itiraz"
+]
+},
+{
+"law": 12,
+"tip": "olumsuz",
+"k": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre aşağıdakilerden hangisi disiplin cezaları arasında yer almaz?",
+"s": [
+"Oda hapsi",
+"Kınama",
+"Aylıktan kesme",
+"Uzun süreli durdurma",
+"Meslekten çıkarma"
+],
+"kanit": [
+"kınama",
+"uzun süreli durdurma"
+]
+},
+{
+"law": 13,
+"k": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre sözleşme süresi için aşağıdakilerden hangisi doğrudur?",
+"s": [
+"Üç yıldan az, dokuz yıldan fazla olamaz.",
+"İki yıldan az, on yıldan fazla olamaz.",
+"Bir yıldan az, beş yıldan fazla olamaz.",
+"Dört yıldan az, sekiz yıldan fazla olamaz.",
+"Beş yıldan az, on beş yıldan fazla olamaz."
+],
+"kanit": [
+"dokuz yıldan fazla"
+]
+},
+{
+"law": 14,
+"k": "5070 sayılı Elektronik İmza Kanunu'na göre güvenli elektronik imza hangi imza ile aynı hukuki sonucu doğurur?",
+"s": [
+"Elle atılan imza",
+"Noter onaylı imza",
+"Paraf",
+"Mühür",
+"Vekâleten atılan imza"
+],
+"kanit": [
+"elle atılan imza ile aynı hukukî sonucu"
+]
+},
+{
+"law": 15,
+"k": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre cevap için süre belirtilmemiş bilgi ve görüş talepleri en geç kaç iş günü içinde cevaplandırılır?",
+"s": [
+"15",
+"5",
+"10",
+"7",
+"30"
+],
+"kanit": [
+"on beş iş günü"
+]
+},
+{
+"law": 15,
+"tip": "onculu",
+"k": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangileri doğrudur?\nI. Belgelerde Times New Roman yazı tipi 12 punto olarak kullanılır.\nII. \"ACELE\" ibaresi sağ üst köşede kırmızı renkle yazılır.\nIII. Paragraf başı girintisi 2 santimetredir.",
+"s": [
+"I ve II",
+"Yalnız I",
+"Yalnız II",
+"II ve III",
+"I, II ve III"
+],
+"kanit": [
+"12 punto",
+"kırmızı"
+]
+},
+{
+"law": 16,
+"k": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre sözleşmeli subayın muvazzaf subaylığa geçebilmesi için fiilî hizmet süresi bakımından hangi şart aranır?",
+"s": [
+"Yedinci yılına başlamış, on ikinci yılını bitirmemiş olmak",
+"Beşinci yılına başlamış, onuncu yılını bitirmemiş olmak",
+"Dördüncü yılına başlamış, on ikinci yılını bitirmemiş olmak",
+"Üçüncü yılına başlamış, dokuzuncu yılını bitirmemiş olmak",
+"Onuncu yılına başlamış, on beşinci yılını bitirmemiş olmak"
+],
+"kanit": [
+"yedinci"
+]
+},
+{
+"law": 17,
+"k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre düğün, nişan, konser, panayır ve festival gibi toplanmalar için mülki amire ne kadar önce bildirimde bulunulur?",
+"s": [
+"48 saat",
+"24 saat",
+"72 saat",
+"12 saat",
+"7 gün"
+],
+"kanit": [
+"kırksekiz saat"
+]
+},
+{
+"law": 18,
+"k": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre veri sorumlusunun belirleyeceği periyodik imha aralığı her hâlde ne kadarı geçemez?",
+"s": [
+"Altı ay",
+"Üç ay",
+"Bir yıl",
+"İki ay",
+"Dokuz ay"
+],
+"kanit": [
+"altı ayı geçemez"
+]
+},
+{
+"law": 19,
+"tip": "olumsuz",
+"k": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre aşağıdakilerden hangisi Yönetmeliğin kapsamında değildir?",
+"s": [
+"Köyler",
+"Belediyeler",
+"İl özel idareleri",
+"Üniversiteler",
+"Türkiye Cumhuriyet Merkez Bankası"
+],
+"kanit": [
+"köyler hariç"
+]
+},
+{
+"law": 20,
+"k": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre yivsiz tüfek ruhsatnamesi kaç yıl süreyle geçerlidir?",
+"s": [
+"5",
+"3",
+"10",
+"2",
+"1"
+],
+"kanit": [
+"5 yıl süreli yivsiz tüfek"
+]
+},
+{
+"law": 21,
+"k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre kolluk, hakkında tedbir kararı verilen korunan kişinin konutunu en az ne sıklıkla ziyaret eder?",
+"s": [
+"Haftada bir",
+"Ayda bir",
+"Ayda iki",
+"Günde bir",
+"On beş günde bir"
+],
+"kanit": [
+"haftada en az bir"
+]
+},
+{
+"law": 21,
+"tip": "olumsuz",
+"k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre zorlama hapsi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+"s": [
+"Adli sicile işlenir ve tekerrüre esas olur.",
+"İlk ihlalde üç günden on güne kadar verilir.",
+"Her tekrarında on beş günden otuz güne kadar verilir.",
+"Toplam süresi altı ayı geçemez.",
+"Duruşma yapılmaksızın karar verilir."
+],
+"kanit": [
+"tekerrüre esas olmaz",
+"altı ayı geçemez"
+]
+},
+{
+"law": 22,
+"k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre bir nöbetin süresi en fazla ne kadar olabilir?",
+"s": [
+"24 saat",
+"12 saat",
+"36 saat",
+"48 saat",
+"8 saat"
+],
+"kanit": [
+"yirmi dört saati geçemez"
+]
+},
+{
+"law": 23,
+"k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre subay, astsubay ve uzman jandarmaların haftalık çalışma süresi kaç saattir?",
+"s": [
+"40",
+"45",
+"48",
+"36",
+"50"
+],
+"kanit": [
+"haftalık çalışma süresi genel olarak 40 saattir"
+]
+},
+{
+"law": 23,
+"tip": "olumsuz",
+"k": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre aşağıdakilerden hangisi yanlıştır?",
+"s": [
+"Emir yalnızca resmî kıyafetli olarak verilebilir.",
+"Disiplin cezaları 7068 sayılı Kanunda düzenlenir.",
+"Devlet memurları ile rütbeli personel arasında astlık-üstlük ilişkisi yoktur.",
+"Araç içinde resmî kıyafetle yolculukta şapka çıkarılabilir.",
+"Millî marş açık yerde şapkalı olarak dinlenir."
+],
+"kanit": [
+"resmî veya sivil kıyafetli olarak verilebilir"
+]
+},
+{
+"law": 25,
+"k": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun'a göre ruhsatın veriliş sebebi ortadan kalkan ruhsat sahibi, durumu ruhsatı veren makama kaç ay içinde bildirmek zorundadır?",
+"s": [
+"Altı",
+"Üç",
+"Bir",
+"On iki",
+"İki"
+],
+"kanit": [
+"altı ay içinde bildirmekle yükümlüdür"
+]
+},
+{
+"law": 25,
+"tip": "vaka",
+"k": "B, ruhsatsız bir tabancayı evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
+"s": [
+"İki yıldan dört yıla kadar",
+"Bir yıldan üç yıla kadar",
+"Altı aydan bir yıla kadar",
+"İki yıldan beş yıla kadar",
+"Üç yıldan sekiz yıla kadar"
+],
+"kanit": [
+"iki yıldan dört yıla kadar hapis"
+]
+}
+]

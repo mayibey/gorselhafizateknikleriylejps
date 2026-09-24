@@ -2754,3 +2754,15 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   2629 Tazminat, Sayıştay, 257 Harçlık + Yön., Damga Vergisi, Tayın Bedeli K., Nakdi Tazminat, İhtiyaç Fazlası Mal, Harcırah, Bütçe K. cetvelleri,
   Fazla-Yersiz Ödeme Yön., İç Kontrol). 5018 ve 5510 kapsamı ikmal/personelden FARKLI → bölümler genişletilerek yazılacak.
 - **SIRADA:** maliye(7) · sağlık(3) · mühendis(2) · veteriner(1) · tabip · diş tabibi · eczacı · kimyager · bando.
+
+### 24 Eylül 2026 — Premium Deneme hattı kuruldu, PİLOT hazır (Jandarma Subay 1)
+
+- Başkan kararı: branşa ve rütbeye göre ATA-AÖF tarzı 80 soruluk denemeler; YALNIZ premium; Tatbikat merkezine eklenecek; uzman erbaşa ayrı deneme.
+  Önerilen dağılım (üye sayısına göre, 27 deneme ≈1.280 yeni soru): Jandarma 5 (sb 3·asb 1·uzmerb 1) · MEBS 5 · Personel 3 · Havacılık 3 ·
+  İkmal/Bakım/İstihkam/Maliye 2'şer · Sağlık/Mühendis/Veteriner 1'er + uzman erbaş ortak 2. Müşterek 40'lık bloklar branşlar arasında ortak.
+- Hat: `scripts/premium-deneme/` — `kaynak/*.json` (el yazımı sorular, her soruda resmî metinden birebir "kanit" ifadesi) →
+  `denetle.py` (kanıt paket madde metninde yoksa sorun) → `birlestir.py` (kanıtın geçtiği maddeden otomatik açıklama, A-E eşit 16'şar,
+  çeldirici karıştırma) → `cikti/<id>.json` (uygulamanın GenelDeneme soru biçimi) → `onizleme.py` (kontrol PDF'i).
+- PİLOT `P-SB-JAN-01`: 40 müşterek + 40 jandarma branş (2026 sınavındaki gibi her branş mevzuatından ~1 soru), öncüllü 6 · olumsuz 13 · vaka 4.
+  80/80 kanıt doğrulandı; ilk turda 15 soru metinde bulunamadı → hepsi düzeltildi/değiştirildi (paket metinleri bazı maddelerde kesik).
+- Uygulama tarafı (Tatbikat'ta premium sekme + sunucudan dağıtım) HENÜZ YAPILMADI — pilot onayından sonra.
