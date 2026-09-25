@@ -2826,3 +2826,6 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   net çizim (cihaz yoğunluğu, 4M px tavan) + yakınlaştırma bitince görünen ≤2 sayfa yeniden (12M px tavan, not katmanı dahil) +
   kenardan kenara + tam ekran düğmesi. Headless Chrome 3x ölçüldü. Başkan cihazda bakacak → "yay" gelirse bayrak kaldırılır.
   Yatay çevirme hâlâ mağaza sürümü ister (yapılmadı).
+- 25 Eyl — Kitap okuyucu HERKESE (başkan "yay"): net çizim + tam ekran (commit 8c4f5e5, OTA e4815bff) ve kalem/parmak ayrımı
+  (commit 923dd6a, OTA f045be4f; tablet kullanıcısı: "kalemle yazarken elimle kaydıramıyorum"). Yalnız runtime 1.0.46
+  (haftalık aktiflerin 773'ü 1.0.46, eski sürümde 10 kişi). Kalem ayrımı gerçek Apple Pencil ile DOĞRULANMADI — geri bildirim bekleniyor.
