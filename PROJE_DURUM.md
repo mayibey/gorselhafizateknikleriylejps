@@ -2795,3 +2795,6 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
   80/80 kanıt resmî metinde; A-E 16'şar; öncüllü 12 · olumsuz 24 · vaka 8. 4 ajan paralel yazdı, 14 riskli soru elle metinden teyit edildi.
   birlestir.py: açıklama artık doğru cevabın kelimelerini en çok içeren kanıttan (pilotta 1 açıklama düzeldi, soru/cevap aynı).
   Gerekçe: 24 Eyl'de 6 satışın 5'i uzman erbaş. Başkana iki PDF gönderildi; onay bekleniyor.
+- 25 Eyl 00:2x — Başkan: "normal uygulamadaki deneme gibi yap" → altın "Gerçek Sınav Provası" satırı KALDIRILDI (ara adımda
+  Premium sekmesi denendi, o da kalktı). Şimdi premium denemeler her sekmede normal denemelerin ALTINDA aynı satır görünümüyle;
+  sağda altın kilit (ücretsiz → paywall) / premium üyede altın taç. commit 20e5afd, OTA runtime 1.0.46, hâlâ on-izleme.
