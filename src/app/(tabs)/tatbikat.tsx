@@ -43,7 +43,7 @@ function TatbikatIcerik() {
   // bu ekran ARTIK YALNIZ DENEMELER. Kanun kanun talim Mevzuat'taki "Talim Yap" düğmesinde,
   // kaldığın yer / zayıf mevzi ise çalışma bölümünde — burası ayrı, orası ayrı.
   // Takım seçimi: Müşterek Konular / Branş / Karma (Genel).
-  const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma' | 'premium'>('müşterek');
+  const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma'>('müşterek');
   // Bu branşta kaç branş denemesi var? (0 ise "Yakında" gösterilir)
   const bransDenemeSayisi = useMemo(() => genelDenemeler('brans', brans).length, [brans]);
   // 23 Ağu: karma denemeler ÖNCE BAŞKANDA. Onay gelince sunucudan (ozellik_herkes)
@@ -52,8 +52,9 @@ function TatbikatIcerik() {
   // Başkan (23 Ağu): "bu alandaki arka planı uygulamada neyse öyle yap." Karargâh ve
   // Mevzuat gece temasındayken Denemeler krem kalıyordu — aynı bayrağa bağlandı.
   const geceTema = useKisiselOzellik('talim-mevzuata');
-  // PREMIUM DENEMELER (24 Eyl 2026): diğer denemeler gibi ayrı sekme. Önce yalnız başkanda
-  // ('on-izleme'), onaydan sonra herkese.
+  // PREMIUM DENEMELER (başkan, 25 Eyl 2026): ayrı sekme YOK — denemelerin altına aynı satırlarla
+  // sıralanır, sağda altın premium kilidi. Premium üye girer, ücretsiz dokununca paywall.
+  // Önce yalnız başkanda ('on-izleme'), onaydan sonra herkese.
   const premiumAcik = useKisiselOzellik('on-izleme');
   const { rutbe } = useRutbe();
   const { premium } = useUyelik();
@@ -104,7 +105,6 @@ function TatbikatIcerik() {
           'müşterek',
           'brans',
           ...(karmaAcik ? (['karma'] as const) : []),
-          ...(premiumAcik ? (['premium'] as const) : []),
         ] as const).map((b, _i, sekmeler) => {
           const aktif = blok === b;
           return (
@@ -161,28 +161,7 @@ function TatbikatIcerik() {
       {/* 1 Eyl 2026: branş denemeleri artık 15 branşta da var (Jandarma'nın kendi 5×50'si,
           diğerlerinde bankadaki branş kanunu sorularından derlenmiş 5×50). Kapı artık
           "Jandarma mı?" diye değil, "bu branşta deneme VAR MI?" diye soruyor. */}
-      {blok === 'premium' ? (
-        <>
-          <AppText variant="kucuk" color={geceTema ? 'kartMetinIkincil' : 'solukMetin'}>
-            Premium denemeler gerçek sınav düzenindedir: 80 soru (40 müşterek + 40 branş). Her soru 1 puan (toplam 80). Yanlışların zayıf mevzilerine düşer.
-          </AppText>
-          {premiumListe.map((d) => (
-            <GenelDenemeSatir
-              key={d.no}
-              deneme={d}
-              katsayi={puanKatsayisi('premium')}
-              sonuc={sonucMap.get(genelSanalLawId('premium', d.no))?.get(0)}
-              kilitli={!premium}
-              gece={geceTema}
-              onGit={() =>
-                premium
-                  ? router.push({ pathname: '/sinav', params: { genel: String(d.no), gblok: 'premium' } })
-                  : router.push('/paywall')
-              }
-            />
-          ))}
-        </>
-      ) : blok === 'brans' && bransDenemeSayisi === 0 ? (
+      {blok === 'brans' && bransDenemeSayisi === 0 ? (
           <DurumKutu
             ikon="flag-checkered"
             baslik="Yakında"
@@ -214,6 +193,24 @@ function TatbikatIcerik() {
           ))}
         </>
       )}
+      {premiumAcik
+        ? premiumListe.map((d) => (
+            <GenelDenemeSatir
+              key={`p${d.no}`}
+              deneme={d}
+              katsayi={puanKatsayisi('premium')}
+              sonuc={sonucMap.get(genelSanalLawId('premium', d.no))?.get(0)}
+              kilitli={!premium}
+              premiumRozet
+              gece={geceTema}
+              onGit={() =>
+                premium
+                  ? router.push({ pathname: '/sinav', params: { genel: String(d.no), gblok: 'premium' } })
+                  : router.push('/paywall')
+              }
+            />
+          ))
+        : null}
     </Screen>
   );
 }
@@ -236,6 +233,7 @@ function GenelDenemeSatir({
   katsayi,
   sonuc,
   kilitli,
+  premiumRozet,
   gece,
   onGit,
 }: {
@@ -243,6 +241,8 @@ function GenelDenemeSatir({
   katsayi: number;
   sonuc: SinavSonuc | undefined;
   kilitli: boolean;
+  /** Premium deneme: sağda altın kilit (ücretsiz) / altın taç (premium üye). */
+  premiumRozet?: boolean;
   gece?: boolean;
   onGit: () => void;
 }) {
@@ -265,9 +265,17 @@ function GenelDenemeSatir({
         </AppText>
       </View>
       <MaterialCommunityIcons
-        name={kilitli ? 'lock' : 'chevron-right'}
+        name={premiumRozet ? (kilitli ? 'lock' : 'crown') : kilitli ? 'lock' : 'chevron-right'}
         size={22}
-        color={kilitli ? Palette.altinKoyu : Palette.solukMetin}
+        color={
+          premiumRozet
+            ? gece
+              ? Palette.altinParlak
+              : Palette.altinKoyu
+            : kilitli
+              ? Palette.altinKoyu
+              : Palette.solukMetin
+        }
       />
     </Pressable>
   );
