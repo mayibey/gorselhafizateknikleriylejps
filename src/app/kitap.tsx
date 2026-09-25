@@ -13,7 +13,6 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Spacing } from '@/constants/theme';
 import { KILIT_AKTIF } from '@/constants/urunler';
 import { kitapNotlari, kitapNotuKaydet } from '@/lib/brans-kitap';
-import { useKisiselOzellik } from '@/lib/ozellik';
 import { imzaliUrller } from '@/lib/imzali-url';
 import { bytesToB64 } from '@/lib/sifreleme';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -39,9 +38,9 @@ export default function KitapScreen() {
   const web = useRef<WebView>(null);
   const router = useRouter();
   // NET + TAM EKRAN (25 Eyl 2026, kullanıcı: "tam ekran olmuyor, yakınlaştırınca netlik bozuluyor"):
-  // önce yalnız 'on-izleme'de. Kitap kenardan kenara (800 px sınırı ve kenar boşluğu yok), sayfa cihaz
-  // yoğunluğunda + yakınlaştırınca yeniden çizilir; tam ekran düğmesi başlığı/durum/araç çubuğunu gizler.
-  const yeni = useKisiselOzellik('on-izleme');
+  // başkan onayıyla 25 Eyl'de herkese. Kitap kenardan kenara (800 px sınırı ve kenar boşluğu yok), sayfa
+  // cihaz yoğunluğunda + yakınlaştırınca yeniden çizilir; tam ekran düğmesi başlığı/durum/araç çubuğunu gizler.
+  const yeni = true;
   const [tam, setTam] = useState(false);
   const tamDegistir = useCallback((a: boolean) => {
     setTam(a);
