@@ -43,7 +43,7 @@ function TatbikatIcerik() {
   // bu ekran ARTIK YALNIZ DENEMELER. Kanun kanun talim Mevzuat'taki "Talim Yap" düğmesinde,
   // kaldığın yer / zayıf mevzi ise çalışma bölümünde — burası ayrı, orası ayrı.
   // Takım seçimi: Müşterek Konular / Branş / Karma (Genel).
-  const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma'>('müşterek');
+  const [blok, setBlok] = useState<'müşterek' | 'brans' | 'karma' | 'premium'>('müşterek');
   // Bu branşta kaç branş denemesi var? (0 ise "Yakında" gösterilir)
   const bransDenemeSayisi = useMemo(() => genelDenemeler('brans', brans).length, [brans]);
   // 23 Ağu: karma denemeler ÖNCE BAŞKANDA. Onay gelince sunucudan (ozellik_herkes)
@@ -52,8 +52,20 @@ function TatbikatIcerik() {
   // Başkan (23 Ağu): "bu alandaki arka planı uygulamada neyse öyle yap." Karargâh ve
   // Mevzuat gece temasındayken Denemeler krem kalıyordu — aynı bayrağa bağlandı.
   const geceTema = useKisiselOzellik('talim-mevzuata');
-  // PREMIUM DENEMELER (24 Eyl 2026): önce yalnız başkanda ('on-izleme'), onaydan sonra herkese.
-  const premiumBolumAcik = useKisiselOzellik('on-izleme');
+  // PREMIUM DENEMELER (24 Eyl 2026): diğer denemeler gibi ayrı sekme. Önce yalnız başkanda
+  // ('on-izleme'), onaydan sonra herkese.
+  const premiumAcik = useKisiselOzellik('on-izleme');
+  const { rutbe } = useRutbe();
+  const { premium } = useUyelik();
+  // Kişinin branş + rütbesine uyan premium denemeler. Hiç yoksa (branşına henüz hazırlanmadı)
+  // hazır olanların hepsi tam başlıklarıyla listelenir.
+  const premiumListe = useMemo(() => {
+    const tumu = premiumDenemeler();
+    const benim = tumu.filter((d) => d.brans === brans && d.rutbe === rutbe);
+    return benim.length > 0
+      ? benim.map((d, i) => ({ ...d, baslik: `Premium Deneme ${i + 1}` }))
+      : tumu;
+  }, [brans, rutbe]);
   const yukle = useCallback(() => {
     // Son deneme skorları (law_id → en güncel; getSinavSonuclari id artan → son yazan kalır).
     void getSinavSonuclari()
@@ -88,10 +100,12 @@ function TatbikatIcerik() {
     <Screen title="Denemeler" koyu={geceTema} kompaktBaslik={geceTema}>
       {/* TAKIM SEÇİMİ: Müşterek Konular · Branş · Karma (Genel). */}
       <View style={[styles.blokSecici, geceTema && styles.blokSeciciGece]}>
-        {(karmaAcik
-          ? (['müşterek', 'brans', 'karma'] as const)
-          : (['müşterek', 'brans'] as const)
-        ).map((b) => {
+        {([
+          'müşterek',
+          'brans',
+          ...(karmaAcik ? (['karma'] as const) : []),
+          ...(premiumAcik ? (['premium'] as const) : []),
+        ] as const).map((b, _i, sekmeler) => {
           const aktif = blok === b;
           return (
             <Pressable
@@ -104,25 +118,32 @@ function TatbikatIcerik() {
               ]}
               accessibilityRole="button"
               accessibilityLabel={
-                b === 'müşterek' ? 'Müşterek sınavlar' : b === 'brans' ? 'Branş sınavları' : 'Karma genel denemeler'
+                b === 'müşterek'
+                  ? 'Müşterek sınavlar'
+                  : b === 'brans'
+                    ? 'Branş sınavları'
+                    : b === 'karma'
+                      ? 'Karma genel denemeler'
+                      : 'Premium denemeler'
               }>
-              <MaterialCommunityIcons
-                name={b === 'müşterek' ? 'account-group' : b === 'brans' ? 'medal-outline' : 'shuffle-variant'}
-                size={16}
-                color={aktif ? (geceTema ? Palette.altinParlak : Palette.beyaz) : geceTema ? 'rgba(226,236,240,0.75)' : Palette.solukMetin}
-              />
+              {/* Dört sekmede ikonlar sığmıyor → yalnız yazı. */}
+              {sekmeler.length < 4 ? (
+                <MaterialCommunityIcons
+                  name={b === 'müşterek' ? 'account-group' : b === 'brans' ? 'medal-outline' : 'shuffle-variant'}
+                  size={16}
+                  color={aktif ? (geceTema ? Palette.altinParlak : Palette.beyaz) : geceTema ? 'rgba(226,236,240,0.75)' : Palette.solukMetin}
+                />
+              ) : null}
               <AppText
                 variant="etiket"
                 bold
                 color={aktif ? (geceTema ? 'altinParlak' : 'beyaz') : geceTema ? 'beyaz' : 'anaMetin'}>
-                {b === 'müşterek' ? 'Müşterek' : b === 'brans' ? 'Branş' : 'Karma'}
+                {b === 'müşterek' ? 'Müşterek' : b === 'brans' ? 'Branş' : b === 'karma' ? 'Karma' : 'Premium'}
               </AppText>
             </Pressable>
           );
         })}
       </View>
-
-      {premiumBolumAcik ? <PremiumBolum gece={geceTema} sonucMap={sonucMap} /> : null}
 
       {/* Başkan (23 Ağu): "sonuçlar bölümü olsun orada kalsın, istediği zaman baksın." */}
       <Pressable
@@ -140,7 +161,28 @@ function TatbikatIcerik() {
       {/* 1 Eyl 2026: branş denemeleri artık 15 branşta da var (Jandarma'nın kendi 5×50'si,
           diğerlerinde bankadaki branş kanunu sorularından derlenmiş 5×50). Kapı artık
           "Jandarma mı?" diye değil, "bu branşta deneme VAR MI?" diye soruyor. */}
-      {blok === 'brans' && bransDenemeSayisi === 0 ? (
+      {blok === 'premium' ? (
+        <>
+          <AppText variant="kucuk" color={geceTema ? 'kartMetinIkincil' : 'solukMetin'}>
+            Premium denemeler gerçek sınav düzenindedir: 80 soru (40 müşterek + 40 branş). Her soru 1 puan (toplam 80). Yanlışların zayıf mevzilerine düşer.
+          </AppText>
+          {premiumListe.map((d) => (
+            <GenelDenemeSatir
+              key={d.no}
+              deneme={d}
+              katsayi={puanKatsayisi('premium')}
+              sonuc={sonucMap.get(genelSanalLawId('premium', d.no))?.get(0)}
+              kilitli={!premium}
+              gece={geceTema}
+              onGit={() =>
+                premium
+                  ? router.push({ pathname: '/sinav', params: { genel: String(d.no), gblok: 'premium' } })
+                  : router.push('/paywall')
+              }
+            />
+          ))}
+        </>
+      ) : blok === 'brans' && bransDenemeSayisi === 0 ? (
           <DurumKutu
             ikon="flag-checkered"
             baslik="Yakında"
@@ -186,86 +228,6 @@ function denemeAdi(blok: 'müşterek' | 'brans' | 'karma', no: number): string {
   // Başlık branşı söyler: kullanıcı branş değiştirince hangi denemeye baktığı belli olsun.
   if (blok === 'brans') return `Branş Deneme ${no}`;
   return `Müşterek Konular Deneme ${no}`;
-}
-
-/**
- * GERÇEK SINAV PROVASI (başkan, 24 Eyl 2026): ATA-AÖF tarzı 80 soruluk premium denemeler
- * (müşterek 40 + branş 40). Kişi yalnız kendi branş + rütbesinin denemelerini görür; branşına
- * henüz yoksa "hazırlanıyor" der ve hazır olanları örnek olarak gösterir. Premium olmayan
- * satırı kilitli görür, dokununca üyelik sayfası açılır.
- */
-function PremiumBolum({
-  gece,
-  sonucMap,
-}: {
-  gece: boolean;
-  sonucMap: Map<number, Map<number, SinavSonuc>>;
-}) {
-  const router = useRouter();
-  const { brans } = useBrans();
-  const { rutbe } = useRutbe();
-  const { premium } = useUyelik();
-  const [acik, setAcik] = useState(false);
-  const tumu = useMemo(() => premiumDenemeler(), []);
-  const benim = tumu.filter((d) => d.brans === brans && d.rutbe === rutbe);
-  const liste = benim.length > 0 ? benim : tumu;
-  const altYazi = benim.length > 0
-    ? `80 soru · gerçek sınav düzeni · ${benim.length} deneme`
-    : '80 soru · gerçek sınav düzeni · branşınızınki hazırlanıyor';
-
-  return (
-    <View style={styles.premiumKutu}>
-      <Pressable
-        onPress={() => (premium ? setAcik((a) => !a) : router.push('/paywall'))}
-        style={({ pressed }) => [styles.premiumSatir, gece && styles.premiumSatirGece, pressed && styles.pressed]}
-        accessibilityRole="button"
-        accessibilityLabel="Gerçek sınav provası, premium denemeler">
-        <View style={[styles.premiumIkon, gece && styles.monogramGece]}>
-          <MaterialCommunityIcons name="crown" size={22} color={gece ? Palette.altinParlak : Palette.altin} />
-        </View>
-        <View style={styles.satirMetin}>
-          <View style={styles.premiumBaslik}>
-            <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'}>
-              GERÇEK SINAV PROVASI
-            </AppText>
-            <View style={styles.premiumChip}>
-              <AppText variant="etiket" bold color="lacivert">
-                PREMIUM
-              </AppText>
-            </View>
-          </View>
-          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
-            {altYazi}
-          </AppText>
-        </View>
-        <MaterialCommunityIcons
-          name={!premium ? 'lock' : acik ? 'chevron-up' : 'chevron-down'}
-          size={22}
-          color={gece ? Palette.altinParlak : Palette.altinKoyu}
-        />
-      </Pressable>
-      {premium && acik ? (
-        <>
-          {benim.length === 0 ? (
-            <AppText variant="kucuk" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
-              Branşınızın provası hazırlanıyor. Hazır olan deneme aşağıda; dilerseniz çözebilirsiniz.
-            </AppText>
-          ) : null}
-          {liste.map((d) => (
-            <GenelDenemeSatir
-              key={d.no}
-              deneme={d}
-              katsayi={puanKatsayisi('premium')}
-              sonuc={sonucMap.get(genelSanalLawId('premium', d.no))?.get(0)}
-              kilitli={false}
-              gece={gece}
-              onGit={() => router.push({ pathname: '/sinav', params: { genel: String(d.no), gblok: 'premium' } })}
-            />
-          ))}
-        </>
-      ) : null}
-    </View>
-  );
 }
 
 /** Genel deneme (Tatbikat) satırı: başlık + soru sayısı + son puan + kilit. */
@@ -395,36 +357,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(243,194,74,0.14)',
     borderWidth: 1,
     borderColor: 'rgba(243,194,74,0.45)',
-  },
-  premiumKutu: { gap: Spacing.two },
-  premiumSatir: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.two,
-    backgroundColor: Palette.kartKremi,
-    borderColor: Palette.altin,
-    borderWidth: 1.5,
-    borderRadius: Radius.m,
-    padding: Spacing.three,
-  },
-  premiumSatirGece: {
-    backgroundColor: 'rgba(3,40,56,0.7)',
-    borderColor: Palette.altinParlak,
-  },
-  premiumIkon: {
-    width: 48,
-    height: 48,
-    borderRadius: Radius.m,
-    backgroundColor: Palette.altinSolukYuzey,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  premiumBaslik: { flexDirection: 'row', alignItems: 'center', gap: Spacing.two, flexWrap: 'wrap' },
-  premiumChip: {
-    backgroundColor: Palette.altinParlak,
-    borderRadius: Radius.s,
-    paddingHorizontal: Spacing.one,
-    paddingVertical: 1,
   },
   sonucSerit: {
     flexDirection: 'row',
