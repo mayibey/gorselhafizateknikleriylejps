@@ -2822,3 +2822,7 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
    (b) tam ekran: kitap.tsx Screen içinde → başlık + 800 px genişlik sınırı + kenar boşluğu; sayfa CSS max-width 900 px; alt araç
    çubuğu hep açık. Çözüm: genişlik sınırı kalkar, "tam ekran" düğmesi başlığı/durum çubuğunu/araç çubuğunu gizler.
    (c) yatay çevirme: app.json orientation=portrait kilitli → açmak MAĞAZA SÜRÜMÜ ister (OTA olmaz). a+b OTA ile gider.
+- 25 Eyl — Madde 6 (PDF okuyucu) başkan "bi bak ben bakayım önce" dedi → YAPILDI, on-izleme (commit 0b6e799, OTA 1.0.46):
+  net çizim (cihaz yoğunluğu, 4M px tavan) + yakınlaştırma bitince görünen ≤2 sayfa yeniden (12M px tavan, not katmanı dahil) +
+  kenardan kenara + tam ekran düğmesi. Headless Chrome 3x ölçüldü. Başkan cihazda bakacak → "yay" gelirse bayrak kaldırılır.
+  Yatay çevirme hâlâ mağaza sürümü ister (yapılmadı).
