@@ -2815,3 +2815,10 @@ YAPILACAKLAR (sırayla, hepsi önce on-izleme):
 4. Rütbe süzgeci: uzmj/uzmerb için müşterek+karma denemelerdeki law 13/16 soruları aynı bloktan başka müşterek soruyla değişir.
 5. Sonraki premium denemeler üye sayısına göre (Jandarma sb/asb, MEBS, Personel…).
 Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den geçici Jandarma uzmerb/sb seçer ya da önce MEBS sb premium üretilir (sorulacak).
+6. **Altın Özet PDF okuyucu (kullanıcı şikâyeti: tam ekran olmuyor, yakınlaştırınca bulanık)** — teşhis (25 Eyl, kod değişmedi):
+   (a) bulanıklık: sayfa ekran genişliğinin SABİT 2 katı çözünürlükte bir kez çiziliyor; yakınlaştırma tarayıcı büyütmesi
+   (maximum-scale=6) → 3x ve üstünde bitmap büyüyor. Telefonlar zaten 3x piksel yoğunluğunda → yakınlaştırmadan bile hafif yumuşak.
+   Çözüm: cihaz yoğunluğunda çiz + parmak kalkınca görünen sayfayı o anki büyütmede yeniden çiz (bellek sınırıyla), notlar da.
+   (b) tam ekran: kitap.tsx Screen içinde → başlık + 800 px genişlik sınırı + kenar boşluğu; sayfa CSS max-width 900 px; alt araç
+   çubuğu hep açık. Çözüm: genişlik sınırı kalkar, "tam ekran" düğmesi başlığı/durum çubuğunu/araç çubuğunu gizler.
+   (c) yatay çevirme: app.json orientation=portrait kilitli → açmak MAĞAZA SÜRÜMÜ ister (OTA olmaz). a+b OTA ile gider.
