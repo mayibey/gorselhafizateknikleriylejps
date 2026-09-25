@@ -2798,3 +2798,20 @@ premium eşlemesi (müşterek paket → müşterek kitap; branş paketi → mü�
 - 25 Eyl 00:2x — Başkan: "normal uygulamadaki deneme gibi yap" → altın "Gerçek Sınav Provası" satırı KALDIRILDI (ara adımda
   Premium sekmesi denendi, o da kalktı). Şimdi premium denemeler her sekmede normal denemelerin ALTINDA aynı satır görünümüyle;
   sağda altın kilit (ücretsiz → paywall) / premium üyede altın taç. commit 20e5afd, OTA runtime 1.0.46, hâlâ on-izleme.
+
+### ⏸ 25 Eyl 2026 — DENEMELER PLANI (BAŞKAN ONAYI BEKLİYOR — "yap" deyince hepsi, sırayla)
+Başkan: "Uzman erbaş denemesi subay/asb'de görünmesin. Müşterek deneme sadece müşterek, branş sadece branş, karma
+branş+müşterek gerçek sınav tadında. Herkes kendi branşındaki denemeleri görecek." Ölçüm (25 Eyl):
+- Premium: kendi branş+rütbesine deneme yoksa HEPSİ gösteriliyordu (fallback) → uzman erbaş denemesi başkalarında da çıkıyor.
+- Karma (5×100): herkes AYNI 5 denemeyi görüyor; her birinde branş sorusu 33-39, bunun 28-32'si BAŞKA branşlardan (Jandarma'ya 5-7).
+- Rütbe: uzmj/uzmerb sınavında 4678 (law 13) + Sözleşmeli Sb/Asb Yön. (law 16) YOK; müşterek denemelerde 5, karmada 30 böyle soru var.
+- Müşterek/Branş denemeleri içerik türü olarak DOĞRU.
+YAPILACAKLAR (sırayla, hepsi önce on-izleme):
+0. **Sekme sırası: KARMA · MÜŞTEREK · BRANŞ**, sayfa açılınca KARMA seçili gelsin (tatbikat.tsx blok varsayılanı + sekme dizisi).
+1. Premium denemeler YALNIZ Karma sekmesinde, mevcut karma denemelerin altında, sağda kilit (ücretsiz→paywall). Müşterek/Branş'ta görünmez.
+2. Premium süzgeci KATI: brans VE rütbe tutmalı; tutmuyorsa hiç premium deneme yok (fallback KALDIRILACAK).
+3. Karma denemeler branşa göre yeniden: müşterek + YALNIZ o branş, gerçek sınav oranı (40+40; MEBS subay 50+30); bankadaki
+   doğrulanmış sorulardan (scripts/deneme-uret.mjs), sanal kimlik/puan geçmişi korunacak.
+4. Rütbe süzgeci: uzmj/uzmerb için müşterek+karma denemelerdeki law 13/16 soruları aynı bloktan başka müşterek soruyla değişir.
+5. Sonraki premium denemeler üye sayısına göre (Jandarma sb/asb, MEBS, Personel…).
+Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den geçici Jandarma uzmerb/sb seçer ya da önce MEBS sb premium üretilir (sorulacak).
