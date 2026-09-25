@@ -19,9 +19,20 @@ function rnPost(o){ if(window.ReactNativeWebView) window.ReactNativeWebView.post
 // seferde DEĞİL parçalar hâlinde gelir (window.parcaEkle) — tek dev string Android'de takılıyordu.
 var parcalar=[], toplamSayfa=0, oran=1.414, sayfaKutular=[], aktifSayfa=0, cizilenler={}, kaydirBekle=null;
 var PENCERE=3; // görünen sayfanın ±3 komşusu çizili durur; uzaktakiler bellek için boşaltılır
+// NET ÇİZİM (25 Eyl 2026, kullanıcı: "yakınlaştırınca netlik bozuluyor"): RN window.AYAR={net,genis}
+// verir (önizleme). net: sayfa cihazın piksel yoğunluğunda çizilir (eskiden sabit 2x) ve
+// yakınlaştırma bitince görünen sayfa o büyütmede YENİDEN çizilir. genis: sayfa genişlik sınırı yok.
+var AYAR={}, DPR=Math.min(window.devicePixelRatio||2,3);
+var TABAN_PX=4e6, ZOOM_PX=12e6; // canvas piksel tavanı (bellek; iOS canvas sınırı ~16,7 M)
+var buyukCizilen={}, zoomBekle=null;
+function carpan(cssW, cssH, iste, tavan){ var k=iste; if(cssW*cssH*k*k>tavan) k=Math.sqrt(tavan/(cssW*cssH)); return Math.max(1,k); }
+// Çizgi kalınlıkları eski 2x tuvale göre kayıtlı → tuval çözünürlüğü değişince oranla ölçeklenir.
+function kalinlikOran(oc){ if(!AYAR.net) return 1; var cw=oc.clientWidth||oc.width/2; return oc.width/(cw*2); }
+window.tamEkran = function(a){ document.body.classList.toggle('tam', !!a); };
 window.parcaEkle = function(s){ parcalar.push(s); };
 window.baslat = function(b64, kayitli, yol, baslangic){
   dosyaYolu = yol||''; notlar = kayitli||{};
+  AYAR = window.AYAR||{}; if(AYAR.genis) document.body.classList.add('genis');
   if(!b64){ b64 = parcalar.join(''); parcalar=[]; }
   var bin = atob(b64), arr = new Uint8Array(bin.length);
   for (var i=0;i<bin.length;i++) arr[i]=bin.charCodeAt(i);
@@ -49,7 +60,43 @@ window.baslat = function(b64, kayitli, yol, baslangic){
   window.addEventListener('scroll', function(){
     clearTimeout(kaydirBekle); kaydirBekle=setTimeout(kaydirmaBitti, 120);
   }, {passive:true});
+  if(AYAR.net && window.visualViewport){
+    var zb=function(){ clearTimeout(zoomBekle); zoomBekle=setTimeout(yakinlikBitti, 350); };
+    window.visualViewport.addEventListener('resize', zb);
+    window.visualViewport.addEventListener('scroll', zb);
+  }
 };
+// Yakınlaştırma durunca: ekranda görünen (en çok 2) sayfayı o anki büyütmede yeniden çiz;
+// büyütme bitince (≈1x) büyük çizilenleri normal çözünürlüğe döndür (bellek).
+function gorunenSayfalar(){
+  var vv=window.visualViewport, ust=vv.pageTop, alt=ust+vv.height, out=[];
+  for (var k=1;k<=toplamSayfa && out.length<2;k++){ var el=sayfaKutular[k];
+    if(el.offsetTop<alt && el.offsetTop+el.offsetHeight>ust && cizilenler[k]) out.push(k); }
+  return out;
+}
+function yakinlikBitti(){
+  if(!pdfDoc) return;
+  var z=window.visualViewport.scale||1, hedef=z>1.15?gorunenSayfalar():[];
+  Object.keys(buyukCizilen).forEach(function(n){ n=+n; if(hedef.indexOf(n)<0){ delete buyukCizilen[n]; yenidenCiz(n,1); } });
+  hedef.forEach(function(n){ if(Math.abs((buyukCizilen[n]||0)-z)>0.1){ buyukCizilen[n]=z; yenidenCiz(n,z); } });
+}
+function yenidenCiz(n, z){
+  var wrap=sayfaKutular[n]; if(!wrap || !cizilenler[n]) return;
+  var c=wrap.querySelector('canvas:not(.ov)'), oc=wrap.querySelector('canvas.ov'); if(!c||!oc) return;
+  return pdfDoc.getPage(n).then(function(page){
+    if(!cizilenler[n]) return;
+    var taban=page.getViewport({scale:1}), cssW=c.clientWidth||(window.innerWidth-12);
+    var k=carpan(cssW, cssW*oran, DPR*z, z>1?ZOOM_PX:TABAN_PX);
+    var vp=page.getViewport({scale:cssW/taban.width*k});
+    var nc=document.createElement('canvas'); nc.width=vp.width; nc.height=vp.height; nc.style.width='100%'; nc.style.display='block';
+    return page.render({canvasContext:nc.getContext('2d'), viewport:vp}).promise.then(function(){
+      if(!cizilenler[n] || c.parentNode!==wrap) return;
+      wrap.replaceChild(nc, c); c.width=1; c.height=1; // eski tuvalin belleği bırakılır
+      oc.width=vp.width; oc.height=vp.height; // not katmanı da aynı netlikte yeniden çizilir
+      cizStroke(oc, (notlar[n]||[]).filter(function(s){ return s.t!=='yazi'; }));
+    });
+  });
+}
 
 // Ekranın ortasındaki sayfayı bul → değiştiyse RN'e bildir + çizim penceresini kaydır.
 function kaydirmaBitti(){
@@ -72,7 +119,7 @@ function pencereCiz(n){
 function sayfaBosalt(n){
   var wrap=sayfaKutular[n]; if(!wrap) return;
   Array.prototype.slice.call(wrap.querySelectorAll('canvas')).forEach(function(c){ c.width=1; c.height=1; c.remove(); });
-  cizilenler[n]=false;
+  cizilenler[n]=false; delete buyukCizilen[n];
 }
 
 function sayfaCiz(n){
@@ -82,8 +129,10 @@ function sayfaCiz(n){
     var wrap=sayfaKutular[n]; if(!wrap || !cizilenler[n]) return;
     var taban = page.getViewport({scale:1});
     var scale = (window.innerWidth-12)/taban.width;
-    var vp = page.getViewport({scale: scale*2}); // 2x net render
-    wrap.style.height=Math.round(vp.height/2)+'px';
+    var cssW=window.innerWidth-12;
+    var kat = AYAR.net ? carpan(cssW, cssW*oran, DPR, TABAN_PX) : 2; // net: cihaz yoğunluğu, eski: 2x
+    var vp = page.getViewport({scale: scale*kat});
+    wrap.style.height=Math.round(vp.height/kat)+'px';
     var c=document.createElement('canvas'); c.width=vp.width; c.height=vp.height; c.style.width='100%'; c.style.display='block';
     var oc=document.createElement('canvas'); oc.width=vp.width; oc.height=vp.height; oc.className='ov'; oc.style.width='100%';
     wrap.insertBefore(oc, wrap.firstChild); wrap.insertBefore(c, wrap.firstChild);
@@ -102,7 +151,7 @@ function cizStroke(oc, liste){
   liste.forEach(function(s){
     ctx.globalCompositeOperation = s.t==='silgi'?'destination-out':'source-over';
     ctx.globalAlpha = s.t==='fosfor'?0.35:1; ctx.strokeStyle=s.c||'#e53935';
-    ctx.lineWidth = s.w || (s.t==='fosfor'?18:(s.t==='silgi'?24:3)); ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.lineWidth = (s.w || (s.t==='fosfor'?18:(s.t==='silgi'?24:3))) * kalinlikOran(oc); ctx.lineCap='round'; ctx.lineJoin='round';
     var p=s.p; if(!p||!p.length) return; ctx.beginPath(); ctx.moveTo(p[0][0]*oc.width, p[0][1]*oc.height);
     for (var i=1;i<p.length;i++) ctx.lineTo(p[i][0]*oc.width, p[i][1]*oc.height);
     ctx.stroke();
@@ -147,7 +196,7 @@ function cizimKur(oc, n, wrap){
   function hareket(e){ if(!ciziyor) return; e.preventDefault(); nokta.push(xy(e));
     ctx.globalCompositeOperation=arac==='silgi'?'destination-out':'source-over';
     ctx.globalAlpha=arac==='fosfor'?0.35:1; ctx.strokeStyle=renk;
-    ctx.lineWidth=boyut[arac]||3; ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.lineWidth=(boyut[arac]||3)*kalinlikOran(oc); ctx.lineCap='round'; ctx.lineJoin='round';
     var a=nokta[nokta.length-2], b=nokta[nokta.length-1]; ctx.beginPath();
     ctx.moveTo(a[0]*oc.width,a[1]*oc.height); ctx.lineTo(b[0]*oc.width,b[1]*oc.height); ctx.stroke();
     ctx.globalAlpha=1; }
@@ -206,6 +255,9 @@ const HTML = `<!doctype html><html><head>
   .arac{font-size:20px;width:44px;height:40px;border:1px solid #e7dcc7;background:#fff;border-radius:8px;}
   .arac.aktif{background:#173b6b;border-color:#173b6b;}
   #boyut{width:120px;accent-color:#173b6b;}
+  /* genis: tablette sayfa ekranı doldursun; tam: tam ekranda araç çubuğu gizli (RN tamEkran). */
+  body.genis .sayfa{max-width:none;}
+  body.tam #cubuk{display:none;} body.tam #pages{padding-bottom:6px;}
   #renkler{display:flex;gap:6px;} .renk{width:26px;height:26px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #ccc;}
 </style></head><body>
 <div id="pages"></div>

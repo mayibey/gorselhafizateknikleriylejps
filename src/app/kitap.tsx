@@ -1,7 +1,10 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
 import { PDF_VIEWER_HTML } from '../assets/pdf-viewer';
@@ -10,6 +13,7 @@ import { Screen } from '@/components/ui/screen';
 import { Palette, Spacing } from '@/constants/theme';
 import { KILIT_AKTIF } from '@/constants/urunler';
 import { kitapNotlari, kitapNotuKaydet } from '@/lib/brans-kitap';
+import { useKisiselOzellik } from '@/lib/ozellik';
 import { imzaliUrller } from '@/lib/imzali-url';
 import { bytesToB64 } from '@/lib/sifreleme';
 import { useUyelik } from '@/lib/uyelik-context';
@@ -34,6 +38,15 @@ export default function KitapScreen() {
   const baslangicSayfa = useRef(1);
   const web = useRef<WebView>(null);
   const router = useRouter();
+  // NET + TAM EKRAN (25 Eyl 2026, kullanıcı: "tam ekran olmuyor, yakınlaştırınca netlik bozuluyor"):
+  // önce yalnız 'on-izleme'de. Kitap kenardan kenara (800 px sınırı ve kenar boşluğu yok), sayfa cihaz
+  // yoğunluğunda + yakınlaştırınca yeniden çizilir; tam ekran düğmesi başlığı/durum/araç çubuğunu gizler.
+  const yeni = useKisiselOzellik('on-izleme');
+  const [tam, setTam] = useState(false);
+  const tamDegistir = useCallback((a: boolean) => {
+    setTam(a);
+    web.current?.injectJavaScript(`window.tamEkran && window.tamEkran(${a}); true;`);
+  }, []);
 
   // PREMIUM KAPISI (savunma-derinliği): kitap ücretli içerik. Liste zaten kilitli satırı paywall'a
   // atar; buraya doğrudan gelinirse (derin bağlantı/geri tuşu) burada da kapı olsun — yoksa indirme
@@ -76,6 +89,7 @@ export default function KitapScreen() {
   const yuklenince = useCallback(() => {
     const b64 = pdfB64.current;
     if (!b64) return;
+    if (yeni) web.current?.injectJavaScript('window.AYAR = { net: true, genis: true }; true;');
     // PDF'i parça parça ver (tek dev injectJavaScript büyük kitapta takılıyordu), sonra başlat.
     for (let i = 0; i < b64.length; i += PARCA) {
       web.current?.injectJavaScript(`window.parcaEkle(${JSON.stringify(b64.slice(i, i + PARCA))}); true;`);
@@ -83,7 +97,7 @@ export default function KitapScreen() {
     web.current?.injectJavaScript(
       `window.baslat(null, ${JSON.stringify(notlar.current)}, ${JSON.stringify(yol ?? '')}, ${baslangicSayfa.current}); true;`,
     );
-  }, [yol]);
+  }, [yol, yeni]);
 
   const mesaj = useCallback(
     (e: WebViewMessageEvent) => {
@@ -101,8 +115,7 @@ export default function KitapScreen() {
     [yol],
   );
 
-  return (
-    <Screen title={baslik ?? 'Kitap'} headerAltinCizgi>
+  const govde = (
       <View style={styles.govde}>
         {html ? (
           <WebView
@@ -133,11 +146,74 @@ export default function KitapScreen() {
           </View>
         ) : null}
       </View>
-    </Screen>
+  );
+
+  if (!yeni)
+    return (
+      <Screen title={baslik ?? 'Kitap'} headerAltinCizgi>
+        {govde}
+      </Screen>
+    );
+
+  return (
+    <SafeAreaView style={[styles.safe, tam && styles.safeTam]} edges={['top', 'left', 'right']}>
+      <StatusBar hidden={tam} style="light" />
+      {!tam ? (
+        <>
+          <View style={styles.baslik}>
+            <Pressable onPress={() => router.back()} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
+              <MaterialCommunityIcons name="arrow-left" size={24} color={Palette.beyaz} />
+            </Pressable>
+            <AppText variant="altBaslik" color="beyaz" numberOfLines={1} style={styles.baslikYazi}>
+              {baslik ?? 'Kitap'}
+            </AppText>
+            <Pressable
+              onPress={() => tamDegistir(true)}
+              hitSlop={12}
+              accessibilityRole="button"
+              accessibilityLabel="Tam ekran">
+              <MaterialCommunityIcons name="fullscreen" size={28} color={Palette.altinParlak} />
+            </Pressable>
+          </View>
+          <View style={styles.altinCizgi} />
+        </>
+      ) : null}
+      {govde}
+      {tam ? (
+        <Pressable
+          onPress={() => tamDegistir(false)}
+          style={styles.tamCik}
+          hitSlop={8}
+          accessibilityRole="button"
+          accessibilityLabel="Tam ekrandan çık">
+          <MaterialCommunityIcons name="fullscreen-exit" size={24} color={Palette.beyaz} />
+        </Pressable>
+      ) : null}
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safe: { flex: 1, backgroundColor: Palette.lacivert },
+  safeTam: { backgroundColor: '#e9e4d8' },
+  baslik: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+    backgroundColor: Palette.lacivert,
+    paddingHorizontal: Spacing.four,
+    paddingVertical: Spacing.two,
+  },
+  baslikYazi: { flex: 1 },
+  altinCizgi: { height: 1, backgroundColor: Palette.altin },
+  tamCik: {
+    position: 'absolute',
+    top: Spacing.six,
+    right: Spacing.three,
+    backgroundColor: 'rgba(11,31,58,0.55)',
+    borderRadius: 999,
+    padding: Spacing.two,
+  },
   govde: { flex: 1 },
   web: { flex: 1, backgroundColor: '#e9e4d8' },
   orta: {
