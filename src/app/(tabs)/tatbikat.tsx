@@ -241,7 +241,7 @@ function GenelDenemeSatir({
   katsayi: number;
   sonuc: SinavSonuc | undefined;
   kilitli: boolean;
-  /** Premium deneme: sağda altın kilit (ücretsiz) / altın taç (premium üye). */
+  /** Premium deneme: sağda altın kilit (ücretsiz) / açık altın kilit (premium üye). Taç YASAK (marka kuralı). */
   premiumRozet?: boolean;
   gece?: boolean;
   onGit: () => void;
@@ -265,7 +265,7 @@ function GenelDenemeSatir({
         </AppText>
       </View>
       <MaterialCommunityIcons
-        name={premiumRozet ? (kilitli ? 'lock' : 'crown') : kilitli ? 'lock' : 'chevron-right'}
+        name={premiumRozet ? (kilitli ? 'lock' : 'lock-open-variant') : kilitli ? 'lock' : 'chevron-right'}
         size={22}
         color={
           premiumRozet
