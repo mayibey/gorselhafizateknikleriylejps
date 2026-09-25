@@ -29,6 +29,16 @@ function carpan(cssW, cssH, iste, tavan){ var k=iste; if(cssW*cssH*k*k>tavan) k=
 // Çizgi kalınlıkları eski 2x tuvale göre kayıtlı → tuval çözünürlüğü değişince oranla ölçeklenir.
 function kalinlikOran(oc){ if(!AYAR.net) return 1; var cw=oc.clientWidth||oc.width/2; return oc.width/(cw*2); }
 window.tamEkran = function(a){ document.body.classList.toggle('tam', !!a); };
+// KALEM / PARMAK AYRIMI (25 Eyl 2026, tablet kullanıcısı: "kalemle yazarken elimle sayfayı kaydıramıyorum"):
+// cihazda bir kez kalem (Apple Pencil / stylus) görülünce çizim YALNIZ kalemle yapılır, parmak sayfayı
+// kaydırır/yakınlaştırır. Kalemi olmayan telefonda hiçbir şey değişmez (parmak çizmeye devam eder).
+var kalemVar=false, sonPen=false, sonDokunma=0;
+function kalemGoruldu(){ if(!kalemVar){ kalemVar=true; document.body.classList.add('kalemli'); } }
+function kalemMi(e){
+  var t=e.touches&&e.touches[0];
+  if(t && t.touchType==='stylus'){ kalemGoruldu(); return true; } // iOS
+  return sonPen; // Android: touchstart'tan hemen önceki pointerdown'ın türü
+}
 window.parcaEkle = function(s){ parcalar.push(s); };
 window.baslat = function(b64, kayitli, yol, baslangic){
   dosyaYolu = yol||''; notlar = kayitli||{};
@@ -190,6 +200,8 @@ function cizimKur(oc, n, wrap){
     return [(t.clientX-r.left)/r.width, (t.clientY-r.top)/r.height]; }
   function bas(e){
     if(arac==='pan') return;
+    if(e.touches){ sonDokunma=Date.now(); if(kalemVar && !kalemMi(e)) return; } // parmak → kaydırma
+    else if(Date.now()-sonDokunma<800) return; // dokunmanın ardından gelen sahte fare olayı
     if(arac==='yazi'){ var pt=xy(e); yeniYazi(wrap, n, pt[0], pt[1]); return; } // boş yere dokun → yeni yazı
     e.preventDefault(); ciziyor=true; nokta=[xy(e)];
   }
@@ -218,6 +230,7 @@ function aracSec(a){ arac=a; document.body.dataset.arac=a;
 }
 window.addEventListener('DOMContentLoaded', function(){
   pagesEl=document.getElementById('pages');
+  document.addEventListener('pointerdown', function(e){ sonPen = e.pointerType==='pen'; if(sonPen) kalemGoruldu(); }, true);
   [['pan','↕','Gez'],['kalem','✏️','Kalem'],['fosfor','🖍️','Fosfor'],['silgi','🧽','Silgi'],['yazi','⌨️','Yazı']].forEach(function(a){
     var b=document.createElement('button'); b.textContent=a[1]; b.title=a[2]; b.className='arac';
     b.onclick=function(){ aracSec(a[0]); }; araclar[a[0]]=b; document.getElementById('arac').appendChild(b);
@@ -243,6 +256,8 @@ const HTML = `<!doctype html><html><head>
   .sayfa .ov{position:absolute;left:0;top:0;touch-action:auto;}
   .sayfa .syf{position:absolute;right:6px;bottom:4px;font:11px/1 Arial,sans-serif;color:#8a7d62;background:rgba(255,255,255,.75);padding:2px 5px;border-radius:3px;pointer-events:none;}
   body[data-arac="kalem"] .ov,body[data-arac="fosfor"] .ov,body[data-arac="silgi"] .ov{touch-action:none;}
+  /* Kalem görüldüyse parmak kaydırabilsin: tarayıcı kaydırmaya izin verir, kalem dokunuşu JS'te durdurulur. */
+  body.kalemli .ov{touch-action:auto !important;}
   /* Klavye yazı notu: sayfaya yapışık, düzenlenebilir kutu (sarı post-it görünümü). */
   .yazi{position:absolute;transform:translate(-1px,-1px);min-width:14px;min-height:1em;max-width:62%;
     background:rgba(255,249,196,.9);border:1px dashed #c9a227;border-radius:5px;padding:2px 5px;
