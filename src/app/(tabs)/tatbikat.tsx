@@ -13,7 +13,8 @@ import type { SinavSonuc } from '@/db/schema';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
-import { genelDenemeler, genelSanalLawId, karmaAnahtar, premiumDenemeler, puanKatsayisi } from '@/lib/sinav';
+import { rekorGetir, type DenemeTakim, type SiraSatiri } from '@/lib/deneme-servis';
+import { genelDenemeler, genelSanalLawId, karmaAnahtar, karmaSunucuNo, premiumDenemeler, puanKatsayisi } from '@/lib/sinav';
 import { useUyelik } from '@/lib/uyelik-context';
 
 /**
@@ -99,6 +100,30 @@ function TatbikatIcerik() {
   }, []);
 
   useFocusEffect(yukle);
+
+  // REKOR (başkan, 27 Eyl 2026: "her denemede rekor kimde görülmüyor"): açık sekmedeki her denemenin
+  // sıralama birincisi. Branş denemeleri sunucuda branş ayrımsız numaralandığı için orada gösterilmez.
+  const [rekor, setRekor] = useState<Record<string, SiraSatiri | null>>({});
+  const rekorAnahtarlari = useMemo((): [string, DenemeTakim, number][] => {
+    if (blok === 'müşterek') return genelDenemeler(undefined).map((d) => [`m${d.no}`, 'musterek', d.no]);
+    if (blok === 'karma' && karmaKey)
+      return [
+        ...karmaBDenemeler.map((d): [string, DenemeTakim, number] => [`k${d.no}`, 'karma', karmaSunucuNo(karmaKey, d.no)]),
+        ...premiumListe.map((d): [string, DenemeTakim, number] => [`p${d.no}`, 'premium', d.no]),
+      ];
+    return [];
+  }, [blok, karmaKey, karmaBDenemeler, premiumListe]);
+  useFocusEffect(
+    useCallback(() => {
+      let iptal = false;
+      void Promise.all(rekorAnahtarlari.map(([k, t, n]) => rekorGetir(t, n).then((r) => [k, r] as const))).then(
+        (liste) => !iptal && setRekor(Object.fromEntries(liste)),
+      );
+      return () => {
+        iptal = true;
+      };
+    }, [rekorAnahtarlari]),
+  );
 
   function genelDenemeGit(no: number, takim: 'müşterek' | 'brans' | 'karma' = 'müşterek') {
     router.push({
@@ -193,6 +218,7 @@ function TatbikatIcerik() {
             karmaBDenemeler.map((d) => (
               <GenelDenemeSatir
                 key={`kb${d.no}`}
+                rekor={rekor[`k${d.no}`]}
                 deneme={d}
                 katsayi={puanKatsayisi('karmab')}
                 sonuc={sonucMap.get(genelSanalLawId('karmab', d.no, karmaKey))?.get(0)}
@@ -212,6 +238,7 @@ function TatbikatIcerik() {
           {premiumListe.map((d) => (
             <GenelDenemeSatir
               key={`p${d.no}`}
+              rekor={rekor[`p${d.no}`]}
               deneme={d}
               katsayi={puanKatsayisi('premium')}
               sonuc={sonucMap.get(genelSanalLawId('premium', d.no))?.get(0)}
@@ -244,6 +271,7 @@ function TatbikatIcerik() {
           {genelDenemeler(blok === 'müşterek' ? undefined : blok, brans).map((d) => (
             <GenelDenemeSatir
               key={d.no}
+              rekor={blok === 'müşterek' ? rekor[`m${d.no}`] : undefined}
               // Branş denemesi kendi başlığını taşır ("MEBS Branş Denemesi 1") — ezme.
               deneme={{ ...d, baslik: blok === 'brans' ? d.baslik : denemeAdi(blok, d.no) }}
               katsayi={puanKatsayisi(blok === 'müşterek' ? undefined : blok)}
@@ -281,6 +309,7 @@ function GenelDenemeSatir({
   sonuc,
   kilitli,
   premiumRozet,
+  rekor,
   gece,
   onGit,
 }: {
@@ -288,6 +317,8 @@ function GenelDenemeSatir({
   katsayi: number;
   sonuc: SinavSonuc | undefined;
   kilitli: boolean;
+  /** Sıralama birincisi (yoksa satır gösterilmez). */
+  rekor?: SiraSatiri | null;
   /** Premium deneme: sağda altın kilit (ücretsiz) / açık altın kilit (premium üye). Taç YASAK (marka kuralı). */
   premiumRozet?: boolean;
   gece?: boolean;
@@ -310,6 +341,11 @@ function GenelDenemeSatir({
           {deneme.soruSayisi} soru · {deneme.soruSayisi * katsayi} puan
           {sonuc ? ` · Son: ${sonuc.dogru * katsayi}/${sonuc.toplam * katsayi} puan` : ''}
         </AppText>
+        {rekor ? (
+          <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'}>
+            Rekor: {rekor.puan}/{rekor.toplam_puan} · {rekor.ad}
+          </AppText>
+        ) : null}
       </View>
       <MaterialCommunityIcons
         name={premiumRozet ? (kilitli ? 'lock' : 'lock-open-variant') : kilitli ? 'lock' : 'chevron-right'}

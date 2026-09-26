@@ -168,6 +168,14 @@ export async function siralamaGetir(takim: DenemeTakim, denemeNo: number): Promi
   return data as SiraSatiri[];
 }
 
+/** Denemenin rekoru: sıralamanın ilk satırı (yoksa null). Deneme listesinde "Rekor" satırı için. */
+export async function rekorGetir(takim: DenemeTakim, denemeNo: number): Promise<SiraSatiri | null> {
+  if (!supabase) return null;
+  const { data, error } = await supabase.rpc('deneme_siralama', { p_takim: takim, p_deneme: denemeNo, p_limit: 1 });
+  if (error || !Array.isArray(data) || !data.length) return null;
+  return data[0] as SiraSatiri;
+}
+
 export async function kendiSiram(
   takim: DenemeTakim,
   denemeNo: number,
