@@ -2,7 +2,7 @@
   "expo": {
     "name": "Mevzu — JSPS Hazırlık",
     "slug": "gorsel-hafiza-jsps",
-    "version": "1.0.46",
+    "version": "1.0.47",
     "orientation": "portrait",
     "icon": "./assets/images/mevzu-icon-1024.png",
     "scheme": "mevzu",
@@ -18,7 +18,9 @@
     },
     "ios": {
       "bundleIdentifier": "app.mevzujsps.ios",
-      "buildNumber": "72",
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "buildNumber": "73",
       "icon": "./assets/images/mevzu-icon-1024.png",
       "usesAppleSignIn": true,
       "associatedDomains": [
