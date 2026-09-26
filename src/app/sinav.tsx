@@ -11,7 +11,6 @@ import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { ekleSinavSonucu, getAllCards, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
-import { useKisiselOzellik } from '@/lib/ozellik';
 import { useRutbe } from '@/lib/rutbe-context';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { genelDenemeErisilebilir } from '@/constants/urunler';
@@ -74,7 +73,7 @@ export default function SinavScreen() {
   }>();
   // Uzman rütbede müşterek denemedeki 4678 / Sözleşmeli Yön. soruları yedekle değişir (önizleme).
   const { rutbe } = useRutbe();
-  const yeniDenemeler = useKisiselOzellik('on-izleme');
+  const yeniDenemeler = true; // başkan onayıyla herkese (27 Eyl 2026)
   // GENEL DENEME (Tatbikat): genel=1/2/3 (müşterek) · gblok=brans 1..5 (branş) · gblok=karma 1..5 (karma, 100 soru).
   // Sanal law_id: müşterek -genelNo (-1..-3), branş -(100+genelNo) (-101..-105) → sonuç/skor
   // AYRIŞIR (getSinavSonuclari law_id<0 ile genel deneme sayar; iki blok çakışmaz).

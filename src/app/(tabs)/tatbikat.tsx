@@ -55,7 +55,8 @@ function TatbikatIcerik() {
   // PREMIUM DENEMELER (başkan, 25 Eyl 2026): ayrı sekme YOK — denemelerin altına aynı satırlarla
   // sıralanır, sağda altın premium kilidi. Premium üye girer, ücretsiz dokununca paywall.
   // Önce yalnız başkanda ('on-izleme'), onaydan sonra herkese.
-  const premiumAcik = useKisiselOzellik('on-izleme');
+  // Başkan onayıyla 27 Eyl 2026'da herkese açıldı (önizleme bitti).
+  const premiumAcik = true;
   // DENEMELER DÜZENİ (başkan, 26 Eyl 2026 — önce 'on-izleme'de):
   //  - sekme sırası KARMA · MÜŞTEREK · BRANŞ, sayfa KARMA ile açılır;
   //  - karma denemeler kişinin BRANŞINA göre (müşterek + yalnız kendi branşı, gerçek sınav oranı);
