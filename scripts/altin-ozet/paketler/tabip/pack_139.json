@@ -1,0 +1,72 @@
+{
+"brans": "tabip",
+"law_id": 139,
+"ad": "Türk Ceza Kanunu — Mal veya Hizmet Satımından Kaçınma (m.240)",
+"sira": 4,
+"arsiv_oneki": "TCK 5237",
+"kitap_pdf": "C:/Users/GIGABYTE/OneDrive/Desktop/JSPS BRANS KITAPLARI/TABIP/5237_Turk_Ceza_Kanunu_Mal_veya_Hizmet_Satimindan_Kaci.pdf",
+"kapsam_maddeleri": [
+240
+],
+"madde_sayisi": 2,
+"maddeler": [
+{
+"anahtar": "TCK 5237 m.240",
+"no": "240",
+"metin": "(1) Belli bir mal veya hizmeti satmaktan kaçınarak kamu için acil bir ihtiyacın ortaya çıkmasına neden olan kişi, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır."
+},
+{
+"anahtar": "TCK 5237 m.Geçici 1",
+"no": "Geçici 1",
+"metin": "(Ek: 11/4/2013-6459/14 md.) (1) Bu maddeyi ihdas eden Kanunla, bu Kanunun 235 inci maddesinde yapılan değişiklik sebebiyle görülmekte olan davalarda görevsizlik kararı verilemez."
+}
+],
+"cikmis_sorular": [],
+"banka_sorulari": [
+{
+"soru": "5237 sayılı Türk Ceza Kanunu'na göre belli bir mal veya hizmeti satmaktan kaçınarak kamu için acil bir ihtiyacın ortaya çıkmasına neden olan kişi hangi ceza ile cezalandırılır?",
+"siklar": [
+"Bir yıldan üç yıla kadar hapis",
+"İki yıldan beş yıla kadar hapis",
+"Adli para cezası",
+"Üç yıldan yedi yıla kadar hapis",
+"Altı aydan iki yıla kadar hapis"
+],
+"dogru": 0,
+"aciklama": "m.240: 'Belli bir mal veya hizmeti satmaktan kaçınarak kamu için acil bir ihtiyacın ortaya çıkmasına neden olan kişi, bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.'",
+"kaynak": "5237 m.240"
+},
+{
+"soru": "5237 sayılı Türk Ceza Kanunu'na göre, 5237 sayılı TCK'nın mal veya hizmet satımından kaçınma suçunun oluşabilmesi için aşağıdakilerden hangisi şarttır?",
+"siklar": [
+"Fiilin bir kamu görevlisine karşı işlenmesi",
+"Satmaktan kaçınma nedeniyle kamu için acil bir ihtiyacın ortaya çıkmış olması",
+"Malın fiyatının piyasa değerinin üzerinde belirlenmiş olması",
+"Failin daha önce aynı suçtan mahkûm olmuş olması",
+"Failin tacir sıfatını taşıması"
+],
+"dogru": 1,
+"aciklama": "m.240 suçun neticesini açıkça belirler: satmaktan kaçınma 'kamu için acil bir ihtiyacın ortaya çıkmasına neden' olmalıdır. Bu netice gerçekleşmezse suç oluşmaz.",
+"kaynak": "5237 m.240"
+},
+{
+"soru": "5237 sayılı Türk Ceza Kanunu'na göre, 5237 sayılı TCK'nın mal veya hizmet satımından kaçınma suçu bakımından fail kimdir?",
+"siklar": [
+"Yalnızca sağlık meslek mensubu",
+"Yalnızca kamu ihalesine katılan istekli",
+"Herhangi bir kişi",
+"Yalnızca üretici konumundaki tüzel kişi",
+"Yalnızca kamu görevlisi olan kişi"
+],
+"dogru": 2,
+"aciklama": "m.240 'neden olan kişi' diyerek fail bakımından özel bir sıfat aramaz; suç herkes tarafından işlenebilir.",
+"kaynak": "5237 m.240"
+}
+],
+"banka_kaynak_sayim": [
+[
+"5237 m.240",
+3
+]
+]
+}

@@ -1,0 +1,765 @@
+{
+"brans": "mebs",
+"law_id": 102,
+"ad": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12)",
+"sira": 1,
+"arsiv_oneki": "CB Genelge 2019-12",
+"kitap_pdf": "C:/Users/GIGABYTE/OneDrive/Desktop/JSPS BRANS KITAPLARI/MEBS/2019-12_Bilgi_ve_Iletisim_Guvenligi_Tedbirleri_Genelgesi.pdf",
+"kapsam_maddeleri": "Tamamı",
+"madde_sayisi": 23,
+"maddeler": [
+{
+"anahtar": "CB Genelge 2019-12 m.1",
+"no": "1",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — GİRİŞ\nBilginin dijital ortamlara taşınması, bilgiye erişimin kolaylaşması, altyapıların dijital hale gelmesi ve bilgi yönetim sistemlerinin yaygın olarak kullanılması, ciddi güvenlik risklerini beraberinde getirmektedir. Karşılaşılan güvenlik risklerinin azaltılması, etkisiz kılınması ve özellikle gizliliği, bütünlüğü veya erişilebilirliği bozulduğunda milli güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek kritik türdeki verilerin güvenliğinin sağlanması amacıyla aşağıdaki tedbirlerin alınması uygun görülmüştür."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.2",
+"no": "2",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 1\nNüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler gibi kritik bilgi ve veriler yurtiçinde güvenli bir şekilde depolanacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.3",
+"no": "3",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 2\nKamu kurum ve kuruluşlarında yer alan kritik veriler, internete kapalı ve fiziksel güvenliği sağlanmış bir ortamda bulunan güvenli bir ağda tutulacak, bu ağda kullanılacak cihazlara erişim kontrollü olarak sağlanacak ve log kayıtları değiştirilmeye karşı önlem alınarak saklanacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.4",
+"no": "4",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 3\nKamu kurum ve kuruluşlarına ait veriler, kurumların kendi özel sistemleri veya kurum kontrolündeki yerli hizmet sağlayıcılar hariç bulut depolama hizmetlerinde saklanmayacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.5",
+"no": "5",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 4\nMevzuatta kodlu veya kriptolu haberleşmeye yetkilendirilmiş kurumlar tarafından geliştirilen yerli mobil uygulamalar hariç olmak üzere, mobil uygulamalar üzerinden, gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.6",
+"no": "6",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 5\nSosyal medya üzerinden gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.7",
+"no": "7",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 6\nSosyal medya ve haberleşme uygulamalarına ait yerli uygulamaların kullanımı tercih edilecektir."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.8",
+"no": "8",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 7\nKamu kurum ve kuruluşlarınca gizlilik dereceli bilgilerin işlendiği yerlerde yayma güvenliği (TEMPEST) veya benzeri güvenlik önlemleri alınacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.9",
+"no": "9",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 8\nKritik veri, doküman ve belgelerin bulunduğu ve/veya görüşmelerin gerçekleştirildiği çalışma odalarında/ortamlarında mobil cihazlar ve veri transferi özelliğine sahip cihazlar bulundurulmayacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.10",
+"no": "10",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 9\nGizlilik dereceli veya kurumsal mahremiyet içeren veri, doküman ve belgeler kurumsal olarak yetkilendirilmemiş veya kişisel olarak kullanılan cihazlarda (dizüstü bilgisayar, mobil cihaz, harici bellek vb.) bulundurulmayacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.11",
+"no": "11",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 10\nKişisel olarak kullanılanlar da dâhil olmak üzere kaynağından emin olunmayan taşınabilir cihazlar (dizüstü bilgisayar, mobil cihazlar, harici bellek/disk, CD/DVD vb.) kurum sistemlerine bağlanmayacaktır. Gizlilik dereceli verilerin saklandığı cihazlar, ancak içerisinde yer alan veriler donanımsal ve/veya yazılımsal olarak kriptolanmak suretiyle kurum dışına çıkarılabilecek; bu amaçla kullanılan cihazlar kayıt altına alınacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.12",
+"no": "12",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 11\nYerli ve milli kripto sistemlerinin geliştirilmesi teşvik edilerek, kurumlara ait gizlilik dereceli haberleşmenin bu sistemler üzerinden gerçekleştirilmesi sağlanacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.13",
+"no": "13",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 12\nKamu kurum ve kuruluşlarınca temin edilecek yazılım veya donanımların kullanım amacına uygun olmayan bir özellik ve arka kapı (kullanıcıların bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan güvenlik zafiyeti) açıklığı içermediğine dair üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname alınacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.14",
+"no": "14",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 13\nYazılımların güvenli olarak geliştirilmesi ile ilgili tedbirler alınacaktır. Temin edilen veya geliştirilen yazılımlar kullanılmadan önce güvenlik testlerinden geçirilerek kullanılacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.15",
+"no": "15",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 14\nKurum ve kuruluşlar, siber tehdit bildirimleri ile ilgili gerekli tedbirleri alacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.16",
+"no": "16",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 15\nÜst düzey yöneticiler de dahil olmak üzere, personelin sistemlere erişim yetkilendirmelerinin, fiilen yürütülen işler ve ihtiyaçlar nazara alınarak yapılması sağlanacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.17",
+"no": "17",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 16\nEndüstriyel kontrol sistemlerinin internete kapalı konumda tutulması sağlanacak, söz konusu sistemlerin internete açık olmasının zorunlu olduğu durumlarda ise gerekli güvenlik önlemleri (güvenlik duvarı, uçtan uca tünelleme yöntemleri, yetkilendirme ve kimliklendirme mekanizmaları vb.) alınacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.18",
+"no": "18",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 17\nMilli güvenliği doğrudan etkileyen stratejik önemi haiz kurum ve kuruluşların üst yöneticileri ile kritik altyapı, tesis ve projelerde görev alacak kritik önemi haiz personel hakkında ilgili mevzuat çerçevesinde güvenlik soruşturması veya arşiv araştırması yaptırılacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.19",
+"no": "19",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 18\nKamu e-posta sistemlerinin ayarları güvenli olacak biçimde yapılandırılacak, e-posta sunucuları, ülkemizde ve kurumun kontrolünde bulundurulacak ve sunucular arasındaki iletişimin şifreli olarak yapılması sağlanacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.20",
+"no": "20",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 19\nKurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılmayacak, kurumsal e-postalar şahsi amaçlarla (özel iletişim, kişisel sosyal medya hesapları vb.) kullanılmayacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.21",
+"no": "21",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 20\nHaberleşme hizmeti sağlamak üzere yetkilendirilmiş işletmeciler Türkiye'de internet değişim noktası kurmakla yükümlüdür. Yurtiçinde değiştirilmesi gereken yurtiçi iletişim trafiğinin yurtdışına çıkarılmamasına yönelik tedbirler alınacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.22",
+"no": "22",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 21\nİşletmeciler tarafından, kritik kurumların bulunduğu bölgelerdeki veriler, radyolink ve benzeri yöntemlerle taşınmayacak, fiber optik kablolar üzerinden taşınacaktır. Kritik veri iletişiminde, radyolink haberleşmesi kullanılmayacak; ancak kullanımın zorunlu olduğu durumlarda veriler milli kripto sistemlerine sahip cihazlar kullanılarak kriptolanacaktır."
+},
+{
+"anahtar": "CB Genelge 2019-12 m.23",
+"no": "23",
+"metin": "2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — KAPANIŞ\nKamu kurum ve kuruluşları ile kritik altyapı hizmeti veren işletmelerin rehbere uyması zorunlu olup, mevcut altyapılar güvenlik seviyeleri dikkate alınarak kademeli olarak uyumlanacaktır. Denetim mekanizmaları oluşturulacak ve yılda en az bir defa uygulanacaktır."
+}
+],
+"cikmis_sorular": [],
+"banka_sorulari": [
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, 2019/12 sayılı Genelge'nin gerekçe bölümüne göre alınacak tedbirlerin temel amacı, verilerin hangi üç niteliğinin bozulması halinde ortaya çıkabilecek milli güvenlik veya kamu düzeni tehdidini önlemektir?",
+"siklar": [
+"Gizlilik, bütünlük, erişilebilirlik",
+"Doğruluk, hız, maliyet",
+"Şeffaflık, hesap verebilirlik, denetlenebilirlik",
+"Yedeklilik, ölçeklenebilirlik, sürdürülebilirlik",
+"Erişilebilirlik, kullanılabilirlik, taşınabilirlik"
+],
+"dogru": 0,
+"aciklama": "Genelge girişi: '...özellikle gizliliği, bütünlüğü veya erişilebilirliği bozulduğunda milli güvenliği tehdit edebilecek veya kamu düzeninin bozulmasına yol açabilecek kritik türdeki verilerin güvenliğinin sağlanması amacıyla...' Bilgi güvenliğinin klasik üç bileşeni (gizlilik-bütünlük-erişilebilirlik) esas alınmıştır.",
+"kaynak": "2019/12 (giriş/gerekçe)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, Genelge'nin giriş paragrafında, güvenlik risklerinin artmasına yol açan gelişmeler arasında aşağıdakilerden hangisi SAYILMAMIŞTIR?",
+"siklar": [
+"Bilginin dijital ortamlara taşınması",
+"Yapay zeka destekli veri işleme sistemlerinin yaygınlaşması",
+"Bilgiye erişimin kolaylaşması",
+"Altyapıların dijital hale gelmesi",
+"Bilgi yönetim sistemlerinin yaygın olarak kullanılması"
+],
+"dogru": 1,
+"aciklama": "Giriş paragrafı yalnızca şu dört unsuru sayar: 'Bilginin dijital ortamlara taşınması, bilgiye erişimin kolaylaşması, altyapıların dijital hale gelmesi ve bilgi yönetim sistemlerinin yaygın olarak kullanılması, ciddi güvenlik risklerini beraberinde getirmektedir.' Yapay zekadan Genelge metninde söz edilmez.",
+"kaynak": "2019/12 (giriş/gerekçe)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, nüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler gibi kritik bilgi ve veriler nerede depolanacaktır?",
+"siklar": [
+"Uluslararası veri merkezlerinde",
+"Yalnızca kağıt ortamında",
+"Yurtiçinde güvenli bir şekilde",
+"Kurum personelinin kişisel cihazlarında",
+"Herhangi bir bulut hizmetinde"
+],
+"dogru": 2,
+"aciklama": "m.1: 'Nüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler gibi kritik bilgi ve veriler yurtiçinde güvenli bir şekilde depolanacaktır.'",
+"kaynak": "2019/12 m.1"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, genelge yurtiçinde güvenli şekilde depolanması öngörülen kritik veri türleri arasında aşağıdakilerden hangisi SAYILMAMIŞTIR?",
+"siklar": [
+"Nüfus kayıt bilgileri",
+"Sağlık kayıt bilgileri",
+"Genetik veriler",
+"Adli sicil kayıt bilgileri",
+"Biyometrik veriler"
+],
+"dogru": 3,
+"aciklama": "m.1'de sayılanlar: nüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler. Adli sicil kayıt bilgileri madde metninde ayrıca sayılmamıştır.",
+"kaynak": "2019/12 m.1"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kamu kurum ve kuruluşlarında yer alan kritik veriler nasıl bir ağda tutulacaktır?",
+"siklar": [
+"İnternete açık ama şifreli bir ağda",
+"Yalnızca kurum dışı bulut sunucularında",
+"Kablosuz (Wi-Fi) genel erişim ağında",
+"Mobil operatör altyapısı üzerinden sanal özel ağda (VPN)",
+"İnternete kapalı ve fiziksel güvenliği sağlanmış bir ortamdaki güvenli ağda"
+],
+"dogru": 4,
+"aciklama": "m.2: 'Kamu kurum ve kuruluşlarında yer alan kritik veriler, internete kapalı ve fiziksel güvenliği sağlanmış bir ortamda bulunan güvenli bir ağda tutulacak...'",
+"kaynak": "2019/12 m.2"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, 2019/12 sayılı Genelge ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+"siklar": [
+"Kritik verilerin tutulduğu ağda kullanılacak cihazlara erişim kontrollü olarak sağlanacaktır.",
+"Kritik verilerin tutulduğu ağda log kayıtları değiştirilmeye karşı önlem alınmadan saklanabilir.",
+"Kritik veriler internete açık bir ortamda tutulabilir.",
+"Kritik verilerin tutulduğu ağa erişim herkese açık olabilir.",
+"Log kayıtlarının saklanması madde kapsamında değildir."
+],
+"dogru": 0,
+"aciklama": "m.2: '...bu ağda kullanılacak cihazlara erişim kontrollü olarak sağlanacak ve log kayıtları değiştirilmeye karşı önlem alınarak saklanacaktır.' Erişim kontrolü ve log kayıtlarının korunması açıkça öngörülmüştür.",
+"kaynak": "2019/12 m.2"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kamu kurum ve kuruluşlarına ait veriler hangi durumda bulut depolama hizmetlerinde saklanabilir?",
+"siklar": [
+"Kurumların kendi özel sistemleri veya kurum kontrolündeki yerli hizmet sağlayıcılar dışında her koşulda",
+"Yalnızca kurumların kendi özel sistemleri veya kurum kontrolündeki yerli hizmet sağlayıcılarda",
+"Uluslararası sertifikaya sahip herhangi bir bulut sağlayıcısında",
+"Kurum personelinin onayı ile herhangi bir bulut hizmetinde",
+"Hiçbir şekilde bulut depolama hizmeti kullanılamaz"
+],
+"dogru": 1,
+"aciklama": "m.3: 'Kamu kurum ve kuruluşlarına ait veriler, kurumların kendi özel sistemleri veya kurum kontrolündeki yerli hizmet sağlayıcılar hariç bulut depolama hizmetlerinde saklanmayacaktır.' Yani yalnız bu iki istisna dışında bulut kullanımı yasaktır.",
+"kaynak": "2019/12 m.3"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, mobil uygulamalar üzerinden gizlilik dereceli veri paylaşımı ve haberleşme yapılmasının istisnası nedir?",
+"siklar": [
+"Herhangi bir yerli mobil uygulamanın kullanılması",
+"Kurum yöneticisinin onayının bulunması",
+"Mevzuatta kodlu veya kriptolu haberleşmeye yetkilendirilmiş kurumların geliştirdiği yerli mobil uygulamalar",
+"Uygulamanın ücretsiz olması",
+"Uygulamanın yurtdışı sunucularında barındırılmaması"
+],
+"dogru": 2,
+"aciklama": "m.4: 'Mevzuatta kodlu veya kriptolu haberleşmeye yetkilendirilmiş kurumlar tarafından geliştirilen yerli mobil uygulamalar hariç olmak üzere, mobil uygulamalar üzerinden, gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır.'",
+"kaynak": "2019/12 m.4"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, aşağıdakilerden hangisi Genelge göre YANLIŞ bir ifadedir?",
+"siklar": [
+"Mobil uygulamalar üzerinden gizlilik dereceli veri paylaşımı esas olarak yapılamaz.",
+"Mevzuatta kriptolu haberleşmeye yetkili kurumların geliştirdiği yerli mobil uygulamalar istisna kapsamındadır.",
+"İstisna, yalnızca yerli mobil uygulamalar için tanınmıştır.",
+"Yabancı menşeli her mobil uygulama, kripto yetkisi olmasa da gizlilik dereceli haberleşmede kullanılabilir.",
+"Mobil uygulamalar üzerinden gizlilik dereceli haberleşme de yasak kapsamındadır."
+],
+"dogru": 3,
+"aciklama": "m.4 istisnayı yalnızca 'mevzuatta kodlu veya kriptolu haberleşmeye yetkilendirilmiş kurumlar tarafından geliştirilen yerli mobil uygulamalar' ile sınırlar; yabancı menşeli uygulamalar bu istisnaya giremez.",
+"kaynak": "2019/12 m.4"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, sosyal medya üzerinden ne yapılmayacaktır?",
+"siklar": [
+"Gizlilik dereceli olmayan genel duyuruların paylaşılması",
+"Kurumsal tanıtım faaliyetleri",
+"Kamuoyu bilgilendirme paylaşımları",
+"Yerli uygulamaların tanıtımı",
+"Gizlilik dereceli veri paylaşımı ve haberleşme"
+],
+"dogru": 4,
+"aciklama": "m.5: 'Sosyal medya üzerinden gizlilik dereceli veri paylaşımı ve haberleşme yapılmayacaktır.'",
+"kaynak": "2019/12 m.5"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, sosyal medya ve haberleşme uygulamalarında hangi tercih esas alınacaktır?",
+"siklar": [
+"Yerli uygulamaların kullanımının tercih edilmesi",
+"En düşük maliyetli uygulamanın kullanımı",
+"Yalnızca kamu kurumlarınca geliştirilen uygulamaların kullanımı",
+"En çok kullanıcıya sahip uygulamanın tercih edilmesi",
+"Uygulama seçiminin personelin insiyatifine bırakılması"
+],
+"dogru": 0,
+"aciklama": "m.6: 'Sosyal medya ve haberleşme uygulamalarına ait yerli uygulamaların kullanımı tercih edilecektir.'",
+"kaynak": "2019/12 m.6"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kamu kurum ve kuruluşlarınca gizlilik dereceli bilgilerin işlendiği yerlerde hangi güvenlik önlemi alınacaktır?",
+"siklar": [
+"Yalnızca fiziksel nöbetçi görevlendirilmesi",
+"Yayma güvenliği (TEMPEST) veya benzeri güvenlik önlemleri",
+"Kapıya parmak izi okuyucu takılması",
+"Odaların ses yalıtımının yapılması",
+"Yalnızca kamera sistemi kurulması"
+],
+"dogru": 1,
+"aciklama": "m.7: 'Kamu kurum ve kuruluşlarınca gizlilik dereceli bilgilerin işlendiği yerlerde yayma güvenliği (TEMPEST) veya benzeri güvenlik önlemleri alınacaktır.'",
+"kaynak": "2019/12 m.7"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, boşluğu doğru tamamlayan seçeneği işaretleyiniz: 'Kamu kurum ve kuruluşlarınca gizlilik dereceli bilgilerin işlendiği yerlerde ......... veya benzeri güvenlik önlemleri alınacaktır.'",
+"siklar": [
+"siber güvenlik sertifikası",
+"fiziksel nöbet sistemi",
+"yayma güvenliği (TEMPEST)",
+"veri şifreleme protokolü",
+"erişim kayıt defteri"
+],
+"dogru": 2,
+"aciklama": "m.7'nin tam metni: '...yayma güvenliği (TEMPEST) veya benzeri güvenlik önlemleri alınacaktır.'",
+"kaynak": "2019/12 m.7"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kritik veri, doküman ve belgelerin bulunduğu veya görüşmelerin gerçekleştirildiği çalışma odalarında ne bulundurulmayacaktır?",
+"siklar": [
+"Yazıcı ve fotokopi makineleri",
+"Masaüstü bilgisayarlar",
+"Sabit hat telefonlar",
+"Mobil cihaz ve veri transferi özelliğine sahip cihazlar",
+"Yangın söndürme cihazları"
+],
+"dogru": 3,
+"aciklama": "m.8: 'Kritik veri, doküman ve belgelerin bulunduğu ve/veya görüşmelerin gerçekleştirildiği çalışma odalarında/ortamlarında mobil cihaz ve veri transferi özelliğine sahip cihazlar bulundurulmayacaktır.'",
+"kaynak": "2019/12 m.8"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, gizlilik dereceli veya kurumsal mahremiyet içeren veri, doküman ve belgeler hangi cihazlarda bulundurulmayacaktır?",
+"siklar": [
+"Yalnızca kurumun merkez sunucularında",
+"Kurumun kendi güvenlik duvarı arkasındaki sunucularda",
+"Kurum içi yerel ağa bağlı masaüstü bilgisayarlarda",
+"Fiziksel arşiv dolaplarında",
+"Kurumsal olarak yetkilendirilmemiş veya kişisel olarak kullanılan cihazlarda (dizüstü bilgisayar, mobil cihaz, harici bellek vb.)"
+],
+"dogru": 4,
+"aciklama": "m.9: '...kurumsal olarak yetkilendirilmemiş veya kişisel olarak kullanılan cihazlarda (dizüstü bilgisayar, mobil cihaz, harici bellek vb.) bulundurulmayacaktır.'",
+"kaynak": "2019/12 m.9"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kaynağından emin olunmayan taşınabilir cihazlar (kişisel olanlar dahil) için kural nedir?",
+"siklar": [
+"Kurum sistemlerine bağlanmayacaktır",
+"Kurum sistemlerine bağlanabilir, ancak antivirüs taraması yeterlidir",
+"Yalnızca üst düzey yöneticiler tarafından bağlanabilir",
+"Kurum dışında kullanılmak şartıyla bağlanabilir",
+"Yazılı izin alınması halinde her zaman bağlanabilir"
+],
+"dogru": 0,
+"aciklama": "m.10: 'Kişisel olarak kullanılanlar da dâhil olmak üzere kaynağından emin olunmayan taşınabilir cihazlar (dizüstü bilgisayar, mobil cihazlar, harici bellek/disk, CD/DVD vb.) kurum sistemlerine bağlanmayacaktır.'",
+"kaynak": "2019/12 m.10"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, gizlilik dereceli verilerin saklandığı cihazların kurum dışına çıkarılabilmesi için aşağıdakilerden hangisi ARANMAZ?",
+"siklar": [
+"Verilerin donanımsal olarak kriptolanması",
+"Kurum yöneticisinin her sefer için ayrı yazılı onay vermesi",
+"Verilerin yazılımsal olarak kriptolanması",
+"Bu amaçla kullanılan cihazların kayıt altına alınması",
+"Cihazın içerisindeki verilerin kriptolanmış olması"
+],
+"dogru": 1,
+"aciklama": "m.10: 'Gizlilik dereceli verilerin saklandığı cihazlar, ancak içerisinde yer alan veriler donanımsal ve/veya yazılımsal olarak kriptolanmak suretiyle kurum dışına çıkarılabilecek; bu amaçla kullanılan cihazlar kayıt altına alınacaktır.' Her seferinde ayrı yazılı onay şartı madde metninde yer almaz.",
+"kaynak": "2019/12 m.10"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kurumlara ait gizlilik dereceli haberleşmenin hangi sistemler üzerinden gerçekleştirilmesi hedeflenmektedir?",
+"siklar": [
+"Yabancı üretici kripto sistemleri",
+"Açık kaynaklı uluslararası şifreleme yazılımları",
+"Yerli ve milli kripto sistemleri",
+"Ticari VPN hizmetleri",
+"Sosyal medya platformlarının şifreleme altyapısı"
+],
+"dogru": 2,
+"aciklama": "m.11: 'Yerli ve milli kripto sistemlerinin geliştirilmesi teşvik edilerek, kurumlara ait gizlilik dereceli haberleşmenin bu sistemler üzerinden gerçekleştirilmesi sağlanacaktır.'",
+"kaynak": "2019/12 m.11"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, 2019/12 sayılı Genelge parantez içinde tanımlanan 'arka kapı' ifadesi neyi belirtir?",
+"siklar": [
+"Yazılımın güncelleme sunucusuna bağlanan resmi arayüz",
+"Kurum personelinin yedek giriş şifresi",
+"Donanımın fiziksel bakım kapağı",
+"Kullanıcıların bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan güvenlik zafiyeti",
+"Ağ güvenlik duvarının varsayılan ayarı"
+],
+"dogru": 3,
+"aciklama": "m.12: '...arka kapı (kullanıcıların bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan güvenlik zafiyeti) açıklığı içermediğine dair üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname alınacaktır.'",
+"kaynak": "2019/12 m.12"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, genelge ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+"siklar": [
+"Kamu kurum ve kuruluşlarınca temin edilecek yazılım/donanımlar için arka kapı bulunmadığına dair taahhütname alınması hiçbir koşulda aranmaz.",
+"Taahhütname yalnızca yerli üreticilerden alınır, yabancı tedarikçilerden alınmaz.",
+"Taahhütname şartı yalnızca donanımlar için geçerlidir, yazılımlar için geçerli değildir.",
+"Arka kapı açıklığı, kullanım amacına uygun olmayan özellikle aynı şeydir ve ayrı bir kavram değildir.",
+"Arka kapı, kullanıcıların bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan bir güvenlik zafiyetidir."
+],
+"dogru": 4,
+"aciklama": "m.12: '...kullanım amacına uygun olmayan bir özellik ve arka kapı (kullanıcıların bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan güvenlik zafiyeti) açıklığı içermediğine dair üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname alınacaktır.' Madde hem yazılım hem donanımı, hem yerli hem yabancı tedarikçiyi kapsar ve arka kapıyı ayrı bir kavram olarak tanımlar.",
+"kaynak": "2019/12 m.12"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, temin edilen veya geliştirilen yazılımlar kullanılmadan önce neye tabi tutulacaktır?",
+"siklar": [
+"Güvenlik testleri",
+"Kullanıcı memnuniyeti anketi",
+"Maliyet analizi",
+"Performans karşılaştırma testi",
+"Telif hakkı incelemesi"
+],
+"dogru": 0,
+"aciklama": "m.13: 'Yazılımların güvenli olarak geliştirilmesi ile ilgili tedbirler alınacaktır. Temin edilen veya geliştirilen yazılımlar kullanılmadan önce güvenlik testlerinden geçirilerek kullanılacaktır.'",
+"kaynak": "2019/12 m.13"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kurum ve kuruluşlar hangi konuda gerekli tedbirleri alacaktır?",
+"siklar": [
+"Personel izin planlaması",
+"Siber tehdit bildirimleri",
+"Bütçe denetimi",
+"Fiziksel arşiv düzenlemesi",
+"Kurumsal sosyal sorumluluk projeleri"
+],
+"dogru": 1,
+"aciklama": "m.14: 'Kurum ve kuruluşlar, siber tehdit bildirimleri ile ilgili gerekli tedbirleri alacaktır.'",
+"kaynak": "2019/12 m.14"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, üst düzey yöneticiler de dahil olmak üzere personelin sistemlere erişim yetkilendirmeleri hangi esasa göre yapılacaktır?",
+"siklar": [
+"Personelin kıdem sırasına göre",
+"Personelin talebine göre otomatik olarak",
+"Fiilen yürütülen işler ve ihtiyaçlar nazara alınarak",
+"Kurumdaki tüm personele eşit yetki verilerek",
+"Yalnızca üst düzey yöneticilerin belirlediği listeye göre"
+],
+"dogru": 2,
+"aciklama": "m.15: 'Üst düzey yöneticiler de dahil olmak üzere, personelin sistemlere erişim yetkilendirmelerinin, fiilen yürütülen işler ve ihtiyaçlar nazara alınarak yapılması sağlanacaktır.'",
+"kaynak": "2019/12 m.15"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, endüstriyel kontrol sistemlerinin temel kural olarak internet bağlantısı nasıl olacaktır?",
+"siklar": [
+"Sürekli internete açık ve uzaktan erişime hazır",
+"Yalnızca mesai saatlerinde internete açık",
+"Kablosuz ağ üzerinden sürekli erişilebilir",
+"İnternete kapalı konumda tutulacak",
+"Bulut tabanlı uzaktan izleme sistemine bağlı"
+],
+"dogru": 3,
+"aciklama": "m.16: 'Endüstriyel kontrol sistemlerinin internete kapalı konumda tutulması sağlanacak...'",
+"kaynak": "2019/12 m.16"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, endüstriyel kontrol sistemlerinin internete açık olmasının zorunlu olduğu durumlarda alınacak güvenlik önlemleri arasında aşağıdakilerden hangisi SAYILMAMIŞTIR?",
+"siklar": [
+"Güvenlik duvarı",
+"Uçtan uca tünelleme yöntemleri",
+"Yetkilendirme mekanizmaları",
+"Kimliklendirme mekanizmaları",
+"Bulut tabanlı otomatik yedekleme sistemi"
+],
+"dogru": 4,
+"aciklama": "m.16: '...gerekli güvenlik önlemleri (güvenlik duvarı, uçtan uca tünelleme yöntemleri, yetkilendirme ve kimliklendirme mekanizmaları vb.) alınacaktır.' Bulut tabanlı yedekleme madde metninde sayılmaz.",
+"kaynak": "2019/12 m.16"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, milli güvenliği doğrudan etkileyen stratejik önemi haiz kurum ve kuruluşların üst yöneticileri ile kritik altyapı, tesis ve projelerde görev alacak kritik önemi haiz personel hakkında ne yaptırılacaktır?",
+"siklar": [
+"İlgili mevzuat çerçevesinde güvenlik soruşturması veya arşiv araştırması",
+"Yalnızca sağlık raporu incelemesi",
+"Performans değerlendirme sınavı",
+"Mali durum beyanı incelemesi",
+"Yabancı dil yeterlilik sınavı"
+],
+"dogru": 0,
+"aciklama": "m.17: '...kritik önemi haiz personel hakkında ilgili mevzuat çerçevesinde güvenlik soruşturması veya arşiv araştırması yaptırılacaktır.'",
+"kaynak": "2019/12 m.17"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, kamu e-posta sunucuları nerede ve kimin kontrolünde bulundurulacaktır?",
+"siklar": [
+"Yurtdışında, hizmet sağlayıcının kontrolünde",
+"Ülkemizde ve kurumun kontrolünde",
+"Uluslararası bir veri merkezinde, ortak kontrolde",
+"Kurum personelinin kişisel sunucularında",
+"Yalnızca bulut hizmeti sağlayıcısının kontrolünde"
+],
+"dogru": 1,
+"aciklama": "m.18: 'Kamu e-posta sistemlerinin ayarları güvenli olacak biçimde yapılandırılacak, e-posta sunucuları, ülkemizde ve kurumun kontrolünde bulundurulacak...'",
+"kaynak": "2019/12 m.18"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, genelge yle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+"siklar": [
+"E-posta sunucuları arasındaki iletişimin şifreli olması gerekmez.",
+"E-posta sunucularının yurtdışında bulunması güvenlik açısından tercih sebebidir.",
+"Kamu e-posta sistemlerinin ayarlarının güvenli biçimde yapılandırılması ve sunucular arası iletişimin şifreli olması sağlanacaktır.",
+"Madde yalnızca özel sektör kuruluşlarını kapsar.",
+"Sunucuların kurumun kontrolünde olması şartı aranmaz."
+],
+"dogru": 2,
+"aciklama": "m.18: 'Kamu e-posta sistemlerinin ayarları güvenli olacak biçimde yapılandırılacak, e-posta sunucuları, ülkemizde ve kurumun kontrolünde bulundurulacak ve sunucular arasındaki iletişimin şifreli olarak yapılması sağlanacaktır.'",
+"kaynak": "2019/12 m.18"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, aşağıdakilerden hangisi 19 uncu maddeye AYKIRI bir davranıştır?",
+"siklar": [
+"Kurumsal e-postanın yalnızca resmi yazışmalarda kullanılması",
+"Kurumsal iletişimin kurumsal e-posta üzerinden yürütülmesi",
+"Kurumsal e-postanın kurum içi yazışmalarda kullanılması",
+"Kurumsal e-postanın kişisel sosyal medya hesabı kaydı için kullanılması",
+"Kurumsal e-postanın kurum onaylı resmi yazışma sistemiyle entegre kullanılması"
+],
+"dogru": 3,
+"aciklama": "m.19: 'Kurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılmayacak, kurumsal e-postalar şahsi amaçlarla (özel iletişim, kişisel sosyal medya hesapları vb.) kullanılmayacaktır.' Kurumsal e-postanın kişisel sosyal medya hesabı için kullanılması açıkça yasaklanan şahsi amaçlı kullanıma örnektir.",
+"kaynak": "2019/12 m.19"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, genelge uyarınca aşağıdakilerden hangisi doğrudan yasaklanmıştır?",
+"siklar": [
+"Kurumsal e-postanın resmi yazışmalarda kullanılması",
+"Kurumsal e-postanın kurum içi duyurularda kullanılması",
+"Kurumsal e-postanın kurum onaylı yazışma sisteminde kullanılması",
+"Kurumsal e-postanın toplantı davetlerinde kullanılması",
+"Kurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılması"
+],
+"dogru": 4,
+"aciklama": "m.19: 'Kurumsal olmayan şahsi e-posta adreslerinden kurumsal iletişim yapılmayacak...' — madde, şahsi e-postadan kurumsal iletişimi ve kurumsal e-postanın şahsi amaçla kullanımını yasaklar; A, B, C, D kurumsal e-postanın olağan/amacına uygun kullanım biçimleridir.",
+"kaynak": "2019/12 m.19"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, haberleşme hizmeti sağlamak üzere yetkilendirilmiş işletmeciler Türkiye'de ne kurmakla yükümlüdür?",
+"siklar": [
+"İnternet değişim noktası",
+"Ulusal veri merkezi",
+"Milli arama motoru",
+"Kamu bulut sistemi",
+"Ulusal kripto ofisi"
+],
+"dogru": 0,
+"aciklama": "m.20: 'Haberleşme hizmeti sağlamak üzere yetkilendirilmiş işletmeciler Türkiye'de internet değişim noktası kurmakla yükümlüdür.'",
+"kaynak": "2019/12 m.20"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, genelge yle ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+"siklar": [
+"Yurtiçi iletişim trafiğinin yurtdışına çıkarılması madde kapsamında serbesttir.",
+"Yurtiçinde değiştirilmesi gereken yurtiçi iletişim trafiğinin yurtdışına çıkarılmamasına yönelik tedbirler alınacaktır.",
+"İnternet değişim noktası kurma yükümlülüğü yalnızca kamu kurumlarına aittir.",
+"Madde, yalnızca uluslararası işletmecileri kapsamaktadır.",
+"İnternet değişim noktası kurulması isteğe bağlıdır."
+],
+"dogru": 1,
+"aciklama": "m.20: '...Yurtiçinde değiştirilmesi gereken yurtiçi iletişim trafiğinin yurtdışına çıkarılmamasına yönelik tedbirler alınacaktır.'",
+"kaynak": "2019/12 m.20"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, işletmeciler tarafından kritik kurumların bulunduğu bölgelerdeki veriler esas olarak hangi yöntemle taşınacaktır?",
+"siklar": [
+"Radyolink yöntemiyle",
+"Uydu üzerinden",
+"Fiber optik kablolar üzerinden",
+"Kablosuz genel ağ üzerinden",
+"Taşınabilir depolama cihazlarıyla fiziksel nakil yoluyla"
+],
+"dogru": 2,
+"aciklama": "m.21: 'İşletmeciler tarafından, kritik kurumların bulunduğu bölgelerdeki veriler, fiber optik kablolar üzerinden taşınacak, radyolink ve benzeri yöntemlerle taşınmayacaktır.'",
+"kaynak": "2019/12 m.21"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, radyolink haberleşmesinin kullanımının zorunlu olduğu durumlarda veriler nasıl korunacaktır?",
+"siklar": [
+"Yalnızca fiziksel güvenlik önlemleriyle",
+"Verilerin sıkıştırılarak gönderilmesiyle",
+"İletişimin gece saatlerine ertelenmesiyle",
+"Milli kripto sistemlerine sahip cihazlar kullanılarak kriptolanarak",
+"Verinin iki farklı hat üzerinden eşzamanlı gönderilmesiyle"
+],
+"dogru": 3,
+"aciklama": "m.21: 'Kritik veri iletişiminde radyolink haberleşmesi kullanılmayacak; ancak kullanımın zorunlu olduğu durumlarda veriler milli kripto sistemlerine sahip cihazlar kullanılarak kriptolanacaktır.'",
+"kaynak": "2019/12 m.21"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, 2019/12 sayılı Genelge'ye göre 'Bilgi ve İletişim Güvenliği Rehberi' hangi kurumun koordinasyonunda hazırlanacaktır?",
+"siklar": [
+"İçişleri Bakanlığı",
+"Milli Savunma Bakanlığı",
+"Bilgi Teknolojileri ve İletişim Kurumu",
+"Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
+"Cumhurbaşkanlığı Dijital Dönüşüm Ofisi Başkanlığı"
+],
+"dogru": 4,
+"aciklama": "Genelge: '...farklı güvenlik seviyeleri içeren \"Bilgi ve İletişim Güvenliği Rehberi\" Cumhurbaşkanlığı Dijital Dönüşüm Ofisi Başkanlığı koordinasyonunda, ilgili kamu kurum ve kuruluşları tarafından gereken katkı sağlanarak hazırlanacak...'",
+"kaynak": "2019/12 (Rehber hükmü)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, Genelge'ye göre 'Bilgi ve İletişim Güvenliği Rehberi' hangi hususlar göz önünde bulundurularak güncellenecektir?",
+"siklar": [
+"İhtiyaçlar, gelişen teknoloji, değişen şartlar ile Ulusal Siber Güvenlik Stratejisi ve eylem planlarındaki değişiklikler",
+"Yalnızca yıllık bütçe imkanları",
+"Yalnızca kamuoyu talepleri",
+"Uluslararası kredi derecelendirme kuruluşlarının raporları",
+"Yalnızca özel sektör önerileri"
+],
+"dogru": 0,
+"aciklama": "Genelge: 'Rehber ihtiyaçlar, gelişen teknoloji, değişen şartlar ile Ulusal Siber Güvenlik Stratejisi ve eylem planlarında yapılacak değişiklikler göz önünde bulundurularak güncellenecektir.'",
+"kaynak": "2019/12 (Rehber hükmü)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, 2019/12 sayılı Genelge'ye göre Rehberde yer verilen usul ve esaslara uyulması, tüm kamu kurum ve kuruluşları ile kritik altyapı hizmeti veren işletmelerde hangi bilgi sistemleri için ZORUNLUDUR?",
+"siklar": [
+"Yalnızca 10 yıldan eski bilgi sistemleri için",
+"Yeni kurulacak bilgi sistemleri için",
+"Yalnızca yurtdışı şubelerdeki sistemler için",
+"Yalnızca özel sektöre ait sistemler için",
+"Hiçbir sistem için zorunlu değildir, tavsiye niteliğindedir"
+],
+"dogru": 1,
+"aciklama": "Genelge: 'Tüm kamu kurum ve kuruluşları ile kritik altyapı hizmeti veren işletmelerde yeni kurulacak bilgi sistemlerinde, Rehberde yer verilen usul ve esaslara uyulması zorunludur.'",
+"kaynak": "2019/12 (uygulama zorunluluğu)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, Genelge'ye göre mevcut bilgi teknolojisi altyapıları Rehbere nasıl uyumlu hale getirilecektir?",
+"siklar": [
+"Derhal ve tek seferde",
+"Yalnızca bütçe imkanı olursa",
+"Güvenlik seviyesi öncelikleri dikkate alınarak kademeli olarak",
+"Hiçbir zaman uyumlu hale getirilmeyecek, muaf tutulacaktır",
+"Yalnızca dış denetim raporunda talep edilirse"
+],
+"dogru": 2,
+"aciklama": "Genelge: 'Mevcut bilgi teknolojisi altyapıları, güvenlik seviyesi öncelikleri dikkate alınarak yayımlanmasını müteakip Rehberde yer alacak plan çerçevesinde kademeli olarak bu esaslara uyumlu hale getirilecektir.'",
+"kaynak": "2019/12 (uygulama zorunluluğu)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, 2019/12 sayılı Genelge'ye göre milli güvenliğin sağlanması ve gizliliğin korunması kapsamında yürütülen görev ve faaliyetler hariç olmak üzere, kurum ve kuruluşlar Rehberin uygulanmasını yılda en az kaç defa denetleyecektir?",
+"siklar": [
+"İki defa",
+"Üç defa",
+"Dört defa",
+"Bir defa",
+"Denetim zorunluluğu yoktur"
+],
+"dogru": 3,
+"aciklama": "Genelge: '...kurum ve kuruluşlar, Rehberin uygulanmasına ilişkin denetim mekanizmalarını oluşturacak ve yılda en az bir defa uygulamayı denetleyecektir.'",
+"kaynak": "2019/12 (denetim hükmü)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, Genelge'ye göre denetim sonuçları ile yapılan düzeltici ve önleyici faaliyetler hangi kuruma nasıl iletilecektir?",
+"siklar": [
+"Sözlü bilgilendirme yoluyla İçişleri Bakanlığına",
+"E-posta yoluyla tüm kamu kurumlarına",
+"Yıllık faaliyet raporunun ekinde Sayıştaya",
+"Basın açıklamasıyla kamuoyuna",
+"Rapor halinde Dijital Dönüşüm Ofisine"
+],
+"dogru": 4,
+"aciklama": "Genelge: 'Denetim sonuçları ile yapılan düzeltici ve önleyici faaliyetler, Rehberde belirtilen usul ve esaslara göre bir rapor halinde Dijital Dönüşüm Ofisine iletilecektir.'",
+"kaynak": "2019/12 (denetim hükmü)"
+},
+{
+"soru": "Cumhurbaşkanlığının 2019/12 Sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre, 2019/12 sayılı 'Bilgi ve İletişim Güvenliği Tedbirleri' konulu Genelge hangi tarihte ve hangi makamdan yayımlanmıştır?",
+"siklar": [
+"5 Temmuz 2019 tarihinde Cumhurbaşkanlığından",
+"6 Temmuz 2019 tarihinde İçişleri Bakanlığından",
+"30 Ağustos 2019 tarihinde Milli Savunma Bakanlığından",
+"5 Temmuz 2019 tarihinde Dijital Dönüşüm Ofisinden",
+"6 Temmuz 2019 tarihinde Resmî Gazete Başkanlığından"
+],
+"dogru": 0,
+"aciklama": "Genelge metninde: 'Cumhurbaşkanlığından' ibaresi ve '5 Temmuz 2019' tarihiyle Recep Tayyip ERDOĞAN imzası yer alır; Resmî Gazete'de yayım tarihi 6 Temmuz 2019, Sayı 30823'tür.",
+"kaynak": "2019/12 (başlık/imza)"
+}
+],
+"banka_kaynak_sayim": [
+[
+"2019/12 (giriş/gerekçe)",
+2
+],
+[
+"2019/12 m.1",
+2
+],
+[
+"2019/12 m.2",
+2
+],
+[
+"2019/12 m.4",
+2
+],
+[
+"2019/12 m.7",
+2
+],
+[
+"2019/12 m.10",
+2
+],
+[
+"2019/12 m.12",
+2
+],
+[
+"2019/12 m.16",
+2
+],
+[
+"2019/12 m.18",
+2
+],
+[
+"2019/12 m.19",
+2
+],
+[
+"2019/12 m.20",
+2
+],
+[
+"2019/12 m.21",
+2
+],
+[
+"2019/12 (Rehber hükmü)",
+2
+],
+[
+"2019/12 (uygulama zorunluluğu)",
+2
+],
+[
+"2019/12 (denetim hükmü)",
+2
+],
+[
+"2019/12 m.3",
+1
+],
+[
+"2019/12 m.5",
+1
+],
+[
+"2019/12 m.6",
+1
+],
+[
+"2019/12 m.8",
+1
+],
+[
+"2019/12 m.9",
+1
+],
+[
+"2019/12 m.11",
+1
+],
+[
+"2019/12 m.13",
+1
+],
+[
+"2019/12 m.14",
+1
+],
+[
+"2019/12 m.15",
+1
+],
+[
+"2019/12 m.17",
+1
+]
+]
+}
