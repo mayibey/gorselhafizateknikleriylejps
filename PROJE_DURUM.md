@@ -2842,3 +2842,6 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   İçişleri 20 km/s yetkisi; 5326 m.28/10 onbeşbin; 4735 m.9 kesin kabule kadar). Israrcı olmayan dil.
 - 10 kişiye kişiye özel duyuru (hepsi 201) + push (7 ok, 3 token yok). 34 bildirim: 12 düzeltildi, 22 incelendi-doğru; kalan yeni 0.
 - Açık: Mesut Dursun geri bildirimi "Maddeler okunmuyor" (3713 m.3 kartı) henüz incelenmedi.
+- 26 Eyl — Mesut Dursun geri bildirimi ("Maddeler okunmuyor", kart 7003 = 3713 m.3) İNCELENDİ: görseldeki trenin arkadaki 7 küçük
+  vagonu (307, 310/1, 311, 312, 313, 315, 320) telefonda okunmuyor; içerik doğru, madde metni tam. Başkan: görsel ÜRETİLMEYECEK,
+  ileride genel bir görsel çalışması yapacak → bu kart o çalışmanın listesine (uzun liste içeren kartlarda küçük yazı taraması).
