@@ -2875,3 +2875,5 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   44 bulgu (4 ciddi: 6136 tabanca cezası yanlış cevap, 6222/4207/çocuk dinlenmesi iki doğru — hepsi P-SB-JAN-01 pilotundaydı),
   hepsi uygulandı, 2 soru çıkarıldı. Açıklama alıntıları artık kelime başından. `python -X utf8 scripts/premium-deneme/hepsini-kur.py`
   75 denemeyi tek komutla kurar (deterministik). 1193 tekil soru; 69 deneme 80, 6 deneme 79 soru. Bulgular: qa-26eyl-bulgular.json.
+- 27 Eyl — **DENEMELER YENİ DÜZEN + 75 PREMIUM DENEME HERKESE** (başkan "yayınla"; commit b4b06f5, OTA 6f1f6bbe, runtime 1.0.46).
+  Önizleme koşulları kaldırıldı (tatbikat.tsx premiumAcik, sinav.tsx yeniDenemeler = true).
