@@ -13,6 +13,7 @@ import { useBrans } from '@/lib/brans-context';
 import { type BransKitap, bransKitaplari } from '@/lib/brans-kitap';
 import { bugunISO } from '@/lib/srs';
 import { sonCalisilanKanun } from '@/lib/devamet';
+import { o } from '@/lib/ekran-olcek';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { sinavVarMi, testSayisi, testSoruSayisi } from '@/lib/sinav';
 import { sinavIlerlemeAnahtarlari } from '@/lib/sinav-ilerleme';
@@ -579,8 +580,9 @@ function Monogram({
   boyut: number;
   variant: 'govde' | 'baslik';
 }) {
+  const kenar = o(boyut); // satır içi ölçü: ekran ölçeğiyle büyüsün (yazı zaten büyüyor)
   return (
-    <View style={[st.monogram, { width: boyut, height: boyut }]}>
+    <View style={[st.monogram, { width: kenar, height: kenar }]}>
       {no ? (
         // 4 haneli numara (5237) küçük kutuda satıra BÖLÜNMESİN: tek satır zorunlu,
         // sığmazsa punto kendiliğinden küçülür (başkanın 9 Ağu "523/7" ekran görüntüsü).
