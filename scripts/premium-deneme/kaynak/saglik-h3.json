@@ -376,19 +376,17 @@
  },
  {
   "law": 99,
-  "tip": "olumsuz",
-  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre kamu personeline yapılacak sosyal yardım ödemelerinde aranan belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "tip": "duz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde hangi belgeler ödeme belgesine bağlanır?",
   "s": [
-   "Doğum yardımında, doğumu gösteren sağlık kurulu raporu ödeme belgesine bağlanır.",
-   "Evlenme yardımında aile yardımı bildirimi ödeme belgesine bağlanır.",
-   "Normal süresinde ölü doğan çocuk için ödenecek ölüm yardımında buna ilişkin rapor da aranır.",
-   "Tayın bedelinin ödenmesinde, ilgili aya ait tutarın tespitini gösteren yazı aranır.",
-   "Aile yardımı bildirimi, yer değiştirme suretiyle atama halinde yenilenir."
+   "Taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu",
+   "Yalnız fatura",
+   "Fatura ve taşınır işlem fişi",
+   "Taahhüt dosyası ve muayene ve kabul komisyonu tutanağı",
+   "Harcama talimatı ve Yapım İşleri Hakediş Raporu"
   ],
   "kanit": [
-   "Doğum olayının meydana geldiği yeri ve tarihi belirten ilgilinin dilekçesi",
-   "ölü olarak doğan çocuklar için ödenecek ölüm yardımında, buna ilişkin raporun",
-   "yer değiştirme suretiyle atama halinde yenilenir"
+   "bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde; -Taahhüt dosyası, - Fatura, -Hizmet İşleri Hakediş Raporu"
   ]
  },
  {
@@ -438,19 +436,18 @@
  },
  {
   "law": 82,
-  "tip": "olumsuz",
-  "k": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre nakdi tazminatla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "tip": "duz",
+  "k": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre bu Kanun kapsamında ilgili sosyal güvenlik kurumlarınca bağlanan görev malullüğü aylıkları yüzde kaç artırılarak ödenir?",
   "s": [
-   "Ölenlerin kanuni mirasçılarına en yüksek Devlet memuru brüt aylığının 50 katı tutarında nakdi tazminat ödenir.",
-   "Tazminata esas aylık, karar tarihindeki en yüksek Devlet memuru aylığının (ek gösterge dahil) brüt tutarıdır.",
-   "Yaralananlara, ölüm hâlinde ödenecek tutarın %20'sini geçmemek üzere nakdi tazminat ödenir.",
-   "Olağanüstü hâlin devamı süresince nakdi tazminat miktarlarını yarıya kadar indirmeye Cumhurbaşkanı yetkilidir.",
-   "Kesin raporun alınmasının uzayacağı anlaşılırsa asgari oran üzerinden avans ödenir."
+   "25",
+   "15",
+   "50",
+   "10",
+   "20"
   ],
   "kanit": [
-   "en yüksek Devlet Memuru brüt aylığının (Ek gösterge dahil) 100 katı tutarında",
-   "yaralananlara ise % 20'sini geçmemek üzere",
-   "yarıya kadar indirilmesine veya nakdi tazminata ilişkin hükümlerin uygulanmamasına Cumhurbaşkanı yetkilidir"
+   "% 25 artırılarak ödenir",
+   "görev malullüğü aylığı bağlanır"
   ]
  },
  {

@@ -17,34 +17,35 @@
  },
  {
   "law": 123,
-  "tip": "duz",
-  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
   "s": [
-   "5",
-   "3",
-   "10",
-   "7",
-   "15"
+   "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
+   "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
+   "Yüklenicinin göstereceği bilirkişilerden oluşur.",
+   "Kararına karşı hakem laboratuvara itiraz edilebilir.",
+   "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir."
   ],
   "kanit": [
-   "en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır"
+   "ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona",
+   "Bu komisyonun vereceği kararlar kesin olup"
   ]
  },
  {
   "law": 77,
-  "tip": "olumsuz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre üst yöneticilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "tip": "onculu",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre yüklenmeyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez.\nII. Yüklenme süresi üç malî yılla sınırlıdır.\nIII. Yüklenmeye girişilen tutara ait ödenekler, gerektiğinde başka mal veya hizmet alımında kullanılabilir.",
   "s": [
-   "İl özel idarelerinde üst yönetici il genel meclisi başkanıdır.",
-   "Belediyelerde belediye başkanı üst yöneticidir.",
-   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir.",
-   "Mahallî idarelerde üst yöneticiler meclislerine karşı sorumludur.",
-   "Üst yöneticiler sorumluluklarını harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla yerine getirir."
+   "Yalnız I",
+   "Yalnız II",
+   "I ve II",
+   "I ve III",
+   "I, II ve III"
   ],
   "kanit": [
-   "il özel idarelerinde vali ve belediyelerde belediye başkanı üst yöneticidir",
-   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir",
-   "harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla"
+   "Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez",
+   "Yüklenme süresi malî yılla sınırlıdır",
+   "başka iş yaptırılması, mal veya hizmet alınması için kullanılamaz"
   ]
  },
  {
@@ -114,16 +115,17 @@
  {
   "law": 77,
   "tip": "duz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre merkezî yönetim kapsamındaki kamu idareleri, kendi bütçeleri içinde aktarma yapılacak tertipteki ödeneğin yüzde kaçına kadar ödenek aktarması yapabilir?",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre sözleşmesinde belirtilmek şartıyla yüklenicilere teminat karşılığında ödenebilecek bütçe dışı avans, yüklenme tutarının yüzde kaçını geçemez?",
   "s": [
-   "20",
-   "10",
-   "5",
    "30",
-   "15"
+   "20",
+   "50",
+   "10",
+   "25"
   ],
   "kanit": [
-   "aktarma yapılacak tertipteki ödeneğin yüzde yirmisine kadar kendi bütçeleri içinde ödenek aktarması yapabilirler"
+   "yüklenme tutarının yüzde otuzunu geçmemek üzere",
+   "teminat karşılığında bütçe dışı avans ödenebilir"
   ]
  },
  {
@@ -271,18 +273,18 @@
  {
   "law": 77,
   "tip": "olumsuz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ödeneklerinin kullanılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre faaliyet raporlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "Cari yılda kullanılmayan ödenekler ertesi yıl bütçesine devreder.",
-   "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz.",
-   "Genel bütçe kapsamındaki kamu idareleri, ayrıntılı harcama programlarını vize edilmek üzere Cumhurbaşkanlığına gönderir.",
-   "Özel bütçeli idareler ve sosyal güvenlik kurumları ayrıntılı finansman programlarını hazırlar.",
-   "İlama bağlı borçlar ilgili kamu idaresinin cari yıl bütçesinden ödenir."
+   "Mahallî idarelerin idare faaliyet raporlarının birer örneği Hazine ve Maliye Bakanlığına gönderilir.",
+   "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkililerince her yıl faaliyet raporu hazırlanır.",
+   "Üst yönetici, idare faaliyet raporunu düzenleyerek kamuoyuna açıklar.",
+   "Merkezî yönetim kapsamındaki idareler, idare faaliyet raporlarının birer örneğini Sayıştaya ve Cumhurbaşkanlığına gönderir.",
+   "Genel faaliyet raporu Cumhurbaşkanlığı tarafından hazırlanır ve kamuoyuna açıklanır."
   ],
   "kanit": [
-   "Cari yılda kullanılmayan ödenekler yıl sonunda iptal edilir",
-   "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz",
-   "ilama bağlı borçlar, ilgili kamu idaresinin cari yıl bütçesinden ödenir"
+   "Mahallî idarelerce hazırlanan idare faaliyet raporlarının birer örneği Sayıştay ve Çevre ve Şehircilik Bakanlığına",
+   "her yıl faaliyet raporu hazırlanır",
+   "Cumhurbaşkanlığı, genel faaliyet raporunu kamuoyuna açıklar"
   ]
  },
  {
@@ -494,18 +496,17 @@
  },
  {
   "law": 123,
-  "tip": "vaka",
-  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre numunenin ilk iki muayenesi birbirinden değişik sonuçlar vermişse aşağıdakilerden hangisi yapılır?",
   "s": [
-   "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
-   "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
-   "Yüklenicinin göstereceği bilirkişilerden oluşur.",
-   "Kararına karşı hakem laboratuvara itiraz edilebilir.",
-   "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir."
+   "Aynı numune üzerinde üçüncü bir muayene yapılarak üç muayenenin sonuçlarına göre karar verilir.",
+   "Mal doğrudan reddedilir.",
+   "Yüklenici lehine kabul kararı verilir.",
+   "Numune Kamu İhale Kurumuna gönderilir.",
+   "Muayene iptal edilerek yükleniciden yeni numune istenir."
   ],
   "kanit": [
-   "ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona",
-   "Bu komisyonun vereceği kararlar kesin olup"
+   "o numune üzerinde üçüncü bir muayene daha yapılarak bu üç muayenenin sonuçlarına göre karar verilir"
   ]
  },
  {

@@ -407,18 +407,19 @@
  },
  {
   "law": 77,
-  "tip": "vaka",
-  "k": "Genel seferberlik ilan edilmiş; Millî Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bütçelerindeki ödenekler birleştirilerek kullanılmasına rağmen yetersiz kalmıştır. 5018 sayılı Kanun'a göre bu durumda toplam ödenek tutarının yüzde kaçına kadar ek harcama yapılabilir?",
+  "tip": "olumsuz",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre üst yöneticilerle ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "15",
-   "10",
-   "20",
-   "25",
-   "5"
+   "İl özel idarelerinde üst yönetici il genel meclisi başkanıdır.",
+   "Belediyelerde belediye başkanı üst yöneticidir.",
+   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir.",
+   "Mahallî idarelerde üst yöneticiler meclislerine karşı sorumludur.",
+   "Üst yöneticiler sorumluluklarını harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla yerine getirir."
   ],
   "kanit": [
-   "toplam ödenek tutarının yüzde on beşine kadar ek harcama yapılabilir",
-   "ödenek toplamları aşılmamak şartıyla, birleştirilerek kullanılabilir"
+   "il özel idarelerinde vali ve belediyelerde belediye başkanı üst yöneticidir",
+   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir",
+   "harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla"
   ]
  },
  {
@@ -519,17 +520,18 @@
  },
  {
   "law": 123,
-  "tip": "duz",
-  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
   "s": [
-   "5",
-   "3",
-   "10",
-   "7",
-   "15"
+   "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
+   "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
+   "Yüklenicinin göstereceği bilirkişilerden oluşur.",
+   "Kararına karşı hakem laboratuvara itiraz edilebilir.",
+   "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir."
   ],
   "kanit": [
-   "en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır"
+   "ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona",
+   "Bu komisyonun vereceği kararlar kesin olup"
   ]
  },
  {

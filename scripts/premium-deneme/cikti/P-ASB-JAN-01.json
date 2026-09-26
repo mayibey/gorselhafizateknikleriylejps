@@ -39,7 +39,7 @@
   },
   {
    "lawId": 1,
-   "soru": "5237 sayılı Türk Ceza Kanunu'na göre görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdakilerden hangisi görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
    "siklar": [
     "Silahla işlenmesi",
     "Birden fazla kişi tarafından birlikte işlenmesi",
@@ -97,13 +97,13 @@
    ],
    "dogru": 0,
    "tip": "duz",
-   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.14",
-   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.14: “) Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.”",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.10",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.10: “) İçişleri Bakanının kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir.”",
    "id": "P-ASB-JAN-01-06"
   },
   {
    "lawId": 2,
-   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre önleme araması kararında aşağıdakilerden hangisinin bulunması gerekmez?",
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarma hizmet binalarında erbaş ve erlerin üst ve eşyalarının aranmasına ilişkin arama kararında veya emrinde aşağıdakilerden hangisinin belirtilmesi gerekmez?",
    "siklar": [
     "Aramanın zamanı ve süresi",
     "Aramanın konusu ve kapsamı",
@@ -151,7 +151,7 @@
   },
   {
    "lawId": 3,
-   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangisi kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
    "siklar": [
     "Doğru ve gerektiğinde güncel olma",
     "Belirli, açık ve meşru amaçlar için işlenme",
@@ -285,7 +285,7 @@
     "Üç yıldan beş yıla kadar hapis",
     "Bir yıldan üç yıla kadar hapis",
     "Altı aydan iki yıla kadar hapis",
-    "Bir yıldan beş yıla kadar ağır hapis"
+    "Bir yıldan beş yıla kadar hapis"
    ],
    "dogru": 4,
    "tip": "duz",
@@ -631,18 +631,18 @@
   },
   {
    "lawId": 25,
-   "soru": "B, ruhsatsız bir tabancayı evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
+   "soru": "B, tek bir ruhsatsız tabancayı mutat sayıdaki mermisiyle birlikte evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
    "siklar": [
-    "Üç yıldan sekiz yıla kadar",
+    "Üç yıldan beş yıla kadar",
     "Altı aydan bir yıla kadar",
-    "Bir yıldan üç yıla kadar",
     "İki yıldan dört yıla kadar",
-    "İki yıldan beş yıla kadar"
+    "Bir yıldan üç yıla kadar",
+    "Beş yıldan sekiz yıla kadar"
    ],
    "dogru": 3,
    "tip": "vaka",
    "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.13",
-   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.13: “a ses veya gaz fişeği atabilen silah iken bu Kanun hükümlerine tabi silah vasfına dönüştürülen silahları satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.”",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.13: “mermilerinin veya namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaların ev veya işyerinde bulundurulması halinde verilecek ceza bir yıldan üç yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasıdır.”",
    "id": "P-ASB-JAN-01-40"
   },
   {

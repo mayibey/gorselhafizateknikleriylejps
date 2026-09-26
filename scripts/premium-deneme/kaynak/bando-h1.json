@@ -79,18 +79,17 @@
  },
  {
   "law": 123,
-  "tip": "vaka",
-  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre numunenin ilk iki muayenesi birbirinden değişik sonuçlar vermişse aşağıdakilerden hangisi yapılır?",
   "s": [
-   "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
-   "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
-   "Yüklenicinin göstereceği bilirkişilerden oluşur.",
-   "Kararına karşı hakem laboratuvara itiraz edilebilir.",
-   "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir."
+   "Aynı numune üzerinde üçüncü bir muayene yapılarak üç muayenenin sonuçlarına göre karar verilir.",
+   "Mal doğrudan reddedilir.",
+   "Yüklenici lehine kabul kararı verilir.",
+   "Numune Kamu İhale Kurumuna gönderilir.",
+   "Muayene iptal edilerek yükleniciden yeni numune istenir."
   ],
   "kanit": [
-   "ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona",
-   "Bu komisyonun vereceği kararlar kesin olup"
+   "o numune üzerinde üçüncü bir muayene daha yapılarak bu üç muayenenin sonuçlarına göre karar verilir"
   ]
  },
  {
@@ -584,19 +583,17 @@
  },
  {
   "law": 122,
-  "tip": "onculu",
-  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.\nII. Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir.\nIII. Ödeneği bulunmayan işler için, ödeneğin sonradan temin edileceği taahhüdüyle ihaleye çıkılabilir.\nIV. Eşik değerin altında kalmak amacıyla mal alımları kısımlara bölünebilir.",
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre yerli malı teklif eden istekliler lehine yüzde kaça kadar fiyat avantajı sağlanabilir?",
   "s": [
-   "I ve II",
-   "I, II ve III",
-   "II ve IV",
-   "Yalnız I",
-   "I, III ve IV"
+   "15",
+   "10",
+   "20",
+   "25",
+   "5"
   ],
   "kanit": [
-   "açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir",
-   "Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir",
-   "Ödeneği bulunmayan hiçbir iş için ihaleye çıkılamaz"
+   "yerli malı teklif eden istekliler lehine % 15 oranına kadar fiyat avantajı sağlanabilir"
   ]
  },
  {

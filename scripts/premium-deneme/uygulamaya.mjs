@@ -28,6 +28,16 @@ const NO = {
 const kok = 'scripts/premium-deneme/cikti';
 // "(müşterek kapsam)" paket etiketi; kullanıcıya gösterilmez.
 const temiz = (t) => t.replace(/\s*\(müşterek kapsam\)/g, '');
+// Açıklamadaki madde alıntısı bazen kelime ortasından başlıyor ("“kilde yapılır…", "“) Rüşvet…"):
+// yarım ilk kelime/işaret atılır, başa "…" konur. Cümle başıyla (büyük harf, rakam, "(") başlayana dokunulmaz.
+const alintiDuzelt = (a) =>
+  a.replace(/“([^”]*)/, (tam, govde) => {
+    const g = govde.trimStart();
+    if (/^[A-ZÇĞİÖŞÜ0-9(“"]/.test(g)) return '“' + g;
+    const bosluk = g.search(/\s/);
+    const kalan = bosluk < 0 ? g : g.slice(bosluk + 1).trimStart();
+    return '“…' + kalan;
+  });
 // TEKİL SORU TABLOSU (26 Eyl 2026): denemeler blokları paylaşıyor (aynı soru birden çok denemede).
 // Her soru bir kez yazılır; deneme yalnız [soru sırası, şık dizilişi] tutar. Şıklar denemeye göre
 // farklı karıştırıldığı için diziliş saklanır (ör. "20413" = gösterilen sırayla taban şık indeksleri).
@@ -44,7 +54,7 @@ for (const f of fs.readdirSync(kok).filter((x) => x.endsWith('.json')).sort()) {
     if (i == null) {
       i = sorular.length;
       anahtar.set(k, i);
-      sorular.push({ l: q.lawId, k: q.soru, s: q.siklar, d: q.dogru, a: temiz(q.aciklama), y: temiz(q.kaynak) });
+      sorular.push({ l: q.lawId, k: q.soru, s: q.siklar, d: q.dogru, a: alintiDuzelt(temiz(q.aciklama)), y: temiz(q.kaynak) });
     }
     const taban = sorular[i].s;
     const dizilis = q.siklar.map((x) => taban.indexOf(x)).join('');

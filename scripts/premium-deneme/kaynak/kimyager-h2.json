@@ -294,7 +294,7 @@
    "1/25.000-1/50.000"
   ],
   "kanit": [
-   "1/50.000-1/100.000 ölçekli çevre düzeni plânları Bakanlıkça yapılır"
+   "1/50.000- 1/100.000 ölçekli çevre düzeni plânları Bakanlıkça yapılır"
   ]
  },
  {
@@ -349,7 +349,7 @@
   "tip": "duz",
   "k": "2872 sayılı Çevre Kanunu'na göre Kanunda öngörülen idari yaptırım kararları Bakanlık taşra teşkilatında kimler tarafından verilir?",
   "s": [
-   "Çevre ve şehircilik il müdürleri",
+   "Bakanlığın il müdürleri",
    "Valiler",
    "Kaymakamlar",
    "Belediye başkanları",
@@ -487,18 +487,17 @@
  {
   "law": 131,
   "tip": "olumsuz",
-  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi tehlike analizi ve kritik kontrol noktaları (HACCP) temel ilkelerinden biri değildir?",
+  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi Yönetmeliğin uygulanmadığı hâller arasında yer almaz?",
   "s": [
-   "Kritik kontrol noktalarının tüketicilere ilan edilmesi",
-   "Önlenmesi gereken tehlikelerin belirlenmesi",
-   "Kritik limitlerin oluşturulması",
-   "Etkin izleme prosedürlerinin oluşturulması",
-   "Düzeltici faaliyet prosedürlerinin oluşturulması"
+   "Hayvansal gıdalar için özel hijyen kurallarının uygulandığı gıda işletmecileri",
+   "Kişisel tüketim amacıyla birincil üretim",
+   "Kişisel tüketim amacıyla gıdanın hazırlanması ve depolanması",
+   "Küçük miktardaki birincil ürünlerin üreticisince son tüketiciye doğrudan arzı",
+   "Yalnızca jelatin ve kolajen hammaddesi sağlayan toplama merkezleri ve tabakhaneler"
   ],
   "kanit": [
-   "aşağıdaki yedi temel ilkeyi içerir",
-   "kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması",
-   "düzeltici faaliyet prosedürlerinin oluşturulması ve uygulanması"
+   "Hayvansal Gıdalar İçin Özel Hijyen Kuralları Yönetmeliğinin uygulandığı gıda işletmecileri için de geçerlidir",
+   "Kişisel tüketim amacıyla birincil üretime"
   ]
  },
  {

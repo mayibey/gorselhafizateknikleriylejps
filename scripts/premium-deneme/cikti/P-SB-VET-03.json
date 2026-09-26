@@ -551,7 +551,7 @@
   },
   {
    "lawId": 21,
-   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile on altı yaşından büyük tek bir korunan kişi için yapılacak günlük ödeme en fazla ne kadar olabilir?",
    "siklar": [
     "Aylık brüt asgari ücretin tamamı",
     "Aylık net asgari ücretin otuzda biri",
@@ -1063,18 +1063,18 @@
   },
   {
    "lawId": 77,
-   "soru": "Genel seferberlik ilan edilmiş; Millî Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bütçelerindeki ödenekler birleştirilerek kullanılmasına rağmen yetersiz kalmıştır. 5018 sayılı Kanun'a göre bu durumda toplam ödenek tutarının yüzde kaçına kadar ek harcama yapılabilir?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre üst yöneticilerle ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "25",
-    "10",
-    "15",
-    "20",
-    "5"
+    "Mahallî idarelerde üst yöneticiler meclislerine karşı sorumludur.",
+    "Belediyelerde belediye başkanı üst yöneticidir.",
+    "İl özel idarelerinde üst yönetici il genel meclisi başkanıdır.",
+    "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir.",
+    "Üst yöneticiler sorumluluklarını harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla yerine getirir."
    ],
    "dogru": 2,
-   "tip": "vaka",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.20",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.20: “olmaması halinde toplam ödenek tutarının yüzde on beşine kadar ek harcama yapılabilir.”",
+   "tip": "olumsuz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.11",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.11: “Bakanlıklarda ve diğer kamu idarelerinde en üst yönetici, il özel idarelerinde vali ve belediyelerde belediye başkanı üst yöneticidir.”",
    "id": "P-SB-VET-03-67"
   },
   {
@@ -1175,18 +1175,18 @@
   },
   {
    "lawId": 123,
-   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
    "siklar": [
-    "7",
-    "3",
-    "15",
-    "10",
-    "5"
+    "Kararına karşı hakem laboratuvara itiraz edilebilir.",
+    "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
+    "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir.",
+    "Yüklenicinin göstereceği bilirkişilerden oluşur.",
+    "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur."
    ],
    "dogru": 4,
-   "tip": "duz",
-   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.11",
-   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.11: “a) Yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesi veya dokümana uygun olarak teslime hazır hale getirildiğini idareye bildirmesinden itibaren en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır.”",
+   "tip": "vaka",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.15",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.15: “Bu takdirde, mal aynen korunmak suretiyle ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona muayene yaptırılır.”",
    "id": "P-SB-VET-03-74"
   },
   {

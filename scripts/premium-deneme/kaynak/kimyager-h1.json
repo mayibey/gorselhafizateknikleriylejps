@@ -300,19 +300,19 @@
  },
  {
   "law": 131,
-  "tip": "onculu",
-  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Taşıma araçlarının ve konteynerlerin içindeki kaplar, gıdadan başka bir maddenin taşınmasında kullanılmaz.\nII. İshal şikâyeti olan ve bulaştırma ihtimali bulunan personelin gıda ile temasına izin verilebilir.\nIII. Temizlik ve dezenfeksiyon maddeleri, gıdanın muameleye tabi tutulduğu alanlarda depolanabilir.",
+  "tip": "olumsuz",
+  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi tehlike analizi ve kritik kontrol noktaları (HACCP) temel ilkelerinden biri değildir?",
   "s": [
-   "Yalnız I",
-   "I ve II",
-   "I ve III",
-   "Yalnız II",
-   "II ve III"
+   "Kritik kontrol noktalarının tüketicilere ilan edilmesi",
+   "Önlenmesi gereken tehlikelerin belirlenmesi",
+   "Kritik limitlerin oluşturulması",
+   "Etkin izleme prosedürlerinin oluşturulması",
+   "Düzeltici faaliyet prosedürlerinin oluşturulması"
   ],
   "kanit": [
-   "gıdadan başka herhangi bir maddenin taşınmasında kullanılmaz",
-   "gıda ile temasına, gıdaları muamele etmesine veya gıdaların muameleye tabi tutulduğu alanlara girmesine izin verilmez",
-   "Temizlik ve dezenfeksiyon maddeleri gıdanın muameleye tabi tutulduğu alanlarda depolanmaz"
+   "aşağıdaki yedi temel ilkeyi içerir",
+   "kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması",
+   "düzeltici faaliyet prosedürlerinin oluşturulması ve uygulanması"
   ]
  },
  {
@@ -587,17 +587,18 @@
  },
  {
   "law": 123,
-  "tip": "duz",
-  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
   "s": [
-   "5",
-   "3",
-   "10",
-   "7",
-   "15"
+   "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
+   "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
+   "Yüklenicinin göstereceği bilirkişilerden oluşur.",
+   "Kararına karşı hakem laboratuvara itiraz edilebilir.",
+   "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir."
   ],
   "kanit": [
-   "en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır"
+   "ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona",
+   "Bu komisyonun vereceği kararlar kesin olup"
   ]
  },
  {
@@ -617,18 +618,19 @@
  },
  {
   "law": 131,
-  "tip": "olumsuz",
-  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi Yönetmeliğin uygulanmadığı hâller arasında yer almaz?",
+  "tip": "onculu",
+  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Taşıma araçlarının ve konteynerlerin içindeki kaplar, gıdadan başka bir maddenin taşınmasında kullanılmaz.\nII. İshal şikâyeti olan ve bulaştırma ihtimali bulunan personelin gıda ile temasına izin verilebilir.\nIII. Temizlik ve dezenfeksiyon maddeleri, gıdanın muameleye tabi tutulduğu alanlarda depolanabilir.",
   "s": [
-   "Hayvansal gıdalar için özel hijyen kurallarının uygulandığı gıda işletmecileri",
-   "Kişisel tüketim amacıyla birincil üretim",
-   "Kişisel tüketim amacıyla gıdanın hazırlanması ve depolanması",
-   "Küçük miktardaki birincil ürünlerin üreticisince son tüketiciye doğrudan arzı",
-   "Yalnızca jelatin ve kolajen hammaddesi sağlayan toplama merkezleri ve tabakhaneler"
+   "Yalnız I",
+   "I ve II",
+   "I ve III",
+   "Yalnız II",
+   "II ve III"
   ],
   "kanit": [
-   "Hayvansal Gıdalar İçin Özel Hijyen Kuralları Yönetmeliğinin uygulandığı gıda işletmecileri için de geçerlidir",
-   "Kişisel tüketim amacıyla birincil üretime"
+   "gıdadan başka herhangi bir maddenin taşınmasında kullanılmaz",
+   "gıda ile temasına, gıdaları muamele etmesine veya gıdaların muameleye tabi tutulduğu alanlara girmesine izin verilmez",
+   "Temizlik ve dezenfeksiyon maddeleri gıdanın muameleye tabi tutulduğu alanlarda depolanmaz"
   ]
  }
 ]

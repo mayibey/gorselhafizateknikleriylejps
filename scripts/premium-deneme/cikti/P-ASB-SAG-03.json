@@ -551,7 +551,7 @@
   },
   {
    "lawId": 21,
-   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile on altı yaşından büyük tek bir korunan kişi için yapılacak günlük ödeme en fazla ne kadar olabilir?",
    "siklar": [
     "Aylık net asgari ücretin otuzda biri",
     "Aylık net asgari ücretin yirmide biri",
@@ -775,18 +775,18 @@
   },
   {
    "lawId": 82,
-   "soru": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre ölenin kanuni mirasçılarına ödenecek nakdi tazminattan, ölenin eş ve füruu ile birlikte bulunan ve ölüm tarihinde sağ olan ana ve babanın her birine ayrı ayrı yüzde kaç tutarında kısım verilir?",
+   "soru": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre nakdi tazminatla ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "15",
-    "20",
-    "25",
-    "5",
-    "10"
+    "Ölenlerin kanuni mirasçılarına en yüksek Devlet memuru brüt aylığının 50 katı tutarında nakdi tazminat ödenir.",
+    "Olağanüstü hâlin devamı süresince nakdi tazminat miktarlarını yarıya kadar indirmeye Cumhurbaşkanı yetkilidir.",
+    "Yaralananlara, ölüm hâlinde ödenecek tutarın %20'sini geçmemek üzere nakdi tazminat ödenir.",
+    "Kesin raporun alınmasının uzayacağı anlaşılırsa asgari oran üzerinden avans ödenir.",
+    "Tazminata esas aylık, karar tarihindeki en yüksek Devlet memuru aylığının (ek gösterge dahil) brüt tutarıdır."
    ],
    "dogru": 0,
-   "tip": "duz",
+   "tip": "olumsuz",
    "kaynak": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun m.3",
-   "aciklama": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun, m.3: “ölenin eş ve füruu veya yalnızca füruu ile içtima eden ve ölüm tarihinde sağ olan ana ve babasının her birine ayrı ayrı olmak üzere % 15 tutarındaki kısmı verildikten sonra kalanı içtima eden diğer mirasçılara ödenir.”",
+   "aciklama": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun, m.3: “) Ölenlerin kanuni mirasçılarına, en yüksek Devlet Memuru brüt aylığının 100 katı tutarında, b) (Değişik: 1/4/1998 - 4356/1 md.”",
    "id": "P-ASB-SAG-03-49"
   },
   {
@@ -887,18 +887,18 @@
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre vize alınmaksızın çalıştırılacak geçici işçilerin ücretlerinin harcama talimatı ve İşçi Ücret Bordrosu ile ödenebilmesi için çalışma süresi en fazla kaç iş günü olmalıdır?",
+   "soru": "Mutemet Astsubay A, birliğindeki Jandarma er ve erbaşlarının harçlık ve tayın bedellerini avans olarak ödetecektir. Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesine hangi belge bağlanır?",
    "siklar": [
-    "45",
-    "20",
-    "30",
-    "60",
-    "15"
+    "Taahhüt dosyası",
+    "Yurtiçi Geçici Görev Yolluğu Bildirimi",
+    "Er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
+    "Muayene ve kabul komisyonu tutanağı",
+    "Sağlık kurulu raporu"
    ],
    "dogru": 2,
-   "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.17",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.17: “a) 30 iş gününü aşmayan sürelerde ve vize alınmaksızın çalıştırılacak işçilerin ücretlerinin ödenmesinde; - Harcama talimatı, - İşçi Ücret Bordrosu (Örnek : 19), ödeme belgesine bağlanır.”",
+   "tip": "vaka",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.18",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.18: “) harçlıklarının ödenmesinde, Er ve Erbaş Harçlıkları Özet Bordrosu (Örnek: 21), b) Jandarma er ve erbaşlarının harçlıkları ve tayın bedellerinin avans olarak ödenmesi halinde, er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı, c) Söz konusu avansların mahsubunda ve kazandan iaşesi mümkün olmayan diğer er ve erbaşların harçlık ve tayın bedelleri ile ordu hemşire, ebe ve hastabakıcılarının tayın bedellerinin ödenmesinde; - Er ve Erbaş Harçlıkları Dağıtım Bordrosu/Er,Erbaş ile Ordu Hemşire, Ebe ve Hastabakıcı Tayın Bedeli Dağıtım Bordrosu (Örnek : 22), - İlgili aya ait tayın bedeli tespitine ilişkin yazı, d) Dinlenme ve hava değişimi alan er ve erbaşların tayın bedellerinin ödenmesinde; - Tayın bedelinin miktarının tespitine ilişkin yazı, -Sağlık kurulu raporu, ödeme belgesine bağlanır. Dinlenme ve hava değişimi alan er ve erbaşların sağlık kurulu raporlarının zamanında düzenlenmemesi halinde hekim raporu veya hasta taburcu belgesi ödeme belgesine bağlanır. Ancak, daha sonra düzenlenen sağlık kurulu raporu, istenildiğinde ibraz edilmek üzere gideri gerçekleştiren harcama biriminde muhafaza edilir. Öğrenim giderleri”",
    "id": "P-ASB-SAG-03-56"
   },
   {
@@ -1047,18 +1047,18 @@
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde hangi belgeler ödeme belgesine bağlanır?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödemenin yapılacağı kişinin tespitinde aranan belgelerle ilgili aşağıdakilerden hangileri doğrudur?\nI. Varislere yapılacak ödemelerde veraset ilamı aranır.\nII. Herhangi bir alacağı temellük eden kişilere yapılacak ödemelerde noterce onaylanmış alacak temliknamesi aranır.\nIII. Kayyımlara yapılacak ödemelerde noterce düzenlenmiş vekaletname aranır.",
    "siklar": [
-    "Taahhüt dosyası ve muayene ve kabul komisyonu tutanağı",
-    "Taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu",
-    "Fatura ve taşınır işlem fişi",
-    "Yalnız fatura",
-    "Harcama talimatı ve Yapım İşleri Hakediş Raporu"
+    "II ve III",
+    "I ve II",
+    "I ve III",
+    "Yalnız I",
+    "I, II ve III"
    ],
    "dogru": 1,
-   "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.45",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.45: “b) Makine, alet, araç ve taşıt kira bedelleri ile bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde; -Taahhüt dosyası, - Fatura, -Hizmet İşleri Hakediş Raporu (Örnek: 4), ödeme belgesine bağlanır.”",
+   "tip": "onculu",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.8",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.8: “d) Varislere yapılacak ödemelerde, veraset ilamı.”",
    "id": "P-ASB-SAG-03-66"
   },
   {
@@ -1191,18 +1191,18 @@
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre yapı, tesis ve onarım giderlerinin ödenmesinde taahhüt dosyası ve fatura ile birlikte ödeme belgesine aşağıdakilerden hangisi bağlanır?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesi ve kanıtlayıcı belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Kıymet takdir komisyonu kararı",
-    "Mihmandar Hesap Cetveli",
-    "Hizmet İşleri Hakediş Raporu",
-    "Piyasa fiyat araştırması tutanağı",
-    "Yapım İşleri Hakediş Raporu"
+    "Fatura ve taşınır işlem fişinin asıllarının bağlanması esastır.",
+    "Kanıtlayıcı belgeler ödeme belgesinin birinci nüshasına bağlanır.",
+    "Ödeme belgesi iki nüsha olarak muhasebe birimine verilir.",
+    "Ödeme belgesinin ikinci nüshası muhasebe biriminde saklanır.",
+    "Ortak veri tabanından yapılan harcamalarda bu veriler ayrıca kanıtlayıcı belge olarak bağlanır."
    ],
    "dogru": 4,
-   "tip": "duz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.54",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.54: “Yapı, tesis ve onarım giderlerinin ödenmesinde; - Taahhüt dosyası, - Fatura, - Yapım İşleri Hakediş Raporu (Örnek: 3) ödeme belgesine bağlanır.”",
+   "tip": "olumsuz",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.5",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.5: “Elektronik ortamda oluşturulan ortak bir veri tabanından yararlanmak suretiyle yapılacak harcamalarda, veri giriş işlemleri gerçekleştirme görevi sayıldığından, ödeme belgesine ayrıca bu verileri kanıtlayıcı belge bağlanmaz .”",
    "id": "P-ASB-SAG-03-75"
   },
   {
@@ -1255,18 +1255,18 @@
   },
   {
    "lawId": 82,
-   "soru": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre bu Kanun kapsamında ilgili sosyal güvenlik kurumlarınca bağlanan görev malullüğü aylıkları yüzde kaç artırılarak ödenir?",
+   "soru": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre ölenin kanuni mirasçılarına ödenecek nakdi tazminattan, ölenin eş ve füruu ile birlikte bulunan ve ölüm tarihinde sağ olan ana ve babanın her birine ayrı ayrı yüzde kaç tutarında kısım verilir?",
    "siklar": [
-    "50",
     "25",
     "15",
-    "20",
-    "10"
+    "10",
+    "5",
+    "20"
    ],
    "dogru": 1,
    "tip": "duz",
-   "kaynak": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun m.4",
-   "aciklama": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun, m.4: “Bu madde gereğince ilgili sosyal güvenlik kurumlarınca kendi mevzuatlarına göre bağlanan aylıklar, (…)7 % 25 artırılarak ödenir.”",
+   "kaynak": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun m.3",
+   "aciklama": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun, m.3: “ölenin eş ve füruu veya yalnızca füruu ile içtima eden ve ölüm tarihinde sağ olan ana ve babasının her birine ayrı ayrı olmak üzere % 15 tutarındaki kısmı verildikten sonra kalanı içtima eden diğer mirasçılara ödenir.”",
    "id": "P-ASB-SAG-03-79"
   },
   {

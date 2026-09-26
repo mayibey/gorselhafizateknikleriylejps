@@ -1031,18 +1031,18 @@
   },
   {
    "lawId": 99,
-   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre kamu personeline yapılacak sosyal yardım ödemelerinde aranan belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde hangi belgeler ödeme belgesine bağlanır?",
    "siklar": [
-    "Tayın bedelinin ödenmesinde, ilgili aya ait tutarın tespitini gösteren yazı aranır.",
-    "Normal süresinde ölü doğan çocuk için ödenecek ölüm yardımında buna ilişkin rapor da aranır.",
-    "Evlenme yardımında aile yardımı bildirimi ödeme belgesine bağlanır.",
-    "Doğum yardımında, doğumu gösteren sağlık kurulu raporu ödeme belgesine bağlanır.",
-    "Aile yardımı bildirimi, yer değiştirme suretiyle atama halinde yenilenir."
+    "Taahhüt dosyası ve muayene ve kabul komisyonu tutanağı",
+    "Fatura ve taşınır işlem fişi",
+    "Yalnız fatura",
+    "Taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu",
+    "Harcama talimatı ve Yapım İşleri Hakediş Raporu"
    ],
    "dogru": 3,
-   "tip": "olumsuz",
-   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.12",
-   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.12: “c) Doğum yardımı : Doğum olayının meydana geldiği yeri ve tarihi belirten ilgilinin dilekçesi ödeme belgesine bağlanır.”",
+   "tip": "duz",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.45",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.45: “b) Makine, alet, araç ve taşıt kira bedelleri ile bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde; -Taahhüt dosyası, - Fatura, -Hizmet İşleri Hakediş Raporu (Örnek: 4), ödeme belgesine bağlanır.”",
    "id": "P-ASB-SAG-02-65"
   },
   {
@@ -1095,18 +1095,18 @@
   },
   {
    "lawId": 82,
-   "soru": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre nakdi tazminatla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre bu Kanun kapsamında ilgili sosyal güvenlik kurumlarınca bağlanan görev malullüğü aylıkları yüzde kaç artırılarak ödenir?",
    "siklar": [
-    "Ölenlerin kanuni mirasçılarına en yüksek Devlet memuru brüt aylığının 50 katı tutarında nakdi tazminat ödenir.",
-    "Kesin raporun alınmasının uzayacağı anlaşılırsa asgari oran üzerinden avans ödenir.",
-    "Tazminata esas aylık, karar tarihindeki en yüksek Devlet memuru aylığının (ek gösterge dahil) brüt tutarıdır.",
-    "Olağanüstü hâlin devamı süresince nakdi tazminat miktarlarını yarıya kadar indirmeye Cumhurbaşkanı yetkilidir.",
-    "Yaralananlara, ölüm hâlinde ödenecek tutarın %20'sini geçmemek üzere nakdi tazminat ödenir."
+    "25",
+    "20",
+    "15",
+    "10",
+    "50"
    ],
    "dogru": 0,
-   "tip": "olumsuz",
-   "kaynak": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun m.3",
-   "aciklama": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun, m.3: “) Ölenlerin kanuni mirasçılarına, en yüksek Devlet Memuru brüt aylığının 100 katı tutarında, b) (Değişik: 1/4/1998 - 4356/1 md.”",
+   "tip": "duz",
+   "kaynak": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun m.4",
+   "aciklama": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun, m.4: “Bu madde gereğince ilgili sosyal güvenlik kurumlarınca kendi mevzuatlarına göre bağlanan aylıklar, (…)7 % 25 artırılarak ödenir.”",
    "id": "P-ASB-SAG-02-69"
   },
   {

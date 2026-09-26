@@ -551,7 +551,7 @@
   },
   {
    "lawId": 21,
-   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile on altı yaşından büyük tek bir korunan kişi için yapılacak günlük ödeme en fazla ne kadar olabilir?",
    "siklar": [
     "Aylık net asgari ücretin yirmide biri",
     "Aylık net asgari ücretin otuzda biri",
@@ -919,18 +919,18 @@
   },
   {
    "lawId": 77,
-   "soru": "Bir kamu görevlisi, alınmamış malı alınmış gibi gösteren gerçek dışı bir belge düzenleyerek kamu kaynağında eksilmeye neden olmuştur. 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bu kişiye, ceza kanunları hükümleri saklı kalmak üzere ayrıca ne kadar para cezası verilir?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ödeneklerinin kullanılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Bir aylık net ödemelerinin dört katı tutarına kadar",
-    "Neden olduğu kamu zararının iki katı tutarına kadar",
-    "Üç aylık brüt aylığı tutarına kadar",
-    "Bir aylık net ödemelerinin yarısı tutarına kadar",
-    "Her türlü aylık, ödenek, zam ve tazminat dahil bir aylık net ödemelerinin iki katı tutarına kadar"
+    "İlama bağlı borçlar ilgili kamu idaresinin cari yıl bütçesinden ödenir.",
+    "Özel bütçeli idareler ve sosyal güvenlik kurumları ayrıntılı finansman programlarını hazırlar.",
+    "Genel bütçe kapsamındaki kamu idareleri, ayrıntılı harcama programlarını vize edilmek üzere Cumhurbaşkanlığına gönderir.",
+    "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz.",
+    "Cari yılda kullanılmayan ödenekler ertesi yıl bütçesine devreder."
    ],
    "dogru": 4,
-   "tip": "vaka",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.71",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.71: “Ayrıca, bu fiilleri işleyenlere her türlü aylık, ödenek, zam, tazminat dahil yapılan bir aylık net ödemelerin iki katı tutarına kadar para cezası verilir.”",
+   "tip": "olumsuz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.20",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.20: “) Cari yılda kullanılmayan ödenekler yıl sonunda iptal edilir.”",
    "id": "P-SB-MUH-03-58"
   },
   {
@@ -999,18 +999,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre faaliyet raporlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "Bir kamu görevlisi, alınmamış malı alınmış gibi gösteren gerçek dışı bir belge düzenleyerek kamu kaynağında eksilmeye neden olmuştur. 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bu kişiye, ceza kanunları hükümleri saklı kalmak üzere ayrıca ne kadar para cezası verilir?",
    "siklar": [
-    "Üst yönetici, idare faaliyet raporunu düzenleyerek kamuoyuna açıklar.",
-    "Merkezî yönetim kapsamındaki idareler, idare faaliyet raporlarının birer örneğini Sayıştaya ve Cumhurbaşkanlığına gönderir.",
-    "Mahallî idarelerin idare faaliyet raporlarının birer örneği Hazine ve Maliye Bakanlığına gönderilir.",
-    "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkililerince her yıl faaliyet raporu hazırlanır.",
-    "Genel faaliyet raporu Cumhurbaşkanlığı tarafından hazırlanır ve kamuoyuna açıklanır."
+    "Üç aylık brüt aylığı tutarına kadar",
+    "Neden olduğu kamu zararının iki katı tutarına kadar",
+    "Her türlü aylık, ödenek, zam ve tazminat dahil bir aylık net ödemelerinin iki katı tutarına kadar",
+    "Bir aylık net ödemelerinin yarısı tutarına kadar",
+    "Bir aylık net ödemelerinin dört katı tutarına kadar"
    ],
    "dogru": 2,
-   "tip": "olumsuz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.41",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.41: “Mahallî idarelerce hazırlanan idare faaliyet raporlarının birer örneği Sayıştay ve Çevre ve Şehircilik Bakanlığına gönderilir.”",
+   "tip": "vaka",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.71",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.71: “Ayrıca, bu fiilleri işleyenlere her türlü aylık, ödenek, zam, tazminat dahil yapılan bir aylık net ödemelerin iki katı tutarına kadar para cezası verilir.”",
    "id": "P-SB-MUH-03-63"
   },
   {
@@ -1159,18 +1159,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre yüklenmeyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez.\nII. Yüklenme süresi üç malî yılla sınırlıdır.\nIII. Yüklenmeye girişilen tutara ait ödenekler, gerektiğinde başka mal veya hizmet alımında kullanılabilir.",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre merkezî yönetim kapsamındaki kamu idareleri, kendi bütçeleri içinde aktarma yapılacak tertipteki ödeneğin yüzde kaçına kadar ödenek aktarması yapabilir?",
    "siklar": [
-    "Yalnız I",
-    "I ve II",
-    "I, II ve III",
-    "I ve III",
-    "Yalnız II"
+    "20",
+    "5",
+    "15",
+    "30",
+    "10"
    ],
    "dogru": 0,
-   "tip": "onculu",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.26",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.26: “Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez.”",
+   "tip": "duz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.21",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.21: “Merkezî yönetim kapsamındaki kamu idareleri, aktarma yapılacak tertipteki ödeneğin yüzde yirmisine kadar kendi bütçeleri içinde ödenek aktarması yapabilirler.”",
    "id": "P-SB-MUH-03-73"
   },
   {

@@ -223,19 +223,19 @@
  },
  {
   "law": 131,
-  "tip": "onculu",
-  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Taşıma araçlarının ve konteynerlerin içindeki kaplar, gıdadan başka bir maddenin taşınmasında kullanılmaz.\nII. İshal şikâyeti olan ve bulaştırma ihtimali bulunan personelin gıda ile temasına izin verilebilir.\nIII. Temizlik ve dezenfeksiyon maddeleri, gıdanın muameleye tabi tutulduğu alanlarda depolanabilir.",
+  "tip": "olumsuz",
+  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi tehlike analizi ve kritik kontrol noktaları (HACCP) temel ilkelerinden biri değildir?",
   "s": [
-   "Yalnız I",
-   "I ve II",
-   "I ve III",
-   "Yalnız II",
-   "II ve III"
+   "Kritik kontrol noktalarının tüketicilere ilan edilmesi",
+   "Önlenmesi gereken tehlikelerin belirlenmesi",
+   "Kritik limitlerin oluşturulması",
+   "Etkin izleme prosedürlerinin oluşturulması",
+   "Düzeltici faaliyet prosedürlerinin oluşturulması"
   ],
   "kanit": [
-   "gıdadan başka herhangi bir maddenin taşınmasında kullanılmaz",
-   "gıda ile temasına, gıdaları muamele etmesine veya gıdaların muameleye tabi tutulduğu alanlara girmesine izin verilmez",
-   "Temizlik ve dezenfeksiyon maddeleri gıdanın muameleye tabi tutulduğu alanlarda depolanmaz"
+   "aşağıdaki yedi temel ilkeyi içerir",
+   "kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması",
+   "düzeltici faaliyet prosedürlerinin oluşturulması ve uygulanması"
   ]
  },
  {
@@ -386,7 +386,7 @@
   "tip": "duz",
   "k": "2872 sayılı Çevre Kanunu'na göre Kanunda öngörülen idari yaptırım kararları Bakanlık taşra teşkilatında kimler tarafından verilir?",
   "s": [
-   "Çevre ve şehircilik il müdürleri",
+   "Bakanlığın il müdürleri",
    "Valiler",
    "Kaymakamlar",
    "Belediye başkanları",
@@ -416,18 +416,18 @@
  {
   "law": 77,
   "tip": "olumsuz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ödeneklerinin kullanılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre faaliyet raporlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "Cari yılda kullanılmayan ödenekler ertesi yıl bütçesine devreder.",
-   "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz.",
-   "Genel bütçe kapsamındaki kamu idareleri, ayrıntılı harcama programlarını vize edilmek üzere Cumhurbaşkanlığına gönderir.",
-   "Özel bütçeli idareler ve sosyal güvenlik kurumları ayrıntılı finansman programlarını hazırlar.",
-   "İlama bağlı borçlar ilgili kamu idaresinin cari yıl bütçesinden ödenir."
+   "Mahallî idarelerin idare faaliyet raporlarının birer örneği Hazine ve Maliye Bakanlığına gönderilir.",
+   "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkililerince her yıl faaliyet raporu hazırlanır.",
+   "Üst yönetici, idare faaliyet raporunu düzenleyerek kamuoyuna açıklar.",
+   "Merkezî yönetim kapsamındaki idareler, idare faaliyet raporlarının birer örneğini Sayıştaya ve Cumhurbaşkanlığına gönderir.",
+   "Genel faaliyet raporu Cumhurbaşkanlığı tarafından hazırlanır ve kamuoyuna açıklanır."
   ],
   "kanit": [
-   "Cari yılda kullanılmayan ödenekler yıl sonunda iptal edilir",
-   "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz",
-   "ilama bağlı borçlar, ilgili kamu idaresinin cari yıl bütçesinden ödenir"
+   "Mahallî idarelerce hazırlanan idare faaliyet raporlarının birer örneği Sayıştay ve Çevre ve Şehircilik Bakanlığına",
+   "her yıl faaliyet raporu hazırlanır",
+   "Cumhurbaşkanlığı, genel faaliyet raporunu kamuoyuna açıklar"
   ]
  },
  {
@@ -579,18 +579,18 @@
  },
  {
   "law": 77,
-  "tip": "duz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre sözleşmesinde belirtilmek şartıyla yüklenicilere teminat karşılığında ödenebilecek bütçe dışı avans, yüklenme tutarının yüzde kaçını geçemez?",
+  "tip": "vaka",
+  "k": "Genel seferberlik ilan edilmiş; Millî Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bütçelerindeki ödenekler birleştirilerek kullanılmasına rağmen yetersiz kalmıştır. 5018 sayılı Kanun'a göre bu durumda toplam ödenek tutarının yüzde kaçına kadar ek harcama yapılabilir?",
   "s": [
-   "30",
-   "20",
-   "50",
+   "15",
    "10",
-   "25"
+   "20",
+   "25",
+   "5"
   ],
   "kanit": [
-   "yüklenme tutarının yüzde otuzunu geçmemek üzere",
-   "teminat karşılığında bütçe dışı avans ödenebilir"
+   "toplam ödenek tutarının yüzde on beşine kadar ek harcama yapılabilir",
+   "ödenek toplamları aşılmamak şartıyla, birleştirilerek kullanılabilir"
   ]
  },
  {

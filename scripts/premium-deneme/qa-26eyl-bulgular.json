@@ -1,0 +1,778 @@
+[
+ {
+  "dosya": "mus-1.json",
+  "sira": 2,
+  "ciddiyet": "dusuk",
+  "tur": "anlasilmiyor",
+  "aciklama": "Kökte soru kalıbı eksik ('aşağıdakilerden hangisi' yok); cümle devrik/eksik okunuyor. İçerik TCK m.265 ile doğru.",
+  "oneri": {
+   "k": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdakilerden hangisi görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
+   "s": [
+    "Suç örgütüne yarar sağlamak maksadıyla işlenmesi",
+    "Yargı görevi yapana karşı işlenmesi",
+    "Kişinin kendisini tanınmayacak hâle koyarak işlemesi",
+    "Birden fazla kişi tarafından birlikte işlenmesi",
+    "Silahla işlenmesi"
+   ],
+   "kanit": [
+    "yargı görevi yapan",
+    "tanınmayacak bir hale"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-1.json",
+  "sira": 5,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap doğru (2803 m.10: 'İçişleri Bakanının kararıyla bir il veya ilçenin tamamı...'), ancak kanıt ifadesi 'içişleri bakanınca' paket metninde geçmiyor; kanıt düzeltilmeli.",
+  "oneri": {
+   "s": [
+    "İçişleri Bakanı",
+    "Jandarma Genel Komutanı",
+    "Vali",
+    "Cumhurbaşkanı",
+    "Emniyet Genel Müdürü"
+   ],
+   "kanit": [
+    "İçişleri Bakanının kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-1.json",
+  "sira": 6,
+  "ciddiyet": "dusuk",
+  "tur": "eksik",
+  "aciklama": "2803'te arama kararı unsurları yalnız m.15/A'da (jandarma hizmet binalarında erbaş ve erlerin üst/eşya araması) düzenleniyor; kök genel 'önleme araması' diyerek kapsamı belirsiz bırakıyor.",
+  "oneri": {
+   "k": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarma hizmet binalarında erbaş ve erlerin üst ve eşyalarının aranmasına ilişkin arama kararında veya emrinde aşağıdakilerden hangisinin belirtilmesi gerekmez?",
+   "s": [
+    "Aramayı yapacak personelin adı ve soyadı",
+    "Aramanın sebebi",
+    "Aramanın konusu ve kapsamı",
+    "Aramanın yapılacağı yer",
+    "Aramanın zamanı ve süresi"
+   ],
+   "kanit": [
+    "aramanın sebebi, konusu ve kapsamı ile yapılacağı yer, zaman ve geçerli olacağı süre"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-1.json",
+  "sira": 9,
+  "ciddiyet": "dusuk",
+  "tur": "anlasilmiyor",
+  "aciklama": "Kökte soru kalıbı eksik ('aşağıdakilerden hangisi' yok). İçerik 6698 m.4 ile doğru.",
+  "oneri": {
+   "k": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangisi kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
+   "s": [
+    "Her hâlde ilgili kişinin açık rızasının alınması",
+    "Hukuka ve dürüstlük kurallarına uygun olma",
+    "Doğru ve gerektiğinde güncel olma",
+    "Belirli, açık ve meşru amaçlar için işlenme",
+    "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma"
+   ],
+   "kanit": [
+    "dürüstlük kurallarına uygun",
+    "sınırlı ve ölçülü"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-1.json",
+  "sira": 17,
+  "ciddiyet": "dusuk",
+  "tur": "sik_hatasi",
+  "aciklama": "Doğru şıkta 'ağır hapis' ifadesi var, diğer şıklarda yalnız 'hapis'; tek farklı terim cevabı ele veriyor (5816 m.1/2). Ayrıca 'ağır hapis' 5237 sonrası kaldırılmış bir ceza türü; şıklar tek biçimde yazılmalı.",
+  "oneri": {
+   "s": [
+    "Bir yıldan beş yıla kadar hapis",
+    "Bir yıldan üç yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "Üç yıldan beş yıla kadar hapis",
+    "İki yıldan yedi yıla kadar hapis"
+   ],
+   "kanit": [
+    "bir yıldan beş yıla kadar"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-mebs-ek-1.json",
+  "sira": 8,
+  "ciddiyet": "dusuk",
+  "tur": "coklu_dogru",
+  "aciklama": "Yönetmelik m.67'de Cumhuriyet başsavcısı sayılmıyor, ancak başsavcılar adli kolluk görevleri yönünden jandarmayı denetleyebildiğinden (CMK/Adli Kolluk Yönetmeliği) 'yetkili değildir' cevabı tartışmaya açık. Açıkça yetkisiz bir makam kullanılmalı.",
+  "oneri": {
+   "s": [
+    "Belediye başkanları",
+    "Mülkiye Teftiş Kurulu Başkanlığı",
+    "İllerde valiler",
+    "İlçelerde kaymakamlar",
+    "Jandarma Genel Komutanı"
+   ],
+   "kanit": [
+    "Bu denetim illerde vali ve ilçelerde kaymakamlar tarafından yapılır",
+    "Jandarma Genel Komutanı tüm jandarma birimlerini kendi görevleri ile ilgili denetler"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-1.json",
+  "sira": 39,
+  "ciddiyet": "yuksek",
+  "tur": "yanlis_cevap",
+  "aciklama": "6136 m.13/1 son cümle: 12/4'te sayılanlar dışındaki tek ateşli silahın mutat mermisiyle ev veya işyerinde bulundurulması hâlinde ceza 1-3 yıl hapistir. Vakada silah evde bulunduruluyor; doğru cevap şıklarda yer alan 'Bir yıldan üç yıla kadar' olur, işaretli cevap (2-4 yıl) yanlış.",
+  "oneri": {
+   "k": "B, tek bir ruhsatsız tabancayı mutat sayıdaki mermisiyle birlikte evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
+   "s": [
+    "Bir yıldan üç yıla kadar",
+    "İki yıldan dört yıla kadar",
+    "Altı aydan bir yıla kadar",
+    "Beş yıldan sekiz yıla kadar",
+    "Üç yıldan beş yıla kadar"
+   ],
+   "kanit": [
+    "ev veya işyerinde bulundurulması halinde verilecek ceza bir yıldan üç yıla kadar hapis"
+   ]
+  }
+ },
+ {
+  "dosya": "sb-jandarma-1.json",
+  "sira": 20,
+  "ciddiyet": "yuksek",
+  "tur": "coklu_dogru",
+  "aciklama": "6222 m.4/1: İl spor güvenlik kurulu 'vali veya görevlendireceği vali yardımcısının başkanlığında' toplanır. Asıl başkan validir; 'Vali' çeldiricisi de doğru, 'Vali yardımcısı' tek başına eksik.",
+  "oneri": {
+   "s": [
+    "Vali veya görevlendireceği vali yardımcısı",
+    "İl emniyet müdürü",
+    "Gençlik ve spor il müdürü",
+    "İl jandarma komutanı",
+    "Belediye başkanı"
+   ],
+   "kanit": [
+    "vali veya görevlendireceği vali yardımcısının başkanlığında"
+   ]
+  }
+ },
+ {
+  "dosya": "sb-jandarma-1.json",
+  "sira": 25,
+  "ciddiyet": "yuksek",
+  "tur": "coklu_dogru",
+  "aciklama": "4207 m.2/1-c yasağı toplu taşıma araçları (taksi dâhil) ve hususi araçlarda yalnız sürücü koltuğu bağlamında düzenler; 'Özel hususi araçlarda tütün ürünü içilmesi yasaktır' genel ifadesi de yanlış/tartışmalı olduğundan ikinci bir 'yanlış' şık oluşuyor. Ayrıca 'Özel hususi' söz tekrarı.",
+  "oneri": {
+   "s": [
+    "Tütün ürünleri on altı yaşını doldurmamış kişilere satılamaz.",
+    "Taksilerde tütün ürünü içilemez.",
+    "Okulların açık alanlarında da tütün ürünü içilemez.",
+    "Tütün ürünleri paketlerinin en geniş iki yüzünün en az %85'i sağlık uyarısına ayrılır.",
+    "Tütün ürünlerinin satışında on sekiz yaşından küçükler çalıştırılamaz."
+   ]
+  }
+ },
+ {
+  "dosya": "sb-jandarma-1.json",
+  "sira": 10,
+  "ciddiyet": "orta",
+  "tur": "coklu_dogru",
+  "aciklama": "2918 m.48 metninde hem 'Hususi otomobil dışındaki araçları alkollü olarak kullanan sürücüler bakımından promil alt sınırı 0.21 olarak uygulanır' hem de '0.20 promilin üzerinde' ifadesi var. 'Sınır kaç promildir' sorusunda 0,20 ile 0,21 ikisi de savunulabilir; paketteki banka sorusu 0,21'i esas alıyor.",
+  "oneri": {
+   "k": "2918 sayılı Karayolları Trafik Kanunu'na göre hususi otomobil dışındaki araçları alkollü olarak kullanan sürücüler bakımından promil alt sınırı kaç olarak uygulanır?",
+   "s": [
+    "0,21",
+    "0,50",
+    "0,30",
+    "0,10",
+    "1,00"
+   ],
+   "kanit": [
+    "promil alt sınırı 0.21 olarak uygulanır"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-3b.json",
+  "sira": 14,
+  "ciddiyet": "dusuk",
+  "tur": "eksik",
+  "aciklama": "6284 Uyg. Yön. m.8/3: otuzda bir sınırı 'on altı yaşından büyükler için' ve tek kişi içindir; birden fazla korunan kişide ilave %20 ile 1,5 katına çıkabilir. 'En fazla' ifadesi kök kısıtlanmadan tartışmaya açık.",
+  "oneri": {
+   "k": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile on altı yaşından büyük tek bir korunan kişi için yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "s": [
+    "Aylık net asgari ücretin otuzda biri",
+    "Aylık net asgari ücretin yarısı",
+    "Aylık net asgari ücretin onda biri",
+    "Aylık brüt asgari ücretin tamamı",
+    "Aylık net asgari ücretin yirmide biri"
+   ]
+  }
+ },
+ {
+  "dosya": "sb-jandarma-1.json",
+  "sira": 9,
+  "ciddiyet": "dusuk",
+  "tur": "coklu_dogru",
+  "aciklama": "4342 m.6: Vali yardımcısının bulunmadığı durumlarda komisyona 'Bakanlık il müdürü' başkanlık eder; 'İl tarım ve orman müdürü' çeldiricisi bu istisna nedeniyle savunulabilir.",
+  "oneri": {
+   "s": [
+    "Vali yardımcısı",
+    "Vali",
+    "Defterdar",
+    "Kaymakam",
+    "Büyükşehir belediye başkanı"
+   ]
+  }
+ },
+ {
+  "dosya": "mus-1.json",
+  "sira": 35,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap doğru (JGK-SGK Personel Yön. m.42/2) ancak kanıt ifadesi pakette birebir geçmiyor: metinde 'yirmidört' bitişik yazılmış.",
+  "oneri": {
+   "s": [
+    "24 saat",
+    "12 saat",
+    "36 saat",
+    "48 saat",
+    "8 saat"
+   ],
+   "kanit": [
+    "yirmidört saati geçemez"
+   ]
+  }
+ },
+ {
+  "dosya": "sb-jandarma-1.json",
+  "sira": 33,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap doğru (Aramalar Yön. m.19, m.31, m.7) ancak kanıt yalnız 'konutta' kelimesi; öncülleri doğrulayan birebir ifade eklenmeli.",
+  "oneri": {
+   "s": [
+    "I ve II",
+    "Yalnız I",
+    "Yalnız III",
+    "II ve III",
+    "I, II ve III"
+   ],
+   "kanit": [
+    "Konutta, yerleşim yerinde ve kamuya açık olmayan özel işyerlerinde ve eklentilerinde önleme araması yapılamaz",
+    "Önleme aramaları, denetimler ve kontroller her zaman yapılabilir",
+    "Kolluk âmirlerince konutta, iş yerinde ve kamuya açık olmayan kapalı alanlarda arama kararı verilemez"
+   ]
+  }
+ },
+ {
+  "dosya": "jan-b3b.json",
+  "sira": 14,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "Doğru şıkta kapatılmış 'Sosyal Hizmetler ve Çocuk Esirgeme Kurumu' adı kullanılıyor (görev bugün Aile ve Sosyal Hizmetler Bakanlığında). Yönetmelik m.16/5 metni bu adı taşısa da adayı yanıltabilir; kurum adı yerine genel ifade önerilir.",
+  "oneri": {
+   "s": [
+    "Savcının talimatıyla çocuğu sosyal hizmet kuruluşuna teslim eder.",
+    "Çocuğu yine de babasına teslim eder.",
+    "Çocuğu nezarethaneye koyar.",
+    "Çocuğu baroya teslim eder.",
+    "Çocuğu serbest bırakır."
+   ]
+  }
+ },
+ {
+  "dosya": "sb-jandarma-1.json",
+  "sira": 38,
+  "ciddiyet": "yuksek",
+  "tur": "coklu_dogru",
+  "aciklama": "Yönetmelik m.5/6 psikolojisi bozulmuş mağdur çocuğun 'bir defa dinlenebilir' der; 'Mağdur çocuk soruşturma evresinde bir defa dinlenir' şıkkı her mağdur çocuk için genelleme yaptığından o da yanlış sayılabilir. Ayrıca amaçlanan cevap (ifadeyi kolluk alır) pakette açıkça yer almıyor; m.5'te bu yönde hüküm yok, kanıt ('bizzat yapılır') ifade alma ile değil soruşturma ile ilgili.",
+  "oneri": {
+   "k": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangisi yanlıştır?",
+   "s": [
+    "Mağdur çocuğun tanık olarak dinlenmesi sırasında uzman bulundurulması zorunlu değildir.",
+    "Mağdur çocuğun tanık olarak dinlenmesinde yemin hariç CMK'nın tanıklığa ilişkin hükümleri uygulanır.",
+    "Çocuklarla ilgili kolluk görevi öncelikle kolluğun çocuk birimlerince yerine getirilir.",
+    "Suça sürüklenen çocuk hakkındaki soruşturma, çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır.",
+    "Suça sürüklenen çocuğun ifadesi alınırken yanında sosyal çalışma görevlisi bulundurulabilir."
+   ],
+   "kanit": [
+    "psikoloji, psikiyatri, tıp veya eğitim alanında uzman bir kişi bulundurulur"
+   ]
+  }
+ },
+ {
+  "dosya": "mebs-b2-b.json",
+  "sira": 1,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap resmî metne göre doğru (5809 m.3 tanımları), ancak sorunun paketi (scripts/altin-ozet/paketler/pack_68.json) m.3'ü 6000 karakterde kırpılmış; kanıt ifadesi bu pakette yok. Tam metin scripts/altin-ozet/paketler/mebs/pack_68.json içinde. Soru metni aynen kalabilir; paket yolu mebs/pack_68.json olarak düzeltilmeli.",
+  "oneri": {
+   "k": "5809 sayılı Elektronik Haberleşme Kanunu'na göre spektrum, elektronik haberleşme amacıyla kullanılan ve frekansı hangi aralıkta olan elektromanyetik dalgaların frekans aralığıdır?",
+   "s": [
+    "9 kHz – 3000 GHz",
+    "3 kHz – 300 GHz",
+    "30 kHz – 3000 MHz",
+    "9 MHz – 300 GHz",
+    "1 kHz – 1000 GHz"
+   ]
+  }
+ },
+ {
+  "dosya": "mebs-b3-b.json",
+  "sira": 0,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap resmî metne göre doğru (5809 m.3 tanımları), ancak sorunun paketi (scripts/altin-ozet/paketler/pack_68.json) m.3'ü 6000 karakterde kırpılmış; kanıt ifadesi bu pakette yok. Tam metin scripts/altin-ozet/paketler/mebs/pack_68.json içinde. Soru metni aynen kalabilir; paket yolu mebs/pack_68.json olarak düzeltilmeli.",
+  "oneri": {
+   "k": "5809 sayılı Elektronik Haberleşme Kanunu'na göre elektronik haberleşme şebekesinde aboneye erişimin sağlandığı fiziksel noktayı ifade eden kavram aşağıdakilerden hangisidir?",
+   "s": [
+    "Şebeke sonlanma noktası",
+    "Şebeke erişim merkezi",
+    "Abone dağıtım noktası",
+    "Ana bağlantı noktası",
+    "Hat başlangıç noktası"
+   ]
+  }
+ },
+ {
+  "dosya": "mebs-b3-b.json",
+  "sira": 1,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap resmî metne göre doğru (5809 m.3 tanımları), ancak sorunun paketi (scripts/altin-ozet/paketler/pack_68.json) m.3'ü 6000 karakterde kırpılmış; kanıt ifadesi bu pakette yok. Tam metin scripts/altin-ozet/paketler/mebs/pack_68.json içinde. Soru metni aynen kalabilir; paket yolu mebs/pack_68.json olarak düzeltilmeli.",
+  "oneri": {
+   "k": "5809 sayılı Elektronik Haberleşme Kanunu'na göre tanımlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "s": [
+    "Standart, uyulması zorunlu olan düzenlemedir.",
+    "Kullanım hakkı, frekans, numara ve uydu pozisyonu gibi kıt kaynakların kullanılması için verilen haktır.",
+    "Tarife, işletmecilerin kullanıcılardan alabilecekleri ücretleri içeren cetveldir.",
+    "Son kullanıcı, elektronik haberleşme hizmeti ve/veya şebekesi sağlamayan kişidir.",
+    "Taşıyıcı, bir çağrının başlatılması, sonlandırılması veya taşınması hizmetlerini sunan işletmecidir."
+   ]
+  }
+ },
+ {
+  "dosya": "mebs-b3-b.json",
+  "sira": 2,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap resmî metne göre doğru (5809 m.3 tanımları), ancak sorunun paketi (scripts/altin-ozet/paketler/pack_68.json) m.3'ü 6000 karakterde kırpılmış; kanıt ifadesi bu pakette yok. Tam metin scripts/altin-ozet/paketler/mebs/pack_68.json içinde. Soru metni aynen kalabilir; paket yolu mebs/pack_68.json olarak düzeltilmeli.",
+  "oneri": {
+   "k": "5809 sayılı Elektronik Haberleşme Kanunu'na göre merkezî mobil cihaz kimlik tanımı veri tabanı sistemini ifade eden kısaltma aşağıdakilerden hangisidir?",
+   "s": [
+    "MCKS",
+    "MCKT",
+    "MKTS",
+    "CMKS",
+    "MCVS"
+   ]
+  }
+ },
+ {
+  "dosya": "mebs-b2-b.json",
+  "sira": 3,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "5809 geçici madde (7571 s. Kanun, 2025) 'yirmibin Türk Lirası' der; idari para cezaları Kabahatler Kanunu m.17/7 gereği her yıl yeniden değerleme oranında artırıldığından uygulanan tutar yıllara göre değişir. Kökte 'Kanun metnine göre' vurgusu yapılmalı.",
+  "oneri": {
+   "k": "5809 sayılı Elektronik Haberleşme Kanunu'nun geçici maddesinde yer alan tutara göre, yabancı uyruklulara ait abonelik kayıtlarıyla ilgili yükümlülüklerini yerine getirmeyen mobil haberleşme işletmecisine her bir mobil hat aboneliği başına kaç Türk lirası idari para cezası verilir?",
+   "s": [
+    "20.000",
+    "5.000",
+    "50.000",
+    "10.000",
+    "100.000"
+   ]
+  }
+ },
+ {
+  "dosya": "mebs-b2-b.json",
+  "sira": 5,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "5809 Geçici 6. madde (7186 s. Kanun, 2019) bir yıllık başvuru süresi öngörür; süre 2020'de dolmuştur. Vaka güncel bir durum gibi kurgulanmış; kökte bunun 2019 tarihli geçici madde olduğu belirtilmeli.",
+  "oneri": {
+   "k": "Uzman Çavuş A'nın MCKS'de kayıtlı cep telefonunun elektronik kimlik bilgisi, 7186 sayılı Kanunla 5809 sayılı Kanuna eklenen geçici 6. madde yürürlüğe girmeden önce değiştirilmiştir. Bu geçici maddeye göre cihazın A'nın numarasıyla eşleştirilerek kullanılabilmesi için süresi içinde başvurup kaç Türk lirası kayıt ücreti yatırılması gerekir?",
+   "s": [
+    "250",
+    "300",
+    "500",
+    "100",
+    "1.000"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b1-b.json",
+  "sira": 3,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "2920 m.6/7/8/34/39 metnindeki 'Ulaştırma Bakanlığı' bugün 'Ulaştırma ve Altyapı Bakanlığı'dır; güncel adı bilen aday tereddüt edebilir. Cevap metne göre doğru; kökte kanun metnindeki adların kullanıldığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) uçuşa elverişli olmak şartıyla aşağıdaki hava araçlarından hangileri, Türk hava sahasını kullanmak için Ulaştırma Bakanlığının iznine tabidir?\nI. Türk Devlet hava araçları\nII. Türk uçak siciline kayıtlı Türk sivil hava araçları\nIII. Türkiye'nin taraf olduğu anlaşmalar uyarınca uçmalarına müsaade edilen hava araçları\nIV. Bunlar dışında kalan yabancı hava araçları",
+   "s": [
+    "Yalnız IV",
+    "I ve II",
+    "III ve IV",
+    "Yalnız III",
+    "II, III ve IV"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b1-b.json",
+  "sira": 10,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "2920 m.6/7/8/34/39 metnindeki 'Ulaştırma Bakanlığı' bugün 'Ulaştırma ve Altyapı Bakanlığı'dır; güncel adı bilen aday tereddüt edebilir. Cevap metne göre doğru; kökte kanun metnindeki adların kullanıldığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) Türk hava sahasında hava araçlarının izleyecekleri uçuş yolları ve kullanacakları hava alanları nasıl belirlenir?",
+   "s": [
+    "Genelkurmay Başkanlığı ile koordinasyon yapılarak Ulaştırma Bakanlığınca",
+    "Dışişleri Bakanlığı ile koordinasyon yapılarak Cumhurbaşkanınca",
+    "İçişleri Bakanlığınca tek başına",
+    "Millî Savunma Bakanlığı ile koordinasyon yapılarak İçişleri Bakanlığınca",
+    "Hava Kuvvetleri Komutanlığınca tek başına"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b1-b.json",
+  "sira": 11,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "2920 m.6/7/8/34/39 metnindeki 'Ulaştırma Bakanlığı' bugün 'Ulaştırma ve Altyapı Bakanlığı'dır; güncel adı bilen aday tereddüt edebilir. Cevap metne göre doğru; kökte kanun metnindeki adların kullanıldığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) Devlet hava araçlarının sivil havaalanlarından istifade edebilmeleri nasıl düzenlenir?",
+   "s": [
+    "Hava aracına sahip bakanlıklar ile Ulaştırma Bakanlığı arasında yapılacak protokollerle",
+    "Cumhurbaşkanı kararıyla",
+    "Genelkurmay Başkanlığının tek taraflı talimatıyla",
+    "Havaalanı işleticisinin onayıyla",
+    "Dışişleri Bakanlığının izniyle"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b2-b.json",
+  "sira": 4,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "2920 m.6/7/8/34/39 metnindeki 'Ulaştırma Bakanlığı' bugün 'Ulaştırma ve Altyapı Bakanlığı'dır; güncel adı bilen aday tereddüt edebilir. Cevap metne göre doğru; kökte kanun metnindeki adların kullanıldığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) gerçek kişilerin ve tüzelkişilerin havaalanı ve iniş şeridi inşa etmesi ve işletmesi neye bağlıdır?",
+   "s": [
+    "Genelkurmay Başkanlığının olumlu mütalaası üzerine Ulaştırma Bakanlığı iznine",
+    "İçişleri Bakanlığının onayına",
+    "Dışişleri Bakanlığının görüşü üzerine Cumhurbaşkanı iznine",
+    "Yalnızca belediyeye bildirimde bulunulmasına",
+    "Bayındırlık Bakanlığının iznine"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b3-b.json",
+  "sira": 1,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "2920 m.6/7/8/34/39 metnindeki 'Ulaştırma Bakanlığı' bugün 'Ulaştırma ve Altyapı Bakanlığı'dır; güncel adı bilen aday tereddüt edebilir. Cevap metne göre doğru; kökte kanun metnindeki adların kullanıldığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) Ulaştırma Bakanlığı, Kanunda sayılanlar dışındaki bir hava aracına Türk hava sahasını kullanma izni vermeden önce kimlerin görüşünü alır?",
+   "s": [
+    "Genelkurmay Başkanlığı ve Dışişleri Bakanlığı",
+    "İçişleri Bakanlığı ve Millî İstihbarat Teşkilatı",
+    "Millî Savunma Bakanlığı ve Maliye Bakanlığı",
+    "Cumhurbaşkanlığı ve İçişleri Bakanlığı",
+    "Dışişleri Bakanlığı ve Ticaret Bakanlığı"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b3-b.json",
+  "sira": 2,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "2920 m.6/7/8/34/39 metnindeki 'Ulaştırma Bakanlığı' bugün 'Ulaştırma ve Altyapı Bakanlığı'dır; güncel adı bilen aday tereddüt edebilir. Cevap metne göre doğru; kökte kanun metnindeki adların kullanıldığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) uçuş güvenliğini sağlamak amacıyla Genelkurmay Başkanlığı ve Ulaştırma Bakanlığınca konulacak diğer tahditler kim tarafından uygulanabilir?",
+   "s": [
+    "Ulaştırma Bakanlığı",
+    "Cumhurbaşkanı",
+    "İçişleri Bakanlığı",
+    "Dışişleri Bakanlığı",
+    "Millî Savunma Bakanlığı"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b1-b.json",
+  "sira": 4,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "Doğru kabul edilen şıklar (kamulaştırma ve etüd-proje işleri 'Bayındırlık Bakanlığınca' yapılır, m.34) kaldırılmış bir bakanlığa atıf yapıyor (2011'de kapatıldı); güncel bilgiyle aday bu şıkları da yanlış sayabilir. Kökte kanun metnindeki adların esas alındığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) havaalanlarının kurulması ve inşasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "s": [
+    "Sivil havaalanlarının inşaat ve onarım işleri Ulaştırma Bakanlığınca yapılır.",
+    "Havaalanları Devlet veya kamu tüzelkişileri tarafından kurulur.",
+    "Havaalanları Devlet veya kamu tüzelkişileri tarafından işletilir.",
+    "Havaalanı hizmetleriyle ilgili kamulaştırma işleri Bayındırlık Bakanlığınca yapılır.",
+    "Havaalanı hizmetleriyle ilgili etüd ve proje işleri Bayındırlık Bakanlığınca yapılır."
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b2-b.json",
+  "sira": 10,
+  "ciddiyet": "orta",
+  "tur": "zamana_bagli",
+  "aciklama": "Cevap 'Bayındırlık Bakanlığı ile Ulaştırma Bakanlığı' (m.34). Bayındırlık Bakanlığı 2011'de kaldırıldı, Ulaştırma Bakanlığının adı değişti; cevabın tamamı artık var olmayan/adı değişmiş kurumlardan oluşuyor ve soru yalnızca bu eski adları ölçüyor.",
+  "oneri": "cikar"
+ },
+ {
+  "dosya": "havacilik-b3-b.json",
+  "sira": 6,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "Ek 1. madde 'Ulaştırma, Denizcilik ve Haberleşme Bakanlığı Kaza Araştırma ve İnceleme Kurulu' der; bakanlığın adı değişti ve kurulun yerini Ulaştırma Emniyeti İnceleme Merkezi aldı. Cevap metne göre doğru; kökte kanun metnindeki adların esas alındığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) Türk siciline kayıtlı ve kaza geçirmiş bir hava aracı, havaalanında aylardır beklemektedir. Malik, tebligat tarihinden itibaren otuz gün içinde gerekli işlemleri yapmamıştır.\nHava aracının itibari ya da fiilî harabiyete uğradığına dair raporu kim verir?",
+   "s": [
+    "Kaza Araştırma ve İnceleme Kurulu",
+    "Sivil Havacılık Genel Müdürlüğü",
+    "Havaalanı işleticisi",
+    "Gümrük idaresi",
+    "Genelkurmay Başkanlığı"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b3-b.json",
+  "sira": 9,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "Ek 1. madde 'Maliye Bakanlığının uygun görüşü' der; bakanlığın bugünkü adı Hazine ve Maliye Bakanlığı. Cevap metne göre doğru; kökte kanun metnindeki adların esas alındığı belirtilmeli.",
+  "oneri": {
+   "k": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) hurdaya ayrılan hava araçlarının satışından Genel Müdürlük bütçesine gelir kaydedilen tutarların harcanacağı yerler nasıl belirlenir?",
+   "s": [
+    "Maliye Bakanlığının uygun görüşü üzerine Genel Müdürlükçe",
+    "Cumhurbaşkanı kararıyla",
+    "Sayıştayın onayıyla Ulaştırma Bakanlığınca",
+    "Genelkurmay Başkanlığının görüşü üzerine",
+    "Havaalanı işleticisince"
+   ]
+  }
+ },
+ {
+  "dosya": "havacilik-b2-a.json",
+  "sira": 3,
+  "ciddiyet": "dusuk",
+  "tur": "coklu_dogru",
+  "aciklama": "2629 m.7/a ölçütleri 'veya' ile bağlanmış: hizmeti 10-20 yıl olup tüm uçuşu 1500 saatin altında kalan pilot '10 yıldan az veya 1500 saatin altında' grubuna da girer (60 saat). Kökte uçuş saati de verilmeli.",
+  "oneri": {
+   "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçuş hizmeti 10-20 yıl ve tüm uçuşu 1500-2500 saat arasında olan bir pilotun uçuş tazminatı alabilmesi için bir yılda en az kaç saat uçuş yapması şarttır?",
+   "s": [
+    "30",
+    "60",
+    "15",
+    "45",
+    "20"
+   ]
+  }
+ },
+ {
+  "dosya": "personel-b1-a.json",
+  "sira": 18,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap (3 iş günü) 5510 m.13'e göre doğru; ancak m.13 pakette yok, kanıt ('kazadan sonraki üç işgünü') paket metninde bulunamadı. Pakette yalnız Ek 5'teki benzer ifade ('Kuruma da en geç üç iş günü içinde') var. Soru içerik olarak sağlam; kanıt doğrulanamıyor.",
+  "oneri": {
+   "k": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre hizmet akdiyle çalışan sigortalının geçirdiği iş kazası, işveren tarafından Kuruma en geç kazadan sonraki kaç iş günü içinde bildirilir?",
+   "s": [
+    "3",
+    "5",
+    "10",
+    "7",
+    "2"
+   ]
+  }
+ },
+ {
+  "dosya": "personel-b3-a.json",
+  "sira": 18,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "İş kazası tanımı (5510 m.13) pakette yok; kanıt ifadeleri paket metninde bulunamadı. Cevap (yıllık izin) ve diğer şıklar m.13'e göre doğru; soru sağlam fakat pakete dayanarak doğrulanamıyor.",
+  "oneri": {
+   "k": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre aşağıdakilerden hangisinde meydana gelen olay iş kazası sayılmaz?",
+   "s": [
+    "Sigortalının yıllık izinde bulunduğu sırada",
+    "Sigortalının işyerinde bulunduğu sırada",
+    "Görevli olarak işyeri dışına gönderilip asıl işini yapmaksızın geçen zamanlarda",
+    "Emziren kadın sigortalının çocuğuna süt vermek için ayrılan zamanlarda",
+    "İşverence sağlanan bir taşıtla işin yapıldığı yere gidiş gelişi sırasında"
+   ]
+  }
+ },
+ {
+  "dosya": "personel-b3-a.json",
+  "sira": 17,
+  "ciddiyet": "dusuk",
+  "tur": "anlasilmiyor",
+  "aciklama": "Kökteki 'ücretleri ayın 1'i ile sonu arasında ödenen sigortalılar' kategorisi m.3/15'te yok (metin: ücretleri ayın 15'inde ödenen 4/a-4/c sigortalıları ile 'diğer sigortalılar'). Cevap 360 her iki grup için de doğru; kök metne uygun hale getirilmeli.",
+  "oneri": {
+   "k": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre \"yıl\" tanımında, 1 Ocak ilâ 31 Aralık tarihleri arasında geçen süre kaç gün olarak değerlendirilir?",
+   "s": [
+    "360",
+    "365",
+    "300",
+    "330",
+    "366"
+   ]
+  }
+ },
+ {
+  "dosya": "ikmal-b1-a.json",
+  "sira": 4,
+  "ciddiyet": "dusuk",
+  "tur": "yazim",
+  "aciklama": "Doğru şıkta 'ihale yetkilisinin yönetiminde bulunmadığı' ifadesi belirsiz; m.11/f'deki istisna 'yönetim kurullarında görevli bulunmadıkları veya sermayesinin %10'undan fazlasına sahip olmadıkları anonim şirketler'. Şık metne uygun yazılmalı.",
+  "oneri": {
+   "k": "4734 sayılı Kamu İhale Kanunu'na göre aşağıdakilerden hangisi ihalelere katılamayacaklar arasında yer almaz?",
+   "s": [
+    "İhale yetkilisinin yönetim kurulunda görev almadığı ve sermayesinin %10'undan fazlasına sahip olmadığı anonim şirket",
+    "Hileli iflas ettiğine karar verilenler",
+    "İhaleyi yapan idarenin ihale yetkilisi kişileri",
+    "İhale işlemlerini hazırlamakla görevli olanların eşleri",
+    "İhaleyi yapan idare bünyesindeki vakıf ve dernekler"
+   ]
+  }
+ },
+ {
+  "dosya": "mebs-b1-b.json",
+  "sira": 10,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "Soru, Telsiz İşlemleri Yönetmeliği geçici maddesindeki 31/12/2015 tarihli bir defaya mahsus izin hükmüne dayanıyor; süre 2015 sonunda doldu, hüküm artık uygulanmıyor. Sınav açısından değeri düşük, tarih ezberi olarak yanıltıcı (güncel izin işlemleri ilgili mevzuata göre yürütülüyor).",
+  "oneri": "cikar"
+ },
+ {
+  "dosya": "personel-b3-a.json",
+  "sira": 12,
+  "ciddiyet": "orta",
+  "tur": "yanlis_cevap",
+  "aciklama": "md.6/1-e: eski kart iade edilmezse kayıp/çalıntı kart ücretinin ödendiğine dair belge ibrazıyla yeni kart teslim edilir; dolayısıyla 'eski kart iade alınmadan da yenisi teslim edilebilir' ifadesi savunulabilir şekilde DOĞRU, soru yanlış seçenek içermiyor olabilir.",
+  "oneri": {
+   "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Kurum Kimlik Kartları Yönetmeliği'ne göre kimlik kartlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "s": [
+    "Eski kimlik kartı iade edilmedikçe, kart ücretinin ödendiğine dair belge ibraz edilse bile yenisi hiçbir şekilde teslim edilmez.",
+    "Kimlik kartı başvurusu, başvuru formuyla asıl hak sahibi personel tarafından yapılır.",
+    "Mecburi hizmet yükümlülüğünü tamamlamamış müstafi astsubaylara sosyal tesislere giriş kartı verilmez.",
+    "Teknolojik gelişmelere bağlı olarak kullanımdaki kartların tamamı yenisiyle değiştirilebilir.",
+    "Geçici olarak geri alınan kimlik kartları, personel işleriyle görevli birimlerce muhafaza edilir."
+   ],
+   "kanit": [
+    "Eski kimlik kartının iade edilmediği durumlarda, kayıp/çalıntı kart talep nedenine karşılık gelen kart ücretinin ödendiğine dair belgenin yetkili birime ibrazı hâlinde, yeni kimlik kartı ilgilisine teslim edilir"
+   ]
+  }
+ },
+ {
+  "dosya": "personel-b1-a.json",
+  "sira": 11,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap doğru (md.6/1-ı) ancak kanıt 'Türk Silahlı Kuvvetleri Akıllı Kart Yönetim Merkezi Başkanlığı' paket metninde birebir geçmiyor (metinde 'MerkeziBaşkanlığı' bitişik); kanıt birebir eşleşmeye göre düzeltildi.",
+  "oneri": {
+   "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Kurum Kimlik Kartları Yönetmeliği'ne göre kimlik kartlarının basımı hangi birim tarafından yapılır?",
+   "s": [
+    "TSK Akıllı Kart Yönetim Merkezi Başkanlığı",
+    "Nüfus ve Vatandaşlık İşleri Genel Müdürlüğü",
+    "Jandarma Genel Komutanlığı Personel Başkanlığı",
+    "Darphane ve Damga Matbaası Genel Müdürlüğü",
+    "Jandarma ve Sahil Güvenlik Akademisi Başkanlığı"
+   ],
+   "kanit": [
+    "Türk Silahlı Kuvvetleri Akıllı Kart Yönetim Merkezi",
+    "dağıtımı ve yönetimi ise Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından yapılır"
+   ]
+  }
+ },
+ {
+  "dosya": "maliye-b3-b.json",
+  "sira": 18,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "Aktarma oranı (yüzde 10) yıllık bütçe kanunundan (7567 sayılı 2026 Yılı MYBK md.6) geliyor ve yıldan yıla değişebilir; kökte yıl belirtilmeli.",
+  "oneri": {
+   "k": "7567 sayılı 2026 Yılı Merkezî Yönetim Bütçe Kanunu'na göre Cumhurbaşkanı, genel bütçe ödeneklerinin yüzde kaçını aşmamak kaydıyla ödenekleri kamu idareleri bütçeleri arasında aktarmaya yetkilidir?",
+   "s": [
+    "10",
+    "5",
+    "20",
+    "15",
+    "25"
+   ],
+   "kanit": [
+    "genel bütçe ödeneklerinin yüzde 10’unu aşmamak kaydıyla"
+   ]
+  }
+ },
+ {
+  "dosya": "L143-1.json",
+  "sira": 10,
+  "ciddiyet": "dusuk",
+  "tur": "diger",
+  "aciklama": "Cevap doğru (m.9/b), ancak kanıt ifadesi paket metninde birebir geçmiyor: metinde '1/50.000- 1/100.000' (tireden sonra boşluk) yazılı. Kanıt düzeltilmeli.",
+  "oneri": {
+   "s": [
+    "1/50.000-1/100.000",
+    "1/5.000-1/25.000",
+    "1/100.000-1/250.000",
+    "1/1.000-1/5.000",
+    "1/25.000-1/50.000"
+   ],
+   "kanit": [
+    "1/50.000- 1/100.000 ölçekli çevre düzeni plânları Bakanlıkça yapılır"
+   ]
+  }
+ },
+ {
+  "dosya": "L143-2.json",
+  "sira": 10,
+  "ciddiyet": "dusuk",
+  "tur": "zamana_bagli",
+  "aciklama": "m.24'teki 'çevre ve şehircilik il müdürleri' ibaresi eski bakanlık adına dayanıyor; bakanlığın güncel adı Çevre, Şehircilik ve İklim Değişikliği Bakanlığı. Eski birim adının doğru cevap olarak kullanılması yanıltabilir; adı nötr biçimde yazılmalı.",
+  "oneri": {
+   "s": [
+    "Bakanlığın il müdürleri",
+    "Valiler",
+    "Kaymakamlar",
+    "Belediye başkanları",
+    "Bölge müdürleri"
+   ],
+   "kanit": [
+    "taşra teşkilâtında çevre ve şehircilik il müdürlerince verilir"
+   ]
+  }
+ },
+ {
+  "dosya": "L139-1.json",
+  "sira": 2,
+  "ciddiyet": "dusuk",
+  "tur": "yazim",
+  "aciklama": "Soru kökünde iki kez 'göre' geçiyor, cümle ağırlaşıyor ('...Kanunu'na göre ... geçici maddeye göre'). Geçici 1. madde açıkça belirtilerek sadeleştirilmeli.",
+  "oneri": {
+   "k": "Türk Ceza Kanunu'nun Geçici 1 inci maddesine göre, 6459 sayılı Kanun'la 235 inci maddede yapılan değişiklik sebebiyle görülmekte olan davalarda aşağıdaki kararlardan hangisi verilemez?",
+   "s": [
+    "Görevsizlik kararı",
+    "Mahkûmiyet kararı",
+    "Beraat kararı",
+    "Durma kararı",
+    "Birleştirme kararı"
+   ]
+  }
+ }
+]

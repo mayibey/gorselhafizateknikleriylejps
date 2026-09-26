@@ -551,7 +551,7 @@
   },
   {
    "lawId": 21,
-   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile on altı yaşından büyük tek bir korunan kişi için yapılacak günlük ödeme en fazla ne kadar olabilir?",
    "siklar": [
     "Aylık net asgari ücretin onda biri",
     "Aylık brüt asgari ücretin tamamı",
@@ -843,14 +843,14 @@
    "siklar": [
     "Kimlik kartı başvurusu, başvuru formuyla asıl hak sahibi personel tarafından yapılır.",
     "Teknolojik gelişmelere bağlı olarak kullanımdaki kartların tamamı yenisiyle değiştirilebilir.",
-    "Eski kimlik kartı iade alınmadan da yenisi teslim edilebilir.",
+    "Eski kimlik kartı iade edilmedikçe, kart ücretinin ödendiğine dair belge ibraz edilse bile yenisi hiçbir şekilde teslim edilmez.",
     "Mecburi hizmet yükümlülüğünü tamamlamamış müstafi astsubaylara sosyal tesislere giriş kartı verilmez.",
     "Geçici olarak geri alınan kimlik kartları, personel işleriyle görevli birimlerce muhafaza edilir."
    ],
    "dogru": 2,
    "tip": "olumsuz",
    "kaynak": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği m.6",
-   "aciklama": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği, m.6: “e) Eski kimlik kartı iade alınmadan, yenisi teslim edilmez.”",
+   "aciklama": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği, m.6: “Eski kimlik kartının iade edilmediği durumlarda, kayıp/çalıntı kart talep nedenine karşılık gelen kart ücretinin ödendiğine dair belgenin yetkili birime ibrazı hâlinde, yeni kimlik kartı ilgilisine teslim edilir.”",
    "id": "P-SB-PER-03-53"
   },
   {
@@ -919,7 +919,7 @@
   },
   {
    "lawId": 75,
-   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre ücretleri ayın 1'i ile sonu arasında ödenen sigortalılar için \"yıl\" kaç gün olarak değerlendirilir?",
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre \"yıl\" tanımında, 1 Ocak ilâ 31 Aralık tarihleri arasında geçen süre kaç gün olarak değerlendirilir?",
    "siklar": [
     "300",
     "330",

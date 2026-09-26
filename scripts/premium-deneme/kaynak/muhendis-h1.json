@@ -50,7 +50,7 @@
   "tip": "olumsuz",
   "k": "4734 sayılı Kamu İhale Kanunu'na göre aşağıdakilerden hangisi ihalelere katılamayacaklar arasında yer almaz?",
   "s": [
-   "İhale yetkilisinin yönetiminde bulunmadığı ve en fazla %10 hissesine sahip olduğu anonim şirket",
+   "İhale yetkilisinin yönetim kurulunda görev almadığı ve sermayesinin %10'undan fazlasına sahip olmadığı anonim şirket",
    "Hileli iflas ettiğine karar verilenler",
    "İhaleyi yapan idarenin ihale yetkilisi kişileri",
    "İhale işlemlerini hazırlamakla görevli olanların eşleri",
@@ -112,18 +112,19 @@
  },
  {
   "law": 77,
-  "tip": "vaka",
-  "k": "Genel seferberlik ilan edilmiş; Millî Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bütçelerindeki ödenekler birleştirilerek kullanılmasına rağmen yetersiz kalmıştır. 5018 sayılı Kanun'a göre bu durumda toplam ödenek tutarının yüzde kaçına kadar ek harcama yapılabilir?",
+  "tip": "olumsuz",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre üst yöneticilerle ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "15",
-   "10",
-   "20",
-   "25",
-   "5"
+   "İl özel idarelerinde üst yönetici il genel meclisi başkanıdır.",
+   "Belediyelerde belediye başkanı üst yöneticidir.",
+   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir.",
+   "Mahallî idarelerde üst yöneticiler meclislerine karşı sorumludur.",
+   "Üst yöneticiler sorumluluklarını harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla yerine getirir."
   ],
   "kanit": [
-   "toplam ödenek tutarının yüzde on beşine kadar ek harcama yapılabilir",
-   "ödenek toplamları aşılmamak şartıyla, birleştirilerek kullanılabilir"
+   "il özel idarelerinde vali ve belediyelerde belediye başkanı üst yöneticidir",
+   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir",
+   "harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla"
   ]
  },
  {
@@ -161,17 +162,19 @@
  },
  {
   "law": 122,
-  "tip": "duz",
-  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre kesinleşen ihale kararı, ihale yetkilisince onaylandığı günü izleyen en geç kaç gün içinde ihaleye teklif veren bütün isteklilere bildirilir?",
+  "tip": "onculu",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.\nII. Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir.\nIII. Ödeneği bulunmayan işler için, ödeneğin sonradan temin edileceği taahhüdüyle ihaleye çıkılabilir.\nIV. Eşik değerin altında kalmak amacıyla mal alımları kısımlara bölünebilir.",
   "s": [
-   "3",
-   "5",
-   "10",
-   "7",
-   "15"
+   "I ve II",
+   "I, II ve III",
+   "II ve IV",
+   "Yalnız I",
+   "I, III ve IV"
   ],
   "kanit": [
-   "onaylandığı günü izleyen en geç üç gün içinde"
+   "açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir",
+   "Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir",
+   "Ödeneği bulunmayan hiçbir iş için ihaleye çıkılamaz"
   ]
  },
  {
@@ -322,19 +325,17 @@
  },
  {
   "law": 122,
-  "tip": "onculu",
-  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.\nII. Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir.\nIII. Ödeneği bulunmayan işler için, ödeneğin sonradan temin edileceği taahhüdüyle ihaleye çıkılabilir.\nIV. Eşik değerin altında kalmak amacıyla mal alımları kısımlara bölünebilir.",
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre yerli malı teklif eden istekliler lehine yüzde kaça kadar fiyat avantajı sağlanabilir?",
   "s": [
-   "I ve II",
-   "I, II ve III",
-   "II ve IV",
-   "Yalnız I",
-   "I, III ve IV"
+   "15",
+   "10",
+   "20",
+   "25",
+   "5"
   ],
   "kanit": [
-   "açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir",
-   "Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir",
-   "Ödeneği bulunmayan hiçbir iş için ihaleye çıkılamaz"
+   "yerli malı teklif eden istekliler lehine % 15 oranına kadar fiyat avantajı sağlanabilir"
   ]
  },
  {
@@ -434,18 +435,18 @@
  },
  {
   "law": 77,
-  "tip": "duz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre sözleşmesinde belirtilmek şartıyla yüklenicilere teminat karşılığında ödenebilecek bütçe dışı avans, yüklenme tutarının yüzde kaçını geçemez?",
+  "tip": "vaka",
+  "k": "Genel seferberlik ilan edilmiş; Millî Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bütçelerindeki ödenekler birleştirilerek kullanılmasına rağmen yetersiz kalmıştır. 5018 sayılı Kanun'a göre bu durumda toplam ödenek tutarının yüzde kaçına kadar ek harcama yapılabilir?",
   "s": [
-   "30",
-   "20",
-   "50",
+   "15",
    "10",
-   "25"
+   "20",
+   "25",
+   "5"
   ],
   "kanit": [
-   "yüklenme tutarının yüzde otuzunu geçmemek üzere",
-   "teminat karşılığında bütçe dışı avans ödenebilir"
+   "toplam ödenek tutarının yüzde on beşine kadar ek harcama yapılabilir",
+   "ödenek toplamları aşılmamak şartıyla, birleştirilerek kullanılabilir"
   ]
  },
  {

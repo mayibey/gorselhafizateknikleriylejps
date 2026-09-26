@@ -663,34 +663,34 @@
   },
   {
    "lawId": 123,
-   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
    "siklar": [
-    "15",
-    "3",
-    "7",
-    "5",
-    "10"
+    "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir.",
+    "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
+    "Kararına karşı hakem laboratuvara itiraz edilebilir.",
+    "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
+    "Yüklenicinin göstereceği bilirkişilerden oluşur."
    ],
    "dogru": 3,
-   "tip": "duz",
-   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.11",
-   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.11: “a) Yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesi veya dokümana uygun olarak teslime hazır hale getirildiğini idareye bildirmesinden itibaren en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır.”",
+   "tip": "vaka",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.15",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.15: “Bu takdirde, mal aynen korunmak suretiyle ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona muayene yaptırılır.”",
    "id": "P-SB-MUH-02-42"
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre üst yöneticilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre yüklenmeyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez.\nII. Yüklenme süresi üç malî yılla sınırlıdır.\nIII. Yüklenmeye girişilen tutara ait ödenekler, gerektiğinde başka mal veya hizmet alımında kullanılabilir.",
    "siklar": [
-    "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir.",
-    "Üst yöneticiler sorumluluklarını harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla yerine getirir.",
-    "Belediyelerde belediye başkanı üst yöneticidir.",
-    "Mahallî idarelerde üst yöneticiler meclislerine karşı sorumludur.",
-    "İl özel idarelerinde üst yönetici il genel meclisi başkanıdır."
+    "I ve II",
+    "I, II ve III",
+    "Yalnız II",
+    "I ve III",
+    "Yalnız I"
    ],
    "dogru": 4,
-   "tip": "olumsuz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.11",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.11: “Bakanlıklarda ve diğer kamu idarelerinde en üst yönetici, il özel idarelerinde vali ve belediyelerde belediye başkanı üst yöneticidir.”",
+   "tip": "onculu",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.26",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.26: “Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez.”",
    "id": "P-SB-MUH-02-43"
   },
   {
@@ -759,18 +759,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre merkezî yönetim kapsamındaki kamu idareleri, kendi bütçeleri içinde aktarma yapılacak tertipteki ödeneğin yüzde kaçına kadar ödenek aktarması yapabilir?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre sözleşmesinde belirtilmek şartıyla yüklenicilere teminat karşılığında ödenebilecek bütçe dışı avans, yüklenme tutarının yüzde kaçını geçemez?",
    "siklar": [
-    "15",
-    "10",
-    "5",
+    "25",
     "20",
-    "30"
+    "50",
+    "30",
+    "10"
    ],
    "dogru": 3,
    "tip": "duz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.21",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.21: “Merkezî yönetim kapsamındaki kamu idareleri, aktarma yapılacak tertipteki ödeneğin yüzde yirmisine kadar kendi bütçeleri içinde ödenek aktarması yapabilirler.”",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.35",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.35: “Sözleşmesinde belirtilmek ve yüklenme tutarının yüzde otuzunu geçmemek üzere, yüklenicilere, teminat karşılığında bütçe dışı avans ödenebilir.”",
    "id": "P-SB-MUH-02-48"
   },
   {
@@ -919,18 +919,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ödeneklerinin kullanılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre faaliyet raporlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Cari yılda kullanılmayan ödenekler ertesi yıl bütçesine devreder.",
-    "Genel bütçe kapsamındaki kamu idareleri, ayrıntılı harcama programlarını vize edilmek üzere Cumhurbaşkanlığına gönderir.",
-    "İlama bağlı borçlar ilgili kamu idaresinin cari yıl bütçesinden ödenir.",
-    "Özel bütçeli idareler ve sosyal güvenlik kurumları ayrıntılı finansman programlarını hazırlar.",
-    "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz."
+    "Mahallî idarelerin idare faaliyet raporlarının birer örneği Hazine ve Maliye Bakanlığına gönderilir.",
+    "Üst yönetici, idare faaliyet raporunu düzenleyerek kamuoyuna açıklar.",
+    "Genel faaliyet raporu Cumhurbaşkanlığı tarafından hazırlanır ve kamuoyuna açıklanır.",
+    "Merkezî yönetim kapsamındaki idareler, idare faaliyet raporlarının birer örneğini Sayıştaya ve Cumhurbaşkanlığına gönderir.",
+    "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkililerince her yıl faaliyet raporu hazırlanır."
    ],
    "dogru": 0,
    "tip": "olumsuz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.20",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.20: “) Cari yılda kullanılmayan ödenekler yıl sonunda iptal edilir.”",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.41",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.41: “Mahallî idarelerce hazırlanan idare faaliyet raporlarının birer örneği Sayıştay ve Çevre ve Şehircilik Bakanlığına gönderilir.”",
    "id": "P-SB-MUH-02-58"
   },
   {
@@ -1143,18 +1143,18 @@
   },
   {
    "lawId": 123,
-   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre numunenin ilk iki muayenesi birbirinden değişik sonuçlar vermişse aşağıdakilerden hangisi yapılır?",
    "siklar": [
-    "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
-    "Yüklenicinin göstereceği bilirkişilerden oluşur.",
-    "Kararına karşı hakem laboratuvara itiraz edilebilir.",
-    "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir.",
-    "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur."
+    "Mal doğrudan reddedilir.",
+    "Yüklenici lehine kabul kararı verilir.",
+    "Numune Kamu İhale Kurumuna gönderilir.",
+    "Muayene iptal edilerek yükleniciden yeni numune istenir.",
+    "Aynı numune üzerinde üçüncü bir muayene yapılarak üç muayenenin sonuçlarına göre karar verilir."
    ],
    "dogru": 4,
-   "tip": "vaka",
-   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.15",
-   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.15: “Bu takdirde, mal aynen korunmak suretiyle ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona muayene yaptırılır.”",
+   "tip": "duz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.14",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.14: “Bu iki muayene değişik sonuçlar vermiş ise, o numune üzerinde üçüncü bir muayene daha yapılarak bu üç muayenenin sonuçlarına göre karar verilir.”",
    "id": "P-SB-MUH-02-72"
   },
   {

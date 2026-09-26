@@ -266,18 +266,19 @@
  },
  {
   "law": 77,
-  "tip": "vaka",
-  "k": "Bir kamu görevlisi, alınmamış malı alınmış gibi gösteren gerçek dışı bir belge düzenleyerek kamu kaynağında eksilmeye neden olmuştur. 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bu kişiye, ceza kanunları hükümleri saklı kalmak üzere ayrıca ne kadar para cezası verilir?",
+  "tip": "olumsuz",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ödeneklerinin kullanılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "Her türlü aylık, ödenek, zam ve tazminat dahil bir aylık net ödemelerinin iki katı tutarına kadar",
-   "Bir aylık net ödemelerinin yarısı tutarına kadar",
-   "Üç aylık brüt aylığı tutarına kadar",
-   "Neden olduğu kamu zararının iki katı tutarına kadar",
-   "Bir aylık net ödemelerinin dört katı tutarına kadar"
+   "Cari yılda kullanılmayan ödenekler ertesi yıl bütçesine devreder.",
+   "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz.",
+   "Genel bütçe kapsamındaki kamu idareleri, ayrıntılı harcama programlarını vize edilmek üzere Cumhurbaşkanlığına gönderir.",
+   "Özel bütçeli idareler ve sosyal güvenlik kurumları ayrıntılı finansman programlarını hazırlar.",
+   "İlama bağlı borçlar ilgili kamu idaresinin cari yıl bütçesinden ödenir."
   ],
   "kanit": [
-   "bir aylık net ödemelerin iki katı tutarına kadar para cezası verilir",
-   "gerçek dışı belge düzenlemek suretiyle kamu kaynağında bir artışa engel veya bir eksilmeye neden olanlar"
+   "Cari yılda kullanılmayan ödenekler yıl sonunda iptal edilir",
+   "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz",
+   "ilama bağlı borçlar, ilgili kamu idaresinin cari yıl bütçesinden ödenir"
   ]
  },
  {
@@ -350,19 +351,18 @@
  },
  {
   "law": 77,
-  "tip": "olumsuz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre faaliyet raporlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "tip": "vaka",
+  "k": "Bir kamu görevlisi, alınmamış malı alınmış gibi gösteren gerçek dışı bir belge düzenleyerek kamu kaynağında eksilmeye neden olmuştur. 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bu kişiye, ceza kanunları hükümleri saklı kalmak üzere ayrıca ne kadar para cezası verilir?",
   "s": [
-   "Mahallî idarelerin idare faaliyet raporlarının birer örneği Hazine ve Maliye Bakanlığına gönderilir.",
-   "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkililerince her yıl faaliyet raporu hazırlanır.",
-   "Üst yönetici, idare faaliyet raporunu düzenleyerek kamuoyuna açıklar.",
-   "Merkezî yönetim kapsamındaki idareler, idare faaliyet raporlarının birer örneğini Sayıştaya ve Cumhurbaşkanlığına gönderir.",
-   "Genel faaliyet raporu Cumhurbaşkanlığı tarafından hazırlanır ve kamuoyuna açıklanır."
+   "Her türlü aylık, ödenek, zam ve tazminat dahil bir aylık net ödemelerinin iki katı tutarına kadar",
+   "Bir aylık net ödemelerinin yarısı tutarına kadar",
+   "Üç aylık brüt aylığı tutarına kadar",
+   "Neden olduğu kamu zararının iki katı tutarına kadar",
+   "Bir aylık net ödemelerinin dört katı tutarına kadar"
   ],
   "kanit": [
-   "Mahallî idarelerce hazırlanan idare faaliyet raporlarının birer örneği Sayıştay ve Çevre ve Şehircilik Bakanlığına",
-   "her yıl faaliyet raporu hazırlanır",
-   "Cumhurbaşkanlığı, genel faaliyet raporunu kamuoyuna açıklar"
+   "bir aylık net ödemelerin iki katı tutarına kadar para cezası verilir",
+   "gerçek dışı belge düzenlemek suretiyle kamu kaynağında bir artışa engel veya bir eksilmeye neden olanlar"
   ]
  },
  {
@@ -509,19 +509,17 @@
  },
  {
   "law": 77,
-  "tip": "onculu",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre yüklenmeyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez.\nII. Yüklenme süresi üç malî yılla sınırlıdır.\nIII. Yüklenmeye girişilen tutara ait ödenekler, gerektiğinde başka mal veya hizmet alımında kullanılabilir.",
+  "tip": "duz",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre merkezî yönetim kapsamındaki kamu idareleri, kendi bütçeleri içinde aktarma yapılacak tertipteki ödeneğin yüzde kaçına kadar ödenek aktarması yapabilir?",
   "s": [
-   "Yalnız I",
-   "Yalnız II",
-   "I ve II",
-   "I ve III",
-   "I, II ve III"
+   "20",
+   "10",
+   "5",
+   "30",
+   "15"
   ],
   "kanit": [
-   "Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez",
-   "Yüklenme süresi malî yılla sınırlıdır",
-   "başka iş yaptırılması, mal veya hizmet alınması için kullanılamaz"
+   "aktarma yapılacak tertipteki ödeneğin yüzde yirmisine kadar kendi bütçeleri içinde ödenek aktarması yapabilirler"
   ]
  },
  {

@@ -45,7 +45,7 @@
    "1/25.000-1/50.000"
   ],
   "kanit": [
-   "1/50.000-1/100.000 ölçekli çevre düzeni plânları Bakanlıkça yapılır"
+   "1/50.000- 1/100.000 ölçekli çevre düzeni plânları Bakanlıkça yapılır"
   ]
  },
  {
@@ -230,35 +230,33 @@
  {
   "law": 131,
   "tip": "olumsuz",
-  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi tehlike analizi ve kritik kontrol noktaları (HACCP) temel ilkelerinden biri değildir?",
+  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi Yönetmeliğin uygulanmadığı hâller arasında yer almaz?",
   "s": [
-   "Kritik kontrol noktalarının tüketicilere ilan edilmesi",
-   "Önlenmesi gereken tehlikelerin belirlenmesi",
-   "Kritik limitlerin oluşturulması",
-   "Etkin izleme prosedürlerinin oluşturulması",
-   "Düzeltici faaliyet prosedürlerinin oluşturulması"
+   "Hayvansal gıdalar için özel hijyen kurallarının uygulandığı gıda işletmecileri",
+   "Kişisel tüketim amacıyla birincil üretim",
+   "Kişisel tüketim amacıyla gıdanın hazırlanması ve depolanması",
+   "Küçük miktardaki birincil ürünlerin üreticisince son tüketiciye doğrudan arzı",
+   "Yalnızca jelatin ve kolajen hammaddesi sağlayan toplama merkezleri ve tabakhaneler"
   ],
   "kanit": [
-   "aşağıdaki yedi temel ilkeyi içerir",
-   "kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması",
-   "düzeltici faaliyet prosedürlerinin oluşturulması ve uygulanması"
+   "Hayvansal Gıdalar İçin Özel Hijyen Kuralları Yönetmeliğinin uygulandığı gıda işletmecileri için de geçerlidir",
+   "Kişisel tüketim amacıyla birincil üretime"
   ]
  },
  {
   "law": 77,
-  "tip": "olumsuz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre faaliyet raporlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "tip": "vaka",
+  "k": "Bir kamu görevlisi, alınmamış malı alınmış gibi gösteren gerçek dışı bir belge düzenleyerek kamu kaynağında eksilmeye neden olmuştur. 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bu kişiye, ceza kanunları hükümleri saklı kalmak üzere ayrıca ne kadar para cezası verilir?",
   "s": [
-   "Mahallî idarelerin idare faaliyet raporlarının birer örneği Hazine ve Maliye Bakanlığına gönderilir.",
-   "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkililerince her yıl faaliyet raporu hazırlanır.",
-   "Üst yönetici, idare faaliyet raporunu düzenleyerek kamuoyuna açıklar.",
-   "Merkezî yönetim kapsamındaki idareler, idare faaliyet raporlarının birer örneğini Sayıştaya ve Cumhurbaşkanlığına gönderir.",
-   "Genel faaliyet raporu Cumhurbaşkanlığı tarafından hazırlanır ve kamuoyuna açıklanır."
+   "Her türlü aylık, ödenek, zam ve tazminat dahil bir aylık net ödemelerinin iki katı tutarına kadar",
+   "Bir aylık net ödemelerinin yarısı tutarına kadar",
+   "Üç aylık brüt aylığı tutarına kadar",
+   "Neden olduğu kamu zararının iki katı tutarına kadar",
+   "Bir aylık net ödemelerinin dört katı tutarına kadar"
   ],
   "kanit": [
-   "Mahallî idarelerce hazırlanan idare faaliyet raporlarının birer örneği Sayıştay ve Çevre ve Şehircilik Bakanlığına",
-   "her yıl faaliyet raporu hazırlanır",
-   "Cumhurbaşkanlığı, genel faaliyet raporunu kamuoyuna açıklar"
+   "bir aylık net ödemelerin iki katı tutarına kadar para cezası verilir",
+   "gerçek dışı belge düzenlemek suretiyle kamu kaynağında bir artışa engel veya bir eksilmeye neden olanlar"
   ]
  },
  {
@@ -356,17 +354,19 @@
  },
  {
   "law": 122,
-  "tip": "duz",
-  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre kesinleşen ihale kararı, ihale yetkilisince onaylandığı günü izleyen en geç kaç gün içinde ihaleye teklif veren bütün isteklilere bildirilir?",
+  "tip": "onculu",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.\nII. Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir.\nIII. Ödeneği bulunmayan işler için, ödeneğin sonradan temin edileceği taahhüdüyle ihaleye çıkılabilir.\nIV. Eşik değerin altında kalmak amacıyla mal alımları kısımlara bölünebilir.",
   "s": [
-   "3",
-   "5",
-   "10",
-   "7",
-   "15"
+   "I ve II",
+   "I, II ve III",
+   "II ve IV",
+   "Yalnız I",
+   "I, III ve IV"
   ],
   "kanit": [
-   "onaylandığı günü izleyen en geç üç gün içinde"
+   "açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir",
+   "Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir",
+   "Ödeneği bulunmayan hiçbir iş için ihaleye çıkılamaz"
   ]
  },
  {
@@ -574,19 +574,19 @@
  },
  {
   "law": 77,
-  "tip": "olumsuz",
-  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre üst yöneticilerle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "tip": "onculu",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre yüklenmeyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez.\nII. Yüklenme süresi üç malî yılla sınırlıdır.\nIII. Yüklenmeye girişilen tutara ait ödenekler, gerektiğinde başka mal veya hizmet alımında kullanılabilir.",
   "s": [
-   "İl özel idarelerinde üst yönetici il genel meclisi başkanıdır.",
-   "Belediyelerde belediye başkanı üst yöneticidir.",
-   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir.",
-   "Mahallî idarelerde üst yöneticiler meclislerine karşı sorumludur.",
-   "Üst yöneticiler sorumluluklarını harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla yerine getirir."
+   "Yalnız I",
+   "Yalnız II",
+   "I ve II",
+   "I ve III",
+   "I, II ve III"
   ],
   "kanit": [
-   "il özel idarelerinde vali ve belediyelerde belediye başkanı üst yöneticidir",
-   "Bakanlıklarda en üst yönetici Cumhurbaşkanı tarafından belirlenir",
-   "harcama yetkilileri, malî hizmetler birimi ve iç denetçiler aracılığıyla"
+   "Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilemez",
+   "Yüklenme süresi malî yılla sınırlıdır",
+   "başka iş yaptırılması, mal veya hizmet alınması için kullanılamaz"
   ]
  },
  {

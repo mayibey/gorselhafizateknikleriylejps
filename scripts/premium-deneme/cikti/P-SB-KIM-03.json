@@ -551,7 +551,7 @@
   },
   {
    "lawId": 21,
-   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile on altı yaşından büyük tek bir korunan kişi için yapılacak günlük ödeme en fazla ne kadar olabilir?",
    "siklar": [
     "Aylık brüt asgari ücretin tamamı",
     "Aylık net asgari ücretin yirmide biri",
@@ -855,18 +855,18 @@
   },
   {
    "lawId": 123,
-   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre numunenin ilk iki muayenesi birbirinden değişik sonuçlar vermişse aşağıdakilerden hangisi yapılır?",
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
    "siklar": [
-    "Muayene iptal edilerek yükleniciden yeni numune istenir.",
-    "Yüklenici lehine kabul kararı verilir.",
-    "Numune Kamu İhale Kurumuna gönderilir.",
-    "Aynı numune üzerinde üçüncü bir muayene yapılarak üç muayenenin sonuçlarına göre karar verilir.",
-    "Mal doğrudan reddedilir."
+    "15",
+    "10",
+    "7",
+    "5",
+    "3"
    ],
    "dogru": 3,
    "tip": "duz",
-   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.14",
-   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.14: “Bu iki muayene değişik sonuçlar vermiş ise, o numune üzerinde üçüncü bir muayene daha yapılarak bu üç muayenenin sonuçlarına göre karar verilir.”",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.11",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.11: “a) Yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesi veya dokümana uygun olarak teslime hazır hale getirildiğini idareye bildirmesinden itibaren en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır.”",
    "id": "P-SB-KIM-03-54"
   },
   {

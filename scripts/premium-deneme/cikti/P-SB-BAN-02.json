@@ -775,18 +775,18 @@
   },
   {
    "lawId": 122,
-   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre kesinleşen ihale kararı, ihale yetkilisince onaylandığı günü izleyen en geç kaç gün içinde ihaleye teklif veren bütün isteklilere bildirilir?",
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.\nII. Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir.\nIII. Ödeneği bulunmayan işler için, ödeneğin sonradan temin edileceği taahhüdüyle ihaleye çıkılabilir.\nIV. Eşik değerin altında kalmak amacıyla mal alımları kısımlara bölünebilir.",
    "siklar": [
-    "7",
-    "10",
-    "5",
-    "3",
-    "15"
+    "Yalnız I",
+    "II ve IV",
+    "I, II ve III",
+    "I ve II",
+    "I, III ve IV"
    ],
    "dogru": 3,
-   "tip": "duz",
-   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.65",
-   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.65: “)(1) Kesinleşen ihale kararı, ihale yetkilisi tarafından onaylandığı günü izleyen en geç üç gün içinde, ihale üzerinde bırakılan dahil, ihaleye teklif veren bütün isteklilere, 64 üncü maddenin birinci fıkrası uyarınca alınan ihale komisyonu kararı ile birlikte bildirilir.”",
+   "tip": "onculu",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.4",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.4: “(4) İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.”",
    "id": "P-SB-BAN-02-49"
   },
   {
@@ -1047,18 +1047,18 @@
   },
   {
    "lawId": 123,
-   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
    "siklar": [
-    "7",
-    "10",
-    "5",
-    "3",
-    "15"
+    "Kararına karşı hakem laboratuvara itiraz edilebilir.",
+    "Yüklenicinin göstereceği bilirkişilerden oluşur.",
+    "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
+    "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
+    "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir."
    ],
    "dogru": 2,
-   "tip": "duz",
-   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.11",
-   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.11: “a) Yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesi veya dokümana uygun olarak teslime hazır hale getirildiğini idareye bildirmesinden itibaren en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır.”",
+   "tip": "vaka",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.15",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.15: “Bu takdirde, mal aynen korunmak suretiyle ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona muayene yaptırılır.”",
    "id": "P-SB-BAN-02-66"
   },
   {

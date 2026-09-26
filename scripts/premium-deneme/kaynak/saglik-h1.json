@@ -126,18 +126,19 @@
  },
  {
   "law": 82,
-  "tip": "duz",
-  "k": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre ölenin kanuni mirasçılarına ödenecek nakdi tazminattan, ölenin eş ve füruu ile birlikte bulunan ve ölüm tarihinde sağ olan ana ve babanın her birine ayrı ayrı yüzde kaç tutarında kısım verilir?",
+  "tip": "olumsuz",
+  "k": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre nakdi tazminatla ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "15",
-   "10",
-   "25",
-   "20",
-   "5"
+   "Ölenlerin kanuni mirasçılarına en yüksek Devlet memuru brüt aylığının 50 katı tutarında nakdi tazminat ödenir.",
+   "Tazminata esas aylık, karar tarihindeki en yüksek Devlet memuru aylığının (ek gösterge dahil) brüt tutarıdır.",
+   "Yaralananlara, ölüm hâlinde ödenecek tutarın %20'sini geçmemek üzere nakdi tazminat ödenir.",
+   "Olağanüstü hâlin devamı süresince nakdi tazminat miktarlarını yarıya kadar indirmeye Cumhurbaşkanı yetkilidir.",
+   "Kesin raporun alınmasının uzayacağı anlaşılırsa asgari oran üzerinden avans ödenir."
   ],
   "kanit": [
-   "ölüm tarihinde sağ olan ana ve babasının her birine ayrı ayrı olmak üzere % 15",
-   "Ancak ana veya babaya verilen tazminat çocukların her birine ödenen tazminattan fazla olamaz"
+   "en yüksek Devlet Memuru brüt aylığının (Ek gösterge dahil) 100 katı tutarında",
+   "yaralananlara ise % 20'sini geçmemek üzere",
+   "yarıya kadar indirilmesine veya nakdi tazminata ilişkin hükümlerin uygulanmamasına Cumhurbaşkanı yetkilidir"
   ]
  },
  {
@@ -236,17 +237,18 @@
  },
  {
   "law": 99,
-  "tip": "duz",
-  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre vize alınmaksızın çalıştırılacak geçici işçilerin ücretlerinin harcama talimatı ve İşçi Ücret Bordrosu ile ödenebilmesi için çalışma süresi en fazla kaç iş günü olmalıdır?",
+  "tip": "vaka",
+  "k": "Mutemet Astsubay A, birliğindeki Jandarma er ve erbaşlarının harçlık ve tayın bedellerini avans olarak ödetecektir. Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesine hangi belge bağlanır?",
   "s": [
-   "30",
-   "15",
-   "60",
-   "45",
-   "20"
+   "Er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
+   "Sağlık kurulu raporu",
+   "Muayene ve kabul komisyonu tutanağı",
+   "Taahhüt dosyası",
+   "Yurtiçi Geçici Görev Yolluğu Bildirimi"
   ],
   "kanit": [
-   "30 iş gününü aşmayan sürelerde ve vize alınmaksızın çalıştırılacak işçilerin"
+   "er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
+   "Jandarma er ve erbaşlarının harçlıkları ve tayın bedellerinin avans olarak"
   ]
  },
  {
@@ -394,17 +396,19 @@
  },
  {
   "law": 99,
-  "tip": "duz",
-  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde hangi belgeler ödeme belgesine bağlanır?",
+  "tip": "onculu",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödemenin yapılacağı kişinin tespitinde aranan belgelerle ilgili aşağıdakilerden hangileri doğrudur?\nI. Varislere yapılacak ödemelerde veraset ilamı aranır.\nII. Herhangi bir alacağı temellük eden kişilere yapılacak ödemelerde noterce onaylanmış alacak temliknamesi aranır.\nIII. Kayyımlara yapılacak ödemelerde noterce düzenlenmiş vekaletname aranır.",
   "s": [
-   "Taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu",
-   "Yalnız fatura",
-   "Fatura ve taşınır işlem fişi",
-   "Taahhüt dosyası ve muayene ve kabul komisyonu tutanağı",
-   "Harcama talimatı ve Yapım İşleri Hakediş Raporu"
+   "I ve II",
+   "Yalnız I",
+   "I ve III",
+   "II ve III",
+   "I, II ve III"
   ],
   "kanit": [
-   "bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde; -Taahhüt dosyası, - Fatura, -Hizmet İşleri Hakediş Raporu"
+   "Varislere yapılacak ödemelerde, veraset ilamı",
+   "noterce onaylanmış alacak temliknamesi",
+   "Kayyımlara yapılacak ödemelerde, kayyım tayinine ilişkin mahkeme ilamı"
   ]
  },
  {
@@ -538,17 +542,19 @@
  },
  {
   "law": 99,
-  "tip": "duz",
-  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre yapı, tesis ve onarım giderlerinin ödenmesinde taahhüt dosyası ve fatura ile birlikte ödeme belgesine aşağıdakilerden hangisi bağlanır?",
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesi ve kanıtlayıcı belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "Yapım İşleri Hakediş Raporu",
-   "Hizmet İşleri Hakediş Raporu",
-   "Mihmandar Hesap Cetveli",
-   "Piyasa fiyat araştırması tutanağı",
-   "Kıymet takdir komisyonu kararı"
+   "Ortak veri tabanından yapılan harcamalarda bu veriler ayrıca kanıtlayıcı belge olarak bağlanır.",
+   "Ödeme belgesi iki nüsha olarak muhasebe birimine verilir.",
+   "Kanıtlayıcı belgeler ödeme belgesinin birinci nüshasına bağlanır.",
+   "Ödeme belgesinin ikinci nüshası muhasebe biriminde saklanır.",
+   "Fatura ve taşınır işlem fişinin asıllarının bağlanması esastır."
   ],
   "kanit": [
-   "Yapım İşleri Hakediş Raporu (Örnek: 3) ödeme belgesine bağlanır"
+   "ödeme belgesine ayrıca bu verileri kanıtlayıcı belge bağlanmaz",
+   "Ödeme belgesi iki nüsha olarak",
+   "ikinci nüshası ise muhasebe biriminde saklanır"
   ]
  },
  {
@@ -603,17 +609,17 @@
  {
   "law": 82,
   "tip": "duz",
-  "k": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre bu Kanun kapsamında ilgili sosyal güvenlik kurumlarınca bağlanan görev malullüğü aylıkları yüzde kaç artırılarak ödenir?",
+  "k": "Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun'a göre ölenin kanuni mirasçılarına ödenecek nakdi tazminattan, ölenin eş ve füruu ile birlikte bulunan ve ölüm tarihinde sağ olan ana ve babanın her birine ayrı ayrı yüzde kaç tutarında kısım verilir?",
   "s": [
-   "25",
    "15",
-   "50",
    "10",
-   "20"
+   "25",
+   "20",
+   "5"
   ],
   "kanit": [
-   "% 25 artırılarak ödenir",
-   "görev malullüğü aylığı bağlanır"
+   "ölüm tarihinde sağ olan ana ve babasının her birine ayrı ayrı olmak üzere % 15",
+   "Ancak ana veya babaya verilen tazminat çocukların her birine ödenen tazminattan fazla olamaz"
   ]
  },
  {

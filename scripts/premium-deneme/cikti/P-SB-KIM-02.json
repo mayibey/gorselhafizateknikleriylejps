@@ -1005,7 +1005,7 @@
     "Kaymakamlar",
     "Valiler",
     "Bölge müdürleri",
-    "Çevre ve şehircilik il müdürleri"
+    "Bakanlığın il müdürleri"
    ],
    "dogru": 4,
    "tip": "duz",
@@ -1143,18 +1143,18 @@
   },
   {
    "lawId": 131,
-   "soru": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi tehlike analizi ve kritik kontrol noktaları (HACCP) temel ilkelerinden biri değildir?",
+   "soru": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi Yönetmeliğin uygulanmadığı hâller arasında yer almaz?",
    "siklar": [
-    "Kritik kontrol noktalarının tüketicilere ilan edilmesi",
-    "Önlenmesi gereken tehlikelerin belirlenmesi",
-    "Etkin izleme prosedürlerinin oluşturulması",
-    "Düzeltici faaliyet prosedürlerinin oluşturulması",
-    "Kritik limitlerin oluşturulması"
+    "Hayvansal gıdalar için özel hijyen kurallarının uygulandığı gıda işletmecileri",
+    "Kişisel tüketim amacıyla birincil üretim",
+    "Küçük miktardaki birincil ürünlerin üreticisince son tüketiciye doğrudan arzı",
+    "Yalnızca jelatin ve kolajen hammaddesi sağlayan toplama merkezleri ve tabakhaneler",
+    "Kişisel tüketim amacıyla gıdanın hazırlanması ve depolanması"
    ],
    "dogru": 0,
    "tip": "olumsuz",
-   "kaynak": "Gıda Hijyeni Yönetmeliği m.22",
-   "aciklama": "Gıda Hijyeni Yönetmeliği, m.22: “(2) Tehlike analizi ve kritik kontrol noktaları/HACCP aşağıdaki yedi temel ilkeyi içerir; a) Önlenmesi, elimine edilmesi veya kabul edilebilir düzeylere düşürülmesi gereken tehlikelerin belirlenmesi, b) Bir tehlikenin önlenmesi veya elimine edilmesi veya kabul edilebilir düzeylere düşürülmesi için kontrolün temelini oluşturan aşama veya aşamalarda kritik kontrol noktalarının belirlenmesi, c) Belirlenen kritik kontrol noktalarında, tanımlanan tehlikenin önlenmesi, elimine edilmesi veya azaltılması için, kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması, ç) Kritik kontrol noktalarında etkin izleme prosedürlerinin oluşturulması ve uygulanması, d) Yapılan izlemede, kritik kontrol noktasının kontrol altında tutulamadığı durumlar için düzeltici faaliyet prosedürlerinin oluşturulması ve uygulanması, e) (a), (b), (c), (ç) ve (d) bentlerde belirtilen tedbirlerin etkin olarak uygulandığının doğrulanması için düzenli olarak yürütülen prosedürlerin oluşturulması, f) (a), (b), (c), (ç), (d) ve (e) bentlerde belirtilen tedbirlerin etkin olarak uygulandığının kanıtlanması için işletmenin yapısı ve büyüklüğüne uygun belge ve kayıtların oluşturulması. (3) Gıda işletmecisi; üründe, üretilen gıdanın işleme yönteminde veya üretimin herhangi bir aşamasında değişiklik yaptığında prosedürü gözden geçirir ve üzerinde gerekli değişiklikleri yapar. (4) Bu maddenin birinci fıkrası sadece, birincil üretim ve ilgili faaliyetlerden sonra gıdanın üretimi, işlenmesi ve dağıtımı aşamalarından birini veya birkaçını yürüten gıda işletmecisi için geçerlidir. (5) Gıda işletmecisi; a) İşletmesinin faaliyet alanı ve büyüklüğünü dikkate alarak, bu maddenin birinci fıkrasında belirtilen şartları karşıladığını kanıtlayan bilgi ve belgeleri, Bakanlığın talep ettiği şekilde sağlar. b) Bu madde uyarınca geliştirilen prosedürleri tanımlayan bütün belgelerin güncelliğini sağlar. c) Diğer tüm belge ve kayıtları uygun bir süre ile saklar. Resmi kontroller, onay ve kayıt”",
+   "kaynak": "Gıda Hijyeni Yönetmeliği m.2",
+   "aciklama": "Gıda Hijyeni Yönetmeliği, m.2: “(2) Bu Yönetmelik, ithalat ve ihracat kontrolleri ile Hayvansal Gıdalar İçin Özel Hijyen Kuralları Yönetmeliğinin uygulandığı gıda işletmecileri için de geçerlidir.”",
    "id": "P-SB-KIM-02-72"
   },
   {

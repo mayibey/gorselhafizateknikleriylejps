@@ -131,17 +131,19 @@
  },
  {
   "law": 122,
-  "tip": "duz",
-  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre kesinleşen ihale kararı, ihale yetkilisince onaylandığı günü izleyen en geç kaç gün içinde ihaleye teklif veren bütün isteklilere bildirilir?",
+  "tip": "onculu",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.\nII. Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir.\nIII. Ödeneği bulunmayan işler için, ödeneğin sonradan temin edileceği taahhüdüyle ihaleye çıkılabilir.\nIV. Eşik değerin altında kalmak amacıyla mal alımları kısımlara bölünebilir.",
   "s": [
-   "3",
-   "5",
-   "10",
-   "7",
-   "15"
+   "I ve II",
+   "I, II ve III",
+   "II ve IV",
+   "Yalnız I",
+   "I, III ve IV"
   ],
   "kanit": [
-   "onaylandığı günü izleyen en geç üç gün içinde"
+   "açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir",
+   "Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir",
+   "Ödeneği bulunmayan hiçbir iş için ihaleye çıkılamaz"
   ]
  },
  {
@@ -398,17 +400,18 @@
  },
  {
   "law": 123,
-  "tip": "duz",
-  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre fiziksel muayene sonucunda malı reddedilen yüklenici, red raporuna usulüne göre itiraz ederek ikinci bir muayene istemiştir. İkinci muayeneyi yapacak komisyonla ilgili aşağıdakilerden hangisi doğrudur?",
   "s": [
-   "5",
-   "3",
-   "10",
-   "7",
-   "15"
+   "İlk muayenede bulunmamış kişilerden en az üç kişilik olarak kurulur.",
+   "İlk komisyonun asıl ve yedek üyelerinden kurulur.",
+   "Yüklenicinin göstereceği bilirkişilerden oluşur.",
+   "Kararına karşı hakem laboratuvara itiraz edilebilir.",
+   "En az beş kişiden oluşur ve kararları tavsiye niteliğindedir."
   ],
   "kanit": [
-   "en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır"
+   "ilk muayenede bulunmamış olan kişilerden kurulacak en az üç kişilik ikinci bir komisyona",
+   "Bu komisyonun vereceği kararlar kesin olup"
   ]
  },
  {

@@ -871,18 +871,18 @@
   },
   {
    "lawId": 131,
-   "soru": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Taşıma araçlarının ve konteynerlerin içindeki kaplar, gıdadan başka bir maddenin taşınmasında kullanılmaz.\nII. İshal şikâyeti olan ve bulaştırma ihtimali bulunan personelin gıda ile temasına izin verilebilir.\nIII. Temizlik ve dezenfeksiyon maddeleri, gıdanın muameleye tabi tutulduğu alanlarda depolanabilir.",
+   "soru": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi tehlike analizi ve kritik kontrol noktaları (HACCP) temel ilkelerinden biri değildir?",
    "siklar": [
-    "I ve II",
-    "I ve III",
-    "Yalnız II",
-    "Yalnız I",
-    "II ve III"
+    "Önlenmesi gereken tehlikelerin belirlenmesi",
+    "Kritik limitlerin oluşturulması",
+    "Etkin izleme prosedürlerinin oluşturulması",
+    "Kritik kontrol noktalarının tüketicilere ilan edilmesi",
+    "Düzeltici faaliyet prosedürlerinin oluşturulması"
    ],
    "dogru": 3,
-   "tip": "onculu",
-   "kaynak": "Gıda Hijyeni Yönetmeliği m.13",
-   "aciklama": "Gıda Hijyeni Yönetmeliği, m.13: “(2) Taşıma araçlarının ve/veya konteynerlerin içindeki kaplar, bulaşmaya sebep olabileceği için, gıdadan başka herhangi bir maddenin taşınmasında kullanılmaz.”",
+   "tip": "olumsuz",
+   "kaynak": "Gıda Hijyeni Yönetmeliği m.22",
+   "aciklama": "Gıda Hijyeni Yönetmeliği, m.22: “(2) Tehlike analizi ve kritik kontrol noktaları/HACCP aşağıdaki yedi temel ilkeyi içerir; a) Önlenmesi, elimine edilmesi veya kabul edilebilir düzeylere düşürülmesi gereken tehlikelerin belirlenmesi, b) Bir tehlikenin önlenmesi veya elimine edilmesi veya kabul edilebilir düzeylere düşürülmesi için kontrolün temelini oluşturan aşama veya aşamalarda kritik kontrol noktalarının belirlenmesi, c) Belirlenen kritik kontrol noktalarında, tanımlanan tehlikenin önlenmesi, elimine edilmesi veya azaltılması için, kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması, ç) Kritik kontrol noktalarında etkin izleme prosedürlerinin oluşturulması ve uygulanması, d) Yapılan izlemede, kritik kontrol noktasının kontrol altında tutulamadığı durumlar için düzeltici faaliyet prosedürlerinin oluşturulması ve uygulanması, e) (a), (b), (c), (ç) ve (d) bentlerde belirtilen tedbirlerin etkin olarak uygulandığının doğrulanması için düzenli olarak yürütülen prosedürlerin oluşturulması, f) (a), (b), (c), (ç), (d) ve (e) bentlerde belirtilen tedbirlerin etkin olarak uygulandığının kanıtlanması için işletmenin yapısı ve büyüklüğüne uygun belge ve kayıtların oluşturulması. (3) Gıda işletmecisi; üründe, üretilen gıdanın işleme yönteminde veya üretimin herhangi bir aşamasında değişiklik yaptığında prosedürü gözden geçirir ve üzerinde gerekli değişiklikleri yapar. (4) Bu maddenin birinci fıkrası sadece, birincil üretim ve ilgili faaliyetlerden sonra gıdanın üretimi, işlenmesi ve dağıtımı aşamalarından birini veya birkaçını yürüten gıda işletmecisi için geçerlidir. (5) Gıda işletmecisi; a) İşletmesinin faaliyet alanı ve büyüklüğünü dikkate alarak, bu maddenin birinci fıkrasında belirtilen şartları karşıladığını kanıtlayan bilgi ve belgeleri, Bakanlığın talep ettiği şekilde sağlar. b) Bu madde uyarınca geliştirilen prosedürleri tanımlayan bütün belgelerin güncelliğini sağlar. c) Diğer tüm belge ve kayıtları uygun bir süre ile saklar. Resmi kontroller, onay ve kayıt”",
    "id": "P-SB-VET-02-55"
   },
   {
@@ -1036,7 +1036,7 @@
     "Kaymakamlar",
     "Belediye başkanları",
     "Valiler",
-    "Çevre ve şehircilik il müdürleri",
+    "Bakanlığın il müdürleri",
     "Bölge müdürleri"
    ],
    "dogru": 3,
@@ -1063,18 +1063,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ödeneklerinin kullanılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre faaliyet raporlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Cari yılda kullanılmayan ödenekler ertesi yıl bütçesine devreder.",
-    "Özel bütçeli idareler ve sosyal güvenlik kurumları ayrıntılı finansman programlarını hazırlar.",
-    "İlama bağlı borçlar ilgili kamu idaresinin cari yıl bütçesinden ödenir.",
-    "Genel bütçe kapsamındaki kamu idareleri, ayrıntılı harcama programlarını vize edilmek üzere Cumhurbaşkanlığına gönderir.",
-    "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz."
+    "Mahallî idarelerin idare faaliyet raporlarının birer örneği Hazine ve Maliye Bakanlığına gönderilir.",
+    "Merkezî yönetim kapsamındaki idareler, idare faaliyet raporlarının birer örneğini Sayıştaya ve Cumhurbaşkanlığına gönderir.",
+    "Genel faaliyet raporu Cumhurbaşkanlığı tarafından hazırlanır ve kamuoyuna açıklanır.",
+    "Üst yönetici, idare faaliyet raporunu düzenleyerek kamuoyuna açıklar.",
+    "Üst yöneticiler ve bütçeyle ödenek tahsis edilen harcama yetkililerince her yıl faaliyet raporu hazırlanır."
    ],
    "dogru": 0,
    "tip": "olumsuz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.20",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.20: “) Cari yılda kullanılmayan ödenekler yıl sonunda iptal edilir.”",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.41",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.41: “Mahallî idarelerce hazırlanan idare faaliyet raporlarının birer örneği Sayıştay ve Çevre ve Şehircilik Bakanlığına gönderilir.”",
    "id": "P-SB-VET-02-67"
   },
   {
@@ -1223,18 +1223,18 @@
   },
   {
    "lawId": 77,
-   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre sözleşmesinde belirtilmek şartıyla yüklenicilere teminat karşılığında ödenebilecek bütçe dışı avans, yüklenme tutarının yüzde kaçını geçemez?",
+   "soru": "Genel seferberlik ilan edilmiş; Millî Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bütçelerindeki ödenekler birleştirilerek kullanılmasına rağmen yetersiz kalmıştır. 5018 sayılı Kanun'a göre bu durumda toplam ödenek tutarının yüzde kaçına kadar ek harcama yapılabilir?",
    "siklar": [
-    "25",
-    "20",
-    "30",
+    "5",
     "10",
-    "50"
+    "15",
+    "25",
+    "20"
    ],
    "dogru": 2,
-   "tip": "duz",
-   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.35",
-   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.35: “Sözleşmesinde belirtilmek ve yüklenme tutarının yüzde otuzunu geçmemek üzere, yüklenicilere, teminat karşılığında bütçe dışı avans ödenebilir.”",
+   "tip": "vaka",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.20",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.20: “olmaması halinde toplam ödenek tutarının yüzde on beşine kadar ek harcama yapılabilir.”",
    "id": "P-SB-VET-02-77"
   },
   {

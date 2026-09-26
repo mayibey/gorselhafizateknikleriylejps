@@ -519,7 +519,7 @@
   },
   {
    "lawId": 21,
-   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile on altı yaşından büyük tek bir korunan kişi için yapılacak günlük ödeme en fazla ne kadar olabilir?",
    "siklar": [
     "Aylık net asgari ücretin otuzda biri",
     "Aylık net asgari ücretin yarısı",
@@ -794,7 +794,7 @@
    "soru": "4342 sayılı Mera Kanunu'na göre il mera komisyonuna kim başkanlık eder?",
    "siklar": [
     "Kaymakam",
-    "İl tarım ve orman müdürü",
+    "Defterdar",
     "Büyükşehir belediye başkanı",
     "Vali",
     "Vali yardımcısı"
@@ -807,18 +807,18 @@
   },
   {
    "lawId": 34,
-   "soru": "2918 sayılı Karayolları Trafik Kanunu'na göre hususi otomobil dışındaki araçları kullanan sürücüler için alkollü araç kullanma sınırı kaç promildir?",
+   "soru": "2918 sayılı Karayolları Trafik Kanunu'na göre hususi otomobil dışındaki araçları alkollü olarak kullanan sürücüler bakımından promil alt sınırı kaç olarak uygulanır?",
    "siklar": [
     "0,50",
     "0,10",
     "1,00",
-    "0,20",
+    "0,21",
     "0,30"
    ],
    "dogru": 3,
    "tip": "duz",
    "kaynak": "2918 sayılı Karayolları Trafik Kanunu m.48",
-   "aciklama": "2918 sayılı Karayolları Trafik Kanunu, m.48: “50 promilin, diğer araç sürücüleri bakımından 0.20 promilin üzerinde alkollü olan sürücülerin trafik kazasına sebebiyet vermesi hâlinde, ayrıca Türk Ceza Kanununun ilgili hükümleri uygulanır.”",
+   "aciklama": "2918 sayılı Karayolları Trafik Kanunu, m.48: “Hususi otomobil dışındaki araçları alkollü olarak kullanan sürücüler bakımından promil alt sınırı 0.21 olarak uygulanır.”",
    "id": "P-UE-JAN-03-51"
   },
   {
@@ -969,11 +969,11 @@
    "lawId": 43,
    "soru": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun'a göre il spor güvenlik kuruluna kim başkanlık eder?",
    "siklar": [
-    "İl emniyet müdürü",
-    "Vali",
-    "Vali yardımcısı",
     "Gençlik ve spor il müdürü",
-    "İl jandarma komutanı"
+    "İl emniyet müdürü",
+    "Vali veya görevlendireceği vali yardımcısı",
+    "İl jandarma komutanı",
+    "Belediye başkanı"
    ],
    "dogru": 2,
    "tip": "duz",
@@ -1050,8 +1050,8 @@
    "soru": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun'a göre aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
     "Tütün ürünlerinin satışında on sekiz yaşından küçükler çalıştırılamaz.",
-    "Özel hususi araçlarda tütün ürünü içilmesi yasaktır.",
-    "Tütün ürünleri paketlerinin ön ve arka yüzeylerinin %85'i sağlık uyarısına ayrılır.",
+    "Taksilerde tütün ürünü içilemez.",
+    "Tütün ürünleri paketlerinin en geniş iki yüzünün en az %85'i sağlık uyarısına ayrılır.",
     "Tütün ürünleri on altı yaşını doldurmamış kişilere satılamaz.",
     "Okulların açık alanlarında da tütün ürünü içilemez."
    ],
@@ -1185,8 +1185,8 @@
    ],
    "dogru": 4,
    "tip": "onculu",
-   "kaynak": "Adli ve Önleme Aramaları Yönetmeliği m.11",
-   "aciklama": "Adli ve Önleme Aramaları Yönetmeliği, m.11: “merci, b) Aramanın yapıldığı yer, tarih ve saat, c) Aramanın konusu, d) Aranan kişinin kimlik bilgileri, adını söylemediği takdirde eşkâl bilgileri, e) Araçta, konutta, işyeri ve eklentilerinde arama yapılmışsa, aracın plaka numarası, markası, konutun, işyerinin ve eklentilerinin açık adresi, su üstü aracının aranmasında su üstü aracının cinsi, ismi, sahibi ve kullananı, deniz aracının aranması hâlinde ise deniz aracının cinsi, ismi, donatanı, bağlama limanı, tonajı, acentesi, kaptanı ve arama mevkiî, f) Aramanın sonuçları, el konulan suç eşyasına ilişkin belirleyici bilgiler, g) Aramada yakalanan kişiler varsa kimlik bilgileri, kimliği belirlenemiyorsa eşkâl bilgileri, h) Arama sonucunda yaralanma veya maddî bir zarar meydana gelip gelmediği, i) Arama işlemini yapanların adı, soyadı, sicili ve unvanı, hususları yer alır. Tutanak arama işlemine katılmış olanlar ve hazır bulunanlarca imzalanır. Tutanağın bir sureti ilgiliye verilir. Kaçakçılık suçlarıyla ilgili tutanaklar, 5607 sayılı Kaçakçılıkla Mücadele Kanununun 11 ve 20 nci maddelerine göre tanzim edilir.”",
+   "kaynak": "Adli ve Önleme Aramaları Yönetmeliği m.19",
+   "aciklama": "Adli ve Önleme Aramaları Yönetmeliği, m.19: “Konutta, yerleşim yerinde ve kamuya açık olmayan özel işyerlerinde ve eklentilerinde önleme araması yapılamaz.”",
    "id": "P-UE-JAN-03-74"
   },
   {
@@ -1257,16 +1257,16 @@
    "lawId": 61,
    "soru": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Suça sürüklenen çocuğun ifadesi kolluk tarafından alınır.",
-    "Mağdur çocuğa yemin verdirilmez.",
-    "Çocukla ilgili kolluk görevi kolluğun çocuk birimince yapılır.",
-    "Suça sürüklenen çocuk hakkındaki soruşturma çocuk bürosu savcısı tarafından yapılır.",
-    "Mağdur çocuk soruşturma evresinde bir defa dinlenir."
+    "Mağdur çocuğun tanık olarak dinlenmesi sırasında uzman bulundurulması zorunlu değildir.",
+    "Çocuklarla ilgili kolluk görevi öncelikle kolluğun çocuk birimlerince yerine getirilir.",
+    "Suça sürüklenen çocuk hakkındaki soruşturma, çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır.",
+    "Suça sürüklenen çocuğun ifadesi alınırken yanında sosyal çalışma görevlisi bulundurulabilir.",
+    "Mağdur çocuğun tanık olarak dinlenmesinde yemin hariç CMK'nın tanıklığa ilişkin hükümleri uygulanır."
    ],
    "dogru": 0,
    "tip": "olumsuz",
    "kaynak": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik m.5",
-   "aciklama": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik, m.5: “Soruşturma MADDE 5 – (1) Suça sürüklenen çocuk hakkındaki soruşturma, çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır.”",
+   "aciklama": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik, m.5: “(7) Mağdur çocuğun tanık olarak dinlenmesi sırasında psikoloji, psikiyatri, tıp veya eğitim alanında uzman bir kişi bulundurulur.”",
    "id": "P-UE-JAN-03-79"
   },
   {

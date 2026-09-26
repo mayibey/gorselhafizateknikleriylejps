@@ -39,7 +39,7 @@
   },
   {
    "lawId": 1,
-   "soru": "5237 sayılı Türk Ceza Kanunu'na göre görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdakilerden hangisi görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
    "siklar": [
     "Silahla işlenmesi",
     "Suç örgütüne yarar sağlamak maksadıyla işlenmesi",
@@ -97,13 +97,13 @@
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.14",
-   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.14: “) Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.”",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.10",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.10: “) İçişleri Bakanının kararıyla bir il veya ilçenin tamamı polis ya da jandarma görev ve sorumluluk alanı olarak belirlenebilir.”",
    "id": "P-SB-HAV-01-06"
   },
   {
    "lawId": 2,
-   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre önleme araması kararında aşağıdakilerden hangisinin bulunması gerekmez?",
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarma hizmet binalarında erbaş ve erlerin üst ve eşyalarının aranmasına ilişkin arama kararında veya emrinde aşağıdakilerden hangisinin belirtilmesi gerekmez?",
    "siklar": [
     "Aramanın sebebi",
     "Aramayı yapacak personelin adı ve soyadı",
@@ -151,7 +151,7 @@
   },
   {
    "lawId": 3,
-   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangisi kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
    "siklar": [
     "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma",
     "Hukuka ve dürüstlük kurallarına uygun olma",
@@ -284,7 +284,7 @@
     "Altı aydan iki yıla kadar hapis",
     "Üç yıldan beş yıla kadar hapis",
     "Bir yıldan üç yıla kadar hapis",
-    "Bir yıldan beş yıla kadar ağır hapis",
+    "Bir yıldan beş yıla kadar hapis",
     "İki yıldan yedi yıla kadar hapis"
    ],
    "dogru": 3,
@@ -631,18 +631,18 @@
   },
   {
    "lawId": 25,
-   "soru": "B, ruhsatsız bir tabancayı evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
+   "soru": "B, tek bir ruhsatsız tabancayı mutat sayıdaki mermisiyle birlikte evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
    "siklar": [
     "Altı aydan bir yıla kadar",
-    "Üç yıldan sekiz yıla kadar",
-    "İki yıldan beş yıla kadar",
-    "Bir yıldan üç yıla kadar",
-    "İki yıldan dört yıla kadar"
+    "Üç yıldan beş yıla kadar",
+    "Beş yıldan sekiz yıla kadar",
+    "İki yıldan dört yıla kadar",
+    "Bir yıldan üç yıla kadar"
    ],
    "dogru": 4,
    "tip": "vaka",
    "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.13",
-   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.13: “a ses veya gaz fişeği atabilen silah iken bu Kanun hükümlerine tabi silah vasfına dönüştürülen silahları satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.”",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.13: “mermilerinin veya namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesinden oluşan ana veya balistik önemi haiz parçaların ev veya işyerinde bulundurulması halinde verilecek ceza bir yıldan üç yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasıdır.”",
    "id": "P-SB-HAV-01-40"
   },
   {
@@ -1015,7 +1015,7 @@
   },
   {
    "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre uçuşa elverişli olmak şartıyla aşağıdaki hava araçlarından hangileri, Türk hava sahasını kullanmak için Ulaştırma Bakanlığının iznine tabidir?\nI. Türk Devlet hava araçları\nII. Türk uçak siciline kayıtlı Türk sivil hava araçları\nIII. Türkiye'nin taraf olduğu anlaşmalar uyarınca uçmalarına müsaade edilen hava araçları\nIV. Bunlar dışında kalan yabancı hava araçları",
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) uçuşa elverişli olmak şartıyla aşağıdaki hava araçlarından hangileri, Türk hava sahasını kullanmak için Ulaştırma Bakanlığının iznine tabidir?\nI. Türk Devlet hava araçları\nII. Türk uçak siciline kayıtlı Türk sivil hava araçları\nIII. Türkiye'nin taraf olduğu anlaşmalar uyarınca uçmalarına müsaade edilen hava araçları\nIV. Bunlar dışında kalan yabancı hava araçları",
    "siklar": [
     "II, III ve IV",
     "I ve II",
@@ -1031,7 +1031,7 @@
   },
   {
    "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre havaalanlarının kurulması ve inşasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) havaalanlarının kurulması ve inşasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
     "Sivil havaalanlarının inşaat ve onarım işleri Ulaştırma Bakanlığınca yapılır.",
     "Havaalanları Devlet veya kamu tüzelkişileri tarafından kurulur.",
@@ -1127,7 +1127,7 @@
   },
   {
    "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre Türk hava sahasında hava araçlarının izleyecekleri uçuş yolları ve kullanacakları hava alanları nasıl belirlenir?",
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) Türk hava sahasında hava araçlarının izleyecekleri uçuş yolları ve kullanacakları hava alanları nasıl belirlenir?",
    "siklar": [
     "Dışişleri Bakanlığı ile koordinasyon yapılarak Cumhurbaşkanınca",
     "Hava Kuvvetleri Komutanlığınca tek başına",
@@ -1143,7 +1143,7 @@
   },
   {
    "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre Devlet hava araçlarının sivil havaalanlarından istifade edebilmeleri nasıl düzenlenir?",
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) Devlet hava araçlarının sivil havaalanlarından istifade edebilmeleri nasıl düzenlenir?",
    "siklar": [
     "Dışişleri Bakanlığının izniyle",
     "Cumhurbaşkanı kararıyla",

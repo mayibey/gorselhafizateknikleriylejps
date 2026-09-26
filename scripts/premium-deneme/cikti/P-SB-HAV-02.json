@@ -3,7 +3,7 @@
  "baslik": "Havacılık Subay — Premium Deneme 2",
  "rutbe": "sb",
  "brans": "havacilik",
- "soruSayisi": 80,
+ "soruSayisi": 79,
  "sorular": [
   {
    "lawId": 1,
@@ -139,11 +139,11 @@
    "siklar": [
     "Verilerin yargı makamlarınca kovuşturma veya yargılama işlemlerine ilişkin işlenmesi",
     "Verilerin kanunla yetkili kamu kurumlarınca istihbari faaliyetler kapsamında işlenmesi",
-    "Verilerin resmî istatistik ile anonim hâle getirilerek işlenmesi",
     "Veri işlemenin suç işlenmesinin önlenmesi için gerekli olması",
+    "Verilerin resmî istatistik ile anonim hâle getirilerek işlenmesi",
     "Verilerin gerçek kişilerce aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi"
    ],
-   "dogru": 3,
+   "dogru": 2,
    "tip": "olumsuz",
    "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.28",
    "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.28: “riç, ilgili kişinin haklarını düzenleyen 11 inci ve Veri Sorumluları Siciline kayıt yükümlülüğünü düzenleyen 16 ncı maddeleri aşağıdaki hâllerde uygulanmaz: a) Kişisel veri işlemenin suç işlenmesinin önlenmesi veya suç soruşturması için gerekli olması.”",
@@ -553,13 +553,13 @@
    "lawId": 21,
    "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre gecikmesinde sakınca bulunan hâlde kolluk amirince alınan önleyici tedbir, hâkimce kaç saat içinde onaylanmazsa kendiliğinden kalkar?",
    "siklar": [
-    "24",
     "72",
     "36",
     "48",
-    "12"
+    "12",
+    "24"
    ],
-   "dogru": 0,
+   "dogru": 4,
    "tip": "duz",
    "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.29",
    "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.29: “Hâkim tarafından yirmi dört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.”",
@@ -618,12 +618,12 @@
    "soru": "Jandarma Genel Komutanlığı İzin Yönetmeliği'ne göre izin işlemlerine ilişkin genel esaslarla ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
     "Personelin izinden çağrılması yazılı veya sözlü olarak yapılabilir.",
-    "Milletlerarası spor müsabakalarına katılan personel, organizasyon süresince izinli sayılır.",
     "Adli makamlara tanık olarak çağrılan personelin görevden ayrı kaldığı süre kanuni izninden mahsup edilir.",
+    "Milletlerarası spor müsabakalarına katılan personel, organizasyon süresince izinli sayılır.",
     "İzin vermeye yetkili amirin yerine vekâlet eden, izin verme yetkisine sahiptir.",
     "İzinlerin başlangıç ve bitiş saati kural olarak günün başlangıç saatidir."
    ],
-   "dogru": 2,
+   "dogru": 1,
    "tip": "olumsuz",
    "kaynak": "Jandarma Genel Komutanlığı İzin Yönetmeliği m.5",
    "aciklama": "Jandarma Genel Komutanlığı İzin Yönetmeliği, m.5: “d) Adli makamlara şüpheli, sanık, tanık, mağdur veya bilirkişi olarak çağrılan personelin görevden ayrı kaldığı süreler kanuni izinlerinden mahsup edilmez.”",
@@ -695,7 +695,7 @@
   },
   {
    "lawId": 70,
-   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçuş hizmeti 10-20 yıl arasında olan bir pilotun uçuş tazminatı alabilmesi için bir yılda en az kaç saat uçuş yapması şarttır?",
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçuş hizmeti 10-20 yıl ve tüm uçuşu 1500-2500 saat arasında olan bir pilotun uçuş tazminatı alabilmesi için bir yılda en az kaç saat uçuş yapması şarttır?",
    "siklar": [
     "15",
     "30",
@@ -764,10 +764,10 @@
     "Kesinti yapılmaz, eksik saatler sonraki yıla eklenir",
     "Tamamı müteakip hizmet yılı başlangıcından itibaren kesilir",
     "%25'i müteakip hizmet yılı başlangıcından itibaren kesilir",
-    "%50'si eksikliğin tespitini izleyen aybaşından itibaren kesilir",
-    "%50'si müteakip hizmet yılı başlangıcından itibaren kesilir"
+    "%50'si müteakip hizmet yılı başlangıcından itibaren kesilir",
+    "%50'si eksikliğin tespitini izleyen aybaşından itibaren kesilir"
    ],
-   "dogru": 4,
+   "dogru": 3,
    "tip": "vaka",
    "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.7",
    "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.7: “e) Yıllık zorunlu uçuş saati, atlayış miktarı veya dalış süresini tamamlamayanların uçuş, atlayış ve dalış tazminatının %50’si müteakip hizmet yılı başlangıcından itibaren kesilir.”",
@@ -793,13 +793,13 @@
    "lawId": 70,
    "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre zorunlu uçuş saatinden fazla uçulan her saat için her yıl yapılan toptan ödemede kaç saatten fazla uçuşlar dikkate alınmaz?",
    "siklar": [
-    "40",
     "80",
+    "40",
     "100",
     "120",
     "60"
    ],
-   "dogru": 1,
+   "dogru": 0,
    "tip": "duz",
    "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.7",
    "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.7: “Bu ödemenin yapılmasında 80 saatten fazla uçuşlar dikkate alınmaz.”",
@@ -1004,10 +1004,10 @@
     "Emsal bedelin yarısı alınır",
     "Emsal bedelin iki katı alınır",
     "Yalnızca yıllık kira bedeli alınır",
-    "Bedel Orman Genel Müdürlüğünce belirlenir",
-    "Herhangi bir bedel alınmaz"
+    "Herhangi bir bedel alınmaz",
+    "Bedel Orman Genel Müdürlüğünce belirlenir"
    ],
-   "dogru": 4,
+   "dogru": 3,
    "tip": "duz",
    "kaynak": "Türk Sivil Havacılık Kanunu Ek 3",
    "aciklama": "Türk Sivil Havacılık Kanunu, Ek 3: “okanta, dinî tesis, alışveriş üniteleri gibi tesislerle akaryakıt istasyonu, lojistik, kargo tesisleri, yönetim ve idari binalar, geçici konaklama tesisleri ve terminal binaları için verilen izinlerden herhangi bir bedel alınmaz.”",
@@ -1031,7 +1031,7 @@
   },
   {
    "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre gerçek kişilerin ve tüzelkişilerin havaalanı ve iniş şeridi inşa etmesi ve işletmesi neye bağlıdır?",
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre (Kanun metnindeki kurum adlarıyla) gerçek kişilerin ve tüzelkişilerin havaalanı ve iniş şeridi inşa etmesi ve işletmesi neye bağlıdır?",
    "siklar": [
     "Genelkurmay Başkanlığının olumlu mütalaası üzerine Ulaştırma Bakanlığı iznine",
     "İçişleri Bakanlığının onayına",
@@ -1127,131 +1127,115 @@
   },
   {
    "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre havaalanı hizmetlerine ilişkin faaliyetlerin yürütülmesinde hangi iki bakanlık koordinasyon ve işbirliği yapar?",
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre Kanunun amaç maddesinde sivil havacılık sahasında hangi faktörlerin büyük önem taşıdığı belirtilmiştir?",
    "siklar": [
-    "Dışişleri Bakanlığı ile Ulaştırma Bakanlığı",
-    "İçişleri Bakanlığı ile Maliye Bakanlığı",
-    "Bayındırlık Bakanlığı ile Ulaştırma Bakanlığı",
-    "Sağlık Bakanlığı ile Bayındırlık Bakanlığı",
-    "Millî Savunma Bakanlığı ile İçişleri Bakanlığı"
+    "Konfor ve hız",
+    "Maliyet ve verim",
+    "Sürat ve emniyet",
+    "Ekonomi ve rekabet",
+    "Gizlilik ve güvenlik"
    ],
    "dogru": 2,
    "tip": "duz",
-   "kaynak": "Türk Sivil Havacılık Kanunu m.34",
-   "aciklama": "Türk Sivil Havacılık Kanunu, m.34: “Faaliyetlerin yürütülmesinde Bayındırlık Bakanlığı ile Ulaştırma Bakanlığı koordinasyon ve işbirliği yapar.”",
-   "id": "P-SB-HAV-02-71"
-  },
-  {
-   "lawId": 69,
-   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre Kanunun amaç maddesinde sivil havacılık sahasında hangi faktörlerin büyük önem taşıdığı belirtilmiştir?",
-   "siklar": [
-    "Gizlilik ve güvenlik",
-    "Ekonomi ve rekabet",
-    "Maliyet ve verim",
-    "Sürat ve emniyet",
-    "Konfor ve hız"
-   ],
-   "dogru": 3,
-   "tip": "duz",
    "kaynak": "Türk Sivil Havacılık Kanunu m.1",
    "aciklama": "Türk Sivil Havacılık Kanunu, m.1: “Bu Kanunun amacı; devamlı ve hızlı bir gelişme gösteren, ileri teknolojinin uygulandığı, sürat ve emniyet faktörlerinin büyük önem taşıdığı sivil havacılık sahasındaki faaliyetlerin ulusal çıkarlarımız ve uluslararası ilişkilerimize uygun bir şekilde düzenlenmesini sağlamaktır.”",
-   "id": "P-SB-HAV-02-72"
+   "id": "P-SB-HAV-02-71"
   },
   {
    "lawId": 104,
    "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre kategori-4 uçuş hangi hava araçlarında yapılabilir?",
    "siklar": [
-    "Yalnızca kategori-3 hava araçlarında",
     "Tüm kategorilerdeki hava araçlarında",
-    "Yalnızca kategori-1 hava araçlarında",
     "Yalnızca insansız hava araçlarında",
+    "Yalnızca kategori-1 hava araçlarında",
+    "Yalnızca kategori-3 hava araçlarında",
     "Kategori-1 ve kategori-2 hava araçlarında"
    ],
-   "dogru": 0,
+   "dogru": 3,
    "tip": "duz",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.63",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.63: “ç) Kategori-4 uçuş: Bir hava aracı kategorisi olmayıp, yalnızca kategori-3 hava araçlarında her iki pilotun Kategori-4 olmaması şartıyla Yardımcı Pilot/İkinci Pilot olarak veya kategori-4 Uçak Komutanı/Birinci Pilot olarak nitelikleri Kuvvet Komutanlıkları, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığınca belirlenecek tecrübeli bir pilot ile birlikte yapılacak uçuşu ifade eder. Kategori-3 hava aracı sağlık yeteneklerini karşılamayan ancak [35] kategori-4 uçuşa elverişli olan uçucular, nitelikleri Kuvvet Komutanlıkları, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığınca belirlenen tecrübeli bir pilot bulunmaksızın hava aracında uçurulmaz. [36] Uçucu adaylarının sağlık yetenekleri”",
-   "id": "P-SB-HAV-02-73"
+   "id": "P-SB-HAV-02-72"
   },
   {
    "lawId": 104,
    "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre Hava Harp Okulu eğitimi sonrasında pilot adaylığına ayrılacaklar hakkında başlangıç uçuş eğitimi öncesi hangi sağlık yeteneği aranır?",
    "siklar": [
-    "Kategori-3 hava aracı uçucularının sağlık yeteneği",
-    "Kategori-4 uçuş sağlık yeteneği",
-    "Seyrüsefer sınıfı sağlık yeteneği",
     "Kategori-1 hava aracı uçucularının sağlık yeteneği",
-    "Görev ekibi sağlık yeteneği"
+    "Seyrüsefer sınıfı sağlık yeteneği",
+    "Kategori-3 hava aracı uçucularının sağlık yeteneği",
+    "Görev ekibi sağlık yeteneği",
+    "Kategori-4 uçuş sağlık yeteneği"
    ],
-   "dogru": 3,
+   "dogru": 0,
    "tip": "duz",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.64",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.64: “lığı ile Sahil Güvenlik Komutanlığı uçucu adayları hakkında başlangıç uçuş eğitimi ve temel uçuş eğitimi birinci safha öncesi bu Yönetmeliğin 67 nci maddesinde kategori-1 hava aracı uçucuları için belirtilen sağlık yeteneği aranır.”",
-   "id": "P-SB-HAV-02-74"
+   "id": "P-SB-HAV-02-73"
   },
   {
    "lawId": 104,
    "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre yetişmiş uçucuların periyodik muayene ve fizyolojik eğitimleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
    "siklar": [
-    "Fizyolojik eğitimini tamamlayanlara fizyolojik eğitim kartı verilir.",
-    "Harekât nedeniyle muayene süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır.",
     "Dört yıllık periyodik muayeneler Sağlık Bakanlığınca belirlenen yetkili hastanelerde yapılır.",
+    "Fizyolojik eğitimini tamamlayanlara fizyolojik eğitim kartı verilir.",
+    "Yıllık periyodik muayenesini tamamlamayan uçucuya uçuş verilmez.",
     "Fizyolojik eğitimler birlik revirlerinde yapılır.",
-    "Yıllık periyodik muayenesini tamamlamayan uçucuya uçuş verilmez."
+    "Harekât nedeniyle muayene süresi dolan uçucunun uçurulması kararı ilgili komutanlığın sorumluluğundadır."
    ],
    "dogru": 3,
    "tip": "olumsuz",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.65",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.65: “) Uçucu personelin dört yıllık periyodik kontrol muayeneleri Sağlık Bakanlığınca belirlenen uçucu raporları vermeye yetkili hastanelerde, fizyolojik eğitimleri ise Uçucu Sağlığı Araştırma ve Eğitim Merkezinde yönerge ile belirlenen esaslara göre yapılır.”",
-   "id": "P-SB-HAV-02-75"
+   "id": "P-SB-HAV-02-74"
   },
   {
    "lawId": 104,
    "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre bulunduğu kategorinin sağlık yeteneğini karşılayamayan uçucunun \"Hava Aracı Kategorisi Değişikliği Uygundur\" kararı ilgili uzmanlık branşından kaç uzman tabibin çoğunluk kararı ile alınır?",
    "siklar": [
     "3",
+    "2",
     "4",
     "5",
-    "2",
     "7"
    ],
    "dogru": 0,
    "tip": "duz",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.65",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.65: “) Herhangi bir nedenle bulunduğu kategorinin sağlık yeteneğini karşılayamadığı tespit edilen uçucunun “Uçuşa (Pilotaja) Elverişsizdir” veya “Hava Aracı Kategorisi Değişikliği Uygundur” kararları ilgili uzmanlık branşından üç uzman tabibin çoğunluk kararı ile alınır.”",
-   "id": "P-SB-HAV-02-76"
+   "id": "P-SB-HAV-02-75"
   },
   {
    "lawId": 104,
    "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre kadın uçucular oral kontraseptiflere ilk başlarken veya preparat değiştirilirken ne kadar süre uçamaz?",
    "siklar": [
-    "On gün",
-    "Bir ay",
-    "Bir hafta",
+    "İki hafta",
     "Üç gün",
-    "İki hafta"
+    "Bir hafta",
+    "On gün",
+    "Bir ay"
    ],
    "dogru": 2,
    "tip": "duz",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.65",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.65: “Oral kontraseptiflere ilk başlarken veya preparat değiştirilirken bir hafta süre ile uçamazlar.”",
-   "id": "P-SB-HAV-02-77"
+   "id": "P-SB-HAV-02-76"
   },
   {
    "lawId": 104,
    "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre uçuculardaki hastalıklarla ilgili aşağıdakilerden hangileri doğrudur?\nI. İnhaler bronkodilatörle kontrol altına alınabilen hafif intermittan astım yalnızca kategori-4 uçuş için elverişlidir.\nII. Tedavi edilmiş spontan pnömotoraks kategori-2 ve kategori-3 hava aracında uçuşa elverişlidir.\nIII. Apne-hipopne indeksi 15'ten düşük uyku apnesi kategori-1 hava aracında uçuşa elverişlidir.",
    "siklar": [
-    "Yalnız III",
-    "Yalnız I",
+    "I, II ve III",
     "II ve III",
+    "Yalnız III",
     "I ve II",
-    "I, II ve III"
+    "Yalnız I"
    ],
    "dogru": 3,
    "tip": "onculu",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.67",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.67: “7) Taşınabilir inhaler bronkodilatör ile kontrol altına alınabilen hafif intermittan astım olguları sadece kategori-4 uçuşu için elverişlidir.”",
-   "id": "P-SB-HAV-02-78"
+   "id": "P-SB-HAV-02-77"
   },
   {
    "lawId": 104,
@@ -1259,31 +1243,31 @@
    "siklar": [
     "Aday muayeneleri uçucu ve dalgıç sınıfı raporları vermeye yetkili sağlık kuruluşunca yapılır.",
     "Periyodik muayeneleri her beş yılda bir yapılır.",
-    "Adaylar hakkında verilen karar kurs sonuna kadar geçerliliğini sürdürür.",
+    "Temel uçuş eğitimlerinin esasları Uçucu Sağlığı Araştırma ve Eğitim Merkezi Başkanlığınca belirlenir.",
     "Sınıfı pilot olan İHA pilotları sınıflarının gereği olan sağlık muayenelerini yaptırır.",
-    "Temel uçuş eğitimlerinin esasları Uçucu Sağlığı Araştırma ve Eğitim Merkezi Başkanlığınca belirlenir."
+    "Adaylar hakkında verilen karar kurs sonuna kadar geçerliliğini sürdürür."
    ],
    "dogru": 1,
    "tip": "olumsuz",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.70",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.70: “(3) İHA pilotu (pilot ve seyrüsefer sınıfı haricindeki diğer sınıflardan) ve görev komutanı/faydalı yük işletmeni/uçuş ve yer sistem teknisyeni hakkında periyodik muayene, her üç yılda bir uçucu sınıfı raporları vermeye yetkili sağlık kuruluşlarında yıllık uçucu periyodik muayene esaslarına göre yapılır.”",
-   "id": "P-SB-HAV-02-79"
+   "id": "P-SB-HAV-02-78"
   },
   {
    "lawId": 104,
    "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre Pilot lisansı (CPL) olan bir uçucu adayının yapılan muayenesinde, kategori-1 hava aracı uçucularının sağlık yeteneklerini karşılamadığı anlaşılmıştır.\nBu aday hakkında nasıl işlem yapılır?",
    "siklar": [
-    "Yalnızca insansız hava aracı pilotu olabilir",
-    "Kategori-2 veya kategori-3 hükümleri uygulanır ve uçuşa elverişli kabul edilir",
     "\"Uçucu Yetiştirilmeye Elverişli Değildir\" kararı verilir",
+    "Kategori-2 veya kategori-3 hükümleri uygulanır ve uçuşa elverişli kabul edilir",
     "Adaylığı doğrudan sona erdirilir",
+    "Yalnızca insansız hava aracı pilotu olabilir",
     "Bir yıl sonra yeniden muayeneye gönderilir"
    ],
    "dogru": 1,
    "tip": "vaka",
    "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.64",
    "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.64: “)Pilot lisansı (CPL) olan adayın sağlık yeteneklerinin kategori-1 hava aracı uçucularının sağlık yeteneklerini karşılamadığı durumlarda kategori-2 veya kategori-3 hava aracı pilotuna ilişkin sağlık yetenekleri hükümleri uygulanır ve aday uçuşa elverişli kabul edilir.”",
-   "id": "P-SB-HAV-02-80"
+   "id": "P-SB-HAV-02-79"
   }
  ]
 }

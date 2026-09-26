@@ -194,16 +194,14 @@
   "tip": "olumsuz",
   "k": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Kurum Kimlik Kartları Yönetmeliği'ne göre kimlik kartlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "Eski kimlik kartı iade alınmadan da yenisi teslim edilebilir.",
+   "Eski kimlik kartı iade edilmedikçe, kart ücretinin ödendiğine dair belge ibraz edilse bile yenisi hiçbir şekilde teslim edilmez.",
    "Kimlik kartı başvurusu, başvuru formuyla asıl hak sahibi personel tarafından yapılır.",
    "Mecburi hizmet yükümlülüğünü tamamlamamış müstafi astsubaylara sosyal tesislere giriş kartı verilmez.",
    "Teknolojik gelişmelere bağlı olarak kullanımdaki kartların tamamı yenisiyle değiştirilebilir.",
    "Geçici olarak geri alınan kimlik kartları, personel işleriyle görevli birimlerce muhafaza edilir."
   ],
   "kanit": [
-   "Eski kimlik kartı iade alınmadan, yenisi teslim edilmez",
-   "asıl hak sahibi personel tarafından kimlik bilgisi girmeye yetkili birime yapılır",
-   "personelin görev yaptığı birimin personel işleriyle görevli birimleri tarafından muhafaza edilir"
+   "Eski kimlik kartının iade edilmediği durumlarda, kayıp/çalıntı kart talep nedenine karşılık gelen kart ücretinin ödendiğine dair belgenin yetkili birime ibrazı hâlinde, yeni kimlik kartı ilgilisine teslim edilir"
   ]
  },
  {
@@ -272,7 +270,7 @@
  {
   "law": 75,
   "tip": "duz",
-  "k": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre ücretleri ayın 1'i ile sonu arasında ödenen sigortalılar için \"yıl\" kaç gün olarak değerlendirilir?",
+  "k": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre \"yıl\" tanımında, 1 Ocak ilâ 31 Aralık tarihleri arasında geçen süre kaç gün olarak değerlendirilir?",
   "s": [
    "360",
    "365",

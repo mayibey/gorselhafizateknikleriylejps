@@ -17,10 +17,11 @@ for x in liste:
     p = f"scripts/altin-ozet/paketler/{brans}/pack_{x['law_id']}.json"
     if os.path.exists(p):
         metin[x['law_id']] = norm(' '.join(m['metin'] for m in json.load(open(p, encoding='utf-8'))['maddeler']))
-HARIC = ('mus-', 'ue-mus', 'uzm-', 'bakim-b', 'bakim-ek-', f'{brans}-h')
+HARIC = ('mus-', 'ue-mus', 'uzm-', 'bakim-b', 'bakim-ek-')
 havuz, gorulen = {}, set()
 for f in sorted(glob.glob(K + '*.json')):
-    if os.path.basename(f).startswith(HARIC): continue
+    # Kurulmuş havuz blokları (<her branş>-hN) kopyadır; havuza katılırsa sonuç kurulma sırasına bağlı olur.
+    if os.path.basename(f).startswith(HARIC) or re.search(r'-h[123]\.json$', f): continue
     for q in json.load(open(f, encoding='utf-8')):
         l = q['law']
         if l not in metin or q['k'] in gorulen: continue

@@ -353,7 +353,7 @@
   "tip": "duz",
   "k": "2872 sayılı Çevre Kanunu'na göre Kanunda öngörülen idari yaptırım kararları Bakanlık taşra teşkilatında kimler tarafından verilir?",
   "s": [
-   "Çevre ve şehircilik il müdürleri",
+   "Bakanlığın il müdürleri",
    "Valiler",
    "Kaymakamlar",
    "Belediye başkanları",
@@ -366,33 +366,32 @@
  {
   "law": 131,
   "tip": "olumsuz",
-  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi tehlike analizi ve kritik kontrol noktaları (HACCP) temel ilkelerinden biri değildir?",
+  "k": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangisi Yönetmeliğin uygulanmadığı hâller arasında yer almaz?",
   "s": [
-   "Kritik kontrol noktalarının tüketicilere ilan edilmesi",
-   "Önlenmesi gereken tehlikelerin belirlenmesi",
-   "Kritik limitlerin oluşturulması",
-   "Etkin izleme prosedürlerinin oluşturulması",
-   "Düzeltici faaliyet prosedürlerinin oluşturulması"
+   "Hayvansal gıdalar için özel hijyen kurallarının uygulandığı gıda işletmecileri",
+   "Kişisel tüketim amacıyla birincil üretim",
+   "Kişisel tüketim amacıyla gıdanın hazırlanması ve depolanması",
+   "Küçük miktardaki birincil ürünlerin üreticisince son tüketiciye doğrudan arzı",
+   "Yalnızca jelatin ve kolajen hammaddesi sağlayan toplama merkezleri ve tabakhaneler"
   ],
   "kanit": [
-   "aşağıdaki yedi temel ilkeyi içerir",
-   "kabul edilebilirliği kabul edilemezlikten ayıran kritik limitlerin oluşturulması",
-   "düzeltici faaliyet prosedürlerinin oluşturulması ve uygulanması"
+   "Hayvansal Gıdalar İçin Özel Hijyen Kuralları Yönetmeliğinin uygulandığı gıda işletmecileri için de geçerlidir",
+   "Kişisel tüketim amacıyla birincil üretime"
   ]
  },
  {
   "law": 99,
   "tip": "duz",
-  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre Jandarma Genel Komutanlığının muhtelif okullarından mezun olanların atama onayları hangi ödeme belgesine bağlanır?",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre vize alınmaksızın çalıştırılacak geçici işçilerin ücretlerinin harcama talimatı ve İşçi Ücret Bordrosu ile ödenebilmesi için çalışma süresi en fazla kaç iş günü olmalıdır?",
   "s": [
-   "İkinci aya ait ödeme belgesine",
-   "İlk aya ait ödeme belgesine",
-   "Mali yılın son ayına ait ödeme belgesine",
-   "Üçüncü aya ait ödeme belgesine",
-   "Aralık ayına ait ödeme belgesine"
+   "30",
+   "15",
+   "60",
+   "45",
+   "20"
   ],
   "kanit": [
-   "atama onayları, ikinci aya ait ödeme belgesine bağlanır"
+   "30 iş gününü aşmayan sürelerde ve vize alınmaksızın çalıştırılacak işçilerin"
   ]
  },
  {
@@ -528,18 +527,19 @@
  },
  {
   "law": 99,
-  "tip": "vaka",
-  "k": "Mutemet Astsubay A, birliğindeki Jandarma er ve erbaşlarının harçlık ve tayın bedellerini avans olarak ödetecektir. Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesine hangi belge bağlanır?",
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ulaştırma ve haberleşme giderlerinin ödenmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
   "s": [
-   "Er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
-   "Sağlık kurulu raporu",
-   "Muayene ve kabul komisyonu tutanağı",
-   "Taahhüt dosyası",
-   "Yurtiçi Geçici Görev Yolluğu Bildirimi"
+   "Haber ajansı abonelik giderlerinde muayene ve kabul komisyonu tutanağı bağlanır.",
+   "İnternet üzerinden televizyon abonelik giderlerinde taahhüt dosyası ve fatura bağlanır.",
+   "Tekel niteliğindeki telefon giderlerinde daire amirince onanmış fatura bağlanır.",
+   "Faturada şehirlerarası görüşme bedellerinin resmi-özel ayrımı gösterilir.",
+   "Posta pulu bedelleri de ulaştırma ve haberleşme giderleri kapsamında ödenir."
   ],
   "kanit": [
-   "er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
-   "Jandarma er ve erbaşlarının harçlıkları ve tayın bedellerinin avans olarak"
+   "bilgiye abonelik giderlerinin ödenmesinde; - Taahhüt dosyası, - Fatura",
+   "resmi-özel ayrımını gösterir, kullanıcının beyanına dayalı olarak ilgili daire amirince onanmış fatura",
+   "telgraf ve posta pulu bedellerinin ödenmesinde"
   ]
  },
  {
