@@ -2871,3 +2871,7 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   sorular (kaynak/L<law>-N.json) + `scripts/premium-deneme/brans-havuz-kur.py <brans>` ortak havuzdan 3×40 blok. 25 branş-rütbe
   grubunun hepsinde 3 deneme; gerçek soru tekrarı yok; 1195 tekil soru (1.29 MB). Bando 3. blok 39 soru.
   Yayına almak için: tatbikat.tsx `yeniDuzen`/sinav.tsx `yeniDenemeler` on-izleme koşulları kaldırılır (Denemeler düzeni + premium).
+- 26 Eyl gece — **Premium QA** (commit 21c2444, OTA 1.0.46 on-izleme): 1210 soru 8 okuyucuyla resmî metne karşı yeniden okundu,
+  44 bulgu (4 ciddi: 6136 tabanca cezası yanlış cevap, 6222/4207/çocuk dinlenmesi iki doğru — hepsi P-SB-JAN-01 pilotundaydı),
+  hepsi uygulandı, 2 soru çıkarıldı. Açıklama alıntıları artık kelime başından. `python -X utf8 scripts/premium-deneme/hepsini-kur.py`
+  75 denemeyi tek komutla kurar (deterministik). 1193 tekil soru; 69 deneme 80, 6 deneme 79 soru. Bulgular: qa-26eyl-bulgular.json.
