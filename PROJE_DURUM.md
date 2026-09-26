@@ -2881,3 +2881,7 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
 - 27 Eyl — iPad'de "sığmıyor" (Mehmet Ali Güneş): app.json'da supportsTablet YOK → iPad uygulamayı iPhone uyumluluk modunda (SE boyu)
   açıyor. OTA ile Karargâh paslanma satırı tek yazı yapıldı (üst üste binme bitti). Rekor: kimse çözmediyse "Rekor henüz kırılmadı".
   **SONRAKİ MAĞAZA SÜRÜMÜ:** ios.supportsTablet=true + iPad ekran görüntüleri (başkan onayladı: "önce OTA, iPad desteği sonraki sürüm").
+- 27 Eyl — **iOS 1.0.47 (build 73) iPad desteği**: supportsTablet + requireFullScreen (commit f666e2d), EAS build 32fbbc7f, ASC'ye yüklendi,
+  sürüm ded9e633 PREPARE_FOR_SUBMISSION, build bağlı, sürüm notu + 5 iPad 12.9" ekran görüntüsü (web çizimi, inceleme hesabıyla) yüklendi.
+  İNCELEMEYE GÖNDERİLMEDİ — başkan onayı bekleniyor. DİKKAT: 1.0.47 yayına girince OTA'lar HEM 1.0.47 (iOS) HEM 1.0.46 (Android) runtime'a basılmalı.
+  Gece zemini iPad'de tam kaplama düzeltmesi (screen.tsx) commit'li, henüz OTA'lanmadı.
