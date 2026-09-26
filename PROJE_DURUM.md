@@ -2845,3 +2845,10 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
 - 26 Eyl — Mesut Dursun geri bildirimi ("Maddeler okunmuyor", kart 7003 = 3713 m.3) İNCELENDİ: görseldeki trenin arkadaki 7 küçük
   vagonu (307, 310/1, 311, 312, 313, 315, 320) telefonda okunmuyor; içerik doğru, madde metni tam. Başkan: görsel ÜRETİLMEYECEK,
   ileride genel bir görsel çalışması yapacak → bu kart o çalışmanın listesine (uzun liste içeren kartlarda küçük yazı taraması).
+- 26 Eyl — **Google OAuth marka doğrulaması TAMAM** (son tarih 22 Ara'ydı): Cloud Console mevzu-jsps Branding → ana sayfa
+  `mevzujsps.com/uygulama.html` (YENİ tanıtım sayfası, commit dbf1d33), gizlilik `mevzujsps.com/`, şartlar `sartlar.html`,
+  yetkili alan +mevzujsps.com. Search Console URL-ön-eki mülkü HTML dosyasıyla doğrulandı (`docs/google2b2160762885508d.html`,
+  commit e4d2540 — SİLME). "Verify branding" ~2 dk'da geçti (Supabase alan adı engel olmadı) → "Publish branding" → "verified and
+  being shown to users". Hepsi dev.ademyilmaz hesabıyla, Brave CDP 9222 + python playwright.
+- 26 Eyl — Apple Case 22202756: 14 Eyl otomatik onaydan sonra Apple HİÇ yazmadı (18 ve 22 Eyl takipler bizden). Developer
+  "Contact Us": ödeme/banka konularında YALNIZ e-posta (Contact Finance); telefon yalnız Membership & Account'ta, hafta sonu kapalı.
