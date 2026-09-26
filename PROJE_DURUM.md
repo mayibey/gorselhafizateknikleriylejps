@@ -2877,3 +2877,4 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   75 denemeyi tek komutla kurar (deterministik). 1193 tekil soru; 69 deneme 80, 6 deneme 79 soru. Bulgular: qa-26eyl-bulgular.json.
 - 27 Eyl — **DENEMELER YENİ DÜZEN + 75 PREMIUM DENEME HERKESE** (başkan "yayınla"; commit b4b06f5, OTA 6f1f6bbe, runtime 1.0.46).
   Önizleme koşulları kaldırıldı (tatbikat.tsx premiumAcik, sinav.tsx yeniDenemeler = true).
+- 27 Eyl — Sıralamada yeni karma/premium denemeler + deneme satırında rekor HERKESE (c1e4e5f, 66a899d).
