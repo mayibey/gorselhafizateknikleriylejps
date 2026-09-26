@@ -183,8 +183,9 @@ const styles = StyleSheet.create({
   },
   arkaGorsel: {
     ...StyleSheet.absoluteFillObject,
-    width: undefined,
-    height: undefined,
+    // 27 Eyl 2026: iPad/geniş ekranda (web) görsel doğal boyutunda kalıp sağ/altta boşluk bırakıyordu → tam kapla.
+    width: '100%',
+    height: '100%',
   },
   tepePerde: {
     position: 'absolute',
