@@ -10,6 +10,13 @@ const NO = {
   'P-SB-JAN-02': 3, 'P-SB-JAN-03': 4,
   'P-ASB-JAN-01': 5, 'P-ASB-JAN-02': 6, 'P-ASB-JAN-03': 7,
   'P-UE-JAN-02': 8, 'P-UE-JAN-03': 9,
+  // 2. dalga (26 Eyl 2026): Havacılık, MEBS, Personel, Bakım, Maliye, İkmal — subay/astsubay 3'er
+  'P-SB-HAV-01': 10, 'P-SB-HAV-02': 11, 'P-SB-HAV-03': 12, 'P-ASB-HAV-01': 13, 'P-ASB-HAV-02': 14, 'P-ASB-HAV-03': 15,
+  'P-SB-MEBS-01': 16, 'P-SB-MEBS-02': 17, 'P-SB-MEBS-03': 18, 'P-ASB-MEBS-01': 19, 'P-ASB-MEBS-02': 20, 'P-ASB-MEBS-03': 21,
+  'P-SB-PER-01': 22, 'P-SB-PER-02': 23, 'P-SB-PER-03': 24, 'P-ASB-PER-01': 25, 'P-ASB-PER-02': 26, 'P-ASB-PER-03': 27,
+  'P-SB-BAK-01': 28, 'P-SB-BAK-02': 29, 'P-SB-BAK-03': 30, 'P-ASB-BAK-01': 31, 'P-ASB-BAK-02': 32, 'P-ASB-BAK-03': 33,
+  'P-SB-MAL-01': 34, 'P-SB-MAL-02': 35, 'P-SB-MAL-03': 36, 'P-ASB-MAL-01': 37, 'P-ASB-MAL-02': 38, 'P-ASB-MAL-03': 39,
+  'P-SB-IKM-01': 40, 'P-SB-IKM-02': 41, 'P-SB-IKM-03': 42, 'P-ASB-IKM-01': 43, 'P-ASB-IKM-02': 44, 'P-ASB-IKM-03': 45,
 };
 
 const kok = 'scripts/premium-deneme/cikti';

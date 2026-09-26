@@ -1,0 +1,158 @@
+[
+ {
+  "law": 1,
+  "tip": "duz",
+  "k": "5237 sayılı Türk Ceza Kanunu'na göre işlenen suçun müebbet hapis cezasını gerektirmesi hâlinde, suçun işlenmesine yardım eden kişiye ne kadar hapis cezası verilir?",
+  "s": [
+   "On yıldan on beş yıla kadar",
+   "On beş yıldan yirmi yıla kadar",
+   "Sekiz yıldan on iki yıla kadar",
+   "Yirmi yıldan yirmi beş yıla kadar",
+   "Beş yıldan on yıla kadar"
+  ],
+  "kanit": [
+   "müebbet hapis cezasını gerektirmesi halinde, on yıldan onbeş yıla kadar hapis cezası verilir"
+  ]
+ },
+ {
+  "law": 1,
+  "tip": "onculu",
+  "k": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Bileşik suçlarda içtima hükümleri uygulanmaz.\nII. Kişinin kastedilenden daha ağır neticeden sorumlu tutulabilmesi için bu netice bakımından en azından taksirle hareket etmesi gerekir.\nIII. Kusur yeteneği olmayanı suçun işlenmesinde araç olarak kullanan kişinin cezası yarı oranında indirilir.",
+  "s": [
+   "I ve II",
+   "Yalnız I",
+   "Yalnız III",
+   "II ve III",
+   "I, II ve III"
+  ],
+  "kanit": [
+   "Bu tür suçlarda içtima hükümleri uygulanmaz",
+   "bu netice bakımından en azından taksirle hareket etmesi gerekir",
+   "kullanan kişinin cezası, üçte birden yarısına kadar artırılır"
+  ]
+ },
+ {
+  "law": 2,
+  "tip": "duz",
+  "k": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre belediye kurulması, kaldırılması veya sınırlarında değişiklik olması hâlinde jandarma ve polis sorumluluk alanları, değişikliğin yürürlüğe girdiği tarihten itibaren en geç kaç ay içinde yeniden düzenlenir?",
+  "s": [
+   "3",
+   "6",
+   "1",
+   "12",
+   "2"
+  ],
+  "kanit": [
+   "en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir"
+  ]
+ },
+ {
+  "law": 5,
+  "tip": "olumsuz",
+  "k": "5442 sayılı İl İdaresi Kanunu'na göre aşağıdakilerden hangisi ilçe idare kurulunda yer almaz?",
+  "s": [
+   "İlçe emniyet müdürü",
+   "Malmüdürü",
+   "Hükümet hekimi",
+   "Tarım memuru",
+   "Tahrirat kâtibi"
+  ],
+  "kanit": [
+   "kaymakamın başkanlığı altında tahrirat katibi, malmüdürü, Hükümet hekimi",
+   "milli eğitim memuriyle tarım memuru ve veterinerden teşekkül eder"
+  ]
+ },
+ {
+  "law": 6,
+  "tip": "duz",
+  "k": "5326 sayılı Kabahatler Kanunu'na göre kabahatler karşılığında uygulanacak idari yaptırımlar nelerden ibarettir?",
+  "s": [
+   "İdari para cezası ve idari tedbirler",
+   "Hapis ve adli para cezası",
+   "İdari para cezası ve güvenlik tedbirleri",
+   "Uyarı ve adli para cezası",
+   "Adli para cezası ve idari tedbirler"
+  ],
+  "kanit": [
+   "idarî yaptırımlar, idarî para cezası ve idarî tedbirlerden ibarettir"
+  ]
+ },
+ {
+  "law": 7,
+  "tip": "duz",
+  "k": "3713 sayılı Terörle Mücadele Kanunu'na göre terör örgütü propagandası suçunun öğretim kurumlarında veya öğrenci yurtlarında işlenmesi hâlinde nasıl ceza verilir?",
+  "s": [
+   "Cezanın iki katı hükmolunur.",
+   "Ceza yarı oranında artırılır.",
+   "Ceza üçte bir oranında artırılır.",
+   "Ceza dörtte bir oranında indirilir.",
+   "Ceza üç katı oranında artırılır."
+  ],
+  "kanit": [
+   "bu fıkradaki cezanın iki katı hükmolunur",
+   "öğretim kurumlarında veya öğrenci yurtlarında"
+  ]
+ },
+ {
+  "law": 12,
+  "tip": "duz",
+  "k": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre meslekten çıkarma cezasını gerektiren fiilin disiplin amirince öğrenildiği tarihten itibaren kaç ay içinde disiplin soruşturmasına başlanmazsa ceza verme yetkisi zamanaşımına uğrar?",
+  "s": [
+   "6",
+   "1",
+   "3",
+   "12",
+   "2"
+  ],
+  "kanit": [
+   "Meslekten çıkarma cezası ve Devlet memurluğundan çıkarma cezasında altı ay içinde"
+  ]
+ },
+ {
+  "law": 15,
+  "tip": "olumsuz",
+  "k": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre belgenin başlık, konu ve muhatap bölümleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "\"Konu:\" yan başlığı, \"Sayı:\" yan başlığının bir üst satırına yazılır.",
+   "Başlığın ilk satırına \"T.C.\" kısaltması yazılır.",
+   "Konu, sonuna herhangi bir noktalama işareti konulmaksızın yazılır.",
+   "Muhatap, konunun son satırından itibaren iki satır boşluk bırakılarak yazılır.",
+   "Muhatap gerçek kişi ise adından önce \"Sayın\" ibaresi yazılır."
+  ],
+  "kanit": [
+   "“Konu:” yan başlığı, “Sayı:” yan başlığının bir alt satırına yazılır",
+   "sonuna herhangi bir noktalama işareti konulmaksızın yazılır"
+  ]
+ },
+ {
+  "law": 17,
+  "tip": "olumsuz",
+  "k": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre aşağıdakilerden hangisi jandarma birimlerini denetlemeye yetkili değildir?",
+  "s": [
+   "Cumhuriyet başsavcıları",
+   "Mülkiye Teftiş Kurulu Başkanlığı",
+   "İllerde valiler",
+   "İlçelerde kaymakamlar",
+   "Jandarma Genel Komutanı"
+  ],
+  "kanit": [
+   "Bu denetim illerde vali ve ilçelerde kaymakamlar tarafından yapılır",
+   "Jandarma Genel Komutanı tüm jandarma birimlerini kendi görevleri ile ilgili denetler"
+  ]
+ },
+ {
+  "law": 22,
+  "tip": "vaka",
+  "k": "İlçe jandarma komutanlığında görevli astsubay A, yıllık iznini kullanmak istemektedir. Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre A'ya yıllık izni kim verir?",
+  "s": [
+   "Kaymakam",
+   "Jandarma Genel Komutanı",
+   "İl jandarma komutanı",
+   "Jandarma bölge komutanı",
+   "İçişleri Bakanı"
+  ],
+  "kanit": [
+   "İl ve ilçe jandarma komutanlıklarında tüm personel için vali ve kaymakamlar"
+  ]
+ }
+]

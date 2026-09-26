@@ -1,0 +1,319 @@
+[
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre hizmet yılı hangi dönemi ifade eder?",
+  "s": [
+   "1 Eylül - 31 Ağustos",
+   "1 Ocak - 31 Aralık",
+   "1 Temmuz - 30 Haziran",
+   "1 Mart - 28 Şubat",
+   "1 Haziran - 31 Mayıs"
+  ],
+  "kanit": [
+   "Hizmet yılı: 1 Eylül tarihinde başlayıp 31 Ağustos tarihinde biten"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçuş hizmet yılı 15 yıl ve daha yukarı olan jet pilotlarına kıstas aylığın yüzde kaçı üzerinden aylık uçuş tazminatı ödenir?",
+  "s": [
+   "%130",
+   "%116",
+   "%145",
+   "%95",
+   "%120"
+  ],
+  "kanit": [
+   "uçuş hizmet yılı 15 yıl ve daha yukarı olanlar için kıstas aylığın % 130’u"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aylık uçuş tazminatı almayan ve kontrol ve tecrübe maksadıyla hava vasıtasında görevlendirilen personele her uçuş saati başına ödenen tazminat ile bir ayda ödenebilecek en yüksek tutar, sırasıyla kıstas aylığın yüzde kaçıdır?",
+  "s": [
+   "%1 - %10",
+   "%2 - %20",
+   "%1 - %5",
+   "%5 - %10",
+   "%0,6 - %10"
+  ],
+  "kanit": [
+   "her uçuş veya dalış saati başına, kıstas aylığın %1’i oranında tazminat ödenir",
+   "kıstas aylığın %10’unu geçemez"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "vaka",
+  "k": "Uçuş tazminatı alan pilot üsteğmen (A), görev isteklerini gereği gibi yerine getirmediği için bir yıl içinde emrinde çalıştığı en yakın iki üst derece amirinin imzasını taşıyan iki yazılı ihtar almıştır.\n2629 sayılı Kanun'a göre (A)'nın tazminatı hakkında aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "%50'si tebliğ tarihini izleyen aybaşından itibaren kesilir",
+   "Tamamı tebliğ tarihinden itibaren kesilir",
+   "%50'si müteakip hizmet yılı başından itibaren kesilir",
+   "%25'i tebliğ tarihini izleyen aybaşından itibaren kesilir",
+   "Kesinti yapılmaz, yalnızca statüsüne son verilir"
+  ],
+  "kanit": [
+   "Bu şartı taşımayanların tazminatının %50’si tebliğ tarihini izleyen aybaşından itibaren kesilir",
+   "yazılı iki ihtar veya aylık bir fena faaliyet raporu almamış olmaları şarttır"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "olumsuz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi uçucu tanımında yer almaz?",
+  "s": [
+   "Görev ekibi personeli",
+   "Silah sistem subayı",
+   "Taktik koordine subayı",
+   "Uçuş ekibi personeli",
+   "Seyrüsefer subayı adayı"
+  ],
+  "kanit": [
+   "Uçucu: Pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi ve bunların adaylarıdır"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "olumsuz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Paraşütçüler, atlayış tazminatının yanında uçuş tazminatından da yararlanır",
+   "Pilot paraşütçülere ayrıca aylık atlayış tazminatı ödenmez",
+   "Denizaltı, ADS pilotu, dalgıç ve kurbağa adam hizmetlerinden ancak birinden tazminat ödenir",
+   "Aylık tazminat aybaşında peşin olarak ödenir",
+   "Kanun kapsamındaki faaliyetlerinden dolayı şehit olanlar ayrıca 2330 sayılı Kanun'dan yararlanamaz"
+  ],
+  "kanit": [
+   "Paraşütçüler, uçuş tazminatından yararlanamazlar",
+   "Pilot paraşütçülere ayrıca aylık atlayış tazminatı ödenmez",
+   "ayrıca 2330 sayılı Kanundan yararlanamazlar"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "onculu",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre yıpranma tazminatıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Sekiz uçuş hizmet yılını tamamladıktan sonra daimi olarak yer hizmetine nakledilen pilotlara kurul kararıyla ödenir.\nII. Oniki uçuş hizmet yılını tamamladıktan sonra daimi olarak yer hizmetine nakledilen uçuş ekibi personeline kurul kararıyla ödenir.\nIII. Uçuş görevinden kendi isteğiyle ayrılanlara da ödenir.",
+  "s": [
+   "I ve II",
+   "Yalnız I",
+   "I, II ve III",
+   "II ve III",
+   "Yalnız III"
+  ],
+  "kanit": [
+   "Sekiz uçuş hizmet yılını tamamladıktan sonra daimi olarak yer hizmetine nakledilen pilot",
+   "Oniki uçuş hizmet yılını tamamladıktan sonra daimi olarak yer hizmetine nakledilen uçuş ekibi",
+   "disiplinsizlik nedeniyle veya kendi istekleri ile ayrılanlara yıpranma tazminatı ödenmez"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre sağlık kurulu raporuyla daimi olarak yer hizmetine nakledilen uçuculara ödenen aylık yıpranma tazminatı kaç yıldan sonra ödenmez?",
+  "s": [
+   "10",
+   "5",
+   "15",
+   "20",
+   "3"
+  ],
+  "kanit": [
+   "Ancak bu tazminat 10 yıldan sonra ödenmez"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre Jandarma Genel Komutanlığı kadrolarında istihdam edilen personel hakkında Kanunun uygulanmasında Genelkurmay Başkanlığına yapılan atıflar hangi makama yapılmış sayılır?",
+  "s": [
+   "İçişleri Bakanlığına",
+   "Millî Savunma Bakanlığına",
+   "Cumhurbaşkanlığına",
+   "Jandarma Genel Komutanlığına",
+   "Kuvvet komutanlıklarına"
+  ],
+  "kanit": [
+   "Genelkurmay Başkanlığına yapılan atıflar ise İçişleri Bakanlığına yapılmış sayılır"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "olumsuz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi uçuştan ayrılma tarihi olarak kabul edilmez?",
+  "s": [
+   "İsteği üzerine ayrılan uçucular için ayrılma onayının tebliğ tarihi",
+   "Kıymetlendirme kurulu kararının tasdik tarihi",
+   "Yetkili sağlık kurulu raporunun tasdik tarihi",
+   "İsteği üzerine ayrılması kabul edilen uçucular için dilekçe tarihi",
+   "Görev ekibi personeli için kadro görev yeri dışına atanıp ilişik kestiği tarih"
+  ],
+  "kanit": [
+   "Uçuculardan istekleri üzerine ayrılmaları kabul edilenlerin dilekçe tarihidir",
+   "Uçuş, atlayış, dalış kıymetlendirme kurullarının karar tasdik tarihidir",
+   "Yetkili Sağlık Kurulu raporunun tasdik tarihidir"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre hizmet yılı hesabında kaç ay ve daha fazla süreler tam yıla tamamlanır?",
+  "s": [
+   "6",
+   "3",
+   "9",
+   "4",
+   "8"
+  ],
+  "kanit": [
+   "Yıl hesabında 6 ay ve daha fazla süreler tam yıla tamamlanır"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre şehit olanların kanuni mirasçılarına kıstas aylığın kaç katı tutarında tazminat ödenir?",
+  "s": [
+   "100",
+   "200",
+   "50",
+   "150",
+   "75"
+  ],
+  "kanit": [
+   "Şehit olanların kanuni mirasçılarına kıstas aylığın 100 katı"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "olumsuz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre engellilik derecelerine göre şehitlik tazminatı tutarı üzerinden ödenecek oranlardan hangisi yanlıştır?",
+  "s": [
+   "1 inci derece: %85",
+   "2 nci derece: %65",
+   "4 üncü derece: %45",
+   "5 inci derece: %35",
+   "6 ncı derece: %25"
+  ],
+  "kanit": [
+   "1 inci dereceye %75’i, 2 nci dereceye %65’i, 3 üncü dereceye %55’i",
+   "4 üncü dereceye %45’i, 5 inci dereceye %35’i, 6 ncı dereceye %25’i"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "onculu",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre paraşütçülere ödenecek tazminatla ilgili aşağıdakilerden hangileri doğrudur?\nI. Aylık atlayış tazminatı kıstas aylığın %68'i üzerinden ek cetveldeki oranda ödenir.\nII. Özel Kuvvetler Komutanlığında bilfiil görev yapan uzman erbaşların tazminat oranları 20 puan artırılır.\nIII. Yılda 40 atlayıştan fazlası tazminat yönünden dikkate alınmaz.",
+  "s": [
+   "I ve III",
+   "Yalnız I",
+   "II ve III",
+   "I, II ve III",
+   "Yalnız II"
+  ],
+  "kanit": [
+   "kıstas aylığın %68’i üzerinden bu Kanuna ek cetvelde",
+   "Yılda 40 atlayıştan fazlası tazminat yönünden dikkate alınmaz",
+   "uzman jandarma ve uzman erbaşlar için 10’ar puan artırılarak ödenir"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçuş, paraşüt, dalgıç ve denizaltı okul ve kurslarında öğrenci yetiştiren öğretmenlere ödenen yetiştirme ikramiyesi kıstas aylığın yüzde kaçıdır?",
+  "s": [
+   "%0,6",
+   "%1",
+   "%0,5",
+   "%2",
+   "%0,8"
+  ],
+  "kanit": [
+   "kıstas aylığın %0,6’sı tutarında, yetiştirme ikramiyesi ayrıca ödenir"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "olumsuz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre tanımlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Kıstas aylık, en yüksek Devlet memuru aylığının ek gösterge hariç net tutarıdır",
+   "Pilotlar, statülerine göre jet pilotu ve pervaneli pilotu olmak üzere ikiye ayrılır",
+   "Kurbağa adamlar, solunum yaptıkları gaza göre ikiye ayrılır",
+   "Paraşütçülük hizmet süresi, okul veya kurslarda ilk atlayışa başlama tarihinden itibaren başlar",
+   "Denizaltıcı olmak için fiilen eğitim ve öğrenime başlayanlara denizaltıcı adayı denir"
+  ],
+  "kanit": [
+   "En yüksek Devlet memuru aylığının (Ek gösterge dahil) brüt tutarıdır",
+   "jet pilotu ve pervaneli pilotu olmak üzere ikiye ayrılır",
+   "Kurbağa adamlar solunum yaptıkları gaza göre"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "duz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre uçucuların, paraşütçülerin ve denizaltıcıların hizmetlerini yapacakları hava vasıtası ve gemi tipini kim saptar?",
+  "s": [
+   "Kuvvet komutanlıkları, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığı",
+   "Millî Savunma Bakanlığı",
+   "Genelkurmay Başkanlığı",
+   "Cumhurbaşkanlığı",
+   "Uçuş kıymetlendirme kurulları"
+  ],
+  "kanit": [
+   "görev ve ihtiyaca göre kuvvet komutanlıkları, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığınca saptanır"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "vaka",
+  "k": "Dalış tazminatı alan kurbağa adam astsubay (B), dalışla ilgisi olmayan yurt dışı daimi bir göreve atanmıştır.\n2629 sayılı Kanun'a göre (B) hakkında aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "Yurt dışında geçen süre dalış hizmet süresinden sayılır; tazminatı yurttan ayrılış tarihini izleyen aybaşından kesilir",
+   "Yurt dışında geçen süre dalış hizmet süresinden sayılmaz; tazminatı ödenmeye devam eder",
+   "Yurt dışında geçen süre sayılır; tazminatı ödenmeye devam eder",
+   "Yurt dışında geçen süre sayılmaz; tazminatı atama tarihinden itibaren kesilir",
+   "Tazminatının %50'si müteakip hizmet yılı başından itibaren kesilir"
+  ],
+  "kanit": [
+   "yurt dışı daimi görevlerde geçen süreleri uçuş, atlayış, dalış hizmet süresinden sayılır",
+   "yurttan ayrılış tarihini izleyen aybaşından itibaren aylık uçuş, atlayış ve dalış tazminatı kesilir"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "onculu",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre olağanüstü hallerde silah altına alınan personelle ilgili aşağıdakilerden hangileri doğrudur?\nI. Uçucu erbaş ve erlere okul veya kursta kıstas aylığın %2'si aylık uçuş tazminatı olarak ödenir.\nII. Uçuculardan fiilen pilotluk görevini yapan erbaş ve erlere kıstas aylığın %10'u aylık uçuş tazminatı olarak ödenir.\nIII. Bu personele Kanun hükümlerine göre şehitlik ve engellilik tazminatı ödenir.",
+  "s": [
+   "I, II ve III",
+   "Yalnız I",
+   "I ve III",
+   "Yalnız II",
+   "II ve III"
+  ],
+  "kanit": [
+   "okul veya kursda kıstas aylığının % 2'si",
+   "fiilen pilotluk görevini yapanlara kıstas aylığının % 10'u",
+   "bu Kanun hükümlerine göre şehitlik ve engellilik tazminatı ödenir"
+  ]
+ },
+ {
+  "law": 70,
+  "tip": "olumsuz",
+  "k": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi Kanunun uygulandığı personel arasında yer almaz?",
+  "s": [
+   "Sivil hava yolu şirketlerinde görev yapan pilotlar",
+   "Taktik koordine subayı",
+   "Atmosferik dalış sistemi pilotu",
+   "Seyrüsefer subayı",
+   "Kurbağa adam adayları"
+  ],
+  "kanit": [
+   "Bu Kanun, Türk Silahlı Kuvvetlerine mensup pilot, silah sistem subayı, seyrüsefer subayı",
+   "atmosferik dalış sistemi pilotu, dalgıç ve kurbağa adamlar ve bunların adayları"
+  ]
+ }
+]

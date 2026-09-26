@@ -1,0 +1,1289 @@
+{
+ "id": "P-SB-MEBS-01",
+ "baslik": "MEBS Subay — Premium Deneme 1",
+ "rutbe": "sb",
+ "brans": "mebs",
+ "soruSayisi": 80,
+ "sorular": [
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre kamu görevlisi ile kişinin rüşvet konusunda anlaşmaya varması hâlinde nasıl işlem yapılır?",
+   "siklar": [
+    "Yalnızca kamu görevlisi cezalandırılır.",
+    "Hazırlık hareketi sayıldığından ceza verilmez.",
+    "Ceza yarı oranında indirilerek verilir.",
+    "Suç tamamlanmış gibi cezaya hükmolunur.",
+    "Teşebbüs hükümlerine göre ceza verilir."
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.252",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.252: “(3) Rüşvet konusunda anlaşmaya varılması halinde, suç tamamlanmış gibi cezaya hükmolunur.”",
+   "id": "P-SB-MEBS-01-01"
+  },
+  {
+   "lawId": 1,
+   "soru": "Kamu görevlisi A, görevinin gereklerine aykırı hareket ederek bir vatandaşın mağduriyetine neden olmuştur. Fiil ayrıca başka bir suç oluşturmamaktadır. 5237 sayılı Türk Ceza Kanunu'na göre A hakkında hangi ceza öngörülür?",
+   "siklar": [
+    "Yalnızca adli para cezası",
+    "Üç aydan bir yıla kadar hapis",
+    "Dört yıldan on iki yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "Bir yıldan dört yıla kadar hapis"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.257",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.257: “gereklerine aykırı hareket etmek suretiyle, kişilerin mağduriyetine veya kamunun zararına neden olan ya da kişilere haksız bir menfaat sağlayan kamu görevlisi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.”",
+   "id": "P-SB-MEBS-01-02"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
+   "siklar": [
+    "Kişinin kendisini tanınmayacak hâle koyarak işlemesi",
+    "Birden fazla kişi tarafından birlikte işlenmesi",
+    "Silahla işlenmesi",
+    "Yargı görevi yapana karşı işlenmesi",
+    "Suç örgütüne yarar sağlamak maksadıyla işlenmesi"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.265",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.265: “(3) Suçun, kişinin kendisini tanınmayacak bir hale koyması suretiyle veya birden fazla kişi tarafından birlikte işlenmesi halinde, verilecek ceza üçte biri oranında artırılır.”",
+   "id": "P-SB-MEBS-01-03"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Tüzel kişiler hakkında ceza yaptırımı uygulanamaz.\nII. Suç ve ceza içeren hükümlerin uygulanmasında kıyas yapılamaz.\nIII. Taksirle işlenen fiiller her hâlde cezalandırılır.",
+   "siklar": [
+    "I ve II",
+    "I, II ve III",
+    "Yalnız III",
+    "Yalnız I",
+    "II ve III"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.20",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.20: “(2) Tüzel kişiler hakkında ceza yaptırımı uygulanamaz.”",
+   "id": "P-SB-MEBS-01-04"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre zimmet suçunda, soruşturma başlamadan önce zararın aynen iade veya tazmin edilmesi hâlinde verilecek cezada ne kadar indirim yapılır?",
+   "siklar": [
+    "Üçte biri",
+    "Dörtte biri",
+    "Dörtte üçü",
+    "Üçte ikisi",
+    "Yarısı"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.248",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.248: “(1) Soruşturma başlamadan önce, zimmete geçirilen malın aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek cezanın üçte ikisi indirilir.”",
+   "id": "P-SB-MEBS-01-05"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre bir il veya ilçenin tamamının jandarma sorumluluk alanı olarak belirlenmesine kim karar verir?",
+   "siklar": [
+    "Jandarma Genel Komutanı",
+    "İçişleri Bakanı",
+    "Vali",
+    "Emniyet Genel Müdürü",
+    "Cumhurbaşkanı"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.14",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.14: “) Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.”",
+   "id": "P-SB-MEBS-01-06"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre önleme araması kararında aşağıdakilerden hangisinin bulunması gerekmez?",
+   "siklar": [
+    "Aramayı yapacak personelin adı ve soyadı",
+    "Aramanın zamanı ve süresi",
+    "Aramanın sebebi",
+    "Aramanın konusu ve kapsamı",
+    "Aramanın yapılacağı yer"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.15/A",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.15/A: “Arama kararında veya emrinde; aramanın sebebi, konusu ve kapsamı ile yapılacağı yer, zaman ve geçerli olacağı süre belirtilir.”",
+   "id": "P-SB-MEBS-01-07"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre komando ve sınır birliklerinde görevli personele ödenen asayiş tazminatı, en yüksek Devlet memuru aylığının yüzde kaçını geçemez?",
+   "siklar": [
+    "%60",
+    "%40",
+    "%35",
+    "%52",
+    "%75"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.21",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.21: “) Jandarma Genel Komutanlığı fiili kadrolarına atanmış19 subay, astsubay ve uzman jandarma ve uzman erbaşlara; 657 sayılı Devlet Memurları Kanununda belirtilen en yüksek Devlet memuru aylığının (ek gösterge dahil); a)Komando ve sınır birliklerinde % 52,20 b) Diğer karargah, birlik ve kurumlarda % 40,21 tutarını geçmemek üzere İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir.”",
+   "id": "P-SB-MEBS-01-08"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarma personelinin kişisel suçları hakkında hangi hükümlere göre işlem yapılır?",
+   "siklar": [
+    "4483 sayılı Kanun",
+    "Askerî Ceza Kanunu",
+    "7068 sayılı Kanun",
+    "Genel hükümler",
+    "TSK İç Hizmet Kanunu"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.15",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.15: “e) Jandarma personelinin kişisel suçlarında genel hükümlere göre işlem yapılır.”",
+   "id": "P-SB-MEBS-01-09"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
+   "siklar": [
+    "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma",
+    "Hukuka ve dürüstlük kurallarına uygun olma",
+    "Belirli, açık ve meşru amaçlar için işlenme",
+    "Doğru ve gerektiğinde güncel olma",
+    "Her hâlde ilgili kişinin açık rızasının alınması"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.4",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.4: “(2) Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma.”",
+   "id": "P-SB-MEBS-01-10"
+  },
+  {
+   "lawId": 4,
+   "soru": "7201 sayılı Tebligat Kanunu'na göre muhatap yerine tebliğ yapılacak kişinin görünüşe göre en az kaç yaşında olması gerekir?",
+   "siklar": [
+    "21",
+    "25",
+    "17",
+    "15",
+    "18"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "7201 sayılı Tebligat Kanunu m.22",
+   "aciklama": "7201 sayılı Tebligat Kanunu, m.22: “Muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran onsekiz yaşından aşağı olmaması ve bariz bir surette ehliyetsiz bulunmaması lazımdır.”",
+   "id": "P-SB-MEBS-01-11"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre vali, kişilerin belirli yerlere giriş-çıkışını, dolaşmasını ve silah taşımasını en çok kaç gün süreyle kısıtlayabilir?",
+   "siklar": [
+    "3 gün",
+    "15 gün",
+    "7 gün",
+    "45 gün",
+    "30 gün"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.11",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.11: “)Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir. (…) Bu fıkra kapsamında alınan ve ilan olunan karar ve tedbirlere uymıyanlar hakkında 66 ncı madde hükmü uygulanır.10 Ç) Jandarma, polis, gümrük muhafaza ve diğer özel kolluk kuvvetlerinin bütün ast ve üstlerinin il içine munhasır olmak üzere geçici veya sürekli olarak vali tarafından yerleri değiştirilebilir ve bundan hemen İçişleri, Gümrük ve Tekel Bakanlıklarına bilgi verir. D) Valiler, ilde çıkabilecek veya çıkan olayların, emrindeki kuvvetlerle önlenmesini mümkün görmedikleri veya önleyemedikleri; aldıkları tedbirlerin bu kuvvetlerle uygulanmasını mümkün görmedikleri veya uygulayamadıkları takdirde, diğer illerin kolluk kuvvetleriyle bu iş için tahsis edilen diğer kuvvetlerden yararlanmak amacıyla, İçişleri Bakanlığından ve gerekirse (…)11 Kara Kuvvetleri Komutanlığının sınır birlikleri dahil olmak üzere en yakın kara, deniz ve hava birlik komutanlığından mümkün olan en hızlı vasıtalar ile müracaat ederek yardım isterler. Bu durumlarda ihtiyaç duyulan kuvvetlerin İçişleri Bakanlığından veya askeri birliklerden veya her iki makamdan talep edilmesi hususu, yardım talebinde bulunan vali tarafından takdir edilir. Valinin yaptığı yardım istemi geciktirilmeksizin yerine getirilir. Acil durumlarda bu istek sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir. 9 2/7/2018 tarihli ve 703 sayılı KHK’nin 138 inci maddesiyle, bu maddede yer alan “Bakanlar Kurulu” ibareleri “Cumhurbaşkanı” şeklinde, “Bakanlar Kurulunca” ibaresi “Cumhurbaşkanınca” şeklinde, “Hükümetin” ibaresi “Cumhurbaşkanının” şeklinde, “Başbakanın” ibaresi “Cumhurbaşkanının” şeklinde değiştirilmiştir. 10 25/7/2018 tarihli ve 7145 sayılı Kanunun 1 inci maddesiyle, bu paragrafta yer alan “Bu hususta” ibaresi “Bu fıkra kapsamında” şeklinde değiştirilmiştir. 11 17/4/2017 tarihli ve 690 sayılı KHK’nin 17 nci maddesiyle, bu fıkranın birinci cümlesinde yer alan “Jandarma Genel Komutanlığının veya” ibaresi yürürlükten kaldırılmış, daha sonra bu hüküm 1/2/2018 tarihli ve 7077 sayılı Kanunun 15 inci maddesiyle aynen kabul edilerek kanunlaşmıştır. Vali tarafından askeri birliklerden yardım istenmesi halinde; muhtemel olaylar için istenen askeri kuvvet, valinin görüşü alınarak olaylara hızla el koymaya uygun yerde, cereyan eden olaylar için ise olay yerinde hazır bulundurulur. Olayların niteliğine göre istenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından, görevde kalış süresi, askerî birliğin komutanı ile koordine edilerek vali tarafından belirlenir. Askeri kuvvetin müstakilen görevlendirilmesi durumunda; verilen görev askeri kuvvet tarafından kendi komutanının sorumluluğu altında ve onun emir ve talimatlarına göre Türk Silahlı Kuvvetleri İç Hizmet Kanununda belirtilen yetkiler ile kolluk kuvvetlerinin genel güvenliği sağlamada sahip olduğu yetkiler kullanılarak yerine getirilir. Güvenlik kuvvetleri ile yardıma gelen askeri kuvvet arasında işbirliği ve koordinasyon, yardıma gelen askeri birliğin komutanının da görüşü alınarak vali tarafından tespit edilir. Ancak, bu askeri birliğin belirli görevleri jandarma ya da polis ile birlikte yapması halinde komuta, sevk ve idare askeri birliklerin en kıdemli komutanı tarafından üstlenilir. Birden fazla ili içine alan olaylarda ilgili valilerin isteği üzerine aynı veya farklı askeri birlik komutanlarından kuvvet tahsis edilmesi durumunda iller veya kuvvetler arasında işbirliği, koordinasyon, kuvvet kaydırması, emir komuta ilişkileri ve gerekli görülen diğer hususlar yukarıda belirtilen hükümler çerçevesinde Cumhurbaşkanı tarafından belirlenecek esaslara göre yürütülür. Bu esasların uygulanmasında, işbirliği ve koordinasyon sağlamak amacıyla gerekli görülen hallerde İçişleri Bakanı ilgili valilerden birini geçici olarak görevlendirir. Olayların sınır illerinde veya bu illere mücavir bölgelerde cereyan etmesi ve eylemcilerin eylemlerini müteakip komşu ülke topraklarına sığındıklarının tespit edilmesi durumunda valinin talebi üzerine ilgili komutan eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Cumhurbaşkanının müsaadesi tahtında, ihtiyaca göre kara, hava, deniz kuvvetleri ve Jandarma Genel Komutanlığı unsurları ile komşu ülkelerin mutabakatı alınmak suretiyle mahdut hedefli sınır ötesi harekat planlayıp icra edebilir. Bu fıkra uyarınca görevlendirilen Türk Silahlı Kuvvetleri birliklerinin, bu fıkra kapsamındaki faaliyetleri, askerlik hizmet ve görevlerinden sayılır.Yukarıda belirtilen hususlar neden”",
+   "id": "P-SB-MEBS-01-12"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre idari para cezasının ödeme süresi içinde ödenmesi hâlinde cezadan ne oranda indirim yapılır?",
+   "siklar": [
+    "%25",
+    "%30",
+    "%20",
+    "%50",
+    "%10"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.17",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.17: “İdari para cezasının ödeme süresi içinde ödenmesi halinde, cezadan %25 oranında indirim yapılır.”",
+   "id": "P-SB-MEBS-01-13"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kabahat, kanunda aksi belirtilmedikçe hem kasten hem de taksirle işlenebilir.\nII. Kabahatlerde tüzel kişilerin sorumluluğu benimsenmiştir.\nIII. Nispî idari para cezasında soruşturma zamanaşımı beş yıldır.",
+   "siklar": [
+    "II ve III",
+    "Yalnız III",
+    "Yalnız I",
+    "I ve II",
+    "I, II ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.9",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.9: “(1) Kabahatler, kanunda açıkça hüküm bulunmayan hallerde, hem kasten hem de taksirle işlenebilir.”",
+   "id": "P-SB-MEBS-01-14"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre terörle mücadele görevi nedeniyle hakkında soruşturma açılan kamu görevlisini savunan en fazla kaç avukatın ücreti ödenir?",
+   "siklar": [
+    "2",
+    "1",
+    "3",
+    "4",
+    "5"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.15",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.15: “dirilmiş diğer personelin, bu görevlerinin ifasından doğduğu iddia edilen suçlardan dolayı yapılan soruşturma ve kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın veya bu görevlerinin ifasından dolayı mağdur, şikâyetçi, katılan, davalı ya da davacı konumunda olan personelin seçeceği bir avukatın ücreti ödenir ve bunlara avukatlık ücret tarifesine bağlı olmaksızın yapılacak ödemeler, ilgili kuruluşların bütçelerine konulacak ödenekten karşılanır. Ancak davacı konumunda olan personelin seçeceği bir avukata ücret ödenmesi, ilgili Bakanın onayına tabidir.11 Avukatların ücretlerinin ödenmesine ilişkin esas ve usûller, Millî Savunma ve İçişleri bakanlıklarınca müştereken çıkarılacak yönetmelikle düzenlenir. 9 29/6/2006 tarihli ve 5532 sayılı Kanunun 10 ve 12 inci maddesiyle 13 üncü maddenin başlığı “Erteleme ve paraya çevrilme”, 17 nci maddenin başlığı \"Şartla salıverilme\" iken metne işlendiği şekilde değiştirilmiştir. Daha sonra 26/2/2008 tarihli ve 5739 sayılı Kanunun 3 üncü maddesiyle 13 üncü maddenin başlığı “Seçenek yaptırımlara çevirme ve erteleme yasağı” iken metne işlendiği şekilde değiştirilmiştir. 10 Bu maddenin başlığı “Müdafii Tayini” iken 23/6/2016 tarihli ve 6722 sayılı Kanunun 15 inci maddesiyle metne işlendiği şekilde değiştirilmiştir. 11 23/6/2016 tarihli ve 6722 sayılı Kanunun 15 inci maddesiyle bu fıkradaki “görev alan” ibaresinden sonra gelmek üzere “Türk Silahlı Kuvvetleri personeli, mülki idare amirleri,” ibaresi eklenmiş ve bu fıkrada yer alan “kovuşturmalarda müdafi olarak belirlediği en fazla üç” ibaresi “kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın veya bu görevlerinin ifasından dolayı mağdur, şikâyetçi, katılan, davalı ya da davacı konumunda olan personelin seçeceği bir” şeklinde değiştirilmiştir. ÜÇÜNCÜ BÖLÜM Cezaların İnfazı Cezaların infazı ve tutukluların muhafazası”",
+   "id": "P-SB-MEBS-01-15"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre aşağıdaki Türk Ceza Kanunu maddelerinden hangisinde yazılı suç terör suçu sayılmaz?",
+   "siklar": [
+    "304",
+    "302",
+    "315",
+    "314",
+    "309"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.3",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.3: “) 26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 302, 307, 309, 311, 312, 313, 314, 315 ve 320 nci maddeleri ile 310 uncu maddesinin birinci fıkrasında yazılı suçlar, terör suçlarıdır.”",
+   "id": "P-SB-MEBS-01-16"
+  },
+  {
+   "lawId": 8,
+   "soru": "2935 sayılı Olağanüstü Hal Kanunu'na göre TBMM olağanüstü hâl süresini her defasında en fazla ne kadar uzatabilir?",
+   "siklar": [
+    "Altı ay",
+    "Üç ay",
+    "Dört ay",
+    "İki ay",
+    "Bir yıl"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
+   "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.”",
+   "id": "P-SB-MEBS-01-17"
+  },
+  {
+   "lawId": 9,
+   "soru": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre Atatürk'ü temsil eden heykeli kıran veya bozan kişiye verilecek ceza aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Bir yıldan üç yıla kadar hapis",
+    "İki yıldan yedi yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "Bir yıldan beş yıla kadar ağır hapis",
+    "Üç yıldan beş yıla kadar hapis"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun m.1",
+   "aciklama": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun, m.1: “Atatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimseye bir yıldan beş yıla kadar ağır hapis cezası verilir.”",
+   "id": "P-SB-MEBS-01-18"
+  },
+  {
+   "lawId": 10,
+   "soru": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre tedbir kararlarına karşı itiraz nereye yapılır?",
+   "siklar": [
+    "Sulh ceza hâkimliğine",
+    "İdare mahkemesine",
+    "Aile mahkemesine",
+    "Mahallin mülki amirine",
+    "Asliye ceza mahkemesine"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.9",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.9: “(1) Bu Kanun hükümlerine göre verilen kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir.”",
+   "id": "P-SB-MEBS-01-19"
+  },
+  {
+   "lawId": 10,
+   "soru": "Kolluk amiri, gecikmesinde sakınca bulunan bir hâlde şiddet uygulayan kişinin konuttan uzaklaştırılmasına karar vermiştir. 6284 sayılı Kanun'a göre bu karar kaç saat içinde hâkim tarafından onaylanmazsa kendiliğinden kalkar?",
+   "siklar": [
+    "72",
+    "24",
+    "48",
+    "36",
+    "12"
+   ],
+   "dogru": 1,
+   "tip": "vaka",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.5",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.5: “Hâkim tarafından yirmidört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.”",
+   "id": "P-SB-MEBS-01-20"
+  },
+  {
+   "lawId": 11,
+   "soru": "2893 sayılı Türk Bayrağı Kanunu'na aykırı bayrak kullananlar hakkında idari para cezasına kim karar verir?",
+   "siklar": [
+    "Sulh ceza hâkimi",
+    "Belediye encümeni",
+    "Cumhuriyet savcısı",
+    "Mahallin mülki amiri",
+    "İl jandarma komutanı"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2893 sayılı Türk Bayrağı Kanunu m.8",
+   "aciklama": "2893 sayılı Türk Bayrağı Kanunu, m.8: “Bu Kanun hükümlerine aykırı davranışta bulunanlara, fiilleri suç oluşturmadığı takdirde mahalli mülki amir tarafından Kabahatler Kanununun 32 nci maddesi uyarınca idarî para ceza verilir.”",
+   "id": "P-SB-MEBS-01-21"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre kısa süreli durdurma cezası hangi sürelerde verilir?",
+   "siklar": [
+    "Dört, altı veya on ay",
+    "Üç, beş veya sekiz ay",
+    "Altı, on iki veya on sekiz ay",
+    "Bir, üç veya beş ay",
+    "İki, dört veya yedi ay"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.7",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.7: “ç) Kısa süreli durdurma: Personelin bulunduğu kademede ilerlemesinin dört, altı veya on ay süre ile durdurulmasıdır.”",
+   "id": "P-SB-MEBS-01-22"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin cezalarına karşı itiraz süresi, kararın tebliğinden itibaren kaç gündür?",
+   "siklar": [
+    "10",
+    "5",
+    "15",
+    "7",
+    "30"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.30",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.30: “(1) Disiplin amirleri tarafından verilen disiplin cezalarına karşı, cezanın tebliğ edilmesinden itibaren on gün içinde itiraz edilebilir.”",
+   "id": "P-SB-MEBS-01-23"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre aşağıdakilerden hangisi disiplin cezaları arasında yer almaz?",
+   "siklar": [
+    "Uzun süreli durdurma",
+    "Kınama",
+    "Meslekten çıkarma",
+    "Aylıktan kesme",
+    "Oda hapsi"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.10",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.10: “(13) Bu Kanunda belirlenmiş ve bir disiplin cezasıyla yaptırıma bağlanmış fiillerin sahil güvenlik personelince yurtdışı liman ziyaretlerinde veya Türk karasuları dışında işlenmesi halinde, uyarma ve kınama cezası gerektiren fiillerde meydana gelen zarar ve tehlikenin ağırlığı da dikkate alınarak aylıktan kesme, kısa veya uzun süreli durdurma cezası; aylıktan kesme, kısa veya uzun süreli durdurma cezası gerektiren fiillerde ise yine meydana gelen zarar veya tehlikenin ağırlığı dikkate alınarak meslekten çıkarma cezası verilebilir. Geçici olarak kontrol altına alma”",
+   "id": "P-SB-MEBS-01-24"
+  },
+  {
+   "lawId": 13,
+   "soru": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre sözleşme süresi için aşağıdakilerden hangisi doğrudur?",
+   "siklar": [
+    "İki yıldan az, on yıldan fazla olamaz.",
+    "Dört yıldan az, sekiz yıldan fazla olamaz.",
+    "Üç yıldan az, dokuz yıldan fazla olamaz.",
+    "Bir yıldan az, beş yıldan fazla olamaz.",
+    "Beş yıldan az, on beş yıldan fazla olamaz."
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.10",
+   "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.10: “Sözleşme süreleri; üç yıldan az ve dokuz yıldan fazla olmamak şartıyla, hizmet gerekleri ve yetiştirme maliyetlerine bağlı olarak kuvvet, sınıf ve branşlara göre yönetmelikte belirlenir.”",
+   "id": "P-SB-MEBS-01-25"
+  },
+  {
+   "lawId": 14,
+   "soru": "5070 sayılı Elektronik İmza Kanunu'na göre güvenli elektronik imza hangi imza ile aynı hukuki sonucu doğurur?",
+   "siklar": [
+    "Elle atılan imza",
+    "Paraf",
+    "Mühür",
+    "Vekâleten atılan imza",
+    "Noter onaylı imza"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.5",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.5: “Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur.”",
+   "id": "P-SB-MEBS-01-26"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre cevap için süre belirtilmemiş bilgi ve görüş talepleri en geç kaç iş günü içinde cevaplandırılır?",
+   "siklar": [
+    "5",
+    "10",
+    "7",
+    "30",
+    "15"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.33",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.33: “alebin kendilerine ulaşmasından itibaren en geç beş iş günü; süre belirtilmeyen bilgi ve görüş taleplerini ise talebin kendilerine ulaşmasından itibaren en geç on beş iş günü içinde yerine getirir.”",
+   "id": "P-SB-MEBS-01-27"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangileri doğrudur?\nI. Belgelerde Times New Roman yazı tipi 12 punto olarak kullanılır.\nII. \"ACELE\" ibaresi sağ üst köşede kırmızı renkle yazılır.\nIII. Paragraf başı girintisi 2 santimetredir.",
+   "siklar": [
+    "I, II ve III",
+    "II ve III",
+    "I ve II",
+    "Yalnız II",
+    "Yalnız I"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.7",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.7: “Harf büyüklüğünün Times New Roman için 12 punto, Arial için 11 punto olması esastır.”",
+   "id": "P-SB-MEBS-01-28"
+  },
+  {
+   "lawId": 16,
+   "soru": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre sözleşmeli subayın muvazzaf subaylığa geçebilmesi için fiilî hizmet süresi bakımından hangi şart aranır?",
+   "siklar": [
+    "Yedinci yılına başlamış, on ikinci yılını bitirmemiş olmak",
+    "Beşinci yılına başlamış, onuncu yılını bitirmemiş olmak",
+    "Üçüncü yılına başlamış, dokuzuncu yılını bitirmemiş olmak",
+    "Dördüncü yılına başlamış, on ikinci yılını bitirmemiş olmak",
+    "Onuncu yılına başlamış, on beşinci yılını bitirmemiş olmak"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Sözleşmeli Subay ve Astsubay Yönetmeliği m.8",
+   "aciklama": "Sözleşmeli Subay ve Astsubay Yönetmeliği, m.8: “Muvazzaf Subaylığa Geçme Madde 8 – Muvazzaf subaylığa geçişle ilgili şartlar şunlardır: a) Muvazzaf subaylığa geçiş başvuru şartları şunlardır: 1) Yedinci fiili hizmet yılına başlamış veya on ikinci fiili hizmet yılını bitirmemiş olmak.”",
+   "id": "P-SB-MEBS-01-29"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre düğün, nişan, konser, panayır ve festival gibi toplanmalar için mülki amire ne kadar önce bildirimde bulunulur?",
+   "siklar": [
+    "24 saat",
+    "12 saat",
+    "72 saat",
+    "48 saat",
+    "7 gün"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.21",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.21: “(2) Düğün, nişan, konser, panayır, festival ve benzeri toplanmalarda kamu düzeninin korunmasına yönelik tedbirlerin alınmasına imkân sağlamak için ilgililer kırksekiz saat önce mülki amire bildirimde bulunmak zorundadır.”",
+   "id": "P-SB-MEBS-01-30"
+  },
+  {
+   "lawId": 18,
+   "soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre veri sorumlusunun belirleyeceği periyodik imha aralığı her hâlde ne kadarı geçemez?",
+   "siklar": [
+    "Üç ay",
+    "İki ay",
+    "Altı ay",
+    "Bir yıl",
+    "Dokuz ay"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik m.11",
+   "aciklama": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik, m.11: “Bu süre her halde altı ayı geçemez.”",
+   "id": "P-SB-MEBS-01-31"
+  },
+  {
+   "lawId": 19,
+   "soru": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre aşağıdakilerden hangisi Yönetmeliğin kapsamında değildir?",
+   "siklar": [
+    "İl özel idareleri",
+    "Türkiye Cumhuriyet Merkez Bankası",
+    "Belediyeler",
+    "Köyler",
+    "Üniversiteler"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik m.2",
+   "aciklama": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik, m.2: “Bu Yönetmelik; merkezi idare kapsamındaki kamu idareleri ile bunların bağlı, ilgili veya ilişkili kuruluşlarının, köyler hariç olmak üzere mahalli idareler ve bunların bağlı ve ilgili kuruluşları ile birlik veya şirketlerinin, T.”",
+   "id": "P-SB-MEBS-01-32"
+  },
+  {
+   "lawId": 20,
+   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre yivsiz tüfek ruhsatnamesi kaç yıl süreyle geçerlidir?",
+   "siklar": [
+    "10",
+    "5",
+    "2",
+    "3",
+    "1"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) m.10",
+   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), m.10: “ı bulunduğu valilik veya kaymakamlığına başvurmaları halinde yivsiz tüfek ruhsatnamesi harcının ödenmiş olması kaydıyla, verildiği tarihten geçerli olmak üzere 5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.”",
+   "id": "P-SB-MEBS-01-33"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre kolluk, hakkında tedbir kararı verilen korunan kişinin konutunu en az ne sıklıkla ziyaret eder?",
+   "siklar": [
+    "Ayda iki",
+    "Günde bir",
+    "Ayda bir",
+    "On beş günde bir",
+    "Haftada bir"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.35",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.35: “Bu kontrol korunan kişinin; a) Bulunduğu konutun haftada en az bir kez ziyaret edilmesi, b) İkinci derece dâhil olmak üzere yakınları ile iletişim kurulması, c) Komşularının bilgisine başvurulması, ç) Oturulan yerin muhtarından bilgi alınması, d) Bulunduğu konutun çevresinde araştırma yapılması, şeklinde yerine getirilir. Tedbir kararlarına aykırılığın tespit edilmesi halinde bu husus hakkında tutanak tutulur ve Cumhuriyet başsavcılığına gönderilir. (6) Tedbir kararlarının alınması ve uygulanması için yapılan iş ve işlemlerin aşamaları ve sonucu hakkında ilgili kurum tarafından aynı gün en geç saat 16.00’ya kadar en seri vasıtalarla ŞÖNİM’e bildirilir. (7) Korunan kişi, korunduğu yer dışında başka bir yere gitmesi gerektiğinde gideceği yer hakkında kolluğa bilgi verir, bu durumda dahi hakkında verilen kararın uygulanmasına devam edilir. Korunan kişi tarafından tedbir kararına uyulmaması halinde bu husus kolluk amiri tarafından bir tutanak ile tespit edilir. (8) Tedbir kararının ilgililere tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez. Kolluk görevleri”",
+   "id": "P-SB-MEBS-01-34"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre zorlama hapsi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Duruşma yapılmaksızın karar verilir.",
+    "İlk ihlalde üç günden on güne kadar verilir.",
+    "Toplam süresi altı ayı geçemez.",
+    "Her tekrarında on beş günden otuz güne kadar verilir.",
+    "Adli sicile işlenir ve tekerrüre esas olur."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.38",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.38: “(7) Zorlama hapsi kararları tekerrüre esas olmaz, koşullu salıverilme hükümleri uygulanmaz ve adli sicil kayıtlarına işlenmez.”",
+   "id": "P-SB-MEBS-01-35"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre bir nöbetin süresi en fazla ne kadar olabilir?",
+   "siklar": [
+    "36 saat",
+    "12 saat",
+    "24 saat",
+    "8 saat",
+    "48 saat"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.42",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.42: “(2) Nöbet, kurumlarda amirin münasip göreceği zamanda başlar ve yirmidört saati geçemez.”",
+   "id": "P-SB-MEBS-01-36"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre subay, astsubay ve uzman jandarmaların haftalık çalışma süresi kaç saattir?",
+   "siklar": [
+    "36",
+    "40",
+    "50",
+    "48",
+    "45"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.24",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.24: “Çalışma saatleri MADDE 24 - (1) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmaların haftalık çalışma süresi genel olarak 40 saattir.”",
+   "id": "P-SB-MEBS-01-37"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Araç içinde resmî kıyafetle yolculukta şapka çıkarılabilir.",
+    "Disiplin cezaları 7068 sayılı Kanunda düzenlenir.",
+    "Emir yalnızca resmî kıyafetli olarak verilebilir.",
+    "Millî marş açık yerde şapkalı olarak dinlenir.",
+    "Devlet memurları ile rütbeli personel arasında astlık-üstlük ilişkisi yoktur."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.10",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.10: “(6) Emir, resmî veya sivil kıyafetli olarak verilebilir.”",
+   "id": "P-SB-MEBS-01-38"
+  },
+  {
+   "lawId": 25,
+   "soru": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun'a göre ruhsatın veriliş sebebi ortadan kalkan ruhsat sahibi, durumu ruhsatı veren makama kaç ay içinde bildirmek zorundadır?",
+   "siklar": [
+    "Üç",
+    "Bir",
+    "On iki",
+    "Altı",
+    "İki"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.6",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.6: “Ruhsatların veriliş sebeplerinin ortadan kalkması halinde ruhsat sahibi durumu ruhsatı veren makama altı ay içinde bildirmekle yükümlüdür.”",
+   "id": "P-SB-MEBS-01-39"
+  },
+  {
+   "lawId": 25,
+   "soru": "B, ruhsatsız bir tabancayı evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
+   "siklar": [
+    "Üç yıldan sekiz yıla kadar",
+    "İki yıldan beş yıla kadar",
+    "Altı aydan bir yıla kadar",
+    "İki yıldan dört yıla kadar",
+    "Bir yıldan üç yıla kadar"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.13",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.13: “a ses veya gaz fişeği atabilen silah iken bu Kanun hükümlerine tabi silah vasfına dönüştürülen silahları satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.”",
+   "id": "P-SB-MEBS-01-40"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre işlenen suçun müebbet hapis cezasını gerektirmesi hâlinde, suçun işlenmesine yardım eden kişiye ne kadar hapis cezası verilir?",
+   "siklar": [
+    "Sekiz yıldan on iki yıla kadar",
+    "On yıldan on beş yıla kadar",
+    "On beş yıldan yirmi yıla kadar",
+    "Yirmi yıldan yirmi beş yıla kadar",
+    "Beş yıldan on yıla kadar"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.39",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.39: “(1) Suçun işlenmesine yardım eden kişiye, işlenen suçun ağırlaştırılmış müebbet hapis cezasını gerektirmesi halinde, onbeş yıldan yirmi yıla; müebbet hapis cezasını gerektirmesi halinde, on yıldan onbeş yıla kadar hapis cezası verilir.”",
+   "id": "P-SB-MEBS-01-41"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Bileşik suçlarda içtima hükümleri uygulanmaz.\nII. Kişinin kastedilenden daha ağır neticeden sorumlu tutulabilmesi için bu netice bakımından en azından taksirle hareket etmesi gerekir.\nIII. Kusur yeteneği olmayanı suçun işlenmesinde araç olarak kullanan kişinin cezası yarı oranında indirilir.",
+   "siklar": [
+    "Yalnız III",
+    "I ve II",
+    "Yalnız I",
+    "I, II ve III",
+    "II ve III"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.42",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.42: “Bu tür suçlarda içtima hükümleri uygulanmaz.”",
+   "id": "P-SB-MEBS-01-42"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre belediye kurulması, kaldırılması veya sınırlarında değişiklik olması hâlinde jandarma ve polis sorumluluk alanları, değişikliğin yürürlüğe girdiği tarihten itibaren en geç kaç ay içinde yeniden düzenlenir?",
+   "siklar": [
+    "6",
+    "1",
+    "3",
+    "2",
+    "12"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.10",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.10: “Büyükşehir, il veya ilçe belediyesi kurulması, kaldırılması ya da kentleşme veya diğer sebeplerle sınırlarda değişiklik olması halinde, değişikliğin yürürlüğe girdiği tarihten itibaren en geç üç ay içerisinde sorumluluk alanları yeniden düzenlenir.”",
+   "id": "P-SB-MEBS-01-43"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre aşağıdakilerden hangisi ilçe idare kurulunda yer almaz?",
+   "siklar": [
+    "İlçe emniyet müdürü",
+    "Tarım memuru",
+    "Hükümet hekimi",
+    "Tahrirat kâtibi",
+    "Malmüdürü"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.58",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.58: “İlçe idare kurulu, kaymakamın başkanlığı altında tahrirat katibi, malmüdürü, Hükümet hekimi, milli eğitim memuriyle tarım memuru ve veterinerden teşekkül eder.”",
+   "id": "P-SB-MEBS-01-44"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre kabahatler karşılığında uygulanacak idari yaptırımlar nelerden ibarettir?",
+   "siklar": [
+    "Hapis ve adli para cezası",
+    "Adli para cezası ve idari tedbirler",
+    "Uyarı ve adli para cezası",
+    "İdari para cezası ve güvenlik tedbirleri",
+    "İdari para cezası ve idari tedbirler"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.16",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.16: “(1) Kabahatler karşılığında uygulanacak olan idarî yaptırımlar, idarî para cezası ve idarî tedbirlerden ibarettir.”",
+   "id": "P-SB-MEBS-01-45"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre terör örgütü propagandası suçunun öğretim kurumlarında veya öğrenci yurtlarında işlenmesi hâlinde nasıl ceza verilir?",
+   "siklar": [
+    "Ceza üçte bir oranında artırılır.",
+    "Ceza yarı oranında artırılır.",
+    "Ceza dörtte bir oranında indirilir.",
+    "Ceza üç katı oranında artırılır.",
+    "Cezanın iki katı hükmolunur."
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.7",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.7: “kuruluşlarına veya bunların yan kuruluşlarına ait bina, lokal, büro veya eklentilerinde veya öğretim kurumlarında veya öğrenci yurtlarında veya bunların eklentilerinde işlenmesi halinde bu fıkradaki cezanın iki katı hükmolunur.”",
+   "id": "P-SB-MEBS-01-46"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre meslekten çıkarma cezasını gerektiren fiilin disiplin amirince öğrenildiği tarihten itibaren kaç ay içinde disiplin soruşturmasına başlanmazsa ceza verme yetkisi zamanaşımına uğrar?",
+   "siklar": [
+    "3",
+    "6",
+    "12",
+    "2",
+    "1"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.29",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.29: “a) Uyarma, kınama, aylıktan kesme ve kısa ve uzun süreli durdurma cezalarında bir ay içinde, b) Meslekten çıkarma cezası ve Devlet memurluğundan çıkarma cezasında altı ay içinde, disiplin soruşturmasına başlanmadığı takdirde disiplin cezası verme yetkisi zamanaşımına uğrar.”",
+   "id": "P-SB-MEBS-01-47"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre belgenin başlık, konu ve muhatap bölümleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Konu, sonuna herhangi bir noktalama işareti konulmaksızın yazılır.",
+    "Muhatap gerçek kişi ise adından önce \"Sayın\" ibaresi yazılır.",
+    "\"Konu:\" yan başlığı, \"Sayı:\" yan başlığının bir üst satırına yazılır.",
+    "Muhatap, konunun son satırından itibaren iki satır boşluk bırakılarak yazılır.",
+    "Başlığın ilk satırına \"T.C.\" kısaltması yazılır."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.13",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.13: “MADDE 13- (1) “Konu:” yan başlığı, “Sayı:” yan başlığının bir alt satırına yazılır.”",
+   "id": "P-SB-MEBS-01-48"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre aşağıdakilerden hangisi jandarma birimlerini denetlemeye yetkili değildir?",
+   "siklar": [
+    "Jandarma Genel Komutanı",
+    "İllerde valiler",
+    "Mülkiye Teftiş Kurulu Başkanlığı",
+    "İlçelerde kaymakamlar",
+    "Cumhuriyet başsavcıları"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.67",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.67: “Bu denetim illerde vali ve ilçelerde kaymakamlar tarafından yapılır.”",
+   "id": "P-SB-MEBS-01-49"
+  },
+  {
+   "lawId": 22,
+   "soru": "İlçe jandarma komutanlığında görevli astsubay A, yıllık iznini kullanmak istemektedir. Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre A'ya yıllık izni kim verir?",
+   "siklar": [
+    "Jandarma bölge komutanı",
+    "Jandarma Genel Komutanı",
+    "İçişleri Bakanı",
+    "Kaymakam",
+    "İl jandarma komutanı"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.44",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.44: “için Jandarma Genel Komutanı veya yetki devri yapacağı jandarma genel komutanı yardımcısı, 4) Jandarma bölge komutanları için konuşlu bulunduğu ilin valisi, 5) İl ve ilçe jandarma komutanlıklarında tüm personel için vali ve kaymakamlar, 6) Diğer personel için birinci amirler, tarafından verilir.”",
+   "id": "P-SB-MEBS-01-50"
+  },
+  {
+   "lawId": 103,
+   "soru": "Bilgi ve İletişim Güvenliği Rehberi'ne göre kurumsal ortamlarda kullanılan sensör, kamera vb. cihaz grupları hangi varlık grubu ana başlığında yer alır?",
+   "siklar": [
+    "Nesnelerin İnterneti (IoT) Cihazları",
+    "Fiziksel Mekânlar",
+    "Taşınabilir Cihaz ve Ortamlar",
+    "Uygulamalar",
+    "Ağ ve Sistemler"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Bilgi ve İletişim Güvenliği Rehberi m.7",
+   "aciklama": "Bilgi ve İletişim Güvenliği Rehberi, m.7: “) grupları • Nesnelerin İnterneti (IoT) Cihazları: Kurumsal ortamlarda kullanılan sensör, kamera vb. cihaz grupları • Personel: Kurum bünyesinde görev yapan personel / uzman grupları • Fiziksel Mekânlar: Bilgi güvenliği kapsamında yönetilen kurumsal sunucu odası, felaket kurtarma merkezi, personel odası vb.”",
+   "id": "P-SB-MEBS-01-51"
+  },
+  {
+   "lawId": 103,
+   "soru": "Bilgi ve İletişim Güvenliği Rehberi'ne göre varlık grubunun kritiklik derecesinin \"Derece 3\" olması için anket puanı en az kaç olmalıdır?",
+   "siklar": [
+    "24",
+    "18",
+    "32",
+    "36",
+    "28"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Bilgi ve İletişim Güvenliği Rehberi m.2",
+   "aciklama": "Bilgi ve İletişim Güvenliği Rehberi, m.2: “Anket Puanına Karşılık Gelen Kritiklik Derecesi Anket Puanı Anket puanı 18’den küçük ise Anket puanı 18 (dâhil) ile 28 arasında ise Varlık Grubu Kritiklik Derecesi Derece 1 Derece 2 Anket puanı 28 ve daha yüksek ise Derece 3 • Varlık grubu içinde yer alan tüm varlıklara aynı güvenlik tedbirlerinin uygulanacağı dikkate alınarak anket sonuçları tekrar değerlendirilir.”",
+   "id": "P-SB-MEBS-01-52"
+  },
+  {
+   "lawId": 103,
+   "soru": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangisi \"Ağ ve Sistem Güvenliği\" ana başlığının alt başlıklarından biri değildir?",
+   "siklar": [
+    "Veri Sızıntısı Önleme",
+    "Uzaktan Çalışma",
+    "Tehdit ve Zafiyet Yönetimi",
+    "Sanallaştırma Güvenliği",
+    "Eğitim ve Farkındalık Faaliyetleri"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Bilgi ve İletişim Güvenliği Rehberi m.40",
+   "aciklama": "Bilgi ve İletişim Güvenliği Rehberi, m.40: “• Genel Güvenlik Tedbirleri • Eğitim ve Farkındalık Faaliyetleri • Tedarikçi İlişkileri Güvenliği”",
+   "id": "P-SB-MEBS-01-53"
+  },
+  {
+   "lawId": 103,
+   "soru": "Bilgi ve İletişim Güvenliği Rehberi'ne göre bir işin yeterli ve en az yetkiyle çalıştırılmasını öngören temel prensip hangisidir?",
+   "siklar": [
+    "Derinlemesine Savunma",
+    "Asgari Yetki Tanımlama",
+    "Saldırı Yüzeyinin Azaltılması",
+    "Güvenlik Temelli Tasarım",
+    "En Zayıf Halkanın Tespiti"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Bilgi ve İletişim Güvenliği Rehberi m.4",
+   "aciklama": "Bilgi ve İletişim Güvenliği Rehberi, m.4: “• Asgari Yetki Tanımlama: Bir işin gerçekleştirilmesi için yeterli ve en az yetkiyle çalıştırılması sağlanmalıdır.”",
+   "id": "P-SB-MEBS-01-54"
+  },
+  {
+   "lawId": 103,
+   "soru": "Bilgi ve İletişim Güvenliği Rehberi'ne göre mevcut durum analizinde, teknik olarak uygulanma ihtimali bulunmayan tedbirin uygulama durumu nasıl belirtilir?",
+   "siklar": [
+    "Ertelenmiş",
+    "Uygulanamaz",
+    "Kısmen",
+    "Çoğunlukla",
+    "Hiç"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Bilgi ve İletişim Güvenliği Rehberi m.3",
+   "aciklama": "Bilgi ve İletişim Güvenliği Rehberi, m.3: “ğunlukla” o Tedbir varlık grubunda yer alan bir kısım varlığa uygulanmakta veya tedbir kısmen uygulanmakta ise “kısmen” o Tedbir hiç uygulanmamakta ise “hiç” o Tedbirin teknik olarak uygulanma ihtimali bulunmuyorsa “uygulanamaz” • Her bir varlık grubu için yapılan değerlendirmeler EK-C.”",
+   "id": "P-SB-MEBS-01-55"
+  },
+  {
+   "lawId": 103,
+   "soru": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangileri \"Taşınabilir Cihaz ve Ortam Güvenliği\" ana başlığının alt başlıklarındandır?\nI. Akıllı Telefon ve Tablet Güvenliği\nII. Taşınabilir Ortam Güvenliği (CD/DVD, Taşınabilir Bellek Ortamları)\nIII. Sanallaştırma Güvenliği",
+   "siklar": [
+    "I ve II",
+    "Yalnız III",
+    "Yalnız I",
+    "II ve III",
+    "I, II ve III"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "Bilgi ve İletişim Güvenliği Rehberi m.32",
+   "aciklama": "Bilgi ve İletişim Güvenliği Rehberi, m.32: “• Akıllı Telefon ve Tablet Güvenliği • Taşınabilir Bilgisayar Güvenliği • Taşınabilir Ortam Güvenliği (CD/DVD, Taşınabilir Bellek Ortamları)”",
+   "id": "P-SB-MEBS-01-56"
+  },
+  {
+   "lawId": 99,
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesi ve kanıtlayıcı belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Kanıtlayıcı belgeler ödeme belgesinin birinci nüshasına bağlanır.",
+    "Ödeme belgesinin ikinci nüshası muhasebe biriminde saklanır.",
+    "Ortak veri tabanından yapılan harcamalarda bu veriler ayrıca kanıtlayıcı belge olarak bağlanır.",
+    "Fatura ve taşınır işlem fişinin asıllarının bağlanması esastır.",
+    "Ödeme belgesi iki nüsha olarak muhasebe birimine verilir."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.5",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.5: “Elektronik ortamda oluşturulan ortak bir veri tabanından yararlanmak suretiyle yapılacak harcamalarda, veri giriş işlemleri gerçekleştirme görevi sayıldığından, ödeme belgesine ayrıca bu verileri kanıtlayıcı belge bağlanmaz .”",
+   "id": "P-SB-MEBS-01-57"
+  },
+  {
+   "lawId": 99,
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde hangi belgeler ödeme belgesine bağlanır?",
+   "siklar": [
+    "Taahhüt dosyası ve muayene ve kabul komisyonu tutanağı",
+    "Harcama talimatı ve Yapım İşleri Hakediş Raporu",
+    "Yalnız fatura",
+    "Fatura ve taşınır işlem fişi",
+    "Taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.45",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.45: “b) Makine, alet, araç ve taşıt kira bedelleri ile bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde; -Taahhüt dosyası, - Fatura, -Hizmet İşleri Hakediş Raporu (Örnek: 4), ödeme belgesine bağlanır.”",
+   "id": "P-SB-MEBS-01-58"
+  },
+  {
+   "lawId": 99,
+   "soru": "Mutemet Astsubay A, birliğindeki Jandarma er ve erbaşlarının harçlık ve tayın bedellerini avans olarak ödetecektir. Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesine hangi belge bağlanır?",
+   "siklar": [
+    "Muayene ve kabul komisyonu tutanağı",
+    "Er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
+    "Sağlık kurulu raporu",
+    "Taahhüt dosyası",
+    "Yurtiçi Geçici Görev Yolluğu Bildirimi"
+   ],
+   "dogru": 1,
+   "tip": "vaka",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.18",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.18: “) harçlıklarının ödenmesinde, Er ve Erbaş Harçlıkları Özet Bordrosu (Örnek: 21), b) Jandarma er ve erbaşlarının harçlıkları ve tayın bedellerinin avans olarak ödenmesi halinde, er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı, c) Söz konusu avansların mahsubunda ve kazandan iaşesi mümkün olmayan diğer er ve erbaşların harçlık ve tayın bedelleri ile ordu hemşire, ebe ve hastabakıcılarının tayın bedellerinin ödenmesinde; - Er ve Erbaş Harçlıkları Dağıtım Bordrosu/Er,Erbaş ile Ordu Hemşire, Ebe ve Hastabakıcı Tayın Bedeli Dağıtım Bordrosu (Örnek : 22), - İlgili aya ait tayın bedeli tespitine ilişkin yazı, d) Dinlenme ve hava değişimi alan er ve erbaşların tayın bedellerinin ödenmesinde; - Tayın bedelinin miktarının tespitine ilişkin yazı, -Sağlık kurulu raporu, ödeme belgesine bağlanır. Dinlenme ve hava değişimi alan er ve erbaşların sağlık kurulu raporlarının zamanında düzenlenmemesi halinde hekim raporu veya hasta taburcu belgesi ödeme belgesine bağlanır. Ancak, daha sonra düzenlenen sağlık kurulu raporu, istenildiğinde ibraz edilmek üzere gideri gerçekleştiren harcama biriminde muhafaza edilir. Öğrenim giderleri”",
+   "id": "P-SB-MEBS-01-59"
+  },
+  {
+   "lawId": 99,
+   "soru": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ulaştırma ve haberleşme giderlerinin ödenmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Haber ajansı abonelik giderlerinde muayene ve kabul komisyonu tutanağı bağlanır.",
+    "Tekel niteliğindeki telefon giderlerinde daire amirince onanmış fatura bağlanır.",
+    "İnternet üzerinden televizyon abonelik giderlerinde taahhüt dosyası ve fatura bağlanır.",
+    "Posta pulu bedelleri de ulaştırma ve haberleşme giderleri kapsamında ödenir.",
+    "Faturada şehirlerarası görüşme bedellerinin resmi-özel ayrımı gösterilir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği m.43",
+   "aciklama": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği, m.43: “) televizyon ve benzeri araçların abone giderleri ile bilgisayar haberleşmesi ve haber ajansları abonelik giderleri gibi bilgiye abonelik giderlerinin ödenmesinde; - Taahhüt dosyası, - Fatura, ödeme belgesine bağlanır.”",
+   "id": "P-SB-MEBS-01-60"
+  },
+  {
+   "lawId": 102,
+   "soru": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre yurtiçinde güvenli şekilde depolanacak kritik bilgi ve veriler arasında aşağıdakilerden hangisi sayılmamıştır?",
+   "siklar": [
+    "Genetik veriler",
+    "Nüfus kayıt bilgileri",
+    "Biyometrik veriler",
+    "Sağlık kayıt bilgileri",
+    "Tapu kayıt bilgileri"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12) m.2",
+   "aciklama": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12), m.2: “2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 1 Nüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler gibi kritik bilgi ve veriler yurtiçinde güvenli bir şekilde depolanacaktır.”",
+   "id": "P-SB-MEBS-01-61"
+  },
+  {
+   "lawId": 102,
+   "soru": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre aşağıdakilerden hangileri doğrudur?\nI. Kritik kurumların bulunduğu bölgelerdeki veriler fiber optik kablolar üzerinden taşınır.\nII. Radyolinkin zorunlu olduğu durumlarda veriler milli kripto sistemleriyle kriptolanır.\nIII. Kritik veri iletişiminde öncelikli yöntem radyolink haberleşmesidir.",
+   "siklar": [
+    "Yalnız III",
+    "I, II ve III",
+    "I ve II",
+    "II ve III",
+    "Yalnız I"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12) m.22",
+   "aciklama": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12), m.22: “2019/12 sayılı Cumhurbaşkanlığı Genelgesi — Bilgi ve İletişim Güvenliği Tedbirleri — Tedbir 21 İşletmeciler tarafından, kritik kurumların bulunduğu bölgelerdeki veriler, radyolink ve benzeri yöntemlerle taşınmayacak, fiber optik kablolar üzerinden taşınacaktır.”",
+   "id": "P-SB-MEBS-01-62"
+  },
+  {
+   "lawId": 102,
+   "soru": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre milli güvenliği doğrudan etkileyen stratejik kurumların üst yöneticileri hakkında ne yaptırılır?",
+   "siklar": [
+    "Sağlık kurulu muayenesi",
+    "Mal bildirimi denetimi",
+    "Psikoteknik değerlendirme",
+    "Yabancı dil yeterlik sınavı",
+    "Güvenlik soruşturması veya arşiv araştırması"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12) m.18",
+   "aciklama": "Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi (2019/12), m.18: “aiz kurum ve kuruluşların üst yöneticileri ile kritik altyapı, tesis ve projelerde görev alacak kritik önemi haiz personel hakkında ilgili mevzuat çerçevesinde güvenlik soruşturması veya arşiv araştırması yaptırılacaktır.”",
+   "id": "P-SB-MEBS-01-63"
+  },
+  {
+   "lawId": 142,
+   "soru": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre cep telefonu tahsis edilen makamların aylık görüşme ücreti limiti, kaç gösterge rakamının memur aylık katsayısıyla çarpımını geçemez?",
+   "siklar": [
+    "2200",
+    "1000",
+    "1800",
+    "1500",
+    "3000"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Tasarruf Tedbirleri Genelgesi (2024/7) — Haberleşme Giderleri m.6",
+   "aciklama": "Tasarruf Tedbirleri Genelgesi (2024/7) — Haberleşme Giderleri, m.6: “Bakanlar, belediye başkanları ve üst yöneticiler tarafından; cep telefonu tahsis edilen makamlar için aylık cep telefonu görüşme ücreti limitleri, 1800 gösterge rakamının memur ayhk katsayısıyla çarpımı sonucu bulunacak tutarı geçmeyecektir.”",
+   "id": "P-SB-MEBS-01-64"
+  },
+  {
+   "lawId": 142,
+   "soru": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre aşağıdakilerden hangisi cep telefonu tahsis edilebilecekler arasında sayılmamıştır?",
+   "siklar": [
+    "Belediyelerde genel sekreterler",
+    "Valiler",
+    "Kaymakamlar",
+    "Yüksek yargı organları başkanları",
+    "Cumhurbaşkanı Yardımcısı"
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Tasarruf Tedbirleri Genelgesi (2024/7) — Haberleşme Giderleri m.6",
+   "aciklama": "Tasarruf Tedbirleri Genelgesi (2024/7) — Haberleşme Giderleri, m.6: “Cep telefonları sadece Cumhurbaşkanı Yardımcısı, bakanlar, yüksek yargı organları başkanları, valiler ve belediye başkanları ile hizmet gereksinimi dikkate alınarak 3 sayılı Cumhurbaşkanlığı Kararnamesine ekli (I) sayılı cetvelde yer alan kadro, pozisyon ve görevlerde bulunanlar ile belediyelerde genel sekreterler ve genel müdürler ile sınırlı olmak üzere bakanlıklar, bağlı, ilgili ve ilişkili kuruluşlarda bakan, belediyelerde belediye başkanı, diğer idarelerde üst yönetici tarafından belirlenen makamlar için tahsis edilebilecektir. Bu şekilde cep telefonu tahsis edilen makamların listesi bakanlıklar, bağlı, ilgili ve ilişkili kuruluşlar ile diğer idareler bakımından Cumhurbaşkanlığına, belediyeler bakımından ise Çevre, Şehircilik ve İklim Değişikliği Bakanlığına gönderilecektir. Bakanlar, belediye başkanları ve üst yöneticiler tarafından; cep telefonu tahsis edilen makamlar için aylık cep telefonu görüşme ücreti limitleri, 1800 gösterge rakamının memur ayhk katsayısıyla çarpımı sonucu bulunacak tutarı geçmeyecektir. Kamu kurum ve kuruluşları, tebligatlarını ilgili mevzuatında istisna tutulan durumlar hariç elektronik tebligat sistemlerini kullanarak yapacaklardır. Mevzuat hükümleri uyarınca elektronik tebligat adresi alma zorunluluğu olmayan kişilerin bu sistemlere dâhil olabilmesi kamu idarelerince teşvik edilecek ve azami gayret gösterilecektir. Tüm yazışmaların elektronik bilgi yönetim sistemi üzerinden yapılması ivedilikle sağlanacaktır. Elektronik bilgi yönetim sistemleri üzerinden yapılan resmî yazışmalar ayrıca posta ile gönderilmeyecektir. Kurum arşivleri elektronik bilgi yönetim sistemlerine taşınacak ve bunu müteakip fiziki arşiv tutulmayacaktır.”",
+   "id": "P-SB-MEBS-01-65"
+  },
+  {
+   "lawId": 68,
+   "soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre abonenin numarasını değiştirmeden aldığı hizmet türünü değiştirmesini ifade eden kavram aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Hizmet taşınabilirliği",
+    "Hizmet dönüşümü",
+    "Hizmet aktarımı",
+    "Hizmet sürekliliği",
+    "Hizmet ön seçimi"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5809 Sayılı Elektronik Haberleşme Kanunu m.3",
+   "aciklama": "5809 Sayılı Elektronik Haberleşme Kanunu, m.3: “konu olan kamuya ait ya da kamunun ortak kullanımında olan taşınmazlar da dahil olmak üzere, taşınmaz sahipleri ve/veya taşınmaz üzerindeki hak sahiplerini, t) Hizmet taşınabilirliği: Abonenin numarasını değiştirmeden aldığı hizmet türünü değiştirmesini, u) İlgili pazar: Ülkenin tümünde veya bir bölümünde sunulmakta olan belirli bir elektronik haberleşme hizmeti ve onunla yüksek derecede ikame edilebilen diğer elektronik haberleşme hizmetlerinden oluşan pazarı, ü) İlgili tesisler: İlgili şebeke ve/veya hizmet aracılığıyla hizmetlerin sunulmasını sağlayan ve/veya destekleyen bir elektronik haberleşme şebekesine ve/veya bir elektronik haberleşme hizmetine ilişkin tesisleri, v) İnternet alan adı: İnternet üzerinde bulunan bilgisayar veya internet sitelerinin adresini belirlemek için kullanılan internet protokol numarasını tanımlayan adları, y) İnternet alan adı sistemi: Okunması ve akılda tutulması kolay olan ve genelde aranan adres sahipleri ile ilişkilendirilebilen simgesel isimlerle yapılan adreslemede, karşılığı olan internet protokolü numarasını bulan ve kullanıcıya veren sistemi, z) İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi, aa) İşletmeci numara taşınabilirliği: Abonenin numarasını değiştirmeden hizmet aldığı işletmeciyi değiştirmesini, bb) Koşullu erişim sistemi: Radyo ve televizyon yayın sistemlerine abonelik veya başka bir yöntemle önceden izin verilmesi yoluyla koşullu olarak erişimi sağlayan her türlü teknik tedbir ve düzenlemeyi, cc) Kullanıcı: Aboneliği olup olmamasına bakılmaksızın elektronik haberleşme hizmetlerinden yararlanan gerçek veya tüzel kişiyi, çç) Kullanım hakkı: Frekans, numara, uydu pozisyonu gibi kıt kaynakların kullanılması için verilen hakkı, dd) Kurul: Bilgi Teknolojileri ve İletişim Kurulunu, ee) Kurum: Bilgi Teknolojileri ve İletişim Kurumunu, ff) MCKS (CEIR): Merkezî mobil cihaz kimlik tanımı veri tabanı sistemini, gg) MCKT (EIR): Mobil cihaz kimlik tanımı veri tabanını, ğğ) Numara: Şebeke ve/veya şebeke sonlanma noktasını tanımlayan, söz konusu noktaya ses, veri ve görüntünün yönlendirilmesini sağlayan, kullanıldığı yere göre abone, işletmeci, elektronik haberleşme şebekesi ve/veya hizmeti ile ilişkilendirilebilen bilgiyi içeren harf, rakamlar dizini veya sembolleri, hh) Numara taşınabilirliği: Abonelerin numarasını değiştirmeden, hizmet aldığı işletmeciyi veya adresini veya aldığı hizmetin türünü değiştirebilmesini, ıı) Onaylanmış kuruluş: Uygunluk değerlendirme faaliyetinde bulunmak üzere, Kurum tarafından belirlenerek, 29/6/2001 tarihli ve 4703 sayılı Ürünlere İlişkin Teknik Mevzuatın Hazırlanması ve Uygulanmasına Dair Kanun ve ilgili teknik düzenlemelerde belirtilen esaslar çerçevesinde yetkilendirilen kamu kurum ve kuruluşları ile gerçek veya tüzel kişileri, ii) Radyo ve televizyon yayını: Karasal, kablo, uydu ve diğer ortamlar üzerinden, şifreli veya şifresiz olarak kitle haberleşmesi amacıyla yapılan ve bireysel iletişim hizmetlerini kapsamayan görüntü ve/veya ses iletimini, jj) Son kullanıcı: Elektronik haberleşme hizmeti ve/veya elektronik haberleşme şebekesi sağlamayan gerçek veya tüzel kişileri, kk) Spektrum: Elektronik haberleşme amacıyla kullanılan, frekansı 9 kHz-3000 GHz arasında olan ve uluslararası düzenleme yapılması halinde 3000 GHz'in üzerindeki frekanslar da dahil olmak üzere elektromanyetik dalgaların frekans aralığını, ll) Standart: Üzerinde mutabakat sağlanmış olan, kabul edilmiş bir kuruluş tarafından onaylanan, mevcut şartlar altında en uygun seviyede bir düzen kurulmasını amaçlayan, ortak ve tekrar eden kullanımlar için ürünün özellikleri, işleme ve üretim yöntemleri, bunlarla ilgili terminoloji, sembol, ambalajlama, işaretleme, etiketleme ve uygunluk değerlendirmesi işlemleri hususlarından biri veya birkaçını belirten ve bu kapsamda uyulması ihtiyari olan düzenlemeyi, mm) Şebeke sonlanma noktası: Elektronik haberleşme şebekesinde aboneye erişimin sağlandığı fiziksel noktayı, anahtarlama veya yönlendirme ihtiva eden şebekelerde ise abone numarası veya ismi ile ilişkilendirilebilen özel bir şebeke adresiyle tanımlanan noktayı, nn) Tarife: İşletmecilerin, elektronik haberleşme hizmetinin sunulması karşılığında kullanıcılardan farklı adlar altında alabilecekleri ücretleri içeren cetveli, oo) Taşıyıcı: Bir çağrının başlatılması, sonlandırılması veya taşınması hizmetlerinin tümünü veya bir kısmını sunan işletmeciyi, öö) Taşıyıcı ön seçimi: Taşıyıcının, taşıyıcı seçim kodu çevrilmeksizin seçilmesine imkan sağlayacak şekilde önceden seçilmesi yöntemini,”",
+   "id": "P-SB-MEBS-01-66"
+  },
+  {
+   "lawId": 68,
+   "soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre frekans planlaması ve tahsisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Kurum, frekanslarda yaptığı değişiklikler nedeniyle doğan zararlardan sorumludur.",
+    "İzin ve ruhsatname gerektirmeyen telsizlerin frekansları için tahsis ve tescil yapılmaz.",
+    "Milli frekans planlaması ve tahsisi Kurum tarafından yapılır.",
+    "Telsiz sistemi kurmak isteyenler Kuruma frekans tahsis ve tescil işlemlerini yaptırmak zorundadır.",
+    "Kurum, tahsis edilen frekanslarda iptal dahil her türlü değişiklik yapabilir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5809 Sayılı Elektronik Haberleşme Kanunu m.36",
+   "aciklama": "5809 Sayılı Elektronik Haberleşme Kanunu, m.36: “Bu konuda yapılacak düzenlemeler sonucunda Kurum, herhangi bir yükümlülük altına girmez.”",
+   "id": "P-SB-MEBS-01-67"
+  },
+  {
+   "lawId": 68,
+   "soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre yabancı uyruklu gerçek kişilerin mobil hat abonelik kayıtlarıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Kişiler, abonelik kayıtlarını güncellemek için altı ay içinde ilgili işletmeciye başvurmak zorundadır.\nII. Başvuru süresi Kurum tarafından bir yıl daha uzatılabilir.\nIII. Başvurmayanların hatlarının bağlantısı, başvuru süresinin bitiminden itibaren bir ay içinde işletmecice kesilir.",
+   "siklar": [
+    "Yalnız II",
+    "I ve III",
+    "I, II ve III",
+    "Yalnız I",
+    "II ve III"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "5809 Sayılı Elektronik Haberleşme Kanunu Geçici 8",
+   "aciklama": "5809 Sayılı Elektronik Haberleşme Kanunu, Geçici 8: “yıtlarının bu maddeyi ihdas eden Kanunla 50 nci maddede yapılan değişikliklere uygun hale getirilmesi amacıyla, bu fıkranın yürürlüğe girdiği tarihten itibaren altı ay içinde yabancı uyruklu gerçek kişiler, abonelik kayıtlarını güncellemek için ilgili işletmeciye başvurmak zorundadır.”",
+   "id": "P-SB-MEBS-01-68"
+  },
+  {
+   "lawId": 68,
+   "soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre işletmecinin ilgili pazarda, tek başına ya da diğer işletmecilerle birlikte rakiplerinden, kullanıcılarından ve tüketicilerinden fark edilir şekilde bağımsız hareket edebilmesine imkân sağlayan ekonomik gücü ifade eden kavram aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Hâkim sermaye gücü",
+    "Tekel piyasa gücü",
+    "Rekabet üstünlüğü",
+    "Etkin piyasa gücü",
+    "Pazar belirleme gücü"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5809 Sayılı Elektronik Haberleşme Kanunu m.3",
+   "aciklama": "5809 Sayılı Elektronik Haberleşme Kanunu, m.3: “berleşme şebekesi, alt yapısı ve/veya hizmetlerinin, diğer işletmecilere sunulmasını, p) Erişim yükümlüsü: Erişim sağlama yükümlülüğü getirilen işletmeciyi, r) Etkin piyasa gücü: İşletmecinin, ilgili elektronik haberleşme pazarında, tek başına ya da diğer işletmecilerle birlikte, rakiplerinden, kullanıcılarından ve tüketicilerinden fark edilir bir şekilde bağımsız olarak hareket edebilmesine imkan sağlayan ekonomik gücü, s) Geçiş hakkı: İşletmecilere, elektronik haberleşme hizmeti sunmak için gerekli şebeke ve alt yapıyı kurmak, kaldırmak, bakım ve onarım yapmak gibi amaçlar ile kamu ve özel mülkiyet alanlarının altından, üstünden, üzerinden geçmeleri için tanınan hakları, ş) Geçiş hakkı sağlayıcısı: Geçiş hakkına konu olan kamuya ait ya da kamunun ortak kullanımında olan taşınmazlar da dahil olmak üzere, taşınmaz sahipleri ve/veya taşınmaz üzerindeki hak sahiplerini, t) Hizmet taşınabilirliği: Abonenin numarasını değiştirmeden aldığı hizmet türünü değiştirmesini, u) İlgili pazar: Ülkenin tümünde veya bir bölümünde sunulmakta olan belirli bir elektronik haberleşme hizmeti ve onunla yüksek derecede ikame edilebilen diğer elektronik haberleşme hizmetlerinden oluşan pazarı, ü) İlgili tesisler: İlgili şebeke ve/veya hizmet aracılığıyla hizmetlerin sunulmasını sağlayan ve/veya destekleyen bir elektronik haberleşme şebekesine ve/veya bir elektronik haberleşme hizmetine ilişkin tesisleri, v) İnternet alan adı: İnternet üzerinde bulunan bilgisayar veya internet sitelerinin adresini belirlemek için kullanılan internet protokol numarasını tanımlayan adları, y) İnternet alan adı sistemi: Okunması ve akılda tutulması kolay olan ve genelde aranan adres sahipleri ile ilişkilendirilebilen simgesel isimlerle yapılan adreslemede, karşılığı olan internet protokolü numarasını bulan ve kullanıcıya veren sistemi, z) İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi, aa) İşletmeci numara taşınabilirliği: Abonenin numarasını değiştirmeden hizmet aldığı işletmeciyi değiştirmesini, bb) Koşullu erişim sistemi: Radyo ve televizyon yayın sistemlerine abonelik veya başka bir yöntemle önceden izin verilmesi yoluyla koşullu olarak erişimi sağlayan her türlü teknik tedbir ve düzenlemeyi, cc) Kullanıcı: Aboneliği olup olmamasına bakılmaksızın elektronik haberleşme hizmetlerinden yararlanan gerçek veya tüzel kişiyi, çç) Kullanım hakkı: Frekans, numara, uydu pozisyonu gibi kıt kaynakların kullanılması için verilen hakkı, dd) Kurul: Bilgi Teknolojileri ve İletişim Kurulunu, ee) Kurum: Bilgi Teknolojileri ve İletişim Kurumunu, ff) MCKS (CEIR): Merkezî mobil cihaz kimlik tanımı veri tabanı sistemini, gg) MCKT (EIR): Mobil cihaz kimlik tanımı veri tabanını, ğğ) Numara: Şebeke ve/veya şebeke sonlanma noktasını tanımlayan, söz konusu noktaya ses, veri ve görüntünün yönlendirilmesini sağlayan, kullanıldığı yere göre abone, işletmeci, elektronik haberleşme şebekesi ve/veya hizmeti ile ilişkilendirilebilen bilgiyi içeren harf, rakamlar dizini veya sembolleri, hh) Numara taşınabilirliği: Abonelerin numarasını değiştirmeden, hizmet aldığı işletmeciyi veya adresini veya aldığı hizmetin türünü değiştirebilmesini, ıı) Onaylanmış kuruluş: Uygunluk değerlendirme faaliyetinde bulunmak üzere, Kurum tarafından belirlenerek, 29/6/2001 tarihli ve 4703 sayılı Ürünlere İlişkin Teknik Mevzuatın Hazırlanması ve Uygulanmasına Dair Kanun ve ilgili teknik düzenlemelerde belirtilen esaslar çerçevesinde yetkilendirilen kamu kurum ve kuruluşları ile gerçek veya tüzel kişileri, ii) Radyo ve televizyon yayını: Karasal, kablo, uydu ve diğer ortamlar üzerinden, şifreli veya şifresiz olarak kitle haberleşmesi amacıyla yapılan ve bireysel iletişim hizmetlerini kapsamayan görüntü ve/veya ses iletimini, jj) Son kullanıcı: Elektronik haberleşme hizmeti ve/veya elektronik haberleşme şebekesi sağlamayan gerçek veya tüzel kişileri, kk) Spektrum: Elektronik haberleşme amacıyla kullanılan, frekansı 9 kHz-3000 GHz arasında olan ve uluslararası düzenleme yapılması halinde 3000 GHz'in üzerindeki frekanslar da dahil olmak üzere elektromanyetik dalgaların frekans aralığını, ll) Standart: Üzerinde mutabakat sağlanmış olan, kabul edilmiş bir kuruluş tarafından onaylanan, mevcut şartlar altında en uygun seviyede bir düzen kurulmasını amaçlayan, ortak ve tekrar eden kullanımlar için ürünün özellikleri, işleme ve üretim yöntemleri, bunlarla ilgili terminoloji, sembol, ambalajlama, işaretleme, etiketleme ve uygunluk değerlendirmesi işlemleri hususlarından biri veya birkaçını belirten ve bu kapsamda uyulması ihtiyari olan düzenlemeyi, mm) Şebeke sonlanma noktası: Elektronik haberleşme şebekesinde aboneye erişimin sağlandığı fiziksel noktayı, anahtarlama veya yönlendirme ihtiva eden şebekelerde ise abone numarası veya ismi ile ilişkilendirilebilen özel bir şebeke adresiyle tanımlanan noktayı, nn) Tarife: İşletmecilerin, elektronik haberleşme hizmetinin sunulması karşılığında kullanıcılardan farklı adlar altında alabilecekleri ücretleri içeren cetveli, oo) Taşıyıcı: Bir çağrının başlatılması, sonlandırılması veya taşınması hizmetlerinin tümünü veya bir kısmını sunan işletmeciyi, öö) Taşıyıcı ön seçimi: Taşıyıcının, taşıyıcı seçim kodu çevrilmeksizin seçilmesine imkan sağlayacak şekilde önceden seçilmesi yöntemini,”",
+   "id": "P-SB-MEBS-01-69"
+  },
+  {
+   "lawId": 68,
+   "soru": "Jandarma Genel Komutanlığı, görev sahasıyla ilgili olarak bedelini kendisi ödeyerek bir işletmeciye elektronik haberleşme şebekesi kurdurmuştur. 5809 sayılı Elektronik Haberleşme Kanunu'na göre bu şebeke hakkında aşağıdakilerden hangisi doğrudur?",
+   "siklar": [
+    "Şebeke işletmeciye ait sayılır ve Kanunun tamamına tabidir.",
+    "Şebekenin işletilmesi Kurumun yetkilendirmesine tabidir.",
+    "Frekans tahsisi ve kriptolu haberleşme hükümleri dışında Kanun hükümleri uygulanmaz.",
+    "Kanunun tamamı uygulanır, yalnız ücret alınmaz.",
+    "Şebekenin kurulması Ulaştırma Bakanlığının iznine bağlıdır."
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "5809 Sayılı Elektronik Haberleşme Kanunu m.2",
+   "aciklama": "5809 Sayılı Elektronik Haberleşme Kanunu, m.2: “elektronik haberleşme cihaz, sistem ve şebekeleri ile bedeli bu kurumlar tarafından ödenerek işletmeciler tarafından kurulan veya kurulacak elektronik haberleşme cihaz, sistem ve şebekeleri hakkında 36 ncı ve 39 uncu maddeler hariç, bu Kanun hükümleri uygulanmaz.”",
+   "id": "P-SB-MEBS-01-70"
+  },
+  {
+   "lawId": 68,
+   "soru": "5809 sayılı Elektronik Haberleşme Kanunu'na göre aşağıdakilerden hangisi elektronik haberleşme tanımında sayılan iletim sistemlerinden biri değildir?",
+   "siklar": [
+    "Elektrokimyasal",
+    "Elektromekanik",
+    "Optik",
+    "Akustik",
+    "Telsiz"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "5809 Sayılı Elektronik Haberleşme Kanunu m.3",
+   "aciklama": "5809 Sayılı Elektronik Haberleşme Kanunu, m.3: “erini etkilemeyen gerçek veya tüzel kişiyi, h) Elektronik haberleşme: Elektriksel işaretlere dönüştürülebilen her türlü işaret, sembol, ses, görüntü ve verinin kablo, telsiz, optik, elektrik, manyetik, elektromanyetik, elektrokimyasal, elektromekanik ve diğer iletim sistemleri vasıtasıyla iletilmesini, gönderilmesini ve alınmasını, ı) Elektronik haberleşme alt yapısı: Elektronik haberleşmenin, üzerinden veya aracılığıyla gerçekleştirildiği anahtarlama ekipmanları, donanım ve yazılımlar, terminaller ve hatlar da dahil olmak üzere her türlü şebeke birimlerini, ilgili tesisleri ve bunların bütünleyici parçalarını, i) Elektronik haberleşme alt yapısı işletimi: İlgili alt yapıya ilişkin gerekli elektronik haberleşme tesislerinin kurulması, kurdurulması, kiralanması veya herhangi bir surette temin alan “kuruluş kanunlarında” ibaresi “kuruluş kanunları ile Cumhurbaşkanlığı kararnamelerinde” şeklinde değiştirilmiştir. edilmesiyle bu tesisin diğer işletmecilerin veya talep eden gerçek veya tüzel kişilerin kullanımına sunulmasını, j) Elektronik haberleşme hizmeti: Elektronik haberleşme tanımına giren faaliyetlerin bir kısmının veya tamamının hizmet olarak sunulmasını, k) Elektronik haberleşme şebekesi: Bir veya daha fazla nokta arasında elektronik haberleşmeyi sağlamak için bu noktalar arası bağlantıyı teşkil eden anahtarlama ekipmanları ve hatlar da dahil olmak üzere her türlü iletim sistemleri ağını, l) Elektronik haberleşme sektörü: Elektronik haberleşme hizmeti verilmesi, elektronik haberleşme şebekesi sağlanması, elektronik haberleşme cihaz ve sistemlerine yönelik üretim, ithal, satış ve bakım-onarım hizmetlerinin yürütülmesi ile ilgili sektörü, m) Elektronik haberleşme şebekesi sağlanması: Elektronik haberleşme şebekesi kurulması, işletilmesi, kullanıma sunulması ve kontrolünü, n) Elektronik kimlik bilgisi: Elektronik haberleşme cihazlarına tek ve benzersiz olarak tahsis edilmiş kimlik tanımını, o) Elektromanyetik girişim (Enterferans): İlgili mevzuat hükümlerine uygun olarak yapılan her türlü elektronik haberleşmeyi engelleyen, kesinti doğuran veya kalitesini bozan her türlü yayın veya elektromanyetik etkiyi, ö) Erişim: Bu Kanunda belirtilen koşullarla, elektronik haberleşme şebekesi, alt yapısı ve/veya hizmetlerinin, diğer işletmecilere sunulmasını, p) Erişim yükümlüsü: Erişim sağlama yükümlülüğü getirilen işletmeciyi, r) Etkin piyasa gücü: İşletmecinin, ilgili elektronik haberleşme pazarında, tek başına ya da diğer işletmecilerle birlikte, rakiplerinden, kullanıcılarından ve tüketicilerinden fark edilir bir şekilde bağımsız olarak hareket edebilmesine imkan sağlayan ekonomik gücü, s) Geçiş hakkı: İşletmecilere, elektronik haberleşme hizmeti sunmak için gerekli şebeke ve alt yapıyı kurmak, kaldırmak, bakım ve onarım yapmak gibi amaçlar ile kamu ve özel mülkiyet alanlarının altından, üstünden, üzerinden geçmeleri için tanınan hakları, ş) Geçiş hakkı sağlayıcısı: Geçiş hakkına konu olan kamuya ait ya da kamunun ortak kullanımında olan taşınmazlar da dahil olmak üzere, taşınmaz sahipleri ve/veya taşınmaz üzerindeki hak sahiplerini, t) Hizmet taşınabilirliği: Abonenin numarasını değiştirmeden aldığı hizmet türünü değiştirmesini, u) İlgili pazar: Ülkenin tümünde veya bir bölümünde sunulmakta olan belirli bir elektronik haberleşme hizmeti ve onunla yüksek derecede ikame edilebilen diğer elektronik haberleşme hizmetlerinden oluşan pazarı, ü) İlgili tesisler: İlgili şebeke ve/veya hizmet aracılığıyla hizmetlerin sunulmasını sağlayan ve/veya destekleyen bir elektronik haberleşme şebekesine ve/veya bir elektronik haberleşme hizmetine ilişkin tesisleri, v) İnternet alan adı: İnternet üzerinde bulunan bilgisayar veya internet sitelerinin adresini belirlemek için kullanılan internet protokol numarasını tanımlayan adları, y) İnternet alan adı sistemi: Okunması ve akılda tutulması kolay olan ve genelde aranan adres sahipleri ile ilişkilendirilebilen simgesel isimlerle yapılan adreslemede, karşılığı olan internet protokolü numarasını bulan ve kullanıcıya veren sistemi, z) İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi, aa) İşletmeci numara taşınabilirliği: Abonenin numarasını değiştirmeden hizmet aldığı işletmeciyi değiştirmesini, bb) Koşullu erişim sistemi: Radyo ve televizyon yayın sistemlerine abonelik veya başka bir yöntemle önceden izin verilmesi yoluyla koşullu olarak erişimi sağlayan her türlü teknik tedbir ve düzenlemeyi, cc) Kullanıcı: Aboneliği olup olmamasına bakılmaksızın elektronik haberleşme hizmetlerinden yararlanan gerçek veya tüzel kişiyi, çç) Kullanım hakkı: Frekans, numara, uydu pozisyonu gibi kıt kaynakların kullanılması için verilen hakkı, dd) Kurul: Bilgi Teknolojileri ve İletişim Kurulunu, ee) Kurum: Bilgi Teknolojileri ve İletişim Kurumunu, ff) MCKS (CEIR): Merkezî mobil cihaz kimlik tanımı veri tabanı sistemini, gg) MCKT (EIR): Mobil cihaz kimlik tanımı veri tabanını, ğğ) Numara: Şebeke ve/veya şebeke sonlanma noktasını tanımlayan, söz konusu noktaya ses, veri ve görüntünün yönlendirilmesini sağlayan, kullanıldığı yere göre abone, işletmeci, elektronik haberleşme şebekesi ve/veya hizmeti ile ilişkilendirilebilen bilgiyi içeren harf, rakamlar dizini veya sembolleri, hh) Numara taşınabilirliği: Abonelerin numarasını değiştirmeden, hizmet aldığı işletmeciyi veya adresini veya aldığı hizmetin türünü değiştirebilmesini, ıı) Onaylanmış kuruluş: Uygunluk değerlendirme faaliyetinde bulunmak üzere, Kurum tarafından belirlenerek, 29/6/2001 tarihli ve 4703 sayılı Ürünlere İlişkin Teknik Mevzuatın Hazırlanması ve Uygulanmasına Dair Kanun ve ilgili teknik düzenlemelerde belirtilen esaslar çerçevesinde yetkilendirilen kamu kurum ve kuruluşları ile gerçek veya tüzel kişileri, ii) Radyo ve televizyon yayını: Karasal, kablo, uydu ve diğer ortamlar üzerinden, şifreli veya şifresiz olarak kitle haberleşmesi amacıyla yapılan ve bireysel iletişim hizmetlerini kapsamayan görüntü ve/veya ses iletimini, jj) Son kullanıcı: Elektronik haberleşme hizmeti ve/veya elektronik haberleşme şebekesi sağlamayan gerçek veya tüzel kişileri, kk) Spektrum: Elektronik haberleşme amacıyla kullanılan, frekansı 9 kHz-3000 GHz arasında olan ve uluslararası düzenleme yapılması halinde 3000 GHz'in üzerindeki frekanslar da dahil olmak üzere elektromanyetik dalgaların frekans aralığını, ll) Standart: Üzerinde mutabakat sağlanmış olan, kabul edilmiş bir kuruluş tarafından onaylanan, mevcut şartlar altında en uygun seviyede bir düzen kurulmasını amaçlayan, ortak ve tekrar eden kullanımlar için ürünün özellikleri, işleme ve üretim yöntemleri, bunlarla ilgili terminoloji, sembol, ambalajlama, işaretleme, etiketleme ve uygunluk değerlendirmesi işlemleri hususlarından biri veya birkaçını belirten ve bu kapsamda uyulması ihtiyari olan düzenlemeyi, mm) Şebeke sonlanma noktası: Elektronik haberleşme şebekesinde aboneye erişimin sağlandığı fiziksel noktayı, anahtarlama veya yönlendirme ihtiva eden şebekelerde ise abone numarası veya ismi ile ilişkilendirilebilen özel bir şebeke adresiyle tanımlanan noktayı, nn) Tarife: İşletmecilerin, elektronik haberleşme hizmetinin sunulması karşılığında kullanıcılardan farklı adlar altında alabilecekleri ücretleri içeren cetveli, oo) Taşıyıcı: Bir çağrının başlatılması, sonlandırılması veya taşınması hizmetlerinin tümünü veya bir kısmını sunan işletmeciyi, öö) Taşıyıcı ön seçimi: Taşıyıcının, taşıyıcı seçim kodu çevrilmeksizin seçilmesine imkan sağlayacak şekilde önceden seçilmesi yöntemini,”",
+   "id": "P-SB-MEBS-01-71"
+  },
+  {
+   "lawId": 97,
+   "soru": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği'ne göre erişim sağlayıcı olan veya telefon hizmeti sunan işletmeci, görüşmelere ait trafik bilgilerini kaç yıl süreyle muhafaza etmekle yükümlüdür?",
+   "siklar": [
+    "5",
+    "2",
+    "3",
+    "10",
+    "1"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği m.19",
+   "aciklama": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği, m.19: “esi, port aralığı, verilen hizmetin başlama ve bitiş zamanı, yararlanılan hizmetin türü, aktarılan veri miktarı, kullanıcı sayısı ve abone kimlik bilgileri ile altyapısı üzerinden gerçekleşen görüşmelere ait trafik bilgilerini iki yıl süreyle; kullanıcı bilgilerini ise ilgili mevzuatta belirtilen zamanaşımı süresi boyunca muhafaza etmekle yükümlüdür.”",
+   "id": "P-SB-MEBS-01-72"
+  },
+  {
+   "lawId": 97,
+   "soru": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği'ne göre işletmecilerin yükümlülükleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Kurumca istenen bilgi ve belgeyi doğru ve eksiksiz olarak vermekle yükümlüdür.",
+    "Acil yardım çağrı hizmetini kullanıcılarına ücret karşılığında sağlar.",
+    "Hizmeti durdurmadan önce objektif nedenleri Kuruma bilgi ve belgeleriyle bildirir.",
+    "Şebekeler arasındaki zararlı elektromanyetik girişimi önlemek için gerekli önlemleri alır.",
+    "Faaliyeti için gerekli diğer izinleri ilgili kurumlardan almakla yükümlüdür."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği m.19",
+   "aciklama": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği, m.19: “Kurum tarafından acil yardım çağrı hizmet numaralarına erişim zorunluluğu getirilen işletmeciler, söz konusu hizmeti kullanıcılarına para, jeton, ön ödemeli kart ve benzeri araç gerekmeksizin ücretsiz olarak sağlamakla ve bu hizmetin verilebilmesi için gereken teçhizat ve sistemleri kurmakla yükümlüdür.”",
+   "id": "P-SB-MEBS-01-73"
+  },
+  {
+   "lawId": 97,
+   "soru": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği'ne göre işletmecinin son kaç yıl içerisinde hizmet sunmadığının tespiti hâlinde yetkilendirmesi iptal edilir?",
+   "siklar": [
+    "2",
+    "3",
+    "1",
+    "5",
+    "4"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği Geçici 10",
+   "aciklama": "Elektronik Haberleşme Sektörüne İlişkin Yetkilendirme Yönetmeliği, Geçici 10: “(1) İşletmecinin son üç yıl içerisinde hizmet sunmadığının tespiti halinde yetkilendirmesinin iptal edilmesine ilişkin 7 nci maddenin beşinci fıkrasındaki hüküm, bu maddenin yürürlüğe girdiği tarihten itibaren üç yıl sonra uygulanmaya başlanır.”",
+   "id": "P-SB-MEBS-01-74"
+  },
+  {
+   "lawId": 101,
+   "soru": "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre amatör telsizciler arasında yapılan ve maddi çıkar sağlamayan, sadece hobi amacı taşıyan haberleşmeyi ifade eden kavram aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Gönüllü telsiz ağı",
+    "Amatör telsiz haberleşmesi",
+    "Kişisel telsiz yayını",
+    "Serbest telsiz haberleşmesi",
+    "Hobi frekans iletişimi"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik m.4",
+   "aciklama": "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik, m.4: “ve çabası ile telsiz iletişim teknikleri alanında kendini yetiştirmek amacıyla ulusal ve uluslararası amatör telsizcilik faaliyetinde bulunan gerçek kişiyi, c) Amatör telsiz haberleşmesi: Amatör telsizciler arasında yapılan ve maddi çıkar sağlamayan, sadece hobi amacı taşıyan haberleşmeyi, ç) BTK başvuru formu: Formatı kurum tarafından belirlenen, kurum internet adresinde yayımlanan ve telsiz cihaz ve sistemi kurup kullanmak için müracaat edecek işletmeci veya kullanıcıların doldurmakla yükümlü oldukları her bir formu, d) BTK bildirim formu: Formatı kurum tarafından belirlenen, kurum internet adresinde yayımlanan ve telsiz cihaz ve sistemi kuran işletmecilerin doldurmakla yükümlü oldukları her bir formu, e) İşletmeci: Yetkilendirme çerçevesinde elektronik haberleşme hizmeti sunan ve/veya elektronik haberleşme şebekesi sağlayan ve alt yapısını işleten şirketi, f) Kanun: 5/11/2008 tarihli ve 5809 sayılı Elektronik Haberleşme Kanununu, g) Kullanıcı: Aboneliği olup olmamasına bakılmaksızın telsiz haberleşme hizmetlerinden yararlanan gerçek veya tüzel kişiyi, ğ) Kurum: Bilgi Teknolojileri ve İletişim Kurumunu, h) Kurul: Bilgi Teknolojileri ve İletişim Kurulunu, ı) Telsiz: Aralarında herhangi bir fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu ses ve veri vermeye, almaya veya yalnızca vermeye veya almaya yarayan sistemleri, i) Telsiz kurma ve kullanma izni: Bu Yönetmelik kapsamında kurulacak ve kullanılacak telsiz cihaz ve sistemleri için Kurum tarafından verilen izni, j) Telsiz ruhsatnamesi: Bu Yönetmelik kapsamında kurulacak ve kullanılacak telsiz cihaz ve sistemleri için Kurum tarafından verilen ruhsatnameyi, k) Üretici: Bir cihazın imalatçısını, imalatçının yurt dışında yerleşik olması halinde Türkiye’de yerleşik yetkili temsilcisini ve/veya bu cihazın ithalatçısını ve faaliyetleri bu cihazın güvenliğe ilişkin özelliklerini etkileyen tedarik zincirindeki diğer kişileri, l) Veri: Sistematik erişim imkânı olan, yönetilebilir, güncellenebilir, taşınabilir, birbirleri arasında tanımlı ilişkiler bulunabilen analog veya sayısal metin, resim, görüntü ve benzeri bilgiler kümesini, m) Yasak bölge: Yurt savunması bakımından hayati önem taşıyan askeri tesis ve bölgelerin çevre duvarı, tel örgü veya benzeri engel veya işaretlerle belirlenen dış sınırlarından en az yüz en fazla dört yüz metre uzağından alınan noktaların birleştirilmesi suretiyle meydana gelen alanlarda kara sınır hattı boyunca ve lüzum görülen kıyılarda otuz ile altı yüz metre derinliklerdeki sahaları, n) Yetkilendirme: Elektronik haberleşme hizmetlerinin sunulması ve/veya elektronik haberleşme şebekesi sağlanmasını teminen şirketlerin, Kurum nezdinde kayıtlanmasını veya kayıtlanmasıyla birlikte bu şirketlere elektronik haberleşme hizmetlerine özel, belirli hak ve yükümlülükler verilmesini ifade eder. İKİNCİ BÖLÜM Telsiz İşlemleri Başvuru”",
+   "id": "P-SB-MEBS-01-75"
+  },
+  {
+   "lawId": 101,
+   "soru": "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre telsiz ücretinden muaf kullanıcılara, talepleri hâlinde bir defaya mahsus olmak üzere hangi tarihe kadar telsiz kurma ve kullanma izni verilir?",
+   "siklar": [
+    "31/12/2013",
+    "01/01/2017",
+    "31/12/2015",
+    "30/06/2016",
+    "31/12/2014"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik Geçici 1",
+   "aciklama": "Telsiz İşlemlerine İlişkin Usul ve Esaslar Hakkında Yönetmelik, Geçici 1: “z ücretinden muaf kullanıcılar tarafından yürütülen faaliyetlerin yerine getirilmesinde zafiyet oluşturulmaması amacıyla talebi halinde, söz konusu kuruluşlara bir defaya mahsus olmak üzere 31/12/2015 tarihine kadar telsiz kurma ve kullanma izni verilir, bu tarihten itibaren telsiz kurma ve kullanma izinlerine ilişkin iş ve işlemler, ilgili mevzuat hükümleri çerçevesinde yürütülür.”",
+   "id": "P-SB-MEBS-01-76"
+  },
+  {
+   "lawId": 100,
+   "soru": "Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik'e göre bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisini ifade eden kavram aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Kripto anahtarı",
+    "Kod çizelgesi",
+    "Kripto özeti",
+    "Şifre çözücü",
+    "Kripto protokolü"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Kodlu/Kriptolu Haberleşme Yapma Usul ve Esasları Yönetmeliği m.4",
+   "aciklama": "Kodlu/Kriptolu Haberleşme Yapma Usul ve Esasları Yönetmeliği, m.4: “ı: Kriptografik işlemlerin şifreleme, şifre çözme, kimlik doğrulama ve benzeri diğer adımlarında kullanılan tüm matematiksel fonksiyonlar ve protokollerini, e) Kripto Anahtarı: Bilginin kriptolanması ve çözülmesinde kullanılan ve algoritmaya uygulanan değişken karakter dizisini, f) Kriptolu elektronik haberleşme: Kriptolu elektronik haberleşme cihazları ile kripto teknikleri kullanılarak gerçekleştirilen haberleşmeyi, g) Kriptolu elektronik haberleşme cihazı: Dahili ve/veya harici yazılım ve donanım tabanlı kriptolama elemanı ile birlikte kullanılan telli veya telsiz elektronik haberleşme cihazını, ğ) Kodlu haberleşme: Haberleşmenin üçüncü şahıslar tarafından anlaşılmaması için mesajların önceden üzerinde anlaşılmış bir koda göre değiştirilerek iletilmesini, h) Milli kripto cihazı: Milli Savunma Bakanlığınca üretim yapmasına yetki verilen kurumlarda ve Milli Kripto Klerans Belgesine sahip Türk vatandaşlarınca geliştirilen, üretilen, kriptografik algoritma, protokol ve anahtar yönetim sistemlerinin güvenlik düzeyi yetkili bir kamu kurumunca onaylanmış cihazları, ı) Telsiz: Aralarında herhangi bir fiziki bağlantı olmaksızın elektromanyetik dalgalar yoluyla açık, kodlu veya kriptolu, ses, veri vermeye, almaya veya yalnızca vermeye veya almaya yarayan sistemleri, i) Üretici: Elektronik haberleşme cihazı imal eden, ıslah eden veya cihaza adını, ticari markasını veya ayırt edici işaretini koymak suretiyle kendini üretici olarak tanıtan gerçek veya tüzel kişiyi, üreticinin Ülke dışında olması halinde, üretici tarafından yetkilendirilen temsilciyi ve/veya ithalatçıyı; ayrıca, cihazın satış ve/veya tedarik zincirinde yer alan ve faaliyetleri cihazın güvenliğine ilişkin özelliklerini etkileyen gerçek veya tüzel kişiyi, ifade eder. İKİNCİ BÖLÜM Kodlu veya Kriptolu Elektronik Haberleşme Hizmetleri İçin Başvuru, Değerlendirme, İzin İşlemleri, Emniyet ve Muhafaza Tedbirleri Başvuru”",
+   "id": "P-SB-MEBS-01-77"
+  },
+  {
+   "lawId": 100,
+   "soru": "Kodlu veya Kriptolu Haberleşme Yapma Usul ve Esasları Hakkında Yönetmelik'e göre aşağıdakilerden hangisi kodlu veya kriptolu haberleşme yapmaya yetkili olduğu için Yönetmelik kapsamı dışında kalan kurumlardan biri değildir?",
+   "siklar": [
+    "Sahil Güvenlik Komutanlığı",
+    "Emniyet Genel Müdürlüğü",
+    "Jandarma Genel Komutanlığı",
+    "Dışişleri Bakanlığı",
+    "Sağlık Bakanlığı"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Kodlu/Kriptolu Haberleşme Yapma Usul ve Esasları Yönetmeliği m.2",
+   "aciklama": "Kodlu/Kriptolu Haberleşme Yapma Usul ve Esasları Yönetmeliği, m.2: “(1) Bu Yönetmelik, elektronik haberleşme hizmeti içinde kodlu veya kriptolu haberleşme yapmaya yetkili Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Milli İstihbarat Teşkilatı Müsteşarlığı, Emniyet Genel Müdürlüğü ve Dışişleri Bakanlığı ile bu kurumlara ait kodlu veya kriptolu elektronik haberleşme sistemlerinin kullanıldığı kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler hariç, diğer kamu kurum ve kuruluşları ile gerçek ve tüzel kişileri kapsar. (2) Kurum düzenlemelerinde belirlenen ve işletilmesi için frekans tahsisine ihtiyaç duyulmayan özel amaçlar için tahsis edilmiş frekans bantlarında ve çıkış gücünde çalışan Kurumca onaylı telsiz cihaz ve sistemleri bu Yönetmelik kapsamı dışındadır. Dayanak”",
+   "id": "P-SB-MEBS-01-78"
+  },
+  {
+   "lawId": 98,
+   "soru": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği'ne göre komisyon kararında teknik, hijyenik, stratejik ve tıbbi nedenlerle imha edilmesi gerektiği belirtilen taşınır mallar nasıl imha edilir?",
+   "siklar": [
+    "Ayrı bir komisyon tarafından tutanak düzenlenerek",
+    "Harcama yetkilisinin sözlü talimatıyla",
+    "Taşınır mal sorumlusu tarafından tek başına",
+    "Sayıştay denetçisi gözetiminde",
+    "HEK'e ayırma komisyonunca tutanaksız olarak"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği m.25",
+   "aciklama": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği, m.25: “(2) Komisyon kararında ekonomik değerinin olmadığı veya teknik, hijyenik, stratejik ve tıbbi nedenlerle imha edilmesi gerektiği belirtilen taşınır mallar, birinci fıkrada belirtilen komisyon dışında oluşturulan ayrı bir komisyon tarafından tutanak düzenlenerek imha edilir.”",
+   "id": "P-SB-MEBS-01-79"
+  },
+  {
+   "lawId": 98,
+   "soru": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği'ne göre taşınır malların yıl sonu sayımlarıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Depolarda ve kullanımda olan taşınır mallar yıl sonlarında sayım kurullarınca sayılır.\nII. Sayım yapılan birimin taşınır mal sorumlusu, sayım süresince kurula refakat eder ve sayım tutanağını imzalar.\nIII. Noksanlıkta kasıt, ihmal veya tedbirsizliği olanlar hakkında ayrıca işlem yapılmaz.",
+   "siklar": [
+    "Yalnız III",
+    "II ve III",
+    "Yalnız I",
+    "I ve II",
+    "I, II ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği m.32",
+   "aciklama": "TSK, MİT, EGM, Jandarma ve Sahil Güvenlik Taşınır Mal Yönetmeliği, m.32: “Taşınır malların yıl sonu sayımları MADDE 32- (1) Depolarda ve kullanımda olan taşınır mallar, yıl sonlarında 30 uncu maddeye göre oluşturulan sayım kurulları tarafından sayılır.”",
+   "id": "P-SB-MEBS-01-80"
+  }
+ ]
+}

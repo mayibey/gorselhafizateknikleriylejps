@@ -1,0 +1,240 @@
+[
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre \"bilginin tam ve doğru olma durumunun korunması\" hangi kritiklik boyutunu ifade eder?",
+  "s": [
+   "Bütünlük",
+   "Gizlilik",
+   "Erişilebilirlik",
+   "Kurumsal Sonuçlar",
+   "Bağımlı Varlıklar"
+  ],
+  "kanit": [
+   "Bütünlük: Bilginin tam ve doğru olma durumunun korunması"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre kritiklik derecesi 2 olan varlık gruplarına hangi seviye tedbirler uygulanır?",
+  "s": [
+   "Temel ve orta seviye",
+   "Yalnız temel seviye",
+   "Yalnız orta seviye",
+   "Temel, orta ve ileri seviye",
+   "Orta ve ileri seviye"
+  ],
+  "kanit": [
+   "temel seviye güvenlik tedbirlerine ek olarak orta seviye güvenlik tedbirleri uygulanır"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "olumsuz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangisi \"Kişisel Verilerin Güvenliği\" ana başlığının alt başlıklarından biri değildir?",
+  "s": [
+   "Zararlı Yazılımlardan Korunma",
+   "Aydınlatma Yönetimi",
+   "Açık Rıza Yönetimi",
+   "Kayıt Yönetimi",
+   "Yetkilendirme"
+  ],
+  "kanit": [
+   "Zararlı Yazılımlardan Korunma • Ağ Güvenliği",
+   "Kayıt Yönetimi • Erişim Kayıtları Yönetimi • Yetkilendirme",
+   "Aydınlatma Yönetimi • Açık Rıza Yönetimi"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "onculu",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangileri \"Fiziksel Mekânların Güvenliği\" ana başlığının alt başlıklarındandır?\nI. Genel Güvenlik Tedbirleri\nII. Sistem Odası/Veri Merkezine Yönelik Güvenlik Tedbirleri\nIII. Elektromanyetik Bilgi Kaçaklarından Korunma Yöntemleri (TEMPEST)",
+  "s": [
+   "I, II ve III",
+   "Yalnız II",
+   "I ve III",
+   "Yalnız I",
+   "II ve III"
+  ],
+  "kanit": [
+   "Sistem Odası/Veri Merkezine Yönelik Güvenlik Tedbirleri • Elektromanyetik Bilgi Kaçaklarından Korunma Yöntemleri"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre rehber uygulama yol haritasında her çalışma için hedefler kaç aylık dönemler halinde belirlenir?",
+  "s": [
+   "2-3",
+   "6-12",
+   "1",
+   "4-5",
+   "12"
+  ],
+  "kanit": [
+   "her çalışma için 2-3 aylık dönemler halinde hedefler belirlenir"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "vaka",
+  "k": "Bir kurum, üst yönetimce onaylı teknik kısıtlamalar nedeniyle bir tedbiri rehberde tanımlandığı şekilde karşılayamamaktadır. Bilgi ve İletişim Güvenliği Rehberi'ne göre kurum ne uygulayabilir?",
+  "s": [
+   "Telafi edici kontroller",
+   "Muafiyet kararı",
+   "Geçici tedbir askıya alma",
+   "Sızma testi",
+   "Delfi anketi"
+  ],
+  "kanit": [
+   "telafi edici kontroller uygulayabilir",
+   "aynı amaç ve etkiye sahip olmaları durumunda kullanılabilir"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "duz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ön ödeme suretiyle yapılacak ödemelerde ödeme belgesi aşağıdakilerden hangisidir?",
+  "s": [
+   "Muhasebe İşlem Fişi",
+   "Ödeme Emri Belgesi",
+   "Harcama Talimatı",
+   "Taşınır İşlem Fişi",
+   "Onay Belgesi"
+  ],
+  "kanit": [
+   "ön ödeme suretiyle yapılacak ödemelerde ise anılan Yönetmelik eki 2 örnek numaralı Muhasebe İşlem Fişini"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre aşağıdakilerden hangisi harcama talimatında gösterilen bilgilerden biri değildir?",
+  "s": [
+   "Yüklenicinin banka hesap numarası",
+   "Giderin gerekçesi",
+   "Yapılacak iş veya hizmetin süresi",
+   "Kullanılabilir ödenek",
+   "Gerçekleştirme usulü"
+  ],
+  "kanit": [
+   "giderin konusunu, gerekçesini, yapılacak iş veya hizmetin süresini, hukuki dayanaklarını",
+   "tutarını, kullanılabilir ödeneğini, tertibini, gerçekleştirme usulü"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "onculu",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre kamu ihale mevzuatına göre yapılan alımlarda aşağıdakilerden hangileri duruma göre ödeme belgesine bağlanır?\nI. Sözleşmenin devrinde devir sözleşmesi\nII. Süre uzatımında buna ilişkin karar ve onay\nIII. Kesin kabul farklarının ödenmesinde kesin hesap belgeleri",
+  "s": [
+   "I, II ve III",
+   "Yalnız I",
+   "I ve III",
+   "Yalnız II",
+   "II ve III"
+  ],
+  "kanit": [
+   "Sözleşmelerin devri halinde devir sözleşmesi",
+   "Süre uzatımı verilmesi halinde, buna ilişkin karar ve onay",
+   "Kesin kabul farklarının ödenmesinde kesin hesap belgeleri"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre sosyal yardım ödemelerinde aranacak belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Doğum yardımında nüfus kayıt örneği ile doğum raporu bağlanır.",
+   "Evlenme yardımında Aile Yardımı Bildirimi bağlanır.",
+   "Ölüm yardımında olayın yeri ve tarihini belirten dilekçe bağlanır.",
+   "Ölü doğan çocuk için ölüm yardımında buna ilişkin rapor da aranır.",
+   "Aile yardımı bildirimi, eş veya çocuk durumu değiştiğinde yenilenir."
+  ],
+  "kanit": [
+   "Doğum olayının meydana geldiği yeri ve tarihi belirten ilgilinin dilekçesi",
+   "Evlenme yardımı: Aile yardımı bildirimi",
+   "Normal süresinde ölü olarak doğan çocuklar için ödenecek ölüm yardımında"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "duz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre kamu verileri, kurumların kendi özel sistemleri dışında hangi bulut depolama hizmetlerinde saklanabilir?",
+  "s": [
+   "Kurum kontrolündeki yerli hizmet sağlayıcılar",
+   "Uluslararası sertifikalı hizmet sağlayıcılar",
+   "Ücretsiz genel bulut hizmetleri",
+   "NATO üyesi ülkelerdeki sağlayıcılar",
+   "Açık kaynak kodlu platformlar"
+  ],
+  "kanit": [
+   "kurum kontrolündeki yerli hizmet sağlayıcılar hariç bulut depolama hizmetlerinde saklanmayacaktır"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "duz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre temin edilecek yazılım veya donanımın arka kapı açıklığı içermediğine dair üretici ve/veya tedarikçiden ne alınır?",
+  "s": [
+   "Taahhütname",
+   "Kaynak kod",
+   "Garanti belgesi",
+   "Kalite belgesi",
+   "Kesin teminat"
+  ],
+  "kanit": [
+   "üretici ve/veya tedarikçilerden imkânlar ölçüsünde taahhütname alınacaktır",
+   "arka kapı (kullanıcıların bilgisi/izni olmaksızın sistemlere erişim imkânı sağlayan"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "olumsuz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre kamu e-posta sistemleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "E-posta sunucuları yurt dışındaki güvenli merkezlerde tutulabilir.",
+   "E-posta sistemlerinin ayarları güvenli biçimde yapılandırılır.",
+   "E-posta sunucuları ülkemizde bulundurulur.",
+   "E-posta sunucuları kurumun kontrolünde bulundurulur.",
+   "Sunucular arasındaki iletişim şifreli yapılır."
+  ],
+  "kanit": [
+   "e-posta sunucuları, ülkemizde ve kurumun kontrolünde bulundurulacak",
+   "sunucular arasındaki iletişimin şifreli olarak yapılması sağlanacaktır",
+   "Kamu e-posta sistemlerinin ayarları güvenli olacak biçimde yapılandırılacak"
+  ]
+ },
+ {
+  "law": 142,
+  "tip": "duz",
+  "k": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre belediyelerde cep telefonu tahsis edilen makamların listesi nereye gönderilir?",
+  "s": [
+   "Çevre, Şehircilik ve İklim Değişikliği Bakanlığına",
+   "İçişleri Bakanlığına",
+   "Hazine ve Maliye Bakanlığına",
+   "Valiliğe",
+   "Sayıştay Başkanlığına"
+  ],
+  "kanit": [
+   "belediyeler bakımından ise Çevre, Şehircilik ve İklim Değişikliği Bakanlığına gönderilecektir"
+  ]
+ },
+ {
+  "law": 142,
+  "tip": "olumsuz",
+  "k": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre tebligat, yazışma ve arşivle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Elektronik bilgi yönetim sistemiyle yapılan resmî yazışmalar ayrıca postayla da gönderilir.",
+   "Tebligatlar, istisnalar hariç elektronik tebligat sistemleriyle yapılır.",
+   "E-tebligat zorunluluğu olmayanların sisteme katılımı teşvik edilir.",
+   "Tüm yazışmaların elektronik bilgi yönetim sistemiyle yapılması sağlanır.",
+   "Kurum arşivleri elektronik sisteme taşındıktan sonra fiziki arşiv tutulmaz."
+  ],
+  "kanit": [
+   "Elektronik bilgi yönetim sistemleri üzerinden yapılan resmî yazışmalar ayrıca posta ile gönderilmeyecektir",
+   "istisna tutulan durumlar hariç elektronik tebligat sistemlerini kullanarak",
+   "bunu müteakip fiziki arşiv tutulmayacaktır"
+  ]
+ }
+]

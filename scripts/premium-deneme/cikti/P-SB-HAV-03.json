@@ -1,0 +1,1289 @@
+{
+ "id": "P-SB-HAV-03",
+ "baslik": "Havacılık Subay — Premium Deneme 3",
+ "rutbe": "sb",
+ "brans": "havacilik",
+ "soruSayisi": 80,
+ "sorular": [
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre resmî elbiseyi yetkisiz giyen kişi, elbisenin sağladığı kolaylıktan yararlanarak suç işlerse elbise giyme fiilinin cezası nasıl uygulanır?",
+   "siklar": [
+    "Artırım yapılmaz.",
+    "Üçte biri oranında artırılır.",
+    "Dörtte biri oranında artırılır.",
+    "Yarı oranında artırılır.",
+    "Bir kat artırılır."
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.264",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.264: “(2) Elbisenin sağlayacağı kolaylık ve olanaklardan yararlanarak bir suç işlenirse, yalnız bu fiilden ötürü yukarıdaki fıkrada belirtilen cezalar üçte biri oranında artırılarak hükmolunur.”",
+   "id": "P-SB-HAV-03-01"
+  },
+  {
+   "lawId": 1,
+   "soru": "A, işlemeyi kastettiği suçun icra hareketlerine başladıktan sonra kendi çabasıyla neticenin gerçekleşmesini önlemiştir. Tamam olan kısım ayrı bir suç oluşturmamaktadır. 5237 sayılı Türk Ceza Kanunu'na göre A hakkında nasıl işlem yapılır?",
+   "siklar": [
+    "Suç tamamlanmış gibi cezalandırılır.",
+    "Teşebbüsten dolayı cezalandırılmaz.",
+    "Cezası üçte bir oranında indirilir.",
+    "Teşebbüs hükümlerine göre cezalandırılır.",
+    "Cezası yarı oranında indirilir."
+   ],
+   "dogru": 1,
+   "tip": "vaka",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.36",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.36: “(1) Fail, suçun icra hareketlerinden gönüllü vazgeçer veya kendi çabalarıyla suçun tamamlanmasını veya neticenin gerçekleşmesini önlerse, teşebbüsten dolayı cezalandırılmaz; fakat tamam olan kısım esasen bir suç oluşturduğu takdirde, sadece o suça ait ceza ile cezalandırılır.”",
+   "id": "P-SB-HAV-03-02"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre işlediği bir fiille birden fazla farklı suçun oluşmasına sebebiyet veren kişi nasıl cezalandırılır?",
+   "siklar": [
+    "En hafif cezayı gerektiren suçtan cezalandırılır.",
+    "En ağır cezayı gerektiren suçtan cezalandırılır.",
+    "Cezalar toplanır ve yarısı indirilir.",
+    "Her suçtan ayrı ayrı cezalandırılır.",
+    "Tek ceza verilir ve dörtte biri oranında artırılır."
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.44",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.44: “(1) İşlediği bir fiil ile birden fazla farklı suçun oluşmasına sebebiyet veren kişi, bunlardan en ağır cezayı gerektiren suçtan dolayı cezalandırılır.”",
+   "id": "P-SB-HAV-03-03"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Gizli kalması gereken belgeleri, kamu görevlisi sıfatı sona erdikten sonra açıklayan kişiye ceza verilmez.\nII. Görevi nedeniyle bilgi edindiği gizli belgeleri açıklayan kamu görevlisine bir yıldan dört yıla kadar hapis cezası verilir.\nIII. Görevinin nüfuzundan yararlanarak başkasına mal satmaya çalışan kamu görevlisine iki yıldan beş yıla kadar hapis cezası verilir.",
+   "siklar": [
+    "I ve II",
+    "II ve III",
+    "Yalnız I",
+    "Yalnız II",
+    "I, II ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.258",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.258: “gereken belgeleri, kararları ve emirleri ve diğer tebligatı açıklayan veya yayınlayan veya ne suretle olursa olsun başkalarının bilgi edinmesini kolaylaştıran kamu görevlisine, bir yıldan dört yıla kadar hapis cezası verilir.”",
+   "id": "P-SB-HAV-03-04"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre rüşvet alan kişinin aşağıdakilerden hangisi olması, verilecek cezanın artırılmasını gerektirmez?",
+   "siklar": [
+    "Avukat",
+    "Hakem",
+    "Noter",
+    "Yeminli mali müşavir",
+    "Bilirkişi"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.252",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.252: “(7) Rüşvet alan veya talebinde bulunan ya da bu konuda anlaşmaya varan kişinin; yargı görevi yapan, hakem, bilirkişi, noter veya yeminli mali müşavir olması halinde, verilecek ceza üçte birden yarısına kadar artırılır.”",
+   "id": "P-SB-HAV-03-05"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre seferberlik ve savaş hâllerinde jandarma birliklerinin Kuvvet Komutanlıkları emrine girecek bölümleri kimin kararıyla belirlenir?",
+   "siklar": [
+    "İçişleri Bakanı",
+    "Jandarma Genel Komutanı",
+    "Millî Savunma Bakanı",
+    "Genelkurmay Başkanı",
+    "Cumhurbaşkanı"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.8",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.8: “) Jandarma birlikleri; seferberlik ve savaş hallerinde, Cumhurbaşkanı kararıyla belirlenecek bölümleriyle Kuvvet Komutanlıkları emrine girer, kalan bölümüyle normal görevlerine devam eder.”",
+   "id": "P-SB-HAV-03-06"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre ilçe jandarma komutanı hakkında her yıl sonunda düzenlenen değerlendirme raporunu kim düzenler?",
+   "siklar": [
+    "Kaymakam",
+    "İl jandarma komutanı",
+    "Jandarma Genel Komutanı",
+    "Kaymakamın değerlendirmesi alınarak il valisi",
+    "İçişleri Bakanı"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu Ek",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, Ek: “)26 İl jandarma komutanı ile merkez ilçe jandarma komutanı hakkında il valisince, ilçe jandarma komutanı hakkında kaymakamın değerlendirmesi alınarak il valisi tarafından her yıl sonunda söz konusu kişilerin (…)26 görevleri ile ilgili olarak değerlendirme raporu düzenlenir.”",
+   "id": "P-SB-HAV-03-07"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangisi kişisel verilerin açık rıza aranmaksızın işlenebileceği hâllerden biri değildir?",
+   "siklar": [
+    "Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması",
+    "Bir hakkın tesisi, kullanılması veya korunması için zorunlu olması",
+    "Kanunlarda açıkça öngörülmesi",
+    "İlgili kişinin kamu görevlisi olması",
+    "İlgili kişinin kendisi tarafından alenileştirilmiş olması"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.5",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.5: “d) İlgili kişinin kendisi tarafından alenileştirilmiş olması.”",
+   "id": "P-SB-HAV-03-08"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre hukuka uygun işlenmiş olsa da işlenmesini gerektiren sebepler ortadan kalkan kişisel verilerle ilgili nasıl işlem yapılır?",
+   "siklar": [
+    "Yalnızca Kurul kararıyla silinir.",
+    "Resen veya ilgili kişinin talebiyle veri sorumlusunca silinir, yok edilir ya da anonim hâle getirilir.",
+    "Yalnızca ilgili kişinin talebiyle veri işleyen tarafından silinir.",
+    "On yıl saklandıktan sonra imha edilir.",
+    "Kişisel Verileri Koruma Kurumuna devredilir."
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.7",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.7: “(1) Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.”",
+   "id": "P-SB-HAV-03-09"
+  },
+  {
+   "lawId": 4,
+   "soru": "7201 sayılı Tebligat Kanunu'na göre imza edemeyen muhataba yapılacak tebliğle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Okur yazar komşu bulunmazsa muhtar veya bir zabıta memuru tebliğde hazır bulundurulur.",
+    "Sol elinin baş parmağı bulunmayan kişinin aynı elinin diğer bir parmağı bastırılır.",
+    "Bu hâller tebliğ mazbatasında açıkça belirtilir.",
+    "İki eli de olmayan kişiye tebligat yapılamaz.",
+    "Sol eli olmayan kişinin sağ elinin baş parmağı bastırılır."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "7201 sayılı Tebligat Kanunu m.24",
+   "aciklama": "7201 sayılı Tebligat Kanunu, m.24: “Tebliğ yapılacak kimsenin iki eli de yoksa tebliğ evrakı kendisine verilir.”",
+   "id": "P-SB-HAV-03-10"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre kaymakam, ilçedeki genel ve özel kolluk amir ve memurlarına savunmalarını aldıktan sonra hangi disiplin cezalarını verebilir?",
+   "siklar": [
+    "Uyarma ve kınama",
+    "Kınama ve aylıktan kesme",
+    "Uyarma, kınama ve kademe ilerlemesinin durdurulması",
+    "Yalnızca uyarma",
+    "Aylıktan kesme ve meslekten çıkarma"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.31",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.31: “) Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular.”",
+   "id": "P-SB-HAV-03-11"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre valinin askerî birliklerden yardım istemesiyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Askerî kuvvetin görevde kalış süresi, birlik komutanı ile koordine edilerek vali tarafından belirlenir.\nII. Acil durumlarda yardım isteği, sonradan yazılı şekle dönüştürülmek kaydıyla sözlü yapılabilir.\nIII. İstenen askerî kuvvetin çapı vali tarafından tek başına belirlenir.",
+   "siklar": [
+    "II ve III",
+    "I ve III",
+    "I ve II",
+    "Yalnız I",
+    "I, II ve III"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.11",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.11: “) Olayların niteliğine göre istenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından, görevde kalış süresi, askerî birliğin komutanı ile koordine edilerek vali tarafından belirlenir.”",
+   "id": "P-SB-HAV-03-12"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre ekonomik durumu müsait olmayan kişinin idari para cezasının taksitle ödenmesine nasıl karar verilebilir?",
+   "siklar": [
+    "İlk taksit peşin ödenmek koşuluyla iki yıl içinde sekiz eşit taksitle",
+    "İlk taksit peşin ödenmek koşuluyla bir yıl içinde on iki eşit taksitle",
+    "Peşinat alınmaksızın bir yıl içinde iki eşit taksitle",
+    "Peşinat alınmaksızın altı ay içinde üç eşit taksitle",
+    "İlk taksit peşin ödenmek koşuluyla bir yıl içinde dört eşit taksitle"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.17",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.17: “Kişinin ekonomik durumunun müsait olmaması halinde, idarî para cezasının, ilk taksitinin peşin ödenmesi koşuluyla, bir yıl içinde ve dört eşit taksit halinde ödenmesine karar verilebilir.”",
+   "id": "P-SB-HAV-03-13"
+  },
+  {
+   "lawId": 6,
+   "soru": "Hakkında idari para cezası verilen A, mücbir sebep nedeniyle sulh ceza mahkemesine başvuru süresini kaçırmıştır. 5326 sayılı Kabahatler Kanunu'na göre A, mücbir sebebin ortadan kalktığı tarihten itibaren en geç kaç gün içinde başvurabilir?",
+   "siklar": [
+    "3",
+    "30",
+    "7",
+    "15",
+    "10"
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.27",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.27: “(2) Mücbir sebebin varlığı dolayısıyla bu sürenin geçirilmiş olması halinde bu sebebin ortadan kalktığı tarihten itibaren en geç yedi gün içinde karara karşı başvuruda bulunulabilir.”",
+   "id": "P-SB-HAV-03-14"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre kamu konutunda otururken terör eylemi nedeniyle malul olan kamu görevlisi, kamu konutundan kira ödemeksizin kaç yıl yararlanmaya devam edebilir?",
+   "siklar": [
+    "10",
+    "15",
+    "20",
+    "3",
+    "5"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.21",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.21: “in aylığa müstehak dul ve yetimleri, 9/11/1983 tarihli ve 2946 sayılı Kamu Konutları Kanununda gösterilen özel tahsisli konutlarda oturanlar hariç olmak üzere, herhangi bir kira bedeli alınmaksızın on yıl süreyle kamu konutlarından yararlanmaya devam edebilirler.”",
+   "id": "P-SB-HAV-03-15"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre terörle mücadelede görev alanlara yönelik koruma tedbirleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Koruma için gerekli araç ve gereçler Adalet ve İçişleri bakanlıklarınca temin edilir.",
+    "Görevinden ayrılmış kamu görevlileri, terör suçlularının taarruzunu savmak için silah kullanamaz.",
+    "Koruma tedbirlerinin esas ve usulleri Cumhurbaşkanınca çıkarılan yönetmelikle belirlenir.",
+    "Koruma kapsamında nüfus kaydı ve diploma gibi belgeler değiştirilebilir.",
+    "Koruma tedbirleri, talep hâlinde estetik cerrahi yoluyla görünümün değiştirilmesini de kapsar."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.20",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.20: “(11) Yukarıda sayılanlardan kamu görevlileri, görevlerinden ayrılmış olsalar dahi terör suçluları tarafından kendilerine veya eş ve çocuklarının canına vuku bulan bir taarruzu savmak için silah kullanmaya yetkilidirler.”",
+   "id": "P-SB-HAV-03-16"
+  },
+  {
+   "lawId": 8,
+   "soru": "2935 sayılı Olağanüstü Hal Kanunu'na göre şiddet olayları sebebiyle ilan edilen olağanüstü hâlde dernek faaliyetleri en fazla ne kadar süreyle durdurulabilir?",
+   "siklar": [
+    "Dört ay",
+    "Altı ay",
+    "İki ay",
+    "Bir ay",
+    "Üç ay"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.11",
+   "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.11: “) Dernek faaliyetlerini; her dernek hakkında ayrı karar almak ve üç ayı geçmemek kaydıyla durdurmak, ö) (Ek: 14/11/1984 - 3076/1 md.”",
+   "id": "P-SB-HAV-03-17"
+  },
+  {
+   "lawId": 9,
+   "soru": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kanunda yazılı suçları işlemeye başkalarını teşvik eden kimse asıl fail gibi cezalandırılır.\nII. Kanunda yazılı suçlardan dolayı soruşturma yapılması şikâyete bağlıdır.\nIII. Suçların basın vasıtasıyla işlenmesi hâlinde ceza yarı nispetinde artırılır.",
+   "siklar": [
+    "II ve III",
+    "I ve II",
+    "Yalnız I",
+    "I ve III",
+    "I, II ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun m.1",
+   "aciklama": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun, m.1: “Yukarki fıkralarda yazılı suçları işlemeye başkalarını teşvik eden kimse asıl fail gibi cezalandırılır.”",
+   "id": "P-SB-HAV-03-18"
+  },
+  {
+   "lawId": 10,
+   "soru": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre tedbir kararlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Tedbir talebinin reddine ilişkin karar sadece korunan kişiye tebliğ edilir.",
+    "Tedbir kararının tebliğinde, aykırılık hâlinde zorlama hapsi uygulanacağı ihtar edilir.",
+    "Tedbir kararı en kolay ulaşılabilecek yer hâkiminden, mülkî amirden veya kolluktan talep edilebilir.",
+    "Tedbir kararı Cumhuriyet savcısının başvurusu üzerine de verilebilir.",
+    "Koruyucu tedbir kararı için şiddetin uygulandığına dair delil veya belge aranır."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.8",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.8: “(3) Koruyucu tedbir kararı verilebilmesi için, şiddetin uygulandığı hususunda delil veya belge aranmaz.”",
+   "id": "P-SB-HAV-03-19"
+  },
+  {
+   "lawId": 11,
+   "soru": "2893 sayılı Türk Bayrağı Kanunu'na göre bayrağın çekilmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Bayrak, yurt dışı temsilciliklerine çekilir.",
+    "Bayrak, yetkililerin araçlarına takılır.",
+    "Bayrak çekilirken ve indirilirken tören yapılır.",
+    "Bayrak törenlerinin gereği gibi yapılmasından o mahaldeki yetkili amirler sorumludur.",
+    "Kamu kurum ve kuruluşlarında bayrak yalnızca mesai saatlerinde çekili kalır."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "2893 sayılı Türk Bayrağı Kanunu m.3",
+   "aciklama": "2893 sayılı Türk Bayrağı Kanunu, m.3: “) Kamu kurum ve kuruluşlarında Türk Bayrağı sürekli çekili kalır.”",
+   "id": "P-SB-HAV-03-20"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre uyarma veya kınama cezası alan personel, cezanın uygulanmasından başlayarak kaç yıl geçtikten sonra cezanın özlük dosyasından silinmesini isteyebilir?",
+   "siklar": [
+    "Beş",
+    "On",
+    "Üç",
+    "İki",
+    "Yedi"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.7",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.7: “(5) Devlet memurluğundan çıkarma ya da meslekten çıkarma cezalarından başka bir disiplin cezasına çarptırılmış olanlar, uyarma ve kınama cezalarının uygulanmasından başlayarak beş yıl, diğer cezaların uygulanmasından başlayarak on yıl geçtikten sonra, atamaya yetkili amire başvurarak verilmiş olan disiplin cezalarının özlük dosyasından silinmesini isteyebilir.”",
+   "id": "P-SB-HAV-03-21"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Aylıktan kesme cezası, kesinleşme tarihini takip eden aybaşında uygulanır.\nII. İtiraz üzerine önceki cezadan daha ağır ceza verilemez.\nIII. Disiplin amirliği yetkisi devredilemez.",
+   "siklar": [
+    "I ve II",
+    "II ve III",
+    "Yalnız III",
+    "Yalnız I",
+    "I, II ve III"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.33",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.33: “(2) Aylıktan kesme cezası, kesinleşme tarihini takip eden aybaşında uygulanır.”",
+   "id": "P-SB-HAV-03-22"
+  },
+  {
+   "lawId": 13,
+   "soru": "Sözleşmeli astsubay A, nasbedildikten sonra 8 ay süreyle yurt dışında kursa gidip dönmüştür. 4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre A'nın sözleşme süresi ne kadar uzatılır?",
+   "siklar": [
+    "16 ay",
+    "4 ay",
+    "24 ay",
+    "12 ay",
+    "8 ay"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.12",
+   "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.12: “14 Subay veya astsubay nasbedildikten sonra; yabancı memleketlere altı ay veya daha uzun süreli öğrenim, staj, kurs, ihtisas veya görgü ve bilgilerini artırmak maksadıyla gidenlerin sözleşme süreleri, gidiş ve dönüş tarihleri arasında geçen sürenin iki katı kadar; Türk Silâhlı Kuvvetleri hesabına yurt içindeki fakülte veya yüksekokullarda öğrenim yapanlarla, meslekleriyle ilgili ihtisas yapanların sözleşme süreleri ise, buralarda geçen süreler kadar uzatılır.”",
+   "id": "P-SB-HAV-03-23"
+  },
+  {
+   "lawId": 14,
+   "soru": "5070 sayılı Elektronik İmza Kanunu'na göre elektronik mühür ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Yargı mercileri ve noterlikler de elektronik mühür sahibi olabilir.",
+    "İzinsiz elektronik mühür oluşturmak hapis ve adli para cezasını gerektirir.",
+    "Belgenin kaynağını ve bütünlüğünü garanti eden delil kaydıdır.",
+    "Resmî mühürden daha düşük bir hukuki niteliğe sahiptir.",
+    "Elektronik imzaya ilişkin hükümler kıyasen elektronik mühüre de uygulanır."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek: “Elektronik mühür, resmî mühür dâhil her türlü fiziki mühür ile aynı hukuki niteliği haizdir.”",
+   "id": "P-SB-HAV-03-24"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre zorunlu hâllerde hazırlanan belgenin \"Sayı\" bölümünde hangi ibare kullanılır?",
+   "siklar": [
+    "E",
+    "H",
+    "O",
+    "Z",
+    "G"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.11",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.11: ““Sayı:” sırasıyla; belgenin hazırlanma süreçlerini ifade eden elektronik ortam için “E”, zorunlu hâller için “Z” veya olağanüstü durumlar için “O” ibarelerinden uygun olanı, DETSİS’te belirtilen Türkiye Cumhuriyeti Devlet Teşkilatı Numarası, standart dosya planı kodu ile kayıt numarasından oluşur ve bunların arasına kısa çizgi işareti (-) konulur (Örnek 3).”",
+   "id": "P-SB-HAV-03-25"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre belge ekleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Uzun ek listesi ayrı sayfada \"EK LİSTESİ\" başlığı altında yazılır.",
+    "Birden fazla ek varsa ek numarası eklerin sağ üst köşesinde belirtilir.",
+    "Tek ek varsa eki belirten ibare \"Ek:\" başlığının sağına yazılır.",
+    "Ekler muhataba gönderilmediğinde ek bölümüne hiçbir ibare yazılmaz.",
+    "Güvenlik gerekçesiyle ekler üst yazıdan ayrı olarak gönderilebilir."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.18",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.18: “(5) Belge eklerinin muhataba gönderilmediği durumlarda “Ek konulmadı” veya “Ek-... konulmadı” ifadesi yazılır (Örnek 14).”",
+   "id": "P-SB-HAV-03-26"
+  },
+  {
+   "lawId": 15,
+   "soru": "Vali Yardımcısı B, valinin devrettiği imza yetkisine dayanarak bir belgeyi imzalayacaktır. Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre imza bölümünün ikinci satırına hangi ibare yazılır?",
+   "siklar": [
+    "Vali Yardımcısı",
+    "Valilik Makamı",
+    "Vali Yrd. a.",
+    "Vali V.",
+    "Vali a."
+   ],
+   "dogru": 4,
+   "tip": "vaka",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.17",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.17: “(9) Belgeyi imza yetkisi devredilen makam imzaladığında, imzalayanın adı ve soyadı birinci satıra, yetki devreden makamı gösteren “Bakan a.”, “İdari İşler Başkanı a.”, “Vali a.”",
+   "id": "P-SB-HAV-03-27"
+  },
+  {
+   "lawId": 16,
+   "soru": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre muvazzaflığa geçiş için yapılan mülakat sınavına katılan adayın en az kaç puan almış olması gerekir?",
+   "siklar": [
+    "50",
+    "70",
+    "75",
+    "60",
+    "65"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Sözleşmeli Subay ve Astsubay Yönetmeliği m.8",
+   "aciklama": "Sözleşmeli Subay ve Astsubay Yönetmeliği, m.8: “Mülakat sınavına katılan adayın asgari yetmiş puan almış olma şartı aranır.”",
+   "id": "P-SB-HAV-03-28"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı kaç yıllık bir dönemi kapsar?",
+   "siklar": [
+    "2",
+    "3",
+    "4",
+    "10",
+    "5"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.76",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.76: “mat, taşınır ve taşınmazları ile hizmetlerinin ve görevlerinin geliştirilmesi ve ihtiyaçlarının önceden tespiti ve hedeflerinin belirlenmesi için hazırlanan ve beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur.”",
+   "id": "P-SB-HAV-03-29"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre jandarmanın durdurma yetkisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Jandarma, durdurduğu kişiye durdurma sebebini bildirir.",
+    "Durdurma sebebi ortadan kalkınca kişinin ayrılmasına izin verilir.",
+    "Durdurma için makul bir sebebin bulunması gerekir.",
+    "Durdurma süresi, işlem için zorunlu olan süreden fazla olamaz.",
+    "Durdurulan kişiden üzerindeki elbiseyi çıkarması istenebilir."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.46",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.46: “Bu amaçla kişinin üzerindeki elbisenin çıkarılması veya aracın dışarıdan bakıldığında içerisi görünmeyen bölümlerinin açılması istenemez.”",
+   "id": "P-SB-HAV-03-30"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Jandarma, yanlarında velileri olsa bile on sekiz yaşını doldurmamış küçüklerin içkili yerlere girmesini engeller.\nII. İcra müdürlüğünün talebiyle yakalanan araç için en geç üç iş günü içinde icra müdürlüğüne bildirimde bulunulur.\nIII. Jandarma karakollarının konuş yerleri valinin onayıyla belirlenir.",
+   "siklar": [
+    "I, II ve III",
+    "II ve III",
+    "I ve II",
+    "I ve III",
+    "Yalnız I"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.45",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.45: “(3) Jandarma; bar, pavyon, gazino, meyhane gibi içkili yerler ile kıraathane, internet salonu ve oyun oynatılan benzeri yerlere yanlarında veli ve vasileri olsa bile onsekiz yaşını doldurmamış küçüklerin girmesini engeller.”",
+   "id": "P-SB-HAV-03-31"
+  },
+  {
+   "lawId": 18,
+   "soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre Kurul, Yönetmelikte belirlenen silme, yok etme veya anonim hâle getirme sürelerini hangi hâlde kısaltabilir?",
+   "siklar": [
+    "Veri sorumlusunun kamu kurumu olması hâlinde",
+    "Telafisi güç veya imkânsız zararların doğması ve açıkça hukuka aykırılık olması hâlinde",
+    "Verilerin yurt dışına aktarılmış olması hâlinde",
+    "İlgili kişinin yazılı talebinin bulunması hâlinde",
+    "Veri sorumlusunun imha politikası hazırlamamış olması hâlinde"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik m.11",
+   "aciklama": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik, m.11: “(4) Kurul, telafisi güç veya imkansız zararların doğması ve açıkça hukuka aykırılık olması halinde, bu maddede belirlenen süreleri kısaltabilir.”",
+   "id": "P-SB-HAV-03-32"
+  },
+  {
+   "lawId": 19,
+   "soru": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre kurum ve kuruluşların sahip olduğu yazılı veya basılı dosya, evrak, kroki, film, fotoğraf ve harita gibi veri taşıyıcılarına ne ad verilir?",
+   "siklar": [
+    "Bilgi",
+    "Belge",
+    "Kayıt",
+    "Arşiv malzemesi",
+    "Üstveri"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik m.4",
+   "aciklama": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik, m.4: “kuruluşların sahip oldukları 4982 sayılı Kanun kapsamındaki yazılı, basılı veya çoğaltılmış dosya, evrak, kitap, dergi, broşür, etüt, mektup, program, talimat, kroki, plan, film, fotoğraf, teyp ve video kaseti, harita, elektronik ortamda kaydedilen her türlü bilgi, haber ve veri taşıyıcılarını, e) Bilgi veya belgeye erişim: İstenen bilgi veya belgenin niteliğine göre, kurum ve kuruluşlarca, başvuru sahibine söz konusu bilgi veya belgenin bir kopyasının verilmesini, kopya verilmesinin mümkün olmadığı hallerde, başvuru sahibinin bilgi veya belgenin aslını inceleyerek not almasına veya içeriğini görmesine veya işitmesine izin verilmesini, f) Kurul: Bilgi Edinme Değerlendirme Kurulunu, g) Kanun: 9/10/2003 tarihli ve 4982 sayılı Bilgi Edinme Hakkı Kanununu, ifade eder.”",
+   "id": "P-SB-HAV-03-33"
+  },
+  {
+   "lawId": 20,
+   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre aşağıdakilerden hangisi av tüfeği bulundurma izni ve belgesi verilmesine engel hâllerden biri değildir?",
+   "siklar": [
+    "Taksirle işlenen bir trafik suçundan altı ay hapis cezasına mahkûm olmak",
+    "Akıl hastası olmak",
+    "Kısıtlı olmak",
+    "18 yaşını bitirmemiş olmak",
+    "Uyuşturucu madde satma suçundan mahkûm olmak"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) m.14",
+   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), m.14: “lar hariç değişik zamanlarda işlediği aynı veya farklı türden ikinden fazla suçtan dolayı hapis veya ağır hapis ve / veya ağır para cezasına mahkum olanlar, e) Ateşli silahla işlenenler ile taksirli suçlar hariç iki yıldan fazla hürriyeti bağlayıcı cezaya mahkum olanlar ile devlet sırlarını açığa vurma, ideolojik, anarşik, terör ve benzeri amaçlarla yaygın şiddet eylemlerine katılma ve bu gibi fiilleri tahrik ve teşvik etme suçlarından birinden hüküm giymiş olanlar, f) 2521 Sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanun Hükümlerine aykırı fiillerden dolayı hapis veya ağır hapis ve/veya ağır para cezasına mahkum olanlar, g) 6136 Sayılı Ateşli Silahlar ve Bıçaklar İle Diğer Aletler Hakkında Kanunun 12,13,14 ve 15 inci maddelerinde belirtilen suçlardan dolayı 6 aydan fazla hürriyeti bağlayıcı cezaya mahkum olanlar ile aynı Kanunun 4 üncü maddesinde yazılı yasak aletlerden birini kullanmak suretiyle suç işleyen ve bu suçtan dolayı hapis ve/veya ağır para cezasına mahkum olanlar, h) Uyuşturucu ve psikotrop maddeleri ruhsatsız veya ruhsata aykırı olarak imal, ithal veya ihraç etme ya da bu fiillere teşebbüs etme, satma, satışa arz etme, satın alma, bulundurma, herhangi bir şekilde başkasına devretme veya devralma, sevk veya nakletme alınıp satılmasına veya devrine ya da her ne suretle olursa olsun tedarikine vasıta olma suçlarından biriyle mahkum olanlar, ı) Kısıtlı olanlar ile Kamu hizmetinden yasaklılar, i) Akıl hastası veya psikolojik ve nörolojik rahatsızlıkları olanlar, j) 18 yaşını bitirmemiş olanlar, Yukarıdaki fıkranın (a), (b), (c), (d), (e), (f), (g) ve (h) bentleri kapsamına girenler, affa uğramış olsalar veya mahkumiyetleri bütün neticeleriyle birlikte ortadan kalksa yada mahkemelerce verilen karar üzerine adli sicilden silinmiş olsa bile, kendilerine hiçbir suretle bu Yönetmelik kapsamına giren belge ve izinler verilmez. Bu fıkra hükmü Türk Ceza Kanununun7 nci maddesi hükümlerine göre suç olmaktan çıkan bir fiil nedeniyle hüküm giymiş olanlara uygulanmaz. Bu madde de belirtilen mahkumiyet, kesinleşmiş mahkumiyettir. Bu madde hükümlerinin uygulanmasında, mahkemelerce verilen hürriyeti bağlayıcı cezalar, paraya çevrilmiş olsa dahi, hürriyeti bağlayıcı ceza esas alınır. 14 üncü Maddedeki Hallere Düşme Nedeniyle İptal”",
+   "id": "P-SB-HAV-03-34"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "siklar": [
+    "Aylık net asgari ücretin onda biri",
+    "Aylık net asgari ücretin otuzda biri",
+    "Aylık net asgari ücretin yirmide biri",
+    "Aylık net asgari ücretin yarısı",
+    "Aylık brüt asgari ücretin tamamı"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.8",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.8: “(3) Geçici maddi yardım kararı ile on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının otuzda birine kadar günlük ödeme yapılır.”",
+   "id": "P-SB-HAV-03-35"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre aşağıdakilerden hangisi görevden uzaklaştırmaya yetkili değildir?",
+   "siklar": [
+    "Bakanlık müfettişleri",
+    "İlçe jandarma komutanları",
+    "İllerde valiler",
+    "İlçelerde kaymakamlar",
+    "Atamaya yetkili amirler"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.51",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.51: “MADDE 52- (1) Görevden uzaklaştırmaya yetkililer şunlardır: a) Atamaya yetkili amirler. b) Bakanlık müfettişleri.”",
+   "id": "P-SB-HAV-03-36"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Personelin değerlendirmesi iki yılda bir yapılır.\nII. Personel, gizli bilgileri görevinden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz.\nIII. Üç defa başarı belgesi alan personele üstün başarı belgesi verilir.",
+   "siklar": [
+    "Yalnız II",
+    "I ve III",
+    "II ve III",
+    "Yalnız I",
+    "I, II ve III"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.41",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.41: “(2) Personel, kamu hizmetleri ile ilgili gizli bilgileri görevinden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz.”",
+   "id": "P-SB-HAV-03-37"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre birlik emniyeti için bulundurulan hazır kıt'anın kuvveti en az kaç kişiden oluşur?",
+   "siklar": [
+    "3",
+    "7",
+    "10",
+    "5",
+    "2"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.27",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.27: “Bu kıt’anın kuvveti en az üç kişiden birliğin tamamına kadar olabilir.”",
+   "id": "P-SB-HAV-03-38"
+  },
+  {
+   "lawId": 24,
+   "soru": "Jandarma Genel Komutanlığı İzin Yönetmeliği'ne göre yurt dışında izinde iken yurda dönme kararı kendisine tebliğ edilen personel kaç saat içinde dönüşe geçer?",
+   "siklar": [
+    "96",
+    "48",
+    "24",
+    "12",
+    "72"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Jandarma Genel Komutanlığı İzin Yönetmeliği m.5",
+   "aciklama": "Jandarma Genel Komutanlığı İzin Yönetmeliği, m.5: “i) Yurt dışında izinde bulunup, yurda dönme kararı kendisine tebliğ edilen personel, 48 saat içerisinde, en kısa yoldan ve en seri vasıta ile dönüşe geçer.”",
+   "id": "P-SB-HAV-03-39"
+  },
+  {
+   "lawId": 25,
+   "soru": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun'a göre aşağıdakilerden hangisinin kullanılması Kanun hükümlerine tabi değildir?",
+   "siklar": [
+    "Sustalı çakı",
+    "Kasatura",
+    "Muşta",
+    "Tarım için kullanılan aletler",
+    "Boğma teli"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.4",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.4: “): Yalnız sporda kullanılan yivli ateşsiz silahlar ve mermileri ile yivsiz tüfekler ve mermilerinin, ev gereçlerinden olan veya tababet, sanayi, tarım, spor için kullanılan aletlerle bir meslek veya sanatın icrası için gerekli bıçak, şiş, raspa ve benzerlerinin kullanılması bu Kanun hükümlerine tabi değildir.”",
+   "id": "P-SB-HAV-03-40"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre harp okulu öğrencileri ile sözleşmeli subay adaylarına, pilotluk eğitimine başlamadan önce yaptıkları fiilî uçuş eğitiminin her uçuş saati başına kıstas aylığın yüzde kaçı ödenir?",
+   "siklar": [
+    "%10",
+    "%1",
+    "%5",
+    "%2",
+    "%4"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.4",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.4: “Harp okulu öğrencileri ile sözleşmeli subay adaylarına pilotluk eğitimine başlamadan önce havacılık ders konuları içerisinde yapacakları fiili uçuş eğitiminin her uçuş saati başına kıstas aylığın %5’i tazminat olarak ödenir.”",
+   "id": "P-SB-HAV-03-41"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre 18 yıllık uçuş hizmet süresini tamamlayan jet pilotlarına, toptan ödemeye esas saatten fazla uçtukları her bir uçuş saati için hizmet yılının son ayındaki uçuş tazminatının yüzde kaçı oranında ek tazminat ödenir?",
+   "siklar": [
+    "%5,5",
+    "%7",
+    "%14",
+    "%10",
+    "%20"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu Ek 1",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, Ek 1: “uş hizmet süresini tamamlayan jet pilotlarına 7 nci maddenin (h) bendi uyarınca yapılan toptan ödemeye esas 80 saatten fazla uçtukları her bir uçuş saati için, hizmet yılının son ayındaki uçuş tazminatının %14’ü oranında tazminat her hizmet yılı sonunda ayrıca ödenir.”",
+   "id": "P-SB-HAV-03-42"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre paraşütçülere ödenecek tazminatla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "“Paraşütle atlayamaz” raporu alan engelli personel, diğer kadroya atanıncaya kadar artırımlı tazminattan yararlanır",
+    "Aynı zamanda dalgıç ve kurbağa adam olarak görev yapan paraşütçülerin oranları, dalış süresinin üçte birini tamamladıkları sürece 10'ar puan artırılır",
+    "Paraşütle atlayış eğitimine katılan askeri öğrencilere okul veya kursta her atlayış başına kıstas aylığın %5'i ödenir",
+    "Aylık atlayış tazminatı, zorunlu yıllık atlayış miktarının yarısı tamamlandığı sürece ödenir",
+    "Temel atlayışlarını tamamlayarak eğitime devam eden askeri öğrencilere her atlayış başına kıstas aylığın %4'ü ödenir"
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.5",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.5: “Askeri öğrencilerden (Sözleşmeli subay adayları ve sözleşmeli subaylar dahil) paraşütle atlayış eğitimine katılanlar ile askeri paraşütçü olmak üzere seçilen erbaş ve erlere, okul veya kursta her atlayış başına kıstas aylığın %2’si, temel atlayışlarını tamamlayarak paraşüt eğitimine devam eden askeri öğrenciler ile paraşütçü kadrolarında görevlendirilen erbaş ve erlere görevlendirildikleri müddetçe her atlayış başına kıstas aylığın %4’ü, atlayış tazminatı olarak ödenir. Yılda 40 atlayıştan fazlası tazminat yönünden dikkate alınmaz. Denizaltıcı, ADS pilotu, dalgıç ve kurbağa adamlara ödenecek tazminat:56”",
+   "id": "P-SB-HAV-03-43"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre denizaltıcı, dalgıç ve kurbağa adam olmak üzere seçilen erbaş ve erlere kursa katılmalarını takip eden aybaşından itibaren kıstas aylığın yüzde kaçı oranında aylık dalış tazminatı ödenir?",
+   "siklar": [
+    "%4",
+    "%10",
+    "%8",
+    "%2",
+    "%5"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.6",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.6: “Denizaltıcı, dalgıç ve kurbağa adam olmak üzere seçilen erbaş ve erlere kursa katılmalarını takip eden aybaşından itibaren kıstas aylığın %5’i, kursu başarmalarından itibaren denizaltıcı, dalgıç ve kurbağa adam kadrolarında görevlendirildikleri müddetçe kıstas aylığın %10’u oranında aylık dalış tazminatı ödenir.”",
+   "id": "P-SB-HAV-03-44"
+  },
+  {
+   "lawId": 70,
+   "soru": "Pilot üsteğmen (E), uçuş görevi sırasında geçirdiği kaza sonucu hava değişimi almıştır.\n2629 sayılı Kanun'a göre (E)'ye son aldığı aylık tazminat en fazla ne kadar süre ödenir?",
+   "siklar": [
+    "2 yıl",
+    "6 ay",
+    "3 yıl",
+    "18 ay",
+    "1 yıl"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.7",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.7: “başka hizmetlere nakledilen pilot, silah sistem subayı, seyrüsefer subayı, taktik koordine subayı, uçuş ekibi, görev ekibi, paraşütçü, ADS pilotu, denizaltıcı, dalgıç ve kurbağa adamlara iki yıl süre, ruh sağlığı hastalıkları nedeniyle hava değişimi alan personele bir yıl süre ile son aldıkları aylık tazminat ödenir.”",
+   "id": "P-SB-HAV-03-45"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre taktik koordine subayları ile uçuş ekibi ve görev ekibi personeline, zorunlu uçuş saatinden fazla uçtukları her saat için hizmet yılının son ayındaki uçuş tazminatının yüzde kaçı oranında toptan ödeme yapılır?",
+   "siklar": [
+    "%3,5",
+    "%14",
+    "%5,5",
+    "%10",
+    "%7"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.7",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.7: “ş saati için uçuş hizmet yılının son ayındaki uçuş tazminatının; jet pilotları, pervaneli pilotları, silah sistem subayları ve seyrüsefer subayları için %7’si, taktik koordine subayları ile uçuş ekibi ve görev ekibi personeli için %5,5’i oranında ayrıca her yıl toptan ödeme yapılır.”",
+   "id": "P-SB-HAV-03-46"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangileri doğrudur?\nI. Bilfiil uçuş gerektirmeyen kadrolara atanan, 10'uncu uçuş hizmet yılını tamamlamış ve toplam uçuşu 1000 saatten fazla olan pilotlara, zorunlu uçuş saatlerini tamamlamaları şartıyla 80 saatlik uçuş karşılığının %80'i ödenir.\nII. Bu şekilde ödenen tazminat gelir vergisine tabidir.\nIII. Zorunlu uçuş saatlerinin indirilmesi hâlinde bu ödemelerin hesabında indirimli süreler dikkate alınır.",
+   "siklar": [
+    "II ve III",
+    "Yalnız III",
+    "I ve III",
+    "Yalnız I",
+    "I ve II"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.7",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.7: “belirlenen ve Genelkurmay Başkanlığınca onaylanan bilfiil uçuş gerektirmeyen kadro görev yerlerine atanan veya bu kadro görev yerlerinde görevlendirilenlerden, 10’uncu uçuş hizmet yılını tamamlamış ve toplam uçuşu 1000 saatten fazla olan pilot, silah sistem subayları, seyrüsefer subayları ve uçuş ekibi personeline (a) bendinde belirtilen zorunlu uçuş saatlerini tamamlamaları şartı ile 80 saatlik uçuş karşılığının %80’i yıllık uçuş tazminatı olarak ödenir. %80 oranı, 18 uçuş hizmet yılını dolduran jet pilotları için %160 olarak uygulanır. Bu şekilde ödenen tazminat, damga vergisi hariç hiçbir vergiye tabi tutulmaz. Zorunlu uçuş veya dalış saatlerinin (d) bendinin (1) numaralı alt bendi uyarınca indirilmesi halinde, bu ödemelerin hesabında indirimli süreler dikkate alınır. Yıpranma tazminatı:”",
+   "id": "P-SB-HAV-03-47"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre öğretmenlere ödenen yetiştirme ikramiyesi ne zaman verilir?",
+   "siklar": [
+    "Öğretmenliğin yapıldığı ayın başında peşin olarak",
+    "Öğretmenliğin yapıldığı ayın sonunda",
+    "Hizmet yılı sonunda toptan",
+    "Üç ayda bir",
+    "Eğitim döneminin bitiminde"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.10",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.10: “Bu ikramiye öğretmenliğin yapıldığı ayın sonunda verilir.”",
+   "id": "P-SB-HAV-03-48"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi yetiştirme ikramiyesi ödenenler arasında yer almaz?",
+   "siklar": [
+    "Uçuş simülatöründe eğitim veren öğretmenler",
+    "Kıtalarda çift kumandalı hava vasıtalarıyla öğrenci ve pilotları fiilen uçuranlar",
+    "Dikey rüzgar tünelinde eğitim veren öğretmenler",
+    "Dalgıç okulunda öğrencileri fiilen dalmak suretiyle yetiştiren öğretmenler",
+    "Denizaltı özel ihtisas kurslarında öğrencileri fiilen daldırarak yetiştiren öğretmenler"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.10",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.10: “başına, ç) Denizaltı özel ihtisas kurslarındaki öğrencilerini denizaltı gemisinde fiilen daldırmak suretiyle yetiştiren öğretmenlere her dalış saati başına, d) Dikey rüzgar tünelinde eğitim veren öğretmenlerin uçuş odasında bilfiil görev yaptıkları her uçuş saati başına, kıstas aylığın %0,6’sı tutarında, yetiştirme ikramiyesi ayrıca ödenir.”",
+   "id": "P-SB-HAV-03-49"
+  },
+  {
+   "lawId": 70,
+   "soru": "Kurbağa adam astsubay (F), dalış faaliyeti sırasında yaralanmıştır. Yaralanması engellilik derecelerine girmemekle birlikte görevinden ayrılmasına neden olmuştur.\n2629 sayılı Kanun'a göre (F)'ye şehitlik tazminatı tutarının yüzde kaçı ödenir?",
+   "siklar": [
+    "%35",
+    "%25",
+    "%10",
+    "%50",
+    "%20"
+   ],
+   "dogru": 4,
+   "tip": "vaka",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.14",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.14: “) Yaralanma ve engellilik durumları (b) bendinde gösterilen derecelerde olmamakla birlikte görevlerinden ayrılmalarına neden olmuş ise, (a) bendinde belirtilen miktarın % 20'si, Tutarında maddi ve manevi tazminat ödenir.”",
+   "id": "P-SB-HAV-03-50"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre şehitlik ve engellilik tazminatıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Tazminatın tespitine esas kıstas aylığı, tazminat verilmesine dair karar tarihindeki kıstas aylığıdır.\nII. Hayatını başkasının yardım ve desteği ile sürdürebilecek şekilde malul olanlara kıstas aylığın 200 katı ödenir.\nIII. Ödenen tazminat yalnızca manevi tazminat niteliğindedir.",
+   "siklar": [
+    "I, II ve III",
+    "II ve III",
+    "Yalnız II",
+    "I ve II",
+    "Yalnız I"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.14",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.14: “Bu tazminatın tespitine esas tutulacak kıstas aylığı, tazminat verilmesine dair karar tarihindeki kıstas aylığıdır.”",
+   "id": "P-SB-HAV-03-51"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre görevlerinin gerektirdiği nitelikleri kaybettikleri anlaşılan uçucu, paraşütçü ve denizaltıcıların statülerine kim tarafından son verilir?",
+   "siklar": [
+    "Disiplin kurulları",
+    "Millî Savunma Bakanlığı",
+    "Kuvvet komutanlıkları, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığınca teşkil edilecek yetkili kurullar",
+    "Yetkili sağlık kurulları",
+    "İçişleri Bakanlığı"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.15",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.15: “Kuvvet komutanlıkları, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığınca teşkil edilecek yetkili kurullar tarafından uçucu, paraşütçü, denizaltıcı, ADS pilotu, dalgıç ve kurbağa adamlardan görevlerinin gerektirdiği nitelikleri kaybettikleri veya görev isteklerini yerine getirmedikleri anlaşılanların bu statülerine son verilir.”",
+   "id": "P-SB-HAV-03-52"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre olağanüstü hallerde silah altına alınan personelle ilgili aşağıdakilerden hangileri doğrudur?\nI. Kurs esnasında subaylara tazminat ödenmez.\nII. Paraşütçü erbaş ve erlere yer eğitimi süresince her atlayış başına kıstas aylığın %1,5'i ödenir.\nIII. Temel atlayışlarını tamamlayarak kadrolarda görevlendirilen paraşütçü erbaş ve erlere her atlayış başına kıstas aylığın %5'i ödenir.",
+   "siklar": [
+    "Yalnız III",
+    "I, II ve III",
+    "I ve II",
+    "Yalnız II",
+    "II ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.16",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.16: “17 c) Paraşütçü erbaş ve erlere birlik veya okullardaki yer eğitim süresince her atlayış başına kıstas aylığının % 1,5'u temel atlayışlarını tamamlayarak kadrolarda görevlendirildikten sonra her atlayış başına kıstas aylığının % 3' ü paraşüt atlayış tazminatı olarak ödenir.”",
+   "id": "P-SB-HAV-03-53"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre tanımlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Uçuş ekibi sertifikası yalnızca Hava Kuvvetleri Komutanlığınca onaylanır",
+    "Paraşütçü olmak için fiilen paraşütçülük eğitim ve öğrenimine başlayanlara paraşütçü adayı denir",
+    "Taktik koordine subayı, hava vasıtalarında pilot ile birlikte kokpit içinde fiilen uçar",
+    "Uçuş ekibi olmak için ilgili hava vasıtasında fiilen eğitime başlayanlara uçuş ekibi adayı denir",
+    "Pilot olmak için fiilen uçuşa başlayanlara pilot adayı denir"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.3",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.3: “p) Uçuş ekibi ve uçuş ekibi adayı: Uçmakta olan bir hava vasıtasının içinde pilot ile beraber fiilen uçarak, hava vasıtasının uçurulmasına katılmaları gerekli olan ve uçuş ekibi sertifikası Genelkurmay Başkanlığı, Kuvvet Komutanlıkları, Jandarma Genel Komutanlığı veya Sahil Güvenlik Komutanlığınca onaylanan ve bu niteliğini muhafaza eden, pilot, silah sistem subayı, seyrüsefer subayı ve taktik koordine subayı dışında kalan kişilerdir.”",
+   "id": "P-SB-HAV-03-54"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi Kanunun amacı arasında yer almaz?",
+   "siklar": [
+    "Personelin atama ve yer değiştirme esaslarının düzenlenmesi",
+    "Ödenecek tazminatların düzenlenmesi",
+    "Kapsamdaki personelin niteliklerinin düzenlenmesi",
+    "Hizmet sürelerinin düzenlenmesi",
+    "Tazminatların ödenmesine ilişkin esas ve yöntemlerin düzenlenmesi"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.2",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.2: “Bu Kanunun amacı, birinci maddede sayılanların niteliklerinin, hizmet sürelerinin, kendilerine ödenecek tazminatlar ile bu tazminatların ödenmesine ilişkin esas ve yöntemlerin düzenlenmesidir.”",
+   "id": "P-SB-HAV-03-55"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre Kanunun yürürlüğünden önce paraşütçü niteliğini kazanan subay ve astsubayların önceki paraşütçülük hizmet yıllarının tespitinde kaç atlayış bir hizmet yılı kabul edilir?",
+   "siklar": [
+    "12",
+    "4",
+    "8",
+    "6",
+    "10"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu Geçici 2",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, Geçici 2: “astsubayların Kanunun yürürlüğe girdiği tarihten önceki paraşütçülük hizmet yıllarının tespitinde, sertifika alarak paraşütçülük niteliğini kazandıktan sonra; yaptıkları her 6 atlayış bir paraşütçü hizmet yılı olarak kabul edilir.”",
+   "id": "P-SB-HAV-03-56"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi bu Kanunla yürürlükten kaldırılan kanunlardan biridir?",
+   "siklar": [
+    "5434 sayılı Emekli Sandığı Kanunu",
+    "2330 sayılı Nakdi Tazminat ve Aylık Bağlanması Hakkında Kanun",
+    "211 sayılı Türk Silahlı Kuvvetleri İç Hizmet Kanunu",
+    "144 sayılı Uçuş Hizmetleri Tazminat Kanunu",
+    "3269 sayılı Uzman Erbaş Kanunu"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.22",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.22: “a) 17/1/1963 tarih ve 144 sayılı uçuş Hizmetleri Tazminat Kanunu ile 18/4/1963 tarih ve 223 sayılı Denizaltı, Dalgıç ve Kurbağa Adam Tazminat Kanunu ve bu Kanunların ek ve değişiklikleri, b) 27/7/1967 tarih ve 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununun ek-5 inci maddesinin; 144 ve 223 sayılı Kanunların uygulanmasına ilişkin olarak albay maaşını tarif eden hükümleri, c) 27/7/1967 tarih ve 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununun ek-6 ncı maddesi, Yürürlükten kaldırılmıştır. Yürürlük:”",
+   "id": "P-SB-HAV-03-57"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre 18 yıllık uçuş hizmet süresini tamamlayan jet pilotlarına her hizmet yılı sonunda yapılan ek ödemede kaç saatten fazla uçuşlar dikkate alınmaz?",
+   "siklar": [
+    "60",
+    "100",
+    "40",
+    "80",
+    "20"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu Ek 1",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, Ek 1: “Bu ödeme damga vergisi hariç herhangi bir vergiye tabi tutulmaz ve 40 saatten fazla uçuşlar dikkate alınmaz.”",
+   "id": "P-SB-HAV-03-58"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Normal tazminat, olumlu kanaat raporunun alındığı tarihi izleyen aybaşından itibaren ödenir",
+    "Fena faaliyet raporu nedeniyle yapılan kesinti, olumlu kanaat raporu alınıncaya kadar sürer",
+    "Uçucu ve paraşütçülerin 1 Eylül 1982 tarihine kadar zorunlu uçuş saati veya atlayış miktarları Kuvvet Komutanlıklarınca saptanır",
+    "Fena faaliyet raporu nedeniyle yapılan tazminat kesintisi her durumda iki yıl süreyle devam eder",
+    "Kanunun yürürlüğü tarihinde eğitim, harekât ve lojistik destek hizmetlerinde görevli Hava Kuvvetleri pervaneli pilotlarının tazminatı jet pilotu statüsü esaslarına göre ödenir"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.7",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.7: “Bu kesilme durumunu düzelttiğine dair en yakın iki üst derece amirlerinden olumlu kanaat raporu alıncaya kadar devam eder.”",
+   "id": "P-SB-HAV-03-59"
+  },
+  {
+   "lawId": 70,
+   "soru": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu'na göre denizaltıcı hizmet süresi hangi tarihten itibaren başlar?",
+   "siklar": [
+    "Denizaltı kursundan diploma alma tarihinden",
+    "Diplomanın onaylandığı tarihten",
+    "Denizaltı kurslarında ilk dalışa başlama tarihinden",
+    "Hizmet yılının başladığı 1 Eylül tarihinden",
+    "Denizaltı kadrosuna atanma tarihinden"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu m.3",
+   "aciklama": "2629 sayılı Uçuş, Paraşüt, Denizaltı, Dalgıç ve Kurbağa Adam Hizmetleri Tazminat Kanunu, m.3: “e) Denizaltıcı hizmet süresi: Denizaltıcıların denizaltı kurslarında ilk dalışa başlama tarihinden itibaren dalıcılıktan ayrılmalarına kadar geçen sürelerdir.”",
+   "id": "P-SB-HAV-03-60"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre ferry uçuş ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "siklar": [
+    "Tescil işlemleri tamamlandıktan sonra yapılır.",
+    "Yalnızca Devlet hava araçlarınca yapılır.",
+    "Uçuşa elverişliliğe halel getiren arızalarla yapılabilir.",
+    "Yalnızca yolcu taşınarak yapılabilir.",
+    "Yolcu ve yük taşımaksızın yapılır."
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.3",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.3: “f) \"Ferry Uçuş\" terimi: Bir hava aracının yolcu ve yük taşımaksızın; satın alınması veya kiralanmasında tescil işlemleri yapılmadan yurda getirilmesi maksadıyla yapılan uçuşlar ile, uçuşa elverişliliğine halel getirmeyen kısmi arızalı olarak yapılan uçuşları; İfade eder.”",
+   "id": "P-SB-HAV-03-61"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre Ulaştırma Bakanlığı, Kanunda sayılanlar dışındaki bir hava aracına Türk hava sahasını kullanma izni vermeden önce kimlerin görüşünü alır?",
+   "siklar": [
+    "Millî Savunma Bakanlığı ve Maliye Bakanlığı",
+    "Dışişleri Bakanlığı ve Ticaret Bakanlığı",
+    "İçişleri Bakanlığı ve Millî İstihbarat Teşkilatı",
+    "Genelkurmay Başkanlığı ve Dışişleri Bakanlığı",
+    "Cumhurbaşkanlığı ve İçişleri Bakanlığı"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.6",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.6: “Ulaştırma Bakanlığı gerekli izni vermeden önce Genelkurmay Başkanlığı ve Dışişleri Bakanlığının görüşünü alır Uçuş yasakları ve sınırlamaları”",
+   "id": "P-SB-HAV-03-62"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre uçuş güvenliğini sağlamak amacıyla Genelkurmay Başkanlığı ve Ulaştırma Bakanlığınca konulacak diğer tahditler kim tarafından uygulanabilir?",
+   "siklar": [
+    "Ulaştırma Bakanlığı",
+    "İçişleri Bakanlığı",
+    "Millî Savunma Bakanlığı",
+    "Cumhurbaşkanı",
+    "Dışişleri Bakanlığı"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.7",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.7: “Uçuş güvenliğini sağlamak amacı ile Genelkurmay Başkanlığı ve Ulaştırma Bakanlığınca konulacak diğer tahditler, bu hükme tabi olmaksızın Ulaştırma Bakanlığınca uygulanabilir.”",
+   "id": "P-SB-HAV-03-63"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre gerçek kişi ve tüzelkişilere verilen havaalanı inşa ve işletme iznine ilişkin aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "İzin yükümlülüklere bağlanabilir.",
+    "İznin kapsamı dışında kullanım hâlinde yalnızca idari para cezası uygulanır.",
+    "Gerektiğinde havaalanı veya iniş şeridi kamulaştırılır.",
+    "Uluslararası Sivil Havacılık Anlaşması hükümleri saklıdır.",
+    "İzin süreye bağlanabilir."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.34",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.34: “Milli güvenliğin, kamu düzeninin ve sağlığın tehlikeye girebileceği kanaatini haklı kılacak nedenlerin varlığı halinde izin verilmez; verilen iznin kapsamı dışında bir kullanım durumunda izin iptal edilir.”",
+   "id": "P-SB-HAV-03-64"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre aşağıdakilerden hangilerinin tehlikeye girebileceği kanaatini haklı kılacak nedenlerin varlığı hâlinde gerçek kişilere havaalanı inşa ve işletme izni verilmez?\nI. Millî güvenlik\nII. Kamu düzeni\nIII. Sağlık\nIV. Ticari rekabet",
+   "siklar": [
+    "I, II, III ve IV",
+    "II ve III",
+    "I, II ve III",
+    "I ve IV",
+    "Yalnız I"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.34",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.34: “Milli güvenliğin, kamu düzeninin ve sağlığın tehlikeye girebileceği kanaatini haklı kılacak nedenlerin varlığı halinde izin verilmez; verilen iznin kapsamı dışında bir kullanım durumunda izin iptal edilir.”",
+   "id": "P-SB-HAV-03-65"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre Türk Ticaret Siciline kayıtlı ticari şirketin mülkiyetindeki hava aracının Türk sivil hava aracı sayılması için oy çoğunluğunun nerede bulunması gerekir?",
+   "siklar": [
+    "Anasözleşmeye göre Türk ortaklarda",
+    "Ticaret siciline göre halka açık paylarda",
+    "Genel kurul kararına göre yabancı ortaklarda",
+    "Yönetim kurulu kararına göre kurucularda",
+    "İç yönergeye göre şirket çalışanlarında"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.49",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.49: “peratifler ve bunların birliklerinin mülkiyetinde bulunan hava araçları, şirketi idare ve temsil etmeye yetkili olanların çoğunluğunun Türk vatandaşı olması ve şirket anasözleşmesine göre oy çoğunluğunun Türk ortaklarda bulunması.”",
+   "id": "P-SB-HAV-03-66"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre Türk siciline kayıtlı ve kaza geçirmiş bir hava aracı, havaalanında aylardır beklemektedir. Malik, tebligat tarihinden itibaren otuz gün içinde gerekli işlemleri yapmamıştır.\nHava aracının itibari ya da fiilî harabiyete uğradığına dair raporu kim verir?",
+   "siklar": [
+    "Genelkurmay Başkanlığı",
+    "Sivil Havacılık Genel Müdürlüğü",
+    "Havaalanı işleticisi",
+    "Kaza Araştırma ve İnceleme Kurulu",
+    "Gümrük idaresi"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "Türk Sivil Havacılık Kanunu Ek 1",
+   "aciklama": "Türk Sivil Havacılık Kanunu, Ek 1: “Türk tesciline kayıtlı hava aracı malikinin ve/veya işleticisinin tebligat veya ilan tarihinden itibaren otuz gün içinde gerekli iş ve işlemleri yapmaması halinde; kaza durumlarında Ulaştırma, Denizcilik ve Haberleşme Bakanlığı Kaza Araştırma ve İnceleme Kurulu, diğer durumlarda ise Sivil Havacılık Genel Müdürlüğü ve ihtiyaç duyulacak ilgili uzmanlardan oluşan ekip tarafından hava aracının itibari ya da fiilî harabiyete uğradığına dair rapor verilmesi halinde, ilgili hava aracı üzerindeki her türlü vergi borcu ve gümrük mevzuatından doğan yükümlülükler ile diğer takyidatlara bakılmaksızın sicilden terkini yapılarak hurdaya ayrılır. Yabancı sicile kayıtlı hava aracı yönünden ise bildirim tarihini izleyen doksan günün sonunda gerekli iş ve işlemlerin yapılmaması durumunda, sicile kayıtlı olduğu ülke sivil havacılık otoritesince sicilden terkin edilip edilmediğine ve her türlü vergi borcu ve gümrük mevzuatından doğan yükümlülükler ile diğer takyidatlara bakılmaksızın hurdaya ayrılır. Hurdaya ayrılan hava araçları, Sivil Havacılık Genel Müdürlüğünün ruhsatlandırdığı havaalanı işleticisi tarafından ayrıştırılmaksızın bütün donanımları ile birlikte açık artırma usulü ile satılarak, bedelden konma-konaklama bedeli alınmaksızın ilan, terkin ve satışa ilişkin masraflar düşüldükten sonra kalan bedel Genel Müdürlüğün emanet hesabına yatırılır. Hava araçları üzerinde bulunan ipotek, haciz ve mevcut takyidatlar bu bedel üzerinden devam eder. Alacakların tasfiyesinden sonra kalan miktar satıştan itibaren beş yıl içinde hak sahiplerinin müracaatları halinde ilgililerine iade edilir. Beş yıl içinde herhangi bir müracaatın yönetmelikler bu Kanunun yürürlüğe girdiği tarihten itibaren altı ay içinde hazırlanır ve” ibaresi “yönetmelikler” şeklinde değiştirilmiştir. olmaması halinde söz konusu bedel Genel Müdürlük bütçesine gelir kaydedilir. Gelir kaydedilen bu tutarların harcanacağı yerler Maliye Bakanlığının uygun görüşü üzerine Genel Müdürlük tarafından belirlenir. Bu madde çerçevesinde yapılacak ilan, terkin, hurdaya ayırma, tasfiye ve ödeme işlemlerine ilişkin usul ve esaslar Sivil Havacılık Genel Müdürlüğü tarafından çıkarılan yönetmelikle belirlenir.”",
+   "id": "P-SB-HAV-03-67"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre hurdaya ayrılan hava araçlarının satışına ilişkin aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Satış açık artırma usulü ile yapılır.",
+    "Masraflar düşüldükten sonra kalan bedel Genel Müdürlüğün emanet hesabına yatırılır.",
+    "Satışı Sivil Havacılık Genel Müdürlüğünün ruhsatlandırdığı havaalanı işleticisi yapar.",
+    "Satış bedelinden konma-konaklama bedeli alınmaz.",
+    "Hava araçları donanımlarından ayrıştırılarak parça parça satılır."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Türk Sivil Havacılık Kanunu Ek 1",
+   "aciklama": "Türk Sivil Havacılık Kanunu, Ek 1: “Hurdaya ayrılan hava araçları, Sivil Havacılık Genel Müdürlüğünün ruhsatlandırdığı havaalanı işleticisi tarafından ayrıştırılmaksızın bütün donanımları ile birlikte açık artırma usulü ile satılarak, bedelden konma-konaklama bedeli alınmaksızın ilan, terkin ve satışa ilişkin masraflar düşüldükten sonra kalan bedel Genel Müdürlüğün emanet hesabına yatırılır.”",
+   "id": "P-SB-HAV-03-68"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre hurdaya ayrılıp satılan hava aracının bedelinden, alacakların tasfiyesinden sonra kalan miktar satıştan itibaren kaç yıl içinde müracaat hâlinde hak sahiplerine iade edilir?",
+   "siklar": [
+    "3",
+    "10",
+    "5",
+    "2",
+    "1"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Türk Sivil Havacılık Kanunu Ek 1",
+   "aciklama": "Türk Sivil Havacılık Kanunu, Ek 1: “Alacakların tasfiyesinden sonra kalan miktar satıştan itibaren beş yıl içinde hak sahiplerinin müracaatları halinde ilgililerine iade edilir.”",
+   "id": "P-SB-HAV-03-69"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre hurdaya ayrılan hava araçlarının satışından Genel Müdürlük bütçesine gelir kaydedilen tutarların harcanacağı yerler nasıl belirlenir?",
+   "siklar": [
+    "Genelkurmay Başkanlığının görüşü üzerine",
+    "Maliye Bakanlığının uygun görüşü üzerine Genel Müdürlükçe",
+    "Cumhurbaşkanı kararıyla",
+    "Havaalanı işleticisince",
+    "Sayıştayın onayıyla Ulaştırma Bakanlığınca"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Türk Sivil Havacılık Kanunu Ek 1",
+   "aciklama": "Türk Sivil Havacılık Kanunu, Ek 1: “Gelir kaydedilen bu tutarların harcanacağı yerler Maliye Bakanlığının uygun görüşü üzerine Genel Müdürlük tarafından belirlenir.”",
+   "id": "P-SB-HAV-03-70"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre aşağıdakilerden hangileri doğrudur?\nI. Kanun, kamu kurum ve kuruluşlarının havacılık sahasındaki faaliyetlerini kapsar.\nII. Kanunda sayılan hava araçlarının Türk hava sahasında uçabilmesi için uçuşa elverişli olmaları şarttır.\nIII. Harabiyet raporu verilen Türk sicilli hava aracı, vergi borcu ödenmeden sicilden terkin edilemez.",
+   "siklar": [
+    "I ve II",
+    "I, II ve III",
+    "II ve III",
+    "Yalnız I",
+    "Yalnız III"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "Türk Sivil Havacılık Kanunu m.2",
+   "aciklama": "Türk Sivil Havacılık Kanunu, m.2: “Bu Kanun, kamu kurum ve kuruluşları ile gerçek ve özel hukuk tüzelkişilerinin havacılık sahasındaki faaliyetlerini kapsar.”",
+   "id": "P-SB-HAV-03-71"
+  },
+  {
+   "lawId": 69,
+   "soru": "2920 sayılı Türk Sivil Havacılık Kanunu'na göre havaalanında bekleyen Türk sicilli hava aracının malikine Sivil Havacılık Genel Müdürlüğünce yapılacak tebligat hangi kanun hükümleri çerçevesinde yapılır?",
+   "siklar": [
+    "2004 sayılı İcra ve İflas Kanunu",
+    "7201 sayılı Tebligat Kanunu",
+    "4749 sayılı Kanun",
+    "6183 sayılı Amme Alacaklarının Tahsil Usulü Hakkında Kanun",
+    "5018 sayılı Kamu Mali Yönetimi ve Kontrol Kanunu"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Türk Sivil Havacılık Kanunu Ek 1",
+   "aciklama": "Türk Sivil Havacılık Kanunu, Ek 1: “tarafından alınmayan Türk siciline kayıtlı hava araçlarının maliklerine ve/veya işleticilerine, Sivil Havacılık Genel Müdürlüğü tarafından 11/2/1959 tarihli ve 7201 sayılı Tebligat Kanunu hükümleri çerçevesinde veya bu şekilde tebligat yapılamaması durumunda Türkiye genelinde yayımlanan ve tirajı yüzbinin üzerinde olan bir gazetede ilanen; otuz gün içinde konma-konaklama ücretleri ile vergi borçlarının ödenmesi ve hava aracının bulunduğu havaalanından kaldırılması konusu tebliğ olunur. Birinci fıkrada belirtilen hava araçları ile aynı durumda olan yabancı bir ülkenin siciline kayıtlı hava araçlarında ise Sivil Havacılık Genel Müdürlüğü tarafından hava aracının siciline kayıtlı olduğu ülke sivil havacılık otoritesine, doksan gün içinde ilgili hava aracının sahipleri tarafından kaldırılması, kaldırılmadığı takdirde tasfiye edileceği hususu bildirilir. Ayrıca, müteakiben tescil sahibi ülke genelinde ulusal yayın yapan gazetede iki gün süre ile hava aracının bulunduğu havaalanından kaldırılması ilan edilir. Türk tesciline kayıtlı hava aracı malikinin ve/veya işleticisinin tebligat veya ilan tarihinden itibaren otuz gün içinde gerekli iş ve işlemleri yapmaması halinde; kaza durumlarında Ulaştırma, Denizcilik ve Haberleşme Bakanlığı Kaza Araştırma ve İnceleme Kurulu, diğer durumlarda ise Sivil Havacılık Genel Müdürlüğü ve ihtiyaç duyulacak ilgili uzmanlardan oluşan ekip tarafından hava aracının itibari ya da fiilî harabiyete uğradığına dair rapor verilmesi halinde, ilgili hava aracı üzerindeki her türlü vergi borcu ve gümrük mevzuatından doğan yükümlülükler ile diğer takyidatlara bakılmaksızın sicilden terkini yapılarak hurdaya ayrılır. Yabancı sicile kayıtlı hava aracı yönünden ise bildirim tarihini izleyen doksan günün sonunda gerekli iş ve işlemlerin yapılmaması durumunda, sicile kayıtlı olduğu ülke sivil havacılık otoritesince sicilden terkin edilip edilmediğine ve her türlü vergi borcu ve gümrük mevzuatından doğan yükümlülükler ile diğer takyidatlara bakılmaksızın hurdaya ayrılır. Hurdaya ayrılan hava araçları, Sivil Havacılık Genel Müdürlüğünün ruhsatlandırdığı havaalanı işleticisi tarafından ayrıştırılmaksızın bütün donanımları ile birlikte açık artırma usulü ile satılarak, bedelden konma-konaklama bedeli alınmaksızın ilan, terkin ve satışa ilişkin masraflar düşüldükten sonra kalan bedel Genel Müdürlüğün emanet hesabına yatırılır. Hava araçları üzerinde bulunan ipotek, haciz ve mevcut takyidatlar bu bedel üzerinden devam eder. Alacakların tasfiyesinden sonra kalan miktar satıştan itibaren beş yıl içinde hak sahiplerinin müracaatları halinde ilgililerine iade edilir. Beş yıl içinde herhangi bir müracaatın yönetmelikler bu Kanunun yürürlüğe girdiği tarihten itibaren altı ay içinde hazırlanır ve” ibaresi “yönetmelikler” şeklinde değiştirilmiştir. olmaması halinde söz konusu bedel Genel Müdürlük bütçesine gelir kaydedilir. Gelir kaydedilen bu tutarların harcanacağı yerler Maliye Bakanlığının uygun görüşü üzerine Genel Müdürlük tarafından belirlenir. Bu madde çerçevesinde yapılacak ilan, terkin, hurdaya ayırma, tasfiye ve ödeme işlemlerine ilişkin usul ve esaslar Sivil Havacılık Genel Müdürlüğü tarafından çıkarılan yönetmelikle belirlenir.”",
+   "id": "P-SB-HAV-03-72"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre uçucu adayları ve ilk defa uçuşa başlayacak personelle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Kara Kuvvetleri Komutanlığı uçucu adayları hakkında kategori-2 ve kategori-3 hükümleri uygulanır.",
+    "İlk defa uçuşa başlayacak personelin fizyolojik eğitimleri Uçucu Sağlığı Araştırma ve Eğitim Merkezinde yapılır.",
+    "Temel uçuş eğitimi ikinci safhada sağlık yeteneği azalan uçucuya kategori-4 uçuş hükümleri uygulanır.",
+    "Uçuculuk sağlık yeteneğini kaybeden adaylar hakkında \"Uçucu Yetiştirilmeye Elverişli Değildir\" kararı verilir.",
+    "Temel uçuş eğitimi ikinci safhada uçulan uçak tipinin karşılığı olan kategori hükümleri uygulanır."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.64",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.64: “Ancak sağlık yeteneklerinin azaldığı durumlarda uçucunun mevcut sağlık durumuna göre (uçtuğu hava aracı kategorisi değiştirilmek üzere) kategori-2 hava aracı veya kategori-3 hava aracı pilotuna ilişkin sağlık yetenekleri hükümleri uygulanır.”",
+   "id": "P-SB-HAV-03-73"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre uçuş ekibi personeli ile Deniz Kuvvetleri ve Sahil Güvenlik Komutanlığı taktik koordine subayları hakkında hangi sınıf personelinin sağlık yetenekleri uygulanır?",
+   "siklar": [
+    "Görev ekibi",
+    "Seyrüsefer sınıfı",
+    "Kategori-1 pilot sınıfı",
+    "Paraşütçü sınıfı",
+    "İHA sınıfı"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.64",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.64: “(6) İlk defa uçuşa başlayacak uçuş ekibi adaylarının muayenelerinde, Hava Kuvvetleri Komutanlığı (1) Numaralı Sınıflandırma Çizelgesindeki seyrüsefer sınıfı personelinin sağlık yetenekleri uygulanır.”",
+   "id": "P-SB-HAV-03-74"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre uçuculara ilişkin sağlık kararlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Yetkili hastanelerin düzenlediği uçuşa elverişlilik raporları Sağlık Bakanlığınca onaylanır.",
+    "Hastalığının bütün kategorilerde karşılığı (-) işareti olan uçucu hakkında pilotaja elverişli değildir kararı verilir.",
+    "Uçuşa elverişlilik kararları sadece uçucu ve dalgıç sınıfı raporları vermeye yetkili hastanelerce verilir.",
+    "Hastalığının çizelgede karşılığı (x) işareti olan uçucu, fiilen uçuşu gerektirmeyen görev yerlerinde görev yapar.",
+    "İstirahat kararları diğer sağlık kurullarınca da verilebilir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.66",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.66: “(1) Uçucu ve dalgıç sınıfı raporları vermeye yetkili hastanelerin düzenlediği istirahat, geçici uçuştan men veya uçuşa elverişlilik raporları hastanelerin baştabipliğince onaylanır.”",
+   "id": "P-SB-HAV-03-75"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre Pilot Yüzbaşı (B), uçuş sırasında hava aracından atlamayla sonuçlanan büyük bir kaza kırım geçirmiştir.\nBirlik uçuş tabibi (B) hakkında nasıl işlem yapar?",
+   "siklar": [
+    "Zorunlu olarak yetkili hastaneler ile Uçucu Sağlığı Araştırma ve Eğitim Merkezine gönderir",
+    "On güne kadar istirahat vererek birliğinde takip eder",
+    "Gerekli görmesi hâlinde hastaneye gönderir",
+    "Yirmi gün uçuştan men ederek uçuşa döndürür",
+    "Hiçbir işlem yapmadan uçuşa devam ettirir"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.65",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.65: “Uçuş tabibi, küçük kaza kırım geçirenleri gerekli gördüğünde; yaralanma veya uçaktan atlamayla sonuçlanan büyük kaza kırım geçirenleri ise zorunlu olarak Sağlık Bakanlığınca belirlenen uçucu raporları vermeye yetkili hastaneler ile Uçucu Sağlığı Araştırma ve Eğitim Merkezine gönderir.”",
+   "id": "P-SB-HAV-03-76"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre uçuş emniyetini ihlal edeceği değerlendirilen hastalığı bulunan subaylardan hangileri hakkında \"Uçuşa Elverişli Değildir, Fiilen Uçuşu Gerektirmeyen Sınıfının veya Branşının Uygun Kadro Görev Yerlerinde Görev Yapar\" kararı verilir?",
+   "siklar": [
+    "Yalnızca general ve amiraller",
+    "Üsteğmen ve daha üst rütbedeki subaylar",
+    "Kıdemli yüzbaşı ve daha üst rütbedeki subaylar",
+    "Yalnızca albaylar",
+    "Teğmen ve daha üst rütbedeki subaylar"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.67",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.67: “Uçuş fizyolojisini etkileyeceği veya uçuş emniyetini ihlal edeceği değerlendirilen hastalıkların bulunması halinde ise kıdemli yüzbaşı ve daha üst rütbedeki subaylar ile kıdemli üstçavuş ve daha üst rütbedeki astsubaylar hakkında “Uçuşa Elverişli Değildir, Fiilen Uçuşu Gerektirmeyen Sınıfının veya Branşının Uygun Kadro Görev Yerlerinde Görev Yapar”, daha ast rütbedeki subay ve astsubaylar hakkında ise “Sınıfı Görevini Yapamaz, Kuvvet Komutanlıkları (1) ve (2) Numaralı Sınıflandırma Çizelgesinde (+) İşaretli Sınıflarda Yeniden Sınıflandırılması Uygundur” veya “Branşı Görevini Yapamaz, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı (1) ve (2) Numaralı Branş Belirleme Çizelgesinde (+) İşaretli Branşlarda Yeniden Branşının Belirlenmesi Uygundur” kararları verilir. Daha düşük performanslı hava araçlarında risk oluşturmayacak hastalıkların bulunması halinde raporun karar hanesinde uçuşa elverişli olduğu hava aracı kategorisi belirtilir. a) Baş ve boyun: 1) Saçlı deri, yüz ve boyunda ameliyat, yaralanma, yanık ya da ülserasyona bağlı doku kayıpları ve kısmi paraliziler (konuşma, görme ve boyun hareketlerini engellemeyen). 2) Temporo-mandibuler eklemin kronik artriti veya tekrarlayan çıkıkları. 3) Aktivitesi tamamen durmuş, sınırlı, kalsifiye, tüberküloza bağlı adenopatiler. 4) Selim adenopati ve selim tümörler. 5) Boyun kaslarının geçici spastik veya nonspastik kontraksiyonları. b) Kulak burun boğaz: 1) Nefes almayı ve konuşmayı güçleştirmeyen septum deviasyonu, hafif atrofik ve kronik rinitler. 2) Ameliyatla iyileşmiş septum deviasyonları ve nasal polipler. 3) Hafif derecede veya ameliyatla iyileşmiş ve nüks etmemiş kronik sinüzitler, sinüs havalanmasını bozmayan ve semptom vermeyen 1 cm’den küçük selim tümörler (osteom, papillom). 4) Asemptomatik (kanama, kabuklanma yapmayan) küçük septum perforasyonları. 5) Kronik otitis eksterna. 6) Dış kulak yolunda ufak egzostozlar. 7) İşitme fonksiyonunu bozmayan, asemptomatik kapalı otit skatrisiyel. 8) İşitme fonksiyonu normale dönen kulak ameliyatları (otoskleroz ve iç kulak cerrahisi hariç). c) Göz: 1) Her iki gözün görme derecesi camlarla düzeltildikten sonra ayrı ayrı 20/20 (10/10)’den aşağı olmayanlar. 2) Görme fonksiyonunu bozmayan, irritasyon yapmayan, ilerleme göstermeyen, tıbbi ve cerrahi tedavi ile iyileşmiş kirpik ve kapak hastalıkları olanlar. 3) Görme keskinliğini bozmayan, ilerleme göstermeyen kornea, konjonktiva hastalıkları ve sekelleri olanlar. 4) Tıbbi ve cerrahi tedavi ile iyileşmiş gözyaşı sistemi hastalıkları olanlar. 5) Binoküler görmeyi ve derinlik hissini bozmayan, 10 prizma dereceyi geçmeyen esoforyalar, 6 prizma dereceyi geçmeyen ekzoforyalar, 1,5 prizma dereceyi geçmeyen hiperforyalar, mikrotopiya da dâhil olmak üzere heterotropiyası olanlar, ekstraoküler kas cerrahi geçirenlerde rezidüel heteroforya, heterotropi (mikrotopiya dâhil) ve motor duyu problemi olmayanlar. 6) 20/20 (10/10) görmeyi bozmayan, çeşitli nedenlerle oluşmuş kornea kesafetleri, parasantral lens kesafetleri, santral lens kesafetleri, vitreus kesafetleri ve dejenerasyonları, göz tabakalarının çeşitli şekil bozuklukları ve sekelleri (Kategori-1 hava aracı uçucularında santral lens kesafetleri uçuşa elverişli kabul edilmez.) olmayanlar. Tashihsiz görmeleri en az 0,7 ve tashihli görmeleri tam olmak şartıyla üç aylık kontrolden sonra komplikasyonsuz katarakt ameliyatları kategori-2 ve kategori-3 hava araçlarında uçuşa uygun olarak kabul edilir. 7) Kategori-1 uçucuları için her iki gözün görmeleri düzeltmeden sonra ayrı ayrı 20/20 (10/10) olmak şartıyla +3 diyoptri (dahil) hipermetropi, -2 diyoptri (dahil) miyopi ve diyoptrisi en fazla olan eksendeki refraksiyon bozukluğu +2 diyoptri veya -2 diyoptriyi geçmeyen çeşitli astigmatizmalar [Kategori-2 ve kategori-3 hava aracı pilotları ile seyrüsefer sınıfı için -3 diyoptri (dahil) miyopi ve +3 diyoptri veya -3 diyoptriyi geçmeyen çeşitli astigmatizmalar; kategori-4 uçuş için ise -4 diyoptriyi geçmeyen miyopi ve +/-4 çeşitli astigmatizmalar elverişli kabul edilir.]. 8) Kategori-2, kategori-3 ve kategori-4 hava aracı uçucuları için tashihli görmesi 10/10 (20/20)’den aşağı olmayan +/-4 diyoptriyi geçmeyen miyopi, hipermetropi ya da yüksek eksende +/-4 çeşitli astigmatik kusuru olan ve başka bir göz hastalığı olmayan uçucu personelden kendi talebi ve uçucu, denizaltıcı ve dalgıç sınıfı raporları vermeye yetkili hastane kararıyla, bu hastane tarafından uygun görülecek yöntemle (PRK, LASEK veya LASİK) ameliyat olup, yeterli süre (en az üç ay) takipten sonra görme kaybı ve komplikasyon gelişmemiş olanlar. 9) Her iki gözde yakın görme 20/200 (1/10)’den aşağı olmayıp düzeltme ile 20/20 (10/10) olanlar. 10) Yumuşak kontakt lens kullanımı (Bifokal, multifokal veya variofokal yumuşak kontakt lens olmaması, kontakt lens üzerine gözlük kullanılmaması, yumuşak kontakt lens ile uzak ve yakın görmelerin her iki gözde ayrı ayrı 20/20 (10/10) olması gerekir.). 11) Uçucu personelde diskromatopsi bulunmaz. Diskromatopsi muayenesinde standart renk görme testinin (Ischiara) her bir sayfasına 3 ila 5 saniye bakarak en az 14 kart görmek şartıyla 2 veya daha az yanlış yapanlar sağlam kabul edilir. 12) Santral ve parasantral hariç olmak üzere tam olarak iyileşmiş, nüks etmeyen, görme alanında toplam 1/10’dan fazla kayıp yapmayan, uzak görme 20/20 (10/10) olmak şartıyla iris, korpus siliare, retina, koroidea ve görme siniri hastalıkları, metamorfobsi oluşturmayan drusen ve benzeri paramakuler ve makuler lezyonlar (retina dekolmanı ve flörosan anjigrafi ile görme derecesinde azalma riski taşıyan makula lezyonları hariç). Periferik retina dejenerasyonları (Retinal delik ve yırtık hariç) kategori-1 hava aracı hariç uçuşa elverişli olarak kabul edilir. 13) Giriş esnasında veya cerrahi girişim ile çıkarıldığında görmeyi bozmayan veya ilerlemeyen, komplikasyon yapmamış, göz ön segmentinin yabancı cisim ameliyatları (retina ve koroideayı zedeleyen arka segment yabancı cisimleri hariç). 14) Komplikasyon yapmayan ve görmeyi bozmayan tam şifa bulmuş selim ekstraokuler tümörler (lipom, kist dermoid ve benzeri). 15) Göz içi basıncı birbirini takip eden en az iki ölçüm sonucunda 22 mmHg aplanasyondan aşağıda olan glokoma ait görme alanı ve optik sinir değişiklikleri gelişmeyen her iki göz arasında 6 mmHg aplanasyondan daha az farkı olanlar (Göz içi basıncı 22 mmHg ila 30 mmHg aplanasyon arasında olup üç aylık periyodlarla yapılan kontrollerde görme sinirinde veya görme alanında göz içi basıncına bağlı değişiklikler tespit edilmeyenlere oküler hipertansiyon olarak tanı konulur.). ç) Akciğer ve göğüs kafesi: 1) Klinik ve laboratuvar muayeneleri sonucu aktivitesinin tamamen durduğu saptanan tüberküloza bağlı sınırlı fibröz artıklar. 2) Akciğer ve mediastenin sınırlı, tek ya da birkaç tüberküloz dışı fibröz ya da kalsifiye artıkları ile perfüzyon defekti veya konjenital koagülasyon anomalisi olmayan iyileşmiş pulmoner tromboemboliler. 3) Akciğer fonksiyonlarını bozmayan ve kot aralıklarının daralmasına yol açmayan plevranın inaktif şeridi kalınlaşmaları, fissüritler ve sinüs kapalılıkları, radyolojik diyafragma dantellenmeleri. 4) Belirli bir sebebe bağlı olmayan akciğerlerin radyolojik bronkovasküler arborizasyonları, konjenital anomalileri ve küçük yabancı cisimleri (küçük lokalize hava kistleri, küçük kist hidatikleri ve laboratuvar muayeneleri ile tanı konulmuş lokalize bronşektazi ve amfizem hariç). 5) Toraksta fonksiyonel hiçbir bozukluk yapmamış yaralanma, yanık sekelleri ya da cerrahi girişimler. 6) Kosta, klavikula ve skapulanın, hareket ve toraks fonksiyonlarını bozmayan iyileşmiş kırık sekelleri. 7) Taşınabilir inhaler bronkodilatör ile kontrol altına alınabilen hafif intermittan astım olguları sadece kategori-4 uçuşu için elverişlidir. 8) Apne epizotları sırasında kan oksijen saturasyonu %80 ve üzerinde olan, apne-hipopne indeksi 15’ten düşük olan uyku apnesi (insansız hava aracı pilotu hariç) sadece kategori-4 uçuş için elverişlidir. 9) Tedavi edilmiş spontan pnomotorakslar kategori-2 ve kategori-3 hava aracında uçuşa elverişlidir. d) Kardiyovasküler sistem: 1) Sistolik arteriyel kan basıncı 140 mmHg-150 mmHg arası (140 mmHg ve 150 mmHg dahil), diastolik arteriyel kan basıncı 90 mmHg-95 mmHg arası (90 mmHg ve 9”",
+   "id": "P-SB-HAV-03-77"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre kategori-2, 3 ve 4 hava aracı uçucularından PRK, LASEK veya LASİK ameliyatı olanlar en az ne kadar süre takipten sonra uçuşa elverişli kabul edilebilir?",
+   "siklar": [
+    "İki hafta",
+    "Altı ay",
+    "Bir yıl",
+    "Bir ay",
+    "Üç ay"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.67",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.67: “denizaltıcı ve dalgıç sınıfı raporları vermeye yetkili hastane kararıyla, bu hastane tarafından uygun görülecek yöntemle (PRK, LASEK veya LASİK) ameliyat olup, yeterli süre (en az üç ay) takipten sonra görme kaybı ve komplikasyon gelişmemiş olanlar.”",
+   "id": "P-SB-HAV-03-78"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre uçucuların göz muayenesine ilişkin aşağıdakilerden hangileri doğrudur?\nI. Göz içi basıncı en az iki ölçümde 22 mmHg aplanasyondan aşağıda olmalıdır.\nII. Ekzoforyalar 10 prizma dereceyi geçmemelidir.\nIII. Komplikasyonsuz katarakt ameliyatı olanlar şartları sağlarsa kategori-2 ve kategori-3 hava araçlarında uçuşa uygun kabul edilir.",
+   "siklar": [
+    "Yalnız I",
+    "Yalnız II",
+    "II ve III",
+    "I, II ve III",
+    "I ve III"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.67",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.67: “15) Göz içi basıncı birbirini takip eden en az iki ölçüm sonucunda 22 mmHg aplanasyondan aşağıda olan glokoma ait görme alanı ve optik sinir değişiklikleri gelişmeyen her iki göz arasında 6 mmHg aplanasyondan daha az farkı olanlar (Göz içi basıncı 22 mmHg ila 30 mmHg aplanasyon arasında olup üç aylık periyodlarla yapılan kontrollerde görme sinirinde veya görme alanında göz içi basıncına bağlı değişiklikler tespit edilmeyenlere oküler hipertansiyon olarak tanı konulur.). ç) Akciğer ve göğüs kafesi: 1) Klinik ve laboratuvar muayeneleri sonucu aktivitesinin tamamen durduğu saptanan tüberküloza bağlı sınırlı fibröz artıklar. 2) Akciğer ve mediastenin sınırlı, tek ya da birkaç tüberküloz dışı fibröz ya da kalsifiye artıkları ile perfüzyon defekti veya konjenital koagülasyon anomalisi olmayan iyileşmiş pulmoner tromboemboliler. 3) Akciğer fonksiyonlarını bozmayan ve kot aralıklarının daralmasına yol açmayan plevranın inaktif şeridi kalınlaşmaları, fissüritler ve sinüs kapalılıkları, radyolojik diyafragma dantellenmeleri. 4) Belirli bir sebebe bağlı olmayan akciğerlerin radyolojik bronkovasküler arborizasyonları, konjenital anomalileri ve küçük yabancı cisimleri (küçük lokalize hava kistleri, küçük kist hidatikleri ve laboratuvar muayeneleri ile tanı konulmuş lokalize bronşektazi ve amfizem hariç). 5) Toraksta fonksiyonel hiçbir bozukluk yapmamış yaralanma, yanık sekelleri ya da cerrahi girişimler. 6) Kosta, klavikula ve skapulanın, hareket ve toraks fonksiyonlarını bozmayan iyileşmiş kırık sekelleri. 7) Taşınabilir inhaler bronkodilatör ile kontrol altına alınabilen hafif intermittan astım olguları sadece kategori-4 uçuşu için elverişlidir. 8) Apne epizotları sırasında kan oksijen saturasyonu %80 ve üzerinde olan, apne-hipopne indeksi 15’ten düşük olan uyku apnesi (insansız hava aracı pilotu hariç) sadece kategori-4 uçuş için elverişlidir. 9) Tedavi edilmiş spontan pnomotorakslar kategori-2 ve kategori-3 hava aracında uçuşa elverişlidir. d) Kardiyovasküler sistem: 1) Sistolik arteriyel kan basıncı 140 mmHg-150 mmHg arası (140 mmHg ve 150 mmHg dahil), diastolik arteriyel kan basıncı 90 mmHg-95 mmHg arası (90 mmHg ve 9”",
+   "id": "P-SB-HAV-03-79"
+  },
+  {
+   "lawId": 104,
+   "soru": "Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Sağlık Yeteneği Yönetmeliği'ne göre aşağıdakilerden hangisi insansız hava aracı sistemlerinin uçurulmasında görev alan personel arasında sayılmamıştır?",
+   "siklar": [
+    "İHA bakım/aviyonik teknisyeni",
+    "İHA pilotu",
+    "İHA faydalı yük işletmeni",
+    "İHA görev komutanı",
+    "İHA uçuş tabibi"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular) m.70",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Sağlık Yeteneği Yönetmeliği (Uçucular), m.70: “) (1) İnsansız hava aracı sistemlerinin uçurulmasında görev alan personel; İHA pilotu, İHA görev komutanı, İHA faydalı yük işletmenleri, İHA yer sistem teknisyenleri ve İHA bakım/aviyonik teknisyenidir.”",
+   "id": "P-SB-HAV-03-80"
+  }
+ ]
+}

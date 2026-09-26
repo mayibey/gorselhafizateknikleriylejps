@@ -1,0 +1,240 @@
+[
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre kurumsal ortamlarda kullanılan sensör, kamera vb. cihaz grupları hangi varlık grubu ana başlığında yer alır?",
+  "s": [
+   "Nesnelerin İnterneti (IoT) Cihazları",
+   "Taşınabilir Cihaz ve Ortamlar",
+   "Fiziksel Mekânlar",
+   "Uygulamalar",
+   "Ağ ve Sistemler"
+  ],
+  "kanit": [
+   "Kurumsal ortamlarda kullanılan sensör, kamera vb. cihaz grupları"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre varlık grubunun kritiklik derecesinin \"Derece 3\" olması için anket puanı en az kaç olmalıdır?",
+  "s": [
+   "28",
+   "18",
+   "32",
+   "24",
+   "36"
+  ],
+  "kanit": [
+   "Anket puanı 28 ve daha yüksek ise Derece 3"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "olumsuz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangisi \"Ağ ve Sistem Güvenliği\" ana başlığının alt başlıklarından biri değildir?",
+  "s": [
+   "Eğitim ve Farkındalık Faaliyetleri",
+   "Tehdit ve Zafiyet Yönetimi",
+   "Veri Sızıntısı Önleme",
+   "Uzaktan Çalışma",
+   "Sanallaştırma Güvenliği"
+  ],
+  "kanit": [
+   "Genel Güvenlik Tedbirleri • Eğitim ve Farkındalık Faaliyetleri",
+   "Tehdit ve Zafiyet Yönetimi",
+   "Veri Sızıntısı Önleme • İz ve Denetim Kayıtlarının Tutulması"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre bir işin yeterli ve en az yetkiyle çalıştırılmasını öngören temel prensip hangisidir?",
+  "s": [
+   "Asgari Yetki Tanımlama",
+   "Saldırı Yüzeyinin Azaltılması",
+   "Derinlemesine Savunma",
+   "En Zayıf Halkanın Tespiti",
+   "Güvenlik Temelli Tasarım"
+  ],
+  "kanit": [
+   "Asgari Yetki Tanımlama: Bir işin gerçekleştirilmesi için yeterli ve en az yetkiyle"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre mevcut durum analizinde, teknik olarak uygulanma ihtimali bulunmayan tedbirin uygulama durumu nasıl belirtilir?",
+  "s": [
+   "Uygulanamaz",
+   "Hiç",
+   "Kısmen",
+   "Çoğunlukla",
+   "Ertelenmiş"
+  ],
+  "kanit": [
+   "Tedbirin teknik olarak uygulanma ihtimali bulunmuyorsa “uygulanamaz”"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "onculu",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangileri \"Taşınabilir Cihaz ve Ortam Güvenliği\" ana başlığının alt başlıklarındandır?\nI. Akıllı Telefon ve Tablet Güvenliği\nII. Taşınabilir Ortam Güvenliği (CD/DVD, Taşınabilir Bellek Ortamları)\nIII. Sanallaştırma Güvenliği",
+  "s": [
+   "I ve II",
+   "Yalnız III",
+   "I, II ve III",
+   "Yalnız I",
+   "II ve III"
+  ],
+  "kanit": [
+   "Akıllı Telefon ve Tablet Güvenliği • Taşınabilir Bilgisayar Güvenliği • Taşınabilir Ortam Güvenliği",
+   "Sanallaştırma Güvenliği • Siber Güvenlik Olay Yönetimi"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesi ve kanıtlayıcı belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Ortak veri tabanından yapılan harcamalarda bu veriler ayrıca kanıtlayıcı belge olarak bağlanır.",
+   "Ödeme belgesi iki nüsha olarak muhasebe birimine verilir.",
+   "Kanıtlayıcı belgeler ödeme belgesinin birinci nüshasına bağlanır.",
+   "Ödeme belgesinin ikinci nüshası muhasebe biriminde saklanır.",
+   "Fatura ve taşınır işlem fişinin asıllarının bağlanması esastır."
+  ],
+  "kanit": [
+   "ödeme belgesine ayrıca bu verileri kanıtlayıcı belge bağlanmaz",
+   "Ödeme belgesi iki nüsha olarak",
+   "ikinci nüshası ise muhasebe biriminde saklanır"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "duz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde hangi belgeler ödeme belgesine bağlanır?",
+  "s": [
+   "Taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu",
+   "Yalnız fatura",
+   "Fatura ve taşınır işlem fişi",
+   "Taahhüt dosyası ve muayene ve kabul komisyonu tutanağı",
+   "Harcama talimatı ve Yapım İşleri Hakediş Raporu"
+  ],
+  "kanit": [
+   "bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde; -Taahhüt dosyası, - Fatura, -Hizmet İşleri Hakediş Raporu"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "vaka",
+  "k": "Mutemet Astsubay A, birliğindeki Jandarma er ve erbaşlarının harçlık ve tayın bedellerini avans olarak ödetecektir. Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesine hangi belge bağlanır?",
+  "s": [
+   "Er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
+   "Sağlık kurulu raporu",
+   "Muayene ve kabul komisyonu tutanağı",
+   "Taahhüt dosyası",
+   "Yurtiçi Geçici Görev Yolluğu Bildirimi"
+  ],
+  "kanit": [
+   "er ve erbaşların sayısı ile harçlık ve tayın bedeli tutarını gösteren yazı",
+   "Jandarma er ve erbaşlarının harçlıkları ve tayın bedellerinin avans olarak"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ulaştırma ve haberleşme giderlerinin ödenmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Haber ajansı abonelik giderlerinde muayene ve kabul komisyonu tutanağı bağlanır.",
+   "İnternet üzerinden televizyon abonelik giderlerinde taahhüt dosyası ve fatura bağlanır.",
+   "Tekel niteliğindeki telefon giderlerinde daire amirince onanmış fatura bağlanır.",
+   "Faturada şehirlerarası görüşme bedellerinin resmi-özel ayrımı gösterilir.",
+   "Posta pulu bedelleri de ulaştırma ve haberleşme giderleri kapsamında ödenir."
+  ],
+  "kanit": [
+   "bilgiye abonelik giderlerinin ödenmesinde; - Taahhüt dosyası, - Fatura",
+   "resmi-özel ayrımını gösterir, kullanıcının beyanına dayalı olarak ilgili daire amirince onanmış fatura",
+   "telgraf ve posta pulu bedellerinin ödenmesinde"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "olumsuz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre yurtiçinde güvenli şekilde depolanacak kritik bilgi ve veriler arasında aşağıdakilerden hangisi sayılmamıştır?",
+  "s": [
+   "Tapu kayıt bilgileri",
+   "Nüfus kayıt bilgileri",
+   "Sağlık kayıt bilgileri",
+   "Genetik veriler",
+   "Biyometrik veriler"
+  ],
+  "kanit": [
+   "Nüfus, sağlık ve iletişim kayıt bilgileri ile genetik ve biyometrik veriler",
+   "yurtiçinde güvenli bir şekilde depolanacaktır"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "onculu",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre aşağıdakilerden hangileri doğrudur?\nI. Kritik kurumların bulunduğu bölgelerdeki veriler fiber optik kablolar üzerinden taşınır.\nII. Radyolinkin zorunlu olduğu durumlarda veriler milli kripto sistemleriyle kriptolanır.\nIII. Kritik veri iletişiminde öncelikli yöntem radyolink haberleşmesidir.",
+  "s": [
+   "I ve II",
+   "Yalnız III",
+   "II ve III",
+   "Yalnız I",
+   "I, II ve III"
+  ],
+  "kanit": [
+   "fiber optik kablolar üzerinden taşınacaktır",
+   "veriler milli kripto sistemlerine sahip cihazlar kullanılarak kriptolanacaktır",
+   "Kritik veri iletişiminde, radyolink haberleşmesi kullanılmayacak"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "duz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre milli güvenliği doğrudan etkileyen stratejik kurumların üst yöneticileri hakkında ne yaptırılır?",
+  "s": [
+   "Güvenlik soruşturması veya arşiv araştırması",
+   "Sağlık kurulu muayenesi",
+   "Mal bildirimi denetimi",
+   "Psikoteknik değerlendirme",
+   "Yabancı dil yeterlik sınavı"
+  ],
+  "kanit": [
+   "güvenlik soruşturması veya arşiv araştırması yaptırılacaktır",
+   "stratejik önemi haiz kurum ve kuruluşların üst yöneticileri"
+  ]
+ },
+ {
+  "law": 142,
+  "tip": "duz",
+  "k": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre cep telefonu tahsis edilen makamların aylık görüşme ücreti limiti, kaç gösterge rakamının memur aylık katsayısıyla çarpımını geçemez?",
+  "s": [
+   "1800",
+   "2200",
+   "1500",
+   "3000",
+   "1000"
+  ],
+  "kanit": [
+   "cep telefonu görüşme ücreti limitleri, 1800 gösterge rakamının"
+  ]
+ },
+ {
+  "law": 142,
+  "tip": "olumsuz",
+  "k": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre aşağıdakilerden hangisi cep telefonu tahsis edilebilecekler arasında sayılmamıştır?",
+  "s": [
+   "Kaymakamlar",
+   "Cumhurbaşkanı Yardımcısı",
+   "Valiler",
+   "Yüksek yargı organları başkanları",
+   "Belediyelerde genel sekreterler"
+  ],
+  "kanit": [
+   "Cep telefonları sadece Cumhurbaşkanı Yardımcısı, bakanlar, yüksek yargı organları başkanları, valiler",
+   "belediyelerde genel sekreterler ve genel müdürler"
+  ]
+ }
+]

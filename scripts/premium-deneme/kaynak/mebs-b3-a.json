@@ -1,0 +1,244 @@
+[
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre birden fazla varlık grubu tarafından adreslenmesi gereken kurumsal varlıklar nasıl değerlendirilir?",
+  "s": [
+   "Kritiklik derecesi en yüksek olan varlık grubu üzerinden",
+   "Kritiklik derecesi en düşük olan varlık grubu üzerinden",
+   "Varlık sahibinin seçtiği grup üzerinden",
+   "Her grupta ayrı ayrı ve bağımsız olarak",
+   "Personel varlık grubu üzerinden"
+  ],
+  "kanit": [
+   "kritiklik derecesi en yüksek olan varlık grubu üzerinden değerlendirilmeli",
+   "Birden fazla varlık grubu tarafından adreslenmesi gereken kurumsal varlıklar"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre rehberin uygulanmasına ilişkin iç denetim yılda en az kaç kez yapılır?",
+  "s": [
+   "Bir",
+   "Dört",
+   "İki",
+   "Altı",
+   "Üç"
+  ],
+  "kanit": [
+   "yılda en az bir kez olmak üzere iç denetim yolu ile gerçekleştirilir"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "olumsuz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangisi uygulama ve teknoloji alanlarına yönelik güvenlik tedbiri ana başlıklarından biri değildir?",
+  "s": [
+   "Personel Güvenliği",
+   "Anlık Mesajlaşma Güvenliği",
+   "Bulut Bilişim Güvenliği",
+   "Kripto Uygulamaları Güvenliği",
+   "Yeni Geliştirmeler ve Tedarik"
+  ],
+  "kanit": [
+   "Nesnelerin İnterneti (IoT) Cihazlarının Güvenliği • Personel Güvenliği • Fiziksel Mekânların Güvenliği",
+   "Kişisel Verilerin Güvenliği • Anlık Mesajlaşma Güvenliği • Bulut Bilişim Güvenliği",
+   "Kripto Uygulamaları Güvenliği • Kritik Altyapılar Güvenliği • Yeni Geliştirmeler ve Tedarik"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "duz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre görev ve sorumluluğu bulunanların yetkileri düzeyinde bilgi sahibi olmasını öngören temel prensip hangisidir?",
+  "s": [
+   "Bilmesi Gereken Prensibi",
+   "Yetkin Personel",
+   "Mahremiyet Temelli Tasarım",
+   "Mükerrer Çalışma ve Yatırımların Önlenmesi",
+   "Güvenlik Hedeflerinin İş Hedefleriyle Uyumu"
+  ],
+  "kanit": [
+   "Bilmesi Gereken Prensibi: Herhangi bir konu veya işi, görev ve sorumlulukları gereği",
+   "sorumluluğu bulunanlar yetkileri düzeyinde bilgi sahibi olmalıdır"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "olumsuz",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre aşağıdakilerden hangisi \"Nesnelerin İnterneti (IoT) Cihazlarının Güvenliği\" ana başlığının alt başlıklarından biri değildir?",
+  "s": [
+   "Tedarikçi İlişkileri Güvenliği",
+   "Ağ Servisleri ve İletişimi",
+   "Dâhili Veri Depolama",
+   "Kimlik Doğrulama ve Yetkilendirme",
+   "API ve Bağlantı Güvenliği"
+  ],
+  "kanit": [
+   "Eğitim ve Farkındalık Faaliyetleri • Tedarikçi İlişkileri Güvenliği",
+   "Ağ Servisleri ve İletişimi • Dâhili Veri Depolama • Kimlik Doğrulama ve Yetkilendirme",
+   "API ve Bağlantı Güvenliği • Diğer Güvenlik Tedbirleri"
+  ]
+ },
+ {
+  "law": 103,
+  "tip": "onculu",
+  "k": "Bilgi ve İletişim Güvenliği Rehberi'ne göre varlık grupları belirlenirken aşağıdakilerden hangileri önerilmektedir?\nI. Aynı güvenlik izolasyonundaki varlıkların mümkün olduğunca aynı gruba dâhil edilmesi\nII. Farklı güvenlik seviyesi gereken varlıkların aynı grupta toplanması\nIII. Aynı seviyede tedbir uygulanacak grupların birleştirilerek grup sayısının azaltılması",
+  "s": [
+   "I ve III",
+   "Yalnız II",
+   "I, II ve III",
+   "Yalnız I",
+   "II ve III"
+  ],
+  "kanit": [
+   "Aynı güvenlik izolasyonunda yer alan varlıkların mümkün olduğunca aynı varlık grubuna dâhil edilmesi",
+   "Farklı güvenlik seviyesine sahip olması gereken varlıkların farklı varlık gruplarında",
+   "birleştirilerek varlık grubu sayısının azaltılması"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre aşağıdakilerden hangisi Bakanlığın kanıtlayıcı belgeleri giderin çeşidine göre ayrıca belirlemeye yetkili olduğu hallerden biri değildir?",
+  "s": [
+   "Harcama yetkilisinin görevden ayrılması",
+   "Savaş hali",
+   "İdari sebeplerle tahliye durumu",
+   "Askeri sebeplerle tahliye durumu",
+   "Mevzuat değişikliğiyle ortaya çıkan yeni bir gider"
+  ],
+  "kanit": [
+   "Savaş hali ile idari ve askeri sebeplerle tahliye durumunda",
+   "Mevzuat değişikliği nedeniyle ortaya çıkan yeni bir giderin"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "onculu",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Yönetmelik 1/1/2006 tarihinde yürürlüğe girmiştir.\nII. Yönetmelikle Devlet Harcama Belgeleri Yönetmeliği yürürlükten kaldırılmıştır.\nIII. Yönetmelik, 4734 sayılı Kamu İhale Kanunu'na dayanılarak hazırlanmıştır.",
+  "s": [
+   "I ve II",
+   "Yalnız III",
+   "I, II ve III",
+   "Yalnız I",
+   "II ve III"
+  ],
+  "kanit": [
+   "Bu Yönetmelik 1/1/2006 tarihinde yürürlüğe girer",
+   "Devlet Harcama Belgeleri Yönetmeliği ile ek ve değişiklikleri yürürlükten kaldırılmıştır",
+   "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanununun 33 üncü maddesi"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "duz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre kimliğinin saklı kalmasını isteyen muhbirlere mutemetleri aracılığıyla yapılacak ödemelerde hangi belge aranır?",
+  "s": [
+   "İlgili dairenin görevlendirme yazısı",
+   "Noterce düzenlenmiş vekaletname",
+   "Mahkeme ilamı",
+   "Şahsi Mutemet Dilekçesi",
+   "Muhbirin kimlik fotokopisi"
+  ],
+  "kanit": [
+   "isteyen muhbirlere mutemetleri aracılığıyla yapılacak ödemelerde, ilgili dairenin görevlendirme yazısı"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "vaka",
+  "k": "Astsubay A, Jandarma Genel Komutanlığı okullarından mezun olup ilk görev yerine atanmıştır. Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre A'nın atama onayı hangi ödeme belgesine bağlanır?",
+  "s": [
+   "İkinci aya ait ödeme belgesine",
+   "İlk aya ait ödeme belgesine",
+   "Mali yılın son ödeme belgesine",
+   "Üçüncü aya ait ödeme belgesine",
+   "Hiçbir ödeme belgesine bağlanmaz"
+  ],
+  "kanit": [
+   "mezun olanların atama onayları, ikinci aya ait ödeme belgesine bağlanır",
+   "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığının muhtelif okullarından"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "duz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre gizlilik dereceli verilerin saklandığı cihazlar kurum dışına hangi şartla çıkarılabilir?",
+  "s": [
+   "Veriler donanımsal ve/veya yazılımsal olarak kriptolanarak",
+   "Kurum amirinin sözlü izniyle",
+   "Cihaz şifresi değiştirilerek",
+   "Yalnız mesai saatleri içinde",
+   "Veriler buluta yedeklenerek"
+  ],
+  "kanit": [
+   "donanımsal ve/veya yazılımsal olarak kriptolanmak suretiyle kurum dışına çıkarılabilecek",
+   "bu amaçla kullanılan cihazlar kayıt altına alınacaktır"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "olumsuz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre aşağıdakilerden hangisi internete açık olması zorunlu endüstriyel kontrol sistemleri için örnek sayılan güvenlik önlemlerinden biri değildir?",
+  "s": [
+   "Sistemin yabancı bulut sağlayıcıya taşınması",
+   "Güvenlik duvarı",
+   "Uçtan uca tünelleme yöntemleri",
+   "Yetkilendirme mekanizmaları",
+   "Kimliklendirme mekanizmaları"
+  ],
+  "kanit": [
+   "güvenlik duvarı, uçtan uca tünelleme yöntemleri, yetkilendirme ve kimliklendirme mekanizmaları",
+   "Endüstriyel kontrol sistemlerinin internete kapalı konumda tutulması sağlanacak"
+  ]
+ },
+ {
+  "law": 102,
+  "tip": "duz",
+  "k": "2019/12 sayılı Bilgi ve İletişim Güvenliği Tedbirleri Genelgesi'ne göre haberleşme hizmeti sağlamak üzere yetkilendirilmiş işletmeciler Türkiye'de ne kurmakla yükümlüdür?",
+  "s": [
+   "İnternet değişim noktası",
+   "Veri merkezi",
+   "Uydu yer istasyonu",
+   "Siber olaylara müdahale ekibi",
+   "Kök sertifika merkezi"
+  ],
+  "kanit": [
+   "Türkiye'de internet değişim noktası kurmakla yükümlüdür",
+   "yurtiçi iletişim trafiğinin yurtdışına çıkarılmamasına yönelik tedbirler"
+  ]
+ },
+ {
+  "law": 142,
+  "tip": "duz",
+  "k": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre haberleşme giderlerini gözden geçirerek sayı, tutar veya kullanım kısıtlamaları dâhil tedbirleri kimler alır?",
+  "s": [
+   "Harcama yetkilileri",
+   "Muhasebe yetkilileri",
+   "Gerçekleştirme görevlileri",
+   "İç denetçiler",
+   "Strateji geliştirme birimleri"
+  ],
+  "kanit": [
+   "Kamu kurum ve kuruluşlarının harcama yetkilileri, haberleşme giderlerini",
+   "sayı, tutar veya kullanım kısıtlamaları da dâhil"
+  ]
+ },
+ {
+  "law": 142,
+  "tip": "olumsuz",
+  "k": "2024/7 sayılı Tasarruf Tedbirleri Genelgesi'ne göre milletlerarası görüşmelere açılacak telefonları belirleyecek makamlarla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+  "s": [
+   "Belediyeler – Vali",
+   "Bakanlıklar – Bakan",
+   "İl özel idareleri – Vali",
+   "Diğer idareler – Üst yönetici",
+   "Bağlı kuruluşlar – Bakan"
+  ],
+  "kanit": [
+   "il özel idarelerinde vali, belediyelerde belediye başkanı, diğer idarelerde üst yönetici",
+   "bakanlıklar, bağlı, ilgili ve ilişkili kuruluşlarda bakan"
+  ]
+ }
+]

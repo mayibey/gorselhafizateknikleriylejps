@@ -1,0 +1,1289 @@
+{
+ "id": "P-SB-PER-01",
+ "baslik": "Personel Subay — Premium Deneme 1",
+ "rutbe": "sb",
+ "brans": "personel",
+ "soruSayisi": 80,
+ "sorular": [
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre kamu görevlisi ile kişinin rüşvet konusunda anlaşmaya varması hâlinde nasıl işlem yapılır?",
+   "siklar": [
+    "Suç tamamlanmış gibi cezaya hükmolunur.",
+    "Ceza yarı oranında indirilerek verilir.",
+    "Yalnızca kamu görevlisi cezalandırılır.",
+    "Teşebbüs hükümlerine göre ceza verilir.",
+    "Hazırlık hareketi sayıldığından ceza verilmez."
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.252",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.252: “(3) Rüşvet konusunda anlaşmaya varılması halinde, suç tamamlanmış gibi cezaya hükmolunur.”",
+   "id": "P-SB-PER-01-01"
+  },
+  {
+   "lawId": 1,
+   "soru": "Kamu görevlisi A, görevinin gereklerine aykırı hareket ederek bir vatandaşın mağduriyetine neden olmuştur. Fiil ayrıca başka bir suç oluşturmamaktadır. 5237 sayılı Türk Ceza Kanunu'na göre A hakkında hangi ceza öngörülür?",
+   "siklar": [
+    "Üç aydan bir yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "Bir yıldan dört yıla kadar hapis",
+    "Dört yıldan on iki yıla kadar hapis",
+    "Yalnızca adli para cezası"
+   ],
+   "dogru": 1,
+   "tip": "vaka",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.257",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.257: “gereklerine aykırı hareket etmek suretiyle, kişilerin mağduriyetine veya kamunun zararına neden olan ya da kişilere haksız bir menfaat sağlayan kamu görevlisi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.”",
+   "id": "P-SB-PER-01-02"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
+   "siklar": [
+    "Kişinin kendisini tanınmayacak hâle koyarak işlemesi",
+    "Suç örgütüne yarar sağlamak maksadıyla işlenmesi",
+    "Yargı görevi yapana karşı işlenmesi",
+    "Birden fazla kişi tarafından birlikte işlenmesi",
+    "Silahla işlenmesi"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.265",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.265: “(3) Suçun, kişinin kendisini tanınmayacak bir hale koyması suretiyle veya birden fazla kişi tarafından birlikte işlenmesi halinde, verilecek ceza üçte biri oranında artırılır.”",
+   "id": "P-SB-PER-01-03"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Tüzel kişiler hakkında ceza yaptırımı uygulanamaz.\nII. Suç ve ceza içeren hükümlerin uygulanmasında kıyas yapılamaz.\nIII. Taksirle işlenen fiiller her hâlde cezalandırılır.",
+   "siklar": [
+    "I ve II",
+    "II ve III",
+    "Yalnız III",
+    "I, II ve III",
+    "Yalnız I"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.20",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.20: “(2) Tüzel kişiler hakkında ceza yaptırımı uygulanamaz.”",
+   "id": "P-SB-PER-01-04"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre zimmet suçunda, soruşturma başlamadan önce zararın aynen iade veya tazmin edilmesi hâlinde verilecek cezada ne kadar indirim yapılır?",
+   "siklar": [
+    "Üçte biri",
+    "Yarısı",
+    "Dörtte biri",
+    "Üçte ikisi",
+    "Dörtte üçü"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.248",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.248: “(1) Soruşturma başlamadan önce, zimmete geçirilen malın aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek cezanın üçte ikisi indirilir.”",
+   "id": "P-SB-PER-01-05"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre bir il veya ilçenin tamamının jandarma sorumluluk alanı olarak belirlenmesine kim karar verir?",
+   "siklar": [
+    "İçişleri Bakanı",
+    "Emniyet Genel Müdürü",
+    "Cumhurbaşkanı",
+    "Jandarma Genel Komutanı",
+    "Vali"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.14",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.14: “) Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.”",
+   "id": "P-SB-PER-01-06"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre önleme araması kararında aşağıdakilerden hangisinin bulunması gerekmez?",
+   "siklar": [
+    "Aramayı yapacak personelin adı ve soyadı",
+    "Aramanın sebebi",
+    "Aramanın zamanı ve süresi",
+    "Aramanın konusu ve kapsamı",
+    "Aramanın yapılacağı yer"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.15/A",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.15/A: “Arama kararında veya emrinde; aramanın sebebi, konusu ve kapsamı ile yapılacağı yer, zaman ve geçerli olacağı süre belirtilir.”",
+   "id": "P-SB-PER-01-07"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre komando ve sınır birliklerinde görevli personele ödenen asayiş tazminatı, en yüksek Devlet memuru aylığının yüzde kaçını geçemez?",
+   "siklar": [
+    "%60",
+    "%75",
+    "%52",
+    "%35",
+    "%40"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.21",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.21: “) Jandarma Genel Komutanlığı fiili kadrolarına atanmış19 subay, astsubay ve uzman jandarma ve uzman erbaşlara; 657 sayılı Devlet Memurları Kanununda belirtilen en yüksek Devlet memuru aylığının (ek gösterge dahil); a)Komando ve sınır birliklerinde % 52,20 b) Diğer karargah, birlik ve kurumlarda % 40,21 tutarını geçmemek üzere İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir.”",
+   "id": "P-SB-PER-01-08"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarma personelinin kişisel suçları hakkında hangi hükümlere göre işlem yapılır?",
+   "siklar": [
+    "Genel hükümler",
+    "4483 sayılı Kanun",
+    "Askerî Ceza Kanunu",
+    "TSK İç Hizmet Kanunu",
+    "7068 sayılı Kanun"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.15",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.15: “e) Jandarma personelinin kişisel suçlarında genel hükümlere göre işlem yapılır.”",
+   "id": "P-SB-PER-01-09"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
+   "siklar": [
+    "Her hâlde ilgili kişinin açık rızasının alınması",
+    "Hukuka ve dürüstlük kurallarına uygun olma",
+    "Doğru ve gerektiğinde güncel olma",
+    "Belirli, açık ve meşru amaçlar için işlenme",
+    "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.4",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.4: “(2) Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma.”",
+   "id": "P-SB-PER-01-10"
+  },
+  {
+   "lawId": 4,
+   "soru": "7201 sayılı Tebligat Kanunu'na göre muhatap yerine tebliğ yapılacak kişinin görünüşe göre en az kaç yaşında olması gerekir?",
+   "siklar": [
+    "15",
+    "17",
+    "18",
+    "21",
+    "25"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "7201 sayılı Tebligat Kanunu m.22",
+   "aciklama": "7201 sayılı Tebligat Kanunu, m.22: “Muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran onsekiz yaşından aşağı olmaması ve bariz bir surette ehliyetsiz bulunmaması lazımdır.”",
+   "id": "P-SB-PER-01-11"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre vali, kişilerin belirli yerlere giriş-çıkışını, dolaşmasını ve silah taşımasını en çok kaç gün süreyle kısıtlayabilir?",
+   "siklar": [
+    "30 gün",
+    "3 gün",
+    "45 gün",
+    "7 gün",
+    "15 gün"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.11",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.11: “)Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir. (…) Bu fıkra kapsamında alınan ve ilan olunan karar ve tedbirlere uymıyanlar hakkında 66 ncı madde hükmü uygulanır.10 Ç) Jandarma, polis, gümrük muhafaza ve diğer özel kolluk kuvvetlerinin bütün ast ve üstlerinin il içine munhasır olmak üzere geçici veya sürekli olarak vali tarafından yerleri değiştirilebilir ve bundan hemen İçişleri, Gümrük ve Tekel Bakanlıklarına bilgi verir. D) Valiler, ilde çıkabilecek veya çıkan olayların, emrindeki kuvvetlerle önlenmesini mümkün görmedikleri veya önleyemedikleri; aldıkları tedbirlerin bu kuvvetlerle uygulanmasını mümkün görmedikleri veya uygulayamadıkları takdirde, diğer illerin kolluk kuvvetleriyle bu iş için tahsis edilen diğer kuvvetlerden yararlanmak amacıyla, İçişleri Bakanlığından ve gerekirse (…)11 Kara Kuvvetleri Komutanlığının sınır birlikleri dahil olmak üzere en yakın kara, deniz ve hava birlik komutanlığından mümkün olan en hızlı vasıtalar ile müracaat ederek yardım isterler. Bu durumlarda ihtiyaç duyulan kuvvetlerin İçişleri Bakanlığından veya askeri birliklerden veya her iki makamdan talep edilmesi hususu, yardım talebinde bulunan vali tarafından takdir edilir. Valinin yaptığı yardım istemi geciktirilmeksizin yerine getirilir. Acil durumlarda bu istek sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir. 9 2/7/2018 tarihli ve 703 sayılı KHK’nin 138 inci maddesiyle, bu maddede yer alan “Bakanlar Kurulu” ibareleri “Cumhurbaşkanı” şeklinde, “Bakanlar Kurulunca” ibaresi “Cumhurbaşkanınca” şeklinde, “Hükümetin” ibaresi “Cumhurbaşkanının” şeklinde, “Başbakanın” ibaresi “Cumhurbaşkanının” şeklinde değiştirilmiştir. 10 25/7/2018 tarihli ve 7145 sayılı Kanunun 1 inci maddesiyle, bu paragrafta yer alan “Bu hususta” ibaresi “Bu fıkra kapsamında” şeklinde değiştirilmiştir. 11 17/4/2017 tarihli ve 690 sayılı KHK’nin 17 nci maddesiyle, bu fıkranın birinci cümlesinde yer alan “Jandarma Genel Komutanlığının veya” ibaresi yürürlükten kaldırılmış, daha sonra bu hüküm 1/2/2018 tarihli ve 7077 sayılı Kanunun 15 inci maddesiyle aynen kabul edilerek kanunlaşmıştır. Vali tarafından askeri birliklerden yardım istenmesi halinde; muhtemel olaylar için istenen askeri kuvvet, valinin görüşü alınarak olaylara hızla el koymaya uygun yerde, cereyan eden olaylar için ise olay yerinde hazır bulundurulur. Olayların niteliğine göre istenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından, görevde kalış süresi, askerî birliğin komutanı ile koordine edilerek vali tarafından belirlenir. Askeri kuvvetin müstakilen görevlendirilmesi durumunda; verilen görev askeri kuvvet tarafından kendi komutanının sorumluluğu altında ve onun emir ve talimatlarına göre Türk Silahlı Kuvvetleri İç Hizmet Kanununda belirtilen yetkiler ile kolluk kuvvetlerinin genel güvenliği sağlamada sahip olduğu yetkiler kullanılarak yerine getirilir. Güvenlik kuvvetleri ile yardıma gelen askeri kuvvet arasında işbirliği ve koordinasyon, yardıma gelen askeri birliğin komutanının da görüşü alınarak vali tarafından tespit edilir. Ancak, bu askeri birliğin belirli görevleri jandarma ya da polis ile birlikte yapması halinde komuta, sevk ve idare askeri birliklerin en kıdemli komutanı tarafından üstlenilir. Birden fazla ili içine alan olaylarda ilgili valilerin isteği üzerine aynı veya farklı askeri birlik komutanlarından kuvvet tahsis edilmesi durumunda iller veya kuvvetler arasında işbirliği, koordinasyon, kuvvet kaydırması, emir komuta ilişkileri ve gerekli görülen diğer hususlar yukarıda belirtilen hükümler çerçevesinde Cumhurbaşkanı tarafından belirlenecek esaslara göre yürütülür. Bu esasların uygulanmasında, işbirliği ve koordinasyon sağlamak amacıyla gerekli görülen hallerde İçişleri Bakanı ilgili valilerden birini geçici olarak görevlendirir. Olayların sınır illerinde veya bu illere mücavir bölgelerde cereyan etmesi ve eylemcilerin eylemlerini müteakip komşu ülke topraklarına sığındıklarının tespit edilmesi durumunda valinin talebi üzerine ilgili komutan eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Cumhurbaşkanının müsaadesi tahtında, ihtiyaca göre kara, hava, deniz kuvvetleri ve Jandarma Genel Komutanlığı unsurları ile komşu ülkelerin mutabakatı alınmak suretiyle mahdut hedefli sınır ötesi harekat planlayıp icra edebilir. Bu fıkra uyarınca görevlendirilen Türk Silahlı Kuvvetleri birliklerinin, bu fıkra kapsamındaki faaliyetleri, askerlik hizmet ve görevlerinden sayılır.Yukarıda belirtilen hususlar neden”",
+   "id": "P-SB-PER-01-12"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre idari para cezasının ödeme süresi içinde ödenmesi hâlinde cezadan ne oranda indirim yapılır?",
+   "siklar": [
+    "%25",
+    "%10",
+    "%50",
+    "%20",
+    "%30"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.17",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.17: “İdari para cezasının ödeme süresi içinde ödenmesi halinde, cezadan %25 oranında indirim yapılır.”",
+   "id": "P-SB-PER-01-13"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kabahat, kanunda aksi belirtilmedikçe hem kasten hem de taksirle işlenebilir.\nII. Kabahatlerde tüzel kişilerin sorumluluğu benimsenmiştir.\nIII. Nispî idari para cezasında soruşturma zamanaşımı beş yıldır.",
+   "siklar": [
+    "I ve II",
+    "Yalnız III",
+    "II ve III",
+    "I, II ve III",
+    "Yalnız I"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.9",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.9: “(1) Kabahatler, kanunda açıkça hüküm bulunmayan hallerde, hem kasten hem de taksirle işlenebilir.”",
+   "id": "P-SB-PER-01-14"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre terörle mücadele görevi nedeniyle hakkında soruşturma açılan kamu görevlisini savunan en fazla kaç avukatın ücreti ödenir?",
+   "siklar": [
+    "2",
+    "5",
+    "4",
+    "3",
+    "1"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.15",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.15: “dirilmiş diğer personelin, bu görevlerinin ifasından doğduğu iddia edilen suçlardan dolayı yapılan soruşturma ve kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın veya bu görevlerinin ifasından dolayı mağdur, şikâyetçi, katılan, davalı ya da davacı konumunda olan personelin seçeceği bir avukatın ücreti ödenir ve bunlara avukatlık ücret tarifesine bağlı olmaksızın yapılacak ödemeler, ilgili kuruluşların bütçelerine konulacak ödenekten karşılanır. Ancak davacı konumunda olan personelin seçeceği bir avukata ücret ödenmesi, ilgili Bakanın onayına tabidir.11 Avukatların ücretlerinin ödenmesine ilişkin esas ve usûller, Millî Savunma ve İçişleri bakanlıklarınca müştereken çıkarılacak yönetmelikle düzenlenir. 9 29/6/2006 tarihli ve 5532 sayılı Kanunun 10 ve 12 inci maddesiyle 13 üncü maddenin başlığı “Erteleme ve paraya çevrilme”, 17 nci maddenin başlığı \"Şartla salıverilme\" iken metne işlendiği şekilde değiştirilmiştir. Daha sonra 26/2/2008 tarihli ve 5739 sayılı Kanunun 3 üncü maddesiyle 13 üncü maddenin başlığı “Seçenek yaptırımlara çevirme ve erteleme yasağı” iken metne işlendiği şekilde değiştirilmiştir. 10 Bu maddenin başlığı “Müdafii Tayini” iken 23/6/2016 tarihli ve 6722 sayılı Kanunun 15 inci maddesiyle metne işlendiği şekilde değiştirilmiştir. 11 23/6/2016 tarihli ve 6722 sayılı Kanunun 15 inci maddesiyle bu fıkradaki “görev alan” ibaresinden sonra gelmek üzere “Türk Silahlı Kuvvetleri personeli, mülki idare amirleri,” ibaresi eklenmiş ve bu fıkrada yer alan “kovuşturmalarda müdafi olarak belirlediği en fazla üç” ibaresi “kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın veya bu görevlerinin ifasından dolayı mağdur, şikâyetçi, katılan, davalı ya da davacı konumunda olan personelin seçeceği bir” şeklinde değiştirilmiştir. ÜÇÜNCÜ BÖLÜM Cezaların İnfazı Cezaların infazı ve tutukluların muhafazası”",
+   "id": "P-SB-PER-01-15"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre aşağıdaki Türk Ceza Kanunu maddelerinden hangisinde yazılı suç terör suçu sayılmaz?",
+   "siklar": [
+    "309",
+    "315",
+    "302",
+    "304",
+    "314"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.3",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.3: “) 26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 302, 307, 309, 311, 312, 313, 314, 315 ve 320 nci maddeleri ile 310 uncu maddesinin birinci fıkrasında yazılı suçlar, terör suçlarıdır.”",
+   "id": "P-SB-PER-01-16"
+  },
+  {
+   "lawId": 8,
+   "soru": "2935 sayılı Olağanüstü Hal Kanunu'na göre TBMM olağanüstü hâl süresini her defasında en fazla ne kadar uzatabilir?",
+   "siklar": [
+    "Bir yıl",
+    "Üç ay",
+    "Dört ay",
+    "İki ay",
+    "Altı ay"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
+   "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.”",
+   "id": "P-SB-PER-01-17"
+  },
+  {
+   "lawId": 9,
+   "soru": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre Atatürk'ü temsil eden heykeli kıran veya bozan kişiye verilecek ceza aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Bir yıldan üç yıla kadar hapis",
+    "Bir yıldan beş yıla kadar ağır hapis",
+    "Üç yıldan beş yıla kadar hapis",
+    "İki yıldan yedi yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun m.1",
+   "aciklama": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun, m.1: “Atatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimseye bir yıldan beş yıla kadar ağır hapis cezası verilir.”",
+   "id": "P-SB-PER-01-18"
+  },
+  {
+   "lawId": 10,
+   "soru": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre tedbir kararlarına karşı itiraz nereye yapılır?",
+   "siklar": [
+    "Asliye ceza mahkemesine",
+    "İdare mahkemesine",
+    "Mahallin mülki amirine",
+    "Sulh ceza hâkimliğine",
+    "Aile mahkemesine"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.9",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.9: “(1) Bu Kanun hükümlerine göre verilen kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir.”",
+   "id": "P-SB-PER-01-19"
+  },
+  {
+   "lawId": 10,
+   "soru": "Kolluk amiri, gecikmesinde sakınca bulunan bir hâlde şiddet uygulayan kişinin konuttan uzaklaştırılmasına karar vermiştir. 6284 sayılı Kanun'a göre bu karar kaç saat içinde hâkim tarafından onaylanmazsa kendiliğinden kalkar?",
+   "siklar": [
+    "72",
+    "48",
+    "36",
+    "24",
+    "12"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.5",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.5: “Hâkim tarafından yirmidört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.”",
+   "id": "P-SB-PER-01-20"
+  },
+  {
+   "lawId": 11,
+   "soru": "2893 sayılı Türk Bayrağı Kanunu'na aykırı bayrak kullananlar hakkında idari para cezasına kim karar verir?",
+   "siklar": [
+    "Sulh ceza hâkimi",
+    "Cumhuriyet savcısı",
+    "Mahallin mülki amiri",
+    "İl jandarma komutanı",
+    "Belediye encümeni"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2893 sayılı Türk Bayrağı Kanunu m.8",
+   "aciklama": "2893 sayılı Türk Bayrağı Kanunu, m.8: “Bu Kanun hükümlerine aykırı davranışta bulunanlara, fiilleri suç oluşturmadığı takdirde mahalli mülki amir tarafından Kabahatler Kanununun 32 nci maddesi uyarınca idarî para ceza verilir.”",
+   "id": "P-SB-PER-01-21"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre kısa süreli durdurma cezası hangi sürelerde verilir?",
+   "siklar": [
+    "Dört, altı veya on ay",
+    "Bir, üç veya beş ay",
+    "İki, dört veya yedi ay",
+    "Üç, beş veya sekiz ay",
+    "Altı, on iki veya on sekiz ay"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.7",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.7: “ç) Kısa süreli durdurma: Personelin bulunduğu kademede ilerlemesinin dört, altı veya on ay süre ile durdurulmasıdır.”",
+   "id": "P-SB-PER-01-22"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin cezalarına karşı itiraz süresi, kararın tebliğinden itibaren kaç gündür?",
+   "siklar": [
+    "5",
+    "7",
+    "15",
+    "30",
+    "10"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.30",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.30: “(1) Disiplin amirleri tarafından verilen disiplin cezalarına karşı, cezanın tebliğ edilmesinden itibaren on gün içinde itiraz edilebilir.”",
+   "id": "P-SB-PER-01-23"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre aşağıdakilerden hangisi disiplin cezaları arasında yer almaz?",
+   "siklar": [
+    "Meslekten çıkarma",
+    "Aylıktan kesme",
+    "Kınama",
+    "Oda hapsi",
+    "Uzun süreli durdurma"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.10",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.10: “(13) Bu Kanunda belirlenmiş ve bir disiplin cezasıyla yaptırıma bağlanmış fiillerin sahil güvenlik personelince yurtdışı liman ziyaretlerinde veya Türk karasuları dışında işlenmesi halinde, uyarma ve kınama cezası gerektiren fiillerde meydana gelen zarar ve tehlikenin ağırlığı da dikkate alınarak aylıktan kesme, kısa veya uzun süreli durdurma cezası; aylıktan kesme, kısa veya uzun süreli durdurma cezası gerektiren fiillerde ise yine meydana gelen zarar veya tehlikenin ağırlığı dikkate alınarak meslekten çıkarma cezası verilebilir. Geçici olarak kontrol altına alma”",
+   "id": "P-SB-PER-01-24"
+  },
+  {
+   "lawId": 13,
+   "soru": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre sözleşme süresi için aşağıdakilerden hangisi doğrudur?",
+   "siklar": [
+    "Bir yıldan az, beş yıldan fazla olamaz.",
+    "Beş yıldan az, on beş yıldan fazla olamaz.",
+    "İki yıldan az, on yıldan fazla olamaz.",
+    "Dört yıldan az, sekiz yıldan fazla olamaz.",
+    "Üç yıldan az, dokuz yıldan fazla olamaz."
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.10",
+   "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.10: “Sözleşme süreleri; üç yıldan az ve dokuz yıldan fazla olmamak şartıyla, hizmet gerekleri ve yetiştirme maliyetlerine bağlı olarak kuvvet, sınıf ve branşlara göre yönetmelikte belirlenir.”",
+   "id": "P-SB-PER-01-25"
+  },
+  {
+   "lawId": 14,
+   "soru": "5070 sayılı Elektronik İmza Kanunu'na göre güvenli elektronik imza hangi imza ile aynı hukuki sonucu doğurur?",
+   "siklar": [
+    "Elle atılan imza",
+    "Paraf",
+    "Mühür",
+    "Noter onaylı imza",
+    "Vekâleten atılan imza"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.5",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.5: “Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur.”",
+   "id": "P-SB-PER-01-26"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre cevap için süre belirtilmemiş bilgi ve görüş talepleri en geç kaç iş günü içinde cevaplandırılır?",
+   "siklar": [
+    "7",
+    "30",
+    "15",
+    "10",
+    "5"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.33",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.33: “alebin kendilerine ulaşmasından itibaren en geç beş iş günü; süre belirtilmeyen bilgi ve görüş taleplerini ise talebin kendilerine ulaşmasından itibaren en geç on beş iş günü içinde yerine getirir.”",
+   "id": "P-SB-PER-01-27"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangileri doğrudur?\nI. Belgelerde Times New Roman yazı tipi 12 punto olarak kullanılır.\nII. \"ACELE\" ibaresi sağ üst köşede kırmızı renkle yazılır.\nIII. Paragraf başı girintisi 2 santimetredir.",
+   "siklar": [
+    "I ve II",
+    "II ve III",
+    "Yalnız II",
+    "Yalnız I",
+    "I, II ve III"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.7",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.7: “Harf büyüklüğünün Times New Roman için 12 punto, Arial için 11 punto olması esastır.”",
+   "id": "P-SB-PER-01-28"
+  },
+  {
+   "lawId": 16,
+   "soru": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre sözleşmeli subayın muvazzaf subaylığa geçebilmesi için fiilî hizmet süresi bakımından hangi şart aranır?",
+   "siklar": [
+    "Dördüncü yılına başlamış, on ikinci yılını bitirmemiş olmak",
+    "Beşinci yılına başlamış, onuncu yılını bitirmemiş olmak",
+    "Yedinci yılına başlamış, on ikinci yılını bitirmemiş olmak",
+    "Onuncu yılına başlamış, on beşinci yılını bitirmemiş olmak",
+    "Üçüncü yılına başlamış, dokuzuncu yılını bitirmemiş olmak"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Sözleşmeli Subay ve Astsubay Yönetmeliği m.8",
+   "aciklama": "Sözleşmeli Subay ve Astsubay Yönetmeliği, m.8: “Muvazzaf Subaylığa Geçme Madde 8 – Muvazzaf subaylığa geçişle ilgili şartlar şunlardır: a) Muvazzaf subaylığa geçiş başvuru şartları şunlardır: 1) Yedinci fiili hizmet yılına başlamış veya on ikinci fiili hizmet yılını bitirmemiş olmak.”",
+   "id": "P-SB-PER-01-29"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre düğün, nişan, konser, panayır ve festival gibi toplanmalar için mülki amire ne kadar önce bildirimde bulunulur?",
+   "siklar": [
+    "12 saat",
+    "48 saat",
+    "72 saat",
+    "24 saat",
+    "7 gün"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.21",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.21: “(2) Düğün, nişan, konser, panayır, festival ve benzeri toplanmalarda kamu düzeninin korunmasına yönelik tedbirlerin alınmasına imkân sağlamak için ilgililer kırksekiz saat önce mülki amire bildirimde bulunmak zorundadır.”",
+   "id": "P-SB-PER-01-30"
+  },
+  {
+   "lawId": 18,
+   "soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre veri sorumlusunun belirleyeceği periyodik imha aralığı her hâlde ne kadarı geçemez?",
+   "siklar": [
+    "Altı ay",
+    "Bir yıl",
+    "Dokuz ay",
+    "İki ay",
+    "Üç ay"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik m.11",
+   "aciklama": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik, m.11: “Bu süre her halde altı ayı geçemez.”",
+   "id": "P-SB-PER-01-31"
+  },
+  {
+   "lawId": 19,
+   "soru": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre aşağıdakilerden hangisi Yönetmeliğin kapsamında değildir?",
+   "siklar": [
+    "Türkiye Cumhuriyet Merkez Bankası",
+    "Belediyeler",
+    "İl özel idareleri",
+    "Üniversiteler",
+    "Köyler"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik m.2",
+   "aciklama": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik, m.2: “Bu Yönetmelik; merkezi idare kapsamındaki kamu idareleri ile bunların bağlı, ilgili veya ilişkili kuruluşlarının, köyler hariç olmak üzere mahalli idareler ve bunların bağlı ve ilgili kuruluşları ile birlik veya şirketlerinin, T.”",
+   "id": "P-SB-PER-01-32"
+  },
+  {
+   "lawId": 20,
+   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre yivsiz tüfek ruhsatnamesi kaç yıl süreyle geçerlidir?",
+   "siklar": [
+    "1",
+    "10",
+    "3",
+    "5",
+    "2"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) m.10",
+   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), m.10: “ı bulunduğu valilik veya kaymakamlığına başvurmaları halinde yivsiz tüfek ruhsatnamesi harcının ödenmiş olması kaydıyla, verildiği tarihten geçerli olmak üzere 5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.”",
+   "id": "P-SB-PER-01-33"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre kolluk, hakkında tedbir kararı verilen korunan kişinin konutunu en az ne sıklıkla ziyaret eder?",
+   "siklar": [
+    "Günde bir",
+    "Ayda iki",
+    "Ayda bir",
+    "On beş günde bir",
+    "Haftada bir"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.35",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.35: “Bu kontrol korunan kişinin; a) Bulunduğu konutun haftada en az bir kez ziyaret edilmesi, b) İkinci derece dâhil olmak üzere yakınları ile iletişim kurulması, c) Komşularının bilgisine başvurulması, ç) Oturulan yerin muhtarından bilgi alınması, d) Bulunduğu konutun çevresinde araştırma yapılması, şeklinde yerine getirilir. Tedbir kararlarına aykırılığın tespit edilmesi halinde bu husus hakkında tutanak tutulur ve Cumhuriyet başsavcılığına gönderilir. (6) Tedbir kararlarının alınması ve uygulanması için yapılan iş ve işlemlerin aşamaları ve sonucu hakkında ilgili kurum tarafından aynı gün en geç saat 16.00’ya kadar en seri vasıtalarla ŞÖNİM’e bildirilir. (7) Korunan kişi, korunduğu yer dışında başka bir yere gitmesi gerektiğinde gideceği yer hakkında kolluğa bilgi verir, bu durumda dahi hakkında verilen kararın uygulanmasına devam edilir. Korunan kişi tarafından tedbir kararına uyulmaması halinde bu husus kolluk amiri tarafından bir tutanak ile tespit edilir. (8) Tedbir kararının ilgililere tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez. Kolluk görevleri”",
+   "id": "P-SB-PER-01-34"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre zorlama hapsi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Toplam süresi altı ayı geçemez.",
+    "Adli sicile işlenir ve tekerrüre esas olur.",
+    "Duruşma yapılmaksızın karar verilir.",
+    "İlk ihlalde üç günden on güne kadar verilir.",
+    "Her tekrarında on beş günden otuz güne kadar verilir."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.38",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.38: “(7) Zorlama hapsi kararları tekerrüre esas olmaz, koşullu salıverilme hükümleri uygulanmaz ve adli sicil kayıtlarına işlenmez.”",
+   "id": "P-SB-PER-01-35"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre bir nöbetin süresi en fazla ne kadar olabilir?",
+   "siklar": [
+    "36 saat",
+    "24 saat",
+    "8 saat",
+    "12 saat",
+    "48 saat"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.42",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.42: “(2) Nöbet, kurumlarda amirin münasip göreceği zamanda başlar ve yirmidört saati geçemez.”",
+   "id": "P-SB-PER-01-36"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre subay, astsubay ve uzman jandarmaların haftalık çalışma süresi kaç saattir?",
+   "siklar": [
+    "48",
+    "50",
+    "36",
+    "40",
+    "45"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.24",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.24: “Çalışma saatleri MADDE 24 - (1) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmaların haftalık çalışma süresi genel olarak 40 saattir.”",
+   "id": "P-SB-PER-01-37"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Araç içinde resmî kıyafetle yolculukta şapka çıkarılabilir.",
+    "Disiplin cezaları 7068 sayılı Kanunda düzenlenir.",
+    "Millî marş açık yerde şapkalı olarak dinlenir.",
+    "Devlet memurları ile rütbeli personel arasında astlık-üstlük ilişkisi yoktur.",
+    "Emir yalnızca resmî kıyafetli olarak verilebilir."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.10",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.10: “(6) Emir, resmî veya sivil kıyafetli olarak verilebilir.”",
+   "id": "P-SB-PER-01-38"
+  },
+  {
+   "lawId": 25,
+   "soru": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun'a göre ruhsatın veriliş sebebi ortadan kalkan ruhsat sahibi, durumu ruhsatı veren makama kaç ay içinde bildirmek zorundadır?",
+   "siklar": [
+    "Üç",
+    "Altı",
+    "Bir",
+    "İki",
+    "On iki"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.6",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.6: “Ruhsatların veriliş sebeplerinin ortadan kalkması halinde ruhsat sahibi durumu ruhsatı veren makama altı ay içinde bildirmekle yükümlüdür.”",
+   "id": "P-SB-PER-01-39"
+  },
+  {
+   "lawId": 25,
+   "soru": "B, ruhsatsız bir tabancayı evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
+   "siklar": [
+    "İki yıldan beş yıla kadar",
+    "Altı aydan bir yıla kadar",
+    "İki yıldan dört yıla kadar",
+    "Bir yıldan üç yıla kadar",
+    "Üç yıldan sekiz yıla kadar"
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.13",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.13: “a ses veya gaz fişeği atabilen silah iken bu Kanun hükümlerine tabi silah vasfına dönüştürülen silahları satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.”",
+   "id": "P-SB-PER-01-40"
+  },
+  {
+   "lawId": 108,
+   "soru": "Astsubay Sicil Yönetmeliği'ne göre bir sicil üstü, sicili düzenlenecek kişiyle o sicil dönemi içinde fiilen en az kaç ay görev yapmadıkça sicil düzenleyemez?",
+   "siklar": [
+    "1",
+    "3",
+    "4",
+    "2",
+    "6"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Astsubay Sicil Yönetmeliği m.15",
+   "aciklama": "Astsubay Sicil Yönetmeliği, m.15: “Sicil düzenleyebilmek için gerekli asgarî süre Madde 15- (1) Bir sicil üstü, asil veya her ne suretle olursa olsun vekil olarak, o görev yerinde sicili düzenlenecek kimse ile beraber o sicil dönemi içersinde fiilen en az üç ay görev yapmadıkça sicil düzenleyemez.”",
+   "id": "P-SB-PER-01-41"
+  },
+  {
+   "lawId": 108,
+   "soru": "Astsubay Sicil Yönetmeliği'ne göre aşağıdakilerden hangisi sicil üstlerinin sicil düzenleyemeyeceği durumlardan biri değildir?",
+   "siklar": [
+    "Sicil düzenleme tarihinde sicil üstünün açıkta olması",
+    "Kendisi ile aynı nasıplı astsubay hakkında",
+    "Sonradan kalksa bile evlilik bağı bulunmuş astsubay hakkında",
+    "Sicil düzenleme tarihinde sicil üstünün tutuklu olması",
+    "Kendisiyle bir yıldır birlikte görev yapan astsubay hakkında"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Astsubay Sicil Yönetmeliği m.16",
+   "aciklama": "Astsubay Sicil Yönetmeliği, m.16: “Kıdemli olan veya kendisi ile aynı nasıplı bulunan astsubay hakkında, b.”",
+   "id": "P-SB-PER-01-42"
+  },
+  {
+   "lawId": 108,
+   "soru": "Astsubay Sicil Yönetmeliği'ne göre sicil belgeleriyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Sicil belgeleri \"ÖZEL\" gizlilik derecelidir.\nII. Sicil belgeleri, sicil üstlerince 2 Mayıs tarihi itibarıyla düzenlenir.\nIII. Elektronik ortamda sicil verilmesi durumunda sicil belgesi sureti bir üst sicil üstüne gönderilir.",
+   "siklar": [
+    "I, II ve III",
+    "I ve II",
+    "II ve III",
+    "Yalnız III",
+    "Yalnız I"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "Astsubay Sicil Yönetmeliği m.25",
+   "aciklama": "Astsubay Sicil Yönetmeliği, m.25: “Sicil belgelerinin gizlilik derecesi Madde 25- (1) Sicil belgeleri “ÖZEL” gizlilik dereceli olup, yetkili olmayanlara gösterilemez ve herhangi bir kısmı yok edilemez.”",
+   "id": "P-SB-PER-01-43"
+  },
+  {
+   "lawId": 108,
+   "soru": "Astsubay Sicil Yönetmeliği'ne göre sicil belgesinde genel değerlendirme kategorisi olarak BAŞARILI işaretlenmesi durumunda genel değerlendirme notu kaç olarak alınır?",
+   "siklar": [
+    "75",
+    "90",
+    "85",
+    "71",
+    "93"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Astsubay Sicil Yönetmeliği m.3",
+   "aciklama": "Astsubay Sicil Yönetmeliği, m.3: “kısmında yer alan ÜSTÜN BAŞARILI, BAŞARILI, YETERLİ VE YETERSİZ şeklinde belirlenen dört kategorinin işaretlenmesi; ÜSTÜN BAŞARILI işaretlenmesi durumunda 93, BAŞARILI işaretlenmesi durumunda 85, YETERLİ işaretlenmesi durumunda 71 ve YETERSİZ işaretlenmesi durumunda 59,99 olarak alınan notu, dd.”",
+   "id": "P-SB-PER-01-44"
+  },
+  {
+   "lawId": 108,
+   "soru": "Astsubay Sicil Yönetmeliği'ne göre aşağıdakilerden hangisi sicil değerlendirme ve denetleme kurullarının yetki ve görevlerinden biri değildir?",
+   "siklar": [
+    "Kasıtlı veya keyfî verilmiş sicilleri saptamak",
+    "Geri besleme yapmak üzere veri sağlamak",
+    "Sicil üstü olamayacak personeli tespit edip atama birimlerine duyurmak",
+    "Personele sicil notu takdir etmek",
+    "Sicil notu %60'ın altında olan personelin durumunu görüşmek"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "Astsubay Sicil Yönetmeliği m.33",
+   "aciklama": "Astsubay Sicil Yönetmeliği, m.33: “Kurul not takdir etmez.”",
+   "id": "P-SB-PER-01-45"
+  },
+  {
+   "lawId": 112,
+   "soru": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği'ne göre genel atamalar her yıl hangi aylar arasında yapılır?",
+   "siklar": [
+    "Haziran-Eylül",
+    "Mart-Kasım",
+    "Nisan-Ağustos",
+    "Mayıs-Ekim",
+    "Temmuz-Aralık"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği m.31",
+   "aciklama": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği, m.31: “Atama zamanı MADDE 31 – (1) Genel atamalar her yıl Mayıs-Ekim aylarının dâhil olduğu zaman aralığında yapılır.”",
+   "id": "P-SB-PER-01-46"
+  },
+  {
+   "lawId": 112,
+   "soru": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği'ne göre personelin hizmet süresi en fazla kaç kez temdit edilebilir?",
+   "siklar": [
+    "5",
+    "3",
+    "2",
+    "6",
+    "4"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği m.27",
+   "aciklama": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği, m.27: “(3) Hizmet süresi en fazla dört kez temdit edilebilir.”",
+   "id": "P-SB-PER-01-47"
+  },
+  {
+   "lawId": 112,
+   "soru": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği'ne göre aşağıdakilerden hangisi personelin genel atama dönemi dışında veya hizmet bölgesi süresi tamamlanmadan atanabileceği hâllerden biri değildir?",
+   "siklar": [
+    "Yurt dışı sürekli göreve seçilme",
+    "Kritik ve önem arz eden kadroların boşalması",
+    "Terfi",
+    "Kadro veya konuş değişikliği",
+    "Kıdem sırasının değişmesi"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği m.34",
+   "aciklama": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği, m.34: “d) Yurt dışı sürekli göreve seçilme.”",
+   "id": "P-SB-PER-01-48"
+  },
+  {
+   "lawId": 112,
+   "soru": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği'ne göre başka bir hizmet bölgesine atanan Astsubay Kıdemli Çavuş Mert, ilişiğini kestiği gün dâhil ve yol süresi hariç en geç kaç gün içinde yeni görevine katılmak zorundadır?",
+   "siklar": [
+    "20",
+    "10",
+    "7",
+    "30",
+    "15"
+   ],
+   "dogru": 4,
+   "tip": "vaka",
+   "kaynak": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği m.52",
+   "aciklama": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği, m.52: “zmet bölgesi dâhilinde bulunanlar, ilişik kestikleri günü takip eden 24 saat içinde; belediye hudutları dışında veya başka bir hizmet bölgesinde bulunanlar ise ilişik kestikleri gün dâhil ve mevzuatta düzenlenen yol süresi hariç 15 gün içinde; bu sürenin sonu resmi tatil gününe rastlıyorsa hizmetin başladığı gün mesai saati içinde atandığı göreve katılmak zorundadır.”",
+   "id": "P-SB-PER-01-49"
+  },
+  {
+   "lawId": 112,
+   "soru": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği'ne göre personelin kendileri ve eşlerinin nüfusa kayıtlı olduğu yerlere atanmamasıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Toplam nüfusu 4.000.000'u aşan iller bu kuralın dışındadır.\nII. Belediye sınırları içindeki nüfusu 1.000.000'u aşan ilçeler bu kuralın dışındadır.\nIII. Eş için evlendikten sonraki nüfusa kayıtlı olduğu yer esas alınır.",
+   "siklar": [
+    "Yalnız I",
+    "I, II ve III",
+    "Yalnız II",
+    "I ve III",
+    "I ve II"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği m.15",
+   "aciklama": "Jandarma Genel Komutanlığı Subay, Astsubay ve Uzman Jandarma Atama Yönetmeliği, m.15: “Personelin kendileriyle eşlerinin nüfusa kayıtlı olduğu yerlere atanmaması MADDE 15 – (1) Bu Yönetmelikte belirtilen istisnalar hariç olmak üzere personel, toplam nüfusu 4.000.000’u aşan iller ile belediye sınırları içindeki nüfusu 1.000.000’u aşan ilçeler hariç, kendileri ve eşlerinin evlenmeden önceki nüfusa kayıtlı olduğu illere ve ilçelere atanmaz.”",
+   "id": "P-SB-PER-01-50"
+  },
+  {
+   "lawId": 105,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Kurum Kimlik Kartları Yönetmeliği'ne göre aşağıdakilerden hangisi kimlik kartlarının geçici olarak geri alınmasını gerektiren hâllerden biri değildir?",
+   "siklar": [
+    "Hapis cezalarının infazı",
+    "Tutuklanma",
+    "Devlet tarafından eğitim için yurt dışına gönderilme",
+    "Güvenlik tedbiri olarak verilen geçici meslekten men cezasının infazı",
+    "Genel veya yerel seçim için istifa"
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği m.7",
+   "aciklama": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği, m.7: “(4) Yurt dışı misyon koruma ve uluslararası sözleşmeler gereği yurt dışında görevlendirilen veya devlet tarafından eğitim yapmak üzere yurt dışına gönderilen personelin kimlik kartı geri alınmaz.”",
+   "id": "P-SB-PER-01-51"
+  },
+  {
+   "lawId": 105,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Kurum Kimlik Kartları Yönetmeliği'ne göre kimlik kartlarının basımı hangi birim tarafından yapılır?",
+   "siklar": [
+    "Nüfus ve Vatandaşlık İşleri Genel Müdürlüğü",
+    "Darphane ve Damga Matbaası Genel Müdürlüğü",
+    "TSK Akıllı Kart Yönetim Merkezi Başkanlığı",
+    "Jandarma ve Sahil Güvenlik Akademisi Başkanlığı",
+    "Jandarma Genel Komutanlığı Personel Başkanlığı"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği m.6",
+   "aciklama": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği, m.6: “ı) Kimlik kartlarının basımı, Jandarma Genel Komutanlığı ve Sahil GüvenlikKomutanlığı ile Genelkurmay Başkanlığı arasında yapılan protokolhükümlerine göre Türk Silahlı Kuvvetleri Akıllı Kart Yönetim MerkeziBaşkanlığı; dağıtımı ve yönetimi ise Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı tarafından yapılır.”",
+   "id": "P-SB-PER-01-52"
+  },
+  {
+   "lawId": 105,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Kurum Kimlik Kartları Yönetmeliği'ne göre kimlik kartını kaybeden Astsubay Üstçavuş Kemal'e yeni kimlik kartı tanzim edilene kadar ne verilir?",
+   "siklar": [
+    "Herhangi bir belge verilmez.",
+    "Görev yaptığı birimce görev belgesi verilir.",
+    "Emniyet müdürlüğünce kayıp belgesi verilir.",
+    "Nüfus müdürlüğünce geçici kimlik belgesi verilir.",
+    "Geçici kimlik kartı verilir."
+   ],
+   "dogru": 1,
+   "tip": "vaka",
+   "kaynak": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği m.6",
+   "aciklama": "JGK ve SGK Kurum Kimlik Kartı Yönetmeliği, m.6: “d) Kimlik kartını kaybedenlere, yeni kimlik kartı tanzim edilene kadar personelin görev yaptığı birim tarafından görev belgesi verilir.”",
+   "id": "P-SB-PER-01-53"
+  },
+  {
+   "lawId": 71,
+   "soru": "657 sayılı Devlet Memurları Kanunu'na göre hizmeti on yıldan fazla olan memurun yıllık izin süresi kaç gündür?",
+   "siklar": [
+    "15",
+    "25",
+    "45",
+    "20",
+    "30"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "657 Sayılı Devlet Memurları Kanunu m.102",
+   "aciklama": "657 Sayılı Devlet Memurları Kanunu, m.102: “) Devlet memurlarının yıllık izin süresi, hizmeti 1 yıldan on yıla kadar (On yıl dahil) olanlar için yirmi gün, hizmeti on yıldan fazla olanlar için 30 gündür.”",
+   "id": "P-SB-PER-01-54"
+  },
+  {
+   "lawId": 71,
+   "soru": "657 sayılı Devlet Memurları Kanunu'na göre aşağıdakilerden hangisi görevden uzaklaştırmaya yetkili olanlardan biri değildir?",
+   "siklar": [
+    "Disiplin kurulları",
+    "Atamaya yetkili amirler",
+    "İlçelerde kaymakamlar",
+    "Bakanlık ve genel müdürlük müfettişleri",
+    "İllerde valiler"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "657 Sayılı Devlet Memurları Kanunu m.138",
+   "aciklama": "657 Sayılı Devlet Memurları Kanunu, m.138: “Görevden uzaklaştırmaya yetkililer şunlardır.”",
+   "id": "P-SB-PER-01-55"
+  },
+  {
+   "lawId": 136,
+   "soru": "926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre muvazzaf astsubaylar, astsubay nasbedildikleri tarihten itibaren fiilen kaç yıl hizmet etmedikçe istifa edemezler?",
+   "siklar": [
+    "10",
+    "8",
+    "15",
+    "20",
+    "12"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "TSK Personel Kanunu (Personel Hükümleri) m.112",
+   "aciklama": "TSK Personel Kanunu (Personel Hükümleri), m.112: “) Muvazzaf subay ve astsubaylar subay ve astsubay nasbedildikleri tarihten itibaren fiilen onbeş yıl hizmet etmedikçe istifa edemezler.”",
+   "id": "P-SB-PER-01-56"
+  },
+  {
+   "lawId": 136,
+   "soru": "926 sayılı Türk Silahlı Kuvvetleri Personel Kanunu'na göre astsubayların her yıl kademe ilerlemesi yapabilmesi için aranan şartlarla ilgili aşağıdakilerden hangileri doğrudur?\nI. Bulunduğu kademede bir terfi yılını doldurmuş olmak\nII. Bulunduğu rütbede ilerleyebileceği bir ileri kademe bulunmak\nIII. Sicil notunun, sicil tam notunun %60'ı ve daha yukarısı olması",
+   "siklar": [
+    "II ve III",
+    "Yalnız I",
+    "I, II ve III",
+    "Yalnız III",
+    "I ve II"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "TSK Personel Kanunu (Personel Hükümleri) m.93",
+   "aciklama": "TSK Personel Kanunu (Personel Hükümleri), m.93: “Bulunduğu kademede bir terfi yılını doldurmuş olmak, 2.”",
+   "id": "P-SB-PER-01-57"
+  },
+  {
+   "lawId": 75,
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre aşağıdakilerden hangisi kısa vadeli sigorta kollarından biri değildir?",
+   "siklar": [
+    "Analık sigortası",
+    "Hastalık sigortası",
+    "İş kazası sigortası",
+    "Meslek hastalığı sigortası",
+    "Yaşlılık sigortası"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.3",
+   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.3: “Tanımlar MADDE 3- Bu Kanunun uygulanmasında; 1) Bakanlık: Çalışma ve Sosyal Güvenlik Bakanlığını, 2) Kurum: Sosyal Güvenlik Kurumu Başkanlığını, 3) Sosyal sigortalar: Kısa ve uzun vadeli sigorta kollarını, 4) Kısa vadeli sigorta kolları: İş kazası ve meslek hastalığı, hastalık ve analık sigortası kollarını, 5) Uzun vadeli sigorta kolları: Malûllük, yaşlılık ve ölüm sigortası kollarını, 6) Sigortalı: Kısa ve/veya uzun vadeli sigorta kolları bakımından adına prim ödenmesi gereken veya kendi adına prim ödemesi gereken kişiyi, 7) Hak sahibi: Sigortalının veya sürekli iş göremezlik geliri ile malûllük, vazife malûllüğü veya yaşlılık aylığı almakta olanların ölümü halinde, gelir veya aylık bağlanmasına veya toptan ödeme yapılmasına hak kazanan eş, çocuk, ana ve babasını, 8) Genel sağlık sigortası: Kişilerin öncelikle sağlıklarının korunmasını, sağlık riskleri ile karşılaşmaları halinde ise oluşan harcamaların finansmanını sağlayan sigortayı, 9) Genel sağlık sigortalısı: Bu Kanunun 60 ıncı maddesinde sayılan kişileri, 10) Bakmakla yükümlü olduğu kişi: 5 inci maddenin birinci fıkrasının (b) bendi ile 60 ıncı maddenin birinci fıkrasının (c) bendinin (1), (2) ve (7) numaralı alt bentleri ile yedinci ve sekizinci fıkraları ile onikinci fıkrasındaki askeri öğrenci adayları ile Jandarma ve Sahil Güvenlik Akademisi öğrenci adayları dışında kalan genel sağlık sigortalısının, sigortalı sayılmayan veya isteğe bağlı sigortalı olmayan, kendi sigortalılığı nedeniyle gelir veya aylık bağlanmamış olan;123 a) Eşini, b) 18 yaşını, lise ve dengi öğrenim veya 5/6/1986 tarihli ve 3308 sayılı Meslekî Eğitim Kanununda belirtilen aday çıraklık ve çıraklık eğitimi ile işletmelerde meslekî eğitim görmesi halinde 20 yaşını, yüksek öğrenim görmesi halinde 25 yaşını doldurmamış ve evli olmayan çocukları ile yaşına bakılmaksızın bu Kanuna göre malûl olduğu tespit edilen evli olmayan çocuklarını, c) Geçiminin genel sağlık sigortalısı tarafından sağlandığı Kurumca belirlenen kriterlere göre tespit edilen ana ve babasını, 11) Hizmet akdi: 22/4/1926 tarihli ve 818 sayılı Borçlar Kanununda tanımlanan hizmet akdini ve iş mevzuatında tanımlanan iş sözleşmesini veya hizmet akdini, 12) Ücret: 4 üncü maddenin birinci fıkrasının (a) ve (c) bendi kapsamında sigortalı sayılanlara saatlik, günlük, haftalık, aylık veya yıllık olarak para ile ödenen ve süreklilik niteliği taşıyan brüt tutarı, 13) Asgarî ücret: 22/5/2003 tarihli ve 4857 sayılı İş Kanunu gereğince 16 yaşından büyük işçiler için belirlenen bir aylık brüt ücreti, 14) Ay: Ücretleri; her ayın 15'inde ödenen 4 üncü maddenin birinci fıkrasının (a) ve (c) bentleri kapsamındaki sigortalılar için, ayın 15'inden ertesi ayın 15'ine kadar geçen, diğer sigortalılar için ise ayın 1'i ilâ sonu arasında geçen ve otuz gün olarak değerlendirilen süreyi, 15) Yıl: Ücretleri; her ayın 15'inde ödenen 4 üncü maddenin birinci fıkrasının (a) ve (c) bentleri kapsamındaki sigortalılar için, 15 Ocak tarihinden ertesi yılın 15 Ocak tarihine kadar geçen, diğer sigortalılar için ise 1 Ocak ilâ 31 Aralık tarihleri arasında geçen ve 360 gün olarak değerlendirilen süreyi, Kanunun 60 ıncı maddesinin birinci fıkrasının (c) bendinin (1) ve (2) numaralı alt bentlerinin dışında kalan genel sağlık sigortalısının,” ibaresi “5 inci maddenin birinci fıkrasının (b) bendi ile 60 ıncı maddenin birinci fıkrasının (c) bendinin (1), (2) ve (7) numaralı alt bentleri ile yedinci ve sekizinci fıkralarının dışında kalan genel sağlık sigortalısının,” olarak, aynı bendin (c) alt bendinde yer alan “sigortalı” ibaresi “genel sağlık sigortalısı” olarak değiştirilmiştir. birinci fıkrasının (c) bendinin (1), (2) ve (7) numaralı alt bentleri ile yedinci ve sekizinci” ibaresi “60 ıncı maddenin birinci fıkrasının (c) bendinin (1), (2) ve (7) numaralı alt bentleri ile yedinci, sekizinci ve onikinci” şeklinde 1/3/2017 tarihinden geçerli olmak üzere değiştirilmiş; daha sonra bu hüküm 1/2/2018 tarihli ve 7073 sayılı Kanunun 72 nci maddesiyle aynen kabul edilerek 1/3/2017 tarihinde yürürlüğe girmek üzere kanunlaşmıştır. numaralı bendinde yer alan “yedinci, sekizinci ve onikinci fıkralarının” ibaresi “yedinci ve sekizinci fıkraları ile onikinci fıkrasındaki askeri öğrenci adayları ile Jandarma ve Sahil Güvenlik Akademisi öğrenci adayları” şeklinde değiştirilmiştir. 16) Gelir: İş kazası veya meslek hastalığı halinde sigortalıya veya sigortalının ölümü halinde hak sahiplerine, yapılan sürekli ödemeyi, 17) Aylık: Malûllük, yaşlılık ve ölüm sigortaları ile vazife malûllüğü halinde yapılan sürekli ödemeyi, 18) Ödeme dönemi: Bu Kanuna göre bağlanan gelir ve aylıkların, ödeme tarihinden takip eden ödeme tarihine kadar geçen süreyi, 19) Tarımsal faaliyet: Kendi mülkünde, ortaklık veya kiralamak suretiyle başkalarının mülkünde veya kamuya mahsus mahallerde; ekim, dikim, bakım, üretme, yetiştirme ve ıslah yoluyla yahut doğrudan doğruya tabiattan istifade etmek suretiyle bitki, orman, hayvan ve su ürünleri elde edilmesini ve/veya bu ürünlerin yetiştiricileri tarafından; muhafazasını, taşınmasını veya pazarlanmasını, 20) Kurum Sağlık Kurulu: Kurumca yetkilendirilen sağlık hizmeti sunucularının sağlık kurullarınca düzenlenecek raporlardaki teşhis ve bu teşhise dayanak teşkil eden belgeleri incelemek suretiyle, çalışma gücü kaybı ve meslekte kazanma gücü kaybı oranlarını, erken yaşlanma halini, vazifelerini yapamayacak şekilde meslekte kazanma gücü kaybını ve malûllük derecelerini belirlemeye yetkili hekimlerden ve/veya diş hekimlerinden oluşan kurulları, 21) Kamu idareleri: 10/12/2003 tarihli ve 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanununun 3 üncü maddesinin birinci fıkrasının (a) bendinde belirtilen kamu idareleri ve kamu iktisadi teşebbüsleri ile bunların bağlı idare, ortaklık, müessese ve işletmeleri ve yukarıda belirtilenlerin ödenmiş sermayesinin % 50’sinden fazlasına sahip oldukları ortaklık ve işletmelerden Türk Ticaret Kanununa tabi olmayanlarla özel kanunlarına göre personel çalıştıran diğer kamu kurumlarını, 22) Sağlık hizmeti: Genel sağlık sigortalısı ve bakmakla yükümlü olduğu kişilere 63 üncü madde gereği finansmanı sağlanacak tıbbî ürün ve hizmetleri, 23) Kişiye yönelik koruyucu sağlık hizmeti: Kişilerin hastalıktan korunması veya sağlıklı olma halinin sürdürülmesi amacıyla, kişiye yönelik olarak finansmanı sağlanacak sağlık hizmetlerini, 24) Aile hekimi: Sağlık Bakanlığı tarafından aile hekimi olarak yetkilendirilen ve Kurum ile sözleşme yapmış hekimleri, 25) Sağlık hizmeti sunucusu: Sağlık hizmetini sunan ve/veya üreten; gerçek kişiler ile kamu ve özel hukuk tüzel kişilerini ve bunların tüzel kişiliği olmayan şubelerini, 26) Katılım payı: Sağlık hizmetlerinden yararlanabilmek için, genel sağlık sigortalısı veya bakmakla yükümlü olduğu kişiler tarafından ödenecek tutarı, 27) Uluslararası koruma başvurusu veya statüsü sahibi ve vatansız kişi: İçişleri Bakanlığı tarafından başvuru sahibi, mülteci, ikincil koruma veya şartlı mülteci statüsü sahibi veya vatansız olarak tanınan kişileri, 28) Peşin sermaye değeri: Kurumca, bu Kanunun ilgili maddelerinde belirtilen giderlerin yaş, kesilme ihtimali ve Kurumca belirlenecek iskonto oranı dikkate alınarak hesaplanan tutarı, 29) Güncelleme katsayısı: Her yılın Aralık ayına göre Türkiye İstatistik Kurumu tarafından açıklanan en son temel yıllı tüketici fiyatları genel indeksindeki değişim oranının % 100’ü ile sabit fiyatlarla gayri safi yurtiçi hasıla gelişme hızının % 30’unun toplamına (1) tam sayısının ilâve edilmesi sonucunda bulunan değeri, 30) Vazife malûllüğü: Bu Kanunun 47 nci maddesinde tarif edilen vazife ve/veya harp malûllüğü hallerini, 31) Uluslararası sosyal güvenlik sözleşmeleri: Ülkemizin taraf olduğu sosyal güvenlik sözleşmelerini, ifade eder. Bu maddenin (29) numaralı bendinde belirtilen güncelleme katsayısının hesabında, en son temel yıllı tüketici fiyatları genel indeksindeki değişim oranı veya sabit fiyatlarla gayri safi yurtiçi hasıla gelişme hızının eksi olduğu yıllarda eksi değerler sıfır olarak alınır. 4857 sayılı Kanunun 13 üncü ve 14 üncü maddelerine göre kısmi süreli veya çağrı üzerine çalışanlar, ay içerisinde günün bazı saatlerinde çalışıp, çalıştığı saat karşılığında ücret alanlardan ay içerisinde otuz günden eksik prim ödeme gün sayısı bulunanlar, sigortalı çalışmama şartı hariç birinci fıkranın (10) numaralı bendinde yer verilen diğer şartları haiz olmaları kaydıyla otuz günden eksik günleri için genel sağlık sigortalısının bakmakla yükümlü olduğu kişi sayılır.”",
+   "id": "P-SB-PER-01-58"
+  },
+  {
+   "lawId": 75,
+   "soru": "5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre hizmet akdiyle çalışan sigortalının geçirdiği iş kazası, işveren tarafından Kuruma en geç kazadan sonraki kaç iş günü içinde bildirilir?",
+   "siklar": [
+    "3",
+    "7",
+    "10",
+    "5",
+    "2"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam) m.13",
+   "aciklama": "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu (MALİYE Tam Kapsam), m.13: “İş kazasının 4 üncü maddenin birinci fıkrasının; a) (a) bendi ile 5 inci madde kapsamında bulunan sigortalılar bakımından bunları çalıştıran işveren tarafından, o yer yetkili kolluk kuvvetlerine derhal ve Kuruma da en geç kazadan sonraki üç işgünü içinde, b) (b) bendi kapsamında bulunan sigortalı bakımından kendisi tarafından, bir ayı geçmemek şartıyla rahatsızlığının bildirim yapmaya engel olmadığı günden sonra üç işgünü içinde, c) (Mülga: 17/4/2008-5754/8 md.”",
+   "id": "P-SB-PER-01-59"
+  },
+  {
+   "lawId": 107,
+   "soru": "Subay Sicil Yönetmeliği'ne göre subay sicil belgeleri kaç çeşittir?",
+   "siklar": [
+    "4",
+    "6",
+    "5",
+    "3",
+    "2"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Subay Sicil Yönetmeliği m.20",
+   "aciklama": "Subay Sicil Yönetmeliği, m.20: “Yedek Subay Sicil Belgesi (EK-3), olmak üzere üç çeşittir.”",
+   "id": "P-SB-PER-01-60"
+  },
+  {
+   "lawId": 138,
+   "soru": "3466 sayılı Uzman Jandarma Kanunu'na göre uzman jandarmalar hangi rütbeyi taşıyan asker kişi sayılır?",
+   "siklar": [
+    "Er",
+    "Astsubay çavuş",
+    "Onbaşı",
+    "Çavuş",
+    "Başçavuş"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Uzman Jandarma Kanunu (Personel Hükümleri) m.9",
+   "aciklama": "Uzman Jandarma Kanunu (Personel Hükümleri), m.9: “) Uzman jandarmalar, çavuş rütbesi taşıyan asker kişi sayılırlar.”",
+   "id": "P-SB-PER-01-61"
+  },
+  {
+   "lawId": 138,
+   "soru": "3466 sayılı Uzman Jandarma Kanunu'na göre uzman jandarmaların sicil ve kademe ilerlemesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Görev esnasında yaralanıp uzun süreli tedavi görenlerden o yıla ait sicil notu olmayanların kademe ilerlemesi sicil notu şartı aranmadan yapılır.",
+    "Bir rütbede en fazla iki defa kademe ilerlemesi yapamayanların yetersizlikten ilişkileri kesilir.",
+    "Her yıl askerî ve mülki olmak üzere iki çeşit sicil belgesi düzenlenir.",
+    "Mülki görevi bulunmayan jandarma birliklerinde görev yapanlar için yalnızca mülki sicil belgesi düzenlenir.",
+    "Kademe ilerlemesi şartları 926 sayılı Türk Silahlı Kuvvetleri Personel Kanununa göre yapılır."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "Uzman Jandarma Kanunu (Personel Hükümleri) m.13",
+   "aciklama": "Uzman Jandarma Kanunu (Personel Hükümleri), m.13: “Mülki görevi bulunmayan jandarma birliklerinde görev yapanlar için sadece askerî sicil belgesi düzenlenir.”",
+   "id": "P-SB-PER-01-62"
+  },
+  {
+   "lawId": 138,
+   "soru": "3466 sayılı Uzman Jandarma Kanunu'na göre kendi nam ve hesabına fakülte veya yüksekokul bitiren uzman jandarmaların astsubay çavuşluğa nasbedilmesi için aranan şartlarla ilgili aşağıdakilerden hangileri doğrudur?\nI. 35 yaşından gün almamış olmak\nII. En az beş yıl uzman jandarma olarak görev yapmış olmak\nIII. Tâbi tutulacakları temel askerlik eğitiminde başarılı olmak",
+   "siklar": [
+    "Yalnız II",
+    "I, II ve III",
+    "Yalnız I",
+    "I ve III",
+    "I ve II"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "Uzman Jandarma Kanunu (Personel Hükümleri) m.18",
+   "aciklama": "Uzman Jandarma Kanunu (Personel Hükümleri), m.18: “35 yaşından gün almamış olmak,910 4.”",
+   "id": "P-SB-PER-01-63"
+  },
+  {
+   "lawId": 138,
+   "soru": "3466 sayılı Uzman Jandarma Kanunu'na göre İçişleri Bakanı, uzman jandarmaların istek üzerine emeklilik ve istifa işlemlerine ilişkin onay yetkisini kime devredebilir?",
+   "siklar": [
+    "Bakan Yardımcısına",
+    "Valiye",
+    "İl jandarma komutanına",
+    "Jandarma Genel Komutanına",
+    "Jandarma Genel Komutanlığı Personel Başkanına"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Uzman Jandarma Kanunu (Personel Hükümleri) Ek 3",
+   "aciklama": "Uzman Jandarma Kanunu (Personel Hükümleri), Ek 3: “) İçişleri Bakanı, uzman jandarmaların istek üzerine veya yaş haddi, adi malullük dâhil malullük veya vazife malullüğüne bağlı emeklilik işlemleri ile istifa işlemlerine ilişkin onay yetkisini Jandarma Genel Komutanına devredebilir.”",
+   "id": "P-SB-PER-01-64"
+  },
+  {
+   "lawId": 137,
+   "soru": "3269 sayılı Uzman Erbaş Kanunu'na göre uzman erbaşlara verilecek mazeret izinleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Kısa süreli mazeretlerde kullanılmak üzere yıllık yirmi güne kadar mazeret izni verilebilir.",
+    "Kendisinin veya çocuğunun evlenmesi hâlinde isteği üzerine yedi güne kadar mazeret izni verilebilir.",
+    "Yangın, deprem, su baskını gibi olağanüstü mazeretlerde bir yıl içinde otuz güne kadar mazeret izni verilebilir.",
+    "Verilen mazeret izinleri yıllık izne mahsup edilmez.",
+    "Eşinin doğum yapması hâlinde isteği üzerine on güne kadar mazeret izni verilebilir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "Uzman Erbaş Kanunu (Personel Hükümleri) m.11",
+   "aciklama": "Uzman Erbaş Kanunu (Personel Hükümleri), m.11: “) Ayrıca, kısa süreli mazeretlerde kullanılmak üzere on beş güne kadar yıllık mazeret izni verilebilir.”",
+   "id": "P-SB-PER-01-65"
+  },
+  {
+   "lawId": 137,
+   "soru": "3269 sayılı Uzman Erbaş Kanunu'na göre ilk beş aylık intibak dönemi içindeki uzman erbaşlardan en az iki disiplin amirinden toplam kaç defa veya daha fazla disiplin cezası alanlar intibak edememiş sayılır?",
+   "siklar": [
+    "İki",
+    "Dört",
+    "Beş",
+    "Üç",
+    "Sekiz"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Uzman Erbaş Kanunu (Personel Hükümleri) m.12/A",
+   "aciklama": "Uzman Erbaş Kanunu (Personel Hükümleri), m.12/A: “li mevzuatında personelin vazife, ödev ve sorumlulukları olarak düzenlenen hususlara riayet etmedikleri rapor, tutanak ve her türlü belge ile sabit olanlar, b) En az iki disiplin amirinden toplam üç defa veya daha fazla disiplin cezası alanlar, c) Verilecek intibak eğitimlerinden başarısız olduğu sınav notu ile tespit edilenler, ç) Bu Kanunda düzenlenen ve görevde başarısız olma veya kendilerinden istifade edilememe halleri bulunanlar, intibak edememiş sayılırlar ve 12 nci maddenin birinci fıkrasına göre sözleşmeleri Başkanlığı tarafından” ibaresi “Milli Savunma Bakanlığınca” şeklinde değiştirilmiştir. feshedilir.”",
+   "id": "P-SB-PER-01-66"
+  },
+  {
+   "lawId": 137,
+   "soru": "3269 sayılı Uzman Erbaş Kanunu'na göre astsubay meslek yüksekokulunda öğrenim görerek astsubaylığa geçmek isteyen uzman erbaş, müracaat yılının ocak ayının ilk günü itibarıyla kaç yaşını bitirmemiş olmalıdır?",
+   "siklar": [
+    "22",
+    "30",
+    "26",
+    "27",
+    "25"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Uzman Erbaş Kanunu (Personel Hükümleri) m.15",
+   "aciklama": "Uzman Erbaş Kanunu (Personel Hükümleri), m.15: “) Astsubay meslek yüksekokulu giriş sınavına müracaat yapılan yılın ocak ayının ilk günü itibarıyla yirmibeş yaşını bitirmemiş olmak, 5) Astsubay meslek yüksek okulu giriş sınavında başarılı olmak, 6) 926 sayılı Türk Silâhlı Kuvvetleri Personel Kanununda, 4752 sayılı Astsubay Meslek Yüksek Okulları Kanununda ve bu kanunlara dayanılarak yürürlüğe konulacak yönetmeliklerde belirtilen; ceza durumuna, sicil notuna, kişisel ve ahlâkî niteliklere, disiplin durumuna, görevdeki başarısına, sağlık durumuna, meslekî yeterliliğe ve sahip olması gereken diğer niteliklere ilişkin şartları sağlamak. Yukarıdaki fıkra hükümlerine göre; astsubay nasbedilecekler, astsubay meslek yüksek okullarındaki öğrenim ve eğitimin süre ve şekilleri bakımından, 4752 sayılı Astsubay Meslek Yüksek Okulları Kanununa tâbi tutulurlar; astsubay nasbedilmek üzere temel askerlik eğitimine tâbi tutulacakların temel askerlik eğitimi esnasındaki öğrenim ve eğitim süre ve şekilleri, bu konuda yürürlüğe konulacak yönetmelikte belirtilir. Uzman erbaşlardan astsubay nasbedileceklerin astsubay meslek yüksek okullarında veya tâbi tutulacakları temel askerlik eğitimi esnasındaki öğrenim ve eğitimlerinde, özlük hakları yönünden uzman erbaşlık statüleri devam eder, evli ve nişanlı olmama durumu ile öğrenime ara vermeme şartı aranmaz. Bunların astsubay meslek yüksek okullarında yatılı olarak öğrenim görmeleri ile ilgili hususlar yönetmelikte düzenlenir. Bunlara okul ve temel askerlik eğitimi süresince 926 sayılı Türk Silâhlı Kuvvetleri Personel Kanununun 143 üncü maddesinde belirtilen öğrenci harçlıkları ödenmez. Bu süre içinde Türkiye Cumhuriyeti Emekli Sandığı iştirakçilikleri rütbe, derece ve kademelerine göre emsalleri gibi devam eder. Astsubay meslek yüksek okullarında veya tâbi tutulacakları temel askerlik eğitiminde başarılı olamayanlar ile kendi isteği ile ayrılanlardan, istekli olan ve uzman erbaş olmak için gerekli olan şartları kaybetmemiş olanlar, bu Kanun hükümlerine göre uzman erbaş olarak hizmete devam ettirilirler. Bu madde hükümlerine göre uzman erbaşlardan astsubaylığa geçirilenler, 27.7.1967 tarihli ve 926 sayılı Türk Silâhlı Kuvvetleri Personel Kanunu hükümlerine tâbi olurlar. Bunların mecburi hizmet süresi, ilk sözleşmelerinin onaylandığı tarihten itibaren onbeş yıldır. Bu personelin uzman erbaşlıkta geçen hizmet süreleri astsubay rütbe bekleme süresinden sayılmaz.1617 Astsubaylığa geçmek için gerekli başvuru şartlarını haiz olup harekât veya yurt dışı operasyon görevleri nedeniyle birinci fıkranın (a) bendi kapsamında başvuruda bulunamayan veya seçme sınavına katılamayan uzman erbaşlara başvuru yapamadıkları veya katılım sağlayamadıkları sınav sayısı kadar sınav hakkı verilir.”",
+   "id": "P-SB-PER-01-67"
+  },
+  {
+   "lawId": 76,
+   "soru": "7179 sayılı Askeralma Kanunu'na göre kıtasından veya görevi icabı bulunmak zorunda olduğu yerden izinsiz olarak kaç günden fazla uzaklaşma firar sayılır?",
+   "siklar": [
+    "On",
+    "Altı",
+    "Yedi",
+    "Üç",
+    "Dört"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Askeralma Kanunu m.3",
+   "aciklama": "Askeralma Kanunu, m.3: “Bu Kanunda yazılı nedenlerle askerlik hizmetine alımın geçici süreyle geri bırakılmasını, j) Firar: Kıtasından veya görevi icabı bulunmak zorunda olduğu yerden izinsiz olarak altı günden fazla uzaklaşmayı, k) Geçici terhis: Kanuni bir mazerete dayalı olarak askerlik hizmet süresinin geçici olarak durdurulmasını, l) Geç iltihak bakayası: Sevkini yaptırdığı hâlde kendisine tanınan yol süresi dışında birliğine katılanları, m) Hava değişimi/izin tecavüzü: Kıtasından veya görevini yapmakta olduğu yerden izin, istirahat veya hava değişimi alarak ayrılanlardan, dönmeye mecbur bulundukları günden itibaren altı gün içerisinde özürsüz olarak gelmemeyi, n) Hizmet süresi: Bu Kanunda belirtilen muvazzaf askerlik sürelerini, o) Muafiyet: Bu Kanunda yazılı nedenlerle askerlik hizmetinin yerine getirilmemesini, ö) Muvazzaf: Askerlik hizmetini yerine getirmek üzere silahaltına alınanları, p) Muvazzaflık dönemi: Yükümlünün sevk belgesinde yazılı sevk tarihi ile başlayıp terhis tarihine kadar geçen süreyi, r) Noksan hizmetli: Tabi olduğu muvazzaflık süresinden eksik hizmet yaptığı tespit edilenleri, s) Sağlık kararı: Yükümlülerin askerliğe elverişli olup olmadıkları hakkında tek hekim veya sağlık kurullarınca verilen kararı, ş) Sağlık kurulu: Sağlık Bakanlığınca belirlenen sağlık raporu vermeye yetkili sağlık kuruluşları bünyesinde oluşturulan heyeti, t) Saklı: Yirmi yaşına girmiş oldukları hâlde isimlerini nüfus kayıtlarına geçirmemiş bulunanları, u) Sefer görev emri: Sefer görevi verilen yedek personelin seferberlik ve savaş hâlinde nereye gideceğini, ne kadar zaman içinde birliğine katılacağını ve katılacağı birliğin seferberlik numarasını bildiren belgeyi, ü) Sınıflandırma: Yükümlülerin; sağlık durumları, öğrenimleri, meslekleri, fiziki yetenekleri ve Bakanlıkça tespit edilecek diğer niteliklerinin bilgi sistemi ortamında değerlendirilmesini, v) Silahaltı davetiyesi: Barışta manevra, tatbikat, atış ve konferanslar gibi öğretim ve eğitim maksadıyla silahaltına alınacak personelle araçların çağrılmasına ilişkin belgeyi, y) Temel askerlik eğitimi: Silahaltına alınan yükümlülere sınıf farkı gözetmeksizin bedenen ve ruhen askerlik hizmetine hazırlayıcı temel bilgi, beceri ve alışkanlıkları kazandırmak amacıyla verilen ve süresi Bakanlıkça belirlenen eğitimi, z) Terhis: Muvazzaflık hizmet süresini tamamlayan veya tamamlamış kabul edilen yükümlülerin, yedeklik döneminde silahaltına alınıp hizmetine ihtiyaç kalmayanlar ile özel kanunlarla Türk Silahlı Kuvvetlerine katılan ve resmî bir kıyafet taşıyan kişilerin çeşitli nedenlerle Türk Silahlı Kuvvetlerinden ayrılmalarını, aa) Yedek astsubay: Yedek astsubay adaylarından öğrenimini müteakip astsubay astçavuş nasbedilenleri, bb) Yedek astsubay adayı: Yapılan seçim ve sınıflandırma sonucu yedek astsubay statüsüne ayrılanlardan, astsubay astçavuş nasbedilinceye kadar geçen dönemde bulunan yükümlüleri, cc) Yedek astsubay aday adayı: İki veya üç yıl süreli yükseköğretim kurumlarından mezun olanlar ve bunların yetkili makamlarca dengi olduğu kabul edilen yurt dışı öğrenim kurumu mezunları ile dört yıl ve daha fazla süreli yükseköğretim kurumlarından mezun olanlar ve bunların yetkili makamlarca dengi olduğu kabul edilen yurt dışı öğrenim kurumu mezunlarından istekli olan yükümlüleri, çç) Yedek personel: Bu Kanun hükümlerine göre askerlik hizmetini yerine getirenler ile yerine getirmiş sayılanları, dd) Yedek subay: Yedek subay adaylarından öğrenimini müteakip asteğmen nasbedilenleri, ee) Yedek subay adayı: Yapılan seçim ve sınıflandırma sonucu yedek subay statüsüne ayrılanlardan, asteğmen nasbedilinceye kadar geçen dönemde bulunan yükümlüleri, ff) Yedek subay aday adayı: Dört yıl ve daha fazla süreli yükseköğretim kurumlarından mezun olanlar ile yetkili makamlarca dengi olduğu kabul edilen yurt dışı öğrenim kurumu mezunu olan yükümlüleri, gg) Yedeklik dönemi: Muvazzaflık döneminin bitiminden askerlik çağının sonuna kadar olan süreyi, ğğ) Yedeklik hizmeti: Yedek personelin, yedeklik dönemi içerisinde ihtiyaç duyulduğunda silahaltına alınarak yerine getirdiği askerlik hizmetini, hh) Yoklama: Yükümlülerin sağlık muayenelerinin yapılarak askerliğe elverişli olup olmadıkları, öğrenim durumları, meslekleri ve niteliklerinin tespitini, ıı) Yoklama dönemi: Askerlik çağının başlangıcından muvazzaflık hizmetinin başlangıç tarihine kadar geçen süreyi, ii) Yoklama kaçağı: Tabi olduğu yoklama yılı içerisinde yoklamasını yaptırmayanları, jj) Yükümlü: Askerlik hizmetini bu Kanun hükümleri gereğince yerine getirmek veya yerine getirmiş sayılmak zorunda olan erkek Türk vatandaşını, ifade eder.”",
+   "id": "P-SB-PER-01-68"
+  },
+  {
+   "lawId": 76,
+   "soru": "7179 sayılı Askeralma Kanunu'na göre askerlik çağı ve hizmet süresiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Askerlik çağı; yoklama, muvazzaflık ve yedeklik olmak üzere üç döneme ayrılır.",
+    "Erbaş ve erler için hizmet süresi altı aydır.",
+    "Hizmet sürelerini artırmaya veya azaltmaya Millî Savunma Bakanlığı karar verir.",
+    "Yedek subay ve yedek astsubaylar için hizmet süresi on iki aydır.",
+    "Askerlik çağı Cumhurbaşkanınca beş yıla kadar uzatılabilir veya kısaltılabilir."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Askeralma Kanunu m.5",
+   "aciklama": "Askeralma Kanunu, m.5: “Hizmet sürelerini, ihtiyaca göre bir katına kadar artırmaya veya yarısına kadar azaltmaya Cumhurbaşkanınca karar verilebilir.”",
+   "id": "P-SB-PER-01-69"
+  },
+  {
+   "lawId": 76,
+   "soru": "Jandarma birliğinde askerlik hizmetini yapan Er A.'nın muvazzaflık hizmeti sırasında eşi doğum yapmıştır. 7179 sayılı Askeralma Kanunu'na göre Er A.'ya talebi üzerine kaç gün ilave izin verilir?",
+   "siklar": [
+    "On beş",
+    "Üç",
+    "On",
+    "Beş",
+    "Yedi"
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "Askeralma Kanunu m.28",
+   "aciklama": "Askeralma Kanunu, m.28: “(4) Muvazzaflık hizmeti esnasında eşi doğum yapan ya da eşi veya ikinci derece dâhil kan veya kayın hısımlarından biri vefat eden erbaş ve erlere, talepleri üzerine ilave on gün izin verilir.”",
+   "id": "P-SB-PER-01-70"
+  },
+  {
+   "lawId": 109,
+   "soru": "Jandarma Kantin Yönetmeliği'ne göre kantin heyeti adaylarının belirlenmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Adaylık şartlarını haiz istekli personele öncelik verilebilir.",
+    "Birlik mal saymanları kantin heyetine aday gösterilemez.",
+    "Aday sayısı, seçilecek asil üye sayısının üç katından az olamaz.",
+    "Erbaş ve erler kantin heyetine aday olarak gösterilebilir.",
+    "Son üç dönem kantin heyetinde asil üye olarak görev yapanlar aday gösterilmez."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Kantin Yönetmeliği m.7",
+   "aciklama": "Jandarma Kantin Yönetmeliği, m.7: “Kantin heyetine, subay, astsubay, uzman jandarma, sivil memur ve uzman erbaşlar aday olarak gösterilebilir.”",
+   "id": "P-SB-PER-01-71"
+  },
+  {
+   "lawId": 109,
+   "soru": "Jandarma Kantin Yönetmeliği'ne göre kantin heyetinin seçimiyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Seçim her yılın Kasım ayı ilk haftasında yapılır.\nII. Yeni kantin heyeti 1 Ocak tarihinde göreve başlar.\nIII. İlk toplantıda çoğunluk sağlanamazsa müteakip toplantıda da mevcudun yarıdan bir fazlası aranır.",
+   "siklar": [
+    "Yalnız III",
+    "I ve II",
+    "I, II ve III",
+    "II ve III",
+    "Yalnız I"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "Jandarma Kantin Yönetmeliği m.8",
+   "aciklama": "Jandarma Kantin Yönetmeliği, m.8: “Kantin heyetinin seçimi, her yılın Kasım ayı ilk haftasında yapılır.”",
+   "id": "P-SB-PER-01-72"
+  },
+  {
+   "lawId": 109,
+   "soru": "Jandarma Kantin Yönetmeliği'ne göre birlik komutanının yazılı izniyle kantin gelirlerinden verilen avans en geç ne zamana kadar kapatılır?",
+   "siklar": [
+    "Hesap yılının sonuna kadar",
+    "Verildiği tarihten itibaren bir hafta içinde",
+    "Verildiği takvim ayının sonuna kadar",
+    "Verildiği tarihten itibaren üç ay içinde",
+    "Bir sonraki kantin heyeti seçimine kadar"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Jandarma Kantin Yönetmeliği m.20",
+   "aciklama": "Jandarma Kantin Yönetmeliği, m.20: “Verilen avans, hizmetin bitiminde gerekli evrak düzenlenerek en geç verildiği takvim ayının sonuna kadar kapatılır.”",
+   "id": "P-SB-PER-01-73"
+  },
+  {
+   "lawId": 106,
+   "soru": "Şehitlik Yönetmeliği'ne göre aşağıdakilerden hangisi şehitliklere defnedilmez?",
+   "siklar": [
+    "Görevi sırasında yaralanıp bu yaralanmanın sebep ve tesiriyle sonradan hayatını kaybeden astsubay",
+    "Kara sınırlarının korunması görevinde hayatını kaybeden er",
+    "Terörle mücadele görevi sırasında hayatını kaybeden uzman erbaş",
+    "Terörle mücadele sırasında hayatını kaybeden geçici köy korucusu",
+    "Kanuni izne giderken yolda hayatını kaybeden er"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Şehitlik Yönetmeliği m.3",
+   "aciklama": "Şehitlik Yönetmeliği, m.3: “c) Kanuni izinler, hava değişimi veya bunlara gidiş ve dönüşler esnasında hayatını kaybedenler ile bakaya, firar, izin tecavüzü ve hava değişimi tecavüzünde iken hayatını kaybedenler.”",
+   "id": "P-SB-PER-01-74"
+  },
+  {
+   "lawId": 106,
+   "soru": "Görev sırasında şehit düşen Astsubay K.'nın eşi, reşit iki çocuğu ve anası hayattadır. Şehitlik Yönetmeliği'ne göre hangi şehitliğe ya da mezarlığa defin yapılacağına dair yazılı beyan kimden alınır?",
+   "siklar": [
+    "Tüm yakınlarından ortak olarak",
+    "En büyük reşit kardeşinden",
+    "Eşinden",
+    "En büyük reşit çocuğundan",
+    "Anasından"
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "Şehitlik Yönetmeliği m.5",
+   "aciklama": "Şehitlik Yönetmeliği, m.5: “(1) Şehitliğe defin kararı veren makam tarafından hayatını kaybeden kişinin sırasıyla eşinden, en büyük reşit çocuğundan, anasından, babasından, en büyük reşit kardeşinden hangi şehitliğe ya da mezarlığa defin yapılmasını talep ettiğine dair yazılı beyan alınır ve bu beyan defnin yapılacağı il valiliğine bildirilir.”",
+   "id": "P-SB-PER-01-75"
+  },
+  {
+   "lawId": 106,
+   "soru": "Şehitlik Yönetmeliği'ne göre yurt içindeki şehitliklerin yönetim, inşa, bakım ve onarımına ilişkin keşif raporları hangi ayın sonuna kadar İçişleri Bakanlığına gönderilir?",
+   "siklar": [
+    "Ocak",
+    "Mart",
+    "Ağustos",
+    "Eylül",
+    "Haziran"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Şehitlik Yönetmeliği m.10",
+   "aciklama": "Şehitlik Yönetmeliği, m.10: “(1) Yurtiçinde bulunan şehitliklerin yönetim, inşa, bakım, onarım ve koruma işlemlerine ilişkin valiliklerce hazırlanan keşif raporları, ödeneğin planlanması için müteakip yılın Mart ayı sonuna kadar İçişleri Bakanlığına gönderilir.”",
+   "id": "P-SB-PER-01-76"
+  },
+  {
+   "lawId": 110,
+   "soru": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği'ne göre şapka, kep, bere gibi başlıklar ön kenarı ile kaş arasında ne kadar mesafe bırakılarak giyilir?",
+   "siklar": [
+    "Tam iki parmak",
+    "En az bir, en fazla bir buçuk parmak",
+    "En az iki, en fazla üç parmak",
+    "En az yarım, en fazla bir parmak",
+    "En az bir buçuk, en fazla iki buçuk parmak"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği m.5",
+   "aciklama": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği, m.5: “(10) Şapka, kep, bere gibi başlıklar, ön kenarları/siperleri ile kaş arasında en az bir, en fazla bir buçuk parmak kalınlığında mesafe bırakılarak, kaşlara paralel olarak giyilir.”",
+   "id": "P-SB-PER-01-77"
+  },
+  {
+   "lawId": 110,
+   "soru": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği'ne göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Resmî kıyafetle kullanılan çanta sırtta veya omuza asılarak taşınabilir.",
+    "Tırnaklar uzatılmaz, temiz ve bakımlı olur.",
+    "Karargâh gömleğinin cepleri boş bulundurulur.",
+    "Pantolonun arka cepleri kapaklı olur.",
+    "Resmî kıyafet içine dışarıdan görünecek şekilde atlet giyilmez."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği m.5",
+   "aciklama": "Jandarma Genel Komutanlığı Kıyafet Yönetmeliği, m.5: “Bu hallerde çanta sol el ile taşınır, sırtta veya omuza asılmak suretiyle kullanılmaz.”",
+   "id": "P-SB-PER-01-78"
+  },
+  {
+   "lawId": 111,
+   "soru": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği'ne göre tesis yönetim kurullarıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Yönetim kurulu üç asil ve iki yedek üyeden teşekkül eder.\nII. Yönetim kurulu en az altı ayda bir defa toplanır.\nIII. Oyların eşit çıkması hâlinde başkanın katıldığı taraf çoğunluğu sağlamış kabul edilir.",
+   "siklar": [
+    "Yalnız II",
+    "I ve III",
+    "I ve II",
+    "Yalnız I",
+    "I, II ve III"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği m.7",
+   "aciklama": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği, m.7: “a) Tesislerin yönetim kurulları; söz konusu tesisin işletme sorumluluğunu üstlenen komutanlıklarca/makamlarca, kendi bağlısı karargâh, birlik ve kurumlardan seçilecek üç asil ve iki yedek üyeden teşekkül eder.”",
+   "id": "P-SB-PER-01-79"
+  },
+  {
+   "lawId": 111,
+   "soru": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği'ne göre subay ve astsubayların brüt maaşından kesilen üye aidatının oranı en az ne olmalıdır?",
+   "siklar": [
+    "Binde beş",
+    "Binde bir",
+    "Yüzde iki",
+    "Binde üç",
+    "Yüzde bir"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği m.22",
+   "aciklama": "Ordu Evleri, Askerî Gazinolar, Kışla Gazinoları ve Vardiya Yatakhaneleri ile Eğitim Merkezleri Yönetmeliği, m.22: “Bu oran binde birden az olamaz.”",
+   "id": "P-SB-PER-01-80"
+  }
+ ]
+}
