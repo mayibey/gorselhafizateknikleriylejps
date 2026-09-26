@@ -2829,3 +2829,16 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
 - 25 Eyl — Kitap okuyucu HERKESE (başkan "yay"): net çizim + tam ekran (commit 8c4f5e5, OTA e4815bff) ve kalem/parmak ayrımı
   (commit 923dd6a, OTA f045be4f; tablet kullanıcısı: "kalemle yazarken elimle kaydıramıyorum"). Yalnız runtime 1.0.46
   (haftalık aktiflerin 773'ü 1.0.46, eski sürümde 10 kişi). Kalem ayrımı gerçek Apple Pencil ile DOĞRULANMADI — geri bildirim bekleniyor.
+
+### 26 Eylül 2026 — Soru hata bildirimleri temizlendi (commit 918d705, OTA f234a5ad, runtime 1.0.46)
+- 8 Eyl'den beri bekleyen 34 bildirim (30 soru) resmî metne karşı incelendi (3 paralel ajan + elle teyit): 24 soru bildirimi haksız.
+- Düzeltilen (Fabrika kaynağı → soru:uret/soru:duello → denemelerde YERİNDE, yeniden karıştırma yok; id bazlı fark ölçüldü):
+  20-D-060 (Sözleşmeli Yön., doğru cevabı yoktu), 09-D-051 (OHAL, şık m.9'da geçiyordu), 03-D-008 + 5442-S-002 (kök sade),
+  2918-S-016 A şıkkı, 7068-S-019 E şıkkı, 03-D-003 açıklama fıkra, 28-S-018 + 2893-S-016 açıklama notu. 05-D-149 KARA LİSTE
+  ((4) sayılı çizelge metni kaynaklarımızda yok → doğru gün sayısı teyit edilemedi).
+- KÖK SEBEP NOTU: soru-standart.mjs "m.14 hükümleri arasında" / "m.11 uyarınca" gibi madde atıflarını sökünce kök anlamını yitiriyor
+  (20-D-060, 09-D-051, 03-D-008). Benzerleri taranmalı (açık iş).
+- Başkan: Bünyamin (otoyol 130) ve İbrahim Erkol bildirimleri mevzuat.gov.tr GÜNCEL metinden doğrulandı (KTY m.100 hâlâ 120 +
+  İçişleri 20 km/s yetkisi; 5326 m.28/10 onbeşbin; 4735 m.9 kesin kabule kadar). Israrcı olmayan dil.
+- 10 kişiye kişiye özel duyuru (hepsi 201) + push (7 ok, 3 token yok). 34 bildirim: 12 düzeltildi, 22 incelendi-doğru; kalan yeni 0.
+- Açık: Mesut Dursun geri bildirimi "Maddeler okunmuyor" (3713 m.3 kartı) henüz incelenmedi.
