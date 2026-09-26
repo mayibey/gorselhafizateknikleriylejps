@@ -1,5 +1,6 @@
 import { Text, type TextProps } from 'react-native';
 
+import { o } from '@/lib/ekran-olcek';
 import { Palette, type PaletteColor, Type } from '@/constants/theme';
 
 type Variant = keyof typeof Type;
@@ -36,6 +37,6 @@ const VARIANT_FONT_BOLD: Record<Variant, string> = {
 export function AppText({ variant = 'govde', color = 'anaMetin', bold, style, ...rest }: AppTextProps) {
   const fontFamily = (bold ? VARIANT_FONT_BOLD : VARIANT_FONT)[variant];
   return (
-    <Text style={[{ fontSize: Type[variant], color: Palette[color], fontFamily }, style]} {...rest} />
+    <Text style={[{ fontSize: o(Type[variant]), color: Palette[color], fontFamily }, style]} {...rest} />
   );
 }

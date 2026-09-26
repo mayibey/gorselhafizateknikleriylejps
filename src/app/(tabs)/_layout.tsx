@@ -1,3 +1,4 @@
+import { EKRAN_OLCEK, o } from '@/lib/ekran-olcek';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Tabs } from 'expo-router';
@@ -15,6 +16,9 @@ import Animated, {
 
 import { FontFamily, Palette } from '@/constants/theme';
 import { useKisiselOzellik } from '@/lib/ozellik';
+
+/** Kompakt sekme çubuğu yüksekliği; tablette büyüyen simge+yazı sığsın diye biraz daha yüksek. */
+const KOMPAKT_H = EKRAN_OLCEK > 1 ? o(52) : 44;
 
 /**
  * SİS PERDESİ (başkan, 11 Ağu: "önce sis çöküyor sonra perde aralanıyor gibi").
@@ -192,17 +196,21 @@ export default function TabsLayout() {
               // ÇÖZÜM: boşluk büyükse (üç tuşlu) TAMAMINI kullan, küçükse kırpmaya devam et.
               ...(kompakt
                 ? kenar.bottom > 24
-                  ? { height: 44 + kenar.bottom, paddingBottom: kenar.bottom, paddingTop: 3 }
-                  : { height: 44 + Math.max(kenar.bottom * 0.55, 6), paddingTop: 3 }
-                : null),
+                  ? { height: KOMPAKT_H + kenar.bottom, paddingBottom: kenar.bottom, paddingTop: 3 }
+                  : { height: KOMPAKT_H + Math.max(kenar.bottom * 0.55, 6), paddingTop: 3 }
+                : EKRAN_OLCEK > 1
+                  ? { height: o(49) + kenar.bottom, paddingBottom: kenar.bottom, paddingTop: 4 } // tablet: büyüyen yazı kesilmesin
+                  : null),
             }
           : {
               backgroundColor: Palette.kartKremi,
               borderTopColor: Palette.kenarlik,
             },
         tabBarLabelStyle: kompakt
-          ? { fontFamily: FontFamily, fontWeight: '700', fontSize: 11, marginTop: -3 }
-          : { fontFamily: FontFamily, fontWeight: '700' },
+          ? { fontFamily: FontFamily, fontWeight: '700', fontSize: o(11), marginTop: -3 }
+          : { fontFamily: FontFamily, fontWeight: '700', fontSize: o(10) },
+        // Tablette yazı simgenin YANINA kaçmasın (iPad'de çubuk dağınık görünüyordu).
+        tabBarLabelPosition: 'below-icon',
       }}>
       <Tabs.Screen
         name="index"
