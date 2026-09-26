@@ -41,4 +41,7 @@ export const SORU_KARA_LISTE = new Set([
   '10970-S-032', // Kamu Taşınmazları Yön. ne zaman yürürlüğe girmiştir (13/9/2006 — takvim ezberi)
   '4734-S-116',  // 4734 hangi maddeler hangi TARİHTE yürürlüğe girmiştir (1.1.2003 kademeli tarih)
   '3298-S-024',  // 4. madde hangi kanunla değiştirilip ne zaman yürürlüğe girmiş (değişiklik metadata)
+  // 26 Eyl 2026 — kullanıcı bildirimi (Hasan Can Kılınç): (4) sayılı çizelge eşleştirmesinde üç şık
+  // kanunda yok; çizelge metni resmî kaynaklarımızda bulunmadığı için doğru değerlerle düzeltilemedi.
+  '05-D-149',    // 7068 (4) sayılı çizelge rütbe/makam - aylıktan kesme eşleştirmesi (birden çok yanlış şık)
 ]);
