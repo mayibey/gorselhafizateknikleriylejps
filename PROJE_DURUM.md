@@ -2852,3 +2852,5 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   being shown to users". Hepsi dev.ademyilmaz hesabıyla, Brave CDP 9222 + python playwright.
 - 26 Eyl — Apple Case 22202756: 14 Eyl otomatik onaydan sonra Apple HİÇ yazmadı (18 ve 22 Eyl takipler bizden). Developer
   "Contact Us": ödeme/banka konularında YALNIZ e-posta (Contact Finance); telefon yalnız Membership & Account'ta, hafta sonu kapalı.
+- 26 Eyl — Apple için karar: başkan İngilizce bilmiyor → telefon yerine yazılı yol. **28 Eyl Pazartesi:** Finance'e 3. takip +
+  Membership & Account e-posta formundan yükseltme talebi; Türkçeleri başkana gösterilip onayla gönderilecek.
