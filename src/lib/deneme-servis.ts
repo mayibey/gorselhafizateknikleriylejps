@@ -169,11 +169,12 @@ export async function siralamaGetir(takim: DenemeTakim, denemeNo: number): Promi
 }
 
 /** Denemenin rekoru: sıralamanın ilk satırı (yoksa null). Deneme listesinde "Rekor" satırı için. */
-export async function rekorGetir(takim: DenemeTakim, denemeNo: number): Promise<SiraSatiri | null> {
-  if (!supabase) return null;
+export async function rekorGetir(takim: DenemeTakim, denemeNo: number): Promise<SiraSatiri | null | undefined> {
+  // undefined = öğrenilemedi (bağlantı/hata → satır gösterilmez) · null = henüz kimse çözmedi
+  if (!supabase) return undefined;
   const { data, error } = await supabase.rpc('deneme_siralama', { p_takim: takim, p_deneme: denemeNo, p_limit: 1 });
-  if (error || !Array.isArray(data) || !data.length) return null;
-  return data[0] as SiraSatiri;
+  if (error || !Array.isArray(data)) return undefined;
+  return data.length ? (data[0] as SiraSatiri) : null;
 }
 
 export async function kendiSiram(

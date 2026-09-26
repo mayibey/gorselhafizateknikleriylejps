@@ -103,16 +103,18 @@ function TatbikatIcerik() {
 
   // REKOR (başkan, 27 Eyl 2026: "her denemede rekor kimde görülmüyor"): açık sekmedeki her denemenin
   // sıralama birincisi. Branş denemeleri sunucuda branş ayrımsız numaralandığı için orada gösterilmez.
-  const [rekor, setRekor] = useState<Record<string, SiraSatiri | null>>({});
+  const [rekor, setRekor] = useState<Record<string, SiraSatiri | null | undefined>>({});
   const rekorAnahtarlari = useMemo((): [string, DenemeTakim, number][] => {
     if (blok === 'müşterek') return genelDenemeler(undefined).map((d) => [`m${d.no}`, 'musterek', d.no]);
+    // Branş: sunucu numarası branş ayrımsız → yalnız Jandarma'da doğru rekor verir.
+    if (blok === 'brans' && brans === 'jandarma') return genelDenemeler('brans', brans).map((d) => [`b${d.no}`, 'brans', d.no]);
     if (blok === 'karma' && karmaKey)
       return [
         ...karmaBDenemeler.map((d): [string, DenemeTakim, number] => [`k${d.no}`, 'karma', karmaSunucuNo(karmaKey, d.no)]),
         ...premiumListe.map((d): [string, DenemeTakim, number] => [`p${d.no}`, 'premium', d.no]),
       ];
     return [];
-  }, [blok, karmaKey, karmaBDenemeler, premiumListe]);
+  }, [blok, brans, karmaKey, karmaBDenemeler, premiumListe]);
   useFocusEffect(
     useCallback(() => {
       let iptal = false;
@@ -271,7 +273,7 @@ function TatbikatIcerik() {
           {genelDenemeler(blok === 'müşterek' ? undefined : blok, brans).map((d) => (
             <GenelDenemeSatir
               key={d.no}
-              rekor={blok === 'müşterek' ? rekor[`m${d.no}`] : undefined}
+              rekor={blok === 'müşterek' ? rekor[`m${d.no}`] : blok === 'brans' ? rekor[`b${d.no}`] : undefined}
               // Branş denemesi kendi başlığını taşır ("MEBS Branş Denemesi 1") — ezme.
               deneme={{ ...d, baslik: blok === 'brans' ? d.baslik : denemeAdi(blok, d.no) }}
               katsayi={puanKatsayisi(blok === 'müşterek' ? undefined : blok)}
@@ -341,9 +343,14 @@ function GenelDenemeSatir({
           {deneme.soruSayisi} soru · {deneme.soruSayisi * katsayi} puan
           {sonuc ? ` · Son: ${sonuc.dogru * katsayi}/${sonuc.toplam * katsayi} puan` : ''}
         </AppText>
+        {/* undefined = yüklenmedi/gösterilmez · null = kimse çözmedi */}
         {rekor ? (
           <AppText variant="etiket" bold color={gece ? 'altinParlak' : 'altinMetin'}>
             Rekor: {rekor.puan}/{rekor.toplam_puan} · {rekor.ad}
+          </AppText>
+        ) : rekor === null ? (
+          <AppText variant="etiket" color={gece ? 'kartMetinIkincil' : 'solukMetin'}>
+            Rekor henüz kırılmadı
           </AppText>
         ) : null}
       </View>
