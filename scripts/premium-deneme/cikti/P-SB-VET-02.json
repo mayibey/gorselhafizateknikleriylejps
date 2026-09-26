@@ -1,0 +1,1289 @@
+{
+ "id": "P-SB-VET-02",
+ "baslik": "Veteriner Subay — Premium Deneme 2",
+ "rutbe": "sb",
+ "brans": "veteriner",
+ "soruSayisi": 80,
+ "sorular": [
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre görevinin sağladığı nüfuzu kötüye kullanarak bir kimseyi kendisine yarar sağlamaya icbar eden kamu görevlisine hangi ceza verilir?",
+   "siklar": [
+    "Üç yıldan beş yıla kadar hapis",
+    "Dört yıldan on iki yıla kadar hapis",
+    "Beş yıldan on yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "Bir yıldan üç yıla kadar hapis"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.250",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.250: “) Görevinin sağladığı nüfuzu kötüye kullanmak suretiyle kendisine veya başkasına yarar sağlanmasına veya bu yolda vaatte bulunulmasına bir kimseyi icbar eden kamu görevlisi, beş yıldan on yıla kadar hapis cezası ile cezalandırılır.”",
+   "id": "P-SB-VET-02-01"
+  },
+  {
+   "lawId": 1,
+   "soru": "Bir kamu kurumunda görevli üç kamu görevlisi, hukuka aykırı olarak ve toplu biçimde görevlerini terk etmiştir. 5237 sayılı Türk Ceza Kanunu'na göre bu kişiler hakkında nasıl işlem yapılır?",
+   "siklar": [
+    "Yalnızca adli para cezasına hükmolunur.",
+    "Cezaya hükmolunmaz.",
+    "Ceza yarı oranında indirilerek verilir.",
+    "Her biri üç aydan bir yıla kadar hapis cezası ile cezalandırılır.",
+    "Her birine altı aydan iki yıla kadar hapis cezası verilir."
+   ],
+   "dogru": 1,
+   "tip": "vaka",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.260",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.260: “Kamu görevlisi sayısının üçten fazla olmaması halinde cezaya hükmolunmaz.”",
+   "id": "P-SB-VET-02-02"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre olası kastla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Müebbet hapis cezasını gerektiren suçlarda yirmi yıldan yirmi beş yıla kadar hapis cezasına hükmolunur.\nII. Ağırlaştırılmış müebbet hapis cezasını gerektiren suçlarda ağırlaştırılmış müebbet hapis cezasına hükmolunur.\nIII. Diğer suçlarda temel ceza yarı oranında artırılır.",
+   "siklar": [
+    "II ve III",
+    "I, II ve III",
+    "I ve III",
+    "I ve II",
+    "Yalnız I"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.21",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.21: “Bu halde, ağırlaştırılmış müebbet hapis cezasını gerektiren suçlarda müebbet hapis cezasına, müebbet hapis cezasını gerektiren suçlarda yirmi yıldan yirmibeş yıla kadar hapis cezasına hükmolunur; diğer suçlarda ise temel ceza üçte birden yarısına kadar indirilir.”",
+   "id": "P-SB-VET-02-03"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre suça teşebbüsle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Diğer hâllerde verilecek cezanın yarısı indirilir.",
+    "Failin suçu elinde olmayan nedenlerle tamamlayamamış olması gerekir.",
+    "Ağırlaştırılmış müebbet hapis yerine on dört yıldan yirmi bir yıla kadar hapis verilir.",
+    "Ceza, meydana gelen zarar veya tehlikenin ağırlığına göre belirlenir.",
+    "Müebbet hapis yerine on yıldan on sekiz yıla kadar hapis verilir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.35",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.35: “Diğer hallerde verilecek cezanın dörtte birinden dörtte üçüne kadarı indirilir.”",
+   "id": "P-SB-VET-02-04"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre zor kullanma yetkisine sahip kamu görevlisinin görevi sırasında kişilere karşı görevinin gerektirdiği ölçünün dışında kuvvet kullanması hâlinde hangi hükümler uygulanır?",
+   "siklar": [
+    "İşkence suçuna ilişkin hükümler",
+    "Yalnızca disiplin hükümleri",
+    "Görevi kötüye kullanma suçuna ilişkin hükümler",
+    "Kasten yaralama suçuna ilişkin hükümler",
+    "Taksirle yaralama suçuna ilişkin hükümler"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.256",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.256: “(1) Zor kullanma yetkisine sahip kamu görevlisinin, görevini yaptığı sırada, kişilere karşı görevinin gerektirdiği ölçünün dışında kuvvet kullanması halinde, kasten yaralama suçuna ilişkin hükümler uygulanır.”",
+   "id": "P-SB-VET-02-05"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre zorunlu nedenlerle senesi içinde kullanılamayıp müteakip sene içinde verilen yıllık izin süresi toplam kaç günü geçemez?",
+   "siklar": [
+    "45",
+    "90",
+    "75",
+    "60",
+    "30"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu Ek",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, Ek: “Bu müddet hiçbir suretle toplam altmış günü geçemez.”",
+   "id": "P-SB-VET-02-06"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarmanın suçları önleme amacıyla iletişimi tespit etme ve dinleme yetkisiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Tedbir sona erince dinleme kayıtları en geç on gün içinde yok edilir.",
+    "Hâkim kararını en geç kırk sekiz saat içinde verir.",
+    "Gecikmesinde sakınca bulunan hâllerde verilen yazılı emir 24 saat içinde hâkim onayına sunulur.",
+    "Kararlar en fazla altı ay için verilebilir.",
+    "Yetkili ve görevli hâkim, Ankara ağır ceza mahkemesi üyesidir."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu Ek",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, Ek: “Kararlar, en fazla üç ay için verilebilir; bu süre aynı usûlle üçer ayı geçmeyecek şekilde en fazla üç defa uzatılabilir.”",
+   "id": "P-SB-VET-02-07"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre kişisel verilerin, başka verilerle eşleştirilse dahi hiçbir surette kimliği belirli veya belirlenebilir bir kişiyle ilişkilendirilemeyecek hâle getirilmesine ne ad verilir?",
+   "siklar": [
+    "Maskeleme",
+    "Veri kayıt sistemi",
+    "Silme",
+    "Yok etme",
+    "Anonim hâle getirme"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.3",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.3: “(1) Bu Kanunun uygulanmasında; a) Açık rıza: Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı, b) Anonim hâle getirme: Kişisel verilerin, başka verilerle eşleştirilerek dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesini, c) Başkan: Kişisel Verileri Koruma Kurumu Başkanını, ç) İlgili kişi: Kişisel verisi işlenen gerçek kişiyi, d) Kişisel veri: Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgiyi, e) Kişisel verilerin işlenmesi: Kişisel verilerin tamamen veya kısmen otomatik olan ya da herhangi bir veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla elde edilmesi, kaydedilmesi, depolanması, muhafaza edilmesi, değiştirilmesi, yeniden düzenlenmesi, açıklanması, aktarılması, devralınması, elde edilebilir hâle getirilmesi, sınıflandırılması ya da kullanılmasının engellenmesi gibi veriler üzerinde gerçekleştirilen her türlü işlemi, f) Kurul: Kişisel Verileri Koruma Kurulunu, g) Kurum: Kişisel Verileri Koruma Kurumunu, ğ) Veri işleyen: Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişiyi, h) Veri kayıt sistemi: Kişisel verilerin belirli kriterlere göre yapılandırılarak işlendiği kayıt sistemini, ı) Veri sorumlusu: Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiyi, ifade eder. İKİNCİ BÖLÜM Kişisel Verilerin İşlenmesi Genel ilkeler”",
+   "id": "P-SB-VET-02-08"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangisi Kanun hükümlerinin uygulanmadığı hâllerden biri değildir?",
+   "siklar": [
+    "Verilerin kanunla yetkili kamu kurumlarınca istihbari faaliyetler kapsamında işlenmesi",
+    "Verilerin resmî istatistik ile anonim hâle getirilerek işlenmesi",
+    "Verilerin yargı makamlarınca kovuşturma veya yargılama işlemlerine ilişkin işlenmesi",
+    "Verilerin gerçek kişilerce aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi",
+    "Veri işlemenin suç işlenmesinin önlenmesi için gerekli olması"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.28",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.28: “riç, ilgili kişinin haklarını düzenleyen 11 inci ve Veri Sorumluları Siciline kayıt yükümlülüğünü düzenleyen 16 ncı maddeleri aşağıdaki hâllerde uygulanmaz: a) Kişisel veri işlemenin suç işlenmesinin önlenmesi veya suç soruşturması için gerekli olması.”",
+   "id": "P-SB-VET-02-09"
+  },
+  {
+   "lawId": 4,
+   "soru": "Tebliğ memuru, muhatabı adreste bulamamış; evrakı muhtara imza karşılığı teslim etmiş ve ihbarnameyi binanın kapısına yapıştırmıştır. 7201 sayılı Tebligat Kanunu'na göre tebliğ tarihi hangisidir?",
+   "siklar": [
+    "İhbarnamenin kapıya yapıştırıldığı tarih",
+    "Muhatabın evrakı muhtardan teslim aldığı tarih",
+    "En yakın komşuya haber verildiği tarih",
+    "Evrakın muhtara teslim edildiği tarihi izleyen beşinci gün",
+    "İhbarnamenin yapıştırıldığı tarihten itibaren on beşinci gün"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "7201 sayılı Tebligat Kanunu m.21",
+   "aciklama": "7201 sayılı Tebligat Kanunu, m.21: “İhbarnamenin kapıya yapıştırıldığı tarih, tebliğ tarihi sayılır.”",
+   "id": "P-SB-VET-02-10"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre kaymakam, ilçe idare şube başkanlarına acele hâllerde en fazla kaç güne kadar izin verebilir?",
+   "siklar": [
+    "5",
+    "3",
+    "15",
+    "8",
+    "10"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.31",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.31: “19 J) Kaymakam, ilçe idare şube başkanlarına acele hallerde (8 güne kadar) ve tayini kendisine ait memurlara, Memurlar Kanunundaki yıllık izin, süresine mahsup edilmek üzere bir aya kadar izin verebilir.”",
+   "id": "P-SB-VET-02-11"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre aşağıdakilerden hangisi il idare kurulunda yer almaz?",
+   "siklar": [
+    "Tarım müdürü",
+    "İl jandarma komutanı",
+    "Defterdar",
+    "Hukuk işleri müdürü",
+    "Millî eğitim müdürü"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.57",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.57: “İl idare kurulu, valinin başkanlığı altında hukuk işleri müdürü, defterdar, milli egitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden teşekkül eder.”",
+   "id": "P-SB-VET-02-12"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre fiili işlediği sırada kaç yaşını doldurmamış çocuk hakkında idari para cezası uygulanamaz?",
+   "siklar": [
+    "16",
+    "11",
+    "12",
+    "15",
+    "18"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.11",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.11: “(1) Fiili işlediği sırada onbeş yaşını doldurmamış çocuk hakkında idarî para cezası uygulanamaz.”",
+   "id": "P-SB-VET-02-13"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre içtima ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Bir fiil hem kabahat hem suç ise her ikisinden ayrı ayrı yaptırım uygulanır.",
+    "Suçtan dolayı yaptırım uygulanamayan hâllerde kabahat dolayısıyla yaptırım uygulanır.",
+    "Kesintisiz fiille işlenen kabahatte yaptırım kararı verilinceye kadar fiil tek sayılır.",
+    "Aynı kabahatin birden fazla işlenmesinde her biri için ayrı idari para cezası verilir.",
+    "Tek fiille yalnız idari para cezası öngörülen birden fazla kabahat işlenirse en ağır ceza verilir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.15",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.15: “(3) Bir fiil hem kabahat hem de suç olarak tanımlanmış ise, sadece suçtan dolayı yaptırım uygulanabilir.”",
+   "id": "P-SB-VET-02-14"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre terör örgütlerine karşı operasyonlarda \"teslim ol\" emrine itaat edilmemesi hâlinde kolluk görevlileri nasıl silah kullanabilir?",
+   "siklar": [
+    "Önce havaya uyarı atışı yaparak",
+    "Yalnızca Cumhuriyet savcısının izniyle",
+    "Yalnızca kendilerine ateş edilmesi hâlinde",
+    "Yalnızca amirinin yazılı emriyle",
+    "Doğrudan ve duraksamadan hedefe karşı"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu Ek",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, Ek: “) Terör örgütlerine karşı icra edilecek operasyonlarda \"teslim ol\" emrine itaat edilmemesi veya silah kullanmaya teşebbüs edilmesi halinde kolluk görevlileri, tehlikeyi etkisiz kılabilecek ölçü ve orantıda, doğrudan ve duraksamadan hedefe karşı silah kullanmaya yetkilidirler.”",
+   "id": "P-SB-VET-02-15"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Haber verme sınırlarını aşmayan düşünce açıklamaları terör örgütü propagandası suçunu oluşturur.\nII. Terör örgütü propagandasının basın ve yayın yoluyla yapılması hâlinde ceza yarı oranında artırılır.\nIII. Propagandaya dönüştürülen gösterilerde kimliğini gizlemek için yüzünü kapatanlar üç yıldan beş yıla kadar hapisle cezalandırılır.",
+   "siklar": [
+    "I ve III",
+    "II ve III",
+    "I, II ve III",
+    "I ve II",
+    "Yalnız II"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.7",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.7: “) Terör örgütünün propagandasına dönüştürülen toplantı ve gösteri yürüyüşlerinde, kimliklerini gizlemek amacıyla yüzünü tamamen veya kısmen kapatanlar üç yıldan beş yıla kadar hapis cezasıyla cezalandırılır.”",
+   "id": "P-SB-VET-02-16"
+  },
+  {
+   "lawId": 8,
+   "soru": "2935 sayılı Olağanüstü Hal Kanunu'na göre olağanüstü hâl ilanıyla ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Cumhurbaşkanı, Millî Güvenlik Kurulunun görüşünü aldıktan sonra olağanüstü hâl ilan edebilir.\nII. Olağanüstü hâl yalnızca yurdun bir bölgesinde ilan edilebilir.\nIII. Olağanüstü hâl altı ayı geçmemek üzere ilan edilebilir.",
+   "siklar": [
+    "I ve II",
+    "II ve III",
+    "Yalnız I",
+    "I, II ve III",
+    "I ve III"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
+   "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Yurdun bir veya birden fazla bölgesinde veya bütününde altı ayı geçmemek üzere olağanüstü hal ilan edebilir.”",
+   "id": "P-SB-VET-02-17"
+  },
+  {
+   "lawId": 9,
+   "soru": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre Atatürk'ün hatırasına alenen hakaret eden veya söven kimseye hangi ceza verilir?",
+   "siklar": [
+    "Bir yıldan beş yıla kadar hapis",
+    "İki yıldan beş yıla kadar hapis",
+    "Üç aydan bir yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "Bir yıldan üç yıla kadar hapis"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun m.1",
+   "aciklama": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun, m.1: “Atatürk'ün hatırasına alenen hakaret eden veya söven kimse bir yıldan üç yıla kadar hapis cezası ile cezalandırılır.”",
+   "id": "P-SB-VET-02-18"
+  },
+  {
+   "lawId": 10,
+   "soru": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre tedbir kararı ilk defasında en çok ne kadar süre için verilebilir?",
+   "siklar": [
+    "Altı ay",
+    "İki ay",
+    "Üç ay",
+    "Dört ay",
+    "Bir yıl"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.8",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.8: “(2) Tedbir kararı ilk defasında en çok altı ay için verilebilir.”",
+   "id": "P-SB-VET-02-19"
+  },
+  {
+   "lawId": 11,
+   "soru": "2893 sayılı Türk Bayrağı Kanunu'na göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Bayrak, siyasi parti amblemlerinde fon teşkil edecek şekilde kullanılamaz.",
+    "Bayrak, elbise veya üniforma şeklinde giyilemez.",
+    "Bayrak, yırtık, sökük veya soluk şekilde kullanılamaz.",
+    "Bayrağa sözle veya yazıyla hakaret edilemez.",
+    "Bayrağın şekli, ayakla basılan yerlere yapılabilir."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "2893 sayılı Türk Bayrağı Kanunu m.7",
+   "aciklama": "2893 sayılı Türk Bayrağı Kanunu, m.7: “Bu yerlere ve benzeri eşyaya Bayrağın şekli yapılamaz.”",
+   "id": "P-SB-VET-02-20"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin soruşturmasında savunma için verilen süre en az kaç gündür?",
+   "siklar": [
+    "10",
+    "5",
+    "3",
+    "15",
+    "7"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.31",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.31: “Savunma için verilen süre yedi günden az olamaz.”",
+   "id": "P-SB-VET-02-21"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre aşağıdaki fiillerden hangisi uyarma cezasını gerektiren fiillerden biri değildir?",
+   "siklar": [
+    "Nezaket kurallarına aykırı tavır ve davranışlarda bulunmak",
+    "Amirinden izin almaksızın görevli bulunduğu il sınırları dışına çıkmak",
+    "Yetkili makamlarca belirlenmiş tasarruf tedbirlerine riayet etmemek",
+    "Silahını, araç ve gerecini temiz tutmamak",
+    "Özürsüz olarak mesaiye geç gelmek"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.8",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.8: “8) Amirinden izin almaksızın görevli bulunduğu il sınırları dışına çıkmak.”",
+   "id": "P-SB-VET-02-22"
+  },
+  {
+   "lawId": 13,
+   "soru": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre taraflar sözleşmenin sona erme tarihinden en az ne kadar önce yenileme bildiriminde bulunmazsa sözleşme kendiliğinden sona erer?",
+   "siklar": [
+    "İki ay",
+    "Bir ay",
+    "Altı ay",
+    "Üç ay",
+    "Bir yıl"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.12",
+   "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.12: “Her sözleşme süresinin sona erme tarihinden en az üç ay önce taraflar sözleşmeyi yenileyeceklerine dair yazılı bildirimde bulunmadıkları takdirde, sözleşme kendiliğinden sona erer.”",
+   "id": "P-SB-VET-02-23"
+  },
+  {
+   "lawId": 14,
+   "soru": "5070 sayılı Elektronik İmza Kanunu'na göre aşağıdakilerden hangisi güvenli elektronik imzanın niteliklerinden biri değildir?",
+   "siklar": [
+    "Nitelikli elektronik sertifikaya dayanarak kimlik tespitini sağlayan",
+    "Münhasıran imza sahibine bağlı olan",
+    "Elle atılan imzayla birlikte kullanılması zorunlu olan",
+    "İmzalı veride sonradan değişiklik yapılıp yapılmadığını tespit ettiren",
+    "Sadece imza sahibinin tasarrufundaki araçla oluşturulan"
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.4",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.4: “Güvenli elektronik imza; a) Münhasıran imza sahibine bağlı olan, b) Sadece imza sahibinin tasarrufunda bulunan güvenli elektronik imza oluşturma aracı ile oluşturulan, c) Nitelikli elektronik sertifikaya dayanarak imza sahibinin kimliğinin tespitini sağlayan, d) İmzalanmış elektronik veride sonradan herhangi bir değişiklik yapılıp yapılmadığının tespitini sağlayan, elektronik imzadır. Güvenli elektronik imzanın hukukî sonucu ve uygulama alanı”",
+   "id": "P-SB-VET-02-24"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre hiyerarşi bakımından üst ve aynı düzeydeki makamlara yazılan belgeler hangi ibareyle bitirilir?",
+   "siklar": [
+    "… rica ederim.",
+    "… arz ederim.",
+    "Saygılarımla.",
+    "Bilgilerinize sunulur.",
+    "… arz ve rica ederim."
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.16",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.16: “”, üst ve aynı düzeydeki makamlara “… arz ederim.” ibaresiyle bitirilir.”",
+   "id": "P-SB-VET-02-25"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre belgelerde tarihin yazılışı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Tutanak ve rapor gibi belgelerde tarih, metnin bitiminde yer alabilir.",
+    "Tarih, sayı ile aynı satırda yazı alanının en sağına yazılır.",
+    "Gün ve ay iki haneli, yıl dört haneli olarak düzenlenir.",
+    "Ay adları harfle de yazılabilir.",
+    "Ay adı harfle yazıldığında gün, ay ve yıl arasına nokta konulur."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.12",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.12: “Bu durumda gün, ay ve yıl arasına herhangi bir işaret konulmaz (Örnek: 10 Ekim 2019).”",
+   "id": "P-SB-VET-02-26"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdaki ifadelerden hangileri doğrudur?\nI. \"Hizmete Özel\" gizlilik dereceli belgelere ilişkin işlemler elektronik ortamda gerçekleştirilir.\nII. Belgenin gizlilik derecesinin belirlenmesinden belgeyi hazırlayan personel sorumludur.\nIII. \"KİŞİYE ÖZEL\" ibaresi taşıyan belge üzerinde yalnızca ilgili kişi tasarruf hakkına sahiptir.",
+   "siklar": [
+    "Yalnız I",
+    "I ve II",
+    "I ve III",
+    "I, II ve III",
+    "II ve III"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.25",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.25: “MADDE 25- (1) “Hizmete Özel” gizlilik derecesi bulunan belgelerin hazırlanması, kaydedilmesi, saklanması, gönderilmesi, alınması ve diğer işlemleri elektronik ortamda gerçekleştirilir.”",
+   "id": "P-SB-VET-02-27"
+  },
+  {
+   "lawId": 16,
+   "soru": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre sözleşmesini yenilemek isteyen personel, sözleşmenin sona erme tarihinden ne kadar önceden başlamak üzere dilekçe ile ilk amirine müracaat eder?",
+   "siklar": [
+    "6 ay",
+    "3 ay",
+    "9 ay",
+    "1 yıl",
+    "2 ay"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Sözleşmeli Subay ve Astsubay Yönetmeliği m.14",
+   "aciklama": "Sözleşmeli Subay ve Astsubay Yönetmeliği, m.14: “a) Sözleşmeli subay ve astsubaylardan, sözleşmesini yenilemek isteyenler sözleşme süresinin sona erme tarihinden 6 ay önceden başlamak suretiyle dilekçe ile ilk amirine müracaat eder.”",
+   "id": "P-SB-VET-02-28"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre jandarma, sorumluluk alanındaki umuma açık istirahat ve eğlence yerlerinin ruhsatına ilişkin görüşünü kaç gün içinde verir?",
+   "siklar": [
+    "10",
+    "30",
+    "7",
+    "15",
+    "3"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.19",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.19: “Jandarma görüşünü genel güvenlik ve asayiş açısından yedi gün içinde verir.”",
+   "id": "P-SB-VET-02-29"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre tutuklu ve hükümlülerin sevk ve nakli ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Sevk edilen tutuklu kadınsa kadın ceza infaz koruma görevlisi verilir.",
+    "Gidilecek yere gündüz varılacak biçimde hareket edilir.",
+    "Sevklerde öncelikle jandarmaya ait hizmet araçları kullanılır.",
+    "İhtiyaç durumunda uçak ile sevk yapılabilir.",
+    "Sevke engel sağlık durumu doktor raporuyla saptanırsa sevk yapılmaz."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.27",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.27: “(3) Jandarmaya ait hizmet araçları sevklerde kullanılmaz.”",
+   "id": "P-SB-VET-02-30"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma, askerlik şubesince aranan yoklama kaçağı A'yı yakalayarak muhafaza altına almıştır. Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre A hakkında nasıl işlem yapılır?",
+   "siklar": [
+    "En geç yirmi dört saat içinde en yakın askerlik şubesine getirilir.",
+    "İfadesi alınarak derhâl serbest bırakılır.",
+    "En geç yirmi dört saat içinde doğrudan kıtasına sevk edilir.",
+    "En geç kırk sekiz saat içinde Cumhuriyet savcılığına teslim edilir.",
+    "En geç üç gün içinde mülki amire teslim edilir."
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.74",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.74: “Yakalanarak muhafaza altına alınan yükümlüler, vakit geçirmeksizin ve en geç yirmidört saat içerisinde en yakın askerlik şubesine getirilirler.”",
+   "id": "P-SB-VET-02-31"
+  },
+  {
+   "lawId": 18,
+   "soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hâle getirilmesine ne ad verilir?",
+   "siklar": [
+    "Yok edilmesi",
+    "Silinmesi",
+    "Maskelenmesi",
+    "Periyodik imha",
+    "Anonim hâle getirilmesi"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik m.9",
+   "aciklama": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik, m.9: “(1) Kişisel verilerin yok edilmesi, kişisel verilerin hiç kimse tarafından hiçbir şekilde erişilemez, geri getirilemez ve tekrar kullanılamaz hale getirilmesi işlemidir.”",
+   "id": "P-SB-VET-02-32"
+  },
+  {
+   "lawId": 19,
+   "soru": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre Türkiye'de ikamet eden yabancıların bilgi edinme hakkı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Karşılıklılık ilkesi çerçevesinde Yönetmelik hükümlerinden yararlanırlar.",
+    "Türkiye'de faaliyette bulunan yabancı tüzel kişiler de bu haktan yararlanabilir.",
+    "Türkiye'nin taraf olduğu uluslararası sözleşmelerden doğan haklar saklıdır.",
+    "Başvurularını kendi ana dillerinde yapabilirler.",
+    "İstedikleri bilgi kendileriyle veya faaliyet alanlarıyla ilgili olmalıdır."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik m.5",
+   "aciklama": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik, m.5: “Türkiye'de ikamet eden yabancılar ile Türkiye'de faaliyette bulunan yabancı tüzel kişiler, isteyecekleri bilgi kendileriyle veya faaliyet alanlarıyla ilgili olmak kaydıyla ve karşılıklılık ilkesi çerçevesinde, Kanun ve bu Yönetmelik hükümlerinden yararlanırlar.”",
+   "id": "P-SB-VET-02-33"
+  },
+  {
+   "lawId": 20,
+   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre satıcılık (bayilik) belgesi kaç yıl süreli verilir?",
+   "siklar": [
+    "10",
+    "1",
+    "2",
+    "3",
+    "5"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) m.10",
+   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), m.10: “Yukarıdaki belgeler ile müracaat eden kişilere, 3 yıl süreli (Örnek 7) deki satıcılık (bayilik) belgesi verilir.”",
+   "id": "P-SB-VET-02-34"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre gecikmesinde sakınca bulunan hâlde kolluk amirince alınan önleyici tedbir, hâkimce kaç saat içinde onaylanmazsa kendiliğinden kalkar?",
+   "siklar": [
+    "12",
+    "24",
+    "36",
+    "72",
+    "48"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.29",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.29: “Hâkim tarafından yirmi dört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.”",
+   "id": "P-SB-VET-02-35"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre genel atamalar hangi aylar arasında yapılır?",
+   "siklar": [
+    "Nisan ve Ağustos (dâhil) ayları arasında",
+    "Mart ve Kasım (dâhil) ayları arasında",
+    "Ocak ve Şubat ayları arasında",
+    "Mayıs ve Ekim (dâhil) ayları arasında",
+    "Haziran ve Eylül (dâhil) ayları arasında"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.14",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.14: “(2) Genel atamalar, her yılın Mayıs ve Ekim (dâhil) ayları arasında yapılır.”",
+   "id": "P-SB-VET-02-36"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Eşi yasaklanan ticari faaliyette bulunan personel, bu durumu on beş gün içinde kurumuna bildirir.\nII. Personel, emeklilik taleplerini Ocak-Şubat ile Temmuz-Ağustos aylarında iletebilir.\nIII. Yıllık planlı iznini zorunlu nedenlerle kullanamayan personele izleyen yıl izin verilemez.",
+   "siklar": [
+    "I ve II",
+    "Yalnız III",
+    "Yalnız I",
+    "II ve III",
+    "I, II ve III"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.37",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.37: “(3) Eşleri, reşit olmayan veya mahcur olan çocukları, yasaklanan faaliyetlerde bulunan personel, bu durumu onbeş gün içinde bağlı oldukları kuruma bildirmekle yükümlüdürler.”",
+   "id": "P-SB-VET-02-37"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre basınla münasebet konusunda aşağıdaki ifadelerden hangileri doğrudur?\nI. Personel, kamu görevleri hakkında basına bilgi ve demeç verebilir.\nII. Personel, siyaset hariç bilimsel konularda gazete ve dergilere makale gönderebilir.\nIII. Personel, yayımladığı eser ve makalelerinden, ismi bulunsun veya bulunmasın tamamen sorumludur.",
+   "siklar": [
+    "Yalnız I",
+    "II ve III",
+    "I, II ve III",
+    "Yalnız II",
+    "I ve III"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.22",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.22: “(6) Personel, kendi hesabına bastırarak yayımlayacağı eser ve makalelerinden, ismi bulunsun veya bulunmasın tamamen mesuldür.”",
+   "id": "P-SB-VET-02-38"
+  },
+  {
+   "lawId": 24,
+   "soru": "Jandarma Genel Komutanlığı İzin Yönetmeliği'ne göre izin işlemlerine ilişkin genel esaslarla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "İzinlerin başlangıç ve bitiş saati kural olarak günün başlangıç saatidir.",
+    "Personelin izinden çağrılması yazılı veya sözlü olarak yapılabilir.",
+    "İzin vermeye yetkili amirin yerine vekâlet eden, izin verme yetkisine sahiptir.",
+    "Milletlerarası spor müsabakalarına katılan personel, organizasyon süresince izinli sayılır.",
+    "Adli makamlara tanık olarak çağrılan personelin görevden ayrı kaldığı süre kanuni izninden mahsup edilir."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Genel Komutanlığı İzin Yönetmeliği m.5",
+   "aciklama": "Jandarma Genel Komutanlığı İzin Yönetmeliği, m.5: “d) Adli makamlara şüpheli, sanık, tanık, mağdur veya bilirkişi olarak çağrılan personelin görevden ayrı kaldığı süreler kanuni izinlerinden mahsup edilmez.”",
+   "id": "P-SB-VET-02-39"
+  },
+  {
+   "lawId": 25,
+   "soru": "C, ruhsatlı silahını üçüncü kez kaybetmiş ve silah vesikası geri alınmıştır. 6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun'a göre C'ye hangi durumda yeniden silah bulundurma veya taşıma izni verilebilir?",
+   "siklar": [
+    "Fiil tarihinden beş yıl geçtikten sonra tek bir silah için",
+    "Hiçbir surette yeniden izin verilemez",
+    "Beklemeksizin, idari para cezası ödemesi şartıyla",
+    "Fiil tarihinden bir yıl geçtikten sonra dilediği sayıda silah için",
+    "Fiil tarihinden üç yıl geçtikten sonra iki silah için"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.9",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.9: “Fiil tarihinden beş yıl geçtikten sonra bu kişilerin yeni silah müracaatlarında tek bir silah için taşıma veya bulundurma izni verilebilir.”",
+   "id": "P-SB-VET-02-40"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ihale sonucu ne zaman Kamu İhale Bülteninde yayımlanır?",
+   "siklar": [
+    "Tekliflerin açıldığı gün",
+    "Kesinleşen ihale kararının bildirimiyle aynı gün",
+    "Sözleşmenin imzalanmasından sonra",
+    "Malın kesin kabulünden sonra",
+    "İhale kararının onaylanmasından önce"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.68",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.68: “(1) İhale sonucu, sözleşmenin imzalanmasından sonra Kamu İhale Bülteninde yayımlanır.”",
+   "id": "P-SB-VET-02-41"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre denetim, muayene ve testler tamamlandığında komisyonun idarece kabul edilen olumlu raporu neye esas alınır?",
+   "siklar": [
+    "Yüklenicinin ihalelerden yasaklanmasına",
+    "Yeni ihale ilanına",
+    "Ödemeye ilişkin belgenin düzenlenmesine",
+    "Ara denetim programının hazırlanmasına",
+    "Hakem laboratuvarın seçilmesine"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.25",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.25: “Sözleşme konusu malların denetim, muayene ve testleri tamamlandığında, komisyonun olumlu raporu idarece kabul edilerek, ödemeye ilişkin belgenin düzenlenmesinde esas alınır.”",
+   "id": "P-SB-VET-02-42"
+  },
+  {
+   "lawId": 143,
+   "soru": "2872 sayılı Çevre Kanunu'na göre mevzuatta Yüksek Çevre Kuruluna yapılmış olan atıflar nereye yapılmış sayılır?",
+   "siklar": [
+    "Çevre, Şehircilik ve İklim Değişikliği Bakanlığına",
+    "Cumhurbaşkanınca belirlenen kurul veya mercie",
+    "Türkiye Büyük Millet Meclisi Çevre Komisyonuna",
+    "Valiliklere",
+    "Türkiye Çevre Ajansına"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Çevre Kanunu Ek 10",
+   "aciklama": "Çevre Kanunu, Ek 10: “) Mevzuatta Yüksek Çevre Kuruluna yapılmış olan atıflar, Cumhurbaşkanınca belirlenen kurul veya mercie yapılmış sayılır.”",
+   "id": "P-SB-VET-02-43"
+  },
+  {
+   "lawId": 131,
+   "soru": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Haşere ve kemirgen kontrol prosedürleri, evcil hayvanların gıda alanlarına girmesini önlemek amacıyla da uygulanır.\nII. Parazitlerle kirletildiği bilinen ham maddeler, işleme sırasında temizlenecekse kabul edilebilir.\nIII. Depolanan ham maddeler bozulma, kokuşma ve bulaşmadan korunacak şartlarda muhafaza edilir.",
+   "siklar": [
+    "I ve III",
+    "I, II ve III",
+    "Yalnız II",
+    "II ve III",
+    "Yalnız I"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "Gıda Hijyeni Yönetmeliği m.18",
+   "aciklama": "Gıda Hijyeni Yönetmeliği, m.18: “Bu prosedürler, gıdanın hazırlandığı, muameleye tabi tutulduğu veya depolandığı yerlere evcil hayvanların girmesini önlemek amacıyla da uygulanır.”",
+   "id": "P-SB-VET-02-44"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre aşağıdakilerden hangisi ertesi yıla geçen yüklenmeye girişilebilecek iş ve hizmetler arasında sayılmamıştır?",
+   "siklar": [
+    "Temini güç ilaç, aşı ve serum alımları",
+    "Kırtasiye ve büro malzemesi alımları",
+    "Taşıma, temizlik ve yemek hizmetleri",
+    "Yiyecek, yakacak ve akaryakıt ihtiyaçları",
+    "Süreli yayın alımları"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.27",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.27: “b) Yiyecek, yakacak, akaryakıt ve madeni yağ ihtiyaçları.”",
+   "id": "P-SB-VET-02-45"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre ihalelere katılmaktan yasaklama kararlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Karar, yayımı tarihinde yürürlüğe girer.",
+    "Belediyelerle ilgili yasaklama kararlarını İçişleri Bakanlığı verir.",
+    "Karar, fiilin tespit edildiği tarihi izleyen en geç kırk beş gün içinde verilir.",
+    "Karar, Resmî Gazete'de yayımlanmak üzere en geç on beş gün içinde gönderilir.",
+    "Kararlar Kamu İhale Kurumunca izlenerek siciller tutulur."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Kanunu m.58",
+   "aciklama": "Kamu İhale Kanunu, m.58: “a bağlı kuruluşu sayılmayan idarelerde bu idarelerin ihale yetkilileri, il özel idareleri ve bunlara bağlı birlik, müessese ve işletmelerde İçişleri Bakanlığı; belediyeler ve bunlara bağlı birlik, müessese ve işletmelerde ise Çevre ve Şehircilik Bakanlığı tarafından verilir.”",
+   "id": "P-SB-VET-02-46"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre sorumlulukla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Hizmet sunucuları, tasarım hatasından doğan zarardan doğrudan sorumludur.",
+    "Yapı denetim görevlileri, denetim eksikliğinden doğan zarardan beş yıl süreyle sorumludur.",
+    "Tedarikçiler, kusurlu malzemeden doğan zarardan doğrudan sorumludur.",
+    "Kanunda hüküm bulunmayan hâllerde Borçlar Kanunu hükümleri uygulanır.",
+    "Yüklenici ve alt yükleniciler, kesin kabul onay tarihinden itibaren on beş yıl müteselsilen sorumludur."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.31",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.31: “Yapı denetimini yerine getiren idare görevlileri, denetim eksikliği nedeniyle işin fen ve sanat kurallarına uygun olarak yapılmamasından ortaya çıkan zarar ve ziyandan onbeş yıl süre ile yüklenici ile birlikte müteselsilen sorumludur.”",
+   "id": "P-SB-VET-02-47"
+  },
+  {
+   "lawId": 95,
+   "soru": "5996 sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu'na göre aşağıdakilerden hangisi Kanunun kapsamı dışındadır?",
+   "siklar": [
+    "Kişisel tüketim amacıyla hazırlanan gıdalar",
+    "Gıda ile temas eden madde ve malzemeler",
+    "Zootekni konuları",
+    "Bitki koruma ürünleri",
+    "Deney hayvanlarının refahı"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu m.2",
+   "aciklama": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu, m.2: “(2) Kişisel tüketim amaçlı birincil üretim ile kişisel tüketim amacıyla hazırlanan gıdalar bu Kanunun kapsamı dışındadır.”",
+   "id": "P-SB-VET-02-48"
+  },
+  {
+   "lawId": 96,
+   "soru": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun'a göre aşağıdakilerden hangileri doğrudur?\nI. Küçük sıhhiye memurları her türlü cerrahi ameliyeyi yapabilir.\nII. Cerrahi sağireye ait ameliyat ile sünneti her tabip yapabilir.\nIII. Sıhhiye sınıfına mensup erbaş ve erler, birliklerinde görev yaptıkları süre ve görevle sınırlı olarak küçük sıhhi işlemleri yapabilir.",
+   "siklar": [
+    "II ve III",
+    "I, II ve III",
+    "Yalnız I",
+    "I ve III",
+    "Yalnız III"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun m.3",
+   "aciklama": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun, m.3: “Cerrahii sağireye ait ameliyat ile sünneti her tabip yapabilir.”",
+   "id": "P-SB-VET-02-49"
+  },
+  {
+   "lawId": 134,
+   "soru": "İlkyardım Yönetmeliği'ne göre merkezler, ilkyardım eğitimi ve ilkyardım eğitici eğitimi programlarında her kaç katılımcıya bir eğitmen olacak şekilde çalışır?",
+   "siklar": [
+    "7",
+    "3",
+    "5",
+    "12",
+    "10"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "İlkyardım Yönetmeliği m.13",
+   "aciklama": "İlkyardım Yönetmeliği, m.13: “(1) Merkezler, ilkyardım eğitimi ve ilkyardım eğitici eğitimi programlarında, her 7 (yedi) katılımcıya bir eğitmen olacak şekilde çalışır.”",
+   "id": "P-SB-VET-02-50"
+  },
+  {
+   "lawId": 84,
+   "soru": "Terörle yaygın ve yoğun mücadeleye yönelik iç güvenlik harekâtıyla görevli bir jandarma birliği, kazandan beslenen birlik değildir. TSK, Jandarma ve Sahil Güvenlik Besleme Kanunu'na göre bu birlikte görevli uzman jandarmaya ne ödenir?",
+   "siklar": [
+    "Görev süresince tayın bedelinin iki katı",
+    "Kazandan beslenmediği için herhangi bir ödeme yapılmaz",
+    "Birlikle beraber bulunduğu günler için güçlendirilmiş yemek bedelinin yarısı",
+    "Birlikle beraber bulunmak zorunda olduğu günler için güçlendirilmiş yemek bedelinin tutarı ay sonunda",
+    "Birlikle beraber bulunmak zorunda olduğu günler için günlük yemek bedelinin tutarı ay başında peşin"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Besleme Kanunu Ek 1",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Besleme Kanunu, Ek 1: “venlik harekatı ile görevli birliğin kazandan beslenen birlik olmaması halinde, bu birliklerde görevli olan subay, astsubay, uzman jandarma ve uzman erbaşlara, birlikle beraber bulunmak zorunda oldukları günler için güçlendirilmiş yemek bedelinin tutarı ay sonunda ödenir.”",
+   "id": "P-SB-VET-02-51"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangisi ihaleye katılımda yeterlik belgesi olarak istenebilecek belgelerden biri değildir?",
+   "siklar": [
+    "Özel imalatta kalite yönetim sistem belgesi",
+    "Özel imalatta kapasite raporu",
+    "Taahhütname",
+    "Malın piyasaya arzı için zorunlu izin belgeleri",
+    "Malın ulusal standarda uygunluğunu gösteren belge"
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.27",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.27: “ı) İhaleye katılımda yeterlik belgesi olarak taahhütname istenemez.”",
+   "id": "P-SB-VET-02-52"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre son teslim tarihinden önce teslim edilen mal sözleşmeye uygun çıkmazsa yüklenici ne yapabilir?",
+   "siklar": [
+    "Teslim süresi içinde yenisini getirebilir veya itiraz muayenesi isteyebilir.",
+    "Kamu İhale Kurumundan izin alarak yeni mal getirebilir.",
+    "Yeni mal getiremez, sözleşme feshedilir.",
+    "Yalnızca itiraz muayenesi isteyebilir.",
+    "Malı ancak bedel indirimiyle teslim edebilir."
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.19",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.19: “eslim tarihinden önce teslim edilen malın sözleşme ve eklerine uygun olmadığının tespit edilmesi durumunda, yüklenici sözleşmede öngörülen teslim süresi içinde malını alıp yenisi getirmekte veya itiraz muayenesi istemekte serbesttir.”",
+   "id": "P-SB-VET-02-53"
+  },
+  {
+   "lawId": 143,
+   "soru": "2872 sayılı Çevre Kanunu'na göre bir fabrikada, gerekli teknik önlemler alınmış olmasına rağmen meydana gelen arıza sonucu dereye karışan atıklar bir çiftçinin ürünlerine zarar vermiştir. Fabrika kusuru bulunmadığını ileri sürmektedir. Bu durumda aşağıdakilerden hangisi doğrudur?",
+   "siklar": [
+    "Fabrika, kusur şartı aranmaksızın zarardan sorumludur.",
+    "Çiftçi ancak kastı ispatlarsa tazminat alabilir.",
+    "Kusuru olmadığından fabrikanın sorumluluğu doğmaz.",
+    "Fabrika yalnızca ağır kusur ispatlanırsa sorumlu olur.",
+    "Zarar Hazinece karşılanır."
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "Çevre Kanunu m.28",
+   "aciklama": "Çevre Kanunu, m.28: “) Çevreyi kirletenler ve çevreye zarar verenler sebep oldukları kirlenme ve bozulmadan doğan zararlardan dolayı kusur şartı aranmaksızın sorumludurlar.”",
+   "id": "P-SB-VET-02-54"
+  },
+  {
+   "lawId": 131,
+   "soru": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Taşıma araçlarının ve konteynerlerin içindeki kaplar, gıdadan başka bir maddenin taşınmasında kullanılmaz.\nII. İshal şikâyeti olan ve bulaştırma ihtimali bulunan personelin gıda ile temasına izin verilebilir.\nIII. Temizlik ve dezenfeksiyon maddeleri, gıdanın muameleye tabi tutulduğu alanlarda depolanabilir.",
+   "siklar": [
+    "I ve II",
+    "I ve III",
+    "Yalnız II",
+    "Yalnız I",
+    "II ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "Gıda Hijyeni Yönetmeliği m.13",
+   "aciklama": "Gıda Hijyeni Yönetmeliği, m.13: “(2) Taşıma araçlarının ve/veya konteynerlerin içindeki kaplar, bulaşmaya sebep olabileceği için, gıdadan başka herhangi bir maddenin taşınmasında kullanılmaz.”",
+   "id": "P-SB-VET-02-55"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre harcama yetkisinin devredilmesi, yetkiyi devredenin sorumluluğu bakımından hangi sonucu doğurur?",
+   "siklar": [
+    "Yetkiyi devredenin idarî sorumluluğunu tamamen ortadan kaldırır.",
+    "Sorumluluk yalnızca muhasebe yetkilisine geçer.",
+    "Yetkiyi devredenin idarî sorumluluğunu ortadan kaldırmaz.",
+    "Sorumluluk üst yöneticiye geçer.",
+    "Sorumluluk, devredenle devralan arasında yarı yarıya paylaşılır."
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.31",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.31: “Harcama yetkisinin devredilmesi, yetkiyi devredenin idarî sorumluluğunu ortadan kaldırmaz.”",
+   "id": "P-SB-VET-02-56"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre Kamu İhale Kurulu kaç üyeden oluşur?",
+   "siklar": [
+    "11",
+    "5",
+    "7",
+    "10",
+    "9"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Kamu İhale Kanunu m.53",
+   "aciklama": "Kamu İhale Kanunu, m.53: “) Kurumun karar organı biri başkan, biri ikinci başkan olmak üzere en az dört yıllık öğrenim görenler arasından Cumhurbaşkanınca atanan dokuz üyeden oluşan Kamu İhale Kuruludur.”",
+   "id": "P-SB-VET-02-57"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre bir yapım işinin, sözleşme bedelinin %80'inden daha düşük bedelle tamamlanacağı anlaşılmıştır. Yüklenici işi bitirmek zorundadır. Bu durumda yükleniciye ayrıca ne ödenir?",
+   "siklar": [
+    "Sözleşme bedelinin %20'si",
+    "Herhangi bir ödeme yapılmaz",
+    "Sözleşme bedelinin %80'i ile yaptığı işin tutarı arasındaki farkın %5'i",
+    "Aradaki farkın tamamı",
+    "Aradaki farkın %10'u"
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.24",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.24: “Bu durumda yükleniciye, yapmış olduğu gerçek giderleri ve yüklenici kârına karşılık olarak, sözleşme bedelinin % 80'i ile sözleşme fiyatlarıyla yaptığı işin tutarı arasındaki bedel farkının % 5'i geçici kabul tarihindeki fiyatlar üzerinden ödenir.”",
+   "id": "P-SB-VET-02-58"
+  },
+  {
+   "lawId": 95,
+   "soru": "5996 sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu'na göre tazminatlı hayvan hastalıkları ve tazminat oranları kim tarafından belirlenir?",
+   "siklar": [
+    "Sağlık Bakanlığı",
+    "Tarım ve Orman Bakanlığı",
+    "Valilik",
+    "Türkiye Büyük Millet Meclisi",
+    "Cumhurbaşkanı"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu m.4",
+   "aciklama": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu, m.4: “ç) İhbarı mecburî hayvan hastalıkları Bakanlıkça, tazminatlı hayvan hastalıkları ve tazminat oranları Cumhurbaşkanı tarafından belirlenir.”",
+   "id": "P-SB-VET-02-59"
+  },
+  {
+   "lawId": 96,
+   "soru": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun'a göre protokol defteri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "İcrayı sanat eden tabipler protokol defteri tutmaya mecburdur.",
+    "Defter kayıtları ücretten doğan davalarda sahibi lehine delil kabul edilebilir.",
+    "Defterdeki kaydın aksi hiçbir delil ile ispat edilemez.",
+    "Defterde tahrifat yapan tabip belgede sahtecilik hükümlerine göre cezalandırılır.",
+    "Defterde hastaların isim ve hüviyetleri kaydedilir."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun m.72",
+   "aciklama": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun, m.72: “Şu kadar ki müstenidi iddia olan kaydın hilafı vesaik veya delaili muteberei saire ile ispat edilebilir.”",
+   "id": "P-SB-VET-02-60"
+  },
+  {
+   "lawId": 134,
+   "soru": "İlkyardım Yönetmeliği'ne göre eğitim süreleriyle ilgili aşağıdakilerden hangileri doğrudur?\nI. İlkyardım eğitici eğitimi 40 saattir.\nII. Afetlerde ilkyardım eğitimi 4 saattir.\nIII. Temel yaşam desteği eğitimi 8 saattir.",
+   "siklar": [
+    "II ve III",
+    "Yalnız III",
+    "I, II ve III",
+    "Yalnız I",
+    "I ve II"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "İlkyardım Yönetmeliği m.20",
+   "aciklama": "İlkyardım Yönetmeliği, m.20: “(2) Eğitim süreleri; a) İlkyardım eğitimi 16 saat, b) İlkyardım eğitici eğitimi 40 saat, c) İlkyardım eğitici eğitmeni eğitimi 40 saat, ç) Temel yaşam desteği eğitimi 2 saat, d) Afetlerde ilkyardım eğitimi 4 saat, olarak düzenlenir.”",
+   "id": "P-SB-VET-02-61"
+  },
+  {
+   "lawId": 84,
+   "soru": "5668 sayılı Türk Silahlı Kuvvetleri, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Besleme Kanunu'na göre aşağıdakilerden hangisi güçlendirilmiş yemek bedeli üzerinden beslenecek personel arasında sayılmamıştır?",
+   "siklar": [
+    "Savaş ve askerî harekâtlarda bulunan birlik personeli",
+    "Doğal afetlerde arama ve kurtarma yapan birlik personeli",
+    "İç güvenlik harekâtıyla görevli birlik personeli",
+    "Birlik veya kurumun nöbetçi personeli",
+    "Çalışma kampındaki TSK spor takımlarının personeli"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "TSK, Jandarma ve Sahil Güvenlik Besleme Kanunu m.7",
+   "aciklama": "TSK, Jandarma ve Sahil Güvenlik Besleme Kanunu, m.7: “g) Birlik veya kurumun nöbetçi personeli.”",
+   "id": "P-SB-VET-02-62"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre idarece ihtiyaç duyulması halinde teklif geçerlilik süresi en fazla ne kadar uzatılabilir?",
+   "siklar": [
+    "Süre sınırı olmaksızın",
+    "Doksan gün",
+    "İhale dokümanında belirtilen teklif geçerlilik süresi kadar",
+    "Otuz gün",
+    "Teklif geçerlilik süresinin iki katı kadar"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.53",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.53: “(2) İdarece ihtiyaç duyulması halinde bu süre, teklif ve sözleşme koşulları değiştirilmemek ve isteklinin kabulü kaydıyla, en fazla ihale dokümanında belirtilen teklif geçerlilik süresi kadar uzatılabilir.”",
+   "id": "P-SB-VET-02-63"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre zorunlu haller dışında hangi laboratuvar hakem laboratuvar olarak belirlenir?",
+   "siklar": [
+    "Yüklenicinin önerdiği laboratuvar",
+    "İhaleyi yapan idare ile hiçbir bağı olmayan laboratuvar",
+    "İdarenin kendi laboratuvarı",
+    "İdareye bağlı en yakın laboratuvar",
+    "Yüklenicinin fabrika laboratuvarı"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.5",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.5: “Zorunlu haller dışında ihaleyi yapan idare ile hiç bir bağı olmayan laboratuar hakem laboratuar olarak belirlenecektir.”",
+   "id": "P-SB-VET-02-64"
+  },
+  {
+   "lawId": 143,
+   "soru": "2872 sayılı Çevre Kanunu'na göre Kanunda öngörülen idari yaptırım kararları Bakanlık taşra teşkilatında kimler tarafından verilir?",
+   "siklar": [
+    "Kaymakamlar",
+    "Belediye başkanları",
+    "Valiler",
+    "Çevre ve şehircilik il müdürleri",
+    "Bölge müdürleri"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Çevre Kanunu m.24",
+   "aciklama": "Çevre Kanunu, m.24: “Bu Kanunda öngörülen idarî yaptırım kararları Bakanlık merkez teşkilâtında genel müdürler, taşra teşkilâtında çevre ve şehircilik il müdürlerince verilir.”",
+   "id": "P-SB-VET-02-65"
+  },
+  {
+   "lawId": 131,
+   "soru": "Gıda Hijyeni Yönetmeliği'ne göre birincil üretimde kayıt tutulmasıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Gıda işletmecisi tuttuğu kayıtları talep edildiğinde Bakanlığa ve alıcıya ibraz eder.\nII. Bitkisel ürün üreten işletmeci, bitki koruma ürünleri ve biyositlerin her türlü kullanımına ilişkin kayıt tutar.\nIII. Gıda işletmecisi kayıtların tutulması için başka kişilerden yardım alamaz.",
+   "siklar": [
+    "I ve III",
+    "I ve II",
+    "Yalnız III",
+    "I, II ve III",
+    "Yalnız II"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "Gıda Hijyeni Yönetmeliği m.9",
+   "aciklama": "Gıda Hijyeni Yönetmeliği, m.9: “(1) Gıda işletmecisi, işletmesinin faaliyet alanı ve büyüklüğüne uygun olarak, tehlikelerin uygun bir biçimde kontrolü amacıyla, uyguladığı tedbirlere ilişkin kayıt tutmak ve muhafaza etmek, talep edildiğinde Bakanlığa ve alıcıya ibraz etmekle yükümlüdür.”",
+   "id": "P-SB-VET-02-66"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ödeneklerinin kullanılmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Cari yılda kullanılmayan ödenekler ertesi yıl bütçesine devreder.",
+    "Özel bütçeli idareler ve sosyal güvenlik kurumları ayrıntılı finansman programlarını hazırlar.",
+    "İlama bağlı borçlar ilgili kamu idaresinin cari yıl bütçesinden ödenir.",
+    "Genel bütçe kapsamındaki kamu idareleri, ayrıntılı harcama programlarını vize edilmek üzere Cumhurbaşkanlığına gönderir.",
+    "Kamu idareleri, bütçelerinde yer alan ödeneklerin üzerinde harcama yapamaz."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.20",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.20: “) Cari yılda kullanılmayan ödenekler yıl sonunda iptal edilir.”",
+   "id": "P-SB-VET-02-67"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre yaklaşık maliyet belirlenirken aşağıdakilerden hangisi hariç tutulur?",
+   "siklar": [
+    "Nakliye giderleri",
+    "Sigorta giderleri",
+    "Malzeme giderleri",
+    "Katma değer vergisi",
+    "İşçilik giderleri"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Kamu İhale Kanunu m.9",
+   "aciklama": "Kamu İhale Kanunu, m.9: “) Mal veya hizmet alımları ile yapım işlerinin ihalesi yapılmadan önce idarece, her türlü fiyat araştırması yapılarak katma değer vergisi hariç olmak üzere yaklaşık maliyet belirlenir ve dayanaklarıyla birlikte bir hesap cetvelinde gösterilir.”",
+   "id": "P-SB-VET-02-68"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre aşağıdakilerden hangisi mücbir sebep olarak kabul edilebilecek hâller arasında sayılmamıştır?",
+   "siklar": [
+    "Kısmî veya genel seferberlik ilanı",
+    "Kanuni grev",
+    "Yüklenicinin malî acz içine düşmesi",
+    "Genel salgın hastalık",
+    "Doğal afetler"
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.19",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.19: “Sözleşme yapıldıktan sonra mücbir sebep halleri dışında yüklenicinin mali acz içinde bulunması nedeniyle taahhüdünü yerine getiremeyeceğini gerekçeleri ile birlikte yazılı olarak bildirmesi halinde, ayrıca protesto çekmeye gerek kalmaksızın kesin teminat ve varsa ek kesin teminatlar gelir kaydedilir ve sözleşme feshedilerek hesabı genel hükümlere göre tasfiye edilir. İdarenin sözleşmeyi feshetmesi”",
+   "id": "P-SB-VET-02-69"
+  },
+  {
+   "lawId": 95,
+   "soru": "5996 sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu'na göre veteriner tıbbî ürünlerle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Bu ürünleri depolayanlar alış ve satış kayıtlarını tutmak zorundadır.",
+    "Psikotropik ve narkotik veteriner tıbbî ürünler için tanıtım numunesi hazırlanabilir.",
+    "Psikotropik ve narkotik ürünler sadece veteriner hekimler tarafından uygulanır.",
+    "Veteriner sağlık ürünlerinin ambalajında satış fiyatının belirtilmesi zorunludur.",
+    "Biyolojik ürünler dışındaki ürünlerin perakende satışı eczaneler kanalıyla da yapılabilir."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu m.13",
+   "aciklama": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu, m.13: “Bu ürünler için azaltılmış olsa dahi tanıtım numunesi hazırlanamaz.”",
+   "id": "P-SB-VET-02-70"
+  },
+  {
+   "lawId": 96,
+   "soru": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun'a göre kişisel çıkar amacı olmasa bile diplomasız olarak diş hekimliği mesleğine ilişkin muayene veya müdahale yapan kimseye hangi hapis cezası verilir?",
+   "siklar": [
+    "Beş yıldan sekiz yıla kadar",
+    "Üç yıldan beş yıla kadar",
+    "Üç aydan altı aya kadar",
+    "Altı aydan bir yıla kadar",
+    "Bir yıldan iki yıla kadar"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun m.41",
+   "aciklama": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun, m.41: “Bu kimseler hakkında üç yıldan beş yıla kadar hapis ve bin güne kadar adlî para cezasına hükmolunur.”",
+   "id": "P-SB-VET-02-71"
+  },
+  {
+   "lawId": 134,
+   "soru": "İlkyardım Yönetmeliği'ne göre merkezlere ilişkin yasaklarla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Merkezler, Genel Müdürlükçe onaylanan ücretlerin üzerinde ücret talep edemez.",
+    "Merkezler, resmi kurum ve kuruluşlarca kullanılan isimleri ticari isim olarak kullanamaz.",
+    "Merkezler, çalışma belgesi olmayan eğitmen çalıştıramaz.",
+    "Merkezler, yetki belgesi almadıkça katılımcı kaydı yapamaz.",
+    "Mesul müdür, başka bir merkezde eğitmenlik yapabilir."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "İlkyardım Yönetmeliği m.28",
+   "aciklama": "İlkyardım Yönetmeliği, m.28: “(3) Mesul müdür, başka bir merkezde eğitmenlik yapamaz.”",
+   "id": "P-SB-VET-02-72"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre sözleşmenin imzalanması aşamasıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Kanunun 21 inci maddesinin (b) ve (c) bentlerine göre yapılan ihalelerde, ihale sonucunun bildiriminden itibaren beş gün geçmedikçe sözleşme imzalanamaz.\nII. Sözleşme imzalanmadan önce ihale üzerinde kalan isteklinin yasaklı olup olmadığının Kurumdan teyidi zorunludur.\nIII. Mücbir sebep dışında sözleşmeyi imzalamayan isteklinin geçici teminatı gelir kaydedilir.\nIV. İhale kararı ihale yetkilisince iptal edilirse isteklilere gerekçe bildirilmez.",
+   "siklar": [
+    "Yalnız III",
+    "I ve IV",
+    "I, III ve IV",
+    "I, II ve III",
+    "II ve IV"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.65",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.65: “(3) İhale sonucunun bütün isteklilere bildiriminden itibaren; Kanunun 21 inci maddesinin (b) ve (c) bentlerine göre yapılan ihalelerde beş gün, diğer hallerde ise on gün geçmedikçe sözleşme imzalanamaz.”",
+   "id": "P-SB-VET-02-73"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre malın fiziksel muayenesiyle ilgili tutanak ne zaman tutulur?",
+   "siklar": [
+    "Geçici kabul onaylandıktan sonra",
+    "Kesin kabul yapıldıktan sonra",
+    "Laboratuvar sonucu alındıktan sonra",
+    "Ödeme belgesi düzenlenirken",
+    "Fiziksel muayeneye başlanmadan önce"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.16",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.16: “Malın veya yapılan işin fiziksel muayenesine başlanmadan önce bir tutanak tutulur.”",
+   "id": "P-SB-VET-02-74"
+  },
+  {
+   "lawId": 143,
+   "soru": "2872 sayılı Çevre Kanunu'na göre çevre katkı payıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. İthaline izin verilen kontrole tâbi yakıt ve atıkların CIF bedelinin yüzde biri oranında alınır.\nII. Hurdalar için CIF bedelinin yüzde beşi oranında alınır.\nIII. Tahsil edilen tutarlar en geç ertesi ayın on beşine kadar ilgili hesaplara aktarılır.",
+   "siklar": [
+    "Yalnız II",
+    "I ve II",
+    "II ve III",
+    "I ve III",
+    "Yalnız I"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "Çevre Kanunu m.18",
+   "aciklama": "Çevre Kanunu, m.18: “) Çevre kirliliğinin önlenmesi, çevrenin iyileştirilmesi ve çevre ile ilgili yatırımların desteklenmesi amacıyla; a) İthaline izin verilen kontrole tâbi yakıt ve atıkların CIF bedelinin yüzde biri ile hurdaların CIF bedelinin binde beşi oranında alınacak miktar, b) Büyükşehir belediyeleri su ve kanalizasyon idarelerince tahsil edilen su ve kullanılmış suları uzaklaştırma bedelinin yüzde biri, çevre katkı payı olarak tahsil edilir. Tahsil edilen bu tutarlar, ilgililerce en geç ertesi ayın onbeşine kadar ilgili mal saymanlıkları hesaplarına aktarılır ve bütçeye gelir kaydedilir. Ayrıca ek 11 inci ve ek 13 üncü maddeler kapsamında elde edilen gelirler, yurt içi ve yurt dışından temin edilecek her türlü hibe, yardım ve bağışlar ile kredi anapara geri dönüşleri ve kredi faizleri de tahsil edilerek, Çevre ve Şehircilik Bakanlığı Merkez Saymanlık Müdürlüğü hesabına yatırılır ve bütçeye gelir kaydedilir. Bu maddede sayılan gelirlerin tahsilatında 6183 sayılı Amme Alacaklarının Tahsil Usulü Hakkında Kanun hükümleri uygulanır. Cumhurbaşkanı (a) ve (b) bentlerinde yer alan oranları ayrı ayrı veya topluca sıfıra kadar indirmeye veya kanunî oranına kadar yükseltmeye yetkilidir.26 Atıksu arıtımı, atık bertarafı ve katı atık geri kazanım tesislerinin gözetim, fizibilite, etüt, proje ve inşaat işlerinin kredi veya yardım suretiyle desteklenmesi ile çevre düzeni plânlarının yapımı, hava, su ve toprak kalitesinin ölçüm ve izleme ağının oluşturulması, gürültünün önlenmesi ile ilgili etüt ve projelerin desteklenmesi, acil müdahale plânlarının hazırlanması, Çevresel Etki Değerlendirmesi faaliyetleri, havza koruma plânı çalışmaları, biyolojik çeşitliliğin korunması, çölleşme ve iklim değişikliği ile mücadele çalışmaları, stratejik çevresel değerlendirme, nesli tehlikede olan bitki ve hayvan türleri ile yaşama ortamlarının korunması, uluslararası sözleşmelerden kaynaklanan yükümlülüklerin 25 Bu madde başlığı \"Fonun gelirleri\" iken, 26/4/2006 tarihli ve 5491 sayılı Kanunun 13 üncü maddesiyle metne işlendiği şekilde değiştirilmiştir. 26 2/7/2018 tarihli ve 703 sayılı Kanun Hükmünde Kararnamenin 187 nci maddesiyle bu fıkrada yer alan “Bakanlar Kurulu” ibaresi “Cumhurbaşkanı” şeklinde değiştirilmiştir. karşılanması, çevre eğitimi ve yayını ile ilgili faaliyetler ve ihtisas komisyonları için yapılan harcamalar ile çevre kirliliğinin giderilmesi çalışmaları için Bakanlık bütçesine, yılı bütçe gelirleri içerisinde tahmin edilen yukarıdaki gelirler karşılığı ödenek öngörülür. Yukarıda sayılan gelirlerin tahsili ve bütçede öngörülen ödeneklerin kullanımı ile ilgili usûl ve esaslar, Hazine ve Maliye Bakanlığının uygun görüşü üzerine Bakanlıkça çıkarılacak yönetmelikle belirlenir.27 Fonun kullanılması:”",
+   "id": "P-SB-VET-02-75"
+  },
+  {
+   "lawId": 131,
+   "soru": "Gıda Hijyeni Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İyi uygulama kılavuzlarının kullanılması gıda işletmecisi için zorunludur.\nII. Soğuk zincirin korunması yalnızca dondurulmuş gıdalar için gereklidir.\nIII. İthal edilen gıda, en az yurt içinde üretilen gıda ile aynı hijyen kurallarına veya eşdeğer bir kurala tabi olmalıdır.",
+   "siklar": [
+    "I, II ve III",
+    "Yalnız I",
+    "Yalnız III",
+    "I ve II",
+    "II ve III"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Gıda Hijyeni Yönetmeliği m.6",
+   "aciklama": "Gıda Hijyeni Yönetmeliği, m.6: “f) İthal edilen gıdanın, en az yurtiçinde üretilen gıda ile aynı hijyen kurallarına veya eşdeğer bir kurala tabi olması gerekir.”",
+   "id": "P-SB-VET-02-76"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre sözleşmesinde belirtilmek şartıyla yüklenicilere teminat karşılığında ödenebilecek bütçe dışı avans, yüklenme tutarının yüzde kaçını geçemez?",
+   "siklar": [
+    "25",
+    "20",
+    "30",
+    "10",
+    "50"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.35",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.35: “Sözleşmesinde belirtilmek ve yüklenme tutarının yüzde otuzunu geçmemek üzere, yüklenicilere, teminat karşılığında bütçe dışı avans ödenebilir.”",
+   "id": "P-SB-VET-02-77"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre doğrudan teminle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "İhtiyaçlar piyasada fiyat araştırması yapılarak temin edilir.",
+    "Teminat alınmaz.",
+    "İlan yapılmaksızın başvurulabilir.",
+    "İdarenin ihtiyacına uygun taşınmaz kiralanmasında başvurulabilir.",
+    "İhale komisyonu kurulması zorunludur."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Kanunu m.22",
+   "aciklama": "Kamu İhale Kanunu, m.22: “Bu maddeye göre yapılacak alımlarda, ihale komisyonu kurma ve 10 uncu maddede sayılan yeterlik kurallarını arama zorunluluğu bulunmaksızın, ihale yetkilisince görevlendirilecek kişi veya kişiler tarafından piyasada fiyat araştırması yapılarak ihtiyaçlar temin edilir.”",
+   "id": "P-SB-VET-02-78"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre sözleşme imzalandıktan sonra bedel aşılmamak ve taraflar anlaşmak kaydıyla aşağıdakilerden hangilerinde değişiklik yapılabilir?\nI. İşin yapılma veya teslim yeri\nII. İşin süresinden önce teslim edilmesi kaydıyla işin süresi\nIII. Sözleşme bedelinin artırılması",
+   "siklar": [
+    "II ve III",
+    "I ve II",
+    "Yalnız I",
+    "I, II ve III",
+    "Yalnız III"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.15",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.15: “Sözleşme imzalandıktan sonra, sözleşme bedelinin aşılmaması ve idare ile yüklenicinin karşılıklı olarak anlaşması kaydıyla, aşağıda belirtilen hususlarda sözleşme hükümlerinde değişiklik yapılabilir: a) İşin yapılma veya teslim yeri.”",
+   "id": "P-SB-VET-02-79"
+  },
+  {
+   "lawId": 95,
+   "soru": "5996 sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu'na göre faaliyetlerinin tamamını veya bir kısmını durduran gıda ve yem işletmecisi bu durumu ne kadar süre içinde Bakanlığa bildirmek zorundadır?",
+   "siklar": [
+    "On beş gün",
+    "Altı ay",
+    "Üç ay",
+    "Bir yıl",
+    "Bir ay"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu m.30",
+   "aciklama": "5996 Sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem Kanunu, m.30: “(3) Gıda ve yem işletmecisinin, faaliyetlerinin tamamını veya bir kısmını durdurması durumunda, bu durumun üç ay içerisinde Bakanlığa bildirilmesi zorunludur.”",
+   "id": "P-SB-VET-02-80"
+  }
+ ]
+}

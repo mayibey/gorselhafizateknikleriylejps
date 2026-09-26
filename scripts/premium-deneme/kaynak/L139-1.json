@@ -1,0 +1,47 @@
+[
+ {
+  "law": 139,
+  "tip": "duz",
+  "k": "Türk Ceza Kanunu'na göre belli bir mal veya hizmeti satmaktan kaçınarak kamu için acil bir ihtiyacın ortaya çıkmasına neden olan kişi hangi cezayla cezalandırılır?",
+  "s": [
+   "Bir yıldan üç yıla kadar hapis",
+   "Altı aydan iki yıla kadar hapis",
+   "İki yıldan beş yıla kadar hapis",
+   "Yalnızca adli para cezası",
+   "Üç yıldan sekiz yıla kadar hapis"
+  ],
+  "kanit": [
+   "bir yıldan üç yıla kadar hapis cezası ile cezalandırılır"
+  ]
+ },
+ {
+  "law": 139,
+  "tip": "vaka",
+  "k": "Türk Ceza Kanunu'na göre salgın döneminde elindeki maskeleri satmaktan kaçınarak kamu için acil bir ihtiyacın ortaya çıkmasına neden olan bir eczacının fiili hangi suçu oluşturur?",
+  "s": [
+   "Mal veya hizmet satımından kaçınma",
+   "İhaleye fesat karıştırma",
+   "Tefecilik",
+   "Görevi kötüye kullanma",
+   "Güveni kötüye kullanma"
+  ],
+  "kanit": [
+   "Belli bir mal veya hizmeti satmaktan kaçınarak kamu için acil bir ihtiyacın"
+  ]
+ },
+ {
+  "law": 139,
+  "tip": "duz",
+  "k": "Türk Ceza Kanunu'na göre 6459 sayılı Kanun'la ihdas edilen geçici maddeye göre, 235 inci maddede yapılan değişiklik sebebiyle görülmekte olan davalarda hangi karar verilemez?",
+  "s": [
+   "Görevsizlik kararı",
+   "Mahkûmiyet kararı",
+   "Beraat kararı",
+   "Durma kararı",
+   "Birleştirme kararı"
+  ],
+  "kanit": [
+   "görülmekte olan davalarda görevsizlik kararı verilemez"
+  ]
+ }
+]

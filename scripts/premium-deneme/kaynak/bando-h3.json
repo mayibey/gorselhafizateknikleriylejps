@@ -1,0 +1,604 @@
+[
+ {
+  "law": 122,
+  "tip": "onculu",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre iş ortaklığında pilot ortağın iş deneyimiyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Pilot ortağın asgari iş deneyim tutarının en az %20'sini sağlaması gerekir.\nII. Pilot ortağın iş deneyim tutarı diğer ortakların her birininkinden fazla olmalıdır.\nIII. Pilot ortağın belgesi yeterlik kriterini sağlıyorsa diğer ortaklar belge sunmak zorunda değildir.\nIV. Pilot ortak teknolojik ürün deneyim belgesi sunsa dahi %20 koşulu aranır.",
+  "s": [
+   "I, II ve III",
+   "I ve IV",
+   "II ve IV",
+   "Yalnız I",
+   "I, III ve IV"
+  ],
+  "kanit": [
+   "diğer ortaklar iş deneyimini gösteren belge sunmak zorunda değildir",
+   "diğer ortaklardan her birinin iş deneyim tutarından fazla olması zorunludur",
+   "Pilot ortağın teknolojik ürün deneyim belgesi sunması durumunda"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre işin süresi dolduktan sonra teslim edilen mal muayenede uygun çıkmamıştır. Yükleniciye tanınacak imkân aşağıdakilerden hangisidir?",
+  "s": [
+   "İhtarlı süre içinde bir defa yeni mal getirebilir.",
+   "Süresiz olarak yeni mal getirebilir.",
+   "Üç defa yeni mal getirebilir.",
+   "Hiçbir şekilde yeni mal getiremez.",
+   "Yalnızca bedel indirimi isteyebilir."
+  ],
+  "kanit": [
+   "ihtarlı süre verilerek bu süre içinde bir defa olmak üzere"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ön ilan yapılan ihalelerde EKAP üzerinden ihale kaydı ne zaman yapılır?",
+  "s": [
+   "Ön ilan hazırlanmadan önce",
+   "İhale ilanı yayımlandıktan sonra",
+   "İhale komisyonu kurulduktan sonra",
+   "İhale dokümanı EKAP'a yüklendikten sonra",
+   "Tekliflerin açılmasından önce"
+  ],
+  "kanit": [
+   "Ön ilan yapılan ihalelerde ihale kaydı ön ilan hazırlanmadan önce yapılır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre malın fiziksel muayenesiyle ilgili tutanak ne zaman tutulur?",
+  "s": [
+   "Fiziksel muayeneye başlanmadan önce",
+   "Laboratuvar sonucu alındıktan sonra",
+   "Kesin kabul yapıldıktan sonra",
+   "Ödeme belgesi düzenlenirken",
+   "Geçici kabul onaylandıktan sonra"
+  ],
+  "kanit": [
+   "fiziksel muayenesine başlanmadan önce bir tutanak tutulur"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "vaka",
+  "k": "İdare, belli istekliler arasında ihale usulüyle yaptığı ihalede yalnızca iki isteklinin teklif verdiğini görmüştür. Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre idare hangi yola başvurabilir?",
+  "s": [
+   "Dokümandaki hataları gidererek ön yeterliği tespit edilenlerin tamamını tekrar davet edip ihaleyi sonuçlandırabilir",
+   "İki teklif üzerinden ihaleyi sonuçlandırmak zorundadır",
+   "İhtiyacı doğrudan temin yoluyla karşılar",
+   "Yalnız en düşük teklif sahibiyle pazarlık yapar",
+   "Ön yeterlik aşamasında elenen adayları da davet eder"
+  ],
+  "kanit": [
+   "ön yeterliği tespit edilenlerin tamamı tekrar davet edilerek ihale sonuçlandırılabilir",
+   "teklif veren istekli sayısının üçten az olması durumunda"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre komisyon fiziksel muayene sırasında malın bazı niteliklerinin ihale dokümanına uygun olmadığını tespit etmiştir. Komisyon nasıl hareket etmelidir?",
+  "s": [
+   "Muayeneyi yarıda bırakmadan tamamlar.",
+   "Muayeneyi derhal sonlandırır.",
+   "Numuneleri hemen laboratuvara gönderir.",
+   "Malın uygun kısmını kabul eder.",
+   "Hakem laboratuvara başvurur."
+  ],
+  "kanit": [
+   "muayene yarıda bırakılmaz, muayene işlemi tamamlanır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre idarece ihtiyaç duyulması halinde teklif geçerlilik süresi en fazla ne kadar uzatılabilir?",
+  "s": [
+   "İhale dokümanında belirtilen teklif geçerlilik süresi kadar",
+   "Otuz gün",
+   "Doksan gün",
+   "Teklif geçerlilik süresinin iki katı kadar",
+   "Süre sınırı olmaksızın"
+  ],
+  "kanit": [
+   "en fazla ihale dokümanında belirtilen teklif geçerlilik süresi kadar uzatılabilir",
+   "teklif ve sözleşme koşulları değiştirilmemek ve isteklinin kabulü kaydıyla"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre uygun çıkmayan mal yerine yeniden getirilen malın muayenesi de olumsuz çıkarsa yüklenici ne yapmak zorundadır?",
+  "s": [
+   "Depodaki malın tamamını belirtilen sürede geri almak",
+   "Yalnızca reddedilen kısmı geri almak",
+   "Malı idareye bedelsiz bırakmak",
+   "Hakem laboratuvara başvurmak",
+   "Mal bedelinin yarısını ödemek"
+  ],
+  "kanit": [
+   "idarenin deposundaki malın tamamını ihale dokümanında belirtilen süre içerisinde geri almak zorundadır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "olumsuz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre teknik şartnamede aşağıdakilerden hangisine yönelik düzenleme yapılamaz?",
+  "s": [
+   "Belirli bir marka veya modele yönelik özellik ve tanımlamalar",
+   "Malın ambalajlanması ve etiketlenmesi",
+   "Malın montajı ve satış sonrası servisi",
+   "Özel imalatta prototipin önce idareye sunulması",
+   "Yüklenicinin çalıştıracağı personelin sayısı ve niteliği"
+  ],
+  "kanit": [
+   "belirli bir marka veya modele yönelik özellik ve tanımlamalara yer verilemez",
+   "ambalajlanması ve etiketlenmesi ile kullanım kılavuzuna yönelik düzenleme yapılabilir"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre itiraz üzerine kurulan ikinci komisyonun fiziksel muayene sonucu olumlu çıkarsa ne yapılır?",
+  "s": [
+   "Laboratuvar muayenelerine geçilir.",
+   "Mal doğrudan kesin kabul edilir.",
+   "Üçüncü bir komisyon kurulur.",
+   "Mal yükleniciye iade edilir.",
+   "İlk komisyonun kararı geçerli sayılır."
+  ],
+  "kanit": [
+   "Sonuç olumlu ise, laboratuvar muayenelerine geçilir"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre konsorsiyumların katılabileceği ihalelerde konsorsiyum ortağı hakkında hangisi doğrudur?",
+  "s": [
+   "İşin uzmanlık gerektiren birden fazla kısmına teklif verebilir",
+   "Yalnızca tek bir kısma teklif verebilir",
+   "Diğer ortakların kısımlarına da teklif vermek zorundadır",
+   "Koordinatör ortağın yazılı izni olmadan teklif veremez",
+   "Kısımlara ayrı bedel yazmadan yalnız toplam bedel teklif eder"
+  ],
+  "kanit": [
+   "konsorsiyum ortağı tarafından işin uzmanlık gerektiren birden fazla kısmına teklif verilebilir"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre ara denetim görevlilerinin üretici firmaya önceden haber vermeden üretim sırasında kontrol yapabilmesi hangi koşula bağlıdır?",
+  "s": [
+   "İhale dokümanında yer alması",
+   "Yüklenicinin yazılı onay vermesi",
+   "Kamu İhale Kurumunun izin vermesi",
+   "Hakem laboratuvarın talep etmesi",
+   "Yetkili makamın her seferinde onay vermesi"
+  ],
+  "kanit": [
+   "İhale dokümanında yer alması koşulu ile denetim için görevlendirilenler"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre teknik şartname, alınacak malın özelliğinin gerektirdiği hallerde danışmanlık hizmet sunucularına hangi kayıtla hazırlattırılabilir?",
+  "s": [
+   "İhale yetkilisi tarafından onaylanması kaydıyla",
+   "Kamu İhale Kurumunun uygun görüşü alınması kaydıyla",
+   "İhale komisyonunun oybirliğiyle karar vermesi kaydıyla",
+   "Yaklaşık maliyetin eşik değerin altında kalması kaydıyla",
+   "Muayene ve kabul komisyonunun onayı kaydıyla"
+  ],
+  "kanit": [
+   "ihale yetkilisi tarafından onaylanması kaydıyla, teknik şartname"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre ara denetimin amaçları arasında aşağıdakilerden hangisi yoktur?",
+  "s": [
+   "Yüklenicinin teslim süresini uzatmak",
+   "Geri dönüşü olmayan hataların ortaya çıkmasını önlemek",
+   "Teslim süresinde gecikmelere yol açmamak",
+   "Hataların zamanında giderilmesini sağlamak",
+   "Üretimden sonra kontrol imkânı olmayan hususları denetlemek"
+  ],
+  "kanit": [
+   "teslim süresinde gecikmelere yol açmamak ve hataların zamanında giderilmesini sağlamak",
+   "geri dönüşü olmayan hataların ortaya çıkmasını önlemek"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre Kurulun uygun görüşü olmadıkça, Kanunun 21 inci maddesinin (f) bendi ve 22 nci maddesinin (d) bendindeki parasal limitler dahilinde yapılacak harcamaların yıllık toplamı, idarenin mal alımı ödeneklerinin yüzde kaçını aşamaz?",
+  "s": [
+   "10",
+   "20",
+   "5",
+   "25",
+   "15"
+  ],
+  "kanit": [
+   "konulacak ödeneklerin %10’unu aşamaz"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayene ve kabul komisyonunun görev ve sorumluluklarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Üyelerin çoğunluğunun muayenede hazır bulunması yeterlidir.",
+   "Teslim edilen malın ihale dokümanına uygunluğunu inceler.",
+   "Kısa sürede bozulabilen maddelerin muayenesine öncelik verir.",
+   "Kabul işlemlerinde esas alınacak işlemleri yürütür.",
+   "Karar verirken varsa ara denetim raporlarını dikkate alır."
+  ],
+  "kanit": [
+   "Komisyon üyeleri her muayenede hazır bulunmak zorundadır",
+   "Kısa sürede bozulabilen maddelerin muayenesine öncelik verir"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ihale veya son başvuru saatinden önce ihalenin iptal edilmesi halinde verilmiş teklifler hakkında hangisi doğrudur?",
+  "s": [
+   "Reddedilmiş sayılır ve açılmaksızın iade edilir",
+   "Açılarak ihale işlem dosyasında saklanır",
+   "Yeniden yapılacak ihalede geçerli sayılır",
+   "İsteklinin talebi halinde değerlendirmeye alınır",
+   "Kamu İhale Kurumuna gönderilir"
+  ],
+  "kanit": [
+   "bütün teklifler reddedilmiş sayılır ve açılmaksızın iade edilir"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre komisyon kararlarının verilişiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Üyeler kararlarda çekimser kalabilir.",
+   "Komisyon eksiksiz toplanır.",
+   "Kararlar çoğunlukla alınır.",
+   "Karşı olanlar gerekçelerini kararın altına yazar.",
+   "Karşı olanlar kararı imza etmek zorundadır."
+  ],
+  "kanit": [
+   "Kararlarda çekimser kalınamaz",
+   "eksiksiz toplanır ve kararlarını çoğunlukla alır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre tüzel kişi aday veya isteklilerin ortaklarına ve ortaklık oranlarına ilişkin bilgiler nasıl elde edilir?",
+  "s": [
+   "İdarece EKAP'tan alınır",
+   "Ticaret Sicili Gazetesinin noter onaylı sureti istenir",
+   "İstekliden taahhütname alınır",
+   "Vergi dairesinden yazıyla istenir",
+   "Yeminli mali müşavir raporuyla sunulur"
+  ],
+  "kanit": [
+   "kurucularına ilişkin bilgiler idarece EKAP’tan alınır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre Yönetmeliğin genel hükümleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Hükümlerini Hazine ve Maliye Bakanı yürütür.",
+   "01.01.2003 tarihinde yürürlüğe girmiştir.",
+   "4734 sayılı Kamu İhale Kanununa dayanılarak hazırlanmıştır.",
+   "Ara denetim ile muayene ve kabulün esas ve usullerini belirler.",
+   "İdareler Yönetmeliğe aykırı olmamak koşuluyla düzenleme yapabilir."
+  ],
+  "kanit": [
+   "Bu Yönetmelik hükümlerini Kamu İhale Kurumu Başkanı yürütür",
+   "01.01.2003 tarihinde yürürlüğe girer"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre pazarlık usulü ile yapılan ihalede yaklaşık maliyet ne zaman açıklanır?",
+  "s": [
+   "Son yazılı fiyat teklifleriyle birlikte",
+   "İhale ilanıyla birlikte",
+   "İlk teklifler alınmadan önce",
+   "Sözleşme imzalandıktan sonra",
+   "İhale kararı onaylandıktan sonra"
+  ],
+  "kanit": [
+   "yaklaşık maliyet, son yazılı fiyat teklifleriyle birlikte açıklanır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre geçici kabul hangi durumda yapılır?",
+  "s": [
+   "Etkinlik ve verimliliğin anlaşılması için belirli bir zaman gerektiğinde",
+   "Mal yurt dışından tedarik edildiğinde",
+   "Laboratuvar muayenesi gerekmediğinde",
+   "Mal süresinden önce teslim edildiğinde",
+   "Yüklenici talep ettiğinde"
+  ],
+  "kanit": [
+   "etkinliğinin ve verimliliğinin anlaşılması için belirli bir zamana ihtiyaç duyulan"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "olumsuz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre kalite yönetim sistem belgesi ve çevre yönetim sistem belgesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "İlk ilan tarihinden önce akreditasyonu geri çekilen kuruluşun düzenlediği belge geçerli kabul edilir",
+   "Bu belgeler özel imalat süreci gerektiren mal alımı ihalelerinde istenebilir",
+   "TÜRKAK Akreditasyon Markası taşıyan belgeler için TÜRKAK'tan teyit alınması zorunlu değildir",
+   "Belgelerin ihale veya son başvuru tarihinde geçerli olması yeterlidir",
+   "İş ortaklıklarında ortaklardan birinin istenilen belgeyi sunması yeterlidir"
+  ],
+  "kanit": [
+   "akreditasyonu geri çekilen belgelendirme kuruluşunun düzenlediği",
+   "sunulması durumunda bu belgeler geçerli kabul edilmez"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre numunenin ilk iki muayenesi birbirinden değişik sonuçlar vermişse aşağıdakilerden hangisi yapılır?",
+  "s": [
+   "Aynı numune üzerinde üçüncü bir muayene yapılarak üç muayenenin sonuçlarına göre karar verilir.",
+   "Mal doğrudan reddedilir.",
+   "Yüklenici lehine kabul kararı verilir.",
+   "Numune Kamu İhale Kurumuna gönderilir.",
+   "Muayene iptal edilerek yükleniciden yeni numune istenir."
+  ],
+  "kanit": [
+   "o numune üzerinde üçüncü bir muayene daha yapılarak bu üç muayenenin sonuçlarına göre karar verilir"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "vaka",
+  "k": "İdare, ilan süresi yirmibeş gün olan bir ihalede yayımlanan ilanın Kanuna uygun olmadığını fark etmiştir. Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre düzeltme ilanı, ilanın yayımlanmasını takip eden kaç gün içinde yapılabilir?",
+  "s": [
+   "15",
+   "10",
+   "7",
+   "20",
+   "5"
+  ],
+  "kanit": [
+   "ilanın yayımlanmasını takip eden onbeş gün, diğer ihalelerde ise on gün içinde"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre kesin kabulle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "İdare, yüklenicinin başvurusu olmadan kendiliğinden başlatır.",
+   "Kesin kabul zamanı ihale dokümanında belirtilir.",
+   "Yüklenici veya vekili dilekçe ile başvurur.",
+   "İdarece kesin kabul teklif belgesi düzenlenir.",
+   "Zorunlu hallerde yeni bir kabul komisyonu kurulabilir."
+  ],
+  "kanit": [
+   "Kesin kabul zamanı geldiğinde yüklenici veya vekili bir dilekçe ile idareye başvurur",
+   "idarece kesin kabul teklif belgesi düzenlenerek"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre birden fazla kalemden oluşan ihalelerde elektronik eksiltme nasıl yapılır?",
+  "s": [
+   "Kalem fiyatları üzerinden yapılır; eksiltilmiş kalem fiyatlarının toplamı teklif olarak verilir",
+   "Yalnızca toplam teklif bedeli üzerinden yapılır",
+   "En yüksek tutarlı kalem üzerinden yapılır",
+   "Her kalem için ayrı ihale açılarak yapılır",
+   "Bu ihalelerde elektronik eksiltme yapılamaz"
+  ],
+  "kanit": [
+   "eksiltme kalem fiyatları üzerinden yapılır ve eksiltilmiş kalem fiyatlarının toplamı, eksiltilmiş teklif olarak verilir"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre görevini tarafsızlıkla yapmayan komisyon üyelerinin sorumluluğuyla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Doğan zarar ilgililere tazmin ettirilemez.",
+   "Haklarında disiplin cezası uygulanır.",
+   "Fiilin özelliğine göre ceza kovuşturması yapılır.",
+   "Zarar genel hükümlere göre tazmin ettirilir.",
+   "Süreçte görev alan diğer ilgililer de sorumludur."
+  ],
+  "kanit": [
+   "zarar ve ziyan genel hükümlere göre kendilerine tazmin ettirilir",
+   "disiplin cezası uygulanır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre yerli malı teklif eden istekliler lehine yüzde kaça kadar fiyat avantajı sağlanabilir?",
+  "s": [
+   "15",
+   "10",
+   "20",
+   "25",
+   "5"
+  ],
+  "kanit": [
+   "yerli malı teklif eden istekliler lehine % 15 oranına kadar fiyat avantajı sağlanabilir"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ön ilan yapılması durumunda, bu ilandan önce onaya sunulan ihale onay belgesine hangisinin eklenmesi yeterlidir?",
+  "s": [
+   "Yaklaşık maliyet hesap cetvelinin",
+   "Teknik şartnamenin",
+   "İdari şartnamenin",
+   "Sözleşme tasarısının",
+   "İhale komisyonu listesinin"
+  ],
+  "kanit": [
+   "Bu belgeye sadece yaklaşık maliyet hesap cetvelinin eklenmesi yeterlidir"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre kısmi teklif verilmesine imkân tanınan ihalede aday veya isteklinin yeterlik değerlendirmesi nasıl yapılır?",
+  "s": [
+   "Teklif verilen her bir kısım için ayrı ayrı",
+   "İşin tamamı için tek seferde",
+   "Yalnızca en yüksek tutarlı kısım için",
+   "Kısımların ortalaması üzerinden",
+   "İhale komisyonunun seçeceği bir kısım için"
+  ],
+  "kanit": [
+   "başvuruda bulunduğu veya teklif verdiği her bir kısım için ayrı ayrı yapılır",
+   "istenecek belgeler işin tamamının yaklaşık maliyeti dikkate alınarak belirlenir"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "olumsuz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ihale dokümanının görülmesi ve indirilmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Dokümanın indirilmesi karşılığında idarece bedel talep edilebilir",
+   "Doküman EKAP'ta görülebilir",
+   "İhaleye katılabilmek için dokümanın EKAP hesabıyla indirilmesi zorunludur",
+   "Ortak girişimlerde ortaklardan herhangi birinin dokümanı indirmesi yeterlidir",
+   "İlansız ihalelerde dokümanı yalnızca davet edilenler görebilir"
+  ],
+  "kanit": [
+   "indirilmesi için herhangi bir bedel talep edilemez",
+   "Ortak girişimlerde ortaklardan herhangi birinin dokümanı indirmiş olması yeterlidir"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ihale tarihinden önceki kaç yıl içinde mesleki faaliyetlerinden dolayı yargı kararıyla hüküm giyen aday ve istekliler ihale dışı bırakılır?",
+  "s": [
+   "5",
+   "3",
+   "10",
+   "2",
+   "7"
+  ],
+  "kanit": [
+   "İhale tarihinden önceki beş yıl içinde, mesleki faaliyetlerinden dolayı yargı kararıyla hüküm giyen"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre fiyat dışı unsurlara ilişkin düzenlemeyi yapan birim veya görevlilerce hazırlanan gerekçeli açıklama belgesi nerede yer alır?",
+  "s": [
+   "İhale onay belgesinin ekinde",
+   "İhale ilanında",
+   "Sözleşme tasarısında",
+   "Teknik şartnamenin ekinde",
+   "Teklif mektubunun ekinde"
+  ],
+  "kanit": [
+   "gerekçeli bir açıklama belgesi hazırlanır ve bu belge ihale onay belgesinin ekinde yer alır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "olumsuz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ihale kararının onaylanması ve belgelerin iadesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Teklif kapsamında verilen asıl belgeler istekli talep etse dahi iade edilmez",
+   "İhale, kararın onaylanması halinde geçerli sayılır",
+   "İhale kararı iptal edilirse ihale hükümsüz sayılır",
+   "Geçici teminat hariç teklif belgeleri ihale sonuçlandıktan sonra iade edilmez",
+   "İade edilen asıl belgelerin idarece onaylı sureti ihale işlem dosyasında saklanır"
+  ],
+  "kanit": [
+   "aday veya isteklinin talebi halinde kendisine iade edilir",
+   "kararın onaylanması halinde geçerli, iptal edilmesi halinde ise hükümsüz sayılır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre idare tarafından ortak girişimlere yapılacak tebligat kime yapılır?",
+  "s": [
+   "Pilot veya koordinatör ortağa",
+   "Ortakların her birine ayrı ayrı",
+   "En az hisseye sahip ortağa",
+   "Ortakların noter onaylı vekiline",
+   "Ortak girişim adına Kamu İhale Kurumuna"
+  ],
+  "kanit": [
+   "ortak girişimlere tebligat, pilot veya koordinatör ortağa yapılır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "vaka",
+  "k": "İdare, yabancı isteklilere açık bir ihalede dokümanı Türkçe ve İngilizce hazırlamış; iki metin arasında yorum farkı doğmuştur. Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre anlaşmazlığın çözümünde hangi metin esas alınır?",
+  "s": [
+   "Türkçe metin",
+   "İngilizce metin",
+   "İsteklinin lehine olan metin",
+   "İhale komisyonunun seçtiği metin",
+   "Kamu İhale Kurumunun belirleyeceği metin"
+  ],
+  "kanit": [
+   "anlaşmazlıkların çözümünde Türkçe metin esas alınır"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "olumsuz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangisi ihaleye katılımda yeterlik belgesi olarak istenebilecek belgelerden biri değildir?",
+  "s": [
+   "Taahhütname",
+   "Malın piyasaya arzı için zorunlu izin belgeleri",
+   "Özel imalatta kalite yönetim sistem belgesi",
+   "Özel imalatta kapasite raporu",
+   "Malın ulusal standarda uygunluğunu gösteren belge"
+  ],
+  "kanit": [
+   "İhaleye katılımda yeterlik belgesi olarak taahhütname istenemez",
+   "piyasaya arzı için zorunlu olan izin veya benzeri belgeler"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "olumsuz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre numunelerin sunulması ve değerlendirilmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "İhale tarihinden önce numune değerlendirmesi yapılarak yalnız numunesi uygun görülenlerin teklif vermesi öngörülebilir",
+   "Numune idare tarafından bir tutanakla teslim alınır",
+   "Numunelere yönelik nihai değerlendirme ihale komisyonu tarafından yapılır",
+   "Kurul veya yargı kararları üzerine yeniden değerlendirme, muhafaza edilen numune üzerinden yapılır",
+   "İstenen kalemler için uygun sayıda numune alınması idarenin sorumluluğundadır"
+  ],
+  "kanit": [
+   "sadece numunesi uygun görülenlerin başvuruda bulunabileceğine veya teklif sunabileceğine ilişkin düzenleme yapılamaz",
+   "yeniden değerlendirme, muhafaza edilen numune üzerinden yapılır"
+  ]
+ }
+]

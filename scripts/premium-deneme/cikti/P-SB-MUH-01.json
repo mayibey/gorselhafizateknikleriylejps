@@ -1,0 +1,1289 @@
+{
+ "id": "P-SB-MUH-01",
+ "baslik": "Mühendis Subay — Premium Deneme 1",
+ "rutbe": "sb",
+ "brans": "muhendis",
+ "soruSayisi": 80,
+ "sorular": [
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre kamu görevlisi ile kişinin rüşvet konusunda anlaşmaya varması hâlinde nasıl işlem yapılır?",
+   "siklar": [
+    "Hazırlık hareketi sayıldığından ceza verilmez.",
+    "Suç tamamlanmış gibi cezaya hükmolunur.",
+    "Yalnızca kamu görevlisi cezalandırılır.",
+    "Ceza yarı oranında indirilerek verilir.",
+    "Teşebbüs hükümlerine göre ceza verilir."
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.252",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.252: “(3) Rüşvet konusunda anlaşmaya varılması halinde, suç tamamlanmış gibi cezaya hükmolunur.”",
+   "id": "P-SB-MUH-01-01"
+  },
+  {
+   "lawId": 1,
+   "soru": "Kamu görevlisi A, görevinin gereklerine aykırı hareket ederek bir vatandaşın mağduriyetine neden olmuştur. Fiil ayrıca başka bir suç oluşturmamaktadır. 5237 sayılı Türk Ceza Kanunu'na göre A hakkında hangi ceza öngörülür?",
+   "siklar": [
+    "Dört yıldan on iki yıla kadar hapis",
+    "Yalnızca adli para cezası",
+    "Bir yıldan dört yıla kadar hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "Üç aydan bir yıla kadar hapis"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.257",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.257: “gereklerine aykırı hareket etmek suretiyle, kişilerin mağduriyetine veya kamunun zararına neden olan ya da kişilere haksız bir menfaat sağlayan kamu görevlisi, altı aydan iki yıla kadar hapis cezası ile cezalandırılır.”",
+   "id": "P-SB-MUH-01-02"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre görevi yaptırmamak için direnme suçunda cezayı artıran hâllerden biri değildir?",
+   "siklar": [
+    "Suç örgütüne yarar sağlamak maksadıyla işlenmesi",
+    "Silahla işlenmesi",
+    "Kişinin kendisini tanınmayacak hâle koyarak işlemesi",
+    "Birden fazla kişi tarafından birlikte işlenmesi",
+    "Yargı görevi yapana karşı işlenmesi"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.265",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.265: “(3) Suçun, kişinin kendisini tanınmayacak bir hale koyması suretiyle veya birden fazla kişi tarafından birlikte işlenmesi halinde, verilecek ceza üçte biri oranında artırılır.”",
+   "id": "P-SB-MUH-01-03"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Tüzel kişiler hakkında ceza yaptırımı uygulanamaz.\nII. Suç ve ceza içeren hükümlerin uygulanmasında kıyas yapılamaz.\nIII. Taksirle işlenen fiiller her hâlde cezalandırılır.",
+   "siklar": [
+    "Yalnız III",
+    "I, II ve III",
+    "I ve II",
+    "II ve III",
+    "Yalnız I"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.20",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.20: “(2) Tüzel kişiler hakkında ceza yaptırımı uygulanamaz.”",
+   "id": "P-SB-MUH-01-04"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre zimmet suçunda, soruşturma başlamadan önce zararın aynen iade veya tazmin edilmesi hâlinde verilecek cezada ne kadar indirim yapılır?",
+   "siklar": [
+    "Yarısı",
+    "Üçte biri",
+    "Dörtte biri",
+    "Üçte ikisi",
+    "Dörtte üçü"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.248",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.248: “(1) Soruşturma başlamadan önce, zimmete geçirilen malın aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek cezanın üçte ikisi indirilir.”",
+   "id": "P-SB-MUH-01-05"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre bir il veya ilçenin tamamının jandarma sorumluluk alanı olarak belirlenmesine kim karar verir?",
+   "siklar": [
+    "Cumhurbaşkanı",
+    "Vali",
+    "Jandarma Genel Komutanı",
+    "İçişleri Bakanı",
+    "Emniyet Genel Müdürü"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.14",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.14: “) Jandarma Genel Komutanı, Genel Komutan Yardımcıları, generaller, bölge ve il jandarma komutanları dışında kalanlar İçişleri Bakanınca yapılır.”",
+   "id": "P-SB-MUH-01-06"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre önleme araması kararında aşağıdakilerden hangisinin bulunması gerekmez?",
+   "siklar": [
+    "Aramanın sebebi",
+    "Aramanın konusu ve kapsamı",
+    "Aramanın yapılacağı yer",
+    "Aramayı yapacak personelin adı ve soyadı",
+    "Aramanın zamanı ve süresi"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.15/A",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.15/A: “Arama kararında veya emrinde; aramanın sebebi, konusu ve kapsamı ile yapılacağı yer, zaman ve geçerli olacağı süre belirtilir.”",
+   "id": "P-SB-MUH-01-07"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre komando ve sınır birliklerinde görevli personele ödenen asayiş tazminatı, en yüksek Devlet memuru aylığının yüzde kaçını geçemez?",
+   "siklar": [
+    "%35",
+    "%40",
+    "%52",
+    "%60",
+    "%75"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.21",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.21: “) Jandarma Genel Komutanlığı fiili kadrolarına atanmış19 subay, astsubay ve uzman jandarma ve uzman erbaşlara; 657 sayılı Devlet Memurları Kanununda belirtilen en yüksek Devlet memuru aylığının (ek gösterge dahil); a)Komando ve sınır birliklerinde % 52,20 b) Diğer karargah, birlik ve kurumlarda % 40,21 tutarını geçmemek üzere İçişleri Bakanlığınca belirlenecek usul ve esaslara göre fazla çalışma karşılığı asayiş tazminatı ödenir.”",
+   "id": "P-SB-MUH-01-08"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre jandarma personelinin kişisel suçları hakkında hangi hükümlere göre işlem yapılır?",
+   "siklar": [
+    "4483 sayılı Kanun",
+    "Askerî Ceza Kanunu",
+    "TSK İç Hizmet Kanunu",
+    "7068 sayılı Kanun",
+    "Genel hükümler"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.15",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.15: “e) Jandarma personelinin kişisel suçlarında genel hükümlere göre işlem yapılır.”",
+   "id": "P-SB-MUH-01-09"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre kişisel verilerin işlenmesinde uyulması zorunlu genel ilkelerden biri değildir?",
+   "siklar": [
+    "İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma",
+    "Her hâlde ilgili kişinin açık rızasının alınması",
+    "Hukuka ve dürüstlük kurallarına uygun olma",
+    "Doğru ve gerektiğinde güncel olma",
+    "Belirli, açık ve meşru amaçlar için işlenme"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.4",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.4: “(2) Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur: a) Hukuka ve dürüstlük kurallarına uygun olma.”",
+   "id": "P-SB-MUH-01-10"
+  },
+  {
+   "lawId": 4,
+   "soru": "7201 sayılı Tebligat Kanunu'na göre muhatap yerine tebliğ yapılacak kişinin görünüşe göre en az kaç yaşında olması gerekir?",
+   "siklar": [
+    "21",
+    "17",
+    "15",
+    "18",
+    "25"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "7201 sayılı Tebligat Kanunu m.22",
+   "aciklama": "7201 sayılı Tebligat Kanunu, m.22: “Muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran onsekiz yaşından aşağı olmaması ve bariz bir surette ehliyetsiz bulunmaması lazımdır.”",
+   "id": "P-SB-MUH-01-11"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre vali, kişilerin belirli yerlere giriş-çıkışını, dolaşmasını ve silah taşımasını en çok kaç gün süreyle kısıtlayabilir?",
+   "siklar": [
+    "30 gün",
+    "7 gün",
+    "3 gün",
+    "15 gün",
+    "45 gün"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.11",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.11: “)Vali, kamu düzeni veya güvenliğinin olağan hayatı durduracak veya kesintiye uğratacak şekilde bozulduğu ya da bozulacağına ilişkin ciddi belirtilerin bulunduğu hâllerde on beş günü geçmemek üzere ildeki belirli yerlere girişi ve çıkışı kamu düzeni ya da kamu güvenliğini bozabileceği şüphesi bulunan kişiler için sınırlayabilir; belli yerlerde veya saatlerde kişilerin dolaşmalarını, toplanmalarını, araçların seyirlerini düzenleyebilir veya kısıtlayabilir ve ruhsatlı da olsa her çeşit silah ve merminin taşınması ve naklini yasaklayabilir. (…) Bu fıkra kapsamında alınan ve ilan olunan karar ve tedbirlere uymıyanlar hakkında 66 ncı madde hükmü uygulanır.10 Ç) Jandarma, polis, gümrük muhafaza ve diğer özel kolluk kuvvetlerinin bütün ast ve üstlerinin il içine munhasır olmak üzere geçici veya sürekli olarak vali tarafından yerleri değiştirilebilir ve bundan hemen İçişleri, Gümrük ve Tekel Bakanlıklarına bilgi verir. D) Valiler, ilde çıkabilecek veya çıkan olayların, emrindeki kuvvetlerle önlenmesini mümkün görmedikleri veya önleyemedikleri; aldıkları tedbirlerin bu kuvvetlerle uygulanmasını mümkün görmedikleri veya uygulayamadıkları takdirde, diğer illerin kolluk kuvvetleriyle bu iş için tahsis edilen diğer kuvvetlerden yararlanmak amacıyla, İçişleri Bakanlığından ve gerekirse (…)11 Kara Kuvvetleri Komutanlığının sınır birlikleri dahil olmak üzere en yakın kara, deniz ve hava birlik komutanlığından mümkün olan en hızlı vasıtalar ile müracaat ederek yardım isterler. Bu durumlarda ihtiyaç duyulan kuvvetlerin İçişleri Bakanlığından veya askeri birliklerden veya her iki makamdan talep edilmesi hususu, yardım talebinde bulunan vali tarafından takdir edilir. Valinin yaptığı yardım istemi geciktirilmeksizin yerine getirilir. Acil durumlarda bu istek sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir. 9 2/7/2018 tarihli ve 703 sayılı KHK’nin 138 inci maddesiyle, bu maddede yer alan “Bakanlar Kurulu” ibareleri “Cumhurbaşkanı” şeklinde, “Bakanlar Kurulunca” ibaresi “Cumhurbaşkanınca” şeklinde, “Hükümetin” ibaresi “Cumhurbaşkanının” şeklinde, “Başbakanın” ibaresi “Cumhurbaşkanının” şeklinde değiştirilmiştir. 10 25/7/2018 tarihli ve 7145 sayılı Kanunun 1 inci maddesiyle, bu paragrafta yer alan “Bu hususta” ibaresi “Bu fıkra kapsamında” şeklinde değiştirilmiştir. 11 17/4/2017 tarihli ve 690 sayılı KHK’nin 17 nci maddesiyle, bu fıkranın birinci cümlesinde yer alan “Jandarma Genel Komutanlığının veya” ibaresi yürürlükten kaldırılmış, daha sonra bu hüküm 1/2/2018 tarihli ve 7077 sayılı Kanunun 15 inci maddesiyle aynen kabul edilerek kanunlaşmıştır. Vali tarafından askeri birliklerden yardım istenmesi halinde; muhtemel olaylar için istenen askeri kuvvet, valinin görüşü alınarak olaylara hızla el koymaya uygun yerde, cereyan eden olaylar için ise olay yerinde hazır bulundurulur. Olayların niteliğine göre istenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından, görevde kalış süresi, askerî birliğin komutanı ile koordine edilerek vali tarafından belirlenir. Askeri kuvvetin müstakilen görevlendirilmesi durumunda; verilen görev askeri kuvvet tarafından kendi komutanının sorumluluğu altında ve onun emir ve talimatlarına göre Türk Silahlı Kuvvetleri İç Hizmet Kanununda belirtilen yetkiler ile kolluk kuvvetlerinin genel güvenliği sağlamada sahip olduğu yetkiler kullanılarak yerine getirilir. Güvenlik kuvvetleri ile yardıma gelen askeri kuvvet arasında işbirliği ve koordinasyon, yardıma gelen askeri birliğin komutanının da görüşü alınarak vali tarafından tespit edilir. Ancak, bu askeri birliğin belirli görevleri jandarma ya da polis ile birlikte yapması halinde komuta, sevk ve idare askeri birliklerin en kıdemli komutanı tarafından üstlenilir. Birden fazla ili içine alan olaylarda ilgili valilerin isteği üzerine aynı veya farklı askeri birlik komutanlarından kuvvet tahsis edilmesi durumunda iller veya kuvvetler arasında işbirliği, koordinasyon, kuvvet kaydırması, emir komuta ilişkileri ve gerekli görülen diğer hususlar yukarıda belirtilen hükümler çerçevesinde Cumhurbaşkanı tarafından belirlenecek esaslara göre yürütülür. Bu esasların uygulanmasında, işbirliği ve koordinasyon sağlamak amacıyla gerekli görülen hallerde İçişleri Bakanı ilgili valilerden birini geçici olarak görevlendirir. Olayların sınır illerinde veya bu illere mücavir bölgelerde cereyan etmesi ve eylemcilerin eylemlerini müteakip komşu ülke topraklarına sığındıklarının tespit edilmesi durumunda valinin talebi üzerine ilgili komutan eylemcileri ele geçirmek veya tesirsiz hale getirmek maksadı ile, her defasında Genelkurmay Başkanlığı kanalı ile Cumhurbaşkanının müsaadesi tahtında, ihtiyaca göre kara, hava, deniz kuvvetleri ve Jandarma Genel Komutanlığı unsurları ile komşu ülkelerin mutabakatı alınmak suretiyle mahdut hedefli sınır ötesi harekat planlayıp icra edebilir. Bu fıkra uyarınca görevlendirilen Türk Silahlı Kuvvetleri birliklerinin, bu fıkra kapsamındaki faaliyetleri, askerlik hizmet ve görevlerinden sayılır.Yukarıda belirtilen hususlar neden”",
+   "id": "P-SB-MUH-01-12"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre idari para cezasının ödeme süresi içinde ödenmesi hâlinde cezadan ne oranda indirim yapılır?",
+   "siklar": [
+    "%10",
+    "%30",
+    "%20",
+    "%25",
+    "%50"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.17",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.17: “İdari para cezasının ödeme süresi içinde ödenmesi halinde, cezadan %25 oranında indirim yapılır.”",
+   "id": "P-SB-MUH-01-13"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kabahat, kanunda aksi belirtilmedikçe hem kasten hem de taksirle işlenebilir.\nII. Kabahatlerde tüzel kişilerin sorumluluğu benimsenmiştir.\nIII. Nispî idari para cezasında soruşturma zamanaşımı beş yıldır.",
+   "siklar": [
+    "Yalnız III",
+    "II ve III",
+    "I, II ve III",
+    "I ve II",
+    "Yalnız I"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.9",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.9: “(1) Kabahatler, kanunda açıkça hüküm bulunmayan hallerde, hem kasten hem de taksirle işlenebilir.”",
+   "id": "P-SB-MUH-01-14"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre terörle mücadele görevi nedeniyle hakkında soruşturma açılan kamu görevlisini savunan en fazla kaç avukatın ücreti ödenir?",
+   "siklar": [
+    "4",
+    "3",
+    "5",
+    "2",
+    "1"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.15",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.15: “dirilmiş diğer personelin, bu görevlerinin ifasından doğduğu iddia edilen suçlardan dolayı yapılan soruşturma ve kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın veya bu görevlerinin ifasından dolayı mağdur, şikâyetçi, katılan, davalı ya da davacı konumunda olan personelin seçeceği bir avukatın ücreti ödenir ve bunlara avukatlık ücret tarifesine bağlı olmaksızın yapılacak ödemeler, ilgili kuruluşların bütçelerine konulacak ödenekten karşılanır. Ancak davacı konumunda olan personelin seçeceği bir avukata ücret ödenmesi, ilgili Bakanın onayına tabidir.11 Avukatların ücretlerinin ödenmesine ilişkin esas ve usûller, Millî Savunma ve İçişleri bakanlıklarınca müştereken çıkarılacak yönetmelikle düzenlenir. 9 29/6/2006 tarihli ve 5532 sayılı Kanunun 10 ve 12 inci maddesiyle 13 üncü maddenin başlığı “Erteleme ve paraya çevrilme”, 17 nci maddenin başlığı \"Şartla salıverilme\" iken metne işlendiği şekilde değiştirilmiştir. Daha sonra 26/2/2008 tarihli ve 5739 sayılı Kanunun 3 üncü maddesiyle 13 üncü maddenin başlığı “Seçenek yaptırımlara çevirme ve erteleme yasağı” iken metne işlendiği şekilde değiştirilmiştir. 10 Bu maddenin başlığı “Müdafii Tayini” iken 23/6/2016 tarihli ve 6722 sayılı Kanunun 15 inci maddesiyle metne işlendiği şekilde değiştirilmiştir. 11 23/6/2016 tarihli ve 6722 sayılı Kanunun 15 inci maddesiyle bu fıkradaki “görev alan” ibaresinden sonra gelmek üzere “Türk Silahlı Kuvvetleri personeli, mülki idare amirleri,” ibaresi eklenmiş ve bu fıkrada yer alan “kovuşturmalarda müdafi olarak belirlediği en fazla üç” ibaresi “kovuşturmalar sebebiyle belirleyeceği en fazla üç avukatın veya bu görevlerinin ifasından dolayı mağdur, şikâyetçi, katılan, davalı ya da davacı konumunda olan personelin seçeceği bir” şeklinde değiştirilmiştir. ÜÇÜNCÜ BÖLÜM Cezaların İnfazı Cezaların infazı ve tutukluların muhafazası”",
+   "id": "P-SB-MUH-01-15"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre aşağıdaki Türk Ceza Kanunu maddelerinden hangisinde yazılı suç terör suçu sayılmaz?",
+   "siklar": [
+    "314",
+    "304",
+    "315",
+    "309",
+    "302"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.3",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.3: “) 26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 302, 307, 309, 311, 312, 313, 314, 315 ve 320 nci maddeleri ile 310 uncu maddesinin birinci fıkrasında yazılı suçlar, terör suçlarıdır.”",
+   "id": "P-SB-MUH-01-16"
+  },
+  {
+   "lawId": 8,
+   "soru": "2935 sayılı Olağanüstü Hal Kanunu'na göre TBMM olağanüstü hâl süresini her defasında en fazla ne kadar uzatabilir?",
+   "siklar": [
+    "İki ay",
+    "Dört ay",
+    "Bir yıl",
+    "Üç ay",
+    "Altı ay"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.3",
+   "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.3: “Cumhurbaşkanının istemi üzerine, her defasında dört ayı geçmemek üzere, süreyi uzatabilir veya olağanüstü hali kaldırabilir.”",
+   "id": "P-SB-MUH-01-17"
+  },
+  {
+   "lawId": 9,
+   "soru": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre Atatürk'ü temsil eden heykeli kıran veya bozan kişiye verilecek ceza aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Üç yıldan beş yıla kadar hapis",
+    "Bir yıldan üç yıla kadar hapis",
+    "Bir yıldan beş yıla kadar ağır hapis",
+    "Altı aydan iki yıla kadar hapis",
+    "İki yıldan yedi yıla kadar hapis"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun m.1",
+   "aciklama": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun, m.1: “Atatürk'ü temsil eden heykel, büst ve abideleri veyahut Atatürk'ün kabrini tahrip eden, kıran, bozan veya kirleten kimseye bir yıldan beş yıla kadar ağır hapis cezası verilir.”",
+   "id": "P-SB-MUH-01-18"
+  },
+  {
+   "lawId": 10,
+   "soru": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre tedbir kararlarına karşı itiraz nereye yapılır?",
+   "siklar": [
+    "Aile mahkemesine",
+    "Mahallin mülki amirine",
+    "Asliye ceza mahkemesine",
+    "İdare mahkemesine",
+    "Sulh ceza hâkimliğine"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.9",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.9: “(1) Bu Kanun hükümlerine göre verilen kararlara karşı tefhim veya tebliğ tarihinden itibaren iki hafta içinde ilgililer tarafından aile mahkemesine itiraz edilebilir.”",
+   "id": "P-SB-MUH-01-19"
+  },
+  {
+   "lawId": 10,
+   "soru": "Kolluk amiri, gecikmesinde sakınca bulunan bir hâlde şiddet uygulayan kişinin konuttan uzaklaştırılmasına karar vermiştir. 6284 sayılı Kanun'a göre bu karar kaç saat içinde hâkim tarafından onaylanmazsa kendiliğinden kalkar?",
+   "siklar": [
+    "12",
+    "48",
+    "24",
+    "72",
+    "36"
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.5",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.5: “Hâkim tarafından yirmidört saat içinde onaylanmayan tedbirler kendiliğinden kalkar.”",
+   "id": "P-SB-MUH-01-20"
+  },
+  {
+   "lawId": 11,
+   "soru": "2893 sayılı Türk Bayrağı Kanunu'na aykırı bayrak kullananlar hakkında idari para cezasına kim karar verir?",
+   "siklar": [
+    "Belediye encümeni",
+    "Sulh ceza hâkimi",
+    "Cumhuriyet savcısı",
+    "İl jandarma komutanı",
+    "Mahallin mülki amiri"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2893 sayılı Türk Bayrağı Kanunu m.8",
+   "aciklama": "2893 sayılı Türk Bayrağı Kanunu, m.8: “Bu Kanun hükümlerine aykırı davranışta bulunanlara, fiilleri suç oluşturmadığı takdirde mahalli mülki amir tarafından Kabahatler Kanununun 32 nci maddesi uyarınca idarî para ceza verilir.”",
+   "id": "P-SB-MUH-01-21"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre kısa süreli durdurma cezası hangi sürelerde verilir?",
+   "siklar": [
+    "İki, dört veya yedi ay",
+    "Altı, on iki veya on sekiz ay",
+    "Dört, altı veya on ay",
+    "Bir, üç veya beş ay",
+    "Üç, beş veya sekiz ay"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.7",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.7: “ç) Kısa süreli durdurma: Personelin bulunduğu kademede ilerlemesinin dört, altı veya on ay süre ile durdurulmasıdır.”",
+   "id": "P-SB-MUH-01-22"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre disiplin cezalarına karşı itiraz süresi, kararın tebliğinden itibaren kaç gündür?",
+   "siklar": [
+    "30",
+    "15",
+    "5",
+    "7",
+    "10"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.30",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.30: “(1) Disiplin amirleri tarafından verilen disiplin cezalarına karşı, cezanın tebliğ edilmesinden itibaren on gün içinde itiraz edilebilir.”",
+   "id": "P-SB-MUH-01-23"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre aşağıdakilerden hangisi disiplin cezaları arasında yer almaz?",
+   "siklar": [
+    "Oda hapsi",
+    "Aylıktan kesme",
+    "Uzun süreli durdurma",
+    "Kınama",
+    "Meslekten çıkarma"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.10",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.10: “(13) Bu Kanunda belirlenmiş ve bir disiplin cezasıyla yaptırıma bağlanmış fiillerin sahil güvenlik personelince yurtdışı liman ziyaretlerinde veya Türk karasuları dışında işlenmesi halinde, uyarma ve kınama cezası gerektiren fiillerde meydana gelen zarar ve tehlikenin ağırlığı da dikkate alınarak aylıktan kesme, kısa veya uzun süreli durdurma cezası; aylıktan kesme, kısa veya uzun süreli durdurma cezası gerektiren fiillerde ise yine meydana gelen zarar veya tehlikenin ağırlığı dikkate alınarak meslekten çıkarma cezası verilebilir. Geçici olarak kontrol altına alma”",
+   "id": "P-SB-MUH-01-24"
+  },
+  {
+   "lawId": 13,
+   "soru": "4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre sözleşme süresi için aşağıdakilerden hangisi doğrudur?",
+   "siklar": [
+    "Dört yıldan az, sekiz yıldan fazla olamaz.",
+    "Bir yıldan az, beş yıldan fazla olamaz.",
+    "Üç yıldan az, dokuz yıldan fazla olamaz.",
+    "Beş yıldan az, on beş yıldan fazla olamaz.",
+    "İki yıldan az, on yıldan fazla olamaz."
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.10",
+   "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.10: “Sözleşme süreleri; üç yıldan az ve dokuz yıldan fazla olmamak şartıyla, hizmet gerekleri ve yetiştirme maliyetlerine bağlı olarak kuvvet, sınıf ve branşlara göre yönetmelikte belirlenir.”",
+   "id": "P-SB-MUH-01-25"
+  },
+  {
+   "lawId": 14,
+   "soru": "5070 sayılı Elektronik İmza Kanunu'na göre güvenli elektronik imza hangi imza ile aynı hukuki sonucu doğurur?",
+   "siklar": [
+    "Elle atılan imza",
+    "Vekâleten atılan imza",
+    "Paraf",
+    "Mühür",
+    "Noter onaylı imza"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu m.5",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, m.5: “Güvenli elektronik imza, elle atılan imza ile aynı hukukî sonucu doğurur.”",
+   "id": "P-SB-MUH-01-26"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre cevap için süre belirtilmemiş bilgi ve görüş talepleri en geç kaç iş günü içinde cevaplandırılır?",
+   "siklar": [
+    "15",
+    "7",
+    "30",
+    "5",
+    "10"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.33",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.33: “alebin kendilerine ulaşmasından itibaren en geç beş iş günü; süre belirtilmeyen bilgi ve görüş taleplerini ise talebin kendilerine ulaşmasından itibaren en geç on beş iş günü içinde yerine getirir.”",
+   "id": "P-SB-MUH-01-27"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangileri doğrudur?\nI. Belgelerde Times New Roman yazı tipi 12 punto olarak kullanılır.\nII. \"ACELE\" ibaresi sağ üst köşede kırmızı renkle yazılır.\nIII. Paragraf başı girintisi 2 santimetredir.",
+   "siklar": [
+    "Yalnız II",
+    "II ve III",
+    "Yalnız I",
+    "I, II ve III",
+    "I ve II"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.7",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.7: “Harf büyüklüğünün Times New Roman için 12 punto, Arial için 11 punto olması esastır.”",
+   "id": "P-SB-MUH-01-28"
+  },
+  {
+   "lawId": 16,
+   "soru": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre sözleşmeli subayın muvazzaf subaylığa geçebilmesi için fiilî hizmet süresi bakımından hangi şart aranır?",
+   "siklar": [
+    "Dördüncü yılına başlamış, on ikinci yılını bitirmemiş olmak",
+    "Yedinci yılına başlamış, on ikinci yılını bitirmemiş olmak",
+    "Beşinci yılına başlamış, onuncu yılını bitirmemiş olmak",
+    "Onuncu yılına başlamış, on beşinci yılını bitirmemiş olmak",
+    "Üçüncü yılına başlamış, dokuzuncu yılını bitirmemiş olmak"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Sözleşmeli Subay ve Astsubay Yönetmeliği m.8",
+   "aciklama": "Sözleşmeli Subay ve Astsubay Yönetmeliği, m.8: “Muvazzaf Subaylığa Geçme Madde 8 – Muvazzaf subaylığa geçişle ilgili şartlar şunlardır: a) Muvazzaf subaylığa geçiş başvuru şartları şunlardır: 1) Yedinci fiili hizmet yılına başlamış veya on ikinci fiili hizmet yılını bitirmemiş olmak.”",
+   "id": "P-SB-MUH-01-29"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre düğün, nişan, konser, panayır ve festival gibi toplanmalar için mülki amire ne kadar önce bildirimde bulunulur?",
+   "siklar": [
+    "7 gün",
+    "12 saat",
+    "24 saat",
+    "48 saat",
+    "72 saat"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.21",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.21: “(2) Düğün, nişan, konser, panayır, festival ve benzeri toplanmalarda kamu düzeninin korunmasına yönelik tedbirlerin alınmasına imkân sağlamak için ilgililer kırksekiz saat önce mülki amire bildirimde bulunmak zorundadır.”",
+   "id": "P-SB-MUH-01-30"
+  },
+  {
+   "lawId": 18,
+   "soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre veri sorumlusunun belirleyeceği periyodik imha aralığı her hâlde ne kadarı geçemez?",
+   "siklar": [
+    "Altı ay",
+    "Dokuz ay",
+    "Bir yıl",
+    "Üç ay",
+    "İki ay"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik m.11",
+   "aciklama": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik, m.11: “Bu süre her halde altı ayı geçemez.”",
+   "id": "P-SB-MUH-01-31"
+  },
+  {
+   "lawId": 19,
+   "soru": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre aşağıdakilerden hangisi Yönetmeliğin kapsamında değildir?",
+   "siklar": [
+    "Belediyeler",
+    "Köyler",
+    "Üniversiteler",
+    "Türkiye Cumhuriyet Merkez Bankası",
+    "İl özel idareleri"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik m.2",
+   "aciklama": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik, m.2: “Bu Yönetmelik; merkezi idare kapsamındaki kamu idareleri ile bunların bağlı, ilgili veya ilişkili kuruluşlarının, köyler hariç olmak üzere mahalli idareler ve bunların bağlı ve ilgili kuruluşları ile birlik veya şirketlerinin, T.”",
+   "id": "P-SB-MUH-01-32"
+  },
+  {
+   "lawId": 20,
+   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre yivsiz tüfek ruhsatnamesi kaç yıl süreyle geçerlidir?",
+   "siklar": [
+    "1",
+    "2",
+    "5",
+    "3",
+    "10"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) m.10",
+   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), m.10: “ı bulunduğu valilik veya kaymakamlığına başvurmaları halinde yivsiz tüfek ruhsatnamesi harcının ödenmiş olması kaydıyla, verildiği tarihten geçerli olmak üzere 5 yıl süreli yivsiz tüfek ruhsatnamesi düzenlenir.”",
+   "id": "P-SB-MUH-01-33"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre kolluk, hakkında tedbir kararı verilen korunan kişinin konutunu en az ne sıklıkla ziyaret eder?",
+   "siklar": [
+    "Haftada bir",
+    "Günde bir",
+    "Ayda iki",
+    "Ayda bir",
+    "On beş günde bir"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.35",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.35: “Bu kontrol korunan kişinin; a) Bulunduğu konutun haftada en az bir kez ziyaret edilmesi, b) İkinci derece dâhil olmak üzere yakınları ile iletişim kurulması, c) Komşularının bilgisine başvurulması, ç) Oturulan yerin muhtarından bilgi alınması, d) Bulunduğu konutun çevresinde araştırma yapılması, şeklinde yerine getirilir. Tedbir kararlarına aykırılığın tespit edilmesi halinde bu husus hakkında tutanak tutulur ve Cumhuriyet başsavcılığına gönderilir. (6) Tedbir kararlarının alınması ve uygulanması için yapılan iş ve işlemlerin aşamaları ve sonucu hakkında ilgili kurum tarafından aynı gün en geç saat 16.00’ya kadar en seri vasıtalarla ŞÖNİM’e bildirilir. (7) Korunan kişi, korunduğu yer dışında başka bir yere gitmesi gerektiğinde gideceği yer hakkında kolluğa bilgi verir, bu durumda dahi hakkında verilen kararın uygulanmasına devam edilir. Korunan kişi tarafından tedbir kararına uyulmaması halinde bu husus kolluk amiri tarafından bir tutanak ile tespit edilir. (8) Tedbir kararının ilgililere tefhim veya tebliğ edilmemesi, kararın uygulanmasına engel teşkil etmez. Kolluk görevleri”",
+   "id": "P-SB-MUH-01-34"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre zorlama hapsi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Duruşma yapılmaksızın karar verilir.",
+    "Toplam süresi altı ayı geçemez.",
+    "İlk ihlalde üç günden on güne kadar verilir.",
+    "Adli sicile işlenir ve tekerrüre esas olur.",
+    "Her tekrarında on beş günden otuz güne kadar verilir."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.38",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.38: “(7) Zorlama hapsi kararları tekerrüre esas olmaz, koşullu salıverilme hükümleri uygulanmaz ve adli sicil kayıtlarına işlenmez.”",
+   "id": "P-SB-MUH-01-35"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre bir nöbetin süresi en fazla ne kadar olabilir?",
+   "siklar": [
+    "12 saat",
+    "36 saat",
+    "48 saat",
+    "24 saat",
+    "8 saat"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.42",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.42: “(2) Nöbet, kurumlarda amirin münasip göreceği zamanda başlar ve yirmidört saati geçemez.”",
+   "id": "P-SB-MUH-01-36"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre subay, astsubay ve uzman jandarmaların haftalık çalışma süresi kaç saattir?",
+   "siklar": [
+    "48",
+    "50",
+    "40",
+    "36",
+    "45"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.24",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.24: “Çalışma saatleri MADDE 24 - (1) Jandarma Genel Komutanlığı, Sahil Güvenlik Komutanlığı, Jandarma ve Sahil Güvenlik Akademisinde görevli subay, sözleşmeli subay, astsubay, sözleşmeli astsubay ve uzman jandarmaların haftalık çalışma süresi genel olarak 40 saattir.”",
+   "id": "P-SB-MUH-01-37"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Millî marş açık yerde şapkalı olarak dinlenir.",
+    "Emir yalnızca resmî kıyafetli olarak verilebilir.",
+    "Araç içinde resmî kıyafetle yolculukta şapka çıkarılabilir.",
+    "Disiplin cezaları 7068 sayılı Kanunda düzenlenir.",
+    "Devlet memurları ile rütbeli personel arasında astlık-üstlük ilişkisi yoktur."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.10",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.10: “(6) Emir, resmî veya sivil kıyafetli olarak verilebilir.”",
+   "id": "P-SB-MUH-01-38"
+  },
+  {
+   "lawId": 25,
+   "soru": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun'a göre ruhsatın veriliş sebebi ortadan kalkan ruhsat sahibi, durumu ruhsatı veren makama kaç ay içinde bildirmek zorundadır?",
+   "siklar": [
+    "Altı",
+    "İki",
+    "Üç",
+    "On iki",
+    "Bir"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.6",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.6: “Ruhsatların veriliş sebeplerinin ortadan kalkması halinde ruhsat sahibi durumu ruhsatı veren makama altı ay içinde bildirmekle yükümlüdür.”",
+   "id": "P-SB-MUH-01-39"
+  },
+  {
+   "lawId": 25,
+   "soru": "B, ruhsatsız bir tabancayı evinde bulundururken yakalanmıştır. Silah, 6136 sayılı Kanun'un 12'nci maddesinin dördüncü fıkrasında sayılan silahlardan değildir. 6136 sayılı Kanun'a göre B hakkında hangi hapis cezası öngörülür?",
+   "siklar": [
+    "Bir yıldan üç yıla kadar",
+    "Üç yıldan sekiz yıla kadar",
+    "İki yıldan dört yıla kadar",
+    "İki yıldan beş yıla kadar",
+    "Altı aydan bir yıla kadar"
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.13",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.13: “a ses veya gaz fişeği atabilen silah iken bu Kanun hükümlerine tabi silah vasfına dönüştürülen silahları satın alan veya taşıyanlar veya bulunduranlar hakkında iki yıldan dört yıla kadar hapis ve yüz günden beşyüz güne kadar adlî para cezasına hükmolunur.”",
+   "id": "P-SB-MUH-01-40"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ihale tarihinden önceki kaç yıl içinde mesleki faaliyetlerinden dolayı yargı kararıyla hüküm giyen aday ve istekliler ihale dışı bırakılır?",
+   "siklar": [
+    "3",
+    "7",
+    "10",
+    "2",
+    "5"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.50",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.50: “hükümleri uyarınca kesinleşmiş sosyal güvenlik prim borcu olan, ç) Türkiye'nin veya kendi ülkesinin mevzuat hükümleri uyarınca kesinleşmiş vergi borcu olan, d) İhale tarihinden önceki beş yıl içinde, mesleki faaliyetlerinden dolayı yargı kararıyla hüküm giyen, e) İhale tarihinden önceki beş yıl içinde, ihaleyi yapan idareye yaptığı işler sırasında iş veya meslek ahlakına aykırı faaliyetlerde bulunduğu bu idare tarafından ispat edilen, f) İhale tarihi itibariyle, mevzuatı gereği kayıtlı olduğu oda tarafından mesleki faaliyetten men edilmiş olan, g) Bu Yönetmelik hükümlerine göre idareler tarafından belirlenen bilgi ve belgeleri vermeyen veya yanıltıcı bilgi ve/veya sahte belge verdiği tespit edilen, ğ) Kanunun 11 inci maddesine göre ihaleye katılamayacağı belirtildiği halde ihaleye katılan, h) Kanunun 17 nci maddesinde belirtilen yasak fiil veya davranışlarda bulundukları tespit edilen, aday ve istekliler ihale dışı bırakılır. (2) İhale üzerinde kalan istekliden, birinci fıkranın (a), (b), (c), (ç), (d) ve (f) bentlerinde belirtilen durumlarda olmadığına dair belgelerin sözleşme imzalanmadan önce istenilmesi zorunludur. Bu belgelerin ihale usulüne göre son başvuru ve/veya ihale tarihinde isteklinin anılan bentlerde belirtilen durumlarda olmadığını göstermesi gerekir. (3) Ortak girişimlerde söz konusu belgelerin yukarıda öngörülen şekilde bütün ortaklarca ayrı ayrı verilmesi zorunludur. (4) Birinci fıkranın (c) bendindeki “Türkiye’de kesinleşmiş sosyal güvenlik prim borcu”nun kapsamı ve tutarı Kamu İhale Genel Tebliğinde belirlenir. (5) Türkiye’de kesinleşmiş sosyal güvenlik prim borcunun değerlendirilmesinde, isteklinin; a) İlgili mevzuatına göre tahakkuk eden prim borçlarının süresi içinde ödenmemesi halinde kesinleşmiş prim borcu olduğu, b) Prim borcuna karşı dava açılması halinde, bu dava sürecinde veya takip ve tahsili durduracak geçici veya nihai bir karar bulunmadığı durumlarda kesinleşmiş prim borcu olduğu, c) Prim borcunun 21/7/1953 tarihli ve 6183 sayılı Amme Alacaklarının Tahsil Usulü Hakkında Kanun hükümleri çerçevesinde cebren tahsili yolunda tesis edilen işlemlere karşı dava açılması halinde, bu dava sürecinde veya sonucunda takip ve tahsili durduracak geçici veya nihai bir karar bulunmadığı durumlarda kesinleşmiş prim borcu olduğu, ç) Vadesi geçtiği halde ödenmemiş ancak ilgili kurum tarafından belli bir vadeye bağlanarak tecil edilmiş prim borçlarının, vadesindeki ödemeler aksatılmadığı sürece, kesinleşmiş prim borcu olmadığı, kabul edilecektir. (6) Birinci fıkranın (ç) bendindeki “Türkiye’de kesinleşmiş vergi borcu”nun kapsamına girecek vergilerin tür ve tutarı Kamu İhale Genel Tebliğinde belirlenir. (7) Türkiye’de kesinleşmiş vergi borcunun değerlendirilmesinde ise isteklinin; a) Beyan üzerine alınan veya maktu olarak belirlenip ödemesi belirli tarihlerde yapılan vergilerde ödeme vadesi geçmiş olup ödeme yapılmamış ise kesinleşmiş vergi borcu olduğu, b) Re’sen, ikmalen veya idarece yapılan tarhiyatlara karşı dava açma süresi geçirilmediği sürece, kesinleşmiş vergi borcu olmadığı, c) Re’sen, ikmalen veya idarece yapılan tarhiyatlara karşı vergi yargısında dava açılmışsa bu dava üzerine tahsil edilebilir hale gelmiş ve süresinde ödenmemiş alacak bulunmadığı sürece kesinleşmiş vergi borcu olmadığı, ç) Vadesi geçtiği halde ödenmemiş ancak vergi idaresi tarafından taksitlendirilmiş veya tecil edilmiş vergi borçlarının, vadesindeki öd”",
+   "id": "P-SB-MUH-01-41"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre komisyon kararlarının verilişiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Karşı olanlar gerekçelerini kararın altına yazar.",
+    "Üyeler kararlarda çekimser kalabilir.",
+    "Komisyon eksiksiz toplanır.",
+    "Kararlar çoğunlukla alınır.",
+    "Karşı olanlar kararı imza etmek zorundadır."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.21",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.21: “Kararlarda çekimser kalınamaz.”",
+   "id": "P-SB-MUH-01-42"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre harcama yetkisinin devredilmesi, yetkiyi devredenin sorumluluğu bakımından hangi sonucu doğurur?",
+   "siklar": [
+    "Sorumluluk, devredenle devralan arasında yarı yarıya paylaşılır.",
+    "Yetkiyi devredenin idarî sorumluluğunu ortadan kaldırmaz.",
+    "Sorumluluk yalnızca muhasebe yetkilisine geçer.",
+    "Yetkiyi devredenin idarî sorumluluğunu tamamen ortadan kaldırır.",
+    "Sorumluluk üst yöneticiye geçer."
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.31",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.31: “Harcama yetkisinin devredilmesi, yetkiyi devredenin idarî sorumluluğunu ortadan kaldırmaz.”",
+   "id": "P-SB-MUH-01-43"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre aşağıdakilerden hangisi ihalelere katılamayacaklar arasında yer almaz?",
+   "siklar": [
+    "İhaleyi yapan idare bünyesindeki vakıf ve dernekler",
+    "İhale yetkilisinin yönetiminde bulunmadığı ve en fazla %10 hissesine sahip olduğu anonim şirket",
+    "Hileli iflas ettiğine karar verilenler",
+    "İhaleyi yapan idarenin ihale yetkilisi kişileri",
+    "İhale işlemlerini hazırlamakla görevli olanların eşleri"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Kanunu m.11",
+   "aciklama": "Kamu İhale Kanunu, m.11: “f) (c), (d) ve (e) bentlerinde belirtilenlerin ortakları ile şirketleri (bu kişilerin yönetim kurullarında görevli bulunmadıkları veya sermayesinin % 10’undan fazlasına sahip olmadıkları anonim şirketler hariç).”",
+   "id": "P-SB-MUH-01-44"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre bir yapım işinin, sözleşme bedelinin %80'inden daha düşük bedelle tamamlanacağı anlaşılmıştır. Yüklenici işi bitirmek zorundadır. Bu durumda yükleniciye ayrıca ne ödenir?",
+   "siklar": [
+    "Aradaki farkın %10'u",
+    "Aradaki farkın tamamı",
+    "Herhangi bir ödeme yapılmaz",
+    "Sözleşme bedelinin %80'i ile yaptığı işin tutarı arasındaki farkın %5'i",
+    "Sözleşme bedelinin %20'si"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.24",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.24: “Bu durumda yükleniciye, yapmış olduğu gerçek giderleri ve yüklenici kârına karşılık olarak, sözleşme bedelinin % 80'i ile sözleşme fiyatlarıyla yaptığı işin tutarı arasındaki bedel farkının % 5'i geçici kabul tarihindeki fiyatlar üzerinden ödenir.”",
+   "id": "P-SB-MUH-01-45"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ön ilanla ilgili aşağıdakilerden hangileri doğrudur?\nI. Ön ilan yapılmış olması idareye ihale yapma yükümlülüğü getirir.\nII. Ön ilana ilişkin düzeltme ilanı yapılamaz.\nIII. Bir ön ilana bağlı olarak birden fazla ihale gerçekleştirilebilir.\nIV. Ön ilanlar Kamu İhale Bülteninde ücretsiz yayımlanır.",
+   "siklar": [
+    "II, III ve IV",
+    "II ve IV",
+    "I, II ve IV",
+    "I ve III",
+    "Yalnız II"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.20",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.20: “(3) Ön ilana ilişkin düzeltme ilanı yapılamaz.”",
+   "id": "P-SB-MUH-01-46"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre Yönetmeliğin genel hükümleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Hükümlerini Hazine ve Maliye Bakanı yürütür.",
+    "Ara denetim ile muayene ve kabulün esas ve usullerini belirler.",
+    "İdareler Yönetmeliğe aykırı olmamak koşuluyla düzenleme yapabilir.",
+    "4734 sayılı Kamu İhale Kanununa dayanılarak hazırlanmıştır.",
+    "01.01.2003 tarihinde yürürlüğe girmiştir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.31",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.31: “Bu Yönetmelik hükümlerini Kamu İhale Kurumu Başkanı yürütür.”",
+   "id": "P-SB-MUH-01-47"
+  },
+  {
+   "lawId": 77,
+   "soru": "Genel seferberlik ilan edilmiş; Millî Savunma Bakanlığı, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı bütçelerindeki ödenekler birleştirilerek kullanılmasına rağmen yetersiz kalmıştır. 5018 sayılı Kanun'a göre bu durumda toplam ödenek tutarının yüzde kaçına kadar ek harcama yapılabilir?",
+   "siklar": [
+    "25",
+    "20",
+    "10",
+    "5",
+    "15"
+   ],
+   "dogru": 4,
+   "tip": "vaka",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.20",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.20: “olmaması halinde toplam ödenek tutarının yüzde on beşine kadar ek harcama yapılabilir.”",
+   "id": "P-SB-MUH-01-48"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre ihalelerde alınacak geçici teminat, teklif edilen bedelin yüzde kaçından az olamaz?",
+   "siklar": [
+    "%10",
+    "%6",
+    "%3",
+    "%2",
+    "%5"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Kamu İhale Kanunu m.24",
+   "aciklama": "Kamu İhale Kanunu, m.24: “) Teklif edilen bedelin % 3’ünden az olmamak üzere, isteklice belirlenecek tutarda geçici teminat verileceği.”",
+   "id": "P-SB-MUH-01-49"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre aşağıdakilerden hangisi sözleşmede belirtilmesi zorunlu hususlar arasında yer almaz?",
+   "siklar": [
+    "Anlaşmazlıkların çözümü",
+    "İş sağlığı ve güvenliğine ilişkin yükümlülükler",
+    "Kesin teminat miktarı ve iadesine ait şartlar",
+    "Gecikme hâlinde alınacak cezalar",
+    "İhale komisyonu üyelerinin adları"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.7",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.7: “n) Gecikme halinde alınacak cezalar.”",
+   "id": "P-SB-MUH-01-50"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre kesinleşen ihale kararı, ihale yetkilisince onaylandığı günü izleyen en geç kaç gün içinde ihaleye teklif veren bütün isteklilere bildirilir?",
+   "siklar": [
+    "7",
+    "10",
+    "5",
+    "15",
+    "3"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.65",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.65: “)(1) Kesinleşen ihale kararı, ihale yetkilisi tarafından onaylandığı günü izleyen en geç üç gün içinde, ihale üzerinde bırakılan dahil, ihaleye teklif veren bütün isteklilere, 64 üncü maddenin birinci fıkrası uyarınca alınan ihale komisyonu kararı ile birlikte bildirilir.”",
+   "id": "P-SB-MUH-01-51"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre ara denetim raporlarıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. İşin özelliği gerektirdiğinde idare ara denetim için hizmet satın alabilir.\nII. Üretimde tespit edilen hususlara ilişkin rapor, denetim görevlisi ile firma yetkilisince imzalanır.\nIII. Ara denetim raporları muayene ve kabul aşamasında değerlendirilmek üzere idareye sunulur.\nIV. Yüklenici ara denetim raporlarını öne sürerek teknik sorumluluktan kurtulabilir.",
+   "siklar": [
+    "Yalnız III",
+    "II ve IV",
+    "I, II ve III",
+    "I, III ve IV",
+    "I ve IV"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.8",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.8: “Ancak işin özelliğinin gerektirdiği durumlarda idareler bu konuda hizmet satın alabilir.”",
+   "id": "P-SB-MUH-01-52"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre ödeme emri belgesine bağlandığı hâlde ödenemeyen ve emanet hesaplarına alınan tutarlar, malın alındığı malî yılı izleyen kaçıncı yılın sonuna kadar talep edilmezse bütçeye gelir kaydedilir?",
+   "siklar": [
+    "2",
+    "3",
+    "1",
+    "10",
+    "5"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.34",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.34: “Ancak, malın alındığı veya hizmetin yapıldığı malî yılı izleyen beşinci yılın sonuna kadar talep edilmeyen emanet hesaplarındaki tutarlar bütçeye gelir kaydedilir.”",
+   "id": "P-SB-MUH-01-53"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre bir istekli, ihalelerdeki yasak fiilleri nedeniyle mükerrer ceza almıştır. Bu kişi hakkında hangi yasaklama uygulanır?",
+   "siklar": [
+    "Mahkeme kararıyla sürekli olarak kamu ihalelerine katılmaktan yasaklanır.",
+    "Mahkeme kararıyla en fazla üç yıl yasaklanır.",
+    "Herhangi bir yasaklama uygulanmaz.",
+    "Yalnız ihaleyi yapan idarenin ihalelerinden yasaklanır.",
+    "İdarece bir yıl süreyle yasaklanır."
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "Kamu İhale Kanunu m.59",
+   "aciklama": "Kamu İhale Kanunu, m.59: “ükerrer ceza hükmolunanlar ile bu kişilerin sermayesinin yarısından fazlasına sahip olduğu sermaye şirketleri veya bu kişilerin ortağı olduğu şahıs şirketleri, mahkeme kararı ile sürekli olarak kamu ihalelerine katılmaktan yasaklanır.”",
+   "id": "P-SB-MUH-01-54"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre sorumlulukla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Tedarikçiler, kusurlu malzemeden doğan zarardan doğrudan sorumludur.",
+    "Yüklenici ve alt yükleniciler, kesin kabul onay tarihinden itibaren on beş yıl müteselsilen sorumludur.",
+    "Yapı denetim görevlileri, denetim eksikliğinden doğan zarardan beş yıl süreyle sorumludur.",
+    "Hizmet sunucuları, tasarım hatasından doğan zarardan doğrudan sorumludur.",
+    "Kanunda hüküm bulunmayan hâllerde Borçlar Kanunu hükümleri uygulanır."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.31",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.31: “Yapı denetimini yerine getiren idare görevlileri, denetim eksikliği nedeniyle işin fen ve sanat kurallarına uygun olarak yapılmamasından ortaya çıkan zarar ve ziyandan onbeş yıl süre ile yüklenici ile birlikte müteselsilen sorumludur.”",
+   "id": "P-SB-MUH-01-55"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre piyasada hazır halde alınıp satılmayan, projelendirme veya bir talep üzerine üretimi yapılacak olan ve özel ihtisas gerektiren işler hangi kavramla ifade edilir?",
+   "siklar": [
+    "Özel imalat",
+    "Alternatif teklif",
+    "Kısmi teklif",
+    "Teknolojik ürün",
+    "Benzer iş"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.3",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.3: “ına; ihale konusu alımın tek bir mala ilişkin olması durumunda ise aynı malın miktarlar itibarıyla belirlenen bir veya birden fazla kısmına verilen teklifi, g) Özel imalat: Piyasada hazır halde alınıp satılmayan, projelendirme veya bir talep üzerine üretimi yapılacak olan, özel ihtisas ve üretim tekniği gerektiren işleri, ğ) Yaklaşık maliyet: İhale onay belgesi düzenlenmeden önce idarece her türlü fiyat araştırması yapılarak, Katma Değer Vergisi (KDV) hariç olmak üzere hesaplanan ve dayanakları ile birlikte bir hesap cetvelinde gösterilen, ihale konusu alımın öngörülen bedelini, h) (12) ı) (12) i) (13) Endeks: Türkiye İstatistik Kurumu tarafından yayımlanan Yurt İçi Üretici Fiyat Genel Endeksini, j) Teknolojik ürün deneyim belgesi: Kanunun 10 uncu maddesinin birinci fıkrasının (b) bendinin (2) numaralı alt bendi çerçevesinde Bilim, Sanayi ve Teknoloji Bakanlığı tarafından düzenlenen iş deneyimini gösteren belgeyi, k) (12) EKAP Yönetmeliği: Kamu Alımlarının Elektronik Ortamda Yapılmasına İlişkin Uygulama Yönetmeliğini, l ) (13) Alt endeks: Türkiye İstatistik Kurumu tarafından aylık yayımlanan endekslerden Yurt İçi Üretici Fiyat Endeksi (2003=100) CPA 2008 kısım, bölüm ve gruplarına göre tarihsel seri tablosu ile Yurt İçi Üretici Fiyat Endeksi 2003=100, CPA 2008 seçilmiş sınıflar tablosunun alt sektörler itibarıyla ilgili endeksi, İfade eder. İKİNCİ BÖLÜM Uygulama İlkeleri ve Yaklaşık Maliyet Temel ilkeler”",
+   "id": "P-SB-MUH-01-56"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayenede aranacak hususlar ve numuneyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Numune mühürlü durumda alıkonulur.",
+    "Numune alınması ve muhafazası idarenin sorumluluğundadır.",
+    "Numune ihale dokümanında belirlenen süre ile alıkonulur.",
+    "Muayenede aranacak hususlar ihale dokümanında yazılı şartlardır.",
+    "Önce numune alınır, malın bütünü incelenmez."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.13",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.13: “Muayeneye sunulan malın önce bütünü incelenerek gerek görülür ise yeter sayıda numunesi saklı tutulur.”",
+   "id": "P-SB-MUH-01-57"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre merkezî yönetim bütçe kanunu süresinde yürürlüğe konulamamış, geçici bütçe kanunu da çıkarılamamıştır. Yeni bütçe kanunu kabul edilinceye kadar ne uygulanır?",
+   "siklar": [
+    "Önceki yılın bütçesi, yeniden değerleme oranına göre artırılarak",
+    "Orta vadeli programdaki ödenek teklif tavanları",
+    "Önceki yılın bütçesi, hiçbir artış yapılmadan",
+    "Cumhurbaşkanınca belirlenen olağanüstü harcama programı",
+    "Önceki yıl bütçesinin yarısı"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.19",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.19: “Geçici bütçe kanununun da çıkarılamaması durumunda, yeni bütçe kanunu kabul edilinceye kadar bir önceki yılın bütçesi yeniden değerleme oranına göre artırılarak uygulanır.”",
+   "id": "P-SB-MUH-01-58"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre aşağıdakilerden hangileri doğrudur?\nI. Teknik şartnamelerde belli bir marka veya model kural olarak belirtilemez.\nII. Yaklaşık maliyete ihale ilanlarında yer verilir.\nIII. Eşik değerlerin altında kalmak amacıyla yapım işleri kısımlara bölünemez.",
+   "siklar": [
+    "Yalnız I",
+    "I, II ve III",
+    "II ve III",
+    "I ve II",
+    "I ve III"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "Kamu İhale Kanunu m.12",
+   "aciklama": "Kamu İhale Kanunu, m.12: “Belli bir marka, model, patent, menşei, kaynak veya ürün belirtilemez ve belirli bir marka veya modele yönelik özellik ve tanımlamalara yer verilmeyecektir.”",
+   "id": "P-SB-MUH-01-59"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre yapım işlerinde iş kalemlerinin bir kısmı için anahtar teslimi götürü bedel, bir kısmı için birim fiyat teklifi alınarak yapılan ihaleler sonucunda hangi sözleşme düzenlenir?",
+   "siklar": [
+    "Birim fiyat sözleşme",
+    "Çerçeve anlaşma",
+    "Götürü bedel sözleşme",
+    "Münferit sözleşme",
+    "Karma sözleşme"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.6",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.6: “) Yapım işlerinde; niteliği itibarıyla iş kalemlerinin bir kısmı için anahtar teslimi götürü bedel, bir kısmı için birim fiyat teklifi alma yöntemleri birlikte uygulanmak suretiyle gerçekleştirilen ihaleler sonucunda karma sözleşme, e) (Ek: 20/11/2008-5812/32 md.”",
+   "id": "P-SB-MUH-01-60"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.\nII. Birden fazla mal kaleminden oluşan ihaleler, birim fiyat teklif almak suretiyle gerçekleştirilir.\nIII. Ödeneği bulunmayan işler için, ödeneğin sonradan temin edileceği taahhüdüyle ihaleye çıkılabilir.\nIV. Eşik değerin altında kalmak amacıyla mal alımları kısımlara bölünebilir.",
+   "siklar": [
+    "I, III ve IV",
+    "I, II ve III",
+    "I ve II",
+    "Yalnız I",
+    "II ve IV"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.4",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.4: “(4) İhalelerde açık ihale usulü ve belli istekliler arasında ihale usulü temel usullerdir.”",
+   "id": "P-SB-MUH-01-61"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayeneye tabi malın saklanması ve muayene yeriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Mal, niteliği ve evsafı değişmeyecek şekilde saklanır.",
+    "Malın değiştirilmesini önleyici tedbirleri idare alır.",
+    "Ayrı depo yoksa muayene yüklenicinin deposunda yapılır.",
+    "Mal, idarenin mevcut mallarıyla karışmaması için ayrı depoda saklanır.",
+    "Mal, muayene sonucu alınıncaya kadar geçici olarak saklanır."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.9",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.9: “Bunun mümkün olmaması halinde, muayene, idarenin deposu içinde ayrılacak bir yerde yapılır ve sözleşme konusu malın veya numunenin değiştirilmesini ve eksilmesini önleyici her türlü tedbir idarece alınır.”",
+   "id": "P-SB-MUH-01-62"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre aşağıdakilerden hangisi genel yönetim kapsamındaki idarelerin bütçe türleri arasında yer almaz?",
+   "siklar": [
+    "Merkezî yönetim bütçesi",
+    "Mahallî idareler bütçeleri",
+    "Sosyal güvenlik kurumları bütçeleri",
+    "Kamu iktisadi teşebbüsleri bütçesi",
+    "Özel bütçe"
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.12",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.12: “Genel yönetim kapsamındaki idarelerin bütçeleri; merkezî yönetim bütçesi, sosyal güvenlik kurumları bütçeleri ve mahallî idareler bütçeleri olarak hazırlanır ve uygulanır.”",
+   "id": "P-SB-MUH-01-63"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre bir ihale A Ltd. Şti. üzerinde kalmış, ancak şirket mücbir sebep olmaksızın usulüne göre sözleşme imzalamamıştır. Şirket hakkında ne kadar süreyle ihalelere katılmaktan yasaklama kararı verilir?",
+   "siklar": [
+    "Altı aydan az olmamak üzere bir yıla kadar",
+    "Sürekli olarak",
+    "Üç aydan az olmamak üzere altı aya kadar",
+    "Bir yıldan az olmamak üzere iki yıla kadar",
+    "Bir yıldan az olmamak üzere üç yıla kadar"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "Kamu İhale Kanunu m.58",
+   "aciklama": "Kamu İhale Kanunu, m.58: “nler hakkında fiil veya davranışlarının özelliğine göre, bir yıldan az olmamak üzere iki yıla kadar, üzerine ihale yapıldığı halde mücbir sebep halleri dışında usulüne göre sözleşme yapmayanlar hakkında ise altı aydan az olmamak üzere bir yıla kadar, 2 nci ve 3 üncü maddeler ile istisna edilenler dahil bütün kamu kurum ve kuruluşlarının ihalelerine katılmaktan yasaklama kararı verilir.”",
+   "id": "P-SB-MUH-01-64"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre birim fiyat sözleşmeyle yürütülen yapım işlerinde iş artışı oranını sözleşme bazında Cumhurbaşkanı yüzde kaça kadar artırabilir?",
+   "siklar": [
+    "%40",
+    "%25",
+    "%30",
+    "%50",
+    "%20"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.24",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.24: “Birim fiyat sözleşme ile yürütülen yapım işlerinde, Cumhurbaşkanı bu oranı sözleşme bazında % 40 'a kadar artırmaya yetkilidir.”",
+   "id": "P-SB-MUH-01-65"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre ihale dokümanında değişiklik ve açıklama yapılmasıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Ek süreye ihtiyaç duyulursa ihale tarihi bir defaya mahsus en fazla yirmi gün zeyilname ile ertelenebilir.\nII. Zeyilname düzenlenmesi halinde teklif vermiş isteklilere teklifini geri çekip yeniden teklif verme imkânı tanınır.\nIII. Açıklama talebi ihale tarihine kadar her zaman yapılabilir.\nIV. İdarenin açıklamasında açıklama talebinde bulunanın kimliği belirtilmez.",
+   "siklar": [
+    "Yalnız II",
+    "I ve III",
+    "II ve III",
+    "I, III ve IV",
+    "I, II ve IV"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.24",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.24: “Zeyilname düzenlenmesi halinde; tekliflerini vermiş veya başvurularını yapmış olan istekli veya adaylara teklif veya başvurularını geri çekerek, yeniden teklif verme veya başvuru yapma imkanı tanınır.”",
+   "id": "P-SB-MUH-01-66"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre kısa sürede nitelikleri değişebilen veya günlük teslime konu mallar için komisyon öncelikle kimlerden kurulur?",
+   "siklar": [
+    "Malı kullanacak birimlerde çalışan görevlilerden",
+    "Hakem laboratuvar personelinden",
+    "Kamu İhale Kurumu uzmanlarından",
+    "Bağımsız denetim kuruluşu çalışanlarından",
+    "Yüklenicinin teknik personelinden"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.6",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.6: “değişebilen veya günlük teslime konu olan malların muayene ve kabul işlemlerinin etkin bir şekilde yürütülebilmesi için idareler, muayene ve kabul komisyonunu öncelikle bu malı kullanacak birimlerde çalışan görevlilerden kurarlar.”",
+   "id": "P-SB-MUH-01-67"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre sözleşmesinde belirtilmek şartıyla yüklenicilere teminat karşılığında ödenebilecek bütçe dışı avans, yüklenme tutarının yüzde kaçını geçemez?",
+   "siklar": [
+    "10",
+    "50",
+    "20",
+    "25",
+    "30"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.35",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.35: “Sözleşmesinde belirtilmek ve yüklenme tutarının yüzde otuzunu geçmemek üzere, yüklenicilere, teminat karşılığında bütçe dışı avans ödenebilir.”",
+   "id": "P-SB-MUH-01-68"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre ihale yetkilisi, ihale komisyonu kararını karar tarihini izleyen en geç kaç iş günü içinde onaylar veya iptal eder?",
+   "siklar": [
+    "5",
+    "10",
+    "15",
+    "3",
+    "7"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Kamu İhale Kanunu m.40",
+   "aciklama": "Kamu İhale Kanunu, m.40: “İhale yetkilisi, karar tarihini izleyen en geç beş iş günü içinde ihale kararını onaylar veya gerekçesini açıkça belirtmek suretiyle iptal eder.”",
+   "id": "P-SB-MUH-01-69"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre anahtar teslimi götürü bedel ihale edilen yapım işlerinde, öngörülemeyen durumlar nedeniyle zorunlu iş artışı sözleşme bedelinin yüzde kaçına kadar aynı yükleniciye yaptırılabilir?",
+   "siklar": [
+    "%5",
+    "%30",
+    "%10",
+    "%20",
+    "%40"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.24",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.24: “n iş; a) Sözleşmeye esas proje içinde kalması, b) İdareyi külfete sokmaksızın asıl işten ayrılmasının teknik veya ekonomik olarak mümkün olmaması, Şartlarıyla, anahtar teslimi götürü bedel ihale edilen yapım işlerinde sözleşme bedelinin % 10'una, birim fiyat teklif almak suretiyle ihale edilen mal ve hizmet alımlarıyla yapım işleri sözleşmelerinde ise % 20 'sine kadar oran dahilinde, süre hariç sözleşme ve ihale dokümanındaki hükümler çerçevesinde aynı yükleniciye yaptırılabilir. Birim fiyat sözleşme ile yürütülen yapım işlerinde, Cumhurbaşkanı bu oranı sözleşme bazında % 40 'a kadar artırmaya yetkilidir.6 5 Bu maddenin başlığı “Öngörülemeyen durumlar nedeniyle işin tasfiyesi” iken, 30/7/2003 tarihli ve 4964 sayılı Kanunun 46 ncı maddesi ile metne işlendiği şekilde değiştirilmiştir. 6 2/7/2018 tarihli ve 700 sayılı KHK’nin 140 ıncı maddesiyle, bu fıkrada yer alan “Bakanlar Kurulu” ibaresi “Cumhurbaşkanı” şeklinde değiştirilmiştir. İşin bu şartlar dahilinde tamamlanamayacağının anlaşılması durumunda ise artış yapılmaksızın hesabı genel hükümlere göre tasfiye edilir. Ancak bu durumda, işin tamamının ihale dokümanı ve sözleşme hükümlerine uygun olarak yerine getirilmesi zorunludur. Sözleşme bedelinin % 80'inden daha düşük bedelle tamamlanacağı anlaşılan işlerde, yüklenici işi bitirmek zorundadır. Bu durumda yükleniciye, yapmış olduğu gerçek giderleri ve yüklenici kârına karşılık olarak, sözleşme bedelinin % 80'i ile sözleşme fiyatlarıyla yaptığı işin tutarı arasındaki bedel farkının % 5'i geçici kabul tarihindeki fiyatlar üzerinden ödenir. ÜÇÜNCÜ KISIM Yasaklar ve Sorumluluklar Yasak fiil ve davranışlar”",
+   "id": "P-SB-MUH-01-70"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre yüklenicinin çalıştıracağı personele ilişkin düzenlemelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Personelin yüklenici bünyesinde bulunduğu sosyal güvenlik kurumu belgesiyle tevsik edilir",
+    "Personelin niteliğini gösteren belgeler teklif ile birlikte sunulur",
+    "Personelin sayısı ve niteliği teknik şartnamede veya sözleşme tasarısında düzenlenebilir",
+    "Deneyim süresi mezuniyet tarihi esas alınarak tevsik edilir",
+    "Personel çalıştırıldığına ilişkin belge yeterlik kriteri olarak istenemez"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.41",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.41: “b) Personelin niteliğini ve deneyim süresini gösteren belgeler ile yüklenicinin bünyesinde bulunduğuna ilişkin belgeler, sözleşmenin imzalanmasından sonra işe başlanmadan önce yüklenici tarafından idareye sunulur.”",
+   "id": "P-SB-MUH-01-71"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre itiraz muayenesi için ilk komisyonca tutulan numune yoksa muayene neyin üzerinden yapılır?",
+   "siklar": [
+    "Fabrika test raporları üzerinden",
+    "Yükleniciden alınacak yeni numune üzerinden",
+    "Ara denetim raporları üzerinden",
+    "Benzer bir alımın numunesi üzerinden",
+    "Mal üzerinden"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.18",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.18: “İtiraz muayenesi yalnız ilk muayeneden olumsuz çıkan ve itiraz edilen noktalar üzerinde ve ilk komisyonca tutulan numune, numune yoksa mal üzerinden yapılır.”",
+   "id": "P-SB-MUH-01-72"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bütçe ilkeleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Bütçelerde gelir ve gider denkliğinin sağlanması esastır.",
+    "Bütçelerde, bütçeyi ilgilendirmeyen hususlara yer verilmez.",
+    "Tüm gelir ve giderler gayri safi olarak bütçelerde gösterilir.",
+    "Belirli gelirlerin belirli giderlere tahsis edilmesi esastır.",
+    "Bütçeler, izleyen iki yılın bütçe tahminleriyle birlikte görüşülür."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.13",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.13: “g) Belirli gelirlerin belirli giderlere tahsis edilmemesi esastır.”",
+   "id": "P-SB-MUH-01-73"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre bir idare, mevcut ekipmanla uyumu sağlamak için ilk alımı yaptığı firmadan doğrudan temin yoluyla ek alım yapacaktır. Bu amaçla düzenlenecek sözleşmelerin toplam süresi en fazla ne kadar olabilir?",
+   "siklar": [
+    "Altı ay",
+    "Bir yıl",
+    "Beş yıl",
+    "İki yıl",
+    "Üç yıl"
+   ],
+   "dogru": 4,
+   "tip": "vaka",
+   "kaynak": "Kamu İhale Kanunu m.22",
+   "aciklama": "Kamu İhale Kanunu, m.22: “c) Mevcut mal, ekipman, teknoloji veya hizmetlerle uyumun ve standardizasyonun sağlanması için zorunlu olan mal ve hizmetlerin, asıl sözleşmeye dayalı olarak düzenlenecek ve toplam süreleri üç yılı geçmeyecek sözleşmelerle ilk alım yapılan gerçek veya tüzel kişiden alınması.”",
+   "id": "P-SB-MUH-01-74"
+  },
+  {
+   "lawId": 88,
+   "soru": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre aşağıdakilerden hangisi mücbir sebep olarak kabul edilebilecek hâller arasında sayılmamıştır?",
+   "siklar": [
+    "Kısmî veya genel seferberlik ilanı",
+    "Yüklenicinin malî acz içine düşmesi",
+    "Doğal afetler",
+    "Kanuni grev",
+    "Genel salgın hastalık"
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Sözleşmeleri Kanunu m.19",
+   "aciklama": "Kamu İhale Sözleşmeleri Kanunu, m.19: “Sözleşme yapıldıktan sonra mücbir sebep halleri dışında yüklenicinin mali acz içinde bulunması nedeniyle taahhüdünü yerine getiremeyeceğini gerekçeleri ile birlikte yazılı olarak bildirmesi halinde, ayrıca protesto çekmeye gerek kalmaksızın kesin teminat ve varsa ek kesin teminatlar gelir kaydedilir ve sözleşme feshedilerek hesabı genel hükümlere göre tasfiye edilir. İdarenin sözleşmeyi feshetmesi”",
+   "id": "P-SB-MUH-01-75"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre Kurulun uygun görüşü olmadıkça, Kanunun 21 inci maddesinin (f) bendi ve 22 nci maddesinin (d) bendindeki parasal limitler dahilinde yapılacak harcamaların yıllık toplamı, idarenin mal alımı ödeneklerinin yüzde kaçını aşamaz?",
+   "siklar": [
+    "15",
+    "10",
+    "20",
+    "5",
+    "25"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.4",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.4: “f) bendi ve 22 nci maddesinin (d) bendinde yer alan parasal limitler dahilinde yapılacak harcamaların yıllık toplamı, idarelerin bütçelerine mal alımı amacıyla konulacak ödeneklerin %10’unu aşamaz.”",
+   "id": "P-SB-MUH-01-76"
+  },
+  {
+   "lawId": 123,
+   "soru": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre kesin kabulle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Yüklenici veya vekili dilekçe ile başvurur.",
+    "İdarece kesin kabul teklif belgesi düzenlenir.",
+    "İdare, yüklenicinin başvurusu olmadan kendiliğinden başlatır.",
+    "Kesin kabul zamanı ihale dokümanında belirtilir.",
+    "Zorunlu hallerde yeni bir kabul komisyonu kurulabilir."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik m.25",
+   "aciklama": "Mal Alımları Denetim Muayene ve Kabul İşlemlerine Dair Yönetmelik, m.25: “Kesin kabul zamanı geldiğinde yüklenici veya vekili bir dilekçe ile idareye başvurur.”",
+   "id": "P-SB-MUH-01-77"
+  },
+  {
+   "lawId": 77,
+   "soru": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre yüklenmeyle ilgili aşağıdakilerden hangileri doğrudur?\nI. Yüklenme süresi malî yılla sınırlıdır.\nII. Bütçede yeterli ödeneği bulunmayan işler için yüklenmeye girişilebilir.\nIII. Yüklenmeye girişilen tutara ait ödenekler başka bir mal veya hizmet alımında kullanılabilir.",
+   "siklar": [
+    "I ve III",
+    "Yalnız III",
+    "II ve III",
+    "Yalnız I",
+    "I ve II"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu m.26",
+   "aciklama": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu, m.26: “Yüklenme süresi malî yılla sınırlıdır.”",
+   "id": "P-SB-MUH-01-78"
+  },
+  {
+   "lawId": 87,
+   "soru": "4734 sayılı Kamu İhale Kanunu'na göre ihalelere katılmaktan yasaklama kararlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Karar, yayımı tarihinde yürürlüğe girer.",
+    "Belediyelerle ilgili yasaklama kararlarını İçişleri Bakanlığı verir.",
+    "Karar, Resmî Gazete'de yayımlanmak üzere en geç on beş gün içinde gönderilir.",
+    "Kararlar Kamu İhale Kurumunca izlenerek siciller tutulur.",
+    "Karar, fiilin tespit edildiği tarihi izleyen en geç kırk beş gün içinde verilir."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "Kamu İhale Kanunu m.58",
+   "aciklama": "Kamu İhale Kanunu, m.58: “a bağlı kuruluşu sayılmayan idarelerde bu idarelerin ihale yetkilileri, il özel idareleri ve bunlara bağlı birlik, müessese ve işletmelerde İçişleri Bakanlığı; belediyeler ve bunlara bağlı birlik, müessese ve işletmelerde ise Çevre ve Şehircilik Bakanlığı tarafından verilir.”",
+   "id": "P-SB-MUH-01-79"
+  },
+  {
+   "lawId": 122,
+   "soru": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre fiyat dışı unsurlara ilişkin düzenlemeyi yapan birim veya görevlilerce hazırlanan gerekçeli açıklama belgesi nerede yer alır?",
+   "siklar": [
+    "Teknik şartnamenin ekinde",
+    "İhale ilanında",
+    "Sözleşme tasarısında",
+    "İhale onay belgesinin ekinde",
+    "Teklif mektubunun ekinde"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Mal Alımı İhaleleri Uygulama Yönetmeliği m.60",
+   "aciklama": "Mal Alımı İhaleleri Uygulama Yönetmeliği, m.60: “(5) Fiyat dışı unsurlara, bu unsurların parasal değerlerine veya nispi ağırlıklarına ve hesaplama yöntemine yönelik düzenlemeyi yapan birim veya görevliler tarafından gerekçeli bir açıklama belgesi hazırlanır ve bu belge ihale onay belgesinin ekinde yer alır.”",
+   "id": "P-SB-MUH-01-80"
+  }
+ ]
+}

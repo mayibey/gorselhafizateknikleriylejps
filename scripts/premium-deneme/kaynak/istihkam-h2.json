@@ -1,0 +1,635 @@
+[
+ {
+  "law": 122,
+  "tip": "onculu",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre belli istekliler arasında ihale usulünde yeterlik puanlamasıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. Mesleki ve teknik yeterlik kriterlerine ilişkin puanların toplamı asgari altmış, azami doksan puan olabilir.\nII. Puanların eşit olması halinde yalnızca en önce başvuran aday listeye alınır.\nIII. İptal edilen ihale yeniden bu usulle yapılırsa davet edilecek aday sayısı iptal edilen ihaledekinden az olamaz.\nIV. Yeterlik kriterlerinden her birine en fazla yirmibeş puan verilebilir.",
+  "s": [
+   "I, III ve IV",
+   "I ve II",
+   "II ve IV",
+   "Yalnız III",
+   "I, II ve III"
+  ],
+  "kanit": [
+   "asgari altmış, azami doksan puan olabilir",
+   "eşit puana sahip adayların tamamı listeye alınarak",
+   "iptal edilen ihalede öngörülen sayıdan daha az olamaz"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre itiraz üzerine kurulan ikinci komisyonun fiziksel muayene sonucu olumlu çıkarsa ne yapılır?",
+  "s": [
+   "Laboratuvar muayenelerine geçilir.",
+   "Mal doğrudan kesin kabul edilir.",
+   "Üçüncü bir komisyon kurulur.",
+   "Mal yükleniciye iade edilir.",
+   "İlk komisyonun kararı geçerli sayılır."
+  ],
+  "kanit": [
+   "Sonuç olumlu ise, laboratuvar muayenelerine geçilir"
+  ]
+ },
+ {
+  "law": 77,
+  "tip": "olumsuz",
+  "k": "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre aşağıdakilerden hangisi ertesi yıla geçen yüklenmeye girişilebilecek iş ve hizmetler arasında sayılmamıştır?",
+  "s": [
+   "Kırtasiye ve büro malzemesi alımları",
+   "Yiyecek, yakacak ve akaryakıt ihtiyaçları",
+   "Temini güç ilaç, aşı ve serum alımları",
+   "Taşıma, temizlik ve yemek hizmetleri",
+   "Süreli yayın alımları"
+  ],
+  "kanit": [
+   "Yiyecek, yakacak, akaryakıt ve madeni yağ ihtiyaçları",
+   "Temini ve korunması güç olan ilaç, aşı, serum ve tıbbi sarf malzemeleri",
+   "Süreli yayın alımı, taşıma, koruma ve güvenlik, temizlik ve yemek hizmetleri"
+  ]
+ },
+ {
+  "law": 87,
+  "tip": "duz",
+  "k": "4734 sayılı Kamu İhale Kanunu'na göre ihale yetkilisi, ihale komisyonu kararını karar tarihini izleyen en geç kaç iş günü içinde onaylar veya iptal eder?",
+  "s": [
+   "5",
+   "3",
+   "10",
+   "7",
+   "15"
+  ],
+  "kanit": [
+   "karar tarihini izleyen en geç beş iş günü içinde ihale kararını onaylar"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "olumsuz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre ödeme belgesi ve kanıtlayıcı belgelerle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Ortak veri tabanından yapılan harcamalarda bu veriler ayrıca kanıtlayıcı belge olarak bağlanır.",
+   "Ödeme belgesi iki nüsha olarak muhasebe birimine verilir.",
+   "Kanıtlayıcı belgeler ödeme belgesinin birinci nüshasına bağlanır.",
+   "Ödeme belgesinin ikinci nüshası muhasebe biriminde saklanır.",
+   "Fatura ve taşınır işlem fişinin asıllarının bağlanması esastır."
+  ],
+  "kanit": [
+   "ödeme belgesine ayrıca bu verileri kanıtlayıcı belge bağlanmaz",
+   "Ödeme belgesi iki nüsha olarak",
+   "ikinci nüshası ise muhasebe biriminde saklanır"
+  ]
+ },
+ {
+  "law": 88,
+  "tip": "olumsuz",
+  "k": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre sözleşmenin feshiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Mücbir sebeplerden dolayı fesihte kesin teminat gelir kaydedilir.",
+   "Gelir kaydedilen teminatlar, yüklenicinin borcuna mahsup edilemez.",
+   "Fesih kararı, karar tarihini izleyen beş gün içinde yükleniciye bildirilir.",
+   "Fesih nedeniyle idarenin uğradığı zarar yükleniciye tazmin ettirilir.",
+   "Mali acz nedeniyle fesihte kesin teminat gelir kaydedilir."
+  ],
+  "kanit": [
+   "kesin teminat ve varsa ek kesin teminatlar iade edilir",
+   "Gelir kaydedilen teminatlar, yüklenicinin borcuna mahsup edilemez",
+   "karar tarihini izleyen beş gün içinde yükleniciye bildirilir"
+  ]
+ },
+ {
+  "law": 116,
+  "tip": "olumsuz",
+  "k": "Ön Ödeme Usul ve Esasları Hakkında Yönetmelik'e göre avans işlemleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Mutemet, avans almadan kendi imkânlarıyla harcama yapıp sonradan mahsup ettirebilir.",
+   "Avans, hangi iş için verilmiş ise yalnızca o işte kullanılır.",
+   "Verilecek avansın üst sınırları merkezi yönetim bütçe kanununda gösterilir.",
+   "Mutemet, harcama yetkilisinin yazılı izniyle üzerindeki avansı başka bir mutemede devredebilir.",
+   "Avansın verildiği tarihten önceki tarihi taşıyan harcama belgeleri kural olarak mahsupta kabul edilmez."
+  ],
+  "kanit": [
+   "Mutemetler avans almadan harcama yapamaz",
+   "Avans, hangi iş için verilmiş ise yalnızca o işte kullanılır",
+   "Harcama yetkilisinin yazılı izniyle mutemet"
+  ]
+ },
+ {
+  "law": 106,
+  "tip": "olumsuz",
+  "k": "Şehitlik Yönetmeliği'ne göre aşağıdakilerden hangisi şehitliklere defnedilmez?",
+  "s": [
+   "Kanuni izne giderken yolda hayatını kaybeden er",
+   "Terörle mücadele görevi sırasında hayatını kaybeden uzman erbaş",
+   "Görevi sırasında yaralanıp bu yaralanmanın sebep ve tesiriyle sonradan hayatını kaybeden astsubay",
+   "Terörle mücadele sırasında hayatını kaybeden geçici köy korucusu",
+   "Kara sınırlarının korunması görevinde hayatını kaybeden er"
+  ],
+  "kanit": [
+   "Kanuni izinler, hava değişimi veya bunlara gidiş ve dönüşler esnasında hayatını kaybedenler",
+   "yaralananlardan daha sonra bu yaralanmanın sebep ve tesiri ile hayatını kaybettiği değerlendirilenler",
+   "Kara Sınırlarının Korunması ve Güvenliği Hakkında Kanunun 1 inci maddesinde sayılan birliklerde görev yapanlardan"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "onculu",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre insan üzerinde yapılan araştırmalarla ilgili aşağıdakilerden hangileri doğrudur?\nI. Araştırmanın sorumluluğu tümüyle araştırmacıya aittir.\nII. Araştırmanın giderleri deneğin sosyal güvenlik kurumuna yansıtılabilir.\nIII. Denek için ciddi bir tehlike şüphesi doğduğunda araştırma durdurulur.",
+  "s": [
+   "I ve III",
+   "Yalnız I",
+   "II ve III",
+   "I, II ve III",
+   "Yalnız II"
+  ],
+  "kanit": [
+   "Araştırmanın sorumluluğu tümüyle araştırmacıya aittir",
+   "ciddi bir tehlike şüphesi doğduğunda araştırma durdurulur",
+   "ya da sosyal güvenlik kurumuna yansıtılamaz"
+  ]
+ },
+ {
+  "law": 89,
+  "tip": "duz",
+  "k": "5543 sayılı İskân Kanunu'na göre Türk soyundan ve Türk kültürüne bağlı olup iki ülke arasındaki anlaşmaya göre yerleşmek amacıyla toplu olarak gelen ailelere ne ad verilir?",
+  "s": [
+   "Toplu göçmen",
+   "Münferit göçmen",
+   "Serbest göçmen",
+   "İskânlı göçmen",
+   "Göçebe"
+  ],
+  "kanit": [
+   "iki ülke arasında yapılan anlaşmaya göre yurdumuza yerleşmek amacıyla toplu olarak gelen ailelerdir"
+  ]
+ },
+ {
+  "law": 91,
+  "tip": "duz",
+  "k": "3194 sayılı İmar Kanunu'na göre belediyeler, imar planlarının yürürlüğe girmesinden en geç ne kadar süre içinde beş yıllık imar programlarını hazırlar?",
+  "s": [
+   "3 ay",
+   "6 ay",
+   "1 ay",
+   "12 ay",
+   "2 ay"
+  ],
+  "kanit": [
+   "imar planlarının yürürlüğe girmesinden en geç 3 ay içinde"
+  ]
+ },
+ {
+  "law": 92,
+  "tip": "duz",
+  "k": "3402 sayılı Kadastro Kanunu'na göre kadastrosuna başlanacak bölgeler en az ne kadar önceden ilan olunur?",
+  "s": [
+   "1 ay",
+   "15 gün",
+   "7 gün",
+   "3 ay",
+   "2 ay"
+  ],
+  "kanit": [
+   "Kadastrosuna başlanacak bölgeler en az bir ay önceden Resmi Gazete"
+  ]
+ },
+ {
+  "law": 93,
+  "tip": "duz",
+  "k": "2565 sayılı Askeri Yasak Bölgeler ve Güvenlik Bölgeleri Kanunu'na göre birinci derece kara askeri yasak bölgeleri, askeri tesisin dış sınırlarından en az kaç metre uzaktan alınan noktalar birleştirilerek oluşturulur?",
+  "s": [
+   "100",
+   "400",
+   "50",
+   "250",
+   "30"
+  ],
+  "kanit": [
+   "en az yüz, en fazla dörtyüz metre uzağından alınan noktaların"
+  ]
+ },
+ {
+  "law": 118,
+  "tip": "olumsuz",
+  "k": "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangisi kamu zararının belirlenmesinde esas alınan hususlardan biri değildir?",
+  "s": [
+   "Bütçe ödeneğinin malî yıl sonunda kullanılmadan kalması",
+   "Belirlenen tutardan fazla ödeme yapılması",
+   "Mevzuatta öngörülen hâller dışında iş yaptırılmadan önce ödeme yapılması",
+   "Rayiç bedelden daha yüksek fiyatla mal alınması",
+   "Görevlilere teslim edilen taşınırların zarara uğraması"
+  ],
+  "kanit": [
+   "Görevlilere teslim edilen taşınırların zarara uğraması",
+   "rayiç bedelinden daha yüksek fiyatla iş yaptırılması, mal veya hizmet alınması"
+  ]
+ },
+ {
+  "law": 90,
+  "tip": "duz",
+  "k": "2942 sayılı Kamulaştırma Kanunu'na göre yurt savunması ihtiyacına veya aceleliğine Cumhurbaşkanınca karar alınan hâllerde, taşınmaz malın değeri mahkemece kaç gün içinde tespit edilerek el konulabilir?",
+  "s": [
+   "7",
+   "15",
+   "30",
+   "3",
+   "10"
+  ],
+  "kanit": [
+   "mahkemece yedi gün içinde o taşınmaz malın",
+   "kıymet takdiri dışındaki işlemler sonradan tamamlanmak üzere"
+  ]
+ },
+ {
+  "law": 47,
+  "tip": "vaka",
+  "k": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun'a göre bir ilin merkez ilçesi dışındaki bir ilçede bulunan taşınmaza tecavüz edilmiştir. Bu tecavüzün önlenmesine hangi makam karar verir?",
+  "s": [
+   "Kaymakam",
+   "Vali",
+   "Vali yardımcısı",
+   "Sulh hukuk hâkimi",
+   "Cumhuriyet savcısı"
+  ],
+  "kanit": [
+   "diğer ilçelerde ise kaymakamlar tarafından bu tecavüz veya müdahalenin önlenmesine karar verilir",
+   "merkez ilçe sınırları içinde ise, il valisi veya görevlendireceği vali yardımcısı"
+  ]
+ },
+ {
+  "law": 127,
+  "tip": "duz",
+  "k": "Hazine Taşınmazlarının İdaresi Hakkında Yönetmelik'e göre ihalelerde alınacak geçici teminat, tahmin edilen bedelin hangi oranları arasında belirlenir?",
+  "s": [
+   "%10'undan az olmamak üzere %30'una kadar",
+   "%3'ünden az olmamak üzere %6'sına kadar",
+   "%5'inden az olmamak üzere %20'sine kadar",
+   "%6'sından az olmamak üzere %10'una kadar",
+   "%20'sinden az olmamak üzere %50'sine kadar"
+  ],
+  "kanit": [
+   "tahmin edilen bedelin yüzde onundan az olmamak üzere yüzde otuzuna kadar"
+  ]
+ },
+ {
+  "law": 121,
+  "tip": "olumsuz",
+  "k": "Kamu Konutları Yönetmeliği'ne göre aşağıdakilerden hangisi aylık kira bedeli alınmayan konutlar arasında yer almaz?",
+  "s": [
+   "Sıra tahsisli konutlar",
+   "Cumhurbaşkanına tahsis edilen özel tahsisli konut",
+   "TBMM Başkanına tahsis edilen özel tahsisli konut",
+   "Yurt dışında büyükelçilere tahsis edilen özel tahsisli konutlar",
+   "Hizmet tahsisli konutlar"
+  ],
+  "kanit": [
+   "hizmet tahsisli konutlardan aylık kira bedeli alınmaz",
+   "Yurt içinde Cumhurbaşkanı, Türkiye Büyük Millet Meclisi Başkanı, Başbakan"
+  ]
+ },
+ {
+  "law": 124,
+  "tip": "olumsuz",
+  "k": "Türk Silahlı Kuvvetleri, Millî İstihbarat Teşkilatı, Emniyet Genel Müdürlüğü, Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Taşınır Mal Yönetmeliği'ne göre taşınır mal sorumlusunun görev ve sorumlulukları arasında aşağıdakilerden hangisi yer almaz?",
+  "s": [
+   "Taşınır malların satışına karar vermek",
+   "Edinilen taşınır malları sayarak, tartarak, ölçerek teslim almak",
+   "Kesin kabulü yapılmadan taşınır malların kullanıma verilmesini önlemek",
+   "Tüketime veya kullanıma verilen taşınır malları ilgililere teslim etmek",
+   "Taşınır malları yangına, ıslanmaya ve çalınmaya karşı korumak için tedbir almak"
+  ],
+  "kanit": [
+   "cins ve niteliklerine göre sayarak, tartarak, ölçerek teslim almak",
+   "kesin kabulleri yapılmadan kullanıma verilmesini önlemek",
+   "Tüketime veya kullanıma verilen taşınır malları ilgililere teslim etmek"
+  ]
+ },
+ {
+  "law": 119,
+  "tip": "duz",
+  "k": "Karayolu Taşıma Yönetmeliği'ne göre Bakanlıkça yapılan kontroller neticesinde, yetki belgesinin geçerlilik süresi içinde hiç uyarma almayan yetki belgesi sahiplerine yenileme sırasında ne kadar süre eklenir?",
+  "s": [
+   "1 yıl",
+   "6 ay",
+   "2 yıl",
+   "3 ay",
+   "5 yıl"
+  ],
+  "kanit": [
+   "Hiç uyarma almayanlara 1 yıllık süre"
+  ]
+ },
+ {
+  "law": 125,
+  "tip": "duz",
+  "k": "Yapım İşleri İhaleleri Uygulama Yönetmeliği'ne göre iş deneyim belgeleri, talepleri halinde talep tarihini izleyen kaç gün içinde düzenlenir ve verilir?",
+  "s": [
+   "30",
+   "15",
+   "45",
+   "10",
+   "60"
+  ],
+  "kanit": [
+   "talep tarihini izleyen 30 gün içinde belge düzenlemeye yetkili mercilerce düzenlenir"
+  ]
+ },
+ {
+  "law": 126,
+  "tip": "vaka",
+  "k": "Yapım İşleri Muayene ve Kabul Yönetmeliği'ne göre yüklenici işi sözleşmedeki bitim tarihinde tamamlamış ve bu durum yapı denetim görevlisinin ön incelemesinde tespit edilmiştir. Ancak kabul komisyonu işyerine geç giderek kabul işlemini geç yapmıştır. Bu durumda geçici kabul tarihi olarak hangi tarih kabul edilir?",
+  "s": [
+   "İşin fiilen bitmiş olduğu tarih",
+   "Kabul tutanağının onaylandığı tarih",
+   "Komisyonun işyerine gittiği tarih",
+   "Komisyonun kurulduğu tarih",
+   "Yüklenicinin geçici kabul başvurusunu yaptığı tarih"
+  ],
+  "kanit": [
+   "itibar tarihi olarak işin fiilen bitmiş olduğu tarih gösterilir"
+  ]
+ },
+ {
+  "law": 94,
+  "tip": "olumsuz",
+  "k": "4925 sayılı Karayolu Taşıma Kanunu'na göre aşağıdakilerden hangisi Kanun hükümlerine tâbi olmayan taşımalar arasında yer almaz?",
+  "s": [
+   "Yetki belgeli taşımacının otobüsüyle yapılan şehirlerarası yolcu taşımaları",
+   "Özel otomobillerle yapılan taşımalar",
+   "Belediyelere ait otomobillerle yapılan taşımalar",
+   "Jandarma Genel Komutanlığına ait motorlu taşıtlarla yapılan taşımalar",
+   "Lastik tekerlekli traktörlerle çekilen römorklarla yapılan taşımalar"
+  ],
+  "kanit": [
+   "kamuya açık karayolunda motorlu taşıtlarla yapılan yolcu ve eşya taşımalarını",
+   "lastik tekerlekli traktörlerle çekilen römorklarla yapılan taşımalar bu Kanun hükümlerine tâbi değildir"
+  ]
+ },
+ {
+  "law": 120,
+  "tip": "duz",
+  "k": "Kamu İdarelerine Ait Taşınmazların Kaydına İlişkin Yönetmelik'e göre taşınmaz kayıt ve kontrol işlemleriyle görevli birim, Kayıt Planına göre oluşturulan formları muhasebe birimine ve mali hizmetler birimine en geç kaç gün içinde gönderir?",
+  "s": [
+   "7",
+   "15",
+   "10",
+   "30",
+   "5"
+  ],
+  "kanit": [
+   "en geç yedi gün içinde muhasebe hizmetlerini yürüten muhasebe birimine ve mali hizmetler birimine"
+  ]
+ },
+ {
+  "law": 122,
+  "tip": "duz",
+  "k": "Mal Alımı İhaleleri Uygulama Yönetmeliği'ne göre bilanço veya bilançonun yeterlik kriterlerinin sağlandığını gösteren bölümlerinin kimlerce onaylanmış olması zorunludur?",
+  "s": [
+   "Yeminli mali müşavir, serbest muhasebeci mali müşavir veya vergi dairesi",
+   "Yalnızca noter",
+   "Ticaret sicili müdürlüğü",
+   "İhale komisyonu",
+   "Kamu İhale Kurumu"
+  ],
+  "kanit": [
+   "yeminli mali müşavir veya serbest muhasebeci mali müşavir ya da vergi dairesince onaylanmış olması zorunludur"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre yüklenicinin malı ihale dokümanına uygun şekilde teslim etmesinden itibaren en geç kaç iş günü içinde idarece muayene ve kabul işlemlerine başlanır?",
+  "s": [
+   "5",
+   "3",
+   "10",
+   "7",
+   "15"
+  ],
+  "kanit": [
+   "en geç beş işgünü içinde idarece muayene ve kabul işlemlerine başlanır"
+  ]
+ },
+ {
+  "law": 77,
+  "tip": "vaka",
+  "k": "Bir kamu görevlisi, alınmamış malı alınmış gibi gösteren gerçek dışı bir belge düzenleyerek kamu kaynağında eksilmeye neden olmuştur. 5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu'na göre bu kişiye, ceza kanunları hükümleri saklı kalmak üzere ayrıca ne kadar para cezası verilir?",
+  "s": [
+   "Her türlü aylık, ödenek, zam ve tazminat dahil bir aylık net ödemelerinin iki katı tutarına kadar",
+   "Bir aylık net ödemelerinin yarısı tutarına kadar",
+   "Üç aylık brüt aylığı tutarına kadar",
+   "Neden olduğu kamu zararının iki katı tutarına kadar",
+   "Bir aylık net ödemelerinin dört katı tutarına kadar"
+  ],
+  "kanit": [
+   "bir aylık net ödemelerin iki katı tutarına kadar para cezası verilir",
+   "gerçek dışı belge düzenlemek suretiyle kamu kaynağında bir artışa engel veya bir eksilmeye neden olanlar"
+  ]
+ },
+ {
+  "law": 87,
+  "tip": "olumsuz",
+  "k": "4734 sayılı Kamu İhale Kanunu'na göre aşağıdakilerden hangisi teminat olarak kabul edilecek değerler arasında yer almaz?",
+  "s": [
+   "Hisse senetleri",
+   "Tedavüldeki Türk parası",
+   "Teminat mektupları",
+   "Devlet iç borçlanma senetleri",
+   "Devlet iç borçlanma senetleri yerine düzenlenen belgeler"
+  ],
+  "kanit": [
+   "Teminat olarak kabul edilecek değerler aşağıda gösterilmiştir",
+   "Devlet İç Borçlanma Senetleri ve bu senetler yerine düzenlenen belgeler"
+  ]
+ },
+ {
+  "law": 99,
+  "tip": "duz",
+  "k": "Merkezî Yönetim Harcama Belgeleri Yönetmeliği'ne göre bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde hangi belgeler ödeme belgesine bağlanır?",
+  "s": [
+   "Taahhüt dosyası, fatura ve Hizmet İşleri Hakediş Raporu",
+   "Yalnız fatura",
+   "Fatura ve taşınır işlem fişi",
+   "Taahhüt dosyası ve muayene ve kabul komisyonu tutanağı",
+   "Harcama talimatı ve Yapım İşleri Hakediş Raporu"
+  ],
+  "kanit": [
+   "bilgisayar sistemleri ve yazılımları kira bedellerinin ödenmesinde; -Taahhüt dosyası, - Fatura, -Hizmet İşleri Hakediş Raporu"
+  ]
+ },
+ {
+  "law": 88,
+  "tip": "olumsuz",
+  "k": "4735 sayılı Kamu İhale Sözleşmeleri Kanunu'na göre aşağıdakilerden hangisi sözleşmede belirtilmesi zorunlu hususlar arasında yer almaz?",
+  "s": [
+   "İhale komisyonu üyelerinin adları",
+   "Gecikme hâlinde alınacak cezalar",
+   "Anlaşmazlıkların çözümü",
+   "İş sağlığı ve güvenliğine ilişkin yükümlülükler",
+   "Kesin teminat miktarı ve iadesine ait şartlar"
+  ],
+  "kanit": [
+   "Gecikme halinde alınacak cezalar",
+   "İş sağlığı ve güvenliğine ilişkin yükümlülükler",
+   "Kesin teminat miktarı ile kesin teminatın iadesine ait şartlar"
+  ]
+ },
+ {
+  "law": 116,
+  "tip": "duz",
+  "k": "Ön Ödeme Usul ve Esasları Hakkında Yönetmelik'e göre görevlerinin niteliği gereği birliklerince toplu olarak beslenemeyen jandarma erbaş ve erlerine, harçlıkları ile birlikte tayın bedelinin ne kadarlık tutarı avans olarak ödenebilir?",
+  "s": [
+   "Bir aylık",
+   "Üç aylık",
+   "İki aylık",
+   "Altı aylık",
+   "On beş günlük"
+  ],
+  "kanit": [
+   "tayın bedelinin bir aylık tutarı avans olarak ödenebilir"
+  ]
+ },
+ {
+  "law": 106,
+  "tip": "duz",
+  "k": "Şehitlik Yönetmeliği'ne göre yurt içindeki şehitliklerin yönetim, inşa, bakım ve onarımına ilişkin keşif raporları hangi ayın sonuna kadar İçişleri Bakanlığına gönderilir?",
+  "s": [
+   "Mart",
+   "Ağustos",
+   "Ocak",
+   "Haziran",
+   "Eylül"
+  ],
+  "kanit": [
+   "ödeneğin planlanması için müteakip yılın Mart ayı sonuna kadar İçişleri Bakanlığına gönderilir"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "olumsuz",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre aşağıdakilerden hangisi hekim için yasaklanmış davranışlardan biri değildir?",
+  "s": [
+   "Yayın araçlarıyla uzmanlık alanını ve çalışma saatlerini duyurmak",
+   "Mesleğini uygularken reklam yapmak",
+   "Maddi çıkar karşılığı başka hekime hasta göndermek",
+   "Ruhsatlandırılmamış maddeleri ilaç olarak kullanmak",
+   "Ölüm cezasının infazına yardımcı olmak"
+  ],
+  "kanit": [
+   "uzmanlık alanını, çalışma gün ve saatlerini bildirebilir",
+   "mesleğini uygularken reklam yapamaz",
+   "maddi çıkar karşılığı hasta gönderemez"
+  ]
+ },
+ {
+  "law": 89,
+  "tip": "onculu",
+  "k": "5543 sayılı İskân Kanunu'na göre iskân komisyonları ve temlikle ilgili aşağıdakilerden hangileri doğrudur?\nI. Mahalli İskân Komisyonu mahallin en büyük mülki amirinin veya görevlendireceği kişinin başkanlığında toplanır.\nII. Verilen taşınmazların temlikine vali ve kaymakamlar yetkilidir.\nIII. Taşınmazlar temlik tarihinde yaşayan aile fertleri adına eşit hisselerle tescil edilir.\nIV. Temlik edilen taşınmazın mülkiyet davasında davalı yalnızca Mahalli İskân Komisyonudur.",
+  "s": [
+   "I, II ve III",
+   "II ve IV",
+   "I ve IV",
+   "I, III ve IV",
+   "Yalnız III"
+  ],
+  "kanit": [
+   "temlikine, vali ve kaymakamlar yetkilidir",
+   "temlik tarihinde yaşayan aile fertleri adına eşit hisselerle",
+   "davalı yeni malik ile birlikte tapudaki tescil durumuna göre Hazinedir"
+  ]
+ },
+ {
+  "law": 91,
+  "tip": "vaka",
+  "k": "3194 sayılı İmar Kanunu'na göre ruhsatsız başlanan bir inşaat mühürlenmiş ve yapı tatil zaptı yapı yerine asılmıştır. Yapı sahibi, ruhsat alarak mührün kaldırılmasını en çok ne kadar süre içinde istemelidir?",
+  "s": [
+   "1 ay",
+   "3 ay",
+   "15 gün",
+   "6 ay",
+   "10 gün"
+  ],
+  "kanit": [
+   "Bu tarihten itibaren en çok bir ay içinde yapı sahibi"
+  ]
+ },
+ {
+  "law": 92,
+  "tip": "duz",
+  "k": "3402 sayılı Kadastro Kanunu'na göre seçilen bilirkişilerin en az kaç yaşını bitirmiş olması gerekir?",
+  "s": [
+   "40",
+   "30",
+   "25",
+   "50",
+   "35"
+  ],
+  "kanit": [
+   "Seçilen bilirkişilerin 40 yaşını bitirmiş olması"
+  ]
+ },
+ {
+  "law": 93,
+  "tip": "onculu",
+  "k": "2565 sayılı Askeri Yasak Bölgeler ve Güvenlik Bölgeleri Kanunu'na göre güvenlik bölgelerinde uygulanacak esaslarla ilgili aşağıdakilerden hangileri doğrudur?\nI. Bölge içindeki gerçek ve tüzel kişilere ait mallar kamulaştırılabilir.\nII. Dış sınırdan itibaren en çok 200 metreye kadar yangın ve patlama tehlikesi gösteren maddelerin imali yasaklanabilir.\nIII. Dış sınırdan itibaren 200 metreye kadar hangi zirai ürünün yetiştirileceğine mahalli mülki amirler karar verebilir.\nIV. Askeri güvenlik bölgesinin fotoğrafının çekilmesine valilik izin verir.",
+  "s": [
+   "I, II ve III",
+   "I ve IV",
+   "II ve III",
+   "I, III ve IV",
+   "Yalnız II"
+  ],
+  "kanit": [
+   "Bölge içindeki gerçek ve tüzelkişilere ait mallar kamulaştırılabilir",
+   "en çok ikiyüz metreye kadar olan saha dahilinde yangın ve patlama",
+   "hangi tür zirai ürünün yetiştirileceğine mahalli mülki amirler"
+  ]
+ },
+ {
+  "law": 118,
+  "tip": "olumsuz",
+  "k": "Kamu Zararlarının Tahsiline İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre kamu zararından doğan alacaklarda faiz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Yapılan ödeme alacak aslı ile faizin tamamını karşılamıyorsa ödenen tutar önce faize mahsup edilir.",
+   "Faizin başlangıç tarihi kural olarak zararın oluştuğu tarihtir.",
+   "Borç aslına faiz dahil edilerek tekrar faiz yürütülemez.",
+   "Taksitlendirilen alacaklara anlaşma tarihindeki faiz oranı uygulanır.",
+   "Sayıştay ilamında faizin başlangıcı hakkında hüküm yoksa faiz karar tarihinden başlar."
+  ],
+  "kanit": [
+   "vadesi gelmiş alacak aslına ve faizine orantılı olarak mahsup edilir",
+   "Borç aslına faiz dahil edilerek, tekrar faiz yürütülemez",
+   "Taksitlendirilen alacaklara, anlaşma tarihindeki faiz oranı uygulanır"
+  ]
+ },
+ {
+  "law": 90,
+  "tip": "duz",
+  "k": "2942 sayılı Kamulaştırma Kanunu'na göre satın alma usulünde malik, idarenin yazısının tebliğ tarihinden itibaren kaç gün içinde taşınmazı pazarlıkla satmak veya trampa isteğiyle idareye başvurmalıdır?",
+  "s": [
+   "15",
+   "30",
+   "7",
+   "10",
+   "60"
+  ],
+  "kanit": [
+   "bu yazının tebliğ tarihinden itibaren on beş gün içinde",
+   "pazarlıkla ve anlaşarak satmak veya trampa isteği ile birlikte idareye başvurulması"
+  ]
+ },
+ {
+  "law": 47,
+  "k": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun'a göre zilyet, tecavüzü öğrendiği tarihten itibaren kaç gün içinde başvuruda bulunmalıdır?",
+  "s": [
+   "60",
+   "30",
+   "15",
+   "90",
+   "120"
+  ],
+  "kanit": [
+   "altmış gün içinde"
+  ]
+ }
+]

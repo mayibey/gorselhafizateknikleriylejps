@@ -1,0 +1,128 @@
+[
+ {
+  "law": 128,
+  "tip": "duz",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre bilgisizlik, deneyimsizlik ya da ilgisizlik nedeniyle bir hastanın zarar görmesi ne anlama gelir?",
+  "s": [
+   "Hekimliğin kötü uygulaması",
+   "Tıbbi komplikasyon",
+   "Görevin ihmali",
+   "Tedaviyi yarıda bırakma",
+   "Yetkinlik dışı faaliyet"
+  ],
+  "kanit": [
+   "zarar görmesi hekimliğin kötü uygulaması anlamına gelir",
+   "Bilgisizlik, deneyimsizlik ya da ilgisizlik nedeniyle bir hastanın zarar görmesi"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "duz",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre bu kurallar bütünü, Türk Tabipleri Birliği yayın organlarından birinde yayımlandıktan ne kadar süre sonra yürürlüğe girer?",
+  "s": [
+   "Bir ay",
+   "Üç ay",
+   "On beş gün",
+   "Altı ay",
+   "Bir yıl"
+  ],
+  "kanit": [
+   "yayımlandıktan bir ay sonra yürürlüğe girer"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "duz",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre bu kurallara aykırı davranan hekimler, tabip odaları yönetim kurulları tarafından nereye sevk edilir?",
+  "s": [
+   "Onur kurullarına",
+   "Yerel etik kurullara",
+   "Merkez Konseyine",
+   "Sağlık Bakanlığına",
+   "Cumhuriyet başsavcılığına"
+  ],
+  "kanit": [
+   "tabip odaları yönetim kurulları tarafından onur kurullarına sevk edilirler"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "duz",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre hekim, cinsel ilişki muayenesi istemlerini hangi mercilerden gelmesi hâlinde dikkate alabilir?",
+  "s": [
+   "Savcılıklar ve mahkemeler",
+   "Kolluk birimleri",
+   "Aile ve veliler",
+   "Okul idareleri",
+   "Mülki idare amirlikleri"
+  ],
+  "kanit": [
+   "savcılıklar ve mahkemeler dışında kalan kişi ve kurumlardan gelen"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "olumsuz",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre aydınlatılmış onamla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Hasta verdiği aydınlatılmış onamı geri alamaz.",
+   "Baskı, tehdit veya kandırma yoluyla alınan onam geçersizdir.",
+   "Hastanın dışında bilgilendirilecek kişileri hasta kendisi belirler.",
+   "Tedavisi yasalarla zorunlu kılınan hastalıklarda onam alınmasa da gerekli tedavi yapılır.",
+   "Acil durumlarda müdahale etmek hekimin takdirindedir."
+  ],
+  "kanit": [
+   "Hasta vermiş olduğu aydınlatılmış onamı dilediği zaman geri alabilir",
+   "baskı, tehdit, eksik aydınlatma ya da kandırma yoluyla alındıysa geçersizdir",
+   "Hastanın dışında bilgilendirilecek kişileri, hasta kendisi belirler"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "olumsuz",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre tutuklu ve hükümlülerin muayenesi sonucu düzenlenen belge veya raporlarda aşağıdakilerden hangisinin bulunması zorunlu tutulmamıştır?",
+  "s": [
+   "Hekimin çalıştığı kurumun adresi",
+   "Hekimin adı",
+   "Hekimin soyadı",
+   "Hekimin diploma numarası",
+   "Hekimin imzası"
+  ],
+  "kanit": [
+   "hekimin adı, soyadı, diploma numarası ve imzası mutlaka bulunur"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "onculu",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre insan üzerinde yapılan araştırmalarla ilgili aşağıdakilerden hangileri doğrudur?\nI. Araştırmanın sorumluluğu tümüyle araştırmacıya aittir.\nII. Araştırmanın giderleri deneğin sosyal güvenlik kurumuna yansıtılabilir.\nIII. Denek için ciddi bir tehlike şüphesi doğduğunda araştırma durdurulur.",
+  "s": [
+   "I ve III",
+   "Yalnız I",
+   "II ve III",
+   "I, II ve III",
+   "Yalnız II"
+  ],
+  "kanit": [
+   "Araştırmanın sorumluluğu tümüyle araştırmacıya aittir",
+   "ciddi bir tehlike şüphesi doğduğunda araştırma durdurulur",
+   "ya da sosyal güvenlik kurumuna yansıtılamaz"
+  ]
+ },
+ {
+  "law": 128,
+  "tip": "vaka",
+  "k": "Hekimlik Meslek Etiği Kuralları'na göre cezaevinde muayene ve tedavi olanaklarını bilinçli olarak reddeden bir hükümlüyle karşılaşan hekim nasıl davranmalıdır?",
+  "s": [
+   "Reddin sonuçlarını açıklar, zorla muayene ve tedavi yoluna gitmez.",
+   "Cezaevi müdürünün onayıyla zorla tedavi uygular.",
+   "Savcılık izni alarak zorla muayene eder.",
+   "Kolluk desteğiyle muayeneyi tamamlar.",
+   "Başka bir hekime zorla tedaviyi önerir."
+  ],
+  "kanit": [
+   "bu davranışlarının sonuçlarının neler olabileceğini açıklar",
+   "Zorla muayene ve tedavi yolunu deneyemez, öneremez"
+  ]
+ }
+]

@@ -1,0 +1,315 @@
+[
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre laboratuvar muayenelerinin masraflarının kime ait olacağı nerede belirtilir?",
+  "s": [
+   "İhale dokümanında",
+   "Muayene raporunda",
+   "Geçici kabul tutanağında",
+   "Kesin kabul teklif belgesinde",
+   "Hakem laboratuvar raporunda"
+  ],
+  "kanit": [
+   "masraflarının kime ait olacağını ve hangi sonucun muteber alınacağını",
+   "İdareler ihale dokümanında laboratuvar muayenelerinin"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre itiraz muayenesi için ilk komisyonca tutulan numune yoksa muayene neyin üzerinden yapılır?",
+  "s": [
+   "Mal üzerinden",
+   "Yükleniciden alınacak yeni numune üzerinden",
+   "Fabrika test raporları üzerinden",
+   "Ara denetim raporları üzerinden",
+   "Benzer bir alımın numunesi üzerinden"
+  ],
+  "kanit": [
+   "ilk komisyonca tutulan numune, numune yoksa mal üzerinden yapılır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre işin süresi dolduktan sonra teslim edilen mal muayenede uygun çıkmamıştır. Yükleniciye tanınacak imkân aşağıdakilerden hangisidir?",
+  "s": [
+   "İhtarlı süre içinde bir defa yeni mal getirebilir.",
+   "Süresiz olarak yeni mal getirebilir.",
+   "Üç defa yeni mal getirebilir.",
+   "Hiçbir şekilde yeni mal getiremez.",
+   "Yalnızca bedel indirimi isteyebilir."
+  ],
+  "kanit": [
+   "ihtarlı süre verilerek bu süre içinde bir defa olmak üzere"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre uygun çıkmayan mal yerine yeniden getirilen malın muayenesi de olumsuz çıkarsa yüklenici ne yapmak zorundadır?",
+  "s": [
+   "Depodaki malın tamamını belirtilen sürede geri almak",
+   "Yalnızca reddedilen kısmı geri almak",
+   "Malı idareye bedelsiz bırakmak",
+   "Hakem laboratuvara başvurmak",
+   "Mal bedelinin yarısını ödemek"
+  ],
+  "kanit": [
+   "idarenin deposundaki malın tamamını ihale dokümanında belirtilen süre içerisinde geri almak zorundadır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre son teslim tarihinden önce teslim edilen mal sözleşmeye uygun çıkmazsa yüklenici ne yapabilir?",
+  "s": [
+   "Teslim süresi içinde yenisini getirebilir veya itiraz muayenesi isteyebilir.",
+   "Yalnızca itiraz muayenesi isteyebilir.",
+   "Yeni mal getiremez, sözleşme feshedilir.",
+   "Kamu İhale Kurumundan izin alarak yeni mal getirebilir.",
+   "Malı ancak bedel indirimiyle teslim edebilir."
+  ],
+  "kanit": [
+   "malını alıp yenisi getirmekte veya itiraz muayenesi istemekte serbesttir"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre komisyon kararlarının verilişiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Üyeler kararlarda çekimser kalabilir.",
+   "Komisyon eksiksiz toplanır.",
+   "Kararlar çoğunlukla alınır.",
+   "Karşı olanlar gerekçelerini kararın altına yazar.",
+   "Karşı olanlar kararı imza etmek zorundadır."
+  ],
+  "kanit": [
+   "Kararlarda çekimser kalınamaz",
+   "eksiksiz toplanır ve kararlarını çoğunlukla alır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre muayene raporlarında sonuç ne şekilde belirtilir?",
+  "s": [
+   "“Niteliklerine uygundur” veya “niteliklerine uygun değildir”",
+   "“Olumlu”, “olumsuz” veya “çekimser”",
+   "“Kabul edilebilir” veya “şartlı kabul”",
+   "Puan ve yüzde oranıyla",
+   "“Kısmen uygundur” şeklinde"
+  ],
+  "kanit": [
+   "sonuç “niteliklerine uygundur” veya “niteliklerine uygun değildir” şeklinde kesin olarak"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre geçici kabul hangi durumda yapılır?",
+  "s": [
+   "Etkinlik ve verimliliğin anlaşılması için belirli bir zaman gerektiğinde",
+   "Mal yurt dışından tedarik edildiğinde",
+   "Laboratuvar muayenesi gerekmediğinde",
+   "Mal süresinden önce teslim edildiğinde",
+   "Yüklenici talep ettiğinde"
+  ],
+  "kanit": [
+   "etkinliğinin ve verimliliğinin anlaşılması için belirli bir zamana ihtiyaç duyulan"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre geçici kabul tutanağı en az kaç nüsha düzenlenir?",
+  "s": [
+   "3",
+   "2",
+   "5",
+   "4",
+   "6"
+  ],
+  "kanit": [
+   "en az üç nüsha geçici kabul tutanağı düzenlenir"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "onculu",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre geçici ve kısmi kabulle ilgili aşağıdakilerden hangileri doğrudur?\nI. Geçici kabul tutanağı yetkili makamca onandıktan sonra geçerli olur.\nII. İş geçici kabule hazır bulunmazsa geçici kabul yapılmamış sayılır.\nIII. Geçici kabul tutanağı yükleniciye onaylatılarak geçerlilik kazanır.\nIV. Kısmi kabul yapılan bölümler için Yönetmelik hükümleri aynen uygulanır.",
+  "s": [
+   "I, II ve IV",
+   "I ve III",
+   "Yalnız II",
+   "II, III ve IV",
+   "III ve IV"
+  ],
+  "kanit": [
+   "yetkili makam tarafından onandıktan sonra geçerli olur",
+   "Bu durumda geçici kabul yapılmamış sayılır",
+   "Kısmi kabul yapılan bölümler için bu Yönetmelik hükümleri aynen uygulanır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre kısmi kabul, taahhüt konusu işin hangi bölümleri için yapılabilir?",
+  "s": [
+   "Tamamlanmış ve müstakil kullanıma elverişli bölümleri",
+   "Yarısı tamamlanmış bölümleri",
+   "Yüklenicinin seçtiği bölümleri",
+   "Laboratuvar muayenesi gerektirmeyen bölümleri",
+   "Ara denetimden geçmiş bütün bölümleri"
+  ],
+  "kanit": [
+   "işin tamamlanmış ve müstakil kullanıma elverişli bölümleri için kısmi kabul"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre kesin kabulle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "İdare, yüklenicinin başvurusu olmadan kendiliğinden başlatır.",
+   "Kesin kabul zamanı ihale dokümanında belirtilir.",
+   "Yüklenici veya vekili dilekçe ile başvurur.",
+   "İdarece kesin kabul teklif belgesi düzenlenir.",
+   "Zorunlu hallerde yeni bir kabul komisyonu kurulabilir."
+  ],
+  "kanit": [
+   "Kesin kabul zamanı geldiğinde yüklenici veya vekili bir dilekçe ile idareye başvurur",
+   "idarece kesin kabul teklif belgesi düzenlenerek"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre denetim, muayene ve testler tamamlandığında komisyonun idarece kabul edilen olumlu raporu neye esas alınır?",
+  "s": [
+   "Ödemeye ilişkin belgenin düzenlenmesine",
+   "Yüklenicinin ihalelerden yasaklanmasına",
+   "Hakem laboratuvarın seçilmesine",
+   "Yeni ihale ilanına",
+   "Ara denetim programının hazırlanmasına"
+  ],
+  "kanit": [
+   "ödemeye ilişkin belgenin düzenlenmesinde esas alınır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "vaka",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre ihale dokümanında hüküm bulunan bir alımda yüklenici, teknik dokümandan farklı ama daha iyi özellikli bir mal önermiş; komisyon bunu onaylamıştır. Bu durumda aşağıdakilerden hangisi doğrudur?",
+  "s": [
+   "Mal kabul edilebilir, yüklenici ilave bedel isteyemez.",
+   "Mal kabul edilir, fark bedeli yükleniciye ödenir.",
+   "Mal her durumda reddedilir.",
+   "Kabul için Kamu İhale Kurumu onayı gerekir.",
+   "Mal yalnız hakem laboratuvar raporuyla kabul edilir."
+  ],
+  "kanit": [
+   "Ancak bu takdirde yüklenici ilave bedel isteyemez",
+   "mevcudundan daha iyi özelliklere sahip olduğu"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre görevini tarafsızlıkla yapmayan komisyon üyelerinin sorumluluğuyla ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Doğan zarar ilgililere tazmin ettirilemez.",
+   "Haklarında disiplin cezası uygulanır.",
+   "Fiilin özelliğine göre ceza kovuşturması yapılır.",
+   "Zarar genel hükümlere göre tazmin ettirilir.",
+   "Süreçte görev alan diğer ilgililer de sorumludur."
+  ],
+  "kanit": [
+   "zarar ve ziyan genel hükümlere göre kendilerine tazmin ettirilir",
+   "disiplin cezası uygulanır"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "duz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre denetleme ile muayene ve kabul işlemlerine ilişkin belgelerin şekli ve içeriği kim tarafından tespit olunur?",
+  "s": [
+   "İlgili idareler",
+   "Kamu İhale Kurumu",
+   "Hazine ve Maliye Bakanlığı",
+   "Sayıştay",
+   "Komisyon başkanı"
+  ],
+  "kanit": [
+   "belgelerinin şekli ve içeriği ilgili idarelerce tespit olunur"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre Yönetmeliğin genel hükümleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+  "s": [
+   "Hükümlerini Hazine ve Maliye Bakanı yürütür.",
+   "01.01.2003 tarihinde yürürlüğe girmiştir.",
+   "4734 sayılı Kamu İhale Kanununa dayanılarak hazırlanmıştır.",
+   "Ara denetim ile muayene ve kabulün esas ve usullerini belirler.",
+   "İdareler Yönetmeliğe aykırı olmamak koşuluyla düzenleme yapabilir."
+  ],
+  "kanit": [
+   "Bu Yönetmelik hükümlerini Kamu İhale Kurumu Başkanı yürütür",
+   "01.01.2003 tarihinde yürürlüğe girer"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "onculu",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre ara denetim raporlarıyla ilgili aşağıdakilerden hangileri doğrudur?\nI. İşin özelliği gerektirdiğinde idare ara denetim için hizmet satın alabilir.\nII. Üretimde tespit edilen hususlara ilişkin rapor, denetim görevlisi ile firma yetkilisince imzalanır.\nIII. Ara denetim raporları muayene ve kabul aşamasında değerlendirilmek üzere idareye sunulur.\nIV. Yüklenici ara denetim raporlarını öne sürerek teknik sorumluluktan kurtulabilir.",
+  "s": [
+   "I, II ve III",
+   "II ve IV",
+   "Yalnız III",
+   "I, III ve IV",
+   "I ve IV"
+  ],
+  "kanit": [
+   "idareler bu konuda hizmet satın alabilir",
+   "denetim görevlisi ile ilgili firma yetkilisi tarafından imzalanır",
+   "değerlendirilmek üzere idareye sunulur"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "onculu",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre aşağıdakilerden hangileri doğrudur?\nI. FOB/FCA teslim esaslı mallarda, ihale dokümanında belirtilmek kaydıyla yurt dışında muayene yapılabilir.\nII. Fabrika test raporlarına istinaden mal idareye teslim edildikten sonra da muayene ve kabul yapılabilir.\nIII. Bağımsız denetim kuruluşlarının raporları nihaidir, komisyon onayı gerekmez.\nIV. Bildirime rağmen hazır bulunmayan yüklenicinin durumu tutanak altına alınır.",
+  "s": [
+   "I, II ve IV",
+   "I ve III",
+   "Yalnız IV",
+   "II ve III",
+   "I, III ve IV"
+  ],
+  "kanit": [
+   "FOB/FCA vb. teslim esaslı mallar için ihale dokümanında belirtilmek kaydıyla",
+   "fabrika test raporlarına istinaden idareye teslim edildikten sonra",
+   "raporlar nihai olmayıp, idarece kurulan muayene ve kabul komisyonlarının onayı"
+  ]
+ },
+ {
+  "law": 123,
+  "tip": "olumsuz",
+  "k": "Mal Alımları Denetim, Muayene ve Kabul İşlemlerine Dair Yönetmelik'e göre ara denetimin amaçları arasında aşağıdakilerden hangisi yoktur?",
+  "s": [
+   "Yüklenicinin teslim süresini uzatmak",
+   "Geri dönüşü olmayan hataların ortaya çıkmasını önlemek",
+   "Teslim süresinde gecikmelere yol açmamak",
+   "Hataların zamanında giderilmesini sağlamak",
+   "Üretimden sonra kontrol imkânı olmayan hususları denetlemek"
+  ],
+  "kanit": [
+   "teslim süresinde gecikmelere yol açmamak ve hataların zamanında giderilmesini sağlamak",
+   "geri dönüşü olmayan hataların ortaya çıkmasını önlemek"
+  ]
+ }
+]

@@ -17,6 +17,12 @@ const NO = {
   'P-SB-BAK-01': 28, 'P-SB-BAK-02': 29, 'P-SB-BAK-03': 30, 'P-ASB-BAK-01': 31, 'P-ASB-BAK-02': 32, 'P-ASB-BAK-03': 33,
   'P-SB-MAL-01': 34, 'P-SB-MAL-02': 35, 'P-SB-MAL-03': 36, 'P-ASB-MAL-01': 37, 'P-ASB-MAL-02': 38, 'P-ASB-MAL-03': 39,
   'P-SB-IKM-01': 40, 'P-SB-IKM-02': 41, 'P-SB-IKM-03': 42, 'P-ASB-IKM-01': 43, 'P-ASB-IKM-02': 44, 'P-ASB-IKM-03': 45,
+  // 3. dalga (26 Eyl 2026): İstihkam, Tabip, Eczacı, Sağlık, Kimyager, Veteriner, Mühendis, Bando — ortak havuzdan
+  'P-SB-IST-01': 46, 'P-SB-IST-02': 47, 'P-SB-IST-03': 48, 'P-ASB-IST-01': 49, 'P-ASB-IST-02': 50, 'P-ASB-IST-03': 51,
+  'P-SB-TAB-01': 52, 'P-SB-TAB-02': 53, 'P-SB-TAB-03': 54, 'P-SB-ECZ-01': 55, 'P-SB-ECZ-02': 56, 'P-SB-ECZ-03': 57,
+  'P-ASB-SAG-01': 58, 'P-ASB-SAG-02': 59, 'P-ASB-SAG-03': 60, 'P-SB-KIM-01': 61, 'P-SB-KIM-02': 62, 'P-SB-KIM-03': 63,
+  'P-SB-VET-01': 64, 'P-SB-VET-02': 65, 'P-SB-VET-03': 66, 'P-SB-MUH-01': 67, 'P-SB-MUH-02': 68, 'P-SB-MUH-03': 69,
+  'P-SB-BAN-01': 70, 'P-SB-BAN-02': 71, 'P-SB-BAN-03': 72, 'P-ASB-BAN-01': 73, 'P-ASB-BAN-02': 74, 'P-ASB-BAN-03': 75,
 };
 
 const kok = 'scripts/premium-deneme/cikti';
