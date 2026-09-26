@@ -9,7 +9,7 @@
 
 import { type KartSoru } from '../assets/kart-sorulari';
 import { type GenelDeneme } from '../assets/genel-denemeler';
-import { type PremiumDeneme } from '../assets/premium-denemeler';
+import { type PremiumDeneme, type PremiumDenemeHam, type PremiumSoruHam } from '../assets/premium-denemeler';
 import { KART_SORU_SAYILARI } from '../assets/kart-soru-sayilari';
 import { EMIR_MADDE_KAPSAM, EMIR_SORU_SAYILARI } from '../assets/emir-madde-kapsam';
 import { birlesikUyeler } from '@/lib/birlesik';
@@ -93,9 +93,37 @@ function genelKaynak(blok?: GenelBlok, brans?: string | null): GenelDeneme[] {
   ).GENEL_DENEMELER);
 }
 
+let _premium: PremiumDeneme[] | null = null;
 function premiumKaynak(): PremiumDeneme[] {
-  return (require('../assets/premium-denemeler') as { PREMIUM_DENEMELER: PremiumDeneme[] })
-    .PREMIUM_DENEMELER;
+  if (_premium) return _premium;
+  const { PREMIUM_SORULAR, PREMIUM_DENEMELER_HAM } = require('../assets/premium-denemeler') as {
+    PREMIUM_SORULAR: PremiumSoruHam[];
+    PREMIUM_DENEMELER_HAM: PremiumDenemeHam[];
+  };
+  // Tekil tablodan kur: şıklar denemedeki dizilişe göre sıralanır, doğru cevap indeksi ona göre.
+  _premium = PREMIUM_DENEMELER_HAM.map((d) => ({
+    no: d.no,
+    kod: d.kod,
+    baslik: d.baslik,
+    brans: d.brans,
+    rutbe: d.rutbe,
+    sorular: d.r.map(([i, dizilis], n) => {
+      const q = PREMIUM_SORULAR[i];
+      const sira = [...dizilis].map(Number);
+      return {
+        id: `${d.kod}-${String(n + 1).padStart(2, '0')}`,
+        lawId: q.l,
+        soru: q.k,
+        siklar: sira.map((j) => q.s[j]),
+        dogru: sira.indexOf(q.d),
+        aciklama: q.a,
+        kaynak: q.y,
+        zorluk: 'orta',
+        kartId: '',
+      };
+    }),
+  }));
+  return _premium;
 }
 
 /** Premium deneme meta bilgisi (kişiye süzme için branş + rütbe dahil). */

@@ -13,43 +13,50 @@ const NO = {
 };
 
 const kok = 'scripts/premium-deneme/cikti';
+// "(müşterek kapsam)" paket etiketi; kullanıcıya gösterilmez.
+const temiz = (t) => t.replace(/\s*\(müşterek kapsam\)/g, '');
+// TEKİL SORU TABLOSU (26 Eyl 2026): denemeler blokları paylaşıyor (aynı soru birden çok denemede).
+// Her soru bir kez yazılır; deneme yalnız [soru sırası, şık dizilişi] tutar. Şıklar denemeye göre
+// farklı karıştırıldığı için diziliş saklanır (ör. "20413" = gösterilen sırayla taban şık indeksleri).
+const sorular = [];
+const anahtar = new Map();
 const denemeler = [];
 for (const f of fs.readdirSync(kok).filter((x) => x.endsWith('.json')).sort()) {
   const d = JSON.parse(fs.readFileSync(path.join(kok, f), 'utf8'));
   const no = NO[d.id];
   if (!no) throw new Error(`${d.id} için NO haritasında numara yok`);
-  // "(müşterek kapsam)" paket etiketi; kullanıcıya gösterilmez.
-  const temiz = (t) => t.replace(/\s*\(müşterek kapsam\)/g, '');
-  denemeler.push({
-    no,
-    kod: d.id,
-    baslik: d.baslik,
-    brans: d.brans,
-    rutbe: d.rutbe,
-    sorular: d.sorular.map((q) => ({
-      id: q.id,
-      lawId: q.lawId,
-      soru: q.soru,
-      siklar: q.siklar,
-      dogru: q.dogru,
-      aciklama: temiz(q.aciklama),
-      kaynak: temiz(q.kaynak),
-      zorluk: 'orta',
-      kartId: '',
-    })),
+  const refs = d.sorular.map((q) => {
+    const k = q.soru + '\u0001' + [...q.siklar].sort().join('\u0001');
+    let i = anahtar.get(k);
+    if (i == null) {
+      i = sorular.length;
+      anahtar.set(k, i);
+      sorular.push({ l: q.lawId, k: q.soru, s: q.siklar, d: q.dogru, a: temiz(q.aciklama), y: temiz(q.kaynak) });
+    }
+    const taban = sorular[i].s;
+    const dizilis = q.siklar.map((x) => taban.indexOf(x)).join('');
+    if (dizilis.includes('-1')) throw new Error('şık eşleşmedi: ' + q.id);
+    return [i, dizilis];
   });
+  denemeler.push({ no, kod: d.id, baslik: d.baslik, brans: d.brans, rutbe: d.rutbe, r: refs });
 }
 denemeler.sort((a, b) => a.no - b.no);
 
 const cikti = `// OTOMATİK ÜRETİLDİ — ELLE DÜZENLEME. \`node scripts/premium-deneme/uygulamaya.mjs\` ile yenile.
-// Premium denemeler (ATA-AÖF tarzı 80 soru: müşterek 40 + branş 40). Her sorunun cevabı
-// resmî madde metnine karşı doğrulandı (scripts/premium-deneme/denetle.py + birlestir.py).
+// Premium denemeler (ATA-AÖF tarzı 80 soru). Her sorunun cevabı resmî madde metnine karşı doğrulandı
+// (scripts/premium-deneme/denetle.py + birlestir.py). Sorular TEKİL tabloda; deneme [sıra, şık dizilişi] tutar
+// (çözümü src/lib/sinav.ts premiumKaynak()).
 /* eslint-disable */
 import type { GenelDeneme } from './genel-denemeler';
 
 export type PremiumDeneme = GenelDeneme & { kod: string; brans: string; rutbe: string };
+/** l: lawId · k: kök · s: taban şıklar · d: taban doğru indeksi · a: açıklama · y: kaynak künyesi */
+export type PremiumSoruHam = { l: number; k: string; s: string[]; d: number; a: string; y: string };
+export type PremiumDenemeHam = { no: number; kod: string; baslik: string; brans: string; rutbe: string; r: [number, string][] };
 
-export const PREMIUM_DENEMELER: PremiumDeneme[] = ${JSON.stringify(denemeler)};
+export const PREMIUM_SORULAR: PremiumSoruHam[] = ${JSON.stringify(sorular)};
+
+export const PREMIUM_DENEMELER_HAM: PremiumDenemeHam[] = ${JSON.stringify(denemeler)};
 `;
 fs.writeFileSync('src/assets/premium-denemeler.ts', cikti);
-console.log(denemeler.length, 'premium deneme →', denemeler.map((d) => `${d.kod}(no ${d.no}, ${d.sorular.length} soru)`).join(', '));
+console.log(denemeler.length, 'premium deneme ·', sorular.length, 'tekil soru →', denemeler.map((d) => `${d.kod}(no ${d.no}, ${d.r.length})`).join(', '));
