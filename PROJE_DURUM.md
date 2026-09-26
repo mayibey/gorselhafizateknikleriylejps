@@ -2866,3 +2866,8 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   Depolama tekil soru tablosuna geçti (46b82e5; 720 soru eski/yeni birebir). Yeni altın özet paketleri: mebs + 7 branş (1376007).
   **Kalan (3. dalga, premium üyesi 0 olan 8 branş):** İstihkam, Tabip, Eczacı, Sağlık(asb), Kimyager, Veteriner, Mühendis, Bando —
   paketler hazır. Açık: Bilgi ve İletişim Güvenliği Rehberi paketinde TANIMLAR bölümü yok (2026'da çok soruldu) → tam metin bulunmalı.
+- 26 Eyl gece — **PREMIUM DENEMELER TAMAM: 75 deneme** (commit 7a674c3, OTA 1.0.46, on-izleme). 3. dalga 30 deneme:
+  İstihkam sb/asb, Tabip, Eczacı, Kimyager, Veteriner, Mühendis (sb), Sağlık (asb), Bando sb/asb — mevzuat bazında yazılan
+  sorular (kaynak/L<law>-N.json) + `scripts/premium-deneme/brans-havuz-kur.py <brans>` ortak havuzdan 3×40 blok. 25 branş-rütbe
+  grubunun hepsinde 3 deneme; gerçek soru tekrarı yok; 1195 tekil soru (1.29 MB). Bando 3. blok 39 soru.
+  Yayına almak için: tatbikat.tsx `yeniDuzen`/sinav.tsx `yeniDenemeler` on-izleme koşulları kaldırılır (Denemeler düzeni + premium).
