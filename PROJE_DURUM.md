@@ -2878,3 +2878,6 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
 - 27 Eyl — **DENEMELER YENİ DÜZEN + 75 PREMIUM DENEME HERKESE** (başkan "yayınla"; commit b4b06f5, OTA 6f1f6bbe, runtime 1.0.46).
   Önizleme koşulları kaldırıldı (tatbikat.tsx premiumAcik, sinav.tsx yeniDenemeler = true).
 - 27 Eyl — Sıralamada yeni karma/premium denemeler + deneme satırında rekor HERKESE (c1e4e5f, 66a899d).
+- 27 Eyl — iPad'de "sığmıyor" (Mehmet Ali Güneş): app.json'da supportsTablet YOK → iPad uygulamayı iPhone uyumluluk modunda (SE boyu)
+  açıyor. OTA ile Karargâh paslanma satırı tek yazı yapıldı (üst üste binme bitti). Rekor: kimse çözmediyse "Rekor henüz kırılmadı".
+  **SONRAKİ MAĞAZA SÜRÜMÜ:** ios.supportsTablet=true + iPad ekran görüntüleri (başkan onayladı: "önce OTA, iPad desteği sonraki sürüm").
