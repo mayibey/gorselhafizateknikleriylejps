@@ -4,13 +4,15 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
-> ### ▶ 27 Eyl — EKRAN ÖLÇEĞİ: tablet doldurur, küçük telefon sığar (commit b6b9622, OTA BEKLİYOR — "yay" yok)
+> ### ▶ 27 Eyl — EKRAN ÖLÇEĞİ: tablet doldurur, küçük telefon sığar (commit b6b9622 + mevzuat no kutusu; OTA YAYINDA 1.0.47+1.0.46 — başkan "yay")
 > Başkan: "her şeyi sığdıracak şekilde yap, konu sadece iPad değil Android'de de". `src/lib/ekran-olcek.ts`
 > (393×852 referans; tablet 1–1.6×, küçük telefon 0.82–1×, normal 1) + `src/lib/olcek-yama.ts` (StyleSheet.create
 > ölçüleri + MaterialCommunityIcons/FontAwesome `size` tek yerden ölçeklenir; borderWidth hariç). Giriş `index.ts`
 > (package.json main) yamayı expo-router'dan ÖNCE yükler. AppText fontSize o(); sekme çubuğu tablette yazı altta,
-> kompakt yükseklik o(52). Web'de iPad/SE/393 çekildi: iPad dolu, SE sığıyor, normal aynı. SIRADA: başkan "yay" →
-> OTA (1.0.46 + 1.0.47 runtime), sonra iPad mağaza görüntüleri yeniden çekilip asc-1047-hazirla.mjs ile değiştirilecek.
+> kompakt yükseklik o(52). Web'de iPad/SE/393 çekildi: iPad dolu, SE sığıyor, normal aynı. OTA grupları:
+> 1.0.47 a1490fdb, 1.0.46 269b9f4f. Build GEREKMEDİ (build 73 ölçeği OTA ile alır). iPad 12.9" mağaza görüntüleri
+> yeniden çekilip yüklendi; iOS 1.0.47 (build 73) 27 Eyl İNCELEMEYE GÖNDERİLDİ (WAITING_FOR_REVIEW, onay sonrası oto-yayın).
+> DİKKAT: satır içi (StyleSheet dışı) sayısal ölçüler ölçeklenmez — tablette böyle bir şey küçük kalırsa o() ile sar.
 >
 > ### ▶ 16 Eyl (gece 2) — SINAV/DENEME: CEVAPTAN SONRA DAYANAK KÜNYESİ (commit 82aafb1, 10 sürüme OTA)
 > **Öneri (Ünal Kutlu, Telegram):** "yanlış yapınca hangi maddeye ait olduğunu göremiyorum, sınav
