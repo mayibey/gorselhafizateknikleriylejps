@@ -15,7 +15,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/ui/app-text';
@@ -32,6 +32,9 @@ import {
   type SiraSatiri,
 } from '@/lib/deneme-servis';
 import { useKisiselOzellik } from '@/lib/ozellik';
+import { useBrans } from '@/lib/brans-context';
+import { useRutbe } from '@/lib/rutbe-context';
+import { genelDenemeler, karmaAnahtar, karmaSunucuNo, premiumDenemeler } from '@/lib/sinav';
 import { AciklamaMetni } from '@/components/sinav/aciklama-metni';
 import { SoruMetni } from '@/components/sinav/soru-metni';
 
@@ -204,11 +207,26 @@ function SonucKarti({
 
 // ──────────────────────────────────────────────────────────── SIRALAMA
 function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }) {
-  // Sıralamada gösterilecek deneme: kullanıcının çözdükleri (yoksa Genel Deneme 1).
-  const secenekler =
-    sonuclar.length > 0
-      ? [...new Map(sonuclar.map((s) => [`${s.takim}-${s.denemeNo}`, s])).values()].slice(0, 12)
-      : [{ takim: 'karma' as DenemeTakim, denemeNo: 1, baslik: 'Genel Deneme 1' } as DenemeSonuc];
+  // SIRALAMA SEÇENEKLERİ (başkan, 27 Eyl 2026: "yeni denemelerin sıralaması yok"): eskiden yalnız
+  // kullanıcının ÇÖZDÜĞÜ denemeler listeleniyordu ("Karma 101" gibi ham numarayla). Artık kişinin
+  // görebildiği tüm denemeler: kendi branşının karmaları, kendi premium'ları, müşterekler (+ Jandarma
+  // branş denemeleri; diğer branşlarda sunucu numarası branşları karıştırdığı için gösterilmez).
+  const { brans } = useBrans();
+  const { rutbe } = useRutbe();
+  const secenekler = useMemo(() => {
+    const out: { takim: DenemeTakim; denemeNo: number; etiket: string }[] = [];
+    const kk = karmaAnahtar(brans, rutbe);
+    if (kk) for (const d of genelDenemeler('karmab', kk)) out.push({ takim: 'karma', denemeNo: karmaSunucuNo(kk, d.no), etiket: `Karma ${d.no}` });
+    premiumDenemeler()
+      .filter((d) => d.brans === brans && d.rutbe === rutbe)
+      .forEach((d, i) => out.push({ takim: 'premium', denemeNo: d.no, etiket: `Premium ${i + 1}` }));
+    for (const d of genelDenemeler(undefined)) out.push({ takim: 'musterek', denemeNo: d.no, etiket: `Müşterek ${d.no}` });
+    if (!brans || brans === 'jandarma')
+      for (const d of genelDenemeler('brans', 'jandarma')) out.push({ takim: 'brans', denemeNo: d.no, etiket: `Branş ${d.no}` });
+    // Önce çözdükleri (kendi yeri görünsün), sıra korunarak.
+    const cozulen = new Set(sonuclar.map((s) => `${s.takim}-${s.denemeNo}`));
+    return [...out.filter((o) => cozulen.has(`${o.takim}-${o.denemeNo}`)), ...out.filter((o) => !cozulen.has(`${o.takim}-${o.denemeNo}`))];
+  }, [brans, rutbe, sonuclar]);
   const [secili, setSecili] = useState(0);
   const [satirlar, setSatirlar] = useState<SiraSatiri[] | null>(null);
   const [benim, setBenim] = useState<{ sira: number; toplam_kisi: number; puan: number } | null>(null);
@@ -238,7 +256,7 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
               variant="etiket"
               bold
               color={i === secili ? (gece ? 'altinParlak' : 'beyaz') : gece ? 'beyaz' : 'anaMetin'}>
-              {TAKIM_AD[s.takim]} {s.denemeNo}
+              {s.etiket}
             </AppText>
           </Pressable>
         ))}
