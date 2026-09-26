@@ -229,6 +229,8 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
   }, [brans, rutbe, sonuclar]);
   const [secili, setSecili] = useState(0);
   const [acik, setAcik] = useState(false);
+  // Önce başkanda ('on-izleme'); onaydan sonra herkese.
+  const acilirDuzen = useKisiselOzellik('on-izleme');
   const [satirlar, setSatirlar] = useState<SiraSatiri[] | null>(null);
   const [benim, setBenim] = useState<{ sira: number; toplam_kisi: number; puan: number } | null>(null);
   const hedef = secenekler[Math.min(secili, secenekler.length - 1)];
@@ -247,10 +249,27 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
 
   return (
     <>
+      {!acilirDuzen ? (
+        <View style={st.denemeSecici}>
+          {secenekler.map((s, i) => (
+            <Pressable
+              key={`${s.takim}-${s.denemeNo}`}
+              onPress={() => setSecili(i)}
+              style={[st.denemeHap, gece && st.denemeHapGece, i === secili && (gece ? st.segAktifGece : st.segAktif)]}>
+              <AppText
+                variant="etiket"
+                bold
+                color={i === secili ? (gece ? 'altinParlak' : 'beyaz') : gece ? 'beyaz' : 'anaMetin'}>
+                {s.etiket}
+              </AppText>
+            </Pressable>
+          ))}
+        </View>
+      ) : null}
       {/* AÇILIR SEÇİM (başkan, 27 Eyl 2026): 18 hap yan yana ekranı dolduruyordu → tek kutu, dokununca liste. */}
       <Pressable
         onPress={() => setAcik((a) => !a)}
-        style={[st.acilirKutu, gece && st.kartGece]}
+        style={[st.acilirKutu, gece && st.kartGece, !acilirDuzen && { display: 'none' }]}
         accessibilityRole="button"
         accessibilityLabel="Deneme seç">
         <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'} style={st.acilirYazi}>
@@ -262,7 +281,7 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
           color={gece ? Palette.altinParlak : Palette.lacivert}
         />
       </Pressable>
-      {acik ? (
+      {acilirDuzen && acik ? (
         <View style={[st.acilirListe, gece && st.kartGece]}>
           {secenekler.map((s, i) => (
             <Pressable
