@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { DogrulamaKapisi } from '@/components/auth/dogrulama-kapisi';
@@ -13,7 +13,7 @@ import type { SinavSonuc } from '@/db/schema';
 import { useKisiselOzellik } from '@/lib/ozellik';
 import { useBrans } from '@/lib/brans-context';
 import { useRutbe } from '@/lib/rutbe-context';
-import { genelDenemeler, genelSanalLawId, premiumDenemeler, puanKatsayisi } from '@/lib/sinav';
+import { genelDenemeler, genelSanalLawId, karmaAnahtar, premiumDenemeler, puanKatsayisi } from '@/lib/sinav';
 import { useUyelik } from '@/lib/uyelik-context';
 
 /**
@@ -56,17 +56,29 @@ function TatbikatIcerik() {
   // sıralanır, sağda altın premium kilidi. Premium üye girer, ücretsiz dokununca paywall.
   // Önce yalnız başkanda ('on-izleme'), onaydan sonra herkese.
   const premiumAcik = useKisiselOzellik('on-izleme');
+  // DENEMELER DÜZENİ (başkan, 26 Eyl 2026 — önce 'on-izleme'de):
+  //  - sekme sırası KARMA · MÜŞTEREK · BRANŞ, sayfa KARMA ile açılır;
+  //  - karma denemeler kişinin BRANŞINA göre (müşterek + yalnız kendi branşı, gerçek sınav oranı);
+  //  - premium denemeler YALNIZ karma sekmesinde ve YALNIZ kendi branş + rütbesine uyanlar.
+  const yeniDuzen = premiumAcik;
   const { rutbe } = useRutbe();
   const { premium } = useUyelik();
-  // Kişinin branş + rütbesine uyan premium denemeler. Hiç yoksa (branşına henüz hazırlanmadı)
-  // hazır olanların hepsi tam başlıklarıyla listelenir.
-  const premiumListe = useMemo(() => {
-    const tumu = premiumDenemeler();
-    const benim = tumu.filter((d) => d.brans === brans && d.rutbe === rutbe);
-    return benim.length > 0
-      ? benim.map((d, i) => ({ ...d, baslik: `Premium Deneme ${i + 1}` }))
-      : tumu;
-  }, [brans, rutbe]);
+  const karmaKey = karmaAnahtar(brans, rutbe);
+  const karmaBDenemeler = useMemo(() => (karmaKey ? genelDenemeler('karmab', karmaKey) : []), [karmaKey]);
+  // Kişinin branş + rütbesine uyan premium denemeler (başkası görünmez).
+  const premiumListe = useMemo(
+    () =>
+      premiumDenemeler()
+        .filter((d) => d.brans === brans && d.rutbe === rutbe)
+        .map((d, i) => ({ ...d, baslik: `Premium Deneme ${i + 1}` })),
+    [brans, rutbe],
+  );
+  // Açılışta KARMA seçili gelsin — bayraklar sonradan yüklendiği için bir kez, kullanıcı
+  // henüz sekme seçmediyse uygulanır.
+  const secildiRef = useRef(false);
+  useEffect(() => {
+    if (yeniDuzen && karmaAcik && !secildiRef.current) setBlok('karma');
+  }, [yeniDuzen, karmaAcik]);
   const yukle = useCallback(() => {
     // Son deneme skorları (law_id → en güncel; getSinavSonuclari id artan → son yazan kalır).
     void getSinavSonuclari()
@@ -101,16 +113,18 @@ function TatbikatIcerik() {
     <Screen title="Denemeler" koyu={geceTema} kompaktBaslik={geceTema}>
       {/* TAKIM SEÇİMİ: Müşterek Konular · Branş · Karma (Genel). */}
       <View style={[styles.blokSecici, geceTema && styles.blokSeciciGece]}>
-        {([
-          'müşterek',
-          'brans',
-          ...(karmaAcik ? (['karma'] as const) : []),
-        ] as const).map((b, _i, sekmeler) => {
+        {(yeniDuzen
+          ? ([...(karmaAcik ? (['karma'] as const) : []), 'müşterek', 'brans'] as const)
+          : (['müşterek', 'brans', ...(karmaAcik ? (['karma'] as const) : [])] as const)
+        ).map((b, _i, sekmeler) => {
           const aktif = blok === b;
           return (
             <Pressable
               key={b}
-              onPress={() => setBlok(b)}
+              onPress={() => {
+                secildiRef.current = true;
+                setBlok(b);
+              }}
               style={[
                 styles.blokSeg,
                 geceTema && styles.blokSegGece,
@@ -161,7 +175,57 @@ function TatbikatIcerik() {
       {/* 1 Eyl 2026: branş denemeleri artık 15 branşta da var (Jandarma'nın kendi 5×50'si,
           diğerlerinde bankadaki branş kanunu sorularından derlenmiş 5×50). Kapı artık
           "Jandarma mı?" diye değil, "bu branşta deneme VAR MI?" diye soruyor. */}
-      {blok === 'brans' && bransDenemeSayisi === 0 ? (
+      {yeniDuzen && blok === 'karma' ? (
+        <>
+          <AppText variant="kucuk" color={geceTema ? 'kartMetinIkincil' : 'solukMetin'}>
+            {brans === 'mebs'
+              ? 'Karma denemeler gerçek sınav düzenindedir: önce 50 müşterek, sonra 30 MEBS branş sorusu. Her soru 1 puan (toplam 80). Yanlışların zayıf mevzilerine düşer.'
+              : 'Karma denemeler gerçek sınav düzenindedir: önce 40 müşterek, sonra 40 branş sorusu. Her soru 1 puan (toplam 80). Yanlışların zayıf mevzilerine düşer.'}
+          </AppText>
+          {karmaBDenemeler.length === 0 ? (
+            <DurumKutu
+              ikon="flag-checkered"
+              baslik="Yakında"
+              aciklama="Branşının karma denemeleri hazırlanıyor. Müşterek ve Branş denemelerini üstteki sekmelerden çözebilirsin."
+            />
+          ) : (
+            karmaBDenemeler.map((d) => (
+              <GenelDenemeSatir
+                key={`kb${d.no}`}
+                deneme={d}
+                katsayi={puanKatsayisi('karmab')}
+                sonuc={sonucMap.get(genelSanalLawId('karmab', d.no, karmaKey))?.get(0)}
+                kilitli={genelKilitli}
+                gece={geceTema}
+                onGit={() =>
+                  genelKilitli
+                    ? router.push('/paywall')
+                    : router.push({
+                        pathname: '/sinav',
+                        params: { genel: String(d.no), gblok: 'karmab', kb: karmaKey ?? '' },
+                      })
+                }
+              />
+            ))
+          )}
+          {premiumListe.map((d) => (
+            <GenelDenemeSatir
+              key={`p${d.no}`}
+              deneme={d}
+              katsayi={puanKatsayisi('premium')}
+              sonuc={sonucMap.get(genelSanalLawId('premium', d.no))?.get(0)}
+              kilitli={!premium}
+              premiumRozet
+              gece={geceTema}
+              onGit={() =>
+                premium
+                  ? router.push({ pathname: '/sinav', params: { genel: String(d.no), gblok: 'premium' } })
+                  : router.push('/paywall')
+              }
+            />
+          ))}
+        </>
+      ) : blok === 'brans' && bransDenemeSayisi === 0 ? (
           <DurumKutu
             ikon="flag-checkered"
             baslik="Yakında"
@@ -193,24 +257,6 @@ function TatbikatIcerik() {
           ))}
         </>
       )}
-      {premiumAcik
-        ? premiumListe.map((d) => (
-            <GenelDenemeSatir
-              key={`p${d.no}`}
-              deneme={d}
-              katsayi={puanKatsayisi('premium')}
-              sonuc={sonucMap.get(genelSanalLawId('premium', d.no))?.get(0)}
-              kilitli={!premium}
-              premiumRozet
-              gece={geceTema}
-              onGit={() =>
-                premium
-                  ? router.push({ pathname: '/sinav', params: { genel: String(d.no), gblok: 'premium' } })
-                  : router.push('/paywall')
-              }
-            />
-          ))
-        : null}
     </Screen>
   );
 }

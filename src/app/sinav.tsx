@@ -11,6 +11,8 @@ import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { ekleSinavSonucu, getAllCards, getCardsByLaw, getSinavSonuclari, kaydetPerformans } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
+import { useKisiselOzellik } from '@/lib/ozellik';
+import { useRutbe } from '@/lib/rutbe-context';
 import { degerlendirSicil } from '@/lib/sicil-servis';
 import { genelDenemeErisilebilir } from '@/constants/urunler';
 import { lawErisilebilirSaf } from '@/lib/icerik-kilidi';
@@ -20,6 +22,8 @@ import {
   soruKanunId,
   genelSanalLawId,
   getGenelDenemeSorulari,
+  karmaSunucuNo,
+  uzmIcinMusterek,
   getTestSorulari,
   type KartSoru,
   puanlaSinav,
@@ -60,29 +64,41 @@ export default function SinavScreen() {
   const router = useRouter();
   // Branş denemesinde sorular kullanıcının branşına göre çözülür (1 Eyl 2026).
   const { brans } = useBrans();
-  const { lawId, test, genel, gblok } = useLocalSearchParams<{
+  const { lawId, test, genel, gblok, kb } = useLocalSearchParams<{
     lawId?: string;
     test?: string;
     genel?: string;
     gblok?: string;
+    /** Branşa göre karma anahtarı (gblok=karmab): branş slug'ı ya da 'jandarma-uzm'. */
+    kb?: string;
   }>();
+  // Uzman rütbede müşterek denemedeki 4678 / Sözleşmeli Yön. soruları yedekle değişir (önizleme).
+  const { rutbe } = useRutbe();
+  const yeniDenemeler = useKisiselOzellik('on-izleme');
   // GENEL DENEME (Tatbikat): genel=1/2/3 (müşterek) · gblok=brans 1..5 (branş) · gblok=karma 1..5 (karma, 100 soru).
   // Sanal law_id: müşterek -genelNo (-1..-3), branş -(100+genelNo) (-101..-105) → sonuç/skor
   // AYRIŞIR (getSinavSonuclari law_id<0 ile genel deneme sayar; iki blok çakışmaz).
   const genelBlok =
-    gblok === 'brans' || gblok === 'karma' || gblok === 'premium'
-      ? (gblok as 'brans' | 'karma' | 'premium')
+    gblok === 'brans' || gblok === 'karma' || gblok === 'premium' || gblok === 'karmab'
+      ? (gblok as 'brans' | 'karma' | 'premium' | 'karmab')
       : undefined;
+  // BRANŞA GÖRE KARMA (26 Eyl 2026): sorular/kimlik branş yerine karma anahtarıyla çözülür.
+  const genelKarmaB = genelBlok === 'karmab';
+  const kaynakBrans = genelKarmaB ? (kb ?? null) : brans;
   // Premium deneme (24 Eyl 2026): 80 soru, branş+rütbeye özel; sanal law_id -(6000+no).
   const genelPremium = genelBlok === 'premium';
   const genelBrans = genelBlok === 'brans';
   // Karma denemenin sanal law_id'si -(200+no) (-201..-205) → müşterek/branş sonuçlarına karışmaz.
-  const genelKarma = genelBlok === 'karma';
+  const genelKarma = genelBlok === 'karma' || genelKarmaB;
   const katsayi = puanKatsayisi(genelBlok); // karma 100 soru -> soru basi 1 puan
   const genelNo = genel != null && genel !== '' ? Number(genel) : null;
   const genelModu = genelNo != null && !Number.isNaN(genelNo);
+  const denemeSorulari = () => {
+    const l = getGenelDenemeSorulari(genelNo!, genelBlok, kaynakBrans);
+    return yeniDenemeler && !genelBlok ? uzmIcinMusterek(l, rutbe) : l; // müşterek = blok yok
+  };
   const lawIdNum = genelModu
-    ? genelSanalLawId(genelBlok, genelNo!, brans)
+    ? genelSanalLawId(genelBlok, genelNo!, kaynakBrans)
     : lawId != null && lawId !== ''
       ? Number(lawId)
       : null;
@@ -95,11 +111,17 @@ export default function SinavScreen() {
       : genelBrans
         ? 'brans'
         : 'musterek';
-  const nereden = genelModu ? `${takim}-${genelNo}` : `talim-${lawId ?? '?'}-${testNum}`;
+  const nereden = genelModu
+    ? genelKarmaB
+      ? `karmab-${kb ?? '?'}-${genelNo}`
+      : `${takim}-${genelNo}`
+    : `talim-${lawId ?? '?'}-${testNum}`;
   // Sınav süresi (sonuç kaydında tutulur).
   const baslangicRef = useRef<number>(Date.now());
   const denemeBasligi = genelPremium
     ? premiumDenemeBasligi(genelNo ?? 0)
+    : genelKarmaB
+    ? `Karma Deneme ${genelNo}`
     : genelModu
     ? `${takim === 'karma' ? 'Genel Deneme' : takim === 'brans' ? 'Branş Deneme' : 'Müşterek Konular Deneme'} ${genelNo}`
     : '';
@@ -163,7 +185,7 @@ export default function SinavScreen() {
     }
     void (async () => {
       const kayit = await sinavIlerlemeOku(lawIdNum, testNum).catch(() => null);
-      const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum, undefined, brans);
+      const liste = genelModu ? denemeSorulari() : getTestSorulari(lawIdNum, testNum, undefined, brans);
       // Yarım sınav SORULARIYLA BİRLİKTE kaydediliyor. Soru bankası güncellenince (23 Ağu:
       // sorular çıkmış sınav standardına çekildi) kayıt ESKİ METNİ oynatmaya devam ediyordu —
       // başkan düzeltilmiş soruyu eski hâliyle gördü. Kaydın metinleri bankayla uyuşmuyorsa
@@ -190,7 +212,7 @@ export default function SinavScreen() {
       }
       kartlariYukle();
     })();
-  }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo, genelBlok]);
+  }, [lawIdNum, testNum, kartlariYukle, genelModu, genelNo, genelBlok, kaynakBrans, yeniDenemeler, rutbe]);
 
   /**
    * SIRADAKİ SINAV (başkan, 23 Ağu: "deneme bitince sıradaki denemeye geç gelmiyor").
@@ -202,12 +224,12 @@ export default function SinavScreen() {
     // Premium listede başka branşların denemeleri de var → "sıradaki" başka branşa atlamasın.
     if (genelPremium) return null;
     if (genelModu) {
-      const toplam = genelDenemeSayisi(genelBlok);
+      const toplam = genelDenemeSayisi(genelBlok, kaynakBrans);
       if (genelNo == null || genelNo + 1 > toplam) return null;
       return {
         etiket: 'Sıradaki deneme',
         params: genelBlok
-          ? { genel: String(genelNo + 1), gblok: genelBlok }
+          ? { genel: String(genelNo + 1), gblok: genelBlok, ...(genelKarmaB && kb ? { kb } : {}) }
           : { genel: String(genelNo + 1) },
       };
     }
@@ -222,7 +244,7 @@ export default function SinavScreen() {
   const yenidenBasla = useCallback(() => {
     if (lawIdNum == null) return;
     void sinavIlerlemeSil(lawIdNum, testNum);
-    const liste = genelModu ? getGenelDenemeSorulari(genelNo!, genelBlok, brans) : getTestSorulari(lawIdNum, testNum, undefined, brans);
+    const liste = genelModu ? denemeSorulari() : getTestSorulari(lawIdNum, testNum, undefined, brans);
     setSorular(liste);
     setSecimler(new Array(liste.length).fill(null));
     setIndex(0);
@@ -369,7 +391,8 @@ export default function SinavScreen() {
         }));
       void sonucKaydet({
         takim,
-        denemeNo: genelNo ?? 0,
+        // Branşa göre karma: sunucuda branş başına ayrı numara (sıralama branşlar arası karışmasın).
+        denemeNo: genelKarmaB && kb ? karmaSunucuNo(kb, genelNo ?? 0) : (genelNo ?? 0),
         baslik: denemeBasligi,
         dogru,
         toplam,

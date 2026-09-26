@@ -30,7 +30,7 @@ let _genelM: GenelDeneme[] | null = null;
 let _genelB: GenelDeneme[] | null = null;
 let _genelK: GenelDeneme[] | null = null;
 /** Genel deneme takımı: müşterek (varsayılan) · branş · karma · premium (80 soru, branş+rütbeye özel). */
-export type GenelBlok = 'brans' | 'karma' | 'premium';
+export type GenelBlok = 'brans' | 'karma' | 'premium' | 'karmab';
 let _genelP: GenelDeneme[] | null = null;
 /** Genel deneme kaynağı (lazy; blok'a göre): müşterek (3) · branş (5) · karma (5×100). */
 
@@ -68,6 +68,9 @@ function bransDigerCoz(brans: string): GenelDeneme[] {
 }
 
 function genelKaynak(blok?: GenelBlok, brans?: string | null): GenelDeneme[] {
+  // BRANŞA GÖRE KARMA (26 Eyl 2026): 'brans' parametresi burada karma ANAHTARIDIR
+  // (karmaAnahtar(): branş slug'ı ya da 'jandarma-uzm').
+  if (blok === 'karmab') return brans ? (_karmaB[brans] ??= karmaBransCoz(brans)) : [];
   // PREMIUM (24 Eyl 2026): tüm branşların denemeleri tek listede; numara (no) küresel ve
   // kalıcı. Kişiye göre süzme Denemeler ekranında (premiumDenemeler).
   if (blok === 'premium') return (_genelP ??= premiumKaynak());
@@ -105,6 +108,43 @@ export function premiumDenemeler(): { no: number; baslik: string; soruSayisi: nu
 /** Premium denemenin görünen başlığı ("Jandarma Subay — Premium Deneme 1"). */
 export function premiumDenemeBasligi(no: number): string {
   return premiumKaynak().find((d) => d.no === no)?.baslik ?? `Premium Deneme ${no}`;
+}
+
+const _karmaB: Record<string, GenelDeneme[]> = {};
+function karmaBransCoz(anahtar: string): GenelDeneme[] {
+  const kaynak = (
+    require('../assets/genel-denemeler-karma-brans') as {
+      GENEL_DENEMELER_KARMA_BRANS: Record<string, { no: number; baslik: string; idler: string[] }[]>;
+    }
+  ).GENEL_DENEMELER_KARMA_BRANS;
+  const harita = idHarita();
+  return (kaynak[anahtar] ?? [])
+    .map((d) => ({
+      no: d.no,
+      baslik: d.baslik,
+      sorular: d.idler.map((id) => harita.get(id)).filter(Boolean) as GenelDeneme['sorular'],
+    }))
+    .filter((d) => d.sorular.length > 0);
+}
+
+/** Karma deneme anahtarı: Jandarma uzman erbaş / uzman jandarma ayrı (müşterekte 4678 ve Sözleşmeli Yön. yok). */
+export function karmaAnahtar(brans?: string | null, rutbe?: string | null): string | null {
+  if (!brans) return null;
+  return brans === 'jandarma' && (rutbe === 'uzmerb' || rutbe === 'uzmj') ? 'jandarma-uzm' : brans;
+}
+
+/** Uzman rütbede müşterek denemedeki 4678 / Sözleşmeli Yön. sorusunu yedeğiyle değiştirir (sıra korunur). */
+export function uzmIcinMusterek(sorular: KartSoru[], rutbe?: string | null): KartSoru[] {
+  if (rutbe !== 'uzmerb' && rutbe !== 'uzmj') return sorular;
+  const yedek = (require('../assets/genel-denemeler-karma-brans') as { MUSTEREK_UZM_YEDEK: Record<string, string> })
+    .MUSTEREK_UZM_YEDEK;
+  const harita = idHarita();
+  return sorular.map((q) => (q.id && yedek[q.id] && harita.get(yedek[q.id])) || q);
+}
+
+/** Karma deneme sonucunun sunucudaki deneme numarası (branşlar arası sıralama karışmasın). */
+export function karmaSunucuNo(anahtar: string, no: number): number {
+  return (KARMA_ANAHTAR_ID[anahtar] ?? 99) * 100 + no;
 }
 
 /** Bir sınav cevabı: hangi soru, hangi şık seçildi. */
@@ -176,8 +216,8 @@ export function getSinavSorulari(
 // --- GENEL DENEMELER (Tatbikat) — karma, çok-kanun; "Genel Deneme 1/2/3" ---
 
 /** Kaç genel deneme var (Tatbikat listesi). blok='brans' → branş denemeleri. */
-export function genelDenemeSayisi(blok?: GenelBlok): number {
-  return genelKaynak(blok).length;
+export function genelDenemeSayisi(blok?: GenelBlok, brans?: string | null): number {
+  return genelKaynak(blok, brans).length;
 }
 
 /** Genel deneme meta bilgisi (no/başlık/soru sayısı). blok='brans' → branş denemeleri. */
@@ -402,7 +442,7 @@ export const PUAN_KATSAYI = 2;
  * Premium 80 soru: soru başına 1 puan (sunucuda puan tam sayı; 1,25 kesirli olurdu).
  */
 export function puanKatsayisi(blok?: GenelBlok): number {
-  return blok === 'karma' || blok === 'premium' ? 1 : PUAN_KATSAYI;
+  return blok === 'karma' || blok === 'premium' || blok === 'karmab' ? 1 : PUAN_KATSAYI;
 }
 
 export function puanlaSinav(
@@ -426,6 +466,7 @@ const BRANS_ID: Record<string, number> = {
   bakim: 8, bando: 9, tabip: 10, eczaci: 12, saglik: 13, kimyager: 14, veteriner: 15,
   muhendis: 16,
 };
+const KARMA_ANAHTAR_ID: Record<string, number> = { ...BRANS_ID, 'jandarma-uzm': 17 };
 
 /**
  * Genel denemenin SANAL kanun kimliği (sonuç/skor bu kimlikle saklanır).
@@ -439,6 +480,8 @@ export function genelSanalLawId(blok: GenelBlok | undefined, no: number, brans?:
   if (blok === 'karma') return -(200 + no);
   // Premium: -(6000+no) — branş kimlikleri en fazla -(3000+16*100+no)'ya kadar gider, çakışmaz.
   if (blok === 'premium') return -(6000 + no);
+  // Branşa göre karma: -(20000 + anahtar*10 + no) → -20010…-20175; diğer kimliklerle çakışmaz.
+  if (blok === 'karmab') return -(20000 + (KARMA_ANAHTAR_ID[brans ?? ''] ?? 99) * 10 + no);
   if (blok !== 'brans') return -no;
   if (!brans || brans === 'jandarma') return -(100 + no);
   const bid = BRANS_ID[brans] ?? 99;
