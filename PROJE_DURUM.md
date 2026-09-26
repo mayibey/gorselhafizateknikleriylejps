@@ -2859,3 +2859,10 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   müşterek blok sınav ağırlıklı, 40+40 / MEBS 50+30, 'jandarma-uzm' ayrı); premium yalnız Karma'da ve KATI branş+rütbe süzgeci;
   uzm rütbede müşterek denemelerdeki 5 soru (4678/Sözleşmeli) yedekle değişir. Eski karma (genel-denemeler-karma.ts) bayrak kapalıyken
   aynen duruyor. Kalan: madde 5 (yeni premium denemeler). Başkan MEBS sb → premium görmek için Sicil'den branş değiştirmeli.
+- 26 Eyl — **PREMIUM DENEMELER 1. + 2. DALGA (on-izleme)**: toplam **45 premium deneme** (886 tekil soru, 982 KB).
+  Jandarma subay/astsubay/uzm.erbaş 3'er (commit a69c2ea) + Havacılık, MEBS, Personel, Bakım, Maliye, İkmal subay/astsubay 3'er
+  (commit 86d12ae). Bloklar paylaşımlı: müşterek M1/M2/M3 (+uzm yedek, +MEBS ek 10), branş başına 3 blok; rütbe içinde farklı
+  eşleşme. ~850 yeni soru, 16 paralel yazıcı, hepsi kanıtlı (denetle.py 0 sorun), şüpheliler elle teyit.
+  Depolama tekil soru tablosuna geçti (46b82e5; 720 soru eski/yeni birebir). Yeni altın özet paketleri: mebs + 7 branş (1376007).
+  **Kalan (3. dalga, premium üyesi 0 olan 8 branş):** İstihkam, Tabip, Eczacı, Sağlık(asb), Kimyager, Veteriner, Mühendis, Bando —
+  paketler hazır. Açık: Bilgi ve İletişim Güvenliği Rehberi paketinde TANIMLAR bölümü yok (2026'da çok soruldu) → tam metin bulunmalı.
