@@ -1,0 +1,1289 @@
+{
+ "id": "P-ASB-JAN-03",
+ "baslik": "Jandarma Astsubay — Premium Deneme 3",
+ "rutbe": "asb",
+ "brans": "jandarma",
+ "soruSayisi": 80,
+ "sorular": [
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre resmî elbiseyi yetkisiz giyen kişi, elbisenin sağladığı kolaylıktan yararlanarak suç işlerse elbise giyme fiilinin cezası nasıl uygulanır?",
+   "siklar": [
+    "Dörtte biri oranında artırılır.",
+    "Artırım yapılmaz.",
+    "Yarı oranında artırılır.",
+    "Bir kat artırılır.",
+    "Üçte biri oranında artırılır."
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.264",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.264: “(2) Elbisenin sağlayacağı kolaylık ve olanaklardan yararlanarak bir suç işlenirse, yalnız bu fiilden ötürü yukarıdaki fıkrada belirtilen cezalar üçte biri oranında artırılarak hükmolunur.”",
+   "id": "P-ASB-JAN-03-01"
+  },
+  {
+   "lawId": 1,
+   "soru": "A, işlemeyi kastettiği suçun icra hareketlerine başladıktan sonra kendi çabasıyla neticenin gerçekleşmesini önlemiştir. Tamam olan kısım ayrı bir suç oluşturmamaktadır. 5237 sayılı Türk Ceza Kanunu'na göre A hakkında nasıl işlem yapılır?",
+   "siklar": [
+    "Teşebbüs hükümlerine göre cezalandırılır.",
+    "Cezası üçte bir oranında indirilir.",
+    "Teşebbüsten dolayı cezalandırılmaz.",
+    "Suç tamamlanmış gibi cezalandırılır.",
+    "Cezası yarı oranında indirilir."
+   ],
+   "dogru": 2,
+   "tip": "vaka",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.36",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.36: “(1) Fail, suçun icra hareketlerinden gönüllü vazgeçer veya kendi çabalarıyla suçun tamamlanmasını veya neticenin gerçekleşmesini önlerse, teşebbüsten dolayı cezalandırılmaz; fakat tamam olan kısım esasen bir suç oluşturduğu takdirde, sadece o suça ait ceza ile cezalandırılır.”",
+   "id": "P-ASB-JAN-03-02"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre işlediği bir fiille birden fazla farklı suçun oluşmasına sebebiyet veren kişi nasıl cezalandırılır?",
+   "siklar": [
+    "Her suçtan ayrı ayrı cezalandırılır.",
+    "Cezalar toplanır ve yarısı indirilir.",
+    "En hafif cezayı gerektiren suçtan cezalandırılır.",
+    "En ağır cezayı gerektiren suçtan cezalandırılır.",
+    "Tek ceza verilir ve dörtte biri oranında artırılır."
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.44",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.44: “(1) İşlediği bir fiil ile birden fazla farklı suçun oluşmasına sebebiyet veren kişi, bunlardan en ağır cezayı gerektiren suçtan dolayı cezalandırılır.”",
+   "id": "P-ASB-JAN-03-03"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Gizli kalması gereken belgeleri, kamu görevlisi sıfatı sona erdikten sonra açıklayan kişiye ceza verilmez.\nII. Görevi nedeniyle bilgi edindiği gizli belgeleri açıklayan kamu görevlisine bir yıldan dört yıla kadar hapis cezası verilir.\nIII. Görevinin nüfuzundan yararlanarak başkasına mal satmaya çalışan kamu görevlisine iki yıldan beş yıla kadar hapis cezası verilir.",
+   "siklar": [
+    "I ve II",
+    "II ve III",
+    "I, II ve III",
+    "Yalnız II",
+    "Yalnız I"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.258",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.258: “gereken belgeleri, kararları ve emirleri ve diğer tebligatı açıklayan veya yayınlayan veya ne suretle olursa olsun başkalarının bilgi edinmesini kolaylaştıran kamu görevlisine, bir yıldan dört yıla kadar hapis cezası verilir.”",
+   "id": "P-ASB-JAN-03-04"
+  },
+  {
+   "lawId": 1,
+   "soru": "5237 sayılı Türk Ceza Kanunu'na göre rüşvet alan kişinin aşağıdakilerden hangisi olması, verilecek cezanın artırılmasını gerektirmez?",
+   "siklar": [
+    "Avukat",
+    "Noter",
+    "Yeminli mali müşavir",
+    "Bilirkişi",
+    "Hakem"
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam) m.252",
+   "aciklama": "5237 sayılı Türk Ceza Kanunu (müşterek kapsam), m.252: “(7) Rüşvet alan veya talebinde bulunan ya da bu konuda anlaşmaya varan kişinin; yargı görevi yapan, hakem, bilirkişi, noter veya yeminli mali müşavir olması halinde, verilecek ceza üçte birden yarısına kadar artırılır.”",
+   "id": "P-ASB-JAN-03-05"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre seferberlik ve savaş hâllerinde jandarma birliklerinin Kuvvet Komutanlıkları emrine girecek bölümleri kimin kararıyla belirlenir?",
+   "siklar": [
+    "Jandarma Genel Komutanı",
+    "Genelkurmay Başkanı",
+    "İçişleri Bakanı",
+    "Millî Savunma Bakanı",
+    "Cumhurbaşkanı"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu m.8",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, m.8: “) Jandarma birlikleri; seferberlik ve savaş hallerinde, Cumhurbaşkanı kararıyla belirlenecek bölümleriyle Kuvvet Komutanlıkları emrine girer, kalan bölümüyle normal görevlerine devam eder.”",
+   "id": "P-ASB-JAN-03-06"
+  },
+  {
+   "lawId": 2,
+   "soru": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu'na göre ilçe jandarma komutanı hakkında her yıl sonunda düzenlenen değerlendirme raporunu kim düzenler?",
+   "siklar": [
+    "İl jandarma komutanı",
+    "Kaymakam",
+    "Kaymakamın değerlendirmesi alınarak il valisi",
+    "İçişleri Bakanı",
+    "Jandarma Genel Komutanı"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu Ek",
+   "aciklama": "2803 sayılı Jandarma Teşkilat, Görev ve Yetkileri Kanunu, Ek: “)26 İl jandarma komutanı ile merkez ilçe jandarma komutanı hakkında il valisince, ilçe jandarma komutanı hakkında kaymakamın değerlendirmesi alınarak il valisi tarafından her yıl sonunda söz konusu kişilerin (…)26 görevleri ile ilgili olarak değerlendirme raporu düzenlenir.”",
+   "id": "P-ASB-JAN-03-07"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre aşağıdakilerden hangisi kişisel verilerin açık rıza aranmaksızın işlenebileceği hâllerden biri değildir?",
+   "siklar": [
+    "Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması",
+    "İlgili kişinin kendisi tarafından alenileştirilmiş olması",
+    "Kanunlarda açıkça öngörülmesi",
+    "Bir hakkın tesisi, kullanılması veya korunması için zorunlu olması",
+    "İlgili kişinin kamu görevlisi olması"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.5",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.5: “d) İlgili kişinin kendisi tarafından alenileştirilmiş olması.”",
+   "id": "P-ASB-JAN-03-08"
+  },
+  {
+   "lawId": 3,
+   "soru": "6698 sayılı Kişisel Verilerin Korunması Kanunu'na göre hukuka uygun işlenmiş olsa da işlenmesini gerektiren sebepler ortadan kalkan kişisel verilerle ilgili nasıl işlem yapılır?",
+   "siklar": [
+    "Yalnızca ilgili kişinin talebiyle veri işleyen tarafından silinir.",
+    "Kişisel Verileri Koruma Kurumuna devredilir.",
+    "On yıl saklandıktan sonra imha edilir.",
+    "Resen veya ilgili kişinin talebiyle veri sorumlusunca silinir, yok edilir ya da anonim hâle getirilir.",
+    "Yalnızca Kurul kararıyla silinir."
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "6698 sayılı Kişisel Verilerin Korunması Kanunu m.7",
+   "aciklama": "6698 sayılı Kişisel Verilerin Korunması Kanunu, m.7: “(1) Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.”",
+   "id": "P-ASB-JAN-03-09"
+  },
+  {
+   "lawId": 4,
+   "soru": "7201 sayılı Tebligat Kanunu'na göre imza edemeyen muhataba yapılacak tebliğle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Sol eli olmayan kişinin sağ elinin baş parmağı bastırılır.",
+    "Sol elinin baş parmağı bulunmayan kişinin aynı elinin diğer bir parmağı bastırılır.",
+    "Okur yazar komşu bulunmazsa muhtar veya bir zabıta memuru tebliğde hazır bulundurulur.",
+    "Bu hâller tebliğ mazbatasında açıkça belirtilir.",
+    "İki eli de olmayan kişiye tebligat yapılamaz."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "7201 sayılı Tebligat Kanunu m.24",
+   "aciklama": "7201 sayılı Tebligat Kanunu, m.24: “Tebliğ yapılacak kimsenin iki eli de yoksa tebliğ evrakı kendisine verilir.”",
+   "id": "P-ASB-JAN-03-10"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre kaymakam, ilçedeki genel ve özel kolluk amir ve memurlarına savunmalarını aldıktan sonra hangi disiplin cezalarını verebilir?",
+   "siklar": [
+    "Uyarma, kınama ve kademe ilerlemesinin durdurulması",
+    "Aylıktan kesme ve meslekten çıkarma",
+    "Kınama ve aylıktan kesme",
+    "Uyarma ve kınama",
+    "Yalnızca uyarma"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.31",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.31: “) Kaymakam, ilçenin idare şube başkanlariyle ikinci derecedeki memurlarına, genel ve özel kolluk amir ve memurlarına Memurin Kanundaki usulüne göre savunmasını aldıktan sonra uyarma, kınama cezaları verir ve uygular.”",
+   "id": "P-ASB-JAN-03-11"
+  },
+  {
+   "lawId": 5,
+   "soru": "5442 sayılı İl İdaresi Kanunu'na göre valinin askerî birliklerden yardım istemesiyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Askerî kuvvetin görevde kalış süresi, birlik komutanı ile koordine edilerek vali tarafından belirlenir.\nII. Acil durumlarda yardım isteği, sonradan yazılı şekle dönüştürülmek kaydıyla sözlü yapılabilir.\nIII. İstenen askerî kuvvetin çapı vali tarafından tek başına belirlenir.",
+   "siklar": [
+    "I ve II",
+    "II ve III",
+    "I ve III",
+    "I, II ve III",
+    "Yalnız I"
+   ],
+   "dogru": 0,
+   "tip": "onculu",
+   "kaynak": "5442 sayılı İl İdaresi Kanunu m.11",
+   "aciklama": "5442 sayılı İl İdaresi Kanunu, m.11: “) Olayların niteliğine göre istenen askerî kuvvetin çapı, vali ile koordine edilerek askerî birliğin komutanı tarafından, görevde kalış süresi, askerî birliğin komutanı ile koordine edilerek vali tarafından belirlenir.”",
+   "id": "P-ASB-JAN-03-12"
+  },
+  {
+   "lawId": 6,
+   "soru": "5326 sayılı Kabahatler Kanunu'na göre ekonomik durumu müsait olmayan kişinin idari para cezasının taksitle ödenmesine nasıl karar verilebilir?",
+   "siklar": [
+    "İlk taksit peşin ödenmek koşuluyla bir yıl içinde dört eşit taksitle",
+    "Peşinat alınmaksızın bir yıl içinde iki eşit taksitle",
+    "Peşinat alınmaksızın altı ay içinde üç eşit taksitle",
+    "İlk taksit peşin ödenmek koşuluyla bir yıl içinde on iki eşit taksitle",
+    "İlk taksit peşin ödenmek koşuluyla iki yıl içinde sekiz eşit taksitle"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.17",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.17: “Kişinin ekonomik durumunun müsait olmaması halinde, idarî para cezasının, ilk taksitinin peşin ödenmesi koşuluyla, bir yıl içinde ve dört eşit taksit halinde ödenmesine karar verilebilir.”",
+   "id": "P-ASB-JAN-03-13"
+  },
+  {
+   "lawId": 6,
+   "soru": "Hakkında idari para cezası verilen A, mücbir sebep nedeniyle sulh ceza mahkemesine başvuru süresini kaçırmıştır. 5326 sayılı Kabahatler Kanunu'na göre A, mücbir sebebin ortadan kalktığı tarihten itibaren en geç kaç gün içinde başvurabilir?",
+   "siklar": [
+    "30",
+    "3",
+    "15",
+    "7",
+    "10"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "5326 sayılı Kabahatler Kanunu m.27",
+   "aciklama": "5326 sayılı Kabahatler Kanunu, m.27: “(2) Mücbir sebebin varlığı dolayısıyla bu sürenin geçirilmiş olması halinde bu sebebin ortadan kalktığı tarihten itibaren en geç yedi gün içinde karara karşı başvuruda bulunulabilir.”",
+   "id": "P-ASB-JAN-03-14"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre kamu konutunda otururken terör eylemi nedeniyle malul olan kamu görevlisi, kamu konutundan kira ödemeksizin kaç yıl yararlanmaya devam edebilir?",
+   "siklar": [
+    "3",
+    "10",
+    "5",
+    "20",
+    "15"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.21",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.21: “in aylığa müstehak dul ve yetimleri, 9/11/1983 tarihli ve 2946 sayılı Kamu Konutları Kanununda gösterilen özel tahsisli konutlarda oturanlar hariç olmak üzere, herhangi bir kira bedeli alınmaksızın on yıl süreyle kamu konutlarından yararlanmaya devam edebilirler.”",
+   "id": "P-ASB-JAN-03-15"
+  },
+  {
+   "lawId": 7,
+   "soru": "3713 sayılı Terörle Mücadele Kanunu'na göre terörle mücadelede görev alanlara yönelik koruma tedbirleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Koruma tedbirlerinin esas ve usulleri Cumhurbaşkanınca çıkarılan yönetmelikle belirlenir.",
+    "Koruma tedbirleri, talep hâlinde estetik cerrahi yoluyla görünümün değiştirilmesini de kapsar.",
+    "Görevinden ayrılmış kamu görevlileri, terör suçlularının taarruzunu savmak için silah kullanamaz.",
+    "Koruma için gerekli araç ve gereçler Adalet ve İçişleri bakanlıklarınca temin edilir.",
+    "Koruma kapsamında nüfus kaydı ve diploma gibi belgeler değiştirilebilir."
+   ],
+   "dogru": 2,
+   "tip": "olumsuz",
+   "kaynak": "3713 sayılı Terörle Mücadele Kanunu m.20",
+   "aciklama": "3713 sayılı Terörle Mücadele Kanunu, m.20: “(11) Yukarıda sayılanlardan kamu görevlileri, görevlerinden ayrılmış olsalar dahi terör suçluları tarafından kendilerine veya eş ve çocuklarının canına vuku bulan bir taarruzu savmak için silah kullanmaya yetkilidirler.”",
+   "id": "P-ASB-JAN-03-16"
+  },
+  {
+   "lawId": 8,
+   "soru": "2935 sayılı Olağanüstü Hal Kanunu'na göre şiddet olayları sebebiyle ilan edilen olağanüstü hâlde dernek faaliyetleri en fazla ne kadar süreyle durdurulabilir?",
+   "siklar": [
+    "Dört ay",
+    "Bir ay",
+    "Üç ay",
+    "İki ay",
+    "Altı ay"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2935 sayılı Olağanüstü Hal Kanunu m.11",
+   "aciklama": "2935 sayılı Olağanüstü Hal Kanunu, m.11: “) Dernek faaliyetlerini; her dernek hakkında ayrı karar almak ve üç ayı geçmemek kaydıyla durdurmak, ö) (Ek: 14/11/1984 - 3076/1 md.”",
+   "id": "P-ASB-JAN-03-17"
+  },
+  {
+   "lawId": 9,
+   "soru": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Kanunda yazılı suçları işlemeye başkalarını teşvik eden kimse asıl fail gibi cezalandırılır.\nII. Kanunda yazılı suçlardan dolayı soruşturma yapılması şikâyete bağlıdır.\nIII. Suçların basın vasıtasıyla işlenmesi hâlinde ceza yarı nispetinde artırılır.",
+   "siklar": [
+    "I, II ve III",
+    "I ve III",
+    "II ve III",
+    "I ve II",
+    "Yalnız I"
+   ],
+   "dogru": 1,
+   "tip": "onculu",
+   "kaynak": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun m.1",
+   "aciklama": "5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun, m.1: “Yukarki fıkralarda yazılı suçları işlemeye başkalarını teşvik eden kimse asıl fail gibi cezalandırılır.”",
+   "id": "P-ASB-JAN-03-18"
+  },
+  {
+   "lawId": 10,
+   "soru": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun'a göre tedbir kararlarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Tedbir kararı Cumhuriyet savcısının başvurusu üzerine de verilebilir.",
+    "Koruyucu tedbir kararı için şiddetin uygulandığına dair delil veya belge aranır.",
+    "Tedbir kararının tebliğinde, aykırılık hâlinde zorlama hapsi uygulanacağı ihtar edilir.",
+    "Tedbir talebinin reddine ilişkin karar sadece korunan kişiye tebliğ edilir.",
+    "Tedbir kararı en kolay ulaşılabilecek yer hâkiminden, mülkî amirden veya kolluktan talep edilebilir."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun m.8",
+   "aciklama": "6284 sayılı Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun, m.8: “(3) Koruyucu tedbir kararı verilebilmesi için, şiddetin uygulandığı hususunda delil veya belge aranmaz.”",
+   "id": "P-ASB-JAN-03-19"
+  },
+  {
+   "lawId": 11,
+   "soru": "2893 sayılı Türk Bayrağı Kanunu'na göre bayrağın çekilmesiyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Bayrak, yurt dışı temsilciliklerine çekilir.",
+    "Kamu kurum ve kuruluşlarında bayrak yalnızca mesai saatlerinde çekili kalır.",
+    "Bayrak, yetkililerin araçlarına takılır.",
+    "Bayrak çekilirken ve indirilirken tören yapılır.",
+    "Bayrak törenlerinin gereği gibi yapılmasından o mahaldeki yetkili amirler sorumludur."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "2893 sayılı Türk Bayrağı Kanunu m.3",
+   "aciklama": "2893 sayılı Türk Bayrağı Kanunu, m.3: “) Kamu kurum ve kuruluşlarında Türk Bayrağı sürekli çekili kalır.”",
+   "id": "P-ASB-JAN-03-20"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre uyarma veya kınama cezası alan personel, cezanın uygulanmasından başlayarak kaç yıl geçtikten sonra cezanın özlük dosyasından silinmesini isteyebilir?",
+   "siklar": [
+    "İki",
+    "Beş",
+    "Üç",
+    "On",
+    "Yedi"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.7",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.7: “(5) Devlet memurluğundan çıkarma ya da meslekten çıkarma cezalarından başka bir disiplin cezasına çarptırılmış olanlar, uyarma ve kınama cezalarının uygulanmasından başlayarak beş yıl, diğer cezaların uygulanmasından başlayarak on yıl geçtikten sonra, atamaya yetkili amire başvurarak verilmiş olan disiplin cezalarının özlük dosyasından silinmesini isteyebilir.”",
+   "id": "P-ASB-JAN-03-21"
+  },
+  {
+   "lawId": 12,
+   "soru": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında Kanun'a göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Aylıktan kesme cezası, kesinleşme tarihini takip eden aybaşında uygulanır.\nII. İtiraz üzerine önceki cezadan daha ağır ceza verilemez.\nIII. Disiplin amirliği yetkisi devredilemez.",
+   "siklar": [
+    "Yalnız III",
+    "Yalnız I",
+    "I ve II",
+    "I, II ve III",
+    "II ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun m.33",
+   "aciklama": "7068 sayılı Genel Kolluk Disiplin Hükümleri Hakkında KHK'nın Kabul Edilmesine Dair Kanun, m.33: “(2) Aylıktan kesme cezası, kesinleşme tarihini takip eden aybaşında uygulanır.”",
+   "id": "P-ASB-JAN-03-22"
+  },
+  {
+   "lawId": 13,
+   "soru": "Sözleşmeli astsubay A, nasbedildikten sonra 8 ay süreyle yurt dışında kursa gidip dönmüştür. 4678 sayılı TSK'da İstihdam Edilecek Sözleşmeli Subay ve Astsubaylar Hakkında Kanun'a göre A'nın sözleşme süresi ne kadar uzatılır?",
+   "siklar": [
+    "16 ay",
+    "4 ay",
+    "24 ay",
+    "8 ay",
+    "12 ay"
+   ],
+   "dogru": 0,
+   "tip": "vaka",
+   "kaynak": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun m.12",
+   "aciklama": "4678 sayılı TSK Sözleşmeli Subay ve Astsubaylar Hakkında Kanun, m.12: “14 Subay veya astsubay nasbedildikten sonra; yabancı memleketlere altı ay veya daha uzun süreli öğrenim, staj, kurs, ihtisas veya görgü ve bilgilerini artırmak maksadıyla gidenlerin sözleşme süreleri, gidiş ve dönüş tarihleri arasında geçen sürenin iki katı kadar; Türk Silâhlı Kuvvetleri hesabına yurt içindeki fakülte veya yüksekokullarda öğrenim yapanlarla, meslekleriyle ilgili ihtisas yapanların sözleşme süreleri ise, buralarda geçen süreler kadar uzatılır.”",
+   "id": "P-ASB-JAN-03-23"
+  },
+  {
+   "lawId": 14,
+   "soru": "5070 sayılı Elektronik İmza Kanunu'na göre elektronik mühür ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "İzinsiz elektronik mühür oluşturmak hapis ve adli para cezasını gerektirir.",
+    "Yargı mercileri ve noterlikler de elektronik mühür sahibi olabilir.",
+    "Belgenin kaynağını ve bütünlüğünü garanti eden delil kaydıdır.",
+    "Elektronik imzaya ilişkin hükümler kıyasen elektronik mühüre de uygulanır.",
+    "Resmî mühürden daha düşük bir hukuki niteliğe sahiptir."
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "5070 sayılı Elektronik İmza Kanunu Ek",
+   "aciklama": "5070 sayılı Elektronik İmza Kanunu, Ek: “Elektronik mühür, resmî mühür dâhil her türlü fiziki mühür ile aynı hukuki niteliği haizdir.”",
+   "id": "P-ASB-JAN-03-24"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre zorunlu hâllerde hazırlanan belgenin \"Sayı\" bölümünde hangi ibare kullanılır?",
+   "siklar": [
+    "H",
+    "G",
+    "Z",
+    "O",
+    "E"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.11",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.11: ““Sayı:” sırasıyla; belgenin hazırlanma süreçlerini ifade eden elektronik ortam için “E”, zorunlu hâller için “Z” veya olağanüstü durumlar için “O” ibarelerinden uygun olanı, DETSİS’te belirtilen Türkiye Cumhuriyeti Devlet Teşkilatı Numarası, standart dosya planı kodu ile kayıt numarasından oluşur ve bunların arasına kısa çizgi işareti (-) konulur (Örnek 3).”",
+   "id": "P-ASB-JAN-03-25"
+  },
+  {
+   "lawId": 15,
+   "soru": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre belge ekleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Ekler muhataba gönderilmediğinde ek bölümüne hiçbir ibare yazılmaz.",
+    "Birden fazla ek varsa ek numarası eklerin sağ üst köşesinde belirtilir.",
+    "Güvenlik gerekçesiyle ekler üst yazıdan ayrı olarak gönderilebilir.",
+    "Uzun ek listesi ayrı sayfada \"EK LİSTESİ\" başlığı altında yazılır.",
+    "Tek ek varsa eki belirten ibare \"Ek:\" başlığının sağına yazılır."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.18",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.18: “(5) Belge eklerinin muhataba gönderilmediği durumlarda “Ek konulmadı” veya “Ek-... konulmadı” ifadesi yazılır (Örnek 14).”",
+   "id": "P-ASB-JAN-03-26"
+  },
+  {
+   "lawId": 15,
+   "soru": "Vali Yardımcısı B, valinin devrettiği imza yetkisine dayanarak bir belgeyi imzalayacaktır. Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik'e göre imza bölümünün ikinci satırına hangi ibare yazılır?",
+   "siklar": [
+    "Vali Yrd. a.",
+    "Vali a.",
+    "Valilik Makamı",
+    "Vali V.",
+    "Vali Yardımcısı"
+   ],
+   "dogru": 1,
+   "tip": "vaka",
+   "kaynak": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik m.17",
+   "aciklama": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik, m.17: “(9) Belgeyi imza yetkisi devredilen makam imzaladığında, imzalayanın adı ve soyadı birinci satıra, yetki devreden makamı gösteren “Bakan a.”, “İdari İşler Başkanı a.”, “Vali a.”",
+   "id": "P-ASB-JAN-03-27"
+  },
+  {
+   "lawId": 16,
+   "soru": "Sözleşmeli Subay ve Astsubay Yönetmeliği'ne göre muvazzaflığa geçiş için yapılan mülakat sınavına katılan adayın en az kaç puan almış olması gerekir?",
+   "siklar": [
+    "75",
+    "50",
+    "65",
+    "60",
+    "70"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "Sözleşmeli Subay ve Astsubay Yönetmeliği m.8",
+   "aciklama": "Sözleşmeli Subay ve Astsubay Yönetmeliği, m.8: “Mülakat sınavına katılan adayın asgari yetmiş puan almış olma şartı aranır.”",
+   "id": "P-ASB-JAN-03-28"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre Jandarma Genel Komutanlığı stratejik hedef planı kaç yıllık bir dönemi kapsar?",
+   "siklar": [
+    "5",
+    "2",
+    "10",
+    "4",
+    "3"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.76",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.76: “mat, taşınır ve taşınmazları ile hizmetlerinin ve görevlerinin geliştirilmesi ve ihtiyaçlarının önceden tespiti ve hedeflerinin belirlenmesi için hazırlanan ve beş yıllık bir dönemi kapsayan Jandarma Genel Komutanlığı stratejik hedef planı Bakan onayı ile yürürlüğe konulur.”",
+   "id": "P-ASB-JAN-03-29"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre jandarmanın durdurma yetkisi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Durdurulan kişiden üzerindeki elbiseyi çıkarması istenebilir.",
+    "Jandarma, durdurduğu kişiye durdurma sebebini bildirir.",
+    "Durdurma için makul bir sebebin bulunması gerekir.",
+    "Durdurma süresi, işlem için zorunlu olan süreden fazla olamaz.",
+    "Durdurma sebebi ortadan kalkınca kişinin ayrılmasına izin verilir."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.46",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.46: “Bu amaçla kişinin üzerindeki elbisenin çıkarılması veya aracın dışarıdan bakıldığında içerisi görünmeyen bölümlerinin açılması istenemez.”",
+   "id": "P-ASB-JAN-03-30"
+  },
+  {
+   "lawId": 17,
+   "soru": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Jandarma, yanlarında velileri olsa bile on sekiz yaşını doldurmamış küçüklerin içkili yerlere girmesini engeller.\nII. İcra müdürlüğünün talebiyle yakalanan araç için en geç üç iş günü içinde icra müdürlüğüne bildirimde bulunulur.\nIII. Jandarma karakollarının konuş yerleri valinin onayıyla belirlenir.",
+   "siklar": [
+    "Yalnız I",
+    "I, II ve III",
+    "I ve II",
+    "II ve III",
+    "I ve III"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği m.45",
+   "aciklama": "Jandarma Teşkilat, Görev ve Yetkileri Yönetmeliği, m.45: “(3) Jandarma; bar, pavyon, gazino, meyhane gibi içkili yerler ile kıraathane, internet salonu ve oyun oynatılan benzeri yerlere yanlarında veli ve vasileri olsa bile onsekiz yaşını doldurmamış küçüklerin girmesini engeller.”",
+   "id": "P-ASB-JAN-03-31"
+  },
+  {
+   "lawId": 18,
+   "soru": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik'e göre Kurul, Yönetmelikte belirlenen silme, yok etme veya anonim hâle getirme sürelerini hangi hâlde kısaltabilir?",
+   "siklar": [
+    "Veri sorumlusunun imha politikası hazırlamamış olması hâlinde",
+    "Verilerin yurt dışına aktarılmış olması hâlinde",
+    "Telafisi güç veya imkânsız zararların doğması ve açıkça hukuka aykırılık olması hâlinde",
+    "Veri sorumlusunun kamu kurumu olması hâlinde",
+    "İlgili kişinin yazılı talebinin bulunması hâlinde"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik m.11",
+   "aciklama": "Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik, m.11: “(4) Kurul, telafisi güç veya imkansız zararların doğması ve açıkça hukuka aykırılık olması halinde, bu maddede belirlenen süreleri kısaltabilir.”",
+   "id": "P-ASB-JAN-03-32"
+  },
+  {
+   "lawId": 19,
+   "soru": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik'e göre kurum ve kuruluşların sahip olduğu yazılı veya basılı dosya, evrak, kroki, film, fotoğraf ve harita gibi veri taşıyıcılarına ne ad verilir?",
+   "siklar": [
+    "Üstveri",
+    "Belge",
+    "Bilgi",
+    "Arşiv malzemesi",
+    "Kayıt"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik m.4",
+   "aciklama": "Bilgi Edinme Hakkı Kanununun Uygulanmasına İlişkin Esas ve Usuller Hakkında Yönetmelik, m.4: “kuruluşların sahip oldukları 4982 sayılı Kanun kapsamındaki yazılı, basılı veya çoğaltılmış dosya, evrak, kitap, dergi, broşür, etüt, mektup, program, talimat, kroki, plan, film, fotoğraf, teyp ve video kaseti, harita, elektronik ortamda kaydedilen her türlü bilgi, haber ve veri taşıyıcılarını, e) Bilgi veya belgeye erişim: İstenen bilgi veya belgenin niteliğine göre, kurum ve kuruluşlarca, başvuru sahibine söz konusu bilgi veya belgenin bir kopyasının verilmesini, kopya verilmesinin mümkün olmadığı hallerde, başvuru sahibinin bilgi veya belgenin aslını inceleyerek not almasına veya içeriğini görmesine veya işitmesine izin verilmesini, f) Kurul: Bilgi Edinme Değerlendirme Kurulunu, g) Kanun: 9/10/2003 tarihli ve 4982 sayılı Bilgi Edinme Hakkı Kanununu, ifade eder.”",
+   "id": "P-ASB-JAN-03-33"
+  },
+  {
+   "lawId": 20,
+   "soru": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik'e göre aşağıdakilerden hangisi av tüfeği bulundurma izni ve belgesi verilmesine engel hâllerden biri değildir?",
+   "siklar": [
+    "18 yaşını bitirmemiş olmak",
+    "Kısıtlı olmak",
+    "Akıl hastası olmak",
+    "Uyuşturucu madde satma suçundan mahkûm olmak",
+    "Taksirle işlenen bir trafik suçundan altı ay hapis cezasına mahkûm olmak"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri) m.14",
+   "aciklama": "2521 sayılı Kanunun Uygulanmasına İlişkin Yönetmelik (Av Tüfekleri), m.14: “lar hariç değişik zamanlarda işlediği aynı veya farklı türden ikinden fazla suçtan dolayı hapis veya ağır hapis ve / veya ağır para cezasına mahkum olanlar, e) Ateşli silahla işlenenler ile taksirli suçlar hariç iki yıldan fazla hürriyeti bağlayıcı cezaya mahkum olanlar ile devlet sırlarını açığa vurma, ideolojik, anarşik, terör ve benzeri amaçlarla yaygın şiddet eylemlerine katılma ve bu gibi fiilleri tahrik ve teşvik etme suçlarından birinden hüküm giymiş olanlar, f) 2521 Sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanun Hükümlerine aykırı fiillerden dolayı hapis veya ağır hapis ve/veya ağır para cezasına mahkum olanlar, g) 6136 Sayılı Ateşli Silahlar ve Bıçaklar İle Diğer Aletler Hakkında Kanunun 12,13,14 ve 15 inci maddelerinde belirtilen suçlardan dolayı 6 aydan fazla hürriyeti bağlayıcı cezaya mahkum olanlar ile aynı Kanunun 4 üncü maddesinde yazılı yasak aletlerden birini kullanmak suretiyle suç işleyen ve bu suçtan dolayı hapis ve/veya ağır para cezasına mahkum olanlar, h) Uyuşturucu ve psikotrop maddeleri ruhsatsız veya ruhsata aykırı olarak imal, ithal veya ihraç etme ya da bu fiillere teşebbüs etme, satma, satışa arz etme, satın alma, bulundurma, herhangi bir şekilde başkasına devretme veya devralma, sevk veya nakletme alınıp satılmasına veya devrine ya da her ne suretle olursa olsun tedarikine vasıta olma suçlarından biriyle mahkum olanlar, ı) Kısıtlı olanlar ile Kamu hizmetinden yasaklılar, i) Akıl hastası veya psikolojik ve nörolojik rahatsızlıkları olanlar, j) 18 yaşını bitirmemiş olanlar, Yukarıdaki fıkranın (a), (b), (c), (d), (e), (f), (g) ve (h) bentleri kapsamına girenler, affa uğramış olsalar veya mahkumiyetleri bütün neticeleriyle birlikte ortadan kalksa yada mahkemelerce verilen karar üzerine adli sicilden silinmiş olsa bile, kendilerine hiçbir suretle bu Yönetmelik kapsamına giren belge ve izinler verilmez. Bu fıkra hükmü Türk Ceza Kanununun7 nci maddesi hükümlerine göre suç olmaktan çıkan bir fiil nedeniyle hüküm giymiş olanlara uygulanmaz. Bu madde de belirtilen mahkumiyet, kesinleşmiş mahkumiyettir. Bu madde hükümlerinin uygulanmasında, mahkemelerce verilen hürriyeti bağlayıcı cezalar, paraya çevrilmiş olsa dahi, hürriyeti bağlayıcı ceza esas alınır. 14 üncü Maddedeki Hallere Düşme Nedeniyle İptal”",
+   "id": "P-ASB-JAN-03-34"
+  },
+  {
+   "lawId": 21,
+   "soru": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği'ne göre geçici maddi yardım kararı ile yapılacak günlük ödeme en fazla ne kadar olabilir?",
+   "siklar": [
+    "Aylık net asgari ücretin otuzda biri",
+    "Aylık brüt asgari ücretin tamamı",
+    "Aylık net asgari ücretin onda biri",
+    "Aylık net asgari ücretin yirmide biri",
+    "Aylık net asgari ücretin yarısı"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği m.8",
+   "aciklama": "6284 sayılı Kanuna İlişkin Uygulama Yönetmeliği, m.8: “(3) Geçici maddi yardım kararı ile on altı yaşından büyükler için her yıl belirlenen aylık net asgari ücret tutarının otuzda birine kadar günlük ödeme yapılır.”",
+   "id": "P-ASB-JAN-03-35"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre aşağıdakilerden hangisi görevden uzaklaştırmaya yetkili değildir?",
+   "siklar": [
+    "İlçelerde kaymakamlar",
+    "Atamaya yetkili amirler",
+    "İllerde valiler",
+    "Bakanlık müfettişleri",
+    "İlçe jandarma komutanları"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.51",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.51: “MADDE 52- (1) Görevden uzaklaştırmaya yetkililer şunlardır: a) Atamaya yetkili amirler. b) Bakanlık müfettişleri.”",
+   "id": "P-ASB-JAN-03-36"
+  },
+  {
+   "lawId": 22,
+   "soru": "Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığı Personel Yönetmeliği'ne göre aşağıdaki ifadelerden hangileri doğrudur?\nI. Personelin değerlendirmesi iki yılda bir yapılır.\nII. Personel, gizli bilgileri görevinden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz.\nIII. Üç defa başarı belgesi alan personele üstün başarı belgesi verilir.",
+   "siklar": [
+    "Yalnız II",
+    "Yalnız I",
+    "I, II ve III",
+    "II ve III",
+    "I ve III"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "JGK ve SGK Personel Yönetmeliği m.41",
+   "aciklama": "JGK ve SGK Personel Yönetmeliği, m.41: “(2) Personel, kamu hizmetleri ile ilgili gizli bilgileri görevinden ayrılmış olsa bile Bakanın yazılı izni olmadıkça açıklayamaz.”",
+   "id": "P-ASB-JAN-03-37"
+  },
+  {
+   "lawId": 23,
+   "soru": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği'ne göre birlik emniyeti için bulundurulan hazır kıt'anın kuvveti en az kaç kişiden oluşur?",
+   "siklar": [
+    "7",
+    "3",
+    "2",
+    "5",
+    "10"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği m.27",
+   "aciklama": "Jandarma ve Sahil Güvenlik Personelinin Hizmet Esasları Yönetmeliği, m.27: “Bu kıt’anın kuvveti en az üç kişiden birliğin tamamına kadar olabilir.”",
+   "id": "P-ASB-JAN-03-38"
+  },
+  {
+   "lawId": 24,
+   "soru": "Jandarma Genel Komutanlığı İzin Yönetmeliği'ne göre yurt dışında izinde iken yurda dönme kararı kendisine tebliğ edilen personel kaç saat içinde dönüşe geçer?",
+   "siklar": [
+    "72",
+    "24",
+    "48",
+    "12",
+    "96"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Jandarma Genel Komutanlığı İzin Yönetmeliği m.5",
+   "aciklama": "Jandarma Genel Komutanlığı İzin Yönetmeliği, m.5: “i) Yurt dışında izinde bulunup, yurda dönme kararı kendisine tebliğ edilen personel, 48 saat içerisinde, en kısa yoldan ve en seri vasıta ile dönüşe geçer.”",
+   "id": "P-ASB-JAN-03-39"
+  },
+  {
+   "lawId": 25,
+   "soru": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun'a göre aşağıdakilerden hangisinin kullanılması Kanun hükümlerine tabi değildir?",
+   "siklar": [
+    "Muşta",
+    "Kasatura",
+    "Sustalı çakı",
+    "Boğma teli",
+    "Tarım için kullanılan aletler"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun m.4",
+   "aciklama": "6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanun, m.4: “): Yalnız sporda kullanılan yivli ateşsiz silahlar ve mermileri ile yivsiz tüfekler ve mermilerinin, ev gereçlerinden olan veya tababet, sanayi, tarım, spor için kullanılan aletlerle bir meslek veya sanatın icrası için gerekli bıçak, şiş, raspa ve benzerlerinin kullanılması bu Kanun hükümlerine tabi değildir.”",
+   "id": "P-ASB-JAN-03-40"
+  },
+  {
+   "lawId": 26,
+   "soru": "5271 sayılı Ceza Muhakemesi Kanunu'na göre yakalama yerine en yakın hâkime gönderilme için gerekli süre hariç, gözaltı süresi yakalama anından itibaren kaç saati geçemez?",
+   "siklar": [
+    "12",
+    "72",
+    "24",
+    "36",
+    "48"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "5271 sayılı Ceza Muhakemesi Kanunu m.91",
+   "aciklama": "5271 sayılı Ceza Muhakemesi Kanunu, m.91: “) Gözaltı süresi, yakalama yerine en yakın hâkim veya mahkemeye gönderilmesi için zorunlu süre hariç, yakalama anından itibaren yirmidört saati geçemez.”",
+   "id": "P-ASB-JAN-03-41"
+  },
+  {
+   "lawId": 26,
+   "soru": "5271 sayılı Ceza Muhakemesi Kanunu'na göre aşağıdakilerden hangileri doğrudur?\nI. Konutta gece vaktinde arama, suçüstü veya gecikmesinde sakınca bulunan hâller gibi istisnalar dışında yapılamaz.\nII. Kural olarak hapis cezasının üst sınırı iki yıldan fazla olmayan suçlarda tutuklama kararı verilemez.\nIII. Konutta arama, kolluk amirinin yazılı emriyle yapılabilir.",
+   "siklar": [
+    "II ve III",
+    "Yalnız II",
+    "I, II ve III",
+    "I ve II",
+    "Yalnız I"
+   ],
+   "dogru": 3,
+   "tip": "onculu",
+   "kaynak": "5271 sayılı Ceza Muhakemesi Kanunu m.118",
+   "aciklama": "5271 sayılı Ceza Muhakemesi Kanunu, m.118: “(1) Konutta, işyerinde veya diğer kapalı yerlerde gece vaktinde arama yapılamaz.”",
+   "id": "P-ASB-JAN-03-42"
+  },
+  {
+   "lawId": 26,
+   "soru": "Tutuklu sanık D'nin yargılandığı suç ağır ceza mahkemesinin görevine girmemektedir. 5271 sayılı Ceza Muhakemesi Kanunu'na göre D'nin tutukluluk süresi, zorunlu hâllerde yapılacak uzatmayla birlikte en çok ne kadar olabilir?",
+   "siklar": [
+    "İki yıl",
+    "Üç yıl",
+    "Altı ay",
+    "Bir yıl altı ay",
+    "Bir yıl"
+   ],
+   "dogru": 3,
+   "tip": "vaka",
+   "kaynak": "5271 sayılı Ceza Muhakemesi Kanunu m.102",
+   "aciklama": "5271 sayılı Ceza Muhakemesi Kanunu, m.102: “) Ağır ceza mahkemesinin görevine girmeyen işlerde tutukluluk süresi en çok bir yıldır.”",
+   "id": "P-ASB-JAN-03-43"
+  },
+  {
+   "lawId": 27,
+   "soru": "1774 sayılı Kimlik Bildirme Kanunu'na göre konutunda misafir kabul eden kişi, misafirinin kaç günden fazla kalması hâlinde kimlik bildiriminde bulunmak zorundadır?",
+   "siklar": [
+    "15",
+    "30",
+    "10",
+    "60",
+    "7"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "1774 sayılı Kimlik Bildirme Kanunu m.7",
+   "aciklama": "1774 sayılı Kimlik Bildirme Kanunu, m.7: “Geçici yer değiştirmelerde; a) Konutlarda 30 günden fazla kalacak misafir için aile reisi; b) Yaylak ve kışlak gibi yerlere mevsimlik olarak göçenler için de aile reisi tarafından, örneğine uygun bildirim, Üç gün içinde kolluk örgütüne verilir.”",
+   "id": "P-ASB-JAN-03-44"
+  },
+  {
+   "lawId": 28,
+   "soru": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu'na göre il ve ilçelerde toplantı ve gösteri yürüyüşü yer ve güzergâhını kim belirler?",
+   "siklar": [
+    "İl jandarma komutanı",
+    "Cumhuriyet başsavcısı",
+    "Mahallin en büyük mülki amiri",
+    "İl emniyet müdürü",
+    "Belediye başkanı"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu m.2",
+   "aciklama": "2911 sayılı Toplantı ve Gösteri Yürüyüşleri Kanunu, m.2: “halkı aydınlatmak ve bir kamuoyu yaratmak suretiyle o konuyu benimsetmek için gerçek ve tüzelkişler tarafından bu Kanun çerçevesinde düzenlenen yürüyüşleri, c) Mahallin en büyük mülki amiri; illerde vali, ilçelerde kaymakamı, d) (Değişik: 2/1/2017-KHK-680/50 md.”",
+   "id": "P-ASB-JAN-03-45"
+  },
+  {
+   "lawId": 29,
+   "soru": "4915 sayılı Kara Avcılığı Kanunu'na göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Haznesi iki fişekle sınırlandırılmış yarı otomatik tüfek avda kullanılabilir.",
+    "Av yasaklarına aykırı davranan kişi tutanak düzenlendikten sonra gözaltına alınır.",
+    "Avcılar avcılık belgesi almak zorundadır.",
+    "Genel kolluk kuvvetleri av yasağına aykırı davrananları avdan men etmeye yetkilidir.",
+    "Merkez Av Komisyonu kararları kesindir."
+   ],
+   "dogru": 1,
+   "tip": "olumsuz",
+   "kaynak": "4915 sayılı Kara Avcılığı Kanunu m.20",
+   "aciklama": "4915 sayılı Kara Avcılığı Kanunu, m.20: “Av yasağına aykırı hareket edenler, olay yerinde gerekli tutanaklar düzenlendikten sonra derhal serbest bırakılır.”",
+   "id": "P-ASB-JAN-03-46"
+  },
+  {
+   "lawId": 30,
+   "soru": "1380 sayılı Su Ürünleri Kanunu'na göre emniyet ve jandarma teşkilatının bulunmadığı yerlerde, bu Kanun kapsamındaki yasaklardan dolayı zabıt tutma ve el koyma görevini kimler yerine getirir?",
+   "siklar": [
+    "Köy muhtarı ve ihtiyar heyeti üyeleri",
+    "Kaymakam",
+    "Belediye başkanı",
+    "Orman işletme şefi",
+    "İl özel idaresi görevlileri"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "1380 sayılı Su Ürünleri Kanunu m.33",
+   "aciklama": "1380 sayılı Su Ürünleri Kanunu, m.33: “aza teşkilatları mensupları, belediye zabıtası amir ve mensupları, kamu tüzel kişilerine bağlı muhafız, bekçi ve korucular ile emniyet ve jandarma teşkilatının bulunmadığı yerlerde köy muhtarı ve ihtiyar heyeti üyeleri bu Kanunla ve bu Kanuna istinaden konulan yasaklardan dolayı, bu Kanun kapsamına giren kabahatler ve suçlar hakkında zabıt varakası tutmak, kabahatin ve suçun işlenmesinde kullanılan istihsal vasıtalarına ve elde edilen su ürünlerine el koymak ve bu Kanunun ek 3 üncü maddesinde yer alan hükümler çerçevesinde idarî para cezalarını kesmekle vazifeli ve yetkilidirler. El konulan su ürünleri ve istihsal vasıtaları:”",
+   "id": "P-ASB-JAN-03-47"
+  },
+  {
+   "lawId": 31,
+   "soru": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu'na göre idari gözetim altındaki yabancı veya yasal temsilcisi, idari gözetim kararına karşı nereye başvurabilir?",
+   "siklar": [
+    "Sulh ceza hâkimine",
+    "Asliye ceza mahkemesine",
+    "İdare mahkemesine",
+    "Valiliğe",
+    "Göç İdaresi Başkanlığına"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu m.57",
+   "aciklama": "6458 sayılı Yabancılar ve Uluslararası Koruma Kanunu, m.57: “(6) İdari gözetim altına alınan kişi veya yasal temsilcisi ya da avukatı, idari gözetim kararına karşı sulh ceza hâkimine başvurabilir.”",
+   "id": "P-ASB-JAN-03-48"
+  },
+  {
+   "lawId": 32,
+   "soru": "6831 sayılı Orman Kanunu'na göre ormanlara kaç kilometre mesafe içinde anız yakılması yasaktır?",
+   "siklar": [
+    "10",
+    "5",
+    "4",
+    "1",
+    "2"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "6831 sayılı Orman Kanunu m.76",
+   "aciklama": "6831 sayılı Orman Kanunu, m.76: “verilen yerlerde yakılan ateşi söndürmeden mahalli terketmek, c) Ormanlara sönmemiş sigara veya yangına dolaylı olarak yol açabilecek madde atmak, d) Ormanlara dört kilometre mesafede veya bu Kanunun 31 inci ve 32 nci maddeleri kapsamına giren köyler hudutları içinde anız veya benzeri bitki örtüsü yakmak, Yasaktır.”",
+   "id": "P-ASB-JAN-03-49"
+  },
+  {
+   "lawId": 33,
+   "soru": "4342 sayılı Mera Kanunu'na göre il mera komisyonuna kim başkanlık eder?",
+   "siklar": [
+    "Büyükşehir belediye başkanı",
+    "Vali yardımcısı",
+    "İl tarım ve orman müdürü",
+    "Vali",
+    "Kaymakam"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "4342 sayılı Mera Kanunu m.6",
+   "aciklama": "4342 sayılı Mera Kanunu, m.6: “Bu amaçla valinin görevlendireceği bir vali yardımcısı başkanlığında; Bakanlık il müdürü, Bakanlık il müdürlüğünden konu uzmanı bir ziraat mühendisi, Devlet Su İşleri Genel Müdürlüğü yetkili temsilcisi, Orman Genel Müdürlüğü yetkili temsilcisi, ilgili köy veya mahalle muhtarı, defterdarlıktan veya bulunamaması halinde vali tarafından görevlendirilecek bir hukukçu, Milli Emlak Müdürlüğünden bir temsilci, Kadastro Müdürlüğünden bir teknik eleman, Ziraat Odası Başkanlığından bir temsilci ve ilgisine göre genel kolluk biriminde görevli bir temsilci olmak üzere on bir kişiden oluşan bir komisyon kurulur.[1] Komisyonlar valilik onayı ile oluşturulur. Vali yardımcısının bulunmadığı durumlarda komisyona Bakanlık il müdürü veya görevlendireceği konu uzmanı bir ziraat mühendisi başkanlık eder. Mera, yaylak ve kışlak varlığı ile hayvancılık potansiyeli dikkate alınarak ihtiyaç duyulan il merkezi ve ilçelerde komisyona bağlı olarak çalışacak ve tespit, ölçme, harita yapma ve yer gösterme çalışmalarını yapmak üzere \"Teknik Ekipler\" oluşturulur. Bu ekipler; Bakanlık il veya ilçe müdürlüğünden bir ziraat mühendisi, Köy Hizmetleri İl Müdürlüğünden bir ziraat mühendisi veya teknik eleman, Kadastro Müdürlüğünden bir teknik eleman, Millî Emlak Müdürlüğünden bir temsilci, orman içi, orman kenarı ve orman üst sınırı meraları ile ilgili olarak bir orman mühendisi, 22.11.1984 tarihli ve 3083 sayılı Sulama Alanlarında Arazi Düzenlemesine Dair Tarım Reformu Kanununun uygulama alanlarında Tarım Reformu Teşkilatından bir ziraat mühendisi ile meradan yararlanan köy ise köyün muhtarı, belediye ise belediye temsilcisi ile komisyonun teklifi ve valinin onayı ile seçilen iki mahallî bilirkişiden oluşur. Teknik ekipler ilçelerde kaymakamın, illerde komisyonun teklifi ve valinin onayı ile oluşturulur. Komisyon ve teknik ekiplerin çalışma usul ve esasları yönetmelikle belirlenir. DÖRDÜNCÜ BÖLÜM Mera, Yaylak ve Kışlakların Korunma, Bakım ve Islahı Mera, Yaylak ve Kışlakların Korunması”",
+   "id": "P-ASB-JAN-03-50"
+  },
+  {
+   "lawId": 34,
+   "soru": "2918 sayılı Karayolları Trafik Kanunu'na göre hususi otomobil dışındaki araçları kullanan sürücüler için alkollü araç kullanma sınırı kaç promildir?",
+   "siklar": [
+    "0,10",
+    "1,00",
+    "0,30",
+    "0,20",
+    "0,50"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "2918 sayılı Karayolları Trafik Kanunu m.48",
+   "aciklama": "2918 sayılı Karayolları Trafik Kanunu, m.48: “50 promilin, diğer araç sürücüleri bakımından 0.20 promilin üzerinde alkollü olan sürücülerin trafik kazasına sebebiyet vermesi hâlinde, ayrıca Türk Ceza Kanununun ilgili hükümleri uygulanır.”",
+   "id": "P-ASB-JAN-03-51"
+  },
+  {
+   "lawId": 34,
+   "soru": "2918 sayılı Karayolları Trafik Kanunu'na göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Araçların tescil işlemlerini yapmak Karayolları Genel Müdürlüğünün görevidir.",
+    "Trafik kazasına adli yönden mahallin genel zabıtası el koyar.",
+    "Hayvanla çekilen taşıtları kullananlar on üç yaşını bitirmiş olmalıdır.",
+    "Alkol ölçümünü kabul etmeyen sürücünün belgesi beş yıl geri alınır.",
+    "Trafik zabıtasının bulunmadığı yerlerde görevi genel zabıta yapar."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "2918 sayılı Karayolları Trafik Kanunu m.5",
+   "aciklama": "2918 sayılı Karayolları Trafik Kanunu, m.5: “f) Araçların tescil işlemlerini yaparak belge ve plakalarını vermek.”",
+   "id": "P-ASB-JAN-03-52"
+  },
+  {
+   "lawId": 35,
+   "soru": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun'a göre özel güvenlik görevlisinin kimlik kartını iptal etmeye kim yetkilidir?",
+   "siklar": [
+    "Jandarma Genel Komutanlığı",
+    "Emniyet Genel Müdürlüğü",
+    "Valilik",
+    "Özel güvenlik şirketi",
+    "İçişleri Bakanlığı"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun m.20",
+   "aciklama": "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun, m.20: “ik kartını başkasına kullandıran özel güvenlik yöneticisi ve görevlisine üçbin Türk Lirası idari para cezası verilir ve bu kişilerin özel güvenlik kimlik kartı valilikçe iptal edilir.”",
+   "id": "P-ASB-JAN-03-53"
+  },
+  {
+   "lawId": 36,
+   "soru": "5395 sayılı Çocuk Koruma Kanunu'na göre acil korunma kararı alınmasını gerektiren durumda Kurum, çocuğun Kuruma geldiği tarihten itibaren en geç kaç gün içinde çocuk hâkimine müracaat eder?",
+   "siklar": [
+    "3",
+    "5",
+    "10",
+    "7",
+    "15"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "5395 sayılı Çocuk Koruma Kanunu m.9",
+   "aciklama": "5395 sayılı Çocuk Koruma Kanunu, m.9: “rgeme Kurumu tarafından bakım ve gözetim altına alındıktan sonra acil korunma kararının alınması için Kurum tarafından çocuğun Kuruma geldiği tarihten itibaren en geç beş gün içinde çocuk hâkimine müracaat edilir.”",
+   "id": "P-ASB-JAN-03-54"
+  },
+  {
+   "lawId": 37,
+   "soru": "2860 sayılı Yardım Toplama Kanunu'na göre birden fazla ili kapsayacak şekilde yardım toplama izni hangi makamdan alınır?",
+   "siklar": [
+    "Yerleşim yerinin kaymakamından",
+    "Yerleşim yerinin valisinden",
+    "Her ilin valisinden ayrı ayrı",
+    "İçişleri Bakanlığından",
+    "Cumhurbaşkanlığından"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "2860 sayılı Yardım Toplama Kanunu m.7",
+   "aciklama": "2860 sayılı Yardım Toplama Kanunu, m.7: “Yardım toplama faaliyeti birden fazla ili kapsıyorsa yardım toplama faaliyetine girişecek gerçek veya tüzel kişilerin yerleşim yerinin bulunduğu ilin valisinden izin alınır ve izni veren valilik tarafından ilgili valiliklere ve İçişleri Bakanlığına bilgi verilir.”",
+   "id": "P-ASB-JAN-03-55"
+  },
+  {
+   "lawId": 38,
+   "soru": "5199 sayılı Hayvanları Koruma Kanunu'na göre ev hayvanları kaç yaşından küçüklere satılamaz?",
+   "siklar": [
+    "16",
+    "18",
+    "15",
+    "21",
+    "12"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "5199 sayılı Hayvanları Koruma Kanunu m.14",
+   "aciklama": "5199 sayılı Hayvanları Koruma Kanunu, m.14: “d) Ev (…)17 hayvanlarını onaltı yaşından küçüklere satmak.”",
+   "id": "P-ASB-JAN-03-56"
+  },
+  {
+   "lawId": 39,
+   "soru": "2872 sayılı Çevre Kanunu'na göre çevreyi kirletenin sorumluluğuna dayanan tazminat talepleri için zamanaşımı süresi kaç yıldır?",
+   "siklar": [
+    "1",
+    "5",
+    "2",
+    "10",
+    "3"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "2872 sayılı Çevre Kanunu m.28",
+   "aciklama": "2872 sayılı Çevre Kanunu, m.28: “) Çevreye verilen zararların tazminine ilişkin talepler zarar görenin zararı ve tazminat yükümlüsünü öğrendiği tarihten itibaren beş yıl sonra zamanaşımına uğrar.”",
+   "id": "P-ASB-JAN-03-57"
+  },
+  {
+   "lawId": 40,
+   "soru": "2559 sayılı Polis Vazife ve Salahiyet Kanunu'na göre zor kullanma yetkisi kapsamında, direnmenin mahiyetine ve derecesine göre kademeli olarak artan nispette aşağıdakilerden hangileri kullanılabilir?\nI. Bedenî kuvvet\nII. Maddî güç\nIII. Kanuni şartları gerçekleştiğinde silah",
+   "siklar": [
+    "Yalnız I",
+    "Yalnız III",
+    "II ve III",
+    "I ve II",
+    "I, II ve III"
+   ],
+   "dogru": 4,
+   "tip": "onculu",
+   "kaynak": "2559 sayılı Polis Vazife ve Salahiyet Kanunu m.16",
+   "aciklama": "2559 sayılı Polis Vazife ve Salahiyet Kanunu, m.16: “Zor kullanma yetkisi kapsamında, direnmenin mahiyetine ve derecesine göre ve direnenleri etkisiz hale getirecek şekilde kademeli olarak artan nispette bedenî kuvvet, maddî güç ve kanunî şartları gerçekleştiğinde silah kullanılabilir.”",
+   "id": "P-ASB-JAN-03-58"
+  },
+  {
+   "lawId": 41,
+   "soru": "5607 sayılı Kaçakçılıkla Mücadele Kanunu'na göre kaçakçılık suçunun en az kaç kişi tarafından birlikte işlenmesi hâlinde verilecek ceza yarı oranında artırılır?",
+   "siklar": [
+    "Altı",
+    "İki",
+    "Dört",
+    "Beş",
+    "Üç"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "5607 sayılı Kaçakçılıkla Mücadele Kanunu m.4",
+   "aciklama": "5607 sayılı Kaçakçılıkla Mücadele Kanunu, m.4: “(2) Bu Kanunda tanımlanan suçların (…)9, üç veya daha fazla kişi tarafından birlikte işlenmesi halinde, verilecek ceza yarı oranında artırılır.”",
+   "id": "P-ASB-JAN-03-59"
+  },
+  {
+   "lawId": 42,
+   "soru": "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun'a göre uyuşturucu maddelerin alımı, satımı, imali, ithali ve ihracı ile ilgili hususlar kimin tespit edeceği esaslara göre yürütülür?",
+   "siklar": [
+    "Tarım ve Orman Bakanlığı",
+    "Toprak Mahsulleri Ofisi",
+    "Sağlık Bakanlığı",
+    "İçişleri Bakanlığı",
+    "Cumhurbaşkanı"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun m.1",
+   "aciklama": "3298 sayılı Uyuşturucu Maddelerle İlgili Kanun, m.1: “leri ve eterleri ile Sağlık ve Sosyal Yardım Bakanlığınca tayin olunacak diğer uyuşturucu maddelerin alımı, satımı, imali, ithali ve ihracı ile ilgili hususlar Cumhurbaşkanının tespit edeceği esaslara göre yürütülür.”",
+   "id": "P-ASB-JAN-03-60"
+  },
+  {
+   "lawId": 43,
+   "soru": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun'a göre il spor güvenlik kuruluna kim başkanlık eder?",
+   "siklar": [
+    "İl jandarma komutanı",
+    "İl emniyet müdürü",
+    "Vali",
+    "Gençlik ve spor il müdürü",
+    "Vali yardımcısı"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun m.4",
+   "aciklama": "6222 sayılı Sporda Şiddet ve Düzensizliğin Önlenmesine Dair Kanun, m.4: “MADDE 4 – (1) İl spor güvenlik kurulu, vali veya görevlendireceği vali yardımcısının başkanlığında, belediye başkanlığı, il jandarma komutanlığı, il emniyet müdürlüğü, gençlik ve spor il müdürlüğü, il sağlık müdürlüğü, il milli eğitim müdürlüğü, ilgili federasyon ve amatör spor kulüpleri konfederasyon temsilcileri, vali tarafından belirlenecek bir hukukçu ile farklı spor kulüplerine mensup stat güvenliğinden sorumlu yönetim kurulu üyesi ve gerekli görüldüğünde davet edilecek basın kuruluşlarının ve ilgili kamu kuruluşlarının temsilcilerinden oluşur.[1] (2) İlçe spor güvenlik kurulu, kaymakam başkanlığında il spor güvenlik kurulunda yer alan kurum ve kuruluşların ilçedeki temsilcileri ve kaymakam tarafından belirlenecek bir hukukçu ile varsa farklı spor kulüplerine mensup stat güvenliğinden sorumlu yönetim kurulu üyesi ve gerekli görüldüğünde davet edilecek basın kuruluşlarının ve ilgili kamu kuruluşlarının temsilcilerinden oluşur.3 Müsabaka, antrenman ve seyir alanlarının güvenliği[2]”",
+   "id": "P-ASB-JAN-03-61"
+  },
+  {
+   "lawId": 44,
+   "soru": "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun'a göre zapt edilen uyuşturucu maddelerin müsaderesine kim karar verir?",
+   "siklar": [
+    "Asliye ceza mahkemesi",
+    "Cumhuriyet savcısı",
+    "Mahallin mülki amiri",
+    "Vali",
+    "Sulh ceza hâkimliği"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun m.20",
+   "aciklama": "2313 sayılı Uyuşturucu Maddelerin Murakabesi Hakkında Kanun, m.20: “) Uyuşturucu maddelerin kesin olarak raporları alındıktan sonra, yönetmelikte belirlenen usule uygun olarak alınacak örneklerin saklanması kaydıyla müsaderesine sulh ceza hâkimliğince soruşturmanın her safhasında karar verilir.”",
+   "id": "P-ASB-JAN-03-62"
+  },
+  {
+   "lawId": 45,
+   "soru": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun'a göre terörizmin finansmanı suçunu işleyen kişiye verilecek hapis cezası aşağıdakilerden hangisidir?",
+   "siklar": [
+    "Üç yıldan sekiz yıla kadar",
+    "On yıldan on beş yıla kadar",
+    "Bir yıldan üç yıla kadar",
+    "Beş yıldan on yıla kadar",
+    "İki yıldan beş yıla kadar"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun m.4",
+   "aciklama": "6415 sayılı Terörizmin Finansmanının Önlenmesi Hakkında Kanun, m.4: “endirilmeden dahi bir teröriste veya terör örgütlerine fon sağlayan veya toplayan kişi, fiili daha ağır cezayı gerektiren başka bir suç oluşturmadığı takdirde, beş yıldan on yıla kadar hapis cezası ile cezalandırılır.”",
+   "id": "P-ASB-JAN-03-63"
+  },
+  {
+   "lawId": 46,
+   "soru": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu'na göre taşınır kültür varlığını bulan kişi, bunu en geç kaç gün içinde bildirmek zorundadır?",
+   "siklar": [
+    "7",
+    "15",
+    "10",
+    "1",
+    "3"
+   ],
+   "dogru": 4,
+   "tip": "duz",
+   "kaynak": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu m.4",
+   "aciklama": "2863 sayılı Kültür ve Tabiat Varlıklarını Koruma Kanunu, m.4: “Taşınır ve taşınmaz kültür ve tabiat varlıklarını bulanlar, malik oldukları veya kullandıkları arazinin içinde kültür ve tabiat varlığı bulunduğunu bilenler veya yeni haberdar olan malik ve zilyetler, bunu en geç üç gün içinde, en yakın müze müdürlüğüne veya köyde muhtara veya diğer yerlerde mülki idare amirlerine bildirmeye mecburdurlar.”",
+   "id": "P-ASB-JAN-03-64"
+  },
+  {
+   "lawId": 47,
+   "soru": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun'a göre zilyet, tecavüzü öğrendiği tarihten itibaren kaç gün içinde başvuruda bulunmalıdır?",
+   "siklar": [
+    "15",
+    "30",
+    "60",
+    "90",
+    "120"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun m.4",
+   "aciklama": "3091 sayılı Taşınmaz Mal Zilyedliğine Yapılan Tecavüzlerin Önlenmesi Hakkında Kanun, m.4: “Başvuruda bulunma süresi Madde 4 – Yetkililerin; tecavüz veya müdahalenin yapıldığını öğrendikleri tarihten altmış gün içinde, idari makama başvuruda bulunmaları gerekir.”",
+   "id": "P-ASB-JAN-03-65"
+  },
+  {
+   "lawId": 48,
+   "soru": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun'a göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Tütün ürünleri on altı yaşını doldurmamış kişilere satılamaz.",
+    "Okulların açık alanlarında da tütün ürünü içilemez.",
+    "Tütün ürünleri paketlerinin ön ve arka yüzeylerinin %85'i sağlık uyarısına ayrılır.",
+    "Özel hususi araçlarda tütün ürünü içilmesi yasaktır.",
+    "Tütün ürünlerinin satışında on sekiz yaşından küçükler çalıştırılamaz."
+   ],
+   "dogru": 0,
+   "tip": "olumsuz",
+   "kaynak": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun m.2",
+   "aciklama": "4207 sayılı Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun, m.2: “Bu alanlara onsekiz yaşını doldurmamış kişiler giremez.”",
+   "id": "P-ASB-JAN-03-66"
+  },
+  {
+   "lawId": 49,
+   "soru": "4733 sayılı Kanun'a göre ticari amaç olmaksızın kendi ürettiği ürünleri kullanarak şahsi tüketimi için en fazla kaç kilogram sarmalık kıyılmış tütün elde eden kişi izin şartından muaftır?",
+   "siklar": [
+    "50",
+    "150",
+    "25",
+    "100",
+    "75"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun m.8",
+   "aciklama": "4733 sayılı Tütün, Tütün Mamulleri ve Alkol Piyasasının Düzenlenmesine Dair Kanun, m.8: “) Ticari amaç olmaksızın, kendi ürettiği ürünleri kullanarak şahsi tüketimi için elli kilogramı aşmayan sarmalık kıyılmış tütün elde eden veya üçyüzelli litreyi aşmayan fermente alkollü içki imal edenler haricinde, Gıda, Tarım ve Hayvancılık Bakanlığından tesis kurma ve faaliyet izni almadan; tütün işleyenler veya tütün mamulleri, makaron, yaprak sigara kâğıdı, sigara filtresi, etil alkol, metanol ya da alkollü içki üretmek üzere fabrika, tesis veya imalathane kuran ve işletenler bir yıldan üç yıla kadar hapis ve beşbin günden onbin güne kadar adlî para cezası ile cezalandırılır. Bu Kanunun 6 ncı maddesinin ikinci ve üçüncü fıkralarına aykırı hareket edenler ile tesislerinde izin verilen kategori dışında faaliyette bulunanlara da aynı ceza verilir.1415 Tütün, tütün mamulleri, etil alkol, metanol ve alkollü içkiler piyasasında Gıda, Tarım ve Hayvancılık Bakanlığından gerekli izinleri alarak veya almadan mal veya hizmet üreten, işleyen, ihraç veya ithal eden, pazarlayan, alan veya satan gerçek ve tüzel kişilere aşağıda yazılı idarî yaptırımlar uygulanır:16 a) Bu Kanun veya ilgili mevzuat gereğince Gıda, Tarım ve Hayvancılık Bakanlığı tarafından istenilen ticari faaliyetlerini gösterir satış veya faaliyet raporlarını veya bilgi, belge ve numuneleri yazılı uyarıya rağmen belirlenen süre içinde vermeyenlere, yanlış veya yanıltıcı bilgi veya belge verenlere, gerekli tesis ve yerleri incelemeye açmayanlara ellibin Yeni Türk Lirasından ikiyüzellibin Yeni Türk Lirasına kadar idarî para cezası verilir. b) Üreticiden satın aldıkları tütünleri satış merkezlerine veya Gıda, Tarım ve Hayvancılık Bakanlığına tescil ettirmeyenlere, yazılı sözleşme yapma tarihine uymayanlara, işleme açılış ve kapanışları ile tütün stoklarını ve tütün depolarını süresi içinde bildirmeyenlere, izinsiz standart dışı işleme yapanlara, bu Kanunda tütün eksperi unvanına sahip olanlar tarafından yapılması öngörülen 13 20/11/2017 tarihli ve 696 sayılı KHK’nin 82 nci maddesiyle, bu maddenin; birinci fıkrasında ve beşinci fıkrasının giriş cümlesi ile (b), (d), (e), (f), (g), (h) ve (ı) bentlerinde yer alan “Kurumdan” ibareleri “Gıda, Tarım ve Hayvancılık Bakanlığından” ; beşinci fıkrasının (b) bendinde ve dokuzuncu fıkrasında yer alan “Kuruma” ibareleri “Gıda, Tarım ve Hayvancılık Bakanlığına” ; sekizinci fıkrasında yer alan “Kurumun” ibaresi “Gıda, Tarım ve Hayvancılık Bakanlığının” ; beşinci fıkrasının (a), (l) ve (m) bentleri ile dokuzuncu ve onikinci fıkralarında yer alan “Kurum” ibareleri “Gıda, Tarım ve Hayvancılık Bakanlığı” şeklinde; altıncı ve sekizinci fıkralarında yer alan “Kurumca” ibareleri “Gıda, Tarım ve Hayvancılık Bakanlığınca” şeklinde değiştirilmiş, daha sonra bu hüküm 1/2/2018 tarihli ve 7079 sayılı Kanunun 77 nci maddesiyle aynen kabul edilerek kanunlaşmıştır. 14 28/11/2017 tarihli ve 7061 sayılı Kanunun 63 üncü maddesi ile bu fıkranın birinci cümlesine “ürünleri kullanarak” ibaresinden sonra gelmek üzere “şahsi tüketimi için” ibaresi eklenmiştir. 15 28/10/2020 tarihli ve 7255 sayılı Kanunun 13 üncü maddesi ile 8 inci maddesinin birinci fıkrasına “tütün mamulleri,” ibaresinden sonra gelmek üzere “makaron, yaprak sigara kâğıdı, sigara filtresi,” ibaresi, eklenmiştir. 16 28/11/2017 tarihli ve 7061 sayılı Kanunun 63 üncü maddesi ile bu fıkraya “içkiler piyasasında” ibaresinden sonra gelmek üzere “Kurumdan gerekli izinleri alarak veya almadan” ibaresi eklenmiştir. işleri yetkisiz kişilere yaptıranlara, yazılı sözleşme esası veya açık artırma yöntemi ile yapılan alım satım kapsamındaki yükümlülüklerini süresi içinde yerine getirmeyenlere onbin Yeni Türk Lirasından ellibin Yeni Türk Lirasına kadar idarî para cezası verilir. Bu hüküm Gıda, Tarım ve Hayvancılık Bakanlığından izin almadan bir yere mahsus tütün çeşidinin tohum veya fidelerini başka çeşitlere ayrılmış olan yerlere ekenler, dikenler veya bu amaçlarla taşıyanlar hakkında da uygulanır. c) İzin almadan veya güncelleme yapmadan, ana girdilerde veya ürün ambalajında değişiklik yaparak ürünleri piyasaya arz edenlere ellibin Yeni Türk Lirasından beşyüzbin Yeni Türk Lirasına kadar idarî para cezası verilir. d) Gıda, Tarım ve Hayvancılık Bakanlığından izin almaksızın işleme veya üretim tesislerinde proje tadilat kapsamındaki işlemleri yapan, kurulu makinelerini ülke içerisinde kısmen veya tamamen aynı firma tarafından kurulan yeni veya eski bir fabrikaya nakleden, başka bir firmaya devreden ya da ülke dışına çıkaranlara veya bildirimde bulunmaksızın faaliyetini sona erdirenlere ellibin Yeni Türk Lirasından beşyüzbin Yeni Türk Lirasına kadar idarî para cezası verilir. e) Gıda, Tarım ve Hayvancılık Bakanlığından izin almadan veya bildirimde bulunmadan dökme alkollü içkileri piyasaya arz eden, sevkiyatını yapan veya izin verilen yerlerden farklı yerlerde depolayanlara ikiyüzbin Yeni Türk Lirası idarî para cezası verilir. f) Gıda, Tarım ve Hayvancılık Bakanlığından belge almamış kişilerden ürün alan veya bu kişilere ürün satan ya da belgesinde belirtilen işyeri dışında satış yapan toptan veya perakende tütün mamulü, makaron, yaprak sigara kâğıdı, etil alkol, metanol veya alkollü içki satıcıları ya da açık içki satıcılarına bin Yeni Türk Lirasından onbin Yeni Türk Lirasına kadar idarî para cezası verilir.17 g) Gıda, Tarım ve Hayvancılık Bakanlığından satış belgesi almadan tütün mamulleri, makaron, yaprak sigara kâğıdı, etil alkol, metanol ve alkollü içkilerin toptan satışını yapanlara ellibin Yeni Türk Lirası; perakende satışını yapanlara ise beşbin Yeni Türk Lirası idarî para cezası verilir.17 h) 18 ı) Gıda, Tarım ve Hayvancılık Bakanlığından uygunluk belgesi almadan enfiye, çiğneme, nargile tütünü veya yaprak sigara kâğıdı ya da makaron ile sigara filtresi üretenler ile satan veya 17 28/10/2020 tarihli ve 7255 sayılı Kanunun 13 üncü maddesi ile (f) bendine “perakende tütün mamulü,” ibaresinden sonra gelmek üzere “makaron, yaprak sigara kâğıdı,” ibaresi, (g) bendine “tütün mamulleri,” ibaresinden sonra gelmek üzere “makaron, yaprak sigara kâğıdı,” ibaresi, (ı) bendine “makaron” ibaresinden sonra gelmek üzere “ile sigara filtresi” ibaresi, (k) bendine “alkollü içkilerin” ibaresinden sonra gelmek üzere “, etil alkol, metanol, makaron, sarmalık kıyılmış tütünün ve yaprak sigara kâğıdının” ibaresi eklenmiştir. 18 18/6/2020 tarihli ve 7247 sayılı Kanunun 17 nci maddesiyle, 28/11/2017 tarihli ve 7061 sayılı Bazı Vergi Kanunları ile Diğer Bazı Kanunlarda Değişiklik Yapılmasına Dair Kanunun 63 üncü maddesiyle 4733 sayılı Kanunun 8 inci maddesinin beşinci fıkrasının (h) bendinin yürürlükten kaldırılmasına ilişkin değişiklik ve 93 üncü maddesiyle 5607 sayılı Kanunun 3 üncü maddesinin yeniden düzenlenen yirminci fıkrası, Tarım ve Orman Bakanlığından yetki belgesi almadan veya bildirimde bulunmadan tütün ticareti yapanlar bakımından 1/7/2021 tarihinde yürürlüğe girer. satışa arz edenlere (…)19, beşbin Yeni Türk Lirası idarî para cezası verilir.17 j) Yetkili olmadıkları halde, açık olarak içki satışı veya sunumu yapanlar ile satışa sunulan tütün mamulleri, etil alkol, metanol ve alkollü içkileri arz ambalajlarını bozmak veya bunları bölmek suretiyle satanlara bin Yeni Türk Lirasından onbin Yeni Türk Lirasına kadar idarî para cezası verilir. k) Tütün mamulleri veya alkollü içkilerin, etil alkol, metanol, makaron, sarmalık kıyılmış tütünün ve yaprak sigara kâğıdının tüketicilere satışını (…)20; internet, televizyon, faks ve telefon gibi elektronik ticaret araçları ya da posta ile sipariş yöntemi kullanarak yapmak üzere satış sistemi kuran veya faaliyette bulunanlara yirmibin Yeni Türk Lirasından yüzbin Yeni Türk Lirasına kadar idarî para cezası verilir. Satışın internet ortamında yapılması halinde, 4/5/2007 tarihli ve 5651 sayılı İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanunda öngörülen usullere göre erişimin engellenmesine karar verilir ve bu karar hakkında da anılan Kanun hükümleri uygulanır.17 1) Tütün mamulleri veya alkollü içkileri satış yerlerindeki raf veya standlara, her türlü teşhir ünitesine, reklam ve tanıtımına ilişkin mevzuata ve Gıda, Tarım ve Hayvancılık Bakanlığı düzenlemelerine aykırılık oluşturacak veya herhangi bir firmaya üstünlük sağlayacak şekilde yerleştirenlere otuzbin Yeni Türk Lirası idarî para cezası verilir. m) Tütün mamulleri (…)21 kullanımını ve satışını özendirici veya teşvik edici kampanya, promosyon, reklam ve tanıtım yapılmasını önlemek amacıyla Gıda, Tarım ve Hayvancılık Bakanlığı tarafından bu Kanun uyarınca yapılan düzenlemelere aykırı hareket edenlere otuzbin Yeni Türk Lirası idarî para cezası verilir. n) Tütün mamulleri (…)22; otomatik satış makinesi ile satanlara veya bahis oynatmak veya ödül vermek gibi yollarla verenlere, fiilleri suç oluşturmadığı takdirde ellibin Yeni Türk”",
+   "id": "P-ASB-JAN-03-67"
+  },
+  {
+   "lawId": 50,
+   "soru": "Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik'e göre konaklama tesislerinde tutulan defterler kaç yıl saklanır?",
+   "siklar": [
+    "3",
+    "2",
+    "1",
+    "5",
+    "10"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "1774 sayılı Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik m.24",
+   "aciklama": "1774 sayılı Kimlik Bildirme Kanununun Uygulanması ile İlgili Yönetmelik, m.24: “Bir yıla ait konaklama belgeleri, düzenlendiği yılı izleyen takvim yılından başlayarak bir yıl; konaklama yeri kayıt defterleri, dolduğu yılı izleyen takvim yılından başlayarak beş yıl süre ile, sorumlu işleticinin sorumluluğu altında tesiste saklanır.”",
+   "id": "P-ASB-JAN-03-68"
+  },
+  {
+   "lawId": 51,
+   "soru": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik'e göre ses ve gaz fişeği atabilen silah satın alma yetki belgesinin geçerlilik süresi ne kadardır?",
+   "siklar": [
+    "Altı ay",
+    "Üç ay",
+    "Bir yıl",
+    "Beş yıl",
+    "İki yıl"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik m.14",
+   "aciklama": "Ses ve Gaz Fişeği Atabilen Silahlar Hakkında Yönetmelik, m.14: “(2) Yetki belgesinin geçerlilik süresi 6 aydır.”",
+   "id": "P-ASB-JAN-03-69"
+  },
+  {
+   "lawId": 52,
+   "soru": "Karayolları Trafik Yönetmeliği'ne göre bir yıl içinde trafik ceza puanı ilk defa 100 puanı aşan sürücünün sürücü belgesi ne kadar süreyle geri alınır?",
+   "siklar": [
+    "Bir ay",
+    "İki ay",
+    "Altı ay",
+    "Bir yıl",
+    "Dört ay"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "Karayolları Trafik Yönetmeliği m.167",
+   "aciklama": "Karayolları Trafik Yönetmeliği, m.167: “Trafik kuralının ihlal edildiği tarihten geriye doğru bir yıl içinde; a) Toplam 100 ceza puanını aştığı tespit edilen sürücülerin, sürücü belgeleri 2 ay süre ile geri alınır.”",
+   "id": "P-ASB-JAN-03-70"
+  },
+  {
+   "lawId": 53,
+   "soru": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye Yönetmeliği'ne göre varlık başkasının mülkü içinde bulunmuşsa, takdir edilecek bedelin yüzde kaçı ikramiye olarak bulan ile mülk sahibi arasında eşit olarak paylaştırılır?",
+   "siklar": [
+    "%40",
+    "%100",
+    "%50",
+    "%80",
+    "%60"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik m.3",
+   "aciklama": "Taşınır Kültür ve Tabiat Varlıklarını Bulanlara, Haber Verenlere ve Yakalayan Kamu Görevlilerine Verilecek İkramiye ile İlgili Yönetmelik, m.3: “b) Varlık başkasının mülkü içinde ise ilgili Yönetmeliğine göre takdir edilecek bedelin % 80'i ikramiye olarak bulan ile mülk sahibi arasında eşit olarak paylaştırılır.”",
+   "id": "P-ASB-JAN-03-71"
+  },
+  {
+   "lawId": 54,
+   "soru": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik'e göre özel güvenlik komisyonunda aşağıdakilerden hangisinin temsilcisi bulunmaz?",
+   "siklar": [
+    "İl emniyet müdürlüğü",
+    "Ticaret odası",
+    "Sanayi odası",
+    "İl jandarma komutanlığı",
+    "Belediye başkanlığı"
+   ],
+   "dogru": 4,
+   "tip": "olumsuz",
+   "kaynak": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik m.5",
+   "aciklama": "Özel Güvenlik Hizmetlerine Dair Kanunun Uygulanmasına İlişkin Yönetmelik, m.5: “Özel Güvenlik Komisyonu Madde 5- Özel güvenlik komisyonu, her ilde valinin görevlendireceği bir vali yardımcısının başkanlığında, il emniyet müdürlüğü, il jandarma komutanlığı, ticaret odası başkanlığı ve sanayi odası başkanlığının temsilcilerinden oluşur.”",
+   "id": "P-ASB-JAN-03-72"
+  },
+  {
+   "lawId": 55,
+   "soru": "Adli Kolluk Yönetmeliği'ne göre her yılın sonunda adli kolluk sorumluları hakkında değerlendirme raporunu kim düzenler?",
+   "siklar": [
+    "Adalet komisyonu başkanı",
+    "Sulh ceza hâkimi",
+    "İl jandarma komutanı",
+    "Cumhuriyet başsavcısı",
+    "Mahallin en büyük mülki amiri"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Adli Kolluk Yönetmeliği m.11",
+   "aciklama": "Adli Kolluk Yönetmeliği, m.11: “raporları Madde 11 – Cumhuriyet başsavcıları her yılın sonunda, bu Yönetmeliğin 3 üncü maddesine göre belirlenmiş adlî kolluk sorumluları hakkında değerlendirme raporu düzenleyerek, mülki idare amirlerine gönderir.”",
+   "id": "P-ASB-JAN-03-73"
+  },
+  {
+   "lawId": 56,
+   "soru": "Adli ve Önleme Aramaları Yönetmeliği'ne göre aşağıdakilerden hangileri doğrudur?\nI. Konutta önleme araması yapılamaz.\nII. Önleme araması gece de yapılabilir.\nIII. Savcıya ulaşılamayan hâllerde kolluk amirinin yazılı emriyle iş yerinde adli arama yapılabilir.",
+   "siklar": [
+    "Yalnız I",
+    "I, II ve III",
+    "I ve II",
+    "II ve III",
+    "Yalnız III"
+   ],
+   "dogru": 2,
+   "tip": "onculu",
+   "kaynak": "Adli ve Önleme Aramaları Yönetmeliği m.11",
+   "aciklama": "Adli ve Önleme Aramaları Yönetmeliği, m.11: “merci, b) Aramanın yapıldığı yer, tarih ve saat, c) Aramanın konusu, d) Aranan kişinin kimlik bilgileri, adını söylemediği takdirde eşkâl bilgileri, e) Araçta, konutta, işyeri ve eklentilerinde arama yapılmışsa, aracın plaka numarası, markası, konutun, işyerinin ve eklentilerinin açık adresi, su üstü aracının aranmasında su üstü aracının cinsi, ismi, sahibi ve kullananı, deniz aracının aranması hâlinde ise deniz aracının cinsi, ismi, donatanı, bağlama limanı, tonajı, acentesi, kaptanı ve arama mevkiî, f) Aramanın sonuçları, el konulan suç eşyasına ilişkin belirleyici bilgiler, g) Aramada yakalanan kişiler varsa kimlik bilgileri, kimliği belirlenemiyorsa eşkâl bilgileri, h) Arama sonucunda yaralanma veya maddî bir zarar meydana gelip gelmediği, i) Arama işlemini yapanların adı, soyadı, sicili ve unvanı, hususları yer alır. Tutanak arama işlemine katılmış olanlar ve hazır bulunanlarca imzalanır. Tutanağın bir sureti ilgiliye verilir. Kaçakçılık suçlarıyla ilgili tutanaklar, 5607 sayılı Kaçakçılıkla Mücadele Kanununun 11 ve 20 nci maddelerine göre tanzim edilir.”",
+   "id": "P-ASB-JAN-03-74"
+  },
+  {
+   "lawId": 57,
+   "soru": "Suç Eşyası Yönetmeliği'ne göre suç eşyası olarak el konulan ateşli silah, mermi ve patlayıcı maddeler nerede muhafaza edilir?",
+   "siklar": [
+    "İl emniyet müdürlüğü depolarında",
+    "Adliye emanet bürosunda",
+    "Mahallî jandarma birlik komutanlığı depolarında",
+    "Mahallin en büyük mal memurluğunda",
+    "Makine ve Kimya Endüstrisi tesislerinde"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Suç Eşyası Yönetmeliği m.11",
+   "aciklama": "Suç Eşyası Yönetmeliği, m.11: “n ve nereden, ne suretle elkonulmuş olduğu tespit edildikten sonra, mahkemece haklarında bir karar verilinceye kadar Cumhuriyet başsavcılığının yazılı emri ile mahallî jandarma birlik komutanlıklarına ait mahfuz bina ve depolarda muhafaza altına alınırlar.”",
+   "id": "P-ASB-JAN-03-75"
+  },
+  {
+   "lawId": 58,
+   "soru": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği'ne göre nezarethanede bir arada en fazla kaç kişi bulundurulabilir?",
+   "siklar": [
+    "3",
+    "7",
+    "12",
+    "5",
+    "10"
+   ],
+   "dogru": 3,
+   "tip": "duz",
+   "kaynak": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği m.11",
+   "aciklama": "Yakalama, Gözaltına Alma ve İfade Alma Yönetmeliği, m.11: “b) Nezarethanede zarurî hâller dışında beşten fazla kişi bir arada bulundurulmaz.”",
+   "id": "P-ASB-JAN-03-76"
+  },
+  {
+   "lawId": 59,
+   "soru": "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğin Tespiti Hakkında Yönetmelik'e göre üst sınırı kaç yıldan daha az hapis cezasını gerektiren suçlarda kişi üzerinde iç beden muayenesi yapılamaz?",
+   "siklar": [
+    "Beş",
+    "Dört",
+    "İki",
+    "Üç",
+    "Bir"
+   ],
+   "dogru": 2,
+   "tip": "duz",
+   "kaynak": "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik m.4",
+   "aciklama": "Ceza Muhakemesinde Beden Muayenesi, Genetik İncelemeler ve Fizik Kimliğinin Tespiti Hakkında Yönetmelik, m.4: “Üst sınırı iki yıldan daha az hapis cezasını gerektiren suçlarda kişi üzerinde iç beden muayenesi yapılamaz.”",
+   "id": "P-ASB-JAN-03-77"
+  },
+  {
+   "lawId": 60,
+   "soru": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik'e göre iş ve meslek edinmesi amacıyla meslek veya sanat edinme kursuna yönlendirilebilecek çocuk en az kaç yaşını doldurmuş olmalıdır?",
+   "siklar": [
+    "15",
+    "12",
+    "14",
+    "18",
+    "16"
+   ],
+   "dogru": 0,
+   "tip": "duz",
+   "kaynak": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik m.13",
+   "aciklama": "Çocuk Koruma Kanununa Göre Verilen Koruyucu ve Destekleyici Tedbir Kararlarının Uygulanması Hakkında Yönetmelik, m.13: “(6) Onbeş yaşını doldurmuş çocuk hakkında, iş ve meslek edinmesi amacıyla bir meslek veya sanat edinme kursuna gitmesine, meslek sahibi bir ustanın yanına yahut kamu ya da özel sektöre ait işyerlerine yerleştirilmesine yönelik verilen tedbir kararında; Milli Eğitim Bakanlığınca yerine getirilmesinin hükme bağlandığı hâllerde bu Bakanlığın koordinasyonunda meslekî eğitim merkezleri, Çalışma ve Sosyal Güvenlik Bakanlığınca yerine getirilmesinin hükme bağlandığı hâllerde ise Türkiye İş Kurumu Genel Müdürlüğünce geliştirilen işgücünün istihdam edilebilirliğini artırmaya yönelik işgücü yetiştirme, meslekî eğitim ve işgücü uyum programlarına yönlendirilmek suretiyle yerine getirilir. Bu eğitim programlarına erişimde güçlük yaşanıyorsa, tedbir kararı verilen çocuğun Türkiye İş Kurumuna Genel Müdürlüğüne müracaatı sonrasında vasıflarına uygun işçi arayan özel işyerleri ile bağlantısı sağlanır. Kamuda işe yerleştirme ise, kamuda işe alınacaklarla ilgili kanun hükümleri çerçevesinde yerine getirilir. (7) Hiç eğitim almamış veya zorunlu eğitimini yarıda bırakmış, zorunlu eğitim yaşını tamamlamış olup haklarında koruyucu ve destekleyici tedbir kararı verilen çocukların; eğitimlerini sürdürebilmeleri, kapasitelerini geliştirebilmeleri, iş ve meslek edinebilmeleri amacıyla Millî Eğitim Bakanlığı ile Çalışma ve Sosyal Güvenlik Bakanlığı ve Türkiye İş Kurumu Genel Müdürlüğünce gerekli önlemler alınır. (8) Eğitim tedbiri, Millî Eğitim Bakanlığı ile Çalışma ve Sosyal Güvenlik Bakanlığının ilgili birimleri tarafından yerine getirilir.”",
+   "id": "P-ASB-JAN-03-78"
+  },
+  {
+   "lawId": 61,
+   "soru": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik'e göre aşağıdakilerden hangisi yanlıştır?",
+   "siklar": [
+    "Mağdur çocuk soruşturma evresinde bir defa dinlenir.",
+    "Suça sürüklenen çocuk hakkındaki soruşturma çocuk bürosu savcısı tarafından yapılır.",
+    "Mağdur çocuğa yemin verdirilmez.",
+    "Suça sürüklenen çocuğun ifadesi kolluk tarafından alınır.",
+    "Çocukla ilgili kolluk görevi kolluğun çocuk birimince yapılır."
+   ],
+   "dogru": 3,
+   "tip": "olumsuz",
+   "kaynak": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik m.5",
+   "aciklama": "Çocuk Koruma Kanununun Uygulanmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik, m.5: “Soruşturma MADDE 5 – (1) Suça sürüklenen çocuk hakkındaki soruşturma, çocuk bürosunda görevli Cumhuriyet savcısı tarafından bizzat yapılır.”",
+   "id": "P-ASB-JAN-03-79"
+  },
+  {
+   "lawId": 62,
+   "soru": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik'e göre umuma açık istirahat ve eğlence yerleri için ruhsat başvurusu kolluğa gönderildiğinde kolluk görüşünü kaç gün içinde bildirir?",
+   "siklar": [
+    "10",
+    "7",
+    "30",
+    "15",
+    "3"
+   ],
+   "dogru": 1,
+   "tip": "duz",
+   "kaynak": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik m.32",
+   "aciklama": "İşyeri Açma ve Çalışma Ruhsatlarına İlişkin Yönetmelik, m.32: “runması açısından kolaylıkla kontrol edilebilecek bir yerde ve konumda olup olmadığını dikkate alarak, işyeri hakkındaki görüşünü mülki idare amiri vasıtasıyla yedi gün içinde bildirir.”",
+   "id": "P-ASB-JAN-03-80"
+  }
+ ]
+}
