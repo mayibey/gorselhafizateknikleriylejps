@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 27 Eyl — EKRAN ÖLÇEĞİ: tablet doldurur, küçük telefon sığar (commit b6b9622, OTA BEKLİYOR — "yay" yok)
+> Başkan: "her şeyi sığdıracak şekilde yap, konu sadece iPad değil Android'de de". `src/lib/ekran-olcek.ts`
+> (393×852 referans; tablet 1–1.6×, küçük telefon 0.82–1×, normal 1) + `src/lib/olcek-yama.ts` (StyleSheet.create
+> ölçüleri + MaterialCommunityIcons/FontAwesome `size` tek yerden ölçeklenir; borderWidth hariç). Giriş `index.ts`
+> (package.json main) yamayı expo-router'dan ÖNCE yükler. AppText fontSize o(); sekme çubuğu tablette yazı altta,
+> kompakt yükseklik o(52). Web'de iPad/SE/393 çekildi: iPad dolu, SE sığıyor, normal aynı. SIRADA: başkan "yay" →
+> OTA (1.0.46 + 1.0.47 runtime), sonra iPad mağaza görüntüleri yeniden çekilip asc-1047-hazirla.mjs ile değiştirilecek.
+>
 > ### ▶ 16 Eyl (gece 2) — SINAV/DENEME: CEVAPTAN SONRA DAYANAK KÜNYESİ (commit 82aafb1, 10 sürüme OTA)
 > **Öneri (Ünal Kutlu, Telegram):** "yanlış yapınca hangi maddeye ait olduğunu göremiyorum, sınav
 > sonuna kadar bekliyorum." 23 Ağu'da başkan künyeyi soru sorulurken KALDIRTMIŞTI (cevabı ele
