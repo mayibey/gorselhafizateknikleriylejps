@@ -228,6 +228,7 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
     return [...out.filter((o) => cozulen.has(`${o.takim}-${o.denemeNo}`)), ...out.filter((o) => !cozulen.has(`${o.takim}-${o.denemeNo}`))];
   }, [brans, rutbe, sonuclar]);
   const [secili, setSecili] = useState(0);
+  const [acik, setAcik] = useState(false);
   const [satirlar, setSatirlar] = useState<SiraSatiri[] | null>(null);
   const [benim, setBenim] = useState<{ sira: number; toplam_kisi: number; puan: number } | null>(null);
   const hedef = secenekler[Math.min(secili, secenekler.length - 1)];
@@ -246,21 +247,44 @@ function Siralama({ gece, sonuclar }: { gece: boolean; sonuclar: DenemeSonuc[] }
 
   return (
     <>
-      <View style={st.denemeSecici}>
-        {secenekler.map((s, i) => (
-          <Pressable
-            key={`${s.takim}-${s.denemeNo}`}
-            onPress={() => setSecili(i)}
-            style={[st.denemeHap, gece && st.denemeHapGece, i === secili && (gece ? st.segAktifGece : st.segAktif)]}>
-            <AppText
-              variant="etiket"
-              bold
-              color={i === secili ? (gece ? 'altinParlak' : 'beyaz') : gece ? 'beyaz' : 'anaMetin'}>
-              {s.etiket}
-            </AppText>
-          </Pressable>
-        ))}
-      </View>
+      {/* AÇILIR SEÇİM (başkan, 27 Eyl 2026): 18 hap yan yana ekranı dolduruyordu → tek kutu, dokununca liste. */}
+      <Pressable
+        onPress={() => setAcik((a) => !a)}
+        style={[st.acilirKutu, gece && st.kartGece]}
+        accessibilityRole="button"
+        accessibilityLabel="Deneme seç">
+        <AppText variant="govde" bold color={gece ? 'beyaz' : 'anaMetin'} style={st.acilirYazi}>
+          {hedef?.etiket ?? 'Deneme seç'}
+        </AppText>
+        <MaterialCommunityIcons
+          name={acik ? 'chevron-up' : 'chevron-down'}
+          size={24}
+          color={gece ? Palette.altinParlak : Palette.lacivert}
+        />
+      </Pressable>
+      {acik ? (
+        <View style={[st.acilirListe, gece && st.kartGece]}>
+          {secenekler.map((s, i) => (
+            <Pressable
+              key={`${s.takim}-${s.denemeNo}`}
+              onPress={() => {
+                setSecili(i);
+                setAcik(false);
+              }}
+              style={({ pressed }) => [st.acilirSatir, i === secili && st.acilirSatirSecili, pressed && { opacity: 0.6 }]}>
+              <AppText
+                variant="kucuk"
+                bold={i === secili}
+                color={i === secili ? (gece ? 'altinParlak' : 'lacivert') : gece ? 'beyaz' : 'anaMetin'}>
+                {s.etiket}
+              </AppText>
+              {i === secili ? (
+                <MaterialCommunityIcons name="check" size={18} color={gece ? Palette.altinParlak : Palette.lacivert} />
+              ) : null}
+            </Pressable>
+          ))}
+        </View>
+      ) : null}
 
       {benim ? (
         <View style={[st.benimKutu, gece && st.kartGece]}>
@@ -367,6 +391,32 @@ const st = StyleSheet.create({
   yanlisGece: { backgroundColor: 'rgba(3,32,46,0.6)' },
 
   denemeSecici: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.one },
+  acilirKutu: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  acilirYazi: { flex: 1 },
+  acilirListe: {
+    backgroundColor: Palette.kartKremi,
+    borderColor: Palette.kenarlik,
+    borderWidth: 1,
+    borderRadius: Radius.m,
+    paddingVertical: Spacing.one,
+  },
+  acilirSatir: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: Spacing.three,
+    paddingVertical: Spacing.two,
+  },
+  acilirSatirSecili: { backgroundColor: 'rgba(201,162,39,0.14)' },
   denemeHap: {
     paddingHorizontal: Spacing.two,
     paddingVertical: 6,
