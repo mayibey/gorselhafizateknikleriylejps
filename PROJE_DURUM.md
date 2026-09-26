@@ -2854,3 +2854,8 @@ Test notu: başkan profili MEBS subay → 2'den sonra premium görmez; Sicil'den
   "Contact Us": ödeme/banka konularında YALNIZ e-posta (Contact Finance); telefon yalnız Membership & Account'ta, hafta sonu kapalı.
 - 26 Eyl — Apple için karar: başkan İngilizce bilmiyor → telefon yerine yazılı yol. **28 Eyl Pazartesi:** Finance'e 3. takip +
   Membership & Account e-posta formundan yükseltme talebi; Türkçeleri başkana gösterilip onayla gönderilecek.
+- 26 Eyl — **DENEMELER PLANI 0-4 YAPILDI (on-izleme)**, commit 1148613, OTA 1.0.46: sekme sırası Karma·Müşterek·Branş (açılış Karma);
+  branşa göre karma (`scripts/karma-brans-uret.mjs --yaz` → `genel-denemeler-karma-brans.ts`, 16 anahtar/76 deneme, yalnız kimlik,
+  müşterek blok sınav ağırlıklı, 40+40 / MEBS 50+30, 'jandarma-uzm' ayrı); premium yalnız Karma'da ve KATI branş+rütbe süzgeci;
+  uzm rütbede müşterek denemelerdeki 5 soru (4678/Sözleşmeli) yedekle değişir. Eski karma (genel-denemeler-karma.ts) bayrak kapalıyken
+  aynen duruyor. Kalan: madde 5 (yeni premium denemeler). Başkan MEBS sb → premium görmek için Sicil'den branş değiştirmeli.
