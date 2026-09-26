@@ -2,7 +2,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Alert, Image, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle, Defs, LinearGradient as SvgGradient, Path, Stop } from 'react-native-svg';
 
 import { DuyuruIkonu } from '@/components/duyuru/duyuru-ikonu';
@@ -1016,14 +1016,12 @@ export default function KarargahScreen() {
             </View>
             <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
               {unutulan.length > 0 ? (
-                <View style={styles.paslanmaSatir}>
-                  <AppText variant="kucuk" bold color="kirmiziParlak" numberOfLines={1}>
-                    {unutulan.length} kanun
-                  </AppText>
-                  <AppText variant="kucuk" bold color="beyaz" numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.85}>
-                    {' paslanmaya başladı'}
-                  </AppText>
-                </View>
+                // TEK YAZI (27 Eyl 2026, iPad/küçük ekran: iki ayrı parça "TEKRAR ET"in altına taşıyordu):
+                // sayı kırmızı iç parça; sığmazsa yazı küçülür, yine sığmazsa "…" ile kısalır.
+                <AppText variant="kucuk" bold color="beyaz" numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.75}>
+                  <Text style={{ color: Palette.kirmiziParlak }}>{unutulan.length} kanun</Text>
+                  {' paslanmaya başladı'}
+                </AppText>
               ) : (
                 <AppText variant="kucuk" bold color="beyaz">
                   Paslanan kanun yok
