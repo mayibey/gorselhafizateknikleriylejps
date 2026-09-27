@@ -1,4 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { SINAV_TARIHI } from '@/constants/sinav-tarihi';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -62,11 +63,7 @@ const TCK_LAW_ID = Number(
 // Düello kanun id → kısa ad (zayıf-kanun / Geri Besleme kartı).
 const KANUN_AD = new Map(DUELLO_KANUNLAR.map((k) => [k.id, k.ad] as const));
 
-// ⏳ JSPS SINAV TARİHİ — Karargah en üstteki geri sayım buna göre işler.
-// BAŞKAN: Tarih/saat değişirse SADECE bu satırları değiştir.
-// new Date(yıl, AY-1, gün, saat, dakika) — AY 0-tabanlı (8 = Eylül, 7 = Ağustos).
-const SINAV_TARIHI = new Date(2026, 9, 10, 10, 0, 0); // 10 Ekim 2026 Cumartesi, 10:00 (RESMÎ)
-// 19 Eylül 2026 sınavı İPTAL edildi; yerine 10 Ekim'de yapılacak (22 Eyl 2026 duyuruldu).
+// ⏳ JSPS SINAV TARİHİ — tek kaynak src/constants/sinav-tarihi.ts (tarih değişirse ORADA değiştir).
 // Ekranda geçen tarih yazısı ARTIK ELLE YAZILMIYOR — SINAV_TARIHI'nden türetilir. Eskiden
 // "19 Eylül'e … gün" koda gömülüydü; tarih değişince sayaç 10 Ekim'i sayarken yazı hâlâ
 // 19 Eylül diyordu. Tek kaynak: SINAV_TARIHI.

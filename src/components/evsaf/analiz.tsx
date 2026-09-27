@@ -28,9 +28,8 @@ import type { LawWithCount, SinavSonuc } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { type GecmisMac, gecmisOzet, macGecmisi } from '@/lib/er-meydani';
 import { bugunISO } from '@/lib/srs';
+import { SINAV_TARIHI } from '@/constants/sinav-tarihi';
 
-/** Resmî JSPS sınav tarihi (Karargah geri sayımıyla aynı). */
-const SINAV_TARIHI = new Date(2026, 8, 19, 14, 0, 0);
 
 const gunMs = 86400000;
 
