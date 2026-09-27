@@ -4,6 +4,11 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 27 Eyl — SINAV PROJEKSİYONU "1 gün kaldı" hatası (OTA 1.0.47 9567017a + 1.0.46 6a933b48)
+> Kullanıcı bildirdi (destek + geri bildirim): Evsaf "Sınav Projeksiyonu" 19 Eylül'ün eski kopyasını
+> kullanıyordu (analiz.tsx) → tarih geçince max(1,…) ile "1 gün kaldı, hepsini bugün çalış". Tarih artık tek
+> kaynakta: `src/constants/sinav-tarihi.ts` (Karargâh + projeksiyon). Kullanıcıya teşekkür + push gönderildi.
+>
 > ### ▶ 27 Eyl — EKRAN ÖLÇEĞİ: tablet doldurur, küçük telefon sığar (commit b6b9622 + mevzuat no kutusu; OTA YAYINDA 1.0.47+1.0.46 — başkan "yay")
 > Başkan: "her şeyi sığdıracak şekilde yap, konu sadece iPad değil Android'de de". `src/lib/ekran-olcek.ts`
 > (393×852 referans; tablet 1–1.6×, küçük telefon 0.82–1×, normal 1) + `src/lib/olcek-yama.ts` (StyleSheet.create
