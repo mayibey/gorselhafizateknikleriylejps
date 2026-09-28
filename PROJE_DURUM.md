@@ -4,6 +4,11 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 28 Eyl — Kitap okuyucu iPad kalem/parmak ayrımı (commit f41b2f8; OTA 1.0.47 13cd32b2 + 1.0.46 dd46baaf)
+> iPad 1.0.47 (gerçek iPad uygulaması) çıkınca parmak da çizmeye başladı: kalemMi() 'direct' dokunuşta da sonPen'e
+> bakıyordu, iPad'de touchstart pointerdown'dan önce gelince sonPen önceki kalemden true kalıyordu. Artık iOS
+> touchType esas; sonPen yalnız Android. Çizgi başlatan dokunuş identifier ile izleniyor (avuç zıplatmasın).
+>
 > ### ▶ 27 Eyl — SINAV PROJEKSİYONU "1 gün kaldı" hatası (OTA 1.0.47 9567017a + 1.0.46 6a933b48)
 > Kullanıcı bildirdi (destek + geri bildirim): Evsaf "Sınav Projeksiyonu" 19 Eylül'ün eski kopyasını
 > kullanıyordu (analiz.tsx) → tarih geçince max(1,…) ile "1 gün kaldı, hepsini bugün çalış". Tarih artık tek
