@@ -35,9 +35,12 @@ window.tamEkran = function(a){ document.body.classList.toggle('tam', !!a); };
 var kalemVar=false, sonPen=false, sonDokunma=0;
 function kalemGoruldu(){ if(!kalemVar){ kalemVar=true; document.body.classList.add('kalemli'); } }
 function kalemMi(e){
-  var t=e.touches&&e.touches[0];
-  if(t && t.touchType==='stylus'){ kalemGoruldu(); return true; } // iOS
-  return sonPen; // Android: touchstart'tan hemen önceki pointerdown'ın türü
+  var t=(e.changedTouches&&e.changedTouches[0])||(e.touches&&e.touches[0]);
+  // iOS dokunuşun türünü kendisi söyler ('stylus' / 'direct') → ona güven. 28 Eyl düzeltmesi: eskiden 'direct'
+  // gelince de sonPen'e bakılıyordu; iPad uygulamasında touchstart pointerdown'dan ÖNCE gelince sonPen
+  // bir önceki kalem dokunuşundan kalma true kalıyor, parmak da çiziyordu (iPad 1.0.47, Mehmet Ali).
+  if(t && t.touchType){ if(t.touchType==='stylus'){ kalemGoruldu(); return true; } return false; }
+  return sonPen; // Android: touchType yok → touchstart'tan hemen önceki pointerdown'ın türü
 }
 window.parcaEkle = function(s){ parcalar.push(s); };
 window.baslat = function(b64, kayitli, yol, baslangic){
@@ -194,25 +197,29 @@ function yeniYazi(wrap, n, x, y){
 
 // Bir sayfada çizim (parmakla) / yazı ekleme + kaydetme.
 function cizimKur(oc, n, wrap){
-  var ctx=oc.getContext('2d'), ciziyor=false, nokta=[];
+  var ctx=oc.getContext('2d'), ciziyor=false, nokta=[], izId=null;
   if(!notlar[n]) notlar[n]=[];
-  function xy(e){ var r=oc.getBoundingClientRect(); var t=e.touches?e.touches[0]:e;
+  // Çizgiyi başlatan dokunuşu izle: avuç ekrana yaslanınca touches[0] avuç olup çizgi zıplamasın.
+  function izBul(e){ var l=[].concat([].slice.call(e.changedTouches||[]),[].slice.call(e.touches||[]));
+    for(var i=0;i<l.length;i++) if(l[i].identifier===izId) return l[i]; return null; }
+  function xy(e){ var r=oc.getBoundingClientRect(); var t=e.touches?(izBul(e)||e.touches[0]||e.changedTouches[0]):e;
     return [(t.clientX-r.left)/r.width, (t.clientY-r.top)/r.height]; }
   function bas(e){
     if(arac==='pan') return;
     if(e.touches){ sonDokunma=Date.now(); if(kalemVar && !kalemMi(e)) return; } // parmak → kaydırma
     else if(Date.now()-sonDokunma<800) return; // dokunmanın ardından gelen sahte fare olayı
     if(arac==='yazi'){ var pt=xy(e); yeniYazi(wrap, n, pt[0], pt[1]); return; } // boş yere dokun → yeni yazı
+    izId=e.changedTouches&&e.changedTouches[0]?e.changedTouches[0].identifier:null;
     e.preventDefault(); ciziyor=true; nokta=[xy(e)];
   }
-  function hareket(e){ if(!ciziyor) return; e.preventDefault(); nokta.push(xy(e));
+  function hareket(e){ if(!ciziyor) return; if(e.touches&&izId!=null&&!izBul(e)) return; e.preventDefault(); nokta.push(xy(e));
     ctx.globalCompositeOperation=arac==='silgi'?'destination-out':'source-over';
     ctx.globalAlpha=arac==='fosfor'?0.35:1; ctx.strokeStyle=renk;
     ctx.lineWidth=(boyut[arac]||3)*kalinlikOran(oc); ctx.lineCap='round'; ctx.lineJoin='round';
     var a=nokta[nokta.length-2], b=nokta[nokta.length-1]; ctx.beginPath();
     ctx.moveTo(a[0]*oc.width,a[1]*oc.height); ctx.lineTo(b[0]*oc.width,b[1]*oc.height); ctx.stroke();
     ctx.globalAlpha=1; }
-  function birak(){ if(!ciziyor) return; ciziyor=false; if(nokta.length>1){ notlar[n].push({t:arac,c:renk,w:boyut[arac],p:nokta}); kaydet(n); } }
+  function birak(e){ if(!ciziyor) return; if(e&&e.changedTouches&&izId!=null&&!izBul(e)) return; izId=null; ciziyor=false; if(nokta.length>1){ notlar[n].push({t:arac,c:renk,w:boyut[arac],p:nokta}); kaydet(n); } }
   oc.addEventListener('touchstart',bas,{passive:false}); oc.addEventListener('touchmove',hareket,{passive:false}); oc.addEventListener('touchend',birak);
   oc.addEventListener('mousedown',bas); oc.addEventListener('mousemove',hareket); oc.addEventListener('mouseup',birak);
 }
