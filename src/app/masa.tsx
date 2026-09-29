@@ -15,6 +15,7 @@ import type { CardWithLaw } from '@/db/schema';
 import { useBrans } from '@/lib/brans-context';
 import { imzaliUrller } from '@/lib/imzali-url';
 import { supabase } from '@/lib/supabase';
+import { useUyelik } from '@/lib/uyelik-context';
 
 /**
  * HAREKÂT MERKEZİ (eski adı Harekât Masası; başkan, 29 Eyl 2026: "bunu uygulamaya ekle, sadece ben göreyim").
@@ -59,6 +60,12 @@ async function kullaniciId(): Promise<string | null> {
 export default function MasaEkrani() {
   const router = useRouter();
   const { brans, yukleniyor: bransYukleniyor } = useBrans();
+  // PREMİUM KAPISI (30 Eyl, herkese açılırken): sayfa imzalı URL ile premium içerikten gelir (sunucu 402 döner);
+  // Altın Özet gibi "premiumlara özel". Üye değilse ekranı hiç kurmadan paywall'a.
+  const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
+  useEffect(() => {
+    if (!uyelikYukleniyor && !premium) router.replace('/paywall');
+  }, [premium, uyelikYukleniyor, router]);
   const web = useRef<WebView>(null);
   const [html, setHtml] = useState<string | null>(null);
   const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
