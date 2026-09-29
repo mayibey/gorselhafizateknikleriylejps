@@ -32,6 +32,8 @@ BRANSLAR = {
             'Kamulaştırma · 3091 · 4734 · 4735 · 4925 · 5018 · 5668 Besleme · Gıda Hijyeni · Hekimlik Etiği · Tayın Bedeli · Beslenme Bedelleri · Besleme Uyg. · Yapım Muayene-Kabul · Hazine Taşınmazları · Taşınmaz Kaydı · Kamu Konutları · Kamu Zararları · Mal Muayene-Kabul · Ön Ödeme · Karayolu Taşıma Yön. · Mal Alımı İhale · Yapım İhale · Harcama Belgeleri · Taşınır Mal · Şehitlik'),
   'bakim': ('ozet_B_bakim', 'Bakim', 'Bakım Branş Mevzuatı',
             'İkmal ile ortak 25 mevzuat (Kamulaştırma · 4734 · 4735 · 5018 · Besleme · Hazine Taşınmazları · Harcama Belgeleri · Taşınır Mal · Şehitlik …) + Ses ve Gaz Fişeği Atabilen Silahlar Yön.'),
+  'maliye': ('ozet_M_maliye', 'Maliye', 'Maliye Branş Mevzuatı',
+             'Tayın Bedeli · Nakdi Tazminat · Harçlıklar · 2629 · 2803 Mali · İhtiyaç Fazlası · Uzman Erbaş · Uzman Jandarma · 4678 · Damga Vergisi · 5018 · 5510 · Besleme · Sayıştay · 6191 · Harcırah · 926 Mali · Bütçe Cetvelleri · Fazla Ödemeler · İç Kontrol · Kantin · Kamu Zararları · Harcama Belgeleri · Ön Ödeme'),
   'istihkam': ('ozet_IS_istihkam', 'Istihkam', 'İstihkam Branş Mevzuatı',
                'Askeri Yasak Bölgeler · Kamulaştırma · 3091 · İmar · Kadastro · İskân · 4734 · 4735 · 4925 · 5018 · Hekimlik Etiği · Yapım Muayene-Kabul · Hazine Taşınmazları · Taşınmaz Kaydı · Kamu Konutları · Kamu Zararları · Mal Muayene-Kabul · Ön Ödeme · Karayolu Taşıma Yön. · Mal Alımı İhale · Yapım İhale · Harcama Belgeleri · Taşınır Mal · Şehitlik'),
 }

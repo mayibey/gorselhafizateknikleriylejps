@@ -142,7 +142,7 @@ for r in kitaplar:
             if izin_etiket:
                 if mno not in izin_etiket: continue
             elif izin_no and n is not None and n not in izin_no and 'ek' not in mno.lower(): continue
-            maddeler.append({'anahtar': k, 'no': mno, 'metin': v[:9000]})
+            maddeler.append({'anahtar': k, 'no': mno, 'metin': v[:60000]})
     cs = cikmis_bul(baslik, onek); bs = banka_bul(baslik, onek)
     paket = {
         'brans': brans, 'law_id': lid, 'ad': baslik, 'sira': r['sira'],
