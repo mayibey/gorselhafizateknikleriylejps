@@ -106,6 +106,12 @@ body.sinavda .toast{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 @media (max-width:480px){.ozet{grid-template-columns:1fr}.buyuk{font-size:34px}}
 </style>
 """
+# gerçek Mevzu logosu (şeffaf), 200px'e küçültülmüş
+import base64, io
+from PIL import Image
+_im = Image.open('C:/Users/GIGABYTE/OneDrive/Desktop/ARŞİV/4 Reklam ve Tanıtım/MEVZU_LOGO_SEFFAF.png').convert('RGBA')
+_im.thumbnail((240, 240)); _b = io.BytesIO(); _im.save(_b, 'PNG', optimize=True)
+LOGO = 'data:image/png;base64,' + base64.b64encode(_b.getvalue()).decode()
 ISKELET = f"""<title>Harekât Merkezi</title>
 <meta name="description" content="JSPS sınavı için eksik taraması: Röntgen veya Check-up, eksik haritası, Nokta Atışı kartları.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,6 +119,9 @@ ISKELET = f"""<title>Harekât Merkezi</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
 {stil}
 {EK_CSS}
+<style>
+{open(os.path.join(KOK, 'stil4.css'), encoding='utf-8').read()}
+</style>
 {gece}
 <div class="kap">
     <main id="ekran"></main>
@@ -121,7 +130,7 @@ ISKELET = f"""<title>Harekât Merkezi</title>
 <div class="toast" id="toast" role="status"></div>
 <script type="application/json" id="veri">__VERI__</script>
 <script>
-{open(os.path.join(KOK, 'masa3.js'), encoding='utf-8').read()}
+{open(os.path.join(KOK, 'masa4.js'), encoding='utf-8').read().replace('__LOGO__', LOGO)}
 </script>
 """
 open(os.path.join(KOK, 'sablon2.html'), 'w', encoding='utf-8').write(ISKELET)
