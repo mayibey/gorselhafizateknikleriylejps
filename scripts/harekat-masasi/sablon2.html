@@ -609,7 +609,7 @@ function giris(){
     <div class="gGun">${IK.kum}<b>${g} gün</b></div>
     <p class="gSlogan">Eksiğini bul.<br>Nokta atışıyla kapat.</p>
   </section>
-  <button class="secim" id="bRontgen"><span class="secimIk">${IK.buyutec}</span><span class="secimMetin"><b>Röntgen Çek</b><small>Kanun bazında ne kadar hazırsın?</small><em>~${Math.round(rSoru*0.3)} dk · ~${rSoru} soru${gecmis.length?` · ${gecmis.length} sonuç`:''}${yarimR?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>
+  <button class="secim" id="bRontgen"><span class="secimIk">${IK.buyutec}</span><span class="secimMetin"><b>Röntgen Çek</b><small>Hangi kanunda ne kadar hazırsın?</small><em>~${Math.round(rSoru*0.3)} dk · ~${rSoru} soru${gecmis.length?` · ${gecmis.length} sonuç`:''}${yarimR?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>
   <button class="secim" id="bCheckup"><span class="secimIk">${IK.belge}</span><span class="secimMetin"><b>Check-up</b><small>Madde madde detaylı tarama</small><em>${IK.hedef} Müşterek / Branş${ozetler?` · ${ozetler} özet kayıtlı`:''}${yarimC?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>`;
   $('#bRontgen').onclick=rontgenSayfa;$('#bCheckup').onclick=checkupListe;
 }
@@ -621,11 +621,11 @@ function rontgenSayfa(){
   const g=(K.rontgenler||(K.rontgen?[K.rontgen]:[])).slice().reverse();
   const H=R=>hazirlik(new Set(R.ids));
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.buyutec}</div><div class="hzMetin"><span class="hzLbl">Kanun bazında hazırlık</span><b class="hzSayi kucukSayi">~${rSoru}<small> soru · ~${Math.round(rSoru*0.3)} dk</small></b><p>Her kanundan bir soru, çok çıkanlardan iki. Cevaplar sonda; bitince hangi kanunda ne kadar hazır olduğunu görürsün.</p></div></section>
-  ${yarim?`<button class="anaBtn2" id="devamR">Devam et ${IK.ok}<small>${Object.keys(yarim.cevap||{}).length}/${yarim.ids.length} cevaplandı · kaldığın yerden</small></button>`:''}
-  <button class="anaBtn2 ${yarim?'ikincil':''}" id="cek">${g.length||yarim?'Yeniden çek':'Röntgen çek'} ${IK.ok}<small>${yarim?'yarım kalan silinir, sıfırdan başlar':'yeni sorularla, ~'+Math.round(rSoru*0.3)+' dk'}</small></button>
+  <section class="hzKart"><div class="hzIk">${IK.buyutec}</div><div class="hzMetin"><span class="hzLbl">Hızlı tarama</span><b class="hzSayi kucukSayi">~${rSoru}<small> soru · ~${Math.round(rSoru*0.3)} dk</small></b><p>Sınav kapsamındaki her kanundan bir soru sorar, sınavda çok soru çıkan kanunlardan iki. Cevapları sonunda görürsün; hangi kanunda ne kadar hazır olduğun kanun kanun ortaya çıkar.</p></div></section>
+  ${yarim?`<button class="anaBtn2" id="devamR">Devam et ${IK.ok}<small>${Object.keys(yarim.cevap||{}).length}/${yarim.ids.length} soruyu cevapladın, kaldığın yerden sürer</small></button>`:''}
+  <button class="anaBtn2 ${yarim?'ikincil':''}" id="cek">${g.length||yarim?'Yeniden çek':'Röntgen çek'} ${IK.ok}<small>${yarim?'yarım kalan röntgen silinir, baştan başlarsın':'yeni sorularla, yaklaşık '+Math.round(rSoru*0.3)+' dakika'}</small></button>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.grafik}</span>Sonuçlarım</h3>
-  ${g.length?`<section class="liste">${g.map((R,i)=>{const h=H(R);return `<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}</b><small>${R.d}/${R.n} doğru${h!=null?` · hazırlık ${h}/100`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:'<p class="kucukNot">Henüz röntgen çekmedin. İlk röntgen ~12 dakika sürer.</p>'}`;
+  ${g.length?`<section class="liste">${g.map((R,i)=>{const h=H(R);return `<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}</b><small>${R.d}/${R.n} doğru${h!=null?` · hazırlık ${h}/100`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:'<p class="kucukNot">Henüz röntgen çekmedin. İlk röntgen yaklaşık 12 dakika sürer.</p>'}`;
   $('#geri').onclick=giris;$('#cek').onclick=()=>{if(yarim){K.aktif=null;kaydet();}rontgenBaslat();};
   if($('#devamR'))$('#devamR').onclick=aktifDevam;
   document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenSayfa));
@@ -666,7 +666,7 @@ function rontgenSonuc(Rsec,geriHedef){
   const ks=KANUN.map(k=>kanunDurum(k,sadece)).filter(x=>x.n);
   const sira={kritik:0,zayif:1,orta:2,hazir:3};ks.sort((a,b)=>sira[a.durum]-sira[b.durum]||w(b.k.id)-w(a.k.id));
   const H=hazirlik(sadece);
-  const cumle=H>=75?'Genel durumun iyi; birkaç kanunda ince eksik var.':H>=50?'Genel durumun iyi, ancak bazı temel alanlarda eksiğin var.':H>=30?'Birçok kanunda eksik var; en ağır olanlardan başla.':'Temel oturmamış; kritik kanunları check-up ile tek tek kapat.';
+  const cumle=H>=75?'Durumun iyi. Birkaç kanunda küçük eksiklerin var.':H>=50?'Genel durumun iyi, ancak bazı temel alanlarda eksiğin var.':H>=30?'Birçok kanunda eksiğin var. Sınavda en çok soru çıkan kanunlardan başla.':'Temel henüz oturmamış. Kritik kanunları check-up ile tek tek kapat.';
   const tipler=tipIst(sorular).filter(t=>t.id!=='bosluk'&&t.id!=='onculu'||t.n>=2).slice(0,4);
   const ilkEksik=ks.find(x=>x.durum==='kritik'||x.durum==='zayif'||x.durum==='orta');
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen Sonucu</h2><span></span></div>
@@ -694,7 +694,7 @@ function checkupListe(){
     const oran=cu?cu.d/cu.n:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
     return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Check-up</h2><span></span></div>
-  <p class="kucukNot" style="text-align:center">Her kanunun tüm soruları. Yarım bırakırsan kaldığın yerden devam eder.</p>
+  <p class="kucukNot" style="text-align:center">Her kanunun bütün soruları sorulur. Yarım bırakırsan kaldığın yerden devam edersin.</p>
   ${KANUN.some(k=>K.checkup[k.id])?`<button class="anaBtn2 ikincil" id="ozetlerim" style="margin:0 0 12px">Özetlerim · ${KANUN.filter(k=>K.checkup[k.id]).length} kanun ${IK.ok}</button>`:""}
   <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
   <section class="liste">${ks.map(satir).join('')}</section>`;
@@ -729,10 +729,10 @@ function checkupAnaliz(id,geriHedef){
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div></div></section>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler</h3>
-  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="satir"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span>${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n}</span></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı; hepsini doğru yaptın.</p>'}</section>
+  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="satir"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span>${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n}</span></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?</h3>
   <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,oranRenk(1-hata))}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')||'<p class="kucukNot">Tip ayrımı için yeterli soru yok.</p>'}</section>
-  <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>eksik maddelerinin noktaları + tuzaklar · kaydedildi</small></button>
+  <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve tuzakları. Özet kaydedildi.</small></button>
   ${yanlislar.length?`<h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[kid(q.i)]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[kid(q.i)]]}) ${esc(q.s[K.cevap[kid(q.i)]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>`:''}
   <div class="altLinkler"><button id="yeniden">Bu kanunu yeniden check-up yap</button></div>`;
   $('#geri').onclick=()=>geriHedef?geriHedef():checkupListe();$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);
@@ -756,10 +756,10 @@ function ozet(id,geriHedef,sekme){
     ${tipler.length?`<div class="tuzakKutu bilgi"><span class="tuzakIk">${IK.unlem}</span><div><b>Hata yaptığın soru tipi: ${tipler.map(t=>esc((TIPLER.find(x=>x[0]===t)||[])[1]||t)).join(', ')}</b><p>${tipler.map(t=>esc(TIP_TAVSIYE[t]||'')).join(' ')}</p></div></div>`:''}
     ${noktalar.map(kart).join('')}
     ${tuzaklar.map(tuzakKart).join('')}
-    ${!noktalar.length&&!tuzaklar.length?'<p class="kucukNot">Eksik maddelerin için özet notu yok; check-up analizindeki yanlış sorulara bak.</p>':''}
+    ${!noktalar.length&&!tuzaklar.length?'<p class="kucukNot">Bu maddeler için özet notu yok. Yanlış yaptığın sorulara check-up analizinden bakabilirsin.</p>':''}
     ${tipler.includes('sayi')||tipler.includes('sure')?tablo('Sayılar ve süreler',k.sayi):''}
     ${tipler.includes('makam')?tablo('Yetkili makamlar',k.makam):''}
-    ${takviye.length?`<h3 class="bolumBaslik">Bu kanunun çıkmış noktaları</h3>${takviye.map(kart).join('')}`:''}
+    ${takviye.length?`<h3 class="bolumBaslik">Bu kanundan sınavda çıkmış noktalar</h3>${takviye.map(kart).join('')}`:''}
     <div class="kayitBaslik"><b>Kaydedilen özetler (${kayitli.length})</b><button id="tumu">Tümünü gör ›</button></div>
     <section class="liste">${kayitli.slice(0,3).map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik madde çıkmadı'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
   const kayitliHtml=`<section class="liste">${kayitli.map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${tarihYaz(K.checkup[x.id].tarih)} · ${K.checkup[x.id].d}/${K.checkup[x.id].n} · ${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik yok'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
