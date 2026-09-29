@@ -56,7 +56,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 if(K.kp!=='mus'&&K.kp!=='mebs')K.kp='mus';
 const kapsamKanun=()=>KANUN.filter(k=>k.g===K.kp);
 const KP_AD={mus:'Müşterek',mebs:'Branş (MEBS)'};
-const kpSecici=()=>`<div class="ara kpSec" id="kpSec"><button class="anahtar" data-kp="mus" aria-pressed="${K.kp==='mus'}">Müşterek</button><button class="anahtar" data-kp="mebs" aria-pressed="${K.kp==='mebs'}">Branş (MEBS)</button></div>`;
+const kpSecici=()=>`<div class="kpSec" id="kpSec"><button class="anahtar" data-kp="mus" aria-pressed="${K.kp==='mus'}">Müşterek</button><button class="anahtar" data-kp="mebs" aria-pressed="${K.kp==='mebs'}">Branş (MEBS)</button></div>`;
 function kpBagla(yenile){document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.kp=b.dataset.kp;kaydet();yenile();});}
 function kanunDurum(k){
   let d=0,n=0;const kacan=new Set();
@@ -168,27 +168,46 @@ function ana(){
 }
 
 /* ---------- GİRİŞ ---------- */
+const IK={
+ saat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+ belge:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg>',
+ soru:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 015 0c0 1.8-2.5 2-2.5 3.5M12 17h.01"/></svg>',
+ radar:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="9" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor" stroke="none"/><path d="M24 7v6M24 35v6M7 24h6M35 24h6" stroke-linecap="round"/><path d="M24 24l12-9" stroke-linecap="round"/></svg>',
+ tara:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 8h16l8 8v10"/><path d="M28 8v8h8M12 8v32h14"/><path d="M17 20h11M17 26h8"/><circle cx="33" cy="33" r="6"/><path d="M37.5 37.5L42 42"/></svg>',
+ simsek:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
+ cubuk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 19v-4M10 19v-8M15 19v-12M20 19V4"/></svg>',
+ tik:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg>',
+ kitap:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h7a2 2 0 012 2v13a2 2 0 00-2-2H3zM21 5h-7a2 2 0 00-2 2v13a2 2 0 012-2h7z"/></svg>',
+ ok:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+};
 function giris(){
   document.body.classList.remove('sinavda');window.scrollTo({top:0});
   const g=kalanGun(), ks=kapsamKanun();
-  const rSoru=ks.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
+  const rSoru=ks.reduce((a,k)=>a+(w(k.id)>=4?2:1),0), rDk=Math.max(4,Math.round(rSoru*0.3));
   $('#ekran').innerHTML=`
-  <section class="girisBas"><span class="lbl">Sınava</span><b>${g} gün</b><p>Önce durumunu görelim. Çalışmış ya da çalışmamış olman fark etmez: nerede eksiğin var onu bulur, sadece orayı kapatırız.</p></section>
-  <p class="kucukNot" style="text-align:center">Önce hangisi: müşterek mevzuat mı, branş mevzuatı mı?</p>
-  ${kpSecici()}
-  <div class="tarama2">
-    <div class="kart tur"><span class="rozet">~12 dk · ${rSoru} soru</span><h3>Röntgen</h3>
-      <p>Her kanundan bir soru, çok çıkanlardan iki. Yanlış yaptığın kanundan farklı maddelerle iki soru daha sorar, emin olur. Cevaplar sonda.</p>
-      <p class="kucukNot">Sonuç: kanun kanun nerede eksiksin + hangi soru tipinde zayıfsın.</p>
-      <button class="btn ana" id="bRontgen">Röntgeni çek</button></div>
-    <div class="kart tur"><span class="rozet">Bölüm bölüm · ${ks.length} bölüm</span><h3>Check-up</h3>
-      <p>Her kanun ayrı bölüm, 8-12 soru, maddelere dağıtılmış. İstediğin bölümü istediğin zaman; bölüm bitince cevaplar hemen.</p>
-      <p class="kucukNot">Sonuç: madde madde nerede eksiksin.</p>
-      <button class="btn" id="bCheckup">Check-up'a başla</button></div>
-  </div>
-  <div class="altLinkler"><button id="lDaha">Daha fazla: konu notları · soru bankası · prova</button></div>`;
+  <section class="hero">
+    <span class="gunRozet">${IK.saat}<span>SINAVA ${g} GÜN</span></span>
+    <h2 class="heroBas">EKSİĞİNİ BUL.<em>İSTER KANUNDA, İSTER MADDEDE.</em></h2>
+    <p class="heroAlt">Hızlıca tarat ya da madde madde in.<br>Nerede açık verdiğini bulalım.</p>
+  </section>
+  <div class="kpSatir"><span>Kapsam:</span>${kpSecici()}</div>
+  <section class="secKart">
+    <div class="secUst"><div class="secIkon">${IK.radar}</div><div class="secBaslik"><span class="secRozet">${IK.simsek}HIZLI</span><h3>Hızlı Röntgen</h3><div class="secMeta"><span>${IK.saat}~${rDk} dk</span><i></i><span>${IK.belge}~${rSoru} soru</span></div></div></div>
+    <p class="secAc">Kanun bazında analiz çıkarır. Hangi kanunlarda açık verdiğini kısa sürede bulur.</p>
+    <ul class="secListe"><li>${IK.tik}Kanun eksiği</li><li>${IK.tik}Soru tipi zaafı</li><li>${IK.tik}İlk eksik listesi</li></ul>
+    <button class="secBtn" id="bRontgen">RÖNTGENİ BAŞLAT ${IK.ok}</button>
+  </section>
+  <section class="secKart">
+    <div class="secUst"><div class="secIkon">${IK.tara}</div><div class="secBaslik"><span class="secRozet">${IK.cubuk}DERİN TARAMA</span><h3>Detaylı Check-up</h3><div class="secMeta"><span>${IK.belge}${ks.length} bölüm</span><i></i><span>${IK.soru}8–12 soru / bölüm</span></div></div></div>
+    <p class="secAc">Kanun maddesi seviyesinde tarar. Hangi maddelerde açık verdiğini bölüm bölüm gösterir.</p>
+    <ul class="secListe"><li>${IK.tik}Madde madde eksik</li><li>${IK.tik}Bölüm bölüm ilerleme</li><li>${IK.tik}Daha net teşhis</li></ul>
+    <button class="secBtn" id="bCheckup">CHECK-UP'A BAŞLA ${IK.ok}</button>
+  </section>
+  <nav class="altNav"><button id="lNot">${IK.kitap}Konu notları</button><i></i><button id="lBanka">${IK.belge}Soru bankası</button><i></i><button id="lProva">${IK.cubuk}Prova</button></nav>`;
   kpBagla(ana);
-  $('#bRontgen').onclick=()=>rontgenBaslat(false);$('#bCheckup').onclick=checkupListe;$('#lDaha').onclick=dahaFazla;
+  $('#bRontgen').onclick=()=>rontgenBaslat(false);$('#bCheckup').onclick=checkupListe;
+  $('#lNot').onclick=dahaFazla;$('#lBanka').onclick=dahaFazla;
+  $('#lProva').onclick=()=>basla([...karistir(KANUN.filter(k=>k.g==='mus').flatMap(k=>k.q)).slice(0,50),...karistir(KANUN.filter(k=>k.g==='mebs').flatMap(k=>k.q)).slice(0,30)],'Sınav provası',{tani:false,tur:'prova'});
 }
 
 /* ---------- soru seçimi ---------- */
