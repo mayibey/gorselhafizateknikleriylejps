@@ -212,6 +212,8 @@ export default function KarargahScreen() {
   // paywall (teşvik).
   // Şerit KİTAP LİSTESİ ekranını açar (başkan: "direkt kitap açılmasın, kitaplar sıralansın").
   const altinOzetAcik = true;
+  // HAREKÂT MASASI + eksik taraması (29 Eyl 2026): yalnız başkanda (kişisel bayrak), deneme aşaması.
+  const masaAcik = useKisiselOzellik('eksik-tarama');
   // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
   const [tekrarAcik, setTekrarAcik] = useState(false);
   // PASLANAN LİSTE YERİ (başkan, 13 Eyl 2026): liste tıklanan satırın HEMEN ALTINDA açılır,
@@ -1108,6 +1110,28 @@ export default function KarargahScreen() {
             </View>
           </Pressable>
           )}
+          {masaAcik ? (
+            <Pressable
+              onPress={() => { hafifDokun(); router.push('/masa'); }}
+              style={({ pressed }) => [styles.gecePanel, styles.tekrarSatir, styles.blokArasi, pressed && styles.pressed]}
+              accessibilityRole="button"
+              accessibilityLabel="Harekât Masası ve eksik taraması">
+              <View style={styles.emirIkonHalka}>
+                <MaterialCommunityIcons name="radar" size={24} color={Palette.altinParlak} />
+              </View>
+              <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
+                <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
+                  Harekât Masası
+                </AppText>
+              </View>
+              <View style={styles.tekrarEtKose}>
+                <AppText variant="etiket" bold color="altinParlak" style={styles.tekrarBaslik2}>
+                  TARA
+                </AppText>
+                <MaterialCommunityIcons name="arrow-right" size={16} color={Palette.altinParlak} />
+              </View>
+            </Pressable>
+          ) : null}
           <View style={[styles.ikizSatir, styles.blokArasi]}>
             <Pressable
               onPress={() => { hafifDokun(); router.push('/tatbikat'); }}
