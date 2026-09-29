@@ -90,9 +90,12 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
    Her ekran açılışında tarayıcı geçmişine bir kayıt düşer; geri hareketi bir önceki EKRANA döner (uygulamadan çıkmaz). */
 const YIGIN=[];let POP=false;
 function iz(f){ if(POP){POP=false;return;} YIGIN.push(f); try{history.pushState({n:YIGIN.length},'');}catch(e){} derinlikBildir(); }
-window.addEventListener('popstate',()=>{ YIGIN.pop(); const f=YIGIN[YIGIN.length-1]; POP=true; if(f)f(); else {POP=false;YIGIN.length=0;giris();} });
+function ekranaDon(){ const f=YIGIN[YIGIN.length-1]; POP=true; if(f)f(); else {POP=false;giris();} }
+// Kenardan kaydırma / donanım geri → tarayıcı geçmişi: hedef derinlik yığından küçükse o kadar geri git; bayat/ileri kayıt ise yoksay.
+window.addEventListener('popstate',e=>{ const hedef=(e.state&&e.state.n)||0; if(hedef>=YIGIN.length)return; while(YIGIN.length>Math.max(hedef,1))YIGIN.pop(); if(hedef===0){YIGIN.length=0;giris();return;} ekranaDon(); });
 function derinlikBildir(){ try{ if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(JSON.stringify({tip:'derinlik',n:YIGIN.length})); }catch(e){} }
-window.merkezGeri=function(){ if(YIGIN.length>1){history.back();return true;} return false; };
+// Ekran içi "‹" düğmesi: tarayıcı geçmişine GÜVENMEDEN kendi yığınımızdan bir geri (WKWebView'da history.back popstate atmayabiliyor).
+window.merkezGeri=function(){ if(YIGIN.length>1){ YIGIN.pop(); ekranaDon(); try{history.go(-1);}catch(e){} derinlikBildir(); return true; } return false; };
 
 /* ---------- ölçüm ---------- */
 function kanunDurum(k,sadece){
