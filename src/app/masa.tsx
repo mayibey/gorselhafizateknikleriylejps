@@ -196,12 +196,12 @@ export default function MasaEkrani() {
           ) : (
             <View style={styles.yuklemeKutu}>
               <View style={styles.yuklemeHalka}>
-                <MaterialCommunityIcons name="radar" size={34} color="#F8D57A" />
+                <MaterialCommunityIcons name="radar" size={46} color="#F8D57A" />
               </View>
               <AppText variant="baslik" style={styles.yuklemeBaslik}>
                 Harekât Merkezi hazırlanıyor
               </AppText>
-              <AppText variant="kucuk" style={styles.yuklemeSatir}>
+              <AppText variant="govde" bold style={styles.yuklemeSatir}>
                 {HAZIRLIK_SATIRLARI[satir]}
               </AppText>
               <ActivityIndicator color="#F3C24A" style={styles.yuklemeSpinner} />
@@ -223,9 +223,9 @@ const styles = StyleSheet.create({
   yuklemePerde: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(2,18,30,0.55)' },
   yuklemeKutu: { alignItems: 'center', gap: Spacing.two, paddingHorizontal: Spacing.four },
   yuklemeHalka: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
+    width: 92,
+    height: 92,
+    borderRadius: 46,
     borderWidth: 1.5,
     borderColor: 'rgba(243,194,74,0.7)',
     backgroundColor: 'rgba(3,40,60,0.7)',
@@ -233,8 +233,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: Spacing.one,
   },
-  yuklemeBaslik: { color: '#FFFFFF', textAlign: 'center', fontSize: 24 },
-  yuklemeSatir: { color: '#DCEBEF', textAlign: 'center', minHeight: 20 },
+  yuklemeBaslik: { color: '#FFFFFF', textAlign: 'center', fontSize: 30, lineHeight: 36, textShadowColor: 'rgba(0,15,25,0.9)', textShadowRadius: 12 },
+  yuklemeSatir: { color: '#F8D57A', textAlign: 'center', minHeight: 26, fontSize: 18, lineHeight: 24, fontWeight: '700', textShadowColor: 'rgba(0,15,25,0.9)', textShadowRadius: 8 },
   yuklemeSpinner: { marginTop: Spacing.two },
   taramaKusagi: { position: 'absolute', left: 0, right: 0, top: 0, height: 160 },
   taramaIz: { flex: 1 },
