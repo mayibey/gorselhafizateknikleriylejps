@@ -33,7 +33,9 @@ const KILIT = Deno.env.get('KILIT_AKTIF') !== '0';
 // sayfanın kendisi herkese açılmalı, yoksa ücretsiz kullanıcı sunucudaki güncel oyunları hiç
 // alamaz, sessizce uygulamaya gömülü eski sürümde kalırdı. Yeni bir sızıntı da değil: gömülü
 // sürüm zaten aynı içeriği her kullanıcının cihazında taşıyor. (8 Ağu 2026)
-const UCRETSIZ_KLASOR = ['tck', 'brtck', 'oyun']; // her zaman serbest klasörler (istemci UCRETSIZ ile hizalı)
+// 'tarama-ucretsiz': Harekât Merkezi'nin İÇERİKSİZ sürümü (soru metni/özet notu yok, yalnız sayılar) — üye olmayan
+// içeride gezer, soru çözmeye/özete basınca ödeme ekranı (30 Eyl 2026). Tam sürüm 'tarama/' premium kalır.
+const UCRETSIZ_KLASOR = ['tck', 'brtck', 'oyun', 'tarama-ucretsiz']; // her zaman serbest klasörler (istemci UCRETSIZ ile hizalı)
 const ucretsizMi = (yol: string) => UCRETSIZ_KLASOR.includes(yol.split('/')[0]);
 
 Deno.serve(async (req) => {

@@ -71,6 +71,8 @@ function birlestir(b){ if(!b||typeof b!=='object')return;
 try{ if(window.MERKEZ_KAYIT) birlestir(window.MERKEZ_KAYIT); }catch(e){}
 if(K.g!=='mus'&&K.g!==BRANS.slug)K.g='mus'; // başka branşın kaydı / eski 'mebs' değeri
 const RN=()=>window.ReactNativeWebView;
+const PREMIUM=window.MERKEZ_PREMIUM!==false;
+function kilit(){ if(PREMIUM)return false; if(RN())RN().postMessage(JSON.stringify({tip:'paywall'})); else toast('Bu bölüm Tam Erişim üyelerine özel.'); return true; }
 let rnZ=null;
 function rnGonder(){ if(!RN())return; clearTimeout(rnZ); try{RN().postMessage(JSON.stringify({tip:'kaydet',veri:K}));}catch(e){} }
 window.merkezFlush=rnGonder; // uygulama arka plana geçince çağırır
@@ -179,7 +181,7 @@ function maddeyeGoreSec(k,adet,haric){
   return out;
 }
 /* ---------- 2. RÖNTGEN ---------- */
-function rontgenBaslat(){
+function rontgenBaslat(){ if(kilit())return;
   const sorular=[];const haric=new Set(Object.keys(K.tani));
   for(const k of KANUN){const n=w(k.id)>=4?2:1;let s=maddeyeGoreSec(k,n,haric);if(s.length<n)s=s.concat(maddeyeGoreSec({q:k.q.filter(q=>!s.includes(q))},n-s.length));sorular.push(...s);}
   basla(karistir(sorular),'Röntgen',{tani:true,tur:'rontgen'});
@@ -237,7 +239,7 @@ function checkupListe(){
   document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.g=b.dataset.g;kaydet();YIGIN.pop();POP=true;checkupListe();});
   document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>{const id=+b.dataset.id;if(yarim===id){aktifDevam();return;}K.checkup[id]?checkupAnaliz(id,checkupListe):checkupBolum(id);});
 }
-function checkupBolum(id,sadeceKalan){
+function checkupBolum(id,sadeceKalan){ if(kilit())return;
   // DETAYLI: kanunun TÜM soruları (başkan: "check-up dediğin detaylı olur"); maddelere dağıtılmış sıra, yarım kalırsa devam eder.
   // sadeceKalan: eski (8-12 soruluk) check-up'ı tamamlamak için yalnız cevaplanmamış sorular; sonuç öncekiyle birleşir.
   const k=BYID[id];const cu=K.checkup[id];
@@ -289,7 +291,7 @@ function checkupAnaliz(id,geriHedef){
 }
 function kartaGit(kanunId,m){ if(window.ReactNativeWebView){window.ReactNativeWebView.postMessage(JSON.stringify({tip:'kart',kanun:kanunId,madde:String(m)}));} else toast('Konu kartı uygulamada açılır.'); }
 /* ---------- 6. ALTIN ÖZET ---------- */
-function ozet(id,geriHedef,sekme,hedefM){
+function ozet(id,geriHedef,sekme,hedefM){ if(kilit())return;
   iz(()=>ozet(id,geriHedef,sekme));
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const k=BYID[id],cu=K.checkup[id];if(!cu){checkupBolum(id);return;}
@@ -369,7 +371,7 @@ function konuNotu(id){
 /* ---------- SORU MOTORU (cevaplar sonda) ---------- */
 let S=null;
 function aktifKaydet(){if(!S){K.aktif=null;kaydet();return;}K.aktif={ids:S.sorular.map(q=>q.i),ad:S.ad,i:S.i,cevap:S.cevap,meta:S.meta};kaydet();}
-function aktifDevam(){const a=K.aktif;if(!a||!a.ids)return false;const sorular=a.ids.map(id=>TUM[id]).filter(Boolean);if(!sorular.length){K.aktif=null;return false;}
+function aktifDevam(){if(kilit())return false;const a=K.aktif;if(!a||!a.ids)return false;const sorular=a.ids.map(id=>TUM[id]).filter(Boolean);if(!sorular.length){K.aktif=null;return false;}
   S={sorular,ad:a.ad,i:Math.min(a.i||0,sorular.length-1),cevap:a.cevap||{},meta:a.meta||{}};iz(()=>{if(!aktifDevam())giris();});soruCiz();return true;}
 function basla(sorular,ad,meta){if(!sorular.length){toast('Soru bulunamadı.');return;}S={sorular,ad,i:0,cevap:{},meta:meta||{}};iz(()=>{if(!aktifDevam())giris();});soruCiz();}
 function soruCiz(kaydir=true){

@@ -146,4 +146,14 @@ if not SLUG or SLUG == 'mebs':   # başkanın artifact'ı + eski tek dosya (MEBS
     open(os.path.join(C, 'masa-app.html'), 'w', encoding='utf-8').write(doc)
 if SLUG:
     open(os.path.join(C, f'masa-app-{SLUG}.html'), 'w', encoding='utf-8').write(doc)
+# ÜCRETSİZ SÜRÜM (üye olmayan): içerik yok, yalnız iskelet + sayılar → kilit sayfanın içinde (Röntgen çek / Check-up / Özet)
+_v = _json.loads(open(os.path.join(C, veri_ad), encoding='utf-8').read())
+for _k in _v['kanun']:
+    _k['q'] = [{'i': q['i'], 'k': '', 's': [], 'd': 0, 'a': '', 'y': q.get('y', ''), 'z': ''} for q in _k['q']]
+    _k['md'] = ''; _k['n'] = []; _k['tz'] = []; _k['sayi'] = []; _k['makam'] = []
+_v['ek'] = {}
+_uc = _json.dumps(_v, ensure_ascii=False).replace('</', '<\\/')
+_doc_uc = doc.replace(veri, _uc, 1)
+assert len(_doc_uc) < len(doc) // 3, 'ücretsiz sürüm soyulmadı'
+open(os.path.join(C, f'masa-app-{SLUG or "mebs"}-ucretsiz.html'), 'w', encoding='utf-8').write(_doc_uc)
 print('ok', brans['slug'], len(sayfa))

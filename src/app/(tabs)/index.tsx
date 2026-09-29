@@ -1113,7 +1113,7 @@ export default function KarargahScreen() {
           )}
           {masaAcik ? (
             <Pressable
-              onPress={() => { hafifDokun(); router.push(premium ? '/masa' : '/paywall'); }}
+              onPress={() => { hafifDokun(); router.push('/masa'); }}
               style={({ pressed }) => [styles.gecePanel, styles.tekrarSatir, styles.blokArasi, pressed && styles.pressed]}
               accessibilityRole="button"
               accessibilityLabel="Harekât Merkezi ve eksik taraması">

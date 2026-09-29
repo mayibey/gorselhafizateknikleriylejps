@@ -30,9 +30,11 @@ import { useUyelik } from '@/lib/uyelik-context';
  */
 // Sayfa BRANŞA GÖRE (30 Eyl, başkan: "tüm branşları o şekilde yapman lazım"): tarama/masa-<brans>.html
 // (müşterek + o branşın mevzuatı). Branş seçilmemişse eski tek dosya (MEBS).
-const yolBul = (brans: string | null) => (brans ? `tarama/masa-${brans}.html` : 'tarama/masa.html');
+const yolBul = (brans: string | null, premium: boolean) =>
+  `${premium ? 'tarama' : 'tarama-ucretsiz'}/${brans ? `masa-${brans}.html` : 'masa.html'}`;
 const ONBELLEK_KLASOR = FileSystem.documentDirectory ? `${FileSystem.documentDirectory}jsps/` : null;
-const onbellekBul = (brans: string | null) => (ONBELLEK_KLASOR ? `${ONBELLEK_KLASOR}masa-${brans ?? 'mebs'}.html` : null);
+const onbellekBul = (brans: string | null, premium: boolean) =>
+  ONBELLEK_KLASOR ? `${ONBELLEK_KLASOR}masa-${brans ?? 'mebs'}${premium ? '' : '-ucretsiz'}.html` : null;
 const ZEMIN = '#043C54';
 // Yükleme ekranı (başkan, 29 Eyl: "hazırlanıyor falan yazsın, böyle çok yavan"): dağ zemini + sırayla değişen satır.
 const HAZIRLIK_SATIRLARI = [
@@ -60,12 +62,10 @@ async function kullaniciId(): Promise<string | null> {
 export default function MasaEkrani() {
   const router = useRouter();
   const { brans, yukleniyor: bransYukleniyor } = useBrans();
-  // PREMİUM KAPISI (30 Eyl, herkese açılırken): sayfa imzalı URL ile premium içerikten gelir (sunucu 402 döner);
-  // Altın Özet gibi "premiumlara özel". Üye değilse ekranı hiç kurmadan paywall'a.
+  // PREMİUM KAPISI (başkan, 30 Eyl): "kilit soru çözümünden hemen önce; içeride gezebilsin ama Altın Özet'i göremesin."
+  // Üye değilse sayfanın ÜCRETSİZ sürümü yüklenir (tarama-ucretsiz/…: soru metni ve özet notu YOK, yalnız sayılar);
+  // sayfa "Röntgen çek / Check-up / Altın Özet" basılınca {tip:'paywall'} yollar → ödeme ekranı.
   const { premium, yukleniyor: uyelikYukleniyor } = useUyelik();
-  useEffect(() => {
-    if (!uyelikYukleniyor && !premium) router.replace('/paywall');
-  }, [premium, uyelikYukleniyor, router]);
   const web = useRef<WebView>(null);
   const [html, setHtml] = useState<string | null>(null);
   const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
@@ -98,10 +98,11 @@ export default function MasaEkrani() {
   };
 
   useEffect(() => {
-    if (bransYukleniyor) return; // branş bilinmeden hangi sayfa? bekle
+    if (bransYukleniyor || uyelikYukleniyor) return; // branş ve üyelik bilinmeden hangi sayfa? bekle
     let yasiyor = true;
-    const YOL = yolBul(brans);
-    const ONBELLEK = onbellekBul(brans);
+    setHtml(null);
+    const YOL = yolBul(brans, premium);
+    const ONBELLEK = onbellekBul(brans, premium);
     void (async () => {
       // 1) sunucudaki ilerleme (sayfadan ÖNCE hazır olmalı: açılışta gömülür)
       try {
@@ -149,7 +150,7 @@ export default function MasaEkrani() {
       donanim?.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bransYukleniyor]);
+  }, [bransYukleniyor, uyelikYukleniyor, premium]);
 
   // "Karta git" (başkan, 30 Eyl): check-up analizindeki eksik maddeden uygulamadaki konu kartına. Karargâh'taki
   // maddeKartinaGit ile aynı seçim: o kanun + o madde numaralı kartlar, özet/ayırt görseli olmayan önce.
@@ -172,6 +173,7 @@ export default function MasaEkrani() {
       const m = JSON.parse(e.nativeEvent.data) as { tip?: string; veri?: unknown; n?: number; kanun?: number; madde?: string };
       if (m.tip === 'derinlik') { derinlik.current = Number(m.n) || 0; return; }
       if (m.tip === 'kart') { void kartaGit(Number(m.kanun), String(m.madde ?? '')); return; }
+      if (m.tip === 'paywall') { router.push('/paywall'); return; }
       if (m.tip !== 'kaydet' || !m.veri || !uid.current || !supabase) return;
       void supabase
         .from('merkez_ilerleme')
@@ -205,7 +207,7 @@ export default function MasaEkrani() {
           setSupportMultipleWindows={false}
           // Yerel geri hareketi KAPALI (pushState ile birlikte WKWebView ekranı donduruyordu); kenar kaydırmasını sayfa kendi algılar.
           allowsBackForwardNavigationGestures={false}
-          injectedJavaScriptBeforeContentLoaded={`window.MERKEZ_KAYIT = ${kayit}; true;`}
+          injectedJavaScriptBeforeContentLoaded={`window.MERKEZ_KAYIT = ${kayit}; window.MERKEZ_PREMIUM = ${premium ? 'true' : 'false'}; true;`}
           onMessage={mesaj}
         />
       ) : (
