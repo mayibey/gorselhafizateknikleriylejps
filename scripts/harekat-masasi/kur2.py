@@ -32,7 +32,7 @@ button.ek:hover{border-color:var(--vurgu)}
 .altLinkler button{color:var(--soluk);font-weight:600;font-size:13px;text-decoration:underline;text-underline-offset:3px}
 .girisBas{text-align:center;padding:18px 0 8px}.girisBas b{display:block;font-family:var(--baslik);font-size:44px;color:var(--altin2);line-height:1.1}
 .girisBas p{max-width:52ch;margin:10px auto 0;color:var(--metin);text-shadow:0 1px 4px rgba(0,20,30,.9)}
-.kpSec{justify-content:center;margin:12px 0 16px}.kpSec>span{color:var(--soluk);font-size:13px}
+.kpSec{justify-content:center;margin:6px 0 14px;gap:8px}.kpSec .anahtar{font-size:14px;padding:8px 18px}
 .tarama2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:720px){.tarama2{grid-template-columns:1fr}}
 .tur{display:flex;flex-direction:column;gap:6px;padding:18px 20px}.tur h3{font-family:var(--baslik);font-size:22px;margin:4px 0 2px;color:var(--altin2)}.tur p{margin:0;font-size:14px;line-height:1.55}.tur .btn{margin-top:auto;align-self:flex-start}
 .kucukNot{color:var(--soluk)!important;font-size:12.5px!important;margin:0 0 10px}
