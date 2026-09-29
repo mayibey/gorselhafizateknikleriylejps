@@ -59,6 +59,29 @@ button.ek:hover{border-color:var(--vurgu)}
 .secBtn svg{width:22px;height:22px}.secBtn:hover{filter:brightness(1.06)}
 .altNav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:6px;flex-wrap:wrap}
 .altNav button{display:inline-flex;align-items:center;gap:8px;color:#E6EEF1;font-weight:600;font-size:15px;padding:6px 4px;text-shadow:0 1px 4px rgba(0,20,30,.9)}.altNav svg{width:20px;height:20px;color:#E6EEF1}.altNav i{width:1px;height:18px;background:rgba(220,235,239,.35)}
+
+/* GİRİŞ TEK EKRAN (başkan: "tek bakışta sığsın"): üst logo gizli, ölçüler sıkı, viewport'a göre küçülür */
+body.giriste .ust,body.giriste .sifirla{display:none}
+body.giriste .kap{padding-block:10px 12px;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:space-between;max-width:560px}
+body.giriste .hero{padding:0}
+body.giriste .gunRozet{padding:5px 14px;font-size:11.5px}
+body.giriste .heroBas{font-size:clamp(22px,6.4vw,30px);margin:8px 0 4px}
+body.giriste .heroBas em{font-size:.7em;margin-top:2px}
+body.giriste .heroAlt{font-size:13.5px;line-height:1.35;max-width:40ch}
+body.giriste .kpSatir{margin:8px 0 8px;gap:8px}body.giriste .kpSatir>span{font-size:13px}
+body.giriste .kpSec .anahtar{font-size:13px;padding:7px 16px}
+body.giriste .secKart{padding:12px 14px 12px;gap:8px;margin-bottom:10px;border-radius:18px}
+body.giriste .secIkon{width:46px;height:46px;border-radius:12px}body.giriste .secIkon svg{width:30px;height:30px}
+body.giriste .secBaslik{gap:3px}body.giriste .secBaslik h3{font-size:clamp(20px,5.6vw,26px)}
+body.giriste .secRozet{font-size:10px;padding:3px 8px}
+body.giriste .secMeta{font-size:12.5px;gap:8px}
+body.giriste .secAc{font-size:13.5px;line-height:1.4;padding-bottom:8px}
+body.giriste .secListe{display:flex;flex-wrap:wrap;gap:6px 12px}body.giriste .secListe li{font-size:12.5px;gap:6px}
+body.giriste .secListe svg{width:17px;height:17px;padding:3px}
+body.giriste .secBtn{padding:11px 16px;font-size:15.5px;border-radius:12px}body.giriste .secBtn svg{width:18px;height:18px}
+body.giriste .altNav{margin-top:2px;gap:10px}body.giriste .altNav button{font-size:13px;padding:4px 2px}body.giriste .altNav svg{width:17px;height:17px}
+@media (max-height:740px){body.giriste .heroAlt{display:none}body.giriste .secAc{display:none}body.giriste .secKart{gap:7px}}
+@media (max-height:620px){body.giriste .secListe{display:none}body.giriste .heroBas{font-size:20px;margin:6px 0 2px}body.giriste .secKart{padding:10px 12px}}
 @media (max-width:400px){.secMeta{font-size:12.5px}.marka small{letter-spacing:1.4px;font-size:10px}}
 .tarama2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:720px){.tarama2{grid-template-columns:1fr}}
 .tur{display:flex;flex-direction:column;gap:6px;padding:18px 20px}.tur h3{font-family:var(--baslik);font-size:22px;margin:4px 0 2px;color:var(--altin2)}.tur p{margin:0;font-size:14px;line-height:1.55}.tur .btn{margin-top:auto;align-self:flex-start}

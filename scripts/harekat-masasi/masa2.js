@@ -119,7 +119,7 @@ function yeniKartlar(){return tumKartlar().filter(c=>!kartDurum(c.id));}
 
 /* ---------- ANA EKRAN ---------- */
 function ana(){
-  document.body.classList.remove('sinavda');window.scrollTo({top:0});S=null;
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});S=null;
   const g=kalanGun(), E=endeks();
   if(!E.deger){giris();return;}
   const ks=kapsamKanun().map(kanunDurum), eksik=ks.filter(x=>x.n&&x.durum!=='iyi').sort((a,b)=>b.oncelik-a.oncelik);
@@ -181,20 +181,20 @@ const IK={
  ok:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
 };
 function giris(){
-  document.body.classList.remove('sinavda');window.scrollTo({top:0});
+  document.body.classList.remove('sinavda');document.body.classList.add('giriste');window.scrollTo({top:0});
   const g=kalanGun(), ks=kapsamKanun();
   const rSoru=ks.reduce((a,k)=>a+(w(k.id)>=4?2:1),0), rDk=Math.max(4,Math.round(rSoru*0.3));
   $('#ekran').innerHTML=`
   <section class="hero">
     <span class="gunRozet">${IK.saat}<span>SINAVA ${g} GÜN</span></span>
     <h2 class="heroBas">EKSİĞİNİ BUL.<em>İSTER KANUNDA, İSTER MADDEDE.</em></h2>
-    <p class="heroAlt">Hızlıca tarat ya da madde madde in.<br>Nerede açık verdiğini bulalım.</p>
+    <p class="heroAlt">Hızlıca tarat ya da madde madde in. Nerede açık verdiğini bulalım.</p>
   </section>
   <div class="kpSatir"><span>Kapsam:</span>${kpSecici()}</div>
   <section class="secKart">
     <div class="secUst"><div class="secIkon">${IK.radar}</div><div class="secBaslik"><span class="secRozet">${IK.simsek}HIZLI</span><h3>Hızlı Röntgen</h3><div class="secMeta"><span>${IK.saat}~${rDk} dk</span><i></i><span>${IK.belge}~${rSoru} soru</span></div></div></div>
     <p class="secAc">Kanun bazında analiz çıkarır. Hangi kanunlarda açık verdiğini kısa sürede bulur.</p>
-    <ul class="secListe"><li>${IK.tik}Kanun eksiği</li><li>${IK.tik}Soru tipi zaafı</li><li>${IK.tik}İlk eksik listesi</li></ul>
+    <ul class="secListe"><li>${IK.tik}Kanun eksiği</li><li>${IK.tik}Soru tipi zaafı</li><li>${IK.tik}Eksik listesi</li></ul>
     <button class="secBtn" id="bRontgen">RÖNTGENİ BAŞLAT ${IK.ok}</button>
   </section>
   <section class="secKart">
@@ -240,7 +240,7 @@ function rontgenBitir(){
 }
 /* ---------- CHECK-UP (bölüm bölüm, cevaplar bölüm sonunda) ---------- */
 function checkupListe(){
-  document.body.classList.remove('sinavda');window.scrollTo({top:0});
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const ks=kapsamKanun().map(kanunDurum).sort((a,b)=>(b.durum!=='iyi'&&b.n?1:0)-(a.durum!=='iyi'&&a.n?1:0)||b.oncelik-a.oncelik||w(b.k.id)-w(a.k.id));
   const bolumBoyu=k=>Math.max(8,Math.min(12,w(k.id)*2+6));
   $('#ekran').innerHTML=`<button class="geri" id="geri">‹ Geri</button>
@@ -264,7 +264,7 @@ function checkupBitir(){
 /* ---------- KANUNU KAPAT: özet → 10 soru → kaçırılanlar ---------- */
 function kanunKapat(id){ozet(id,false);}
 function ozet(id,sadeceOku){
-  document.body.classList.remove('sinavda');window.scrollTo({top:0});
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const k=BYID[id], kd=kanunDurum(k), kacan=new Set(kd.kacan);
   const yildiz=k.n.filter(n=>n.s), digerKacan=k.n.filter(n=>!n.s&&n.m.some(m=>kacan.has(m)));
   const nokta=n=>`<li class="${n.s?'yildizli':''} ${n.m.some(m=>kacan.has(m))?'kacan':''}">${n.s?'<span class="yld">★</span>':''}${n.m.some(m=>kacan.has(m))?'<span class="etk tz">Yanlış yaptın</span>':''}<b>${esc(n.b)}</b> — ${esc(n.h)}${n.nd?`<div class="nd"><span class="etk nd">Ne demek</span>${esc(n.nd)}</div>`:''}${n.t?`<div class="nd"><span class="etk tz">Tuzak</span>${esc(n.t)}</div>`:''}</li>`;
@@ -294,7 +294,7 @@ function noktaAtisi(kanunId,tipId){
   N={kartlar,i:0,acik:false,sonuc:{},tip:tipId||null,kanun:kanunId||null,bas:Date.now()};kartCiz();
 }
 function kartCiz(){
-  document.body.classList.add('sinavda');window.scrollTo({top:0});
+  document.body.classList.remove('giriste');document.body.classList.add('sinavda');window.scrollTo({top:0});
   const c=N.kartlar[N.i], k=BYID[c.k];
   const on=c.t==='n'?`<span class="kartKanun">${esc(kisaAd(k))}${c.n.m.length?' · m.'+c.n.m.join(', '):''}${c.n.s?' · <span class="yld">★ çıkmış</span>':''}</span><p class="kok">${esc(c.n.b)}</p><p class="ipucu2">Hükmü hatırla: ne diyor, sayı/makam/şart ne?</p>`
     :c.t==='sayi'?`<span class="kartKanun">${esc(kisaAd(k))} · sayı / süre</span><p class="kok">${esc(c.r[0])}</p><p class="ipucu2">Değer ne?</p>`
@@ -347,7 +347,7 @@ function aktifDevam(){const a=K.aktif;if(!a||!a.ids)return false;const sorular=a
   S={sorular,ad:a.ad,i:Math.min(a.i||0,sorular.length-1),cevap:a.cevap||{},meta:a.meta||{}};soruCiz();return true;}
 function basla(sorular,ad,meta){if(!sorular.length){toast('Soru bulunamadı.');return;}S={sorular,ad,i:0,cevap:{},meta:meta||{}};soruCiz();}
 function soruCiz(kaydir=true){
-  aktifKaydet();document.body.classList.add('sinavda');if(kaydir)window.scrollTo({top:0});
+  aktifKaydet();document.body.classList.remove('giriste');document.body.classList.add('sinavda');if(kaydir)window.scrollTo({top:0});
   const q=S.sorular[S.i],k=BYID[q.l],c=S.cevap[S.i],cevapli=c!==undefined,goster=cevapli&&!S.meta.tani;
   $('#ekran').innerHTML=`<div class="sinav"><button class="geri" id="geri">‹ Çık</button>
    <div class="sBas"><span class="say">${S.i+1} / ${S.sorular.length}</span><div class="ilerle"><span style="width:${(S.i+1)/S.sorular.length*100}%"></span></div></div>
@@ -376,7 +376,7 @@ function ileri(){
   K.aktif=null;kaydet();sonucEkrani(()=>{S=null;ana();},'Ana ekran');
 }
 function sonucEkrani(don,donMetin){
-  document.body.classList.remove('sinavda');window.scrollTo({top:0});
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const n=S.sorular.length,dg=S.sorular.filter((q,i)=>S.cevap[i]===q.d).length;const yanlislar=S.sorular.map((q,i)=>[q,i]).filter(([q,i])=>S.cevap[i]!==q.d);
   $('#ekran').innerHTML=`<div class="sinav"><article class="kart sonuc"><span class="cip v">${esc(S.ad)}</span><h2>${dg} / ${n}</h2>
    <p>${yanlislar.length?`Yanlış yaptığın ${yanlislar.length} soru aşağıda; bu maddeler eksik listene düştü.`:'Hepsi doğru. Bu bölümde eksik görünmüyor.'}</p>
@@ -396,7 +396,7 @@ document.addEventListener('keydown',e=>{
 
 /* ---------- DAHA FAZLA: konu notları, soru bankası, prova ---------- */
 function dahaFazla(){
-  document.body.classList.remove('sinavda');window.scrollTo({top:0});
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const ks=kapsamKanun();
   $('#ekran').innerHTML=`<button class="geri" id="geri">‹ Geri</button>
   <div class="mvBas"><div><h2>Daha fazla</h2><div class="kapsam">Konu notları ve soru bankası. Ölçüm değil, serbest çalışma.</div></div>
@@ -407,7 +407,7 @@ function dahaFazla(){
 }
 function mdHazirla(md){return md.replace(/★\s*(çıkmış|20\d\d(?:\/\d+)?)/g,'<span class="yld">★ $1</span>').replace(/(^|\s)★(?!\s*<)/g,'$1<span class="yld">★</span>').replace(/\*Tuzak:\*/g,'<span class="etk tz">Tuzak</span>').replace(/\*\*Ne demek:\*\*/g,'<span class="etk nd">Ne demek</span>').replace(/\*Örnek:\*/g,'<span class="etk or">Örnek</span>');}
 function mevzuat(id){
-  document.body.classList.remove('sinavda');window.scrollTo({top:0});const k=BYID[id];
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});const k=BYID[id];
   $('#ekran').innerHTML=`<button class="geri" id="geri">‹ Geri</button>
   <div class="mvBas"><div><h2>${esc(k.ad)}</h2><div class="kapsam">Sınav kapsamı: ${esc(k.kap||'—')}</div></div><button class="btn ana" id="coz">Soru çöz · ${k.q.length}</button></div>
   <div class="not" id="not"></div>`;
