@@ -4,6 +4,14 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 29 Eyl (gece 2) — ÜYELİK AÇILIŞ HATASI (Fatih Keyvan) + MERKEZ iOS DONMA (OTA iki runtime)
+> Ömür boyu üyeli kullanıcı "tekrar satın almaya yönlendiriyor" dedi. Sunucu temiz (premium_mi true, kilit yok). Sebep: uygulama uzun
+> süre kapalı kalınca oturum anahtarı dolmuş; ilk `uyelik_haklari` isteği 401 → kod 'offline' sayıp açılış değeri premium=false ile
+> paywall'a atıyordu (anahtar 2 sn sonra yenileniyor; auth.refresh_tokens 19:28:05 kaydı = şikâyet anı). Düzeltme `uyelik-context.tsx`:
+> son OK haklar AsyncStorage'da (uid ile), offline'da onunla devam; JWT hatasında refreshSession + tekrar dene.
+> Merkez: history.pushState + WKWebView yerel geri hareketi ekranı donduruyordu → tarayıcı geçmişi kaldırıldı, kendi yığın + JS kenar
+> kaydırma; `allowsBackForwardNavigationGestures={false}`. WebKit (playwright webkit) ile dokunma testi geçti.
+>
 > ### ▶ 29 Eyl (gece) — HAREKÂT MERKEZİ v4 + İLERLEME SUNUCUDA (yalnız başkan bayrağı; OTA iki runtime)
 > Ad "Harekât Merkezi". Akış: iki seçenek → Röntgen sayfası (Devam et / Röntgen çek / Sonuçlarım) → Röntgen (kanun başı 1-2 soru,
 > cevaplar sonda) → Röntgen Sonucu (yalnız o röntgen: Hazırlık, kanun satırları, tip zaafı, "Eksiklerime göre başla") ·
