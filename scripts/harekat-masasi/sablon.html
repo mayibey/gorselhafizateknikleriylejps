@@ -384,7 +384,7 @@ function ana(){
   const adG=GRUP==='mus'?'Müşterek':'MEBS';
   const sonT=(K.taramalar||[]).slice(-1)[0];
   $('#ekran').innerHTML=`
-  <button class="taramaSerit" id="taramaAc"><span class="ik">${IK.analiz}</span><span><b>Eksik taraması</b><small>${sonT?'Reçeten hazır · yeniden tarayabilir ya da planına devam edebilirsin':'Hızlı Check-up ya da Detaylı Röntgen: nerede eksiksin, sınava kadar ne çalışmalısın?'}</small></span><span class="ok">›</span></button>
+  <button class="taramaSerit" id="taramaAc"><span class="ik">${IK.analiz}</span><span><b>Eksik taraması</b><small>${sonT?'Reçeten hazır · yeniden tarayabilir ya da planına devam edebilirsin':'Hızlı Röntgen ya da Detaylı Check-up: nerede eksiksin, sınava kadar ne çalışmalısın?'}</small></span><span class="ok">›</span></button>
   <section class="pano">
     <div class="kart ozetKart">
       <div class="halka">
@@ -594,7 +594,7 @@ function taramaBaslat(tur,kp){
     sorular.push(...maddeyeGoreSec(k,adet));
   }
   if(tur==='check') sorular=karistir(sorular);
-  const ad=tur==='check'?'Hızlı Check-up':'Detaylı Röntgen';
+  const ad=tur==='check'?'Hızlı Röntgen':'Detaylı Check-up';
   basla(sorular,ad,true,0);
   S.tarama={tur,kp,ek:false,bas:Date.now()};aktifKaydet();soruCiz(false);
 }
@@ -625,14 +625,14 @@ function taramaGiris(){
      <button class="anahtar" data-kp="mus" aria-pressed="false">Yalnız Müşterek</button>
      <button class="anahtar" data-kp="mebs" aria-pressed="false">Yalnız MEBS</button></div></div>
    <div class="tarama2">
-    <div class="kart tur"><span class="rozet">≈ 15-20 dk</span><h3>Hızlı Check-up</h3>
+    <div class="kart tur"><span class="rozet">≈ 15-20 dk</span><h3>Hızlı Röntgen</h3>
       <p>Her kanundan 1 soru, sınavda çok soru çıkan kanunlardan 2. Yanlış yaptığın kanuna, dikkatsizlik mi eksik mi anlamak için bir soru daha gelir. Cevaplar sonda gösterilir.</p>
-      <p class="kucukNot" id="nCheck"></p><button class="btn ana" id="bCheck">Check-up'ı başlat</button></div>
-    <div class="kart tur"><span class="rozet">≈ 2-3 saat · ara verebilirsin</span><h3>Detaylı Röntgen</h3>
+      <p class="kucukNot" id="nCheck"></p><button class="btn ana" id="bCheck">Röntgeni çek</button></div>
+    <div class="kart tur"><span class="rozet">≈ 2-3 saat · ara verebilirsin</span><h3>Detaylı Check-up</h3>
       <p>Her kanunun farklı maddelerinden, sınav ağırlığına göre 6-15 soru. Madde madde, soru tipi soru tipi nerede eksik olduğunu çıkarır. Kapatırsan kaldığın yerden devam eder.</p>
-      <p class="kucukNot" id="nRontgen"></p><button class="btn ana" id="bRontgen">Röntgeni başlat</button></div>
+      <p class="kucukNot" id="nRontgen"></p><button class="btn ana" id="bRontgen">Check-up'ı başlat</button></div>
    </div>
-   ${son?`<div class="kart"><h3>Son taraman</h3><p style="margin:0 0 10px;color:var(--soluk)">${son.tur==='check'?'Hızlı Check-up':'Detaylı Röntgen'} · ${new Date(son.tarih).toLocaleDateString('tr-TR',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})}</p><button class="btn" id="sonRecete">Reçeteni aç</button></div>`:''}
+   ${son?`<div class="kart"><h3>Son taraman</h3><p style="margin:0 0 10px;color:var(--soluk)">${son.tur==='check'?'Hızlı Röntgen':'Detaylı Check-up'} · ${new Date(son.tarih).toLocaleDateString('tr-TR',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})}</p><button class="btn" id="sonRecete">Reçeteni aç</button></div>`:''}
   </div>`;
   let kp='hepsi';
   const say=()=>{const ks=kapsamKanun(kp);$('#nCheck').textContent=`${ks.reduce((a,k)=>a+(w(k.id)>=4?2:1),0)} soru + gerekirse birkaç ek`;
@@ -678,7 +678,7 @@ function recete(id){
     }
   }
   if(kalanGun>=2) gunler.push({ad:'Sınavdan 2 gün önce',is:[{t:'prova',m:'Sınav provası: 80 soru (50 müşterek + 30 MEBS), süre tutarak'},{t:'defter',m:'Provadaki yanlışları yanlış defterinden kapat'}]});
-  if(kalanGun>=1) gunler.push({ad:'Sınavdan 1 gün önce',is:[{t:'son',m:'Son tekrar listeleri + her kanunun yalnız ★ satırları. Yeni konuya girme.'},{t:'tekrar',m:`Tekrar taraması: Hızlı Check-up (ilerlemeni gör)`}]});
+  if(kalanGun>=1) gunler.push({ad:'Sınavdan 1 gün önce',is:[{t:'son',m:'Son tekrar listeleri + her kanunun yalnız ★ satırları. Yeni konuya girme.'},{t:'tekrar',m:`Tekrar taraması: Hızlı Röntgen (ilerlemeni gör)`}]});
   const plan=R.plan||{};
   const yz=x=>Math.round(x*100);
   const rozetRenk={hazir:'var(--dogru)',zayif:'var(--altin2)',kritik:'#FF8F86'};
@@ -689,7 +689,7 @@ function recete(id){
     (zayifTip.length?zayifTip.slice(0,2).map(t=>`<p><b>${esc(t.ad)}:</b> bu tipte %${yz(t.oran)} doğru, genel ortalamanın altında.${TIP_PAY[t.tid]?` Çıkmış sınav sorularının yaklaşık %${TIP_PAY[t.tid]}'i bu tipte.`:''} ${esc(t.tav)}</p>`).join(''):'<p>Soru tiplerinde belirgin bir zaafın çıkmadı; eksikler konu bilgisinden geliyor.</p>')+
     `<p style="color:var(--soluk)">Sınava ${kalanGun} gün var. Aşağıdaki plan eksiklerini sınav ağırlığına göre sıraladı; her maddeye dokununca ilgili çalışma açılır.</p>`;
   $('#ekran').innerHTML=`<button class="geri" id="geri">‹ Eksik taraması</button>
-  <div class="mvBas"><div><h2>Sınav reçeten</h2><div class="kapsam">${R.tur==='check'?'Hızlı Check-up':'Detaylı Röntgen'} · ${new Date(R.tarih).toLocaleDateString('tr-TR',{day:'numeric',month:'long'})} · ${R.sure} dk${onceki?' · ▲▼ önceki taramaya göre':''}</div></div>
+  <div class="mvBas"><div><h2>Sınav reçeten</h2><div class="kapsam">${R.tur==='check'?'Hızlı Röntgen':'Detaylı Check-up'} · ${new Date(R.tarih).toLocaleDateString('tr-TR',{day:'numeric',month:'long'})} · ${R.sure} dk${onceki?' · ▲▼ önceki taramaya göre':''}</div></div>
     <button class="btn" id="yenidenTara">Yeniden tara</button></div>
   <div class="rapor">
    <div class="kart"><h3>Teşhis</h3><div class="yorum">${oz}</div></div>
