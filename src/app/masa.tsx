@@ -3,7 +3,7 @@ import * as FileSystem from 'expo-file-system/legacy';
 import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, BackHandler, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, AppState, BackHandler, Image, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
@@ -26,6 +26,14 @@ import { supabase } from '@/lib/supabase';
 const YOL = 'tarama/masa.html';
 const ONBELLEK = FileSystem.documentDirectory ? `${FileSystem.documentDirectory}jsps/masa.html` : null;
 const ZEMIN = '#043C54';
+// Yükleme ekranı (başkan, 29 Eyl: "hazırlanıyor falan yazsın, böyle çok yavan"): dağ zemini + sırayla değişen satır.
+const HAZIRLIK_SATIRLARI = [
+  'Kanunlar sıraya diziliyor…',
+  'Soru bankası açılıyor…',
+  'Röntgen cihazı ısınıyor…',
+  'Altın Özet notları raftan iniyor…',
+  'Eksiklerin yerini tespit edeceğiz…',
+];
 
 async function kullaniciId(): Promise<string | null> {
   if (!supabase) return null;
@@ -47,7 +55,12 @@ export default function MasaEkrani() {
   const [html, setHtml] = useState<string | null>(null);
   const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
   const [hata, setHata] = useState(false);
+  const [satir, setSatir] = useState(0);
   const uid = useRef<string | null>(null);
+  useEffect(() => {
+    const t = setInterval(() => setSatir((i) => (i + 1) % HAZIRLIK_SATIRLARI.length), 1400);
+    return () => clearInterval(t);
+  }, []);
   const derinlik = useRef(0); // sayfanın kendi ekran yığını (giriş=0)
   // Geri: sayfa içinde bir önceki ekran varsa oraya, yoksa Karargâh'a.
   const geri = () => {
@@ -148,12 +161,25 @@ export default function MasaEkrani() {
         />
       ) : (
         <View style={styles.orta}>
+          <Image source={require('../../assets/images/oyun-yukleme.webp')} style={styles.yuklemeArka} resizeMode="cover" />
+          <View style={styles.yuklemePerde} />
           {hata ? (
             <AppText variant="kucuk" style={styles.hata}>
               Merkez yüklenemedi. İnternet bağlantını kontrol edip tekrar dene.
             </AppText>
           ) : (
-            <ActivityIndicator color="#D9B24A" />
+            <View style={styles.yuklemeKutu}>
+              <View style={styles.yuklemeHalka}>
+                <MaterialCommunityIcons name="radar" size={34} color="#F8D57A" />
+              </View>
+              <AppText variant="baslik" style={styles.yuklemeBaslik}>
+                Harekât Merkezi hazırlanıyor
+              </AppText>
+              <AppText variant="kucuk" style={styles.yuklemeSatir}>
+                {HAZIRLIK_SATIRLARI[satir]}
+              </AppText>
+              <ActivityIndicator color="#F3C24A" style={styles.yuklemeSpinner} />
+            </View>
           )}
         </View>
       )}
@@ -168,4 +194,21 @@ const styles = StyleSheet.create({
   web: { flex: 1, backgroundColor: ZEMIN },
   orta: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: Spacing.four },
   hata: { color: '#93A7B6', textAlign: 'center' },
+  yuklemeArka: { ...StyleSheet.absoluteFillObject, width: '100%', height: '100%' },
+  yuklemePerde: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(2,18,30,0.55)' },
+  yuklemeKutu: { alignItems: 'center', gap: Spacing.two, paddingHorizontal: Spacing.four },
+  yuklemeHalka: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    borderWidth: 1.5,
+    borderColor: 'rgba(243,194,74,0.7)',
+    backgroundColor: 'rgba(3,40,60,0.7)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: Spacing.one,
+  },
+  yuklemeBaslik: { color: '#FFFFFF', textAlign: 'center', fontSize: 24 },
+  yuklemeSatir: { color: '#DCEBEF', textAlign: 'center', minHeight: 20 },
+  yuklemeSpinner: { marginTop: Spacing.two },
 });
