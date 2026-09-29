@@ -4,6 +4,13 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 29 Eyl — HAREKÂT MASASI + EKSİK TARAMASI (yalnız başkan; OTA 1.0.47 59d9428f + 1.0.46 21cd2a06)
+> Başkanın kişisel çalışma artifact'ı (müşterek+MEBS konu notu + 1.339 soru) uygulamaya kondu: `/masa` WebView,
+> sayfa sunucudan `icerik/tarama/masa.html` (imzalı URL, premium) → OTA'sız güncellenir. Karargâh satırı
+> `eksik-tarama` kişisel bayrağıyla YALNIZ başkanda. Yeni: Hızlı Check-up (kanun başı 1-2 soru, yanlışa ek soru) /
+> Detaylı Röntgen (madde bazlı 6-15 soru, devam edilebilir) → sınav reçetesi (hazırlık haritası, soru tipi, gün gün plan).
+> Kaynak: scratchpad/calisma (sablon.html + tarama.js + veri.json). Ayrıca: Maliye Altın Özet yüklendi; bot karşılama güncellendi.
+>
 > ### ▶ 28 Eyl — Kitap okuyucu iPad kalem/parmak ayrımı (commit f41b2f8; OTA 1.0.47 13cd32b2 + 1.0.46 dd46baaf)
 > iPad 1.0.47 (gerçek iPad uygulaması) çıkınca parmak da çizmeye başladı: kalemMi() 'direct' dokunuşta da sonPen'e
 > bakıyordu, iPad'de touchstart pointerdown'dan önce gelince sonPen önceki kalemden true kalıyordu. Artık iOS
