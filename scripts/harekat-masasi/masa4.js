@@ -17,6 +17,8 @@ const bugun=()=>new Date().toISOString().slice(0,10);
 const tarihYaz=iso=>new Date(iso+'T12:00:00').toLocaleDateString('tr-TR',{day:'numeric',month:'long'});
 const AGIRLIK={1:7,2:3,3:2,4:1,5:3,6:3,7:3,8:1,9:1,10:1,11:1,12:3,13:1,14:1,15:4,16:1,17:4,18:1,19:1,20:1,21:1,22:3,23:1,24:1,25:1,68:4,97:4,98:3,99:3,100:3,101:3,102:4,142:3,103:3};
 const w=id=>AGIRLIK[id]||1;
+// Soru kimliklerinde '/' ve '.' var (2010/616-S-003); bulut kaydı bu anahtarları yutuyor → temiz anahtar
+const kid=id=>String(id).replace(/[^A-Za-z0-9_-]/g,c=>'_'+c.charCodeAt(0).toString(16)+'_');
 const maddeNo=q=>{const m=(q.y||'').match(/m\.\s*(\d+)/i);return m?m[1]:null;};
 const SURE_RE=/(gün|\bay\b|ayı|yıl|saat|dakika|hafta|süre)/i;
 // Soru tipleri: [id, ad, tanıyıcı]
@@ -55,6 +57,8 @@ const IK={
 const ANAHTAR='harekat-merkezi-v3';
 let K={tani:{},cevap:{},rontgen:null,checkup:{},aktif:null,g:'mus'};
 try{const s=JSON.parse(localStorage.getItem(ANAHTAR)||'null');if(s&&s.tani)K=Object.assign(K,s);}catch(e){}
+function anahtarGoc(o){const y={};for(const [k,v] of Object.entries(o||{}))y[kid(k)]=v;return y;}
+K.tani=anahtarGoc(K.tani);K.cevap=anahtarGoc(K.cevap);
 let bulutRef=null,bulutZ=null;
 function kaydet(){try{localStorage.setItem(ANAHTAR,JSON.stringify(K))}catch(e){} if(bulutRef){clearTimeout(bulutZ);bulutZ=setTimeout(bulutaYaz,1500);}}
 function bulutaYaz(){if(!bulutRef)return;clearTimeout(bulutZ);bulutRef.set(JSON.parse(JSON.stringify(K))).catch(()=>{});}
@@ -64,7 +68,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
   const [db,user]=await Promise.all([claude.use('db'),claude.use('user')]); if(!db||!user)return;
   const uid=await user.id(); if(!uid)return;
   const ref=db.doc('data/users/'+uid+'/merkez3'); const sn=await ref.get();
-  if(sn.exists){const b=sn.data(); if(!Object.keys(K.tani).length){K=Object.assign(K,b);} else {for(const a of ['tani','cevap','checkup'])K[a]=Object.assign({},b[a]||{},K[a]||{});K.rontgen=K.rontgen||b.rontgen||null;}
+  if(sn.exists){const b=sn.data(); if(!Object.keys(K.tani).length){K=Object.assign(K,b);K.tani=anahtarGoc(K.tani);K.cevap=anahtarGoc(K.cevap);} else {for(const a of ['tani','cevap','checkup'])K[a]=Object.assign({},a==='checkup'?(b[a]||{}):anahtarGoc(b[a]),K[a]||{});K.rontgen=K.rontgen||b.rontgen||null;}
     try{localStorage.setItem(ANAHTAR,JSON.stringify(K))}catch(e){}}
   bulutRef=ref; bulutaYaz(); if(!S&&document.querySelector('.gHero')) giris();
 }catch(e){}})();
@@ -72,18 +76,18 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 /* ---------- ölçüm ---------- */
 function kanunDurum(k){
   let d=0,n=0;const kacan=[];const yanlisQ=[];
-  for(const q of k.q){const v=K.tani[q.i];if(v===undefined)continue;n++;if(v===1)d++;else{yanlisQ.push(q);const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}
+  for(const q of k.q){const v=K.tani[kid(q.i)];if(v===undefined)continue;n++;if(v===1)d++;else{yanlisQ.push(q);const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}
   let durum='yok';
   if(n){const o=d/n; durum=n>=6?(o>=.75?'hazir':o>=.5?'orta':o>=.3?'zayif':'kritik'):(n-d===0?'hazir':n-d===1?'orta':'kritik');}
   return {k,d,n,kacan,yanlisQ,durum,oran:n?d/n:0};
 }
 const DURUM={hazir:['Hazır','#3FBF7F'],orta:['Orta','#F3C24A'],zayif:['Zayıf','#F09A3E'],kritik:['Kritik','#E85A4F'],yok:['Ölçülmedi','#7FA3AE']};
 function tipIst(sorular){ // her tip için d/n (verilen sorular)
-  return TIPLER.map(([id,ad,f])=>{const c=sorular.filter(f);const d=c.filter(q=>K.tani[q.i]===1).length;return {id,ad,n:c.length,d,oran:c.length?d/c.length:null};});
+  return TIPLER.map(([id,ad,f])=>{const c=sorular.filter(f);const d=c.filter(q=>K.tani[kid(q.i)]===1).length;return {id,ad,n:c.length,d,oran:c.length?d/c.length:null};});
 }
 const zayifTipler=sorular=>tipIst(sorular).filter(t=>t.n>=2&&t.d/t.n<=.5).sort((a,b)=>a.oran-b.oran);
 function hazirlik(){const ks=KANUN.map(kanunDurum).filter(x=>x.n);if(!ks.length)return null;let wt=0,ws=0;ks.forEach(x=>{wt+=w(x.k.id);ws+=w(x.k.id)*x.oran;});return Math.round(ws/wt*100);}
-function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[q.i]===0)||(sorular||[]).find(q=>maddeNo(q)===m);if(!q)return 'Madde '+m;const t=q.k.replace(/^.*?göre,?\s*/i,'').replace(/\s+/g,' ');return t.length>70?t.slice(0,70)+'…':t;}
+function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[kid(q.i)]===0)||(sorular||[]).find(q=>maddeNo(q)===m);if(!q)return 'Madde '+m;const t=q.k.replace(/^.*?göre,?\s*/i,'').replace(/\s+/g,' ');return t.length>70?t.slice(0,70)+'…':t;}
 const bar=(oran,renk)=>`<span class="bar"><i style="width:${Math.max(3,Math.round(oran*100))}%;background:${renk}"></i></span>`;
 const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
 
@@ -113,7 +117,7 @@ function giris(){
 /* ---------- soru seçimi ---------- */
 function karistir(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a;}
 function maddeyeGoreSec(k,adet,haric){
-  const g={};karistir(k.q).forEach(q=>{if(haric&&haric.has(q.i))return;const m=maddeNo(q)||'?';(g[m]=g[m]||[]).push(q);});
+  const g={};karistir(k.q).forEach(q=>{if(haric&&haric.has(kid(q.i)))return;const m=maddeNo(q)||'?';(g[m]=g[m]||[]).push(q);});
   const anahtar=karistir(Object.keys(g));const out=[];let tur=0;
   while(out.length<adet&&anahtar.some(a=>g[a].length)){for(const a of anahtar){if(out.length>=adet)break;if(g[a].length)out.push(g[a].shift());}if(++tur>30)break;}
   return out;
@@ -126,7 +130,7 @@ function rontgenBaslat(){
 }
 function rontgenBitir(){
   let d=0,n=0;
-  S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){const v=S.cevap[i]===q.d?1:0;K.tani[q.i]=v;K.cevap[q.i]=S.cevap[i];n++;d+=v;}});
+  S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){const v=S.cevap[i]===q.d?1:0;K.tani[kid(q.i)]=v;K.cevap[kid(q.i)]=S.cevap[i];n++;d+=v;}});
   K.rontgen={tarih:bugun(),d,n,ids:S.sorular.map(q=>q.i)};K.aktif=null;kaydet();S=null;rontgenSonuc();
 }
 /* ---------- 3. RÖNTGEN SONUCU ---------- */
@@ -142,7 +146,7 @@ function rontgenSonuc(){
   const ilkEksik=ks.find(x=>x.durum==='kritik'||x.durum==='zayif'||x.durum==='orta');
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen Sonucu</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.grafik}</div><div class="hzMetin"><span class="hzLbl">Hazırlık</span><b class="hzSayi">${H}<small>/100</small></b><p>${cumle}</p></div></section>
-  <h3 class="bolumBaslik">Kanun bazında analiz</h3>
+  <h3 class="bolumBaslik">Kanun bazında analiz</h3><p class="kucukNot" style="margin-top:-4px">Röntgen + yaptığın check-up'ların tüm cevapları birlikte sayılır.</p>
   <section class="liste">${ks.map(x=>`<button class="satir kb" data-cu="${x.k.id}"><span class="satirAd">${esc(kisa(x.k))}</span><span class="satirOk">${IK.sag}</span><span class="kbAlt">${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span></span></button>`).join('')}</section>
   <h3 class="bolumBaslik">Soru tipi zaafı</h3>
   <section class="tipIzgara">${tipler.map(t=>`<div class="tipHucre"><span class="tipAd">${esc(t.ad)}</span>${t.n?`<div class="tipAltSatir">${bar(t.oran,oranRenk(t.oran))}<span class="tipYuzde">%${Math.round(t.oran*100)}</span></div><small>${t.d}/${t.n} doğru</small>`:'<small>bu tipte soru çıkmadı</small>'}</div>`).join('')}</section>
@@ -178,7 +182,7 @@ function checkupBolum(id){
 }
 function checkupBitir(){
   const id=S.meta.kanun;let d=0,n=0;const kacan=[];const ids=S.sorular.map(q=>q.i);
-  S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){const v=S.cevap[i]===q.d?1:0;K.tani[q.i]=v;K.cevap[q.i]=S.cevap[i];n++;d+=v;if(!v){const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}});
+  S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){const v=S.cevap[i]===q.d?1:0;K.tani[kid(q.i)]=v;K.cevap[kid(q.i)]=S.cevap[i];n++;d+=v;if(!v){const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}});
   const tipler=zayifTipler(S.sorular).map(t=>t.id);
   const eski=K.checkup[id];
   K.checkup[id]={tarih:bugun(),d,n,kacan:eski?[...new Set([...eski.kacan,...kacan])]:kacan,ids:eski?[...new Set([...eski.ids,...ids])]:ids,tipler:[...new Set([...(eski?.tipler||[]),...tipler])]};
@@ -191,10 +195,10 @@ function checkupAnaliz(id,geriHedef){
   const sorular=cu.ids.map(i=>TUM[i]).filter(Boolean);
   const oran=cu.d/cu.n;
   // madde bazlı: o maddeden çıkan sorular d/n
-  const maddeler={};sorular.forEach(q=>{const m=maddeNo(q);if(!m)return;const o=maddeler[m]=maddeler[m]||{d:0,n:0};o.n++;if(K.tani[q.i]===1)o.d++;});
+  const maddeler={};sorular.forEach(q=>{const m=maddeNo(q);if(!m)return;const o=maddeler[m]=maddeler[m]||{d:0,n:0};o.n++;if(K.tani[kid(q.i)]===1)o.d++;});
   const eksik=Object.entries(maddeler).filter(([,o])=>o.d<o.n).sort((a,b)=>a[1].d/a[1].n-b[1].d/b[1].n);
   const tipler=tipIst(sorular).filter(t=>t.n>=1).sort((a,b)=>(a.oran??1)-(b.oran??1));
-  const yanlislar=sorular.filter(q=>K.tani[q.i]===0);
+  const yanlislar=sorular.filter(q=>K.tani[kid(q.i)]===0);
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div></div></section>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler</h3>
@@ -202,7 +206,7 @@ function checkupAnaliz(id,geriHedef){
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?</h3>
   <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,oranRenk(1-hata))}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')||'<p class="kucukNot">Tip ayrımı için yeterli soru yok.</p>'}</section>
   <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>eksik maddelerinin noktaları + tuzaklar · kaydedildi</small></button>
-  ${yanlislar.length?`<h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[q.i]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[q.i]]}) ${esc(q.s[K.cevap[q.i]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>`:''}
+  ${yanlislar.length?`<h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[kid(q.i)]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[kid(q.i)]]}) ${esc(q.s[K.cevap[kid(q.i)]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>`:''}
   <div class="altLinkler"><button id="yeniden">Bu kanunu yeniden check-up yap</button></div>`;
   $('#geri').onclick=()=>geriHedef?geriHedef():checkupListe();$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);
 }
