@@ -75,6 +75,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 
 /* ---------- ölçüm ---------- */
 function kanunDurum(k,sadece){
+  if(!(sadece instanceof Set))sadece=null; // .map(kanunDurum) indeks geçirir
   let d=0,n=0;const kacan=[];const yanlisQ=[];
   for(const q of k.q){if(sadece&&!sadece.has(q.i))continue;const v=K.tani[kid(q.i)];if(v===undefined)continue;n++;if(v===1)d++;else{yanlisQ.push(q);const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}
   let durum='yok';
