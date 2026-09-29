@@ -168,12 +168,24 @@ export default function MasaEkrani() {
     else router.push({ pathname: '/patika', params: { lawId: String(kanun) } });
   }
 
+  // KULLANIM OLAYLARI (başkan, 30 Eyl: "kim açmış, kaçı kilide takılmış göreyim"): merkez_olay tablosu.
+  // acti = ekran hazır; kilit = üye olmayan kilitli düğmeye bastı; rontgen/checkup/devam/ozet = üye başlattı.
+  const olayYaz = (olay: string, ayrinti?: unknown) => {
+    if (!olay || !uid.current || !supabase) return;
+    void supabase
+      .from('merkez_olay')
+      .insert({ user_id: uid.current, olay, ayrinti: ayrinti && typeof ayrinti === 'object' ? ayrinti : {}, premium, brans })
+      .then(() => {});
+  };
+  const actiYazildi = useRef(false);
+
   const mesaj = (e: WebViewMessageEvent) => {
     try {
       const m = JSON.parse(e.nativeEvent.data) as { tip?: string; veri?: unknown; n?: number; kanun?: number; madde?: string };
       if (m.tip === 'derinlik') { derinlik.current = Number(m.n) || 0; return; }
       if (m.tip === 'kart') { void kartaGit(Number(m.kanun), String(m.madde ?? '')); return; }
       if (m.tip === 'paywall') { router.push('/paywall'); return; }
+      if (m.tip === 'olay') { olayYaz(String((m as { olay?: string }).olay ?? ''), (m as { ayrinti?: unknown }).ayrinti); return; }
       if (m.tip !== 'kaydet' || !m.veri || !uid.current || !supabase) return;
       void supabase
         .from('merkez_ilerleme')
@@ -185,6 +197,10 @@ export default function MasaEkrani() {
   };
 
   const hazir = html && kayit !== null && minSure;
+  useEffect(() => {
+    if (hazir && !actiYazildi.current) { actiYazildi.current = true; olayYaz('acti'); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hazir]);
   return (
     <SafeAreaView style={styles.kap} edges={hazir ? ['top', 'bottom'] : ['top']}>
       <StatusBar style="light" />
