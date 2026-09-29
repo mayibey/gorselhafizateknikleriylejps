@@ -654,7 +654,7 @@ function giris(){
     <div class="gGun">${IK.kum}<b>${g} gün</b></div>
   </section>
   <button class="secim" id="bRontgen"><span class="secimIk">${IK.buyutec}</span><span class="secimMetin"><b>Kanunların röntgenini çek</b><small>Hangi kanunda ne kadar hazırsın?</small><em>~${Math.round(rSoru*0.3)} dk · ~${rSoru} soru${gecmis.length?` · ${gecmis.length} sonuç`:''}${yarimR?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>
-  <button class="secim" id="bCheckup"><span class="secimIk">${IK.belge}</span><span class="secimMetin"><b>Kanunlara check-up yap</b><small>Madde madde detaylı tarama</small><em>${IK.hedef} Müşterek / Branş${ozetler?` · ${ozetler} özet kayıtlı`:''}${yarimC?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>`;
+  <button class="secim" id="bCheckup"><span class="secimIk">${IK.belge}</span><span class="secimMetin"><b>Kanunlara check-up yap</b><small>Seçtiğin kanunun çıkabilecek tüm soruları, madde madde</small><em>${IK.hedef} Müşterek / Branş${ozetler?` · ${ozetler} özet kayıtlı`:''}${yarimC?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>`;
   $('#bRontgen').onclick=rontgenSayfa;$('#bCheckup').onclick=checkupListe;
 }
 /* RÖNTGEN SAYFASI: devam et / çek / sonuçlarım */
@@ -743,7 +743,7 @@ function checkupListe(){
     const oran=cu?cu.d/cu.n:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
     return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Check-up</h2><span></span></div>
-  <p class="kucukNot" style="text-align:center">Her kanunun bütün soruları sorulur. Yarım bırakırsan kaldığın yerden devam edersin.</p>
+  <p class="kucukNot" style="text-align:center">Her kanunda o kanundan çıkabilecek bütün sorular sorulur. Yarım bırakırsan kaldığın yerden devam edersin.</p>
   ${KANUN.some(k=>K.checkup[k.id])?`<button class="anaBtn2 ikincil" id="ozetlerim" style="margin:0 0 12px">Özetlerim · ${KANUN.filter(k=>K.checkup[k.id]).length} kanun ${IK.ok}</button>`:""}
   <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
   <section class="liste">${ks.map(satir).join('')}</section>`;
