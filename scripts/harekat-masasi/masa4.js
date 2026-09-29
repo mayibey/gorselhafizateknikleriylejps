@@ -1,3 +1,4 @@
+const BRANS=window.BRANS||{slug:'mebs',ad:'MEBS'}; // hangi branşın sayfası (kur2.py gömer)
 (()=>{
 /* ===== HAREKÂT MERKEZİ v4 — GPT taslağına birebir düzen (29 Eyl). Akış v3 ile aynı:
    Giriş → Röntgen (direkt sorular) → Röntgen Sonucu (Hazırlık, kanun bazında, tip zaafı)
@@ -68,6 +69,7 @@ function birlestir(b){ if(!b||typeof b!=='object')return;
   const hepsi=[...(b.rontgenler||[]),...(K.rontgenler||[])];const g2={};hepsi.forEach(x=>{if(x&&x.ids)g2[x.saat||x.tarih]=x;});K.rontgenler=Object.values(g2).sort((a,b)=>(a.saat||a.tarih).localeCompare(b.saat||b.tarih)).slice(-8);
   if(!K.aktif&&b.aktif)K.aktif=b.aktif; if(b.g)K.g=K.g||b.g; }
 try{ if(window.MERKEZ_KAYIT) birlestir(window.MERKEZ_KAYIT); }catch(e){}
+if(K.g!=='mus'&&K.g!==BRANS.slug)K.g='mus'; // başka branşın kaydı / eski 'mebs' değeri
 const RN=()=>window.ReactNativeWebView;
 let rnZ=null;
 function rnGonder(){ if(!RN())return; clearTimeout(rnZ); try{RN().postMessage(JSON.stringify({tip:'kaydet',veri:K}));}catch(e){} }
@@ -229,7 +231,7 @@ function checkupListe(){
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Check-up</h2><span></span></div>
   <p class="kucukNot" style="text-align:center">Her kanunda o kanundan çıkabilecek bütün sorular sorulur. Yarım bırakırsan kaldığın yerden devam edersin.</p>
   ${KANUN.some(k=>K.checkup[k.id])?`<button class="anaBtn2 ikincil" id="ozetlerim" style="margin:0 0 12px">Özetlerim · ${KANUN.filter(k=>K.checkup[k.id]).length} kanun ${IK.ok}</button>`:""}
-  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
+  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="${BRANS.slug}" aria-pressed="${K.g===BRANS.slug}">Branş (${esc(BRANS.ad)})</button></div>
   <section class="liste">${ks.map(satir).join('')}</section>`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};if($('#ozetlerim'))$('#ozetlerim').onclick=()=>{const ilk=KANUN.find(k=>K.checkup[k.id]);ilk&&ozet(ilk.id,checkupListe,'kayit');};
   document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.g=b.dataset.g;kaydet();YIGIN.pop();POP=true;checkupListe();});
@@ -347,7 +349,7 @@ function kanunListesi(mod){
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const ks=KANUN.filter(k=>k.g===K.g);
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${mod==='not'?'Konu notları':'Soru bankası'}</h2><span></span></div>
-  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
+  <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="${BRANS.slug}" aria-pressed="${K.g===BRANS.slug}">Branş (${esc(BRANS.ad)})</button></div>
   <section class="liste">${ks.map(k=>`<button class="satir cu" data-id="${k.id}"><span class="satirIk">${mod==='not'?IK.kitap:IK.belge}</span><span class="satirMetin"><b>${esc(kisa(k))}</b><small>${mod==='not'?`${k.n.length} nokta · ★ ${k.n.filter(n=>n.s).length} çıkmış`:`${k.q.length} soru`}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
   $('#geri').onclick=giris;
   document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.g=b.dataset.g;kaydet();kanunListesi(mod);});

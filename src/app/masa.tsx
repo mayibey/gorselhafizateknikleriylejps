@@ -12,6 +12,7 @@ import { AppText } from '@/components/ui/app-text';
 import { Spacing } from '@/constants/theme';
 import { getAllCards } from '@/db/database';
 import type { CardWithLaw } from '@/db/schema';
+import { useBrans } from '@/lib/brans-context';
 import { imzaliUrller } from '@/lib/imzali-url';
 import { supabase } from '@/lib/supabase';
 
@@ -26,8 +27,11 @@ import { supabase } from '@/lib/supabase';
  * sayfaya `window.MERKEZ_KAYIT` ile verilir; sayfa her değişiklikte postMessage({tip:'kaydet', veri}) yollar,
  * biz upsert ederiz. Arka plana geçince sayfadan son hâli isteriz (window.merkezFlush).
  */
-const YOL = 'tarama/masa.html';
-const ONBELLEK = FileSystem.documentDirectory ? `${FileSystem.documentDirectory}jsps/masa.html` : null;
+// Sayfa BRANŞA GÖRE (30 Eyl, başkan: "tüm branşları o şekilde yapman lazım"): tarama/masa-<brans>.html
+// (müşterek + o branşın mevzuatı). Branş seçilmemişse eski tek dosya (MEBS).
+const yolBul = (brans: string | null) => (brans ? `tarama/masa-${brans}.html` : 'tarama/masa.html');
+const ONBELLEK_KLASOR = FileSystem.documentDirectory ? `${FileSystem.documentDirectory}jsps/` : null;
+const onbellekBul = (brans: string | null) => (ONBELLEK_KLASOR ? `${ONBELLEK_KLASOR}masa-${brans ?? 'mebs'}.html` : null);
 const ZEMIN = '#043C54';
 // Yükleme ekranı (başkan, 29 Eyl: "hazırlanıyor falan yazsın, böyle çok yavan"): dağ zemini + sırayla değişen satır.
 const HAZIRLIK_SATIRLARI = [
@@ -54,6 +58,7 @@ async function kullaniciId(): Promise<string | null> {
 
 export default function MasaEkrani() {
   const router = useRouter();
+  const { brans, yukleniyor: bransYukleniyor } = useBrans();
   const web = useRef<WebView>(null);
   const [html, setHtml] = useState<string | null>(null);
   const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
@@ -86,7 +91,10 @@ export default function MasaEkrani() {
   };
 
   useEffect(() => {
+    if (bransYukleniyor) return; // branş bilinmeden hangi sayfa? bekle
     let yasiyor = true;
+    const YOL = yolBul(brans);
+    const ONBELLEK = onbellekBul(brans);
     void (async () => {
       // 1) sunucudaki ilerleme (sayfadan ÖNCE hazır olmalı: açılışta gömülür)
       try {
@@ -113,8 +121,8 @@ export default function MasaEkrani() {
         const metin = await cevap.text();
         if (metin.length < 100_000 || !metin.includes('Harekât')) throw new Error('bozuk');
         if (yasiyor) setHtml(metin);
-        if (ONBELLEK) {
-          await FileSystem.makeDirectoryAsync(ONBELLEK.replace(/masa\.html$/, ''), { intermediates: true }).catch(() => {});
+        if (ONBELLEK && ONBELLEK_KLASOR) {
+          await FileSystem.makeDirectoryAsync(ONBELLEK_KLASOR, { intermediates: true }).catch(() => {});
           await FileSystem.writeAsStringAsync(ONBELLEK, metin).catch(() => {});
         }
       } catch {
@@ -134,7 +142,7 @@ export default function MasaEkrani() {
       donanim?.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [bransYukleniyor]);
 
   // "Karta git" (başkan, 30 Eyl): check-up analizindeki eksik maddeden uygulamadaki konu kartına. Karargâh'taki
   // maddeKartinaGit ile aynı seçim: o kanun + o madde numaralı kartlar, özet/ayırt görseli olmayan önce.
