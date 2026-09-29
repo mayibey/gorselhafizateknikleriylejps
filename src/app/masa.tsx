@@ -4,7 +4,7 @@ import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { ActivityIndicator, Animated, AppState, BackHandler, Easing, Image, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Animated, AppState, BackHandler, Easing, ImageBackground, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
@@ -57,6 +57,12 @@ export default function MasaEkrani() {
   const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
   const [hata, setHata] = useState(false);
   const [satir, setSatir] = useState(0);
+  // Açılış sahnesi en az 5 sn dursun (başkan: "logo gibi olsun, yazılar okunsun").
+  const [minSure, setMinSure] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setMinSure(true), 5000);
+    return () => clearTimeout(t);
+  }, []);
   // RÖNTGEN TARAMA EFEKTİ (başkan): ışık çizgisi yukarıdan aşağı süpürür.
   const [alanBoyu, setAlanBoyu] = useState(0);
   const tarama = useRef(new Animated.Value(0)).current;
@@ -67,7 +73,7 @@ export default function MasaEkrani() {
   }, [tarama]);
   const uid = useRef<string | null>(null);
   useEffect(() => {
-    const t = setInterval(() => setSatir((i) => (i + 1) % HAZIRLIK_SATIRLARI.length), 1400);
+    const t = setInterval(() => setSatir((i) => (i + 1) % HAZIRLIK_SATIRLARI.length), 1250);
     return () => clearInterval(t);
   }, []);
   const derinlik = useRef(0); // sayfanın kendi ekran yığını (giriş=0)
@@ -142,9 +148,9 @@ export default function MasaEkrani() {
     }
   };
 
-  const hazir = html && kayit !== null;
+  const hazir = html && kayit !== null && minSure;
   return (
-    <SafeAreaView style={styles.kap} edges={['top', 'bottom']}>
+    <SafeAreaView style={styles.kap} edges={hazir ? ['top', 'bottom'] : ['top']}>
       <StatusBar style="light" />
       <View style={styles.ust}>
         <Pressable onPress={geri} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
@@ -169,8 +175,11 @@ export default function MasaEkrani() {
           onMessage={mesaj}
         />
       ) : (
-        <View style={styles.orta} onLayout={(e) => setAlanBoyu(e.nativeEvent.layout.height)}>
-          <Image source={require('../../assets/images/oyun-yukleme.webp')} style={styles.yuklemeArka} resizeMode="cover" />
+        <ImageBackground
+          source={require('../../assets/images/oyun-yukleme.webp')}
+          style={styles.orta}
+          resizeMode="cover"
+          onLayout={(e) => setAlanBoyu(e.nativeEvent.layout.height)}>
           <View style={styles.yuklemePerde} />
           {!hata && alanBoyu > 0 ? (
             <Animated.View
@@ -198,7 +207,7 @@ export default function MasaEkrani() {
               <ActivityIndicator color="#F3C24A" style={styles.yuklemeSpinner} />
             </View>
           )}
-        </View>
+        </ImageBackground>
       )}
     </SafeAreaView>
   );
@@ -209,9 +218,8 @@ const styles = StyleSheet.create({
   ust: { flexDirection: 'row', alignItems: 'center', gap: Spacing.three, paddingHorizontal: Spacing.four, paddingVertical: Spacing.two },
   baslik: { color: '#ECE6D8' },
   web: { flex: 1, backgroundColor: ZEMIN },
-  orta: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: Spacing.four },
+  orta: { flex: 1, alignSelf: 'stretch', width: '100%', alignItems: 'center', justifyContent: 'center', padding: Spacing.four, overflow: 'hidden' },
   hata: { color: '#93A7B6', textAlign: 'center' },
-  yuklemeArka: { ...StyleSheet.absoluteFillObject, width: '100%', height: '100%' },
   yuklemePerde: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(2,18,30,0.55)' },
   yuklemeKutu: { alignItems: 'center', gap: Spacing.two, paddingHorizontal: Spacing.four },
   yuklemeHalka: {
