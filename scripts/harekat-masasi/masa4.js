@@ -293,7 +293,11 @@ function ozet(id,geriHedef,sekme){
   K.kayit=K.kayit||{};
   const kayitBtn=id=>`<button class="kaydet ${K.kayit[id]?'acik':''}" data-kaydet="${id}">${IK.yerimi}${K.kayit[id]?'Kaydedildi':'Kaydet'}</button>`;
   const kart=n=>`<article class="ozKart"><div class="ozUst"><span class="ozNo">${n.m.length?'m.'+n.m[0]:''}</span><b>${esc(n.b)}</b>${kayitBtn(n.i)}</div><p class="ozHukum">${esc(n.h)}</p>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}${n.t?`<div class="tuzakKutu"><span class="tuzakIk">${IK.unlem}</span><div><b>Tuzak</b><p>${esc(n.t)}</p></div></div>`:''}</article>`;
-  const tuzakKart=(z,i)=>`<article class="ozKart"><div class="ozUst"><span class="ozNo">${z.m.length?'m.'+z.m[0]:''}</span><b>Yanlış şık</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div><p class="ozHukum">"${esc(z.y)}"</p><div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;
+  const tirnakSil=t=>String(t).replace(/^[\s"“”']+|[\s"“”']+$/g,'');
+  const tzMadde=z=>z.m[0]||((String(z.d).match(/\((\d+)(?:\/[^)]*)?\)\s*$/)||[])[1])||'';
+  const tuzakKart=(z,i)=>`<article class="ozKart tzKart"><div class="ozUst"><span class="ozNo">${tzMadde(z)?'m.'+tzMadde(z):''}</span><b>Sınavın tuzağı</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div>
+    <div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${tirnakSil(z.y).split(/"\s*\/\s*"/).map(x=>`<p>“${esc(tirnakSil(x))}”</p>`).join('')}</div></div>
+    <div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;
   const tablo=(baslik,rows)=>rows.length?`<h3 class="bolumBaslik">${baslik}</h3><div class="tabloKap ozTablo"><table>${rows.slice(0,16).map(r=>`<tr><td>${esc(r[0])}</td><td><b>${esc(r[1])}</b></td></tr>`).join('')}</table></div>`:'';
   const bu=`<p class="ozOzet">${esc(kisa(k))} · check-up ${tarihYaz(cu.tarih)} · ${cu.d}/${cu.n} doğru${cu.kacan.length?' · eksik: '+cu.kacan.map(m=>'m.'+m).join(', '):''}</p>
     ${tipler.length?`<div class="tuzakKutu bilgi"><span class="tuzakIk">${IK.unlem}</span><div><b>Hata yaptığın soru tipi: ${tipler.map(t=>esc((TIPLER.find(x=>x[0]===t)||[])[1]||t)).join(', ')}</b><p>${tipler.map(t=>esc(TIP_TAVSIYE[t]||'')).join(' ')}</p></div></div>`:''}
@@ -303,8 +307,7 @@ function ozet(id,geriHedef,sekme){
     ${tipler.includes('sayi')||tipler.includes('sure')?tablo('Sayılar ve süreler',k.sayi):''}
     ${tipler.includes('makam')?tablo('Yetkili makamlar',k.makam):''}
     ${takviye.length?`<h3 class="bolumBaslik">Bu kanundan sınavda çıkmış noktalar</h3>${takviye.map(kart).join('')}`:''}
-    <div class="kayitBaslik"><b>Kaydettiğin kartlar (${Object.keys(K.kayit||{}).length})</b><button id="tumu">Tümünü gör ›</button></div>
-    <section class="liste">${kayitli.slice(0,3).map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik madde çıkmadı'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
+    <div class="kayitBaslik"><b>Kaydettiğin kartlar (${Object.keys(K.kayit||{}).length})</b><button id="tumu">Tümünü gör ›</button></div>`;
   const kayitKartlar=[];for(const kk of KANUN){kk.n.forEach(n=>{if(K.kayit[n.i])kayitKartlar.push({k:kk,h:kart(n)});});kk.tz.forEach((z,i)=>{if(K.kayit[kk.id+'-tz'+i])kayitKartlar.push({k:kk,h:tuzakKart(z,i)});});}
   const kayitliHtml=kayitKartlar.length?`<p class="ozOzet">${kayitKartlar.length} kayıtlı kart · dokunup kaldırabilirsin</p>${kayitKartlar.map(x=>`<p class="ozKanun">${esc(kisa(x.k))}</p>${x.h}`).join('')}<h3 class="bolumBaslik">Check-up yaptığın kanunlar</h3>`:'<p class="kucukNot">Henüz kart kaydetmedin. Kartların sağ üstündeki "Kaydet"e dokun.</p>';
   const eskiKayitliHtml=`<section class="liste">${kayitli.map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${tarihYaz(K.checkup[x.id].tarih)} · ${K.checkup[x.id].d}/${K.checkup[x.id].n} · ${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik yok'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
