@@ -42,7 +42,10 @@ def noktalar(md, kid):
             if '**Ne demek:**' in p: nd = p.split('**Ne demek:**', 1)[1]
             elif '*Örnek:*' in p: o = p.split('*Örnek:*', 1)[1]
             elif '*Tuzak:*' in p: t = p.split('*Tuzak:*', 1)[1]
-        out.append({'i': f'{kid}-{len(out)}', 's': star, 'b': temiz(baslik), 'h': temiz(hukum),
+        kalin = [temiz(x) for x in re.findall(r'\*\*(.+?)\*\*', hukum) if temiz(x)]
+        mref = re.search(r'\((m\.[^)]+)\)\s*$', hukum.strip())
+        kisa = (' · '.join(kalin) + (f' ({mref.group(1)})' if mref else '')) if kalin else ''
+        out.append({'i': f'{kid}-{len(out)}', 's': star, 'b': temiz(baslik), 'h': temiz(hukum), 'k': kisa,
                     'nd': temiz(nd), 'o': temiz(o), 't': temiz(t), 'm': maddeler(hukum)})
     return out
 

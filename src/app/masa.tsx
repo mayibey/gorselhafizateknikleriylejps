@@ -10,6 +10,8 @@ import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
 import { AppText } from '@/components/ui/app-text';
 import { Spacing } from '@/constants/theme';
+import { getAllCards } from '@/db/database';
+import type { CardWithLaw } from '@/db/schema';
 import { imzaliUrller } from '@/lib/imzali-url';
 import { supabase } from '@/lib/supabase';
 
@@ -134,10 +136,25 @@ export default function MasaEkrani() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // "Karta git" (başkan, 30 Eyl): check-up analizindeki eksik maddeden uygulamadaki konu kartına. Karargâh'taki
+  // maddeKartinaGit ile aynı seçim: o kanun + o madde numaralı kartlar, özet/ayırt görseli olmayan önce.
+  const kartlar = useRef<CardWithLaw[] | null>(null);
+  async function kartaGit(kanun: number, maddeNo: string) {
+    if (!kanun) return;
+    const hedef = /(\d+)/.exec(maddeNo)?.[1] ?? maddeNo;
+    if (!kartlar.current) kartlar.current = await getAllCards();
+    const kartNo = (c: CardWithLaw) => /(\d+)/.exec(c.madde_no ?? '')?.[1] ?? '';
+    const havuz = kartlar.current.filter((c) => c.law_id === kanun && kartNo(c) === hedef);
+    const kart = havuz.find((c) => !(c.gorsel_yolu && /_(ayirt|ozet)(_|$)/i.test(c.gorsel_yolu))) ?? havuz[0];
+    if (kart) router.push({ pathname: '/akis', params: { lawId: String(kanun), kart: String(kart.id) } });
+    else router.push({ pathname: '/patika', params: { lawId: String(kanun) } });
+  }
+
   const mesaj = (e: WebViewMessageEvent) => {
     try {
-      const m = JSON.parse(e.nativeEvent.data) as { tip?: string; veri?: unknown; n?: number };
+      const m = JSON.parse(e.nativeEvent.data) as { tip?: string; veri?: unknown; n?: number; kanun?: number; madde?: string };
       if (m.tip === 'derinlik') { derinlik.current = Number(m.n) || 0; return; }
+      if (m.tip === 'kart') { void kartaGit(Number(m.kanun), String(m.madde ?? '')); return; }
       if (m.tip !== 'kaydet' || !m.veri || !uid.current || !supabase) return;
       void supabase
         .from('merkez_ilerleme')

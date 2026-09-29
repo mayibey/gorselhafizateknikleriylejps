@@ -162,3 +162,23 @@ html,body,button,.kap{touch-action:manipulation}
 .ozKart .tuzakKutu.iyi{margin-top:8px}.ozKart .tuzakKutu.iyi p{font-size:14.5px;line-height:1.55;color:#F2EEE4}.ozKart .ozNd{margin:0 0 4px;color:#DCEBEF}
 
 .ozKart .ozHukum{margin:0 0 4px}.ozKart .tuzakKutu.iyi p+p{margin-top:4px}
+
+/* Check-up analizi: açılır bölümler, madde kartları, aşağı ipucu (30 Eyl) */
+.acilir{margin-top:14px}.acilir>summary{list-style:none;display:flex;align-items:center;gap:8px;cursor:pointer;font-family:var(--baslik);font-size:18px;color:#F8D57A;padding:6px 0;text-shadow:0 1px 6px rgba(0,15,25,.95),0 0 14px rgba(0,15,25,.8);-webkit-tap-highlight-color:transparent}
+.acilir>summary::-webkit-details-marker{display:none}.acilir>summary::marker{content:''}
+.acilir .rozet{font-family:var(--mono);font-size:12px;color:#F8D57A;background:rgba(243,194,74,.16);border:1px solid rgba(243,194,74,.5);border-radius:999px;padding:2px 9px;text-shadow:none}
+.acilir .acilirOk{margin-left:auto;color:#F8D57A;transform:rotate(90deg);transition:transform .2s}.acilir .acilirOk svg{width:18px;height:18px}.acilir[open] .acilirOk{transform:rotate(-90deg)}
+.acilir>.liste{margin-top:6px}
+.mdKart{padding:12px;border-radius:12px;border:1px solid rgba(67,203,218,.3);background:rgba(3,40,60,.55)}
+.mdUst{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:baseline}
+.mdUst .satirAd{font-size:14.5px;line-height:1.3;display:block;-webkit-line-clamp:unset;overflow:visible;color:#fff}
+.mdOlcu{display:flex;align-items:center;gap:10px;margin-top:9px}.mdOlcu .bar{flex:1;min-width:0}.mdOlcu .satirDeger{min-width:0}
+.mdBtnler{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
+.mdBtn{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;border-radius:10px;font-weight:800;font-size:13.5px;border:1.5px solid rgba(243,194,74,.6);background:rgba(243,194,74,.12);color:#F8D57A}
+.mdBtn.dolu{background:linear-gradient(180deg,#F8D57A,#F3C24A);color:#1b1406;border-color:transparent}.mdBtn svg{width:16px;height:16px;flex:none}
+.anaBtn2+.anaBtn2.ikincil{margin-top:10px}
+.asagiIpucu{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(3,30,45,.94);border:1px solid rgba(243,194,74,.65);color:#F8D57A;font-weight:800;font-size:13px;padding:10px 16px;border-radius:999px;display:flex;gap:6px;align-items:center;box-shadow:0 6px 18px rgba(0,0,0,.45);animation:zipla 1.4s ease-in-out infinite;z-index:5;transition:opacity .25s;white-space:nowrap}
+.asagiIpucu .asagiOk{display:inline-flex;transform:rotate(90deg)}.asagiIpucu .asagiOk svg{width:15px;height:15px}
+.asagiIpucu.gizli{opacity:0;pointer-events:none;animation:none}
+@keyframes zipla{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-6px)}}
+.ozKart.vurgu{box-shadow:0 0 0 2px rgba(243,194,74,.9),0 0 22px rgba(243,194,74,.45)}
