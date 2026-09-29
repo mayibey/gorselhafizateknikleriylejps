@@ -4,6 +4,18 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl (00:00-00:30) — MERKEZ: ALTIN ÖZET KART DÜZENİ + AÇILIŞ SAHNESİ + METİNLER (sayfa sunucudan; OTA iki runtime)
+> Altın Özet kartı sırası (başkan üç tur düzeltti): üstte madde açıklaması → kırmızı "Sınavda böyle yazarlar" (noktanın tuzağı +
+> aynı maddenin yanlış şıkları) → yeşil "Doğrusu" (tuzağın doğru ifadesi; tuzak yoksa hüküm). Eşleşmeyen tuzaklar "Sınavın tuzağı" kartı.
+> Sekmeler "Eksik maddelerim / Kaydettiklerim"; kaydetme serbest (Kaydet/Kaydedildi). Giriş: "Kanunların röntgenini çek / Kanunlara
+> check-up yap", manşet "EKSİKLERİNİ HIZLICA NOKTA ATIŞI TESPİT ET"; notlar "Sorular her röntgende değişir" / "çıkabilecek tüm sorular".
+> Eski kısa check-up'lar "Kısmi" + "Kalan N soruyu çöz". Röntgen sonuç satırlarında "Check-up yap". Uygulama üst geri oku soru
+> ekranında duraklatıp bir önceki ekrana döner. masa.tsx açılış sahnesi: tam ekran dağ zemini (ImageBackground, SafeArea yalnız üst),
+> röntgen tarama çizgisi + radar, "Harekât Merkezi hazırlanıyor" 30px + altın dönen satırlar 18px, en az 5 sn (commit fad78fb,
+> dd055d8; OTA e2d8d278/555a5cf1 + tekrar). Yayın: `python scripts/harekat-masasi/kur2.py <calisma>` → masa-app.html → curl POST
+> storage `icerik/tarama/masa.html` (x-upsert) → uygulamada Merkez'i kapat-aç yeter. **Araç notu:** helper node ile `npx` bozuk
+> ("npm-prefix.js yok") → EAS için `node ~/AppData/Roaming/npm/node_modules/eas-cli/bin/run update ...` + PATH'e `/d` (npm shim).
+>
 > ### ▶ 29 Eyl (gece 2) — ÜYELİK AÇILIŞ HATASI (Fatih Keyvan) + MERKEZ iOS DONMA (OTA iki runtime)
 > Ömür boyu üyeli kullanıcı "tekrar satın almaya yönlendiriyor" dedi. Sunucu temiz (premium_mi true, kilit yok). Sebep: uygulama uzun
 > süre kapalı kalınca oturum anahtarı dolmuş; ilk `uyelik_haklari` isteği 401 → kod 'offline' sayıp açılış değeri premium=false ile
