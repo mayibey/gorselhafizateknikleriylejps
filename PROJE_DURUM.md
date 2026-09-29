@@ -4,6 +4,23 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl (02:00-03:15) — MERKEZ HERKESE AÇILDI (kilit soru çözümünden önce) + 16/16 BRANŞ ALTIN ÖZET KİTABI
+> **Yayın:** `uygulama_ayar.ozellik_herkes` = ["karma-deneme","eksik-tarama"] (başkan "yayınla"). Kilit modeli (başkan: "içeride
+> gezebilsin ama soru çözmeden önce ödeme ekranı, Altın Özet'i göremesin"): üye olmayana sayfanın İÇERİKSİZ sürümü iner
+> (`icerik/tarama-ucretsiz/masa-<slug>.html`, ~0,5 MB: soru metni/şık/açıklama ve özet notu soyulmuş, yalnız kimlik+sayılar);
+> sayfa `window.MERKEZ_PREMIUM=false` görünce Röntgen çek / Check-up / Devam et / Altın Özet'te `{tip:'paywall'}` yollar →
+> masa.tsx `/paywall`. Üye olunca `premium` değişir → tam sürüm (`tarama/`) yeniden yüklenir. `imzali-url` v18: `tarama-ucretsiz`
+> ücretsiz klasör (deploy: `node scripts/edge-deploy.mjs imzali-url` — Management API, CLI/Docker yok; npm -g bozuk).
+> Karargâh satırı herkeste; `bayrak-denetle` KASITLI_KAPALI notu "sunucudan açık" (sonraki build'de YAYIN_BAYRAKLARI'na alınabilir).
+> **Kitaplar:** 8 yeni branş basıldı+yüklendi (Sağlık 101 s, Tabip 126, Diş Tabibi 126 (aynı içerik), Eczacı 88, Veteriner 115,
+> Kimyager 27, Mühendis 50, Bando 20) → 16/16 branşın Altın Özet kitabı var. Yeni bölümler (`icerik/_yeni/`): 5996 (55 nokta),
+> 1219 (47), İlkyardım Yön. (35), Acil Servis Tebliği (33), TCK m.240 sağlık (6), 3212 (18; Maliye kitabına da eklendi, yeniden
+> basıldı). Derleme: `brans_ozet_derle.py <slug> <STEM>` (var olan bölümleri Merkez'le AYNI eşleştiriciyle kopyalar) →
+> `altin_kitap_brans.py <slug>` → `altin-ozet-yukle.mjs --brans`. Merkez sayfaları yeniden üretildi: özetsiz mevzuat KALMADI.
+> **İçerik borcu (yazar raporları):** paketlerde madde metni 4000/9000 karakterde KESİK (5996 m.3/10/12/31; 1219 Ek 13; Acil Servis
+> m.6/7/10/11) → o hükümler banka açıklamalarından yazıldı; Acil Servis paketi 2018+2022 sürümlerini karıştırıyor (m.11/3 8 saat vs
+> m.14/3 24 saat). Paketleri `altin_pack_brans.py` (60000 sınırı) ile yeniden üretip bu 3 bölümü gözden geçir.
+>
 > ### ▶ 30 Eyl (01:00-02:00) — HAREKÂT MERKEZİ TÜM BRANŞLAR (16 sayfa sunucuda; OTA iki runtime)
 > Başkan: "tüm branşları o şekilde yapman lazım." Her branş için ayrı sayfa: `tarama/masa-<slug>.html` (müşterek 25 + o branşın
 > mevzuatı; 2,3-4,4 MB). Uygulama `useBrans()` ile kullanıcının branşının sayfasını yükler (branş yoksa eski `masa.html` = MEBS);
