@@ -521,7 +521,7 @@ function checkupListe(){
   const bolumBoyu=k=>Math.max(8,Math.min(12,w(k.id)*2+6));
   $('#ekran').innerHTML=`<button class="geri" id="geri">‹ Geri</button>
   <div class="mvBas"><div><h2>Check-up</h2><div class="kapsam">${Object.keys(K.checkup).length}/${ks.length} bölüm · her bölüm 8-12 soru · cevaplar bölüm sonunda</div></div></div>
-  <p class="kucukNot">${K.rontgen?'Röntgen\'de kaçırdığın kanunlar üstte.':'Sınavda çok çıkan kanunlar üstte.'} Bir bölüm ≈ 5 dk.</p>
+  <p class="kucukNot">${K.rontgen?'Röntgen\'de zayıf çıkan kanunlar üstte.':'Sınavda çok çıkan kanunlar üstte.'} Bir bölüm ≈ 5 dk.</p>
   <div class="ekler">${ks.map(x=>`<button class="ek tik2 ${K.checkup[x.k.id]?'yapildi':''}" data-id="${x.k.id}" style="--r:${x.durum==='kritik'?'#FF8F86':x.durum==='dikkat'?'var(--altin2)':x.durum==='iyi'?'var(--dogru)':'var(--soluk2)'}"><div class="ekUst"><span class="hd">${K.checkup[x.k.id]?'Yapıldı · '+x.d+'/'+x.n:x.n?'Röntgen: '+x.d+'/'+x.n:'Ölçülmedi'}</span><b>${esc(kisaAd(x.k))}</b><small>${bolumBoyu(x.k)} soru · ağırlık ${w(x.k.id)}</small></div><span class="ok">›</span></button>`).join('')}</div>`;
   $('#geri').onclick=ana;
   document.querySelectorAll('.tik2').forEach(b=>b.onclick=()=>checkupBolum(+b.dataset.id));
