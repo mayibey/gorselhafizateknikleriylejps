@@ -132,7 +132,7 @@ function ana(){
   const durumRenk={kritik:'#FF8F86',dikkat:'var(--altin2)',iyi:'var(--dogru)',yok:'var(--soluk2)'};
   const satir=x=>{const kart=kanunKartlari(x), acik=kart.filter(c=>!kapali(c.id)).length, cu=K.checkup[x.k.id];
     return `<div class="ek" style="--r:${durumRenk[x.durum]}"><div class="ekUst"><span class="hd">${durumAd[x.durum]}</span><b>${esc(kisaAd(x.k))}</b>
-      <small>${x.d}/${x.n} doğru${x.kacan.length?` · kaçan: ${x.kacan.slice(0,6).map(m=>'m.'+m).join(', ')}`:''}${cu?' · check-up yapıldı':' · röntgen'}</small></div>
+      <small>${x.d}/${x.n} doğru${x.kacan.length?` · yanlış: ${x.kacan.slice(0,6).map(m=>'m.'+m).join(', ')}`:''}${cu?' · check-up yapıldı':' · röntgen'}</small></div>
       <div class="ekAlt">${acik?`<button class="btn kucuk ana" data-na="${x.k.id}">Nokta Atışı · ${acik}</button>`:'<span class="cip">noktalar kapandı</span>'}
       ${cu?`<button class="btn kucuk" data-not="${x.k.id}">Özet</button>`:`<button class="btn kucuk" data-kapat="${x.k.id}">Kanunu kapat · ~8 dk</button>`}</div></div>`;};
   const zsatir=z=>{const kart=tipKartlari(z), acik=kart.filter(c=>!kapali(c.id)).length;
@@ -168,13 +168,13 @@ function giris(){
   const g=kalanGun(), ks=kapsamKanun();
   const rSoru=ks.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
   $('#ekran').innerHTML=`
-  <section class="girisBas"><span class="lbl">Sınava</span><b>${g} gün</b><p>Önce durumunu görelim. Çalışmış ya da çalışmamış olman fark etmez: nerede kaçırdığını bulur, sadece orayı kapatırız.</p></section>
+  <section class="girisBas"><span class="lbl">Sınava</span><b>${g} gün</b><p>Önce durumunu görelim. Çalışmış ya da çalışmamış olman fark etmez: nerede eksiğin var onu bulur, sadece orayı kapatırız.</p></section>
   <div class="ara kpSec" id="kpSec"><span>Kapsam:</span>
     <button class="anahtar" data-kp="hepsi" aria-pressed="${K.kp==='hepsi'}">Müşterek + MEBS</button>
     <button class="anahtar" data-kp="mus" aria-pressed="${K.kp==='mus'}">Yalnız Müşterek</button></div>
   <div class="tarama2">
     <div class="kart tur"><span class="rozet">~12 dk · ${rSoru} soru</span><h3>Röntgen</h3>
-      <p>Her kanundan bir soru, çok çıkanlardan iki. Kaçırdığın kanuna farklı maddeden iki soru daha sorar, emin olur. Cevaplar sonda.</p>
+      <p>Her kanundan bir soru, çok çıkanlardan iki. Yanlış yaptığın kanundan farklı maddelerle iki soru daha sorar, emin olur. Cevaplar sonda.</p>
       <p class="kucukNot">Sonuç: kanun kanun nerede eksiksin + hangi soru tipinde zayıfsın.</p>
       <button class="btn ana" id="bRontgen">Röntgeni çek</button></div>
     <div class="kart tur"><span class="rozet">Bölüm bölüm · ${ks.length} bölüm</span><h3>Check-up</h3>
@@ -244,11 +244,11 @@ function ozet(id,sadeceOku){
   document.body.classList.remove('sinavda');window.scrollTo({top:0});
   const k=BYID[id], kd=kanunDurum(k), kacan=new Set(kd.kacan);
   const yildiz=k.n.filter(n=>n.s), digerKacan=k.n.filter(n=>!n.s&&n.m.some(m=>kacan.has(m)));
-  const nokta=n=>`<li class="${n.s?'yildizli':''} ${n.m.some(m=>kacan.has(m))?'kacan':''}">${n.s?'<span class="yld">★</span>':''}${n.m.some(m=>kacan.has(m))?'<span class="etk tz">Kaçırdın</span>':''}<b>${esc(n.b)}</b> — ${esc(n.h)}${n.nd?`<div class="nd"><span class="etk nd">Ne demek</span>${esc(n.nd)}</div>`:''}${n.t?`<div class="nd"><span class="etk tz">Tuzak</span>${esc(n.t)}</div>`:''}</li>`;
+  const nokta=n=>`<li class="${n.s?'yildizli':''} ${n.m.some(m=>kacan.has(m))?'kacan':''}">${n.s?'<span class="yld">★</span>':''}${n.m.some(m=>kacan.has(m))?'<span class="etk tz">Yanlış yaptın</span>':''}<b>${esc(n.b)}</b> — ${esc(n.h)}${n.nd?`<div class="nd"><span class="etk nd">Ne demek</span>${esc(n.nd)}</div>`:''}${n.t?`<div class="nd"><span class="etk tz">Tuzak</span>${esc(n.t)}</div>`:''}</li>`;
   $('#ekran').innerHTML=`<button class="geri" id="geri">‹ Eksiklerin</button>
-  <div class="mvBas"><div><h2>${esc(kisaAd(k))}</h2><div class="kapsam">Hızlı özet · yalnız çıkmış ★ noktalar${digerKacan.length?' + kaçırdığın maddeler':''} · ${yildiz.length+digerKacan.length} nokta · ~${Math.max(2,Math.ceil((yildiz.length+digerKacan.length)/6))} dk</div></div>
+  <div class="mvBas"><div><h2>${esc(kisaAd(k))}</h2><div class="kapsam">Hızlı özet · yalnız çıkmış ★ noktalar${digerKacan.length?' + yanlış yaptığın maddeler':''} · ${yildiz.length+digerKacan.length} nokta · ~${Math.max(2,Math.ceil((yildiz.length+digerKacan.length)/6))} dk</div></div>
     ${sadeceOku?`<button class="btn ana" id="na">Nokta Atışı</button>`:`<button class="btn ana" id="devam">10 soruya geç ›</button>`}</div>
-  ${sadeceOku?'':'<p class="kucukNot">Okumak istemiyorsan doğrudan sorulara geçebilirsin; kaçırdığın maddeler nokta atışına düşer.</p>'}
+  ${sadeceOku?'':'<p class="kucukNot">Okumak istemiyorsan doğrudan sorulara geçebilirsin; yanlış yaptığın maddeler nokta atışına düşer.</p>'}
   <div class="not"><ul>${digerKacan.map(nokta).join('')}${yildiz.map(nokta).join('')}</ul>
   ${k.tz.length?`<h3>"Yanlıştır" tuzakları</h3><ul>${k.tz.slice(0,10).map(z=>`<li>"${esc(z.y)}" → <b>${esc(z.d)}</b></li>`).join('')}</ul>`:''}
   ${k.sayi.length?`<h3>Sayılar ve süreler</h3><div class="tabloKap"><table>${k.sayi.slice(0,14).map(r=>`<tr><td>${esc(r[0])}</td><td><b>${esc(r[1])}</b></td></tr>`).join('')}</table></div>`:''}
@@ -356,7 +356,7 @@ function sonucEkrani(don,donMetin){
   document.body.classList.remove('sinavda');window.scrollTo({top:0});
   const n=S.sorular.length,dg=S.sorular.filter((q,i)=>S.cevap[i]===q.d).length;const yanlislar=S.sorular.map((q,i)=>[q,i]).filter(([q,i])=>S.cevap[i]!==q.d);
   $('#ekran').innerHTML=`<div class="sinav"><article class="kart sonuc"><span class="cip v">${esc(S.ad)}</span><h2>${dg} / ${n}</h2>
-   <p>${yanlislar.length?`Kaçırdığın ${yanlislar.length} soru aşağıda; bu maddeler eksik listene düştü.`:'Hepsi doğru. Bu bölümde eksik görünmüyor.'}</p>
+   <p>${yanlislar.length?`Yanlış yaptığın ${yanlislar.length} soru aşağıda; bu maddeler eksik listene düştü.`:'Hepsi doğru. Bu bölümde eksik görünmüyor.'}</p>
    <button class="btn ana" id="don">${donMetin}</button>
    ${yanlislar.length?`<div class="yanlisListe">${yanlislar.map(([q,i])=>`<details><summary>${S.cevap[i]===undefined?'Boş':'✗'} · ${esc(q.y||'')} · ${esc(q.k.slice(0,110))}…</summary><p style="white-space:pre-line">${esc(q.k)}</p>${S.cevap[i]!==undefined?`<p style="color:#FF8F86">Senin cevabın: ${HARF[S.cevap[i]]}) ${esc(q.s[S.cevap[i]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></details>`).join('')}</div>`:''}
   </article></div>`;
