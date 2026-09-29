@@ -2,34 +2,67 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as FileSystem from 'expo-file-system/legacy';
 import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, AppState, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { WebView } from 'react-native-webview';
+import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
 import { AppText } from '@/components/ui/app-text';
 import { Spacing } from '@/constants/theme';
 import { imzaliUrller } from '@/lib/imzali-url';
+import { supabase } from '@/lib/supabase';
 
 /**
  * HAREKÂT MERKEZİ (eski adı Harekât Masası; başkan, 29 Eyl 2026: "bunu uygulamaya ekle, sadece ben göreyim").
- * EKSİK TARAMASI (Hızlı Check-up / Detaylı Röntgen → sınav reçetesi).
+ * EKSİK TARAMASI: Röntgen (kanun bazlı) / Check-up (madde bazlı) → kayıtlı Altın Özet.
  * Sayfa sunucudan gelir (`icerik/tarama/masa.html`, imzalı URL) → OTA'sız güncellenir; son inen kopya
- * cihazda saklanır, bağlantı yoksa onunla açılır. İlerleme sayfanın kendi localStorage'ında
- * (baseUrl sabit olduğu için kalıcı). Giriş Karargâh'ta `eksik-tarama` kişisel bayrağıyla açılır.
+ * cihazda saklanır, bağlantı yoksa onunla açılır. Giriş Karargâh'ta `eksik-tarama` kişisel bayrağıyla açılır.
+ *
+ * İLERLEME (29 Eyl, başkan: "yayınladığımızda kullanıcıların ilerlemelerini kaydetmen lazım"):
+ * sunucuda `merkez_ilerleme` (user_id → veri jsonb, RLS: herkes yalnız kendi satırı). Açılışta satır okunur ve
+ * sayfaya `window.MERKEZ_KAYIT` ile verilir; sayfa her değişiklikte postMessage({tip:'kaydet', veri}) yollar,
+ * biz upsert ederiz. Arka plana geçince sayfadan son hâli isteriz (window.merkezFlush).
  */
 const YOL = 'tarama/masa.html';
 const ONBELLEK = FileSystem.documentDirectory ? `${FileSystem.documentDirectory}jsps/masa.html` : null;
-const ZEMIN = '#06131F';
+const ZEMIN = '#043C54';
+
+async function kullaniciId(): Promise<string | null> {
+  if (!supabase) return null;
+  for (let i = 0; i < 6; i++) {
+    try {
+      const { data } = await supabase.auth.getSession();
+      if (data.session?.user?.id) return data.session.user.id;
+    } catch {
+      /* oturum henüz yok */
+    }
+    await new Promise((c) => setTimeout(c, 250));
+  }
+  return null;
+}
 
 export default function MasaEkrani() {
   const router = useRouter();
+  const web = useRef<WebView>(null);
   const [html, setHtml] = useState<string | null>(null);
+  const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
   const [hata, setHata] = useState(false);
+  const uid = useRef<string | null>(null);
 
   useEffect(() => {
     let yasiyor = true;
     void (async () => {
+      // 1) sunucudaki ilerleme (sayfadan ÖNCE hazır olmalı: açılışta gömülür)
+      try {
+        uid.current = await kullaniciId();
+        if (uid.current && supabase) {
+          const { data } = await supabase.from('merkez_ilerleme').select('veri').eq('user_id', uid.current).maybeSingle();
+          if (yasiyor) setKayit(JSON.stringify((data as { veri?: unknown } | null)?.veri ?? {}));
+        } else if (yasiyor) setKayit('{}');
+      } catch {
+        if (yasiyor) setKayit('{}');
+      }
+      // 2) sayfa
       let yerel: string | null = null;
       try {
         if (ONBELLEK && (await FileSystem.getInfoAsync(ONBELLEK)).exists) yerel = await FileSystem.readAsStringAsync(ONBELLEK);
@@ -54,11 +87,30 @@ export default function MasaEkrani() {
         else setHata(true);
       }
     })();
+    // arka plana geçerken sayfadaki son hâli iste
+    const abone = AppState.addEventListener('change', (d) => {
+      if (d !== 'active') web.current?.injectJavaScript('window.merkezFlush && window.merkezFlush(); true;');
+    });
     return () => {
       yasiyor = false;
+      abone.remove();
     };
   }, []);
 
+  const mesaj = (e: WebViewMessageEvent) => {
+    try {
+      const m = JSON.parse(e.nativeEvent.data) as { tip?: string; veri?: unknown };
+      if (m.tip !== 'kaydet' || !m.veri || !uid.current || !supabase) return;
+      void supabase
+        .from('merkez_ilerleme')
+        .upsert({ user_id: uid.current, veri: m.veri, guncelleme: new Date().toISOString() }, { onConflict: 'user_id' })
+        .then(() => {});
+    } catch {
+      /* bozuk mesaj */
+    }
+  };
+
+  const hazir = html && kayit !== null;
   return (
     <SafeAreaView style={styles.kap} edges={['top', 'bottom']}>
       <StatusBar style="light" />
@@ -70,20 +122,23 @@ export default function MasaEkrani() {
           Harekât Merkezi
         </AppText>
       </View>
-      {html ? (
+      {hazir ? (
         <WebView
+          ref={web}
           style={styles.web}
-          source={{ html, baseUrl: 'https://mevzujsps.com/masa' }}
+          source={{ html: html!, baseUrl: 'https://mevzujsps.com/masa' }}
           originWhitelist={['*']}
           domStorageEnabled
           javaScriptEnabled
           setSupportMultipleWindows={false}
+          injectedJavaScriptBeforeContentLoaded={`window.MERKEZ_KAYIT = ${kayit}; true;`}
+          onMessage={mesaj}
         />
       ) : (
         <View style={styles.orta}>
           {hata ? (
             <AppText variant="kucuk" style={styles.hata}>
-              Masa yüklenemedi. İnternet bağlantını kontrol edip tekrar dene.
+              Merkez yüklenemedi. İnternet bağlantını kontrol edip tekrar dene.
             </AppText>
           ) : (
             <ActivityIndicator color="#D9B24A" />

@@ -467,6 +467,16 @@ body:not(.giriste) #gece::after{content:"";position:absolute;inset:0;background:
 
 .kayitSatir.devam{border-style:solid;border-color:var(--altin);background:rgba(243,194,74,.12)}
 
+.blok{border:1.5px solid var(--altin);border-radius:16px;background:linear-gradient(180deg,rgba(3,40,60,.88),rgba(2,30,46,.92));margin-bottom:14px;box-shadow:0 8px 24px rgba(0,0,0,.28);overflow:hidden}
+.blok .secim{border:0;border-radius:0;margin:0;box-shadow:none;background:none}
+.blokAlt{display:flex;gap:8px;padding:0 12px 12px;flex-wrap:wrap}
+.blokBtn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 10px;border-radius:10px;border:1px solid rgba(243,194,74,.55);color:#F8D57A;font-weight:700;font-size:13px;background:rgba(243,194,74,.08);white-space:nowrap}
+.blokBtn svg{width:15px;height:15px}
+.blokBtn.ana{background:linear-gradient(180deg,#F8D57A,#F3C24A);color:#1b1406;border-color:transparent}
+
+.anaBtn2.ikincil{background:rgba(243,194,74,.1);color:#F8D57A;border:1.5px solid rgba(243,194,74,.6);box-shadow:none}
+.anaBtn2+.anaBtn2{margin-top:10px}
+
 </style>
 <div id="gece" aria-hidden="true"></div>
 <div class="kap">
@@ -537,10 +547,23 @@ let K={tani:{},cevap:{},rontgen:null,checkup:{},aktif:null,g:'mus'};
 try{const s=JSON.parse(localStorage.getItem(ANAHTAR)||'null');if(s&&s.tani)K=Object.assign(K,s);}catch(e){}
 function anahtarGoc(o){const y={};for(const [k,v] of Object.entries(o||{}))y[kid(k)]=v;return y;}
 K.tani=anahtarGoc(K.tani);K.cevap=anahtarGoc(K.cevap);
+// UYGULAMA KÖPRÜSÜ (Mevzu içinde): uygulama açılışta sunucudaki kaydı window.MERKEZ_KAYIT ile verir,
+// biz her değişikliği window.ReactNativeWebView.postMessage ile geri yollarız (uygulama sunucuya yazar).
+function birlestir(b){ if(!b||typeof b!=='object')return;
+  const bt=anahtarGoc(b.tani),bc=anahtarGoc(b.cevap);
+  K.tani=Object.assign({},bt,K.tani);K.cevap=Object.assign({},bc,K.cevap);K.checkup=Object.assign({},b.checkup||{},K.checkup||{});
+  if(!K.rontgen||(b.rontgen&&b.rontgen.tarih>K.rontgen.tarih))K.rontgen=b.rontgen||K.rontgen;
+  const hepsi=[...(b.rontgenler||[]),...(K.rontgenler||[])];const g2={};hepsi.forEach(x=>{if(x&&x.ids)g2[x.saat||x.tarih]=x;});K.rontgenler=Object.values(g2).sort((a,b)=>(a.saat||a.tarih).localeCompare(b.saat||b.tarih)).slice(-8);
+  if(!K.aktif&&b.aktif)K.aktif=b.aktif; if(b.g)K.g=K.g||b.g; }
+try{ if(window.MERKEZ_KAYIT) birlestir(window.MERKEZ_KAYIT); }catch(e){}
+const RN=()=>window.ReactNativeWebView;
+let rnZ=null;
+function rnGonder(){ if(!RN())return; clearTimeout(rnZ); try{RN().postMessage(JSON.stringify({tip:'kaydet',veri:K}));}catch(e){} }
+window.merkezFlush=rnGonder; // uygulama arka plana geçince çağırır
 let bulutRef=null,bulutZ=null;
-function kaydet(){try{localStorage.setItem(ANAHTAR,JSON.stringify(K))}catch(e){} if(bulutRef){clearTimeout(bulutZ);bulutZ=setTimeout(bulutaYaz,1500);}}
+function kaydet(){try{localStorage.setItem(ANAHTAR,JSON.stringify(K))}catch(e){} if(bulutRef){clearTimeout(bulutZ);bulutZ=setTimeout(bulutaYaz,1500);} if(RN()){clearTimeout(rnZ);rnZ=setTimeout(rnGonder,1200);}}
 function bulutaYaz(){if(!bulutRef)return;clearTimeout(bulutZ);bulutRef.set(JSON.parse(JSON.stringify(K))).catch(()=>{});}
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&bulutZ)bulutaYaz();});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){if(bulutZ)bulutaYaz();if(rnZ)rnGonder();}});
 (async()=>{try{
   if(!window.claude||!claude.use)return;
   const [db,user]=await Promise.all([claude.use('db'),claude.use('user')]); if(!db||!user)return;
@@ -575,6 +598,9 @@ function giris(){
   document.body.classList.remove('sinavda');document.body.classList.add('giriste');window.scrollTo({top:0});S=null;
   const g=kalanGun(); const rSoru=KANUN.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
   const ozetler=KANUN.filter(k=>K.checkup[k.id]).length;
+  const yarimR=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='rontgen', yarimC=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup';
+  const yarimYazi=a=>`${Object.keys(a.cevap||{}).length}/${a.ids.length}`;
+  const gecmis=K.rontgenler||(K.rontgen?[K.rontgen]:[]);
   $('#ekran').innerHTML=`
   <section class="gHero">
     <div class="gBaslik"><span class="gRadar">${IK.radar}</span><span>Harekât <i>Merkezi</i></span></div>
@@ -583,14 +609,34 @@ function giris(){
     <div class="gGun">${IK.kum}<b>${g} gün</b></div>
     <p class="gSlogan">Eksiğini bul.<br>Nokta atışıyla kapat.</p>
   </section>
-  <button class="secim" id="bRontgen"><span class="secimIk">${IK.buyutec}</span><span class="secimMetin"><b>Röntgen Çek</b><small>Kanun bazında ne kadar hazırsın?</small><em>~${Math.round(rSoru*0.3)} dk · ~${rSoru} soru${K.rontgen?` · son: ${tarihYaz(K.rontgen.tarih)}`:''}</em></span><span class="secimOk">${IK.sag}</span></button>
-  <button class="secim" id="bCheckup"><span class="secimIk">${IK.belge}</span><span class="secimMetin"><b>Check-up</b><small>Madde madde detaylı tarama</small><em>${IK.hedef} Müşterek / Branş${ozetler?` · ${ozetler} özet kayıtlı`:''}</em></span><span class="secimOk">${IK.sag}</span></button>
-  ${K.aktif&&K.aktif.ids?`<button class="kayitSatir devam" id="devamEt"><span>Yarım kalan: ${esc(K.aktif.ad)} · ${Object.keys(K.aktif.cevap||{}).length}/${K.aktif.ids.length} cevaplandı</span><b>Devam et ›</b></button>`:''}
-  ${K.rontgen?`<button class="kayitSatir" id="sonRontgen"><span>Son röntgen sonucu · ${K.rontgen.d}/${K.rontgen.n}</span><b>Aç ›</b></button>`:''}
-`;
-  $('#bRontgen').onclick=rontgenBaslat;$('#bCheckup').onclick=checkupListe;
-  if($('#sonRontgen'))$('#sonRontgen').onclick=rontgenSonuc;
-  if($('#devamEt'))$('#devamEt').onclick=aktifDevam;
+  <button class="secim" id="bRontgen"><span class="secimIk">${IK.buyutec}</span><span class="secimMetin"><b>Röntgen Çek</b><small>Kanun bazında ne kadar hazırsın?</small><em>~${Math.round(rSoru*0.3)} dk · ~${rSoru} soru${gecmis.length?` · ${gecmis.length} sonuç`:''}${yarimR?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>
+  <button class="secim" id="bCheckup"><span class="secimIk">${IK.belge}</span><span class="secimMetin"><b>Check-up</b><small>Madde madde detaylı tarama</small><em>${IK.hedef} Müşterek / Branş${ozetler?` · ${ozetler} özet kayıtlı`:''}${yarimC?' · yarım kalan var':''}</em></span><span class="secimOk">${IK.sag}</span></button>`;
+  $('#bRontgen').onclick=rontgenSayfa;$('#bCheckup').onclick=checkupListe;
+}
+/* RÖNTGEN SAYFASI: devam et / çek / sonuçlarım */
+function rontgenSayfa(){
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
+  const rSoru=KANUN.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
+  const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='rontgen'?K.aktif:null;
+  const g=(K.rontgenler||(K.rontgen?[K.rontgen]:[])).slice().reverse();
+  const H=R=>hazirlik(new Set(R.ids));
+  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen</h2><span></span></div>
+  <section class="hzKart"><div class="hzIk">${IK.buyutec}</div><div class="hzMetin"><span class="hzLbl">Kanun bazında hazırlık</span><b class="hzSayi kucukSayi">~${rSoru}<small> soru · ~${Math.round(rSoru*0.3)} dk</small></b><p>Her kanundan bir soru, çok çıkanlardan iki. Cevaplar sonda; bitince hangi kanunda ne kadar hazır olduğunu görürsün.</p></div></section>
+  ${yarim?`<button class="anaBtn2" id="devamR">Devam et ${IK.ok}<small>${Object.keys(yarim.cevap||{}).length}/${yarim.ids.length} cevaplandı · kaldığın yerden</small></button>`:''}
+  <button class="anaBtn2 ${yarim?'ikincil':''}" id="cek">${g.length||yarim?'Yeniden çek':'Röntgen çek'} ${IK.ok}<small>${yarim?'yarım kalan silinir, sıfırdan başlar':'yeni sorularla, ~'+Math.round(rSoru*0.3)+' dk'}</small></button>
+  <h3 class="bolumBaslik"><span class="hedefIk">${IK.grafik}</span>Sonuçlarım</h3>
+  ${g.length?`<section class="liste">${g.map((R,i)=>{const h=H(R);return `<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}</b><small>${R.d}/${R.n} doğru${h!=null?` · hazırlık ${h}/100`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:'<p class="kucukNot">Henüz röntgen çekmedin. İlk röntgen ~12 dakika sürer.</p>'}`;
+  $('#geri').onclick=giris;$('#cek').onclick=()=>{if(yarim){K.aktif=null;kaydet();}rontgenBaslat();};
+  if($('#devamR'))$('#devamR').onclick=aktifDevam;
+  document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenSayfa));
+}
+/* önceki röntgenler */
+function rontgenGecmis(){
+  document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
+  const g=(K.rontgenler||(K.rontgen?[K.rontgen]:[])).slice().reverse();
+  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Önceki röntgenler</h2><span></span></div>
+  <section class="liste">${g.map((R,i)=>`<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son':''}</b><small>${R.d}/${R.n} doğru · ${R.n} soru</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
+  $('#geri').onclick=giris;document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenGecmis));
 }
 
 /* ---------- soru seçimi ---------- */
@@ -610,12 +656,12 @@ function rontgenBaslat(){
 function rontgenBitir(){
   let d=0,n=0;
   S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){const v=S.cevap[i]===q.d?1:0;K.tani[kid(q.i)]=v;K.cevap[kid(q.i)]=S.cevap[i];n++;d+=v;}});
-  K.rontgen={tarih:bugun(),d,n,ids:S.sorular.map(q=>q.i)};K.aktif=null;kaydet();S=null;rontgenSonuc();
+  K.rontgen={tarih:bugun(),d,n,ids:S.sorular.map(q=>q.i),saat:new Date().toISOString()};K.rontgenler=(K.rontgenler||[]).concat([K.rontgen]).slice(-8);K.aktif=null;kaydet();S=null;rontgenSonuc();
 }
 /* ---------- 3. RÖNTGEN SONUCU ---------- */
-function rontgenSonuc(){
+function rontgenSonuc(Rsec,geriHedef){
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
-  const R=K.rontgen;if(!R){giris();return;}
+  const R=(Rsec&&Rsec.ids)?Rsec:K.rontgen;if(!R){giris();return;}
   const sorular=R.ids.map(i=>TUM[i]).filter(Boolean);const sadece=new Set(R.ids);
   const ks=KANUN.map(k=>kanunDurum(k,sadece)).filter(x=>x.n);
   const sira={kritik:0,zayif:1,orta:2,hazir:3};ks.sort((a,b)=>sira[a.durum]-sira[b.durum]||w(b.k.id)-w(a.k.id));
@@ -624,6 +670,7 @@ function rontgenSonuc(){
   const tipler=tipIst(sorular).filter(t=>t.id!=='bosluk'&&t.id!=='onculu'||t.n>=2).slice(0,4);
   const ilkEksik=ks.find(x=>x.durum==='kritik'||x.durum==='zayif'||x.durum==='orta');
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen Sonucu</h2><span></span></div>
+  <p class="ozOzet" style="text-align:center">${tarihYaz(R.tarih)} · ${R.d}/${R.n} doğru</p>
   <section class="hzKart"><div class="hzIk">${IK.grafik}</div><div class="hzMetin"><span class="hzLbl">Hazırlık</span><b class="hzSayi">${H}<small>/100</small></b><p>${cumle}</p></div></section>
   <h3 class="bolumBaslik">Kanun bazında analiz</h3>
   <section class="liste">${ks.map(x=>`<button class="satir kb" data-cu="${x.k.id}"><span class="satirAd">${esc(kisa(x.k))}</span><span class="satirOk">${IK.sag}</span><span class="kbAlt">${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span></span></button>`).join('')}</section>
@@ -631,7 +678,7 @@ function rontgenSonuc(){
   <section class="tipIzgara">${tipler.map(t=>`<div class="tipHucre"><span class="tipAd">${esc(t.ad)}</span>${t.n?`<div class="tipAltSatir">${bar(t.oran,oranRenk(t.oran))}<span class="tipYuzde">%${Math.round(t.oran*100)}</span></div><small>${t.d}/${t.n} doğru</small>`:'<small>bu tipte soru çıkmadı</small>'}</div>`).join('')}</section>
   ${ilkEksik?`<button class="anaBtn2" id="eksikBasla">Eksiklerime göre başla ${IK.ok}<small>${esc(kisa(ilkEksik.k))} check-up · 8-12 soru</small></button>`:''}
   <div class="altLinkler"><button id="yenile">Röntgeni yenile</button></div>`;
-  $('#geri').onclick=giris;$('#yenile').onclick=rontgenBaslat;
+  $('#geri').onclick=()=>geriHedef?geriHedef():rontgenSayfa();$('#yenile').onclick=rontgenBaslat;
   document.querySelectorAll('[data-cu]').forEach(b=>b.onclick=()=>K.checkup[+b.dataset.cu]?ozet(+b.dataset.cu,rontgenSonuc):checkupBolum(+b.dataset.cu));
   if(ilkEksik)$('#eksikBasla').onclick=()=>checkupBolum(ilkEksik.k.id);
 }
@@ -648,9 +695,10 @@ function checkupListe(){
     return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Check-up</h2><span></span></div>
   <p class="kucukNot" style="text-align:center">Her kanunun tüm soruları. Yarım bırakırsan kaldığın yerden devam eder.</p>
+  ${KANUN.some(k=>K.checkup[k.id])?`<button class="anaBtn2 ikincil" id="ozetlerim" style="margin:0 0 12px">Özetlerim · ${KANUN.filter(k=>K.checkup[k.id]).length} kanun ${IK.ok}</button>`:""}
   <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
   <section class="liste">${ks.map(satir).join('')}</section>`;
-  $('#geri').onclick=giris;
+  $('#geri').onclick=giris;if($('#ozetlerim'))$('#ozetlerim').onclick=()=>{const ilk=KANUN.find(k=>K.checkup[k.id]);ilk&&ozet(ilk.id,checkupListe,'kayit');};
   document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.g=b.dataset.g;kaydet();checkupListe();});
   document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>{const id=+b.dataset.id;if(yarim===id){aktifDevam();return;}K.checkup[id]?checkupAnaliz(id,checkupListe):checkupBolum(id);});
 }
@@ -764,7 +812,7 @@ function soruCiz(kaydir=true){
      <div class="siklar">${q.s.map((s,j)=>`<button class="sik ${cevapli&&j===c?'secili':''}" data-j="${j}"><span class="h">${HARF[j]}</span><span>${esc(s)}</span></button>`).join('')}</div>
      <div class="soruBtn"><button class="btn" id="onc" ${S.i?'':'disabled style="opacity:.4"'}>Önceki</button><button class="btn ana" id="snr">${S.i===S.sorular.length-1?'Bitir':'Sonraki'} ${IK.ok}</button></div>
    </article></div>`;
-  $('#geri').onclick=()=>{aktifKaydet();S=null;giris();};
+  $('#geri').onclick=()=>{const t=S.meta.tur;aktifKaydet();S=null;t==='rontgen'?rontgenSayfa():t==='checkup'?checkupListe():giris();};
   document.querySelectorAll('.sik').forEach(b=>b.onclick=()=>{S.cevap[S.i]=+b.dataset.j;aktifKaydet();if(S.i<S.sorular.length-1){S.i++;soruCiz();}else soruCiz(false);});
   $('#onc').onclick=()=>{if(S.i){S.i--;soruCiz();}};$('#snr').onclick=ileri;
 }

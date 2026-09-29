@@ -120,3 +120,13 @@ body:not(.giriste) #gece::after{content:"";position:absolute;inset:0;background:
 .ySoruK{grid-column:1/-1;font-size:13.5px;line-height:1.4}
 
 .kayitSatir.devam{border-style:solid;border-color:var(--altin);background:rgba(243,194,74,.12)}
+
+.blok{border:1.5px solid var(--altin);border-radius:16px;background:linear-gradient(180deg,rgba(3,40,60,.88),rgba(2,30,46,.92));margin-bottom:14px;box-shadow:0 8px 24px rgba(0,0,0,.28);overflow:hidden}
+.blok .secim{border:0;border-radius:0;margin:0;box-shadow:none;background:none}
+.blokAlt{display:flex;gap:8px;padding:0 12px 12px;flex-wrap:wrap}
+.blokBtn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 10px;border-radius:10px;border:1px solid rgba(243,194,74,.55);color:#F8D57A;font-weight:700;font-size:13px;background:rgba(243,194,74,.08);white-space:nowrap}
+.blokBtn svg{width:15px;height:15px}
+.blokBtn.ana{background:linear-gradient(180deg,#F8D57A,#F3C24A);color:#1b1406;border-color:transparent}
+
+.anaBtn2.ikincil{background:rgba(243,194,74,.1);color:#F8D57A;border:1.5px solid rgba(243,194,74,.6);box-shadow:none}
+.anaBtn2+.anaBtn2{margin-top:10px}
