@@ -298,7 +298,7 @@ function ozet(id,geriHedef,sekme){
   // Madde kartı: hüküm = doğrusu; altında kırmızı "Sınavda böyle yazarlar" (noktanın kendi tuzağı + aynı maddenin yanlış şıkları)
   const kart=(n,kk)=>{kk=kk||k;const mm=n.m[0];const ekTz=mm?kk.tz.filter(z=>tzMadde0(z)===mm):[];ekTz.forEach(z=>kullanilanTz.add(kk.id+'-tz'+kk.tz.indexOf(z)));
     const yanlislar=[...new Set([n.t,...ekTz.flatMap(z=>tirnakSil0(z.y).split(/"\s*\/\s*"/).map(tirnakSil0))].filter(Boolean))];
-    return `<article class="ozKart"><div class="ozUst"><span class="ozNo">${mm?'m.'+mm:''}</span><b>${esc(n.b)}</b>${kayitBtn(n.i)}</div><p class="ozHukum">${esc(n.h)}</p>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}${yanlislar.length?`<div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${yanlislar.map(x=>`<p>${esc(x)}</p>`).join('')}</div></div>`:''}</article>`;};
+    return `<article class="ozKart"><div class="ozUst"><span class="ozNo">${mm?'m.'+mm:''}</span><b>${esc(n.b)}</b>${kayitBtn(n.i)}</div>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}<div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(n.h)}</p></div></div>${yanlislar.length?`<div class="tzYanlis"><span class="tzIk">✕</span><div><small>Sınavda böyle yazarlar</small>${yanlislar.map(x=>`<p>${esc(x)}</p>`).join('')}</div></div>`:''}</article>`;};
   const tirnakSil=t=>String(t).replace(/^[\s"“”']+|[\s"“”']+$/g,'');
   const tzMadde=z=>z.m[0]||((String(z.d).match(/\((\d+)(?:\/[^)]*)?\)\s*$/)||[])[1])||'';
   const tuzakKart=(z,i)=>`<article class="ozKart tzKart"><div class="ozUst"><span class="ozNo">${tzMadde(z)?'m.'+tzMadde(z):''}</span><b>Sınavın tuzağı</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div>

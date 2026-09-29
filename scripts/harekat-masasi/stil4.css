@@ -158,3 +158,5 @@ html,body,button,.kap{touch-action:manipulation}
 
 .ozKart .tzYanlis{margin-top:10px}
 .secimMetin b{font-size:clamp(19px,5.4vw,23px)}
+
+.ozKart .tuzakKutu.iyi{margin-top:8px}.ozKart .tuzakKutu.iyi p{font-size:14.5px;line-height:1.55;color:#F2EEE4}.ozKart .ozNd{margin:0 0 4px;color:#DCEBEF}
