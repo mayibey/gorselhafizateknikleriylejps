@@ -4,6 +4,17 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl (00:30-01:00) — MERKEZ: KISA "DOĞRUSU" + CHECK-UP ANALİZİ DÜZENİ + "KARTA GİT" (OTA iki runtime)
+> Kart sırası kesinleşti: üstte orijinal hüküm → kırmızı "Sınavda böyle yazarlar" → yeşil "Doğrusu" KISA özet (tuzağın doğru
+> ifadesi; yoksa hükmün kalın anahtar parçaları: `nokta_ayristir.py` yeni `k` alanı, 852/1232 noktada var; yoksa ilk parça/başlık).
+> Analiz ekranı: "Altın Özeti aç" en üstte; "Eksik maddeler" (açık) ve "Soru tipi" (kapalı) `<details>`; eksik madde kartında tam ad +
+> "Karta git" (page → RN `{tip:'kart',kanun,madde}` → masa.tsx `kartaGit` → /akis) ve "Altın özete git" (ozet 4. parametre hedefM,
+> `.ozKart[data-m]`e kaydırır+vurgu); altta "Yanlış yaptığın N soru aşağıda" zıplayan ipucu (scroll>80 gizlenir).
+> **Karta git denetimi** (`scratchpad/karta-git-denetim.py`, 429 kanun×madde): yanlış karta giden YOK. Bulunan hata: Karargâh
+> `maddeKartinaGit` ve Merkez kartNo İLK sayıyı alıyordu → etiketi rakamlı 5 kanunda (10, 20, 21, 25, 42: "6284 Ailenin Korunması m.5")
+> hiç eşleşmiyordu; artık " m." sonrası sayı (ikisi de düzeltildi, commit 200c287). MEBS mevzuatının konu kartı yok → o kanunlarda
+> "Karta git" düğmesi çizilmez (yalnız "Altın özete git"). Müşterekte kartsız madde (150) o kanunun patikasına düşer.
+>
 > ### ▶ 30 Eyl (00:00-00:30) — MERKEZ: ALTIN ÖZET KART DÜZENİ + AÇILIŞ SAHNESİ + METİNLER (sayfa sunucudan; OTA iki runtime)
 > Altın Özet kartı sırası (başkan üç tur düzeltti): üstte madde açıklaması → kırmızı "Sınavda böyle yazarlar" (noktanın tuzağı +
 > aynı maddenin yanlış şıkları) → yeşil "Doğrusu" (tuzağın doğru ifadesi; tuzak yoksa hüküm). Eşleşmeyen tuzaklar "Sınavın tuzağı" kartı.
