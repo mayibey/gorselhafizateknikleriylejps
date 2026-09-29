@@ -306,15 +306,15 @@ function ozet(id,geriHedef,sekme){
     <div class="kayitBaslik"><b>Kaydettiğin kartlar (${Object.keys(K.kayit||{}).length})</b><button id="tumu">Tümünü gör ›</button></div>
     <section class="liste">${kayitli.slice(0,3).map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik madde çıkmadı'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
   const kayitKartlar=[];for(const kk of KANUN){kk.n.forEach(n=>{if(K.kayit[n.i])kayitKartlar.push({k:kk,h:kart(n)});});kk.tz.forEach((z,i)=>{if(K.kayit[kk.id+'-tz'+i])kayitKartlar.push({k:kk,h:tuzakKart(z,i)});});}
-  const kayitliHtml=kayitKartlar.length?`<p class="ozOzet">${kayitKartlar.length} kayıtlı kart · dokunup kaldırabilirsin</p>${kayitKartlar.map(x=>`<p class="ozKanun">${esc(kisa(x.k))}</p>${x.h}`).join('')}<h3 class="bolumBaslik">Check-up yaptığın kanunlar</h3>`:'<p class="kucukNot">Henüz kart kaydetmedin. Özetteki kartların sağ üstündeki "Kaydet"e dokun.</p>';
+  const kayitliHtml=kayitKartlar.length?`<p class="ozOzet">${kayitKartlar.length} kayıtlı kart · dokunup kaldırabilirsin</p>${kayitKartlar.map(x=>`<p class="ozKanun">${esc(kisa(x.k))}</p>${x.h}`).join('')}<h3 class="bolumBaslik">Check-up yaptığın kanunlar</h3>`:'<p class="kucukNot">Henüz kart kaydetmedin. Kartların sağ üstündeki "Kaydet"e dokun.</p>';
   const eskiKayitliHtml=`<section class="liste">${kayitli.map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${tarihYaz(K.checkup[x.id].tarih)} · ${K.checkup[x.id].d}/${K.checkup[x.id].n} · ${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik yok'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Altın Özet</h2><span></span></div>
-  <div class="segment" id="ozSekme"><button data-s="bu" aria-pressed="${sekme==='bu'}">Bu kanun özeti</button><button data-s="kayit" aria-pressed="${sekme==='kayit'}">Kaydedilenler</button></div>
+  <div class="segment" id="ozSekme"><button data-s="bu" aria-pressed="${sekme==='bu'}">Eksik maddelerim</button><button data-s="kayit" aria-pressed="${sekme==='kayit'}">Kaydettiklerim</button></div>
   ${sekme==='bu'?bu:kayitliHtml+(kayitKartlar.length?eskiKayitliHtml:'')}`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};
   document.querySelectorAll('#ozSekme button').forEach(b=>b.onclick=()=>{YIGIN.pop();POP=true;ozet(id,geriHedef,b.dataset.s);});
   document.querySelectorAll('[data-oz]').forEach(b=>b.onclick=()=>ozet(+b.dataset.oz,geriHedef,'bu'));
-  document.querySelectorAll('[data-kaydet]').forEach(b=>b.onclick=()=>{const id=b.dataset.kaydet;if(K.kayit[id])delete K.kayit[id];else K.kayit[id]=true;kaydet();b.classList.toggle('acik',!!K.kayit[id]);b.innerHTML=IK.yerimi+(K.kayit[id]?'Kaydedildi':'Kaydet');toast(K.kayit[id]?'Kaydedildi. Kaydedilenler sekmesinden ulaşırsın.':'Kayıttan kaldırıldı.');});
+  document.querySelectorAll('[data-kaydet]').forEach(b=>b.onclick=()=>{const id=b.dataset.kaydet;if(K.kayit[id])delete K.kayit[id];else K.kayit[id]=true;kaydet();b.classList.toggle('acik',!!K.kayit[id]);b.innerHTML=IK.yerimi+(K.kayit[id]?'Kaydedildi':'Kaydet');toast(K.kayit[id]?'Kaydedildi. Kaydettiklerim sekmesinden ulaşırsın.':'Kayıttan kaldırıldı.');});
   if($('#tumu'))$('#tumu').onclick=()=>ozet(id,geriHedef,'kayit');
 }
 
