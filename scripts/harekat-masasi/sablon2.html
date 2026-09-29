@@ -490,6 +490,11 @@ html,body,button,.kap{touch-action:manipulation}
 .kbBtn{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end}
 .kbBtn .btn.kucuk svg{width:14px;height:14px;margin-left:4px;vertical-align:-2px}
 
+.kaydet{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;color:#DCEBEF;border:1px solid rgba(220,235,239,.45);padding:4px 9px;border-radius:7px;white-space:nowrap;background:rgba(2,30,46,.5)}
+.kaydet svg{width:12px;height:12px}
+.kaydet.acik{color:#8FE3B5;border-color:rgba(63,191,127,.6);background:rgba(63,191,127,.1)}
+.ozKanun{font-family:var(--mono);font-size:12px;color:var(--altin2);margin:14px 0 6px}
+
 </style>
 <div id="gece" aria-hidden="true"></div>
 <div class="kap">
@@ -556,7 +561,7 @@ const IK={
 
 /* ---------- kayıt ---------- */
 const ANAHTAR='harekat-merkezi-v3';
-let K={tani:{},cevap:{},rontgen:null,checkup:{},aktif:null,g:'mus'};
+let K={tani:{},cevap:{},rontgen:null,checkup:{},aktif:null,g:'mus',kayit:{}};
 try{const s=JSON.parse(localStorage.getItem(ANAHTAR)||'null');if(s&&s.tani)K=Object.assign(K,s);}catch(e){}
 function anahtarGoc(o){const y={};for(const [k,v] of Object.entries(o||{}))y[kid(k)]=v;return y;}
 K.tani=anahtarGoc(K.tani);K.cevap=anahtarGoc(K.cevap);
@@ -564,7 +569,7 @@ K.tani=anahtarGoc(K.tani);K.cevap=anahtarGoc(K.cevap);
 // biz her değişikliği window.ReactNativeWebView.postMessage ile geri yollarız (uygulama sunucuya yazar).
 function birlestir(b){ if(!b||typeof b!=='object')return;
   const bt=anahtarGoc(b.tani),bc=anahtarGoc(b.cevap);
-  K.tani=Object.assign({},bt,K.tani);K.cevap=Object.assign({},bc,K.cevap);K.checkup=Object.assign({},b.checkup||{},K.checkup||{});
+  K.tani=Object.assign({},bt,K.tani);K.cevap=Object.assign({},bc,K.cevap);K.checkup=Object.assign({},b.checkup||{},K.checkup||{});K.kayit=Object.assign({},b.kayit||{},K.kayit||{});
   if(!K.rontgen||(b.rontgen&&b.rontgen.tarih>K.rontgen.tarih))K.rontgen=b.rontgen||K.rontgen;
   const hepsi=[...(b.rontgenler||[]),...(K.rontgenler||[])];const g2={};hepsi.forEach(x=>{if(x&&x.ids)g2[x.saat||x.tarih]=x;});K.rontgenler=Object.values(g2).sort((a,b)=>(a.saat||a.tarih).localeCompare(b.saat||b.tarih)).slice(-8);
   if(!K.aktif&&b.aktif)K.aktif=b.aktif; if(b.g)K.g=K.g||b.g; }
@@ -784,8 +789,10 @@ function ozet(id,geriHedef,sekme){
   const takviye=noktalar.length<3?k.n.filter(n=>n.s&&!ilgili(n)).slice(0,6):[];
   const tipler=cu.tipler||[];
   const kayitli=KANUN.filter(x=>K.checkup[x.id]).sort((a,b)=>K.checkup[b.id].tarih.localeCompare(K.checkup[a.id].tarih));
-  const kart=n=>`<article class="ozKart"><div class="ozUst"><span class="ozNo">${n.m.length?'m.'+n.m[0]:''}</span><b>${esc(n.b)}</b><span class="kaydedildi">${IK.yerimi}Kaydedildi</span></div><p class="ozHukum">${esc(n.h)}</p>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}${n.t?`<div class="tuzakKutu"><span class="tuzakIk">${IK.unlem}</span><div><b>Tuzak</b><p>${esc(n.t)}</p></div></div>`:''}</article>`;
-  const tuzakKart=z=>`<article class="ozKart"><div class="ozUst"><span class="ozNo">${z.m.length?'m.'+z.m[0]:''}</span><b>Yanlış şık</b></div><p class="ozHukum">"${esc(z.y)}"</p><div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;
+  K.kayit=K.kayit||{};
+  const kayitBtn=id=>`<button class="kaydet ${K.kayit[id]?'acik':''}" data-kaydet="${id}">${IK.yerimi}${K.kayit[id]?'Kaydedildi':'Kaydet'}</button>`;
+  const kart=n=>`<article class="ozKart"><div class="ozUst"><span class="ozNo">${n.m.length?'m.'+n.m[0]:''}</span><b>${esc(n.b)}</b>${kayitBtn(n.i)}</div><p class="ozHukum">${esc(n.h)}</p>${n.nd?`<p class="ozNd">${esc(n.nd)}</p>`:''}${n.t?`<div class="tuzakKutu"><span class="tuzakIk">${IK.unlem}</span><div><b>Tuzak</b><p>${esc(n.t)}</p></div></div>`:''}</article>`;
+  const tuzakKart=(z,i)=>`<article class="ozKart"><div class="ozUst"><span class="ozNo">${z.m.length?'m.'+z.m[0]:''}</span><b>Yanlış şık</b>${kayitBtn(k.id+'-tz'+k.tz.indexOf(z))}</div><p class="ozHukum">"${esc(z.y)}"</p><div class="tuzakKutu iyi"><span class="tuzakIk">${IK.tik}</span><div><b>Doğrusu</b><p>${esc(z.d)}</p></div></div></article>`;
   const tablo=(baslik,rows)=>rows.length?`<h3 class="bolumBaslik">${baslik}</h3><div class="tabloKap ozTablo"><table>${rows.slice(0,16).map(r=>`<tr><td>${esc(r[0])}</td><td><b>${esc(r[1])}</b></td></tr>`).join('')}</table></div>`:'';
   const bu=`<p class="ozOzet">${esc(kisa(k))} · check-up ${tarihYaz(cu.tarih)} · ${cu.d}/${cu.n} doğru${cu.kacan.length?' · eksik: '+cu.kacan.map(m=>'m.'+m).join(', '):''}</p>
     ${tipler.length?`<div class="tuzakKutu bilgi"><span class="tuzakIk">${IK.unlem}</span><div><b>Hata yaptığın soru tipi: ${tipler.map(t=>esc((TIPLER.find(x=>x[0]===t)||[])[1]||t)).join(', ')}</b><p>${tipler.map(t=>esc(TIP_TAVSIYE[t]||'')).join(' ')}</p></div></div>`:''}
@@ -795,15 +802,18 @@ function ozet(id,geriHedef,sekme){
     ${tipler.includes('sayi')||tipler.includes('sure')?tablo('Sayılar ve süreler',k.sayi):''}
     ${tipler.includes('makam')?tablo('Yetkili makamlar',k.makam):''}
     ${takviye.length?`<h3 class="bolumBaslik">Bu kanundan sınavda çıkmış noktalar</h3>${takviye.map(kart).join('')}`:''}
-    <div class="kayitBaslik"><b>Kaydedilen özetler (${kayitli.length})</b><button id="tumu">Tümünü gör ›</button></div>
+    <div class="kayitBaslik"><b>Kaydettiğin kartlar (${Object.keys(K.kayit||{}).length})</b><button id="tumu">Tümünü gör ›</button></div>
     <section class="liste">${kayitli.slice(0,3).map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik madde çıkmadı'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
-  const kayitliHtml=`<section class="liste">${kayitli.map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${tarihYaz(K.checkup[x.id].tarih)} · ${K.checkup[x.id].d}/${K.checkup[x.id].n} · ${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik yok'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
+  const kayitKartlar=[];for(const kk of KANUN){kk.n.forEach(n=>{if(K.kayit[n.i])kayitKartlar.push({k:kk,h:kart(n)});});kk.tz.forEach((z,i)=>{if(K.kayit[kk.id+'-tz'+i])kayitKartlar.push({k:kk,h:tuzakKart(z,i)});});}
+  const kayitliHtml=kayitKartlar.length?`<p class="ozOzet">${kayitKartlar.length} kayıtlı kart · dokunup kaldırabilirsin</p>${kayitKartlar.map(x=>`<p class="ozKanun">${esc(kisa(x.k))}</p>${x.h}`).join('')}<h3 class="bolumBaslik">Check-up yaptığın kanunlar</h3>`:'<p class="kucukNot">Henüz kart kaydetmedin. Özetteki kartların sağ üstündeki "Kaydet"e dokun.</p>';
+  const eskiKayitliHtml=`<section class="liste">${kayitli.map(x=>`<button class="satir cu" data-oz="${x.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x))}</b><small>${tarihYaz(K.checkup[x.id].tarih)} · ${K.checkup[x.id].d}/${K.checkup[x.id].n} · ${K.checkup[x.id].kacan.length?'eksik: '+K.checkup[x.id].kacan.map(m=>'m.'+m).join(', '):'eksik yok'}</small></span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>`;
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Altın Özet</h2><span></span></div>
   <div class="segment" id="ozSekme"><button data-s="bu" aria-pressed="${sekme==='bu'}">Bu kanun özeti</button><button data-s="kayit" aria-pressed="${sekme==='kayit'}">Kaydedilenler</button></div>
-  ${sekme==='bu'?bu:kayitliHtml}`;
+  ${sekme==='bu'?bu:kayitliHtml+(kayitKartlar.length?eskiKayitliHtml:'')}`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};
   document.querySelectorAll('#ozSekme button').forEach(b=>b.onclick=()=>{YIGIN.pop();POP=true;ozet(id,geriHedef,b.dataset.s);});
   document.querySelectorAll('[data-oz]').forEach(b=>b.onclick=()=>ozet(+b.dataset.oz,geriHedef,'bu'));
+  document.querySelectorAll('[data-kaydet]').forEach(b=>b.onclick=()=>{const id=b.dataset.kaydet;if(K.kayit[id])delete K.kayit[id];else K.kayit[id]=true;kaydet();b.classList.toggle('acik',!!K.kayit[id]);b.innerHTML=IK.yerimi+(K.kayit[id]?'Kaydedildi':'Kaydet');toast(K.kayit[id]?'Kaydedildi. Kaydedilenler sekmesinden ulaşırsın.':'Kayıttan kaldırıldı.');});
   if($('#tumu'))$('#tumu').onclick=()=>ozet(id,geriHedef,'kayit');
 }
 
