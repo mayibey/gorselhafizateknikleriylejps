@@ -4,6 +4,13 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl (03:30) — MERKEZ KULLANIM SAYACI (başkan: "kim açmış, kaçı kilide takılmış göreyim")
+> `merkez_olay` (user_id, olay, ayrinti, premium, brans, zaman; RLS yalnız kendi insert; okuma servis anahtarıyla). Olaylar:
+> `acti` (masa.tsx ekran hazır olunca, tek sefer) · `kilit` {nerede: rontgen|checkup|devam|ozet} (üye olmayan) · `rontgen/checkup/devam/ozet`
+> (üye başlattı; sayfa `olay()` → `{tip:'olay'}` → masa.tsx insert). Rapor: `node scripts/merkez-rapor.mjs [gün]` → açan kişi
+> (üye/değil), kilide takılan, başlayan, kişi listesi e-postayla. Tuzak: yeni tablo sonrası PostgREST önbelleği →
+> `NOTIFY pgrst, 'reload schema'` (sql-calistir ile). sql-calistir env ister: EXPO_PUBLIC_SUPABASE_URL + SUPABASE_ACCESS_TOKEN export.
+>
 > ### ▶ 30 Eyl (02:00-03:15) — MERKEZ HERKESE AÇILDI (kilit soru çözümünden önce) + 16/16 BRANŞ ALTIN ÖZET KİTABI
 > **Yayın:** `uygulama_ayar.ozellik_herkes` = ["karma-deneme","eksik-tarama"] (başkan "yayınla"). Kilit modeli (başkan: "içeride
 > gezebilsin ama soru çözmeden önce ödeme ekranı, Altın Özet'i göremesin"): üye olmayana sayfanın İÇERİKSİZ sürümü iner
