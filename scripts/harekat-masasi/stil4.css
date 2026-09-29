@@ -130,3 +130,11 @@ body:not(.giriste) #gece::after{content:"";position:absolute;inset:0;background:
 
 .anaBtn2.ikincil{background:rgba(243,194,74,.1);color:#F8D57A;border:1.5px solid rgba(243,194,74,.6);box-shadow:none}
 .anaBtn2+.anaBtn2{margin-top:10px}
+
+/* çift dokunma yakınlaşması kapalı */
+html,body,button,.kap{touch-action:manipulation}
+/* giriş manşeti */
+.gManset{margin:22px 0 0;font-family:var(--baslik);font-weight:800;font-size:clamp(26px,7.6vw,36px);line-height:1.08;color:#fff;letter-spacing:.3px;text-shadow:0 2px 12px rgba(0,20,30,.85),0 0 24px rgba(243,194,74,.25)}
+.gManset em{font-style:normal;color:var(--altin2)}
+.gSinava{margin-top:22px}
+.gGun b{font-size:46px}

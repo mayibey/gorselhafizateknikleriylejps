@@ -299,6 +299,8 @@ function RootNavigator() {
     <>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" />
+        {/* Harekât Merkezi: kenardan kaydırma sayfanın kendi geçmişinde geri gider (WebView), ekranı kapatmaz. */}
+        <Stack.Screen name="masa" options={{ gestureEnabled: false }} />
         <Stack.Screen name="kanun-sec" />
         <Stack.Screen name="zor-detay" />
         <Stack.Screen name="akis" />

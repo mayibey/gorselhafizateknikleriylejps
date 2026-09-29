@@ -3,7 +3,7 @@ import * as FileSystem from 'expo-file-system/legacy';
 import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, AppState, BackHandler, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
@@ -48,6 +48,12 @@ export default function MasaEkrani() {
   const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
   const [hata, setHata] = useState(false);
   const uid = useRef<string | null>(null);
+  const derinlik = useRef(0); // sayfanın kendi ekran yığını (giriş=0)
+  // Geri: sayfa içinde bir önceki ekran varsa oraya, yoksa Karargâh'a.
+  const geri = () => {
+    if (derinlik.current > 0) web.current?.injectJavaScript('window.merkezGeri && window.merkezGeri(); true;');
+    else router.back();
+  };
 
   useEffect(() => {
     let yasiyor = true;
@@ -91,15 +97,19 @@ export default function MasaEkrani() {
     const abone = AppState.addEventListener('change', (d) => {
       if (d !== 'active') web.current?.injectJavaScript('window.merkezFlush && window.merkezFlush(); true;');
     });
+    const donanim = Platform.OS === 'android' ? BackHandler.addEventListener('hardwareBackPress', () => { geri(); return true; }) : null;
     return () => {
       yasiyor = false;
       abone.remove();
+      donanim?.remove();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const mesaj = (e: WebViewMessageEvent) => {
     try {
-      const m = JSON.parse(e.nativeEvent.data) as { tip?: string; veri?: unknown };
+      const m = JSON.parse(e.nativeEvent.data) as { tip?: string; veri?: unknown; n?: number };
+      if (m.tip === 'derinlik') { derinlik.current = Number(m.n) || 0; return; }
       if (m.tip !== 'kaydet' || !m.veri || !uid.current || !supabase) return;
       void supabase
         .from('merkez_ilerleme')
@@ -115,7 +125,7 @@ export default function MasaEkrani() {
     <SafeAreaView style={styles.kap} edges={['top', 'bottom']}>
       <StatusBar style="light" />
       <View style={styles.ust}>
-        <Pressable onPress={() => router.back()} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
+        <Pressable onPress={geri} hitSlop={12} accessibilityRole="button" accessibilityLabel="Geri">
           <MaterialCommunityIcons name="arrow-left" size={24} color="#ECE6D8" />
         </Pressable>
         <AppText variant="govde" bold style={styles.baslik}>
@@ -131,6 +141,7 @@ export default function MasaEkrani() {
           domStorageEnabled
           javaScriptEnabled
           setSupportMultipleWindows={false}
+          allowsBackForwardNavigationGestures
           injectedJavaScriptBeforeContentLoaded={`window.MERKEZ_KAYIT = ${kayit}; true;`}
           onMessage={mesaj}
         />

@@ -137,6 +137,6 @@ open(os.path.join(KOK, 'sablon2.html'), 'w', encoding='utf-8').write(ISKELET)
 veri = open(os.path.join(C, 'veri2.json'), encoding='utf-8').read().replace('</', '<\\/')
 sayfa = ISKELET.replace('__VERI__', veri)
 open(os.path.join(C, 'harekat-masasi.html'), 'w', encoding='utf-8').write(sayfa)
-doc = '<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>html,body{margin:0}[hidden]{display:none!important}</style></head><body>' + sayfa + '</body></html>'
+doc = '<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><style>html,body{margin:0}[hidden]{display:none!important}</style></head><body>' + sayfa + '</body></html>'
 open(os.path.join(C, 'masa-app.html'), 'w', encoding='utf-8').write(doc)
 print('ok', len(sayfa))

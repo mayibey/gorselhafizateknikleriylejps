@@ -1912,7 +1912,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(243,194,74,0.6)',
   },
   blokArasi: {
-    marginTop: 0, // 23 Ağu: şeritlerin üstündeki fazladan boşluk kaldırıldı
+    // 29 Eyl (başkan): kutular arası boşluk azalsın, alta taşan ikizler tek ekrana sığsın → Screen gövde gap'ini (16) 8'e indirir.
+    marginTop: -Spacing.two,
   },
   basvuruKapsul: {
     // Artık sayacın üstünde, açıklamanın sağında duruyor → üstten boşluk yok.
@@ -2076,7 +2077,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center', // tek satır: ikon, yazı ve TEKRAR ET aynı hizada
     gap: Spacing.two,
-    paddingVertical: Spacing.two,
+    paddingVertical: Spacing.one, // 29 Eyl: şeritler inceldi (tek ekran)
   },
   tekrarBaslik2: {
     letterSpacing: 1,
@@ -2102,7 +2103,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // 246 iPhone'da alt sekme çubuğuna taşıyordu (13 Ağu) → 198. 17 Ağu: başkan "alt boşluk
     // fazla, kartlar biraz büyüsün" → 220 (246 ile 198 arası güvenli orta; taşmadan boşluğu doldurur).
-    height: 220,
+    height: 200, // 29 Eyl: Harekât Merkezi şeridi eklenince taşıyordu → 200
     borderRadius: Radius.l,
     borderWidth: 1,
     borderColor: 'rgba(67,203,218,0.5)',
