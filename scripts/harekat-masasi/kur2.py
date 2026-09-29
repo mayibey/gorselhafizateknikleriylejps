@@ -82,6 +82,11 @@ body.giriste .secBtn{padding:11px 16px;font-size:15.5px;border-radius:12px}body.
 body.giriste .altNav{margin-top:2px;gap:10px}body.giriste .altNav button{font-size:13px;padding:4px 2px}body.giriste .altNav svg{width:17px;height:17px}
 @media (max-height:740px){body.giriste .heroAlt{display:none}body.giriste .secAc{display:none}body.giriste .secKart{gap:7px}}
 @media (max-height:620px){body.giriste .secListe{display:none}body.giriste .heroBas{font-size:20px;margin:6px 0 2px}body.giriste .secKart{padding:10px 12px}}
+.kayitSatir{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:9px 12px;border-radius:10px;border:1px dashed rgba(243,194,74,.5);color:#F2EEE4;font-size:13px;text-align:left}.kayitSatir b{color:var(--altin2);white-space:nowrap}.kayitSatir svg{width:16px;height:16px;vertical-align:-3px;margin-right:6px}
+body.giriste .kayitSatir{padding:7px 10px;font-size:12.5px}
+.tipKutu{padding:12px 14px;margin-bottom:12px;font-size:14px;line-height:1.5;border-color:rgba(243,194,74,.45)}
+.alt3.sabit{position:static;background:none;border:0;backdrop-filter:none;padding:14px 0 0}
+.sinav .alt3{position:fixed}
 @media (max-width:400px){.secMeta{font-size:12.5px}.marka small{letter-spacing:1.4px;font-size:10px}}
 .tarama2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:720px){.tarama2{grid-template-columns:1fr}}
 .tur{display:flex;flex-direction:column;gap:6px;padding:18px 20px}.tur h3{font-family:var(--baslik);font-size:22px;margin:4px 0 2px;color:var(--altin2)}.tur p{margin:0;font-size:14px;line-height:1.55}.tur .btn{margin-top:auto;align-self:flex-start}
@@ -110,14 +115,13 @@ ISKELET = f"""<title>Harekât Merkezi</title>
 {EK_CSS}
 {gece}
 <div class="kap">
-  <header class="ust"><div class="marka"><canvas id="radar" width="104" height="104" aria-hidden="true"></canvas><div><h1>Harekât <i>Merkezi</i></h1><small>Eksiğini bul · nokta atışıyla kapat</small></div></div></header>
-  <main id="ekran"></main>
+    <main id="ekran"></main>
   <div class="sifirla"><button id="sifirlaBtn">İlerlemeyi sıfırla</button></div>
 </div>
 <div class="toast" id="toast" role="status"></div>
 <script type="application/json" id="veri">__VERI__</script>
 <script>
-{open(os.path.join(KOK, 'masa2.js'), encoding='utf-8').read()}
+{open(os.path.join(KOK, 'masa3.js'), encoding='utf-8').read()}
 </script>
 """
 open(os.path.join(KOK, 'sablon2.html'), 'w', encoding='utf-8').write(ISKELET)
