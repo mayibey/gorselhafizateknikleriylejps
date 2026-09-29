@@ -173,7 +173,7 @@ function karistir(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floo
 function maddeyeGoreSec(k,adet,haric){
   const g={};karistir(k.q).forEach(q=>{if(haric&&haric.has(kid(q.i)))return;const m=maddeNo(q)||'?';(g[m]=g[m]||[]).push(q);});
   const anahtar=karistir(Object.keys(g));const out=[];let tur=0;
-  while(out.length<adet&&anahtar.some(a=>g[a].length)){for(const a of anahtar){if(out.length>=adet)break;if(g[a].length)out.push(g[a].shift());}if(++tur>30)break;}
+  while(out.length<adet&&anahtar.some(a=>g[a].length)){for(const a of anahtar){if(out.length>=adet)break;if(g[a].length)out.push(g[a].shift());}if(++tur>500)break;}
   return out;
 }
 /* ---------- 2. RÖNTGEN ---------- */
@@ -221,7 +221,8 @@ function checkupListe(){
   const bolumBoyu=k=>k.q.length;
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup'?K.aktif.meta.kanun:null;
   const satir=x=>{const cu=K.checkup[x.k.id];const durum=cu?'tam':yarim===x.k.id?'devam':'yok';
-    const pill={tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
+    const kismi=cu&&cu.n<x.k.q.length;
+    const pill=kismi&&durum==='tam'?[`Kısmi · ${cu.n}/${x.k.q.length}`,'#F3C24A']:{tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
     const cevaplanan=durum==='devam'?Object.keys(K.aktif.cevap||{}).length:0;
     const oran=cu?cu.d/cu.n:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
     return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
@@ -234,17 +235,21 @@ function checkupListe(){
   document.querySelectorAll('#kpSec button').forEach(b=>b.onclick=()=>{K.g=b.dataset.g;kaydet();YIGIN.pop();POP=true;checkupListe();});
   document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>{const id=+b.dataset.id;if(yarim===id){aktifDevam();return;}K.checkup[id]?checkupAnaliz(id,checkupListe):checkupBolum(id);});
 }
-function checkupBolum(id){
-  // DETAYLI: kanunun TÜM soruları (başkan: "check-up dediğin detaylı olur"); maddelere dağıtılmış sıra, yarım kalırsa devam eder
-  const k=BYID[id];const s=maddeyeGoreSec(k,k.q.length);
-  basla(s,`${kisa(k)} Check-up`,{tani:true,tur:'checkup',kanun:id});
+function checkupBolum(id,sadeceKalan){
+  // DETAYLI: kanunun TÜM soruları (başkan: "check-up dediğin detaylı olur"); maddelere dağıtılmış sıra, yarım kalırsa devam eder.
+  // sadeceKalan: eski (8-12 soruluk) check-up'ı tamamlamak için yalnız cevaplanmamış sorular; sonuç öncekiyle birleşir.
+  const k=BYID[id];const cu=K.checkup[id];
+  const haric=sadeceKalan&&cu?new Set(cu.ids.map(kid)):null;
+  const s=maddeyeGoreSec(k,k.q.length,haric);
+  if(!s.length){toast('Bu kanunun bütün soruları zaten çözülmüş.');return;}
+  basla(s,`${kisa(k)} Check-up`,{tani:true,tur:'checkup',kanun:id,kalan:!!sadeceKalan});
 }
 function checkupBitir(){
   const id=S.meta.kanun;let d=0,n=0;const kacan=[];const ids=S.sorular.map(q=>q.i);
   S.sorular.forEach((q,i)=>{if(S.cevap[i]!==undefined){const v=S.cevap[i]===q.d?1:0;K.tani[kid(q.i)]=v;K.cevap[kid(q.i)]=S.cevap[i];n++;d+=v;if(!v){const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}});
   const tipler=zayifTipler(S.sorular).map(t=>t.id);
-  const eski=K.checkup[id];
-  K.checkup[id]={tarih:bugun(),d,n,kacan:eski?[...new Set([...eski.kacan,...kacan])]:kacan,ids:eski?[...new Set([...eski.ids,...ids])]:ids,tipler:[...new Set([...(eski?.tipler||[]),...tipler])]};
+  const eski=S.meta.kalan?K.checkup[id]:null;
+  K.checkup[id]={tarih:bugun(),d:d+(eski?eski.d:0),n:n+(eski?eski.n:0),kacan:eski?[...new Set([...eski.kacan,...kacan])]:kacan,ids:eski?[...new Set([...eski.ids,...ids])]:ids,tipler:[...new Set([...(eski?.tipler||[]),...tipler])]};
   K.aktif=null;kaydet();S=null;YIGIN.pop();checkupAnaliz(id,checkupListe);
 }
 /* ---------- 5. CHECK-UP ANALİZİ ---------- */
@@ -260,7 +265,8 @@ function checkupAnaliz(id,geriHedef){
   const tipler=tipIst(sorular).filter(t=>t.n>=1).sort((a,b)=>(a.oran??1)-(b.oran??1));
   const yanlislar=sorular.filter(q=>K.tani[kid(q.i)]===0);
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div></div></section>
+  <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${cu.n<k.q.length?`<p>Bu kanunun ${k.q.length} sorusundan ${cu.n}'i çözüldü.</p>`:''}</div></section>
+  ${cu.n<k.q.length?`<button class="anaBtn2 ikincil" id="kalan" style="margin-top:10px">Kalan ${k.q.length-cu.n} soruyu çöz ${IK.ok}<small>sonuç bu check-up'la birleşir</small></button>`:''}
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler</h3>
   <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="satir"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span>${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n}</span></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?</h3>
@@ -268,6 +274,7 @@ function checkupAnaliz(id,geriHedef){
   <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve tuzakları. Özet kaydedildi.</small></button>
   ${yanlislar.length?`<h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[kid(q.i)]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[kid(q.i)]]}) ${esc(q.s[K.cevap[kid(q.i)]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>`:''}
   <div class="altLinkler"><button id="yeniden">Bu kanunu yeniden check-up yap</button></div>`;
+  if($('#kalan'))$('#kalan').onclick=()=>checkupBolum(id,true);
   $('#geri').onclick=()=>{if(!window.merkezGeri())checkupListe();};$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);
 }
 /* ---------- 6. ALTIN ÖZET ---------- */
