@@ -1,4 +1,4 @@
-# Harekât Masası v2 kurucu: sablon.html'in CSS'i + yeni iskelet + masa2.js + veri2.json
+# Harekât Merkezi v2 kurucu: sablon.html'in CSS'i + yeni iskelet + masa2.js + veri2.json
 #   python kur2.py <calisma_klasoru>   → harekat-masasi.html (artifact) + masa-app.html (uygulama)
 import os, re, sys
 KOK = os.path.dirname(os.path.abspath(__file__))
@@ -51,7 +51,7 @@ body.sinavda .toast{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 @media (max-width:480px){.ozet{grid-template-columns:1fr}.buyuk{font-size:34px}}
 </style>
 """
-ISKELET = f"""<title>Harekât Masası</title>
+ISKELET = f"""<title>Harekât Merkezi</title>
 <meta name="description" content="JSPS sınavı için eksik taraması: Röntgen veya Check-up, eksik haritası, Nokta Atışı kartları.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -60,7 +60,7 @@ ISKELET = f"""<title>Harekât Masası</title>
 {EK_CSS}
 {gece}
 <div class="kap">
-  <header class="ust"><div class="marka"><canvas id="radar" width="104" height="104" aria-hidden="true"></canvas><div><h1>Harekât <i>Masası</i></h1><small>Eksiğini bul · nokta atışıyla kapat</small></div></div></header>
+  <header class="ust"><div class="marka"><canvas id="radar" width="104" height="104" aria-hidden="true"></canvas><div><h1>Harekât <i>Merkezi</i></h1><small>Eksiğini bul · nokta atışıyla kapat</small></div></div></header>
   <main id="ekran"></main>
   <div class="sifirla"><button id="sifirlaBtn">İlerlemeyi sıfırla</button></div>
 </div>

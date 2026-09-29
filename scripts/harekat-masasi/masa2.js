@@ -1,5 +1,5 @@
 (()=>{
-/* ================= HAREKÂT MASASI v2 — Teşhis → Eksikler → Nokta Atışı ================= */
+/* ================= HAREKÂT MERKEZİ v2 — Teşhis → Eksikler → Nokta Atışı ================= */
 const V=JSON.parse(document.getElementById('veri').textContent);
 const KANUN=V.kanun, BYID={}; KANUN.forEach(k=>{BYID[k.id]=k; k.q.forEach(q=>q.l=k.id);});
 const TUM={}; KANUN.forEach(k=>k.q.forEach(q=>TUM[q.i]=q));

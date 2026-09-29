@@ -212,7 +212,7 @@ export default function KarargahScreen() {
   // paywall (teşvik).
   // Şerit KİTAP LİSTESİ ekranını açar (başkan: "direkt kitap açılmasın, kitaplar sıralansın").
   const altinOzetAcik = true;
-  // HAREKÂT MASASI + eksik taraması (29 Eyl 2026): yalnız başkanda (kişisel bayrak), deneme aşaması.
+  // HAREKÂT MERKEZİ + eksik taraması (29 Eyl 2026): yalnız başkanda (kişisel bayrak), deneme aşaması.
   const masaAcik = useKisiselOzellik('eksik-tarama');
   // Tekrar Zamanı yarım kartı: dokununca paslanan kanun listesi açılır (10 Ağu gece yerleşimi).
   const [tekrarAcik, setTekrarAcik] = useState(false);
@@ -1115,13 +1115,13 @@ export default function KarargahScreen() {
               onPress={() => { hafifDokun(); router.push('/masa'); }}
               style={({ pressed }) => [styles.gecePanel, styles.tekrarSatir, styles.blokArasi, pressed && styles.pressed]}
               accessibilityRole="button"
-              accessibilityLabel="Harekât Masası ve eksik taraması">
+              accessibilityLabel="Harekât Merkezi ve eksik taraması">
               <View style={styles.emirIkonHalka}>
                 <MaterialCommunityIcons name="radar" size={24} color={Palette.altinParlak} />
               </View>
               <View style={[styles.erMetin, styles.tekrarYaziAlani]}>
                 <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
-                  Harekât Masası
+                  Harekât Merkezi
                 </AppText>
               </View>
               <View style={styles.tekrarEtKose}>

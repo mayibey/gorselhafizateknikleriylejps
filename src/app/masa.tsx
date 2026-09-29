@@ -12,8 +12,8 @@ import { Spacing } from '@/constants/theme';
 import { imzaliUrller } from '@/lib/imzali-url';
 
 /**
- * HAREKÂT MASASI (başkan, 29 Eyl 2026: "bunu uygulamaya ekle, sadece ben göreyim").
- * Müşterek + MEBS çalışma masası ve EKSİK TARAMASI (Hızlı Check-up / Detaylı Röntgen → sınav reçetesi).
+ * HAREKÂT MERKEZİ (eski adı Harekât Masası; başkan, 29 Eyl 2026: "bunu uygulamaya ekle, sadece ben göreyim").
+ * EKSİK TARAMASI (Hızlı Check-up / Detaylı Röntgen → sınav reçetesi).
  * Sayfa sunucudan gelir (`icerik/tarama/masa.html`, imzalı URL) → OTA'sız güncellenir; son inen kopya
  * cihazda saklanır, bağlantı yoksa onunla açılır. İlerleme sayfanın kendi localStorage'ında
  * (baseUrl sabit olduğu için kalıcı). Giriş Karargâh'ta `eksik-tarama` kişisel bayrağıyla açılır.
@@ -67,7 +67,7 @@ export default function MasaEkrani() {
           <MaterialCommunityIcons name="arrow-left" size={24} color="#ECE6D8" />
         </Pressable>
         <AppText variant="govde" bold style={styles.baslik}>
-          Harekât Masası
+          Harekât Merkezi
         </AppText>
       </View>
       {html ? (

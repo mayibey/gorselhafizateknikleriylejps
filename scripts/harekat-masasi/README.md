@@ -1,4 +1,4 @@
-# Harekât Masası (başkanın çalışma masası + eksik taraması)
+# Harekât Merkezi (eski adı Harekât Masası) (başkanın çalışma masası + eksik taraması)
 
 - `sablon.html`: sayfanın TAMAMI (analiz.js ve tarama.js zaten İÇİNE işlenmiş; yama_*.py tarihçe içindir, tekrar çalıştırma).
 - Veri: `veri.json` (repo'da yok, 1,7 MB) — `scripts/altin-ozet/icerik/ozet_A..D.md` + `src/assets/kart-sorulari.ts` + `premium-denemeler.ts`'den üretilir.
