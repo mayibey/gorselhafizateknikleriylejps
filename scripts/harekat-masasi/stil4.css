@@ -155,3 +155,6 @@ html,body,button,.kap{touch-action:manipulation}
 .tzYanlis p{margin:0;font-size:15px;line-height:1.45;color:#fff;font-style:italic}.tzYanlis p+p{margin-top:4px}
 .tzIk{width:28px;height:28px;border-radius:50%;background:#E85A4F;color:#fff;display:grid;place-items:center;font-weight:900;font-size:15px}
 .tzKart .tuzakKutu.iyi{margin-top:8px}
+
+.ozKart .tzYanlis{margin-top:10px}
+.secimMetin b{font-size:clamp(19px,5.4vw,23px)}
