@@ -552,9 +552,9 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 }catch(e){}})();
 
 /* ---------- ölçüm ---------- */
-function kanunDurum(k){
+function kanunDurum(k,sadece){
   let d=0,n=0;const kacan=[];const yanlisQ=[];
-  for(const q of k.q){const v=K.tani[kid(q.i)];if(v===undefined)continue;n++;if(v===1)d++;else{yanlisQ.push(q);const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}
+  for(const q of k.q){if(sadece&&!sadece.has(q.i))continue;const v=K.tani[kid(q.i)];if(v===undefined)continue;n++;if(v===1)d++;else{yanlisQ.push(q);const m=maddeNo(q);if(m&&!kacan.includes(m))kacan.push(m);}}
   let durum='yok';
   if(n){const o=d/n; durum=n>=6?(o>=.75?'hazir':o>=.5?'orta':o>=.3?'zayif':'kritik'):(n-d===0?'hazir':n-d===1?'orta':'kritik');}
   return {k,d,n,kacan,yanlisQ,durum,oran:n?d/n:0};
@@ -564,7 +564,7 @@ function tipIst(sorular){ // her tip için d/n (verilen sorular)
   return TIPLER.map(([id,ad,f])=>{const c=sorular.filter(f);const d=c.filter(q=>K.tani[kid(q.i)]===1).length;return {id,ad,n:c.length,d,oran:c.length?d/c.length:null};});
 }
 const zayifTipler=sorular=>tipIst(sorular).filter(t=>t.n>=2&&t.d/t.n<=.5).sort((a,b)=>a.oran-b.oran);
-function hazirlik(){const ks=KANUN.map(kanunDurum).filter(x=>x.n);if(!ks.length)return null;let wt=0,ws=0;ks.forEach(x=>{wt+=w(x.k.id);ws+=w(x.k.id)*x.oran;});return Math.round(ws/wt*100);}
+function hazirlik(sadece){const ks=KANUN.map(k=>kanunDurum(k,sadece)).filter(x=>x.n);if(!ks.length)return null;let wt=0,ws=0;ks.forEach(x=>{wt+=w(x.k.id);ws+=w(x.k.id)*x.oran;});return Math.round(ws/wt*100);}
 function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[kid(q.i)]===0)||(sorular||[]).find(q=>maddeNo(q)===m);if(!q)return 'Madde '+m;const t=q.k.replace(/^.*?göre,?\s*/i,'').replace(/\s+/g,' ');return t.length>70?t.slice(0,70)+'…':t;}
 const bar=(oran,renk)=>`<span class="bar"><i style="width:${Math.max(3,Math.round(oran*100))}%;background:${renk}"></i></span>`;
 const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
@@ -615,16 +615,16 @@ function rontgenBitir(){
 function rontgenSonuc(){
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const R=K.rontgen;if(!R){giris();return;}
-  const sorular=R.ids.map(i=>TUM[i]).filter(Boolean);
-  const ks=KANUN.map(kanunDurum).filter(x=>x.n);
+  const sorular=R.ids.map(i=>TUM[i]).filter(Boolean);const sadece=new Set(R.ids);
+  const ks=KANUN.map(k=>kanunDurum(k,sadece)).filter(x=>x.n);
   const sira={kritik:0,zayif:1,orta:2,hazir:3};ks.sort((a,b)=>sira[a.durum]-sira[b.durum]||w(b.k.id)-w(a.k.id));
-  const H=hazirlik();
+  const H=hazirlik(sadece);
   const cumle=H>=75?'Genel durumun iyi; birkaç kanunda ince eksik var.':H>=50?'Genel durumun iyi, ancak bazı temel alanlarda eksiğin var.':H>=30?'Birçok kanunda eksik var; en ağır olanlardan başla.':'Temel oturmamış; kritik kanunları check-up ile tek tek kapat.';
   const tipler=tipIst(sorular).filter(t=>t.id!=='bosluk'&&t.id!=='onculu'||t.n>=2).slice(0,4);
   const ilkEksik=ks.find(x=>x.durum==='kritik'||x.durum==='zayif'||x.durum==='orta');
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen Sonucu</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.grafik}</div><div class="hzMetin"><span class="hzLbl">Hazırlık</span><b class="hzSayi">${H}<small>/100</small></b><p>${cumle}</p></div></section>
-  <h3 class="bolumBaslik">Kanun bazında analiz</h3><p class="kucukNot" style="margin-top:-4px">Röntgen + yaptığın check-up'ların tüm cevapları birlikte sayılır.</p>
+  <h3 class="bolumBaslik">Kanun bazında analiz</h3>
   <section class="liste">${ks.map(x=>`<button class="satir kb" data-cu="${x.k.id}"><span class="satirAd">${esc(kisa(x.k))}</span><span class="satirOk">${IK.sag}</span><span class="kbAlt">${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span></span></button>`).join('')}</section>
   <h3 class="bolumBaslik">Soru tipi zaafı</h3>
   <section class="tipIzgara">${tipler.map(t=>`<div class="tipHucre"><span class="tipAd">${esc(t.ad)}</span>${t.n?`<div class="tipAltSatir">${bar(t.oran,oranRenk(t.oran))}<span class="tipYuzde">%${Math.round(t.oran*100)}</span></div><small>${t.d}/${t.n} doğru</small>`:'<small>bu tipte soru çıkmadı</small>'}</div>`).join('')}</section>
