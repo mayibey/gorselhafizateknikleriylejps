@@ -36,6 +36,22 @@ BRANSLAR = {
              'Tayın Bedeli · Nakdi Tazminat · Harçlıklar · 2629 · 2803 Mali · İhtiyaç Fazlası · Uzman Erbaş · Uzman Jandarma · 4678 · Damga Vergisi · 5018 · 5510 · Besleme · Sayıştay · 6191 · Harcırah · 926 Mali · Bütçe Cetvelleri · Fazla Ödemeler · İç Kontrol · Kantin · Kamu Zararları · Harcama Belgeleri · Ön Ödeme'),
   'istihkam': ('ozet_IS_istihkam', 'Istihkam', 'İstihkam Branş Mevzuatı',
                'Askeri Yasak Bölgeler · Kamulaştırma · 3091 · İmar · Kadastro · İskân · 4734 · 4735 · 4925 · 5018 · Hekimlik Etiği · Yapım Muayene-Kabul · Hazine Taşınmazları · Taşınmaz Kaydı · Kamu Konutları · Kamu Zararları · Mal Muayene-Kabul · Ön Ödeme · Karayolu Taşıma Yön. · Mal Alımı İhale · Yapım İhale · Harcama Belgeleri · Taşınır Mal · Şehitlik'),
+  'saglik': ('ozet_SG_saglik', 'Saglik', 'Sağlık Branş Mevzuatı',
+           '1219 Tababet Şuabatı · Nakdi Tazminat Aylık · Çevre · 5996 Veteriner Hizmetleri, · Gıda Hijyeni · İlkyardım · Kazandan Beslemesi Olanaksız · Mal Alımı İhaleleri · Mal Alımları Denetim · Merkezî Yönetim Harcama · Yapım İşleri Muayene'),
+  'tabip': ('ozet_T_tabip', 'Tabip', 'Tabip Branş Mevzuatı',
+           '1219 Tababet Şuabatı · Nakdi Tazminat Aylık · Çevre · Türk Ceza — · 5510 Sosyal Sigortalar · 5996 Veteriner Hizmetleri, · Gıda Hijyeni · Hekimlik Meslek Etiği · İlkyardım · Mal Alımı İhaleleri · Mal Alımları Denetim · Yataklı Sağlık Tesislerinde'),
+  'dis_tabibi': ('ozet_T_tabip', 'DisTabibi', 'Diş Tabibi Branş Mevzuatı',
+           '1219 Tababet Şuabatı · Nakdi Tazminat Aylık · Çevre · Türk Ceza — · 5510 Sosyal Sigortalar · 5996 Veteriner Hizmetleri, · Gıda Hijyeni · Hekimlik Meslek Etiği · İlkyardım · Mal Alımı İhaleleri · Mal Alımları Denetim · Yataklı Sağlık Tesislerinde'),
+  'eczaci': ('ozet_EC_eczaci', 'Eczaci', 'Eczacı Branş Mevzuatı',
+           '1219 Tababet Şuabatı · Nakdi Tazminat Aylık · Çevre · 5996 Veteriner Hizmetleri, · Gıda Hijyeni · İlkyardım · Mal Alımı İhaleleri · Mal Alımları Denetim'),
+  'veteriner': ('ozet_V_veteriner', 'Veteriner', 'Veteriner Branş Mevzuatı',
+           '1219 Tababet Şuabatı · Çevre · Kamu İhale · Kamu İhale Sözleşmeleri · 5018 Kamu Malî · TSK, Jandarma Sahil · 5996 Veteriner Hizmetleri, · Gıda Hijyeni · İlkyardım · Mal Alımı İhaleleri · Mal Alımları Denetim'),
+  'kimyager': ('ozet_K_kimyager', 'Kimyager', 'Kimyager Branş Mevzuatı',
+           'Çevre · Gıda Hijyeni · Mal Alımı İhaleleri · Mal Alımları Denetim'),
+  'muhendis': ('ozet_MH_muhendis', 'Muhendis', 'Mühendis Branş Mevzuatı',
+           'Kamu İhale · Kamu İhale Sözleşmeleri · 5018 Kamu Malî · Mal Alımı İhaleleri · Mal Alımları Denetim'),
+  'bando': ('ozet_BN_bando', 'Bando', 'Bando Branş Mevzuatı',
+           'Mal Alımı İhaleleri · Mal Alımları Denetim'),
 }
 if not SADECE_MUSTEREK and BRANS not in BRANSLAR:
     print('bilinmeyen brans:', BRANS, '- tanimli:', ', '.join(BRANSLAR)); raise SystemExit(1)

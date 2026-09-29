@@ -9,7 +9,6 @@
 import json, re, sys, os, glob
 sys.stdout.reconfigure(encoding='utf-8')
 KOK = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
-slug, hedef = sys.argv[1], sys.argv[2]
 
 seed = open(os.path.join(KOK, 'src/db/seed.ts'), encoding='utf-8').read()
 diger = open(os.path.join(KOK, 'src/db/seed-brans-diger.ts'), encoding='utf-8').read()
@@ -18,10 +17,11 @@ for m in re.finditer(r"\{ id: (\d+), blok: '([^']+)', ad: (['\"])((?:\\.|(?!\3).
     LAWS[int(m.group(1))] = m.group(4).replace("\\'", "'").replace('\\"', '"')
 BRANS_AD = {m.group(1): m.group(2) for m in re.finditer(r"slug: '([^']+)', ad: '([^']+)'", seed)}
 BR_ID = {m.group(2): int(m.group(1)) for m in re.finditer(r"\{ id: (\d+), slug: '([^']+)'", seed)}  # slug → branch_id
-if slug not in BRANS_AD: sys.exit(f'branş yok: {slug} (olanlar: {", ".join(BRANS_AD)})')
-bid = BR_ID[slug]
-if slug == 'jandarma': brans_laws = list(range(26, 68))
-else: brans_laws = [int(a) for a, b in re.findall(r"\{ law_id: (\d+), branch_id: (\d+) \}", diger) if int(b) == bid]
+def brans_kanunlari(slug):
+    if slug not in BRANS_AD: sys.exit(f'branş yok: {slug} (olanlar: {", ".join(BRANS_AD)})')
+    bid = BR_ID[slug]
+    if slug == 'jandarma': return list(range(26, 68))
+    return [int(a) for a, b in re.findall(r"\{ law_id: (\d+), branch_id: (\d+) \}", diger) if int(b) == bid]
 mus_laws = [i for i in sorted(LAWS) if i <= 25]
 
 # sorular
@@ -104,12 +104,17 @@ def kanun(lid, g, sira):
         ad = bas.split('—')[0].strip() or ad      # görünen ad: özet başlığındaki (eski veriyle aynı)
     return {'id': lid, 'ad': ad, 'kap': kap, 'g': g, 'md': md, 'q': sorular(lid), 'yildiz': md.count('★')}
 
-K = [kanun(l, 'mus', MUS + TUM_DOSYA) for l in mus_laws]
-own = [OWN[slug]] if slug in OWN else []
-K += [kanun(l, slug, own + TUM_DOSYA) for l in brans_laws]
-V = {'brans': {'slug': slug, 'ad': BRANS_AD[slug]}, 'kanun': K, 'ek': {}}
-json.dump(V, open(hedef, 'w', encoding='utf-8'), ensure_ascii=False)
-ozetsiz = [f"{k['id']} {k['ad'][:40]}" for k in K if not k['md']]
-sorusuz = [k['id'] for k in K if not k['q']]
-print(f"{slug}: kanun {len(K)} (müşterek {len(mus_laws)} + branş {len(brans_laws)}) · soru {sum(len(k['q']) for k in K)} · özetsiz {len(ozetsiz)} · sorusuz {sorusuz or '-'}")
-for o in ozetsiz: print('   özetsiz:', o)
+def main(slug, hedef):
+    brans_laws = brans_kanunlari(slug)
+    K = [kanun(l, 'mus', MUS + TUM_DOSYA) for l in mus_laws]
+    own = [OWN[slug]] if slug in OWN else []
+    K += [kanun(l, slug, own + TUM_DOSYA) for l in brans_laws]
+    V = {'brans': {'slug': slug, 'ad': BRANS_AD[slug]}, 'kanun': K, 'ek': {}}
+    json.dump(V, open(hedef, 'w', encoding='utf-8'), ensure_ascii=False)
+    ozetsiz = [f"{k['id']} {k['ad'][:40]}" for k in K if not k['md']]
+    sorusuz = [k['id'] for k in K if not k['q']]
+    print(f"{slug}: kanun {len(K)} (müşterek {len(mus_laws)} + branş {len(brans_laws)}) · soru {sum(len(k['q']) for k in K)} · özetsiz {len(ozetsiz)} · sorusuz {sorusuz or '-'}")
+    for o in ozetsiz: print('   özetsiz:', o)
+
+if __name__ == '__main__':
+    main(sys.argv[1], sys.argv[2])
