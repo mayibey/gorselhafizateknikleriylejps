@@ -143,7 +143,9 @@ export default function MasaEkrani() {
     if (!kanun) return;
     const hedef = /(\d+)/.exec(maddeNo)?.[1] ?? maddeNo;
     if (!kartlar.current) kartlar.current = await getAllCards();
-    const kartNo = (c: CardWithLaw) => /(\d+)/.exec(c.madde_no ?? '')?.[1] ?? '';
+    // madde_no "6284 Ailenin Korunması m.5" biçiminde olabilir → İLK sayı değil, " m." SONRASI sayı alınır
+    // (30 Eyl denetimi: etiketi rakamlı 5 kanunda ilk-sayı kuralı hiç eşleşmiyordu).
+    const kartNo = (c: CardWithLaw) => / m\.(?:Ek )?(\d+)/.exec(c.madde_no ?? '')?.[1] ?? '';
     const havuz = kartlar.current.filter((c) => c.law_id === kanun && kartNo(c) === hedef);
     const kart = havuz.find((c) => !(c.gorsel_yolu && /_(ayirt|ozet)(_|$)/i.test(c.gorsel_yolu))) ?? havuz[0];
     if (kart) router.push({ pathname: '/akis', params: { lawId: String(kanun), kart: String(kart.id) } });

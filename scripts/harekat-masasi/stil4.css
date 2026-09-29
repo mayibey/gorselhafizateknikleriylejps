@@ -182,3 +182,4 @@ html,body,button,.kap{touch-action:manipulation}
 .asagiIpucu.gizli{opacity:0;pointer-events:none;animation:none}
 @keyframes zipla{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-6px)}}
 .ozKart.vurgu{box-shadow:0 0 0 2px rgba(243,194,74,.9),0 0 22px rgba(243,194,74,.45)}
+.mdBtnler.tek{grid-template-columns:1fr}

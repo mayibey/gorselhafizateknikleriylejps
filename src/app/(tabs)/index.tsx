@@ -281,7 +281,8 @@ export default function KarargahScreen() {
     kapatModal();
     const hedef = /(\d+)/.exec(maddeNo)?.[1] ?? maddeNo;
     const ozetAyirtMi = (yol: string | null) => !!yol && /_(ayirt|ozet)(_|$)/i.test(yol);
-    const kartNo = (c: CardWithLaw) => /(\d+)/.exec(c.madde_no ?? '')?.[1] ?? '';
+    // " m." SONRASI sayı: etiketi rakamlı kanunlarda ("6284 Ailenin Korunması m.5") ilk sayı 6284 çıkıyordu (30 Eyl).
+    const kartNo = (c: CardWithLaw) => / m\.(?:Ek )?(\d+)/.exec(c.madde_no ?? '')?.[1] ?? '';
     const havuz = tumKartlar.filter((c) => c.law_id === kanun && kartNo(c) === hedef);
     const kart = havuz.find((c) => !ozetAyirtMi(c.gorsel_yolu)) ?? havuz[0];
     if (kart) router.push({ pathname: '/akis', params: { lawId: String(kanun), kart: String(kart.id) } });
