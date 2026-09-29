@@ -141,7 +141,8 @@ export default function MasaEkrani() {
           domStorageEnabled
           javaScriptEnabled
           setSupportMultipleWindows={false}
-          allowsBackForwardNavigationGestures
+          // Yerel geri hareketi KAPALI (pushState ile birlikte WKWebView ekranı donduruyordu); kenar kaydırmasını sayfa kendi algılar.
+          allowsBackForwardNavigationGestures={false}
           injectedJavaScriptBeforeContentLoaded={`window.MERKEZ_KAYIT = ${kayit}; true;`}
           onMessage={mesaj}
         />

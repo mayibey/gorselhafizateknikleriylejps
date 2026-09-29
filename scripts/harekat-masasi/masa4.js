@@ -89,13 +89,17 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 /* ---------- GERİ GEZİNME (başkan: "kaydırarak geri çok geriye atıyor") ----------
    Her ekran açılışında tarayıcı geçmişine bir kayıt düşer; geri hareketi bir önceki EKRANA döner (uygulamadan çıkmaz). */
 const YIGIN=[];let POP=false;
-function iz(f){ if(POP){POP=false;return;} YIGIN.push(f); try{history.pushState({n:YIGIN.length},'');}catch(e){} derinlikBildir(); }
+// Tarayıcı geçmişi KULLANILMAZ (WKWebView'da pushState + kenar hareketi ekranı donduruyordu). Kendi yığınımız:
+function iz(f){ if(POP){POP=false;return;} YIGIN.push(f); derinlikBildir(); }
 function ekranaDon(){ const f=YIGIN[YIGIN.length-1]; POP=true; if(f)f(); else {POP=false;giris();} }
-// Kenardan kaydırma / donanım geri → tarayıcı geçmişi: hedef derinlik yığından küçükse o kadar geri git; bayat/ileri kayıt ise yoksay.
-window.addEventListener('popstate',e=>{ const hedef=(e.state&&e.state.n)||0; if(hedef>=YIGIN.length)return; while(YIGIN.length>Math.max(hedef,1))YIGIN.pop(); if(hedef===0){YIGIN.length=0;giris();return;} ekranaDon(); });
 function derinlikBildir(){ try{ if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(JSON.stringify({tip:'derinlik',n:YIGIN.length})); }catch(e){} }
-// Ekran içi "‹" düğmesi: tarayıcı geçmişine GÜVENMEDEN kendi yığınımızdan bir geri (WKWebView'da history.back popstate atmayabiliyor).
-window.merkezGeri=function(){ if(YIGIN.length>1){ YIGIN.pop(); ekranaDon(); try{history.go(-1);}catch(e){} derinlikBildir(); return true; } return false; };
+window.merkezGeri=function(){ if(YIGIN.length>1){ YIGIN.pop(); ekranaDon(); derinlikBildir(); return true; } return false; };
+// Kenardan sağa kaydırma = geri (kendi algılamamız; uygulamanın yerel hareketi kapalı).
+(function(){let x0=null,y0=null,t0=0;
+  document.addEventListener('touchstart',e=>{const t=e.touches[0];if(t&&t.clientX<28){x0=t.clientX;y0=t.clientY;t0=Date.now();}else x0=null;},{passive:true});
+  document.addEventListener('touchend',e=>{if(x0==null)return;const t=e.changedTouches[0];const dx=t.clientX-x0,dy=Math.abs(t.clientY-y0);x0=null;
+    if(dx>70&&dy<60&&Date.now()-t0<800){ if(S){aktifKaydet();S=null;} if(!window.merkezGeri())giris(); }},{passive:true});
+})();
 
 /* ---------- ölçüm ---------- */
 function kanunDurum(k,sadece){
@@ -118,7 +122,7 @@ const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
 
 /* ---------- 1. GİRİŞ ---------- */
 function giris(){
-  YIGIN.length=0;POP=false;try{history.replaceState({n:0},'');}catch(e){}derinlikBildir();
+  YIGIN.length=0;POP=false;derinlikBildir();
   document.body.classList.remove('sinavda');document.body.classList.add('giriste');window.scrollTo({top:0});S=null;
   const g=kalanGun(); const rSoru=KANUN.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
   const ozetler=KANUN.filter(k=>K.checkup[k.id]).length;
