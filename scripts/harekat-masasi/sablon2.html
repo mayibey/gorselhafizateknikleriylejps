@@ -465,6 +465,8 @@ body:not(.giriste) #gece::after{content:"";position:absolute;inset:0;background:
 .ySoru summary{grid-template-columns:1fr 18px;row-gap:6px}
 .ySoruK{grid-column:1/-1;font-size:13.5px;line-height:1.4}
 
+.kayitSatir.devam{border-style:solid;border-color:var(--altin);background:rgba(243,194,74,.12)}
+
 </style>
 <div id="gece" aria-hidden="true"></div>
 <div class="kap">
@@ -578,10 +580,12 @@ function giris(){
   </section>
   <button class="secim" id="bRontgen"><span class="secimIk">${IK.buyutec}</span><span class="secimMetin"><b>Röntgen Çek</b><small>Kanun bazında ne kadar hazırsın?</small><em>~${Math.round(rSoru*0.3)} dk · ~${rSoru} soru${K.rontgen?` · son: ${tarihYaz(K.rontgen.tarih)}`:''}</em></span><span class="secimOk">${IK.sag}</span></button>
   <button class="secim" id="bCheckup"><span class="secimIk">${IK.belge}</span><span class="secimMetin"><b>Check-up</b><small>Madde madde detaylı tarama</small><em>${IK.hedef} Müşterek / Branş${ozetler?` · ${ozetler} özet kayıtlı`:''}</em></span><span class="secimOk">${IK.sag}</span></button>
+  ${K.aktif&&K.aktif.ids?`<button class="kayitSatir devam" id="devamEt"><span>Yarım kalan: ${esc(K.aktif.ad)} · ${Object.keys(K.aktif.cevap||{}).length}/${K.aktif.ids.length} cevaplandı</span><b>Devam et ›</b></button>`:''}
   ${K.rontgen?`<button class="kayitSatir" id="sonRontgen"><span>Son röntgen sonucu · ${K.rontgen.d}/${K.rontgen.n}</span><b>Aç ›</b></button>`:''}
 `;
   $('#bRontgen').onclick=rontgenBaslat;$('#bCheckup').onclick=checkupListe;
   if($('#sonRontgen'))$('#sonRontgen').onclick=rontgenSonuc;
+  if($('#devamEt'))$('#devamEt').onclick=aktifDevam;
 }
 
 /* ---------- soru seçimi ---------- */
@@ -630,13 +634,15 @@ function rontgenSonuc(){
 function checkupListe(){
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
   const ks=KANUN.filter(k=>k.g===K.g).map(kanunDurum);
-  const bolumBoyu=k=>Math.max(8,Math.min(12,w(k.id)*2+6));
+  const bolumBoyu=k=>k.q.length;
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup'?K.aktif.meta.kanun:null;
   const satir=x=>{const cu=K.checkup[x.k.id];const durum=cu?'tam':yarim===x.k.id?'devam':'yok';
     const pill={tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
-    const oran=cu?cu.d/cu.n:0;
-    return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):'#7FA3AE')}<span>%${Math.round(oran*100)}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
+    const cevaplanan=durum==='devam'?Object.keys(K.aktif.cevap||{}).length:0;
+    const oran=cu?cu.d/cu.n:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
+    return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Check-up</h2><span></span></div>
+  <p class="kucukNot" style="text-align:center">Her kanunun tüm soruları. Yarım bırakırsan kaldığın yerden devam eder.</p>
   <div class="segment" id="kpSec"><button data-g="mus" aria-pressed="${K.g==='mus'}">Müşterek</button><button data-g="mebs" aria-pressed="${K.g==='mebs'}">Branş (MEBS)</button></div>
   <section class="liste">${ks.map(satir).join('')}</section>`;
   $('#geri').onclick=giris;
@@ -644,8 +650,8 @@ function checkupListe(){
   document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>{const id=+b.dataset.id;if(yarim===id){aktifDevam();return;}K.checkup[id]?checkupAnaliz(id,checkupListe):checkupBolum(id);});
 }
 function checkupBolum(id){
-  const k=BYID[id];const adet=Math.max(8,Math.min(12,w(id)*2+6));
-  const haric=new Set(Object.keys(K.tani));let s=maddeyeGoreSec(k,adet,haric);if(s.length<adet)s=s.concat(maddeyeGoreSec({q:k.q.filter(q=>!s.includes(q))},adet-s.length));
+  // DETAYLI: kanunun TÜM soruları (başkan: "check-up dediğin detaylı olur"); maddelere dağıtılmış sıra, yarım kalırsa devam eder
+  const k=BYID[id];const s=maddeyeGoreSec(k,k.q.length);
   basla(s,`${kisa(k)} Check-up`,{tani:true,tur:'checkup',kanun:id});
 }
 function checkupBitir(){
@@ -753,7 +759,7 @@ function soruCiz(kaydir=true){
      <div class="siklar">${q.s.map((s,j)=>`<button class="sik ${cevapli&&j===c?'secili':''}" data-j="${j}"><span class="h">${HARF[j]}</span><span>${esc(s)}</span></button>`).join('')}</div>
      <div class="soruBtn"><button class="btn" id="onc" ${S.i?'':'disabled style="opacity:.4"'}>Önceki</button><button class="btn ana" id="snr">${S.i===S.sorular.length-1?'Bitir':'Sonraki'} ${IK.ok}</button></div>
    </article></div>`;
-  $('#geri').onclick=()=>{S=null;K.aktif=null;kaydet();giris();};
+  $('#geri').onclick=()=>{aktifKaydet();S=null;giris();};
   document.querySelectorAll('.sik').forEach(b=>b.onclick=()=>{S.cevap[S.i]=+b.dataset.j;aktifKaydet();if(S.i<S.sorular.length-1){S.i++;soruCiz();}else soruCiz(false);});
   $('#onc').onclick=()=>{if(S.i){S.i--;soruCiz();}};$('#snr').onclick=ileri;
 }
@@ -780,7 +786,7 @@ document.addEventListener('keydown',e=>{
 let tz;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('ac');clearTimeout(tz);tz=setTimeout(()=>t.classList.remove('ac'),3200);}
 let sifirOnay=0;
 $('#sifirlaBtn').onclick=e=>{if(Date.now()-sifirOnay<4000){K={tani:{},cevap:{},rontgen:null,checkup:{},aktif:null,g:K.g};kaydet();e.target.textContent='İlerlemeyi sıfırla';toast('Sıfırlandı.');giris();return;}sifirOnay=Date.now();e.target.textContent='Emin misin? 4 sn içinde tekrar bas';setTimeout(()=>{e.target.textContent='İlerlemeyi sıfırla'},4000);};
-if(!aktifDevam()) giris();
+giris();
 })();
 
 </script>

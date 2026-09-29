@@ -118,3 +118,5 @@ body:not(.giriste) #gece::after{content:"";position:absolute;inset:0;background:
 .kbAlt{grid-column:1/-1;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:10px}
 .ySoru summary{grid-template-columns:1fr 18px;row-gap:6px}
 .ySoruK{grid-column:1/-1;font-size:13.5px;line-height:1.4}
+
+.kayitSatir.devam{border-style:solid;border-color:var(--altin);background:rgba(243,194,74,.12)}
