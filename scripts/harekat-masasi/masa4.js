@@ -93,7 +93,7 @@ const YIGIN=[];let POP=false;
 function iz(f){ if(POP){POP=false;return;} YIGIN.push(f); derinlikBildir(); }
 function ekranaDon(){ const f=YIGIN[YIGIN.length-1]; POP=true; if(f)f(); else {POP=false;giris();} }
 function derinlikBildir(){ try{ if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(JSON.stringify({tip:'derinlik',n:YIGIN.length})); }catch(e){} }
-window.merkezGeri=function(){ if(YIGIN.length>1){ YIGIN.pop(); ekranaDon(); derinlikBildir(); return true; } return false; };
+window.merkezGeri=function(){ if(S){aktifKaydet();S=null;} if(YIGIN.length>1){ YIGIN.pop(); ekranaDon(); derinlikBildir(); return true; } YIGIN.length=0; giris(); return false; };
 // Kenardan sağa kaydırma = geri (kendi algılamamız; uygulamanın yerel hareketi kapalı).
 (function(){let x0=null,y0=null,t0=0;
   document.addEventListener('touchstart',e=>{const t=e.touches[0];if(t&&t.clientX<28){x0=t.clientX;y0=t.clientY;t0=Date.now();}else x0=null;},{passive:true});
