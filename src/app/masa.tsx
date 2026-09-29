@@ -3,7 +3,8 @@ import * as FileSystem from 'expo-file-system/legacy';
 import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, BackHandler, Image, Platform, Pressable, StyleSheet, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { ActivityIndicator, Animated, AppState, BackHandler, Easing, Image, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
@@ -56,6 +57,14 @@ export default function MasaEkrani() {
   const [kayit, setKayit] = useState<string | null>(null); // JSON (sunucudaki ilerleme) — '{}' = yok
   const [hata, setHata] = useState(false);
   const [satir, setSatir] = useState(0);
+  // RÖNTGEN TARAMA EFEKTİ (başkan): ışık çizgisi yukarıdan aşağı süpürür.
+  const [alanBoyu, setAlanBoyu] = useState(0);
+  const tarama = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    const d = Animated.loop(Animated.timing(tarama, { toValue: 1, duration: 2200, easing: Easing.inOut(Easing.quad), useNativeDriver: true }));
+    d.start();
+    return () => d.stop();
+  }, [tarama]);
   const uid = useRef<string | null>(null);
   useEffect(() => {
     const t = setInterval(() => setSatir((i) => (i + 1) % HAZIRLIK_SATIRLARI.length), 1400);
@@ -160,9 +169,17 @@ export default function MasaEkrani() {
           onMessage={mesaj}
         />
       ) : (
-        <View style={styles.orta}>
+        <View style={styles.orta} onLayout={(e) => setAlanBoyu(e.nativeEvent.layout.height)}>
           <Image source={require('../../assets/images/oyun-yukleme.webp')} style={styles.yuklemeArka} resizeMode="cover" />
           <View style={styles.yuklemePerde} />
+          {!hata && alanBoyu > 0 ? (
+            <Animated.View
+              pointerEvents="none"
+              style={[styles.taramaKusagi, { transform: [{ translateY: tarama.interpolate({ inputRange: [0, 1], outputRange: [-160, alanBoyu + 20] }) }] }]}>
+              <LinearGradient colors={['rgba(67,203,218,0)', 'rgba(67,203,218,0.28)', 'rgba(143,227,245,0.95)']} style={styles.taramaIz} />
+              <View style={styles.taramaCizgi} />
+            </Animated.View>
+          ) : null}
           {hata ? (
             <AppText variant="kucuk" style={styles.hata}>
               Merkez yüklenemedi. İnternet bağlantını kontrol edip tekrar dene.
@@ -211,4 +228,15 @@ const styles = StyleSheet.create({
   yuklemeBaslik: { color: '#FFFFFF', textAlign: 'center', fontSize: 24 },
   yuklemeSatir: { color: '#DCEBEF', textAlign: 'center', minHeight: 20 },
   yuklemeSpinner: { marginTop: Spacing.two },
+  taramaKusagi: { position: 'absolute', left: 0, right: 0, top: 0, height: 160 },
+  taramaIz: { flex: 1 },
+  taramaCizgi: {
+    height: 3,
+    backgroundColor: '#B8F3FF',
+    shadowColor: '#43CBDA',
+    shadowOpacity: 0.9,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 0 },
+    elevation: 6,
+  },
 });
