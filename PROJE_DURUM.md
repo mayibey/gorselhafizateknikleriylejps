@@ -4,6 +4,16 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 29 Eyl (gece) — HAREKÂT MERKEZİ v4 + İLERLEME SUNUCUDA (yalnız başkan bayrağı; OTA iki runtime)
+> Ad "Harekât Merkezi". Akış: iki seçenek → Röntgen sayfası (Devam et / Röntgen çek / Sonuçlarım) → Röntgen (kanun başı 1-2 soru,
+> cevaplar sonda) → Röntgen Sonucu (yalnız o röntgen: Hazırlık, kanun satırları, tip zaafı, "Eksiklerime göre başla") ·
+> Check-up (Müşterek/Branş listesi → kanunun TÜM soruları → Check-up Analizi: eksik maddeler + tip → Altın Özet kartları, kayıtlı,
+> "Özetlerim"). Kaynak `scripts/harekat-masasi/masa4.js + stil4.css + kur2.py` (veri: nokta_ayristir.py → veri2.json).
+> **İlerleme:** `merkez_ilerleme` (user_id pk, veri jsonb, RLS kendi satırı; `supabase/sql/merkez-ilerleme.sql`, Management API ile
+> `scripts/sql-calistir.mjs`). masa.tsx: açılışta satırı okuyup `window.MERKEZ_KAYIT` gömer, sayfa postMessage → upsert; arka planda flush.
+> Tuzaklar: soru kimliklerinde `/` `.` var → anahtarlar `kid()` ile temizlenir (bulut kaydı yutuyordu); `.map(kanunDurum)` indeks geçirir.
+> Herkese açmak için: `eksik-tarama` bayrağı `ozellik_herkes`e (başkan "yay" demeden AÇMA).
+>
 > ### ▶ 29 Eyl — HAREKÂT MASASI + EKSİK TARAMASI (yalnız başkan; OTA 1.0.47 59d9428f + 1.0.46 21cd2a06)
 > Başkanın kişisel çalışma artifact'ı (müşterek+MEBS konu notu + 1.339 soru) uygulamaya kondu: `/masa` WebView,
 > sayfa sunucudan `icerik/tarama/masa.html` (imzalı URL, premium) → OTA'sız güncellenir. Karargâh satırı
