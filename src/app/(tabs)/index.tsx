@@ -1123,6 +1123,9 @@ export default function KarargahScreen() {
                 <AppText variant="kucuk" bold color="beyaz" numberOfLines={1}>
                   Harekât Merkezi
                 </AppText>
+                <AppText variant="etiket" color="kartMetinIkincil" numberOfLines={1}>
+                  Röntgen · Check-up
+                </AppText>
               </View>
               <View style={styles.tekrarEtKose}>
                 <AppText variant="etiket" bold color="altinParlak" style={styles.tekrarBaslik2}>

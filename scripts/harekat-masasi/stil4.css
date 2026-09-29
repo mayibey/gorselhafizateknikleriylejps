@@ -140,3 +140,6 @@ html,body,button,.kap{touch-action:manipulation}
 .gGun b{font-size:46px}
 
 .gGun{margin-bottom:22px}
+
+.kbBtn{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end}
+.kbBtn .btn.kucuk svg{width:14px;height:14px;margin-left:4px;vertical-align:-2px}

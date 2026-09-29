@@ -196,13 +196,14 @@ function rontgenSonuc(Rsec,geriHedef){
   <p class="ozOzet" style="text-align:center">${tarihYaz(R.tarih)} · ${R.d}/${R.n} doğru</p>
   <section class="hzKart"><div class="hzIk">${IK.grafik}</div><div class="hzMetin"><span class="hzLbl">Hazırlık</span><b class="hzSayi">${H}<small>/100</small></b><p>${cumle}</p></div></section>
   <h3 class="bolumBaslik">Kanun bazında analiz</h3>
-  <section class="liste">${ks.map(x=>`<button class="satir kb" data-cu="${x.k.id}"><span class="satirAd">${esc(kisa(x.k))}</span><span class="satirOk">${IK.sag}</span><span class="kbAlt">${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span></span></button>`).join('')}</section>
+  <section class="liste">${ks.map(x=>`<div class="satir kb"><span class="satirAd">${esc(kisa(x.k))}</span><span></span><span class="kbAlt">${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span></span>${x.durum!=='hazir'?`<span class="kbBtn">${K.checkup[x.k.id]?`<button class="btn kucuk" data-oz="${x.k.id}">Özeti aç</button>`:''}<button class="btn kucuk ana" data-cu="${x.k.id}">${K.checkup[x.k.id]?'Yeniden check-up':'Check-up yap'} ${IK.ok}</button></span>`:''}</div>`).join('')}</section>
   <h3 class="bolumBaslik">Soru tipi zaafı</h3>
   <section class="tipIzgara">${tipler.map(t=>`<div class="tipHucre"><span class="tipAd">${esc(t.ad)}</span>${t.n?`<div class="tipAltSatir">${bar(t.oran,oranRenk(t.oran))}<span class="tipYuzde">%${Math.round(t.oran*100)}</span></div><small>${t.d}/${t.n} doğru</small>`:'<small>bu tipte soru çıkmadı</small>'}</div>`).join('')}</section>
   ${ilkEksik?`<button class="anaBtn2" id="eksikBasla">Eksiklerime göre başla ${IK.ok}<small>${esc(kisa(ilkEksik.k))} check-up · 8-12 soru</small></button>`:''}
   <div class="altLinkler"><button id="yenile">Röntgeni yenile</button></div>`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())rontgenSayfa();};$('#yenile').onclick=rontgenBaslat;
-  document.querySelectorAll('[data-cu]').forEach(b=>b.onclick=()=>K.checkup[+b.dataset.cu]?ozet(+b.dataset.cu,rontgenSonuc):checkupBolum(+b.dataset.cu));
+  document.querySelectorAll('[data-cu]').forEach(b=>b.onclick=()=>checkupBolum(+b.dataset.cu));
+  document.querySelectorAll('[data-oz]').forEach(b=>b.onclick=()=>ozet(+b.dataset.oz,()=>rontgenSonuc(R)));
   if(ilkEksik)$('#eksikBasla').onclick=()=>checkupBolum(ilkEksik.k.id);
 }
 /* ---------- 4. CHECK-UP LİSTESİ ---------- */
