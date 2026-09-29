@@ -4,6 +4,19 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl (01:00-02:00) — HAREKÂT MERKEZİ TÜM BRANŞLAR (16 sayfa sunucuda; OTA iki runtime)
+> Başkan: "tüm branşları o şekilde yapman lazım." Her branş için ayrı sayfa: `tarama/masa-<slug>.html` (müşterek 25 + o branşın
+> mevzuatı; 2,3-4,4 MB). Uygulama `useBrans()` ile kullanıcının branşının sayfasını yükler (branş yoksa eski `masa.html` = MEBS);
+> önbellek `jsps/masa-<slug>.html`. Üretim: `python scripts/harekat-masasi/hepsini_kur.py <calisma>` → her slug için
+> `veri_uret.py` (seed.ts + seed-brans-diger.ts + kart-sorulari.ts + premium-denemeler.ts + `scripts/altin-ozet/icerik/ozet_*.md`)
+> → `nokta_ayristir.py` → `kur2.py <calisma> <slug>`. Kimlikler kaynaklardan deterministik (soru id + P<index>); MEBS çıktısı eski
+> veri.json ile BİREBİR (34 kanun md/ad/kap/soru) → başkanın ilerlemesi bozulmadı. Bölüm eşleştirme: numara tutması + ad benzerliği
+> (difflib) + tür grubu (kanun/yönetmelik-esaslar-tebliğ/genelge/rehber) + kısaltma açılımı (TSK, MİT, EGM, JGK, SGK, CBDDO) +
+> branşın kendi dosyasına bonus; "(müşterek kapsam)" TCK notu branş dilimine (139) verilmez. Altın Özet notu OLMAYAN 6 mevzuat
+> (95 Veteriner Hizmetleri, 96 Tababet, 134 İlkyardım Yön., 135 Acil Servis Tebliği, 139 TCK sağlık dilimi, 83 3212 İhtiyaç Fazlası):
+> soruları var, özet boş görünür — içerik işi. Sayfa: `window.BRANS` (kur2 gömer), segment "Branş (Ad)", `K.g` doğrulanır.
+> Tuzak: bash heredoc içinde python `r'\\b'` yazınca dosyaya ^H (backspace) düştü → regex sessizce bozuldu; Write/Edit ile yaz.
+>
 > ### ▶ 30 Eyl (00:30-01:00) — MERKEZ: KISA "DOĞRUSU" + CHECK-UP ANALİZİ DÜZENİ + "KARTA GİT" (OTA iki runtime)
 > Kart sırası kesinleşti: üstte orijinal hüküm → kırmızı "Sınavda böyle yazarlar" → yeşil "Doğrusu" KISA özet (tuzağın doğru
 > ifadesi; yoksa hükmün kalın anahtar parçaları: `nokta_ayristir.py` yeni `k` alanı, 852/1232 noktada var; yoksa ilk parça/başlık).
