@@ -7,20 +7,20 @@ body.giriste .sifirla{display:none}
 .ustBar h2{margin:0;text-align:center;font-family:var(--govde);font-weight:700;font-size:18px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .geriIk{font-size:30px;line-height:1;color:#fff;text-align:left;padding:0 6px}
 /* 1. giriş */
-.gHero{text-align:center;padding-top:6px}
+.gHero{text-align:center;padding-top:22px}
 .gLogo{width:76px;height:76px;object-fit:cover;border-radius:50%;border:1.5px solid rgba(243,194,74,.7);box-shadow:0 0 18px rgba(243,194,74,.35)}
 .gMarka{font-family:var(--govde);font-weight:800;font-size:26px;letter-spacing:4px;color:#fff;margin-top:2px}
-.gBaslik{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px;font-family:var(--baslik);font-size:26px;color:#fff}
+.gBaslik{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:0;font-family:var(--baslik);font-size:32px;color:#fff}
 .gBaslik i{color:var(--altin2)}
-.gRadar{width:40px;height:40px;color:var(--altin2)}.gRadar svg{width:100%;height:100%}
+.gRadar{width:48px;height:48px;color:var(--altin2)}.gRadar svg{width:100%;height:100%}
 .gAlt{font-size:10.5px;letter-spacing:2.2px;color:#DCEBEF;margin-top:4px}
-.gSinava{margin-top:16px;font-size:11px;letter-spacing:3px;color:#DCEBEF}
+.gSinava{margin-top:34px;font-size:11px;letter-spacing:3px;color:#DCEBEF}
 .gGun{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--altin2)}
-.gGun svg{width:28px;height:28px}.gGun b{font-family:var(--baslik);font-size:44px;line-height:1.05}
-.gSlogan{margin:10px 0 16px;font-family:var(--baslik);font-size:19px;line-height:1.3;color:#fff;text-shadow:0 1px 8px rgba(0,20,30,.8)}
-.secim{display:grid;grid-template-columns:52px 1fr 24px;align-items:center;gap:12px;width:100%;text-align:left;padding:14px 14px 14px 16px;border-radius:16px;border:1.5px solid var(--altin);background:linear-gradient(180deg,rgba(3,40,60,.88),rgba(2,30,46,.92));margin-bottom:12px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.gGun svg{width:32px;height:32px}.gGun b{font-family:var(--baslik);font-size:52px;line-height:1.05}
+.gSlogan{margin:14px 0 30px;font-family:var(--baslik);font-size:21px;line-height:1.3;color:#fff;text-shadow:0 1px 8px rgba(0,20,30,.8)}
+.secim{margin-bottom:14px;display:grid;grid-template-columns:52px 1fr 24px;align-items:center;gap:12px;width:100%;text-align:left;padding:14px 14px 14px 16px;border-radius:16px;border:1.5px solid var(--altin);background:linear-gradient(180deg,rgba(3,40,60,.88),rgba(2,30,46,.92));margin-bottom:12px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
 .secimIk{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(243,194,74,.6);display:grid;place-items:center;color:var(--altin2)}.secimIk svg{width:26px;height:26px}
-.secimMetin b{display:block;font-family:var(--baslik);font-size:22px;color:#F8D57A;line-height:1.1}
+.secimMetin b{display:block;font-family:var(--baslik);font-size:24px;color:#F8D57A;line-height:1.1}
 .secimMetin small{display:block;color:#F2EEE4;font-size:13.5px;margin-top:3px}
 .secimMetin em{display:flex;align-items:center;gap:5px;font-style:normal;color:#A9C6CF;font-size:12px;margin-top:5px}.secimMetin em svg{width:13px;height:13px}
 .secimOk{color:#F8D57A}.secimOk svg{width:22px;height:22px}
@@ -94,3 +94,27 @@ body.sinavda .toast{bottom:24px}
 .kayitBaslik{display:flex;justify-content:space-between;align-items:center;margin:18px 0 8px}.kayitBaslik b{font-size:14px;color:#fff}.kayitBaslik button{color:var(--altin2);font-weight:700;font-size:13px}
 .yanlisKatla{margin-top:14px}.yanlisKatla>summary{cursor:pointer;color:#A9C6CF;font-weight:600;padding:8px 0}
 .kucukNot{color:#A9C6CF!important;font-size:12.5px!important;margin:0 0 10px}
+
+/* okunurluk: giriş dışındaki ekranlarda dağ görseli kararır, başlıklar gölgeli */
+body:not(.giriste) #gece::after{content:"";position:absolute;inset:0;background:rgba(2,18,30,.58)}
+#gece{overflow:hidden}
+.bolumBaslik,.ustBar h2,.ozOzet,.kucukNot,.altLinkler button,.kayitBaslik b{text-shadow:0 1px 6px rgba(0,15,25,.95),0 0 14px rgba(0,15,25,.8)}
+.bolumBaslik{font-size:18px}
+/* kanun adları tam: satırlar iki satıra sarabilir */
+.satirMetin b{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.25}
+.satir{grid-template-columns:minmax(0,2fr) minmax(48px,.8fr) auto auto auto}
+.satirAd{-webkit-line-clamp:3}
+/* yanlış sorular: belirgin kartlar */
+.ySoru{border:1px solid rgba(232,90,79,.55);border-radius:12px;background:rgba(60,20,25,.55)}
+.ySoru summary{list-style:none;display:grid;grid-template-columns:auto 1fr 18px;gap:10px;align-items:center;padding:10px 12px;cursor:pointer;color:#F2EEE4;font-size:13.5px;line-height:1.35}
+.ySoru summary::-webkit-details-marker{display:none}
+.ySoru .satirNo{color:#FF8F86}
+.ySoru[open] summary .satirOk{transform:rotate(90deg)}
+.ySoruIc{padding:0 12px 12px;font-size:14px;line-height:1.5;border-top:1px dashed rgba(232,90,79,.35)}
+.ySoruIc p{margin:8px 0 0}.ySenin{color:#FF8F86}.ySoruIc .dg{color:#8FE3B5;font-weight:700}
+
+.satir.kb{grid-template-columns:1fr 18px;row-gap:8px}
+.satir.kb .satirAd{font-size:14px;-webkit-line-clamp:2}
+.kbAlt{grid-column:1/-1;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:10px}
+.ySoru summary{grid-template-columns:1fr 18px;row-gap:6px}
+.ySoruK{grid-column:1/-1;font-size:13.5px;line-height:1.4}

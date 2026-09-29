@@ -10,7 +10,7 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const HARF='ABCDE';
 const kisaAd=k=>k.ad.replace(' (müşterek kapsam)','');
 const KISALT={1:'5237 TCK',2:'2803 Jandarma K.',3:'6698 KVKK',4:'7201 Tebligat',5:'5442 İl İdaresi',6:'5326 Kabahatler',7:'3713 TMK',8:'2935 OHAL',9:'5816 Atatürk K.',10:'6284 Aile K.',11:'2893 Bayrak K.',12:'7068 Disiplin',13:'4678 Sözleşmeli K.',14:'5070 E-İmza',15:'Resmî Yazışma Yön.',16:'Sözleşmeli Sb/Asb Yön.',17:'Jandarma Teşkilat Yön.',18:'KVK Silme Yön.',19:'Bilgi Edinme Yön.',20:'2521 Av Tüfekleri Yön.',21:'6284 Uygulama Yön.',22:'JGK-SGK Personel Yön.',23:'Hizmet Esasları Yön.',24:'İzin Yön.',25:'6136 Silah K.',68:'5809 Elektronik Hab.',97:'Yetkilendirme Yön.',98:'Taşınır Mal Yön.',99:'Harcama Belgeleri Yön.',100:'Kriptolu Hab. Yön.',101:'Telsiz Yön.',102:'2019/12 Genelge',142:'2024/7 Tasarruf',103:'BİG Rehberi'};
-const kisa=k=>KISALT[k.id]||kisaAd(k);
+const kisa=k=>kisaAd(k); // başkan: kanun adları TAM yazılsın
 const SINAV_AN=new Date('2026-10-10T10:00:00+03:00');
 const kalanGun=()=>Math.max(0,Math.floor((SINAV_AN-new Date())/86400000));
 const bugun=()=>new Date().toISOString().slice(0,10);
@@ -83,7 +83,7 @@ function tipIst(sorular){ // her tip için d/n (verilen sorular)
 }
 const zayifTipler=sorular=>tipIst(sorular).filter(t=>t.n>=2&&t.d/t.n<=.5).sort((a,b)=>a.oran-b.oran);
 function hazirlik(){const ks=KANUN.map(kanunDurum).filter(x=>x.n);if(!ks.length)return null;let wt=0,ws=0;ks.forEach(x=>{wt+=w(x.k.id);ws+=w(x.k.id)*x.oran;});return Math.round(ws/wt*100);}
-function maddeBaslik(k,m){const n=k.n.find(n=>n.m.includes(m));return n?n.b:'';}
+function maddeBaslik(k,m,sorular){const n=k.n.find(n=>n.m.includes(m));if(n)return n.b;const q=(sorular||[]).find(q=>maddeNo(q)===m&&K.tani[q.i]===0)||(sorular||[]).find(q=>maddeNo(q)===m);if(!q)return 'Madde '+m;const t=q.k.replace(/^.*?göre,?\s*/i,'').replace(/\s+/g,' ');return t.length>70?t.slice(0,70)+'…':t;}
 const bar=(oran,renk)=>`<span class="bar"><i style="width:${Math.max(3,Math.round(oran*100))}%;background:${renk}"></i></span>`;
 const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
 
@@ -94,8 +94,6 @@ function giris(){
   const ozetler=KANUN.filter(k=>K.checkup[k.id]).length;
   $('#ekran').innerHTML=`
   <section class="gHero">
-    <img class="gLogo" src="__LOGO__" alt="Mevzu">
-    <div class="gMarka">MEVZU</div>
     <div class="gBaslik"><span class="gRadar">${IK.radar}</span><span>Harekât <i>Merkezi</i></span></div>
     <div class="gAlt">EKSİĞİNİ BUL · NOKTA ATIŞIYLA KAPAT</div>
     <div class="gSinava">SINAVA</div>
@@ -105,11 +103,9 @@ function giris(){
   <button class="secim" id="bRontgen"><span class="secimIk">${IK.buyutec}</span><span class="secimMetin"><b>Röntgen Çek</b><small>Kanun bazında ne kadar hazırsın?</small><em>~${Math.round(rSoru*0.3)} dk · ~${rSoru} soru${K.rontgen?` · son: ${tarihYaz(K.rontgen.tarih)}`:''}</em></span><span class="secimOk">${IK.sag}</span></button>
   <button class="secim" id="bCheckup"><span class="secimIk">${IK.belge}</span><span class="secimMetin"><b>Check-up</b><small>Madde madde detaylı tarama</small><em>${IK.hedef} Müşterek / Branş${ozetler?` · ${ozetler} özet kayıtlı`:''}</em></span><span class="secimOk">${IK.sag}</span></button>
   ${K.rontgen?`<button class="kayitSatir" id="sonRontgen"><span>Son röntgen sonucu · ${K.rontgen.d}/${K.rontgen.n}</span><b>Aç ›</b></button>`:''}
-  <nav class="altBar"><button id="lNot">${IK.kitap}<span>Konu notları</span></button><i></i><button id="lBanka">${IK.belge}<span>Soru bankası</span></button><i></i><button id="lProva">${IK.hedef}<span>Prova</span></button></nav>`;
+`;
   $('#bRontgen').onclick=rontgenBaslat;$('#bCheckup').onclick=checkupListe;
   if($('#sonRontgen'))$('#sonRontgen').onclick=rontgenSonuc;
-  $('#lNot').onclick=()=>kanunListesi('not');$('#lBanka').onclick=()=>kanunListesi('soru');
-  $('#lProva').onclick=()=>basla([...karistir(KANUN.filter(k=>k.g==='mus').flatMap(k=>k.q)).slice(0,50),...karistir(KANUN.filter(k=>k.g==='mebs').flatMap(k=>k.q)).slice(0,30)],'Prova',{tani:false,tur:'serbest'});
 }
 
 /* ---------- soru seçimi ---------- */
@@ -145,7 +141,7 @@ function rontgenSonuc(){
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen Sonucu</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.grafik}</div><div class="hzMetin"><span class="hzLbl">Hazırlık</span><b class="hzSayi">${H}<small>/100</small></b><p>${cumle}</p></div></section>
   <h3 class="bolumBaslik">Kanun bazında analiz</h3>
-  <section class="liste">${ks.map(x=>`<button class="satir" data-cu="${x.k.id}"><span class="satirAd">${esc(kisa(x.k))}</span>${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span><span class="satirOk">${IK.sag}</span></button>`).join('')}</section>
+  <section class="liste">${ks.map(x=>`<button class="satir kb" data-cu="${x.k.id}"><span class="satirAd">${esc(kisa(x.k))}</span><span class="satirOk">${IK.sag}</span><span class="kbAlt">${bar(x.oran,DURUM[x.durum][1])}<span class="satirDeger">${x.d}/${x.n}</span><span class="pill" style="--p:${DURUM[x.durum][1]}">${DURUM[x.durum][0]}</span></span></button>`).join('')}</section>
   <h3 class="bolumBaslik">Soru tipi zaafı</h3>
   <section class="tipIzgara">${tipler.map(t=>`<div class="tipHucre"><span class="tipAd">${esc(t.ad)}</span>${t.n?`<div class="tipAltSatir">${bar(t.oran,oranRenk(t.oran))}<span class="tipYuzde">%${Math.round(t.oran*100)}</span></div><small>${t.d}/${t.n} doğru</small>`:'<small>bu tipte soru çıkmadı</small>'}</div>`).join('')}</section>
   ${ilkEksik?`<button class="anaBtn2" id="eksikBasla">Eksiklerime göre başla ${IK.ok}<small>${esc(kisa(ilkEksik.k))} check-up · 8-12 soru</small></button>`:''}
@@ -198,11 +194,11 @@ function checkupAnaliz(id,geriHedef){
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div></div></section>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler</h3>
-  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="satir"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m)||'—')}</span>${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n}</span></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı; hepsini doğru yaptın.</p>'}</section>
+  <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="satir"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span>${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n}</span></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı; hepsini doğru yaptın.</p>'}</section>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?</h3>
   <section class="liste">${tipler.map(t=>{const hata=1-t.oran;return `<div class="satir"><span class="satirAd">${esc(t.ad)}</span>${bar(hata,oranRenk(1-hata))}<span class="satirDeger">%${Math.round(hata*100)}</span><span class="satirKucuk">${t.n-t.d}/${t.n} yanlış</span></div>`}).join('')||'<p class="kucukNot">Tip ayrımı için yeterli soru yok.</p>'}</section>
   <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>eksik maddelerinin noktaları + tuzaklar · kaydedildi</small></button>
-  ${yanlislar.length?`<details class="yanlisKatla"><summary>Yanlış yaptığın sorular (${yanlislar.length})</summary><div class="yanlisListe">${yanlislar.map(q=>`<details><summary>${esc(q.y||'')} · ${esc(q.k.slice(0,90))}…</summary><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[q.i]!==undefined?`<p style="color:#FF8F86">Senin cevabın: ${HARF[K.cevap[q.i]]}) ${esc(q.s[K.cevap[q.i]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></details>`).join('')}</div></details>`:''}
+  ${yanlislar.length?`<h3 class="bolumBaslik"><span class="hedefIk">${IK.hedef}</span>Yanlış yaptığın sorular (${yanlislar.length})</h3><section class="liste yanlisKartlar">${yanlislar.map((q,i)=>`<details class="ySoru"><summary><span class="satirNo">${esc((q.y||'').match(/m\.[\d\/\-]+/)?.[0]||('Soru '+(i+1)))}</span><span class="satirOk">${IK.sag}</span><span class="ySoruK">${esc(q.k.slice(0,120))}${q.k.length>120?'…':''}</span></summary><div class="ySoruIc"><p style="white-space:pre-line">${esc(q.k)}</p>${K.cevap[q.i]!==undefined?`<p class="ySenin">Senin cevabın: ${HARF[K.cevap[q.i]]}) ${esc(q.s[K.cevap[q.i]])}</p>`:''}<p class="dg">Doğru: ${HARF[q.d]}) ${esc(q.s[q.d])}</p><p>${esc(q.a)}</p></div></details>`).join('')}</section>`:''}
   <div class="altLinkler"><button id="yeniden">Bu kanunu yeniden check-up yap</button></div>`;
   $('#geri').onclick=()=>geriHedef?geriHedef():checkupListe();$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);
 }
