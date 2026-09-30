@@ -150,19 +150,28 @@ function giris(){
 function rontgenSayfa(){
   iz(rontgenSayfa);
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
-  const rSoru=rontgenToplam();
+  const rSoru=rontgenToplam(), dk=Math.round(rSoru*0.3);
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='rontgen'?K.aktif:null;
   const g=(K.rontgenler||(K.rontgen?[K.rontgen]:[])).slice().reverse();
   const H=R=>hazirlik(new Set(R.ids));
-  $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.buyutec}</div><div class="hzMetin"><span class="hzLbl">Hızlı tarama</span><b class="hzSayi kucukSayi">~${rSoru}<small> soru · ~${Math.round(rSoru*0.3)} dk</small></b><p><b>Sınav düzeninde:</b> ilk 40 soru müşterek, son 40 soru branş mevzuatından; sınavda çok soru çıkan kanunlardan daha fazla gelir. Cevapları sonunda görürsün; hangi kanunda ne kadar hazır olduğun kanun kanun ortaya çıkar. <b>Sorular her röntgende değişir</b>, istediğin kadar tekrar çekebilirsin.</p></div></section>
-  ${yarim?`<button class="anaBtn2" id="devamR">Devam et ${IK.ok}<small>${Object.keys(yarim.cevap||{}).length}/${yarim.ids.length} soruyu cevapladın, kaldığın yerden sürer</small></button>`:''}
-  <button class="anaBtn2 ${yarim?'ikincil':''}" id="cek">${g.length||yarim?'Yeniden çek':'Röntgen çek'} ${IK.ok}<small>${yarim?'yarım kalan röntgen silinir, baştan başlarsın':'her seferinde farklı sorular · yaklaşık '+Math.round(rSoru*0.3)+' dakika'}</small></button>
-  <h3 class="bolumBaslik"><span class="hedefIk">${IK.grafik}</span>Sonuçlarım</h3>
-  ${g.length?`<section class="liste">${g.map((R,i)=>{const h=H(R);return `<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}</b><small>${R.d}/${R.n} doğru${h!=null?` · hazırlık ${h}/100`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:'<p class="kucukNot">Henüz röntgen çekmedin. İlk röntgen yaklaşık 25 dakika sürer.</p>'}`;
+  const yc=yarim?Object.keys(yarim.cevap||{}).length:0;
+  $('#ekran').innerHTML=`<div class="rxUst"><button class="geriIk" id="geri">‹</button><h1 class="rxBaslik">Röntgen</h1><div class="rxSus"><i></i><span>✦</span><i></i></div></div>
+  <section class="rxKart">
+    <div class="rxIkon"><span>${IK.buyutec}</span></div>
+    <div class="rxMetin"><span class="rxLbl">Hızlı tarama</span><div class="rxSayi">~<b>${rSoru}</b> soru · ~<b>${dk}</b> dk</div>
+      <p>İlk 40 soru müşterek, son 40 soru branş mevzuatından gelir. Sorular sınav ağırlığına göre dağılır ve her röntgende değişir.</p></div>
+    <div class="rxAyrac"></div>
+    <span class="rxLbl rxTam">Röntgen sonunda görürsün:</span>
+    <ul class="rxListe"><li>${IK.tik}<span>Kanun bazında ne kadar hazırsın</span></li><li>${IK.tik}<span>Hangi soru tiplerinde zorlanıyorsun</span></li><li>${IK.tik}<span>Önce hangi kanuna dönmen gerekiyor</span></li></ul>
+  </section>
+  ${yarim?`<button class="rxBtn" id="devamR">${IK.ok}<span>DEVAM ET</span><small>${yc}/${yarim.ids.length} cevaplandı · kaldığın yerden</small></button>`:''}
+  <button class="rxBtn ${yarim?'ikincil':''}" id="cek">${IK.grafik}<span>${g.length||yarim?'YENİ RÖNTGEN ÇEK':'RÖNTGEN ÇEK'}</span>${IK.ok}</button>
+  <p class="rxNot">Her seferinde farklı soru seti · yaklaşık ${dk} dakika${yarim?' · yeniden çekersen yarım kalan silinir':''}</p>
+  <h3 class="rxBolum">${IK.grafik}<span>Son Röntgenlerin</span></h3>
+  ${g.length?`<section class="rxSonuclar">${g.map((R,i)=>{const h=H(R);return `<button class="rxSatir ${i===0?'son':''}" data-i="${i}"><span class="rxSatirIk">${IK.grafik}</span><span class="rxSatirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}${i===0?'<em class="rozetHazir">Rapor hazır</em>':''}</b><small><span><b>${R.d}</b>/${R.n} doğru</span><i></i>${h!=null?`<span>Hazırlık <b>${h}</b>/100</span>`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:`<p class="kucukNot" style="text-align:center">Henüz röntgen çekmedin. İlk röntgen yaklaşık ${dk} dakika sürer.</p>`}`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};$('#cek').onclick=()=>{if(yarim){K.aktif=null;kaydet();}rontgenBaslat();};
   if($('#devamR'))$('#devamR').onclick=aktifDevam;
-  document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenSayfa));
+  document.querySelectorAll('.rxSatir').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenSayfa));
 }
 /* önceki röntgenler */
 function rontgenGecmis(){
