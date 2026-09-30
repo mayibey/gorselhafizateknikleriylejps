@@ -4,6 +4,12 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl 11:40 — HAREKÂT MERKEZİ LANSMAN DUYURUSU
+> Başkanın metniyle: bildirim başlık "SINAVA 10 GÜN KALA MÜJDE" / içerik "Eksiklerinin Röntgenini Çeken Sistem Yayında."; uygulama içi
+> duyuru (herkes, link yok) + Telegram grubu (mesaj 2598). Push: 833 token, 833 ok / 0 hata (kanal ictima_firsat, data.url=masa).
+> Telegram KANAL id (-1003436401693, bot .env) "chat not found" → kanal yok ya da bot üye değil; grup yeterli. Betik:
+> scratchpad/merkez-duyuru-gonder.mjs (duyuru+push+telegram tek komut; metinler içinde).
+>
 > ### ▶ 30 Eyl (sabah) — RÖNTGEN 80 SORU + RÖNTGEN SAYFASI TASARIMI + KARARGÂH "BUGÜNÜN EMRİ" TUTARSIZLIĞI
 > **Röntgen:** sınav düzeni 80 soru = 40 müşterek + 40 branş (`rontgenDagilim`: AGIRLIK'la orantılı pay, en büyük kalan; kanun soru
 > sayısıyla sınırlı; Bando 2 kanun → 20+20, Jandarma 42 kanun → bazıları o turda boş, sonraki turda gelir). Soru ekranında
