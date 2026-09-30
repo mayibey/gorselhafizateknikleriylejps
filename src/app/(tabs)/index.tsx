@@ -14,6 +14,11 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Loading } from '@/components/ui/loading';
 import { Screen } from '@/components/ui/screen';
 import { Palette, Radius, Spacing } from '@/constants/theme';
+import { kotuMu } from '@/lib/performans';
+
+/** GÜNLÜK EMİR DİLİMİ (30 Eyl, başkan: "hepsinde düzelt"): zayıf havuzundan günde en çok bu kadar kart istenir;
+ *  halka ve "N kart kaldı" bu dilime göre. Havuzun tamamı ayrıca "havuz N" olarak yazılır. */
+const GUNLUK_DILIM = 25;
 import {
   getAllCards,
   getCardCount,
@@ -242,7 +247,7 @@ export default function KarargahScreen() {
   const [gunMadde, setGunMadde] = useState<CardWithLaw | null>(null);
   const [tumKartlar, setTumKartlar] = useState<CardWithLaw[]>([]); // madde→kart eşleşmesi (Güç Kazandırma)
   const [sonKonu, setSonKonu] = useState<string | null>(null);
-  const [bugunSayi, setBugunSayi] = useState(0);
+  const [bugunZayif, setBugunZayif] = useState(0); // bugün çalışılan ZAYIF mevzi sayısı (halka payı)
   // Unutma uyarısı: ≥7 gündür çalışılmamış (ama daha önce çalışılmış) kanunlar.
   const [unutulan, setUnutulan] = useState<{ lawId: number; ad: string; gun: number }[]>([]);
   const [zayifKanun, setZayifKanun] = useState<ZayifKanun[]>([]);
@@ -379,7 +384,11 @@ export default function KarargahScreen() {
         const bugunKartlar = new Set(
           perf.filter((p) => p.tarih === bugun && p.kaynak === 'calisma').map((p) => p.card_id),
         );
-        setBugunSayi(bugunKartlar.size);
+        // 30 Eyl: halka eskiden "bugün çalışılan HER kart / (o + bekleyen)" idi → 90/623 gibi anlamsız
+        // bir pay çıkıyordu (zayıf olmayan kartlar sayılıyor, bugün çalışılıp hâlâ zayıf kalan çift sayılıyordu).
+        // Artık yalnız ZAYIF mevzi çalışması sayılır: bugün çalışılan kartlardan daha önce kötü sonucu olanlar.
+        const kotuKartlar = new Set(perf.filter(kotuMu).map((p) => p.card_id));
+        setBugunZayif([...bugunKartlar].filter((id) => kotuKartlar.has(id)).length);
         // Haftalık gün halkaları (Şafak sahnesi): son 7 günün her birinde çalışma var mı?
         const GUN_HARF = ['Pz', 'Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct'];
         const bugunMs0 = Date.parse(`${bugun}T00:00:00Z`);
@@ -439,6 +448,9 @@ export default function KarargahScreen() {
   const tekrarSayisi = queue?.length ?? 0;
   const bekleyen = queue?.length ?? 0;
   const bos = queue !== null && queue.length === 0;
+  // GÜNLÜK DİLİM: emir günlüktür — halka = bugün bitirilen zayıf mevzi / bugünkü hedef (en çok GUNLUK_DILIM).
+  const hedef = Math.min(GUNLUK_DILIM, bugunZayif + bekleyen);
+  const kalan = Math.max(0, hedef - bugunZayif);
 
   if (hata) {
     return (
@@ -661,7 +673,7 @@ export default function KarargahScreen() {
                   ) : null}
                 </View>
                 {!bos ? (
-                  <EmirHalka tamam={bugunSayi} toplam={bugunSayi + bekleyen} />
+                  <EmirHalka tamam={bugunZayif} toplam={hedef} />
                 ) : hicCalisilan ? (
                   /* 24 Ağu: burada "0/8 KART" yazıyordu — 8 sayısı UYDURMAYDI (ilk turun
                      kaç kart olduğu kanuna göre değişir). Sayı yerine keşif amblemi. */
@@ -685,7 +697,7 @@ export default function KarargahScreen() {
                   <View style={styles.emirMetaKol}>
                     <MaterialCommunityIcons name="clock-outline" size={16} color={Palette.beyaz} />
                     <AppText variant="kucuk" bold color="beyaz">
-                      {bekleyen} kart · {bekleyen} dk
+                      {kalan > 0 ? `${kalan} kart kaldı` : 'Bugünkü dilim tamam'} · havuz {bekleyen}
                     </AppText>
                   </View>
                   {sonKonu ? (
@@ -718,7 +730,8 @@ export default function KarargahScreen() {
                         router.push({ pathname: '/patika', params: { lawId: String(TCK_LAW_ID) } }),
                       );
                     } else if (bos) router.push('/mevzuat');
-                    else router.push({ pathname: '/akis', params: { mod: 'zayif' } });
+                    // Günlük dilim: akışa yalnız bugünkü kalan kadar kart gider (dilim bittiyse yeni bir dilim).
+                    else router.push({ pathname: '/akis', params: { mod: 'zayif', adet: String(kalan > 0 ? kalan : GUNLUK_DILIM) } });
                   }}
                   accessibilityRole="button"
                   accessibilityLabel={

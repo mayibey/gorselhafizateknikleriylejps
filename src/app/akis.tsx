@@ -78,7 +78,7 @@ export default function AkisScreen() {
   // (Ekran görüntüsü/kayıt engeli artık GLOBAL — root _layout'ta useEkranKoruma.)
   useImzaliTazele(); // web imzalı modda görsel URL'leri gelince yeniden çiz (native no-op)
   const router = useRouter();
-  const { lawId, bolumId, mod, kart, kapsam, maddeKart } = useLocalSearchParams<{
+  const { lawId, bolumId, mod, kart, kapsam, maddeKart, adet } = useLocalSearchParams<{
     lawId?: string;
     bolumId?: string;
     mod?: string;
@@ -90,6 +90,8 @@ export default function AkisScreen() {
     // ("Madde 3 → içi Madde 4"). Artık lawId + maddeKart geliyor: tüm kanun yüklenir,
     // bu kart id'sine atlanır. Kanun kuyruğu düğümlerle aynı sıradan → çakışma imkânsız.
     maddeKart?: string;
+    /** Zayıf modunda GÜNLÜK DİLİM (30 Eyl): kuyruğun ilk N kartı (Karargâh "N kart kaldı" ile aynı sayı). */
+    adet?: string;
   }>();
   const bolumModu = bolumId != null && bolumId !== '';
   const kanunModu = lawId != null && lawId !== '';
@@ -279,6 +281,7 @@ export default function AkisScreen() {
         // zincirini AYNEN üretir ama DOĞRU kart id'siyle → madde-kayması biter. Kuyruğu
         // çıpa kartından dilimle (paydayı/ilerlemeyi eski davranışla birebir korur).
         let sonListe = liste;
+        if (zayifModu && adet && Number(adet) > 0) sonListe = liste.slice(0, Number(adet)); // günlük dilim
         if (maddeKart) {
           const i = liste.findIndex((c) => c.id === Number(maddeKart));
           if (i > 0) sonListe = liste.slice(i);
