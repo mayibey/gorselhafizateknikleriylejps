@@ -4,6 +4,17 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl (sabah) — RÖNTGEN 80 SORU + RÖNTGEN SAYFASI TASARIMI + KARARGÂH "BUGÜNÜN EMRİ" TUTARSIZLIĞI
+> **Röntgen:** sınav düzeni 80 soru = 40 müşterek + 40 branş (`rontgenDagilim`: AGIRLIK'la orantılı pay, en büyük kalan; kanun soru
+> sayısıyla sınırlı; Bando 2 kanun → 20+20, Jandarma 42 kanun → bazıları o turda boş, sonraki turda gelir). Soru ekranında
+> "Müşterek/Branş" etiketi. Sayfa GPT taslağına göre yeniden çizildi (rxKart/rxBtn/rxSatir, "Rapor hazır" rozeti). 3 branşta WebKit ölçüldü.
+> **Karargâh Emir paneli (başkan: "sayılar tutarsız"):** halka "90/623" = bugün çalışılan HER kart / (o + bekleyen zayıf) idi; meta
+> "533 kart · 533 dk" = kart başına 1 dk uydurması. Düzeltme: GÜNLÜK DİLİM `GUNLUK_DILIM=25`; halka = bugün çalışılan ZAYIF
+> mevzi (daha önce kötü sonucu olan kartlar) / min(25, o + bekleyen); meta "N kart kaldı · havuz M"; TAARRUZA BAŞLA akışa `adet`
+> parametresiyle yalnız dilimi gönderir (`akis.tsx` zayif modunda `liste.slice(0, adet)`). Havuz kuralı değişmedi (kötü sonuç → girer,
+> 2 ardışık iyi → çıkar); havuz denemelerdeki her yanlışla büyür — bilinçli. Merkez kullanım raporu 10:11: 6 kişi açtı (5 üye), 3 başladı,
+> 1 kilide takıldı (rontgen); Elvida hesabı 22 Eyl yeniden satın almış, sorun yok.
+>
 > ### ▶ 30 Eyl (03:30) — MERKEZ KULLANIM SAYACI (başkan: "kim açmış, kaçı kilide takılmış göreyim")
 > `merkez_olay` (user_id, olay, ayrinti, premium, brans, zaman; RLS yalnız kendi insert; okuma servis anahtarıyla). Olaylar:
 > `acti` (masa.tsx ekran hazır olunca, tek sefer) · `kilit` {nerede: rontgen|checkup|devam|ozet} (üye olmayan) · `rontgen/checkup/devam/ozet`
