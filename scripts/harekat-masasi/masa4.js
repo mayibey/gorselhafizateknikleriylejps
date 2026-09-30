@@ -129,7 +129,7 @@ const oranRenk=o=>o>=.75?'#3FBF7F':o>=.5?'#F3C24A':o>=.3?'#F09A3E':'#E85A4F';
 function giris(){
   YIGIN.length=0;POP=false;derinlikBildir();
   document.body.classList.remove('sinavda');document.body.classList.add('giriste');window.scrollTo({top:0});S=null;
-  const g=kalanGun(); const rSoru=KANUN.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
+  const g=kalanGun(); const rSoru=rontgenToplam();
   const ozetler=KANUN.filter(k=>K.checkup[k.id]).length;
   const yarimR=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='rontgen', yarimC=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup';
   const yarimYazi=a=>`${Object.keys(a.cevap||{}).length}/${a.ids.length}`;
@@ -150,16 +150,16 @@ function giris(){
 function rontgenSayfa(){
   iz(rontgenSayfa);
   document.body.classList.remove('sinavda','giriste');window.scrollTo({top:0});
-  const rSoru=KANUN.reduce((a,k)=>a+(w(k.id)>=4?2:1),0);
+  const rSoru=rontgenToplam();
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='rontgen'?K.aktif:null;
   const g=(K.rontgenler||(K.rontgen?[K.rontgen]:[])).slice().reverse();
   const H=R=>hazirlik(new Set(R.ids));
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>Röntgen</h2><span></span></div>
-  <section class="hzKart"><div class="hzIk">${IK.buyutec}</div><div class="hzMetin"><span class="hzLbl">Hızlı tarama</span><b class="hzSayi kucukSayi">~${rSoru}<small> soru · ~${Math.round(rSoru*0.3)} dk</small></b><p>Sınav kapsamındaki her kanundan bir soru sorar, sınavda çok soru çıkan kanunlardan iki. Cevapları sonunda görürsün; hangi kanunda ne kadar hazır olduğun kanun kanun ortaya çıkar. <b>Sorular her röntgende değişir</b>, istediğin kadar tekrar çekebilirsin.</p></div></section>
+  <section class="hzKart"><div class="hzIk">${IK.buyutec}</div><div class="hzMetin"><span class="hzLbl">Hızlı tarama</span><b class="hzSayi kucukSayi">~${rSoru}<small> soru · ~${Math.round(rSoru*0.3)} dk</small></b><p><b>Sınav düzeninde:</b> ilk 40 soru müşterek, son 40 soru branş mevzuatından; sınavda çok soru çıkan kanunlardan daha fazla gelir. Cevapları sonunda görürsün; hangi kanunda ne kadar hazır olduğun kanun kanun ortaya çıkar. <b>Sorular her röntgende değişir</b>, istediğin kadar tekrar çekebilirsin.</p></div></section>
   ${yarim?`<button class="anaBtn2" id="devamR">Devam et ${IK.ok}<small>${Object.keys(yarim.cevap||{}).length}/${yarim.ids.length} soruyu cevapladın, kaldığın yerden sürer</small></button>`:''}
   <button class="anaBtn2 ${yarim?'ikincil':''}" id="cek">${g.length||yarim?'Yeniden çek':'Röntgen çek'} ${IK.ok}<small>${yarim?'yarım kalan röntgen silinir, baştan başlarsın':'her seferinde farklı sorular · yaklaşık '+Math.round(rSoru*0.3)+' dakika'}</small></button>
   <h3 class="bolumBaslik"><span class="hedefIk">${IK.grafik}</span>Sonuçlarım</h3>
-  ${g.length?`<section class="liste">${g.map((R,i)=>{const h=H(R);return `<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}</b><small>${R.d}/${R.n} doğru${h!=null?` · hazırlık ${h}/100`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:'<p class="kucukNot">Henüz röntgen çekmedin. İlk röntgen yaklaşık 12 dakika sürer.</p>'}`;
+  ${g.length?`<section class="liste">${g.map((R,i)=>{const h=H(R);return `<button class="satir cu" data-i="${i}"><span class="satirIk">${IK.grafik}</span><span class="satirMetin"><b>${tarihYaz(R.tarih)}${i===0?' · son röntgen':''}</b><small>${R.d}/${R.n} doğru${h!=null?` · hazırlık ${h}/100`:''}</small></span><span class="satirOk">${IK.sag}</span></button>`}).join('')}</section>`:'<p class="kucukNot">Henüz röntgen çekmedin. İlk röntgen yaklaşık 25 dakika sürer.</p>'}`;
   $('#geri').onclick=()=>{if(!window.merkezGeri())giris();};$('#cek').onclick=()=>{if(yarim){K.aktif=null;kaydet();}rontgenBaslat();};
   if($('#devamR'))$('#devamR').onclick=aktifDevam;
   document.querySelectorAll('.satir.cu').forEach(b=>b.onclick=()=>rontgenSonuc(g[+b.dataset.i],rontgenSayfa));
@@ -182,10 +182,23 @@ function maddeyeGoreSec(k,adet,haric){
   return out;
 }
 /* ---------- 2. RÖNTGEN ---------- */
+const RONTGEN_BLOK=40; // sınav düzeni: 40 müşterek + 40 branş
+function rontgenDagilim(grup){
+  const ks=KANUN.filter(k=>k.g===grup&&k.q.length);if(!ks.length)return [];
+  const top=ks.reduce((a,k)=>a+w(k.id),0);
+  const pay=ks.map(k=>{const ham=RONTGEN_BLOK*w(k.id)/top;return {k,n:Math.min(Math.floor(ham),k.q.length),kalan:ham-Math.floor(ham)};});
+  let kalan=RONTGEN_BLOK-pay.reduce((a,p)=>a+p.n,0);
+  pay.sort((a,b)=>b.kalan-a.kalan||w(b.k.id)-w(a.k.id));
+  for(let tur=0;kalan>0&&tur<6;tur++){for(const p of pay){if(kalan<=0)break;if(p.n<p.k.q.length){p.n++;kalan--;}}}
+  return pay.filter(p=>p.n>0).map(p=>[p.k,p.n]);
+}
+const rontgenToplam=()=>rontgenDagilim('mus').reduce((a,[,n])=>a+n,0)+rontgenDagilim(BRANS.slug).reduce((a,[,n])=>a+n,0);
 function rontgenBaslat(){ if(kilit('rontgen'))return;
-  const sorular=[];const haric=new Set(Object.keys(K.tani));
-  for(const k of KANUN){const n=w(k.id)>=4?2:1;let s=maddeyeGoreSec(k,n,haric);if(s.length<n)s=s.concat(maddeyeGoreSec({q:k.q.filter(q=>!s.includes(q))},n-s.length));sorular.push(...s);}
-  basla(karistir(sorular),'Röntgen',{tani:true,tur:'rontgen'});
+  const haric=new Set(Object.keys(K.tani));
+  const sec=(k,n)=>{let s=maddeyeGoreSec(k,n,haric);if(s.length<n)s=s.concat(maddeyeGoreSec({q:k.q.filter(q=>!s.includes(q))},n-s.length));return s;};
+  const blok=g=>karistir(rontgenDagilim(g).flatMap(([k,n])=>sec(k,n)));
+  const mus=blok('mus');
+  basla([...mus,...blok(BRANS.slug)],'Röntgen',{tani:true,tur:'rontgen',bolum:mus.length});
 }
 function rontgenBitir(){
   let d=0,n=0;
@@ -381,7 +394,7 @@ function soruCiz(kaydir=true){
   const mod=S.meta.tur==='rontgen'?'Röntgen Modu':S.meta.tur==='checkup'?'Check-up Modu':S.ad;
   $('#ekran').innerHTML=`<div class="sinav">
    <div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(S.meta.tur==='rontgen'?'Röntgen':S.meta.tur==='checkup'?'Check-up':S.ad)}</h2><span></span></div>
-   <div class="ilerleSatir"><div class="ilerle"><span style="width:${(S.i+1)/S.sorular.length*100}%"></span></div><span class="say">${S.i+1} / ${S.sorular.length}</span></div>
+   <div class="ilerleSatir"><div class="ilerle"><span style="width:${(S.i+1)/S.sorular.length*100}%"></span></div><span class="say">${S.i+1} / ${S.sorular.length}</span>${S.meta.bolum?`<span class="blokEtiket">${S.i<S.meta.bolum?'Müşterek':'Branş'}</span>`:''}</div>
    <div class="cipSatir"><span class="cipK">${IK.hedef}${esc(kisa(k))}</span><span class="cipMod">${IK.radar}${esc(mod)}</span></div>
    <article class="kart soru"><div class="soruNo">Soru ${S.i+1}</div>
      <p class="kok">${esc(q.k)}</p>

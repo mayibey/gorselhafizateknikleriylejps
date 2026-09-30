@@ -183,3 +183,5 @@ html,body,button,.kap{touch-action:manipulation}
 @keyframes zipla{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-6px)}}
 .ozKart.vurgu{box-shadow:0 0 0 2px rgba(243,194,74,.9),0 0 22px rgba(243,194,74,.45)}
 .mdBtnler.tek{grid-template-columns:1fr}
+
+.blokEtiket{margin-left:8px;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#F8D57A;border:1px solid rgba(243,194,74,.55);border-radius:999px;padding:2px 8px;white-space:nowrap}
