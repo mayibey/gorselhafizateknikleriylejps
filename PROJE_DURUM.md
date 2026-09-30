@@ -4,6 +4,13 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 30 Eyl 15:45 — KAYIT SONRASI BRANŞ EKRANI BOŞ KALIYORDU (OTA iki runtime, b9b2453)
+> Muhammet Ali G. (IG): "branş seçeneği çıkmıyor, giriş yapamıyorum". profiles.brans/rutbe NULL → GorevAdim'da takılı.
+> Sebep: onboarding branş listesi yalnız yerel DB'den tek sefer (`getBranches`); DB hazır değil/hata → boş, tekrar denenmiyor.
+> Düzeltme: liste SEED_BRANCHES ile açılır, DB cevap verirse tazelenir (onboarding + brans-secici). Son 3 günün 140 kaydının
+> 25'i brans/rutbe boş. Bu kişi için sunucuda jandarma/uzmerb yazıldı (uygulama açılışta profiles'tan çeker → ekran atlanır).
+> Not: başkan müşteriye "uzman erbaşta branş seçimi pasif" dedi — YANLIŞ (kilit yok; uzman erbaş sınavında 40 branş sorusu var).
+>
 > ### ▶ 30 Eyl 11:40 — HAREKÂT MERKEZİ LANSMAN DUYURUSU
 > Başkanın metniyle: bildirim başlık "SINAVA 10 GÜN KALA MÜJDE" / içerik "Eksiklerinin Röntgenini Çeken Sistem Yayında."; uygulama içi
 > duyuru (herkes, link yok) + Telegram grubu (mesaj 2598). Push: 833 token, 833 ok / 0 hata (kanal ictima_firsat, data.url=masa).
