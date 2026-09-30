@@ -11,6 +11,7 @@ import { SecimKutu } from '@/components/auth/secim-kutu';
 import { AppText } from '@/components/ui/app-text';
 import { MaxContentWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getBranches } from '@/db/database';
+import { SEED_BRANCHES } from '@/db/seed';
 import { useAuth } from '@/lib/auth-context';
 import { useBrans } from '@/lib/brans-context';
 import { type Rutbe, RUTBELER } from '@/lib/rutbe-store';
@@ -48,12 +49,24 @@ function GorevAdim({ onTamam }: { onTamam: () => void }) {
   const { setRutbe } = useRutbe();
   const [brans, setBransSec] = useState<string | null>(null);
   const [rutbe, setRutbeSec] = useState<Rutbe | null>(null);
-  const [branslar, setBranslar] = useState<{ slug: string; ad: string }[]>([]);
+  // 30 Eyl (Muhammet Ali G. "branş seçeneği çıkmıyor, giriş yapamıyorum"; son 3 günün 140 kaydının 25'i bu ekranda
+  // boş kalmış): liste eskiden YALNIZ yerel veritabanından geliyordu; ilk açılışta veritabanı hazır olmadan/hata verince
+  // liste boş kalıyor ve bir daha denenmiyordu → kullanıcı içeri giremiyordu. Branş listesi sabit (seed) → doğrudan oradan
+  // başla; veritabanı cevap verirse onunla tazele. Böylece liste HİÇBİR koşulda boş açılmaz.
+  const [branslar, setBranslar] = useState<{ slug: string; ad: string }[]>(() =>
+    SEED_BRANCHES.map((b) => ({ slug: b.slug, ad: b.ad })),
+  );
   const [mesgul, setMesgul] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
 
   useEffect(() => {
-    void getBranches().then((bs) => setBranslar(bs.map((b) => ({ slug: b.slug, ad: b.ad }))));
+    void getBranches()
+      .then((bs) => {
+        if (bs.length > 0) setBranslar(bs.map((b) => ({ slug: b.slug, ad: b.ad })));
+      })
+      .catch(() => {
+        /* veritabanı hazır değil → sabit liste kalır */
+      });
   }, []);
 
   async function kaydet() {

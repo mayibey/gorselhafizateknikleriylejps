@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { AppText } from '@/components/ui/app-text';
 import { CardFlowMaxWidth, Palette, Radius, Spacing } from '@/constants/theme';
 import { getBranches } from '@/db/database';
+import { SEED_BRANCHES } from '@/db/seed';
 import type { Branch } from '@/db/schema';
 import { useKisiselOzellik } from '@/lib/ozellik';
 
@@ -23,7 +24,10 @@ export function BransSecici({ baslik, altyazi, seciliSlug, onSelect }: Props) {
   const gece = useKisiselOzellik('talim-mevzuata');
 
   useEffect(() => {
-    void getBranches().then(setBranches);
+    // Sabit liste yedeği (30 Eyl): veritabanı boş/hatalı dönerse liste boş kalmasın.
+    void getBranches()
+      .then((bs) => setBranches(bs.length > 0 ? bs : SEED_BRANCHES))
+      .catch(() => setBranches(SEED_BRANCHES));
   }, []);
 
   return (
