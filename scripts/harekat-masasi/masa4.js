@@ -107,6 +107,7 @@ window.merkezGeri=function(){ if(S){aktifKaydet();S=null;} if(YIGIN.length>1){ Y
 })();
 
 /* ---------- ölçüm ---------- */
+const kalanSorular=(k,cu)=>{if(!cu)return k.q;const c=new Set((cu.ids||[]).map(x=>kid(x)));return k.q.filter(q=>!c.has(kid(q.i)));};
 function kanunDurum(k,sadece){
   if(!(sadece instanceof Set))sadece=null; // .map(kanunDurum) indeks geçirir
   let d=0,n=0;const kacan=[];const yanlisQ=[];
@@ -248,8 +249,8 @@ function checkupListe(){
   const bolumBoyu=k=>k.q.length;
   const yarim=K.aktif&&K.aktif.meta&&K.aktif.meta.tur==='checkup'?K.aktif.meta.kanun:null;
   const satir=x=>{const cu=K.checkup[x.k.id];const durum=cu?'tam':yarim===x.k.id?'devam':'yok';
-    const kismi=cu&&cu.n<x.k.q.length;
-    const pill=kismi&&durum==='tam'?[`Kısmi · ${cu.n}/${x.k.q.length}`,'#F3C24A']:{tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
+    const kalanN=cu?kalanSorular(x.k,cu).length:0;const kismi=kalanN>0;
+    const pill=kismi&&durum==='tam'?[`Yeni soru · ${kalanN}`,'#F3C24A']:{tam:['Tamamlandı','#3FBF7F'],devam:['Devam ediyor','#F3C24A'],yok:['Başlanmadı','#7FA3AE']}[durum];
     const cevaplanan=durum==='devam'?Object.keys(K.aktif.cevap||{}).length:0;
     const oran=cu?cu.d/cu.n:durum==='devam'?cevaplanan/bolumBoyu(x.k):0;
     return `<button class="satir cu" data-id="${x.k.id}"><span class="satirIk">${IK.belge}</span><span class="satirMetin"><b>${esc(kisa(x.k))}</b><small>${bolumBoyu(x.k)} soru ${bar(oran,cu?oranRenk(oran):durum==='devam'?'#F3C24A':'#7FA3AE')}<span>${cu?'%'+Math.round(oran*100)+' doğru':durum==='devam'?cevaplanan+'/'+bolumBoyu(x.k)+' cevaplandı':'%0'}</span></small></span><span class="pill" style="--p:${pill[1]}">${pill[0]}</span><span class="satirOk">${IK.sag}</span></button>`;};
@@ -294,7 +295,8 @@ function checkupAnaliz(id,geriHedef){
   $('#ekran').innerHTML=`<div class="ustBar"><button class="geriIk" id="geri">‹</button><h2>${esc(kisa(k))} Check-up</h2><span></span></div>
   <section class="hzKart"><div class="hzIk">${IK.belge}</div><div class="hzMetin"><b class="hzSayi kucukSayi">${cu.d}<small> / ${cu.n} doğru</small></b><div class="tipAltSatir">${bar(oran,oranRenk(oran))}<span class="tipYuzde">%${Math.round(oran*100)}</span></div>${cu.n<k.q.length?`<p>Bu kanunun ${k.q.length} sorusundan ${cu.n}'i çözüldü.</p>`:''}</div></section>
   <button class="anaBtn2" id="ozetAc">Altın Özeti aç ${IK.ok}<small>Eksik kaldığın maddelerin notları ve sınav tuzakları · kayıtlı</small></button>
-  ${cu.n<k.q.length?`<button class="anaBtn2 ikincil" id="kalan">Kalan ${k.q.length-cu.n} soruyu çöz ${IK.ok}<small>sonuç bu check-up'la birleşir</small></button>`:''}
+  ${kalanSorular(k,cu).length?`<button class="anaBtn2 ikincil" id="kalan">Yeni / kalan ${kalanSorular(k,cu).length} soruyu çöz ${IK.ok}<small>sonuç bu check-up'la birleşir</small></button>`:''}
+  <button class="anaBtn2 ikincil" id="yenidenUst">Yeniden check-up yap ${IK.ok}<small>bu kanunun bütün sorularıyla baştan</small></button>
   <details class="acilir" open><summary><span class="hedefIk">${IK.hedef}</span>Eksik olduğun maddeler<span class="rozet">${eksik.length}</span><span class="acilirOk">${IK.sag}</span></summary>
   <section class="liste">${eksik.length?eksik.map(([m,o])=>`<div class="mdKart"><div class="mdUst"><span class="satirNo">m.${m}</span><span class="satirAd">${esc(maddeBaslik(k,m,sorular))}</span></div><div class="mdOlcu">${bar(o.d/o.n,oranRenk(o.d/o.n))}<span class="satirDeger">${o.d}/${o.n} doğru</span></div><div class="mdBtnler ${k.g==='mus'?'':'tek'}">${k.g==='mus'?`<button class="mdBtn" data-kart="${m}">${IK.kitap}Karta git</button>`:''}<button class="mdBtn dolu" data-ozet="${m}">${IK.belge}Altın özete git</button></div></div>`).join(''):'<p class="kucukNot">Eksik madde çıkmadı, hepsini doğru yaptın.</p>'}</section></details>
   <details class="acilir"><summary><span class="hedefIk">${IK.hedef}</span>Hangi soru tipinde hata yapıyorsun?<span class="rozet">${tipler.filter(t=>t.d<t.n).length}</span><span class="acilirOk">${IK.sag}</span></summary>
@@ -310,7 +312,7 @@ function checkupAnaliz(id,geriHedef){
     window.addEventListener('scroll',g,{passive:true});
     if(document.documentElement.scrollHeight<=window.innerHeight+120)ip.classList.add('gizli'); }
   if($('#kalan'))$('#kalan').onclick=()=>checkupBolum(id,true);
-  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupListe();};$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);
+  $('#geri').onclick=()=>{if(!window.merkezGeri())checkupListe();};$('#ozetAc').onclick=()=>ozet(id,()=>checkupAnaliz(id,geriHedef));$('#yeniden').onclick=()=>checkupBolum(id);$('#yenidenUst').onclick=()=>checkupBolum(id);
 }
 function kartaGit(kanunId,m){ if(window.ReactNativeWebView){window.ReactNativeWebView.postMessage(JSON.stringify({tip:'kart',kanun:kanunId,madde:String(m)}));} else toast('Konu kartı uygulamada açılır.'); }
 /* ---------- 6. ALTIN ÖZET ---------- */
