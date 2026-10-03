@@ -4,6 +4,11 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki gece — "İLGİLİ KARTI ÇALIŞ" DÜZELTMESİ HERKESE AÇIK (bayrak ilgili-kart-kitap; f75b224; OTA 1.0.47+1.0.46 22:18)
+> Mehmet Ali: 5809 m.3 sorusunda düğme TCK açıyordu (kanunda kart yoksa bütün kanunlarda madde no aranıyordu). Başkan kuralı:
+> kart varsa kart, yoksa kanunun PDF kitabı. Sıra: madde kartı → branşın o kanuna ait PDF'i → Altın Özet kitabı → "Bu kanunu çalış"
+> → düğme yok. PDF üyelik kapılı. Zayıf havuza da yalnız aynı kanunun kartı düşer. Geri alma: ozellik_herkes'ten çıkar.
+>
 > ### ▶ 3 Eki akşam (3) — OTURUM KORUMA HERKESE AÇIK: başkan "yay" dedi → uygulama_ayar.ozellik_herkes'e "oturum-koruma" eklendi
 > OTA gerekmedi. OTA'lı (1.0.47/1.0.46 yeni paket) cihazlarda bayrak bir açılışta önbelleğe yazılır, SONRAKİ açılıştan itibaren
 > çalışır. Geri alma: ozellik_herkes'ten "oturum-koruma"yı çıkar (eski davranış döner). Sonraki build'de YAYIN_BAYRAKLARI'na alınabilir.
