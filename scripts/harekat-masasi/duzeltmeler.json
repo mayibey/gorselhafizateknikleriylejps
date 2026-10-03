@@ -31297,5 +31297,856 @@
     "Kısmi istisna hâllerinde Veri Sorumluları Siciline kayıt yükümlülüğü gibi aydınlatma yükümlülüğü de uygulanmaz (m.28/2)"
    ]
   }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Emir makamı (mülkiye amiri yerine savcı) ve tebligat yolu (her hâlde PTT) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Tehirinde zarar umulan işlerde tebligat, Cumhuriyet savcısının emriyle zabıta vasıtasıyla yaptırılır.”",
+    "“Aynı yerde bulunan daire ve müesseseler arasındaki tebligat her hâlde PTT vasıtasıyla yapılır.”"
+   ],
+   "dogrusu": [
+    "Tehirinde zarar umulan işlerde tebligat, kendi memurları veya mahalli mülkiye amirinin emriyle zabıta vasıtasıyla yaptırılır (m.2/1)",
+    "Aynı yerdeki daire ve müesseseler arasındaki tebligat, kendi memurları veya mahalli mülkiye amirinin emriyle zabıta vasıtasıyla yaptırılır (m.2/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Saklı tutulan hükümler yürürlükten kalkmış gibi gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Zor kullanılmasını gerektiren görevlerin zabıta tarafından yapılacağına dair hükümler, Tebligat Kanunu ile yürürlükten kalkmıştır.”",
+    "“Tebligat Kanununun ikinci babında yazılı hususi hükümler, genel hükümler karşısında uygulanmaz.”"
+   ],
+   "dogrusu": [
+    "Zor kullanmayı gerektiren veya hazırlık tahkikatına ilişkin görevlerin zabıtaca yapılacağına dair hükümler saklıdır (m.2/2)",
+    "Kanunun ikinci babında yazılı hususi hükümler saklıdır (m.2/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tarifeyi belirleyen makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“PTT'nin Tebligat Kanununa göre yapacağı işlerden alacağı ücretler Adalet Bakanlığınca belirlenir.”"
+   ],
+   "dogrusu": [
+    "PTT'nin bu Kanuna göre yapacağı işlerin ücretleri, PTT tarafından ayrı bir tarife ile tespit ve tayin edilir (m.3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Evrakın teslim edileceği kişiler (muhtar/ihtiyar heyeti/zabıta) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Muhatap ve onun yerine tebliğ yapılabilecek kimseler adreste bulunmazsa, tebliğ memuru evrakı en yakın PTT şubesine bırakır.”",
+    "“Muhatap tebellüğden imtina ederse tebliğ evrakı gönderen kuruma iade edilir.”"
+   ],
+   "dogrusu": [
+    "Adreste kimse bulunmazsa tebliğ memuru evrakı muhtara, ihtiyar heyeti azasından birine veya zabıta amir ya da memurlarına imza karşılığında teslim eder (m.21/1)",
+    "Muhatap tebellüğden imtina ederse evrak muhtara, ihtiyar heyeti azasından birine veya zabıtaya imza karşılığında teslim edilir (m.21/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; tebliğ tarihi ve ihbarnamenin yapıştırılacağı yer bozuldu. KART_CELISKI: hükümde komşu/yönetici/kapıcıya bildirme kayıtsız yazılmış; resmî metinde bu bildirim yalnız adreste bulunmama hâlinde ve muhataba haber verilmesi içindir (imtinada yok)",
+  "duzeltme": {
+   "hukum": "Tesellüm edenin adresini içeren ihbarname, gösterilen adresteki binanın kapısına yapıştırılır; adreste bulunmama hâlinde, muhataba haber verilmesi için durum mümkün oldukça en yakın komşulardan birine, varsa yönetici veya kapıcıya da bildirilir; ihbarnamenin kapıya yapıştırıldığı tarih, tebliğ tarihi sayılır (m.21/1)",
+   "sinavda_boyle_yazarlar": [
+    "“Tebliğ evrakının muhtara teslim edildiği tarih, tebliğ tarihi sayılır.”",
+    "“Teslim alanın adresini içeren ihbarname, evrakı teslim alan muhtarın kapısına yapıştırılır.”"
+   ],
+   "dogrusu": [
+    "İhbarnamenin gösterilen adresteki binanın kapısına yapıştırıldığı tarih, tebliğ tarihi sayılır (m.21/1)",
+    "Teslim alanın adresini içeren ihbarname, muhatabın gösterilen adresindeki binanın kapısına yapıştırılır (m.21/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Adres kayıt sistemindeki adreste oturmama hâlinde iade ve tebliğ tarihi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Muhatap adres kayıt sistemindeki adreste hiç oturmamış veya oradan sürekli ayrılmışsa tebliğ evrakı iade edilir.”",
+    "“Adres kayıt sistemindeki adrese yapılan tebligatta tebliğ tarihi, muhatabın durumu öğrendiği tarihtir.”"
+   ],
+   "dogrusu": [
+    "Adres kayıt sistemindeki adreste hiç oturmamış veya sürekli ayrılmış olsa dahi evrak muhtara, ihtiyar heyeti azasına veya zabıtaya teslim edilir (m.21/2)",
+    "Adres kayıt sistemindeki adrese yapılan tebligatta da ihbarnamenin kapıya yapıştırıldığı tarih tebliğ tarihi sayılır (m.21/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kabul zorunluluğu ihtiyariye çevrildi; zabıta kapsam dışı gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Muhtar ve zabıta memurları, kendilerine teslim edilmek istenen tebliğ evrakını kabul etmeyebilir.”",
+    "“Tebliğ evrakını kabul zorunluluğu yalnızca muhtar için geçerlidir; zabıta amir ve memurları evrakı kabule mecbur değildir.”"
+   ],
+   "dogrusu": [
+    "Muhtar, ihtiyar heyeti azaları, zabıta amir ve memurları kendilerine teslim edilen evrakı kabule mecburdur (m.21/3)",
+    "Evrakı kabul zorunluluğu muhtar ve ihtiyar heyeti azalarıyla birlikte zabıta amir ve memurları için de geçerlidir (m.21/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; yaş sınırı ve görünüşe göre değerlendirme öğesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Muhatap yerine kendisine tebliğ yapılacak kimsenin görünüşüne nazaran on beş yaşından aşağı olmaması yeterlidir.”",
+    "“Muhatap yerine tebliğ yapılacak kimsenin yaşı, kimlik belgesi incelenerek kesin olarak tespit edilmelidir.”"
+   ],
+   "dogrusu": [
+    "Muhatap yerine tebliğ yapılacak kimse görünüşüne nazaran 18 yaşından aşağı olmamalı ve bariz surette ehliyetsiz bulunmamalıdır (m.22)",
+    "Muhatap yerine tebliğ yapılacak kimsenin yaşı, kimlik incelemesiyle değil, görünüşüne nazaran değerlendirilir (m.22)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-9",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İki eli olmayan kişiye tebligatın sonucu bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Tebliğ yapılacak kimsenin iki eli de yoksa tebligat yapılamaz.”",
+    "“Tebliğ yapılacak kimsenin iki eli de yoksa tebliğ evrakı muhtara teslim edilir.”"
+   ],
+   "dogrusu": [
+    "Tebliğ yapılacak kimsenin iki eli de yoksa tebliğ evrakı kendisine verilir (m.24/3)",
+    "İki eli de olmayan kimseye tebliğ evrakı muhtara bırakılmaz, doğrudan kendisine verilir (m.24/3)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Mazbataya yazma ve hazır bulunana imzalatma zorunluluğu kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Parmak bastırılarak yapılan tebligatta durumun tebliğ mazbatasına yazılması gerekmez.”",
+    "“Parmak bastırılarak yapılan tebligatta hazır bulunan komşuya tebliğ mazbatası imzalatılmaz.”"
+   ],
+   "dogrusu": [
+    "Parmak bastırma veya iki eli olmama hâlinde durum tebliğ mazbatasında açıkça belirtilir ve hazır bulunan kişiye de imzalatılır (m.24/4)",
+    "Parmak bastırılarak yapılan tebligatta hazır bulunan kişiye de tebliğ mazbatası imzalatılır (m.24/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 4,
+  "kart_id": "4-11",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tebligat ertelenir denildi; davet edilecekler listesine belediye görevlisi eklendi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Okuryazar bir komşu bulunmazsa tebligat, okuryazar bir komşu bulununcaya kadar ertelenir.”",
+    "“Bulunan komşu imzadan imtina ederse tebliğ memuru bir belediye görevlisini davet eder ve tebligat onun huzurunda yapılır.”"
+   ],
+   "dogrusu": [
+    "Okuryazar komşu bulunmazsa tebligat ertelenmez; muhtar, ihtiyar heyeti azası veya zabıta memuru davet edilerek bunların huzurunda yapılır (m.24/5)",
+    "Komşu imzadan imtina ederse tebliğ memuru muhtarı, ihtiyar heyeti azasından birini veya bir zabıta memurunu davet eder (m.24/5)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Ölçüt (merkezi idare) ve bölünüş sırası (köy eklenmesi) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Türkiye, mahalli idare kuruluşu bakımından illere, iller ilçelere, ilçeler de bucaklara bölünmüştür.”",
+    "“Merkezi idare kuruluşu bakımından iller ilçelere, ilçeler bucaklara, bucaklar da köylere bölünmüştür.”"
+   ],
+   "dogrusu": [
+    "Türkiye, mahalli idare değil, merkezi idare kuruluşu bakımından illere, iller ilçelere, ilçeler de bucaklara bölünmüştür (m.1)",
+    "Merkezi idare kuruluşu bakımından Türkiye illere, iller ilçelere, ilçeler de bucaklara bölünmüştür; köy bu sıralamada yer almaz (m.1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Cumhurbaşkanı onayı gereken işler kanuna bağlandı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bucak kurulması ve kaldırılması, il ve ilçede olduğu gibi kanunla yapılır.”",
+    "“İl ve ilçe sınırlarının değiştirilmesi kanunla yapılır.”"
+   ],
+   "dogrusu": [
+    "Bucak kurulması ve kaldırılması Cumhurbaşkanı onayıyla yapılır; kanunla kurulan ve kaldırılan yalnız il ve ilçedir (m.2/B, A)",
+    "İl, ilçe ve bucak sınırlarının değiştirilmesi kanunla değil, Cumhurbaşkanı onayıyla yapılır (m.2/B)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Köy işlerinde makam/usul bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Köy adlarının değiştirilmesi ve köylerin birleştirilmesi Cumhurbaşkanı onayı ile yapılır.”",
+    "“Yeniden köy kurulması veya köyün yerinin değiştirilmesi kanunla yapılır.”"
+   ],
+   "dogrusu": [
+    "Köy adlarının değiştirilmesi, köylerin birleştirilmesi ve ayrılması İçişleri Bakanlığının tasvibiyle yapılır (m.2/Ç)",
+    "Yeniden köy kurulması veya yerinin değiştirilmesi, Bayındırlık ile Sağlık ve Sosyal Yardım Bakanlıklarının mütalaası alınarak yapılır (m.2/C)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Coğrafi/tarihi san seçeneği silindi; ihtiyari hüküm zorunluya çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İl, ilçe ve bucaklara her hâlde merkez yapılan şehir, kasaba veya köyün adı verilir; başka bir isim verilemez.”",
+    "“Merkez yapılan yerin coğrafi veya tarihi bir sanı varsa il, ilçe ve bucağa bu sanın verilmesi zorunludur.”"
+   ],
+   "dogrusu": [
+    "İl, ilçe ve bucağa merkezin adı verilir; ancak coğrafi veya tarihi bir sanı varsa o da isim olarak verilebilir (m.2/E)",
+    "Coğrafi veya tarihi san isim olarak verilebilir; bu bir zorunluluk değil, imkândır (m.2/E)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bağlılık (valinin emri) ve memur derecesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bakanlıkların il teşkilatı ve il idare şube başkanları valinin değil, doğrudan bağlı oldukları bakanlıkların emri altındadır.”",
+    "“İl idare şube başkanlarının emri altında çalışanlar ilin birinci derecede memurlarıdır.”"
+   ],
+   "dogrusu": [
+    "Bakanlıkların il teşkilatı ve bu teşkilatın başındaki il idare şube başkanları valinin emri altındadır (m.4)",
+    "İl idare şube başkanlarının emri altında çalışanlar ilin ikinci derecede memurlarıdır (m.4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İstisna listesine emniyet eklendi; listedeki askerlik şubeleri çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Emniyet teşkilatı, adli teşkilat ve askerî birlikler gibi valinin emri dışında kalan kuruluşlardandır.”",
+    "“Askerlik daire ve şubeleri, valinin emri altındaki il teşkilatı içinde yer alır.”"
+   ],
+   "dogrusu": [
+    "Valinin emri dışındakiler yargıç, savcı, adalet memurları, askerî birlikler, askerî fabrika ve müesseseler ile askerlik daire ve şubeleridir; emniyet listede yoktur (m.4/2)",
+    "Askerlik daire ve şubeleri, askerî birlikler ve askerî fabrikalarla birlikte valinin emri dışında kalır (m.4/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sorumluluk makamı ve bakanların emir verme usulü bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Valiler, ilin genel idaresinden İçişleri Bakanına karşı sorumludur.”",
+    "“Bakanlar, görevlerine ait işler için valilere ancak İçişleri Bakanlığı kanalıyla emir ve talimat verebilir.”"
+   ],
+   "dogrusu": [
+    "Valiler, ilin genel idaresinden Cumhurbaşkanına karşı sorumludur (m.9/A)",
+    "Cumhurbaşkanı yardımcıları ve bakanlar, görevlerine ait işler için valilere resen emir ve talimat verir (m.9/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İmza yetkisi devri ve yazışma muhatabı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, hiçbir konuda il idare şube başkanlarına vali adına imza yetkisi veremez.”",
+    "“Bakanlıklar, il genel idare teşkilatına ait işleri valiliğe değil, doğrudan il idare şube başkanlarına yazar.”"
+   ],
+   "dogrusu": [
+    "Vali, hesabata ve teknik hususlara ait işlerde idare şube başkanlarına vali adına imza yetkisi verebilir (m.9/B)",
+    "Bakanlıklar ve tüzel kişiliği haiz genel müdürlükler, il genel idare teşkilatına ait bütün işleri doğrudan doğruya valiliklere yazar (m.9/B)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Genel emir yetkisinin sahibi ve ilan zorunluluğu bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İlde genel emir çıkarma yetkisi yalnızca İçişleri Bakanına aittir; vali genel emir çıkaramaz.”",
+    "“Vali, çıkardığı genel emirleri ilan etmek zorunda değildir.”"
+   ],
+   "dogrusu": [
+    "Vali, mevzuatın verdiği yetkiyi kullanmak ve ödevleri yerine getirmek için genel emirler çıkarabilir ve bunları ilan eder (m.9/Ç)",
+    "Vali, çıkardığı genel emirleri ilan eder (m.9/Ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-9",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Denetim kapsamına adli/askerî teşkilat eklendi; yaptırabilme imkânı kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, adli ve askerî teşkilat dahil ildeki bütün Devlet daire ve müesseselerini denetler ve teftiş eder.”",
+    "“Vali, denetleme ve teftiş görevini bizzat yapmak zorundadır; bu görevi müfettişlere yaptıramaz.”"
+   ],
+   "dogrusu": [
+    "Vali, adli ve askerî teşkilat dışında kalan bütün Devlet daire, müessese ve işletmelerini denetler ve teftiş eder (m.9/D)",
+    "Vali, denetleme ve teftişi bakanlık veya genel müdürlük müfettişleriyle ya da bu dairelerin amir ve memurlarıyla da yaptırabilir (m.9/D)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sorumluluk il idare kuruluna kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İlin her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten il idare kurulu sorumludur.”"
+   ],
+   "dogrusu": [
+    "İlin her yönden genel idare ve genel gidişini düzenlemek ve denetlemekten vali sorumludur (m.9/E)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-11",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İsteme yetkisi kaldırıldı; mecburi iş ihtiyariye çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, ilde teşkilatı bulunmayan bir işin yürütülmesini başka bir idare şube başkanından isteyemez.”",
+    "“Valinin teşkilatı bulunmayan bir iş için görevlendirdiği şube başkanı, bu işi yapıp yapmamakta serbesttir.”"
+   ],
+   "dogrusu": [
+    "Vali, ilde teşkilatı veya görevli memuru bulunmayan işlerin yürütülmesini o işle yakın ilgisi bulunan idare şube veya daire başkanından isteyebilir (m.9/F)",
+    "Valinin teşkilatı bulunmayan bir iş için şube başkanına verdiği işin yapılması mecburidir (m.9/F)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-12",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bilgi verme yükümlülüğü ve asli vazifeye halel getirmeme şartı düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, uzman veya fen kollarına dahil memurlardan iş istediğinde ilgili Bakanlığa bilgi vermek zorunda değildir.”",
+    "“Vali, uzman memurlardan asli vazifelerini aksatacak olsa bile ilin hizmetlerine ilişkin iş isteyebilir.”"
+   ],
+   "dogrusu": [
+    "Vali, uzman veya fen kollarındaki memurlardan iş istediğinde durumdan ilgili Bakanlığa ve tüzel kişiliği haiz genel müdürlüğe bilgi verir (m.9/G)",
+    "Vali, uzman memurlardan ancak asli vazifelerine halel getirmemek şartıyla ilin genel ve mahalli hizmetlerine ilişkin iş isteyebilir (m.9/G)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-13",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tören başkanlığı belediye başkanına verildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Cumhuriyet Bayramında ilde yapılacak resmî törenlere belediye başkanı başkanlık yapar.”"
+   ],
+   "dogrusu": [
+    "Cumhuriyet Bayramında ilde yapılacak resmî törenlere vali başkanlık yapar ve tebrikleri kabul eder (m.9/K)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-14",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Sicil amirliği dereceleri ters çevrildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, genel ve özel kolluk amirlerinin ikinci derecede sicil amiridir.”",
+    "“Vali, kaymakamların ikinci derecede, diğer memurların birinci derecede sicil amiridir.”"
+   ],
+   "dogrusu": [
+    "Vali, genel ve özel kolluk amirlerinin birinci derecede, diğer memurların ikinci derecede sicil amiridir (m.18)",
+    "Vali, kaymakamların birinci derecede, diğer memurların ikinci derecede sicil amiridir (m.18)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-15",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Amirlik kapsamı (özel kolluk) ve emirlerin derhal yerine getirilmesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, il sınırları içinde yalnızca genel kolluk kuvvetlerinin amiridir; özel kolluk teşkilatı valinin emrinde değildir.”",
+    "“Kolluk amir ve memurları, valinin emirlerini bağlı oldukları bakanlığın onayını aldıktan sonra yerine getirir.”"
+   ],
+   "dogrusu": [
+    "Vali, il sınırları içinde bulunan genel ve özel bütün kolluk kuvvet ve teşkilatının amiridir (m.11/A)",
+    "Kolluk amir ve memurları, vali tarafından verilen emirleri derhal yerine getirmekle yükümlüdür (m.11/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-16",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yetki garnizon komutanına verildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İldeki sınır ve kıyı emniyetiyle ilgili bütün işleri garnizon komutanı sağlar ve yürütür.”"
+   ],
+   "dogrusu": [
+    "Memleketin sınır ve kıyı emniyetini ve bununla ilgili bütün işleri yürürlükteki hükümlere göre vali sağlar ve yürütür (m.11/B)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-17",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Önleyici kolluk adli kolluk gibi gösterildi; karar alma yetkisi kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İl sınırları içinde adli kolluk yetkisi, valinin ödev ve görevlerindendir.”",
+    "“Vali, ilde huzur ve güvenliğin sağlanması için karar alamaz; yalnızca İçişleri Bakanlığının aldığı tedbirleri uygular.”"
+   ],
+   "dogrusu": [
+    "İl sınırları içinde huzur ve güvenliğin sağlanması ve önleyici kolluk yetkisi valinin ödev ve görevlerindendir (m.11/C)",
+    "Vali, huzur ve güvenliği, kişi dokunulmazlığını ve kamu esenliğini sağlamak için gereken karar ve tedbirleri alır (m.11/C)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-18",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Süre (on beş gün) ve ruhsatlı silah kapsamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, kamu düzeninin olağan hayatı durduracak şekilde bozulduğu hâllerde otuz günü geçmemek üzere belirli yerlere giriş ve çıkışı sınırlayabilir.”",
+    "“Vali, on beş günlük tedbirler kapsamında yalnızca ruhsatsız silahların taşınmasını yasaklayabilir; ruhsatlı silahlar bu yasağın dışındadır.”"
+   ],
+   "dogrusu": [
+    "Vali, kamu düzeninin olağan hayatı durduracak şekilde bozulduğu hâllerde on beş günü geçmemek üzere belirli yerlere giriş ve çıkışı sınırlayabilir (m.11/C)",
+    "Vali, on beş günlük tedbirler kapsamında ruhsatlı da olsa her çeşit silah ve merminin taşınmasını ve naklini yasaklayabilir (m.11/C)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-19",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Onay şartı eklendi; il içine münhasırlık kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, jandarma ve polis personelinin il içindeki yerlerini ancak İçişleri Bakanının onayıyla değiştirebilir.”",
+    "“Vali, ildeki jandarma ve polis personelini geçici veya sürekli olarak il dışındaki görev yerlerine de atayabilir.”"
+   ],
+   "dogrusu": [
+    "Vali, kolluk personelinin il içindeki yerlerini onay almadan değiştirebilir; bundan hemen İçişleri ile Gümrük ve Tekel Bakanlıklarına bilgi verir (m.11/Ç)",
+    "Valinin kolluk personelinin yerini değiştirme yetkisi il içine münhasırdır; il dışına yer değiştirme yapamaz (m.11/Ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-20",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yardım istenecek makamlar daraltıldı; sözlü istem geçersiz gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Vali, emrindeki kuvvetlerle önleyemediği olaylar için yalnızca İçişleri Bakanlığından yardım isteyebilir; askerî birliklerden yardım isteyemez.”",
+    "“Valinin askerî birliklerden yardım istemi her durumda yazılı yapılmalıdır; sözlü istem geçersizdir.”"
+   ],
+   "dogrusu": [
+    "Vali, İçişleri Bakanlığından ve gerekirse en yakın kara, deniz ve hava birlik komutanlığından yardım ister (m.11/D)",
+    "Acil durumlarda yardım istemi, sonradan yazılı şekle dönüştürülmek kaydıyla sözlü olarak yapılabilir (m.11/D)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-21",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Çap ve süreyi belirleyen makamlar yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Valinin istediği askerî kuvvetin çapını vali, görevde kalış süresini askerî birliğin komutanı belirler.”",
+    "“Yardıma gelen askerî kuvvetin görevde kalış süresini İçişleri Bakanı belirler.”"
+   ],
+   "dogrusu": [
+    "Askerî kuvvetin çapını vali ile koordine edilerek birlik komutanı, görevde kalış süresini komutanla koordine edilerek vali belirler (m.11/D)",
+    "Askerî kuvvetin görevde kalış süresini, askerî birliğin komutanı ile koordine edilerek vali belirler (m.11/D)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-22",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Müşterek görevde komuta valiye verildi; müstakil görevde emir makamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Yardıma gelen askerî birliğin belirli görevleri jandarma veya polisle birlikte yapması hâlinde komuta, sevk ve idare valiye aittir.”",
+    "“Müstakilen görevlendirilen askerî kuvvet, verilen görevi valinin emir ve talimatlarına göre yerine getirir.”"
+   ],
+   "dogrusu": [
+    "Askerî birlik belirli görevleri jandarma ya da polisle birlikte yaparsa komuta, sevk ve idareyi askerî birliklerin en kıdemli komutanı üstlenir (m.11/D)",
+    "Müstakilen görevlendirilen askerî kuvvet, görevi kendi komutanının sorumluluğu altında ve onun emir ve talimatlarına göre yerine getirir (m.11/D)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-23",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İzin makamı ve komşu ülke mutabakatı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Komşu ülkeye sığınan eylemcilere yönelik mahdut hedefli sınır ötesi harekât, İçişleri Bakanının onayıyla yapılır.”",
+    "“Sınır ötesi harekât, komşu ülkenin mutabakatı aranmaksızın yalnızca Cumhurbaşkanının müsaadesiyle yapılır.”"
+   ],
+   "dogrusu": [
+    "Mahdut hedefli sınır ötesi harekât, her defasında Genelkurmay Başkanlığı kanalıyla Cumhurbaşkanının müsaadesiyle ve komşu ülkelerin mutabakatı alınarak yapılır (m.11/D)",
+    "Sınır ötesi harekâtta Cumhurbaşkanının müsaadesinin yanında komşu ülkelerin mutabakatı da alınır (m.11/D)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-24",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kaymakama temsilci sıfatı verildi; adli/askerî teşkilat emre katıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, ilçede Cumhurbaşkanının temsilcisi ve idari yürütme vasıtasıdır.”",
+    "“İlçedeki adli ve askerî teşkilat da kaymakamın emri altındadır.”"
+   ],
+   "dogrusu": [
+    "Kaymakam, ilçede Cumhurbaşkanının temsilcisi değil, idari yürütme vasıtasıdır (m.27)",
+    "İlçedeki teşkilat kaymakamın emri altındadır; ancak adli ve askerî teşkilat bunun dışındadır (m.27)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-25",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Valiye ait genel emir yetkisi kaymakama verildi; valinin emirlerini yürütme ödevi kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, mevzuatın verdiği yetkileri kullanmak için ilçede genel emir çıkarabilir.”",
+    "“Kaymakam, ilçede yalnızca bakanlıkların talimatlarını yürütür; valinin talimat ve emirlerini yürütmekle ödevli değildir.”"
+   ],
+   "dogrusu": [
+    "Genel emir çıkarma yetkisi valiye aittir; kaymakam mevzuatın uygulanmasını sağlar ve valinin talimat ve emirlerini yürütür (m.9/Ç, m.31/A)",
+    "Kaymakam, valinin talimat ve emirlerini yürütmekle ödevlidir (m.31/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-26",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Olağanüstü hâl istisnası ve valiye bilgi verme yükümlülüğü bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakamlar hiçbir hâlde İçişleri Bakanlığı ve diğer bakanlıklarla doğrudan muhabere edemez.”",
+    "“Kaymakam, olağanüstü hâllerde bakanlıklarla yaptığı doğrudan muhabereden valiye bilgi vermek zorunda değildir.”"
+   ],
+   "dogrusu": [
+    "Olağanüstü hâllerde kaymakamlar İçişleri Bakanlığı ve diğer bakanlıklarla muhabere edebilir ve bundan valiye bilgi verir (m.31/B)",
+    "Kaymakam, olağanüstü hâllerde bakanlıklarla yaptığı muhabereden valiye bilgi verir (m.31/B)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-27",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Valinin muvafakati ile resen el çektirme yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, denetimi sırasında görevde kalmasında sakınca gördüğü ilçe idare şube başkanlarını resen işten el çektirebilir.”",
+    "“Kaymakam, diğer memur ve müstahdemlere ancak valinin muvafakatiyle işten el çektirebilir.”"
+   ],
+   "dogrusu": [
+    "Kaymakam, ilçe idare şube başkanlarını valinin muvafakatiyle, diğer memur ve müstahdemleri resen işten el çektirebilir (m.31/D)",
+    "Kaymakam, diğer memur ve müstahdemleri valinin muvafakati aranmaksızın resen ve sorumluluğu altında işten el çektirebilir (m.31/D)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-28",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Müfettiş talep makamı (vali) ve denetim kapsamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, teftiş için ihtiyaç duyduğu bakanlık müfettişlerini doğrudan ilgili bakanlıktan talep eder.”",
+    "“Kaymakam, ilçedeki adli ve askerî daireleri de denetler ve teftiş eder.”"
+   ],
+   "dogrusu": [
+    "Kaymakam, teftişi bizzat, idare şube başkanlarıyla veya validen talep edeceği bakanlık ya da genel müdürlük müfettişleriyle yapar (m.31/Ç)",
+    "Kaymakam, adli ve askerî daireler dışında kalan bütün Devlet daire, müessese ve işletmelerini denetler ve teftiş eder (m.31/Ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-29",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Ceza türü (aylıktan kesme) eklendi; kesinlik kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, ilçenin idare şube başkanlarına ve kolluk amirlerine aylıktan kesme cezası verebilir.”",
+    "“Kaymakamlarca resen verilen uyarma ve kınama cezaları kesin değildir.”"
+   ],
+   "dogrusu": [
+    "Kaymakam yalnız uyarma ve kınama cezası verebilir; daha ağır cezalar için teklif ve talepte bulunur (m.31/I)",
+    "Kaymakamlarca resen verilen cezalar kesindir ve tebliğ tarihinden itibaren sicile geçer (m.31/I)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-30",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "8 gün ile bir ay yer değiştirildi; yıllık izne mahsup kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, ilçe idare şube başkanlarına acele hâllerde bir aya kadar, tayini kendisine ait memurlara 8 güne kadar izin verebilir.”",
+    "“Kaymakamın tayini kendisine ait memurlara verdiği bir aya kadar izin, yıllık izin süresinden düşülmez.”"
+   ],
+   "dogrusu": [
+    "Kaymakam, ilçe idare şube başkanlarına acele hâllerde 8 güne kadar, tayini kendisine ait memurlara bir aya kadar izin verebilir (m.31/J)",
+    "Kaymakamın tayini kendisine ait memurlara verdiği bir aya kadar izin, yıllık izin süresine mahsup edilir (m.31/J)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-31",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Bildirim makamı ve tören başkanlığı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, askerlik şubesinin cevabını yeterli görmezse durumu doğrudan Millî Savunma Bakanlığına bildirir.”",
+    "“Cumhuriyet Bayramında ilçede yapılacak resmî törenlere belediye başkanı başkanlık yapar.”"
+   ],
+   "dogrusu": [
+    "Kaymakam, askerlik şubesinin cevabını yeterli görmezse durumu valiye bildirir (m.31/K)",
+    "Cumhuriyet Bayramında ilçede yapılacak resmî törenlere kaymakam başkanlık yapar ve tebrikleri kabul eder (m.31/L)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-32",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Amirlik kapsamı (özel kolluk) ve derhal yerine getirme bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, ilçe sınırları içinde yalnızca genel kolluk kuvvetlerinin amiridir; özel kolluk teşkilatı kaymakamın emrinde değildir.”",
+    "“Kolluk amir ve memurları, kaymakamın verdiği emirleri ancak valinin onayından sonra yerine getirir.”"
+   ],
+   "dogrusu": [
+    "Kaymakam, ilçe sınırları içinde bulunan genel ve özel kolluk kuvvet ve teşkilatının amiridir (m.32/A)",
+    "Kolluk amir ve memurları, kaymakam tarafından verilen emirleri derhal yerine getirmekle ödevlidir (m.32/B)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-33",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Valiye özgü on beş günlük kısıtlama yetkisi kaymakama verildi (süre m.11/C'den); sınır-kıyı görevi kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam da vali gibi ilçede belirli yerlere giriş ve çıkışı on beş günü geçmemek üzere sınırlayabilir.”",
+    "“İlçede sınır ve kıyı emniyetiyle ilgili işler kaymakamın değil, yalnızca valinin görevidir.”"
+   ],
+   "dogrusu": [
+    "Belirli yerlere giriş-çıkışı on beş güne kadar sınırlama yetkisi valiye aittir; kaymakam önleyici kolluk yetkisiyle gereken karar ve tedbirleri alır (m.11/C, m.32/Ç)",
+    "Kaymakam, memleketin sınır ve kıyı emniyetiyle ilgili bütün işleri yürürlükteki hükümlere göre sağlar ve yürütür (m.32/C)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-34",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Valinin tasvibi şartı kaldırıldı; sürekli yer değiştirme dışlandı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, ilçe genel ve özel kolluk kuvvetleri mensuplarının yerlerini resen değiştirebilir.”",
+    "“Kaymakam, valinin tasvibiyle kolluk mensuplarının yalnızca geçici olarak yerlerini değiştirebilir; sürekli değişiklik yapamaz.”"
+   ],
+   "dogrusu": [
+    "Kaymakam, ilçe kolluk mensuplarının yerlerini ancak valinin tasvibiyle geçici veya sürekli olarak değiştirebilir (m.32/D)",
+    "Kaymakam, valinin tasvibiyle kolluk mensuplarının yerlerini geçici veya sürekli olarak değiştirebilir (m.32/D)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-35",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Yardım istenecek makam (vali) askerî komutana kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakam, ilçede önlenemeyecek olağanüstü ve ani olaylarda yardımı doğrudan en yakın askerî komutandan ister.”"
+   ],
+   "dogrusu": [
+    "Kaymakam olağanüstü ve ani olaylarda hemen valiye bilgi vererek yardım ister, en yakın askerî komutanlara ise haber verir (m.32/E)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-36",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Gözetim kapsamı kamu kurumlarına daraltıldı; bilgi verme yükümlülüğü kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kaymakamın gözetim ve denetimi yalnızca kamuya ait daire ve müesseselerle sınırlıdır; özel kişilerin işletmeleri bu kapsama girmez.”",
+    "“İşyerleri, kaymakamın çalışanların kimlik ve nitelikleri hakkında istediği bilgileri vermekle yükümlü değildir.”"
+   ],
+   "dogrusu": [
+    "Gerçek ve tüzel kişilerce işletilen mali, ticari, sınai ve iktisadi müesseseler, ambar ve depolar da kaymakamın gözetim ve denetimi altındadır (m.32/F)",
+    "Kaymakam bu yerlerde bulunan veya çalışanların kimlik ve nitelikleri hakkında bilgi isteyebilir; istenen bilgiler hemen verilir (m.32/F)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-37",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Temsil sıfatı ve genel idare sorumluluğu kaymakama kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bucak müdürü, bucakta kaymakamın temsilcisidir.”",
+    "“Bucağın genel idaresinden bucak müdürünün bağlı olduğu kaymakam sorumludur.”"
+   ],
+   "dogrusu": [
+    "Bucak müdürü, bucakta en büyük Hükümet memuru ve temsilcisidir (m.42)",
+    "Bucağın genel idaresinden bucak müdürü sorumludur (m.42/A)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-38",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kınama yetkisi eklendi; cezanın kesinliği bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bucak müdürü, kolluk amir ve memurlarına savunmalarını aldıktan sonra uyarma ve kınama cezası verebilir.”",
+    "“Bucak müdürünün verdiği uyarma cezası, kaymakamın onayından sonra kesinleşir.”"
+   ],
+   "dogrusu": [
+    "Bucak müdürü, savunma aldıktan sonra yalnız uyarma cezası verebilir; kınama yetkisi yoktur (m.42/E)",
+    "Bucak müdürünün verdiği uyarma cezası kesindir ve tebliğ tarihinden itibaren sicile geçer (m.42/E)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-39",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kolluğun bağlılığı ve suçu önleme yetkisi kaymakama kaydırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bucakta genel ve özel kolluk kuvvetleri bucak müdürünün değil, yalnızca kaymakamın emri altındadır.”",
+    "“Bucak müdürü, bucakta suç işlenmesini önlemek için tedbir alamaz; bu yetki yalnız kaymakama aittir.”"
+   ],
+   "dogrusu": [
+    "Bucakta genel ve özel kolluk kuvvetleri bucak müdürünün emri altındadır ve emirlerini yerine getirmeye mecburdur (m.43)",
+    "Bucak müdürü, bucakta suç işlenmesini önlemek için gereken tedbirleri alır ve uygular (m.43)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-40",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tören başkanlığı belediye başkanına verildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Cumhuriyet Bayramlarında bucakta yapılacak törene belediye başkanı başkanlık yapar.”"
+   ],
+   "dogrusu": [
+    "Cumhuriyet Bayramlarında bucakta yapılacak törene bucak müdürü başkanlık yapar ve ziyaretleri kabul eder (m.42/F)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-41",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kurul listesine kolluk amirleri eklendi; vali muavini görevlendirmesi kaldırıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İl idare kurulu, valinin başkanlığında emniyet müdürü ve il jandarma komutanının da katılımıyla teşekkül eder.”",
+    "“Vali, il idare kuruluna başkanlık etmek üzere vali muavinini görevlendiremez.”"
+   ],
+   "dogrusu": [
+    "İl idare kurulu, vali başkanlığında hukuk işleri müdürü, defterdar ve millî eğitim, bayındırlık, sağlık ve sosyal yardım, tarım ve veteriner müdürlerinden oluşur (m.57)",
+    "Vali, il idare kuruluna başkanlık etmek üzere vali muavinini görevlendirebilir (m.57)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 5,
+  "kart_id": "5-42",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kurul listesine jandarma komutanı ve belediye başkanı eklendi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İlçe idare kurulu, kaymakamın başkanlığında ilçe jandarma komutanı ve belediye başkanının da katılımıyla teşekkül eder.”"
+   ],
+   "dogrusu": [
+    "İlçe idare kurulu kaymakam başkanlığında tahrirat kâtibi, malmüdürü, Hükümet hekimi, millî eğitim memuru, tarım memuru ve veterinerden oluşur (m.58)"
+   ]
+  }
  }
 ]

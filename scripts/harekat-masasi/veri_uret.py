@@ -43,8 +43,8 @@ for _f in sorted(glob.glob(os.path.join(KOK, 'scripts', 'harekat-masasi', 'ek_so
 DEGISTIR_DIR = os.path.join(KOK, 'scripts', 'harekat-masasi', 'soru_degistir')
 def sorular(lid):
     dy = os.path.join(DEGISTIR_DIR, f'kanun_{lid}.json')
-    if os.path.exists(dy):
-        return [{'i': q['i'], 'k': q['k'], 's': q['s'], 'd': q['d'], 'a': q['a'], 'y': q['y'], 'z': q.get('z', 'orta')} for q in json.load(open(dy, encoding='utf-8'))] + EK.get(lid, [])
+    if os.path.exists(dy):   # tam set: banka soruları da ek sorular da devre dışı (eski metne göre yazılmış olabilirler)
+        return [{'i': q['i'], 'k': q['k'], 's': q['s'], 'd': q['d'], 'a': q['a'], 'y': q['y'], 'z': q.get('z', 'orta')} for q in json.load(open(dy, encoding='utf-8'))]
     out = [{'i': q['id'], 'k': q['soru'], 's': q['siklar'], 'd': q['dogru'], 'a': q['aciklama'], 'y': q['kaynak'], 'z': q.get('zorluk', 'orta')} for q in KS.get(str(lid), [])]
     out += [{'i': f'P{i}', 'k': p['k'], 's': p['s'], 'd': p['d'], 'a': p['a'], 'y': p['y'], 'z': 'orta'} for i, p in enumerate(P) if p['l'] == lid]
     out += EK.get(lid, [])

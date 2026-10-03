@@ -20,7 +20,9 @@ def tzm(z):
     return m.group(1) if m else ''
 
 PARTI = []
+BITEN = {int(re.search(r'kanun_(\d+)', f).group(1)) for f in glob.glob(B + '/sonuc/kanun_*.json')}  # sonucu olan kanun yeniden yazılmaz
 for lid, k in kayit.items():
+    if lid in BITEN: continue
     r = json.load(open(f'{KOK}/gemini_calisma/girdi/resmi_metin/kanun_{lid}.json', encoding='utf-8'))
     metin = {x['no']: x['metin'] for x in r['maddeler']}
     kartlar = []

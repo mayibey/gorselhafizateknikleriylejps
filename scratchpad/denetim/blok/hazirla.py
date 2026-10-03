@@ -38,7 +38,7 @@ for lid_s, mv in KAP['mevzuatlar'].items():
     kk = [(n['m'][0] if n['m'] else '', kel(n['b'] + ' ' + n['h'])) for n in k['n']]
     sorular = collections.defaultdict(list); karis = collections.defaultdict(collections.Counter)
     for q in k['q']:
-        m = madde_no(q.get('y'))
+        m = q.get('m') or madde_no(q.get('y'))   # q.m: veri_uret + madde_anahtar ("Ek 1", "38/A" doğru maddede)
         if not m: continue
         sorular[m].append(q)
         for si, s in enumerate(q['s']):
