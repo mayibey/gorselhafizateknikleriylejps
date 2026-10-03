@@ -149,7 +149,7 @@ if SLUG:
 # ÜCRETSİZ SÜRÜM (üye olmayan): içerik yok, yalnız iskelet + sayılar → kilit sayfanın içinde (Röntgen çek / Check-up / Özet)
 _v = _json.loads(open(os.path.join(C, veri_ad), encoding='utf-8').read())
 for _k in _v['kanun']:
-    _k['q'] = [{'i': q['i'], 'k': '', 's': [], 'd': 0, 'a': '', 'y': q.get('y', ''), 'z': ''} for q in _k['q']]
+    _k['q'] = [dict({'i': q['i'], 'k': '', 's': [], 'd': 0, 'a': '', 'y': q.get('y', ''), 'z': ''}, **({'m': q['m']} if 'm' in q else {})) for q in _k['q']]
     _k['md'] = ''; _k['n'] = []; _k['tz'] = []; _k['sayi'] = []; _k['makam'] = []; _k['bl'] = {}   # 2. aşama blok metinleri de üyeye özel
 _v['ek'] = {}
 _uc = _json.dumps(_v, ensure_ascii=False).replace('</', '<\\/')

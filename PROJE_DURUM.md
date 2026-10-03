@@ -4,6 +4,18 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki öğleden sonra — LİMİT DOLDU, DEVAM NOKTASI
+> - Yayında: 53 mevzuatın madde blokları (öz/akılda tut/sorulur/karıştırılanlar), kapsam dışı ek-geçici madde soruları
+>   ayıklandı (branş başına 5-39 soru), "Ek m.1" ve ayrı harfli madde ("38/A") artık kendi bloğunda (madde_anahtar.py).
+> - Kalan blok partileri: 11-40 (partiler.json; 11, 12, 13, 14, 15 yarıda durduruldu → yeniden başlat). Kırmızı kutu: yalnız kanun 3
+>   birleşti; parti 1-20 kaldı (scratchpad/denetim/kutu). Her parti bitince: python scratchpad/denetim/yayina_al.py → hepsini_kur →
+>   test → yukle_sayfalar.sh.
+> - Acil Servis yeni 70 soru hazır: scratchpad/denetim/soru135.json → scripts/harekat-masasi/soru_degistir/kanun_135.json'a kopyala
+>   (veri_uret o mevzuatın banka sorularını bununla değiştirir); 3 dayanak/yürürlük sorusu (003, 069, 070) için karar bekliyor.
+>   Uygulamadaki soru bankasında eski 2009 soruları duruyor (Y68-S-*): ayrı iş.
+> - KART_CELISKI listesi: scratchpad/denetim/kart_celiski.json (gerçek içerik hataları, ör. 5070 m.5 banka teminat mektubu).
+> - Kesik resmî metinler (2200/6000/9000 karakter, ~89 madde) mevzuat.gov.tr'den tamamlanmalı.
+>
 > ### ▶ 3 Eki öğle — ACİL SERVİS 2022 + MERKEZ 2. AŞAMA BAŞLADI + ANTIGRAVITY KARŞILAŞTIRMASI (sayfa sunucudan; OTA YOK)
 > - **Acil Servis Tebliği (tabip/diş tabibi):** paket 2009 ve 2022 tebliğini karışık taşıyordu (24 saat takip, 30 dk konsültasyon,
 >   mavi kod… kalkmış hükümler). `_yeni/135.md` güncel metinle baştan yazıldı (40 nokta), ozet_T_tabip yeniden derlendi, Tabip ve

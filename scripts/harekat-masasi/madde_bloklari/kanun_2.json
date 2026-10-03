@@ -1,0 +1,506 @@
+[
+ {
+  "kanun_id": 2,
+  "madde": "1",
+  "baslik": "Kanunun amacı",
+  "oz": "Bu Kanun, Türkiye Cumhuriyeti Jandarma Teşkilatının görev, yetki ve sorumluluklarını düzenler. Ayrıca hizmetin gerektirdiği bağlılık ve ilişkiler ile teşkilat ve konuşa, yani birliklerin yerleşimine ait esas ve usulleri belirler.",
+  "sorulur": [
+   "Beklenen kalıp: Kanunun düzenlediği konular sayılıp listede olmayan sorulur; görev, yetki, sorumluluk, bağlılık ve ilişkiler, teşkilat ve konuş kanunun konusudur."
+  ],
+  "akilda": [
+   "Amaç üçlüsü: görev-yetki-sorumluluk; bağlılık ve ilişkiler; teşkilat ve konuş."
+  ],
+  "karis": [
+   {
+    "madde": "2",
+    "neden": "Amaç maddesi konuları sayar; kapsam maddesi karargâh, birlik, kurum ve personeli."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.1). Not: girdideki 2-27 kartı ve örnek soru Ek m.1'e (denetim ve teftiş) ait, bu maddeye yanlış eşlenmiş; Ek m.1 metni girdide yok."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "2",
+  "baslik": "Kanunun kapsamı",
+  "oz": "Kanun, Jandarma Teşkilatındaki karargâh, birlik ve kurumları kapsar. Buralarda hizmet gören personel ile bunlarla ilgili faaliyet ve esaslar da kapsamın içindedir.",
+  "sorulur": [
+   "Beklenen kalıp: kapsam daraltılarak yanlış şık kurulur; “yalnız birlikleri kapsar, buralarda hizmet gören personeli kapsamaz” gibi bir ifade yanlıştır."
+  ],
+  "akilda": [
+   "Kapsam dörtlüsü: karargâh, birlik, kurum ve buralarda hizmet gören personel; bunlarla ilgili faaliyet ve esaslar da dahil."
+  ],
+  "karis": [
+   {
+    "madde": "1",
+    "neden": "Amaç maddesi düzenlenen konuları sayar; kapsam maddesi karargâh, birlik, kurum ve personeli."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.2). Not: girdideki 2-28 kartı ve örnek soru Ek m.2'ye (değerlendirme raporu) ait, bu maddeye yanlış eşlenmiş; Ek m.2 metni girdide yok."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "3",
+  "baslik": "Jandarmanın tanımı",
+  "oz": "Türkiye Cumhuriyeti Jandarması, emniyet ve asayiş ile kamu düzeninin korunmasını sağlayan silahlı genel kolluk kuvvetidir. Diğer kanunların ve Cumhurbaşkanlığı kararnamelerinin verdiği görevleri de yerine getirir.",
+  "sorulur": [
+   "Jandarmanın ne tür bir kuvvet olduğu sorulur; doğrusu “silahlı genel kolluk kuvveti”dir. Çeldiriciler silahlı özel kolluk, askerî kolluk, sivil genel kolluk ve yardımcı kolluktur."
+  ],
+  "akilda": [
+   "Üç kelimelik kimlik: silahlı + genel + kolluk. Biri değişmişse (özel, askerî, sivil) şık yanlıştır.",
+   "Görev kaynağı ikilidir: kanunlar ve Cumhurbaşkanlığı kararnameleri."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.3). Not: girdideki 2-37…2-42 kartları Ek m.3'e (izinler) ait, bu maddeye yanlış eşlenmiş; Ek m.3 metni girdide yok."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "4",
+  "baslik": "Jandarmanın bağlılığı",
+  "oz": "Jandarma Genel Komutanlığı İçişleri Bakanlığına bağlıdır. Millî Savunma Bakanlığına, Genelkurmay Başkanlığına ya da doğrudan Cumhurbaşkanlığına bağlı değildir.",
+  "sorulur": [
+   "Jandarma Genel Komutanlığının bağlı olduğu makam sorulur; doğrusu İçişleri Bakanlığıdır. Genelkurmay Başkanlığı, Millî Savunma Bakanlığı, Cumhurbaşkanlığı ve Adalet Bakanlığı çeldiricidir."
+  ],
+  "akilda": [
+   "Jandarma İçişlerinin evidir: bağlılık İçişleri Bakanlığına, bütçe de İçişleri bünyesinde ama ayrı (m.18)."
+  ],
+  "karis": [
+   {
+    "madde": "8",
+    "neden": "Seferberlik ve savaşta bir bölümü Cumhurbaşkanı kararıyla Kuvvet Komutanlıkları emrine girer."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.4). Not: girdideki 2-53 kartı Ek m.4'e (gözaltı masrafları) ait, bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "5",
+  "baslik": "Kuruluş, konuş ve bölge teşkilatı",
+  "oz": "Jandarmanın kuruluş, kadro ve konuş yerlerini İçişleri Bakanlığı düzenler; seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek birlikler için Genelkurmay Başkanlığının görüşü alınır. Birliklerin kuruluş ve konuşunda mülki taksimat, yani il-ilçe bölünüşü esas alınır. Geçici olarak birden çok ili içine alan bölge teşkilatı da kurulabilir; bölge komutanı, teşkilatın konuşlu olduğu ilin valisine karşı sorumludur.",
+  "sorulur": [
+   "Bölge komutanının kime karşı sorumlu olduğu sorulur; doğrusu bölge teşkilatının konuşlu bulunduğu ilin valisidir. Garnizon komutanı, İçişleri Bakanı, Jandarma Genel Komutanı ve Genelkurmay Başkanı çeldiricidir.",
+   "Kuruluş ve konuşta esas alınan ölçü sorulur: mülki taksimat; coğrafi konum, nüfus yoğunluğu, askerî taksimat ve suç oranları çeldiricidir.",
+   "Makam oynatılır: kuruluşu düzenleyen İçişleri Bakanlığı yerine Genelkurmay yazılır ya da savaş birlikleri için “görüş alınmaz” denir."
+  ],
+  "akilda": [
+   "Düzenleyen İçişleri, görüş veren Genelkurmay: yalnız savaşta Kuvvet emrine girecek birlikler için Genelkurmay görüşü alınır.",
+   "Haritayı mülki taksimat çizer; bölge komutanı karargâhının bulunduğu ilin valisine hesap verir."
+  ],
+  "karis": [
+   {
+    "madde": "8",
+    "neden": "Kuvvet emrine girecek bölümleri Cumhurbaşkanı belirler; kuruluşlarında Genelkurmay görüş verir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.5). Not: 2-33…2-36 kartları Ek m.5'e (önleyici dinleme), 2-52 kartı Geçici m.5'e ait; bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "6",
+  "baslik": "Jandarma Genel Komutanının sorumluluğu",
+  "oz": "Jandarma Genel Komutanı, tüm Jandarma Teşkilatının komutanıdır. Teşkilatın sevk ve idaresinden, kanun ve nizam hükümlerinin uygulanmasını sağlamaktan ve bunlara dayanan emir ve kararların yerine getirilmesinden sorumludur.",
+  "sorulur": [
+   "Yanlış ifade sorusunda Genel Komutana maddede olmayan bir sorumluluk yüklenir; “bütçeyi onaylamaktan sorumludur” şıkkı yanlıştır. Komutanlık, sevk ve idare, kanun-nizam icrası ve emirlerin uygulanması doğrudur."
+  ],
+  "akilda": [
+   "Üç sorumluluk: sevk ve idare, kanun ve nizamların icrası, emir ve kararların uygulanması. Komutanlık tüm teşkilatı kapsar."
+  ],
+  "karis": [
+   {
+    "madde": "14",
+    "neden": "Genel Komutan teşkilatın komutanıdır; ama atamaların çoğunu İçişleri Bakanı yapar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.6); ikinci cümle mülga. Not: 2-29 kartı ve örnek soru Ek m.6'ya (yetki devri) ait, bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "7",
+  "baslik": "Mülki, adli ve askerî görevler",
+  "oz": "Jandarmanın sorumluluk alanındaki görevleri üçe ayrılır. Mülki görevler; emniyet, asayiş ve kamu düzenini sağlamak, kaçakçılığı men, takip ve tahkik etmek, suçu önleyici tedbirler almak ve ceza infaz kurumları ile tutukevlerinin dış korumasını yapmaktır. Adli görevler, işlenmiş suçlarla ilgili kanuni işlemleri yapmaktır. Askerî görevler ise kanunlar ve Cumhurbaşkanlığı kararnameleriyle verilen askerî hizmetlerdir.",
+  "sorulur": [
+   "Görevlerden olmayan şık sorulur; tuzak “ceza infaz kurumlarının iç güvenliği”dir, maddede yalnız dış koruma yazar.",
+   "Görev türü eşleştirilir: suçu önlemek mülki, işlenmiş suçla ilgili işlem adli görevdir; dış koruma da mülki görev sayılır.",
+   "Olay sorusu: hırsızlıktan sonra olay yerini koruyup delil toplayan ve faili yakalayan jandarmanın faaliyeti adli görevdir; mülki görev şıkkı çeldiricidir."
+  ],
+  "akilda": [
+   "Zaman çizgisi: suçtan önce önleme = mülki, suçtan sonra işlem = adli.",
+   "Cezaevinde jandarma dışarıdadır: dış koruma mülki görevdir, maddede iç güvenlik yazmaz.",
+   "Askerî görevler kanun ve Cumhurbaşkanlığı kararnamesiyle verilir; Genelkurmayın talebiyle görev verilmesi ayrı bir yoldur (m.8)."
+  ],
+  "karis": [
+   {
+    "madde": "8",
+    "neden": "Ek askerî görev Genelkurmay talebiyle İçişleri Bakanının, illerde valinin onayıyla verilir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.7/a-c). Not: 2-30 kartı Ek m.7'ye, 2-32 kartı Ek m.5'e ait; bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "8",
+  "baslik": "Seferberlik, savaş ve askerî görev",
+  "oz": "Seferberlik ve savaşta jandarma birliklerinin Cumhurbaşkanı kararıyla belirlenen bölümleri Kuvvet Komutanlıkları emrine girer, kalan bölümü normal görevine devam eder. Ayrıca jandarma, Genelkurmay Başkanlığının talebi üzerine İçişleri Bakanının, illerde garnizon komutanının talebi üzerine valinin onayıyla verilen askerî görevleri de yapar.",
+  "sorulur": [
+   "Kuvvet Komutanlıkları emrine girecek bölümleri belirleyen makam sorulur; doğrusu Cumhurbaşkanıdır. İçişleri Bakanı, Genelkurmay, Millî Savunma Bakanı ve eski metinden kalan Bakanlar Kurulu çeldiricidir.",
+   "Talep-onay ikilileri karıştırılır: Genelkurmay talep eder, İçişleri Bakanı onaylar; garnizon komutanı talep eder, vali onaylar."
+  ],
+  "akilda": [
+   "Savaşta kimin emrine? Kuvvet Komutanlıkları. Hangi bölüm? Cumhurbaşkanı kararıyla belirlenen; geri kalan normal görevine devam eder.",
+   "Talep-onay çifti: Genelkurmay → İçişleri Bakanı, garnizon komutanı → vali. Talep eden asker, onaylayan sivil."
+  ],
+  "karis": [
+   {
+    "madde": "5",
+    "neden": "Savaş birliklerinin kuruluşunda Genelkurmay görüş verir; bölümleri Cumhurbaşkanı belirler."
+   },
+   {
+    "madde": "7",
+    "neden": "Olağan askerî görevler kanun ve Cumhurbaşkanlığı kararnamesiyle verilir; burada talep-onay yolu var."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.8); “Bakanlar Kurulu” ibaresi 703 sayılı KHK ile “Cumhurbaşkanı” olmuştur (dipnot 7)."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "9",
+  "baslik": "Jandarmanın hizmet sınırı",
+  "oz": "Kanun ve nizamların ya da bunlara dayanan emir ve kararların öngörmediği hiçbir görev jandarmadan istenemez. Yani jandarmaya ancak hukuki dayanağı olan görev verilebilir.",
+  "sorulur": [
+   "Hizmet sınırıyla ilgili doğru ifade sorulur; doğrusu “kanun ve nizamlar ile bunlara dayalı emir ve kararların öngörmediği hiçbir görev istenemez”dir.",
+   "Çeldiriciler kurala istisna açar: mülki amirin uygun gördüğü görev, acil durumda sözlü emir, İçişleri Bakanının yazılı emri ya da Genel Komutanın onayı."
+  ],
+  "akilda": [
+   "Dayanak yoksa görev yok: kanun, nizam ya da bunlara dayalı emir ve karar olmadan jandarmadan iş istenemez."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.9); ikinci cümle mülga. Not: 2-49 ve 2-50 kartları ile örnek soru Ek m.9'a (ödül ve madalya) ait, bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "10",
+  "baslik": "Görev ve sorumluluk alanı",
+  "oz": "Jandarmanın alanı, il ve ilçe belediye sınırları dışında kalan ya da polis teşkilatı bulunmayan yerlerdir; belediye sınırı içinde uygun görülen yerler de jandarmaya verilebilir. İçişleri Bakanı bir il ya da ilçenin tamamını polis veya jandarma alanı yapabilir. Sınırları vali ya da kaymakam başkanlığındaki komisyon belirler, kararlar İçişleri Bakanının onayıyla yürürlüğe girer. Belediye sınırları değişirse alanlar en geç 3 ay içinde yeniden düzenlenir.",
+  "sorulur": [
+   "Boşluk doldurma: belediye kurulması ya da sınır değişikliğinde alanlar en geç 3 ay içinde yeniden düzenlenir; bir ay, altı ay ve bir yıl çeldiricidir.",
+   "Makam oynatılır: il ya da ilçenin tamamını jandarma alanı yapan ve komisyon kararını onaylayan İçişleri Bakanıdır; geçici karşılıklı görevlendirmeyi mahalli mülki amirler yapar.",
+   "Yanlış ifade sorusunda “belediye sınırları içinde asla jandarma alanı belirlenemez” gibi mutlak şıklar konur; madde buna izin verir."
+  ],
+  "akilda": [
+   "Jandarma şehrin dışını tutar: belediye sınırı dışı ya da polisin olmadığı yer. İstisna: uygun görülen belediye içi yerler.",
+   "Komisyonun başı vali ya da kaymakam, onayı İçişleri Bakanı, süresi 3 ay, belgesi harita veya kroki.",
+   "Yetersiz kalan güç komşunun sahasına geçici olarak gider; görevlendiren mahalli mülki amirdir."
+  ],
+  "karis": [
+   {
+    "madde": "12",
+    "neden": "Kurumlar arası personel görevlendirmesini İçişleri Bakanı yapar; sahalar arası geçici görevlendirmeyi mülki amir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.10); metnin arasına giren 5-7 numaralı dipnotlar m.7 ve m.8'e aittir."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "11",
+  "baslik": "Silah kullanma yetkisi",
+  "oz": "Jandarma, kendisine verilen görevleri yaparken hizmetin özelliğine uygun ve görevin gereği olarak, kanunlarda öngörülen silah kullanma yetkisine sahiptir. Bu yetkinin kaynağını ve sınırını kanunlar çizer.",
+  "sorulur": [
+   "Silah kullanma yetkisiyle ilgili doğru ifade sorulur; doğrusu “görevin ifası sırasında, hizmet özelliğine uygun ve kanunlarda öngörülen” yetkidir. Çeldiriciler sınırsız yetki, vali izni, yalnız savaş hâli ve Genelkurmay emridir."
+  ],
+  "akilda": [
+   "Silahın üç kilidi: görev sırasında olmak, hizmet özelliğine uygunluk, kanunda öngörülmüş olmak. “Yönetmelikle belirlenen yetki” şıkkı çeldiricidir."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.11). Not: 2-51 kartı Ek m.11'e (adli yardım) ait, bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "12",
+  "baslik": "Kolluklar arası görevlendirme ve tahsis",
+  "oz": "İçişleri Bakanı gerektiğinde Emniyet Genel Müdürlüğü, Sahil Güvenlik Komutanlığı ve Jandarma Genel Komutanlığı arasında her kademedeki personeli geçici olarak görevlendirebilir; bu yetkisini il valilerine devredebilir. Bu üç kurum, yine İçişleri Bakanının onayıyla silah, mühimmat, taşıt gibi taşınırlarını ve taşınmazlarını birbirine geçici tahsis edebilir ya da bedelsiz devredebilir.",
+  "sorulur": [
+   "Personeli kurumlar arasında geçici görevlendirme yetkisinin kime ait olduğu sorulur; doğrusu İçişleri Bakanıdır. Cumhurbaşkanı, Jandarma Genel Komutanı, Genelkurmay Başkanı ve il valisi çeldiricidir.",
+   "Yetki devri sorulur: Bakan bu yetkiyi il valilerine devredebilir; “Jandarma Genel Komutanına devreder” şıkkı yanlıştır."
+  ],
+  "akilda": [
+   "Üç kurum (EGM, SGK, JGnK), tek anahtar: İçişleri Bakanı. Personel görevlendirir, eşya tahsisini onaylar; görevlendirme yetkisini valiye devredebilir.",
+   "Tahsis “geçici”, devir “bedelsiz”dir."
+  ],
+  "karis": [
+   {
+    "madde": "10",
+    "neden": "Sahada yetersizlikte jandarma-emniyet geçici görevlendirmesini mahalli mülki amirler yapar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.12). Not: 2-47 kartı Geçici m.12'ye, 2-48 kartı Ek m.12'ye ait; bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "13",
+  "baslik": "Personele uygulanacak mevzuat ve nasıp",
+  "oz": "Jandarma Hizmetleri Sınıfı personelinin özlük işlerinde, bu Kanunda hüküm yoksa Devlet Memurları Kanunu uygulanır; nasıp, terfi ve mali haklarda ise statüsüne göre Türk Silahlı Kuvvetleri Personel Kanunu ve ilgili personel kanunları geçerlidir. Nasıp işlemleri İçişleri Bakanlığının onayıyla yapılır. Hizmetine ihtiyaç duyulan albaylar 60, generaller 65 yaşına kadar İçişleri Bakanı onayıyla görevde bırakılabilir; albay ve üstü, kadrosuzluk tazminatıyla Cumhurbaşkanı onayıyla emekliye sevk edilebilir.",
+  "sorulur": [
+   "Görevde bırakma yaşı sorulur: albaylar 60, generaller 65; şıklarda komşu yaşlar ve albay-general yaşlarının yer değiştirmesi durur.",
+   "Makam oynatılır: nasıp ve görevde bırakma İçişleri Bakanlığı/Bakanı onayıyla, kadrosuzluk tazminatıyla emekliye sevk Cumhurbaşkanı onayıyla yapılır.",
+   "Uygulanacak kanun sırası ters çevrilir: özlükte önce bu Kanun, hüküm yoksa 657; nasıp-terfi ve mali haklarda 926 ve diğer personel kanunları."
+  ],
+  "akilda": [
+   "60-65 kuralı: albay 60, general 65; ikisinde de onay İçişleri Bakanının.",
+   "Erken emeklilik Cumhurbaşkanından: albay ve üstü, kadrosuzluk tazminatıyla Cumhurbaşkanı onayıyla emekliye sevk edilebilir.",
+   "Mevzuat ikilisi: özlükte 657 boşluk doldurur, nasıp-terfi ve parada 926 ailesi uygulanır."
+  ],
+  "karis": [
+   {
+    "madde": "20",
+    "neden": "Orada bu Kanundaki haklara ek olarak 926, 657 ve diğer kanunlardaki haklardan yararlanma var."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.13); dördüncü fıkra AYM kararıyla iptal. Not: 2-44 kartı Ek m.13'e, 2-56…2-59 kartları m.13/A'ya ait; bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "13/A",
+  "baslik": "Jandarma ve Sahil Güvenlik Akademisi",
+  "oz": "Akademi, jandarma ve sahil güvenliğin subay, astsubay ve diğer personel ihtiyacını karşılamak için kurulan, İçişleri Bakanlığına bağlı bir yükseköğretim kurumudur; ihtiyaçları Jandarma Genel Komutanlığı bütçesinden karşılanır. Akademi Başkanını, en az yüksek lisans düzeyinde akademik kariyere sahip general, amiral, albay ya da profesörler arasından İçişleri Bakanı atar. Bakan en fazla 4 başkan yardımcısını ve dekanları da atar.",
+  "sorulur": [
+   "Beklenen kalıp: Akademinin bağlı olduğu bakanlık sorulur; doğrusu İçişleri Bakanlığıdır, Millî Savunma Bakanlığı ve YÖK şıkları çeldiricidir.",
+   "Beklenen kalıp: Akademi Başkanını atayan makam, aranan öğrenim düzeyi (en az yüksek lisans) ve yardımcı sayısı (en fazla 4) oynatılır.",
+   "Beklenen kalıp: ders ücreti sınırı (haftada 20, yılda 360 saat) ve uzman erbaş eğitiminin Akademide değil eğitim komutanlıklarında yapılması sorulur."
+  ],
+  "akilda": [
+   "Akademinin anahtarı İçişleri: bağlılık İçişleri Bakanlığına; başkanı, yardımcıları ve dekanları İçişleri Bakanı atar; para Jandarma bütçesinden.",
+   "Sayılar: en fazla 4 yardımcı; ders ücreti haftada 20, yılda 360 saati aşamaz.",
+   "Uzman erbaş ve sözleşmeli er-erbaş eğitimi Akademinin ilkeleriyle ama eğitim komutanlıklarında yapılır."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.13/A); girdideki metin sonda kesik. Bu maddenin kartları (2-56…2-59) girdide m.13'e eşlenmiş, içerikleri resmî metinle uyumlu."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "14",
+  "baslik": "Atama ve valilik emrine atanma",
+  "oz": "Jandarma Genel Komutanı, yardımcıları, generaller, bölge ve il jandarma komutanları dışındaki personelin atamasını İçişleri Bakanı yapar. Özel eğitim görmüş personel nokta atamasına tabi tutulabilir. Nokta ataması yapılmayan subay, astsubay ve uzman jandarmalar valilik emrine atanır; istihdam yerlerini ve il içi yer değiştirmelerini vali yapar. Uygun görülürse il jandarma komutanlığına general de atanabilir.",
+  "sorulur": [
+   "Nokta ataması yapılmayan subay, astsubay ve uzman jandarmanın kimin emrine atandığı sorulur; doğrusu valilik emridir. İçişleri Bakanlığı, Jandarma Genel Komutanlığı, bölge ve garnizon komutanlığı çeldiricidir.",
+   "Makam oynatılır: valilik emrindekilerin il içi yer değiştirmesini vali yapar; Jandarma Genel Komutanı, bölge komutanı, İçişleri Bakanı ve il jandarma komutanı çeldiricidir."
+  ],
+  "akilda": [
+   "İki katlı atama: üst kademe dışındakileri İçişleri Bakanı atar; nokta ataması yoksa valilik emrine girilir, il içini vali dağıtır.",
+   "İl jandarma komutanlığına uygun görülürse general de atanabilir."
+  ],
+  "karis": [
+   {
+    "madde": "12",
+    "neden": "Kurumlar arası geçici görevlendirme İçişleri Bakanının; il içi yer değiştirme valinindir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.14); birinci cümlede “atamaları” sözcüğü metinde eksik görünüyor, anlam atama yetkisi olarak okundu. Not: Ek m.14 soruları (mecburi hizmet, tazminat) bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "15",
+  "baslik": "Disiplin, soruşturma ve ilişik kesme",
+  "oz": "Jandarma personelinin disiplin işleri özel kanunlara göre yürür. Mülki görevden doğan suçlarda memurların yargılanmasına ilişkin kanun, adli görevden doğan suçlarda Ceza Muhakemesi Kanununun ilgili hükmü, askerî görev suçlarında emrine girdiği birliğin mahkemesi, kişisel suçlarda genel hükümler uygulanır. Sayılan suçlardan ya da kasten işlenen bir suçtan 1 yıl veya daha fazla hapis cezası alan subay, astsubay ve uzman jandarmanın ilişiği, ceza ertelense bile İçişleri Bakanı onayıyla kesilir.",
+  "sorulur": [
+   "Olay sorusu: izinliyken komşusunu yaralayan astsubayın suçu kişiseldir, genel hükümler uygulanır; mülki görev suçunda 4483 sayılı Kanun, askerî görev suçunda emrine verildiği birliğin mahkemesi.",
+   "İlişik kesmede onay makamı sorulur: İçişleri Bakanı. Öncüllü soruda erteleme, hükmün açıklanmasının geri bırakılması ve affın ilişik kesmeye engel olup olmadığı sorulur; hiçbiri engel değildir.",
+   "Liste dışı unsur eklenir: ilişik kesmeyi gerektiren suçlara maddede olmayan bir suç konur ya da görev türüne uygulanacak kanun yer değiştirir."
+  ],
+  "akilda": [
+   "Görev türü → yol: mülki = memur yargılaması (4483), adli = CMK'nın 161/5 hükmü, askerî = emrine girilen birliğin mahkemesi, kişisel = genel hükümler.",
+   "İlişik kesmede “olsa bile” kuralı: erteleme, HAGB, af ya da seçenek yaptırım ilişiği kurtarmaz; onay İçişleri Bakanının.",
+   "Disiplin ayrı yoldan yürür: özel kanun hükümlerine göre."
+  ],
+  "karis": [
+   {
+    "madde": "7",
+    "neden": "Mülki, adli ve askerî görev ayrımı oradadır; burada her görevin suçuna ayrı yol."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.15/a-e ve ek fıkra). Not: 2-26 kartı ve 15/A soruları m.15/A'ya, 2-43 kartı Ek m.14'e ait; bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "15/A",
+  "baslik": "Erbaş ve erlerin üst-eşya araması",
+  "oz": "Tehlikeyi ya da suçu önlemek için sulh ceza hâkiminin kararıyla veya gecikmede sakınca varsa birlik komutanı ya da kurum amirinin yazılı emriyle, jandarma hizmet binaları ve eklentilerinde askerlik yükümlüsü erbaş ve erlerin üstü, özel kâğıtları ve eşyası aranır. Yazılı emir 24 saat içinde görevli hâkimin onayına sunulur. Sonuç tutanakla bildirilir; konutta, yerleşim yerinde ve eklentilerinde önleme araması yapılamaz.",
+  "sorulur": [
+   "Beklenen kalıp: gecikmede verilen yazılı emrin hâkim onayına sunulma süresi sorulur: 24 saat; daha kısa ya da daha uzun saatler çeldiricidir.",
+   "Beklenen kalıp: yazılı emri kimin verebileceği sorulur: birlik komutanı veya kurum amiri; vali, Cumhuriyet savcısı, Jandarma Genel Komutanı ve kaymakam çeldiricidir.",
+   "Beklenen kalıp: kararda yazılması gerekmeyen sorulur, örneğin aramayı yapacak personelin adı; sebep, konu, kapsam, yer, zaman ve süre yazılır. Konutta önleme araması hiç yapılamaz."
+  ],
+  "akilda": [
+   "Arama formülü: hâkim kararı ya da gecikmede yazılı emir + 24 saatte hâkim onayı. Yer: hizmet binası ve eklentileri; konut ve yerleşim yeri yasak.",
+   "Kim aranır? Askerlik yükümlülüğünü yerine getiren erbaş ve erler: üstü, özel kâğıtları ve eşyası."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.15/A). Not: bu maddenin kartı (2-26) ve soruları girdide m.15'e eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "16",
+  "atla": "Mülga madde (2-46 kartı ve örnek soru Ek m.16'ya ait, buraya yanlış eşlenmiş)."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "17",
+  "atla": "Mülga madde."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "18",
+  "baslik": "Jandarmanın bütçesi",
+  "oz": "Jandarma Genel Komutanlığının bütçesi İçişleri Bakanlığının bünyesinde düzenlenir, ancak Bakanlığın kendi bütçesinden ayrıdır. Yani jandarma İçişleri çatısı altında kendi bütçesine sahiptir.",
+  "sorulur": [
+   "Bütçenin nasıl düzenlendiği sorulur; doğrusu “İçişleri Bakanlığı bünyesinde, Bakanlık bütçesinden ayrı olarak”tır. TSK, Cumhurbaşkanlığı, Millî Savunma ve Genelkurmay bütçesi şıkları çeldiricidir.",
+   "Tuzak şıkta “İçişleri Bakanlığı bütçesi içinde” denir; bünyesinde olmak ile bütçesi içinde olmak farklıdır."
+  ],
+  "akilda": [
+   "Aynı çatı, ayrı kasa: İçişleri bünyesinde ama İçişleri bütçesinden ayrı."
+  ],
+  "karis": [
+   {
+    "madde": "19",
+    "neden": "İhtiyaçlar bu bütçeden karşılanır; savaşta Kuvvet emrine girecek birliklerinkini Millî Savunma Bakanlığı sağlar."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.18). Not: 2-45 kartı Ek m.18'e (kıdemli başçavuş yaş uzatımı) ait, bu maddeye yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "19",
+  "baslik": "İkmal esasları",
+  "oz": "Jandarma her türlü ihtiyacını, silah ve mühimmatını İçişleri Bakanlığının belirlediği standartlara uygun olarak kendi bütçesinden karşılar; Savunma Sanayii Destekleme Fonundan Türk Silahlı Kuvvetlerinin usulleriyle yararlanır. Seferberlik ve savaşta Kuvvet Komutanlıkları emrine girecek ya da askerî görev verilen birliklerin ihtiyaçlarını, sefer stokları dahil, Millî Savunma Bakanlığı sağlar. Silahlı Kuvvetlere tanınan gümrük, vergi ve harç muafiyetleri jandarmaya da uygulanır.",
+  "sorulur": [
+   "Öncüllü soru: kendi bütçesinden karşılama ve Savunma Sanayii Destekleme Fonundan yararlanma doğrudur; “savaşta Kuvvet emrine girecek birliklerin sefer stokları da jandarma bütçesinden karşılanır” öncülü yanlıştır."
+  ],
+  "akilda": [
+   "Barışta kendi kasası, savaşta Millî Savunmanın kasası: Kuvvet emrine giren ya da askerî görev verilen birliğin ihtiyacını Millî Savunma Bakanlığı sağlar.",
+   "Standart kimden? Barışta İçişleri Bakanlığının, savaşta emrine girilen Kuvvet Komutanlığının standardı."
+  ],
+  "karis": [
+   {
+    "madde": "18",
+    "neden": "Bütçe İçişleri bünyesinde ama ayrıdır; ikmal bu bütçeden, savaşta Millî Savunma Bakanlığınca."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.19)."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "20",
+  "baslik": "Personelin özlük hakları",
+  "oz": "Jandarma Genel Komutanlığı personeli, bu Kanunun verdiği haklara ek olarak Türk Silahlı Kuvvetleri Personel Kanunu, Devlet Memurları Kanunu ve genel ya da özel düzenleme getiren diğer kanunların tanıdığı özlük haklarından da yararlanır. Bu haklar birbirini dışlamaz, üst üste eklenir.",
+  "sorulur": [
+   "Beklenen kalıp: personelin yararlandığı kanunlar sayılıp eksik ya da yanlış olanı sorulur; doğru liste bu Kanun, 926 sayılı Kanun, 657 sayılı Kanun ve diğer genel-özel kanunlardır."
+  ],
+  "akilda": [
+   "Haklar toplanır: bu Kanun + 926 + 657 + diğer kanunlar; biri ötekini dışlamaz."
+  ],
+  "karis": [
+   {
+    "madde": "13",
+    "neden": "Orada özlükte hüküm yoksa 657, nasıp-terfi ve mali haklarda 926 uygulanır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.20)."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "21",
+  "baslik": "Asayiş tazminatı",
+  "oz": "Jandarma fiilî kadrolarına atanmış subay, astsubay, uzman jandarma ve uzman erbaşlara fazla çalışma karşılığı asayiş tazminatı ödenir. Tavan, en yüksek Devlet memuru aylığının (ek gösterge dahil) komando ve sınır birliklerinde %52'si, diğer karargâh, birlik ve kurumlarda %40'ıdır. Usul ve esasları İçişleri Bakanlığı belirler; tazminattan damga vergisi dışında vergi ve kesinti yapılmaz.",
+  "sorulur": [
+   "Oran sorulur: komando ve sınır birliklerinde en çok %52; şıklarda diğer birliklerin %40'ı ve yakın yüzdeler durur.",
+   "Yanlış ifade sorusunda “damga vergisi dahil her türlü vergi ve kesinti yapılır” ya da “hiçbir vergi kesilmez” denir; yalnız damga vergisi kesilir."
+  ],
+  "akilda": [
+   "Sınırda daha çok: komando ve sınır %52, diğerleri %40. Bunlar tavan oranıdır (“geçmemek üzere”).",
+   "Tek kesinti damga vergisidir."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.21); metindeki “52,20” ve “40,21” ifadelerindeki 20 ve 21 dipnot numarasıdır, oranlar %52 ve %40."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "22",
+  "baslik": "Uzman jandarma, erbaş ve erlerin hakları",
+  "oz": "Uzman jandarmaların hizmet süreleri, giyim, kuşam, beslenme usulleri ve diğer özlük hakları kendi özel kanunlarında düzenlenir. Erbaş ve erlerin kaynakları, hizmet süreleri ve kıyafetleri için de özel kanunları geçerlidir.",
+  "sorulur": [
+   "Beklenen kalıp: bu konuların hangi düzenlemeyle belirlendiği sorulur; doğrusu özel kanunlarıdır, yönetmelik ya da bakan onayı şıkları çeldiricidir."
+  ],
+  "akilda": [
+   "Uzman jandarma ile erbaş ve erin süre, kıyafet ve hakları bu Kanunda değil, özel kanunlarındadır."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.22); metne eklenen 18-22 numaralı dipnotlar m.21'e aittir."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "23",
+  "atla": "Mülga madde."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "24",
+  "baslik": "Kanunun yönetmeliği",
+  "oz": "Jandarmanın teşkilatı, görev, yetki ve sorumlulukları, diğer makamlarla ilişkileri, komuta-kontrol ilişkileri, personelin terfi, değerlendirme, ödüllendirme ve kılık-kıyafet işleri ile Kanunun uygulanmasına ilişkin diğer konular Cumhurbaşkanınca yürürlüğe konulan yönetmelikle düzenlenir. Bu, Kanunun ayrıca yönetmelik çıkarılmasını öngördüğü konulara ek olarak yapılır.",
+  "sorulur": [
+   "Yönetmeliği yürürlüğe koyan makam sorulur; doğrusu Cumhurbaşkanıdır. İçişleri Bakanlığı, Bakanlar Kurulu, Genelkurmay ve Jandarma Genel Komutanlığı çeldiricidir."
+  ],
+  "akilda": [
+   "Genel yönetmelik Cumhurbaşkanından: teşkilat, görev, terfi, ödül, kılık-kıyafet hep Cumhurbaşkanınca yürürlüğe konulan yönetmelikte.",
+   "Dikkat: arama (m.15/A), Akademi (m.13/A) ve kurumlar arası görevlendirme (m.12) yönetmeliklerini İçişleri Bakanlığı çıkarır."
+  ],
+  "karis": [
+   {
+    "madde": "12",
+    "neden": "Kurumlar arası görevlendirme ve tahsisin yönetmeliğini İçişleri Bakanlığı yürürlüğe koyar."
+   },
+   {
+    "madde": "15/A",
+    "neden": "Erbaş ve er aramasının yönetmeliğini İçişleri Bakanlığı çıkarır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.24)."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "25",
+  "atla": "Mülga madde."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "26",
+  "atla": "Yürürlük maddesi."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "27",
+  "atla": "Yürütme maddesi."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "Ek",
+  "atla": "Girdideki metin yalnız Anayasa Mahkemesince iptal edilen Ek m.20; hüküm taşımıyor. Ek m.1-18 metinleri girdide yok; kartları ve soruları m.1-18'e yanlış eşlenmiş."
+ },
+ {
+  "kanun_id": 2,
+  "madde": "Geçici",
+  "baslik": "Subaylığa geçenlerin rütbe yaş hadleri",
+  "oz": "Türk Silahlı Kuvvetleri Personel Kanunundaki ilgili ek geçici maddeler kapsamında astsubaylıktan subaylığa geçenler için ayrı rütbe yaş hadleri konmuştur. Bu yaşlar teğmen ve üsteğmende 49, yüzbaşıda 55, binbaşıda 56, yarbayda 57, albayda 60'tır.",
+  "sorulur": [
+   "Beklenen kalıp: bir rütbe verilip yaş haddi sorulur, örneğin albay için 60; şıklarda komşu rütbelerin yaşları (56, 57) ve görevde bırakma yaşı 65 durur."
+  ],
+  "akilda": [
+   "49'dan sonra merdiven: teğmen-üsteğmen 49; yüzbaşı 55, binbaşı 56, yarbay 57 birer birer artar; albay 60.",
+   "Bu tablo yalnız astsubaylıktan subaylığa geçenler içindir."
+  ],
+  "karis": [
+   {
+    "madde": "13",
+    "neden": "Hizmetine ihtiyaç duyulan albaylar 60, generaller 65 yaşına kadar görevde bırakılabilir."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (Geçici m.12); tablo düz metinden okundu (teğmen-üsteğmen 49, yüzbaşı 55, binbaşı 56, yarbay 57, albay 60), 2-47 kartı da aynı eşlemeyi veriyor. Sondaki 37 numaralı dipnot başka bir geçici maddeye ait; girdide başka geçici madde metni yok."
+ }
+]

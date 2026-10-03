@@ -30927,5 +30927,375 @@
   "duzeltme": {
    "dogru": "ASKOM kararları il sağlık müdürünün onayıyla yürürlüğe girer (m.13/1)"
   }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-0",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; tanım öğesi (eşleştirmede dahi ilişkilendirilememe) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Anonim hâle getirme, kişisel verilerden yalnızca kimlik bilgilerinin silinmesidir.”"
+   ],
+   "dogrusu": [
+    "Anonim hâle getirme yalnız kimlik bilgilerini silmek değildir; veri, başka verilerle eşleştirilse dahi kişiyle ilişkilendirilemez hâle getirilir (m.3/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-1",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Açıklama satırı iki yanlış şık cümlesine çevrildi (belirli konu / bilgilendirme unsuru)",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Açık rıza, belirli bir konuya ilişkin olması aranmaksızın genel nitelikte verilebilen rızadır.”",
+    "“Açık rıza için rızanın özgür iradeyle açıklanması yeterlidir; bilgilendirilmeye dayanması gerekmez.”"
+   ],
+   "dogrusu": [
+    "Açık rıza belirli bir konuya ilişkin olmalıdır; genel nitelikte verilen rıza açık rıza sayılmaz (m.3/1-a)",
+    "Açık rıza, özgür iradeyle açıklanmanın yanında bilgilendirilmeye de dayanmalıdır (m.3/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-2",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Gerçek kişi / belirlenebilir kişi öğeleri bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kimliği belirli veya belirlenebilir tüzel kişilere ilişkin bilgiler de kişisel veri sayılır.”",
+    "“Yalnızca kimliği belirli gerçek kişilere ilişkin bilgiler kişisel veridir; kimliği belirlenebilir kişilere ait bilgiler kişisel veri sayılmaz.”"
+   ],
+   "dogrusu": [
+    "Kişisel veri, kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgidir; tüzel kişi bilgisi kişisel veri değildir (m.3/1-d)",
+    "Kimliği belirli olanların yanında kimliği belirlenebilir gerçek kişiye ilişkin bilgiler de kişisel veridir (m.3/1-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-3",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İlgili kişi ile veri işleyen yer değiştirildi; tüzel kişi eklendi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İlgili kişi, kişisel verileri veri sorumlusu adına işleyen gerçek kişidir.”",
+    "“İlgili kişi, kişisel verisi işlenen gerçek veya tüzel kişidir.”"
+   ],
+   "dogrusu": [
+    "İlgili kişi, kişisel verisi işlenen gerçek kişidir; veri sorumlusu adına verileri işleyen kişi veri işleyendir (m.3/1-ç, ğ)",
+    "İlgili kişi yalnızca kişisel verisi işlenen gerçek kişidir; tüzel kişiler bu tanıma girmez (m.3/1-ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-4",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kapsam öğeleri (otomatik olmayan yollar, kullanılmasının engellenmesi) bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel verilerin işlenmesi, yalnızca tamamen otomatik yollarla gerçekleştirilen işlemleri kapsar.”",
+    "“Kişisel verilerin kullanılmasının engellenmesi, veri işleme sayılmaz.”"
+   ],
+   "dogrusu": [
+    "Kısmen otomatik ve veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla yapılan işlemler de veri işlemedir (m.3/1-e)",
+    "Kişisel verilerin kullanılmasının engellenmesi de kişisel verilerin işlenmesi kapsamındadır (m.3/1-e)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-5",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Veri sorumlusu tanımıyla yer değiştirme; kişi türü daraltıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Veri işleyen, kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen gerçek veya tüzel kişidir.”",
+    "“Veri işleyen yalnızca tüzel kişi olabilir; gerçek kişiler veri işleyen sıfatını taşıyamaz.”"
+   ],
+   "dogrusu": [
+    "Veri işleyen, veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişidir (m.3/1-ğ)",
+    "Veri işleyen, gerçek kişi de tüzel kişi de olabilir (m.3/1-ğ)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-6",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Veri işleyen tanımıyla yer değiştirme; kayıt sistemi sorumluluğu düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Veri sorumlusu, başkasının verdiği yetkiye dayanarak onun adına kişisel verileri fiilen işleyen kişidir.”",
+    "“Veri sorumlusu, işleme amaçlarını belirleyen kişidir; veri kayıt sisteminin kurulması ve yönetilmesinden sorumlu değildir.”"
+   ],
+   "dogrusu": [
+    "Veri sorumlusu işleme amaçlarını ve vasıtalarını belirleyen kişidir; başkası adına verileri işleyen kişi veri işleyendir (m.3/1-ı, ğ)",
+    "Veri sorumlusu, veri kayıt sisteminin kurulmasından ve yönetilmesinden de sorumludur (m.3/1-ı)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-7",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Belirli kriterlere göre yapılandırma öğesi düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel verilerin bulunduğu her türlü arşiv, belirli kriterlere göre yapılandırılmış olmasa da veri kayıt sistemidir.”"
+   ],
+   "dogrusu": [
+    "Veri kayıt sistemi, kişisel verilerin belirli kriterlere göre yapılandırılarak işlendiği kayıt sistemidir (m.3/1-h)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-8",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Dayanak normu (kanun yerine yönetmelik) ve diğer kanunlar öğesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel veriler, ancak yönetmelikle belirlenen usul ve esaslara uygun olarak işlenebilir.”",
+    "“Kişisel veriler yalnızca Kişisel Verilerin Korunması Kanununda öngörülen usul ve esaslara göre işlenebilir; diğer kanunlardaki usuller uygulanmaz.”"
+   ],
+   "dogrusu": [
+    "Kişisel veriler, yönetmelikle değil, ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun olarak işlenebilir (m.4/1)",
+    "Kişisel veriler, bu Kanunun yanında diğer kanunlarda öngörülen usul ve esaslara uygun olarak da işlenebilir (m.4/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-9",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Dürüstlük kuralı öğesi düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel verilerin işlenmesinde yalnızca hukuka uygunluk ilkesi aranır; dürüstlük kurallarına uygunluk ilke olarak sayılmamıştır.”"
+   ],
+   "dogrusu": [
+    "Kişisel veri işlemede ilk ilke, hukuka ve dürüstlük kurallarına birlikte uygun olmaktır (m.4/2-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-10",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "\"Gerektiğinde güncel\" öğesi ve zorunluluk bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel veri işleme ilkelerinden biri, verilerin doğru ve her durumda güncel olmasıdır.”",
+    "“Verilerin doğru ve gerektiğinde güncel olması, uyulması zorunlu olmayan tavsiye niteliğinde bir ilkedir.”"
+   ],
+   "dogrusu": [
+    "Kişisel veriler doğru ve gerektiğinde güncel olmalıdır; güncellik her durumda değil, gerektiğinde aranır (m.4/2-b)",
+    "Verilerin doğru ve gerektiğinde güncel olması, kişisel veri işlemede uyulması zorunlu ilkelerdendir (m.4/2-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-11",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Amaç öğesi veri sorumlusunun amaçlarına kaydırıldı; meşruluk düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel veriler, veri sorumlusunun belirlediği her türlü amaca uygun olarak işlenebilir.”",
+    "“Kişisel verilerin belirli ve açık amaçlar için işlenmesi yeterlidir; amacın meşru olması aranmaz.”"
+   ],
+   "dogrusu": [
+    "Kişisel veriler ancak belirli, açık ve meşru amaçlar için işlenebilir (m.4/2-c)",
+    "Kişisel verilerin işlendiği amaç belirli ve açık olmanın yanında meşru da olmalıdır (m.4/2-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-13",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Tuzak satırı boştu; süre öğesi ve makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel veriler, ileride başka işlemlerde kullanılmak üzere süresiz olarak muhafaza edilebilir.”",
+    "“Kişisel verilerin muhafaza süresi her durumda Kurul tarafından belirlenir.”"
+   ],
+   "dogrusu": [
+    "Kişisel veriler, ilgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar muhafaza edilir (m.4/2-d)",
+    "Muhafaza süresi, ilgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süredir (m.4/2-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-14",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kural ile istisna yer değiştirildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel veriler kural olarak ilgili kişinin açık rızası aranmaksızın işlenebilir; açık rıza yalnızca istisnai hâllerde aranır.”"
+   ],
+   "dogrusu": [
+    "Kural olarak kişisel veriler, ilgili kişinin açık rızası olmaksızın işlenemez; rıza aranmayan hâller istisnadır (m.5/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-15",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Listeye olmayan veri eklendi / listedeki veri çıkarıldı",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişilerin adres bilgisi, mali durumu ve eğitim durumu özel nitelikli kişisel veridir.”",
+    "“Kişilerin kılık ve kıyafeti ile biyometrik verileri özel nitelikli kişisel veri sayılmaz.”"
+   ],
+   "dogrusu": [
+    "Adres, mali durum ve eğitim durumu özel nitelikli kişisel veri listesinde yer almaz (m.6/1)",
+    "Kılık ve kıyafet ile biyometrik ve genetik veriler de özel nitelikli kişisel veridir (m.6/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-18",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Önlemi belirleyen makam (Kurul) ve ek şart bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Özel nitelikli kişisel verilerin işlenmesinde alınacak yeterli önlemler Kişisel Verileri Koruma Kurumu Başkanınca belirlenir.”",
+    "“Özel nitelikli kişisel veriler, açık rıza bulunması hâlinde ayrıca bir önlem alınmasına gerek olmaksızın işlenebilir.”"
+   ],
+   "dogrusu": [
+    "Özel nitelikli verilerin işlenmesinde alınacak yeterli önlemler Kurul tarafından belirlenir (m.6/4)",
+    "Açık rıza bulunsa bile özel nitelikli verilerin işlenmesinde ayrıca Kurulca belirlenen yeterli önlemlerin alınması şarttır (m.6/4)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-19",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Resen / talep üzerine öğesi ve yapan makam bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“İşlenmesini gerektiren sebepler ortadan kalkan kişisel veriler, yalnızca ilgili kişinin talebi üzerine silinir.”",
+    "“İşlenmesini gerektiren sebepler ortadan kalkan kişisel veriler, Kurul kararıyla silinir veya yok edilir.”"
+   ],
+   "dogrusu": [
+    "İşlenme sebebi kalkan veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir (m.7/1)",
+    "Silme, yok etme veya anonim hâle getirme Kurul kararıyla değil, veri sorumlusu tarafından resen veya talep üzerine yapılır (m.7/1)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-20",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Düzenleme aracı (yönetmelik) ve saklı hükümler bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel verilerin silinmesi, yok edilmesi veya anonim hâle getirilmesine ilişkin usul ve esaslar Kurul kararıyla düzenlenir.”",
+    "“Kişisel verilerin silinmesine ilişkin diğer kanunlarda yer alan hükümler, Kişisel Verilerin Korunması Kanunu karşısında uygulanmaz.”"
+   ],
+   "dogrusu": [
+    "Silme, yok etme ve anonim hâle getirmenin usul ve esasları yönetmelikle düzenlenir (m.7/3)",
+    "Silme, yok etme veya anonim hâle getirmeye ilişkin diğer kanunlarda yer alan hükümler saklıdır (m.7/2)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-21",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İstisnanın iki kaydından her biri ayrı ayrı düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Gerçek kişilerin kendisi veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlediği veriler, üçüncü kişilere verilse dahi Kanun kapsamı dışındadır.”",
+    "“Aile içi faaliyetler kapsamında işlenen kişisel veriler için veri güvenliğine ilişkin yükümlülüklere uyulması gerekmez.”"
+   ],
+   "dogrusu": [
+    "Aile içi işleme istisnası, veriler üçüncü kişilere verilmemek ve veri güvenliği yükümlülüklerine uyulmak kaydıyla geçerlidir (m.28/1-a)",
+    "Aile içi faaliyet istisnasında da veri güvenliğine ilişkin yükümlülüklere uyulması şarttır (m.28/1-a)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-22",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Anonimleştirme şartı düşürüldü",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Kişisel verilerin anonim hâle getirilmeksizin araştırma, planlama ve istatistik amacıyla işlenmesi Kanun kapsamı dışındadır.”"
+   ],
+   "dogrusu": [
+    "Araştırma, planlama ve istatistik amaçlı işlemenin Kanun kapsamı dışında kalması için verilerin anonim hâle getirilmesi gerekir (m.28/1-b)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-23",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kayıt cümlesi silinip mutlak istisna gibi gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Sanat, tarih, edebiyat veya bilimsel amaçlarla işlenen kişisel veriler hiçbir şart aranmaksızın Kanun kapsamı dışındadır.”"
+   ],
+   "dogrusu": [
+    "Sanat, tarih, edebiyat veya bilimsel amaçlı işleme; millî güvenlik, kamu düzeni, özel hayatın gizliliği gibi değerleri ihlal etmemek ve suç teşkil etmemek kaydıyla istisnadır (m.28/1-c)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-24",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Kurum öğesi (kanunla görevli) ve amaç kapsamı bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Bütün kamu kurum ve kuruluşlarınca yürütülen önleyici, koruyucu ve istihbari faaliyetler kapsamındaki veri işleme Kanun kapsamı dışındadır.”",
+    "“Önleyici, koruyucu ve istihbari faaliyet istisnası millî savunma ve millî güvenlikle sınırlıdır; kamu düzenini sağlamaya yönelik faaliyetleri kapsamaz.”"
+   ],
+   "dogrusu": [
+    "Önleyici, koruyucu ve istihbari faaliyet istisnası yalnız kanunla görev ve yetki verilmiş kamu kurum ve kuruluşları içindir (m.28/1-ç)",
+    "Önleyici, koruyucu ve istihbari faaliyet istisnası kamu güvenliği, kamu düzeni ve ekonomik güvenliği sağlamaya yönelik faaliyetleri de kapsar (m.28/1-ç)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-25",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "İşleyen makam yargı/infaz mercii yerine kolluk gösterildi",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Soruşturma, kovuşturma, yargılama veya infaz işlemlerine ilişkin verilerin kolluk birimlerince işlenmesi Kanun kapsamı dışındadır.”"
+   ],
+   "dogrusu": [
+    "Yargı istisnası, soruşturma, kovuşturma, yargılama veya infaz işlemlerine ilişkin verilerin yargı makamları veya infaz mercilerince işlenmesini kapsar (m.28/1-d)"
+   ]
+  }
+ },
+ {
+  "kanun_id": 3,
+  "kart_id": "3-26",
+  "sorun": "kirmizi_kutu",
+  "aciklama": "Hariç tutulan zarar giderimi hakkı ve aydınlatma yükümlülüğü öğesi bozuldu",
+  "duzeltme": {
+   "sinavda_boyle_yazarlar": [
+    "“Suç soruşturması için gerekli veri işlemede ilgili kişinin zararın giderilmesini talep etme hakkı da dâhil bütün hakları uygulanmaz.”",
+    "“Kısmi istisna hâllerinde veri sorumlusunun aydınlatma yükümlülüğü devam eder; yalnızca Veri Sorumluları Siciline kayıt yükümlülüğü uygulanmaz.”"
+   ],
+   "dogrusu": [
+    "Kısmi istisna hâllerinde ilgili kişinin hakları uygulanmaz; ancak zararın giderilmesini talep etme hakkı korunur (m.28/2)",
+    "Kısmi istisna hâllerinde Veri Sorumluları Siciline kayıt yükümlülüğü gibi aydınlatma yükümlülüğü de uygulanmaz (m.28/2)"
+   ]
+  }
  }
 ]

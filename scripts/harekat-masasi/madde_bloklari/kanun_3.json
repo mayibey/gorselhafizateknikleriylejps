@@ -1,0 +1,146 @@
+[
+ {
+  "kanun_id": 3,
+  "madde": "3",
+  "baslik": "Temel kavramların tanımları",
+  "oz": "Kişisel veri, kimliği belirli ya da belirlenebilir gerçek kişiye ilişkin her bilgidir; ilgili kişi, verisi işlenen gerçek kişidir. Açık rıza, belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızadır. Anonim hâle getirme, verinin başka verilerle eşleştirilse bile bir gerçek kişiyle ilişkilendirilemez hâle getirilmesidir. İşleme amaç ve vasıtalarını veri sorumlusu belirler; veri işleyen onun yetkisiyle, onun adına işler.",
+  "sorulur": [
+   "Tanımdan kavram buldurulur: tanım tırnak içinde verilir, şıklar açık rıza, kişisel veri, işleme, anonim hâle getirme, veri sorumlusu ve veri işleyendir.",
+   "Boşluk doldurma: açık rızada “bilgilendirilmeye” dayanma, anonim hâle getirmede “gerçek kişi” boşaltılır; yazılı beyan, noter onayı ve tüzel kişi çeldiricidir.",
+   "Olay sorusu: bordroyu işverenin talimatıyla, onun adına işleyen muhasebe firması veri işleyendir; amacı ve vasıtayı belirleyen işveren veri sorumlusudur."
+  ],
+  "akilda": [
+   "Patron-taşeron kuralı: amaç ve vasıtayı belirleyen veri sorumlusu (patron), onun adına ve yetkisiyle işleyen veri işleyen (taşeron).",
+   "Açık rızanın üç şartı: belirli konu + bilgilendirme + özgür irade. Her şeye verilen genel rıza açık rıza değildir.",
+   "Kişisel veri yalnız gerçek kişinindir; tüzel kişi bilgisi kişisel veri sayılmaz."
+  ],
+  "karis": [
+   {
+    "madde": "7",
+    "neden": "Silme, yok etme ve anonim hâle getirme orada üç ayrı işlem olarak sayılır."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.3/1-a…ı)."
+ },
+ {
+  "kanun_id": 3,
+  "madde": "4",
+  "baslik": "Kişisel veri işlemenin genel ilkeleri",
+  "oz": "Kişisel veriler ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara uygun olarak işlenebilir. İşlemede 5 ilkeye uymak zorunludur: hukuka ve dürüstlük kurallarına uygunluk; doğru ve gerektiğinde güncel olma; belirli, açık ve meşru amaç; amaçla bağlantılı, sınırlı ve ölçülü olma; mevzuatta öngörülen ya da amaç için gerekli süre kadar saklama.",
+  "sorulur": [
+   "“Hangisi genel ilkelerden biri değildir?” sorulur; beş ilkeye uydurma bir altıncı eklenir: “her hâlde açık rıza alınması”, “süresiz saklama”, “Kuruldan izin alma”, “noter onayı” gibi.",
+   "Olay sorusu: e-bülten için e-posta yeterken kan grubu ve plaka istemek “amaçla bağlantılı, sınırlı ve ölçülü olma” ilkesine aykırıdır."
+  ],
+  "akilda": [
+   "Beş ilke sırası “Hukuk-Doğru-Amaç-Ölçü-Süre”: hukuka ve dürüstlüğe uygun, doğru ve güncel, belirli amaçlı, ölçülü, gerektiği kadar saklanan veri.",
+   "Açık rıza ilke değil, işleme şartıdır (m.5). İlke listesinde rıza görürsen şık yanlıştır.",
+   "“Gerektiğinde güncel” ve “gerekli süre kadar”: “her zaman güncel” ya da “süresiz” şıkları yanlıştır."
+  ],
+  "karis": [
+   {
+    "madde": "5",
+    "neden": "Açık rıza orada işleme şartıdır; buradaki beş ilke arasında yer almaz."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.4/1-2)."
+ },
+ {
+  "kanun_id": 3,
+  "madde": "5",
+  "baslik": "Kişisel verilerin işlenme şartları",
+  "oz": "Kural olarak kişisel veriler ilgili kişinin açık rızası olmadan işlenemez. Ancak 7 hâlde açık rıza aranmaz: kanunlarda açıkça öngörülmesi, fiili imkânsızlıkta hayat ya da beden bütünlüğünü korumak, sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması, veri sorumlusunun hukuki yükümlülüğü, ilgili kişinin veriyi alenileştirmesi, bir hakkın tesisi, kullanılması veya korunması ve ilgili kişinin haklarına zarar vermeden veri sorumlusunun meşru menfaati.",
+  "sorulur": [
+   "“Hangisi açık rıza aranmayan hâllerden biri değildir?” sorulur; çeldirici uydurma bir hâldir: “ticari kazancı artırmak”, “ilgili kişinin kamu görevlisi olması” gibi.",
+   "Olay sorusu: kargo için adres işlemek sözleşme, baygın hastanın kimliğini işlemek fiili imkânsızlık, sigorta bildirimi hukuki yükümlülük, internette kendi yayımladığı numara alenileştirmedir.",
+   "Sayı sorulur: açık rıza aranmayan hâl sayısı 7'dir."
+  ],
+  "akilda": [
+   "Kural rıza, istisna 7 kapı: kanun, hayat, sözleşme, hukuki yükümlülük, aleniyet, hak, meşru menfaat.",
+   "Genel veride 7, özel nitelikli veride 8 hâl vardır; özelde açık rıza da bu hâllerden biridir (m.6).",
+   "Sözleşme ve meşru menfaat kapısı yalnız genel veride açıktır; özel nitelikli veride yoktur."
+  ],
+  "karis": [
+   {
+    "madde": "6",
+    "neden": "Özel nitelikli veride işleme yasak; açık rıza dahil 8 hâlde mümkün."
+   },
+   {
+    "madde": "28",
+    "neden": "Aleniyet burada rızasız işleme şartı; orada aydınlatma ve sicilden kısmi istisna."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.5/1-2). SAYI_ONAY: 7 — m.5/2'deki bent sayısı (a, b, c, ç, d, e, f). SAYI_ONAY: 8 — m.6/3'teki bent sayısı (a…g, ç dahil)."
+ },
+ {
+  "kanun_id": 3,
+  "madde": "6",
+  "baslik": "Özel nitelikli kişisel veriler",
+  "oz": "Irk, etnik köken, siyasi düşünce, felsefi inanç, din, mezhep ve diğer inançlar, kılık ve kıyafet, dernek, vakıf ya da sendika üyeliği, sağlık, cinsel hayat, ceza mahkûmiyeti ve güvenlik tedbirleri ile biyometrik ve genetik veriler özel nitelikli kişisel veridir. Bunların işlenmesi yasaktır; ancak açık rıza dahil sayılı 8 hâlden biri varsa işlenebilir. Ayrıca Kurulun belirlediği yeterli önlemler alınmalıdır.",
+  "sorulur": [
+   "Listeden buldurma: hangisi özel nitelikli veridir ya da değildir? Genetik, biyometrik, kılık-kıyafet, dernek üyeliği listededir; ev adresi, plaka, doğum tarihi, e-posta ve eğitim durumu değildir.",
+   "Sayı sorulur: özel nitelikli verinin işlenebildiği hâl sayısı 8'dir; genel verideki 7 çeldiricidir.",
+   "Yanlış ifade: “yeterli önlem alınmışsa her hâlde serbestçe işlenir” ya da “hiçbir hâlde işlenemez” şıkları yanlıştır; kural yasak, sayılı hâllerde ve Kurul önlemleriyle mümkündür."
+  ],
+  "akilda": [
+   "Hassas liste kodu: inanç (din, mezhep, felsefe, siyaset), köken (ırk, etnik), beden (sağlık, cinsel hayat, biyometrik, genetik), üyelik, kıyafet, ceza.",
+   "Kural yasak + 8 kapı + Kurul önlemi. Açık rıza da kapılardan biridir; alenileştirilen veri ancak alenileştirme iradesine uygun işlenir.",
+   "Adres, eğitim ve mali durum özel nitelikli değildir; listede olmayanı ekleyen şık yanlıştır."
+  ],
+  "karis": [
+   {
+    "madde": "5",
+    "neden": "Genel veride açık rıza aranmayan 7 hâl var; sözleşme ve meşru menfaat yalnız orada."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.6/1-4); m.6/2 mülga. SAYI_ONAY: 7 — m.5/2'deki bent sayısı, karşılaştırma için. TABLO: girdideki “7 hâl (a-g)” satırı yanlış; m.6/3'te a, b, c, ç, d, e, f, g olmak üzere 8 hâl var (3-16 kartı ve bankadaki soru doğru)."
+ },
+ {
+  "kanun_id": 3,
+  "madde": "7",
+  "baslik": "Silme, yok etme ve anonimleştirme",
+  "oz": "Kanuna uygun işlenmiş olsa bile, işlenmesini gerektiren sebepler ortadan kalkınca kişisel veriler veri sorumlusu tarafından silinir, yok edilir ya da anonim hâle getirilir. Bu, resen ya da ilgili kişinin talebiyle yapılır. Diğer kanunlardaki bu konudaki hükümler saklıdır; usul ve esaslar yönetmelikle düzenlenir.",
+  "sorulur": [
+   "Sebep ortadan kalkınca ne yapılacağı sorulur; doğrusu “silinir, yok edilir veya anonim hâle getirilir”dir. Şifreleme, arşivleme, Kurula devir ve üçüncü kişiye aktarma çeldiricidir.",
+   "Olay sorusu: talep gelmese de sebep kalmadıysa veri resen silinmelidir; “yalnız ilgili kişi isterse”, “Kurul kararıyla” ve “veri işleyen siler” şıkları yanlıştır.",
+   "Usul ve esasların hangi işlemle düzenlendiği sorulur: yönetmelik; tebliğ, Kurul kararı ve genelge çeldiricidir."
+  ],
+  "akilda": [
+   "Sebep biterse veri de biter: sil, yok et ya da anonimleştir. Kimse istemese bile veri sorumlusu kendiliğinden yapar.",
+   "Üç yol, iki tetik, bir sorumlu: silme-yok etme-anonimleştirme; resen ya da talep; veri sorumlusu."
+  ],
+  "karis": [
+   {
+    "madde": "4",
+    "neden": "Gerekli süre kadar saklama orada ilkedir; süre bitince silme yükümlülüğü burada."
+   },
+   {
+    "madde": "3",
+    "neden": "Anonim hâle getirmenin tanımı orada; ne zaman yapılacağı burada."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.7/1-3)."
+ },
+ {
+  "kanun_id": 3,
+  "madde": "28",
+  "baslik": "Kanunun uygulanmadığı hâller",
+  "oz": "Kanun 5 hâlde hiç uygulanmaz: kişinin kendisi ve aynı konuttaki ailesiyle ilgili işleme, resmî istatistik ve anonimleştirilerek araştırma, sanat-bilim-ifade özgürlüğü amaçlı işleme, kanunla yetkili kurumların önleyici, koruyucu ve istihbari faaliyetleri, yargı ve infaz işlemleri. Suçun önlenmesi ya da soruşturması gibi 4 hâlde ise yalnız aydınlatma yükümlülüğü, ilgili kişinin hakları ve sicile kayıt uygulanmaz; zararın giderilmesini isteme hakkı korunur.",
+  "sorulur": [
+   "İstihbari faaliyet sorusunda Kanunun nasıl uygulanacağı sorulur: tam istisna, hiç uygulanmaz; “yalnız aydınlatma ve sicil uygulanmaz” (kısmi istisna) şıkkı çeldiricidir.",
+   "“Hangisi Kanunun hiç uygulanmadığı hâllerden değildir?” sorusunda doğru cevap “suçun önlenmesi için gerekli olması”dır; o hâl kısmi istisnadır.",
+   "Kısmi istisnada uygulanmaya devam eden sorulur: zararın giderilmesini talep etme hakkı; aydınlatma, sicil, bilgi isteme ve düzeltme şıkları çeldiricidir."
+  ],
+  "akilda": [
+   "Tam istisna beşlisi “Ev-İstatistik-Sanat-İstihbarat-Yargı”: bu hâllerde Kanun hiç uygulanmaz.",
+   "Kısmi istisna dörtlüsü “Suç-Aleniyet-Denetim-Maliye”: yalnız aydınlatma, haklar ve sicil düşer; zararın giderilmesini isteme hakkı kalır.",
+   "Ayırt et: suçun önlenmesi kısmi istisna, istihbari faaliyet tam istisnadır."
+  ],
+  "karis": [
+   {
+    "madde": "5",
+    "neden": "Aleniyet orada rızasız işleme şartı; burada aydınlatma ve sicilden kısmi istisna."
+   }
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.28/1-2); metne giren 8 numaralı dipnot başka bir maddeye ait. SAYI_ONAY: 5 — m.28/1'deki bent sayısı (a, b, c, ç, d). SAYI_ONAY: 4 — m.28/2'deki bent sayısı (a, b, c, ç)."
+ }
+]

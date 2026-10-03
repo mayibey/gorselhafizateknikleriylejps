@@ -38,7 +38,13 @@ EK = {}
 for _f in sorted(glob.glob(os.path.join(KOK, 'scripts', 'harekat-masasi', 'ek_sorular', '*.json'))):
     for _q in json.load(open(_f, encoding='utf-8')):
         EK.setdefault(int(_q['kanun_id']), []).append({'i': _q['i'], 'k': _q['k'], 's': _q['s'], 'd': _q['d'], 'a': _q['a'], 'y': _q['y'], 'z': _q.get('z', 'orta')})
+# SORU DEĞİŞTİRME (3 Eki): scripts/harekat-masasi/soru_degistir/kanun_<id>.json varsa o mevzuatın banka soruları YERİNE kullanılır
+# (Acil Servis: bankadaki 65 soru yürürlükten kalkan 2009 tebliğine göreydi → 2022 metnine göre yeni set).
+DEGISTIR_DIR = os.path.join(KOK, 'scripts', 'harekat-masasi', 'soru_degistir')
 def sorular(lid):
+    dy = os.path.join(DEGISTIR_DIR, f'kanun_{lid}.json')
+    if os.path.exists(dy):
+        return [{'i': q['i'], 'k': q['k'], 's': q['s'], 'd': q['d'], 'a': q['a'], 'y': q['y'], 'z': q.get('z', 'orta')} for q in json.load(open(dy, encoding='utf-8'))] + EK.get(lid, [])
     out = [{'i': q['id'], 'k': q['soru'], 's': q['siklar'], 'd': q['dogru'], 'a': q['aciklama'], 'y': q['kaynak'], 'z': q.get('zorluk', 'orta')} for q in KS.get(str(lid), [])]
     out += [{'i': f'P{i}', 'k': p['k'], 's': p['s'], 'd': p['d'], 'a': p['a'], 'y': p['y'], 'z': 'orta'} for i, p in enumerate(P) if p['l'] == lid]
     out += EK.get(lid, [])
@@ -111,9 +117,14 @@ def kapsam_listesi(lid, g):
     t = EMIR.get('müşterek' if g == 'mus' else g, {})
     v = t.get(str(lid))
     return set(int(x) for x in v) if v else None
-def madde_no(q):
-    m = re.search(r'm\.\s*(\d+)', q.get('y') or '')
-    return int(m.group(1)) if m else None
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from madde_anahtar import soru_maddesi
+def madde_no(q, lid=None):
+    """Sorunun kaynak maddesi: ana madde → int; ek/geçici → "Ek 1" / "Geçici 2"; harfli ayrı madde (lid verilirse) → "38/A".
+    3 Eki: "Ek m.1" ana m.1'e, "m.38/A" ana m.38'e düşüyordu (madde_anahtar.py)."""
+    k = soru_maddesi(q.get('y'), lid)
+    if k is None: return None
+    return int(k) if k.isdigit() else k
 # TEKRAR SÜZGECİ: aynı maddeden, kökü çok benzeyen ve doğru cevabı aynı olan sorulardan ilki kalır.
 def _nk(t): return re.sub(r'[^a-zçğıöşü0-9 ]', ' ', re.sub(r"^.*?(göre|gereğince),?", '', str(t).replace('İ', 'i').replace('I', 'ı').lower())).split()
 def tekrar_ayikla(qs):
@@ -155,10 +166,24 @@ def kanun(lid, g, sira):
         kap = m.group(1).strip() if m else ''
         ad = bas.split('—')[0].strip() or ad      # görünen ad: özet başlığındaki (eski veriyle aynı)
     qs = sorular(lid); kl = kapsam_listesi(lid, g)
-    disarida = [q for q in qs if kl and madde_no(q) is not None and madde_no(q) not in kl]
+    kk = kap.replace('İ', 'i').replace('I', 'ı').lower()
+    tum_kap = (not kap.strip()) or 'tamam' in kk or 'tam metin' in kk
+    def ek_kapsamda(key):   # 3 Eki: kapsamı madde listesi olan mevzuatta, listede yazmayan ek/geçici madde sorusu kapsam dışı
+        if tum_kap: return True
+        tur, no = key.rsplit(' ', 1)
+        return re.search(r'\b' + tur.replace(' ', r'\s+') + r'\s*(?:m\.|madde)?\s*' + no + r'\b', kap, re.I) is not None
+    def kapsamda(key):
+        if key is None: return True
+        if isinstance(key, int): return not kl or key in kl
+        if '/' in key: return not kl or int(key.split('/')[0]) in kl   # harfli ayrı madde: ana numarayla (eski davranış)
+        return ek_kapsamda(key)
+    disarida = [q for q in qs if not kapsamda(madde_no(q, lid))]
     qs = [q for q in qs if q not in disarida]
     qs, tekrar = tekrar_ayikla(qs)
     if disarida or tekrar: SUZGEC_RAPOR.append((lid, len(disarida), len(tekrar)))
+    for q in qs:   # sayfa (masa4.js maddeNo) maddeyi buradan okur: tek kural, iki yerde aynı sonuç
+        mk = madde_no(q, lid)
+        if mk is not None: q['m'] = str(mk)
     return {'id': lid, 'ad': ad, 'kap': kap, 'g': g, 'md': md, 'q': qs, 'yildiz': md.count('★'), 'bl': bloklar(lid, g)}
 
 def main(slug, hedef):

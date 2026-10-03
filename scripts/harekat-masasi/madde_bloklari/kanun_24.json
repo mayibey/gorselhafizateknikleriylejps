@@ -1,0 +1,36 @@
+[
+ {"kanun_id": 24, "madde": "5",
+  "baslik": "İzin işlemlerinin genel esasları",
+  "oz": "Personele 4 tür izin verilir: yıllık izin, mazeret izinleri, sıhhi izinler ve yurt dışı izinleri. Adli makama çağrılınca geçen süre ve tatil günlerinde verilen il dışı izni kanuni izinden düşülmez. Savaşta ve olağanüstü hâlde izinler kısaltılabilir ya da kaldırılabilir, personel izinden geri çağrılabilir. Yurt dışındayken dönme kararı tebliğ edilen personel 48 saat içinde dönüşe geçer; görev yapılan ilin dışına izinsiz çıkılmaz.",
+  "sorulur": [
+   "Soru bankasında en sık kalıp izin türleridir: dörtlü listeye hizmet içi izni, ödül izni gibi metinde olmayan bir tür eklenir ya da 'kaç türdür' diye sorulur.",
+   "Boşluk doldurmada 48 saat, 'en kısa yoldan ve en seri vasıta ile', dayanak olarak 2803 sayılı Kanun ve izin saati olarak günün başlangıç saati sorulur; şıklar birbirine çok yakındır.",
+   "'Hangisi yanlıştır' sorularında doğru hüküm ters çevrilir: 'şüpheli ya da tanık olarak çağrılma süresi izinden düşülür', 'kursiyere yıllık izni eksiksiz kullandırılır', 'geri çağırma yalnız yazılı olur' gibi."
+  ],
+  "akilda": [
+   "4 izin, 4 eşya: takvim (yıllık), özür dilekçesi (mazeret), doktor raporu (sıhhi), pasaport (yurt dışı). Listede başka bir ad varsa çeldiricidir.",
+   "Geri çağırmanın 2 kapısı: savaş ve olağanüstü hâl (2803 sayılı Kanun) ile hizmet ihtiyacı (izin planını onaylayan makam, sözlü de olur); masraf Harcırah Kanununa göre ödenir.",
+   "48 saat = 2 gün: yurda dönüş en kısa yoldan, en seri vasıtayla. Adliye çağrısı ve tatil günü il dışı izni kanuni izinden düşülmez."
+  ],
+  "karis": [
+   {"madde": "20", "neden": "Yurt dışından 48 saatte dönüş m.5'te; orada uyulacak üniforma, silah kuralları m.20'de."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.5/1-a…m). KART_CELISKI: 24-12 — resmî metin kursiyere 'yıllık mazeret veya mazeret izni' verilebilir diyor; kartta 'yıllık, mazeret veya mazeret izni' yazıyor (araya virgül girmiş, kursiyere yıllık izin verilebilir gibi okunuyor)."},
+ {"kanun_id": 24, "madde": "20",
+  "baslik": "Yurt dışında izinli personelin kuralları",
+  "oz": "İzinli olarak yurt dışında bulunan subay, astsubay (sözleşmeliler dahil), uzman jandarma ve uzman erbaşlar milletimizin ve Jandarma Genel Komutanlığının temsilcisidir. Yabancılarla temasta titiz davranır, meslekî şerefe uygun bir meskende yaşar, zorunlu olmadıkça üniforma giyemez. Seyahate giden personel şahsi, zati ve miri silahını götüremez. Gitmeden önce birliği onu istihbarata karşı koyma ve koruyucu güvenlik konusunda uyarır; personel Jandarma Genel Komutanlığının belirlediği esaslara uyar.",
+  "sorulur": [
+   "Silah sorusunda şıklara eksik listeler konur: 'yalnız miri', 'şahsi ve miri (zati hariç)'. Doğrusu üçü birden: şahsi, zati ve miri; boşlukta da 'seyahat' kelimesi sorulur.",
+   "Kapsam sorusunda listeye sivil memur ya da er ve erbaş sokulur. Boşluk doldurmada 'Milletimizin - Jandarma Genel Komutanlığının' ve 'meslekî vakar ve anane' ikilileri sorulur.",
+   "Uyarı ve uyulacak esasların konusu sorulur: doğrusu istihbarata karşı koyma ve koruyucu güvenliktir; trafik, gümrük, protokol, mali disiplin çeldiricidir. Üniformada 'hiç giyemez' ya da 'her zaman giyer' yanlıştır."
+  ],
+  "akilda": [
+   "Seyahat valizinde silah yok: şahsi, zati, miri; 3'ü de yasak.",
+   "Kapsam: subay ve astsubay (sözleşmeliler dahil), uzman jandarma, uzman erbaş. Er, erbaş ve sivil memur bu listede yok.",
+   "Üniformada anahtar söz 'zorunlu olmadıkça': ne 'hiç giyemez' ne 'serbest'. Uyarıyı birlik verir, esasları Jandarma Genel Komutanlığı belirler."
+  ],
+  "karis": [
+   {"madde": "5", "neden": "Yurt dışındayken dönme kararı gelirse 48 saat kuralı m.5'tedir."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.20/1-3)."}
+]

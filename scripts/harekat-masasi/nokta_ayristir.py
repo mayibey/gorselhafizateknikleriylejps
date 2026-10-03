@@ -11,12 +11,13 @@ def temiz(s):
     s = re.sub(r'(?<!\*)\*(?!\*)(.+?)\*', r'\1', s)  # italik
     return s.strip(' .·—-').strip()
 
-def maddeler(s):
-    out = []
-    for m in re.finditer(r'm\.\s*(\d+)(?:/[^\s,;)]+)?(?:\s*(?:,|ve|-)\s*(\d+))*', s):
-        for g in m.groups():
-            if g and g not in out: out.append(g)
-    return out
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from madde_anahtar import metin_maddeleri
+def maddeler(s, kid=None):
+    """Hükümdeki madde atıfları. 3 Eki: "(Ek m.1)" → "Ek 1", ayrı madde olan "(m.38/A)" → "38/A" (madde_anahtar.py);
+    eskiden ikisi de ana maddeye (1, 38) düşüyor, kart yanlış madde bloğunda görünüyordu."""
+    return metin_maddeleri(s, kid)
 
 def bolum(md, baslik_re):
     """'### baslik' ile bir sonraki '###' arasını döndürür."""
@@ -46,7 +47,7 @@ def noktalar(md, kid):
         mref = re.search(r'\((m\.[^)]+)\)\s*$', hukum.strip())
         kisa = (' · '.join(kalin) + (f' ({mref.group(1)})' if mref else '')) if kalin else ''
         out.append({'i': f'{kid}-{len(out)}', 's': star, 'b': temiz(baslik), 'h': temiz(hukum), 'k': kisa,
-                    'nd': temiz(nd), 'o': temiz(o), 't': temiz(t), 'm': maddeler(hukum)})
+                    'nd': temiz(nd), 'o': temiz(o), 't': temiz(t), 'm': maddeler(hukum, kid)})
     return out
 
 def tablo(md, baslik_re):
@@ -72,7 +73,7 @@ def tablo(md, baslik_re):
         if konu and deger: rows.append([konu, deger, madde])
     return rows
 
-def tuzaklar(md):
+def tuzaklar(md, kid=None):
     """İki biçim: müşterek = tablo '| Doğru hüküm | Sınavın çarpıtacağı hâl |'; MEBS = '1. "yanlış" → YANLIŞ; doğrusu.'"""
     icerik = bolum(md, r'"Yanlıştır')
     out = []
@@ -82,18 +83,18 @@ def tuzaklar(md):
             if set(satir.replace('|', '').strip()) <= set('-: '): continue
             h = [temiz(x) for x in satir.strip('|').split('|')]
             if len(h) >= 2 and not h[0].lower().startswith('doğru hüküm'):
-                out.append({'y': h[1], 'd': h[0], 'm': maddeler(h[0])})
+                out.append({'y': h[1], 'd': h[0], 'm': maddeler(h[0], kid)})
             continue
         m = re.match(r'(?:-|\d+\.)\s*[“"](.+?)[”"]\s*→\s*(?:YANLIŞ;?\s*)?(.+)', satir)
         if not m: continue
         dogru = re.sub(r'\s*★.*$', '', m.group(2))
-        out.append({'y': temiz(m.group(1)), 'd': temiz(dogru), 'm': maddeler(dogru)})
+        out.append({'y': temiz(m.group(1)), 'd': temiz(dogru), 'm': maddeler(dogru, kid)})
     return out
 
 top = {'n': 0, 's': 0, 'sayi': 0, 'makam': 0, 'tz': 0}
 for k in V['kanun']:
     md = k['md']
-    k['n'] = noktalar(md, k['id']); k['sayi'] = tablo(md, r'Sayılar'); k['makam'] = tablo(md, r'Yetkili makam'); k['tz'] = tuzaklar(md)
+    k['n'] = noktalar(md, k['id']); k['sayi'] = tablo(md, r'Sayılar'); k['makam'] = tablo(md, r'Yetkili makam'); k['tz'] = tuzaklar(md, k['id'])
     top['n'] += len(k['n']); top['s'] += sum(x['s'] for x in k['n']); top['sayi'] += len(k['sayi']); top['makam'] += len(k['makam']); top['tz'] += len(k['tz'])
     print(k['g'], k['id'], k['ad'][:36].ljust(36), 'nokta', str(len(k['n'])).rjust(3), '★', str(sum(x['s'] for x in k['n'])).rjust(3), 'sayı', str(len(k['sayi'])).rjust(2), 'makam', str(len(k['makam'])).rjust(2), 'tz', str(len(k['tz'])).rjust(2), 'maddesiz', sum(1 for x in k['n'] if not x['m']))
 print(top)

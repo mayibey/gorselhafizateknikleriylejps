@@ -1,0 +1,296 @@
+[
+ {"kanun_id": 25, "madde": "1",
+  "baslik": "Kanunun kapsamı",
+  "oz": "Kanun şu eşyalara uygulanır: ateşli silahlar ve mermileri, bu silahların ana ya da balistik önemi olan parçaları ve salt saldırı ve savunma için özel yapılmış bıçak ve aletler. Parçalar tek tek sayılmıştır: namlu, sürgü, gövde, çerçeve, silindir, mekanizma başı, çıkarıcı, tırnak, ateşleme iğnesi. Bunları yurda sokmak, yapmak, satmak, satın almak, taşımak ya da bulundurmak Kanuna tabidir.",
+  "sorulur": [
+   "Parça sorusu: namlu, sürgü, mekanizma başı, ateşleme iğnesi gibi sayılan parçaların arasına dürbün gibi listede olmayan bir parça konur; 'hangisi değildir' diye sorulur.",
+   "Öncüllü soruda parçayı yurda sokma, saldırı aletini taşıma, mermiyi satın alma gibi fiiller verilir; hepsi Kanuna tabidir. 'Parçalar kapsam dışıdır' ifadesi yanlıştır."
+  ],
+  "akilda": [
+   "Dürbün parça değildir (m.1), ama dürbünlü tabanca kaçakçılıkta nitelikli silahtır (m.12).",
+   "Fiiller silahın yolculuğu gibi: yurda girer, yapılır, satılır, satın alınır, taşınır, bulundurulur; her durak Kanuna tabidir.",
+   "Parça listesi m.12 ve m.13'te aynen tekrar eder; listedeki parça da silah gibi suç konusudur."
+  ],
+  "karis": [
+   {"madde": "4", "neden": "Kapsamı m.1 çizer; yivsiz tüfek, ev ve meslek aletleri gibi istisnalar m.4'te."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.1). Not: bu numaraya bağlanan 7 sorudan 5'i ile 25-35 ve 25-37 kartları Ek m.1'e ait (silah taşınamayan yerler); Ek m.1 metni girdide yok, bloğa alınmadı."},
+ {"kanun_id": 25, "madde": "2",
+  "baslik": "Yurda silah sokma yasağı ve istisnaları",
+  "oz": "Ateşli silah, mermi ve salt saldırı-savunma aletlerini yurda sokmak yasaktır; güvenlik kurumlarının ihtiyacı ve Savunma Sanayii eliyle yapılan dış alımlar ayrıdır. Diplomatik ayrıcalıklı kişiler karşılıklılık şartıyla tek silah ve mermisini, resmî görevde kendisine silah armağan edilen ise belgelemek şartıyla armağanını getirebilir. Dış temsilciliklerimizdeki elçi, konsolos, subay ve güvenlik memurları memuriyetleri boyunca 1 kez, tek silah getirir. Kıta ile yurt dışına giden subay ve astsubaya kimliğe kayıtlı silahı için izin aranmaz.",
+  "sorulur": [
+   "İstisnanın sınırı sorulur: şıklarda 'en fazla 2 silah', 'sayı sınırı yok', 'yalnız mermi' verilir; doğrusu tek bir silah ve o silahın mermileridir.",
+   "Kıta ile yurt dışına giden subay ve astsubayın kimlikte kayıtlı silahı sorulur; doğrusu izin şartı aranmaz. Şıklarda İçişleri izni, gümrük vergisi, 'Dışişleri önerisi ve İçişleri onayı' yer alır."
+  ],
+  "akilda": [
+   "Kural yasak; istisnada 3 anahtar: diplomata 'tek silah', armağana 'belge', kıta ile dönen askere 'kimlik kaydı'.",
+   "Yabancı diplomat için şart karşılıklılık; bizim dış temsilcimiz için memuriyet boyunca 1 kez, tek silah.",
+   "Diplomatik ayrıcalığı olmayan yabancı elçilik görevlisinde 2 bakanlık birlikte: Dışişleri önerir, İçişleri uygun görür."
+  ],
+  "karis": [
+   {"madde": "11", "neden": "Armağan silahı yurda sokma m.2'de; hatıra sayılıp bulundurulması m.11'de."},
+   {"madde": "7", "neden": "Yurda kimin silah getirebileceği m.2'de; kimin taşıyabileceği m.7'de."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.2/A-C ve son fıkralar); metnin başına ve A-2 bendinin ortasına dipnot parçaları karışmış, hüküm sayılmadı."},
+ {"kanun_id": 25, "madde": "3",
+  "baslik": "Yurt içinde silah ve mermi yapımı",
+  "oz": "Yurt içinde ateşli silah ve mermi yapımının kuralları bu Kanunda değil, 3 ayrı kanundadır. Bunlar silah ve mühimmat yapan özel sanayi kuruluşlarının denetimi, Makina ve Kimya Endüstrisi Kurumu ve barut, silah ve av malzemesinin tekelden çıkarılmasıyla ilgili kanunlardır. Kanun dışı üretimin cezası m.12'dedir.",
+  "sorulur": [
+   "Beklenen kalıp: yurt içinde ateşli silah ve mermi yapımının hangi kanunlara tabi olduğu sorulur; doğru cevapta özel sanayi denetimi, MKE ve tekelden çıkarma kanunları yer alır."
+  ],
+  "akilda": [
+   "Yapım başka kanunların işi: özel sanayi denetimi, MKE, tekelden çıkarma. 6136 yapımı onlara bırakır, kanun dışı üretimi m.12'de cezalandırır.",
+   "Ateşli silah yapımı başka kanunlara bağlı (m.3); saldırı bıçaklarının yapımı ise doğrudan yasak (m.4)."
+  ],
+  "karis": [
+   {"madde": "4", "neden": "Ateşli silah yapımı başka kanunlara tabi; saldırı bıçaklarının yapımı m.4'te yasak."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.3). Şüphe: m.12 üretim denetimi için 5201 sayılı Kanunu anıyor; m.3'teki 3763 sayılı Kanun güncel olmayabilir, metne sadık kalındı."},
+ {"kanun_id": 25, "madde": "4",
+  "baslik": "Yasak bıçaklar ve Kanuna tabi olmayanlar",
+  "oz": "Kama, hançer, sustalı çakı, kılıç, süngü, muşta, boğma teli gibi salt saldırı ve savunma için yapılan aletlerin yurt içinde yapımı yasaktır. Bir meslek için zorunlu olanların yapımına İçişleri Bakanlığının yönetmeliğine göre izin verilir. Yivsiz tüfekler, yalnız sporda kullanılan yivli ateşsiz silahlar, ev gereçleri ile tıp, sanayi, tarım, spor ve meslek aletleri Kanuna tabi değildir. Avda ya da sporda kullanılan ateşli yivli silahlar ise m.7'ye göre ruhsata tabidir.",
+  "sorulur": [
+   "'Hangisinin yapımı yasak değildir?' kalıbı: sustalı çakı, muşta, şişli baston, boğma teli arasına yivsiz av tüfeği ya da tarım aleti konur; doğru cevap odur.",
+   "Vaka sorusu: kasabın et bıçağı ile cebinde muşta taşıyan kişi karşılaştırılır; meslek bıçağı Kanuna tabi değildir, muşta yasak alettir.",
+   "Meslek için zorunlu aletin yapım izninde makam oynanır: Adalet, Millî Savunma, Emniyet çeldiricidir; doğrusu İçişleri Bakanlığının yönetmeliğidir."
+  ],
+  "akilda": [
+   "Yasak liste 'saldırı için doğmuş' aletlerdir: kama, hançer, kılıç, süngü, muşta, boğma teli. Mutfakta, tarlada, ameliyatta kullanılan alet listede yok.",
+   "Yivsiz 6136 dışı, yivli ruhsatlı: yivsiz tüfek Kanuna tabi değil; avda ya da sporda kullanılan ateşli yivli silah m.7'ye göre ruhsata tabi."
+  ],
+  "karis": [
+   {"madde": "5", "neden": "m.4 yapımı yasaklar; aynı aletleri satmayı, taşımayı, bulundurmayı m.5 yasaklar."},
+   {"madde": "1", "neden": "Kanunun kapsamını m.1 çizer; kapsam dışı kalanları m.4 sayar."},
+   {"madde": "15", "neden": "Yasak bıçağı satma, taşıma, bulundurma cezası m.15'te; yurda sokma, yapma m.14'te."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.4). KART_CELISKI (yalnız fıkra atfı): 25-2 m.4/1 değil m.4/2; 25-3 m.4/2 değil m.4/3; 25-4 m.4/3 değil m.4/4 — m.15/4 muaf listeyi '4 üncü maddenin üçüncü fıkrası' diye anıyor. Bu numaraya bağlanan 2 soru Ek m.4'e ait."},
+ {"kanun_id": 25, "madde": "5",
+  "baslik": "Yasak bıçaklarda satış ve taşıma yasağı",
+  "oz": "Yapımı ve yurda sokulması yasak olan saldırı bıçak ve aletlerinin (m.4/1) satılması, satın alınması, taşınması ve bulundurulması da yasaktır. Bir sanat ya da meslek için m.4'e göre yapımına izin verilen bıçaklar bu yasağın dışındadır. Yani bu aletler için yapımdan bulundurmaya kadar zincirin her halkası yasaktır.",
+  "sorulur": [
+   "Beklenen kalıp: m.4'teki yasak bıçaklar için hangi fiillerin yasak olduğu sorulur; şıklarda yalnız taşımanın yasak olduğu söylenir, oysa satma, satın alma ve bulundurma da yasaktır.",
+   "Beklenen ikinci kalıp: meslek için yapımına izin verilen bıçağın da bu yasağa girdiği iddia edilir; bu bıçaklar yasağın dışındadır."
+  ],
+  "akilda": [
+   "Yasak bıçağın yolu baştan sona kapalı: yapılamaz (m.4), yurda sokulamaz (m.2), satılamaz, alınamaz, taşınamaz, bulundurulamaz (m.5).",
+   "İstisna meslek için yapımına izin verilen bıçaktır; onu da amacı dışında satmak ya da taşımak m.15'e göre suçtur."
+  ],
+  "karis": [
+   {"madde": "4", "neden": "Yasak bıçak listesi ve yapım yasağı m.4'te; satış, taşıma yasağı m.5'te."},
+   {"madde": "15", "neden": "m.5'teki yasağın cezası m.15'te: 6 ay-1 yıl hapis ve adlî para."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.5). Bu maddenin kartı (25-5) girdide m.4 altında."},
+ {"kanun_id": 25, "madde": "6",
+  "baslik": "Ruhsat süresi, yenileme ve geçerlilik",
+  "oz": "Taşıma ve bulundurma ruhsatları yenileme harcı alınarak 5 yıl geçerlidir. Veriliş sebebi ortadan kalkan ruhsat sahibi bunu 6 ay içinde ruhsatı veren makama bildirir; bildirmeyenin ve süresi dolup 6 ay içinde yenilemeyenin ruhsatı iptal edilir. Şartları taşıyan kişi 3 bin TL idari para cezasını öderse yeniden ruhsat alabilir; cezayı mülki amir verir. Taşıma ruhsatı Ek m.1'de sayılan yerler dışında her yerde geçerlidir.",
+  "sorulur": [
+   "Çıkmış süre kalıbı: ruhsat kaç yıl geçerlidir (5), sebep kalkınca kaç ay içinde bildirilir (6)? Şıklarda 1, 2, 3, 7, 10 ve 12 yer değiştirir.",
+   "Yeniden ruhsat sorusunda tutar (3 bin TL; bin, 5 bin, 10 bin çeldirici) ve yetkili (mülki amir; savcı, sulh ceza hâkimi, jandarma komutanı çeldirici) sorulur.",
+   "Öncüllü soruda süre kaydı aranmayanlar sorulur: Jandarma Genel Komutanı ve gaziler listededir, emekli astsubay yoktur. Mermiye ayrı ruhsat gerekmediği ve Ek m.1 yerlerinde taşıma ruhsatının geçmediği de sorulur."
+  ],
+  "akilda": [
+   "5-6-6 dizisi: ruhsat 5 yıl geçerli; sebep kalkınca 6 ayda bildir; süre dolunca 6 ayda yenile, yoksa iptal.",
+   "İptalden dönüş bileti: 3 bin TL idari para cezası; bileti kesen mülki amir.",
+   "Süresiz ruhsat: üst düzey devlet görevlileri ve bu görevlerde bulunmuş olanlar, gaziler, şehit ve gazi yakınları. Emekli astsubay silah taşıyabilir (m.7) ama bu listede yok."
+  ],
+  "karis": [
+   {"madde": "9", "neden": "m.6 iptalinde 3 bin TL cezayla dönüş var; m.9'da silahla suçta dönüş yok."},
+   {"madde": "13", "neden": "Yeniden ruhsat için 3 bin TL m.6'da; ruhsat işlemi aykırılığına 10-25 bin TL m.13'te."},
+   {"madde": "7", "neden": "Kimin silah taşıyabileceği m.7'de; süre kaydı aranmayanlar m.6'da."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.6); metne karışmış değişiklik dipnotları hüküm sayılmadı."},
+ {"kanun_id": 25, "madde": "7",
+  "baslik": "Ateşli silah taşıyabilecek ve bulundurabilecekler",
+  "oz": "Ateşli silahı yalnız m.7'de sayılanlar taşıyabilir ya da evinde, işyerinde bulundurabilir: Cumhurbaşkanı ve yardımcıları, bakanlar, bakan yardımcıları, milletvekilleri ve bu görevlerde bulunmuş olanlar; özel kanunuyla yetkili olanlar; Cumhurbaşkanı kararıyla belirlenen kamu görevlileri; sayılan emekli asker, mülki amir, hâkim, savcı ve emniyet mensupları; validen izin vesikası alanlar; güvenlik korucuları; en az 1 dönem muhtarlık ya da belediye başkanlığı yapanlar. Tart, ihraç, ayırma ya da meslekten çıkarılma ile ayrılanlar emekli hakkından yararlanamaz.",
+  "sorulur": [
+   "Öncüllü kalıp: muhtarlık yapmış olan, görevdeki güvenlik korucusu, tart ve ihraç edilen gibi kişiler verilir; hangilerinin silah taşıyabileceği sorulur. Tart ve ihraç edilen hep dışarıda kalır.",
+   "Uzman erbaşın süresi oynanır: en az 10 yıl görev şartı yerine 3, 5, 7, 15 yıl verilir."
+  ],
+  "akilda": [
+   "Madde 7'de 7 kapı: makam sahipleri, özel kanunu olanlar, Cumhurbaşkanı kararıyla kamu görevlileri, emekliler, vali izni alanlar, korucular, eski muhtar ve belediye başkanları.",
+   "İstifada şart: subay, astsubay ve uzman jandarma mecburi hizmetini tamamlamalı; uzman erbaş ve emniyet personeli en az 10 yıl görev yapmalı.",
+   "Kötü ayrılış kapıyı kapatır: tart, ihraç, rütbe geri alma, ayırma, meslekten çıkarma."
+  ],
+  "karis": [
+   {"madde": "6", "neden": "Kimin taşıyabileceği m.7'de; ruhsatında süre kaydı aranmayanlar m.6'da."},
+   {"madde": "8", "neden": "Kişiye vali izin vesikası m.7'de; bölge halkına Cumhurbaşkanı kararıyla izin m.8'de."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.7/1-2); girdideki metin 6000 karakterde kesik, m.7/3'ün sonu görülemedi, bloğa alınmadı. 25-4 kartı m.4'e; 25-40, 25-41 kartları ile 3 soru (bulundurma ruhsatı, nakil belgesi) Ek m.7'ye ait."},
+ {"kanun_id": 25, "madde": "8",
+  "baslik": "Bölgesel silah izni ve toplu arama",
+  "oz": "Gerekli görülen bölgelerde valiler, Cumhurbaşkanı kararıyla halka silah bulundurma ve taşıma izni verebilir. Aynı usulle o bölgede toplu silah araması da yapılabilir. Kararı Cumhurbaşkanı verir, uygulayan validir; vali ya da bakanlık bunu tek başına yapamaz.",
+  "sorulur": [
+   "'Nasıl gerçekleşir?' diye sorulur; şıklarda İçişleri Bakanının onayı, valinin resen kararı, sulh ceza hâkimi kararı, TBMM kararı yer değiştirir. Doğrusu: Cumhurbaşkanı kararıyla valiler tarafından."
+  ],
+  "akilda": [
+   "İkili imza: kararı Cumhurbaşkanı verir, valiler uygular; halka izinde de toplu aramada da aynı ikili.",
+   "Toplu arama da halka izin de 'lüzum görülen mıntıka' içindir: tüm ülke için değil, bölge için."
+  ],
+  "karis": [
+   {"madde": "7", "neden": "Kişiye vali izin vesikası m.7'de; bölge halkına toplu izin m.8'de."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.8). 25-42 kartı ve 1 soru (zati demirbaş tabanca) Ek m.8'e ait."},
+ {"kanun_id": 25, "madde": "9",
+  "baslik": "Silah devri ve vesikanın geri alınması",
+  "oz": "Taşıma izni olan kişi silahını ruhsatı olmayana satamaz, geçici de olsa başkasına veremez. Ruhsat sahibi silahıyla suç işlerse ya da ihmali yüzünden o silahla başkası suç işlerse veya intihar ya da intihara teşebbüs edilirse vesika geri alınır ve bir daha izin verilmez. Silahını 2. kez kaybedene ya da çaldırana yeni başvuruda yalnız tek silah için izin verilebilir; 3. kezde vesika geri alınır, 5 yıl izin verilmez.",
+  "sorulur": [
+   "Vaka sorusu: silahını 3. kez kaybeden kişiye ne zaman izin verileceği sorulur; şıklarda 1 yıl, 3 yıl, hiç izin verilmez, cezayı ödeyince yer değiştirir. Doğrusu: fiil tarihinden 5 yıl sonra tek silah.",
+   "Devir sorusunda 'kısa süreli emanet', 'birinci derece yakına geçici verme', 'kolluğa bildirerek verme' gibi gevşetmeler çeldiricidir; ruhsatsız kişiye ne satılır ne geçici verilir."
+  ],
+  "akilda": [
+   "Kayıp merdiveni: 2. kayıp ya da çalınmada yeni başvuruya tek silah; 3.'de vesika geri alınır, 5 yıl beklenir, sonra yine tek silah.",
+   "Suç kalıcı, kayıp geçici yasak getirir: silahla suçta bir daha izin yok; 3. kayıpta 5 yıl sonra kapı yeniden aralanır.",
+   "Silah emanet edilmez: ruhsatlıya satılabilir, ruhsatsıza ne satılır ne geçici olarak verilir."
+  ],
+  "karis": [
+   {"madde": "6", "neden": "Bildirmeme, yenilememe iptali m.6'da; idari para cezasıyla yeniden ruhsat alınabilir."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.9, 2024 ek fıkraları dahil). Şüphe: 'intihar ve intihara teşebbüs' hâlinin kimin eylemi olduğu metinde açık değil; metindeki edilgen anlatım korundu."},
+ {"kanun_id": 25, "madde": "10",
+  "baslik": "Zoralım ve ele geçirilen silahlar",
+  "oz": "Mahkemenin zoralımına karar verdiği ya da güvenlik kuvvetlerinin ele geçirdiği silah, mermi ve bıçaklar tutanakla Millî Savunma Bakanlığı emrine verilir. Önce Millî Savunma, Jandarma, Emniyet, MİT ve Gümrükler Muhafazanın ihtiyacı karşılanır. Artanların bir kısmını Bakanlık, silah taşıma yetkisi olan kişilere 1 adet, bedel takdiriyle Makina ve Kimya Endüstrisi Kurumu aracılığıyla satabilir. Zati silah izni olan polis, tabancayı takdir edilen bedelin yarısına almada önceliklidir.",
+  "sorulur": [
+   "Çıkmış kalıp: zoralımına karar verilen silahların hangi bakanlığın emrine verildiği sorulur; şıklarda İçişleri, Adalet, Ticaret, Hazine ve Maliye yer alır. Doğrusu Millî Savunma Bakanlığıdır.",
+   "Beklenen diğer kalıplar: ihtiyacı öncelikle karşılanan kurumlar ile polisin tabancayı yarı bedelle alma önceliği."
+  ],
+  "akilda": [
+   "Ele geçen silah askere gider: zoralım silahı İçişlerine değil, Millî Savunma Bakanlığına teslim edilir.",
+   "Polise yarı fiyat: zati silah izni olan polis, 1 tabancayı takdir edilen bedelin yarısına almada önceliklidir."
+  ],
+  "karis": [
+   {"madde": "Geçici", "neden": "İptal edilen korucu silahı İçişleri Bakanlığına, zoralım silahı Millî Savunma Bakanlığına gider."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.10/1-4); metne karışmış değişiklik dipnotları hüküm sayılmadı."},
+ {"kanun_id": 25, "madde": "11",
+  "baslik": "Hatıra ve antika silahlar",
+  "oz": "Hatıra ya da antika ateşli silah ve bıçakların bulundurulmasına izin verilmesi zorunludur. Antika izni silahın sahibinde kalmasına ve nakline izin verir, üstte taşımaya izin vermez; izin vesikasıyla birlikte satışı serbesttir. Görevden sonra evde kalan kılıç ve meç için izin belgesi aranmaz. Hatıra silah devlet büyüklerince hediye edilip belgelenen ya da savaş hatırası olan silahtır; antika ise eskiden kalma, değerli bir özelliği olan, az bulunan ve artık yapılmayan silahtır.",
+  "sorulur": [
+   "Çıkmış 'hangisi yanlıştır?' kalıbı: antika iznin üstte taşımaya izin verdiği ya da hatıra silaha bulundurma izni verilmeyeceği söylenir; ikisi de yanlıştır.",
+   "Tanım sorusu: antikanın 4 niteliği arasına hatıranın ölçütü olan 'devlet başkanınca hediye edilmiş olma' sokulur. Vakada düğünde belinde antika tabanca taşıyan kişi izne aykırı davranmış olur.",
+   "Boşlukta satış şartı sorulur: antika silah 'izin vesikalarıyla' birlikte serbestçe satılır; noter, müze, bakanlık onayı çeldiricidir."
+  ],
+  "akilda": [
+   "Hatıra = kim verdi (devlet büyüğü, savaş). Antika = ne kadar eski ve nadir. Hediye ölçütü antikada değil hatırada aranır.",
+   "Antika vitrinde durur, belde durmaz: izin sahibinde kalma ve nakil içindir, üstte taşımaya cevaz vermez.",
+   "Görevden kalan kılıç ve meç evde izin belgesi istemez."
+  ],
+  "karis": [
+   {"madde": "2", "neden": "Armağan silahı yurda sokma m.2'de; hatıra sayılıp bulundurulması m.11'de."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.11). 25-43 kartı ve 1 soru (poligon açma izni) Ek m.11'e ait."},
+ {"kanun_id": 25, "madde": "12",
+  "baslik": "Silah kaçakçılığı ve ağırlaştırıcı hâller",
+  "oz": "Ateşli silah, mermi ya da ana parçaları yurda sokan, kanun dışı üreten, taşıyan, yollayan, satan veya satmak için bulunduran 5-12 yıl hapis ve 500-5000 gün adlî para cezası alır. Suçu 2 ya da daha çok kişi birlikte işlerse 8-15 yıl hapis, örgüt faaliyetiyse ceza 1 kat artırılır. Tüfek ya da tam otomatik, dürbünlü, susturuculu, hedef noktalayıcılı tabancada veya vahim miktarda ceza yarı oranında artar. Kurusıkıyı gerçek silaha dönüştürmek üretim sayılır.",
+  "sorulur": [
+   "Ceza sınırı kalıbı: fiil verilip hapis aralığı sorulur; şıklarda m.13'ün 2-4, 1-3, 5-8 yılı ve m.15'in 6 ay-1 yılı bulunur. Satın alma 5-12 yıllık suç değildir, m.13'e girer.",
+   "Çıkmış 'hangisi nitelikli hâl değildir?' kalıbı (2 ayrı kitapçıkta): tüfek ile tam otomatik, dürbünlü, susturuculu, hedef noktalayıcılı tabanca listesine 'dürbünsüz tabanca' gibi listede olmayan bir silah eklenir.",
+   "Oran soruları: örgütte 1 kat, vahim miktarda yarı oranında artırım; birlikte işlemede ise artırım değil 8-15 yıllık ayrı ceza. Şıklarda 'yarı oranında' ile 'bir kat' yer değiştirir."
+  ],
+  "akilda": [
+   "Beşin oyunu: kaçakçılıkta hapis 5 yıldan, adlî para 500 günden 5000 güne. Üst sınır 12 yıl.",
+   "Oran merdiveni: nitelikli silah ya da vahim miktar → yarı oranında; nitelikli silah vahim miktarda → 1 kat; örgüt → 1 kat.",
+   "Nitelikli silah = tüfek + donanımlı tabanca: tam otomatik, dürbünlü, susturuculu, hedef noktalayıcılı. Sade tabanca listede yok; o ancak miktar vahimse yarı oranında artırıma girer."
+  ],
+  "karis": [
+   {"madde": "13", "neden": "Satmak amacıyla bulunduran m.12'ye (5-12 yıl), satın alan ya da bulunduran m.13'e (2-4 yıl) girer."},
+   {"madde": "14", "neden": "Bıçak kaçakçılığı m.14'te 2-5 yıl; orada birlikte işleme 1 kat, teşekkül 5-10 yıl."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.12/1-6). 25-28, 25-29 kartları m.13'e; 25-39 kartı ve 1 soru (askerî savaş silahları) Ek m.5'e ait."},
+ {"kanun_id": 25, "madde": "13",
+  "baslik": "Ruhsatsız silah satın alma, taşıma, bulundurma",
+  "oz": "Ruhsatsız ateşli silah, mermi ya da parça satın alan, taşıyan veya bulunduran 2-4 yıl hapis ve 100-500 gün adlî para cezası alır. Nitelikli silahta ya da vahim miktarda ceza 5-8 yıldır. Evde ya da işyerinde tek silah ve mutat mermi için 1-3 yıl, mahkemece vahim görülmeyen pek az mermi için 6 aya kadar hapis verilir. Ruhsat ve nakil işlemlerindeki aykırılığa mülki idare amiri 10-25 bin TL idari para cezası verir.",
+  "sorulur": [
+   "Ceza sınırı kalıbı: 'satın alan, taşıyan veya bulunduran kural olarak ne ceza alır?' diye sorulur; şıklarda m.12'nin 5-12 yılı ve m.15'in 6 ay-1 yılı da bulunur, doğrusu 2-4 yıl.",
+   "Vaka sorusu: evinde tek ruhsatsız tabanca ve mutat mermisiyle yakalanan kişi; doğrusu 1-3 yıl hapis ve 100-500 gün. 5-8 ve 2-4 yıl şıkları çeldiricidir.",
+   "Yeni fıkralar da sorulabilir: ruhsat ve nakil aykırılığında hapis değil 10-25 bin TL idari para cezası verilir; yetki mahkemede değil mülki idare amirindedir."
+  ],
+  "akilda": [
+   "Ceza merdiveni: pek az mermi 6 aya kadar → evde tek silah 1-3 → genel 2-4 → nitelikli ya da vahim 5-8 yıl.",
+   "Satış amacı farkı: satmak için bulunduran m.12'de 5-12 yıl; satış amacı yoksa m.13'te 2-4 yıl.",
+   "Takdir kimde? Pek az merminin vahim olup olmadığını mahkeme, idari para cezasını mülki idare amiri belirler."
+  ],
+  "karis": [
+   {"madde": "12", "neden": "Satmak amacıyla bulundurma m.12'de 5-12 yıl; satış amacı yoksa burada 2-4 yıl."},
+   {"madde": "6", "neden": "Yeniden ruhsat için 3 bin TL ceza m.6'da; burada 10-25 bin TL."},
+   {"madde": "15", "neden": "Yasak bıçağı bulundurma m.15'te 6 ay-1 yıl; ateşli silahta 2-4 yıl."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.13/1-7, 2024 fıkraları dahil); metne karışmış eski ceza dipnotları güncel hüküm sayılmadı."},
+ {"kanun_id": 25, "madde": "14",
+  "baslik": "Yasak bıçak ve alet kaçakçılığı",
+  "oz": "Yasak bıçak ve aletleri (m.4) yurda sokan, yapan, bir yerden bir yere taşıyan ya da yollayan 2-5 yıl hapis ve en az 200 gün adlî para cezası alır. Bıçakların niteliği ya da az sayıda olması cezayı yarısına kadar indirir. Suçu teşekkül kuran, yöneten ya da mensubu işlerse 5-10 yıl hapis verilir; 2 ya da daha çok kişi birlikte işlerse ceza 1 kat, miktar vahimse yarı oranında artar.",
+  "sorulur": [
+   "Ceza sorusu: m.4'teki bıçağı yurda sokanın cezası sorulur; şıklarda ateşli silah kaçakçılığının 5-12 yılı, 1-3 yıl ve yalnız idari para cezası bulunur. Doğrusu 2-5 yıl hapis ve en az 200 gün.",
+   "İndirim oranı sorulur: niteliği ya da azlığı hâlinde ceza 'yarısına kadar' indirilir; üçte bir, dörtte bir, üçte iki, altıda bir çeldiricidir."
+  ],
+  "akilda": [
+   "Ayna kuralı: silahta birlikte işleme ayrı aralık (8-15 yıl), örgüt 1 kat; bıçakta teşekkül ayrı aralık (5-10 yıl), birlikte işleme 1 kat.",
+   "Bıçakta 2-5, silahta 5-12: bıçak kaçakçılığının üst sınırı, silah kaçakçılığının alt sınırıdır.",
+   "Bıçağı sokan ya da yapan m.14 (2-5 yıl); satan, alan, bulunduran m.15 (6 ay-1 yıl)."
+  ],
+  "karis": [
+   {"madde": "12", "neden": "Ateşli silah kaçakçılığı m.12'de 5-12 yıl; bıçakta 2-5 yıl."},
+   {"madde": "15", "neden": "Bıçağı satma, satın alma, bulundurma m.15'te 6 ay-1 yıl; sokma ve yapma burada."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.14/1-4). Bu maddenin kartı (25-32) girdide m.4 altında."},
+ {"kanun_id": 25, "madde": "15",
+  "baslik": "Yasak bıçağı satma ve taşımanın cezası",
+  "oz": "Yasak bıçak ve aletleri (m.4) satan, satın alan, taşıyan ya da bulunduran 6 ay-1 yıl hapis ve en az 25 gün adlî para cezası alır; vahim hâlde ceza yarıdan 1 katına kadar artar. Meslek için izinli bıçağı amacı dışında satan, taşıyan ya da bulunduran da aynı cezayı alır. Kanuna tabi olmayan silah ya da bıçağı sırf saldırı için taşıyana 3 aya kadar hapis veya adlî para cezası verilir.",
+  "sorulur": [
+   "Vaka sorusu: hâl ve şartlardan sırf saldırı amacıyla bıçak taşıdığı anlaşılan kişinin cezası sorulur; doğrusu 3 aya kadar hapis veya adlî para. 6 ay-1 yıl ve 2-4 yıl şıkları çeldiricidir.",
+   "'Veya' ile 've' oynanır: sırf saldırı amacıyla taşımada ceza seçimliktir (hapis veya adlî para); temel suçta hapis ve adlî para birlikte verilir."
+  ],
+  "akilda": [
+   "Bıçakta iki kademe: satma, alma, taşıma, bulundurma 6 ay-1 yıl; yurda sokma ve yapma m.14'te 2-5 yıl.",
+   "Sırf saldırı = 3 ay, 'veya' ile: Kanuna tabi olmayan alet bile saldırı niyetiyle taşınırsa 3 aya kadar hapis veya adlî para.",
+   "Vahim bıçakta artırım aralıklıdır: yarıdan 1 katına kadar. Silah ve bıçak kaçakçılığında vahim miktar ise sabit 'yarı oranında'."
+  ],
+  "karis": [
+   {"madde": "14", "neden": "Bıçağı yurda sokma ve yapma m.14'te: 2-5 yıl ve en az 200 gün."},
+   {"madde": "5", "neden": "Satma, taşıma yasağının kendisi m.5'te; cezası burada."},
+   {"madde": "13", "neden": "Ateşli silahı satın alma, bulundurma m.13'te 2-4 yıl; bıçakta 6 ay-1 yıl."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.15/1-4). Bu maddenin kartları (25-33, 25-34) girdide m.4 altında."},
+ {"kanun_id": 25, "madde": "16",
+  "baslik": "Genel kaçakçılık kanunu uygulanmaz",
+  "oz": "Bu Kanunun kapsamına giren silah ve bıçak suçlarında Kaçakçılığın Men ve Takibine Dair Kanun uygulanmaz. Silah ve bıçak kaçakçılığının cezası bu Kanunun kendi maddelerindedir (m.12, m.14).",
+  "sorulur": [
+   "Beklenen kalıp: 6136 kapsamındaki suçlarda hangi kanun hükümlerinin uygulanmayacağı sorulur; doğrusu Kaçakçılığın Men ve Takibine Dair 1918 sayılı Kanundur."
+  ],
+  "akilda": [
+   "Silah kaçakçılığı genel kaçakçılık kanununa girmez: 6136 cezasını kendi verir (m.12 silah, m.14 bıçak)."
+  ],
+  "karis": [],
+  "kontrol": "Resmî metinle karşılaştırıldı (m.16)."},
+ {"kanun_id": 25, "madde": "17", "atla": "yürürlük maddesi"},
+ {"kanun_id": 25, "madde": "18", "atla": "yürütme maddesi (sonundaki 'Ana Kanuna işlenemeyen hükümler' yalnız başlık)"},
+ {"kanun_id": 25, "madde": "Ek",
+  "baslik": "Eski kayıtlı silahlar için geçiş hükmü",
+  "oz": "Bu, Ek Geçici Madde 3'tür. Kanuna aykırı edinildiği hâlde 23/6/1981'e kadar ruhsata, kimliğe ya da askerî silah kayıtlarına geçirilmiş silahın sahibi, kayıt silahla uyuşur ve kişi m.7 kapsamındaysa yeniden izin alır; değilse vesikası iptal edilmiştir. İptal tebliğinden sonra 3 ay içinde silahını teslim edene takibat yapılmaz; silah tutanakla Millî Savunma Bakanlığı emrine verilir.",
+  "sorulur": [
+   "Beklenen kalıp: geçiş hükmünde vesikası iptal edilen kişinin silahını kaç ay içinde teslim edeceği (3 ay) ve silahların hangi bakanlığa verileceği (Millî Savunma) sorulabilir."
+  ],
+  "akilda": [
+   "Teslim et, kurtul: tebliğden 3 ay içinde teslim edene takibat yok; silah m.10'daki gibi Millî Savunma Bakanlığına gider.",
+   "Korucu geçiş hükmüyle karıştırma: orada süre 90 gün, iptal edilen silah İçişleri Bakanlığına gider (Geçici Madde 9)."
+  ],
+  "karis": [
+   {"madde": "Geçici", "neden": "Korucu silahlarında teslim süresi 90 gün; iptal edilen silah İçişleri Bakanlığına gider."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (Ek Geçici m.3). Not: girdideki 'Ek' metni yalnız Ek Geçici m.3; Ek m.1-11 metinleri girdide yok, bu yüzden 25-35…25-43 kartları resmî metinle doğrulanamadı (bu kartlar ve soruları asıl madde numaralarına düşmüş)."},
+ {"kanun_id": 25, "madde": "Geçici",
+  "baslik": "Korucu silahları için geçiş hükmü",
+  "oz": "Bu, Geçici Madde 9'dur. Gönüllü korucular ve geçici köy korucuları ellerindeki tabanca, makineli tabanca ya da hafif makineli tüfeği 90 gün içinde mülki makamlara teslim ederse takibat yapılmaz; isteyene valilerce harçsız, birer adet ruhsat verilebilir. Bu silahlar miras dışında devredilemez, satılamaz. Görevi biten korucunun ruhsatı iptal edilebilir; iptal edilen silah Devlet malı sayılır, İçişleri Bakanlığına teslim edilir.",
+  "sorulur": [
+   "Beklenen kalıp: korucuların silah teslim süresi (90 gün), ruhsatı kimin düzenlediği (vali) ve iptal edilen silahın teslim edildiği bakanlık (İçişleri) sorulabilir."
+  ],
+  "akilda": [
+   "Korucu üçlüsü: 90 gün teslim, validen harçsız ruhsat, iptalde İçişleri Bakanlığı. Zoralım silahı ise Millî Savunmaya gider (m.10).",
+   "Korucu silahı mirasla geçer ama satılmaz: veraset dışında devir, hibe ve satış yasak."
+  ],
+  "karis": [
+   {"madde": "10", "neden": "Zoralım ve ele geçen silahlar İçişlerine değil Millî Savunma Bakanlığına verilir."},
+   {"madde": "Ek", "neden": "Ek Geçici Madde 3'te teslim süresi 3 ay; silahlar Millî Savunmaya gider."},
+   {"madde": "7", "neden": "Görevdeki güvenlik korucularının silah hakkı m.7'de; burası eski bir geçiş hükmü."}
+  ],
+  "kontrol": "Resmî metinle karşılaştırıldı (Geçici m.9). Not: girdideki 'Geçici' metni yalnız Geçici m.9; eski adla duran 'Bakanlar Kurulunca toplatma' ibaresi öze alınmadı."}
+]

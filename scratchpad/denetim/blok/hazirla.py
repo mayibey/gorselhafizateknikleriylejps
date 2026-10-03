@@ -23,6 +23,7 @@ def madde_no(y):
 def kel(t): return set(w for w in re.sub(r'[^a-zçğıöşü0-9 ]', ' ', str(t).replace('İ', 'i').replace('I', 'ı').lower()).split() if len(w) >= 5 or re.search(r'\d', w))
 
 PARTI = []
+SADECE = set(int(x) for x in sys.argv[1:]) if len(sys.argv) > 1 else None
 for lid_s, mv in KAP['mevzuatlar'].items():
     lid = int(lid_s); k = kayit[lid]
     r = json.load(open(f'{KOK}/gemini_calisma/girdi/resmi_metin/kanun_{lid}.json', encoding='utf-8'))
@@ -57,7 +58,8 @@ for lid_s, mv in KAP['mevzuatlar'].items():
         # çeşitli 8 soru: önce farklı kökler
         sec, gor = [], set()
         for q in qs:
-            anahtar = q['k'][:60]
+            # 3 Eki: kök kanunun uzun adıyla başlıyor → ilk 60 karakter hep aynıydı, madde başına tek soru kalıyordu. Ad kısmı atılır.
+            anahtar = re.sub(r'^.*?(?:göre|gereğince|uyarınca|hükümlerine göre)\s*,?\s*', '', q['k'], count=1)[:80]
             if anahtar in gor: continue
             gor.add(anahtar); sec.append({'kok': q['k'], 'siklar': q['s'], 'dogru': q['s'][q['d']]})
             if len(sec) >= 8: break
@@ -71,7 +73,7 @@ for lid_s, mv in KAP['mevzuatlar'].items():
              'diger_maddeler_kisa': {no: re.sub(r'\s+', ' ', metin[no])[:160] for no in tum_nolar if no not in kap_nolar},
              'maddeler': maddeler}
     yol = f'{B}/girdi/kanun_{lid}.json'
-    json.dump(giris, open(yol, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if SADECE is None or lid in SADECE: json.dump(giris, open(yol, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     boy = os.path.getsize(yol)
     jan = 'jandarma' in mv['branslar']
     oncelik = (0 if mv['grup'] == 'müşterek' else 1, 0 if jan else 1, -len(mv['branslar']))
@@ -88,7 +90,7 @@ for onc, lid, boy, n, ad in PARTI:
     cur.append(lid); cur_b += boy; cur_g = g
 if cur: partiler.append(cur)
 bilgi = {lid: (n, boy, ad) for _, lid, boy, n, ad in PARTI}
-json.dump(partiler, open(B + '/partiler.json', 'w', encoding='utf-8'))
+if SADECE is None: json.dump(partiler, open(B + '/partiler.json', 'w', encoding='utf-8'))
 for i, p in enumerate(partiler, 1):
     print(f'parti {i:2d}: {len(p):2d} mevzuat · {sum(bilgi[l][0] for l in p):4d} madde · {sum(bilgi[l][1] for l in p)//1000:4d} KB · {p}')
 print('toplam parti', len(partiler), '· madde', sum(b[0] for b in bilgi.values()))

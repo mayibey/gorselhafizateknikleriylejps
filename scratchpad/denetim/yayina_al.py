@@ -1,0 +1,44 @@
+# Biten ajan çıktılarını denetleyip yayına hazırlar (sonra: hepsini_kur → test → yukle_sayfalar.sh)
+#   python scratchpad/denetim/yayina_al.py
+# 1) madde blokları: scratchpad/denetim/blok/sonuc/kanun_<id>.json  (blok_denetle HATA 0) → scripts/harekat-masasi/madde_bloklari/
+# 2) kırmızı kutu  : scratchpad/denetim/kutu/sonuc/kanun_<id>.json  (kutu_denetle HATA 0) → duzeltmeler.json (aynı kartın eski
+#    kirmizi_kutu kaydı varsa yenisi yerine geçer; dosya sonuna eklenir → önceki düzeltmeleri ezer)
+import json, os, sys, glob, shutil, re
+sys.stdout.reconfigure(encoding='utf-8')
+KOK = 'D:/GorselHafizaTeknikleriyleJSPS'
+sys.path.insert(0, KOK + '/scripts/harekat-masasi')
+import blok_denetle, kutu_denetle
+
+hedef = KOK + '/scripts/harekat-masasi/madde_bloklari'; os.makedirs(hedef, exist_ok=True)
+gecen_b, kalan_b, celiski = [], [], []
+for y in sorted(glob.glob(KOK + '/scratchpad/denetim/blok/sonuc/kanun_*.json')):
+    h, u, n = blok_denetle.denetle(y)
+    lid = int(re.search(r'kanun_(\d+)', y).group(1))
+    if h: kalan_b.append((lid, len(h), h[0][:90])); continue
+    shutil.copy(y, f'{hedef}/kanun_{lid}.json'); gecen_b.append(lid)
+    for b in json.load(open(y, encoding='utf-8')):
+        for c in re.findall(r'KART_CELISKI:[^|]*', str(b.get('kontrol', ''))): celiski.append((lid, b.get('madde'), c.strip()[:200]))
+
+duz_yol = KOK + '/scripts/harekat-masasi/duzeltmeler.json'
+D = json.load(open(duz_yol, encoding='utf-8'))
+gecen_k, kalan_k, yeni = [], [], []
+for y in sorted(glob.glob(KOK + '/scratchpad/denetim/kutu/sonuc/kanun_*.json')):
+    h, u, n = kutu_denetle.denetle(y)
+    lid = int(re.search(r'kanun_(\d+)', y).group(1))
+    if h: kalan_k.append((lid, len(h), h[0][:90])); continue
+    for x in json.load(open(y, encoding='utf-8')):
+        if 'atla' in x: continue
+        yeni.append(x)
+        if 'KART_CELISKI' in str(x.get('aciklama', '')): celiski.append((lid, x['kart_id'], str(x['aciklama'])[:200]))
+    gecen_k.append(lid)
+if yeni:
+    anahtar = {(x['kanun_id'], x['kart_id']) for x in yeni}
+    D = [x for x in D if not (x.get('sorun') == 'kirmizi_kutu' and (x.get('kanun_id'), x.get('kart_id')) in anahtar)] + yeni
+    json.dump(D, open(duz_yol, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+print(f'madde blokları: {len(gecen_b)} kanun yayına hazır {gecen_b}')
+for x in kalan_b: print('   bekliyor (hata):', x)
+print(f'kırmızı kutu : {len(gecen_k)} kanun, {len(yeni)} kart düzeltmesi duzeltmeler.json\'da {gecen_k}')
+for x in kalan_k: print('   bekliyor (hata):', x)
+json.dump(celiski, open(KOK + '/scratchpad/denetim/kart_celiski.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+print(f'KART_CELISKI: {len(celiski)} (scratchpad/denetim/kart_celiski.json)')
