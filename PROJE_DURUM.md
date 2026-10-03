@@ -4,6 +4,18 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki akşam (2) — OTURUM KORUMA YAZILDI: bayrak `oturum-koruma`, YALNIZ başkanda açık (commit 1cf5ab1, OTA 1.0.47+1.0.46)
+> Başkan kararı: "Aynı anda tek cihaz açık oturum olsun. Ama şakkadanak kapanmasın."
+> - İnternetsiz açılışta cihazdaki oturum korunur (çıkış sayılmaz); bağlantı gelince tek-oturum denetimi/senkron/profil yapılır.
+>   Üyelik de son bilinen hakları korur. Yeni modül src/lib/oturum-koruma.ts.
+> - Tek-oturum düşürmesi ve çıkış yalnız bu cihazı kapatır (signOut local); hesap silme global kalır.
+> - Açılışta geri yüklenen oturum hesabı yeniden sahiplenmez; yalnız gerçek giriş (giriş niyeti / yeni oturum kimliği) sahiplenir.
+> - Bayrak kapalıyken davranış aynı. Doğrulama: tsc 0, gerçek auth-js ile 15 senaryo geçti, bayrak:denetle temiz.
+> - OTA 17:02: 1.0.47 grup d4d3020a-75bc-47b2-a49c-bfdfb32df58b · 1.0.46 grup a5f03d49-2a94-4527-b3df-297750662d92 (runtime doğru).
+> - **YAY:** uygulama_ayar.ozellik_herkes dizisine "oturum-koruma" eklenir (OTA gerekmez; her cihazda sonraki açılıştan).
+> - Başkan testi: uygulamayı internetli aç, 10 sn bekle, tam kapat (bayrak önbelleğe yazılır). Sonra 1 saatten uzun bekletip
+>   uçak modunda aç → giriş ekranı GELMEMELİ. İkinci cihazdan giriş → ilk cihaz öne gelince uyarıyla düşer, ikinci cihaz açık kalır.
+>
 > ### ▶ 3 Eki akşam — TABLETTE KENDİLİĞİNDEN ÇIKIŞ: TEŞHİS (kod değişmedi, onay bekliyor)
 > Bildirenler: Mehmet Ali Güneş (yalnız iPad), Kasım Tuncer (iOS + Android). Üç neden bulundu:
 > 1. Erişim anahtarı 1 saatte doluyor; tablet uykudan uyanıp internetsizken açılınca yenileme başarısız → Supabase "oturum yok"
