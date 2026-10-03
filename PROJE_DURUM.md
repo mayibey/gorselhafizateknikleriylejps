@@ -9,6 +9,9 @@
 > blokların hepsi "Önemli hükümler" yer tutucusu. Kullanılamaz. Yeni görev: `gemini_calisma/KODLAMA_PROMPT.md` (kilit kelime →
 > tek cevap şifreleri; önce müşterek 1-25) + hile geçirmeyen denetçi `gemini_calisma/girdi/kodlama_denetci.py` (kanıt resmî
 > metinde AYNEN aranır, tetikleyici tekilliği, yer tutucu/kalıp yasağı). Çıktı `gemini_calisma/kodlama/` (gitignored).
+> SONRA iki görev TEK prompta birleşti: `gemini_calisma/BIRLESIK_PROMPT.md` (+ANTIGRAVITYE_YAPISTIR_BIRLESIK.txt). zorunlu_denetci.py
+> güçlendirildi (yer tutucu/kalıp, tekrar oranı, madde metniyle örtüşme, ham fıkra şıkkı, atlanan madde metinden doğrulanır);
+> sahte çıktı `cikti_REDDEDILEN_3eki/`'ye alındı, cikti/ boş.
 > Ajan işleri başkan emriyle DURAKLATILDI; havacılık kutu sonuçları (69,70,104,142) birleştirilmeyi bekliyor.
 >
 > ### ▶ 3 Eki gece — "İLGİLİ KARTI ÇALIŞ" DÜZELTMESİ HERKESE AÇIK (bayrak ilgili-kart-kitap; f75b224; OTA 1.0.47+1.0.46 22:18)
