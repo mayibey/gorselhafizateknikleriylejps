@@ -4,6 +4,25 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki öğle — ACİL SERVİS 2022 + MERKEZ 2. AŞAMA BAŞLADI + ANTIGRAVITY KARŞILAŞTIRMASI (sayfa sunucudan; OTA YOK)
+> - **Acil Servis Tebliği (tabip/diş tabibi):** paket 2009 ve 2022 tebliğini karışık taşıyordu (24 saat takip, 30 dk konsültasyon,
+>   mavi kod… kalkmış hükümler). `_yeni/135.md` güncel metinle baştan yazıldı (40 nokta), ozet_T_tabip yeniden derlendi, Tabip ve
+>   Diş Tabibi PDF'leri yüklendi. Kart sırası değiştiği için eski 35 düzeltme çıkarıldı; yeni 40 kartın kutuları (sonuc_14) + 12 tuzak.
+>   pack_135.json 2022 metniyle değiştirildi. Bot arşivi de düzeltildi (bot commit 668040d) — **sunucudaki bot henüz çekmedi**
+>   (sunucu 0e3ce3a'da; sabahki 60 tam madde düzeltmesi 2df5b82 de bekliyor; deploy = git pull + pm2 restart, başkan onayıyla).
+>   Commit 4e15a3a.
+> - **Merkez 2. aşama altyapısı (27d4486):** madde bloğuna öz, Akılda tut, Sınavda nasıl soruluyor, nedenli karıştırılanlar.
+>   Veri `scripts/harekat-masasi/madde_bloklari/kanun_<id>.json` → veri_uret `bl` (branş kapsamına göre süzer; ücretsiz sayfada boş).
+>   Bana özel artık kartı olmayan yanlış maddeleri de gösteriyor. İki sütunlu tablolarda madde değerdeki (m.X) atfından → ezber satırı
+>   bloğa bağlanıyor. Denetçi `blok_denetle.py` (resmî metinde olmayan sayıyı yakalar). Sayfalar yüklendi (16/16).
+> - **İçerik yazımı sürüyor:** 143 mevzuat, 3.334 kapsam maddesi, 40 parti (`scratchpad/denetim/blok/`, GOREV_BLOK.md). İlk dalga
+>   10 ajan: müşterek 25 mevzuat (parti 1-6) + jandarma branş (7-10). Biten parti `sonuc/` → denetçi → `madde_bloklari/` → kur → yükle.
+> - **Antigravity karşılaştırması:** `gemini_calisma/PROMPT.md` (gitignore). Antigravity Merkez içeriğini 143 mevzuat için sıfırdan
+>   yazacak (yalnız resmî metin + kapsam görüyor). Çıktı gelince aynı sayfaya takılıp yan yana karşılaştırılacak (memory
+>   antigravity-sifirdan-karsilastirma.md).
+> - Fark edilen: kartların bir kısmında "Sınavda böyle yazarlar" kutusu hâlâ açıklama cümlesi (ör. 5442 m.2: '"kanunla" denir veya…');
+>   yz düzeltmesi almamış kartlar. Ayrı tarama gerekli.
+>
 > ### ▶ 3 Eki gece — MERKEZ CHECK-UP BÜYÜK DÜZELTME (sayfa sunucudan; OTA YOK)
 > Başkanın gece boyu bildirdikleri ve çözümleri:
 > - **Alakasız tuzak/Doğrusu** (4678 m.3 "3-9 yıl" her karta): tuzaklar madde no ile eşleniyordu (821 basım) → içerikle tek karta (176).
