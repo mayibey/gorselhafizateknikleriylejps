@@ -4,6 +4,25 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki gece — MERKEZ CHECK-UP BÜYÜK DÜZELTME (sayfa sunucudan; OTA YOK)
+> Başkanın gece boyu bildirdikleri ve çözümleri:
+> - **Alakasız tuzak/Doğrusu** (4678 m.3 "3-9 yıl" her karta): tuzaklar madde no ile eşleniyordu (821 basım) → içerikle tek karta (176).
+> - **Halüsinasyon/yanlış içerik:** 2.840 kart resmî metne karşı 10 ajanla denetlendi → 1.032 düzeltme (uydurma hüküm: 6222, 3298,
+>   5607, 2863, 6415, 2942…; "yanlış" diye gösterilen doğru bilgiler; yanlış madde no). + 1.132 + 339 parça/başlık "Doğrusu" kutusuna
+>   tek cümle (GOREV_DOGRU.md). Hepsi `scripts/harekat-masasi/duzeltmeler.json` → `duzeltme_uygula.py` (hepsini_kur otomatik).
+> - **Check-up'ta olmayan özet içeriği** (m.11 sınır ötesi vb.): Altın Özet noktalarının ~530'u hiçbir soruyla karşılanmıyordu →
+>   resmî metinden doğrulanmış **593 ek soru** (`ek_sorular/`, `ek_soru_dogrula.py`; ölçüm `soru_acigi.py`). 5442: 41→58 soru.
+> - **Kapsam dışı sorular** (5442 m.66 "eksik" görünüyordu): `veri_uret` resmî Ek-1 süzgeci (_emir-madde-kapsam.json) + tekrar süzgeci
+>   (MEBS'te Harcama Belgeleri 91 kapsam dışı soru çıktı). Madde başlığı artık soru kökünden üretilmiyor.
+> - **Soru eklenince/çıkınca/kapsam değişince:** skor `cuOzet` ile güncel soru setinden; eklenen soru "Yeni soru · N" + "Yeni / kalan N
+>   soruyu çöz"; çıkarılan sorunun maddesi eksik sayılmaz.
+> - **Analiz ekranı:** "Yanlışlarımın özeti" (üstte + liste sonunda; kural/senin cevabın/doğrusu/neden, sayı-makam altın, doğru şık
+>   kelimeleri yeşil, "Yanlışları tekrar çöz"); tek "Bu maddeyi öğren" (özette kart varsa oraya kayar, yoksa konu kartı); tip bölümü
+>   yalnız yanlış olan tipler (yoksa bölüm yok); düğmelerin üstüne binen sabit balon kaldırıldı → satır içi bağlantı.
+> - **Sayılar ve süreler / Yetkili makamlar:** değer sütunu hiç görünmüyordu (ilk 2 sütun alınıyordu) → konu → DEĞER · madde.
+> - Bekleyen: kodlama/taktik çalışması (3 Eki 11:17 hatırlatma; memory kodlama-taktik-calismasi.md). Paket sorunları: kanun 115 paketi
+>   yanlış yönetmelik; 4000/9000 karakter kesik maddeler (altin_pack_brans 60000 ile yeniden üret).
+>
 > ### ▶ 30 Eyl 15:45 — KAYIT SONRASI BRANŞ EKRANI BOŞ KALIYORDU (OTA iki runtime, b9b2453)
 > Muhammet Ali G. (IG): "branş seçeneği çıkmıyor, giriş yapamıyorum". profiles.brans/rutbe NULL → GorevAdim'da takılı.
 > Sebep: onboarding branş listesi yalnız yerel DB'den tek sefer (`getBranches`); DB hazır değil/hata → boş, tekrar denenmiyor.
