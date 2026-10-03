@@ -4,6 +4,11 @@
 > **KURAL: Her iş/düzeltme sonrası bu dosya güncellenir (farz).** Ne yapıldı, hangi commit, yeni karar/sorun eklenir.
 > Son güncelleme: 16 Eylül 2026 (Sınav dayanak künyesi · Görsel hazırlanıyor takılması + Micro geçişi · Supabase sunucu çökmesi · Karargâh paslanan liste yeri · soru kökü kimlik kayması)
 >
+> ### ▶ 3 Eki akşam (3) — OTURUM KORUMA HERKESE AÇIK: başkan "yay" dedi → uygulama_ayar.ozellik_herkes'e "oturum-koruma" eklendi
+> OTA gerekmedi. OTA'lı (1.0.47/1.0.46 yeni paket) cihazlarda bayrak bir açılışta önbelleğe yazılır, SONRAKİ açılıştan itibaren
+> çalışır. Geri alma: ozellik_herkes'ten "oturum-koruma"yı çıkar (eski davranış döner). Sonraki build'de YAYIN_BAYRAKLARI'na alınabilir.
+> İzleme önerisi: birkaç gün sonra "geçerli oturumu bırakıp yeniden giriş" ölçümü (memory oturum-dusme-tablet-teshis) tekrar yapılmalı.
+>
 > ### ▶ 3 Eki akşam (2) — OTURUM KORUMA YAZILDI: bayrak `oturum-koruma`, YALNIZ başkanda açık (commit 1cf5ab1, OTA 1.0.47+1.0.46)
 > Başkan kararı: "Aynı anda tek cihaz açık oturum olsun. Ama şakkadanak kapanmasın."
 > - İnternetsiz açılışta cihazdaki oturum korunur (çıkış sayılmaz); bağlantı gelince tek-oturum denetimi/senkron/profil yapılır.
